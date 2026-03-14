@@ -1,0 +1,32 @@
+[tool.briefcase]
+project_name = "Wizard's Cavern"
+bundle = "com.example"
+version = "0.1.2"
+url = ""
+license.file = "LICENSE"
+author = ""
+author_email = ""
+
+[tool.briefcase.app.wizardscavern]
+formal_name = "Wizard's Cavern"
+description = "A text-based dungeon crawler"
+sources = ["wizardscavern"]
+requires = ["toga>=0.4.0"]
+
+[tool.briefcase.app.wizardscavern.macOS]
+requires = ["toga-cocoa>=0.4.0"]
+
+[tool.briefcase.app.wizardscavern.linux]
+requires = ["toga-gtk>=0.4.0"]
+
+[tool.briefcase.app.wizardscavern.windows]
+requires = ["toga-winforms>=0.4.0"]
+
+[tool.briefcase.app.wizardscavern.iOS]
+requires = ["toga-iOS>=0.4.0"]
+
+[tool.briefcase.app.wizardscavern.android]
+requires = ["toga-android>=0.4.0"]
+
+[tool.briefcase.app.wizardscavern.web]
+requires = ["toga-web>=0.4.0"]
