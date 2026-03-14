@@ -661,6 +661,9 @@ class SaveSystem:
             'gs.haunted_floors': dict(gs.haunted_floors),  # floor_num -> turns remaining
             'gs.unique_treasures_spawned': list(gs.unique_treasures_spawned),
             'gs.ephemeral_gardens': gs.ephemeral_gardens,
+            'gs.bug_level_floors': {str(k): v for k, v in gs.bug_level_floors.items()},
+            'gs.player_is_shrunk': gs.player_is_shrunk,
+            'gs.bug_queen_defeated': gs.bug_queen_defeated,
             'unlocked_achievements': list(gs.unlocked_achievements),
             # Identification system state
             'gs.identified_items': list(gs.identified_items),
@@ -735,6 +738,14 @@ class SaveSystem:
         if 'gs.ephemeral_gardens' in data:
             gs.ephemeral_gardens.clear()
             gs.ephemeral_gardens.update(data['gs.ephemeral_gardens'])
+        if 'gs.bug_level_floors' in data:
+            gs.bug_level_floors.clear()
+            for k, v in data['gs.bug_level_floors'].items():
+                gs.bug_level_floors[int(k)] = v
+        if 'gs.player_is_shrunk' in data:
+            gs.player_is_shrunk = data['gs.player_is_shrunk']
+        if 'gs.bug_queen_defeated' in data:
+            gs.bug_queen_defeated = data['gs.bug_queen_defeated']
         if 'unlocked_achievements' in data:
             gs.unlocked_achievements.clear()
             gs.unlocked_achievements.update(data['unlocked_achievements'])

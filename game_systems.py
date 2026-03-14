@@ -15,7 +15,7 @@ from game_state import (add_log, print_to_output, COLOR_RED, COLOR_GREEN, COLOR_
 from sprite_data import generate_monster_sprite_html, generate_room_sprite_html
 from sprite_data import generate_player_sprite_html as _generate_player_sprite_html
 from game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE, MONSTER_EVOLUTION_TIERS,
-                       TROPHY_DROPS, TAXIDERMIST_COLLECTIONS)
+                       TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES)
 from items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
                    Trophy, Rune, Shard, identify_item, is_item_identified,
@@ -2281,15 +2281,60 @@ def _trigger_room_interaction(player_character, my_tower):
                     m_data.get('gold_max', 30) * 2
                 )
                 new_monster.properties['undead_guardian'] = True
+
+            # Bug Level: Spawn bug monsters on bug level floors
+            elif room.properties.get('is_bug_monster'):
+                is_queen = room.properties.get('is_bug_queen', False)
+                if is_queen:
+                    # Spawn the Bug Queen
+                    queen_data = [m for m in BUG_MONSTER_TEMPLATES if m['name'] == 'BUG QUEEN'][0]
+                    new_monster = Monster(
+                        queen_data['name'],
+                        queen_data['health'],
+                        queen_data['attack'],
+                        queen_data['defense'],
+                        queen_data.get('elemental_weakness', []),
+                        queen_data.get('elemental_strength', []),
+                        queen_data.get('level', 3),
+                        queen_data.get('attack_element', 'Physical'),
+                        queen_data.get('flavor_text', ''),
+                        queen_data.get('victory_text', ''),
+                        queen_data.get('can_talk', True),
+                        queen_data.get('greeting_template', ''),
+                        queen_data.get('special_attack', None)
+                    )
+                    new_monster.properties['is_bug_queen'] = True
+                    new_monster.properties['is_bug_monster'] = True
+                else:
+                    # Spawn a random bug monster (not the queen)
+                    bug_pool = [m for m in BUG_MONSTER_TEMPLATES if m['name'] != 'BUG QUEEN']
+                    m_data = random.choice(bug_pool)
+                    new_monster = Monster(
+                        m_data['name'],
+                        m_data['health'],
+                        m_data['attack'],
+                        m_data['defense'],
+                        m_data.get('elemental_weakness', []),
+                        m_data.get('elemental_strength', []),
+                        m_data.get('level', 1),
+                        m_data.get('attack_element', 'Physical'),
+                        m_data.get('flavor_text', ''),
+                        m_data.get('victory_text', ''),
+                        m_data.get('can_talk', False),
+                        m_data.get('greeting_template', ''),
+                        m_data.get('special_attack', None)
+                    )
+                    new_monster.properties['is_bug_monster'] = True
+
             else:
                 # Normal monster spawning with floor-based phasing and evolution
                 # Each template level has a floor range where it can appear.
                 # Lower-level templates phase out on deeper floors.
                 # Monsters evolve (Hardened/Savage/Dread/Mythic) based on floor
                 # depth vs their base template level.
-                
+
                 target_lvl = player_character.z
-                
+
                 # Filter templates by floor range
                 potential_monsters = [
                     m for m in MONSTER_TEMPLATES
@@ -2693,6 +2738,24 @@ def process_chest_action(player_character, my_tower, cmd):
             
             gs.game_stats['chests_opened'] = gs.game_stats.get('chests_opened', 0) + 1
             check_achievements(player_character)
+        elif room.properties.get('has_growth_mushroom') and gs.player_is_shrunk:
+            # Bug level chest with Growth Mushroom - guaranteed backup way to cure shrinking
+            add_log(f"{COLOR_GREEN}You pry open the tiny chest...{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}Inside, a luminous mushroom pulses with restorative magic!{COLOR_RESET}")
+            growth_mushroom = Potion(
+                name="Zot's Growth Mushroom",
+                description="A luminous mushroom pulsing with restorative magic. Eating it will reverse Zot's shrinking spell.",
+                value=0, level=0, potion_type='growth_mushroom', effect_magnitude=0, duration=0
+            )
+            player_character.inventory.add_item(growth_mushroom)
+            add_log(f"{COLOR_GREEN}You obtained: Zot's Growth Mushroom!{COLOR_RESET}")
+            add_log(f"{COLOR_CYAN}Use it from your inventory to restore your size!{COLOR_RESET}")
+            # Also give some normal chest loot
+            gold_found = random.randint(20, 80)
+            player_character.gold += gold_found
+            add_log(f"You also found {gold_found} gold.")
+            gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + gold_found
+            gs.game_stats['chests_opened'] = gs.game_stats.get('chests_opened', 0) + 1
         else:
             # Normal chest logic
             # Updated chest outcome system with Lantern Fuel, Equipment, and Upgrade Scrolls
@@ -3449,6 +3512,39 @@ def activate_playtest_mode(player_character):
 
 
 
+def _trigger_shrinking_spell(player_character):
+    """Trigger Zot's shrinking spell when player enters a bug level."""
+    gs.player_is_shrunk = True
+    gs.bug_queen_defeated = False
+
+    # Add the shrinking status effect (very long duration - effectively permanent until cured)
+    player_character.add_status_effect(
+        effect_name='Shrinking',
+        duration=999,
+        effect_type='shrinking',
+        magnitude=0,
+        description="Zot's shrinking spell - you are tiny!"
+    )
+
+    add_log("")
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log(f"{COLOR_RED}*** ZOT'S SHRINKING SPELL ***{COLOR_RESET}")
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log(f"{COLOR_YELLOW}A cackling voice echoes through the chamber:{COLOR_RESET}")
+    add_log(f'{COLOR_CYAN}"HAHAHAHA! You thought you could just waltz through MY tower?"{COLOR_RESET}')
+    add_log(f'{COLOR_CYAN}"Let us see how brave you are when you are the size of a BUG!"{COLOR_RESET}')
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log(f"{COLOR_RED}Arcane energy crackles around you!{COLOR_RESET}")
+    add_log(f"{COLOR_YELLOW}The world grows larger... no, YOU are growing smaller!{COLOR_RESET}")
+    add_log(f"{COLOR_RED}You shrink to the size of an insect!{COLOR_RESET}")
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log(f"{COLOR_YELLOW}The bugs on this floor now tower over you!{COLOR_RESET}")
+    add_log(f"{COLOR_CYAN}Find and defeat the Bug Queen or find a Growth Mushroom{COLOR_RESET}")
+    add_log(f"{COLOR_CYAN}to restore your size and escape this floor!{COLOR_RESET}")
+    add_log(f"{COLOR_RED}The stairs are sealed by Zot's magic while you are shrunk!{COLOR_RESET}")
+    add_log("")
+
+
 def handle_stairs_up(player_character, my_tower, floor_params):
     interacted_this_turn = False
     print_to_output("You found a passage leading back up toward the entrance.")
@@ -3501,6 +3597,12 @@ def handle_stairs_down(player_character, my_tower, floor_params):
         if found_u:
             break
     reveal_adjacent_walls(player_character, my_tower)
+
+    # Check if we just entered a bug level - trigger Zot's shrinking spell
+    current_floor = my_tower.floors[player_character.z]
+    if current_floor.properties.get('is_bug_level') and not gs.player_is_shrunk:
+        _trigger_shrinking_spell(player_character)
+
     _trigger_room_interaction(player_character, my_tower) # Trigger room interaction for the new room
     interacted_this_turn = True
     print_to_output(f"You arrive at ({player_character.x}, {player_character.y}) on Depth {player_character.z + 1}.")
@@ -3577,10 +3679,17 @@ def handle_warp_room(current_x, current_y, current_room, game_should_quit, my_to
 def process_stairs_up_action(player_character, my_tower, cmd, floor_params_ref):
 
     if cmd == "init":
-        add_log("You see stairs leading upwards. Press 'u' to ascend.")
+        if gs.player_is_shrunk:
+            add_log(f"{COLOR_YELLOW}You see stairs leading upwards, but each step is a cliff face at your size!{COLOR_RESET}")
+            add_log(f"{COLOR_RED}Zot's shrinking spell prevents you from leaving! Defeat the Bug Queen or find a Growth Mushroom!{COLOR_RESET}")
+        else:
+            add_log("You see stairs leading upwards. Press 'u' to ascend.")
         return
 
     if cmd == 'u':
+        if gs.player_is_shrunk:
+            add_log(f"{COLOR_RED}You try to climb but the stairs are impossibly tall! You need to break the shrinking spell first!{COLOR_RESET}")
+            return
         add_log("You begin to climb the stairs.")
         ch_x, ch_y, game_quit, interacted = handle_stairs_up(player_character, my_tower, floor_params_ref)
         if game_quit:
@@ -3600,6 +3709,10 @@ def process_stairs_up_action(player_character, my_tower, cmd, floor_params_ref):
 def process_stairs_down_action(player_character, my_tower, cmd):
 
     if cmd == "init":
+        if gs.player_is_shrunk:
+            add_log(f"{COLOR_YELLOW}You see stairs leading downwards, but each step is a deadly drop at your size!{COLOR_RESET}")
+            add_log(f"{COLOR_RED}Zot's shrinking spell prevents you from leaving! Defeat the Bug Queen or find a Growth Mushroom!{COLOR_RESET}")
+            return
         # Check if this is floor 49 (the gate to floor 50)
         if player_character.z == 48:  # 0-indexed, floor 48 is the 49th floor
             if gs.gate_to_floor_50_unlocked:
@@ -3615,6 +3728,9 @@ def process_stairs_down_action(player_character, my_tower, cmd):
         return
 
     if cmd == 'd':
+        if gs.player_is_shrunk:
+            add_log(f"{COLOR_RED}You peer over the edge but the drop is lethal at your size! Break the shrinking spell first!{COLOR_RESET}")
+            return
         # Check if trying to descend from floor 49 without all shards
         if player_character.z == 48 and not gs.gate_to_floor_50_unlocked:
             add_log(f"{COLOR_RED}The gate remains sealed! You need all 8 Shards of Power!{COLOR_RESET}")

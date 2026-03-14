@@ -335,7 +335,7 @@ last_player_heal = 0
 NEGATIVE_EFFECT_TYPES = {
     'poison', 'damage_over_time', 'confusion', 'blindness', 'silence',
     'defense_penalty', 'web', 'sticky_hands', 'paralysis', 'weakness',
-    'burn', 'freeze', 'life_drain',
+    'burn', 'freeze', 'life_drain', 'shrinking',
 }
 
 # ============================================================================
@@ -344,6 +344,15 @@ NEGATIVE_EFFECT_TYPES = {
 haunted_floors = {}
 pending_tomb_guardian_reward = None
 ephemeral_gardens = {}
+
+# ============================================================================
+# BUG LEVEL TRACKING
+# ============================================================================
+# Tracks which floors are bug levels. Player is shrunk on entry and must
+# defeat the Bug Queen or find the Growth Mushroom to restore normal size.
+bug_level_floors = {}  # floor_index -> True if this floor is a bug level
+player_is_shrunk = False  # True while player is under Zot's shrinking spell
+bug_queen_defeated = False  # Set True when Bug Queen falls on current bug level
 
 # ============================================================================
 # FEY GARDEN INGREDIENTS

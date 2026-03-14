@@ -4,7 +4,7 @@ from collections import deque
 import game_state as gs
 from game_state import (
     add_log, COLOR_GREEN, COLOR_RESET, COLOR_YELLOW, COLOR_GREY,
-    COLOR_RED, COLOR_PURPLE,
+    COLOR_RED, COLOR_PURPLE, COLOR_CYAN,
 )
 
 
@@ -440,6 +440,11 @@ class Tower:
             if generate_vault_on_floor(new_floor, len(self.floors)):
                 add_log(f"{COLOR_PURPLE}A hidden vault chamber has been carved into this floor...{COLOR_RESET}")
 
+            # BUG LEVEL: Spawn Zot's Shrinking Bug Level on floors 8-15
+            # Only one bug level per game, triggered by random chance
+            if self._should_create_bug_level(floor_number):
+                self._create_bug_level(new_floor, floor_number)
+
             # Setup special room mechanics for dungeons and tombs
             self.setup_dungeons_and_tombs(new_floor, len(self.floors))
 
@@ -553,6 +558,70 @@ class Tower:
                         adj_room.room_type = 'M'
                         adj_room.properties['undead_guardian'] = True
                         adj_room.properties['tomb_location'] = (tomb_x, tomb_y, tomb_z)
+
+    def _should_create_bug_level(self, floor_number):
+        """Determine if this floor should be a bug level.
+        One bug level per game, appears on floors 8-15 with 40% chance per floor."""
+        # Only spawn on floors 8-15
+        if floor_number < 8 or floor_number > 15:
+            return False
+        # Only one bug level per game
+        if gs.bug_level_floors:
+            return False
+        # 40% chance per eligible floor (guarantees it shows up in that range)
+        if gs.PLAYTEST:
+            return floor_number == 8  # Always spawn on floor 8 in playtest
+        return random.random() < 0.40
+
+    def _create_bug_level(self, floor, floor_number):
+        """Transform a floor into Zot's Shrinking Bug Level.
+        Replaces all monster rooms with bug monsters and places the Bug Queen."""
+        from game_data import BUG_MONSTER_TEMPLATES
+
+        floor_index = floor_number - 1  # Convert to 0-indexed
+        gs.bug_level_floors[floor_index] = True
+        floor.properties['is_bug_level'] = True
+
+        # Find all monster rooms and empty rooms
+        monster_rooms = []
+        empty_rooms = []
+        for r in range(floor.rows):
+            for c in range(floor.cols):
+                room = floor.grid[r][c]
+                if room.room_type == 'M':
+                    monster_rooms.append((r, c))
+                elif room.room_type == '.':
+                    empty_rooms.append((r, c))
+
+        # Mark all existing monster rooms as bug monsters
+        for r, c in monster_rooms:
+            floor.grid[r][c].properties['is_bug_monster'] = True
+
+        # Place the Bug Queen in an empty room (or monster room if no empty)
+        queen_candidates = empty_rooms if empty_rooms else monster_rooms
+        if queen_candidates:
+            qr, qc = random.choice(queen_candidates)
+            floor.grid[qr][qc].room_type = 'M'
+            floor.grid[qr][qc].properties['is_bug_queen'] = True
+            floor.grid[qr][qc].properties['is_bug_monster'] = True
+
+        # Place a Growth Mushroom in a chest on this floor (backup way to restore size)
+        chest_rooms = []
+        for r in range(floor.rows):
+            for c in range(floor.cols):
+                if floor.grid[r][c].room_type == 'C':
+                    chest_rooms.append((r, c))
+        if chest_rooms:
+            cr, cc = random.choice(chest_rooms)
+            floor.grid[cr][cc].properties['has_growth_mushroom'] = True
+
+        add_log("")
+        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+        add_log(f"{COLOR_RED}*** ZOT'S MISCHIEF ***{COLOR_RESET}")
+        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+        add_log(f"{COLOR_CYAN}You sense strange magic on this floor...{COLOR_RESET}")
+        add_log(f"{COLOR_YELLOW}The air buzzes with the sound of enormous insects!{COLOR_RESET}")
+        add_log("")
 
     def __repr__(self):
         return f"Tower(number_of_floors={len(self.floors)})"

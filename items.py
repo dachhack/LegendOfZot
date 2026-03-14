@@ -1167,6 +1167,26 @@ class Potion(Item):
 
             return True  # Consumed
 
+        elif self.potion_type == 'growth_mushroom':
+            import game_state as gs
+            add_log("")
+            add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+            add_log(f"{COLOR_GREEN}{character.name} eats the {self.name}!{COLOR_RESET}")
+            add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}Warmth floods your body as you begin to GROW!{COLOR_RESET}")
+            add_log(f"{COLOR_GREEN}Your arms stretch, your legs lengthen...{COLOR_RESET}")
+            add_log(f"{COLOR_GREEN}The bugs around you shrink back to their normal size!{COLOR_RESET}")
+            add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}Zot's shrinking spell has been broken!{COLOR_RESET}")
+            add_log(f"{COLOR_GREEN}You can now use the stairs to leave this floor!{COLOR_RESET}")
+            add_log("")
+
+            # Remove shrinking effect
+            gs.player_is_shrunk = False
+            character.remove_status_effect('Shrinking')
+
+            return True  # Consumed
+
         else:
             add_log(f"{character.name} drinks {self.name}, but nothing happens...")
             return True

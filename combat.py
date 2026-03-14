@@ -21,7 +21,7 @@ from game_state import (
     normal_int_range, get_article,
 )
 
-from items import (Trophy, Treasure, Rune, Shard, Towel, Spell,
+from items import (Trophy, Treasure, Rune, Shard, Towel, Spell, Potion,
                    CORROSIVE_MONSTERS, get_base_monster_name, apply_corrosion_effect,
                    apply_rust_effect, degrade_equipment, is_item_identified, identify_item,
                    get_item_display_name, process_potion_effects_in_combat,
@@ -183,6 +183,23 @@ def process_combat_action(player_character, my_tower, cmd):
             if not stacked:
                 player_character.inventory.add_item(trophy)
             add_log(f"{COLOR_YELLOW}[Trophy] You collected: {trophy.name}! (for the Taxidermist){COLOR_RESET}")
+
+        # CHECK FOR BUG QUEEN DEFEAT (status effect path)
+        if gs.active_monster and gs.active_monster.properties.get('is_bug_queen'):
+            gs.bug_queen_defeated = True
+            growth_mushroom = Potion(
+                name="Zot's Growth Mushroom",
+                description="A luminous mushroom pulsing with restorative magic. Eating it will reverse Zot's shrinking spell.",
+                value=0, level=0, potion_type='growth_mushroom', effect_magnitude=0, duration=0
+            )
+            player_character.inventory.add_item(growth_mushroom)
+            add_log("")
+            add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}The Bug Queen drops a glowing mushroom!{COLOR_RESET}")
+            add_log(f"{COLOR_GREEN}You obtained: Zot's Growth Mushroom!{COLOR_RESET}")
+            add_log(f"{COLOR_CYAN}Use it from your inventory to restore your size!{COLOR_RESET}")
+            add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+            add_log("")
 
         # CHECK FOR DUNGEON KEY DROP
         # Check if this monster holds any dungeon keys
@@ -473,6 +490,28 @@ def process_combat_action(player_character, my_tower, cmd):
                 add_log(f"{COLOR_YELLOW}   LEGENDARY UNIQUE TREASURE!   {COLOR_RESET}")
                 add_log(f"{COLOR_YELLOW}You obtained: Platino's Scale!{COLOR_RESET}")
                 add_log(f"{COLOR_CYAN}Halves all physical damage taken when equipped as an accessory.{COLOR_RESET}")
+                add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                add_log("")
+
+            # CHECK FOR BUG QUEEN DEFEAT - Drop Growth Mushroom and restore size
+            if gs.active_monster and gs.active_monster.properties.get('is_bug_queen'):
+                gs.bug_queen_defeated = True
+                # Give the player the Growth Mushroom
+                growth_mushroom = Potion(
+                    name="Zot's Growth Mushroom",
+                    description="A luminous mushroom pulsing with restorative magic. Eating it will reverse Zot's shrinking spell.",
+                    value=0,
+                    level=0,
+                    potion_type='growth_mushroom',
+                    effect_magnitude=0,
+                    duration=0
+                )
+                player_character.inventory.add_item(growth_mushroom)
+                add_log("")
+                add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                add_log(f"{COLOR_YELLOW}The Bug Queen drops a glowing mushroom!{COLOR_RESET}")
+                add_log(f"{COLOR_GREEN}You obtained: Zot's Growth Mushroom!{COLOR_RESET}")
+                add_log(f"{COLOR_CYAN}Use it from your inventory to restore your size!{COLOR_RESET}")
                 add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
                 add_log("")
 

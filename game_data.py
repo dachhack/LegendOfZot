@@ -2079,6 +2079,191 @@ MONSTER_TEMPLATES = [
 ]
 
 # ============================================================================
+# BUG LEVEL MONSTER TEMPLATES
+# ============================================================================
+# These monsters only appear on the special Shrinking Bug Level.
+# They are NOT in MONSTER_TEMPLATES because they don't use normal spawn logic.
+# Instead, they are spawned directly by the bug level generation code.
+# ============================================================================
+
+BUG_MONSTER_TEMPLATES = [
+    {
+        'name': "Titan Beetle",
+        'health': 30,
+        'attack': 10,
+        'defense': 8,
+        'level': 2,
+        'flavor_text': "A massive beetle towers over your shrunken form. Its horn is bigger than you are.",
+        'victory_text': "The beetle topples over with a thunderous crash. Well, thunderous to you.",
+        'elemental_weakness': ['Fire'],
+        'elemental_strength': ['Earth', 'Physical'],
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'paralysis',
+            'chance': 0.20,
+            'duration': 2,
+            'magnitude': 0,
+            'description': 'slams you with its massive horn'
+        }
+    },
+    {
+        'name': "Stinkbug Brute",
+        'health': 25,
+        'attack': 8,
+        'defense': 3,
+        'level': 1,
+        'flavor_text': "A hulking stinkbug blocks your path. The smell alone could kill you at this size.",
+        'victory_text': "The stinkbug releases one final noxious cloud as it expires. Gross.",
+        'elemental_weakness': ['Wind'],
+        'elemental_strength': ['Earth'],
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'poison',
+            'chance': 0.30,
+            'duration': 3,
+            'magnitude': 4,
+            'description': 'sprays you with nauseating stink chemicals'
+        }
+    },
+    {
+        'name': "Mosquito Swarm",
+        'health': 18,
+        'attack': 12,
+        'defense': 1,
+        'level': 1,
+        'flavor_text': "A buzzing cloud of mosquitoes. At your current size, each one is like a flying vampire.",
+        'victory_text': "The swarm disperses, leaving tiny drained husks behind.",
+        'elemental_weakness': ['Fire', 'Wind'],
+        'elemental_strength': ['Physical'],
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'life_drain',
+            'chance': 0.35,
+            'duration': 1,
+            'magnitude': 5,
+            'description': 'drains your blood with dozens of tiny proboscises'
+        }
+    },
+    {
+        'name': "Pill Bug Golem",
+        'health': 40,
+        'attack': 6,
+        'defense': 12,
+        'level': 2,
+        'flavor_text': "A pill bug the size of a boulder has rolled into a defensive ball. It uncurls menacingly.",
+        'victory_text': "The pill bug curls into a ball one last time and doesn't uncurl.",
+        'elemental_weakness': ['Fire'],
+        'elemental_strength': ['Physical', 'Earth'],
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'defense_penalty',
+            'chance': 0.25,
+            'duration': 3,
+            'magnitude': 5,
+            'description': 'rolls over you like a tiny steamroller'
+        }
+    },
+    {
+        'name': "Firefly Mage",
+        'health': 20,
+        'attack': 14,
+        'defense': 2,
+        'level': 2,
+        'flavor_text': "A firefly pulses with arcane light. At this size, its glow is blinding and magical.",
+        'victory_text': "The firefly's light flickers and fades to darkness.",
+        'elemental_weakness': ['Darkness'],
+        'elemental_strength': ['Light', 'Fire'],
+        'attack_element': 'Fire',
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'burn',
+            'chance': 0.30,
+            'duration': 3,
+            'magnitude': 4,
+            'description': 'sears you with concentrated bioluminescent fire'
+        }
+    },
+    {
+        'name': "Ant Soldier",
+        'health': 22,
+        'attack': 9,
+        'defense': 5,
+        'level': 1,
+        'flavor_text': "A soldier ant clacks its mandibles. To your shrunken self, it looks like a war machine.",
+        'victory_text': "The ant falls, its mandibles still twitching with duty.",
+        'elemental_weakness': ['Fire', 'Water'],
+        'elemental_strength': ['Earth'],
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'weakness',
+            'chance': 0.25,
+            'duration': 3,
+            'magnitude': 4,
+            'description': 'sprays formic acid that burns your skin'
+        }
+    },
+    {
+        'name': "Dung Beetle Lord",
+        'health': 35,
+        'attack': 11,
+        'defense': 7,
+        'level': 2,
+        'flavor_text': "A dung beetle rolls a ball twice your size. It regards you as an obstacle. Or maybe an ingredient.",
+        'victory_text': "The dung beetle lord falls. Its precious dung ball rolls away into the darkness.",
+        'elemental_weakness': ['Fire', 'Wind'],
+        'elemental_strength': ['Earth', 'Darkness'],
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'confusion',
+            'chance': 0.25,
+            'duration': 3,
+            'magnitude': 0,
+            'description': 'flings a chunk of dung at your face'
+        }
+    },
+    {
+        'name': "Moth Enchantress",
+        'health': 22,
+        'attack': 11,
+        'defense': 3,
+        'level': 2,
+        'flavor_text': "A moth with hypnotic wing patterns flutters before you. Its scales shimmer with sleep magic.",
+        'victory_text': "The moth flutters to the ground, its enchanting patterns dimming forever.",
+        'elemental_weakness': ['Fire'],
+        'elemental_strength': ['Darkness', 'Light'],
+        'attack_element': 'Arcane',
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'confusion',
+            'chance': 0.35,
+            'duration': 4,
+            'magnitude': 0,
+            'description': 'mesmerizes you with swirling wing patterns'
+        }
+    },
+    {
+        'name': "BUG QUEEN",
+        'health': 65,
+        'attack': 16,
+        'defense': 10,
+        'level': 3,
+        'flavor_text': "The Bug Queen rises from her throne of chitin and silk. She holds Zot's Growth Mushroom in her mandibles. You're going to need that.",
+        'victory_text': "The Bug Queen shrieks and collapses! A glowing mushroom tumbles from her mandibles!",
+        'elemental_weakness': ['Fire'],
+        'elemental_strength': ['Earth', 'Physical', 'Darkness'],
+        'can_talk': True,
+        'greeting_template': "Tiny {title} {name}? The wizard promised me a kingdom. You are trespassing in it!",
+        'special_attack': {
+            'effect_type': 'web',
+            'chance': 0.30,
+            'duration': 3,
+            'magnitude': 0,
+            'description': 'ensnares you in royal silk webbing'
+        }
+    },
+]
+
+# ============================================================================
 # SPECIAL ATTACK BALANCE NOTES
 # ============================================================================
 """
