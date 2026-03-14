@@ -2478,6 +2478,9 @@ def _trigger_room_interaction(player_character, my_tower):
         gs.prompt_cntl = "war_room_mode"
         process_war_room_action(player_character, my_tower, "init")
     elif room.room_type == 'X':
+        if room.properties.get('is_bug_taxidermist'):
+            add_log(f"{COLOR_GREEN}A dung beetle in a leather apron looks up from its workbench.{COLOR_RESET}")
+            add_log(f'{COLOR_CYAN}"Bring me trophies from the hive! I can make something beautiful!"{COLOR_RESET}')
         gs.prompt_cntl = "taxidermist_mode"
         process_taxidermist_action(player_character, my_tower, "init")
     elif room.room_type == 'Z' or room.properties.get('is_puzzle_room'):

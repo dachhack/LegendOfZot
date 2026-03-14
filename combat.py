@@ -29,7 +29,7 @@ from items import (Trophy, Treasure, Rune, Shard, Towel, Spell, Potion,
                    track_equipment_use, drop_monster_items, drop_monster_meat)
 from achievements import check_achievements
 
-from game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES
+from game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
 from dungeon import Room
 
 
@@ -248,6 +248,10 @@ def process_combat_action(player_character, my_tower, cmd):
             if not stacked:
                 player_character.inventory.add_item(trophy)
             add_log(f"{COLOR_YELLOW}[Trophy] You collected: {trophy.name}! (for the Taxidermist){COLOR_RESET}")
+
+        # Bug gear drop - bug monsters have a chance to drop bug-sized weapons/armor
+        if gs.active_monster and gs.active_monster.properties.get('is_bug_monster'):
+            _drop_bug_gear(player_character)
 
         # CHECK FOR BUG QUEEN DEFEAT (status effect path)
         if gs.active_monster and gs.active_monster.properties.get('is_bug_queen'):
@@ -537,6 +541,23 @@ def process_combat_action(player_character, my_tower, cmd):
 
             # Check achievements
             check_achievements(player_character)
+
+            # Trophy drop - chance based on TROPHY_DROPS table
+            trophy = get_trophy_drop(gs.active_monster.name)
+            if trophy:
+                stacked = False
+                for inv_item in player_character.inventory.items:
+                    if isinstance(inv_item, Trophy) and inv_item.name == trophy.name:
+                        inv_item.count += 1
+                        stacked = True
+                        break
+                if not stacked:
+                    player_character.inventory.add_item(trophy)
+                add_log(f"{COLOR_YELLOW}[Trophy] You collected: {trophy.name}! (for the Taxidermist){COLOR_RESET}")
+
+            # Bug gear drop - bug monsters have a chance to drop bug-sized weapons/armor
+            if gs.active_monster and gs.active_monster.properties.get('is_bug_monster'):
+                _drop_bug_gear(player_character)
 
             # CHECK FOR TOMB GUARDIAN REWARD
             # If we just defeated a tomb guardian, award the special reward
@@ -1072,11 +1093,53 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + gold_drop
                     check_achievements(player_character)
 
+                    # Trophy drop - chance based on TROPHY_DROPS table
+                    trophy = get_trophy_drop(gs.active_monster.name)
+                    if trophy:
+                        stacked = False
+                        for inv_item in player_character.inventory.items:
+                            if isinstance(inv_item, Trophy) and inv_item.name == trophy.name:
+                                inv_item.count += 1
+                                stacked = True
+                                break
+                        if not stacked:
+                            player_character.inventory.add_item(trophy)
+                        add_log(f"{COLOR_YELLOW}[Trophy] You collected: {trophy.name}! (for the Taxidermist){COLOR_RESET}")
+
+                    # Bug gear drop
+                    if gs.active_monster and gs.active_monster.properties.get('is_bug_monster'):
+                        _drop_bug_gear(player_character)
+
+                    # CHECK FOR BUG QUEEN DEFEAT
+                    if gs.active_monster and gs.active_monster.properties.get('is_bug_queen'):
+                        gs.bug_queen_defeated = True
+                        growth_mushroom = Potion(
+                            name="Zot's Growth Mushroom",
+                            description="A luminous mushroom pulsing with restorative magic. Eating it will reverse Zot's shrinking spell.",
+                            value=0, level=0, potion_type='growth_mushroom', effect_magnitude=0, duration=0
+                        )
+                        player_character.inventory.add_item(growth_mushroom)
+                        add_log("")
+                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                        add_log(f"{COLOR_YELLOW}The Bug Queen drops a glowing mushroom!{COLOR_RESET}")
+                        add_log(f"{COLOR_GREEN}You obtained: Zot's Growth Mushroom!{COLOR_RESET}")
+                        add_log(f"{COLOR_CYAN}Use it from your inventory to restore your size!{COLOR_RESET}")
+                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                        add_log("")
+
                     # Remove monster from room
                     current_floor = my_tower.floors[player_character.z]
                     room = current_floor.grid[player_character.y][player_character.x]
+                    _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
                     room.room_type = '.'  # Clear room
+                    drop_monster_items(gs.active_monster, player_character)
+                    drop_monster_meat(gs.active_monster, player_character)
                     gs.active_monster = None
+
+                    # Check if all bugs are dead and the Bug Queen should spawn
+                    if _was_bug_monster:
+                        _check_bug_queen_spawn(player_character, my_tower)
+
                     main._trigger_room_interaction(player_character, my_tower)  # Re-evaluate room as '.'
                     return  # Combat ended
 
@@ -1125,6 +1188,32 @@ def get_trophy_drop(monster_name):
         monster_source=monster_name,
         count=1
     )
+
+
+def _drop_bug_gear(player_character):
+    """25% chance to drop a random bug weapon or armor after killing a bug monster."""
+    from items import Weapon, Armor
+    if random.random() > 0.25:
+        return
+    # 50/50 weapon or armor
+    if random.random() < 0.5:
+        template = random.choice(BUG_WEAPON_TEMPLATES)
+        item = Weapon(
+            name=template['name'], description=template['description'],
+            attack_bonus=template['attack_bonus'], value=template['value'],
+            level=template['level'], upgrade_level=0,
+            elemental_strength=template.get('elemental_strength', ["None"]),
+        )
+    else:
+        template = random.choice(BUG_ARMOR_TEMPLATES)
+        item = Armor(
+            name=template['name'], description=template['description'],
+            defense_bonus=template['defense_bonus'], value=template['value'],
+            level=template['level'], upgrade_level=0,
+            elemental_strength=template.get('elemental_strength', ["None"]),
+        )
+    player_character.inventory.add_item(item)
+    add_log(f"{COLOR_GREEN}The bug dropped some gear: {item.name}!{COLOR_RESET}")
 
 
 def get_player_trophies(player_character):

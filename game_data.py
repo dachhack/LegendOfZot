@@ -83,6 +83,17 @@ TROPHY_DROPS = {
     "Manticore":       ("Manticore Spine",         "A hollow spine loaded with dried venom.",         65,  0.22),
     "Griffin":         ("Griffin Feather",         "A golden flight feather as long as a sword.",     70,  0.22),
     "Roc":             ("Roc Talon",               "A talon as long as a dagger, razor-sharp.",       80,  0.18),
+
+    # BUG HIVE collection pieces (Shrinking Bug Level)
+    "Titan Beetle":    ("Titan Beetle Horn",       "A curved horn of iridescent chitin, impossibly hard.",         30,  0.35),
+    "Stinkbug Brute":  ("Stinkbug Gland",          "A swollen gland that still reeks. Handle with care.",         25,  0.35),
+    "Mosquito Swarm":  ("Mosquito Proboscis",      "A needle-like proboscis as long as your arm (at this size).", 20,  0.40),
+    "Pill Bug Golem":  ("Pill Bug Shell Plate",    "A curved armor plate from a pill bug's carapace.",            30,  0.35),
+    "Firefly Mage":    ("Firefly Lantern Gland",   "A bioluminescent organ that pulses with soft green light.",   35,  0.30),
+    "Ant Soldier":     ("Ant Mandible",            "A serrated mandible that could cut through stone.",           25,  0.35),
+    "Dung Beetle Lord": ("Dung Beetle Carapace",   "A polished piece of dung beetle shell, surprisingly pretty.", 30,  0.35),
+    "Moth Enchantress": ("Moth Wing Dust",         "Shimmering scales from an enchanted moth wing.",              35,  0.30),
+    "BUG QUEEN":       ("Royal Chitin Crown",      "A fragment of the Bug Queen's crown, thrumming with power.",  60,  0.80),
 }
 
 # Seven collections: each needs exactly 3 trophy pieces
@@ -143,6 +154,14 @@ TAXIDERMIST_COLLECTIONS = {
         "reward_value": 2800,
         "reward_level": 9,
         "flavor": "The taxidermist sets the talon in silver. 'Every creature in this cavern will sense this ring and think twice.'",
+    },
+    "Bug Hive": {
+        "pieces": ["Royal Chitin Crown", "Titan Beetle Horn", "Moth Wing Dust"],
+        "reward_name": "Chitin Crown of the Hive",
+        "reward_desc": "A crown forged from the bug hive's mightiest. +4 DEF, +3 ATK, grants permanent paralysis immunity.",
+        "reward_value": 1500,
+        "reward_level": 4,
+        "flavor": "The bug taxidermist clicks excitedly. 'Crown... horn... dust... YES! A masterwork! The hive's power is yours, tiny one!'",
     },
 }
 
