@@ -582,6 +582,14 @@ class Tower:
         gs.bug_level_floors[floor_index] = True
         floor.properties['is_bug_level'] = True
 
+        # Remove all warp rooms - no escaping the bug level via portals!
+        for r in range(floor.rows):
+            for c in range(floor.cols):
+                room = floor.grid[r][c]
+                if room.room_type == 'W':
+                    room.room_type = 'M'
+                    room.properties['is_bug_monster'] = True
+
         # Find all monster rooms and empty rooms
         monster_rooms = []
         empty_rooms = []

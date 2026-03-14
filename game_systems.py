@@ -2671,6 +2671,11 @@ def _execute_warp(player_character, my_tower, floor_params_ref, is_vault_warp, v
         # Reveal
         target_floor.grid[player_character.y][player_character.x].discovered = True
         reveal_adjacent_walls(player_character, my_tower)
+
+        # Check if we warped into a bug level - trigger shrinking spell
+        if target_floor.properties.get('is_bug_level') and not gs.player_is_shrunk:
+            _trigger_shrinking_spell(player_character)
+
         _trigger_room_interaction(player_character, my_tower)  # Trigger interaction for the new room
         add_log(f"You emerge disoriented in a new room at ({player_character.x}, {player_character.y}) on Floor {player_character.z + 1}.")
 
@@ -3668,6 +3673,11 @@ def handle_warp_room(current_x, current_y, current_room, game_should_quit, my_to
 
         player_character.x = new_x
         player_character.y = new_y
+
+        # Check if we warped into a bug level - trigger shrinking spell
+        warp_target_floor = my_tower.floors[player_character.z]
+        if warp_target_floor.properties.get('is_bug_level') and not gs.player_is_shrunk:
+            _trigger_shrinking_spell(player_character)
 
         print_to_output(f"You emerge disoriented in a new room at ({player_character.x}, {player_character.y}) on Depth {player_character.z + 1}!")
         interacted_this_turn = True # A turn was definitely consumed by warping
