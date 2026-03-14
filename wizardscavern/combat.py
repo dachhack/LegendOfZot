@@ -867,9 +867,14 @@ def process_spell_memorization_action(player_character, my_tower, cmd):
         else:
             add_log("Available Spells:")
             for i, spell in enumerate(all_spells):
+                display_name = get_item_display_name(spell)
+                identified = is_item_identified(spell)
                 slots_needed = player_character.get_spell_slots(spell)
                 memorized_marker = " [MEMORIZED]" if spell in player_character.memorized_spells else ""
-                add_log(f"  {i + 1}. {spell.name} (Cost: {spell.mana_cost} MP, Lvl {spell.level}, {slots_needed} slot{'s' if slots_needed > 1 else ''}){memorized_marker}")
+                if identified:
+                    add_log(f"  {i + 1}. {display_name} (Cost: {spell.mana_cost} MP, Lvl {spell.level}, {slots_needed} slot{'s' if slots_needed > 1 else ''}){memorized_marker}")
+                else:
+                    add_log(f"  {i + 1}. {display_name} [?]")
 
             add_log("")
             add_log("Memorized Spells:")

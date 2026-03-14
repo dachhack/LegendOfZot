@@ -3078,16 +3078,21 @@ class WizardsCavernApp(toga.App):
             else:
                 available_spells_html += "<ul>"
                 for i, spell in enumerate(all_spells):
-                    slots_needed = gs.player_character.get_spell_slots(spell)
+                    identified = is_item_identified(spell)
+                    display_name = get_item_display_name(spell)
                     is_memorized = spell in gs.player_character.memorized_spells
                     color = "#888" if is_memorized else "#FFF"
                     marker = " <span style='color: #4CAF50;'>[MEM]</span>" if is_memorized else ""
 
-                    spell_info = f"<b>{spell.name}</b>{marker}<br>"
-                    spell_info += f"&nbsp;&nbsp;L{spell.level} | "
-                    spell_info += f"{spell.mana_cost} MP | "
-                    spell_info += f"{slots_needed} slot{'s' if slots_needed > 1 else ''}<br>"
-                    spell_info += f"&nbsp;&nbsp;Type: {spell.spell_type}"
+                    if identified:
+                        slots_needed = gs.player_character.get_spell_slots(spell)
+                        spell_info = f"<b>{display_name}</b>{marker}<br>"
+                        spell_info += f"&nbsp;&nbsp;L{spell.level} | "
+                        spell_info += f"{spell.mana_cost} MP | "
+                        spell_info += f"{slots_needed} slot{'s' if slots_needed > 1 else ''}<br>"
+                        spell_info += f"&nbsp;&nbsp;Type: {spell.spell_type}"
+                    else:
+                        spell_info = f"<b>{display_name}</b> <span style='color: #888;'>[?]</span>"
 
                     available_spells_html += f"<li style='color: {color}; margin-bottom: 5px;'><b>{i + 1}.</b> {spell_info}</li>"
                 available_spells_html += "</ul>"
