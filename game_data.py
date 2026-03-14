@@ -2086,6 +2086,28 @@ MONSTER_TEMPLATES = [
 # Instead, they are spawned directly by the bug level generation code.
 # ============================================================================
 
+# ============================================================================
+# BUG-THEMED WEAPON AND ARMOR TEMPLATES
+# Used by bug merchants on the shrinking bug level.
+# Level 1-2 range to match floors 8-15 player power level.
+# ============================================================================
+
+BUG_WEAPON_TEMPLATES = [
+    {'name': "Stinger Blade", 'description': "A sharpened wasp stinger, perfect for bug-sized combat.", 'attack_bonus': 4, 'value': 40, 'level': 1, 'elemental_strength': ["Poison"]},
+    {'name': "Mandible Axe", 'description': "An ant mandible repurposed as a wicked axe.", 'attack_bonus': 6, 'value': 70, 'level': 1, 'elemental_strength': ["Physical"]},
+    {'name': "Thorax Spear", 'description': "A beetle leg sharpened to a deadly point.", 'attack_bonus': 5, 'value': 55, 'level': 1, 'elemental_strength': ["None"]},
+    {'name': "Firefly Wand", 'description': "A glowing firefly abdomen that crackles with bioluminescent energy.", 'attack_bonus': 7, 'value': 90, 'level': 2, 'elemental_strength': ["Fire"]},
+    {'name': "Scorpion Tail Whip", 'description': "A venomous scorpion tail segment, still dripping.", 'attack_bonus': 8, 'value': 110, 'level': 2, 'elemental_strength': ["Poison"]},
+]
+
+BUG_ARMOR_TEMPLATES = [
+    {'name': "Chitin Shell", 'description': "A piece of beetle carapace strapped on as armor.", 'defense_bonus': 3, 'value': 45, 'level': 1, 'elemental_strength': ["Earth"]},
+    {'name': "Silk Weave", 'description': "Spider silk woven into surprisingly tough armor.", 'defense_bonus': 4, 'value': 65, 'level': 1, 'elemental_strength': ["None"]},
+    {'name': "Moth Wing Cape", 'description': "Shimmering moth wing scales that deflect attacks.", 'defense_bonus': 3, 'value': 50, 'level': 1, 'elemental_strength': ["Air"]},
+    {'name': "Pill Bug Plate", 'description': "Interlocking pill bug segments form heavy but sturdy armor.", 'defense_bonus': 5, 'value': 85, 'level': 2, 'elemental_strength': ["Earth"]},
+    {'name': "Royal Jelly Mail", 'description': "Hardened royal jelly molded into glistening armor.", 'defense_bonus': 6, 'value': 120, 'level': 2, 'elemental_strength': ["None"]},
+]
+
 BUG_MONSTER_TEMPLATES = [
     {
         'name': "Titan Beetle",

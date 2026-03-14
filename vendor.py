@@ -51,13 +51,19 @@ def _get_enhanced_armor(floor_level):
 # ============================================================================
 
 class Vendor:
-    def __init__(self, name, gold, player_character, starting=False, magic_shop=False):
+    def __init__(self, name, gold, player_character, starting=False, magic_shop=False, bug_merchant=False):
         self.name = name
         self.gold = gold
         self.inventory = Inventory()
         self.player = player_character
         self.is_magic_shop = magic_shop
-        if magic_shop:
+        self.is_bug_merchant = bug_merchant
+        if bug_merchant:
+            # Bug merchant on the shrinking bug level - sells bug-sized gear
+            bug_items = generate_bug_merchant_inventory()
+            for item in bug_items:
+                self.inventory.add_item_quiet(item)
+        elif magic_shop:
             # Ye Olde Magic Shoppe - specialized arcane inventory
             magic_items = generate_magic_shop_inventory(player_character.z, player_character)
             for item in magic_items:
@@ -256,6 +262,68 @@ MAGIC_SHOP_MESSAGES = {
 
 MAGIC_SHOP_CHANCE = 0.15  # 15% chance on floors 20+
 MAGIC_SHOP_MIN_FLOOR = 20
+
+# ============================================================================
+# BUG MERCHANT DATA (Shrinking Bug Level)
+# ============================================================================
+
+BUG_MERCHANT_NAMES = [
+    "Clickwick the Weevil",
+    "Madame Thorax",
+    "Old Chitin-face",
+    "Buzzy McFly",
+    "The Silk Spinner",
+    "Grub the Dealer",
+]
+
+BUG_MERCHANT_GREETINGS = {
+    "Clickwick the Weevil": "A weevil in a tiny top hat clicks its mandibles. 'Shrunk, are ya? I've got just the gear for your... condition.'",
+    "Madame Thorax": "A regal mantis adjusts her spectacles. 'Welcome, little one. My wares are crafted from the finest chitin.'",
+    "Old Chitin-face": "A scarred beetle grunts from behind a counter of bark. 'Bug-sized gear. Fair prices. No refunds.'",
+    "Buzzy McFly": "A hyperactive fly rubs its hands together. 'BZZT! Welcome welcome! Everything must go! Buzz buzz!'",
+    "The Silk Spinner": "A spider delicately arranges silk-wrapped bundles. 'I spin only the finest armor, dear. Try not to get eaten.'",
+    "Grub the Dealer": "A fat grub lounges on a mushroom cap. 'Psst. You need gear? I got gear. Real bug-quality stuff.'",
+}
+
+
+def generate_bug_merchant_inventory():
+    """Generate inventory for a bug merchant on the shrinking bug level.
+    Stocks bug-themed weapons, armor, and healing potions."""
+    from game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+
+    items = []
+
+    # 2 random bug weapons
+    weapons = random.sample(BUG_WEAPON_TEMPLATES, min(2, len(BUG_WEAPON_TEMPLATES)))
+    for wt in weapons:
+        w = Weapon(
+            name=wt['name'], description=wt['description'],
+            attack_bonus=wt['attack_bonus'], value=wt['value'],
+            level=wt['level'], upgrade_level=0,
+            elemental_strength=wt.get('elemental_strength', ["None"]),
+        )
+        items.append(w)
+
+    # 2 random bug armors
+    armors = random.sample(BUG_ARMOR_TEMPLATES, min(2, len(BUG_ARMOR_TEMPLATES)))
+    for at in armors:
+        a = Armor(
+            name=at['name'], description=at['description'],
+            defense_bonus=at['defense_bonus'], value=at['value'],
+            level=at['level'], upgrade_level=0,
+            elemental_strength=at.get('elemental_strength', ["None"]),
+        )
+        items.append(a)
+
+    # 2-3 healing potions (nectar-themed)
+    num_potions = random.randint(2, 3)
+    for _ in range(num_potions):
+        items.append(Potion(
+            "Nectar Vial", "A drop of flower nectar - a full meal at this size.",
+            value=25, level=1, potion_type='healing', effect_magnitude=35,
+        ))
+
+    return items
 
 
 # ============================================================================

@@ -2140,7 +2140,7 @@ def _trigger_room_interaction(player_character, my_tower):
 
     if room.room_type == 'V':
         coords = (player_character.x, player_character.y, player_character.z)
-        
+
         # Check if this is a Shard Vault (requires rune to enter)
         shard_type = room.properties.get('shard_vault_type')
         if shard_type and not gs.shards_obtained.get(shard_type):
@@ -2148,10 +2148,15 @@ def _trigger_room_interaction(player_character, my_tower):
             gs.prompt_cntl = "shard_vault_mode"
             process_shard_vault_action(player_character, my_tower, "init")
         else:
-            # Normal vendor vault or Magic Shop
+            # Normal vendor vault, Magic Shop, or Bug Merchant
             if coords not in gs.encountered_vendors:
                 is_magic = room.properties.get('is_magic_shop', False)
-                if is_magic:
+                is_bug = room.properties.get('is_bug_merchant', False)
+                if is_bug:
+                    from vendor import BUG_MERCHANT_NAMES
+                    v_name = random.choice(BUG_MERCHANT_NAMES)
+                    new_vendor = Vendor(name=v_name, gold=random.randint(100, 300), player_character=player_character, bug_merchant=True)
+                elif is_magic:
                     v_name = random.choice(MAGIC_SHOP_NAMES)
                     new_vendor = Vendor(name=v_name, gold=random.randint(500, 1200), player_character=player_character, magic_shop=True)
                 else:
@@ -2161,7 +2166,13 @@ def _trigger_room_interaction(player_character, my_tower):
 
             gs.active_vendor = gs.encountered_vendors[coords]
             is_magic = room.properties.get('is_magic_shop', False)
-            if is_magic:
+            is_bug = room.properties.get('is_bug_merchant', False)
+            if is_bug:
+                from vendor import BUG_MERCHANT_GREETINGS
+                greeting = BUG_MERCHANT_GREETINGS.get(gs.active_vendor.name, f"A bug merchant chitters at you. 'Need gear, tiny one?'")
+                set_vendor_greeting(greeting)
+                add_log(f"{COLOR_GREEN}{greeting}{COLOR_RESET}")
+            elif is_magic:
                 greeting = MAGIC_SHOP_MESSAGES.get(gs.active_vendor.name, "You have found Ye Olde Magic Shoppe. Arcane wonders await within.")
                 set_vendor_greeting(greeting)
                 add_log(f"{COLOR_PURPLE}{greeting}{COLOR_RESET}")
@@ -3543,9 +3554,36 @@ def _trigger_shrinking_spell(player_character):
     add_log(f"{COLOR_YELLOW}The world grows larger... no, YOU are growing smaller!{COLOR_RESET}")
     add_log(f"{COLOR_RED}You shrink to the size of an insect!{COLOR_RESET}")
     add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+
+    # Unequip all gear - nothing fits at insect size!
+    gear_dropped = False
+    if player_character.equipped_weapon:
+        wep_name = player_character.equipped_weapon.name
+        player_character.equipped_weapon = None
+        add_log(f"{COLOR_YELLOW}Your {wep_name} clatters to the ground, now bigger than you are!{COLOR_RESET}")
+        gear_dropped = True
+    if player_character.equipped_armor:
+        arm_name = player_character.equipped_armor.name
+        player_character.equipped_armor = None
+        add_log(f"{COLOR_YELLOW}You tumble out of your {arm_name} like a pea from a pod!{COLOR_RESET}")
+        gear_dropped = True
+    for slot in range(4):
+        if player_character.equipped_accessories[slot] is not None:
+            acc = player_character.equipped_accessories[slot]
+            player_character._remove_accessory_bonuses(acc)
+            acc.is_equipped = False
+            player_character.equipped_accessories[slot] = None
+            add_log(f"{COLOR_YELLOW}Your {acc.name} slips off - it's enormous now!{COLOR_RESET}")
+            gear_dropped = True
+    if gear_dropped:
+        add_log(f"{COLOR_RED}None of your gear fits anymore! You'll need to find bug-sized equipment!{COLOR_RESET}")
+    else:
+        add_log(f"{COLOR_RED}Good thing you weren't wearing much - nothing would fit now!{COLOR_RESET}")
+
     add_log(f"{COLOR_YELLOW}The bugs on this floor now tower over you!{COLOR_RESET}")
     add_log(f"{COLOR_CYAN}Find and defeat the Bug Queen or find a Growth Mushroom{COLOR_RESET}")
     add_log(f"{COLOR_CYAN}to restore your size and escape this floor!{COLOR_RESET}")
+    add_log(f"{COLOR_CYAN}Look for bug merchants to find gear that fits!{COLOR_RESET}")
     add_log(f"{COLOR_RED}The stairs are sealed by Zot's magic while you are shrunk!{COLOR_RESET}")
     add_log("")
 
