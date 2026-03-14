@@ -582,13 +582,19 @@ class Tower:
         gs.bug_level_floors[floor_index] = True
         floor.properties['is_bug_level'] = True
 
-        # Remove all warp rooms - no escaping the bug level via portals!
+        # Strip rooms that don't fit the bug hive theme.
+        # Keep: U (stairs up), D (stairs down), C (chests), M (monsters), . (empty), # (walls)
+        # Convert everything else to bug monsters or empty floors.
+        rooms_to_bugs = {'W', 'V', 'A', 'N', 'T'}    # Warps, vendors, altars, dungeons, tombs -> bugs
+        rooms_to_empty = {'P', 'L', 'G', 'O', 'B', 'F', 'Q', 'K', 'X', 'Z'}  # Pools, libraries, etc -> empty
         for r in range(floor.rows):
             for c in range(floor.cols):
                 room = floor.grid[r][c]
-                if room.room_type == 'W':
+                if room.room_type in rooms_to_bugs:
                     room.room_type = 'M'
                     room.properties['is_bug_monster'] = True
+                elif room.room_type in rooms_to_empty:
+                    room.room_type = '.'
 
         # Find all monster rooms and empty rooms
         monster_rooms = []
