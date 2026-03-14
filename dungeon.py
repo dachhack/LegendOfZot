@@ -605,13 +605,10 @@ class Tower:
         for r, c in monster_rooms:
             floor.grid[r][c].properties['is_bug_monster'] = True
 
-        # Place the Bug Queen in an empty room (or monster room if no empty)
-        queen_candidates = empty_rooms if empty_rooms else monster_rooms
-        if queen_candidates:
-            qr, qc = random.choice(queen_candidates)
-            floor.grid[qr][qc].room_type = 'M'
-            floor.grid[qr][qc].properties['is_bug_queen'] = True
-            floor.grid[qr][qc].properties['is_bug_monster'] = True
+        # NOTE: The Bug Queen is NOT placed during floor creation.
+        # She spawns dynamically after all other bug monsters are defeated,
+        # appearing to avenge her fallen swarm. See _check_bug_queen_spawn()
+        # in combat.py.
 
         # Place a Growth Mushroom in a chest on this floor (backup way to restore size)
         chest_rooms = []

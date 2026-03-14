@@ -29,7 +29,8 @@ from items import (Trophy, Treasure, Rune, Shard, Towel, Spell, Potion,
                    track_equipment_use, drop_monster_items, drop_monster_meat)
 from achievements import check_achievements
 
-from game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS
+from game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES
+from dungeon import Room
 
 
 # ---------------------------------------------------------------------------
@@ -40,6 +41,70 @@ def _main():
     """Return the game_systems module (lazy import)."""
     import game_systems as main
     return main
+
+
+def _check_bug_queen_spawn(player_character, my_tower):
+    """After a bug monster is killed, check if all bugs on the floor are dead.
+    If so, the Bug Queen spawns to avenge her swarm."""
+    current_floor = my_tower.floors[player_character.z]
+
+    # Only applies on bug levels, and only if queen hasn't been defeated yet
+    if not current_floor.properties.get('is_bug_level'):
+        return
+    if gs.bug_queen_defeated:
+        return
+
+    # Count remaining living bug monster rooms (room_type still 'M' with is_bug_monster)
+    remaining_bugs = 0
+    for r in range(current_floor.rows):
+        for c in range(current_floor.cols):
+            room = current_floor.grid[r][c]
+            if room.room_type == 'M' and room.properties.get('is_bug_monster'):
+                remaining_bugs += 1
+
+    if remaining_bugs > 0:
+        return
+
+    # All bugs are dead! The Bug Queen appears to avenge them.
+    # Find a suitable empty room near the player to place her
+    import random
+    px, py = player_character.x, player_character.y
+    candidates = []
+    for r in range(current_floor.rows):
+        for c in range(current_floor.cols):
+            room = current_floor.grid[r][c]
+            if room.room_type == '.' and not room.properties.get('is_bug_queen'):
+                dist = abs(r - py) + abs(c - px)
+                candidates.append((dist, r, c))
+
+    if not candidates:
+        return
+
+    # Pick a room 2-5 steps away for dramatic entrance, fallback to closest
+    nearby = [cand for cand in candidates if 2 <= cand[0] <= 5]
+    if not nearby:
+        nearby = sorted(candidates, key=lambda x: x[0])[:5]
+    _, qr, qc = random.choice(nearby)
+
+    # Spawn the queen
+    queen_room = current_floor.grid[qr][qc]
+    queen_room.room_type = 'M'
+    queen_room.properties['is_bug_queen'] = True
+    queen_room.properties['is_bug_monster'] = True
+    queen_room.discovered = True  # Reveal her position on the map
+
+    add_log("")
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log(f"{COLOR_RED}The ground trembles beneath your tiny feet...{COLOR_RESET}")
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log(f"{COLOR_YELLOW}A furious shriek echoes through the chamber!{COLOR_RESET}")
+    add_log(f'{COLOR_CYAN}"YOU SLAUGHTERED MY CHILDREN!"{COLOR_RESET}')
+    add_log(f'{COLOR_CYAN}"NOW FACE THEIR MOTHER!"{COLOR_RESET}')
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log(f"{COLOR_RED}*** THE BUG QUEEN HAS APPEARED! ***{COLOR_RESET}")
+    add_log(f"{COLOR_YELLOW}She has revealed herself on the map. Find her!{COLOR_RESET}")
+    add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+    add_log("")
 
 
 # ---------------------------------------------------------------------------
@@ -217,12 +282,18 @@ def process_combat_action(player_character, my_tower, cmd):
 
         current_floor = my_tower.floors[player_character.z]
         room = current_floor.grid[player_character.y][player_character.x]
+        _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
         room.room_type = '.'  # Clear room
         # Drop items from monster
         drop_monster_items(gs.active_monster, player_character)
         # Drop meat from monster if edible
         drop_monster_meat(gs.active_monster, player_character)
         gs.active_monster = None
+
+        # Check if all bugs are dead and the Bug Queen should spawn
+        if _was_bug_monster:
+            _check_bug_queen_spawn(player_character, my_tower)
+
         main._trigger_room_interaction(player_character, my_tower)  # Re-evaluate room as '.'
         return  # Combat ended by status effect
 
@@ -532,6 +603,7 @@ def process_combat_action(player_character, my_tower, cmd):
             # Remove monster from room
             current_floor = my_tower.floors[player_character.z]
             room = current_floor.grid[player_character.y][player_character.x]
+            _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
             room.room_type = '.'  # Clear room
             # Drop items from monster
             drop_monster_items(gs.active_monster, player_character)
@@ -540,6 +612,11 @@ def process_combat_action(player_character, my_tower, cmd):
             _fire_kill = (damage_type == "Fire")
             gs.active_monster = None
             drop_monster_meat(_dying_monster, player_character, fire_killed=_fire_kill)
+
+            # Check if all bugs are dead and the Bug Queen should spawn
+            if _was_bug_monster:
+                _check_bug_queen_spawn(player_character, my_tower)
+
             main._trigger_room_interaction(player_character, my_tower)  # Re-evaluate room as '.'
             return
 
