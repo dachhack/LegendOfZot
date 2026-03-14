@@ -87,12 +87,14 @@ TROPHY_DROPS = {
     # BUG HIVE collection pieces (Shrinking Bug Level)
     "Titan Beetle":    ("Titan Beetle Horn",       "A curved horn of iridescent chitin, impossibly hard.",         30,  0.35),
     "Stinkbug Brute":  ("Stinkbug Gland",          "A swollen gland that still reeks. Handle with care.",         25,  0.35),
-    "Mosquito Swarm":  ("Mosquito Proboscis",      "A needle-like proboscis as long as your arm (at this size).", 20,  0.40),
+    "Fly Swarm":       ("Fly Swarm Wings",         "A handful of iridescent fly wings, still buzzing faintly.",   20,  0.40),
     "Pill Bug Golem":  ("Pill Bug Shell Plate",    "A curved armor plate from a pill bug's carapace.",            30,  0.35),
     "Firefly Mage":    ("Firefly Lantern Gland",   "A bioluminescent organ that pulses with soft green light.",   35,  0.30),
     "Ant Soldier":     ("Ant Mandible",            "A serrated mandible that could cut through stone.",           25,  0.35),
     "Dung Beetle Lord": ("Dung Beetle Carapace",   "A polished piece of dung beetle shell, surprisingly pretty.", 30,  0.35),
-    "Moth Enchantress": ("Moth Wing Dust",         "Shimmering scales from an enchanted moth wing.",              35,  0.30),
+    "Dragonfly Enchantress": ("Dragonfly Wing Dust", "Shimmering scales from an enchanted dragonfly wing.",         35,  0.30),
+    "Earthworm":       ("Earthworm Segment",       "A tough, rubbery segment of giant earthworm.",               15,  0.45),
+    "Snail":           ("Snail Shell Shard",        "A pearlescent fragment of snail shell, surprisingly hard.",  20,  0.40),
     "BUG QUEEN":       ("Royal Chitin Crown",      "A fragment of the Bug Queen's crown, thrumming with power.",  60,  0.80),
 }
 
@@ -156,7 +158,7 @@ TAXIDERMIST_COLLECTIONS = {
         "flavor": "The taxidermist sets the talon in silver. 'Every creature in this cavern will sense this ring and think twice.'",
     },
     "Bug Hive": {
-        "pieces": ["Royal Chitin Crown", "Titan Beetle Horn", "Moth Wing Dust"],
+        "pieces": ["Royal Chitin Crown", "Titan Beetle Horn", "Dragonfly Wing Dust"],
         "reward_name": "Chitin Crown of the Hive",
         "reward_desc": "A crown forged from the bug hive's mightiest. +4 DEF, +3 ATK, grants permanent paralysis immunity.",
         "reward_value": 1500,
@@ -2167,13 +2169,13 @@ BUG_MONSTER_TEMPLATES = [
         }
     },
     {
-        'name': "Mosquito Swarm",
+        'name': "Fly Swarm",
         'health': 18,
         'attack': 12,
         'defense': 1,
         'level': 1,
-        'flavor_text': "A buzzing cloud of mosquitoes. At your current size, each one is like a flying vampire.",
-        'victory_text': "The swarm disperses, leaving tiny drained husks behind.",
+        'flavor_text': "A buzzing cloud of flies. At your current size, each one is like a dive-bombing fighter jet.",
+        'victory_text': "The swarm disperses, leaving twitching wings scattered on the ground.",
         'elemental_weakness': ['Fire', 'Wind'],
         'elemental_strength': ['Physical'],
         'can_talk': False,
@@ -2182,7 +2184,7 @@ BUG_MONSTER_TEMPLATES = [
             'chance': 0.35,
             'duration': 1,
             'magnitude': 5,
-            'description': 'drains your blood with dozens of tiny proboscises'
+            'description': 'swarms you with dozens of biting flies'
         }
     },
     {
@@ -2263,13 +2265,13 @@ BUG_MONSTER_TEMPLATES = [
         }
     },
     {
-        'name': "Moth Enchantress",
+        'name': "Dragonfly Enchantress",
         'health': 22,
         'attack': 11,
         'defense': 3,
         'level': 2,
-        'flavor_text': "A moth with hypnotic wing patterns flutters before you. Its scales shimmer with sleep magic.",
-        'victory_text': "The moth flutters to the ground, its enchanting patterns dimming forever.",
+        'flavor_text': "A dragonfly with iridescent wings hovers before you. Its compound eyes shimmer with arcane light.",
+        'victory_text': "The dragonfly spirals downward, its enchanting wings going still.",
         'elemental_weakness': ['Fire'],
         'elemental_strength': ['Darkness', 'Light'],
         'attack_element': 'Arcane',
@@ -2279,7 +2281,45 @@ BUG_MONSTER_TEMPLATES = [
             'chance': 0.35,
             'duration': 4,
             'magnitude': 0,
-            'description': 'mesmerizes you with swirling wing patterns'
+            'description': 'mesmerizes you with prismatic wing flashes'
+        }
+    },
+    {
+        'name': "Earthworm",
+        'health': 28,
+        'attack': 7,
+        'defense': 4,
+        'level': 1,
+        'flavor_text': "A massive earthworm bursts from the soil. Its segmented body writhes with surprising speed.",
+        'victory_text': "The earthworm retreats into the earth, leaving a tunnel behind.",
+        'elemental_weakness': ['Fire', 'Light'],
+        'elemental_strength': ['Earth'],
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'weakness',
+            'chance': 0.25,
+            'duration': 3,
+            'magnitude': 3,
+            'description': 'coils around you and squeezes tight'
+        }
+    },
+    {
+        'name': "Snail",
+        'health': 35,
+        'attack': 5,
+        'defense': 10,
+        'level': 1,
+        'flavor_text': "A giant snail oozes toward you, leaving a corrosive trail. Its shell is like a fortress.",
+        'victory_text': "The snail withdraws into its shell one final time, cracking as it topples over.",
+        'elemental_weakness': ['Fire', 'Poison'],
+        'elemental_strength': ['Physical', 'Earth'],
+        'can_talk': False,
+        'special_attack': {
+            'effect_type': 'defense_penalty',
+            'chance': 0.20,
+            'duration': 3,
+            'magnitude': 4,
+            'description': 'coats you in corrosive slime'
         }
     },
     {

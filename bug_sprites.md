@@ -1,50 +1,29 @@
 # Bug Monster Sprite Assignments
 
-All bug monsters use the **Pest1** sprite sheet (16x16 pixel cells, 8 columns x 11 rows).
+All bug monsters use the **Compendium** sprite sheet (18x18 pixel cells, 30 columns x 18 rows).
 
 ## Current Assignments
 
-![Bug Sprite Assignments](bug_sprites.png)
-
 | Monster | Sheet | Col | Row | Description |
 |---------|-------|-----|-----|-------------|
-| **BUG QUEEN** | Pest1 | 2 | 2 | Large menacing spider - the boss |
-| **Titan Beetle** | Pest1 | 2 | 3 | Dark heavy beetle/crawler |
-| **Stinkbug Brute** | Pest1 | 4 | 3 | Spiky dark beetle |
-| **Mosquito Swarm** | Pest1 | 2 | 1 | Flying insect with spread wings |
-| **Pill Bug Golem** | Pest1 | 1 | 4 | Armored shell creature (tank) |
-| **Firefly Mage** | Pest1 | 6 | 1 | Bright glowing flier |
-| **Ant Soldier** | Pest1 | 0 | 3 | Dark beetle/ant |
-| **Dung Beetle Lord** | Pest1 | 6 | 3 | Chunky dark beetle |
-| **Moth Enchantress** | Pest1 | 0 | 7 | Large winged moth |
-
-## Pest1 Sheet Reference
-
-![Pest1 Full Reference Grid](pest1_reference.png)
-
-### Row Guide
-
-| Row | Contents |
-|-----|----------|
-| 0 | Tiny flies, gnats |
-| 1 | Dragonflies, wasps, flying insects |
-| 2 | Spiders (various sizes) |
-| 3 | Large beetles, centipedes, crawlers |
-| 4 | Snails, armored shell creatures |
-| 5 | Beetles, crickets, blue/white insects |
-| 6 | Scorpions, small centipedes |
-| 7 | Moths, butterflies (large wings) |
-| 8 | Scorpions, crabs, snails |
-| 9 | Caterpillars, worms |
-| 10 | Caterpillars, larvae |
-| 11 | Large spiders |
+| **BUG QUEEN** | Compendium | 18 | 9 | The boss |
+| **Titan Beetle** | Compendium | 4 | 11 | Heavy beetle/crawler |
+| **Stinkbug Brute** | Compendium | 4 | 10 | Spiky dark beetle |
+| **Fly Swarm** | Compendium | 10 | 11 | Buzzing fly swarm |
+| **Pill Bug Golem** | Compendium | 2 | 10 | Armored shell creature (tank) |
+| **Firefly Mage** | Compendium | 14 | 11 | Bright glowing flier |
+| **Ant Soldier** | Compendium | 1 | 11 | Dark ant |
+| **Dung Beetle Lord** | Compendium | 1 | 3 | Chunky dark beetle |
+| **Dragonfly Enchantress** | Compendium | 9 | 11 | Iridescent dragonfly |
+| **Earthworm** | Compendium | 10 | 10 | Segmented earthworm |
+| **Snail** | Compendium | 8 | 10 | Giant snail with shell |
 
 ## How to Change a Sprite
 
 In `sprite_data.py`, find `generate_monster_sprite_html()` and update the `_MAP` entry:
 
 ```python
-'Monster Name': ('Pest1', col, row),
+'Monster Name': ('Compendium', col, row),
 ```
 
-Coordinates are `(col, row)` matching the reference grid labels above.
+Coordinates are `(col, row)` matching the Compendium reference grid.
