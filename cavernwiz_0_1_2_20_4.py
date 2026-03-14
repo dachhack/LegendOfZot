@@ -4434,13 +4434,20 @@ class WizardsCavernApp(toga.App):
             rfw_done = room.properties.get('reforged_weapon', False)
             rfa_done = room.properties.get('reforged_armor',  False)
 
+            smith_sprite = generate_room_sprite_html('B')
+
             smith_html = f"""
                 <div style="border: 2px solid #FF8C00; border-radius: 3px; padding: 12px;">
-                    <div style="color: #FF8C00; font-size: 13px; font-weight: bold; margin-bottom: 8px;">
-                        [B] BLACKSMITH
-                    </div>
-                    <div style="color: #DDD; font-size: 10px; margin-bottom: 10px; font-style: italic;">
-                        "I can fix what's broken and roll the dice on what's dull."
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                        <div style="flex-shrink:0;">{smith_sprite}</div>
+                        <div>
+                            <div style="color: #FF8C00; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
+                                [B] BLACKSMITH
+                            </div>
+                            <div style="color: #DDD; font-size: 10px; font-style: italic;">
+                                "I can fix what's broken and roll the dice on what's dull."
+                            </div>
+                        </div>
                     </div>
                     <div style="color: #CCC; font-size: 10px; margin-bottom: 8px;">
                         Weapon: {weapon.name if weapon else 'none'} -- Durability: {item_dur_str(weapon)}<br>
@@ -4524,13 +4531,20 @@ class WizardsCavernApp(toga.App):
                 for i, p in enumerate(potions, 1):
                     potion_list_html += f"<div style='color:#DDD; font-size:10px;'>{i}. {p.name}</div>"
 
+            alch_sprite = generate_room_sprite_html('Q')
+
             alch_html = f"""
                 <div style="border: 2px solid #39FF14; border-radius: 3px; padding: 12px;">
-                    <div style="color: #39FF14; font-size: 13px; font-weight: bold; margin-bottom: 8px;">
-                        [Q] ALCHEMIST'S LAB
-                    </div>
-                    <div style="color: #DDD; font-size: 10px; margin-bottom: 8px; font-style: italic;">
-                        "Two become one. Results... variable."
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                        <div style="flex-shrink:0;">{alch_sprite}</div>
+                        <div>
+                            <div style="color: #39FF14; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
+                                [Q] ALCHEMIST'S LAB
+                            </div>
+                            <div style="color: #DDD; font-size: 10px; font-style: italic;">
+                                "Two become one. Results... variable."
+                            </div>
+                        </div>
                     </div>
                     <div style="color: #CCC; font-size: 10px; margin-bottom: 8px;">
                         Uses remaining: {uses_left} | Potions in pack: {len(potions)}
@@ -4568,13 +4582,20 @@ class WizardsCavernApp(toga.App):
             if raid_active:
                 raid_status = f"<div style='color:#F44336; font-size:10px; font-weight:bold; margin-bottom:6px;'>[RAID MODE ACTIVE -- {raid_turns} turns remaining]</div>"
 
+            war_sprite = generate_room_sprite_html('K')
+
             war_html = f"""
                 <div style="border: 2px solid #CD5C5C; border-radius: 3px; padding: 12px;">
-                    <div style="color: #CD5C5C; font-size: 13px; font-weight: bold; margin-bottom: 8px;">
-                        [K] WAR ROOM
-                    </div>
-                    <div style="color: #DDD; font-size: 10px; margin-bottom: 8px; font-style: italic;">
-                        Maps still pinned to the walls. Someone planned an assault here.
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                        <div style="flex-shrink:0;">{war_sprite}</div>
+                        <div>
+                            <div style="color: #CD5C5C; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
+                                [K] WAR ROOM
+                            </div>
+                            <div style="color: #DDD; font-size: 10px; font-style: italic;">
+                                Maps still pinned to the walls. Someone planned an assault here.
+                            </div>
+                        </div>
                     </div>
                     {raid_status}
                     <div style="font-size: 10px; color: #DDD;">
@@ -4646,13 +4667,20 @@ class WizardsCavernApp(toga.App):
             trophy_count = sum(getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
             trophy_val = sum(t.value * getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
 
+            tax_sprite = generate_room_sprite_html('X')
+
             tax_html = f"""
                 <div style='border:2px solid #8B6914; border-radius:3px; padding:12px;'>
-                    <div style='color:#D4A017; font-size:13px; font-weight:bold; margin-bottom:6px;'>
-                        [X] TAXIDERMIST
-                    </div>
-                    <div style='color:#CCC; font-size:9px; font-style:italic; margin-bottom:8px;'>
-                        You have {trophy_count} trophy piece(s) worth {trophy_val}g if sold.
+                    <div style='display:flex; align-items:center; gap:8px; margin-bottom:8px;'>
+                        <div style='flex-shrink:0;'>{tax_sprite}</div>
+                        <div>
+                            <div style='color:#D4A017; font-size:13px; font-weight:bold; margin-bottom:4px;'>
+                                [X] TAXIDERMIST
+                            </div>
+                            <div style='color:#CCC; font-size:9px; font-style:italic;'>
+                                You have {trophy_count} trophy piece(s) worth {trophy_val}g if sold.
+                            </div>
+                        </div>
                     </div>
                     <div style='margin-bottom:8px;'>{rows_html}</div>
                     <div style='border-top:1px solid #555; padding-top:6px;'>
