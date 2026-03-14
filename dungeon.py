@@ -584,10 +584,10 @@ class Tower:
 
         # Strip rooms that don't fit the bug hive theme.
         # Keep: U (stairs up), D (stairs down), C (chests), M (monsters), V (bug merchants),
-        #        X (bug taxidermist), . (empty), # (walls)
+        #        X (bug taxidermist), G (gardens - become bug gardens), . (empty), # (walls)
         # Convert everything else to bug monsters or empty floors.
         rooms_to_bugs = {'W', 'A', 'N', 'T'}    # Warps, altars, dungeons, tombs -> bugs
-        rooms_to_empty = {'P', 'L', 'G', 'O', 'B', 'F', 'Q', 'K', 'Z'}  # Pools, libraries, etc -> empty
+        rooms_to_empty = {'P', 'L', 'O', 'B', 'F', 'Q', 'K', 'Z'}  # Pools, libraries, etc -> empty
         has_taxidermist = False
         for r in range(floor.rows):
             for c in range(floor.cols):
@@ -602,12 +602,16 @@ class Tower:
                 elif room.room_type in rooms_to_bugs:
                     room.room_type = 'M'
                     room.properties['is_bug_monster'] = True
+                elif room.room_type == 'G':
+                    # Keep gardens but mark as bug gardens
+                    room.properties['is_bug_garden'] = True
                 elif room.room_type in rooms_to_empty:
                     room.room_type = '.'
 
-        # Find all monster rooms and empty rooms
+        # Find all monster rooms, empty rooms, and existing gardens
         monster_rooms = []
         empty_rooms = []
+        garden_count = 0
         for r in range(floor.rows):
             for c in range(floor.cols):
                 room = floor.grid[r][c]
@@ -615,6 +619,19 @@ class Tower:
                     monster_rooms.append((r, c))
                 elif room.room_type == '.':
                     empty_rooms.append((r, c))
+                elif room.room_type == 'G':
+                    garden_count += 1
+
+        # Add extra bug gardens from empty rooms (target 3-5 total)
+        target_gardens = random.randint(3, 5)
+        gardens_to_add = max(0, target_gardens - garden_count)
+        if gardens_to_add > 0 and empty_rooms:
+            random.shuffle(empty_rooms)
+            for i in range(min(gardens_to_add, len(empty_rooms))):
+                gr, gc = empty_rooms[i]
+                floor.grid[gr][gc].room_type = 'G'
+                floor.grid[gr][gc].properties['is_bug_garden'] = True
+            empty_rooms = empty_rooms[min(gardens_to_add, len(empty_rooms)):]
 
         # Ensure at least one bug taxidermist exists on the floor
         if not has_taxidermist and empty_rooms:

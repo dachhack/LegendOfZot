@@ -10,7 +10,7 @@ import game_state as gs
 from game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
                         COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE,
                         normal_int_range, get_article)
-from game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS
+from game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_GARDEN_INGREDIENTS
 from items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
                    Trophy, Rune, Shard, identify_item, is_item_identified,
@@ -2010,8 +2010,9 @@ def process_garden_action(player_character, my_tower, cmd):
     room = current_floor.grid[player_character.y][player_character.x]
     coords = (player_character.x, player_character.y, player_character.z)
 
-    # Check if this is a Fey Garden (ephemeral)
+    # Check if this is a Fey Garden (ephemeral) or Bug Garden
     is_fey_garden = room.properties.get('is_fey_garden', False)
+    is_bug_garden = room.properties.get('is_bug_garden', False)
 
     if cmd == "init":
         if coords in gs.harvested_gardens:
@@ -2020,6 +2021,11 @@ def process_garden_action(player_character, my_tower, cmd):
         elif is_fey_garden:
             # FEY GARDEN: Set distinct mode and skip the logs (moved to UI)
             gs.prompt_cntl = "fey_garden_mode"
+        elif is_bug_garden:
+            add_log(f"{COLOR_GREEN}A tiny overgrown garden thrives in the hive's damp soil.{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}Luminous fungi and strange bug-sized plants grow here.{COLOR_RESET}")
+            add_log(f"{COLOR_GREY}(Harvesting may disturb something lurking in the undergrowth...){COLOR_RESET}")
+            gs.prompt_cntl = "garden_mode"
         else:
             # NORMAL GARDEN: Keep standard behavior
             add_log(f"{COLOR_GREEN}A lush magical garden blooms before you, filled with rare ingredients.{COLOR_RESET}")
@@ -2052,6 +2058,10 @@ def process_garden_action(player_character, my_tower, cmd):
                 ('Time Blossom', 'speed_boost', 2, 35, 'Petals fall in slow motion')
             ]
             add_log(f"{COLOR_CYAN}You carefully harvest the otherworldly flora...{COLOR_RESET}")
+        elif is_bug_garden:
+            # Bug Garden Loot
+            loot_table = BUG_GARDEN_INGREDIENTS
+            add_log(f"{COLOR_GREEN}You carefully pluck the tiny fungi and plants...{COLOR_RESET}")
         else:
             # Normal Garden Loot
             loot_table = GARDEN_INGREDIENTS
@@ -2062,18 +2072,47 @@ def process_garden_action(player_character, my_tower, cmd):
         for _ in range(num_items):
             item_data = random.choice(loot_table)
             # item_data is (name, description, value, level, chance)
-            ingredient = Ingredient(name=item_data[0], description=item_data[1], 
+            ingredient = Ingredient(name=item_data[0], description=item_data[1],
                                     value=item_data[2], level=item_data[3])
             player_character.inventory.add_item(ingredient)
             add_log(f"{COLOR_GREEN}Gathered: {ingredient.name}{COLOR_RESET}")
 
         gs.harvested_gardens[coords] = True
-        
+
         # Set garden to empty room after harvesting
         current_floor = my_tower.floors[player_character.z]
         current_room = current_floor.grid[player_character.y][player_character.x]
         current_room.room_type = '.'
-        
+
+        # Bug garden harvest: 40% chance to disturb a lurking bug
+        if is_bug_garden and random.random() < 0.40:
+            bug_pool = [m for m in BUG_MONSTER_TEMPLATES if m['name'] != 'BUG QUEEN']
+            m_data = random.choice(bug_pool)
+            add_log("")
+            add_log(f"{COLOR_RED}Something was hiding in the undergrowth!{COLOR_RESET}")
+            add_log(f"{COLOR_YELLOW}A {m_data['name']} lunges at you!{COLOR_RESET}")
+            new_monster = Monster(
+                m_data['name'],
+                m_data['health'],
+                m_data['attack'],
+                m_data['defense'],
+                m_data.get('elemental_weakness', []),
+                m_data.get('elemental_strength', []),
+                m_data.get('level', 1),
+                m_data.get('attack_element', 'Physical'),
+                m_data.get('flavor_text', ''),
+                m_data.get('victory_text', ''),
+                m_data.get('can_talk', False),
+                m_data.get('greeting_template', ''),
+                m_data.get('special_attack', None)
+            )
+            new_monster.properties['is_bug_monster'] = True
+            gs.encountered_monsters[coords] = new_monster
+            gs.active_monster = new_monster
+            gs.prompt_cntl = "combat_mode"
+            process_combat_action(player_character, my_tower, "init")
+            return
+
         gs.prompt_cntl = "game_loop"
         _get_trigger_room_interaction()(player_character, my_tower)
 

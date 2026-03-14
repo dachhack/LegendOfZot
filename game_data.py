@@ -2108,6 +2108,22 @@ MONSTER_TEMPLATES = [
 # ============================================================================
 
 # ============================================================================
+# BUG GARDEN INGREDIENTS
+# Harvestable from bug gardens on the shrinking bug level.
+# Bug-sized plants and fungi growing in the hive's overgrown chambers.
+# ============================================================================
+
+BUG_GARDEN_INGREDIENTS = [
+    ('Aphid Honeydew', 'A sticky droplet of sweet honeydew, harvested from tiny aphids.', 8, 1, 0.20),
+    ('Mycelium Thread', 'A strand of luminous fungal thread growing between cracks.', 10, 1, 0.15),
+    ('Pollen Cluster', 'A dense ball of golden pollen, buzzing with residual energy.', 6, 1, 0.20),
+    ('Spore Cap', 'A tiny mushroom cap releasing glittering spores.', 12, 2, 0.15),
+    ('Nectar Bead', 'A crystallized bead of flower nectar, impossibly sweet.', 15, 2, 0.10),
+    ('Chitin Moss', 'Moss that grows on discarded bug shells, tough and fibrous.', 7, 1, 0.15),
+    ('Dew Silk', 'A thread of spider silk coated in morning dew, glistening.', 20, 2, 0.05),
+]
+
+# ============================================================================
 # BUG-THEMED WEAPON AND ARMOR TEMPLATES
 # Used by bug merchants on the shrinking bug level.
 # Level 1-2 range to match floors 8-15 player power level.
