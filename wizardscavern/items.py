@@ -2302,7 +2302,7 @@ def restock_vendor_at(tower, character, vendor_x, vendor_y):
 
     # Generate new vendor inventory
     # This is similar to how vendors are initially populated
-    new_inventory = generate_vendor_inventory(floor_level)
+    new_inventory = generate_vendor_inventory(floor_level, vendor_room, player_character=character)
     # Track in game stats
     gs.game_stats['vendors_restocked'] = gs.game_stats.get('vendors_restocked', 0) + 1
     check_achievements(character)
@@ -2314,7 +2314,7 @@ def restock_vendor_at(tower, character, vendor_x, vendor_y):
     add_log(f"{COLOR_GREEN}[Vendor at ({vendor_x}, {vendor_y}) has been restocked!]{COLOR_RESET}")
 
 
-def generate_vendor_inventory(floor_level, room):
+def generate_vendor_inventory(floor_level, room, player_character=None):
     """
     Generate a new random vendor inventory for the given floor level.
     Uses enhanced weapon/armor generation for better variety.
@@ -2401,9 +2401,11 @@ def generate_vendor_inventory(floor_level, room):
         upgrade_scroll = Scroll("Scroll of Upgrade", "A mystical scroll of enhancement.", "Upgrade items to +3 maximum.", 150, 1, 'upgrade')
     inventory.append(upgrade_scroll)
 
-    # Always stock some food items
-    rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=1)
-    inventory.append(_create_item_copy(rations))
+    # Always stock some food items (3-4 rations per vendor)
+    num_rations = random.randint(3, 4)
+    for _ in range(num_rations):
+        rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=1)
+        inventory.append(_create_item_copy(rations))
     if floor_level >= 2:
         jerky = Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1)
         inventory.append(_create_item_copy(jerky))
@@ -2413,6 +2415,12 @@ def generate_vendor_inventory(floor_level, room):
         inventory.append(cooking_kit)
         iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
         inventory.append(_create_item_copy(iron_rations))
+
+    # Lembas wafers for elf characters
+    if player_character and getattr(player_character, 'race', '').lower() == 'elf':
+        for _ in range(2):
+            lembas = Food("Lembas Wafer", "Elven waybread. A single bite fills the stomach.", value=25, level=0, nutrition=80, count=1)
+            inventory.append(_create_item_copy(lembas))
 
     # Generate 4-8 random other items
     num_items = random.randint(4, 8)
@@ -2892,6 +2900,15 @@ def process_hunger(character):
     elif h <= HUNGER_HUNGRY_THRESHOLD:
         if h % 20 == 0:
             add_log(f"{COLOR_YELLOW}Your stomach growls. You are hungry.{COLOR_RESET}")
+    elif h >= 85 and character.health < character.max_health:
+        # Well-fed regen: 1 HP every 2 turns
+        if not hasattr(character, '_hunger_regen_counter'):
+            character._hunger_regen_counter = 0
+        character._hunger_regen_counter += 1
+        if character._hunger_regen_counter >= 2:
+            character._hunger_regen_counter = 0
+            character.health = min(character.max_health, character.health + 1)
+            add_log(f"{COLOR_GREEN}Your full belly restores 1 HP.{COLOR_RESET}")
 
 
 def get_hunger_label(hunger):

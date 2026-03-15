@@ -1079,7 +1079,7 @@ def use_merchants_bell(character, my_tower):
 
     # Temporarily convert to vendor
     room.room_type = 'V'
-    room.properties['vendor_inventory'] = generate_vendor_inventory(character.z, room)
+    room.properties['vendor_inventory'] = generate_vendor_inventory(character.z, room, player_character=character)
     room.properties['temporary_vendor'] = True
     room.properties['old_room_type'] = old_room_type
 
