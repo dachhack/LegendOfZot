@@ -1666,9 +1666,9 @@ def get_available_recipes(player_character):
     available = []
     inventory_items = {}
     
-    # Count ingredients in inventory
+    # Count ingredients and food items in inventory
     for item in player_character.inventory.items:
-        if isinstance(item, Ingredient):
+        if isinstance(item, (Ingredient, Food)):
             inventory_items[item.name] = inventory_items.get(item.name, 0) + 1
     
     # Check each recipe
@@ -1697,7 +1697,7 @@ def craft_potion(player_character, recipe_name):
     for ing_name, ing_count in recipe['ingredients']:
         removed = 0
         for item in list(player_character.inventory.items):
-            if isinstance(item, Ingredient) and item.name == ing_name:
+            if isinstance(item, (Ingredient, Food)) and item.name == ing_name:
                 player_character.inventory.items.remove(item)
                 removed += 1
                 if removed >= ing_count:

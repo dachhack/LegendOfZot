@@ -79,10 +79,6 @@ class Vendor:
             self.inventory.add_item_quiet(Armor("Leather Armor","Light leather armor.", defense_bonus=3, value=50, level=0, upgrade_level=0))
             self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=50, light_radius=7, value=30, level=0))
             self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=3))
-            # Lembas wafers for elf characters at starting vendor
-            if getattr(player_character, 'race', '').lower() == 'elf':
-                self.inventory.add_item_quiet(Food("Lembas Wafer", "Elven waybread. A single bite fills the stomach.", value=25, level=0, nutrition=80, count=1))
-                self.inventory.add_item_quiet(Food("Lembas Wafer", "Elven waybread. A single bite fills the stomach.", value=25, level=0, nutrition=80, count=1))
             # Towel removed from starting vendor - now only randomly available from dungeon vendors
             # Add starting else
         else:
@@ -189,11 +185,6 @@ class Vendor:
             num_rations = random.randint(3, 4)
             for _ in range(num_rations):
                 self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=1))
-
-            # Lembas wafers for elf characters
-            if getattr(player_character, 'race', '').lower() == 'elf':
-                self.inventory.add_item_quiet(Food("Lembas Wafer", "Elven waybread. A single bite fills the stomach.", value=25, level=0, nutrition=80, count=1))
-                self.inventory.add_item_quiet(Food("Lembas Wafer", "Elven waybread. A single bite fills the stomach.", value=25, level=0, nutrition=80, count=1))
 
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:

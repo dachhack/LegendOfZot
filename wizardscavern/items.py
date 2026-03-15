@@ -1257,7 +1257,12 @@ POTION_RECIPES = {
         'tier': 1,
         'result': lambda: Potion(name="Antidote", potion_type='cure_all', effect_magnitude=0, value=100, level=1, description="Cures all negative status effects")
     },
-    
+    'Lembas Wafer': {
+        'ingredients': [('Moonpetal', 1), ('Healing Moss', 1), ('Rations', 1)],
+        'tier': 1,
+        'result': lambda: LembasWafer()
+    },
+
     # ============================================================
     # TIER 2: INTERMEDIATE POTIONS (Common + Uncommon)
     # ============================================================
@@ -2416,12 +2421,6 @@ def generate_vendor_inventory(floor_level, room, player_character=None):
         iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
         inventory.append(_create_item_copy(iron_rations))
 
-    # Lembas wafers for elf characters
-    if player_character and getattr(player_character, 'race', '').lower() == 'elf':
-        for _ in range(2):
-            lembas = Food("Lembas Wafer", "Elven waybread. A single bite fills the stomach.", value=25, level=0, nutrition=80, count=1)
-            inventory.append(_create_item_copy(lembas))
-
     # Generate 4-8 random other items
     num_items = random.randint(4, 8)
 
@@ -2672,6 +2671,22 @@ class Food(Item):
         return True  # consumed
 
 
+class LembasWafer(Food):
+    """Elven waybread. Fills hunger to max and delays hunger decay for 30 turns."""
+    def __init__(self):
+        super().__init__(
+            name="Lembas Wafer",
+            description="Elven waybread wrapped in mallorn leaves. A single bite fills the stomach and sustains for many leagues.",
+            value=40, level=1, nutrition=100, count=1
+        )
+
+    def use(self, character, my_tower=None):
+        character.hunger = HUNGER_MAX
+        character._lembas_turns = 30
+        add_log(f"{COLOR_GREEN}You eat the Lembas Wafer. Hunger fully restored! You feel sustained for a long journey.{COLOR_RESET}")
+        return True  # consumed
+
+
 class Meat(Item):
     """Meat dropped by monsters - can be raw or cooked, rots over time."""
     def __init__(self, name, description="", value=3, level=0,
@@ -2886,6 +2901,12 @@ def tick_meat_rot(character):
 
 def process_hunger(character):
     """Called each move. Decreases hunger and applies penalties/bonuses."""
+    # Lembas wafer delays hunger decay
+    if getattr(character, '_lembas_turns', 0) > 0:
+        character._lembas_turns -= 1
+        if character._lembas_turns == 0:
+            add_log(f"{COLOR_YELLOW}The sustaining effect of the Lembas fades.{COLOR_RESET}")
+        return  # No hunger decay while lembas is active
     character.hunger = max(0, character.hunger - HUNGER_DECAY_PER_MOVE)
     h = character.hunger
     if h <= 0:
