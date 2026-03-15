@@ -658,6 +658,7 @@ class SaveSystem:
             'gs.looted_dungeons': [f"{k[0]},{k[1]},{k[2]}" for k in gs.looted_dungeons],
             'gs.looted_tombs': [f"{k[0]},{k[1]},{k[2]}" for k in gs.looted_tombs],
             'gs.harvested_gardens': [f"{k[0]},{k[1]},{k[2]}" for k in gs.harvested_gardens],
+            'gs.harvested_fey_floors': list(gs.harvested_fey_floors),
             'gs.haunted_floors': dict(gs.haunted_floors),  # floor_num -> turns remaining
             'gs.unique_treasures_spawned': list(gs.unique_treasures_spawned),
             'gs.ephemeral_gardens': gs.ephemeral_gardens,
@@ -727,6 +728,8 @@ class SaveSystem:
             gs.harvested_gardens.clear()
             for k in data['gs.harvested_gardens']:
                 gs.harvested_gardens[tuple(map(int, k.split(',')))] = True
+        if 'gs.harvested_fey_floors' in data:
+            gs.harvested_fey_floors = set(data['gs.harvested_fey_floors'])
         if 'gs.haunted_floors' in data:
             gs.haunted_floors.clear()
             # JSON converts int keys to strings, so convert back

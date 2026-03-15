@@ -263,6 +263,7 @@ unlocked_dungeons = {}
 looted_dungeons = {}
 looted_tombs = {}
 harvested_gardens = {}
+harvested_fey_floors = set()  # Floors where a fey garden has been harvested (no respawn)
 
 # ============================================================================
 # QUEST TRACKING - RUNES & SHARDS (Orb of Zot)

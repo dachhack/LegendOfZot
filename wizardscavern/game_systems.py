@@ -1403,8 +1403,8 @@ def process_ephemeral_gardens(character, my_tower):
             if random.random() < 0.15:
                 add_log(f"{COLOR_CYAN}You sense fey magic nearby... ({garden_data['turns_remaining']} turns remaining){COLOR_RESET}")
     
-    # Try to spawn a new ephemeral garden (only on floors 5+, and only if none exists on this floor)
-    if current_floor_num >= 5 and current_floor_num not in gs.ephemeral_gardens:
+    # Try to spawn a new ephemeral garden (only on floors 5+, not already present, not already harvested)
+    if current_floor_num >= 5 and current_floor_num not in gs.ephemeral_gardens and current_floor_num not in gs.harvested_fey_floors:
         # In PLAYTEST mode, always spawn; otherwise 3% chance per move
         if gs.PLAYTEST or random.random() < 0.03:
             _spawn_fey_garden(character, my_tower)
@@ -1964,6 +1964,17 @@ def handle_inventory_menu(player_character, my_tower, cmd):
 
             if 0 <= item_number < len(sorted_items):
                 item_to_equip = sorted_items[item_number]
+
+                # Block equipping non-bug items while shrunk
+                if gs.player_is_shrunk:
+                    from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+                    bug_item_names = {t['name'] for t in BUG_WEAPON_TEMPLATES} | {t['name'] for t in BUG_ARMOR_TEMPLATES}
+                    if isinstance(item_to_equip, (Weapon, Armor, Towel)) and item_to_equip.name not in bug_item_names:
+                        add_log(f"{COLOR_YELLOW}You're too tiny to use {item_to_equip.name}! Only bug-sized gear fits right now.{COLOR_RESET}")
+                        return
+                    if isinstance(item_to_equip, Treasure) and item_to_equip.treasure_type == 'passive':
+                        add_log(f"{COLOR_YELLOW}You're too tiny to wear {item_to_equip.name}! Only bug-sized gear fits right now.{COLOR_RESET}")
+                        return
 
                 if isinstance(item_to_equip, Weapon):
                     if player_character.equipped_weapon:

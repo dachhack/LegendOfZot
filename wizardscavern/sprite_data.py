@@ -6334,6 +6334,10 @@ def generate_room_sprite_html(room_type, variant=None):
         'E':  ('Door0',  0, 5),    # Entrance - portal
         'F':  ('Decor1', 1, 20),   # Shrine of the Fallen - memorial shrine
         'Z':  ('Door0',  3, 5),    # Zotle puzzle - mystic portal
+        'B':  ('Decor1', 1, 11),   # Blacksmith
+        'Q':  ('Decor1', 3, 4),    # Quest room
+        'K':  ('Decor1', 5, 11),   # War room
+        'X':  ('Decor1', 2, 12),   # Taxidermist
     }
 
     # Special variants override default

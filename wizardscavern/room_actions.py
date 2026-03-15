@@ -2079,6 +2079,10 @@ def process_garden_action(player_character, my_tower, cmd):
 
         gs.harvested_gardens[coords] = True
 
+        # Track fey garden floors so they don't respawn
+        if is_fey_garden:
+            gs.harvested_fey_floors.add(player_character.z)
+
         # Set garden to empty room after harvesting
         current_floor = my_tower.floors[player_character.z]
         current_room = current_floor.grid[player_character.y][player_character.x]
@@ -2870,12 +2874,16 @@ def process_taxidermist_action(player_character, my_tower, cmd):
     current_floor = my_tower.floors[player_character.z]
     room = current_floor.grid[player_character.y][player_character.x]
 
+    is_bug = room.properties.get('is_bug_taxidermist', False)
+
     if cmd == "init":
         gs.prompt_cntl = "taxidermist_mode"
         return
 
-    # Complete a collection by number
+    # Complete a collection by number - filter by bug/regular taxidermist
     collection_status = get_collection_status(player_character)
+    collection_status = [(name, data, pieces, complete) for name, data, pieces, complete in collection_status
+                         if bool(data.get('is_bug')) == is_bug]
     completable = [(i, name, data) for i, (name, data, pieces, complete)
                    in enumerate(collection_status) if complete and not room.properties.get(f'completed_{name}')]
 

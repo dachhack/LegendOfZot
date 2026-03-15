@@ -478,6 +478,7 @@ class WizardsCavernApp(toga.App):
         gs.looted_dungeons = {}
         gs.looted_tombs = {}
         gs.harvested_gardens = {}
+        gs.harvested_fey_floors = set()
         gs.haunted_floors = {}
         gs.ephemeral_gardens = {}
         gs.pending_tomb_guardian_reward = None
@@ -1495,8 +1496,8 @@ class WizardsCavernApp(toga.App):
             backspace_button = toga.Button(
                 '<-',
                 on_press=self.zotle_backspace,
-                style=Pack(flex=1, margin=0, padding=0, font_size=9, font_weight='bold',
-                           background_color='#333', color='#EEE', height=30)
+                style=Pack(flex=1, margin=0, padding=0, font_size=13, font_weight='bold',
+                           background_color='#333', color='#EEE', height=38)
             )
             row3.append(backspace_button)
         else:
@@ -1506,8 +1507,8 @@ class WizardsCavernApp(toga.App):
         shift_button = toga.Button(
             shift_label,
             on_press=self.toggle_keyboard_case,
-            style=Pack(flex=1, margin=0, padding=0, font_size=9, font_weight='bold',
-                       background_color='#444', color='#FFF', height=30)
+            style=Pack(flex=1, margin=0, padding=0, font_size=13, font_weight='bold',
+                       background_color='#444', color='#FFF', height=38)
         )
         row3.append(shift_button)
 
@@ -1520,12 +1521,12 @@ class WizardsCavernApp(toga.App):
             self.number_pad_box.add(btn)
     
     def create_keyboard_button(self, cmd_key, cmd_label):
-        """Create a smaller keyboard button for QWERTY layout (fits 10 per row)."""
+        """Create a keyboard button for QWERTY layout (fits 10 per row)."""
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(flex=1, margin=0, padding=0, font_size=9,
-                       background_color='#333', color='#EEE', height=24)
+            style=Pack(flex=1, margin=0, padding=0, font_size=13,
+                       background_color='#333', color='#EEE', height=38)
         )
         self._compact_android_button(btn)
         return btn
@@ -2983,9 +2984,9 @@ class WizardsCavernApp(toga.App):
             ingredients_html += "<div style='color: #4CAF50; font-weight: bold; margin-bottom: 5px;'>Your Ingredients:</div>"
             if ingredient_counts:
                 ing_list = ", ".join([f"{count}x {name}" for name, count in sorted(ingredient_counts.items())])
-                ingredients_html += f"<div style='color: #888; font-size: 12px;'>{ing_list}</div>"
+                ingredients_html += f"<div style='color: #CCC; font-size: 14px;'>{ing_list}</div>"
             else:
-                ingredients_html += "<div style='color: #666; font-size: 12px; font-style: italic;'>No ingredients. Harvest from Garden rooms!</div>"
+                ingredients_html += "<div style='color: #AAA; font-size: 14px; font-style: italic;'>No ingredients. Harvest from Garden rooms!</div>"
             ingredients_html += "</div>"
             
             # Build craftable recipes HTML
@@ -3013,31 +3014,31 @@ class WizardsCavernApp(toga.App):
                         
                         recipes_html += f"""
                             <div style='padding: 6px; margin: 4px 0; background: rgba(255,255,255,0.05); border-radius: 3px; border-left: 3px solid {tier_color};'>
-                                <div style='color: #FFD700; font-weight: bold;'>{recipe_counter}. {recipe_name}</div>
-                                <div style='color: #888; font-size: 12px;'>Needs: {ingredients_text}</div>
-                                <div style='color: #AAA; font-size: 12px; font-style: italic;'>{potion.description}</div>
+                                <div style='color: #FFD700; font-weight: bold; font-size: 14px;'>{recipe_counter}. {recipe_name}</div>
+                                <div style='color: #CCC; font-size: 14px;'>Needs: {ingredients_text}</div>
+                                <div style='color: #DDD; font-size: 14px; font-style: italic;'>{potion.description}</div>
                             </div>
                         """
                         recipe_counter += 1
             else:
-                recipes_html = "<div style='color: #666; font-style: italic; padding: 10px;'>No recipes available. Collect more ingredients!</div>"
+                recipes_html = "<div style='color: #AAA; font-style: italic; padding: 10px; font-size: 14px;'>No recipes available. Collect more ingredients!</div>"
             
             # Build close recipes HTML
             close_html = ""
             if close:
                 close_html = "<div style='margin-top: 10px; padding-top: 8px; border-top: 1px solid #444;'>"
-                close_html += "<div style='color: #888; font-size: 12px; margin-bottom: 5px;'>Almost Craftable:</div>"
+                close_html += "<div style='color: #CCC; font-size: 14px; margin-bottom: 5px;'>Almost Craftable:</div>"
                 for recipe_name, recipe_data, _, missing in close[:3]:
                     missing_text = ", ".join([f"{count}x {name}" for name, count in missing])
                     tier = recipe_data.get('tier', 1)
-                    close_html += f"<div style='color: #666; font-size: 9px;'>T{tier} {recipe_name} - <span style='color: #F44336;'>Need: {missing_text}</span></div>"
+                    close_html += f"<div style='color: #AAA; font-size: 13px;'>T{tier} {recipe_name} - <span style='color: #F44336;'>Need: {missing_text}</span></div>"
                 if len(close) > 3:
-                    close_html += f"<div style='color: #555; font-size: 9px;'>...and {len(close) - 3} more</div>"
+                    close_html += f"<div style='color: #999; font-size: 13px;'>...and {len(close) - 3} more</div>"
                 close_html += "</div>"
             
             crafting_html = f"""
                 <div style="border: 2px solid #E040FB; border-radius: 4px; padding: 10px; background: #1a1a1a;">
-                    <div style="color: #E040FB; font-weight: bold; font-size: 12px; text-align: center; margin-bottom: 8px;">
+                    <div style="color: #E040FB; font-weight: bold; font-size: 16px; text-align: center; margin-bottom: 8px;">
                         POTION CRAFTING
                     </div>
                     {ingredients_html}
@@ -3045,7 +3046,7 @@ class WizardsCavernApp(toga.App):
                         {recipes_html}
                     </div>
                     {close_html}
-                    <div style="text-align: center; margin-top: 8px; color: #888; font-size: 12px;">
+                    <div style="text-align: center; margin-top: 8px; color: #CCC; font-size: 14px;">
                         Craftable: {len(craftable)} | Enter number to craft
                     </div>
                 </div>
@@ -3056,7 +3057,7 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
-                    <div style="width: 100%;">{crafting_html}</div>
+                    <div class="room-panel" style="width: 100%;">{crafting_html}</div>
                 </div>
             """
             current_commands_text = "# = craft | x = back to inventory"
@@ -3524,7 +3525,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     
-                    <div style="width: 100%;">{spells_html}</div>
+                    <div class="room-panel" style="width: 100%;">{spells_html}</div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
                 </div>
                 """
@@ -3802,7 +3803,7 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{chest_html}</div>
+                        <div class="room-panel" style="width: 100%;">{chest_html}</div>
                     </div>
 </div>
                 """
@@ -3895,7 +3896,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{altar_html}</div>
+                        <div class="room-panel" style="width: 100%;">{altar_html}</div>
                     </div>
                 </div>
                 """
@@ -3990,7 +3991,7 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{pool_html}</div>
+                        <div class="room-panel" style="width: 100%;">{pool_html}</div>
                     </div>
 </div>
                 """
@@ -4053,7 +4054,7 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{warp_html}</div>
+                        <div class="room-panel" style="width: 100%;">{warp_html}</div>
                     </div>
 
                     <div style="margin-top: 8px; padding: 4px; border-radius: 3px; font-size: 12px;">
@@ -4116,7 +4117,7 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{stairs_html}</div>
+                        <div class="room-panel" style="width: 100%;">{stairs_html}</div>
                     </div>
 </div>
                 """
@@ -4180,7 +4181,7 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{stairs_html}</div>
+                        <div class="room-panel" style="width: 100%;">{stairs_html}</div>
                     </div>
 </div>
                 """
@@ -4251,7 +4252,7 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{library_html}</div>
+                        <div class="room-panel" style="width: 100%;">{library_html}</div>
                     </div>
 </div>
                 """
@@ -4307,7 +4308,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{dungeon_html}</div>
+                        <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
                     </div>
                 </div>
             """
@@ -4350,7 +4351,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{dungeon_html}</div>
+                        <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
                     </div>
                 </div>
             """
@@ -4391,7 +4392,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%; padding: 8px; border: 1px solid #8B4513; border-radius: 3px;">
+                        <div class="room-panel" style="width: 100%; padding: 8px; border: 1px solid #8B4513; border-radius: 3px;">
                             <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
                                 <div style="flex-shrink:0;">{tomb_sprite}</div>
                                 <div style="color: #DDD; font-size: 12px;">An ancient tomb lies before you, its stone lid cracked with age.</div>
@@ -4444,7 +4445,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{garden_html}</div>
+                        <div class="room-panel" style="width: 100%;">{garden_html}</div>
                     </div>
                 </div>
             """
@@ -4504,7 +4505,7 @@ class WizardsCavernApp(toga.App):
                             {player_stats_html}
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                                 <div>{grid_html}</div>
-                                <div style="width: 100%;">{fey_html}</div>
+                                <div class="room-panel" style="width: 100%;">{fey_html}</div>
                             </div>
                         </div>
                     """
@@ -4545,7 +4546,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{oracle_html}</div>
+                        <div class="room-panel" style="width: 100%;">{oracle_html}</div>
                     </div>
                 </div>
             """
@@ -4574,10 +4575,12 @@ class WizardsCavernApp(toga.App):
             rfw_done = room.properties.get('reforged_weapon', False)
             rfa_done = room.properties.get('reforged_armor',  False)
 
+            smith_sprite = generate_room_sprite_html('B')
             smith_html = f"""
                 <div style="border: 2px solid #FF8C00; border-radius: 3px; padding: 12px;">
-                    <div style="color: #FF8C00; font-size: 12px; font-weight: bold; margin-bottom: 8px;">
-                        [B] BLACKSMITH
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                        <div style="flex-shrink:0;">{smith_sprite}</div>
+                        <div style="color: #FF8C00; font-size: 12px; font-weight: bold;">BLACKSMITH</div>
                     </div>
                     <div style="color: #DDD; font-size: 12px; margin-bottom: 10px; font-style: italic;">
                         "I can fix what's broken and roll the dice on what's dull."
@@ -4602,7 +4605,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{smith_html}</div>
+                        <div class="room-panel" style="width: 100%;">{smith_html}</div>
                     </div>
                 </div>
             """
@@ -4644,7 +4647,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{shrine_html}</div>
+                        <div class="room-panel" style="width: 100%;">{shrine_html}</div>
                     </div>
                 </div>
             """
@@ -4664,10 +4667,12 @@ class WizardsCavernApp(toga.App):
                 for i, p in enumerate(potions, 1):
                     potion_list_html += f"<div style='color:#DDD; font-size:12px;'>{i}. {p.name}</div>"
 
+            alch_sprite = generate_room_sprite_html('Q')
             alch_html = f"""
                 <div style="border: 2px solid #39FF14; border-radius: 3px; padding: 12px;">
-                    <div style="color: #39FF14; font-size: 12px; font-weight: bold; margin-bottom: 8px;">
-                        [Q] ALCHEMIST'S LAB
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                        <div style="flex-shrink:0;">{alch_sprite}</div>
+                        <div style="color: #39FF14; font-size: 12px; font-weight: bold;">ALCHEMIST'S LAB</div>
                     </div>
                     <div style="color: #DDD; font-size: 12px; margin-bottom: 8px; font-style: italic;">
                         "Two become one. Results... variable."
@@ -4687,7 +4692,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{alch_html}</div>
+                        <div class="room-panel" style="width: 100%;">{alch_html}</div>
                     </div>
                 </div>
             """
@@ -4708,10 +4713,12 @@ class WizardsCavernApp(toga.App):
             if raid_active:
                 raid_status = f"<div style='color:#F44336; font-size:12px; font-weight:bold; margin-bottom:6px;'>[RAID MODE ACTIVE -- {raid_turns} turns remaining]</div>"
 
+            war_sprite = generate_room_sprite_html('K')
             war_html = f"""
                 <div style="border: 2px solid #CD5C5C; border-radius: 3px; padding: 12px;">
-                    <div style="color: #CD5C5C; font-size: 12px; font-weight: bold; margin-bottom: 8px;">
-                        [K] WAR ROOM
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                        <div style="flex-shrink:0;">{war_sprite}</div>
+                        <div style="color: #CD5C5C; font-size: 12px; font-weight: bold;">WAR ROOM</div>
                     </div>
                     <div style="color: #DDD; font-size: 12px; margin-bottom: 8px; font-style: italic;">
                         Maps still pinned to the walls. Someone planned an assault here.
@@ -4731,7 +4738,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{war_html}</div>
+                        <div class="room-panel" style="width: 100%;">{war_html}</div>
                     </div>
                 </div>
             """
@@ -4743,7 +4750,11 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             room = floor.grid[gs.player_character.y][gs.player_character.x]
 
+            is_bug_tax = room.properties.get('is_bug_taxidermist', False)
             collection_status = get_collection_status(gs.player_character)
+            # Filter collections: bug taxidermist shows only bug collections, regular shows only non-bug
+            collection_status = [(name, data, pieces, complete) for name, data, pieces, complete in collection_status
+                                 if bool(data.get('is_bug')) == is_bug_tax]
             trophies = get_player_trophies(gs.player_character)
             completable = [(name, data) for (name, data, pieces, complete) in collection_status
                            if complete and not room.properties.get(f'completed_{name}')]
@@ -4786,10 +4797,13 @@ class WizardsCavernApp(toga.App):
             trophy_count = sum(getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
             trophy_val = sum(t.value * getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
 
+            tax_sprite = generate_room_sprite_html('X')
+            tax_title = "BUG TAXIDERMIST" if is_bug_tax else "TAXIDERMIST"
             tax_html = f"""
                 <div style='border:2px solid #8B6914; border-radius:3px; padding:12px;'>
-                    <div style='color:#D4A017; font-size:12px; font-weight:bold; margin-bottom:6px;'>
-                        [X] TAXIDERMIST
+                    <div style='display:flex; align-items:center; gap:8px; margin-bottom:6px;'>
+                        <div style='flex-shrink:0;'>{tax_sprite}</div>
+                        <div style='color:#D4A017; font-size:12px; font-weight:bold;'>{tax_title}</div>
                     </div>
                     <div style='color:#CCC; font-size:11px; font-style:italic; margin-bottom:8px;'>
                         You have {trophy_count} trophy piece(s) worth {trophy_val}g if sold.
@@ -4810,7 +4824,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style='display: flex; flex-direction: column; align-items: center; gap: 10px;'>
                         <div>{grid_html}</div>
-                        <div style='width: 100%;'>{tax_html}</div>
+                        <div class="room-panel" style='width: 100%;'>{tax_html}</div>
                     </div>
                 </div>"""
             current_commands_text = "1-7=turn in collection | s=sell trophies | i=inventory | n/s/e/w=move"
@@ -4872,7 +4886,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{towel_html}</div>
+                        <div class="room-panel" style="width: 100%;">{towel_html}</div>
                     </div>
                 </div>
             """
@@ -4999,7 +5013,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{teleporter_html}</div>
+                        <div class="room-panel" style="width: 100%;">{teleporter_html}</div>
                     </div>
                 </div>
             """
@@ -5065,7 +5079,7 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%;">{library_html}</div>
+                        <div class="room-panel" style="width: 100%;">{library_html}</div>
                     </div>
 </div>
             """
@@ -5357,6 +5371,13 @@ class WizardsCavernApp(toga.App):
                 .dungeon-map {{
                     overflow-x: auto;
                     white-space: nowrap;
+                }}
+
+                /* Constrain room interaction panels to prevent outer scrolling */
+                .room-panel {{
+                    max-height: calc(100vh - 340px);
+                    overflow-y: auto;
+                    -webkit-overflow-scrolling: touch;
                 }}
             </style>
         </head>
