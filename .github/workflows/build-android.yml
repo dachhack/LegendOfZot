@@ -1,0 +1,67 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master, "claude/*" ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:  # Allows manual trigger from GitHub UI
+
+jobs:
+  build-android:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Install Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Accept Android SDK licenses
+        run: yes | sdkmanager --licenses || true
+
+      - name: Install Briefcase
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install briefcase
+
+      - name: Create Android project
+        run: briefcase create android
+
+      - name: Build Android APK
+        run: briefcase build android
+
+      - name: Find APK file
+        id: find-apk
+        run: |
+          APK_PATH=$(find . -name "*.apk" -type f | head -1)
+          echo "apk_path=$APK_PATH" >> "$GITHUB_OUTPUT"
+          echo "Found APK at: $APK_PATH"
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: wizards-cavern-apk
+          path: ${{ steps.find-apk.outputs.apk_path }}
+          if-no-files-found: error
+
+      - name: Upload APK to Google Drive
+        if: steps.find-apk.outputs.apk_path != ''
+        uses: adityak74/google-drive-upload-git-action@main
+        with:
+          credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
+          filename: ${{ steps.find-apk.outputs.apk_path }}
+          folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+          name: "WizardsCavern-${{ github.sha }}.apk"
+          overwrite: "true"
