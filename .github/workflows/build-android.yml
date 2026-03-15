@@ -55,13 +55,3 @@ jobs:
           name: wizards-cavern-apk
           path: ${{ steps.find-apk.outputs.apk_path }}
           if-no-files-found: error
-
-      - name: Upload APK to Google Drive
-        if: steps.find-apk.outputs.apk_path != ''
-        uses: adityak74/google-drive-upload-git-action@main
-        with:
-          credentials: ${{ secrets.GOOGLE_DRIVE_CREDENTIALS }}
-          filename: ${{ steps.find-apk.outputs.apk_path }}
-          folderId: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
-          name: "WizardsCavern-${{ github.sha }}.apk"
-          overwrite: "true"
