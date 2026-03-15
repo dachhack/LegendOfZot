@@ -1260,7 +1260,50 @@ POTION_RECIPES = {
     'Lembas Wafer': {
         'ingredients': [('Moonpetal', 1), ('Healing Moss', 1), ('Rations', 1)],
         'tier': 1,
+        'race': 'elf',
         'result': lambda: LembasWafer()
+    },
+    'Lembas of Mending': {
+        'ingredients': [('Healing Moss', 2), ('Moonpetal', 1), ('Rations', 1)],
+        'tier': 1,
+        'race': 'elf',
+        'result': lambda: LembasWafer(
+            name="Lembas of Mending",
+            description="Waybread infused with healing moss. Restores hunger and mends wounds.",
+            value=60, lembas_turns=25, bonus_effect='heal', bonus_magnitude=40)
+    },
+    'Lembas of Clarity': {
+        'ingredients': [('Starbloom', 2), ('Crystal Dew', 1), ('Rations', 1)],
+        'tier': 2,
+        'race': 'elf',
+        'result': lambda: LembasWafer(
+            name="Lembas of Clarity",
+            description="Waybread dusted with starbloom pollen. Restores hunger and sharpens the mind.",
+            value=80, level=2, lembas_turns=25, bonus_effect='mana', bonus_magnitude=30)
+    },
+    'Lembas of Swiftness': {
+        'ingredients': [('Shadow Leaf', 2), ('Moonpetal', 1), ('Rations', 1)],
+        'tier': 2,
+        'race': 'elf',
+        'result': lambda: LembasWafer(
+            name="Lembas of Swiftness",
+            description="Waybread wrapped in shadow leaves. Grants elven agility.",
+            value=80, level=2, lembas_turns=25,
+            bonus_effect='Elven Swiftness', bonus_effect_type='dexterity_boost',
+            bonus_magnitude=3, bonus_duration=15,
+            bonus_msg="Elven agility sharpens your reflexes! +3 DEX for 15 turns.")
+    },
+    'Lembas of Resolve': {
+        'ingredients': [('Fire Root', 2), ('Iron Bark', 1), ('Rations', 1)],
+        'tier': 2,
+        'race': 'elf',
+        'result': lambda: LembasWafer(
+            name="Lembas of Resolve",
+            description="Waybread baked with fire root. Hardens body and spirit.",
+            value=80, level=2, lembas_turns=25,
+            bonus_effect='Elven Resolve', bonus_effect_type='defense_boost',
+            bonus_magnitude=3, bonus_duration=15,
+            bonus_msg="Elven resolve strengthens you! +3 DEF for 15 turns.")
     },
 
     # ============================================================
@@ -2672,18 +2715,41 @@ class Food(Item):
 
 
 class LembasWafer(Food):
-    """Elven waybread. Fills hunger to max and delays hunger decay for 30 turns."""
-    def __init__(self):
-        super().__init__(
-            name="Lembas Wafer",
-            description="Elven waybread wrapped in mallorn leaves. A single bite fills the stomach and sustains for many leagues.",
-            value=40, level=1, nutrition=100, count=1
-        )
+    """Elven waybread. Fills hunger to max, delays hunger decay, and grants a bonus effect."""
+    def __init__(self, name="Lembas Wafer", description="Elven waybread wrapped in mallorn leaves. A single bite fills the stomach and sustains for many leagues.",
+                 value=40, level=1, lembas_turns=30, bonus_effect=None, bonus_effect_type='stat_boost',
+                 bonus_magnitude=0, bonus_duration=0, bonus_msg=""):
+        super().__init__(name=name, description=description, value=value, level=level, nutrition=100, count=1)
+        self.lembas_turns = lembas_turns
+        self.bonus_effect = bonus_effect  # effect name or special keyword ('heal', 'mana')
+        self.bonus_effect_type = bonus_effect_type  # status effect type for add_status_effect
+        self.bonus_magnitude = bonus_magnitude
+        self.bonus_duration = bonus_duration
+        self.bonus_msg = bonus_msg
 
     def use(self, character, my_tower=None):
         character.hunger = HUNGER_MAX
-        character._lembas_turns = 30
-        add_log(f"{COLOR_GREEN}You eat the Lembas Wafer. Hunger fully restored! You feel sustained for a long journey.{COLOR_RESET}")
+        character._lembas_turns = self.lembas_turns
+        add_log(f"{COLOR_GREEN}You eat the {self.name}. Hunger fully restored! You feel sustained for a long journey.{COLOR_RESET}")
+        if self.bonus_effect == 'heal':
+            heal = min(self.bonus_magnitude, character.max_health - character.health)
+            character.health = min(character.max_health, character.health + self.bonus_magnitude)
+            if heal > 0:
+                add_log(f"{COLOR_GREEN}The waybread restores {heal} HP.{COLOR_RESET}")
+        elif self.bonus_effect == 'mana':
+            restore = min(self.bonus_magnitude, character.max_mana - character.mana)
+            character.mana = min(character.max_mana, character.mana + self.bonus_magnitude)
+            if restore > 0:
+                add_log(f"{COLOR_GREEN}Elven clarity restores {restore} MP.{COLOR_RESET}")
+        elif self.bonus_effect and self.bonus_duration > 0:
+            character.add_status_effect(
+                effect_name=self.bonus_effect,
+                duration=self.bonus_duration,
+                effect_type=self.bonus_effect_type,
+                magnitude=self.bonus_magnitude,
+                description=self.bonus_msg
+            )
+            add_log(f"{COLOR_GREEN}{self.bonus_msg}{COLOR_RESET}")
         return True  # consumed
 
 

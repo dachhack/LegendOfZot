@@ -1672,14 +1672,20 @@ def get_available_recipes(player_character):
             inventory_items[item.name] = inventory_items.get(item.name, 0) + 1
     
     # Check each recipe
+    player_race = getattr(player_character, 'race', '').lower()
     for recipe_name, recipe_data in POTION_RECIPES.items():
+        # Skip race-restricted recipes for other races
+        required_race = recipe_data.get('race')
+        if required_race and player_race != required_race.lower():
+            continue
+
         can_craft = True
         missing = []
         for ing_name, ing_count in recipe_data['ingredients']:
             if inventory_items.get(ing_name, 0) < ing_count:
                 can_craft = False
                 missing.append((ing_name, ing_count - inventory_items.get(ing_name, 0)))
-        
+
         if can_craft:
             available.append((recipe_name, recipe_data, True, []))
         else:
