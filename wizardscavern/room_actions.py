@@ -2939,8 +2939,9 @@ def process_taxidermist_action(player_character, my_tower, cmd):
     if cmd == 'i':
         gs.prompt_cntl = "inventory"
         handle_inventory_menu(player_character, my_tower, "init")
-    elif cmd in ['n', 's', 'e', 'w']:
-        move_player(player_character, my_tower, cmd)
+    elif cmd == 'x':
+        # Exit taxidermist interaction back to normal room mode
+        gs.prompt_cntl = "move"
 
 
 def process_shard_vault_action(player_character, my_tower, cmd):

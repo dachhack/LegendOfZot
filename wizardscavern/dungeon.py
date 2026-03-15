@@ -437,13 +437,15 @@ class Tower:
         if len(self.floors) == 49:  # 0-indexed, so floor 49 is the 50th floor
             self.create_floor_50_boss_arena(new_floor)
         else:
-            if generate_vault_on_floor(new_floor, len(self.floors)):
-                add_log(f"{COLOR_PURPLE}A hidden vault chamber has been carved into this floor...{COLOR_RESET}")
-
             # BUG LEVEL: Spawn Zot's Shrinking Bug Level on floors 8-15
             # Only one bug level per game, triggered by random chance
-            if self._should_create_bug_level(floor_number):
+            is_bug_level = self._should_create_bug_level(floor_number)
+            if is_bug_level:
                 self._create_bug_level(new_floor, floor_number)
+
+            # Vaults don't spawn on bug levels
+            if not is_bug_level and generate_vault_on_floor(new_floor, len(self.floors)):
+                add_log(f"{COLOR_PURPLE}A hidden vault chamber has been carved into this floor...{COLOR_RESET}")
 
             # Setup special room mechanics for dungeons and tombs
             self.setup_dungeons_and_tombs(new_floor, len(self.floors))

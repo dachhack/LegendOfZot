@@ -1030,14 +1030,14 @@ class WizardsCavernApp(toga.App):
                 self.create_spacer(),
             ]
         
-        # Row 2: [I][spacers][Q]
+        # Row 2: [I][spacers]
         left_row2 = [
             self.create_button('i', 'I') if 'i' in cmd_dict else self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
-            self.create_button('q', 'Q') if 'q' in cmd_dict else self.create_spacer(),
+            self.create_spacer(),
         ]
         
         # Row 3: All spacers
@@ -1098,7 +1098,7 @@ class WizardsCavernApp(toga.App):
             dpad_row3 = [self.create_spacer() for _ in range(3)]
         
         # === RIGHT SIDE: COMMANDS (5 columns) ===
-        # Get non-movement commands (excluding l since it's in D-pad now)
+        # Get non-movement commands (excluding l since it's in D-pad now, q is in inventory only)
         other_cmds = {k: v for k, v in cmd_dict.items() if k not in ['n', 's', 'e', 'w', 'i', 'q', 'l']}
         
         # Command priority for placement
@@ -1127,16 +1127,15 @@ class WizardsCavernApp(toga.App):
             else:
                 cmd_row1.append(self.create_spacer())
         
-        # Row 2: [I][next 3 commands][Q]
+        # Row 2: [I][next 4 commands]
         cmd_row2 = [
             self.create_button('i', cmd_dict.get('i', 'I')) if 'i' in cmd_dict else self.create_spacer()
         ]
-        for i in range(5, 8):  # Positions 2-4
+        for i in range(5, 9):  # Positions 2-5
             if i < len(sorted_cmds):
                 cmd_row2.append(self.create_button(sorted_cmds[i][0], sorted_cmds[i][1]))
             else:
                 cmd_row2.append(self.create_spacer())
-        cmd_row2.append(self.create_button('q', cmd_dict.get('q', 'Q')) if 'q' in cmd_dict else self.create_spacer())
         
         # Row 3: Empty
         cmd_row3 = [self.create_spacer() for _ in range(5)]
@@ -1164,8 +1163,9 @@ class WizardsCavernApp(toga.App):
         is_vendor = 'b' in cmd_dict
         is_journal = (any(str(i) in cmd_dict for i in range(1, 9)) and 'x' in cmd_dict and not is_altar) or \
                      ('b' in cmd_dict and 's' in cmd_dict and 'a' in cmd_dict and 'g' in cmd_dict and 'x' in cmd_dict)
-        is_crafting = not is_inventory and not is_vendor and not is_journal and not is_altar and 'x' in cmd_dict
-        
+        is_taxidermist = gs.prompt_cntl == 'taxidermist_mode'
+        is_crafting = not is_inventory and not is_vendor and not is_journal and not is_altar and not is_taxidermist and 'x' in cmd_dict
+
         if is_altar:
             # Altar layout first (has priority)
             self.build_altar_layout(cmd_dict)
@@ -1194,6 +1194,9 @@ class WizardsCavernApp(toga.App):
             # [.][.][.][.]         [4][5][6]
             # [X][.][.][.]         [7][8][9]
             self.build_vendor_layout(cmd_dict)
+        elif is_taxidermist:
+            # Taxidermist layout: S, I, X on left, numpad on right
+            self.build_taxidermist_layout(cmd_dict)
         elif is_crafting:
             # Crafting layout with 0-9 and X button
             self.build_crafting_layout(cmd_dict)
@@ -1258,7 +1261,7 @@ class WizardsCavernApp(toga.App):
 
         Row 1: [U][E][C] [fillers] [1][2][3]
         Row 2: [M][J][A] [fillers] [0][4][5][6]
-        Row 3: [S][X][G] [fillers] [7][8][9]
+        Row 3: [S][Q][X] [fillers] [7][8][9]
         """
 
         # Commands (left 3 columns)
@@ -1274,8 +1277,8 @@ class WizardsCavernApp(toga.App):
         ]
         cmd_row3 = [
             self.create_button('s', cmd_dict.get('s', 'S')) if 's' in cmd_dict else self.create_spacer(),  # STATS
+            self.create_button('q', cmd_dict.get('q', 'Q')) if 'q' in cmd_dict else self.create_spacer(),  # QUIT
             self.create_button('x', cmd_dict.get('x', 'X')) if 'x' in cmd_dict else self.create_spacer(),  # EXIT
-            self.create_button('g', cmd_dict.get('g', 'G')) if 'g' in cmd_dict else self.create_spacer(),  # SAVE
         ]
 
         # Build rows: commands on left, numpad on right, expanding gap between
@@ -1367,14 +1370,39 @@ class WizardsCavernApp(toga.App):
         for btn in row1: self.button_row_1.add(btn)
         for btn in row2: self.button_row_2.add(btn)
         for btn in row3: self.number_pad_box.add(btn)
-    
+
+    def build_taxidermist_layout(self, cmd_dict):
+        """
+        Build taxidermist layout: [CMDS] [fillers] [NUMPAD]
+
+        Row 1: [S]  [fillers]  [1][2][3]
+        Row 2: [I]  [fillers]  [4][5][6]
+        Row 3: [X]  [fillers]  [7][8][9]
+        """
+        row1 = self.build_row(
+            [self.create_button('s', 'S')],
+            [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')]
+        )
+        row2 = self.build_row(
+            [self.create_button('i', 'I')],
+            [self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
+        )
+        row3 = self.build_row(
+            [self.create_button('x', 'X')],
+            [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')]
+        )
+
+        for btn in row1: self.button_row_1.add(btn)
+        for btn in row2: self.button_row_2.add(btn)
+        for btn in row3: self.number_pad_box.add(btn)
+
     def build_altar_layout(self, cmd_dict):
         """
         Build altar layout for item sacrifice: [D-PAD (3)] [CMDS (3)] [NUMPAD (3)]
 
-        Row 1: [ ][N][ ]  [Sac][I][ ]     [1][2][3]
-        Row 2: [W][ ][E]  [ ][Q][ ]  [0]  [4][5][6]
-        Row 3: [L][S][ ]  [ ][ ][ ]       [7][8][9]
+        Row 1: [ ][N][ ]  [Sac][I][ ]  [1][2][3]
+        Row 2: [W][ ][E]  [ ][Q][ ]    [4][5][6]
+        Row 3: [L][S][ ]  [0][ ][ ]    [7][8][9]
         """
         # D-pad
         dpad_row1 = [self.create_spacer(), self.create_button('n', 'N') if 'n' in cmd_dict else self.create_spacer(), self.create_spacer()]
@@ -1389,9 +1417,10 @@ class WizardsCavernApp(toga.App):
         sac_btn = toga.Button(
             'Sac',
             on_press=lambda w: self.number_pad_input('s'),
-            style=Pack(flex=1, margin=1, font_size=11, font_weight='bold', color='#FFD700',
-                       background_color='#333', height=36)
+            style=Pack(margin=0, font_size=11, font_weight='bold', color='#FFD700',
+                       background_color='#333', width=55, height=34)
         )
+        self._compact_android_button(sac_btn)
         cmd_row1 = [
             sac_btn,
             self.create_button('i', 'I') if 'i' in cmd_dict else self.create_spacer(),
@@ -1399,13 +1428,13 @@ class WizardsCavernApp(toga.App):
         ]
         cmd_row2 = [
             self.create_spacer(),
-            self.create_button('q', 'Q') if 'q' in cmd_dict else self.create_spacer(),
+            self.create_spacer(),
             self.create_spacer(),
         ]
         cmd_row3 = [self.create_spacer(), self.create_spacer(), self.create_spacer()]
 
-        # Numpad for item selection (far right)
-        numpad_row1 = [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')]
+        # Numpad for item selection (far right) - [0][4][5][6] on row 2 matches standard layout
+        numpad_row1 = [self.create_spacer(), self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')]
         numpad_row2 = [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
 
         # Button 9 is the Devotion Rune offering - only show when player qualifies
@@ -1419,12 +1448,13 @@ class WizardsCavernApp(toga.App):
             btn9 = toga.Button(
                 '9',
                 on_press=lambda w: self.number_pad_input('9'),
-                style=Pack(flex=1, margin=1, font_size=12, font_weight='bold', color='#FFD700',
-                           background_color='#2a2a2a', height=36)
+                style=Pack(margin=0, font_size=12, font_weight='bold', color='#FFD700',
+                           background_color='#2a2a2a', width=55, height=34)
             )
+            self._compact_android_button(btn9)
         else:
             btn9 = self.create_numpad_button('9')
-        numpad_row3 = [self.create_numpad_button('7'), self.create_numpad_button('8'), btn9]
+        numpad_row3 = [self.create_spacer(), self.create_numpad_button('7'), self.create_numpad_button('8'), btn9]
 
         for btn in dpad_row1 + cmd_row1 + numpad_row1:
             self.button_row_1.add(btn)
@@ -2840,7 +2870,7 @@ class WizardsCavernApp(toga.App):
                 if can_cast:
                     inv_commands += " | m = spells"
 
-                inv_commands += " | j = jrnl | x = exit"
+                inv_commands += " | j = jrnl | q = quit | x = exit"
 
                 html_code = f"""
 
@@ -3903,7 +3933,7 @@ class WizardsCavernApp(toga.App):
             current_commands_text = "s# = sacrifice item | i = inventory"
             if has_lantern:
                 current_commands_text += " | l = lantern"
-            current_commands_text += " | n/s/e/w = move | q = quit"
+            current_commands_text += " | n/s/e/w = move"
 
         elif gs.prompt_cntl == "pool_mode":
             # POOL VIEW - Simplified: Map | Pool Info
@@ -4813,7 +4843,7 @@ class WizardsCavernApp(toga.App):
                         {complete_html}
                     </div>
                     <div style='color:#888; font-size:11px; margin-top:6px;'>
-                        s = sell all trophies for gold | i = inventory | n/s/e/w = move
+                        s = sell all trophies for gold | i = inventory | x = exit
                     </div>
                 </div>"""
 
@@ -4827,7 +4857,7 @@ class WizardsCavernApp(toga.App):
                         <div class="room-panel" style='width: 100%;'>{tax_html}</div>
                     </div>
                 </div>"""
-            current_commands_text = "1-7=turn in collection | s=sell trophies | i=inventory | n/s/e/w=move"
+            current_commands_text = "#=turn in collection | s=sell trophies | i=inventory | x=exit"
 
         elif gs.prompt_cntl == "towel_action_mode":
             # TOWEL ACTION VIEW
@@ -5147,19 +5177,16 @@ class WizardsCavernApp(toga.App):
                 if has_lantern:
                     base_commands += f" | l = lantern"
 
-                base_commands += " | q = quit"
 
                 # Add stairs commands if on stairs
                 if current_room.room_type == 'U':
                     current_commands_text = "n/s/e/w = move | u = go up | i = inventory"
                     if has_lantern:
                         current_commands_text += f" | l = lantern"
-                    current_commands_text += " | q = quit"
                 elif current_room.room_type == 'D':
                     current_commands_text = "n/s/e/w = move | d = go down | i = inventory"
                     if has_lantern:
                         current_commands_text += f" | l = lantern"
-                    current_commands_text += " | q = quit"
                 else:
                     current_commands_text = base_commands
 
@@ -5169,17 +5196,17 @@ class WizardsCavernApp(toga.App):
                 current_commands_text = "o = open | i = inventory"
                 if has_lantern:
                     current_commands_text += f" | l = lantern"
-                current_commands_text += " | q = quit | n/s/e/w = move"
+                current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "pool_mode":
                 current_commands_text = "dr = drink | i = inventory"
                 if has_lantern:
                     current_commands_text += f" | l = lantern"
-                current_commands_text += " | n/s/e/w = move | q = quit"
+                current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "altar_mode":
                 current_commands_text = "s# = sacrifice item | i = inventory"
                 if has_lantern:
                     current_commands_text += " | l = lantern"
-                current_commands_text += " | n/s/e/w = move | q = quit"
+                current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "warp_mode":
                 current_commands_text = "y = resist | n = enter"
             elif gs.prompt_cntl == "flare_direction_mode":
@@ -5188,7 +5215,7 @@ class WizardsCavernApp(toga.App):
                 current_commands_text = "r = rummage for books | i = inventory"
                 if has_lantern:
                     current_commands_text += f" | l = lantern"
-                current_commands_text += " | n/s/e/w = move | q = quit"
+                current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "library_read_decision_mode":
                 current_commands_text = "y = read grimoire | n = discard"
             elif gs.prompt_cntl == "upgrade_scroll_mode":
@@ -5209,7 +5236,7 @@ class WizardsCavernApp(toga.App):
         # Determine if number pad is needed
         needs_numbers = gs.prompt_cntl in [
             'inventory',
-            'vendor_shop', 
+            'vendor_shop',
             'starting_shop',
             'altar_mode',
             'spell_memorization_mode',
@@ -5219,6 +5246,7 @@ class WizardsCavernApp(toga.App):
             'upgrade_scroll_mode',
             'identify_scroll_mode',
             'sell_quantity_mode',
+            'taxidermist_mode',
         ]
         
         self.update_button_panel(current_commands_text, needs_numbers)
