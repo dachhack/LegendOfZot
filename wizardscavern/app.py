@@ -2085,7 +2085,7 @@ class WizardsCavernApp(toga.App):
             ach = gs.newly_unlocked_achievements[-1]
             gold_text = f' (+{ach.reward_gold}g)' if ach.reward_gold > 0 else ''
             achievement_notifications = f"""
-                  <div style="background: rgba(255, 215, 0, 0.1);
+                  <div style="background: rgba(136, 136, 136, 0.05);
                             color: #FFD700;
                             padding: 6px 10px;
                             margin-bottom: 8px;
@@ -2315,7 +2315,7 @@ class WizardsCavernApp(toga.App):
                                         HP: <span style="color: #CCC;">{loaded_char.health}/{loaded_char.max_health}</span>
                                     </div>
                                     <div style="background: #333; border-radius: 3px; height: 8px; overflow: hidden;">
-                                        <div style="background: linear-gradient(90deg, #4CAF50, #8BC34A); height: 100%; width: {int(loaded_char.health / loaded_char.max_health * 100)}%;"></div>
+                                        <div style="background: linear-gradient(90deg, #888, #AAA); height: 100%; width: {int(loaded_char.health / loaded_char.max_health * 100)}%;"></div>
                                     </div>
                                 </div>
                                 <div style="margin: 10px 0;">
@@ -2323,7 +2323,7 @@ class WizardsCavernApp(toga.App):
                                         MP: <span style="color: #2196F3;">{loaded_char.mana}/{loaded_char.max_mana}</span>
                                     </div>
                                     <div style="background: #333; border-radius: 3px; height: 8px; overflow: hidden;">
-                                        <div style="background: linear-gradient(90deg, #2196F3, #03A9F4); height: 100%; width: {int(loaded_char.mana / max(1, loaded_char.max_mana) * 100)}%;"></div>
+                                        <div style="background: linear-gradient(90deg, #666, #888); height: 100%; width: {int(loaded_char.mana / max(1, loaded_char.max_mana) * 100)}%;"></div>
                                     </div>
                                 </div>
 
@@ -2620,7 +2620,7 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">{gs.active_vendor.name}'s Shop</div>
                     {player_stats_html}
-                    <div style="margin-bottom: 5px; color: #DAA520;">{gs.shop_message}</div>
+                    <div style="margin-bottom: 5px; color: #CCC;">{gs.shop_message}</div>
                     <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
                         <div style="border: 1px solid grey; padding: 3px;">{vendor_html}</div>
                         <div style="border: 1px solid grey; padding: 3px;">{player_inv_html}</div>
@@ -2638,7 +2638,7 @@ class WizardsCavernApp(toga.App):
             
             quantity_html = f"""
                 <div style="border: 2px solid #666; padding: 15px; border-radius: 8px; background: #1a1a1a; text-align: center;">
-                    <div style="color: #DAA520; font-weight: bold; font-size: 16px; margin-bottom: 10px;">
+                    <div style="color: #CCC; font-weight: bold; font-size: 16px; margin-bottom: 10px;">
                         How many to sell?
                     </div>
                     <div style="color: #FFF; font-size: 12px; margin-bottom: 8px;">
@@ -2709,7 +2709,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     {player_stats_html}
-                    <div style="margin-bottom: 5px; color: #DAA520;">{gs.shop_message}</div>
+                    <div style="margin-bottom: 5px; color: #CCC;">{gs.shop_message}</div>
                     <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
                         <div style="border: 1px solid grey; padding: 3px;">{vendor_html}</div>
                         <div style="border: 1px solid grey; padding: 3px;">{player_inv_html}</div>
@@ -3133,7 +3133,7 @@ class WizardsCavernApp(toga.App):
             memorized_html = f"""
                 <h3>Spell Slots: {used_slots}/{max_slots}</h3>
                 <div style="background-color: #333; padding: 3px; border-radius: 3px; margin-bottom: 5px;">
-                    <div style="background-color: #4CAF50; width: {(used_slots / max_slots) * 100 if max_slots > 0 else 0}%; height: 20px; border-radius: 2px;"></div>
+                    <div style="background-color: #888; width: {(used_slots / max_slots) * 100 if max_slots > 0 else 0}%; height: 20px; border-radius: 2px;"></div>
                 </div>
                 <b>Available Slots:</b> {max_slots - used_slots}<br>
                 <hr>
@@ -3196,7 +3196,7 @@ class WizardsCavernApp(toga.App):
             journal_html = f"""
                 <h3> Adventurer's Journal</h3>
                 <div style="padding: 3px; border-radius: 3px; margin-bottom: 15px;">
-                    <div style=""background-color: #4CAF50; width: {completion_pct}%; height: 20px; border-radius: 2px; text-align: center; line-height: 20px; color: #000; font-weight: bold;">
+                    <div style=""background-color: #888; width: {completion_pct}%; height: 20px; border-radius: 2px; text-align: center; line-height: 20px; color: #000; font-weight: bold;">
                         {total_found}/{total_items} Items Discovered ({completion_pct}%)
                     </div>
                 </div>
@@ -3989,7 +3989,7 @@ class WizardsCavernApp(toga.App):
                 insight_text = room.properties.get('insight_text', '')
                 insight_color = room.properties.get('insight_color', '#DDD')
                 pool_html += f"""
-                    <div style="margin-top: 8px; padding: 6px; border-left: 3px solid {insight_color}; border-radius: 3px; background: rgba(0,206,209,0.05);">
+                    <div style="margin-top: 8px; padding: 6px; border-left: 3px solid {insight_color}; border-radius: 3px; background: rgba(136,136,136,0.05);">
                         <div style="color: {insight_color}; font-size: 12px;"> Intuition (INT {gs.player_character.intelligence})</div>
                         <div style="color: #DDD; font-size: 12px; margin-top: 2px;">{insight_text}</div>
                     </div>
@@ -4045,7 +4045,7 @@ class WizardsCavernApp(toga.App):
             vault_warning = ""
             if is_vault_warp:
                 vault_warning = """
-                    <div style="padding: 6px; margin-top: 8px; border-radius: 3px; border-left: 3px solid #F44336; background: rgba(244,67,54,0.1);">
+                    <div style="padding: 6px; margin-top: 8px; border-radius: 3px; border-left: 3px solid #F44336; background: rgba(136,136,136,0.05);">
                         <div style="color: #F44336; font-size: 12px; font-weight: bold;">Warning!</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px;">This portal pulses with vault energy. You may be drawn to a sealed chamber with no escape!</div>
                     </div>
@@ -4264,10 +4264,10 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     
-                    {'<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #DAA520; font-size: 12px;"> Already Searched</div><div style="color: #AAA; font-size: 9px; margin-top: 2px;">You have already rummaged through this library.</div></div>' if has_searched else '<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #DAA520; font-size: 12px;"> Unsearched</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Hidden knowledge awaits discovery...</div></div>'}
+                    {'<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #CCC; font-size: 12px;"> Already Searched</div><div style="color: #AAA; font-size: 9px; margin-top: 2px;">You have already rummaged through this library.</div></div>' if has_searched else '<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #CCC; font-size: 12px;"> Unsearched</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Hidden knowledge awaits discovery...</div></div>'}
                     
                     <div style="padding: 6px; margin-top: 10px; border-radius: 3px;">
-                        <div style="color: #DAA520; font-size: 12px; font-weight: bold;"> Rummage for grimoires?</div>
+                        <div style="color: #CCC; font-size: 12px; font-weight: bold;"> Rummage for grimoires?</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Search the shelves for ancient spellbooks...</div>
                     </div>
                 </div>
@@ -4498,7 +4498,7 @@ class WizardsCavernApp(toga.App):
             fey_sprite = generate_room_sprite_html('G', variant='fey_garden')
 
             fey_html = f"""
-                        <div style="border: 2px solid #666; border-radius: 5px; padding: 15px; background: rgba(20, 0, 30, 0.8); box-shadow: none;">
+                        <div style="border: 2px solid #666; border-radius: 5px; padding: 15px; background: rgba(26, 26, 26, 0.8); box-shadow: none;">
                             <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px; border-bottom: 1px solid #666; padding-bottom: 10px;">
                                 <div style="flex-shrink:0;">{fey_sprite}</div>
                                 <span style="font-size: 18px; font-weight: bold; color: #CCC;">* FEY GARDEN *</span>
@@ -4517,7 +4517,7 @@ class WizardsCavernApp(toga.App):
                             </div>
 
                             <div style="display: flex; gap: 10px; justify-content: center;">
-                                <div style="background: #4A148C; padding: 8px 15px; border-radius: 4px; border: 1px solid #666; color: #FFF; font-weight: bold; font-size: 12px;">
+                                <div style="background: #333; padding: 8px 15px; border-radius: 4px; border: 1px solid #666; color: #FFF; font-weight: bold; font-size: 12px;">
                                     [ H ] Harvest Ingredients
                                 </div>
                             </div>
@@ -5080,21 +5080,21 @@ class WizardsCavernApp(toga.App):
                 # Show spell info if intelligence is high enough
                 if gs.player_character.intelligence >= 20:
                     library_html += f"""
-                    <div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(218,165,32,0.2); border-left: 3px solid #DAA520;">
-                        <div style="color: #DAA520; font-size: 12px; font-weight: bold;"> {found_spell.name}</div>
+                    <div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(136,136,136,0.05); border-left: 3px solid #666;">
+                        <div style="color: #CCC; font-size: 12px; font-weight: bold;"> {found_spell.name}</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px;">Costs {found_spell.mana_cost} MP</div>
                     </div>
                     """
                 else:
                     library_html += """
-                    <div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(218,165,32,0.1); border-left: 3px solid #8B4513;">
+                    <div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(136,136,136,0.05); border-left: 3px solid #666;">
                         <div style="color: #888; font-size: 9px; font-style: italic;">The arcane symbols are difficult to decipher...</div>
                     </div>
                     """
             
             library_html += """
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #DAA520; background: rgba(218,165,32,0.1);">
-                        <div style="color: #DAA520; font-size: 12px; font-weight: bold;"> Attempt to read this grimoire?</div>
+                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #666; background: rgba(136,136,136,0.05);">
+                        <div style="color: #CCC; font-size: 12px; font-weight: bold;"> Attempt to read this grimoire?</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Reading may succeed or fail based on your intelligence...</div>
                     </div>
                 </div>
