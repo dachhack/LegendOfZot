@@ -2977,7 +2977,12 @@ class WizardsCavernApp(toga.App):
             for item in gs.player_character.inventory.items:
                 if isinstance(item, Ingredient):
                     ingredient_counts[item.name] = ingredient_counts.get(item.name, 0) + 1
-            
+            # Count rations
+            ration_count = 0
+            for item in gs.player_character.inventory.items:
+                if isinstance(item, Food) and item.name == "Rations":
+                    ration_count += getattr(item, 'count', 1)
+
             # Build ingredients display
             ingredients_html = "<div style='margin-bottom: 10px;'>"
             ingredients_html += "<div style='color: #4CAF50; font-weight: bold; margin-bottom: 5px;'>Your Ingredients:</div>"
@@ -2986,6 +2991,8 @@ class WizardsCavernApp(toga.App):
                 ingredients_html += f"<div style='color: #888; font-size: 12px;'>{ing_list}</div>"
             else:
                 ingredients_html += "<div style='color: #666; font-size: 12px; font-style: italic;'>No ingredients. Harvest from Garden rooms!</div>"
+            if ration_count > 0:
+                ingredients_html += f"<div style='color: #88FF88; font-size: 12px;'>{ration_count}x Rations</div>"
             ingredients_html += "</div>"
             
             # Build craftable recipes HTML
@@ -3008,14 +3015,17 @@ class WizardsCavernApp(toga.App):
                     recipes_html += f"<div style='color: {tier_color}; font-weight: bold; margin: 8px 0 4px 0; border-bottom: 1px solid {tier_color};'>TIER {tier} - {tier_names[tier]}</div>"
                     
                     for recipe_name, recipe_data in by_tier[tier]:
-                        potion = recipe_data['result']()
+                        crafted_item = recipe_data['result']()
                         ingredients_text = ", ".join([f"{count}x {name}" for name, count in recipe_data['ingredients']])
-                        
+                        ration_cost = recipe_data.get('ration_cost', 0)
+                        if ration_cost > 0:
+                            ingredients_text += f", {ration_cost}x Rations"
+
                         recipes_html += f"""
                             <div style='padding: 6px; margin: 4px 0; background: rgba(255,255,255,0.05); border-radius: 3px; border-left: 3px solid {tier_color};'>
                                 <div style='color: #FFD700; font-weight: bold;'>{recipe_counter}. {recipe_name}</div>
                                 <div style='color: #888; font-size: 12px;'>Needs: {ingredients_text}</div>
-                                <div style='color: #AAA; font-size: 12px; font-style: italic;'>{potion.description}</div>
+                                <div style='color: #AAA; font-size: 12px; font-style: italic;'>{crafted_item.description}</div>
                             </div>
                         """
                         recipe_counter += 1
@@ -3038,7 +3048,7 @@ class WizardsCavernApp(toga.App):
             crafting_html = f"""
                 <div style="border: 2px solid #E040FB; border-radius: 4px; padding: 10px; background: #1a1a1a;">
                     <div style="color: #E040FB; font-weight: bold; font-size: 12px; text-align: center; margin-bottom: 8px;">
-                        POTION CRAFTING
+                        CRAFTING
                     </div>
                     {ingredients_html}
                     <div style="max-height: 300px; overflow-y: auto;">
