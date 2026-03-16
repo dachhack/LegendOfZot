@@ -3856,17 +3856,19 @@ class WizardsCavernApp(toga.App):
             hunch_god_id = room.properties.get('hunch_god_id', blessed_id)
             hunch_god = gods.get(hunch_god_id, blessed_god)
 
-            # Spirit voice whispers per god
-            spirit_whispers = {
-                1: "...bring me the essence of life... let healing flow upon this stone...",
-                2: "...the wild calls... nature's bounty belongs here...",
-                3: "...knowledge... inscribed words... lay them before me...",
-                4: "...steel... bring me the bite of a blade...",
-                5: "...armor yourself no more... surrender your shield to the moon...",
-                6: "...anything... everything... surprise me, mortal...",
-                7: "...cursed things... tainted things... give them to the void...",
-            }
-            whisper = spirit_whispers.get(hunch_god_id, "...offer something... anything...")
+            # Generic spirit flavor text - no hints about which god
+            import random as _rnd
+            spirit_whispers = [
+                "...place your offering upon the stone... and pray...",
+                "...the altar hums with ancient power...",
+                "...something watches... waiting for a gift...",
+                "...do you dare part with your possessions, mortal?...",
+                "...the air grows thick with divine presence...",
+                "...choose wisely... or do not choose at all...",
+                "...a faint pulse echoes from deep within the stone...",
+                "...the gods are always hungry...",
+            ]
+            whisper = _rnd.choice(spirit_whispers)
 
             # Build sacrificeable inventory list (no Runes/Shards)
             sorted_items = get_sorted_inventory(gs.player_character.inventory)
