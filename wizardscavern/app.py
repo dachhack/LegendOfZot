@@ -68,6 +68,7 @@ from .save_system import SaveSystem
 from .room_actions import *
 from .game_systems import *
 from .game_systems import _handle, _trigger_room_interaction, _execute_warp
+from .version import VERSION, BUILD_NUMBER, CHANGELOG
 
 def health_bar(current, maximum, width=20):
     filled = int((current / maximum) * width) if maximum > 0 else 0
@@ -405,9 +406,24 @@ class WizardsCavernApp(toga.App):
         # Show window
         self.main_window.show()
         
+        # Start with splash screen
+        gs.prompt_cntl = "splash"
+
         # Initial render
         self.render()
-        
+
+        # Schedule transition from splash to intro after 5 seconds
+        import threading
+        def _end_splash():
+            gs.prompt_cntl = "intro_story"
+            try:
+                self.render()
+            except Exception:
+                pass
+        self._splash_timer = threading.Timer(5.0, _end_splash)
+        self._splash_timer.daemon = True
+        self._splash_timer.start()
+
         # CRITICAL: Disable native keyboard AFTER window is shown
         # This must happen after the native widgets are fully initialized
         self.disable_ios_keyboard()
@@ -1776,6 +1792,13 @@ class WizardsCavernApp(toga.App):
         if gs.game_should_quit:
             return
 
+        # Handle splash screen - any input skips to intro
+        if gs.prompt_cntl == "splash":
+            if hasattr(self, '_splash_timer'):
+                self._splash_timer.cancel()
+            gs.prompt_cntl = "intro_story"
+            return
+
         # Handle death screen - any key closes the game and deletes save
         if gs.prompt_cntl == "death_screen":
             add_log("Thanks for playing Wizard's Cavern!")
@@ -2112,6 +2135,35 @@ class WizardsCavernApp(toga.App):
         html_code = ""
         current_commands_text = ""
 
+        # SPLASH SCREEN - Show version and recent changes for 5 seconds
+        if gs.prompt_cntl == "splash":
+            changelog_html = ""
+            for entry in CHANGELOG[:8]:
+                # Escape HTML in commit messages
+                safe_entry = entry.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+                changelog_html += f'<div style="color: #AAA; font-size: 11px; margin: 3px 0; padding-left: 10px; border-left: 2px solid #444;">{safe_entry}</div>'
+
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 12px; padding: 20px; text-align: center;
+                            display: flex; flex-direction: column; justify-content: center; min-height: 60vh;">
+                    <div style="font-size: 24px; font-weight: bold; margin-bottom: 8px; color: #FFD700;">
+                        WIZARD'S CAVERN
+                    </div>
+                    <div style="font-size: 14px; color: #4FC3F7; margin-bottom: 30px;">
+                        v{VERSION} (build {BUILD_NUMBER})
+                    </div>
+                    <div style="text-align: left; max-width: 340px; margin: 0 auto;">
+                        <div style="color: #888; font-size: 11px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">
+                            Recent Changes
+                        </div>
+                        {changelog_html}
+                    </div>
+                </div>
+            """
+            current_commands_text = ""
+            self.update_button_panel(current_commands_text, False)
+            return html_code
+
         # DEATH SCREEN - Show gravestone and final stats
         if gs.prompt_cntl == "death_screen":
             # Calculate final stats
@@ -2157,7 +2209,7 @@ class WizardsCavernApp(toga.App):
             return html_code
 
         # Player stats - hide HP/MP during character creation and starting shop
-        show_bars = gs.prompt_cntl not in ['intro_story', 'player_name', 'player_race', 'player_gender', 'starting_shop']
+        show_bars = gs.prompt_cntl not in ['splash', 'intro_story', 'player_name', 'player_race', 'player_gender', 'starting_shop']
 
         # Get dynamic title
         player_title = get_player_title(gs.player_character) if show_bars else ""
