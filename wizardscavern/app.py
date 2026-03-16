@@ -1637,7 +1637,7 @@ class WizardsCavernApp(toga.App):
 
     def create_spacer(self):
         """Create an empty spacer that fills remaining space."""
-        return toga.Box(style=Pack(flex=1))
+        return toga.Box(style=Pack(flex=1, height=34))
     def create_filler(self):
         """Create a small gap between button groups."""
         return toga.Box(style=Pack(width=2))
