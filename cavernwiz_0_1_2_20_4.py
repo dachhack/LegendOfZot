@@ -4067,27 +4067,20 @@ class WizardsCavernApp(toga.App):
             library_sprite = generate_room_sprite_html('L', variant=lib_variant)
 
             # Library info box - simple and clean
+            if has_searched:
+                lib_status = '<div style="color: #888; font-size: 11px; margin-top: 4px;">You have already rummaged through this library.</div>'
+            else:
+                lib_status = '<div style="color: #DAA520; font-size: 11px; margin-top: 4px;">Hidden knowledge awaits discovery...</div>'
+
             library_html = f"""
-                <div style="
-                            border: 2px solid #8B4513;
-                            border-radius: 3px;
-                            padding: 12px;
-                            max-height: 300px;
-                            overflow-y: auto;
-                            ">
+                <div style="border: 2px solid #8B4513; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{library_sprite}</div>
                         <div style="color: #DDD; font-size: 11px; line-height: 1.4;">
                              Towering shelves filled with dusty tomes surround you. The air is thick with the scent of old parchment and forgotten knowledge.
                         </div>
                     </div>
-                    
-                    {'<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #DAA520; font-size: 10px;"> Already Searched</div><div style="color: #AAA; font-size: 9px; margin-top: 2px;">You have already rummaged through this library.</div></div>' if has_searched else '<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #DAA520; font-size: 10px;"> Unsearched</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Hidden knowledge awaits discovery...</div></div>'}
-                    
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px;">
-                        <div style="color: #DAA520; font-size: 10px; font-weight: bold;"> Rummage for grimoires?</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Search the shelves for ancient spellbooks...</div>
-                    </div>
+                    {lib_status}
                 </div>
                 """
 
@@ -4899,38 +4892,30 @@ class WizardsCavernApp(toga.App):
             current_room = floor.grid[gs.player_character.y][gs.player_character.x]
             found_spell = current_room.properties.get('found_spell')
             
-            # Library info box with grimoire decision
-            library_html = """
-                <div style="
-                            border: 2px solid #8B4513;
-                            border-radius: 3px;
-                            padding: 12px;
-                            max-height: 300px;
-                            overflow-y: auto;
-                            ">
-                    <div style="padding: 6px; margin-bottom: 5px;">
-                    </div>
-            """
-            
+            # Library sprite
+            lib_variant = 'codex' if current_room.properties.get('has_codex') else None
+            library_sprite = generate_room_sprite_html('L', variant=lib_variant)
+
+            # Spell info line
+            spell_info = ""
             if found_spell:
-                # Show spell info if intelligence is high enough
                 if gs.player_character.intelligence >= 20:
-                    library_html += f"""
-                    <div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(218,165,32,0.2); border-left: 3px solid #DAA520;">
-                        <div style="color: #DAA520; font-size: 10px; font-weight: bold;"> {found_spell.name}</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px;">Costs {found_spell.mana_cost} MP</div>
-                    </div>
-                    """
+                    spell_info = f'<div style="color: #DAA520; font-size: 11px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555;"><b>{found_spell.name}</b> <span style="color: #AAA;">({found_spell.mana_cost} MP)</span></div>'
                 else:
-                    library_html += """
-                    <div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(218,165,32,0.1); border-left: 3px solid #8B4513;">
-                        <div style="color: #888; font-size: 9px; font-style: italic;">The arcane symbols are difficult to decipher...</div>
+                    spell_info = '<div style="color: #888; font-size: 9px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555; font-style: italic;">The arcane symbols are difficult to decipher...</div>'
+
+            # Library info box with grimoire decision
+            library_html = f"""
+                <div style="border: 2px solid #8B4513; border-radius: 3px; padding: 12px;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
+                        <div style="flex-shrink:0;">{library_sprite}</div>
+                        <div style="color: #DDD; font-size: 11px; line-height: 1.4;">
+                            You found a grimoire among the dusty shelves!
+                        </div>
                     </div>
-                    """
-            
-            library_html += """
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #DAA520; background: rgba(218,165,32,0.1);">
-                        <div style="color: #DAA520; font-size: 10px; font-weight: bold;"> Attempt to read this grimoire?</div>
+                    {spell_info}
+                    <div style="padding-top: 6px; margin-top: 6px; border-top: 1px solid #555;">
+                        <div style="color: #DAA520; font-size: 11px; font-weight: bold;">Attempt to read this grimoire?</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Reading may succeed or fail based on your intelligence...</div>
                     </div>
                 </div>
