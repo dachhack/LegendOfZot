@@ -2,7 +2,7 @@
 from .items import (
     Item, Potion, Ingredient, Trophy, Rune, Shard,
     Weapon, Armor, Scroll, Flare, Lantern, LanternFuel,
-    Food, Meat, CookingKit, Treasure, Towel, Spell,
+    Food, Meat, CookingKit, Treasure, Towel, Spell, LembasWafer,
 )
 
 
@@ -208,6 +208,31 @@ POTION_RECIPES = {
         ],
         'tier': 5,
         'result': lambda: Potion(name="Prismatic Elixir", potion_type='resistance_all', value=1000, level=5, description="~~~ PERMANENT: ALL Elemental Resistances forever! ~~~")
+    },
+}
+
+# ============================================================================
+# LEMBAS RECIPES (Elf-only): Garden ingredients + Rations -> Lembas Wafer
+# Each recipe requires garden herbs plus one Ration to bake into lembas.
+# ============================================================================
+LEMBAS_RECIPES = {
+    'Lembas Wafer (Moonpetal)': {
+        'ingredients': [('Moonpetal', 2), ('Healing Moss', 1)],
+        'ration_cost': 1,
+        'tier': 1,
+        'result': lambda: LembasWafer(),
+    },
+    'Lembas Wafer (Starbloom)': {
+        'ingredients': [('Starbloom', 2), ('Crystal Dew', 1)],
+        'ration_cost': 1,
+        'tier': 2,
+        'result': lambda: LembasWafer(),
+    },
+    'Lembas Wafer (Herbal)': {
+        'ingredients': [('Fire Root', 1), ('Shadow Leaf', 1), ('Moonpetal', 1)],
+        'ration_cost': 1,
+        'tier': 2,
+        'result': lambda: LembasWafer(),
     },
 }
 
