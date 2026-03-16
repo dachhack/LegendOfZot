@@ -603,7 +603,8 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, background_color='#2a2a2a', color='#EEE')
+            style=Pack(flex=1, margin=2, height=36, font_size=14,
+                       background_color='#2a2a2a', color='#EEE')
         )
         
         # Note: iOS keyboard will be disabled AFTER window is shown
@@ -613,19 +614,19 @@ class WizardsCavernApp(toga.App):
         self.backspace_button = toga.Button(
             "\u232b",
             on_press=lambda w: self.number_pad_backspace(),
-            style=Pack(margin=2, width=45, font_size=14,
+            style=Pack(margin=2, width=50, height=36, font_size=14,
                        background_color='#333', color='#EEE')
         )
 
         self.submit_button = toga.Button(
-            "Send",
+            "SEND",
             on_press=self.on_command_submit,
-            style=Pack(margin=2, width=80, font_size=14,
+            style=Pack(margin=2, width=65, height=36, font_size=14, font_weight='bold',
                        background_color='#444', color='#FFF')
         )
         
         self.input_row = toga.Box(
-            style=Pack(direction=ROW, margin=2, background_color='#1a1a1a'),
+            style=Pack(direction=ROW, margin=2, height=40, background_color='#1a1a1a'),
             children=[
                 self.input_field,
                 self.backspace_button,
@@ -647,7 +648,7 @@ class WizardsCavernApp(toga.App):
             style=Pack(
                 direction=COLUMN,
                 background_color="#1a1a1a",
-                height=170,
+                height=200,
                 flex=0,
             ),
             children=[
