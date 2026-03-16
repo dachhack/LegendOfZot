@@ -4,8 +4,9 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 3
+BUILD_NUMBER = 4
 CHANGELOG = [
+    "Move font size toggle from main menu to inventory ('f' key)",
     "Add splash screen with version info and auto-incrementing build number",
     "Merge altar redesign and visual fixes from fix-altar-box-height branch",
     "Merge main: game changes and CI fixes",
@@ -13,5 +14,4 @@ CHANGELOG = [
     "Simplify interaction box colors: grey borders, remove colored backgrounds",
     "Fix input row position by giving button_panel a fixed height",
     "Fix input row shifting up in combat by giving spacers a fixed height",
-    "Rework library interaction to match other room panels",
 ]

@@ -5308,11 +5308,40 @@ class WizardsCavernApp(toga.App):
         import json
         log_lines_json = json.dumps(gs.log_lines)
         
-        # Large text mode: granular font size scaling
+        # Large text mode: CSS class toggles granular font scaling
+        large_class = ' class="large-text"' if gs.large_text_mode else ''
         body_font = "14px" if gs.large_text_mode else "11px"
         heading_font = "16px" if gs.large_text_mode else "13px"
         log_font = "11px" if gs.large_text_mode else "9px"
         pre_font = "13px" if gs.large_text_mode else "10px"
+
+        # When large-text is active, override ALL inline font-size declarations
+        # via attribute-selector + !important so map, rooms, inventory, vendor all scale
+        large_text_overrides = ""
+        if gs.large_text_mode:
+            large_text_overrides = """
+                /* Large text overrides - bump every inline font-size */
+                body.large-text [style*="font-size: 8px"],
+                body.large-text [style*="font-size:8px"]  { font-size: 10px !important; }
+                body.large-text [style*="font-size: 9px"],
+                body.large-text [style*="font-size:9px"]  { font-size: 11px !important; }
+                body.large-text [style*="font-size: 10px"],
+                body.large-text [style*="font-size:10px"] { font-size: 12px !important; }
+                body.large-text [style*="font-size: 11px"],
+                body.large-text [style*="font-size:11px"] { font-size: 13px !important; }
+                body.large-text [style*="font-size: 12px"],
+                body.large-text [style*="font-size:12px"] { font-size: 15px !important; }
+                body.large-text [style*="font-size: 13px"],
+                body.large-text [style*="font-size:13px"] { font-size: 16px !important; }
+                body.large-text [style*="font-size: 14px"],
+                body.large-text [style*="font-size:14px"] { font-size: 17px !important; }
+                body.large-text [style*="font-size: 15px"],
+                body.large-text [style*="font-size:15px"] { font-size: 18px !important; }
+                body.large-text [style*="font-size: 16px"],
+                body.large-text [style*="font-size:16px"] { font-size: 19px !important; }
+                body.large-text [style*="font-size: 18px"],
+                body.large-text [style*="font-size:18px"] { font-size: 21px !important; }
+            """
 
         return f"""
         <!DOCTYPE html>
@@ -5456,9 +5485,11 @@ class WizardsCavernApp(toga.App):
                     overflow-y: auto;
                     -webkit-overflow-scrolling: touch;
                 }}
+
+                {large_text_overrides}
             </style>
         </head>
-        <body>
+        <body{large_class}>
             <div id="content-area">
                 {content}
             </div>
