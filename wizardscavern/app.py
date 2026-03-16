@@ -1008,10 +1008,7 @@ class WizardsCavernApp(toga.App):
 
         row2 = [self.create_spacer() for _ in range(9)]
 
-        # Row 3: text size toggle on the right
-        text_label = "Aa-" if gs.large_text_mode else "Aa+"
-        row3 = [self.create_spacer() for _ in range(8)]
-        row3.append(self.create_button('t', text_label))
+        row3 = [self.create_spacer() for _ in range(9)]
 
         for btn in row1:
             self.button_row_1.add(btn)
@@ -1302,10 +1299,12 @@ class WizardsCavernApp(toga.App):
             self.create_button('j', cmd_dict.get('j', 'J')) if 'j' in cmd_dict else self.create_spacer(),  # JOURNAL
             self.create_button('a', cmd_dict.get('a', 'A')) if 'a' in cmd_dict else self.create_spacer(),  # ACHIEVEMENTS
         ]
+        font_label = "Aa-" if gs.large_text_mode else "Aa+"
         cmd_row3 = [
             self.create_button('s', cmd_dict.get('s', 'S')) if 's' in cmd_dict else self.create_spacer(),  # STATS
             self.create_button('q', cmd_dict.get('q', 'Q')) if 'q' in cmd_dict else self.create_spacer(),  # QUIT
             self.create_button('x', cmd_dict.get('x', 'X')) if 'x' in cmd_dict else self.create_spacer(),  # EXIT
+            self.create_button('f', font_label),  # FONT SIZE TOGGLE
         ]
 
         # Build rows: commands on left, numpad on right, expanding gap between
@@ -2282,11 +2281,10 @@ class WizardsCavernApp(toga.App):
                             </div>
                         </div>
                     """
-            text_mode_hint = "Aa- = Normal Text" if gs.large_text_mode else "Aa+ = Large Text"
             if has_saves:
-                current_commands_text = f"Send = New Game | 1-3 = Load | {text_mode_hint}"
+                current_commands_text = "Send = New Game | 1-3 = Load"
             else:
-                current_commands_text = f"Send to begin | {text_mode_hint}"
+                current_commands_text = "Send to begin"
 
         elif gs.prompt_cntl == "game_loaded_summary":
             # LOADED GAME SUMMARY SCREEN
@@ -5310,8 +5308,11 @@ class WizardsCavernApp(toga.App):
         import json
         log_lines_json = json.dumps(gs.log_lines)
         
-        # Large text mode: scale all HTML content via CSS zoom
-        zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
+        # Large text mode: granular font size scaling
+        body_font = "14px" if gs.large_text_mode else "11px"
+        heading_font = "16px" if gs.large_text_mode else "13px"
+        log_font = "11px" if gs.large_text_mode else "9px"
+        pre_font = "13px" if gs.large_text_mode else "10px"
 
         return f"""
         <!DOCTYPE html>
@@ -5326,14 +5327,13 @@ class WizardsCavernApp(toga.App):
                     font-family: 'Courier New', monospace;
                     margin: 0;
                     padding: 4px;
-                    font-size: 13px;
+                    font-size: {body_font};
                     line-height: 1.3;
                     overflow-x: hidden;
                     max-width: 100vw;
                     width: 100%;
                     word-wrap: break-word;
                     overflow-wrap: break-word;
-                    {zoom_css}
                 }}
                 
                 /* Prevent all content from expanding beyond viewport */
@@ -5371,12 +5371,12 @@ class WizardsCavernApp(toga.App):
                 /* Mobile-optimized - aggressive size reduction */
                 h1, h2, h3 {{
                     margin: 4px 0 3px 0;
-                    font-size: 15px;
+                    font-size: {heading_font};
                 }}
 
                 h4 {{
                     margin: 3px 0 2px 0;
-                    font-size: 13px;
+                    font-size: {heading_font};
                 }}
                 
                 /* Compact padding on all bordered elements */
@@ -5395,7 +5395,7 @@ class WizardsCavernApp(toga.App):
                     color: #EEE;
                     padding: 5px;
                     font-family: monospace;
-                    font-size: 11px;
+                    font-size: {log_font};
                     overflow-y: auto;
                     border-top: 2px solid #444;
                     z-index: 1000;
@@ -5414,7 +5414,7 @@ class WizardsCavernApp(toga.App):
                 
                 /* Make dungeon map compact */
                 pre {{
-                    font-size: 12px;
+                    font-size: {pre_font};
                     overflow-x: auto;
                     margin: 2px 0;
                     padding: 4px;

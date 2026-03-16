@@ -1857,6 +1857,12 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         process_save_load_action(player_character, my_tower, "init")
         return
 
+    if cmd == 'f':
+        gs.large_text_mode = not gs.large_text_mode
+        mode_str = "Large" if gs.large_text_mode else "Normal"
+        add_log(f"Font size: {mode_str}")
+        return
+
     # Use/Equip commands - work with sorted inventory
     # In combat, filter to only usable items (Potions, Scrolls)
     sorted_items = get_sorted_inventory(player_character.inventory)
