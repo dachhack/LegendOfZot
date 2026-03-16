@@ -489,18 +489,17 @@ def process_altar_action(player_character, my_tower, cmd):
     # -------------------------------------------------------------------------
     # NAVIGATION / OTHER
     # -------------------------------------------------------------------------
-    if cmd == 'i':
+    if cmd == 'x':
+        add_log("You step away from the altar.")
+        gs.prompt_cntl = "game_loop"
+    elif cmd == 'i':
         gs.prompt_cntl = "inventory"
         handle_inventory_menu(player_character, my_tower, "init")
-    elif cmd in ['n', 's', 'e', 'w']:
-        moved = move_player(player_character, my_tower, cmd)
-        if not moved:
-            gs.prompt_cntl = "altar_mode"
     elif cmd == 'q':
         gs.game_should_quit = True
         add_log("You abandon the altar.")
     else:
-        add_log(f"{COLOR_YELLOW}Enter s# to sacrifice (e.g., s1), 'i' for inventory, or move.{COLOR_RESET}")
+        add_log(f"{COLOR_YELLOW}Enter s# to sacrifice (e.g., s1), 'i' for inventory, or 'x' to exit.{COLOR_RESET}")
 
 def process_pool_action(player_character, my_tower, cmd):
 

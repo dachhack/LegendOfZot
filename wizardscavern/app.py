@@ -702,8 +702,7 @@ class WizardsCavernApp(toga.App):
         
         # Special case: 'e' in inventory means equip (not east movement)
         # Override is_movement for 'e' when in inventory/needs_numbers mode
-        # BUT NOT in altar_mode where 'e' should always be east movement
-        if cmd == 'e' and self.current_needs_numbers and gs.prompt_cntl != 'altar_mode':
+        if cmd == 'e' and self.current_needs_numbers:
             is_movement = False
         
         # Special case: 's' in vendor mode means sell (not south movement)
@@ -1398,21 +1397,12 @@ class WizardsCavernApp(toga.App):
 
     def build_altar_layout(self, cmd_dict):
         """
-        Build altar layout for item sacrifice: [D-PAD (3)] [CMDS (3)] [NUMPAD (3)]
+        Build altar layout for item sacrifice (no d-pad, vendor-style):
 
-        Row 1: [ ][N][ ]  [Sac][I][ ]  [1][2][3]
-        Row 2: [W][ ][E]  [ ][Q][ ]    [4][5][6]
-        Row 3: [L][S][ ]  [0][ ][ ]    [7][8][9]
+        Row 1: [Sac][I][X]     [1][2][3]
+        Row 2: [ ][ ][ ]  [0]  [4][5][6]
+        Row 3: [ ][ ][ ]       [7][8][9]
         """
-        # D-pad
-        dpad_row1 = [self.create_spacer(), self.create_button('n', 'N') if 'n' in cmd_dict else self.create_spacer(), self.create_spacer()]
-        dpad_row2 = [self.create_button('w', 'W') if 'w' in cmd_dict else self.create_spacer(), self.create_spacer(), self.create_button('e', 'E') if 'e' in cmd_dict else self.create_spacer()]
-        dpad_row3 = [
-            self.create_button('l', 'L') if 'l' in cmd_dict else self.create_spacer(),
-            self.create_button('s', 'S') if 's' in cmd_dict else self.create_spacer(),
-            self.create_spacer(),
-        ]
-
         # Commands - SAC button types 's' prefix for sacrifice (e.g., s1 = sacrifice item 1)
         sac_btn = toga.Button(
             'Sac',
@@ -1424,7 +1414,7 @@ class WizardsCavernApp(toga.App):
         cmd_row1 = [
             sac_btn,
             self.create_button('i', 'I') if 'i' in cmd_dict else self.create_spacer(),
-            self.create_spacer(),
+            self.create_button('x', 'X') if 'x' in cmd_dict else self.create_spacer(),
         ]
         cmd_row2 = [
             self.create_spacer(),
@@ -1456,11 +1446,11 @@ class WizardsCavernApp(toga.App):
             btn9 = self.create_numpad_button('9')
         numpad_row3 = [self.create_spacer(), self.create_numpad_button('7'), self.create_numpad_button('8'), btn9]
 
-        for btn in dpad_row1 + cmd_row1 + numpad_row1:
+        for btn in cmd_row1 + numpad_row1:
             self.button_row_1.add(btn)
-        for btn in dpad_row2 + cmd_row2 + numpad_row2:
+        for btn in cmd_row2 + numpad_row2:
             self.button_row_2.add(btn)
-        for btn in dpad_row3 + cmd_row3 + numpad_row3:
+        for btn in cmd_row3 + numpad_row3:
             self.number_pad_box.add(btn)
     
     def build_generic_numpad_layout(self, cmd_dict):
@@ -3854,28 +3844,29 @@ class WizardsCavernApp(toga.App):
             current_commands_text += " | n/s/e/w = move"
 
         elif gs.prompt_cntl == "altar_mode":
-            # ALTAR VIEW - Show inventory items to sacrifice
-
-            # Check for lantern
-            has_lantern = False
-            for item in gs.player_character.inventory.items:
-                if isinstance(item, Lantern):
-                    has_lantern = True
-                    break
+            # ALTAR VIEW - Vendor-style full interaction (no map)
 
             gods = gs.active_altar_state.get('gods', {})
             blessed_id = gs.active_altar_state.get('blessed_id', 1)
             blessed_god = gods.get(blessed_id, {})
-
-            # Generate map HTML
-            floor = gs.my_tower.floors[gs.player_character.z]
-            grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Get hunch god info for display
             current_floor = gs.my_tower.floors[gs.player_character.z]
             room = current_floor.grid[gs.player_character.y][gs.player_character.x]
             hunch_god_id = room.properties.get('hunch_god_id', blessed_id)
             hunch_god = gods.get(hunch_god_id, blessed_god)
+
+            # Spirit voice whispers per god
+            spirit_whispers = {
+                1: "...bring me the essence of life... let healing flow upon this stone...",
+                2: "...the wild calls... nature's bounty belongs here...",
+                3: "...knowledge... inscribed words... lay them before me...",
+                4: "...steel... bring me the bite of a blade...",
+                5: "...armor yourself no more... surrender your shield to the moon...",
+                6: "...anything... everything... surprise me, mortal...",
+                7: "...cursed things... tainted things... give them to the void...",
+            }
+            whisper = spirit_whispers.get(hunch_god_id, "...offer something... anything...")
 
             # Build sacrificeable inventory list (no Runes/Shards)
             sorted_items = get_sorted_inventory(gs.player_character.inventory)
@@ -3903,47 +3894,38 @@ class WizardsCavernApp(toga.App):
 
             altar_sprite = generate_room_sprite_html('A')
 
-            altar_html = f"""
-                <div style="border: 2px solid #9370DB; border-radius: 3px; padding: 6px; box-sizing: border-box;">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
+                    {achievement_notifications}
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{altar_sprite}</div>
                         <div>
-                            <div style="color: {hunch_god.get('color','#DDD')}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">
-                                {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')} - {hunch_god.get('title','')}
+                            <div style="font-size: 16px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
+                                {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
                             </div>
-                            <div style="color: #AAA; font-size: 9px;">
-                                INT {gs.player_character.intelligence} intuition | You sense this altar hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
-                            </div>
+                            <div style="font-size: 10px; color: #AAA;">{hunch_god.get('title','')}</div>
                         </div>
                     </div>
-                    <div style="border-top: 1px solid #444; padding-top: 4px; margin-top: 2px;">
-                    <div style="color: #DDD; font-size: 12px; font-weight: bold; margin-bottom: 3px;">Sacrifice an item:</div>
-                    <div style="max-height: 120px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;">
-                        {inv_html}
-                    </div>
-                    <div style="color: #888; font-size: 9px; margin-top: 4px;">
-                        Right offering = great reward | Wrong offering = displeasure
-                    </div>
-                    {devotion_hint}
-                    </div>
-                </div>
-            """
-
-            html_code = f"""
-                <div style="font-family: monospace; font-size: 12px;">
-                    {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                        <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{altar_html}</div>
+                    <div style="margin-bottom: 5px; color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 10px;">
+                        A spirit voice whispers: "{whisper}"
+                    </div>
+                    <div style="color: #AAA; font-size: 9px; margin-bottom: 5px;">
+                        INT {gs.player_character.intelligence} intuition | Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
+                        | <span style="color:#888;">Right offering = reward | Wrong = displeasure</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
+                        <div style="border: 1px solid #9370DB; padding: 3px;">
+                            <h3 style='margin: 0 0 5px 0; color: #DDD;'>Sacrifice an Item</h3>
+                            <div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>
+                                {inv_html}
+                            </div>
+                            {devotion_hint}
+                        </div>
                     </div>
                 </div>
                 """
-            current_commands_text = "s# = sacrifice item | i = inventory"
-            if has_lantern:
-                current_commands_text += " | l = lantern"
-            current_commands_text += " | n/s/e/w = move"
+            current_commands_text = "s# = sacrifice | i = inventory | x = exit"
 
         elif gs.prompt_cntl == "pool_mode":
             # POOL VIEW - Simplified: Map | Pool Info
@@ -5213,10 +5195,7 @@ class WizardsCavernApp(toga.App):
                     current_commands_text += f" | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "altar_mode":
-                current_commands_text = "s# = sacrifice item | i = inventory"
-                if has_lantern:
-                    current_commands_text += " | l = lantern"
-                current_commands_text += " | n/s/e/w = move"
+                current_commands_text = "s# = sacrifice | i = inventory | x = exit"
             elif gs.prompt_cntl == "warp_mode":
                 current_commands_text = "y = resist | n = enter"
             elif gs.prompt_cntl == "flare_direction_mode":
