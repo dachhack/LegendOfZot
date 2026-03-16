@@ -181,6 +181,10 @@ class Vendor:
                             status_effect_magnitude=spell_template.status_effect_magnitude
                         ))
 
+            # All vendors stock rations (3-4)
+            num_rations = random.randint(3, 4)
+            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=num_rations))
+
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:
                 self.inventory.add_item_quiet(Towel("Towel", "A soft cotton towel. Don't panic!", value=5, level=0))

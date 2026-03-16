@@ -2664,6 +2664,22 @@ class Food(Item):
         return True  # consumed
 
 
+class LembasWafer(Food):
+    """Elven lembas wafer - fills hunger completely and freezes hunger decay for 30 turns."""
+    def __init__(self, name="Lembas Wafer", description="A golden elven waybread that sustains travelers on long journeys.", value=25, level=0, count=1):
+        super().__init__(name, description, value, level, nutrition=HUNGER_MAX, count=count)
+
+    def __repr__(self):
+        return f"LembasWafer(name='{self.name}', count={self.count})"
+
+    def use(self, character, my_tower=None):
+        character.hunger = HUNGER_MAX
+        character.hunger_freeze_turns = 30
+        add_log(f"{COLOR_GREEN}You eat a {self.name}. Its golden warmth fills you completely!{COLOR_RESET}")
+        add_log(f"{COLOR_CYAN}The lembas sustains you — hunger will not decrease for 30 turns.{COLOR_RESET}")
+        return True  # consumed
+
+
 class Meat(Item):
     """Meat dropped by monsters - can be raw or cooked, rots over time."""
     def __init__(self, name, description="", value=3, level=0,
@@ -2878,8 +2894,28 @@ def tick_meat_rot(character):
 
 def process_hunger(character):
     """Called each move. Decreases hunger and applies penalties/bonuses."""
-    character.hunger = max(0, character.hunger - HUNGER_DECAY_PER_MOVE)
+    # Check for lembas hunger freeze
+    freeze = getattr(character, 'hunger_freeze_turns', 0)
+    if freeze > 0:
+        character.hunger_freeze_turns -= 1
+        if character.hunger_freeze_turns == 0:
+            add_log(f"{COLOR_YELLOW}The sustaining power of the lembas fades.{COLOR_RESET}")
+    else:
+        character.hunger = max(0, character.hunger - HUNGER_DECAY_PER_MOVE)
+
     h = character.hunger
+
+    # HP regeneration: 1 HP every 2 moves when hunger >= 85
+    if h >= 85 and character.health < character.max_health:
+        tracker = getattr(character, 'hunger_regen_tracker', 0) + 1
+        character.hunger_regen_tracker = tracker
+        if tracker >= 2:
+            character.hunger_regen_tracker = 0
+            character.health = min(character.max_health, character.health + 1)
+            add_log(f"{COLOR_GREEN}[Well-fed] +1 HP{COLOR_RESET}")
+    else:
+        character.hunger_regen_tracker = 0
+
     if h <= 0:
         # Starving: take damage
         dmg = 2
