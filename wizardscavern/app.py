@@ -907,6 +907,12 @@ class WizardsCavernApp(toga.App):
         self.button_row_2.clear()
         self.number_pad_box.clear()
 
+        # Adjust bottom panel height for QWERTY keyboard modes (3 full rows)
+        if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
+            self.bottom_panel.style.height = 205
+        else:
+            self.bottom_panel.style.height = 170
+
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
         if gs.prompt_cntl in ['intro_story', 'main_menu']:
             self.build_main_menu_layout()

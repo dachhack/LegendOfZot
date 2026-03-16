@@ -1398,7 +1398,7 @@ class WizardsCavernApp(toga.App):
             backspace_button = toga.Button(
                 '<-',
                 on_press=self.zotle_backspace,
-                style=Pack(flex=1, margin=1, font_size=10, font_weight='bold', width=32)
+                style=Pack(flex=1, margin=1, font_size=10, font_weight='bold', width=32, height=34)
             )
             row3.append(backspace_button)
         else:
@@ -1408,7 +1408,7 @@ class WizardsCavernApp(toga.App):
         shift_button = toga.Button(
             shift_label,
             on_press=self.toggle_keyboard_case,
-            style=Pack(flex=1, margin=1, font_size=12, font_weight='bold', width=32)
+            style=Pack(flex=1, margin=1, font_size=12, font_weight='bold', width=32, height=34)
         )
         row3.append(shift_button)
 
@@ -1425,7 +1425,7 @@ class WizardsCavernApp(toga.App):
         return toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(flex=1, margin=1, font_size=10, width=32)
+            style=Pack(flex=1, margin=1, font_size=10, width=32, height=34)
         )
     
     def fill_row(self, cmd_dict, priority, num_buttons):
