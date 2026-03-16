@@ -17,7 +17,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: "3.14"
 
       - name: Set up Java 17
         uses: actions/setup-java@v4
@@ -28,16 +28,60 @@ jobs:
       - name: Install Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Accept Android SDK licenses
-        run: yes | sdkmanager --licenses || true
-
       - name: Install Briefcase
-        run: |
-          python -m pip install --upgrade pip
-          python -m pip install briefcase
+        run: pip install "briefcase==0.3.26" Pillow
 
       - name: Create Android project
         run: briefcase create android
+
+      - name: Patch Android theme to match local build
+        run: |
+          COLORS=build/wizardscavern/android/gradle/app/src/main/res/values/colors.xml
+          cat > "$COLORS" << 'XMLEOF'
+          <?xml version="1.0" encoding="utf-8"?>
+          <resources>
+              <color name="colorPrimary">#000000</color>
+              <color name="colorPrimaryDark">#000000</color>
+              <color name="colorAccent">#2a2a2a</color>
+              <color name="colorSplashScreenBackground">#FFFFFF</color>
+          </resources>
+          XMLEOF
+
+          STYLES=build/wizardscavern/android/gradle/app/src/main/res/values/styles.xml
+          cat > "$STYLES" << 'XMLEOF'
+          <resources>
+              <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+                  <item name="colorPrimary">@color/colorPrimary</item>
+                  <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+                  <item name="colorAccent">@color/colorAccent</item>
+              </style>
+              <style name="AppTheme" parent="AppTheme.Base"/>
+              <style name="AppTheme.Launcher">
+                  <item name="android:windowBackground">@drawable/splash_screen_background</item>
+              </style>
+          </resources>
+          XMLEOF
+
+      - name: Update Android project with latest resources
+        run: briefcase update android
+
+      - name: Override launcher icons with app icon
+        run: |
+          RES=build/wizardscavern/android/gradle/app/src/main/res
+          SRC=wizardscavern/resources/wizardscavern.png
+          declare -A SIZES=(["mdpi"]=48 ["hdpi"]=72 ["xhdpi"]=96 ["xxhdpi"]=144 ["xxxhdpi"]=192)
+          for density in "${!SIZES[@]}"; do
+            size=${SIZES[$density]}
+            dir="$RES/mipmap-${density}"
+            python3 -c "
+          from PIL import Image
+          img = Image.open('$SRC').resize(($size, $size), Image.LANCZOS)
+          img.save('${dir}/ic_launcher.png')
+          img.save('${dir}/ic_launcher_round.png')
+          img.save('${dir}/ic_launcher_foreground.png')
+          "
+          done
+          echo "Icons overwritten for all densities"
 
       - name: Build Android APK
         run: briefcase build android
@@ -55,3 +99,16 @@ jobs:
           name: wizards-cavern-apk
           path: ${{ steps.find-apk.outputs.apk_path }}
           if-no-files-found: error
+
+      - name: Install Google Drive dependencies
+        run: pip install google-api-python-client google-auth requests
+
+      - name: Upload APK to Google Drive
+        if: steps.find-apk.outputs.apk_path != ''
+        env:
+          PYTHONUNBUFFERED: "1"
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        run: python .github/scripts/upload_to_drive.py "${{ steps.find-apk.outputs.apk_path }}"
