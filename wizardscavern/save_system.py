@@ -681,6 +681,7 @@ class SaveSystem:
             'gs.identified_items': list(gs.identified_items),
             'gs.item_cryptic_mapping': gs.item_cryptic_mapping,
             'gs.equipment_use_count': {str(k): v for k, v in gs.equipment_use_count.items()},
+            'gs.large_font': gs.large_font,
         }
 
     @staticmethod
@@ -775,6 +776,8 @@ class SaveSystem:
             gs.equipment_use_count.clear()
             for k, v in data['gs.equipment_use_count'].items():
                 gs.equipment_use_count[int(k)] = v
+        if 'gs.large_font' in data:
+            gs.large_font = data['gs.large_font']
 
     @staticmethod
     def save_game(player_character, my_tower, slot=1):

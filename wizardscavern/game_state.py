@@ -46,6 +46,7 @@ game_should_quit = False
 lets_go = False
 html_cache = ""
 quit_txt = "q = quit"
+large_font = False
 
 # ============================================================================
 # PLAYER & WORLD

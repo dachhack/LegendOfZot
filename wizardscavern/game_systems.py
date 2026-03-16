@@ -1837,6 +1837,12 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         #process_achievements_action(player_character, my_tower, "init")
         return
 
+    if cmd == 'f':
+        gs.large_font = not gs.large_font
+        state_label = "ON" if gs.large_font else "OFF"
+        add_log(f"{COLOR_GREEN}Large font mode: {state_label}{COLOR_RESET}")
+        return
+
     if cmd == 'x':
         # Check if we're in combat - return to combat mode, not game_loop
         if in_combat:

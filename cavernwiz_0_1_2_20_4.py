@@ -2611,7 +2611,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     """
 
-                current_commands_text = "u# = use | j = jrnl | x = back"
+                current_commands_text = "u# = use | j = jrnl | f = font | x = back"
 
 
             else:
@@ -2704,7 +2704,7 @@ class WizardsCavernApp(toga.App):
                 if can_cast:
                     inv_commands += " | m = spells"
 
-                inv_commands += " | j = jrnl | x = exit"
+                inv_commands += " | j = jrnl | f = font | x = exit"
 
                 html_code = f"""
 
@@ -5110,7 +5110,21 @@ class WizardsCavernApp(toga.App):
         # Convert log_lines to JavaScript-safe format
         import json
         log_lines_json = json.dumps(gs.log_lines)
-        
+
+        # Font sizes - scale up when large_font mode is active
+        if gs.large_font:
+            body_font = "14px"
+            heading_font = "16px"
+            sub_heading_font = "14px"
+            log_font = "11px"
+            pre_font = "13px"
+        else:
+            body_font = "11px"
+            heading_font = "13px"
+            sub_heading_font = "11px"
+            log_font = "9px"
+            pre_font = "10px"
+
         return f"""
         <!DOCTYPE html>
         <html>
@@ -5124,7 +5138,7 @@ class WizardsCavernApp(toga.App):
                     font-family: 'Courier New', monospace;
                     margin: 0;
                     padding: 4px;
-                    font-size: 11px;
+                    font-size: {body_font};
                     line-height: 1.3;
                     overflow-x: hidden;
                     max-width: 393px;
@@ -5168,12 +5182,12 @@ class WizardsCavernApp(toga.App):
                 /* Mobile-optimized - aggressive size reduction */
                 h1, h2, h3 {{
                     margin: 4px 0 3px 0;
-                    font-size: 13px;
+                    font-size: {heading_font};
                 }}
-                
+
                 h4 {{
                     margin: 3px 0 2px 0;
-                    font-size: 11px;
+                    font-size: {sub_heading_font};
                 }}
                 
                 /* Compact padding on all bordered elements */
@@ -5192,7 +5206,7 @@ class WizardsCavernApp(toga.App):
                     color: #EEE;
                     padding: 5px;
                     font-family: monospace;
-                    font-size: 9px;
+                    font-size: {log_font};
                     overflow-y: auto;
                     border-top: 2px solid #444;
                     z-index: 1000;
@@ -5211,7 +5225,7 @@ class WizardsCavernApp(toga.App):
                 
                 /* Make dungeon map compact */
                 pre {{
-                    font-size: 10px;
+                    font-size: {pre_font};
                     overflow-x: auto;
                     margin: 2px 0;
                     padding: 4px;
