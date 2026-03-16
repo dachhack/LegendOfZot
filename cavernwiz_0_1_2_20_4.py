@@ -4230,9 +4230,12 @@ class WizardsCavernApp(toga.App):
             tomb_variant = 'cursed' if room_t.properties.get('is_cursed') else None
             tomb_sprite = generate_room_sprite_html('T', variant=tomb_variant)
 
-            # Get last 15 lines from log for tomb content
-            log_content = '\n'.join(gs.log_lines[-15:]) if gs.log_lines else ""
-            
+            # Build tomb status text
+            if already_looted:
+                tomb_status = '<div style="color: #888; font-size: 11px; margin-top: 4px;">This tomb has already been raided.</div>'
+            else:
+                tomb_status = '<div style="color: #C8A96E; font-size: 11px; margin-top: 4px;">You could <b>raid</b> it for treasure... or <b>pay respects</b> to the dead.</div>'
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 11px;">
                     {achievement_notifications}
@@ -4245,7 +4248,7 @@ class WizardsCavernApp(toga.App):
                                 <div style="flex-shrink:0;">{tomb_sprite}</div>
                                 <div style="color: #DDD; font-size: 11px;">An ancient tomb lies before you, its stone lid cracked with age.</div>
                             </div>
-                            <pre style="margin: 0; font-family: monospace; font-size: 11px; white-space: pre-wrap; word-wrap: break-word;">{log_content}</pre>
+                            {tomb_status}
                         </div>
                     </div>
                 </div>
