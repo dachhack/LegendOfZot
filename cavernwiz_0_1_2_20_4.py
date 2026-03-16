@@ -3737,7 +3737,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                     <div style="border-top: 1px solid #444; padding-top: 4px; margin-top: 2px;">
                     <div style="color: #DDD; font-size: 10px; font-weight: bold; margin-bottom: 3px;">Sacrifice an item:</div>
-                    <div style="max-height: 120px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;">
+                    <div style="border: 1px solid #444; padding: 3px; border-radius: 3px;">
                         {inv_html}
                     </div>
                     <div style="color: #888; font-size: 9px; margin-top: 4px;">
@@ -3749,13 +3749,13 @@ class WizardsCavernApp(toga.App):
             """
 
             html_code = f"""
-                <div style="font-family: monospace; font-size: 11px;">
+                <div style="font-family: monospace; font-size: 11px; display: flex; flex-direction: column; height: calc(100vh - 95px);">
                     {achievement_notifications}
                     <div style="font-size: 13px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%;">{altar_html}</div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; min-height: 0;">
+                        <div style="flex-shrink: 0;">{grid_html}</div>
+                        <div style="width: 100%; flex: 1; min-height: 0; overflow-y: auto;">{altar_html}</div>
                     </div>
                 </div>
                 """
