@@ -28,13 +28,18 @@ jobs:
       - name: Install Android SDK
         uses: android-actions/setup-android@v3
 
-      - name: Install dependencies
-        run: |
-          pip install "briefcase==0.3.26"
-          pip install -e .
+      - name: Install Briefcase
+        run: pip install "briefcase==0.3.26"
 
       - name: Create Android project
         run: briefcase create android
+
+      - name: Verify bundled app
+        run: |
+          echo "=== Bundled Python files ==="
+          find build/wizardscavern/android -name "*.py" -path "*/main/python/*" | sort
+          echo "=== app.py line count ==="
+          wc -l build/wizardscavern/android/gradle/app/src/main/python/wizardscavern/app.py
 
       - name: Build Android APK
         run: briefcase build android
