@@ -30,7 +30,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install briefcase
+          pip install "briefcase==0.3.26"
           pip install -e .
 
       - name: Create Android project
