@@ -62,6 +62,9 @@ jobs:
           </resources>
           XMLEOF
 
+      - name: Update Android project with latest resources
+        run: briefcase update android
+
       - name: Build Android APK
         run: briefcase build android
 
