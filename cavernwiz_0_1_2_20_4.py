@@ -692,8 +692,7 @@ class WizardsCavernApp(toga.App):
         
         # Special case: 'e' in inventory means equip (not east movement)
         # Override is_movement for 'e' when in inventory/needs_numbers mode
-        # BUT NOT in altar_mode where 'e' should always be east movement
-        if cmd == 'e' and self.current_needs_numbers and gs.prompt_cntl != 'altar_mode':
+        if cmd == 'e' and self.current_needs_numbers:
             is_movement = False
         
         # Special case: 's' in vendor mode means sell (not south movement)
@@ -845,7 +844,11 @@ class WizardsCavernApp(toga.App):
             row1 = [self.create_spacer() for _ in range(9)]
 
         row2 = [self.create_spacer() for _ in range(9)]
-        row3 = [self.create_spacer() for _ in range(9)]
+
+        # Row 3: text size toggle on the right
+        text_label = "Aa-" if gs.large_text_mode else "Aa+"
+        row3 = [self.create_spacer() for _ in range(8)]
+        row3.append(self.create_button('t', text_label))
 
         for btn in row1:
             self.button_row_1.add(btn)
@@ -1284,21 +1287,12 @@ class WizardsCavernApp(toga.App):
     
     def build_altar_layout(self, cmd_dict):
         """
-        Build altar layout for item sacrifice: [D-PAD (3)] [CMDS (3)] [NUMPAD (3)]
+        Build altar layout for item sacrifice (no d-pad, vendor-style):
 
-        Row 1: [ ][N][ ]  [Sac][I][ ]     [1][2][3]
-        Row 2: [W][ ][E]  [ ][Q][ ]  [0]  [4][5][6]
-        Row 3: [L][S][ ]  [ ][ ][ ]       [7][8][9]
+        Row 1: [Sac][I][X]     [1][2][3]
+        Row 2: [ ][ ][ ]  [0]  [4][5][6]
+        Row 3: [ ][ ][ ]       [7][8][9]
         """
-        # D-pad
-        dpad_row1 = [self.create_spacer(), self.create_button('n', 'N') if 'n' in cmd_dict else self.create_spacer(), self.create_spacer()]
-        dpad_row2 = [self.create_button('w', 'W') if 'w' in cmd_dict else self.create_spacer(), self.create_spacer(), self.create_button('e', 'E') if 'e' in cmd_dict else self.create_spacer()]
-        dpad_row3 = [
-            self.create_button('l', 'L') if 'l' in cmd_dict else self.create_spacer(),
-            self.create_button('s', 'S') if 's' in cmd_dict else self.create_spacer(),
-            self.create_spacer(),
-        ]
-
         # Commands - SAC button types 's' prefix for sacrifice (e.g., s1 = sacrifice item 1)
         sac_btn = toga.Button(
             'Sac',
@@ -1308,11 +1302,11 @@ class WizardsCavernApp(toga.App):
         cmd_row1 = [
             sac_btn,
             self.create_button('i', 'I') if 'i' in cmd_dict else self.create_spacer(),
-            self.create_spacer(),
+            self.create_button('x', 'X') if 'x' in cmd_dict else self.create_spacer(),
         ]
         cmd_row2 = [
             self.create_spacer(),
-            self.create_button('q', 'Q') if 'q' in cmd_dict else self.create_spacer(),
+            self.create_spacer(),
             self.create_spacer(),
         ]
         cmd_row3 = [self.create_spacer(), self.create_spacer(), self.create_spacer()]
@@ -1338,13 +1332,13 @@ class WizardsCavernApp(toga.App):
             btn9 = self.create_numpad_button('9')
         numpad_row3 = [self.create_numpad_button('7'), self.create_numpad_button('8'), btn9]
 
-        for btn in dpad_row1 + cmd_row1 + numpad_row1:
+        for btn in cmd_row1 + numpad_row1:
             self.button_row_1.add(btn)
-        for btn in dpad_row2 + cmd_row2 + numpad_row2:
+        for btn in cmd_row2 + numpad_row2:
             self.button_row_2.add(btn)
-        for btn in dpad_row3 + cmd_row3 + numpad_row3:
+        for btn in cmd_row3 + numpad_row3:
             self.number_pad_box.add(btn)
-    
+
     def build_generic_numpad_layout(self, cmd_dict):
         """Build generic layout with full number pad."""
         # Just use inventory layout as default for now
@@ -1408,7 +1402,7 @@ class WizardsCavernApp(toga.App):
             backspace_button = toga.Button(
                 '<-',
                 on_press=self.zotle_backspace,
-                style=Pack(flex=1, margin=1, font_size=10, font_weight='bold', width=32)
+                style=Pack(flex=1, margin=1, font_size=10, font_weight='bold', width=32, height=34)
             )
             row3.append(backspace_button)
         else:
@@ -1418,7 +1412,7 @@ class WizardsCavernApp(toga.App):
         shift_button = toga.Button(
             shift_label,
             on_press=self.toggle_keyboard_case,
-            style=Pack(flex=1, margin=1, font_size=12, font_weight='bold', width=32)
+            style=Pack(flex=1, margin=1, font_size=12, font_weight='bold', width=32, height=34)
         )
         row3.append(shift_button)
 
@@ -1435,7 +1429,7 @@ class WizardsCavernApp(toga.App):
         return toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(flex=1, margin=1, font_size=10, width=32)
+            style=Pack(flex=1, margin=1, font_size=10, width=32, height=34)
         )
     
     def fill_row(self, cmd_dict, priority, num_buttons):
@@ -2062,10 +2056,11 @@ class WizardsCavernApp(toga.App):
                             </div>
                         </div>
                     """
+            text_mode_hint = "Aa- = Normal Text" if gs.large_text_mode else "Aa+ = Large Text"
             if has_saves:
-                current_commands_text = "Send = New Game | 1-3 = Load Save"
+                current_commands_text = f"Send = New Game | 1-3 = Load | {text_mode_hint}"
             else:
-                current_commands_text = "Press Send to begin"
+                current_commands_text = f"Send to begin | {text_mode_hint}"
 
         elif gs.prompt_cntl == "game_loaded_summary":
             # LOADED GAME SUMMARY SCREEN
@@ -3628,7 +3623,7 @@ class WizardsCavernApp(toga.App):
             # Chest info box - simple and clean
             chest_html = f"""
                <div style="
-                            border: 2px solid #FFD700;
+                            border: 2px solid #666;
                             border-radius: 3px;
                             padding: 12px;
                             max-height: 300px;
@@ -3673,28 +3668,31 @@ class WizardsCavernApp(toga.App):
             current_commands_text += " | n/s/e/w = move"
 
         elif gs.prompt_cntl == "altar_mode":
-            # ALTAR VIEW - Show inventory items to sacrifice
-
-            # Check for lantern
-            has_lantern = False
-            for item in gs.player_character.inventory.items:
-                if isinstance(item, Lantern):
-                    has_lantern = True
-                    break
+            # ALTAR VIEW - Vendor-style full interaction (no map)
 
             gods = gs.active_altar_state.get('gods', {})
             blessed_id = gs.active_altar_state.get('blessed_id', 1)
             blessed_god = gods.get(blessed_id, {})
-
-            # Generate map HTML
-            floor = gs.my_tower.floors[gs.player_character.z]
-            grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Get hunch god info for display
             current_floor = gs.my_tower.floors[gs.player_character.z]
             room = current_floor.grid[gs.player_character.y][gs.player_character.x]
             hunch_god_id = room.properties.get('hunch_god_id', blessed_id)
             hunch_god = gods.get(hunch_god_id, blessed_god)
+
+            # Generic spirit flavor text - no hints about which god
+            import random as _rnd
+            spirit_whispers = [
+                "...place your offering upon the stone... and pray...",
+                "...the altar hums with ancient power...",
+                "...something watches... waiting for a gift...",
+                "...do you dare part with your possessions, mortal?...",
+                "...the air grows thick with divine presence...",
+                "...choose wisely... or do not choose at all...",
+                "...a faint pulse echoes from deep within the stone...",
+                "...the gods are always hungry...",
+            ]
+            whisper = _rnd.choice(spirit_whispers)
 
             # Build sacrificeable inventory list (no Runes/Shards)
             sorted_items = get_sorted_inventory(gs.player_character.inventory)
@@ -3722,47 +3720,38 @@ class WizardsCavernApp(toga.App):
 
             altar_sprite = generate_room_sprite_html('A')
 
-            altar_html = f"""
-                <div style="border: 2px solid #9370DB; border-radius: 3px; padding: 6px; box-sizing: border-box;">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 11px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
+                    {achievement_notifications}
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{altar_sprite}</div>
                         <div>
-                            <div style="color: {hunch_god.get('color','#DDD')}; font-weight: bold; font-size: 11px; margin-bottom: 2px;">
-                                {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')} - {hunch_god.get('title','')}
+                            <div style="font-size: 14px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
+                                {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
                             </div>
-                            <div style="color: #AAA; font-size: 9px;">
-                                INT {gs.player_character.intelligence} intuition | You sense this altar hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
-                            </div>
+                            <div style="font-size: 10px; color: #AAA;">{hunch_god.get('title','')}</div>
                         </div>
                     </div>
-                    <div style="border-top: 1px solid #444; padding-top: 4px; margin-top: 2px;">
-                    <div style="color: #DDD; font-size: 10px; font-weight: bold; margin-bottom: 3px;">Sacrifice an item:</div>
-                    <div style="max-height: 120px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;">
-                        {inv_html}
-                    </div>
-                    <div style="color: #888; font-size: 9px; margin-top: 4px;">
-                        Right offering = great reward | Wrong offering = displeasure
-                    </div>
-                    {devotion_hint}
-                    </div>
-                </div>
-            """
-
-            html_code = f"""
-                <div style="font-family: monospace; font-size: 11px;">
-                    {achievement_notifications}
-                    <div style="font-size: 13px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%;">{altar_html}</div>
+                    <div style="margin-bottom: 5px; color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 10px;">
+                        A spirit voice whispers: "{whisper}"
+                    </div>
+                    <div style="color: #AAA; font-size: 9px; margin-bottom: 5px;">
+                        INT {gs.player_character.intelligence} intuition | Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
+                        | <span style="color:#888;">Right offering = reward | Wrong = displeasure</span>
+                    </div>
+                    <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
+                        <div style="border: 1px solid #666; padding: 3px;">
+                            <h3 style='margin: 0 0 5px 0; color: #DDD;'>Sacrifice an Item</h3>
+                            <div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>
+                                {inv_html}
+                            </div>
+                            {devotion_hint}
+                        </div>
                     </div>
                 </div>
                 """
-            current_commands_text = "s# = sacrifice item | i = inventory"
-            if has_lantern:
-                current_commands_text += " | l = lantern"
-            current_commands_text += " | n/s/e/w = move | q = quit"
+            current_commands_text = "s# = sacrifice | i = inventory | x = exit"
 
         elif gs.prompt_cntl == "pool_mode":
             # POOL VIEW - Simplified: Map | Pool Info
@@ -3799,7 +3788,7 @@ class WizardsCavernApp(toga.App):
             # Pool info box - simple and clean
             pool_html = f"""
                 <div style="
-                            border: 2px solid #00CED1;
+                            border: 2px solid #666;
                             border-radius: 3px;
                             padding: 12px;
                             max-height: 300px;
@@ -3818,7 +3807,7 @@ class WizardsCavernApp(toga.App):
                 insight_text = room.properties.get('insight_text', '')
                 insight_color = room.properties.get('insight_color', '#DDD')
                 pool_html += f"""
-                    <div style="margin-top: 8px; padding: 6px; border-left: 3px solid {insight_color}; border-radius: 3px; background: rgba(0,206,209,0.05);">
+                    <div style="margin-top: 8px; padding: 6px; border-left: 3px solid #555; border-radius: 3px;">
                         <div style="color: {insight_color}; font-size: 10px;"> Intuition (INT {gs.player_character.intelligence})</div>
                         <div style="color: #DDD; font-size: 10px; margin-top: 2px;">{insight_text}</div>
                     </div>
@@ -3835,7 +3824,7 @@ class WizardsCavernApp(toga.App):
             # Decision prompt
             pool_html += '''
                 <div style="padding: 6px; margin-top: 10px; border-radius: 3px;">
-                    <div style="color: #00CED1; font-size: 10px; font-weight: bold;"> Drink from the basin?</div>
+                    <div style="color: #DDD; font-size: 10px; font-weight: bold;"> Drink from the basin?</div>
                     <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Effects unknown until you drink...</div>
                 </div>
                 '''
@@ -3874,8 +3863,8 @@ class WizardsCavernApp(toga.App):
             vault_warning = ""
             if is_vault_warp:
                 vault_warning = """
-                    <div style="padding: 6px; margin-top: 8px; border-radius: 3px; border-left: 3px solid #F44336; background: rgba(244,67,54,0.1);">
-                        <div style="color: #F44336; font-size: 10px; font-weight: bold;">Warning!</div>
+                    <div style="padding: 6px; margin-top: 8px; border-radius: 3px; border-left: 3px solid #555;">
+                        <div style="color: #FFA500; font-size: 10px; font-weight: bold;">Warning!</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px;">This portal pulses with vault energy. You may be drawn to a sealed chamber with no escape!</div>
                     </div>
                 """
@@ -3884,7 +3873,7 @@ class WizardsCavernApp(toga.App):
             warp_sprite = generate_room_sprite_html('W')
             warp_html = f"""
                 <div style="
-                            border: 2px solid #E040FB;
+                            border: 2px solid #666;
                             border-radius: 3px;
                             padding: 12px;
                             max-height: 300px;
@@ -3943,7 +3932,7 @@ class WizardsCavernApp(toga.App):
             stairs_sprite = generate_room_sprite_html('U')
             stairs_html = f"""
                 <div style="
-                            border: 2px solid #4CAF50;
+                            border: 2px solid #666;
                             border-radius: 3px;
                             padding: 12px;
                             max-height: 300px;
@@ -3957,12 +3946,12 @@ class WizardsCavernApp(toga.App):
                     </div>
                     
                     <div style="padding-top: 10px; border-top: 1px solid #555;">
-                        <div style="color: #4CAF50; font-size: 11px; font-weight: bold; margin-bottom: 4px;"> Current Depth</div>
+                        <div style="color: #DDD; font-size: 11px; font-weight: bold; margin-bottom: 4px;"> Current Depth</div>
                         <div style="color: #DDD; font-size: 10px; margin: 3px 0;">Floor: {gs.player_character.z + 1}</div>
                     </div>
                     
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #4CAF50; background: rgba(76,175,80,0.05);">
-                        <div style="color: #4CAF50; font-size: 10px; font-weight: bold;"> Ascend the stairs?</div>
+                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #555;">
+                        <div style="color: #DDD; font-size: 10px; font-weight: bold;"> Ascend the stairs?</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Press 'u' to climb upward...</div>
                     </div>
                 </div>
@@ -4006,7 +3995,7 @@ class WizardsCavernApp(toga.App):
             stairs_down_sprite = generate_room_sprite_html('D')
             stairs_html = f"""
                 <div style="
-                            border: 2px solid #F44336;
+                            border: 2px solid #666;
                             border-radius: 3px;
                             padding: 12px;
                             max-height: 300px;
@@ -4020,13 +4009,13 @@ class WizardsCavernApp(toga.App):
                     </div>
                     
                     <div style="padding-top: 10px; border-top: 1px solid #555;">
-                        <div style="color: #F44336; font-size: 11px; font-weight: bold; margin-bottom: 4px;"> Current Depth</div>
+                        <div style="color: #DDD; font-size: 11px; font-weight: bold; margin-bottom: 4px;"> Current Depth</div>
                         <div style="color: #DDD; font-size: 10px; margin: 3px 0;">Floor: {gs.player_character.z + 1}</div>
                         <div style="color: #FFA500; font-size: 9px; margin-top: 4px;"> Danger increases with depth</div>
                     </div>
                     
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #F44336; background: rgba(244,67,54,0.05);">
-                        <div style="color: #F44336; font-size: 10px; font-weight: bold;"> Descend deeper?</div>
+                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #555;">
+                        <div style="color: #DDD; font-size: 10px; font-weight: bold;"> Descend deeper?</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Press 'd' to venture into the darkness...</div>
                     </div>
                 </div>
@@ -4078,27 +4067,20 @@ class WizardsCavernApp(toga.App):
             library_sprite = generate_room_sprite_html('L', variant=lib_variant)
 
             # Library info box - simple and clean
+            if has_searched:
+                lib_status = '<div style="color: #888; font-size: 11px; margin-top: 4px;">You have already rummaged through this library.</div>'
+            else:
+                lib_status = '<div style="color: #DAA520; font-size: 11px; margin-top: 4px;">Hidden knowledge awaits discovery...</div>'
+
             library_html = f"""
-                <div style="
-                            border: 2px solid #8B4513;
-                            border-radius: 3px;
-                            padding: 12px;
-                            max-height: 300px;
-                            overflow-y: auto;
-                            ">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{library_sprite}</div>
                         <div style="color: #DDD; font-size: 11px; line-height: 1.4;">
                              Towering shelves filled with dusty tomes surround you. The air is thick with the scent of old parchment and forgotten knowledge.
                         </div>
                     </div>
-                    
-                    {'<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #DAA520; font-size: 10px;"> Already Searched</div><div style="color: #AAA; font-size: 9px; margin-top: 2px;">You have already rummaged through this library.</div></div>' if has_searched else '<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #DAA520; font-size: 10px;"> Unsearched</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Hidden knowledge awaits discovery...</div></div>'}
-                    
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px;">
-                        <div style="color: #DAA520; font-size: 10px; font-weight: bold;"> Rummage for grimoires?</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Search the shelves for ancient spellbooks...</div>
-                    </div>
+                    {lib_status}
                 </div>
                 """
 
@@ -4148,7 +4130,7 @@ class WizardsCavernApp(toga.App):
             dungeon_sprite = generate_room_sprite_html('N', variant=dng_variant)
 
             dungeon_html = f"""
-                <div style="border: 2px solid #FF6B6B; border-radius: 3px; padding: 12px;">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{dungeon_sprite}</div>
                         <div style="color: #DDD; font-size: 11px;">
@@ -4195,7 +4177,7 @@ class WizardsCavernApp(toga.App):
             already_looted = coords in gs.looted_dungeons
             
             dungeon_html = f"""
-                <div style="border: 2px solid #4CAF50; border-radius: 3px; padding: 12px;">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
                     <div style="color: #DDD; font-size: 11px; margin-bottom: 8px;">
                         The iron door stands open. {'The chamber has been emptied.' if already_looted else 'Treasures glint in the darkness within.'}
                     </div>
@@ -4241,9 +4223,12 @@ class WizardsCavernApp(toga.App):
             tomb_variant = 'cursed' if room_t.properties.get('is_cursed') else None
             tomb_sprite = generate_room_sprite_html('T', variant=tomb_variant)
 
-            # Get last 15 lines from log for tomb content
-            log_content = '\n'.join(gs.log_lines[-15:]) if gs.log_lines else ""
-            
+            # Build tomb status text
+            if already_looted:
+                tomb_status = '<div style="color: #888; font-size: 11px; margin-top: 4px;">This tomb has already been raided.</div>'
+            else:
+                tomb_status = '<div style="color: #C8A96E; font-size: 11px; margin-top: 4px;">You could <b>raid</b> it for treasure... or <b>pay respects</b> to the dead.</div>'
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 11px;">
                     {achievement_notifications}
@@ -4256,7 +4241,7 @@ class WizardsCavernApp(toga.App):
                                 <div style="flex-shrink:0;">{tomb_sprite}</div>
                                 <div style="color: #DDD; font-size: 11px;">An ancient tomb lies before you, its stone lid cracked with age.</div>
                             </div>
-                            <pre style="margin: 0; font-family: monospace; font-size: 11px; white-space: pre-wrap; word-wrap: break-word;">{log_content}</pre>
+                            {tomb_status}
                         </div>
                     </div>
                 </div>
@@ -4286,7 +4271,7 @@ class WizardsCavernApp(toga.App):
             garden_sprite = generate_room_sprite_html('G')
 
             garden_html = f"""
-                <div style="border: 2px solid #2E7D32; border-radius: 3px; padding: 12px;">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{garden_sprite}</div>
                         <div style="color: #DDD; font-size: 11px;">
@@ -4327,30 +4312,30 @@ class WizardsCavernApp(toga.App):
             fey_sprite = generate_room_sprite_html('G', variant='fey_garden')
 
             fey_html = f"""
-                        <div style="border: 2px solid #E040FB; border-radius: 5px; padding: 15px; background: rgba(20, 0, 30, 0.8); box-shadow: 0 0 15px #E040FB;">
-                            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px; border-bottom: 1px solid #E1BEE7; padding-bottom: 10px;">
+                        <div style="border: 2px solid #666; border-radius: 5px; padding: 15px;">
+                            <div style="display:flex; align-items:center; gap:8px; margin-bottom:10px; border-bottom: 1px solid #555; padding-bottom: 10px;">
                                 <div style="flex-shrink:0;">{fey_sprite}</div>
-                                <span style="font-size: 18px; font-weight: bold; color: #E1BEE7; text-shadow: 0 0 5px #E040FB;">* FEY GARDEN *</span>
+                                <span style="font-size: 18px; font-weight: bold; color: #DDD;">* FEY GARDEN *</span>
                             </div>
 
-                            <div style="color: #E1BEE7; font-size: 12px; margin-bottom: 12px; font-style: italic; text-align: center;">
+                            <div style="color: #AAA; font-size: 12px; margin-bottom: 12px; font-style: italic; text-align: center;">
                                 "The air shimmers with magic from the realm between worlds..."
                             </div>
 
-                            <div style="background: rgba(156, 39, 176, 0.1); padding: 10px; border-radius: 4px; border-left: 3px solid #E040FB; margin-bottom: 15px;">
-                                <div style="color: #F3E5F5; font-size: 11px;">
+                            <div style="padding: 10px; border-radius: 4px; border-left: 3px solid #555; margin-bottom: 15px;">
+                                <div style="color: #DDD; font-size: 11px;">
                                     Exotic flora blooms here that cannot be found in the mortal realm.
                                     <br><br>
-                                    <span style="color: #FF4081;">This garden will vanish in <strong>{turns_left}</strong> turns!</span>
+                                    <span style="color: #FFA500;">This garden will vanish in <strong>{turns_left}</strong> turns!</span>
                                 </div>
                             </div>
 
                             <div style="display: flex; gap: 10px; justify-content: center;">
-                                <div style="background: #4A148C; padding: 8px 15px; border-radius: 4px; border: 1px solid #AB47BC; color: #FFF; font-weight: bold; font-size: 12px;">
+                                <div style="padding: 8px 15px; border-radius: 4px; border: 1px solid #555; color: #DDD; font-weight: bold; font-size: 12px;">
                                     [ H ] Harvest Ingredients
                                 </div>
                             </div>
-                            <div style="text-align: center; margin-top: 8px; font-size: 10px; color: #B39DDB;">
+                            <div style="text-align: center; margin-top: 8px; font-size: 10px; color: #AAA;">
                                 (Move N/S/E/W to leave)
                             </div>
                         </div>
@@ -4383,7 +4368,7 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             
             oracle_html = f"""
-                <div style="border: 2px solid #E040FB; border-radius: 3px; padding: 12px;">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{generate_room_sprite_html('O')}</div>
                         <div style="color: #DDD; font-size: 11px;">
@@ -4391,8 +4376,8 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #E040FB; background: rgba(156,39,176,0.1);">
-                        <div style="color: #BA68C8; font-size: 10px; font-weight: bold;">Gaze into the Oracle?</div>
+                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #555;">
+                        <div style="color: #DDD; font-size: 10px; font-weight: bold;">Gaze into the Oracle?</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press 'g' to seek guidance on your quest...</div>
                     </div>
                 </div>
@@ -4437,7 +4422,7 @@ class WizardsCavernApp(toga.App):
             smith_sprite = generate_room_sprite_html('B')
 
             smith_html = f"""
-                <div style="border: 2px solid #FF8C00; border-radius: 3px; padding: 12px;">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{smith_sprite}</div>
                         <div>
@@ -4483,7 +4468,7 @@ class WizardsCavernApp(toga.App):
             shrine_sprite = generate_room_sprite_html('F')
 
             shrine_html = f"""
-                <div style="border: 2px solid #87CEEB; border-radius: 3px; padding: 12px;">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{shrine_sprite}</div>
                         <div>
@@ -4534,7 +4519,7 @@ class WizardsCavernApp(toga.App):
             alch_sprite = generate_room_sprite_html('Q')
 
             alch_html = f"""
-                <div style="border: 2px solid #39FF14; border-radius: 3px; padding: 12px;">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{alch_sprite}</div>
                         <div>
@@ -4585,7 +4570,7 @@ class WizardsCavernApp(toga.App):
             war_sprite = generate_room_sprite_html('K')
 
             war_html = f"""
-                <div style="border: 2px solid #CD5C5C; border-radius: 3px; padding: 12px;">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{war_sprite}</div>
                         <div>
@@ -4670,7 +4655,7 @@ class WizardsCavernApp(toga.App):
             tax_sprite = generate_room_sprite_html('X')
 
             tax_html = f"""
-                <div style='border:2px solid #8B6914; border-radius:3px; padding:12px;'>
+                <div style='border:2px solid #666; border-radius:3px; padding:12px;'>
                     <div style='display:flex; align-items:center; gap:8px; margin-bottom:8px;'>
                         <div style='flex-shrink:0;'>{tax_sprite}</div>
                         <div>
@@ -4729,7 +4714,7 @@ class WizardsCavernApp(toga.App):
                         towel_wetness = " (soaking)"
             
             towel_html = f"""
-                <div style="border: 2px solid #8B4513; border-radius: 3px; padding: 12px; background: rgba(139,69,19,0.1);">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px; background: rgba(139,69,19,0.1);">
                     <div style="color: #D2691E; font-weight: bold; font-size: 12px; margin-bottom: 8px;">
                         [TOWEL] Towel{towel_wetness}
                     </div>
@@ -4827,7 +4812,7 @@ class WizardsCavernApp(toga.App):
             """
             
             puzzle_html = f"""
-                <div style="border: 2px solid #E040FB; padding: 10px; border-radius: 4px; background: #121213;">
+                <div style="border: 2px solid #666; padding: 10px; border-radius: 4px; background: #121213;">
                     {dialog_html}
                     
                     <div style="padding: 8px; background: #0a0a0a; border-radius: 3px; margin-bottom: 8px;">
@@ -4864,7 +4849,7 @@ class WizardsCavernApp(toga.App):
             max_floors = len(gs.my_tower.floors)
             
             teleporter_html = f"""
-                <div style="border: 2px solid #E040FB; padding: 8px; border-radius: 6px; background: #1a1a2e;">
+                <div style="border: 2px solid #666; padding: 8px; border-radius: 6px; background: #1a1a2e;">
                     <div style="color: #E040FB; font-weight: bold; font-size: 13px; text-align: center; margin-bottom: 4px;">
                         ZOT'S DIMENSIONAL KEY
                     </div>
@@ -4907,38 +4892,30 @@ class WizardsCavernApp(toga.App):
             current_room = floor.grid[gs.player_character.y][gs.player_character.x]
             found_spell = current_room.properties.get('found_spell')
             
-            # Library info box with grimoire decision
-            library_html = """
-                <div style="
-                            border: 2px solid #8B4513;
-                            border-radius: 3px;
-                            padding: 12px;
-                            max-height: 300px;
-                            overflow-y: auto;
-                            ">
-                    <div style="padding: 6px; margin-bottom: 5px;">
-                    </div>
-            """
-            
+            # Library sprite
+            lib_variant = 'codex' if current_room.properties.get('has_codex') else None
+            library_sprite = generate_room_sprite_html('L', variant=lib_variant)
+
+            # Spell info line
+            spell_info = ""
             if found_spell:
-                # Show spell info if intelligence is high enough
                 if gs.player_character.intelligence >= 20:
-                    library_html += f"""
-                    <div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(218,165,32,0.2); border-left: 3px solid #DAA520;">
-                        <div style="color: #DAA520; font-size: 10px; font-weight: bold;"> {found_spell.name}</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px;">Costs {found_spell.mana_cost} MP</div>
-                    </div>
-                    """
+                    spell_info = f'<div style="color: #DAA520; font-size: 11px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555;"><b>{found_spell.name}</b> <span style="color: #AAA;">({found_spell.mana_cost} MP)</span></div>'
                 else:
-                    library_html += """
-                    <div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(218,165,32,0.1); border-left: 3px solid #8B4513;">
-                        <div style="color: #888; font-size: 9px; font-style: italic;">The arcane symbols are difficult to decipher...</div>
+                    spell_info = '<div style="color: #888; font-size: 9px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555; font-style: italic;">The arcane symbols are difficult to decipher...</div>'
+
+            # Library info box with grimoire decision
+            library_html = f"""
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
+                        <div style="flex-shrink:0;">{library_sprite}</div>
+                        <div style="color: #DDD; font-size: 11px; line-height: 1.4;">
+                            You found a grimoire among the dusty shelves!
+                        </div>
                     </div>
-                    """
-            
-            library_html += """
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #DAA520; background: rgba(218,165,32,0.1);">
-                        <div style="color: #DAA520; font-size: 10px; font-weight: bold;"> Attempt to read this grimoire?</div>
+                    {spell_info}
+                    <div style="padding-top: 6px; margin-top: 6px; border-top: 1px solid #555;">
+                        <div style="color: #DAA520; font-size: 11px; font-weight: bold;">Attempt to read this grimoire?</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Reading may succeed or fail based on your intelligence...</div>
                     </div>
                 </div>
@@ -5050,10 +5027,7 @@ class WizardsCavernApp(toga.App):
                     current_commands_text += f" | l = lantern"
                 current_commands_text += " | n/s/e/w = move | q = quit"
             elif gs.prompt_cntl == "altar_mode":
-                current_commands_text = "s# = sacrifice item | i = inventory"
-                if has_lantern:
-                    current_commands_text += " | l = lantern"
-                current_commands_text += " | n/s/e/w = move | q = quit"
+                current_commands_text = "s# = sacrifice | i = inventory | x = exit"
             elif gs.prompt_cntl == "warp_mode":
                 current_commands_text = "y = resist | n = enter"
             elif gs.prompt_cntl == "flare_direction_mode":
@@ -5111,6 +5085,9 @@ class WizardsCavernApp(toga.App):
         import json
         log_lines_json = json.dumps(gs.log_lines)
         
+        # Large text mode: scale all HTML content via CSS zoom
+        zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
+
         return f"""
         <!DOCTYPE html>
         <html>
@@ -5131,6 +5108,7 @@ class WizardsCavernApp(toga.App):
                     width: 393px;
                     word-wrap: break-word;
                     overflow-wrap: break-word;
+                    {zoom_css}
                 }}
                 
                 /* Prevent all content from expanding beyond viewport */
