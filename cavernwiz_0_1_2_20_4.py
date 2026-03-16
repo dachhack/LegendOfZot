@@ -3743,7 +3743,7 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
                         <div style="border: 1px solid #666; padding: 3px;">
                             <h3 style='margin: 0 0 5px 0; color: #DDD;'>Sacrifice an Item</h3>
-                            <div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>
+                            <div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 400px;'>
                                 {inv_html}
                             </div>
                             {devotion_hint}
