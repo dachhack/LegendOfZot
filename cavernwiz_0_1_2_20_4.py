@@ -844,7 +844,11 @@ class WizardsCavernApp(toga.App):
             row1 = [self.create_spacer() for _ in range(9)]
 
         row2 = [self.create_spacer() for _ in range(9)]
-        row3 = [self.create_spacer() for _ in range(9)]
+
+        # Row 3: text size toggle on the right
+        text_label = "Aa-" if gs.large_text_mode else "Aa+"
+        row3 = [self.create_spacer() for _ in range(8)]
+        row3.append(self.create_button('t', text_label))
 
         for btn in row1:
             self.button_row_1.add(btn)
@@ -2052,10 +2056,11 @@ class WizardsCavernApp(toga.App):
                             </div>
                         </div>
                     """
+            text_mode_hint = "Aa- = Normal Text" if gs.large_text_mode else "Aa+ = Large Text"
             if has_saves:
-                current_commands_text = "Send = New Game | 1-3 = Load Save"
+                current_commands_text = f"Send = New Game | 1-3 = Load | {text_mode_hint}"
             else:
-                current_commands_text = "Press Send to begin"
+                current_commands_text = f"Send to begin | {text_mode_hint}"
 
         elif gs.prompt_cntl == "game_loaded_summary":
             # LOADED GAME SUMMARY SCREEN
@@ -5092,6 +5097,9 @@ class WizardsCavernApp(toga.App):
         import json
         log_lines_json = json.dumps(gs.log_lines)
         
+        # Large text mode: scale all HTML content via CSS zoom
+        zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
+
         return f"""
         <!DOCTYPE html>
         <html>
@@ -5112,6 +5120,7 @@ class WizardsCavernApp(toga.App):
                     width: 393px;
                     word-wrap: break-word;
                     overflow-wrap: break-word;
+                    {zoom_css}
                 }}
                 
                 /* Prevent all content from expanding beyond viewport */
