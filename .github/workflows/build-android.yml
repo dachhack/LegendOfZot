@@ -2,7 +2,7 @@ name: Build Android APK
 
 on:
   push:
-    branches: [ main, master, "claude/*" ]
+    branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
   workflow_dispatch:  # Allows manual trigger from GitHub UI
@@ -34,12 +34,33 @@ jobs:
       - name: Create Android project
         run: briefcase create android
 
-      - name: Verify bundled app
+      - name: Patch Android theme to match local build
         run: |
-          echo "=== Bundled Python files ==="
-          find build/wizardscavern/android -name "*.py" -path "*/main/python/*" | sort
-          echo "=== app.py line count ==="
-          wc -l build/wizardscavern/android/gradle/app/src/main/python/wizardscavern/app.py
+          COLORS=build/wizardscavern/android/gradle/app/src/main/res/values/colors.xml
+          cat > "$COLORS" << 'XMLEOF'
+          <?xml version="1.0" encoding="utf-8"?>
+          <resources>
+              <color name="colorPrimary">#000000</color>
+              <color name="colorPrimaryDark">#000000</color>
+              <color name="colorAccent">#2a2a2a</color>
+              <color name="colorSplashScreenBackground">#FFFFFF</color>
+          </resources>
+          XMLEOF
+
+          STYLES=build/wizardscavern/android/gradle/app/src/main/res/values/styles.xml
+          cat > "$STYLES" << 'XMLEOF'
+          <resources>
+              <style name="AppTheme.Base" parent="Theme.AppCompat.Light.NoActionBar">
+                  <item name="colorPrimary">@color/colorPrimary</item>
+                  <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+                  <item name="colorAccent">@color/colorAccent</item>
+              </style>
+              <style name="AppTheme" parent="AppTheme.Base"/>
+              <style name="AppTheme.Launcher">
+                  <item name="android:windowBackground">@drawable/splash_screen_background</item>
+              </style>
+          </resources>
+          XMLEOF
 
       - name: Build Android APK
         run: briefcase build android
