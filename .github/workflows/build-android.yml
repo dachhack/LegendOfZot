@@ -29,7 +29,7 @@ jobs:
         uses: android-actions/setup-android@v3
 
       - name: Install Briefcase
-        run: pip install "briefcase==0.3.26"
+        run: pip install "briefcase==0.3.26" Pillow
 
       - name: Create Android project
         run: briefcase create android
@@ -64,6 +64,24 @@ jobs:
 
       - name: Update Android project with latest resources
         run: briefcase update android
+
+      - name: Override launcher icons with app icon
+        run: |
+          RES=build/wizardscavern/android/gradle/app/src/main/res
+          SRC=wizardscavern/resources/wizardscavern.png
+          declare -A SIZES=(["mdpi"]=48 ["hdpi"]=72 ["xhdpi"]=96 ["xxhdpi"]=144 ["xxxhdpi"]=192)
+          for density in "${!SIZES[@]}"; do
+            size=${SIZES[$density]}
+            dir="$RES/mipmap-${density}"
+            python3 -c "
+          from PIL import Image
+          img = Image.open('$SRC').resize(($size, $size), Image.LANCZOS)
+          img.save('${dir}/ic_launcher.png')
+          img.save('${dir}/ic_launcher_round.png')
+          img.save('${dir}/ic_launcher_foreground.png')
+          "
+          done
+          echo "Icons overwritten for all densities"
 
       - name: Build Android APK
         run: briefcase build android
