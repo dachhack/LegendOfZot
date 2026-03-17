@@ -1603,7 +1603,13 @@ class WizardsCavernApp(toga.App):
         
         # Process the command using your existing game logic
         self.process_command(cmd)
-        
+
+        # Check if game should quit (e.g. after death screen)
+        if gs.game_should_quit:
+            self.render()
+            self.main_window.close()
+            return
+
         # Re-render the display
         self.render()
         
