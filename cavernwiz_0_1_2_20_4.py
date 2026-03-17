@@ -580,27 +580,27 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, height=36, font_size=14)
+            style=Pack(flex=1, margin=1, height=36, font_size=14)
         )
-        
+
         # Note: iOS keyboard will be disabled AFTER window is shown
         # See disable_ios_keyboard() method called in startup()
-        
+
         # Permanent backspace button (always visible)
         self.backspace_button = toga.Button(
             "\u232b",
             on_press=lambda w: self.number_pad_backspace(),
-            style=Pack(margin=2, width=50, height=36, font_size=14)
+            style=Pack(margin=1, width=44, height=36, font_size=14)
         )
 
         self.submit_button = toga.Button(
-            "SEND",
+            "SND",
             on_press=self.on_command_submit,
-            style=Pack(margin=2, width=65, height=36, font_size=14, font_weight='bold')
+            style=Pack(margin=1, width=52, height=36, font_size=13, font_weight='bold')
         )
-        
+
         self.input_row = toga.Box(
-            style=Pack(direction=ROW, margin=2, height=40),
+            style=Pack(direction=ROW, margin=(2, 4), height=40),
             children=[
                 self.input_field,
                 self.backspace_button,
@@ -1459,7 +1459,7 @@ class WizardsCavernApp(toga.App):
         return toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(flex=1, margin=1, font_size=11, width=37)
+            style=Pack(flex=1, margin=1, font_size=11, height=34)
         )
     
     def create_big_button(self, cmd_key, cmd_label):
@@ -1467,7 +1467,7 @@ class WizardsCavernApp(toga.App):
         return toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(flex=1, margin=1, font_size=14, font_weight='bold', width=37, height=45)
+            style=Pack(flex=1, margin=1, font_size=14, font_weight='bold', height=45)
         )
     
     def create_numpad_button(self, number):
@@ -1475,7 +1475,7 @@ class WizardsCavernApp(toga.App):
         return toga.Button(
             number,
             on_press=lambda w, n=number: self.number_pad_input(n),
-            style=Pack(flex=1, margin=1, font_size=12, font_weight='bold', color='#4CAF50', width=37)
+            style=Pack(flex=1, margin=1, font_size=12, font_weight='bold', color='#4CAF50', height=34)
         )
     
     def create_spacer(self):

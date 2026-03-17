@@ -603,30 +603,30 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, height=36, font_size=14,
+            style=Pack(flex=1, margin=1, height=36, font_size=14,
                        background_color='#2a2a2a', color='#EEE')
         )
-        
+
         # Note: iOS keyboard will be disabled AFTER window is shown
         # See disable_ios_keyboard() method called in startup()
-        
+
         # Permanent backspace button (always visible)
         self.backspace_button = toga.Button(
             "\u232b",
             on_press=lambda w: self.number_pad_backspace(),
-            style=Pack(margin=2, width=50, height=36, font_size=14,
+            style=Pack(margin=1, width=44, height=36, font_size=14,
                        background_color='#333', color='#EEE')
         )
 
         self.submit_button = toga.Button(
-            "SEND",
+            "SND",
             on_press=self.on_command_submit,
-            style=Pack(margin=2, width=65, height=36, font_size=14, font_weight='bold',
+            style=Pack(margin=1, width=52, height=36, font_size=13, font_weight='bold',
                        background_color='#444', color='#FFF')
         )
-        
+
         self.input_row = toga.Box(
-            style=Pack(direction=ROW, margin=2, height=40, background_color='#1a1a1a'),
+            style=Pack(direction=ROW, margin=(2, 4), height=40, background_color='#1a1a1a'),
             children=[
                 self.input_field,
                 self.backspace_button,
@@ -1626,7 +1626,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=11, width=55,
+            style=Pack(flex=1, margin=0, font_size=11,
                        background_color='#333', color='#EEE', height=34)
         )
         self._compact_android_button(btn)
@@ -1637,7 +1637,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=13, font_weight='bold', width=65, height=40,
+            style=Pack(flex=1, margin=0, font_size=13, font_weight='bold', height=40,
                        background_color='#444', color='#FFF')
         )
         self._compact_android_button(btn)
@@ -1648,7 +1648,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             number,
             on_press=lambda w, n=number: self.number_pad_input(n),
-            style=Pack(margin=0, font_size=12, font_weight='bold', width=55,
+            style=Pack(flex=1, margin=0, font_size=12, font_weight='bold',
                        color='#4CAF50', height=34, background_color='#2a2a2a')
         )
         self._compact_android_button(btn)
