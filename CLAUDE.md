@@ -24,4 +24,11 @@ When the user needs to view or update sprite assignments:
 
 ## Source of Truth
 
-All game source code lives in `wizardscavern/`. Briefcase builds the APK directly from that package. There are no root-level copies to keep in sync — edit files in `wizardscavern/` and your changes will appear in the next APK build automatically.
+**IMPORTANT:** All game source code lives in `wizardscavern/`. Briefcase builds the APK directly from that package. There are no root-level copies to keep in sync — edit files in `wizardscavern/` and your changes will appear in the next APK build automatically.
+
+**NEVER edit root-level .py files** (e.g. `cavernwiz_*.py`) — these are stale legacy copies and are NOT used by the build. The actual source files are:
+- `wizardscavern/app.py` — main application, UI, and rendering
+- `wizardscavern/game_systems.py` — inventory, crafting, game logic
+- `wizardscavern/combat.py` — combat, journal, spells
+- `wizardscavern/game_state.py` — global state
+- `wizardscavern/sprite_data.py` — sprite sheets and mappings
