@@ -930,7 +930,7 @@ class WizardsCavernApp(toga.App):
 
         # Adjust panel heights for QWERTY keyboard modes (taller keys)
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
-            self.bottom_panel.style.height = 205
+            self.bottom_panel.style.height = 220
             self.button_panel.style.height = 145
         else:
             self.bottom_panel.style.height = 170
@@ -1337,9 +1337,9 @@ class WizardsCavernApp(toga.App):
         else:
             row2.extend([self.create_keyboard_button(letter.lower(), letter.lower()) for letter in row2_letters])
         
-        # Row 3: Z X C V B N M (spacer + 7 buttons + backspace + Shift)
+        # Row 3: Z X C V B N M (half-spacer + 7 buttons + backspace + Shift)
         row3_letters = ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
-        row3 = [self.create_spacer()]  # Start with spacer
+        row3 = []
         if self.keyboard_uppercase:
             row3.extend([self.create_keyboard_button(letter.lower(), letter) for letter in row3_letters])
         else:
