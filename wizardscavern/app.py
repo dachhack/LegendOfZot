@@ -1080,29 +1080,16 @@ class WizardsCavernApp(toga.App):
 
     def build_layout_no_numpad(self, commands):
         """
-        Build layout without number pad.
-        
-        Layout: [D-PAD (3 cols)] [COMMANDS (5 cols)]
-        
-        D-pad (left 3 columns):
-        Row 1: [][N][]
-        Row 2: [W][S][E]
-        Row 3: [][][]
-        
-        Commands (right 5 columns):
-        Row 1: [CMD][CMD][CMD][CMD][CMD]
-        Row 2: [I][CMD][CMD][CMD][Q]
-        Row 3: [][][][][]
+        D-pad on left, command buttons in columns from bottom-right going up.
+        New columns added to the left when a column fills (3 buttons max).
+
+        Layout: [D-PAD (3 cols)] [fillers] [CMD cols right-aligned]
         """
         cmd_dict = {key: label for key, label in commands}
         has_movement = any(k in cmd_dict for k in ['n', 's', 'e', 'w'])
-        
+
         # === LEFT SIDE: D-PAD (3 columns) ===
         if has_movement:
-            # D-pad layout (proper cross - S on bottom row)
-            # Row 1:  [][N][]
-            # Row 2:  [W][][E]
-            # Row 3:  [][S][]
             dpad_row1 = [
                 self.create_spacer(),
                 self.create_button('n', cmd_dict.get('n', 'N')) if 'n' in cmd_dict else self.create_spacer(),
@@ -1114,208 +1101,162 @@ class WizardsCavernApp(toga.App):
                 self.create_button('e', cmd_dict.get('e', 'E')) if 'e' in cmd_dict else self.create_spacer(),
             ]
             dpad_row3 = [
-                self.create_button('l', cmd_dict.get('l', 'L')) if 'l' in cmd_dict else self.create_spacer(),
+                self.create_spacer(),
                 self.create_button('s', cmd_dict.get('s', 'S')) if 's' in cmd_dict else self.create_spacer(),
                 self.create_spacer(),
             ]
         else:
-            # No movement - empty d-pad area
             dpad_row1 = [self.create_spacer() for _ in range(3)]
             dpad_row2 = [self.create_spacer() for _ in range(3)]
             dpad_row3 = [self.create_spacer() for _ in range(3)]
-        
-        # === RIGHT SIDE: COMMANDS (5 columns) ===
-        # Get non-movement commands (excluding l since it's in D-pad now, q is in inventory only)
-        other_cmds = {k: v for k, v in cmd_dict.items() if k not in ['n', 's', 'e', 'w', 'i', 'q', 'l']}
-        
-        # Command priority for placement
-        priority = ['a', 'f', 'c', 'p', 'dr', 'o', 'r', 'u', 'd', 'b', 's', 'ba', 'm', 'j', 'y', 'x']
-        
-        # Build sorted list of commands by priority
-        sorted_cmds = []
-        for p in priority:
-            if p in other_cmds:
-                sorted_cmds.append((p, other_cmds[p]))
-        # Add any remaining commands not in priority list
-        for k, v in other_cmds.items():
-            if k not in [c[0] for c in sorted_cmds]:
-                sorted_cmds.append((k, v))
-        
-        # Row 1: First 5 commands (or spacers) - use big buttons for combat actions
+
+        # === RIGHT SIDE: COMMANDS (columns, bottom-right going up then left) ===
+        dpad_keys = {'n', 's', 'e', 'w'}
+
+        # Priority order (first = bottom-right, most important)
+        priority = ['l', 'i', 'q', 'o', 'dr', 'g', 'r', 'u', 'd', 'p', 'h', 'c',
+                     'y', 'x', 'a', 'f', 'b', 'm', 'j',
+                     '1', '2', '3', '4', '5', '6', '7', '8', '9']
+
+        cmds_to_place = []
+        placed = set()
+        for pkey in priority:
+            if pkey in cmd_dict and pkey not in dpad_keys and pkey not in placed:
+                cmds_to_place.append((pkey, cmd_dict[pkey]))
+                placed.add(pkey)
+        for k, v in cmd_dict.items():
+            if k not in dpad_keys and k not in placed:
+                cmds_to_place.append((k, v))
+
+        # Build columns (max 3 per column, bottom to top)
+        # columns[0] = rightmost column
+        columns = []
+        for i in range(0, len(cmds_to_place), 3):
+            columns.append(cmds_to_place[i:i+3])
+
+        num_cols = len(columns)
         cmd_row1 = []
-        for i in range(5):
-            if i < len(sorted_cmds):
-                cmd_key, cmd_label = sorted_cmds[i]
-                # Use big button for attack and flee
-                if cmd_key in ['a', 'f']:
-                    cmd_row1.append(self.create_big_button(cmd_key, cmd_label))
-                else:
-                    cmd_row1.append(self.create_button(cmd_key, cmd_label))
-            else:
-                cmd_row1.append(self.create_spacer())
-        
-        # Row 2: [I][next 4 commands]
-        cmd_row2 = [
-            self.create_button('i', cmd_dict.get('i', 'I')) if 'i' in cmd_dict else self.create_spacer()
-        ]
-        for i in range(5, 9):  # Positions 2-5
-            if i < len(sorted_cmds):
-                cmd_row2.append(self.create_button(sorted_cmds[i][0], sorted_cmds[i][1]))
-            else:
-                cmd_row2.append(self.create_spacer())
-        
-        # Row 3: Empty
-        cmd_row3 = [self.create_spacer() for _ in range(5)]
-        
-        # Combine D-pad + Commands
-        for btn in dpad_row1 + cmd_row1:
+        cmd_row2 = []
+        cmd_row3 = []
+
+        # Build left-to-right: leftmost column first (= last in columns list)
+        for col_idx in range(num_cols - 1, -1, -1):
+            col = columns[col_idx]
+            cmd_row3.append(self.create_button(col[0][0], col[0][1]) if len(col) > 0 else self.create_spacer())
+            cmd_row2.append(self.create_button(col[1][0], col[1][1]) if len(col) > 1 else self.create_spacer())
+            cmd_row1.append(self.create_button(col[2][0], col[2][1]) if len(col) > 2 else self.create_spacer())
+
+        filler_count = max(2, 5 - num_cols)
+
+        for btn in dpad_row1 + [self.create_filler() for _ in range(filler_count)] + cmd_row1:
             self.button_row_1.add(btn)
-        for btn in dpad_row2 + cmd_row2:
+        for btn in dpad_row2 + [self.create_filler() for _ in range(filler_count)] + cmd_row2:
             self.button_row_2.add(btn)
-        for btn in dpad_row3 + cmd_row3:
+        for btn in dpad_row3 + [self.create_filler() for _ in range(filler_count)] + cmd_row3:
             self.number_pad_box.add(btn)
 
     def build_layout_with_numpad(self, commands):
-        """Build layout with integrated number pad on right side."""
-        # Create command dictionary for easy lookup
+        """
+        Numpad on right, command buttons in columns from bottom-left going up.
+        New columns added to the right when a column fills (3 buttons max).
+
+        Layout: [CMD cols left-aligned] [fillers] [NUMPAD (3-4 cols)]
+        """
         cmd_dict = {key: label for key, label in commands}
-        
-        # Determine layout type based on commands
-        # Check altar FIRST before inventory (since 'e' could be east OR equip)
-        # Altar has 'p' command for pray and number keys 1-8 for selecting gods
         is_altar = gs.prompt_cntl == 'altar_mode'
-        is_spell_memorization = 'm' in cmd_dict and 'f' in cmd_dict and 'x' in cmd_dict
-        is_inventory = 'u' in cmd_dict or ('e' in cmd_dict and not is_altar)
-        is_sell_quantity = 'a' in cmd_dict and 'c' in cmd_dict and 'b' not in cmd_dict and not is_inventory
-        is_vendor = 'b' in cmd_dict
-        is_journal = (any(str(i) in cmd_dict for i in range(1, 9)) and 'x' in cmd_dict and not is_altar) or \
-                     ('b' in cmd_dict and 's' in cmd_dict and 'a' in cmd_dict and 'g' in cmd_dict and 'x' in cmd_dict)
-        is_taxidermist = gs.prompt_cntl == 'taxidermist_mode'
-        is_crafting = not is_inventory and not is_vendor and not is_journal and not is_altar and not is_taxidermist and 'x' in cmd_dict
 
+        # Separate numpad keys from command keys
+        numpad_keys = set(str(i) for i in range(10))
+
+        # Priority order (first = bottom-left, most accessible)
+        priority = ['x', 'c', 'i', 'a', 's', 'b', 'r', 'u', 'e',
+                     'm', 'f', 'j', 'g', 'id', 'ba']
+
+        cmds_to_place = []
+        placed = set()
+        for pkey in priority:
+            if pkey in cmd_dict and pkey not in numpad_keys and pkey not in placed:
+                cmds_to_place.append((pkey, cmd_dict[pkey]))
+                placed.add(pkey)
+        for k, v in cmd_dict.items():
+            if k not in numpad_keys and k not in placed:
+                cmds_to_place.append((k, v))
+
+        # Build columns (max 3 per column, bottom to top)
+        # columns[0] = leftmost column
+        columns = []
+        for i in range(0, len(cmds_to_place), 3):
+            columns.append(cmds_to_place[i:i+3])
+
+        num_cols = len(columns)
+        cmd_row1 = []
+        cmd_row2 = []
+        cmd_row3 = []
+
+        for col in columns:
+            # Bottom row
+            if len(col) > 0:
+                k, v = col[0]
+                if is_altar and k == 's':
+                    cmd_row3.append(toga.Button(
+                        'Sac', on_press=lambda w: self.number_pad_input('s'),
+                        style=Pack(flex=1, margin=1, font_size=11, font_weight='bold', width=37)))
+                else:
+                    cmd_row3.append(self.create_button(k, v))
+            else:
+                cmd_row3.append(self.create_spacer())
+            cmd_row2.append(self.create_button(col[1][0], col[1][1]) if len(col) > 1 else self.create_spacer())
+            cmd_row1.append(self.create_button(col[2][0], col[2][1]) if len(col) > 2 else self.create_spacer())
+
+        filler_count = max(2, 5 - num_cols)
+
+        # Numpad (right side)
+        numpad_row1 = [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')]
+        numpad_row2 = [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
+        numpad_row3 = [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')]
+
+        # Altar: special devotion rune button 9
         if is_altar:
-            # Altar layout first (has priority)
-            self.build_altar_layout(cmd_dict)
-        elif is_spell_memorization:
-            # Spell memorization layout (M, F, X with numpad)
-            self.build_spell_memorization_layout(cmd_dict)
-        elif is_inventory:
-            # Inventory layout (check before sell_quantity):
-            # [U][E][C]    [1][2][3]
-            # [M][J][A]    [4][5][6]
-            # [S][I][X]    [7][8][9]
-            self.build_inventory_layout(cmd_dict)
-        elif is_sell_quantity:
-            # Sell quantity layout (A, C with numpad)
-            self.build_sell_quantity_layout(cmd_dict)
-        elif is_journal:
-            # Journal layout (needs X button visible):
-            # Check journal BEFORE inventory because inventory has 'x' too
-            # [1][2][3]    [4][5][6]
-            # [7][.][.]    [8][9][0]
-            # [.][.][X]    [.][.][.]
-            self.build_journal_layout(cmd_dict)
-        elif is_vendor:
-            # Vendor layout:
-            # [B][S][.][.]    [0][1][2][3]
-            # [.][.][.][.]         [4][5][6]
-            # [X][.][.][.]         [7][8][9]
-            self.build_vendor_layout(cmd_dict)
-        elif is_taxidermist:
-            # Taxidermist layout: S, I, X on left, numpad on right
-            self.build_taxidermist_layout(cmd_dict)
-        elif is_crafting:
-            # Crafting layout with 0-9 and X button
-            self.build_crafting_layout(cmd_dict)
-        else:
-            # Generic number pad layout
-            self.build_generic_numpad_layout(cmd_dict)
-    
-    def build_spell_memorization_layout(self, cmd_dict):
-        """
-        Build spell memorization layout: [CMDS] [fillers] [NUMPAD]
+            can_offer = (
+                not gs.runes_obtained.get('devotion', False) and
+                gs.player_character is not None and
+                gs.player_character.gold >= gs.rune_progress_reqs.get('gold_obtained', 500) and
+                gs.player_character.health >= gs.rune_progress_reqs.get('player_health_obtained', 50)
+            )
+            if can_offer:
+                numpad_row3[2] = toga.Button(
+                    '9', on_press=lambda w: self.number_pad_input('9'),
+                    style=Pack(flex=1, margin=1, font_size=12, font_weight='bold', color='#FFD700', width=37))
 
-        Row 1: [M] [fillers] [1][2][3]
-        Row 2: [F] [fillers] [0][4][5][6]
-        Row 3: [X] [fillers] [7][8][9]
-        """
-
-        row1 = self.build_row([self.create_button('m', 'M')], [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')])
-        row2 = self.build_row([self.create_button('f', 'F')], [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')])
-        row3 = self.build_row([self.create_button('x', 'X')], [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')])
-
-        for btn in row1: self.button_row_1.add(btn)
-        for btn in row2: self.button_row_2.add(btn)
-        for btn in row3: self.number_pad_box.add(btn)
-    
-    def build_sell_quantity_layout(self, cmd_dict):
-        """
-        Build sell quantity layout: [CMDS] [fillers] [NUMPAD]
-
-        Row 1: [fillers] [1][2][3]
-        Row 2: [ALL] [fillers] [0][4][5][6]
-        Row 3: [C] [fillers] [7][8][9]
-        """
-
-        row1 = self.build_row([], [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')])
-        row2 = self.build_row([self.create_button('a', 'ALL')], [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')])
-        row3 = self.build_row([self.create_button('c', 'C')], [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')])
-
-        for btn in row1: self.button_row_1.add(btn)
-        for btn in row2: self.button_row_2.add(btn)
-        for btn in row3: self.number_pad_box.add(btn)
+        for btn in cmd_row1 + [self.create_filler() for _ in range(filler_count)] + numpad_row1:
+            self.button_row_1.add(btn)
+        for btn in cmd_row2 + [self.create_filler() for _ in range(filler_count)] + numpad_row2:
+            self.button_row_2.add(btn)
+        for btn in cmd_row3 + [self.create_filler() for _ in range(filler_count)] + numpad_row3:
+            self.number_pad_box.add(btn)
     
     def build_teleporter_layout(self):
         """
-        Build teleporter layout: [CMDS] [fillers] [NUMPAD]
+        Teleporter: comma and cancel on left, numpad on right.
 
-        Row 1: [,] [fillers] [1][2][3]
-        Row 2: [C] [fillers] [0][4][5][6]
-        Row 3: [fillers] [7][8][9]
+        Layout: [CMD cols left-aligned] [fillers] [NUMPAD]
         """
+        cmd_row1 = [self.create_spacer()]
+        cmd_row2 = [self.create_numpad_button(',')]
+        cmd_row3 = [self.create_button('c', 'C')]
 
-        row1 = self.build_row([self.create_numpad_button(',')], [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')])
-        row2 = self.build_row([self.create_button('c', 'C')], [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')])
-        row3 = self.build_row([], [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')])
+        filler_count = 4
 
-        for btn in row1: self.button_row_1.add(btn)
-        for btn in row2: self.button_row_2.add(btn)
-        for btn in row3: self.number_pad_box.add(btn)
+        numpad_row1 = [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')]
+        numpad_row2 = [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
+        numpad_row3 = [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')]
 
-    def build_inventory_layout(self, cmd_dict):
-        """
-        Build inventory layout: [COMMANDS (3)] [FILLERS] [NUMPAD (3)]
-
-        Row 1: [U][E][C] [fillers] [1][2][3]
-        Row 2: [M][J][A] [fillers] [0][4][5][6]
-        Row 3: [S][Q][X] [fillers] [7][8][9]
-        """
-
-        # Commands (left 3 columns)
-        cmd_row1 = [
-            self.create_button('u', cmd_dict.get('u', 'U')) if 'u' in cmd_dict else self.create_spacer(),
-            self.create_button('e', cmd_dict.get('e', 'E')) if 'e' in cmd_dict else self.create_spacer(),
-            self.create_button('c', cmd_dict.get('c', 'C')) if 'c' in cmd_dict else self.create_spacer(),  # CRAFT
-        ]
-        cmd_row2 = [
-            self.create_button('m', cmd_dict.get('m', 'M')) if 'm' in cmd_dict else self.create_spacer(),  # SPELLS
-            self.create_button('j', cmd_dict.get('j', 'J')) if 'j' in cmd_dict else self.create_spacer(),  # JOURNAL
-            self.create_button('a', cmd_dict.get('a', 'A')) if 'a' in cmd_dict else self.create_spacer(),  # ACHIEVEMENTS
-        ]
-        cmd_row3 = [
-            self.create_button('s', cmd_dict.get('s', 'S')) if 's' in cmd_dict else self.create_spacer(),  # STATS
-            self.create_button('q', cmd_dict.get('q', 'Q')) if 'q' in cmd_dict else self.create_spacer(),  # QUIT
-            self.create_button('x', cmd_dict.get('x', 'X')) if 'x' in cmd_dict else self.create_spacer(),  # EXIT
-        ]
-
-        # Build rows: commands on left, numpad on right, expanding gap between
-        row1 = self.build_row(cmd_row1, [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')])
-        row2 = self.build_row(cmd_row2, [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')])
-        row3 = self.build_row(cmd_row3, [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')])
-
-        for btn in row1: self.button_row_1.add(btn)
-        for btn in row2: self.button_row_2.add(btn)
-        for btn in row3: self.number_pad_box.add(btn)
+        for btn in cmd_row1 + [self.create_filler() for _ in range(filler_count)] + numpad_row1:
+            self.button_row_1.add(btn)
+        for btn in cmd_row2 + [self.create_filler() for _ in range(filler_count)] + numpad_row2:
+            self.button_row_2.add(btn)
+        for btn in cmd_row3 + [self.create_filler() for _ in range(filler_count)] + numpad_row3:
+            self.number_pad_box.add(btn)
 
     def build_save_load_layout(self, cmd_dict):
         """
@@ -1333,159 +1274,6 @@ class WizardsCavernApp(toga.App):
         for btn in row2: self.button_row_2.add(btn)
         for btn in row3: self.number_pad_box.add(btn)
 
-    def build_vendor_layout(self, cmd_dict):
-        """Build vendor layout: commands on left, numpad on right."""
-        left1 = [
-            self.create_button('b', 'B') if 'b' in cmd_dict else self.create_spacer(),
-            self.create_button('s', 'S') if 's' in cmd_dict else self.create_spacer(),
-            self.create_button('r', 'R') if 'r' in cmd_dict else self.create_spacer(),
-        ]
-        if 'id' in cmd_dict: left1.append(self.create_button('id', 'ID'))
-        if 'ba' in cmd_dict: left1.append(self.create_button('ba', 'BA'))
-
-        row1 = self.build_row(left1, [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')])
-        row2 = self.build_row([], [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')])
-        row3 = self.build_row(
-            [self.create_button('x', 'X')] if 'x' in cmd_dict else [],
-            [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')]
-        )
-
-        for btn in row1: self.button_row_1.add(btn)
-        for btn in row2: self.button_row_2.add(btn)
-        for btn in row3: self.number_pad_box.add(btn)
-    
-    def build_journal_layout(self, cmd_dict):
-        """
-        Build journal layout: [COMMANDS] [fillers] [NUMPAD]
-
-        Row 1: [S][A][G] [fillers] [1][2][3]
-        Row 2: [fillers] [4][5][6]
-        Row 3: [B][X] [fillers] [7][8]
-        """
-        left1 = [
-            self.create_button('s', 'S') if 's' in cmd_dict else self.create_spacer(),
-            self.create_button('a', 'A') if 'a' in cmd_dict else self.create_spacer(),
-            self.create_button('g', 'G') if 'g' in cmd_dict else self.create_spacer(),
-        ]
-        left3 = [
-            self.create_button('b', 'B') if 'b' in cmd_dict else self.create_spacer(),
-            self.create_button('x', cmd_dict.get('x', 'X')) if 'x' in cmd_dict else self.create_spacer(),
-        ]
-        row1 = self.build_row(left1, [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')])
-        row2 = self.build_row([], [self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')])
-        row3 = self.build_row(left3, [self.create_numpad_button('7'), self.create_numpad_button('8')])
-
-        for btn in row1: self.button_row_1.add(btn)
-        for btn in row2: self.button_row_2.add(btn)
-        for btn in row3: self.number_pad_box.add(btn)
-    
-    def build_crafting_layout(self, cmd_dict):
-        """
-        Build crafting layout with full 0-9 number pad and X button
-
-        Row 1: [fillers] [1][2][3]
-        Row 2: [fillers] [0][4][5][6]
-        Row 3: [X] [fillers] [7][8][9]
-        """
-        row1 = self.build_row([], [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')])
-        row2 = self.build_row([], [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')])
-        row3 = self.build_row(
-            [self.create_button('x', cmd_dict.get('x', 'X'))] if 'x' in cmd_dict else [],
-            [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')]
-        )
-
-        for btn in row1: self.button_row_1.add(btn)
-        for btn in row2: self.button_row_2.add(btn)
-        for btn in row3: self.number_pad_box.add(btn)
-
-    def build_taxidermist_layout(self, cmd_dict):
-        """
-        Build taxidermist layout: [CMDS] [fillers] [NUMPAD]
-
-        Row 1: [S]  [fillers]  [1][2][3]
-        Row 2: [I]  [fillers]  [4][5][6]
-        Row 3: [X]  [fillers]  [7][8][9]
-        """
-        row1 = self.build_row(
-            [self.create_button('s', 'S')],
-            [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')]
-        )
-        row2 = self.build_row(
-            [self.create_button('i', 'I')],
-            [self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
-        )
-        row3 = self.build_row(
-            [self.create_button('x', 'X')],
-            [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')]
-        )
-
-        for btn in row1: self.button_row_1.add(btn)
-        for btn in row2: self.button_row_2.add(btn)
-        for btn in row3: self.number_pad_box.add(btn)
-
-    def build_altar_layout(self, cmd_dict):
-        """
-        Build altar layout for item sacrifice (no d-pad, vendor-style):
-
-        Row 1: [Sac][I][X]     [1][2][3]
-        Row 2: [ ][ ][ ]  [0]  [4][5][6]
-        Row 3: [ ][ ][ ]       [7][8][9]
-        """
-        # Commands - SAC button types 's' prefix for sacrifice (e.g., s1 = sacrifice item 1)
-        sac_btn = toga.Button(
-            'Sac',
-            on_press=lambda w: self.number_pad_input('s'),
-            style=Pack(margin=0, font_size=11, font_weight='bold', color='#FFD700',
-                       background_color='#333', width=55, height=34)
-        )
-        self._compact_android_button(sac_btn)
-        cmd_row1 = [
-            sac_btn,
-            self.create_button('i', 'I') if 'i' in cmd_dict else self.create_spacer(),
-            self.create_button('x', 'X') if 'x' in cmd_dict else self.create_spacer(),
-        ]
-        cmd_row2 = [
-            self.create_spacer(),
-            self.create_spacer(),
-            self.create_spacer(),
-        ]
-        cmd_row3 = [self.create_spacer(), self.create_spacer(), self.create_spacer()]
-
-        # Numpad for item selection (far right) - [0][4][5][6] on row 2 matches standard layout
-        numpad_row1 = [self.create_spacer(), self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')]
-        numpad_row2 = [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
-
-        # Button 9 is the Devotion Rune offering - only show when player qualifies
-        can_offer_devotion = (
-            not gs.runes_obtained.get('devotion', False) and
-            gs.player_character is not None and
-            gs.player_character.gold >= gs.rune_progress_reqs.get('gold_obtained', 500) and
-            gs.player_character.health >= gs.rune_progress_reqs.get('player_health_obtained', 50)
-        )
-        if can_offer_devotion:
-            btn9 = toga.Button(
-                '9',
-                on_press=lambda w: self.number_pad_input('9'),
-                style=Pack(margin=0, font_size=12, font_weight='bold', color='#FFD700',
-                           background_color='#2a2a2a', width=55, height=34)
-            )
-            self._compact_android_button(btn9)
-        else:
-            btn9 = self.create_numpad_button('9')
-        numpad_row3 = [self.create_spacer(), self.create_numpad_button('7'), self.create_numpad_button('8'), btn9]
-
-        for btn in cmd_row1 + numpad_row1:
-            self.button_row_1.add(btn)
-        for btn in cmd_row2 + numpad_row2:
-            self.button_row_2.add(btn)
-        for btn in cmd_row3 + numpad_row3:
-            self.number_pad_box.add(btn)
-    
-    def build_generic_numpad_layout(self, cmd_dict):
-        """Build generic layout with full number pad."""
-        # Just use inventory layout as default for now
-        self.build_inventory_layout(cmd_dict)
-    
     def toggle_keyboard_case(self, widget):
         """Toggle between uppercase and lowercase keyboard."""
         self.keyboard_uppercase = not self.keyboard_uppercase
@@ -4477,7 +4265,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%; padding: 8px; border: 1px solid #8B4513; border-radius: 3px;">
+                        <div class="room-panel" style="width: 100%; padding: 8px; border: 1px solid #666; border-radius: 3px;">
                             <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
                                 <div style="flex-shrink:0;">{tomb_sprite}</div>
                                 <div style="color: #DDD; font-size: 12px;">An ancient tomb lies before you, its stone lid cracked with age.</div>
@@ -4665,7 +4453,7 @@ class WizardsCavernApp(toga.App):
                 <div style="border: 2px solid #FF8C00; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{smith_sprite}</div>
-                        <div style="color: #FF8C00; font-size: 12px; font-weight: bold;">BLACKSMITH</div>
+                        <div style="color: #CCC; font-size: 13px; font-weight: bold; margin-bottom: 4px;">[B] BLACKSMITH</div>
                     </div>
                     <div style="color: #DDD; font-size: 12px; margin-bottom: 10px; font-style: italic;">
                         "I can fix what's broken and roll the dice on what's dull."
@@ -4708,7 +4496,7 @@ class WizardsCavernApp(toga.App):
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{shrine_sprite}</div>
                         <div>
-                            <div style="color: #87CEEB; font-size: 12px; font-weight: bold; margin-bottom: 4px;">
+                            <div style="color: #CCC; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
                                 SHRINE OF THE FALLEN
                             </div>
                             <div style="color: #DDD; font-size: 12px; font-style: italic;">
@@ -4751,7 +4539,7 @@ class WizardsCavernApp(toga.App):
                 <div style="border: 2px solid #39FF14; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{alch_sprite}</div>
-                        <div style="color: #39FF14; font-size: 12px; font-weight: bold;">ALCHEMIST'S LAB</div>
+                        <div style="color: #CCC; font-size: 13px; font-weight: bold; margin-bottom: 4px;">[Q] ALCHEMIST'S LAB</div>
                     </div>
                     <div style="color: #DDD; font-size: 12px; margin-bottom: 8px; font-style: italic;">
                         "Two become one. Results... variable."
@@ -4797,7 +4585,7 @@ class WizardsCavernApp(toga.App):
                 <div style="border: 2px solid #CD5C5C; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{war_sprite}</div>
-                        <div style="color: #CD5C5C; font-size: 12px; font-weight: bold;">WAR ROOM</div>
+                        <div style="color: #CCC; font-size: 13px; font-weight: bold; margin-bottom: 4px;">[K] WAR ROOM</div>
                     </div>
                     <div style="color: #DDD; font-size: 12px; margin-bottom: 8px; font-style: italic;">
                         Maps still pinned to the walls. Someone planned an assault here.
@@ -4882,7 +4670,7 @@ class WizardsCavernApp(toga.App):
                 <div style='border:2px solid #8B6914; border-radius:3px; padding:12px;'>
                     <div style='display:flex; align-items:center; gap:8px; margin-bottom:6px;'>
                         <div style='flex-shrink:0;'>{tax_sprite}</div>
-                        <div style='color:#D4A017; font-size:12px; font-weight:bold;'>{tax_title}</div>
+                        <div style='color:#CCC; font-size:13px; font-weight:bold; margin-bottom:4px;'>{tax_title}</div>
                     </div>
                     <div style='color:#CCC; font-size:11px; font-style:italic; margin-bottom:8px;'>
                         You have {trophy_count} trophy piece(s) worth {trophy_val}g if sold.
@@ -4934,8 +4722,8 @@ class WizardsCavernApp(toga.App):
                         towel_wetness = " (soaking)"
             
             towel_html = f"""
-                <div style="border: 2px solid #8B4513; border-radius: 3px; padding: 12px; background: rgba(139,69,19,0.1);">
-                    <div style="color: #D2691E; font-weight: bold; font-size: 12px; margin-bottom: 8px;">
+                <div style="border: 2px solid #8B4513; border-radius: 3px; padding: 12px;">
+                    <div style="color: #CCC; font-weight: bold; font-size: 12px; margin-bottom: 8px;">
                         [TOWEL] Towel{towel_wetness}
                     </div>
                     <div style="color: #DDD; font-size: 12px; margin-bottom: 10px;">
@@ -5010,18 +4798,18 @@ class WizardsCavernApp(toga.App):
                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                     <div style="flex-shrink:0;">{zotle_sprite}</div>
                     <div>
-                        <div style="color: #E040FB; font-weight: bold; font-size: 12px; margin-bottom: 4px;">
+                        <div style="color: #CCC; font-weight: bold; font-size: 14px; margin-bottom: 4px;">
                             ZOTLE - ZOT'S WORD PUZZLE
                         </div>
-                        <div style="color: #FFD700; font-size: 12px;">
+                        <div style="color: #DDD; font-size: 11px;">
                             A shimmering phantom of the great wizard Zot appears!
                         </div>
                     </div>
                 </div>
-                <div style="color: #00BCD4; font-size: 12px; margin-bottom: 4px; text-align: center;">
+                <div style="color: #DDD; font-size: 10px; margin-bottom: 4px; text-align: center;">
                     "Guess the 5-letter word!"
                 </div>
-                <div style="color: #E040FB; font-size: 12px; margin-bottom: 8px; text-align: center;">
+                <div style="color: #CCC; font-size: 10px; margin-bottom: 8px; text-align: center;">
                     "Hint: It's a word that describes YOU!"
                 </div>
                 <div style="color: #888; font-size: 9px; margin-bottom: 8px; text-align: center;">
@@ -5032,7 +4820,7 @@ class WizardsCavernApp(toga.App):
             """
             
             puzzle_html = f"""
-                <div style="border: 2px solid #E040FB; padding: 10px; border-radius: 4px; background: #121213;">
+                <div style="border: 2px solid #E040FB; padding: 10px; border-radius: 4px;">
                     {dialog_html}
                     
                     <div style="padding: 8px; background: #0a0a0a; border-radius: 3px; margin-bottom: 8px;">
@@ -5069,15 +4857,15 @@ class WizardsCavernApp(toga.App):
             max_floors = len(gs.my_tower.floors)
             
             teleporter_html = f"""
-                <div style="border: 2px solid #E040FB; padding: 8px; border-radius: 6px; background: #1a1a2e;">
-                    <div style="color: #E040FB; font-weight: bold; font-size: 12px; text-align: center; margin-bottom: 4px;">
+                <div style="border: 2px solid #E040FB; padding: 8px; border-radius: 6px;">
+                    <div style="color: #CCC; font-weight: bold; font-size: 13px; text-align: center; margin-bottom: 4px;">
                         ZOT'S DIMENSIONAL KEY
                     </div>
                     <div style="display: flex; justify-content: center; gap: 12px; color: #FFF; font-size: 12px; margin: 4px 0;">
-                        <span>Now: <span style="color: #4FC3F7;">{gs.player_character.x},{gs.player_character.y},{gs.player_character.z + 1}</span></span>
+                        <span>Now: <span style="color: #CCC;">{gs.player_character.x},{gs.player_character.y},{gs.player_character.z + 1}</span></span>
                     </div>
-                    <div style="color: #FFD700; font-size: 12px; text-align: center; margin-top: 4px;">
-                        Enter: <span style="color: #E040FB;">x,y,z</span> (e.g. 7,7,3)
+                    <div style="color: #DDD; font-size: 11px; text-align: center; margin-top: 4px;">
+                        Enter: <span style="color: #CCC;">x,y,z</span> (e.g. 7,7,3)
                     </div>
                     <div style="color: #FF6B6B; font-size: 9px; text-align: center; margin-top: 2px;">
                         Cannot teleport into walls!
