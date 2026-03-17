@@ -5,8 +5,8 @@ Contains all item subclasses, identification, durability, and item management fu
 
 import random
 import math
-from . import game_state as gs
-from .game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
+import game_state as gs
+from game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
                         COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE,
                         normal_int_range, get_article)
 
@@ -114,7 +114,7 @@ def initialize_identification_system():
     Shuffles cryptic names and creates mappings.
     Called at game start.
     """
-    from .item_templates import SCROLL_TEMPLATES, WEAPON_TEMPLATES, ARMOR_TEMPLATES
+    from item_templates import SCROLL_TEMPLATES, WEAPON_TEMPLATES, ARMOR_TEMPLATES
 
     # Reset identification state
     gs.identified_items = set()
@@ -1168,7 +1168,7 @@ class Potion(Item):
             return True  # Consumed
 
         elif self.potion_type == 'growth_mushroom':
-            from . import game_state as gs
+            import game_state as gs
             add_log("")
             add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
             add_log(f"{COLOR_GREEN}{character.name} eats the {self.name}!{COLOR_RESET}")
@@ -1718,9 +1718,9 @@ class Scroll(Item):
 
         Replace the existing Scroll.use() method with this function.
         """
-        from .dungeon import is_wall_at_coordinate
-        from .vendor import reveal_adjacent_walls
-        from .game_systems import _trigger_room_interaction
+        from dungeon import is_wall_at_coordinate
+        from vendor import reveal_adjacent_walls
+        from game_systems import _trigger_room_interaction
 
         # Auto-identify scroll on use
         identify_item(self, silent=False)
@@ -1978,7 +1978,7 @@ class Scroll(Item):
             return True
 
 def process_upgrade_scroll_action(player_character, my_tower, cmd):
-    from .game_systems import handle_inventory_menu
+    from game_systems import handle_inventory_menu
 
     if cmd.lower() == 'c':
         add_log("Upgrade cancelled.")
@@ -2126,7 +2126,7 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
 
 def process_identify_scroll_action(player_character, my_tower, cmd):
     """Handle item selection for Scroll of Identify"""
-    from .game_systems import handle_inventory_menu
+    from game_systems import handle_inventory_menu
 
     if cmd.lower() == 'c':
         add_log("Identification cancelled.")
@@ -2288,7 +2288,7 @@ def restock_vendor_at(tower, character, vendor_x, vendor_y):
     Restock a specific vendor with new random inventory.
     This regenerates the vendor's stock as if it's a new vendor.
     """
-    from .achievements import check_achievements
+    from achievements import check_achievements
 
     floor_level = character.z
 
@@ -2319,8 +2319,8 @@ def generate_vendor_inventory(floor_level, room):
     Generate a new random vendor inventory for the given floor level.
     Uses enhanced weapon/armor generation for better variety.
     """
-    from .game_systems import create_random_enhanced_weapon, create_random_enhanced_armor
-    from .item_templates import ALL_ITEM_TEMPLATES
+    from game_systems import create_random_enhanced_weapon, create_random_enhanced_armor
+    from item_templates import ALL_ITEM_TEMPLATES
 
     inventory = []
 
@@ -2664,22 +2664,6 @@ class Food(Item):
         return True  # consumed
 
 
-class LembasWafer(Food):
-    """Elven lembas wafer - fills hunger completely and freezes hunger decay for 30 turns."""
-    def __init__(self, name="Lembas Wafer", description="A golden elven waybread that sustains travelers on long journeys.", value=25, level=0, count=1):
-        super().__init__(name, description, value, level, nutrition=HUNGER_MAX, count=count)
-
-    def __repr__(self):
-        return f"LembasWafer(name='{self.name}', count={self.count})"
-
-    def use(self, character, my_tower=None):
-        character.hunger = HUNGER_MAX
-        character.hunger_freeze_turns = 30
-        add_log(f"{COLOR_GREEN}You eat a {self.name}. Its golden warmth fills you completely!{COLOR_RESET}")
-        add_log(f"{COLOR_CYAN}The lembas sustains you — hunger will not decrease for 30 turns.{COLOR_RESET}")
-        return True  # consumed
-
-
 class Meat(Item):
     """Meat dropped by monsters - can be raw or cooked, rots over time."""
     def __init__(self, name, description="", value=3, level=0,
@@ -2793,8 +2777,8 @@ def drop_monster_items(monster, player_character):
     Chance to drop equipment/items from slain monsters.
     Low base probability, scales with monster level and floor.
     """
-    from .game_systems import create_random_enhanced_weapon, create_random_enhanced_armor, get_random_potion
-    from .item_templates import SCROLL_TEMPLATES
+    from game_systems import create_random_enhanced_weapon, create_random_enhanced_armor, get_random_potion
+    from item_templates import SCROLL_TEMPLATES
 
     monster_lvl = getattr(monster, 'level', 1)
     floor_lvl = player_character.z
@@ -2894,28 +2878,8 @@ def tick_meat_rot(character):
 
 def process_hunger(character):
     """Called each move. Decreases hunger and applies penalties/bonuses."""
-    # Check for lembas hunger freeze
-    freeze = getattr(character, 'hunger_freeze_turns', 0)
-    if freeze > 0:
-        character.hunger_freeze_turns -= 1
-        if character.hunger_freeze_turns == 0:
-            add_log(f"{COLOR_YELLOW}The sustaining power of the lembas fades.{COLOR_RESET}")
-    else:
-        character.hunger = max(0, character.hunger - HUNGER_DECAY_PER_MOVE)
-
+    character.hunger = max(0, character.hunger - HUNGER_DECAY_PER_MOVE)
     h = character.hunger
-
-    # HP regeneration: 1 HP every 2 moves when hunger >= 85
-    if h >= 85 and character.health < character.max_health:
-        tracker = getattr(character, 'hunger_regen_tracker', 0) + 1
-        character.hunger_regen_tracker = tracker
-        if tracker >= 2:
-            character.hunger_regen_tracker = 0
-            character.health = min(character.max_health, character.health + 1)
-            add_log(f"{COLOR_GREEN}[Well-fed] +1 HP{COLOR_RESET}")
-    else:
-        character.hunger_regen_tracker = 0
-
     if h <= 0:
         # Starving: take damage
         dmg = 2
@@ -2975,7 +2939,7 @@ class Treasure(Item):
 
     def collect(self, character):
         """Called when treasure is picked up from a chest"""
-        from .achievements import check_achievements
+        from achievements import check_achievements
 
         if self.treasure_type == 'gold':
             character.gold += self.gold_value

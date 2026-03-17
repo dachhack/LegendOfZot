@@ -5,15 +5,15 @@ Contains the SaveSystem class and get_classes_dict() helper for
 serializing and deserializing game state to/from JSON save files.
 
 Usage:
-    from .save_system import SaveSystem, get_classes_dict
+    from save_system import SaveSystem, get_classes_dict
 """
 
 import json
 import os
 from datetime import datetime
 
-from . import game_state as gs
-from .game_state import (
+import game_state as gs
+from game_state import (
     add_log,
     COLOR_RED,
     COLOR_GREEN,
@@ -26,14 +26,14 @@ from .game_state import (
 # These imports are needed for serialization/deserialization of game objects.
 # They are imported at module level since the save system must know about
 # all concrete classes to serialize/deserialize them.
-from .items import (
+from items import (
     Item, Potion, Weapon, Armor, Scroll, Spell, Treasure,
     Towel, Flare, Lantern, LanternFuel, Food, Meat,
-    CookingKit, Ingredient, Trophy, Rune, Shard, LembasWafer,
+    CookingKit, Ingredient, Trophy, Rune, Shard,
 )
-from .characters import Character, Monster, Inventory, StatusEffect
-from .vendor import Vendor
-from .dungeon import Room, Floor, Tower
+from characters import Character, Monster, Inventory, StatusEffect
+from vendor import Vendor
+from dungeon import Room, Floor, Tower
 
 
 # ---------------------------------------------------------------------------
@@ -43,19 +43,19 @@ from .dungeon import Room, Floor, Tower
 
 def _get_spell_templates():
     """Import SPELL_TEMPLATES from item_templates."""
-    from .item_templates import SPELL_TEMPLATES
+    from item_templates import SPELL_TEMPLATES
     return SPELL_TEMPLATES
 
 
 def _get_hunger_max():
     """Import HUNGER_MAX from item_templates."""
-    from .item_templates import HUNGER_MAX
+    from item_templates import HUNGER_MAX
     return HUNGER_MAX
 
 
 def _get_meat_rot_turns_raw():
     """Import MEAT_ROT_TURNS_RAW from item_templates."""
-    from .item_templates import MEAT_ROT_TURNS_RAW
+    from item_templates import MEAT_ROT_TURNS_RAW
     return MEAT_ROT_TURNS_RAW
 
 
@@ -400,13 +400,6 @@ class SaveSystem:
                 return item
             except NameError:
                 return Item(data['name'], data.get('description', ''), data.get('value', 0), data.get('level', 0))
-        elif cls_name == 'LembasWafer':
-            item = LembasWafer(
-                name=data['name'], description=data.get('description', ''),
-                value=data.get('value', 25), level=data.get('level', 0),
-                count=data.get('count', 1)
-            )
-            return item
         elif cls_name == 'Food':
             item = Food(
                 name=data['name'], description=data.get('description', ''),
@@ -483,8 +476,6 @@ class SaveSystem:
             'memorized_spells': [SaveSystem.serialize_item(s) for s in character.memorized_spells],
             'status_effects': status_effects_data,
             'hunger': getattr(character, 'hunger', HUNGER_MAX),
-            'hunger_freeze_turns': getattr(character, 'hunger_freeze_turns', 0),
-            'hunger_regen_tracker': getattr(character, 'hunger_regen_tracker', 0),
         }
 
     @staticmethod
@@ -521,8 +512,6 @@ class SaveSystem:
         character.title = data.get('title', '')
         character.character_class = data.get('character_class', 'Adventurer')
         character.hunger = data.get('hunger', HUNGER_MAX)
-        character.hunger_freeze_turns = data.get('hunger_freeze_turns', 0)
-        character.hunger_regen_tracker = data.get('hunger_regen_tracker', 0)
 
         # Inventory
         character.inventory = Inventory()
@@ -669,7 +658,6 @@ class SaveSystem:
             'gs.looted_dungeons': [f"{k[0]},{k[1]},{k[2]}" for k in gs.looted_dungeons],
             'gs.looted_tombs': [f"{k[0]},{k[1]},{k[2]}" for k in gs.looted_tombs],
             'gs.harvested_gardens': [f"{k[0]},{k[1]},{k[2]}" for k in gs.harvested_gardens],
-            'gs.harvested_fey_floors': list(gs.harvested_fey_floors),
             'gs.haunted_floors': dict(gs.haunted_floors),  # floor_num -> turns remaining
             'gs.unique_treasures_spawned': list(gs.unique_treasures_spawned),
             'gs.ephemeral_gardens': gs.ephemeral_gardens,
@@ -739,8 +727,6 @@ class SaveSystem:
             gs.harvested_gardens.clear()
             for k in data['gs.harvested_gardens']:
                 gs.harvested_gardens[tuple(map(int, k.split(',')))] = True
-        if 'gs.harvested_fey_floors' in data:
-            gs.harvested_fey_floors = set(data['gs.harvested_fey_floors'])
         if 'gs.haunted_floors' in data:
             gs.haunted_floors.clear()
             # JSON converts int keys to strings, so convert back

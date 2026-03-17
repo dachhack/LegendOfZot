@@ -5,15 +5,15 @@ Contains the Vendor class, vendor name/message data, magic shop logic,
 and all vendor interaction functions (buy, sell, identify, repair).
 
 Usage:
-    from .vendor import Vendor, handle_starting_shop, handle_vendor_shop,
+    from vendor import Vendor, handle_starting_shop, handle_vendor_shop,
                        process_vendor_action, process_sell_quantity,
                        reveal_adjacent_walls
 """
 
 import random
 
-from . import game_state as gs
-from .game_state import (
+import game_state as gs
+from game_state import (
     add_log,
     COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
     COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY,
@@ -21,7 +21,7 @@ from .game_state import (
 )
 
 # Item classes and item functions
-from .items import (
+from items import (
     Item, Potion, Scroll, Spell, Weapon, Armor,
     Lantern, LanternFuel, Towel, Food, Flare, Ingredient,
     _create_item_copy,
@@ -29,20 +29,20 @@ from .items import (
     get_vendor_identify_cost, get_item_display_name,
     get_repair_cost,
 )
-from .characters import Inventory, get_sorted_inventory
-from .item_templates import POTION_TEMPLATES, SCROLL_TEMPLATES, SPELL_TEMPLATES
-from .achievements import check_achievements
+from characters import Inventory, get_sorted_inventory
+from item_templates import POTION_TEMPLATES, SCROLL_TEMPLATES, SPELL_TEMPLATES
+from achievements import check_achievements
 
 
 def _get_enhanced_weapon(floor_level):
     """Lazy import wrapper to avoid circular imports with game_systems."""
-    from .game_systems import create_random_enhanced_weapon
+    from game_systems import create_random_enhanced_weapon
     return create_random_enhanced_weapon(floor_level)
 
 
 def _get_enhanced_armor(floor_level):
     """Lazy import wrapper to avoid circular imports with game_systems."""
-    from .game_systems import create_random_enhanced_armor
+    from game_systems import create_random_enhanced_armor
     return create_random_enhanced_armor(floor_level)
 
 
@@ -181,10 +181,6 @@ class Vendor:
                             status_effect_magnitude=spell_template.status_effect_magnitude
                         ))
 
-            # All vendors stock rations (3-4)
-            num_rations = random.randint(3, 4)
-            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=num_rations))
-
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:
                 self.inventory.add_item_quiet(Towel("Towel", "A soft cotton towel. Don't panic!", value=5, level=0))
@@ -293,7 +289,7 @@ BUG_MERCHANT_GREETINGS = {
 def generate_bug_merchant_inventory():
     """Generate inventory for a bug merchant on the shrinking bug level.
     Stocks bug-themed weapons, armor, and healing potions."""
-    from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+    from game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
 
     items = []
 

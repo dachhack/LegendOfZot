@@ -16,22 +16,22 @@ Contains:
     - VAULT_DEFENDER_TEMPLATES data
 
 Usage:
-    from .characters import Character, Monster, Inventory, StatusEffect
+    from characters import Character, Monster, Inventory, StatusEffect
 """
 
 import random
 import math
-from . import game_state as gs
-from .game_state import (
+import game_state as gs
+from game_state import (
     add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
     COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD,
     normal_int_range, get_article, print_to_output
 )
 
-from .items import (
+from items import (
     Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
     Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
-    Trophy, Rune, Shard, LembasWafer
+    Trophy, Rune, Shard
 )
 
 
@@ -40,51 +40,51 @@ from .items import (
 # ============================================================================
 
 def _get_register_item_discovery():
-    from .items import register_item_discovery
+    from items import register_item_discovery
     return register_item_discovery
 
 def _get_item_display_name(item, for_vendor=False):
-    from .items import get_item_display_name
+    from items import get_item_display_name
     return get_item_display_name(item, for_vendor=for_vendor)
 
 def _is_item_identified(item):
-    from .items import is_item_identified
+    from items import is_item_identified
     return is_item_identified(item)
 
 def _identify_item(item):
-    from .items import identify_item
+    from items import identify_item
     return identify_item(item)
 
 def _cook_meat_in_inventory(character, source="fire"):
-    from .items import cook_meat_in_inventory
+    from items import cook_meat_in_inventory
     return cook_meat_in_inventory(character, source)
 
 def _has_dodge_cloak(character):
-    from .game_systems import has_dodge_cloak
+    from game_systems import has_dodge_cloak
     return has_dodge_cloak(character)
 
 def _has_hunter_cloak(character):
-    from .game_systems import has_hunter_cloak
+    from game_systems import has_hunter_cloak
     return has_hunter_cloak(character)
 
 def _get_holy_brand_bonus(character):
-    from .game_systems import get_holy_brand_bonus
+    from game_systems import get_holy_brand_bonus
     return get_holy_brand_bonus(character)
 
 def _has_poison_immunity(character):
-    from .game_systems import has_poison_immunity
+    from game_systems import has_poison_immunity
     return has_poison_immunity(character)
 
 def _has_confusion_immunity(character):
-    from .game_systems import has_confusion_immunity
+    from game_systems import has_confusion_immunity
     return has_confusion_immunity(character)
 
 def _has_fire_resistance(character):
-    from .game_systems import has_fire_resistance
+    from game_systems import has_fire_resistance
     return has_fire_resistance(character)
 
 def _check_achievements(player_char):
-    from .achievements import check_achievements
+    from achievements import check_achievements
     return check_achievements(player_char)
 
 
@@ -425,13 +425,6 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
             item_str = f"<span style='color:#CC8844;'>{item.name}</span> (rot in {item.rot_timer} moves)"
         item_str += price_str
 
-    elif isinstance(item, LembasWafer):
-        item_str = f"<span style='color:#FFD700;'>{item.name}</span> (Full + 30 turn sustain)"
-        count = getattr(item, 'count', 1)
-        if count > 1:
-            item_str += f" (x{count})"
-        item_str += price_str
-
     elif isinstance(item, Food):
         item_str = f"<span style='color:#88FF88;'>{item.name}</span> (+{item.nutrition} hunger)"
         count = getattr(item, 'count', 1)
@@ -751,8 +744,6 @@ class Character:
         self.base_max_mana_bonus = 0    # For permanent mana bonuses
         # Hunger system
         self.hunger = HUNGER_MAX  # Start full
-        self.hunger_freeze_turns = 0  # Lembas wafer postpones hunger decay
-        self.hunger_regen_tracker = 0  # Tracks moves for HP regen when well-fed
         # Now safe to call max_mana property
         self.mana = self.max_mana # Initialize mana to max_mana
 

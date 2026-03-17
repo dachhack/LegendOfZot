@@ -6,14 +6,14 @@ spell memorization, spell casting during combat, journal actions,
 trophy drops, and taxidermist reward helpers.
 
 Usage:
-    from .combat import process_combat_action, process_flee_direction_action, ...
+    from combat import process_combat_action, process_flee_direction_action, ...
 """
 
 import random
 import math
 
-from . import game_state as gs
-from .game_state import (
+import game_state as gs
+from game_state import (
     add_log,
     COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
     COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY,
@@ -21,16 +21,16 @@ from .game_state import (
     normal_int_range, get_article,
 )
 
-from .items import (Trophy, Treasure, Rune, Shard, Towel, Spell, Potion,
+from items import (Trophy, Treasure, Rune, Shard, Towel, Spell, Potion,
                    CORROSIVE_MONSTERS, get_base_monster_name, apply_corrosion_effect,
                    apply_rust_effect, degrade_equipment, is_item_identified, identify_item,
                    get_item_display_name, process_potion_effects_in_combat,
                    process_potion_effects_on_monster_defeat, process_regeneration_effect,
                    track_equipment_use, drop_monster_items, drop_monster_meat)
-from .achievements import check_achievements
+from achievements import check_achievements
 
-from .game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
-from .dungeon import Room
+from game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+from dungeon import Room
 
 
 # ---------------------------------------------------------------------------
@@ -39,7 +39,7 @@ from .dungeon import Room
 # ---------------------------------------------------------------------------
 def _main():
     """Return the game_systems module (lazy import)."""
-    from . import game_systems as main
+    import game_systems as main
     return main
 
 
@@ -562,7 +562,7 @@ def process_combat_action(player_character, my_tower, cmd):
             # CHECK FOR TOMB GUARDIAN REWARD
             # If we just defeated a tomb guardian, award the special reward
             if gs.active_monster and gs.active_monster.properties.get('is_tomb_guardian'):
-                from .room_actions import award_tomb_guardian_reward
+                from room_actions import award_tomb_guardian_reward
                 award_tomb_guardian_reward(player_character)
 
             # CHECK FOR PLATINO DROP
@@ -867,14 +867,9 @@ def process_spell_memorization_action(player_character, my_tower, cmd):
         else:
             add_log("Available Spells:")
             for i, spell in enumerate(all_spells):
-                display_name = get_item_display_name(spell)
-                identified = is_item_identified(spell)
                 slots_needed = player_character.get_spell_slots(spell)
                 memorized_marker = " [MEMORIZED]" if spell in player_character.memorized_spells else ""
-                if identified:
-                    add_log(f"  {i + 1}. {display_name} (Cost: {spell.mana_cost} MP, Lvl {spell.level}, {slots_needed} slot{'s' if slots_needed > 1 else ''}){memorized_marker}")
-                else:
-                    add_log(f"  {i + 1}. {display_name} [?]")
+                add_log(f"  {i + 1}. {spell.name} (Cost: {spell.mana_cost} MP, Lvl {spell.level}, {slots_needed} slot{'s' if slots_needed > 1 else ''}){memorized_marker}")
 
             add_log("")
             add_log("Memorized Spells:")
@@ -1197,7 +1192,7 @@ def get_trophy_drop(monster_name):
 
 def _drop_bug_gear(player_character):
     """25% chance to drop a random bug weapon or armor after killing a bug monster."""
-    from .items import Weapon, Armor
+    from items import Weapon, Armor
     if random.random() > 0.25:
         return
     # 50/50 weapon or armor
