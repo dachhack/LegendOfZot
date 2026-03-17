@@ -587,7 +587,7 @@ class WizardsCavernApp(toga.App):
         
         # Container for button rows (always visible, fixed height to keep input row stable)
         self.button_panel = toga.Box(
-            style=Pack(direction=COLUMN, background_color="#1a1a1a", height=110),
+            style=Pack(direction=COLUMN, background_color="#1a1a1a"),
             children=[
                 #self.command_display,
                 self.button_row_1,
@@ -647,7 +647,6 @@ class WizardsCavernApp(toga.App):
             style=Pack(
                 direction=COLUMN,
                 background_color="#1a1a1a",
-                height=170,
                 flex=0,
             ),
             children=[
