@@ -12,8 +12,8 @@ import json
 import os
 from datetime import datetime
 
-import game_state as gs
-from game_state import (
+from . import game_state as gs
+from .game_state import (
     add_log,
     COLOR_RED,
     COLOR_GREEN,
@@ -26,14 +26,14 @@ from game_state import (
 # These imports are needed for serialization/deserialization of game objects.
 # They are imported at module level since the save system must know about
 # all concrete classes to serialize/deserialize them.
-from items import (
+from .items import (
     Item, Potion, Weapon, Armor, Scroll, Spell, Treasure,
     Towel, Flare, Lantern, LanternFuel, Food, Meat,
     CookingKit, Ingredient, Trophy, Rune, Shard,
 )
-from characters import Character, Monster, Inventory, StatusEffect
-from vendor import Vendor
-from dungeon import Room, Floor, Tower
+from .characters import Character, Monster, Inventory, StatusEffect
+from .vendor import Vendor
+from .dungeon import Room, Floor, Tower
 
 
 # ---------------------------------------------------------------------------
@@ -43,19 +43,19 @@ from dungeon import Room, Floor, Tower
 
 def _get_spell_templates():
     """Import SPELL_TEMPLATES from item_templates."""
-    from item_templates import SPELL_TEMPLATES
+    from .item_templates import SPELL_TEMPLATES
     return SPELL_TEMPLATES
 
 
 def _get_hunger_max():
     """Import HUNGER_MAX from item_templates."""
-    from item_templates import HUNGER_MAX
+    from .item_templates import HUNGER_MAX
     return HUNGER_MAX
 
 
 def _get_meat_rot_turns_raw():
     """Import MEAT_ROT_TURNS_RAW from item_templates."""
-    from item_templates import MEAT_ROT_TURNS_RAW
+    from .item_templates import MEAT_ROT_TURNS_RAW
     return MEAT_ROT_TURNS_RAW
 
 

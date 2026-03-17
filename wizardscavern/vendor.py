@@ -12,8 +12,8 @@ Usage:
 
 import random
 
-import game_state as gs
-from game_state import (
+from . import game_state as gs
+from .game_state import (
     add_log,
     COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
     COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY,
@@ -21,7 +21,7 @@ from game_state import (
 )
 
 # Item classes and item functions
-from items import (
+from .items import (
     Item, Potion, Scroll, Spell, Weapon, Armor,
     Lantern, LanternFuel, Towel, Food, Flare, Ingredient,
     _create_item_copy,
@@ -29,20 +29,20 @@ from items import (
     get_vendor_identify_cost, get_item_display_name,
     get_repair_cost,
 )
-from characters import Inventory, get_sorted_inventory
-from item_templates import POTION_TEMPLATES, SCROLL_TEMPLATES, SPELL_TEMPLATES
-from achievements import check_achievements
+from .characters import Inventory, get_sorted_inventory
+from .item_templates import POTION_TEMPLATES, SCROLL_TEMPLATES, SPELL_TEMPLATES
+from .achievements import check_achievements
 
 
 def _get_enhanced_weapon(floor_level):
     """Lazy import wrapper to avoid circular imports with game_systems."""
-    from game_systems import create_random_enhanced_weapon
+    from .game_systems import create_random_enhanced_weapon
     return create_random_enhanced_weapon(floor_level)
 
 
 def _get_enhanced_armor(floor_level):
     """Lazy import wrapper to avoid circular imports with game_systems."""
-    from game_systems import create_random_enhanced_armor
+    from .game_systems import create_random_enhanced_armor
     return create_random_enhanced_armor(floor_level)
 
 
@@ -289,7 +289,7 @@ BUG_MERCHANT_GREETINGS = {
 def generate_bug_merchant_inventory():
     """Generate inventory for a bug merchant on the shrinking bug level.
     Stocks bug-themed weapons, armor, and healing potions."""
-    from game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+    from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
 
     items = []
 

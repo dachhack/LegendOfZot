@@ -35,12 +35,12 @@ from toga.style import Pack
 from toga.style.pack import COLUMN, ROW
 
 # Sprite and game data
-from sprite_data import (
+from .sprite_data import (
     generate_monster_sprite_html,
     generate_room_sprite_html,
     generate_player_sprite_html as _generate_player_sprite_html,
 )
-from game_data import (
+from .game_data import (
     MONSTER_TEMPLATES,
     MONSTER_SPAWN_FLOOR_RANGE,
     MONSTER_EVOLUTION_TIERS,
@@ -49,25 +49,25 @@ from game_data import (
 )
 
 # Game state (all shared mutable globals)
-import game_state as gs
-from game_state import (add_log, print_to_output, normal_int_range, get_article,
+from . import game_state as gs
+from .game_state import (add_log, print_to_output, normal_int_range, get_article,
                         COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
                         COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE)
 
 # Game modules - import all public names for backward compatibility
-from achievements import Achievement, ACHIEVEMENTS, check_achievements
-from zotle import (scramble_word_for_zotle, check_zotle_guess, initialize_zotle_puzzle,
+from .achievements import Achievement, ACHIEVEMENTS, check_achievements
+from .zotle import (scramble_word_for_zotle, check_zotle_guess, initialize_zotle_puzzle,
                    format_zotle_guess_html, should_spawn_puzzle_room, spawn_puzzle_room_on_floor)
-from item_templates import *
-from items import *
-from characters import *
-from dungeon import Room, Floor, Tower, is_wall_at_coordinate
-from combat import *
-from vendor import *
-from save_system import SaveSystem
-from room_actions import *
-from game_systems import *
-from game_systems import _handle, _trigger_room_interaction, _execute_warp
+from .item_templates import *
+from .items import *
+from .characters import *
+from .dungeon import Room, Floor, Tower, is_wall_at_coordinate
+from .combat import *
+from .vendor import *
+from .save_system import SaveSystem
+from .room_actions import *
+from .game_systems import *
+from .game_systems import _handle, _trigger_room_interaction, _execute_warp
 
 def health_bar(current, maximum, width=20):
     filled = int((current / maximum) * width) if maximum > 0 else 0

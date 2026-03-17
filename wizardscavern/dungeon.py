@@ -1,8 +1,8 @@
 """Dungeon generation and structure classes for Wizard's Cavern."""
 import random
 from collections import deque
-import game_state as gs
-from game_state import (
+from . import game_state as gs
+from .game_state import (
     add_log, COLOR_GREEN, COLOR_RESET, COLOR_YELLOW, COLOR_GREY,
     COLOR_RED, COLOR_PURPLE, COLOR_CYAN,
 )
@@ -315,9 +315,9 @@ class Tower:
                   p_limits=(0, 100), c_limits=(0, 100), w_limits=(0, 100), a_limits=(0, 100), l_limits=(0, 100), dungeon_limits=(0, 100), t_limits=(0, 100), garden_limits=(0, 100), o_limits=(0, 100), m_limits=(0, 100),
                   b_limits=(0,0), f_limits=(0,0), q_limits=(0,0), k_limits=(0,0), x_limits=(0,0)):
         # Late imports to avoid circular dependencies
-        from game_systems import generate_vault_on_floor
-        from zotle import should_spawn_puzzle_room, spawn_puzzle_room_on_floor
-        from item_templates import MAGIC_SHOP_MIN_FLOOR, MAGIC_SHOP_CHANCE
+        from .game_systems import generate_vault_on_floor
+        from .zotle import should_spawn_puzzle_room, spawn_puzzle_room_on_floor
+        from .item_templates import MAGIC_SHOP_MIN_FLOOR, MAGIC_SHOP_CHANCE
 
         new_floor = Floor(gs.grid_rows, gs.grid_cols, wall_char, floor_char)
 
@@ -576,7 +576,7 @@ class Tower:
     def _create_bug_level(self, floor, floor_number):
         """Transform a floor into Zot's Shrinking Bug Level.
         Replaces all monster rooms with bug monsters and places the Bug Queen."""
-        from game_data import BUG_MONSTER_TEMPLATES
+        from .game_data import BUG_MONSTER_TEMPLATES
 
         floor_index = floor_number - 1  # Convert to 0-indexed
         gs.bug_level_floors[floor_index] = True

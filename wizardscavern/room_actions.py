@@ -6,66 +6,66 @@ tombs, gardens, oracles, blacksmith, shrine, alchemist, war room, taxidermist, e
 
 import random
 import math
-import game_state as gs
-from game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
+from . import game_state as gs
+from .game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
                         COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE,
                         normal_int_range, get_article)
-from game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_GARDEN_INGREDIENTS
-from items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
+from .game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_GARDEN_INGREDIENTS
+from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
                    Trophy, Rune, Shard, identify_item, is_item_identified,
                    get_item_display_name, _create_item_copy)
-from characters import Monster, get_sorted_inventory, format_item_for_display, burn_inventory_items
-from achievements import check_achievements
-from zotle import check_zotle_guess
-from dungeon import is_wall_at_coordinate
-from item_templates import (POTION_RECIPES, GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
+from .characters import Monster, get_sorted_inventory, format_item_for_display, burn_inventory_items
+from .achievements import check_achievements
+from .zotle import check_zotle_guess
+from .dungeon import is_wall_at_coordinate
+from .item_templates import (POTION_RECIPES, GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
                             SPELL_TEMPLATES, POTION_TEMPLATES, WEAPON_TEMPLATES,
                             ARMOR_TEMPLATES, SCROLL_TEMPLATES, FEY_GARDEN_INGREDIENTS)
-from save_system import SaveSystem
+from .save_system import SaveSystem
 
 
 # Lazy imports to avoid circular dependencies with game_systems and combat
 def _get_trigger_room_interaction():
-    from game_systems import _trigger_room_interaction
+    from .game_systems import _trigger_room_interaction
     return _trigger_room_interaction
 
 def _get_reveal_adjacent_walls():
-    from vendor import reveal_adjacent_walls
+    from .vendor import reveal_adjacent_walls
     return reveal_adjacent_walls
 
 def check_pool_protection(character):
-    from game_systems import check_pool_protection as _f; return _f(character)
+    from .game_systems import check_pool_protection as _f; return _f(character)
 
 def create_legendary_monster(shard_type, floor_level):
-    from game_systems import create_legendary_monster as _f; return _f(shard_type, floor_level)
+    from .game_systems import create_legendary_monster as _f; return _f(shard_type, floor_level)
 
 def create_random_enhanced_weapon(floor_level):
-    from game_systems import create_random_enhanced_weapon as _f; return _f(floor_level)
+    from .game_systems import create_random_enhanced_weapon as _f; return _f(floor_level)
 
 def create_random_enhanced_armor(floor_level):
-    from game_systems import create_random_enhanced_armor as _f; return _f(floor_level)
+    from .game_systems import create_random_enhanced_armor as _f; return _f(floor_level)
 
 def get_random_treasure(floor_level, allow_unique=False):
-    from game_systems import get_random_treasure as _f; return _f(floor_level, allow_unique)
+    from .game_systems import get_random_treasure as _f; return _f(floor_level, allow_unique)
 
 def get_repair_cost(item):
-    from items import get_repair_cost as _f; return _f(item)
+    from .items import get_repair_cost as _f; return _f(item)
 
 def handle_inventory_menu(pc, tw, cmd):
-    from game_systems import handle_inventory_menu as _f; return _f(pc, tw, cmd)
+    from .game_systems import handle_inventory_menu as _f; return _f(pc, tw, cmd)
 
 def move_player(character, tw, direction, ignore_confusion=False):
-    from game_systems import move_player as _f; return _f(character, tw, direction, ignore_confusion)
+    from .game_systems import move_player as _f; return _f(character, tw, direction, ignore_confusion)
 
 def process_combat_action(pc, tw, cmd):
-    from combat import process_combat_action as _f; return _f(pc, tw, cmd)
+    from .combat import process_combat_action as _f; return _f(pc, tw, cmd)
 
 def get_collection_status(pc):
-    from combat import get_collection_status as _f; return _f(pc)
+    from .combat import get_collection_status as _f; return _f(pc)
 
 def _make_taxidermist_reward(cname, cdata):
-    from combat import _make_taxidermist_reward as _f; return _f(cname, cdata)
+    from .combat import _make_taxidermist_reward as _f; return _f(cname, cdata)
 
 
 # --------------------------------------------------------------------------------

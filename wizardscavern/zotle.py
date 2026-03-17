@@ -7,8 +7,8 @@ Players encounter puzzle rooms ('Z') on floors and must guess a scrambled 5-lett
 
 import random
 
-import game_state as gs
-from game_state import add_log, COLOR_GREEN, COLOR_RESET, COLOR_YELLOW
+from . import game_state as gs
+from .game_state import add_log, COLOR_GREEN, COLOR_RESET, COLOR_YELLOW
 
 
 def scramble_word_for_zotle(word):

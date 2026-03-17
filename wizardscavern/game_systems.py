@@ -8,15 +8,15 @@ import random
 import math
 import re
 import textwrap
-import game_state as gs
-from game_state import (add_log, print_to_output, COLOR_RED, COLOR_GREEN, COLOR_RESET,
+from . import game_state as gs
+from .game_state import (add_log, print_to_output, COLOR_RED, COLOR_GREEN, COLOR_RESET,
                         COLOR_PURPLE, COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY,
                         BOLD, UNDERLINE, normal_int_range, get_article)
-from sprite_data import generate_monster_sprite_html, generate_room_sprite_html
-from sprite_data import generate_player_sprite_html as _generate_player_sprite_html
-from game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE, MONSTER_EVOLUTION_TIERS,
+from .sprite_data import generate_monster_sprite_html, generate_room_sprite_html
+from .sprite_data import generate_player_sprite_html as _generate_player_sprite_html
+from .game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE, MONSTER_EVOLUTION_TIERS,
                        TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES)
-from items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
+from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
                    Trophy, Rune, Shard, identify_item, is_item_identified,
                    get_item_display_name, register_item_discovery, _create_item_copy,
@@ -28,7 +28,7 @@ from items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    process_hunger, tick_meat_rot, get_base_monster_name,
                    is_metal_item, generate_vendor_inventory, process_upgrade_scroll_action,
                    CORROSIVE_MONSTERS)
-from item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES,
+from .item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES,
                             UTILITY_TEMPLATES, TREASURE_TEMPLATES, POTION_TEMPLATES,
                             SPELL_TEMPLATES, ALL_ITEM_TEMPLATES, INGREDIENT_TEMPLATES,
                             UNIQUE_WEAPON_TEMPLATES, UNIQUE_ARMOR_TEMPLATES,
@@ -38,64 +38,64 @@ from item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES,
                             VAULT_DEFENDER_TEMPLATES, ENHANCED_MINOR_TREASURES,
                             UNIQUE_TREASURE_TEMPLATES,
                             ELEMENTAL_SUFFIXES, MULTI_ELEMENT_SUFFIXES)
-from characters import Character, Monster, Inventory, StatusEffect, get_sorted_inventory, format_item_for_display, burn_inventory_items
-from achievements import check_achievements
-from dungeon import Room, Floor, Tower, is_wall_at_coordinate
-from vendor import (Vendor, set_vendor_greeting, set_shop_msg, process_vendor_action,
+from .characters import Character, Monster, Inventory, StatusEffect, get_sorted_inventory, format_item_for_display, burn_inventory_items
+from .achievements import check_achievements
+from .dungeon import Room, Floor, Tower, is_wall_at_coordinate
+from .vendor import (Vendor, set_vendor_greeting, set_shop_msg, process_vendor_action,
                     handle_starting_shop, handle_vendor_shop, generate_magic_shop_inventory,
                     process_sell_quantity, reveal_adjacent_walls,
                     MAGIC_SHOP_NAMES, MAGIC_SHOP_MESSAGES, vendor_names)
-from save_system import SaveSystem
+from .save_system import SaveSystem
 
 
 # Lazy imports to avoid circular dependencies with room_actions and combat.
 # These functions are defined in those modules but called from here.
 
 def use_zotle_teleporter(character, my_tower):
-    from room_actions import use_zotle_teleporter as _f; return _f(character, my_tower)
+    from .room_actions import use_zotle_teleporter as _f; return _f(character, my_tower)
 
 def process_altar_action(pc, tw, cmd):
-    from room_actions import process_altar_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_altar_action as _f; return _f(pc, tw, cmd)
 def process_pool_action(pc, tw, cmd):
-    from room_actions import process_pool_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_pool_action as _f; return _f(pc, tw, cmd)
 def process_library_action(pc, tw, cmd):
-    from room_actions import process_library_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_library_action as _f; return _f(pc, tw, cmd)
 def process_dungeon_action(pc, tw, cmd):
-    from room_actions import process_dungeon_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_dungeon_action as _f; return _f(pc, tw, cmd)
 def process_tomb_action(pc, tw, cmd):
-    from room_actions import process_tomb_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_tomb_action as _f; return _f(pc, tw, cmd)
 def process_garden_action(pc, tw, cmd):
-    from room_actions import process_garden_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_garden_action as _f; return _f(pc, tw, cmd)
 def process_oracle_action(pc, tw, cmd):
-    from room_actions import process_oracle_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_oracle_action as _f; return _f(pc, tw, cmd)
 def process_blacksmith_action(pc, tw, cmd):
-    from room_actions import process_blacksmith_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_blacksmith_action as _f; return _f(pc, tw, cmd)
 def process_shrine_action(pc, tw, cmd):
-    from room_actions import process_shrine_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_shrine_action as _f; return _f(pc, tw, cmd)
 def process_alchemist_action(pc, tw, cmd):
-    from room_actions import process_alchemist_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_alchemist_action as _f; return _f(pc, tw, cmd)
 def process_war_room_action(pc, tw, cmd):
-    from room_actions import process_war_room_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_war_room_action as _f; return _f(pc, tw, cmd)
 def process_taxidermist_action(pc, tw, cmd):
-    from room_actions import process_taxidermist_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_taxidermist_action as _f; return _f(pc, tw, cmd)
 def process_shard_vault_action(pc, tw, cmd):
-    from room_actions import process_shard_vault_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_shard_vault_action as _f; return _f(pc, tw, cmd)
 def process_save_load_action(pc, tw, cmd):
-    from room_actions import process_save_load_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_save_load_action as _f; return _f(pc, tw, cmd)
 def process_lantern_quick_use(pc, tw):
-    from room_actions import process_lantern_quick_use as _f; return _f(pc, tw)
+    from .room_actions import process_lantern_quick_use as _f; return _f(pc, tw)
 def process_towel_action(pc, tw, cmd):
-    from room_actions import process_towel_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_towel_action as _f; return _f(pc, tw, cmd)
 def process_puzzle_action(pc, tw, cmd):
-    from room_actions import process_puzzle_action as _f; return _f(pc, tw, cmd)
+    from .room_actions import process_puzzle_action as _f; return _f(pc, tw, cmd)
 def process_combat_action(pc, tw, cmd):
-    from combat import process_combat_action as _f; return _f(pc, tw, cmd)
+    from .combat import process_combat_action as _f; return _f(pc, tw, cmd)
 def process_spell_memorization_action(pc, tw, cmd):
-    from combat import process_spell_memorization_action as _f; return _f(pc, tw, cmd)
+    from .combat import process_spell_memorization_action as _f; return _f(pc, tw, cmd)
 def process_spell_casting_action(pc, tw, cmd):
-    from combat import process_spell_casting_action as _f; return _f(pc, tw, cmd)
+    from .combat import process_spell_casting_action as _f; return _f(pc, tw, cmd)
 def process_journal_action(pc, tw, cmd):
-    from combat import process_journal_action as _f; return _f(pc, tw, cmd)
+    from .combat import process_journal_action as _f; return _f(pc, tw, cmd)
 
 
 # --------------------------------------------------------------------------------
@@ -2153,7 +2153,7 @@ def _trigger_room_interaction(player_character, my_tower):
                 is_magic = room.properties.get('is_magic_shop', False)
                 is_bug = room.properties.get('is_bug_merchant', False)
                 if is_bug:
-                    from vendor import BUG_MERCHANT_NAMES
+                    from .vendor import BUG_MERCHANT_NAMES
                     v_name = random.choice(BUG_MERCHANT_NAMES)
                     new_vendor = Vendor(name=v_name, gold=random.randint(100, 300), player_character=player_character, bug_merchant=True)
                 elif is_magic:
@@ -2168,7 +2168,7 @@ def _trigger_room_interaction(player_character, my_tower):
             is_magic = room.properties.get('is_magic_shop', False)
             is_bug = room.properties.get('is_bug_merchant', False)
             if is_bug:
-                from vendor import BUG_MERCHANT_GREETINGS
+                from .vendor import BUG_MERCHANT_GREETINGS
                 greeting = BUG_MERCHANT_GREETINGS.get(gs.active_vendor.name, f"A bug merchant chitters at you. 'Need gear, tiny one?'")
                 set_vendor_greeting(greeting)
                 add_log(f"{COLOR_GREEN}{greeting}{COLOR_RESET}")

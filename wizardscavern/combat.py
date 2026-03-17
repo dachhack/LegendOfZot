@@ -12,8 +12,8 @@ Usage:
 import random
 import math
 
-import game_state as gs
-from game_state import (
+from . import game_state as gs
+from .game_state import (
     add_log,
     COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
     COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY,
@@ -21,16 +21,16 @@ from game_state import (
     normal_int_range, get_article,
 )
 
-from items import (Trophy, Treasure, Rune, Shard, Towel, Spell, Potion,
+from .items import (Trophy, Treasure, Rune, Shard, Towel, Spell, Potion,
                    CORROSIVE_MONSTERS, get_base_monster_name, apply_corrosion_effect,
                    apply_rust_effect, degrade_equipment, is_item_identified, identify_item,
                    get_item_display_name, process_potion_effects_in_combat,
                    process_potion_effects_on_monster_defeat, process_regeneration_effect,
                    track_equipment_use, drop_monster_items, drop_monster_meat)
-from achievements import check_achievements
+from .achievements import check_achievements
 
-from game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
-from dungeon import Room
+from .game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES, BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+from .dungeon import Room
 
 
 # ---------------------------------------------------------------------------
@@ -39,7 +39,7 @@ from dungeon import Room
 # ---------------------------------------------------------------------------
 def _main():
     """Return the game_systems module (lazy import)."""
-    import game_systems as main
+    from . import game_systems as main
     return main
 
 
@@ -562,7 +562,7 @@ def process_combat_action(player_character, my_tower, cmd):
             # CHECK FOR TOMB GUARDIAN REWARD
             # If we just defeated a tomb guardian, award the special reward
             if gs.active_monster and gs.active_monster.properties.get('is_tomb_guardian'):
-                from room_actions import award_tomb_guardian_reward
+                from .room_actions import award_tomb_guardian_reward
                 award_tomb_guardian_reward(player_character)
 
             # CHECK FOR PLATINO DROP
@@ -1192,7 +1192,7 @@ def get_trophy_drop(monster_name):
 
 def _drop_bug_gear(player_character):
     """25% chance to drop a random bug weapon or armor after killing a bug monster."""
-    from items import Weapon, Armor
+    from .items import Weapon, Armor
     if random.random() > 0.25:
         return
     # 50/50 weapon or armor

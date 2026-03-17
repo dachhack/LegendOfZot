@@ -5,8 +5,8 @@ Contains all item subclasses, identification, durability, and item management fu
 
 import random
 import math
-import game_state as gs
-from game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
+from . import game_state as gs
+from .game_state import (add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET, COLOR_PURPLE,
                         COLOR_BLUE, COLOR_CYAN, COLOR_YELLOW, COLOR_GREY, BOLD, UNDERLINE,
                         normal_int_range, get_article)
 
@@ -114,7 +114,7 @@ def initialize_identification_system():
     Shuffles cryptic names and creates mappings.
     Called at game start.
     """
-    from item_templates import SCROLL_TEMPLATES, WEAPON_TEMPLATES, ARMOR_TEMPLATES
+    from .item_templates import SCROLL_TEMPLATES, WEAPON_TEMPLATES, ARMOR_TEMPLATES
 
     # Reset identification state
     gs.identified_items = set()
@@ -1168,7 +1168,7 @@ class Potion(Item):
             return True  # Consumed
 
         elif self.potion_type == 'growth_mushroom':
-            import game_state as gs
+            from . import game_state as gs
             add_log("")
             add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
             add_log(f"{COLOR_GREEN}{character.name} eats the {self.name}!{COLOR_RESET}")
@@ -1718,9 +1718,9 @@ class Scroll(Item):
 
         Replace the existing Scroll.use() method with this function.
         """
-        from dungeon import is_wall_at_coordinate
-        from vendor import reveal_adjacent_walls
-        from game_systems import _trigger_room_interaction
+        from .dungeon import is_wall_at_coordinate
+        from .vendor import reveal_adjacent_walls
+        from .game_systems import _trigger_room_interaction
 
         # Auto-identify scroll on use
         identify_item(self, silent=False)
@@ -1978,7 +1978,7 @@ class Scroll(Item):
             return True
 
 def process_upgrade_scroll_action(player_character, my_tower, cmd):
-    from game_systems import handle_inventory_menu
+    from .game_systems import handle_inventory_menu
 
     if cmd.lower() == 'c':
         add_log("Upgrade cancelled.")
@@ -2126,7 +2126,7 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
 
 def process_identify_scroll_action(player_character, my_tower, cmd):
     """Handle item selection for Scroll of Identify"""
-    from game_systems import handle_inventory_menu
+    from .game_systems import handle_inventory_menu
 
     if cmd.lower() == 'c':
         add_log("Identification cancelled.")
@@ -2288,7 +2288,7 @@ def restock_vendor_at(tower, character, vendor_x, vendor_y):
     Restock a specific vendor with new random inventory.
     This regenerates the vendor's stock as if it's a new vendor.
     """
-    from achievements import check_achievements
+    from .achievements import check_achievements
 
     floor_level = character.z
 
@@ -2319,8 +2319,8 @@ def generate_vendor_inventory(floor_level, room):
     Generate a new random vendor inventory for the given floor level.
     Uses enhanced weapon/armor generation for better variety.
     """
-    from game_systems import create_random_enhanced_weapon, create_random_enhanced_armor
-    from item_templates import ALL_ITEM_TEMPLATES
+    from .game_systems import create_random_enhanced_weapon, create_random_enhanced_armor
+    from .item_templates import ALL_ITEM_TEMPLATES
 
     inventory = []
 
@@ -2777,8 +2777,8 @@ def drop_monster_items(monster, player_character):
     Chance to drop equipment/items from slain monsters.
     Low base probability, scales with monster level and floor.
     """
-    from game_systems import create_random_enhanced_weapon, create_random_enhanced_armor, get_random_potion
-    from item_templates import SCROLL_TEMPLATES
+    from .game_systems import create_random_enhanced_weapon, create_random_enhanced_armor, get_random_potion
+    from .item_templates import SCROLL_TEMPLATES
 
     monster_lvl = getattr(monster, 'level', 1)
     floor_lvl = player_character.z
@@ -2939,7 +2939,7 @@ class Treasure(Item):
 
     def collect(self, character):
         """Called when treasure is picked up from a chest"""
-        from achievements import check_achievements
+        from .achievements import check_achievements
 
         if self.treasure_type == 'gold':
             character.gold += self.gold_value

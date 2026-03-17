@@ -8,8 +8,8 @@ Usage:
     from achievements import ACHIEVEMENTS, check_achievements
 """
 
-import game_state as gs
-from game_state import COLOR_GREEN, COLOR_RESET, COLOR_YELLOW, add_log
+from . import game_state as gs
+from .game_state import COLOR_GREEN, COLOR_RESET, COLOR_YELLOW, add_log
 
 
 # --------------------------------------------------------------------------------
