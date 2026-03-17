@@ -3637,12 +3637,12 @@ class WizardsCavernApp(toga.App):
                     </div>
                     
                     <div style="padding-top: 10px; border-top: 1px solid #555;">
-                        <div style="color: #FFD700; font-size: 11px; font-weight: bold; margin-bottom: 4px;"> Chest Stats</div>
+                        <div style="color: #CCC; font-size: 11px; font-weight: bold; margin-bottom: 4px;"> Chest Stats</div>
                         <div style="color: #DDD; font-size: 10px; margin: 3px 0;">Chests Opened: {gs.game_stats.get('chests_opened', 0)}</div>
                     </div>
                     
                     <div style="padding: 6px; margin-top: 10px; border-radius: 3px;">
-                        <div style="color: #FFD700; font-size: 10px; font-weight: bold;"> Ready to open?</div>
+                        <div style="color: #CCC; font-size: 10px; font-weight: bold;"> Ready to open?</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Press 'o' to discover what's inside...</div>
                     </div>
                 </div>
@@ -3704,7 +3704,7 @@ class WizardsCavernApp(toga.App):
             else:
                 for i, item in enumerate(sacrificeable):
                     item_str = format_item_for_display(item, gs.player_character, show_price=False)
-                    cursed_tag = " <span style='color:#F44336;'>[CURSED]</span>" if getattr(item, 'is_cursed', False) else ""
+                    cursed_tag = " <span style='color:#CCC;'>[CURSED]</span>" if getattr(item, 'is_cursed', False) else ""
                     inv_html += f"<div style='margin:2px 0; font-size:10px;'><b>{i+1}.</b> {item_str}{cursed_tag}</div>"
 
             devotion_hint = ""
@@ -3713,7 +3713,7 @@ class WizardsCavernApp(toga.App):
                 hp_req = gs.rune_progress_reqs.get('player_health_obtained', 50)
                 if gs.player_character.gold >= gold_req and gs.player_character.health >= hp_req:
                     devotion_hint = (
-                        "<div style='color:#FFD700; font-size:9px; margin-top:5px; border-top:1px solid #555; padding-top:4px;'>"
+                        "<div style='color:#CCC; font-size:9px; margin-top:5px; border-top:1px solid #555; padding-top:4px;'>"
                         "[9] Offer " + str(gold_req) + " gold + " + str(hp_req) + " HP to all gods - Rune of Devotion"
                         "</div>"
                     )
@@ -3726,18 +3726,18 @@ class WizardsCavernApp(toga.App):
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{altar_sprite}</div>
                         <div>
-                            <div style="font-size: 14px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
+                            <div style="font-size: 14px; font-weight: bold; color: #CCC;">
                                 {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
                             </div>
                             <div style="font-size: 10px; color: #AAA;">{hunch_god.get('title','')}</div>
                         </div>
                     </div>
                     {player_stats_html}
-                    <div style="margin-bottom: 5px; color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 10px;">
+                    <div style="margin-bottom: 5px; color: #DDD; font-style: italic; font-size: 10px;">
                         A spirit voice whispers: "{whisper}"
                     </div>
                     <div style="color: #AAA; font-size: 9px; margin-bottom: 5px;">
-                        INT {gs.player_character.intelligence} intuition | Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
+                        INT {gs.player_character.intelligence} intuition | Hungers for: <b style="color:#CCC;">{hunch_god.get('item_label','?')}</b>
                         | <span style="color:#888;">Right offering = reward | Wrong = displeasure</span>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
@@ -3816,7 +3816,7 @@ class WizardsCavernApp(toga.App):
             # Show active status effects if any (important for pools since they can cause effects)
             if gs.player_character.status_effects:
                 pool_html += '<div style="margin-top: 10px; padding-top: 10px; border-top: 1px solid #555;">'
-                pool_html += '<div style="color: #FFD700; font-size: 11px; font-weight: bold; margin-bottom: 3px;"> Active Effects</div>'
+                pool_html += '<div style="color: #CCC; font-size: 11px; font-weight: bold; margin-bottom: 3px;"> Active Effects</div>'
                 for effect_name, effect in gs.player_character.status_effects.items():
                     pool_html += f'<div style="color: #DDD; font-size: 10px; margin: 2px 0;"> {effect_name} ({effect.duration} turns)</div>'
                 pool_html += '</div>'
@@ -3864,7 +3864,7 @@ class WizardsCavernApp(toga.App):
             if is_vault_warp:
                 vault_warning = """
                     <div style="padding: 6px; margin-top: 8px; border-radius: 3px; border-left: 3px solid #555;">
-                        <div style="color: #FFA500; font-size: 10px; font-weight: bold;">Warning!</div>
+                        <div style="color: #CCC; font-size: 10px; font-weight: bold;">Warning!</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px;">This portal pulses with vault energy. You may be drawn to a sealed chamber with no escape!</div>
                     </div>
                 """
@@ -3887,9 +3887,9 @@ class WizardsCavernApp(toga.App):
                     </div>
                     {vault_warning}
                     <div style="padding: 6px; margin-top: 10px; border-radius: 3px;">
-                        <div style="color: #E040FB; font-size: 10px; font-weight: bold;">What do you do?</div>
-                        <div style="color: #4CAF50; font-size: 9px; margin-top: 4px;"><b>Y</b> = Try to resist the warp (INT check)</div>
-                        <div style="color: #F44336; font-size: 9px; margin-top: 2px;"><b>N</b> = Enter the portal willingly</div>
+                        <div style="color: #CCC; font-size: 10px; font-weight: bold;">What do you do?</div>
+                        <div style="color: #DDD; font-size: 9px; margin-top: 4px;"><b>Y</b> = Try to resist the warp (INT check)</div>
+                        <div style="color: #DDD; font-size: 9px; margin-top: 2px;"><b>N</b> = Enter the portal willingly</div>
                     </div>
                 </div>
                 """
@@ -4011,7 +4011,7 @@ class WizardsCavernApp(toga.App):
                     <div style="padding-top: 10px; border-top: 1px solid #555;">
                         <div style="color: #DDD; font-size: 11px; font-weight: bold; margin-bottom: 4px;"> Current Depth</div>
                         <div style="color: #DDD; font-size: 10px; margin: 3px 0;">Floor: {gs.player_character.z + 1}</div>
-                        <div style="color: #FFA500; font-size: 9px; margin-top: 4px;"> Danger increases with depth</div>
+                        <div style="color: #DDD; font-size: 9px; margin-top: 4px;"> Danger increases with depth</div>
                     </div>
                     
                     <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #555;">
@@ -4070,7 +4070,7 @@ class WizardsCavernApp(toga.App):
             if has_searched:
                 lib_status = '<div style="color: #888; font-size: 11px; margin-top: 4px;">You have already rummaged through this library.</div>'
             else:
-                lib_status = '<div style="color: #DAA520; font-size: 11px; margin-top: 4px;">Hidden knowledge awaits discovery...</div>'
+                lib_status = '<div style="color: #DDD; font-size: 11px; margin-top: 4px;">Hidden knowledge awaits discovery...</div>'
 
             library_html = f"""
                 <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
@@ -4120,9 +4120,9 @@ class WizardsCavernApp(toga.App):
             
             # Build action prompt based on key status
             if has_key:
-                action_html = '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #4CAF50; font-size: 10px; font-weight: bold;">Unlock the dungeon?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press u to use your key...</div></div>'
+                action_html = '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #CCC; font-size: 10px; font-weight: bold;">Unlock the dungeon?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press u to use your key...</div></div>'
             else:
-                action_html = '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #FF6B6B; font-size: 10px; font-weight: bold;">Find the key!</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Defeat monsters on this floor to find it...</div></div>'
+                action_html = '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #CCC; font-size: 10px; font-weight: bold;">Find the key!</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Defeat monsters on this floor to find it...</div></div>'
 
             # Check if master dungeon variant
             room_d = floor.grid[gs.player_character.y][gs.player_character.x]
@@ -4181,7 +4181,7 @@ class WizardsCavernApp(toga.App):
                     <div style="color: #DDD; font-size: 11px; margin-bottom: 8px;">
                         The iron door stands open. {'The chamber has been emptied.' if already_looted else 'Treasures glint in the darkness within.'}
                     </div>
-                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(136,136,136,0.2); border-left: 3px solid #888;"><div style="color: #888; font-size: 10px;">Already Looted</div></div>' if already_looted else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #4CAF50; background: rgba(76,175,80,0.1);"><div style="color: #4CAF50; font-size: 10px; font-weight: bold;">Claim your reward?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press \'l\' to loot the dungeon...</div></div>')}
+                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(136,136,136,0.2); border-left: 3px solid #888;"><div style="color: #888; font-size: 10px;">Already Looted</div></div>' if already_looted else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #888; background: rgba(136,136,136,0.1);"><div style="color: #CCC; font-size: 10px; font-weight: bold;">Claim your reward?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press \'l\' to loot the dungeon...</div></div>')}
                 </div>
             """
             
@@ -4227,7 +4227,7 @@ class WizardsCavernApp(toga.App):
             if already_looted:
                 tomb_status = '<div style="color: #888; font-size: 11px; margin-top: 4px;">This tomb has already been raided.</div>'
             else:
-                tomb_status = '<div style="color: #C8A96E; font-size: 11px; margin-top: 4px;">You could <b>raid</b> it for treasure... or <b>pay respects</b> to the dead.</div>'
+                tomb_status = '<div style="color: #DDD; font-size: 11px; margin-top: 4px;">You could <b>raid</b> it for treasure... or <b>pay respects</b> to the dead.</div>'
 
             html_code = f"""
                 <div style="font-family: monospace; font-size: 11px;">
@@ -4278,7 +4278,7 @@ class WizardsCavernApp(toga.App):
                             {'The garden lies barren, its magical plants already harvested.' if already_harvested else 'A lush magical garden blooms with glowing flowers, shimmering herbs, and crystalline plants. The air hums with arcane energy.'}
                         </div>
                     </div>
-                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #888; font-size: 10px;">Already Harvested</div></div>' if already_harvested else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #66BB6A; font-size: 10px; font-weight: bold;">Harvest ingredients?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press \'h\' to gather potion components...</div></div>')}
+                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #888; font-size: 10px;">Already Harvested</div></div>' if already_harvested else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #CCC; font-size: 10px; font-weight: bold;">Harvest ingredients?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press \'h\' to gather potion components...</div></div>')}
                 </div>
             """
             
@@ -4326,7 +4326,7 @@ class WizardsCavernApp(toga.App):
                                 <div style="color: #DDD; font-size: 11px;">
                                     Exotic flora blooms here that cannot be found in the mortal realm.
                                     <br><br>
-                                    <span style="color: #FFA500;">This garden will vanish in <strong>{turns_left}</strong> turns!</span>
+                                    <span style="color: #DDD;">This garden will vanish in <strong>{turns_left}</strong> turns!</span>
                                 </div>
                             </div>
 
@@ -4512,7 +4512,7 @@ class WizardsCavernApp(toga.App):
 
             potion_list_html = ""
             if combining:
-                potion_list_html = "<div style='color:#FF9800; font-size:10px; margin-top:6px;'>Choose two potions -- enter numbers like: 1 2</div>"
+                potion_list_html = "<div style='color:#DDD; font-size:10px; margin-top:6px;'>Choose two potions -- enter numbers like: 1 2</div>"
                 for i, p in enumerate(potions, 1):
                     potion_list_html += f"<div style='color:#DDD; font-size:10px;'>{i}. {p.name}</div>"
 
@@ -4565,7 +4565,7 @@ class WizardsCavernApp(toga.App):
 
             raid_status = ""
             if raid_active:
-                raid_status = f"<div style='color:#F44336; font-size:10px; font-weight:bold; margin-bottom:6px;'>[RAID MODE ACTIVE -- {raid_turns} turns remaining]</div>"
+                raid_status = f"<div style='color:#CCC; font-size:10px; font-weight:bold; margin-bottom:6px;'>[RAID MODE ACTIVE -- {raid_turns} turns remaining]</div>"
 
             war_sprite = generate_room_sprite_html('K')
 
@@ -4626,13 +4626,13 @@ class WizardsCavernApp(toga.App):
                     status_color = '#888'
                     status_txt = '[COLLECTED]'
                 elif complete:
-                    status_color = '#4CAF50'
+                    status_color = '#CCC'
                     status_txt = '[READY]'
                 else:
-                    status_color = '#FF9800'
+                    status_color = '#AAA'
                     status_txt = f'{have_count}/{total}'
                 pieces_detail = ', '.join(
-                    f"<span style='color:{'#4CAF50' if pieces_have.get(p,0)>=1 else '#F44336'}'>{p}</span>"
+                    f"<span style='color:{'#CCC' if pieces_have.get(p,0)>=1 else '#888'}'>{p}</span>"
                     for p in cdata['pieces']
                 )
                 rows_html += f"""
@@ -4645,7 +4645,7 @@ class WizardsCavernApp(toga.App):
             # Completable list with numbers
             complete_html = ""
             for idx, (cname, cdata) in enumerate(completable, 1):
-                complete_html += f"<div style='color:#4CAF50; font-size:10px; margin-bottom:2px;'>[{idx}] Turn in {cname} -> {cdata['reward_name']}</div>"
+                complete_html += f"<div style='color:#CCC; font-size:10px; margin-bottom:2px;'>[{idx}] Turn in {cname} -> {cdata['reward_name']}</div>"
             if not complete_html:
                 complete_html = "<div style='color:#888; font-size:10px;'>No collections ready to turn in.</div>"
 
@@ -4723,16 +4723,16 @@ class WizardsCavernApp(toga.App):
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 6px;">
                         <div style="padding: 6px; border-radius: 3px; background: rgba(255,255,255,0.05);">
-                            <span style="color: #FFD700;">1.</span> <span style="color: #CCC;">Wear over face (blind yourself - protection from gaze)</span>
+                            <span style="color: #CCC;">1.</span> <span style="color: #CCC;">Wear over face (blind yourself - protection from gaze)</span>
                         </div>
                         <div style="padding: 6px; border-radius: 3px; background: rgba(255,255,255,0.05);">
-                            <span style="color: #FFD700;">2.</span> <span style="color: #CCC;">Wipe face (cure face-based blindness)</span>
+                            <span style="color: #CCC;">2.</span> <span style="color: #CCC;">Wipe face (cure face-based blindness)</span>
                         </div>
                         <div style="padding: 6px; border-radius: 3px; background: rgba(255,255,255,0.05);">
-                            <span style="color: #FFD700;">3.</span> <span style="color: #CCC;">Wipe hands (cure slippery hands)</span>
+                            <span style="color: #CCC;">3.</span> <span style="color: #CCC;">Wipe hands (cure slippery hands)</span>
                         </div>
                         <div style="padding: 6px; border-radius: 3px; background: rgba(255,255,255,0.05);">
-                            <span style="color: #FFD700;">4.</span> <span style="color: #888;">Cancel</span>
+                            <span style="color: #CCC;">4.</span> <span style="color: #888;">Cancel</span>
                         </div>
                     </div>
                 </div>
@@ -4900,7 +4900,7 @@ class WizardsCavernApp(toga.App):
             spell_info = ""
             if found_spell:
                 if gs.player_character.intelligence >= 20:
-                    spell_info = f'<div style="color: #DAA520; font-size: 11px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555;"><b>{found_spell.name}</b> <span style="color: #AAA;">({found_spell.mana_cost} MP)</span></div>'
+                    spell_info = f'<div style="color: #CCC; font-size: 11px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555;"><b>{found_spell.name}</b> <span style="color: #AAA;">({found_spell.mana_cost} MP)</span></div>'
                 else:
                     spell_info = '<div style="color: #888; font-size: 9px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555; font-style: italic;">The arcane symbols are difficult to decipher...</div>'
 
@@ -4915,7 +4915,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                     {spell_info}
                     <div style="padding-top: 6px; margin-top: 6px; border-top: 1px solid #555;">
-                        <div style="color: #DAA520; font-size: 11px; font-weight: bold;">Attempt to read this grimoire?</div>
+                        <div style="color: #CCC; font-size: 11px; font-weight: bold;">Attempt to read this grimoire?</div>
                         <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Reading may succeed or fail based on your intelligence...</div>
                     </div>
                 </div>
