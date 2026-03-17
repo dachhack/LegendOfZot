@@ -3951,7 +3951,7 @@ class WizardsCavernApp(toga.App):
                     <div style="color: #DDD; font-size: 11px; margin-bottom: 8px;">
                         The iron door stands open. {'The chamber has been emptied.' if already_looted else 'Treasures glint in the darkness within.'}
                     </div>
-                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(136,136,136,0.2); border-left: 3px solid #888;"><div style="color: #888; font-size: 10px;">Already Looted</div></div>' if already_looted else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #888; background: rgba(136,136,136,0.1);"><div style="color: #CCC; font-size: 10px; font-weight: bold;">Claim your reward?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press \'l\' to loot the dungeon...</div></div>')}
+                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; background: rgba(136,136,136,0.2); border-left: 3px solid #888;"><div style="color: #888; font-size: 10px;">Already Looted</div></div>' if already_looted else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #888; background: rgba(136,136,136,0.1);"><div style="color: #CCC; font-size: 10px; font-weight: bold;">Claim your reward?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press &apos;l&apos; to loot the dungeon...</div></div>')}
                 </div>
             """
             
@@ -4048,7 +4048,7 @@ class WizardsCavernApp(toga.App):
                             {'The garden lies barren, its magical plants already harvested.' if already_harvested else 'A lush magical garden blooms with glowing flowers, shimmering herbs, and crystalline plants. The air hums with arcane energy.'}
                         </div>
                     </div>
-                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #888; font-size: 10px;">Already Harvested</div></div>' if already_harvested else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #CCC; font-size: 10px; font-weight: bold;">Harvest ingredients?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press \'h\' to gather potion components...</div></div>')}
+                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #888; font-size: 10px;">Already Harvested</div></div>' if already_harvested else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #CCC; font-size: 10px; font-weight: bold;">Harvest ingredients?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press &apos;h&apos; to gather potion components...</div></div>')}
                 </div>
             """
             
@@ -4250,13 +4250,7 @@ class WizardsCavernApp(toga.App):
                             </div>
                         </div>
                     </div>
-                    {'<div style="color:#888; font-size:10px;">The shrine lies silent. The spirit has passed on.</div>' if used else f"""
-                    <div style="font-size: 10px; color: #DDD;">
-                        <div style="margin-bottom: 4px;">[p] Pray -- 33% blessing / 33% map hint / 33% silence</div>
-                        <div>[o] Leave offering -- 50g for guaranteed potion or scroll</div>
-                    </div>
-                    <div style="color:#888; font-size:9px; margin-top:8px;">Gold: {gs.player_character.gold}g</div>
-                    """}
+                    {'<div style="color:#888; font-size:10px;">The shrine lies silent. The spirit has passed on.</div>' if used else '<div style="font-size: 10px; color: #DDD;"><div style="margin-bottom: 4px;">[p] Pray -- 33% blessing / 33% map hint / 33% silence</div><div>[o] Leave offering -- 50g for guaranteed potion or scroll</div></div><div style="color:#888; font-size:9px; margin-top:8px;">Gold: ' + str(gs.player_character.gold) + 'g</div>'}
                 </div>
             """
             html_code = f"""
