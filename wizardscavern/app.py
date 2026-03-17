@@ -1007,11 +1007,7 @@ class WizardsCavernApp(toga.App):
             row1 = [self.create_spacer() for _ in range(9)]
 
         row2 = [self.create_spacer() for _ in range(9)]
-
-        # Row 3: text size toggle on the right
-        text_label = "Aa-" if gs.large_text_mode else "Aa+"
-        row3 = [self.create_spacer() for _ in range(8)]
-        row3.append(self.create_button('t', text_label))
+        row3 = [self.create_spacer() for _ in range(9)]
 
         for btn in row1:
             self.button_row_1.add(btn)
@@ -2070,11 +2066,10 @@ class WizardsCavernApp(toga.App):
                             </div>
                         </div>
                     """
-            text_mode_hint = "Aa- = Normal Text" if gs.large_text_mode else "Aa+ = Large Text"
             if has_saves:
-                current_commands_text = f"Send = New Game | 1-3 = Load | {text_mode_hint}"
+                current_commands_text = "Send = New Game | 1-3 = Load"
             else:
-                current_commands_text = f"Send to begin | {text_mode_hint}"
+                current_commands_text = "Send to begin"
 
         elif gs.prompt_cntl == "game_loaded_summary":
             # LOADED GAME SUMMARY SCREEN
@@ -2713,7 +2708,8 @@ class WizardsCavernApp(toga.App):
                 if can_cast:
                     inv_commands += " | m = spells"
 
-                inv_commands += " | j = jrnl | q = quit | x = exit"
+                text_label = "Aa-" if gs.large_text_mode else "Aa+"
+                inv_commands += f" | j = jrnl | t = {text_label} | q = quit | x = exit"
 
                 html_code = f"""
 
