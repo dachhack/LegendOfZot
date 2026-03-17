@@ -18,7 +18,7 @@ from .game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE, MONSTER_EV
                        TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES)
 from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
-                   Trophy, Rune, Shard, identify_item, is_item_identified,
+                   LembasWafer, Trophy, Rune, Shard, identify_item, is_item_identified,
                    get_item_display_name, register_item_discovery, _create_item_copy,
                    get_monster_meat_info, drop_monster_items, drop_monster_meat,
                    cook_meat_in_inventory, player_has_item_type,
@@ -33,7 +33,7 @@ from .item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES
                             SPELL_TEMPLATES, ALL_ITEM_TEMPLATES, INGREDIENT_TEMPLATES,
                             UNIQUE_WEAPON_TEMPLATES, UNIQUE_ARMOR_TEMPLATES,
                             WEAPON_TIER_PREFIXES, ARMOR_TIER_PREFIXES,
-                            POTION_RECIPES, GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
+                            POTION_RECIPES, LEMBAS_RECIPES, GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
                             HUNGER_MAX, HUNGER_DECAY_PER_MOVE,
                             VAULT_DEFENDER_TEMPLATES, ENHANCED_MINOR_TREASURES,
                             UNIQUE_TREASURE_TEMPLATES,
@@ -1403,8 +1403,8 @@ def process_ephemeral_gardens(character, my_tower):
             if random.random() < 0.15:
                 add_log(f"{COLOR_CYAN}You sense fey magic nearby... ({garden_data['turns_remaining']} turns remaining){COLOR_RESET}")
     
-    # Try to spawn a new ephemeral garden (only on floors 5+, and only if none exists on this floor)
-    if current_floor_num >= 5 and current_floor_num not in gs.ephemeral_gardens:
+    # Try to spawn a new ephemeral garden (only on floors 5+, not already present, not already harvested)
+    if current_floor_num >= 5 and current_floor_num not in gs.ephemeral_gardens and current_floor_num not in gs.harvested_fey_floors:
         # In PLAYTEST mode, always spawn; otherwise 3% chance per move
         if gs.PLAYTEST or random.random() < 0.03:
             _spawn_fey_garden(character, my_tower)
@@ -1665,13 +1665,19 @@ def get_available_recipes(player_character):
     """Return list of recipes player can craft based on inventory"""
     available = []
     inventory_items = {}
-    
+
     # Count ingredients in inventory
     for item in player_character.inventory.items:
         if isinstance(item, Ingredient):
             inventory_items[item.name] = inventory_items.get(item.name, 0) + 1
-    
-    # Check each recipe
+
+    # Count rations in inventory
+    ration_count = 0
+    for item in player_character.inventory.items:
+        if isinstance(item, Food) and item.name == "Rations":
+            ration_count += getattr(item, 'count', 1)
+
+    # Check each potion recipe
     for recipe_name, recipe_data in POTION_RECIPES.items():
         can_craft = True
         missing = []
@@ -1679,21 +1685,49 @@ def get_available_recipes(player_character):
             if inventory_items.get(ing_name, 0) < ing_count:
                 can_craft = False
                 missing.append((ing_name, ing_count - inventory_items.get(ing_name, 0)))
-        
+
         if can_craft:
             available.append((recipe_name, recipe_data, True, []))
         else:
             # Include recipes player is close to crafting
             if len(missing) <= 2:  # Show if only missing 1-2 ingredient types
                 available.append((recipe_name, recipe_data, False, missing))
-    
+
+    # Check lembas recipes (elf only)
+    if getattr(player_character, 'race', '').lower() == 'elf':
+        for recipe_name, recipe_data in LEMBAS_RECIPES.items():
+            can_craft = True
+            missing = []
+            for ing_name, ing_count in recipe_data['ingredients']:
+                if inventory_items.get(ing_name, 0) < ing_count:
+                    can_craft = False
+                    missing.append((ing_name, ing_count - inventory_items.get(ing_name, 0)))
+            # Check ration cost
+            ration_needed = recipe_data.get('ration_cost', 0)
+            if ration_count < ration_needed:
+                can_craft = False
+                missing.append(('Rations', ration_needed - ration_count))
+
+            if can_craft:
+                available.append((recipe_name, recipe_data, True, []))
+            else:
+                if len(missing) <= 2:
+                    available.append((recipe_name, recipe_data, False, missing))
+
     return available
 
 def craft_potion(player_character, recipe_name):
-    """Craft a potion, removing ingredients and adding result"""
-    recipe = POTION_RECIPES[recipe_name]
-    
-    # Remove ingredients from inventory
+    """Craft a potion or lembas, removing ingredients and adding result"""
+    # Check both recipe dicts
+    if recipe_name in POTION_RECIPES:
+        recipe = POTION_RECIPES[recipe_name]
+    elif recipe_name in LEMBAS_RECIPES:
+        recipe = LEMBAS_RECIPES[recipe_name]
+    else:
+        add_log(f"{COLOR_RED}Unknown recipe: {recipe_name}{COLOR_RESET}")
+        return
+
+    # Remove herb/ingredient components from inventory
     for ing_name, ing_count in recipe['ingredients']:
         removed = 0
         for item in list(player_character.inventory.items):
@@ -1702,13 +1736,25 @@ def craft_potion(player_character, recipe_name):
                 removed += 1
                 if removed >= ing_count:
                     break
-    
-    # Add crafted potion
-    new_potion = recipe['result']()
-    player_character.inventory.add_item(new_potion)
-    add_log(f"{COLOR_GREEN}* You crafted: {new_potion.name}! *{COLOR_RESET}")
-    add_log(f"{COLOR_CYAN}{new_potion.description}{COLOR_RESET}")
-    
+
+    # Remove rations if recipe requires them (lembas)
+    ration_cost = recipe.get('ration_cost', 0)
+    if ration_cost > 0:
+        for item in player_character.inventory.items:
+            if isinstance(item, Food) and item.name == "Rations":
+                count = getattr(item, 'count', 1)
+                if count > ration_cost:
+                    item.count -= ration_cost
+                else:
+                    player_character.inventory.items.remove(item)
+                break
+
+    # Add crafted item
+    new_item = recipe['result']()
+    player_character.inventory.add_item(new_item)
+    add_log(f"{COLOR_GREEN}* You crafted: {new_item.name}! *{COLOR_RESET}")
+    add_log(f"{COLOR_CYAN}{new_item.description}{COLOR_RESET}")
+
     # Update stats
     gs.game_stats['potions_crafted'] = gs.game_stats.get('potions_crafted', 0) + 1
     check_achievements(player_character)
@@ -1964,6 +2010,17 @@ def handle_inventory_menu(player_character, my_tower, cmd):
 
             if 0 <= item_number < len(sorted_items):
                 item_to_equip = sorted_items[item_number]
+
+                # Block equipping non-bug items while shrunk
+                if gs.player_is_shrunk:
+                    from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+                    bug_item_names = {t['name'] for t in BUG_WEAPON_TEMPLATES} | {t['name'] for t in BUG_ARMOR_TEMPLATES}
+                    if isinstance(item_to_equip, (Weapon, Armor, Towel)) and item_to_equip.name not in bug_item_names:
+                        add_log(f"{COLOR_YELLOW}You're too tiny to use {item_to_equip.name}! Only bug-sized gear fits right now.{COLOR_RESET}")
+                        return
+                    if isinstance(item_to_equip, Treasure) and item_to_equip.treasure_type == 'passive':
+                        add_log(f"{COLOR_YELLOW}You're too tiny to wear {item_to_equip.name}! Only bug-sized gear fits right now.{COLOR_RESET}")
+                        return
 
                 if isinstance(item_to_equip, Weapon):
                     if player_character.equipped_weapon:

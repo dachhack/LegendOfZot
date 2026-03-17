@@ -5,7 +5,7 @@ Contains the Achievement class, the master ACHIEVEMENTS list,
 and the check_achievements() function.
 
 Usage:
-    from achievements import ACHIEVEMENTS, check_achievements
+    from .achievements import ACHIEVEMENTS, check_achievements
 """
 
 from . import game_state as gs

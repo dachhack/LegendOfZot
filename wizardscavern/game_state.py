@@ -5,12 +5,12 @@ All mutable game state lives here. Other modules import this module
 and access/modify state via `gs.variable_name`.
 
 Usage:
-    import game_state as gs
+    from . import game_state as gs
     gs.prompt_cntl = "combat_mode"
     gs.player_character.health -= 10
 
 For colors and utility functions, import directly:
-    from game_state import add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET
+    from .game_state import add_log, COLOR_RED, COLOR_GREEN, COLOR_RESET
 """
 
 import random
@@ -33,7 +33,7 @@ COLOR_GREY = '\u001b[38;5;245m'
 # SAVE SYSTEM CONFIGURATION
 # ============================================================================
 SAVE_VERSION = "1.0"
-SAVE_DIRECTORY = "saves"
+SAVE_DIRECTORY = "saves"  # Overridden at startup on mobile via app.paths.data
 MAX_SAVE_SLOTS = 3
 
 # ============================================================================
@@ -268,6 +268,7 @@ unlocked_dungeons = {}
 looted_dungeons = {}
 looted_tombs = {}
 harvested_gardens = {}
+harvested_fey_floors = set()  # Floors where a fey garden has been harvested (no respawn)
 
 # ============================================================================
 # QUEST TRACKING - RUNES & SHARDS (Orb of Zot)

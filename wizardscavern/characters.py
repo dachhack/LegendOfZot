@@ -16,7 +16,7 @@ Contains:
     - VAULT_DEFENDER_TEMPLATES data
 
 Usage:
-    from characters import Character, Monster, Inventory, StatusEffect
+    from .characters import Character, Monster, Inventory, StatusEffect
 """
 
 import random
@@ -31,7 +31,7 @@ from .game_state import (
 from .items import (
     Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
     Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
-    Trophy, Rune, Shard
+    Trophy, Rune, Shard, LembasWafer
 )
 
 
@@ -425,6 +425,13 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
             item_str = f"<span style='color:#CC8844;'>{item.name}</span> (rot in {item.rot_timer} moves)"
         item_str += price_str
 
+    elif isinstance(item, LembasWafer):
+        item_str = f"<span style='color:#FFD700;'>{item.name}</span> (Full + 30 turn sustain)"
+        count = getattr(item, 'count', 1)
+        if count > 1:
+            item_str += f" (x{count})"
+        item_str += price_str
+
     elif isinstance(item, Food):
         item_str = f"<span style='color:#88FF88;'>{item.name}</span> (+{item.nutrition} hunger)"
         count = getattr(item, 'count', 1)
@@ -744,6 +751,8 @@ class Character:
         self.base_max_mana_bonus = 0    # For permanent mana bonuses
         # Hunger system
         self.hunger = HUNGER_MAX  # Start full
+        self.hunger_freeze_turns = 0  # Lembas wafer postpones hunger decay
+        self.hunger_regen_tracker = 0  # Tracks moves for HP regen when well-fed
         # Now safe to call max_mana property
         self.mana = self.max_mana # Initialize mana to max_mana
 

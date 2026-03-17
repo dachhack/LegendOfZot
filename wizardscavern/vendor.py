@@ -5,7 +5,7 @@ Contains the Vendor class, vendor name/message data, magic shop logic,
 and all vendor interaction functions (buy, sell, identify, repair).
 
 Usage:
-    from vendor import Vendor, handle_starting_shop, handle_vendor_shop,
+    from .vendor import Vendor, handle_starting_shop, handle_vendor_shop,
                        process_vendor_action, process_sell_quantity,
                        reveal_adjacent_walls
 """
@@ -180,6 +180,10 @@ class Vendor:
                             status_effect_type=spell_template.status_effect_type,
                             status_effect_magnitude=spell_template.status_effect_magnitude
                         ))
+
+            # All vendors stock rations (3-4)
+            num_rations = random.randint(3, 4)
+            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=num_rations))
 
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:
