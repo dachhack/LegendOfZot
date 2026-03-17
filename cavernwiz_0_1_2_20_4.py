@@ -4236,7 +4236,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div style="width: 100%; padding: 8px; border: 1px solid #8B4513; border-radius: 3px;">
+                        <div style="width: 100%; padding: 8px; border: 1px solid #666; border-radius: 3px;">
                             <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
                                 <div style="flex-shrink:0;">{tomb_sprite}</div>
                                 <div style="color: #DDD; font-size: 11px;">An ancient tomb lies before you, its stone lid cracked with age.</div>
@@ -4426,7 +4426,7 @@ class WizardsCavernApp(toga.App):
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{smith_sprite}</div>
                         <div>
-                            <div style="color: #FF8C00; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
+                            <div style="color: #CCC; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
                                 [B] BLACKSMITH
                             </div>
                             <div style="color: #DDD; font-size: 10px; font-style: italic;">
@@ -4472,7 +4472,7 @@ class WizardsCavernApp(toga.App):
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{shrine_sprite}</div>
                         <div>
-                            <div style="color: #87CEEB; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
+                            <div style="color: #CCC; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
                                 SHRINE OF THE FALLEN
                             </div>
                             <div style="color: #DDD; font-size: 10px; font-style: italic;">
@@ -4523,7 +4523,7 @@ class WizardsCavernApp(toga.App):
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{alch_sprite}</div>
                         <div>
-                            <div style="color: #39FF14; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
+                            <div style="color: #CCC; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
                                 [Q] ALCHEMIST'S LAB
                             </div>
                             <div style="color: #DDD; font-size: 10px; font-style: italic;">
@@ -4574,7 +4574,7 @@ class WizardsCavernApp(toga.App):
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                         <div style="flex-shrink:0;">{war_sprite}</div>
                         <div>
-                            <div style="color: #CD5C5C; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
+                            <div style="color: #CCC; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
                                 [K] WAR ROOM
                             </div>
                             <div style="color: #DDD; font-size: 10px; font-style: italic;">
@@ -4659,7 +4659,7 @@ class WizardsCavernApp(toga.App):
                     <div style='display:flex; align-items:center; gap:8px; margin-bottom:8px;'>
                         <div style='flex-shrink:0;'>{tax_sprite}</div>
                         <div>
-                            <div style='color:#D4A017; font-size:13px; font-weight:bold; margin-bottom:4px;'>
+                            <div style='color:#CCC; font-size:13px; font-weight:bold; margin-bottom:4px;'>
                                 [X] TAXIDERMIST
                             </div>
                             <div style='color:#CCC; font-size:9px; font-style:italic;'>
@@ -4714,8 +4714,8 @@ class WizardsCavernApp(toga.App):
                         towel_wetness = " (soaking)"
             
             towel_html = f"""
-                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px; background: rgba(139,69,19,0.1);">
-                    <div style="color: #D2691E; font-weight: bold; font-size: 12px; margin-bottom: 8px;">
+                <div style="border: 2px solid #666; border-radius: 3px; padding: 12px;">
+                    <div style="color: #CCC; font-weight: bold; font-size: 12px; margin-bottom: 8px;">
                         [TOWEL] Towel{towel_wetness}
                     </div>
                     <div style="color: #DDD; font-size: 10px; margin-bottom: 10px;">
@@ -4790,18 +4790,18 @@ class WizardsCavernApp(toga.App):
                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                     <div style="flex-shrink:0;">{zotle_sprite}</div>
                     <div>
-                        <div style="color: #E040FB; font-weight: bold; font-size: 14px; margin-bottom: 4px;">
+                        <div style="color: #CCC; font-weight: bold; font-size: 14px; margin-bottom: 4px;">
                             ZOTLE - ZOT'S WORD PUZZLE
                         </div>
-                        <div style="color: #FFD700; font-size: 11px;">
+                        <div style="color: #DDD; font-size: 11px;">
                             A shimmering phantom of the great wizard Zot appears!
                         </div>
                     </div>
                 </div>
-                <div style="color: #00BCD4; font-size: 10px; margin-bottom: 4px; text-align: center;">
+                <div style="color: #DDD; font-size: 10px; margin-bottom: 4px; text-align: center;">
                     "Guess the 5-letter word!"
                 </div>
-                <div style="color: #E040FB; font-size: 10px; margin-bottom: 8px; text-align: center;">
+                <div style="color: #CCC; font-size: 10px; margin-bottom: 8px; text-align: center;">
                     "Hint: It's a word that describes YOU!"
                 </div>
                 <div style="color: #888; font-size: 9px; margin-bottom: 8px; text-align: center;">
@@ -4812,7 +4812,7 @@ class WizardsCavernApp(toga.App):
             """
             
             puzzle_html = f"""
-                <div style="border: 2px solid #666; padding: 10px; border-radius: 4px; background: #121213;">
+                <div style="border: 2px solid #666; padding: 10px; border-radius: 4px;">
                     {dialog_html}
                     
                     <div style="padding: 8px; background: #0a0a0a; border-radius: 3px; margin-bottom: 8px;">
@@ -4849,15 +4849,15 @@ class WizardsCavernApp(toga.App):
             max_floors = len(gs.my_tower.floors)
             
             teleporter_html = f"""
-                <div style="border: 2px solid #666; padding: 8px; border-radius: 6px; background: #1a1a2e;">
-                    <div style="color: #E040FB; font-weight: bold; font-size: 13px; text-align: center; margin-bottom: 4px;">
+                <div style="border: 2px solid #666; padding: 8px; border-radius: 6px;">
+                    <div style="color: #CCC; font-weight: bold; font-size: 13px; text-align: center; margin-bottom: 4px;">
                         ZOT'S DIMENSIONAL KEY
                     </div>
                     <div style="display: flex; justify-content: center; gap: 12px; color: #FFF; font-size: 11px; margin: 4px 0;">
-                        <span>Now: <span style="color: #4FC3F7;">{gs.player_character.x},{gs.player_character.y},{gs.player_character.z + 1}</span></span>
+                        <span>Now: <span style="color: #CCC;">{gs.player_character.x},{gs.player_character.y},{gs.player_character.z + 1}</span></span>
                     </div>
-                    <div style="color: #FFD700; font-size: 11px; text-align: center; margin-top: 4px;">
-                        Enter: <span style="color: #E040FB;">x,y,z</span> (e.g. 7,7,3)
+                    <div style="color: #DDD; font-size: 11px; text-align: center; margin-top: 4px;">
+                        Enter: <span style="color: #CCC;">x,y,z</span> (e.g. 7,7,3)
                     </div>
                     <div style="color: #FF6B6B; font-size: 9px; text-align: center; margin-top: 2px;">
                         Cannot teleport into walls!
