@@ -1204,10 +1204,10 @@ class WizardsCavernApp(toga.App):
 
         filler_count = max(2, 5 - num_cols)
 
-        # Numpad (right side)
+        # Numpad (right side) - phone-style layout
         numpad_row1 = [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')]
-        numpad_row2 = [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
-        numpad_row3 = [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')]
+        numpad_row2 = [self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
+        numpad_row3 = [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9'), self.create_numpad_button('0')]
 
         # Altar: special devotion rune button 9
         if is_altar:
@@ -1242,8 +1242,8 @@ class WizardsCavernApp(toga.App):
         filler_count = 4
 
         numpad_row1 = [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')]
-        numpad_row2 = [self.create_numpad_button('0'), self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
-        numpad_row3 = [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')]
+        numpad_row2 = [self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')]
+        numpad_row3 = [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9'), self.create_numpad_button('0')]
 
         for btn in cmd_row1 + [self.create_filler() for _ in range(filler_count)] + numpad_row1:
             self.button_row_1.add(btn)
