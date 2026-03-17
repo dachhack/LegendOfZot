@@ -580,7 +580,7 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2)
+            style=Pack(flex=1, margin=2, height=36, font_size=14)
         )
         
         # Note: iOS keyboard will be disabled AFTER window is shown
@@ -590,17 +590,17 @@ class WizardsCavernApp(toga.App):
         self.backspace_button = toga.Button(
             "\u232b",
             on_press=lambda w: self.number_pad_backspace(),
-            style=Pack(margin=2, width=45, font_size=14)
+            style=Pack(margin=2, width=50, height=36, font_size=14)
         )
-        
+
         self.submit_button = toga.Button(
-            "Send",
+            "SEND",
             on_press=self.on_command_submit,
-            style=Pack(margin=2, width=55, font_size=14)
+            style=Pack(margin=2, width=65, height=36, font_size=14, font_weight='bold')
         )
         
         self.input_row = toga.Box(
-            style=Pack(direction=ROW, margin=2),
+            style=Pack(direction=ROW, margin=2, height=40),
             children=[
                 self.input_field,
                 self.backspace_button,
@@ -620,9 +620,9 @@ class WizardsCavernApp(toga.App):
         
         bottom_panel = toga.Box(
             style=Pack(
-                direction=COLUMN, 
+                direction=COLUMN,
                 background_color="#222",
-                margin_bottom=20
+                margin_bottom=34
             ),
             children=[
                 self.commands_label,
@@ -1172,17 +1172,17 @@ class WizardsCavernApp(toga.App):
             backspace_button = toga.Button(
                 '<-',
                 on_press=self.zotle_backspace,
-                style=Pack(flex=1, margin=1, font_size=10, font_weight='bold', width=32, height=34)
+                style=Pack(flex=1, margin=1, font_size=10, font_weight='bold', height=34)
             )
             row3.append(backspace_button)
         else:
             row3.append(self.create_spacer())
         # Create shift button
-        shift_label = "\u21e7" if self.keyboard_uppercase else "\u21e7"  # Could use different symbol for lower
+        shift_label = "\u21e7" if self.keyboard_uppercase else "\u21e7"
         shift_button = toga.Button(
             shift_label,
             on_press=self.toggle_keyboard_case,
-            style=Pack(flex=1, margin=1, font_size=12, font_weight='bold', width=32, height=34)
+            style=Pack(flex=1.5, margin=1, font_size=12, font_weight='bold', height=34)
         )
         row3.append(shift_button)
 
@@ -1199,7 +1199,7 @@ class WizardsCavernApp(toga.App):
         return toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(flex=1, margin=1, font_size=10, width=32, height=34)
+            style=Pack(flex=1, margin=1, font_size=10, height=34)
         )
     
     def fill_row(self, cmd_dict, priority, num_buttons):
@@ -1250,13 +1250,13 @@ class WizardsCavernApp(toga.App):
     
     def create_spacer(self):
         """Create an empty spacer that maintains grid alignment."""
-        return toga.Box(style=Pack(flex=1, margin=1, width=37))
+        return toga.Box(style=Pack(flex=1, margin=1))
     def create_filler(self):
         """Create a collapsible filler spacer (no fixed width)."""
         return toga.Box(style=Pack(flex=1, margin=1))
     def create_half_spacer(self):
-        """Create an empty spacer that maintains grid alignment."""
-        return toga.Box(style=Pack(flex=1, margin=1, width=18))
+        """Create a half-width spacer for row offset alignment."""
+        return toga.Box(style=Pack(width=16, margin=1))
     
     def parse_commands(self, commands_text):
         """
@@ -3513,7 +3513,7 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
                         <div style="border: 1px solid #666; padding: 3px;">
                             <h3 style='margin: 0 0 5px 0; color: #DDD;'>Sacrifice an Item</h3>
-                            <div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>
+                            <div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 400px;'>
                                 {inv_html}
                             </div>
                             {devotion_hint}
