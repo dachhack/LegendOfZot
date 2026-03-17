@@ -1084,27 +1084,27 @@ class WizardsCavernApp(toga.App):
         cmd_dict = {key: label for key, label in commands}
         has_movement = any(k in cmd_dict for k in ['n', 's', 'e', 'w'])
 
-        # === LEFT SIDE: D-PAD (3 columns) ===
+        # === LEFT SIDE: D-PAD (3 columns, fixed-width spacers for compact cross) ===
         if has_movement:
             dpad_row1 = [
-                self.create_spacer(),
-                self.create_button('n', cmd_dict.get('n', 'N')) if 'n' in cmd_dict else self.create_spacer(),
-                self.create_spacer(),
+                self.create_dpad_spacer(),
+                self.create_button('n', cmd_dict.get('n', 'N')) if 'n' in cmd_dict else self.create_dpad_spacer(),
+                self.create_dpad_spacer(),
             ]
             dpad_row2 = [
-                self.create_button('w', cmd_dict.get('w', 'W')) if 'w' in cmd_dict else self.create_spacer(),
-                self.create_spacer(),
-                self.create_button('e', cmd_dict.get('e', 'E')) if 'e' in cmd_dict else self.create_spacer(),
+                self.create_button('w', cmd_dict.get('w', 'W')) if 'w' in cmd_dict else self.create_dpad_spacer(),
+                self.create_dpad_spacer(),
+                self.create_button('e', cmd_dict.get('e', 'E')) if 'e' in cmd_dict else self.create_dpad_spacer(),
             ]
             dpad_row3 = [
-                self.create_spacer(),
-                self.create_button('s', cmd_dict.get('s', 'S')) if 's' in cmd_dict else self.create_spacer(),
-                self.create_spacer(),
+                self.create_dpad_spacer(),
+                self.create_button('s', cmd_dict.get('s', 'S')) if 's' in cmd_dict else self.create_dpad_spacer(),
+                self.create_dpad_spacer(),
             ]
         else:
-            dpad_row1 = [self.create_spacer() for _ in range(3)]
-            dpad_row2 = [self.create_spacer() for _ in range(3)]
-            dpad_row3 = [self.create_spacer() for _ in range(3)]
+            dpad_row1 = [self.create_dpad_spacer() for _ in range(3)]
+            dpad_row2 = [self.create_dpad_spacer() for _ in range(3)]
+            dpad_row3 = [self.create_dpad_spacer() for _ in range(3)]
 
         # === RIGHT SIDE: COMMANDS (columns, bottom-right going up then left) ===
         dpad_keys = {'n', 's', 'e', 'w'}
@@ -1142,13 +1142,11 @@ class WizardsCavernApp(toga.App):
             cmd_row2.append(self.create_button(col[1][0], col[1][1]) if len(col) > 1 else self.create_spacer())
             cmd_row1.append(self.create_button(col[2][0], col[2][1]) if len(col) > 2 else self.create_spacer())
 
-        filler_count = max(2, 5 - num_cols)
-
-        for btn in dpad_row1 + [self.create_filler() for _ in range(filler_count)] + cmd_row1:
+        for btn in dpad_row1 + [self.create_spacer()] + cmd_row1:
             self.button_row_1.add(btn)
-        for btn in dpad_row2 + [self.create_filler() for _ in range(filler_count)] + cmd_row2:
+        for btn in dpad_row2 + [self.create_spacer()] + cmd_row2:
             self.button_row_2.add(btn)
-        for btn in dpad_row3 + [self.create_filler() for _ in range(filler_count)] + cmd_row3:
+        for btn in dpad_row3 + [self.create_spacer()] + cmd_row3:
             self.number_pad_box.add(btn)
 
     def build_layout_with_numpad(self, commands):
@@ -1440,6 +1438,9 @@ class WizardsCavernApp(toga.App):
     def create_spacer(self):
         """Create an empty spacer that fills remaining space."""
         return toga.Box(style=Pack(flex=1, height=34))
+    def create_dpad_spacer(self):
+        """Create a fixed-width spacer for D-pad (same size as a button)."""
+        return toga.Box(style=Pack(width=55, height=34))
     def create_filler(self):
         """Create a small gap between button groups."""
         return toga.Box(style=Pack(width=2))
