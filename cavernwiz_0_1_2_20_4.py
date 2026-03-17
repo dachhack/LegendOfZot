@@ -938,7 +938,7 @@ class WizardsCavernApp(toga.App):
                 self.create_button('e', cmd_dict.get('e', 'E')) if 'e' in cmd_dict else self.create_spacer(),
             ]
             dpad_row3 = [
-                self.create_button('l', cmd_dict.get('l', 'L')) if 'l' in cmd_dict else self.create_spacer(),
+                self.create_spacer(),
                 self.create_button('s', cmd_dict.get('s', 'S')) if 's' in cmd_dict else self.create_spacer(),
                 self.create_spacer(),
             ]
@@ -948,10 +948,10 @@ class WizardsCavernApp(toga.App):
             dpad_row3 = [self.create_spacer() for _ in range(3)]
 
         # === RIGHT SIDE: COMMANDS (columns, bottom-right going up then left) ===
-        dpad_keys = {'n', 's', 'e', 'w', 'l'}
+        dpad_keys = {'n', 's', 'e', 'w'}
 
         # Priority order (first = bottom-right, most important)
-        priority = ['i', 'q', 'o', 'dr', 'g', 'r', 'u', 'd', 'p', 'h', 'c',
+        priority = ['l', 'i', 'q', 'o', 'dr', 'g', 'r', 'u', 'd', 'p', 'h', 'c',
                      'y', 'x', 'a', 'f', 'b', 'm', 'j',
                      '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
