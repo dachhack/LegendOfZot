@@ -1832,10 +1832,6 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         process_spell_memorization_action(player_character, my_tower, "init")
         return
 
-    if cmd == 't':
-        gs.large_text_mode = not gs.large_text_mode
-        return
-
     if cmd == 'a':
         gs.prompt_cntl = "achievements_mode"
         #process_achievements_action(player_character, my_tower, "init")

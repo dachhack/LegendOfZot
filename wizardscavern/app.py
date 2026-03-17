@@ -927,14 +927,6 @@ class WizardsCavernApp(toga.App):
         self.button_panel.add(self.button_row_2)
         self.button_panel.add(self.number_pad_box)
 
-        # Adjust panel heights for QWERTY keyboard modes (taller keys)
-        if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
-            self.bottom_panel.style.height = 220
-            self.button_panel.style.height = 145
-        else:
-            self.bottom_panel.style.height = 170
-            self.button_panel.style.height = 110
-
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
         if gs.prompt_cntl in ['intro_story', 'main_menu']:
             self.build_main_menu_layout()
@@ -1040,26 +1032,26 @@ class WizardsCavernApp(toga.App):
         # Row 1: [C][A][spacer][F][spacer][spacer] or [spacer][A][spacer][F][spacer][spacer]
         if has_cast:
             left_row1 = [
-                self.create_big_button('a', 'A'),  # Attack
-                self.create_big_button('c', 'C'),  # Cast
+                self.create_big_button('a', 'Atk'),  # Attack
+                self.create_big_button('c', 'Cst'),  # Cast
                 self.create_spacer(),
                 self.create_spacer(),# Spacer between A and F
-                self.create_big_button('f', 'F'),  # Flee
+                self.create_big_button('f', 'Fle'),  # Flee
                 self.create_spacer(),
             ]
         else:
             left_row1 = [
-                self.create_big_button('a', 'A'),  # Attack
+                self.create_big_button('a', 'Atk'),  # Attack
                 self.create_spacer(),              # No cast available
                 self.create_spacer(),              # Spacer between A and F
                 self.create_spacer(),
-                self.create_big_button('f', 'F'),  # Flee
+                self.create_big_button('f', 'Fle'),  # Flee
                 self.create_spacer(),
             ]
-        
+
         # Row 2: [I][spacers]
         left_row2 = [
-            self.create_button('i', 'I') if 'i' in cmd_dict else self.create_spacer(),
+            self.create_button('i', 'Inv') if 'i' in cmd_dict else self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
@@ -1563,8 +1555,8 @@ class WizardsCavernApp(toga.App):
                 else:
                     actual_cmd = key
                 
-                # Simple single-letter/code labels for all buttons
-                btn_label = actual_cmd.upper()
+                # Use first 3 chars of descriptive label for button text
+                btn_label = label[:3].capitalize() if len(label) > 1 else actual_cmd.upper()
                 
                 commands.append((actual_cmd, btn_label))
         
@@ -2754,8 +2746,7 @@ class WizardsCavernApp(toga.App):
                 if can_cast:
                     inv_commands += " | m = spells"
 
-                text_label = "Aa-" if gs.large_text_mode else "Aa+"
-                inv_commands += f" | j = jrnl | t = {text_label} | q = quit | x = exit"
+                inv_commands += " | j = jrnl | q = quit | x = exit"
 
                 html_code = f"""
 
@@ -3149,7 +3140,8 @@ class WizardsCavernApp(toga.App):
                     </div>
 </div>
                 """
-            current_commands_text = "1-8 = category | s = stats | a = achv | g = save | x = back"
+            text_label = "Aa-" if gs.large_text_mode else "Aa+"
+            current_commands_text = f"1-8 = category | s = stats | a = achv | t = {text_label} | g = save | x = back"
 
         elif gs.prompt_cntl.startswith("journal_"):
             # JOURNAL CATEGORY VIEW
@@ -3351,7 +3343,8 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
                 """
-            current_commands_text = "b = back | s = stats | a = achv | g = save | x = close"
+            text_label = "Aa-" if gs.large_text_mode else "Aa+"
+            current_commands_text = f"b = back | s = stats | a = achv | t = {text_label} | g = save | x = close"
 
         elif gs.prompt_cntl == "spell_casting_mode":
             # SPELL CASTING - 3 Column: Map | Combat | Spells

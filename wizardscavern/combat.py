@@ -951,6 +951,10 @@ def process_journal_action(player_character, my_tower, cmd):
         gs.prompt_cntl = "achievements_mode"
         return
 
+    if cmd == 't':
+        gs.large_text_mode = not gs.large_text_mode
+        return
+
     if cmd == 'g':
         if gs.active_monster and gs.active_monster.is_alive():
             add_log(f"{COLOR_YELLOW}You cannot save during combat!{COLOR_RESET}")
@@ -1000,6 +1004,10 @@ def process_journal_category(player_character, my_tower, category, cmd):
 
     if cmd == 'a':
         gs.prompt_cntl = "achievements_mode"
+        return
+
+    if cmd == 't':
+        gs.large_text_mode = not gs.large_text_mode
         return
 
     if cmd == 'g':
