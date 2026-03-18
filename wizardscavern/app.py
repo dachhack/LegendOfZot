@@ -710,7 +710,7 @@ class WizardsCavernApp(toga.App):
         # In vendor modes, b/s/ba need to wait for item numbers
         is_vendor_mode = gs.prompt_cntl in ['vendor_shop', 'starting_shop']
         is_spell_memorization_mode = gs.prompt_cntl == 'spell_memorization_mode'
-        needs_number_suffix = (cmd in ['u', 'e'] and self.current_needs_numbers) or \
+        needs_number_suffix = (cmd in ['u', 'e'] and self.current_needs_numbers and not gs.inventory_filter) or \
                               (cmd in ['b', 's', 'r', 'id'] and is_vendor_mode) or \
                               (cmd in ['m', 'f'] and is_spell_memorization_mode)
         
@@ -1673,6 +1673,7 @@ class WizardsCavernApp(toga.App):
 
         if cmd == 'i' and gs.prompt_cntl == "game_loop":
             gs.prompt_cntl = "inventory"
+            gs.inventory_filter = None
             handle_inventory_menu(gs.player_character, gs.my_tower, "init")
             return
 
@@ -2649,15 +2650,29 @@ class WizardsCavernApp(toga.App):
                     elif isinstance(item, Scroll) and item.scroll_type in combat_scroll_types:
                         combat_usable_items.append(item)
                 
+                # Apply filter in combat too
+                display_items = combat_usable_items
+                combat_filter_label = "Combat Items"
+                if gs.inventory_filter == 'eat':
+                    display_items = [i for i in combat_usable_items if isinstance(i, (Food, Meat))]
+                    combat_filter_label = "Food Items"
+                elif gs.inventory_filter == 'use':
+                    display_items = [i for i in combat_usable_items if isinstance(i, (Potion, Scroll))]
+                    combat_filter_label = "Usable Items"
+
+                combat_filter_indicator = ""
+                if gs.inventory_filter:
+                    combat_filter_indicator = f" <span style='color: #4FC3F7; font-size: 10px;'>[filtered]</span>"
+
                 # Build inventory HTML - matching normal inventory style
-                player_inv_html = "<h3>Combat Items</h3>"
+                player_inv_html = f"<h3>{combat_filter_label}{combat_filter_indicator}</h3>"
                 player_inv_html += "<div style='max-height: 280px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
                 player_inv_html += "<div style='margin: 0; padding: 0;'>"
 
-                if not combat_usable_items:
-                    player_inv_html += "<div style='margin: 2px 0; padding: 0; color: #888;'>(No usable items)</div>"
+                if not display_items:
+                    player_inv_html += "<div style='margin: 2px 0; padding: 0; color: #888;'>(No matching items)</div>"
                 else:
-                    for i, item in enumerate(combat_usable_items):
+                    for i, item in enumerate(display_items):
                         item_str = format_item_for_display(item, gs.player_character, show_price=False)
                         player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
 
@@ -2676,7 +2691,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     """
 
-                current_commands_text = "u# = use | j = jrnl | x = close"
+                current_commands_text = "u = use | eat = eat | j = jrnl | x = close"
 
 
             else:
@@ -2737,25 +2752,36 @@ class WizardsCavernApp(toga.App):
                         </div>
                     """
 
-                player_inv_html = "<h3>Your Inventory</h3>"
+                sorted_items = get_sorted_inventory(gs.player_character.inventory)
+
+                # Apply inventory filter
+                display_items = sorted_items
+                filter_label = "Your Inventory"
+                if gs.inventory_filter == 'use':
+                    display_items = [i for i in sorted_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit))]
+                    filter_label = "Usable Items"
+                elif gs.inventory_filter == 'equip':
+                    display_items = [i for i in sorted_items if isinstance(i, (Weapon, Armor, Towel)) or (isinstance(i, Treasure) and getattr(i, 'treasure_type', '') == 'passive')]
+                    filter_label = "Equippable Items"
+                elif gs.inventory_filter == 'eat':
+                    display_items = [i for i in sorted_items if isinstance(i, (Food, Meat))]
+                    filter_label = "Food Items"
+
+                filter_indicator = ""
+                if gs.inventory_filter:
+                    filter_indicator = f" <span style='color: #4FC3F7; font-size: 10px;'>[filtered - tap again to show all]</span>"
+
+                player_inv_html = f"<h3>{filter_label}{filter_indicator}</h3>"
 
                 player_inv_html += "<div style='max-height: 295px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
 
                 player_inv_html += "<div style='margin: 0; padding: 0;'>"
 
-                sorted_items = get_sorted_inventory(gs.player_character.inventory)
-
-                if not sorted_items:
-
-                    player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
-
+                if not display_items:
+                    player_inv_html += "<div style='margin: 2px 0; padding: 0; color: #888;'>(No matching items)</div>"
                 else:
-
-                    # Reuse the rendering logic from the previous response or your existing code
-
-                    for i, item in enumerate(sorted_items):
+                    for i, item in enumerate(display_items):
                         item_str = format_item_for_display(item, gs.player_character, show_price=False)
-
                         player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
 
                 player_inv_html += "</div>"
@@ -2764,7 +2790,7 @@ class WizardsCavernApp(toga.App):
 
                 can_cast = can_cast_spells(gs.player_character)
 
-                inv_commands = "u# = use | e# = equip | c = craft"
+                inv_commands = "u = use | e = equip | eat = eat | c = craft"
 
                 if can_cast:
                     inv_commands += " | m = spells"

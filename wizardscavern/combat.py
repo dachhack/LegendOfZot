@@ -304,6 +304,7 @@ def process_combat_action(player_character, my_tower, cmd):
 
     if cmd == 'i':
         gs.prompt_cntl = "inventory"
+        gs.inventory_filter = None
         main.handle_inventory_menu(player_character, my_tower, "init")
         return
 

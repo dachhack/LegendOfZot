@@ -67,6 +67,9 @@ active_spell_choice = None
 active_towel_item = None
 active_library_state = None
 
+# Inventory filter: None (show all), 'use', 'equip', or 'eat'
+inventory_filter = None
+
 # ============================================================================
 # SHOP & SELL STATE
 # ============================================================================
