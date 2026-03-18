@@ -647,7 +647,7 @@ class WizardsCavernApp(toga.App):
             style=Pack(
                 direction=COLUMN,
                 background_color="#1a1a1a",
-                height=190,
+                height=198,
                 flex=0,
             ),
             children=[
@@ -932,15 +932,15 @@ class WizardsCavernApp(toga.App):
         # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
             # QWERTY keyboard: 3 rows × 38px keys
-            self.bottom_panel.style.height = 248
+            self.bottom_panel.style.height = 264
             self.button_panel.style.height = 145
         elif needs_numbers:
             # Numpad layout: 4 rows × 26px compact keys
-            self.bottom_panel.style.height = 210
+            self.bottom_panel.style.height = 222
             self.button_panel.style.height = 110
         else:
             # Normal: 3 rows × 30px buttons
-            self.bottom_panel.style.height = 190
+            self.bottom_panel.style.height = 198
             self.button_panel.style.height = 94
 
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
@@ -1368,9 +1368,7 @@ class WizardsCavernApp(toga.App):
                            background_color='#333', color='#EEE', height=38)
             )
             row3.append(backspace_button)
-        else:
             row3.append(toga.Box(style=Pack(flex=1, height=38)))
-        row3.append(toga.Box(style=Pack(flex=1, height=38)))
 
         # Add to button rows
         for btn in row1:
