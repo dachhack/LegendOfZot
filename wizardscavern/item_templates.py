@@ -255,6 +255,15 @@ MINING_INGREDIENTS = [
     ('Adamantine Dust', 'Dust from the hardest substance known', 75, 5, 0.01),
 ]
 
+# Sellable gems that drop from ore veins (gold only, not crafting ingredients)
+SELLABLE_GEMS = [
+    ('Rough Quartz', 5),
+    ('Polished Agate', 8),
+    ('Citrine Shard', 12),
+    ('Amethyst Chunk', 18),
+    ('Topaz Fragment', 25),
+]
+
 # ============================================================================
 # DWARVEN RECIPES (Dwarf-only): Mining ingredients -> Ioun Stone accessories
 # Inspired by D&D Ioun Stones — orbiting gemstones that grant passive bonuses.
@@ -262,7 +271,7 @@ MINING_INGREDIENTS = [
 # ============================================================================
 DWARVEN_RECIPES = {
     'Ioun Stone of Fortitude': {
-        'ingredients': [('Iron Chunk', 4), ('Copper Nugget', 3)],
+        'ingredients': [('Iron Chunk', 2), ('Copper Nugget', 2)],
         'tier': 1,
         'result': lambda: Treasure(
             name="Ioun Stone of Fortitude",
@@ -273,7 +282,7 @@ DWARVEN_RECIPES = {
         ),
     },
     'Ioun Stone of Might': {
-        'ingredients': [('Silver Vein', 3), ('Coal Ember', 2)],
+        'ingredients': [('Silver Vein', 2), ('Coal Ember', 1)],
         'tier': 2,
         'result': lambda: Treasure(
             name="Ioun Stone of Might",
@@ -284,7 +293,7 @@ DWARVEN_RECIPES = {
         ),
     },
     'Ioun Stone of Agility': {
-        'ingredients': [('Mithril Shard', 2), ('Gold Flake', 3)],
+        'ingredients': [('Mithril Shard', 1), ('Gold Flake', 1)],
         'tier': 3,
         'result': lambda: Treasure(
             name="Ioun Stone of Agility",

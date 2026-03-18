@@ -16,6 +16,65 @@ def is_wall_at_coordinate(current_floor, r, c):
 
     return current_floor.grid[r][c].room_type == gs.wall_char
 
+
+def generate_ore_vein(floor):
+    """Drunk-walk through walls to create a mineable ore vein of 5-10 tiles.
+
+    Finds a wall adjacent to a floor tile, then random-walks through
+    neighboring walls to carve a vein.  Each vein wall gets the
+    ``is_ore_vein`` property so dwarves can detect and mine it.
+    """
+    wall_char = floor.wall_char
+
+    # Candidate walls: must be adjacent to at least one floor tile
+    candidates = []
+    for r in range(1, floor.rows - 1):
+        for c in range(1, floor.cols - 1):
+            room = floor.grid[r][c]
+            if room.room_type != wall_char:
+                continue
+            for dy, dx in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                nr, nc = r + dy, c + dx
+                if 0 <= nr < floor.rows and 0 <= nc < floor.cols:
+                    if floor.grid[nr][nc].room_type != wall_char:
+                        candidates.append((r, c))
+                        break
+
+    if not candidates:
+        return
+
+    # Pick a random starting wall
+    start = random.choice(candidates)
+    vein_length = random.randint(5, 10)
+    vein_cells = [start]
+    visited = {start}
+    cr, cc = start
+
+    for _ in range(vein_length - 1):
+        # Shuffle directions for drunk walk
+        dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+        random.shuffle(dirs)
+        moved = False
+        for dy, dx in dirs:
+            nr, nc = cr + dy, cc + dx
+            if (nr, nc) in visited:
+                continue
+            # Stay within bounds (avoid edges) and stay in walls
+            if 1 <= nr < floor.rows - 1 and 1 <= nc < floor.cols - 1:
+                if floor.grid[nr][nc].room_type == wall_char:
+                    vein_cells.append((nr, nc))
+                    visited.add((nr, nc))
+                    cr, cc = nr, nc
+                    moved = True
+                    break
+        if not moved:
+            break  # Dead end, stop the vein here
+
+    # Only create the vein if we got at least 3 tiles
+    if len(vein_cells) >= 3:
+        for r, c in vein_cells:
+            floor.grid[r][c].properties['is_ore_vein'] = True
+
 def new_grid(grid_rows, grid_cols, wall_char):
     return [[wall_char for _ in range(gs.grid_cols)] for _ in range(gs.grid_rows)]
 
@@ -485,6 +544,10 @@ class Tower:
                     new_floor.grid[mr][mc].room_type = 'V'
                     new_floor.grid[mr][mc].properties['is_magic_shop'] = True
                     add_log(f"{COLOR_PURPLE}You sense arcane commerce somewhere on this floor...{COLOR_RESET}")
+
+        # Ore veins: ~50% of normal floors get a mineable ore vein
+        if len(self.floors) != 49 and random.random() < 0.50:
+            generate_ore_vein(new_floor)
 
         self.floors.append(new_floor)
 

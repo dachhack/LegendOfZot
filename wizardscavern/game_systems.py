@@ -2664,7 +2664,18 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
 
         # Reveal adjacent walls
         reveal_adjacent_walls(character, my_tower)
-        
+
+        # Dwarf ore vein detection — sense mineable ore in adjacent walls
+        if getattr(character, 'race', '').lower() == 'dwarf':
+            dir_names = {(-1, 0): 'north', (1, 0): 'south', (0, -1): 'west', (0, 1): 'east'}
+            for (dy, dx), dname in dir_names.items():
+                ty, tx = new_y + dy, new_x + dx
+                if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                    adj = current_floor.grid[ty][tx]
+                    if adj.properties.get('is_ore_vein') and not adj.properties.get('ore_vein_detected'):
+                        adj.properties['ore_vein_detected'] = True
+                        add_log(f"{COLOR_YELLOW}You sense mineral deposits in the wall to the {dname}!{COLOR_RESET}")
+
         # Secrets Shard: Reveal hidden rooms on current floor
         reveal_secrets_shard_rooms(character, my_tower)
 
