@@ -603,24 +603,24 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, background_color='#2a2a2a', color='#EEE')
+            style=Pack(flex=1, margin=2, height=30, background_color='#2a2a2a', color='#EEE')
         )
-        
+
         # Note: iOS keyboard will be disabled AFTER window is shown
         # See disable_ios_keyboard() method called in startup()
-        
+
         # Permanent backspace button (always visible)
         self.backspace_button = toga.Button(
             "\u232b",
             on_press=lambda w: self.number_pad_backspace(),
-            style=Pack(margin=2, width=45, font_size=14,
+            style=Pack(margin=2, width=45, height=30, font_size=14,
                        background_color='#333', color='#EEE')
         )
 
         self.submit_button = toga.Button(
             "Send",
             on_press=self.on_command_submit,
-            style=Pack(margin=2, width=80, font_size=14,
+            style=Pack(margin=2, width=80, height=30, font_size=14,
                        background_color='#444', color='#FFF')
         )
         
@@ -2494,9 +2494,11 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
                     {achievement_notifications}
-                    <div style="font-size: 16px; font-weight: bold; margin-bottom: 5px;">{gs.active_vendor.name}'s Shop</div>
+                    <div style="margin-bottom: 5px;">
+                        <div style="font-size: 16px; font-weight: bold;">{gs.active_vendor.name}'s Shop</div>
+                        <div style="color: #DAA520; font-size: 12px; margin-top: 2px;">{gs.shop_message}</div>
+                    </div>
                     {player_stats_html}
-                    <div style="margin-bottom: 5px; color: #DAA520;">{gs.shop_message}</div>
                     <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
                         <div style="border: 1px solid grey; padding: 3px;">{vendor_html}</div>
                         <div style="border: 1px solid grey; padding: 3px;">{player_inv_html}</div>
@@ -2577,15 +2579,15 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
                     {achievement_notifications}
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
+                    <div style="display:flex; align-items:flex-start; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{vendor_sprite}</div>
                         <div>
                             <div style="font-size: 16px; font-weight: bold; color: {shop_title_color};">{shop_label}</div>
                             {'<div style="font-size: 12px; color: #a78bfa;">Proprietor: ' + gs.active_vendor.name + '</div>' if is_magic else ''}
+                            <div style="color: #DAA520; font-size: 12px; margin-top: 2px;">{gs.shop_message}</div>
                         </div>
                     </div>
                     {player_stats_html}
-                    <div style="margin-bottom: 5px; color: #DAA520;">{gs.shop_message}</div>
                     <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
                         <div style="border: 1px solid grey; padding: 3px;">{vendor_html}</div>
                         <div style="border: 1px solid grey; padding: 3px;">{player_inv_html}</div>
