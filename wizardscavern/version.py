@@ -4,10 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 5
+BUILD_NUMBER = 6
 CHANGELOG = [
-    "Fix button panels getting cut off: dynamic heights for keyboard/numpad/normal",
-    "Fix QWERTY row 3 uneven sizing: shift+7 letters+2 spacers = 10 cols like row 1",
+    "Fix bottom cutoff: tighter panel heights, bigger nav bar spacer (30px)",
+    "Fix QWERTY row 3 uneven sizing: shift+7 letters+2 spacers = 10 cols",
     "Fix QWERTY keyboard buttons not showing on character creation screen",
     "Buttons now show 3-letter labels (Use, Eqp, Cft, Atk, etc.)",
     "Font size toggle (Aa+/Aa-) moved from inventory to journal",
