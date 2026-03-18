@@ -4,9 +4,9 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 13
+BUILD_NUMBER = 14
 CHANGELOG = [
-    "Compact button panel: shorter buttons (26px), smaller input row, tiny bottom spacer",
+    "Remove button elevation/shadow to eliminate vertical gaps between rows",
     "Smaller input field font (11pt) to prevent text clipping",
     "Trim button panel padding: reduce wasted space above keyboard/buttons",
     "Fix QWERTY row 3 narrower buttons: remove trailing invisible spacers",
