@@ -924,6 +924,11 @@ class Character:
             "Drake Cloak":            {"_base_defense": 4},
             "Psychic Shield Circlet": {"intelligence": 6, "base_max_mana_bonus": 10},
             "Apex Predator Signet":   {"_base_attack": 8, "dexterity": 5, "strength": 3},
+            # Dwarven Ioun Stones (crafted from mined ores/gems)
+            "Ioun Stone of Fortitude": {"base_max_health_bonus": 10, "_base_defense": 2},
+            "Ioun Stone of Might":     {"strength": 3, "_base_attack": 3},
+            "Ioun Stone of Agility":   {"dexterity": 4},
+            "Ioun Stone of Mastery":   {"strength": 3, "dexterity": 3, "intelligence": 3, "base_max_health_bonus": 15},
         }
 
         bonuses = accessory_bonuses.get(item.name, {})
@@ -972,6 +977,11 @@ class Character:
             "Drake Cloak":            {"_base_defense": 4},
             "Psychic Shield Circlet": {"intelligence": 6, "base_max_mana_bonus": 10},
             "Apex Predator Signet":   {"_base_attack": 8, "dexterity": 5, "strength": 3},
+            # Dwarven Ioun Stones (crafted from mined ores/gems)
+            "Ioun Stone of Fortitude": {"base_max_health_bonus": 10, "_base_defense": 2},
+            "Ioun Stone of Might":     {"strength": 3, "_base_attack": 3},
+            "Ioun Stone of Agility":   {"dexterity": 4},
+            "Ioun Stone of Mastery":   {"strength": 3, "dexterity": 3, "intelligence": 3, "base_max_health_bonus": 15},
         }
 
         bonuses = accessory_bonuses.get(item.name, {})

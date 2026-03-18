@@ -256,28 +256,54 @@ MINING_INGREDIENTS = [
 ]
 
 # ============================================================================
-# DWARVEN RECIPES (Dwarf-only): Mining ingredients -> consumables/gear
+# DWARVEN RECIPES (Dwarf-only): Mining ingredients -> Ioun Stone accessories
+# Inspired by D&D Ioun Stones — orbiting gemstones that grant passive bonuses.
+# Equip in accessory slots for permanent stat boosts while worn.
 # ============================================================================
 DWARVEN_RECIPES = {
-    'Dwarven Stout': {
-        'ingredients': [('Coal Ember', 1), ('Copper Nugget', 2)],
+    'Ioun Stone of Fortitude': {
+        'ingredients': [('Iron Chunk', 3), ('Copper Nugget', 2)],
         'tier': 1,
-        'result': lambda: Potion(name="Dwarven Stout", potion_type='defense', effect_magnitude=8, duration=8, value=60, level=2, description="+8 Defense for 8 turns")
+        'result': lambda: Treasure(
+            name="Ioun Stone of Fortitude",
+            description="A deep red rhomboid that orbits your head, pulsing with earthy vitality.",
+            gold_value=60, value=60, level=2,
+            treasure_type='passive',
+            passive_effect="+10 Max HP, +2 Defense",
+        ),
     },
-    'Runestone of Might': {
-        'ingredients': [('Iron Chunk', 3), ('Silver Vein', 1)],
+    'Ioun Stone of Might': {
+        'ingredients': [('Silver Vein', 2), ('Coal Ember', 1)],
         'tier': 2,
-        'result': lambda: Potion(name="Runestone of Might", potion_type='strength', effect_magnitude=8, duration=8, value=80, level=3, description="+8 Attack for 8 turns")
+        'result': lambda: Treasure(
+            name="Ioun Stone of Might",
+            description="A pale blue rhomboid that orbits your head, humming with raw power.",
+            gold_value=80, value=80, level=3,
+            treasure_type='passive',
+            passive_effect="+3 Strength, +3 Attack",
+        ),
     },
-    'Mithril Salve': {
+    'Ioun Stone of Agility': {
         'ingredients': [('Mithril Shard', 1), ('Gold Flake', 2)],
         'tier': 3,
-        'result': lambda: Potion(name="Mithril Salve", potion_type='healing', effect_magnitude=150, value=120, level=4, description="Restores 150 HP")
+        'result': lambda: Treasure(
+            name="Ioun Stone of Agility",
+            description="A shimmering emerald sphere that orbits your head in quick, darting loops.",
+            gold_value=120, value=120, level=4,
+            treasure_type='passive',
+            passive_effect="+4 Dexterity",
+        ),
     },
-    'Gemstone Tonic': {
-        'ingredients': [('Ruby Fragment', 1), ('Diamond Chip', 1)],
+    'Ioun Stone of Mastery': {
+        'ingredients': [('Ruby Fragment', 1), ('Diamond Chip', 1), ('Adamantine Dust', 1)],
         'tier': 4,
-        'result': lambda: Potion(name="Gemstone Tonic", potion_type='full_restore', effect_magnitude=0, value=200, level=5, description="Fully restores HP and Mana")
+        'result': lambda: Treasure(
+            name="Ioun Stone of Mastery",
+            description="A brilliant prismatic spindle that orbits your head, refracting light into rainbows.",
+            gold_value=200, value=200, level=5,
+            treasure_type='passive',
+            passive_effect="+3 Str/Dex/Int, +15 Max HP",
+        ),
     },
 }
 

@@ -1774,6 +1774,10 @@ def craft_potion(player_character, recipe_name):
     add_log(f"{COLOR_GREEN}* You crafted: {new_item.name}! *{COLOR_RESET}")
     add_log(f"{COLOR_CYAN}{new_item.description}{COLOR_RESET}")
 
+    # Ioun Stone flavor text
+    if isinstance(new_item, Treasure) and new_item.treasure_type == 'passive':
+        add_log(f"{COLOR_PURPLE}Equip it from your inventory to activate its power!{COLOR_RESET}")
+
     # Update stats
     gs.game_stats['potions_crafted'] = gs.game_stats.get('potions_crafted', 0) + 1
     check_achievements(player_character)
