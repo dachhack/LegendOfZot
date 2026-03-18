@@ -112,3 +112,16 @@ jobs:
             --title "Latest Build" \
             --notes "Auto-published from main branch. $(date -u '+%Y-%m-%d %H:%M UTC')" \
             --prerelease
+
+      - name: Install Google Drive dependencies
+        run: pip install google-api-python-client google-auth requests
+
+      - name: Upload APK to Google Drive
+        if: steps.find-apk.outputs.apk_path != ''
+        env:
+          PYTHONUNBUFFERED: "1"
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_REFRESH_TOKEN: ${{ secrets.GOOGLE_REFRESH_TOKEN }}
+          GOOGLE_DRIVE_FOLDER_ID: ${{ secrets.GOOGLE_DRIVE_FOLDER_ID }}
+        run: python .github/scripts/upload_to_drive.py "${{ steps.find-apk.outputs.apk_path }}"
