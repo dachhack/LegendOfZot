@@ -3052,10 +3052,6 @@ def process_save_load_action(player_character, my_tower, cmd):
 def process_main_menu_action(cmd):
     """Handle main menu input (new game vs continue)."""
 
-    if cmd == 't':
-        gs.large_text_mode = not gs.large_text_mode
-        return True
-
     if cmd == 'n' or cmd == '':
         # Start new game
         gs.prompt_cntl = "intro_story"

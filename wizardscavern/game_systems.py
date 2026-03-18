@@ -1799,12 +1799,16 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         # Commands now shown in HTML and placeholder, not log
         return
 
+    # Clear inventory filter when navigating away from inventory
+    if cmd in ('s', 'j', 'c', 'm', 'a', 'x', 'g', 'q'):
+        gs.inventory_filter = None
+
     # Block non-combat actions during combat (but allow journal, achievements, stats)
     if in_combat:
         if cmd in ['c', 'm', 'g']:
             add_log(f"{COLOR_YELLOW}You can't do that during combat!{COLOR_RESET}")
             return
-        if cmd.startswith('e'):
+        if cmd.startswith('e') and not cmd.startswith('eat'):
             add_log(f"{COLOR_YELLOW}You can't equip items during combat!{COLOR_RESET}")
             return
 
@@ -1837,7 +1841,7 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         #process_achievements_action(player_character, my_tower, "init")
         return
 
-    if cmd == 'x':
+    if cmd == 'x' or (cmd == 'q' and not in_combat):
         # Check if we're in combat - return to combat mode, not game_loop
         if in_combat:
             gs.prompt_cntl = "combat_mode"
@@ -1875,15 +1879,42 @@ def handle_inventory_menu(player_character, my_tower, cmd):
     else:
         working_items = sorted_items
 
+    # --- Bare command toggles (set filter, refresh display) ---
+    if cmd == 'u':
+        gs.inventory_filter = 'use' if gs.inventory_filter != 'use' else None
+        return
+
+    if cmd == 'e':
+        gs.inventory_filter = 'equip' if gs.inventory_filter != 'equip' else None
+        return
+
+    if cmd == 'eat':
+        gs.inventory_filter = 'eat' if gs.inventory_filter != 'eat' else None
+        return
+
+    # Apply active inventory filter to narrow working_items for numbered commands
+    if gs.inventory_filter == 'use':
+        working_items = [i for i in working_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit))]
+    elif gs.inventory_filter == 'equip':
+        working_items = [i for i in working_items if isinstance(i, (Weapon, Armor, Towel)) or (isinstance(i, Treasure) and i.treasure_type == 'passive')]
+    elif gs.inventory_filter == 'eat':
+        working_items = [i for i in working_items if isinstance(i, (Food, Meat))]
+
+    # When a filter is active and user types just a number, route to the appropriate action
+    if gs.inventory_filter and cmd.isdigit():
+        if gs.inventory_filter == 'use':
+            cmd = 'u' + cmd
+        elif gs.inventory_filter == 'equip':
+            cmd = 'e' + cmd
+        elif gs.inventory_filter == 'eat':
+            cmd = 'eat' + cmd
+
     if cmd.startswith('u'):
         try:
-            # Handle both "u 3" and "u3" formats
-            if cmd == 'u':
-                add_log(f"{COLOR_YELLOW}Please specify an item number (e.g., u1){COLOR_RESET}")
-                return
             # Extract number - skip 'u' and optional space
             num_str = cmd[1:].strip()
             item_number = int(num_str) - 1  # Convert to 0-indexed
+            gs.inventory_filter = None  # Clear filter after selecting item
 
             if 0 <= item_number < len(working_items):
                 item_to_use = working_items[item_number]
@@ -1962,14 +1993,7 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                     # Don't reset prompt_cntl - towel.use() sets it to towel_action_mode
 
                 elif isinstance(item_to_use, (Food, Meat)):
-                    consumed = item_to_use.use(player_character, my_tower)
-                    if consumed:
-                        count = getattr(item_to_use, 'count', 1)
-                        if count > 1:
-                            item_to_use.count -= 1
-                            add_log(f"{COLOR_GREY}({item_to_use.count} remaining){COLOR_RESET}")
-                        else:
-                            player_character.inventory.remove_item(item_to_use.name)
+                    add_log(f"{COLOR_YELLOW}Use 'eat' to consume food items.{COLOR_RESET}")
                     gs.prompt_cntl = "inventory"
                     handle_inventory_menu(player_character, my_tower, "init")
 
@@ -1998,18 +2022,39 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         except (ValueError, IndexError):
             add_log(f"{COLOR_YELLOW}Invalid use command. Format: u [number]{COLOR_RESET}")
 
+    elif cmd.startswith('eat') and len(cmd) > 3:
+        # Eat command: eat# consumes food/meat items
+        try:
+            num_str = cmd[3:].strip()
+            item_number = int(num_str) - 1
+            edible_items = [i for i in working_items if isinstance(i, (Food, Meat))]
+            if 0 <= item_number < len(edible_items):
+                item_to_eat = edible_items[item_number]
+                consumed = item_to_eat.use(player_character, my_tower)
+                if consumed:
+                    count = getattr(item_to_eat, 'count', 1)
+                    if count > 1:
+                        item_to_eat.count -= 1
+                        add_log(f"{COLOR_GREY}({item_to_eat.count} remaining){COLOR_RESET}")
+                    else:
+                        player_character.inventory.remove_item(item_to_eat.name)
+                gs.inventory_filter = None
+                gs.prompt_cntl = "inventory"
+                handle_inventory_menu(player_character, my_tower, "init")
+            else:
+                add_log(f"{COLOR_YELLOW}Invalid item number.{COLOR_RESET}")
+        except (ValueError, IndexError):
+            add_log(f"{COLOR_YELLOW}Invalid eat command. Format: eat [number]{COLOR_RESET}")
+
     elif cmd.startswith('e'):
         try:
-            # Handle both "e 3" and "e3" formats
-            if cmd == 'e':
-                add_log(f"{COLOR_YELLOW}Please specify an item number (e.g., e1){COLOR_RESET}")
-                return
             # Extract number - skip 'e' and optional space
             num_str = cmd[1:].strip()
             item_number = int(num_str) - 1
+            gs.inventory_filter = None  # Clear filter after selecting item
 
-            if 0 <= item_number < len(sorted_items):
-                item_to_equip = sorted_items[item_number]
+            if 0 <= item_number < len(working_items):
+                item_to_equip = working_items[item_number]
 
                 # Block equipping non-bug items while shrunk
                 if gs.player_is_shrunk:

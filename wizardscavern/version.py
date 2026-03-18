@@ -4,14 +4,14 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 2
+BUILD_NUMBER = 18
 CHANGELOG = [
-    "Merge altar redesign and visual fixes from fix-altar-box-height branch",
-    "Merge main: game changes and CI fixes",
-    "Sync workflow from main and re-add claude/* branch trigger",
-    "Simplify interaction box colors: grey borders, remove colored backgrounds",
-    "Fix input row position by giving button_panel a fixed height",
-    "Fix input row shifting up in combat by giving spacers a fixed height",
-    "Rework library interaction to match other room panels",
-    "Shrink tomb interaction box by removing embedded log",
+    "Taller Send button and input box for easier tapping",
+    "Use/Equip buttons now instantly filter inventory list",
+    "Journal category boxes now fill full container width",
+    "Crafting window taller with larger, lighter text for readability",
+    "Fix button panels getting cut off: dynamic heights for keyboard/numpad/normal",
+    "Fix QWERTY keyboard buttons not showing on character creation screen",
+    "Font size toggle (Aa+/Aa-) moved from inventory to journal",
+    "Buttons now show 5-letter labels (Equip, Craft, Attck, Flee, etc.)",
 ]
