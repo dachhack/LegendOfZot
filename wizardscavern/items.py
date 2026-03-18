@@ -1945,6 +1945,54 @@ class Scroll(Item):
                     break
 
             return True  # Consumed
+        elif self.scroll_type == 'verdant_growth':
+            # VERDANT GROWTH SCROLL - sprout gardens in nearby rooms
+            from .dungeon import is_wall_at_coordinate
+            add_log(f"{COLOR_GREEN}You read the {self.name}!{COLOR_RESET}")
+            add_log(f"{COLOR_GREEN}Druidic magic surges outward from the scroll...{COLOR_RESET}")
+
+            current_floor = my_tower.floors[character.z]
+            directions = [(-1, 0), (1, 0), (0, -1), (0, 1)]  # N, S, W, E
+
+            # Find adjacent empty floor tiles
+            candidates = []
+            for dy, dx in directions:
+                ty, tx = character.y + dy, character.x + dx
+                if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                    room = current_floor.grid[ty][tx]
+                    coords = (tx, ty, character.z)
+                    if room.room_type == '.' and coords not in gs.harvested_gardens:
+                        candidates.append((tx, ty, room))
+
+            if not candidates:
+                add_log(f"{COLOR_YELLOW}The magic fizzles — no suitable ground nearby.{COLOR_RESET}")
+                return False  # Don't consume
+
+            # Create 1-4 gardens (capped by available spots)
+            num_gardens = min(random.randint(1, 4), len(candidates))
+            random.shuffle(candidates)
+            chosen = candidates[:num_gardens]
+
+            gardens_created = 0
+            fey_created = False
+            for gx, gy, room in chosen:
+                room.room_type = 'G'
+                room.discovered = True
+                gardens_created += 1
+                # 15% chance each garden is a fey garden
+                if random.random() < 0.15:
+                    room.properties['is_fey_garden'] = True
+                    room.properties['fey_garden_floor_level'] = character.z
+                    fey_created = True
+                    add_log(f"{COLOR_PURPLE}A shimmering Fey Garden blooms to the {'north' if gy < character.y else 'south' if gy > character.y else 'east' if gx > character.x else 'west'}!{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_GREEN}A lush garden sprouts to the {'north' if gy < character.y else 'south' if gy > character.y else 'east' if gx > character.x else 'west'}!{COLOR_RESET}")
+
+            add_log(f"{COLOR_GREEN}{gardens_created} garden{'s' if gardens_created != 1 else ''} burst into life around you!{COLOR_RESET}")
+            if fey_created:
+                add_log(f"{COLOR_PURPLE}You sense fey magic among the growth...{COLOR_RESET}")
+
+            return True  # Consumed
         elif self.scroll_type == 'vendor_restock':
             return use_scroll_of_commerce(character, my_tower)
         elif self.scroll_type == 'identify':

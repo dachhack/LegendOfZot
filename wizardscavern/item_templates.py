@@ -1403,6 +1403,14 @@ SCROLL_TEMPLATES = [
         level=0,
         scroll_type='identify'
     ),
+    Scroll(
+        name="Scroll of Verdant Growth",
+        description="Druidic magic pulses from this scroll, smelling of rich earth and wild flowers.",
+        effect_description="Sprouts gardens in nearby rooms. May attract fey magic.",
+        value=200,
+        level=4,
+        scroll_type='verdant_growth'
+    ),
 ]
 
 
