@@ -32,3 +32,7 @@ When the user needs to view or update sprite assignments:
 - `wizardscavern/combat.py` — combat, journal, spells
 - `wizardscavern/game_state.py` — global state
 - `wizardscavern/sprite_data.py` — sprite sheets and mappings
+
+## Changelog / Splash Screen
+
+**After every change**, update the `CHANGELOG` list in `wizardscavern/version.py` with a short description of what changed. This list is shown on the splash screen when the app launches. Keep entries concise (one line each). Bump `BUILD_NUMBER` when pushing a set of changes. Keep the list to ~8 entries — drop the oldest when adding new ones.
