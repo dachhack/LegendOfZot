@@ -4,14 +4,14 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 2
+BUILD_NUMBER = 3
 CHANGELOG = [
+    "Buttons now show 3-letter labels (Use, Eqp, Cft, Atk, etc.)",
+    "Font size toggle (Aa+/Aa-) moved from inventory to journal",
+    "Grey borders on all room interactions, removed colored backgrounds",
+    "Shorter input bar and buttons to save vertical space",
+    "Vendor name top-aligned with greeting text below inline with sprite",
+    "Bottom padding so input row isn't clipped by gesture nav bar",
     "Merge altar redesign and visual fixes from fix-altar-box-height branch",
     "Merge main: game changes and CI fixes",
-    "Sync workflow from main and re-add claude/* branch trigger",
-    "Simplify interaction box colors: grey borders, remove colored backgrounds",
-    "Fix input row position by giving button_panel a fixed height",
-    "Fix input row shifting up in combat by giving spacers a fixed height",
-    "Rework library interaction to match other room panels",
-    "Shrink tomb interaction box by removing embedded log",
 ]

@@ -648,12 +648,12 @@ class WizardsCavernApp(toga.App):
                 direction=COLUMN,
                 background_color="#1a1a1a",
                 flex=0,
-                padding_bottom=14,
             ),
             children=[
                 self.commands_label,
                 self.button_panel,
                 self.input_row,
+                toga.Box(style=Pack(height=16, background_color='#1a1a1a')),
             ]
         )
 
