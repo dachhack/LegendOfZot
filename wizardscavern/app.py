@@ -603,7 +603,7 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, height=30, background_color='#2a2a2a', color='#EEE')
+            style=Pack(flex=1, margin=2, height=36, background_color='#2a2a2a', color='#EEE')
         )
 
         # Note: iOS keyboard will be disabled AFTER window is shown
@@ -613,14 +613,14 @@ class WizardsCavernApp(toga.App):
         self.backspace_button = toga.Button(
             "\u232b",
             on_press=lambda w: self.number_pad_backspace(),
-            style=Pack(margin=2, width=45, height=36, font_size=14,
+            style=Pack(margin=2, width=45, height=42, font_size=14,
                        background_color='#333', color='#EEE')
         )
 
         self.submit_button = toga.Button(
             "Send",
             on_press=self.on_command_submit,
-            style=Pack(margin=2, width=80, height=36, font_size=14,
+            style=Pack(margin=2, width=80, height=42, font_size=14,
                        background_color='#444', color='#FFF')
         )
         
@@ -647,7 +647,7 @@ class WizardsCavernApp(toga.App):
             style=Pack(
                 direction=COLUMN,
                 background_color="#1a1a1a",
-                height=188,
+                height=190,
                 flex=0,
             ),
             children=[
@@ -935,17 +935,17 @@ class WizardsCavernApp(toga.App):
 
         # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
-            # QWERTY keyboard: 3 rows × 38px keys
-            self.bottom_panel.style.height = 250
-            self.button_panel.style.height = 145
+            # QWERTY keyboard: 3 rows × 38px keys = 114px content
+            self.bottom_panel.style.height = 218
+            self.button_panel.style.height = 116
         elif needs_numbers:
-            # Numpad layout: 4 rows × 26px compact keys
+            # Numpad layout: 4 rows × 26px compact keys = 104px content
             self.bottom_panel.style.height = 208
-            self.button_panel.style.height = 110
+            self.button_panel.style.height = 106
         else:
-            # Normal: 3 rows × 30px buttons
-            self.bottom_panel.style.height = 188
-            self.button_panel.style.height = 94
+            # Normal: 3 rows × 30px buttons = 90px content
+            self.bottom_panel.style.height = 190
+            self.button_panel.style.height = 92
 
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
         if gs.prompt_cntl in ['intro_story', 'main_menu']:
