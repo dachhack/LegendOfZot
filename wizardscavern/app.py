@@ -286,7 +286,7 @@ def generate_grid_html(floor, player_x, player_y):
                 content = room.room_type
                 if content == '#' and room.properties.get('ore_vein_detected'):
                     content = '%'
-                    cell_style += "color: #CD853F; font-weight: bold; text-shadow: 0 0 2px #DAA520;"
+                    cell_style += "color: #555;"
                 elif content == '#':
                     cell_style += "color: #555;"
                 elif content == '.':
