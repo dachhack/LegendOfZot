@@ -1098,23 +1098,26 @@ class WizardsCavernApp(toga.App):
         Layout: [D-PAD (3 cols)] [fillers] [CMD cols right-aligned]
         """
         cmd_dict = {key: label for key, label in commands}
-        has_movement = any(k in cmd_dict for k in ['n', 's', 'e', 'w'])
+        # Movement directions have single-char uppercase labels (N/S/E/W) from "n/s/e/w = move"
+        # Non-movement uses of n/s/e/w (like "n = no") have longer labels (No, Enter, etc.)
+        move_keys = {k for k, label in commands if k in ('n', 's', 'e', 'w') and len(label) == 1}
+        has_movement = bool(move_keys)
 
         # === LEFT SIDE: D-PAD (cross/plus shape with arrow symbols) ===
         if has_movement:
             dpad_row1 = [
                 self.create_dpad_spacer(),
-                self.create_dpad_button('n', '\u25B2') if 'n' in cmd_dict else self.create_dpad_spacer(),
+                self.create_dpad_button('n', '\u25B2') if 'n' in move_keys else self.create_dpad_spacer(),
                 self.create_dpad_spacer(),
             ]
             dpad_row2 = [
-                self.create_dpad_button('w', '\u25C4') if 'w' in cmd_dict else self.create_dpad_spacer(),
+                self.create_dpad_button('w', '\u25C4') if 'w' in move_keys else self.create_dpad_spacer(),
                 self.create_dpad_center(),
-                self.create_dpad_button('e', '\u25BA') if 'e' in cmd_dict else self.create_dpad_spacer(),
+                self.create_dpad_button('e', '\u25BA') if 'e' in move_keys else self.create_dpad_spacer(),
             ]
             dpad_row3 = [
                 self.create_dpad_spacer(),
-                self.create_dpad_button('s', '\u25BC') if 's' in cmd_dict else self.create_dpad_spacer(),
+                self.create_dpad_button('s', '\u25BC') if 's' in move_keys else self.create_dpad_spacer(),
                 self.create_dpad_spacer(),
             ]
         else:
@@ -1123,21 +1126,21 @@ class WizardsCavernApp(toga.App):
             dpad_row3 = [self.create_dpad_spacer() for _ in range(3)]
 
         # === RIGHT SIDE: COMMANDS (columns, bottom-right going up then left) ===
-        dpad_keys = {'n', 's', 'e', 'w'}
+        # Only exclude actual movement keys from command buttons (not n=no, etc.)
 
         # Priority order (first = bottom-right, most important)
         priority = ['l', 'i', 'q', 'o', 'dr', 'g', 'r', 'u', 'd', 'p', 'h', 'c',
-                     'y', 'x', 'a', 'f', 'b', 'm', 'j',
+                     'y', 'n', 'x', 'a', 'f', 'b', 'm', 'j',
                      '1', '2', '3', '4', '5', '6', '7', '8', '9']
 
         cmds_to_place = []
         placed = set()
         for pkey in priority:
-            if pkey in cmd_dict and pkey not in dpad_keys and pkey not in placed:
+            if pkey in cmd_dict and pkey not in move_keys and pkey not in placed:
                 cmds_to_place.append((pkey, cmd_dict[pkey]))
                 placed.add(pkey)
         for k, v in cmd_dict.items():
-            if k not in dpad_keys and k not in placed:
+            if k not in move_keys and k not in placed:
                 cmds_to_place.append((k, v))
 
         # Build columns (max 3 per column, bottom to top)
