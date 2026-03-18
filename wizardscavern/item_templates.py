@@ -262,7 +262,7 @@ MINING_INGREDIENTS = [
 # ============================================================================
 DWARVEN_RECIPES = {
     'Ioun Stone of Fortitude': {
-        'ingredients': [('Iron Chunk', 3), ('Copper Nugget', 2)],
+        'ingredients': [('Iron Chunk', 4), ('Copper Nugget', 3)],
         'tier': 1,
         'result': lambda: Treasure(
             name="Ioun Stone of Fortitude",
@@ -273,7 +273,7 @@ DWARVEN_RECIPES = {
         ),
     },
     'Ioun Stone of Might': {
-        'ingredients': [('Silver Vein', 2), ('Coal Ember', 1)],
+        'ingredients': [('Silver Vein', 3), ('Coal Ember', 2)],
         'tier': 2,
         'result': lambda: Treasure(
             name="Ioun Stone of Might",
@@ -284,7 +284,7 @@ DWARVEN_RECIPES = {
         ),
     },
     'Ioun Stone of Agility': {
-        'ingredients': [('Mithril Shard', 1), ('Gold Flake', 2)],
+        'ingredients': [('Mithril Shard', 2), ('Gold Flake', 3)],
         'tier': 3,
         'result': lambda: Treasure(
             name="Ioun Stone of Agility",
@@ -295,7 +295,7 @@ DWARVEN_RECIPES = {
         ),
     },
     'Ioun Stone of Mastery': {
-        'ingredients': [('Ruby Fragment', 1), ('Diamond Chip', 1), ('Adamantine Dust', 1)],
+        'ingredients': [('Ruby Fragment', 2), ('Diamond Chip', 1), ('Adamantine Dust', 1)],
         'tier': 4,
         'result': lambda: Treasure(
             name="Ioun Stone of Mastery",

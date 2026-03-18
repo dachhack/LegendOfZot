@@ -1720,10 +1720,11 @@ class WizardsCavernApp(toga.App):
                         direction_name = {'n': 'northern', 's': 'southern', 'e': 'eastern', 'w': 'western'}[cmd]
                         add_log(f"{COLOR_CYAN}You smash through the {direction_name} wall!{COLOR_RESET}")
                         add_log(f"{COLOR_GREY}({mines_left} mine{'s' if mines_left != 1 else ''} remaining on this floor){COLOR_RESET}")
-                        # Mining loot: 1-3 ore/gem items
-                        num_items = random.randint(1, 3)
+                        # Mining loot: 1-2 ore/gem items (weighted by rarity)
+                        num_items = random.randint(1, 2)
+                        weights = [entry[4] for entry in MINING_INGREDIENTS]
                         for _ in range(num_items):
-                            item_data = random.choice(MINING_INGREDIENTS)
+                            item_data = random.choices(MINING_INGREDIENTS, weights=weights, k=1)[0]
                             ingredient = Ingredient(name=item_data[0], description=item_data[1],
                                                     value=item_data[2], level=item_data[3],
                                                     ingredient_type='ore')

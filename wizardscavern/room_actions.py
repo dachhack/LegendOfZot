@@ -2066,10 +2066,11 @@ def process_garden_action(player_character, my_tower, cmd):
             loot_table = GARDEN_INGREDIENTS
             add_log(f"{COLOR_GREEN}You gather useful herbs and plants...{COLOR_RESET}")
 
-        # Grant Items
+        # Grant Items (weighted by rarity)
         num_items = random.randint(2, 4)
+        weights = [entry[4] for entry in loot_table]
         for _ in range(num_items):
-            item_data = random.choice(loot_table)
+            item_data = random.choices(loot_table, weights=weights, k=1)[0]
             # item_data is (name, description, value, level, chance)
             ingredient = Ingredient(name=item_data[0], description=item_data[1],
                                     value=item_data[2], level=item_data[3])
