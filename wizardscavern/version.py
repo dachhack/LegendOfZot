@@ -4,9 +4,9 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 10
+BUILD_NUMBER = 11
 CHANGELOG = [
-    "Taller input row (42px buttons, 36px field) to fix text clipping on Android",
+    "Smaller input field font (11pt) to prevent text clipping",
     "Trim button panel padding: reduce wasted space above keyboard/buttons",
     "Fix QWERTY row 3 narrower buttons: remove trailing invisible spacers",
     "Fix button panels getting cut off: dynamic heights for keyboard/numpad/normal",

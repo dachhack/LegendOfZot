@@ -603,7 +603,7 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, height=36, background_color='#2a2a2a', color='#EEE')
+            style=Pack(flex=1, margin=2, height=36, font_size=11, background_color='#2a2a2a', color='#EEE')
         )
 
         # Note: iOS keyboard will be disabled AFTER window is shown
