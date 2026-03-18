@@ -1052,26 +1052,26 @@ class WizardsCavernApp(toga.App):
         # Row 1: [C][A][spacer][F][spacer][spacer] or [spacer][A][spacer][F][spacer][spacer]
         if has_cast:
             left_row1 = [
-                self.create_big_button('a', 'Atk'),  # Attack
-                self.create_big_button('c', 'Cst'),  # Cast
+                self.create_big_button('a', 'Attck'),  # Attack
+                self.create_big_button('c', 'Cast'),  # Cast
                 self.create_spacer(),
                 self.create_spacer(),# Spacer between A and F
-                self.create_big_button('f', 'Fle'),  # Flee
+                self.create_big_button('f', 'Flee'),  # Flee
                 self.create_spacer(),
             ]
         else:
             left_row1 = [
-                self.create_big_button('a', 'Atk'),  # Attack
+                self.create_big_button('a', 'Attck'),  # Attack
                 self.create_spacer(),              # No cast available
                 self.create_spacer(),              # Spacer between A and F
                 self.create_spacer(),
-                self.create_big_button('f', 'Fle'),  # Flee
+                self.create_big_button('f', 'Flee'),  # Flee
                 self.create_spacer(),
             ]
 
         # Row 2: [I][spacers]
         left_row2 = [
-            self.create_button('i', 'Inv') if 'i' in cmd_dict else self.create_spacer(),
+            self.create_button('i', 'Invnt') if 'i' in cmd_dict else self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
@@ -1442,7 +1442,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=11, width=55,
+            style=Pack(margin=0, font_size=11, width=65,
                        background_color='#333', color='#EEE', height=30)
         )
         self._compact_android_button(btn)
@@ -1453,7 +1453,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=13, font_weight='bold', width=65, height=30,
+            style=Pack(margin=0, font_size=13, font_weight='bold', width=75, height=30,
                        background_color='#444', color='#FFF')
         )
         self._compact_android_button(btn)
@@ -1576,8 +1576,8 @@ class WizardsCavernApp(toga.App):
                 else:
                     actual_cmd = key
                 
-                # Use first 3 chars of descriptive label for button text
-                btn_label = label[:3].capitalize() if len(label) > 1 else actual_cmd.upper()
+                # Use first 5 chars of descriptive label for button text
+                btn_label = label[:5].capitalize() if len(label) > 1 else actual_cmd.upper()
                 
                 commands.append((actual_cmd, btn_label))
         
@@ -2526,7 +2526,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
                 """
-            current_commands_text = "b# = buy | s# = sell | r# = repair | ba = buyall | x = exit"
+            current_commands_text = "b# = buy | s# = sell | r# = repair | ba = buy all | x = exit"
 
         elif gs.prompt_cntl == "sell_quantity_mode":
             # SELL QUANTITY MODE - Show "How many?" prompt
@@ -2676,7 +2676,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     """
 
-                current_commands_text = "u# = use | j = jrnl | x = back"
+                current_commands_text = "u# = use | j = jrnl | x = close"
 
 
             else:
@@ -2764,12 +2764,12 @@ class WizardsCavernApp(toga.App):
 
                 can_cast = can_cast_spells(gs.player_character)
 
-                inv_commands = "u# = use | e# = eqp | c = cft"
+                inv_commands = "u# = use | e# = equip | c = craft"
 
                 if can_cast:
                     inv_commands += " | m = spells"
 
-                inv_commands += " | j = jrnl | q = quit | x = exit"
+                inv_commands += " | j = jrnl | q = close | x = exit"
 
                 html_code = f"""
 
@@ -3164,7 +3164,7 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             text_label = "Aa-" if gs.large_text_mode else "Aa+"
-            current_commands_text = f"1-8 = category | s = stats | a = achv | t = {text_label} | g = save | x = back"
+            current_commands_text = f"1-8 = category | s = stats | a = achvs | t = {text_label} | g = save | x = back"
 
         elif gs.prompt_cntl.startswith("journal_"):
             # JOURNAL CATEGORY VIEW
@@ -3367,7 +3367,7 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             text_label = "Aa-" if gs.large_text_mode else "Aa+"
-            current_commands_text = f"b = back | s = stats | a = achv | t = {text_label} | g = save | x = close"
+            current_commands_text = f"b = back | s = stats | a = achvs | t = {text_label} | g = save | x = close"
 
         elif gs.prompt_cntl == "spell_casting_mode":
             # SPELL CASTING - 3 Column: Map | Combat | Spells
@@ -4057,7 +4057,7 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             # Build stairs up commands with lantern if available
-            current_commands_text = "u = go up | i = inventory"
+            current_commands_text = "u = up | i = inventory"
             if has_lantern:
                 current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
@@ -4121,7 +4121,7 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             # Build stairs down commands with lantern if available
-            current_commands_text = "d = go down | i = inventory"
+            current_commands_text = "d = down | i = inventory"
             if has_lantern:
                 current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
@@ -5068,11 +5068,11 @@ class WizardsCavernApp(toga.App):
 
                 # Add stairs commands if on stairs
                 if current_room.room_type == 'U':
-                    current_commands_text = "n/s/e/w = move | u = go up | i = inventory"
+                    current_commands_text = "n/s/e/w = move | u = up | i = inventory"
                     if has_lantern:
                         current_commands_text += f" | l = lantern"
                 elif current_room.room_type == 'D':
-                    current_commands_text = "n/s/e/w = move | d = go down | i = inventory"
+                    current_commands_text = "n/s/e/w = move | d = down | i = inventory"
                     if has_lantern:
                         current_commands_text += f" | l = lantern"
                 else:
