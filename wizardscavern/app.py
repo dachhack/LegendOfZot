@@ -929,12 +929,18 @@ class WizardsCavernApp(toga.App):
         self.button_panel.add(self.button_row_2)
         self.button_panel.add(self.number_pad_box)
 
-        # Adjust panel heights for QWERTY keyboard modes (taller keys)
+        # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
+            # QWERTY keyboard: 3 rows × 38px keys
             self.bottom_panel.style.height = 220
             self.button_panel.style.height = 145
+        elif needs_numbers:
+            # Numpad layout: 4 rows × 26px compact keys
+            self.bottom_panel.style.height = 180
+            self.button_panel.style.height = 110
         else:
-            self.bottom_panel.style.height = 170
+            # Normal: 3 rows × 30px buttons
+            self.bottom_panel.style.height = 160
             self.button_panel.style.height = 94
 
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
@@ -1338,9 +1344,17 @@ class WizardsCavernApp(toga.App):
         else:
             row2.extend([self.create_keyboard_button(letter.lower(), letter.lower()) for letter in row2_letters])
         
-        # Row 3: Z X C V B N M (half-spacer + 7 buttons + backspace + Shift)
+        # Row 3: Shift + Z X C V B N M + backspace/spacer + Shift (10 items to match row 1)
         row3_letters = ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
-        row3 = []
+        # Create shift button
+        shift_label = "\u21e7" if self.keyboard_uppercase else "\u21e7"
+        shift_button = toga.Button(
+            shift_label,
+            on_press=self.toggle_keyboard_case,
+            style=Pack(flex=1, margin=0, padding=0, font_size=13, font_weight='bold',
+                       background_color='#444', color='#FFF', height=38)
+        )
+        row3 = [shift_button]
         if self.keyboard_uppercase:
             row3.extend([self.create_keyboard_button(letter.lower(), letter) for letter in row3_letters])
         else:
@@ -1355,16 +1369,8 @@ class WizardsCavernApp(toga.App):
             )
             row3.append(backspace_button)
         else:
-            row3.append(self.create_spacer())
-        # Create shift button
-        shift_label = "\u21e7" if self.keyboard_uppercase else "\u21e7"  # Could use different symbol for lower
-        shift_button = toga.Button(
-            shift_label,
-            on_press=self.toggle_keyboard_case,
-            style=Pack(flex=1, margin=0, padding=0, font_size=13, font_weight='bold',
-                       background_color='#444', color='#FFF', height=38)
-        )
-        row3.append(shift_button)
+            row3.append(toga.Box(style=Pack(flex=1, height=38)))
+        row3.append(toga.Box(style=Pack(flex=1, height=38)))
 
         # Add to button rows
         for btn in row1:
