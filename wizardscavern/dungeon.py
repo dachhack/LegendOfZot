@@ -18,11 +18,12 @@ def is_wall_at_coordinate(current_floor, r, c):
 
 
 def generate_ore_vein(floor):
-    """Drunk-walk through walls to create a mineable ore vein of 5-10 tiles.
+    """Carve a directional worm ore vein of 5-10 tiles through walls.
 
-    Finds a wall adjacent to a floor tile, then random-walks through
-    neighboring walls to carve a vein.  Each vein wall gets the
-    ``is_ore_vein`` property so dwarves can detect and mine it.
+    Picks a wall adjacent to a floor tile, chooses a primary direction,
+    then extends mostly straight with occasional 1-tile perpendicular
+    jogs — creating a natural mineral-vein look.  Each vein wall gets
+    the ``is_ore_vein`` property so dwarves can detect and mine it.
     """
     wall_char = floor.wall_char
 
@@ -43,23 +44,36 @@ def generate_ore_vein(floor):
     if not candidates:
         return
 
-    # Pick a random starting wall
+    # Pick a random starting wall and primary direction
     start = random.choice(candidates)
     vein_length = random.randint(5, 10)
     vein_cells = [start]
     visited = {start}
     cr, cc = start
 
+    # Choose a primary direction for the vein to run
+    primary_dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
+    random.shuffle(primary_dirs)
+    primary = primary_dirs[0]
+    # Perpendicular directions for occasional jogs
+    if primary[0] == 0:  # horizontal primary
+        perp = [(-1, 0), (1, 0)]
+    else:  # vertical primary
+        perp = [(0, -1), (0, 1)]
+
     for _ in range(vein_length - 1):
-        # Shuffle directions for drunk walk
-        dirs = [(-1, 0), (1, 0), (0, -1), (0, 1)]
-        random.shuffle(dirs)
+        # 70% continue in primary direction, 30% jog perpendicular
+        if random.random() < 0.70:
+            candidates_dir = [primary]
+        else:
+            candidates_dir = list(perp)
+            random.shuffle(candidates_dir)
+
         moved = False
-        for dy, dx in dirs:
+        for dy, dx in candidates_dir:
             nr, nc = cr + dy, cc + dx
             if (nr, nc) in visited:
                 continue
-            # Stay within bounds (avoid edges) and stay in walls
             if 1 <= nr < floor.rows - 1 and 1 <= nc < floor.cols - 1:
                 if floor.grid[nr][nc].room_type == wall_char:
                     vein_cells.append((nr, nc))
@@ -68,7 +82,20 @@ def generate_ore_vein(floor):
                     moved = True
                     break
         if not moved:
-            break  # Dead end, stop the vein here
+            # Try primary direction as fallback if perpendicular failed
+            for dy, dx in [primary] + perp:
+                nr, nc = cr + dy, cc + dx
+                if (nr, nc) in visited:
+                    continue
+                if 1 <= nr < floor.rows - 1 and 1 <= nc < floor.cols - 1:
+                    if floor.grid[nr][nc].room_type == wall_char:
+                        vein_cells.append((nr, nc))
+                        visited.add((nr, nc))
+                        cr, cc = nr, nc
+                        moved = True
+                        break
+            if not moved:
+                break  # Dead end, stop the vein here
 
     # Only create the vein if we got at least 3 tiles
     if len(vein_cells) >= 3:

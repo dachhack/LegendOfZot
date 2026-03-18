@@ -4,9 +4,9 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 24
+BUILD_NUMBER = 25
 CHANGELOG = [
-    "Ore veins: drunk-carved tunnels of 5-10 mineable walls spawn on 50% of floors",
+    "Ore veins now carve as directional worms — mostly straight with natural jogs",
     "Dwarves sense ore veins when adjacent — detected veins show as % on the map",
     "Mining reworked: only ore veins can be mined (not regular walls)",
     "Mines drop ore ingredients (70%) or sellable gems for gold (30%)",
