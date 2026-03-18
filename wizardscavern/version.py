@@ -4,8 +4,9 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 5
+BUILD_NUMBER = 6
 CHANGELOG = [
+    "Fix input/SEND button cut off at bottom by increasing safe area spacer",
     "Fix button panels getting cut off: dynamic heights for keyboard/numpad/normal",
     "Fix QWERTY row 3 uneven sizing: shift+7 letters+2 spacers = 10 cols like row 1",
     "Fix QWERTY keyboard buttons not showing on character creation screen",
@@ -13,5 +14,4 @@ CHANGELOG = [
     "Font size toggle (Aa+/Aa-) moved from inventory to journal",
     "Grey borders on all room interactions, removed colored backgrounds",
     "Shorter input bar and buttons to save vertical space",
-    "Vendor name top-aligned with greeting text below inline with sprite",
 ]
