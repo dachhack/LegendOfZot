@@ -603,7 +603,7 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, height=28, font_size=12,
+            style=Pack(flex=1, margin=2, height=36, font_size=12,
                        background_color='#2a2a2a', color='#EEE')
         )
 
@@ -614,19 +614,19 @@ class WizardsCavernApp(toga.App):
         self.backspace_button = toga.Button(
             "\u232b",
             on_press=lambda w: self.number_pad_backspace(),
-            style=Pack(margin=2, width=50, height=28, font_size=12,
+            style=Pack(margin=2, width=50, height=36, font_size=13,
                        background_color='#333', color='#EEE')
         )
 
         self.submit_button = toga.Button(
             "SEND",
             on_press=self.on_command_submit,
-            style=Pack(margin=2, width=65, height=28, font_size=12, font_weight='bold',
+            style=Pack(margin=2, width=70, height=36, font_size=13, font_weight='bold',
                        background_color='#444', color='#FFF')
         )
         
         self.input_row = toga.Box(
-            style=Pack(direction=ROW, margin=2, height=32, background_color='#1a1a1a'),
+            style=Pack(direction=ROW, margin=2, height=40, background_color='#1a1a1a'),
             children=[
                 self.input_field,
                 self.backspace_button,
@@ -648,7 +648,7 @@ class WizardsCavernApp(toga.App):
             style=Pack(
                 direction=COLUMN,
                 background_color="#1a1a1a",
-                height=200,
+                height=208,
                 flex=0,
             ),
             children=[
@@ -711,8 +711,8 @@ class WizardsCavernApp(toga.App):
         # In vendor modes, b/s/ba need to wait for item numbers
         is_vendor_mode = gs.prompt_cntl in ['vendor_shop', 'starting_shop']
         is_spell_memorization_mode = gs.prompt_cntl == 'spell_memorization_mode'
-        needs_number_suffix = (cmd in ['u', 'e'] and self.current_needs_numbers and not gs.inventory_filter) or \
-                              (cmd in ['b', 's', 'r', 'id'] and is_vendor_mode) or \
+        # u/e always submit immediately (toggles inventory filter, then user picks number)
+        needs_number_suffix = (cmd in ['b', 's', 'r', 'id'] and is_vendor_mode) or \
                               (cmd in ['m', 'f'] and is_spell_memorization_mode)
         
         # Special case: 'ba' (buy all) in starting shop - needs send but no number
@@ -937,15 +937,15 @@ class WizardsCavernApp(toga.App):
         # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
             # QWERTY keyboard: 3 rows × 38px keys
-            self.bottom_panel.style.height = 190
+            self.bottom_panel.style.height = 198
             self.button_panel.style.height = 116
         elif needs_numbers:
             # Numpad layout: 4 rows × 26px compact keys
-            self.bottom_panel.style.height = 180
+            self.bottom_panel.style.height = 188
             self.button_panel.style.height = 106
         else:
             # Normal: 3 rows × 30px buttons
-            self.bottom_panel.style.height = 162
+            self.bottom_panel.style.height = 170
             self.button_panel.style.height = 92
 
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
@@ -2945,14 +2945,14 @@ class WizardsCavernApp(toga.App):
 
             # Build ingredients display
             ingredients_html = "<div style='margin-bottom: 10px;'>"
-            ingredients_html += "<div style='color: #4CAF50; font-weight: bold; margin-bottom: 5px;'>Your Ingredients:</div>"
+            ingredients_html += "<div style='color: #4CAF50; font-weight: bold; font-size: 16px; margin-bottom: 5px;'>Your Ingredients:</div>"
             if ingredient_counts:
                 ing_list = ", ".join([f"{count}x {name}" for name, count in sorted(ingredient_counts.items())])
-                ingredients_html += f"<div style='color: #CCC; font-size: 14px;'>{ing_list}</div>"
+                ingredients_html += f"<div style='color: #DDD; font-size: 15px;'>{ing_list}</div>"
             else:
-                ingredients_html += "<div style='color: #AAA; font-size: 14px; font-style: italic;'>No ingredients. Harvest from Garden rooms!</div>"
+                ingredients_html += "<div style='color: #BBB; font-size: 15px; font-style: italic;'>No ingredients. Harvest from Garden rooms!</div>"
             if ration_count > 0:
-                ingredients_html += f"<div style='color: #88FF88; font-size: 14px;'>{ration_count}x Rations</div>"
+                ingredients_html += f"<div style='color: #88FF88; font-size: 15px;'>{ration_count}x Rations</div>"
             ingredients_html += "</div>"
             
             # Build craftable recipes HTML
@@ -2972,7 +2972,7 @@ class WizardsCavernApp(toga.App):
                 recipe_counter = 1
                 for tier in sorted(by_tier.keys()):
                     tier_color = tier_colors.get(tier, '#888')
-                    recipes_html += f"<div style='color: {tier_color}; font-weight: bold; margin: 8px 0 4px 0; border-bottom: 1px solid {tier_color};'>TIER {tier} - {tier_names[tier]}</div>"
+                    recipes_html += f"<div style='color: {tier_color}; font-weight: bold; font-size: 16px; margin: 8px 0 4px 0; border-bottom: 1px solid {tier_color};'>TIER {tier} - {tier_names[tier]}</div>"
                     
                     for recipe_name, recipe_data in by_tier[tier]:
                         crafted_item = recipe_data['result']()
@@ -2983,39 +2983,39 @@ class WizardsCavernApp(toga.App):
 
                         recipes_html += f"""
                             <div style='padding: 6px; margin: 4px 0; background: rgba(255,255,255,0.05); border-radius: 3px; border-left: 3px solid {tier_color};'>
-                                <div style='color: #FFD700; font-weight: bold; font-size: 14px;'>{recipe_counter}. {recipe_name}</div>
-                                <div style='color: #CCC; font-size: 14px;'>Needs: {ingredients_text}</div>
-                                <div style='color: #DDD; font-size: 14px; font-style: italic;'>{crafted_item.description}</div>
+                                <div style='color: #FFD700; font-weight: bold; font-size: 16px;'>{recipe_counter}. {recipe_name}</div>
+                                <div style='color: #DDD; font-size: 15px;'>Needs: {ingredients_text}</div>
+                                <div style='color: #EEE; font-size: 15px; font-style: italic;'>{crafted_item.description}</div>
                             </div>
                         """
                         recipe_counter += 1
             else:
-                recipes_html = "<div style='color: #AAA; font-style: italic; padding: 10px; font-size: 14px;'>No recipes available. Collect more ingredients!</div>"
+                recipes_html = "<div style='color: #CCC; font-style: italic; padding: 10px; font-size: 15px;'>No recipes available. Collect more ingredients!</div>"
             
             # Build close recipes HTML
             close_html = ""
             if close:
                 close_html = "<div style='margin-top: 10px; padding-top: 8px; border-top: 1px solid #444;'>"
-                close_html += "<div style='color: #CCC; font-size: 14px; margin-bottom: 5px;'>Almost Craftable:</div>"
+                close_html += "<div style='color: #DDD; font-size: 15px; margin-bottom: 5px;'>Almost Craftable:</div>"
                 for recipe_name, recipe_data, _, missing in close[:3]:
                     missing_text = ", ".join([f"{count}x {name}" for name, count in missing])
                     tier = recipe_data.get('tier', 1)
-                    close_html += f"<div style='color: #AAA; font-size: 13px;'>T{tier} {recipe_name} - <span style='color: #F44336;'>Need: {missing_text}</span></div>"
+                    close_html += f"<div style='color: #BBB; font-size: 14px;'>T{tier} {recipe_name} - <span style='color: #F44336;'>Need: {missing_text}</span></div>"
                 if len(close) > 3:
-                    close_html += f"<div style='color: #999; font-size: 13px;'>...and {len(close) - 3} more</div>"
+                    close_html += f"<div style='color: #AAA; font-size: 14px;'>...and {len(close) - 3} more</div>"
                 close_html += "</div>"
             
             crafting_html = f"""
                 <div style="border: 2px solid #E040FB; border-radius: 4px; padding: 10px; background: #1a1a1a;">
-                    <div style="color: #E040FB; font-weight: bold; font-size: 16px; text-align: center; margin-bottom: 8px;">
+                    <div style="color: #E040FB; font-weight: bold; font-size: 18px; text-align: center; margin-bottom: 8px;">
                         CRAFTING
                     </div>
                     {ingredients_html}
-                    <div style="max-height: 300px; overflow-y: auto;">
+                    <div style="max-height: 500px; overflow-y: auto;">
                         {recipes_html}
                     </div>
                     {close_html}
-                    <div style="text-align: center; margin-top: 8px; color: #CCC; font-size: 14px;">
+                    <div style="text-align: center; margin-top: 8px; color: #DDD; font-size: 15px;">
                         Craftable: {len(craftable)} | Enter number to craft
                     </div>
                 </div>
@@ -3140,7 +3140,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
 
-                <div style="display: flex; flex-direction: column; gap: 2px; width: 50%; ">
+                <div style="display: flex; flex-direction: column; gap: 2px; width: 100%; ">
                     <div style="border: 2px solid #FF6F00; padding: 2px; border-radius: 2px;">
                         <b style="color: #FF6F00;">1.  Weapons ({weapons_found}/{weapons_total})</b><br>
                         <span style="font-size: 12px; color: #DDD;">Swords, axes, and instruments of combat</span>

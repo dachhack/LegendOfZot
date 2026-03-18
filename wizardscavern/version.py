@@ -4,14 +4,14 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 17
+BUILD_NUMBER = 18
 CHANGELOG = [
+    "Taller Send button and input box for easier tapping",
+    "Use/Equip buttons now instantly filter inventory list",
+    "Journal category boxes now fill full container width",
+    "Crafting window taller with larger, lighter text for readability",
     "Fix button panels getting cut off: dynamic heights for keyboard/numpad/normal",
     "Fix QWERTY keyboard buttons not showing on character creation screen",
     "Font size toggle (Aa+/Aa-) moved from inventory to journal",
     "Buttons now show 5-letter labels (Equip, Craft, Attck, Flee, etc.)",
-    "Wider command buttons (65px) to fit longer labels",
-    "Use/Equip/Eat buttons now filter inventory to show only matching items",
-    "New 'Eat' command for food items (food no longer consumed via 'Use')",
-    "Fix n=no/y=yes showing as D-pad instead of regular buttons",
 ]
