@@ -603,7 +603,7 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, height=36, font_size=11, background_color='#2a2a2a', color='#EEE')
+            style=Pack(flex=1, margin=1, height=32, font_size=11, background_color='#2a2a2a', color='#EEE')
         )
 
         # Note: iOS keyboard will be disabled AFTER window is shown
@@ -613,19 +613,19 @@ class WizardsCavernApp(toga.App):
         self.backspace_button = toga.Button(
             "\u232b",
             on_press=lambda w: self.number_pad_backspace(),
-            style=Pack(margin=2, width=45, height=42, font_size=14,
+            style=Pack(margin=1, width=45, height=36, font_size=14,
                        background_color='#333', color='#EEE')
         )
 
         self.submit_button = toga.Button(
             "Send",
             on_press=self.on_command_submit,
-            style=Pack(margin=2, width=80, height=42, font_size=14,
+            style=Pack(margin=1, width=80, height=36, font_size=14,
                        background_color='#444', color='#FFF')
         )
         
         self.input_row = toga.Box(
-            style=Pack(direction=ROW, margin=2, background_color='#1a1a1a'),
+            style=Pack(direction=ROW, margin=1, background_color='#1a1a1a'),
             children=[
                 self.input_field,
                 self.backspace_button,
@@ -647,14 +647,14 @@ class WizardsCavernApp(toga.App):
             style=Pack(
                 direction=COLUMN,
                 background_color="#1a1a1a",
-                height=170,
+                height=142,
                 flex=0,
             ),
             children=[
                 self.commands_label,
                 self.button_panel,
                 self.input_row,
-                toga.Box(style=Pack(height=14, background_color='#1a1a1a')),
+                toga.Box(style=Pack(height=6, background_color='#1a1a1a')),
             ]
         )
 
@@ -936,16 +936,16 @@ class WizardsCavernApp(toga.App):
         # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
             # QWERTY keyboard: 3 rows × 38px keys = 114px content
-            self.bottom_panel.style.height = 198
+            self.bottom_panel.style.height = 180
             self.button_panel.style.height = 116
         elif needs_numbers:
-            # Numpad layout: 4 rows × 26px compact keys = 104px content
-            self.bottom_panel.style.height = 188
-            self.button_panel.style.height = 106
+            # Numpad layout: 4 rows × 22px compact keys = 88px content
+            self.bottom_panel.style.height = 154
+            self.button_panel.style.height = 90
         else:
-            # Normal: 3 rows × 30px buttons = 90px content
-            self.bottom_panel.style.height = 170
-            self.button_panel.style.height = 92
+            # Normal: 3 rows × 26px buttons = 78px content
+            self.bottom_panel.style.height = 142
+            self.button_panel.style.height = 80
 
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
         if gs.prompt_cntl in ['intro_story', 'main_menu']:
@@ -1241,7 +1241,7 @@ class WizardsCavernApp(toga.App):
             if can_offer:
                 numpad_rows[2][2] = toga.Button(
                     '9', on_press=lambda w: self.number_pad_input('9'),
-                    style=Pack(flex=1, margin=0, font_size=11, font_weight='bold', color='#FFD700', height=26))
+                    style=Pack(width=55, margin=0, font_size=11, font_weight='bold', color='#FFD700', height=22))
 
         right_col = toga.Box(style=Pack(direction=COLUMN))
         for row_btns in numpad_rows:
@@ -1439,8 +1439,8 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=11, flex=1,
-                       background_color='#333', color='#EEE', height=30)
+            style=Pack(margin=0, font_size=11, width=55,
+                       background_color='#333', color='#EEE', height=26)
         )
         self._compact_android_button(btn)
         return btn
@@ -1450,7 +1450,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=13, font_weight='bold', width=65, height=34,
+            style=Pack(margin=0, font_size=13, font_weight='bold', width=65, height=26,
                        background_color='#444', color='#FFF')
         )
         self._compact_android_button(btn)
@@ -1458,12 +1458,12 @@ class WizardsCavernApp(toga.App):
 
     def create_numpad_button(self, number, compact=False):
         """Create a number pad button. Compact mode uses shorter height for 4-row layout."""
-        h = 26 if compact else 34
+        h = 22 if compact else 30
         fs = 11 if compact else 12
         btn = toga.Button(
             number,
             on_press=lambda w, n=number: self.number_pad_input(n),
-            style=Pack(margin=0, font_size=fs, font_weight='bold', flex=1,
+            style=Pack(margin=0, font_size=fs, font_weight='bold', width=55,
                        color='#4CAF50', height=h, background_color='#2a2a2a')
         )
         self._compact_android_button(btn)
@@ -1471,25 +1471,25 @@ class WizardsCavernApp(toga.App):
 
     def create_spacer(self):
         """Create an empty spacer that fills remaining space."""
-        return toga.Box(style=Pack(flex=1, height=30))
+        return toga.Box(style=Pack(flex=1, height=26))
     def create_dpad_button(self, cmd_key, arrow_label):
         """Create a D-pad directional button with arrow symbol and controller styling."""
         btn = toga.Button(
             arrow_label,
             on_press=lambda w, k=cmd_key: self.quick_command(k, cmd_key.upper()),
             style=Pack(margin=0, font_size=14, font_weight='bold', width=50,
-                       background_color='#2a2a2a', color='#AAA', height=30)
+                       background_color='#2a2a2a', color='#AAA', height=26)
         )
         self._compact_android_button(btn)
         return btn
 
     def create_dpad_center(self):
         """Create the center piece of the D-pad cross."""
-        return toga.Box(style=Pack(width=50, height=30, background_color='#222'))
+        return toga.Box(style=Pack(width=50, height=26, background_color='#222'))
 
     def create_dpad_spacer(self):
         """Create an invisible corner spacer for D-pad cross shape."""
-        return toga.Box(style=Pack(width=50, height=30, background_color='#1a1a1a'))
+        return toga.Box(style=Pack(width=50, height=26, background_color='#1a1a1a'))
     def create_filler(self):
         """Create a small gap between button groups."""
         return toga.Box(style=Pack(width=2))
