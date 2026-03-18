@@ -647,14 +647,14 @@ class WizardsCavernApp(toga.App):
             style=Pack(
                 direction=COLUMN,
                 background_color="#1a1a1a",
-                height=190,
+                height=170,
                 flex=0,
             ),
             children=[
                 self.commands_label,
                 self.button_panel,
                 self.input_row,
-                toga.Box(style=Pack(height=34, background_color='#1a1a1a')),
+                toga.Box(style=Pack(height=14, background_color='#1a1a1a')),
             ]
         )
 
@@ -936,15 +936,15 @@ class WizardsCavernApp(toga.App):
         # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
             # QWERTY keyboard: 3 rows × 38px keys = 114px content
-            self.bottom_panel.style.height = 218
+            self.bottom_panel.style.height = 198
             self.button_panel.style.height = 116
         elif needs_numbers:
             # Numpad layout: 4 rows × 26px compact keys = 104px content
-            self.bottom_panel.style.height = 208
+            self.bottom_panel.style.height = 188
             self.button_panel.style.height = 106
         else:
             # Normal: 3 rows × 30px buttons = 90px content
-            self.bottom_panel.style.height = 190
+            self.bottom_panel.style.height = 170
             self.button_panel.style.height = 92
 
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
@@ -1241,7 +1241,7 @@ class WizardsCavernApp(toga.App):
             if can_offer:
                 numpad_rows[2][2] = toga.Button(
                     '9', on_press=lambda w: self.number_pad_input('9'),
-                    style=Pack(flex=1, margin=0, font_size=11, font_weight='bold', color='#FFD700', height=26, width=55))
+                    style=Pack(flex=1, margin=0, font_size=11, font_weight='bold', color='#FFD700', height=26))
 
         right_col = toga.Box(style=Pack(direction=COLUMN))
         for row_btns in numpad_rows:
@@ -1439,7 +1439,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=11, width=55,
+            style=Pack(margin=0, font_size=11, flex=1,
                        background_color='#333', color='#EEE', height=30)
         )
         self._compact_android_button(btn)
@@ -1463,7 +1463,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             number,
             on_press=lambda w, n=number: self.number_pad_input(n),
-            style=Pack(margin=0, font_size=fs, font_weight='bold', width=55,
+            style=Pack(margin=0, font_size=fs, font_weight='bold', flex=1,
                        color='#4CAF50', height=h, background_color='#2a2a2a')
         )
         self._compact_android_button(btn)
