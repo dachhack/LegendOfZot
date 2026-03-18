@@ -647,7 +647,7 @@ class WizardsCavernApp(toga.App):
             style=Pack(
                 direction=COLUMN,
                 background_color="#1a1a1a",
-                height=170,
+                height=190,
                 flex=0,
             ),
             children=[
@@ -932,15 +932,15 @@ class WizardsCavernApp(toga.App):
         # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
             # QWERTY keyboard: 3 rows × 38px keys
-            self.bottom_panel.style.height = 238
+            self.bottom_panel.style.height = 248
             self.button_panel.style.height = 145
         elif needs_numbers:
             # Numpad layout: 4 rows × 26px compact keys
-            self.bottom_panel.style.height = 198
+            self.bottom_panel.style.height = 210
             self.button_panel.style.height = 110
         else:
             # Normal: 3 rows × 30px buttons
-            self.bottom_panel.style.height = 178
+            self.bottom_panel.style.height = 190
             self.button_panel.style.height = 94
 
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
