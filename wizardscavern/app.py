@@ -640,7 +640,7 @@ class WizardsCavernApp(toga.App):
         # Commands hint label - single line, no wrapping
         self.commands_label = toga.Label(
             "",
-            style=Pack(margin=(1, 5), font_size=9, color="#AAA", height=18)
+            style=Pack(margin=(0, 5), font_size=9, color="#AAA", height=14)
         )
         
         self.bottom_panel = toga.Box(
@@ -648,6 +648,7 @@ class WizardsCavernApp(toga.App):
                 direction=COLUMN,
                 background_color="#1a1a1a",
                 flex=0,
+                padding_bottom=14,
             ),
             children=[
                 self.commands_label,
@@ -1422,7 +1423,7 @@ class WizardsCavernApp(toga.App):
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
             style=Pack(margin=0, font_size=11, width=55,
-                       background_color='#333', color='#EEE', height=34)
+                       background_color='#333', color='#EEE', height=30)
         )
         self._compact_android_button(btn)
         return btn
@@ -1432,7 +1433,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=13, font_weight='bold', width=65, height=40,
+            style=Pack(margin=0, font_size=13, font_weight='bold', width=65, height=34,
                        background_color='#444', color='#FFF')
         )
         self._compact_android_button(btn)
@@ -1453,25 +1454,25 @@ class WizardsCavernApp(toga.App):
 
     def create_spacer(self):
         """Create an empty spacer that fills remaining space."""
-        return toga.Box(style=Pack(flex=1, height=34))
+        return toga.Box(style=Pack(flex=1, height=30))
     def create_dpad_button(self, cmd_key, arrow_label):
         """Create a D-pad directional button with arrow symbol and controller styling."""
         btn = toga.Button(
             arrow_label,
             on_press=lambda w, k=cmd_key: self.quick_command(k, cmd_key.upper()),
             style=Pack(margin=0, font_size=14, font_weight='bold', width=50,
-                       background_color='#2a2a2a', color='#AAA', height=34)
+                       background_color='#2a2a2a', color='#AAA', height=30)
         )
         self._compact_android_button(btn)
         return btn
 
     def create_dpad_center(self):
         """Create the center piece of the D-pad cross."""
-        return toga.Box(style=Pack(width=50, height=34, background_color='#222'))
+        return toga.Box(style=Pack(width=50, height=30, background_color='#222'))
 
     def create_dpad_spacer(self):
         """Create an invisible corner spacer for D-pad cross shape."""
-        return toga.Box(style=Pack(width=50, height=34, background_color='#1a1a1a'))
+        return toga.Box(style=Pack(width=50, height=30, background_color='#1a1a1a'))
     def create_filler(self):
         """Create a small gap between button groups."""
         return toga.Box(style=Pack(width=2))
