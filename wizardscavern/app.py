@@ -495,6 +495,7 @@ class WizardsCavernApp(toga.App):
         gs.looted_tombs = {}
         gs.harvested_gardens = {}
         gs.harvested_fey_floors = set()
+        gs.dwarf_mines_per_floor = {}
         gs.haunted_floors = {}
         gs.ephemeral_gardens = {}
         gs.pending_tomb_guardian_reward = None
@@ -1673,6 +1674,72 @@ class WizardsCavernApp(toga.App):
             gs.previous_prompt_cntl = gs.prompt_cntl
             gs.prompt_cntl = "confirm_quit"
             add_log("Are you sure you want to quit? (y/n)")
+            return
+
+        if cmd == 'm' and gs.prompt_cntl == "game_loop":
+            # Dwarf mining - break an adjacent wall
+            if getattr(gs.player_character, 'race', '').lower() != 'dwarf':
+                add_log(f"{COLOR_YELLOW}Only dwarves know how to mine stone walls.{COLOR_RESET}")
+                return
+            floor_num = gs.player_character.z
+            mines_used = gs.dwarf_mines_per_floor.get(floor_num, 0)
+            if mines_used >= 3:
+                add_log(f"{COLOR_YELLOW}You've exhausted the minable stone on this floor (3/3).{COLOR_RESET}")
+                return
+            # Check if any adjacent wall exists
+            current_floor = gs.my_tower.floors[gs.player_character.z]
+            has_wall = False
+            for dy, dx in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                ty, tx = gs.player_character.y + dy, gs.player_character.x + dx
+                if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                    if current_floor.grid[ty][tx].room_type == current_floor.wall_char:
+                        has_wall = True
+                        break
+            if not has_wall:
+                add_log(f"{COLOR_YELLOW}No walls adjacent to mine.{COLOR_RESET}")
+                return
+            add_log(f"{COLOR_CYAN}Which direction to mine? (n/s/e/w){COLOR_RESET}")
+            gs.prompt_cntl = "mine_direction_mode"
+            return
+
+        if gs.prompt_cntl == "mine_direction_mode":
+            if cmd in ['n', 's', 'e', 'w']:
+                from .item_templates import MINING_INGREDIENTS
+                current_floor = gs.my_tower.floors[gs.player_character.z]
+                dx, dy = {'n': (0, -1), 's': (0, 1), 'e': (1, 0), 'w': (-1, 0)}[cmd]
+                tx, ty = gs.player_character.x + dx, gs.player_character.y + dy
+                if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                    room = current_floor.grid[ty][tx]
+                    if room.room_type == current_floor.wall_char:
+                        # Break the wall
+                        room.room_type = '.'
+                        room.discovered = True
+                        floor_num = gs.player_character.z
+                        gs.dwarf_mines_per_floor[floor_num] = gs.dwarf_mines_per_floor.get(floor_num, 0) + 1
+                        mines_left = 3 - gs.dwarf_mines_per_floor[floor_num]
+                        direction_name = {'n': 'northern', 's': 'southern', 'e': 'eastern', 'w': 'western'}[cmd]
+                        add_log(f"{COLOR_CYAN}You smash through the {direction_name} wall!{COLOR_RESET}")
+                        add_log(f"{COLOR_GREY}({mines_left} mine{'s' if mines_left != 1 else ''} remaining on this floor){COLOR_RESET}")
+                        # Mining loot: 1-3 ore/gem items
+                        num_items = random.randint(1, 3)
+                        for _ in range(num_items):
+                            item_data = random.choice(MINING_INGREDIENTS)
+                            ingredient = Ingredient(name=item_data[0], description=item_data[1],
+                                                    value=item_data[2], level=item_data[3],
+                                                    ingredient_type='ore')
+                            gs.player_character.inventory.add_item(ingredient)
+                            add_log(f"{COLOR_GREEN}Mined: {ingredient.name}{COLOR_RESET}")
+                    else:
+                        add_log(f"{COLOR_YELLOW}That's not a wall!{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}Nothing to mine in that direction.{COLOR_RESET}")
+                gs.prompt_cntl = "game_loop"
+            elif cmd == 'c':
+                add_log("Mining cancelled.")
+                gs.prompt_cntl = "game_loop"
+            else:
+                add_log("Pick a direction (n/s/e/w) or 'c' to cancel.")
+            self.render()
             return
 
         if cmd == 'i' and gs.prompt_cntl == "game_loop":
@@ -5095,6 +5162,19 @@ class WizardsCavernApp(toga.App):
                 if has_lantern:
                     base_commands += f" | l = lantern"
 
+                # Add mine command for dwarves adjacent to walls
+                if getattr(gs.player_character, 'race', '').lower() == 'dwarf':
+                    mines_used = gs.dwarf_mines_per_floor.get(gs.player_character.z, 0)
+                    if mines_used < 3:
+                        has_adj_wall = False
+                        for dy, dx in [(-1, 0), (1, 0), (0, -1), (0, 1)]:
+                            ty, tx = gs.player_character.y + dy, gs.player_character.x + dx
+                            if 0 <= ty < current_floor.rows and 0 <= tx < current_floor.cols:
+                                if current_floor.grid[ty][tx].room_type == current_floor.wall_char:
+                                    has_adj_wall = True
+                                    break
+                        if has_adj_wall:
+                            base_commands += " | m = mine"
 
                 # Add stairs commands if on stairs
                 if current_room.room_type == 'U':
@@ -5108,6 +5188,8 @@ class WizardsCavernApp(toga.App):
                 else:
                     current_commands_text = base_commands
 
+            elif gs.prompt_cntl == "mine_direction_mode":
+                current_commands_text = "n/s/e/w = mine direction | c = cancel"
             elif gs.prompt_cntl == "confirm_quit":
                 current_commands_text = "y = yes | n = no"
             elif gs.prompt_cntl == "chest_mode":

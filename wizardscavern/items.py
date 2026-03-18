@@ -1968,8 +1968,18 @@ class Scroll(Item):
                 add_log(f"{COLOR_YELLOW}The magic fizzles — no suitable ground nearby.{COLOR_RESET}")
                 return False  # Don't consume
 
-            # Create 1-4 gardens (capped by available spots)
-            num_gardens = min(random.randint(1, 4), len(candidates))
+            # Elves get bonus: guaranteed 2-4, doubled fey chance
+            is_elf = getattr(character, 'race', '').lower() == 'elf'
+            if is_elf:
+                min_gardens = 2
+                fey_chance = 0.30
+                add_log(f"{COLOR_CYAN}Your elven nature amplifies the druidic magic!{COLOR_RESET}")
+            else:
+                min_gardens = 1
+                fey_chance = 0.15
+
+            # Create gardens (capped by available spots)
+            num_gardens = min(random.randint(min_gardens, 4), len(candidates))
             random.shuffle(candidates)
             chosen = candidates[:num_gardens]
 
@@ -1979,8 +1989,7 @@ class Scroll(Item):
                 room.room_type = 'G'
                 room.discovered = True
                 gardens_created += 1
-                # 15% chance each garden is a fey garden
-                if random.random() < 0.15:
+                if random.random() < fey_chance:
                     room.properties['is_fey_garden'] = True
                     room.properties['fey_garden_floor_level'] = character.z
                     fey_created = True

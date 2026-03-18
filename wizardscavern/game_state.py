@@ -272,6 +272,7 @@ looted_dungeons = {}
 looted_tombs = {}
 harvested_gardens = {}
 harvested_fey_floors = set()  # Floors where a fey garden has been harvested (no respawn)
+dwarf_mines_per_floor = {}  # floor_num -> count of walls mined (limit 3 per floor)
 
 # ============================================================================
 # QUEST TRACKING - RUNES & SHARDS (Orb of Zot)

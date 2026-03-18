@@ -236,6 +236,51 @@ LEMBAS_RECIPES = {
     },
 }
 
+# ============================================================================
+# MINING INGREDIENTS (Dwarf mining loot)
+# ============================================================================
+MINING_INGREDIENTS = [
+    # Common (60%)
+    ('Iron Chunk', 'A rough piece of iron ore', 8, 1, 0.20),
+    ('Copper Nugget', 'A small nugget of gleaming copper', 6, 1, 0.20),
+    ('Stone Shard', 'A sharp fragment of cave stone', 4, 1, 0.20),
+    # Uncommon (30%)
+    ('Silver Vein', 'A thin strip of pure silver', 15, 2, 0.12),
+    ('Gold Flake', 'A glittering flake of gold', 20, 2, 0.10),
+    ('Coal Ember', 'A smoldering piece of deep coal', 10, 2, 0.08),
+    # Rare (10%)
+    ('Mithril Shard', 'A sliver of the legendary metal, light as air', 50, 4, 0.04),
+    ('Ruby Fragment', 'A rough ruby shard pulsing with inner fire', 40, 3, 0.03),
+    ('Diamond Chip', 'A tiny but brilliant diamond chip', 60, 5, 0.02),
+    ('Adamantine Dust', 'Dust from the hardest substance known', 75, 5, 0.01),
+]
+
+# ============================================================================
+# DWARVEN RECIPES (Dwarf-only): Mining ingredients -> consumables/gear
+# ============================================================================
+DWARVEN_RECIPES = {
+    'Dwarven Stout': {
+        'ingredients': [('Coal Ember', 1), ('Copper Nugget', 2)],
+        'tier': 1,
+        'result': lambda: Potion(name="Dwarven Stout", potion_type='defense', effect_magnitude=8, duration=8, value=60, level=2, description="+8 Defense for 8 turns")
+    },
+    'Runestone of Might': {
+        'ingredients': [('Iron Chunk', 3), ('Silver Vein', 1)],
+        'tier': 2,
+        'result': lambda: Potion(name="Runestone of Might", potion_type='strength', effect_magnitude=8, duration=8, value=80, level=3, description="+8 Attack for 8 turns")
+    },
+    'Mithril Salve': {
+        'ingredients': [('Mithril Shard', 1), ('Gold Flake', 2)],
+        'tier': 3,
+        'result': lambda: Potion(name="Mithril Salve", potion_type='healing', effect_magnitude=150, value=120, level=4, description="Restores 150 HP")
+    },
+    'Gemstone Tonic': {
+        'ingredients': [('Ruby Fragment', 1), ('Diamond Chip', 1)],
+        'tier': 4,
+        'result': lambda: Potion(name="Gemstone Tonic", potion_type='full_restore', effect_magnitude=0, value=200, level=5, description="Fully restores HP and Mana")
+    },
+}
+
 # Available garden ingredients with spawn chances
 GARDEN_INGREDIENTS = [
     # Common (60% chance)

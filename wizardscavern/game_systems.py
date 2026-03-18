@@ -33,7 +33,8 @@ from .item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES
                             SPELL_TEMPLATES, ALL_ITEM_TEMPLATES, INGREDIENT_TEMPLATES,
                             UNIQUE_WEAPON_TEMPLATES, UNIQUE_ARMOR_TEMPLATES,
                             WEAPON_TIER_PREFIXES, ARMOR_TIER_PREFIXES,
-                            POTION_RECIPES, LEMBAS_RECIPES, GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
+                            POTION_RECIPES, LEMBAS_RECIPES, DWARVEN_RECIPES,
+                            GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
                             HUNGER_MAX, HUNGER_DECAY_PER_MOVE,
                             VAULT_DEFENDER_TEMPLATES, ENHANCED_MINOR_TREASURES,
                             UNIQUE_TREASURE_TEMPLATES,
@@ -1714,6 +1715,22 @@ def get_available_recipes(player_character):
                 if len(missing) <= 2:
                     available.append((recipe_name, recipe_data, False, missing))
 
+    # Check dwarven recipes (dwarf only)
+    if getattr(player_character, 'race', '').lower() == 'dwarf':
+        for recipe_name, recipe_data in DWARVEN_RECIPES.items():
+            can_craft = True
+            missing = []
+            for ing_name, ing_count in recipe_data['ingredients']:
+                if inventory_items.get(ing_name, 0) < ing_count:
+                    can_craft = False
+                    missing.append((ing_name, ing_count - inventory_items.get(ing_name, 0)))
+
+            if can_craft:
+                available.append((recipe_name, recipe_data, True, []))
+            else:
+                if len(missing) <= 2:
+                    available.append((recipe_name, recipe_data, False, missing))
+
     return available
 
 def craft_potion(player_character, recipe_name):
@@ -1723,6 +1740,8 @@ def craft_potion(player_character, recipe_name):
         recipe = POTION_RECIPES[recipe_name]
     elif recipe_name in LEMBAS_RECIPES:
         recipe = LEMBAS_RECIPES[recipe_name]
+    elif recipe_name in DWARVEN_RECIPES:
+        recipe = DWARVEN_RECIPES[recipe_name]
     else:
         add_log(f"{COLOR_RED}Unknown recipe: {recipe_name}{COLOR_RESET}")
         return
