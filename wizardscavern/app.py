@@ -3532,20 +3532,36 @@ class WizardsCavernApp(toga.App):
             # Monster Info
             evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
             evo_name_color = evo_border_color if evo_border_color else "#F44336"
-            monster_html = f"""
-                <div style="padding: 4px; border-radius: 4px; {evo_border_style} margin-bottom: 5px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
-                        <div style="flex-shrink:0;">{monster_sprite_html}</div>
-                        <div>
-                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 15px; margin-bottom: 4px;">{gs.active_monster.name} {evo_tier_label}</div>
-                            <div style="font-size: 12px; margin-bottom: 3px;">Level {gs.active_monster.level}</div>
-                            <div style="font-size: 12px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=15)}</div>
-                            {f'<div style="font-size: 12px; color: #FFB74D; margin-top: 3px;">Weak: {", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
-                            {f'<div style="font-size: 12px; color: #64B5F6; margin-top: 2px;">Resist: {", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
+
+            if gs.large_text_mode:
+                # Ultra-compact side-by-side for large text mode
+                monster_html = f"""
+                    <div style="padding: 2px; border-radius: 3px; {evo_border_style} flex: 1; min-width: 0;">
+                        <div style="display:flex; align-items:center; gap:4px;">
+                            <div style="flex-shrink:0;">{monster_sprite_html}</div>
+                            <div style="min-width:0;">
+                                <div style="color: {evo_name_color}; font-weight: bold; font-size: 10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{gs.active_monster.name} {evo_tier_label}</div>
+                                <div style="font-size: 8px;">Lv {gs.active_monster.level}</div>
+                                <div style="font-size: 8px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=8)}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                """
+                    """
+            else:
+                monster_html = f"""
+                    <div style="padding: 4px; border-radius: 4px; {evo_border_style} margin-bottom: 5px;">
+                        <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                            <div style="flex-shrink:0;">{monster_sprite_html}</div>
+                            <div>
+                                <div style="color: {evo_name_color}; font-weight: bold; font-size: 15px; margin-bottom: 4px;">{gs.active_monster.name} {evo_tier_label}</div>
+                                <div style="font-size: 12px; margin-bottom: 3px;">Level {gs.active_monster.level}</div>
+                                <div style="font-size: 12px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=15)}</div>
+                                {f'<div style="font-size: 12px; color: #FFB74D; margin-top: 3px;">Weak: {", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
+                                {f'<div style="font-size: 12px; color: #64B5F6; margin-top: 2px;">Resist: {", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
+                            </div>
+                        </div>
+                    </div>
+                    """
 
             # Player Combat Info
             player_sprite_html_combat = generate_player_sprite_html(
@@ -3553,22 +3569,39 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'gender', 'male'),
                 getattr(gs.player_character, 'equipped_armor', None)
             )
-            player_combat_html = f"""
-                <div style="padding: 4px; border-radius: 4px; border: 2px solid #666;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
-                        <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
-                        <div>
-                            <div style="color: #4CAF50; font-weight: bold; font-size: 15px; margin-bottom: 4px;"> {gs.player_character.name}</div>
-                            <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=15)}</div>
-                            <div style="font-size: 12px; margin-bottom: 4px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=15)}</div>
-                            <div style="font-size: 12px;">Atk: {gs.player_character.attack} | Def: {gs.player_character.defense}</div>
-                            <div style="font-size: 12px; margin-top: 2px;">Int: {gs.player_character.intelligence} (boosts spells)</div>
-                            {f'<div style="font-size: 9px; color: #64B5F6; margin-top: 3px;">Resist: {", ".join(gs.player_character.elemental_strengths)}</div>' if gs.player_character.elemental_strengths else ''}
-                            {f'<div style="font-size: 9px; color: #FFB74D; margin-top: 2px;">Weak: {", ".join(gs.player_character.elemental_weaknesses)}</div>' if gs.player_character.elemental_weaknesses else ''}
+
+            if gs.large_text_mode:
+                # Ultra-compact side-by-side for large text mode
+                player_combat_html = f"""
+                    <div style="padding: 2px; border-radius: 3px; border: 2px solid #666; flex: 1; min-width: 0;">
+                        <div style="display:flex; align-items:center; gap:4px;">
+                            <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
+                            <div style="min-width:0;">
+                                <div style="color: #4CAF50; font-weight: bold; font-size: 10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{gs.player_character.name}</div>
+                                <div style="font-size: 8px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=8)}</div>
+                                <div style="font-size: 8px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=8)}</div>
+                                <div style="font-size: 7px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                """
+                    """
+            else:
+                player_combat_html = f"""
+                    <div style="padding: 4px; border-radius: 4px; border: 2px solid #666;">
+                        <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                            <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
+                            <div>
+                                <div style="color: #4CAF50; font-weight: bold; font-size: 15px; margin-bottom: 4px;"> {gs.player_character.name}</div>
+                                <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=15)}</div>
+                                <div style="font-size: 12px; margin-bottom: 4px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=15)}</div>
+                                <div style="font-size: 12px;">Atk: {gs.player_character.attack} | Def: {gs.player_character.defense}</div>
+                                <div style="font-size: 12px; margin-top: 2px;">Int: {gs.player_character.intelligence} (boosts spells)</div>
+                                {f'<div style="font-size: 9px; color: #64B5F6; margin-top: 3px;">Resist: {", ".join(gs.player_character.elemental_strengths)}</div>' if gs.player_character.elemental_strengths else ''}
+                                {f'<div style="font-size: 9px; color: #FFB74D; margin-top: 2px;">Weak: {", ".join(gs.player_character.elemental_weaknesses)}</div>' if gs.player_character.elemental_weaknesses else ''}
+                            </div>
+                        </div>
+                    </div>
+                    """
 
             # Spells List
             available_spells = gs.player_character.memorized_spells
@@ -3599,23 +3632,42 @@ class WizardsCavernApp(toga.App):
             spells_html += '</div>'
 
             # Layout: Map | Combat Info | Spell Menu
-            html_code = f"""
-                <div style="font-family: monospace; font-size: 12px;">
-                    {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
-                    {player_stats_html}
+            if gs.large_text_mode:
+                html_code = f"""
+                    <div style="font-family: monospace; font-size: 12px;">
+                        {achievement_notifications}
+                        <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                        {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%; max-width: 300px;">
-                            {monster_html}
-                            {player_combat_html}
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px; margin-bottom: 4px;">
+                            <div>{grid_html}</div>
+                            <div style="display: flex; gap: 4px; width: 100%; max-width: 340px;">
+                                {monster_html}
+                                {player_combat_html}
+                            </div>
                         </div>
+
+                        <div class="room-panel" style="width: 100%;">{spells_html}</div>
+                        {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
+                    </div>"""
+            else:
+                html_code = f"""
+                    <div style="font-family: monospace; font-size: 12px;">
+                        {achievement_notifications}
+                        <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                        {player_stats_html}
+
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 8px;">
+                            <div>{grid_html}</div>
+                            <div style="width: 100%; max-width: 300px;">
+                                {monster_html}
+                                {player_combat_html}
+                            </div>
+                        </div>
+
+                        <div class="room-panel" style="width: 100%;">{spells_html}</div>
+                        {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
                     </div>
-                    
-                    <div class="room-panel" style="width: 100%;">{spells_html}</div>
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
-                </div>
                 """
             current_commands_text = "#  = cast spell | x = cancel"
 
@@ -3635,47 +3687,80 @@ class WizardsCavernApp(toga.App):
             # Compact Monster Info
             evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
             evo_name_color = evo_border_color if evo_border_color else "#F44336"
-            monster_html = f"""
-                <div style="padding: 3px; border-radius: 3px; {evo_border_style} margin-bottom: 4px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
-                        <div style="flex-shrink:0;">{monster_sprite_html}</div>
-                        <div>
-                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
-                            <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
-                            <div style="font-size: 9px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=10)}</div>
-                            {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
-                            {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 1px;">{", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
+
+            if gs.large_text_mode:
+                # Ultra-compact side-by-side layout for large text mode
+                monster_html = f"""
+                    <div style="padding: 2px; border-radius: 3px; {evo_border_style} flex: 1; min-width: 0;">
+                        <div style="display:flex; align-items:center; gap:4px;">
+                            <div style="flex-shrink:0;">{monster_sprite_html}</div>
+                            <div style="min-width:0;">
+                                <div style="color: {evo_name_color}; font-weight: bold; font-size: 10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{gs.active_monster.name} {evo_tier_label}</div>
+                                <div style="font-size: 8px;">Lv {gs.active_monster.level}</div>
+                                <div style="font-size: 8px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=8)}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                """
+                    """
+            else:
+                monster_html = f"""
+                    <div style="padding: 3px; border-radius: 3px; {evo_border_style} margin-bottom: 4px;">
+                        <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                            <div style="flex-shrink:0;">{monster_sprite_html}</div>
+                            <div>
+                                <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
+                                <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
+                                <div style="font-size: 9px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=10)}</div>
+                                {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
+                                {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 1px;">{", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
+                            </div>
+                        </div>
+                    </div>
+                    """
 
             # Build player display name with title from get_player_title function
             player_title = get_player_title(gs.player_character)
             player_display = f"{gs.player_character.name} the {player_title}"
-            
+
             # Compact Player Combat Info
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
                 getattr(gs.player_character, 'equipped_armor', None)
             )
-            player_combat_html = f"""
-                <div style="padding: 3px; border-radius: 3px; border: 2px solid #666;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
-                        <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
-                        <div>
-                            <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {player_display}</div>
-                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=10)}</div>
-                            <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
-                            <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
-                            {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 2px;"> {", ".join(gs.player_character.elemental_strengths)}</div>' if gs.player_character.elemental_strengths else ''}
-                            {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 1px;"> {", ".join(gs.player_character.elemental_weaknesses)}</div>' if gs.player_character.elemental_weaknesses else ''}
-                            {f'<div style="font-size: 8px; color: #FDD835; margin-top: 1px;">{", ".join(gs.player_character.status_effects.keys())}</div>' if gs.player_character.status_effects else ''}
+
+            if gs.large_text_mode:
+                # Ultra-compact side-by-side layout for large text mode
+                player_combat_html = f"""
+                    <div style="padding: 2px; border-radius: 3px; border: 2px solid #666; flex: 1; min-width: 0;">
+                        <div style="display:flex; align-items:center; gap:4px;">
+                            <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
+                            <div style="min-width:0;">
+                                <div style="color: #4CAF50; font-weight: bold; font-size: 10px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">{gs.player_character.name}</div>
+                                <div style="font-size: 8px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=8)}</div>
+                                <div style="font-size: 8px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=8)}</div>
+                                <div style="font-size: 7px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                """
+                    """
+            else:
+                player_combat_html = f"""
+                    <div style="padding: 3px; border-radius: 3px; border: 2px solid #666;">
+                        <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
+                            <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
+                            <div>
+                                <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {player_display}</div>
+                                <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=10)}</div>
+                                <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
+                                <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
+                                {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 2px;"> {", ".join(gs.player_character.elemental_strengths)}</div>' if gs.player_character.elemental_strengths else ''}
+                                {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 1px;"> {", ".join(gs.player_character.elemental_weaknesses)}</div>' if gs.player_character.elemental_weaknesses else ''}
+                                {f'<div style="font-size: 8px; color: #FDD835; margin-top: 1px;">{", ".join(gs.player_character.status_effects.keys())}</div>' if gs.player_character.status_effects else ''}
+                            </div>
+                        </div>
+                    </div>
+                    """
 
             # Combat layout: Map | Combat Info | (empty space for consistency)
             # Generate combat commands based on spell capability
@@ -3683,23 +3768,42 @@ class WizardsCavernApp(toga.App):
             combat_commands = "a = attack | f = flee | i = inventory"
             if can_cast:
                 combat_commands += " | c = cast spell"
-            
-            html_code = f"""
-                <div style="font-family: monospace; font-size: 12px;">
-                    {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
-                    {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%; max-width: 300px;">
-                            {monster_html}
-                            {player_combat_html}
+            if gs.large_text_mode:
+                # Side-by-side boxes below map for large text mode
+                html_code = f"""
+                    <div style="font-family: monospace; font-size: 12px;">
+                        {achievement_notifications}
+                        <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                        {player_stats_html}
+
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 4px;">
+                            <div>{grid_html}</div>
+                            <div style="display: flex; gap: 4px; width: 100%; max-width: 340px;">
+                                {monster_html}
+                                {player_combat_html}
+                            </div>
                         </div>
+                        {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
                     </div>
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
-                </div>
-                """
+                    """
+            else:
+                html_code = f"""
+                    <div style="font-family: monospace; font-size: 12px;">
+                        {achievement_notifications}
+                        <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                        {player_stats_html}
+
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                            <div>{grid_html}</div>
+                            <div style="width: 100%; max-width: 300px;">
+                                {monster_html}
+                                {player_combat_html}
+                            </div>
+                        </div>
+                        {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
+                    </div>
+                    """
             current_commands_text = combat_commands
 
         elif gs.prompt_cntl == "flee_direction_mode":
