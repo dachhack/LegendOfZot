@@ -981,6 +981,12 @@ class WizardsCavernApp(toga.App):
             self.build_teleporter_layout()
             return
 
+        # Special case: Race/gender selection - centered single row
+        if gs.prompt_cntl in ('player_race', 'player_gender'):
+            commands = self.parse_commands(commands_text)
+            self.build_centered_row_layout(commands)
+            return
+
         # Special case: Combat mode - custom layout with C, A, spacer, F
         if gs.prompt_cntl == 'combat_mode':
             commands = self.parse_commands(commands_text)
@@ -1029,6 +1035,23 @@ class WizardsCavernApp(toga.App):
 
         row2 = [self.create_spacer() for _ in range(9)]
         row3 = [self.create_spacer() for _ in range(9)]
+
+        for btn in row1:
+            self.button_row_1.add(btn)
+        for btn in row2:
+            self.button_row_2.add(btn)
+        for btn in row3:
+            self.number_pad_box.add(btn)
+
+    def build_centered_row_layout(self, commands):
+        """Build a centered single row of buttons (for race/gender selection)."""
+        # Row 2 (middle): spacers + buttons + spacers, centered
+        buttons = [self.create_button(k, v) for k, v in commands]
+        # Pad with spacers to center
+        row2 = [self.create_spacer()] + buttons + [self.create_spacer()]
+        # Rows 1 and 3: all spacers
+        row1 = [self.create_spacer() for _ in range(len(row2))]
+        row3 = [self.create_spacer() for _ in range(len(row2))]
 
         for btn in row1:
             self.button_row_1.add(btn)
