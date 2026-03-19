@@ -2547,6 +2547,33 @@ class Lantern(Item):
     def __repr__(self):
         return f"Lantern(name='{self.name}', fuel={self.fuel_amount}, radius={self.light_radius}, value={self.value}, level={self.level})"
 
+    @staticmethod
+    def _has_line_of_sight(r0, c0, r1, c1, floor):
+        """Check if light can reach (r1,c1) from (r0,c0) without passing through walls.
+        Uses Bresenham's line algorithm to trace intermediate cells."""
+        dr = abs(r1 - r0)
+        dc = abs(c1 - c0)
+        sr = 1 if r1 > r0 else -1
+        sc = 1 if c1 > c0 else -1
+        err = dr - dc
+        r, c = r0, c0
+        while (r, c) != (r1, c1):
+            e2 = 2 * err
+            if e2 > -dc:
+                err -= dc
+                r += sr
+            if e2 < dr:
+                err -= dr
+                c += sc
+            # Check intermediate cells (not the target itself)
+            if (r, c) != (r1, c1):
+                if 0 <= r < floor.rows and 0 <= c < floor.cols:
+                    if floor.grid[r][c].room_type == floor.wall_char:
+                        return False
+                else:
+                    return False
+        return True
+
     def use(self, character, my_tower=None):
         if self.fuel_amount > 0:
             add_log(f"{character.name} lit the {self.name}.")
@@ -2576,6 +2603,10 @@ class Lantern(Item):
 
                 # Check boundaries (target_x is row/y, target_y is col/x)
                 if 0 <= target_x < current_floor.rows and 0 <= target_y < current_floor.cols:
+                    # Check line of sight - light cannot pass through walls
+                    if radius > 1 and not self._has_line_of_sight(
+                            character.y, character.x, target_x, target_y, current_floor):
+                        continue
                     target_room = current_floor.grid[target_x][target_y]
                     if not target_room.discovered:
                         target_room.discovered = True

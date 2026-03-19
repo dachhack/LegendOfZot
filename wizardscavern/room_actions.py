@@ -3117,6 +3117,10 @@ def process_lantern_quick_use(player_character, my_tower):
 
             # Check boundaries (target_x is row/y, target_y is col/x)
             if 0 <= target_x < current_floor.rows and 0 <= target_y < current_floor.cols:
+                # Check line of sight - light cannot pass through walls
+                if radius > 1 and not Lantern._has_line_of_sight(
+                        player_character.y, player_character.x, target_x, target_y, current_floor):
+                    continue
                 target_room = current_floor.grid[target_x][target_y]
                 if not target_room.discovered:
                     target_room.discovered = True

@@ -5420,6 +5420,17 @@ class WizardsCavernApp(toga.App):
         # Large text mode: scale all HTML content via CSS zoom
         zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
 
+        # Smaller log for inventory/vendor modes to give more room to content
+        compact_log_modes = ('inventory', 'vendor_shop', 'starting_shop', 'sell_quantity_mode',
+                             'character_stats_mode', 'achievements_mode', 'crafting_mode',
+                             'spell_memorization_mode', 'journal_mode')
+        if gs.prompt_cntl in compact_log_modes:
+            log_height = 50
+            log_padding_bottom = 45
+        else:
+            log_height = 90
+            log_padding_bottom = 85
+
         return f"""
         <!DOCTYPE html>
         <html>
@@ -5497,7 +5508,7 @@ class WizardsCavernApp(toga.App):
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    height: 90px;
+                    height: {log_height}px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -5508,10 +5519,10 @@ class WizardsCavernApp(toga.App):
                     z-index: 1000;
                     line-height: 1.2;
                 }}
-                
+
                 /* Scrollable content area - add padding at bottom for log */
                 #content-area {{
-                    padding-bottom: 85px; /* Space for fixed log */
+                    padding-bottom: {log_padding_bottom}px;
                 }}
                 
                 /* Tighter line spacing */
