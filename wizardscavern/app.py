@@ -1057,7 +1057,7 @@ class WizardsCavernApp(toga.App):
         # Row 1: [C][A][spacer][F][spacer][spacer] or [spacer][A][spacer][F][spacer][spacer]
         if has_cast:
             left_row1 = [
-                self.create_big_button('a', 'Attck'),  # Attack
+                self.create_big_button('a', 'Attack'),  # Attack
                 self.create_big_button('c', 'Cast'),  # Cast
                 self.create_spacer(),
                 self.create_spacer(),# Spacer between A and F
@@ -1066,7 +1066,7 @@ class WizardsCavernApp(toga.App):
             ]
         else:
             left_row1 = [
-                self.create_big_button('a', 'Attck'),  # Attack
+                self.create_big_button('a', 'Attack'),  # Attack
                 self.create_spacer(),              # No cast available
                 self.create_spacer(),              # Spacer between A and F
                 self.create_spacer(),
@@ -1076,7 +1076,7 @@ class WizardsCavernApp(toga.App):
 
         # Row 2: [I][spacers]
         left_row2 = [
-            self.create_button('i', 'Invnt') if 'i' in cmd_dict else self.create_spacer(),
+            self.create_button('i', 'Invent') if 'i' in cmd_dict else self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
@@ -1450,7 +1450,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=11, width=65,
+            style=Pack(margin=0, font_size=11, width=73,
                        background_color='#333', color='#EEE', height=36)
         )
         self._compact_android_button(btn)
@@ -1461,7 +1461,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=13, font_weight='bold', width=75, height=36,
+            style=Pack(margin=0, font_size=13, font_weight='bold', width=83, height=36,
                        background_color='#444', color='#FFF')
         )
         self._compact_android_button(btn)
@@ -1585,7 +1585,7 @@ class WizardsCavernApp(toga.App):
                     actual_cmd = key
                 
                 # Use first 5 chars of descriptive label for button text
-                btn_label = label[:5].capitalize() if len(label) > 1 else actual_cmd.upper()
+                btn_label = label[:7].capitalize() if len(label) > 1 else actual_cmd.upper()
                 
                 commands.append((actual_cmd, btn_label))
         
@@ -1986,8 +1986,14 @@ class WizardsCavernApp(toga.App):
                 gs._pending_load = None
             gs.prompt_cntl = "game_loop"
             _trigger_room_interaction(gs.player_character, gs.my_tower)
-        elif gs.prompt_cntl == "main_menu":
-            process_main_menu_action(cmd)
+        elif gs.prompt_cntl in ("main_menu", "intro_story"):
+            # Handle save loading for both states
+            if cmd in ['1', '2', '3']:
+                process_main_menu_action(cmd)
+            else:
+                # Start new game - transition to character naming
+                gs.log_lines.clear()
+                gs.prompt_cntl = "player_name"
         elif gs.prompt_cntl == "player_name":
             create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
         elif gs.prompt_cntl == "player_race":
