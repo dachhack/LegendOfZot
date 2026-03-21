@@ -4,8 +4,9 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 29
+BUILD_NUMBER = 30
 CHANGELOG = [
+    "Vendor identify/repair now filter inventory to show only relevant items",
     "Added gap between rightmost command buttons and numpad",
     "Button labels now show 9 characters (was 7) for better readability",
     "Fixed Sacrifice button in altar rooms — now works like vendor buy/sell",

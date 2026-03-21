@@ -347,6 +347,9 @@ def process_vendor_action(player_character, vendor_character, cmd):
     Processes a single command for vendor interaction.
     Returns True if shopping is finished, False otherwise.
     """
+    # Clear vendor filter for non-identify/non-repair commands
+    if not cmd.startswith('id') and not cmd.startswith('r'):
+        gs.vendor_filter = None
 
     if cmd == "init" or cmd == "l" or cmd == "list":
         if cmd != "init":
@@ -512,21 +515,9 @@ def process_vendor_action(player_character, vendor_character, cmd):
         try:
             # Handle both "id 3" and "id3" formats
             if cmd == 'id':
-                # Show list of unidentified items
-                unid_items = []
-                sorted_items = get_sorted_inventory(player_character.inventory)
-                for i, item in enumerate(sorted_items):
-                    if isinstance(item, (Potion, Scroll, Weapon, Armor, Spell)) and not is_item_identified(item):
-                        cost = get_vendor_identify_cost(item)
-                        display_name = get_item_display_name(item, for_vendor=False)
-                        unid_items.append(f"{i+1}. {display_name} - {cost}g to identify")
-
-                if unid_items:
-                    set_shop_msg("Unidentified items: " + ", ".join(unid_items[:5]))
-                    if len(unid_items) > 5:
-                        set_shop_msg(gs.shop_message + f"... and {len(unid_items) - 5} more. Use 'id#' to identify.")
-                else:
-                    set_shop_msg("All your items are already identified!")
+                # Toggle filter — display updates in app.py render
+                set_shop_msg("Select an item to identify.")
+                gs.vendor_filter = 'identify'
                 return False
 
             # Extract number - skip 'id' and optional space
@@ -534,6 +525,10 @@ def process_vendor_action(player_character, vendor_character, cmd):
             item_number = int(num_str) - 1
 
             sorted_items = get_sorted_inventory(player_character.inventory)
+
+            # Use filtered list when vendor_filter is active
+            if gs.vendor_filter == 'identify':
+                sorted_items = [i for i in sorted_items if isinstance(i, (Potion, Scroll, Weapon, Armor, Spell)) and not is_item_identified(i)]
 
             if 0 <= item_number < len(sorted_items):
                 item = sorted_items[item_number]
@@ -554,6 +549,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 set_shop_msg("Invalid item number.")
         except ValueError:
             set_shop_msg("Use 'id' to see unidentified items, or 'id#' to identify a specific item.")
+        gs.vendor_filter = None
         return False
 
     # REPAIR COMMAND - vendor repairs damaged equipment for gold
@@ -561,23 +557,9 @@ def process_vendor_action(player_character, vendor_character, cmd):
         try:
             # Handle both "r 3" and "r3" formats
             if cmd == 'r':
-                # Show list of damaged items
-                damaged_items = []
-                sorted_items = get_sorted_inventory(player_character.inventory)
-                for i, item in enumerate(sorted_items):
-                    if isinstance(item, (Weapon, Armor)) and item.durability < item.max_durability:
-                        if getattr(item, 'is_cursed', False):
-                            damaged_items.append(f"{i+1}. {item.name} (CURSED - cannot repair)")
-                        else:
-                            cost = get_repair_cost(item)
-                            damaged_items.append(f"{i+1}. {item.name} ({item.durability}/{item.max_durability}) - {cost}g")
-
-                if damaged_items:
-                    set_shop_msg("Damaged items: " + ", ".join(damaged_items[:4]))
-                    if len(damaged_items) > 4:
-                        set_shop_msg(gs.shop_message + f"... and {len(damaged_items) - 4} more. Use 'r#' to repair.")
-                else:
-                    set_shop_msg("All your equipment is in good condition!")
+                # Toggle filter — display updates in app.py render
+                set_shop_msg("Select an item to repair.")
+                gs.vendor_filter = 'repair'
                 return False
 
             # Repair all command
@@ -601,6 +583,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
                     set_shop_msg(f"Repaired {len(items_to_repair)} items for {total_cost} gold!")
                 else:
                     set_shop_msg(f"Not enough gold! Repairing all items costs {total_cost}g.")
+                gs.vendor_filter = None
                 return False
 
             # Extract number - skip 'r' and optional space
@@ -608,6 +591,10 @@ def process_vendor_action(player_character, vendor_character, cmd):
             item_number = int(num_str) - 1
 
             sorted_items = get_sorted_inventory(player_character.inventory)
+
+            # Use filtered list when vendor_filter is active
+            if gs.vendor_filter == 'repair':
+                sorted_items = [i for i in sorted_items if isinstance(i, (Weapon, Armor)) and i.durability < i.max_durability]
 
             if 0 <= item_number < len(sorted_items):
                 item = sorted_items[item_number]
@@ -631,9 +618,11 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 set_shop_msg("Invalid item number.")
         except ValueError:
             set_shop_msg("Use 'r' to see damaged items, 'r#' to repair one, or 'ra' to repair all.")
+        gs.vendor_filter = None
         return False
 
     elif cmd == 'x' or cmd == 'q':
+        gs.vendor_filter = None
         return True # Shopping finished
     else:
         set_shop_msg(f"Invalid input. Please use 'b [number]', 's [number]', 'x', or 'q'.")
@@ -896,6 +885,7 @@ def handle_starting_shop(player_character, my_tower, cmd):
     if finished: # This checks if 'q' or 'f' was entered
         add_log("You finish shopping and head out on your adventure!")
         gs.active_vendor = None
+        gs.vendor_filter = None
         gs.prompt_cntl = "game_loop"
 
     return True
@@ -922,6 +912,7 @@ def handle_vendor_shop(player_character, my_tower, cmd):
     if finished: # This checks if 'q' or 'f' was entered
         add_log("You finish shopping and continue on your adventure!")
         gs.active_vendor = None
+        gs.vendor_filter = None
         gs.prompt_cntl = "game_loop"
 
     return True

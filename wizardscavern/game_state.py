@@ -70,6 +70,9 @@ active_library_state = None
 # Inventory filter: None (show all), 'use', 'equip', or 'eat'
 inventory_filter = None
 
+# Vendor filter: None (show all), 'identify' (unidentified only), 'repair' (damaged only)
+vendor_filter = None
+
 # ============================================================================
 # SHOP & SELL STATE
 # ============================================================================

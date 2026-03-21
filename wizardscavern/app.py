@@ -733,11 +733,23 @@ class WizardsCavernApp(toga.App):
         if cmd == 's' and (is_vendor_mode or is_altar_mode):
             is_movement = False
         
+        # Vendor filter: set when id/r pressed, clear on other vendor commands
+        if is_vendor_mode:
+            if cmd == 'id':
+                gs.vendor_filter = 'identify'
+            elif cmd == 'r':
+                gs.vendor_filter = 'repair'
+            else:
+                gs.vendor_filter = None
+
         # In modes that need numbers (inventory, vendor, etc.), certain commands wait for number/send
         # All other commands (c, m, x, i, etc.) submit immediately
         if (needs_number_suffix or is_buy_all) and not is_movement:
             # Append command to input field, user will type number and press send
             self.input_field.value = cmd
+            # Re-render to show filtered inventory for identify/repair
+            if is_vendor_mode and cmd in ['id', 'r']:
+                self.render()
             # Don't focus if readonly (will trigger keyboard)
             if not self.input_field.readonly:
                 self.input_field.focus()
@@ -2627,10 +2639,20 @@ class WizardsCavernApp(toga.App):
             vendor_html += "</div>"
 
             sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
-            player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
+
+            # Apply vendor filter for identify/repair
+            filter_label = "Your Inventory"
+            if gs.vendor_filter == 'identify':
+                sorted_player_items = [i for i in sorted_player_items if isinstance(i, (Potion, Scroll, Weapon, Armor, Spell)) and not is_item_identified(i)]
+                filter_label = "Unidentified Items <span style='color: #4FC3F7; font-size: 10px;'>[filtered]</span>"
+            elif gs.vendor_filter == 'repair':
+                sorted_player_items = [i for i in sorted_player_items if isinstance(i, (Weapon, Armor)) and i.durability < i.max_durability]
+                filter_label = "Damaged Items <span style='color: #4FC3F7; font-size: 10px;'>[filtered]</span>"
+
+            player_inv_html = f"<h3 style='margin: 0 0 5px 0;'>{filter_label}</h3>"
             player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
             if not sorted_player_items:
-                player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
+                player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(No matching items)</div>"
             else:
                 for i, item in enumerate(sorted_player_items):
                     # Player inventory shows cryptic names for unidentified items
@@ -2705,10 +2727,20 @@ class WizardsCavernApp(toga.App):
             vendor_html += "</div>"
 
             sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
-            player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
+
+            # Apply vendor filter for identify/repair
+            filter_label = "Your Inventory"
+            if gs.vendor_filter == 'identify':
+                sorted_player_items = [i for i in sorted_player_items if isinstance(i, (Potion, Scroll, Weapon, Armor, Spell)) and not is_item_identified(i)]
+                filter_label = "Unidentified Items <span style='color: #4FC3F7; font-size: 10px;'>[filtered]</span>"
+            elif gs.vendor_filter == 'repair':
+                sorted_player_items = [i for i in sorted_player_items if isinstance(i, (Weapon, Armor)) and i.durability < i.max_durability]
+                filter_label = "Damaged Items <span style='color: #4FC3F7; font-size: 10px;'>[filtered]</span>"
+
+            player_inv_html = f"<h3 style='margin: 0 0 5px 0;'>{filter_label}</h3>"
             player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
             if not sorted_player_items:
-                player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
+                player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(No matching items)</div>"
             else:
                 for i, item in enumerate(sorted_player_items):
                     # Player inventory shows cryptic names for unidentified items
