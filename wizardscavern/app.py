@@ -1256,6 +1256,8 @@ class WizardsCavernApp(toga.App):
             row_box = toga.Box(style=Pack(direction=ROW, margin=0, flex=1))
             for btn in row_btns:
                 row_box.add(btn)
+            # Add small gap between rightmost command button and numpad
+            row_box.add(toga.Box(style=Pack(width=6)))
             left_col.add(row_box)
 
         # Right column: 4-row phone-style numpad (compact buttons)

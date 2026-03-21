@@ -4,8 +4,9 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 28
+BUILD_NUMBER = 29
 CHANGELOG = [
+    "Added gap between rightmost command buttons and numpad",
     "Button labels now show 9 characters (was 7) for better readability",
     "Fixed Sacrifice button in altar rooms — now works like vendor buy/sell",
     "Altar room text enlarged for better readability on mobile",
