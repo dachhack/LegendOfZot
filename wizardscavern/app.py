@@ -715,9 +715,11 @@ class WizardsCavernApp(toga.App):
         # In vendor modes, b/s/ba need to wait for item numbers
         is_vendor_mode = gs.prompt_cntl in ['vendor_shop', 'starting_shop']
         is_spell_memorization_mode = gs.prompt_cntl == 'spell_memorization_mode'
+        is_altar_mode = gs.prompt_cntl == 'altar_mode'
         # u/e always submit immediately (toggles inventory filter, then user picks number)
         needs_number_suffix = (cmd in ['b', 's', 'r', 'id'] and is_vendor_mode) or \
-                              (cmd in ['m', 'f'] and is_spell_memorization_mode)
+                              (cmd in ['m', 'f'] and is_spell_memorization_mode) or \
+                              (cmd == 's' and is_altar_mode)
         
         # Special case: 'ba' (buy all) in starting shop - needs send but no number
         is_buy_all = cmd == 'ba' and gs.prompt_cntl == 'starting_shop'
@@ -727,8 +729,8 @@ class WizardsCavernApp(toga.App):
         if cmd == 'e' and self.current_needs_numbers:
             is_movement = False
         
-        # Special case: 's' in vendor mode means sell (not south movement)
-        if cmd == 's' and is_vendor_mode:
+        # Special case: 's' in vendor/altar mode means sell/sacrifice (not south movement)
+        if cmd == 's' and (is_vendor_mode or is_altar_mode):
             is_movement = False
         
         # In modes that need numbers (inventory, vendor, etc.), certain commands wait for number/send
@@ -1239,7 +1241,7 @@ class WizardsCavernApp(toga.App):
                 k, v = col[0]
                 if is_altar and k == 's':
                     cmd_row3.append(toga.Button(
-                        'Sac', on_press=lambda w: self.number_pad_input('s'),
+                        'Sacrifice', on_press=lambda w: self.quick_command('s', 'Sacrifice'),
                         style=Pack(flex=1, margin=1, font_size=11, font_weight='bold', width=37)))
                 else:
                     cmd_row3.append(self.create_button(k, v))
@@ -1610,8 +1612,8 @@ class WizardsCavernApp(toga.App):
                 else:
                     actual_cmd = key
                 
-                # Use first 5 chars of descriptive label for button text
-                btn_label = label[:7].capitalize() if len(label) > 1 else actual_cmd.upper()
+                # Use first 9 chars of descriptive label for button text
+                btn_label = label[:9].capitalize() if len(label) > 1 else actual_cmd.upper()
                 
                 commands.append((actual_cmd, btn_label))
         
@@ -4038,12 +4040,12 @@ class WizardsCavernApp(toga.App):
 
             inv_html = ""
             if not sacrificeable:
-                inv_html = "<div style='color:#888; font-size:12px;'>(Nothing to sacrifice)</div>"
+                inv_html = "<div style='color:#888; font-size:13px;'>(Nothing to sacrifice)</div>"
             else:
                 for i, item in enumerate(sacrificeable):
                     item_str = format_item_for_display(item, gs.player_character, show_price=False)
                     cursed_tag = " <span style='color:#F44336;'>[CURSED]</span>" if getattr(item, 'is_cursed', False) else ""
-                    inv_html += f"<div style='margin:2px 0; font-size:12px;'><b>{i+1}.</b> {item_str}{cursed_tag}</div>"
+                    inv_html += f"<div style='margin:2px 0; font-size:13px;'><b>{i+1}.</b> {item_str}{cursed_tag}</div>"
 
             devotion_hint = ""
             if not gs.runes_obtained.get('devotion', False) and gs.player_character is not None:
@@ -4051,7 +4053,7 @@ class WizardsCavernApp(toga.App):
                 hp_req = gs.rune_progress_reqs.get('player_health_obtained', 50)
                 if gs.player_character.gold >= gold_req and gs.player_character.health >= hp_req:
                     devotion_hint = (
-                        "<div style='color:#FFD700; font-size:11px; margin-top:5px; border-top:1px solid #555; padding-top:4px;'>"
+                        "<div style='color:#FFD700; font-size:13px; margin-top:5px; border-top:1px solid #555; padding-top:4px;'>"
                         "[9] Offer " + str(gold_req) + " gold + " + str(hp_req) + " HP to all gods - Rune of Devotion"
                         "</div>"
                     )
@@ -4059,28 +4061,28 @@ class WizardsCavernApp(toga.App):
             altar_sprite = generate_room_sprite_html('A')
 
             html_code = f"""
-                <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
+                <div style="font-family: monospace; font-size: 13px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
                     {achievement_notifications}
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{altar_sprite}</div>
                         <div>
-                            <div style="font-size: 16px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
+                            <div style="font-size: 18px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
                                 {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
                             </div>
-                            <div style="font-size: 10px; color: #AAA;">{hunch_god.get('title','')}</div>
+                            <div style="font-size: 13px; color: #AAA;">{hunch_god.get('title','')}</div>
                         </div>
                     </div>
                     {player_stats_html}
-                    <div style="margin-bottom: 5px; color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 10px;">
+                    <div style="margin-bottom: 5px; color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 13px;">
                         A spirit voice whispers: "{whisper}"
                     </div>
-                    <div style="color: #AAA; font-size: 9px; margin-bottom: 5px;">
+                    <div style="color: #AAA; font-size: 12px; margin-bottom: 5px;">
                         INT {gs.player_character.intelligence} intuition | Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
                         | <span style="color:#888;">Right offering = reward | Wrong = displeasure</span>
                     </div>
                     <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
                         <div style="border: 1px solid #555; padding: 3px;">
-                            <h3 style='margin: 0 0 5px 0; color: #DDD;'>Sacrifice an Item</h3>
+                            <h3 style='margin: 0 0 5px 0; color: #DDD; font-size: 15px;'>Sacrifice an Item</h3>
                             <div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 400px;'>
                                 {inv_html}
                             </div>
