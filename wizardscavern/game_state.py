@@ -339,6 +339,11 @@ last_monster_status = None
 last_player_heal = 0
 
 # ============================================================================
+# MONSTER DEFEAT ANIMATION STATE
+# ============================================================================
+monster_defeated_anim = None  # Set to monster name string when killed, cleared after render
+
+# ============================================================================
 # DICE ROLL ANIMATION STATE
 # ============================================================================
 # Stores the last combat dice rolls for the animated d20 display.

@@ -170,6 +170,7 @@ def process_combat_action(player_character, my_tower, cmd):
 
     # Check if monster was defeated by status effects
     if gs.active_monster and not gs.active_monster.is_alive():
+        gs.monster_defeated_anim = gs.active_monster.name
         add_log(f"{COLOR_GREEN}The {gs.active_monster.name} succumbed to its status effects!{COLOR_RESET}")
         # XP, Gold, Room clearing logic should be here as well
          # Calculate base rewards
@@ -380,6 +381,7 @@ def process_combat_action(player_character, my_tower, cmd):
 
         # Continue with normal monster defeat check...
         if not gs.active_monster.is_alive():
+            gs.monster_defeated_anim = gs.active_monster.name
             add_log(f"{COLOR_GREEN}You defeated the {gs.active_monster.name}!{COLOR_RESET}")
             # Cook meat if killed with fire weapon
             if damage_type == "Fire":
@@ -1088,6 +1090,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
 
                 # After casting, check combat state
                 if gs.active_monster and not gs.active_monster.is_alive():
+                    gs.monster_defeated_anim = gs.active_monster.name
                     add_log(f"{COLOR_GREEN}You defeated the {gs.active_monster.name}!{COLOR_RESET}")
                     add_log(f"{COLOR_GREEN}{gs.active_monster.victory_text}{COLOR_RESET}")
 

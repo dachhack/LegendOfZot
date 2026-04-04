@@ -349,6 +349,60 @@ def generate_dice_roll_js(dice_rolls):
     return js
 
 
+def generate_monster_defeat_js(monster_name):
+    """Generate a monster defeat animation: grayscale + fade + dissolve.
+
+    If the monster panel exists (combat view still showing), it animates
+    the panel itself. Otherwise creates a floating overlay with the
+    monster name that dissolves away.
+    """
+    if not monster_name:
+        return ""
+    safe_name = monster_name.replace('"', '\\"').replace("'", "\\'").replace('<', '').replace('>', '')
+    return (
+        '<script>(function(){'
+        'var mp=document.getElementById("monster_panel");'
+        'if(mp){'
+        # Animate the actual monster panel: grayscale + shrink + fade
+        'mp.style.transition="filter 0.4s,opacity 0.6s,transform 0.6s";'
+        'mp.style.filter="grayscale(100%) brightness(0.5)";'
+        'setTimeout(function(){'
+        'mp.style.opacity="0";'
+        'mp.style.transform="scale(0.85)";'
+        '},400);'
+        'setTimeout(function(){if(mp.parentNode)mp.parentNode.removeChild(mp);},1000);'
+        '}else{'
+        # No panel: show floating defeat text overlay
+        'var ov=document.createElement("div");'
+        'ov.style.cssText="position:fixed;top:35%;left:50%;transform:translate(-50%,-50%);'
+        'z-index:99999;text-align:center;pointer-events:none;";'
+
+        'var txt=document.createElement("div");'
+        'txt.style.cssText="font-family:monospace;font-size:14px;font-weight:bold;'
+        'color:#F44336;text-shadow:0 0 8px #F44336;margin-bottom:4px;";'
+        'txt.textContent="' + safe_name + '";'
+        'ov.appendChild(txt);'
+
+        'var sub=document.createElement("div");'
+        'sub.style.cssText="font-family:monospace;font-size:11px;color:#69F0AE;'
+        'text-shadow:0 0 6px #69F0AE;";'
+        'sub.textContent="DEFEATED";'
+        'ov.appendChild(sub);'
+
+        'document.body.appendChild(ov);'
+
+        # Animate: flash then fade + drift up
+        'ov.style.transition="opacity 0.8s,transform 0.8s";'
+        'setTimeout(function(){'
+        'ov.style.opacity="0";'
+        'ov.style.transform="translate(-50%,-50%) translateY(-20px)";'
+        '},800);'
+        'setTimeout(function(){if(ov.parentNode)ov.parentNode.removeChild(ov);},1600);'
+        '}'
+        '})();</script>'
+    )
+
+
 # ============================================================
 # SPRITE SYSTEM
 # Sprite sheets, mappings, and rendering functions
@@ -5584,9 +5638,12 @@ class WizardsCavernApp(toga.App):
                 window.addEventListener('load', updateLog);
             </script>
             {generate_dice_roll_js(gs.last_dice_rolls)}
+            {generate_monster_defeat_js(gs.monster_defeated_anim)}
         </body>
         </html>
         """
+        # Clear one-shot animation flags after rendering
+        gs.monster_defeated_anim = None
     
 
     
