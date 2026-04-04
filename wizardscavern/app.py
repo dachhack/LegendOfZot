@@ -1162,26 +1162,26 @@ class WizardsCavernApp(toga.App):
         # Row 1: [C][A][spacer][F][spacer][spacer] or [spacer][A][spacer][F][spacer][spacer]
         if has_cast:
             left_row1 = [
-                self.create_big_button('a', 'Attck'),  # Attack
-                self.create_big_button('c', 'Cast'),  # Cast
+                self.create_big_button('a', 'Attack'),
+                self.create_big_button('c', 'Cast'),
                 self.create_spacer(),
-                self.create_spacer(),# Spacer between A and F
-                self.create_big_button('f', 'Flee'),  # Flee
+                self.create_spacer(),
+                self.create_big_button('f', 'Flee'),
                 self.create_spacer(),
             ]
         else:
             left_row1 = [
-                self.create_big_button('a', 'Attck'),  # Attack
-                self.create_spacer(),              # No cast available
-                self.create_spacer(),              # Spacer between A and F
+                self.create_big_button('a', 'Attack'),
                 self.create_spacer(),
-                self.create_big_button('f', 'Flee'),  # Flee
+                self.create_spacer(),
+                self.create_spacer(),
+                self.create_big_button('f', 'Flee'),
                 self.create_spacer(),
             ]
 
-        # Row 2: [I][spacers]
+        # Row 2: [Inventory][spacers]
         left_row2 = [
-            self.create_button('i', 'Invnt') if 'i' in cmd_dict else self.create_spacer(),
+            self.create_button('i', 'Inventory') if 'i' in cmd_dict else self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
@@ -1564,8 +1564,8 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=11, width=65,
-                       background_color='#333', color='#EEE', height=30)
+            style=Pack(margin=1, font_size=12, width=85,
+                       background_color='#383838', color='#EEE', height=36)
         )
         self._compact_android_button(btn)
         return btn
@@ -1575,7 +1575,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=0, font_size=13, font_weight='bold', width=75, height=30,
+            style=Pack(margin=1, font_size=14, font_weight='bold', width=90, height=36,
                        background_color='#444', color='#FFF')
         )
         self._compact_android_button(btn)
@@ -1596,25 +1596,25 @@ class WizardsCavernApp(toga.App):
 
     def create_spacer(self):
         """Create an empty spacer that fills remaining space."""
-        return toga.Box(style=Pack(flex=1, height=30))
+        return toga.Box(style=Pack(flex=1, height=36))
     def create_dpad_button(self, cmd_key, arrow_label):
         """Create a D-pad directional button with arrow symbol and controller styling."""
         btn = toga.Button(
             arrow_label,
             on_press=lambda w, k=cmd_key: self.quick_command(k, cmd_key.upper()),
             style=Pack(margin=0, font_size=14, font_weight='bold', width=50,
-                       background_color='#2a2a2a', color='#AAA', height=30)
+                       background_color='#2a2a2a', color='#AAA', height=36)
         )
         self._compact_android_button(btn)
         return btn
 
     def create_dpad_center(self):
         """Create the center piece of the D-pad cross."""
-        return toga.Box(style=Pack(width=50, height=30, background_color='#222'))
+        return toga.Box(style=Pack(width=50, height=36, background_color='#222'))
 
     def create_dpad_spacer(self):
         """Create an invisible corner spacer for D-pad cross shape."""
-        return toga.Box(style=Pack(width=50, height=30, background_color='#1a1a1a'))
+        return toga.Box(style=Pack(width=50, height=36, background_color='#1a1a1a'))
     def create_filler(self):
         """Create a small gap between button groups."""
         return toga.Box(style=Pack(width=2))
@@ -1698,8 +1698,8 @@ class WizardsCavernApp(toga.App):
                 else:
                     actual_cmd = key
                 
-                # Use first 5 chars of descriptive label for button text
-                btn_label = label[:5].capitalize() if len(label) > 1 else actual_cmd.upper()
+                # Use first 8 chars of descriptive label for button text
+                btn_label = label[:8].strip().capitalize() if len(label) > 1 else actual_cmd.upper()
                 
                 commands.append((actual_cmd, btn_label))
         
