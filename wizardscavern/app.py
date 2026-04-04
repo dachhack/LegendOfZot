@@ -1255,12 +1255,21 @@ class WizardsCavernApp(toga.App):
             cmd_row2.append(self.create_button(col[1][0], col[1][1]) if len(col) > 1 else self.create_spacer())
             cmd_row1.append(self.create_button(col[2][0], col[2][1]) if len(col) > 2 else self.create_spacer())
 
-        for btn in dpad_row1 + [self.create_spacer()] + cmd_row1:
-            self.button_row_1.add(btn)
-        for btn in dpad_row2 + [self.create_spacer()] + cmd_row2:
-            self.button_row_2.add(btn)
-        for btn in dpad_row3 + [self.create_spacer()] + cmd_row3:
-            self.number_pad_box.add(btn)
+        if has_movement:
+            for btn in dpad_row1 + [self.create_spacer()] + cmd_row1:
+                self.button_row_1.add(btn)
+            for btn in dpad_row2 + [self.create_spacer()] + cmd_row2:
+                self.button_row_2.add(btn)
+            for btn in dpad_row3 + [self.create_spacer()] + cmd_row3:
+                self.number_pad_box.add(btn)
+        else:
+            # No D-pad: center the command buttons
+            for btn in [self.create_spacer()] + cmd_row1 + [self.create_spacer()]:
+                self.button_row_1.add(btn)
+            for btn in [self.create_spacer()] + cmd_row2 + [self.create_spacer()]:
+                self.button_row_2.add(btn)
+            for btn in [self.create_spacer()] + cmd_row3 + [self.create_spacer()]:
+                self.number_pad_box.add(btn)
 
     def build_layout_with_numpad(self, commands):
         """
