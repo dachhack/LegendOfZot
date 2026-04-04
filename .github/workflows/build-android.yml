@@ -99,6 +99,7 @@ jobs:
           name: wizards-cavern-apk
           path: ${{ steps.find-apk.outputs.apk_path }}
           if-no-files-found: error
+          compression-level: 0
 
       - name: Install Google Drive dependencies
         run: pip install google-api-python-client google-auth requests
