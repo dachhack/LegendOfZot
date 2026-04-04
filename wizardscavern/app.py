@@ -1185,7 +1185,7 @@ class WizardsCavernApp(toga.App):
 
         # Row 2: [Inventory][spacers]
         left_row2 = [
-            self.create_button('i', 'Inventory') if 'i' in cmd_dict else self.create_spacer(),
+            self.create_big_button('i', 'Inventory') if 'i' in cmd_dict else self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
             self.create_spacer(),
@@ -1558,31 +1558,31 @@ class WizardsCavernApp(toga.App):
             from android.graphics import Color
 
             density = native.getContext().getResources().getDisplayMetrics().density
-            corner_px = int(corner_dp * density)
+            corner_px = float(int(corner_dp * density))
             border_px = max(1, int(1 * density))
 
-            def make_gradient(top_hex, bot_hex):
-                gd = GradientDrawable(
-                    GradientDrawable.Orientation.TOP_BOTTOM,
-                    [Color.parseColor(top_hex), Color.parseColor(bot_hex)]
-                )
-                gd.setCornerRadius(float(corner_px))
+            def make_drawable(top_hex, bot_hex):
+                gd = GradientDrawable()
+                gd.setCornerRadius(corner_px)
                 gd.setStroke(border_px, Color.parseColor(border_color))
+                # Try gradient first, fall back to solid color
+                try:
+                    gd.setOrientation(GradientDrawable.Orientation.TOP_BOTTOM)
+                    gd.setColors([Color.parseColor(top_hex), Color.parseColor(bot_hex)])
+                except Exception:
+                    gd.setColor(Color.parseColor(top_hex))
                 return gd
 
-            normal = make_gradient(bg_start, bg_end)
-            pressed = make_gradient(pressed_start, pressed_end)
+            normal = make_drawable(bg_start, bg_end)
+            pressed = make_drawable(pressed_start, pressed_end)
 
             sld = StateListDrawable()
-            # Pressed state: android.R.attr.state_pressed = 0x010100a7
-            from java.lang import Integer
-            pressed_state = Integer(0x010100a7).intValue()
-            sld.addState([pressed_state], pressed)
+            # android.R.attr.state_pressed = 16842919
+            sld.addState([16842919], pressed)
             sld.addState([], normal)
 
             native.setBackground(sld)
-            # Re-apply elevation for a subtle lift (1dp shadow)
-            native.setElevation(float(int(1 * density)))
+            native.setElevation(float(int(density)))
         except Exception:
             pass
     
@@ -1613,7 +1613,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=2, font_size=12, width=85,
+            style=Pack(margin=2, font_size=12, width=95,
                        background_color='#383838', color='#EEE', height=36)
         )
         self._compact_android_button(btn)
@@ -1625,7 +1625,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=2, font_size=14, font_weight='bold', width=90, height=36,
+            style=Pack(margin=2, font_size=13, font_weight='bold', width=100, height=36,
                        background_color='#444', color='#FFF')
         )
         self._compact_android_button(btn)
