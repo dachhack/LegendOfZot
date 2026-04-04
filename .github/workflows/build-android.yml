@@ -7,6 +7,9 @@ on:
     branches: [ main, master ]
   workflow_dispatch:  # Allows manual trigger from GitHub UI
 
+permissions:
+  contents: write  # Needed for creating releases
+
 jobs:
   build-android:
     runs-on: ubuntu-latest
@@ -101,11 +104,43 @@ jobs:
           if-no-files-found: error
           compression-level: 0
 
+      - name: Create GitHub Release with APK
+        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # Generate a tag from short SHA and date
+          TAG="build-$(date -u +%Y%m%d-%H%M%S)"
+          SHORT_SHA="${GITHUB_SHA:0:7}"
+          COMMIT_MSG=$(git log -1 --pretty=%s)
+
+          # Copy APK with a clean name
+          cp "${{ steps.find-apk.outputs.apk_path }}" "wizards-cavern-${TAG}.apk"
+
+          # Delete previous 'latest' release if it exists
+          gh release delete latest --yes 2>/dev/null || true
+          git push --delete origin latest 2>/dev/null || true
+
+          # Create a 'latest' release (always points to newest build)
+          gh release create latest \
+            --title "Latest Build (${SHORT_SHA})" \
+            --notes "**${COMMIT_MSG}**
+
+          Commit: ${GITHUB_SHA}
+          Built: $(date -u '+%Y-%m-%d %H:%M UTC')
+
+          Download the APK below and install on your Android device." \
+            --prerelease \
+            "wizards-cavern-${TAG}.apk#Wizards-Cavern.apk"
+
       - name: Install Google Drive dependencies
+        if: steps.find-apk.outputs.apk_path != ''
+        continue-on-error: true
         run: pip install google-api-python-client google-auth requests
 
       - name: Upload APK to Google Drive
         if: steps.find-apk.outputs.apk_path != ''
+        continue-on-error: true
         env:
           PYTHONUNBUFFERED: "1"
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
