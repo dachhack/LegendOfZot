@@ -1042,6 +1042,10 @@ class WizardsCavernApp(toga.App):
         # Compact input row buttons (remove Android Material insets that clip text)
         self._compact_android_button(self.submit_button)
         self._compact_android_button(self.backspace_button)
+        self._style_android_button(self.submit_button, bg_start='#555555', bg_end='#383838',
+                                    pressed_start='#383838', pressed_end='#222222',
+                                    border_color='#666666')
+        self._style_android_button(self.backspace_button)
 
         # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
@@ -1509,10 +1513,11 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(flex=1, margin=0, padding=0, font_size=13,
+            style=Pack(flex=1, margin=1, padding=0, font_size=13,
                        background_color='#333', color='#EEE', height=38)
         )
         self._compact_android_button(btn)
+        self._style_android_button(btn, corner_dp=4)
         return btn
 
     def _compact_android_button(self, btn):
@@ -1534,6 +1539,50 @@ class WizardsCavernApp(toga.App):
                 # Remove elevation/shadow which adds vertical space between buttons
                 native.setStateListAnimator(None)
                 native.setElevation(0)
+        except Exception:
+            pass
+
+    def _style_android_button(self, btn, bg_start='#484848', bg_end='#303030',
+                               pressed_start='#2a2a2a', pressed_end='#1a1a1a',
+                               border_color='#5a5a5a', corner_dp=6):
+        """Apply rounded gradient background with pressed state to Android button."""
+        import sys
+        if sys.platform != 'android':
+            return
+        try:
+            if not (hasattr(btn, '_impl') and hasattr(btn._impl, 'native')):
+                return
+            native = btn._impl.native
+
+            from android.graphics.drawable import GradientDrawable, StateListDrawable
+            from android.graphics import Color
+
+            density = native.getContext().getResources().getDisplayMetrics().density
+            corner_px = int(corner_dp * density)
+            border_px = max(1, int(1 * density))
+
+            def make_gradient(top_hex, bot_hex):
+                gd = GradientDrawable(
+                    GradientDrawable.Orientation.TOP_BOTTOM,
+                    [Color.parseColor(top_hex), Color.parseColor(bot_hex)]
+                )
+                gd.setCornerRadius(float(corner_px))
+                gd.setStroke(border_px, Color.parseColor(border_color))
+                return gd
+
+            normal = make_gradient(bg_start, bg_end)
+            pressed = make_gradient(pressed_start, pressed_end)
+
+            sld = StateListDrawable()
+            # Pressed state: android.R.attr.state_pressed = 0x010100a7
+            from java.lang import Integer
+            pressed_state = Integer(0x010100a7).intValue()
+            sld.addState([pressed_state], pressed)
+            sld.addState([], normal)
+
+            native.setBackground(sld)
+            # Re-apply elevation for a subtle lift (1dp shadow)
+            native.setElevation(float(int(1 * density)))
         except Exception:
             pass
     
@@ -1560,14 +1609,15 @@ class WizardsCavernApp(toga.App):
         return buttons
     
     def create_button(self, cmd_key, cmd_label):
-        """Create a command button."""
+        """Create a command button with rounded gradient styling."""
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=1, font_size=12, width=85,
+            style=Pack(margin=2, font_size=12, width=85,
                        background_color='#383838', color='#EEE', height=36)
         )
         self._compact_android_button(btn)
+        self._style_android_button(btn)
         return btn
 
     def create_big_button(self, cmd_key, cmd_label):
@@ -1575,10 +1625,13 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=1, font_size=14, font_weight='bold', width=90, height=36,
+            style=Pack(margin=2, font_size=14, font_weight='bold', width=90, height=36,
                        background_color='#444', color='#FFF')
         )
         self._compact_android_button(btn)
+        self._style_android_button(btn, bg_start='#555555', bg_end='#383838',
+                                    pressed_start='#383838', pressed_end='#222222',
+                                    border_color='#666666')
         return btn
 
     def create_numpad_button(self, number, compact=False):
@@ -1588,10 +1641,13 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             number,
             on_press=lambda w, n=number: self.number_pad_input(n),
-            style=Pack(margin=0, font_size=fs, font_weight='bold', width=55,
+            style=Pack(margin=1, font_size=fs, font_weight='bold', width=55,
                        color='#4CAF50', height=h, background_color='#2a2a2a')
         )
         self._compact_android_button(btn)
+        self._style_android_button(btn, bg_start='#333333', bg_end='#222222',
+                                    pressed_start='#1a1a1a', pressed_end='#111111',
+                                    border_color='#444444')
         return btn
 
     def create_spacer(self):
@@ -1606,6 +1662,9 @@ class WizardsCavernApp(toga.App):
                        background_color='#2a2a2a', color='#AAA', height=36)
         )
         self._compact_android_button(btn)
+        self._style_android_button(btn, bg_start='#3a3a3a', bg_end='#222222',
+                                    pressed_start='#222222', pressed_end='#111111',
+                                    border_color='#4a4a4a', corner_dp=8)
         return btn
 
     def create_dpad_center(self):
