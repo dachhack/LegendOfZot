@@ -232,91 +232,107 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
 
 
 def generate_dice_roll_js(dice_rolls):
-    """Generate animated d20 dice roll display for combat RNG events.
+    """Generate animated 3D dice roll display inside combat panels.
 
-    dice_rolls: list of (roll_value, dc, hit_bool, label) tuples.
-    Shows a small animated d20 per roll above the combat area.
-    The dice tumbles through random faces then lands on the actual result.
+    dice_rolls: list of (roll_value, dc, hit_bool, label, sides) tuples.
+    ATK dice appear in monster panel, DEF/FLEE dice in player panel.
+    Different polygon clip-paths per die type (d20=hexagon, d12=pentagon, d8=diamond).
+    Uses CSS 3D perspective transforms for tumbling effect.
     """
     if not dice_rolls:
         return ""
 
-    # Build JS for each dice roll, staggered by 200ms
     roll_data_js = ",".join(
-        f'[{r[0]},{r[1]},{1 if r[2] else 0},"{r[3]}"]'
+        f'[{r[0]},{r[1]},{1 if r[2] else 0},"{r[3]}",{r[4]}]'
         for r in dice_rolls
     )
 
     js = (
         '<script>(function(){'
         'var rolls=[' + roll_data_js + '];'
-        'var container=document.getElementById("dice_roll_area");'
-        'if(!container)return;'
-        'container.innerHTML="";'
-        # For each roll, create an animated dice element
+
+        # Clip-path shapes for each die type
+        'var shapes={'
+        '20:"polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%)",'   # hexagon (d20)
+        '12:"polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%)",'         # pentagon (d12)
+        '8:"polygon(50% 0%,100% 50%,50% 100%,0% 50%)",'                    # diamond (d8)
+        '6:"none",'                                                          # square (d6)
+        '4:"polygon(50% 0%,100% 100%,0% 100%)"'                            # triangle (d4)
+        '};'
+        # Border-radius per die type
+        'var radii={20:"2px",12:"2px",8:"0",6:"3px",4:"0"};'
+
         'rolls.forEach(function(r,idx){'
-        'var val=r[0],dc=r[1],hit=r[2],label=r[3];'
+        'var val=r[0],dc=r[1],hit=r[2],label=r[3],sides=r[4];'
+
+        # Target panel: ATK -> monster, DEF/FLEE -> player
+        'var targetId=label==="ATK"?"monster_dice":"player_dice";'
+        'var container=document.getElementById(targetId);'
+        'if(!container)return;'
 
         # Create dice wrapper
         'var wrap=document.createElement("div");'
-        'wrap.style.cssText="display:inline-block;text-align:center;margin:0 6px;vertical-align:top;";'
+        'wrap.style.cssText="text-align:center;";'
 
-        # Label above dice
-        'var lbl=document.createElement("div");'
-        'lbl.style.cssText="font-size:9px;color:#AAA;font-family:monospace;margin-bottom:2px;";'
-        'lbl.textContent=label;'
-        'wrap.appendChild(lbl);'
-
-        # The dice face
+        # The 3D dice face
+        'var sz=28;'
         'var dice=document.createElement("div");'
+        'var clip=shapes[sides]||shapes[20];'
+        'var rad=radii[sides]||"2px";'
         'dice.style.cssText='
-        '"width:32px;height:32px;border:2px solid #666;border-radius:4px;'
+        '"width:"+sz+"px;height:"+sz+"px;'
         'display:flex;align-items:center;justify-content:center;'
-        'font-size:16px;font-weight:bold;font-family:monospace;'
-        'color:#FFF;background:#333;margin:0 auto;'
-        'text-shadow:0 0 4px #000;transition:none;";'
-        'dice.textContent="?";'
+        'font-size:13px;font-weight:bold;font-family:monospace;'
+        'color:#FFF;background:#444;margin:0 auto;'
+        'text-shadow:0 0 3px #000;'
+        'border:2px solid #777;border-radius:"+rad+";'
+        'perspective:120px;";'
+        'if(clip!=="none")dice.style.clipPath=clip;'
+        'dice.textContent="";'
         'wrap.appendChild(dice);'
 
-        # DC text below dice
-        'var dcEl=document.createElement("div");'
-        'dcEl.style.cssText="font-size:8px;color:#888;font-family:monospace;margin-top:2px;opacity:0;";'
-        'dcEl.textContent="DC "+dc;'
-        'wrap.appendChild(dcEl);'
+        # d-label below dice
+        'var dlbl=document.createElement("div");'
+        'dlbl.style.cssText="font-size:7px;color:#777;font-family:monospace;margin-top:1px;";'
+        'dlbl.textContent="d"+sides;'
+        'wrap.appendChild(dlbl);'
 
         'container.appendChild(wrap);'
 
-        # Animate: cycle through random numbers then land on result
-        'var frame=0;var totalFrames=12;var flickerInterval;'
+        # Animate: 3D tumble then land
+        'var frame=0;var total=8;var flicker;'
         'setTimeout(function(){'
-        'flickerInterval=setInterval(function(){'
+        'flicker=setInterval(function(){'
         'frame++;'
-        'if(frame<totalFrames){'
-        'dice.textContent=Math.floor(Math.random()*20)+1;'
-        'dice.style.borderColor="#888";'
-        # Subtle rotation wiggle
-        'dice.style.transform="rotate("+(Math.random()*30-15)+"deg)";'
+        'if(frame<total){'
+        'dice.textContent=Math.floor(Math.random()*sides)+1;'
+        # 3D tumble: perspective rotateX/Y
+        'var rx=(Math.random()*360-180);'
+        'var ry=(Math.random()*360-180);'
+        'dice.style.transform="perspective(120px) rotateX("+rx+"deg) rotateY("+ry+"deg)";'
+        'dice.style.borderColor="#999";'
         '}else{'
-        'clearInterval(flickerInterval);'
-        # Land on actual value
+        'clearInterval(flicker);'
+        # Land: snap to front face
         'dice.textContent=val;'
-        'dice.style.transform="rotate(0deg)";'
-        'dcEl.style.opacity="1";'
+        'dice.style.transform="perspective(120px) rotateX(0) rotateY(0)";'
         'if(hit){'
         'dice.style.borderColor="#69F0AE";dice.style.color="#69F0AE";'
-        'dice.style.boxShadow="0 0 8px #69F0AE";'
+        'dice.style.background="#2a3a2a";'
+        'dice.style.boxShadow="0 0 6px #69F0AE";'
         '}else{'
         'dice.style.borderColor="#FF5252";dice.style.color="#FF5252";'
-        'dice.style.boxShadow="0 0 8px #FF5252";'
+        'dice.style.background="#3a2a2a";'
+        'dice.style.boxShadow="0 0 6px #FF5252";'
         '}'
-        # Fade out after 2 seconds
+        # Fade out after 1.5s
         'setTimeout(function(){'
-        'wrap.style.transition="opacity 0.8s";wrap.style.opacity="0";'
-        'setTimeout(function(){if(wrap.parentNode)wrap.parentNode.removeChild(wrap);},800);'
-        '},2000);'
+        'wrap.style.transition="opacity 0.5s";wrap.style.opacity="0";'
+        'setTimeout(function(){if(wrap.parentNode)wrap.parentNode.removeChild(wrap);},500);'
+        '},1500);'
         '}'
-        '},60);'  # 60ms per flicker frame = ~720ms total animation
-        '},idx*250);'  # stagger each dice by 250ms
+        '},45);'   # 45ms per frame = ~360ms tumble
+        '},idx*120);'  # 120ms stagger between dice
 
         '});'
         '})();</script>'
@@ -3518,7 +3534,7 @@ class WizardsCavernApp(toga.App):
             evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
             evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div style="padding: 4px; border-radius: 4px; {evo_border_style} margin-bottom: 5px;">
+                <div id="monster_panel" style="position:relative; padding: 4px; border-radius: 4px; {evo_border_style} margin-bottom: 5px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
@@ -3529,6 +3545,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 12px; color: #64B5F6; margin-top: 2px;">Resist: {", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
                     </div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
                 </div>
                 """
 
@@ -3539,7 +3556,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'equipped_armor', None)
             )
             player_combat_html = f"""
-                <div style="padding: 4px; border-radius: 4px; border: 2px solid #666;">
+                <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -3552,6 +3569,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 9px; color: #FFB74D; margin-top: 2px;">Weak: {", ".join(gs.player_character.elemental_weaknesses)}</div>' if gs.player_character.elemental_weaknesses else ''}
                         </div>
                     </div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
                 </div>
                 """
 
@@ -3590,7 +3608,7 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
 
-                    <div id="dice_roll_area" style="text-align:center;min-height:0;margin-bottom:4px;"></div>
+
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 8px;">
                         <div>{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
@@ -3623,7 +3641,7 @@ class WizardsCavernApp(toga.App):
             evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
             evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div style="padding: 3px; border-radius: 3px; {evo_border_style} margin-bottom: 4px;">
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {evo_border_style} margin-bottom: 4px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
@@ -3634,6 +3652,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 1px;">{", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
                     </div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
                 </div>
                 """
 
@@ -3648,7 +3667,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'equipped_armor', None)
             )
             player_combat_html = f"""
-                <div style="padding: 3px; border-radius: 3px; border: 2px solid #666;">
+                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -3661,6 +3680,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 8px; color: #FDD835; margin-top: 1px;">{", ".join(gs.player_character.status_effects.keys())}</div>' if gs.player_character.status_effects else ''}
                         </div>
                     </div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
                 </div>
                 """
 
@@ -3677,7 +3697,7 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
 
-                    <div id="dice_roll_area" style="text-align:center;min-height:0;margin-bottom:4px;"></div>
+
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
                         <div>{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
@@ -3708,7 +3728,7 @@ class WizardsCavernApp(toga.App):
             evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
             evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div style="padding: 4px; border-radius: 4px; {evo_border_style} margin-bottom: 5px;">
+                <div id="monster_panel" style="position:relative; padding: 4px; border-radius: 4px; {evo_border_style} margin-bottom: 5px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
@@ -3717,6 +3737,7 @@ class WizardsCavernApp(toga.App):
                             <div style="font-size: 12px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=15)}</div>
                         </div>
                     </div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
                 </div>
                 """
 
@@ -3727,7 +3748,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'equipped_armor', None)
             )
             player_combat_html = f"""
-                <div style="padding: 4px; border-radius: 4px; border: 2px solid #666;">
+                <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -3737,6 +3758,7 @@ class WizardsCavernApp(toga.App):
                             <div style="font-size: 12px; color: #FFD700;">Escaped combat!</div>
                         </div>
                     </div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
                 </div>
                 """
 
@@ -3746,7 +3768,7 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
 
-                    <div id="dice_roll_area" style="text-align:center;min-height:0;margin-bottom:4px;"></div>
+
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
                         <div>{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">

@@ -683,11 +683,12 @@ def process_combat_action(player_character, my_tower, cmd):
             add_log(f"{COLOR_PURPLE}[Invisible] The {gs.active_monster.name} cannot see you. You escape easily.{COLOR_RESET}")
             gs.prompt_cntl = "flee_direction_mode"
         else:
-            # Roll for flee (d20 system: need >= DC to escape)
-            dc = max(1, min(20, int(round((1 - flee_chance) * 20))))
-            roll = random.randint(1, 20)
+            # Roll for flee (d8: need >= DC to escape)
+            sides = 8
+            dc = max(1, min(sides, int(round((1 - flee_chance) * sides))))
+            roll = random.randint(1, sides)
             flee_success = roll >= dc
-            gs.last_dice_rolls.append((roll, dc, flee_success, "FLEE"))
+            gs.last_dice_rolls.append((roll, dc, flee_success, "FLEE", sides))
             if flee_success:
                 add_log(f"{COLOR_GREEN}You successfully broke away from combat!{COLOR_RESET}")
                 add_log("Choose a direction to flee (n/s/e/w):")
