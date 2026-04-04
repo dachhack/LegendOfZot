@@ -364,40 +364,46 @@ def generate_monster_defeat_js(monster_name):
         'var mp=document.getElementById("monster_panel");'
         'if(mp){'
         # Animate the actual monster panel: grayscale + shrink + fade
-        'mp.style.transition="filter 0.4s,opacity 0.6s,transform 0.6s";'
-        'mp.style.filter="grayscale(100%) brightness(0.5)";'
+        'mp.style.transition="filter 0.6s ease-out,opacity 1s ease-out 0.6s,transform 1s ease-out 0.6s";'
+        'mp.style.filter="grayscale(100%) brightness(0.4)";'
         'setTimeout(function(){'
         'mp.style.opacity="0";'
-        'mp.style.transform="scale(0.85)";'
-        '},400);'
-        'setTimeout(function(){if(mp.parentNode)mp.parentNode.removeChild(mp);},1000);'
+        'mp.style.transform="scale(0.8)";'
+        '},600);'
+        'setTimeout(function(){if(mp.parentNode)mp.parentNode.removeChild(mp);},1800);'
         '}else{'
         # No panel: show floating defeat text overlay
         'var ov=document.createElement("div");'
-        'ov.style.cssText="position:fixed;top:35%;left:50%;transform:translate(-50%,-50%);'
-        'z-index:99999;text-align:center;pointer-events:none;";'
+        'ov.style.cssText="position:fixed;top:35%;left:50%;transform:translate(-50%,-50%) scale(0.8);'
+        'z-index:99999;text-align:center;pointer-events:none;opacity:0;";'
 
         'var txt=document.createElement("div");'
-        'txt.style.cssText="font-family:monospace;font-size:14px;font-weight:bold;'
-        'color:#F44336;text-shadow:0 0 8px #F44336;margin-bottom:4px;";'
+        'txt.style.cssText="font-family:monospace;font-size:16px;font-weight:bold;'
+        'color:#F44336;text-shadow:0 0 10px #F44336,0 0 20px #F44336;margin-bottom:6px;";'
         'txt.textContent="' + safe_name + '";'
         'ov.appendChild(txt);'
 
         'var sub=document.createElement("div");'
-        'sub.style.cssText="font-family:monospace;font-size:11px;color:#69F0AE;'
-        'text-shadow:0 0 6px #69F0AE;";'
+        'sub.style.cssText="font-family:monospace;font-size:13px;font-weight:bold;color:#69F0AE;'
+        'text-shadow:0 0 8px #69F0AE,0 0 16px #69F0AE;letter-spacing:4px;";'
         'sub.textContent="DEFEATED";'
         'ov.appendChild(sub);'
 
         'document.body.appendChild(ov);'
 
-        # Animate: flash then fade + drift up
-        'ov.style.transition="opacity 0.8s,transform 0.8s";'
+        # Animate: scale up + fade in, hold, then drift up + fade out
+        'ov.style.transition="opacity 0.3s ease-out,transform 0.3s ease-out";'
         'setTimeout(function(){'
+        'ov.style.opacity="1";'
+        'ov.style.transform="translate(-50%,-50%) scale(1)";'
+        '},50);'
+        # Hold for 1.5s then fade out
+        'setTimeout(function(){'
+        'ov.style.transition="opacity 1s ease-in,transform 1s ease-in";'
         'ov.style.opacity="0";'
-        'ov.style.transform="translate(-50%,-50%) translateY(-20px)";'
-        '},800);'
-        'setTimeout(function(){if(ov.parentNode)ov.parentNode.removeChild(ov);},1600);'
+        'ov.style.transform="translate(-50%,-50%) translateY(-30px) scale(1.05)";'
+        '},1500);'
+        'setTimeout(function(){if(ov.parentNode)ov.parentNode.removeChild(ov);},2500);'
         '}'
         '})();</script>'
     )
@@ -1112,9 +1118,9 @@ class WizardsCavernApp(toga.App):
 
         # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
-            # QWERTY keyboard: 3 rows × 38px keys
-            self.bottom_panel.style.height = 198
-            self.button_panel.style.height = 116
+            # QWERTY keyboard: 3 rows × 38px keys + margins
+            self.bottom_panel.style.height = 210
+            self.button_panel.style.height = 126
         elif needs_numbers:
             # Numpad layout: 4 rows × 24px compact keys
             self.bottom_panel.style.height = 170
@@ -5435,7 +5441,7 @@ class WizardsCavernApp(toga.App):
         # Large text mode: scale all HTML content via CSS zoom
         zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
 
-        return f"""
+        result = f"""
         <!DOCTYPE html>
         <html>
         <head>
@@ -5644,6 +5650,7 @@ class WizardsCavernApp(toga.App):
         """
         # Clear one-shot animation flags after rendering
         gs.monster_defeated_anim = None
+        return result
     
 
     
