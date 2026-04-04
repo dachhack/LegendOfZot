@@ -5524,6 +5524,43 @@ class WizardsCavernApp(toga.App):
                     overflow-y: auto;
                     -webkit-overflow-scrolling: touch;
                 }}
+
+                /* ===== TRANSITION ANIMATIONS ===== */
+
+                /* Subtle page-level fade for smooth content swaps */
+                body {{
+                    animation: pageFade 150ms ease-out;
+                }}
+                @keyframes pageFade {{
+                    from {{ opacity: 0; }}
+                    to   {{ opacity: 1; }}
+                }}
+
+                /* Room interaction panels: fade + slide up */
+                .room-panel {{
+                    animation: panelSlideIn 300ms ease-out;
+                }}
+                @keyframes panelSlideIn {{
+                    from {{ opacity: 0; transform: translateY(12px); }}
+                    to   {{ opacity: 1; transform: translateY(0); }}
+                }}
+
+                /* Combat panels: fade + subtle scale pop */
+                #monster_panel {{
+                    animation: combatIn 250ms ease-out;
+                }}
+                #player_panel {{
+                    animation: combatIn 250ms ease-out 80ms both;
+                }}
+                @keyframes combatIn {{
+                    from {{ opacity: 0; transform: scale(0.95); }}
+                    to   {{ opacity: 1; transform: scale(1); }}
+                }}
+
+                /* Game log: no animation (fixed, persistent) */
+                #game-log {{
+                    animation: none;
+                }}
             </style>
         </head>
         <body>
