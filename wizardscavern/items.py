@@ -2501,6 +2501,7 @@ class Lantern(Item):
             current_floor = my_tower.floors[character.z]
 
             # Circular reveal with radius based on light_radius
+            # Uses line-of-sight: walls block the lantern light
             directions_to_reveal = []
             radius = self.upgrade_level+1  # Or use self.light_radius if you want it variable
 
@@ -2519,10 +2520,25 @@ class Lantern(Item):
 
                 # Check boundaries (target_x is row/y, target_y is col/x)
                 if 0 <= target_x < current_floor.rows and 0 <= target_y < current_floor.cols:
-                    target_room = current_floor.grid[target_x][target_y]
-                    if not target_room.discovered:
-                        target_room.discovered = True
-                        revealed_any = True
+                    # Line-of-sight check: walk from player to target,
+                    # if any intermediate cell is a wall, light is blocked
+                    blocked = False
+                    pr, pc_ = character.y, character.x
+                    tr, tc = target_x, target_y
+                    steps = max(abs(tr - pr), abs(tc - pc_))
+                    if steps > 1:
+                        for s in range(1, steps):
+                            ir = pr + round((tr - pr) * s / steps)
+                            ic = pc_ + round((tc - pc_) * s / steps)
+                            if current_floor.grid[ir][ic].room_type == current_floor.wall_char:
+                                blocked = True
+                                break
+
+                    if not blocked:
+                        target_room = current_floor.grid[target_x][target_y]
+                        if not target_room.discovered:
+                            target_room.discovered = True
+                            revealed_any = True
 
             # FIX: Swap coordinates to (y, x) for row, col
             my_tower.floors[character.z].print_floor(highlight_coords=(character.x, character.y))

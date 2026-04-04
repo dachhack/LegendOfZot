@@ -3097,6 +3097,7 @@ def process_lantern_quick_use(player_character, my_tower):
         add_log(f"{COLOR_CYAN}You light your {lantern.name}...{COLOR_RESET}")
 
         # Circular reveal with radius based on light_radius
+        # Uses line-of-sight: walls block the lantern light
         directions_to_reveal = []
         radius = lantern.upgrade_level+1  # Or use self.light_radius if you want it variable
 
@@ -3116,11 +3117,27 @@ def process_lantern_quick_use(player_character, my_tower):
 
             # Check boundaries (target_x is row/y, target_y is col/x)
             if 0 <= target_x < current_floor.rows and 0 <= target_y < current_floor.cols:
-                target_room = current_floor.grid[target_x][target_y]
-                if not target_room.discovered:
-                    target_room.discovered = True
-                    revealed_any = True
-                    revealed_count+=1
+                # Line-of-sight check: walk from player to target,
+                # if any intermediate cell is a wall, light is blocked
+                blocked = False
+                pr, pc_ = player_character.y, player_character.x
+                tr, tc = target_x, target_y
+                # Bresenham-style ray: step through intermediate cells
+                steps = max(abs(tr - pr), abs(tc - pc_))
+                if steps > 1:
+                    for s in range(1, steps):
+                        ir = pr + round((tr - pr) * s / steps)
+                        ic = pc_ + round((tc - pc_) * s / steps)
+                        if current_floor.grid[ir][ic].room_type == current_floor.wall_char:
+                            blocked = True
+                            break
+
+                if not blocked:
+                    target_room = current_floor.grid[target_x][target_y]
+                    if not target_room.discovered:
+                        target_room.discovered = True
+                        revealed_any = True
+                        revealed_count+=1
 
         if not revealed_any:
             add_log(f"{COLOR_CYAN}The lantern shines brightly, but reveals no new rooms nearby.{COLOR_RESET}")
