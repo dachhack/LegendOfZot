@@ -1017,8 +1017,12 @@ class Character:
         # Clamp hit chance between 5% and 95%
         hit_chance = max(0.05, min(0.95, hit_chance))
 
-        # Roll for hit
-        if random.random() > hit_chance:
+        # Roll for hit (d20 system: need to roll >= DC to hit)
+        dc = max(1, min(20, int(round((1 - hit_chance) * 20))))
+        roll = random.randint(1, 20)
+        hit = roll >= dc
+        gs.last_dice_rolls.append((roll, dc, hit, "ATK"))
+        if not hit:
             add_log(f"{COLOR_YELLOW}You missed the evil {target.name}!{COLOR_RESET}")
             return 0
 
@@ -1408,8 +1412,12 @@ class Monster:
         if _has_dodge_cloak(gs.player_character):
             hit_chance *= 0.8  # 20% reduced
 
-        # Roll for hit
-        if random.random() > hit_chance:
+        # Roll for hit (d20 system: monster needs >= DC to hit)
+        dc = max(1, min(20, int(round((1 - hit_chance) * 20))))
+        roll = random.randint(1, 20)
+        hit = roll >= dc
+        gs.last_dice_rolls.append((roll, dc, hit, "DEF"))
+        if not hit:
           gs.last_player_blocked = True
           add_log(f"{COLOR_YELLOW}{self.name} missed {target.name}!{COLOR_RESET}")
           return 0 # No damage dealt

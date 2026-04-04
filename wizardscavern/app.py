@@ -231,6 +231,99 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
     return js
 
 
+def generate_dice_roll_js(dice_rolls):
+    """Generate animated d20 dice roll display for combat RNG events.
+
+    dice_rolls: list of (roll_value, dc, hit_bool, label) tuples.
+    Shows a small animated d20 per roll above the combat area.
+    The dice tumbles through random faces then lands on the actual result.
+    """
+    if not dice_rolls:
+        return ""
+
+    # Build JS for each dice roll, staggered by 200ms
+    roll_data_js = ",".join(
+        f'[{r[0]},{r[1]},{1 if r[2] else 0},"{r[3]}"]'
+        for r in dice_rolls
+    )
+
+    js = (
+        '<script>(function(){'
+        'var rolls=[' + roll_data_js + '];'
+        'var container=document.getElementById("dice_roll_area");'
+        'if(!container)return;'
+        'container.innerHTML="";'
+        # For each roll, create an animated dice element
+        'rolls.forEach(function(r,idx){'
+        'var val=r[0],dc=r[1],hit=r[2],label=r[3];'
+
+        # Create dice wrapper
+        'var wrap=document.createElement("div");'
+        'wrap.style.cssText="display:inline-block;text-align:center;margin:0 6px;vertical-align:top;";'
+
+        # Label above dice
+        'var lbl=document.createElement("div");'
+        'lbl.style.cssText="font-size:9px;color:#AAA;font-family:monospace;margin-bottom:2px;";'
+        'lbl.textContent=label;'
+        'wrap.appendChild(lbl);'
+
+        # The dice face
+        'var dice=document.createElement("div");'
+        'dice.style.cssText='
+        '"width:32px;height:32px;border:2px solid #666;border-radius:4px;'
+        'display:flex;align-items:center;justify-content:center;'
+        'font-size:16px;font-weight:bold;font-family:monospace;'
+        'color:#FFF;background:#333;margin:0 auto;'
+        'text-shadow:0 0 4px #000;transition:none;";'
+        'dice.textContent="?";'
+        'wrap.appendChild(dice);'
+
+        # DC text below dice
+        'var dcEl=document.createElement("div");'
+        'dcEl.style.cssText="font-size:8px;color:#888;font-family:monospace;margin-top:2px;opacity:0;";'
+        'dcEl.textContent="DC "+dc;'
+        'wrap.appendChild(dcEl);'
+
+        'container.appendChild(wrap);'
+
+        # Animate: cycle through random numbers then land on result
+        'var frame=0;var totalFrames=12;var flickerInterval;'
+        'setTimeout(function(){'
+        'flickerInterval=setInterval(function(){'
+        'frame++;'
+        'if(frame<totalFrames){'
+        'dice.textContent=Math.floor(Math.random()*20)+1;'
+        'dice.style.borderColor="#888";'
+        # Subtle rotation wiggle
+        'dice.style.transform="rotate("+(Math.random()*30-15)+"deg)";'
+        '}else{'
+        'clearInterval(flickerInterval);'
+        # Land on actual value
+        'dice.textContent=val;'
+        'dice.style.transform="rotate(0deg)";'
+        'dcEl.style.opacity="1";'
+        'if(hit){'
+        'dice.style.borderColor="#69F0AE";dice.style.color="#69F0AE";'
+        'dice.style.boxShadow="0 0 8px #69F0AE";'
+        '}else{'
+        'dice.style.borderColor="#FF5252";dice.style.color="#FF5252";'
+        'dice.style.boxShadow="0 0 8px #FF5252";'
+        '}'
+        # Fade out after 2 seconds
+        'setTimeout(function(){'
+        'wrap.style.transition="opacity 0.8s";wrap.style.opacity="0";'
+        'setTimeout(function(){if(wrap.parentNode)wrap.parentNode.removeChild(wrap);},800);'
+        '},2000);'
+        '}'
+        '},60);'  # 60ms per flicker frame = ~720ms total animation
+        '},idx*250);'  # stagger each dice by 250ms
+
+        '});'
+        '})();</script>'
+    )
+    return js
+
+
 # ============================================================
 # SPRITE SYSTEM
 # Sprite sheets, mappings, and rendering functions
@@ -3488,6 +3581,7 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
 
+                    <div id="dice_roll_area" style="text-align:center;min-height:0;margin-bottom:4px;"></div>
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 8px;">
                         <div>{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
@@ -3495,9 +3589,10 @@ class WizardsCavernApp(toga.App):
                             {player_combat_html}
                         </div>
                     </div>
-                    
+
                     <div class="room-panel" style="width: 100%;">{spells_html}</div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
+                    {generate_dice_roll_js(gs.last_dice_rolls)}
                 </div>
                 """
             current_commands_text = "#  = cast spell | x = cancel"
@@ -3573,6 +3668,7 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
 
+                    <div id="dice_roll_area" style="text-align:center;min-height:0;margin-bottom:4px;"></div>
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
                         <div>{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
@@ -3581,6 +3677,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
+                    {generate_dice_roll_js(gs.last_dice_rolls)}
                 </div>
                 """
             current_commands_text = combat_commands
@@ -3640,6 +3737,7 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
 
+                    <div id="dice_roll_area" style="text-align:center;min-height:0;margin-bottom:4px;"></div>
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
                         <div>{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
@@ -3649,6 +3747,7 @@ class WizardsCavernApp(toga.App):
                     </div>
 
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
+                    {generate_dice_roll_js(gs.last_dice_rolls)}
                 </div>
                 """
             current_commands_text = "n/s/e/w = flee direction | c = cancel"

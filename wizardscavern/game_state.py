@@ -339,6 +339,17 @@ last_monster_status = None
 last_player_heal = 0
 
 # ============================================================================
+# DICE ROLL ANIMATION STATE
+# ============================================================================
+# Stores the last combat dice rolls for the animated d20 display.
+# Each entry is a tuple: (roll_value, needed, hit_bool, label)
+#   roll_value: 1-20 result
+#   needed: DC threshold (roll >= needed to succeed)
+#   hit_bool: True if succeeded
+#   label: short description e.g. "ATK", "DEF", "FLEE"
+last_dice_rolls = []   # list of roll tuples to show this frame
+
+# ============================================================================
 # NEGATIVE STATUS EFFECT TYPES
 # ============================================================================
 NEGATIVE_EFFECT_TYPES = {

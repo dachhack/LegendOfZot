@@ -118,6 +118,7 @@ def process_combat_action(player_character, my_tower, cmd):
     gs.last_player_status = None
     gs.last_monster_status = None
     gs.last_player_heal = 0
+    gs.last_dice_rolls = []
 
     if cmd == "init":
         # Get player title for intelligent monsters
@@ -681,12 +682,18 @@ def process_combat_action(player_character, my_tower, cmd):
         elif 'Invisibility' in player_character.status_effects:
             add_log(f"{COLOR_PURPLE}[Invisible] The {gs.active_monster.name} cannot see you. You escape easily.{COLOR_RESET}")
             gs.prompt_cntl = "flee_direction_mode"
-        elif random.random() < flee_chance:
-            add_log(f"{COLOR_GREEN}You successfully broke away from combat!{COLOR_RESET}")
-            add_log("Choose a direction to flee (n/s/e/w):")
-            gs.prompt_cntl = "flee_direction_mode"
         else:
-            add_log(f"{COLOR_RED}Flee failed! The monster blocks your escape.{COLOR_RESET}")
+            # Roll for flee (d20 system: need >= DC to escape)
+            dc = max(1, min(20, int(round((1 - flee_chance) * 20))))
+            roll = random.randint(1, 20)
+            flee_success = roll >= dc
+            gs.last_dice_rolls.append((roll, dc, flee_success, "FLEE"))
+            if flee_success:
+                add_log(f"{COLOR_GREEN}You successfully broke away from combat!{COLOR_RESET}")
+                add_log("Choose a direction to flee (n/s/e/w):")
+                gs.prompt_cntl = "flee_direction_mode"
+            else:
+                add_log(f"{COLOR_RED}Flee failed! The monster blocks your escape.{COLOR_RESET}")
             gs.active_monster.attack_target(player_character)
             if not player_character.is_alive():
                 add_log(f"{COLOR_RED}You were defeated...{COLOR_RESET}")
@@ -1035,6 +1042,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
     gs.last_player_status = None
     gs.last_monster_status = None
     gs.last_player_heal = 0
+    gs.last_dice_rolls = []
 
     main = _main()
 
