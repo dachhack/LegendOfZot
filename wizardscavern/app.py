@@ -232,12 +232,12 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
 
 
 def generate_dice_roll_js(dice_rolls):
-    """Generate animated 3D dice roll display inside combat panels.
+    """Generate animated 3D dice roll display as floating overlays.
 
     dice_rolls: list of (roll_value, dc, hit_bool, label, sides) tuples.
-    ATK dice appear in monster panel, DEF/FLEE dice in player panel.
-    Different polygon clip-paths per die type (d20=hexagon, d12=pentagon, d8=diamond).
-    Uses CSS 3D perspective transforms for tumbling effect.
+    ATK dice appear in monster panel if present, else top-right overlay.
+    DEF/FLEE dice appear in player panel if present, else bottom-right overlay.
+    Falls back to fixed-position overlays so dice always show even after combat ends.
     """
     if not dice_rolls:
         return ""
@@ -253,22 +253,30 @@ def generate_dice_roll_js(dice_rolls):
 
         # Clip-path shapes for each die type
         'var shapes={'
-        '20:"polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%)",'   # hexagon (d20)
-        '12:"polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%)",'         # pentagon (d12)
-        '8:"polygon(50% 0%,100% 50%,50% 100%,0% 50%)",'                    # diamond (d8)
-        '6:"none",'                                                          # square (d6)
-        '4:"polygon(50% 0%,100% 100%,0% 100%)"'                            # triangle (d4)
+        '20:"polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%)",'
+        '12:"polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%)",'
+        '8:"polygon(50% 0%,100% 50%,50% 100%,0% 50%)",'
+        '6:"none",'
+        '4:"polygon(50% 0%,100% 100%,0% 100%)"'
         '};'
-        # Border-radius per die type
         'var radii={20:"2px",12:"2px",8:"0",6:"3px",4:"0"};'
 
         'rolls.forEach(function(r,idx){'
         'var val=r[0],dc=r[1],hit=r[2],label=r[3],sides=r[4];'
 
-        # Target panel: ATK -> monster, DEF/FLEE -> player
+        # Try panel dice area first, fall back to floating overlay
         'var targetId=label==="ATK"?"monster_dice":"player_dice";'
         'var container=document.getElementById(targetId);'
-        'if(!container)return;'
+        'var floating=false;'
+        'if(!container){'
+        # Create a floating overlay anchored to top-right area of page
+        'floating=true;'
+        'container=document.createElement("div");'
+        'container.style.cssText="position:fixed;'
+        'right:8px;z-index:99999;pointer-events:none;'
+        'top:"+(label==="ATK"?"30":"55")+"%;";'
+        'document.body.appendChild(container);'
+        '}'
 
         # Create dice wrapper
         'var wrap=document.createElement("div");'
@@ -306,14 +314,12 @@ def generate_dice_roll_js(dice_rolls):
         'frame++;'
         'if(frame<total){'
         'dice.textContent=Math.floor(Math.random()*sides)+1;'
-        # 3D tumble: perspective rotateX/Y
         'var rx=(Math.random()*360-180);'
         'var ry=(Math.random()*360-180);'
         'dice.style.transform="perspective(120px) rotateX("+rx+"deg) rotateY("+ry+"deg)";'
         'dice.style.borderColor="#999";'
         '}else{'
         'clearInterval(flicker);'
-        # Land: snap to front face
         'dice.textContent=val;'
         'dice.style.transform="perspective(120px) rotateX(0) rotateY(0)";'
         'if(hit){'
@@ -325,14 +331,17 @@ def generate_dice_roll_js(dice_rolls):
         'dice.style.background="#3a2a2a";'
         'dice.style.boxShadow="0 0 6px #FF5252";'
         '}'
-        # Fade out after 1.5s
         'setTimeout(function(){'
         'wrap.style.transition="opacity 0.5s";wrap.style.opacity="0";'
-        'setTimeout(function(){if(wrap.parentNode)wrap.parentNode.removeChild(wrap);},500);'
+        'setTimeout(function(){'
+        'if(wrap.parentNode)wrap.parentNode.removeChild(wrap);'
+        'if(floating&&container.parentNode&&!container.hasChildNodes())'
+        'container.parentNode.removeChild(container);'
+        '},500);'
         '},1500);'
         '}'
-        '},45);'   # 45ms per frame = ~360ms tumble
-        '},idx*120);'  # 120ms stagger between dice
+        '},45);'
+        '},idx*120);'
 
         '});'
         '})();</script>'
@@ -3678,7 +3687,7 @@ class WizardsCavernApp(toga.App):
 
                     <div class="room-panel" style="width: 100%;">{spells_html}</div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
-                    {generate_dice_roll_js(gs.last_dice_rolls)}
+
                 </div>
                 """
             current_commands_text = "#  = cast spell | x = cancel"
@@ -3765,7 +3774,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
-                    {generate_dice_roll_js(gs.last_dice_rolls)}
+
                 </div>
                 """
             current_commands_text = combat_commands
@@ -3837,7 +3846,7 @@ class WizardsCavernApp(toga.App):
                     </div>
 
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
-                    {generate_dice_roll_js(gs.last_dice_rolls)}
+
                 </div>
                 """
             current_commands_text = "n/s/e/w = flee direction | c = cancel"
@@ -5537,6 +5546,7 @@ class WizardsCavernApp(toga.App):
                 // Call on page load
                 window.addEventListener('load', updateLog);
             </script>
+            {generate_dice_roll_js(gs.last_dice_rolls)}
         </body>
         </html>
         """

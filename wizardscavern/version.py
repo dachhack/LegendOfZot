@@ -4,7 +4,7 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 25
+BUILD_NUMBER = 26
 CHANGELOG = [
     "Styled buttons: rounded corners, gradient shading, border, press feedback",
     "Bigger buttons (85px wide, 36px tall) with 8-char labels: Inventory, Attack, etc.",
