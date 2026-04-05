@@ -330,19 +330,20 @@ def generate_dice_roll_js(dice_rolls):
 
 
 def generate_monster_defeat_js(monster_name):
-    """Generate a monster defeat animation inside the monster combat panel.
+    """Generate a monster defeat animation.
 
-    If the monster panel exists, it fades to grayscale + shrinks + dissolves.
-    If no panel (combat already ended), does nothing — the defeat is shown
-    in the game log text instead.
+    If the monster panel exists (multi-round kill), it fades to grayscale.
+    Otherwise (one-shot kill), shows a floating overlay with the monster
+    name + DEFEATED that fades out automatically.
     """
     if not monster_name:
         return ""
+    safe_name = monster_name.replace('"', '\\"').replace("'", "\\'").replace('<', '').replace('>', '')
     return (
         '<script>(function(){'
         'var mp=document.getElementById("monster_panel");'
-        'if(!mp)return;'
-        # Delay start so dice roll animation finishes first (~600ms)
+        'if(mp){'
+        # Panel exists: delay for dice, then grayscale + fade
         'setTimeout(function(){'
         'mp.style.transition="filter 0.6s ease-out,opacity 1s ease-out 0.6s,transform 1s ease-out 0.6s";'
         'mp.style.filter="grayscale(100%) brightness(0.4)";'
@@ -351,7 +352,32 @@ def generate_monster_defeat_js(monster_name):
         'mp.style.transform="scale(0.8)";'
         '},600);'
         'setTimeout(function(){if(mp.parentNode)mp.parentNode.removeChild(mp);},1800);'
-        '},700);'  # wait for dice to land
+        '},700);'
+        '}else{'
+        # No panel (one-shot kill): floating overlay
+        'var ov=document.createElement("div");'
+        'ov.style.cssText="position:fixed;top:40%;left:50%;transform:translate(-50%,-50%) scale(0.8);'
+        'z-index:99999;text-align:center;pointer-events:none;opacity:0;";'
+        'var txt=document.createElement("div");'
+        'txt.style.cssText="font-family:monospace;font-size:15px;font-weight:bold;'
+        'color:#F44336;text-shadow:0 0 8px #F44336;margin-bottom:4px;";'
+        'txt.textContent="' + safe_name + '";'
+        'ov.appendChild(txt);'
+        'var sub=document.createElement("div");'
+        'sub.style.cssText="font-family:monospace;font-size:12px;font-weight:bold;color:#69F0AE;'
+        'text-shadow:0 0 6px #69F0AE;letter-spacing:3px;";'
+        'sub.textContent="DEFEATED";'
+        'ov.appendChild(sub);'
+        'document.body.appendChild(ov);'
+        'ov.style.transition="opacity 0.3s ease-out,transform 0.3s ease-out";'
+        'setTimeout(function(){ov.style.opacity="1";ov.style.transform="translate(-50%,-50%) scale(1)";},50);'
+        'setTimeout(function(){'
+        'ov.style.transition="opacity 0.8s ease-in,transform 0.8s ease-in";'
+        'ov.style.opacity="0";'
+        'ov.style.transform="translate(-50%,-50%) translateY(-20px)";'
+        '},1200);'
+        'setTimeout(function(){if(ov.parentNode)ov.parentNode.removeChild(ov);},2000);'
+        '}'
         '})();</script>'
     )
 
@@ -2042,10 +2068,6 @@ class WizardsCavernApp(toga.App):
             process_chest_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "spell_casting_mode": # New condition for spell casting
             process_spell_casting_action(gs.player_character, gs.my_tower, cmd)
-        elif gs.prompt_cntl == "combat_victory":
-            # Any input dismisses victory screen and transitions to room
-            gs.victory_monster_name = None
-            _trigger_room_interaction(gs.player_character, gs.my_tower)
         elif gs.prompt_cntl == "combat_mode": # This block needs to be after spell_casting_mode for 'c' to work
             process_combat_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "spell_memorization_mode":
@@ -3794,53 +3816,6 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             current_commands_text = combat_commands
-
-        elif gs.prompt_cntl == "combat_victory":
-            # VICTORY VIEW - shows monster panel with defeat animation before transitioning
-
-            floor = gs.my_tower.floors[gs.player_character.z]
-            grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-
-            # Monster panel using saved name (gs.active_monster is already None)
-            victory_name = gs.victory_monster_name or "Monster"
-            monster_sprite_html = generate_monster_sprite_html(victory_name)
-
-            # Show last damage dealt if available
-            dmg_text = ""
-            if gs.last_monster_damage > 0:
-                dmg_text = f'<div style="font-size: 9px; color: #FF5252;">-{gs.last_monster_damage} HP</div>'
-
-            monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666; margin-bottom: 4px;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
-                        <div style="flex-shrink:0;">{monster_sprite_html}</div>
-                        <div>
-                            <div style="color: #F44336; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}</div>
-                            <div style="font-size: 10px; color: #69F0AE; font-weight: bold;">DEFEATED</div>
-                            {dmg_text}
-                        </div>
-                    </div>
-                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
-                </div>
-                """
-
-            html_code = f"""
-                <div style="font-family: monospace; font-size: 12px;">
-                    {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
-                    {player_stats_html}
-
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%; max-width: 300px;">
-                            {monster_html}
-                        </div>
-                    </div>
-                </div>
-                """
-            # Set the defeat animation flag for this render
-            gs.monster_defeated_anim = victory_name
-            current_commands_text = "Press any key to continue"
 
         elif gs.prompt_cntl == "flee_direction_mode":
             # FLEE DIRECTION SELECTION VIEW
