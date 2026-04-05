@@ -1631,7 +1631,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=1, font_size=11, width=88,
+            style=Pack(margin=1, font_size=11, width=95,
                        background_color='#383838', color='#EEE', height=30)
         )
         self._compact_android_button(btn)
@@ -1643,7 +1643,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=1, font_size=12, font_weight='bold', width=88, height=30,
+            style=Pack(margin=1, font_size=12, font_weight='bold', width=100, height=30,
                        background_color='#444', color='#FFF')
         )
         self._compact_android_button(btn)
