@@ -1091,9 +1091,9 @@ class WizardsCavernApp(toga.App):
 
         # Adjust panel heights based on mode
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
-            # QWERTY keyboard: 3 rows × 38px keys + margins
-            self.bottom_panel.style.height = 210
-            self.button_panel.style.height = 126
+            # QWERTY keyboard: 3 rows × 34px keys + margins
+            self.bottom_panel.style.height = 200
+            self.button_panel.style.height = 114
         elif needs_numbers:
             # Numpad layout: 4 rows × 24px compact keys
             self.bottom_panel.style.height = 170
@@ -1529,7 +1529,7 @@ class WizardsCavernApp(toga.App):
             shift_label,
             on_press=self.toggle_keyboard_case,
             style=Pack(flex=1, margin=0, padding=0, font_size=13, font_weight='bold',
-                       background_color='#444', color='#FFF', height=38)
+                       background_color='#444', color='#FFF', height=34)
         )
         row3 = [shift_button]
         if self.keyboard_uppercase:
@@ -1542,10 +1542,10 @@ class WizardsCavernApp(toga.App):
                 '<-',
                 on_press=self.zotle_backspace,
                 style=Pack(flex=1, margin=0, padding=0, font_size=13, font_weight='bold',
-                           background_color='#333', color='#EEE', height=38)
+                           background_color='#333', color='#EEE', height=34)
             )
             row3.append(backspace_button)
-            row3.append(toga.Box(style=Pack(flex=1, height=38)))
+            row3.append(toga.Box(style=Pack(flex=1, height=34)))
 
         # Add to button rows
         for btn in row1:
@@ -1560,8 +1560,8 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(flex=1, margin=1, padding=0, font_size=13,
-                       background_color='#333', color='#EEE', height=38)
+            style=Pack(flex=1, margin=1, padding=0, font_size=12,
+                       background_color='#333', color='#EEE', height=34)
         )
         self._compact_android_button(btn)
         self._style_android_button(btn, corner_dp=4)
