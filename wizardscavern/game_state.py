@@ -342,6 +342,7 @@ last_player_heal = 0
 # MONSTER DEFEAT ANIMATION STATE
 # ============================================================================
 monster_defeated_anim = None  # Set to monster name string when killed, cleared after render
+victory_monster_name = None   # Saved monster name for combat_victory view
 
 # ============================================================================
 # DICE ROLL ANIMATION STATE

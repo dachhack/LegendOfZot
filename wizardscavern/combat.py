@@ -286,6 +286,9 @@ def process_combat_action(player_character, my_tower, cmd):
                         gs.dungeon_keys[dungeon_coords] = True
                         add_log(f"{COLOR_CYAN}The monster dropped a dungeon key for location ({c}, {r})!{COLOR_RESET}")
 
+        # Enter victory state for defeat animation
+        gs.victory_monster_name = gs.active_monster.name
+
         current_floor = my_tower.floors[player_character.z]
         room = current_floor.grid[player_character.y][player_character.x]
         _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
@@ -300,7 +303,7 @@ def process_combat_action(player_character, my_tower, cmd):
         if _was_bug_monster:
             _check_bug_queen_spawn(player_character, my_tower)
 
-        main._trigger_room_interaction(player_character, my_tower)  # Re-evaluate room as '.'
+        gs.prompt_cntl = "combat_victory"
         return  # Combat ended by status effect
 
 
@@ -625,6 +628,9 @@ def process_combat_action(player_character, my_tower, cmd):
                             gs.dungeon_keys[dungeon_coords] = True
                             add_log(f"{COLOR_CYAN}The monster dropped a dungeon key for location ({c}, {r})!{COLOR_RESET}")
 
+            # Enter victory state: keep combat view showing for defeat animation
+            gs.victory_monster_name = gs.active_monster.name
+
             # Remove monster from room
             current_floor = my_tower.floors[player_character.z]
             room = current_floor.grid[player_character.y][player_character.x]
@@ -642,7 +648,7 @@ def process_combat_action(player_character, my_tower, cmd):
             if _was_bug_monster:
                 _check_bug_queen_spawn(player_character, my_tower)
 
-            main._trigger_room_interaction(player_character, my_tower)  # Re-evaluate room as '.'
+            gs.prompt_cntl = "combat_victory"
             return
 
 
@@ -1153,6 +1159,9 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                         add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
                         add_log("")
 
+                    # Enter victory state for defeat animation
+                    gs.victory_monster_name = gs.active_monster.name
+
                     # Remove monster from room
                     current_floor = my_tower.floors[player_character.z]
                     room = current_floor.grid[player_character.y][player_character.x]
@@ -1166,7 +1175,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     if _was_bug_monster:
                         _check_bug_queen_spawn(player_character, my_tower)
 
-                    main._trigger_room_interaction(player_character, my_tower)  # Re-evaluate room as '.'
+                    gs.prompt_cntl = "combat_victory"
                     return  # Combat ended
 
                 elif gs.active_monster:  # Monster still alive, it attacks back

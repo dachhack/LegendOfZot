@@ -2034,6 +2034,10 @@ class WizardsCavernApp(toga.App):
             process_chest_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "spell_casting_mode": # New condition for spell casting
             process_spell_casting_action(gs.player_character, gs.my_tower, cmd)
+        elif gs.prompt_cntl == "combat_victory":
+            # Any input dismisses victory screen and transitions to room
+            gs.victory_monster_name = None
+            _trigger_room_interaction(gs.player_character, gs.my_tower)
         elif gs.prompt_cntl == "combat_mode": # This block needs to be after spell_casting_mode for 'c' to work
             process_combat_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "spell_memorization_mode":
@@ -3782,6 +3786,69 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             current_commands_text = combat_commands
+
+        elif gs.prompt_cntl == "combat_victory":
+            # VICTORY VIEW - shows combat panels with defeat animation before transitioning
+
+            floor = gs.my_tower.floors[gs.player_character.z]
+            grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+
+            # Monster panel using saved name (gs.active_monster is already None)
+            victory_name = gs.victory_monster_name or "Monster"
+            monster_sprite_html = generate_monster_sprite_html(victory_name)
+            monster_html = f"""
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666; margin-bottom: 4px;">
+                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                        <div style="flex-shrink:0;">{monster_sprite_html}</div>
+                        <div>
+                            <div style="color: #F44336; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}</div>
+                            <div style="font-size: 9px; color: #69F0AE; font-weight: bold;">DEFEATED</div>
+                        </div>
+                    </div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                </div>
+                """
+
+            player_title = get_player_title(gs.player_character)
+            player_display = f"{gs.player_character.name} the {player_title}"
+            player_sprite_html_combat = generate_player_sprite_html(
+                getattr(gs.player_character, 'race', 'human'),
+                getattr(gs.player_character, 'gender', 'male'),
+                getattr(gs.player_character, 'equipped_armor', None)
+            )
+            player_combat_html = f"""
+                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;">
+                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
+                        <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
+                        <div>
+                            <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {player_display}</div>
+                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=10)}</div>
+                            <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
+                            <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
+                        </div>
+                    </div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                </div>
+                """
+
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 12px;">
+                    {achievement_notifications}
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    {player_stats_html}
+
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                        <div>{grid_html}</div>
+                        <div style="width: 100%; max-width: 300px;">
+                            {monster_html}
+                            {player_combat_html}
+                        </div>
+                    </div>
+                </div>
+                """
+            # Set the defeat animation flag for this render
+            gs.monster_defeated_anim = victory_name
+            current_commands_text = "Press any key to continue"
 
         elif gs.prompt_cntl == "flee_direction_mode":
             # FLEE DIRECTION SELECTION VIEW
