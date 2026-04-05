@@ -1373,6 +1373,18 @@ class WizardsCavernApp(toga.App):
         cmd_row2 = []
         cmd_row3 = []
 
+        def compact_btn(k, v):
+            """Create a compact button for numpad layouts (flex instead of fixed width)."""
+            btn = toga.Button(
+                v,
+                on_press=lambda w, ck=k, cl=v: self.quick_command(ck, cl),
+                style=Pack(flex=1, margin=1, font_size=11,
+                           background_color='#383838', color='#EEE', height=30)
+            )
+            self._compact_android_button(btn)
+            self._style_android_button(btn)
+            return btn
+
         for col in columns:
             if len(col) > 0:
                 k, v = col[0]
@@ -1381,11 +1393,11 @@ class WizardsCavernApp(toga.App):
                         'Sac', on_press=lambda w: self.number_pad_input('s'),
                         style=Pack(flex=1, margin=1, font_size=11, font_weight='bold', width=37)))
                 else:
-                    cmd_row3.append(self.create_button(k, v))
+                    cmd_row3.append(compact_btn(k, v))
             else:
                 cmd_row3.append(self.create_spacer())
-            cmd_row2.append(self.create_button(col[1][0], col[1][1]) if len(col) > 1 else self.create_spacer())
-            cmd_row1.append(self.create_button(col[2][0], col[2][1]) if len(col) > 2 else self.create_spacer())
+            cmd_row2.append(compact_btn(col[1][0], col[1][1]) if len(col) > 1 else self.create_spacer())
+            cmd_row1.append(compact_btn(col[2][0], col[2][1]) if len(col) > 2 else self.create_spacer())
 
         # Left column: command buttons in 3 rows
         left_col = toga.Box(style=Pack(direction=COLUMN, flex=1))
