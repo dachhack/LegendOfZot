@@ -342,6 +342,8 @@ def generate_monster_defeat_js(monster_name):
         '<script>(function(){'
         'var mp=document.getElementById("monster_panel");'
         'if(!mp)return;'
+        # Delay start so dice roll animation finishes first (~600ms)
+        'setTimeout(function(){'
         'mp.style.transition="filter 0.6s ease-out,opacity 1s ease-out 0.6s,transform 1s ease-out 0.6s";'
         'mp.style.filter="grayscale(100%) brightness(0.4)";'
         'setTimeout(function(){'
@@ -349,6 +351,7 @@ def generate_monster_defeat_js(monster_name):
         'mp.style.transform="scale(0.8)";'
         '},600);'
         'setTimeout(function(){if(mp.parentNode)mp.parentNode.removeChild(mp);},1800);'
+        '},700);'  # wait for dice to land
         '})();</script>'
     )
 
@@ -3801,13 +3804,20 @@ class WizardsCavernApp(toga.App):
             # Monster panel using saved name (gs.active_monster is already None)
             victory_name = gs.victory_monster_name or "Monster"
             monster_sprite_html = generate_monster_sprite_html(victory_name)
+
+            # Show last damage dealt if available
+            dmg_text = ""
+            if gs.last_monster_damage > 0:
+                dmg_text = f'<div style="font-size: 9px; color: #FF5252;">-{gs.last_monster_damage} HP</div>'
+
             monster_html = f"""
                 <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666; margin-bottom: 4px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
                             <div style="color: #F44336; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}</div>
-                            <div style="font-size: 9px; color: #69F0AE; font-weight: bold;">DEFEATED</div>
+                            <div style="font-size: 10px; color: #69F0AE; font-weight: bold;">DEFEATED</div>
+                            {dmg_text}
                         </div>
                     </div>
                     <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
