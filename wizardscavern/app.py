@@ -1295,8 +1295,13 @@ class WizardsCavernApp(toga.App):
                 self.button_row_2.add(btn)
             for btn in dpad_row3 + [self.create_spacer()] + cmd_row3:
                 self.number_pad_box.add(btn)
+        elif len(cmds_to_place) <= 4:
+            # Few buttons, no D-pad: arrange all in a single centered row
+            row_buttons = [self.create_button(k, v) for k, v in cmds_to_place]
+            for btn in [self.create_spacer()] + row_buttons + [self.create_spacer()]:
+                self.number_pad_box.add(btn)
         else:
-            # No D-pad: center the command buttons
+            # No D-pad: center the command buttons in columns
             for btn in [self.create_spacer()] + cmd_row1 + [self.create_spacer()]:
                 self.button_row_1.add(btn)
             for btn in [self.create_spacer()] + cmd_row2 + [self.create_spacer()]:
@@ -3788,7 +3793,7 @@ class WizardsCavernApp(toga.App):
             current_commands_text = combat_commands
 
         elif gs.prompt_cntl == "combat_victory":
-            # VICTORY VIEW - shows combat panels with defeat animation before transitioning
+            # VICTORY VIEW - shows monster panel with defeat animation before transitioning
 
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
@@ -3809,28 +3814,6 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
 
-            player_title = get_player_title(gs.player_character)
-            player_display = f"{gs.player_character.name} the {player_title}"
-            player_sprite_html_combat = generate_player_sprite_html(
-                getattr(gs.player_character, 'race', 'human'),
-                getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
-            )
-            player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
-                        <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
-                        <div>
-                            <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {player_display}</div>
-                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=10)}</div>
-                            <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
-                            <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
-                        </div>
-                    </div>
-                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
-                </div>
-                """
-
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
@@ -3841,7 +3824,6 @@ class WizardsCavernApp(toga.App):
                         <div>{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
                             {monster_html}
-                            {player_combat_html}
                         </div>
                     </div>
                 </div>
