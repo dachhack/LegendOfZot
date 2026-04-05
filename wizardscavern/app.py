@@ -232,12 +232,11 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
 
 
 def generate_dice_roll_js(dice_rolls):
-    """Generate animated 3D dice roll display as floating overlays.
+    """Generate animated 3D dice roll display inside combat panels only.
 
     dice_rolls: list of (roll_value, dc, hit_bool, label, sides) tuples.
-    ATK dice appear in monster panel if present, else top-right overlay.
-    DEF/FLEE dice appear in player panel if present, else bottom-right overlay.
-    Falls back to fixed-position overlays so dice always show even after combat ends.
+    ATK dice appear in monster_dice div, DEF/FLEE in player_dice div.
+    If the target panel doesn't exist, the roll is silently skipped.
     """
     if not dice_rolls:
         return ""
@@ -251,7 +250,6 @@ def generate_dice_roll_js(dice_rolls):
         '<script>(function(){'
         'var rolls=[' + roll_data_js + '];'
 
-        # Clip-path shapes for each die type
         'var shapes={'
         '20:"polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%)",'
         '12:"polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%)",'
@@ -264,25 +262,13 @@ def generate_dice_roll_js(dice_rolls):
         'rolls.forEach(function(r,idx){'
         'var val=r[0],dc=r[1],hit=r[2],label=r[3],sides=r[4];'
 
-        # Try panel dice area first, fall back to floating overlay
         'var targetId=label==="ATK"?"monster_dice":"player_dice";'
         'var container=document.getElementById(targetId);'
-        'var floating=false;'
-        'if(!container){'
-        # Create a floating overlay anchored to top-right area of page
-        'floating=true;'
-        'container=document.createElement("div");'
-        'container.style.cssText="position:fixed;'
-        'right:8px;z-index:99999;pointer-events:none;'
-        'top:"+(label==="ATK"?"30":"55")+"%;";'
-        'document.body.appendChild(container);'
-        '}'
+        'if(!container)return;'
 
-        # Create dice wrapper
         'var wrap=document.createElement("div");'
         'wrap.style.cssText="text-align:center;";'
 
-        # The 3D dice face
         'var sz=28;'
         'var dice=document.createElement("div");'
         'var clip=shapes[sides]||shapes[20];'
@@ -299,7 +285,6 @@ def generate_dice_roll_js(dice_rolls):
         'dice.textContent="";'
         'wrap.appendChild(dice);'
 
-        # d-label below dice
         'var dlbl=document.createElement("div");'
         'dlbl.style.cssText="font-size:7px;color:#777;font-family:monospace;margin-top:1px;";'
         'dlbl.textContent="d"+sides;'
@@ -307,7 +292,6 @@ def generate_dice_roll_js(dice_rolls):
 
         'container.appendChild(wrap);'
 
-        # Animate: 3D tumble then land
         'var frame=0;var total=8;var flicker;'
         'setTimeout(function(){'
         'flicker=setInterval(function(){'
@@ -333,11 +317,7 @@ def generate_dice_roll_js(dice_rolls):
         '}'
         'setTimeout(function(){'
         'wrap.style.transition="opacity 0.5s";wrap.style.opacity="0";'
-        'setTimeout(function(){'
-        'if(wrap.parentNode)wrap.parentNode.removeChild(wrap);'
-        'if(floating&&container.parentNode&&!container.hasChildNodes())'
-        'container.parentNode.removeChild(container);'
-        '},500);'
+        'setTimeout(function(){if(wrap.parentNode)wrap.parentNode.removeChild(wrap);},500);'
         '},1500);'
         '}'
         '},45);'
@@ -350,20 +330,18 @@ def generate_dice_roll_js(dice_rolls):
 
 
 def generate_monster_defeat_js(monster_name):
-    """Generate a monster defeat animation: grayscale + fade + dissolve.
+    """Generate a monster defeat animation inside the monster combat panel.
 
-    If the monster panel exists (combat view still showing), it animates
-    the panel itself. Otherwise creates a floating overlay with the
-    monster name that dissolves away.
+    If the monster panel exists, it fades to grayscale + shrinks + dissolves.
+    If no panel (combat already ended), does nothing — the defeat is shown
+    in the game log text instead.
     """
     if not monster_name:
         return ""
-    safe_name = monster_name.replace('"', '\\"').replace("'", "\\'").replace('<', '').replace('>', '')
     return (
         '<script>(function(){'
         'var mp=document.getElementById("monster_panel");'
-        'if(mp){'
-        # Animate the actual monster panel: grayscale + shrink + fade
+        'if(!mp)return;'
         'mp.style.transition="filter 0.6s ease-out,opacity 1s ease-out 0.6s,transform 1s ease-out 0.6s";'
         'mp.style.filter="grayscale(100%) brightness(0.4)";'
         'setTimeout(function(){'
@@ -371,40 +349,6 @@ def generate_monster_defeat_js(monster_name):
         'mp.style.transform="scale(0.8)";'
         '},600);'
         'setTimeout(function(){if(mp.parentNode)mp.parentNode.removeChild(mp);},1800);'
-        '}else{'
-        # No panel: show floating defeat text overlay
-        'var ov=document.createElement("div");'
-        'ov.style.cssText="position:fixed;top:35%;left:50%;transform:translate(-50%,-50%) scale(0.8);'
-        'z-index:99999;text-align:center;pointer-events:none;opacity:0;";'
-
-        'var txt=document.createElement("div");'
-        'txt.style.cssText="font-family:monospace;font-size:16px;font-weight:bold;'
-        'color:#F44336;text-shadow:0 0 10px #F44336,0 0 20px #F44336;margin-bottom:6px;";'
-        'txt.textContent="' + safe_name + '";'
-        'ov.appendChild(txt);'
-
-        'var sub=document.createElement("div");'
-        'sub.style.cssText="font-family:monospace;font-size:13px;font-weight:bold;color:#69F0AE;'
-        'text-shadow:0 0 8px #69F0AE,0 0 16px #69F0AE;letter-spacing:4px;";'
-        'sub.textContent="DEFEATED";'
-        'ov.appendChild(sub);'
-
-        'document.body.appendChild(ov);'
-
-        # Animate: scale up + fade in, hold, then drift up + fade out
-        'ov.style.transition="opacity 0.3s ease-out,transform 0.3s ease-out";'
-        'setTimeout(function(){'
-        'ov.style.opacity="1";'
-        'ov.style.transform="translate(-50%,-50%) scale(1)";'
-        '},50);'
-        # Hold for 1.5s then fade out
-        'setTimeout(function(){'
-        'ov.style.transition="opacity 1s ease-in,transform 1s ease-in";'
-        'ov.style.opacity="0";'
-        'ov.style.transform="translate(-50%,-50%) translateY(-30px) scale(1.05)";'
-        '},1500);'
-        'setTimeout(function(){if(ov.parentNode)ov.parentNode.removeChild(ov);},2500);'
-        '}'
         '})();</script>'
     )
 
@@ -1682,7 +1626,7 @@ class WizardsCavernApp(toga.App):
         btn = toga.Button(
             cmd_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
-            style=Pack(margin=1, font_size=11, width=80,
+            style=Pack(margin=1, font_size=11, width=88,
                        background_color='#383838', color='#EEE', height=30)
         )
         self._compact_android_button(btn)
@@ -5650,6 +5594,7 @@ class WizardsCavernApp(toga.App):
         """
         # Clear one-shot animation flags after rendering
         gs.monster_defeated_anim = None
+        gs.last_dice_rolls = []
         return result
     
 

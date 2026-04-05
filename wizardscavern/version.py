@@ -4,7 +4,7 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 30
+BUILD_NUMBER = 31
 CHANGELOG = [
     "Monster defeat animation: grayscale + shrink + fade (or floating DEFEATED text)",
     "Transition animations: page fade, room panels slide up, combat panels pop in",
