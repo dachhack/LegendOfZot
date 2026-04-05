@@ -4,7 +4,7 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 39
+BUILD_NUMBER = 40
 CHANGELOG = [
     "Combat victory screen: defeat animation plays on monster panel before transitioning",
     "Dice and defeat animations only show inside combat panels (no floating overlays)",

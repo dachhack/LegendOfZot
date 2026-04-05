@@ -2767,7 +2767,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
                 """
-            current_commands_text = "b# = buy | s# = sell | r# = repair | ba = all | x = exit"
+            current_commands_text = "b# = buy | s# = sell | ba = all | x = exit"
 
         elif gs.prompt_cntl == "sell_quantity_mode":
             # SELL QUANTITY MODE - Show "How many?" prompt
