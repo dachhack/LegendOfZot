@@ -725,7 +725,7 @@ class WizardsCavernApp(toga.App):
         self.input_field = toga.TextInput(
             placeholder="Type command...",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, height=36, font_size=12,
+            style=Pack(flex=1, margin=2, height=40, font_size=12,
                        background_color='#2a2a2a', color='#EEE')
         )
 
