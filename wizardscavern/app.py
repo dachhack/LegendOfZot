@@ -2081,6 +2081,10 @@ class WizardsCavernApp(toga.App):
             process_chest_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "spell_casting_mode": # New condition for spell casting
             process_spell_casting_action(gs.player_character, gs.my_tower, cmd)
+        elif gs.prompt_cntl == "combat_victory":
+            # Any input dismisses victory screen early and transitions to room
+            gs.victory_monster_name = None
+            _trigger_room_interaction(gs.player_character, gs.my_tower)
         elif gs.prompt_cntl == "combat_mode": # This block needs to be after spell_casting_mode for 'c' to work
             process_combat_action(gs.player_character, gs.my_tower, cmd)
         elif gs.prompt_cntl == "spell_memorization_mode":
@@ -2153,6 +2157,17 @@ class WizardsCavernApp(toga.App):
                  moved = move_player(gs.player_character, gs.my_tower, cmd)
                  if not moved:
                      gs.prompt_cntl = "game_loop" # If movement failed, explicitly revert to game_loop.
+
+    def _schedule_victory_dismiss(self):
+        """Auto-dismiss combat victory screen after animations finish."""
+        import threading
+        def _auto_dismiss():
+            if gs.prompt_cntl == "combat_victory":
+                gs.victory_monster_name = None
+                _trigger_room_interaction(gs.player_character, gs.my_tower)
+                self.render()
+        # 2.5s: dice (0.5s) + damage float (0.5s) + grayscale+fade (1.5s)
+        threading.Timer(2.5, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
 
     def render(self):
         """
@@ -3829,6 +3844,78 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             current_commands_text = combat_commands
+
+        elif gs.prompt_cntl == "combat_victory":
+            # VICTORY VIEW - shows combat panels with defeat animation, auto-dismisses
+
+            floor = gs.my_tower.floors[gs.player_character.z]
+            grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+
+            victory_name = gs.victory_monster_name or "Monster"
+            monster_sprite_html = generate_monster_sprite_html(victory_name)
+
+            # Show last damage dealt
+            dmg_text = ""
+            if gs.last_monster_damage > 0:
+                dmg_text = f'<div style="font-size: 9px; color: #FF5252; font-weight: bold;">-{gs.last_monster_damage} HP</div>'
+
+            monster_html = f"""
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666; margin-bottom: 4px;">
+                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                        <div style="flex-shrink:0;">{monster_sprite_html}</div>
+                        <div>
+                            <div style="color: #F44336; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}</div>
+                            <div style="font-size: 9px;">{health_bar(0, 1, width=10)}</div>
+                            {dmg_text}
+                            <div style="font-size: 10px; color: #69F0AE; font-weight: bold; margin-top: 2px;">DEFEATED</div>
+                        </div>
+                    </div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                </div>
+                """
+
+            player_title = get_player_title(gs.player_character)
+            player_display = f"{gs.player_character.name} the {player_title}"
+            player_sprite_html_combat = generate_player_sprite_html(
+                getattr(gs.player_character, 'race', 'human'),
+                getattr(gs.player_character, 'gender', 'male'),
+                getattr(gs.player_character, 'equipped_armor', None)
+            )
+            player_combat_html = f"""
+                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;">
+                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
+                        <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
+                        <div>
+                            <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {player_display}</div>
+                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=10)}</div>
+                            <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
+                            <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
+                        </div>
+                    </div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                </div>
+                """
+
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 12px;">
+                    {achievement_notifications}
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    {player_stats_html}
+
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
+                        <div>{grid_html}</div>
+                        <div style="width: 100%; max-width: 300px;">
+                            {monster_html}
+                            {player_combat_html}
+                        </div>
+                    </div>
+                </div>
+                """
+            gs.monster_defeated_anim = victory_name
+            current_commands_text = ""
+
+            # Schedule auto-dismiss after animations finish (~2.5s)
+            self._schedule_victory_dismiss()
 
         elif gs.prompt_cntl == "flee_direction_mode":
             # FLEE DIRECTION SELECTION VIEW

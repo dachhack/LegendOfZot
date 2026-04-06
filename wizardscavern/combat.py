@@ -303,7 +303,7 @@ def process_combat_action(player_character, my_tower, cmd):
         if _was_bug_monster:
             _check_bug_queen_spawn(player_character, my_tower)
 
-        main._trigger_room_interaction(player_character, my_tower)
+        gs.prompt_cntl = "combat_victory"
         return  # Combat ended by status effect
 
 
@@ -648,7 +648,7 @@ def process_combat_action(player_character, my_tower, cmd):
             if _was_bug_monster:
                 _check_bug_queen_spawn(player_character, my_tower)
 
-            main._trigger_room_interaction(player_character, my_tower)
+            gs.prompt_cntl = "combat_victory"
             return
 
 
@@ -1175,7 +1175,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     if _was_bug_monster:
                         _check_bug_queen_spawn(player_character, my_tower)
 
-                    main._trigger_room_interaction(player_character, my_tower)
+                    gs.prompt_cntl = "combat_victory"
                     return  # Combat ended
 
                 elif gs.active_monster:  # Monster still alive, it attacks back
