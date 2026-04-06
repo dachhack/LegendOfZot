@@ -5665,14 +5665,7 @@ class WizardsCavernApp(toga.App):
 
                 /* ===== TRANSITION ANIMATIONS ===== */
 
-                /* Subtle page-level fade for smooth content swaps */
-                body {{
-                    animation: pageFade 150ms ease-out;
-                }}
-                @keyframes pageFade {{
-                    from {{ opacity: 0; }}
-                    to   {{ opacity: 1; }}
-                }}
+                /* No page-level fade — movement/lantern should feel instant */
 
                 /* Room interaction panels: fade + slide up */
                 .room-panel {{
