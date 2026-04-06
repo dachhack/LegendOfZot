@@ -1439,6 +1439,7 @@ class WizardsCavernApp(toga.App):
         self.button_panel.clear()
         self.button_panel.style.direction = ROW
         self.button_panel.add(left_col)
+        self.button_panel.add(toga.Box(style=Pack(width=8)))  # gap between buttons and numpad
         self.button_panel.add(right_col)
 
     def build_teleporter_layout(self):
@@ -1816,8 +1817,8 @@ class WizardsCavernApp(toga.App):
                 else:
                     actual_cmd = key
                 
-                # Use first 8 chars of descriptive label for button text
-                btn_label = label[:8].strip().capitalize() if len(label) > 1 else actual_cmd.upper()
+                # Use full descriptive label for button text
+                btn_label = label.strip().capitalize() if len(label) > 1 else actual_cmd.upper()
                 
                 commands.append((actual_cmd, btn_label))
         
@@ -2931,7 +2932,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     """
 
-                current_commands_text = "u = use | eat = eat | j = jrnl | x = close"
+                current_commands_text = "u = use | eat = eat | j = journal | x = close"
 
 
             else:
@@ -3035,7 +3036,7 @@ class WizardsCavernApp(toga.App):
                 if can_cast:
                     inv_commands += " | m = spells"
 
-                inv_commands += " | j = jrnl | q = close | x = exit"
+                inv_commands += " | j = journal | q = quit game | x = exit"
 
                 html_code = f"""
 
