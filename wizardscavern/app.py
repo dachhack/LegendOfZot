@@ -343,13 +343,15 @@ def generate_monster_defeat_js(monster_name):
         '<script>(function(){'
         'var mp=document.getElementById("monster_panel");'
         'if(mp){'
+        # Cancel any CSS animation that might conflict
+        'mp.style.animation="none";'
         # Panel exists: delay for dice, then grayscale + fade
         'setTimeout(function(){'
-        'mp.style.transition="filter 0.6s ease-out,opacity 1s ease-out 0.6s,transform 1s ease-out 0.6s";'
-        'mp.style.filter="grayscale(100%) brightness(0.4)";'
+        'mp.style.setProperty("transition","filter 0.6s ease-out,opacity 1s ease-out 0.6s,transform 1s ease-out 0.6s","important");'
+        'mp.style.setProperty("filter","grayscale(100%) brightness(0.4)","important");'
         'setTimeout(function(){'
-        'mp.style.opacity="0";'
-        'mp.style.transform="scale(0.8)";'
+        'mp.style.setProperty("opacity","0","important");'
+        'mp.style.setProperty("transform","scale(0.8)","important");'
         '},600);'
         'setTimeout(function(){if(mp.parentNode)mp.parentNode.removeChild(mp);},1800);'
         '},700);'
@@ -2166,8 +2168,8 @@ class WizardsCavernApp(toga.App):
                 gs.victory_monster_name = None
                 _trigger_room_interaction(gs.player_character, gs.my_tower)
                 self.render()
-        # 2.5s: dice (0.5s) + damage float (0.5s) + grayscale+fade (1.5s)
-        threading.Timer(2.5, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
+        # 3s: dice (0.5s) + damage float (0.5s) + 700ms delay + grayscale (0.6s) + fade (1s)
+        threading.Timer(3.0, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
 
     def render(self):
         """
@@ -3909,12 +3911,13 @@ class WizardsCavernApp(toga.App):
                             {player_combat_html}
                         </div>
                     </div>
+                    {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
                 </div>
                 """
             gs.monster_defeated_anim = victory_name
             current_commands_text = ""
 
-            # Schedule auto-dismiss after animations finish (~2.5s)
+            # Schedule auto-dismiss after animations finish (~2.8s)
             self._schedule_victory_dismiss()
 
         elif gs.prompt_cntl == "flee_direction_mode":
