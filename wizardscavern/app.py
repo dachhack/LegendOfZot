@@ -330,11 +330,14 @@ def generate_dice_roll_js(dice_rolls):
 
 
 def generate_monster_defeat_js(monster_name):
-    """Generate a monster defeat animation.
+    """Generate a sequenced monster defeat animation inside the combat panel.
 
-    If the monster panel exists (multi-round kill), it fades to grayscale.
-    Otherwise (one-shot kill), shows a floating overlay with the monster
-    name + DEFEATED that fades out automatically.
+    Sequence:
+      0-1200ms: dice roll + damage float (already running from other JS)
+      1200ms:   start grayscale fade on monster sprite
+      1800ms:   sprite is grey -- flash in "MONSTER NAME / DEFEATED" overlay
+                inside the combat panel with red glow + green DEFEATED text
+      3500ms:   panel auto-dismissed by Python timer
     """
     if not monster_name:
         return ""
@@ -342,44 +345,49 @@ def generate_monster_defeat_js(monster_name):
     return (
         '<script>(function(){'
         'var mp=document.getElementById("monster_panel");'
-        'if(mp){'
-        # Cancel any CSS animation that might conflict
+        'if(!mp)return;'
+        # Cancel CSS entrance animation that might conflict
         'mp.style.animation="none";'
-        # Panel exists: delay for dice, then grayscale + fade
+
+        # Phase 1 (1200ms): wait for dice + damage float to play
+
+        # Phase 2 (1200ms): grayscale + dim the sprite box only (not the text)
         'setTimeout(function(){'
-        'mp.style.setProperty("transition","filter 0.6s ease-out,opacity 1s ease-out 0.6s,transform 1s ease-out 0.6s","important");'
-        'mp.style.setProperty("filter","grayscale(100%) brightness(0.4)","important");'
+        'var sb=document.getElementById("monster_sprite_box");'
+        'if(sb){'
+        'sb.style.setProperty("filter","grayscale(100%) brightness(0.35)","important");'
+        '}'
+        '},1200);'
+
+        # Phase 3 (1800ms): flash in overlay with monster name + DEFEATED
         'setTimeout(function(){'
-        'mp.style.setProperty("opacity","0","important");'
-        'mp.style.setProperty("transform","scale(0.8)","important");'
-        '},600);'
-        'setTimeout(function(){if(mp.parentNode)mp.parentNode.removeChild(mp);},1800);'
-        '},700);'
-        '}else{'
-        # No panel (one-shot kill): floating overlay
         'var ov=document.createElement("div");'
-        'ov.style.cssText="position:fixed;top:40%;left:50%;transform:translate(-50%,-50%) scale(0.8);'
-        'z-index:99999;text-align:center;pointer-events:none;opacity:0;";'
+        'ov.style.cssText="position:absolute;left:0;right:0;top:0;bottom:0;'
+        'display:flex;flex-direction:column;align-items:center;justify-content:center;'
+        'background:rgba(0,0,0,0.55);border-radius:3px;'
+        'pointer-events:none;opacity:0;transform:scale(0.85);'
+        'transition:opacity 0.3s ease-out,transform 0.3s ease-out;";'
+
         'var txt=document.createElement("div");'
         'txt.style.cssText="font-family:monospace;font-size:15px;font-weight:bold;'
-        'color:#F44336;text-shadow:0 0 8px #F44336;margin-bottom:4px;";'
+        'color:#F44336;text-shadow:0 0 8px #F44336,0 0 16px #F44336;margin-bottom:4px;";'
         'txt.textContent="' + safe_name + '";'
         'ov.appendChild(txt);'
+
         'var sub=document.createElement("div");'
         'sub.style.cssText="font-family:monospace;font-size:12px;font-weight:bold;color:#69F0AE;'
-        'text-shadow:0 0 6px #69F0AE;letter-spacing:3px;";'
+        'text-shadow:0 0 6px #69F0AE,0 0 12px #69F0AE;letter-spacing:3px;";'
         'sub.textContent="DEFEATED";'
         'ov.appendChild(sub);'
-        'document.body.appendChild(ov);'
-        'ov.style.transition="opacity 0.3s ease-out,transform 0.3s ease-out";'
-        'setTimeout(function(){ov.style.opacity="1";ov.style.transform="translate(-50%,-50%) scale(1)";},50);'
-        'setTimeout(function(){'
-        'ov.style.transition="opacity 0.8s ease-in,transform 0.8s ease-in";'
-        'ov.style.opacity="0";'
-        'ov.style.transform="translate(-50%,-50%) translateY(-20px)";'
-        '},1200);'
-        'setTimeout(function(){if(ov.parentNode)ov.parentNode.removeChild(ov);},2000);'
-        '}'
+
+        'mp.appendChild(ov);'
+        # Trigger entrance: opacity 0 -> 1, scale 0.85 -> 1
+        'requestAnimationFrame(function(){'
+        'ov.style.opacity="1";'
+        'ov.style.transform="scale(1)";'
+        '});'
+        '},1800);'
+
         '})();</script>'
     )
 
@@ -2168,8 +2176,8 @@ class WizardsCavernApp(toga.App):
                 gs.victory_monster_name = None
                 _trigger_room_interaction(gs.player_character, gs.my_tower)
                 self.render()
-        # 3s: dice (0.5s) + damage float (0.5s) + 700ms delay + grayscale (0.6s) + fade (1s)
-        threading.Timer(3.0, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
+        # 3.5s total: dice (0-1.2s) + grayscale (1.2-1.8s) + DEFEATED flash (1.8-3.5s)
+        threading.Timer(3.5, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
 
     def render(self):
         """
@@ -3864,12 +3872,11 @@ class WizardsCavernApp(toga.App):
             monster_html = f"""
                 <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666; margin-bottom: 4px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
-                        <div style="flex-shrink:0;">{monster_sprite_html}</div>
-                        <div>
+                        <div id="monster_sprite_box" style="flex-shrink:0; transition: filter 0.6s ease-out;">{monster_sprite_html}</div>
+                        <div id="monster_info_box">
                             <div style="color: #F44336; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{victory_name}</div>
                             <div style="font-size: 9px;">{health_bar(0, 1, width=10)}</div>
                             {dmg_text}
-                            <div style="font-size: 10px; color: #69F0AE; font-weight: bold; margin-top: 2px;">DEFEATED</div>
                         </div>
                     </div>
                     <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
