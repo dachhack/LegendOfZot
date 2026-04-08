@@ -423,22 +423,27 @@ def generate_dice_roll_js(dice_rolls):
         '}'
 
         # Process each opposed-roll entry
+        # Each of ATK/DEF/FLEE has its own dedicated dice slot in each panel:
+        #   player_atk_dice / player_def_dice  (inside player_panel)
+        #   monster_atk_dice / monster_def_dice (inside monster_panel)
+        # This way ATK and DEF dice don't fight for the same spot.
         'rolls.forEach(function(r){'
         'var pRoll=r[0],mRoll=r[1],playerWins=r[2],label=r[3],sides=r[4],pMod=r[5],mMod=r[6];'
         # Winner is whoever has higher total (raw + mod)
         'var pHigher=((pRoll+pMod)>(mRoll+mMod));'
 
         'if(label==="ATK"){'
-        # Player attacks first, monster defends second
-        'makeDice("player_dice",pRoll,pMod,pHigher,"ATTACK","#FF8A65",sides,0);'
-        'makeDice("monster_dice",mRoll,mMod,!pHigher,"DEFEND","#64B5F6",sides,600);'
+        # Player attacks first (in player ATK slot), monster defends second (in monster DEF slot)
+        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"ATTACK","#FF8A65",sides,0);'
+        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"DEFEND","#64B5F6",sides,600);'
         '}else if(label==="DEF"){'
-        # Monster attacks first, player defends second (delayed after player ATK+damage phase)
-        'makeDice("monster_dice",mRoll,mMod,!pHigher,"ATTACK","#FF8A65",sides,1900);'
-        'makeDice("player_dice",pRoll,pMod,pHigher,"DEFEND","#64B5F6",sides,2500);'
+        # Monster attacks (in monster ATK slot), player defends (in player DEF slot)
+        'makeDice("monster_atk_dice",mRoll,mMod,!pHigher,"ATTACK","#FF8A65",sides,1900);'
+        'makeDice("player_def_dice",pRoll,pMod,pHigher,"DEFEND","#64B5F6",sides,2500);'
         '}else if(label==="FLEE"){'
-        'makeDice("player_dice",pRoll,pMod,pHigher,"FLEE","#FFD54F",sides,0);'
-        'makeDice("monster_dice",mRoll,mMod,!pHigher,"CATCH","#FF8A65",sides,600);'
+        # Flee uses the ATK slots since it is an initiating action
+        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"FLEE","#FFD54F",sides,0);'
+        'makeDice("monster_atk_dice",mRoll,mMod,!pHigher,"CATCH","#FF8A65",sides,600);'
         '}'
 
         '});'
@@ -3820,7 +3825,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 12px; color: #64B5F6; margin-top: 2px;">Resist: {", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
                     </div>
-                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
                 """
 
@@ -3844,7 +3849,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 9px; color: #FFB74D; margin-top: 2px;">Weak: {", ".join(gs.player_character.elemental_weaknesses)}</div>' if gs.player_character.elemental_weaknesses else ''}
                         </div>
                     </div>
-                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="player_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="player_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
                 """
 
@@ -3927,7 +3932,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 1px;">{", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
                     </div>
-                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
                 """
 
@@ -3955,7 +3960,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 8px; color: #FDD835; margin-top: 1px;">{", ".join(gs.player_character.status_effects.keys())}</div>' if gs.player_character.status_effects else ''}
                         </div>
                     </div>
-                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="player_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="player_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
                 """
 
@@ -4010,7 +4015,7 @@ class WizardsCavernApp(toga.App):
                             {dmg_text}
                         </div>
                     </div>
-                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
                 """
 
@@ -4032,7 +4037,7 @@ class WizardsCavernApp(toga.App):
                             <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
                         </div>
                     </div>
-                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="player_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="player_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
                 """
 
@@ -4084,7 +4089,7 @@ class WizardsCavernApp(toga.App):
                             <div style="font-size: 12px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=15)}</div>
                         </div>
                     </div>
-                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
                 """
 
@@ -4105,7 +4110,7 @@ class WizardsCavernApp(toga.App):
                             <div style="font-size: 12px; color: #FFD700;">Escaped combat!</div>
                         </div>
                     </div>
-                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="player_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="player_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
                 """
 
