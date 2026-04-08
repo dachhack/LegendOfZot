@@ -692,11 +692,14 @@ def process_combat_action(player_character, my_tower, cmd):
             gs.prompt_cntl = "flee_direction_mode"
         else:
             # Opposed d8 roll: player flee vs monster catch.
+            # Player gets a small dex-based mod, monster gets a level-based mod.
             from .characters import opposed_roll
             sides = 8
             flee_success = random.random() < flee_chance
-            p_roll, m_roll = opposed_roll(flee_success, sides)
-            gs.last_dice_rolls.append((p_roll, m_roll, flee_success, "FLEE", sides))
+            p_mod = max(0, (player_character.dexterity - 10) // 3)
+            m_mod = max(0, gs.active_monster.level // 2)
+            p_roll, m_roll = opposed_roll(flee_success, sides, p_mod, m_mod)
+            gs.last_dice_rolls.append((p_roll, m_roll, flee_success, "FLEE", sides, p_mod, m_mod))
             if flee_success:
                 add_log(f"{COLOR_GREEN}You successfully broke away from combat!{COLOR_RESET}")
                 add_log("Choose a direction to flee (n/s/e/w):")

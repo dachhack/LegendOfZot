@@ -38,24 +38,33 @@ from .items import (
 # ============================================================================
 # OPPOSED DICE ROLL HELPER
 # ============================================================================
-def opposed_roll(player_wins, sides=20):
+def opposed_roll(player_wins, sides=20, p_mod=0, m_mod=0):
     """Synthesize a pair of opposed dice rolls whose outcome matches player_wins.
 
+    The *total* comparison (p_roll + p_mod) vs (m_roll + m_mod) determines
+    the winner, so the displayed modifiers stay consistent with the glow.
     Uses rejection sampling over independent uniform rolls so the
-    distribution looks natural. Returns (player_roll, monster_roll)
-    where (player_roll > monster_roll) == player_wins.
+    distribution looks natural.
 
-    Ties are rerolled (a tie goes against nobody). Safety-capped at
-    50 tries; falls back to (sides, 1) or (1, sides) if exhausted.
+    Returns (player_roll, monster_roll) where
+        (player_roll + p_mod > monster_roll + m_mod) == player_wins
+
+    Ties on the total are rerolled. Safety-capped at 100 tries; falls
+    back to forcing extremes if exhausted.
     """
-    for _ in range(50):
+    for _ in range(100):
         p = random.randint(1, sides)
         m = random.randint(1, sides)
-        if p == m:
+        p_total = p + p_mod
+        m_total = m + m_mod
+        if p_total == m_total:
             continue
-        if (p > m) == player_wins:
+        if (p_total > m_total) == player_wins:
             return p, m
-    return (sides, 1) if player_wins else (1, sides)
+    # Fallback: force extremes such that (p+p_mod) beats or loses to (m+m_mod)
+    if player_wins:
+        return sides, 1
+    return 1, sides
 
 
 # ============================================================================
@@ -1041,11 +1050,14 @@ class Character:
         hit_chance = max(0.05, min(0.95, hit_chance))
 
         # Opposed d20 roll: player attack vs monster defense.
-        # player_wins iff player_roll > monster_roll, probability == hit_chance.
+        # Display modifiers are derived from the stat totals (already include
+        # weapon bonus, strength, status boosts, etc.) scaled to a d20 scale.
         sides = 20
         player_wins = random.random() < hit_chance
-        p_roll, m_roll = opposed_roll(player_wins, sides)
-        gs.last_dice_rolls.append((p_roll, m_roll, player_wins, "ATK", sides))
+        p_mod = max(0, self.attack // 4)
+        m_mod = max(0, target.defense // 4)
+        p_roll, m_roll = opposed_roll(player_wins, sides, p_mod, m_mod)
+        gs.last_dice_rolls.append((p_roll, m_roll, player_wins, "ATK", sides, p_mod, m_mod))
         hit = player_wins
         if not hit:
             add_log(f"{COLOR_YELLOW}You missed the evil {target.name}!{COLOR_RESET}")
@@ -1439,11 +1451,16 @@ class Monster:
 
         # Opposed d20 roll: monster attack vs player defense.
         # hit_chance is the monster's chance to hit; player_wins (dodge) is the inverse.
+        # For DEF entries, p_mod is the PLAYER's defense mod and m_mod is the
+        # MONSTER's attack mod — so the same (p_roll+p_mod > m_roll+m_mod) → player_wins
+        # check holds regardless of ATK/DEF label.
         sides = 20
         monster_hits = random.random() < hit_chance
         player_wins = not monster_hits  # player dodged if monster missed
-        p_roll, m_roll = opposed_roll(player_wins, sides)
-        gs.last_dice_rolls.append((p_roll, m_roll, player_wins, "DEF", sides))
+        p_mod = max(0, target.defense // 4)
+        m_mod = max(0, self.attack // 4)
+        p_roll, m_roll = opposed_roll(player_wins, sides, p_mod, m_mod)
+        gs.last_dice_rolls.append((p_roll, m_roll, player_wins, "DEF", sides, p_mod, m_mod))
         hit = monster_hits
         if not hit:
           gs.last_player_blocked = True

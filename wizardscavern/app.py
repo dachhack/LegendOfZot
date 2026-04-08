@@ -256,10 +256,13 @@ def generate_dice_roll_js(dice_rolls):
     if not dice_rolls:
         return ""
 
-    roll_data_js = ",".join(
-        f'[{r[0]},{r[1]},{1 if r[2] else 0},"{r[3]}",{r[4]}]'
-        for r in dice_rolls
-    )
+    # Each tuple: (player_roll, monster_roll, player_wins, label, sides, p_mod, m_mod)
+    # Older tuples without modifiers get 0/0 defaults.
+    def _pack(r):
+        p_mod = r[5] if len(r) > 5 else 0
+        m_mod = r[6] if len(r) > 6 else 0
+        return f'[{r[0]},{r[1]},{1 if r[2] else 0},"{r[3]}",{r[4]},{p_mod},{m_mod}]'
+    roll_data_js = ",".join(_pack(r) for r in dice_rolls)
 
     js = (
         '<script>(function(){'
@@ -275,19 +278,20 @@ def generate_dice_roll_js(dice_rolls):
         '};'
         'var radii={20:"2px",12:"2px",8:"0",6:"3px",4:"0"};'
 
-        # Helper: create and animate a single dice
-        'function makeDice(containerId,val,winner,labelText,labelColor,sides,delayMs){'
+        # Helper: create and animate a single dice with optional modifier.
+        # The dice shows the TOTAL (raw + mod); the bottom label shows the breakdown.
+        'function makeDice(containerId,rawVal,mod,winner,labelText,labelColor,sides,delayMs){'
         'var container=document.getElementById(containerId);'
         'if(!container)return;'
 
         'var wrap=document.createElement("div");'
         'wrap.style.cssText="text-align:center;opacity:0;transition:opacity 0.2s;";'
 
-        # Top label: action verb
+        # Top label: action verb + modifier badge (e.g., "ATTACK +3")
         'var top=document.createElement("div");'
         'top.style.cssText="font-size:7px;font-weight:bold;font-family:monospace;'
         'margin-bottom:1px;letter-spacing:0.5px;color:"+labelColor+";";'
-        'top.textContent=labelText;'
+        'top.textContent=mod>0?(labelText+" +"+mod):labelText;'
         'wrap.appendChild(top);'
 
         # The dice
@@ -307,7 +311,7 @@ def generate_dice_roll_js(dice_rolls):
         'dice.textContent="";'
         'wrap.appendChild(dice);'
 
-        # Bottom label: the rolled value (so both rolls are easy to compare at a glance)
+        # Bottom label: shows raw + mod breakdown (e.g., "15+3") or plain "d20"
         'var dlbl=document.createElement("div");'
         'dlbl.style.cssText="font-size:7px;color:#888;font-family:monospace;margin-top:1px;";'
         'dlbl.textContent="d"+sides;'
@@ -329,7 +333,10 @@ def generate_dice_roll_js(dice_rolls):
         'dice.style.borderColor="#999";'
         '}else{'
         'clearInterval(flicker);'
-        'dice.textContent=val;'
+        # Land: dice shows TOTAL, bottom label shows breakdown so it is clear
+        'var total_val=rawVal+mod;'
+        'dice.textContent=total_val;'
+        'if(mod>0){dlbl.textContent=rawVal+"+"+mod;}'
         'dice.style.transform="perspective(120px) rotateX(0) rotateY(0)";'
         'if(winner){'
         'dice.style.borderColor="#69F0AE";dice.style.color="#69F0AE";'
@@ -352,20 +359,21 @@ def generate_dice_roll_js(dice_rolls):
 
         # Process each opposed-roll entry
         'rolls.forEach(function(r){'
-        'var pRoll=r[0],mRoll=r[1],playerWins=r[2],label=r[3],sides=r[4];'
-        'var pHigher=(pRoll>mRoll);'
+        'var pRoll=r[0],mRoll=r[1],playerWins=r[2],label=r[3],sides=r[4],pMod=r[5],mMod=r[6];'
+        # Winner is whoever has higher total (raw + mod)
+        'var pHigher=((pRoll+pMod)>(mRoll+mMod));'
 
         'if(label==="ATK"){'
         # Player attacks first, monster defends second
-        'makeDice("player_dice",pRoll,pHigher,"ATTACK","#FF8A65",sides,0);'
-        'makeDice("monster_dice",mRoll,!pHigher,"DEFEND","#64B5F6",sides,600);'
+        'makeDice("player_dice",pRoll,pMod,pHigher,"ATTACK","#FF8A65",sides,0);'
+        'makeDice("monster_dice",mRoll,mMod,!pHigher,"DEFEND","#64B5F6",sides,600);'
         '}else if(label==="DEF"){'
         # Monster attacks first, player defends second (delayed after player ATK+damage phase)
-        'makeDice("monster_dice",mRoll,!pHigher,"ATTACK","#FF8A65",sides,1900);'
-        'makeDice("player_dice",pRoll,pHigher,"DEFEND","#64B5F6",sides,2500);'
+        'makeDice("monster_dice",mRoll,mMod,!pHigher,"ATTACK","#FF8A65",sides,1900);'
+        'makeDice("player_dice",pRoll,pMod,pHigher,"DEFEND","#64B5F6",sides,2500);'
         '}else if(label==="FLEE"){'
-        'makeDice("player_dice",pRoll,pHigher,"FLEE","#FFD54F",sides,0);'
-        'makeDice("monster_dice",mRoll,!pHigher,"CATCH","#FF8A65",sides,600);'
+        'makeDice("player_dice",pRoll,pMod,pHigher,"FLEE","#FFD54F",sides,0);'
+        'makeDice("monster_dice",mRoll,mMod,!pHigher,"CATCH","#FF8A65",sides,600);'
         '}'
 
         '});'
