@@ -184,6 +184,8 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
             f'showFloat("{monster_canvas_id}_wrap","{bx}","#FFD54F",-20,{MONSTER_DMG_DELAY - 150});'
         )
     if m_text:
+        # Shake the monster panel exactly when the damage number lands
+        float_calls.append(f'shakePanel("monster_panel",{MONSTER_DMG_DELAY});')
         float_calls.append(
             f'showFloat("{monster_canvas_id}_wrap","{m_text}","{m_color}",0,{MONSTER_DMG_DELAY});'
         )
@@ -193,6 +195,8 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
             f'showFloat("player_sprite_wrap","{bx}","#FFD54F",-20,{PLAYER_DMG_DELAY - 150});'
         )
     if p_text:
+        # Shake the player panel exactly when the damage number lands
+        float_calls.append(f'shakePanel("player_panel",{PLAYER_DMG_DELAY});')
         float_calls.append(
             f'showFloat("player_sprite_wrap","{p_text}","{p_color}",0,{PLAYER_DMG_DELAY});'
         )
@@ -248,6 +252,16 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
         'else if(e.parentNode){e.parentNode.removeChild(e);}'
         '}'
         'requestAnimationFrame(step);'
+        '},delayMs||0);'
+        '}'
+        # shakePanel(panelId, delayMs) — kinetic impact feedback on damage
+        'function shakePanel(pid,delayMs){'
+        'setTimeout(function(){'
+        'var p=document.getElementById(pid);'
+        'if(!p)return;'
+        'p.style.animation="none";'
+        'void p.offsetWidth;'  # force reflow so animation restarts
+        'p.style.animation="panelShake 0.35s ease-out";'
         '},delayMs||0);'
         '}'
         + ''.join(float_calls)
@@ -358,7 +372,27 @@ def generate_dice_roll_js(dice_rolls):
         'dice.textContent=total_val;'
         'if(mod>0){dlbl.textContent=rawVal+"+"+mod;}'
         'dice.style.transform="perspective(120px) rotateX(0) rotateY(0)";'
-        'if(winner){'
+        # Detect crit (nat max AND winner) and fumble (nat 1 AND loser)
+        'var isCrit=(rawVal===sides && winner);'
+        'var isFumble=(rawVal===1 && !winner);'
+        'if(isCrit){'
+        'dice.style.borderColor="#FFD700";'
+        'dice.style.color="#FFD700";'
+        'dice.style.background="#3a2e00";'
+        'dice.style.boxShadow="0 0 16px #FFD700,0 0 32px #FFD700";'
+        'dice.style.animation="critPulse 0.5s ease-out";'
+        'top.textContent=labelText+" CRIT!";'
+        'top.style.color="#FFD700";'
+        'top.style.textShadow="0 0 6px #FFD700";'
+        '}else if(isFumble){'
+        'dice.style.borderColor="#555";'
+        'dice.style.color="#888";'
+        'dice.style.background="#181818";'
+        'dice.style.boxShadow="0 0 4px #333";'
+        'dice.style.animation="fumbleShake 0.4s ease-out";'
+        'top.textContent=labelText+" FUMBLE!";'
+        'top.style.color="#666";'
+        '}else if(winner){'
         'dice.style.borderColor="#69F0AE";dice.style.color="#69F0AE";'
         'dice.style.background="#2a3a2a";'
         'dice.style.boxShadow="0 0 6px #69F0AE";'
@@ -5774,6 +5808,33 @@ class WizardsCavernApp(toga.App):
                 @keyframes combatIn {{
                     from {{ opacity: 0; transform: scale(0.95); }}
                     to   {{ opacity: 1; transform: scale(1); }}
+                }}
+
+                /* Panel shake on damage impact */
+                @keyframes panelShake {{
+                    0%, 100% {{ transform: translateX(0); }}
+                    15% {{ transform: translateX(-5px); }}
+                    30% {{ transform: translateX(5px); }}
+                    45% {{ transform: translateX(-4px); }}
+                    60% {{ transform: translateX(3px); }}
+                    75% {{ transform: translateX(-2px); }}
+                }}
+
+                /* Critical hit burst on a winning nat-max dice */
+                @keyframes critPulse {{
+                    0%   {{ transform: scale(1) rotate(0deg); filter: brightness(1); }}
+                    30%  {{ transform: scale(1.5) rotate(-8deg); filter: brightness(2.5); }}
+                    60%  {{ transform: scale(1.2) rotate(4deg); filter: brightness(1.8); }}
+                    100% {{ transform: scale(1) rotate(0deg); filter: brightness(1); }}
+                }}
+
+                /* Fumble wobble on a losing nat-1 dice */
+                @keyframes fumbleShake {{
+                    0%, 100% {{ transform: rotate(0deg); }}
+                    20% {{ transform: rotate(-12deg); }}
+                    40% {{ transform: rotate(12deg); }}
+                    60% {{ transform: rotate(-8deg); }}
+                    80% {{ transform: rotate(5deg); }}
                 }}
 
                 /* Game log: no animation (fixed, persistent) */
