@@ -119,6 +119,8 @@ def process_combat_action(player_character, my_tower, cmd):
     gs.last_monster_status = None
     gs.last_player_heal = 0
     gs.last_dice_rolls = []
+    gs.last_monster_damage_badge = None
+    gs.last_player_damage_badge = None
 
     if cmd == "init":
         # Get player title for intelligent monsters

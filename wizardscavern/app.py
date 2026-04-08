@@ -100,12 +100,17 @@ def mana_bar(current, maximum, width=20):
 
 
 def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_blocked=False,
-                              player_status=None, monster_status=None, player_heal=0):
+                              player_status=None, monster_status=None, player_heal=0,
+                              monster_badge=None, player_badge=None):
     """Generate floating damage/heal/status text above combat sprites.
 
     Injects absolutely-positioned divs into the sprite wrapper elements.
     Uses a JS-driven animation loop (requestAnimationFrame) so it works
     reliably in Toga/WKWebView without requiring <style> blocks in <body>.
+
+    monster_badge / player_badge: optional short string (e.g. "HUNTER!",
+    "HOLY +8", "RAID!", "HALVED!") floated in small yellow text right
+    before the damage number.
     """
     monster_canvas_id = "ms_" + "".join(ch if ch.isalnum() else "_" for ch in monster_name)
 
@@ -167,10 +172,25 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
     # -----------------------------------------------------------------
     MONSTER_DMG_DELAY = 1300  # After player attack exchange resolves
     PLAYER_DMG_DELAY  = 3200  # After monster attack exchange resolves
+
+    def _escape(s):
+        return str(s).replace('"', '').replace("'", '').replace('<', '').replace('>', '')[:18]
+
     float_calls = []
+    # Badge floats appear 150ms BEFORE the damage number, slightly offset
+    if monster_badge and m_text:
+        bx = _escape(monster_badge)
+        float_calls.append(
+            f'showFloat("{monster_canvas_id}_wrap","{bx}","#FFD54F",-20,{MONSTER_DMG_DELAY - 150});'
+        )
     if m_text:
         float_calls.append(
             f'showFloat("{monster_canvas_id}_wrap","{m_text}","{m_color}",0,{MONSTER_DMG_DELAY});'
+        )
+    if player_badge and p_text:
+        bx = _escape(player_badge)
+        float_calls.append(
+            f'showFloat("player_sprite_wrap","{bx}","#FFD54F",-20,{PLAYER_DMG_DELAY - 150});'
         )
     if p_text:
         float_calls.append(
@@ -3820,7 +3840,7 @@ class WizardsCavernApp(toga.App):
                     </div>
 
                     <div class="room-panel" style="width: 100%;">{spells_html}</div>
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
+                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge)}
 
                 </div>
                 """
@@ -3907,7 +3927,7 @@ class WizardsCavernApp(toga.App):
                             {player_combat_html}
                         </div>
                     </div>
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
+                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge)}
 
                 </div>
                 """
@@ -3976,7 +3996,7 @@ class WizardsCavernApp(toga.App):
                             {player_combat_html}
                         </div>
                     </div>
-                    {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
+                    {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge)}
                 </div>
                 """
             gs.monster_defeated_anim = victory_name
@@ -4051,7 +4071,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
 
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal)}
+                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge)}
 
                 </div>
                 """

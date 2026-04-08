@@ -67,6 +67,52 @@ def opposed_roll(player_wins, sides=20, p_mod=0, m_mod=0):
     return 1, sides
 
 
+def compute_player_attack_mod(player, target):
+    """Total display modifier for the player's attack roll against a target.
+
+    Captures EVERY visible buff/nerf that should show up on the dice:
+    - Weapon bonus + strength + attack_boost status effects (via player.attack)
+    - Dex bonus (better aim)
+    - Level advantage over the target
+    Result is clamped to [0, 10] so the dice rejection sampler stays fast.
+    """
+    mod = 0
+    mod += max(0, player.attack // 4)                  # weapon/str/status
+    mod += max(0, (player.dexterity - 10) // 4)         # dex precision
+    mod += max(0, player.level - target.level)          # level advantage
+    return max(0, min(10, mod))
+
+
+def compute_monster_defense_mod(monster, attacker_player):
+    """Total display modifier for a monster's defense roll vs the player."""
+    mod = 0
+    mod += max(0, monster.defense // 4)                 # defense stat
+    mod += max(0, monster.level - attacker_player.level)  # level advantage
+    return max(0, min(10, mod))
+
+
+def compute_monster_attack_mod(monster, target_player):
+    """Total display modifier for a monster's attack roll vs the player."""
+    mod = 0
+    mod += max(0, monster.attack // 4)
+    mod += max(0, monster.level - target_player.level)
+    return max(0, min(10, mod))
+
+
+def compute_player_defense_mod(player, attacker_monster):
+    """Total display modifier for the player's defense roll vs a monster.
+
+    Includes the Dodge Cloak and any future defensive passives.
+    """
+    mod = 0
+    mod += max(0, player.defense // 4)                   # armor/dex/status
+    mod += max(0, (player.dexterity - 10) // 4)          # dex evasion
+    mod += max(0, player.level - attacker_monster.level) # level advantage
+    if _has_dodge_cloak(player):
+        mod += 2                                          # Cloak of Dodging
+    return max(0, min(10, mod))
+
+
 # ============================================================================
 # LAZY IMPORTS (to avoid circular dependencies during refactoring)
 # ============================================================================
@@ -1050,12 +1096,12 @@ class Character:
         hit_chance = max(0.05, min(0.95, hit_chance))
 
         # Opposed d20 roll: player attack vs monster defense.
-        # Display modifiers are derived from the stat totals (already include
-        # weapon bonus, strength, status boosts, etc.) scaled to a d20 scale.
+        # Display modifiers capture EVERY visible combat contributor so
+        # weapon upgrades, dex, level diffs, and status effects all show.
         sides = 20
         player_wins = random.random() < hit_chance
-        p_mod = max(0, self.attack // 4)
-        m_mod = max(0, target.defense // 4)
+        p_mod = compute_player_attack_mod(self, target)
+        m_mod = compute_monster_defense_mod(target, self)
         p_roll, m_roll = opposed_roll(player_wins, sides, p_mod, m_mod)
         gs.last_dice_rolls.append((p_roll, m_roll, player_wins, "ATK", sides, p_mod, m_mod))
         hit = player_wins
@@ -1074,11 +1120,14 @@ class Character:
 
         elemental = self.equipped_weapon.elemental_strength[0] if self.equipped_weapon and not weapon_broken else "None"
         scaled_attack = self.attack
+        badge = None  # Damage badge shown as a floating tag above the damage number
         # Broken weapon or bare fists: drastically reduce damage (max 2 damage)
         if weapon_broken or no_weapon:
             scaled_attack = max(1, self._base_attack // 4)
+            badge = "BROKEN!" if weapon_broken else "BARE FISTS!"
         elif elemental != "None" and elemental in target.elemental_weakness:
           scaled_attack=int(scaled_attack*1.5)
+          badge = f"{elemental.upper()} WEAK!"
           print_to_output(f"{target.name} is weak against {elemental}!")
 
         dmg = max(1, scaled_attack - target.defense)
@@ -1086,6 +1135,7 @@ class Character:
         # Cloak of the Hunter: 15% chance to bypass target defense entirely
         if _has_hunter_cloak(self) and not (weapon_broken or no_weapon) and random.random() < 0.15:
             dmg = max(1, scaled_attack)
+            badge = "HUNTER!"
             add_log(f"{COLOR_GREEN}[Hunter Cloak] Defense bypassed!{COLOR_RESET}")
 
         # Holy Brand Ring: +8 Holy damage on every hit
@@ -1093,8 +1143,10 @@ class Character:
         if holy_bonus > 0 and not (weapon_broken or no_weapon):
             # Holy damage bypasses defense and hits undead hard
             dmg += holy_bonus
+            badge = f"HOLY +{holy_bonus}" if not badge else badge + f" +HOLY"
             add_log(f"{COLOR_YELLOW}[Holy Brand] +{holy_bonus} Holy damage!{COLOR_RESET}")
 
+        gs.last_monster_damage_badge = badge
         add_log(f"You hit the evil {target.name}!")
         return dmg
 
@@ -1451,14 +1503,13 @@ class Monster:
 
         # Opposed d20 roll: monster attack vs player defense.
         # hit_chance is the monster's chance to hit; player_wins (dodge) is the inverse.
-        # For DEF entries, p_mod is the PLAYER's defense mod and m_mod is the
-        # MONSTER's attack mod — so the same (p_roll+p_mod > m_roll+m_mod) → player_wins
-        # check holds regardless of ATK/DEF label.
+        # Display mods include dex, level diff, armor, and equipment passives
+        # like the Dodge Cloak — every dodge-relevant buff is visible.
         sides = 20
         monster_hits = random.random() < hit_chance
         player_wins = not monster_hits  # player dodged if monster missed
-        p_mod = max(0, target.defense // 4)
-        m_mod = max(0, self.attack // 4)
+        p_mod = compute_player_defense_mod(target, self)
+        m_mod = compute_monster_attack_mod(self, target)
         p_roll, m_roll = opposed_roll(player_wins, sides, p_mod, m_mod)
         gs.last_dice_rolls.append((p_roll, m_roll, player_wins, "DEF", sides, p_mod, m_mod))
         hit = monster_hits
@@ -1468,12 +1519,14 @@ class Monster:
           return 0 # No damage dealt
         # If it hits, calculate damage
         dmg = max(1, self.attack - target.defense)
+        badge = None  # Damage badge shown above the player damage float
 
         # Raid mode: monsters deal +25% damage while raid is active
         try:
             current_fl = gs.my_tower.floors[target.z]
             if current_fl.properties.get('raid_mode_active'):
                 dmg = max(1, int(dmg * current_fl.properties.get('raid_atk_mult', 1.25)))
+                badge = "RAID!"
         except Exception:
             pass
 
@@ -1482,8 +1535,10 @@ class Monster:
             for acc in target.equipped_accessories:
                 if acc and acc.name == "Platino's Scale":
                     dmg = max(1, dmg // 2)
+                    badge = "HALVED!" if not badge else badge + " HALVED!"
                     break
 
+        gs.last_player_damage_badge = badge
         add_log(f"Ouch! {self.name} hit {target.name}!")
         target.take_damage(dmg, self.attack_element)
 

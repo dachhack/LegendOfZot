@@ -339,6 +339,10 @@ last_player_blocked = False
 last_player_status = None
 last_monster_status = None
 last_player_heal = 0
+# Optional damage badges that float above the damage number on big hits
+# (e.g. "HUNTER!", "HOLY +8", "WEAK!", "HALVED!", "RAID!")
+last_monster_damage_badge = None  # Badge on damage dealt TO monster
+last_player_damage_badge = None   # Badge on damage dealt TO player
 
 # ============================================================================
 # MONSTER DEFEAT ANIMATION STATE
