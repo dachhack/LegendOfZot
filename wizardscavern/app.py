@@ -154,26 +154,28 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
     #  3. Animates it upward with fading via requestAnimationFrame
     #  4. delay_ms parameter staggers multiple notifications
     # -----------------------------------------------------------------
-    # TUNING: Change FLOAT_DELAY_MS to adjust the gap (in milliseconds)
-    #         between successive floating notifications.
-    #         0 = all appear at once, 400 = 0.4s stagger, etc.
+    # SEQUENCED COMBAT TIMELINE (matches generate_dice_roll_js):
+    #   0ms      Player ATK dice starts tumbling
+    #   600ms    ATK dice lands
+    #   900ms    Monster damage float appears (after ATK roll resolves)
+    #   1700ms   Monster DEF dice (player dodge roll) starts tumbling
+    #   2300ms   DEF dice lands
+    #   2600ms   Player damage float appears
     # -----------------------------------------------------------------
-    FLOAT_DELAY_MS = 400
+    MONSTER_DMG_DELAY = 900   # After player attack roll resolves
+    PLAYER_DMG_DELAY  = 2600  # After monster attack / player dodge resolves
     float_calls = []
-    delay_idx = 0
     if m_text:
         float_calls.append(
-            f'showFloat("{monster_canvas_id}_wrap","{m_text}","{m_color}",0,{delay_idx * FLOAT_DELAY_MS});'
+            f'showFloat("{monster_canvas_id}_wrap","{m_text}","{m_color}",0,{MONSTER_DMG_DELAY});'
         )
-        delay_idx += 1
     if p_text:
         float_calls.append(
-            f'showFloat("player_sprite_wrap","{p_text}","{p_color}",0,{delay_idx * FLOAT_DELAY_MS});'
+            f'showFloat("player_sprite_wrap","{p_text}","{p_color}",0,{PLAYER_DMG_DELAY});'
         )
-        delay_idx += 1
     if h_text:
         float_calls.append(
-            f'showFloat("player_sprite_wrap","{h_text}","{h_color}",24,{delay_idx * FLOAT_DELAY_MS});'
+            f'showFloat("player_sprite_wrap","{h_text}","{h_color}",24,{PLAYER_DMG_DELAY + 200});'
         )
 
     js = (
@@ -335,7 +337,9 @@ def generate_dice_roll_js(dice_rolls):
         '},1500);'
         '}'
         '},45);'
-        '},idx*120);'
+        # Sequenced delay per roll type so combat actions feel paced.
+        # ATK happens first, then a beat for the damage, then DEF.
+        '},label==="ATK"?0:(label==="DEF"?1700:1700));'
 
         '});'
         '})();</script>'
@@ -346,12 +350,12 @@ def generate_dice_roll_js(dice_rolls):
 def generate_monster_defeat_js(monster_name):
     """Generate a sequenced monster defeat animation inside the combat panel.
 
-    Sequence:
-      0-1200ms: dice roll + damage float (already running from other JS)
-      1200ms:   start grayscale fade on monster sprite
-      1800ms:   sprite is grey -- flash in "MONSTER NAME / DEFEATED" overlay
-                inside the combat panel with red glow + green DEFEATED text
-      3500ms:   panel auto-dismissed by Python timer
+    Combat sequence on a kill (matches dice/damage timing):
+      0-600ms:   Player ATK dice tumbles + lands
+      900ms:     Monster damage float appears
+      1700ms:    Sprite fades to grayscale (kill confirmed)
+      2300ms:    Flash "MONSTER NAME / DEFEATED" overlay
+      4000ms:    Panel auto-dismissed by Python timer
     """
     if not monster_name:
         return ""
@@ -363,17 +367,17 @@ def generate_monster_defeat_js(monster_name):
         # Cancel CSS entrance animation that might conflict
         'mp.style.animation="none";'
 
-        # Phase 1 (1200ms): wait for dice + damage float to play
+        # Phase 1 (0-1700ms): wait for ATK dice + damage float to play
 
-        # Phase 2 (1200ms): grayscale + dim the sprite box only (not the text)
+        # Phase 2 (1700ms): grayscale + dim the sprite box only (not the text)
         'setTimeout(function(){'
         'var sb=document.getElementById("monster_sprite_box");'
         'if(sb){'
         'sb.style.setProperty("filter","grayscale(100%) brightness(0.35)","important");'
         '}'
-        '},1200);'
+        '},1700);'
 
-        # Phase 3 (1800ms): flash in overlay with monster name + DEFEATED
+        # Phase 3 (2300ms): flash in overlay with monster name + DEFEATED
         'setTimeout(function(){'
         'var ov=document.createElement("div");'
         'ov.style.cssText="position:absolute;left:0;right:0;top:0;bottom:0;'
@@ -400,7 +404,7 @@ def generate_monster_defeat_js(monster_name):
         'ov.style.opacity="1";'
         'ov.style.transform="scale(1)";'
         '});'
-        '},1800);'
+        '},2300);'
 
         '})();</script>'
     )
@@ -2193,8 +2197,9 @@ class WizardsCavernApp(toga.App):
                 gs.victory_monster_name = None
                 _trigger_room_interaction(gs.player_character, gs.my_tower)
                 self.render()
-        # 3.5s total: dice (0-1.2s) + grayscale (1.2-1.8s) + DEFEATED flash (1.8-3.5s)
-        threading.Timer(3.5, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
+        # 4s total: ATK dice (0-0.6s) + damage (0.9-1.5s) + grayscale (1.7-2.3s)
+        # + DEFEATED flash (2.3-4.0s)
+        threading.Timer(4.0, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
 
     def render(self):
         """
