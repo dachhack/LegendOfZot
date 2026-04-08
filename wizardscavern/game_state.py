@@ -328,6 +328,7 @@ encountered_vendors = {}
 encountered_monsters = {}
 unique_treasures_spawned = set()
 curing_kit_stocked = False  # True once a vendor has stocked a Curing Kit — prevents duplicates
+curing_kit_floor = None     # Random floor 0-9 (1-10) where the Curing Kit vendor spawns
 
 # ============================================================================
 # COMBAT ANIMATION STATE

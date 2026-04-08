@@ -2076,6 +2076,19 @@ def process_garden_action(player_character, my_tower, cmd):
             player_character.inventory.add_item(ingredient)
             add_log(f"{COLOR_GREEN}Gathered: {ingredient.name}{COLOR_RESET}")
 
+        # Dwarf bonus: dwarves have a nose for hot peppers.
+        # In normal and bug gardens, they get extra pepper rolls.
+        is_dwarf = getattr(player_character, 'race', '').lower() == 'dwarf'
+        if is_dwarf and not is_fey_garden:
+            if random.random() < 0.40:
+                fp = Ingredient(name='Fire Pepper', description='A small red pepper that hums with heat. Dwarves seem drawn to them.', value=12, level=1)
+                player_character.inventory.add_item(fp)
+                add_log(f"{COLOR_RED}[Dwarven Instinct] You spot a Fire Pepper tucked between the rocks!{COLOR_RESET}")
+            if random.random() < 0.10:
+                gp = Ingredient(name='Ghost Pepper', description='An ashen, wrinkled pepper so hot it shimmers. Deeply prized for cured meats.', value=35, level=3)
+                player_character.inventory.add_item(gp)
+                add_log(f"{COLOR_PURPLE}[Dwarven Instinct] A rare Ghost Pepper hides in the soil!{COLOR_RESET}")
+
         gs.harvested_gardens[coords] = True
 
         # Track fey garden floors so they don't respawn

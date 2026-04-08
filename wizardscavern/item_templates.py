@@ -283,6 +283,44 @@ SAUSAGE_RECIPES = {
             value=80, level=3, nutrition=110, sausage_style="Boerewors"
         ),
     },
+
+    # ============================================================
+    # SPICY SAUSAGES — require hot peppers, grant Spiced Fury buff
+    # ============================================================
+
+    'Pepperwurst': {
+        'ingredients': [('Fire Pepper', 1), ('Moonpetal', 1), ('Fire Root', 1)],
+        'meat_cost': 1,
+        'tier': 2,
+        'result': lambda: Sausage(
+            name="Pepperwurst",
+            description="A red-flecked bratwurst kicked up with Fire Pepper. Grants Spiced Fury on eat.",
+            value=55, level=2, nutrition=75, sausage_style="Pepperwurst",
+            is_spicy=True, spice_level=1,
+        ),
+    },
+    'Diablo Chorizo': {
+        'ingredients': [('Fire Pepper', 2), ('Fire Root', 2), ('Healing Moss', 1)],
+        'meat_cost': 1,
+        'tier': 3,
+        'result': lambda: Sausage(
+            name="Diablo Chorizo",
+            description="A chorizo stuffed with two Fire Peppers. Grants powerful Spiced Fury on eat.",
+            value=85, level=3, nutrition=90, sausage_style="Diablo Chorizo",
+            is_spicy=True, spice_level=1,
+        ),
+    },
+    'Dragonbreath Sausage': {
+        'ingredients': [('Ghost Pepper', 1), ('Fire Root', 2), ('Shadow Leaf', 1)],
+        'meat_cost': 2,
+        'tier': 4,
+        'result': lambda: Sausage(
+            name="Dragonbreath Sausage",
+            description="A ghost-pepper cured sausage said to breathe fire back at you. Grants legendary Spiced Fury.",
+            value=150, level=4, nutrition=120, sausage_style="Dragonbreath Sausage",
+            is_spicy=True, spice_level=2,
+        ),
+    },
 }
 
 # Available garden ingredients with spawn chances
@@ -301,7 +339,10 @@ GARDEN_INGREDIENTS = [
     ('Iron Bark', 'Bark from an ancient ironwood tree', 20, 3, 0.02),
     ('Wisdom Moss', 'Rare moss said to enhance mental clarity', 20, 3, 0.02),
     ('Stone Flower', 'A flower as hard as granite', 18, 3, 0.02),
-    ('Quicksilver Drop', 'A drop of liquid mercury-like substance', 22, 3, 0.01)
+    ('Quicksilver Drop', 'A drop of liquid mercury-like substance', 22, 3, 0.01),
+    # Spicy peppers — dwarves find these at double the base rate (see garden spawn code)
+    ('Fire Pepper', 'A small red pepper that hums with heat. Dwarves seem drawn to them.', 12, 1, 0.06),
+    ('Ghost Pepper', 'An ashen, wrinkled pepper so hot it shimmers. Deeply prized for cured meats.', 35, 3, 0.02),
 ]
 
 # Dictionary for easy lookup

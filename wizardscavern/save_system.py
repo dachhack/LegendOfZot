@@ -252,6 +252,8 @@ class SaveSystem:
             data['count'] = getattr(item, 'count', 1)
             data['monster_source'] = getattr(item, 'monster_source', 'Generic')
             data['sausage_style'] = getattr(item, 'sausage_style', 'Bratwurst')
+            data['is_spicy'] = getattr(item, 'is_spicy', False)
+            data['spice_level'] = getattr(item, 'spice_level', 0)
         elif isinstance(item, Food):
             data['nutrition'] = item.nutrition
             data['count'] = getattr(item, 'count', 1)
@@ -452,6 +454,8 @@ class SaveSystem:
                 count=data.get('count', 1),
                 monster_source=data.get('monster_source', 'Generic'),
                 sausage_style=data.get('sausage_style', 'Bratwurst'),
+                is_spicy=data.get('is_spicy', False),
+                spice_level=data.get('spice_level', 0),
             )
         else:
             # Generic item fallback

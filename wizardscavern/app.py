@@ -648,6 +648,8 @@ class WizardsCavernApp(toga.App):
         gs.active_flare_item = None
         gs.newly_unlocked_achievements = []
         gs.curing_kit_stocked = False  # Reset so next vendor on floors 1-10 stocks it
+        import random as _rnd
+        gs.curing_kit_floor = _rnd.randint(0, 9)  # Random floor 1-10 (0-indexed)
         gs.achievement_notification_timer = 0
         
         # Initialize dungeon and tomb tracking

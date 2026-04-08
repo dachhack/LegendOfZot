@@ -1454,7 +1454,10 @@ GARDEN_INGREDIENTS = [
     ('Iron Bark', 'Bark from an ancient ironwood tree', 20, 3, 0.02),
     ('Wisdom Moss', 'Rare moss said to enhance mental clarity', 20, 3, 0.02),
     ('Stone Flower', 'A flower as hard as granite', 18, 3, 0.02),
-    ('Quicksilver Drop', 'A drop of liquid mercury-like substance', 22, 3, 0.01)
+    ('Quicksilver Drop', 'A drop of liquid mercury-like substance', 22, 3, 0.01),
+    # Spicy peppers — dwarves find these at double the base rate (see garden spawn code)
+    ('Fire Pepper', 'A small red pepper that hums with heat. Dwarves seem drawn to them.', 12, 1, 0.06),
+    ('Ghost Pepper', 'An ashen, wrinkled pepper so hot it shimmers. Deeply prized for cured meats.', 35, 3, 0.02),
 ]
 
 # Dictionary for easy lookup
@@ -2414,12 +2417,16 @@ def generate_vendor_inventory(floor_level, room):
         iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
         inventory.append(_create_item_copy(iron_rations))
 
-    # Curing Kit: guaranteed stock on the first vendor encountered on floors 1-10.
-    # Stays stocked on subsequent vendors only until one has spawned it, so the player
-    # is guaranteed to see it at some point without multiple copies cluttering shops.
-    if 1 <= floor_level <= 10 and not getattr(gs, 'curing_kit_stocked', False):
-        inventory.append(CuringKit())
-        gs.curing_kit_stocked = True
+    # Curing Kit: stocked on the first vendor found on a specific random floor (1-10).
+    # Safety net: if player has reached floor 10 without the kit being stocked yet,
+    # the next vendor they find will always carry it.
+    if not getattr(gs, 'curing_kit_stocked', False):
+        target_floor = getattr(gs, 'curing_kit_floor', None)
+        is_target_floor = target_floor is not None and floor_level == target_floor
+        is_last_chance = floor_level >= 9  # Floor 10 (0-indexed 9) is the safety net
+        if (1 <= floor_level <= 10) and (is_target_floor or is_last_chance):
+            inventory.append(CuringKit())
+            gs.curing_kit_stocked = True
 
     # Generate 4-8 random other items
     num_items = random.randint(4, 8)
@@ -2704,27 +2711,59 @@ class LembasWafer(Food):
 
 
 class Sausage(Food):
-    """Cured sausage crafted from monster meat. Doesn't rot, fills hunger, and grants a small HP regen buff."""
+    """Cured sausage crafted from monster meat.
+
+    Dwarves get a +50% nutrition and healing bonus (hearty mountain appetite).
+    Spicy variants (is_spicy=True) grant a temporary attack buff on eat.
+    """
     def __init__(self, name="Sausage", description="A hand-stuffed cured sausage. Smoked, spiced, and shelf-stable.",
-                 value=30, level=1, nutrition=60, count=1, monster_source="Generic", sausage_style="Bratwurst"):
+                 value=30, level=1, nutrition=60, count=1, monster_source="Generic", sausage_style="Bratwurst",
+                 is_spicy=False, spice_level=0):
         super().__init__(name, description, value, level, nutrition=nutrition, count=count)
         self.monster_source = monster_source
         self.sausage_style = sausage_style
+        self.is_spicy = is_spicy
+        self.spice_level = spice_level  # 1 = Fire Pepper, 2 = Ghost Pepper
 
     def __repr__(self):
-        return f"Sausage(name='{self.name}', nutrition={self.nutrition}, count={self.count})"
+        return f"Sausage(name='{self.name}', nutrition={self.nutrition}, spicy={self.is_spicy})"
 
     def use(self, character, my_tower=None):
+        is_dwarf = getattr(character, 'race', '').lower() == 'dwarf'
+        # Dwarves get +50% nutrition and healing from sausages
+        nutrition_gain = int(self.nutrition * 1.5) if is_dwarf else self.nutrition
+        base_heal = 5
+        heal_amount = int(base_heal * 1.5) if is_dwarf else base_heal
+
         old_hunger = character.hunger
-        character.hunger = min(HUNGER_MAX, character.hunger + self.nutrition)
+        character.hunger = min(HUNGER_MAX, character.hunger + nutrition_gain)
         gained = character.hunger - old_hunger
-        # Small HP regen buff: +2 HP immediately, feels like a hearty meal
-        heal = min(5, character.max_health - character.health)
+        heal = min(heal_amount, character.max_health - character.health)
         if heal > 0:
             character.health += heal
+
         add_log(f"{COLOR_GREEN}You eat the {self.name}. Hunger restored by {gained}.{COLOR_RESET}")
         if heal > 0:
             add_log(f"{COLOR_GREEN}The hearty cured meat restores {heal} HP.{COLOR_RESET}")
+        if is_dwarf:
+            add_log(f"{COLOR_YELLOW}[Dwarven Appetite] Your stout constitution draws extra nourishment from the meal.{COLOR_RESET}")
+
+        # Spicy sausage buff — grants "Spiced Fury" attack boost
+        if self.is_spicy:
+            magnitude = 3 if self.spice_level <= 1 else 6  # Fire = +3 atk, Ghost = +6 atk
+            duration = 10 if self.spice_level <= 1 else 15  # Ghost lasts longer
+            # Dwarves handle heat better — 50% longer duration
+            if is_dwarf:
+                duration = int(duration * 1.5)
+            character.add_status_effect(
+                effect_name="Spiced Fury",
+                duration=duration,
+                effect_type='attack_boost',
+                magnitude=magnitude,
+                description=f"The spicy sausage fills you with fiery vigor (+{magnitude} Atk)."
+            )
+            add_log(f"{COLOR_RED}Your blood boils with spicy fury! +{magnitude} Attack for {duration} turns.{COLOR_RESET}")
+
         return True  # consumed
 
 
@@ -4066,6 +4105,8 @@ def _create_item_copy(item_obj):
             nutrition=item_obj.nutrition, count=getattr(item_obj, 'count', 1),
             monster_source=getattr(item_obj, 'monster_source', 'Generic'),
             sausage_style=getattr(item_obj, 'sausage_style', 'Bratwurst'),
+            is_spicy=getattr(item_obj, 'is_spicy', False),
+            spice_level=getattr(item_obj, 'spice_level', 0),
         )
         return new_sausage
     elif isinstance(item_obj, Food):
