@@ -154,16 +154,19 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
     #  3. Animates it upward with fading via requestAnimationFrame
     #  4. delay_ms parameter staggers multiple notifications
     # -----------------------------------------------------------------
-    # SEQUENCED COMBAT TIMELINE (matches generate_dice_roll_js):
-    #   0ms      Player ATK dice starts tumbling
-    #   600ms    ATK dice lands
-    #   900ms    Monster damage float appears (after ATK roll resolves)
-    #   1700ms   Monster DEF dice (player dodge roll) starts tumbling
-    #   2300ms   DEF dice lands
-    #   2600ms   Player damage float appears
+    # SEQUENCED OPPOSED-DICE COMBAT TIMELINE
+    # (matches generate_dice_roll_js):
+    #   0ms     Player ATTACK dice tumbles
+    #   600ms   Monster DEFEND dice tumbles
+    #   1000ms  Both rolls landed
+    #   1300ms  Monster damage float appears (exchange resolved)
+    #   1900ms  Monster ATTACK dice tumbles
+    #   2500ms  Player DEFEND dice tumbles
+    #   2900ms  Both rolls landed
+    #   3200ms  Player damage float appears
     # -----------------------------------------------------------------
-    MONSTER_DMG_DELAY = 900   # After player attack roll resolves
-    PLAYER_DMG_DELAY  = 2600  # After monster attack / player dodge resolves
+    MONSTER_DMG_DELAY = 1300  # After player attack exchange resolves
+    PLAYER_DMG_DELAY  = 3200  # After monster attack exchange resolves
     float_calls = []
     if m_text:
         float_calls.append(
@@ -234,11 +237,21 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
 
 
 def generate_dice_roll_js(dice_rolls):
-    """Generate animated 3D dice roll display inside combat panels only.
+    """Generate animated 3D opposed dice rolls inside combat panels.
 
-    dice_rolls: list of (roll_value, dc, hit_bool, label, sides) tuples.
-    ATK dice appear in monster_dice div, DEF/FLEE in player_dice div.
-    If the target panel doesn't exist, the roll is silently skipped.
+    dice_rolls: list of (player_roll, monster_roll, player_wins, label, sides) tuples.
+    Each entry produces TWO dice: one in the player panel, one in the monster panel.
+    The winning dice glows green, the losing dice glows red.
+
+    Sequenced timeline (per round):
+      0ms     Player ATTACK dice tumbles (orange label, player panel)
+      600ms   Monster DEFEND dice tumbles (blue label, monster panel)
+      1900ms  Monster ATTACK dice tumbles (orange label, monster panel)
+      2500ms  Player DEFEND dice tumbles (blue label, player panel)
+
+    FLEE uses the same format but sequenced as a single exchange:
+      0ms     Player FLEE dice tumbles (yellow label, player panel)
+      600ms   Monster CATCH dice tumbles (red label, monster panel)
     """
     if not dice_rolls:
         return ""
@@ -252,6 +265,7 @@ def generate_dice_roll_js(dice_rolls):
         '<script>(function(){'
         'var rolls=[' + roll_data_js + '];'
 
+        # Polygon clip-paths per die type (d20 hex, d12 pent, d8 diamond...)
         'var shapes={'
         '20:"polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%)",'
         '12:"polygon(50% 0%,100% 38%,82% 100%,18% 100%,0% 38%)",'
@@ -261,29 +275,22 @@ def generate_dice_roll_js(dice_rolls):
         '};'
         'var radii={20:"2px",12:"2px",8:"0",6:"3px",4:"0"};'
 
-        'rolls.forEach(function(r,idx){'
-        'var val=r[0],dc=r[1],hit=r[2],label=r[3],sides=r[4];'
-
-        # Friendly action labels and colors per roll type
-        'var labelMap={"ATK":"TO HIT","DEF":"TO DODGE","FLEE":"TO FLEE"};'
-        'var labelColorMap={"ATK":"#FF8A65","DEF":"#64B5F6","FLEE":"#FFD54F"};'
-        'var displayLabel=labelMap[label]||label;'
-        'var labelColor=labelColorMap[label]||"#AAA";'
-
-        'var targetId=label==="ATK"?"monster_dice":"player_dice";'
-        'var container=document.getElementById(targetId);'
+        # Helper: create and animate a single dice
+        'function makeDice(containerId,val,winner,labelText,labelColor,sides,delayMs){'
+        'var container=document.getElementById(containerId);'
         'if(!container)return;'
 
         'var wrap=document.createElement("div");'
-        'wrap.style.cssText="text-align:center;";'
+        'wrap.style.cssText="text-align:center;opacity:0;transition:opacity 0.2s;";'
 
-        # Top label: action verb (TO HIT / TO DODGE / TO FLEE)
+        # Top label: action verb
         'var top=document.createElement("div");'
         'top.style.cssText="font-size:7px;font-weight:bold;font-family:monospace;'
         'margin-bottom:1px;letter-spacing:0.5px;color:"+labelColor+";";'
-        'top.textContent=displayLabel;'
+        'top.textContent=labelText;'
         'wrap.appendChild(top);'
 
+        # The dice
         'var sz=28;'
         'var dice=document.createElement("div");'
         'var clip=shapes[sides]||shapes[20];'
@@ -300,16 +307,18 @@ def generate_dice_roll_js(dice_rolls):
         'dice.textContent="";'
         'wrap.appendChild(dice);'
 
-        # Bottom label: needed value (e.g. "≥6") so player sees the threshold
+        # Bottom label: the rolled value (so both rolls are easy to compare at a glance)
         'var dlbl=document.createElement("div");'
         'dlbl.style.cssText="font-size:7px;color:#888;font-family:monospace;margin-top:1px;";'
-        'dlbl.textContent="\\u2265"+dc;'
+        'dlbl.textContent="d"+sides;'
         'wrap.appendChild(dlbl);'
 
         'container.appendChild(wrap);'
 
-        'var frame=0;var total=8;var flicker;'
+        # Tumble animation
         'setTimeout(function(){'
+        'wrap.style.opacity="1";'
+        'var frame=0;var total=8;var flicker;'
         'flicker=setInterval(function(){'
         'frame++;'
         'if(frame<total){'
@@ -322,7 +331,7 @@ def generate_dice_roll_js(dice_rolls):
         'clearInterval(flicker);'
         'dice.textContent=val;'
         'dice.style.transform="perspective(120px) rotateX(0) rotateY(0)";'
-        'if(hit){'
+        'if(winner){'
         'dice.style.borderColor="#69F0AE";dice.style.color="#69F0AE";'
         'dice.style.background="#2a3a2a";'
         'dice.style.boxShadow="0 0 6px #69F0AE";'
@@ -331,15 +340,33 @@ def generate_dice_roll_js(dice_rolls):
         'dice.style.background="#3a2a2a";'
         'dice.style.boxShadow="0 0 6px #FF5252";'
         '}'
+        # Fade out after brief hold
         'setTimeout(function(){'
         'wrap.style.transition="opacity 0.5s";wrap.style.opacity="0";'
         'setTimeout(function(){if(wrap.parentNode)wrap.parentNode.removeChild(wrap);},500);'
-        '},1500);'
+        '},1800);'
         '}'
         '},45);'
-        # Sequenced delay per roll type so combat actions feel paced.
-        # ATK happens first, then a beat for the damage, then DEF.
-        '},label==="ATK"?0:(label==="DEF"?1700:1700));'
+        '},delayMs);'
+        '}'
+
+        # Process each opposed-roll entry
+        'rolls.forEach(function(r){'
+        'var pRoll=r[0],mRoll=r[1],playerWins=r[2],label=r[3],sides=r[4];'
+        'var pHigher=(pRoll>mRoll);'
+
+        'if(label==="ATK"){'
+        # Player attacks first, monster defends second
+        'makeDice("player_dice",pRoll,pHigher,"ATTACK","#FF8A65",sides,0);'
+        'makeDice("monster_dice",mRoll,!pHigher,"DEFEND","#64B5F6",sides,600);'
+        '}else if(label==="DEF"){'
+        # Monster attacks first, player defends second (delayed after player ATK+damage phase)
+        'makeDice("monster_dice",mRoll,!pHigher,"ATTACK","#FF8A65",sides,1900);'
+        'makeDice("player_dice",pRoll,pHigher,"DEFEND","#64B5F6",sides,2500);'
+        '}else if(label==="FLEE"){'
+        'makeDice("player_dice",pRoll,pHigher,"FLEE","#FFD54F",sides,0);'
+        'makeDice("monster_dice",mRoll,!pHigher,"CATCH","#FF8A65",sides,600);'
+        '}'
 
         '});'
         '})();</script>'
@@ -351,11 +378,12 @@ def generate_monster_defeat_js(monster_name):
     """Generate a sequenced monster defeat animation inside the combat panel.
 
     Combat sequence on a kill (matches dice/damage timing):
-      0-600ms:   Player ATK dice tumbles + lands
-      900ms:     Monster damage float appears
-      1700ms:    Sprite fades to grayscale (kill confirmed)
-      2300ms:    Flash "MONSTER NAME / DEFEATED" overlay
-      4000ms:    Panel auto-dismissed by Python timer
+      0-600ms:    Player ATTACK dice tumbles + lands
+      600-1000ms: Monster DEFEND dice tumbles + lands (exchange resolved)
+      1300ms:     Monster damage float appears
+      2100ms:     Sprite fades to grayscale (kill confirmed)
+      2700ms:     Flash "MONSTER NAME / DEFEATED" overlay
+      4500ms:     Panel auto-dismissed by Python timer
     """
     if not monster_name:
         return ""
@@ -367,17 +395,17 @@ def generate_monster_defeat_js(monster_name):
         # Cancel CSS entrance animation that might conflict
         'mp.style.animation="none";'
 
-        # Phase 1 (0-1700ms): wait for ATK dice + damage float to play
+        # Phase 1 (0-2100ms): wait for opposed dice + damage float to play
 
-        # Phase 2 (1700ms): grayscale + dim the sprite box only (not the text)
+        # Phase 2 (2100ms): grayscale + dim the sprite box only (not the text)
         'setTimeout(function(){'
         'var sb=document.getElementById("monster_sprite_box");'
         'if(sb){'
         'sb.style.setProperty("filter","grayscale(100%) brightness(0.35)","important");'
         '}'
-        '},1700);'
+        '},2100);'
 
-        # Phase 3 (2300ms): flash in overlay with monster name + DEFEATED
+        # Phase 3 (2700ms): flash in overlay with monster name + DEFEATED
         'setTimeout(function(){'
         'var ov=document.createElement("div");'
         'ov.style.cssText="position:absolute;left:0;right:0;top:0;bottom:0;'
@@ -404,7 +432,7 @@ def generate_monster_defeat_js(monster_name):
         'ov.style.opacity="1";'
         'ov.style.transform="scale(1)";'
         '});'
-        '},2300);'
+        '},2700);'
 
         '})();</script>'
     )
@@ -2197,9 +2225,9 @@ class WizardsCavernApp(toga.App):
                 gs.victory_monster_name = None
                 _trigger_room_interaction(gs.player_character, gs.my_tower)
                 self.render()
-        # 4s total: ATK dice (0-0.6s) + damage (0.9-1.5s) + grayscale (1.7-2.3s)
-        # + DEFEATED flash (2.3-4.0s)
-        threading.Timer(4.0, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
+        # 4.5s total: opposed ATK exchange (0-1.0s) + damage (1.3-1.9s) +
+        # grayscale (2.1-2.7s) + DEFEATED flash (2.7-4.5s)
+        threading.Timer(4.5, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
 
     def render(self):
         """

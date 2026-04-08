@@ -36,6 +36,29 @@ from .items import (
 
 
 # ============================================================================
+# OPPOSED DICE ROLL HELPER
+# ============================================================================
+def opposed_roll(player_wins, sides=20):
+    """Synthesize a pair of opposed dice rolls whose outcome matches player_wins.
+
+    Uses rejection sampling over independent uniform rolls so the
+    distribution looks natural. Returns (player_roll, monster_roll)
+    where (player_roll > monster_roll) == player_wins.
+
+    Ties are rerolled (a tie goes against nobody). Safety-capped at
+    50 tries; falls back to (sides, 1) or (1, sides) if exhausted.
+    """
+    for _ in range(50):
+        p = random.randint(1, sides)
+        m = random.randint(1, sides)
+        if p == m:
+            continue
+        if (p > m) == player_wins:
+            return p, m
+    return (sides, 1) if player_wins else (1, sides)
+
+
+# ============================================================================
 # LAZY IMPORTS (to avoid circular dependencies during refactoring)
 # ============================================================================
 
@@ -1017,12 +1040,13 @@ class Character:
         # Clamp hit chance between 5% and 95%
         hit_chance = max(0.05, min(0.95, hit_chance))
 
-        # Roll for hit (d20: need to roll >= DC to hit)
+        # Opposed d20 roll: player attack vs monster defense.
+        # player_wins iff player_roll > monster_roll, probability == hit_chance.
         sides = 20
-        dc = max(1, min(sides, int(round((1 - hit_chance) * sides))))
-        roll = random.randint(1, sides)
-        hit = roll >= dc
-        gs.last_dice_rolls.append((roll, dc, hit, "ATK", sides))
+        player_wins = random.random() < hit_chance
+        p_roll, m_roll = opposed_roll(player_wins, sides)
+        gs.last_dice_rolls.append((p_roll, m_roll, player_wins, "ATK", sides))
+        hit = player_wins
         if not hit:
             add_log(f"{COLOR_YELLOW}You missed the evil {target.name}!{COLOR_RESET}")
             return 0
@@ -1413,12 +1437,14 @@ class Monster:
         if _has_dodge_cloak(gs.player_character):
             hit_chance *= 0.8  # 20% reduced
 
-        # Roll for dodge (d12: player needs >= DC to dodge)
-        sides = 12
-        dc = max(1, min(sides, int(round((1 - hit_chance) * sides))))
-        roll = random.randint(1, sides)
-        hit = roll >= dc
-        gs.last_dice_rolls.append((roll, dc, hit, "DEF", sides))
+        # Opposed d20 roll: monster attack vs player defense.
+        # hit_chance is the monster's chance to hit; player_wins (dodge) is the inverse.
+        sides = 20
+        monster_hits = random.random() < hit_chance
+        player_wins = not monster_hits  # player dodged if monster missed
+        p_roll, m_roll = opposed_roll(player_wins, sides)
+        gs.last_dice_rolls.append((p_roll, m_roll, player_wins, "DEF", sides))
+        hit = monster_hits
         if not hit:
           gs.last_player_blocked = True
           add_log(f"{COLOR_YELLOW}{self.name} missed {target.name}!{COLOR_RESET}")
