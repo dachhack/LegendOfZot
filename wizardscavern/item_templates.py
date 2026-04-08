@@ -2,7 +2,7 @@
 from .items import (
     Item, Potion, Ingredient, Trophy, Rune, Shard,
     Weapon, Armor, Scroll, Flare, Lantern, LanternFuel,
-    Food, Meat, CookingKit, Treasure, Towel, Spell, LembasWafer,
+    Food, Meat, CookingKit, CuringKit, Sausage, Treasure, Towel, Spell, LembasWafer,
 )
 
 
@@ -233,6 +233,55 @@ LEMBAS_RECIPES = {
         'ration_cost': 1,
         'tier': 2,
         'result': lambda: LembasWafer(),
+    },
+}
+
+# ================================================================================
+# SAUSAGE RECIPES (requires Curing Kit - consumes cooked meat + spices)
+# ================================================================================
+# Each recipe specifies a 'meat_cost' (number of cooked meat pieces consumed).
+# The sausage style is fixed but the meat_source is auto-set to the consumed monster.
+
+SAUSAGE_RECIPES = {
+    'Bratwurst': {
+        'ingredients': [('Moonpetal', 1), ('Fire Root', 1)],
+        'meat_cost': 1,
+        'tier': 1,
+        'result': lambda: Sausage(
+            name="Bratwurst",
+            description="A coarse-ground German sausage. Savory and warming.",
+            value=30, level=1, nutrition=60, sausage_style="Bratwurst"
+        ),
+    },
+    'Chorizo': {
+        'ingredients': [('Fire Root', 2), ('Healing Moss', 1)],
+        'meat_cost': 1,
+        'tier': 2,
+        'result': lambda: Sausage(
+            name="Chorizo",
+            description="A smoky, paprika-red Spanish sausage with a fiery kick.",
+            value=45, level=2, nutrition=70, sausage_style="Chorizo"
+        ),
+    },
+    'Andouille': {
+        'ingredients': [('Shadow Leaf', 1), ('Fire Root', 1), ('Healing Moss', 1)],
+        'meat_cost': 2,
+        'tier': 2,
+        'result': lambda: Sausage(
+            name="Andouille",
+            description="A heavily smoked Cajun sausage. Hearty and filling.",
+            value=60, level=2, nutrition=90, sausage_style="Andouille"
+        ),
+    },
+    'Boerewors': {
+        'ingredients': [('Fire Root', 1), ('Crystal Dew', 1), ('Starbloom', 1)],
+        'meat_cost': 2,
+        'tier': 3,
+        'result': lambda: Sausage(
+            name="Boerewors",
+            description="A coiled South African farmer's sausage, coriander-forward and deeply satisfying.",
+            value=80, level=3, nutrition=110, sausage_style="Boerewors"
+        ),
     },
 }
 

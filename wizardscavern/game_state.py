@@ -327,6 +327,7 @@ gate_to_floor_50_unlocked = False
 encountered_vendors = {}
 encountered_monsters = {}
 unique_treasures_spawned = set()
+curing_kit_stocked = False  # True once a vendor has stocked a Curing Kit — prevents duplicates
 
 # ============================================================================
 # COMBAT ANIMATION STATE

@@ -647,6 +647,7 @@ class WizardsCavernApp(toga.App):
         gs.lets_go = False
         gs.active_flare_item = None
         gs.newly_unlocked_achievements = []
+        gs.curing_kit_stocked = False  # Reset so next vendor on floors 1-10 stocks it
         gs.achievement_notification_timer = 0
         
         # Initialize dungeon and tomb tracking
@@ -3024,7 +3025,7 @@ class WizardsCavernApp(toga.App):
                 display_items = sorted_items
                 filter_label = "Your Inventory"
                 if gs.inventory_filter == 'use':
-                    display_items = [i for i in sorted_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit))]
+                    display_items = [i for i in sorted_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit, CuringKit))]
                     filter_label = "Usable Items"
                 elif gs.inventory_filter == 'equip':
                     display_items = [i for i in sorted_items if isinstance(i, (Weapon, Armor, Towel)) or (isinstance(i, Treasure) and getattr(i, 'treasure_type', '') == 'passive')]

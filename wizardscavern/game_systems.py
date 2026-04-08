@@ -17,7 +17,8 @@ from .sprite_data import generate_player_sprite_html as _generate_player_sprite_
 from .game_data import (MONSTER_TEMPLATES, MONSTER_SPAWN_FLOOR_RANGE, MONSTER_EVOLUTION_TIERS,
                        TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLATES)
 from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
-                   Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
+                   Flare, Lantern, LanternFuel, Food, Meat, CookingKit, CuringKit,
+                   Sausage, Ingredient,
                    LembasWafer, Trophy, Rune, Shard, identify_item, is_item_identified,
                    get_item_display_name, register_item_discovery, _create_item_copy,
                    get_monster_meat_info, drop_monster_items, drop_monster_meat,
@@ -33,7 +34,8 @@ from .item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES
                             SPELL_TEMPLATES, ALL_ITEM_TEMPLATES, INGREDIENT_TEMPLATES,
                             UNIQUE_WEAPON_TEMPLATES, UNIQUE_ARMOR_TEMPLATES,
                             WEAPON_TIER_PREFIXES, ARMOR_TIER_PREFIXES,
-                            POTION_RECIPES, LEMBAS_RECIPES, GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
+                            POTION_RECIPES, LEMBAS_RECIPES, SAUSAGE_RECIPES,
+                            GARDEN_INGREDIENTS, GARDEN_INGREDIENTS_DICT,
                             HUNGER_MAX, HUNGER_DECAY_PER_MOVE,
                             VAULT_DEFENDER_TEMPLATES, ENHANCED_MINOR_TREASURES,
                             UNIQUE_TREASURE_TEMPLATES,
@@ -1677,6 +1679,15 @@ def get_available_recipes(player_character):
         if isinstance(item, Food) and item.name == "Rations":
             ration_count += getattr(item, 'count', 1)
 
+    # Count cooked, non-rotten monster meat in inventory (for sausage recipes)
+    cooked_meat_count = 0
+    for item in player_character.inventory.items:
+        if isinstance(item, Meat) and item.is_cooked and not getattr(item, 'is_rotten', False):
+            cooked_meat_count += getattr(item, 'count', 1)
+
+    # Check if player owns a Curing Kit (unlocks sausage crafting)
+    has_curing_kit = any(isinstance(item, CuringKit) for item in player_character.inventory.items)
+
     # Check each potion recipe
     for recipe_name, recipe_data in POTION_RECIPES.items():
         can_craft = True
@@ -1714,15 +1725,38 @@ def get_available_recipes(player_character):
                 if len(missing) <= 2:
                     available.append((recipe_name, recipe_data, False, missing))
 
+    # Check sausage recipes (requires Curing Kit)
+    if has_curing_kit:
+        for recipe_name, recipe_data in SAUSAGE_RECIPES.items():
+            can_craft = True
+            missing = []
+            for ing_name, ing_count in recipe_data['ingredients']:
+                if inventory_items.get(ing_name, 0) < ing_count:
+                    can_craft = False
+                    missing.append((ing_name, ing_count - inventory_items.get(ing_name, 0)))
+            # Check cooked meat cost
+            meat_needed = recipe_data.get('meat_cost', 1)
+            if cooked_meat_count < meat_needed:
+                can_craft = False
+                missing.append(('Cooked Meat', meat_needed - cooked_meat_count))
+
+            if can_craft:
+                available.append((recipe_name, recipe_data, True, []))
+            else:
+                if len(missing) <= 2:
+                    available.append((recipe_name, recipe_data, False, missing))
+
     return available
 
 def craft_potion(player_character, recipe_name):
-    """Craft a potion or lembas, removing ingredients and adding result"""
-    # Check both recipe dicts
+    """Craft a potion, lembas, or sausage, removing ingredients and adding result"""
+    # Check all recipe dicts
     if recipe_name in POTION_RECIPES:
         recipe = POTION_RECIPES[recipe_name]
     elif recipe_name in LEMBAS_RECIPES:
         recipe = LEMBAS_RECIPES[recipe_name]
+    elif recipe_name in SAUSAGE_RECIPES:
+        recipe = SAUSAGE_RECIPES[recipe_name]
     else:
         add_log(f"{COLOR_RED}Unknown recipe: {recipe_name}{COLOR_RESET}")
         return
@@ -1749,8 +1783,34 @@ def craft_potion(player_character, recipe_name):
                     player_character.inventory.items.remove(item)
                 break
 
+    # Remove cooked meat if recipe requires it (sausage)
+    # Tag the crafted sausage with the monster source of the consumed meat.
+    meat_cost = recipe.get('meat_cost', 0)
+    consumed_meat_source = None
+    if meat_cost > 0:
+        remaining = meat_cost
+        for item in list(player_character.inventory.items):
+            if remaining <= 0:
+                break
+            if isinstance(item, Meat) and item.is_cooked and not getattr(item, 'is_rotten', False):
+                count = getattr(item, 'count', 1)
+                if consumed_meat_source is None:
+                    consumed_meat_source = getattr(item, 'monster_name', 'Unknown')
+                if count > remaining:
+                    item.count -= remaining
+                    remaining = 0
+                else:
+                    player_character.inventory.items.remove(item)
+                    remaining -= count
+
     # Add crafted item
     new_item = recipe['result']()
+    # If it's a sausage, attribute the monster source in the name and description
+    if isinstance(new_item, Sausage) and consumed_meat_source:
+        style = new_item.sausage_style
+        new_item.monster_source = consumed_meat_source
+        new_item.name = f"{consumed_meat_source} {style}"
+        new_item.description = f"A hand-stuffed {style.lower()} made from cured {consumed_meat_source} meat. {new_item.description}"
     player_character.inventory.add_item(new_item)
     add_log(f"{COLOR_GREEN}* You crafted: {new_item.name}! *{COLOR_RESET}")
     add_log(f"{COLOR_CYAN}{new_item.description}{COLOR_RESET}")

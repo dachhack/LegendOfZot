@@ -2414,6 +2414,13 @@ def generate_vendor_inventory(floor_level, room):
         iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
         inventory.append(_create_item_copy(iron_rations))
 
+    # Curing Kit: guaranteed stock on the first vendor encountered on floors 1-10.
+    # Stays stocked on subsequent vendors only until one has spawned it, so the player
+    # is guaranteed to see it at some point without multiple copies cluttering shops.
+    if 1 <= floor_level <= 10 and not getattr(gs, 'curing_kit_stocked', False):
+        inventory.append(CuringKit())
+        gs.curing_kit_stocked = True
+
     # Generate 4-8 random other items
     num_items = random.randint(4, 8)
 
@@ -2696,6 +2703,31 @@ class LembasWafer(Food):
         return True  # consumed
 
 
+class Sausage(Food):
+    """Cured sausage crafted from monster meat. Doesn't rot, fills hunger, and grants a small HP regen buff."""
+    def __init__(self, name="Sausage", description="A hand-stuffed cured sausage. Smoked, spiced, and shelf-stable.",
+                 value=30, level=1, nutrition=60, count=1, monster_source="Generic", sausage_style="Bratwurst"):
+        super().__init__(name, description, value, level, nutrition=nutrition, count=count)
+        self.monster_source = monster_source
+        self.sausage_style = sausage_style
+
+    def __repr__(self):
+        return f"Sausage(name='{self.name}', nutrition={self.nutrition}, count={self.count})"
+
+    def use(self, character, my_tower=None):
+        old_hunger = character.hunger
+        character.hunger = min(HUNGER_MAX, character.hunger + self.nutrition)
+        gained = character.hunger - old_hunger
+        # Small HP regen buff: +2 HP immediately, feels like a hearty meal
+        heal = min(5, character.max_health - character.health)
+        if heal > 0:
+            character.health += heal
+        add_log(f"{COLOR_GREEN}You eat the {self.name}. Hunger restored by {gained}.{COLOR_RESET}")
+        if heal > 0:
+            add_log(f"{COLOR_GREEN}The hearty cured meat restores {heal} HP.{COLOR_RESET}")
+        return True  # consumed
+
+
 class Meat(Item):
     """Meat dropped by monsters - can be raw or cooked, rots over time."""
     def __init__(self, name, description="", value=3, level=0,
@@ -2788,6 +2820,22 @@ class CookingKit(Item):
             add_log(f"{COLOR_GREEN}You cooked the {meat.name}!{COLOR_RESET}")
         add_log(f"{COLOR_GREEN}Cooked {cooked_count} piece(s) of meat. It will stay fresh much longer!{COLOR_RESET}")
         return False  # kit is reusable, not consumed
+
+
+class CuringKit(Item):
+    """Guaranteed purchase from a vendor on floors 1-10. Unlocks sausage crafting."""
+    def __init__(self, name="Curing Kit",
+                 description="A small wooden box of salt, saltpeter, spice jars, and natural casings. Unlocks sausage crafting at the cooking pot.",
+                 value=180, level=1):
+        super().__init__(name, description, value, level)
+
+    def __repr__(self):
+        return f"CuringKit(name='{self.name}', value={self.value})"
+
+    def use(self, character, my_tower=None):
+        """Curing kit is never used directly — it enables sausage recipes in crafting."""
+        add_log(f"{COLOR_CYAN}The Curing Kit unlocks sausage recipes in the crafting menu. Combine meat with curing ingredients!{COLOR_RESET}")
+        return False  # not consumed
 
 
 def cook_meat_in_inventory(character, source="fire"):
@@ -4002,6 +4050,8 @@ def _create_item_copy(item_obj):
         return Towel(name=item_obj.name, description=item_obj.description, value=item_obj.value, level=item_obj.level, wetness=item_obj.wetness)
     elif isinstance(item_obj, CookingKit):
         return CookingKit(name=item_obj.name, description=item_obj.description, value=item_obj.value, level=item_obj.level)
+    elif isinstance(item_obj, CuringKit):
+        return CuringKit(name=item_obj.name, description=item_obj.description, value=item_obj.value, level=item_obj.level)
     elif isinstance(item_obj, Meat):
         new_meat = Meat(
             name=item_obj.name, description=item_obj.description, value=item_obj.value, level=item_obj.level,
@@ -4010,6 +4060,14 @@ def _create_item_copy(item_obj):
         )
         new_meat.is_rotten = item_obj.is_rotten
         return new_meat
+    elif isinstance(item_obj, Sausage):
+        new_sausage = Sausage(
+            name=item_obj.name, description=item_obj.description, value=item_obj.value, level=item_obj.level,
+            nutrition=item_obj.nutrition, count=getattr(item_obj, 'count', 1),
+            monster_source=getattr(item_obj, 'monster_source', 'Generic'),
+            sausage_style=getattr(item_obj, 'sausage_style', 'Bratwurst'),
+        )
+        return new_sausage
     elif isinstance(item_obj, Food):
         return Food(name=item_obj.name, description=item_obj.description, value=item_obj.value, level=item_obj.level,
                     nutrition=item_obj.nutrition, count=getattr(item_obj, 'count', 1))

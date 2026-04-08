@@ -29,7 +29,7 @@ from .game_state import (
 from .items import (
     Item, Potion, Weapon, Armor, Scroll, Spell, Treasure,
     Towel, Flare, Lantern, LanternFuel, Food, Meat,
-    CookingKit, Ingredient, Trophy, Rune, Shard, LembasWafer,
+    CookingKit, CuringKit, Sausage, Ingredient, Trophy, Rune, Shard, LembasWafer,
 )
 from .characters import Character, Monster, Inventory, StatusEffect
 from .vendor import Vendor
@@ -247,10 +247,15 @@ class SaveSystem:
             data['descriptor'] = item.descriptor
             data['is_rotten'] = item.is_rotten
             data['count'] = getattr(item, 'count', 1)
+        elif isinstance(item, Sausage):
+            data['nutrition'] = item.nutrition
+            data['count'] = getattr(item, 'count', 1)
+            data['monster_source'] = getattr(item, 'monster_source', 'Generic')
+            data['sausage_style'] = getattr(item, 'sausage_style', 'Bratwurst')
         elif isinstance(item, Food):
             data['nutrition'] = item.nutrition
             data['count'] = getattr(item, 'count', 1)
-        # CookingKit has no extra fields to save
+        # CookingKit and CuringKit have no extra fields to save
 
         return data
 
@@ -433,6 +438,20 @@ class SaveSystem:
             return CookingKit(
                 name=data['name'], description=data.get('description', ''),
                 value=data.get('value', 120), level=data.get('level', 3)
+            )
+        elif cls_name == 'CuringKit':
+            return CuringKit(
+                name=data['name'], description=data.get('description', ''),
+                value=data.get('value', 180), level=data.get('level', 1)
+            )
+        elif cls_name == 'Sausage':
+            return Sausage(
+                name=data['name'], description=data.get('description', ''),
+                value=data.get('value', 30), level=data.get('level', 1),
+                nutrition=data.get('nutrition', 60),
+                count=data.get('count', 1),
+                monster_source=data.get('monster_source', 'Generic'),
+                sausage_style=data.get('sausage_style', 'Bratwurst'),
             )
         else:
             # Generic item fallback
