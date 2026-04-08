@@ -262,12 +262,25 @@ def generate_dice_roll_js(dice_rolls):
         'rolls.forEach(function(r,idx){'
         'var val=r[0],dc=r[1],hit=r[2],label=r[3],sides=r[4];'
 
+        # Friendly action labels and colors per roll type
+        'var labelMap={"ATK":"TO HIT","DEF":"TO DODGE","FLEE":"TO FLEE"};'
+        'var labelColorMap={"ATK":"#FF8A65","DEF":"#64B5F6","FLEE":"#FFD54F"};'
+        'var displayLabel=labelMap[label]||label;'
+        'var labelColor=labelColorMap[label]||"#AAA";'
+
         'var targetId=label==="ATK"?"monster_dice":"player_dice";'
         'var container=document.getElementById(targetId);'
         'if(!container)return;'
 
         'var wrap=document.createElement("div");'
         'wrap.style.cssText="text-align:center;";'
+
+        # Top label: action verb (TO HIT / TO DODGE / TO FLEE)
+        'var top=document.createElement("div");'
+        'top.style.cssText="font-size:7px;font-weight:bold;font-family:monospace;'
+        'margin-bottom:1px;letter-spacing:0.5px;color:"+labelColor+";";'
+        'top.textContent=displayLabel;'
+        'wrap.appendChild(top);'
 
         'var sz=28;'
         'var dice=document.createElement("div");'
@@ -285,9 +298,10 @@ def generate_dice_roll_js(dice_rolls):
         'dice.textContent="";'
         'wrap.appendChild(dice);'
 
+        # Bottom label: needed value (e.g. "≥6") so player sees the threshold
         'var dlbl=document.createElement("div");'
-        'dlbl.style.cssText="font-size:7px;color:#777;font-family:monospace;margin-top:1px;";'
-        'dlbl.textContent="d"+sides;'
+        'dlbl.style.cssText="font-size:7px;color:#888;font-family:monospace;margin-top:1px;";'
+        'dlbl.textContent="\\u2265"+dc;'
         'wrap.appendChild(dlbl);'
 
         'container.appendChild(wrap);'

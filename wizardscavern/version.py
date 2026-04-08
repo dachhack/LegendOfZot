@@ -4,7 +4,7 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 47
+BUILD_NUMBER = 48
 CHANGELOG = [
     "Spicy sausages! Fire/Ghost Peppers enable Pepperwurst, Diablo Chorizo, Dragonbreath",
     "Dwarves get +50% nutrition/HP from sausages and find hot peppers in gardens",
