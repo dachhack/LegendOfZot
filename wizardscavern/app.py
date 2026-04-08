@@ -314,12 +314,16 @@ def generate_dice_roll_js(dice_rolls):
 
         # Helper: create and animate a single dice with optional modifier.
         # The dice shows the TOTAL (raw + mod); the bottom label shows the breakdown.
+        # Wraps are absolute-positioned to fill the container so multiple dice
+        # (ATK then DEF in same slot) occupy the SAME spot instead of stacking.
         'function makeDice(containerId,rawVal,mod,winner,labelText,labelColor,sides,delayMs){'
         'var container=document.getElementById(containerId);'
         'if(!container)return;'
 
         'var wrap=document.createElement("div");'
-        'wrap.style.cssText="text-align:center;opacity:0;transition:opacity 0.2s;";'
+        'wrap.style.cssText="position:absolute;left:0;right:0;top:0;bottom:0;'
+        'display:flex;flex-direction:column;align-items:center;justify-content:center;'
+        'opacity:0;transition:opacity 0.2s;";'
 
         # Top label: action verb + modifier badge (e.g., "ATTACK +3")
         'var top=document.createElement("div");'
@@ -384,6 +388,13 @@ def generate_dice_roll_js(dice_rolls):
         'top.textContent=labelText+" CRIT!";'
         'top.style.color="#FFD700";'
         'top.style.textShadow="0 0 6px #FFD700";'
+        # Shake the whole content area on a critical — the big moment
+        'var scr=document.getElementById("content-area");'
+        'if(scr){'
+        'scr.style.animation="none";'
+        'void scr.offsetWidth;'
+        'scr.style.animation="screenShake 0.5s ease-out";'
+        '}'
         '}else if(isFumble){'
         'dice.style.borderColor="#555";'
         'dice.style.color="#888";'
@@ -2320,10 +2331,18 @@ class WizardsCavernApp(toga.App):
     def generate_html(self):
         """
         Generate HTML content for the game display.
-        
+
         This should be your existing render() function logic from cavern12.
         Copy all the HTML generation code here.
         """
+
+        # Low-HP pulse: if player is below 25% max HP, glow red on every panel.
+        low_hp_pulse_style = ""
+        try:
+            if gs.player_character and gs.player_character.health < (gs.player_character.max_health // 4):
+                low_hp_pulse_style = " animation: lowHPPulse 1s ease-in-out infinite;"
+        except Exception:
+            pass
 
         # CREATE ACHIEVEMENT NOTIFICATION HTML - MINIMAL VERSION
         achievement_notifications = ""
@@ -3801,7 +3820,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 12px; color: #64B5F6; margin-top: 2px;">Resist: {", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
                     </div>
-                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
                 </div>
                 """
 
@@ -3812,7 +3831,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'equipped_armor', None)
             )
             player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;">
+                <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;{low_hp_pulse_style}">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -3825,7 +3844,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 9px; color: #FFB74D; margin-top: 2px;">Weak: {", ".join(gs.player_character.elemental_weaknesses)}</div>' if gs.player_character.elemental_weaknesses else ''}
                         </div>
                     </div>
-                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
                 </div>
                 """
 
@@ -3908,7 +3927,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 1px;">{", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
                     </div>
-                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
                 </div>
                 """
 
@@ -3923,7 +3942,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'equipped_armor', None)
             )
             player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;">
+                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -3936,7 +3955,7 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 8px; color: #FDD835; margin-top: 1px;">{", ".join(gs.player_character.status_effects.keys())}</div>' if gs.player_character.status_effects else ''}
                         </div>
                     </div>
-                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
                 </div>
                 """
 
@@ -3991,7 +4010,7 @@ class WizardsCavernApp(toga.App):
                             {dmg_text}
                         </div>
                     </div>
-                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
                 </div>
                 """
 
@@ -4003,7 +4022,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'equipped_armor', None)
             )
             player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;">
+                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -4013,7 +4032,7 @@ class WizardsCavernApp(toga.App):
                             <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
                         </div>
                     </div>
-                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
                 </div>
                 """
 
@@ -4065,7 +4084,7 @@ class WizardsCavernApp(toga.App):
                             <div style="font-size: 12px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=15)}</div>
                         </div>
                     </div>
-                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                    <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
                 </div>
                 """
 
@@ -4076,7 +4095,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'equipped_armor', None)
             )
             player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;">
+                <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;{low_hp_pulse_style}">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
@@ -4086,7 +4105,7 @@ class WizardsCavernApp(toga.App):
                             <div style="font-size: 12px; color: #FFD700;">Escaped combat!</div>
                         </div>
                     </div>
-                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);"></div>
+                    <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:60px;height:52px;"></div>
                 </div>
                 """
 
@@ -5818,6 +5837,31 @@ class WizardsCavernApp(toga.App):
                     45% {{ transform: translateX(-4px); }}
                     60% {{ transform: translateX(3px); }}
                     75% {{ transform: translateX(-2px); }}
+                }}
+
+                /* Full screen shake on CRIT — bigger amplitude, diagonal travel */
+                @keyframes screenShake {{
+                    0%, 100% {{ transform: translate(0, 0); }}
+                    10% {{ transform: translate(-7px, -3px); }}
+                    20% {{ transform: translate(7px, 3px); }}
+                    30% {{ transform: translate(-6px, 2px); }}
+                    40% {{ transform: translate(6px, -2px); }}
+                    50% {{ transform: translate(-4px, 1px); }}
+                    60% {{ transform: translate(4px, -1px); }}
+                    70% {{ transform: translate(-2px, 0); }}
+                    80% {{ transform: translate(2px, 0); }}
+                }}
+
+                /* Low-HP pulse for the player panel: red heartbeat warning */
+                @keyframes lowHPPulse {{
+                    0%, 100% {{
+                        box-shadow: 0 0 4px rgba(255, 82, 82, 0.3);
+                        border-color: #8a3a3a;
+                    }}
+                    50% {{
+                        box-shadow: 0 0 18px rgba(255, 82, 82, 0.85), 0 0 6px rgba(255, 82, 82, 0.6) inset;
+                        border-color: #FF5252;
+                    }}
                 }}
 
                 /* Critical hit burst on a winning nat-max dice */
