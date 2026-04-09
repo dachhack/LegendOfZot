@@ -386,7 +386,26 @@ def generate_spell_cast_js(spell):
         '},' + tint_duration + ');'
         'setTimeout(function(){if(tint.parentNode)tint.parentNode.removeChild(tint);},800);'
 
-        '})();</script>'
+        # Layer 3b: L4+ screen distortion via CSS filters (brief, dramatic)
+        + (
+        'var ca=document.getElementById("content-area");'
+        'if(ca&&' + str(lvl) + '>=4){'
+        'setTimeout(function(){'
+        'ca.style.transition="filter 0.1s";'
+        + {
+            'Earth': 'ca.style.filter="blur(3px)";',                     # earthquake blur
+            'Darkness': 'ca.style.filter="invert(1) brightness(0.8)";',  # void flash
+            'Shadow': 'ca.style.filter="invert(1) brightness(0.8)";',
+            'Psionic': 'ca.style.filter="hue-rotate(180deg)";',           # psychedelic
+            'Lightning': 'ca.style.filter="brightness(2)";',              # white-out
+            'Wind': 'ca.style.filter="brightness(2)";',
+        }.get(dtype, 'ca.style.filter="saturate(2)";')                    # default: oversaturate
+        + 'setTimeout(function(){ca.style.filter="none";},200);'
+        '},300);}'
+        if lvl >= 4 else ''
+        )
+
+        + '})();</script>'
     )
 
 
@@ -475,6 +494,7 @@ def generate_spell_particles_js(spell):
         'var count=' + str(count) + ';'
         'var spd=' + str(speed) + ';'
         'var sty="' + style + '";'
+        'var elem="' + dtype + '";'
         'var szMin=' + str(sz_min) + ',szMax=' + str(sz_max) + ';'
         'var glowMult=' + str(glow_mult) + ';'
         'var lifeBonus=' + str(life_bonus) + ';'
@@ -501,7 +521,17 @@ def generate_spell_particles_js(spell):
         'else{vx=Math.cos(angle)*v;vy=Math.sin(angle)*v;}'
 
         'var grav=(sty==="splash"||sty==="shatter")?0.15:0;'
-        'particles.push({x:px,y:py,ox:cx,oy:cy,vx:vx,vy:vy,sz:sz,life:0,max:22+lifeBonus+Math.floor(Math.random()*20),grav:grav});'
+        # Generate random crystal vertices for ice/earth (4-6 pointed shards)
+        'var verts=null;'
+        'if(elem==="Ice"||elem==="Earth"){'
+        'var nv=4+Math.floor(Math.random()*3);'
+        'verts=[];'
+        'for(var vi=0;vi<nv;vi++){'
+        'var va=vi/nv*Math.PI*2+Math.random()*0.5;'
+        'var vr=0.5+Math.random()*0.8;'  # random radius multiplier per vertex
+        'verts.push({a:va,r:vr});'
+        '}}'
+        'particles.push({x:px,y:py,ox:cx,oy:cy,vx:vx,vy:vy,sz:sz,life:0,max:22+lifeBonus+Math.floor(Math.random()*20),grav:grav,verts:verts,prevX:px,prevY:py});'
         '}'
 
         # Animate on canvas
@@ -516,36 +546,83 @@ def generate_spell_particles_js(spell):
         'p.vx*=0.97;p.vy+=p.grav;'
         'p.x+=p.vx;p.y+=p.vy;'
         'var alpha=1-p.life/p.max;'
+        'var clr="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha+")";'
         'ctx.shadowBlur=p.sz*3*glowMult;'
         'ctx.shadowColor="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha*0.6+")";'
 
-        'if(sty==="burst"&&(p.life<p.max*0.7)){'
-        # Lightning zig-zag bolt: draw jagged line from origin to current position
-        'ctx.beginPath();'
-        'ctx.moveTo(p.ox,p.oy);'
+        # ===== LIGHTNING: zig-zag bolts =====
+        'if((elem==="Lightning"||elem==="Wind")&&p.life<p.max*0.7){'
+        'ctx.beginPath();ctx.moveTo(p.ox,p.oy);'
         'var dx=p.x-p.ox,dy=p.y-p.oy;'
         'var segs=4+Math.floor(Math.random()*3);'
-        'for(var s=1;s<=segs;s++){'
-        'var t=s/segs;'
-        'var jitter=(1-t)*12*glowMult;'  # more jitter near origin, less at tip
-        'var bx=p.ox+dx*t+(Math.random()-0.5)*jitter;'
-        'var by=p.oy+dy*t+(Math.random()-0.5)*jitter;'
-        'ctx.lineTo(bx,by);'
-        '}'
-        'ctx.strokeStyle="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha+")";'
-        'ctx.lineWidth=p.sz*0.6;'
-        'ctx.stroke();'
-        # Bright core at the tip
+        'for(var s=1;s<=segs;s++){var t=s/segs;var j=(1-t)*12*glowMult;'
+        'ctx.lineTo(p.ox+dx*t+(Math.random()-0.5)*j,p.oy+dy*t+(Math.random()-0.5)*j);}'
+        'ctx.strokeStyle=clr;ctx.lineWidth=p.sz*0.6;ctx.stroke();'
         'ctx.beginPath();ctx.arc(p.x,p.y,p.sz*0.5,0,Math.PI*2);'
-        'ctx.fillStyle="rgba(255,255,255,"+alpha*0.8+")";'
-        'ctx.fill();'
-        '}else{'
-        # Standard glowing circle for all other elements
+        'ctx.fillStyle="rgba(255,255,255,"+alpha*0.8+")";ctx.fill();'
+
+        # ===== FIRE: circle + ember trail =====
+        '}else if(elem==="Fire"||elem==="Demonic"){'
+        'ctx.beginPath();ctx.moveTo(p.prevX,p.prevY);ctx.lineTo(p.x,p.y);'
+        'ctx.strokeStyle="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha*0.4+")";'
+        'ctx.lineWidth=p.sz*0.8;ctx.stroke();'
+        'ctx.beginPath();ctx.arc(p.x,p.y,p.sz,0,Math.PI*2);ctx.fillStyle=clr;ctx.fill();'
+
+        # ===== ICE / EARTH: random crystal/rock shards =====
+        '}else if(p.verts){'
         'ctx.beginPath();'
-        'ctx.arc(p.x,p.y,p.sz,0,Math.PI*2);'
-        'ctx.fillStyle="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha+")";'
-        'ctx.fill();'
+        'for(var vi=0;vi<p.verts.length;vi++){'
+        'var vt=p.verts[vi];var vx2=p.x+Math.cos(vt.a)*p.sz*vt.r;var vy2=p.y+Math.sin(vt.a)*p.sz*vt.r;'
+        'if(vi===0)ctx.moveTo(vx2,vy2);else ctx.lineTo(vx2,vy2);}'
+        'ctx.closePath();ctx.fillStyle=clr;ctx.fill();'
+        'if(elem==="Ice"){ctx.strokeStyle="rgba(255,255,255,"+alpha*0.5+")";ctx.lineWidth=0.5;ctx.stroke();}'
+
+        # ===== HOLY / LIGHT: starburst rays =====
+        '}else if(elem==="Holy"||elem==="Light"){'
+        'var rl=p.sz*1.5;'
+        'ctx.strokeStyle=clr;ctx.lineWidth=1;'
+        'for(var ri=0;ri<4;ri++){var ra=ri*Math.PI/4+p.life*0.1;'
+        'ctx.beginPath();ctx.moveTo(p.x-Math.cos(ra)*rl,p.y-Math.sin(ra)*rl);'
+        'ctx.lineTo(p.x+Math.cos(ra)*rl,p.y+Math.sin(ra)*rl);ctx.stroke();}'
+        'ctx.beginPath();ctx.arc(p.x,p.y,p.sz*0.4,0,Math.PI*2);'
+        'ctx.fillStyle="rgba(255,255,255,"+alpha*0.9+")";ctx.fill();'
+
+        # ===== DARKNESS: void tendril (curved trail) =====
+        '}else if(elem==="Darkness"||elem==="Shadow"){'
+        'ctx.beginPath();ctx.moveTo(p.prevX,p.prevY);'
+        'var cpx=p.prevX+(p.x-p.prevX)*0.5+(Math.random()-0.5)*10;'
+        'var cpy=p.prevY+(p.y-p.prevY)*0.5+(Math.random()-0.5)*10;'
+        'ctx.quadraticCurveTo(cpx,cpy,p.x,p.y);'
+        'ctx.strokeStyle=clr;ctx.lineWidth=p.sz*0.7;ctx.stroke();'
+        'ctx.beginPath();ctx.arc(p.x,p.y,p.sz*0.6,0,Math.PI*2);ctx.fillStyle=clr;ctx.fill();'
+
+        # ===== PSIONIC: expanding ring outlines =====
+        '}else if(elem==="Psionic"){'
+        'var ringR=p.sz+p.life*0.5;'
+        'ctx.beginPath();ctx.arc(p.x,p.y,ringR,0,Math.PI*2);'
+        'ctx.strokeStyle=clr;ctx.lineWidth=1.5;ctx.stroke();'
+
+        # ===== HEALING: plus/cross shapes =====
+        '}else if(elem==="Healing"){'
+        'var cl=p.sz*1.2;'
+        'ctx.strokeStyle=clr;ctx.lineWidth=p.sz*0.5;'
+        'ctx.beginPath();ctx.moveTo(p.x-cl,p.y);ctx.lineTo(p.x+cl,p.y);ctx.stroke();'
+        'ctx.beginPath();ctx.moveTo(p.x,p.y-cl);ctx.lineTo(p.x,p.y+cl);ctx.stroke();'
+
+        # ===== WATER: teardrop trail (like fire but with gravity) =====
+        '}else if(elem==="Water"){'
+        'ctx.beginPath();ctx.moveTo(p.prevX,p.prevY);ctx.lineTo(p.x,p.y);'
+        'ctx.strokeStyle="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha*0.3+")";'
+        'ctx.lineWidth=p.sz;ctx.lineCap="round";ctx.stroke();ctx.lineCap="butt";'
+        'ctx.beginPath();ctx.arc(p.x,p.y,p.sz*0.8,0,Math.PI*2);ctx.fillStyle=clr;ctx.fill();'
+
+        # ===== DEFAULT: standard glowing circle =====
+        '}else{'
+        'ctx.beginPath();ctx.arc(p.x,p.y,p.sz,0,Math.PI*2);ctx.fillStyle=clr;ctx.fill();'
         '}'
+
+        # Save previous position for trails, clear shadow
+        'p.prevX=p.x;p.prevY=p.y;'
         'ctx.shadowBlur=0;'
         '}'
         'if(alive>0)requestAnimationFrame(frame);'
