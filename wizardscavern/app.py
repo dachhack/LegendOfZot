@@ -184,8 +184,9 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
             f'showFloat("{monster_canvas_id}_wrap","{bx}","#FFD54F",-20,{MONSTER_DMG_DELAY - 150});'
         )
     if m_text:
-        # Shake the monster panel exactly when the damage number lands
-        float_calls.append(f'shakePanel("monster_panel",{MONSTER_DMG_DELAY});')
+        # Shake the monster panel only on actual damage (not status effects)
+        if monster_dmg > 0:
+            float_calls.append(f'shakePanel("monster_panel",{MONSTER_DMG_DELAY});')
         float_calls.append(
             f'showFloat("{monster_canvas_id}_wrap","{m_text}","{m_color}",0,{MONSTER_DMG_DELAY});'
         )
@@ -195,8 +196,9 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
             f'showFloat("player_sprite_wrap","{bx}","#FFD54F",-20,{PLAYER_DMG_DELAY - 150});'
         )
     if p_text:
-        # Shake the player panel exactly when the damage number lands
-        float_calls.append(f'shakePanel("player_panel",{PLAYER_DMG_DELAY});')
+        # Shake the player panel only on actual damage (not blocks/heals/status)
+        if player_dmg > 0:
+            float_calls.append(f'shakePanel("player_panel",{PLAYER_DMG_DELAY});')
         float_calls.append(
             f'showFloat("player_sprite_wrap","{p_text}","{p_color}",0,{PLAYER_DMG_DELAY});'
         )
@@ -323,12 +325,12 @@ def generate_dice_roll_js(dice_rolls):
         'var wrap=document.createElement("div");'
         'wrap.style.cssText="position:absolute;left:0;right:0;top:0;bottom:0;'
         'display:flex;flex-direction:column;align-items:center;justify-content:center;'
-        'opacity:0;transition:opacity 0.2s;";'
+        'opacity:0;transition:opacity 0.2s;overflow:visible;";'
 
         # Top label: action verb + modifier badge (e.g., "ATTACK +3")
         'var top=document.createElement("div");'
         'top.style.cssText="font-size:7px;font-weight:bold;font-family:monospace;'
-        'margin-bottom:1px;letter-spacing:0.5px;color:"+labelColor+";";'
+        'margin-bottom:1px;letter-spacing:0.5px;white-space:nowrap;color:"+labelColor+";";'
         'top.textContent=mod>0?(labelText+" +"+mod):labelText;'
         'wrap.appendChild(top);'
 
