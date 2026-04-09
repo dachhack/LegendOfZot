@@ -101,7 +101,7 @@ def mana_bar(current, maximum, width=20):
 
 def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_blocked=False,
                               player_status=None, monster_status=None, player_heal=0,
-                              monster_badge=None, player_badge=None):
+                              monster_badge=None, player_badge=None, spell_element=None):
     """Generate floating damage/heal/status text above combat sprites.
 
     Injects absolutely-positioned divs into the sprite wrapper elements.
@@ -134,7 +134,8 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
     # --- Determine monster text / color ---
     if monster_dmg > 0:
         m_text = f"-{monster_dmg}"
-        m_color = "#FF5252"
+        # Use element color if a spell was cast, otherwise standard red
+        m_color = ELEMENT_COLORS.get(spell_element, "#FF5252") if spell_element else "#FF5252"
     elif monster_status:
         m_text = str(monster_status).replace('"', '').replace("'", '').replace('<', '').replace('>', '')[:12]
         m_color = "#FFB74D"
@@ -270,6 +271,105 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
         + '})();</script>'
     )
     return js
+
+
+# ============================================================
+# ELEMENT COLOR MAP — used for spell damage floats, banners, and screen tints
+# ============================================================
+ELEMENT_COLORS = {
+    'Fire': '#FF6B35',
+    'Ice': '#4FC3F7',
+    'Lightning': '#FFD740',
+    'Wind': '#FFD740',       # same as Lightning (air element)
+    'Water': '#29B6F6',
+    'Earth': '#8D6E63',
+    'Light': '#FFF9C4',
+    'Holy': '#FFD700',
+    'Darkness': '#CE93D8',
+    'Shadow': '#CE93D8',
+    'Psionic': '#E040FB',
+    'Demonic': '#FF1744',
+    'Physical': '#FF5252',
+    'Healing': '#69F0AE',
+}
+
+# Element screen tint colors (used for brief flash overlay)
+ELEMENT_TINTS = {
+    'Fire': 'rgba(255,107,53,0.25)',
+    'Ice': 'rgba(79,195,247,0.25)',
+    'Lightning': 'rgba(255,255,255,0.4)',   # bright white flash
+    'Wind': 'rgba(255,215,64,0.2)',
+    'Water': 'rgba(41,182,246,0.2)',
+    'Earth': 'rgba(141,110,99,0.2)',
+    'Light': 'rgba(255,249,196,0.3)',
+    'Holy': 'rgba(255,215,0,0.3)',
+    'Darkness': 'rgba(206,147,216,0.25)',
+    'Shadow': 'rgba(206,147,216,0.25)',
+    'Psionic': 'rgba(224,64,251,0.25)',
+    'Demonic': 'rgba(255,23,68,0.25)',
+    'Healing': 'rgba(105,240,174,0.2)',
+}
+
+
+def generate_spell_cast_js(spell):
+    """Generate spell casting animation: banner + screen tint.
+
+    Plays BEFORE the damage/healing float sequence.
+
+    Layer 2 — Banner: the spell name flashes across the combat area in the
+    element's color with letter-spacing and glow. Fades in, holds, fades out.
+
+    Layer 3 — Screen tint: a brief color wash over #content-area matching
+    the spell's element. Lightning is a sharp white flash, fire is a warm
+    orange wash, ice is cool blue, etc.
+    """
+    if not spell:
+        return ""
+    name = spell.name.replace('"', '').replace("'", '').replace('<', '').replace('>', '')
+    dtype = getattr(spell, 'damage_type', 'Physical')
+    if spell.spell_type == 'healing':
+        dtype = 'Healing'
+    color = ELEMENT_COLORS.get(dtype, '#FFFFFF')
+    tint = ELEMENT_TINTS.get(dtype, 'rgba(255,255,255,0.15)')
+    # Lightning gets a shorter, sharper flash
+    tint_duration = '120' if dtype in ('Lightning', 'Wind') else '400'
+
+    return (
+        '<script>(function(){'
+
+        # Layer 2: Spell name banner
+        'var bn=document.createElement("div");'
+        'bn.style.cssText="position:fixed;top:38%;left:50%;transform:translate(-50%,-50%) scale(0.7);'
+        'z-index:99999;text-align:center;pointer-events:none;opacity:0;'
+        'font-family:monospace;font-size:18px;font-weight:bold;letter-spacing:6px;'
+        'text-transform:uppercase;'
+        'color:' + color + ';'
+        'text-shadow:0 0 12px ' + color + ',0 0 24px ' + color + ',0 0 4px #000;";'
+        'bn.textContent="' + name + '";'
+        'document.body.appendChild(bn);'
+        # Animate: scale up + fade in, hold, fade out
+        'bn.style.transition="opacity 0.3s ease-out,transform 0.3s ease-out";'
+        'setTimeout(function(){bn.style.opacity="1";bn.style.transform="translate(-50%,-50%) scale(1)";},50);'
+        'setTimeout(function(){'
+        'bn.style.transition="opacity 0.4s ease-in,transform 0.4s ease-in";'
+        'bn.style.opacity="0";'
+        'bn.style.transform="translate(-50%,-50%) scale(1.1) translateY(-10px)";'
+        '},700);'
+        'setTimeout(function(){if(bn.parentNode)bn.parentNode.removeChild(bn);},1100);'
+
+        # Layer 3: Screen tint flash
+        'var tint=document.createElement("div");'
+        'tint.style.cssText="position:fixed;top:0;left:0;right:0;bottom:0;'
+        'z-index:99998;pointer-events:none;'
+        'background:' + tint + ';opacity:0;transition:opacity 0.15s ease-out;";'
+        'document.body.appendChild(tint);'
+        'setTimeout(function(){tint.style.opacity="1";},100);'
+        'setTimeout(function(){tint.style.transition="opacity 0.3s ease-in";tint.style.opacity="0";'
+        '},' + tint_duration + ');'
+        'setTimeout(function(){if(tint.parentNode)tint.parentNode.removeChild(tint);},800);'
+
+        '})();</script>'
+    )
 
 
 def generate_dice_roll_js(dice_rolls):
@@ -2370,6 +2470,14 @@ class WizardsCavernApp(toga.App):
         else:
             _p_display_hp = gs.player_character.health if gs.player_character else 0
 
+        # Spell element for coloring damage floats and triggering spell animations
+        _spell = getattr(gs, 'last_spell_cast', None)
+        _spell_element = None
+        if _spell:
+            _spell_element = getattr(_spell, 'damage_type', None)
+            if getattr(_spell, 'spell_type', '') == 'healing':
+                _spell_element = 'Healing'
+
         # CREATE ACHIEVEMENT NOTIFICATION HTML - MINIMAL VERSION
         achievement_notifications = ""
         if gs.newly_unlocked_achievements:
@@ -3919,7 +4027,7 @@ class WizardsCavernApp(toga.App):
                     </div>
 
                     <div class="room-panel" style="width: 100%;">{spells_html}</div>
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge)}
+                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
 
                 </div>
                 """
@@ -4006,7 +4114,7 @@ class WizardsCavernApp(toga.App):
                             {player_combat_html}
                         </div>
                     </div>
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge)}
+                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
 
                 </div>
                 """
@@ -4075,7 +4183,7 @@ class WizardsCavernApp(toga.App):
                             {player_combat_html}
                         </div>
                     </div>
-                    {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge)}
+                    {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
                 </div>
                 """
             gs.monster_defeated_anim = victory_name
@@ -4150,7 +4258,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
 
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge)}
+                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
 
                 </div>
                 """
@@ -5939,6 +6047,7 @@ class WizardsCavernApp(toga.App):
                 // Call on page load
                 window.addEventListener('load', updateLog);
             </script>
+            {generate_spell_cast_js(gs.last_spell_cast)}
             {generate_dice_roll_js(gs.last_dice_rolls)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
         </body>
@@ -5947,6 +6056,7 @@ class WizardsCavernApp(toga.App):
         # Clear one-shot animation flags after rendering
         gs.monster_defeated_anim = None
         gs.last_dice_rolls = []
+        gs.last_spell_cast = None
         return result
     
 

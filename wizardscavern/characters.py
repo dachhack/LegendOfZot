@@ -1270,6 +1270,7 @@ class Character:
             return False
 
         self.mana -= actual_cost
+        gs.last_spell_cast = spell_to_cast  # Track for spell animation rendering
         add_log(f"{COLOR_CYAN}You cast {spell_to_cast.name}! Mana remaining: {self.mana}.{COLOR_RESET}")
 
         if spell_to_cast.spell_type == 'healing':

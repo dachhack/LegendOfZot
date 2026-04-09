@@ -347,6 +347,7 @@ last_player_damage_badge = None   # Badge on damage dealt TO player
 # so the bar doesn't drop until after the damage animation plays.
 pre_round_monster_hp = None       # Monster HP before this combat round
 pre_round_player_hp = None        # Player HP before this combat round
+last_spell_cast = None            # Spell object from the last cast (for animation rendering)
 
 # ============================================================================
 # MONSTER DEFEAT ANIMATION STATE
