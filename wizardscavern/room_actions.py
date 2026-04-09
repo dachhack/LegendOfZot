@@ -149,11 +149,11 @@ def process_altar_action(player_character, my_tower, cmd):
             'title': 'The Cleanser',
             'symbol': 'O',
             'color': '#4B0082',
-            'item_type': 'cursed',  # Special: only accepts cursed items
+            'item_type': 'sealed',  # Special: only accepts sealed items
             'item_label': 'Cursed items',
             'altar_desc': 'There is no altar. Only absence. A space where something should be, but isn\'t.',
-            'pleased_msg': 'The Void consumes the curse, releasing pure energy...',
-            'displeased_msg': 'The Void rejects the uncursed. It hungers only for corruption.',
+            'pleased_msg': 'The Void consumes the seal, releasing pure energy...',
+            'displeased_msg': 'The Void rejects the unsealed. It hungers only for corruption.',
         },
         8: {
             'name': 'Malachar, the Relentless',
@@ -188,8 +188,8 @@ def process_altar_action(player_character, my_tower, cmd):
         item_type = god_info['item_type']
         if item_type is None:
             return True  # Loki accepts anything
-        if item_type == 'cursed':
-            return getattr(item, 'is_cursed', False)
+        if item_type == 'sealed':
+            return getattr(item, 'is_sealed', False)
         return isinstance(item, item_type)
 
     def _apply_pleased_reward(player_character, item, god_id, god_info, floor_level):
@@ -314,8 +314,8 @@ def process_altar_action(player_character, my_tower, cmd):
 
         elif god_id == 7:
             # The Void (Cursed items) - cleanses curse, grants reward
-            if getattr(item, 'is_cursed', False):
-                item.is_cursed = False
+            if getattr(item, 'is_sealed', False):
+                item.is_sealed = False
                 add_log(f"{COLOR_CYAN}The curse is consumed by The Void!{COLOR_RESET}")
                 add_log(f"{COLOR_GREEN}{item.name} is now purified!{COLOR_RESET}")
                 player_character.inventory.add_item(item)
@@ -361,14 +361,14 @@ def process_altar_action(player_character, my_tower, cmd):
         add_log("")
         roll = random.random()
         if roll < 0.50:
-            # Return a cursed weapon or armor
-            cursed_options = [
-                Weapon("Cursed Blade", "A blade that hungers for its wielder.", attack_bonus=max(1, player_character.z), value=10, level=player_character.z, is_cursed=True),
-                Armor("Cursed Mail", "Armor that weakens its wearer.", defense_bonus=max(1, player_character.z // 2), value=10, level=player_character.z, is_cursed=True),
+            # Return a sealed weapon or armor (divine punishment — cannot be upgraded)
+            sealed_options = [
+                Weapon("Sealed Blade", "A blade bound by dark magic.", attack_bonus=max(1, player_character.z), value=10, level=player_character.z, is_sealed=True),
+                Armor("Sealed Mail", "Armor locked by a divine seal.", defense_bonus=max(1, player_character.z // 2), value=10, level=player_character.z, is_sealed=True),
             ]
-            cursed_item = random.choice(cursed_options)
-            player_character.inventory.add_item(cursed_item)
-            add_log(f"{COLOR_RED}A {cursed_item.name} materializes in your hands - CURSED!{COLOR_RESET}")
+            sealed_item = random.choice(sealed_options)
+            player_character.inventory.add_item(sealed_item)
+            add_log(f"{COLOR_RED}A {sealed_item.name} materializes in your hands - SEALED!{COLOR_RESET}")
         else:
             # Small gold pittance
             gold = random.randint(5, 20)
@@ -1899,12 +1899,12 @@ def award_tomb_guardian_reward(player_character):
             attack_bonus=base_attack,
             elemental_strength=w_elem,
             level=floor_level,
-            description=f"{w_desc} [CURSED - Cannot be upgraded]",
+            description=f"{w_desc} [SEALED - Cannot be upgraded]",
             value=400 + floor_level * 20,
-            is_cursed=True  # Cannot be upgraded!
+            is_sealed=True  # Cannot be upgraded!
         )
         player_character.inventory.add_item(weapon)
-        add_log(f"{COLOR_PURPLE}Found: {w_name} (Attack +{base_attack}) [CURSED]{COLOR_RESET}")
+        add_log(f"{COLOR_PURPLE}Found: {w_name} (Attack +{base_attack}) [SEALED]{COLOR_RESET}")
         add_log(f"{COLOR_GREY}(Cursed items are powerful but cannot be upgraded){COLOR_RESET}")
         
         # Award Rune of Eternity
@@ -1954,12 +1954,12 @@ def award_tomb_guardian_reward(player_character):
                 attack_bonus=base_attack,
                 elemental_strength=w_elem,
                 level=floor_level,
-                description=f"{w_desc} [CURSED - Cannot be upgraded]",
+                description=f"{w_desc} [SEALED - Cannot be upgraded]",
                 value=200 + floor_level * 15,
-                is_cursed=True
+                is_sealed=True
             )
             player_character.inventory.add_item(weapon)
-            add_log(f"{COLOR_PURPLE}Found: {w_name} (Attack +{base_attack}) [CURSED]{COLOR_RESET}")
+            add_log(f"{COLOR_PURPLE}Found: {w_name} (Attack +{base_attack}) [SEALED]{COLOR_RESET}")
         else:
             # Cursed armor
             cursed_armors = [
@@ -1978,12 +1978,12 @@ def award_tomb_guardian_reward(player_character):
                 defense_bonus=base_defense,
                 elemental_strength=a_elem,
                 level=floor_level,
-                description=f"{a_desc} [CURSED - Cannot be upgraded]",
+                description=f"{a_desc} [SEALED - Cannot be upgraded]",
                 value=200 + floor_level * 15,
-                is_cursed=True
+                is_sealed=True
             )
             player_character.inventory.add_item(armor)
-            add_log(f"{COLOR_PURPLE}Found: {a_name} (Defense +{base_defense}) [CURSED]{COLOR_RESET}")
+            add_log(f"{COLOR_PURPLE}Found: {a_name} (Defense +{base_defense}) [SEALED]{COLOR_RESET}")
         
         add_log(f"{COLOR_GREY}(Cursed items are powerful but cannot be upgraded){COLOR_RESET}")
     

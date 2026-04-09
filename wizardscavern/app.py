@@ -4309,8 +4309,8 @@ class WizardsCavernApp(toga.App):
             else:
                 for i, item in enumerate(sacrificeable):
                     item_str = format_item_for_display(item, gs.player_character, show_price=False)
-                    cursed_tag = " <span style='color:#F44336;'>[CURSED]</span>" if getattr(item, 'is_cursed', False) else ""
-                    inv_html += f"<div style='margin:2px 0; font-size:12px;'><b>{i+1}.</b> {item_str}{cursed_tag}</div>"
+                    sealed_tag = " <span style='color:#E040FB;'>[SEALED]</span>" if getattr(item, 'is_sealed', False) else ""
+                    inv_html += f"<div style='margin:2px 0; font-size:12px;'><b>{i+1}.</b> {item_str}{sealed_tag}</div>"
 
             devotion_hint = ""
             if not gs.runes_obtained.get('devotion', False) and gs.player_character is not None:

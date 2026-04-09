@@ -1471,13 +1471,13 @@ class Weapon(Item):
     BASE_DURABILITY = {0: 40, 1: 60, 2: 84, 3: 112, 4: 144, 5: 180, 6: 220, 7: 264, 8: 312, 9: 364, 10: 420}
     UPGRADE_DURABILITY_BONUS = 20  # Each upgrade adds 20 durability
     
-    def __init__(self, name, description="", attack_bonus=0, value=0, level=0, upgrade_level=0, elemental_strength=["None"], upgrade_limit=True, is_cursed=False, durability=None, max_durability=None):
+    def __init__(self, name, description="", attack_bonus=0, value=0, level=0, upgrade_level=0, elemental_strength=["None"], upgrade_limit=True, is_sealed=False, durability=None, max_durability=None):
         super().__init__(name, description, value, level)
         self._base_attack_bonus = attack_bonus
         self.upgrade_limit = upgrade_limit
         self.upgrade_level = upgrade_level
         self.elemental_strength = elemental_strength
-        self.is_cursed = is_cursed  # Cursed weapons cannot be upgraded
+        self.is_sealed = is_sealed  # Sealed weapons cannot be upgraded
         
         # Durability system - higher level/upgrade = more durable
         base_dur = self.BASE_DURABILITY.get(min(level, 10), 420)
@@ -1575,27 +1575,27 @@ class Weapon(Item):
         if self.upgrade_level > 0:
             full_name += f" (+{self.upgrade_level})"
         
-        if self.is_cursed:
-            full_name += " [CURSED]"
+        if self.is_sealed:
+            full_name += " [SEALED]"
         
         return full_name
 
     def __repr__(self):
-        cursed_str = ", CURSED" if self.is_cursed else ""
-        return f"Weapon(name='{self.name}', attack_bonus={self.attack_bonus}, value={self.value}, level={self.level}, upgrade_level={self.upgrade_level}{cursed_str})"
+        sealed_str = ", SEALED" if self.is_sealed else ""
+        return f"Weapon(name='{self.name}', attack_bonus={self.attack_bonus}, value={self.value}, level={self.level}, upgrade_level={self.upgrade_level}{sealed_str})"
 
 class Armor(Item):
     # Base durability for armor by level
     BASE_DURABILITY = {0: 50, 1: 76, 2: 106, 3: 140, 4: 180, 5: 224, 6: 272, 7: 324, 8: 380, 9: 440, 10: 504}
     UPGRADE_DURABILITY_BONUS = 24  # Each upgrade adds 24 durability (armor is tougher)
     
-    def __init__(self, name, description="", defense_bonus=0, value=0, level=0, upgrade_level=0, elemental_strength=["None"], upgrade_limit=True, is_cursed=False, durability=None, max_durability=None):
+    def __init__(self, name, description="", defense_bonus=0, value=0, level=0, upgrade_level=0, elemental_strength=["None"], upgrade_limit=True, is_sealed=False, durability=None, max_durability=None):
         super().__init__(name, description, value, level)
         self._base_defense_bonus = defense_bonus
         self.upgrade_level = upgrade_level
         self.upgrade_limit = upgrade_limit
         self.elemental_strength = elemental_strength
-        self.is_cursed = is_cursed  # Cursed armor cannot be upgraded
+        self.is_sealed = is_sealed  # Sealed armor cannot be upgraded
         
         # Durability system - higher level/upgrade = more durable
         base_dur = self.BASE_DURABILITY.get(min(level, 10), 504)
@@ -1693,14 +1693,14 @@ class Armor(Item):
         if self.upgrade_level > 0:
             full_name += f" (+{self.upgrade_level})"
         
-        if self.is_cursed:
-            full_name += " [CURSED]"
+        if self.is_sealed:
+            full_name += " [SEALED]"
         
         return full_name
 
     def __repr__(self):
-        cursed_str = ", CURSED" if self.is_cursed else ""
-        return f"Armor(name='{self.name}', defense_bonus={self.defense_bonus}, value={self.value}, level={self.level}, upgrade_level={self.upgrade_level}{cursed_str})"
+        sealed_str = ", SEALED" if self.is_sealed else ""
+        return f"Armor(name='{self.name}', defense_bonus={self.defense_bonus}, value={self.value}, level={self.level}, upgrade_level={self.upgrade_level}{sealed_str})"
 
 class Scroll(Item):
     def __init__(self, name, description="", effect_description="", value=0, level=0,
@@ -1735,7 +1735,7 @@ class Scroll(Item):
             for item in character.inventory.items:
                 if isinstance(item, (Weapon, Armor)):
                     # Skip cursed items - they cannot be upgraded
-                    if getattr(item, 'is_cursed', False):
+                    if getattr(item, 'is_sealed', False):
                         continue
                     # Skip unidentified items - must identify before upgrading
                     if not is_item_identified(item):
@@ -1744,7 +1744,7 @@ class Scroll(Item):
 
             if not upgradable_items:
                 add_log("You have no weapons or armor that can be upgraded.")
-                add_log(f"{COLOR_GREY}(Cursed items cannot be upgraded. Unidentified items must be identified first.){COLOR_RESET}")
+                add_log(f"{COLOR_GREY}(Sealed items cannot be upgraded. Unidentified items must be identified first.){COLOR_RESET}")
                 return False
 
             add_log("\nSelect an item to upgrade (or 'c' to cancel):")

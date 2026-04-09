@@ -566,8 +566,8 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 sorted_items = get_sorted_inventory(player_character.inventory)
                 for i, item in enumerate(sorted_items):
                     if isinstance(item, (Weapon, Armor)) and item.durability < item.max_durability:
-                        if getattr(item, 'is_cursed', False):
-                            damaged_items.append(f"{i+1}. {item.name} (CURSED - cannot repair)")
+                        if getattr(item, 'is_sealed', False):
+                            damaged_items.append(f"{i+1}. {item.name} (SEALED - cannot repair)")
                         else:
                             cost = get_repair_cost(item)
                             damaged_items.append(f"{i+1}. {item.name} ({item.durability}/{item.max_durability}) - {cost}g")
@@ -587,7 +587,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 items_to_repair = []
                 for item in sorted_items:
                     if isinstance(item, (Weapon, Armor)) and item.durability < item.max_durability:
-                        if getattr(item, 'is_cursed', False):
+                        if getattr(item, 'is_sealed', False):
                             continue  # Skip cursed items
                         items_to_repair.append(item)
                         total_cost += get_repair_cost(item)
@@ -614,7 +614,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
 
                 if not isinstance(item, (Weapon, Armor)):
                     set_shop_msg("That item cannot be repaired.")
-                elif getattr(item, 'is_cursed', False):
+                elif getattr(item, 'is_sealed', False):
                     set_shop_msg(f"{item.name} is cursed and cannot be repaired!")
                 elif item.durability >= item.max_durability:
                     set_shop_msg(f"{item.name} doesn't need repair.")
