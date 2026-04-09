@@ -4,7 +4,7 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 75
+BUILD_NUMBER = 76
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
     "INITIATIVE SYSTEM! d20+DEX vs d20+level — monster can strike first now",

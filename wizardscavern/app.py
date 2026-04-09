@@ -2758,14 +2758,6 @@ class WizardsCavernApp(toga.App):
         Copy all the HTML generation code here.
         """
 
-        # Low-HP pulse: if player is below 25% max HP, glow red on every panel.
-        low_hp_pulse_style = ""
-        try:
-            if gs.player_character and gs.player_character.health < (gs.player_character.max_health // 4):
-                low_hp_pulse_style = " animation: lowHPPulse 1s ease-in-out infinite;"
-        except Exception:
-            pass
-
         # Pre-round HP: in combat views, show health bars at their pre-damage values
         # so the bar doesn't drop until the damage animation plays.
         # Falls back to current HP if no snapshot exists (non-combat views).
@@ -2778,6 +2770,15 @@ class WizardsCavernApp(toga.App):
             _p_display_hp = gs.pre_round_player_hp
         else:
             _p_display_hp = gs.player_character.health if gs.player_character else 0
+
+        # Low-HP pulse uses display HP (not current) so it doesn't spoil the animation
+        low_hp_pulse_style = ""
+        try:
+            hp_for_pulse = _p_display_hp if gs.prompt_cntl in _combat_views else (gs.player_character.health if gs.player_character else 100)
+            if gs.player_character and hp_for_pulse < (gs.player_character.max_health // 4):
+                low_hp_pulse_style = " animation: lowHPPulse 1s ease-in-out infinite;"
+        except Exception:
+            pass
 
         # Spell element for coloring damage floats and triggering spell animations.
         _spell = getattr(gs, 'last_spell_cast', None)
