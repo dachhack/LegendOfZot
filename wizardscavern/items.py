@@ -1471,13 +1471,16 @@ class Weapon(Item):
     BASE_DURABILITY = {0: 40, 1: 60, 2: 84, 3: 112, 4: 144, 5: 180, 6: 220, 7: 264, 8: 312, 9: 364, 10: 420}
     UPGRADE_DURABILITY_BONUS = 20  # Each upgrade adds 20 durability
     
-    def __init__(self, name, description="", attack_bonus=0, value=0, level=0, upgrade_level=0, elemental_strength=["None"], upgrade_limit=True, is_sealed=False, durability=None, max_durability=None):
+    def __init__(self, name, description="", attack_bonus=0, value=0, level=0, upgrade_level=0, elemental_strength=["None"], upgrade_limit=True, is_sealed=False, durability=None, max_durability=None,
+                 buc_status='uncursed', buc_known=False):
         super().__init__(name, description, value, level)
         self._base_attack_bonus = attack_bonus
         self.upgrade_limit = upgrade_limit
         self.upgrade_level = upgrade_level
         self.elemental_strength = elemental_strength
         self.is_sealed = is_sealed  # Sealed weapons cannot be upgraded
+        self.buc_status = buc_status   # 'blessed' | 'uncursed' | 'cursed'
+        self.buc_known = buc_known     # True once player has detected the BUC status
         
         # Durability system - higher level/upgrade = more durable
         base_dur = self.BASE_DURABILITY.get(min(level, 10), 420)
@@ -1577,25 +1580,36 @@ class Weapon(Item):
         
         if self.is_sealed:
             full_name += " [SEALED]"
-        
+
+        # BUC tag — only shown if player has detected it
+        if self.buc_known:
+            if self.buc_status == 'blessed':
+                full_name += " [BLESSED]"
+            elif self.buc_status == 'cursed':
+                full_name += " [CURSED]"
+
         return full_name
 
     def __repr__(self):
         sealed_str = ", SEALED" if self.is_sealed else ""
-        return f"Weapon(name='{self.name}', attack_bonus={self.attack_bonus}, value={self.value}, level={self.level}, upgrade_level={self.upgrade_level}{sealed_str})"
+        buc_str = f", buc={self.buc_status}" if self.buc_status != 'uncursed' else ""
+        return f"Weapon(name='{self.name}', attack_bonus={self.attack_bonus}, value={self.value}, level={self.level}, upgrade_level={self.upgrade_level}{sealed_str}{buc_str})"
 
 class Armor(Item):
     # Base durability for armor by level
     BASE_DURABILITY = {0: 50, 1: 76, 2: 106, 3: 140, 4: 180, 5: 224, 6: 272, 7: 324, 8: 380, 9: 440, 10: 504}
     UPGRADE_DURABILITY_BONUS = 24  # Each upgrade adds 24 durability (armor is tougher)
     
-    def __init__(self, name, description="", defense_bonus=0, value=0, level=0, upgrade_level=0, elemental_strength=["None"], upgrade_limit=True, is_sealed=False, durability=None, max_durability=None):
+    def __init__(self, name, description="", defense_bonus=0, value=0, level=0, upgrade_level=0, elemental_strength=["None"], upgrade_limit=True, is_sealed=False, durability=None, max_durability=None,
+                 buc_status='uncursed', buc_known=False):
         super().__init__(name, description, value, level)
         self._base_defense_bonus = defense_bonus
         self.upgrade_level = upgrade_level
         self.upgrade_limit = upgrade_limit
         self.elemental_strength = elemental_strength
         self.is_sealed = is_sealed  # Sealed armor cannot be upgraded
+        self.buc_status = buc_status   # 'blessed' | 'uncursed' | 'cursed'
+        self.buc_known = buc_known     # True once player has detected the BUC status
         
         # Durability system - higher level/upgrade = more durable
         base_dur = self.BASE_DURABILITY.get(min(level, 10), 504)
@@ -1695,12 +1709,20 @@ class Armor(Item):
         
         if self.is_sealed:
             full_name += " [SEALED]"
-        
+
+        # BUC tag — only shown if player has detected it
+        if self.buc_known:
+            if self.buc_status == 'blessed':
+                full_name += " [BLESSED]"
+            elif self.buc_status == 'cursed':
+                full_name += " [CURSED]"
+
         return full_name
 
     def __repr__(self):
         sealed_str = ", SEALED" if self.is_sealed else ""
-        return f"Armor(name='{self.name}', defense_bonus={self.defense_bonus}, value={self.value}, level={self.level}, upgrade_level={self.upgrade_level}{sealed_str})"
+        buc_str = f", buc={self.buc_status}" if self.buc_status != 'uncursed' else ""
+        return f"Armor(name='{self.name}', defense_bonus={self.defense_bonus}, value={self.value}, level={self.level}, upgrade_level={self.upgrade_level}{sealed_str}{buc_str})"
 
 class Scroll(Item):
     def __init__(self, name, description="", effect_description="", value=0, level=0,
@@ -4051,9 +4073,15 @@ def remove_giant_strength_on_expire(character, effect):
 def _create_item_copy(item_obj):
     """Helper function to create a new instance of an item, preserving its specific class and attributes."""
     if isinstance(item_obj, Weapon):
-        return Weapon(item_obj.name, item_obj.description, item_obj._base_attack_bonus, item_obj.value, item_obj.level, item_obj.upgrade_level, elemental_strength=item_obj.elemental_strength, upgrade_limit=item_obj.upgrade_limit)
+        w = Weapon(item_obj.name, item_obj.description, item_obj._base_attack_bonus, item_obj.value, item_obj.level, item_obj.upgrade_level, elemental_strength=item_obj.elemental_strength, upgrade_limit=item_obj.upgrade_limit,
+                   buc_status=getattr(item_obj, 'buc_status', 'uncursed'), buc_known=getattr(item_obj, 'buc_known', False))
+        w.is_sealed = getattr(item_obj, 'is_sealed', False)
+        return w
     elif isinstance(item_obj, Armor):
-        return Armor(item_obj.name, item_obj.description, item_obj._base_defense_bonus, item_obj.value, item_obj.level, item_obj.upgrade_level, elemental_strength=item_obj.elemental_strength, upgrade_limit=item_obj.upgrade_limit)
+        a = Armor(item_obj.name, item_obj.description, item_obj._base_defense_bonus, item_obj.value, item_obj.level, item_obj.upgrade_level, elemental_strength=item_obj.elemental_strength, upgrade_limit=item_obj.upgrade_limit,
+                  buc_status=getattr(item_obj, 'buc_status', 'uncursed'), buc_known=getattr(item_obj, 'buc_known', False))
+        a.is_sealed = getattr(item_obj, 'is_sealed', False)
+        return a
     elif isinstance(item_obj, Potion):
         # Updated for new Potion attributes including count
         return Potion(name=item_obj.name, description=item_obj.description, value=item_obj.value, level=item_obj.level,

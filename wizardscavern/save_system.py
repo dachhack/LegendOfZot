@@ -176,6 +176,8 @@ class SaveSystem:
             data['elemental_strength'] = item.elemental_strength
             data['upgrade_limit'] = item.upgrade_limit
             data['is_sealed'] = getattr(item, 'is_sealed', False)
+            data['buc_status'] = getattr(item, 'buc_status', 'uncursed')
+            data['buc_known'] = getattr(item, 'buc_known', False)
             data['durability'] = getattr(item, 'durability', item.max_durability)
             data['max_durability'] = getattr(item, 'max_durability', 100)
         elif isinstance(item, Armor):
@@ -184,6 +186,8 @@ class SaveSystem:
             data['elemental_strength'] = item.elemental_strength
             data['upgrade_limit'] = item.upgrade_limit
             data['is_sealed'] = getattr(item, 'is_sealed', False)
+            data['buc_status'] = getattr(item, 'buc_status', 'uncursed')
+            data['buc_known'] = getattr(item, 'buc_known', False)
             data['durability'] = getattr(item, 'durability', item.max_durability)
             data['max_durability'] = getattr(item, 'max_durability', 100)
         elif isinstance(item, Potion):
@@ -280,6 +284,8 @@ class SaveSystem:
                 max_durability=data.get('max_durability')
             )
             item.is_sealed = data.get('is_sealed', data.get('is_cursed', False))
+            item.buc_status = data.get('buc_status', 'uncursed')
+            item.buc_known = data.get('buc_known', False)
             return item
         elif cls_name == 'Armor':
             item = Armor(
@@ -292,6 +298,8 @@ class SaveSystem:
                 max_durability=data.get('max_durability')
             )
             item.is_sealed = data.get('is_sealed', data.get('is_cursed', False))
+            item.buc_status = data.get('buc_status', 'uncursed')
+            item.buc_known = data.get('buc_known', False)
             return item
         elif cls_name == 'Potion':
             item = Potion(
