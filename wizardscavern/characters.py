@@ -864,6 +864,11 @@ class Character:
         for effect in self.status_effects.values():
             if effect.effect_type == 'attack_boost':
                 attack_from_stats += effect.magnitude
+        # BUC bonus: blessed weapon +2, cursed weapon -2
+        if self.equipped_weapon and getattr(self.equipped_weapon, 'buc_status', 'uncursed') == 'blessed':
+            attack_from_stats += 2
+        elif self.equipped_weapon and getattr(self.equipped_weapon, 'buc_status', 'uncursed') == 'cursed':
+            attack_from_stats -= 2
         return attack_from_stats
 
     @property
@@ -878,6 +883,11 @@ class Character:
         for effect in self.status_effects.values():
             if effect.effect_type == 'defense_boost':
                 defense_from_stats += effect.magnitude
+        # BUC bonus: blessed armor +2, cursed armor -2
+        if self.equipped_armor and getattr(self.equipped_armor, 'buc_status', 'uncursed') == 'blessed':
+            defense_from_stats += 2
+        elif self.equipped_armor and getattr(self.equipped_armor, 'buc_status', 'uncursed') == 'cursed':
+            defense_from_stats -= 2
         return defense_from_stats
 
     def get_current_floor(self, tower):

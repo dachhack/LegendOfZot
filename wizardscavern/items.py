@@ -173,6 +173,37 @@ def initialize_identification_system():
             gs.item_cryptic_mapping['armor'][armor.name] = armor_names[armor_idx]
             armor_idx += 1
 
+def roll_buc_status(floor_level, source='monster'):
+    """Roll BUC status for a newly created Weapon or Armor.
+
+    source: 'vendor', 'monster', 'chest', or 'tomb' — each has different
+    base rates. Floor level shifts cursed chance up and blessed chance down.
+
+    Returns 'blessed', 'uncursed', or 'cursed'.
+    """
+    # Base rates per source (blessed%, uncursed%, cursed%)
+    bases = {
+        'vendor':  (10, 85,  5),
+        'monster': ( 5, 80, 15),
+        'chest':   (10, 65, 25),
+        'tomb':    ( 5, 40, 55),
+    }
+    base_blessed, _base_uncursed, base_cursed = bases.get(source, (5, 80, 15))
+
+    # Floor scaling: curse grows +0.25%/floor, blessed shrinks -0.06%/floor
+    cursed_pct = base_cursed + floor_level * 0.25
+    blessed_pct = max(1, base_blessed - floor_level * 0.06)
+    uncursed_pct = max(0, 100 - cursed_pct - blessed_pct)
+
+    roll = random.random() * 100
+    if roll < blessed_pct:
+        return 'blessed'
+    elif roll < blessed_pct + uncursed_pct:
+        return 'uncursed'
+    else:
+        return 'cursed'
+
+
 def is_item_identified(item):
     """Check if an item type has been identified"""
     
@@ -186,21 +217,26 @@ def is_item_identified(item):
 def identify_item(item, silent=False):
     """
     Identify an item type. All items of this type become identified.
+    Also reveals BUC status on the specific item instance.
     Returns True if this was a new identification.
     """
-    
-    if item.name in gs.identified_items:
-        return False  # Already identified
-    
-    gs.identified_items.add(item.name)
-    
-    if not silent:
-        add_log(f"{COLOR_CYAN}You have identified: {item.name}!{COLOR_RESET}")
-    
-    # Register in journal now that it's identified
-    register_item_discovery(item)
-    
-    return True
+    new_id = item.name not in gs.identified_items
+
+    if new_id:
+        gs.identified_items.add(item.name)
+        if not silent:
+            add_log(f"{COLOR_CYAN}You have identified: {item.name}!{COLOR_RESET}")
+        # Register in journal now that it's identified
+        register_item_discovery(item)
+
+    # Always reveal BUC status when identifying (even if name was already known)
+    if hasattr(item, 'buc_known') and not item.buc_known:
+        item.buc_known = True
+        if not silent and item.buc_status != 'uncursed':
+            status_color = COLOR_GREEN if item.buc_status == 'blessed' else COLOR_RED
+            add_log(f"{status_color}The {item.name} is {item.buc_status}!{COLOR_RESET}")
+
+    return new_id
 
 def get_item_display_name(item, for_vendor=False):
     """
@@ -1997,6 +2033,22 @@ class Scroll(Item):
             gs.prompt_cntl = 'identify_scroll_mode'
             gs.active_scroll_item = self
             return False  # Don't consume yet - wait for selection
+        elif self.scroll_type == 'remove_curse':
+            # REMOVE CURSE SCROLL — uncurses ALL currently equipped items
+            add_log(f"{COLOR_CYAN}You read the {self.name}!{COLOR_RESET}")
+            add_log(f"{COLOR_CYAN}A warm golden light envelops your gear...{COLOR_RESET}")
+            removed_any = False
+            for equipped in [character.equipped_weapon, character.equipped_armor] + list(character.equipped_accessories):
+                if equipped and getattr(equipped, 'buc_status', 'uncursed') == 'cursed':
+                    equipped.buc_status = 'uncursed'
+                    equipped.buc_known = True
+                    add_log(f"{COLOR_GREEN}The curse on {equipped.name} is lifted!{COLOR_RESET}")
+                    removed_any = True
+            if not removed_any:
+                add_log(f"{COLOR_YELLOW}None of your equipped items were cursed.{COLOR_RESET}")
+            identify_item(self, silent=True)
+            return True  # Consumed
+
         else:
             # Generic scroll behavior
             add_log(f"{character.name} read the {self.name}. Effect: {self.effect_description}")

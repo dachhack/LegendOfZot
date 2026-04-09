@@ -2128,14 +2128,28 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                         return
 
                 if isinstance(item_to_equip, Weapon):
-                    if player_character.equipped_weapon:
-                        add_log(f"Unequipped {player_character.equipped_weapon.name}.")
+                    # BUC curse check: cursed weapon is welded and can't be swapped
+                    old = player_character.equipped_weapon
+                    if old and getattr(old, 'buc_status', 'uncursed') == 'cursed':
+                        old.buc_known = True  # Reveal the curse
+                        add_log(f"{COLOR_RED}The {old.name} is welded to your hand! It's CURSED!{COLOR_RESET}")
+                        add_log(f"{COLOR_YELLOW}You need a Scroll of Remove Curse or altar purification.{COLOR_RESET}")
+                        return
+                    if old:
+                        add_log(f"Unequipped {old.name}.")
                     player_character.equipped_weapon = item_to_equip
                     add_log(f"{COLOR_GREEN}Equipped {item_to_equip.name}!{COLOR_RESET}")
 
                 elif isinstance(item_to_equip, Armor):
-                    if player_character.equipped_armor:
-                        add_log(f"Unequipped {player_character.equipped_armor.name}.")
+                    # BUC curse check: cursed armor is fused and can't be removed
+                    old = player_character.equipped_armor
+                    if old and getattr(old, 'buc_status', 'uncursed') == 'cursed':
+                        old.buc_known = True  # Reveal the curse
+                        add_log(f"{COLOR_RED}The {old.name} is fused to your body! It's CURSED!{COLOR_RESET}")
+                        add_log(f"{COLOR_YELLOW}You need a Scroll of Remove Curse or altar purification.{COLOR_RESET}")
+                        return
+                    if old:
+                        add_log(f"Unequipped {old.name}.")
                     player_character.equipped_armor = item_to_equip
                     add_log(f"{COLOR_GREEN}Equipped {item_to_equip.name}!{COLOR_RESET}")
 

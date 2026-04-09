@@ -1493,6 +1493,14 @@ SCROLL_TEMPLATES = [
         level=0,
         scroll_type='identify'
     ),
+    Scroll(
+        name="Scroll of Remove Curse",
+        description="Holy scripture that glows with warm golden light. Breaks the bonds of cursed equipment.",
+        effect_description="Removes curses from all equipped items.",
+        value=120,
+        level=2,
+        scroll_type='remove_curse'
+    ),
 ]
 
 
