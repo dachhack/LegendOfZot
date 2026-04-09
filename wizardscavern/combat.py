@@ -122,7 +122,7 @@ def process_combat_action(player_character, my_tower, cmd):
     gs.last_monster_damage_badge = None
     gs.last_player_damage_badge = None
     gs.last_spell_cast = None
-    gs.monster_acts_first = False  # Initiative result: does monster swing before player?
+    # DON'T reset monster_acts_first here — it persists from the init roll
     # Snapshot HP BEFORE any damage so the render can show pre-damage bars
     gs.pre_round_monster_hp = gs.active_monster.health if gs.active_monster else None
     gs.pre_round_player_hp = player_character.health
@@ -147,7 +147,21 @@ def process_combat_action(player_character, my_tower, cmd):
             else:
                 add_log(f"A {gs.active_monster.name} (Level {gs.active_monster.level}) appears!")
 
-        # Commands now shown in HTML and placeholder
+        # Roll initiative ONCE at combat start — determines turn order for the fight
+        from .characters import opposed_roll
+        p_init_mod = max(0, (player_character.dexterity - 10) // 3)
+        m_init_mod = max(0, gs.active_monster.level)
+        init_chance = max(0.20, min(0.80, 0.55 + (p_init_mod - m_init_mod) * 0.05))
+        player_goes_first = random.random() < init_chance
+        p_roll, m_roll = opposed_roll(player_goes_first, sides=20, p_mod=p_init_mod, m_mod=m_init_mod)
+        gs.last_dice_rolls.append((p_roll, m_roll, player_goes_first, "INIT", 20, p_init_mod, m_init_mod))
+        gs.monster_acts_first = not player_goes_first
+
+        if player_goes_first:
+            add_log(f"{COLOR_GREEN}You seize the initiative!{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_RED}The {gs.active_monster.name} strikes first!{COLOR_RESET}")
+
         return
 
     # Check if this is a vault defender (special combat)
@@ -348,22 +362,10 @@ def process_combat_action(player_character, my_tower, cmd):
                    for e in player_character.status_effects.values())
 
     # -------------------------------------------------------------------------
-    # INITIATIVE ROLL — who acts first this round?
-    # d20 + DEX mod (player) vs d20 + level (monster). Ties go to player.
+    # INITIATIVE — monster attacks first if they won the init roll at combat start
     # -------------------------------------------------------------------------
-    if cmd in ('a', 'f', 'c') and gs.active_monster and gs.active_monster.is_alive():
-        from .characters import opposed_roll, compute_player_attack_mod
-        p_init_mod = max(0, (player_character.dexterity - 10) // 3)
-        m_init_mod = max(0, gs.active_monster.level)
-        # Use hit probability as a rough guide: faster player = more likely to go first
-        init_chance = max(0.20, min(0.80, 0.55 + (p_init_mod - m_init_mod) * 0.05))
-        player_goes_first = random.random() < init_chance
-        p_roll, m_roll = opposed_roll(player_goes_first, sides=20, p_mod=p_init_mod, m_mod=m_init_mod)
-        gs.last_dice_rolls.append((p_roll, m_roll, player_goes_first, "INIT", 20, p_init_mod, m_init_mod))
-        gs.monster_acts_first = not player_goes_first
-
-        # If monster acts first, execute their attack NOW (before player's action)
-        if gs.monster_acts_first and not is_paralyzed:
+    if gs.monster_acts_first and cmd in ('a', 'f', 'c') and not is_paralyzed:
+        if gs.active_monster and gs.active_monster.is_alive():
             monster_frozen = any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values())
             if monster_frozen:
                 add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time!{COLOR_RESET}")
