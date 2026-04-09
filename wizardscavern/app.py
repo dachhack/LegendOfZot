@@ -4310,7 +4310,13 @@ class WizardsCavernApp(toga.App):
                 for i, item in enumerate(sacrificeable):
                     item_str = format_item_for_display(item, gs.player_character, show_price=False)
                     sealed_tag = " <span style='color:#E040FB;'>[SEALED]</span>" if getattr(item, 'is_sealed', False) else ""
-                    inv_html += f"<div style='margin:2px 0; font-size:12px;'><b>{i+1}.</b> {item_str}{sealed_tag}</div>"
+                    buc_tag = ""
+                    if getattr(item, 'buc_known', False):
+                        if item.buc_status == 'blessed':
+                            buc_tag = " <span style='color:#FFD700;'>[BLESSED]</span>"
+                        elif item.buc_status == 'cursed':
+                            buc_tag = " <span style='color:#F44336;'>[CURSED]</span>"
+                    inv_html += f"<div style='margin:2px 0; font-size:12px;'><b>{i+1}.</b> {item_str}{sealed_tag}{buc_tag}</div>"
 
             devotion_hint = ""
             if not gs.runes_obtained.get('devotion', False) and gs.player_character is not None:
@@ -4356,7 +4362,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
                 """
-            current_commands_text = "s# = sacrifice | i = inventory | x = exit"
+            current_commands_text = "s# = sacrifice | d = detect | b = bless | u = purify | i = inventory | x = exit"
 
         elif gs.prompt_cntl == "pool_mode":
             # POOL VIEW - Simplified: Map | Pool Info
@@ -5609,7 +5615,7 @@ class WizardsCavernApp(toga.App):
                     current_commands_text += f" | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "altar_mode":
-                current_commands_text = "s# = sacrifice | i = inventory | x = exit"
+                current_commands_text = "s# = sacrifice | d = detect | b = bless | u = purify | i = inventory | x = exit"
             elif gs.prompt_cntl == "warp_mode":
                 current_commands_text = "y = resist | n = enter"
             elif gs.prompt_cntl == "flare_direction_mode":

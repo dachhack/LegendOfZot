@@ -487,6 +487,81 @@ def process_altar_action(player_character, my_tower, cmd):
         return
 
     # -------------------------------------------------------------------------
+    # -------------------------------------------------------------------------
+    # BUC ALTAR ACTIONS: Detect, Bless, Purify
+    # -------------------------------------------------------------------------
+    if cmd == 'd':
+        # DETECT BUC — reveals BUC status of all equipped items
+        equipped = [('weapon', player_character.equipped_weapon),
+                    ('armor', player_character.equipped_armor)]
+        equipped += [(f'acc {i+1}', acc) for i, acc in enumerate(player_character.equipped_accessories) if acc]
+        revealed_any = False
+        for slot_name, item in equipped:
+            if item and hasattr(item, 'buc_known') and not item.buc_known:
+                item.buc_known = True
+                revealed_any = True
+                if item.buc_status == 'blessed':
+                    add_log(f"{COLOR_GREEN}Your {slot_name} ({item.name}) glows BLUE — it is blessed!{COLOR_RESET}")
+                elif item.buc_status == 'cursed':
+                    add_log(f"{COLOR_RED}Your {slot_name} ({item.name}) glows BLACK — it is cursed!{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_GREY}Your {slot_name} ({item.name}) glows WHITE — it is uncursed.{COLOR_RESET}")
+        if not revealed_any:
+            add_log(f"{COLOR_YELLOW}You already know the BUC status of all your equipped gear.{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_CYAN}The altar's light fades.{COLOR_RESET}")
+        return
+
+    elif cmd == 'b':
+        # BLESS ITEM — upgrade one equipped uncursed item to blessed (costs gold)
+        bless_cost = 100 + player_character.z * 10
+        candidates = []
+        if player_character.equipped_weapon and getattr(player_character.equipped_weapon, 'buc_status', '') == 'uncursed':
+            candidates.append(('weapon', player_character.equipped_weapon))
+        if player_character.equipped_armor and getattr(player_character.equipped_armor, 'buc_status', '') == 'uncursed':
+            candidates.append(('armor', player_character.equipped_armor))
+        if not candidates:
+            add_log(f"{COLOR_YELLOW}You have no uncursed equipped weapon or armor to bless.{COLOR_RESET}")
+            add_log(f"{COLOR_GREY}(Items must be uncursed. Remove curse first if cursed.){COLOR_RESET}")
+            return
+        if player_character.gold < bless_cost:
+            add_log(f"{COLOR_RED}Blessing requires {bless_cost} gold. You have {player_character.gold}.{COLOR_RESET}")
+            return
+        # Bless the first candidate (weapon priority)
+        slot_name, item = candidates[0]
+        player_character.gold -= bless_cost
+        item.buc_status = 'blessed'
+        item.buc_known = True
+        add_log(f"{COLOR_GREEN}You offer {bless_cost} gold to the altar...{COLOR_RESET}")
+        add_log(f"{COLOR_YELLOW}Divine light bathes your {item.name}! It is now BLESSED!{COLOR_RESET}")
+        add_log(f"{COLOR_CYAN}(Blessed equipment grants +2 attack or defense.){COLOR_RESET}")
+        return
+
+    elif cmd == 'u':
+        # PURIFY — remove curse from one equipped item (costs 10% max HP)
+        hp_cost = max(5, player_character.max_health // 10)
+        cursed_equipped = []
+        if player_character.equipped_weapon and getattr(player_character.equipped_weapon, 'buc_status', '') == 'cursed':
+            cursed_equipped.append(('weapon', player_character.equipped_weapon))
+        if player_character.equipped_armor and getattr(player_character.equipped_armor, 'buc_status', '') == 'cursed':
+            cursed_equipped.append(('armor', player_character.equipped_armor))
+        if not cursed_equipped:
+            add_log(f"{COLOR_YELLOW}None of your equipped items are cursed.{COLOR_RESET}")
+            return
+        if player_character.health <= hp_cost:
+            add_log(f"{COLOR_RED}Purification costs {hp_cost} HP as penance. You don't have enough health.{COLOR_RESET}")
+            return
+        # Purify the first cursed item
+        slot_name, item = cursed_equipped[0]
+        player_character.health -= hp_cost
+        item.buc_status = 'uncursed'
+        item.buc_known = True
+        add_log(f"{COLOR_RED}You offer {hp_cost} HP as penance to the altar...{COLOR_RESET}")
+        add_log(f"{COLOR_GREEN}The curse on {item.name} is purified! It is now uncursed.{COLOR_RESET}")
+        add_log(f"{COLOR_GREY}(You can now unequip it or bless it with gold.){COLOR_RESET}")
+        return
+
+    # -------------------------------------------------------------------------
     # NAVIGATION / OTHER
     # -------------------------------------------------------------------------
     if cmd == 'x':
