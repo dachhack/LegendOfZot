@@ -4,7 +4,7 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 62
+BUILD_NUMBER = 63
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
     "BUC system LIVE: weapons/armor spawn blessed, uncursed, or cursed",

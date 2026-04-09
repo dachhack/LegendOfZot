@@ -2357,6 +2357,19 @@ class WizardsCavernApp(toga.App):
         except Exception:
             pass
 
+        # Pre-round HP: in combat views, show health bars at their pre-damage values
+        # so the bar doesn't drop until the damage animation plays.
+        # Falls back to current HP if no snapshot exists (non-combat views).
+        _combat_views = ('combat_mode', 'spell_casting_mode')
+        if gs.prompt_cntl in _combat_views and getattr(gs, 'pre_round_monster_hp', None) is not None:
+            _m_display_hp = gs.pre_round_monster_hp
+        else:
+            _m_display_hp = gs.active_monster.health if gs.active_monster else 0
+        if gs.prompt_cntl in _combat_views and getattr(gs, 'pre_round_player_hp', None) is not None:
+            _p_display_hp = gs.pre_round_player_hp
+        else:
+            _p_display_hp = gs.player_character.health if gs.player_character else 0
+
         # CREATE ACHIEVEMENT NOTIFICATION HTML - MINIMAL VERSION
         achievement_notifications = ""
         if gs.newly_unlocked_achievements:
@@ -2475,7 +2488,7 @@ class WizardsCavernApp(toga.App):
             player_stats_html = f"""
                 <div style="font-family: monospace; font-size: 12px; margin-bottom: 4px; padding: 3px; background: #1a1a1a; border-radius: 2px;">
                     <b>{gs.player_character.name}</b> Lv{gs.player_character.level} | F{gs.player_character.z + 1} ({gs.player_character.x},{gs.player_character.y}) | {gs.player_character.gold}g | {gs.player_character.experience}xp<br>
-                    HP:{health_bar(gs.player_character.health, gs.player_character.max_health, width=10)} MP:{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)} | <span style="color:{hunger_color};">H:{gs.player_character.hunger}</span>
+                    HP:{health_bar(_p_display_hp, gs.player_character.max_health, width=10)} MP:{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)} | <span style="color:{hunger_color};">H:{gs.player_character.hunger}</span>
                 </div>
             """
         else:
@@ -3828,7 +3841,7 @@ class WizardsCavernApp(toga.App):
                         <div>
                             <div style="color: {evo_name_color}; font-weight: bold; font-size: 15px; margin-bottom: 4px;">{gs.active_monster.name} {evo_tier_label}</div>
                             <div style="font-size: 12px; margin-bottom: 3px;">Level {gs.active_monster.level}</div>
-                            <div style="font-size: 12px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=15)}</div>
+                            <div style="font-size: 12px;">{health_bar(_m_display_hp, gs.active_monster.max_health, width=15)}</div>
                             {f'<div style="font-size: 12px; color: #FFB74D; margin-top: 3px;">Weak: {", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
                             {f'<div style="font-size: 12px; color: #64B5F6; margin-top: 2px;">Resist: {", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
@@ -3849,7 +3862,7 @@ class WizardsCavernApp(toga.App):
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
                             <div style="color: #4CAF50; font-weight: bold; font-size: 15px; margin-bottom: 4px;"> {gs.player_character.name}</div>
-                            <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=15)}</div>
+                            <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=15)}</div>
                             <div style="font-size: 12px; margin-bottom: 4px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=15)}</div>
                             <div style="font-size: 12px;">Atk: {gs.player_character.attack} | Def: {gs.player_character.defense}</div>
                             <div style="font-size: 12px; margin-top: 2px;">Int: {gs.player_character.intelligence} (boosts spells)</div>
@@ -3935,7 +3948,7 @@ class WizardsCavernApp(toga.App):
                         <div>
                             <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
                             <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
-                            <div style="font-size: 9px;">{health_bar(gs.active_monster.health, gs.active_monster.max_health, width=10)}</div>
+                            <div style="font-size: 9px;">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</div>
                             {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
                             {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 1px;">{", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
@@ -3960,7 +3973,7 @@ class WizardsCavernApp(toga.App):
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
                             <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {player_display}</div>
-                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=10)}</div>
+                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</div>
                             <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
                             <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
                             {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 2px;"> {", ".join(gs.player_character.elemental_strengths)}</div>' if gs.player_character.elemental_strengths else ''}
@@ -4040,7 +4053,7 @@ class WizardsCavernApp(toga.App):
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
                             <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {player_display}</div>
-                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=10)}</div>
+                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</div>
                             <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
                             <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
                         </div>
@@ -4113,7 +4126,7 @@ class WizardsCavernApp(toga.App):
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
                             <div style="color: #4CAF50; font-weight: bold; font-size: 15px; margin-bottom: 4px;"> {gs.player_character.name}</div>
-                            <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=15)}</div>
+                            <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=15)}</div>
                             <div style="font-size: 12px; margin-bottom: 4px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=15)}</div>
                             <div style="font-size: 12px; color: #FFD700;">Escaped combat!</div>
                         </div>
@@ -4169,7 +4182,7 @@ class WizardsCavernApp(toga.App):
             player_info_html = f"""
                 <div style="padding: 4px; border-radius: 4px; border: 2px solid #4CAF50;">
                     <div style="color: #4CAF50; font-weight: bold; font-size: 15px; margin-bottom: 4px;"> {gs.player_character.name}</div>
-                    <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(gs.player_character.health, gs.player_character.max_health, width=15)}</div>
+                    <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=15)}</div>
                     <div style="font-size: 12px; color: #DDD;">Position: ({gs.player_character.x}, {gs.player_character.y})</div>
                     <div style="font-size: 12px; color: #DDD;">Floor: {gs.player_character.z + 1}</div>
                 </div>

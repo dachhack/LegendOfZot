@@ -343,6 +343,10 @@ last_player_heal = 0
 # (e.g. "HUNTER!", "HOLY +8", "WEAK!", "HALVED!", "RAID!")
 last_monster_damage_badge = None  # Badge on damage dealt TO monster
 last_player_damage_badge = None   # Badge on damage dealt TO player
+# Pre-round HP snapshots: used to render health bars at their pre-damage values
+# so the bar doesn't drop until after the damage animation plays.
+pre_round_monster_hp = None       # Monster HP before this combat round
+pre_round_player_hp = None        # Player HP before this combat round
 
 # ============================================================================
 # MONSTER DEFEAT ANIMATION STATE
