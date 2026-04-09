@@ -332,19 +332,36 @@ def generate_spell_cast_js(spell):
     color = ELEMENT_COLORS.get(dtype, '#FFFFFF')
     tint = ELEMENT_TINTS.get(dtype, 'rgba(255,255,255,0.15)')
     # Lightning gets a shorter, sharper flash
-    tint_duration = '120' if dtype in ('Lightning', 'Wind') else '400'
+    # Scale visual intensity with spell level (0-5)
+    lvl = getattr(spell, 'level', 0)
+    # Banner font scales: 14px at L0, up to 28px at L5
+    banner_size = 14 + lvl * 3
+    # Banner letter spacing scales: 4px at L0, up to 10px at L5
+    banner_spacing = 4 + lvl
+    # Extra glow layers for high-level spells
+    banner_glow = '0 0 12px ' + color + ',0 0 4px #000'
+    if lvl >= 2:
+        banner_glow += ',0 0 24px ' + color
+    if lvl >= 4:
+        banner_glow += ',0 0 48px ' + color + ',0 0 64px ' + color
+    # Banner hold time: 0.4s at L0, 0.9s at L5
+    banner_hold = 400 + lvl * 100
+    # Screen tint intensity scales with level
+    tint_base_opacity = 0.15 + lvl * 0.06
+    tint_duration = '120' if dtype in ('Lightning', 'Wind') else str(300 + lvl * 60)
 
     return (
         '<script>(function(){'
 
-        # Layer 2: Spell name banner
+        # Layer 2: Spell name banner (scaled with level)
         'var bn=document.createElement("div");'
         'bn.style.cssText="position:fixed;top:38%;left:50%;transform:translate(-50%,-50%) scale(0.7);'
         'z-index:99999;text-align:center;pointer-events:none;opacity:0;'
-        'font-family:monospace;font-size:18px;font-weight:bold;letter-spacing:6px;'
+        'font-family:monospace;font-size:' + str(banner_size) + 'px;font-weight:bold;'
+        'letter-spacing:' + str(banner_spacing) + 'px;'
         'text-transform:uppercase;'
         'color:' + color + ';'
-        'text-shadow:0 0 12px ' + color + ',0 0 24px ' + color + ',0 0 4px #000;";'
+        'text-shadow:' + banner_glow + ';";'
         'bn.textContent="' + name + '";'
         'document.body.appendChild(bn);'
         # Animate: scale up + fade in, hold, fade out
@@ -354,16 +371,17 @@ def generate_spell_cast_js(spell):
         'bn.style.transition="opacity 0.4s ease-in,transform 0.4s ease-in";'
         'bn.style.opacity="0";'
         'bn.style.transform="translate(-50%,-50%) scale(1.1) translateY(-10px)";'
-        '},700);'
+        '},' + str(banner_hold) + ');'
         'setTimeout(function(){if(bn.parentNode)bn.parentNode.removeChild(bn);},1100);'
 
         # Layer 3: Screen tint flash
+        # Screen tint: level scales max opacity from 0.6 (L0) to 1.0 (L5)
         'var tint=document.createElement("div");'
         'tint.style.cssText="position:fixed;top:0;left:0;right:0;bottom:0;'
         'z-index:99998;pointer-events:none;'
         'background:' + tint + ';opacity:0;transition:opacity 0.15s ease-out;";'
         'document.body.appendChild(tint);'
-        'setTimeout(function(){tint.style.opacity="1";},100);'
+        'setTimeout(function(){tint.style.opacity="' + str(min(1.0, 0.6 + lvl * 0.08)) + '";},100);'
         'setTimeout(function(){tint.style.transition="opacity 0.3s ease-in";tint.style.opacity="0";'
         '},' + tint_duration + ');'
         'setTimeout(function(){if(tint.parentNode)tint.parentNode.removeChild(tint);},800);'
@@ -378,6 +396,11 @@ def generate_spell_particles_js(spell):
     Creates a full-screen canvas, spawns particles with per-element physics,
     animates them via requestAnimationFrame, and removes the canvas when done.
     Canvas rendering is dramatically faster than DOM particles on mobile.
+
+    Scales dramatically with spell level:
+      L0: 20-30 particles, small, 1 burst
+      L3: 50-70 particles, medium, 2 bursts
+      L5: 80-120 particles, large glow, 3 bursts (Armageddon-tier)
     """
     if not spell:
         return ""
@@ -386,27 +409,47 @@ def generate_spell_particles_js(spell):
         dtype = 'Healing'
     color = ELEMENT_COLORS.get(dtype, '#FFFFFF')
 
+    lvl = getattr(spell, 'level', 0)
+
+    # Base configs per element (count, speed, style)
     configs = {
-        'Fire':      (30, 3.0, 'rise'),
-        'Ice':       (25, 2.0, 'fall'),
-        'Lightning': (40, 7.0, 'burst'),
-        'Wind':      (35, 6.0, 'burst'),
-        'Water':     (28, 3.5, 'splash'),
-        'Earth':     (22, 4.5, 'shatter'),
-        'Holy':      (30, 1.5, 'radiate'),
-        'Light':     (30, 1.5, 'radiate'),
-        'Darkness':  (28, 2.5, 'implode'),
-        'Shadow':    (28, 2.5, 'implode'),
-        'Psionic':   (25, 2.0, 'spiral'),
-        'Demonic':   (30, 4.0, 'burst'),
-        'Healing':   (25, 2.0, 'rise'),
-        'Physical':  (20, 4.0, 'burst'),
+        'Fire':      (20, 3.0, 'rise'),
+        'Ice':       (18, 2.0, 'fall'),
+        'Lightning': (25, 7.0, 'burst'),
+        'Wind':      (22, 6.0, 'burst'),
+        'Water':     (18, 3.5, 'splash'),
+        'Earth':     (15, 4.5, 'shatter'),
+        'Holy':      (20, 1.5, 'radiate'),
+        'Light':     (20, 1.5, 'radiate'),
+        'Darkness':  (18, 2.5, 'implode'),
+        'Shadow':    (18, 2.5, 'implode'),
+        'Psionic':   (18, 2.0, 'spiral'),
+        'Demonic':   (20, 4.0, 'burst'),
+        'Healing':   (18, 2.0, 'rise'),
+        'Physical':  (15, 4.0, 'burst'),
     }
-    count, speed, style = configs.get(dtype, (25, 3.0, 'burst'))
+    base_count, base_speed, style = configs.get(dtype, (20, 3.0, 'burst'))
+
+    # Scale with spell level: L0 = base, L5 = ~3x particles, 1.5x speed, bigger glow
+    count = int(base_count * (1 + lvl * 0.4))    # L0=20, L3=44, L5=60
+    speed = base_speed * (1 + lvl * 0.1)          # L0=3.0, L5=4.5
+    glow_mult = 1 + lvl * 0.5                     # glow radius multiplier
+    sz_min = 2 + lvl * 0.5                         # L0=2, L5=4.5
+    sz_max = 4 + lvl * 1.0                         # L0=4, L5=9 (big chunky particles!)
+    life_bonus = lvl * 4                            # longer-lived particles at high levels
+    # Multi-burst: L0-2 = 1 burst, L3-4 = 2 bursts, L5 = 3 bursts
+    num_bursts = 1 + (1 if lvl >= 3 else 0) + (1 if lvl >= 5 else 0)
+    burst_delay = 250                               # ms between bursts
+
     target_id = 'player_panel' if dtype == 'Healing' else 'monster_panel'
 
     return (
         '<script>(function(){'
+        'var numBursts=' + str(num_bursts) + ';'
+        'var burstDelay=' + str(burst_delay) + ';'
+
+        'for(var burst=0;burst<numBursts;burst++){'
+        '(function(burstIdx){'
         'setTimeout(function(){'
         'var tgt=document.getElementById("' + target_id + '");'
         'if(!tgt)return;'
@@ -414,7 +457,7 @@ def generate_spell_particles_js(spell):
         'var cx=rect.left+rect.width/2;'
         'var cy=rect.top+rect.height/2;'
 
-        # Create full-screen canvas overlay
+        # Create full-screen canvas overlay (one per burst)
         'var cvs=document.createElement("canvas");'
         'cvs.width=window.innerWidth;cvs.height=window.innerHeight;'
         'cvs.style.cssText="position:fixed;top:0;left:0;z-index:99997;pointer-events:none;";'
@@ -427,16 +470,19 @@ def generate_spell_particles_js(spell):
         'var cs=getComputedStyle(tc).color;document.body.removeChild(tc);'
         'var rgb=cs.match(/\\d+/g).map(Number);'
 
-        # Spawn particles
+        # Spawn particles — scaled with level
         'var particles=[];'
         'var count=' + str(count) + ';'
         'var spd=' + str(speed) + ';'
         'var sty="' + style + '";'
+        'var szMin=' + str(sz_min) + ',szMax=' + str(sz_max) + ';'
+        'var glowMult=' + str(glow_mult) + ';'
+        'var lifeBonus=' + str(life_bonus) + ';'
         'for(var i=0;i<count;i++){'
         'var angle=Math.random()*Math.PI*2;'
         'var v=spd*(0.5+Math.random());'
         'var px=cx,py=cy,vx,vy;'
-        'var sz=2+Math.random()*4;'
+        'var sz=szMin+Math.random()*(szMax-szMin);'
 
         'if(sty==="rise"){vx=(Math.random()-0.5)*2;vy=-v;}'
         'else if(sty==="fall"){vx=(Math.random()-0.5)*2;vy=v*0.7;}'
@@ -453,7 +499,7 @@ def generate_spell_particles_js(spell):
         'else{vx=Math.cos(angle)*v;vy=Math.sin(angle)*v;}'
 
         'var grav=(sty==="splash"||sty==="shatter")?0.15:0;'
-        'particles.push({x:px,y:py,vx:vx,vy:vy,sz:sz,life:0,max:22+Math.floor(Math.random()*20),grav:grav});'
+        'particles.push({x:px,y:py,vx:vx,vy:vy,sz:sz,life:0,max:22+lifeBonus+Math.floor(Math.random()*20),grav:grav});'
         '}'
 
         # Animate on canvas
@@ -473,8 +519,8 @@ def generate_spell_particles_js(spell):
         'ctx.arc(p.x,p.y,p.sz,0,Math.PI*2);'
         'ctx.fillStyle="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha+")";'
         'ctx.fill();'
-        # Glow effect via shadow
-        'ctx.shadowBlur=p.sz*3;'
+        # Glow effect via shadow (scales with level)
+        'ctx.shadowBlur=p.sz*3*glowMult;'
         'ctx.shadowColor="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha*0.6+")";'
         'ctx.fill();ctx.shadowBlur=0;'
         '}'
@@ -483,7 +529,9 @@ def generate_spell_particles_js(spell):
         '}'
         'requestAnimationFrame(frame);'
 
-        '},400);'  # 400ms delay: particles start as spell banner fades
+        '},400+burstIdx*burstDelay);'  # 400ms base + stagger per burst
+        '})(burst);'
+        '}'  # end burst loop
         '})();</script>'
     )
 
