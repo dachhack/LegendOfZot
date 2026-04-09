@@ -122,6 +122,7 @@ def process_combat_action(player_character, my_tower, cmd):
     gs.last_monster_damage_badge = None
     gs.last_player_damage_badge = None
     gs.last_spell_cast = None
+    gs.monster_acts_first = False  # Initiative result: does monster swing before player?
     # Snapshot HP BEFORE any damage so the render can show pre-damage bars
     gs.pre_round_monster_hp = gs.active_monster.health if gs.active_monster else None
     gs.pre_round_player_hp = player_character.health
@@ -319,6 +320,66 @@ def process_combat_action(player_character, my_tower, cmd):
         main.handle_inventory_menu(player_character, my_tower, "init")
         return
 
+    # -------------------------------------------------------------------------
+    # DEBUFF CHECKS — paralysis/freeze skip turn, confusion/blindness modify
+    # -------------------------------------------------------------------------
+    # Paralysis / Freeze: player cannot act at all this turn. Monster still attacks.
+    is_paralyzed = any(e.effect_type in ('paralysis', 'freeze')
+                       for e in player_character.status_effects.values())
+    if is_paralyzed and cmd in ('a', 'f', 'c'):
+        effect_name = next(n for n, e in player_character.status_effects.items()
+                           if e.effect_type in ('paralysis', 'freeze'))
+        add_log(f"{COLOR_RED}You are {effect_name.lower()} and cannot act!{COLOR_RESET}")
+        # Monster still gets their attack
+        if gs.active_monster and gs.active_monster.is_alive():
+            if not any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values()):
+                gs.active_monster.attack_target(player_character)
+                if not player_character.is_alive():
+                    add_log(f"{COLOR_RED}You were defeated...{COLOR_RESET}")
+                    gs.prompt_cntl = "death_screen"
+        return
+
+    # Confusion: 33% chance to hit yourself instead of the monster
+    is_confused = any(e.effect_type == 'confusion'
+                      for e in player_character.status_effects.values())
+
+    # Blindness: 50% chance to auto-miss attacks
+    is_blind = any(e.effect_type == 'blindness'
+                   for e in player_character.status_effects.values())
+
+    # -------------------------------------------------------------------------
+    # INITIATIVE ROLL — who acts first this round?
+    # d20 + DEX mod (player) vs d20 + level (monster). Ties go to player.
+    # -------------------------------------------------------------------------
+    if cmd in ('a', 'f', 'c') and gs.active_monster and gs.active_monster.is_alive():
+        from .characters import opposed_roll, compute_player_attack_mod
+        p_init_mod = max(0, (player_character.dexterity - 10) // 3)
+        m_init_mod = max(0, gs.active_monster.level)
+        # Use hit probability as a rough guide: faster player = more likely to go first
+        init_chance = max(0.20, min(0.80, 0.55 + (p_init_mod - m_init_mod) * 0.05))
+        player_goes_first = random.random() < init_chance
+        p_roll, m_roll = opposed_roll(player_goes_first, sides=20, p_mod=p_init_mod, m_mod=m_init_mod)
+        gs.last_dice_rolls.append((p_roll, m_roll, player_goes_first, "INIT", 20, p_init_mod, m_init_mod))
+        gs.monster_acts_first = not player_goes_first
+
+        # If monster acts first, execute their attack NOW (before player's action)
+        if gs.monster_acts_first and not is_paralyzed:
+            monster_frozen = any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values())
+            if monster_frozen:
+                add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time!{COLOR_RESET}")
+            elif 'Invisibility' in player_character.status_effects:
+                add_log(f"{COLOR_PURPLE}[Invisible] The {gs.active_monster.name} cannot see you!{COLOR_RESET}")
+            else:
+                gs.active_monster.attack_target(player_character)
+                if 'Frost Armor' in player_character.status_effects:
+                    reflect_damage = player_character.status_effects['Frost Armor'].magnitude
+                    gs.active_monster.take_damage(reflect_damage, "Ice")
+                    add_log(f"{COLOR_CYAN} Frost Armor reflects {reflect_damage} ice damage!{COLOR_RESET}")
+                if not player_character.is_alive():
+                    add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")
+                    gs.prompt_cntl = "death_screen"
+                    return
+
     if cmd == 'a':
         # Player attacks
         damage_type = "Physical"
@@ -339,8 +400,17 @@ def process_combat_action(player_character, my_tower, cmd):
             add_log(msg)
 
         # FIRST ATTACK
+        # Confusion: 33% chance to hit yourself
+        if is_confused and random.random() < 0.33:
+            self_dmg = max(1, player_character.attack // 3)
+            player_character.health -= self_dmg
+            gs.last_player_damage = self_dmg
+            add_log(f"{COLOR_PURPLE}You are confused and strike yourself for {self_dmg} damage!{COLOR_RESET}")
+        # Blindness: 50% auto-miss
+        elif is_blind and random.random() < 0.50:
+            add_log(f"{COLOR_GREY}You swing wildly in the darkness and miss completely!{COLOR_RESET}")
         # Platino: immune to melee/direct attacks
-        if gs.active_monster and gs.active_monster.properties.get('is_platino'):
+        elif gs.active_monster and gs.active_monster.properties.get('is_platino'):
             add_log(f"{COLOR_YELLOW}Platino easily dodges your melee attack.{COLOR_RESET}")
         else:
           dmg = player_character.attack_target(gs.active_monster)
@@ -658,34 +728,38 @@ def process_combat_action(player_character, my_tower, cmd):
             return
 
 
-        # Check for Time Stop / frozen — monster can't act
-        monster_frozen = False
-        if gs.active_monster:
-            for eff_name, eff in gs.active_monster.status_effects.items():
-                if eff.effect_type == 'time_stop':
-                    monster_frozen = True
-                    add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time and cannot act!{COLOR_RESET}")
-                    break
-
-        # Check for Invisibility - monsters can't attack invisible players
-        if monster_frozen:
-            pass  # Skip monster attack entirely
-        elif 'Invisibility' in player_character.status_effects:
-            add_log(f"{COLOR_PURPLE}[Invisible] The {gs.active_monster.name} cannot see you!{COLOR_RESET}")
-            # Skip monster attack
+        # If monster already acted first (initiative), skip their post-player attack
+        if gs.monster_acts_first:
+            pass  # Monster already swung before the player's action
         else:
-            # Normal monster attack
-            gs.active_monster.attack_target(player_character)
-            if 'Frost Armor' in player_character.status_effects:
-                reflect_damage = player_character.status_effects['Frost Armor'].magnitude
-                gs.active_monster.take_damage(reflect_damage, "Ice")
-                add_log(f"{COLOR_CYAN} Frost Armor reflects {reflect_damage} ice damage!{COLOR_RESET}")
+            # Check for Time Stop / frozen — monster can't act
+            monster_frozen = False
+            if gs.active_monster:
+                for eff_name, eff in gs.active_monster.status_effects.items():
+                    if eff.effect_type == 'time_stop':
+                        monster_frozen = True
+                        add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time and cannot act!{COLOR_RESET}")
+                        break
 
-            # Corrosive monsters damage armor on attack
-            if (gs.active_monster.name in CORROSIVE_MONSTERS or get_base_monster_name(gs.active_monster.name) in CORROSIVE_MONSTERS):
-                corrosion_messages = apply_corrosion_effect(player_character, gs.active_monster.name, is_player_attacking=False)
-                for msg in corrosion_messages:
-                    add_log(msg)
+            # Check for Invisibility - monsters can't attack invisible players
+            if monster_frozen:
+                pass  # Skip monster attack entirely
+            elif 'Invisibility' in player_character.status_effects:
+                add_log(f"{COLOR_PURPLE}[Invisible] The {gs.active_monster.name} cannot see you!{COLOR_RESET}")
+                # Skip monster attack
+            else:
+                # Normal monster attack
+                gs.active_monster.attack_target(player_character)
+                if 'Frost Armor' in player_character.status_effects:
+                    reflect_damage = player_character.status_effects['Frost Armor'].magnitude
+                    gs.active_monster.take_damage(reflect_damage, "Ice")
+                    add_log(f"{COLOR_CYAN} Frost Armor reflects {reflect_damage} ice damage!{COLOR_RESET}")
+
+                # Corrosive monsters damage armor on attack
+                if (gs.active_monster.name in CORROSIVE_MONSTERS or get_base_monster_name(gs.active_monster.name) in CORROSIVE_MONSTERS):
+                    corrosion_messages = apply_corrosion_effect(player_character, gs.active_monster.name, is_player_attacking=False)
+                    for msg in corrosion_messages:
+                        add_log(msg)
 
         if not player_character.is_alive():
              add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")

@@ -171,8 +171,10 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
     #   2900ms  Both rolls landed
     #   3200ms  Player damage float appears
     # -----------------------------------------------------------------
-    MONSTER_DMG_DELAY = 1300  # After player attack exchange resolves
-    PLAYER_DMG_DELAY  = 3200  # After monster attack exchange resolves
+    # Damage float delays shift when initiative dice are also showing
+    _init_offset = 1000 if (gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)) else 0
+    MONSTER_DMG_DELAY = 1300 + _init_offset  # After player attack exchange resolves
+    PLAYER_DMG_DELAY  = 3200 + _init_offset  # After monster attack exchange resolves
 
     def _escape(s):
         return str(s).replace('"', '').replace("'", '').replace('<', '').replace('>', '')[:18]
@@ -834,6 +836,10 @@ def generate_dice_roll_js(dice_rolls):
         #   Phase 1 (player ATK): P-ATK + M-DEF -> both light up LEFT column
         #   Phase 2 (monster ATK): M-ATK + P-DEF -> both light up RIGHT column
         #   FLEE:                 P-FLEE + M-CATCH -> LEFT column
+        # Check if an INIT roll is present — if so, shift combat dice forward
+        'var hasInit=rolls.some(function(r){return r[3]==="INIT";});'
+        'var initOffset=hasInit?1000:0;'  # 1s delay after initiative dice settle
+
         'rolls.forEach(function(r){'
         'var pRoll=r[0],mRoll=r[1],playerWins=r[2],label=r[3],sides=r[4],pMod=r[5],mMod=r[6];'
         # Winner is whoever has higher total (raw + mod)
@@ -841,16 +847,20 @@ def generate_dice_roll_js(dice_rolls):
 
         'if(label==="ATK"){'
         # Player attacks first (in player ATK slot), monster defends second (in monster DEF slot)
-        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"ATTACK","#FF8A65",sides,0);'
-        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"DEFEND","#64B5F6",sides,600);'
+        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"ATTACK","#FF8A65",sides,initOffset+0);'
+        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"DEFEND","#64B5F6",sides,initOffset+600);'
         '}else if(label==="DEF"){'
         # Monster attacks (in monster ATK slot), player defends (in player DEF slot)
-        'makeDice("monster_atk_dice",mRoll,mMod,!pHigher,"ATTACK","#FF8A65",sides,1900);'
-        'makeDice("player_def_dice",pRoll,pMod,pHigher,"DEFEND","#64B5F6",sides,2500);'
+        'makeDice("monster_atk_dice",mRoll,mMod,!pHigher,"ATTACK","#FF8A65",sides,initOffset+1900);'
+        'makeDice("player_def_dice",pRoll,pMod,pHigher,"DEFEND","#64B5F6",sides,initOffset+2500);'
         '}else if(label==="FLEE"){'
-        # Flee pair in the LEFT column: player flee vs monster catch vertically aligned
+        # Flee pair in the LEFT column
         'makeDice("player_atk_dice",pRoll,pMod,pHigher,"FLEE","#FFD54F",sides,0);'
         'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"CATCH","#FF8A65",sides,600);'
+        '}else if(label==="INIT"){'
+        # Initiative: both dice in the ATK column (left), quick flash before combat
+        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"INIT","#B0BEC5",sides,0);'
+        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"INIT","#B0BEC5",sides,200);'
         '}'
 
         '});'
