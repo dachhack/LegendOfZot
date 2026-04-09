@@ -273,6 +273,30 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
     return js
 
 
+def _spell_visual_element(spell):
+    """Derive the visual element type for a spell's animations.
+
+    Damage spells use their damage_type directly. Buff/debuff/heal spells
+    map to thematically appropriate visual elements:
+      attack_boost → Fire (orange), defense_boost → Holy (gold),
+      heal_over_time → Healing (green), time_stop → Ice (frozen),
+      remove_status → Light (cleansing), healing → Healing.
+    """
+    if not spell:
+        return 'Physical'
+    stype = getattr(spell, 'spell_type', '')
+    if stype == 'healing':
+        return 'Healing'
+    elif stype in ('add_status_effect', 'debuff_target'):
+        etype = getattr(spell, 'status_effect_type', '')
+        return {'attack_boost': 'Fire', 'defense_boost': 'Holy',
+                'damage_reduction': 'Holy', 'heal_over_time': 'Healing',
+                'paralysis': 'Ice', 'time_stop': 'Ice'}.get(etype, 'Light')
+    elif stype == 'remove_status':
+        return 'Light'
+    return getattr(spell, 'damage_type', 'Physical')
+
+
 # ============================================================
 # ELEMENT COLOR MAP — used for spell damage floats, banners, and screen tints
 # ============================================================
@@ -289,6 +313,8 @@ ELEMENT_COLORS = {
     'Shadow': '#CE93D8',
     'Psionic': '#E040FB',
     'Demonic': '#FF1744',
+    'Poison': '#76FF03',      # toxic neon green
+    'Acid': '#76FF03',
     'Physical': '#FF5252',
     'Healing': '#69F0AE',
 }
@@ -307,6 +333,8 @@ ELEMENT_TINTS = {
     'Shadow': 'rgba(206,147,216,0.25)',
     'Psionic': 'rgba(224,64,251,0.25)',
     'Demonic': 'rgba(255,23,68,0.25)',
+    'Poison': 'rgba(118,255,3,0.25)',
+    'Acid': 'rgba(118,255,3,0.25)',
     'Healing': 'rgba(105,240,174,0.2)',
 }
 
@@ -326,9 +354,7 @@ def generate_spell_cast_js(spell):
     if not spell:
         return ""
     name = spell.name.replace('"', '').replace("'", '').replace('<', '').replace('>', '')
-    dtype = getattr(spell, 'damage_type', 'Physical')
-    if spell.spell_type == 'healing':
-        dtype = 'Healing'
+    dtype = _spell_visual_element(spell)
     color = ELEMENT_COLORS.get(dtype, '#FFFFFF')
     tint = ELEMENT_TINTS.get(dtype, 'rgba(255,255,255,0.15)')
     # Lightning gets a shorter, sharper flash
@@ -403,6 +429,8 @@ def generate_spell_cast_js(spell):
             'Darkness': 'ca.style.filter="invert(1) brightness(0.8)";',       # void flash
             'Shadow': 'ca.style.filter="invert(1) brightness(0.8)";',
             'Psionic': 'ca.style.filter="hue-rotate(180deg)";',               # psychedelic
+            'Poison': 'ca.style.filter="hue-rotate(90deg) saturate(2)";',       # toxic green shift
+            'Acid': 'ca.style.filter="hue-rotate(90deg) saturate(2)";',
             'Lightning': 'ca.style.filter="brightness(2.5)";',                # white-out flash
             'Wind': 'ca.style.filter="brightness(2.5)";',
         }.get(dtype, 'ca.style.filter="saturate(2)";')                    # default: oversaturate
@@ -429,9 +457,7 @@ def generate_spell_particles_js(spell):
     """
     if not spell:
         return ""
-    dtype = getattr(spell, 'damage_type', 'Physical')
-    if getattr(spell, 'spell_type', '') == 'healing':
-        dtype = 'Healing'
+    dtype = _spell_visual_element(spell)
     color = ELEMENT_COLORS.get(dtype, '#FFFFFF')
 
     lvl = getattr(spell, 'level', 0)
@@ -449,6 +475,8 @@ def generate_spell_particles_js(spell):
         'Darkness':  (18, 2.5, 'implode'),
         'Shadow':    (18, 2.5, 'implode'),
         'Psionic':   (18, 2.0, 'spiral'),
+        'Poison':    (22, 3.0, 'splash'),
+        'Acid':      (22, 3.0, 'splash'),
         'Demonic':   (20, 4.0, 'burst'),
         'Healing':   (18, 2.0, 'rise'),
         'Physical':  (15, 4.0, 'burst'),
@@ -2741,13 +2769,9 @@ class WizardsCavernApp(toga.App):
         else:
             _p_display_hp = gs.player_character.health if gs.player_character else 0
 
-        # Spell element for coloring damage floats and triggering spell animations
+        # Spell element for coloring damage floats and triggering spell animations.
         _spell = getattr(gs, 'last_spell_cast', None)
-        _spell_element = None
-        if _spell:
-            _spell_element = getattr(_spell, 'damage_type', None)
-            if getattr(_spell, 'spell_type', '') == 'healing':
-                _spell_element = 'Healing'
+        _spell_element = _spell_visual_element(_spell) if _spell else None
 
         # CREATE ACHIEVEMENT NOTIFICATION HTML - MINIMAL VERSION
         achievement_notifications = ""

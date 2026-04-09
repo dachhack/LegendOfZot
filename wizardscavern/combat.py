@@ -658,8 +658,19 @@ def process_combat_action(player_character, my_tower, cmd):
             return
 
 
+        # Check for Time Stop / frozen — monster can't act
+        monster_frozen = False
+        if gs.active_monster:
+            for eff_name, eff in gs.active_monster.status_effects.items():
+                if eff.effect_type == 'time_stop':
+                    monster_frozen = True
+                    add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time and cannot act!{COLOR_RESET}")
+                    break
+
         # Check for Invisibility - monsters can't attack invisible players
-        if 'Invisibility' in player_character.status_effects:
+        if monster_frozen:
+            pass  # Skip monster attack entirely
+        elif 'Invisibility' in player_character.status_effects:
             add_log(f"{COLOR_PURPLE}[Invisible] The {gs.active_monster.name} cannot see you!{COLOR_RESET}")
             # Skip monster attack
         else:

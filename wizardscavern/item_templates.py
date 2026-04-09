@@ -434,7 +434,7 @@ SPELL_TEMPLATES = [
     Spell(name="Heal", description="Restores a small amount of health.", mana_cost=12, damage_type='Healing', base_power=25, level=1, spell_type='healing'),
     Spell(name="Water Blast", description="A pressurized stream of water.", mana_cost=11, damage_type='Water', base_power=22, level=1),
     Spell(name="Wind Slash", description="A cutting blade of wind.", mana_cost=10, damage_type='Wind', base_power=21, level=1),
-    Spell(name="Acid Splash", description="Corrosive acid burns the target.", mana_cost=12, damage_type='Earth', base_power=23, level=1),
+    Spell(name="Acid Splash", description="Corrosive acid sizzles and burns the target.", mana_cost=12, damage_type='Poison', base_power=23, level=1),
     Spell(name="Mind Spike", description="A sharp psionic attack.", mana_cost=13, damage_type='Psionic', base_power=24, level=1),
     Spell(name="Purify", description="Cleanses poison from the caster.", mana_cost=15, level=1, spell_type='remove_status', status_effect_name='Poison'),
     Spell(name="Cure Weakness", description="Restores strength and vigor.", mana_cost=12, level=1, spell_type='add_status_effect', status_effect_name='Vigor', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=5),
@@ -472,7 +472,7 @@ SPELL_TEMPLATES = [
     Spell(name="Full Restore", description="Completely restores health.", mana_cost=40, damage_type='Healing', base_power=100, level=4, spell_type='healing'),
     Spell(name="Titan's Strength", description="Grants enormous power.", mana_cost=38, level=4, spell_type='add_status_effect', status_effect_name='Titan Strength', status_effect_duration=5, status_effect_type='attack_boost', status_effect_magnitude=20),
     Spell(name="Clarity", description="Removes all negative status effects.", mana_cost=35, level=4, spell_type='remove_status', status_effect_name='All'),
-    Spell(name="Time Stop", description="Slows time around the caster.", mana_cost=45, level=4, spell_type='add_status_effect', status_effect_name='Hasted', status_effect_duration=3, status_effect_type='attack_boost', status_effect_magnitude=25),
+    Spell(name="Time Stop", description="Freezes the enemy in a temporal prison. They cannot act for 2 turns.", mana_cost=45, level=4, spell_type='debuff_target', status_effect_name='Frozen in Time', status_effect_duration=2, status_effect_type='time_stop', status_effect_magnitude=0),
 
     # ===== LEVEL 5 SPELLS (3 slots each) - Legendary =====
     Spell(name="Armageddon", description="The end of all things.", mana_cost=50, damage_type='Demonic', base_power=75, level=5),

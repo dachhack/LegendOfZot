@@ -1317,17 +1317,30 @@ class Character:
                 add_log(f"{COLOR_YELLOW}No specific status effect to remove for {spell_to_cast.name}.{COLOR_RESET}")
             return True
         elif spell_to_cast.spell_type == 'add_status_effect':
+            # Buff spells: apply to SELF (the caster)
+            if spell_to_cast.status_effect_name and spell_to_cast.status_effect_type:
+                self.add_status_effect(
+                    effect_name=spell_to_cast.status_effect_name,
+                    duration=spell_to_cast.status_effect_duration,
+                    effect_type=spell_to_cast.status_effect_type,
+                    magnitude=spell_to_cast.status_effect_magnitude,
+                    description=spell_to_cast.description
+                )
+                add_log(f"{COLOR_GREEN}{self.name} is now affected by {spell_to_cast.status_effect_name}!{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_YELLOW}Missing status effect details for {spell_to_cast.name}. No effect.{COLOR_RESET}")
+            return True
+        elif spell_to_cast.spell_type == 'debuff_target':
+            # Debuff spells: apply to TARGET (the monster) — e.g. Time Stop
             if spell_to_cast.status_effect_name and spell_to_cast.status_effect_type:
                 target.add_status_effect(
                     effect_name=spell_to_cast.status_effect_name,
                     duration=spell_to_cast.status_effect_duration,
                     effect_type=spell_to_cast.status_effect_type,
                     magnitude=spell_to_cast.status_effect_magnitude,
-                    description=spell_to_cast.description # Re-use spell description for effect
+                    description=spell_to_cast.description
                 )
-                add_log(f"{COLOR_GREEN}{target.name} is now affected by {spell_to_cast.status_effect_name}!{COLOR_RESET}")
-            else:
-                add_log(f"{COLOR_YELLOW}Missing status effect details for {spell_to_cast.name}. No effect.{COLOR_RESET}")
+                add_log(f"{COLOR_PURPLE}{target.name} is {spell_to_cast.status_effect_name}!{COLOR_RESET}")
             return True
         else:
             add_log(f"{COLOR_YELLOW}Unknown spell type for {spell_to_cast.name}. No effect.{COLOR_RESET}")
