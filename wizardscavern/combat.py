@@ -1062,6 +1062,11 @@ def process_spell_casting_action(player_character, my_tower, cmd):
     gs.last_player_heal = 0
     gs.last_dice_rolls = []
     gs.last_spell_cast = None
+    gs.last_monster_damage_badge = None
+    gs.last_player_damage_badge = None
+    # Snapshot HP BEFORE any damage so the render shows pre-damage bars
+    gs.pre_round_monster_hp = gs.active_monster.health if gs.active_monster else None
+    gs.pre_round_player_hp = player_character.health
 
     main = _main()
 

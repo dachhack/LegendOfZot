@@ -2624,7 +2624,7 @@ class WizardsCavernApp(toga.App):
         # Pre-round HP: in combat views, show health bars at their pre-damage values
         # so the bar doesn't drop until the damage animation plays.
         # Falls back to current HP if no snapshot exists (non-combat views).
-        _combat_views = ('combat_mode', 'spell_casting_mode')
+        _combat_views = ('combat_mode', 'spell_casting_mode', 'combat_victory')
         if gs.prompt_cntl in _combat_views and getattr(gs, 'pre_round_monster_hp', None) is not None:
             _m_display_hp = gs.pre_round_monster_hp
         else:
