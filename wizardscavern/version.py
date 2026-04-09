@@ -4,7 +4,7 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 69
+BUILD_NUMBER = 70
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
     "Spell effects scale to 11: L5 spells get 180 particles in 3 explosive bursts",

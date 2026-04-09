@@ -501,7 +501,7 @@ def generate_spell_particles_js(spell):
         'else{vx=Math.cos(angle)*v;vy=Math.sin(angle)*v;}'
 
         'var grav=(sty==="splash"||sty==="shatter")?0.15:0;'
-        'particles.push({x:px,y:py,vx:vx,vy:vy,sz:sz,life:0,max:22+lifeBonus+Math.floor(Math.random()*20),grav:grav});'
+        'particles.push({x:px,y:py,ox:cx,oy:cy,vx:vx,vy:vy,sz:sz,life:0,max:22+lifeBonus+Math.floor(Math.random()*20),grav:grav});'
         '}'
 
         # Animate on canvas
@@ -516,15 +516,37 @@ def generate_spell_particles_js(spell):
         'p.vx*=0.97;p.vy+=p.grav;'
         'p.x+=p.vx;p.y+=p.vy;'
         'var alpha=1-p.life/p.max;'
-        # Draw glowing circle
+        'ctx.shadowBlur=p.sz*3*glowMult;'
+        'ctx.shadowColor="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha*0.6+")";'
+
+        'if(sty==="burst"&&(p.life<p.max*0.7)){'
+        # Lightning zig-zag bolt: draw jagged line from origin to current position
+        'ctx.beginPath();'
+        'ctx.moveTo(p.ox,p.oy);'
+        'var dx=p.x-p.ox,dy=p.y-p.oy;'
+        'var segs=4+Math.floor(Math.random()*3);'
+        'for(var s=1;s<=segs;s++){'
+        'var t=s/segs;'
+        'var jitter=(1-t)*12*glowMult;'  # more jitter near origin, less at tip
+        'var bx=p.ox+dx*t+(Math.random()-0.5)*jitter;'
+        'var by=p.oy+dy*t+(Math.random()-0.5)*jitter;'
+        'ctx.lineTo(bx,by);'
+        '}'
+        'ctx.strokeStyle="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha+")";'
+        'ctx.lineWidth=p.sz*0.6;'
+        'ctx.stroke();'
+        # Bright core at the tip
+        'ctx.beginPath();ctx.arc(p.x,p.y,p.sz*0.5,0,Math.PI*2);'
+        'ctx.fillStyle="rgba(255,255,255,"+alpha*0.8+")";'
+        'ctx.fill();'
+        '}else{'
+        # Standard glowing circle for all other elements
         'ctx.beginPath();'
         'ctx.arc(p.x,p.y,p.sz,0,Math.PI*2);'
         'ctx.fillStyle="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha+")";'
         'ctx.fill();'
-        # Glow effect via shadow (scales with level)
-        'ctx.shadowBlur=p.sz*3*glowMult;'
-        'ctx.shadowColor="rgba("+rgb[0]+","+rgb[1]+","+rgb[2]+","+alpha*0.6+")";'
-        'ctx.fill();ctx.shadowBlur=0;'
+        '}'
+        'ctx.shadowBlur=0;'
         '}'
         'if(alive>0)requestAnimationFrame(frame);'
         'else if(cvs.parentNode)cvs.parentNode.removeChild(cvs);'
