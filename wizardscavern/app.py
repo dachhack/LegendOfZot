@@ -372,6 +372,113 @@ def generate_spell_cast_js(spell):
     )
 
 
+def generate_spell_particles_js(spell):
+    """Generate element-specific particle effects for spell casting.
+
+    Spawns 20-30 small animated divs near the target combat panel.
+    Each element type has a distinct particle motion pattern:
+      Fire=rise, Ice=fall, Lightning=burst, Holy=radiate,
+      Darkness=implode, Water=splash, Earth=shatter,
+      Healing=rise (from player), Psionic=spiral.
+
+    Particles appear at ~400ms (as the spell banner fades) and
+    play for ~800ms, filling the gap before the damage float.
+    """
+    if not spell:
+        return ""
+    dtype = getattr(spell, 'damage_type', 'Physical')
+    if getattr(spell, 'spell_type', '') == 'healing':
+        dtype = 'Healing'
+    color = ELEMENT_COLORS.get(dtype, '#FFFFFF')
+
+    # Particle config per element: (count, speed, style, sz_min, sz_max)
+    configs = {
+        'Fire':      (25, 3.0, 'rise',    3, 6),
+        'Ice':       (20, 2.0, 'fall',    3, 5),
+        'Lightning': (30, 6.0, 'burst',   2, 4),
+        'Wind':      (30, 6.0, 'burst',   2, 4),
+        'Water':     (22, 3.5, 'splash',  3, 5),
+        'Earth':     (18, 4.0, 'shatter', 4, 7),
+        'Holy':      (25, 1.5, 'radiate', 3, 5),
+        'Light':     (25, 1.5, 'radiate', 3, 5),
+        'Darkness':  (22, 2.5, 'implode', 3, 6),
+        'Shadow':    (22, 2.5, 'implode', 3, 6),
+        'Psionic':   (20, 2.0, 'spiral',  3, 5),
+        'Demonic':   (25, 3.5, 'burst',   3, 6),
+        'Healing':   (20, 2.0, 'rise',    3, 5),
+        'Physical':  (15, 4.0, 'burst',   2, 4),
+    }
+    count, speed, style, sz_min, sz_max = configs.get(dtype, (20, 3.0, 'burst', 3, 5))
+    # Healing targets player panel, everything else targets monster panel
+    target_id = 'player_panel' if dtype == 'Healing' else 'monster_panel'
+
+    return (
+        '<script>(function(){'
+        'setTimeout(function(){'
+        'var tgt=document.getElementById("' + target_id + '");'
+        'if(!tgt)return;'
+        'var rect=tgt.getBoundingClientRect();'
+        'var cx=rect.left+rect.width/2;'
+        'var cy=rect.top+rect.height/2;'
+        'var count=' + str(count) + ';'
+        'var spd=' + str(speed) + ';'
+        'var color="' + color + '";'
+        'var szMin=' + str(sz_min) + ',szMax=' + str(sz_max) + ';'
+
+        'for(var i=0;i<count;i++){'
+        'var p=document.createElement("div");'
+        'var sz=szMin+Math.random()*(szMax-szMin);'
+        'p.style.cssText="position:fixed;border-radius:50%;pointer-events:none;z-index:99997;'
+        'width:"+sz+"px;height:"+sz+"px;background:"+color+";'
+        'box-shadow:0 0 "+sz+"px "+color+";'
+        'left:"+cx+"px;top:"+cy+"px;opacity:1;";'
+        'document.body.appendChild(p);'
+
+        # Velocity based on style
+        'var angle=Math.random()*Math.PI*2;'
+        'var v=spd*(0.5+Math.random());'
+        'var vx,vy;'
+        'var sty="' + style + '";'
+        'if(sty==="rise"){vx=(Math.random()-0.5)*2;vy=-v;}'
+        'else if(sty==="fall"){vx=(Math.random()-0.5)*2;vy=v*0.7;}'
+        'else if(sty==="burst"){vx=Math.cos(angle)*v;vy=Math.sin(angle)*v;}'
+        'else if(sty==="splash"){vx=Math.cos(angle)*v;vy=Math.sin(angle)*v*0.5+1;}'
+        'else if(sty==="shatter"){vx=Math.cos(angle)*v;vy=Math.sin(angle)*v*0.3+2;}'
+        'else if(sty==="radiate"){vx=Math.cos(angle)*v*0.6;vy=Math.sin(angle)*v*0.6;}'
+        'else if(sty==="implode"){'
+        'var dist=30+Math.random()*40;'
+        'p.style.left=(cx+Math.cos(angle)*dist)+"px";'
+        'p.style.top=(cy+Math.sin(angle)*dist)+"px";'
+        'vx=-Math.cos(angle)*v*0.8;vy=-Math.sin(angle)*v*0.8;}'
+        'else if(sty==="spiral"){'
+        'var r=10+Math.random()*20;'
+        'p.style.left=(cx+Math.cos(angle)*r)+"px";'
+        'p.style.top=(cy+Math.sin(angle)*r)+"px";'
+        'vx=Math.cos(angle+1.5)*v;vy=Math.sin(angle+1.5)*v;}'
+        'else{vx=Math.cos(angle)*v;vy=Math.sin(angle)*v;}'
+
+        # Animate with requestAnimationFrame
+        'var life=0;var maxLife=20+Math.floor(Math.random()*20);'
+        'var grav=(sty==="splash"||sty==="shatter")?0.15:0;'
+        '(function(el,dx,dy,ml,gv){'
+        'var l=0;'
+        'function step(){'
+        'l++;dx*=0.97;dy+=gv;'
+        'el.style.left=(parseFloat(el.style.left)+dx)+"px";'
+        'el.style.top=(parseFloat(el.style.top)+dy)+"px";'
+        'el.style.opacity=""+(1-l/ml);'
+        'if(l<ml)requestAnimationFrame(step);'
+        'else if(el.parentNode)el.parentNode.removeChild(el);'
+        '}'
+        'requestAnimationFrame(step);'
+        '})(p,vx,vy,maxLife,grav);'
+        '}'
+
+        '},400);'  # 400ms delay: particles start as spell banner fades
+        '})();</script>'
+    )
+
+
 def generate_dice_roll_js(dice_rolls):
     """Generate animated 3D opposed dice rolls inside combat panels.
 
@@ -6048,6 +6155,7 @@ class WizardsCavernApp(toga.App):
                 window.addEventListener('load', updateLog);
             </script>
             {generate_spell_cast_js(gs.last_spell_cast)}
+            {generate_spell_particles_js(gs.last_spell_cast)}
             {generate_dice_roll_js(gs.last_dice_rolls)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
         </body>
