@@ -483,9 +483,11 @@ def generate_spell_particles_js(spell):
         'var v=spd*(0.5+Math.random());'
         'var px=cx,py=cy,vx,vy;'
         'var sz=szMin+Math.random()*(szMax-szMin);'
+        # Level-scaled spawn spread: particles scatter from a wider area at higher levels
+        'var spread=' + str(10 + lvl * 12) + ';'
 
-        'if(sty==="rise"){vx=(Math.random()-0.5)*2;vy=-v;}'
-        'else if(sty==="fall"){vx=(Math.random()-0.5)*2;vy=v*0.7;}'
+        'if(sty==="rise"){px=cx+(Math.random()-0.5)*spread;vx=(Math.random()-0.5)*3;vy=-v;}'
+        'else if(sty==="fall"){px=cx+(Math.random()-0.5)*spread*1.5;py=cy-spread*0.5-Math.random()*20;vx=(Math.random()-0.5)*2;vy=v*0.7;}'
         'else if(sty==="burst"){vx=Math.cos(angle)*v;vy=Math.sin(angle)*v;}'
         'else if(sty==="splash"){vx=Math.cos(angle)*v;vy=Math.sin(angle)*v*0.5+1;}'
         'else if(sty==="shatter"){vx=Math.cos(angle)*v;vy=Math.sin(angle)*v*0.3+2;}'
