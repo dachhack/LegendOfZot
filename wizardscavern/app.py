@@ -869,6 +869,134 @@ def generate_dice_roll_js(dice_rolls):
     return js
 
 
+def generate_concentration_check_js(conc_roll):
+    """Generate a single d20 concentration check dice animation.
+
+    conc_roll: (raw_roll, modifier, total, dc, passed)
+    Shows a single d20 in the player panel with CONC label, glowing
+    green on pass or red on fail. On failure, plays a fizzle overlay.
+    """
+    if not conc_roll:
+        return ""
+    raw_roll, modifier, total, dc, passed = conc_roll
+    win_js = 1 if passed else 0
+    # Reuse the makeDice infrastructure from dice rolls
+    label_color = '#69F0AE' if passed else '#FF5252'
+    result_label = 'HELD!' if passed else 'FIZZLE!'
+
+    js = (
+        '<script>(function(){'
+        # Create a single dice in the player ATK slot
+        'var container=document.getElementById("player_atk_dice");'
+        'if(!container)return;'
+
+        'var wrap=document.createElement("div");'
+        'wrap.style.cssText="position:absolute;left:0;right:0;top:0;bottom:0;'
+        'display:flex;flex-direction:column;align-items:center;justify-content:center;'
+        'opacity:0;transition:opacity 0.2s;overflow:visible;";'
+
+        # Top label
+        'var top=document.createElement("div");'
+        'top.style.cssText="font-size:7px;font-weight:bold;font-family:monospace;'
+        'margin-bottom:1px;letter-spacing:0.5px;white-space:nowrap;'
+        f'color:{label_color};";'
+        f'top.textContent="CONC +{modifier}";'
+        'wrap.appendChild(top);'
+
+        # The dice
+        'var sz=28;'
+        'var dice=document.createElement("div");'
+        'dice.style.cssText='
+        '"width:"+sz+"px;height:"+sz+"px;'
+        'display:flex;align-items:center;justify-content:center;'
+        'font-size:13px;font-weight:bold;font-family:monospace;'
+        'color:#FFF;background:#444;margin:0 auto;'
+        'text-shadow:0 0 3px #000;'
+        'border:2px solid #777;border-radius:2px;'
+        'clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);'
+        'perspective:120px;";'
+        'dice.textContent="";'
+        'wrap.appendChild(dice);'
+
+        # Bottom label: shows DC
+        'var dlbl=document.createElement("div");'
+        'dlbl.style.cssText="font-size:7px;color:#888;font-family:monospace;margin-top:1px;";'
+        f'dlbl.textContent="DC {dc}";'
+        'wrap.appendChild(dlbl);'
+
+        'container.appendChild(wrap);'
+
+        # Tumble animation (delayed to play after monster attack dice)
+        'setTimeout(function(){'
+        'wrap.style.opacity="1";'
+        'var frame=0;var total=8;var flicker;'
+        'flicker=setInterval(function(){'
+        'frame++;'
+        'if(frame<total){'
+        'dice.textContent=Math.floor(Math.random()*20)+1;'
+        'var rx=(Math.random()*360-180);'
+        'var ry=(Math.random()*360-180);'
+        'dice.style.transform="perspective(120px) rotateX("+rx+"deg) rotateY("+ry+"deg)";'
+        '}else{'
+        'clearInterval(flicker);'
+        f'dice.textContent={total};'
+        f'if({modifier}>0){{dlbl.textContent="{raw_roll}+{modifier} vs DC {dc}";}}'
+        'dice.style.transform="perspective(120px) rotateX(0) rotateY(0)";'
+        f'if({win_js}){{'
+        'dice.style.borderColor="#69F0AE";dice.style.color="#69F0AE";'
+        'dice.style.background="#2a3a2a";'
+        'dice.style.boxShadow="0 0 6px #69F0AE";'
+        f'top.textContent="{result_label}";'
+        'top.style.color="#69F0AE";'
+        '}else{'
+        'dice.style.borderColor="#FF5252";dice.style.color="#FF5252";'
+        'dice.style.background="#3a2a2a";'
+        'dice.style.boxShadow="0 0 6px #FF5252";'
+        f'top.textContent="{result_label}";'
+        'top.style.color="#FF5252";'
+        'top.style.textShadow="0 0 6px #FF5252";'
+    )
+
+    # Fizzle overlay on failure
+    if not passed:
+        js += (
+            # Screen flash red + "FIZZLE!" banner
+            'var fz=document.createElement("div");'
+            'fz.style.cssText="position:fixed;top:38%;left:50%;transform:translate(-50%,-50%) scale(0.7);'
+            'z-index:99999;text-align:center;pointer-events:none;opacity:0;'
+            'font-family:monospace;font-size:22px;font-weight:bold;'
+            'letter-spacing:6px;text-transform:uppercase;'
+            'color:#FF5252;text-shadow:0 0 12px #FF5252,0 0 4px #000;";'
+            'fz.textContent="FIZZLE!";'
+            'document.body.appendChild(fz);'
+            'setTimeout(function(){fz.style.transition="opacity 0.3s";fz.style.opacity="1";'
+            'fz.style.transform="translate(-50%,-50%) scale(1)";},50);'
+            'setTimeout(function(){fz.style.transition="opacity 0.4s";fz.style.opacity="0";},800);'
+            'setTimeout(function(){if(fz.parentNode)fz.parentNode.removeChild(fz);},1300);'
+            # Red screen tint
+            'var tint=document.createElement("div");'
+            'tint.style.cssText="position:fixed;inset:0;background:rgba(255,50,50,0.15);'
+            'z-index:99998;pointer-events:none;opacity:0;transition:opacity 0.15s;";'
+            'document.body.appendChild(tint);'
+            'setTimeout(function(){tint.style.opacity="1";},50);'
+            'setTimeout(function(){tint.style.opacity="0";},400);'
+            'setTimeout(function(){if(tint.parentNode)tint.parentNode.removeChild(tint);},600);'
+        )
+
+    js += (
+        '}'  # close else (fail styling)
+        'setTimeout(function(){'
+        'wrap.style.transition="opacity 0.5s";wrap.style.opacity="0";'
+        'setTimeout(function(){if(wrap.parentNode)wrap.parentNode.removeChild(wrap);},500);'
+        '},1800);'
+        '}'  # close landed frame
+        '},45);'  # close setInterval
+        '},3200);'  # delay: after monster attack dice sequence
+        '})();</script>'
+    )
+    return js
+
+
 def generate_monster_defeat_js(monster_name):
     """Generate a sequenced monster defeat animation inside the combat panel.
 
@@ -4299,9 +4427,13 @@ class WizardsCavernApp(toga.App):
                 for i, spell in enumerate(available_spells):
                     can_cast = gs.player_character.mana >= spell.mana_cost
                     color = "#4CAF50" if can_cast else "#888"
+                    charge_turns = get_spell_charge_turns(spell)
+                    charge_tag = ""
+                    if charge_turns > 0:
+                        charge_tag = f' <span style="color:#CE93D8;">[{charge_turns}T charge]</span>'
 
                     spell_line = f'<div style="color: {color}; font-size: 12px; margin-bottom: 6px; padding: 4px; border-radius: 2px;">'
-                    spell_line += f'<b>{i + 1}. {spell.name}</b> ({spell.mana_cost} MP)<br>'
+                    spell_line += f'<b>{i + 1}. {spell.name}</b> ({spell.mana_cost} MP){charge_tag}<br>'
                     spell_line += f'&nbsp;&nbsp;Lvl {spell.level} | '
 
                     if spell.spell_type == 'damage':
@@ -4405,7 +4537,36 @@ class WizardsCavernApp(toga.App):
             combat_commands = "a = attack | f = flee | i = inventory"
             if can_cast:
                 combat_commands += " | c = cast spell"
-            
+
+            # Channeling indicator — shown when player is mid-channel
+            channeling_html = ""
+            if gs.spell_charging:
+                ch = gs.spell_charging
+                spell_name = ch['spell'].name
+                turns_left = ch['turns_remaining']
+                total_turns = ch['total_turns']
+                # Progress bar: filled segments for completed turns
+                filled = total_turns - turns_left
+                bar_segments = ''.join(
+                    f'<span style="color:#E040FB;">{"*" if i < filled else "."}</span>'
+                    for i in range(total_turns)
+                )
+                channeling_html = f"""
+                <div style="padding: 6px; border: 2px solid #E040FB; border-radius: 4px; margin-top: 4px;
+                            background: rgba(224,64,251,0.08); animation: channelPulse 1.5s ease-in-out infinite;">
+                    <div style="color: #E040FB; font-weight: bold; font-size: 12px; margin-bottom: 2px;">
+                        CHANNELING: {spell_name}
+                    </div>
+                    <div style="font-size: 10px; color: #CE93D8;">
+                        [{bar_segments}] {turns_left} turn{'s' if turns_left != 1 else ''} remaining
+                    </div>
+                    <div style="font-size: 9px; color: #888; margin-top: 2px;">
+                        Concentration: d20 + INT/{gs.player_character.intelligence // 4}
+                    </div>
+                </div>
+                """
+                combat_commands = "any key = continue channeling"
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
@@ -4418,6 +4579,7 @@ class WizardsCavernApp(toga.App):
                         <div style="width: 100%; max-width: 300px;">
                             {monster_html}
                             {player_combat_html}
+                            {channeling_html}
                         </div>
                     </div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
@@ -6327,6 +6489,12 @@ class WizardsCavernApp(toga.App):
                     80% {{ transform: rotate(5deg); }}
                 }}
 
+                /* Spell channeling pulse on the channeling indicator */
+                @keyframes channelPulse {{
+                    0%, 100% {{ border-color: #E040FB; box-shadow: 0 0 4px rgba(224,64,251,0.3); }}
+                    50% {{ border-color: #CE93D8; box-shadow: 0 0 12px rgba(224,64,251,0.6); }}
+                }}
+
                 /* Game log: no animation (fixed, persistent) */
                 #game-log {{
                     animation: none;
@@ -6383,6 +6551,7 @@ class WizardsCavernApp(toga.App):
             {generate_spell_cast_js(gs.last_spell_cast)}
             {generate_spell_particles_js(gs.last_spell_cast)}
             {generate_dice_roll_js(gs.last_dice_rolls)}
+            {generate_concentration_check_js(gs.last_concentration_roll)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
         </body>
         </html>
@@ -6391,6 +6560,7 @@ class WizardsCavernApp(toga.App):
         gs.monster_defeated_anim = None
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
+        gs.last_concentration_roll = None
         return result
     
 

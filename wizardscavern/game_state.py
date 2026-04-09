@@ -351,6 +351,15 @@ last_spell_cast = None            # Spell object from the last cast (for animati
 monster_acts_first = False        # Initiative result: True if monster swings before player this round
 
 # ============================================================================
+# SPELL CHANNELING / CHARGING STATE
+# ============================================================================
+# None when not channeling. During channeling:
+# {'spell': <Spell obj>, 'turns_remaining': int, 'total_turns': int}
+# Mana is spent when channeling begins; spell fires when turns_remaining hits 0.
+spell_charging = None
+last_concentration_roll = None    # (raw_roll, modifier, total, dc, passed) for dice anim
+
+# ============================================================================
 # MONSTER DEFEAT ANIMATION STATE
 # ============================================================================
 monster_defeated_anim = None  # Set to monster name string when killed, cleared after render

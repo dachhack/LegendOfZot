@@ -43,6 +43,167 @@ def _main():
     return main
 
 
+# ---------------------------------------------------------------------------
+# SPELL CHANNELING / CHARGING HELPERS
+# ---------------------------------------------------------------------------
+def get_spell_charge_turns(spell):
+    """Return the number of charge turns required for a spell.
+    L0-1: 0 (instant), L2-3: 1 turn, L4-5: 2 turns."""
+    lvl = getattr(spell, 'level', 0)
+    if lvl <= 1:
+        return 0
+    elif lvl <= 3:
+        return 1
+    else:
+        return 2
+
+
+def concentration_check(player_character, damage_taken):
+    """Roll a concentration check: d20 + INT//4 vs DC (damage_taken // 2, min 5).
+    Returns (passed, raw_roll, modifier, total, dc)."""
+    modifier = player_character.intelligence // 4
+    dc = max(5, damage_taken // 2)
+    raw_roll = random.randint(1, 20)
+    total = raw_roll + modifier
+    passed = total >= dc
+    return passed, raw_roll, modifier, total, dc
+
+
+def _do_concentration_check(player_character, damage_taken):
+    """Perform concentration check after taking damage while channeling.
+    Logs result and stores dice data for animation. Returns True if passed."""
+    if damage_taken <= 0:
+        return True  # No damage, no check needed
+
+    passed, raw_roll, modifier, total, dc = concentration_check(player_character, damage_taken)
+    gs.last_concentration_roll = (raw_roll, modifier, total, dc, passed)
+
+    if passed:
+        add_log(f"{COLOR_CYAN}Concentration check: d20({raw_roll})+INT/4({modifier}) = {total} vs DC {dc} - HELD!{COLOR_RESET}")
+    else:
+        add_log(f"{COLOR_RED}Concentration check: d20({raw_roll})+INT/4({modifier}) = {total} vs DC {dc} - FAILED!{COLOR_RESET}")
+        add_log(f"{COLOR_RED}Your spell fizzles! The mana is lost!{COLOR_RESET}")
+        gs.spell_charging = None
+    return passed
+
+
+def _execute_charged_spell(player_character):
+    """Fire the fully-charged spell. Mana was already spent at channel start."""
+    charging = gs.spell_charging
+    if not charging:
+        return False
+    spell = charging['spell']
+    gs.spell_charging = None
+
+    gs.last_spell_cast = spell
+    add_log(f"{COLOR_CYAN}Your channeling is complete!{COLOR_RESET}")
+
+    # Apply the spell effect (mana already deducted, skip that part)
+    # Auto-identify
+    from .items import is_item_identified as _is_id, identify_item as _id_item
+    if not _is_id(spell):
+        _id_item(spell)
+
+    # Check silence (could have been applied during channeling)
+    for effect_name, effect in player_character.status_effects.items():
+        if effect.effect_type == 'silence':
+            add_log(f"{COLOR_YELLOW}You are silenced! The spell fizzles even as you finish channeling!{COLOR_RESET}")
+            return False
+
+    target = gs.active_monster
+
+    if spell.spell_type == 'healing':
+        healing_amount = spell.base_power + (player_character.intelligence // 2)
+        player_character.health += healing_amount
+        if player_character.health > player_character.max_health:
+            player_character.health = player_character.max_health
+        gs.last_player_heal = healing_amount
+        add_log(f"{COLOR_GREEN}You healed for {healing_amount} HP! Current health: {player_character.health}.{COLOR_RESET}")
+        return True
+    elif spell.spell_type == 'damage':
+        int_bonus = (player_character.intelligence // 2) + (max(0, player_character.intelligence - 10) * spell.level // 3)
+        base_damage = spell.base_power + int_bonus
+        effective_damage = base_damage
+        if spell.damage_type != 'Physical':
+            if spell.damage_type in target.elemental_weakness:
+                effective_damage = int(effective_damage * 2.5)
+                add_log(f"{COLOR_RED}{target.name} is weak to {spell.damage_type}! Devastating damage!{COLOR_RESET}")
+            elif spell.damage_type in target.elemental_strength:
+                effective_damage = int(effective_damage * 0.5)
+                add_log(f"{COLOR_GREEN}{target.name} is resistant to {spell.damage_type}! Reduced damage.{COLOR_RESET}")
+        if spell.damage_type in target.elemental_weakness:
+            reduced_defense = target.defense // 2
+        else:
+            reduced_defense = target.defense
+        final_damage = max(1, effective_damage - reduced_defense)
+        add_log(f"{COLOR_RED}Your {spell.name} hits {target.name} for {final_damage} {spell.damage_type} damage!{COLOR_RESET}")
+        target.take_damage(final_damage, spell.damage_type)
+        return True
+    elif spell.spell_type == 'remove_status':
+        if spell.status_effect_name:
+            if spell.status_effect_name in player_character.status_effects:
+                player_character.remove_status_effect(spell.status_effect_name)
+                add_log(f"{COLOR_GREEN}{player_character.name} cleansed {spell.status_effect_name}!{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_YELLOW}{player_character.name} is not affected by {spell.status_effect_name}.{COLOR_RESET}")
+        return True
+    elif spell.spell_type == 'add_status_effect':
+        if spell.status_effect_name and spell.status_effect_type:
+            player_character.add_status_effect(
+                effect_name=spell.status_effect_name,
+                duration=spell.status_effect_duration,
+                effect_type=spell.status_effect_type,
+                magnitude=spell.status_effect_magnitude,
+                description=spell.description
+            )
+            add_log(f"{COLOR_GREEN}{player_character.name} is now affected by {spell.status_effect_name}!{COLOR_RESET}")
+        return True
+    elif spell.spell_type == 'debuff_target':
+        if spell.status_effect_name and spell.status_effect_type:
+            target.add_status_effect(
+                effect_name=spell.status_effect_name,
+                duration=spell.status_effect_duration,
+                effect_type=spell.status_effect_type,
+                magnitude=spell.status_effect_magnitude,
+                description=spell.description
+            )
+            add_log(f"{COLOR_PURPLE}{target.name} is {spell.status_effect_name}!{COLOR_RESET}")
+        return True
+    else:
+        add_log(f"{COLOR_YELLOW}Unknown spell type for {spell.name}. No effect.{COLOR_RESET}")
+        return False
+
+
+def _monster_attack_during_channeling(player_character):
+    """Let the monster attack during a channeling turn. Returns damage dealt to player."""
+    if not gs.active_monster or not gs.active_monster.is_alive():
+        return 0
+
+    # Check time stop
+    monster_frozen = any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values())
+    if monster_frozen:
+        add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time!{COLOR_RESET}")
+        return 0
+
+    # Check invisibility
+    if 'Invisibility' in player_character.status_effects:
+        add_log(f"{COLOR_PURPLE}[Invisible] The {gs.active_monster.name} cannot see you!{COLOR_RESET}")
+        return 0
+
+    # Track HP before attack to calculate damage taken
+    hp_before = player_character.health
+    gs.active_monster.attack_target(player_character)
+
+    # Frost Armor reflect
+    if 'Frost Armor' in player_character.status_effects:
+        reflect_damage = player_character.status_effects['Frost Armor'].magnitude
+        gs.active_monster.take_damage(reflect_damage, "Ice")
+        add_log(f"{COLOR_CYAN} Frost Armor reflects {reflect_damage} ice damage!{COLOR_RESET}")
+
+    damage_taken = max(0, hp_before - player_character.health)
+    return damage_taken
+
+
 def _check_bug_queen_spawn(player_character, my_tower):
     """After a bug monster is killed, check if all bugs on the floor are dead.
     If so, the Bug Queen spawns to avenge her swarm."""
@@ -122,12 +283,15 @@ def process_combat_action(player_character, my_tower, cmd):
     gs.last_monster_damage_badge = None
     gs.last_player_damage_badge = None
     gs.last_spell_cast = None
+    gs.last_concentration_roll = None
     # DON'T reset monster_acts_first here — it persists from the init roll
     # Snapshot HP BEFORE any damage so the render can show pre-damage bars
     gs.pre_round_monster_hp = gs.active_monster.health if gs.active_monster else None
     gs.pre_round_player_hp = player_character.health
 
     if cmd == "init":
+        # Clear any stale channeling from a previous fight
+        gs.spell_charging = None
         # Get player title for intelligent monsters
         main = _main()
         player_title = main.get_player_title(player_character)
@@ -333,6 +497,142 @@ def process_combat_action(player_character, my_tower, cmd):
         gs.inventory_filter = None
         main.handle_inventory_menu(player_character, my_tower, "init")
         return
+
+    # -------------------------------------------------------------------------
+    # SPELL CHANNELING — player is locked in, auto-continues each turn
+    # -------------------------------------------------------------------------
+    if gs.spell_charging:
+        gs.last_concentration_roll = None
+        charging = gs.spell_charging
+
+        # Paralysis/freeze breaks channeling
+        is_paralyzed = any(e.effect_type in ('paralysis', 'freeze')
+                          for e in player_character.status_effects.values())
+        if is_paralyzed:
+            effect_name = next(n for n, e in player_character.status_effects.items()
+                               if e.effect_type in ('paralysis', 'freeze'))
+            add_log(f"{COLOR_RED}You are {effect_name.lower()}! Your channeling is disrupted!{COLOR_RESET}")
+            add_log(f"{COLOR_RED}Your {charging['spell'].name} fizzles! The mana is lost!{COLOR_RESET}")
+            gs.spell_charging = None
+            # Monster still attacks
+            if gs.active_monster and gs.active_monster.is_alive():
+                if not any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values()):
+                    gs.active_monster.attack_target(player_character)
+                    if not player_character.is_alive():
+                        add_log(f"{COLOR_RED}You were defeated...{COLOR_RESET}")
+                        gs.prompt_cntl = "death_screen"
+            return
+
+        # Decrement turns remaining
+        charging['turns_remaining'] -= 1
+
+        if charging['turns_remaining'] > 0:
+            # Still channeling — monster attacks, concentration check
+            add_log(f"{COLOR_PURPLE}Channeling {charging['spell'].name}... ({charging['turns_remaining']} turn{'s' if charging['turns_remaining'] > 1 else ''} remaining){COLOR_RESET}")
+
+            damage_taken = _monster_attack_during_channeling(player_character)
+
+            if not player_character.is_alive():
+                add_log(f"{COLOR_RED}You were defeated while channeling...{COLOR_RESET}")
+                gs.spell_charging = None
+                gs.prompt_cntl = "death_screen"
+                return
+
+            if damage_taken > 0 and gs.spell_charging:
+                _do_concentration_check(player_character, damage_taken)
+
+            return  # Stay in combat_mode, still channeling
+
+        else:
+            # Channeling complete! Fire the spell
+            spell_successful = _execute_charged_spell(player_character)
+
+            if spell_successful:
+                gs.game_stats['spells_cast'] = gs.game_stats.get('spells_cast', 0) + 1
+                check_achievements(player_character)
+
+                # Check if monster was killed
+                if gs.active_monster and not gs.active_monster.is_alive():
+                    gs.monster_defeated_anim = gs.active_monster.name
+                    add_log(f"{COLOR_GREEN}You defeated the {gs.active_monster.name}!{COLOR_RESET}")
+                    add_log(f"{COLOR_GREEN}{gs.active_monster.victory_text}{COLOR_RESET}")
+
+                    xp_reward = (gs.active_monster.level + 1) * 5
+                    gold_drop = random.randint(1, 10) * (gs.active_monster.level + 1)
+
+                    if 'Fortune' in player_character.status_effects:
+                        bonus_pct = player_character.status_effects['Fortune'].magnitude
+                        bonus_gold = int(gold_drop * bonus_pct / 100)
+                        gold_drop += bonus_gold
+                        add_log(f"{COLOR_YELLOW} [Fortune] +{bonus_gold} bonus gold (+{bonus_pct}%)!{COLOR_RESET}")
+
+                    if 'Experience Boost' in player_character.status_effects:
+                        bonus_pct = player_character.status_effects['Experience Boost'].magnitude
+                        bonus_xp = int(xp_reward * bonus_pct / 100)
+                        xp_reward += bonus_xp
+                        add_log(f"{COLOR_PURPLE} [Experience Boost] +{bonus_xp} bonus XP (+{bonus_pct}%)!{COLOR_RESET}")
+
+                    player_character.gain_experience(xp_reward)
+                    player_character.gold += gold_drop
+                    add_log(f"You found {gold_drop} gold.")
+                    gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + gold_drop
+                    check_achievements(player_character)
+
+                    trophy = get_trophy_drop(gs.active_monster.name)
+                    if trophy:
+                        stacked = False
+                        for inv_item in player_character.inventory.items:
+                            if isinstance(inv_item, Trophy) and inv_item.name == trophy.name:
+                                inv_item.count += 1
+                                stacked = True
+                                break
+                        if not stacked:
+                            player_character.inventory.add_item(trophy)
+                        add_log(f"{COLOR_YELLOW}[Trophy] You collected: {trophy.name}! (for the Taxidermist){COLOR_RESET}")
+
+                    if gs.active_monster and gs.active_monster.properties.get('is_bug_monster'):
+                        _drop_bug_gear(player_character)
+
+                    if gs.active_monster and gs.active_monster.properties.get('is_bug_queen'):
+                        gs.bug_queen_defeated = True
+                        growth_mushroom = Potion(
+                            name="Zot's Growth Mushroom",
+                            description="A luminous mushroom pulsing with restorative magic. Eating it will reverse Zot's shrinking spell.",
+                            value=0, level=0, potion_type='growth_mushroom', effect_magnitude=0, duration=0
+                        )
+                        player_character.inventory.add_item(growth_mushroom)
+                        add_log("")
+                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                        add_log(f"{COLOR_YELLOW}The Bug Queen drops a glowing mushroom!{COLOR_RESET}")
+                        add_log(f"{COLOR_GREEN}You obtained: Zot's Growth Mushroom!{COLOR_RESET}")
+                        add_log(f"{COLOR_CYAN}Use it from your inventory to restore your size!{COLOR_RESET}")
+                        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+                        add_log("")
+
+                    gs.victory_monster_name = gs.active_monster.name
+                    current_floor = my_tower.floors[player_character.z]
+                    room = current_floor.grid[player_character.y][player_character.x]
+                    _was_bug_monster = gs.active_monster.properties.get('is_bug_monster', False)
+                    room.room_type = '.'
+                    drop_monster_items(gs.active_monster, player_character)
+                    drop_monster_meat(gs.active_monster, player_character)
+                    gs.active_monster = None
+
+                    if _was_bug_monster:
+                        _check_bug_queen_spawn(player_character, my_tower)
+
+                    gs.prompt_cntl = "combat_victory"
+                    return
+
+                elif gs.active_monster:  # Monster still alive, it attacks back
+                    damage_taken = _monster_attack_during_channeling(player_character)
+                    if not player_character.is_alive():
+                        add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")
+                        gs.prompt_cntl = "death_screen"
+                        return
+
+            gs.prompt_cntl = "combat_mode"
+            return
 
     # -------------------------------------------------------------------------
     # DEBUFF CHECKS — paralysis/freeze skip turn, confusion/blindness modify
@@ -1151,6 +1451,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
     gs.last_spell_cast = None
     gs.last_monster_damage_badge = None
     gs.last_player_damage_badge = None
+    gs.last_concentration_roll = None
     # Snapshot HP BEFORE any damage so the render shows pre-damage bars
     gs.pre_round_monster_hp = gs.active_monster.health if gs.active_monster else None
     gs.pre_round_player_hp = player_character.health
@@ -1188,7 +1489,58 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                 gs.prompt_cntl = "combat_mode"
                 return
 
-            # Cast the spell
+            # Check if this spell requires channeling (L2+ spells)
+            charge_turns = get_spell_charge_turns(chosen_spell)
+
+            if charge_turns > 0:
+                # --- BEGIN CHANNELING ---
+                # Check silence
+                for effect_name, effect in player_character.status_effects.items():
+                    if effect.effect_type == 'silence':
+                        add_log(f"{COLOR_YELLOW}You are silenced and cannot cast spells!{COLOR_RESET}")
+                        gs.prompt_cntl = "spell_casting_mode"
+                        add_log("Choose another spell or 'x' to cancel.")
+                        return
+
+                # Check mana (with Knowledge Shard discount)
+                actual_cost = chosen_spell.mana_cost
+                if gs.shards_obtained.get('knowledge'):
+                    actual_cost = int(chosen_spell.mana_cost * 0.8)
+                    add_log(f"{COLOR_PURPLE}[Knowledge Shard] Mana cost reduced: {chosen_spell.mana_cost} -> {actual_cost}!{COLOR_RESET}")
+
+                if player_character.mana < actual_cost:
+                    add_log(f"{COLOR_YELLOW}Not enough mana to cast {chosen_spell.name}! You have {player_character.mana}/{player_character.max_mana} mana.{COLOR_RESET}")
+                    gs.prompt_cntl = "spell_casting_mode"
+                    add_log("Choose another spell or 'x' to cancel.")
+                    return
+
+                # Spend mana and begin channeling
+                player_character.mana -= actual_cost
+                gs.spell_charging = {
+                    'spell': chosen_spell,
+                    'turns_remaining': charge_turns,
+                    'total_turns': charge_turns,
+                }
+                add_log(f"{COLOR_PURPLE}You begin channeling {chosen_spell.name}! ({charge_turns} turn{'s' if charge_turns > 1 else ''} remaining){COLOR_RESET}")
+                add_log(f"{COLOR_CYAN}Mana spent: {actual_cost}. Remaining: {player_character.mana}.{COLOR_RESET}")
+
+                # Monster attacks during the channeling initiation turn
+                damage_taken = _monster_attack_during_channeling(player_character)
+
+                if not player_character.is_alive():
+                    add_log(f"{COLOR_RED}You were defeated while channeling...{COLOR_RESET}")
+                    gs.spell_charging = None
+                    gs.prompt_cntl = "death_screen"
+                    return
+
+                # Concentration check if damaged
+                if damage_taken > 0 and gs.spell_charging:
+                    _do_concentration_check(player_character, damage_taken)
+
+                gs.prompt_cntl = "combat_mode"
+                return
+
+            # --- INSTANT CAST (L0-1 spells, original behavior) ---
             spell_cast_successful = player_character.cast_spell(chosen_spell, gs.active_monster)
 
             if spell_cast_successful:
