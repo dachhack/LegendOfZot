@@ -2415,16 +2415,18 @@ def generate_vendor_inventory(floor_level, room):
     if not available_items:
         available_items = [item for item in ALL_ITEM_TEMPLATES if not isinstance(item, (Weapon, Armor))]
 
-    # Add 1-2 enhanced weapons
+    # Add 1-2 enhanced weapons (BUC assigned from vendor source)
     num_weapons = random.randint(1, 2)
     for _ in range(num_weapons):
         weapon = create_random_enhanced_weapon(floor_level)
+        weapon.buc_status = roll_buc_status(floor_level, 'vendor')
         inventory.append(weapon)
-    
-    # Add 1-2 enhanced armors
+
+    # Add 1-2 enhanced armors (BUC assigned from vendor source)
     num_armors = random.randint(1, 2)
     for _ in range(num_armors):
         armor = create_random_enhanced_armor(floor_level)
+        armor.buc_status = roll_buc_status(floor_level, 'vendor')
         inventory.append(armor)
 
     # Always stock 2-4 healing potions appropriate to floor level
@@ -2988,10 +2990,12 @@ def drop_monster_items(monster, player_character):
     if roll < 0.25:
         # Weapon drop
         item = create_random_enhanced_weapon(floor_lvl)
+        item.buc_status = roll_buc_status(floor_lvl, 'monster')
         add_log(f"{COLOR_YELLOW}The {monster.name} dropped {get_article(item.name)} {item.name}!{COLOR_RESET}")
     elif roll < 0.50:
         # Armor drop
         item = create_random_enhanced_armor(floor_lvl)
+        item.buc_status = roll_buc_status(floor_lvl, 'monster')
         add_log(f"{COLOR_YELLOW}The {monster.name} dropped some {item.name}!{COLOR_RESET}")
     elif roll < 0.70:
         # Potion drop

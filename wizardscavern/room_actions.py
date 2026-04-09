@@ -14,7 +14,7 @@ from .game_data import TROPHY_DROPS, TAXIDERMIST_COLLECTIONS, BUG_MONSTER_TEMPLA
 from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    Flare, Lantern, LanternFuel, Food, Meat, CookingKit, Ingredient,
                    Trophy, Rune, Shard, identify_item, is_item_identified,
-                   get_item_display_name, _create_item_copy)
+                   get_item_display_name, _create_item_copy, roll_buc_status)
 from .characters import Monster, get_sorted_inventory, format_item_for_display, burn_inventory_items
 from .achievements import check_achievements
 from .zotle import check_zotle_guess
@@ -363,8 +363,8 @@ def process_altar_action(player_character, my_tower, cmd):
         if roll < 0.50:
             # Return a sealed weapon or armor (divine punishment — cannot be upgraded)
             sealed_options = [
-                Weapon("Sealed Blade", "A blade bound by dark magic.", attack_bonus=max(1, player_character.z), value=10, level=player_character.z, is_sealed=True),
-                Armor("Sealed Mail", "Armor locked by a divine seal.", defense_bonus=max(1, player_character.z // 2), value=10, level=player_character.z, is_sealed=True),
+                Weapon("Sealed Blade", "A blade bound by dark magic.", attack_bonus=max(1, player_character.z), value=10, level=player_character.z, is_sealed=True, buc_status='cursed'),
+                Armor("Sealed Mail", "Armor locked by a divine seal.", defense_bonus=max(1, player_character.z // 2), value=10, level=player_character.z, is_sealed=True, buc_status='cursed'),
             ]
             sealed_item = random.choice(sealed_options)
             player_character.inventory.add_item(sealed_item)
@@ -1901,11 +1901,12 @@ def award_tomb_guardian_reward(player_character):
             level=floor_level,
             description=f"{w_desc} [SEALED - Cannot be upgraded]",
             value=400 + floor_level * 20,
-            is_sealed=True  # Cannot be upgraded!
+            is_sealed=True,  # Cannot be upgraded!
+            buc_status=roll_buc_status(floor_level, 'tomb'),
         )
         player_character.inventory.add_item(weapon)
         add_log(f"{COLOR_PURPLE}Found: {w_name} (Attack +{base_attack}) [SEALED]{COLOR_RESET}")
-        add_log(f"{COLOR_GREY}(Cursed items are powerful but cannot be upgraded){COLOR_RESET}")
+        add_log(f"{COLOR_GREY}(Sealed items are powerful but cannot be upgraded. BUC status unknown.){COLOR_RESET}")
         
         # Award Rune of Eternity
         rune = Rune(
@@ -1956,7 +1957,8 @@ def award_tomb_guardian_reward(player_character):
                 level=floor_level,
                 description=f"{w_desc} [SEALED - Cannot be upgraded]",
                 value=200 + floor_level * 15,
-                is_sealed=True
+                is_sealed=True,
+                buc_status=roll_buc_status(floor_level, 'tomb'),
             )
             player_character.inventory.add_item(weapon)
             add_log(f"{COLOR_PURPLE}Found: {w_name} (Attack +{base_attack}) [SEALED]{COLOR_RESET}")
@@ -1980,7 +1982,8 @@ def award_tomb_guardian_reward(player_character):
                 level=floor_level,
                 description=f"{a_desc} [SEALED - Cannot be upgraded]",
                 value=200 + floor_level * 15,
-                is_sealed=True
+                is_sealed=True,
+                buc_status=roll_buc_status(floor_level, 'tomb'),
             )
             player_character.inventory.add_item(armor)
             add_log(f"{COLOR_PURPLE}Found: {a_name} (Defense +{base_defense}) [SEALED]{COLOR_RESET}")

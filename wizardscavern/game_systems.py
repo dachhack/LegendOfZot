@@ -28,7 +28,7 @@ from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    apply_rust_effect, repair_item, get_repair_cost,
                    process_hunger, tick_meat_rot, get_base_monster_name,
                    is_metal_item, generate_vendor_inventory, process_upgrade_scroll_action,
-                   CORROSIVE_MONSTERS)
+                   roll_buc_status, CORROSIVE_MONSTERS)
 from .item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES,
                             UTILITY_TEMPLATES, TREASURE_TEMPLATES, POTION_TEMPLATES,
                             SPELL_TEMPLATES, ALL_ITEM_TEMPLATES, INGREDIENT_TEMPLATES,
@@ -3081,6 +3081,7 @@ def process_chest_action(player_character, my_tower, cmd):
                 # Enhanced weapon or armor drop
                 if random.random() < 0.5:
                     weapon = create_random_enhanced_weapon(player_character.z)
+                    weapon.buc_status = roll_buc_status(player_character.z, 'chest')
                     player_character.inventory.add_item(weapon)
                     add_log(f"{COLOR_CYAN}You found a weapon!{COLOR_RESET}")
                     add_log(f"{COLOR_GREEN}{weapon.get_display_name()}{COLOR_RESET}")
@@ -3089,6 +3090,7 @@ def process_chest_action(player_character, my_tower, cmd):
                         add_log(f"{COLOR_YELLOW}Element: {', '.join(weapon.elemental_strength)}{COLOR_RESET}")
                 else:
                     armor = create_random_enhanced_armor(player_character.z)
+                    armor.buc_status = roll_buc_status(player_character.z, 'chest')
                     player_character.inventory.add_item(armor)
                     add_log(f"{COLOR_CYAN}You found armor!{COLOR_RESET}")
                     add_log(f"{COLOR_GREEN}{armor.get_display_name()}{COLOR_RESET}")
