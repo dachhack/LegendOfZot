@@ -393,12 +393,18 @@ def generate_spell_cast_js(spell):
         'setTimeout(function(){'
         'ca.style.transition="filter 0.1s";'
         + {
-            'Earth': 'ca.style.filter="blur(3px)";',                     # earthquake blur
-            'Darkness': 'ca.style.filter="invert(1) brightness(0.8)";',  # void flash
+            'Fire': 'ca.style.filter="sepia(1) brightness(1.5)";',            # scorched amber
+            'Demonic': 'ca.style.filter="sepia(1) saturate(3) hue-rotate(330deg)";',  # blood red hellscape
+            'Ice': 'ca.style.filter="brightness(1.8) saturate(0.2)";',        # frozen white-out
+            'Water': 'ca.style.filter="blur(2px) brightness(0.8)";',          # underwater murk
+            'Holy': 'ca.style.filter="brightness(2) contrast(0.5)";',         # blinding divine light
+            'Light': 'ca.style.filter="brightness(2) contrast(0.5)";',
+            'Earth': 'ca.style.filter="blur(3px)";',                          # earthquake blur
+            'Darkness': 'ca.style.filter="invert(1) brightness(0.8)";',       # void flash
             'Shadow': 'ca.style.filter="invert(1) brightness(0.8)";',
-            'Psionic': 'ca.style.filter="hue-rotate(180deg)";',           # psychedelic
-            'Lightning': 'ca.style.filter="brightness(2)";',              # white-out
-            'Wind': 'ca.style.filter="brightness(2)";',
+            'Psionic': 'ca.style.filter="hue-rotate(180deg)";',               # psychedelic
+            'Lightning': 'ca.style.filter="brightness(2.5)";',                # white-out flash
+            'Wind': 'ca.style.filter="brightness(2.5)";',
         }.get(dtype, 'ca.style.filter="saturate(2)";')                    # default: oversaturate
         + 'setTimeout(function(){ca.style.filter="none";},200);'
         '},300);}'

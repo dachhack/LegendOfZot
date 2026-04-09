@@ -4,7 +4,7 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 71
+BUILD_NUMBER = 72
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
     "Every element has unique particle geometry: bolts, shards, rays, tendrils",
