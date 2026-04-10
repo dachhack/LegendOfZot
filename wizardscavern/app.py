@@ -1816,9 +1816,14 @@ class WizardsCavernApp(toga.App):
             self.build_combat_layout(cmd_dict)
             return
 
+        # Special case: Inventory (no filter) — explicit 3x3 grid layout
+        if gs.prompt_cntl == 'inventory' and not gs.inventory_filter:
+            self.build_inventory_layout()
+            return
+
         # Parse commands from text
         commands = self.parse_commands(commands_text)
-        
+
         # Build layout based on mode
         if needs_numbers:
             self.build_layout_with_numpad(commands)
@@ -2014,6 +2019,45 @@ class WizardsCavernApp(toga.App):
                 self.button_row_2.add(btn)
             for btn in [self.create_spacer()] + cmd_row3 + [self.create_spacer()]:
                 self.number_pad_box.add(btn)
+
+    def build_inventory_layout(self):
+        """Explicit 3x3 grid for inventory (no filter active).
+
+        Row 1: Equip | Eat   | Use
+        Row 2: Journal| Craft | Spells (if can cast, else spacer)
+        Row 3: Exit  | spacer| Quit
+        """
+        can_cast = False
+        try:
+            from .game_systems import can_cast_spells
+            can_cast = can_cast_spells(gs.player_character)
+        except Exception:
+            pass
+
+        in_combat = gs.active_monster and gs.active_monster.is_alive() if gs.active_monster else False
+
+        row1 = [
+            self.create_button('e', 'Equip'),
+            self.create_button('eat', 'Eat'),
+            self.create_button('u', 'Use'),
+        ]
+        row2 = [
+            self.create_button('j', 'Journal'),
+            self.create_button('c', 'Craft'),
+            self.create_button('m', 'Spells') if can_cast else self.create_spacer(),
+        ]
+        row3 = [
+            self.create_button('x', 'Exit'),
+            self.create_spacer(),
+            self.create_button('q', 'Quit') if not in_combat else self.create_spacer(),
+        ]
+
+        for btn in [self.create_spacer()] + row1 + [self.create_spacer()]:
+            self.button_row_1.add(btn)
+        for btn in [self.create_spacer()] + row2 + [self.create_spacer()]:
+            self.button_row_2.add(btn)
+        for btn in [self.create_spacer()] + row3 + [self.create_spacer()]:
+            self.number_pad_box.add(btn)
 
     def build_layout_with_numpad(self, commands):
         """
