@@ -69,6 +69,10 @@ active_library_state = None
 
 # Inventory filter: None (show all), 'use', 'equip', or 'eat'
 inventory_filter = None
+# Vendor sub-action: None (show menu), 'buy', 'sell', 'repair', or 'identify'
+vendor_action = None
+# Spell memorization sub-action: None (show menu), 'memorize' or 'forget'
+spell_memo_action = None
 
 # ============================================================================
 # SHOP & SELL STATE

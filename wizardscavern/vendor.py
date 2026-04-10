@@ -348,6 +348,56 @@ def process_vendor_action(player_character, vendor_character, cmd):
     Returns True if shopping is finished, False otherwise.
     """
 
+    # --- Sub-action routing: numpad mode prefixes bare numbers ---
+    if gs.vendor_action and cmd.isdigit():
+        prefix = {'buy': 'b', 'sell': 's', 'repair': 'r', 'identify': 'id'}.get(gs.vendor_action, '')
+        cmd = prefix + cmd
+
+    # --- Back button: clear sub-action and return to main vendor view ---
+    if cmd == 'b' and gs.vendor_action:
+        gs.vendor_action = None
+        return False
+
+    # --- Bare commands set sub-action for numpad mode ---
+    if cmd == 'b':
+        gs.vendor_action = 'buy'
+        return False
+    if cmd == 's':
+        gs.vendor_action = 'sell'
+        return False
+    if cmd == 'r':
+        gs.vendor_action = 'repair'
+        # Also show damaged items list
+        damaged_items = []
+        sorted_items = get_sorted_inventory(player_character.inventory)
+        for i, item in enumerate(sorted_items):
+            if isinstance(item, (Weapon, Armor)) and item.durability < item.max_durability:
+                if getattr(item, 'is_sealed', False):
+                    damaged_items.append(f"{i+1}. {item.name} (SEALED)")
+                else:
+                    cost = get_repair_cost(item)
+                    damaged_items.append(f"{i+1}. {item.name} ({item.durability}/{item.max_durability}) - {cost}g")
+        if damaged_items:
+            set_shop_msg("Damaged: " + ", ".join(damaged_items[:4]))
+        else:
+            set_shop_msg("All equipment is in good condition!")
+        return False
+    if cmd == 'id':
+        gs.vendor_action = 'identify'
+        # Also show unidentified items list
+        unid_items = []
+        sorted_items = get_sorted_inventory(player_character.inventory)
+        for i, item in enumerate(sorted_items):
+            if isinstance(item, (Potion, Scroll, Weapon, Armor, Spell)) and not is_item_identified(item):
+                cost = get_vendor_identify_cost(item)
+                display_name = get_item_display_name(item, for_vendor=False)
+                unid_items.append(f"{i+1}. {display_name} - {cost}g")
+        if unid_items:
+            set_shop_msg("Unidentified: " + ", ".join(unid_items[:5]))
+        else:
+            set_shop_msg("All items are already identified!")
+        return False
+
     if cmd == "init" or cmd == "l" or cmd == "list":
         if cmd != "init":
              set_vendor_greeting(vendor_messages.get(vendor_character.name, "Welcome."))
@@ -634,6 +684,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
         return False
 
     elif cmd == 'x' or cmd == 'q':
+        gs.vendor_action = None
         return True # Shopping finished
     else:
         set_shop_msg(f"Invalid input. Please use 'b [number]', 's [number]', 'x', or 'q'.")
@@ -922,6 +973,7 @@ def handle_vendor_shop(player_character, my_tower, cmd):
     if finished: # This checks if 'q' or 'f' was entered
         add_log("You finish shopping and continue on your adventure!")
         gs.active_vendor = None
+        gs.vendor_action = None
         gs.prompt_cntl = "game_loop"
 
     return True

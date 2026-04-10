@@ -1303,8 +1303,28 @@ def process_spell_memorization_action(player_character, my_tower, cmd):
         return
 
     if cmd == 'x':
+        gs.spell_memo_action = None
         gs.prompt_cntl = "inventory"
         add_log("Closed spell memorization.")
+        return
+
+    # Sub-action routing: numpad mode prefixes bare numbers
+    if gs.spell_memo_action and cmd.isdigit():
+        prefix = {'memorize': 'm', 'forget': 'f'}.get(gs.spell_memo_action, '')
+        cmd = prefix + cmd
+
+    # Back button: clear sub-action
+    if cmd == 'b' and gs.spell_memo_action:
+        gs.spell_memo_action = None
+        return
+
+    # Bare commands set sub-action for numpad mode
+    if cmd == 'm':
+        gs.spell_memo_action = 'memorize'
+        return
+
+    if cmd == 'f':
+        gs.spell_memo_action = 'forget'
         return
 
     all_spells = player_character.get_spell_inventory()

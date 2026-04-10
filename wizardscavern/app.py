@@ -1540,29 +1540,24 @@ class WizardsCavernApp(toga.App):
         
         is_movement = cmd in ['n', 's', 'e', 'w']
         
-        # Commands that need numbers appended (u3, e5, b1, s2, etc.)
-        # In vendor modes, b/s/ba need to wait for item numbers
+        # Commands that need numbers appended
+        # Vendor b/s/r/id and spell memo m/f now submit immediately to set
+        # sub-action state, then numpad appears for item selection.
+        # No commands need number suffix anymore — all submit immediately.
         is_vendor_mode = gs.prompt_cntl in ['vendor_shop', 'starting_shop']
-        is_spell_memorization_mode = gs.prompt_cntl == 'spell_memorization_mode'
-        # u/e always submit immediately (toggles inventory filter, then user picks number)
-        needs_number_suffix = (cmd in ['b', 's', 'r', 'id'] and is_vendor_mode) or \
-                              (cmd in ['m', 'f'] and is_spell_memorization_mode)
-        
-        # Special case: 'ba' (buy all) in starting shop - needs send but no number
-        is_buy_all = cmd == 'ba' and gs.prompt_cntl == 'starting_shop'
-        
+        needs_number_suffix = False
+
         # Special case: 'e' in inventory means equip (not east movement)
         # Override is_movement for 'e' when in inventory/needs_numbers mode
         if cmd == 'e' and self.current_needs_numbers:
             is_movement = False
-        
+
         # Special case: 's' in vendor mode means sell (not south movement)
         if cmd == 's' and is_vendor_mode:
             is_movement = False
-        
-        # In modes that need numbers (inventory, vendor, etc.), certain commands wait for number/send
-        # All other commands (c, m, x, i, etc.) submit immediately
-        if (needs_number_suffix or is_buy_all) and not is_movement:
+
+        # All commands now submit immediately (no prefix-and-wait pattern)
+        if needs_number_suffix and not is_movement:
             # Append command to input field, user will type number and press send
             self.input_field.value = cmd
             # Don't focus if readonly (will trigger keyboard)
@@ -3492,7 +3487,11 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
                 """
-            current_commands_text = "b# = buy | s# = sell | ba = all | x = exit"
+            if gs.vendor_action:
+                action_label = {'buy': 'buy', 'sell': 'sell'}.get(gs.vendor_action, gs.vendor_action)
+                current_commands_text = f"# = {action_label} item | b = back"
+            else:
+                current_commands_text = "b = buy | s = sell | ba = buy all | x = exit"
 
         elif gs.prompt_cntl == "sell_quantity_mode":
             # SELL QUANTITY MODE - Show "How many?" prompt
@@ -3583,8 +3582,11 @@ class WizardsCavernApp(toga.App):
                 """
             if gs.prompt_cntl == "sell_quantity_mode":
                 current_commands_text = "1-9 / a = sell | c = cancel"
+            elif gs.vendor_action:
+                action_label = {'buy': 'buy', 'sell': 'sell', 'repair': 'repair', 'identify': 'identify'}.get(gs.vendor_action, gs.vendor_action)
+                current_commands_text = f"# = {action_label} item | b = back"
             else:
-                current_commands_text = "b# = buy | s# = sell | r# = repair | id# = identify | x = exit"
+                current_commands_text = "b = buy | s = sell | r = repair | id = identify | x = exit"
 
 
 
@@ -3656,7 +3658,10 @@ class WizardsCavernApp(toga.App):
                         </div>
                     """
 
-                current_commands_text = "u = use | eat = eat | j = journal | x = close"
+                if gs.inventory_filter:
+                    current_commands_text = "# = select | b = back"
+                else:
+                    current_commands_text = "u = use | eat = eat | j = journal | x = close"
 
 
             else:
@@ -3755,12 +3760,16 @@ class WizardsCavernApp(toga.App):
 
                 can_cast = can_cast_spells(gs.player_character)
 
-                inv_commands = "u = use | e = equip | eat = eat | c = craft"
-
-                if can_cast:
-                    inv_commands += " | m = spells"
-
-                inv_commands += " | j = journal | q = quit game | x = exit"
+                if gs.inventory_filter:
+                    # Filter active: numpad mode with back button
+                    filter_label = {'use': 'Use', 'equip': 'Equip', 'eat': 'Eat'}.get(gs.inventory_filter, gs.inventory_filter)
+                    inv_commands = f"# = {filter_label.lower()} item | b = back"
+                else:
+                    # Main inventory: centered command buttons, no numpad
+                    inv_commands = "u = use | e = equip | eat = eat | c = craft"
+                    if can_cast:
+                        inv_commands += " | m = spells"
+                    inv_commands += " | j = journal | q = quit game | x = exit"
 
                 html_code = f"""
 
@@ -4059,7 +4068,11 @@ class WizardsCavernApp(toga.App):
                     <div style="border: 1px solid blue; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{available_spells_html}</div>
 </div>
                 """
-            current_commands_text = "m# = memorize | f# = forget | x = exit"
+            if gs.spell_memo_action:
+                action_label = {'memorize': 'memorize', 'forget': 'forget'}.get(gs.spell_memo_action, gs.spell_memo_action)
+                current_commands_text = f"# = {action_label} spell | b = back"
+            else:
+                current_commands_text = "m = memorize | f = forget | x = exit"
 
         elif gs.prompt_cntl == "journal_mode":
             # JOURNAL MAIN MENU
@@ -6234,20 +6247,25 @@ class WizardsCavernApp(toga.App):
         
         # Update button panel dynamically
         # Determine if number pad is needed
-        needs_numbers = gs.prompt_cntl in [
-            'inventory',
-            'vendor_shop',
-            'starting_shop',
-            'altar_mode',
-            'spell_memorization_mode',
-            'spell_casting_mode',
-            'journal_mode',
-            'crafting_mode',
-            'upgrade_scroll_mode',
-            'identify_scroll_mode',
-            'sell_quantity_mode',
-            'taxidermist_mode',
-        ]
+        # Modes that ALWAYS need numpad:
+        _always_numpad = {
+            'altar_mode', 'spell_casting_mode', 'journal_mode',
+            'crafting_mode', 'upgrade_scroll_mode', 'identify_scroll_mode',
+            'sell_quantity_mode', 'taxidermist_mode',
+        }
+        # Modes that need numpad only when a sub-selection is active:
+        if gs.prompt_cntl in _always_numpad:
+            needs_numbers = True
+        elif gs.prompt_cntl == 'inventory':
+            needs_numbers = gs.inventory_filter is not None
+        elif gs.prompt_cntl == 'vendor_shop':
+            needs_numbers = getattr(gs, 'vendor_action', None) is not None
+        elif gs.prompt_cntl == 'starting_shop':
+            needs_numbers = getattr(gs, 'vendor_action', None) is not None
+        elif gs.prompt_cntl == 'spell_memorization_mode':
+            needs_numbers = getattr(gs, 'spell_memo_action', None) is not None
+        else:
+            needs_numbers = False
         
         self.update_button_panel(current_commands_text, needs_numbers)
 
