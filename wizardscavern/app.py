@@ -2038,6 +2038,8 @@ class WizardsCavernApp(toga.App):
         Row 1: Equip | Eat   | Use
         Row 2: Journal| Craft | Spells (if can cast, else spacer)
         Row 3: Exit  | spacer| Quit
+
+        All cells use flex=1 so columns align perfectly across rows.
         """
         can_cast = False
         try:
@@ -2048,27 +2050,37 @@ class WizardsCavernApp(toga.App):
 
         in_combat = gs.active_monster and gs.active_monster.is_alive() if gs.active_monster else False
 
-        row1 = [
-            self.create_button('e', 'Equip'),
-            self.create_button('eat', 'Eat'),
-            self.create_button('u', 'Use'),
-        ]
+        def flex_btn(key, label):
+            btn = toga.Button(
+                label,
+                on_press=lambda w, k=key, l=label: self.quick_command(k, l),
+                style=Pack(flex=1, margin=1, font_size=11, height=30,
+                           background_color='#383838', color='#EEE')
+            )
+            self._compact_android_button(btn)
+            self._style_android_button(btn)
+            return btn
+
+        def flex_spacer():
+            return toga.Box(style=Pack(flex=1, height=30))
+
+        row1 = [flex_btn('e', 'Equip'), flex_btn('eat', 'Eat'), flex_btn('u', 'Use')]
         row2 = [
-            self.create_button('j', 'Journal'),
-            self.create_button('c', 'Craft'),
-            self.create_button('m', 'Spells') if can_cast else self.create_spacer(),
+            flex_btn('j', 'Journal'),
+            flex_btn('c', 'Craft'),
+            flex_btn('m', 'Spells') if can_cast else flex_spacer(),
         ]
         row3 = [
-            self.create_button('x', 'Exit'),
-            self.create_spacer(),
-            self.create_button('q', 'Quit') if not in_combat else self.create_spacer(),
+            flex_btn('x', 'Exit'),
+            flex_spacer(),
+            flex_btn('q', 'Quit') if not in_combat else flex_spacer(),
         ]
 
-        for btn in [self.create_spacer()] + row1 + [self.create_spacer()]:
+        for btn in row1:
             self.button_row_1.add(btn)
-        for btn in [self.create_spacer()] + row2 + [self.create_spacer()]:
+        for btn in row2:
             self.button_row_2.add(btn)
-        for btn in [self.create_spacer()] + row3 + [self.create_spacer()]:
+        for btn in row3:
             self.number_pad_box.add(btn)
 
     def build_layout_with_numpad(self, commands):
