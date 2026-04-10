@@ -320,12 +320,37 @@ def process_combat_action(player_character, my_tower, cmd):
         p_roll, m_roll = opposed_roll(player_goes_first, sides=20, p_mod=p_init_mod, m_mod=m_init_mod)
         gs.last_dice_rolls.append((p_roll, m_roll, player_goes_first, "INIT", 20, p_init_mod, m_init_mod))
         gs.monster_acts_first = not player_goes_first
+        gs.monster_initiative_pending = gs.monster_acts_first
 
         if player_goes_first:
             add_log(f"{COLOR_GREEN}You seize the initiative!{COLOR_RESET}")
         else:
             add_log(f"{COLOR_RED}The {gs.active_monster.name} strikes first!{COLOR_RESET}")
 
+        return
+
+    # -------------------------------------------------------------------------
+    # MONSTER INITIATIVE AUTO-ATTACK — fires once after init, before player acts
+    # -------------------------------------------------------------------------
+    if cmd == '_init_strike' and gs.monster_initiative_pending:
+        gs.monster_initiative_pending = False
+        if gs.active_monster and gs.active_monster.is_alive():
+            monster_frozen = any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values())
+            if monster_frozen:
+                add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time!{COLOR_RESET}")
+            elif 'Invisibility' in player_character.status_effects:
+                add_log(f"{COLOR_PURPLE}[Invisible] The {gs.active_monster.name} cannot see you!{COLOR_RESET}")
+            else:
+                gs.active_monster.attack_target(player_character)
+                if 'Frost Armor' in player_character.status_effects:
+                    reflect_damage = player_character.status_effects['Frost Armor'].magnitude
+                    gs.active_monster.take_damage(reflect_damage, "Ice")
+                    add_log(f"{COLOR_CYAN} Frost Armor reflects {reflect_damage} ice damage!{COLOR_RESET}")
+                if not player_character.is_alive():
+                    add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")
+                    gs.prompt_cntl = "death_screen"
+                    return
+        # Stay in combat_mode — player now gets their turn
         return
 
     # Check if this is a vault defender (special combat)
@@ -624,7 +649,7 @@ def process_combat_action(player_character, my_tower, cmd):
                     gs.prompt_cntl = "combat_victory"
                     return
 
-                elif gs.active_monster:  # Monster still alive, it attacks back
+                elif gs.active_monster and gs.active_monster.is_alive():  # Monster still alive, it attacks back
                     damage_taken = _monster_attack_during_channeling(player_character)
                     if not player_character.is_alive():
                         add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")
@@ -661,26 +686,7 @@ def process_combat_action(player_character, my_tower, cmd):
     is_blind = any(e.effect_type == 'blindness'
                    for e in player_character.status_effects.values())
 
-    # -------------------------------------------------------------------------
-    # INITIATIVE — monster attacks first if they won the init roll at combat start
-    # -------------------------------------------------------------------------
-    if gs.monster_acts_first and cmd in ('a', 'f', 'c') and not is_paralyzed:
-        if gs.active_monster and gs.active_monster.is_alive():
-            monster_frozen = any(e.effect_type == 'time_stop' for e in gs.active_monster.status_effects.values())
-            if monster_frozen:
-                add_log(f"{COLOR_CYAN}The {gs.active_monster.name} is frozen in time!{COLOR_RESET}")
-            elif 'Invisibility' in player_character.status_effects:
-                add_log(f"{COLOR_PURPLE}[Invisible] The {gs.active_monster.name} cannot see you!{COLOR_RESET}")
-            else:
-                gs.active_monster.attack_target(player_character)
-                if 'Frost Armor' in player_character.status_effects:
-                    reflect_damage = player_character.status_effects['Frost Armor'].magnitude
-                    gs.active_monster.take_damage(reflect_damage, "Ice")
-                    add_log(f"{COLOR_CYAN} Frost Armor reflects {reflect_damage} ice damage!{COLOR_RESET}")
-                if not player_character.is_alive():
-                    add_log(f"{COLOR_RED}You were defeated by the {gs.active_monster.name}...{COLOR_RESET}")
-                    gs.prompt_cntl = "death_screen"
-                    return
+    # (Monster initiative auto-attack is now handled by _init_strike above)
 
     if cmd == 'a':
         # Player attacks
@@ -1652,7 +1658,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     gs.prompt_cntl = "combat_victory"
                     return  # Combat ended
 
-                elif gs.active_monster:  # Monster still alive, it attacks back
+                elif gs.active_monster and gs.active_monster.is_alive():  # Monster still alive, it attacks back
                     gs.active_monster.attack_target(player_character)
 
                     if not player_character.is_alive():

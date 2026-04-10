@@ -719,7 +719,9 @@ def generate_dice_roll_js(dice_rolls):
         # The dice shows the TOTAL (raw + mod); the bottom label shows the breakdown.
         # Wraps are absolute-positioned to fill the container so multiple dice
         # (ATK then DEF in same slot) occupy the SAME spot instead of stacking.
-        'function makeDice(containerId,rawVal,mod,winner,labelText,labelColor,sides,delayMs){'
+        # revealMs: absolute time when win/lose colors are revealed (both dice
+        #           in a pair share the same reveal time so neither spoils the result).
+        'function makeDice(containerId,rawVal,mod,winner,labelText,labelColor,sides,delayMs,revealMs){'
         'var container=document.getElementById(containerId);'
         'if(!container)return;'
 
@@ -774,14 +776,22 @@ def generate_dice_roll_js(dice_rolls):
         'dice.style.borderColor="#999";'
         '}else{'
         'clearInterval(flicker);'
-        # Land: dice shows TOTAL, bottom label shows breakdown so it is clear
+        # Land: show the number but stay NEUTRAL grey — don't reveal win/lose yet
         'var total_val=rawVal+mod;'
         'dice.textContent=total_val;'
         'if(mod>0){dlbl.textContent=rawVal+"+"+mod;}'
         'dice.style.transform="perspective(120px) rotateX(0) rotateY(0)";'
-        # Detect crit (nat max AND winner) and fumble (nat 1 AND loser)
+        'dice.style.borderColor="#AAA";dice.style.color="#DDD";'
+        'dice.style.background="#3a3a3a";'
+        '}'
+        '},45);'
+        '},delayMs);'
+
+        # Reveal phase: after both dice have landed, show win/lose colors
+        'setTimeout(function(){'
         'var isCrit=(rawVal===sides && winner);'
         'var isFumble=(rawVal===1 && !winner);'
+        'dice.style.transition="border-color 0.25s,color 0.25s,background 0.25s,box-shadow 0.25s";'
         'if(isCrit){'
         'dice.style.borderColor="#FFD700";'
         'dice.style.color="#FFD700";'
@@ -791,7 +801,6 @@ def generate_dice_roll_js(dice_rolls):
         'top.textContent=labelText+" CRIT!";'
         'top.style.color="#FFD700";'
         'top.style.textShadow="0 0 6px #FFD700";'
-        # Shake the whole content area on a critical — the big moment
         'var scr=document.getElementById("content-area");'
         'if(scr){'
         'scr.style.animation="none";'
@@ -820,9 +829,7 @@ def generate_dice_roll_js(dice_rolls):
         'wrap.style.transition="opacity 0.5s";wrap.style.opacity="0";'
         'setTimeout(function(){if(wrap.parentNode)wrap.parentNode.removeChild(wrap);},500);'
         '},1800);'
-        '}'
-        '},45);'
-        '},delayMs);'
+        '},revealMs);'
         '}'
 
         # Process each opposed-roll entry.
@@ -845,22 +852,27 @@ def generate_dice_roll_js(dice_rolls):
         # Winner is whoever has higher total (raw + mod)
         'var pHigher=((pRoll+pMod)>(mRoll+mMod));'
 
+        # revealMs = when second dice lands + 200ms beat (tumble ~360ms)
         'if(label==="ATK"){'
-        # Player attacks first (in player ATK slot), monster defends second (in monster DEF slot)
-        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"ATTACK","#FF8A65",sides,initOffset+0);'
-        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"DEFEND","#64B5F6",sides,initOffset+600);'
+        # Player attacks first, monster defends. Reveal after monster dice lands.
+        'var rv=initOffset+600+360+200;'
+        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"ATTACK","#FF8A65",sides,initOffset+0,rv);'
+        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"DEFEND","#64B5F6",sides,initOffset+600,rv);'
         '}else if(label==="DEF"){'
-        # Monster attacks (in monster ATK slot), player defends (in player DEF slot)
-        'makeDice("monster_atk_dice",mRoll,mMod,!pHigher,"ATTACK","#FF8A65",sides,initOffset+1900);'
-        'makeDice("player_def_dice",pRoll,pMod,pHigher,"DEFEND","#64B5F6",sides,initOffset+2500);'
+        # Monster attacks, player defends. Reveal after player dice lands.
+        'var rv=initOffset+2500+360+200;'
+        'makeDice("monster_atk_dice",mRoll,mMod,!pHigher,"ATTACK","#FF8A65",sides,initOffset+1900,rv);'
+        'makeDice("player_def_dice",pRoll,pMod,pHigher,"DEFEND","#64B5F6",sides,initOffset+2500,rv);'
         '}else if(label==="FLEE"){'
-        # Flee pair in the LEFT column
-        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"FLEE","#FFD54F",sides,0);'
-        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"CATCH","#FF8A65",sides,600);'
+        # Flee pair. Reveal after monster CATCH dice lands.
+        'var rv=600+360+200;'
+        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"FLEE","#FFD54F",sides,0,rv);'
+        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"CATCH","#FF8A65",sides,600,rv);'
         '}else if(label==="INIT"){'
-        # Initiative: both dice in the ATK column (left), quick flash before combat
-        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"INIT","#B0BEC5",sides,0);'
-        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"INIT","#B0BEC5",sides,200);'
+        # Initiative: reveal after both land.
+        'var rv=200+360+200;'
+        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"INIT","#B0BEC5",sides,0,rv);'
+        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"INIT","#B0BEC5",sides,200,rv);'
         '}'
 
         '});'
@@ -2879,6 +2891,16 @@ class WizardsCavernApp(toga.App):
                  if not moved:
                      gs.prompt_cntl = "game_loop" # If movement failed, explicitly revert to game_loop.
 
+    def _schedule_initiative_strike(self):
+        """Auto-fire monster's initiative attack after init dice animation plays."""
+        import threading
+        def _auto_strike():
+            if gs.prompt_cntl == "combat_mode" and gs.monster_initiative_pending:
+                self.process_command('_init_strike')
+                self.render()
+        # 1.8s: init dice tumble (0-360ms) + reveal (760ms) + hold (800ms)
+        threading.Timer(1.8, lambda: self.app.loop.call_soon_threadsafe(_auto_strike)).start()
+
     def _schedule_victory_dismiss(self):
         """Auto-dismiss combat victory screen after animations finish."""
         import threading
@@ -4634,6 +4656,10 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             current_commands_text = combat_commands
+
+            # Schedule monster initiative auto-attack after init dice animation
+            if gs.monster_initiative_pending:
+                self._schedule_initiative_strike()
 
         elif gs.prompt_cntl == "combat_victory":
             # VICTORY VIEW - shows combat panels with defeat animation, auto-dismisses
