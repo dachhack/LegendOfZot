@@ -6634,7 +6634,9 @@ class WizardsCavernApp(toga.App):
             <script>
                 // Embed log lines from Python
                 window.logLines = {log_lines_json};
-                
+                window.hasDiceRolls = {'true' if gs.last_dice_rolls else 'false'};
+                window.hasInitRoll = {'true' if (gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)) else 'false'};
+
                 // Update log content and auto-scroll to bottom
                 function updateLog() {{
                     var logDiv = document.getElementById('game-log');
@@ -6643,8 +6645,23 @@ class WizardsCavernApp(toga.App):
                         logDiv.scrollTop = logDiv.scrollHeight;
                     }}
                 }}
-                // Call on page load
-                window.addEventListener('load', updateLog);
+                // Delay log when dice are rolling so results aren't spoiled.
+                // Log stays hidden until after the reveal animation finishes.
+                if (window.hasDiceRolls) {{
+                    var logDiv = document.getElementById('game-log');
+                    if (logDiv) logDiv.style.opacity = '0';
+                    // Reveal delay: ATK reveal ~1160ms, DEF reveal ~3060ms, init ~760ms
+                    var delay = window.hasInitRoll ? 1000 : 3300;
+                    window.addEventListener('load', function() {{
+                        setTimeout(function() {{
+                            updateLog();
+                            var ld = document.getElementById('game-log');
+                            if (ld) {{ ld.style.transition = 'opacity 0.3s'; ld.style.opacity = '1'; }}
+                        }}, delay);
+                    }});
+                }} else {{
+                    window.addEventListener('load', updateLog);
+                }}
             </script>
             {generate_spell_cast_js(gs.last_spell_cast)}
             {generate_spell_particles_js(gs.last_spell_cast)}
