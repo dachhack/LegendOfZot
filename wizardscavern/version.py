@@ -4,15 +4,15 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 76
+BUILD_NUMBER = 79
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "INITIATIVE SYSTEM! d20+DEX vs d20+level — monster can strike first now",
-    "Paralysis/Freeze skip your turn, Confusion self-hit, Blindness miss chance",
-    "Buff spells get themed visuals: ATK=fire, DEF=holy gold, heals=green",
-    "Time Stop actually FREEZES monster for 2 turns (debuff_target spell type)",
-    "Acid Splash reclassified as Poison element (toxic neon green)",
-    "Every element has unique particles + L4+ screen distortion",
-    "BUC system: blessed/uncursed/cursed equipment with 100-floor scaling",
+    "SPELL CHANNELING! L2-3 spells charge 1 turn, L4-5 charge 2 turns",
+    "Concentration checks: d20+INT/4 vs DC when hit during channeling",
+    "BUTTON UI REWORK! Numpad only shows when selecting items",
+    "Inventory/Vendor/Spells/Altar: pick action first, then numpad",
+    "Bigger centered buttons when browsing, Back button to return",
+    "Spell casting: compact layout, map hidden, spells always visible",
+    "Fizzle animation + dice roll on failed concentration",
     "Opposed d20 combat with modifiers, crits, fumbles, panel shake",
 ]

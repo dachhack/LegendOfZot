@@ -416,6 +416,23 @@ def process_altar_action(player_character, my_tower, cmd):
         return
 
     # -------------------------------------------------------------------------
+    # SUB-ACTION ROUTING: sacrifice numpad mode
+    # -------------------------------------------------------------------------
+    # When altar_action is 'sacrifice', bare numbers prefix with 's'
+    if gs.altar_action == 'sacrifice' and cmd.isdigit():
+        cmd = 's' + cmd
+
+    # Back button: clear sacrifice sub-action
+    if cmd == 'b' and gs.altar_action == 'sacrifice':
+        gs.altar_action = None
+        return
+
+    # Bare 's': enter sacrifice numpad mode
+    if cmd == 's':
+        gs.altar_action = 'sacrifice'
+        return
+
+    # -------------------------------------------------------------------------
     # SPECIAL: Devotion Rune ultimate offering (cmd = '9' shortcut kept)
     # -------------------------------------------------------------------------
     if cmd == '9' and not gs.runes_obtained['devotion'] and player_character.gold >= 500 and player_character.health >= 50:
@@ -566,11 +583,14 @@ def process_altar_action(player_character, my_tower, cmd):
     # -------------------------------------------------------------------------
     if cmd == 'x':
         add_log("You step away from the altar.")
+        gs.altar_action = None
         gs.prompt_cntl = "game_loop"
     elif cmd == 'i':
+        gs.altar_action = None
         gs.prompt_cntl = "inventory"
         handle_inventory_menu(player_character, my_tower, "init")
     elif cmd == 'q':
+        gs.altar_action = None
         gs.game_should_quit = True
         add_log("You abandon the altar.")
     else:

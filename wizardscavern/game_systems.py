@@ -1939,6 +1939,11 @@ def handle_inventory_menu(player_character, my_tower, cmd):
     else:
         working_items = sorted_items
 
+    # --- Back button: clear filter and return to main inventory view ---
+    if cmd == 'b':
+        gs.inventory_filter = None
+        return
+
     # --- Bare command toggles (set filter, refresh display) ---
     if cmd == 'u':
         gs.inventory_filter = 'use' if gs.inventory_filter != 'use' else None

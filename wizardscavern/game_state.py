@@ -69,6 +69,12 @@ active_library_state = None
 
 # Inventory filter: None (show all), 'use', 'equip', or 'eat'
 inventory_filter = None
+# Vendor sub-action: None (show menu), 'buy', 'sell', 'repair', or 'identify'
+vendor_action = None
+# Spell memorization sub-action: None (show menu), 'memorize' or 'forget'
+spell_memo_action = None
+# Altar sub-action: None (show menu), 'sacrifice'
+altar_action = None
 
 # ============================================================================
 # SHOP & SELL STATE
@@ -349,6 +355,15 @@ pre_round_monster_hp = None       # Monster HP before this combat round
 pre_round_player_hp = None        # Player HP before this combat round
 last_spell_cast = None            # Spell object from the last cast (for animation rendering)
 monster_acts_first = False        # Initiative result: True if monster swings before player this round
+
+# ============================================================================
+# SPELL CHANNELING / CHARGING STATE
+# ============================================================================
+# None when not channeling. During channeling:
+# {'spell': <Spell obj>, 'turns_remaining': int, 'total_turns': int}
+# Mana is spent when channeling begins; spell fires when turns_remaining hits 0.
+spell_charging = None
+last_concentration_roll = None    # (raw_roll, modifier, total, dc, passed) for dice anim
 
 # ============================================================================
 # MONSTER DEFEAT ANIMATION STATE

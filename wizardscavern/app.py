@@ -869,6 +869,134 @@ def generate_dice_roll_js(dice_rolls):
     return js
 
 
+def generate_concentration_check_js(conc_roll):
+    """Generate a single d20 concentration check dice animation.
+
+    conc_roll: (raw_roll, modifier, total, dc, passed)
+    Shows a single d20 in the player panel with CONC label, glowing
+    green on pass or red on fail. On failure, plays a fizzle overlay.
+    """
+    if not conc_roll:
+        return ""
+    raw_roll, modifier, total, dc, passed = conc_roll
+    win_js = 1 if passed else 0
+    # Reuse the makeDice infrastructure from dice rolls
+    label_color = '#69F0AE' if passed else '#FF5252'
+    result_label = 'HELD!' if passed else 'FIZZLE!'
+
+    js = (
+        '<script>(function(){'
+        # Create a single dice in the player ATK slot
+        'var container=document.getElementById("player_atk_dice");'
+        'if(!container)return;'
+
+        'var wrap=document.createElement("div");'
+        'wrap.style.cssText="position:absolute;left:0;right:0;top:0;bottom:0;'
+        'display:flex;flex-direction:column;align-items:center;justify-content:center;'
+        'opacity:0;transition:opacity 0.2s;overflow:visible;";'
+
+        # Top label
+        'var top=document.createElement("div");'
+        'top.style.cssText="font-size:7px;font-weight:bold;font-family:monospace;'
+        'margin-bottom:1px;letter-spacing:0.5px;white-space:nowrap;'
+        f'color:{label_color};";'
+        f'top.textContent="CONC +{modifier}";'
+        'wrap.appendChild(top);'
+
+        # The dice
+        'var sz=28;'
+        'var dice=document.createElement("div");'
+        'dice.style.cssText='
+        '"width:"+sz+"px;height:"+sz+"px;'
+        'display:flex;align-items:center;justify-content:center;'
+        'font-size:13px;font-weight:bold;font-family:monospace;'
+        'color:#FFF;background:#444;margin:0 auto;'
+        'text-shadow:0 0 3px #000;'
+        'border:2px solid #777;border-radius:2px;'
+        'clip-path:polygon(50% 0%,93% 25%,93% 75%,50% 100%,7% 75%,7% 25%);'
+        'perspective:120px;";'
+        'dice.textContent="";'
+        'wrap.appendChild(dice);'
+
+        # Bottom label: shows DC
+        'var dlbl=document.createElement("div");'
+        'dlbl.style.cssText="font-size:7px;color:#888;font-family:monospace;margin-top:1px;";'
+        f'dlbl.textContent="DC {dc}";'
+        'wrap.appendChild(dlbl);'
+
+        'container.appendChild(wrap);'
+
+        # Tumble animation (delayed to play after monster attack dice)
+        'setTimeout(function(){'
+        'wrap.style.opacity="1";'
+        'var frame=0;var total=8;var flicker;'
+        'flicker=setInterval(function(){'
+        'frame++;'
+        'if(frame<total){'
+        'dice.textContent=Math.floor(Math.random()*20)+1;'
+        'var rx=(Math.random()*360-180);'
+        'var ry=(Math.random()*360-180);'
+        'dice.style.transform="perspective(120px) rotateX("+rx+"deg) rotateY("+ry+"deg)";'
+        '}else{'
+        'clearInterval(flicker);'
+        f'dice.textContent={total};'
+        f'if({modifier}>0){{dlbl.textContent="{raw_roll}+{modifier} vs DC {dc}";}}'
+        'dice.style.transform="perspective(120px) rotateX(0) rotateY(0)";'
+        f'if({win_js}){{'
+        'dice.style.borderColor="#69F0AE";dice.style.color="#69F0AE";'
+        'dice.style.background="#2a3a2a";'
+        'dice.style.boxShadow="0 0 6px #69F0AE";'
+        f'top.textContent="{result_label}";'
+        'top.style.color="#69F0AE";'
+        '}else{'
+        'dice.style.borderColor="#FF5252";dice.style.color="#FF5252";'
+        'dice.style.background="#3a2a2a";'
+        'dice.style.boxShadow="0 0 6px #FF5252";'
+        f'top.textContent="{result_label}";'
+        'top.style.color="#FF5252";'
+        'top.style.textShadow="0 0 6px #FF5252";'
+    )
+
+    # Fizzle overlay on failure
+    if not passed:
+        js += (
+            # Screen flash red + "FIZZLE!" banner
+            'var fz=document.createElement("div");'
+            'fz.style.cssText="position:fixed;top:38%;left:50%;transform:translate(-50%,-50%) scale(0.7);'
+            'z-index:99999;text-align:center;pointer-events:none;opacity:0;'
+            'font-family:monospace;font-size:22px;font-weight:bold;'
+            'letter-spacing:6px;text-transform:uppercase;'
+            'color:#FF5252;text-shadow:0 0 12px #FF5252,0 0 4px #000;";'
+            'fz.textContent="FIZZLE!";'
+            'document.body.appendChild(fz);'
+            'setTimeout(function(){fz.style.transition="opacity 0.3s";fz.style.opacity="1";'
+            'fz.style.transform="translate(-50%,-50%) scale(1)";},50);'
+            'setTimeout(function(){fz.style.transition="opacity 0.4s";fz.style.opacity="0";},800);'
+            'setTimeout(function(){if(fz.parentNode)fz.parentNode.removeChild(fz);},1300);'
+            # Red screen tint
+            'var tint=document.createElement("div");'
+            'tint.style.cssText="position:fixed;inset:0;background:rgba(255,50,50,0.15);'
+            'z-index:99998;pointer-events:none;opacity:0;transition:opacity 0.15s;";'
+            'document.body.appendChild(tint);'
+            'setTimeout(function(){tint.style.opacity="1";},50);'
+            'setTimeout(function(){tint.style.opacity="0";},400);'
+            'setTimeout(function(){if(tint.parentNode)tint.parentNode.removeChild(tint);},600);'
+        )
+
+    js += (
+        '}'  # close else (fail styling)
+        'setTimeout(function(){'
+        'wrap.style.transition="opacity 0.5s";wrap.style.opacity="0";'
+        'setTimeout(function(){if(wrap.parentNode)wrap.parentNode.removeChild(wrap);},500);'
+        '},1800);'
+        '}'  # close landed frame
+        '},45);'  # close setInterval
+        '},3200);'  # delay: after monster attack dice sequence
+        '})();</script>'
+    )
+    return js
+
+
 def generate_monster_defeat_js(monster_name):
     """Generate a sequenced monster defeat animation inside the combat panel.
 
@@ -1412,29 +1540,24 @@ class WizardsCavernApp(toga.App):
         
         is_movement = cmd in ['n', 's', 'e', 'w']
         
-        # Commands that need numbers appended (u3, e5, b1, s2, etc.)
-        # In vendor modes, b/s/ba need to wait for item numbers
+        # Commands that need numbers appended
+        # Vendor b/s/r/id and spell memo m/f now submit immediately to set
+        # sub-action state, then numpad appears for item selection.
+        # No commands need number suffix anymore — all submit immediately.
         is_vendor_mode = gs.prompt_cntl in ['vendor_shop', 'starting_shop']
-        is_spell_memorization_mode = gs.prompt_cntl == 'spell_memorization_mode'
-        # u/e always submit immediately (toggles inventory filter, then user picks number)
-        needs_number_suffix = (cmd in ['b', 's', 'r', 'id'] and is_vendor_mode) or \
-                              (cmd in ['m', 'f'] and is_spell_memorization_mode)
-        
-        # Special case: 'ba' (buy all) in starting shop - needs send but no number
-        is_buy_all = cmd == 'ba' and gs.prompt_cntl == 'starting_shop'
-        
+        needs_number_suffix = False
+
         # Special case: 'e' in inventory means equip (not east movement)
         # Override is_movement for 'e' when in inventory/needs_numbers mode
         if cmd == 'e' and self.current_needs_numbers:
             is_movement = False
-        
+
         # Special case: 's' in vendor mode means sell (not south movement)
         if cmd == 's' and is_vendor_mode:
             is_movement = False
-        
-        # In modes that need numbers (inventory, vendor, etc.), certain commands wait for number/send
-        # All other commands (c, m, x, i, etc.) submit immediately
-        if (needs_number_suffix or is_buy_all) and not is_movement:
+
+        # All commands now submit immediately (no prefix-and-wait pattern)
+        if needs_number_suffix and not is_movement:
             # Append command to input field, user will type number and press send
             self.input_field.value = cmd
             # Don't focus if readonly (will trigger keyboard)
@@ -3364,7 +3487,11 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
                 """
-            current_commands_text = "b# = buy | s# = sell | ba = all | x = exit"
+            if gs.vendor_action:
+                action_label = {'buy': 'buy', 'sell': 'sell'}.get(gs.vendor_action, gs.vendor_action)
+                current_commands_text = f"# = {action_label} item | b = back"
+            else:
+                current_commands_text = "b = buy | s = sell | ba = buy all | x = exit"
 
         elif gs.prompt_cntl == "sell_quantity_mode":
             # SELL QUANTITY MODE - Show "How many?" prompt
@@ -3455,8 +3582,11 @@ class WizardsCavernApp(toga.App):
                 """
             if gs.prompt_cntl == "sell_quantity_mode":
                 current_commands_text = "1-9 / a = sell | c = cancel"
+            elif gs.vendor_action:
+                action_label = {'buy': 'buy', 'sell': 'sell', 'repair': 'repair', 'identify': 'identify'}.get(gs.vendor_action, gs.vendor_action)
+                current_commands_text = f"# = {action_label} item | b = back"
             else:
-                current_commands_text = "b# = buy | s# = sell | r# = repair | id# = identify | x = exit"
+                current_commands_text = "b = buy | s = sell | r = repair | id = identify | x = exit"
 
 
 
@@ -3528,7 +3658,10 @@ class WizardsCavernApp(toga.App):
                         </div>
                     """
 
-                current_commands_text = "u = use | eat = eat | j = journal | x = close"
+                if gs.inventory_filter:
+                    current_commands_text = "# = select | b = back"
+                else:
+                    current_commands_text = "u = use | eat = eat | j = journal | x = close"
 
 
             else:
@@ -3627,12 +3760,16 @@ class WizardsCavernApp(toga.App):
 
                 can_cast = can_cast_spells(gs.player_character)
 
-                inv_commands = "u = use | e = equip | eat = eat | c = craft"
-
-                if can_cast:
-                    inv_commands += " | m = spells"
-
-                inv_commands += " | j = journal | q = quit game | x = exit"
+                if gs.inventory_filter:
+                    # Filter active: numpad mode with back button
+                    filter_label = {'use': 'Use', 'equip': 'Equip', 'eat': 'Eat'}.get(gs.inventory_filter, gs.inventory_filter)
+                    inv_commands = f"# = {filter_label.lower()} item | b = back"
+                else:
+                    # Main inventory: centered command buttons, no numpad
+                    inv_commands = "u = use | e = equip | eat = eat | c = craft"
+                    if can_cast:
+                        inv_commands += " | m = spells"
+                    inv_commands += " | j = journal | q = quit game | x = exit"
 
                 html_code = f"""
 
@@ -3931,7 +4068,11 @@ class WizardsCavernApp(toga.App):
                     <div style="border: 1px solid blue; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{available_spells_html}</div>
 </div>
                 """
-            current_commands_text = "m# = memorize | f# = forget | x = exit"
+            if gs.spell_memo_action:
+                action_label = {'memorize': 'memorize', 'forget': 'forget'}.get(gs.spell_memo_action, gs.spell_memo_action)
+                current_commands_text = f"# = {action_label} spell | b = back"
+            else:
+                current_commands_text = "m = memorize | f = forget | x = exit"
 
         elif gs.prompt_cntl == "journal_mode":
             # JOURNAL MAIN MENU
@@ -4233,55 +4374,47 @@ class WizardsCavernApp(toga.App):
             current_commands_text = f"b = back | s = stats | a = achvs | t = {text_label} | g = save | x = close"
 
         elif gs.prompt_cntl == "spell_casting_mode":
-            # SPELL CASTING - 3 Column: Map | Combat | Spells
-
-            # Generate map HTML
-            floor = gs.my_tower.floors[gs.player_character.z]
-            highlight_coords = (gs.player_character.y, gs.player_character.x)
-
-            grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            # SPELL CASTING - Compact: Combat panels + spell list (no map)
+            # Map is hidden to give spell list room on mobile screens.
 
             # Generate pixel art sprite for the monster
             monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name)
             evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
 
-            # Monster Info
+            # Compact Monster Info (same as combat_mode compact style)
             evo_border_style = f"border: 2px solid {evo_border_color};" if evo_border_color else "border: 2px solid #666;"
             evo_name_color = evo_border_color if evo_border_color else "#F44336"
             monster_html = f"""
-                <div id="monster_panel" style="position:relative; padding: 4px; border-radius: 4px; {evo_border_style} margin-bottom: 5px;">
+                <div id="monster_panel" style="position:relative; padding: 3px; border-radius: 3px; {evo_border_style} margin-bottom: 4px;">
                     <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{monster_sprite_html}</div>
                         <div>
-                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 15px; margin-bottom: 4px;">{gs.active_monster.name} {evo_tier_label}</div>
-                            <div style="font-size: 12px; margin-bottom: 3px;">Level {gs.active_monster.level}</div>
-                            <div style="font-size: 12px;">{health_bar(_m_display_hp, gs.active_monster.max_health, width=15)}</div>
-                            {f'<div style="font-size: 12px; color: #FFB74D; margin-top: 3px;">Weak: {", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
-                            {f'<div style="font-size: 12px; color: #64B5F6; margin-top: 2px;">Resist: {", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
+                            <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
+                            <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
+                            <div style="font-size: 9px;">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</div>
+                            {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
+                            {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 1px;">{", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
                     </div>
                     <div id="monster_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="monster_def_dice" style="position:relative;width:32px;height:52px;"></div><div id="monster_atk_dice" style="position:relative;width:32px;height:52px;"></div></div>
                 </div>
                 """
 
-            # Player Combat Info
+            # Compact Player Combat Info (mana emphasized for spell selection)
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
                 getattr(gs.player_character, 'equipped_armor', None)
             )
             player_combat_html = f"""
-                <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;{low_hp_pulse_style}">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
+                <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
+                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:2px;">
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
-                            <div style="color: #4CAF50; font-weight: bold; font-size: 15px; margin-bottom: 4px;"> {gs.player_character.name}</div>
-                            <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=15)}</div>
-                            <div style="font-size: 12px; margin-bottom: 4px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=15)}</div>
-                            <div style="font-size: 12px;">Atk: {gs.player_character.attack} | Def: {gs.player_character.defense}</div>
-                            <div style="font-size: 12px; margin-top: 2px;">Int: {gs.player_character.intelligence} (boosts spells)</div>
-                            {f'<div style="font-size: 9px; color: #64B5F6; margin-top: 3px;">Resist: {", ".join(gs.player_character.elemental_strengths)}</div>' if gs.player_character.elemental_strengths else ''}
-                            {f'<div style="font-size: 9px; color: #FFB74D; margin-top: 2px;">Weak: {", ".join(gs.player_character.elemental_weaknesses)}</div>' if gs.player_character.elemental_weaknesses else ''}
+                            <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {gs.player_character.name}</div>
+                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</div>
+                            <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
+                            <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense} Int:{gs.player_character.intelligence}</div>
                         </div>
                     </div>
                     <div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%);width:68px;height:52px;display:flex;gap:4px;"><div id="player_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="player_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
@@ -4290,8 +4423,8 @@ class WizardsCavernApp(toga.App):
 
             # Spells List
             available_spells = gs.player_character.memorized_spells
-            spells_html = '<div style="padding: 4px; border-radius: 4px; border: 2px solid #E040FB;">'
-            spells_html += '<div style="color: #E040FB; font-weight: bold; font-size: 15px; margin-bottom: 6px;"> Cast Spell</div>'
+            spells_html = '<div style="padding: 4px; border-radius: 4px; border: 2px solid #E040FB; max-height: 45vh; overflow-y: auto;">'
+            spells_html += '<div style="color: #E040FB; font-weight: bold; font-size: 13px; margin-bottom: 4px;"> Cast Spell</div>'
 
             if not available_spells:
                 spells_html += '<div style="color: #F44336; font-size: 12px;">No spells memorized!</div>'
@@ -4299,9 +4432,13 @@ class WizardsCavernApp(toga.App):
                 for i, spell in enumerate(available_spells):
                     can_cast = gs.player_character.mana >= spell.mana_cost
                     color = "#4CAF50" if can_cast else "#888"
+                    charge_turns = get_spell_charge_turns(spell)
+                    charge_tag = ""
+                    if charge_turns > 0:
+                        charge_tag = f' <span style="color:#CE93D8;">[{charge_turns}T]</span>'
 
-                    spell_line = f'<div style="color: {color}; font-size: 12px; margin-bottom: 6px; padding: 4px; border-radius: 2px;">'
-                    spell_line += f'<b>{i + 1}. {spell.name}</b> ({spell.mana_cost} MP)<br>'
+                    spell_line = f'<div style="color: {color}; font-size: 11px; margin-bottom: 4px; padding: 3px; border-radius: 2px;">'
+                    spell_line += f'<b>{i + 1}. {spell.name}</b> ({spell.mana_cost} MP){charge_tag}<br>'
                     spell_line += f'&nbsp;&nbsp;Lvl {spell.level} | '
 
                     if spell.spell_type == 'damage':
@@ -4310,29 +4447,27 @@ class WizardsCavernApp(toga.App):
                         spell_line += f'Heal {spell.base_power} HP'
                     elif spell.spell_type in ['add_status_effect', 'remove_status']:
                         spell_line += f'{spell.status_effect_name}'
+                    elif spell.spell_type == 'debuff_target':
+                        spell_line += f'{spell.status_effect_name}'
 
                     spell_line += '</div>'
                     spells_html += spell_line
 
             spells_html += '</div>'
 
-            # Layout: Map | Combat Info | Spell Menu
+            # Layout: Compact combat panels + spell list (no map — all visible)
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                     {player_stats_html}
 
-
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px; margin-bottom: 8px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%; max-width: 300px;">
-                            {monster_html}
-                            {player_combat_html}
-                        </div>
+                    <div style="width: 100%; max-width: 300px; margin: 0 auto 4px auto;">
+                        {monster_html}
+                        {player_combat_html}
                     </div>
 
-                    <div class="room-panel" style="width: 100%;">{spells_html}</div>
+                    {spells_html}
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
 
                 </div>
@@ -4405,7 +4540,36 @@ class WizardsCavernApp(toga.App):
             combat_commands = "a = attack | f = flee | i = inventory"
             if can_cast:
                 combat_commands += " | c = cast spell"
-            
+
+            # Channeling indicator — shown when player is mid-channel
+            channeling_html = ""
+            if gs.spell_charging:
+                ch = gs.spell_charging
+                spell_name = ch['spell'].name
+                turns_left = ch['turns_remaining']
+                total_turns = ch['total_turns']
+                # Progress bar: filled segments for completed turns
+                filled = total_turns - turns_left
+                bar_segments = ''.join(
+                    f'<span style="color:#E040FB;">{"*" if i < filled else "."}</span>'
+                    for i in range(total_turns)
+                )
+                channeling_html = f"""
+                <div style="padding: 6px; border: 2px solid #E040FB; border-radius: 4px; margin-top: 4px;
+                            background: rgba(224,64,251,0.08); animation: channelPulse 1.5s ease-in-out infinite;">
+                    <div style="color: #E040FB; font-weight: bold; font-size: 12px; margin-bottom: 2px;">
+                        CHANNELING: {spell_name}
+                    </div>
+                    <div style="font-size: 10px; color: #CE93D8;">
+                        [{bar_segments}] {turns_left} turn{'s' if turns_left != 1 else ''} remaining
+                    </div>
+                    <div style="font-size: 9px; color: #888; margin-top: 2px;">
+                        Concentration: d20 + INT/{gs.player_character.intelligence // 4}
+                    </div>
+                </div>
+                """
+                combat_commands = "any key = continue channeling"
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
@@ -4418,6 +4582,7 @@ class WizardsCavernApp(toga.App):
                         <div style="width: 100%; max-width: 300px;">
                             {monster_html}
                             {player_combat_html}
+                            {channeling_html}
                         </div>
                     </div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
@@ -4791,7 +4956,10 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
                 """
-            current_commands_text = "s# = sacrifice | d = detect | b = bless | u = purify | i = inventory | x = exit"
+            if gs.altar_action:
+                current_commands_text = "# = sacrifice item | b = back"
+            else:
+                current_commands_text = "s = sacrifice | d = detect | b = bless | u = purify | i = inventory | x = exit"
 
         elif gs.prompt_cntl == "pool_mode":
             # POOL VIEW - Simplified: Map | Pool Info
@@ -6044,7 +6212,10 @@ class WizardsCavernApp(toga.App):
                     current_commands_text += f" | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "altar_mode":
-                current_commands_text = "s# = sacrifice | d = detect | b = bless | u = purify | i = inventory | x = exit"
+                if gs.altar_action:
+                    current_commands_text = "# = sacrifice item | b = back"
+                else:
+                    current_commands_text = "s = sacrifice | d = detect | b = bless | u = purify | i = inventory | x = exit"
             elif gs.prompt_cntl == "warp_mode":
                 current_commands_text = "y = resist | n = enter"
             elif gs.prompt_cntl == "flare_direction_mode":
@@ -6072,20 +6243,27 @@ class WizardsCavernApp(toga.App):
         
         # Update button panel dynamically
         # Determine if number pad is needed
-        needs_numbers = gs.prompt_cntl in [
-            'inventory',
-            'vendor_shop',
-            'starting_shop',
-            'altar_mode',
-            'spell_memorization_mode',
-            'spell_casting_mode',
-            'journal_mode',
-            'crafting_mode',
-            'upgrade_scroll_mode',
-            'identify_scroll_mode',
-            'sell_quantity_mode',
-            'taxidermist_mode',
-        ]
+        # Modes that ALWAYS need numpad:
+        _always_numpad = {
+            'spell_casting_mode', 'journal_mode',
+            'crafting_mode', 'upgrade_scroll_mode', 'identify_scroll_mode',
+            'sell_quantity_mode', 'taxidermist_mode',
+        }
+        # Modes that need numpad only when a sub-selection is active:
+        if gs.prompt_cntl in _always_numpad:
+            needs_numbers = True
+        elif gs.prompt_cntl == 'inventory':
+            needs_numbers = gs.inventory_filter is not None
+        elif gs.prompt_cntl == 'vendor_shop':
+            needs_numbers = getattr(gs, 'vendor_action', None) is not None
+        elif gs.prompt_cntl == 'starting_shop':
+            needs_numbers = getattr(gs, 'vendor_action', None) is not None
+        elif gs.prompt_cntl == 'spell_memorization_mode':
+            needs_numbers = getattr(gs, 'spell_memo_action', None) is not None
+        elif gs.prompt_cntl == 'altar_mode':
+            needs_numbers = getattr(gs, 'altar_action', None) is not None
+        else:
+            needs_numbers = False
         
         self.update_button_panel(current_commands_text, needs_numbers)
 
@@ -6327,6 +6505,12 @@ class WizardsCavernApp(toga.App):
                     80% {{ transform: rotate(5deg); }}
                 }}
 
+                /* Spell channeling pulse on the channeling indicator */
+                @keyframes channelPulse {{
+                    0%, 100% {{ border-color: #E040FB; box-shadow: 0 0 4px rgba(224,64,251,0.3); }}
+                    50% {{ border-color: #CE93D8; box-shadow: 0 0 12px rgba(224,64,251,0.6); }}
+                }}
+
                 /* Game log: no animation (fixed, persistent) */
                 #game-log {{
                     animation: none;
@@ -6383,6 +6567,7 @@ class WizardsCavernApp(toga.App):
             {generate_spell_cast_js(gs.last_spell_cast)}
             {generate_spell_particles_js(gs.last_spell_cast)}
             {generate_dice_roll_js(gs.last_dice_rolls)}
+            {generate_concentration_check_js(gs.last_concentration_roll)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
         </body>
         </html>
@@ -6391,6 +6576,7 @@ class WizardsCavernApp(toga.App):
         gs.monster_defeated_anim = None
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
+        gs.last_concentration_roll = None
         return result
     
 
