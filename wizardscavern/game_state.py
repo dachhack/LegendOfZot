@@ -73,6 +73,8 @@ inventory_filter = None
 vendor_action = None
 # Spell memorization sub-action: None (show menu), 'memorize' or 'forget'
 spell_memo_action = None
+# Altar sub-action: None (show menu), 'sacrifice'
+altar_action = None
 
 # ============================================================================
 # SHOP & SELL STATE
