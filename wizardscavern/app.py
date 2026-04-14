@@ -442,8 +442,18 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
             sfxMaster.gain.value = 0.35;
             sfxMaster.connect(ctx.destination);
 
+            // Variation helper: returns value ± pct (e.g. vary(1200, 0.15) = 1020..1380)
+            function vary(val, pct) {{
+                return val * (1 + (Math.random() * 2 - 1) * pct);
+            }}
+            // Random pick from array
+            function pick(arr) {{ return arr[Math.floor(Math.random() * arr.length)]; }}
+
             // Helper: filtered noise burst
             function noiseBurst(duration, freq, Q, gain, startTime) {{
+                duration = vary(duration, 0.15);
+                freq = vary(freq, 0.18);
+                gain = vary(gain, 0.1);
                 var len = ctx.sampleRate * duration;
                 var buf = ctx.createBuffer(1, len, ctx.sampleRate);
                 var d = buf.getChannelData(0);
@@ -453,7 +463,7 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
                 var filt = ctx.createBiquadFilter();
                 filt.type = 'bandpass';
                 filt.frequency.value = freq;
-                filt.Q.value = Q;
+                filt.Q.value = vary(Q, 0.2);
                 var g = ctx.createGain();
                 g.gain.setValueAtTime(gain, startTime);
                 g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
@@ -466,10 +476,16 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
 
             // Helper: tone with pitch envelope
             function toneSweep(startFreq, endFreq, duration, type, gain, startTime) {{
+                startFreq = vary(startFreq, 0.12);
+                endFreq = vary(endFreq, 0.12);
+                duration = vary(duration, 0.1);
+                gain = vary(gain, 0.1);
                 var osc = ctx.createOscillator();
                 osc.type = type || 'sine';
                 osc.frequency.setValueAtTime(startFreq, startTime);
                 osc.frequency.exponentialRampToValueAtTime(Math.max(endFreq, 20), startTime + duration);
+                // Slight random detune for character
+                osc.detune.value = (Math.random() * 30) - 15;
                 var g = ctx.createGain();
                 g.gain.setValueAtTime(gain, startTime);
                 g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
@@ -481,9 +497,13 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
 
             // Helper: quick tone (fixed pitch, fast decay)
             function quickTone(freq, duration, type, gain, startTime) {{
+                freq = vary(freq, 0.08);
+                duration = vary(duration, 0.1);
+                gain = vary(gain, 0.1);
                 var osc = ctx.createOscillator();
                 osc.type = type || 'sine';
                 osc.frequency.value = freq;
+                osc.detune.value = (Math.random() * 20) - 10;
                 var g = ctx.createGain();
                 g.gain.setValueAtTime(gain, startTime);
                 g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
@@ -495,8 +515,10 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
 
             // Helper: ascending arpeggio (array of freqs)
             function arpeggio(freqs, noteLen, type, gain, startTime) {{
+                // Slight per-note timing jitter for organic feel
                 for (var i = 0; i < freqs.length; i++) {{
-                    quickTone(freqs[i], noteLen * 1.5, type, gain, startTime + i * noteLen);
+                    var jitter = (Math.random() * 0.012) - 0.006;
+                    quickTone(freqs[i], noteLen * 1.5, type, gain, startTime + i * noteLen + jitter);
                 }}
             }}
 
@@ -510,143 +532,152 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
                 switch(fx) {{
                     // === COMBAT ===
                     case 'weapon_hit':
-                        noiseBurst(0.12, 1200, 2, 0.5, st);
-                        toneSweep(300, 100, 0.15, 'sawtooth', 0.2, st);
+                        noiseBurst(0.12, pick([1000, 1200, 1400]), 2, 0.5, st);
+                        toneSweep(pick([280, 300, 340]), pick([80, 100, 120]), 0.15, 'sawtooth', 0.2, st);
                         break;
 
                     case 'crit_hit':
-                        noiseBurst(0.2, 2000, 3, 0.7, st);
-                        toneSweep(600, 150, 0.25, 'sawtooth', 0.35, st);
-                        quickTone(880, 0.15, 'triangle', 0.25, st + 0.05);
+                        noiseBurst(0.2, pick([1800, 2000, 2200]), 3, 0.7, st);
+                        toneSweep(pick([550, 600, 680]), pick([120, 150, 180]), 0.25, 'sawtooth', 0.35, st);
+                        quickTone(pick([830, 880, 932]), 0.15, 'triangle', 0.25, st + 0.05);
                         break;
 
                     case 'player_hurt':
-                        noiseBurst(0.15, 600, 2, 0.4, st);
-                        toneSweep(200, 80, 0.2, 'sine', 0.3, st);
+                        noiseBurst(0.15, pick([500, 600, 700]), 2, 0.4, st);
+                        toneSweep(pick([180, 200, 230]), pick([60, 80, 100]), 0.2, 'sine', 0.3, st);
                         break;
 
                     case 'fumble':
-                        toneSweep(400, 60, 0.4, 'sawtooth', 0.2, st);
-                        noiseBurst(0.08, 300, 1, 0.15, st + 0.1);
+                        toneSweep(pick([350, 400, 450]), pick([50, 60, 75]), 0.4, pick(['sawtooth', 'sine']), 0.2, st);
+                        noiseBurst(0.08, pick([250, 300, 380]), 1, 0.15, st + 0.1);
                         break;
 
                     case 'block':
-                        noiseBurst(0.06, 3000, 8, 0.5, st);
-                        quickTone(1200, 0.08, 'square', 0.2, st);
-                        quickTone(800, 0.1, 'square', 0.15, st + 0.04);
+                        noiseBurst(0.06, pick([2800, 3000, 3400]), pick([6, 8, 10]), 0.5, st);
+                        quickTone(pick([1100, 1200, 1350]), 0.08, 'square', 0.2, st);
+                        quickTone(pick([700, 800, 900]), 0.1, 'square', 0.15, st + 0.04);
                         break;
 
                     case 'monster_death':
-                        toneSweep(300, 40, 0.5, 'sawtooth', 0.3, st);
-                        noiseBurst(0.3, 500, 1, 0.4, st);
-                        noiseBurst(0.15, 100, 2, 0.3, st + 0.15);
+                        toneSweep(pick([260, 300, 350]), pick([30, 40, 55]), 0.5, 'sawtooth', 0.3, st);
+                        noiseBurst(0.3, pick([400, 500, 600]), 1, 0.4, st);
+                        noiseBurst(0.15, pick([80, 100, 130]), 2, 0.3, st + 0.15);
                         break;
 
                     case 'heal':
-                        arpeggio([392, 494, 587, 784], 0.1, 'sine', 0.2, st);
+                        // Randomly shift the arpeggio up or down a bit
+                        var hShift = pick([0.95, 1.0, 1.05]);
+                        arpeggio([392*hShift, 494*hShift, 587*hShift, 784*hShift], 0.1, pick(['sine', 'triangle']), 0.2, st);
                         break;
 
                     case 'status_inflict':
-                        toneSweep(500, 200, 0.3, 'sine', 0.15, st);
-                        noiseBurst(0.1, 800, 4, 0.1, st + 0.05);
+                        toneSweep(pick([450, 500, 560]), pick([170, 200, 240]), 0.3, 'sine', 0.15, st);
+                        noiseBurst(0.1, pick([700, 800, 950]), 4, 0.1, st + 0.05);
                         break;
 
                     // === SPELLS (element-specific) ===
                     case 'spell_fire':
-                        noiseBurst(0.35, 1500, 1, 0.5, st);
-                        noiseBurst(0.2, 3000, 2, 0.3, st + 0.05);
-                        toneSweep(200, 100, 0.3, 'sawtooth', 0.15, st);
+                        noiseBurst(pick([0.3, 0.35, 0.4]), pick([1300, 1500, 1700]), 1, 0.5, st);
+                        noiseBurst(0.2, pick([2500, 3000, 3500]), 2, 0.3, st + 0.05);
+                        toneSweep(pick([180, 200, 230]), pick([80, 100, 120]), 0.3, 'sawtooth', 0.15, st);
                         break;
 
                     case 'spell_ice':
-                        quickTone(1200, 0.3, 'sine', 0.25, st);
-                        quickTone(1800, 0.2, 'sine', 0.15, st + 0.05);
-                        noiseBurst(0.15, 4000, 10, 0.3, st + 0.1);
+                        quickTone(pick([1100, 1200, 1350]), 0.3, 'sine', 0.25, st);
+                        quickTone(pick([1650, 1800, 2000]), 0.2, 'sine', 0.15, st + 0.05);
+                        noiseBurst(0.15, pick([3500, 4000, 4500]), pick([8, 10, 12]), 0.3, st + 0.1);
                         break;
 
                     case 'spell_lightning':
-                        noiseBurst(0.05, 5000, 1, 0.8, st);
-                        noiseBurst(0.25, 2000, 2, 0.4, st + 0.03);
-                        toneSweep(2000, 100, 0.15, 'square', 0.3, st);
+                        noiseBurst(pick([0.04, 0.05, 0.07]), pick([4500, 5000, 5500]), 1, 0.8, st);
+                        noiseBurst(0.25, pick([1800, 2000, 2400]), 2, 0.4, st + 0.03);
+                        toneSweep(pick([1800, 2000, 2300]), pick([80, 100, 130]), 0.15, 'square', 0.3, st);
                         break;
 
                     case 'spell_holy':
-                        arpeggio([523, 659, 784, 1047], 0.08, 'sine', 0.25, st);
-                        quickTone(1047, 0.4, 'triangle', 0.15, st + 0.3);
+                        var holyShift = pick([0.94, 1.0, 1.06]);
+                        arpeggio([523*holyShift, 659*holyShift, 784*holyShift, 1047*holyShift], 0.08, 'sine', 0.25, st);
+                        quickTone(1047*holyShift, 0.4, 'triangle', 0.15, st + 0.3);
                         break;
 
                     case 'spell_darkness': case 'spell_shadow':
-                        toneSweep(100, 40, 0.5, 'sawtooth', 0.3, st);
-                        noiseBurst(0.3, 200, 6, 0.25, st + 0.05);
+                        toneSweep(pick([90, 100, 115]), pick([30, 40, 50]), 0.5, 'sawtooth', 0.3, st);
+                        noiseBurst(0.3, pick([160, 200, 250]), pick([5, 6, 8]), 0.25, st + 0.05);
                         break;
 
                     case 'spell_poison': case 'spell_acid':
-                        noiseBurst(0.25, 800, 3, 0.3, st);
-                        toneSweep(400, 150, 0.3, 'sine', 0.2, st + 0.05);
-                        toneSweep(350, 120, 0.2, 'sine', 0.15, st + 0.15);
+                        noiseBurst(0.25, pick([700, 800, 950]), 3, 0.3, st);
+                        toneSweep(pick([360, 400, 450]), pick([120, 150, 180]), 0.3, 'sine', 0.2, st + 0.05);
+                        toneSweep(pick([300, 350, 400]), pick([100, 120, 150]), 0.2, 'sine', 0.15, st + 0.15);
                         break;
 
                     case 'spell_arcane':
-                        quickTone(660, 0.2, 'triangle', 0.25, st);
-                        quickTone(880, 0.15, 'triangle', 0.2, st + 0.08);
-                        noiseBurst(0.15, 2000, 5, 0.15, st + 0.1);
+                        quickTone(pick([620, 660, 700]), 0.2, 'triangle', 0.25, st);
+                        quickTone(pick([830, 880, 940]), 0.15, 'triangle', 0.2, st + 0.08);
+                        noiseBurst(0.15, pick([1800, 2000, 2300]), 5, 0.15, st + 0.1);
                         break;
 
                     case 'spell_earth':
-                        toneSweep(80, 40, 0.4, 'sine', 0.35, st);
-                        noiseBurst(0.2, 300, 2, 0.4, st);
-                        noiseBurst(0.15, 600, 3, 0.2, st + 0.1);
+                        toneSweep(pick([70, 80, 95]), pick([30, 40, 50]), 0.4, 'sine', 0.35, st);
+                        noiseBurst(0.2, pick([250, 300, 380]), 2, 0.4, st);
+                        noiseBurst(0.15, pick([500, 600, 750]), 3, 0.2, st + 0.1);
                         break;
 
                     case 'spell_wind': case 'spell_air':
-                        noiseBurst(0.4, 2500, 1, 0.35, st);
-                        toneSweep(800, 1600, 0.3, 'sine', 0.1, st);
+                        noiseBurst(pick([0.35, 0.4, 0.45]), pick([2200, 2500, 2800]), 1, 0.35, st);
+                        toneSweep(pick([700, 800, 900]), pick([1400, 1600, 1800]), 0.3, 'sine', 0.1, st);
                         break;
 
                     case 'spell_water':
-                        noiseBurst(0.2, 1800, 3, 0.3, st);
-                        toneSweep(600, 300, 0.3, 'sine', 0.2, st + 0.05);
-                        quickTone(900, 0.1, 'sine', 0.1, st + 0.15);
+                        noiseBurst(0.2, pick([1600, 1800, 2100]), 3, 0.3, st);
+                        toneSweep(pick([550, 600, 680]), pick([250, 300, 350]), 0.3, 'sine', 0.2, st + 0.05);
+                        quickTone(pick([800, 900, 1000]), 0.1, 'sine', 0.1, st + 0.15);
                         break;
 
                     case 'spell_force': case 'spell_psychic':
-                        toneSweep(440, 880, 0.2, 'sine', 0.3, st);
-                        toneSweep(880, 440, 0.2, 'sine', 0.2, st + 0.15);
-                        noiseBurst(0.1, 3000, 8, 0.15, st + 0.1);
+                        var forceF = pick([400, 440, 490]);
+                        toneSweep(forceF, forceF * 2, 0.2, 'sine', 0.3, st);
+                        toneSweep(forceF * 2, forceF, 0.2, 'sine', 0.2, st + 0.15);
+                        noiseBurst(0.1, pick([2500, 3000, 3500]), 8, 0.15, st + 0.1);
                         break;
 
                     case 'spell_fizzle':
-                        toneSweep(600, 80, 0.5, 'sine', 0.25, st);
-                        noiseBurst(0.2, 400, 1, 0.2, st + 0.15);
+                        toneSweep(pick([500, 600, 700]), pick([60, 80, 100]), 0.5, pick(['sine', 'triangle']), 0.25, st);
+                        noiseBurst(0.2, pick([350, 400, 500]), 1, 0.2, st + 0.15);
                         break;
 
                     // === EXPLORATION / UI ===
                     case 'chest_open':
-                        noiseBurst(0.1, 2000, 3, 0.2, st);
-                        arpeggio([523, 659, 784, 1047, 1319], 0.07, 'triangle', 0.2, st + 0.05);
+                        noiseBurst(0.1, pick([1800, 2000, 2300]), 3, 0.2, st);
+                        var cShift = pick([0.95, 1.0, 1.05]);
+                        arpeggio([523*cShift, 659*cShift, 784*cShift, 1047*cShift, 1319*cShift], 0.07, 'triangle', 0.2, st + 0.05);
                         break;
 
                     case 'level_up':
-                        arpeggio([262, 330, 392, 523, 659, 784], 0.1, 'triangle', 0.25, st);
-                        quickTone(784, 0.5, 'sine', 0.15, st + 0.55);
+                        var lShift = pick([0.95, 1.0, 1.05]);
+                        arpeggio([262*lShift, 330*lShift, 392*lShift, 523*lShift, 659*lShift, 784*lShift], 0.1, pick(['triangle', 'sine']), 0.25, st);
+                        quickTone(784*lShift, 0.5, 'sine', 0.15, st + 0.55);
                         break;
 
                     case 'achievement':
-                        arpeggio([523, 659, 784, 1047], 0.08, 'triangle', 0.2, st);
-                        quickTone(1047, 0.3, 'sine', 0.2, st + 0.3);
-                        quickTone(1319, 0.3, 'sine', 0.15, st + 0.4);
+                        var aShift = pick([0.95, 1.0, 1.05]);
+                        arpeggio([523*aShift, 659*aShift, 784*aShift, 1047*aShift], 0.08, 'triangle', 0.2, st);
+                        quickTone(1047*aShift, 0.3, 'sine', 0.2, st + 0.3);
+                        quickTone(1319*aShift, 0.3, 'sine', 0.15, st + 0.4);
                         break;
 
                     case 'buy':
-                        quickTone(800, 0.06, 'square', 0.15, st);
-                        quickTone(1000, 0.06, 'square', 0.12, st + 0.07);
-                        quickTone(1200, 0.08, 'square', 0.1, st + 0.14);
+                        var bF = pick([750, 800, 860]);
+                        quickTone(bF, 0.06, 'square', 0.15, st);
+                        quickTone(bF * 1.25, 0.06, 'square', 0.12, st + 0.07);
+                        quickTone(bF * 1.5, 0.08, 'square', 0.1, st + 0.14);
                         break;
 
                     case 'sell':
-                        quickTone(1200, 0.06, 'square', 0.15, st);
-                        quickTone(1000, 0.06, 'square', 0.12, st + 0.07);
-                        quickTone(800, 0.08, 'square', 0.1, st + 0.14);
+                        var sF = pick([1100, 1200, 1300]);
+                        quickTone(sF, 0.06, 'square', 0.15, st);
+                        quickTone(sF * 0.83, 0.06, 'square', 0.12, st + 0.07);
+                        quickTone(sF * 0.67, 0.08, 'square', 0.1, st + 0.14);
                         break;
                 }}
                 offset += 0.05;
