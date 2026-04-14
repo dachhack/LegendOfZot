@@ -116,19 +116,20 @@ def get_audio_mood(prompt_cntl):
 
 
 def generate_ambient_audio_js(mood, enabled):
-    """Generate procedural ambient music via Web Audio API.
+    """Generate chiptune music via a 4-channel Web Audio API step sequencer.
 
-    Each mood defines a set of drone frequencies, a scale for melodic notes,
-    filter settings, and optional rhythmic pulses.  The engine creates:
-      - A layered drone (2 detuned oscillators + sub-bass)
-      - Filtered noise for atmosphere (wind / cave ambience)
-      - Occasional random melodic notes from a mood-specific scale
-      - Optional rhythmic LFO modulation for combat tension
+    Channels mirror the NES APU:
+      - pulse1  (square wave)  — melody
+      - pulse2  (square wave)  — harmony / countermelody
+      - triangle               — bass line
+      - noise   (filtered)     — percussion (kick / snare / hi-hat)
 
-    Because wrap_html() rebuilds the entire page on every game action,
-    the audio context is created fresh each render.  A short fade-in
-    (200ms) prevents clicks, and the ambient nature of the sound makes
-    restarts imperceptible.
+    Each mood has a unique song: BPM, key, and 32-step patterns (8th-note
+    resolution, 4 bars).  Pattern entries are [step, freq, duration_steps].
+    Noise freq controls bandpass cutoff: ~150 = kick, ~3000 = snare, ~8000 = hat.
+
+    A subtle random detune (±8 cents) is applied per note so the
+    sequencer doesn't sound perfectly sterile.
     """
     if not enabled:
         return ""
@@ -142,217 +143,170 @@ def generate_ambient_audio_js(mood, enabled):
             if (!AC) return;
             var ctx = new AC();
 
-            // Master gain — everything routes here
             var master = ctx.createGain();
             master.gain.value = 0;
             master.connect(ctx.destination);
-
-            // Fade in over 400ms to avoid click
             master.gain.linearRampToValueAtTime(0.0, ctx.currentTime + 0.05);
-            master.gain.linearRampToValueAtTime(0.28, ctx.currentTime + 0.45);
+            master.gain.linearRampToValueAtTime(0.25, ctx.currentTime + 0.5);
 
-            // --- Mood Definitions ---
-            var moods = {{
+            // --- Song Data ---
+            // Pattern format: [[step, frequency, duration_in_steps], ...]
+            // 32 steps per loop (8th notes, 4 bars of 4/4)
+            // Noise freq: 150=kick, 3000=snare, 8000=hi-hat
+            var songs = {{
                 explore: {{
-                    droneFreqs: [65.41, 98.0],   // C2, G2
-                    subFreq: 32.7,                // C1
-                    scale: [130.81, 146.83, 164.81, 196.0, 220.0, 261.63, 293.66], // C minor pentatonic
-                    noiseGain: 0.06,
-                    droneGain: 0.13,
-                    melodyGain: 0.07,
-                    filterFreq: 400,
-                    filterQ: 2,
-                    melodyInterval: 4000,
-                    lfoRate: 0,
-                    oscType: 'sine'
+                    bpm: 110,
+                    pulse1: [[0,262,2],[3,311,1],[4,392,3],[8,349,1],[9,311,1],[10,294,2],[12,262,2],[16,233,2],[19,262,1],[20,311,3],[24,294,1],[25,262,1],[26,233,2],[28,262,4]],
+                    pulse2: [[4,311,2],[12,196,2],[20,262,2],[28,196,4]],
+                    triangle: [[0,131,4],[4,104,4],[8,117,4],[12,98,4],[16,104,4],[20,156,4],[24,117,4],[28,131,4]],
+                    noise: [[0,8000,1],[2,8000,1],[4,8000,1],[6,8000,1],[8,150,1],[10,8000,1],[12,8000,1],[14,8000,1],[16,8000,1],[18,8000,1],[20,8000,1],[22,8000,1],[24,150,1],[26,8000,1],[28,8000,1],[30,8000,1]]
                 }},
                 combat: {{
-                    droneFreqs: [55.0, 82.41],    // A1, E2
-                    subFreq: 27.5,                // A0
-                    scale: [110.0, 130.81, 146.83, 164.81, 207.65, 220.0, 261.63], // A minor
-                    noiseGain: 0.09,
-                    droneGain: 0.14,
-                    melodyGain: 0.05,
-                    filterFreq: 600,
-                    filterQ: 4,
-                    melodyInterval: 1800,
-                    lfoRate: 2.5,
-                    oscType: 'sawtooth'
+                    bpm: 140,
+                    pulse1: [[0,440,1],[1,330,1],[2,440,1],[3,523,2],[6,494,1],[7,440,1],[8,392,2],[10,330,1],[11,294,1],[12,330,2],[14,262,1],[15,294,1],[16,440,1],[17,330,1],[18,440,1],[19,523,2],[22,587,1],[23,523,1],[24,440,2],[26,392,1],[27,330,1],[28,294,2],[30,330,2]],
+                    pulse2: [[0,220,1],[2,220,1],[4,175,1],[6,175,1],[8,196,1],[10,196,1],[12,165,1],[14,165,1],[16,220,1],[18,220,1],[20,175,1],[22,175,1],[24,196,1],[26,196,1],[28,165,1],[30,131,1]],
+                    triangle: [[0,110,2],[4,87,2],[8,98,2],[12,82,2],[16,110,2],[20,87,2],[24,98,2],[28,131,2]],
+                    noise: [[0,150,1],[2,3000,1],[4,150,1],[6,3000,1],[8,150,1],[10,3000,1],[12,150,1],[14,3000,1],[16,150,1],[18,3000,1],[20,150,1],[22,3000,1],[24,150,1],[26,3000,1],[28,150,1],[30,3000,1]]
                 }},
                 victory: {{
-                    droneFreqs: [130.81, 164.81], // C3, E3 (major third)
-                    subFreq: 65.41,               // C2
-                    scale: [261.63, 293.66, 329.63, 392.0, 440.0, 523.25], // C major pentatonic
-                    noiseGain: 0.03,
-                    droneGain: 0.12,
-                    melodyGain: 0.10,
-                    filterFreq: 800,
-                    filterQ: 1,
-                    melodyInterval: 2500,
-                    lfoRate: 0,
-                    oscType: 'triangle'
+                    bpm: 130,
+                    pulse1: [[0,262,2],[2,330,2],[4,392,2],[6,523,4],[12,494,1],[13,440,1],[14,392,2],[16,330,2],[18,392,2],[20,440,2],[22,523,6],[28,659,2],[30,523,2]],
+                    pulse2: [[0,196,2],[4,262,2],[6,330,4],[16,262,2],[20,330,2],[22,392,6]],
+                    triangle: [[0,131,4],[4,175,4],[8,196,4],[12,131,4],[16,131,4],[20,175,4],[24,196,4],[28,131,4]],
+                    noise: [[0,150,1],[1,8000,1],[2,3000,1],[3,8000,1],[4,150,1],[5,8000,1],[6,3000,1],[7,8000,1],[8,150,1],[9,8000,1],[10,3000,1],[11,8000,1],[12,150,1],[14,3000,1],[16,150,1],[17,8000,1],[18,3000,1],[19,8000,1],[20,150,1],[22,3000,1],[24,150,1],[25,8000,1],[26,3000,1],[27,8000,1],[28,150,1],[30,3000,1]]
                 }},
                 shop: {{
-                    droneFreqs: [87.31, 130.81],  // F2, C3
-                    subFreq: 43.65,               // F1
-                    scale: [174.61, 196.0, 220.0, 261.63, 293.66, 349.23], // F major
-                    noiseGain: 0.03,
-                    droneGain: 0.09,
-                    melodyGain: 0.08,
-                    filterFreq: 600,
-                    filterQ: 1,
-                    melodyInterval: 3500,
-                    lfoRate: 0,
-                    oscType: 'sine'
+                    bpm: 100,
+                    pulse1: [[0,349,2],[2,440,1],[3,523,2],[6,440,1],[7,349,1],[8,330,2],[10,294,1],[11,262,1],[12,294,2],[14,349,2],[16,440,2],[18,523,1],[19,587,2],[22,523,1],[23,440,1],[24,349,3],[28,262,2],[30,349,2]],
+                    pulse2: [[0,262,2],[4,349,2],[8,262,2],[12,220,2],[16,262,2],[20,349,2],[24,262,2],[28,220,2]],
+                    triangle: [[0,175,2],[2,196,2],[4,220,2],[6,175,2],[8,165,2],[10,175,2],[12,147,2],[14,131,2],[16,175,2],[18,196,2],[20,220,2],[22,175,2],[24,165,2],[26,175,2],[28,147,2],[30,175,2]],
+                    noise: [[0,8000,1],[4,8000,1],[8,8000,1],[12,8000,1],[16,8000,1],[20,8000,1],[24,8000,1],[28,8000,1]]
                 }},
                 mystery: {{
-                    droneFreqs: [61.74, 92.50],   // Eb2, Gb2 (tritone!)
-                    subFreq: 30.87,               // Eb1
-                    scale: [123.47, 138.59, 155.56, 185.0, 207.65, 246.94], // Eb whole-tone
-                    noiseGain: 0.08,
-                    droneGain: 0.11,
-                    melodyGain: 0.05,
-                    filterFreq: 350,
-                    filterQ: 6,
-                    melodyInterval: 5000,
-                    lfoRate: 0.3,
-                    oscType: 'sine'
+                    bpm: 80,
+                    pulse1: [[0,311,3],[6,392,2],[12,494,3],[20,440,2],[26,349,3]],
+                    pulse2: [[4,554,4],[16,494,4]],
+                    triangle: [[0,78,8],[8,87,8],[16,78,8],[24,98,8]],
+                    noise: [[0,6000,1],[8,6000,1],[16,6000,1],[24,6000,1]]
                 }},
                 deep: {{
-                    droneFreqs: [41.2, 61.74],    // E1, Eb2
-                    subFreq: 20.6,                // E0
-                    scale: [82.41, 92.50, 110.0, 123.47, 146.83, 164.81], // E phrygian
-                    noiseGain: 0.10,
-                    droneGain: 0.15,
-                    melodyGain: 0.04,
-                    filterFreq: 250,
-                    filterQ: 3,
-                    melodyInterval: 6000,
-                    lfoRate: 0.15,
-                    oscType: 'sine'
+                    bpm: 85,
+                    pulse1: [[0,165,3],[6,175,2],[10,196,3],[16,220,2],[20,196,2],[24,175,3],[28,165,4]],
+                    pulse2: [[0,131,4],[8,110,4],[16,131,4],[24,98,8]],
+                    triangle: [[0,82,4],[4,87,4],[8,82,4],[12,65,4],[16,82,4],[20,87,4],[24,82,4],[28,65,4]],
+                    noise: [[0,150,2],[8,150,2],[16,150,2],[24,150,2]]
                 }},
                 garden: {{
-                    droneFreqs: [98.0, 146.83],   // G2, D3
-                    subFreq: 49.0,                // G1
-                    scale: [196.0, 220.0, 246.94, 293.66, 329.63, 392.0, 440.0], // G major
-                    noiseGain: 0.04,
-                    droneGain: 0.08,
-                    melodyGain: 0.10,
-                    filterFreq: 900,
-                    filterQ: 1,
-                    melodyInterval: 2800,
-                    lfoRate: 0,
-                    oscType: 'triangle'
+                    bpm: 105,
+                    pulse1: [[0,392,2],[2,330,1],[3,294,1],[4,330,2],[6,392,2],[8,440,2],[10,392,1],[11,330,1],[12,294,3],[16,262,2],[18,294,1],[19,330,1],[20,392,2],[22,440,2],[24,523,3],[28,440,1],[29,392,1],[30,330,2]],
+                    pulse2: [[0,247,2],[4,262,2],[8,294,2],[12,247,2],[16,262,2],[20,294,2],[24,330,2],[28,262,2]],
+                    triangle: [[0,98,2],[2,123,2],[4,131,2],[6,98,2],[8,110,2],[10,123,2],[12,131,2],[14,147,2],[16,98,2],[18,123,2],[20,131,2],[22,98,2],[24,110,2],[26,123,2],[28,131,2],[30,98,2]],
+                    noise: [[4,8000,1],[12,8000,1],[20,8000,1],[28,8000,1]]
                 }},
                 death: {{
-                    droneFreqs: [46.25, 55.0],    // Bb1, A1 (semitone rub)
-                    subFreq: 23.12,               // Bb0
-                    scale: [92.50, 103.83, 116.54, 138.59, 155.56], // Bb minor
-                    noiseGain: 0.07,
-                    droneGain: 0.16,
-                    melodyGain: 0.03,
-                    filterFreq: 200,
-                    filterQ: 8,
-                    melodyInterval: 7000,
-                    lfoRate: 0.1,
-                    oscType: 'sine'
+                    bpm: 70,
+                    pulse1: [[0,349,3],[4,311,3],[8,277,3],[12,262,3],[16,233,4],[22,277,2],[24,311,3],[28,233,4]],
+                    pulse2: [[0,233,8],[8,185,8],[16,156,8],[24,175,8]],
+                    triangle: [[0,117,8],[8,139,8],[16,117,8],[24,87,8]],
+                    noise: [[0,4000,1],[16,4000,1]]
                 }},
                 menu: {{
-                    droneFreqs: [73.42, 110.0],   // D2, A2
-                    subFreq: 36.71,               // D1
-                    scale: [146.83, 164.81, 196.0, 220.0, 261.63, 293.66], // D minor
-                    noiseGain: 0.03,
-                    droneGain: 0.07,
-                    melodyGain: 0.06,
-                    filterFreq: 500,
-                    filterQ: 1,
-                    melodyInterval: 4500,
-                    lfoRate: 0,
-                    oscType: 'sine'
+                    bpm: 90,
+                    pulse1: [[0,294,2],[2,349,2],[4,440,3],[8,392,1],[9,349,1],[10,294,2],[12,262,2],[14,294,2],[16,349,2],[18,440,2],[20,523,3],[24,440,1],[25,392,1],[26,349,2],[28,294,4]],
+                    pulse2: [[4,294,2],[12,220,2],[20,349,2],[28,220,4]],
+                    triangle: [[0,147,4],[4,175,4],[8,196,4],[12,131,4],[16,147,4],[20,175,4],[24,196,4],[28,147,4]],
+                    noise: [[0,8000,1],[4,8000,1],[8,8000,1],[12,8000,1],[16,8000,1],[20,8000,1],[24,8000,1],[28,8000,1]]
                 }}
             }};
 
-            var m = moods[MOOD] || moods['explore'];
+            var song = songs[MOOD] || songs['explore'];
+            var stepSec = 60 / (song.bpm * 2);   // 8th note in seconds
+            var totalSteps = 32;
+            var currentStep = 0;
 
-            // --- Drone Layer (2 detuned oscillators + sub) ---
-            function makeDrone(freq, detune, type) {{
+            // Shared noise buffer (reused for all drum hits)
+            var noiseBufLen = ctx.sampleRate;
+            var noiseBuf = ctx.createBuffer(1, noiseBufLen, ctx.sampleRate);
+            var nd = noiseBuf.getChannelData(0);
+            for (var i = 0; i < noiseBufLen; i++) nd[i] = Math.random() * 2 - 1;
+
+            // Channel volumes
+            var VOL = {{ pulse1: 0.08, pulse2: 0.06, triangle: 0.12, noise: 0.07 }};
+
+            // Play a tonal note (square or triangle)
+            function playNote(freq, dur, type, vol) {{
+                if (!freq || freq <= 0) return;
                 var osc = ctx.createOscillator();
                 osc.type = type;
                 osc.frequency.value = freq;
-                osc.detune.value = detune;
-                var g = ctx.createGain();
-                g.gain.value = m.droneGain;
-                osc.connect(g);
-                g.connect(master);
-                osc.start();
-                return osc;
-            }}
-
-            makeDrone(m.droneFreqs[0], -6, m.oscType);
-            makeDrone(m.droneFreqs[1], 6, m.oscType);
-            // Sub-bass — always sine, gentle
-            var sub = ctx.createOscillator();
-            sub.type = 'sine';
-            sub.frequency.value = m.subFreq;
-            var subG = ctx.createGain();
-            subG.gain.value = m.droneGain * 0.5;
-            sub.connect(subG);
-            subG.connect(master);
-            sub.start();
-
-            // --- Filtered Noise (cave wind / atmosphere) ---
-            var bufLen = ctx.sampleRate * 2;
-            var noiseBuf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
-            var data = noiseBuf.getChannelData(0);
-            for (var i = 0; i < bufLen; i++) data[i] = Math.random() * 2 - 1;
-            var noise = ctx.createBufferSource();
-            noise.buffer = noiseBuf;
-            noise.loop = true;
-            var nFilter = ctx.createBiquadFilter();
-            nFilter.type = 'lowpass';
-            nFilter.frequency.value = m.filterFreq;
-            nFilter.Q.value = m.filterQ;
-            var nGain = ctx.createGain();
-            nGain.gain.value = m.noiseGain;
-            noise.connect(nFilter);
-            nFilter.connect(nGain);
-            nGain.connect(master);
-            noise.start();
-
-            // --- LFO for tension (combat / mystery) ---
-            if (m.lfoRate > 0) {{
-                var lfo = ctx.createOscillator();
-                lfo.type = 'sine';
-                lfo.frequency.value = m.lfoRate;
-                var lfoG = ctx.createGain();
-                lfoG.gain.value = m.droneGain * 0.4;
-                lfo.connect(lfoG);
-                lfoG.connect(master.gain);
-                lfo.start();
-            }}
-
-            // --- Melodic Notes (random from scale, with reverb-like decay) ---
-            function playNote() {{
-                var freq = m.scale[Math.floor(Math.random() * m.scale.length)];
-                var osc = ctx.createOscillator();
-                osc.type = 'triangle';
-                osc.frequency.value = freq;
+                // Subtle random detune for organic feel
+                osc.detune.value = (Math.random() * 16) - 8;
                 var g = ctx.createGain();
                 var now = ctx.currentTime;
-                g.gain.setValueAtTime(m.melodyGain, now);
-                g.gain.exponentialRampToValueAtTime(0.001, now + 2.5);
+                var len = dur * stepSec;
+                // Chiptune envelope: instant attack, sustain, quick release
+                g.gain.setValueAtTime(vol, now);
+                g.gain.setValueAtTime(vol * 0.8, now + len * 0.75);
+                g.gain.linearRampToValueAtTime(0.001, now + len * 0.95);
                 osc.connect(g);
                 g.connect(master);
                 osc.start(now);
-                osc.stop(now + 2.6);
-
-                // Schedule next note with some jitter
-                var jitter = m.melodyInterval * 0.4;
-                var next = m.melodyInterval + (Math.random() * jitter - jitter / 2);
-                setTimeout(playNote, next);
+                osc.stop(now + len);
             }}
-            // Start first melodic note after a short delay
-            setTimeout(playNote, 800 + Math.random() * 1500);
+
+            // Play a noise hit (kick / snare / hi-hat via bandpass freq)
+            function playNoise(filterFreq, dur) {{
+                var src = ctx.createBufferSource();
+                src.buffer = noiseBuf;
+                var filt = ctx.createBiquadFilter();
+                // Low freq = kick (lowpass), high freq = hat (bandpass)
+                if (filterFreq < 500) {{
+                    filt.type = 'lowpass';
+                    filt.frequency.value = filterFreq * (0.9 + Math.random() * 0.2);
+                }} else {{
+                    filt.type = 'bandpass';
+                    filt.frequency.value = filterFreq * (0.85 + Math.random() * 0.3);
+                    filt.Q.value = 1 + Math.random() * 2;
+                }}
+                var g = ctx.createGain();
+                var now = ctx.currentTime;
+                var len = Math.min(dur * stepSec, 0.15);
+                g.gain.setValueAtTime(VOL.noise, now);
+                g.gain.exponentialRampToValueAtTime(0.001, now + len);
+                src.connect(filt);
+                filt.connect(g);
+                g.connect(master);
+                src.start(now);
+                src.stop(now + len + 0.01);
+            }}
+
+            // Step sequencer tick
+            function tick() {{
+                // Check each channel for notes starting at currentStep
+                var channels = ['pulse1', 'pulse2', 'triangle', 'noise'];
+                for (var c = 0; c < channels.length; c++) {{
+                    var ch = channels[c];
+                    var pattern = song[ch];
+                    if (!pattern) continue;
+                    for (var n = 0; n < pattern.length; n++) {{
+                        if (pattern[n][0] === currentStep) {{
+                            var freq = pattern[n][1];
+                            var dur = pattern[n][2];
+                            if (ch === 'noise') {{
+                                playNoise(freq, dur);
+                            }} else if (ch === 'triangle') {{
+                                playNote(freq, dur, 'triangle', VOL.triangle);
+                            }} else {{
+                                playNote(freq, dur, 'square', VOL[ch]);
+                            }}
+                        }}
+                    }}
+                }}
+                currentStep = (currentStep + 1) % totalSteps;
+            }}
+
+            // Start the sequencer
+            setInterval(tick, stepSec * 1000);
 
         }} catch(e) {{
             // Web Audio not available — silent fallback
