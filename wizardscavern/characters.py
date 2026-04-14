@@ -1241,6 +1241,7 @@ class Character:
         add_log(f"You gained {amount} experience.")
         if int(math.sqrt(self.experience)/5) > self.level:
             self.level = int(math.sqrt(self.experience)/5)
+            gs.sfx_event = 'level_up'
             add_log(f"{COLOR_YELLOW}*** LEVEL UP! You are now level {self.level} ***{COLOR_RESET}")
             add_log(f"Max Health increased to {self.max_health}!")
             _check_achievements(self)

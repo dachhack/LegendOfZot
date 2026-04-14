@@ -362,6 +362,303 @@ def generate_ambient_audio_js(mood, enabled):
     """
 
 
+def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
+                     monster_badge, player_badge, player_status, monster_status,
+                     spell_cast, concentration_roll, monster_defeated,
+                     sfx_event, music_enabled):
+    """Generate one-shot procedural sound effects via Web Audio API.
+
+    Reads combat flags and the sfx_event flag to synthesize appropriate
+    sounds: weapon hits, spell blasts, blocks, crits, heals, chest opens,
+    level-ups, achievement fanfares, and vendor coin clinks.
+    """
+    if not music_enabled:
+        return ""
+
+    # Collect which effects to play
+    effects = []
+
+    # --- Combat effects ---
+    if monster_dmg and monster_dmg > 0 and not spell_cast:
+        if monster_badge == 'CRIT':
+            effects.append('crit_hit')
+        else:
+            effects.append('weapon_hit')
+
+    if player_dmg and player_dmg > 0:
+        if player_badge == 'FUMBLE':
+            effects.append('fumble')
+        else:
+            effects.append('player_hurt')
+
+    if player_blocked:
+        effects.append('block')
+
+    if player_heal and player_heal > 0:
+        effects.append('heal')
+
+    if player_status:
+        effects.append('status_inflict')
+    if monster_status:
+        effects.append('status_inflict')
+
+    # --- Spell effects ---
+    if spell_cast:
+        element = getattr(spell_cast, 'element', 'arcane') if spell_cast else None
+        if element:
+            effects.append(f'spell_{element.lower()}')
+        else:
+            effects.append('spell_arcane')
+
+    if concentration_roll:
+        passed = concentration_roll[4] if len(concentration_roll) > 4 else True
+        if not passed:
+            effects.append('spell_fizzle')
+
+    # --- Monster defeat ---
+    if monster_defeated:
+        effects.append('monster_death')
+
+    # --- Misc events ---
+    if sfx_event:
+        effects.append(sfx_event)
+
+    if not effects:
+        return ""
+
+    effects_js = json.dumps(effects)
+
+    return f"""
+    <script>
+    (function() {{
+        var effects = {effects_js};
+        if (!effects.length) return;
+        try {{
+            var AC = window.AudioContext || window.webkitAudioContext;
+            if (!AC) return;
+            var ctx = new AC();
+
+            var sfxMaster = ctx.createGain();
+            sfxMaster.gain.value = 0.35;
+            sfxMaster.connect(ctx.destination);
+
+            // Helper: filtered noise burst
+            function noiseBurst(duration, freq, Q, gain, startTime) {{
+                var len = ctx.sampleRate * duration;
+                var buf = ctx.createBuffer(1, len, ctx.sampleRate);
+                var d = buf.getChannelData(0);
+                for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+                var src = ctx.createBufferSource();
+                src.buffer = buf;
+                var filt = ctx.createBiquadFilter();
+                filt.type = 'bandpass';
+                filt.frequency.value = freq;
+                filt.Q.value = Q;
+                var g = ctx.createGain();
+                g.gain.setValueAtTime(gain, startTime);
+                g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+                src.connect(filt);
+                filt.connect(g);
+                g.connect(sfxMaster);
+                src.start(startTime);
+                src.stop(startTime + duration);
+            }}
+
+            // Helper: tone with pitch envelope
+            function toneSweep(startFreq, endFreq, duration, type, gain, startTime) {{
+                var osc = ctx.createOscillator();
+                osc.type = type || 'sine';
+                osc.frequency.setValueAtTime(startFreq, startTime);
+                osc.frequency.exponentialRampToValueAtTime(Math.max(endFreq, 20), startTime + duration);
+                var g = ctx.createGain();
+                g.gain.setValueAtTime(gain, startTime);
+                g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+                osc.connect(g);
+                g.connect(sfxMaster);
+                osc.start(startTime);
+                osc.stop(startTime + duration + 0.01);
+            }}
+
+            // Helper: quick tone (fixed pitch, fast decay)
+            function quickTone(freq, duration, type, gain, startTime) {{
+                var osc = ctx.createOscillator();
+                osc.type = type || 'sine';
+                osc.frequency.value = freq;
+                var g = ctx.createGain();
+                g.gain.setValueAtTime(gain, startTime);
+                g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+                osc.connect(g);
+                g.connect(sfxMaster);
+                osc.start(startTime);
+                osc.stop(startTime + duration + 0.01);
+            }}
+
+            // Helper: ascending arpeggio (array of freqs)
+            function arpeggio(freqs, noteLen, type, gain, startTime) {{
+                for (var i = 0; i < freqs.length; i++) {{
+                    quickTone(freqs[i], noteLen * 1.5, type, gain, startTime + i * noteLen);
+                }}
+            }}
+
+            var t = ctx.currentTime + 0.05;
+            var offset = 0;
+
+            for (var i = 0; i < effects.length; i++) {{
+                var fx = effects[i];
+                var st = t + offset;
+
+                switch(fx) {{
+                    // === COMBAT ===
+                    case 'weapon_hit':
+                        noiseBurst(0.12, 1200, 2, 0.5, st);
+                        toneSweep(300, 100, 0.15, 'sawtooth', 0.2, st);
+                        break;
+
+                    case 'crit_hit':
+                        noiseBurst(0.2, 2000, 3, 0.7, st);
+                        toneSweep(600, 150, 0.25, 'sawtooth', 0.35, st);
+                        quickTone(880, 0.15, 'triangle', 0.25, st + 0.05);
+                        break;
+
+                    case 'player_hurt':
+                        noiseBurst(0.15, 600, 2, 0.4, st);
+                        toneSweep(200, 80, 0.2, 'sine', 0.3, st);
+                        break;
+
+                    case 'fumble':
+                        toneSweep(400, 60, 0.4, 'sawtooth', 0.2, st);
+                        noiseBurst(0.08, 300, 1, 0.15, st + 0.1);
+                        break;
+
+                    case 'block':
+                        noiseBurst(0.06, 3000, 8, 0.5, st);
+                        quickTone(1200, 0.08, 'square', 0.2, st);
+                        quickTone(800, 0.1, 'square', 0.15, st + 0.04);
+                        break;
+
+                    case 'monster_death':
+                        toneSweep(300, 40, 0.5, 'sawtooth', 0.3, st);
+                        noiseBurst(0.3, 500, 1, 0.4, st);
+                        noiseBurst(0.15, 100, 2, 0.3, st + 0.15);
+                        break;
+
+                    case 'heal':
+                        arpeggio([392, 494, 587, 784], 0.1, 'sine', 0.2, st);
+                        break;
+
+                    case 'status_inflict':
+                        toneSweep(500, 200, 0.3, 'sine', 0.15, st);
+                        noiseBurst(0.1, 800, 4, 0.1, st + 0.05);
+                        break;
+
+                    // === SPELLS (element-specific) ===
+                    case 'spell_fire':
+                        noiseBurst(0.35, 1500, 1, 0.5, st);
+                        noiseBurst(0.2, 3000, 2, 0.3, st + 0.05);
+                        toneSweep(200, 100, 0.3, 'sawtooth', 0.15, st);
+                        break;
+
+                    case 'spell_ice':
+                        quickTone(1200, 0.3, 'sine', 0.25, st);
+                        quickTone(1800, 0.2, 'sine', 0.15, st + 0.05);
+                        noiseBurst(0.15, 4000, 10, 0.3, st + 0.1);
+                        break;
+
+                    case 'spell_lightning':
+                        noiseBurst(0.05, 5000, 1, 0.8, st);
+                        noiseBurst(0.25, 2000, 2, 0.4, st + 0.03);
+                        toneSweep(2000, 100, 0.15, 'square', 0.3, st);
+                        break;
+
+                    case 'spell_holy':
+                        arpeggio([523, 659, 784, 1047], 0.08, 'sine', 0.25, st);
+                        quickTone(1047, 0.4, 'triangle', 0.15, st + 0.3);
+                        break;
+
+                    case 'spell_darkness': case 'spell_shadow':
+                        toneSweep(100, 40, 0.5, 'sawtooth', 0.3, st);
+                        noiseBurst(0.3, 200, 6, 0.25, st + 0.05);
+                        break;
+
+                    case 'spell_poison': case 'spell_acid':
+                        noiseBurst(0.25, 800, 3, 0.3, st);
+                        toneSweep(400, 150, 0.3, 'sine', 0.2, st + 0.05);
+                        toneSweep(350, 120, 0.2, 'sine', 0.15, st + 0.15);
+                        break;
+
+                    case 'spell_arcane':
+                        quickTone(660, 0.2, 'triangle', 0.25, st);
+                        quickTone(880, 0.15, 'triangle', 0.2, st + 0.08);
+                        noiseBurst(0.15, 2000, 5, 0.15, st + 0.1);
+                        break;
+
+                    case 'spell_earth':
+                        toneSweep(80, 40, 0.4, 'sine', 0.35, st);
+                        noiseBurst(0.2, 300, 2, 0.4, st);
+                        noiseBurst(0.15, 600, 3, 0.2, st + 0.1);
+                        break;
+
+                    case 'spell_wind': case 'spell_air':
+                        noiseBurst(0.4, 2500, 1, 0.35, st);
+                        toneSweep(800, 1600, 0.3, 'sine', 0.1, st);
+                        break;
+
+                    case 'spell_water':
+                        noiseBurst(0.2, 1800, 3, 0.3, st);
+                        toneSweep(600, 300, 0.3, 'sine', 0.2, st + 0.05);
+                        quickTone(900, 0.1, 'sine', 0.1, st + 0.15);
+                        break;
+
+                    case 'spell_force': case 'spell_psychic':
+                        toneSweep(440, 880, 0.2, 'sine', 0.3, st);
+                        toneSweep(880, 440, 0.2, 'sine', 0.2, st + 0.15);
+                        noiseBurst(0.1, 3000, 8, 0.15, st + 0.1);
+                        break;
+
+                    case 'spell_fizzle':
+                        toneSweep(600, 80, 0.5, 'sine', 0.25, st);
+                        noiseBurst(0.2, 400, 1, 0.2, st + 0.15);
+                        break;
+
+                    // === EXPLORATION / UI ===
+                    case 'chest_open':
+                        noiseBurst(0.1, 2000, 3, 0.2, st);
+                        arpeggio([523, 659, 784, 1047, 1319], 0.07, 'triangle', 0.2, st + 0.05);
+                        break;
+
+                    case 'level_up':
+                        arpeggio([262, 330, 392, 523, 659, 784], 0.1, 'triangle', 0.25, st);
+                        quickTone(784, 0.5, 'sine', 0.15, st + 0.55);
+                        break;
+
+                    case 'achievement':
+                        arpeggio([523, 659, 784, 1047], 0.08, 'triangle', 0.2, st);
+                        quickTone(1047, 0.3, 'sine', 0.2, st + 0.3);
+                        quickTone(1319, 0.3, 'sine', 0.15, st + 0.4);
+                        break;
+
+                    case 'buy':
+                        quickTone(800, 0.06, 'square', 0.15, st);
+                        quickTone(1000, 0.06, 'square', 0.12, st + 0.07);
+                        quickTone(1200, 0.08, 'square', 0.1, st + 0.14);
+                        break;
+
+                    case 'sell':
+                        quickTone(1200, 0.06, 'square', 0.15, st);
+                        quickTone(1000, 0.06, 'square', 0.12, st + 0.07);
+                        quickTone(800, 0.08, 'square', 0.1, st + 0.14);
+                        break;
+                }}
+                offset += 0.05;
+            }}
+        }} catch(e) {{
+            // Web Audio not available — silent fallback
+        }}
+    }})();
+    </script>
+    """
+
+
 def health_bar(current, maximum, width=20):
     filled = int((current / maximum) * width) if maximum > 0 else 0
     filled = min(filled, width)  # Cap at width
@@ -6969,6 +7266,7 @@ class WizardsCavernApp(toga.App):
             {generate_concentration_check_js(gs.last_concentration_roll)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
             {generate_ambient_audio_js(get_audio_mood(gs.prompt_cntl), gs.music_enabled)}
+            {generate_sfx_js(gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, gs.last_player_status, gs.last_monster_status, gs.last_spell_cast, gs.last_concentration_roll, gs.monster_defeated_anim, gs.sfx_event, gs.music_enabled)}
         </body>
         </html>
         """
@@ -6977,6 +7275,7 @@ class WizardsCavernApp(toga.App):
         gs.last_dice_rolls = []
         gs.last_spell_cast = None
         gs.last_concentration_roll = None
+        gs.sfx_event = None
         return result
     
 
