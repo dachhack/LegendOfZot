@@ -2851,6 +2851,7 @@ def _execute_warp(player_character, my_tower, floor_params_ref, is_vault_warp, v
              new_z = random.randint(min_z, max_z)  # Try one more time to change floors
 
         player_character.z = new_z
+        gs.music_restart = True
         target_floor = my_tower.floors[new_z]
 
         # Pick new location
@@ -3783,6 +3784,7 @@ def handle_stairs_up(player_character, my_tower, floor_params):
         return player_character.x, player_character.y, False, False
 
     player_character.z -= 1  # Going up now means back to previous depth
+    gs.music_restart = True
     print_to_output(f"Ascending toward entrance. Depth {player_character.z + 1}!")
     current_floor = my_tower.floors[player_character.z]
     # Find the 'D' room on the new floor to place the character
@@ -3808,6 +3810,7 @@ def handle_stairs_down(player_character, my_tower, floor_params):
     print_to_output("You found a passage leading down!")
 
     player_character.z += 1
+    gs.music_restart = True
     while len(my_tower.floors) <= player_character.z:
         my_tower.add_floor(**gs.floor_params)  # Generate new deeper floor
 
