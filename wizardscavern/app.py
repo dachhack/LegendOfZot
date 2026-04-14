@@ -96,7 +96,7 @@ def get_audio_mood(prompt_cntl):
     return 'explore'
 
 
-def generate_ambient_audio_js(mood, enabled):
+def generate_ambient_audio_js(mood, enabled, start_step=None):
     """Generate chiptune music via a 4-channel Web Audio API step sequencer.
 
     Channels mirror the NES APU:
@@ -114,6 +114,12 @@ def generate_ambient_audio_js(mood, enabled):
     """
     if not enabled:
         return ""
+
+    # If no start_step provided, pick randomly (fallback for legacy callers)
+    if start_step is None:
+        start_step_js = "Math.floor(Math.random() * totalSteps)"
+    else:
+        start_step_js = str(int(start_step) % 64)
 
     return f"""
     <script>
@@ -204,8 +210,10 @@ def generate_ambient_audio_js(mood, enabled):
             var song = songs[MOOD] || songs['explore'];
             var stepSec = 60 / (song.bpm * 2);   // 8th note in seconds
             var totalSteps = 64;
-            // Start at random position so resets sound like continuous play
-            var currentStep = Math.floor(Math.random() * totalSteps);
+            // Start at the step position Python computed from elapsed
+            // time, creating the illusion of continuous playback across
+            // page reloads.
+            var currentStep = {start_step_js};
 
             // Shared noise buffer (reused for all drum hits)
             var noiseBufLen = ctx.sampleRate;
@@ -7033,16 +7041,34 @@ class WizardsCavernApp(toga.App):
         # Large text mode: scale all HTML content via CSS zoom
         zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
 
-        # --- Music: only play at major transitions ---
+        # --- Music continuity ---
+        # Always inject the music, but compute start_step from elapsed
+        # wall-clock time so music "resumes" at the position it would
+        # be at if it had been playing continuously — creates the
+        # illusion of uninterrupted playback across page reloads.
+        import time
         new_mood = get_audio_mood(gs.prompt_cntl)
         mood_changed = (new_mood != gs.current_music_mood)
-        should_play_music = mood_changed or gs.music_restart
-        if should_play_music:
-            music_js = generate_ambient_audio_js(new_mood, gs.music_enabled)
+        mood_bpms = {'menu': 90, 'explore': 110, 'combat': 140,
+                     'victory': 130, 'death': 70}
+        now = time.time()
+
+        if mood_changed or gs.music_restart:
+            # Fresh start at step 0 for new scene
+            gs.music_step = 0
             gs.current_music_mood = new_mood
             gs.music_restart = False
-        else:
-            music_js = ""
+        elif gs.last_music_render_time > 0:
+            # Advance step count based on real elapsed time
+            elapsed = now - gs.last_music_render_time
+            step_sec = 60.0 / (mood_bpms.get(new_mood, 110) * 2)
+            steps_elapsed = int(elapsed / step_sec)
+            gs.music_step = (gs.music_step + steps_elapsed) % 64
+
+        music_js = generate_ambient_audio_js(
+            new_mood, gs.music_enabled, gs.music_step
+        )
+        gs.last_music_render_time = now
 
         result = f"""
         <!DOCTYPE html>

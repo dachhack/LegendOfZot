@@ -105,10 +105,14 @@ _pending_load = None
 large_text_mode = False
 music_enabled = True
 
-# Music state — tracks what mood is currently "playing" so we only
-# restart at major transitions, not on every render.
+# Music continuity state.
+# We track the step position as if music had been playing continuously,
+# then resume from that position on each render (page reload destroys
+# the AudioContext, but the illusion of continuous playback is preserved).
 current_music_mood = None
-music_restart = False   # one-shot flag set on floor changes
+music_step = 0              # step position within the 64-step loop
+last_music_render_time = 0  # time.time() of last render (0 = never)
+music_restart = False       # one-shot: force step=0 on floor changes
 
 # One-shot SFX event flag — set to an event name, cleared after rendering.
 # Used for events not already covered by combat damage/spell flags.
