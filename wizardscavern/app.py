@@ -70,6 +70,298 @@ from .game_systems import *
 from .game_systems import _handle, _trigger_room_interaction, _execute_warp
 from .version import VERSION, BUILD_NUMBER, CHANGELOG
 
+def get_audio_mood(prompt_cntl):
+    """Map game state to an audio mood for the procedural music engine."""
+    MOOD_MAP = {
+        # Menu / UI
+        'splash': 'menu', 'intro_story': 'menu', 'main_menu': 'menu',
+        'player_name': 'menu', 'player_race': 'menu', 'player_gender': 'menu',
+        'save_load_mode': 'menu', 'confirm_quit': 'menu', 'load_pending': 'menu',
+        'game_loaded_summary': 'menu',
+        # Exploration
+        'game_loop': 'explore', 'warp_mode': 'explore',
+        'foresight_direction_mode': 'explore', 'flare_direction_mode': 'explore',
+        # Combat
+        'combat_mode': 'combat', 'spell_casting_mode': 'combat',
+        'spell_memorization_mode': 'combat', 'flee_direction_mode': 'combat',
+        'combat_victory': 'victory',
+        # Shops / NPCs
+        'vendor_shop': 'shop', 'starting_shop': 'shop',
+        'blacksmith_mode': 'shop', 'alchemist_mode': 'shop',
+        'war_room_mode': 'shop', 'taxidermist_mode': 'shop',
+        'sell_quantity_mode': 'shop',
+        # Mystery / sacred
+        'altar_mode': 'mystery', 'pool_mode': 'mystery',
+        'oracle_mode': 'mystery', 'tomb_mode': 'mystery',
+        'library_mode': 'mystery', 'library_book_selection_mode': 'mystery',
+        'library_read_decision_mode': 'mystery',
+        'shrine_mode': 'mystery',
+        # Dungeon deep
+        'dungeon_mode': 'deep', 'dungeon_unlocked_mode': 'deep',
+        # Garden / fey
+        'garden_mode': 'garden', 'fey_garden_mode': 'garden',
+        # Loot
+        'chest_mode': 'explore',
+        'upgrade_scroll_mode': 'explore', 'identify_scroll_mode': 'explore',
+        'towel_action_mode': 'explore',
+        # Puzzle
+        'puzzle_mode': 'mystery', 'zotle_teleporter_mode': 'mystery',
+        # Inventory / journal / stats
+        'inventory': 'explore', 'character_stats_mode': 'explore',
+        'achievements_mode': 'explore', 'journal_mode': 'explore',
+        # Death
+        'death_screen': 'death',
+    }
+    return MOOD_MAP.get(prompt_cntl, 'explore')
+
+
+def generate_ambient_audio_js(mood, enabled):
+    """Generate procedural ambient music via Web Audio API.
+
+    Each mood defines a set of drone frequencies, a scale for melodic notes,
+    filter settings, and optional rhythmic pulses.  The engine creates:
+      - A layered drone (2 detuned oscillators + sub-bass)
+      - Filtered noise for atmosphere (wind / cave ambience)
+      - Occasional random melodic notes from a mood-specific scale
+      - Optional rhythmic LFO modulation for combat tension
+
+    Because wrap_html() rebuilds the entire page on every game action,
+    the audio context is created fresh each render.  A short fade-in
+    (200ms) prevents clicks, and the ambient nature of the sound makes
+    restarts imperceptible.
+    """
+    if not enabled:
+        return ""
+
+    return f"""
+    <script>
+    (function() {{
+        var MOOD = '{mood}';
+        try {{
+            var AC = window.AudioContext || window.webkitAudioContext;
+            if (!AC) return;
+            var ctx = new AC();
+
+            // Master gain — everything routes here
+            var master = ctx.createGain();
+            master.gain.value = 0;
+            master.connect(ctx.destination);
+
+            // Fade in over 400ms to avoid click
+            master.gain.linearRampToValueAtTime(0.0, ctx.currentTime + 0.05);
+            master.gain.linearRampToValueAtTime(0.28, ctx.currentTime + 0.45);
+
+            // --- Mood Definitions ---
+            var moods = {{
+                explore: {{
+                    droneFreqs: [65.41, 98.0],   // C2, G2
+                    subFreq: 32.7,                // C1
+                    scale: [130.81, 146.83, 164.81, 196.0, 220.0, 261.63, 293.66], // C minor pentatonic
+                    noiseGain: 0.06,
+                    droneGain: 0.13,
+                    melodyGain: 0.07,
+                    filterFreq: 400,
+                    filterQ: 2,
+                    melodyInterval: 4000,
+                    lfoRate: 0,
+                    oscType: 'sine'
+                }},
+                combat: {{
+                    droneFreqs: [55.0, 82.41],    // A1, E2
+                    subFreq: 27.5,                // A0
+                    scale: [110.0, 130.81, 146.83, 164.81, 207.65, 220.0, 261.63], // A minor
+                    noiseGain: 0.09,
+                    droneGain: 0.14,
+                    melodyGain: 0.05,
+                    filterFreq: 600,
+                    filterQ: 4,
+                    melodyInterval: 1800,
+                    lfoRate: 2.5,
+                    oscType: 'sawtooth'
+                }},
+                victory: {{
+                    droneFreqs: [130.81, 164.81], // C3, E3 (major third)
+                    subFreq: 65.41,               // C2
+                    scale: [261.63, 293.66, 329.63, 392.0, 440.0, 523.25], // C major pentatonic
+                    noiseGain: 0.03,
+                    droneGain: 0.12,
+                    melodyGain: 0.10,
+                    filterFreq: 800,
+                    filterQ: 1,
+                    melodyInterval: 2500,
+                    lfoRate: 0,
+                    oscType: 'triangle'
+                }},
+                shop: {{
+                    droneFreqs: [87.31, 130.81],  // F2, C3
+                    subFreq: 43.65,               // F1
+                    scale: [174.61, 196.0, 220.0, 261.63, 293.66, 349.23], // F major
+                    noiseGain: 0.03,
+                    droneGain: 0.09,
+                    melodyGain: 0.08,
+                    filterFreq: 600,
+                    filterQ: 1,
+                    melodyInterval: 3500,
+                    lfoRate: 0,
+                    oscType: 'sine'
+                }},
+                mystery: {{
+                    droneFreqs: [61.74, 92.50],   // Eb2, Gb2 (tritone!)
+                    subFreq: 30.87,               // Eb1
+                    scale: [123.47, 138.59, 155.56, 185.0, 207.65, 246.94], // Eb whole-tone
+                    noiseGain: 0.08,
+                    droneGain: 0.11,
+                    melodyGain: 0.05,
+                    filterFreq: 350,
+                    filterQ: 6,
+                    melodyInterval: 5000,
+                    lfoRate: 0.3,
+                    oscType: 'sine'
+                }},
+                deep: {{
+                    droneFreqs: [41.2, 61.74],    // E1, Eb2
+                    subFreq: 20.6,                // E0
+                    scale: [82.41, 92.50, 110.0, 123.47, 146.83, 164.81], // E phrygian
+                    noiseGain: 0.10,
+                    droneGain: 0.15,
+                    melodyGain: 0.04,
+                    filterFreq: 250,
+                    filterQ: 3,
+                    melodyInterval: 6000,
+                    lfoRate: 0.15,
+                    oscType: 'sine'
+                }},
+                garden: {{
+                    droneFreqs: [98.0, 146.83],   // G2, D3
+                    subFreq: 49.0,                // G1
+                    scale: [196.0, 220.0, 246.94, 293.66, 329.63, 392.0, 440.0], // G major
+                    noiseGain: 0.04,
+                    droneGain: 0.08,
+                    melodyGain: 0.10,
+                    filterFreq: 900,
+                    filterQ: 1,
+                    melodyInterval: 2800,
+                    lfoRate: 0,
+                    oscType: 'triangle'
+                }},
+                death: {{
+                    droneFreqs: [46.25, 55.0],    // Bb1, A1 (semitone rub)
+                    subFreq: 23.12,               // Bb0
+                    scale: [92.50, 103.83, 116.54, 138.59, 155.56], // Bb minor
+                    noiseGain: 0.07,
+                    droneGain: 0.16,
+                    melodyGain: 0.03,
+                    filterFreq: 200,
+                    filterQ: 8,
+                    melodyInterval: 7000,
+                    lfoRate: 0.1,
+                    oscType: 'sine'
+                }},
+                menu: {{
+                    droneFreqs: [73.42, 110.0],   // D2, A2
+                    subFreq: 36.71,               // D1
+                    scale: [146.83, 164.81, 196.0, 220.0, 261.63, 293.66], // D minor
+                    noiseGain: 0.03,
+                    droneGain: 0.07,
+                    melodyGain: 0.06,
+                    filterFreq: 500,
+                    filterQ: 1,
+                    melodyInterval: 4500,
+                    lfoRate: 0,
+                    oscType: 'sine'
+                }}
+            }};
+
+            var m = moods[MOOD] || moods['explore'];
+
+            // --- Drone Layer (2 detuned oscillators + sub) ---
+            function makeDrone(freq, detune, type) {{
+                var osc = ctx.createOscillator();
+                osc.type = type;
+                osc.frequency.value = freq;
+                osc.detune.value = detune;
+                var g = ctx.createGain();
+                g.gain.value = m.droneGain;
+                osc.connect(g);
+                g.connect(master);
+                osc.start();
+                return osc;
+            }}
+
+            makeDrone(m.droneFreqs[0], -6, m.oscType);
+            makeDrone(m.droneFreqs[1], 6, m.oscType);
+            // Sub-bass — always sine, gentle
+            var sub = ctx.createOscillator();
+            sub.type = 'sine';
+            sub.frequency.value = m.subFreq;
+            var subG = ctx.createGain();
+            subG.gain.value = m.droneGain * 0.5;
+            sub.connect(subG);
+            subG.connect(master);
+            sub.start();
+
+            // --- Filtered Noise (cave wind / atmosphere) ---
+            var bufLen = ctx.sampleRate * 2;
+            var noiseBuf = ctx.createBuffer(1, bufLen, ctx.sampleRate);
+            var data = noiseBuf.getChannelData(0);
+            for (var i = 0; i < bufLen; i++) data[i] = Math.random() * 2 - 1;
+            var noise = ctx.createBufferSource();
+            noise.buffer = noiseBuf;
+            noise.loop = true;
+            var nFilter = ctx.createBiquadFilter();
+            nFilter.type = 'lowpass';
+            nFilter.frequency.value = m.filterFreq;
+            nFilter.Q.value = m.filterQ;
+            var nGain = ctx.createGain();
+            nGain.gain.value = m.noiseGain;
+            noise.connect(nFilter);
+            nFilter.connect(nGain);
+            nGain.connect(master);
+            noise.start();
+
+            // --- LFO for tension (combat / mystery) ---
+            if (m.lfoRate > 0) {{
+                var lfo = ctx.createOscillator();
+                lfo.type = 'sine';
+                lfo.frequency.value = m.lfoRate;
+                var lfoG = ctx.createGain();
+                lfoG.gain.value = m.droneGain * 0.4;
+                lfo.connect(lfoG);
+                lfoG.connect(master.gain);
+                lfo.start();
+            }}
+
+            // --- Melodic Notes (random from scale, with reverb-like decay) ---
+            function playNote() {{
+                var freq = m.scale[Math.floor(Math.random() * m.scale.length)];
+                var osc = ctx.createOscillator();
+                osc.type = 'triangle';
+                osc.frequency.value = freq;
+                var g = ctx.createGain();
+                var now = ctx.currentTime;
+                g.gain.setValueAtTime(m.melodyGain, now);
+                g.gain.exponentialRampToValueAtTime(0.001, now + 2.5);
+                osc.connect(g);
+                g.connect(master);
+                osc.start(now);
+                osc.stop(now + 2.6);
+
+                // Schedule next note with some jitter
+                var jitter = m.melodyInterval * 0.4;
+                var next = m.melodyInterval + (Math.random() * jitter - jitter / 2);
+                setTimeout(playNote, next);
+            }}
+            // Start first melodic note after a short delay
+            setTimeout(playNote, 800 + Math.random() * 1500);
+
+        }} catch(e) {{
+            // Web Audio not available — silent fallback
+        }}
+    }})();
+    </script>
+    """
+
+
 def health_bar(current, maximum, width=20):
     filled = int((current / maximum) * width) if maximum > 0 else 0
     filled = min(filled, width)  # Cap at width
@@ -2657,6 +2949,12 @@ class WizardsCavernApp(toga.App):
             add_log("Are you sure you want to quit? (y/n)")
             return
 
+        if cmd == 'v':
+            gs.music_enabled = not gs.music_enabled
+            state = "on" if gs.music_enabled else "off"
+            add_log(f"Music toggled {state}.")
+            return
+
         if cmd == 'i' and gs.prompt_cntl == "game_loop":
             gs.prompt_cntl = "inventory"
             gs.inventory_filter = None
@@ -4246,7 +4544,8 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             text_label = "Aa-" if gs.large_text_mode else "Aa+"
-            current_commands_text = f"1-8 = category | s = stats | a = achvs | t = {text_label} | g = save | x = back"
+            music_label = "vol-" if gs.music_enabled else "vol+"
+            current_commands_text = f"1-8 = category | s = stats | a = achvs | t = {text_label} | v = {music_label} | g = save | x = back"
 
         elif gs.prompt_cntl.startswith("journal_"):
             # JOURNAL CATEGORY VIEW
@@ -4449,7 +4748,8 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             text_label = "Aa-" if gs.large_text_mode else "Aa+"
-            current_commands_text = f"b = back | s = stats | a = achvs | t = {text_label} | g = save | x = close"
+            music_label = "vol-" if gs.music_enabled else "vol+"
+            current_commands_text = f"b = back | s = stats | a = achvs | t = {text_label} | v = {music_label} | g = save | x = close"
 
         elif gs.prompt_cntl == "spell_casting_mode":
             # SPELL CASTING - Compact: Combat panels + spell list (no map)
@@ -6668,6 +6968,7 @@ class WizardsCavernApp(toga.App):
             {generate_dice_roll_js(gs.last_dice_rolls)}
             {generate_concentration_check_js(gs.last_concentration_roll)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
+            {generate_ambient_audio_js(get_audio_mood(gs.prompt_cntl), gs.music_enabled)}
         </body>
         </html>
         """
