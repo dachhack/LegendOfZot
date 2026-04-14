@@ -105,6 +105,11 @@ _pending_load = None
 large_text_mode = False
 music_enabled = True
 
+# Music state — tracks what mood is currently "playing" so we only
+# restart at major transitions, not on every render.
+current_music_mood = None
+music_restart = False   # one-shot flag set on floor changes
+
 # One-shot SFX event flag — set to an event name, cleared after rendering.
 # Used for events not already covered by combat damage/spell flags.
 # Valid values: 'level_up', 'chest_open', 'achievement', 'buy', 'sell',

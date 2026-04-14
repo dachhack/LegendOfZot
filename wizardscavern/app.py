@@ -71,48 +71,29 @@ from .game_systems import _handle, _trigger_room_interaction, _execute_warp
 from .version import VERSION, BUILD_NUMBER, CHANGELOG
 
 def get_audio_mood(prompt_cntl):
-    """Map game state to an audio mood for the procedural music engine."""
-    MOOD_MAP = {
-        # Menu / UI
-        'splash': 'menu', 'intro_story': 'menu', 'main_menu': 'menu',
-        'player_name': 'menu', 'player_race': 'menu', 'player_gender': 'menu',
-        'save_load_mode': 'menu', 'confirm_quit': 'menu', 'load_pending': 'menu',
-        'game_loaded_summary': 'menu',
-        # Exploration
-        'game_loop': 'explore', 'warp_mode': 'explore',
-        'foresight_direction_mode': 'explore', 'flare_direction_mode': 'explore',
-        # Combat
-        'combat_mode': 'combat', 'spell_casting_mode': 'combat',
-        'spell_memorization_mode': 'combat', 'flee_direction_mode': 'combat',
-        'combat_victory': 'victory',
-        # Shops / NPCs
-        'vendor_shop': 'shop', 'starting_shop': 'shop',
-        'blacksmith_mode': 'shop', 'alchemist_mode': 'shop',
-        'war_room_mode': 'shop', 'taxidermist_mode': 'shop',
-        'sell_quantity_mode': 'shop',
-        # Mystery / sacred
-        'altar_mode': 'mystery', 'pool_mode': 'mystery',
-        'oracle_mode': 'mystery', 'tomb_mode': 'mystery',
-        'library_mode': 'mystery', 'library_book_selection_mode': 'mystery',
-        'library_read_decision_mode': 'mystery',
-        'shrine_mode': 'mystery',
-        # Dungeon deep
-        'dungeon_mode': 'deep', 'dungeon_unlocked_mode': 'deep',
-        # Garden / fey
-        'garden_mode': 'garden', 'fey_garden_mode': 'garden',
-        # Loot
-        'chest_mode': 'explore',
-        'upgrade_scroll_mode': 'explore', 'identify_scroll_mode': 'explore',
-        'towel_action_mode': 'explore',
-        # Puzzle
-        'puzzle_mode': 'mystery', 'zotle_teleporter_mode': 'mystery',
-        # Inventory / journal / stats
-        'inventory': 'explore', 'character_stats_mode': 'explore',
-        'achievements_mode': 'explore', 'journal_mode': 'explore',
-        # Death
-        'death_screen': 'death',
-    }
-    return MOOD_MAP.get(prompt_cntl, 'explore')
+    """Map game state to a music mood.
+
+    Only 5 major moods so music restarts only at significant transitions:
+      menu    — splash, character creation, intro shop
+      explore — all dungeon activity (movement, vendors, altars, inventory...)
+      combat  — active combat and spell casting
+      victory — just won a fight
+      death   — game over
+    """
+    if prompt_cntl in ('splash', 'intro_story', 'main_menu',
+                        'player_name', 'player_race', 'player_gender',
+                        'starting_shop', 'game_loaded_summary',
+                        'save_load_mode', 'load_pending', 'confirm_quit'):
+        return 'menu'
+    if prompt_cntl in ('combat_mode', 'spell_casting_mode',
+                        'spell_memorization_mode', 'flee_direction_mode'):
+        return 'combat'
+    if prompt_cntl == 'combat_victory':
+        return 'victory'
+    if prompt_cntl == 'death_screen':
+        return 'death'
+    # Everything else: dungeon, vendors, altars, chests, inventory, puzzles
+    return 'explore'
 
 
 def generate_ambient_audio_js(mood, enabled):
@@ -7048,9 +7029,20 @@ class WizardsCavernApp(toga.App):
         # Convert log_lines to JavaScript-safe format
         import json
         log_lines_json = json.dumps(gs.log_lines)
-        
+
         # Large text mode: scale all HTML content via CSS zoom
         zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
+
+        # --- Music: only play at major transitions ---
+        new_mood = get_audio_mood(gs.prompt_cntl)
+        mood_changed = (new_mood != gs.current_music_mood)
+        should_play_music = mood_changed or gs.music_restart
+        if should_play_music:
+            music_js = generate_ambient_audio_js(new_mood, gs.music_enabled)
+            gs.current_music_mood = new_mood
+            gs.music_restart = False
+        else:
+            music_js = ""
 
         result = f"""
         <!DOCTYPE html>
@@ -7354,7 +7346,7 @@ class WizardsCavernApp(toga.App):
             {generate_dice_roll_js(gs.last_dice_rolls)}
             {generate_concentration_check_js(gs.last_concentration_roll)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
-            {generate_ambient_audio_js(get_audio_mood(gs.prompt_cntl), gs.music_enabled)}
+            {music_js}
             {generate_sfx_js(gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, gs.last_player_status, gs.last_monster_status, gs.last_spell_cast, gs.last_concentration_roll, gs.monster_defeated_anim, gs.sfx_event, gs.music_enabled, bool(gs.last_dice_rolls), bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
         </body>
         </html>
