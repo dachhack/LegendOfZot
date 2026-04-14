@@ -103,6 +103,7 @@ _pending_load = None
 # DISPLAY SETTINGS
 # ============================================================================
 large_text_mode = False
+music_enabled = True
 
 # ============================================================================
 # GAME STATISTICS (for achievements)

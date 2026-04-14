@@ -1420,6 +1420,12 @@ def process_journal_action(player_character, my_tower, cmd):
         gs.large_text_mode = not gs.large_text_mode
         return
 
+    if cmd == 'v':
+        gs.music_enabled = not gs.music_enabled
+        state = "on" if gs.music_enabled else "off"
+        add_log(f"Music toggled {state}.")
+        return
+
     if cmd == 'g':
         if gs.active_monster and gs.active_monster.is_alive():
             add_log(f"{COLOR_YELLOW}You cannot save during combat!{COLOR_RESET}")
@@ -1473,6 +1479,12 @@ def process_journal_category(player_character, my_tower, category, cmd):
 
     if cmd == 't':
         gs.large_text_mode = not gs.large_text_mode
+        return
+
+    if cmd == 'v':
+        gs.music_enabled = not gs.music_enabled
+        state = "on" if gs.music_enabled else "off"
+        add_log(f"Music toggled {state}.")
         return
 
     if cmd == 'g':
