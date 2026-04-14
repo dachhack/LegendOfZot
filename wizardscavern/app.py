@@ -396,28 +396,28 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
             sfxMaster.gain.value = 0.35;
             sfxMaster.connect(ctx.destination);
 
-            // Variation helper: returns value ± pct (e.g. vary(1200, 0.15) = 1020..1380)
+            // Variation helpers
             function vary(val, pct) {{
                 return val * (1 + (Math.random() * 2 - 1) * pct);
             }}
-            // Random pick from array
             function pick(arr) {{ return arr[Math.floor(Math.random() * arr.length)]; }}
 
-            // Helper: filtered noise burst
-            function noiseBurst(duration, freq, Q, gain, startTime) {{
-                duration = vary(duration, 0.15);
-                freq = vary(freq, 0.18);
+            // Shared noise buffer for NES-style noise channel
+            var nBufLen = ctx.sampleRate;
+            var nBuf = ctx.createBuffer(1, nBufLen, ctx.sampleRate);
+            var nD = nBuf.getChannelData(0);
+            for (var i = 0; i < nBufLen; i++) nD[i] = Math.random() * 2 - 1;
+
+            // NES noise hit: kick (lowpass), snare (bandpass), hat (highpass)
+            function noiseHit(filterFreq, duration, gain, startTime, type) {{
+                duration = vary(duration, 0.12);
                 gain = vary(gain, 0.1);
-                var len = ctx.sampleRate * duration;
-                var buf = ctx.createBuffer(1, len, ctx.sampleRate);
-                var d = buf.getChannelData(0);
-                for (var i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
                 var src = ctx.createBufferSource();
-                src.buffer = buf;
+                src.buffer = nBuf;
                 var filt = ctx.createBiquadFilter();
-                filt.type = 'bandpass';
-                filt.frequency.value = freq;
-                filt.Q.value = vary(Q, 0.2);
+                filt.type = type || (filterFreq < 500 ? 'lowpass' : 'bandpass');
+                filt.frequency.value = vary(filterFreq, 0.15);
+                filt.Q.value = filterFreq < 500 ? 1 : vary(3, 0.3);
                 var g = ctx.createGain();
                 g.gain.setValueAtTime(gain, startTime);
                 g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
@@ -425,54 +425,71 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
                 filt.connect(g);
                 g.connect(sfxMaster);
                 src.start(startTime);
-                src.stop(startTime + duration);
+                src.stop(startTime + duration + 0.01);
             }}
 
-            // Helper: tone with pitch envelope
-            function toneSweep(startFreq, endFreq, duration, type, gain, startTime) {{
-                startFreq = vary(startFreq, 0.12);
-                endFreq = vary(endFreq, 0.12);
+            // Square wave pitch sweep (classic NES SFX)
+            function sqSweep(startFreq, endFreq, duration, gain, startTime) {{
+                startFreq = vary(startFreq, 0.1);
+                endFreq = vary(endFreq, 0.1);
                 duration = vary(duration, 0.1);
                 gain = vary(gain, 0.1);
                 var osc = ctx.createOscillator();
-                osc.type = type || 'sine';
+                osc.type = 'square';
                 osc.frequency.setValueAtTime(startFreq, startTime);
                 osc.frequency.exponentialRampToValueAtTime(Math.max(endFreq, 20), startTime + duration);
-                // Slight random detune for character
-                osc.detune.value = (Math.random() * 30) - 15;
+                osc.detune.value = (Math.random() * 16) - 8;
                 var g = ctx.createGain();
                 g.gain.setValueAtTime(gain, startTime);
-                g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+                g.gain.setValueAtTime(gain * 0.6, startTime + duration * 0.7);
+                g.gain.linearRampToValueAtTime(0.001, startTime + duration);
                 osc.connect(g);
                 g.connect(sfxMaster);
                 osc.start(startTime);
                 osc.stop(startTime + duration + 0.01);
             }}
 
-            // Helper: quick tone (fixed pitch, fast decay)
-            function quickTone(freq, duration, type, gain, startTime) {{
+            // Square wave blip (fixed pitch, instant on/off like NES)
+            function sqBlip(freq, duration, gain, startTime) {{
                 freq = vary(freq, 0.08);
                 duration = vary(duration, 0.1);
                 gain = vary(gain, 0.1);
                 var osc = ctx.createOscillator();
-                osc.type = type || 'sine';
+                osc.type = 'square';
                 osc.frequency.value = freq;
-                osc.detune.value = (Math.random() * 20) - 10;
+                osc.detune.value = (Math.random() * 16) - 8;
                 var g = ctx.createGain();
                 g.gain.setValueAtTime(gain, startTime);
-                g.gain.exponentialRampToValueAtTime(0.001, startTime + duration);
+                g.gain.setValueAtTime(gain * 0.6, startTime + duration * 0.8);
+                g.gain.linearRampToValueAtTime(0.001, startTime + duration);
                 osc.connect(g);
                 g.connect(sfxMaster);
                 osc.start(startTime);
                 osc.stop(startTime + duration + 0.01);
             }}
 
-            // Helper: ascending arpeggio (array of freqs)
-            function arpeggio(freqs, noteLen, type, gain, startTime) {{
-                // Slight per-note timing jitter for organic feel
+            // Triangle blip (for bass/softer tones)
+            function triBlip(freq, duration, gain, startTime) {{
+                freq = vary(freq, 0.08);
+                duration = vary(duration, 0.1);
+                gain = vary(gain, 0.1);
+                var osc = ctx.createOscillator();
+                osc.type = 'triangle';
+                osc.frequency.value = freq;
+                var g = ctx.createGain();
+                g.gain.setValueAtTime(gain, startTime);
+                g.gain.linearRampToValueAtTime(0.001, startTime + duration);
+                osc.connect(g);
+                g.connect(sfxMaster);
+                osc.start(startTime);
+                osc.stop(startTime + duration + 0.01);
+            }}
+
+            // Chiptune arpeggio (square wave rapid notes)
+            function chipArp(freqs, noteLen, gain, startTime) {{
                 for (var i = 0; i < freqs.length; i++) {{
-                    var jitter = (Math.random() * 0.012) - 0.006;
-                    quickTone(freqs[i], noteLen * 1.5, type, gain, startTime + i * noteLen + jitter);
+                    var jitter = (Math.random() * 0.008) - 0.004;
+                    sqBlip(freqs[i], noteLen * 1.4, gain, startTime + i * noteLen + jitter);
                 }}
             }}
 
@@ -486,152 +503,186 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
                 switch(fx) {{
                     // === COMBAT ===
                     case 'weapon_hit':
-                        noiseBurst(0.12, pick([1000, 1200, 1400]), 2, 0.5, st);
-                        toneSweep(pick([280, 300, 340]), pick([80, 100, 120]), 0.15, 'sawtooth', 0.2, st);
+                        // NES sword slash: fast square pitch drop + noise
+                        sqSweep(pick([800, 900, 1000]), pick([150, 200, 250]), 0.08, 0.25, st);
+                        noiseHit(pick([2000, 2500, 3000]), 0.06, 0.3, st);
                         break;
 
                     case 'crit_hit':
-                        noiseBurst(0.2, pick([1800, 2000, 2200]), 3, 0.7, st);
-                        toneSweep(pick([550, 600, 680]), pick([120, 150, 180]), 0.25, 'sawtooth', 0.35, st);
-                        quickTone(pick([830, 880, 932]), 0.15, 'triangle', 0.25, st + 0.05);
+                        // Big impact: two-stage sweep + heavy noise
+                        sqSweep(pick([1200, 1400, 1600]), pick([200, 250, 300]), 0.12, 0.35, st);
+                        sqBlip(pick([1800, 2000, 2200]), 0.04, 0.2, st + 0.03);
+                        noiseHit(pick([2500, 3000]), 0.1, 0.4, st);
+                        noiseHit(150, 0.08, 0.25, st + 0.04);
                         break;
 
                     case 'player_hurt':
-                        noiseBurst(0.15, pick([500, 600, 700]), 2, 0.4, st);
-                        toneSweep(pick([180, 200, 230]), pick([60, 80, 100]), 0.2, 'sine', 0.3, st);
+                        // Damage: descending square buzz
+                        sqSweep(pick([500, 600, 700]), pick([80, 100, 120]), 0.15, 0.25, st);
+                        noiseHit(pick([400, 500]), 0.08, 0.2, st + 0.02);
                         break;
 
                     case 'fumble':
-                        toneSweep(pick([350, 400, 450]), pick([50, 60, 75]), 0.4, pick(['sawtooth', 'sine']), 0.2, st);
-                        noiseBurst(0.08, pick([250, 300, 380]), 1, 0.15, st + 0.1);
+                        // Sad whiff: slow descending square
+                        sqSweep(pick([400, 450, 500]), pick([60, 80, 100]), 0.3, 0.15, st);
+                        sqSweep(pick([300, 350]), pick([40, 50]), 0.2, 0.1, st + 0.1);
                         break;
 
                     case 'block':
-                        noiseBurst(0.06, pick([2800, 3000, 3400]), pick([6, 8, 10]), 0.5, st);
-                        quickTone(pick([1100, 1200, 1350]), 0.08, 'square', 0.2, st);
-                        quickTone(pick([700, 800, 900]), 0.1, 'square', 0.15, st + 0.04);
+                        // Metallic ting: high square blips
+                        sqBlip(pick([2000, 2200, 2400]), 0.03, 0.3, st);
+                        sqBlip(pick([1500, 1700, 1900]), 0.04, 0.2, st + 0.03);
+                        noiseHit(pick([6000, 8000]), 0.03, 0.2, st);
                         break;
 
                     case 'monster_death':
-                        toneSweep(pick([260, 300, 350]), pick([30, 40, 55]), 0.5, 'sawtooth', 0.3, st);
-                        noiseBurst(0.3, pick([400, 500, 600]), 1, 0.4, st);
-                        noiseBurst(0.15, pick([80, 100, 130]), 2, 0.3, st + 0.15);
+                        // Multi-step descending: classic RPG enemy defeat
+                        sqSweep(pick([600, 700, 800]), pick([80, 100]), 0.12, 0.2, st);
+                        sqSweep(pick([300, 400]), pick([50, 60]), 0.15, 0.2, st + 0.1);
+                        sqSweep(pick([150, 200]), pick([30, 40]), 0.2, 0.15, st + 0.2);
+                        noiseHit(150, 0.15, 0.3, st + 0.05);
                         break;
 
                     case 'heal':
-                        // Randomly shift the arpeggio up or down a bit
-                        var hShift = pick([0.95, 1.0, 1.05]);
-                        arpeggio([392*hShift, 494*hShift, 587*hShift, 784*hShift], 0.1, pick(['sine', 'triangle']), 0.2, st);
+                        // Zelda-style ascending chime
+                        var hS = pick([0.95, 1.0, 1.05]);
+                        chipArp([392*hS, 494*hS, 587*hS, 784*hS], 0.06, 0.2, st);
+                        triBlip(784*hS, 0.3, 0.15, st + 0.24);
                         break;
 
                     case 'status_inflict':
-                        toneSweep(pick([450, 500, 560]), pick([170, 200, 240]), 0.3, 'sine', 0.15, st);
-                        noiseBurst(0.1, pick([700, 800, 950]), 4, 0.1, st + 0.05);
+                        // Wobbling square (poison/debuff feel)
+                        sqSweep(pick([500, 550, 600]), pick([200, 250]), 0.2, 0.15, st);
+                        sqBlip(pick([300, 350, 400]), 0.08, 0.1, st + 0.1);
                         break;
 
-                    // === SPELLS (element-specific) ===
+                    // === SPELLS (element-specific, all chiptune) ===
                     case 'spell_fire':
-                        noiseBurst(pick([0.3, 0.35, 0.4]), pick([1300, 1500, 1700]), 1, 0.5, st);
-                        noiseBurst(0.2, pick([2500, 3000, 3500]), 2, 0.3, st + 0.05);
-                        toneSweep(pick([180, 200, 230]), pick([80, 100, 120]), 0.3, 'sawtooth', 0.15, st);
+                        // Rapid noise crackle + rising square
+                        noiseHit(pick([1500, 2000, 2500]), 0.15, 0.35, st);
+                        noiseHit(pick([3000, 4000]), 0.1, 0.2, st + 0.04);
+                        sqSweep(pick([200, 250, 300]), pick([600, 800, 1000]), 0.2, 0.15, st);
                         break;
 
                     case 'spell_ice':
-                        quickTone(pick([1100, 1200, 1350]), 0.3, 'sine', 0.25, st);
-                        quickTone(pick([1650, 1800, 2000]), 0.2, 'sine', 0.15, st + 0.05);
-                        noiseBurst(0.15, pick([3500, 4000, 4500]), pick([8, 10, 12]), 0.3, st + 0.1);
+                        // High crystalline square blips
+                        sqBlip(pick([1800, 2000, 2200]), 0.06, 0.2, st);
+                        sqBlip(pick([2400, 2600, 2800]), 0.05, 0.15, st + 0.04);
+                        sqBlip(pick([3000, 3200]), 0.04, 0.12, st + 0.08);
+                        noiseHit(pick([8000, 10000]), 0.08, 0.15, st + 0.03);
                         break;
 
                     case 'spell_lightning':
-                        noiseBurst(pick([0.04, 0.05, 0.07]), pick([4500, 5000, 5500]), 1, 0.8, st);
-                        noiseBurst(0.25, pick([1800, 2000, 2400]), 2, 0.4, st + 0.03);
-                        toneSweep(pick([1800, 2000, 2300]), pick([80, 100, 130]), 0.15, 'square', 0.3, st);
+                        // Sharp crack: fast noise + high square drop
+                        noiseHit(pick([8000, 10000, 12000]), 0.03, 0.5, st);
+                        sqSweep(pick([3000, 4000, 5000]), pick([200, 300]), 0.08, 0.35, st);
+                        noiseHit(pick([2000, 3000]), 0.12, 0.25, st + 0.03);
                         break;
 
                     case 'spell_holy':
-                        var holyShift = pick([0.94, 1.0, 1.06]);
-                        arpeggio([523*holyShift, 659*holyShift, 784*holyShift, 1047*holyShift], 0.08, 'sine', 0.25, st);
-                        quickTone(1047*holyShift, 0.4, 'triangle', 0.15, st + 0.3);
+                        // Ascending major arpeggio + sustain
+                        var hoS = pick([0.94, 1.0, 1.06]);
+                        chipArp([523*hoS, 659*hoS, 784*hoS, 1047*hoS], 0.06, 0.2, st);
+                        sqBlip(1047*hoS, 0.25, 0.15, st + 0.24);
                         break;
 
                     case 'spell_darkness': case 'spell_shadow':
-                        toneSweep(pick([90, 100, 115]), pick([30, 40, 50]), 0.5, 'sawtooth', 0.3, st);
-                        noiseBurst(0.3, pick([160, 200, 250]), pick([5, 6, 8]), 0.25, st + 0.05);
+                        // Low rumbling square + noise
+                        sqSweep(pick([120, 140, 160]), pick([40, 50, 60]), 0.35, 0.25, st);
+                        noiseHit(pick([200, 300]), 0.2, 0.2, st + 0.03);
+                        sqBlip(pick([80, 90, 100]), 0.15, 0.15, st + 0.15);
                         break;
 
                     case 'spell_poison': case 'spell_acid':
-                        noiseBurst(0.25, pick([700, 800, 950]), 3, 0.3, st);
-                        toneSweep(pick([360, 400, 450]), pick([120, 150, 180]), 0.3, 'sine', 0.2, st + 0.05);
-                        toneSweep(pick([300, 350, 400]), pick([100, 120, 150]), 0.2, 'sine', 0.15, st + 0.15);
+                        // Bubbling: alternating square blips
+                        var pF = pick([300, 350, 400]);
+                        sqBlip(pF, 0.05, 0.15, st);
+                        sqBlip(pF * 0.8, 0.05, 0.12, st + 0.06);
+                        sqBlip(pF * 1.1, 0.05, 0.15, st + 0.12);
+                        sqBlip(pF * 0.75, 0.05, 0.12, st + 0.18);
+                        noiseHit(pick([600, 800]), 0.1, 0.1, st + 0.05);
                         break;
 
                     case 'spell_arcane':
-                        quickTone(pick([620, 660, 700]), 0.2, 'triangle', 0.25, st);
-                        quickTone(pick([830, 880, 940]), 0.15, 'triangle', 0.2, st + 0.08);
-                        noiseBurst(0.15, pick([1800, 2000, 2300]), 5, 0.15, st + 0.1);
+                        // Quick square arpeggio up-down
+                        var aF = pick([600, 660, 720]);
+                        sqBlip(aF, 0.04, 0.2, st);
+                        sqBlip(aF * 1.33, 0.04, 0.18, st + 0.04);
+                        sqBlip(aF * 1.5, 0.04, 0.15, st + 0.08);
+                        sqBlip(aF * 1.33, 0.04, 0.12, st + 0.12);
                         break;
 
                     case 'spell_earth':
-                        toneSweep(pick([70, 80, 95]), pick([30, 40, 50]), 0.4, 'sine', 0.35, st);
-                        noiseBurst(0.2, pick([250, 300, 380]), 2, 0.4, st);
-                        noiseBurst(0.15, pick([500, 600, 750]), 3, 0.2, st + 0.1);
+                        // Low thud: triangle bass + noise
+                        triBlip(pick([60, 70, 80]), 0.2, 0.3, st);
+                        noiseHit(150, 0.12, 0.35, st);
+                        sqSweep(pick([200, 250]), pick([80, 100]), 0.15, 0.15, st + 0.05);
                         break;
 
                     case 'spell_wind': case 'spell_air':
-                        noiseBurst(pick([0.35, 0.4, 0.45]), pick([2200, 2500, 2800]), 1, 0.35, st);
-                        toneSweep(pick([700, 800, 900]), pick([1400, 1600, 1800]), 0.3, 'sine', 0.1, st);
+                        // Whoosh: noise sweep + rising square
+                        noiseHit(pick([3000, 4000, 5000]), 0.25, 0.3, st, 'highpass');
+                        sqSweep(pick([400, 500, 600]), pick([1200, 1500, 1800]), 0.2, 0.1, st);
                         break;
 
                     case 'spell_water':
-                        noiseBurst(0.2, pick([1600, 1800, 2100]), 3, 0.3, st);
-                        toneSweep(pick([550, 600, 680]), pick([250, 300, 350]), 0.3, 'sine', 0.2, st + 0.05);
-                        quickTone(pick([800, 900, 1000]), 0.1, 'sine', 0.1, st + 0.15);
+                        // Splash: noise + warbling square
+                        noiseHit(pick([2000, 2500]), 0.12, 0.25, st);
+                        sqBlip(pick([800, 900, 1000]), 0.06, 0.15, st + 0.03);
+                        sqBlip(pick([600, 700]), 0.06, 0.12, st + 0.08);
+                        sqBlip(pick([900, 1000]), 0.05, 0.1, st + 0.13);
                         break;
 
                     case 'spell_force': case 'spell_psychic':
-                        var forceF = pick([400, 440, 490]);
-                        toneSweep(forceF, forceF * 2, 0.2, 'sine', 0.3, st);
-                        toneSweep(forceF * 2, forceF, 0.2, 'sine', 0.2, st + 0.15);
-                        noiseBurst(0.1, pick([2500, 3000, 3500]), 8, 0.15, st + 0.1);
+                        // Square ping-pong
+                        var fF = pick([400, 440, 490]);
+                        sqSweep(fF, fF * 2, 0.1, 0.25, st);
+                        sqSweep(fF * 2, fF, 0.1, 0.2, st + 0.1);
+                        sqBlip(fF * 1.5, 0.06, 0.15, st + 0.2);
                         break;
 
                     case 'spell_fizzle':
-                        toneSweep(pick([500, 600, 700]), pick([60, 80, 100]), 0.5, pick(['sine', 'triangle']), 0.25, st);
-                        noiseBurst(0.2, pick([350, 400, 500]), 1, 0.2, st + 0.15);
+                        // Sad descending square + noise puff
+                        sqSweep(pick([600, 700, 800]), pick([80, 100, 120]), 0.35, 0.2, st);
+                        noiseHit(pick([400, 500]), 0.15, 0.15, st + 0.1);
                         break;
 
                     // === EXPLORATION / UI ===
                     case 'chest_open':
-                        noiseBurst(0.1, pick([1800, 2000, 2300]), 3, 0.2, st);
-                        var cShift = pick([0.95, 1.0, 1.05]);
-                        arpeggio([523*cShift, 659*cShift, 784*cShift, 1047*cShift, 1319*cShift], 0.07, 'triangle', 0.2, st + 0.05);
+                        // Zelda chest jingle
+                        var cS = pick([0.95, 1.0, 1.05]);
+                        chipArp([523*cS, 659*cS, 784*cS, 1047*cS, 1319*cS], 0.055, 0.2, st);
+                        sqBlip(1319*cS, 0.2, 0.15, st + 0.28);
                         break;
 
                     case 'level_up':
-                        var lShift = pick([0.95, 1.0, 1.05]);
-                        arpeggio([262*lShift, 330*lShift, 392*lShift, 523*lShift, 659*lShift, 784*lShift], 0.1, pick(['triangle', 'sine']), 0.25, st);
-                        quickTone(784*lShift, 0.5, 'sine', 0.15, st + 0.55);
+                        // Classic RPG fanfare arpeggio
+                        var lS = pick([0.95, 1.0, 1.05]);
+                        chipArp([262*lS, 330*lS, 392*lS, 523*lS, 659*lS, 784*lS], 0.07, 0.22, st);
+                        sqBlip(784*lS, 0.35, 0.18, st + 0.42);
+                        triBlip(131*lS, 0.4, 0.15, st + 0.42);
                         break;
 
                     case 'achievement':
-                        var aShift = pick([0.95, 1.0, 1.05]);
-                        arpeggio([523*aShift, 659*aShift, 784*aShift, 1047*aShift], 0.08, 'triangle', 0.2, st);
-                        quickTone(1047*aShift, 0.3, 'sine', 0.2, st + 0.3);
-                        quickTone(1319*aShift, 0.3, 'sine', 0.15, st + 0.4);
+                        // Bright fanfare + high sustain
+                        var aS = pick([0.95, 1.0, 1.05]);
+                        chipArp([523*aS, 659*aS, 784*aS, 1047*aS], 0.06, 0.2, st);
+                        sqBlip(1047*aS, 0.2, 0.18, st + 0.24);
+                        sqBlip(1319*aS, 0.25, 0.15, st + 0.34);
                         break;
 
                     case 'buy':
+                        // Mario-style coin: two quick square pips ascending
                         var bF = pick([750, 800, 860]);
-                        quickTone(bF, 0.06, 'square', 0.15, st);
-                        quickTone(bF * 1.25, 0.06, 'square', 0.12, st + 0.07);
-                        quickTone(bF * 1.5, 0.08, 'square', 0.1, st + 0.14);
+                        sqBlip(bF, 0.04, 0.2, st);
+                        sqBlip(bF * 1.5, 0.08, 0.18, st + 0.04);
                         break;
 
                     case 'sell':
+                        // Reverse coin: descending pips
                         var sF = pick([1100, 1200, 1300]);
-                        quickTone(sF, 0.06, 'square', 0.15, st);
-                        quickTone(sF * 0.83, 0.06, 'square', 0.12, st + 0.07);
-                        quickTone(sF * 0.67, 0.08, 'square', 0.1, st + 0.14);
+                        sqBlip(sF, 0.04, 0.2, st);
+                        sqBlip(sF * 0.67, 0.08, 0.18, st + 0.04);
                         break;
                 }}
                 offset += 0.05;
