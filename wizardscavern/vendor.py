@@ -459,6 +459,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 if player_character.gold >= item_to_buy.calculated_value:
                     player_character.gold -= item_to_buy.calculated_value
                     vendor_character.gold += item_to_buy.calculated_value
+                    gs.sfx_event = 'buy'
 
                     new_item = _create_item_copy(item_to_buy)
 
@@ -523,6 +524,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 sell_price = item_to_sell.calculated_value // 2
                 if vendor_character.gold >= sell_price:
                     player_character.gold += sell_price
+                    gs.sfx_event = 'sell'
                     gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + sell_price
                     check_achievements(player_character)
                     vendor_character.gold -= sell_price

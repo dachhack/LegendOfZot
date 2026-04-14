@@ -123,6 +123,7 @@ def check_achievements(player_character):
     for achievement in ACHIEVEMENTS:
         if achievement.check_unlock(player_character, gs.game_stats):
             # Achievement just unlocked!
+            gs.sfx_event = 'achievement'
             # Only show in log with description
             add_log(f"{COLOR_YELLOW} ACHIEVEMENT UNLOCKED: {achievement.name} - {achievement.description}{COLOR_RESET}")
 

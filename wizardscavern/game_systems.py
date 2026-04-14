@@ -2890,9 +2890,10 @@ def process_chest_action(player_character, my_tower, cmd):
         return
 
     if cmd == 'o':
+        gs.sfx_event = 'chest_open'
         # Check if this is a Legendary Chest
         is_legendary = room.properties.get('is_legendary', False)
-        
+
         if is_legendary and not gs.runes_obtained['treasure']:
             # LEGENDARY CHEST - Guaranteed great rewards + Rune
             add_log(f"{COLOR_YELLOW}The magnificent chest opens with a blinding flash of light!{COLOR_RESET}")

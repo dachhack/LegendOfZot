@@ -105,6 +105,12 @@ _pending_load = None
 large_text_mode = False
 music_enabled = True
 
+# One-shot SFX event flag — set to an event name, cleared after rendering.
+# Used for events not already covered by combat damage/spell flags.
+# Valid values: 'level_up', 'chest_open', 'achievement', 'buy', 'sell',
+#               'equip', 'stairs', 'door_open', None
+sfx_event = None
+
 # ============================================================================
 # GAME STATISTICS (for achievements)
 # ============================================================================
