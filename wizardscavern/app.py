@@ -321,51 +321,58 @@ def generate_ambient_audio_js(mood, enabled):
 def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
                      monster_badge, player_badge, player_status, monster_status,
                      spell_cast, concentration_roll, monster_defeated,
-                     sfx_event, music_enabled, has_dice_rolls=False):
+                     sfx_event, music_enabled, has_dice_rolls=False, has_init_roll=False):
     """Generate one-shot procedural sound effects via Web Audio API.
 
-    SFX are delayed to sync with animations:
-    - Spell SFX fires when the spell banner appears (~100ms)
-    - Combat hit/damage SFX fires after dice reveal (~3.4s with dice, 0 without)
-    - Monster death SFX fires after dice reveal + brief beat
+    SFX are grouped by timing to sync with animations:
+    - Spell SFX fires with spell banner (~100ms)
+    - "Hit monster" SFX fires with monster damage float/shake (~1300ms)
+    - "Hit player" SFX fires with player damage float/shake (~3200ms)
     - Non-combat SFX (chest, buy, etc.) fires immediately
     """
     if not music_enabled:
         return ""
 
-    # Compute SFX delay to sync with animations
-    # Dice rolls take ~3.3s to fully reveal (ATK reveal ~1.16s, DEF reveal ~3.06s)
-    combat_delay_ms = 3400 if has_dice_rolls else 0
+    # Match the timeline from generate_damage_float_js
+    init_offset = 1000 if has_init_roll else 0
+    monster_hit_delay = (1300 + init_offset) if has_dice_rolls else 0
+    player_hit_delay = (3200 + init_offset) if has_dice_rolls else 0
     spell_delay_ms = 100 if spell_cast else 0
 
-    # Collect which effects to play, with timing category
-    effects = []         # immediate effects
-    combat_effects = []  # delayed until after dice
-    spell_effects = []   # delayed for spell banner
+    # Categorize effects by timing
+    effects = []              # immediate (non-combat)
+    monster_hit_effects = []  # synced with monster damage shake
+    player_hit_effects = []   # synced with player damage shake
+    spell_effects = []        # synced with spell banner
 
-    # --- Combat effects (sync with dice reveal) ---
+    # --- "Hit monster" effects (sync with monster panel shake) ---
     if monster_dmg and monster_dmg > 0 and not spell_cast:
         if monster_badge == 'CRIT':
-            combat_effects.append('crit_hit')
+            monster_hit_effects.append('crit_hit')
         else:
-            combat_effects.append('weapon_hit')
+            monster_hit_effects.append('weapon_hit')
 
+    if monster_status:
+        monster_hit_effects.append('status_inflict')
+
+    if monster_defeated:
+        monster_hit_effects.append('monster_death')
+
+    # --- "Hit player" effects (sync with player panel shake) ---
     if player_dmg and player_dmg > 0:
         if player_badge == 'FUMBLE':
-            combat_effects.append('fumble')
+            player_hit_effects.append('fumble')
         else:
-            combat_effects.append('player_hurt')
+            player_hit_effects.append('player_hurt')
 
     if player_blocked:
-        combat_effects.append('block')
+        player_hit_effects.append('block')
 
     if player_heal and player_heal > 0:
-        combat_effects.append('heal')
+        player_hit_effects.append('heal')
 
     if player_status:
-        combat_effects.append('status_inflict')
-    if monster_status:
-        combat_effects.append('status_inflict')
+        player_hit_effects.append('status_inflict')
 
     # --- Spell effects (sync with spell banner) ---
     if spell_cast:
@@ -380,29 +387,23 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
         if not passed:
             spell_effects.append('spell_fizzle')
 
-    # --- Monster defeat (after dice + beat) ---
-    if monster_defeated:
-        combat_effects.append('monster_death')
-
     # --- Misc events (immediate) ---
     if sfx_event:
         effects.append(sfx_event)
 
-    all_effects = effects + combat_effects + spell_effects
+    all_effects = effects + monster_hit_effects + player_hit_effects + spell_effects
     if not all_effects:
         return ""
-
-    effects_js = json.dumps(effects)
-    combat_effects_js = json.dumps(combat_effects)
-    spell_effects_js = json.dumps(spell_effects)
 
     return f"""
     <script>
     (function() {{
-        var immediateEffects = {effects_js};
-        var combatEffects = {combat_effects_js};
-        var spellEffects = {spell_effects_js};
-        var combatDelayMs = {combat_delay_ms};
+        var immediateEffects = {json.dumps(effects)};
+        var monsterHitEffects = {json.dumps(monster_hit_effects)};
+        var playerHitEffects = {json.dumps(player_hit_effects)};
+        var spellEffects = {json.dumps(spell_effects)};
+        var monsterHitDelayMs = {monster_hit_delay};
+        var playerHitDelayMs = {player_hit_delay};
         var spellDelayMs = {spell_delay_ms};
         try {{
             var AC = window.AudioContext || window.webkitAudioContext;
@@ -712,20 +713,30 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
 
             // Spell effects (synced with spell banner appearance)
             if (spellEffects.length) {{
-                var spellDelay = spellDelayMs / 1000;
                 setTimeout(function() {{
                     playEffects(spellEffects, ctx.currentTime);
                 }}, spellDelayMs);
             }}
 
-            // Combat effects (synced with dice reveal)
-            if (combatEffects.length) {{
-                if (combatDelayMs > 0) {{
+            // Monster hit effects (synced with monster panel shake)
+            if (monsterHitEffects.length) {{
+                if (monsterHitDelayMs > 0) {{
                     setTimeout(function() {{
-                        playEffects(combatEffects, ctx.currentTime);
-                    }}, combatDelayMs);
+                        playEffects(monsterHitEffects, ctx.currentTime);
+                    }}, monsterHitDelayMs);
                 }} else {{
-                    playEffects(combatEffects, t);
+                    playEffects(monsterHitEffects, t);
+                }}
+            }}
+
+            // Player hit effects (synced with player panel shake)
+            if (playerHitEffects.length) {{
+                if (playerHitDelayMs > 0) {{
+                    setTimeout(function() {{
+                        playEffects(playerHitEffects, ctx.currentTime);
+                    }}, playerHitDelayMs);
+                }} else {{
+                    playEffects(playerHitEffects, t + 0.2);
                 }}
             }}
 
@@ -7344,7 +7355,7 @@ class WizardsCavernApp(toga.App):
             {generate_concentration_check_js(gs.last_concentration_roll)}
             {generate_monster_defeat_js(gs.monster_defeated_anim)}
             {generate_ambient_audio_js(get_audio_mood(gs.prompt_cntl), gs.music_enabled)}
-            {generate_sfx_js(gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, gs.last_player_status, gs.last_monster_status, gs.last_spell_cast, gs.last_concentration_roll, gs.monster_defeated_anim, gs.sfx_event, gs.music_enabled, bool(gs.last_dice_rolls))}
+            {generate_sfx_js(gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, gs.last_player_status, gs.last_monster_status, gs.last_spell_cast, gs.last_concentration_roll, gs.monster_defeated_anim, gs.sfx_event, gs.music_enabled, bool(gs.last_dice_rolls), bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
         </body>
         </html>
         """
