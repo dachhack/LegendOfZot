@@ -7,9 +7,8 @@ VERSION = "0.1.2"
 BUILD_NUMBER = 80
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "INITIATIVE dice moved to dedicated left-side slots, 1.4x bigger",
-    "INITIATIVE! banner now sits above combat panels, not up in the map",
-    "Purple INIT dice + banner + bell SFX + haptic tick",
+    "INIT dice now sit just left of combat dice, not over the sprite",
+    "1.4x bigger INIT dice with purple color + banner + bell + haptic",
     "FIX: HP bars drain with the damage float instead of dropping early",
     "FIX: Music pauses when app is backgrounded, resumes on return",
     "FIX: Monster death SFX no longer plays before damage lands",
