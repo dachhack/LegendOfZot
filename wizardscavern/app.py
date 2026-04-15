@@ -1457,7 +1457,10 @@ def generate_dice_roll_js(dice_rolls):
 
         # Reveal phase: after both dice have landed, show win/lose colors
         'setTimeout(function(){'
-        'var isCrit=(rawVal===sides && winner);'
+        # CRIT only applies to ATTACK rolls (and FLEE, which is an attack-style roll).
+        # Defense nat-20s are just successful dodges, not crits.
+        'var canCrit=(labelText==="ATTACK"||labelText==="FLEE");'
+        'var isCrit=(rawVal===sides && winner && canCrit);'
         'var isFumble=(rawVal===1 && !winner);'
         'dice.style.transition="border-color 0.25s,color 0.25s,background 0.25s,box-shadow 0.25s";'
         'if(isCrit){'
