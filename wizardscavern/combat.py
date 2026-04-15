@@ -43,6 +43,22 @@ def _main():
     return main
 
 
+def _clear_combat_visuals_on_kill():
+    """Clean up combat visual state when the monster dies on the player's turn.
+
+    Strips DEF dice (monster's would-be attack) and clears player damage/heal
+    visual flags from any pre-attack the monster made earlier this round.
+    The damage info is still in the log, but we don't want phantom panel
+    shakes or floating numbers playing AFTER the monster is already dead.
+    """
+    gs.last_dice_rolls = [r for r in gs.last_dice_rolls if r[3] != 'DEF']
+    gs.last_player_damage = 0
+    gs.last_player_blocked = False
+    gs.last_player_status = None
+    gs.last_player_damage_badge = None
+    gs.last_player_heal = 0
+
+
 # ---------------------------------------------------------------------------
 # SPELL CHANNELING / CHARGING HELPERS
 # ---------------------------------------------------------------------------
@@ -381,7 +397,7 @@ def process_combat_action(player_character, my_tower, cmd):
     # Check if monster was defeated by status effects
     if gs.active_monster and not gs.active_monster.is_alive():
         gs.monster_defeated_anim = gs.active_monster.name
-        gs.last_dice_rolls = [r for r in gs.last_dice_rolls if r[3] != 'DEF']
+        _clear_combat_visuals_on_kill()
         add_log(f"{COLOR_GREEN}The {gs.active_monster.name} succumbed to its status effects!{COLOR_RESET}")
         # XP, Gold, Room clearing logic should be here as well
          # Calculate base rewards
@@ -580,7 +596,7 @@ def process_combat_action(player_character, my_tower, cmd):
                 # Check if monster was killed
                 if gs.active_monster and not gs.active_monster.is_alive():
                     gs.monster_defeated_anim = gs.active_monster.name
-                    gs.last_dice_rolls = [r for r in gs.last_dice_rolls if r[3] != 'DEF']
+                    _clear_combat_visuals_on_kill()
                     add_log(f"{COLOR_GREEN}You defeated the {gs.active_monster.name}!{COLOR_RESET}")
                     add_log(f"{COLOR_GREEN}{gs.active_monster.victory_text}{COLOR_RESET}")
 
@@ -794,7 +810,7 @@ def process_combat_action(player_character, my_tower, cmd):
             gs.monster_defeated_anim = gs.active_monster.name
             # Strip DEF dice from this frame — the monster's initiative attack
             # already happened, but showing it AFTER the kill shot looks wrong.
-            gs.last_dice_rolls = [r for r in gs.last_dice_rolls if r[3] != 'DEF']
+            _clear_combat_visuals_on_kill()
             add_log(f"{COLOR_GREEN}You defeated the {gs.active_monster.name}!{COLOR_RESET}")
             # Cook meat if killed with fire weapon
             if damage_type == "Fire":
@@ -1615,7 +1631,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                 # After casting, check combat state
                 if gs.active_monster and not gs.active_monster.is_alive():
                     gs.monster_defeated_anim = gs.active_monster.name
-                    gs.last_dice_rolls = [r for r in gs.last_dice_rolls if r[3] != 'DEF']
+                    _clear_combat_visuals_on_kill()
                     add_log(f"{COLOR_GREEN}You defeated the {gs.active_monster.name}!{COLOR_RESET}")
                     add_log(f"{COLOR_GREEN}{gs.active_monster.victory_text}{COLOR_RESET}")
 
