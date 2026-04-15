@@ -7778,6 +7778,16 @@ class WizardsCavernApp(toga.App):
                                 currentMood = null;
                                 this.setMood(m, enabled, 0);
                             }}
+                        }},
+                        // Suspend the AudioContext entirely so playback halts
+                        // AND the browser frees CPU/battery.  Called on
+                        // visibilitychange=hidden (app backgrounded, phone
+                        // locked, etc.).  resume() picks up where it left off.
+                        pause: function() {{
+                            if (!ctx) return;
+                            if (ctx.state === 'running') {{
+                                try {{ ctx.suspend(); }} catch(e) {{}}
+                            }}
                         }}
                     }};
                 }})();
@@ -7791,6 +7801,20 @@ class WizardsCavernApp(toga.App):
                 document.addEventListener('touchstart', function() {{
                     try {{ if (window._musicEngine) window._musicEngine.resume(); }} catch(e) {{}}
                 }}, {{passive:true,capture:true}});
+
+                // Pause music when the app goes to background, resume on
+                // return.  Fires when the user switches apps, locks the
+                // phone, or otherwise sends the WebView to the background.
+                document.addEventListener('visibilitychange', function() {{
+                    if (!window._musicEngine) return;
+                    try {{
+                        if (document.visibilityState === 'hidden') {{
+                            window._musicEngine.pause();
+                        }} else if (document.visibilityState === 'visible') {{
+                            window._musicEngine.resume();
+                        }}
+                    }} catch(e) {{}}
+                }});
 
                 // === updateGame: incremental DOM update used by render_update ===
                 // Replaces content-area innerHTML, re-executes inline scripts
