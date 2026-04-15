@@ -910,6 +910,49 @@ def mana_bar(current, maximum, width=20):
     return f"{bar} {cur_str}/{max_str}"
 
 
+def generate_hp_drain_js(monster_cur_hp, monster_max_hp, player_cur_hp, player_max_hp,
+                          monster_dmg, player_dmg, player_heal, has_init_roll):
+    """Schedule HP bar text updates to land at the damage-float timing.
+
+    The combat views render HP bars with pre-round HP so the bar
+    doesn't drop until the damage animation plays.  This helper emits
+    a script that swaps the bar innerHTML to the post-round HP at
+    MONSTER_DMG_DELAY (1.3s) / PLAYER_DMG_DELAY (3.2s) — the same
+    moment the damage float appears and the panel shakes.
+
+    The HP bar <span> tags in the combat templates need matching IDs:
+      #monster_hp_bar  (in monster_combat_html)
+      #player_hp_bar   (in player_combat_html)
+    """
+    if not (monster_dmg or player_dmg or player_heal):
+        return ""
+    init_offset = 1000 if has_init_roll else 0
+    m_delay = 1300 + init_offset
+    p_delay = 3200 + init_offset
+    # Compute post-damage bars in both sizes used across templates.
+    m_bar_10 = health_bar(monster_cur_hp, monster_max_hp, width=10)
+    p_bar_10 = health_bar(player_cur_hp, player_max_hp, width=10)
+    p_bar_15 = health_bar(player_cur_hp, player_max_hp, width=15)
+    parts = [
+        '<script>(function(){'
+        'function up(sel,h){var es=document.querySelectorAll(sel);'
+        'for(var i=0;i<es.length;i++)es[i].innerHTML=h;}'
+    ]
+    if monster_dmg > 0:
+        parts.append(
+            f'setTimeout(function(){{up(".monster-hp-bar",{json.dumps(m_bar_10)});}},{m_delay});'
+        )
+    if player_dmg > 0 or player_heal > 0:
+        parts.append(
+            f'setTimeout(function(){{'
+            f'up(".player-hp-bar",{json.dumps(p_bar_10)});'
+            f'up(".player-hp-bar-wide",{json.dumps(p_bar_15)});'
+            f'}},{p_delay});'
+        )
+    parts.append('})();</script>')
+    return ''.join(parts)
+
+
 def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_blocked=False,
                               player_status=None, monster_status=None, player_heal=0,
                               monster_badge=None, player_badge=None, spell_element=None,
@@ -4095,7 +4138,7 @@ class WizardsCavernApp(toga.App):
             player_stats_html = f"""
                 <div style="font-family: monospace; font-size: 12px; margin-bottom: 4px; padding: 3px; background: #1a1a1a; border-radius: 2px;">
                     <b>{gs.player_character.name}</b> Lv{gs.player_character.level} | F{gs.player_character.z + 1} ({gs.player_character.x},{gs.player_character.y}) | {gs.player_character.gold}g | {gs.player_character.experience}xp<br>
-                    HP:{health_bar(_p_display_hp, gs.player_character.max_health, width=10)} MP:{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)} | <span style="color:{hunger_color};">H:{gs.player_character.hunger}</span>
+                    HP:<span class="player-hp-bar">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</span> MP:{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)} | <span style="color:{hunger_color};">H:{gs.player_character.hunger}</span>
                 </div>
             """
         else:
@@ -5468,7 +5511,7 @@ class WizardsCavernApp(toga.App):
                         <div>
                             <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
                             <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
-                            <div style="font-size: 9px;">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</div>
+                            <div style="font-size: 9px;"><span class="monster-hp-bar">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</span></div>
                             {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
                             {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 1px;">{", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
@@ -5489,7 +5532,7 @@ class WizardsCavernApp(toga.App):
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
                             <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {gs.player_character.name}</div>
-                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</div>
+                            <div style="font-size: 9px; margin-bottom: 1px;"><span class="player-hp-bar">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</span></div>
                             <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
                             <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense} Int:{gs.player_character.intelligence}</div>
                         </div>
@@ -5546,6 +5589,7 @@ class WizardsCavernApp(toga.App):
 
                     {spells_html}
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
+                    {generate_hp_drain_js(gs.active_monster.health, gs.active_monster.max_health, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
 
                 </div>
                 """
@@ -5574,7 +5618,7 @@ class WizardsCavernApp(toga.App):
                         <div>
                             <div style="color: {evo_name_color}; font-weight: bold; font-size: 12px; margin-bottom: 2px;">{gs.active_monster.name} {evo_tier_label}</div>
                             <div style="font-size: 9px; margin-bottom: 2px;">Lv {gs.active_monster.level}</div>
-                            <div style="font-size: 9px;">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</div>
+                            <div style="font-size: 9px;"><span class="monster-hp-bar">{health_bar(_m_display_hp, gs.active_monster.max_health, width=10)}</span></div>
                             {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 2px;">{", ".join(gs.active_monster.elemental_weakness)}</div>' if gs.active_monster.elemental_weakness else ''}
                             {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 1px;">{", ".join(gs.active_monster.elemental_strength)}</div>' if gs.active_monster.elemental_strength else ''}
                         </div>
@@ -5599,7 +5643,7 @@ class WizardsCavernApp(toga.App):
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
                             <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {player_display}</div>
-                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</div>
+                            <div style="font-size: 9px; margin-bottom: 1px;"><span class="player-hp-bar">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</span></div>
                             <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
                             <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
                             {f'<div style="font-size: 8px; color: #64B5F6; margin-top: 2px;"> {", ".join(gs.player_character.elemental_strengths)}</div>' if gs.player_character.elemental_strengths else ''}
@@ -5663,6 +5707,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
+                    {generate_hp_drain_js(gs.active_monster.health, gs.active_monster.max_health, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
 
                 </div>
                 """
@@ -5713,7 +5758,7 @@ class WizardsCavernApp(toga.App):
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
                             <div style="color: #4CAF50; font-weight: bold; font-size: 12px; margin-bottom: 2px;"> {player_display}</div>
-                            <div style="font-size: 9px; margin-bottom: 1px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</div>
+                            <div style="font-size: 9px; margin-bottom: 1px;"><span class="player-hp-bar">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</span></div>
                             <div style="font-size: 9px; margin-bottom: 2px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)}</div>
                             <div style="font-size: 8px;">A:{gs.player_character.attack} D:{gs.player_character.defense}</div>
                         </div>
@@ -5736,6 +5781,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
+                    {generate_hp_drain_js(0, 1, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
                 </div>
                 """
             gs.monster_defeated_anim = victory_name
@@ -5786,7 +5832,7 @@ class WizardsCavernApp(toga.App):
                         <div style="flex-shrink:0;">{player_sprite_html_combat}</div>
                         <div>
                             <div style="color: #4CAF50; font-weight: bold; font-size: 15px; margin-bottom: 4px;"> {gs.player_character.name}</div>
-                            <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=15)}</div>
+                            <div style="font-size: 12px; margin-bottom: 2px;"><span class="player-hp-bar-wide">{health_bar(_p_display_hp, gs.player_character.max_health, width=15)}</span></div>
                             <div style="font-size: 12px; margin-bottom: 4px;">{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=15)}</div>
                             <div style="font-size: 12px; color: #FFD700;">Escaped combat!</div>
                         </div>
@@ -5811,6 +5857,7 @@ class WizardsCavernApp(toga.App):
                     </div>
 
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
+                    {generate_hp_drain_js(gs.active_monster.health, gs.active_monster.max_health, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
 
                 </div>
                 """
@@ -5842,7 +5889,7 @@ class WizardsCavernApp(toga.App):
             player_info_html = f"""
                 <div style="padding: 4px; border-radius: 4px; border: 2px solid #4CAF50;">
                     <div style="color: #4CAF50; font-weight: bold; font-size: 15px; margin-bottom: 4px;"> {gs.player_character.name}</div>
-                    <div style="font-size: 12px; margin-bottom: 2px;">{health_bar(_p_display_hp, gs.player_character.max_health, width=15)}</div>
+                    <div style="font-size: 12px; margin-bottom: 2px;"><span class="player-hp-bar-wide">{health_bar(_p_display_hp, gs.player_character.max_health, width=15)}</span></div>
                     <div style="font-size: 12px; color: #DDD;">Position: ({gs.player_character.x}, {gs.player_character.y})</div>
                     <div style="font-size: 12px; color: #DDD;">Floor: {gs.player_character.z + 1}</div>
                 </div>
