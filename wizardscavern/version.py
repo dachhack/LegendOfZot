@@ -7,8 +7,8 @@ VERSION = "0.1.2"
 BUILD_NUMBER = 80
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "INIT dice now sit just left of combat dice, not over the sprite",
-    "1.4x bigger INIT dice with purple color + banner + bell + haptic",
+    "INIT dice sized to stay inside the combat box (no more overflow)",
+    "INIT dice still just left of combat dice, purple + banner + bell",
     "FIX: HP bars drain with the damage float instead of dropping early",
     "FIX: Music pauses when app is backgrounded, resumes on return",
     "FIX: Monster death SFX no longer plays before damage lands",
