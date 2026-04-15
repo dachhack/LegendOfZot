@@ -4083,9 +4083,14 @@ class WizardsCavernApp(toga.App):
                 save_slots_html += "</div>"
 
             html_code = f"""
-                        <div style="font-family: monospace; font-size: 12px; padding: 10px; text-align: center;">
-                            <div style="font-size: 22px; font-weight: bold; margin-bottom: 20px; color: #FFD700;">
-                                 WIZARD'S CAVERN 
+                        <div id="intro-tap-zone" style="font-family: monospace; font-size: 12px; padding: 10px; text-align: center; cursor: pointer;"
+                             onclick="(function(){{ if(window._musicEngine){{ window._musicEngine.resume(); var s=document.getElementById('music-status'); if(s){{ s.innerHTML='&#9835; MUSIC ON &mdash; press SEND to begin'; s.style.color='#69F0AE'; }} }} }})()"
+                             ontouchstart="(function(){{ if(window._musicEngine){{ window._musicEngine.resume(); var s=document.getElementById('music-status'); if(s){{ s.innerHTML='&#9835; MUSIC ON &mdash; press SEND to begin'; s.style.color='#69F0AE'; }} }} }})()">
+                            <div style="font-size: 22px; font-weight: bold; margin-bottom: 12px; color: #FFD700;">
+                                 WIZARD'S CAVERN
+                            </div>
+                            <div id="music-status" style="font-size: 11px; color: #FFB74D; margin-bottom: 18px; letter-spacing: 1px;">
+                                &#9835; TAP THIS PANEL TO ENABLE MUSIC
                             </div>
                             <div style="font-size: 12px; line-height: 1.6; margin-bottom: 30px; color: #CCCCCC; text-align: left; max-width: 400px; margin-left: auto; margin-right: auto;">
                                 Many cycles ago, in the kingdom of Medium Earth, the gnomic wizard Zot forged his great ORB OF POWER.
