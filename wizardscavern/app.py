@@ -1776,32 +1776,13 @@ def generate_dice_roll_js(dice_rolls):
         'makeDice("player_atk_dice",pRoll,pMod,pHigher,"FLEE","#FFD54F",sides,0,rv);'
         'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"CATCH","#FF8A65",sides,600,rv);'
         '}else if(label==="INIT"){'
-        # Initiative: its own distinctive visual treatment — purple dice,
-        # centered "INITIATIVE!" banner, AND the dice themselves render
-        # in a larger centered overlay (scaled 1.6x) so it reads as a
-        # pre-battle event rather than a combat exchange.
+        # Initiative: rendered in the combat panels (same slots as
+        # ATK/DEF) but with purple dice + a centered "INITIATIVE!"
+        # banner + bell SFX + haptic tick so it still reads as a
+        # distinct pre-battle event.
         'var rv=200+360+200;'
-        # Build a fixed-position overlay with fresh dice slot divs that
-        # makeDice can find.  Use distinct IDs so the normal ATK/DEF
-        # combat slots stay free for their own phase.
-        'var initOv=document.createElement("div");'
-        'initOv.style.cssText="position:fixed;top:45%;left:50%;'
-        'transform:translate(-50%,-50%) scale(1.6);'
-        'z-index:99996;display:flex;gap:10px;pointer-events:none;";'
-        'var ipD=document.createElement("div");'
-        'ipD.id="init_player_dice";'
-        'ipD.style.cssText="position:relative;width:32px;height:52px;";'
-        'initOv.appendChild(ipD);'
-        'var imD=document.createElement("div");'
-        'imD.id="init_monster_dice";'
-        'imD.style.cssText="position:relative;width:32px;height:52px;";'
-        'initOv.appendChild(imD);'
-        'document.body.appendChild(initOv);'
-        'makeDice("init_player_dice",pRoll,pMod,pHigher,"INIT","#CE93D8",sides,0,rv);'
-        'makeDice("init_monster_dice",mRoll,mMod,!pHigher,"INIT","#CE93D8",sides,200,rv);'
-        # Remove the overlay after the dice reveal + hold completes
-        # (makeDice schedules a fade-out at revealMs + 1800ms).
-        'setTimeout(function(){if(initOv.parentNode)initOv.parentNode.removeChild(initOv);},3200);'
+        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"INIT","#CE93D8",sides,0,rv);'
+        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"INIT","#CE93D8",sides,200,rv);'
         # Centered announcement banner (similar style to spell name banner)
         'var ib=document.createElement("div");'
         'ib.style.cssText="position:fixed;top:30%;left:50%;'
