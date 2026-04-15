@@ -904,7 +904,8 @@ def mana_bar(current, maximum, width=20):
 
 def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_blocked=False,
                               player_status=None, monster_status=None, player_heal=0,
-                              monster_badge=None, player_badge=None, spell_element=None):
+                              monster_badge=None, player_badge=None, spell_element=None,
+                              spell_level=0):
     """Generate floating damage/heal/status text above combat sprites.
 
     Injects absolutely-positioned divs into the sprite wrapper elements.
@@ -989,10 +990,28 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
         float_calls.append(
             f'showFloat("{monster_canvas_id}_wrap","{bx}","#FFD54F",-20,{MONSTER_DMG_DELAY - 150});'
         )
+    # Haptic patterns — fired at the SAME delay as the panel shake so
+    # the phone buzz lands exactly when the damage number appears.
+    # Normal hits don't vibrate (would be too much on every attack);
+    # only crits and high-level spells (L3+) get haptic feedback.
+    def _vibe_pattern(badge, is_hit_spell):
+        if badge == 'CRIT':
+            return '[80,40,180]'       # strong two-buzz for crits
+        if is_hit_spell and spell_level >= 4:
+            return '[120,60,80,40,180]'  # dramatic pulse for L4-5 spells
+        if is_hit_spell and spell_level >= 3:
+            return '[100]'             # single buzz for L3 spells
+        return None
+
     if m_text:
         # Shake the monster panel only on actual damage (not status effects)
         if monster_dmg > 0:
             float_calls.append(f'shakePanel("monster_panel",{MONSTER_DMG_DELAY});')
+            _vm = _vibe_pattern(monster_badge, spell_element is not None)
+            if _vm:
+                float_calls.append(
+                    f'setTimeout(function(){{try{{if(navigator.vibrate)navigator.vibrate({_vm});}}catch(e){{}}}},{MONSTER_DMG_DELAY});'
+                )
         float_calls.append(
             f'showFloat("{monster_canvas_id}_wrap","{m_text}","{m_color}",0,{MONSTER_DMG_DELAY});'
         )
@@ -1005,6 +1024,11 @@ def generate_damage_float_js(monster_name, monster_dmg, player_dmg, player_block
         # Shake the player panel only on actual damage (not blocks/heals/status)
         if player_dmg > 0:
             float_calls.append(f'shakePanel("player_panel",{PLAYER_DMG_DELAY});')
+            _vp = _vibe_pattern(player_badge, False)
+            if _vp:
+                float_calls.append(
+                    f'setTimeout(function(){{try{{if(navigator.vibrate)navigator.vibrate({_vp});}}catch(e){{}}}},{PLAYER_DMG_DELAY});'
+                )
         float_calls.append(
             f'showFloat("player_sprite_wrap","{p_text}","{p_color}",0,{PLAYER_DMG_DELAY});'
         )
@@ -1181,9 +1205,12 @@ def generate_spell_cast_js(spell):
     tint_base_opacity = 0.15 + lvl * 0.06
     tint_duration = '120' if dtype in ('Lightning', 'Wind') else str(300 + lvl * 60)
 
+    # NOTE: haptic on high-level spells is triggered by
+    # generate_damage_float_js at the moment of damage panel shake,
+    # not at spell-banner appearance, so the buzz lands with the impact.
+
     return (
         '<script>(function(){'
-
         # Layer 2: Spell name banner (scaled with level)
         'var bn=document.createElement("div");'
         'bn.style.cssText="position:fixed;top:38%;left:50%;transform:translate(-50%,-50%) scale(0.7);'
@@ -1619,6 +1646,9 @@ def generate_dice_roll_js(dice_rolls):
         'void scr.offsetWidth;'
         'scr.style.animation="screenShake 0.5s ease-out";'
         '}'
+        # NOTE: haptic on crit is triggered by generate_damage_float_js
+        # at the same instant as the damage panel shake (~1300ms), which
+        # is the visually impactful moment, not the dice reveal.
         '}else if(isFumble){'
         'dice.style.borderColor="#555";'
         'dice.style.color="#888";'
@@ -1837,6 +1867,9 @@ def generate_monster_defeat_js(monster_name):
     safe_name = monster_name.replace('"', '\\"').replace("'", "\\'").replace('<', '').replace('>', '')
     return (
         '<script>(function(){'
+        # Haptic on kills is handled by generate_damage_float_js only when
+        # the badge is CRIT or the spell is high-level — normal kills stay
+        # quiet so buzzes land only on the big moments.
         'var mp=document.getElementById("monster_panel");'
         'if(!mp)return;'
         # Cancel CSS entrance animation that might conflict
@@ -3934,6 +3967,7 @@ class WizardsCavernApp(toga.App):
         # Spell element for coloring damage floats and triggering spell animations.
         _spell = getattr(gs, 'last_spell_cast', None)
         _spell_element = _spell_visual_element(_spell) if _spell else None
+        _spell_level = getattr(_spell, 'level', 0) if _spell else 0
 
         # CREATE ACHIEVEMENT NOTIFICATION HTML - MINIMAL VERSION
         achievement_notifications = ""
@@ -5503,7 +5537,7 @@ class WizardsCavernApp(toga.App):
                     </div>
 
                     {spells_html}
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
+                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
 
                 </div>
                 """
@@ -5620,7 +5654,7 @@ class WizardsCavernApp(toga.App):
                             {channeling_html}
                         </div>
                     </div>
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
+                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
 
                 </div>
                 """
@@ -5693,7 +5727,7 @@ class WizardsCavernApp(toga.App):
                             {player_combat_html}
                         </div>
                     </div>
-                    {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
+                    {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
                 </div>
                 """
             gs.monster_defeated_anim = victory_name
@@ -5768,7 +5802,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
 
-                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element)}
+                    {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
 
                 </div>
                 """

@@ -29,5 +29,10 @@ requires = ["toga-iOS>=0.4.0"]
 [tool.briefcase.app.wizardscavern.android]
 requires = ["toga-android>=0.4.0"]
 
+# Needed so navigator.vibrate() works in the WebView — haptic feedback
+# for critical hits and high-level spells.
+[tool.briefcase.app.wizardscavern.android.permission]
+"android.permission.VIBRATE" = "Haptic feedback on critical hits and powerful spells."
+
 [tool.briefcase.app.wizardscavern.web]
 requires = ["toga-web>=0.4.0"]
