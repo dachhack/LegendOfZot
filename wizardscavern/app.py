@@ -2043,30 +2043,21 @@ class WizardsCavernApp(toga.App):
         # Show window
         self.main_window.show()
 
-        # Bypass Android/iOS user-gesture policy on the audio WebView so it
-        # can play music without ever receiving a click.  Without this, a
-        # 0x0 hidden WebView's AudioContext stays suspended forever.
-        import sys
+        # The persistent hidden audio_view approach didn't pan out:
+        #   - Bypassing the Android user-gesture policy via
+        #     setMediaPlaybackRequiresUserGesture(false) triggers a security
+        #     warning to the user.
+        #   - Without the bypass, the AudioContext stays suspended forever
+        #     in the 0x0 hidden frame.
+        # Until we can do incremental DOM updates (so the main WebView stops
+        # reloading on every button press), we use inline music injection.
+        # The audio_view widget is kept in the layout but loads an empty
+        # placeholder.
         self._audio_view_active = False
         try:
-            if sys.platform == 'android':
-                settings = self.audio_view._impl.native.getSettings()
-                settings.setMediaPlaybackRequiresUserGesture(False)
-            elif sys.platform == 'ios':
-                # WKWebView: 0 = WKAudiovisualMediaTypeNone (no user action required)
-                config = self.audio_view._impl.native.configuration
-                config.mediaTypesRequiringUserActionForPlayback = 0
+            self.audio_view.set_content("", "<html><body></body></html>")
         except Exception:
             pass
-
-        # Load persistent audio player into the hidden audio WebView.
-        # This is done ONCE at startup — the AudioContext then persists
-        # across every game render for truly continuous music.
-        try:
-            self.audio_view.set_content("", build_audio_player_html())
-            self._audio_view_active = True
-        except Exception:
-            self._audio_view_active = False
 
         # Start with splash screen
         gs.prompt_cntl = "splash"
@@ -7217,13 +7208,23 @@ class WizardsCavernApp(toga.App):
                      'victory': 130, 'death': 70}
         now = time.time()
 
-        # Delay victory/death music until kill/damage animation finishes.
-        # Combat sequence is ~3.4s with dice (1.16s ATK reveal + 3.06s DEF
-        # reveal + brief settle).  Without dice, no delay needed.
+        # Delay victory/death music so the new theme begins after the
+        # corresponding animation finishes:
+        #   Victory: monster killed at MONSTER_DMG_DELAY (~1.3s, when the
+        #            monster panel shakes) + ~0.5s for the death SFX to
+        #            decay = ~1.8s before victory theme starts.
+        #   Death:   player killed at PLAYER_DMG_DELAY (~3.2s, when the
+        #            player panel shakes) + ~0.3s settle = ~3.5s.
+        # Add 1000ms when initiative dice are present (timeline shifted).
+        has_init = bool(gs.last_dice_rolls and
+                        any(r[3] == 'INIT' for r in gs.last_dice_rolls))
+        init_offset = 1000 if has_init else 0
         music_start_delay_ms = 0
-        if mood_changed and new_mood in ('victory', 'death') and gs.last_dice_rolls:
-            has_init = any(r[3] == 'INIT' for r in gs.last_dice_rolls)
-            music_start_delay_ms = 3400 + (1000 if has_init else 0)
+        if mood_changed and gs.last_dice_rolls:
+            if new_mood == 'victory':
+                music_start_delay_ms = 1800 + init_offset
+            elif new_mood == 'death':
+                music_start_delay_ms = 3500 + init_offset
 
         if getattr(self, '_audio_view_active', False):
             # PERSISTENT: only fire setMood on actual transitions, no reset
