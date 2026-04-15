@@ -524,6 +524,11 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
     if sfx_event:
         effects.append(sfx_event)
 
+    # Initiative roll: brief pre-battle cue — fires as soon as the combat
+    # view mounts, before any attack/defend dice tumble.
+    if has_init_roll:
+        effects.append('init_roll')
+
     all_effects = effects + monster_hit_effects + player_hit_effects + spell_effects
     if not all_effects:
         return ""
@@ -834,6 +839,15 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
                         var sF = pick([1100, 1200, 1300]);
                         sqBlip(sF, 0.04, 0.2, st);
                         sqBlip(sF * 0.67, 0.08, 0.18, st + 0.04);
+                        break;
+
+                    case 'init_roll':
+                        // Pre-battle cue: single bell-like triangle tone
+                        // with a short airy noise "fwoosh" — signals combat
+                        // is about to start, distinct from any hit SFX.
+                        triBlip(pick([660, 700, 740]), 0.35, 0.22, st);
+                        triBlip(pick([988, 1046, 1108]), 0.3, 0.14, st + 0.05);
+                        noiseHit(pick([4000, 5000]), 0.12, 0.18, st, 'highpass');
                         break;
                 }}
                 offset += 0.05;
@@ -1762,10 +1776,30 @@ def generate_dice_roll_js(dice_rolls):
         'makeDice("player_atk_dice",pRoll,pMod,pHigher,"FLEE","#FFD54F",sides,0,rv);'
         'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"CATCH","#FF8A65",sides,600,rv);'
         '}else if(label==="INIT"){'
-        # Initiative: reveal after both land.
+        # Initiative: its own distinctive visual treatment — purple dice,
+        # centered "INITIATIVE!" banner so it reads as a pre-battle event
+        # rather than a combat exchange.
         'var rv=200+360+200;'
-        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"INIT","#B0BEC5",sides,0,rv);'
-        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"INIT","#B0BEC5",sides,200,rv);'
+        'makeDice("player_atk_dice",pRoll,pMod,pHigher,"INIT","#CE93D8",sides,0,rv);'
+        'makeDice("monster_def_dice",mRoll,mMod,!pHigher,"INIT","#CE93D8",sides,200,rv);'
+        # Centered announcement banner (similar style to spell name banner)
+        'var ib=document.createElement("div");'
+        'ib.style.cssText="position:fixed;top:30%;left:50%;'
+        'transform:translate(-50%,-50%) scale(0.7);'
+        'z-index:99997;text-align:center;pointer-events:none;opacity:0;'
+        'font-family:monospace;font-size:18px;font-weight:bold;'
+        'letter-spacing:6px;text-transform:uppercase;'
+        'color:#CE93D8;'
+        'text-shadow:0 0 10px #CE93D8,0 0 3px #000;";'
+        'ib.textContent="INITIATIVE!";'
+        'document.body.appendChild(ib);'
+        'ib.style.transition="opacity 0.25s ease-out,transform 0.25s ease-out";'
+        'setTimeout(function(){ib.style.opacity="1";ib.style.transform="translate(-50%,-50%) scale(1)";},40);'
+        'setTimeout(function(){ib.style.transition="opacity 0.4s ease-in,transform 0.4s ease-in";'
+        'ib.style.opacity="0";ib.style.transform="translate(-50%,-50%) scale(1.05) translateY(-6px)";},700);'
+        'setTimeout(function(){if(ib.parentNode)ib.parentNode.removeChild(ib);},1200);'
+        # Tiny haptic tick on the initiative moment
+        'try{if(navigator.vibrate)navigator.vibrate(40);}catch(e){}'
         '}'
 
         '});'
