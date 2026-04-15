@@ -1,11 +1,23 @@
 name: Build Android APK
 
+# Trigger rules designed so each commit fires AT MOST one build:
+#   - Push to main   -> full build + release publish
+#   - PR to main     -> build for validation (one run per commit on the branch)
+#   - Manual         -> workflow_dispatch from the GitHub UI
+# Previously we also listened to `push: claude/*`, which caused duplicate
+# runs (push + PR) for the same commit during feature-branch development.
 on:
   push:
-    branches: [ main, master, "claude/*" ]
+    branches: [ main, master ]
   pull_request:
     branches: [ main, master ]
-  workflow_dispatch:  # Allows manual trigger from GitHub UI
+  workflow_dispatch:
+
+# Cancel any in-progress run for the same ref when a new commit arrives.
+# Saves CI minutes when we push several times in quick succession.
+concurrency:
+  group: build-android-${{ github.ref }}
+  cancel-in-progress: true
 
 permissions:
   contents: write  # Needed for creating releases
