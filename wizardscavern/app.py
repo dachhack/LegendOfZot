@@ -458,10 +458,18 @@ def generate_sfx_js(monster_dmg, player_dmg, player_blocked, player_heal,
     if not music_enabled:
         return ""
 
-    # Match the timeline from generate_damage_float_js
+    # Match the timeline from generate_damage_float_js.  The damage floats
+    # and panel shakes ALWAYS land at these offsets regardless of whether
+    # dice were rolled — spells, status-effect damage, and channeled
+    # attacks all still show their damage float at MONSTER_DMG_DELAY (1.3s)
+    # and PLAYER_DMG_DELAY (3.2s).  So SFX (including monster_death) must
+    # fire at the same delays so the sound lands WITH the visual impact.
+    # Previously this gated the delay on has_dice_rolls, which caused
+    # monster_death SFX to fire immediately on spell kills while the
+    # damage float waited until 1.3s — death SFX played before the hit.
     init_offset = 1000 if has_init_roll else 0
-    monster_hit_delay = (1300 + init_offset) if has_dice_rolls else 0
-    player_hit_delay = (3200 + init_offset) if has_dice_rolls else 0
+    monster_hit_delay = 1300 + init_offset
+    player_hit_delay = 3200 + init_offset
     spell_delay_ms = 100 if spell_cast else 0
 
     # Categorize effects by timing
