@@ -7,9 +7,9 @@ VERSION = "0.1.2"
 BUILD_NUMBER = 80
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "MUSIC CONTINUITY! Tracks step position by elapsed time = feels uncut",
-    "Intro music plays through char creation, explore through inventory",
-    "Combat music plays the full fight, not just the first round",
+    "PERSISTENT MUSIC! Audio lives in a hidden WebView that never reloads",
+    "TRUE continuous playback — no gaps when you click or open menus",
+    "Mood switches via evaluate_javascript() to the persistent audio engine",
     "SFX syncs with panel shakes! Hits land with damage numbers",
     "CHIPTUNE SFX! All effects use NES-style square/noise synthesis",
     "CHIPTUNE MUSIC! 4-channel NES-style sequencer, 8 bars per song",
