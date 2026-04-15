@@ -2076,6 +2076,19 @@ class WizardsCavernApp(toga.App):
         except Exception:
             pass
 
+        # iOS WKWebView config: allow audio playback without a user gesture.
+        # Without this, the AudioContext stays suspended even though scripts
+        # execute fine.  iOS does NOT show a security warning for this
+        # (unlike Android's setMediaPlaybackRequiresUserGesture).
+        import sys
+        if sys.platform == 'ios':
+            try:
+                cfg = self.web_view._impl.native.configuration
+                cfg.mediaTypesRequiringUserActionForPlayback = 0
+                cfg.allowsInlineMediaPlayback = True
+            except Exception:
+                pass
+
         # Start with splash screen
         gs.prompt_cntl = "splash"
 
@@ -7300,20 +7313,19 @@ class WizardsCavernApp(toga.App):
         music_songs_json = _MUSIC_SONGS_JSON
 
         # Music: bootstrap the persistent _musicEngine in the shell.
-        # On the first render this script tag fires window._musicEngine.setMood
-        # with the initial mood. Subsequent renders use _render_update() which
-        # calls setMood directly via evaluate_javascript and never reloads.
+        # We deliberately fire setMood IMMEDIATELY (no 'load' event wait) —
+        # iOS WKWebView only honours autoplay during page-load script
+        # execution.  Once 'load' fires, the autoplay window has closed
+        # and the AudioContext stays suspended.
         new_mood = get_audio_mood(gs.prompt_cntl)
         gs.current_music_mood = new_mood
         gs.music_restart = False
         enabled_js = 'true' if gs.music_enabled else 'false'
         music_js = (
             "<script>"
-            "window.addEventListener('load', function() {"
-            "  if (window._musicEngine) {"
-            f"    _musicEngine.setMood('{new_mood}', {enabled_js}, 0);"
-            "  }"
-            "});"
+            "if (window._musicEngine) {"
+            f" _musicEngine.setMood('{new_mood}', {enabled_js}, 0);"
+            "}"
             "</script>"
         )
 
