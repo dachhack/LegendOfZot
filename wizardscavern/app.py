@@ -3854,13 +3854,23 @@ class WizardsCavernApp(toga.App):
             'musicDelayMs': music_delay_ms,
         }
 
-        # Fire-and-forget evaluate_javascript. If it ever fails, fall back
-        # to a full set_content reload so the user always sees a render.
+        # Fire-and-forget JS evaluation. We deliberately do NOT fall back
+        # to _render_initial() on failure — that would reload the page
+        # and destroy the AudioContext, which is exactly what this whole
+        # refactor exists to prevent.
+        # On Android, use the native WebView's evaluateJavascript() directly
+        # (bypassing Toga's awaitable wrapper which can be flaky in
+        # fire-and-forget mode).  On other platforms, use Toga's API.
+        import sys
         js = 'if(window.updateGame){updateGame(' + _json.dumps(payload) + ');}'
         try:
-            self.web_view.evaluate_javascript(js)
+            if sys.platform == 'android':
+                self.web_view._impl.native.evaluateJavascript(js, None)
+            else:
+                self.web_view.evaluate_javascript(js)
         except Exception:
-            self._render_initial()
+            # Quiet-skip — the next render will catch up.  Music keeps playing.
+            pass
 
         # Clear one-shot flags (mirrors what wrap_html does on first render)
         gs.monster_defeated_anim = None
