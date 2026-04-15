@@ -96,215 +96,165 @@ def get_audio_mood(prompt_cntl):
     return 'explore'
 
 
-def build_audio_player_html():
-    """Generate the persistent audio player HTML document.
+def generate_inline_music_js(mood, start_step, enabled):
+    """Generate a self-contained <script> tag that plays the given mood.
 
-    This is loaded ONCE into a hidden audio WebView at app startup.
-    The AudioContext lives here forever, so music plays truly
-    continuously — the main game WebView reloads don't affect it.
+    This injects a fresh AudioContext + sequencer into the main game
+    page on every render. The persistent audio WebView approach was
+    blocked by Android's user-gesture policy in 0x0 frames.
 
-    Exposes globals the Python side calls via evaluate_javascript():
-      - window.setMood(mood, enabled)   — switch to a mood's song
-      - window.stopMusic()               — fade out and halt
-      - window.setVolume(v)              — 0..1 master volume
-
-    Channels mirror the NES APU:
-      pulse1 (square) melody, pulse2 (square) harmony,
-      triangle bass, noise (filtered) percussion.
+    start_step lets us resume at the position the music *would* be at
+    if it had been playing continuously, so back-to-back renders feel
+    like one uninterrupted song.
     """
-    return """<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Audio</title>
-</head>
-<body style="margin:0;padding:0;background:#000;">
-<script>
-(function() {
-    // --- Song Data (64 steps, 8 bars, [step, freq, duration_steps]) ---
-    var songs = {
-        explore: {
-            bpm: 110,
-            pulse1: [[0,262,2],[3,311,1],[4,392,3],[8,349,1],[9,311,1],[10,294,2],[12,262,2],[16,233,2],[19,262,1],[20,311,3],[24,294,1],[25,262,1],[26,233,2],[28,262,4],[32,392,2],[34,349,1],[35,311,1],[36,294,2],[38,262,2],[40,311,3],[44,392,1],[45,440,1],[46,392,2],[48,349,2],[50,311,1],[51,294,1],[52,262,3],[56,233,2],[58,262,1],[59,294,1],[60,262,4]],
-            pulse2: [[4,311,2],[12,196,2],[20,262,2],[28,196,4],[36,233,2],[44,311,2],[52,196,2],[60,233,4]],
-            triangle: [[0,131,4],[4,104,4],[8,117,4],[12,98,4],[16,104,4],[20,156,4],[24,117,4],[28,131,4],[32,131,4],[36,156,4],[40,117,4],[44,104,4],[48,98,4],[52,117,4],[56,104,4],[60,131,4]],
-            noise: [[0,8000,1],[2,8000,1],[4,8000,1],[6,8000,1],[8,150,1],[10,8000,1],[12,8000,1],[14,8000,1],[16,8000,1],[18,8000,1],[20,8000,1],[22,8000,1],[24,150,1],[26,8000,1],[28,8000,1],[30,8000,1],[32,8000,1],[34,8000,1],[36,8000,1],[38,8000,1],[40,150,1],[42,8000,1],[44,8000,1],[46,8000,1],[48,8000,1],[50,8000,1],[52,8000,1],[54,8000,1],[56,150,1],[58,3000,1],[60,8000,1],[62,8000,1]]
-        },
-        combat: {
-            bpm: 140,
-            pulse1: [[0,440,1],[1,330,1],[2,440,1],[3,523,2],[6,494,1],[7,440,1],[8,392,2],[10,330,1],[11,294,1],[12,330,2],[14,262,1],[15,294,1],[16,440,1],[17,330,1],[18,440,1],[19,523,2],[22,587,1],[23,523,1],[24,440,2],[26,392,1],[27,330,1],[28,294,2],[30,330,2],[32,523,1],[33,440,1],[34,523,1],[35,587,2],[38,523,1],[39,440,1],[40,392,1],[41,330,1],[42,294,1],[43,330,1],[44,440,2],[46,523,2],[48,587,2],[50,523,1],[51,440,1],[52,392,2],[54,330,1],[55,294,1],[56,262,2],[58,294,1],[59,330,1],[60,440,2],[62,392,2]],
-            pulse2: [[0,220,1],[2,220,1],[4,175,1],[6,175,1],[8,196,1],[10,196,1],[12,165,1],[14,165,1],[16,220,1],[18,220,1],[20,175,1],[22,175,1],[24,196,1],[26,196,1],[28,165,1],[30,131,1],[32,262,1],[34,262,1],[36,220,1],[38,220,1],[40,196,1],[42,196,1],[44,220,1],[46,220,1],[48,262,1],[50,262,1],[52,196,1],[54,196,1],[56,165,1],[58,165,1],[60,220,1],[62,220,1]],
-            triangle: [[0,110,2],[4,87,2],[8,98,2],[12,82,2],[16,110,2],[20,87,2],[24,98,2],[28,131,2],[32,131,2],[36,110,2],[40,98,2],[44,87,2],[48,131,2],[52,110,2],[56,82,2],[60,110,2]],
-            noise: [[0,150,1],[2,3000,1],[4,150,1],[6,3000,1],[8,150,1],[10,3000,1],[12,150,1],[14,3000,1],[16,150,1],[18,3000,1],[20,150,1],[22,3000,1],[24,150,1],[26,3000,1],[28,150,1],[30,3000,1],[32,150,1],[34,3000,1],[36,150,1],[38,3000,1],[40,150,1],[41,150,1],[42,3000,1],[44,150,1],[46,3000,1],[48,150,1],[50,3000,1],[52,150,1],[54,3000,1],[56,150,1],[57,150,1],[58,3000,1],[60,150,1],[62,3000,1]]
-        },
-        victory: {
-            bpm: 130,
-            pulse1: [[0,262,2],[2,330,2],[4,392,2],[6,523,4],[12,494,1],[13,440,1],[14,392,2],[16,330,2],[18,392,2],[20,440,2],[22,523,6],[28,659,2],[30,523,2],[32,659,2],[34,523,2],[36,440,2],[38,392,2],[40,440,2],[42,523,2],[44,659,4],[48,523,2],[50,440,2],[52,392,2],[54,523,2],[56,659,3],[60,784,4]],
-            pulse2: [[0,196,2],[4,262,2],[6,330,4],[16,262,2],[20,330,2],[22,392,6],[32,392,2],[36,330,2],[38,262,4],[48,330,2],[52,262,2],[54,330,6]],
-            triangle: [[0,131,4],[4,175,4],[8,196,4],[12,131,4],[16,131,4],[20,175,4],[24,196,4],[28,131,4],[32,175,4],[36,196,4],[40,131,4],[44,175,4],[48,196,4],[52,131,4],[56,175,4],[60,131,4]],
-            noise: [[0,150,1],[1,8000,1],[2,3000,1],[3,8000,1],[4,150,1],[5,8000,1],[6,3000,1],[7,8000,1],[8,150,1],[10,3000,1],[12,150,1],[14,3000,1],[16,150,1],[17,8000,1],[18,3000,1],[20,150,1],[22,3000,1],[24,150,1],[26,3000,1],[28,150,1],[30,3000,1],[32,150,1],[33,8000,1],[34,3000,1],[35,8000,1],[36,150,1],[38,3000,1],[40,150,1],[41,8000,1],[42,3000,1],[44,150,1],[46,3000,1],[48,150,1],[49,8000,1],[50,3000,1],[52,150,1],[54,3000,1],[56,150,1],[58,3000,1],[60,150,1],[62,3000,1]]
-        },
-        death: {
-            bpm: 70,
-            pulse1: [[0,349,3],[4,311,3],[8,277,3],[12,262,3],[16,233,4],[22,277,2],[24,311,3],[28,233,4],[32,277,3],[36,262,3],[40,233,3],[44,277,3],[48,311,4],[54,277,2],[56,262,3],[60,233,4]],
-            pulse2: [[0,233,8],[8,185,8],[16,156,8],[24,175,8],[32,175,8],[40,156,8],[48,185,8],[56,156,8]],
-            triangle: [[0,117,8],[8,139,8],[16,117,8],[24,87,8],[32,139,8],[40,117,8],[48,139,8],[56,117,8]],
-            noise: [[0,4000,1],[16,4000,1],[32,4000,1],[48,4000,1]]
-        },
-        menu: {
-            bpm: 90,
-            pulse1: [[0,294,2],[2,349,2],[4,440,3],[8,392,1],[9,349,1],[10,294,2],[12,262,2],[14,294,2],[16,349,2],[18,440,2],[20,523,3],[24,440,1],[25,392,1],[26,349,2],[28,294,4],[32,349,2],[34,440,2],[36,523,3],[40,440,1],[41,392,1],[42,349,2],[44,294,2],[46,349,2],[48,440,2],[50,523,2],[52,587,3],[56,523,1],[57,440,1],[58,392,2],[60,349,4]],
-            pulse2: [[4,294,2],[12,220,2],[20,349,2],[28,220,4],[36,349,2],[44,262,2],[52,392,2],[60,262,4]],
-            triangle: [[0,147,4],[4,175,4],[8,196,4],[12,131,4],[16,147,4],[20,175,4],[24,196,4],[28,147,4],[32,175,4],[36,196,4],[40,147,4],[44,131,4],[48,175,4],[52,196,4],[56,147,4],[60,147,4]],
-            noise: [[0,8000,1],[4,8000,1],[8,8000,1],[12,8000,1],[16,8000,1],[20,8000,1],[24,8000,1],[28,8000,1],[32,8000,1],[36,8000,1],[40,8000,1],[44,8000,1],[48,8000,1],[52,8000,1],[56,8000,1],[60,8000,1]]
-        }
-    };
-
-    // Fallback moods -> major mood (so old callers still work)
-    var MOOD_ALIASES = {shop:'explore', mystery:'explore', deep:'explore', garden:'explore'};
-
-    var ctx = null;
-    var master = null;
-    var noiseBuf = null;
-    var currentMood = null;
-    var currentSong = null;
-    var stepSec = 0.3;
-    var currentStep = 0;
-    var tickHandle = null;
-    var enabled = true;
-    var totalSteps = 64;
-    var VOL = { pulse1: 0.08, pulse2: 0.06, triangle: 0.12, noise: 0.07 };
-
-    function initCtx() {
-        if (ctx) return true;
+    if not enabled:
+        return ""
+    return """
+    <script>
+    (function() {
+        var MOOD = '__MOOD__';
+        var START_STEP = __START_STEP__;
         try {
             var AC = window.AudioContext || window.webkitAudioContext;
-            if (!AC) return false;
-            ctx = new AC();
-            master = ctx.createGain();
-            master.gain.value = 0.25;
+            if (!AC) return;
+            var ctx = new AC();
+            // Try to resume on any user click anywhere
+            var resumeOnClick = function() {
+                if (ctx.state === 'suspended') ctx.resume();
+            };
+            window.addEventListener('click', resumeOnClick, {passive:true,once:false});
+            window.addEventListener('touchstart', resumeOnClick, {passive:true,once:false});
+            var master = ctx.createGain();
+            master.gain.value = 0;
             master.connect(ctx.destination);
-            // Shared noise buffer
+            master.gain.linearRampToValueAtTime(0.0, ctx.currentTime + 0.05);
+            master.gain.linearRampToValueAtTime(0.25, ctx.currentTime + 0.4);
+
+            var songs = __SONGS_JSON__;
+            var MOOD_ALIASES = {shop:'explore', mystery:'explore', deep:'explore', garden:'explore'};
+            MOOD = MOOD_ALIASES[MOOD] || MOOD;
+            var song = songs[MOOD] || songs.explore;
+            var stepSec = 60 / (song.bpm * 2);
+            var totalSteps = 64;
+            var currentStep = ((START_STEP % totalSteps) + totalSteps) % totalSteps;
+
             var nLen = ctx.sampleRate;
-            noiseBuf = ctx.createBuffer(1, nLen, ctx.sampleRate);
-            var nd = noiseBuf.getChannelData(0);
+            var nBuf = ctx.createBuffer(1, nLen, ctx.sampleRate);
+            var nd = nBuf.getChannelData(0);
             for (var i = 0; i < nLen; i++) nd[i] = Math.random() * 2 - 1;
-            return true;
-        } catch(e) {
-            return false;
-        }
-    }
+            var VOL = { pulse1: 0.08, pulse2: 0.06, triangle: 0.12, noise: 0.07 };
 
-    function playNote(freq, dur, type, vol) {
-        if (!freq || freq <= 0 || !enabled) return;
-        var osc = ctx.createOscillator();
-        osc.type = type;
-        osc.frequency.value = freq;
-        osc.detune.value = (Math.random() * 16) - 8;
-        var g = ctx.createGain();
-        var now = ctx.currentTime;
-        var len = dur * stepSec;
-        g.gain.setValueAtTime(vol, now);
-        g.gain.setValueAtTime(vol * 0.8, now + len * 0.75);
-        g.gain.linearRampToValueAtTime(0.001, now + len * 0.95);
-        osc.connect(g);
-        g.connect(master);
-        osc.start(now);
-        osc.stop(now + len);
-    }
-
-    function playNoiseHit(filterFreq, dur) {
-        if (!enabled) return;
-        var src = ctx.createBufferSource();
-        src.buffer = noiseBuf;
-        var filt = ctx.createBiquadFilter();
-        if (filterFreq < 500) {
-            filt.type = 'lowpass';
-            filt.frequency.value = filterFreq * (0.9 + Math.random() * 0.2);
-        } else {
-            filt.type = 'bandpass';
-            filt.frequency.value = filterFreq * (0.85 + Math.random() * 0.3);
-            filt.Q.value = 1 + Math.random() * 2;
-        }
-        var g = ctx.createGain();
-        var now = ctx.currentTime;
-        var len = Math.min(dur * stepSec, 0.15);
-        g.gain.setValueAtTime(VOL.noise, now);
-        g.gain.exponentialRampToValueAtTime(0.001, now + len);
-        src.connect(filt);
-        filt.connect(g);
-        g.connect(master);
-        src.start(now);
-        src.stop(now + len + 0.01);
-    }
-
-    function tick() {
-        if (!currentSong || !enabled) return;
-        var channels = ['pulse1', 'pulse2', 'triangle', 'noise'];
-        for (var c = 0; c < channels.length; c++) {
-            var ch = channels[c];
-            var pattern = currentSong[ch];
-            if (!pattern) continue;
-            for (var n = 0; n < pattern.length; n++) {
-                if (pattern[n][0] === currentStep) {
-                    var freq = pattern[n][1];
-                    var dur = pattern[n][2];
-                    if (ch === 'noise') {
-                        playNoiseHit(freq, dur);
-                    } else if (ch === 'triangle') {
-                        playNote(freq, dur, 'triangle', VOL.triangle);
-                    } else {
-                        playNote(freq, dur, 'square', VOL[ch]);
+            function playNote(freq, dur, type, vol) {
+                if (!freq || freq <= 0) return;
+                var osc = ctx.createOscillator();
+                osc.type = type; osc.frequency.value = freq;
+                osc.detune.value = (Math.random() * 16) - 8;
+                var g = ctx.createGain();
+                var now = ctx.currentTime;
+                var len = dur * stepSec;
+                g.gain.setValueAtTime(vol, now);
+                g.gain.setValueAtTime(vol * 0.8, now + len * 0.75);
+                g.gain.linearRampToValueAtTime(0.001, now + len * 0.95);
+                osc.connect(g); g.connect(master);
+                osc.start(now); osc.stop(now + len);
+            }
+            function playNoiseHit(filterFreq, dur) {
+                var src = ctx.createBufferSource();
+                src.buffer = nBuf;
+                var filt = ctx.createBiquadFilter();
+                if (filterFreq < 500) {
+                    filt.type = 'lowpass';
+                    filt.frequency.value = filterFreq * (0.9 + Math.random() * 0.2);
+                } else {
+                    filt.type = 'bandpass';
+                    filt.frequency.value = filterFreq * (0.85 + Math.random() * 0.3);
+                    filt.Q.value = 1 + Math.random() * 2;
+                }
+                var g = ctx.createGain();
+                var now = ctx.currentTime;
+                var len = Math.min(dur * stepSec, 0.15);
+                g.gain.setValueAtTime(VOL.noise, now);
+                g.gain.exponentialRampToValueAtTime(0.001, now + len);
+                src.connect(filt); filt.connect(g); g.connect(master);
+                src.start(now); src.stop(now + len + 0.01);
+            }
+            function tick() {
+                var channels = ['pulse1', 'pulse2', 'triangle', 'noise'];
+                for (var c = 0; c < channels.length; c++) {
+                    var ch = channels[c];
+                    var pattern = song[ch];
+                    if (!pattern) continue;
+                    for (var n = 0; n < pattern.length; n++) {
+                        if (pattern[n][0] === currentStep) {
+                            var freq = pattern[n][1];
+                            var dur = pattern[n][2];
+                            if (ch === 'noise') playNoiseHit(freq, dur);
+                            else if (ch === 'triangle') playNote(freq, dur, 'triangle', VOL.triangle);
+                            else playNote(freq, dur, 'square', VOL[ch]);
+                        }
                     }
                 }
+                currentStep = (currentStep + 1) % totalSteps;
             }
-        }
-        currentStep = (currentStep + 1) % totalSteps;
+            setInterval(tick, stepSec * 1000);
+        } catch(e) {}
+    })();
+    </script>
+    """.replace('__MOOD__', mood).replace(
+        '__START_STEP__', str(int(start_step) % 64)
+    ).replace('__SONGS_JSON__', _MUSIC_SONGS_JSON)
+
+
+# Song data extracted as JSON so generate_inline_music_js doesn't have
+# to re-encode it on every render.
+_MUSIC_SONGS_JSON = json.dumps({
+    'explore': {
+        'bpm': 110,
+        'pulse1': [[0,262,2],[3,311,1],[4,392,3],[8,349,1],[9,311,1],[10,294,2],[12,262,2],[16,233,2],[19,262,1],[20,311,3],[24,294,1],[25,262,1],[26,233,2],[28,262,4],[32,392,2],[34,349,1],[35,311,1],[36,294,2],[38,262,2],[40,311,3],[44,392,1],[45,440,1],[46,392,2],[48,349,2],[50,311,1],[51,294,1],[52,262,3],[56,233,2],[58,262,1],[59,294,1],[60,262,4]],
+        'pulse2': [[4,311,2],[12,196,2],[20,262,2],[28,196,4],[36,233,2],[44,311,2],[52,196,2],[60,233,4]],
+        'triangle': [[0,131,4],[4,104,4],[8,117,4],[12,98,4],[16,104,4],[20,156,4],[24,117,4],[28,131,4],[32,131,4],[36,156,4],[40,117,4],[44,104,4],[48,98,4],[52,117,4],[56,104,4],[60,131,4]],
+        'noise': [[0,8000,1],[2,8000,1],[4,8000,1],[6,8000,1],[8,150,1],[10,8000,1],[12,8000,1],[14,8000,1],[16,8000,1],[18,8000,1],[20,8000,1],[22,8000,1],[24,150,1],[26,8000,1],[28,8000,1],[30,8000,1],[32,8000,1],[34,8000,1],[36,8000,1],[38,8000,1],[40,150,1],[42,8000,1],[44,8000,1],[46,8000,1],[48,8000,1],[50,8000,1],[52,8000,1],[54,8000,1],[56,150,1],[58,3000,1],[60,8000,1],[62,8000,1]]
+    },
+    'combat': {
+        'bpm': 140,
+        'pulse1': [[0,440,1],[1,330,1],[2,440,1],[3,523,2],[6,494,1],[7,440,1],[8,392,2],[10,330,1],[11,294,1],[12,330,2],[14,262,1],[15,294,1],[16,440,1],[17,330,1],[18,440,1],[19,523,2],[22,587,1],[23,523,1],[24,440,2],[26,392,1],[27,330,1],[28,294,2],[30,330,2],[32,523,1],[33,440,1],[34,523,1],[35,587,2],[38,523,1],[39,440,1],[40,392,1],[41,330,1],[42,294,1],[43,330,1],[44,440,2],[46,523,2],[48,587,2],[50,523,1],[51,440,1],[52,392,2],[54,330,1],[55,294,1],[56,262,2],[58,294,1],[59,330,1],[60,440,2],[62,392,2]],
+        'pulse2': [[0,220,1],[2,220,1],[4,175,1],[6,175,1],[8,196,1],[10,196,1],[12,165,1],[14,165,1],[16,220,1],[18,220,1],[20,175,1],[22,175,1],[24,196,1],[26,196,1],[28,165,1],[30,131,1],[32,262,1],[34,262,1],[36,220,1],[38,220,1],[40,196,1],[42,196,1],[44,220,1],[46,220,1],[48,262,1],[50,262,1],[52,196,1],[54,196,1],[56,165,1],[58,165,1],[60,220,1],[62,220,1]],
+        'triangle': [[0,110,2],[4,87,2],[8,98,2],[12,82,2],[16,110,2],[20,87,2],[24,98,2],[28,131,2],[32,131,2],[36,110,2],[40,98,2],[44,87,2],[48,131,2],[52,110,2],[56,82,2],[60,110,2]],
+        'noise': [[0,150,1],[2,3000,1],[4,150,1],[6,3000,1],[8,150,1],[10,3000,1],[12,150,1],[14,3000,1],[16,150,1],[18,3000,1],[20,150,1],[22,3000,1],[24,150,1],[26,3000,1],[28,150,1],[30,3000,1],[32,150,1],[34,3000,1],[36,150,1],[38,3000,1],[40,150,1],[41,150,1],[42,3000,1],[44,150,1],[46,3000,1],[48,150,1],[50,3000,1],[52,150,1],[54,3000,1],[56,150,1],[57,150,1],[58,3000,1],[60,150,1],[62,3000,1]]
+    },
+    'victory': {
+        'bpm': 130,
+        'pulse1': [[0,262,2],[2,330,2],[4,392,2],[6,523,4],[12,494,1],[13,440,1],[14,392,2],[16,330,2],[18,392,2],[20,440,2],[22,523,6],[28,659,2],[30,523,2],[32,659,2],[34,523,2],[36,440,2],[38,392,2],[40,440,2],[42,523,2],[44,659,4],[48,523,2],[50,440,2],[52,392,2],[54,523,2],[56,659,3],[60,784,4]],
+        'pulse2': [[0,196,2],[4,262,2],[6,330,4],[16,262,2],[20,330,2],[22,392,6],[32,392,2],[36,330,2],[38,262,4],[48,330,2],[52,262,2],[54,330,6]],
+        'triangle': [[0,131,4],[4,175,4],[8,196,4],[12,131,4],[16,131,4],[20,175,4],[24,196,4],[28,131,4],[32,175,4],[36,196,4],[40,131,4],[44,175,4],[48,196,4],[52,131,4],[56,175,4],[60,131,4]],
+        'noise': [[0,150,1],[1,8000,1],[2,3000,1],[3,8000,1],[4,150,1],[5,8000,1],[6,3000,1],[7,8000,1],[8,150,1],[10,3000,1],[12,150,1],[14,3000,1],[16,150,1],[17,8000,1],[18,3000,1],[20,150,1],[22,3000,1],[24,150,1],[26,3000,1],[28,150,1],[30,3000,1],[32,150,1],[33,8000,1],[34,3000,1],[35,8000,1],[36,150,1],[38,3000,1],[40,150,1],[41,8000,1],[42,3000,1],[44,150,1],[46,3000,1],[48,150,1],[49,8000,1],[50,3000,1],[52,150,1],[54,3000,1],[56,150,1],[58,3000,1],[60,150,1],[62,3000,1]]
+    },
+    'death': {
+        'bpm': 70,
+        'pulse1': [[0,349,3],[4,311,3],[8,277,3],[12,262,3],[16,233,4],[22,277,2],[24,311,3],[28,233,4],[32,277,3],[36,262,3],[40,233,3],[44,277,3],[48,311,4],[54,277,2],[56,262,3],[60,233,4]],
+        'pulse2': [[0,233,8],[8,185,8],[16,156,8],[24,175,8],[32,175,8],[40,156,8],[48,185,8],[56,156,8]],
+        'triangle': [[0,117,8],[8,139,8],[16,117,8],[24,87,8],[32,139,8],[40,117,8],[48,139,8],[56,117,8]],
+        'noise': [[0,4000,1],[16,4000,1],[32,4000,1],[48,4000,1]]
+    },
+    'menu': {
+        'bpm': 90,
+        'pulse1': [[0,294,2],[2,349,2],[4,440,3],[8,392,1],[9,349,1],[10,294,2],[12,262,2],[14,294,2],[16,349,2],[18,440,2],[20,523,3],[24,440,1],[25,392,1],[26,349,2],[28,294,4],[32,349,2],[34,440,2],[36,523,3],[40,440,1],[41,392,1],[42,349,2],[44,294,2],[46,349,2],[48,440,2],[50,523,2],[52,587,3],[56,523,1],[57,440,1],[58,392,2],[60,349,4]],
+        'pulse2': [[4,294,2],[12,220,2],[20,349,2],[28,220,4],[36,349,2],[44,262,2],[52,392,2],[60,262,4]],
+        'triangle': [[0,147,4],[4,175,4],[8,196,4],[12,131,4],[16,147,4],[20,175,4],[24,196,4],[28,147,4],[32,175,4],[36,196,4],[40,147,4],[44,131,4],[48,175,4],[52,196,4],[56,147,4],[60,147,4]],
+        'noise': [[0,8000,1],[4,8000,1],[8,8000,1],[12,8000,1],[16,8000,1],[20,8000,1],[24,8000,1],[28,8000,1],[32,8000,1],[36,8000,1],[40,8000,1],[44,8000,1],[48,8000,1],[52,8000,1],[56,8000,1],[60,8000,1]]
     }
+})
 
-    // --- Public API ---
-    window.setMood = function(mood, musicEnabled) {
-        if (!initCtx()) return;
-        enabled = (musicEnabled !== false);
-        if (ctx.state === 'suspended') {
-            try { ctx.resume(); } catch(e) {}
-        }
-        mood = MOOD_ALIASES[mood] || mood;
-        if (mood === currentMood) return;   // no change
-        currentMood = mood;
-        currentSong = songs[mood] || songs.explore;
-        stepSec = 60 / (currentSong.bpm * 2);
-        currentStep = 0;
-        if (tickHandle) clearInterval(tickHandle);
-        tickHandle = setInterval(tick, stepSec * 1000);
-    };
 
-    window.stopMusic = function() {
-        if (tickHandle) { clearInterval(tickHandle); tickHandle = null; }
-        currentSong = null;
-        currentMood = null;
-    };
-
-    window.setMusicEnabled = function(on) {
-        enabled = !!on;
-        if (!enabled && master) {
-            master.gain.setTargetAtTime(0, ctx.currentTime, 0.05);
-        } else if (master) {
-            master.gain.setTargetAtTime(0.25, ctx.currentTime, 0.05);
-        }
-    };
-
-    // Try to resume audio context on any user interaction anywhere
-    // (Android requires a gesture somewhere in the app before audio can play)
-    window.addEventListener('touchstart', function() {
-        if (ctx && ctx.state === 'suspended') ctx.resume();
-    }, {passive: true});
-    window.addEventListener('click', function() {
-        if (ctx && ctx.state === 'suspended') ctx.resume();
-    }, {passive: true});
-})();
-</script>
-</body>
+def build_audio_player_html():
+    """DEPRECATED: kept so the audio_view widget still has something to load,
+    but the persistent-audio-WebView approach was blocked by Android's
+    user-gesture policy in 0x0 hidden frames. Music is injected inline
+    in the main page via generate_inline_music_js() instead.
+    """
+    return """<!DOCTYPE html>
+<html><head><meta charset='UTF-8'></head>
+<body style='margin:0;padding:0;background:#000;'></body>
 </html>"""
 
 
@@ -7067,31 +7017,35 @@ class WizardsCavernApp(toga.App):
         # Large text mode: scale all HTML content via CSS zoom
         zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
 
-        # --- Music: controlled via persistent audio WebView ---
-        # The audio WebView holds a living AudioContext that survives
-        # main-view reloads.  We just tell it to switch moods when the
-        # game state changes.
+        # --- Music: inline injection with elapsed-time continuity ---
+        # We tried a persistent hidden audio WebView but Android's
+        # user-gesture policy blocks AudioContext startup in 0x0 frames.
+        # Instead, inject the sequencer into the main page on each render
+        # and resume at the step position the music *would* be at if it
+        # had been playing continuously (tracked via wall-clock time in
+        # game_state).  Combined with a 400ms fade-in, the gap between
+        # renders is mostly imperceptible.
+        import time
         new_mood = get_audio_mood(gs.prompt_cntl)
-        if (new_mood != gs.current_music_mood) or gs.music_restart:
+        mood_changed = (new_mood != gs.current_music_mood)
+        mood_bpms = {'menu': 90, 'explore': 110, 'combat': 140,
+                     'victory': 130, 'death': 70}
+        now = time.time()
+
+        if mood_changed or gs.music_restart:
+            gs.music_step = 0
             gs.current_music_mood = new_mood
             gs.music_restart = False
-            try:
-                enabled_js = 'true' if gs.music_enabled else 'false'
-                self.audio_view.evaluate_javascript(
-                    f'if(window.setMood)setMood("{new_mood}",{enabled_js});'
-                )
-            except Exception:
-                pass
-        else:
-            # Mood unchanged — just sync enabled state in case 'v' was toggled
-            try:
-                enabled_js = 'true' if gs.music_enabled else 'false'
-                self.audio_view.evaluate_javascript(
-                    f'if(window.setMusicEnabled)setMusicEnabled({enabled_js});'
-                )
-            except Exception:
-                pass
-        music_js = ""  # No longer injected into main page
+        elif gs.last_music_render_time > 0:
+            elapsed = now - gs.last_music_render_time
+            step_sec = 60.0 / (mood_bpms.get(new_mood, 110) * 2)
+            steps_elapsed = int(elapsed / step_sec)
+            gs.music_step = (gs.music_step + steps_elapsed) % 64
+
+        music_js = generate_inline_music_js(
+            new_mood, gs.music_step, gs.music_enabled
+        )
+        gs.last_music_render_time = now
 
         result = f"""
         <!DOCTYPE html>
