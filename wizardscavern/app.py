@@ -70,6 +70,23 @@ from .game_systems import *
 from .game_systems import _handle, _trigger_room_interaction, _execute_warp
 from .version import VERSION, BUILD_NUMBER, CHANGELOG
 
+def _extract_script_body(html_str):
+    """Extract concatenated bodies of all <script> tags from a string.
+
+    Used by _render_update() to convert the existing animation/SFX
+    generators (which return '<script>...</script>' strings) into raw
+    JS that can be passed to evaluate_javascript().  innerHTML doesn't
+    auto-execute embedded scripts, so we strip the wrapper and re-execute
+    the body via document.createElement('script').
+    """
+    if not html_str:
+        return ''
+    bodies = re.findall(
+        r'<script[^>]*>(.*?)</script>', html_str, re.DOTALL
+    )
+    return '\n'.join(b for b in bodies if b.strip())
+
+
 def get_audio_mood(prompt_cntl):
     """Map game state to a music mood.
 
@@ -3751,23 +3768,23 @@ class WizardsCavernApp(toga.App):
         threading.Timer(4.5, lambda: self.app.loop.call_soon_threadsafe(_auto_dismiss)).start()
 
     def render(self):
+        """Render the game state to the display.
+
+        First call: full set_content (loads the shell, audio engine, and
+        initial content). Subsequent calls: incremental DOM update via
+        evaluate_javascript('updateGame(...)') so the AudioContext and
+        all persistent JS state survive across renders.
         """
-        Render the game state to the display.
-        
-        For WebView approach: Generate HTML and set it in the WebView
-        For Text approach: Generate plain text and set it in the MultilineTextInput
-        """
-        # Update input field visibility based on mode
         self.set_input_visibility()
-        
-        
-        # Generate HTML using your existing render() function logic
+        if not getattr(self, '_first_render_done', False):
+            self._render_initial()
+        else:
+            self._render_update()
+
+    def _render_initial(self):
+        """First render: full set_content with shell + initial content."""
         html_content = self.generate_html()
-        
-        # Update WebView with log lines
         full_html = self.wrap_html(html_content, gs.log_lines)
-        # Workaround for Toga Android bug #2242: set_content uses loadData()
-        # which breaks on '#' chars in CSS. Use loadDataWithBaseURL() instead.
         import sys
         if sys.platform == 'android':
             self.web_view._impl.native.loadDataWithBaseURL(
@@ -3775,6 +3792,82 @@ class WizardsCavernApp(toga.App):
             )
         else:
             self.web_view.set_content("", full_html)
+        self._first_render_done = True
+
+    def _render_update(self):
+        """Subsequent renders: incremental update via evaluate_javascript.
+
+        Builds a JSON payload (content HTML, log lines, animation/SFX
+        scripts, music mood) and hands it to window.updateGame() in the
+        already-loaded shell. The audio engine and other persistent state
+        are untouched.
+        """
+        import json as _json
+        html_content = self.generate_html()
+
+        # Compute music state
+        new_mood = get_audio_mood(gs.prompt_cntl)
+        mood_changed = (new_mood != gs.current_music_mood)
+        has_init = bool(gs.last_dice_rolls and
+                        any(r[3] == 'INIT' for r in gs.last_dice_rolls))
+        init_offset = 1000 if has_init else 0
+        music_delay_ms = 0
+        if mood_changed and gs.last_dice_rolls:
+            if new_mood == 'victory':
+                music_delay_ms = 1800 + init_offset
+            elif new_mood == 'death':
+                music_delay_ms = 3500 + init_offset
+        if mood_changed or gs.music_restart:
+            gs.current_music_mood = new_mood
+            gs.music_restart = False
+
+        # Extract animation / SFX script bodies (raw JS, no <script> wrapper)
+        anim_scripts = []
+        for raw in (
+            generate_spell_cast_js(gs.last_spell_cast),
+            generate_spell_particles_js(gs.last_spell_cast),
+            generate_dice_roll_js(gs.last_dice_rolls),
+            generate_concentration_check_js(gs.last_concentration_roll),
+            generate_monster_defeat_js(gs.monster_defeated_anim),
+            generate_sfx_js(
+                gs.last_monster_damage, gs.last_player_damage,
+                gs.last_player_blocked, gs.last_player_heal,
+                gs.last_monster_damage_badge, gs.last_player_damage_badge,
+                gs.last_player_status, gs.last_monster_status,
+                gs.last_spell_cast, gs.last_concentration_roll,
+                gs.monster_defeated_anim, gs.sfx_event,
+                gs.music_enabled, bool(gs.last_dice_rolls), has_init,
+            ),
+        ):
+            body = _extract_script_body(raw)
+            if body:
+                anim_scripts.append(body)
+
+        payload = {
+            'contentHtml': html_content,
+            'logLines': list(gs.log_lines),
+            'hasDiceRolls': bool(gs.last_dice_rolls),
+            'hasInitRoll': has_init,
+            'scripts': anim_scripts,
+            'mood': new_mood if mood_changed else None,
+            'musicEnabled': bool(gs.music_enabled),
+            'musicDelayMs': music_delay_ms,
+        }
+
+        # Fire-and-forget evaluate_javascript. If it ever fails, fall back
+        # to a full set_content reload so the user always sees a render.
+        js = 'if(window.updateGame){updateGame(' + _json.dumps(payload) + ');}'
+        try:
+            self.web_view.evaluate_javascript(js)
+        except Exception:
+            self._render_initial()
+
+        # Clear one-shot flags (mirrors what wrap_html does on first render)
+        gs.monster_defeated_anim = None
+        gs.last_dice_rolls = []
+        gs.last_spell_cast = None
+        gs.last_concentration_roll = None
+        gs.sfx_event = None
     
     def generate_html(self):
         """
@@ -7193,82 +7286,26 @@ class WizardsCavernApp(toga.App):
         # Large text mode: scale all HTML content via CSS zoom
         zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
 
-        # --- Music orchestration ---
-        # Preferred path: persistent hidden audio WebView (audio_view) with
-        # platform-level gesture-policy bypass.  AudioContext lives forever,
-        # so music is truly continuous — only mood transitions cost anything.
-        #
-        # Fallback path: inline injection into main page, with elapsed-time
-        # step tracking.  Used when the persistent view isn't available
-        # (desktop, or platforms where the gesture bypass didn't apply).
-        import time
+        # Embed song data for the persistent music engine in the shell
+        music_songs_json = _MUSIC_SONGS_JSON
+
+        # Music: bootstrap the persistent _musicEngine in the shell.
+        # On the first render this script tag fires window._musicEngine.setMood
+        # with the initial mood. Subsequent renders use _render_update() which
+        # calls setMood directly via evaluate_javascript and never reloads.
         new_mood = get_audio_mood(gs.prompt_cntl)
-        mood_changed = (new_mood != gs.current_music_mood)
-        mood_bpms = {'menu': 90, 'explore': 110, 'combat': 140,
-                     'victory': 130, 'death': 70}
-        now = time.time()
-
-        # Delay victory/death music so the new theme begins after the
-        # corresponding animation finishes:
-        #   Victory: monster killed at MONSTER_DMG_DELAY (~1.3s, when the
-        #            monster panel shakes) + ~0.5s for the death SFX to
-        #            decay = ~1.8s before victory theme starts.
-        #   Death:   player killed at PLAYER_DMG_DELAY (~3.2s, when the
-        #            player panel shakes) + ~0.3s settle = ~3.5s.
-        # Add 1000ms when initiative dice are present (timeline shifted).
-        has_init = bool(gs.last_dice_rolls and
-                        any(r[3] == 'INIT' for r in gs.last_dice_rolls))
-        init_offset = 1000 if has_init else 0
-        music_start_delay_ms = 0
-        if mood_changed and gs.last_dice_rolls:
-            if new_mood == 'victory':
-                music_start_delay_ms = 1800 + init_offset
-            elif new_mood == 'death':
-                music_start_delay_ms = 3500 + init_offset
-
-        if getattr(self, '_audio_view_active', False):
-            # PERSISTENT: only fire setMood on actual transitions, no reset
-            # cost on routine renders.  No inline music in main page.
-            if mood_changed or gs.music_restart:
-                gs.current_music_mood = new_mood
-                gs.music_restart = False
-                enabled_js = 'true' if gs.music_enabled else 'false'
-                mood_js = (
-                    f'if(window.setMood){{setTimeout(function(){{setMood("{new_mood}",{enabled_js});}},{music_start_delay_ms});}}'
-                    if music_start_delay_ms > 0
-                    else f'if(window.setMood)setMood("{new_mood}",{enabled_js});'
-                )
-                try:
-                    self.audio_view.evaluate_javascript(mood_js)
-                except Exception:
-                    pass
-            else:
-                # Sync mute state in case 'v' was toggled
-                try:
-                    enabled_js = 'true' if gs.music_enabled else 'false'
-                    self.audio_view.evaluate_javascript(
-                        f'if(window.setMusicEnabled)setMusicEnabled({enabled_js});'
-                    )
-                except Exception:
-                    pass
-            music_js = ""  # No inline music — persistent view handles it
-        else:
-            # FALLBACK: inline injection with elapsed-time step tracking
-            if mood_changed or gs.music_restart:
-                gs.music_step = 0
-                gs.current_music_mood = new_mood
-                gs.music_restart = False
-            elif gs.last_music_render_time > 0:
-                elapsed = now - gs.last_music_render_time
-                step_sec = 60.0 / (mood_bpms.get(new_mood, 110) * 2)
-                steps_elapsed = int(elapsed / step_sec)
-                gs.music_step = (gs.music_step + steps_elapsed) % 64
-
-            music_js = generate_inline_music_js(
-                new_mood, gs.music_step, gs.music_enabled,
-                start_delay_ms=music_start_delay_ms,
-            )
-        gs.last_music_render_time = now
+        gs.current_music_mood = new_mood
+        gs.music_restart = False
+        enabled_js = 'true' if gs.music_enabled else 'false'
+        music_js = (
+            "<script>"
+            "window.addEventListener('load', function() {"
+            "  if (window._musicEngine) {"
+            f"    _musicEngine.setMood('{new_mood}', {enabled_js}, 0);"
+            "  }"
+            "});"
+            "</script>"
+        )
 
         result = f"""
         <!DOCTYPE html>
@@ -7528,6 +7565,209 @@ class WizardsCavernApp(toga.App):
                                 setTimeout(fn, delay);
                             }})(s.fn, t);
                         }}
+                    }}
+                }};
+
+                // === Persistent music engine ===
+                // Lives in the shell so the AudioContext survives all
+                // _render_update() calls (which use evaluate_javascript
+                // and never reload the page).
+                window._musicEngine = (function() {{
+                    var SONGS = {music_songs_json};
+                    var ALIASES = {{shop:'explore', mystery:'explore', deep:'explore', garden:'explore'}};
+                    var ctx = null, master = null, noiseBuf = null;
+                    var currentMood = null, currentSong = null;
+                    var stepSec = 0.3, currentStep = 0, tickHandle = null;
+                    var enabled = true, totalSteps = 64;
+                    var VOL = {{ pulse1: 0.08, pulse2: 0.06, triangle: 0.12, noise: 0.07 }};
+
+                    function ensureCtx() {{
+                        if (ctx) return true;
+                        try {{
+                            var AC = window.AudioContext || window.webkitAudioContext;
+                            if (!AC) return false;
+                            ctx = new AC();
+                            master = ctx.createGain();
+                            master.gain.value = 0.25;
+                            master.connect(ctx.destination);
+                            var nLen = ctx.sampleRate;
+                            noiseBuf = ctx.createBuffer(1, nLen, ctx.sampleRate);
+                            var nd = noiseBuf.getChannelData(0);
+                            for (var i = 0; i < nLen; i++) nd[i] = Math.random() * 2 - 1;
+                            return true;
+                        }} catch(e) {{ return false; }}
+                    }}
+                    function playNote(freq, dur, type, vol) {{
+                        if (!freq || freq <= 0 || !enabled) return;
+                        try {{
+                            var osc = ctx.createOscillator();
+                            osc.type = type; osc.frequency.value = freq;
+                            osc.detune.value = (Math.random() * 16) - 8;
+                            var g = ctx.createGain();
+                            var now = ctx.currentTime;
+                            var len = dur * stepSec;
+                            g.gain.setValueAtTime(vol, now);
+                            g.gain.setValueAtTime(vol * 0.8, now + len * 0.75);
+                            g.gain.linearRampToValueAtTime(0.001, now + len * 0.95);
+                            osc.connect(g); g.connect(master);
+                            osc.start(now); osc.stop(now + len);
+                        }} catch(e) {{}}
+                    }}
+                    function playNoiseHit(filterFreq, dur) {{
+                        if (!enabled) return;
+                        try {{
+                            var src = ctx.createBufferSource();
+                            src.buffer = noiseBuf;
+                            var filt = ctx.createBiquadFilter();
+                            if (filterFreq < 500) {{
+                                filt.type = 'lowpass';
+                                filt.frequency.value = filterFreq * (0.9 + Math.random() * 0.2);
+                            }} else {{
+                                filt.type = 'bandpass';
+                                filt.frequency.value = filterFreq * (0.85 + Math.random() * 0.3);
+                                filt.Q.value = 1 + Math.random() * 2;
+                            }}
+                            var g = ctx.createGain();
+                            var now = ctx.currentTime;
+                            var len = Math.min(dur * stepSec, 0.15);
+                            g.gain.setValueAtTime(VOL.noise, now);
+                            g.gain.exponentialRampToValueAtTime(0.001, now + len);
+                            src.connect(filt); filt.connect(g); g.connect(master);
+                            src.start(now); src.stop(now + len + 0.01);
+                        }} catch(e) {{}}
+                    }}
+                    function tick() {{
+                        if (!currentSong || !enabled) return;
+                        var channels = ['pulse1', 'pulse2', 'triangle', 'noise'];
+                        for (var c = 0; c < channels.length; c++) {{
+                            var ch = channels[c];
+                            var pattern = currentSong[ch];
+                            if (!pattern) continue;
+                            for (var n = 0; n < pattern.length; n++) {{
+                                if (pattern[n][0] === currentStep) {{
+                                    var f = pattern[n][1], d = pattern[n][2];
+                                    if (ch === 'noise') playNoiseHit(f, d);
+                                    else if (ch === 'triangle') playNote(f, d, 'triangle', VOL.triangle);
+                                    else playNote(f, d, 'square', VOL[ch]);
+                                }}
+                            }}
+                        }}
+                        currentStep = (currentStep + 1) % totalSteps;
+                    }}
+                    return {{
+                        setMood: function(mood, isEnabled, delayMs) {{
+                            if (!ensureCtx()) return;
+                            enabled = (isEnabled !== false);
+                            if (ctx.state === 'suspended') {{
+                                try {{ ctx.resume(); }} catch(e) {{}}
+                            }}
+                            mood = ALIASES[mood] || mood;
+                            if (mood === currentMood) return;
+                            var swap = function() {{
+                                currentMood = mood;
+                                currentSong = SONGS[mood] || SONGS.explore;
+                                stepSec = 60 / (currentSong.bpm * 2);
+                                currentStep = 0;
+                                if (tickHandle) clearInterval(tickHandle);
+                                tickHandle = setInterval(tick, stepSec * 1000);
+                            }};
+                            if (delayMs > 0) {{
+                                if (tickHandle) {{ clearInterval(tickHandle); tickHandle = null; }}
+                                currentSong = null;
+                                setTimeout(swap, delayMs);
+                            }} else {{
+                                swap();
+                            }}
+                        }},
+                        setEnabled: function(on) {{
+                            enabled = !!on;
+                            if (master && ctx) {{
+                                try {{
+                                    master.gain.setTargetAtTime(on ? 0.25 : 0, ctx.currentTime, 0.05);
+                                }} catch(e) {{}}
+                            }}
+                        }},
+                        ctxState: function() {{ return ctx ? ctx.state : 'none'; }},
+                        resume: function() {{
+                            if (!ensureCtx()) return;
+                            if (ctx.state === 'suspended') {{
+                                try {{ ctx.resume(); }} catch(e) {{}}
+                            }}
+                            // If we have a queued mood with no song playing yet,
+                            // re-trigger setMood now that we've got a gesture.
+                            if (currentMood && !currentSong) {{
+                                var m = currentMood;
+                                currentMood = null;
+                                this.setMood(m, enabled, 0);
+                            }}
+                        }}
+                    }};
+                }})();
+
+                // Resume music context on first user interaction (gesture
+                // policy compliance — works because the audio engine and
+                // game UI now share the same WebView frame).
+                document.addEventListener('click', function() {{
+                    try {{ if (window._musicEngine) window._musicEngine.resume(); }} catch(e) {{}}
+                }}, {{passive:true,capture:true}});
+                document.addEventListener('touchstart', function() {{
+                    try {{ if (window._musicEngine) window._musicEngine.resume(); }} catch(e) {{}}
+                }}, {{passive:true,capture:true}});
+
+                // === updateGame: incremental DOM update used by render_update ===
+                // Replaces content-area innerHTML, re-executes inline scripts
+                // (innerHTML doesn't auto-run them), updates log, runs the
+                // animation/SFX scripts, and switches music mood.
+                window.updateGame = function(p) {{
+                    var ca = document.getElementById('content-area');
+                    if (ca && p.contentHtml !== undefined) {{
+                        ca.innerHTML = p.contentHtml;
+                        // Re-execute inline <script> tags from new content
+                        var inner = ca.querySelectorAll('script');
+                        for (var i = 0; i < inner.length; i++) {{
+                            try {{
+                                var ns = document.createElement('script');
+                                ns.textContent = inner[i].textContent;
+                                document.body.appendChild(ns);
+                                document.body.removeChild(ns);
+                            }} catch(e) {{}}
+                        }}
+                    }}
+                    // Update log
+                    if (p.logLines !== undefined) {{
+                        window.logLines = p.logLines;
+                        window.hasDiceRolls = !!p.hasDiceRolls;
+                        window.hasInitRoll = !!p.hasInitRoll;
+                        var ld = document.getElementById('game-log');
+                        if (window.hasDiceRolls && ld) {{
+                            ld.style.opacity = '0';
+                            var delay = window.hasInitRoll ? 1000 : 3300;
+                            setTimeout(function() {{
+                                if (typeof updateLog === 'function') updateLog();
+                                ld.style.transition = 'opacity 0.3s';
+                                ld.style.opacity = '1';
+                            }}, delay);
+                        }} else {{
+                            if (typeof updateLog === 'function') updateLog();
+                            if (ld) ld.style.opacity = '1';
+                        }}
+                    }}
+                    // Run animation / SFX scripts from payload
+                    if (p.scripts) {{
+                        for (var j = 0; j < p.scripts.length; j++) {{
+                            try {{
+                                var s = document.createElement('script');
+                                s.textContent = p.scripts[j];
+                                document.body.appendChild(s);
+                                document.body.removeChild(s);
+                            }} catch(e) {{}}
+                        }}
+                    }}
+                    // Music mood
+                    if (p.mood && window._musicEngine) {{
+                        window._musicEngine.setMood(p.mood, p.musicEnabled !== false, p.musicDelayMs || 0);
+                    }} else if (window._musicEngine && p.musicEnabled !== undefined) {{
+                        window._musicEngine.setEnabled(!!p.musicEnabled);
                     }}
                 }};
             </script>
