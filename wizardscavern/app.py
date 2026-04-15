@@ -96,16 +96,19 @@ def get_audio_mood(prompt_cntl):
     return 'explore'
 
 
-def generate_inline_music_js(mood, start_step, enabled):
+def generate_inline_music_js(mood, start_step, enabled, start_delay_ms=0):
     """Generate a self-contained <script> tag that plays the given mood.
 
     This injects a fresh AudioContext + sequencer into the main game
-    page on every render. The persistent audio WebView approach was
-    blocked by Android's user-gesture policy in 0x0 frames.
+    page on every render.
 
     start_step lets us resume at the position the music *would* be at
     if it had been playing continuously, so back-to-back renders feel
     like one uninterrupted song.
+
+    start_delay_ms delays the entire music start — used when transitioning
+    to victory/death mood so the kill/damage animation finishes before
+    the new theme begins.
     """
     if not enabled:
         return ""
@@ -114,6 +117,8 @@ def generate_inline_music_js(mood, start_step, enabled):
     (function() {
         var MOOD = '__MOOD__';
         var START_STEP = __START_STEP__;
+        var START_DELAY_MS = __START_DELAY_MS__;
+        function startMusicEngine() {
         try {
             var AC = window.AudioContext || window.webkitAudioContext;
             if (!AC) return;
@@ -198,10 +203,18 @@ def generate_inline_music_js(mood, start_step, enabled):
             }
             setInterval(tick, stepSec * 1000);
         } catch(e) {}
+        }  // end startMusicEngine
+        if (START_DELAY_MS > 0) {
+            setTimeout(startMusicEngine, START_DELAY_MS);
+        } else {
+            startMusicEngine();
+        }
     })();
     </script>
     """.replace('__MOOD__', mood).replace(
         '__START_STEP__', str(int(start_step) % 64)
+    ).replace(
+        '__START_DELAY_MS__', str(int(start_delay_ms))
     ).replace('__SONGS_JSON__', _MUSIC_SONGS_JSON)
 
 
@@ -247,14 +260,169 @@ _MUSIC_SONGS_JSON = json.dumps({
 
 
 def build_audio_player_html():
-    """DEPRECATED: kept so the audio_view widget still has something to load,
-    but the persistent-audio-WebView approach was blocked by Android's
-    user-gesture policy in 0x0 hidden frames. Music is injected inline
-    in the main page via generate_inline_music_js() instead.
+    """Persistent audio player HTML — loaded ONCE into the hidden audio
+    WebView so the AudioContext lives forever across game renders.
+
+    Exposes:
+      - window.setMood(mood, enabled) — switch active song
+      - window.setMusicEnabled(on)     — mute/unmute on the fly
+      - window.audioReady              — true once initialized
+
+    Gesture policy is bypassed at the platform level (see startup() —
+    setMediaPlaybackRequiresUserGesture(false) on Android,
+    mediaTypesRequiringUserActionForPlayback = 0 on iOS).
     """
     return """<!DOCTYPE html>
-<html><head><meta charset='UTF-8'></head>
-<body style='margin:0;padding:0;background:#000;'></body>
+<html>
+<head><meta charset='UTF-8'></head>
+<body style='margin:0;padding:0;background:#000;'>
+<script>
+(function() {
+    var SONGS = """ + _MUSIC_SONGS_JSON + """;
+    var MOOD_ALIASES = {shop:'explore', mystery:'explore', deep:'explore', garden:'explore'};
+    var ctx = null, master = null, noiseBuf = null;
+    var currentMood = null, currentSong = null;
+    var stepSec = 0.3, currentStep = 0, tickHandle = null;
+    var enabled = true;
+    var totalSteps = 64;
+    var VOL = { pulse1: 0.08, pulse2: 0.06, triangle: 0.12, noise: 0.07 };
+    var pendingMood = null, pendingEnabled = true;
+
+    function initCtx() {
+        if (ctx) return true;
+        try {
+            var AC = window.AudioContext || window.webkitAudioContext;
+            if (!AC) return false;
+            ctx = new AC();
+            master = ctx.createGain();
+            master.gain.value = 0.25;
+            master.connect(ctx.destination);
+            var nLen = ctx.sampleRate;
+            noiseBuf = ctx.createBuffer(1, nLen, ctx.sampleRate);
+            var nd = noiseBuf.getChannelData(0);
+            for (var i = 0; i < nLen; i++) nd[i] = Math.random() * 2 - 1;
+            return true;
+        } catch(e) { return false; }
+    }
+
+    function playNote(freq, dur, type, vol) {
+        if (!freq || freq <= 0 || !enabled) return;
+        try {
+            var osc = ctx.createOscillator();
+            osc.type = type; osc.frequency.value = freq;
+            osc.detune.value = (Math.random() * 16) - 8;
+            var g = ctx.createGain();
+            var now = ctx.currentTime;
+            var len = dur * stepSec;
+            g.gain.setValueAtTime(vol, now);
+            g.gain.setValueAtTime(vol * 0.8, now + len * 0.75);
+            g.gain.linearRampToValueAtTime(0.001, now + len * 0.95);
+            osc.connect(g); g.connect(master);
+            osc.start(now); osc.stop(now + len);
+        } catch(e) {}
+    }
+
+    function playNoiseHit(filterFreq, dur) {
+        if (!enabled) return;
+        try {
+            var src = ctx.createBufferSource();
+            src.buffer = noiseBuf;
+            var filt = ctx.createBiquadFilter();
+            if (filterFreq < 500) {
+                filt.type = 'lowpass';
+                filt.frequency.value = filterFreq * (0.9 + Math.random() * 0.2);
+            } else {
+                filt.type = 'bandpass';
+                filt.frequency.value = filterFreq * (0.85 + Math.random() * 0.3);
+                filt.Q.value = 1 + Math.random() * 2;
+            }
+            var g = ctx.createGain();
+            var now = ctx.currentTime;
+            var len = Math.min(dur * stepSec, 0.15);
+            g.gain.setValueAtTime(VOL.noise, now);
+            g.gain.exponentialRampToValueAtTime(0.001, now + len);
+            src.connect(filt); filt.connect(g); g.connect(master);
+            src.start(now); src.stop(now + len + 0.01);
+        } catch(e) {}
+    }
+
+    function tick() {
+        if (!currentSong || !enabled) return;
+        var channels = ['pulse1', 'pulse2', 'triangle', 'noise'];
+        for (var c = 0; c < channels.length; c++) {
+            var ch = channels[c];
+            var pattern = currentSong[ch];
+            if (!pattern) continue;
+            for (var n = 0; n < pattern.length; n++) {
+                if (pattern[n][0] === currentStep) {
+                    var freq = pattern[n][1];
+                    var dur = pattern[n][2];
+                    if (ch === 'noise') playNoiseHit(freq, dur);
+                    else if (ch === 'triangle') playNote(freq, dur, 'triangle', VOL.triangle);
+                    else playNote(freq, dur, 'square', VOL[ch]);
+                }
+            }
+        }
+        currentStep = (currentStep + 1) % totalSteps;
+    }
+
+    window.setMood = function(mood, musicEnabled) {
+        if (!initCtx()) {
+            // Queue for retry
+            pendingMood = mood;
+            pendingEnabled = musicEnabled;
+            return;
+        }
+        enabled = (musicEnabled !== false);
+        if (ctx.state === 'suspended') {
+            try { ctx.resume(); } catch(e) {}
+        }
+        mood = MOOD_ALIASES[mood] || mood;
+        if (mood === currentMood) return;
+        currentMood = mood;
+        currentSong = SONGS[mood] || SONGS.explore;
+        stepSec = 60 / (currentSong.bpm * 2);
+        currentStep = 0;
+        if (tickHandle) clearInterval(tickHandle);
+        tickHandle = setInterval(tick, stepSec * 1000);
+    };
+
+    window.setMusicEnabled = function(on) {
+        enabled = !!on;
+        if (master) {
+            try {
+                var target = enabled ? 0.25 : 0;
+                master.gain.setTargetAtTime(target, ctx.currentTime, 0.05);
+            } catch(e) {}
+        }
+    };
+
+    window.stopMusic = function() {
+        if (tickHandle) { clearInterval(tickHandle); tickHandle = null; }
+        currentSong = null;
+        currentMood = null;
+    };
+
+    // Resume audio on any gesture this frame ever receives
+    function tryResume() {
+        if (ctx && ctx.state === 'suspended') {
+            try { ctx.resume(); } catch(e) {}
+        }
+        // Also process pending mood request if any
+        if (pendingMood) {
+            var m = pendingMood, e = pendingEnabled;
+            pendingMood = null;
+            window.setMood(m, e);
+        }
+    }
+    window.addEventListener('click', tryResume, {passive:true});
+    window.addEventListener('touchstart', tryResume, {passive:true});
+
+    // Mark ready so Python can detect that the page loaded
+    window.audioReady = true;
+})();
+</script>
+</body>
 </html>"""
 
 
@@ -1875,13 +2043,30 @@ class WizardsCavernApp(toga.App):
         # Show window
         self.main_window.show()
 
+        # Bypass Android/iOS user-gesture policy on the audio WebView so it
+        # can play music without ever receiving a click.  Without this, a
+        # 0x0 hidden WebView's AudioContext stays suspended forever.
+        import sys
+        self._audio_view_active = False
+        try:
+            if sys.platform == 'android':
+                settings = self.audio_view._impl.native.getSettings()
+                settings.setMediaPlaybackRequiresUserGesture(False)
+            elif sys.platform == 'ios':
+                # WKWebView: 0 = WKAudiovisualMediaTypeNone (no user action required)
+                config = self.audio_view._impl.native.configuration
+                config.mediaTypesRequiringUserActionForPlayback = 0
+        except Exception:
+            pass
+
         # Load persistent audio player into the hidden audio WebView.
         # This is done ONCE at startup — the AudioContext then persists
         # across every game render for truly continuous music.
         try:
             self.audio_view.set_content("", build_audio_player_html())
+            self._audio_view_active = True
         except Exception:
-            pass
+            self._audio_view_active = False
 
         # Start with splash screen
         gs.prompt_cntl = "splash"
@@ -7017,14 +7202,14 @@ class WizardsCavernApp(toga.App):
         # Large text mode: scale all HTML content via CSS zoom
         zoom_css = "zoom: 1.3;" if gs.large_text_mode else ""
 
-        # --- Music: inline injection with elapsed-time continuity ---
-        # We tried a persistent hidden audio WebView but Android's
-        # user-gesture policy blocks AudioContext startup in 0x0 frames.
-        # Instead, inject the sequencer into the main page on each render
-        # and resume at the step position the music *would* be at if it
-        # had been playing continuously (tracked via wall-clock time in
-        # game_state).  Combined with a 400ms fade-in, the gap between
-        # renders is mostly imperceptible.
+        # --- Music orchestration ---
+        # Preferred path: persistent hidden audio WebView (audio_view) with
+        # platform-level gesture-policy bypass.  AudioContext lives forever,
+        # so music is truly continuous — only mood transitions cost anything.
+        #
+        # Fallback path: inline injection into main page, with elapsed-time
+        # step tracking.  Used when the persistent view isn't available
+        # (desktop, or platforms where the gesture bypass didn't apply).
         import time
         new_mood = get_audio_mood(gs.prompt_cntl)
         mood_changed = (new_mood != gs.current_music_mood)
@@ -7032,19 +7217,56 @@ class WizardsCavernApp(toga.App):
                      'victory': 130, 'death': 70}
         now = time.time()
 
-        if mood_changed or gs.music_restart:
-            gs.music_step = 0
-            gs.current_music_mood = new_mood
-            gs.music_restart = False
-        elif gs.last_music_render_time > 0:
-            elapsed = now - gs.last_music_render_time
-            step_sec = 60.0 / (mood_bpms.get(new_mood, 110) * 2)
-            steps_elapsed = int(elapsed / step_sec)
-            gs.music_step = (gs.music_step + steps_elapsed) % 64
+        # Delay victory/death music until kill/damage animation finishes.
+        # Combat sequence is ~3.4s with dice (1.16s ATK reveal + 3.06s DEF
+        # reveal + brief settle).  Without dice, no delay needed.
+        music_start_delay_ms = 0
+        if mood_changed and new_mood in ('victory', 'death') and gs.last_dice_rolls:
+            has_init = any(r[3] == 'INIT' for r in gs.last_dice_rolls)
+            music_start_delay_ms = 3400 + (1000 if has_init else 0)
 
-        music_js = generate_inline_music_js(
-            new_mood, gs.music_step, gs.music_enabled
-        )
+        if getattr(self, '_audio_view_active', False):
+            # PERSISTENT: only fire setMood on actual transitions, no reset
+            # cost on routine renders.  No inline music in main page.
+            if mood_changed or gs.music_restart:
+                gs.current_music_mood = new_mood
+                gs.music_restart = False
+                enabled_js = 'true' if gs.music_enabled else 'false'
+                mood_js = (
+                    f'if(window.setMood){{setTimeout(function(){{setMood("{new_mood}",{enabled_js});}},{music_start_delay_ms});}}'
+                    if music_start_delay_ms > 0
+                    else f'if(window.setMood)setMood("{new_mood}",{enabled_js});'
+                )
+                try:
+                    self.audio_view.evaluate_javascript(mood_js)
+                except Exception:
+                    pass
+            else:
+                # Sync mute state in case 'v' was toggled
+                try:
+                    enabled_js = 'true' if gs.music_enabled else 'false'
+                    self.audio_view.evaluate_javascript(
+                        f'if(window.setMusicEnabled)setMusicEnabled({enabled_js});'
+                    )
+                except Exception:
+                    pass
+            music_js = ""  # No inline music — persistent view handles it
+        else:
+            # FALLBACK: inline injection with elapsed-time step tracking
+            if mood_changed or gs.music_restart:
+                gs.music_step = 0
+                gs.current_music_mood = new_mood
+                gs.music_restart = False
+            elif gs.last_music_render_time > 0:
+                elapsed = now - gs.last_music_render_time
+                step_sec = 60.0 / (mood_bpms.get(new_mood, 110) * 2)
+                steps_elapsed = int(elapsed / step_sec)
+                gs.music_step = (gs.music_step + steps_elapsed) % 64
+
+            music_js = generate_inline_music_js(
+                new_mood, gs.music_step, gs.music_enabled,
+                start_delay_ms=music_start_delay_ms,
+            )
         gs.last_music_render_time = now
 
         result = f"""
