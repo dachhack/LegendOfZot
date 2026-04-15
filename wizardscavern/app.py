@@ -3891,6 +3891,15 @@ class WizardsCavernApp(toga.App):
         gs.last_spell_cast = None
         gs.last_concentration_roll = None
         gs.sfx_event = None
+        # Clear combat SFX flags so they don't re-fire on the next render
+        gs.last_monster_damage = 0
+        gs.last_player_damage = 0
+        gs.last_player_blocked = False
+        gs.last_player_heal = 0
+        gs.last_monster_damage_badge = None
+        gs.last_player_damage_badge = None
+        gs.last_player_status = None
+        gs.last_monster_status = None
     
     def generate_html(self):
         """
@@ -7850,6 +7859,18 @@ class WizardsCavernApp(toga.App):
         gs.last_spell_cast = None
         gs.last_concentration_roll = None
         gs.sfx_event = None
+        # Clear combat SFX flags too — these are set at the start of a combat
+        # turn and were previously only reset by the NEXT combat turn, so they
+        # lingered across renders in game_loop and re-fired SFX on every
+        # button press (e.g., weapon hit replaying after a combat victory).
+        gs.last_monster_damage = 0
+        gs.last_player_damage = 0
+        gs.last_player_blocked = False
+        gs.last_player_heal = 0
+        gs.last_monster_damage_badge = None
+        gs.last_player_damage_badge = None
+        gs.last_player_status = None
+        gs.last_monster_status = None
         return result
     
 
