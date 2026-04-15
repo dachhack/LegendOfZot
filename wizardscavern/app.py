@@ -1398,11 +1398,17 @@ def generate_dice_roll_js(dice_rolls):
         'display:flex;flex-direction:column;align-items:center;justify-content:center;'
         'opacity:0;transition:opacity 0.2s;overflow:visible;";'
 
-        # Top label: action verb + modifier badge (e.g., "ATTACK +3")
+        # Top label: short action verb. Modifier breakdown is in the bottom
+        # label ("15+6"), so we don't repeat it here. We also clip overflow
+        # so adjacent dice labels can't bleed into each other.
+        'var SHORT={ATTACK:"ATK",DEFEND:"DEF",CATCH:"CAT",FLEE:"FLEE",INIT:"INIT"};'
+        'var shortLabel=SHORT[labelText]||labelText;'
         'var top=document.createElement("div");'
         'top.style.cssText="font-size:7px;font-weight:bold;font-family:monospace;'
-        'margin-bottom:1px;letter-spacing:0.5px;white-space:nowrap;color:"+labelColor+";";'
-        'top.textContent=mod>0?(labelText+" +"+mod):labelText;'
+        'margin-bottom:1px;letter-spacing:0.5px;white-space:nowrap;'
+        'overflow:hidden;text-overflow:clip;max-width:32px;text-align:center;'
+        'color:"+labelColor+";";'
+        'top.textContent=shortLabel;'
         'wrap.appendChild(top);'
 
         # The dice
@@ -1469,7 +1475,7 @@ def generate_dice_roll_js(dice_rolls):
         'dice.style.background="#3a2e00";'
         'dice.style.boxShadow="0 0 16px #FFD700,0 0 32px #FFD700";'
         'dice.style.animation="critPulse 0.5s ease-out";'
-        'top.textContent=labelText+" CRIT!";'
+        'top.textContent="CRIT!";'
         'top.style.color="#FFD700";'
         'top.style.textShadow="0 0 6px #FFD700";'
         'var scr=document.getElementById("content-area");'
@@ -1484,7 +1490,7 @@ def generate_dice_roll_js(dice_rolls):
         'dice.style.background="#181818";'
         'dice.style.boxShadow="0 0 4px #333";'
         'dice.style.animation="fumbleShake 0.4s ease-out";'
-        'top.textContent=labelText+" FUMBLE!";'
+        'top.textContent="MISS!";'
         'top.style.color="#666";'
         '}else if(winner){'
         'dice.style.borderColor="#69F0AE";dice.style.color="#69F0AE";'
