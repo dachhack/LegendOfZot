@@ -26,6 +26,25 @@ jobs:
   build-android:
     runs-on: ubuntu-latest
     steps:
+      - name: Skip if PR is already merged
+        if: github.event_name == 'pull_request'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          # When a PR is squash-merged quickly, the pull_request run may still
+          # be in flight while the main push kicks off its own build. This step
+          # aborts the now-redundant PR run so we don't burn minutes twice.
+          merged=$(gh pr view ${{ github.event.pull_request.number }} \
+            --repo ${{ github.repository }} --json merged --jq .merged)
+          if [ "$merged" = "true" ]; then
+            echo "PR #${{ github.event.pull_request.number }} already merged — cancelling this run."
+            gh run cancel ${{ github.run_id }} --repo ${{ github.repository }}
+            # Sleep so subsequent steps don't start before the cancel lands
+            sleep 60
+            exit 1
+          fi
+          echo "PR still open, proceeding with validation build."
+
       - name: Checkout code
         uses: actions/checkout@v4
 
