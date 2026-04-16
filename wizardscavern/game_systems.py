@@ -1979,21 +1979,46 @@ def handle_inventory_menu(player_character, my_tower, cmd):
             # Extract number - skip 'u' and optional space
             num_str = cmd[1:].strip()
             item_number = int(num_str) - 1  # Convert to 0-indexed
-            gs.inventory_filter = None  # Clear filter after selecting item
 
             if 0 <= item_number < len(working_items):
                 item_to_use = working_items[item_number]
 
                 # Use the item
                 if isinstance(item_to_use, Potion):
-                    consumed = item_to_use.use(player_character)
-                    if consumed:
-                        # Handle stack: decrement count or remove if last one
-                        if getattr(item_to_use, 'count', 1) > 1:
-                            item_to_use.count -= 1
-                            add_log(f"{COLOR_GREY}({item_to_use.count} remaining){COLOR_RESET}")
+                    if item_to_use.potion_type == 'healing':
+                        # Healing potions: auto-drink enough to reach full HP
+                        hp_deficit = player_character.max_health - player_character.health
+                        if hp_deficit <= 0:
+                            add_log(f"{COLOR_YELLOW}Already at full health!{COLOR_RESET}")
                         else:
-                            player_character.inventory.remove_item(item_to_use.name)
+                            identify_item(item_to_use, silent=False)
+                            heal_per = item_to_use.effect_magnitude
+                            available = getattr(item_to_use, 'count', 1)
+                            potions_needed = min(available, -(-hp_deficit // heal_per))  # ceil div
+                            total_heal = min(hp_deficit, potions_needed * heal_per)
+                            player_character.health = min(player_character.max_health,
+                                                         player_character.health + total_heal)
+                            if potions_needed == 1:
+                                add_log(f"{COLOR_GREEN}{player_character.name} drinks {item_to_use.name} and recovers {total_heal} HP!{COLOR_RESET}")
+                            else:
+                                add_log(f"{COLOR_GREEN}{player_character.name} drinks {potions_needed}x {item_to_use.name} and recovers {total_heal} HP!{COLOR_RESET}")
+                            remaining = available - potions_needed
+                            if remaining > 0:
+                                item_to_use.count = remaining
+                                add_log(f"{COLOR_GREY}({remaining} remaining){COLOR_RESET}")
+                            else:
+                                player_character.inventory.remove_item(item_to_use.name)
+                    else:
+                        # Non-healing potions: use one at a time
+                        consumed = item_to_use.use(player_character)
+                        if consumed:
+                            if getattr(item_to_use, 'count', 1) > 1:
+                                item_to_use.count -= 1
+                                add_log(f"{COLOR_GREY}({item_to_use.count} remaining){COLOR_RESET}")
+                            else:
+                                player_character.inventory.remove_item(item_to_use.name)
+                    # Stay in use filter
+                    gs.inventory_filter = 'use'
                     gs.prompt_cntl = "inventory"
                     handle_inventory_menu(player_character, my_tower, "init")
 
@@ -2016,6 +2041,7 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                                 add_log(f"{COLOR_GREY}({item_to_use.count} remaining){COLOR_RESET}")
                             else:
                                 player_character.inventory.remove_item(item_to_use.name)
+                        gs.inventory_filter = 'use'
                         gs.prompt_cntl = "inventory"
                         handle_inventory_menu(player_character, my_tower, "init")
 
@@ -2026,6 +2052,7 @@ def handle_inventory_menu(player_character, my_tower, cmd):
 
                 elif isinstance(item_to_use, Lantern):
                     consumed = item_to_use.use(player_character, my_tower)
+                    gs.inventory_filter = 'use'
                     gs.prompt_cntl = "inventory"
                     handle_inventory_menu(player_character, my_tower, "init")
 
@@ -2038,6 +2065,7 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                             add_log(f"{COLOR_GREY}({item_to_use.count} remaining){COLOR_RESET}")
                         else:
                             player_character.inventory.remove_item(item_to_use.name)
+                    gs.inventory_filter = 'use'
                     gs.prompt_cntl = "inventory"
                     handle_inventory_menu(player_character, my_tower, "init")
 
@@ -2049,6 +2077,7 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                         player_character.inventory.remove_item(item_to_use.name)
                     # Only return to inventory if the use_effect didn't change the mode
                     if gs.prompt_cntl == prompt_before:
+                        gs.inventory_filter = 'use'
                         gs.prompt_cntl = "inventory"
                         handle_inventory_menu(player_character, my_tower, "init")
 
@@ -2177,6 +2206,8 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                 else:
                     add_log(f"{COLOR_YELLOW}You cannot equip {item_to_equip.name}.{COLOR_RESET}")
 
+                # Stay in equip filter so user can equip more items
+                gs.inventory_filter = 'equip'
                 gs.prompt_cntl = "inventory"
                 handle_inventory_menu(player_character, my_tower, "init")
             else:

@@ -3075,8 +3075,9 @@ class WizardsCavernApp(toga.App):
 
     def build_layout_with_numpad(self, commands):
         """
-        Two-column layout: command buttons on left (3 rows), numpad on right (4 rows).
-        Both columns fit within the same panel height.
+        Two-column layout: back button on the left, 3x3 numpad centered.
+        Bigger buttons than before; the numpad dominates because that's what
+        the player taps most in filter modes.
         """
         cmd_dict = {key: label for key, label in commands}
         is_altar = gs.prompt_cntl == 'altar_mode'
@@ -3084,70 +3085,44 @@ class WizardsCavernApp(toga.App):
         # Separate numpad keys from command keys
         numpad_keys = set(str(i) for i in range(10))
 
-        # Priority order (first = bottom-left, most accessible)
-        priority = ['x', 'c', 'i', 'a', 's', 'b', 'r', 'u', 'e',
-                     'm', 'f', 'j', 'g', 'id', 'ba']
+        # Find the back/exit command for the left-side button
+        back_key = None
+        back_label = None
+        for k in ['b', 'x', 'c']:
+            if k in cmd_dict and k not in numpad_keys:
+                back_key = k
+                back_label = cmd_dict[k]
+                break
 
-        cmds_to_place = []
-        placed = set()
-        for pkey in priority:
-            if pkey in cmd_dict and pkey not in numpad_keys and pkey not in placed:
-                cmds_to_place.append((pkey, cmd_dict[pkey]))
-                placed.add(pkey)
-        for k, v in cmd_dict.items():
-            if k not in numpad_keys and k not in placed:
-                cmds_to_place.append((k, v))
-
-        # Build columns (max 3 per column, bottom to top)
-        columns = []
-        for i in range(0, len(cmds_to_place), 3):
-            columns.append(cmds_to_place[i:i+3])
-
-        num_cols = len(columns)
-        cmd_row1 = []
-        cmd_row2 = []
-        cmd_row3 = []
-
-        def compact_btn(k, v):
-            """Create a compact button for numpad layouts (flex instead of fixed width)."""
-            btn = toga.Button(
-                v,
-                on_press=lambda w, ck=k, cl=v: self.quick_command(ck, cl),
-                style=Pack(flex=1, margin=1, font_size=11,
-                           background_color='#383838', color='#EEE', height=30)
+        # Left column: back button vertically centered
+        left_col = toga.Box(style=Pack(direction=COLUMN, width=52))
+        left_col.add(toga.Box(style=Pack(flex=1)))  # top spacer
+        if back_key:
+            back_btn = toga.Button(
+                back_label,
+                on_press=lambda w, ck=back_key, cl=back_label: self.quick_command(ck, cl),
+                style=Pack(width=48, margin=1, font_size=10,
+                           background_color='#383838', color='#EEE', height=34)
             )
-            self._compact_android_button(btn)
-            self._style_android_button(btn)
-            return btn
+            self._compact_android_button(back_btn)
+            self._style_android_button(back_btn)
+            left_col.add(back_btn)
+        # Altar sacrifice button
+        if is_altar and 's' in cmd_dict:
+            sac_btn = toga.Button(
+                'Sac', on_press=lambda w: self.number_pad_input('s'),
+                style=Pack(width=48, margin=1, font_size=10, font_weight='bold',
+                           background_color='#383838', color='#FFD700', height=34))
+            self._compact_android_button(sac_btn)
+            self._style_android_button(sac_btn)
+            left_col.add(sac_btn)
+        left_col.add(toga.Box(style=Pack(flex=1)))  # bottom spacer
 
-        for col in columns:
-            if len(col) > 0:
-                k, v = col[0]
-                if is_altar and k == 's':
-                    cmd_row3.append(toga.Button(
-                        'Sac', on_press=lambda w: self.number_pad_input('s'),
-                        style=Pack(flex=1, margin=1, font_size=11, font_weight='bold', width=37)))
-                else:
-                    cmd_row3.append(compact_btn(k, v))
-            else:
-                cmd_row3.append(self.create_spacer())
-            cmd_row2.append(compact_btn(col[1][0], col[1][1]) if len(col) > 1 else self.create_spacer())
-            cmd_row1.append(compact_btn(col[2][0], col[2][1]) if len(col) > 2 else self.create_spacer())
-
-        # Left column: command buttons in 3 rows
-        left_col = toga.Box(style=Pack(direction=COLUMN, flex=1))
-        for row_btns in [cmd_row1, cmd_row2, cmd_row3]:
-            row_box = toga.Box(style=Pack(direction=ROW, margin=0, flex=1))
-            for btn in row_btns:
-                row_box.add(btn)
-            left_col.add(row_box)
-
-        # Right column: 4-row phone-style numpad (compact buttons)
+        # Right column: 3-row numpad with bigger buttons
         numpad_rows = [
-            [self.create_numpad_button('1', compact=True), self.create_numpad_button('2', compact=True), self.create_numpad_button('3', compact=True)],
-            [self.create_numpad_button('4', compact=True), self.create_numpad_button('5', compact=True), self.create_numpad_button('6', compact=True)],
-            [self.create_numpad_button('7', compact=True), self.create_numpad_button('8', compact=True), self.create_numpad_button('9', compact=True)],
-            [self.create_numpad_button('0', compact=True)],
+            [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')],
+            [self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')],
+            [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')],
         ]
 
         # Altar: special devotion rune button 9
@@ -3161,11 +3136,12 @@ class WizardsCavernApp(toga.App):
             if can_offer:
                 numpad_rows[2][2] = toga.Button(
                     '9', on_press=lambda w: self.number_pad_input('9'),
-                    style=Pack(width=55, margin=0, font_size=11, font_weight='bold', color='#FFD700', height=26))
+                    style=Pack(flex=1, margin=1, font_size=13, font_weight='bold',
+                               color='#FFD700', height=30, background_color='#2a2a2a'))
 
-        right_col = toga.Box(style=Pack(direction=COLUMN))
+        right_col = toga.Box(style=Pack(direction=COLUMN, flex=1))
         for row_btns in numpad_rows:
-            row_box = toga.Box(style=Pack(direction=ROW, margin=0))
+            row_box = toga.Box(style=Pack(direction=ROW, margin=0, flex=1))
             for btn in row_btns:
                 row_box.add(btn)
             right_col.add(row_box)
@@ -3174,7 +3150,7 @@ class WizardsCavernApp(toga.App):
         self.button_panel.clear()
         self.button_panel.style.direction = ROW
         self.button_panel.add(left_col)
-        self.button_panel.add(toga.Box(style=Pack(width=8)))  # gap between buttons and numpad
+        self.button_panel.add(toga.Box(style=Pack(width=4)))  # gap
         self.button_panel.add(right_col)
 
     def build_teleporter_layout(self):
@@ -3241,44 +3217,48 @@ class WizardsCavernApp(toga.App):
     def build_qwerty_keyboard_layout(self):
         """
         Build QWERTY keyboard layout for name entry.
-        
+
         Row 1: [Q][W][E][R][T][Y][U][I][O][P]
-        Row 2: [.][A][S][D][F][G][H][J][K][L]
-        Row 3: [.][Z][X][C][V][B][N][M][.][\u21e7]
-        
+        Row 2: [.][A][S][D][F][G][H][J][K][L][.]
+        Row 3: [\u21e7][Z][X][C][V][B][N][M][.]
+
         Backspace and Send buttons are in the input row at the bottom
         """
         # Determine case based on shift state
         if not hasattr(self, 'keyboard_uppercase'):
             self.keyboard_uppercase = True  # Start with uppercase
-        
+
         # Row 1: Q W E R T Y U I O P (10 buttons - full top row!)
         row1_letters = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P']
         if self.keyboard_uppercase:
             row1 = [self.create_keyboard_button(letter.lower(), letter) for letter in row1_letters]
         else:
             row1 = [self.create_keyboard_button(letter.lower(), letter.lower()) for letter in row1_letters]
-        
-        # Row 2: A S D F G H J K L (9 buttons)
+
+        # Row 2: A S D F G H J K L (9 buttons, centered with half-spacers on both sides)
 
         row2_letters = ['A', 'S', 'D', 'F', 'G', 'H', 'J', 'K', 'L']
 
-        row2 = [self.create_half_spacer()]  # Start with half spacer
+        row2 = [self.create_half_spacer()]  # Left half spacer
         if self.keyboard_uppercase:
             row2.extend([self.create_keyboard_button(letter.lower(), letter) for letter in row2_letters])
         else:
             row2.extend([self.create_keyboard_button(letter.lower(), letter.lower()) for letter in row2_letters])
-        
-        # Row 3: Shift + Z X C V B N M + backspace/spacer + Shift (10 items to match row 1)
+        row2.append(self.create_half_spacer())  # Right half spacer for centering
+
+        # Row 3: Shift + Z X C V B N M + trailing spacer
         row3_letters = ['Z', 'X', 'C', 'V', 'B', 'N', 'M']
-        # Create shift button
-        shift_label = "\u21e7" if self.keyboard_uppercase else "\u21e7"
+        # Shift button: highlighted when uppercase is active
+        shift_bg = '#666' if self.keyboard_uppercase else '#333'
+        shift_color = '#FFF' if self.keyboard_uppercase else '#999'
         shift_button = toga.Button(
-            shift_label,
+            "\u21e7",
             on_press=self.toggle_keyboard_case,
-            style=Pack(flex=1, margin=0, padding=0, font_size=13, font_weight='bold',
-                       background_color='#444', color='#FFF', height=34)
+            style=Pack(width=38, margin=1, padding=0, font_size=11,
+                       background_color=shift_bg, color=shift_color, height=34)
         )
+        self._compact_android_button(shift_button)
+        self._style_android_button(shift_button)
         row3 = [shift_button]
         if self.keyboard_uppercase:
             row3.extend([self.create_keyboard_button(letter.lower(), letter) for letter in row3_letters])
@@ -3293,7 +3273,7 @@ class WizardsCavernApp(toga.App):
                            background_color='#333', color='#EEE', height=34)
             )
             row3.append(backspace_button)
-            row3.append(toga.Box(style=Pack(flex=1, height=34)))
+        row3.append(toga.Box(style=Pack(flex=1, height=34)))  # Trailing spacer
 
         # Add to button rows
         for btn in row1:
@@ -3432,11 +3412,11 @@ class WizardsCavernApp(toga.App):
     def create_numpad_button(self, number, compact=False):
         """Create a number pad button. Compact mode uses shorter height for 4-row layout."""
         h = 24 if compact else 30
-        fs = 11 if compact else 11
+        fs = 11 if compact else 13
         btn = toga.Button(
             number,
             on_press=lambda w, n=number: self.number_pad_input(n),
-            style=Pack(margin=1, font_size=fs, font_weight='bold', width=50,
+            style=Pack(margin=1, font_size=fs, font_weight='bold', flex=1,
                        color='#4CAF50', height=h, background_color='#2a2a2a')
         )
         self._compact_android_button(btn)
