@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 83
+BUILD_NUMBER = 84
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Combat dice scaled up 1.3x for readability, anchored to panel right edge",
     "INIT dice: horizontal layout (dice + labels side-by-side), sized down",
     "CI: auto-cancel PR validation builds when the PR is already merged",
     "INIT dice shifted right + sized down so they don't cover portrait/text",
