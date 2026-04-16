@@ -1944,6 +1944,47 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         gs.inventory_filter = None
         return
 
+    # --- Drink Full: bulk-use healing potions to reach max HP ---
+    if cmd == 'df':
+        hp_deficit = player_character.max_health - player_character.health
+        if hp_deficit <= 0:
+            add_log(f"{COLOR_YELLOW}Already at full health!{COLOR_RESET}")
+        else:
+            # Find all healing potions in inventory
+            healing_potions = [i for i in player_character.inventory.items
+                               if isinstance(i, Potion) and i.potion_type == 'healing']
+            if not healing_potions:
+                add_log(f"{COLOR_YELLOW}No healing potions to drink!{COLOR_RESET}")
+            else:
+                total_healed = 0
+                total_used = 0
+                for pot in healing_potions:
+                    if player_character.health >= player_character.max_health:
+                        break
+                    heal_per = pot.effect_magnitude
+                    available = getattr(pot, 'count', 1)
+                    still_needed = player_character.max_health - player_character.health
+                    use_count = min(available, -(-still_needed // heal_per))  # ceil div
+                    heal_amount = min(still_needed, use_count * heal_per)
+                    player_character.health = min(player_character.max_health,
+                                                 player_character.health + heal_amount)
+                    total_healed += heal_amount
+                    total_used += use_count
+                    remaining = available - use_count
+                    if remaining > 0:
+                        pot.count = remaining
+                    else:
+                        player_character.inventory.remove_item(pot.name)
+                    identify_item(pot, silent=True)
+                if total_used == 1:
+                    add_log(f"{COLOR_GREEN}{player_character.name} drinks a potion and recovers {total_healed} HP!{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_GREEN}{player_character.name} drinks {total_used} potions and recovers {total_healed} HP!{COLOR_RESET}")
+        gs.inventory_filter = 'use'
+        gs.prompt_cntl = "inventory"
+        handle_inventory_menu(player_character, my_tower, "init")
+        return
+
     # --- Bare command toggles (set filter, refresh display) ---
     if cmd == 'u':
         gs.inventory_filter = 'use' if gs.inventory_filter != 'use' else None
@@ -1986,28 +2027,24 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                 # Use the item
                 if isinstance(item_to_use, Potion):
                     if item_to_use.potion_type == 'healing':
-                        # Healing potions: auto-drink enough to reach full HP
                         hp_deficit = player_character.max_health - player_character.health
                         if hp_deficit <= 0:
                             add_log(f"{COLOR_YELLOW}Already at full health!{COLOR_RESET}")
                         else:
-                            identify_item(item_to_use, silent=False)
-                            heal_per = item_to_use.effect_magnitude
-                            available = getattr(item_to_use, 'count', 1)
-                            potions_needed = min(available, -(-hp_deficit // heal_per))  # ceil div
-                            total_heal = min(hp_deficit, potions_needed * heal_per)
-                            player_character.health = min(player_character.max_health,
-                                                         player_character.health + total_heal)
-                            if potions_needed == 1:
-                                add_log(f"{COLOR_GREEN}{player_character.name} drinks {item_to_use.name} and recovers {total_heal} HP!{COLOR_RESET}")
-                            else:
-                                add_log(f"{COLOR_GREEN}{player_character.name} drinks {potions_needed}x {item_to_use.name} and recovers {total_heal} HP!{COLOR_RESET}")
-                            remaining = available - potions_needed
-                            if remaining > 0:
-                                item_to_use.count = remaining
-                                add_log(f"{COLOR_GREY}({remaining} remaining){COLOR_RESET}")
-                            else:
-                                player_character.inventory.remove_item(item_to_use.name)
+                            # Drink ONE potion, then offer "Drink to Full" if stacked
+                            consumed = item_to_use.use(player_character)
+                            if consumed:
+                                available = getattr(item_to_use, 'count', 1)
+                                if available > 1:
+                                    item_to_use.count = available - 1
+                                    add_log(f"{COLOR_GREY}({item_to_use.count} remaining){COLOR_RESET}")
+                                else:
+                                    player_character.inventory.remove_item(item_to_use.name)
+                                # If still hurt and more potions remain, offer bulk option
+                                still_hurt = player_character.health < player_character.max_health
+                                still_have = item_to_use.name in [i.name for i in player_character.inventory.items] if hasattr(player_character.inventory, 'items') else False
+                                if still_hurt and still_have:
+                                    add_log(f"{COLOR_CYAN}Type 'df' or tap Drink Full to heal to max.{COLOR_RESET}")
                     else:
                         # Non-healing potions: use one at a time
                         consumed = item_to_use.use(player_character)

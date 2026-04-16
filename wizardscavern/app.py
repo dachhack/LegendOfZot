@@ -3107,6 +3107,16 @@ class WizardsCavernApp(toga.App):
             self._compact_android_button(back_btn)
             self._style_android_button(back_btn)
             left_col.add(back_btn)
+        # "Drink Full" button when available
+        if 'df' in cmd_dict:
+            df_btn = toga.Button(
+                'Heal', on_press=lambda w: self.quick_command('df', 'Heal'),
+                style=Pack(width=48, margin=1, font_size=9, font_weight='bold',
+                           background_color='#2a3a2a', color='#4CAF50', height=34))
+            self._compact_android_button(df_btn)
+            self._style_android_button(df_btn, bg_start='#2a3a2a', bg_end='#1a2a1a',
+                                        border_color='#4CAF50')
+            left_col.add(df_btn)
         # Altar sacrifice button
         if is_altar and 's' in cmd_dict:
             sac_btn = toga.Button(
@@ -3118,11 +3128,12 @@ class WizardsCavernApp(toga.App):
             left_col.add(sac_btn)
         left_col.add(toga.Box(style=Pack(flex=1)))  # bottom spacer
 
-        # Right column: 3-row numpad with bigger buttons
+        # Right column: numpad with bigger buttons (3x3 + bottom row with 0)
         numpad_rows = [
             [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')],
             [self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')],
             [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')],
+            [toga.Box(style=Pack(flex=1)), self.create_numpad_button('0'), toga.Box(style=Pack(flex=1))],
         ]
 
         # Altar: special devotion rune button 9
@@ -4815,6 +4826,11 @@ class WizardsCavernApp(toga.App):
 
                 if gs.inventory_filter:
                     current_commands_text = "# = select | b = back"
+                    if gs.inventory_filter == 'use' and player_character.health < player_character.max_health:
+                        has_healing = any(isinstance(i, Potion) and i.potion_type == 'healing'
+                                          for i in player_character.inventory.items)
+                        if has_healing:
+                            current_commands_text += " | df = drink full"
                 else:
                     current_commands_text = "u = use | eat = eat | j = journal | x = close"
 
@@ -4919,6 +4935,12 @@ class WizardsCavernApp(toga.App):
                     # Filter active: numpad mode with back button
                     filter_label = {'use': 'Use', 'equip': 'Equip', 'eat': 'Eat'}.get(gs.inventory_filter, gs.inventory_filter)
                     inv_commands = f"# = {filter_label.lower()} item | b = back"
+                    # Add "Drink Full" option when in use filter and player has healing potions + is hurt
+                    if gs.inventory_filter == 'use' and player_character.health < player_character.max_health:
+                        has_healing = any(isinstance(i, Potion) and i.potion_type == 'healing'
+                                          for i in player_character.inventory.items)
+                        if has_healing:
+                            inv_commands += " | df = drink full"
                 else:
                     # Main inventory: centered command buttons, no numpad
                     inv_commands = "u = use | e = equip | eat = eat | c = craft"
