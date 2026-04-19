@@ -2435,9 +2435,9 @@ class WizardsCavernApp(toga.App):
         # ====================================================================
         
         self.input_field = toga.TextInput(
-            placeholder="Type command...",
+            placeholder="",
             on_confirm=self.on_input_confirm,
-            style=Pack(flex=1, margin=2, height=40, font_size=12,
+            style=Pack(width=90, margin=2, height=28, font_size=12,
                        background_color='#2a2a2a', color='#EEE')
         )
 
@@ -2448,20 +2448,25 @@ class WizardsCavernApp(toga.App):
         self.backspace_button = toga.Button(
             "\u232b",
             on_press=lambda w: self.number_pad_backspace(),
-            style=Pack(margin=2, width=50, height=36, font_size=13,
+            style=Pack(margin=2, width=44, height=28, font_size=13,
                        background_color='#333', color='#EEE')
         )
 
         self.submit_button = toga.Button(
             "SEND",
             on_press=self.on_command_submit,
-            style=Pack(margin=2, width=70, height=36, font_size=13, font_weight='bold',
+            style=Pack(margin=2, width=64, height=28, font_size=12, font_weight='bold',
                        background_color='#444', color='#FFF')
         )
-        
+
+        # Leading spacer pushes compact input field + buttons to the right edge.
+        # When input goes full-width (name entry), input_field flex=1 squeezes this to 0.
+        self.input_row_spacer = toga.Box(style=Pack(flex=1))
+
         self.input_row = toga.Box(
-            style=Pack(direction=ROW, margin=2, height=40, background_color='#1a1a1a'),
+            style=Pack(direction=ROW, margin=2, height=32, background_color='#1a1a1a'),
             children=[
+                self.input_row_spacer,
                 self.input_field,
                 self.backspace_button,
                 self.submit_button
@@ -2768,18 +2773,36 @@ class WizardsCavernApp(toga.App):
                                     border_color='#666666')
         self._style_android_button(self.backspace_button)
 
-        # Adjust panel heights based on mode
+        # Adjust panel heights based on mode. The input row is compact (32px)
+        # in command/numpad modes; full-width and slightly taller for text entry.
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
             # QWERTY keyboard: 3 rows × 34px keys + margins
+            # Name entry needs the wide text field — let input_field flex to fill,
+            # and collapse the leading spacer so it doesn't steal half the row.
+            self.input_row_spacer.style.flex = 0
+            self.input_field.style.flex = 1
+            self.input_field.style.width = 0
+            self.input_field.style.height = 36
+            self.input_row.style.height = 40
             self.bottom_panel.style.height = 200
             self.button_panel.style.height = 114
         elif needs_numbers:
-            # Numpad layout: 4 rows × 24px compact keys
-            self.bottom_panel.style.height = 170
+            # Numpad layout: 4 rows × 24px compact keys + compact input row
+            self.input_row_spacer.style.flex = 1
+            self.input_field.style.flex = 0
+            self.input_field.style.width = 90
+            self.input_field.style.height = 28
+            self.input_row.style.height = 32
+            self.bottom_panel.style.height = 158
             self.button_panel.style.height = 98
         else:
-            # Normal: 3 rows × 30px buttons
-            self.bottom_panel.style.height = 145
+            # Normal: 3 rows × 30px buttons + compact input row
+            self.input_row_spacer.style.flex = 1
+            self.input_field.style.flex = 0
+            self.input_field.style.width = 90
+            self.input_field.style.height = 28
+            self.input_row.style.height = 32
+            self.bottom_panel.style.height = 133
             self.button_panel.style.height = 96
 
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
