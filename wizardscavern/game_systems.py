@@ -1987,7 +1987,9 @@ def handle_inventory_menu(player_character, my_tower, cmd):
 
     # --- Bare command toggles (set filter, refresh display) ---
     if cmd == 'u':
+        prev = gs.inventory_filter
         gs.inventory_filter = 'use' if gs.inventory_filter != 'use' else None
+        add_log(f"[dbg] u tapped: filter {prev} -> {gs.inventory_filter}")
         return
 
     if cmd == 'e':
@@ -1998,9 +2000,10 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         gs.inventory_filter = 'eat' if gs.inventory_filter != 'eat' else None
         return
 
-    # Apply active inventory filter to narrow working_items for numbered commands
+    # Apply active inventory filter to narrow working_items for numbered commands.
+    # Must stay in sync with the render filter in app.py (inventory view).
     if gs.inventory_filter == 'use':
-        working_items = [i for i in working_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit))]
+        working_items = [i for i in working_items if isinstance(i, (Potion, Scroll, Flare, Lantern, LanternFuel, Treasure, Towel, CookingKit, CuringKit))]
     elif gs.inventory_filter == 'equip':
         working_items = [i for i in working_items if isinstance(i, (Weapon, Armor, Towel)) or (isinstance(i, Treasure) and i.treasure_type == 'passive')]
     elif gs.inventory_filter == 'eat':
@@ -2129,6 +2132,11 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                     handle_inventory_menu(player_character, my_tower, "init")
 
                 elif isinstance(item_to_use, CookingKit):
+                    item_to_use.use(player_character, my_tower)  # Not consumed
+                    gs.prompt_cntl = "inventory"
+                    handle_inventory_menu(player_character, my_tower, "init")
+
+                elif isinstance(item_to_use, CuringKit):
                     item_to_use.use(player_character, my_tower)  # Not consumed
                     gs.prompt_cntl = "inventory"
                     handle_inventory_menu(player_character, my_tower, "init")
