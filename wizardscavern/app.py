@@ -3104,6 +3104,11 @@ class WizardsCavernApp(toga.App):
         """
         cmd_dict = {key: label for key, label in commands}
         is_altar = gs.prompt_cntl == 'altar_mode'
+        try:
+            from .game_state import add_log as _dbg_log
+            _dbg_log(f"[dbg] build_numpad: prompt={gs.prompt_cntl} filter={gs.inventory_filter}")
+        except Exception:
+            pass
 
         # Separate numpad keys from command keys
         numpad_keys = set(str(i) for i in range(10))

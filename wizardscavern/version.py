@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 88
+BUILD_NUMBER = 89
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "DEBUG: Use-button diagnostic logs in-game (tap Use, check log)",
     "FIX: Use filter now actually uses Curing Kits (render/handler were out of sync)",
     "Input box: compact by default, right-aligned; full-width only for name entry",
     "Bottom panel: ~12px shorter, more room for inventory/message view",

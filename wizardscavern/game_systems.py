@@ -1987,7 +1987,9 @@ def handle_inventory_menu(player_character, my_tower, cmd):
 
     # --- Bare command toggles (set filter, refresh display) ---
     if cmd == 'u':
+        prev = gs.inventory_filter
         gs.inventory_filter = 'use' if gs.inventory_filter != 'use' else None
+        add_log(f"[dbg] u tapped: filter {prev} -> {gs.inventory_filter}")
         return
 
     if cmd == 'e':
