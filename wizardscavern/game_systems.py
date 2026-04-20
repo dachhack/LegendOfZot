@@ -1985,19 +1985,21 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         handle_inventory_menu(player_character, my_tower, "init")
         return
 
-    # --- Bare command toggles (set filter, refresh display) ---
+    # --- Filter commands: idempotent set (double-fire safe).
+    # Previously toggled, but iOS/Android button taps sometimes fire twice in
+    # quick succession, which would cancel the toggle and leave the filter
+    # unchanged. Users exit a filter via the BACK ('b') button, not by
+    # re-tapping the filter command.
     if cmd == 'u':
-        prev = gs.inventory_filter
-        gs.inventory_filter = 'use' if gs.inventory_filter != 'use' else None
-        add_log(f"[dbg] u tapped: filter {prev} -> {gs.inventory_filter}")
+        gs.inventory_filter = 'use'
         return
 
     if cmd == 'e':
-        gs.inventory_filter = 'equip' if gs.inventory_filter != 'equip' else None
+        gs.inventory_filter = 'equip'
         return
 
     if cmd == 'eat':
-        gs.inventory_filter = 'eat' if gs.inventory_filter != 'eat' else None
+        gs.inventory_filter = 'eat'
         return
 
     # Apply active inventory filter to narrow working_items for numbered commands.
