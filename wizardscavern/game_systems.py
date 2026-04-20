@@ -1991,10 +1991,12 @@ def handle_inventory_menu(player_character, my_tower, cmd):
     # unchanged. Users exit a filter via the BACK ('b') button, not by
     # re-tapping the filter command.
     if cmd == 'u':
+        add_log(f"[dbg] handler u: combat={in_combat} prev_filter={gs.inventory_filter}")
         gs.inventory_filter = 'use'
         return
 
     if cmd == 'e':
+        add_log(f"[dbg] handler e: combat={in_combat} prev_filter={gs.inventory_filter}")
         gs.inventory_filter = 'equip'
         return
 

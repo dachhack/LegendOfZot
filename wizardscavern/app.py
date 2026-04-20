@@ -2517,7 +2517,16 @@ class WizardsCavernApp(toga.App):
     
     def quick_command(self, cmd, label=None):
         """Handle button press for commands."""
-        
+
+        # DEBUG: log every quick_command fire so we can tell if the Use button
+        # is actually reaching Python on Android/iOS.
+        if cmd in ('u', 'e', 'eat'):
+            try:
+                from .game_state import add_log as _dbg
+                _dbg(f"[dbg] quick_command cmd={cmd!r} prompt={gs.prompt_cntl}")
+            except Exception:
+                pass
+
         # Special handling for QWERTY keyboard letters during name entry
         if gs.prompt_cntl == 'player_name' and len(cmd) == 1 and cmd.isalpha():
             # Use the label (which has correct case) if provided, otherwise use cmd
@@ -2775,34 +2784,32 @@ class WizardsCavernApp(toga.App):
 
         # Adjust panel heights based on mode. The input row is compact (32px)
         # in command/numpad modes; full-width and slightly taller for text entry.
+        # NOTE: we rebuild input_field.style from scratch each mode because
+        # Toga Pack doesn't cleanly "unset" a width once assigned — setting
+        # width=0 literally renders 0px wide, ignoring flex.
+        _field_base = dict(margin=2, font_size=12,
+                           background_color='#2a2a2a', color='#EEE')
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
             # QWERTY keyboard: 3 rows × 34px keys + margins
-            # Name entry needs the wide text field — let input_field flex to fill,
-            # and collapse the leading spacer so it doesn't steal half the row.
+            # Name entry needs the wide text field.
             self.input_row_spacer.style.flex = 0
-            self.input_field.style.flex = 1
-            self.input_field.style.width = 0
-            self.input_field.style.height = 36
+            self.input_field.style = Pack(flex=1, height=36, **_field_base)
             self.input_row.style.height = 40
             self.bottom_panel.style.height = 200
             self.button_panel.style.height = 114
         elif needs_numbers:
             # Numpad layout: 4 rows × 24px compact keys + compact input row
             self.input_row_spacer.style.flex = 1
-            self.input_field.style.flex = 0
-            self.input_field.style.width = 90
-            self.input_field.style.height = 28
+            self.input_field.style = Pack(width=90, height=28, **_field_base)
             self.input_row.style.height = 32
             self.bottom_panel.style.height = 158
             self.button_panel.style.height = 98
         else:
             # Normal: 3 rows × 30px buttons + compact input row
             self.input_row_spacer.style.flex = 1
-            self.input_field.style.flex = 0
-            self.input_field.style.width = 90
-            self.input_field.style.height = 28
+            self.input_field.style = Pack(width=90, height=28, **_field_base)
             self.input_row.style.height = 32
-            self.bottom_panel.style.height = 133
+            self.bottom_panel.style.height = 148
             self.button_panel.style.height = 96
 
         # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
