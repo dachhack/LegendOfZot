@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 92
+BUILD_NUMBER = 93
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Numpad: 0 moves left, input+send inline with it — one row tighter",
     "FIX: Use filter now renders! NameError on player_character crashed render",
     "FIX: Name-entry input field visible again (width=0 regression)",
     "FIX: Use/Equip/Eat buttons are double-fire safe (no more phantom cancels)",

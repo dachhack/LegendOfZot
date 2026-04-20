@@ -2746,6 +2746,35 @@ class WizardsCavernApp(toga.App):
             # Just clear placeholder
             self.input_field.placeholder = ""
 
+    def _move_input_widgets_to(self, target_box, add_to_target=True):
+        """Relocate input widgets to target_box (or orphan them if add_to_target=False).
+
+        In numpad filter modes the input_field/⌫/SEND live inside the numpad's
+        last row; in other modes they live in input_row. This helper handles
+        the reparenting gracefully no matter where the widgets currently are.
+        """
+        widgets = [self.input_row_spacer, self.input_field,
+                   self.backspace_button, self.submit_button]
+        # Detach from any current parent.
+        for w in widgets:
+            parent = getattr(w, 'parent', None)
+            if parent is None or parent is target_box:
+                continue
+            try:
+                parent.remove(w)
+            except Exception:
+                pass
+        if not add_to_target:
+            return
+        # Add (in order) to the target box.
+        current_children = list(target_box.children)
+        for w in widgets:
+            if w not in current_children:
+                try:
+                    target_box.add(w)
+                except Exception:
+                    pass
+
     def update_button_panel(self, commands_text, needs_numbers=False):
         """..."""
 
@@ -2765,6 +2794,22 @@ class WizardsCavernApp(toga.App):
         self.button_panel.add(self.button_row_2)
         self.button_panel.add(self.number_pad_box)
 
+        # Decide whether input widgets belong in the numpad's last row (filter
+        # modes with needs_numbers) or in the dedicated input_row (everything
+        # else, including player_name/puzzle QWERTY and no-numpad views).
+        # build_layout_with_numpad expects the widgets to be orphaned and
+        # re-adds them to its own last row.
+        _numpad_inline = needs_numbers and gs.prompt_cntl not in (
+            'player_name', 'puzzle_mode', 'zotle_teleporter_mode',
+            'save_load_mode', 'intro_story', 'main_menu',
+            'game_loaded_summary', 'combat_mode',
+        )
+        if _numpad_inline:
+            self._move_input_widgets_to(self.input_row, add_to_target=False)
+            self.input_row.style.height = 0
+        else:
+            self._move_input_widgets_to(self.input_row, add_to_target=True)
+
         # Compact input row buttons (remove Android Material insets that clip text)
         self._compact_android_button(self.submit_button)
         self._compact_android_button(self.backspace_button)
@@ -2773,11 +2818,10 @@ class WizardsCavernApp(toga.App):
                                     border_color='#666666')
         self._style_android_button(self.backspace_button)
 
-        # Adjust panel heights based on mode. The input row is compact (32px)
-        # in command/numpad modes; full-width and slightly taller for text entry.
-        # NOTE: we rebuild input_field.style from scratch each mode because
-        # Toga Pack doesn't cleanly "unset" a width once assigned — setting
-        # width=0 literally renders 0px wide, ignoring flex.
+        # Adjust panel heights based on mode. In numpad filter modes the
+        # input widgets live inside the numpad's last row (see
+        # build_layout_with_numpad) — input_row is collapsed to 0. In other
+        # modes the input widgets stay in input_row and get sized here.
         _field_base = dict(margin=2, font_size=12,
                            background_color='#2a2a2a', color='#EEE')
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
@@ -2788,8 +2832,14 @@ class WizardsCavernApp(toga.App):
             self.input_row.style.height = 40
             self.bottom_panel.style.height = 200
             self.button_panel.style.height = 114
+        elif _numpad_inline:
+            # Numpad layout with input inline on the last row; input_row is empty.
+            # Button panel holds 4 numpad rows × 30px + margins.
+            self.bottom_panel.style.height = 132
+            self.button_panel.style.height = 128
         elif needs_numbers:
-            # Numpad layout: 4 rows × 24px compact keys + compact input row
+            # Numpad mode but input_row stays separate (e.g., teleporter,
+            # combat-adjacent layouts that share this branch).
             self.input_row_spacer.style.flex = 1
             self.input_field.style = Pack(width=90, height=28, **_field_base)
             self.input_row.style.height = 32
@@ -3149,12 +3199,37 @@ class WizardsCavernApp(toga.App):
             left_col.add(sac_btn)
         left_col.add(toga.Box(style=Pack(flex=1)))  # bottom spacer
 
-        # Right column: numpad with bigger buttons (3x3 + bottom row with 0)
+        # Right column: 3x3 numpad + a 4th row that merges [0] with the input
+        # widgets (field / backspace / send) inline — reclaims the separate
+        # input_row of vertical space.  update_button_panel orphans the input
+        # widgets before calling us, so we just re-style and add them to the
+        # new numpad row here.
+        # Re-style the input widgets to sit flush with the numpad row.
+        self.input_field.style = Pack(flex=1, margin=1, height=30, font_size=12,
+                                      background_color='#2a2a2a', color='#EEE')
+        self.backspace_button.style = Pack(margin=1, width=44, height=30,
+                                           font_size=13, background_color='#333',
+                                           color='#EEE')
+        self.submit_button.style = Pack(margin=1, width=64, height=30,
+                                        font_size=12, font_weight='bold',
+                                        background_color='#444', color='#FFF')
+        self._compact_android_button(self.submit_button)
+        self._compact_android_button(self.backspace_button)
+        self._style_android_button(self.submit_button, bg_start='#555555', bg_end='#383838',
+                                    pressed_start='#383838', pressed_end='#222222',
+                                    border_color='#666666')
+        self._style_android_button(self.backspace_button)
+
         numpad_rows = [
             [self.create_numpad_button('1'), self.create_numpad_button('2'), self.create_numpad_button('3')],
             [self.create_numpad_button('4'), self.create_numpad_button('5'), self.create_numpad_button('6')],
             [self.create_numpad_button('7'), self.create_numpad_button('8'), self.create_numpad_button('9')],
-            [toga.Box(style=Pack(flex=1)), self.create_numpad_button('0'), toga.Box(style=Pack(flex=1))],
+            [
+                self.create_numpad_button('0'),
+                self.input_field,
+                self.backspace_button,
+                self.submit_button,
+            ],
         ]
 
         # Altar: special devotion rune button 9
