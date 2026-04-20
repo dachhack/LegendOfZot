@@ -2518,15 +2518,6 @@ class WizardsCavernApp(toga.App):
     def quick_command(self, cmd, label=None):
         """Handle button press for commands."""
 
-        # DEBUG: log every quick_command fire so we can tell if the Use button
-        # is actually reaching Python on Android/iOS.
-        if cmd in ('u', 'e', 'eat'):
-            try:
-                from .game_state import add_log as _dbg
-                _dbg(f"[dbg] quick_command cmd={cmd!r} prompt={gs.prompt_cntl}")
-            except Exception:
-                pass
-
         # Special handling for QWERTY keyboard letters during name entry
         if gs.prompt_cntl == 'player_name' and len(cmd) == 1 and cmd.isalpha():
             # Use the label (which has correct case) if provided, otherwise use cmd
@@ -4856,9 +4847,9 @@ class WizardsCavernApp(toga.App):
 
                 if gs.inventory_filter:
                     current_commands_text = "# = select | b = back"
-                    if gs.inventory_filter == 'use' and player_character.health < player_character.max_health:
+                    if gs.inventory_filter == 'use' and gs.player_character.health < gs.player_character.max_health:
                         has_healing = any(isinstance(i, Potion) and i.potion_type == 'healing'
-                                          for i in player_character.inventory.items)
+                                          for i in gs.player_character.inventory.items)
                         if has_healing:
                             current_commands_text += " | df = drink full"
                 else:
@@ -4966,9 +4957,9 @@ class WizardsCavernApp(toga.App):
                     filter_label = {'use': 'Use', 'equip': 'Equip', 'eat': 'Eat'}.get(gs.inventory_filter, gs.inventory_filter)
                     inv_commands = f"# = {filter_label.lower()} item | b = back"
                     # Add "Drink Full" option when in use filter and player has healing potions + is hurt
-                    if gs.inventory_filter == 'use' and player_character.health < player_character.max_health:
+                    if gs.inventory_filter == 'use' and gs.player_character.health < gs.player_character.max_health:
                         has_healing = any(isinstance(i, Potion) and i.potion_type == 'healing'
-                                          for i in player_character.inventory.items)
+                                          for i in gs.player_character.inventory.items)
                         if has_healing:
                             inv_commands += " | df = drink full"
                 else:
