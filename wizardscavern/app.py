@@ -4879,12 +4879,15 @@ class WizardsCavernApp(toga.App):
                                 </div>
                             </div>
 
-                            <div style="margin-top: 20px; color: #4FC3F7; font-size: 12px;">
-                                Press Send to continue your adventure!
+                            <div class='taprow altar-act blessing' data-zcmd=' '
+                                 onclick="window.__zotTap(' ', this)"
+                                 style="margin-top: 20px;">
+                                <div class='aname'>Continue Your Adventure</div>
+                                <div class='ameta'>Pick up where you left off</div>
                             </div>
                         </div>
                     """
-            current_commands_text = "Press Send to continue"
+            current_commands_text = "Tap Continue"
         elif gs.prompt_cntl == "save_load_mode":
             # SAVE/LOAD MENU — tappable slot cards.
             # Empty slot: tap to save here.
@@ -5204,29 +5207,56 @@ class WizardsCavernApp(toga.App):
                 current_commands_text = "Tap a tab above to begin | ba = buy all | x = exit"
 
         elif gs.prompt_cntl == "sell_quantity_mode":
-            # SELL QUANTITY MODE - Show "How many?" prompt
+            # SELL QUANTITY MODE — tappable quick-quantity buttons.
             item = gs.pending_sell_item
             item_count = getattr(item, 'count', 1) if item else 1
             sell_price_each = (item.calculated_value // 2) if item else 0
             item_name = item.name if item else "item"
-            
+
+            # Build quick-pick buttons: 1, 5, 10 (when applicable), All.
+            # Each shows the total gold the player gets for that qty.
+            _quick_qtys = []
+            for q in (1, 5, 10):
+                if q <= item_count:
+                    _quick_qtys.append(q)
+            qty_buttons_html = "<div class='altar-actions'>"
+            for q in _quick_qtys:
+                qty_buttons_html += (
+                    f"<div class='taprow altar-act offering' data-zcmd='{q}' "
+                    f"onclick=\"window.__zotTap('{q}', this)\">"
+                    f"<div class='aname'>Sell {q}</div>"
+                    f"<div class='ameta'>+{q * sell_price_each} gold</div>"
+                    f"</div>"
+                )
+            qty_buttons_html += (
+                f"<div class='taprow altar-act bless' data-zcmd='a' "
+                f"onclick=\"window.__zotTap('a', this)\">"
+                f"<div class='aname'>Sell All ({item_count})</div>"
+                f"<div class='ameta'>+{item_count * sell_price_each} gold</div>"
+                f"</div>"
+            )
+            qty_buttons_html += (
+                "<div class='taprow cancel' data-zcmd='c' "
+                "onclick=\"window.__zotTap('c', this)\">"
+                "<span class='tapnum'>&times;</span>Cancel</div>"
+            )
+            qty_buttons_html += "</div>"
+
             quantity_html = f"""
-                <div style="border: 2px solid #DAA520; padding: 15px; border-radius: 8px; background: #1a1a1a; text-align: center;">
-                    <div style="color: #DAA520; font-weight: bold; font-size: 16px; margin-bottom: 10px;">
+                <div style="border: 2px solid #DAA520; padding: 15px; border-radius: 8px; background: #1a1a1a;">
+                    <div style="color: #DAA520; font-weight: bold; font-size: 16px; margin-bottom: 10px; text-align: center;">
                         How many to sell?
                     </div>
-                    <div style="color: #FFF; font-size: 12px; margin-bottom: 8px;">
+                    <div style="color: #FFF; font-size: 12px; margin-bottom: 4px; text-align: center;">
                         <b>{item_name}</b>
                     </div>
-                    <div style="color: #888; font-size: 12px; margin-bottom: 8px;">
-                        You have: {item_count} | Price each: {sell_price_each}g
+                    <div style="color: #888; font-size: 12px; margin-bottom: 8px; text-align: center;">
+                        You have: {item_count} &middot; Price each: {sell_price_each}g
                     </div>
-                    <div style="color: #4CAF50; font-size: 12px;">
-                        Enter 1-{item_count}, 'a' for all, or 'c' to cancel
-                    </div>
+                    {qty_buttons_html}
                 </div>
             """
-            
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column;">
                     {achievement_notifications}
@@ -5237,7 +5267,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
             """
-            current_commands_text = "1-9 = quantity | a = all | c = cancel"
+            current_commands_text = f"Tap a quantity (1-{item_count} / All / Cancel)"
 
         elif gs.prompt_cntl == "vendor_shop":
             # SHOP VIEW
@@ -6634,12 +6664,18 @@ class WizardsCavernApp(toga.App):
                             {player_combat_html}
                         </div>
                     </div>
+                    <div class='taprow altar-act bless' data-zcmd=' '
+                         onclick="window.__zotTap(' ', this)"
+                         style="margin-top: 12px;">
+                        <div class='aname'>Victory! Continue</div>
+                        <div class='ameta'>Tap anywhere or wait for auto-dismiss</div>
+                    </div>
                     {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
                     {generate_hp_drain_js(0, 1, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
                 </div>
                 """
             gs.monster_defeated_anim = victory_name
-            current_commands_text = ""
+            current_commands_text = "Tap Continue or wait"
 
             # Schedule auto-dismiss after animations finish (~2.8s)
             self._schedule_victory_dismiss()
@@ -7126,7 +7162,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 """
             
-            # Warp info box
+            # Warp info box + binary tap choice.
             warp_sprite = generate_room_sprite_html('W')
             warp_html = f"""
                 <div style="
@@ -7143,10 +7179,17 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     {vault_warning}
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px;">
-                        <div style="color: #E040FB; font-size: 12px; font-weight: bold;">What do you do?</div>
-                        <div style="color: #4CAF50; font-size: 9px; margin-top: 4px;"><b>Y</b> = Try to resist the warp (INT check)</div>
-                        <div style="color: #F44336; font-size: 9px; margin-top: 2px;"><b>N</b> = Enter the portal willingly</div>
+                    <div class='altar-actions'>
+                        <div class='taprow altar-act blessing' data-zcmd='y'
+                             onclick="window.__zotTap('y', this)">
+                            <div class='aname'>Resist the Warp</div>
+                            <div class='ameta'>Intelligence check &mdash; success keeps you here</div>
+                        </div>
+                        <div class='taprow altar-act mystic' data-zcmd='n'
+                             onclick="window.__zotTap('n', this)">
+                            <div class='aname'>Enter the Portal</div>
+                            <div class='ameta'>Step in willingly &mdash; reality will reshape around you</div>
+                        </div>
                     </div>
                 </div>
                 """
@@ -7162,12 +7205,9 @@ class WizardsCavernApp(toga.App):
                         <div class="room-panel" style="width: 100%;">{warp_html}</div>
                     </div>
 
-                    <div style="margin-top: 8px; padding: 4px; border-radius: 3px; font-size: 12px;">
-                        <b>y = resist | n = enter</b>
-                    </div>
                 </div>
                 """
-            current_commands_text = "y = resist | n = enter"
+            current_commands_text = "Tap Resist or Enter"
 
         elif gs.prompt_cntl == "stairs_up_mode":
             # STAIRS UP MODE - 2 columns: Map | Stairs Info
@@ -8018,6 +8058,44 @@ class WizardsCavernApp(toga.App):
             if raid_active:
                 raid_status = f"<div style='color:#F44336; font-size:12px; font-weight:bold; margin-bottom:6px;'>[RAID MODE ACTIVE -- {raid_turns} turns remaining]</div>"
 
+            # Two action cards.  Each is tappable when usable, greyed
+            # with a contextual tapnote otherwise (already-used, active,
+            # or — for raid — no-op while the raid is already running).
+            intel_card = (
+                "<div class='taprow altar-act detect disabled'>"
+                "<div class='aname'>Intel</div>"
+                "<div class='ameta'>Already used here</div>"
+                "<span class='tapnote'>spent</span></div>"
+            ) if intel_used else (
+                "<div class='taprow altar-act detect' data-zcmd='1' "
+                "onclick=\"window.__zotTap('1', this)\">"
+                "<div class='aname'>Intel</div>"
+                "<div class='ameta'>Free &middot; reveal all rooms on the next floor</div>"
+                "</div>"
+            )
+            if raid_used:
+                raid_card = (
+                    "<div class='taprow altar-act reforge disabled'>"
+                    "<div class='aname'>Raid Mode</div>"
+                    "<div class='ameta'>Already used here</div>"
+                    "<span class='tapnote'>spent</span></div>"
+                )
+            elif raid_active:
+                raid_card = (
+                    f"<div class='taprow altar-act reforge disabled'>"
+                    f"<div class='aname'>Raid Mode</div>"
+                    f"<div class='ameta'>Active &middot; {raid_turns} turns remaining</div>"
+                    f"<span class='tapnote'>running</span></div>"
+                )
+            else:
+                raid_card = (
+                    f"<div class='taprow altar-act reforge' data-zcmd='2' "
+                    f"onclick=\"window.__zotTap('2', this)\">"
+                    f"<div class='aname'>Raid Mode</div>"
+                    f"<div class='ameta'>{raid_cost}g &middot; +50% XP / +25% monster ATK for 10 turns</div>"
+                    f"</div>"
+                )
+
             war_sprite = generate_room_sprite_html('K')
             war_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
@@ -8029,9 +8107,9 @@ class WizardsCavernApp(toga.App):
                         Maps still pinned to the walls. Someone planned an assault here.
                     </div>
                     {raid_status}
-                    <div style="font-size: 12px; color: #DDD;">
-                        <div style="margin-bottom: 4px;">{'<span style="color:#888">[1] Intel (already used)</span>' if intel_used else '[1] Intel (free) -- reveal all rooms on next floor'}</div>
-                        <div>{'<span style="color:#888">[2] Raid mode (already used)</span>' if raid_used else ('[2] Raid mode -- already active' if raid_active else f'[2] Raid mode -- {raid_cost}g | +50% XP, +25% monster ATK for 10 turns')}</div>
+                    <div class='altar-actions'>
+                        {intel_card}
+                        {raid_card}
                     </div>
                     <div style="color:#888; font-size:11px; margin-top:10px;">Gold: {gs.player_character.gold}g</div>
                 </div>
@@ -8047,7 +8125,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
             """
-            current_commands_text = "1=intel | 2=raid mode | i=inventory | n/s/e/w=move"
+            current_commands_text = "Tap a service | i = inventory | n/s/e/w = move"
 
         elif gs.prompt_cntl == "taxidermist_mode":
             # TAXIDERMIST VIEW
