@@ -2540,9 +2540,10 @@ class WizardsCavernApp(toga.App):
             # Append letter to input field
             current = self.input_field.value or ""
             self.input_field.value = current + letter_to_add
+            self._haptic('tap')
             # DON'T focus - prevents keyboard popup!
             return
-        
+
         # Special handling for QWERTY keyboard letters during Zotle puzzle
         if gs.prompt_cntl == 'puzzle_mode' and len(cmd) == 1 and cmd.isalpha():
             letter = cmd.upper()
@@ -2552,9 +2553,15 @@ class WizardsCavernApp(toga.App):
                     if not gs.zotle_puzzle['current_guess'][i]:
                         gs.zotle_puzzle['current_guess'][i] = letter
                         break
+            self._haptic('tap')
             # Re-render to show the letter
             self.render()
             return
+
+        # Every command button press gets a light haptic.  Dangerous
+        # commands additionally get the 'arm' pulse inside
+        # _check_confirm_commit on the first tap.
+        self._haptic('tap')
         
         # Commands that always submit immediately:
         # - Movement: n/s/e/w
@@ -3672,13 +3679,15 @@ class WizardsCavernApp(toga.App):
         """Handle number pad input."""
         self.input_field.value += char
         self.input_field.focus()
-    
+        self._haptic('tap')
+
     def number_pad_backspace(self):
         """Handle backspace on number pad."""
         current = self.input_field.value
         if current:
             self.input_field.value = current[:-1]
         self.input_field.focus()
+        self._haptic('tap')
     
     def on_input_confirm(self, widget):
         """Handle Send button or Enter key press in input field."""
@@ -3782,10 +3791,85 @@ class WizardsCavernApp(toga.App):
                 except Exception:
                     pass
 
+    # ------------------------------------------------------------------
+    # Haptic feedback + two-tap commit
+    # ------------------------------------------------------------------
+    _CONFIRM_WINDOW_SEC = 3.0
+
+    def _haptic(self, pattern='tap'):
+        """Fire a haptic buzz through the WebView (navigator.vibrate).
+
+        Works on Android and desktop browsers.  iOS Safari/WKWebView
+        doesn't expose vibrate() — native UIImpactFeedbackGenerator
+        would be required there (follow-up).
+        """
+        patterns = {
+            'tap':     '8',              # quick button press
+            'arm':     '[30,60,30]',     # "armed, tap again to confirm"
+            'confirm': '40',              # solid commit buzz
+            'deny':    '[10,40,10,40]',   # denial / error
+        }
+        p = patterns.get(pattern, '8')
+        try:
+            js = f"if(window.navigator&&navigator.vibrate)navigator.vibrate({p});"
+            res = self.web_view.evaluate_javascript(js)
+            # fire-and-forget: deliberately don't await
+            _ = res
+        except Exception:
+            pass
+
+    def _dangerous_cmd_label(self, cmd):
+        """If this command is destructive in the current context, return a
+        human label for the confirm prompt; otherwise None."""
+        c = (cmd or '').strip().lower()
+        # 'q' already has its own y/n confirm flow (confirm_quit prompt).
+        if c == 'df':
+            return 'Drink potions to full'
+        if c == 'f' and gs.prompt_cntl == 'combat_mode':
+            return 'Flee combat'
+        if c == 's' and gs.prompt_cntl == 'altar_mode':
+            return 'Sacrifice at the altar'
+        return None
+
+    def _check_confirm_commit(self, cmd):
+        """Two-tap commit gate.
+
+        Returns True when the command should execute now, False to hold
+        it back (arming state).  Non-dangerous commands clear any pending
+        arm silently so a stray tap elsewhere doesn't surprise-commit the
+        next time the user presses a dangerous button.
+        """
+        import time
+        label = self._dangerous_cmd_label(cmd)
+        norm = (cmd or '').strip().lower()
+        now = time.time()
+        armed_cmd = getattr(self, '_armed_cmd', None)
+        armed_at = getattr(self, '_armed_at', 0.0)
+        # Expire stale arming
+        if armed_cmd and (now - armed_at) > self._CONFIRM_WINDOW_SEC:
+            armed_cmd = None
+            self._armed_cmd = None
+        if label is None:
+            # Non-dangerous command — clear pending arm
+            if armed_cmd:
+                self._armed_cmd = None
+            return True
+        if armed_cmd == norm:
+            # Confirmed — execute
+            self._armed_cmd = None
+            self._haptic('confirm')
+            return True
+        # Arm it, ask for second tap
+        self._armed_cmd = norm
+        self._armed_at = now
+        add_log(f"{COLOR_YELLOW}Tap again within 3s to confirm: {label}{COLOR_RESET}")
+        self._haptic('arm')
+        return False
+
     def process_command(self, cmd):
 
         # cmd is already passed in and processed by on_command_submit
-        
+
         if gs.game_should_quit:
             return
 
@@ -3818,6 +3902,12 @@ class WizardsCavernApp(toga.App):
             else:
                 add_log("Are you sure you want to quit? (y/n)")
                 return
+
+        # Two-tap commit gate for destructive commands.  Runs after the
+        # special-case modes above (splash / death_screen / confirm_quit)
+        # have their own flows, but before the main command dispatch.
+        if not self._check_confirm_commit(cmd):
+            return
 
         if cmd == 'q':
             gs.previous_prompt_cntl = gs.prompt_cntl
