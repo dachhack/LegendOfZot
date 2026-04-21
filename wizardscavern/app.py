@@ -3152,7 +3152,7 @@ class WizardsCavernApp(toga.App):
         # Row layout:
         #   Row 1: Journal | Craft | Spells
         #   Row 2: Exit | -- | Quit
-        #   Row 3: empty spacers (keep panel height consistent)
+        #   Row 3: -- | Save&Quit | --
         row1 = [
             flex_btn('j', 'Journal'),
             flex_btn('c', 'Craft'),
@@ -3163,7 +3163,9 @@ class WizardsCavernApp(toga.App):
             flex_spacer(),
             flex_btn('q', 'Quit') if not in_combat else flex_spacer(),
         ]
-        row3 = [flex_spacer(), flex_spacer(), flex_spacer()]
+        # Save & Quit lives in row 3 (out of combat only — can't save in combat).
+        sq_btn = flex_btn('sq', 'Save&Quit') if not in_combat else flex_spacer()
+        row3 = [flex_spacer(), sq_btn, flex_spacer()]
 
         for btn in row1:
             self.button_row_1.add(btn)
