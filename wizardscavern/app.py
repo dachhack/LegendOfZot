@@ -3743,16 +3743,16 @@ class WizardsCavernApp(toga.App):
         
         # Check if game should quit
         if gs.game_should_quit:
-            self.main_window.close()
+            self._force_quit()
             return
-        
+
         # Process the command using your existing game logic
         self.process_command(cmd)
 
         # Check if game should quit (e.g. after death screen)
         if gs.game_should_quit:
             self.render()
-            self.main_window.close()
+            self._force_quit()
             return
 
         # Re-render the display
@@ -3835,6 +3835,51 @@ class WizardsCavernApp(toga.App):
     # Haptic feedback + two-tap commit
     # ------------------------------------------------------------------
     _CONFIRM_WINDOW_SEC = 3.0
+
+    def _force_quit(self):
+        """Really terminate the app.
+
+        Toga's main_window.close() doesn't actually kill the process on
+        mobile — on Android the Activity finishes but the JVM/Python
+        host can linger, and on iOS programmatic exit is typically a
+        no-op via close().  We layer platform-native calls plus an
+        os._exit(0) fallback so "Quit" always closes the game.
+        """
+        import sys
+        # Android: tell the activity to finishAndRemoveTask so the app
+        # disappears from the recents list too, then nuke the JVM.
+        if sys.platform == 'android':
+            try:
+                from android import activity as _android_activity
+                try:
+                    _android_activity.finishAndRemoveTask()
+                except Exception:
+                    try:
+                        _android_activity.finish()
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+            try:
+                from java.lang import System as _JavaSystem
+                _JavaSystem.exit(0)
+            except Exception:
+                pass
+        # Toga's own close + app-level exit hooks (run cleanup handlers).
+        try:
+            self.main_window.close()
+        except Exception:
+            pass
+        try:
+            self.exit()
+        except Exception:
+            pass
+        # Last resort: hard terminate the Python process on every platform.
+        try:
+            import os
+            os._exit(0)
+        except Exception:
+            pass
 
     def _init_ios_haptics(self):
         """Lazy-init iOS UIFeedbackGenerator instances via rubicon.
