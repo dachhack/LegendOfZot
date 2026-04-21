@@ -3140,17 +3140,23 @@ class WizardsCavernApp(toga.App):
         def flex_spacer():
             return toga.Box(style=Pack(flex=1, height=30))
 
-        row1 = [flex_btn('e', 'Equip'), flex_btn('eat', 'Eat'), flex_btn('u', 'Use')]
-        row2 = [
+        # Filter (Equip/Eat/Use) is now handled by segmented tabs inside
+        # the WebView inventory panel — those Toga buttons are gone.
+        # Row layout:
+        #   Row 1: Journal | Craft | Spells
+        #   Row 2: Exit | -- | Quit
+        #   Row 3: empty spacers (keep panel height consistent)
+        row1 = [
             flex_btn('j', 'Journal'),
             flex_btn('c', 'Craft'),
             flex_btn('m', 'Spells') if can_cast else flex_spacer(),
         ]
-        row3 = [
+        row2 = [
             flex_btn('x', 'Exit'),
             flex_spacer(),
             flex_btn('q', 'Quit') if not in_combat else flex_spacer(),
         ]
+        row3 = [flex_spacer(), flex_spacer(), flex_spacer()]
 
         for btn in row1:
             self.button_row_1.add(btn)
@@ -4974,12 +4980,24 @@ class WizardsCavernApp(toga.App):
                     display_items = [i for i in combat_usable_items if isinstance(i, (Potion, Scroll))]
                     combat_filter_label = "Usable Items"
 
-                combat_filter_indicator = ""
-                if gs.inventory_filter:
-                    combat_filter_indicator = f" <span style='color: #4FC3F7; font-size: 10px;'>[filtered]</span>"
+                # Segmented filter tabs — combat has no Equip tab (can't
+                # swap gear mid-fight). 'All' sends 'b' to clear the filter.
+                _cbt_tabs = [
+                    ('All', 'b',   gs.inventory_filter is None),
+                    ('Use', 'u',   gs.inventory_filter == 'use'),
+                    ('Eat', 'eat', gs.inventory_filter == 'eat'),
+                ]
+                combat_tabs_html = "<div class='filtertabs'>"
+                for label, cmd, is_active in _cbt_tabs:
+                    cls = 'filtertab active' if is_active else 'filtertab'
+                    combat_tabs_html += (
+                        f"<div class='{cls}' data-zcmd='{cmd}' "
+                        f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                    )
+                combat_tabs_html += "</div>"
 
                 # Build inventory HTML - matching normal inventory style
-                player_inv_html = f"<h3>{combat_filter_label}{combat_filter_indicator}</h3>"
+                player_inv_html = combat_tabs_html
                 player_inv_html += "<div style='max-height: 280px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
                 player_inv_html += "<div style='margin: 0; padding: 0;'>"
 
@@ -5029,7 +5047,8 @@ class WizardsCavernApp(toga.App):
                         if has_healing:
                             current_commands_text += " | df = drink full"
                 else:
-                    current_commands_text = "u = use | eat = eat | j = journal | x = close"
+                    # Filter tabs (above) replace the typed u/eat commands.
+                    current_commands_text = "j = journal | x = close"
 
 
             else:
@@ -5105,11 +5124,26 @@ class WizardsCavernApp(toga.App):
                     display_items = [i for i in sorted_items if isinstance(i, (Food, Meat))]
                     filter_label = "Food Items"
 
-                filter_indicator = ""
-                if gs.inventory_filter:
-                    filter_indicator = f" <span style='color: #4FC3F7; font-size: 10px;'>[filtered - tap again to show all]</span>"
+                # Segmented filter tabs replace the old [filtered - tap again]
+                # hint.  Active tab reflects gs.inventory_filter; tapping a
+                # tab sends the corresponding command (b / u / e / eat)
+                # through the normal command handler.
+                _tabs = [
+                    ('All',   'b',   gs.inventory_filter is None),
+                    ('Use',   'u',   gs.inventory_filter == 'use'),
+                    ('Equip', 'e',   gs.inventory_filter == 'equip'),
+                    ('Eat',   'eat', gs.inventory_filter == 'eat'),
+                ]
+                tabs_html = "<div class='filtertabs'>"
+                for label, cmd, is_active in _tabs:
+                    cls = 'filtertab active' if is_active else 'filtertab'
+                    tabs_html += (
+                        f"<div class='{cls}' data-zcmd='{cmd}' "
+                        f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                    )
+                tabs_html += "</div>"
 
-                player_inv_html = f"<h3>{filter_label}{filter_indicator}</h3>"
+                player_inv_html = tabs_html
 
                 player_inv_html += "<div style='max-height: 295px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
 
@@ -5157,8 +5191,9 @@ class WizardsCavernApp(toga.App):
                         if has_healing:
                             inv_commands += " | df = drink full"
                 else:
-                    # Main inventory: centered command buttons, no numpad
-                    inv_commands = "u = use | e = equip | eat = eat | c = craft"
+                    # Main inventory: tap a filter tab (above) to pick items.
+                    # Hint shows only the non-tab commands.
+                    inv_commands = "c = craft"
                     if can_cast:
                         inv_commands += " | m = spells"
                     inv_commands += " | j = journal | q = quit game | x = exit"
@@ -7985,6 +8020,47 @@ class WizardsCavernApp(toga.App):
                     background: linear-gradient(180deg, #3a5a3a 0%, #1a301a 100%);
                     border-color: #8BC34A;
                     box-shadow: 0 0 10px rgba(139,195,74,0.6);
+                }}
+
+                /* ===== SEGMENTED FILTER TABS =====
+                   Pill-style bar showing the current inventory filter.
+                   Tapping a tab sets the filter directly (no more typing
+                   'u' / 'e' / 'eat').  Active tab highlights green. */
+                .filtertabs {{
+                    display: flex;
+                    gap: 3px;
+                    margin: 0 0 6px 0;
+                    padding: 3px;
+                    background: #121212;
+                    border: 1px solid #2a2a2a;
+                    border-radius: 7px;
+                }}
+                .filtertab {{
+                    flex: 1;
+                    text-align: center;
+                    padding: 7px 4px;
+                    font-size: 11px;
+                    font-weight: bold;
+                    color: #888;
+                    background: transparent;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: background 120ms ease-out, color 120ms ease-out,
+                                transform 60ms ease-out;
+                }}
+                .filtertab:active {{
+                    transform: scale(0.96);
+                    background: #252525;
+                }}
+                .filtertab.active {{
+                    background: linear-gradient(180deg, #2a4a2a 0%, #1a301a 100%);
+                    color: #8BC34A;
+                    border-color: #4CAF50;
+                    box-shadow: 0 0 6px rgba(76,175,80,0.35) inset;
                 }}
             </style>
         </head>
