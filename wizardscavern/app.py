@@ -3834,13 +3834,70 @@ class WizardsCavernApp(toga.App):
     # ------------------------------------------------------------------
     _CONFIRM_WINDOW_SEC = 3.0
 
-    def _haptic(self, pattern='tap'):
-        """Fire a haptic buzz through the WebView (navigator.vibrate).
+    def _init_ios_haptics(self):
+        """Lazy-init iOS UIFeedbackGenerator instances via rubicon.
 
-        Works on Android and desktop browsers.  iOS Safari/WKWebView
-        doesn't expose vibrate() — native UIImpactFeedbackGenerator
-        would be required there (follow-up).
+        Creates one UIImpactFeedbackGenerator per style (light/medium/heavy)
+        plus a UINotificationFeedbackGenerator.  Calling prepare() warms
+        the Taptic Engine so the first buzz isn't delayed.
         """
+        import sys
+        if sys.platform != 'ios':
+            return
+        if getattr(self, '_ios_haptic_ready', False):
+            return
+        try:
+            from rubicon.objc import ObjCClass
+            UIImpactFeedbackGenerator = ObjCClass('UIImpactFeedbackGenerator')
+            UINotificationFeedbackGenerator = ObjCClass('UINotificationFeedbackGenerator')
+            # UIImpactFeedbackStyle: 0=light, 1=medium, 2=heavy
+            self._ios_haptic_light = UIImpactFeedbackGenerator.alloc().initWithStyle_(0)
+            self._ios_haptic_medium = UIImpactFeedbackGenerator.alloc().initWithStyle_(1)
+            self._ios_haptic_heavy = UIImpactFeedbackGenerator.alloc().initWithStyle_(2)
+            self._ios_haptic_notif = UINotificationFeedbackGenerator.alloc().init()
+            for g in (self._ios_haptic_light, self._ios_haptic_medium,
+                      self._ios_haptic_heavy, self._ios_haptic_notif):
+                try:
+                    g.prepare()
+                except Exception:
+                    pass
+            self._ios_haptic_ready = True
+        except Exception:
+            self._ios_haptic_ready = False
+
+    def _haptic(self, pattern='tap'):
+        """Fire a haptic buzz.
+
+        iOS path: UIImpactFeedbackGenerator / UINotificationFeedbackGenerator
+        via rubicon (WKWebView doesn't expose navigator.vibrate on iOS).
+        Android / desktop path: navigator.vibrate() through evaluate_javascript.
+        """
+        import sys
+        if sys.platform == 'ios':
+            try:
+                self._init_ios_haptics()
+                if getattr(self, '_ios_haptic_ready', False):
+                    # UINotificationFeedbackType: 0=success, 1=warning, 2=error
+                    if pattern == 'tap':
+                        self._ios_haptic_light.impactOccurred()
+                        self._ios_haptic_light.prepare()
+                    elif pattern == 'arm':
+                        self._ios_haptic_notif.notificationOccurred_(1)  # warning
+                        self._ios_haptic_notif.prepare()
+                    elif pattern == 'confirm':
+                        self._ios_haptic_notif.notificationOccurred_(0)  # success
+                        self._ios_haptic_notif.prepare()
+                    elif pattern == 'deny':
+                        self._ios_haptic_notif.notificationOccurred_(2)  # error
+                        self._ios_haptic_notif.prepare()
+                    else:
+                        self._ios_haptic_medium.impactOccurred()
+                        self._ios_haptic_medium.prepare()
+                    return
+            except Exception:
+                pass  # fall through to JS path
+
+        # Android / desktop: navigator.vibrate via WebView
         patterns = {
             'tap':     '8',              # quick button press
             'arm':     '[30,60,30]',     # "armed, tap again to confirm"
@@ -3851,8 +3908,7 @@ class WizardsCavernApp(toga.App):
         try:
             js = f"if(window.navigator&&navigator.vibrate)navigator.vibrate({p});"
             res = self.web_view.evaluate_javascript(js)
-            # fire-and-forget: deliberately don't await
-            _ = res
+            _ = res  # fire-and-forget: don't await
         except Exception:
             pass
 
@@ -5380,14 +5436,32 @@ class WizardsCavernApp(toga.App):
                     # Without a filter we have no implicit verb, so rows
                     # stay non-interactive (user picks a verb button first).
                     _tap_prefix = {'use': 'u', 'equip': 'e', 'eat': 'eat'}.get(gs.inventory_filter, '')
+                    _pc = gs.player_character
+                    _equipped_accs = set(id(a) for a in getattr(_pc, 'equipped_accessories', []) if a is not None)
                     for i, item in enumerate(display_items):
                         item_str = format_item_for_display(item, gs.player_character, show_price=False)
+                        # In the Equip filter, mark currently-equipped rows so
+                        # the player sees that tapping will UNEQUIP instead of
+                        # a silent no-op.
+                        _is_equipped = False
+                        if gs.inventory_filter == 'equip':
+                            if isinstance(item, Weapon) and _pc.equipped_weapon is item:
+                                _is_equipped = True
+                            elif isinstance(item, Armor) and _pc.equipped_armor is item:
+                                _is_equipped = True
+                            elif isinstance(item, Towel) and _pc.equipped_weapon is item:
+                                _is_equipped = True
+                            elif isinstance(item, Treasure) and id(item) in _equipped_accs:
+                                _is_equipped = True
                         if _tap_prefix:
                             cmd_str = f"{_tap_prefix}{i + 1}"
+                            row_cls = 'taprow equipped' if _is_equipped else 'taprow'
+                            eq_badge = "<span class='eqbadge'>EQUIPPED &middot; tap to remove</span>" if _is_equipped else ""
                             player_inv_html += (
-                                f"<div class='taprow' data-zcmd='{cmd_str}' "
+                                f"<div class='{row_cls}' data-zcmd='{cmd_str}' "
                                 f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
                                 f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                                f"{eq_badge}"
                                 f"</div>"
                             )
                         else:
@@ -5659,36 +5733,70 @@ class WizardsCavernApp(toga.App):
             max_slots = gs.player_character.get_max_memorized_spell_slots()
             used_slots = gs.player_character.get_used_spell_slots()
 
-            # Available spells HTML
+            # Segmented tabs: [Memorize] [Forget] [Cast].  Idempotent —
+            # bare m/f/c already SET the sub-action (no toggle-off) so
+            # tapping the active tab is harmless.  'Cast' invokes
+            # self-targeted spells out of combat (healing, cleanses,
+            # buffs); damage/debuff_target spells are greyed out.
+            _mem_tabs = [
+                ('Memorize', 'm', gs.spell_memo_action == 'memorize'),
+                ('Forget',   'f', gs.spell_memo_action == 'forget'),
+                ('Cast',     'c', gs.spell_memo_action == 'cast'),
+            ]
+            memo_tabs_html = "<div class='filtertabs'>"
+            for label, cmd, is_active in _mem_tabs:
+                cls = 'filtertab active' if is_active else 'filtertab'
+                memo_tabs_html += (
+                    f"<div class='{cls}' data-zcmd='{cmd}' "
+                    f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                )
+            memo_tabs_html += "</div>"
+
+            # Available spells HTML — tappable when Memorize tab is active
             available_spells_html = "<h3>Spells in Inventory</h3>"
             available_spells_html += "<div style='max-height: 280px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
-            available_spells_html += "<ul style='margin: 0; padding-left: 20px;'>"
+            _can_memorize = (gs.spell_memo_action == 'memorize')
             if not all_spells:
                 available_spells_html += "<p>You have no spell scrolls in your inventory.</p>"
             else:
-                available_spells_html += "<ul>"
                 for i, spell in enumerate(all_spells):
                     identified = is_item_identified(spell)
                     display_name = get_item_display_name(spell)
                     is_memorized = spell in gs.player_character.memorized_spells
-                    color = "#888" if is_memorized else "#FFF"
-                    marker = " <span style='color: #4CAF50;'>[MEM]</span>" if is_memorized else ""
+                    marker = " <span class='eqbadge'>MEM</span>" if is_memorized else ""
 
                     if identified:
                         slots_needed = gs.player_character.get_spell_slots(spell)
                         spell_info = f"<b>{display_name}</b>{marker}<br>"
-                        spell_info += f"&nbsp;&nbsp;L{spell.level} | "
-                        spell_info += f"{spell.mana_cost} MP | "
-                        spell_info += f"{slots_needed} slot{'s' if slots_needed > 1 else ''}<br>"
-                        spell_info += f"&nbsp;&nbsp;Type: {spell.spell_type}"
+                        spell_info += f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
+                        spell_info += f"L{spell.level} | {spell.mana_cost} MP | "
+                        spell_info += f"{slots_needed} slot{'s' if slots_needed > 1 else ''} | "
+                        spell_info += f"{spell.spell_type}</span>"
                     else:
                         spell_info = f"<b>{display_name}</b> <span style='color: #888;'>[?]</span>"
 
-                    available_spells_html += f"<li style='color: {color}; margin-bottom: 5px;'><b>{i + 1}.</b> {spell_info}</li>"
-                available_spells_html += "</ul>"
+                    body = f"<span class='tapnum'>{i + 1}.</span>{spell_info}"
+                    if _can_memorize and not is_memorized:
+                        cmd_str = f"m{i + 1}"
+                        available_spells_html += (
+                            f"<div class='taprow spell' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">{body}</div>"
+                        )
+                    else:
+                        row_cls = 'taprow spell disabled' if _can_memorize and is_memorized else 'taprow spell disabled'
+                        # No filter active OR already memorized => non-tappable
+                        if _can_memorize and is_memorized:
+                            available_spells_html += (
+                                f"<div class='{row_cls}'>{body}"
+                                f"<span class='tapnote'>Already memorized</span></div>"
+                            )
+                        else:
+                            available_spells_html += (
+                                f"<div style='margin: 2px 0; padding: 4px;'>{body}</div>"
+                            )
             available_spells_html += "</div>"
 
-            # Memorized spells HTML with progress bar
+            # Memorized spells HTML with progress bar — tappable when Forget is active
             memorized_html = f"""
                 <h3>Spell Slots: {used_slots}/{max_slots}</h3>
                 <div style="background-color: #333; padding: 3px; border-radius: 3px; margin-bottom: 5px;">
@@ -5699,12 +5807,65 @@ class WizardsCavernApp(toga.App):
                 <h3>Currently Memorized</h3>
                 """
 
+            _can_forget = (gs.spell_memo_action == 'forget')
+            _can_cast_ooc = (gs.spell_memo_action == 'cast')
+            # spell_types that make sense without a monster target — must stay
+            # in sync with _OUT_OF_COMBAT_SAFE in combat.py.
+            _ooc_safe_types = {'healing', 'remove_status', 'add_status_effect'}
+            _current_mana = gs.player_character.mana
             if gs.player_character.memorized_spells:
-                memorized_html += "<ul>"
                 for i, spell in enumerate(gs.player_character.memorized_spells):
                     slots_used = gs.player_character.get_spell_slots(spell)
-                    memorized_html += f"<li><b>{i + 1}.</b> {spell.name} ({slots_used} slot{'s' if slots_used > 1 else ''})</li>"
-                memorized_html += "</ul>"
+                    # Cast-tab rows show the MP cost + effect summary
+                    if _can_cast_ooc:
+                        if spell.spell_type == 'healing':
+                            detail = f"Heal {spell.base_power}+Int/2 HP"
+                        elif spell.spell_type == 'remove_status':
+                            detail = f"Cleanse {spell.status_effect_name or '(self)'}"
+                        elif spell.spell_type == 'add_status_effect':
+                            detail = f"Buff: {spell.status_effect_name or '(self)'}"
+                        else:
+                            detail = f"{spell.spell_type} (combat only)"
+                        body = (
+                            f"<span class='tapnum'>{i + 1}.</span>"
+                            f"<b>{spell.name}</b> ({spell.mana_cost} MP)<br>"
+                            f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
+                            f"Lvl {spell.level} | {detail}</span>"
+                        )
+                    else:
+                        body = (
+                            f"<span class='tapnum'>{i + 1}.</span>"
+                            f"<b>{spell.name}</b> "
+                            f"<span style='color:#CE93D8; font-size:10px;'>"
+                            f"({slots_used} slot{'s' if slots_used > 1 else ''})</span>"
+                        )
+                    if _can_forget:
+                        cmd_str = f"f{i + 1}"
+                        memorized_html += (
+                            f"<div class='taprow spell' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">{body}</div>"
+                        )
+                    elif _can_cast_ooc:
+                        if spell.spell_type not in _ooc_safe_types:
+                            memorized_html += (
+                                f"<div class='taprow spell disabled'>{body}"
+                                f"<span class='tapnote'>Combat only</span></div>"
+                            )
+                        elif _current_mana < spell.mana_cost:
+                            memorized_html += (
+                                f"<div class='taprow spell disabled'>{body}"
+                                f"<span class='tapnote'>Not enough MP</span></div>"
+                            )
+                        else:
+                            cmd_str = f"c{i + 1}"
+                            memorized_html += (
+                                f"<div class='taprow spell' data-zcmd='{cmd_str}' "
+                                f"onclick=\"window.__zotTap('{cmd_str}', this)\">{body}</div>"
+                            )
+                    else:
+                        memorized_html += (
+                            f"<div style='margin: 2px 0; padding: 4px;'>{body}</div>"
+                        )
             else:
                 memorized_html += "<p><i>No spells memorized</i></p>"
 
@@ -5713,16 +5874,18 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
 
+                    {memo_tabs_html}
+
                     <div style="border: 1px solid green; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{memorized_html}</div>
-                    
+
                     <div style="border: 1px solid blue; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{available_spells_html}</div>
 </div>
                 """
             if gs.spell_memo_action:
-                action_label = {'memorize': 'memorize', 'forget': 'forget'}.get(gs.spell_memo_action, gs.spell_memo_action)
-                current_commands_text = f"# = {action_label} spell | b = back"
+                action_label = {'memorize': 'memorize', 'forget': 'forget', 'cast': 'cast'}.get(gs.spell_memo_action, gs.spell_memo_action)
+                current_commands_text = f"# = {action_label} spell | x = exit"
             else:
-                current_commands_text = "m = memorize | f = forget | x = exit"
+                current_commands_text = "Tap a tab above to begin | x = exit"
 
         elif gs.prompt_cntl == "journal_mode":
             # JOURNAL MAIN MENU
@@ -6075,7 +6238,9 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
 
-            # Spells List
+            # Spells List — tappable modal.  Rows are taprows that send the
+            # bare spell number (process_spell_casting_action reads an int).
+            # Insufficient-mana rows stay non-interactive and greyed out.
             available_spells = gs.player_character.memorized_spells
             spells_html = '<div style="padding: 4px; border-radius: 4px; border: 2px solid #E040FB; max-height: 45vh; overflow-y: auto;">'
             spells_html += '<div style="color: #E040FB; font-weight: bold; font-size: 13px; margin-bottom: 4px;"> Cast Spell</div>'
@@ -6085,27 +6250,46 @@ class WizardsCavernApp(toga.App):
             else:
                 for i, spell in enumerate(available_spells):
                     can_cast = gs.player_character.mana >= spell.mana_cost
-                    color = "#4CAF50" if can_cast else "#888"
                     charge_turns = get_spell_charge_turns(spell)
                     charge_tag = ""
                     if charge_turns > 0:
                         charge_tag = f' <span style="color:#CE93D8;">[{charge_turns}T]</span>'
 
-                    spell_line = f'<div style="color: {color}; font-size: 11px; margin-bottom: 4px; padding: 3px; border-radius: 2px;">'
-                    spell_line += f'<b>{i + 1}. {spell.name}</b> ({spell.mana_cost} MP){charge_tag}<br>'
-                    spell_line += f'&nbsp;&nbsp;Lvl {spell.level} | '
-
                     if spell.spell_type == 'damage':
-                        spell_line += f'{spell.damage_type} | Pwr {spell.base_power}'
+                        detail = f'{spell.damage_type} | Pwr {spell.base_power}'
                     elif spell.spell_type == 'healing':
-                        spell_line += f'Heal {spell.base_power} HP'
+                        detail = f'Heal {spell.base_power} HP'
                     elif spell.spell_type in ['add_status_effect', 'remove_status']:
-                        spell_line += f'{spell.status_effect_name}'
+                        detail = f'{spell.status_effect_name}'
                     elif spell.spell_type == 'debuff_target':
-                        spell_line += f'{spell.status_effect_name}'
+                        detail = f'{spell.status_effect_name}'
+                    else:
+                        detail = ''
 
-                    spell_line += '</div>'
-                    spells_html += spell_line
+                    body = (
+                        f"<span class='tapnum'>{i + 1}.</span>"
+                        f"<b>{spell.name}</b> ({spell.mana_cost} MP){charge_tag}<br>"
+                        f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
+                        f"Lvl {spell.level} | {detail}</span>"
+                    )
+                    if can_cast:
+                        cmd_str = f"{i + 1}"
+                        spells_html += (
+                            f"<div class='taprow spell' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">{body}</div>"
+                        )
+                    else:
+                        spells_html += (
+                            f"<div class='taprow spell disabled'>{body}"
+                            f"<span class='tapnote'>Not enough MP</span></div>"
+                        )
+
+                # Cancel row so the player can back out without typing 'x'
+                spells_html += (
+                    "<div class='taprow spell cancel' data-zcmd='x' "
+                    "onclick=\"window.__zotTap('x', this)\">"
+                    "<span class='tapnum'>&times;</span>Cancel</div>"
+                )
 
             spells_html += '</div>'
 
@@ -6127,7 +6311,7 @@ class WizardsCavernApp(toga.App):
 
                 </div>
                 """
-            current_commands_text = "#  = cast spell | x = cancel"
+            current_commands_text = "Tap a spell to cast | x = cancel"
 
         elif gs.prompt_cntl == "combat_mode":
             # COMBAT VIEW WITH MAP - 3 Column Layout
@@ -6565,6 +6749,8 @@ class WizardsCavernApp(toga.App):
             sorted_items = get_sorted_inventory(gs.player_character.inventory)
             sacrificeable = [it for it in sorted_items if not isinstance(it, (Rune, Shard))]
 
+            # Tappable sacrifice rows — each sends s{N} directly to
+            # process_altar_action, which handles any altar_action state.
             inv_html = ""
             if not sacrificeable:
                 inv_html = "<div style='color:#888; font-size:12px;'>(Nothing to sacrifice)</div>"
@@ -6578,18 +6764,56 @@ class WizardsCavernApp(toga.App):
                             buc_tag = " <span style='color:#FFD700;'>[BLESSED]</span>"
                         elif item.buc_status == 'cursed':
                             buc_tag = " <span style='color:#F44336;'>[CURSED]</span>"
-                    inv_html += f"<div style='margin:2px 0; font-size:12px;'><b>{i+1}.</b> {item_str}{sealed_tag}{buc_tag}</div>"
+                    cmd_str = f"s{i + 1}"
+                    inv_html += (
+                        f"<div class='taprow' data-zcmd='{cmd_str}' "
+                        f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                        f"<span class='tapnum'>{i + 1}.</span>{item_str}{sealed_tag}{buc_tag}"
+                        f"</div>"
+                    )
 
+            # Altar action buttons: Detect BUC / Bless / Purify / Devotion.
+            # Rendered as large taprow buttons so the player doesn't have to
+            # type d / b / u / 9.  Devotion only appears when qualified.
+            _pc = gs.player_character
+            _floor = _pc.z if _pc else 0
+            _bless_cost = 100 + _floor * 10
+            _purify_cost_pct = max(1, _pc.max_health // 10) if _pc else 0
+            action_cards_html = "<div class='altar-actions'>"
+            action_cards_html += (
+                "<div class='taprow altar-act detect' data-zcmd='d' "
+                "onclick=\"window.__zotTap('d', this)\">"
+                "<div class='aname'>Detect BUC</div>"
+                "<div class='ameta'>Reveal blessed / cursed status on equipped gear</div>"
+                "</div>"
+            )
+            action_cards_html += (
+                f"<div class='taprow altar-act bless' data-zcmd='b' "
+                f"onclick=\"window.__zotTap('b', this)\">"
+                f"<div class='aname'>Bless Equipment</div>"
+                f"<div class='ameta'>Costs {_bless_cost} gold &middot; elevates one uncursed item</div>"
+                f"</div>"
+            )
+            action_cards_html += (
+                f"<div class='taprow altar-act purify' data-zcmd='u' "
+                f"onclick=\"window.__zotTap('u', this)\">"
+                f"<div class='aname'>Purify Curse</div>"
+                f"<div class='ameta'>Costs ~{_purify_cost_pct} HP (10% max) &middot; remove curse from equipped gear</div>"
+                f"</div>"
+            )
             devotion_hint = ""
             if not gs.runes_obtained.get('devotion', False) and gs.player_character is not None:
                 gold_req = gs.rune_progress_reqs.get('gold_obtained', 500)
                 hp_req = gs.rune_progress_reqs.get('player_health_obtained', 50)
                 if gs.player_character.gold >= gold_req and gs.player_character.health >= hp_req:
-                    devotion_hint = (
-                        "<div style='color:#FFD700; font-size:11px; margin-top:5px; border-top:1px solid #555; padding-top:4px;'>"
-                        "[9] Offer " + str(gold_req) + " gold + " + str(hp_req) + " HP to all gods - Rune of Devotion"
-                        "</div>"
+                    action_cards_html += (
+                        f"<div class='taprow altar-act devotion' data-zcmd='9' "
+                        f"onclick=\"window.__zotTap('9', this)\">"
+                        f"<div class='aname'>Rune of Devotion</div>"
+                        f"<div class='ameta'>Costs {gold_req}g + {hp_req} HP &middot; one-time ultimate offering</div>"
+                        f"</div>"
                     )
+            action_cards_html += "</div>"
 
             altar_sprite = generate_room_sprite_html('A')
 
@@ -6613,21 +6837,20 @@ class WizardsCavernApp(toga.App):
                         INT {gs.player_character.intelligence} intuition | Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
                         | <span style="color:#888;">Right offering = reward | Wrong = displeasure</span>
                     </div>
+                    {action_cards_html}
                     <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
                         <div style="border: 1px solid #555; padding: 3px;">
-                            <h3 style='margin: 0 0 5px 0; color: #DDD;'>Sacrifice an Item</h3>
+                            <h3 style='margin: 0 0 5px 0; color: #DDD;'>Tap an item to sacrifice</h3>
                             <div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 400px;'>
                                 {inv_html}
                             </div>
-                            {devotion_hint}
                         </div>
                     </div>
                 </div>
                 """
-            if gs.altar_action:
-                current_commands_text = "# = sacrifice item | b = back"
-            else:
-                current_commands_text = "s = sacrifice | d = detect | b = bless | u = purify | i = inventory | x = exit"
+            # Rows + action cards carry every interaction; hint shows the
+            # keyboard fallbacks plus the global exit.
+            current_commands_text = "Tap an item to sacrifice | i = inventory | x = exit"
 
         elif gs.prompt_cntl == "pool_mode":
             # POOL VIEW - Simplified: Map | Pool Info
@@ -8244,6 +8467,125 @@ class WizardsCavernApp(toga.App):
                     border-color: #8BC34A;
                     box-shadow: 0 0 10px rgba(139,195,74,0.6);
                 }}
+                /* Equipped items in the Equip list: gold border + "tap to
+                   remove" affordance so the unequip action is obvious. */
+                .taprow.equipped {{
+                    background: linear-gradient(180deg, #2a2418 0%, #18140c 100%);
+                    border-color: #FFD700;
+                    box-shadow: 0 0 6px rgba(255,215,0,0.35) inset;
+                }}
+                .taprow.equipped .tapnum {{
+                    color: #FFD700;
+                }}
+                .eqbadge {{
+                    display: inline-block;
+                    margin-left: 8px;
+                    padding: 1px 6px;
+                    font-size: 9px;
+                    font-weight: bold;
+                    color: #1a1a1a;
+                    background: #FFD700;
+                    border-radius: 8px;
+                    vertical-align: middle;
+                    letter-spacing: 0.3px;
+                }}
+                /* Spell cast modal rows: purple/magenta theme. */
+                .taprow.spell {{
+                    background: linear-gradient(180deg, #2a1a3a 0%, #1a0e24 100%);
+                    border-color: #5a3a7a;
+                    color: #E1BEE7;
+                }}
+                .taprow.spell:active {{
+                    background: linear-gradient(180deg, #4a2a6a 0%, #2a1a3a 100%);
+                    border-color: #E040FB;
+                    box-shadow: 0 0 10px rgba(224,64,251,0.5),
+                                0 1px 0 #0a0a0a inset;
+                }}
+                .taprow.spell .tapnum {{
+                    color: #E040FB;
+                }}
+                /* Disabled: grey out and kill interactivity. */
+                .taprow.disabled {{
+                    opacity: 0.45;
+                    cursor: not-allowed;
+                    pointer-events: none;
+                    filter: grayscale(0.6);
+                }}
+                .tapnote {{
+                    display: inline-block;
+                    margin-left: 8px;
+                    padding: 1px 6px;
+                    font-size: 9px;
+                    font-weight: bold;
+                    color: #bbb;
+                    background: #3a1a1a;
+                    border-radius: 8px;
+                    vertical-align: middle;
+                }}
+                /* Cancel-row variant: muted red tint. */
+                .taprow.cancel {{
+                    background: linear-gradient(180deg, #2a1a1a 0%, #1a0e0e 100%);
+                    border-color: #6a3a3a;
+                    color: #D0A0A0;
+                    text-align: center;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-top: 6px;
+                }}
+                .taprow.cancel:active {{
+                    background: linear-gradient(180deg, #4a2a2a 0%, #2a1a1a 100%);
+                    border-color: #FF5252;
+                    box-shadow: 0 0 8px rgba(255,82,82,0.5);
+                }}
+                .taprow.cancel .tapnum {{
+                    color: #FF8A80;
+                }}
+                /* Altar action cards: stack of tall taprows, each with a
+                   coloured title + muted meta line, rendered ABOVE the
+                   sacrifice item list.  Detect=cyan, Bless=gold, Purify=
+                   pale violet, Devotion=divine gold. */
+                .altar-actions {{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 4px;
+                    margin: 4px 0 8px 0;
+                }}
+                .taprow.altar-act {{
+                    padding: 8px 10px;
+                    line-height: 1.3;
+                }}
+                .taprow.altar-act .aname {{
+                    font-weight: bold;
+                    font-size: 12px;
+                    letter-spacing: 0.3px;
+                }}
+                .taprow.altar-act .ameta {{
+                    font-size: 10px;
+                    color: #888;
+                    margin-top: 2px;
+                }}
+                .taprow.altar-act.detect {{
+                    background: linear-gradient(180deg, #13272e 0%, #0c1a1f 100%);
+                    border-color: #4a7a8a;
+                }}
+                .taprow.altar-act.detect .aname {{ color: #4FC3F7; }}
+                .taprow.altar-act.bless {{
+                    background: linear-gradient(180deg, #2a2418 0%, #18140c 100%);
+                    border-color: #8a7a4a;
+                }}
+                .taprow.altar-act.bless .aname {{ color: #FFD700; }}
+                .taprow.altar-act.purify {{
+                    background: linear-gradient(180deg, #2a1a2e 0%, #18101f 100%);
+                    border-color: #8a5a9a;
+                }}
+                .taprow.altar-act.purify .aname {{ color: #CE93D8; }}
+                .taprow.altar-act.devotion {{
+                    background: linear-gradient(180deg, #3a2a0e 0%, #1f1506 100%);
+                    border-color: #FFC107;
+                    box-shadow: 0 0 10px rgba(255,193,7,0.25) inset;
+                }}
+                .taprow.altar-act.devotion .aname {{ color: #FFC107; }}
+                .taprow.altar-act.devotion .ameta {{ color: #C8A857; }}
 
                 /* ===== SEGMENTED FILTER TABS =====
                    Pill-style bar showing the current inventory filter.

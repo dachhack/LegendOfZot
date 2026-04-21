@@ -1358,7 +1358,7 @@ def process_spell_memorization_action(player_character, my_tower, cmd):
 
     # Sub-action routing: numpad mode prefixes bare numbers
     if gs.spell_memo_action and cmd.isdigit():
-        prefix = {'memorize': 'm', 'forget': 'f'}.get(gs.spell_memo_action, '')
+        prefix = {'memorize': 'm', 'forget': 'f', 'cast': 'c'}.get(gs.spell_memo_action, '')
         cmd = prefix + cmd
 
     # Back button: clear sub-action
@@ -1375,7 +1375,15 @@ def process_spell_memorization_action(player_character, my_tower, cmd):
         gs.spell_memo_action = 'forget'
         return
 
+    if cmd == 'c':
+        gs.spell_memo_action = 'cast'
+        return
+
     all_spells = player_character.get_spell_inventory()
+
+    # Self-targeted spell types safe to cast outside combat.  Damage and
+    # debuff_target spells need a monster target so we refuse those here.
+    _OUT_OF_COMBAT_SAFE = {'healing', 'remove_status', 'add_status_effect'}
 
     if cmd.startswith('m') and len(cmd) > 1 and cmd != 'mx':
         try:
@@ -1402,6 +1410,25 @@ def process_spell_memorization_action(player_character, my_tower, cmd):
                 add_log(f"{COLOR_YELLOW}Invalid memorized spell number.{COLOR_RESET}")
         except ValueError:
             add_log(f"{COLOR_YELLOW}Invalid input. Use 'f [number]' to forget.{COLOR_RESET}")
+
+    elif cmd.startswith('c') and len(cmd) > 1 and cmd != 'cx':
+        # Out-of-combat cast: only self-targeted spell types allowed.
+        # cast_spell handles silence / mana checks and returns False if
+        # the cast was blocked.
+        try:
+            spell_index = int(cmd[1:].strip()) - 1
+            mem = player_character.memorized_spells
+            if 0 <= spell_index < len(mem):
+                spell = mem[spell_index]
+                if spell.spell_type not in _OUT_OF_COMBAT_SAFE:
+                    add_log(f"{COLOR_YELLOW}{spell.name} can only be cast in combat.{COLOR_RESET}")
+                else:
+                    player_character.cast_spell(spell, None)
+                process_spell_memorization_action(player_character, my_tower, "init")
+            else:
+                add_log(f"{COLOR_YELLOW}Invalid memorized spell number.{COLOR_RESET}")
+        except ValueError:
+            add_log(f"{COLOR_YELLOW}Invalid input. Use 'c [number]' to cast.{COLOR_RESET}")
 
 def process_journal_action(player_character, my_tower, cmd):
     """
