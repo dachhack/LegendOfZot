@@ -2236,6 +2236,21 @@ class WizardsCavernApp(toga.App):
         # Initial render
         self.render()
 
+        # Launch the WebView tap-bridge poll loop.  Item rows in the HTML
+        # side call window.__zotTap(cmd) on click; this task drains the
+        # queue and feeds commands back into process_command() so players
+        # can tap an inventory item instead of typing its number.
+        try:
+            self.add_background_task(self._poll_webview_bridge)
+        except Exception:
+            try:
+                import asyncio
+                self.loop.call_soon(
+                    lambda: asyncio.ensure_future(self._poll_webview_bridge())
+                )
+            except Exception:
+                pass
+
         # Schedule transition from splash to intro after 5 seconds
         import threading
         def _end_splash():
@@ -3690,7 +3705,77 @@ class WizardsCavernApp(toga.App):
         
         # Keep focus on input
         self.input_field.focus()
-    
+
+    async def _poll_webview_bridge(self, *args, **kwargs):
+        """Drain tap commands posted from the WebView (tappable item rows).
+
+        The HTML shell exposes window.__zotTap(cmd) which pushes onto
+        window.__zotCmds.  We poll every ~120ms, read-and-clear the queue
+        via evaluate_javascript, and feed each command into the normal
+        process_command()/render() path — same effect as typing the
+        command on the numpad and hitting SEND.
+        """
+        import asyncio
+        import json as _json
+        # Let startup settle before we start polling
+        try:
+            await asyncio.sleep(0.5)
+        except Exception:
+            return
+        drain_js = (
+            "(function(){"
+            "var q=(window.__zotCmds||[]).slice();"
+            "window.__zotCmds=[];"
+            "return JSON.stringify(q);"
+            "})()"
+        )
+        while True:
+            try:
+                await asyncio.sleep(0.12)
+            except Exception:
+                break
+            if getattr(gs, 'game_should_quit', False):
+                break
+            res = None
+            try:
+                res = self.web_view.evaluate_javascript(drain_js)
+                if hasattr(res, '__await__'):
+                    res = await res
+                elif hasattr(res, 'result'):
+                    try:
+                        res = res.result
+                    except Exception:
+                        res = None
+            except Exception:
+                continue
+            if not res:
+                continue
+            if isinstance(res, bytes):
+                try:
+                    res = res.decode('utf-8')
+                except Exception:
+                    continue
+            cmds = []
+            try:
+                cmds = _json.loads(res)
+            except Exception:
+                try:
+                    cmds = _json.loads(_json.loads(res))
+                except Exception:
+                    cmds = []
+            if not cmds:
+                continue
+            for cmd in cmds:
+                if not cmd:
+                    continue
+                try:
+                    self.process_command(str(cmd))
+                    if getattr(gs, 'game_should_quit', False):
+                        return
+                    self.render()
+                except Exception:
+                    pass
+
     def process_command(self, cmd):
 
         # cmd is already passed in and processed by on_command_submit
@@ -4901,9 +4986,25 @@ class WizardsCavernApp(toga.App):
                 if not display_items:
                     player_inv_html += "<div style='margin: 2px 0; padding: 0; color: #888;'>(No matching items)</div>"
                 else:
+                    # Tap-to-act in combat: filter prefix is 'u' or 'eat'.
+                    # No filter => no implicit verb, so rows stay plain text.
+                    _tap_prefix = {'use': 'u', 'eat': 'eat'}.get(gs.inventory_filter, '')
                     for i, item in enumerate(display_items):
                         item_str = format_item_for_display(item, gs.player_character, show_price=False)
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                        if _tap_prefix:
+                            cmd_str = f"{_tap_prefix}{i + 1}"
+                            player_inv_html += (
+                                f"<div class='taprow' data-zcmd='{cmd_str}' "
+                                f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                                f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                                f"</div>"
+                            )
+                        else:
+                            player_inv_html += (
+                                f"<div style='margin: 2px 0; padding: 4px 0;'>"
+                                f"<b>{i + 1}.</b> {item_str}"
+                                f"</div>"
+                            )
 
                 player_inv_html += "</div>"
                 player_inv_html += "</div>"
@@ -5017,9 +5118,27 @@ class WizardsCavernApp(toga.App):
                 if not display_items:
                     player_inv_html += "<div style='margin: 2px 0; padding: 0; color: #888;'>(No matching items)</div>"
                 else:
+                    # Tap-to-act: with a filter active, each row injects the
+                    # properly-prefixed command (u1 / e1 / eat1) to Python.
+                    # Without a filter we have no implicit verb, so rows
+                    # stay non-interactive (user picks a verb button first).
+                    _tap_prefix = {'use': 'u', 'equip': 'e', 'eat': 'eat'}.get(gs.inventory_filter, '')
                     for i, item in enumerate(display_items):
                         item_str = format_item_for_display(item, gs.player_character, show_price=False)
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                        if _tap_prefix:
+                            cmd_str = f"{_tap_prefix}{i + 1}"
+                            player_inv_html += (
+                                f"<div class='taprow' data-zcmd='{cmd_str}' "
+                                f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                                f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                                f"</div>"
+                            )
+                        else:
+                            player_inv_html += (
+                                f"<div style='margin: 2px 0; padding: 4px 0;'>"
+                                f"<b>{i + 1}.</b> {item_str}"
+                                f"</div>"
+                            )
 
                 player_inv_html += "</div>"
 
@@ -7826,10 +7945,79 @@ class WizardsCavernApp(toga.App):
                 #game-log {{
                     animation: none;
                 }}
+
+                /* ===== TAPPABLE INVENTORY / MENU ROWS ===== */
+                /* Fat touch target, visible affordance, press feedback.
+                   Any element with class="taprow" becomes a finger-friendly
+                   button. data-zcmd attribute carries the command string
+                   that should be injected to Python on tap. */
+                .taprow {{
+                    display: block;
+                    margin: 3px 0;
+                    padding: 8px 10px;
+                    border: 1px solid #2a3a2a;
+                    border-radius: 4px;
+                    background: linear-gradient(180deg, #1e2a1e 0%, #162016 100%);
+                    color: #DDD;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: transform 60ms ease-out, background 120ms ease-out,
+                                border-color 120ms ease-out, box-shadow 120ms ease-out;
+                    box-shadow: 0 1px 0 #0a0a0a inset;
+                }}
+                .taprow:active {{
+                    transform: scale(0.98);
+                    background: linear-gradient(180deg, #2a4a2a 0%, #1a301a 100%);
+                    border-color: #4CAF50;
+                    box-shadow: 0 0 8px rgba(76,175,80,0.45),
+                                0 1px 0 #0a0a0a inset;
+                }}
+                .taprow .tapnum {{
+                    color: #4CAF50;
+                    font-weight: bold;
+                    margin-right: 6px;
+                    min-width: 14px;
+                    display: inline-block;
+                }}
+                .taprow.armed {{
+                    background: linear-gradient(180deg, #3a5a3a 0%, #1a301a 100%);
+                    border-color: #8BC34A;
+                    box-shadow: 0 0 10px rgba(139,195,74,0.6);
+                }}
             </style>
         </head>
         <body>
             <script>
+                // ===== Python <-> WebView tap bridge =====
+                // Item rows (and any other .taprow) call window.__zotTap(cmd)
+                // on click.  Commands queue up in window.__zotCmds and are
+                // drained by a Python background task that polls via
+                // evaluate_javascript().  A short debounce on each row
+                // prevents double-fire from accidental re-taps.
+                window.__zotCmds = window.__zotCmds || [];
+                window.__zotTap = function(cmd, el) {{
+                    try {{
+                        if (!cmd) return;
+                        var now = Date.now();
+                        if (el && el.__lastTap && (now - el.__lastTap) < 350) {{
+                            return;  // debounce rapid re-taps on same row
+                        }}
+                        if (el) {{
+                            el.__lastTap = now;
+                            el.classList.add('armed');
+                            setTimeout(function(){{
+                                try {{ el.classList.remove('armed'); }} catch(e){{}}
+                            }}, 180);
+                        }}
+                        window.__zotCmds.push(String(cmd));
+                        if (navigator && navigator.vibrate) {{
+                            try {{ navigator.vibrate(8); }} catch(e) {{}}
+                        }}
+                    }} catch(e) {{}}
+                }};
+
                 // Lightweight Timeline sequencer — replaces nested setTimeout chains.
                 // Usage: new Timeline().wait(300).do(fn1).wait(600).do(fn2).play();
                 window.Timeline = function() {{
