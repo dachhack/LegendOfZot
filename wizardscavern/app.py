@@ -2236,6 +2236,21 @@ class WizardsCavernApp(toga.App):
         # Initial render
         self.render()
 
+        # Launch the WebView tap-bridge poll loop.  Item rows in the HTML
+        # side call window.__zotTap(cmd) on click; this task drains the
+        # queue and feeds commands back into process_command() so players
+        # can tap an inventory item instead of typing its number.
+        try:
+            self.add_background_task(self._poll_webview_bridge)
+        except Exception:
+            try:
+                import asyncio
+                self.loop.call_soon(
+                    lambda: asyncio.ensure_future(self._poll_webview_bridge())
+                )
+            except Exception:
+                pass
+
         # Schedule transition from splash to intro after 5 seconds
         import threading
         def _end_splash():
@@ -2525,9 +2540,10 @@ class WizardsCavernApp(toga.App):
             # Append letter to input field
             current = self.input_field.value or ""
             self.input_field.value = current + letter_to_add
+            self._haptic('tap')
             # DON'T focus - prevents keyboard popup!
             return
-        
+
         # Special handling for QWERTY keyboard letters during Zotle puzzle
         if gs.prompt_cntl == 'puzzle_mode' and len(cmd) == 1 and cmd.isalpha():
             letter = cmd.upper()
@@ -2537,9 +2553,15 @@ class WizardsCavernApp(toga.App):
                     if not gs.zotle_puzzle['current_guess'][i]:
                         gs.zotle_puzzle['current_guess'][i] = letter
                         break
+            self._haptic('tap')
             # Re-render to show the letter
             self.render()
             return
+
+        # Every command button press gets a light haptic.  Dangerous
+        # commands additionally get the 'arm' pulse inside
+        # _check_confirm_commit on the first tap.
+        self._haptic('tap')
         
         # Commands that always submit immediately:
         # - Movement: n/s/e/w
@@ -3125,17 +3147,23 @@ class WizardsCavernApp(toga.App):
         def flex_spacer():
             return toga.Box(style=Pack(flex=1, height=30))
 
-        row1 = [flex_btn('e', 'Equip'), flex_btn('eat', 'Eat'), flex_btn('u', 'Use')]
-        row2 = [
+        # Filter (Equip/Eat/Use) is now handled by segmented tabs inside
+        # the WebView inventory panel — those Toga buttons are gone.
+        # Row layout:
+        #   Row 1: Journal | Craft | Spells
+        #   Row 2: Exit | -- | Quit
+        #   Row 3: empty spacers (keep panel height consistent)
+        row1 = [
             flex_btn('j', 'Journal'),
             flex_btn('c', 'Craft'),
             flex_btn('m', 'Spells') if can_cast else flex_spacer(),
         ]
-        row3 = [
+        row2 = [
             flex_btn('x', 'Exit'),
             flex_spacer(),
             flex_btn('q', 'Quit') if not in_combat else flex_spacer(),
         ]
+        row3 = [flex_spacer(), flex_spacer(), flex_spacer()]
 
         for btn in row1:
             self.button_row_1.add(btn)
@@ -3180,22 +3208,47 @@ class WizardsCavernApp(toga.App):
             left_col.add(back_btn)
         # "Drink Full" button when available
         if 'df' in cmd_dict:
+            df_armed = self._is_armed('df')
+            df_label = 'Tap!' if df_armed else 'Heal'
+            df_bg = '#8B0000' if df_armed else '#2a3a2a'
+            df_fg = '#FFF' if df_armed else '#4CAF50'
             df_btn = toga.Button(
-                'Heal', on_press=lambda w: self.quick_command('df', 'Heal'),
+                df_label, on_press=lambda w: self.quick_command('df', 'Heal'),
                 style=Pack(width=48, margin=1, font_size=9, font_weight='bold',
-                           background_color='#2a3a2a', color='#4CAF50', height=34))
+                           background_color=df_bg, color=df_fg, height=34))
             self._compact_android_button(df_btn)
-            self._style_android_button(df_btn, bg_start='#2a3a2a', bg_end='#1a2a1a',
-                                        border_color='#4CAF50')
+            if df_armed:
+                self._style_android_button(df_btn, bg_start='#C62828', bg_end='#8B0000',
+                                            pressed_start='#8B0000', pressed_end='#5B0000',
+                                            border_color='#FF6F6F')
+            else:
+                self._style_android_button(df_btn, bg_start='#2a3a2a', bg_end='#1a2a1a',
+                                            border_color='#4CAF50')
             left_col.add(df_btn)
         # Altar sacrifice button
         if is_altar and 's' in cmd_dict:
+            sac_armed = self._is_armed('s')
+            sac_label = 'Tap!' if sac_armed else 'Sac'
+            sac_bg = '#8B0000' if sac_armed else '#383838'
+            sac_fg = '#FFF' if sac_armed else '#FFD700'
+            # Armed state auto-submits (single-tap confirm); unarmed state
+            # follows the historical behavior of buffering 's' into the
+            # input field so it plays nicely with any keyboard chording.
+            if sac_armed:
+                sac_on_press = lambda w: self.quick_command('s', 'Sac')
+            else:
+                sac_on_press = lambda w: self.number_pad_input('s')
             sac_btn = toga.Button(
-                'Sac', on_press=lambda w: self.number_pad_input('s'),
+                sac_label, on_press=sac_on_press,
                 style=Pack(width=48, margin=1, font_size=10, font_weight='bold',
-                           background_color='#383838', color='#FFD700', height=34))
+                           background_color=sac_bg, color=sac_fg, height=34))
             self._compact_android_button(sac_btn)
-            self._style_android_button(sac_btn)
+            if sac_armed:
+                self._style_android_button(sac_btn, bg_start='#C62828', bg_end='#8B0000',
+                                            pressed_start='#8B0000', pressed_end='#5B0000',
+                                            border_color='#FF6F6F')
+            else:
+                self._style_android_button(sac_btn)
             left_col.add(sac_btn)
         left_col.add(toga.Box(style=Pack(flex=1)))  # bottom spacer
 
@@ -3503,17 +3556,30 @@ class WizardsCavernApp(toga.App):
         return btn
 
     def create_big_button(self, cmd_key, cmd_label):
-        """Create a larger button for important combat actions."""
+        """Create a larger button for important combat actions.
+
+        If cmd_key is armed for two-tap confirmation, the button flips to
+        a red "Tap again!" state so the player sees the pending confirm.
+        """
+        armed = self._is_armed(cmd_key)
+        display_label = 'Tap again!' if armed else cmd_label
+        bg_flat = '#8B0000' if armed else '#444'
+        text_color = '#FFF'
         btn = toga.Button(
-            cmd_label,
+            display_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
             style=Pack(margin=1, font_size=12, font_weight='bold', width=100, height=30,
-                       background_color='#444', color='#FFF')
+                       background_color=bg_flat, color=text_color)
         )
         self._compact_android_button(btn)
-        self._style_android_button(btn, bg_start='#555555', bg_end='#383838',
-                                    pressed_start='#383838', pressed_end='#222222',
-                                    border_color='#666666')
+        if armed:
+            self._style_android_button(btn, bg_start='#C62828', bg_end='#8B0000',
+                                        pressed_start='#8B0000', pressed_end='#5B0000',
+                                        border_color='#FF6F6F')
+        else:
+            self._style_android_button(btn, bg_start='#555555', bg_end='#383838',
+                                        pressed_start='#383838', pressed_end='#222222',
+                                        border_color='#666666')
         return btn
 
     def create_numpad_button(self, number, compact=False):
@@ -3651,13 +3717,15 @@ class WizardsCavernApp(toga.App):
         """Handle number pad input."""
         self.input_field.value += char
         self.input_field.focus()
-    
+        self._haptic('tap')
+
     def number_pad_backspace(self):
         """Handle backspace on number pad."""
         current = self.input_field.value
         if current:
             self.input_field.value = current[:-1]
         self.input_field.focus()
+        self._haptic('tap')
     
     def on_input_confirm(self, widget):
         """Handle Send button or Enter key press in input field."""
@@ -3690,11 +3758,173 @@ class WizardsCavernApp(toga.App):
         
         # Keep focus on input
         self.input_field.focus()
-    
+
+    async def _poll_webview_bridge(self, *args, **kwargs):
+        """Drain tap commands posted from the WebView (tappable item rows).
+
+        The HTML shell exposes window.__zotTap(cmd) which pushes onto
+        window.__zotCmds.  We poll every ~120ms, read-and-clear the queue
+        via evaluate_javascript, and feed each command into the normal
+        process_command()/render() path — same effect as typing the
+        command on the numpad and hitting SEND.
+        """
+        import asyncio
+        import json as _json
+        # Let startup settle before we start polling
+        try:
+            await asyncio.sleep(0.5)
+        except Exception:
+            return
+        drain_js = (
+            "(function(){"
+            "var q=(window.__zotCmds||[]).slice();"
+            "window.__zotCmds=[];"
+            "return JSON.stringify(q);"
+            "})()"
+        )
+        while True:
+            try:
+                await asyncio.sleep(0.12)
+            except Exception:
+                break
+            if getattr(gs, 'game_should_quit', False):
+                break
+            res = None
+            try:
+                res = self.web_view.evaluate_javascript(drain_js)
+                if hasattr(res, '__await__'):
+                    res = await res
+                elif hasattr(res, 'result'):
+                    try:
+                        res = res.result
+                    except Exception:
+                        res = None
+            except Exception:
+                continue
+            if not res:
+                continue
+            if isinstance(res, bytes):
+                try:
+                    res = res.decode('utf-8')
+                except Exception:
+                    continue
+            cmds = []
+            try:
+                cmds = _json.loads(res)
+            except Exception:
+                try:
+                    cmds = _json.loads(_json.loads(res))
+                except Exception:
+                    cmds = []
+            if not cmds:
+                continue
+            for cmd in cmds:
+                if not cmd:
+                    continue
+                try:
+                    self.process_command(str(cmd))
+                    if getattr(gs, 'game_should_quit', False):
+                        return
+                    self.render()
+                except Exception:
+                    pass
+
+    # ------------------------------------------------------------------
+    # Haptic feedback + two-tap commit
+    # ------------------------------------------------------------------
+    _CONFIRM_WINDOW_SEC = 3.0
+
+    def _haptic(self, pattern='tap'):
+        """Fire a haptic buzz through the WebView (navigator.vibrate).
+
+        Works on Android and desktop browsers.  iOS Safari/WKWebView
+        doesn't expose vibrate() — native UIImpactFeedbackGenerator
+        would be required there (follow-up).
+        """
+        patterns = {
+            'tap':     '8',              # quick button press
+            'arm':     '[30,60,30]',     # "armed, tap again to confirm"
+            'confirm': '40',              # solid commit buzz
+            'deny':    '[10,40,10,40]',   # denial / error
+        }
+        p = patterns.get(pattern, '8')
+        try:
+            js = f"if(window.navigator&&navigator.vibrate)navigator.vibrate({p});"
+            res = self.web_view.evaluate_javascript(js)
+            # fire-and-forget: deliberately don't await
+            _ = res
+        except Exception:
+            pass
+
+    def _is_armed(self, cmd_key):
+        """True if cmd_key is currently armed for confirmation.
+
+        Used by button factories to swap label/colour so an armed
+        action visually screams "tap again to confirm".
+        """
+        import time
+        if not cmd_key:
+            return False
+        armed_cmd = getattr(self, '_armed_cmd', None)
+        if armed_cmd != str(cmd_key).strip().lower():
+            return False
+        armed_at = getattr(self, '_armed_at', 0.0)
+        if (time.time() - armed_at) > self._CONFIRM_WINDOW_SEC:
+            return False
+        return True
+
+    def _dangerous_cmd_label(self, cmd):
+        """If this command is destructive in the current context, return a
+        human label for the confirm prompt; otherwise None."""
+        c = (cmd or '').strip().lower()
+        # 'q' already has its own y/n confirm flow (confirm_quit prompt).
+        if c == 'df':
+            return 'Drink potions to full'
+        if c == 'f' and gs.prompt_cntl == 'combat_mode':
+            return 'Flee combat'
+        if c == 's' and gs.prompt_cntl == 'altar_mode':
+            return 'Sacrifice at the altar'
+        return None
+
+    def _check_confirm_commit(self, cmd):
+        """Two-tap commit gate.
+
+        Returns True when the command should execute now, False to hold
+        it back (arming state).  Non-dangerous commands clear any pending
+        arm silently so a stray tap elsewhere doesn't surprise-commit the
+        next time the user presses a dangerous button.
+        """
+        import time
+        label = self._dangerous_cmd_label(cmd)
+        norm = (cmd or '').strip().lower()
+        now = time.time()
+        armed_cmd = getattr(self, '_armed_cmd', None)
+        armed_at = getattr(self, '_armed_at', 0.0)
+        # Expire stale arming
+        if armed_cmd and (now - armed_at) > self._CONFIRM_WINDOW_SEC:
+            armed_cmd = None
+            self._armed_cmd = None
+        if label is None:
+            # Non-dangerous command — clear pending arm
+            if armed_cmd:
+                self._armed_cmd = None
+            return True
+        if armed_cmd == norm:
+            # Confirmed — execute
+            self._armed_cmd = None
+            self._haptic('confirm')
+            return True
+        # Arm it, ask for second tap
+        self._armed_cmd = norm
+        self._armed_at = now
+        add_log(f"{COLOR_YELLOW}Tap again within 3s to confirm: {label}{COLOR_RESET}")
+        self._haptic('arm')
+        return False
+
     def process_command(self, cmd):
 
         # cmd is already passed in and processed by on_command_submit
-        
+
         if gs.game_should_quit:
             return
 
@@ -3727,6 +3957,12 @@ class WizardsCavernApp(toga.App):
             else:
                 add_log("Are you sure you want to quit? (y/n)")
                 return
+
+        # Two-tap commit gate for destructive commands.  Runs after the
+        # special-case modes above (splash / death_screen / confirm_quit)
+        # have their own flows, but before the main command dispatch.
+        if not self._check_confirm_commit(cmd):
+            return
 
         if cmd == 'q':
             gs.previous_prompt_cntl = gs.prompt_cntl
@@ -4711,18 +4947,42 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "starting_shop":
             # STARTING SHOP VIEW - Match regular vendor format
+            # Starting shop only offers Buy and Sell (no repair / identify).
+            _s_tabs = [
+                ('Buy',  'vbuy',  gs.vendor_action == 'buy'),
+                ('Sell', 'vsell', gs.vendor_action == 'sell'),
+            ]
+            starting_tabs_html = "<div class='filtertabs'>"
+            for label, cmd, is_active in _s_tabs:
+                cls = 'filtertab active' if is_active else 'filtertab'
+                starting_tabs_html += (
+                    f"<div class='{cls}' data-zcmd='{cmd}' "
+                    f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                )
+            starting_tabs_html += "</div>"
+
             sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
             vendor_html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>"
             vendor_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
             if not sorted_vendor_items:
                 vendor_html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
             else:
+                _wares_tappable = (gs.vendor_action == 'buy')
                 for i, item in enumerate(sorted_vendor_items):
-                    # Vendors know what items are - show real names (for_vendor=True)
                     item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
-                    vendor_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                    if _wares_tappable:
+                        cmd_str = f"b{i + 1}"
+                        vendor_html += (
+                            f"<div class='taprow' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"</div>"
+                        )
+                    else:
+                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
             vendor_html += "</div>"
 
+            _player_tap_prefix = 's' if gs.vendor_action == 'sell' else ''
             sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
             player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
             player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
@@ -4730,10 +4990,20 @@ class WizardsCavernApp(toga.App):
                 player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
             else:
                 for i, item in enumerate(sorted_player_items):
-                    # Player inventory shows cryptic names for unidentified items
                     item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
-                    player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                    if _player_tap_prefix:
+                        cmd_str = f"{_player_tap_prefix}{i + 1}"
+                        player_inv_html += (
+                            f"<div class='taprow' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"</div>"
+                        )
+                    else:
+                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
             player_inv_html += "</div>"
+
+            vendor_html = starting_tabs_html + vendor_html
 
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
@@ -4751,9 +5021,11 @@ class WizardsCavernApp(toga.App):
                 """
             if gs.vendor_action:
                 action_label = {'buy': 'buy', 'sell': 'sell'}.get(gs.vendor_action, gs.vendor_action)
-                current_commands_text = f"# = {action_label} item | b = back"
+                # Tabs handle mode switching; rows are tappable in the active
+                # list; hint shows just the row-select shortcut + exits.
+                current_commands_text = f"# = {action_label} item | ba = buy all | x = exit"
             else:
-                current_commands_text = "b = buy | s = sell | ba = buy all | x = exit"
+                current_commands_text = "Tap a tab above to begin | ba = buy all | x = exit"
 
         elif gs.prompt_cntl == "sell_quantity_mode":
             # SELL QUANTITY MODE - Show "How many?" prompt
@@ -4793,18 +5065,48 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "vendor_shop":
             # SHOP VIEW
+            # Segmented vendor tabs [Buy][Sell][Repair][ID] — tabs use
+            # the vbuy/vsell/vrep/vid idempotent commands so re-tapping
+            # the active tab is a no-op instead of toggling off.
+            _v_tabs = [
+                ('Buy',    'vbuy', gs.vendor_action == 'buy'),
+                ('Sell',   'vsell', gs.vendor_action == 'sell'),
+                ('Repair', 'vrep',  gs.vendor_action == 'repair'),
+                ('ID',     'vid',   gs.vendor_action == 'identify'),
+            ]
+            vendor_tabs_html = "<div class='filtertabs'>"
+            for label, cmd, is_active in _v_tabs:
+                cls = 'filtertab active' if is_active else 'filtertab'
+                vendor_tabs_html += (
+                    f"<div class='{cls}' data-zcmd='{cmd}' "
+                    f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                )
+            vendor_tabs_html += "</div>"
+
+            # Vendor wares: tappable "buy" targets when buy tab is active.
             sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
             vendor_html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>"
             vendor_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
             if not sorted_vendor_items:
                 vendor_html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
             else:
+                _wares_tappable = (gs.vendor_action == 'buy')
                 for i, item in enumerate(sorted_vendor_items):
-                    # Vendors know what items are - show real names (for_vendor=True)
                     item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
-                    vendor_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                    if _wares_tappable:
+                        cmd_str = f"b{i + 1}"
+                        vendor_html += (
+                            f"<div class='taprow' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"</div>"
+                        )
+                    else:
+                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
             vendor_html += "</div>"
 
+            # Player inventory: tappable when sell/repair/identify is active.
+            _player_tap_prefix = {'sell': 's', 'repair': 'r', 'identify': 'id'}.get(gs.vendor_action, '')
             sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
             player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
             player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
@@ -4812,10 +5114,21 @@ class WizardsCavernApp(toga.App):
                 player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
             else:
                 for i, item in enumerate(sorted_player_items):
-                    # Player inventory shows cryptic names for unidentified items
                     item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
-                    player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                    if _player_tap_prefix:
+                        cmd_str = f"{_player_tap_prefix}{i + 1}"
+                        player_inv_html += (
+                            f"<div class='taprow' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"</div>"
+                        )
+                    else:
+                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
             player_inv_html += "</div>"
+
+            # Prepend tabs above the wares list so the player sees them first.
+            vendor_html = vendor_tabs_html + vendor_html
 
             vendor_sprite = generate_room_sprite_html('V')
 
@@ -4846,9 +5159,10 @@ class WizardsCavernApp(toga.App):
                 current_commands_text = "1-9 / a = sell | c = cancel"
             elif gs.vendor_action:
                 action_label = {'buy': 'buy', 'sell': 'sell', 'repair': 'repair', 'identify': 'identify'}.get(gs.vendor_action, gs.vendor_action)
-                current_commands_text = f"# = {action_label} item | b = back"
+                # Tabs above drive the mode; hint shows row shortcut + exit.
+                current_commands_text = f"# = {action_label} item | x = exit"
             else:
-                current_commands_text = "b = buy | s = sell | r = repair | id = identify | x = exit"
+                current_commands_text = "Tap a tab above to begin | x = exit"
 
 
 
@@ -4889,21 +5203,49 @@ class WizardsCavernApp(toga.App):
                     display_items = [i for i in combat_usable_items if isinstance(i, (Potion, Scroll))]
                     combat_filter_label = "Usable Items"
 
-                combat_filter_indicator = ""
-                if gs.inventory_filter:
-                    combat_filter_indicator = f" <span style='color: #4FC3F7; font-size: 10px;'>[filtered]</span>"
+                # Segmented filter tabs — combat has no Equip tab (can't
+                # swap gear mid-fight). 'All' sends 'b' to clear the filter.
+                _cbt_tabs = [
+                    ('All', 'b',   gs.inventory_filter is None),
+                    ('Use', 'u',   gs.inventory_filter == 'use'),
+                    ('Eat', 'eat', gs.inventory_filter == 'eat'),
+                ]
+                combat_tabs_html = "<div class='filtertabs'>"
+                for label, cmd, is_active in _cbt_tabs:
+                    cls = 'filtertab active' if is_active else 'filtertab'
+                    combat_tabs_html += (
+                        f"<div class='{cls}' data-zcmd='{cmd}' "
+                        f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                    )
+                combat_tabs_html += "</div>"
 
                 # Build inventory HTML - matching normal inventory style
-                player_inv_html = f"<h3>{combat_filter_label}{combat_filter_indicator}</h3>"
+                player_inv_html = combat_tabs_html
                 player_inv_html += "<div style='max-height: 280px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
                 player_inv_html += "<div style='margin: 0; padding: 0;'>"
 
                 if not display_items:
                     player_inv_html += "<div style='margin: 2px 0; padding: 0; color: #888;'>(No matching items)</div>"
                 else:
+                    # Tap-to-act in combat: filter prefix is 'u' or 'eat'.
+                    # No filter => no implicit verb, so rows stay plain text.
+                    _tap_prefix = {'use': 'u', 'eat': 'eat'}.get(gs.inventory_filter, '')
                     for i, item in enumerate(display_items):
                         item_str = format_item_for_display(item, gs.player_character, show_price=False)
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                        if _tap_prefix:
+                            cmd_str = f"{_tap_prefix}{i + 1}"
+                            player_inv_html += (
+                                f"<div class='taprow' data-zcmd='{cmd_str}' "
+                                f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                                f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                                f"</div>"
+                            )
+                        else:
+                            player_inv_html += (
+                                f"<div style='margin: 2px 0; padding: 4px 0;'>"
+                                f"<b>{i + 1}.</b> {item_str}"
+                                f"</div>"
+                            )
 
                 player_inv_html += "</div>"
                 player_inv_html += "</div>"
@@ -4928,7 +5270,8 @@ class WizardsCavernApp(toga.App):
                         if has_healing:
                             current_commands_text += " | df = drink full"
                 else:
-                    current_commands_text = "u = use | eat = eat | j = journal | x = close"
+                    # Filter tabs (above) replace the typed u/eat commands.
+                    current_commands_text = "j = journal | x = close"
 
 
             else:
@@ -5004,11 +5347,26 @@ class WizardsCavernApp(toga.App):
                     display_items = [i for i in sorted_items if isinstance(i, (Food, Meat))]
                     filter_label = "Food Items"
 
-                filter_indicator = ""
-                if gs.inventory_filter:
-                    filter_indicator = f" <span style='color: #4FC3F7; font-size: 10px;'>[filtered - tap again to show all]</span>"
+                # Segmented filter tabs replace the old [filtered - tap again]
+                # hint.  Active tab reflects gs.inventory_filter; tapping a
+                # tab sends the corresponding command (b / u / e / eat)
+                # through the normal command handler.
+                _tabs = [
+                    ('All',   'b',   gs.inventory_filter is None),
+                    ('Use',   'u',   gs.inventory_filter == 'use'),
+                    ('Equip', 'e',   gs.inventory_filter == 'equip'),
+                    ('Eat',   'eat', gs.inventory_filter == 'eat'),
+                ]
+                tabs_html = "<div class='filtertabs'>"
+                for label, cmd, is_active in _tabs:
+                    cls = 'filtertab active' if is_active else 'filtertab'
+                    tabs_html += (
+                        f"<div class='{cls}' data-zcmd='{cmd}' "
+                        f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                    )
+                tabs_html += "</div>"
 
-                player_inv_html = f"<h3>{filter_label}{filter_indicator}</h3>"
+                player_inv_html = tabs_html
 
                 player_inv_html += "<div style='max-height: 295px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
 
@@ -5017,9 +5375,27 @@ class WizardsCavernApp(toga.App):
                 if not display_items:
                     player_inv_html += "<div style='margin: 2px 0; padding: 0; color: #888;'>(No matching items)</div>"
                 else:
+                    # Tap-to-act: with a filter active, each row injects the
+                    # properly-prefixed command (u1 / e1 / eat1) to Python.
+                    # Without a filter we have no implicit verb, so rows
+                    # stay non-interactive (user picks a verb button first).
+                    _tap_prefix = {'use': 'u', 'equip': 'e', 'eat': 'eat'}.get(gs.inventory_filter, '')
                     for i, item in enumerate(display_items):
                         item_str = format_item_for_display(item, gs.player_character, show_price=False)
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                        if _tap_prefix:
+                            cmd_str = f"{_tap_prefix}{i + 1}"
+                            player_inv_html += (
+                                f"<div class='taprow' data-zcmd='{cmd_str}' "
+                                f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                                f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                                f"</div>"
+                            )
+                        else:
+                            player_inv_html += (
+                                f"<div style='margin: 2px 0; padding: 4px 0;'>"
+                                f"<b>{i + 1}.</b> {item_str}"
+                                f"</div>"
+                            )
 
                 player_inv_html += "</div>"
 
@@ -5038,8 +5414,9 @@ class WizardsCavernApp(toga.App):
                         if has_healing:
                             inv_commands += " | df = drink full"
                 else:
-                    # Main inventory: centered command buttons, no numpad
-                    inv_commands = "u = use | e = equip | eat = eat | c = craft"
+                    # Main inventory: tap a filter tab (above) to pick items.
+                    # Hint shows only the non-tab commands.
+                    inv_commands = "c = craft"
                     if can_cast:
                         inv_commands += " | m = spells"
                     inv_commands += " | j = journal | q = quit game | x = exit"
@@ -7826,10 +8203,120 @@ class WizardsCavernApp(toga.App):
                 #game-log {{
                     animation: none;
                 }}
+
+                /* ===== TAPPABLE INVENTORY / MENU ROWS ===== */
+                /* Fat touch target, visible affordance, press feedback.
+                   Any element with class="taprow" becomes a finger-friendly
+                   button. data-zcmd attribute carries the command string
+                   that should be injected to Python on tap. */
+                .taprow {{
+                    display: block;
+                    margin: 3px 0;
+                    padding: 8px 10px;
+                    border: 1px solid #2a3a2a;
+                    border-radius: 4px;
+                    background: linear-gradient(180deg, #1e2a1e 0%, #162016 100%);
+                    color: #DDD;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: transform 60ms ease-out, background 120ms ease-out,
+                                border-color 120ms ease-out, box-shadow 120ms ease-out;
+                    box-shadow: 0 1px 0 #0a0a0a inset;
+                }}
+                .taprow:active {{
+                    transform: scale(0.98);
+                    background: linear-gradient(180deg, #2a4a2a 0%, #1a301a 100%);
+                    border-color: #4CAF50;
+                    box-shadow: 0 0 8px rgba(76,175,80,0.45),
+                                0 1px 0 #0a0a0a inset;
+                }}
+                .taprow .tapnum {{
+                    color: #4CAF50;
+                    font-weight: bold;
+                    margin-right: 6px;
+                    min-width: 14px;
+                    display: inline-block;
+                }}
+                .taprow.armed {{
+                    background: linear-gradient(180deg, #3a5a3a 0%, #1a301a 100%);
+                    border-color: #8BC34A;
+                    box-shadow: 0 0 10px rgba(139,195,74,0.6);
+                }}
+
+                /* ===== SEGMENTED FILTER TABS =====
+                   Pill-style bar showing the current inventory filter.
+                   Tapping a tab sets the filter directly (no more typing
+                   'u' / 'e' / 'eat').  Active tab highlights green. */
+                .filtertabs {{
+                    display: flex;
+                    gap: 3px;
+                    margin: 0 0 6px 0;
+                    padding: 3px;
+                    background: #121212;
+                    border: 1px solid #2a2a2a;
+                    border-radius: 7px;
+                }}
+                .filtertab {{
+                    flex: 1;
+                    text-align: center;
+                    padding: 7px 4px;
+                    font-size: 11px;
+                    font-weight: bold;
+                    color: #888;
+                    background: transparent;
+                    border: 1px solid transparent;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: background 120ms ease-out, color 120ms ease-out,
+                                transform 60ms ease-out;
+                }}
+                .filtertab:active {{
+                    transform: scale(0.96);
+                    background: #252525;
+                }}
+                .filtertab.active {{
+                    background: linear-gradient(180deg, #2a4a2a 0%, #1a301a 100%);
+                    color: #8BC34A;
+                    border-color: #4CAF50;
+                    box-shadow: 0 0 6px rgba(76,175,80,0.35) inset;
+                }}
             </style>
         </head>
         <body>
             <script>
+                // ===== Python <-> WebView tap bridge =====
+                // Item rows (and any other .taprow) call window.__zotTap(cmd)
+                // on click.  Commands queue up in window.__zotCmds and are
+                // drained by a Python background task that polls via
+                // evaluate_javascript().  A short debounce on each row
+                // prevents double-fire from accidental re-taps.
+                window.__zotCmds = window.__zotCmds || [];
+                window.__zotTap = function(cmd, el) {{
+                    try {{
+                        if (!cmd) return;
+                        var now = Date.now();
+                        if (el && el.__lastTap && (now - el.__lastTap) < 350) {{
+                            return;  // debounce rapid re-taps on same row
+                        }}
+                        if (el) {{
+                            el.__lastTap = now;
+                            el.classList.add('armed');
+                            setTimeout(function(){{
+                                try {{ el.classList.remove('armed'); }} catch(e){{}}
+                            }}, 180);
+                        }}
+                        window.__zotCmds.push(String(cmd));
+                        if (navigator && navigator.vibrate) {{
+                            try {{ navigator.vibrate(8); }} catch(e) {{}}
+                        }}
+                    }} catch(e) {{}}
+                }};
+
                 // Lightweight Timeline sequencer — replaces nested setTimeout chains.
                 // Usage: new Timeline().wait(300).do(fn1).wait(600).do(fn2).play();
                 window.Timeline = function() {{
