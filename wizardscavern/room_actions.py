@@ -3160,6 +3160,19 @@ def process_save_load_action(player_character, my_tower, cmd):
         handle_inventory_menu(player_character, my_tower, "init")
         return
 
+    # Delete commands (d1, d2, d3) — irreversible; UI arms with two-tap
+    # commit.  Stays in save_load_mode so the player sees the slot freed up.
+    if cmd in ['d1', 'd2', 'd3']:
+        slot = int(cmd[1])
+        if SaveSystem.save_exists(slot):
+            if SaveSystem.delete_save(slot):
+                add_log(f"{COLOR_YELLOW}Save slot {slot} deleted.{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_RED}Failed to delete save slot {slot}.{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_YELLOW}No save in slot {slot} to delete.{COLOR_RESET}")
+        return
+
 def process_main_menu_action(cmd):
     """Handle main menu input (new game vs continue)."""
 

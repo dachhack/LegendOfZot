@@ -3944,6 +3944,9 @@ class WizardsCavernApp(toga.App):
         # that slot — always ask twice.
         if c in ('o1', 'o2', 'o3') and gs.prompt_cntl == 'save_load_mode':
             return f'Overwrite save slot {c[1]}'
+        # Save-delete commands (d1/d2/d3) are irreversible; arm twice too.
+        if c in ('d1', 'd2', 'd3') and gs.prompt_cntl == 'save_load_mode':
+            return f'Delete save slot {c[1]}'
         return None
 
     def _check_confirm_commit(self, cmd):
@@ -4810,11 +4813,15 @@ class WizardsCavernApp(toga.App):
                     info = save['info']
                     timestamp = info['timestamp'][:10] if info['timestamp'] != 'Unknown' else 'Unknown'
                     ovr_cmd = f"o{slot}"
+                    del_cmd = f"d{slot}"
                     ovr_armed = (armed_ovr == ovr_cmd)
+                    del_armed = (armed_ovr == del_cmd)
                     ovr_cls = 'ovr-btn armed' if ovr_armed else 'ovr-btn'
+                    del_cls = 'del-btn armed' if del_armed else 'del-btn'
                     ovr_label = 'TAP AGAIN TO OVERWRITE' if ovr_armed else 'Overwrite'
-                    # event.stopPropagation so tapping the overwrite
-                    # micro-button doesn't also trigger the parent LOAD.
+                    del_label = 'TAP AGAIN TO DELETE' if del_armed else 'Delete'
+                    # event.stopPropagation so tapping a micro-button
+                    # doesn't also trigger the parent LOAD.
                     slots_html += (
                         f"<div class='taprow save-populated' data-zcmd='{slot}' "
                         f"onclick=\"window.__zotTap('{slot}', this)\">"
@@ -4824,6 +4831,8 @@ class WizardsCavernApp(toga.App):
                         f"<span class='slabel'>TAP TO LOAD</span>"
                         f"&nbsp;<span class='{ovr_cls}' data-zcmd='{ovr_cmd}' "
                         f"onclick=\"event.stopPropagation(); window.__zotTap('{ovr_cmd}', this)\">{ovr_label}</span>"
+                        f"<span class='{del_cls}' data-zcmd='{del_cmd}' "
+                        f"onclick=\"event.stopPropagation(); window.__zotTap('{del_cmd}', this)\">{del_label}</span>"
                         f"</div>"
                     )
 
@@ -8701,6 +8710,37 @@ class WizardsCavernApp(toga.App):
                     border-color: #FF6F6F;
                     color: #FFF;
                     box-shadow: 0 0 8px rgba(255,82,82,0.6);
+                }}
+                /* Delete micro-button on populated slots: red from the
+                   start so the "destructive" framing is obvious before
+                   you even arm it.  Armed state intensifies. */
+                .del-btn {{
+                    display: inline-block;
+                    margin-top: 8px;
+                    margin-left: 6px;
+                    padding: 4px 10px;
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: #FF8A80;
+                    background: #2a1010;
+                    border: 1px solid #8a3a3a;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: background 120ms ease-out, transform 60ms ease-out;
+                }}
+                .del-btn:active {{
+                    transform: scale(0.96);
+                    background: #5a1a1a;
+                    border-color: #FF5252;
+                }}
+                .del-btn.armed {{
+                    background: #8B0000;
+                    border-color: #FF6F6F;
+                    color: #FFF;
+                    box-shadow: 0 0 10px rgba(255,82,82,0.7);
                 }}
 
                 /* ===== SEGMENTED FILTER TABS =====

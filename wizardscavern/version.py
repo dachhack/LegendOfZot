@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 104
+BUILD_NUMBER = 105
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Delete save affordance: red Delete button on each populated slot, two-tap gated",
     "Tappable save slots! Main menu + save/load menu become fat card buttons",
     "Overwrite save is two-tap gated: first tap arms, second tap commits",
     "Main menu NEW GAME is a big gold tap card — no more typing anything",
@@ -14,5 +15,4 @@ CHANGELOG = [
     "iOS haptics! Native UIImpactFeedbackGenerator — iPhone finally buzzes on taps",
     "Cast spells OUT of combat! New [Cast] tab: heal, cleanse, and buff on demand",
     "Spell cast modal: tap a spell to cast, Cancel row at bottom",
-    "Vendor tabs: [Buy] [Sell] [Repair] [ID] — tap a tab, tap an item, done",
 ]
