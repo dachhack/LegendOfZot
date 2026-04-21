@@ -2216,10 +2216,17 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                         add_log(f"{COLOR_RED}The {old.name} is welded to your hand! It's CURSED!{COLOR_RESET}")
                         add_log(f"{COLOR_YELLOW}You need a Scroll of Remove Curse or altar purification.{COLOR_RESET}")
                         return
-                    if old:
-                        add_log(f"Unequipped {old.name}.")
-                    player_character.equipped_weapon = item_to_equip
-                    add_log(f"{COLOR_GREEN}Equipped {item_to_equip.name}!{COLOR_RESET}")
+                    # Tapping the weapon that's already equipped unequips it
+                    # rather than redundantly re-equipping (which logged
+                    # "Unequipped X / Equipped X" with no actual change).
+                    if old is item_to_equip:
+                        player_character.equipped_weapon = None
+                        add_log(f"Unequipped {item_to_equip.name}.")
+                    else:
+                        if old:
+                            add_log(f"Unequipped {old.name}.")
+                        player_character.equipped_weapon = item_to_equip
+                        add_log(f"{COLOR_GREEN}Equipped {item_to_equip.name}!{COLOR_RESET}")
 
                 elif isinstance(item_to_equip, Armor):
                     # BUC curse check: cursed armor is fused and can't be removed
@@ -2229,26 +2236,44 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                         add_log(f"{COLOR_RED}The {old.name} is fused to your body! It's CURSED!{COLOR_RESET}")
                         add_log(f"{COLOR_YELLOW}You need a Scroll of Remove Curse or altar purification.{COLOR_RESET}")
                         return
-                    if old:
-                        add_log(f"Unequipped {old.name}.")
-                    player_character.equipped_armor = item_to_equip
-                    add_log(f"{COLOR_GREEN}Equipped {item_to_equip.name}!{COLOR_RESET}")
+                    if old is item_to_equip:
+                        player_character.equipped_armor = None
+                        add_log(f"Unequipped {item_to_equip.name}.")
+                    else:
+                        if old:
+                            add_log(f"Unequipped {old.name}.")
+                        player_character.equipped_armor = item_to_equip
+                        add_log(f"{COLOR_GREEN}Equipped {item_to_equip.name}!{COLOR_RESET}")
 
                 elif isinstance(item_to_equip, Towel):
                     # Allow equipping towel as weapon (wet towel is more effective)
-                    if player_character.equipped_weapon:
-                        add_log(f"Unequipped {player_character.equipped_weapon.name}.")
-                    player_character.equipped_weapon = item_to_equip
-                    if item_to_equip.wetness > 0:
-                        add_log(f"{COLOR_GREEN}Equipped {item_to_equip.get_display_name()} as weapon!{COLOR_RESET}")
-                        add_log(f"{COLOR_CYAN}Wet towel damage: 1-{min(6, item_to_equip.wetness)}{COLOR_RESET}")
+                    if player_character.equipped_weapon is item_to_equip:
+                        player_character.equipped_weapon = None
+                        add_log(f"Unequipped {item_to_equip.name}.")
                     else:
-                        add_log(f"{COLOR_YELLOW}Equipped dry towel as weapon. It's not very effective...{COLOR_RESET}")
-                        add_log(f"{COLOR_GREY}(Wet it in a pool for better damage!){COLOR_RESET}")
+                        if player_character.equipped_weapon:
+                            add_log(f"Unequipped {player_character.equipped_weapon.name}.")
+                        player_character.equipped_weapon = item_to_equip
+                        if item_to_equip.wetness > 0:
+                            add_log(f"{COLOR_GREEN}Equipped {item_to_equip.get_display_name()} as weapon!{COLOR_RESET}")
+                            add_log(f"{COLOR_CYAN}Wet towel damage: 1-{min(6, item_to_equip.wetness)}{COLOR_RESET}")
+                        else:
+                            add_log(f"{COLOR_YELLOW}Equipped dry towel as weapon. It's not very effective...{COLOR_RESET}")
+                            add_log(f"{COLOR_GREY}(Wet it in a pool for better damage!){COLOR_RESET}")
 
                 elif isinstance(item_to_equip, Treasure) and item_to_equip.treasure_type == 'passive':
-                    # Equip passive treasure as accessory
-                    player_character.equip_accessory(item_to_equip)
+                    # Tap an already-equipped accessory to remove it; otherwise
+                    # equip into the first open slot (existing equip_accessory
+                    # handles BUC curse checks and slot selection).
+                    equipped_slot = None
+                    for _i, _acc in enumerate(player_character.equipped_accessories):
+                        if _acc is item_to_equip:
+                            equipped_slot = _i
+                            break
+                    if equipped_slot is not None:
+                        player_character.unequip_accessory(equipped_slot)
+                    else:
+                        player_character.equip_accessory(item_to_equip)
 
                 else:
                     add_log(f"{COLOR_YELLOW}You cannot equip {item_to_equip.name}.{COLOR_RESET}")

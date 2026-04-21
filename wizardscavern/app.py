@@ -5380,14 +5380,32 @@ class WizardsCavernApp(toga.App):
                     # Without a filter we have no implicit verb, so rows
                     # stay non-interactive (user picks a verb button first).
                     _tap_prefix = {'use': 'u', 'equip': 'e', 'eat': 'eat'}.get(gs.inventory_filter, '')
+                    _pc = gs.player_character
+                    _equipped_accs = set(id(a) for a in getattr(_pc, 'equipped_accessories', []) if a is not None)
                     for i, item in enumerate(display_items):
                         item_str = format_item_for_display(item, gs.player_character, show_price=False)
+                        # In the Equip filter, mark currently-equipped rows so
+                        # the player sees that tapping will UNEQUIP instead of
+                        # a silent no-op.
+                        _is_equipped = False
+                        if gs.inventory_filter == 'equip':
+                            if isinstance(item, Weapon) and _pc.equipped_weapon is item:
+                                _is_equipped = True
+                            elif isinstance(item, Armor) and _pc.equipped_armor is item:
+                                _is_equipped = True
+                            elif isinstance(item, Towel) and _pc.equipped_weapon is item:
+                                _is_equipped = True
+                            elif isinstance(item, Treasure) and id(item) in _equipped_accs:
+                                _is_equipped = True
                         if _tap_prefix:
                             cmd_str = f"{_tap_prefix}{i + 1}"
+                            row_cls = 'taprow equipped' if _is_equipped else 'taprow'
+                            eq_badge = "<span class='eqbadge'>EQUIPPED &middot; tap to remove</span>" if _is_equipped else ""
                             player_inv_html += (
-                                f"<div class='taprow' data-zcmd='{cmd_str}' "
+                                f"<div class='{row_cls}' data-zcmd='{cmd_str}' "
                                 f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
                                 f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                                f"{eq_badge}"
                                 f"</div>"
                             )
                         else:
@@ -8243,6 +8261,28 @@ class WizardsCavernApp(toga.App):
                     background: linear-gradient(180deg, #3a5a3a 0%, #1a301a 100%);
                     border-color: #8BC34A;
                     box-shadow: 0 0 10px rgba(139,195,74,0.6);
+                }}
+                /* Equipped items in the Equip list: gold border + "tap to
+                   remove" affordance so the unequip action is obvious. */
+                .taprow.equipped {{
+                    background: linear-gradient(180deg, #2a2418 0%, #18140c 100%);
+                    border-color: #FFD700;
+                    box-shadow: 0 0 6px rgba(255,215,0,0.35) inset;
+                }}
+                .taprow.equipped .tapnum {{
+                    color: #FFD700;
+                }}
+                .eqbadge {{
+                    display: inline-block;
+                    margin-left: 8px;
+                    padding: 1px 6px;
+                    font-size: 9px;
+                    font-weight: bold;
+                    color: #1a1a1a;
+                    background: #FFD700;
+                    border-radius: 8px;
+                    vertical-align: middle;
+                    letter-spacing: 0.3px;
                 }}
 
                 /* ===== SEGMENTED FILTER TABS =====
