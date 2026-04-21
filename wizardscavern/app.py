@@ -8269,18 +8269,25 @@ class WizardsCavernApp(toga.App):
                     <div style="color: #DDD; font-size: 12px; margin-bottom: 10px;">
                         What do you want to do with the towel?
                     </div>
-                    <div style="display: flex; flex-direction: column; gap: 6px;">
-                        <div style="padding: 6px; border-radius: 3px;">
-                            <span style="color: #FFD700;">1.</span> <span style="color: #CCC;">Wear over face (blind yourself - protection from gaze)</span>
+                    <div class='altar-actions'>
+                        <div class='taprow altar-act mystic' data-zcmd='1'
+                             onclick="window.__zotTap('1', this)">
+                            <div class='aname'>Wear Over Face</div>
+                            <div class='ameta'>Blind yourself &mdash; protection from gaze attacks</div>
                         </div>
-                        <div style="padding: 6px; border-radius: 3px;">
-                            <span style="color: #FFD700;">2.</span> <span style="color: #CCC;">Wipe face (cure face-based blindness)</span>
+                        <div class='taprow altar-act blessing' data-zcmd='2'
+                             onclick="window.__zotTap('2', this)">
+                            <div class='aname'>Wipe Face</div>
+                            <div class='ameta'>Cure face-based blindness</div>
                         </div>
-                        <div style="padding: 6px; border-radius: 3px;">
-                            <span style="color: #FFD700;">3.</span> <span style="color: #CCC;">Wipe hands (cure slippery hands)</span>
+                        <div class='taprow altar-act offering' data-zcmd='3'
+                             onclick="window.__zotTap('3', this)">
+                            <div class='aname'>Wipe Hands</div>
+                            <div class='ameta'>Cure slippery hands</div>
                         </div>
-                        <div style="padding: 6px; border-radius: 3px;">
-                            <span style="color: #FFD700;">4.</span> <span style="color: #888;">Cancel</span>
+                        <div class='taprow cancel' data-zcmd='c'
+                             onclick="window.__zotTap('c', this)">
+                            <span class='tapnum'>&times;</span>Cancel
                         </div>
                     </div>
                 </div>
@@ -8297,7 +8304,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
             """
-            current_commands_text = "1-4 = choose action | c = cancel"
+            current_commands_text = "Tap an action | c = cancel"
             needs_numbers = True
 
         elif gs.prompt_cntl == "puzzle_mode":
@@ -8607,6 +8614,29 @@ class WizardsCavernApp(toga.App):
                     "<span class='tapnum'>&times;</span>Cancel Identify</div>"
                 )
 
+            # Inline Yes/No tap cards for the confirm_quit dialog so the
+            # player never has to type y/n.  Rendered over the map view
+            # (confirm_quit is in show_map above).
+            confirm_quit_html = ""
+            if gs.prompt_cntl == "confirm_quit":
+                confirm_quit_html = """
+                    <div style="text-align:center; color:#FFD700; font-weight:bold; margin-top:10px; font-size:14px;">
+                        Quit the game?
+                    </div>
+                    <div class='altar-actions' style='max-width: 280px; margin-left:auto; margin-right:auto;'>
+                        <div class='taprow altar-act reforge' data-zcmd='y'
+                             onclick="window.__zotTap('y', this)">
+                            <div class='aname'>Yes, Quit</div>
+                            <div class='ameta'>Close the app (remember to save first)</div>
+                        </div>
+                        <div class='taprow altar-act blessing' data-zcmd='n'
+                             onclick="window.__zotTap('n', this)">
+                            <div class='aname'>No, Keep Playing</div>
+                            <div class='ameta'>Back to the adventure</div>
+                        </div>
+                    </div>
+                """
+
             # Inline d-pad for modes that need a direction pick during the
             # map view (currently flare_direction_mode — foresight and flee
             # have their own dedicated render blocks above).
@@ -8638,6 +8668,7 @@ class WizardsCavernApp(toga.App):
                     {grid_html}
                     {dpad_overlay_html}
                     {scroll_picker_html}
+                    {confirm_quit_html}
                     <hr>
 
                     <div style="height: 150px; overflow-y: auto; color: #EEE; padding: 3px; font-family: monospace; font-size: 12px;">
@@ -8678,7 +8709,7 @@ class WizardsCavernApp(toga.App):
                     current_commands_text = base_commands
 
             elif gs.prompt_cntl == "confirm_quit":
-                current_commands_text = "y = yes | n = no"
+                current_commands_text = "Tap Yes or Keep Playing"
             elif gs.prompt_cntl == "chest_mode":
                 current_commands_text = "o = open | i = inventory"
                 if has_lantern:
