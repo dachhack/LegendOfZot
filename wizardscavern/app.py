@@ -4947,18 +4947,42 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "starting_shop":
             # STARTING SHOP VIEW - Match regular vendor format
+            # Starting shop only offers Buy and Sell (no repair / identify).
+            _s_tabs = [
+                ('Buy',  'vbuy',  gs.vendor_action == 'buy'),
+                ('Sell', 'vsell', gs.vendor_action == 'sell'),
+            ]
+            starting_tabs_html = "<div class='filtertabs'>"
+            for label, cmd, is_active in _s_tabs:
+                cls = 'filtertab active' if is_active else 'filtertab'
+                starting_tabs_html += (
+                    f"<div class='{cls}' data-zcmd='{cmd}' "
+                    f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                )
+            starting_tabs_html += "</div>"
+
             sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
             vendor_html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>"
             vendor_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
             if not sorted_vendor_items:
                 vendor_html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
             else:
+                _wares_tappable = (gs.vendor_action == 'buy')
                 for i, item in enumerate(sorted_vendor_items):
-                    # Vendors know what items are - show real names (for_vendor=True)
                     item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
-                    vendor_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                    if _wares_tappable:
+                        cmd_str = f"b{i + 1}"
+                        vendor_html += (
+                            f"<div class='taprow' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"</div>"
+                        )
+                    else:
+                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
             vendor_html += "</div>"
 
+            _player_tap_prefix = 's' if gs.vendor_action == 'sell' else ''
             sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
             player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
             player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
@@ -4966,10 +4990,20 @@ class WizardsCavernApp(toga.App):
                 player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
             else:
                 for i, item in enumerate(sorted_player_items):
-                    # Player inventory shows cryptic names for unidentified items
                     item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
-                    player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                    if _player_tap_prefix:
+                        cmd_str = f"{_player_tap_prefix}{i + 1}"
+                        player_inv_html += (
+                            f"<div class='taprow' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"</div>"
+                        )
+                    else:
+                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
             player_inv_html += "</div>"
+
+            vendor_html = starting_tabs_html + vendor_html
 
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
@@ -4987,9 +5021,11 @@ class WizardsCavernApp(toga.App):
                 """
             if gs.vendor_action:
                 action_label = {'buy': 'buy', 'sell': 'sell'}.get(gs.vendor_action, gs.vendor_action)
-                current_commands_text = f"# = {action_label} item | b = back"
+                # Tabs handle mode switching; rows are tappable in the active
+                # list; hint shows just the row-select shortcut + exits.
+                current_commands_text = f"# = {action_label} item | ba = buy all | x = exit"
             else:
-                current_commands_text = "b = buy | s = sell | ba = buy all | x = exit"
+                current_commands_text = "Tap a tab above to begin | ba = buy all | x = exit"
 
         elif gs.prompt_cntl == "sell_quantity_mode":
             # SELL QUANTITY MODE - Show "How many?" prompt
@@ -5029,18 +5065,48 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "vendor_shop":
             # SHOP VIEW
+            # Segmented vendor tabs [Buy][Sell][Repair][ID] — tabs use
+            # the vbuy/vsell/vrep/vid idempotent commands so re-tapping
+            # the active tab is a no-op instead of toggling off.
+            _v_tabs = [
+                ('Buy',    'vbuy', gs.vendor_action == 'buy'),
+                ('Sell',   'vsell', gs.vendor_action == 'sell'),
+                ('Repair', 'vrep',  gs.vendor_action == 'repair'),
+                ('ID',     'vid',   gs.vendor_action == 'identify'),
+            ]
+            vendor_tabs_html = "<div class='filtertabs'>"
+            for label, cmd, is_active in _v_tabs:
+                cls = 'filtertab active' if is_active else 'filtertab'
+                vendor_tabs_html += (
+                    f"<div class='{cls}' data-zcmd='{cmd}' "
+                    f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                )
+            vendor_tabs_html += "</div>"
+
+            # Vendor wares: tappable "buy" targets when buy tab is active.
             sorted_vendor_items = get_sorted_inventory(gs.active_vendor.inventory)
             vendor_html = "<h3 style='margin: 0 0 5px 0;'>Vendor Wares</h3>"
             vendor_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
             if not sorted_vendor_items:
                 vendor_html += "<div style='margin: 2px 0; padding: 0;'>(Out of stock)</div>"
             else:
+                _wares_tappable = (gs.vendor_action == 'buy')
                 for i, item in enumerate(sorted_vendor_items):
-                    # Vendors know what items are - show real names (for_vendor=True)
                     item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=False, for_vendor=True)
-                    vendor_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                    if _wares_tappable:
+                        cmd_str = f"b{i + 1}"
+                        vendor_html += (
+                            f"<div class='taprow' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"</div>"
+                        )
+                    else:
+                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
             vendor_html += "</div>"
 
+            # Player inventory: tappable when sell/repair/identify is active.
+            _player_tap_prefix = {'sell': 's', 'repair': 'r', 'identify': 'id'}.get(gs.vendor_action, '')
             sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
             player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
             player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
@@ -5048,10 +5114,21 @@ class WizardsCavernApp(toga.App):
                 player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
             else:
                 for i, item in enumerate(sorted_player_items):
-                    # Player inventory shows cryptic names for unidentified items
                     item_str = format_item_for_display(item, gs.player_character, show_price=True, is_sell_price=True)
-                    player_inv_html += f"<div style='margin: 2px 0; padding: 0;'><b>{i + 1}.</b> {item_str}</div>"
+                    if _player_tap_prefix:
+                        cmd_str = f"{_player_tap_prefix}{i + 1}"
+                        player_inv_html += (
+                            f"<div class='taprow' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"</div>"
+                        )
+                    else:
+                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
             player_inv_html += "</div>"
+
+            # Prepend tabs above the wares list so the player sees them first.
+            vendor_html = vendor_tabs_html + vendor_html
 
             vendor_sprite = generate_room_sprite_html('V')
 
@@ -5082,9 +5159,10 @@ class WizardsCavernApp(toga.App):
                 current_commands_text = "1-9 / a = sell | c = cancel"
             elif gs.vendor_action:
                 action_label = {'buy': 'buy', 'sell': 'sell', 'repair': 'repair', 'identify': 'identify'}.get(gs.vendor_action, gs.vendor_action)
-                current_commands_text = f"# = {action_label} item | b = back"
+                # Tabs above drive the mode; hint shows row shortcut + exit.
+                current_commands_text = f"# = {action_label} item | x = exit"
             else:
-                current_commands_text = "b = buy | s = sell | r = repair | id = identify | x = exit"
+                current_commands_text = "Tap a tab above to begin | x = exit"
 
 
 

@@ -358,6 +358,43 @@ def process_vendor_action(player_character, vendor_character, cmd):
         gs.vendor_action = None
         return False
 
+    # --- Segmented tab commands: always SET the sub-action (no toggle).
+    # Fired by the WebView segmented tabs so tapping the active tab a
+    # second time doesn't accidentally back out.  Keyboard users keep
+    # the bare b/s/r/id toggle semantics below.
+    if cmd in ('vbuy', 'vsell', 'vrep', 'vid'):
+        target = {'vbuy': 'buy', 'vsell': 'sell', 'vrep': 'repair', 'vid': 'identify'}[cmd]
+        if gs.vendor_action == target:
+            return False  # already on this tab, nothing to do
+        gs.vendor_action = target
+        if target == 'repair':
+            damaged_items = []
+            sorted_items = get_sorted_inventory(player_character.inventory)
+            for i, item in enumerate(sorted_items):
+                if isinstance(item, (Weapon, Armor)) and item.durability < item.max_durability:
+                    if getattr(item, 'is_sealed', False):
+                        damaged_items.append(f"{i+1}. {item.name} (SEALED)")
+                    else:
+                        cost = get_repair_cost(item)
+                        damaged_items.append(f"{i+1}. {item.name} ({item.durability}/{item.max_durability}) - {cost}g")
+            if damaged_items:
+                set_shop_msg("Damaged: " + ", ".join(damaged_items[:4]))
+            else:
+                set_shop_msg("All equipment is in good condition!")
+        elif target == 'identify':
+            unid_items = []
+            sorted_items = get_sorted_inventory(player_character.inventory)
+            for i, item in enumerate(sorted_items):
+                if isinstance(item, (Potion, Scroll, Weapon, Armor, Spell)) and not is_item_identified(item):
+                    cost = get_vendor_identify_cost(item)
+                    display_name = get_item_display_name(item, for_vendor=False)
+                    unid_items.append(f"{i+1}. {display_name} - {cost}g")
+            if unid_items:
+                set_shop_msg("Unidentified: " + ", ".join(unid_items[:5]))
+            else:
+                set_shop_msg("All items are already identified!")
+        return False
+
     # --- Bare commands set sub-action for numpad mode ---
     if cmd == 'b':
         gs.vendor_action = 'buy'
