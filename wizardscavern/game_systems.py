@@ -1921,6 +1921,31 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         process_save_load_action(player_character, my_tower, "init")
         return
 
+    if cmd == 'sq':
+        # Save & Quit: write to the most-recently-used slot (or slot 1 if
+        # all slots are empty), then funnel into the confirm_quit dialog
+        # so the player gets the standard y/n safety before the app closes.
+        if in_combat:
+            add_log(f"{COLOR_YELLOW}You cannot save during combat!{COLOR_RESET}")
+            return
+        saves = SaveSystem.list_saves()
+        populated = [s for s in saves if not s['empty']]
+        if populated:
+            # Pick most-recent by timestamp (ISO-8601 sorts lexicographically)
+            target_slot = max(populated,
+                              key=lambda s: s['info'].get('timestamp', ''))['slot']
+        else:
+            target_slot = 1
+        if SaveSystem.save_game(player_character, my_tower, target_slot):
+            add_log(f"{COLOR_GREEN}Game saved to slot {target_slot}.{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_RED}Failed to save game!{COLOR_RESET}")
+            return
+        gs.previous_prompt_cntl = gs.prompt_cntl
+        gs.prompt_cntl = "confirm_quit"
+        add_log("Are you sure you want to quit? (y/n)")
+        return
+
     # Use/Equip commands - work with sorted inventory
     # In combat, filter to only usable items (Potions, Scrolls)
     sorted_items = get_sorted_inventory(player_character.inventory)
@@ -4111,7 +4136,23 @@ def _handle(my_tower, player_character, cmd):
         else:
             add_log(f"{COLOR_YELLOW}No save in slot {slot}{COLOR_RESET}")
         return True
-    # Otherwise start new game
+    # Delete a save directly from the launch screen (two-tap gated in UI).
+    if cmd in ['d1', 'd2', 'd3']:
+        slot = int(cmd[1])
+        if SaveSystem.save_exists(slot):
+            if SaveSystem.delete_save(slot):
+                add_log(f"{COLOR_YELLOW}Save slot {slot} deleted.{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_RED}Failed to delete save slot {slot}.{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_YELLOW}No save in slot {slot} to delete.{COLOR_RESET}")
+        return True
+    # 'n' starts a new game (tap card on the main menu)
+    if cmd == 'n':
+        gs.log_lines.clear()
+        gs.prompt_cntl = "player_name"
+        return True
+    # Otherwise start new game (legacy SEND / empty input path)
     gs.log_lines.clear()
     gs.prompt_cntl = "player_name"
     return True
