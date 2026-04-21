@@ -3743,16 +3743,16 @@ class WizardsCavernApp(toga.App):
         
         # Check if game should quit
         if gs.game_should_quit:
-            self.main_window.close()
+            self._force_quit()
             return
-        
+
         # Process the command using your existing game logic
         self.process_command(cmd)
 
         # Check if game should quit (e.g. after death screen)
         if gs.game_should_quit:
             self.render()
-            self.main_window.close()
+            self._force_quit()
             return
 
         # Re-render the display
@@ -3835,6 +3835,51 @@ class WizardsCavernApp(toga.App):
     # Haptic feedback + two-tap commit
     # ------------------------------------------------------------------
     _CONFIRM_WINDOW_SEC = 3.0
+
+    def _force_quit(self):
+        """Really terminate the app.
+
+        Toga's main_window.close() doesn't actually kill the process on
+        mobile — on Android the Activity finishes but the JVM/Python
+        host can linger, and on iOS programmatic exit is typically a
+        no-op via close().  We layer platform-native calls plus an
+        os._exit(0) fallback so "Quit" always closes the game.
+        """
+        import sys
+        # Android: tell the activity to finishAndRemoveTask so the app
+        # disappears from the recents list too, then nuke the JVM.
+        if sys.platform == 'android':
+            try:
+                from android import activity as _android_activity
+                try:
+                    _android_activity.finishAndRemoveTask()
+                except Exception:
+                    try:
+                        _android_activity.finish()
+                    except Exception:
+                        pass
+            except Exception:
+                pass
+            try:
+                from java.lang import System as _JavaSystem
+                _JavaSystem.exit(0)
+            except Exception:
+                pass
+        # Toga's own close + app-level exit hooks (run cleanup handlers).
+        try:
+            self.main_window.close()
+        except Exception:
+            pass
+        try:
+            self.exit()
+        except Exception:
+            pass
+        # Last resort: hard terminate the Python process on every platform.
+        try:
+            import os
+            os._exit(0)
+        except Exception:
+            pass
 
     def _init_ios_haptics(self):
         """Lazy-init iOS UIFeedbackGenerator instances via rubicon.
@@ -5065,11 +5110,16 @@ class WizardsCavernApp(toga.App):
                         <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
 
                         <div style="border: 1px solid gold; padding: 4px; border-radius: 4px; background: #1a1a1a; max-height: 500px; overflow-y: auto; margin-bottom: 5px;">{achievements_html}</div>
-                        
+
                         <div style="border: 1px solid cyan; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{stats_html}</div>
+
+                        <div class='taprow cancel' data-zcmd='x'
+                             onclick="window.__zotTap('x', this)">
+                            <span class='tapnum'>&times;</span>Close Achievements
+                        </div>
 </div>
                     """
-            current_commands_text = "x = exit"
+            current_commands_text = "Tap Close | x = exit"
 
         elif gs.prompt_cntl == "starting_shop":
             # STARTING SHOP VIEW - Match regular vendor format
@@ -5736,8 +5786,8 @@ class WizardsCavernApp(toga.App):
                 recipe_counter = 1
                 for tier in sorted(by_tier.keys()):
                     tier_color = tier_colors.get(tier, '#888')
-                    recipes_html += f"<div style='color: {tier_color}; font-weight: bold; font-size: 16px; margin: 8px 0 4px 0; border-bottom: 1px solid {tier_color};'>TIER {tier} - {tier_names[tier]}</div>"
-                    
+                    recipes_html += f"<div style='color: {tier_color}; font-weight: bold; font-size: 13px; margin: 8px 0 4px 0; letter-spacing: 1px;'>TIER {tier} &middot; {tier_names[tier]}</div>"
+
                     for recipe_name, recipe_data in by_tier[tier]:
                         crafted_item = recipe_data['result']()
                         ingredients_text = ", ".join([f"{count}x {name}" for name, count in recipe_data['ingredients']])
@@ -5745,13 +5795,18 @@ class WizardsCavernApp(toga.App):
                         if ration_cost > 0:
                             ingredients_text += f", {ration_cost}x Rations"
 
-                        recipes_html += f"""
-                            <div style='padding: 6px; margin: 4px 0; background: rgba(255,255,255,0.05); border-radius: 3px; border-left: 3px solid {tier_color};'>
-                                <div style='color: #FFD700; font-weight: bold; font-size: 16px;'>{recipe_counter}. {recipe_name}</div>
-                                <div style='color: #DDD; font-size: 15px;'>Needs: {ingredients_text}</div>
-                                <div style='color: #EEE; font-size: 15px; font-style: italic;'>{crafted_item.description}</div>
-                            </div>
-                        """
+                        cmd_str = f"{recipe_counter}"
+                        recipes_html += (
+                            f"<div class='taprow recipe' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\" "
+                            f"style='border-left: 3px solid {tier_color};'>"
+                            f"<div class='rname' style='color:{tier_color};'>"
+                            f"<span class='tapnum'>{recipe_counter}.</span>{recipe_name}"
+                            f"</div>"
+                            f"<div class='rmeta'>Needs: {ingredients_text}</div>"
+                            f"<div class='rdesc'>{crafted_item.description}</div>"
+                            f"</div>"
+                        )
                         recipe_counter += 1
             else:
                 recipes_html = "<div style='color: #CCC; font-style: italic; padding: 10px; font-size: 15px;'>No recipes available. Collect more ingredients!</div>"
@@ -5769,6 +5824,11 @@ class WizardsCavernApp(toga.App):
                     close_html += f"<div style='color: #AAA; font-size: 14px;'>...and {len(close) - 3} more</div>"
                 close_html += "</div>"
             
+            cancel_html = (
+                "<div class='taprow cancel' data-zcmd='x' "
+                "onclick=\"window.__zotTap('x', this)\">"
+                "<span class='tapnum'>&times;</span>Back to Inventory</div>"
+            )
             crafting_html = f"""
                 <div style="border: 2px solid #E040FB; border-radius: 4px; padding: 10px; background: #1a1a1a;">
                     <div style="color: #E040FB; font-weight: bold; font-size: 18px; text-align: center; margin-bottom: 8px;">
@@ -5779,9 +5839,10 @@ class WizardsCavernApp(toga.App):
                         {recipes_html}
                     </div>
                     {close_html}
-                    <div style="text-align: center; margin-top: 8px; color: #DDD; font-size: 15px;">
-                        Craftable: {len(craftable)} | Enter number to craft
+                    <div style="text-align: center; margin-top: 8px; color: #DDD; font-size: 12px;">
+                        Tap a recipe to craft &middot; Craftable: {len(craftable)}
                     </div>
+                    {cancel_html}
                 </div>
             """
             
@@ -5793,7 +5854,7 @@ class WizardsCavernApp(toga.App):
                     <div class="room-panel" style="width: 100%;">{crafting_html}</div>
                 </div>
             """
-            current_commands_text = "# = craft | x = back to inventory"
+            current_commands_text = "Tap a recipe to craft | x = back"
             needs_numbers = True
 
         elif gs.prompt_cntl == "spell_memorization_mode":
@@ -5989,54 +6050,39 @@ class WizardsCavernApp(toga.App):
             total_items = weapons_total + armor_total + potions_total + scrolls_total + spells_total + treasures_total + utilities_total + ingredients_total
             completion_pct = int((total_found / total_items) * 100) if total_items > 0 else 0
 
+            _jcats = [
+                ('1', 'Weapons',     weapons_found,     weapons_total,     '#FF6F00'),
+                ('2', 'Armor',       armor_found,       armor_total,       '#4CAF50'),
+                ('3', 'Potions',     potions_found,     potions_total,     '#E91E63'),
+                ('4', 'Scrolls',     scrolls_found,     scrolls_total,     '#E040FB'),
+                ('5', 'Spells',      spells_found,      spells_total,      '#2196F3'),
+                ('6', 'Treasures',   treasures_found,   treasures_total,   '#FFD700'),
+                ('7', 'Utilities',   utilities_found,   utilities_total,   '#607D8B'),
+                ('8', 'Ingredients', ingredients_found, ingredients_total, '#8BC34A'),
+            ]
+            jcats_html = "<div class='jcat-grid'>"
+            for num, name, found, total, color in _jcats:
+                jcats_html += (
+                    f"<div class='taprow jcat' data-zcmd='{num}' "
+                    f"onclick=\"window.__zotTap('{num}', this)\" "
+                    f"style='border-color:{color};'>"
+                    f"<div class='jname' style='color:{color};'>{name}</div>"
+                    f"<div class='jprog'>{found}/{total}</div>"
+                    f"</div>"
+                )
+            jcats_html += "</div>"
+
             journal_html = f"""
                 <h3> Adventurer's Journal</h3>
                 <div style="padding: 3px; border-radius: 3px; margin-bottom: 15px;">
-                    <div style=""background-color: #4CAF50; width: {completion_pct}%; height: 20px; border-radius: 2px; text-align: center; line-height: 20px; color: #000; font-weight: bold;">
+                    <div style="background-color: #4CAF50; width: {completion_pct}%; height: 20px; border-radius: 2px; text-align: center; line-height: 20px; color: #000; font-weight: bold;">
                         {total_found}/{total_items} Items Discovered ({completion_pct}%)
                     </div>
                 </div>
-
-                <div style="display: flex; flex-direction: column; gap: 2px; width: 100%; ">
-                    <div style="border: 2px solid #FF6F00; padding: 2px; border-radius: 2px;">
-                        <b style="color: #FF6F00;">1.  Weapons ({weapons_found}/{weapons_total})</b><br>
-                        <span style="font-size: 12px; color: #DDD;">Swords, axes, and instruments of combat</span>
-                    </div>
-
-                    <div style="border: 2px solid #4CAF50; padding: 2px; border-radius: 2px;">
-                        <b style="color: #4CAF50;">2.  Armor ({armor_found}/{armor_total})</b><br>
-                        <span style="font-size: 12px; color: #DDD;">Protective gear and defensive equipment</span>
-                    </div>
-
-                    <div style="border: 2px solid #E91E63; padding: 2px; border-radius: 2px;">
-                        <b style="color: #E91E63;">3.  Potions ({potions_found}/{potions_total})</b><br>
-                        <span style="font-size: 12px; color: #DDD;">Elixirs, brews, and magical drinks</span>
-                    </div>
-
-                    <div style="border: 2px solid #E040FB; padding: 2px; border-radius: 2px;">
-                        <b style="color: #E040FB;">4.  Scrolls ({scrolls_found}/{scrolls_total})</b><br>
-                        <span style="font-size: 12px; color: #DDD;">Ancient parchments with mystical powers</span>
-                    </div>
-
-                    <div style="border: 2px solid #2196F3; padding: 2px; border-radius: 2px;">
-                        <b style="color: #2196F3;">5.  Spells ({spells_found}/{spells_total})</b><br>
-                        <span style="font-size: 12px; color: #DDD;">Arcane knowledge and magical incantations</span>
-                    </div>
-
-                    <div style="border: 2px solid #FFD700; padding: 2px; border-radius: 2px;">
-                        <b style="color: #FFD700;">6.  Treasures ({treasures_found}/{treasures_total})</b><br>
-                        <span style="font-size: 12px; color: #DDD;">Rare artifacts and precious items</span>
-                    </div>
-
-                    <div style="border: 2px solid #607D8B; padding: 2px; border-radius: 2px;">
-                        <b style="color: #607D8B;">7.  Utilities ({utilities_found}/{utilities_total})</b><br>
-                        <span style="font-size: 12px; color: #DDD;">Tools, lights, food and practical equipment</span>
-                    </div>
-
-                    <div style="border: 2px solid #8BC34A; padding: 2px; border-radius: 2px;">
-                        <b style="color: #8BC34A;">8.  Ingredients ({ingredients_found}/{ingredients_total})</b><br>
-                        <span style="font-size: 12px; color: #DDD;">Herbs, reagents and alchemical materials</span>
-                    </div>
+                {jcats_html}
+                <div class='taprow cancel' data-zcmd='x'
+                     onclick="window.__zotTap('x', this)">
+                    <span class='tapnum'>&times;</span>Back to Inventory
                 </div>
                 """
 
@@ -6052,7 +6098,7 @@ class WizardsCavernApp(toga.App):
                 """
             text_label = "Aa-" if gs.large_text_mode else "Aa+"
             music_label = "vol-" if gs.music_enabled else "vol+"
-            current_commands_text = f"1-8 = category | s = stats | a = achvs | t = {text_label} | v = {music_label} | g = save | x = back"
+            current_commands_text = f"Tap a category | s = stats | a = achvs | t = {text_label} | v = {music_label} | g = save | x = back"
 
         elif gs.prompt_cntl.startswith("journal_"):
             # JOURNAL CATEGORY VIEW
@@ -6249,14 +6295,16 @@ class WizardsCavernApp(toga.App):
                         {entries_html}
                     </div>
 
-                    <div style="margin-top: 10px;">
-                        Commands: <b>b</b> to go back | <b>x</b> to close journal
+                    <div class='taprow cancel' data-zcmd='b'
+                         onclick="window.__zotTap('b', this)"
+                         style='margin-top: 10px;'>
+                        <span class='tapnum'>&larr;</span>Back to Journal
                     </div>
                 </div>
                 """
             text_label = "Aa-" if gs.large_text_mode else "Aa+"
             music_label = "vol-" if gs.music_enabled else "vol+"
-            current_commands_text = f"b = back | s = stats | a = achvs | t = {text_label} | v = {music_label} | g = save | x = close"
+            current_commands_text = f"Tap Back | x = close journal"
 
         elif gs.prompt_cntl == "spell_casting_mode":
             # SPELL CASTING - Compact: Combat panels + spell list (no map)
@@ -8789,6 +8837,57 @@ class WizardsCavernApp(toga.App):
                     box-shadow: 0 0 10px rgba(255,193,7,0.3) inset;
                 }}
                 .taprow.altar-act.loot .aname {{ color: #FFD54F; }}
+                /* Crafting recipe rows: reuse the taprow base with a
+                   denser layout (name / ingredients / description). */
+                .taprow.recipe {{
+                    background: linear-gradient(180deg, #1f1025 0%, #120818 100%);
+                    padding: 8px 10px;
+                    line-height: 1.3;
+                }}
+                .taprow.recipe:active {{
+                    background: linear-gradient(180deg, #3a1a45 0%, #1f0e28 100%);
+                    box-shadow: 0 0 10px rgba(224,64,251,0.5),
+                                0 1px 0 #0a0a0a inset;
+                }}
+                .taprow.recipe .rname {{
+                    font-weight: bold;
+                    font-size: 13px;
+                    letter-spacing: 0.3px;
+                }}
+                .taprow.recipe .rmeta {{
+                    margin-top: 2px;
+                    font-size: 10px;
+                    color: #BBB;
+                }}
+                .taprow.recipe .rdesc {{
+                    margin-top: 2px;
+                    font-size: 10px;
+                    color: #888;
+                    font-style: italic;
+                }}
+
+                /* Journal category cards: 2-column grid of tappable tiles. */
+                .jcat-grid {{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 6px;
+                    margin: 6px 0;
+                }}
+                .taprow.jcat {{
+                    padding: 10px 8px;
+                    text-align: center;
+                    line-height: 1.3;
+                }}
+                .taprow.jcat .jname {{
+                    font-weight: bold;
+                    font-size: 13px;
+                }}
+                .taprow.jcat .jprog {{
+                    font-size: 10px;
+                    color: #AAA;
+                    margin-top: 2px;
+                }}
+
                 /* Shared "locked / already used" info pill used by rooms
                    when the action isn't available — muted grey, no tap. */
                 .roominfo {{
