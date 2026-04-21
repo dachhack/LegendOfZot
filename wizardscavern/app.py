@@ -7241,9 +7241,21 @@ class WizardsCavernApp(toga.App):
             
             # Build action prompt based on key status
             if has_key:
-                action_html = '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #4CAF50; font-size: 12px; font-weight: bold;">Unlock the dungeon?</div><div style="color: #DDD; font-size: 12px; margin-top: 2px;">Press u to use your key...</div></div>'
+                action_html = (
+                    "<div class='altar-actions'>"
+                    "<div class='taprow altar-act unlock' data-zcmd='u' "
+                    "onclick=\"window.__zotTap('u', this)\">"
+                    "<div class='aname'>Unlock the Dungeon</div>"
+                    "<div class='ameta'>Use your key to break the seal</div>"
+                    "</div>"
+                    "</div>"
+                )
             else:
-                action_html = '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #FF6B6B; font-size: 12px; font-weight: bold;">Find the key!</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Defeat monsters on this floor to find it...</div></div>'
+                action_html = (
+                    "<div class='roominfo' style='color:#FF6B6B;'>"
+                    "Find the key &mdash; defeat monsters on this floor."
+                    "</div>"
+                )
 
             # Check if master dungeon variant
             room_d = floor.grid[gs.player_character.y][gs.player_character.x]
@@ -7276,7 +7288,7 @@ class WizardsCavernApp(toga.App):
             """
             # Only show unlock command if player has key
             if has_key:
-                current_commands_text = "u = unlock | i = inventory"
+                current_commands_text = "Tap Unlock | i = inventory"
             else:
                 current_commands_text = "i = inventory"
             if has_lantern:
@@ -7297,12 +7309,26 @@ class WizardsCavernApp(toga.App):
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             already_looted = coords in gs.looted_dungeons
             
+            if already_looted:
+                loot_body = "<div class='roominfo'>Already Looted &mdash; the chamber is bare.</div>"
+            else:
+                # Command is 'r' (rummage) — the old HTML said 'l' which was
+                # a documentation bug; the handler always wanted 'r'.
+                loot_body = (
+                    "<div class='altar-actions'>"
+                    "<div class='taprow altar-act loot' data-zcmd='r' "
+                    "onclick=\"window.__zotTap('r', this)\">"
+                    "<div class='aname'>Rummage for Treasure</div>"
+                    "<div class='ameta'>Claim your reward</div>"
+                    "</div>"
+                    "</div>"
+                )
             dungeon_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="color: #DDD; font-size: 12px; margin-bottom: 8px;">
                         The iron door stands open. {'The chamber has been emptied.' if already_looted else 'Treasures glint in the darkness within.'}
                     </div>
-                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px; border-left: 3px solid #888;"><div style="color: #888; font-size: 12px;">Already Looted</div></div>' if already_looted else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #555;"><div style="color: #4CAF50; font-size: 12px; font-weight: bold;">Claim your reward?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press &apos;l&apos; to loot the dungeon...</div></div>')}
+                    {loot_body}
                 </div>
             """
             
@@ -7318,7 +7344,7 @@ class WizardsCavernApp(toga.App):
                 </div>
             """
             if not already_looted:
-                current_commands_text = "r = rummage | i = inventory"
+                current_commands_text = "Tap Rummage | i = inventory"
             else:
                 current_commands_text = "i = inventory"
             if has_lantern:
@@ -7496,10 +7522,12 @@ class WizardsCavernApp(toga.App):
                             A mystical mirror stands before you, its silvered surface rippling with arcane energy. Swirling mists dance within, showing glimpses of your destiny.
                         </div>
                     </div>
-                    
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #555;">
-                        <div style="color: #BA68C8; font-size: 12px; font-weight: bold;">Gaze into the Oracle?</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press 'g' to seek guidance on your quest...</div>
+                    <div class='altar-actions'>
+                        <div class='taprow altar-act mystic' data-zcmd='g'
+                             onclick="window.__zotTap('g', this)">
+                            <div class='aname'>Gaze into the Oracle</div>
+                            <div class='ameta'>Seek mystic guidance on your quest</div>
+                        </div>
                     </div>
                 </div>
             """
@@ -7515,7 +7543,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
             """
-            current_commands_text = "g = gaze | i = inventory"
+            current_commands_text = "Tap to gaze | i = inventory"
             if has_lantern:
                 current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
@@ -7540,6 +7568,50 @@ class WizardsCavernApp(toga.App):
             rfw_done = room.properties.get('reforged_weapon', False)
             rfa_done = room.properties.get('reforged_armor',  False)
 
+            def _smith_card(cmd, cls, title, meta, enabled):
+                if enabled:
+                    return (
+                        f"<div class='taprow altar-act {cls}' data-zcmd='{cmd}' "
+                        f"onclick=\"window.__zotTap('{cmd}', this)\">"
+                        f"<div class='aname'>{title}</div>"
+                        f"<div class='ameta'>{meta}</div>"
+                        f"</div>"
+                    )
+                return (
+                    f"<div class='taprow altar-act {cls} disabled'>"
+                    f"<div class='aname'>{title}</div>"
+                    f"<div class='ameta'>{meta}</div>"
+                    f"</div>"
+                )
+
+            w_repairable = bool(weapon and weapon.durability < weapon.max_durability)
+            a_repairable = bool(armor  and armor.durability  < armor.max_durability)
+            w_reforgeable = bool(weapon and not rfw_done)
+            a_reforgeable = bool(armor  and not rfa_done)
+
+            smith_cards = "<div class='altar-actions'>"
+            smith_cards += _smith_card(
+                '1', 'forge', 'Repair Weapon',
+                f"{w_repair_cost}g &middot; restore {weapon.name}" if w_repairable
+                    else ('Already at full durability' if weapon else 'No weapon equipped'),
+                w_repairable)
+            smith_cards += _smith_card(
+                '2', 'forge', 'Repair Armor',
+                f"{a_repair_cost}g &middot; restore {armor.name}" if a_repairable
+                    else ('Already at full durability' if armor else 'No armor equipped'),
+                a_repairable)
+            smith_cards += _smith_card(
+                '3', 'reforge', 'Reforge Weapon',
+                f"{reforge_cost}g &middot; gamble: re-roll base ATK" if w_reforgeable
+                    else ('Already reforged here' if rfw_done else 'No weapon equipped'),
+                w_reforgeable)
+            smith_cards += _smith_card(
+                '4', 'reforge', 'Reforge Armor',
+                f"{reforge_cost}g &middot; gamble: re-roll base DEF" if a_reforgeable
+                    else ('Already reforged here' if rfa_done else 'No armor equipped'),
+                a_reforgeable)
+            smith_cards += "</div>"
+
             smith_sprite = generate_room_sprite_html('B')
             smith_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
@@ -7554,12 +7626,7 @@ class WizardsCavernApp(toga.App):
                         Weapon: {weapon.name if weapon else 'none'} -- Durability: {item_dur_str(weapon)}<br>
                         Armor:  {armor.name  if armor  else 'none'} -- Durability: {item_dur_str(armor)}
                     </div>
-                    <div style="font-size: 12px; color: #DDD;">
-                        <div style="margin-bottom: 4px;">{'<span style="color:#888">[1] Weapon (perfect)</span>' if not weapon or weapon.durability >= weapon.max_durability else f'[1] Repair weapon -- {w_repair_cost}g'}</div>
-                        <div style="margin-bottom: 4px;">{'<span style="color:#888">[2] Armor (perfect)</span>'  if not armor  or armor.durability  >= armor.max_durability  else f'[2] Repair armor  -- {a_repair_cost}g'}</div>
-                        <div style="margin-bottom: 4px;">{'<span style="color:#888">[3] Reforge weapon (done)</span>' if rfw_done or not weapon else f'[3] Reforge weapon -- {reforge_cost}g (gamble: re-roll base ATK)'}</div>
-                        <div>{'<span style="color:#888">[4] Reforge armor (done)</span>'  if rfa_done or not armor  else f'[4] Reforge armor  -- {reforge_cost}g (gamble: re-roll base DEF)'}</div>
-                    </div>
+                    {smith_cards}
                     <div style="color:#888; font-size:11px; margin-top:10px;">Gold: {gs.player_character.gold}g</div>
                 </div>
             """
@@ -7574,7 +7641,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
             """
-            current_commands_text = "1=repair weapon | 2=repair armor | 3=reforge weapon | 4=reforge armor | i=inventory | n/s/e/w=move"
+            current_commands_text = "Tap a service | i = inventory | n/s/e/w = move"
 
         elif gs.prompt_cntl == "shrine_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
@@ -7583,6 +7650,27 @@ class WizardsCavernApp(toga.App):
             used = room.properties.get('shrine_used', False)
             shrine_sprite = generate_room_sprite_html('F')
 
+            if used:
+                shrine_body = (
+                    "<div class='roominfo'>The shrine lies silent. "
+                    "The spirit has passed on.</div>"
+                )
+            else:
+                shrine_body = (
+                    "<div class='altar-actions'>"
+                    "<div class='taprow altar-act blessing' data-zcmd='p' "
+                    "onclick=\"window.__zotTap('p', this)\">"
+                    "<div class='aname'>Pray</div>"
+                    "<div class='ameta'>Free &middot; 33% blessing / 33% map hint / 33% silence</div>"
+                    "</div>"
+                    "<div class='taprow altar-act offering' data-zcmd='o' "
+                    "onclick=\"window.__zotTap('o', this)\">"
+                    "<div class='aname'>Leave Offering</div>"
+                    "<div class='ameta'>50g &middot; guaranteed potion or scroll</div>"
+                    "</div>"
+                    "</div>"
+                    f"<div style='color:#888; font-size:11px; margin-top:8px;'>Gold: {gs.player_character.gold}g</div>"
+                )
             shrine_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
@@ -7596,7 +7684,7 @@ class WizardsCavernApp(toga.App):
                             </div>
                         </div>
                     </div>
-                    {'<div style="color:#888; font-size:12px;">The shrine lies silent. The spirit has passed on.</div>' if used else '<div style="font-size: 12px; color: #DDD;"><div style="margin-bottom: 4px;">[p] Pray -- 33% blessing / 33% map hint / 33% silence</div><div>[o] Leave offering -- 50g for guaranteed potion or scroll</div></div><div style="color:#888; font-size:11px; margin-top:8px;">Gold: ' + str(gs.player_character.gold) + 'g</div>'}
+                    {shrine_body}
                 </div>
             """
             html_code = f"""
@@ -7610,7 +7698,10 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
             """
-            current_commands_text = "p=pray | o=leave offering (50g) | i=inventory | n/s/e/w=move"
+            if used:
+                current_commands_text = "i = inventory | n/s/e/w = move"
+            else:
+                current_commands_text = "Tap Pray or Offering | i = inventory | n/s/e/w = move"
 
         elif gs.prompt_cntl == "alchemist_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
@@ -8608,6 +8699,60 @@ class WizardsCavernApp(toga.App):
                 }}
                 .taprow.altar-act.devotion .aname {{ color: #FFC107; }}
                 .taprow.altar-act.devotion .ameta {{ color: #C8A857; }}
+                /* Additional NPC-room action-card variants reusing the
+                   altar-act layout.  Colours chosen to match each room's
+                   theme so the player can tell them apart at a glance. */
+                .taprow.altar-act.forge {{
+                    background: linear-gradient(180deg, #2e1a0e 0%, #1a0e06 100%);
+                    border-color: #8a5a22;
+                }}
+                .taprow.altar-act.forge .aname {{ color: #FF9800; }}
+                .taprow.altar-act.reforge {{
+                    background: linear-gradient(180deg, #2a1e0e 0%, #180e06 100%);
+                    border-color: #B71C1C;
+                    box-shadow: 0 0 6px rgba(229,57,53,0.25) inset;
+                }}
+                .taprow.altar-act.reforge .aname {{ color: #E53935; }}
+                .taprow.altar-act.mystic {{
+                    background: linear-gradient(180deg, #1f1430 0%, #110820 100%);
+                    border-color: #7e57c2;
+                    box-shadow: 0 0 8px rgba(186,104,200,0.2) inset;
+                }}
+                .taprow.altar-act.mystic .aname {{ color: #BA68C8; }}
+                .taprow.altar-act.blessing {{
+                    background: linear-gradient(180deg, #0e2a1e 0%, #08180e 100%);
+                    border-color: #4caf50;
+                }}
+                .taprow.altar-act.blessing .aname {{ color: #81C784; }}
+                .taprow.altar-act.offering {{
+                    background: linear-gradient(180deg, #2a2412 0%, #181308 100%);
+                    border-color: #c9a02b;
+                }}
+                .taprow.altar-act.offering .aname {{ color: #FFCA28; }}
+                .taprow.altar-act.unlock {{
+                    background: linear-gradient(180deg, #0e2a18 0%, #08180c 100%);
+                    border-color: #4caf50;
+                    box-shadow: 0 0 8px rgba(76,175,80,0.3) inset;
+                }}
+                .taprow.altar-act.unlock .aname {{ color: #66BB6A; }}
+                .taprow.altar-act.loot {{
+                    background: linear-gradient(180deg, #2a200a 0%, #1a1206 100%);
+                    border-color: #FFC107;
+                    box-shadow: 0 0 10px rgba(255,193,7,0.3) inset;
+                }}
+                .taprow.altar-act.loot .aname {{ color: #FFD54F; }}
+                /* Shared "locked / already used" info pill used by rooms
+                   when the action isn't available — muted grey, no tap. */
+                .roominfo {{
+                    padding: 8px 10px;
+                    margin: 4px 0;
+                    border: 1px dashed #444;
+                    border-radius: 4px;
+                    background: #1a1a1a;
+                    color: #888;
+                    font-size: 11px;
+                    font-style: italic;
+                }}
 
                 /* ===== SAVE / LOAD SLOT CARDS ===== */
                 /* Populated slot: cyan border, character summary, tap = LOAD.
