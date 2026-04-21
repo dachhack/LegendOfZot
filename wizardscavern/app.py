@@ -3208,22 +3208,47 @@ class WizardsCavernApp(toga.App):
             left_col.add(back_btn)
         # "Drink Full" button when available
         if 'df' in cmd_dict:
+            df_armed = self._is_armed('df')
+            df_label = 'Tap!' if df_armed else 'Heal'
+            df_bg = '#8B0000' if df_armed else '#2a3a2a'
+            df_fg = '#FFF' if df_armed else '#4CAF50'
             df_btn = toga.Button(
-                'Heal', on_press=lambda w: self.quick_command('df', 'Heal'),
+                df_label, on_press=lambda w: self.quick_command('df', 'Heal'),
                 style=Pack(width=48, margin=1, font_size=9, font_weight='bold',
-                           background_color='#2a3a2a', color='#4CAF50', height=34))
+                           background_color=df_bg, color=df_fg, height=34))
             self._compact_android_button(df_btn)
-            self._style_android_button(df_btn, bg_start='#2a3a2a', bg_end='#1a2a1a',
-                                        border_color='#4CAF50')
+            if df_armed:
+                self._style_android_button(df_btn, bg_start='#C62828', bg_end='#8B0000',
+                                            pressed_start='#8B0000', pressed_end='#5B0000',
+                                            border_color='#FF6F6F')
+            else:
+                self._style_android_button(df_btn, bg_start='#2a3a2a', bg_end='#1a2a1a',
+                                            border_color='#4CAF50')
             left_col.add(df_btn)
         # Altar sacrifice button
         if is_altar and 's' in cmd_dict:
+            sac_armed = self._is_armed('s')
+            sac_label = 'Tap!' if sac_armed else 'Sac'
+            sac_bg = '#8B0000' if sac_armed else '#383838'
+            sac_fg = '#FFF' if sac_armed else '#FFD700'
+            # Armed state auto-submits (single-tap confirm); unarmed state
+            # follows the historical behavior of buffering 's' into the
+            # input field so it plays nicely with any keyboard chording.
+            if sac_armed:
+                sac_on_press = lambda w: self.quick_command('s', 'Sac')
+            else:
+                sac_on_press = lambda w: self.number_pad_input('s')
             sac_btn = toga.Button(
-                'Sac', on_press=lambda w: self.number_pad_input('s'),
+                sac_label, on_press=sac_on_press,
                 style=Pack(width=48, margin=1, font_size=10, font_weight='bold',
-                           background_color='#383838', color='#FFD700', height=34))
+                           background_color=sac_bg, color=sac_fg, height=34))
             self._compact_android_button(sac_btn)
-            self._style_android_button(sac_btn)
+            if sac_armed:
+                self._style_android_button(sac_btn, bg_start='#C62828', bg_end='#8B0000',
+                                            pressed_start='#8B0000', pressed_end='#5B0000',
+                                            border_color='#FF6F6F')
+            else:
+                self._style_android_button(sac_btn)
             left_col.add(sac_btn)
         left_col.add(toga.Box(style=Pack(flex=1)))  # bottom spacer
 
@@ -3531,17 +3556,30 @@ class WizardsCavernApp(toga.App):
         return btn
 
     def create_big_button(self, cmd_key, cmd_label):
-        """Create a larger button for important combat actions."""
+        """Create a larger button for important combat actions.
+
+        If cmd_key is armed for two-tap confirmation, the button flips to
+        a red "Tap again!" state so the player sees the pending confirm.
+        """
+        armed = self._is_armed(cmd_key)
+        display_label = 'Tap again!' if armed else cmd_label
+        bg_flat = '#8B0000' if armed else '#444'
+        text_color = '#FFF'
         btn = toga.Button(
-            cmd_label,
+            display_label,
             on_press=lambda w, k=cmd_key, l=cmd_label: self.quick_command(k, l),
             style=Pack(margin=1, font_size=12, font_weight='bold', width=100, height=30,
-                       background_color='#444', color='#FFF')
+                       background_color=bg_flat, color=text_color)
         )
         self._compact_android_button(btn)
-        self._style_android_button(btn, bg_start='#555555', bg_end='#383838',
-                                    pressed_start='#383838', pressed_end='#222222',
-                                    border_color='#666666')
+        if armed:
+            self._style_android_button(btn, bg_start='#C62828', bg_end='#8B0000',
+                                        pressed_start='#8B0000', pressed_end='#5B0000',
+                                        border_color='#FF6F6F')
+        else:
+            self._style_android_button(btn, bg_start='#555555', bg_end='#383838',
+                                        pressed_start='#383838', pressed_end='#222222',
+                                        border_color='#666666')
         return btn
 
     def create_numpad_button(self, number, compact=False):
@@ -3817,6 +3855,23 @@ class WizardsCavernApp(toga.App):
             _ = res
         except Exception:
             pass
+
+    def _is_armed(self, cmd_key):
+        """True if cmd_key is currently armed for confirmation.
+
+        Used by button factories to swap label/colour so an armed
+        action visually screams "tap again to confirm".
+        """
+        import time
+        if not cmd_key:
+            return False
+        armed_cmd = getattr(self, '_armed_cmd', None)
+        if armed_cmd != str(cmd_key).strip().lower():
+            return False
+        armed_at = getattr(self, '_armed_at', 0.0)
+        if (time.time() - armed_at) > self._CONFIRM_WINDOW_SEC:
+            return False
+        return True
 
     def _dangerous_cmd_label(self, cmd):
         """If this command is destructive in the current context, return a
