@@ -5677,36 +5677,67 @@ class WizardsCavernApp(toga.App):
             max_slots = gs.player_character.get_max_memorized_spell_slots()
             used_slots = gs.player_character.get_used_spell_slots()
 
-            # Available spells HTML
+            # Segmented tabs: [Memorize] [Forget].  Idempotent — bare m/f
+            # already SET the sub-action (no toggle-off) so tapping the
+            # active tab is harmless.
+            _mem_tabs = [
+                ('Memorize', 'm', gs.spell_memo_action == 'memorize'),
+                ('Forget',   'f', gs.spell_memo_action == 'forget'),
+            ]
+            memo_tabs_html = "<div class='filtertabs'>"
+            for label, cmd, is_active in _mem_tabs:
+                cls = 'filtertab active' if is_active else 'filtertab'
+                memo_tabs_html += (
+                    f"<div class='{cls}' data-zcmd='{cmd}' "
+                    f"onclick=\"window.__zotTap('{cmd}', this)\">{label}</div>"
+                )
+            memo_tabs_html += "</div>"
+
+            # Available spells HTML — tappable when Memorize tab is active
             available_spells_html = "<h3>Spells in Inventory</h3>"
             available_spells_html += "<div style='max-height: 280px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
-            available_spells_html += "<ul style='margin: 0; padding-left: 20px;'>"
+            _can_memorize = (gs.spell_memo_action == 'memorize')
             if not all_spells:
                 available_spells_html += "<p>You have no spell scrolls in your inventory.</p>"
             else:
-                available_spells_html += "<ul>"
                 for i, spell in enumerate(all_spells):
                     identified = is_item_identified(spell)
                     display_name = get_item_display_name(spell)
                     is_memorized = spell in gs.player_character.memorized_spells
-                    color = "#888" if is_memorized else "#FFF"
-                    marker = " <span style='color: #4CAF50;'>[MEM]</span>" if is_memorized else ""
+                    marker = " <span class='eqbadge'>MEM</span>" if is_memorized else ""
 
                     if identified:
                         slots_needed = gs.player_character.get_spell_slots(spell)
                         spell_info = f"<b>{display_name}</b>{marker}<br>"
-                        spell_info += f"&nbsp;&nbsp;L{spell.level} | "
-                        spell_info += f"{spell.mana_cost} MP | "
-                        spell_info += f"{slots_needed} slot{'s' if slots_needed > 1 else ''}<br>"
-                        spell_info += f"&nbsp;&nbsp;Type: {spell.spell_type}"
+                        spell_info += f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
+                        spell_info += f"L{spell.level} | {spell.mana_cost} MP | "
+                        spell_info += f"{slots_needed} slot{'s' if slots_needed > 1 else ''} | "
+                        spell_info += f"{spell.spell_type}</span>"
                     else:
                         spell_info = f"<b>{display_name}</b> <span style='color: #888;'>[?]</span>"
 
-                    available_spells_html += f"<li style='color: {color}; margin-bottom: 5px;'><b>{i + 1}.</b> {spell_info}</li>"
-                available_spells_html += "</ul>"
+                    body = f"<span class='tapnum'>{i + 1}.</span>{spell_info}"
+                    if _can_memorize and not is_memorized:
+                        cmd_str = f"m{i + 1}"
+                        available_spells_html += (
+                            f"<div class='taprow spell' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">{body}</div>"
+                        )
+                    else:
+                        row_cls = 'taprow spell disabled' if _can_memorize and is_memorized else 'taprow spell disabled'
+                        # No filter active OR already memorized => non-tappable
+                        if _can_memorize and is_memorized:
+                            available_spells_html += (
+                                f"<div class='{row_cls}'>{body}"
+                                f"<span class='tapnote'>Already memorized</span></div>"
+                            )
+                        else:
+                            available_spells_html += (
+                                f"<div style='margin: 2px 0; padding: 4px;'>{body}</div>"
+                            )
             available_spells_html += "</div>"
 
-            # Memorized spells HTML with progress bar
+            # Memorized spells HTML with progress bar — tappable when Forget is active
             memorized_html = f"""
                 <h3>Spell Slots: {used_slots}/{max_slots}</h3>
                 <div style="background-color: #333; padding: 3px; border-radius: 3px; margin-bottom: 5px;">
@@ -5717,12 +5748,26 @@ class WizardsCavernApp(toga.App):
                 <h3>Currently Memorized</h3>
                 """
 
+            _can_forget = (gs.spell_memo_action == 'forget')
             if gs.player_character.memorized_spells:
-                memorized_html += "<ul>"
                 for i, spell in enumerate(gs.player_character.memorized_spells):
                     slots_used = gs.player_character.get_spell_slots(spell)
-                    memorized_html += f"<li><b>{i + 1}.</b> {spell.name} ({slots_used} slot{'s' if slots_used > 1 else ''})</li>"
-                memorized_html += "</ul>"
+                    body = (
+                        f"<span class='tapnum'>{i + 1}.</span>"
+                        f"<b>{spell.name}</b> "
+                        f"<span style='color:#CE93D8; font-size:10px;'>"
+                        f"({slots_used} slot{'s' if slots_used > 1 else ''})</span>"
+                    )
+                    if _can_forget:
+                        cmd_str = f"f{i + 1}"
+                        memorized_html += (
+                            f"<div class='taprow spell' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">{body}</div>"
+                        )
+                    else:
+                        memorized_html += (
+                            f"<div style='margin: 2px 0; padding: 4px;'>{body}</div>"
+                        )
             else:
                 memorized_html += "<p><i>No spells memorized</i></p>"
 
@@ -5731,16 +5776,18 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
 
+                    {memo_tabs_html}
+
                     <div style="border: 1px solid green; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{memorized_html}</div>
-                    
+
                     <div style="border: 1px solid blue; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{available_spells_html}</div>
 </div>
                 """
             if gs.spell_memo_action:
                 action_label = {'memorize': 'memorize', 'forget': 'forget'}.get(gs.spell_memo_action, gs.spell_memo_action)
-                current_commands_text = f"# = {action_label} spell | b = back"
+                current_commands_text = f"# = {action_label} spell | x = exit"
             else:
-                current_commands_text = "m = memorize | f = forget | x = exit"
+                current_commands_text = "Tap a tab above to begin | x = exit"
 
         elif gs.prompt_cntl == "journal_mode":
             # JOURNAL MAIN MENU
@@ -6093,7 +6140,9 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
 
-            # Spells List
+            # Spells List — tappable modal.  Rows are taprows that send the
+            # bare spell number (process_spell_casting_action reads an int).
+            # Insufficient-mana rows stay non-interactive and greyed out.
             available_spells = gs.player_character.memorized_spells
             spells_html = '<div style="padding: 4px; border-radius: 4px; border: 2px solid #E040FB; max-height: 45vh; overflow-y: auto;">'
             spells_html += '<div style="color: #E040FB; font-weight: bold; font-size: 13px; margin-bottom: 4px;"> Cast Spell</div>'
@@ -6103,27 +6152,46 @@ class WizardsCavernApp(toga.App):
             else:
                 for i, spell in enumerate(available_spells):
                     can_cast = gs.player_character.mana >= spell.mana_cost
-                    color = "#4CAF50" if can_cast else "#888"
                     charge_turns = get_spell_charge_turns(spell)
                     charge_tag = ""
                     if charge_turns > 0:
                         charge_tag = f' <span style="color:#CE93D8;">[{charge_turns}T]</span>'
 
-                    spell_line = f'<div style="color: {color}; font-size: 11px; margin-bottom: 4px; padding: 3px; border-radius: 2px;">'
-                    spell_line += f'<b>{i + 1}. {spell.name}</b> ({spell.mana_cost} MP){charge_tag}<br>'
-                    spell_line += f'&nbsp;&nbsp;Lvl {spell.level} | '
-
                     if spell.spell_type == 'damage':
-                        spell_line += f'{spell.damage_type} | Pwr {spell.base_power}'
+                        detail = f'{spell.damage_type} | Pwr {spell.base_power}'
                     elif spell.spell_type == 'healing':
-                        spell_line += f'Heal {spell.base_power} HP'
+                        detail = f'Heal {spell.base_power} HP'
                     elif spell.spell_type in ['add_status_effect', 'remove_status']:
-                        spell_line += f'{spell.status_effect_name}'
+                        detail = f'{spell.status_effect_name}'
                     elif spell.spell_type == 'debuff_target':
-                        spell_line += f'{spell.status_effect_name}'
+                        detail = f'{spell.status_effect_name}'
+                    else:
+                        detail = ''
 
-                    spell_line += '</div>'
-                    spells_html += spell_line
+                    body = (
+                        f"<span class='tapnum'>{i + 1}.</span>"
+                        f"<b>{spell.name}</b> ({spell.mana_cost} MP){charge_tag}<br>"
+                        f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
+                        f"Lvl {spell.level} | {detail}</span>"
+                    )
+                    if can_cast:
+                        cmd_str = f"{i + 1}"
+                        spells_html += (
+                            f"<div class='taprow spell' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">{body}</div>"
+                        )
+                    else:
+                        spells_html += (
+                            f"<div class='taprow spell disabled'>{body}"
+                            f"<span class='tapnote'>Not enough MP</span></div>"
+                        )
+
+                # Cancel row so the player can back out without typing 'x'
+                spells_html += (
+                    "<div class='taprow spell cancel' data-zcmd='x' "
+                    "onclick=\"window.__zotTap('x', this)\">"
+                    "<span class='tapnum'>&times;</span>Cancel</div>"
+                )
 
             spells_html += '</div>'
 
@@ -6145,7 +6213,7 @@ class WizardsCavernApp(toga.App):
 
                 </div>
                 """
-            current_commands_text = "#  = cast spell | x = cancel"
+            current_commands_text = "Tap a spell to cast | x = cancel"
 
         elif gs.prompt_cntl == "combat_mode":
             # COMBAT VIEW WITH MAP - 3 Column Layout
@@ -8283,6 +8351,57 @@ class WizardsCavernApp(toga.App):
                     border-radius: 8px;
                     vertical-align: middle;
                     letter-spacing: 0.3px;
+                }}
+                /* Spell cast modal rows: purple/magenta theme. */
+                .taprow.spell {{
+                    background: linear-gradient(180deg, #2a1a3a 0%, #1a0e24 100%);
+                    border-color: #5a3a7a;
+                    color: #E1BEE7;
+                }}
+                .taprow.spell:active {{
+                    background: linear-gradient(180deg, #4a2a6a 0%, #2a1a3a 100%);
+                    border-color: #E040FB;
+                    box-shadow: 0 0 10px rgba(224,64,251,0.5),
+                                0 1px 0 #0a0a0a inset;
+                }}
+                .taprow.spell .tapnum {{
+                    color: #E040FB;
+                }}
+                /* Disabled: grey out and kill interactivity. */
+                .taprow.disabled {{
+                    opacity: 0.45;
+                    cursor: not-allowed;
+                    pointer-events: none;
+                    filter: grayscale(0.6);
+                }}
+                .tapnote {{
+                    display: inline-block;
+                    margin-left: 8px;
+                    padding: 1px 6px;
+                    font-size: 9px;
+                    font-weight: bold;
+                    color: #bbb;
+                    background: #3a1a1a;
+                    border-radius: 8px;
+                    vertical-align: middle;
+                }}
+                /* Cancel-row variant: muted red tint. */
+                .taprow.cancel {{
+                    background: linear-gradient(180deg, #2a1a1a 0%, #1a0e0e 100%);
+                    border-color: #6a3a3a;
+                    color: #D0A0A0;
+                    text-align: center;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    margin-top: 6px;
+                }}
+                .taprow.cancel:active {{
+                    background: linear-gradient(180deg, #4a2a2a 0%, #2a1a1a 100%);
+                    border-color: #FF5252;
+                    box-shadow: 0 0 8px rgba(255,82,82,0.5);
+                }}
+                .taprow.cancel .tapnum {{
+                    color: #FF8A80;
                 }}
 
                 /* ===== SEGMENTED FILTER TABS =====
