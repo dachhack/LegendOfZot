@@ -7880,11 +7880,74 @@ class WizardsCavernApp(toga.App):
             potions = [item for item in gs.player_character.inventory.items if isinstance(item, Potion)]
             combining = room.properties.get('alch_combining', False)
 
-            potion_list_html = ""
-            if combining:
-                potion_list_html = "<div style='color:#FF9800; font-size:12px; margin-top:6px;'>Choose two potions -- enter numbers like: 1 2</div>"
-                for i, p in enumerate(potions, 1):
-                    potion_list_html += f"<div style='color:#DDD; font-size:12px;'>{i}. {p.name}</div>"
+            # Body varies by state:
+            # - spent              -> info pill
+            # - idle (not combining) -> "Combine Two Potions" action card
+            # - combining           -> JS-side 2-tap picker on potion rows +
+            #                          cancel card; the handler accepts a
+            #                          single "X Y" command so we synthesise
+            #                          that on the second tap.
+            if uses_left <= 0:
+                alch_body = '<div class="roominfo">The apparatus is spent. No more combinations here.</div>'
+            elif not combining:
+                alch_body = (
+                    "<div class='altar-actions'>"
+                    "<div class='taprow altar-act mystic' data-zcmd='c' "
+                    "onclick=\"window.__zotTap('c', this)\">"
+                    "<div class='aname'>Combine Two Potions</div>"
+                    "<div class='ameta'>10% botch chance &middot; pick any two from your pack</div>"
+                    "</div>"
+                    "</div>"
+                )
+            else:
+                # Inline the 2-tap picker helper.  On each render the shell
+                # re-executes inline <script> tags, which also resets
+                # __alchFirst so an old selection doesn't bleed across
+                # turns.
+                alch_js = """
+                <script>
+                  window.__alchFirst = null;
+                  window.__alchSelect = function(idx, el) {
+                    try {
+                      if (window.__alchFirst === null) {
+                        window.__alchFirst = idx;
+                        el.classList.add('armed');
+                      } else if (window.__alchFirst === idx) {
+                        window.__alchFirst = null;
+                        el.classList.remove('armed');
+                      } else {
+                        var combined = window.__alchFirst + ' ' + idx;
+                        window.__alchFirst = null;
+                        document.querySelectorAll('.taprow.potion-pick.armed').forEach(function(r){
+                            r.classList.remove('armed');
+                        });
+                        window.__zotTap(combined, el);
+                      }
+                    } catch(e) {}
+                  };
+                </script>
+                """
+                picker_html = (
+                    "<div style='color:#FF9800; font-size:12px; margin:8px 0 4px 0;'>"
+                    "Pick TWO potions &mdash; tap the first, then tap the second to combine."
+                    "</div>"
+                )
+                if not potions:
+                    picker_html += "<div class='roominfo'>No potions in your pack to combine.</div>"
+                else:
+                    for i, p in enumerate(potions, 1):
+                        picker_html += (
+                            f"<div class='taprow spell potion-pick' "
+                            f"onclick=\"window.__alchSelect({i}, this)\">"
+                            f"<span class='tapnum'>{i}.</span>{p.name}"
+                            f"</div>"
+                        )
+                picker_html += (
+                    "<div class='taprow cancel' data-zcmd='x' "
+                    "onclick=\"window.__zotTap('x', this)\">"
+                    "<span class='tapnum'>&times;</span>Cancel Combining</div>"
+                )
+                alch_body = alch_js + picker_html
 
             alch_sprite = generate_room_sprite_html('Q')
             alch_html = f"""
@@ -7897,11 +7960,9 @@ class WizardsCavernApp(toga.App):
                         "Two become one. Results... variable."
                     </div>
                     <div style="color: #CCC; font-size: 12px; margin-bottom: 8px;">
-                        Uses remaining: {uses_left} | Potions in pack: {len(potions)}
+                        Uses remaining: {uses_left} &middot; Potions in pack: {len(potions)}
                     </div>
-                    {'<div style="color:#888; font-size:12px;">The apparatus is spent.</div>' if uses_left <= 0 else
-                     '<div style="font-size:12px; color:#DDD;">[c] Combine two potions (10% botch chance)</div>'}
-                    {potion_list_html}
+                    {alch_body}
                 </div>
             """
             html_code = f"""
@@ -7915,7 +7976,12 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
             """
-            current_commands_text = "c=combine potions | i=inventory | n/s/e/w=move"
+            if combining:
+                current_commands_text = "Tap two potions to combine | x = cancel | n/s/e/w = move"
+            elif uses_left <= 0:
+                current_commands_text = "Spent | i = inventory | n/s/e/w = move"
+            else:
+                current_commands_text = "Tap Combine | i = inventory | n/s/e/w = move"
 
         elif gs.prompt_cntl == "war_room_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
@@ -8265,7 +8331,7 @@ class WizardsCavernApp(toga.App):
                 else:
                     spell_info = '<div style="color: #888; font-size: 9px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555; font-style: italic;">The arcane symbols are difficult to decipher...</div>'
 
-            # Library info box with grimoire decision
+            # Library info box with grimoire decision — tappable Yes/No.
             library_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
@@ -8275,9 +8341,20 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     {spell_info}
-                    <div style="padding-top: 6px; margin-top: 6px; border-top: 1px solid #555;">
-                        <div style="color: #DAA520; font-size: 12px; font-weight: bold;">Attempt to read this grimoire?</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Reading may succeed or fail based on your intelligence...</div>
+                    <div style="color: #DDD; font-size: 11px; margin-top: 8px; font-style: italic;">
+                        Reading may succeed or fail based on your intelligence&hellip;
+                    </div>
+                    <div class='altar-actions'>
+                        <div class='taprow altar-act offering' data-zcmd='y'
+                             onclick="window.__zotTap('y', this)">
+                            <div class='aname'>Read the Grimoire</div>
+                            <div class='ameta'>Attempt to decipher its secrets</div>
+                        </div>
+                        <div class='taprow altar-act purify' data-zcmd='n'
+                             onclick="window.__zotTap('n', this)">
+                            <div class='aname'>Leave it Alone</div>
+                            <div class='ameta'>Return the grimoire to the shelf</div>
+                        </div>
                     </div>
                 </div>
             """
@@ -8295,7 +8372,7 @@ class WizardsCavernApp(toga.App):
                     </div>
 </div>
             """
-            current_commands_text = "y = read grimoire | n = discard"
+            current_commands_text = "Tap Read or Leave it"
 
         else:
             # MAP VIEW (for game_loop, confirm_quit, etc.)
@@ -8399,7 +8476,7 @@ class WizardsCavernApp(toga.App):
                     current_commands_text += f" | l = lantern"
                 current_commands_text += " | n/s/e/w = move"
             elif gs.prompt_cntl == "library_read_decision_mode":
-                current_commands_text = "y = read grimoire | n = discard"
+                current_commands_text = "Tap Read or Leave it"
             elif gs.prompt_cntl == "upgrade_scroll_mode":
                 current_commands_text = "Select item number to upgrade | c = cancel"
             elif gs.prompt_cntl == "identify_scroll_mode":

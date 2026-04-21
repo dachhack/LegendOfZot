@@ -2802,6 +2802,15 @@ def process_alchemist_action(player_character, my_tower, cmd):
 
     potions = [item for item in player_character.inventory.items if isinstance(item, Potion)]
 
+    # Cancel combining sub-mode without consuming a use.  Fired by the
+    # tappable "Cancel Combining" card on mobile; keyboard users can
+    # still type 'x' too.
+    if cmd == 'x' and room.properties.get('alch_combining'):
+        room.properties['alch_combining'] = False
+        add_log(f"{COLOR_GREY}You set the potions aside.{COLOR_RESET}")
+        gs.prompt_cntl = "alchemist_mode"
+        return
+
     if cmd == 'c':  # Begin combine
         if len(potions) < 2:
             add_log(f"{COLOR_YELLOW}You need at least 2 potions to combine.{COLOR_RESET}")
