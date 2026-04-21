@@ -3174,7 +3174,7 @@ def process_save_load_action(player_character, my_tower, cmd):
         return
 
 def process_main_menu_action(cmd):
-    """Handle main menu input (new game vs continue)."""
+    """Handle main menu input (new game vs continue vs delete)."""
 
     if cmd == 'n' or cmd == '':
         # Start new game
@@ -3194,6 +3194,18 @@ def process_main_menu_action(cmd):
                 add_log(f"{COLOR_RED}Failed to load save from slot {slot}!{COLOR_RESET}")
         else:
             add_log(f"{COLOR_YELLOW}No save in slot {slot}.{COLOR_RESET}")
+        return True
+
+    # Delete a save from the launch screen (two-tap gated at the UI layer).
+    if cmd in ['d1', 'd2', 'd3']:
+        slot = int(cmd[1])
+        if SaveSystem.save_exists(slot):
+            if SaveSystem.delete_save(slot):
+                add_log(f"{COLOR_YELLOW}Save slot {slot} deleted.{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_RED}Failed to delete save slot {slot}.{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_YELLOW}No save in slot {slot} to delete.{COLOR_RESET}")
         return True
 
     return False

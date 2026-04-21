@@ -4136,7 +4136,23 @@ def _handle(my_tower, player_character, cmd):
         else:
             add_log(f"{COLOR_YELLOW}No save in slot {slot}{COLOR_RESET}")
         return True
-    # Otherwise start new game
+    # Delete a save directly from the launch screen (two-tap gated in UI).
+    if cmd in ['d1', 'd2', 'd3']:
+        slot = int(cmd[1])
+        if SaveSystem.save_exists(slot):
+            if SaveSystem.delete_save(slot):
+                add_log(f"{COLOR_YELLOW}Save slot {slot} deleted.{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_RED}Failed to delete save slot {slot}.{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_YELLOW}No save in slot {slot} to delete.{COLOR_RESET}")
+        return True
+    # 'n' starts a new game (tap card on the main menu)
+    if cmd == 'n':
+        gs.log_lines.clear()
+        gs.prompt_cntl = "player_name"
+        return True
+    # Otherwise start new game (legacy SEND / empty input path)
     gs.log_lines.clear()
     gs.prompt_cntl = "player_name"
     return True

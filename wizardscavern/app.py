@@ -3914,6 +3914,41 @@ class WizardsCavernApp(toga.App):
         except Exception:
             pass
 
+    def _relative_save_time(self, iso_str):
+        """Render a save-timestamp ISO string as a short relative phrase
+        ("just now", "5m ago", "3h ago", "2d ago", "3w ago", or finally
+        the raw date).  Defensive: falls back to the first 10 chars on
+        any parse failure so the UI never breaks on an old / corrupt
+        timestamp format."""
+        if not iso_str or iso_str == 'Unknown':
+            return 'Unknown'
+        try:
+            from datetime import datetime
+            saved = datetime.fromisoformat(iso_str)
+            # timestamps are naive local time (datetime.now().isoformat())
+            now = datetime.now()
+            seconds = int((now - saved).total_seconds())
+            if seconds < 0:
+                # Clock skew or future timestamp — just show the date.
+                return saved.strftime('%Y-%m-%d')
+            if seconds < 45:
+                return 'just now'
+            if seconds < 3600:
+                m = max(1, seconds // 60)
+                return f"{m}m ago"
+            if seconds < 86400:
+                h = seconds // 3600
+                return f"{h}h ago"
+            if seconds < 604800:
+                d = seconds // 86400
+                return f"{d}d ago"
+            if seconds < 2592000:
+                w = seconds // 604800
+                return f"{w}w ago"
+            return saved.strftime('%Y-%m-%d')
+        except Exception:
+            return iso_str[:10] if isinstance(iso_str, str) else 'Unknown'
+
     def _is_armed(self, cmd_key):
         """True if cmd_key is currently armed for confirmation.
 
@@ -3947,7 +3982,11 @@ class WizardsCavernApp(toga.App):
         if c in ('o1', 'o2', 'o3') and gs.prompt_cntl == 'save_load_mode':
             return f'Overwrite save slot {c[1]}'
         # Save-delete commands (d1/d2/d3) are irreversible; arm twice too.
-        if c in ('d1', 'd2', 'd3') and gs.prompt_cntl == 'save_load_mode':
+        # Available from both in-game save menu and the launch-screen
+        # main menu.
+        if c in ('d1', 'd2', 'd3') and gs.prompt_cntl in (
+            'save_load_mode', 'main_menu', 'intro_story'
+        ):
             return f'Delete save slot {c[1]}'
         return None
 
@@ -4613,16 +4652,25 @@ class WizardsCavernApp(toga.App):
                     "&mdash; OR CONTINUE &mdash;"
                     "</div>"
                 )
+                armed_mm = getattr(self, '_armed_cmd', None)
                 for save in saves:
                     slot = save['slot']
                     if not save['empty']:
                         info = save['info']
+                        rel = self._relative_save_time(info.get('timestamp', 'Unknown'))
+                        del_cmd = f"d{slot}"
+                        del_armed = (armed_mm == del_cmd)
+                        del_cls = 'del-btn armed' if del_armed else 'del-btn'
+                        del_label = 'TAP AGAIN TO DELETE' if del_armed else 'Delete'
                         save_slots_html += (
                             f"<div class='taprow save-populated' data-zcmd='{slot}' "
                             f"onclick=\"window.__zotTap('{slot}', this)\">"
                             f"<div class='sname'>Slot {slot}: {info['name']}</div>"
                             f"<div class='smeta'>Level {info['level']} &middot; Floor {info['floor']} &middot; {info['gold']} gold</div>"
+                            f"<div class='sdate'>{rel}</div>"
                             f"<span class='slabel'>TAP TO LOAD</span>"
+                            f"&nbsp;<span class='{del_cls}' data-zcmd='{del_cmd}' "
+                            f"onclick=\"event.stopPropagation(); window.__zotTap('{del_cmd}', this)\">{del_label}</span>"
                             f"</div>"
                         )
 
@@ -4813,7 +4861,7 @@ class WizardsCavernApp(toga.App):
                     )
                 else:
                     info = save['info']
-                    timestamp = info['timestamp'][:10] if info['timestamp'] != 'Unknown' else 'Unknown'
+                    timestamp = self._relative_save_time(info.get('timestamp', 'Unknown'))
                     ovr_cmd = f"o{slot}"
                     del_cmd = f"d{slot}"
                     ovr_armed = (armed_ovr == ovr_cmd)
