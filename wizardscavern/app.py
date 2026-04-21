@@ -6824,9 +6824,12 @@ class WizardsCavernApp(toga.App):
                         <div style="color: #DDD; font-size: 12px; margin: 3px 0;">Chests Opened: {gs.game_stats.get('chests_opened', 0)}</div>
                     </div>
                     
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px;">
-                        <div style="color: #FFD700; font-size: 12px; font-weight: bold;"> Ready to open?</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Press 'o' to discover what's inside...</div>
+                    <div class='altar-actions'>
+                        <div class='taprow altar-act loot' data-zcmd='o'
+                             onclick="window.__zotTap('o', this)">
+                            <div class='aname'>Open the Chest</div>
+                            <div class='ameta'>Claim whatever treasures it holds</div>
+                        </div>
                     </div>
                 </div>
                 """
@@ -6845,7 +6848,7 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             # Build chest commands with lantern if available
-            current_commands_text = "o = open | i = inventory"
+            current_commands_text = "Tap to open | i = inventory"
             if has_lantern:
                 current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
@@ -7052,13 +7055,16 @@ class WizardsCavernApp(toga.App):
                     pool_html += f'<div style="color: #DDD; font-size: 12px; margin: 2px 0;"> {effect_name} ({effect.duration} turns)</div>'
                 pool_html += '</div>'
 
-            # Decision prompt
-            pool_html += '''
-                <div style="padding: 6px; margin-top: 10px; border-radius: 3px;">
-                    <div style="color: #00CED1; font-size: 12px; font-weight: bold;"> Drink from the basin?</div>
-                    <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Effects unknown until you drink...</div>
+            # Decision prompt — tappable
+            pool_html += """
+                <div class='altar-actions'>
+                    <div class='taprow altar-act mystic' data-zcmd='dr'
+                         onclick="window.__zotTap('dr', this)">
+                        <div class='aname'>Drink from the Basin</div>
+                        <div class='ameta'>Effects unknown until you drink&hellip;</div>
+                    </div>
                 </div>
-                '''
+                """
 
             pool_html += '</div>'
 
@@ -7075,7 +7081,7 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             # Build pool commands with lantern if available
-            current_commands_text = "dr = drink | i = inventory"
+            current_commands_text = "Tap to drink | i = inventory"
             if has_lantern:
                 current_commands_text += f" | l = lantern"
             current_commands_text += " | n/s/e/w = move"
@@ -7181,13 +7187,16 @@ class WizardsCavernApp(toga.App):
                         <div style="color: #DDD; font-size: 12px; margin: 3px 0;">Floor: {gs.player_character.z + 1}</div>
                     </div>
                     
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #555;">
-                        <div style="color: #4CAF50; font-size: 12px; font-weight: bold;"> Ascend the stairs?</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Press 'u' to climb upward...</div>
+                    <div class='altar-actions'>
+                        <div class='taprow altar-act blessing' data-zcmd='u'
+                             onclick="window.__zotTap('u', this)">
+                            <div class='aname'>Ascend the Stairs</div>
+                            <div class='ameta'>Climb upward toward the surface</div>
+                        </div>
                     </div>
                 </div>
                 """
-            
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
@@ -7201,7 +7210,7 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             # Build stairs up commands with lantern if available
-            current_commands_text = "u = up | i = inventory"
+            current_commands_text = "Tap to ascend | i = inventory"
             if has_lantern:
                 current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
@@ -7245,13 +7254,16 @@ class WizardsCavernApp(toga.App):
                         <div style="color: #FFA500; font-size: 9px; margin-top: 4px;"> Danger increases with depth</div>
                     </div>
                     
-                    <div style="padding: 6px; margin-top: 10px; border-radius: 3px; border-left: 3px solid #555;">
-                        <div style="color: #F44336; font-size: 12px; font-weight: bold;"> Descend deeper?</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px; font-style: italic;">Press 'd' to venture into the darkness...</div>
+                    <div class='altar-actions'>
+                        <div class='taprow altar-act reforge' data-zcmd='d'
+                             onclick="window.__zotTap('d', this)">
+                            <div class='aname'>Descend Deeper</div>
+                            <div class='ameta'>Venture into the darkness below</div>
+                        </div>
                     </div>
                 </div>
                 """
-            
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
@@ -7265,7 +7277,7 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             # Build stairs down commands with lantern if available
-            current_commands_text = "d = down | i = inventory"
+            current_commands_text = "Tap to descend | i = inventory"
             if has_lantern:
                 current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
@@ -7297,11 +7309,25 @@ class WizardsCavernApp(toga.App):
             lib_variant = 'codex' if current_room.properties.get('has_codex') else None
             library_sprite = generate_room_sprite_html('L', variant=lib_variant)
 
-            # Library info box - simple and clean
+            # Library body — tappable Rummage card when unsearched,
+            # muted info pill once searched.
             if has_searched:
-                lib_status = '<div style="color: #888; font-size: 12px; margin-top: 4px;">You have already rummaged through this library.</div>'
+                lib_body = (
+                    '<div class="roominfo">Already rummaged &mdash; the shelves are bare.</div>'
+                )
             else:
-                lib_status = '<div style="color: #DAA520; font-size: 12px; margin-top: 4px;">Hidden knowledge awaits discovery...</div>'
+                lib_body = (
+                    '<div style="color: #DAA520; font-size: 12px; margin: 4px 0 8px 0; font-style: italic;">'
+                    'Hidden knowledge awaits discovery&hellip;'
+                    '</div>'
+                    "<div class='altar-actions'>"
+                    "<div class='taprow altar-act offering' data-zcmd='r' "
+                    "onclick=\"window.__zotTap('r', this)\">"
+                    "<div class='aname'>Rummage for Books</div>"
+                    "<div class='ameta'>Search the shelves for spell scrolls and lore</div>"
+                    "</div>"
+                    "</div>"
+                )
 
             library_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
@@ -7311,7 +7337,7 @@ class WizardsCavernApp(toga.App):
                              Towering shelves filled with dusty tomes surround you. The air is thick with the scent of old parchment and forgotten knowledge.
                         </div>
                     </div>
-                    {lib_status}
+                    {lib_body}
                 </div>
                 """
 
@@ -7329,7 +7355,7 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             # Build library commands with lantern if available
-            current_commands_text = "r = rummage for books | i = inventory"
+            current_commands_text = "Tap Rummage | i = inventory" if not has_searched else "i = inventory"
             if has_lantern:
                 current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
@@ -7480,11 +7506,30 @@ class WizardsCavernApp(toga.App):
             tomb_variant = 'cursed' if room_t.properties.get('is_cursed') else None
             tomb_sprite = generate_room_sprite_html('T', variant=tomb_variant)
 
-            # Build tomb status text
+            # Build tomb body — binary choice (raid vs pay respects) when
+            # unplundered, muted info pill once already looted.
             if already_looted:
-                tomb_status = '<div style="color: #888; font-size: 12px; margin-top: 4px;">This tomb has already been raided.</div>'
+                tomb_body = (
+                    '<div class="roominfo">This tomb has already been raided.</div>'
+                )
             else:
-                tomb_status = '<div style="color: #C8A96E; font-size: 12px; margin-top: 4px;">You could <b>raid</b> it for treasure... or <b>pay respects</b> to the dead.</div>'
+                tomb_body = (
+                    '<div style="color: #C8A96E; font-size: 12px; margin: 6px 0;">'
+                    'Greed or reverence? The dead are watching.'
+                    '</div>'
+                    "<div class='altar-actions'>"
+                    "<div class='taprow altar-act reforge' data-zcmd='r' "
+                    "onclick=\"window.__zotTap('r', this)\">"
+                    "<div class='aname'>Raid the Tomb</div>"
+                    "<div class='ameta'>Treasure now, vengeance later &mdash; may spawn a guardian</div>"
+                    "</div>"
+                    "<div class='taprow altar-act blessing' data-zcmd='p' "
+                    "onclick=\"window.__zotTap('p', this)\">"
+                    "<div class='aname'>Pay Respects</div>"
+                    "<div class='ameta'>Honour the dead &mdash; a quiet blessing may follow</div>"
+                    "</div>"
+                    "</div>"
+                )
 
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
@@ -7498,13 +7543,13 @@ class WizardsCavernApp(toga.App):
                                 <div style="flex-shrink:0;">{tomb_sprite}</div>
                                 <div style="color: #DDD; font-size: 12px;">An ancient tomb lies before you, its stone lid cracked with age.</div>
                             </div>
-                            {tomb_status}
+                            {tomb_body}
                         </div>
                     </div>
                 </div>
             """
             if not already_looted:
-                current_commands_text = "r = raid | p = pay respects | i = inventory"
+                current_commands_text = "Tap Raid or Pay Respects | i = inventory"
             else:
                 current_commands_text = "i = inventory"
             if has_lantern:
@@ -7527,6 +7572,18 @@ class WizardsCavernApp(toga.App):
             
             garden_sprite = generate_room_sprite_html('G')
 
+            if already_harvested:
+                garden_body = "<div class='roominfo'>Already Harvested &mdash; the garden lies barren.</div>"
+            else:
+                garden_body = (
+                    "<div class='altar-actions'>"
+                    "<div class='taprow altar-act blessing' data-zcmd='h' "
+                    "onclick=\"window.__zotTap('h', this)\">"
+                    "<div class='aname'>Harvest Ingredients</div>"
+                    "<div class='ameta'>Gather potion components from the magical plants</div>"
+                    "</div>"
+                    "</div>"
+                )
             garden_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
@@ -7535,7 +7592,7 @@ class WizardsCavernApp(toga.App):
                             {'The garden lies barren, its magical plants already harvested.' if already_harvested else 'A lush magical garden blooms with glowing flowers, shimmering herbs, and crystalline plants. The air hums with arcane energy.'}
                         </div>
                     </div>
-                    {('<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #888; font-size: 12px;">Already Harvested</div></div>' if already_harvested else '<div style="padding: 6px; margin-top: 10px; border-radius: 3px;"><div style="color: #66BB6A; font-size: 12px; font-weight: bold;">Harvest ingredients?</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">Press &apos;h&apos; to gather potion components...</div></div>')}
+                    {garden_body}
                 </div>
             """
             
@@ -7551,7 +7608,7 @@ class WizardsCavernApp(toga.App):
                 </div>
             """
             if not already_harvested:
-                current_commands_text = "h = harvest | i = inventory"
+                current_commands_text = "Tap to harvest | i = inventory"
             else:
                 current_commands_text = "i = inventory"
             if has_lantern:
@@ -7587,9 +7644,11 @@ class WizardsCavernApp(toga.App):
                                 </div>
                             </div>
 
-                            <div style="display: flex; gap: 10px; justify-content: center;">
-                                <div style="padding: 8px 15px; border-radius: 4px; border: 1px solid #555; color: #FFF; font-weight: bold; font-size: 12px;">
-                                    [ H ] Harvest Ingredients
+                            <div class='altar-actions'>
+                                <div class='taprow altar-act devotion' data-zcmd='h'
+                                     onclick="window.__zotTap('h', this)">
+                                    <div class='aname'>Harvest Fey Ingredients</div>
+                                    <div class='ameta'>Rare exotic flora &middot; {turns_left} turns remaining</div>
                                 </div>
                             </div>
                             <div style="text-align: center; margin-top: 8px; font-size: 12px; color: #B39DDB;">
@@ -7610,7 +7669,7 @@ class WizardsCavernApp(toga.App):
                             </div>
                         </div>
                     """
-            current_commands_text = "h = harvest | i = inventory | n/s/e/w = move"
+            current_commands_text = "Tap to harvest fey garden | i = inventory | n/s/e/w = move"
 
         elif gs.prompt_cntl == "oracle_mode":
             # ORACLE VIEW - Mystical mirror with quest hints
