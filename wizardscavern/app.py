@@ -3834,13 +3834,70 @@ class WizardsCavernApp(toga.App):
     # ------------------------------------------------------------------
     _CONFIRM_WINDOW_SEC = 3.0
 
-    def _haptic(self, pattern='tap'):
-        """Fire a haptic buzz through the WebView (navigator.vibrate).
+    def _init_ios_haptics(self):
+        """Lazy-init iOS UIFeedbackGenerator instances via rubicon.
 
-        Works on Android and desktop browsers.  iOS Safari/WKWebView
-        doesn't expose vibrate() — native UIImpactFeedbackGenerator
-        would be required there (follow-up).
+        Creates one UIImpactFeedbackGenerator per style (light/medium/heavy)
+        plus a UINotificationFeedbackGenerator.  Calling prepare() warms
+        the Taptic Engine so the first buzz isn't delayed.
         """
+        import sys
+        if sys.platform != 'ios':
+            return
+        if getattr(self, '_ios_haptic_ready', False):
+            return
+        try:
+            from rubicon.objc import ObjCClass
+            UIImpactFeedbackGenerator = ObjCClass('UIImpactFeedbackGenerator')
+            UINotificationFeedbackGenerator = ObjCClass('UINotificationFeedbackGenerator')
+            # UIImpactFeedbackStyle: 0=light, 1=medium, 2=heavy
+            self._ios_haptic_light = UIImpactFeedbackGenerator.alloc().initWithStyle_(0)
+            self._ios_haptic_medium = UIImpactFeedbackGenerator.alloc().initWithStyle_(1)
+            self._ios_haptic_heavy = UIImpactFeedbackGenerator.alloc().initWithStyle_(2)
+            self._ios_haptic_notif = UINotificationFeedbackGenerator.alloc().init()
+            for g in (self._ios_haptic_light, self._ios_haptic_medium,
+                      self._ios_haptic_heavy, self._ios_haptic_notif):
+                try:
+                    g.prepare()
+                except Exception:
+                    pass
+            self._ios_haptic_ready = True
+        except Exception:
+            self._ios_haptic_ready = False
+
+    def _haptic(self, pattern='tap'):
+        """Fire a haptic buzz.
+
+        iOS path: UIImpactFeedbackGenerator / UINotificationFeedbackGenerator
+        via rubicon (WKWebView doesn't expose navigator.vibrate on iOS).
+        Android / desktop path: navigator.vibrate() through evaluate_javascript.
+        """
+        import sys
+        if sys.platform == 'ios':
+            try:
+                self._init_ios_haptics()
+                if getattr(self, '_ios_haptic_ready', False):
+                    # UINotificationFeedbackType: 0=success, 1=warning, 2=error
+                    if pattern == 'tap':
+                        self._ios_haptic_light.impactOccurred()
+                        self._ios_haptic_light.prepare()
+                    elif pattern == 'arm':
+                        self._ios_haptic_notif.notificationOccurred_(1)  # warning
+                        self._ios_haptic_notif.prepare()
+                    elif pattern == 'confirm':
+                        self._ios_haptic_notif.notificationOccurred_(0)  # success
+                        self._ios_haptic_notif.prepare()
+                    elif pattern == 'deny':
+                        self._ios_haptic_notif.notificationOccurred_(2)  # error
+                        self._ios_haptic_notif.prepare()
+                    else:
+                        self._ios_haptic_medium.impactOccurred()
+                        self._ios_haptic_medium.prepare()
+                    return
+            except Exception:
+                pass  # fall through to JS path
+
+        # Android / desktop: navigator.vibrate via WebView
         patterns = {
             'tap':     '8',              # quick button press
             'arm':     '[30,60,30]',     # "armed, tap again to confirm"
@@ -3851,8 +3908,7 @@ class WizardsCavernApp(toga.App):
         try:
             js = f"if(window.navigator&&navigator.vibrate)navigator.vibrate({p});"
             res = self.web_view.evaluate_javascript(js)
-            # fire-and-forget: deliberately don't await
-            _ = res
+            _ = res  # fire-and-forget: don't await
         except Exception:
             pass
 
