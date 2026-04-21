@@ -3940,6 +3940,10 @@ class WizardsCavernApp(toga.App):
             return 'Flee combat'
         if c == 's' and gs.prompt_cntl == 'altar_mode':
             return 'Sacrifice at the altar'
+        # Save-overwrite commands (o1/o2/o3) destroy the existing save in
+        # that slot — always ask twice.
+        if c in ('o1', 'o2', 'o3') and gs.prompt_cntl == 'save_load_mode':
+            return f'Overwrite save slot {c[1]}'
         return None
 
     def _check_confirm_commit(self, cmd):
@@ -4585,32 +4589,37 @@ class WizardsCavernApp(toga.App):
             """
 
         if gs.prompt_cntl == "intro_story" or gs.prompt_cntl == "main_menu":
-            # MAIN MENU / INTRO STORY SCREEN
+            # MAIN MENU / INTRO STORY SCREEN — tappable slot cards.
+            # The big gold NEW GAME card sends 'n' to start fresh; each
+            # populated save slot card sends its digit to load.
             saves = SaveSystem.list_saves()
             has_saves = any(not s['empty'] for s in saves)
 
-            # Build save slots HTML
-            save_slots_html = ""
+            save_slots_html = (
+                "<div class='taprow save-new' data-zcmd='n' "
+                "onclick=\"window.__zotTap('n', this)\">"
+                "<div class='sname'>NEW GAME</div>"
+                "<div class='smeta'>A fresh descent into the Cavern</div>"
+                "</div>"
+            )
             if has_saves:
-                save_slots_html = """
-                            <div style="border-top: 1px solid #444; padding-top: 15px; margin-top: 10px;">
-                                <div style="color: #888; font-size: 12px; margin-bottom: 10px;">- OR CONTINUE -</div>
-                        """
+                save_slots_html += (
+                    "<div style='color: #888; font-size: 12px; text-align:center; margin: 10px 0 6px 0; letter-spacing:1px;'>"
+                    "&mdash; OR CONTINUE &mdash;"
+                    "</div>"
+                )
                 for save in saves:
                     slot = save['slot']
                     if not save['empty']:
                         info = save['info']
-                        save_slots_html += f"""
-                                    <div style="padding: 8px; margin: 5px 0; border: 1px solid #4FC3F7; border-radius: 4px; background: #222; text-align: left;">
-                                        <div style="color: #4FC3F7; font-size: 12px;">
-                                            Press '{slot}' to load: <span style="color: #FFF;">{info['name']}</span>
-                                        </div>
-                                        <div style="color: #888; font-size: 12px;">
-                                            Level {info['level']} | Floor {info['floor']} | {info['gold']} Gold
-                                        </div>
-                                    </div>
-                                """
-                save_slots_html += "</div>"
+                        save_slots_html += (
+                            f"<div class='taprow save-populated' data-zcmd='{slot}' "
+                            f"onclick=\"window.__zotTap('{slot}', this)\">"
+                            f"<div class='sname'>Slot {slot}: {info['name']}</div>"
+                            f"<div class='smeta'>Level {info['level']} &middot; Floor {info['floor']} &middot; {info['gold']} gold</div>"
+                            f"<span class='slabel'>TAP TO LOAD</span>"
+                            f"</div>"
+                        )
 
             html_code = f"""
                         <div id="intro-tap-zone" style="font-family: monospace; font-size: 12px; padding: 10px; text-align: center; cursor: pointer;"
@@ -4632,18 +4641,15 @@ class WizardsCavernApp(toga.App):
                                 <span style="color: #FF4444;">Beware!!</span>
                             </div>
 
-                            <div style="border: 2px solid #555; border-radius: 5px; padding: 15px; margin: 20px auto; max-width: 350px; background: #1a1a1a;">
-                                <div style="color: #4FC3F7; font-size: 12px; margin-bottom: 15px;">
-                                    Press Send to start a <span style="color: #4FC3F7;">NEW GAME</span>
-                                </div>
+                            <div style="border: 2px solid #555; border-radius: 5px; padding: 12px; margin: 20px auto; max-width: 350px; background: #1a1a1a;">
                                 {save_slots_html}
                             </div>
                         </div>
                     """
             if has_saves:
-                current_commands_text = "Send = New Game | 1-3 = Load"
+                current_commands_text = "Tap New Game or a save slot"
             else:
-                current_commands_text = "Send to begin"
+                current_commands_text = "Tap NEW GAME to begin"
 
         elif gs.prompt_cntl == "game_loaded_summary":
             # LOADED GAME SUMMARY SCREEN
@@ -4782,43 +4788,51 @@ class WizardsCavernApp(toga.App):
                     """
             current_commands_text = "Press Send to continue"
         elif gs.prompt_cntl == "save_load_mode":
-            # SAVE/LOAD MENU
+            # SAVE/LOAD MENU — tappable slot cards.
+            # Empty slot: tap to save here.
+            # Populated slot: tap the big card to LOAD; tap the small
+            # "Overwrite" micro-button to overwrite (two-tap gated).
             saves = SaveSystem.list_saves()
+            armed_ovr = getattr(self, '_armed_cmd', None)
 
             slots_html = ""
             for save in saves:
                 slot = save['slot']
                 if save['empty']:
-                    slots_html += f"""
-                                <div style="padding: 12px; margin: 8px 0; border: 1px solid #333; border-radius: 4px; background: #222;">
-                                    <div style="color: #888; font-size: 12px;">
-                                        <span style="color: #666;">Slot {slot}:</span> Empty
-                                    </div>
-                                    <div style="color: #4FC3F7; font-size: 12px; margin-top: 5px;">
-                                        Press '{slot}' to SAVE here
-                                    </div>
-                                </div>
-                            """
+                    slots_html += (
+                        f"<div class='taprow save-empty' data-zcmd='{slot}' "
+                        f"onclick=\"window.__zotTap('{slot}', this)\">"
+                        f"<div class='sname'>Slot {slot}: <i>Empty</i></div>"
+                        f"<div class='slabel'>TAP TO SAVE HERE</div>"
+                        f"</div>"
+                    )
                 else:
                     info = save['info']
                     timestamp = info['timestamp'][:10] if info['timestamp'] != 'Unknown' else 'Unknown'
-                    slots_html += f"""
-                                <div style="padding: 12px; margin: 8px 0; border: 1px solid #4FC3F7; border-radius: 4px; background: #222;">
-                                    <div style="color: #4FC3F7; font-size: 12px; font-weight: bold;">
-                                        Slot {slot}: {info['name']}
-                                    </div>
-                                    <div style="color: #AAA; font-size: 12px; margin-top: 5px;">
-                                        Level {info['level']} | Floor {info['floor']} | {info['gold']} Gold
-                                    </div>
-                                    <div style="color: #666; font-size: 12px; margin-top: 3px;">
-                                        Saved: {timestamp}
-                                    </div>
-                                    <div style="color: #888; font-size: 12px; margin-top: 8px; border-top: 1px solid #333; padding-top: 8px;">
-                                        Press '{slot}' to <span style="color: #4FC3F7;">LOAD</span> | 
-                                        Press 'o{slot}' to <span style="color: #FFA500;">OVERWRITE</span>
-                                    </div>
-                                </div>
-                            """
+                    ovr_cmd = f"o{slot}"
+                    ovr_armed = (armed_ovr == ovr_cmd)
+                    ovr_cls = 'ovr-btn armed' if ovr_armed else 'ovr-btn'
+                    ovr_label = 'TAP AGAIN TO OVERWRITE' if ovr_armed else 'Overwrite'
+                    # event.stopPropagation so tapping the overwrite
+                    # micro-button doesn't also trigger the parent LOAD.
+                    slots_html += (
+                        f"<div class='taprow save-populated' data-zcmd='{slot}' "
+                        f"onclick=\"window.__zotTap('{slot}', this)\">"
+                        f"<div class='sname'>Slot {slot}: {info['name']}</div>"
+                        f"<div class='smeta'>Level {info['level']} &middot; Floor {info['floor']} &middot; {info['gold']} gold</div>"
+                        f"<div class='sdate'>Saved: {timestamp}</div>"
+                        f"<span class='slabel'>TAP TO LOAD</span>"
+                        f"&nbsp;<span class='{ovr_cls}' data-zcmd='{ovr_cmd}' "
+                        f"onclick=\"event.stopPropagation(); window.__zotTap('{ovr_cmd}', this)\">{ovr_label}</span>"
+                        f"</div>"
+                    )
+
+            # Cancel row pinned at the bottom of the card stack.
+            slots_html += (
+                "<div class='taprow cancel' data-zcmd='x' "
+                "onclick=\"window.__zotTap('x', this)\">"
+                "<span class='tapnum'>&times;</span>Cancel</div>"
+            )
 
             html_code = f"""
                         <div style="font-family: monospace; font-size: 12px; padding: 15px;">
@@ -4826,15 +4840,12 @@ class WizardsCavernApp(toga.App):
                             <h2 style="color: #FFD700; text-align: center; margin-bottom: 15px;">
                                 SAVE / LOAD GAME
                             </h2>
-                            <div style="border: 2px solid #555; border-radius: 5px; padding: 15px; background: #1a1a1a;">
+                            <div style="border: 2px solid #555; border-radius: 5px; padding: 12px; background: #1a1a1a;">
                                 {slots_html}
-                            </div>
-                            <div style="text-align: center; margin-top: 15px; color: #888; font-size: 12px;">
-                                Press 'x' to cancel
                             </div>
                         </div>
                     """
-            current_commands_text = "1-3 = save/load | o1-o3 = overwrite | x = cancel"
+            current_commands_text = "Tap a slot | x = cancel"
 
         elif gs.prompt_cntl == "player_name":
             # PLAYER NAME INPUT SCREEN
@@ -8586,6 +8597,111 @@ class WizardsCavernApp(toga.App):
                 }}
                 .taprow.altar-act.devotion .aname {{ color: #FFC107; }}
                 .taprow.altar-act.devotion .ameta {{ color: #C8A857; }}
+
+                /* ===== SAVE / LOAD SLOT CARDS ===== */
+                /* Populated slot: cyan border, character summary, tap = LOAD.
+                   Inner .ovr-btn taps OVERWRITE (dangerous, two-tap gated). */
+                .taprow.save-populated {{
+                    background: linear-gradient(180deg, #0e1e2a 0%, #0a1520 100%);
+                    border-color: #4FC3F7;
+                    padding: 10px 12px;
+                    position: relative;
+                }}
+                .taprow.save-populated .sname {{
+                    color: #4FC3F7;
+                    font-weight: bold;
+                    font-size: 13px;
+                }}
+                .taprow.save-populated .smeta {{
+                    color: #AAA;
+                    font-size: 10px;
+                    margin-top: 3px;
+                }}
+                .taprow.save-populated .sdate {{
+                    color: #666;
+                    font-size: 9px;
+                    margin-top: 2px;
+                }}
+                .taprow.save-populated .slabel {{
+                    display: inline-block;
+                    margin-top: 6px;
+                    padding: 2px 7px;
+                    font-size: 9px;
+                    font-weight: bold;
+                    color: #1a1a1a;
+                    background: #4FC3F7;
+                    border-radius: 7px;
+                    letter-spacing: 0.5px;
+                }}
+                /* Empty slot: dimmer, amber "save here" tint. */
+                .taprow.save-empty {{
+                    background: linear-gradient(180deg, #22221a 0%, #18180e 100%);
+                    border-color: #554a22;
+                    padding: 14px 12px;
+                    color: #888;
+                }}
+                .taprow.save-empty .sname {{
+                    color: #AAA;
+                    font-size: 12px;
+                }}
+                .taprow.save-empty .slabel {{
+                    display: inline-block;
+                    margin-top: 6px;
+                    padding: 2px 7px;
+                    font-size: 9px;
+                    font-weight: bold;
+                    color: #1a1a1a;
+                    background: #FFC107;
+                    border-radius: 7px;
+                    letter-spacing: 0.5px;
+                }}
+                /* New Game card (main menu): bold gold treatment. */
+                .taprow.save-new {{
+                    background: linear-gradient(180deg, #2a2210 0%, #1a1408 100%);
+                    border-color: #FFD700;
+                    padding: 14px;
+                    text-align: center;
+                    box-shadow: 0 0 10px rgba(255,215,0,0.25) inset;
+                }}
+                .taprow.save-new .sname {{
+                    color: #FFD700;
+                    font-weight: bold;
+                    font-size: 14px;
+                    letter-spacing: 1px;
+                }}
+                .taprow.save-new .smeta {{
+                    color: #A78B5A;
+                    font-size: 10px;
+                    margin-top: 4px;
+                }}
+                /* Inner overwrite micro-button on populated slots. */
+                .ovr-btn {{
+                    display: inline-block;
+                    margin-top: 8px;
+                    padding: 4px 10px;
+                    font-size: 10px;
+                    font-weight: bold;
+                    color: #FFB74D;
+                    background: #2a1f10;
+                    border: 1px solid #8a6a2a;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: background 120ms ease-out, transform 60ms ease-out;
+                }}
+                .ovr-btn:active {{
+                    transform: scale(0.96);
+                    background: #5a3a1a;
+                    border-color: #FFA500;
+                }}
+                .ovr-btn.armed {{
+                    background: #8B0000;
+                    border-color: #FF6F6F;
+                    color: #FFF;
+                    box-shadow: 0 0 8px rgba(255,82,82,0.6);
+                }}
 
                 /* ===== SEGMENTED FILTER TABS =====
                    Pill-style bar showing the current inventory filter.
