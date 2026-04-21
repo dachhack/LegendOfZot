@@ -6697,6 +6697,19 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
 
+            flee_dpad = """
+                <div class='dpad'>
+                    <div class='dpad-slot empty'></div>
+                    <div class='taprow dpad-dir' data-zcmd='n' onclick="window.__zotTap('n', this)">N</div>
+                    <div class='dpad-slot empty'></div>
+                    <div class='taprow dpad-dir' data-zcmd='w' onclick="window.__zotTap('w', this)">W</div>
+                    <div class='taprow dpad-cancel' data-zcmd='c' onclick="window.__zotTap('c', this)">FIGHT</div>
+                    <div class='taprow dpad-dir' data-zcmd='e' onclick="window.__zotTap('e', this)">E</div>
+                    <div class='dpad-slot empty'></div>
+                    <div class='taprow dpad-dir' data-zcmd='s' onclick="window.__zotTap('s', this)">S</div>
+                    <div class='dpad-slot empty'></div>
+                </div>
+            """
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
@@ -6712,12 +6725,15 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
 
+                    <div style="text-align:center; color:#F44336; font-weight:bold; margin-top:8px;">Flee which way?</div>
+                    {flee_dpad}
+
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
                     {generate_hp_drain_js(gs.active_monster.health, gs.active_monster.max_health, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
 
                 </div>
                 """
-            current_commands_text = "n/s/e/w = flee direction | c = cancel"
+            current_commands_text = "Tap a direction or FIGHT to cancel"
 
         elif gs.prompt_cntl == "foresight_direction_mode":
             # FORESIGHT DIRECTION VIEW (similar to flee but for scroll)
@@ -6765,19 +6781,23 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
 
-                    <div style="margin-top: 8px; font-size: 12px; padding: 10px; border-radius: 3px; border: 2px solid #E040FB;">
-                        <b style="color: #E040FB;">Choose your direction of sight:</b><br>
-                        <div style="margin-top: 6px; color: #DDD;">
-                            <b>n</b> = North (reveal 3 columns upward)<br>
-                            <b>s</b> = South (reveal 3 columns downward)<br>
-                            <b>e</b> = East (reveal 3 rows rightward)<br>
-                            <b>w</b> = West (reveal 3 rows leftward)<br>
-                            <b>c</b> = Cancel (keep the scroll)
-                        </div>
+                    <div style="margin-top: 8px; text-align:center; color:#E040FB; font-weight:bold;">
+                        Choose your direction of sight
+                    </div>
+                    <div class='dpad'>
+                        <div class='dpad-slot empty'></div>
+                        <div class='taprow dpad-dir' data-zcmd='n' onclick="window.__zotTap('n', this)">N</div>
+                        <div class='dpad-slot empty'></div>
+                        <div class='taprow dpad-dir' data-zcmd='w' onclick="window.__zotTap('w', this)">W</div>
+                        <div class='taprow dpad-cancel' data-zcmd='c' onclick="window.__zotTap('c', this)">CANCEL</div>
+                        <div class='taprow dpad-dir' data-zcmd='e' onclick="window.__zotTap('e', this)">E</div>
+                        <div class='dpad-slot empty'></div>
+                        <div class='taprow dpad-dir' data-zcmd='s' onclick="window.__zotTap('s', this)">S</div>
+                        <div class='dpad-slot empty'></div>
                     </div>
                 </div>
                 """
-            current_commands_text = "n/s/e/w = direction | c = cancel"
+            current_commands_text = "Tap a direction or Cancel"
 
         elif gs.prompt_cntl == "chest_mode":
             # CHEST VIEW - Simplified 2 columns: Map | Chest Info
@@ -8403,6 +8423,28 @@ class WizardsCavernApp(toga.App):
                 # Grid Container
                 grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
+            # Inline d-pad for modes that need a direction pick during the
+            # map view (currently flare_direction_mode — foresight and flee
+            # have their own dedicated render blocks above).
+            dpad_overlay_html = ""
+            if gs.prompt_cntl == "flare_direction_mode":
+                dpad_overlay_html = """
+                    <div style="text-align:center; color:#FFD700; font-weight:bold; margin-top:8px;">
+                        Shine the flare which way?
+                    </div>
+                    <div class='dpad'>
+                        <div class='dpad-slot empty'></div>
+                        <div class='taprow dpad-dir' data-zcmd='n' onclick="window.__zotTap('n', this)">N</div>
+                        <div class='dpad-slot empty'></div>
+                        <div class='taprow dpad-dir' data-zcmd='w' onclick="window.__zotTap('w', this)">W</div>
+                        <div class='taprow dpad-cancel' data-zcmd='c' onclick="window.__zotTap('c', this)">CANCEL</div>
+                        <div class='taprow dpad-dir' data-zcmd='e' onclick="window.__zotTap('e', this)">E</div>
+                        <div class='dpad-slot empty'></div>
+                        <div class='taprow dpad-dir' data-zcmd='s' onclick="window.__zotTap('s', this)">S</div>
+                        <div class='dpad-slot empty'></div>
+                    </div>
+                """
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 16px;">
                     {achievement_notifications}
@@ -8410,8 +8452,9 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     {lantern_info_html}
                     {grid_html}
+                    {dpad_overlay_html}
                     <hr>
-                    
+
                     <div style="height: 150px; overflow-y: auto; color: #EEE; padding: 3px; font-family: monospace; font-size: 12px;">
                 </div>
                 """
@@ -8469,7 +8512,7 @@ class WizardsCavernApp(toga.App):
             elif gs.prompt_cntl == "warp_mode":
                 current_commands_text = "y = resist | n = enter"
             elif gs.prompt_cntl == "flare_direction_mode":
-                current_commands_text = "Shine the flare in a direction (n, s, e, w, or c to cancel): "
+                current_commands_text = "Tap a direction or Cancel"
             elif gs.prompt_cntl == "library_mode":
                 current_commands_text = "r = rummage for books | i = inventory"
                 if has_lantern:
@@ -9036,6 +9079,56 @@ class WizardsCavernApp(toga.App):
                     font-size: 10px;
                     color: #AAA;
                     margin-top: 2px;
+                }}
+
+                /* ===== DIRECTION PICKER D-PAD =====
+                   Cross-shaped 3x3 grid: N top, W/center-cancel/E
+                   middle, S bottom.  Used by flee / flare / foresight
+                   direction modes. */
+                .dpad {{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-template-rows: auto auto auto;
+                    gap: 4px;
+                    margin: 10px 0;
+                    max-width: 240px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }}
+                .dpad .dpad-slot {{
+                    min-height: 44px;
+                }}
+                .dpad .dpad-slot.empty {{
+                    background: transparent;
+                    border: none;
+                }}
+                .taprow.dpad-dir {{
+                    padding: 10px 0;
+                    text-align: center;
+                    font-size: 16px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    color: #DDD;
+                    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+                    border-color: #4a4a4a;
+                }}
+                .taprow.dpad-dir:active {{
+                    background: linear-gradient(180deg, #3a4a3a 0%, #1a2a1a 100%);
+                    border-color: #4CAF50;
+                    box-shadow: 0 0 8px rgba(76,175,80,0.45);
+                }}
+                .taprow.dpad-cancel {{
+                    padding: 8px 0;
+                    text-align: center;
+                    font-size: 11px;
+                    font-weight: bold;
+                    color: #FF8A80;
+                    background: #2a1010;
+                    border-color: #8a3a3a;
+                }}
+                .taprow.dpad-cancel:active {{
+                    background: #5a1a1a;
+                    border-color: #FF5252;
                 }}
 
                 /* Shared "locked / already used" info pill used by rooms
