@@ -8092,12 +8092,40 @@ class WizardsCavernApp(toga.App):
                         <div style='font-size:11px; color:#AAA; margin-top:1px;'>{cdata['reward_name']}: {cdata['reward_desc'][:60]}...</div>
                     </div>"""
 
-            # Completable list with numbers
+            # Completable collections — each a tappable card that sends
+            # the matching digit to process_taxidermist_action.
             complete_html = ""
             for idx, (cname, cdata) in enumerate(completable, 1):
-                complete_html += f"<div style='color:#4CAF50; font-size:12px; margin-bottom:2px;'>[{idx}] Turn in {cname} -> {cdata['reward_name']}</div>"
+                complete_html += (
+                    f"<div class='taprow altar-act offering' data-zcmd='{idx}' "
+                    f"onclick=\"window.__zotTap('{idx}', this)\">"
+                    f"<div class='aname'>Turn in {cname}</div>"
+                    f"<div class='ameta'>{cdata['reward_name']}</div>"
+                    f"</div>"
+                )
             if not complete_html:
-                complete_html = "<div style='color:#888; font-size:12px;'>No collections ready to turn in.</div>"
+                complete_html = "<div class='roominfo'>No collections ready to turn in.</div>"
+            else:
+                complete_html = f"<div class='altar-actions'>{complete_html}</div>"
+
+            # Sell-all / exit action cards (always available).
+            trophy_count_peek = sum(getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
+            trophy_val_peek = sum(t.value * getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
+            tail_html = "<div class='altar-actions'>"
+            if trophy_count_peek > 0:
+                tail_html += (
+                    f"<div class='taprow altar-act bless' data-zcmd='s' "
+                    f"onclick=\"window.__zotTap('s', this)\">"
+                    f"<div class='aname'>Sell All Trophies</div>"
+                    f"<div class='ameta'>{trophy_count_peek} piece(s) &middot; +{trophy_val_peek} gold</div>"
+                    f"</div>"
+                )
+            tail_html += (
+                "<div class='taprow cancel' data-zcmd='x' "
+                "onclick=\"window.__zotTap('x', this)\">"
+                "<span class='tapnum'>&times;</span>Leave Taxidermist</div>"
+            )
+            tail_html += "</div>"
 
             trophy_count = sum(getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
             trophy_val = sum(t.value * getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
@@ -8114,12 +8142,8 @@ class WizardsCavernApp(toga.App):
                         You have {trophy_count} trophy piece(s) worth {trophy_val}g if sold.
                     </div>
                     <div style='margin-bottom:8px;'>{rows_html}</div>
-                    <div style='border-top:1px solid #555; padding-top:6px;'>
-                        {complete_html}
-                    </div>
-                    <div style='color:#888; font-size:11px; margin-top:6px;'>
-                        s = sell all trophies for gold | i = inventory | x = exit
-                    </div>
+                    {complete_html}
+                    {tail_html}
                 </div>"""
 
             html_code = f"""
@@ -8132,7 +8156,7 @@ class WizardsCavernApp(toga.App):
                         <div class="room-panel" style='width: 100%;'>{tax_html}</div>
                     </div>
                 </div>"""
-            current_commands_text = "#=turn in collection | s=sell trophies | i=inventory | x=exit"
+            current_commands_text = "Tap a collection or Sell All | i = inventory | n/s/e/w = move"
 
         elif gs.prompt_cntl == "towel_action_mode":
             # TOWEL ACTION VIEW
@@ -8396,7 +8420,7 @@ class WizardsCavernApp(toga.App):
 
         else:
             # MAP VIEW (for game_loop, confirm_quit, etc.)
-            show_map = gs.prompt_cntl in ["game_loop", "confirm_quit", "flare_direction_mode", "upgrade_scroll_mode"]
+            show_map = gs.prompt_cntl in ["game_loop", "confirm_quit", "flare_direction_mode", "upgrade_scroll_mode", "identify_scroll_mode"]
 
             grid_html = ""
             lantern_info_html = ""  # ADD THIS
@@ -8422,6 +8446,88 @@ class WizardsCavernApp(toga.App):
 
                 # Grid Container
                 grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+
+            # Inline scroll picker overlay: upgrade_scroll_mode +
+            # identify_scroll_mode both present a numbered inventory
+            # subset.  Render the list as tappable taprow cards beneath
+            # the map so the player never has to type a number.
+            scroll_picker_html = ""
+            if gs.prompt_cntl == "upgrade_scroll_mode":
+                scroll_name = gs.active_scroll_item.name if gs.active_scroll_item else "Scroll"
+                # Same tier-to-max-level logic as items.py:2069+.
+                _tier_levels = [
+                    ("Eternal", 35), ("Cosmic", 30), ("Celestial", 25),
+                    ("Divine", 20), ("Mythic", 17), ("Epic", 14),
+                    ("Superior", 10), ("Greater", 6),
+                ]
+                max_up_level = 3
+                for _tier, _lvl in _tier_levels:
+                    if _tier in scroll_name:
+                        max_up_level = _lvl
+                        break
+                up_items = [i for i in gs.player_character.inventory.items
+                             if isinstance(i, (Weapon, Armor))]
+                scroll_picker_html = (
+                    f"<div style='text-align:center; color:#E040FB; font-weight:bold; margin-top:8px;'>"
+                    f"{scroll_name}"
+                    f"</div>"
+                    f"<div style='text-align:center; color:#CE93D8; font-size:10px; margin-bottom:4px;'>"
+                    f"Can upgrade items up to +{max_up_level}"
+                    f"</div>"
+                )
+                if not up_items:
+                    scroll_picker_html += "<div class='roominfo'>No weapons or armor to upgrade.</div>"
+                else:
+                    for idx, item in enumerate(up_items, 1):
+                        item_display = item.get_display_name() if hasattr(item, 'get_display_name') else item.name
+                        maxed = item.upgrade_level >= max_up_level
+                        if maxed:
+                            scroll_picker_html += (
+                                f"<div class='taprow spell disabled'>"
+                                f"<span class='tapnum'>{idx}.</span>{item_display}"
+                                f"<span class='tapnote'>MAX for this scroll</span></div>"
+                            )
+                        else:
+                            scroll_picker_html += (
+                                f"<div class='taprow spell' data-zcmd='{idx}' "
+                                f"onclick=\"window.__zotTap('{idx}', this)\">"
+                                f"<span class='tapnum'>{idx}.</span>{item_display}</div>"
+                            )
+                scroll_picker_html += (
+                    "<div class='taprow cancel' data-zcmd='c' "
+                    "onclick=\"window.__zotTap('c', this)\">"
+                    "<span class='tapnum'>&times;</span>Cancel Upgrade</div>"
+                )
+            elif gs.prompt_cntl == "identify_scroll_mode":
+                # List unidentified Potion / Scroll / Spell / Weapon / Armor.
+                _ident_items = []
+                for itm in gs.player_character.inventory.items:
+                    if isinstance(itm, (Potion, Scroll, Spell, Weapon, Armor)):
+                        if not is_item_identified(itm):
+                            _ident_items.append(itm)
+                scroll_picker_html = (
+                    "<div style='text-align:center; color:#E040FB; font-weight:bold; margin-top:8px;'>"
+                    "Scroll of Identify"
+                    "</div>"
+                    "<div style='text-align:center; color:#CE93D8; font-size:10px; margin-bottom:4px;'>"
+                    "Reveal the true name + stats of one item"
+                    "</div>"
+                )
+                if not _ident_items:
+                    scroll_picker_html += "<div class='roominfo'>Nothing unidentified in your inventory.</div>"
+                else:
+                    for idx, itm in enumerate(_ident_items, 1):
+                        disp = get_item_display_name(itm) if 'get_item_display_name' in globals() else itm.name
+                        scroll_picker_html += (
+                            f"<div class='taprow spell' data-zcmd='{idx}' "
+                            f"onclick=\"window.__zotTap('{idx}', this)\">"
+                            f"<span class='tapnum'>{idx}.</span>{disp}</div>"
+                        )
+                scroll_picker_html += (
+                    "<div class='taprow cancel' data-zcmd='c' "
+                    "onclick=\"window.__zotTap('c', this)\">"
+                    "<span class='tapnum'>&times;</span>Cancel Identify</div>"
+                )
 
             # Inline d-pad for modes that need a direction pick during the
             # map view (currently flare_direction_mode — foresight and flee
@@ -8453,6 +8559,7 @@ class WizardsCavernApp(toga.App):
                     {lantern_info_html}
                     {grid_html}
                     {dpad_overlay_html}
+                    {scroll_picker_html}
                     <hr>
 
                     <div style="height: 150px; overflow-y: auto; color: #EEE; padding: 3px; font-family: monospace; font-size: 12px;">
@@ -8521,9 +8628,9 @@ class WizardsCavernApp(toga.App):
             elif gs.prompt_cntl == "library_read_decision_mode":
                 current_commands_text = "Tap Read or Leave it"
             elif gs.prompt_cntl == "upgrade_scroll_mode":
-                current_commands_text = "Select item number to upgrade | c = cancel"
+                current_commands_text = "Tap an item to upgrade | c = cancel"
             elif gs.prompt_cntl == "identify_scroll_mode":
-                current_commands_text = "Select item number to identify | c = cancel"
+                current_commands_text = "Tap an item to identify | c = cancel"
             else:
                 current_commands_text = ""
 
