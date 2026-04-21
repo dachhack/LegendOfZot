@@ -6080,6 +6080,20 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
                 {jcats_html}
+                <div class='jcat-grid'>
+                    <div class='taprow jcat' data-zcmd='a'
+                         onclick="window.__zotTap('a', this)"
+                         style='border-color:#FFD700;'>
+                        <div class='jname' style='color:#FFD700;'>Achievements</div>
+                        <div class='jprog'>view unlocks &amp; rewards</div>
+                    </div>
+                    <div class='taprow jcat' data-zcmd='s'
+                         onclick="window.__zotTap('s', this)"
+                         style='border-color:#4FC3F7;'>
+                        <div class='jname' style='color:#4FC3F7;'>Stats</div>
+                        <div class='jprog'>character details</div>
+                    </div>
+                </div>
                 <div class='taprow cancel' data-zcmd='x'
                      onclick="window.__zotTap('x', this)">
                     <span class='tapnum'>&times;</span>Back to Inventory
@@ -6098,7 +6112,7 @@ class WizardsCavernApp(toga.App):
                 """
             text_label = "Aa-" if gs.large_text_mode else "Aa+"
             music_label = "vol-" if gs.music_enabled else "vol+"
-            current_commands_text = f"Tap a category | s = stats | a = achvs | t = {text_label} | v = {music_label} | g = save | x = back"
+            current_commands_text = f"Tap a category or Achievements | t = {text_label} | v = {music_label} | g = save | x = back"
 
         elif gs.prompt_cntl.startswith("journal_"):
             # JOURNAL CATEGORY VIEW
