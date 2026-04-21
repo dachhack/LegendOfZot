@@ -5677,12 +5677,15 @@ class WizardsCavernApp(toga.App):
             max_slots = gs.player_character.get_max_memorized_spell_slots()
             used_slots = gs.player_character.get_used_spell_slots()
 
-            # Segmented tabs: [Memorize] [Forget].  Idempotent — bare m/f
-            # already SET the sub-action (no toggle-off) so tapping the
-            # active tab is harmless.
+            # Segmented tabs: [Memorize] [Forget] [Cast].  Idempotent —
+            # bare m/f/c already SET the sub-action (no toggle-off) so
+            # tapping the active tab is harmless.  'Cast' invokes
+            # self-targeted spells out of combat (healing, cleanses,
+            # buffs); damage/debuff_target spells are greyed out.
             _mem_tabs = [
                 ('Memorize', 'm', gs.spell_memo_action == 'memorize'),
                 ('Forget',   'f', gs.spell_memo_action == 'forget'),
+                ('Cast',     'c', gs.spell_memo_action == 'cast'),
             ]
             memo_tabs_html = "<div class='filtertabs'>"
             for label, cmd, is_active in _mem_tabs:
@@ -5749,21 +5752,60 @@ class WizardsCavernApp(toga.App):
                 """
 
             _can_forget = (gs.spell_memo_action == 'forget')
+            _can_cast_ooc = (gs.spell_memo_action == 'cast')
+            # spell_types that make sense without a monster target — must stay
+            # in sync with _OUT_OF_COMBAT_SAFE in combat.py.
+            _ooc_safe_types = {'healing', 'remove_status', 'add_status_effect'}
+            _current_mana = gs.player_character.mana
             if gs.player_character.memorized_spells:
                 for i, spell in enumerate(gs.player_character.memorized_spells):
                     slots_used = gs.player_character.get_spell_slots(spell)
-                    body = (
-                        f"<span class='tapnum'>{i + 1}.</span>"
-                        f"<b>{spell.name}</b> "
-                        f"<span style='color:#CE93D8; font-size:10px;'>"
-                        f"({slots_used} slot{'s' if slots_used > 1 else ''})</span>"
-                    )
+                    # Cast-tab rows show the MP cost + effect summary
+                    if _can_cast_ooc:
+                        if spell.spell_type == 'healing':
+                            detail = f"Heal {spell.base_power}+Int/2 HP"
+                        elif spell.spell_type == 'remove_status':
+                            detail = f"Cleanse {spell.status_effect_name or '(self)'}"
+                        elif spell.spell_type == 'add_status_effect':
+                            detail = f"Buff: {spell.status_effect_name or '(self)'}"
+                        else:
+                            detail = f"{spell.spell_type} (combat only)"
+                        body = (
+                            f"<span class='tapnum'>{i + 1}.</span>"
+                            f"<b>{spell.name}</b> ({spell.mana_cost} MP)<br>"
+                            f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
+                            f"Lvl {spell.level} | {detail}</span>"
+                        )
+                    else:
+                        body = (
+                            f"<span class='tapnum'>{i + 1}.</span>"
+                            f"<b>{spell.name}</b> "
+                            f"<span style='color:#CE93D8; font-size:10px;'>"
+                            f"({slots_used} slot{'s' if slots_used > 1 else ''})</span>"
+                        )
                     if _can_forget:
                         cmd_str = f"f{i + 1}"
                         memorized_html += (
                             f"<div class='taprow spell' data-zcmd='{cmd_str}' "
                             f"onclick=\"window.__zotTap('{cmd_str}', this)\">{body}</div>"
                         )
+                    elif _can_cast_ooc:
+                        if spell.spell_type not in _ooc_safe_types:
+                            memorized_html += (
+                                f"<div class='taprow spell disabled'>{body}"
+                                f"<span class='tapnote'>Combat only</span></div>"
+                            )
+                        elif _current_mana < spell.mana_cost:
+                            memorized_html += (
+                                f"<div class='taprow spell disabled'>{body}"
+                                f"<span class='tapnote'>Not enough MP</span></div>"
+                            )
+                        else:
+                            cmd_str = f"c{i + 1}"
+                            memorized_html += (
+                                f"<div class='taprow spell' data-zcmd='{cmd_str}' "
+                                f"onclick=\"window.__zotTap('{cmd_str}', this)\">{body}</div>"
+                            )
                     else:
                         memorized_html += (
                             f"<div style='margin: 2px 0; padding: 4px;'>{body}</div>"
@@ -5784,7 +5826,7 @@ class WizardsCavernApp(toga.App):
 </div>
                 """
             if gs.spell_memo_action:
-                action_label = {'memorize': 'memorize', 'forget': 'forget'}.get(gs.spell_memo_action, gs.spell_memo_action)
+                action_label = {'memorize': 'memorize', 'forget': 'forget', 'cast': 'cast'}.get(gs.spell_memo_action, gs.spell_memo_action)
                 current_commands_text = f"# = {action_label} spell | x = exit"
             else:
                 current_commands_text = "Tap a tab above to begin | x = exit"
