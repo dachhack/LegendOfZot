@@ -2170,6 +2170,59 @@ def generate_grid_html(floor, player_x, player_y):
 # 22. UI - TOGA APPLICATION
 # --------------------------------------------------------------------------------
 
+
+# ---------------------------------------------------------------------------
+# Mode layout dispatch table used by update_button_panel().
+#
+# Maps prompt_cntl -> callable(self, commands_text) that builds the right
+# button layout for that mode.  A sentinel _EMPTY_LAYOUT means the mode
+# wants no buttons rendered (e.g., game_loaded_summary — just the big
+# tappable "Continue" card in the HTML).
+#
+# Kept outside the class so it's easy to scan and maintain as new modes
+# land.  The callables accept `self` (the app) and the raw commands_text
+# string; they pull whatever they need (parsed commands, etc.) themselves.
+# ---------------------------------------------------------------------------
+_EMPTY_LAYOUT = object()  # sentinel — "render no buttons for this mode"
+
+MODE_LAYOUTS = {
+    'intro_story':           lambda self, cmds: self.build_main_menu_layout(),
+    'main_menu':              lambda self, cmds: self.build_main_menu_layout(),
+    'game_loaded_summary':    _EMPTY_LAYOUT,
+    'save_load_mode':         lambda self, cmds: self.build_save_load_layout({}),
+    'player_name':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
+    'puzzle_mode':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
+    'zotle_teleporter_mode':  lambda self, cmds: self.build_teleporter_layout(),
+    'combat_mode':            lambda self, cmds: self.build_combat_layout(
+                                  {k: l for k, l in self.parse_commands(cmds)}),
+}
+
+# Modes where pressing 'l' triggers the quick-use lantern hotkey.
+# These all show "l = lantern" in their hint line today.
+_LANTERN_QUICK_USE_MODES = frozenset({
+    'game_loop', 'chest_mode', 'pool_mode', 'altar_mode', 'library_mode',
+    'stairs_up_mode', 'stairs_down_mode', 'dungeon_mode', 'tomb_mode',
+    'garden_mode', 'oracle_mode', 'puzzle_mode',
+})
+
+# Modes that need the 0-9 numpad grid rendered.  After the full tap-first
+# pass, only the Zotle teleporter still needs it (for x,y,z coord
+# entry).  All other filter-style modes drive item selection via
+# .taprow cards instead.  Adding a new mode here opts it back in.
+_MODES_WITH_NUMPAD = frozenset({
+    'zotle_teleporter_mode',
+})
+
+# Modes that need the input_field + SEND + backspace row rendered.
+# Text-entry screens only — teleporter coords, name, puzzle word.  Every
+# other mode hides the row and gets that ~32px back for the game view.
+_MODES_WITH_INPUT_FIELD = frozenset({
+    'zotle_teleporter_mode',
+    'player_name',
+    'puzzle_mode',
+})
+
+
 class WizardsCavernApp(toga.App):
     def startup(self):
         """Initialize and display the application."""
@@ -2816,21 +2869,42 @@ class WizardsCavernApp(toga.App):
         self.button_panel.add(self.button_row_2)
         self.button_panel.add(self.number_pad_box)
 
-        # Decide whether input widgets belong in the numpad's last row (filter
-        # modes with needs_numbers) or in the dedicated input_row (everything
-        # else, including player_name/puzzle QWERTY and no-numpad views).
-        # build_layout_with_numpad expects the widgets to be orphaned and
-        # re-adds them to its own last row.
-        _numpad_inline = needs_numbers and gs.prompt_cntl not in (
-            'player_name', 'puzzle_mode', 'zotle_teleporter_mode',
+        # -------------------------------------------------------------------
+        # Per-mode UI surface flags.
+        #
+        #   wants_numpad      — render the 0-9 digit grid.  After the full
+        #                       tap-first pass only the Zotle teleporter
+        #                       needs this (x,y,z coord entry).
+        #   wants_input_field — render the input_field + SEND + backspace
+        #                       row below the button panel.  Text-entry
+        #                       modes only.
+        #
+        # The "numpad inline" layout still fires when BOTH are true AND
+        # needs_numbers is set, because build_layout_with_numpad packs
+        # the input widgets into the numpad's 4th row.
+        # -------------------------------------------------------------------
+        wants_numpad = gs.prompt_cntl in _MODES_WITH_NUMPAD
+        wants_input_field = gs.prompt_cntl in _MODES_WITH_INPUT_FIELD
+        _numpad_inline = wants_numpad and needs_numbers and gs.prompt_cntl not in (
+            'player_name', 'puzzle_mode',
             'save_load_mode', 'intro_story', 'main_menu',
             'game_loaded_summary', 'combat_mode',
         )
         if _numpad_inline:
+            # Input widgets live inside build_layout_with_numpad's 4th row;
+            # input_row itself is collapsed.
             self._move_input_widgets_to(self.input_row, add_to_target=False)
             self.input_row.style.height = 0
-        else:
+        elif wants_input_field:
+            # Input widgets live in their dedicated input_row.
             self._move_input_widgets_to(self.input_row, add_to_target=True)
+        else:
+            # Pure tap-first mode: orphan the input widgets and collapse
+            # input_row entirely so the reclaimed ~32px goes to the game
+            # view.  Toga is happy having these widgets detached; they'll
+            # be re-parented when we land in a text-entry mode.
+            self._move_input_widgets_to(self.input_row, add_to_target=False)
+            self.input_row.style.height = 0
 
         # Compact input row buttons (remove Android Material insets that clip text)
         self._compact_android_button(self.submit_button)
@@ -2840,87 +2914,65 @@ class WizardsCavernApp(toga.App):
                                     border_color='#666666')
         self._style_android_button(self.backspace_button)
 
-        # Adjust panel heights based on mode. In numpad filter modes the
-        # input widgets live inside the numpad's last row (see
-        # build_layout_with_numpad) — input_row is collapsed to 0. In other
-        # modes the input widgets stay in input_row and get sized here.
+        # Adjust panel heights based on the mode + surface flags.  The
+        # three QWERTY/numpad text-entry modes keep their old generous
+        # heights; pure tap-first modes claw back the ~32px input_row.
         _field_base = dict(margin=2, font_size=12,
                            background_color='#2a2a2a', color='#EEE')
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
-            # QWERTY keyboard: 3 rows × 34px keys + margins
-            # Name entry needs the wide text field.
+            # QWERTY keyboard: 3 rows × 34px keys + margins; wide text field.
             self.input_row_spacer.style.flex = 0
             self.input_field.style = Pack(flex=1, height=36, **_field_base)
             self.input_row.style.height = 40
             self.bottom_panel.style.height = 200
             self.button_panel.style.height = 114
         elif _numpad_inline:
-            # Numpad layout with input inline on the last row; input_row is empty.
+            # Numpad with input inline on the last row; input_row empty.
             # Button panel holds 4 numpad rows × 30px + margins.
             self.bottom_panel.style.height = 132
             self.button_panel.style.height = 128
-        elif needs_numbers:
-            # Numpad mode but input_row stays separate (e.g., teleporter,
-            # combat-adjacent layouts that share this branch).
+        elif wants_input_field:
+            # Teleporter-style: separate numpad + separate input row.
             self.input_row_spacer.style.flex = 1
             self.input_field.style = Pack(width=90, height=28, **_field_base)
             self.input_row.style.height = 32
             self.bottom_panel.style.height = 158
             self.button_panel.style.height = 98
         else:
-            # Normal: 3 rows × 30px buttons + compact input row
-            self.input_row_spacer.style.flex = 1
-            self.input_field.style = Pack(width=90, height=28, **_field_base)
-            self.input_row.style.height = 32
-            self.bottom_panel.style.height = 148
+            # Pure tap-first mode: 3 rows × 30px command buttons, no
+            # input row.  Reclaims the 32px that used to host the
+            # input_field + SEND + backspace.
+            self.bottom_panel.style.height = 116
             self.button_panel.style.height = 96
 
-        # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
-        if gs.prompt_cntl in ['intro_story', 'main_menu']:
-            self.build_main_menu_layout()
-            return
-
-        # Special case: Game loaded summary - just empty buttons, use Send
-        if gs.prompt_cntl == 'game_loaded_summary':
-            return
-
-        # Special case: Save/Load menu
-        if gs.prompt_cntl == 'save_load_mode':
-            self.build_save_load_layout({})
-            return
-
-        # Special case: QWERTY keyboard for name entry
-        if gs.prompt_cntl == 'player_name':
-            self.build_qwerty_keyboard_layout()
-            return
-
-        # Special case: QWERTY keyboard for Zotle puzzle
-        if gs.prompt_cntl == 'puzzle_mode':
-            self.build_qwerty_keyboard_layout()
-            return
-
-        # Special case: Zotle Teleporter - number pad with comma
-        if gs.prompt_cntl == 'zotle_teleporter_mode':
-            self.build_teleporter_layout()
-            return
-
-        # Special case: Combat mode - custom layout with C, A, spacer, F
-        if gs.prompt_cntl == 'combat_mode':
-            commands = self.parse_commands(commands_text)
-            cmd_dict = {key: label for key, label in commands}
-            self.build_combat_layout(cmd_dict)
-            return
-
-        # Special case: Inventory (no filter) — explicit 3x3 grid layout
+        # Mode-specific layout dispatch.  MODE_LAYOUTS (defined below)
+        # maps prompt_cntl -> a callable that builds the right button
+        # layout.  Three special cases are still resolved in-line:
+        #   - inventory with no filter uses a bespoke 3x3 grid; with a
+        #     filter it falls through to build_layout_with_numpad.
+        #   - game_loaded_summary wants zero buttons; it returns None
+        #     from the table, which we treat as "no-op".
+        #   - everything else is the generic numpad/no-numpad builder
+        #     keyed off needs_numbers.
         if gs.prompt_cntl == 'inventory' and not gs.inventory_filter:
             self.build_inventory_layout()
             return
 
-        # Parse commands from text
-        commands = self.parse_commands(commands_text)
+        layout_fn = MODE_LAYOUTS.get(gs.prompt_cntl)
+        if layout_fn is _EMPTY_LAYOUT:
+            return  # Mode explicitly wants no buttons rendered.
+        if layout_fn is not None:
+            layout_fn(self, commands_text)
+            return
 
-        # Build layout based on mode
-        if needs_numbers:
+        # Generic fallback: parse commands out of the hint line and hand
+        # off to the appropriate builder.  After the tap-first pass only
+        # wants_numpad modes get the digit grid — everything else falls
+        # back to the plain 3x3 command-button layout even if the hint
+        # line advertises digits (the digit keyboard shortcuts still
+        # work for hardware-keyboard players).
+        commands = self.parse_commands(commands_text)
+        if needs_numbers and wants_numpad:
             self.build_layout_with_numpad(commands)
         else:
             self.build_layout_no_numpad(commands)
@@ -4131,87 +4183,15 @@ class WizardsCavernApp(toga.App):
             handle_inventory_menu(gs.player_character, gs.my_tower, "init")
             return
 
-        # ADD THIS NEW BLOCK FOR LANTERN
-        if cmd == 'l' and gs.prompt_cntl == "game_loop":
+        # Lantern quick-use hotkey.  Allowed in any mode where the hint
+        # shows "l = lantern" — game_loop + most single-action rooms.
+        # game_loop is special-cased because its caller re-renders; every
+        # other mode needs us to render here so the updated fuel level
+        # shows up immediately.
+        if cmd == 'l' and gs.prompt_cntl in _LANTERN_QUICK_USE_MODES:
             process_lantern_quick_use(gs.player_character, gs.my_tower)
-            return
-
-        # Allow lantern use in chest mode
-        if cmd == 'l' and gs.prompt_cntl == "chest_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in pool mode
-        if cmd == 'l' and gs.prompt_cntl == "pool_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in altar mode
-        if cmd == 'l' and gs.prompt_cntl == "altar_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in library mode
-        if cmd == 'l' and gs.prompt_cntl == "library_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in stairs_up_mode
-        if cmd == 'l' and gs.prompt_cntl == "stairs_up_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in stairs_down_mode
-        if cmd == 'l' and gs.prompt_cntl == "stairs_down_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in altar mode
-        if cmd == 'l' and gs.prompt_cntl == "altar_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in library mode
-        if cmd == 'l' and gs.prompt_cntl == "library_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in dungeon mode
-        if cmd == 'l' and gs.prompt_cntl == "dungeon_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in tomb mode
-        if cmd == 'l' and gs.prompt_cntl == "tomb_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in garden mode
-        if cmd == 'l' and gs.prompt_cntl == "garden_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in oracle mode
-        if cmd == 'l' and gs.prompt_cntl == "oracle_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in puzzle mode
-        if cmd == 'l' and gs.prompt_cntl == "puzzle_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
+            if gs.prompt_cntl != 'game_loop':
+                self.render()
             return
 
         if gs.prompt_cntl == "flare_direction_mode":
