@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 120
+BUILD_NUMBER = 121
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "FIX: Splash + Death screens have tappable Continue / Close cards",
     "Numpad retired from tap-first modes — only Teleporter shows it now",
     "Input field + SEND hidden in tap modes — ~32px more screen for the game",
     "Internal: MODES refactor — dispatch tables replace the giant prompt_cntl elif trees",
@@ -14,5 +15,4 @@ CHANGELOG = [
     "Towel: Wipe Face / Wipe Hands grey out when not blind or slippery",
     "FIX: Towel no longer dries out when wiping finds nothing to wipe off",
     "Confirm Quit dialog now has tappable Yes / Keep Playing cards",
-    "War Room: tappable Intel / Raid Mode cards (greyed when used or active)",
 ]

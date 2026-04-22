@@ -4584,6 +4584,12 @@ class WizardsCavernApp(toga.App):
                         </div>
                         {changelog_html}
                     </div>
+                    <div class='taprow altar-act blessing' data-zcmd=' '
+                         onclick="window.__zotTap(' ', this)"
+                         style='margin-top: 22px; max-width: 340px; margin-left:auto; margin-right:auto;'>
+                        <div class='aname'>Enter the Cavern</div>
+                        <div class='ameta'>Tap to continue (or wait a few seconds)</div>
+                    </div>
                 </div>
             """
             current_commands_text = ""
@@ -4625,12 +4631,15 @@ class WizardsCavernApp(toga.App):
                         <div style="margin: 8px 0;"><b>Spells Cast:</b> {gs.game_stats.get('spells_cast', 0)}</div>
                     </div>
                     
-                    <div style="margin-top: 40px; color: #888; font-size: 12px;">
-                        Press Send to close...
+                    <div class='taprow altar-act reforge' data-zcmd=' '
+                         onclick="window.__zotTap(' ', this)"
+                         style='margin: 30px auto 10px auto; max-width: 340px;'>
+                        <div class='aname'>Close Game</div>
+                        <div class='ameta'>Saves will be wiped &mdash; permadeath is permanent</div>
                     </div>
                 </div>
                 """
-            current_commands_text = "Press Send to close"
+            current_commands_text = "Tap Close"
             self.update_button_panel(current_commands_text, False)
             return html_code
 
