@@ -2205,6 +2205,23 @@ _LANTERN_QUICK_USE_MODES = frozenset({
     'garden_mode', 'oracle_mode', 'puzzle_mode',
 })
 
+# Modes that need the 0-9 numpad grid rendered.  After the full tap-first
+# pass, only the Zotle teleporter still needs it (for x,y,z coord
+# entry).  All other filter-style modes drive item selection via
+# .taprow cards instead.  Adding a new mode here opts it back in.
+_MODES_WITH_NUMPAD = frozenset({
+    'zotle_teleporter_mode',
+})
+
+# Modes that need the input_field + SEND + backspace row rendered.
+# Text-entry screens only — teleporter coords, name, puzzle word.  Every
+# other mode hides the row and gets that ~32px back for the game view.
+_MODES_WITH_INPUT_FIELD = frozenset({
+    'zotle_teleporter_mode',
+    'player_name',
+    'puzzle_mode',
+})
+
 
 class WizardsCavernApp(toga.App):
     def startup(self):
@@ -2852,21 +2869,42 @@ class WizardsCavernApp(toga.App):
         self.button_panel.add(self.button_row_2)
         self.button_panel.add(self.number_pad_box)
 
-        # Decide whether input widgets belong in the numpad's last row (filter
-        # modes with needs_numbers) or in the dedicated input_row (everything
-        # else, including player_name/puzzle QWERTY and no-numpad views).
-        # build_layout_with_numpad expects the widgets to be orphaned and
-        # re-adds them to its own last row.
-        _numpad_inline = needs_numbers and gs.prompt_cntl not in (
-            'player_name', 'puzzle_mode', 'zotle_teleporter_mode',
+        # -------------------------------------------------------------------
+        # Per-mode UI surface flags.
+        #
+        #   wants_numpad      — render the 0-9 digit grid.  After the full
+        #                       tap-first pass only the Zotle teleporter
+        #                       needs this (x,y,z coord entry).
+        #   wants_input_field — render the input_field + SEND + backspace
+        #                       row below the button panel.  Text-entry
+        #                       modes only.
+        #
+        # The "numpad inline" layout still fires when BOTH are true AND
+        # needs_numbers is set, because build_layout_with_numpad packs
+        # the input widgets into the numpad's 4th row.
+        # -------------------------------------------------------------------
+        wants_numpad = gs.prompt_cntl in _MODES_WITH_NUMPAD
+        wants_input_field = gs.prompt_cntl in _MODES_WITH_INPUT_FIELD
+        _numpad_inline = wants_numpad and needs_numbers and gs.prompt_cntl not in (
+            'player_name', 'puzzle_mode',
             'save_load_mode', 'intro_story', 'main_menu',
             'game_loaded_summary', 'combat_mode',
         )
         if _numpad_inline:
+            # Input widgets live inside build_layout_with_numpad's 4th row;
+            # input_row itself is collapsed.
             self._move_input_widgets_to(self.input_row, add_to_target=False)
             self.input_row.style.height = 0
-        else:
+        elif wants_input_field:
+            # Input widgets live in their dedicated input_row.
             self._move_input_widgets_to(self.input_row, add_to_target=True)
+        else:
+            # Pure tap-first mode: orphan the input widgets and collapse
+            # input_row entirely so the reclaimed ~32px goes to the game
+            # view.  Toga is happy having these widgets detached; they'll
+            # be re-parented when we land in a text-entry mode.
+            self._move_input_widgets_to(self.input_row, add_to_target=False)
+            self.input_row.style.height = 0
 
         # Compact input row buttons (remove Android Material insets that clip text)
         self._compact_android_button(self.submit_button)
@@ -2876,39 +2914,35 @@ class WizardsCavernApp(toga.App):
                                     border_color='#666666')
         self._style_android_button(self.backspace_button)
 
-        # Adjust panel heights based on mode. In numpad filter modes the
-        # input widgets live inside the numpad's last row (see
-        # build_layout_with_numpad) — input_row is collapsed to 0. In other
-        # modes the input widgets stay in input_row and get sized here.
+        # Adjust panel heights based on the mode + surface flags.  The
+        # three QWERTY/numpad text-entry modes keep their old generous
+        # heights; pure tap-first modes claw back the ~32px input_row.
         _field_base = dict(margin=2, font_size=12,
                            background_color='#2a2a2a', color='#EEE')
         if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
-            # QWERTY keyboard: 3 rows × 34px keys + margins
-            # Name entry needs the wide text field.
+            # QWERTY keyboard: 3 rows × 34px keys + margins; wide text field.
             self.input_row_spacer.style.flex = 0
             self.input_field.style = Pack(flex=1, height=36, **_field_base)
             self.input_row.style.height = 40
             self.bottom_panel.style.height = 200
             self.button_panel.style.height = 114
         elif _numpad_inline:
-            # Numpad layout with input inline on the last row; input_row is empty.
+            # Numpad with input inline on the last row; input_row empty.
             # Button panel holds 4 numpad rows × 30px + margins.
             self.bottom_panel.style.height = 132
             self.button_panel.style.height = 128
-        elif needs_numbers:
-            # Numpad mode but input_row stays separate (e.g., teleporter,
-            # combat-adjacent layouts that share this branch).
+        elif wants_input_field:
+            # Teleporter-style: separate numpad + separate input row.
             self.input_row_spacer.style.flex = 1
             self.input_field.style = Pack(width=90, height=28, **_field_base)
             self.input_row.style.height = 32
             self.bottom_panel.style.height = 158
             self.button_panel.style.height = 98
         else:
-            # Normal: 3 rows × 30px buttons + compact input row
-            self.input_row_spacer.style.flex = 1
-            self.input_field.style = Pack(width=90, height=28, **_field_base)
-            self.input_row.style.height = 32
-            self.bottom_panel.style.height = 148
+            # Pure tap-first mode: 3 rows × 30px command buttons, no
+            # input row.  Reclaims the 32px that used to host the
+            # input_field + SEND + backspace.
+            self.bottom_panel.style.height = 116
             self.button_panel.style.height = 96
 
         # Mode-specific layout dispatch.  MODE_LAYOUTS (defined below)
@@ -2932,9 +2966,13 @@ class WizardsCavernApp(toga.App):
             return
 
         # Generic fallback: parse commands out of the hint line and hand
-        # off to the appropriate numpad / no-numpad builder.
+        # off to the appropriate builder.  After the tap-first pass only
+        # wants_numpad modes get the digit grid — everything else falls
+        # back to the plain 3x3 command-button layout even if the hint
+        # line advertises digits (the digit keyboard shortcuts still
+        # work for hardware-keyboard players).
         commands = self.parse_commands(commands_text)
-        if needs_numbers:
+        if needs_numbers and wants_numpad:
             self.build_layout_with_numpad(commands)
         else:
             self.build_layout_no_numpad(commands)
