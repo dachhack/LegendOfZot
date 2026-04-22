@@ -3338,19 +3338,20 @@ class Towel(Item):
         # Check for curable blindness effects
         curable_effects = ['Blinded', 'Cream Pie', 'Venom Blind', 'Flash Blind']
         cured_something = False
-        
+
         for effect_name in curable_effects:
             if effect_name in character.status_effects:
                 character.remove_status_effect(effect_name)
                 cured_something = True
                 add_log(f"{COLOR_GREEN}You wipe the {effect_name.lower()} from your face!{COLOR_RESET}")
-        
+
         if not cured_something:
-            add_log(f"{COLOR_GREY}Your face feels clean now.{COLOR_RESET}")
-        
-        # Using towel dries it by 1 level
+            add_log(f"{COLOR_GREY}Your face is already clear — nothing to wipe off.{COLOR_RESET}")
+            return  # Don't waste wetness on a no-op.
+
+        # Using the towel productively dries it by 1 level.
         self.dry_one_level()
-    
+
     def wipe_hands(self, character):
         """Wipe hands to cure slippery status."""
         if 'Slippery Hands' in character.status_effects:
@@ -3360,9 +3361,10 @@ class Towel(Item):
             character.remove_status_effect('Greasy')
             add_log(f"{COLOR_GREEN}You wipe the grease from your hands!{COLOR_RESET}")
         else:
-            add_log(f"{COLOR_GREY}Your hands feel dry now.{COLOR_RESET}")
-        
-        # Using towel dries it by 1 level
+            add_log(f"{COLOR_GREY}Your hands are already dry — nothing to wipe off.{COLOR_RESET}")
+            return  # Don't waste wetness on a no-op.
+
+        # Using the towel productively dries it by 1 level.
         self.dry_one_level()
     
     def get_weapon_damage(self):

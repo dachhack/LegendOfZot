@@ -2168,16 +2168,6 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                     gs.prompt_cntl = "inventory"
                     handle_inventory_menu(player_character, my_tower, "init")
 
-                elif type(item_to_use).__name__ == 'Towel' or 'Towel' in item_to_use.name:
-                    # Fallback for Towel - in case isinstance fails
-                    add_log(f"{COLOR_CYAN}What do you want to do with the towel?{COLOR_RESET}")
-                    add_log(f"  1. Wear it over your face (blind yourself)")
-                    add_log(f"  2. Wipe your face (cure face-based blindness)")
-                    add_log(f"  3. Wipe your hands (cure slippery hands)")
-                    add_log(f"  4. Cancel")
-                    gs.prompt_cntl = "towel_action_mode"
-                    gs.active_towel_item = item_to_use
-
                 else:
                     add_log(f"{COLOR_YELLOW}You cannot use {item_to_use.name}.{COLOR_RESET}")
                     gs.prompt_cntl = "inventory"
