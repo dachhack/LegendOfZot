@@ -4584,6 +4584,12 @@ class WizardsCavernApp(toga.App):
                         </div>
                         {changelog_html}
                     </div>
+                    <div class='taprow altar-act blessing' data-zcmd=' '
+                         onclick="window.__zotTap(' ', this)"
+                         style='margin-top: 22px; max-width: 340px; margin-left:auto; margin-right:auto;'>
+                        <div class='aname'>Enter the Cavern</div>
+                        <div class='ameta'>Tap to continue (or wait a few seconds)</div>
+                    </div>
                 </div>
             """
             current_commands_text = ""
@@ -4625,12 +4631,15 @@ class WizardsCavernApp(toga.App):
                         <div style="margin: 8px 0;"><b>Spells Cast:</b> {gs.game_stats.get('spells_cast', 0)}</div>
                     </div>
                     
-                    <div style="margin-top: 40px; color: #888; font-size: 12px;">
-                        Press Send to close...
+                    <div class='taprow altar-act reforge' data-zcmd=' '
+                         onclick="window.__zotTap(' ', this)"
+                         style='margin: 30px auto 10px auto; max-width: 340px;'>
+                        <div class='aname'>Close Game</div>
+                        <div class='ameta'>Saves will be wiped &mdash; permadeath is permanent</div>
                     </div>
                 </div>
                 """
-            current_commands_text = "Press Send to close"
+            current_commands_text = "Tap Close"
             self.update_button_panel(current_commands_text, False)
             return html_code
 
@@ -4952,7 +4961,7 @@ class WizardsCavernApp(toga.App):
             current_commands_text = "Use letter buttons below"
 
         elif gs.prompt_cntl == "player_race":
-            # PLAYER RACE SELECTION SCREEN
+            # PLAYER RACE SELECTION SCREEN — tappable race cards.
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; padding: 10px;">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 15px; color: #FFD700; text-align: center;">
@@ -4964,17 +4973,29 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; margin-bottom: 10px; color: #FFFFFF;">
                         Choose your race:
                     </div>
-                    <div style="margin-left: 20px; font-size: 12px; line-height: 1.8;">
-                        <div><b>H</b> - Human (Balanced stats)</div>
-                        <div><b>E</b> - Elf (+Dex, +Int, -Str, -Health)</div>
-                        <div><b>D</b> - Dwarf (+Str, +Def, +Health, -Dex, -Int)</div>
+                    <div class='altar-actions'>
+                        <div class='taprow altar-act bless' data-zcmd='h'
+                             onclick="window.__zotTap('h', this)">
+                            <div class='aname'>Human</div>
+                            <div class='ameta'>Balanced stats &mdash; the jack of all trades</div>
+                        </div>
+                        <div class='taprow altar-act mystic' data-zcmd='e'
+                             onclick="window.__zotTap('e', this)">
+                            <div class='aname'>Elf</div>
+                            <div class='ameta'>+Dex, +Int &middot; -Str, -Health</div>
+                        </div>
+                        <div class='taprow altar-act forge' data-zcmd='d'
+                             onclick="window.__zotTap('d', this)">
+                            <div class='aname'>Dwarf</div>
+                            <div class='ameta'>+Str, +Def, +Health &middot; -Dex, -Int</div>
+                        </div>
                     </div>
                 </div>
                 """
-            current_commands_text = "H = Human | E = Elf | D = Dwarf"
+            current_commands_text = "Tap a race"
 
         elif gs.prompt_cntl == "player_gender":
-            # PLAYER GENDER SELECTION SCREEN
+            # PLAYER GENDER SELECTION SCREEN — tappable gender cards.
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; padding: 10px;">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 15px; color: #FFD700; text-align: center;">
@@ -4986,14 +5007,23 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; margin-bottom: 10px; color: #FFFFFF;">
                         Choose your gender:
                     </div>
-                    <div style="margin-left: 20px; font-size: 12px; line-height: 1.8;">
-                        <div><b>M</b> - Male</div>
-                        <div><b>F</b> - Female</div>
-                        <div><b>N</b> - Non-binary</div>
+                    <div class='altar-actions'>
+                        <div class='taprow altar-act detect' data-zcmd='m'
+                             onclick="window.__zotTap('m', this)">
+                            <div class='aname'>Male</div>
+                        </div>
+                        <div class='taprow altar-act offering' data-zcmd='f'
+                             onclick="window.__zotTap('f', this)">
+                            <div class='aname'>Female</div>
+                        </div>
+                        <div class='taprow altar-act mystic' data-zcmd='n'
+                             onclick="window.__zotTap('n', this)">
+                            <div class='aname'>Non-binary</div>
+                        </div>
                     </div>
                 </div>
                 """
-            current_commands_text = "M = Male | F = Female | N = Non-binary"
+            current_commands_text = "Tap a gender"
 
         elif gs.prompt_cntl == "achievements_mode":
             # ACHIEVEMENTS VIEW
@@ -5744,11 +5774,16 @@ class WizardsCavernApp(toga.App):
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
-                    
+
                     <div style="border: 1px solid #444; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{stats_html}</div>
+
+                    <div class='taprow cancel' data-zcmd='x'
+                         onclick="window.__zotTap('x', this)">
+                        <span class='tapnum'>&times;</span>Back to Inventory
+                    </div>
 </div>
                 """
-            current_commands_text = "x = back to inventory"
+            current_commands_text = "Tap Back | x = back to inventory"
 
         elif gs.prompt_cntl == "crafting_mode":
             # CRAFTING MENU VIEW - Full HTML display
