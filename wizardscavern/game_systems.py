@@ -4146,64 +4146,73 @@ def _handle(my_tower, player_character, cmd):
     gs.log_lines.clear()
     gs.prompt_cntl = "player_name"
     return True
-  if gs.prompt_cntl == "player_name":
-    return create_player_character(my_tower, player_character, gs.prompt_cntl, cmd)
-  elif gs.prompt_cntl == "player_race":
-    return create_player_character(my_tower, player_character, gs.prompt_cntl, cmd)
-  elif gs.prompt_cntl == "player_gender":
-    return create_player_character(my_tower, player_character, gs.prompt_cntl, cmd)
-  elif gs.prompt_cntl == "starting_shop":
-    return handle_starting_shop(player_character, my_tower, cmd)
-  elif gs.prompt_cntl == "stairs_up_mode":
-      process_stairs_up_action(player_character, my_tower, cmd, gs.floor_params) # Pass gs.floor_params here
-      return True # Indicates the command was handled
-  elif gs.prompt_cntl == "stairs_down_mode": # New state for stairs down
-      process_stairs_down_action(player_character, my_tower, cmd)
-      return True # Indicates the command was handled
-  elif gs.prompt_cntl == "warp_mode":
-      process_warp_action(player_character, my_tower, cmd, gs.floor_params) # Pass gs.floor_params here
-      return True # Indicates the command was handled
-  elif gs.prompt_cntl == "altar_mode":
-      process_altar_action(player_character, my_tower, cmd)
+  # --- Mode dispatch table -------------------------------------------------
+  # MODE_HANDLERS (defined below) maps prompt_cntl -> handler callable.
+  # Character-creation modes and starting_shop return their own bool;
+  # every other handler's truth-value is "handled, skip fallback".
+  # Capture the mode BEFORE dispatch — handlers routinely mutate
+  # gs.prompt_cntl (e.g. player_name -> player_race on success), and
+  # the pass-through decision has to match what the caller originally
+  # dispatched on, not what the handler leaves behind.
+  mode_before = gs.prompt_cntl
+  handler = MODE_HANDLERS.get(mode_before)
+  if handler is not None:
+      result = handler(player_character, my_tower, cmd)
+      if mode_before in _HANDLE_PASSTHROUGH_RESULT:
+          return result
       return True
-  elif gs.prompt_cntl == "pool_mode":
-      process_pool_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "dungeon_mode":
-      process_dungeon_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "dungeon_unlocked_mode":
-      process_dungeon_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "tomb_mode":
-      process_tomb_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "garden_mode" or gs.prompt_cntl == "fey_garden_mode":
-      process_garden_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "oracle_mode":
-      process_oracle_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "blacksmith_mode":
-      process_blacksmith_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "shrine_mode":
-      process_shrine_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "alchemist_mode":
-      process_alchemist_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "war_room_mode":
-      process_war_room_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "taxidermist_mode":
-      process_taxidermist_action(player_character, my_tower, cmd)
-      return True
-  elif gs.prompt_cntl == "towel_action_mode":
-      process_towel_action(player_character, my_tower, cmd)
-      return True
-  else:
-    return False
+  return False
+
+
+# ---------------------------------------------------------------------------
+# Mode dispatch table used by _handle() above.
+#
+# Each entry maps prompt_cntl -> callable(player_character, my_tower, cmd).
+# Handlers that need extra state (e.g. stairs_up uses gs.floor_params) are
+# wrapped in lambdas that pull the argument from game_state.
+#
+# Adding a new mode now just means: register the handler here + add a
+# render block + (optionally) a tap-first UI in app.py.
+# ---------------------------------------------------------------------------
+MODE_HANDLERS = {
+    # Character creation (all three routes share a single handler that
+    # branches on gs.prompt_cntl internally).
+    "player_name":            lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
+    "player_race":            lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
+    "player_gender":          lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
+
+    # Shops / vendors.
+    "starting_shop":          handle_starting_shop,
+
+    # Stairs + warp need gs.floor_params threaded through.
+    "stairs_up_mode":         lambda pc, t, cmd: process_stairs_up_action(pc, t, cmd, gs.floor_params),
+    "stairs_down_mode":       process_stairs_down_action,
+    "warp_mode":              lambda pc, t, cmd: process_warp_action(pc, t, cmd, gs.floor_params),
+
+    # Standard room action handlers.
+    "altar_mode":             process_altar_action,
+    "pool_mode":              process_pool_action,
+    "dungeon_mode":           process_dungeon_action,
+    "dungeon_unlocked_mode":  process_dungeon_action,
+    "tomb_mode":              process_tomb_action,
+    "garden_mode":            process_garden_action,
+    "fey_garden_mode":        process_garden_action,
+    "oracle_mode":            process_oracle_action,
+    "blacksmith_mode":        process_blacksmith_action,
+    "shrine_mode":            process_shrine_action,
+    "alchemist_mode":         process_alchemist_action,
+    "war_room_mode":          process_war_room_action,
+    "taxidermist_mode":       process_taxidermist_action,
+    "towel_action_mode":      process_towel_action,
+}
+
+# Modes whose handler return value should pass through to _handle's caller
+# (character-creation flows return whether the step completed;
+# handle_starting_shop has its own "done shopping" boolean).  Everything
+# else just returns True once dispatched.
+_HANDLE_PASSTHROUGH_RESULT = {
+    "player_name", "player_race", "player_gender", "starting_shop",
+}
 def health_bar(current, maximum, width=20):
     filled = int((current / maximum) * width) if maximum > 0 else 0
     filled = min(filled, width)  # Cap at width

@@ -2170,6 +2170,42 @@ def generate_grid_html(floor, player_x, player_y):
 # 22. UI - TOGA APPLICATION
 # --------------------------------------------------------------------------------
 
+
+# ---------------------------------------------------------------------------
+# Mode layout dispatch table used by update_button_panel().
+#
+# Maps prompt_cntl -> callable(self, commands_text) that builds the right
+# button layout for that mode.  A sentinel _EMPTY_LAYOUT means the mode
+# wants no buttons rendered (e.g., game_loaded_summary — just the big
+# tappable "Continue" card in the HTML).
+#
+# Kept outside the class so it's easy to scan and maintain as new modes
+# land.  The callables accept `self` (the app) and the raw commands_text
+# string; they pull whatever they need (parsed commands, etc.) themselves.
+# ---------------------------------------------------------------------------
+_EMPTY_LAYOUT = object()  # sentinel — "render no buttons for this mode"
+
+MODE_LAYOUTS = {
+    'intro_story':           lambda self, cmds: self.build_main_menu_layout(),
+    'main_menu':              lambda self, cmds: self.build_main_menu_layout(),
+    'game_loaded_summary':    _EMPTY_LAYOUT,
+    'save_load_mode':         lambda self, cmds: self.build_save_load_layout({}),
+    'player_name':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
+    'puzzle_mode':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
+    'zotle_teleporter_mode':  lambda self, cmds: self.build_teleporter_layout(),
+    'combat_mode':            lambda self, cmds: self.build_combat_layout(
+                                  {k: l for k, l in self.parse_commands(cmds)}),
+}
+
+# Modes where pressing 'l' triggers the quick-use lantern hotkey.
+# These all show "l = lantern" in their hint line today.
+_LANTERN_QUICK_USE_MODES = frozenset({
+    'game_loop', 'chest_mode', 'pool_mode', 'altar_mode', 'library_mode',
+    'stairs_up_mode', 'stairs_down_mode', 'dungeon_mode', 'tomb_mode',
+    'garden_mode', 'oracle_mode', 'puzzle_mode',
+})
+
+
 class WizardsCavernApp(toga.App):
     def startup(self):
         """Initialize and display the application."""
@@ -2875,51 +2911,29 @@ class WizardsCavernApp(toga.App):
             self.bottom_panel.style.height = 148
             self.button_panel.style.height = 96
 
-        # Special case: Intro/Main menu - show save slots if saves exist, otherwise empty
-        if gs.prompt_cntl in ['intro_story', 'main_menu']:
-            self.build_main_menu_layout()
-            return
-
-        # Special case: Game loaded summary - just empty buttons, use Send
-        if gs.prompt_cntl == 'game_loaded_summary':
-            return
-
-        # Special case: Save/Load menu
-        if gs.prompt_cntl == 'save_load_mode':
-            self.build_save_load_layout({})
-            return
-
-        # Special case: QWERTY keyboard for name entry
-        if gs.prompt_cntl == 'player_name':
-            self.build_qwerty_keyboard_layout()
-            return
-
-        # Special case: QWERTY keyboard for Zotle puzzle
-        if gs.prompt_cntl == 'puzzle_mode':
-            self.build_qwerty_keyboard_layout()
-            return
-
-        # Special case: Zotle Teleporter - number pad with comma
-        if gs.prompt_cntl == 'zotle_teleporter_mode':
-            self.build_teleporter_layout()
-            return
-
-        # Special case: Combat mode - custom layout with C, A, spacer, F
-        if gs.prompt_cntl == 'combat_mode':
-            commands = self.parse_commands(commands_text)
-            cmd_dict = {key: label for key, label in commands}
-            self.build_combat_layout(cmd_dict)
-            return
-
-        # Special case: Inventory (no filter) — explicit 3x3 grid layout
+        # Mode-specific layout dispatch.  MODE_LAYOUTS (defined below)
+        # maps prompt_cntl -> a callable that builds the right button
+        # layout.  Three special cases are still resolved in-line:
+        #   - inventory with no filter uses a bespoke 3x3 grid; with a
+        #     filter it falls through to build_layout_with_numpad.
+        #   - game_loaded_summary wants zero buttons; it returns None
+        #     from the table, which we treat as "no-op".
+        #   - everything else is the generic numpad/no-numpad builder
+        #     keyed off needs_numbers.
         if gs.prompt_cntl == 'inventory' and not gs.inventory_filter:
             self.build_inventory_layout()
             return
 
-        # Parse commands from text
-        commands = self.parse_commands(commands_text)
+        layout_fn = MODE_LAYOUTS.get(gs.prompt_cntl)
+        if layout_fn is _EMPTY_LAYOUT:
+            return  # Mode explicitly wants no buttons rendered.
+        if layout_fn is not None:
+            layout_fn(self, commands_text)
+            return
 
-        # Build layout based on mode
+        # Generic fallback: parse commands out of the hint line and hand
+        # off to the appropriate numpad / no-numpad builder.
+        commands = self.parse_commands(commands_text)
         if needs_numbers:
             self.build_layout_with_numpad(commands)
         else:
@@ -4131,87 +4145,15 @@ class WizardsCavernApp(toga.App):
             handle_inventory_menu(gs.player_character, gs.my_tower, "init")
             return
 
-        # ADD THIS NEW BLOCK FOR LANTERN
-        if cmd == 'l' and gs.prompt_cntl == "game_loop":
+        # Lantern quick-use hotkey.  Allowed in any mode where the hint
+        # shows "l = lantern" — game_loop + most single-action rooms.
+        # game_loop is special-cased because its caller re-renders; every
+        # other mode needs us to render here so the updated fuel level
+        # shows up immediately.
+        if cmd == 'l' and gs.prompt_cntl in _LANTERN_QUICK_USE_MODES:
             process_lantern_quick_use(gs.player_character, gs.my_tower)
-            return
-
-        # Allow lantern use in chest mode
-        if cmd == 'l' and gs.prompt_cntl == "chest_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in pool mode
-        if cmd == 'l' and gs.prompt_cntl == "pool_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in altar mode
-        if cmd == 'l' and gs.prompt_cntl == "altar_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in library mode
-        if cmd == 'l' and gs.prompt_cntl == "library_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in stairs_up_mode
-        if cmd == 'l' and gs.prompt_cntl == "stairs_up_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in stairs_down_mode
-        if cmd == 'l' and gs.prompt_cntl == "stairs_down_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in altar mode
-        if cmd == 'l' and gs.prompt_cntl == "altar_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in library mode
-        if cmd == 'l' and gs.prompt_cntl == "library_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in dungeon mode
-        if cmd == 'l' and gs.prompt_cntl == "dungeon_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in tomb mode
-        if cmd == 'l' and gs.prompt_cntl == "tomb_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in garden mode
-        if cmd == 'l' and gs.prompt_cntl == "garden_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in oracle mode
-        if cmd == 'l' and gs.prompt_cntl == "oracle_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
-            return
-
-        # Allow lantern use in puzzle mode
-        if cmd == 'l' and gs.prompt_cntl == "puzzle_mode":
-            process_lantern_quick_use(gs.player_character, gs.my_tower)
-            self.render()
+            if gs.prompt_cntl != 'game_loop':
+                self.render()
             return
 
         if gs.prompt_cntl == "flare_direction_mode":
