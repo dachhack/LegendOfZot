@@ -3320,73 +3320,53 @@ def process_lantern_quick_use(player_character, my_tower):
 
 
 def process_towel_action(player_character, my_tower, cmd):
-    """Handle towel usage options."""
-    
+    """Handle towel usage options.
+
+    Any action (wear / wipe / cancel) returns the player to the
+    inventory's Use filter so they can keep browsing without retyping
+    the path.  Movement keys still flip straight to game_loop.
+    """
+
     if gs.active_towel_item is None:
         add_log(f"{COLOR_RED}Error: No towel selected.{COLOR_RESET}")
         gs.prompt_cntl = "game_loop"
         return
-    
+
     towel = gs.active_towel_item
-    
-    # Check if towel has required methods (might be a generic Item)
-    has_towel_methods = hasattr(towel, 'wear') and hasattr(towel, 'wipe_face')
-    
-    if cmd == '1':
-        # Wear towel over face (blind self)
-        if has_towel_methods:
-            towel.wear(player_character)
-        else:
-            # Fallback for generic Item
-            towel.is_worn = True
-            player_character.add_status_effect(
-                effect_name='Towel Blindfold',
-                duration=-1,
-                stat_changes={'accuracy': -100},
-                description='You have a towel over your face'
-            )
-            add_log(f"{COLOR_PURPLE}You wrap the towel around your face.{COLOR_RESET}")
-            add_log(f"{COLOR_YELLOW}You are now BLIND! (But protected from gaze attacks){COLOR_RESET}")
-        gs.prompt_cntl = "game_loop"
-    elif cmd == '2':
-        # Wipe face
-        if has_towel_methods:
-            towel.wipe_face(player_character)
-        else:
-            # Fallback for generic Item
-            if 'Blinded' in player_character.status_effects:
-                player_character.remove_status_effect('Blinded')
-                add_log(f"{COLOR_GREEN}You wipe your face clean. You can see again!{COLOR_RESET}")
-            else:
-                add_log(f"{COLOR_GREY}You wipe your face. Nothing happens.{COLOR_RESET}")
-        gs.prompt_cntl = "game_loop"
-    elif cmd == '3':
-        # Wipe hands
-        if has_towel_methods:
-            towel.wipe_hands(player_character)
-        else:
-            # Fallback for generic Item
-            if 'Slippery Hands' in player_character.status_effects:
-                player_character.remove_status_effect('Slippery Hands')
-                add_log(f"{COLOR_GREEN}You dry your hands. Your grip is firm again!{COLOR_RESET}")
-            else:
-                add_log(f"{COLOR_GREY}You wipe your hands. Nothing happens.{COLOR_RESET}")
-        gs.prompt_cntl = "game_loop"
-    elif cmd == '4' or cmd == 'c':
-        # Cancel
-        add_log(f"{COLOR_GREY}You put the towel away.{COLOR_RESET}")
-        gs.prompt_cntl = "game_loop"
-    elif cmd == 'i':
+
+    def _return_to_inventory():
+        gs.inventory_filter = 'use'
         gs.prompt_cntl = "inventory"
         handle_inventory_menu(player_character, my_tower, "init")
+
+    if cmd == '1':
+        # Wear towel over face (blind self)
+        towel.wear(player_character)
+        _return_to_inventory()
+    elif cmd == '2':
+        # Wipe face
+        towel.wipe_face(player_character)
+        _return_to_inventory()
+    elif cmd == '3':
+        # Wipe hands
+        towel.wipe_hands(player_character)
+        _return_to_inventory()
+    elif cmd == '4' or cmd == 'c':
+        # Cancel — put the towel away, back to inventory.
+        add_log(f"{COLOR_GREY}You put the towel away.{COLOR_RESET}")
+        _return_to_inventory()
+    elif cmd == 'i':
+        _return_to_inventory()
     elif cmd in ['n', 's', 'e', 'w']:
+        gs.active_towel_item = None  # exit the dialog — moving closes it
         move_player(player_character, my_tower, cmd)
+        return
     else:
         add_log(f"{COLOR_YELLOW}Please choose 1-4.{COLOR_RESET}")
-    
-    # Clear the active towel after action (unless going to inventory)
-    if gs.prompt_cntl != "inventory":
-        gs.active_towel_item = None
+        return
+
+    # Any action path above clears the selection once we've committed.
+    gs.active_towel_item = None
 
 
 # =============================================================================

@@ -8261,6 +8261,46 @@ class WizardsCavernApp(toga.App):
                     else:
                         towel_wetness = " (soaking)"
             
+            # Grey out Wipe Face / Wipe Hands when the player doesn't
+            # actually have the status effects they'd cure — prevents the
+            # "did anything happen?" silent-no-op trap.
+            _pc_effects = gs.player_character.status_effects
+            _face_curable = ('Blinded', 'Cream Pie', 'Venom Blind', 'Flash Blind')
+            _face_active = [e for e in _face_curable if e in _pc_effects]
+            _hands_active = [e for e in ('Slippery Hands', 'Greasy') if e in _pc_effects]
+
+            if _face_active:
+                face_card = (
+                    "<div class='taprow altar-act blessing' data-zcmd='2' "
+                    "onclick=\"window.__zotTap('2', this)\">"
+                    "<div class='aname'>Wipe Face</div>"
+                    f"<div class='ameta'>Cure {', '.join(e.lower() for e in _face_active)}</div>"
+                    "</div>"
+                )
+            else:
+                face_card = (
+                    "<div class='taprow altar-act blessing disabled'>"
+                    "<div class='aname'>Wipe Face</div>"
+                    "<div class='ameta'>Nothing to wipe off — your face is clear</div>"
+                    "<span class='tapnote'>not needed</span></div>"
+                )
+
+            if _hands_active:
+                hands_card = (
+                    "<div class='taprow altar-act offering' data-zcmd='3' "
+                    "onclick=\"window.__zotTap('3', this)\">"
+                    "<div class='aname'>Wipe Hands</div>"
+                    f"<div class='ameta'>Cure {', '.join(e.lower() for e in _hands_active)}</div>"
+                    "</div>"
+                )
+            else:
+                hands_card = (
+                    "<div class='taprow altar-act offering disabled'>"
+                    "<div class='aname'>Wipe Hands</div>"
+                    "<div class='ameta'>Nothing to wipe off — your hands are dry</div>"
+                    "<span class='tapnote'>not needed</span></div>"
+                )
+
             towel_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="color: #CCC; font-weight: bold; font-size: 12px; margin-bottom: 8px;">
@@ -8275,16 +8315,8 @@ class WizardsCavernApp(toga.App):
                             <div class='aname'>Wear Over Face</div>
                             <div class='ameta'>Blind yourself &mdash; protection from gaze attacks</div>
                         </div>
-                        <div class='taprow altar-act blessing' data-zcmd='2'
-                             onclick="window.__zotTap('2', this)">
-                            <div class='aname'>Wipe Face</div>
-                            <div class='ameta'>Cure face-based blindness</div>
-                        </div>
-                        <div class='taprow altar-act offering' data-zcmd='3'
-                             onclick="window.__zotTap('3', this)">
-                            <div class='aname'>Wipe Hands</div>
-                            <div class='ameta'>Cure slippery hands</div>
-                        </div>
+                        {face_card}
+                        {hands_card}
                         <div class='taprow cancel' data-zcmd='c'
                              onclick="window.__zotTap('c', this)">
                             <span class='tapnum'>&times;</span>Cancel
