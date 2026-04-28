@@ -3545,26 +3545,8 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
         player_character.character_class = "Adventurer"
         # player_character.race and player_character.gender are already set correctly
 
-        # Hand off to the sprite picker. The starting shop only fires after
-        # the player chooses a portrait (or auto-defaults if pool is empty).
-        gs.prompt_cntl = "player_sprite"
-        return True
-
-    if _cntl == "player_sprite":
-        # Commands look like 'sp1', 'sp2', ... mapping into the curated cell
-        # list for the chosen race.
-        from .sprite_data import get_character_race_cells
-        race = (player_character.race or 'human').lower()
-        cells = get_character_race_cells(race) or get_character_race_cells('human')
-        choice = (cmd or '').lower().strip()
-        if choice.startswith('sp') and choice[2:].isdigit():
-            idx = int(choice[2:])
-            if 1 <= idx <= len(cells):
-                player_character.sprite_cell = cells[idx - 1]
-                gs.prompt_cntl = "starting_shop"
-                handle_starting_shop(player_character, my_tower, "init")
-                return True
-        add_log("Tap a portrait to continue.")
+        gs.prompt_cntl = "starting_shop"
+        handle_starting_shop(player_character, my_tower, "init")
         return True
     return False # Should not be reached if state is managed
 def activate_playtest_mode(player_character):
@@ -4198,7 +4180,6 @@ MODE_HANDLERS = {
     "player_name":            lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
     "player_race":            lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
     "player_gender":          lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
-    "player_sprite":          lambda pc, t, cmd: create_player_character(t, pc, gs.prompt_cntl, cmd),
 
     # Shops / vendors.
     "starting_shop":          handle_starting_shop,
