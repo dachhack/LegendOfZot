@@ -16869,6 +16869,41 @@ _POTION_CRYPTIC_ORDER = [
 ]
 _POTION_CRYPTIC_INDEX = {n: i for i, n in enumerate(_POTION_CRYPTIC_ORDER)}
 
+# Scrolls live in cols 8-9 rows 0-6 (parchment cards with weapon/element
+# symbols) + row 9 cols 0-9 (rolled scrolls). 14 + 10 = 24 cells, exactly
+# matching the 24 cryptic scroll names so each one gets a unique sprite.
+_SCROLL_CELLS = (
+    [(c, r) for r in range(7) for c in (8, 9)] +
+    [(c, 9) for c in range(10)]
+)
+_SCROLL_CRYPTIC_ORDER = [
+    "Scroll labeled ZELGO MER", "Scroll labeled JUYED AWK YACC",
+    "Scroll labeled FOOBIE BLETCH", "Scroll labeled TEMOV",
+    "Scroll labeled XIXAXA XOXAXA", "Scroll labeled PRATYAVAYAH",
+    "Scroll labeled DAIYEN FANSEN", "Scroll labeled LEP GEX VEN ZEA",
+    "Scroll labeled PRIRUTSENIE", "Scroll labeled ELBIB YLANSEN",
+    "Scroll labeled VERR YED HULL", "Scroll labeled VENZAR BORGAVVE",
+    "Scroll labeled NOSMAS", "Scroll labeled NEDNIL",
+    "Scroll labeled KERNOD WEL", "Scroll labeled ELAM EBOW",
+    "Scroll labeled DUAM XNAHT", "Scroll labeled ANDOVA BEGARIN",
+    "Scroll labeled KIRJE", "Scroll labeled VE FORBRULL",
+    "Scroll labeled GARVEN DEH", "Scroll labeled READ ME",
+    "Scroll labeled HACKEM MUCHE", "Scroll labeled VELOX NEB",
+]
+_SCROLL_CRYPTIC_INDEX = {n: i for i, n in enumerate(_SCROLL_CRYPTIC_ORDER)}
+
+# Spell books fill rows 7-8 (32 distinct book covers). The cryptic-spell
+# list has 60 entries so collisions are inevitable, but each cryptic name
+# still maps to a stable book.
+_SPELL_BOOK_CELLS = [(c, r) for r in (7, 8) for c in range(16)]
+
+# Rings / amulets / circlets / brooches: col 11 rows 0-6 + row 11 cols 3-7.
+# 12 cells covers the ~11 wearable-accessory items in the game.
+_RING_CELLS = (
+    [(11, r) for r in range(7)] +
+    [(c, 11) for c in range(3, 8)]
+)
+
 
 def _stable_slot(key, modulus):
     """Deterministic, cross-process-stable hash -> slot in [0, modulus)."""
@@ -16881,6 +16916,26 @@ def _potion_cell(appearance_key):
     if slot is None:
         slot = _stable_slot(appearance_key, _POTION_ICON_COUNT)
     return slot % _POTION_ICON_COLS, slot // _POTION_ICON_COLS
+
+
+def _scroll_cell(appearance_key):
+    """Map a scroll's in-world appearance (cryptic label) to (col, row)."""
+    slot = _SCROLL_CRYPTIC_INDEX.get(appearance_key)
+    if slot is None:
+        slot = _stable_slot(appearance_key, len(_SCROLL_CELLS))
+    return _SCROLL_CELLS[slot]
+
+
+def _spell_cell(appearance_key):
+    """Map a spell's in-world appearance (cryptic glyph) to a book cell."""
+    slot = _stable_slot(appearance_key, len(_SPELL_BOOK_CELLS))
+    return _SPELL_BOOK_CELLS[slot]
+
+
+def _ring_cell(item_name):
+    """Map a wearable-accessory item name to (col, row)."""
+    slot = _stable_slot(item_name, len(_RING_CELLS))
+    return _RING_CELLS[slot]
 
 
 # Per-item-render counter so multiple sprites for the same appearance get
@@ -16936,19 +16991,54 @@ def generate_item_sprite_html(item, size=32):
     their mappings are added.
     """
     cls_name = type(item).__name__
+
     if cls_name == 'Potion':
-        try:
-            from . import game_state as _gs
-            appearance = _gs.item_cryptic_mapping.get('potions', {}).get(
-                getattr(item, 'name', ''), getattr(item, 'name', '')
-            )
-        except Exception:
-            appearance = getattr(item, 'name', '')
+        appearance = _appearance_for(item, 'potions')
         if not appearance:
             return ''
         sx, sy = _potion_cell(appearance)
-        _ITEM_SPRITE_SEQ[0] += 1
-        safe_id = f'is_p_{_ITEM_SPRITE_SEQ[0]}'
-        return _gemini_canvas_html(safe_id, sx, sy, size)
-    return ''
+        prefix = 'p'
+    elif cls_name == 'Scroll':
+        appearance = _appearance_for(item, 'scrolls')
+        if not appearance:
+            return ''
+        sx, sy = _scroll_cell(appearance)
+        prefix = 's'
+    elif cls_name == 'Spell':
+        appearance = _appearance_for(item, 'spells')
+        if not appearance:
+            return ''
+        sx, sy = _spell_cell(appearance)
+        prefix = 'sp'
+    elif cls_name == 'Treasure':
+        # Only wearable accessories get an icon (rings, amulets, circlets,
+        # brooches). Trophies, raw gems, and active-use treasures fall through.
+        if getattr(item, 'treasure_type', '') != 'passive':
+            return ''
+        name = getattr(item, 'name', '')
+        if not name:
+            return ''
+        sx, sy = _ring_cell(name)
+        prefix = 'r'
+    else:
+        return ''
+
+    _ITEM_SPRITE_SEQ[0] += 1
+    return _gemini_canvas_html(f'is_{prefix}_{_ITEM_SPRITE_SEQ[0]}', sx, sy, size)
+
+
+def _appearance_for(item, category):
+    """Look up a cryptic in-world appearance for an item (NetHack-style).
+
+    Returns the cryptic name when the cryptic mapping has one, otherwise
+    falls back to item.name so freshly-crafted or off-template items still
+    get a stable sprite.
+    """
+    try:
+        from . import game_state as _gs
+        return _gs.item_cryptic_mapping.get(category, {}).get(
+            getattr(item, 'name', ''), getattr(item, 'name', '')
+        )
+    except Exception:
+        return getattr(item, 'name', '')
 
