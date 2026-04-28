@@ -432,20 +432,10 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
         if player_character and hasattr(player_character, 'equipped_accessories'):
             is_equipped = item in player_character.equipped_accessories
 
-        try:
-            from .sprite_data import generate_item_sprite_html as _gen_isprite
-            sprite_html = _gen_isprite(item, size=24)
-        except Exception:
-            sprite_html = ''
-
         if is_equipped:
-            label = f"<span style='color: #FFD700;'><b>{item.name}</b></span>"
+            item_str = f"<span style='color: #FFD700;'><b>{item.name}</b></span>"
         else:
-            label = f"{item.name}"
-        if sprite_html:
-            item_str = f"{sprite_html}<span style='vertical-align:middle;margin-left:4px;'>{label}</span>"
-        else:
-            item_str = label
+            item_str = f"{item.name}"
 
         # Show passive effect in bright purple for equippable accessories
         if item.treasure_type == 'passive' and item.passive_effect:
@@ -479,15 +469,7 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
         # Get display name (cryptic if unidentified)
         display_name = _get_item_display_name(item, for_vendor=for_vendor) if not is_identified else item.name
 
-        try:
-            from .sprite_data import generate_item_sprite_html as _gen_isprite
-            sprite_html = _gen_isprite(item, size=24)
-        except Exception:
-            sprite_html = ''
-        if sprite_html:
-            item_str = f"{sprite_html}<span style='vertical-align:middle;margin-left:4px;'>{display_name}</span>"
-        else:
-            item_str = f"{display_name}"
+        item_str = f"{display_name}"
         count = getattr(item, 'count', 1)
         if count > 1:
             item_str += f" (x{count})"
@@ -553,17 +535,8 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
         # Get display name (cryptic if unidentified)
         display_name = _get_item_display_name(item, for_vendor=for_vendor) if not is_identified else item.name
 
-        try:
-            from .sprite_data import generate_item_sprite_html as _gen_isprite
-            sprite_html = _gen_isprite(item, size=24)
-        except Exception:
-            sprite_html = ''
         # Spells are blue to distinguish them
-        label = f"<span style='color: #42A5F5;'>{display_name}</span>"
-        if sprite_html:
-            item_str = f"{sprite_html}<span style='vertical-align:middle;margin-left:4px;'>{label}</span>"
-        else:
-            item_str = label
+        item_str = f"<span style='color: #42A5F5;'>{display_name}</span>"
 
         # Only show details if identified
         if is_identified:
