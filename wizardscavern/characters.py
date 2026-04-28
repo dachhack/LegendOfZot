@@ -447,17 +447,7 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
         # Get display name (cryptic if unidentified)
         display_name = _get_item_display_name(item, for_vendor=for_vendor) if not is_identified else item.name
 
-        # Prepend the appearance-keyed sprite (NetHack-style: same look
-        # whether identified or not). Lazy import avoids a hard dep cycle.
-        try:
-            from .sprite_data import generate_item_sprite_html as _gen_isprite
-            sprite_html = _gen_isprite(item, size=24)
-        except Exception:
-            sprite_html = ''
-        if sprite_html:
-            item_str = f"{sprite_html}<span style='vertical-align:middle;margin-left:4px;'>{display_name}</span>"
-        else:
-            item_str = f"{display_name}"
+        item_str = f"{display_name}"
         count = getattr(item, 'count', 1)
         if count > 1:
             item_str += f" (x{count})"

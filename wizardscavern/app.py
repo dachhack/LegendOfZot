@@ -39,7 +39,6 @@ from .sprite_data import (
     generate_monster_sprite_html,
     generate_room_sprite_html,
     generate_player_sprite_html as _generate_player_sprite_html,
-    gemini_bootstrap_html,
 )
 from .game_data import (
     MONSTER_TEMPLATES,
@@ -5174,8 +5173,7 @@ class WizardsCavernApp(toga.App):
 
             _player_tap_prefix = 's' if gs.vendor_action == 'sell' else ''
             sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
-            player_inv_html = gemini_bootstrap_html()
-            player_inv_html += "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
+            player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
             player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
             if not sorted_player_items:
                 player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
@@ -5326,8 +5324,7 @@ class WizardsCavernApp(toga.App):
             # Player inventory: tappable when sell/repair/identify is active.
             _player_tap_prefix = {'sell': 's', 'repair': 'r', 'identify': 'id'}.get(gs.vendor_action, '')
             sorted_player_items = get_sorted_inventory(gs.player_character.inventory)
-            player_inv_html = gemini_bootstrap_html()
-            player_inv_html += "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
+            player_inv_html = "<h3 style='margin: 0 0 5px 0;'>Your Inventory</h3>"
             player_inv_html += "<div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 200px;'>"
             if not sorted_player_items:
                 player_inv_html += "<div style='margin: 2px 0; padding: 0;'>(Empty)</div>"
@@ -5439,7 +5436,7 @@ class WizardsCavernApp(toga.App):
                 combat_tabs_html += "</div>"
 
                 # Build inventory HTML - matching normal inventory style
-                player_inv_html = gemini_bootstrap_html() + combat_tabs_html
+                player_inv_html = combat_tabs_html
                 player_inv_html += "<div style='max-height: 280px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
                 player_inv_html += "<div style='margin: 0; padding: 0;'>"
 
@@ -5585,7 +5582,7 @@ class WizardsCavernApp(toga.App):
                     )
                 tabs_html += "</div>"
 
-                player_inv_html = gemini_bootstrap_html() + tabs_html
+                player_inv_html = tabs_html
 
                 player_inv_html += "<div style='max-height: 295px; overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px;'>"
 
