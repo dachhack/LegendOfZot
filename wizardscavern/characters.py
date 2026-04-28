@@ -856,6 +856,9 @@ class Character:
         self.race = "Human"
         self.gender = "Unknown"
         self.character_class = "Adventurer"
+        # Player-chosen sprite cell on the Characters sheet, or None to fall
+        # back on the legacy race+armor map. Stored as (col, row).
+        self.sprite_cell = None
         self.elemental_strengths = [] # Initialize as empty list
         self.elemental_weaknesses = [] # Initialize as empty list
         self.elemental_resistance = [] # For permanent resistances from potions
