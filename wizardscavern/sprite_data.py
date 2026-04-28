@@ -25786,12 +25786,44 @@ def generate_room_sprite_html(room_type, variant=None):
 
 
 
-def generate_player_sprite_html(race, armor_state='none'):
+def generate_player_sprite_html(race, armor_state='none', sprite_cell=None):
     """
-    Generate a player character sprite based on race and armor state.
-    Uses Player1 sprite sheet (16x16 sprites, 8 cols x 15 rows).
-    armor_state: 'none', 'nonmetal', or 'metal'
+    Generate a player character sprite.
+
+    If ``sprite_cell`` is provided as ``(col, row)``, it is rendered from the
+    high-resolution Characters sheet (32px cells, displayed at 64x64). This
+    is what the player picks during character creation.
+
+    Otherwise the legacy 16px Player1 sheet is used, indexed by race/armor.
     """
+    SIZE = 64
+
+    if sprite_cell is not None:
+        col, row = sprite_cell
+        cell_size = _cell_size_for('Characters')
+        px = col * cell_size
+        py = row * cell_size
+        # Bootstrap caches the sheet on window.__zotChars so repeated player
+        # renders (combat HUD, stats, inventory) don't re-inline 700KB each.
+        return (
+            characters_bootstrap_html()
+            + '<div id="player_sprite_wrap" style="position:relative;display:inline-block;overflow:visible;">'
+            f'<canvas id="player_sprite" width="{SIZE}" height="{SIZE}"'
+            ' style="image-rendering:pixelated;image-rendering:crisp-edges;'
+            'display:block;margin:4px auto;"></canvas>'
+            '<script>(function(){'
+            'var c=document.getElementById("player_sprite");'
+            'if(!c)return;'
+            'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
+            'var img=window.__zotChars;if(!img)return;'
+            f'function draw(){{ctx.drawImage(img,{px},{py},{cell_size},{cell_size},0,0,{SIZE},{SIZE});}}'
+            'if(img.complete&&img.naturalWidth)draw();'
+            'else img.addEventListener("load",draw);'
+            '})()'
+            '</script>'
+            '</div>'
+        )
+
     _PLAYER_MAP = {
         ('human', 'none'):      (0, 5),
         ('human', 'nonmetal'):  (2, 5),
@@ -25810,7 +25842,6 @@ def generate_player_sprite_html(race, armor_state='none'):
     col, row = _PLAYER_MAP.get((race_key, armor_state), (0, 5))
     px = col * 16
     py = row * 16
-    SIZE = 64
     _SHEET = (
         'iVBORw0KGgoAAAANSUhEUgAAAIAAAADwCAMAAAD/wpw4AAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxj'
         'YGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9A'
@@ -26308,4 +26339,71 @@ def _appearance_for(item, category):
         )
     except Exception:
         return getattr(item, 'name', '')
+
+
+# === Player sprite picker (Characters sheet) ===============================
+# During character creation we let the player pick a portrait that matches
+# their race. Each list is curated by hand from the 32px Characters sheet so
+# the picker shows clean, recognisable options without paginating.
+
+_CHARACTER_RACE_CELLS = {
+    'human': [
+        (1, 4), (3, 4), (5, 4),
+        (1, 5), (3, 5), (5, 5),
+        (3, 7), (5, 7),
+    ],
+    'elf': [
+        (7, 6), (8, 6), (9, 6),
+        (7, 7),
+        (1, 8), (3, 8),
+    ],
+    'dwarf': [
+        (12, 4), (14, 4),
+        (10, 6), (12, 6), (14, 6), (15, 6),
+        (12, 7), (15, 7),
+    ],
+}
+
+
+def get_character_race_cells(race):
+    """Return the curated (col, row) list for a race, or [] if unknown."""
+    return list(_CHARACTER_RACE_CELLS.get((race or '').lower(), []))
+
+
+def characters_bootstrap_html():
+    """Embed the Characters sheet once on window.__zotChars. Per-cell
+    canvases reference the cached image, keeping the picker HTML small.
+    """
+    sheet_data_uri = 'data:image/png;base64,' + ''.join(_SHEETS['Characters'])
+    return (
+        '<script>(function(){'
+        'if(window.__zotChars)return;'
+        'var i=new Image();i.src="' + sheet_data_uri + '";'
+        'window.__zotChars=i;'
+        '})()</script>'
+    )
+
+
+def generate_character_picker_canvas_html(col, row, size=64, dom_id=None):
+    """Render a single Characters-sheet cell as a canvas — used by the
+    sprite picker grid during character creation. Caller must include
+    characters_bootstrap_html() once before any picker canvases.
+    """
+    cell_size = _cell_size_for('Characters')
+    px = col * cell_size
+    py = row * cell_size
+    safe_id = dom_id or f'char_pick_{col}_{row}'
+    return (
+        f'<canvas id="{safe_id}" width="{size}" height="{size}" '
+        f'style="image-rendering:pixelated;image-rendering:crisp-edges;'
+        f'display:block;margin:0 auto;"></canvas>'
+        f'<script>(function(){{'
+        f'var c=document.getElementById("{safe_id}");if(!c)return;'
+        f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
+        f'var img=window.__zotChars;if(!img)return;'
+        f'function draw(){{ctx.drawImage(img,{px},{py},{cell_size},{cell_size},0,0,{size},{size});}}'
+        f'if(img.complete&&img.naturalWidth)draw();'
+        f'else img.addEventListener("load",draw);'
+        f'}})()</script>'
+    )
 

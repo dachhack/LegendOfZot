@@ -2047,8 +2047,15 @@ def get_evolution_tier_style(monster):
     return '', ''  # Normal: no border, no label
 
 
-def generate_player_sprite_html(race, gender, equipped_armor=None):
-    """Wrapper that resolves armor state, then delegates to sprite_data."""
+def generate_player_sprite_html(race, gender, equipped_armor=None, sprite_cell=None):
+    """Wrapper that resolves armor state, then delegates to sprite_data.
+
+    If ``sprite_cell`` is provided, the high-resolution Characters sheet is
+    used (player picked a portrait at character creation). Otherwise the
+    legacy race+armor-state lookup runs.
+    """
+    if sprite_cell is not None:
+        return _generate_player_sprite_html(race, sprite_cell=sprite_cell)
     if equipped_armor is None or getattr(equipped_armor, 'is_broken', False):
         armor_state = 'none'
     elif is_metal_item(equipped_armor):
@@ -4344,6 +4351,8 @@ class WizardsCavernApp(toga.App):
             create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
         elif gs.prompt_cntl == "player_gender":
             create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
+        elif gs.prompt_cntl == "player_sprite":
+            create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
         elif _handle(gs.my_tower, gs.player_character, cmd):
             pass
         else: # This 'else' block means gs.prompt_cntl is "game_loop" or similar map-based interaction.
@@ -4806,7 +4815,7 @@ class WizardsCavernApp(toga.App):
                             <div style="border: 2px solid #4FC3F7; border-radius: 8px; padding: 15px; background: #111; text-align: left;">
                                 <!-- Character Header -->
                                 <div style="text-align: center; margin-bottom: 10px;">
-                                    {generate_player_sprite_html(getattr(loaded_char, 'race', 'human'), getattr(loaded_char, 'gender', 'male'), getattr(loaded_char, 'equipped_armor', None))}
+                                    {generate_player_sprite_html(getattr(loaded_char, 'race', 'human'), getattr(loaded_char, 'gender', 'male'), getattr(loaded_char, 'equipped_armor', None), sprite_cell=getattr(loaded_char, 'sprite_cell', None))}
                                     <div style="font-size: 20px; font-weight: bold; color: #FFD700;">
                                         {loaded_char.name}
                                     </div>
@@ -5025,6 +5034,51 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             current_commands_text = "Tap a gender"
+
+        elif gs.prompt_cntl == "player_sprite":
+            # PLAYER SPRITE PICKER — shows a curated grid of cells from the
+            # Characters sheet, filtered by the race the player chose. Each
+            # tile sends a `sp<n>` command that maps back to the (col, row).
+            from .sprite_data import (
+                get_character_race_cells,
+                generate_character_picker_canvas_html,
+                characters_bootstrap_html,
+            )
+            race = (gs.player_character.race or 'human').lower()
+            cells = get_character_race_cells(race) or get_character_race_cells('human')
+
+            tiles = []
+            for idx, (col, row) in enumerate(cells, start=1):
+                cmd = f"sp{idx}"
+                canvas = generate_character_picker_canvas_html(
+                    col, row, size=72, dom_id=f"sp_pick_{idx}"
+                )
+                tiles.append(
+                    f"<div class='taprow altar-act' style='display:inline-block;width:96px;"
+                    f"margin:4px;padding:6px;text-align:center;vertical-align:top;' "
+                    f"data-zcmd='{cmd}' onclick=\"window.__zotTap('{cmd}', this)\">"
+                    f"{canvas}"
+                    f"</div>"
+                )
+
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 12px; padding: 10px;">
+                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 12px; color: #FFD700; text-align: center;">
+                        CHARACTER CREATION
+                    </div>
+                    <div style="font-size: 12px; margin-bottom: 6px; color: #FFFFFF;">
+                        <b>{gs.player_character.race.title()}</b> &middot; <b>{gs.player_character.gender.title()}</b>
+                    </div>
+                    <div style="font-size: 12px; margin-bottom: 12px; color: #FFFFFF;">
+                        Pick your portrait:
+                    </div>
+                    {characters_bootstrap_html()}
+                    <div style="text-align: center;">
+                        {''.join(tiles)}
+                    </div>
+                </div>
+                """
+            current_commands_text = "Tap a portrait"
 
         elif gs.prompt_cntl == "achievements_mode":
             # ACHIEVEMENTS VIEW
@@ -5713,7 +5767,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                sprite_cell=getattr(gs.player_character, 'sprite_cell', None),
             )
             stats_html = f"""
                 {player_sprite_html}
@@ -6400,7 +6455,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                sprite_cell=getattr(gs.player_character, 'sprite_cell', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
@@ -6534,7 +6590,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                sprite_cell=getattr(gs.player_character, 'sprite_cell', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
@@ -6651,7 +6708,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                sprite_cell=getattr(gs.player_character, 'sprite_cell', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
@@ -6733,7 +6791,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                sprite_cell=getattr(gs.player_character, 'sprite_cell', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;{low_hp_pulse_style}">
