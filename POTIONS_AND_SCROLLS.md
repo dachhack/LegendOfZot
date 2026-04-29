@@ -1,0 +1,158 @@
+# Potion and Scroll Item Names
+
+A flat list of every potion and scroll currently defined in the game (`wizardscavern/item_templates.py` + `wizardscavern/items.py`).
+
+## Potions (123)
+
+- Healing Potion
+- Mana Potion
+- Antidote
+- Greater Healing Potion
+- Greater Mana Potion
+- Strength Elixir
+- Dexterity Tonic
+- Intelligence Brew
+- Defense Brew
+- Regeneration Potion
+- Berserker Rage
+- Giant's Might
+- Haste Potion
+- Stone Skin
+- Invisibility Potion
+- True Sight
+- Fortune Brew
+- Experience Elixir
+- Vampiric Elixir
+- Frost Armor
+- Clarity Potion
+- Elixir of Might
+- Potion of Swiftness
+- Draught of Brilliance
+- Potion of Fortitude
+- Essence of Resilience
+- Fireward Elixir
+- Frostward Tonic
+- Stormward Brew
+- Shadowward Potion
+- Lightward Essence
+- Prismatic Elixir
+- Minor Healing Potion
+- Superior Healing Potion
+- Master Healing Potion
+- Minor Mana Potion
+- Superior Mana Potion
+- Potion of Strength
+- Potion of Greater Strength
+- Potion of Dexterity
+- Potion of Intelligence
+- Potion of Defense
+- Potion of Invisibility
+- Potion of True Sight
+- Potion of Berserker Rage
+- Potion of Regeneration
+- Potion of Clarity
+- Potion of Frost Armor
+- Potion of Giant's Strength
+- Potion of Vampirism
+- Potion of Fortune
+- Potion of Experience
+- Potion of Haste
+- Potion of Stone Skin
+- Potion of Fire Resistance
+- Potion of Ice Resistance
+- Potion of Lightning Resistance
+- Potion of Water Resistance
+- Potion of Earth Resistance
+- Potion of Wind Resistance
+- Potion of Holy Resistance
+- Potion of Shadow Resistance
+- Potion of Poison Resistance
+- Potion of Physical Resistance
+- Potion of Psionic Resistance
+- Greater Fire Resistance
+- Greater Ice Resistance
+- Greater Lightning Resistance
+- Greater Shadow Resistance
+- Greater Poison Resistance
+- Potion of Elemental Warding
+- Potion of Natural Warding
+- Potion of Arcane Warding
+- Potion of Universal Resistance
+- Elixir of Invulnerability
+- Supreme Healing Potion
+- Divine Healing Potion
+- Godly Healing Potion
+- Supreme Mana Potion
+- Divine Mana Potion
+- Potion of Titan Strength
+- Potion of Dragon Strength
+- Potion of God Strength
+- Potion of Cat Reflexes
+- Potion of Wind Reflexes
+- Potion of Iron Fortress
+- Potion of Adamant Fortress
+- Potion of Diamond Fortress
+- War Elixir
+- Warlord Elixir
+- Elixir of Grace
+- Elixir of Brilliance
+- Greater Elixir of Might
+- Greater Elixir of Grace
+- Greater Elixir of Brilliance
+- Supreme Elixir of Might
+- Supreme Elixir of Grace
+- Supreme Elixir of Brilliance
+- Elixir of Vitality
+- Greater Elixir of Vitality
+- Supreme Elixir of Vitality
+- Heroic Healing Potion
+- Legendary Healing Potion
+- Mythic Healing Potion
+- Master Mana Potion
+- Potion of Wrath
+- Potion of Titan's Wrath
+- Potion of Mythic Wrath
+- Potion of Iron Will
+- Potion of Titan's Guard
+- Potion of Mythic Guard
+- Potion of Greater Dexterity
+- Potion of Superior Dexterity
+- Potion of Greater Intelligence
+- Potion of Superior Intelligence
+- Potion of Greater Berserker Rage
+- Greater Potion of Haste
+- Greater Potion of Stone Skin
+- Potion of Greater Frost Armor
+- Greater Regeneration Potion
+- Supreme Regeneration Potion
+- Greater Vampirism Potion
+- Supreme Vampirism Potion
+
+## Scrolls (26)
+
+- Scroll of Ice Shard
+- Scroll of Fireball
+- Scroll of Healing
+- Scroll of Lightning Bolt
+- Scroll of Ice Storm
+- Scroll of Greater Heal
+- Scroll of Meteor Strike
+- Scroll of Chain Lightning
+- Scroll of Inferno
+- Scroll of Full Restore
+- Scroll of Teleportation
+- Scroll of Mapping
+- Scroll of Protection
+- Scroll of Restoration
+- Scroll of Descent
+- Scroll of Foresight
+- Scroll of Upgrade
+- Scroll of Greater Upgrade
+- Scroll of Superior Upgrade
+- Scroll of Epic Upgrade
+- Scroll of Mythic Upgrade
+- Scroll of Divine Upgrade
+- Scroll of Commerce
+- Scroll of Lantern Upgrade
+- Scroll of Identify
+- Scroll of Remove Curse
