@@ -69,3 +69,12 @@ A flat list of every weapon currently defined in the game (`wizardscavern/item_t
 - Soulreaver Scythe
 - Shieldbreaker Maul
 - Vorpal Blade
+
+## Bug Weapons (5)
+_Dropped at 25% chance by bug monsters (Bug Queen and her swarm)._
+
+- Stinger Blade
+- Mandible Axe
+- Thorax Spear
+- Firefly Wand
+- Scorpion Tail Whip

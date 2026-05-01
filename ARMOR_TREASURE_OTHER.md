@@ -57,6 +57,16 @@ Source: `wizardscavern/items.py`, `wizardscavern/item_templates.py`, `wizardscav
 - Titan's Plate
 - Runesmith's Carapace
 
+
+## Bug Armor (5)
+_Dropped at 25% chance by bug monsters._
+
+- Chitin Shell
+- Silk Weave
+- Moth Wing Cape
+- Pill Bug Plate
+- Royal Jelly Mail
+
 ## Accessories — passive Treasure (rings, amulets, circlets, brooches) (20)
 
 - Ring of Regeneration
