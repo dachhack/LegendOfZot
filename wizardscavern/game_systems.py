@@ -3552,15 +3552,22 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
 
     if _cntl == "player_sprite":
         # Commands look like 'sp1', 'sp2', ... mapping into the round-8
-        # _CHARACTERS_POOL by 1-based index.
+        # _CHARACTERS_POOL by 1-based index. Routes back to whatever
+        # launched the picker — starting_shop for new characters, or
+        # gs.player_sprite_return_to for the "Change Portrait" flow.
         from .sprites.characters import _CHARACTERS_POOL
         choice = (cmd or '').lower().strip()
         if choice.startswith('sp') and choice[2:].isdigit():
             idx = int(choice[2:])
             if 1 <= idx <= len(_CHARACTERS_POOL):
                 player_character.sprite_pid = _CHARACTERS_POOL[idx - 1]
-                gs.prompt_cntl = "starting_shop"
-                handle_starting_shop(player_character, my_tower, "init")
+                return_to = gs.player_sprite_return_to
+                gs.player_sprite_return_to = None
+                if return_to:
+                    gs.prompt_cntl = return_to
+                else:
+                    gs.prompt_cntl = "starting_shop"
+                    handle_starting_shop(player_character, my_tower, "init")
                 return True
         add_log("Tap a portrait to continue.")
         return True
