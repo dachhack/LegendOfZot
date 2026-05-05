@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 129
+BUILD_NUMBER = 130
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Each room instance now picks its own variant — same Chest looks the same when you come back, but different Chests vary",
     "Rooms now render from the round-8 sprite pool — 27 slots x 3 variants each",
     "FIX: tomb-spawned undead now use the new sprites (UNDEAD SKELETON, DEATH KNIGHT, etc.)",
     "Monsters now render from the round-8 sprite pool — 124 monsters x 3 variants each",

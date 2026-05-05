@@ -6426,13 +6426,15 @@ def generate_monster_sprite_html(monster_name):
     )
     return html
 
-def _try_new_room_sprite(room_type, variant=None):
+def _try_new_room_sprite(room_type, variant=None, seed=None):
     """Render a room via the new round-8 pool, or return None to fall back.
 
     The pool already pre-renders every room sprite so we just look up the
     pid by (variant or room_type) and emit a tiny canvas referencing the
-    pool's webp data URI. Variant pick is deterministic so a given
-    room_type/variant pair always shows the same sprite.
+    pool's webp data URI. If `seed` is supplied (typically the room's
+    (x, y, z)) the variant is stable per room instance — every Chest in
+    the dungeon picks one of its 3 variants and keeps it. Without a seed
+    the room_type alone seeds the pick, so all Chests look identical.
     """
     try:
         from .sprites.room_pool import get_room_pids, get_variant_pids
@@ -6448,7 +6450,7 @@ def _try_new_room_sprite(room_type, variant=None):
     if not pids:
         return None
 
-    seed_key = (room_type, variant)
+    seed_key = seed if seed is not None else (room_type, variant)
     pid = pids[_stable_seed(seed_key) % len(pids)]
     img_b64 = get_image_b64(pid)
     if not img_b64:
@@ -6471,7 +6473,7 @@ def _try_new_room_sprite(room_type, variant=None):
     )
 
 
-def generate_room_sprite_html(room_type, variant=None):
+def generate_room_sprite_html(room_type, variant=None, seed=None):
     """
     Generate a sprite for a room interaction.
 
@@ -6481,9 +6483,13 @@ def generate_room_sprite_html(room_type, variant=None):
 
     room_type: single char room type ('C','A','P','L','V','W','T','N','D','U','E','G')
     variant: optional string for special variants ('legendary', 'ancient', 'master', etc.)
+    seed: optional hashable used to pick the variant. Typically the room's
+        (x, y, z) — same coords always render the same variant, so a given
+        Chest in the dungeon always looks the same. If omitted, all rooms
+        of the same type+variant look identical.
     Returns HTML string with a 48x48 canvas sprite.
     """
-    new_html = _try_new_room_sprite(room_type, variant)
+    new_html = _try_new_room_sprite(room_type, variant, seed=seed)
     if new_html is not None:
         return new_html
 

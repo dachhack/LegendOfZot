@@ -5346,7 +5346,7 @@ class WizardsCavernApp(toga.App):
             # Prepend tabs above the wares list so the player sees them first.
             vendor_html = vendor_tabs_html + vendor_html
 
-            vendor_sprite = generate_room_sprite_html('V')
+            vendor_sprite = generate_room_sprite_html('V', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             # Magic shop gets purple styling
             is_magic = gs.active_vendor.is_magic_shop if hasattr(gs.active_vendor, 'is_magic_shop') else False
@@ -6872,7 +6872,7 @@ class WizardsCavernApp(toga.App):
             current_floor_c = gs.my_tower.floors[gs.player_character.z]
             room_c = current_floor_c.grid[gs.player_character.y][gs.player_character.x]
             chest_variant = 'legendary' if room_c.properties.get('is_legendary') else None
-            chest_sprite = generate_room_sprite_html('C', variant=chest_variant)
+            chest_sprite = generate_room_sprite_html('C', variant=chest_variant, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             # Chest info box - simple and clean
             chest_html = f"""
@@ -7021,7 +7021,7 @@ class WizardsCavernApp(toga.App):
                     )
             action_cards_html += "</div>"
 
-            altar_sprite = generate_room_sprite_html('A')
+            altar_sprite = generate_room_sprite_html('A', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
@@ -7088,7 +7088,7 @@ class WizardsCavernApp(toga.App):
 
             # Pool sprite - check for ancient waters variant
             pool_variant = 'ancient' if room.properties.get('is_ancient') else None
-            pool_sprite = generate_room_sprite_html('P', variant=pool_variant)
+            pool_sprite = generate_room_sprite_html('P', variant=pool_variant, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             # Pool info box - simple and clean
             pool_html = f"""
@@ -7178,7 +7178,7 @@ class WizardsCavernApp(toga.App):
                 """
             
             # Warp info box + binary tap choice.
-            warp_sprite = generate_room_sprite_html('W')
+            warp_sprite = generate_room_sprite_html('W', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             warp_html = f"""
                 <div style="
                             border: 2px solid #555;
@@ -7241,7 +7241,7 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             
             # Stairs info box
-            stairs_sprite = generate_room_sprite_html('U')
+            stairs_sprite = generate_room_sprite_html('U', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             stairs_html = f"""
                 <div style="
                             border: 2px solid #555;
@@ -7307,7 +7307,7 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             
             # Stairs info box
-            stairs_down_sprite = generate_room_sprite_html('D')
+            stairs_down_sprite = generate_room_sprite_html('D', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             stairs_html = f"""
                 <div style="
                             border: 2px solid #555;
@@ -7382,7 +7382,7 @@ class WizardsCavernApp(toga.App):
 
             # Library sprite - check for codex variant
             lib_variant = 'codex' if current_room.properties.get('has_codex') else None
-            library_sprite = generate_room_sprite_html('L', variant=lib_variant)
+            library_sprite = generate_room_sprite_html('L', variant=lib_variant, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             # Library body — tappable Rummage card when unsearched,
             # muted info pill once searched.
@@ -7471,7 +7471,7 @@ class WizardsCavernApp(toga.App):
             # Check if master dungeon variant
             room_d = floor.grid[gs.player_character.y][gs.player_character.x]
             dng_variant = 'master' if room_d.properties.get('is_master') else None
-            dungeon_sprite = generate_room_sprite_html('N', variant=dng_variant)
+            dungeon_sprite = generate_room_sprite_html('N', variant=dng_variant, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             dungeon_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
@@ -7579,7 +7579,7 @@ class WizardsCavernApp(toga.App):
             # Get tomb variant
             room_t = floor.grid[gs.player_character.y][gs.player_character.x]
             tomb_variant = 'cursed' if room_t.properties.get('is_cursed') else None
-            tomb_sprite = generate_room_sprite_html('T', variant=tomb_variant)
+            tomb_sprite = generate_room_sprite_html('T', variant=tomb_variant, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             # Build tomb body — binary choice (raid vs pay respects) when
             # unplundered, muted info pill once already looted.
@@ -7645,7 +7645,7 @@ class WizardsCavernApp(toga.App):
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             already_harvested = coords in gs.harvested_gardens
             
-            garden_sprite = generate_room_sprite_html('G')
+            garden_sprite = generate_room_sprite_html('G', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             if already_harvested:
                 garden_body = "<div class='roominfo'>Already Harvested &mdash; the garden lies barren.</div>"
@@ -7698,7 +7698,7 @@ class WizardsCavernApp(toga.App):
             # Get turns remaining
             turns_left = gs.ephemeral_gardens.get(gs.player_character.z, {}).get('turns_remaining', '?')
 
-            fey_sprite = generate_room_sprite_html('G', variant='fey_garden')
+            fey_sprite = generate_room_sprite_html('G', variant='fey_garden', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             fey_html = f"""
                         <div style="border: 2px solid #555; border-radius: 5px; padding: 15px;">
@@ -7761,7 +7761,7 @@ class WizardsCavernApp(toga.App):
             oracle_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
-                        <div style="flex-shrink:0;">{generate_room_sprite_html('O')}</div>
+                        <div style="flex-shrink:0;">{generate_room_sprite_html('O', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))}</div>
                         <div style="color: #DDD; font-size: 12px;">
                             A mystical mirror stands before you, its silvered surface rippling with arcane energy. Swirling mists dance within, showing glimpses of your destiny.
                         </div>
@@ -7856,7 +7856,7 @@ class WizardsCavernApp(toga.App):
                 a_reforgeable)
             smith_cards += "</div>"
 
-            smith_sprite = generate_room_sprite_html('B')
+            smith_sprite = generate_room_sprite_html('B', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             smith_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
@@ -7892,7 +7892,7 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
             room = floor.grid[gs.player_character.y][gs.player_character.x]
             used = room.properties.get('shrine_used', False)
-            shrine_sprite = generate_room_sprite_html('F')
+            shrine_sprite = generate_room_sprite_html('F', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             if used:
                 shrine_body = (
@@ -8024,7 +8024,7 @@ class WizardsCavernApp(toga.App):
                 )
                 alch_body = alch_js + picker_html
 
-            alch_sprite = generate_room_sprite_html('Q')
+            alch_sprite = generate_room_sprite_html('Q', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             alch_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
@@ -8111,7 +8111,7 @@ class WizardsCavernApp(toga.App):
                     f"</div>"
                 )
 
-            war_sprite = generate_room_sprite_html('K')
+            war_sprite = generate_room_sprite_html('K', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             war_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
@@ -8223,7 +8223,7 @@ class WizardsCavernApp(toga.App):
             trophy_count = sum(getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
             trophy_val = sum(t.value * getattr(t,'count',1) for t in gs.player_character.inventory.items if isinstance(t, Trophy))
 
-            tax_sprite = generate_room_sprite_html('X')
+            tax_sprite = generate_room_sprite_html('X', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             tax_title = "BUG TAXIDERMIST" if is_bug_tax else "TAXIDERMIST"
             tax_html = f"""
                 <div style='border:2px solid #555; border-radius:3px; padding:12px;'>
@@ -8387,7 +8387,7 @@ class WizardsCavernApp(toga.App):
             guess_count = len(gs.zotle_puzzle['guesses']) if gs.zotle_puzzle else 0
             
             # Dialog/instructions in the room box
-            zotle_sprite = generate_room_sprite_html('Z')
+            zotle_sprite = generate_room_sprite_html('Z', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             dialog_html = f"""
                 <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
                     <div style="flex-shrink:0;">{zotle_sprite}</div>
@@ -8497,7 +8497,7 @@ class WizardsCavernApp(toga.App):
             # Library sprite
             current_room = floor.grid[gs.player_character.y][gs.player_character.x]
             lib_variant = 'codex' if current_room.properties.get('has_codex') else None
-            library_sprite = generate_room_sprite_html('L', variant=lib_variant)
+            library_sprite = generate_room_sprite_html('L', variant=lib_variant, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             # Spell info line
             spell_info = ""
