@@ -6072,6 +6072,55 @@ def _strip_evo_prefix(name):
     return name
 
 
+def _resolve_new_monster_key(monster_name, cat_map):
+    """Match a (potentially decorated) monster name against the new sprite
+    map. Mirrors the legacy resolver: tries the name as-is, strips
+    evolution prefixes, normalises whitespace, then title-cases each word
+    and tries that, finally tries the last word title-cased.
+
+    Returns the matched key in cat_map, or None.
+    """
+    if monster_name in cat_map:
+        return monster_name
+
+    # Try with evolution prefix stripped (Hardened/Savage/Dread/Mythic).
+    stripped_evo = _strip_evo_prefix(monster_name)
+    if stripped_evo in cat_map:
+        return stripped_evo
+
+    # Normalise leading garbage like " UNDEAD SKELETON" or "~~~ DIVINE AVATAR".
+    stripped = monster_name.strip().lstrip('~').strip()
+    if stripped in cat_map:
+        return stripped
+
+    parts = stripped.split()
+    if not parts:
+        return None
+
+    # Multi-word trailing-tail match (longest first). Catches cases like
+    # " UNDEAD DEATH KNIGHT" -> "Death Knight" and "WANDERING GHOST" matches.
+    # Tries title case ("Death Knight"), upper case ("DEATH KNIGHT"), and
+    # the raw stripped form, so legendaries like "DEATH KNIGHT" hit.
+    for length in range(len(parts), 0, -1):
+        tail = parts[-length:]
+        for variant in (
+            ' '.join(w.title() for w in tail),
+            ' '.join(w.upper() for w in tail),
+            ' '.join(tail),
+        ):
+            if variant in cat_map:
+                return variant
+
+    # Single-word last-resort title match (covers single-word monsters
+    # already, but kept for clarity).
+    for word in parts:
+        word_title = word.title()
+        if word_title in cat_map:
+            return word_title
+
+    return None
+
+
 def _try_new_monster_sprite(monster_name):
     """Render via the new round-8 system, or return None if monster_name
     isn't in the new map (caller should fall back to the legacy path).
@@ -6083,20 +6132,13 @@ def _try_new_monster_sprite(monster_name):
         return None
 
     cat_map = _msprites._MONSTERS_MAP
-
-    # Try as-is, then with evolution prefix stripped.
-    base_name = monster_name
-    if monster_name not in cat_map:
-        stripped = _strip_evo_prefix(monster_name)
-        if stripped in cat_map:
-            base_name = stripped
-        else:
-            # Not covered by the new map yet — fall back.
-            return None
+    base_name = _resolve_new_monster_key(monster_name, cat_map)
+    if base_name is None:
+        return None
 
     # Same monster type uses the same variant for now (deterministic by
     # name). Per-instance variety can come later by passing instance ids.
-    variant = get_named_variant(cat_map, base_name, seed=monster_name)
+    variant = get_named_variant(cat_map, base_name, seed=base_name)
     if variant is None:
         return None
     pid, _vi = variant

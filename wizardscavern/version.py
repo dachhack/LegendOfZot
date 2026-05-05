@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 127
+BUILD_NUMBER = 128
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "FIX: tomb-spawned undead now use the new sprites (UNDEAD SKELETON, DEATH KNIGHT, etc.)",
     "Monsters now render from the round-8 sprite pool — 124 monsters x 3 variants each",
     "Reverted prior sprite work — fresh approach coming",
     "FIX: Character creation (race + gender) now has tappable choice cards",
