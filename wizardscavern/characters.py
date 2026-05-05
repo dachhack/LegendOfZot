@@ -447,7 +447,16 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
         # Get display name (cryptic if unidentified)
         display_name = _get_item_display_name(item, for_vendor=for_vendor) if not is_identified else item.name
 
-        item_str = f"{display_name}"
+        # Per-game-shuffled sprite icon, NetHack-style. Same cryptic
+        # appearance always renders the same bottle within a game.
+        try:
+            from .sprites.identifiables import get_cryptic_sprite_pid, render_inline_item_sprite
+            sprite_html = render_inline_item_sprite(
+                get_cryptic_sprite_pid(item, 'potions'), size=24,
+            )
+        except Exception:
+            sprite_html = ''
+        item_str = f"{sprite_html}{display_name}"
         count = getattr(item, 'count', 1)
         if count > 1:
             item_str += f" (x{count})"
@@ -459,7 +468,14 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
         # Get display name (cryptic if unidentified)
         display_name = _get_item_display_name(item, for_vendor=for_vendor) if not is_identified else item.name
 
-        item_str = f"{display_name}"
+        try:
+            from .sprites.identifiables import get_cryptic_sprite_pid, render_inline_item_sprite
+            sprite_html = render_inline_item_sprite(
+                get_cryptic_sprite_pid(item, 'scrolls'), size=24,
+            )
+        except Exception:
+            sprite_html = ''
+        item_str = f"{sprite_html}{display_name}"
         count = getattr(item, 'count', 1)
         if count > 1:
             item_str += f" (x{count})"
@@ -525,8 +541,16 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
         # Get display name (cryptic if unidentified)
         display_name = _get_item_display_name(item, for_vendor=for_vendor) if not is_identified else item.name
 
+        try:
+            from .sprites.identifiables import get_cryptic_sprite_pid, render_inline_item_sprite
+            sprite_html = render_inline_item_sprite(
+                get_cryptic_sprite_pid(item, 'spells'), size=24,
+            )
+        except Exception:
+            sprite_html = ''
+
         # Spells are blue to distinguish them
-        item_str = f"<span style='color: #42A5F5;'>{display_name}</span>"
+        item_str = f"{sprite_html}<span style='color: #42A5F5;'>{display_name}</span>"
 
         # Only show details if identified
         if is_identified:
