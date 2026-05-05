@@ -6650,21 +6650,24 @@ def generate_room_sprite_html(room_type, variant=None, seed=None):
 
 
 
-def _try_new_player_sprite(seed):
+def _try_new_player_sprite(seed=None, pid=None):
     """Render a player avatar via the round-8 characters pool.
 
-    Returns HTML or None if the pool is empty / disabled.
+    If `pid` is given (the player picked at character creation), use it
+    directly. Otherwise pick deterministically from the pool using `seed`.
+    Returns HTML or None if the pool is empty / the pid is missing.
     """
     try:
         from .sprites import characters as _csprites
         from .sprites import get_generic_variant, get_image_b64
     except Exception:
         return None
-    if not _csprites._CHARACTERS_POOL:
-        return None
-    pid = get_generic_variant(_csprites._CHARACTERS_POOL, seed=seed)
-    if not pid:
-        return None
+    if pid is None:
+        if not _csprites._CHARACTERS_POOL:
+            return None
+        pid = get_generic_variant(_csprites._CHARACTERS_POOL, seed=seed)
+        if not pid:
+            return None
     img_b64 = get_image_b64(pid)
     if not img_b64:
         return None
@@ -6689,20 +6692,18 @@ def _try_new_player_sprite(seed):
     )
 
 
-def generate_player_sprite_html(race, armor_state='none', seed=None):
+def generate_player_sprite_html(race, armor_state='none', seed=None, sprite_pid=None):
     """
     Generate a player character sprite.
 
-    If `seed` is provided, picks one of the 73 character avatars from the
-    round-8 pool — same seed always renders the same avatar. Typically the
-    seed is a tuple of (race, gender, character_name) so each character a
-    player creates gets a unique-ish look that stays stable.
-
-    If `seed` is None, falls back to the legacy Player1 16x16 sheet keyed
-    by (race, armor_state).
+    If `sprite_pid` is given, render that exact avatar from the round-8
+    characters pool. Otherwise, if `seed` is provided, pick one of the 73
+    avatars deterministically from the seed (typically race+gender+name).
+    If neither is provided, fall back to the legacy Player1 16x16 sheet
+    keyed by (race, armor_state).
     """
-    if seed is not None:
-        new_html = _try_new_player_sprite(seed)
+    if sprite_pid is not None or seed is not None:
+        new_html = _try_new_player_sprite(seed=seed, pid=sprite_pid)
         if new_html is not None:
             return new_html
 
