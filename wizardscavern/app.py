@@ -8905,6 +8905,18 @@ class WizardsCavernApp(toga.App):
             if gs.achievement_notification_timer > 2:
                 gs.newly_unlocked_achievements.clear()
                 gs.achievement_notification_timer = 0
+
+        # Loot toasts overlay — fixed-position floating banners for items
+        # the player just acquired. Empty when the queue is empty / all
+        # toasts have expired.
+        try:
+            from .sprites.loot_toast import render_loot_toasts_html
+            toast_html = render_loot_toasts_html()
+        except Exception:
+            toast_html = ''
+        if toast_html:
+            html_code = toast_html + html_code
+
         return html_code
     
     def wrap_html(self, content, log_lines=[]):
@@ -8977,6 +8989,46 @@ class WizardsCavernApp(toga.App):
                    animations from showing above sprites. */
                 #content-area {{
                     overflow-x: hidden;
+                }}
+
+                /* Loot toast popups — floating banners at top-right that
+                   announce items the player just acquired. */
+                #loot-toasts {{
+                    position: fixed;
+                    top: 10px;
+                    right: 10px;
+                    z-index: 9999;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    pointer-events: none;
+                    max-width: 280px;
+                }}
+                .loot-toast {{
+                    display: flex;
+                    align-items: center;
+                    gap: 8px;
+                    background: rgba(20, 20, 20, 0.94);
+                    border: 1px solid #FFD700;
+                    border-radius: 5px;
+                    padding: 6px 10px;
+                    font-family: monospace;
+                    color: #FFD700;
+                    font-size: 12px;
+                    line-height: 1.2;
+                    box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+                    animation: lootFade 4s linear forwards;
+                    max-width: 100% !important;
+                }}
+                .loot-toast-text {{
+                    flex: 1;
+                    word-break: break-word;
+                }}
+                @keyframes lootFade {{
+                    0%   {{ opacity: 0; transform: translateX(20px); }}
+                    8%   {{ opacity: 1; transform: translateX(0); }}
+                    85%  {{ opacity: 1; transform: translateX(0); }}
+                    100% {{ opacity: 0; transform: translateX(20px); }}
                 }}
                 
                 /* Carve-out: sprite wrapper divs need overflow:visible for float animations */

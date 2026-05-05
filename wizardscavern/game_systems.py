@@ -1811,7 +1811,7 @@ def craft_potion(player_character, recipe_name):
         new_item.monster_source = consumed_meat_source
         new_item.name = f"{consumed_meat_source} {style}"
         new_item.description = f"A hand-stuffed {style.lower()} made from cured {consumed_meat_source} meat. {new_item.description}"
-    player_character.inventory.add_item(new_item)
+    player_character.inventory.add_item(new_item, notify=False)
     add_log(f"{COLOR_GREEN}* You crafted: {new_item.name}! *{COLOR_RESET}")
     add_log(f"{COLOR_CYAN}{new_item.description}{COLOR_RESET}")
 
@@ -3608,7 +3608,7 @@ def activate_playtest_mode(player_character):
         elemental_strength=['Fire', 'Ice', 'Lightning'],
         upgrade_limit=False
     )
-    player_character.inventory.add_item(playtest_weapon)
+    player_character.inventory.add_item(playtest_weapon, notify=False)
     player_character.equipped_weapon = playtest_weapon
 
     playtest_armor = Armor(
@@ -3621,7 +3621,7 @@ def activate_playtest_mode(player_character):
         elemental_strength=['Fire', 'Ice', 'Lightning'],
         upgrade_limit=False
     )
-    player_character.inventory.add_item(playtest_armor)
+    player_character.inventory.add_item(playtest_armor, notify=False)
     player_character.equipped_armor = playtest_armor
 
     # Add ALL weapons from templates
@@ -3638,7 +3638,7 @@ def activate_playtest_mode(player_character):
                 elemental_strength=list(weapon_template.elemental_strength) if weapon_template.elemental_strength else [],
                 upgrade_limit=weapon_template.upgrade_limit
             )
-            player_character.inventory.add_item(weapon_copy)
+            player_character.inventory.add_item(weapon_copy, notify=False)
         except Exception as e:
             add_log(f"{COLOR_RED}Error adding weapon: {e}{COLOR_RESET}")
 
@@ -3656,7 +3656,7 @@ def activate_playtest_mode(player_character):
                 elemental_strength=list(armor_template.elemental_strength) if armor_template.elemental_strength else [],
                 upgrade_limit=armor_template.upgrade_limit
             )
-            player_character.inventory.add_item(armor_copy)
+            player_character.inventory.add_item(armor_copy, notify=False)
         except Exception as e:
             add_log(f"{COLOR_RED}Error adding armor: {e}{COLOR_RESET}")
 
@@ -3677,7 +3677,7 @@ def activate_playtest_mode(player_character):
                 status_effect_type=spell_template.status_effect_type,
                 status_effect_magnitude=spell_template.status_effect_magnitude
             )
-            player_character.inventory.add_item(spell_copy)
+            player_character.inventory.add_item(spell_copy, notify=False)
             player_character.memorize_spell(spell_copy)
         except Exception as e:
             add_log(f"{COLOR_RED}Error adding spell: {e}{COLOR_RESET}")
@@ -3698,7 +3698,7 @@ def activate_playtest_mode(player_character):
                     duration=getattr(potion_template, 'duration', 0),
                     resistance_element=getattr(potion_template, 'resistance_element', None)
                 )
-                player_character.inventory.add_item(potion_copy)
+                player_character.inventory.add_item(potion_copy, notify=False)
         except Exception as e:
             add_log(f"{COLOR_RED}Error adding potion {potion_template.name}: {e}{COLOR_RESET}")
 
@@ -3712,7 +3712,7 @@ def activate_playtest_mode(player_character):
             value=120,
             level=2,
             scroll_type='mapping'
-        ))
+        , notify=False))
         player_character.inventory.add_item(Scroll(
             name="Scroll of Upgrade",
             description="Enhances equipment",
@@ -3720,7 +3720,7 @@ def activate_playtest_mode(player_character):
             value=100,
             level=2,
             scroll_type='upgrade'
-        ))
+        , notify=False))
         player_character.inventory.add_item(Scroll(
             name="Scroll of Teleportation",
             description="Teleport to random location",
@@ -3728,7 +3728,7 @@ def activate_playtest_mode(player_character):
             value=100,
             level=2,
             scroll_type='teleport'
-        ))
+        , notify=False))
 
     # Add lantern with lots of fuel
     lantern = Lantern(
@@ -3740,7 +3740,7 @@ def activate_playtest_mode(player_character):
         level=0,
         upgrade_level=5
     )
-    player_character.inventory.add_item(lantern)
+    player_character.inventory.add_item(lantern, notify=False)
 
     # Add lantern fuel
     for _ in range(20):
@@ -3750,7 +3750,7 @@ def activate_playtest_mode(player_character):
             value=5,
             level=0,
             fuel_restore_amount=50
-        ))
+        , notify=False))
 
     # Add ALL treasures (includes unique treasures and minor treasures)
     add_log(f"{COLOR_CYAN}Adding all treasures...{COLOR_RESET}")
@@ -3769,7 +3769,7 @@ def activate_playtest_mode(player_character):
                 passive_effect=getattr(treasure_template, 'passive_effect', ''),
                 benefit=getattr(treasure_template, 'benefit', {})
             )
-            player_character.inventory.add_item(treasure_copy)
+            player_character.inventory.add_item(treasure_copy, notify=False)
         except Exception as e:
             add_log(f"{COLOR_RED}Error adding treasure {treasure_template.name}: {e}{COLOR_RESET}")
 
@@ -3787,7 +3787,7 @@ def activate_playtest_mode(player_character):
                 elemental_strength=list(weapon_template.elemental_strength) if weapon_template.elemental_strength else [],
                 upgrade_limit=weapon_template.upgrade_limit
             )
-            player_character.inventory.add_item(weapon_copy)
+            player_character.inventory.add_item(weapon_copy, notify=False)
         except Exception as e:
             add_log(f"{COLOR_RED}Error adding unique weapon: {e}{COLOR_RESET}")
 
@@ -3805,7 +3805,7 @@ def activate_playtest_mode(player_character):
                 elemental_strength=list(armor_template.elemental_strength) if armor_template.elemental_strength else [],
                 upgrade_limit=armor_template.upgrade_limit
             )
-            player_character.inventory.add_item(armor_copy)
+            player_character.inventory.add_item(armor_copy, notify=False)
         except Exception as e:
             add_log(f"{COLOR_RED}Error adding unique armor: {e}{COLOR_RESET}")
 
@@ -3822,7 +3822,7 @@ def activate_playtest_mode(player_character):
         use_effect=use_zotle_teleporter,
         benefit={'special': 'Teleport to any coordinate in the dungeon'}
     )
-    player_character.inventory.add_item(teleporter)
+    player_character.inventory.add_item(teleporter, notify=False)
     # Mark puzzle as solved so it doesn't spawn
     if gs.zotle_puzzle:
         gs.zotle_puzzle['solved'] = True
