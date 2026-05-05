@@ -6426,13 +6426,67 @@ def generate_monster_sprite_html(monster_name):
     )
     return html
 
+def _try_new_room_sprite(room_type, variant=None):
+    """Render a room via the new round-8 pool, or return None to fall back.
+
+    The pool already pre-renders every room sprite so we just look up the
+    pid by (variant or room_type) and emit a tiny canvas referencing the
+    pool's webp data URI. Variant pick is deterministic so a given
+    room_type/variant pair always shows the same sprite.
+    """
+    try:
+        from .sprites.room_pool import get_room_pids, get_variant_pids
+        from .sprites import get_image_b64
+        from .sprites.pool import _stable_seed
+    except Exception:
+        return None
+
+    if variant:
+        pids = get_variant_pids(variant)
+    else:
+        pids = get_room_pids(room_type)
+    if not pids:
+        return None
+
+    seed_key = (room_type, variant)
+    pid = pids[_stable_seed(seed_key) % len(pids)]
+    img_b64 = get_image_b64(pid)
+    if not img_b64:
+        return None
+
+    safe_id = "rs_" + room_type + ("_" + variant if variant else "")
+    SIZE = 48
+    img_uri = "data:image/webp;base64," + img_b64
+    return (
+        f'<canvas id="{safe_id}" width="{SIZE}" height="{SIZE}" '
+        f'style="image-rendering:pixelated;image-rendering:crisp-edges;'
+        f'display:block;margin:2px auto;"></canvas>'
+        f'<script>(function(){{'
+        f'var c=document.getElementById("{safe_id}");if(!c)return;'
+        f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
+        f'var img=new Image();'
+        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});}};'
+        f'img.src="{img_uri}";'
+        f'}})()</script>'
+    )
+
+
 def generate_room_sprite_html(room_type, variant=None):
     """
-    Generate a sprite for a room interaction by cropping from sprite sheets.
+    Generate a sprite for a room interaction.
+
+    Tries the new round-8 sprite pool first (3 variants per slot, pre-rendered
+    96x96 webp). Falls back to the legacy sheet-cropping path for any room
+    code not yet covered by the new map.
+
     room_type: single char room type ('C','A','P','L','V','W','T','N','D','U','E','G')
     variant: optional string for special variants ('legendary', 'ancient', 'master', etc.)
     Returns HTML string with a 48x48 canvas sprite.
     """
+    new_html = _try_new_room_sprite(room_type, variant)
+    if new_html is not None:
+        return new_html
+
     # (sheet_key, col, row) for each room type
     _ROOM_MAP = {
         'C':  ('Chest0', 1, 0),    # Chest - dark chest
