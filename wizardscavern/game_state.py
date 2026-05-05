@@ -42,6 +42,12 @@ MAX_SAVE_SLOTS = 3
 log_lines = []
 prompt_cntl = "intro_story"
 previous_prompt_cntl = ""
+# When the portrait picker (player_sprite mode) is launched from somewhere
+# other than character creation (e.g. the "Change Portrait" card on the
+# Character Stats screen), set this to the prompt_cntl to return to after
+# the player taps a portrait. None means the new-character path: launch
+# the starting shop.
+player_sprite_return_to = None
 game_should_quit = False
 lets_go = False
 html_cache = ""

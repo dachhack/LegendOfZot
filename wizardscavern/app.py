@@ -4281,6 +4281,10 @@ class WizardsCavernApp(toga.App):
             if cmd == 'x':
                 gs.prompt_cntl = "inventory"
                 handle_inventory_menu(gs.player_character, gs.my_tower, "init")
+            elif cmd == 'cp':
+                # Launch the portrait picker, then return to stats screen.
+                gs.player_sprite_return_to = "character_stats_mode"
+                gs.prompt_cntl = "player_sprite"
             # Invalid commands are silently ignored - prompt is in placeholder
         elif gs.prompt_cntl == "chest_mode":
             process_chest_action(gs.player_character, gs.my_tower, cmd)
@@ -5836,13 +5840,18 @@ class WizardsCavernApp(toga.App):
 
                     <div style="border: 1px solid #444; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{stats_html}</div>
 
+                    <div class='taprow altar-act' data-zcmd='cp'
+                         onclick="window.__zotTap('cp', this)">
+                        <div class='aname'>Change Portrait</div>
+                        <div class='ameta'>Pick a new avatar from the gallery</div>
+                    </div>
                     <div class='taprow cancel' data-zcmd='x'
                          onclick="window.__zotTap('x', this)">
                         <span class='tapnum'>&times;</span>Back to Inventory
                     </div>
 </div>
                 """
-            current_commands_text = "Tap Back | x = back to inventory"
+            current_commands_text = "Tap Back | cp = change portrait | x = inventory"
 
         elif gs.prompt_cntl == "crafting_mode":
             # CRAFTING MENU VIEW - Full HTML display
