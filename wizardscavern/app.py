@@ -6370,7 +6370,7 @@ class WizardsCavernApp(toga.App):
             # Map is hidden to give spell list room on mobile screens.
 
             # Generate pixel art sprite for the monster
-            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name)
+            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
 
             # Compact Monster Info (same as combat_mode compact style)
@@ -6500,7 +6500,7 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Generate pixel art sprite for the monster
-            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name)
+            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
 
             # Compact Monster Info
@@ -6621,7 +6621,7 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             victory_name = gs.victory_monster_name or "Monster"
-            monster_sprite_html = generate_monster_sprite_html(victory_name)
+            monster_sprite_html = generate_monster_sprite_html(victory_name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             # Show last damage dealt
             dmg_text = ""
@@ -6705,7 +6705,7 @@ class WizardsCavernApp(toga.App):
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
 
             # Generate pixel art sprite for the monster
-            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name)
+            monster_sprite_html = generate_monster_sprite_html(gs.active_monster.name, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             evo_border_color, evo_tier_label = get_evolution_tier_style(gs.active_monster)
 
             # Monster info (still there, but you're fleeing)

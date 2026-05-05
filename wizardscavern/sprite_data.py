@@ -6121,9 +6121,13 @@ def _resolve_new_monster_key(monster_name, cat_map):
     return None
 
 
-def _try_new_monster_sprite(monster_name):
+def _try_new_monster_sprite(monster_name, seed=None):
     """Render via the new round-8 system, or return None if monster_name
     isn't in the new map (caller should fall back to the legacy path).
+
+    `seed` chooses among the variants (typically the monster's spawn
+    coords). If None, the resolved base name is used so all monsters of
+    the same type share a sprite.
     """
     try:
         from .sprites import monsters as _msprites
@@ -6136,9 +6140,8 @@ def _try_new_monster_sprite(monster_name):
     if base_name is None:
         return None
 
-    # Same monster type uses the same variant for now (deterministic by
-    # name). Per-instance variety can come later by passing instance ids.
-    variant = get_named_variant(cat_map, base_name, seed=base_name)
+    variant_seed = seed if seed is not None else base_name
+    variant = get_named_variant(cat_map, base_name, seed=variant_seed)
     if variant is None:
         return None
     pid, _vi = variant
@@ -6167,7 +6170,7 @@ def _try_new_monster_sprite(monster_name):
     )
 
 
-def generate_monster_sprite_html(monster_name):
+def generate_monster_sprite_html(monster_name, seed=None):
     """
     Generate a sprite for a monster.
 
@@ -6175,8 +6178,12 @@ def generate_monster_sprite_html(monster_name):
     wizardscavern.sprites.monsters._MONSTERS_MAP rendered from the
     canonical pool). Falls back to the legacy sheet-based system for
     monsters not yet covered by the new map.
+
+    `seed` is hashed to pick among the 3 variants for the monster's name.
+    Typically the monster's spawn coords, so different Goblin instances
+    look different but each one stays the same across re-renders.
     """
-    new_html = _try_new_monster_sprite(monster_name)
+    new_html = _try_new_monster_sprite(monster_name, seed=seed)
     if new_html is not None:
         return new_html
 
