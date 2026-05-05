@@ -1,0 +1,66 @@
+{
+  "category": "lanterns",
+  "version": 1,
+  "generated_at": "2026-05-02",
+  "chosen_count": 4,
+  "reserve_count": 0,
+  "total_count": 4,
+  "source_pickers": [
+    "migrate-generic-to-reserve (session 3.5)"
+  ],
+  "chosen": [
+    {
+      "pid": "CR0108",
+      "sheet": "CR1",
+      "src_label": "r09c00",
+      "source_row": 9,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Lantern",
+        "category": "lantern",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "CR0114",
+      "sheet": "CR1",
+      "src_label": "r09c06",
+      "source_row": 9,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Lantern",
+        "category": "lantern",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "CR0116",
+      "sheet": "CR1",
+      "src_label": "r09c08",
+      "source_row": 9,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Lantern",
+        "category": "lantern",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "LF0080",
+      "sheet": "LF1",
+      "src_label": "r06c07",
+      "source_row": 6,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Lantern Fuel",
+        "category": "lantern",
+        "variant_index": 0
+      }
+    }
+  ],
+  "reserve": []
+}

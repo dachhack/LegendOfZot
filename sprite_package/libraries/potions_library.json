@@ -1,0 +1,1184 @@
+{
+  "category": "potions",
+  "version": 2,
+  "generated_at": "2026-05-02",
+  "chosen_count": 87,
+  "reserve_count": 6,
+  "total_count": 93,
+  "source_pickers": [
+    "potion_picker.html",
+    "potions_picks.json"
+  ],
+  "chosen": [
+    {
+      "pid": "P031",
+      "sheet": "",
+      "src_label": "NEW2 C9",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 C9",
+          "NEW2 C9",
+          "NEW4 C9"
+        ]
+      }
+    },
+    {
+      "pid": "P034",
+      "sheet": "",
+      "src_label": "NEW4 C12",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 4,
+        "all_labels": [
+          "NEW1 C12",
+          "NEW2 C12",
+          "NEW2 E10",
+          "NEW4 C12"
+        ]
+      }
+    },
+    {
+      "pid": "P037",
+      "sheet": "",
+      "src_label": "NEW2 D3",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 D3",
+          "NEW2 D3",
+          "NEW4 D3"
+        ]
+      }
+    },
+    {
+      "pid": "P041",
+      "sheet": "",
+      "src_label": "NEW4 D7",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW1 D7",
+          "NEW4 D7"
+        ]
+      }
+    },
+    {
+      "pid": "P044",
+      "sheet": "",
+      "src_label": "NEW4 D10",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 5,
+        "all_labels": [
+          "NEW1 D10",
+          "NEW1 D11",
+          "NEW2 D10",
+          "NEW2 D11",
+          "NEW4 D10"
+        ]
+      }
+    },
+    {
+      "pid": "P050",
+      "sheet": "",
+      "src_label": "NEW2 E8",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW1 E8",
+          "NEW2 E8"
+        ]
+      }
+    },
+    {
+      "pid": "P052",
+      "sheet": "",
+      "src_label": "NEW4 E10",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 7,
+        "all_labels": [
+          "NEW1 E10",
+          "NEW1 F9",
+          "NEW1 G9",
+          "NEW2 F9",
+          "NEW4 E10",
+          "NEW4 F9",
+          "NEW4 G9"
+        ]
+      }
+    },
+    {
+      "pid": "P053",
+      "sheet": "",
+      "src_label": "NEW4 E11",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 E11",
+          "NEW2 E11",
+          "NEW4 E11"
+        ]
+      }
+    },
+    {
+      "pid": "P054",
+      "sheet": "",
+      "src_label": "NEW4 E12",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 6,
+        "all_labels": [
+          "NEW1 E12",
+          "NEW1 F12",
+          "NEW2 E12",
+          "NEW2 F12",
+          "NEW4 E12",
+          "NEW4 F12"
+        ]
+      }
+    },
+    {
+      "pid": "P056",
+      "sheet": "",
+      "src_label": "NEW2 H2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 4,
+        "all_labels": [
+          "NEW1 F2",
+          "NEW2 F2",
+          "NEW2 H2",
+          "NEW4 F2"
+        ]
+      }
+    },
+    {
+      "pid": "P059",
+      "sheet": "",
+      "src_label": "NEW4 F6",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 F6",
+          "NEW2 F6",
+          "NEW4 F6"
+        ]
+      }
+    },
+    {
+      "pid": "P060",
+      "sheet": "",
+      "src_label": "NEW2 F7",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 F7",
+          "NEW2 F7",
+          "NEW4 F7"
+        ]
+      }
+    },
+    {
+      "pid": "P061",
+      "sheet": "",
+      "src_label": "NEW2 C4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 F10",
+          "NEW2 C4",
+          "NEW4 F10"
+        ]
+      }
+    },
+    {
+      "pid": "P062",
+      "sheet": "",
+      "src_label": "NEW4 F11",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 F11",
+          "NEW2 F11",
+          "NEW4 F11"
+        ]
+      }
+    },
+    {
+      "pid": "P063",
+      "sheet": "",
+      "src_label": "NEW2 G1",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 G1",
+          "NEW2 G1",
+          "NEW4 G1"
+        ]
+      }
+    },
+    {
+      "pid": "P064",
+      "sheet": "",
+      "src_label": "NEW4 G2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 G2",
+          "NEW2 G2",
+          "NEW4 G2"
+        ]
+      }
+    },
+    {
+      "pid": "P065",
+      "sheet": "",
+      "src_label": "NEW2 G3",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 G3",
+          "NEW2 G3",
+          "NEW4 G3"
+        ]
+      }
+    },
+    {
+      "pid": "P066",
+      "sheet": "",
+      "src_label": "NEW4 G4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 G4",
+          "NEW2 G4",
+          "NEW4 G4"
+        ]
+      }
+    },
+    {
+      "pid": "P067",
+      "sheet": "",
+      "src_label": "NEW4 G5",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 G5",
+          "NEW2 G5",
+          "NEW4 G5"
+        ]
+      }
+    },
+    {
+      "pid": "P068",
+      "sheet": "",
+      "src_label": "NEW4 G6",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 G6",
+          "NEW2 G6",
+          "NEW4 G6"
+        ]
+      }
+    },
+    {
+      "pid": "P069",
+      "sheet": "",
+      "src_label": "NEW4 G7",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 G7",
+          "NEW2 G7",
+          "NEW4 G7"
+        ]
+      }
+    },
+    {
+      "pid": "P070",
+      "sheet": "",
+      "src_label": "NEW4 G8",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 G8",
+          "NEW2 G8",
+          "NEW4 G8"
+        ]
+      }
+    },
+    {
+      "pid": "P074",
+      "sheet": "",
+      "src_label": "NEW4 H1",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW1 H1",
+          "NEW4 H1"
+        ]
+      }
+    },
+    {
+      "pid": "P075",
+      "sheet": "",
+      "src_label": "NEW4 H2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW1 H2",
+          "NEW4 H2"
+        ]
+      }
+    },
+    {
+      "pid": "P076",
+      "sheet": "",
+      "src_label": "NEW2 H3",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 H3",
+          "NEW2 H3",
+          "NEW4 H3"
+        ]
+      }
+    },
+    {
+      "pid": "P077",
+      "sheet": "",
+      "src_label": "NEW2 H5",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 H5",
+          "NEW2 H5",
+          "NEW4 H5"
+        ]
+      }
+    },
+    {
+      "pid": "P080",
+      "sheet": "",
+      "src_label": "NEW4 H8",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW1 H8",
+          "NEW4 H8"
+        ]
+      }
+    },
+    {
+      "pid": "P081",
+      "sheet": "",
+      "src_label": "NEW2 H9",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW1 H9",
+          "NEW2 H9",
+          "NEW4 H9"
+        ]
+      }
+    },
+    {
+      "pid": "P093",
+      "sheet": "",
+      "src_label": "NEW2 A9",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW2 A9"
+        ]
+      }
+    },
+    {
+      "pid": "P097",
+      "sheet": "",
+      "src_label": "NEW2 B3",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW2 B3"
+        ]
+      }
+    },
+    {
+      "pid": "P098",
+      "sheet": "",
+      "src_label": "NEW2 B4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW2 B4"
+        ]
+      }
+    },
+    {
+      "pid": "P099",
+      "sheet": "",
+      "src_label": "NEW2 B5",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW2 B5"
+        ]
+      }
+    },
+    {
+      "pid": "P102",
+      "sheet": "",
+      "src_label": "NEW2 B8",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW2 B8",
+          "NEW2 B9",
+          "NEW2 B10"
+        ]
+      }
+    },
+    {
+      "pid": "P103",
+      "sheet": "",
+      "src_label": "NEW2 B11",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW2 B11"
+        ]
+      }
+    },
+    {
+      "pid": "P107",
+      "sheet": "",
+      "src_label": "NEW4 C6",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW2 C6",
+          "NEW4 C6"
+        ]
+      }
+    },
+    {
+      "pid": "P108",
+      "sheet": "",
+      "src_label": "NEW4 C7",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW2 C7",
+          "NEW4 C7"
+        ]
+      }
+    },
+    {
+      "pid": "P111",
+      "sheet": "",
+      "src_label": "NEW4 D4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 3,
+        "all_labels": [
+          "NEW2 D4",
+          "NEW2 E4",
+          "NEW4 D4"
+        ]
+      }
+    },
+    {
+      "pid": "P114",
+      "sheet": "",
+      "src_label": "NEW4 D12",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW2 D12",
+          "NEW4 D12"
+        ]
+      }
+    },
+    {
+      "pid": "P115",
+      "sheet": "",
+      "src_label": "NEW2 F5",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW2 F5"
+        ]
+      }
+    },
+    {
+      "pid": "P118",
+      "sheet": "",
+      "src_label": "NEW2 G10",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW2 G10"
+        ]
+      }
+    },
+    {
+      "pid": "P119",
+      "sheet": "",
+      "src_label": "NEW2 H4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW2 H4",
+          "NEW4 H4"
+        ]
+      }
+    },
+    {
+      "pid": "P120",
+      "sheet": "",
+      "src_label": "NEW3 A1",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 A1"
+        ]
+      }
+    },
+    {
+      "pid": "P121",
+      "sheet": "",
+      "src_label": "NEW3 A2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 A2"
+        ]
+      }
+    },
+    {
+      "pid": "P123",
+      "sheet": "",
+      "src_label": "NEW3 A4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 A4"
+        ]
+      }
+    },
+    {
+      "pid": "P124",
+      "sheet": "",
+      "src_label": "NEW3 B1",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 B1"
+        ]
+      }
+    },
+    {
+      "pid": "P125",
+      "sheet": "",
+      "src_label": "NEW3 B2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 B2"
+        ]
+      }
+    },
+    {
+      "pid": "P126",
+      "sheet": "",
+      "src_label": "NEW3 B3",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 B3"
+        ]
+      }
+    },
+    {
+      "pid": "P127",
+      "sheet": "",
+      "src_label": "NEW3 B4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 B4"
+        ]
+      }
+    },
+    {
+      "pid": "P128",
+      "sheet": "",
+      "src_label": "NEW3 C1",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 C1"
+        ]
+      }
+    },
+    {
+      "pid": "P131",
+      "sheet": "",
+      "src_label": "NEW3 D2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 D2"
+        ]
+      }
+    },
+    {
+      "pid": "P132",
+      "sheet": "",
+      "src_label": "NEW3 D3",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW3 D3"
+        ]
+      }
+    },
+    {
+      "pid": "P134",
+      "sheet": "",
+      "src_label": "NEW4 A1",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 A1"
+        ]
+      }
+    },
+    {
+      "pid": "P140",
+      "sheet": "",
+      "src_label": "NEW4 A8",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "NEW4 A8",
+          "NEW4 B8"
+        ]
+      }
+    },
+    {
+      "pid": "P142",
+      "sheet": "",
+      "src_label": "NEW4 A10",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 A10"
+        ]
+      }
+    },
+    {
+      "pid": "P143",
+      "sheet": "",
+      "src_label": "NEW4 A11",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 A11"
+        ]
+      }
+    },
+    {
+      "pid": "P144",
+      "sheet": "",
+      "src_label": "NEW4 A12",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 A12"
+        ]
+      }
+    },
+    {
+      "pid": "P145",
+      "sheet": "",
+      "src_label": "NEW4 B1",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 B1"
+        ]
+      }
+    },
+    {
+      "pid": "P147",
+      "sheet": "",
+      "src_label": "NEW4 B3",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 B3"
+        ]
+      }
+    },
+    {
+      "pid": "P148",
+      "sheet": "",
+      "src_label": "NEW4 B4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 B4"
+        ]
+      }
+    },
+    {
+      "pid": "P149",
+      "sheet": "",
+      "src_label": "NEW4 B5",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 B5"
+        ]
+      }
+    },
+    {
+      "pid": "P150",
+      "sheet": "",
+      "src_label": "NEW4 B6",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 B6"
+        ]
+      }
+    },
+    {
+      "pid": "P151",
+      "sheet": "",
+      "src_label": "NEW4 B7",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 B7"
+        ]
+      }
+    },
+    {
+      "pid": "P152",
+      "sheet": "",
+      "src_label": "NEW4 B9",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 B9"
+        ]
+      }
+    },
+    {
+      "pid": "P153",
+      "sheet": "",
+      "src_label": "NEW4 B10",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 B10"
+        ]
+      }
+    },
+    {
+      "pid": "P154",
+      "sheet": "",
+      "src_label": "NEW4 B11",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 B11"
+        ]
+      }
+    },
+    {
+      "pid": "P155",
+      "sheet": "",
+      "src_label": "NEW4 C1",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 C1"
+        ]
+      }
+    },
+    {
+      "pid": "P156",
+      "sheet": "",
+      "src_label": "NEW4 C2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 C2"
+        ]
+      }
+    },
+    {
+      "pid": "P157",
+      "sheet": "",
+      "src_label": "NEW4 C5",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 C5"
+        ]
+      }
+    },
+    {
+      "pid": "P158",
+      "sheet": "",
+      "src_label": "NEW4 C11",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 C11"
+        ]
+      }
+    },
+    {
+      "pid": "P159",
+      "sheet": "",
+      "src_label": "NEW4 D1",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 D1"
+        ]
+      }
+    },
+    {
+      "pid": "P160",
+      "sheet": "",
+      "src_label": "NEW4 D2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 D2"
+        ]
+      }
+    },
+    {
+      "pid": "P161",
+      "sheet": "",
+      "src_label": "NEW4 D5",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 D5"
+        ]
+      }
+    },
+    {
+      "pid": "P162",
+      "sheet": "",
+      "src_label": "NEW4 D6",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 D6"
+        ]
+      }
+    },
+    {
+      "pid": "P163",
+      "sheet": "",
+      "src_label": "NEW4 D8",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 D8"
+        ]
+      }
+    },
+    {
+      "pid": "P165",
+      "sheet": "",
+      "src_label": "NEW4 D11",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 D11"
+        ]
+      }
+    },
+    {
+      "pid": "P167",
+      "sheet": "",
+      "src_label": "NEW4 E5",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 E5"
+        ]
+      }
+    },
+    {
+      "pid": "P168",
+      "sheet": "",
+      "src_label": "NEW4 E6",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 E6"
+        ]
+      }
+    },
+    {
+      "pid": "P169",
+      "sheet": "",
+      "src_label": "NEW4 E7",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 E7"
+        ]
+      }
+    },
+    {
+      "pid": "P170",
+      "sheet": "",
+      "src_label": "NEW4 E8",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 E8"
+        ]
+      }
+    },
+    {
+      "pid": "P171",
+      "sheet": "",
+      "src_label": "NEW4 F5",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NEW4 F5"
+        ]
+      }
+    },
+    {
+      "pid": "P172",
+      "sheet": "",
+      "src_label": "S5 E4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 7,
+        "all_labels": [
+          "S5 A1",
+          "S5 A2",
+          "S5 A3",
+          "S5 A4",
+          "S5 C1",
+          "S5 E4",
+          "S5 F3"
+        ]
+      }
+    },
+    {
+      "pid": "P174",
+      "sheet": "",
+      "src_label": "S5 C4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 4,
+        "all_labels": [
+          "S5 B4",
+          "S5 C4",
+          "S5 E1",
+          "S5 E2"
+        ]
+      }
+    },
+    {
+      "pid": "P175",
+      "sheet": "",
+      "src_label": "S5 D2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "S5 C2",
+          "S5 D2"
+        ]
+      }
+    },
+    {
+      "pid": "P176",
+      "sheet": "",
+      "src_label": "S5 F2",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "S5 D1",
+          "S5 F2"
+        ]
+      }
+    },
+    {
+      "pid": "P178",
+      "sheet": "",
+      "src_label": "S5 D4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "S5 D4"
+        ]
+      }
+    },
+    {
+      "pid": "P179",
+      "sheet": "",
+      "src_label": "S5 E3",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "S5 E3"
+        ]
+      }
+    },
+    {
+      "pid": "P183",
+      "sheet": "",
+      "src_label": "S5 G4",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "S5 G4"
+        ]
+      }
+    }
+  ],
+  "reserve": [
+    {
+      "pid": "P002",
+      "sheet": "",
+      "src_label": "NEW1 A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "P006",
+      "sheet": "",
+      "src_label": "NEW1 A7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "P013",
+      "sheet": "",
+      "src_label": "NEW1 B2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "P018",
+      "sheet": "",
+      "src_label": "NEW1 B7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "P021",
+      "sheet": "",
+      "src_label": "NEW1 B10",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "P104",
+      "sheet": "",
+      "src_label": "NEW2 B12",
+      "status": "reserve",
+      "marked": null
+    }
+  ]
+}

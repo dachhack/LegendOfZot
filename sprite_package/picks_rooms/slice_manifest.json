@@ -1,0 +1,814 @@
+{
+  "sprites": [
+    {
+      "rm_id": "RM0001",
+      "pid": "S8A_r01c04",
+      "sheet": "S8A",
+      "row": 1,
+      "col": 4,
+      "slots": [
+        "Q"
+      ]
+    },
+    {
+      "rm_id": "RM0002",
+      "pid": "S8A_r01c06",
+      "sheet": "S8A",
+      "row": 1,
+      "col": 6,
+      "slots": [
+        "L"
+      ]
+    },
+    {
+      "rm_id": "RM0003",
+      "pid": "S8A_r01c07",
+      "sheet": "S8A",
+      "row": 1,
+      "col": 7,
+      "slots": [
+        "Q"
+      ]
+    },
+    {
+      "rm_id": "RM0004",
+      "pid": "S8A_r02c06",
+      "sheet": "S8A",
+      "row": 2,
+      "col": 6,
+      "slots": [
+        "L"
+      ]
+    },
+    {
+      "rm_id": "RM0005",
+      "pid": "S8A_r02c07",
+      "sheet": "S8A",
+      "row": 2,
+      "col": 7,
+      "slots": [
+        "L"
+      ]
+    },
+    {
+      "rm_id": "RM0006",
+      "pid": "S8A_r03c08",
+      "sheet": "S8A",
+      "row": 3,
+      "col": 8,
+      "slots": [
+        "W"
+      ]
+    },
+    {
+      "rm_id": "RM0007",
+      "pid": "S8A_r03c10",
+      "sheet": "S8A",
+      "row": 3,
+      "col": 10,
+      "slots": [
+        "B"
+      ]
+    },
+    {
+      "rm_id": "RM0008",
+      "pid": "S8A_r03c11",
+      "sheet": "S8A",
+      "row": 3,
+      "col": 11,
+      "slots": [
+        "B"
+      ]
+    },
+    {
+      "rm_id": "RM0009",
+      "pid": "S8A_r03c14",
+      "sheet": "S8A",
+      "row": 3,
+      "col": 14,
+      "slots": [
+        "O"
+      ]
+    },
+    {
+      "rm_id": "RM0010",
+      "pid": "S8A_r05c10",
+      "sheet": "S8A",
+      "row": 5,
+      "col": 10,
+      "slots": [
+        "B"
+      ]
+    },
+    {
+      "rm_id": "RM0011",
+      "pid": "S8A_r10c05",
+      "sheet": "S8A",
+      "row": 10,
+      "col": 5,
+      "slots": [
+        "N"
+      ]
+    },
+    {
+      "rm_id": "RM0012",
+      "pid": "S8A_r11c01",
+      "sheet": "S8A",
+      "row": 11,
+      "col": 1,
+      "slots": [
+        "N"
+      ]
+    },
+    {
+      "rm_id": "RM0013",
+      "pid": "S8A_r11c03",
+      "sheet": "S8A",
+      "row": 11,
+      "col": 3,
+      "slots": [
+        "N"
+      ]
+    },
+    {
+      "rm_id": "RM0014",
+      "pid": "S8A_r12c04",
+      "sheet": "S8A",
+      "row": 12,
+      "col": 4,
+      "slots": [
+        "V"
+      ]
+    },
+    {
+      "rm_id": "RM0015",
+      "pid": "S8A_r12c05",
+      "sheet": "S8A",
+      "row": 12,
+      "col": 5,
+      "slots": [
+        "V"
+      ]
+    },
+    {
+      "rm_id": "RM0016",
+      "pid": "S8A_r13c04",
+      "sheet": "S8A",
+      "row": 13,
+      "col": 4,
+      "slots": [
+        "V"
+      ]
+    },
+    {
+      "rm_id": "RM0017",
+      "pid": "S8B_r00c06",
+      "sheet": "S8B",
+      "row": 0,
+      "col": 6,
+      "slots": [
+        "C"
+      ]
+    },
+    {
+      "rm_id": "RM0018",
+      "pid": "S8B_r01c07",
+      "sheet": "S8B",
+      "row": 1,
+      "col": 7,
+      "slots": [
+        "Q"
+      ]
+    },
+    {
+      "rm_id": "RM0019",
+      "pid": "S8B_r04c15",
+      "sheet": "S8B",
+      "row": 4,
+      "col": 15,
+      "slots": [
+        "O"
+      ]
+    },
+    {
+      "rm_id": "RM0020",
+      "pid": "S8B_r05c07",
+      "sheet": "S8B",
+      "row": 5,
+      "col": 7,
+      "slots": [
+        "T"
+      ]
+    },
+    {
+      "rm_id": "RM0021",
+      "pid": "S8B_r05c13",
+      "sheet": "S8B",
+      "row": 5,
+      "col": 13,
+      "slots": [
+        "W"
+      ]
+    },
+    {
+      "rm_id": "RM0022",
+      "pid": "S8B_r05c15",
+      "sheet": "S8B",
+      "row": 5,
+      "col": 15,
+      "slots": [
+        "E"
+      ]
+    },
+    {
+      "rm_id": "RM0023",
+      "pid": "S8B_r06c07",
+      "sheet": "S8B",
+      "row": 6,
+      "col": 7,
+      "slots": [
+        "G"
+      ]
+    },
+    {
+      "rm_id": "RM0024",
+      "pid": "S8C_r03c10",
+      "sheet": "S8C",
+      "row": 3,
+      "col": 10,
+      "slots": [
+        "C"
+      ]
+    },
+    {
+      "rm_id": "RM0025",
+      "pid": "S8C_r05c05",
+      "sheet": "S8C",
+      "row": 5,
+      "col": 5,
+      "slots": [
+        "T"
+      ]
+    },
+    {
+      "rm_id": "RM0026",
+      "pid": "S8C_r05c07",
+      "sheet": "S8C",
+      "row": 5,
+      "col": 7,
+      "slots": [
+        "T"
+      ]
+    },
+    {
+      "rm_id": "RM0027",
+      "pid": "S8D_r06c07",
+      "sheet": "S8D",
+      "row": 6,
+      "col": 7,
+      "slots": [
+        "fey_garden"
+      ]
+    },
+    {
+      "rm_id": "RM0028",
+      "pid": "S8D_r07c04",
+      "sheet": "S8D",
+      "row": 7,
+      "col": 4,
+      "slots": [
+        "ancient"
+      ]
+    },
+    {
+      "rm_id": "RM0029",
+      "pid": "S8D_r07c07",
+      "sheet": "S8D",
+      "row": 7,
+      "col": 7,
+      "slots": [
+        "fey_garden"
+      ]
+    },
+    {
+      "rm_id": "RM0030",
+      "pid": "S8D_r11c05",
+      "sheet": "S8D",
+      "row": 11,
+      "col": 5,
+      "slots": [
+        "ancient"
+      ]
+    },
+    {
+      "rm_id": "RM0031",
+      "pid": "S8E_r00c10",
+      "sheet": "S8E",
+      "row": 0,
+      "col": 10,
+      "slots": [
+        "C"
+      ]
+    },
+    {
+      "rm_id": "RM0032",
+      "pid": "S8E_r07c11",
+      "sheet": "S8E",
+      "row": 7,
+      "col": 11,
+      "slots": [
+        "P"
+      ]
+    },
+    {
+      "rm_id": "RM0033",
+      "pid": "S8E_r07c12",
+      "sheet": "S8E",
+      "row": 7,
+      "col": 12,
+      "slots": [
+        "ancient"
+      ]
+    },
+    {
+      "rm_id": "RM0034",
+      "pid": "S8E_r07c14",
+      "sheet": "S8E",
+      "row": 7,
+      "col": 14,
+      "slots": [
+        "P"
+      ]
+    },
+    {
+      "rm_id": "RM0035",
+      "pid": "S8E_r07c15",
+      "sheet": "S8E",
+      "row": 7,
+      "col": 15,
+      "slots": [
+        "P"
+      ]
+    },
+    {
+      "rm_id": "RM0036",
+      "pid": "S8F_r11c11",
+      "sheet": "S8F",
+      "row": 11,
+      "col": 11,
+      "slots": [
+        "K"
+      ]
+    },
+    {
+      "rm_id": "RM0037",
+      "pid": "S8G_r07c14",
+      "sheet": "S8G",
+      "row": 7,
+      "col": 14,
+      "slots": [
+        "W"
+      ]
+    },
+    {
+      "rm_id": "RM0038",
+      "pid": "S8G_r07c15",
+      "sheet": "S8G",
+      "row": 7,
+      "col": 15,
+      "slots": [
+        "O"
+      ]
+    },
+    {
+      "rm_id": "RM0039",
+      "pid": "S8I_r00c15",
+      "sheet": "S8I",
+      "row": 0,
+      "col": 15,
+      "slots": [
+        "fey_garden"
+      ]
+    },
+    {
+      "rm_id": "RM0040",
+      "pid": "S8I_r02c09",
+      "sheet": "S8I",
+      "row": 2,
+      "col": 9,
+      "slots": [
+        "G"
+      ]
+    },
+    {
+      "rm_id": "RM0041",
+      "pid": "S8I_r02c10",
+      "sheet": "S8I",
+      "row": 2,
+      "col": 10,
+      "slots": [
+        "G"
+      ]
+    },
+    {
+      "rm_id": "RM0042",
+      "pid": "S8I_r13c09",
+      "sheet": "S8I",
+      "row": 13,
+      "col": 9,
+      "slots": [
+        "F"
+      ]
+    },
+    {
+      "rm_id": "RM0043",
+      "pid": "S8I_r13c10",
+      "sheet": "S8I",
+      "row": 13,
+      "col": 10,
+      "slots": [
+        "F"
+      ]
+    },
+    {
+      "rm_id": "RM0044",
+      "pid": "S8J_r03c08",
+      "sheet": "S8J",
+      "row": 3,
+      "col": 8,
+      "slots": [
+        "legendary"
+      ]
+    },
+    {
+      "rm_id": "RM0045",
+      "pid": "S8J_r03c09",
+      "sheet": "S8J",
+      "row": 3,
+      "col": 9,
+      "slots": [
+        "legendary"
+      ]
+    },
+    {
+      "rm_id": "RM0046",
+      "pid": "S8J_r03c12",
+      "sheet": "S8J",
+      "row": 3,
+      "col": 12,
+      "slots": [
+        "legendary"
+      ]
+    },
+    {
+      "rm_id": "RM0047",
+      "pid": "S8J_r10c13",
+      "sheet": "S8J",
+      "row": 10,
+      "col": 13,
+      "slots": [
+        "E"
+      ]
+    },
+    {
+      "rm_id": "RM0048",
+      "pid": "S8J_r14c14",
+      "sheet": "S8J",
+      "row": 14,
+      "col": 14,
+      "slots": [
+        "Z"
+      ]
+    },
+    {
+      "rm_id": "RM0049",
+      "pid": "S8K_r03c07",
+      "sheet": "S8K",
+      "row": 3,
+      "col": 7,
+      "slots": [
+        "X"
+      ]
+    },
+    {
+      "rm_id": "RM0050",
+      "pid": "S8K_r03c14",
+      "sheet": "S8K",
+      "row": 3,
+      "col": 14,
+      "slots": [
+        "cursed"
+      ]
+    },
+    {
+      "rm_id": "RM0051",
+      "pid": "S8K_r04c08",
+      "sheet": "S8K",
+      "row": 4,
+      "col": 8,
+      "slots": [
+        "champion"
+      ]
+    },
+    {
+      "rm_id": "RM0052",
+      "pid": "S8K_r04c14",
+      "sheet": "S8K",
+      "row": 4,
+      "col": 14,
+      "slots": [
+        "shard_vault"
+      ]
+    },
+    {
+      "rm_id": "RM0053",
+      "pid": "S8K_r04c15",
+      "sheet": "S8K",
+      "row": 4,
+      "col": 15,
+      "slots": [
+        "F"
+      ]
+    },
+    {
+      "rm_id": "RM0054",
+      "pid": "S8K_r05c15",
+      "sheet": "S8K",
+      "row": 5,
+      "col": 15,
+      "slots": [
+        "shard_vault"
+      ]
+    },
+    {
+      "rm_id": "RM0055",
+      "pid": "S8K_r06c12",
+      "sheet": "S8K",
+      "row": 6,
+      "col": 12,
+      "slots": [
+        "A"
+      ]
+    },
+    {
+      "rm_id": "RM0056",
+      "pid": "S8K_r07c13",
+      "sheet": "S8K",
+      "row": 7,
+      "col": 13,
+      "slots": [
+        "Z"
+      ]
+    },
+    {
+      "rm_id": "RM0057",
+      "pid": "S8K_r09c12",
+      "sheet": "S8K",
+      "row": 9,
+      "col": 12,
+      "slots": [
+        "E"
+      ]
+    },
+    {
+      "rm_id": "RM0058",
+      "pid": "S8K_r10c06",
+      "sheet": "S8K",
+      "row": 10,
+      "col": 6,
+      "slots": [
+        "K"
+      ]
+    },
+    {
+      "rm_id": "RM0059",
+      "pid": "S8K_r10c07",
+      "sheet": "S8K",
+      "row": 10,
+      "col": 7,
+      "slots": [
+        "champion"
+      ]
+    },
+    {
+      "rm_id": "RM0060",
+      "pid": "S8K_r11c00",
+      "sheet": "S8K",
+      "row": 11,
+      "col": 0,
+      "slots": [
+        "master"
+      ]
+    },
+    {
+      "rm_id": "RM0061",
+      "pid": "S8K_r11c01",
+      "sheet": "S8K",
+      "row": 11,
+      "col": 1,
+      "slots": [
+        "master"
+      ]
+    },
+    {
+      "rm_id": "RM0062",
+      "pid": "S8K_r11c03",
+      "sheet": "S8K",
+      "row": 11,
+      "col": 3,
+      "slots": [
+        "master"
+      ]
+    },
+    {
+      "rm_id": "RM0063",
+      "pid": "S8K_r11c06",
+      "sheet": "S8K",
+      "row": 11,
+      "col": 6,
+      "slots": [
+        "K"
+      ]
+    },
+    {
+      "rm_id": "RM0064",
+      "pid": "S8K_r14c14",
+      "sheet": "S8K",
+      "row": 14,
+      "col": 14,
+      "slots": [
+        "Z"
+      ]
+    },
+    {
+      "rm_id": "RM0065",
+      "pid": "S8L_r03c08",
+      "sheet": "S8L",
+      "row": 3,
+      "col": 8,
+      "slots": [
+        "cursed"
+      ]
+    },
+    {
+      "rm_id": "RM0066",
+      "pid": "S8L_r03c09",
+      "sheet": "S8L",
+      "row": 3,
+      "col": 9,
+      "slots": [
+        "cursed"
+      ]
+    },
+    {
+      "rm_id": "RM0067",
+      "pid": "S8L_r03c10",
+      "sheet": "S8L",
+      "row": 3,
+      "col": 10,
+      "slots": [
+        "A"
+      ]
+    },
+    {
+      "rm_id": "RM0068",
+      "pid": "S8L_r04c08",
+      "sheet": "S8L",
+      "row": 4,
+      "col": 8,
+      "slots": [
+        "champion"
+      ]
+    },
+    {
+      "rm_id": "RM0069",
+      "pid": "S8L_r04c15",
+      "sheet": "S8L",
+      "row": 4,
+      "col": 15,
+      "slots": [
+        "shard_vault"
+      ]
+    },
+    {
+      "rm_id": "RM0070",
+      "pid": "S8L_r06c14",
+      "sheet": "S8L",
+      "row": 6,
+      "col": 14,
+      "slots": [
+        "A"
+      ]
+    },
+    {
+      "rm_id": "RM0071",
+      "pid": "S8L_r07c04",
+      "sheet": "S8L",
+      "row": 7,
+      "col": 4,
+      "slots": [
+        "X"
+      ]
+    },
+    {
+      "rm_id": "RM0072",
+      "pid": "S8L_r07c05",
+      "sheet": "S8L",
+      "row": 7,
+      "col": 5,
+      "slots": [
+        "X"
+      ]
+    },
+    {
+      "rm_id": "RM0073",
+      "pid": "S8M_r00c11",
+      "sheet": "S8M",
+      "row": 0,
+      "col": 11,
+      "slots": [
+        "U"
+      ]
+    },
+    {
+      "rm_id": "RM0074",
+      "pid": "S8M_r01c13",
+      "sheet": "S8M",
+      "row": 1,
+      "col": 13,
+      "slots": [
+        "U"
+      ]
+    },
+    {
+      "rm_id": "RM0075",
+      "pid": "S8M_r01c14",
+      "sheet": "S8M",
+      "row": 1,
+      "col": 14,
+      "slots": [
+        "U"
+      ]
+    },
+    {
+      "rm_id": "RM0076",
+      "pid": "S8M_r02c15",
+      "sheet": "S8M",
+      "row": 2,
+      "col": 15,
+      "slots": [
+        "D"
+      ]
+    },
+    {
+      "rm_id": "RM0077",
+      "pid": "S8M_r04c15",
+      "sheet": "S8M",
+      "row": 4,
+      "col": 15,
+      "slots": [
+        "D"
+      ]
+    },
+    {
+      "rm_id": "RM0078",
+      "pid": "S8M_r08c00",
+      "sheet": "S8M",
+      "row": 8,
+      "col": 0,
+      "slots": [
+        "D"
+      ]
+    },
+    {
+      "rm_id": "RM0079",
+      "pid": "S8M_r13c04",
+      "sheet": "S8M",
+      "row": 13,
+      "col": 4,
+      "slots": [
+        "codex"
+      ]
+    },
+    {
+      "rm_id": "RM0080",
+      "pid": "S8M_r13c11",
+      "sheet": "S8M",
+      "row": 13,
+      "col": 11,
+      "slots": [
+        "codex"
+      ]
+    },
+    {
+      "rm_id": "RM0081",
+      "pid": "S8M_r14c11",
+      "sheet": "S8M",
+      "row": 14,
+      "col": 11,
+      "slots": [
+        "codex"
+      ]
+    }
+  ]
+}
