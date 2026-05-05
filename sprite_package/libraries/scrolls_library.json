@@ -1,0 +1,673 @@
+{
+  "category": "scrolls",
+  "version": 2,
+  "generated_at": "2026-05-02",
+  "chosen_count": 42,
+  "reserve_count": 10,
+  "total_count": 52,
+  "source_pickers": [
+    "scroll_picker.html",
+    "scrolls_picks.json"
+  ],
+  "chosen": [
+    {
+      "pid": "S040",
+      "sheet": "",
+      "src_label": "S6 E15",
+      "status": "in-game",
+      "game_data": {
+        "group_size": 2,
+        "all_labels": [
+          "S6 E15",
+          "S7 E15"
+        ]
+      }
+    },
+    {
+      "pid": "S085",
+      "sheet": "NS7",
+      "src_label": "NS7 B3",
+      "source_row": 0,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 B3"
+        ]
+      }
+    },
+    {
+      "pid": "S086",
+      "sheet": "NS6",
+      "src_label": "NS6 A3",
+      "source_row": 0,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS6 A3"
+        ]
+      }
+    },
+    {
+      "pid": "S087",
+      "sheet": "NS3",
+      "src_label": "NS3 A4",
+      "source_row": 0,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS3 A4"
+        ]
+      }
+    },
+    {
+      "pid": "S088",
+      "sheet": "NS1",
+      "src_label": "NS1 A4",
+      "source_row": 0,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS1 A4"
+        ]
+      }
+    },
+    {
+      "pid": "S089",
+      "sheet": "NS1",
+      "src_label": "NS1 C3",
+      "source_row": 0,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS1 C3"
+        ]
+      }
+    },
+    {
+      "pid": "S090",
+      "sheet": "NS4",
+      "src_label": "NS4 C2",
+      "source_row": 0,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS4 C2"
+        ]
+      }
+    },
+    {
+      "pid": "S091",
+      "sheet": "NS6",
+      "src_label": "NS6 C1",
+      "source_row": 0,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS6 C1"
+        ]
+      }
+    },
+    {
+      "pid": "S092",
+      "sheet": "NS1",
+      "src_label": "NS1 A2",
+      "source_row": 0,
+      "source_col": 10,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS1 A2"
+        ]
+      }
+    },
+    {
+      "pid": "S093",
+      "sheet": "NS1",
+      "src_label": "NS1 C2",
+      "source_row": 0,
+      "source_col": 11,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS1 C2"
+        ]
+      }
+    },
+    {
+      "pid": "S094",
+      "sheet": "NS4",
+      "src_label": "NS4 A4",
+      "source_row": 0,
+      "source_col": 12,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS4 A4"
+        ]
+      }
+    },
+    {
+      "pid": "S095",
+      "sheet": "NS1",
+      "src_label": "NS1 B1",
+      "source_row": 0,
+      "source_col": 13,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS1 B1"
+        ]
+      }
+    },
+    {
+      "pid": "S096",
+      "sheet": "NS1",
+      "src_label": "NS1 C1",
+      "source_row": 1,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS1 C1"
+        ]
+      }
+    },
+    {
+      "pid": "S097",
+      "sheet": "NS7",
+      "src_label": "NS7 C3",
+      "source_row": 1,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 C3"
+        ]
+      }
+    },
+    {
+      "pid": "S098",
+      "sheet": "NS6",
+      "src_label": "NS6 C2",
+      "source_row": 1,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS6 C2"
+        ]
+      }
+    },
+    {
+      "pid": "S099",
+      "sheet": "NS7",
+      "src_label": "NS7 A2",
+      "source_row": 1,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 A2"
+        ]
+      }
+    },
+    {
+      "pid": "S100",
+      "sheet": "NS1",
+      "src_label": "NS1 A1",
+      "source_row": 1,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS1 A1"
+        ]
+      }
+    },
+    {
+      "pid": "S101",
+      "sheet": "NS7",
+      "src_label": "NS7 A4",
+      "source_row": 1,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 A4"
+        ]
+      }
+    },
+    {
+      "pid": "S102",
+      "sheet": "NS4",
+      "src_label": "NS4 B2",
+      "source_row": 1,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS4 B2"
+        ]
+      }
+    },
+    {
+      "pid": "S103",
+      "sheet": "NS3",
+      "src_label": "NS3 D3",
+      "source_row": 1,
+      "source_col": 10,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS3 D3"
+        ]
+      }
+    },
+    {
+      "pid": "S104",
+      "sheet": "NS6",
+      "src_label": "NS6 A1",
+      "source_row": 1,
+      "source_col": 11,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS6 A1"
+        ]
+      }
+    },
+    {
+      "pid": "S105",
+      "sheet": "NS3",
+      "src_label": "NS3 C3",
+      "source_row": 1,
+      "source_col": 13,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS3 C3"
+        ]
+      }
+    },
+    {
+      "pid": "S106",
+      "sheet": "NS7",
+      "src_label": "NS7 B1",
+      "source_row": 1,
+      "source_col": 14,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 B1"
+        ]
+      }
+    },
+    {
+      "pid": "S107",
+      "sheet": "NS3",
+      "src_label": "NS3 C2",
+      "source_row": 1,
+      "source_col": 15,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS3 C2"
+        ]
+      }
+    },
+    {
+      "pid": "S108",
+      "sheet": "NS3",
+      "src_label": "NS3 A1",
+      "source_row": 2,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS3 A1"
+        ]
+      }
+    },
+    {
+      "pid": "S109",
+      "sheet": "NS7",
+      "src_label": "NS7 C4",
+      "source_row": 2,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 C4"
+        ]
+      }
+    },
+    {
+      "pid": "S110",
+      "sheet": "NS6",
+      "src_label": "NS6 B1",
+      "source_row": 2,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS6 B1"
+        ]
+      }
+    },
+    {
+      "pid": "S111",
+      "sheet": "NS3",
+      "src_label": "NS3 A2",
+      "source_row": 2,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS3 A2"
+        ]
+      }
+    },
+    {
+      "pid": "S112",
+      "sheet": "NS7",
+      "src_label": "NS7 A1",
+      "source_row": 2,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 A1"
+        ]
+      }
+    },
+    {
+      "pid": "S113",
+      "sheet": "NS7",
+      "src_label": "NS7 C2",
+      "source_row": 2,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 C2"
+        ]
+      }
+    },
+    {
+      "pid": "S114",
+      "sheet": "NS4",
+      "src_label": "NS4 B4",
+      "source_row": 2,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS4 B4"
+        ]
+      }
+    },
+    {
+      "pid": "S115",
+      "sheet": "NS6",
+      "src_label": "NS6 C3",
+      "source_row": 2,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS6 C3"
+        ]
+      }
+    },
+    {
+      "pid": "S116",
+      "sheet": "NS6",
+      "src_label": "NS6 B2",
+      "source_row": 2,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS6 B2"
+        ]
+      }
+    },
+    {
+      "pid": "S117",
+      "sheet": "NS7",
+      "src_label": "NS7 A3",
+      "source_row": 2,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 A3"
+        ]
+      }
+    },
+    {
+      "pid": "S118",
+      "sheet": "NS4",
+      "src_label": "NS4 A3",
+      "source_row": 2,
+      "source_col": 10,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS4 A3"
+        ]
+      }
+    },
+    {
+      "pid": "S119",
+      "sheet": "NS6",
+      "src_label": "NS6 A2",
+      "source_row": 2,
+      "source_col": 11,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS6 A2"
+        ]
+      }
+    },
+    {
+      "pid": "S120",
+      "sheet": "NS4",
+      "src_label": "NS4 C3",
+      "source_row": 2,
+      "source_col": 12,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS4 C3"
+        ]
+      }
+    },
+    {
+      "pid": "S121",
+      "sheet": "NS7",
+      "src_label": "NS7 B4",
+      "source_row": 2,
+      "source_col": 13,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 B4"
+        ]
+      }
+    },
+    {
+      "pid": "S122",
+      "sheet": "NS7",
+      "src_label": "NS7 B2",
+      "source_row": 2,
+      "source_col": 14,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS7 B2"
+        ]
+      }
+    },
+    {
+      "pid": "S123",
+      "sheet": "NS6",
+      "src_label": "NS6 B3",
+      "source_row": 3,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS6 B3"
+        ]
+      }
+    },
+    {
+      "pid": "S124",
+      "sheet": "NS4",
+      "src_label": "NS4 B1",
+      "source_row": 3,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "NS4 B1"
+        ]
+      }
+    },
+    {
+      "pid": "S125",
+      "sheet": "3646.png",
+      "src_label": "3646.png C1 (unidentified scroll)",
+      "source_row": 3,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "group_size": 1,
+        "all_labels": [
+          "3646.png C1 (unidentified scroll)"
+        ]
+      }
+    }
+  ],
+  "reserve": [
+    {
+      "pid": "S014",
+      "sheet": "",
+      "src_label": "S5 A7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "S018",
+      "sheet": "",
+      "src_label": "S5 F6",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "S029",
+      "sheet": "",
+      "src_label": "S5 F7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "S031",
+      "sheet": "",
+      "src_label": "S5 E7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "S034",
+      "sheet": "",
+      "src_label": "S5 D7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "S035",
+      "sheet": "",
+      "src_label": "S5 C6",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "S036",
+      "sheet": "",
+      "src_label": "S5 C7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "S038",
+      "sheet": "",
+      "src_label": "S5 D6",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "S042",
+      "sheet": "",
+      "src_label": "S7 C9",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "S083",
+      "sheet": "",
+      "src_label": "S6 J11",
+      "status": "reserve",
+      "marked": null
+    }
+  ]
+}

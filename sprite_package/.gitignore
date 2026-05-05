@@ -1,0 +1,19 @@
+# Unzipped sprite assets — these live in `assets/sprites/` after fetching the
+# assets bundle. Should not be committed (too large for GitHub free tier).
+# See README.md for fetch instructions.
+assets/sprites/
+assets/sprites/**
+
+# Backup of canonical pool from `promote_all_sprites.py`
+canonical_pool_full.pkl.bak
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/

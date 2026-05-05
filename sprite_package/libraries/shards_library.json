@@ -1,0 +1,429 @@
+{
+  "category": "shards",
+  "version": 2,
+  "generated_at": "2026-05-03",
+  "named_count": 24,
+  "generic_count": 0,
+  "reserve_count": 11,
+  "total_count": 35,
+  "source_pickers": [
+    "migrate-generic-to-reserve (session 3.5)",
+    "shards_picks.json",
+    "shards_match.json"
+  ],
+  "chosen": [
+    {
+      "pid": "SH0032",
+      "sheet": "GS1",
+      "src_label": "r02c07",
+      "status": "in-game",
+      "source_row": 2,
+      "source_col": 7,
+      "game_data": {
+        "item_name": "Battle",
+        "category": "shard",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "SH0033",
+      "sheet": "GS1",
+      "src_label": "r02c08",
+      "status": "in-game",
+      "source_row": 2,
+      "source_col": 8,
+      "game_data": {
+        "item_name": "Secrets",
+        "category": "shard",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "SH0034",
+      "sheet": "GS1",
+      "src_label": "r02c09",
+      "status": "in-game",
+      "source_row": 2,
+      "source_col": 9,
+      "game_data": {
+        "item_name": "Treasure",
+        "category": "shard",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "SH0035",
+      "sheet": "GS1",
+      "src_label": "r02c10",
+      "status": "in-game",
+      "source_row": 2,
+      "source_col": 10,
+      "game_data": {
+        "item_name": "Devotion",
+        "category": "shard",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "SH0044",
+      "sheet": "GS1",
+      "src_label": "r03c07",
+      "status": "in-game",
+      "source_row": 3,
+      "source_col": 7,
+      "game_data": {
+        "item_name": "Knowledge",
+        "category": "shard",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "SH0047",
+      "sheet": "GS1",
+      "src_label": "r03c10",
+      "status": "in-game",
+      "source_row": 3,
+      "source_col": 10,
+      "game_data": {
+        "item_name": "Reflection",
+        "category": "shard",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "SH0055",
+      "sheet": "GS1",
+      "src_label": "r04c06",
+      "status": "in-game",
+      "source_row": 4,
+      "source_col": 6,
+      "game_data": {
+        "item_name": "Eternity",
+        "category": "shard",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "SH0057",
+      "sheet": "GS1",
+      "src_label": "r04c08",
+      "status": "in-game",
+      "source_row": 4,
+      "source_col": 8,
+      "game_data": {
+        "item_name": "Battle",
+        "category": "shard",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "SH0058",
+      "sheet": "GS1",
+      "src_label": "r04c09",
+      "status": "in-game",
+      "source_row": 4,
+      "source_col": 9,
+      "game_data": {
+        "item_name": "Treasure",
+        "category": "shard",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "SH0059",
+      "sheet": "GS1",
+      "src_label": "r04c10",
+      "status": "in-game",
+      "source_row": 4,
+      "source_col": 10,
+      "game_data": {
+        "item_name": "Treasure",
+        "category": "shard",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "SH0061",
+      "sheet": "GS1",
+      "src_label": "r05c00",
+      "status": "in-game",
+      "source_row": 5,
+      "source_col": 0,
+      "game_data": {
+        "item_name": "Battle",
+        "category": "shard",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "SH0062",
+      "sheet": "GS1",
+      "src_label": "r05c01",
+      "status": "in-game",
+      "source_row": 5,
+      "source_col": 1,
+      "game_data": {
+        "item_name": "Growth",
+        "category": "shard",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "SH0063",
+      "sheet": "GS1",
+      "src_label": "r05c02",
+      "status": "in-game",
+      "source_row": 5,
+      "source_col": 2,
+      "game_data": {
+        "item_name": "Knowledge",
+        "category": "shard",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "SH0064",
+      "sheet": "GS1",
+      "src_label": "r05c03",
+      "status": "in-game",
+      "source_row": 5,
+      "source_col": 3,
+      "game_data": {
+        "item_name": "Devotion",
+        "category": "shard",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "SH0065",
+      "sheet": "GS1",
+      "src_label": "r05c04",
+      "status": "in-game",
+      "source_row": 5,
+      "source_col": 4,
+      "game_data": {
+        "item_name": "Growth",
+        "category": "shard",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "SH0066",
+      "sheet": "GS1",
+      "src_label": "r05c05",
+      "status": "in-game",
+      "source_row": 5,
+      "source_col": 5,
+      "game_data": {
+        "item_name": "Reflection",
+        "category": "shard",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "SH0069",
+      "sheet": "GS1",
+      "src_label": "r05c08",
+      "status": "in-game",
+      "source_row": 5,
+      "source_col": 8,
+      "game_data": {
+        "item_name": "Growth",
+        "category": "shard",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "SH0072",
+      "sheet": "GS1",
+      "src_label": "r05c11",
+      "status": "in-game",
+      "source_row": 5,
+      "source_col": 11,
+      "game_data": {
+        "item_name": "Knowledge",
+        "category": "shard",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "SH0077",
+      "sheet": "GS1",
+      "src_label": "r06c04",
+      "status": "in-game",
+      "source_row": 6,
+      "source_col": 4,
+      "game_data": {
+        "item_name": "Reflection",
+        "category": "shard",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "SH0079",
+      "sheet": "GS1",
+      "src_label": "r06c06",
+      "status": "in-game",
+      "source_row": 6,
+      "source_col": 6,
+      "game_data": {
+        "item_name": "Secrets",
+        "category": "shard",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "SH0083",
+      "sheet": "GS1",
+      "src_label": "r06c10",
+      "status": "in-game",
+      "source_row": 6,
+      "source_col": 10,
+      "game_data": {
+        "item_name": "Devotion",
+        "category": "shard",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "SH0085",
+      "sheet": "GS1",
+      "src_label": "r07c00",
+      "status": "in-game",
+      "source_row": 7,
+      "source_col": 0,
+      "game_data": {
+        "item_name": "Secrets",
+        "category": "shard",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "SH0088",
+      "sheet": "GS1",
+      "src_label": "r07c03",
+      "status": "in-game",
+      "source_row": 7,
+      "source_col": 3,
+      "game_data": {
+        "item_name": "Eternity",
+        "category": "shard",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "SH0103",
+      "sheet": "GS1",
+      "src_label": "r08c06",
+      "status": "in-game",
+      "source_row": 8,
+      "source_col": 6,
+      "game_data": {
+        "item_name": "Eternity",
+        "category": "shard",
+        "variant_index": 1
+      }
+    }
+  ],
+  "reserve": [
+    {
+      "pid": "SH0023",
+      "sheet": "GS1",
+      "src_label": "r01c10",
+      "status": "reserve",
+      "source_row": 1,
+      "source_col": 10,
+      "marked": null
+    },
+    {
+      "pid": "SH0024",
+      "sheet": "GS1",
+      "src_label": "r01c11",
+      "status": "reserve",
+      "source_row": 1,
+      "source_col": 11,
+      "marked": null
+    },
+    {
+      "pid": "SH0043",
+      "sheet": "GS1",
+      "src_label": "r03c06",
+      "status": "reserve",
+      "source_row": 3,
+      "source_col": 6,
+      "marked": null
+    },
+    {
+      "pid": "SH0045",
+      "sheet": "GS1",
+      "src_label": "r03c08",
+      "status": "reserve",
+      "source_row": 3,
+      "source_col": 8,
+      "marked": null
+    },
+    {
+      "pid": "SH0046",
+      "sheet": "GS1",
+      "src_label": "r03c09",
+      "status": "reserve",
+      "source_row": 3,
+      "source_col": 9,
+      "marked": null
+    },
+    {
+      "pid": "SH0067",
+      "sheet": "GS1",
+      "src_label": "r05c06",
+      "status": "reserve",
+      "source_row": 5,
+      "source_col": 6,
+      "marked": null
+    },
+    {
+      "pid": "SH0070",
+      "sheet": "GS1",
+      "src_label": "r05c09",
+      "status": "reserve",
+      "source_row": 5,
+      "source_col": 9,
+      "marked": null
+    },
+    {
+      "pid": "SH0076",
+      "sheet": "GS1",
+      "src_label": "r06c03",
+      "status": "reserve",
+      "source_row": 6,
+      "source_col": 3,
+      "marked": null
+    },
+    {
+      "pid": "SH0082",
+      "sheet": "GS1",
+      "src_label": "r06c09",
+      "status": "reserve",
+      "source_row": 6,
+      "source_col": 9,
+      "marked": null
+    },
+    {
+      "pid": "SH0084",
+      "sheet": "GS1",
+      "src_label": "r06c11",
+      "status": "reserve",
+      "source_row": 6,
+      "source_col": 11,
+      "marked": null
+    },
+    {
+      "pid": "SH0086",
+      "sheet": "GS1",
+      "src_label": "r07c01",
+      "status": "reserve",
+      "source_row": 7,
+      "source_col": 1,
+      "marked": null
+    }
+  ]
+}

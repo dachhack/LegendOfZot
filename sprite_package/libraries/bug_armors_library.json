@@ -1,0 +1,499 @@
+{
+  "category": "bug_armors",
+  "version": 1,
+  "generated_at": "2026-05-02",
+  "chosen_count": 15,
+  "reserve_count": 41,
+  "total_count": 56,
+  "source_pickers": [
+    "bug_armor_picker.html",
+    "bug_armors_library_marked.json",
+    "migrate-generic-to-reserve (session 3.5)"
+  ],
+  "chosen": [
+    {
+      "pid": "BU0002",
+      "sheet": "BU1",
+      "src_label": "r02c02",
+      "source_row": 2,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Pill Bug Plate",
+        "category": "bug",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "BU0005",
+      "sheet": "BU1",
+      "src_label": "r02c05",
+      "source_row": 2,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Silk Weave",
+        "category": "bug",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "BU0006",
+      "sheet": "BU1",
+      "src_label": "r02c06",
+      "source_row": 2,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Silk Weave",
+        "category": "bug",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "BU0007",
+      "sheet": "BU1",
+      "src_label": "r02c07",
+      "source_row": 2,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Silk Weave",
+        "category": "bug",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "BU0009",
+      "sheet": "BU1",
+      "src_label": "r03c02",
+      "source_row": 3,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Chitin Shell",
+        "category": "bug",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "BU0011",
+      "sheet": "BU1",
+      "src_label": "r03c05",
+      "source_row": 3,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Chitin Shell",
+        "category": "bug",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "BU0014",
+      "sheet": "BU1",
+      "src_label": "r06c01",
+      "source_row": 6,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Pill Bug Plate",
+        "category": "bug",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "BU0017",
+      "sheet": "BU1",
+      "src_label": "r04c04",
+      "source_row": 4,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Chitin Shell",
+        "category": "bug",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "BU0021",
+      "sheet": "BU1",
+      "src_label": "r05c01",
+      "source_row": 5,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Pill Bug Plate",
+        "category": "bug",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "BU0032",
+      "sheet": "BU1",
+      "src_label": "r06c07",
+      "source_row": 6,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Royal Jelly Mail",
+        "category": "bug",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "BU0041",
+      "sheet": "BU2",
+      "src_label": "r01c01",
+      "source_row": 1,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Royal Jelly Mail",
+        "category": "bug",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "BU0043",
+      "sheet": "BU2",
+      "src_label": "r01c03",
+      "source_row": 1,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Royal Jelly Mail",
+        "category": "bug",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "BU0052",
+      "sheet": "BU3",
+      "src_label": "r00c01",
+      "source_row": 0,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Moth Wing Cape",
+        "category": "bug",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "BU0053",
+      "sheet": "BU3",
+      "src_label": "r00c02",
+      "source_row": 0,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Moth Wing Cape",
+        "category": "bug",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "BU0055",
+      "sheet": "BU3",
+      "src_label": "r01c00",
+      "source_row": 1,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Moth Wing Cape",
+        "category": "bug",
+        "variant_index": 0
+      }
+    }
+  ],
+  "reserve": [
+    {
+      "pid": "BU0001",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0008",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0010",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0012",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0013",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0015",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0016",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0018",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0019",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0020",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0022",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0023",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0024",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0025",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0026",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0027",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0028",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0029",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0030",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0031",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0033",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0034",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0035",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0036",
+      "sheet": "BU1",
+      "src_label": "BU1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0039",
+      "sheet": "BU2",
+      "src_label": "BU2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0046",
+      "sheet": "BU2",
+      "src_label": "BU2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0044",
+      "sheet": "BU2",
+      "src_label": "BU2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0045",
+      "sheet": "BU2",
+      "src_label": "BU2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0047",
+      "sheet": "BU2",
+      "src_label": "BU2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0049",
+      "sheet": "BU2",
+      "src_label": "BU2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0051",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0054",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0056",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0057",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0058",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0059",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0060",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0061",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0063",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0064",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "BU0065",
+      "sheet": "BU3",
+      "src_label": "BU3",
+      "status": "reserve",
+      "marked": null
+    }
+  ]
+}

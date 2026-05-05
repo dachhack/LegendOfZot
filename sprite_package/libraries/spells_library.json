@@ -1,0 +1,1221 @@
+{
+  "category": "spells",
+  "version": 1,
+  "generated_at": "2026-05-02",
+  "chosen_count": 49,
+  "reserve_count": 88,
+  "total_count": 137,
+  "source_pickers": [
+    "spell_refine_picker.html",
+    "spells_library_marked.json",
+    "migrate-generic-to-reserve (session 3.5)"
+  ],
+  "chosen": [
+    {
+      "pid": "I012",
+      "sheet": "original",
+      "src_label": "E4",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Inferno",
+        "row": 2,
+        "col": 1,
+        "index": 33
+      }
+    },
+    {
+      "pid": "I028",
+      "sheet": "original",
+      "src_label": "J12",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Flame Lance",
+        "row": 1,
+        "col": 4,
+        "index": 20
+      }
+    },
+    {
+      "pid": "I029",
+      "sheet": "original",
+      "src_label": "E1",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Fireball",
+        "row": 0,
+        "col": 6,
+        "index": 6
+      }
+    },
+    {
+      "pid": "I047",
+      "sheet": "original",
+      "src_label": "J2",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Divine Shield",
+        "row": 1,
+        "col": 15,
+        "index": 31
+      }
+    },
+    {
+      "pid": "I056",
+      "sheet": "original",
+      "src_label": "F12",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Time Stop",
+        "row": 2,
+        "col": 10,
+        "index": 42
+      }
+    },
+    {
+      "pid": "I058",
+      "sheet": "original",
+      "src_label": "J1",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Stone Skin",
+        "row": 1,
+        "col": 3,
+        "index": 19
+      }
+    },
+    {
+      "pid": "I062",
+      "sheet": "original",
+      "src_label": "I2",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Heal",
+        "row": 0,
+        "col": 7,
+        "index": 7
+      }
+    },
+    {
+      "pid": "I087",
+      "sheet": "original",
+      "src_label": "J3",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Ultimate Shield",
+        "row": 3,
+        "col": 0,
+        "index": 48
+      }
+    },
+    {
+      "pid": "I096",
+      "sheet": "original",
+      "src_label": "I1",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Minor Heal",
+        "row": 0,
+        "col": 3,
+        "index": 3
+      }
+    },
+    {
+      "pid": "I098",
+      "sheet": "original",
+      "src_label": "D15",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Battle Hymn",
+        "row": 1,
+        "col": 2,
+        "index": 18
+      }
+    },
+    {
+      "pid": "I099",
+      "sheet": "original",
+      "src_label": "E11",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Purify",
+        "row": 0,
+        "col": 12,
+        "index": 12
+      }
+    },
+    {
+      "pid": "I102",
+      "sheet": "original",
+      "src_label": "E13",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Cure Weakness",
+        "row": 0,
+        "col": 13,
+        "index": 13
+      }
+    },
+    {
+      "pid": "I111",
+      "sheet": "original",
+      "src_label": "K11",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Acid Splash",
+        "row": 0,
+        "col": 10,
+        "index": 10
+      }
+    },
+    {
+      "pid": "I114",
+      "sheet": "original",
+      "src_label": "J4",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Full Restore",
+        "row": 2,
+        "col": 7,
+        "index": 39
+      }
+    },
+    {
+      "pid": "I115",
+      "sheet": "original",
+      "src_label": "J11",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Regeneration",
+        "row": 1,
+        "col": 9,
+        "index": 25
+      }
+    },
+    {
+      "pid": "I118",
+      "sheet": "original",
+      "src_label": "I4",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Mass Heal",
+        "row": 2,
+        "col": 0,
+        "index": 32
+      }
+    },
+    {
+      "pid": "I120",
+      "sheet": "original",
+      "src_label": "C14",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Psychic Scream",
+        "row": 2,
+        "col": 6,
+        "index": 38
+      }
+    },
+    {
+      "pid": "I124",
+      "sheet": "original",
+      "src_label": "I3",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Greater Heal",
+        "row": 1,
+        "col": 6,
+        "index": 22
+      }
+    },
+    {
+      "pid": "I131",
+      "sheet": "original",
+      "src_label": "F11",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Clarity",
+        "row": 2,
+        "col": 9,
+        "index": 41
+      }
+    },
+    {
+      "pid": "I132",
+      "sheet": "original",
+      "src_label": "D12",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Divine Intervention",
+        "row": 2,
+        "col": 14,
+        "index": 46
+      }
+    },
+    {
+      "pid": "I150",
+      "sheet": "original",
+      "src_label": "C7",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Ice Storm",
+        "row": 1,
+        "col": 0,
+        "index": 16
+      }
+    },
+    {
+      "pid": "I154",
+      "sheet": "original",
+      "src_label": "E7",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Ice Shard",
+        "row": 0,
+        "col": 0,
+        "index": 0
+      }
+    },
+    {
+      "pid": "I159",
+      "sheet": "original",
+      "src_label": "C6",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Absolute Zero",
+        "row": 2,
+        "col": 2,
+        "index": 34
+      }
+    },
+    {
+      "pid": "I164",
+      "sheet": "original",
+      "src_label": "H5",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Water Blast",
+        "row": 0,
+        "col": 8,
+        "index": 8
+      }
+    },
+    {
+      "pid": "I168",
+      "sheet": "original",
+      "src_label": "I7",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Blizzard",
+        "row": 1,
+        "col": 11,
+        "index": 27
+      }
+    },
+    {
+      "pid": "I170",
+      "sheet": "original",
+      "src_label": "I11",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Holy Light",
+        "row": 1,
+        "col": 7,
+        "index": 23
+      }
+    },
+    {
+      "pid": "I171",
+      "sheet": "original",
+      "src_label": "E5",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Tsunami",
+        "row": 2,
+        "col": 3,
+        "index": 35
+      }
+    },
+    {
+      "pid": "I181",
+      "sheet": "original",
+      "src_label": "K16",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Mind Spike",
+        "row": 0,
+        "col": 11,
+        "index": 11
+      }
+    },
+    {
+      "pid": "I185",
+      "sheet": "original",
+      "src_label": "J16",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Mind Blast",
+        "row": 1,
+        "col": 13,
+        "index": 29
+      }
+    },
+    {
+      "pid": "I186",
+      "sheet": "original",
+      "src_label": "C16",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Armageddon",
+        "row": 2,
+        "col": 11,
+        "index": 43
+      }
+    },
+    {
+      "pid": "V054",
+      "sheet": "3664",
+      "src_label": "x188y253-x258y324",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Titan's Strength",
+        "row": 2,
+        "col": 8,
+        "index": 40
+      }
+    },
+    {
+      "pid": "V060",
+      "sheet": "3664",
+      "src_label": "x126y255-x193y322",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Stone Throw",
+        "row": 0,
+        "col": 2,
+        "index": 2
+      }
+    },
+    {
+      "pid": "V078",
+      "sheet": "3664",
+      "src_label": "x0y320-x63y383",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Earthquake",
+        "row": 1,
+        "col": 12,
+        "index": 28
+      }
+    },
+    {
+      "pid": "V109",
+      "sheet": "3665",
+      "src_label": "x422y102-x476y157",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Spark",
+        "row": 0,
+        "col": 1,
+        "index": 1
+      }
+    },
+    {
+      "pid": "V167",
+      "sheet": "3664",
+      "src_label": "x511y639-x577y705",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Perfect Regeneration",
+        "row": 2,
+        "col": 15,
+        "index": 47
+      }
+    },
+    {
+      "pid": "V211",
+      "sheet": "3664",
+      "src_label": "x447y704-x512y768",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Darkness Bolt",
+        "row": 0,
+        "col": 15,
+        "index": 15
+      }
+    },
+    {
+      "pid": "V213",
+      "sheet": "3665",
+      "src_label": "x898y549-x954y606",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Shadow Strike",
+        "row": 1,
+        "col": 14,
+        "index": 30
+      }
+    },
+    {
+      "pid": "V215",
+      "sheet": "3664",
+      "src_label": "x379y701-x449y772",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Holy Smite",
+        "row": 2,
+        "col": 5,
+        "index": 37
+      }
+    },
+    {
+      "pid": "V219",
+      "sheet": "3665",
+      "src_label": "x629y601-x693y666",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Light Ray",
+        "row": 0,
+        "col": 5,
+        "index": 5
+      }
+    },
+    {
+      "pid": "V220",
+      "sheet": "3665",
+      "src_label": "x473y605-x531y662",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Shadow Bolt",
+        "row": 0,
+        "col": 4,
+        "index": 4
+      }
+    },
+    {
+      "pid": "V228",
+      "sheet": "3665",
+      "src_label": "x1109y549-x1167y607",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Freedom",
+        "row": 1,
+        "col": 1,
+        "index": 17
+      }
+    },
+    {
+      "pid": "V247",
+      "sheet": "3664",
+      "src_label": "x61y63-x130y131",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Wind Slash",
+        "row": 0,
+        "col": 9,
+        "index": 9
+      }
+    },
+    {
+      "pid": "V289",
+      "sheet": "3664",
+      "src_label": "x829y62-x898y131",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Black Hole",
+        "row": 2,
+        "col": 13,
+        "index": 45
+      }
+    },
+    {
+      "pid": "V292",
+      "sheet": "3664",
+      "src_label": "x957y254-x1024y321",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Meteor Strike",
+        "row": 1,
+        "col": 8,
+        "index": 24
+      }
+    },
+    {
+      "pid": "V298",
+      "sheet": "3664",
+      "src_label": "x892y61-x962y131",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Supernova",
+        "row": 2,
+        "col": 12,
+        "index": 44
+      }
+    },
+    {
+      "pid": "V335",
+      "sheet": "3665",
+      "src_label": "x895y491-x958y554",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Void Beam",
+        "row": 2,
+        "col": 4,
+        "index": 36
+      }
+    },
+    {
+      "pid": "W141",
+      "sheet": "ewck9w",
+      "src_label": "x319y979-x416y1076",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Thunder Clap",
+        "row": 0,
+        "col": 14,
+        "index": 14
+      }
+    },
+    {
+      "pid": "W144",
+      "sheet": "ewck9w",
+      "src_label": "x1161y321-x1272y433",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Chain Lightning",
+        "row": 1,
+        "col": 10,
+        "index": 26
+      }
+    },
+    {
+      "pid": "W146",
+      "sheet": "ewck9w",
+      "src_label": "x526y321-x635y430",
+      "status": "in-game",
+      "game_data": {
+        "spell_name": "Lightning Bolt",
+        "row": 1,
+        "col": 5,
+        "index": 21
+      }
+    }
+  ],
+  "reserve": [
+    {
+      "pid": "I024",
+      "sheet": "original",
+      "src_label": "I12",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I041",
+      "sheet": "original",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I044",
+      "sheet": "original",
+      "src_label": "J10",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I054",
+      "sheet": "original",
+      "src_label": "D16",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I071",
+      "sheet": "original",
+      "src_label": "I6",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I103",
+      "sheet": "original",
+      "src_label": "A8",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I108",
+      "sheet": "original",
+      "src_label": "D8",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I113",
+      "sheet": "original",
+      "src_label": "J9",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I122",
+      "sheet": "original",
+      "src_label": "L7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I130",
+      "sheet": "original",
+      "src_label": "B4",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I134",
+      "sheet": "original",
+      "src_label": "C3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I135",
+      "sheet": "original",
+      "src_label": "K6",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I138",
+      "sheet": "original",
+      "src_label": "I10",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I139",
+      "sheet": "original",
+      "src_label": "A11",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I141",
+      "sheet": "original",
+      "src_label": "C2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I145",
+      "sheet": "original",
+      "src_label": "K7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I148",
+      "sheet": "original",
+      "src_label": "B7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I152",
+      "sheet": "original",
+      "src_label": "B6",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I153",
+      "sheet": "original",
+      "src_label": "A6",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I156",
+      "sheet": "original",
+      "src_label": "A7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I158",
+      "sheet": "original",
+      "src_label": "B3",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I167",
+      "sheet": "original",
+      "src_label": "H7",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I172",
+      "sheet": "original",
+      "src_label": "I8",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I176",
+      "sheet": "original",
+      "src_label": "H12",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I180",
+      "sheet": "original",
+      "src_label": "K8",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I183",
+      "sheet": "original",
+      "src_label": "K5",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "I188",
+      "sheet": "original",
+      "src_label": "K9",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V026",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x957y191",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V050",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x61y190",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V055",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x254y191",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V073",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x510y511",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V087",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x572y508",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V089",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x125y320",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V093",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x317y319",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V094",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x317y253",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V108",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x513y129",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V124",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x253y638",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V164",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x61y702",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V174",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x894y511",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V175",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x828y572",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V176",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x765y510",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V180",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x828y509",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V221",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x189y574",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V227",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x317y637",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V229",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x956y318",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V270",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x126y703",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V277",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x188y60",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V280",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x764y317",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V286",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x188y124",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V294",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x893y317",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V295",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x766y259",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V302",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x829y0",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V303",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x893y190",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V311",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x893y0",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V317",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x959y64",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V321",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x513y66",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V332",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x958y127",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V351",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x636y252",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V361",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x638y575",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V364",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x829y445",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V370",
+      "sheet": "v3664",
+      "src_label": "3664-bb-x510y447",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V100",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x312y211",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V102",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x208y212",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V166",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x1005y605",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V172",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x421y0",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V189",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x843y326",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V231",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x576y602",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V239",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x473y326",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V276",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x48y46",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V293",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x259y491",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V310",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x631y325",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V326",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x791y494",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V357",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x844y495",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "V358",
+      "sheet": "v3665",
+      "src_label": "3665-bb-x1317y436",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W016",
+      "sheet": "wnew",
+      "src_label": "W-x2125y1217",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W021",
+      "sheet": "wnew",
+      "src_label": "W-x1595y1219",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W037",
+      "sheet": "wnew",
+      "src_label": "W-x1804y880",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W045",
+      "sheet": "wnew",
+      "src_label": "W-x2011y883",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W047",
+      "sheet": "wnew",
+      "src_label": "W-x1907y883",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W056",
+      "sheet": "wnew",
+      "src_label": "W-x2021y214",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W087",
+      "sheet": "wnew",
+      "src_label": "W-x1380y774",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W168",
+      "sheet": "wnew",
+      "src_label": "W-x1912y556",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W181",
+      "sheet": "wnew",
+      "src_label": "W-x1272y549",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W184",
+      "sheet": "wnew",
+      "src_label": "W-x1590y999",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W185",
+      "sheet": "wnew",
+      "src_label": "W-x2223y547",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W189",
+      "sheet": "wnew",
+      "src_label": "W-x1374y543",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W191",
+      "sheet": "wnew",
+      "src_label": "W-x1063y664",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "W192",
+      "sheet": "wnew",
+      "src_label": "W-x2013y992",
+      "status": "reserve",
+      "marked": null
+    }
+  ]
+}

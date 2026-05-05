@@ -1,0 +1,2010 @@
+{
+  "category": "armors",
+  "version": 1,
+  "generated_at": "2026-05-02",
+  "chosen_count": 114,
+  "reserve_count": 73,
+  "total_count": 187,
+  "source_pickers": [
+    "armor_variant_picker.html",
+    "armors_library_marked.json",
+    "migrate-generic-to-reserve (session 3.5)"
+  ],
+  "chosen": [
+    {
+      "pid": "AR0001",
+      "sheet": "A1",
+      "src_label": "r00c00",
+      "source_row": 0,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Cloth Robes",
+        "category": "light",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0002",
+      "sheet": "A1",
+      "src_label": "r00c01",
+      "source_row": 0,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Cloth Robes",
+        "category": "light",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0003",
+      "sheet": "A1",
+      "src_label": "r00c02",
+      "source_row": 0,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Cloth Robes",
+        "category": "light",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0004",
+      "sheet": "A1",
+      "src_label": "r00c03",
+      "source_row": 0,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Padded Armor",
+        "category": "light",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0005",
+      "sheet": "A1",
+      "src_label": "r00c04",
+      "source_row": 0,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Padded Armor",
+        "category": "light",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0006",
+      "sheet": "A1",
+      "src_label": "r00c05",
+      "source_row": 0,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Breastplate",
+        "category": "mail",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0009",
+      "sheet": "A1",
+      "src_label": "r00c08",
+      "source_row": 0,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Adamantine Plate",
+        "category": "exotic",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0011",
+      "sheet": "A1",
+      "src_label": "r01c00",
+      "source_row": 1,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Leather Armor",
+        "category": "light",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0012",
+      "sheet": "A1",
+      "src_label": "r01c01",
+      "source_row": 1,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Leather Armor",
+        "category": "light",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0013",
+      "sheet": "A1",
+      "src_label": "r01c02",
+      "source_row": 1,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Padded Armor",
+        "category": "light",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0014",
+      "sheet": "A1",
+      "src_label": "r01c03",
+      "source_row": 1,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Hide Armor",
+        "category": "light",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0016",
+      "sheet": "A1",
+      "src_label": "r01c05",
+      "source_row": 1,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Hide Armor",
+        "category": "light",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0018",
+      "sheet": "A1",
+      "src_label": "r01c07",
+      "source_row": 1,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Hide Armor",
+        "category": "light",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0019",
+      "sheet": "A1",
+      "src_label": "r01c09",
+      "source_row": 1,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Studded Leather",
+        "category": "light",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0020",
+      "sheet": "A1",
+      "src_label": "r02c00",
+      "source_row": 2,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Chainmail",
+        "category": "mail",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0021",
+      "sheet": "A1",
+      "src_label": "r02c01",
+      "source_row": 2,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Chainmail",
+        "category": "mail",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0022",
+      "sheet": "A1",
+      "src_label": "r02c02",
+      "source_row": 2,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Ring Mail",
+        "category": "mail",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0023",
+      "sheet": "A1",
+      "src_label": "r02c03",
+      "source_row": 2,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Scale Mail",
+        "category": "mail",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0024",
+      "sheet": "A1",
+      "src_label": "r02c04",
+      "source_row": 2,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Scale Mail",
+        "category": "mail",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0025",
+      "sheet": "A1",
+      "src_label": "r02c05",
+      "source_row": 2,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Breastplate",
+        "category": "mail",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0027",
+      "sheet": "A1",
+      "src_label": "r02c07",
+      "source_row": 2,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Splint Armor",
+        "category": "mail",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0028",
+      "sheet": "A1",
+      "src_label": "r02c09",
+      "source_row": 2,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Splint Armor",
+        "category": "mail",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0031",
+      "sheet": "A1",
+      "src_label": "r03c02",
+      "source_row": 3,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Half Plate",
+        "category": "plate",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0036",
+      "sheet": "A1",
+      "src_label": "r03c07",
+      "source_row": 3,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Plate Armor",
+        "category": "plate",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0039",
+      "sheet": "A1",
+      "src_label": "r04c00",
+      "source_row": 4,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Mithril Chainmail",
+        "category": "exotic",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0040",
+      "sheet": "A1",
+      "src_label": "r04c01",
+      "source_row": 4,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Mithril Chainmail",
+        "category": "exotic",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0042",
+      "sheet": "A1",
+      "src_label": "r04c03",
+      "source_row": 4,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Full Plate",
+        "category": "plate",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0045",
+      "sheet": "A1",
+      "src_label": "r04c06",
+      "source_row": 4,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Dragon Scale",
+        "category": "exotic",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0047",
+      "sheet": "A1",
+      "src_label": "r04c08",
+      "source_row": 4,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Dwarven Plate",
+        "category": "exotic",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0049",
+      "sheet": "A1",
+      "src_label": "r05c00",
+      "source_row": 5,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Volcanic Mail",
+        "category": "elemental",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0050",
+      "sheet": "A1",
+      "src_label": "r05c01",
+      "source_row": 5,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Volcanic Mail",
+        "category": "elemental",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0051",
+      "sheet": "A1",
+      "src_label": "r05c02",
+      "source_row": 5,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Crystal Plate",
+        "category": "elemental",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0052",
+      "sheet": "A1",
+      "src_label": "r05c03",
+      "source_row": 5,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Crystal Plate",
+        "category": "elemental",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0053",
+      "sheet": "A1",
+      "src_label": "r05c04",
+      "source_row": 5,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Runeforged Armor",
+        "category": "elemental",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0054",
+      "sheet": "A1",
+      "src_label": "r05c05",
+      "source_row": 5,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Nethersteel Armor",
+        "category": "dark",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0056",
+      "sheet": "A1",
+      "src_label": "r05c07",
+      "source_row": 5,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Venomscale Mail",
+        "category": "elemental",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0058",
+      "sheet": "A1",
+      "src_label": "r05c09",
+      "source_row": 5,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Deepforge Plate",
+        "category": "elemental",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0062",
+      "sheet": "A1",
+      "src_label": "r06c04",
+      "source_row": 6,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Enchanted Plate",
+        "category": "elemental",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0063",
+      "sheet": "A1",
+      "src_label": "r06c05",
+      "source_row": 6,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Eldrich Mail",
+        "category": "unique",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0065",
+      "sheet": "A1",
+      "src_label": "r06c07",
+      "source_row": 6,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Abyssal Shell",
+        "category": "elemental",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0069",
+      "sheet": "A1",
+      "src_label": "r07c01",
+      "source_row": 7,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Starfall Plate",
+        "category": "legendary",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0071",
+      "sheet": "A1",
+      "src_label": "r07c03",
+      "source_row": 7,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Adamantine Plate",
+        "category": "exotic",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0081",
+      "sheet": "A1",
+      "src_label": "r08c03",
+      "source_row": 8,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Godplate",
+        "category": "legendary",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0083",
+      "sheet": "A1",
+      "src_label": "r08c05",
+      "source_row": 8,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Half Plate",
+        "category": "plate",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0086",
+      "sheet": "A1",
+      "src_label": "r08c08",
+      "source_row": 8,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Astral Fortress",
+        "category": "godlike",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0087",
+      "sheet": "A1",
+      "src_label": "r08c09",
+      "source_row": 8,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Godplate",
+        "category": "legendary",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0089",
+      "sheet": "A1",
+      "src_label": "r09c01",
+      "source_row": 9,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Venomscale Mail",
+        "category": "elemental",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0091",
+      "sheet": "A1",
+      "src_label": "r09c03",
+      "source_row": 9,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Godplate",
+        "category": "legendary",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0092",
+      "sheet": "A1",
+      "src_label": "r09c04",
+      "source_row": 9,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Aegis of the Paladin",
+        "category": "unique",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0094",
+      "sheet": "A1",
+      "src_label": "r09c07",
+      "source_row": 9,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Adamantine Plate",
+        "category": "exotic",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0095",
+      "sheet": "A1",
+      "src_label": "r09c08",
+      "source_row": 9,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Runesmith's Carapace",
+        "category": "unique",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0110",
+      "sheet": "A2",
+      "src_label": "r01c03",
+      "source_row": 1,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Leather Armor",
+        "category": "light",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0115",
+      "sheet": "A2",
+      "src_label": "r01c08",
+      "source_row": 1,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Studded Leather",
+        "category": "light",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0116",
+      "sheet": "A2",
+      "src_label": "r01c09",
+      "source_row": 1,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Studded Leather",
+        "category": "light",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0118",
+      "sheet": "A2",
+      "src_label": "r02c01",
+      "source_row": 2,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Chainmail",
+        "category": "mail",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0119",
+      "sheet": "A2",
+      "src_label": "r02c02",
+      "source_row": 2,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Scale Mail",
+        "category": "mail",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0120",
+      "sheet": "A2",
+      "src_label": "r02c03",
+      "source_row": 2,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Breastplate",
+        "category": "mail",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0122",
+      "sheet": "A2",
+      "src_label": "r02c05",
+      "source_row": 2,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Plate Armor",
+        "category": "plate",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0125",
+      "sheet": "A2",
+      "src_label": "r02c08",
+      "source_row": 2,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Full Plate",
+        "category": "plate",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0127",
+      "sheet": "A2",
+      "src_label": "r03c00",
+      "source_row": 3,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Ring Mail",
+        "category": "mail",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0128",
+      "sheet": "A2",
+      "src_label": "r03c01",
+      "source_row": 3,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Half Plate",
+        "category": "plate",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0129",
+      "sheet": "A2",
+      "src_label": "r03c02",
+      "source_row": 3,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Dragon Scale",
+        "category": "exotic",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0131",
+      "sheet": "A2",
+      "src_label": "r03c04",
+      "source_row": 3,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Splint Armor",
+        "category": "mail",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0134",
+      "sheet": "A2",
+      "src_label": "r03c07",
+      "source_row": 3,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Plate Armor",
+        "category": "plate",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0135",
+      "sheet": "A2",
+      "src_label": "r03c08",
+      "source_row": 3,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Full Plate",
+        "category": "plate",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0136",
+      "sheet": "A2",
+      "src_label": "r03c09",
+      "source_row": 3,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Aegis of the Paladin",
+        "category": "unique",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0137",
+      "sheet": "A2",
+      "src_label": "r04c00",
+      "source_row": 4,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Mithril Chainmail",
+        "category": "exotic",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0138",
+      "sheet": "A2",
+      "src_label": "r04c01",
+      "source_row": 4,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Knight's Armor",
+        "category": "plate",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0139",
+      "sheet": "A2",
+      "src_label": "r04c02",
+      "source_row": 4,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Elven Mail",
+        "category": "exotic",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0140",
+      "sheet": "A2",
+      "src_label": "r04c03",
+      "source_row": 4,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Dragon Scale",
+        "category": "exotic",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0141",
+      "sheet": "A2",
+      "src_label": "r04c04",
+      "source_row": 4,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Knight's Armor",
+        "category": "plate",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0142",
+      "sheet": "A2",
+      "src_label": "r04c05",
+      "source_row": 4,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Volcanic Mail",
+        "category": "elemental",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0143",
+      "sheet": "A2",
+      "src_label": "r04c06",
+      "source_row": 4,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Crystal Plate",
+        "category": "elemental",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0144",
+      "sheet": "A2",
+      "src_label": "r04c07",
+      "source_row": 4,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Stormweave Armor",
+        "category": "elemental",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0145",
+      "sheet": "A2",
+      "src_label": "r04c08",
+      "source_row": 4,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Celestial Mail",
+        "category": "exotic",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0146",
+      "sheet": "A2",
+      "src_label": "r04c09",
+      "source_row": 4,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Cosmic Shell",
+        "category": "godlike",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0147",
+      "sheet": "A2",
+      "src_label": "r05c00",
+      "source_row": 5,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Knight's Armor",
+        "category": "plate",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0148",
+      "sheet": "A2",
+      "src_label": "r05c01",
+      "source_row": 5,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Enchanted Plate",
+        "category": "elemental",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0149",
+      "sheet": "A2",
+      "src_label": "r05c02",
+      "source_row": 5,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Elven Mail",
+        "category": "exotic",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0150",
+      "sheet": "A2",
+      "src_label": "r05c03",
+      "source_row": 5,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Venomscale Mail",
+        "category": "elemental",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0151",
+      "sheet": "A2",
+      "src_label": "r05c04",
+      "source_row": 5,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Elven Mail",
+        "category": "exotic",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0152",
+      "sheet": "A2",
+      "src_label": "r05c05",
+      "source_row": 5,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Deepforge Plate",
+        "category": "elemental",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0155",
+      "sheet": "A2",
+      "src_label": "r05c08",
+      "source_row": 5,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Void Carapace",
+        "category": "dark",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0156",
+      "sheet": "A2",
+      "src_label": "r05c09",
+      "source_row": 5,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Deepforge Plate",
+        "category": "elemental",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0158",
+      "sheet": "A2",
+      "src_label": "r06c01",
+      "source_row": 6,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Celestial Mail",
+        "category": "exotic",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0159",
+      "sheet": "A2",
+      "src_label": "r06c02",
+      "source_row": 6,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Dwarven Plate",
+        "category": "exotic",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0160",
+      "sheet": "A2",
+      "src_label": "r06c03",
+      "source_row": 6,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Abyssal Shell",
+        "category": "elemental",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0162",
+      "sheet": "A2",
+      "src_label": "r06c05",
+      "source_row": 6,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Eternity Aegis",
+        "category": "godlike",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0163",
+      "sheet": "A2",
+      "src_label": "r06c06",
+      "source_row": 6,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Elder Warplate",
+        "category": "dark",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0164",
+      "sheet": "A2",
+      "src_label": "r06c07",
+      "source_row": 6,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Dwarven Plate",
+        "category": "exotic",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0165",
+      "sheet": "A2",
+      "src_label": "r06c08",
+      "source_row": 6,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Doomplate",
+        "category": "legendary",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0167",
+      "sheet": "A2",
+      "src_label": "r07c00",
+      "source_row": 7,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Shadow Cloak of Nocturne",
+        "category": "unique",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0168",
+      "sheet": "A2",
+      "src_label": "r07c01",
+      "source_row": 7,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Celestial Mail",
+        "category": "exotic",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0169",
+      "sheet": "A2",
+      "src_label": "r07c02",
+      "source_row": 7,
+      "source_col": 2,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Runeforged Armor",
+        "category": "elemental",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0170",
+      "sheet": "A2",
+      "src_label": "r07c03",
+      "source_row": 7,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Abyssal Shell",
+        "category": "elemental",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0171",
+      "sheet": "A2",
+      "src_label": "r07c04",
+      "source_row": 7,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Primordial Bastion",
+        "category": "dark",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0172",
+      "sheet": "A2",
+      "src_label": "r07c05",
+      "source_row": 7,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Mythic Bulwark",
+        "category": "godlike",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0173",
+      "sheet": "A2",
+      "src_label": "r07c06",
+      "source_row": 7,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Eldrich Mail",
+        "category": "unique",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0174",
+      "sheet": "A2",
+      "src_label": "r07c07",
+      "source_row": 7,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Worldshield",
+        "category": "legendary",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0175",
+      "sheet": "A2",
+      "src_label": "r07c08",
+      "source_row": 7,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Doomplate",
+        "category": "legendary",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0176",
+      "sheet": "A2",
+      "src_label": "r07c09",
+      "source_row": 7,
+      "source_col": 9,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Aegis of the Paladin",
+        "category": "unique",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0177",
+      "sheet": "A2",
+      "src_label": "r08c00",
+      "source_row": 8,
+      "source_col": 0,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Eternity Aegis",
+        "category": "godlike",
+        "variant_index": 2
+      }
+    },
+    {
+      "pid": "AR0178",
+      "sheet": "A2",
+      "src_label": "r08c01",
+      "source_row": 8,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Titan's Plate",
+        "category": "unique",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0180",
+      "sheet": "A2",
+      "src_label": "r08c03",
+      "source_row": 8,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Cosmic Shell",
+        "category": "godlike",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0182",
+      "sheet": "A2",
+      "src_label": "r08c05",
+      "source_row": 8,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Dragon Scale Armor",
+        "category": "unique",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0183",
+      "sheet": "A2",
+      "src_label": "r08c06",
+      "source_row": 8,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Eternity Aegis",
+        "category": "godlike",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0184",
+      "sheet": "A2",
+      "src_label": "r08c07",
+      "source_row": 8,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Shadow Cloak of Nocturne",
+        "category": "unique",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0188",
+      "sheet": "A2",
+      "src_label": "r09c01",
+      "source_row": 9,
+      "source_col": 1,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Astral Fortress",
+        "category": "godlike",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0190",
+      "sheet": "A2",
+      "src_label": "r09c03",
+      "source_row": 9,
+      "source_col": 3,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Cosmic Shell",
+        "category": "godlike",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0191",
+      "sheet": "A2",
+      "src_label": "r09c04",
+      "source_row": 9,
+      "source_col": 4,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Shadowsteel Mail",
+        "category": "dark",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0192",
+      "sheet": "A2",
+      "src_label": "r09c05",
+      "source_row": 9,
+      "source_col": 5,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Titan Guard",
+        "category": "legendary",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "AR0193",
+      "sheet": "A2",
+      "src_label": "r09c06",
+      "source_row": 9,
+      "source_col": 6,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Enchanted Plate",
+        "category": "elemental",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0194",
+      "sheet": "A2",
+      "src_label": "r09c07",
+      "source_row": 9,
+      "source_col": 7,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Shadow Cloak of Nocturne",
+        "category": "unique",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "AR0195",
+      "sheet": "A2",
+      "src_label": "r09c08",
+      "source_row": 9,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Mythic Bulwark",
+        "category": "godlike",
+        "variant_index": 1
+      }
+    }
+  ],
+  "reserve": [
+    {
+      "pid": "AR0007",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0008",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0010",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0015",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0017",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0026",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0029",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0030",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0032",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0033",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0034",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0035",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0037",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0038",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0041",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0043",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0044",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0046",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0048",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0057",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0060",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0061",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0064",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0066",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0067",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0068",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0070",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0072",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0073",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0074",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0075",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0076",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0082",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0084",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0085",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0088",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0090",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0093",
+      "sheet": "A1",
+      "src_label": "A1",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0097",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0098",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0099",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0100",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0101",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0102",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0103",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0104",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0105",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0106",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0107",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0108",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0109",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0111",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0112",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0113",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0114",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0117",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0121",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0123",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0124",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0126",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0130",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0132",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0133",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0153",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0154",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0157",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0161",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0166",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0179",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0181",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0185",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0186",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    },
+    {
+      "pid": "AR0187",
+      "sheet": "A2",
+      "src_label": "A2",
+      "status": "reserve",
+      "marked": null
+    }
+  ]
+}

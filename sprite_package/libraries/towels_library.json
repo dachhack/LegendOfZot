@@ -1,0 +1,53 @@
+{
+  "category": "towels",
+  "version": 1,
+  "generated_at": "2026-05-02",
+  "chosen_count": 3,
+  "reserve_count": 0,
+  "total_count": 3,
+  "source_pickers": [
+    "migrate-generic-to-reserve (session 3.5)"
+  ],
+  "chosen": [
+    {
+      "pid": "LN0153",
+      "sheet": "LN2",
+      "src_label": "r00c10",
+      "source_row": 0,
+      "source_col": 10,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Towel",
+        "category": "towel",
+        "variant_index": 0
+      }
+    },
+    {
+      "pid": "LN0175",
+      "sheet": "LN2",
+      "src_label": "r02c08",
+      "source_row": 2,
+      "source_col": 8,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Towel",
+        "category": "towel",
+        "variant_index": 1
+      }
+    },
+    {
+      "pid": "LN0177",
+      "sheet": "LN2",
+      "src_label": "r02c10",
+      "source_row": 2,
+      "source_col": 10,
+      "status": "in-game",
+      "game_data": {
+        "item_name": "Towel",
+        "category": "towel",
+        "variant_index": 2
+      }
+    }
+  ],
+  "reserve": []
+}
