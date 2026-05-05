@@ -84,6 +84,28 @@ def get_cryptic_sprite_pid(item, category):
     return pool[_stable_seed(cryptic) % len(pool)]
 
 
+def get_per_spell_sprite_pid(spell):
+    """Return the unique round-8 pid for a specific spell (NOT the shared
+    `?` placeholder used in inventory).
+
+    Used for cast-time animations where each spell should look distinct so
+    the player can learn the icon-to-spell association by sight.
+    """
+    pool = _POOLS.get('spells')
+    if not pool:
+        return None
+    try:
+        from .. import game_state as _gs
+        mapping = _gs.item_cryptic_mapping.get('spells', {}) if _gs.item_cryptic_mapping else {}
+    except Exception:
+        mapping = {}
+    name = getattr(spell, 'name', '') or ''
+    cryptic = mapping.get(name, name)
+    if not cryptic:
+        return None
+    return pool[_stable_seed(cryptic) % len(pool)]
+
+
 def _pick_named(cat_map, key):
     """Pick a deterministic (pid, variant_index) for a named item.
 
