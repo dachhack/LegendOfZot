@@ -1341,6 +1341,264 @@ def generate_spell_cast_js(spell):
     )
 
 
+# === Spell icon visual buckets ===========================================
+# Each spell's cast animation uses its round-8 sprite (the unique book /
+# glyph icon, not the inventory `?` placeholder). The animation style is
+# chosen by bucket: projectile, aoe, heal, buff, cleanse, ultimate.
+
+_AOE_SPELLS = frozenset({
+    'Inferno', 'Blizzard', 'Earthquake', 'Tsunami', 'Meteor Strike',
+    'Chain Lightning', 'Thunder Clap', 'Mass Heal', 'Psychic Scream',
+    'Holy Light',
+})
+
+_ULTIMATE_SPELLS = frozenset({
+    'Time Stop', 'Armageddon', 'Supernova', 'Black Hole',
+    'Divine Intervention', 'Perfect Regeneration', 'Ultimate Shield',
+})
+
+_CLEANSE_SPELLS = frozenset({
+    'Purify', 'Cure Weakness', 'Freedom',
+})
+
+
+def _spell_visual_bucket(spell):
+    """Map a spell to one of six animation buckets."""
+    if spell is None:
+        return None
+    name = getattr(spell, 'name', '')
+    if name in _ULTIMATE_SPELLS:
+        return 'ultimate'
+    if name in _AOE_SPELLS:
+        return 'aoe'
+    if name in _CLEANSE_SPELLS:
+        return 'cleanse'
+    stype = getattr(spell, 'spell_type', 'damage')
+    if stype == 'healing':
+        return 'heal'
+    if stype == 'remove_status':
+        return 'cleanse'
+    if stype == 'buff':
+        return 'buff'
+    return 'projectile'
+
+
+def generate_spell_icon_visual_js(spell):
+    """Animate the spell's round-8 sprite icon during cast.
+
+    Returns a `<script>` tag containing per-bucket animation JS, or '' if
+    the spell has no sprite or the bucket is unknown. The script runs
+    alongside generate_spell_cast_js (banner+tint) and
+    generate_spell_particles_js (per-element particles) — those handle
+    the wash and the tail; this one handles the spell's identity.
+    """
+    if not spell:
+        return ''
+    try:
+        from .sprites.identifiables import get_per_spell_sprite_pid
+        from .sprites import get_image_b64
+    except Exception:
+        return ''
+    pid = get_per_spell_sprite_pid(spell)
+    if not pid:
+        return ''
+    img_b64 = get_image_b64(pid)
+    if not img_b64:
+        return ''
+
+    bucket = _spell_visual_bucket(spell)
+    if not bucket:
+        return ''
+
+    dtype = _spell_visual_element(spell)
+    color = ELEMENT_COLORS.get(dtype, '#FFFFFF')
+    glow_color = color
+    img_uri = 'data:image/webp;base64,' + img_b64
+
+    # Common scaffold: an <img> overlay positioned over the viewport.
+    # Each bucket sets cssText, schedules transitions, and removes itself.
+    base = (
+        'var img=document.createElement("img");'
+        'img.src="' + img_uri + '";'
+        'img.style.imageRendering="pixelated";'
+    )
+
+    if bucket == 'projectile':
+        # Spawn near the bottom-left (player side of the combat panel),
+        # animate across to the right (monster side), scaling up and
+        # spinning, then fade on impact.
+        return (
+            '<script>(function(){'
+            + base +
+            'img.style.cssText="position:fixed;bottom:30%;left:18%;width:56px;height:56px;'
+            'image-rendering:pixelated;z-index:99997;opacity:0;'
+            'transform:translate(0,0) scale(0.6) rotate(0deg);'
+            'transition:all 0.45s cubic-bezier(.5,.05,.95,.7);'
+            'filter:drop-shadow(0 0 14px ' + glow_color + ');";'
+            'document.body.appendChild(img);'
+            'setTimeout(function(){'
+            'img.style.opacity="1";'
+            'img.style.left="68%";'
+            'img.style.transform="translate(0,-40px) scale(1.4) rotate(540deg)";'
+            '},40);'
+            'setTimeout(function(){'
+            'img.style.transition="opacity 0.18s ease-in,transform 0.18s ease-in";'
+            'img.style.opacity="0";'
+            'img.style.transform="translate(0,-40px) scale(2.2) rotate(540deg)";'
+            '},480);'
+            'setTimeout(function(){if(img.parentNode)img.parentNode.removeChild(img);},760);'
+            '})();</script>'
+        )
+
+    if bucket == 'aoe':
+        # Big icon flashes center-screen. Existing screen tint + particles
+        # cover the rest.
+        return (
+            '<script>(function(){'
+            + base +
+            'img.style.cssText="position:fixed;top:38%;left:50%;width:160px;height:160px;'
+            'image-rendering:pixelated;z-index:99997;opacity:0;'
+            'transform:translate(-50%,-50%) scale(0.5) rotate(0deg);'
+            'transition:all 0.22s ease-out;'
+            'filter:drop-shadow(0 0 22px ' + glow_color + ');";'
+            'document.body.appendChild(img);'
+            'setTimeout(function(){'
+            'img.style.opacity="0.92";'
+            'img.style.transform="translate(-50%,-50%) scale(1.15) rotate(8deg)";'
+            '},40);'
+            'setTimeout(function(){'
+            'img.style.transition="opacity 0.4s ease-in,transform 0.4s ease-in";'
+            'img.style.opacity="0";'
+            'img.style.transform="translate(-50%,-50%) scale(2.0) rotate(-12deg)";'
+            '},420);'
+            'setTimeout(function(){if(img.parentNode)img.parentNode.removeChild(img);},900);'
+            '})();</script>'
+        )
+
+    if bucket == 'heal':
+        # Icon descends from above onto the player area (left side of HUD)
+        # with a green-gold glow, then fades out gently.
+        return (
+            '<script>(function(){'
+            + base +
+            'img.style.cssText="position:fixed;top:-80px;left:24%;width:72px;height:72px;'
+            'image-rendering:pixelated;z-index:99997;opacity:0;'
+            'transform:translate(-50%,0) rotate(0deg);'
+            'transition:all 0.6s cubic-bezier(.25,.1,.25,1);'
+            'filter:drop-shadow(0 0 18px #4CFF8C) drop-shadow(0 0 8px #FFD700);";'
+            'document.body.appendChild(img);'
+            'setTimeout(function(){'
+            'img.style.opacity="1";'
+            'img.style.top="44%";'
+            'img.style.transform="translate(-50%,0) rotate(360deg)";'
+            '},40);'
+            'setTimeout(function(){'
+            'img.style.transition="opacity 0.5s ease-in,transform 0.5s ease-in";'
+            'img.style.opacity="0";'
+            'img.style.transform="translate(-50%,-40px) scale(0.8) rotate(360deg)";'
+            '},800);'
+            'setTimeout(function(){if(img.parentNode)img.parentNode.removeChild(img);},1400);'
+            '})();</script>'
+        )
+
+    if bucket == 'buff':
+        # Icon orbits the player area in a half-loop and settles into a
+        # pulsing glow before fading.
+        return (
+            '<script>(function(){'
+            + base +
+            'img.style.cssText="position:fixed;bottom:32%;left:24%;width:56px;height:56px;'
+            'image-rendering:pixelated;z-index:99997;opacity:0;'
+            'transform:translate(-50%,0) scale(0.5);'
+            'transition:all 0.3s ease-out;'
+            'filter:drop-shadow(0 0 14px ' + glow_color + ') drop-shadow(0 0 4px #FFD700);";'
+            'document.body.appendChild(img);'
+            'setTimeout(function(){'
+            'img.style.opacity="1";'
+            'img.style.transform="translate(-50%,0) scale(1.1)";'
+            '},40);'
+            'setTimeout(function(){'
+            'img.style.transition="all 0.35s ease-in-out";'
+            'img.style.transform="translate(40px,-40px) scale(1)";'
+            '},340);'
+            'setTimeout(function(){'
+            'img.style.transform="translate(-90px,-40px) scale(1)";'
+            '},680);'
+            'setTimeout(function(){'
+            'img.style.transform="translate(-50%,-30px) scale(1.2)";'
+            '},1020);'
+            'setTimeout(function(){'
+            'img.style.transition="opacity 0.4s ease-in,transform 0.4s ease-in";'
+            'img.style.opacity="0";'
+            'img.style.transform="translate(-50%,0) scale(0.6)";'
+            '},1300);'
+            'setTimeout(function(){if(img.parentNode)img.parentNode.removeChild(img);},1800);'
+            '})();</script>'
+        )
+
+    if bucket == 'cleanse':
+        # Icon spirals around the player position with a white-gold sparkle
+        # filter, briefly inflates, then fades.
+        return (
+            '<script>(function(){'
+            + base +
+            'img.style.cssText="position:fixed;bottom:32%;left:24%;width:56px;height:56px;'
+            'image-rendering:pixelated;z-index:99997;opacity:0;'
+            'transform:translate(-50%,0) rotate(0deg) scale(0.6);'
+            'transition:all 0.55s cubic-bezier(.25,.1,.25,1);'
+            'filter:drop-shadow(0 0 16px #FFFFFF) drop-shadow(0 0 6px #FFD700);";'
+            'document.body.appendChild(img);'
+            'setTimeout(function(){'
+            'img.style.opacity="1";'
+            'img.style.transform="translate(-50%,-40px) rotate(720deg) scale(1.4)";'
+            '},40);'
+            'setTimeout(function(){'
+            'img.style.transition="opacity 0.4s ease-in,transform 0.4s ease-in";'
+            'img.style.opacity="0";'
+            'img.style.transform="translate(-50%,-80px) rotate(1080deg) scale(0.8)";'
+            '},700);'
+            'setTimeout(function(){if(img.parentNode)img.parentNode.removeChild(img);},1200);'
+            '})();</script>'
+        )
+
+    if bucket == 'ultimate':
+        # Black wash + huge icon held center-screen for ~0.8s with intense
+        # drop-shadow glow, then both fade out.
+        return (
+            '<script>(function(){'
+            'var ovl=document.createElement("div");'
+            'ovl.style.cssText="position:fixed;top:0;left:0;right:0;bottom:0;z-index:99996;'
+            'background:#000;opacity:0;transition:opacity 0.18s ease-out;pointer-events:none;";'
+            'document.body.appendChild(ovl);'
+            'setTimeout(function(){ovl.style.opacity="0.8";},40);'
+            + base +
+            'img.style.cssText="position:fixed;top:50%;left:50%;width:240px;height:240px;'
+            'image-rendering:pixelated;z-index:99997;opacity:0;'
+            'transform:translate(-50%,-50%) scale(0.2) rotate(0deg);'
+            'transition:all 0.35s cubic-bezier(.34,1.56,.64,1);'
+            'filter:drop-shadow(0 0 36px ' + glow_color + ') drop-shadow(0 0 12px #FFD700);";'
+            'document.body.appendChild(img);'
+            'setTimeout(function(){'
+            'img.style.opacity="1";'
+            'img.style.transform="translate(-50%,-50%) scale(1) rotate(360deg)";'
+            '},80);'
+            'setTimeout(function(){'
+            'img.style.transition="opacity 0.5s ease-in,transform 0.5s ease-in";'
+            'ovl.style.transition="opacity 0.5s ease-in";'
+            'img.style.opacity="0";'
+            'ovl.style.opacity="0";'
+            'img.style.transform="translate(-50%,-50%) scale(1.6) rotate(360deg)";'
+            '},900);'
+            'setTimeout(function(){'
+            'if(img.parentNode)img.parentNode.removeChild(img);'
+            'if(ovl.parentNode)ovl.parentNode.removeChild(ovl);'
+            '},1500);'
+            '})();</script>'
+        )
+
+    return ''
+
+
 def generate_spell_particles_js(spell):
     """Generate element-specific particle effects via a temporary canvas overlay.
 
@@ -4449,6 +4707,7 @@ class WizardsCavernApp(toga.App):
         anim_scripts = []
         for raw in (
             generate_spell_cast_js(gs.last_spell_cast),
+            generate_spell_icon_visual_js(gs.last_spell_cast),
             generate_spell_particles_js(gs.last_spell_cast),
             generate_dice_roll_js(gs.last_dice_rolls),
             generate_concentration_check_js(gs.last_concentration_roll),
@@ -10033,6 +10292,7 @@ class WizardsCavernApp(toga.App):
                 }}
             </script>
             {generate_spell_cast_js(gs.last_spell_cast)}
+            {generate_spell_icon_visual_js(gs.last_spell_cast)}
             {generate_spell_particles_js(gs.last_spell_cast)}
             {generate_dice_roll_js(gs.last_dice_rolls)}
             {generate_concentration_check_js(gs.last_concentration_roll)}

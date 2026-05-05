@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 137
+BUILD_NUMBER = 138
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Spell cast animations! Spell icons fly, flash, descend, orbit, spiral, or fill the screen depending on the spell type",
     "Loot toast popups — find an item, see a banner with its icon and name fade in at the top of the screen",
     "Every item now has an inventory icon — weapons, armor, accessories, food, ingredients, treasures, runes, shards, trophies, lanterns, towels, bug armors",
     "Spells share a single placeholder ? icon — all spells look the same in inventory until you've cast them",
