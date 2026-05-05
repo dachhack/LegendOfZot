@@ -48,6 +48,11 @@ previous_prompt_cntl = ""
 # the player taps a portrait. None means the new-character path: launch
 # the starting shop.
 player_sprite_return_to = None
+
+# Loot toast popup queue. Each entry is
+# {'icon': html, 'text': str, 'created_at': float}. The renderer reads,
+# emits, and prunes via wizardscavern.sprites.loot_toast.
+loot_toasts = []
 game_should_quit = False
 lets_go = False
 html_cache = ""
