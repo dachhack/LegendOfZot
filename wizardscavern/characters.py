@@ -180,16 +180,26 @@ class Inventory:
     def __init__(self, items=None):
         self.items = items if items is not None else []
 
-    def add_item(self, item_obj):
+    def add_item(self, item_obj, notify=True):
         # Register discovery
         register_item_discovery = _get_register_item_discovery()
         register_item_discovery(item_obj)
+
+        def _toast():
+            if not notify:
+                return
+            try:
+                from .sprites.loot_toast import notify_loot
+                notify_loot(item_obj)
+            except Exception:
+                pass
 
         # Stack Flares
         if isinstance(item_obj, Flare):
             for item in self.items:
                 if isinstance(item, Flare) and item.name == item_obj.name:
                     item.count += item_obj.count
+                    _toast()
                     return
 
         # Stack Potions (same name = same type)
@@ -199,6 +209,7 @@ class Inventory:
                     count_to_add = getattr(item_obj, 'count', 1)
                     item.count = getattr(item, 'count', 1) + count_to_add
                     display_name = _get_item_display_name(item_obj)
+                    _toast()
                     return
 
         # Stack Scrolls (same name and type)
@@ -208,6 +219,7 @@ class Inventory:
                     count_to_add = getattr(item_obj, 'count', 1)
                     item.count = getattr(item, 'count', 1) + count_to_add
                     display_name = _get_item_display_name(item_obj)
+                    _toast()
                     return
 
         # Stack Ingredients (same name)
@@ -216,6 +228,7 @@ class Inventory:
                 if isinstance(item, Ingredient) and item.name == item_obj.name:
                     count_to_add = getattr(item_obj, 'count', 1)
                     item.count = getattr(item, 'count', 1) + count_to_add
+                    _toast()
                     return
 
         # Stack Lantern Fuel (same name)
@@ -224,6 +237,7 @@ class Inventory:
                 if isinstance(item, LanternFuel) and item.name == item_obj.name:
                     count_to_add = getattr(item_obj, 'count', 1)
                     item.count = getattr(item, 'count', 1) + count_to_add
+                    _toast()
                     return
 
         # Stack Food items (same name - Rations etc.)
@@ -233,9 +247,11 @@ class Inventory:
                 if isinstance(item, Food) and item.name == item_obj.name:
                     count_to_add = getattr(item_obj, 'count', 1)
                     item.count = getattr(item, 'count', 1) + count_to_add
+                    _toast()
                     return
 
         self.items.append(item_obj)
+        _toast()
 
         # ADD THIS HELPFUL HINT
         if isinstance(item_obj, Lantern):

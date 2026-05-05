@@ -461,7 +461,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 items_identified = 0
                 for item_to_buy in list(vendor_character.inventory.items): # Iterate over a copy
                     new_item = _create_item_copy(item_to_buy)
-                    player_character.inventory.add_item(new_item)
+                    player_character.inventory.add_item(new_item, notify=False)
                     # Auto-identify purchased items
                     if isinstance(new_item, (Potion, Scroll, Weapon, Armor)) and not is_item_identified(new_item):
                         identify_item(new_item, silent=True)
@@ -500,7 +500,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
 
                     new_item = _create_item_copy(item_to_buy)
 
-                    player_character.inventory.add_item(new_item)
+                    player_character.inventory.add_item(new_item, notify=False)
                     # Remove the actual item from vendor's inventory (not by index since we used sorted)
                     vendor_character.inventory.items.remove(item_to_buy)
 
