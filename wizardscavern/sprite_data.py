@@ -6650,12 +6650,63 @@ def generate_room_sprite_html(room_type, variant=None, seed=None):
 
 
 
-def generate_player_sprite_html(race, armor_state='none'):
+def _try_new_player_sprite(seed):
+    """Render a player avatar via the round-8 characters pool.
+
+    Returns HTML or None if the pool is empty / disabled.
     """
-    Generate a player character sprite based on race and armor state.
-    Uses Player1 sprite sheet (16x16 sprites, 8 cols x 15 rows).
-    armor_state: 'none', 'nonmetal', or 'metal'
+    try:
+        from .sprites import characters as _csprites
+        from .sprites import get_generic_variant, get_image_b64
+    except Exception:
+        return None
+    if not _csprites._CHARACTERS_POOL:
+        return None
+    pid = get_generic_variant(_csprites._CHARACTERS_POOL, seed=seed)
+    if not pid:
+        return None
+    img_b64 = get_image_b64(pid)
+    if not img_b64:
+        return None
+
+    SIZE = 64
+    img_uri = "data:image/webp;base64," + img_b64
+    return (
+        '<div id="player_sprite_wrap" style="position:relative;display:inline-block;overflow:visible;">'
+        f'<canvas id="player_sprite" width="{SIZE}" height="{SIZE}"'
+        ' style="image-rendering:pixelated;image-rendering:crisp-edges;'
+        'display:block;margin:4px auto;"></canvas>'
+        '<script>(function(){'
+        'var c=document.getElementById("player_sprite");'
+        'if(!c)return;'
+        'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
+        'var img=new Image();'
+        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});}};'
+        f'img.src="{img_uri}";'
+        '})()'
+        '</script>'
+        '</div>'
+    )
+
+
+def generate_player_sprite_html(race, armor_state='none', seed=None):
     """
+    Generate a player character sprite.
+
+    If `seed` is provided, picks one of the 73 character avatars from the
+    round-8 pool — same seed always renders the same avatar. Typically the
+    seed is a tuple of (race, gender, character_name) so each character a
+    player creates gets a unique-ish look that stays stable.
+
+    If `seed` is None, falls back to the legacy Player1 16x16 sheet keyed
+    by (race, armor_state).
+    """
+    if seed is not None:
+        new_html = _try_new_player_sprite(seed)
+        if new_html is not None:
+            return new_html
+
+    # Legacy path — Player1 sprite sheet (16x16 sprites, 8 cols x 15 rows).
     _PLAYER_MAP = {
         ('human', 'none'):      (0, 5),
         ('human', 'nonmetal'):  (2, 5),

@@ -2046,15 +2046,22 @@ def get_evolution_tier_style(monster):
     return '', ''  # Normal: no border, no label
 
 
-def generate_player_sprite_html(race, gender, equipped_armor=None):
-    """Wrapper that resolves armor state, then delegates to sprite_data."""
+def generate_player_sprite_html(race, gender, equipped_armor=None, character_name=None):
+    """Wrapper that resolves armor state, then delegates to sprite_data.
+
+    When `character_name` is provided, the round-8 character pool is used
+    seeded by (race, gender, character_name) — every character a player
+    creates gets a stable-but-unique avatar. Without a name, falls back
+    to the legacy race+armor_state Player1 sheet for save-compat.
+    """
     if equipped_armor is None or getattr(equipped_armor, 'is_broken', False):
         armor_state = 'none'
     elif is_metal_item(equipped_armor):
         armor_state = 'metal'
     else:
         armor_state = 'nonmetal'
-    return _generate_player_sprite_html(race, armor_state)
+    seed = (race, gender, character_name) if character_name else None
+    return _generate_player_sprite_html(race, armor_state, seed=seed)
 
 def can_cast_spells(player_character):
     """
@@ -4805,7 +4812,7 @@ class WizardsCavernApp(toga.App):
                             <div style="border: 2px solid #4FC3F7; border-radius: 8px; padding: 15px; background: #111; text-align: left;">
                                 <!-- Character Header -->
                                 <div style="text-align: center; margin-bottom: 10px;">
-                                    {generate_player_sprite_html(getattr(loaded_char, 'race', 'human'), getattr(loaded_char, 'gender', 'male'), getattr(loaded_char, 'equipped_armor', None))}
+                                    {generate_player_sprite_html(getattr(loaded_char, 'race', 'human'), getattr(loaded_char, 'gender', 'male'), getattr(loaded_char, 'equipped_armor', None), character_name=getattr(loaded_char, 'name', None))}
                                     <div style="font-size: 20px; font-weight: bold; color: #FFD700;">
                                         {loaded_char.name}
                                     </div>
@@ -5710,7 +5717,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                character_name=getattr(gs.player_character, 'name', None),
             )
             stats_html = f"""
                 {player_sprite_html}
@@ -6397,7 +6405,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                character_name=getattr(gs.player_character, 'name', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
@@ -6531,7 +6540,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                character_name=getattr(gs.player_character, 'name', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
@@ -6648,7 +6658,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                character_name=getattr(gs.player_character, 'name', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
@@ -6730,7 +6741,8 @@ class WizardsCavernApp(toga.App):
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
-                getattr(gs.player_character, 'equipped_armor', None)
+                getattr(gs.player_character, 'equipped_armor', None),
+                character_name=getattr(gs.player_character, 'name', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;{low_hp_pulse_style}">
