@@ -490,6 +490,7 @@ class SaveSystem:
             'gender': getattr(character, 'gender', 'Unknown'),
             'title': getattr(character, 'title', ''),
             'character_class': getattr(character, 'character_class', 'Adventurer'),
+            'sprite_pid': getattr(character, 'sprite_pid', None),
             'health': character.health,
             # Don't save max_health - it's computed from level, strength, and bonus
             'base_max_health_bonus': getattr(character, 'base_max_health_bonus', 0),
@@ -551,6 +552,7 @@ class SaveSystem:
         character.gender = data.get('gender', 'Unknown')
         character.title = data.get('title', '')
         character.character_class = data.get('character_class', 'Adventurer')
+        character.sprite_pid = data.get('sprite_pid', None)
         character.hunger = data.get('hunger', HUNGER_MAX)
         character.hunger_freeze_turns = data.get('hunger_freeze_turns', 0)
         character.hunger_regen_tracker = data.get('hunger_regen_tracker', 0)

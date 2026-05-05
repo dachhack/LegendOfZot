@@ -99,6 +99,7 @@ def get_audio_mood(prompt_cntl):
     """
     if prompt_cntl in ('splash', 'intro_story', 'main_menu',
                         'player_name', 'player_race', 'player_gender',
+                        'player_sprite',
                         'starting_shop', 'game_loaded_summary',
                         'save_load_mode', 'load_pending', 'confirm_quit'):
         return 'menu'
@@ -2046,13 +2047,17 @@ def get_evolution_tier_style(monster):
     return '', ''  # Normal: no border, no label
 
 
-def generate_player_sprite_html(race, gender, equipped_armor=None, character_name=None):
+def generate_player_sprite_html(race, gender, equipped_armor=None, character_name=None, sprite_pid=None):
     """Wrapper that resolves armor state, then delegates to sprite_data.
 
-    When `character_name` is provided, the round-8 character pool is used
-    seeded by (race, gender, character_name) — every character a player
-    creates gets a stable-but-unique avatar. Without a name, falls back
-    to the legacy race+armor_state Player1 sheet for save-compat.
+    Precedence:
+      1. `sprite_pid` (player picked at character creation) — render that
+         exact avatar.
+      2. `character_name` (auto-pick) — pool is seeded by
+         (race, gender, character_name) so a fresh character gets a
+         stable-but-unique look.
+      3. neither — legacy Player1 16x16 sheet keyed by (race, armor_state)
+         for old-save compat.
     """
     if equipped_armor is None or getattr(equipped_armor, 'is_broken', False):
         armor_state = 'none'
@@ -2061,7 +2066,7 @@ def generate_player_sprite_html(race, gender, equipped_armor=None, character_nam
     else:
         armor_state = 'nonmetal'
     seed = (race, gender, character_name) if character_name else None
-    return _generate_player_sprite_html(race, armor_state, seed=seed)
+    return _generate_player_sprite_html(race, armor_state, seed=seed, sprite_pid=sprite_pid)
 
 def can_cast_spells(player_character):
     """
@@ -4350,6 +4355,8 @@ class WizardsCavernApp(toga.App):
             create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
         elif gs.prompt_cntl == "player_gender":
             create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
+        elif gs.prompt_cntl == "player_sprite":
+            create_player_character(gs.my_tower, gs.player_character, gs.prompt_cntl, cmd)
         elif _handle(gs.my_tower, gs.player_character, cmd):
             pass
         else: # This 'else' block means gs.prompt_cntl is "game_loop" or similar map-based interaction.
@@ -4651,7 +4658,7 @@ class WizardsCavernApp(toga.App):
             return html_code
 
         # Player stats - hide HP/MP during character creation and starting shop
-        show_bars = gs.prompt_cntl not in ['splash', 'intro_story', 'player_name', 'player_race', 'player_gender', 'starting_shop']
+        show_bars = gs.prompt_cntl not in ['splash', 'intro_story', 'player_name', 'player_race', 'player_gender', 'player_sprite', 'starting_shop']
 
         # Get dynamic title
         player_title = get_player_title(gs.player_character) if show_bars else ""
@@ -4812,7 +4819,7 @@ class WizardsCavernApp(toga.App):
                             <div style="border: 2px solid #4FC3F7; border-radius: 8px; padding: 15px; background: #111; text-align: left;">
                                 <!-- Character Header -->
                                 <div style="text-align: center; margin-bottom: 10px;">
-                                    {generate_player_sprite_html(getattr(loaded_char, 'race', 'human'), getattr(loaded_char, 'gender', 'male'), getattr(loaded_char, 'equipped_armor', None), character_name=getattr(loaded_char, 'name', None))}
+                                    {generate_player_sprite_html(getattr(loaded_char, 'race', 'human'), getattr(loaded_char, 'gender', 'male'), getattr(loaded_char, 'equipped_armor', None), character_name=getattr(loaded_char, 'name', None), sprite_pid=getattr(loaded_char, 'sprite_pid', None))}
                                     <div style="font-size: 20px; font-weight: bold; color: #FFD700;">
                                         {loaded_char.name}
                                     </div>
@@ -5031,6 +5038,49 @@ class WizardsCavernApp(toga.App):
                 </div>
                 """
             current_commands_text = "Tap a gender"
+
+        elif gs.prompt_cntl == "player_sprite":
+            # PORTRAIT PICKER — scrollable grid of all 73 round-8 character
+            # avatars. Tap a card -> sends 'sp<n>' which stores the chosen
+            # pid and advances to the starting shop.
+            from .sprites.characters import _CHARACTERS_POOL
+            from .sprites import get_image_b64
+            tiles = []
+            for idx, pid in enumerate(_CHARACTERS_POOL, start=1):
+                img_b64 = get_image_b64(pid)
+                if not img_b64:
+                    continue
+                cmd = f"sp{idx}"
+                tiles.append(
+                    f"<div class='taprow altar-act' "
+                    f"style='display:inline-block;width:80px;margin:4px;padding:6px;"
+                    f"text-align:center;vertical-align:top;background:#222;border-radius:6px;' "
+                    f"data-zcmd='{cmd}' onclick=\"window.__zotTap('{cmd}', this)\">"
+                    f"<canvas id='spk_{idx}' width='64' height='64' "
+                    f"style='image-rendering:pixelated;image-rendering:crisp-edges;display:block;margin:0 auto;'></canvas>"
+                    f"<script>(function(){{var c=document.getElementById('spk_{idx}');"
+                    f"if(!c)return;var ctx=c.getContext('2d');ctx.imageSmoothingEnabled=false;"
+                    f"var img=new Image();img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,64,64);}};"
+                    f"img.src='data:image/webp;base64,{img_b64}';}})()</script>"
+                    f"</div>"
+                )
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 12px; padding: 10px;">
+                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 12px; color: #FFD700; text-align: center;">
+                        CHARACTER CREATION
+                    </div>
+                    <div style="font-size: 12px; margin-bottom: 6px; color: #FFFFFF;">
+                        <b>{gs.player_character.race.title()}</b> &middot; <b>{gs.player_character.gender.title()}</b>
+                    </div>
+                    <div style="font-size: 12px; margin-bottom: 12px; color: #FFFFFF;">
+                        Pick your portrait:
+                    </div>
+                    <div style="max-height: 480px; overflow-y: auto; text-align: center; padding: 4px; border: 1px solid #444; border-radius: 6px;">
+                        {''.join(tiles)}
+                    </div>
+                </div>
+                """
+            current_commands_text = "Tap a portrait"
 
         elif gs.prompt_cntl == "achievements_mode":
             # ACHIEVEMENTS VIEW
@@ -5719,6 +5769,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'gender', 'male'),
                 getattr(gs.player_character, 'equipped_armor', None),
                 character_name=getattr(gs.player_character, 'name', None),
+                sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
             stats_html = f"""
                 {player_sprite_html}
@@ -6407,6 +6458,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'gender', 'male'),
                 getattr(gs.player_character, 'equipped_armor', None),
                 character_name=getattr(gs.player_character, 'name', None),
+                sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
@@ -6542,6 +6594,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'gender', 'male'),
                 getattr(gs.player_character, 'equipped_armor', None),
                 character_name=getattr(gs.player_character, 'name', None),
+                sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
@@ -6660,6 +6713,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'gender', 'male'),
                 getattr(gs.player_character, 'equipped_armor', None),
                 character_name=getattr(gs.player_character, 'name', None),
+                sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 3px; border-radius: 3px; border: 2px solid #666;{low_hp_pulse_style}">
@@ -6743,6 +6797,7 @@ class WizardsCavernApp(toga.App):
                 getattr(gs.player_character, 'gender', 'male'),
                 getattr(gs.player_character, 'equipped_armor', None),
                 character_name=getattr(gs.player_character, 'name', None),
+                sprite_pid=getattr(gs.player_character, 'sprite_pid', None),
             )
             player_combat_html = f"""
                 <div id="player_panel" style="position:relative; padding: 4px; border-radius: 4px; border: 2px solid #666;{low_hp_pulse_style}">

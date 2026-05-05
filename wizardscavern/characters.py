@@ -819,6 +819,9 @@ class Character:
         self.race = "Human"
         self.gender = "Unknown"
         self.character_class = "Adventurer"
+        # Player-chosen avatar sprite (a pid from the round-8 characters
+        # pool). When None the renderer falls back to a seeded auto-pick.
+        self.sprite_pid = None
         self.elemental_strengths = [] # Initialize as empty list
         self.elemental_weaknesses = [] # Initialize as empty list
         self.elemental_resistance = [] # For permanent resistances from potions

@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 132
+BUILD_NUMBER = 133
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Pick your portrait! New character creation step shows all 73 avatars in a tappable grid",
     "Player avatar now picks from 73 round-8 character sprites — each new character gets a unique stable look",
     "Each monster instance now picks its own sprite variant — same Goblin always looks the same, different Goblins vary",
     "Each room instance now picks its own variant — same Chest looks the same when you come back, but different Chests vary",
