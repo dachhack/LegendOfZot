@@ -4,9 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 135
+BUILD_NUMBER = 136
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Every item now has an inventory icon — weapons, armor, accessories, food, ingredients, treasures, runes, shards, trophies, lanterns, towels, bug armors",
+    "Spells share a single placeholder ? icon — all spells look the same in inventory until you've cast them",
     "Potions, scrolls, and spells now have icons — each new game shuffles which sprite means what (NetHack-style)",
     "Change Portrait button on the Character Stats screen — re-pick your avatar any time",
     "Pick your portrait! New character creation step shows all 73 avatars in a tappable grid",
