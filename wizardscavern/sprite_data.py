@@ -6060,10 +6060,84 @@ _SHEETS = {
     ),
 }
 
+# Evolution prefixes the dungeon spawns at higher floor depths. Stripped
+# when looking up base monster names in the new sprite map.
+_EVO_PREFIXES = ('Hardened ', 'Savage ', 'Dread ', 'Mythic ')
+
+
+def _strip_evo_prefix(name):
+    for p in _EVO_PREFIXES:
+        if name.startswith(p):
+            return name[len(p):]
+    return name
+
+
+def _try_new_monster_sprite(monster_name):
+    """Render via the new round-8 system, or return None if monster_name
+    isn't in the new map (caller should fall back to the legacy path).
+    """
+    try:
+        from .sprites import monsters as _msprites
+        from .sprites import get_named_variant, get_image_b64
+    except Exception:
+        return None
+
+    cat_map = _msprites._MONSTERS_MAP
+
+    # Try as-is, then with evolution prefix stripped.
+    base_name = monster_name
+    if monster_name not in cat_map:
+        stripped = _strip_evo_prefix(monster_name)
+        if stripped in cat_map:
+            base_name = stripped
+        else:
+            # Not covered by the new map yet — fall back.
+            return None
+
+    # Same monster type uses the same variant for now (deterministic by
+    # name). Per-instance variety can come later by passing instance ids.
+    variant = get_named_variant(cat_map, base_name, seed=monster_name)
+    if variant is None:
+        return None
+    pid, _vi = variant
+    img_b64 = get_image_b64(pid)
+    if not img_b64:
+        return None
+
+    # Pre-rendered sprites are 96x96 webp; we draw them into a 64x64 canvas
+    # to match the legacy display size.
+    safe_id = "ms_" + "".join(ch if ch.isalnum() else "_" for ch in monster_name)
+    SIZE = 64
+    img_uri = "data:image/webp;base64," + img_b64
+    return (
+        f'<div id="{safe_id}_wrap" style="position:relative;display:inline-block;overflow:visible;">'
+        f'<canvas id="{safe_id}" width="{SIZE}" height="{SIZE}" '
+        f'style="image-rendering:pixelated;image-rendering:crisp-edges;'
+        f'display:block;margin:2px auto;"></canvas>'
+        f'<script>(function(){{'
+        f'var c=document.getElementById("{safe_id}");if(!c)return;'
+        f'var ctx=c.getContext("2d");ctx.imageSmoothingEnabled=false;'
+        f'var img=new Image();'
+        f'img.onload=function(){{ctx.drawImage(img,0,0,img.naturalWidth,img.naturalHeight,0,0,{SIZE},{SIZE});}};'
+        f'img.src="{img_uri}";'
+        f'}})()</script>'
+        f'</div>'
+    )
+
+
 def generate_monster_sprite_html(monster_name):
     """
-    Generate a sprite for a monster by cropping from sprite sheets.
+    Generate a sprite for a monster.
+
+    Tries the new round-8 sprite system first (per-monster variants from
+    wizardscavern.sprites.monsters._MONSTERS_MAP rendered from the
+    canonical pool). Falls back to the legacy sheet-based system for
+    monsters not yet covered by the new map.
     """
+    new_html = _try_new_monster_sprite(monster_name)
+    if new_html is not None:
+        return new_html
+
     _MAP = {
         'ANCIENT': ('Humanoid1', 1, 10),
         'ARCHLICH': ('RogueLike1', 4, 6),

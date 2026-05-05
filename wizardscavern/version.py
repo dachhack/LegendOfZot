@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 126
+BUILD_NUMBER = 127
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Monsters now render from the round-8 sprite pool — 124 monsters x 3 variants each",
     "Reverted prior sprite work — fresh approach coming",
     "FIX: Character creation (race + gender) now has tappable choice cards",
     "FIX: Character Stats screen has a tappable Back to Inventory card",
