@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 138
+BUILD_NUMBER = 139
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Internal: deleted ~24 MB of legacy sprite-sheet base64 now that everything renders from the round-8 pool",
     "Spell cast animations! Spell icons fly, flash, descend, orbit, spiral, or fill the screen depending on the spell type",
     "Loot toast popups — find an item, see a banner with its icon and name fade in at the top of the screen",
     "Every item now has an inventory icon — weapons, armor, accessories, food, ingredients, treasures, runes, shards, trophies, lanterns, towels, bug armors",
