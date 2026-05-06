@@ -9169,6 +9169,7 @@ class WizardsCavernApp(toga.App):
             # tap targets stay close to the action.  Stairs chip appears
             # only when standing on U/D so the body doesn't clutter.
             hud_chips_html = ""
+            bigdpad_html = ""
             if gs.prompt_cntl == "game_loop":
                 _floor = gs.my_tower.floors[gs.player_character.z]
                 _here = _floor.grid[gs.player_character.y][gs.player_character.x]
@@ -9198,6 +9199,41 @@ class WizardsCavernApp(toga.App):
                     "<div class='hudchips'>" + "".join(_chips) + "</div>"
                 )
 
+                # Big in-body d-pad — fills the empty area under the map
+                # with chunky tap targets. Disabled directions grey out so
+                # you can see at a glance which way you can step.  Tile
+                # taps in the map still work as a shortcut, but this is
+                # the primary movement UI now.
+                _px, _py = gs.player_character.x, gs.player_character.y
+                _wall = _floor.wall_char
+                def _can(nx, ny):
+                    return (0 <= nx < _floor.cols and 0 <= ny < _floor.rows
+                            and _floor.grid[ny][nx].room_type != _wall)
+                _dirs = [
+                    ('n', '▲', _can(_px, _py - 1)),
+                    ('s', '▼', _can(_px, _py + 1)),
+                    ('e', '►', _can(_px + 1, _py)),
+                    ('w', '◄', _can(_px - 1, _py)),
+                ]
+                _btns = {}
+                for _key, _glyph, _ok in _dirs:
+                    if _ok:
+                        _btns[_key] = (
+                            f"<div class='bigdpad-btn' data-zcmd='{_key}' "
+                            f"onclick=\"window.__zotTap('{_key}', this)\">{_glyph}</div>"
+                        )
+                    else:
+                        _btns[_key] = (
+                            f"<div class='bigdpad-btn disabled'>{_glyph}</div>"
+                        )
+                bigdpad_html = (
+                    "<div class='bigdpad'>"
+                    f"<div class='bigdpad-cell'></div>{_btns['n']}<div class='bigdpad-cell'></div>"
+                    f"{_btns['w']}<div class='bigdpad-cell mid'></div>{_btns['e']}"
+                    f"<div class='bigdpad-cell'></div>{_btns['s']}<div class='bigdpad-cell'></div>"
+                    "</div>"
+                )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 16px;">
                     {achievement_notifications}
@@ -9206,6 +9242,7 @@ class WizardsCavernApp(toga.App):
                     {lantern_info_html}
                     {grid_html}
                     {hud_chips_html}
+                    {bigdpad_html}
                     {dpad_overlay_html}
                     {scroll_picker_html}
                     {confirm_quit_html}
@@ -9797,6 +9834,52 @@ class WizardsCavernApp(toga.App):
                     -webkit-tap-highlight-color: transparent;
                     -webkit-user-select: none;
                     user-select: none;
+                }}
+                /* Big in-body d-pad for game_loop. Sits under the HUD
+                   chips, filling the empty mid-screen real estate with
+                   chunky 70px tap targets. Disabled directions grey out
+                   so the player can see at a glance which way is wall. */
+                .bigdpad {{
+                    display: grid;
+                    grid-template-columns: repeat(3, 70px);
+                    grid-template-rows: repeat(3, 70px);
+                    gap: 6px;
+                    justify-content: center;
+                    margin: 14px auto 6px auto;
+                }}
+                .bigdpad-cell {{
+                    /* Empty corner / center fillers in the 3x3 grid. */
+                }}
+                .bigdpad-btn {{
+                    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+                    border: 2px solid #4CAF50;
+                    border-radius: 10px;
+                    color: #8BC34A;
+                    font-size: 38px;
+                    line-height: 66px;
+                    text-align: center;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    box-shadow: 0 1px 0 #0a0a0a inset,
+                                0 0 8px rgba(76,175,80,0.15);
+                    transition: transform 60ms ease-out, background 120ms ease-out,
+                                box-shadow 120ms ease-out;
+                }}
+                .bigdpad-btn:active {{
+                    transform: scale(0.92);
+                    background: linear-gradient(180deg, #2a4a2a 0%, #1a301a 100%);
+                    box-shadow: 0 0 14px rgba(76,175,80,0.6),
+                                0 1px 0 #0a0a0a inset;
+                }}
+                .bigdpad-btn.disabled {{
+                    border-color: #2a2a2a;
+                    color: #2a2a2a;
+                    background: linear-gradient(180deg, #181818 0%, #101010 100%);
+                    box-shadow: none;
+                    cursor: not-allowed;
+                    pointer-events: none;
                 }}
                 /* Altar action cards: stack of tall taprows, each with a
                    coloured title + muted meta line, rendered ABOVE the
