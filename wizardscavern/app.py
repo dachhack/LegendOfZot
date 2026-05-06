@@ -2509,6 +2509,11 @@ _MODES_NO_BOTTOM_PANEL = frozenset({
     'starting_shop', 'vendor_shop',
     'combat_mode',
     'inventory',
+    # Map-view room modes — body owns d-pad + HUD chips via
+    # _build_map_hud_and_dpad_html().
+    'chest_mode', 'pool_mode', 'library_mode',
+    'tomb_mode', 'garden_mode', 'oracle_mode',
+    'stairs_up_mode', 'stairs_down_mode',
 })
 
 # Modes where pressing 'l' triggers the quick-use lantern hotkey.
@@ -3749,6 +3754,73 @@ class WizardsCavernApp(toga.App):
         self.keyboard_uppercase = not self.keyboard_uppercase
         # Rebuild the keyboard with new case
         self.update_button_panel(self.command_display.text, needs_numbers=False)
+
+    def _build_map_hud_and_dpad_html(self):
+        """Return (hud_chips_html, bigdpad_html) for any map-view mode.
+
+        Used by game_loop and the room-interaction modes (chest, pool,
+        altar, library, oracle, tomb, garden, etc.) so movement +
+        INVENTORY / LANTERN / STAIRS chips render as HTML instead of
+        relying on the toga bottom panel that's invisible on some
+        devices.  Stairs chip only appears when standing on U or D.
+        """
+        floor = gs.my_tower.floors[gs.player_character.z]
+        here = floor.grid[gs.player_character.y][gs.player_character.x]
+        has_lantern = any(isinstance(it, Lantern)
+                          for it in gs.player_character.inventory.items)
+
+        chips = []
+        if here.room_type == 'U':
+            chips.append(
+                "<div class='hudchip stairs' data-zcmd='u' "
+                "onclick=\"window.__zotTap('u', this)\">&#9650; STAIRS UP</div>"
+            )
+        elif here.room_type == 'D':
+            chips.append(
+                "<div class='hudchip stairs' data-zcmd='d' "
+                "onclick=\"window.__zotTap('d', this)\">&#9660; STAIRS DOWN</div>"
+            )
+        chips.append(
+            "<div class='hudchip' data-zcmd='i' "
+            "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
+        )
+        if has_lantern:
+            chips.append(
+                "<div class='hudchip lantern' data-zcmd='l' "
+                "onclick=\"window.__zotTap('l', this)\">LANTERN</div>"
+            )
+        hud_chips_html = "<div class='hudchips'>" + "".join(chips) + "</div>"
+
+        px, py = gs.player_character.x, gs.player_character.y
+        wall = floor.wall_char
+        def _can(nx, ny):
+            return (0 <= nx < floor.cols and 0 <= ny < floor.rows
+                    and floor.grid[ny][nx].room_type != wall)
+        dirs = [
+            ('n', '▲', _can(px, py - 1)),
+            ('s', '▼', _can(px, py + 1)),
+            ('e', '►', _can(px + 1, py)),
+            ('w', '◄', _can(px - 1, py)),
+        ]
+        btns = {}
+        for key, glyph, ok in dirs:
+            if ok:
+                btns[key] = (
+                    f"<div class='bigdpad-btn' data-zcmd='{key}' "
+                    f"onclick=\"window.__zotTap('{key}', this)\">{glyph}</div>"
+                )
+            else:
+                btns[key] = (
+                    f"<div class='bigdpad-btn disabled'>{glyph}</div>"
+                )
+        bigdpad_html = (
+            "<div class='bigdpad'>"
+            f"<div class='bigdpad-cell'></div>{btns['n']}<div class='bigdpad-cell'></div>"
+            f"{btns['w']}<div class='bigdpad-cell mid'></div>{btns['e']}"
+            f"<div class='bigdpad-cell'></div>{btns['s']}<div class='bigdpad-cell'></div>"
+            "</div>"
+        )
+        return hud_chips_html, bigdpad_html
 
     def zotle_backspace(self, widget):
         """Remove the last entered letter from the Zotle current guess."""
@@ -7562,6 +7634,7 @@ class WizardsCavernApp(toga.App):
             highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             # Determine chest variant for sprite
             current_floor_c = gs.my_tower.floors[gs.player_character.z]
@@ -7610,6 +7683,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{chest_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -7780,6 +7855,7 @@ class WizardsCavernApp(toga.App):
             highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             # Pool sprite - check for ancient waters variant
             pool_variant = 'ancient' if room.properties.get('is_ancient') else None
@@ -7843,6 +7919,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{pool_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -7934,7 +8012,8 @@ class WizardsCavernApp(toga.App):
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
             # Stairs info box
             stairs_sprite = generate_room_sprite_html('U', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             stairs_html = f"""
@@ -7976,6 +8055,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{stairs_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -8000,7 +8081,8 @@ class WizardsCavernApp(toga.App):
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
             # Stairs info box
             stairs_down_sprite = generate_room_sprite_html('D', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             stairs_html = f"""
@@ -8043,6 +8125,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{stairs_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -8069,6 +8153,7 @@ class WizardsCavernApp(toga.App):
             highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             # Get library info from room
             current_room = floor.grid[gs.player_character.y][gs.player_character.x]
@@ -8121,6 +8206,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{library_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -8268,6 +8355,7 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             already_looted = coords in gs.looted_tombs
             
@@ -8315,6 +8403,8 @@ class WizardsCavernApp(toga.App):
                             </div>
                             {tomb_body}
                         </div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8337,6 +8427,7 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             already_harvested = coords in gs.harvested_gardens
             
@@ -8374,6 +8465,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{garden_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8452,7 +8545,8 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
             oracle_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
@@ -8479,6 +8573,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{oracle_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -9486,75 +9582,13 @@ class WizardsCavernApp(toga.App):
                     </div>
                 """
 
-            # HUD chip-buttons for game_loop only — replace the bottom-panel
-            # INVENTORY/LANTERN buttons. Sit in a flex row above the map so
-            # tap targets stay close to the action.  Stairs chip appears
-            # only when standing on U/D so the body doesn't clutter.
+            # HUD chips + d-pad — replace the bottom-panel INVENTORY/LANTERN
+            # buttons and movement d-pad with HTML widgets that render
+            # reliably on every device.
             hud_chips_html = ""
             bigdpad_html = ""
             if gs.prompt_cntl == "game_loop":
-                _floor = gs.my_tower.floors[gs.player_character.z]
-                _here = _floor.grid[gs.player_character.y][gs.player_character.x]
-                _has_lantern = any(isinstance(it, Lantern)
-                                    for it in gs.player_character.inventory.items)
-                _chips = []
-                if _here.room_type == 'U':
-                    _chips.append(
-                        "<div class='hudchip stairs' data-zcmd='u' "
-                        "onclick=\"window.__zotTap('u', this)\">&#9650; STAIRS UP</div>"
-                    )
-                elif _here.room_type == 'D':
-                    _chips.append(
-                        "<div class='hudchip stairs' data-zcmd='d' "
-                        "onclick=\"window.__zotTap('d', this)\">&#9660; STAIRS DOWN</div>"
-                    )
-                _chips.append(
-                    "<div class='hudchip' data-zcmd='i' "
-                    "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
-                )
-                if _has_lantern:
-                    _chips.append(
-                        "<div class='hudchip lantern' data-zcmd='l' "
-                        "onclick=\"window.__zotTap('l', this)\">LANTERN</div>"
-                    )
-                hud_chips_html = (
-                    "<div class='hudchips'>" + "".join(_chips) + "</div>"
-                )
-
-                # Big in-body d-pad — fills the empty area under the map
-                # with chunky tap targets. Disabled directions grey out so
-                # you can see at a glance which way you can step.  Tile
-                # taps in the map still work as a shortcut, but this is
-                # the primary movement UI now.
-                _px, _py = gs.player_character.x, gs.player_character.y
-                _wall = _floor.wall_char
-                def _can(nx, ny):
-                    return (0 <= nx < _floor.cols and 0 <= ny < _floor.rows
-                            and _floor.grid[ny][nx].room_type != _wall)
-                _dirs = [
-                    ('n', '▲', _can(_px, _py - 1)),
-                    ('s', '▼', _can(_px, _py + 1)),
-                    ('e', '►', _can(_px + 1, _py)),
-                    ('w', '◄', _can(_px - 1, _py)),
-                ]
-                _btns = {}
-                for _key, _glyph, _ok in _dirs:
-                    if _ok:
-                        _btns[_key] = (
-                            f"<div class='bigdpad-btn' data-zcmd='{_key}' "
-                            f"onclick=\"window.__zotTap('{_key}', this)\">{_glyph}</div>"
-                        )
-                    else:
-                        _btns[_key] = (
-                            f"<div class='bigdpad-btn disabled'>{_glyph}</div>"
-                        )
-                bigdpad_html = (
-                    "<div class='bigdpad'>"
-                    f"<div class='bigdpad-cell'></div>{_btns['n']}<div class='bigdpad-cell'></div>"
-                    f"{_btns['w']}<div class='bigdpad-cell mid'></div>{_btns['e']}"
-                    f"<div class='bigdpad-cell'></div>{_btns['s']}<div class='bigdpad-cell'></div>"
-                    "</div>"
-                )
+                hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             html_code = f"""
                 <div style="font-family: monospace; font-size: 16px;">
