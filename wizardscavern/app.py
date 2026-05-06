@@ -2338,30 +2338,6 @@ def can_cast_spells(player_character):
 def generate_grid_html(floor, player_x, player_y):
     """Generate the HTML for the dungeon grid/map display."""
     highlight_coords = (player_y, player_x)
-
-    # Trim the rendered grid to a window centered on the player.  The floor
-    # itself is 15x21, but only discovered cells carry visible content — so
-    # when the explored region is small or hugs one corner, an untrimmed
-    # render leaves the player's location stuck in a top-left wedge with
-    # blank padding hogging the rest of the frame.  Mirroring the bounding
-    # box around the player keeps them visually centered no matter where
-    # they roam.
-    min_r, max_r = player_y, player_y
-    min_c, max_c = player_x, player_x
-    for r in range(floor.rows):
-        for c in range(floor.cols):
-            if floor.grid[r][c].discovered:
-                if r < min_r: min_r = r
-                if r > max_r: max_r = r
-                if c < min_c: min_c = c
-                if c > max_c: max_c = c
-    half_h = max(max_r - player_y, player_y - min_r) + 1
-    half_w = max(max_c - player_x, player_x - min_c) + 1
-    win_min_r = max(0, player_y - half_h)
-    win_max_r = min(floor.rows - 1, player_y + half_h)
-    win_min_c = max(0, player_x - half_w)
-    win_max_c = min(floor.cols - 1, player_x + half_w)
-
     grid_html = '<div style="text-align: center; max-width: 100%; overflow-x: auto; margin: 0 auto;"><div style="background-color: #222; display: inline-block; padding: 2px; border-radius: 2px; max-width: 100%;">'
 
     # Tap-to-move targets: 4 cardinal neighbours of the player. Each maps
@@ -2377,9 +2353,9 @@ def generate_grid_html(floor, player_x, player_y):
     }
     is_game_loop = gs.prompt_cntl == "game_loop"
 
-    for r_idx in range(win_min_r, win_max_r + 1):
+    for r_idx in range(floor.rows):
         grid_html += '<div style="height: 17px; white-space: nowrap;">'
-        for c_idx in range(win_min_c, win_max_c + 1):
+        for c_idx in range(floor.cols):
             room = floor.grid[r_idx][c_idx]
             cell_style = "display: inline-block; width: 17px; height: 17px; line-height: 17px; text-align: center; vertical-align: top; font-family: monospace; font-size: 13px;"
             content = "&nbsp;"

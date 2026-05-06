@@ -4,10 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 161
+BUILD_NUMBER = 162
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Map centering fix — grid now trims to a window mirrored around the player and the mvframe centers horizontally via fit-content + auto margins, so the discovered area no longer hugs the top-left of a 15x21 frame",
+    "Map centering fix — mvframe now uses display:block + width:fit-content + margin:0 auto, so the full 15x21 floor renders centered on the screen instead of hugging the left edge",
     "Map edge tap zones now always tappable — walls log 'You hit a wall!' instead of greying out the affordance",
     "Map edge tap zones! Big in-body d-pad gone — tap the slim arrow strips around the map perimeter to step that direction. INV / LANT / STAIRS chips shrunk to compact pills",
     "Toga panel retired everywhere: list-picker modes (spell cast/memorize, crafting, journal, save/load, sell quantity, character stats, scroll picks), plus an HTML numpad for the Zotle teleporter — every mode is now body-only",
