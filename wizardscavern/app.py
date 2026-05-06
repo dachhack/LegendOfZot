@@ -2340,19 +2340,6 @@ def generate_grid_html(floor, player_x, player_y):
     highlight_coords = (player_y, player_x)
     grid_html = '<div style="text-align: center; max-width: 100%; overflow-x: auto; margin: 0 auto;"><div style="background-color: #222; display: inline-block; padding: 2px; border-radius: 2px; max-width: 100%;">'
 
-    # Tap-to-move targets: 4 cardinal neighbours of the player. Each maps
-    # to the n/s/e/w command that move_player() expects.  Only walkable,
-    # in-bounds tiles get the tap handler — walls stay inert.  This is
-    # the sole tap-to-move affordance now that the perimeter edge bars
-    # are gone.
-    tap_dirs = {
-        (player_y - 1, player_x): 'n',
-        (player_y + 1, player_x): 's',
-        (player_y, player_x - 1): 'w',
-        (player_y, player_x + 1): 'e',
-    }
-    is_game_loop = gs.prompt_cntl == "game_loop"
-
     for r_idx in range(floor.rows):
         grid_html += '<div style="height: 17px; white-space: nowrap;">'
         for c_idx in range(floor.cols):
@@ -2442,27 +2429,28 @@ def generate_grid_html(floor, player_x, player_y):
                 if (r_idx, c_idx) == highlight_coords:
                     cell_style += "background-color: #DDD; color: #000; font-weight: bold; border-radius: 2px;"
 
-            # Tap-to-move: cardinal neighbour, walkable, in-bounds.
-            tap_attrs = ""
-            if (
-                is_game_loop
-                and (r_idx, c_idx) in tap_dirs
-                and 0 <= c_idx < floor.cols
-                and 0 <= r_idx < floor.rows
-                and floor.grid[r_idx][c_idx].room_type != floor.wall_char
-                and (r_idx, c_idx) != highlight_coords
-            ):
-                _dir = tap_dirs[(r_idx, c_idx)]
-                cell_style += "cursor: pointer;"
-                tap_attrs = (
-                    f' onclick="window.__zotTap(\'{_dir}\', this)"'
-                )
-
-            grid_html += f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'
+            grid_html += f'<span class="zmap-cell" style="{cell_style}">{content}</span>'
         grid_html += "</div>"
     grid_html += "</div></div>"
 
-    return f"<div class='mvframe'><div class='mvmap'>{grid_html}</div></div>"
+    # Four triangular tap zones tile the entire map area (X-quadrant
+    # split through the diagonals).  Tapping the top triangle steps n,
+    # bottom = s, left = w, right = e.  Walls just log "You hit a wall!"
+    # — we don't dim the affordance.  Small ▲▼◄► glyphs render at the
+    # midpoint of each edge as visual hints.
+    triangles = [
+        ('n', '▲', 'mv-n'),
+        ('s', '▼', 'mv-s'),
+        ('w', '◄', 'mv-w'),
+        ('e', '►', 'mv-e'),
+    ]
+    tri_html = ""
+    for cmd_dir, glyph, cls in triangles:
+        tri_html += (
+            f"<div class='mvtri {cls}' data-zcmd='{cmd_dir}' "
+            f"onclick=\"window.__zotTap('{cmd_dir}', this)\">{glyph}</div>"
+        )
+    return f"<div class='mvframe'><div class='mvmap'>{grid_html}{tri_html}</div></div>"
 
 
 
@@ -10331,8 +10319,8 @@ class WizardsCavernApp(toga.App):
                     user-select: none;
                 }}
                 /* Map frame — centers the grid horizontally on screen.
-                   Tap-to-move now lives on the cardinal-neighbour cells
-                   inside the grid itself, not perimeter bars. */
+                   Tap-to-move lives on four triangular overlays that tile
+                   the entire map (X-split through the diagonals). */
                 .mvframe {{
                     display: block;
                     width: fit-content;
@@ -10340,6 +10328,53 @@ class WizardsCavernApp(toga.App):
                 }}
                 .mvmap {{
                     position: relative;
+                }}
+                .mvtri {{
+                    position: absolute;
+                    top: 0; left: 0; right: 0; bottom: 0;
+                    display: flex;
+                    cursor: pointer;
+                    color: #4CAF50;
+                    font-family: monospace;
+                    font-size: 22px;
+                    font-weight: bold;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    background: transparent;
+                    transition: background 120ms ease-out;
+                    z-index: 2;
+                }}
+                .mvtri:active {{
+                    background: rgba(76,175,80,0.20);
+                }}
+                .mvtri.mv-n {{
+                    -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+                    clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
+                    align-items: flex-start;
+                    justify-content: center;
+                    padding-top: 4px;
+                }}
+                .mvtri.mv-s {{
+                    -webkit-clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+                    clip-path: polygon(50% 50%, 0% 100%, 100% 100%);
+                    align-items: flex-end;
+                    justify-content: center;
+                    padding-bottom: 4px;
+                }}
+                .mvtri.mv-w {{
+                    -webkit-clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
+                    clip-path: polygon(0% 0%, 50% 50%, 0% 100%);
+                    align-items: center;
+                    justify-content: flex-start;
+                    padding-left: 4px;
+                }}
+                .mvtri.mv-e {{
+                    -webkit-clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
+                    clip-path: polygon(100% 0%, 100% 100%, 50% 50%);
+                    align-items: center;
+                    justify-content: flex-end;
+                    padding-right: 4px;
                 }}
                 /* Altar action cards: stack of tall taprows, each with a
                    coloured title + muted meta line, rendered ABOVE the
