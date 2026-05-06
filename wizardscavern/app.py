@@ -2464,7 +2464,25 @@ def generate_grid_html(floor, player_x, player_y):
             grid_html += f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'
         grid_html += "</div>"
     grid_html += "</div></div>"
-    return grid_html
+
+    # Wrap the map in edge-tap zones so the player can step in any
+    # direction by tapping the slim arrow strips around the perimeter.
+    # All 4 edges are always tappable — walls let move_player log
+    # "You hit a wall!" so the player can probe without us dimming
+    # the affordance and second-guessing them.
+    edges = [
+        ('n', '▲', 'mv-n'),
+        ('s', '▼', 'mv-s'),
+        ('w', '◄', 'mv-w'),
+        ('e', '►', 'mv-e'),
+    ]
+    edge_html = ""
+    for cmd_dir, glyph, cls in edges:
+        edge_html += (
+            f"<div class='mvedge {cls}' data-zcmd='{cmd_dir}' "
+            f"onclick=\"window.__zotTap('{cmd_dir}', this)\">{glyph}</div>"
+        )
+    return f"<div class='mvframe'>{edge_html}<div class='mvmap'>{grid_html}</div></div>"
 
 
 
@@ -2494,16 +2512,43 @@ MODE_LAYOUTS = {
     'game_loop':              _EMPTY_LAYOUT,  # in-body tap-to-move + HUD chips
     'save_load_mode':         lambda self, cmds: self.build_save_load_layout({}),
     'player_name':            _EMPTY_LAYOUT,  # body owns the HTML keyboard
-    'puzzle_mode':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
-    'zotle_teleporter_mode':  lambda self, cmds: self.build_teleporter_layout(),
-    'combat_mode':            lambda self, cmds: self.build_combat_layout(
-                                  {k: l for k, l in self.parse_commands(cmds)}),
+    'starting_shop':          _EMPTY_LAYOUT,  # body owns BUY ALL / EXIT chips
+    'vendor_shop':            _EMPTY_LAYOUT,  # body owns EXIT chip + tabs
+    'puzzle_mode':            _EMPTY_LAYOUT,  # body owns the HTML keyboard + chips
+    'zotle_teleporter_mode':  _EMPTY_LAYOUT,  # body owns the HTML numpad
+    'combat_mode':            _EMPTY_LAYOUT,  # body owns ATTACK/CAST/INVENTORY/FLEE chips
 }
 
 # Modes that hide the entire bottom panel — the body owns all input
 # (taps on the map + HUD chips). Reclaiming the ~116px of bottom_panel
 # gives the map and log every pixel they can use.
-_MODES_NO_BOTTOM_PANEL = frozenset({'game_loop', 'player_name'})
+_MODES_NO_BOTTOM_PANEL = frozenset({
+    'game_loop', 'player_name', 'puzzle_mode',
+    'starting_shop', 'vendor_shop',
+    'combat_mode',
+    'inventory',
+    # Map-view room modes — body owns d-pad + HUD chips via
+    # _build_map_hud_and_dpad_html().
+    'chest_mode', 'pool_mode', 'library_mode',
+    'tomb_mode', 'garden_mode', 'oracle_mode',
+    'stairs_up_mode', 'stairs_down_mode',
+    'fey_garden_mode', 'dungeon_mode', 'dungeon_unlocked_mode',
+    'blacksmith_mode', 'shrine_mode', 'alchemist_mode',
+    'war_room_mode', 'taxidermist_mode', 'towel_action_mode',
+    # Vendor-style or forced-choice modes (no map d-pad needed but the
+    # toga panel is invisible and the body owns all interaction).
+    'altar_mode', 'warp_mode',
+    # List-picker modes — already render their items as taprows; the
+    # toga numpad / command buttons were the only thing in the bottom
+    # panel and they're invisible anyway.
+    'spell_casting_mode', 'spell_memorization_mode',
+    'crafting_mode', 'sell_quantity_mode',
+    'journal_mode', 'character_stats_mode',
+    'save_load_mode',
+    'flare_direction_mode', 'library_read_decision_mode',
+    'upgrade_scroll_mode', 'identify_scroll_mode',
+    'zotle_teleporter_mode',
+})
 
 # Modes where pressing 'l' triggers the quick-use lantern hotkey.
 # These all show "l = lantern" in their hint line today.
@@ -2517,18 +2562,13 @@ _LANTERN_QUICK_USE_MODES = frozenset({
 # pass, only the Zotle teleporter still needs it (for x,y,z coord
 # entry).  All other filter-style modes drive item selection via
 # .taprow cards instead.  Adding a new mode here opts it back in.
-_MODES_WITH_NUMPAD = frozenset({
-    'zotle_teleporter_mode',
-})
+_MODES_WITH_NUMPAD = frozenset()
 
 # Modes that need the input_field + SEND + backspace row rendered.
-# Text-entry screens only — teleporter coords + puzzle word.  player_name
-# moved to a body-only flow (HTML BACKSPACE / SEND cards), so the toga
-# input row stays orphaned to avoid the duplicate-controls confusion.
-_MODES_WITH_INPUT_FIELD = frozenset({
-    'zotle_teleporter_mode',
-    'puzzle_mode',
-})
+# Text-entry screens only — used to also include zotle_teleporter_mode +
+# puzzle_mode + player_name, but those have moved to body-only HTML
+# flows.  Empty for now; kept as a frozenset so future modes can opt in.
+_MODES_WITH_INPUT_FIELD = frozenset()
 
 
 class WizardsCavernApp(toga.App):
@@ -3238,20 +3278,13 @@ class WizardsCavernApp(toga.App):
         # owns all input. Reset every render so transitioning out of
         # game_loop restores the label.
         self.commands_label.style.height = 14
-        if gs.prompt_cntl in _MODES_NO_BOTTOM_PANEL:
+        if gs.prompt_cntl in _MODES_NO_BOTTOM_PANEL or gs.prompt_cntl.startswith('journal_'):
             # No bottom panel at all — the HTML body owns all controls
             # (tap-to-move on the map, HUD chips for inventory/lantern).
             # Collapse everything so the web_view claims the full screen.
             self.bottom_panel.style.height = 0
             self.button_panel.style.height = 0
             self.commands_label.style.height = 0
-        elif gs.prompt_cntl == 'puzzle_mode':
-            # QWERTY keyboard: 3 rows × 34px keys + margins; wide text field.
-            self.input_row_spacer.style.flex = 0
-            self.input_field.style = Pack(flex=1, height=36, **_field_base)
-            self.input_row.style.height = 40
-            self.bottom_panel.style.height = 200
-            self.button_panel.style.height = 114
         elif _numpad_inline:
             # Numpad with input inline on the last row; input_row empty.
             # Button panel holds 4 numpad rows × 30px + margins.
@@ -3280,6 +3313,12 @@ class WizardsCavernApp(toga.App):
         #     from the table, which we treat as "no-op".
         #   - everything else is the generic numpad/no-numpad builder
         #     keyed off needs_numbers.
+        # Modes that hide the bottom panel entirely don't need any toga
+        # buttons built — bottom_panel.height is already 0.  Skip the
+        # inventory special case + the MODE_LAYOUTS dispatch for them.
+        if gs.prompt_cntl in _MODES_NO_BOTTOM_PANEL or gs.prompt_cntl.startswith('journal_'):
+            return
+
         if gs.prompt_cntl == 'inventory' and not gs.inventory_filter:
             self.build_inventory_layout()
             return
@@ -3744,6 +3783,44 @@ class WizardsCavernApp(toga.App):
         self.keyboard_uppercase = not self.keyboard_uppercase
         # Rebuild the keyboard with new case
         self.update_button_panel(self.command_display.text, needs_numbers=False)
+
+    def _build_map_hud_and_dpad_html(self):
+        """Return (hud_chips_html, '') for any map-view mode.
+
+        Used by game_loop and the room-interaction modes (chest, pool,
+        altar, library, oracle, tomb, garden, etc.).  Movement now
+        lives on map-edge tap zones (see generate_grid_html), so the
+        d-pad return slot is always empty — kept for backwards
+        compatibility with the templates that still interpolate
+        {bigdpad_html}.
+        """
+        floor = gs.my_tower.floors[gs.player_character.z]
+        here = floor.grid[gs.player_character.y][gs.player_character.x]
+        has_lantern = any(isinstance(it, Lantern)
+                          for it in gs.player_character.inventory.items)
+
+        chips = []
+        if here.room_type == 'U':
+            chips.append(
+                "<div class='hudchip stairs' data-zcmd='u' "
+                "onclick=\"window.__zotTap('u', this)\">&#9650; UP</div>"
+            )
+        elif here.room_type == 'D':
+            chips.append(
+                "<div class='hudchip stairs' data-zcmd='d' "
+                "onclick=\"window.__zotTap('d', this)\">&#9660; DOWN</div>"
+            )
+        chips.append(
+            "<div class='hudchip' data-zcmd='i' "
+            "onclick=\"window.__zotTap('i', this)\">INV</div>"
+        )
+        if has_lantern:
+            chips.append(
+                "<div class='hudchip lantern' data-zcmd='l' "
+                "onclick=\"window.__zotTap('l', this)\">LANT</div>"
+            )
+        hud_chips_html = "<div class='hudchips'>" + "".join(chips) + "</div>"
+        return hud_chips_html, ""
 
     def zotle_backspace(self, widget):
         """Remove the last entered letter from the Zotle current guess."""
@@ -4228,6 +4305,55 @@ class WizardsCavernApp(toga.App):
                             if not cmd_str:
                                 continue
                             self.input_field.value = ""
+                    if gs.prompt_cntl == 'zotle_teleporter_mode':
+                        if cmd_str.startswith('__tp_d_') and len(cmd_str) == 8:
+                            digit = cmd_str[-1]
+                            if digit.isdigit():
+                                self.input_field.value = (self.input_field.value or "") + digit
+                                self._haptic('tap')
+                                self.render()
+                            continue
+                        if cmd_str == '__tp_comma':
+                            self.input_field.value = (self.input_field.value or "") + ","
+                            self._haptic('tap')
+                            self.render()
+                            continue
+                        if cmd_str == '__tp_bs':
+                            cur = self.input_field.value or ""
+                            self.input_field.value = cur[:-1]
+                            self._haptic('tap')
+                            self.render()
+                            continue
+                        if cmd_str == '__tp_send':
+                            cmd_str = (self.input_field.value or "").strip()
+                            if not cmd_str:
+                                continue
+                            self.input_field.value = ""
+                    if gs.prompt_cntl == 'puzzle_mode':
+                        if cmd_str.startswith('__pz_k_') and len(cmd_str) == 8:
+                            # In-body QWERTY letter tap: __pz_k_<a-z>.
+                            letter = cmd_str[-1].upper()
+                            if letter.isalpha() and gs.zotle_puzzle:
+                                for i in range(5):
+                                    if not gs.zotle_puzzle['current_guess'][i]:
+                                        gs.zotle_puzzle['current_guess'][i] = letter
+                                        break
+                                self._haptic('tap')
+                                self.render()
+                            continue
+                        if cmd_str == '__pz_bs':
+                            if gs.zotle_puzzle:
+                                for i in range(4, -1, -1):
+                                    if gs.zotle_puzzle['current_guess'][i]:
+                                        gs.zotle_puzzle['current_guess'][i] = ''
+                                        break
+                            self._haptic('tap')
+                            self.render()
+                            continue
+                        if cmd_str == '__pz_send':
+                            # Empty cmd to process_puzzle_action submits
+                            # the assembled guess (see room_actions.py:3421).
+                            cmd_str = ''
                     self.process_command(cmd_str)
                     if getattr(gs, 'game_should_quit', False):
                         return
@@ -5634,7 +5760,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                     <div style="font-family: monospace; font-size: 12px;">
                         {achievement_notifications}
-                        <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                        <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                         <div style="border: 1px solid gold; padding: 4px; border-radius: 4px; background: #1a1a1a; max-height: 500px; overflow-y: auto; margin-bottom: 5px;">{achievements_html}</div>
 
@@ -5708,6 +5834,17 @@ class WizardsCavernApp(toga.App):
 
             vendor_html = starting_tabs_html + vendor_html
 
+            # HTML shop chips — replace the bottom-panel 'ba' / 'x' toga
+            # buttons that render invisible on some devices.
+            shop_chips_html = (
+                "<div class='hudchips' style='margin-top:8px;'>"
+                "<div class='hudchip' data-zcmd='ba' "
+                "onclick=\"window.__zotTap('ba', this)\">BUY ALL</div>"
+                "<div class='hudchip exit' data-zcmd='x' "
+                "onclick=\"window.__zotTap('x', this)\">EXIT</div>"
+                "</div>"
+            )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
                     {achievement_notifications}
@@ -5720,6 +5857,7 @@ class WizardsCavernApp(toga.App):
                         <div style="border: 1px solid grey; padding: 3px;">{vendor_html}</div>
                         <div style="border: 1px solid grey; padding: 3px;">{player_inv_html}</div>
                     </div>
+                    {shop_chips_html}
                 </div>
                 """
             if gs.vendor_action:
@@ -5867,6 +6005,16 @@ class WizardsCavernApp(toga.App):
             shop_title_color = '#c084fc' if is_magic else '#FFFFFF'
             shop_label = "Ye Olde Magic Shoppe" if is_magic else f"{gs.active_vendor.name}'s Shop"
 
+            # HTML shop chips — vendor_shop omits BUY ALL (starting-shop
+            # only feature per vendor.py:451) and just exposes EXIT so
+            # the player has a visible way out when toga buttons hide.
+            shop_chips_html = (
+                "<div class='hudchips' style='margin-top:8px;'>"
+                "<div class='hudchip exit' data-zcmd='x' "
+                "onclick=\"window.__zotTap('x', this)\">EXIT</div>"
+                "</div>"
+            )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
                     {achievement_notifications}
@@ -5883,6 +6031,7 @@ class WizardsCavernApp(toga.App):
                         <div style="border: 1px solid grey; padding: 3px;">{vendor_html}</div>
                         <div style="border: 1px solid grey; padding: 3px;">{player_inv_html}</div>
                     </div>
+                    {shop_chips_html}
                 </div>
                 """
             if gs.prompt_cntl == "sell_quantity_mode":
@@ -5980,14 +6129,46 @@ class WizardsCavernApp(toga.App):
                 player_inv_html += "</div>"
                 player_inv_html += "</div>"
 
+                # HTML inventory chips for combat: BACK / DRINK FULL when
+                # filtering, JOURNAL + CLOSE otherwise.
+                _cb_chips = []
+                if gs.inventory_filter:
+                    if (gs.inventory_filter == 'use'
+                        and gs.player_character.health < gs.player_character.max_health
+                        and any(isinstance(i, Potion) and i.potion_type == 'healing'
+                                for i in gs.player_character.inventory.items)):
+                        _cb_chips.append(
+                            "<div class='hudchip lantern' data-zcmd='df' "
+                            "onclick=\"window.__zotTap('df', this)\">DRINK FULL</div>"
+                        )
+                    _cb_chips.append(
+                        "<div class='hudchip' data-zcmd='b' "
+                        "onclick=\"window.__zotTap('b', this)\">&larr; BACK</div>"
+                    )
+                else:
+                    _cb_chips.append(
+                        "<div class='hudchip' data-zcmd='j' "
+                        "onclick=\"window.__zotTap('j', this)\">JOURNAL</div>"
+                    )
+                    _cb_chips.append(
+                        "<div class='hudchip exit' data-zcmd='x' "
+                        "onclick=\"window.__zotTap('x', this)\">CLOSE</div>"
+                    )
+                cb_inv_chips_html = (
+                    "<div class='hudchips' style='margin-top:6px;'>"
+                    + "".join(_cb_chips) +
+                    "</div>"
+                )
+
                 # COMBAT LAYOUT - matching normal inventory structure
                 html_code = f"""
                         <div style="font-family: monospace; font-size: 12px; width: 100%; max-width: 100vw; overflow-x: auto; box-sizing: border-box;">
                             <div style="min-width: 0; max-width: 100%;">
                                 {achievement_notifications}
-                                <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                                <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                                 {player_stats_html}
                                 <div style="border: 1px solid #4CAF50; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px; overflow-x: auto; max-width: 100%;">{player_inv_html}</div>
+                                {cb_inv_chips_html}
                             </div>
                         </div>
                     """
@@ -6169,6 +6350,55 @@ class WizardsCavernApp(toga.App):
                         inv_commands += " | m = spells"
                     inv_commands += " | j = journal | q = quit game | x = exit"
 
+                # HTML inventory chips — replace the toga 3x3 grid (Journal /
+                # Craft / Spells / Exit / Quit / Save&Quit) that renders
+                # invisible on some devices.
+                _inv_chips = []
+                if gs.inventory_filter:
+                    if (gs.inventory_filter == 'use'
+                        and gs.player_character.health < gs.player_character.max_health
+                        and any(isinstance(i, Potion) and i.potion_type == 'healing'
+                                for i in gs.player_character.inventory.items)):
+                        _inv_chips.append(
+                            "<div class='hudchip lantern' data-zcmd='df' "
+                            "onclick=\"window.__zotTap('df', this)\">DRINK FULL</div>"
+                        )
+                    _inv_chips.append(
+                        "<div class='hudchip' data-zcmd='b' "
+                        "onclick=\"window.__zotTap('b', this)\">&larr; BACK</div>"
+                    )
+                else:
+                    _inv_chips.append(
+                        "<div class='hudchip' data-zcmd='c' "
+                        "onclick=\"window.__zotTap('c', this)\">CRAFT</div>"
+                    )
+                    if can_cast:
+                        _inv_chips.append(
+                            "<div class='hudchip combat-cast' data-zcmd='m' "
+                            "onclick=\"window.__zotTap('m', this)\">SPELLS</div>"
+                        )
+                    _inv_chips.append(
+                        "<div class='hudchip' data-zcmd='j' "
+                        "onclick=\"window.__zotTap('j', this)\">JOURNAL</div>"
+                    )
+                    _inv_chips.append(
+                        "<div class='hudchip' data-zcmd='sq' "
+                        "onclick=\"window.__zotTap('sq', this)\">SAVE &amp; QUIT</div>"
+                    )
+                    _inv_chips.append(
+                        "<div class='hudchip exit' data-zcmd='q' "
+                        "onclick=\"window.__zotTap('q', this)\">QUIT</div>"
+                    )
+                    _inv_chips.append(
+                        "<div class='hudchip exit' data-zcmd='x' "
+                        "onclick=\"window.__zotTap('x', this)\">CLOSE</div>"
+                    )
+                inv_chips_html = (
+                    "<div class='hudchips' style='margin-top:6px;'>"
+                    + "".join(_inv_chips) +
+                    "</div>"
+                )
+
                 html_code = f"""
 
                         <div style="font-family: monospace; font-size: 12px; width: 100%; max-width: 100vw; overflow-x: auto; box-sizing: border-box;">
@@ -6177,13 +6407,15 @@ class WizardsCavernApp(toga.App):
 
                                 {achievement_notifications}
 
-                                <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                                <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                                 {player_stats_html}
 
                                 {equipment_box_html}
 
                                 <div style="border: 1px solid #4CAF50; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px; overflow-x: auto; max-width: 100%;">{player_inv_html}</div>
+
+                                {inv_chips_html}
 
                             </div>
 
@@ -6289,7 +6521,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     <div style="border: 1px solid #444; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{stats_html}</div>
 
@@ -6415,7 +6647,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div class="room-panel" style="width: 100%;">{crafting_html}</div>
                 </div>
@@ -6569,13 +6801,18 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     {memo_tabs_html}
 
                     <div style="border: 1px solid green; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{memorized_html}</div>
 
                     <div style="border: 1px solid blue; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{available_spells_html}</div>
+
+                    <div class='hudchips' style='margin-top:6px;'>
+                        <div class='hudchip exit' data-zcmd='x'
+                             onclick="window.__zotTap('x', this)">EXIT</div>
+                    </div>
 </div>
                 """
             if gs.spell_memo_action:
@@ -6669,10 +6906,20 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     <div style="border: 1px solid gold; padding: 10px; max-height: 500px; overflow-y: auto;">
                         {journal_html}
+                    </div>
+                    <div class='hudchips' style='margin-top:8px;'>
+                        <div class='hudchip' data-zcmd='t'
+                             onclick="window.__zotTap('t', this)">{ 'Aa-' if gs.large_text_mode else 'Aa+' }</div>
+                        <div class='hudchip' data-zcmd='v'
+                             onclick="window.__zotTap('v', this)">{ 'VOL-' if gs.music_enabled else 'VOL+' }</div>
+                        <div class='hudchip lantern' data-zcmd='g'
+                             onclick="window.__zotTap('g', this)">SAVE</div>
+                        <div class='hudchip exit' data-zcmd='x'
+                             onclick="window.__zotTap('x', this)">BACK</div>
                     </div>
 </div>
                 """
@@ -6997,7 +7244,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="width: 100%; max-width: 300px; margin: 0 auto 4px auto;">
@@ -7113,10 +7360,39 @@ class WizardsCavernApp(toga.App):
                 """
                 combat_commands = "any key = continue channeling"
 
+            # HTML combat action chips — replace the toga C/A/F/I buttons
+            # that render invisible on some devices. Channeling pauses the
+            # action panel ("any key = continue") so we hide chips then
+            # and show the channeling progress instead.
+            combat_chips_html = ""
+            if not gs.spell_charging:
+                _chips = [
+                    "<div class='hudchip combat-attack' data-zcmd='a' "
+                    "onclick=\"window.__zotTap('a', this)\">ATTACK</div>"
+                ]
+                if can_cast:
+                    _chips.append(
+                        "<div class='hudchip combat-cast' data-zcmd='c' "
+                        "onclick=\"window.__zotTap('c', this)\">CAST</div>"
+                    )
+                _chips.append(
+                    "<div class='hudchip' data-zcmd='i' "
+                    "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
+                )
+                _chips.append(
+                    "<div class='hudchip exit' data-zcmd='f' "
+                    "onclick=\"window.__zotTap('f', this)\">FLEE</div>"
+                )
+                combat_chips_html = (
+                    "<div class='hudchips' style='margin-top:6px;'>"
+                    + "".join(_chips) +
+                    "</div>"
+                )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
 
@@ -7126,6 +7402,7 @@ class WizardsCavernApp(toga.App):
                             {monster_html}
                             {player_combat_html}
                             {channeling_html}
+                            {combat_chips_html}
                         </div>
                     </div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
@@ -7196,7 +7473,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
@@ -7293,7 +7570,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
 
@@ -7350,7 +7627,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
@@ -7396,6 +7673,7 @@ class WizardsCavernApp(toga.App):
             highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             # Determine chest variant for sprite
             current_floor_c = gs.my_tower.floors[gs.player_character.z]
@@ -7437,13 +7715,15 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{chest_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -7581,6 +7861,12 @@ class WizardsCavernApp(toga.App):
                             </div>
                         </div>
                     </div>
+                    <div class='hudchips' style='margin-top:8px;'>
+                        <div class='hudchip' data-zcmd='i'
+                             onclick="window.__zotTap('i', this)">INVENTORY</div>
+                        <div class='hudchip exit' data-zcmd='x'
+                             onclick="window.__zotTap('x', this)">EXIT ALTAR</div>
+                    </div>
                 </div>
                 """
             # Rows + action cards carry every interaction; hint shows the
@@ -7614,6 +7900,7 @@ class WizardsCavernApp(toga.App):
             highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             # Pool sprite - check for ancient waters variant
             pool_variant = 'ancient' if room.properties.get('is_ancient') else None
@@ -7671,12 +7958,14 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{pool_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -7688,10 +7977,14 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "warp_mode":
             # WARP MODE - 2 columns: Map | Warp Info
-            
+
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            # Warp is a forced binary choice (Resist / Enter), no movement —
+            # but the hud-chips helper still gives us INVENTORY / LANTERN /
+            # STAIRS chips that stay useful when relevant.
+            hud_chips_html, _bigdpad_warp = self._build_map_hud_and_dpad_html()
             
             # Check if this is a vault warp
             room = floor.grid[gs.player_character.y][gs.player_character.x]
@@ -7741,12 +8034,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{warp_html}</div>
+                        {hud_chips_html}
                     </div>
 
                 </div>
@@ -7768,7 +8062,8 @@ class WizardsCavernApp(toga.App):
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
             # Stairs info box
             stairs_sprite = generate_room_sprite_html('U', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             stairs_html = f"""
@@ -7804,12 +8099,14 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{stairs_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -7834,7 +8131,8 @@ class WizardsCavernApp(toga.App):
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
             # Stairs info box
             stairs_down_sprite = generate_room_sprite_html('D', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             stairs_html = f"""
@@ -7871,12 +8169,14 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{stairs_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -7903,6 +8203,7 @@ class WizardsCavernApp(toga.App):
             highlight_coords = (gs.player_character.y, gs.player_character.x)
 
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             # Get library info from room
             current_room = floor.grid[gs.player_character.y][gs.player_character.x]
@@ -7948,13 +8249,15 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{library_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
 </div>
                 """
@@ -7976,6 +8279,7 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             has_key = coords in gs.dungeon_keys
             
@@ -8018,11 +8322,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8046,6 +8352,7 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             already_looted = coords in gs.looted_dungeons
             
@@ -8075,11 +8382,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8102,6 +8411,7 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             already_looted = coords in gs.looted_tombs
             
@@ -8138,7 +8448,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -8149,6 +8459,8 @@ class WizardsCavernApp(toga.App):
                             </div>
                             {tomb_body}
                         </div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8171,6 +8483,7 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             already_harvested = coords in gs.harvested_gardens
             
@@ -8203,11 +8516,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{garden_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8223,6 +8538,7 @@ class WizardsCavernApp(toga.App):
             # FEY GARDEN VIEW - Special UI
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             # Get turns remaining
             turns_left = gs.ephemeral_gardens.get(gs.player_character.z, {}).get('turns_remaining', '?')
@@ -8265,11 +8581,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                         <div style="font-family: monospace; font-size: 12px;">
                             {achievement_notifications}
-                            <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                            <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                             {player_stats_html}
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                                 <div>{grid_html}</div>
                                 <div class="room-panel" style="width: 100%;">{fey_html}</div>
+                                {hud_chips_html}
+                                {bigdpad_html}
                             </div>
                         </div>
                     """
@@ -8286,7 +8604,8 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
             oracle_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
@@ -8308,11 +8627,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{oracle_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8324,6 +8645,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "blacksmith_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
             weapon = gs.player_character.equipped_weapon
             armor  = gs.player_character.equipped_armor
@@ -8406,11 +8728,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{smith_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8419,6 +8743,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "shrine_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
             used = room.properties.get('shrine_used', False)
             shrine_sprite = generate_room_sprite_html('F', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
@@ -8463,11 +8788,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{shrine_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8479,6 +8806,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "alchemist_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
             uses_left = room.properties.get('alch_uses', 3)
             potions = [item for item in gs.player_character.inventory.items if isinstance(item, Potion)]
@@ -8572,11 +8900,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{alch_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8590,6 +8920,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "war_room_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
             floor_level = gs.player_character.z
             raid_cost = 100 + floor_level * 5
@@ -8661,11 +8992,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{war_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8675,6 +9008,7 @@ class WizardsCavernApp(toga.App):
             # TAXIDERMIST VIEW
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
 
             is_bug_tax = room.properties.get('is_bug_taxidermist', False)
@@ -8771,21 +9105,24 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style='font-family: monospace; font-size: 12px;'>
                     {achievement_notifications}
-                    <div style='font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;'>Wizard's Cavern</div>
+                    <div style='font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;'>Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style='display: flex; flex-direction: column; align-items: center; gap: 10px;'>
                         <div>{grid_html}</div>
                         <div class="room-panel" style='width: 100%;'>{tax_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>"""
             current_commands_text = "Tap a collection or Sell All | i = inventory | n/s/e/w = move"
 
         elif gs.prompt_cntl == "towel_action_mode":
             # TOWEL ACTION VIEW
-            
+
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
             towel_wetness = ""
             if gs.active_towel_item:
                 # Handle both Towel objects and generic Items that are towels
@@ -8872,11 +9209,13 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{towel_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8885,7 +9224,7 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "puzzle_mode":
             # ZOTLE PUZZLE VIEW - Wordle-style interface (no map, like inventory)
-            
+
             # Build previous guesses display (like Wordle rows)
             guesses_html = ""
             if gs.zotle_puzzle and gs.zotle_puzzle['guesses']:
@@ -8901,7 +9240,7 @@ class WizardsCavernApp(toga.App):
                         row_html += f'<div style="width: 40px; height: 40px; background: {bg_color}; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;">{letter}</div>'
                     row_html += '</div>'
                     guesses_html += row_html
-            
+
             # Current input row (empty boxes or current guess letters)
             current_guess = gs.zotle_puzzle.get('current_guess', ['', '', '', '', '']) if gs.zotle_puzzle else ['', '', '', '', '']
             current_row_html = '<div style="display: flex; justify-content: center; gap: 4px; margin: 4px 0;">'
@@ -8912,9 +9251,53 @@ class WizardsCavernApp(toga.App):
                 else:
                     current_row_html += f'<div style="width: 40px; height: 40px; background: #121213; border: 2px solid #3a3a3c; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;"></div>'
             current_row_html += '</div>'
-            
+
             guess_count = len(gs.zotle_puzzle['guesses']) if gs.zotle_puzzle else 0
-            
+
+            # In-body QWERTY keyboard with Wordle-style letter coloring.
+            # keyboard_used maps letters to their best-known status; we
+            # tint each key accordingly so the player sees at a glance
+            # which letters are eliminated / present / nailed.
+            kbd_used = (gs.zotle_puzzle or {}).get('keyboard_used', {}) or {}
+            kbd_rows = [
+                ['Q','W','E','R','T','Y','U','I','O','P'],
+                ['A','S','D','F','G','H','J','K','L'],
+                ['Z','X','C','V','B','N','M'],
+            ]
+            pz_kbd_html = ""
+            for row in kbd_rows:
+                row_html = ""
+                for letter in row:
+                    cmd = f"__pz_k_{letter.lower()}"
+                    status = kbd_used.get(letter, '')
+                    cls = "pz-key"
+                    if status == 'correct':
+                        cls += " pz-correct"
+                    elif status == 'present':
+                        cls += " pz-present"
+                    elif status == 'absent':
+                        cls += " pz-absent"
+                    row_html += (
+                        f"<div class='{cls}' data-zcmd='{cmd}' "
+                        f"onclick=\"window.__zotTap('{cmd}', this)\">{letter}</div>"
+                    )
+                pz_kbd_html += f"<div class='pz-kbd-row'>{row_html}</div>"
+
+            # Action chips: ENTER (submits 5-letter guess), BACKSPACE,
+            # LEAVE (back to game_loop). ENTER dims when guess incomplete.
+            full_guess = ''.join(current_guess)
+            enter_cls = "hudchip" if len(full_guess) == 5 else "hudchip nm-empty"
+            pz_actions_html = (
+                "<div class='hudchips' style='margin: 8px 4px;'>"
+                "<div class='hudchip exit' data-zcmd='__pz_bs' "
+                "onclick=\"window.__zotTap('__pz_bs', this)\">&#9003; BACKSPACE</div>"
+                f"<div class='{enter_cls}' data-zcmd='__pz_send' "
+                "onclick=\"window.__zotTap('__pz_send', this)\">ENTER &#9654;</div>"
+                "<div class='hudchip exit' data-zcmd='x' "
+                "onclick=\"window.__zotTap('x', this)\">LEAVE</div>"
+                "</div>"
+            )
+
             # Dialog/instructions in the room box
             zotle_sprite = generate_room_sprite_html('Z', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             dialog_html = f"""
@@ -8941,44 +9324,86 @@ class WizardsCavernApp(toga.App):
                     <span style="color: #3a3a3c;">Grey</span> = Not in word
                 </div>
             """
-            
+
             puzzle_html = f"""
                 <div style="border: 2px solid #555; padding: 10px; border-radius: 4px;">
                     {dialog_html}
-                    
+
                     <div style="padding: 8px; background: #0a0a0a; border-radius: 3px; margin-bottom: 8px;">
                         {guesses_html}
                         {current_row_html}
                     </div>
-                    
+
                     <div style="text-align: center; color: #888; font-size: 12px;">
-                        Guesses: {guess_count} | Type letters, then press Send
+                        Guesses: {guess_count}
                     </div>
                 </div>
             """
-            
+
             html_code = f"""
+                <style>
+                  .pz-kbd-row {{ display: flex; gap: 4px; justify-content: center;
+                                   margin: 4px 2px; }}
+                  .pz-key {{
+                    flex: 1 1 0;
+                    min-width: 0;
+                    max-width: 38px;
+                    height: 44px;
+                    line-height: 42px;
+                    background: linear-gradient(180deg, #3a3a3a 0%, #1f1f1f 100%);
+                    border: 1px solid #555;
+                    border-radius: 5px;
+                    color: #EEE;
+                    font-family: 'Courier New', monospace;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: transparent;
+                    box-shadow: 0 1px 0 #0a0a0a inset;
+                    transition: transform 60ms ease-out, background 100ms ease-out;
+                  }}
+                  .pz-key:active {{
+                    transform: scale(0.92);
+                    background: linear-gradient(180deg, #5a5a5a 0%, #303030 100%);
+                  }}
+                  .pz-key.pz-correct {{
+                    background: linear-gradient(180deg, #538d4e 0%, #386033 100%);
+                    border-color: #6db263; color: #FFF;
+                  }}
+                  .pz-key.pz-present {{
+                    background: linear-gradient(180deg, #b59f3b 0%, #806f25 100%);
+                    border-color: #d4bc52; color: #FFF;
+                  }}
+                  .pz-key.pz-absent {{
+                    background: linear-gradient(180deg, #2a2a2c 0%, #161618 100%);
+                    border-color: #3a3a3c; color: #555;
+                  }}
+                </style>
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="padding: 8px;">
                         {puzzle_html}
                     </div>
+                    {pz_actions_html}
+                    <div style="margin-top:6px;">{pz_kbd_html}</div>
                 </div>
             """
-            current_commands_text = "Type letters then Send | x = leave"
+            current_commands_text = ""
             needs_numbers = False
 
         elif gs.prompt_cntl == "zotle_teleporter_mode":
             # ZOTLE TELEPORTER VIEW - Compact display for mobile
-            
+
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+
             # Calculate valid coordinate ranges
             max_floors = len(gs.my_tower.floors)
-            
+            typed_coords = (self.input_field.value or "").strip()
+
             teleporter_html = f"""
                 <div style="border: 2px solid #555; padding: 8px; border-radius: 6px;">
                     <div style="color: #CCC; font-weight: bold; font-size: 13px; text-align: center; margin-bottom: 4px;">
@@ -8993,18 +9418,84 @@ class WizardsCavernApp(toga.App):
                     <div style="color: #FF6B6B; font-size: 9px; text-align: center; margin-top: 2px;">
                         Cannot teleport into walls!
                     </div>
+                    <div class="tp-slate">{typed_coords or '&nbsp;'}</div>
                 </div>
             """
-            
+
+            # HTML numpad for the teleporter so the bottom toga numpad
+            # stops being a problem.  Digits append, comma separates
+            # x,y,z, BACKSPACE clears last char, SEND submits, CANCEL
+            # backs out.
+            tp_keys = [
+                ('1','2','3'),
+                ('4','5','6'),
+                ('7','8','9'),
+                (',','0','__tp_bs'),
+            ]
+            tp_pad_html = "<div class='tp-pad'>"
+            for row in tp_keys:
+                for k in row:
+                    if k == '__tp_bs':
+                        tp_pad_html += (
+                            "<div class='tp-key tp-bs' data-zcmd='__tp_bs' "
+                            "onclick=\"window.__zotTap('__tp_bs', this)\">&#9003;</div>"
+                        )
+                    else:
+                        cmd = f"__tp_d_{k}" if k != ',' else "__tp_comma"
+                        tp_pad_html += (
+                            f"<div class='tp-key' data-zcmd='{cmd}' "
+                            f"onclick=\"window.__zotTap('{cmd}', this)\">{k}</div>"
+                        )
+            tp_pad_html += "</div>"
+            tp_actions_html = (
+                "<div class='hudchips' style='margin-top:8px;'>"
+                "<div class='hudchip' data-zcmd='__tp_send' "
+                "onclick=\"window.__zotTap('__tp_send', this)\">TELEPORT &#9654;</div>"
+                "<div class='hudchip exit' data-zcmd='c' "
+                "onclick=\"window.__zotTap('c', this)\">CANCEL</div>"
+                "</div>"
+            )
+
             html_code = f"""
+                <style>
+                  .tp-slate {{
+                    font-family: 'Courier New', monospace; font-size: 22px;
+                    letter-spacing: 4px; font-weight: bold; color: #FFD700;
+                    text-align: center; padding: 10px; margin: 10px 0 0 0;
+                    background: linear-gradient(180deg, #1a1608 0%, #0a0804 100%);
+                    border: 2px solid #5a4a1a; border-radius: 6px;
+                    min-height: 32px;
+                  }}
+                  .tp-pad {{ display: grid;
+                              grid-template-columns: repeat(3, 64px);
+                              grid-template-rows: repeat(4, 56px);
+                              gap: 6px; justify-content: center;
+                              margin: 12px auto 4px auto; }}
+                  .tp-key {{
+                    background: linear-gradient(180deg, #3a3a3a 0%, #1f1f1f 100%);
+                    border: 1px solid #555; border-radius: 6px;
+                    color: #EEE; font-family: 'Courier New', monospace;
+                    font-size: 22px; font-weight: bold;
+                    line-height: 54px; text-align: center;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: transparent;
+                    box-shadow: 0 1px 0 #0a0a0a inset;
+                    transition: transform 60ms ease-out, background 100ms ease-out;
+                  }}
+                  .tp-key:active {{ transform: scale(0.92);
+                                     background: linear-gradient(180deg, #5a5a5a 0%, #303030 100%); }}
+                  .tp-key.tp-bs {{ color: #FF8A80; border-color: #6a3a3a; }}
+                </style>
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{teleporter_html}</div>
                     </div>
+                    {tp_pad_html}
+                    {tp_actions_html}
                 </div>
             """
             current_commands_text = "0-9 = digits | , = comma | c = cancel"
@@ -9067,7 +9558,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     {player_stats_html}
 
@@ -9235,80 +9726,18 @@ class WizardsCavernApp(toga.App):
                     </div>
                 """
 
-            # HUD chip-buttons for game_loop only — replace the bottom-panel
-            # INVENTORY/LANTERN buttons. Sit in a flex row above the map so
-            # tap targets stay close to the action.  Stairs chip appears
-            # only when standing on U/D so the body doesn't clutter.
+            # HUD chips + d-pad — replace the bottom-panel INVENTORY/LANTERN
+            # buttons and movement d-pad with HTML widgets that render
+            # reliably on every device.
             hud_chips_html = ""
             bigdpad_html = ""
             if gs.prompt_cntl == "game_loop":
-                _floor = gs.my_tower.floors[gs.player_character.z]
-                _here = _floor.grid[gs.player_character.y][gs.player_character.x]
-                _has_lantern = any(isinstance(it, Lantern)
-                                    for it in gs.player_character.inventory.items)
-                _chips = []
-                if _here.room_type == 'U':
-                    _chips.append(
-                        "<div class='hudchip stairs' data-zcmd='u' "
-                        "onclick=\"window.__zotTap('u', this)\">&#9650; STAIRS UP</div>"
-                    )
-                elif _here.room_type == 'D':
-                    _chips.append(
-                        "<div class='hudchip stairs' data-zcmd='d' "
-                        "onclick=\"window.__zotTap('d', this)\">&#9660; STAIRS DOWN</div>"
-                    )
-                _chips.append(
-                    "<div class='hudchip' data-zcmd='i' "
-                    "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
-                )
-                if _has_lantern:
-                    _chips.append(
-                        "<div class='hudchip lantern' data-zcmd='l' "
-                        "onclick=\"window.__zotTap('l', this)\">LANTERN</div>"
-                    )
-                hud_chips_html = (
-                    "<div class='hudchips'>" + "".join(_chips) + "</div>"
-                )
-
-                # Big in-body d-pad — fills the empty area under the map
-                # with chunky tap targets. Disabled directions grey out so
-                # you can see at a glance which way you can step.  Tile
-                # taps in the map still work as a shortcut, but this is
-                # the primary movement UI now.
-                _px, _py = gs.player_character.x, gs.player_character.y
-                _wall = _floor.wall_char
-                def _can(nx, ny):
-                    return (0 <= nx < _floor.cols and 0 <= ny < _floor.rows
-                            and _floor.grid[ny][nx].room_type != _wall)
-                _dirs = [
-                    ('n', '▲', _can(_px, _py - 1)),
-                    ('s', '▼', _can(_px, _py + 1)),
-                    ('e', '►', _can(_px + 1, _py)),
-                    ('w', '◄', _can(_px - 1, _py)),
-                ]
-                _btns = {}
-                for _key, _glyph, _ok in _dirs:
-                    if _ok:
-                        _btns[_key] = (
-                            f"<div class='bigdpad-btn' data-zcmd='{_key}' "
-                            f"onclick=\"window.__zotTap('{_key}', this)\">{_glyph}</div>"
-                        )
-                    else:
-                        _btns[_key] = (
-                            f"<div class='bigdpad-btn disabled'>{_glyph}</div>"
-                        )
-                bigdpad_html = (
-                    "<div class='bigdpad'>"
-                    f"<div class='bigdpad-cell'></div>{_btns['n']}<div class='bigdpad-cell'></div>"
-                    f"{_btns['w']}<div class='bigdpad-cell mid'></div>{_btns['e']}"
-                    f"<div class='bigdpad-cell'></div>{_btns['s']}<div class='bigdpad-cell'></div>"
-                    "</div>"
-                )
+                hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             html_code = f"""
                 <div style="font-family: monospace; font-size: 16px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     {lantern_info_html}
                     {grid_html}
@@ -9865,20 +10294,20 @@ class WizardsCavernApp(toga.App):
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    gap: 8px;
-                    margin: 12px 4px 8px 4px;
+                    gap: 6px;
+                    margin: 6px 4px 4px 4px;
                 }}
                 .hudchip {{
                     display: inline-block;
-                    padding: 14px 22px;
-                    border-radius: 24px;
+                    padding: 7px 12px;
+                    border-radius: 14px;
                     background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
                     border: 1px solid #555;
                     color: #EEE;
                     font-family: monospace;
-                    font-size: 15px;
+                    font-size: 12px;
                     font-weight: bold;
-                    letter-spacing: 1.5px;
+                    letter-spacing: 1px;
                     cursor: pointer;
                     user-select: none;
                     -webkit-user-select: none;
@@ -9900,58 +10329,65 @@ class WizardsCavernApp(toga.App):
                     border-color: #4CAF50;
                     color: #8BC34A;
                 }}
+                .hudchip.exit {{
+                    background: linear-gradient(180deg, #3a1a1a 0%, #1a0e0e 100%);
+                    border-color: #8a3a3a;
+                    color: #FF8A80;
+                }}
+                .hudchip.combat-attack {{
+                    background: linear-gradient(180deg, #3a1a1a 0%, #1a0808 100%);
+                    border-color: #B71C1C;
+                    color: #FF5252;
+                }}
+                .hudchip.combat-cast {{
+                    background: linear-gradient(180deg, #2a1a3a 0%, #1a0e24 100%);
+                    border-color: #5a3a7a;
+                    color: #E040FB;
+                }}
                 /* Map cells: smooth touch feedback on tappable neighbours. */
                 .zmap-cell {{
                     -webkit-tap-highlight-color: transparent;
                     -webkit-user-select: none;
                     user-select: none;
                 }}
-                /* Big in-body d-pad for game_loop. Sits under the HUD
-                   chips, filling the empty mid-screen real estate with
-                   chunky 70px tap targets. Disabled directions grey out
-                   so the player can see at a glance which way is wall. */
-                .bigdpad {{
-                    display: grid;
-                    grid-template-columns: repeat(3, 52px);
-                    grid-template-rows: repeat(3, 52px);
-                    gap: 4px;
+                /* Map edge tap zones — slim arrow strips around the
+                   perimeter that fire n/s/e/w movement.  Replaces the
+                   big d-pad with something that lives in the same
+                   space the map already occupies. */
+                .mvframe {{
+                    position: relative;
+                    display: inline-block;
+                    padding: 28px 28px;
+                    margin: 0 auto;
+                }}
+                .mvmap {{
+                    position: relative;
+                }}
+                .mvedge {{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
                     justify-content: center;
-                    margin: 10px auto 4px auto;
-                }}
-                .bigdpad-cell {{
-                    /* Empty corner / center fillers in the 3x3 grid. */
-                }}
-                .bigdpad-btn {{
-                    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
-                    border: 1px solid #4CAF50;
-                    border-radius: 8px;
-                    color: #8BC34A;
-                    font-size: 26px;
-                    line-height: 50px;
-                    text-align: center;
                     cursor: pointer;
+                    color: #4CAF50;
+                    font-family: monospace;
+                    font-size: 22px;
+                    font-weight: bold;
                     user-select: none;
                     -webkit-user-select: none;
                     -webkit-tap-highlight-color: transparent;
-                    box-shadow: 0 1px 0 #0a0a0a inset,
-                                0 0 8px rgba(76,175,80,0.15);
-                    transition: transform 60ms ease-out, background 120ms ease-out,
-                                box-shadow 120ms ease-out;
+                    border-radius: 6px;
+                    background: rgba(76,175,80,0.06);
+                    border: 1px solid rgba(76,175,80,0.25);
+                    transition: background 120ms ease-out, opacity 120ms ease-out;
                 }}
-                .bigdpad-btn:active {{
-                    transform: scale(0.92);
-                    background: linear-gradient(180deg, #2a4a2a 0%, #1a301a 100%);
-                    box-shadow: 0 0 14px rgba(76,175,80,0.6),
-                                0 1px 0 #0a0a0a inset;
+                .mvedge:active {{
+                    background: rgba(76,175,80,0.35);
                 }}
-                .bigdpad-btn.disabled {{
-                    border-color: #2a2a2a;
-                    color: #2a2a2a;
-                    background: linear-gradient(180deg, #181818 0%, #101010 100%);
-                    box-shadow: none;
-                    cursor: not-allowed;
-                    pointer-events: none;
-                }}
+                .mvedge.mv-n {{ top: 0; left: 28px; right: 28px; height: 24px; }}
+                .mvedge.mv-s {{ bottom: 0; left: 28px; right: 28px; height: 24px; }}
+                .mvedge.mv-w {{ left: 0; top: 28px; bottom: 28px; width: 24px; }}
+                .mvedge.mv-e {{ right: 0; top: 28px; bottom: 28px; width: 24px; }}
                 /* Altar action cards: stack of tall taprows, each with a
                    coloured title + muted meta line, rendered ABOVE the
                    sacrifice item list.  Detect=cyan, Bless=gold, Purify=
