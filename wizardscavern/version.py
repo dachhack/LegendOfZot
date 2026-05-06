@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 159
+BUILD_NUMBER = 160
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Map edges now hot zones OVERLAID on the map (33% bands top/bottom + side wings) — no more horizontal scroll, map fits the screen at any width",
     "Map edge tap zones now always tappable — walls log 'You hit a wall!' instead of greying out the affordance",
     "Map edge tap zones! Big in-body d-pad gone — tap the slim arrow strips around the map perimeter to step that direction. INV / LANT / STAIRS chips shrunk to compact pills",
     "Toga panel retired everywhere: list-picker modes (spell cast/memorize, crafting, journal, save/load, sell quantity, character stats, scroll picks), plus an HTML numpad for the Zotle teleporter — every mode is now body-only",
