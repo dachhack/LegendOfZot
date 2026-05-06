@@ -2860,10 +2860,13 @@ class WizardsCavernApp(toga.App):
         if gs.prompt_cntl == 'player_name' and len(cmd) == 1 and cmd.isalpha():
             # Use the label (which has correct case) if provided, otherwise use cmd
             letter_to_add = label if label else cmd
-            # Append letter to input field
+            # Append letter to input field, capped at 12 chars to fit the slate.
             current = self.input_field.value or ""
-            self.input_field.value = current + letter_to_add
+            if len(current) < 12:
+                self.input_field.value = current + letter_to_add
             self._haptic('tap')
+            # Re-render so the gold name slate in the HTML body updates.
+            self.render()
             # DON'T focus - prevents keyboard popup!
             return
 
@@ -4146,7 +4149,23 @@ class WizardsCavernApp(toga.App):
                 if not cmd:
                     continue
                 try:
-                    self.process_command(str(cmd))
+                    cmd_str = str(cmd)
+                    # Name-entry HTML controls: backspace and send pseudo-cmds
+                    # are handled here so the typed name lives in input_field
+                    # and gets submitted as a real command on SEND.
+                    if gs.prompt_cntl == 'player_name':
+                        if cmd_str == '__nm_bs':
+                            current = self.input_field.value or ""
+                            self.input_field.value = current[:-1]
+                            self._haptic('tap')
+                            self.render()
+                            continue
+                        if cmd_str == '__nm_send':
+                            cmd_str = (self.input_field.value or "").strip()
+                            if not cmd_str:
+                                continue
+                            self.input_field.value = ""
+                    self.process_command(cmd_str)
                     if getattr(gs, 'game_should_quit', False):
                         return
                     self.render()
@@ -5221,21 +5240,71 @@ class WizardsCavernApp(toga.App):
             current_commands_text = "Tap a slot | x = cancel"
 
         elif gs.prompt_cntl == "player_name":
-            # PLAYER NAME INPUT SCREEN
+            # PLAYER NAME INPUT SCREEN — big gold slate showing the typed
+            # name with a blinking cursor, plus tappable BACKSPACE / SEND
+            # cards so the action is obvious even before the user notices
+            # the QWERTY at the bottom.
+            typed = (self.input_field.value or "").upper()
+            max_len = 12
+            slot_html = ""
+            for i in range(max_len):
+                if i < len(typed):
+                    ch = typed[i]
+                    if not ch.isalpha():
+                        ch = "?"
+                    slot_html += f"<span class='nm-slot nm-filled'>{ch}</span>"
+                elif i == len(typed):
+                    slot_html += "<span class='nm-slot nm-cursor'>_</span>"
+                else:
+                    slot_html += "<span class='nm-slot nm-empty'>_</span>"
+            has_name = len(typed) > 0
+            send_cls = "taprow nm-send" if has_name else "taprow nm-send disabled"
+            bs_cls = "taprow cancel nm-bs" if has_name else "taprow cancel nm-bs disabled"
             html_code = f"""
+                <style>
+                  .nm-slate {{
+                    font-family: 'Courier New', monospace;
+                    font-size: 28px; letter-spacing: 6px; font-weight: bold;
+                    text-align: center; padding: 22px 8px; margin: 14px 0 10px 0;
+                    background: linear-gradient(180deg, #1a1608 0%, #0a0804 100%);
+                    border: 2px solid #5a4a1a; border-radius: 6px;
+                    box-shadow: 0 0 14px rgba(255,215,0,0.18) inset,
+                                0 0 8px rgba(255,215,0,0.10);
+                    overflow-x: auto; white-space: nowrap;
+                  }}
+                  .nm-slot {{ display: inline-block; min-width: 18px; }}
+                  .nm-filled {{ color: #FFD700; text-shadow: 0 0 10px rgba(255,215,0,0.7); }}
+                  .nm-empty  {{ color: #3a3320; }}
+                  .nm-cursor {{ color: #FFD700; animation: nmblink 0.9s steps(2) infinite; }}
+                  @keyframes nmblink {{ 50% {{ opacity: 0.15; }} }}
+                  .nm-actions {{ display: flex; gap: 8px; margin-top: 6px; }}
+                  .nm-actions .taprow {{ flex: 1; margin: 0; text-align: center;
+                                          font-weight: bold; letter-spacing: 1.5px;
+                                          padding: 14px 8px; font-size: 14px; }}
+                  .nm-hint {{ font-size: 11px; color: #888; text-align: center;
+                              margin: 2px 0 6px 0; }}
+                  .nm-count {{ font-size: 10px; color: #5a5a5a; text-align: center;
+                                margin-top: -4px; }}
+                </style>
                 <div style="font-family: monospace; font-size: 12px; padding: 10px;">
-                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 15px; color: #FFD700; text-align: center;">
+                    <div style="font-size: 18px; font-weight: bold; margin-bottom: 6px; color: #FFD700; text-align: center;">
                         CHARACTER CREATION
                     </div>
-                    <div style="font-size: 12px; margin-bottom: 10px; color: #FFFFFF;">
-                        What is your hero's name?
+                    <div style="font-size: 12px; margin-bottom: 2px; color: #FFFFFF; text-align: center;">
+                        What is thy name, hero?
                     </div>
-                    <div style="font-size: 12px; color: #888888; margin-top: 20px;">
-                        Use the letter buttons below to type your name, then press SEND...
+                    <div class="nm-slate">{slot_html}</div>
+                    <div class="nm-count">{len(typed)}/{max_len}</div>
+                    <div class="nm-hint">Tap letters below to type &middot; SEND when ready</div>
+                    <div class="nm-actions">
+                        <div class="{bs_cls}" data-zcmd="__nm_bs"
+                             onclick="window.__zotTap('__nm_bs', this)">&#9003; BACKSPACE</div>
+                        <div class="{send_cls}" data-zcmd="__nm_send"
+                             onclick="window.__zotTap('__nm_send', this)">SEND &#9654;</div>
                     </div>
                 </div>
                 """
-            current_commands_text = "Use letter buttons below"
+            current_commands_text = "Tap letters · ⌫ · SEND"
 
         elif gs.prompt_cntl == "player_race":
             # PLAYER RACE SELECTION SCREEN — tappable race cards.
