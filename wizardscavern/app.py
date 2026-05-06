@@ -2340,19 +2340,6 @@ def generate_grid_html(floor, player_x, player_y):
     highlight_coords = (player_y, player_x)
     grid_html = '<div style="text-align: center; max-width: 100%; overflow-x: auto; margin: 0 auto;"><div style="background-color: #222; display: inline-block; padding: 2px; border-radius: 2px; max-width: 100%;">'
 
-    # Tap-to-move targets: 4 cardinal neighbours of the player. Each maps
-    # to the n/s/e/w command that move_player() expects. Only walkable,
-    # in-bounds, discovered (or any) tiles get the tap handler — walls
-    # stay inert. This keeps the in-body map navigable without the
-    # bottom-panel d-pad.
-    tap_dirs = {
-        (player_y - 1, player_x): 'n',
-        (player_y + 1, player_x): 's',
-        (player_y, player_x - 1): 'w',
-        (player_y, player_x + 1): 'e',
-    }
-    is_game_loop = gs.prompt_cntl == "game_loop"
-
     for r_idx in range(floor.rows):
         grid_html += '<div style="height: 17px; white-space: nowrap;">'
         for c_idx in range(floor.cols):
@@ -2442,26 +2429,7 @@ def generate_grid_html(floor, player_x, player_y):
                 if (r_idx, c_idx) == highlight_coords:
                     cell_style += "background-color: #DDD; color: #000; font-weight: bold; border-radius: 2px;"
 
-            # Tap-to-move: cardinal neighbour, walkable, in-bounds.
-            tap_attrs = ""
-            if (
-                is_game_loop
-                and (r_idx, c_idx) in tap_dirs
-                and 0 <= c_idx < floor.cols
-                and 0 <= r_idx < floor.rows
-                and floor.grid[r_idx][c_idx].room_type != floor.wall_char
-                and (r_idx, c_idx) != highlight_coords
-            ):
-                _dir = tap_dirs[(r_idx, c_idx)]
-                # Tap target — no visual highlight (the body d-pad is the
-                # primary movement UI now). Cells stay invisibly tappable
-                # for power users who want to tap directly on the map.
-                cell_style += "cursor: pointer;"
-                tap_attrs = (
-                    f' onclick="window.__zotTap(\'{_dir}\', this)"'
-                )
-
-            grid_html += f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'
+            grid_html += f'<span class="zmap-cell" style="{cell_style}">{content}</span>'
         grid_html += "</div>"
     grid_html += "</div></div>"
 
