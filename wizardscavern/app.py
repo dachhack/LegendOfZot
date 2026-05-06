@@ -2453,14 +2453,12 @@ def generate_grid_html(floor, player_x, player_y):
                 and (r_idx, c_idx) != highlight_coords
             ):
                 _dir = tap_dirs[(r_idx, c_idx)]
-                cell_style += (
-                    "cursor: pointer; box-shadow: inset 0 0 0 1px #4CAF50;"
-                    "border-radius: 2px;"
-                )
+                # Tap target — no visual highlight (the body d-pad is the
+                # primary movement UI now). Cells stay invisibly tappable
+                # for power users who want to tap directly on the map.
+                cell_style += "cursor: pointer;"
                 tap_attrs = (
                     f' onclick="window.__zotTap(\'{_dir}\', this)"'
-                    ' ontouchstart="this.style.background=\'#2a4a2a\';"'
-                    ' ontouchend="this.style.background=\'\';"'
                 )
 
             grid_html += f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'
@@ -9867,20 +9865,20 @@ class WizardsCavernApp(toga.App):
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    gap: 6px;
-                    margin: 8px 4px 4px 4px;
+                    gap: 8px;
+                    margin: 12px 4px 8px 4px;
                 }}
                 .hudchip {{
                     display: inline-block;
-                    padding: 8px 14px;
-                    border-radius: 18px;
+                    padding: 14px 22px;
+                    border-radius: 24px;
                     background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
                     border: 1px solid #555;
                     color: #EEE;
                     font-family: monospace;
-                    font-size: 12px;
+                    font-size: 15px;
                     font-weight: bold;
-                    letter-spacing: 1px;
+                    letter-spacing: 1.5px;
                     cursor: pointer;
                     user-select: none;
                     -webkit-user-select: none;
@@ -9914,22 +9912,22 @@ class WizardsCavernApp(toga.App):
                    so the player can see at a glance which way is wall. */
                 .bigdpad {{
                     display: grid;
-                    grid-template-columns: repeat(3, 70px);
-                    grid-template-rows: repeat(3, 70px);
-                    gap: 6px;
+                    grid-template-columns: repeat(3, 52px);
+                    grid-template-rows: repeat(3, 52px);
+                    gap: 4px;
                     justify-content: center;
-                    margin: 14px auto 6px auto;
+                    margin: 10px auto 4px auto;
                 }}
                 .bigdpad-cell {{
                     /* Empty corner / center fillers in the 3x3 grid. */
                 }}
                 .bigdpad-btn {{
                     background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
-                    border: 2px solid #4CAF50;
-                    border-radius: 10px;
+                    border: 1px solid #4CAF50;
+                    border-radius: 8px;
                     color: #8BC34A;
-                    font-size: 38px;
-                    line-height: 66px;
+                    font-size: 26px;
+                    line-height: 50px;
                     text-align: center;
                     cursor: pointer;
                     user-select: none;
