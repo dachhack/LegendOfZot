@@ -2524,11 +2524,11 @@ _MODES_WITH_NUMPAD = frozenset({
 })
 
 # Modes that need the input_field + SEND + backspace row rendered.
-# Text-entry screens only — teleporter coords, name, puzzle word.  Every
-# other mode hides the row and gets that ~32px back for the game view.
+# Text-entry screens only — teleporter coords + puzzle word.  player_name
+# moved to a body-only flow (HTML BACKSPACE / SEND cards), so the toga
+# input row stays orphaned to avoid the duplicate-controls confusion.
 _MODES_WITH_INPUT_FIELD = frozenset({
     'zotle_teleporter_mode',
-    'player_name',
     'puzzle_mode',
 })
 
@@ -3244,7 +3244,14 @@ class WizardsCavernApp(toga.App):
             self.bottom_panel.style.height = 0
             self.button_panel.style.height = 0
             self.commands_label.style.height = 0
-        elif gs.prompt_cntl in ('player_name', 'puzzle_mode'):
+        elif gs.prompt_cntl == 'player_name':
+            # Body owns the BACKSPACE / SEND cards now, so the toga
+            # input_row is fully suppressed — no more duplicate controls.
+            # Bottom panel is QWERTY-only.
+            self.input_row.style.height = 0
+            self.bottom_panel.style.height = 160
+            self.button_panel.style.height = 114
+        elif gs.prompt_cntl == 'puzzle_mode':
             # QWERTY keyboard: 3 rows × 34px keys + margins; wide text field.
             self.input_row_spacer.style.flex = 0
             self.input_field.style = Pack(flex=1, height=36, **_field_base)
@@ -5312,8 +5319,14 @@ class WizardsCavernApp(toga.App):
                 else:
                     slot_html += "<span class='nm-slot nm-empty'>_</span>"
             has_name = len(typed) > 0
-            send_cls = "taprow nm-send" if has_name else "taprow nm-send disabled"
-            bs_cls = "taprow cancel nm-bs" if has_name else "taprow cancel nm-bs disabled"
+            # SEND no-ops when empty (handled by the polling-loop intercept),
+            # so leave both cards visually active — users were tapping and
+            # getting nothing back from the disabled state.
+            send_cls = "taprow nm-send"
+            bs_cls = "taprow cancel nm-bs"
+            if not has_name:
+                send_cls += " nm-empty"
+                bs_cls += " nm-empty"
             html_code = f"""
                 <style>
                   .nm-slate {{
@@ -5339,6 +5352,7 @@ class WizardsCavernApp(toga.App):
                               margin: 2px 0 6px 0; }}
                   .nm-count {{ font-size: 10px; color: #5a5a5a; text-align: center;
                                 margin-top: -4px; }}
+                  .nm-actions .taprow.nm-empty {{ opacity: 0.55; }}
                 </style>
                 <div style="font-family: monospace; font-size: 12px; padding: 10px;">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 6px; color: #FFD700; text-align: center;">
@@ -9169,6 +9183,7 @@ class WizardsCavernApp(toga.App):
             # tap targets stay close to the action.  Stairs chip appears
             # only when standing on U/D so the body doesn't clutter.
             hud_chips_html = ""
+            bigdpad_html = ""
             if gs.prompt_cntl == "game_loop":
                 _floor = gs.my_tower.floors[gs.player_character.z]
                 _here = _floor.grid[gs.player_character.y][gs.player_character.x]
@@ -9198,6 +9213,41 @@ class WizardsCavernApp(toga.App):
                     "<div class='hudchips'>" + "".join(_chips) + "</div>"
                 )
 
+                # Big in-body d-pad — fills the empty area under the map
+                # with chunky tap targets. Disabled directions grey out so
+                # you can see at a glance which way you can step.  Tile
+                # taps in the map still work as a shortcut, but this is
+                # the primary movement UI now.
+                _px, _py = gs.player_character.x, gs.player_character.y
+                _wall = _floor.wall_char
+                def _can(nx, ny):
+                    return (0 <= nx < _floor.cols and 0 <= ny < _floor.rows
+                            and _floor.grid[ny][nx].room_type != _wall)
+                _dirs = [
+                    ('n', '▲', _can(_px, _py - 1)),
+                    ('s', '▼', _can(_px, _py + 1)),
+                    ('e', '►', _can(_px + 1, _py)),
+                    ('w', '◄', _can(_px - 1, _py)),
+                ]
+                _btns = {}
+                for _key, _glyph, _ok in _dirs:
+                    if _ok:
+                        _btns[_key] = (
+                            f"<div class='bigdpad-btn' data-zcmd='{_key}' "
+                            f"onclick=\"window.__zotTap('{_key}', this)\">{_glyph}</div>"
+                        )
+                    else:
+                        _btns[_key] = (
+                            f"<div class='bigdpad-btn disabled'>{_glyph}</div>"
+                        )
+                bigdpad_html = (
+                    "<div class='bigdpad'>"
+                    f"<div class='bigdpad-cell'></div>{_btns['n']}<div class='bigdpad-cell'></div>"
+                    f"{_btns['w']}<div class='bigdpad-cell mid'></div>{_btns['e']}"
+                    f"<div class='bigdpad-cell'></div>{_btns['s']}<div class='bigdpad-cell'></div>"
+                    "</div>"
+                )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 16px;">
                     {achievement_notifications}
@@ -9206,6 +9256,7 @@ class WizardsCavernApp(toga.App):
                     {lantern_info_html}
                     {grid_html}
                     {hud_chips_html}
+                    {bigdpad_html}
                     {dpad_overlay_html}
                     {scroll_picker_html}
                     {confirm_quit_html}
@@ -9797,6 +9848,52 @@ class WizardsCavernApp(toga.App):
                     -webkit-tap-highlight-color: transparent;
                     -webkit-user-select: none;
                     user-select: none;
+                }}
+                /* Big in-body d-pad for game_loop. Sits under the HUD
+                   chips, filling the empty mid-screen real estate with
+                   chunky 70px tap targets. Disabled directions grey out
+                   so the player can see at a glance which way is wall. */
+                .bigdpad {{
+                    display: grid;
+                    grid-template-columns: repeat(3, 70px);
+                    grid-template-rows: repeat(3, 70px);
+                    gap: 6px;
+                    justify-content: center;
+                    margin: 14px auto 6px auto;
+                }}
+                .bigdpad-cell {{
+                    /* Empty corner / center fillers in the 3x3 grid. */
+                }}
+                .bigdpad-btn {{
+                    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+                    border: 2px solid #4CAF50;
+                    border-radius: 10px;
+                    color: #8BC34A;
+                    font-size: 38px;
+                    line-height: 66px;
+                    text-align: center;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    box-shadow: 0 1px 0 #0a0a0a inset,
+                                0 0 8px rgba(76,175,80,0.15);
+                    transition: transform 60ms ease-out, background 120ms ease-out,
+                                box-shadow 120ms ease-out;
+                }}
+                .bigdpad-btn:active {{
+                    transform: scale(0.92);
+                    background: linear-gradient(180deg, #2a4a2a 0%, #1a301a 100%);
+                    box-shadow: 0 0 14px rgba(76,175,80,0.6),
+                                0 1px 0 #0a0a0a inset;
+                }}
+                .bigdpad-btn.disabled {{
+                    border-color: #2a2a2a;
+                    color: #2a2a2a;
+                    background: linear-gradient(180deg, #181818 0%, #101010 100%);
+                    box-shadow: none;
+                    cursor: not-allowed;
+                    pointer-events: none;
                 }}
                 /* Altar action cards: stack of tall taprows, each with a
                    coloured title + muted meta line, rendered ABOVE the
