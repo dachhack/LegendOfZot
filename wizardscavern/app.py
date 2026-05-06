@@ -3124,14 +3124,17 @@ class WizardsCavernApp(toga.App):
             pass
 
     def set_input_visibility(self):
-        """Manage keyboard visibility by focusing input when needed."""
-        
-        # Only show keyboard during character name entry
+        """Manage placeholder text on the (now hidden) input_field.
+
+        The toga input_field is no longer rendered for player_name — the
+        body owns the typing flow — but we still use input_field.value
+        as the source of truth for the typed name.  Do NOT clear it
+        here: render() runs every keystroke, and clearing on every
+        render would erase the letter the polling intercept just added.
+        """
         if gs.prompt_cntl == 'player_name':
             self.input_field.placeholder = "Type your name..."
-            self.input_field.value = ""
         else:
-            # Just clear placeholder
             self.input_field.placeholder = ""
 
     def _move_input_widgets_to(self, target_box, add_to_target=True):
