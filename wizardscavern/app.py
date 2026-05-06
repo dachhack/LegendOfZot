@@ -10334,9 +10334,9 @@ class WizardsCavernApp(toga.App):
                     top: 0; left: 0; right: 0; bottom: 0;
                     display: flex;
                     cursor: pointer;
-                    color: #4CAF50;
+                    color: rgba(76,175,80,0.25);
                     font-family: monospace;
-                    font-size: 22px;
+                    font-size: 12px;
                     font-weight: bold;
                     user-select: none;
                     -webkit-user-select: none;

@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 165
+BUILD_NUMBER = 166
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Map arrows dimmed and shrunk — ▲▼◄► hint glyphs now render at 12px in 25% opacity green so they barely whisper at the edges of the map without competing with the dungeon glyphs",
     "Map movement: X-quadrant triangle hotspots tile the whole map area — tap the top triangle to step n, right for e, bottom for s, left for w. Small ▲▼◄► glyphs at the edge midpoints serve as visual hints. No more cardinal-neighbour cell taps; no more perimeter bars",
     "Map centering fix — mvframe now uses display:block + width:fit-content + margin:0 auto, so the full 15x21 floor renders centered on the screen instead of hugging the left edge",
     "Map edge tap zones now always tappable — walls log 'You hit a wall!' instead of greying out the affordance",
