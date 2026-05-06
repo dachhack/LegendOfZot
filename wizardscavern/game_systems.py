@@ -3712,7 +3712,7 @@ def activate_playtest_mode(player_character):
             value=120,
             level=2,
             scroll_type='mapping'
-        , notify=False))
+        ), notify=False)
         player_character.inventory.add_item(Scroll(
             name="Scroll of Upgrade",
             description="Enhances equipment",
@@ -3720,7 +3720,7 @@ def activate_playtest_mode(player_character):
             value=100,
             level=2,
             scroll_type='upgrade'
-        , notify=False))
+        ), notify=False)
         player_character.inventory.add_item(Scroll(
             name="Scroll of Teleportation",
             description="Teleport to random location",
@@ -3728,7 +3728,7 @@ def activate_playtest_mode(player_character):
             value=100,
             level=2,
             scroll_type='teleport'
-        , notify=False))
+        ), notify=False)
 
     # Add lantern with lots of fuel
     lantern = Lantern(
@@ -3750,7 +3750,7 @@ def activate_playtest_mode(player_character):
             value=5,
             level=0,
             fuel_restore_amount=50
-        , notify=False))
+        ), notify=False)
 
     # Add ALL treasures (includes unique treasures and minor treasures)
     add_log(f"{COLOR_CYAN}Adding all treasures...{COLOR_RESET}")

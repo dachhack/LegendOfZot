@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 139
+BUILD_NUMBER = 140
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "FIX: playtest mode no longer crashes with TypeError when adding scrolls / lantern fuel",
     "Internal: deleted ~24 MB of legacy sprite-sheet base64 now that everything renders from the round-8 pool",
     "Spell cast animations! Spell icons fly, flash, descend, orbit, spiral, or fill the screen depending on the spell type",
     "Loot toast popups — find an item, see a banner with its icon and name fade in at the top of the screen",
