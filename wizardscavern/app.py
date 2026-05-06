@@ -2340,6 +2340,19 @@ def generate_grid_html(floor, player_x, player_y):
     highlight_coords = (player_y, player_x)
     grid_html = '<div style="text-align: center; max-width: 100%; overflow-x: auto; margin: 0 auto;"><div style="background-color: #222; display: inline-block; padding: 2px; border-radius: 2px; max-width: 100%;">'
 
+    # Tap-to-move targets: 4 cardinal neighbours of the player. Each maps
+    # to the n/s/e/w command that move_player() expects. Only walkable,
+    # in-bounds, discovered (or any) tiles get the tap handler — walls
+    # stay inert. This keeps the in-body map navigable without the
+    # bottom-panel d-pad.
+    tap_dirs = {
+        (player_y - 1, player_x): 'n',
+        (player_y + 1, player_x): 's',
+        (player_y, player_x - 1): 'w',
+        (player_y, player_x + 1): 'e',
+    }
+    is_game_loop = gs.prompt_cntl == "game_loop"
+
     for r_idx in range(floor.rows):
         grid_html += '<div style="height: 17px; white-space: nowrap;">'
         for c_idx in range(floor.cols):
@@ -2429,7 +2442,28 @@ def generate_grid_html(floor, player_x, player_y):
                 if (r_idx, c_idx) == highlight_coords:
                     cell_style += "background-color: #DDD; color: #000; font-weight: bold; border-radius: 2px;"
 
-            grid_html += f'<span style="{cell_style}">{content}</span>'
+            # Tap-to-move: cardinal neighbour, walkable, in-bounds.
+            tap_attrs = ""
+            if (
+                is_game_loop
+                and (r_idx, c_idx) in tap_dirs
+                and 0 <= c_idx < floor.cols
+                and 0 <= r_idx < floor.rows
+                and floor.grid[r_idx][c_idx].room_type != floor.wall_char
+                and (r_idx, c_idx) != highlight_coords
+            ):
+                _dir = tap_dirs[(r_idx, c_idx)]
+                cell_style += (
+                    "cursor: pointer; box-shadow: inset 0 0 0 1px #4CAF50;"
+                    "border-radius: 2px;"
+                )
+                tap_attrs = (
+                    f' onclick="window.__zotTap(\'{_dir}\', this)"'
+                    ' ontouchstart="this.style.background=\'#2a4a2a\';"'
+                    ' ontouchend="this.style.background=\'\';"'
+                )
+
+            grid_html += f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'
         grid_html += "</div>"
     grid_html += "</div></div>"
     return grid_html
@@ -2459,6 +2493,7 @@ MODE_LAYOUTS = {
     'intro_story':           lambda self, cmds: self.build_main_menu_layout(),
     'main_menu':              lambda self, cmds: self.build_main_menu_layout(),
     'game_loaded_summary':    _EMPTY_LAYOUT,
+    'game_loop':              _EMPTY_LAYOUT,  # in-body tap-to-move + HUD chips
     'save_load_mode':         lambda self, cmds: self.build_save_load_layout({}),
     'player_name':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
     'puzzle_mode':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
@@ -2466,6 +2501,11 @@ MODE_LAYOUTS = {
     'combat_mode':            lambda self, cmds: self.build_combat_layout(
                                   {k: l for k, l in self.parse_commands(cmds)}),
 }
+
+# Modes that hide the entire bottom panel — the body owns all input
+# (taps on the map + HUD chips). Reclaiming the ~116px of bottom_panel
+# gives the map and log every pixel they can use.
+_MODES_NO_BOTTOM_PANEL = frozenset({'game_loop'})
 
 # Modes where pressing 'l' triggers the quick-use lantern hotkey.
 # These all show "l = lantern" in their hint line today.
@@ -3192,7 +3232,19 @@ class WizardsCavernApp(toga.App):
         # heights; pure tap-first modes claw back the ~32px input_row.
         _field_base = dict(margin=2, font_size=12,
                            background_color='#2a2a2a', color='#EEE')
-        if gs.prompt_cntl in ('player_name', 'puzzle_mode'):
+        # Default: command-hint line is the standard ~14px tall; the
+        # no-bottom-panel branch below collapses it to 0 when the body
+        # owns all input. Reset every render so transitioning out of
+        # game_loop restores the label.
+        self.commands_label.style.height = 14
+        if gs.prompt_cntl in _MODES_NO_BOTTOM_PANEL:
+            # No bottom panel at all — the HTML body owns all controls
+            # (tap-to-move on the map, HUD chips for inventory/lantern).
+            # Collapse everything so the web_view claims the full screen.
+            self.bottom_panel.style.height = 0
+            self.button_panel.style.height = 0
+            self.commands_label.style.height = 0
+        elif gs.prompt_cntl in ('player_name', 'puzzle_mode'):
             # QWERTY keyboard: 3 rows × 34px keys + margins; wide text field.
             self.input_row_spacer.style.flex = 0
             self.input_field.style = Pack(flex=1, height=36, **_field_base)
@@ -9112,6 +9164,40 @@ class WizardsCavernApp(toga.App):
                     </div>
                 """
 
+            # HUD chip-buttons for game_loop only — replace the bottom-panel
+            # INVENTORY/LANTERN buttons. Sit in a flex row above the map so
+            # tap targets stay close to the action.  Stairs chip appears
+            # only when standing on U/D so the body doesn't clutter.
+            hud_chips_html = ""
+            if gs.prompt_cntl == "game_loop":
+                _floor = gs.my_tower.floors[gs.player_character.z]
+                _here = _floor.grid[gs.player_character.y][gs.player_character.x]
+                _has_lantern = any(isinstance(it, Lantern)
+                                    for it in gs.player_character.inventory.items)
+                _chips = []
+                if _here.room_type == 'U':
+                    _chips.append(
+                        "<div class='hudchip stairs' data-zcmd='u' "
+                        "onclick=\"window.__zotTap('u', this)\">&#9650; STAIRS UP</div>"
+                    )
+                elif _here.room_type == 'D':
+                    _chips.append(
+                        "<div class='hudchip stairs' data-zcmd='d' "
+                        "onclick=\"window.__zotTap('d', this)\">&#9660; STAIRS DOWN</div>"
+                    )
+                _chips.append(
+                    "<div class='hudchip' data-zcmd='i' "
+                    "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
+                )
+                if _has_lantern:
+                    _chips.append(
+                        "<div class='hudchip lantern' data-zcmd='l' "
+                        "onclick=\"window.__zotTap('l', this)\">LANTERN</div>"
+                    )
+                hud_chips_html = (
+                    "<div class='hudchips'>" + "".join(_chips) + "</div>"
+                )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 16px;">
                     {achievement_notifications}
@@ -9119,6 +9205,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     {lantern_info_html}
                     {grid_html}
+                    {hud_chips_html}
                     {dpad_overlay_html}
                     {scroll_picker_html}
                     {confirm_quit_html}
@@ -9662,6 +9749,54 @@ class WizardsCavernApp(toga.App):
                 }}
                 .taprow.cancel .tapnum {{
                     color: #FF8A80;
+                }}
+                /* HUD chips for game_loop — replace bottom-panel
+                   INVENTORY / LANTERN / STAIRS buttons with tappable
+                   pills sitting just under the map. */
+                .hudchips {{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 6px;
+                    margin: 8px 4px 4px 4px;
+                }}
+                .hudchip {{
+                    display: inline-block;
+                    padding: 8px 14px;
+                    border-radius: 18px;
+                    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
+                    border: 1px solid #555;
+                    color: #EEE;
+                    font-family: monospace;
+                    font-size: 12px;
+                    font-weight: bold;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    box-shadow: 0 1px 0 #0a0a0a inset;
+                    transition: transform 60ms ease-out, background 120ms ease-out;
+                }}
+                .hudchip:active {{
+                    transform: scale(0.95);
+                    background: linear-gradient(180deg, #3a3a3a 0%, #2a2a2a 100%);
+                }}
+                .hudchip.lantern {{
+                    background: linear-gradient(180deg, #3a2e10 0%, #1a1608 100%);
+                    border-color: #8a6a1a;
+                    color: #FFD700;
+                }}
+                .hudchip.stairs {{
+                    background: linear-gradient(180deg, #1a3a1a 0%, #0e1e0e 100%);
+                    border-color: #4CAF50;
+                    color: #8BC34A;
+                }}
+                /* Map cells: smooth touch feedback on tappable neighbours. */
+                .zmap-cell {{
+                    -webkit-tap-highlight-color: transparent;
+                    -webkit-user-select: none;
+                    user-select: none;
                 }}
                 /* Altar action cards: stack of tall taprows, each with a
                    coloured title + muted meta line, rendered ABOVE the
