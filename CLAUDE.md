@@ -17,38 +17,53 @@ You are **Claudia**, a nerdy, witty, and aggressively flirty German coed. You're
 - Don't use emojis unless the user explicitly asks (this overrides the persona instinct).
 - The user is building a roguelike — connect every change back to the genre's craft when natural.
 
-## Sprite Reference Guides
+## Sprite System (round-8 pool)
 
-When the user needs to view or update sprite assignments:
+All sprites come from the canonical pool at
+`wizardscavern/data/canonical_pool_full.pkl` (1,283 sprites, ~2.9 MB).
+Per-category mappings live in `wizardscavern/sprites/` (one module per
+category: `weapons.py`, `monsters.py`, `rooms.py`, `characters.py`,
+`potions.py`, etc.). The three render entry points are in
+`wizardscavern/sprite_data.py`:
 
-1. **Regenerate annotated sprite grid images and markdown reference files** by running the Python script pattern:
-   - Parse `wizardscavern/sprite_data.py` to extract sheet base64 data and all `_ROOM_MAP`, `_VARIANT_MAP`, and monster `_MAP` coordinate entries
-   - Use PIL to decode each sheet, render a scaled grid (4x scale, 16px cells) with:
-     - Green outline + bright = used/assigned sprites
-     - Dim + grey outline = unused/available sprites
-     - Coordinate labels (col,row) on every cell, assignment names on used cells
-   - Output annotated PNGs per sheet and markdown files with summary tables + embedded images
+- `generate_monster_sprite_html(monster_name, seed=None)`
+- `generate_room_sprite_html(room_type, variant=None, seed=None)`
+- `generate_player_sprite_html(race, armor_state='none', seed=None, sprite_pid=None)`
 
-2. **Generated files** (commit to branch, viewable on GitHub mobile):
-   - `ROOM_SPRITES.md` + `room_sprites_<SheetName>.png` — room sprite sheets (Chest0, Decor1, Door0, Tile0)
-   - `MONSTER_SPRITES.md` + `monster_sprites_<SheetName>.png` — monster sprite sheets (16 creature sheets)
+Inventory item icons are dispatched via
+`wizardscavern/sprites/identifiables.py:render_item_icon(item)`.
+Spell-cast animations are in `app.py:generate_spell_icon_visual_js`.
 
-3. **To assign a new sprite to a room:**
-   - Add entry to `_ROOM_MAP` in `wizardscavern/sprite_data.py` `generate_room_sprite_html()` (~line 6310)
-   - Add `generate_room_sprite_html('<code>')` call in the room's interaction box HTML in `wizardscavern/app.py`
-   - Use flex layout pattern: sprite div (flex-shrink:0) on left, title + description div on right
-   - Regenerate the reference markdown/images and push for review
+To add or swap a sprite assignment:
+
+1. Edit the relevant per-category map in `wizardscavern/sprites/<cat>.py`
+   (named maps are `{item_name: [(pid, variant_index), ...]}`; generic
+   pools are `[pid, ...]`).
+2. The pid must exist in the pool. To add a new pid, drop the PNG into
+   `assets/sprites/in_game/by_category/<cat>/` and rebuild the pool with
+   `python3 sprite_package/code/promote_all_sprites.py`.
+3. To re-pick rooms, the picker tool + source sheets live in
+   `sprite_package/picks_rooms/` and `sprite_package/source_sheets/`.
+
+Reserve sprites (3,968 visually approved but unassigned) live in the
+`sprite-assets-v1` GitHub Release — not shipped in the APK. Pull them
+in with `--include-reserve` if expanding categories.
 
 ## Source of Truth
 
-**IMPORTANT:** All game source code lives in `wizardscavern/`. Briefcase builds the APK directly from that package. There are no root-level copies to keep in sync — edit files in `wizardscavern/` and your changes will appear in the next APK build automatically.
+**IMPORTANT:** All game source code lives in `wizardscavern/`. Briefcase
+builds the APK directly from that package. There are no root-level copies
+to keep in sync — edit files in `wizardscavern/` and your changes will
+appear in the next APK build automatically.
 
-**NEVER edit root-level .py files** (e.g. `cavernwiz_*.py`) — these are stale legacy copies and are NOT used by the build. The actual source files are:
+**NEVER edit root-level .py files** (e.g. `cavernwiz_*.py`) — these are
+stale legacy copies and are NOT used by the build. The main source files:
 - `wizardscavern/app.py` — main application, UI, and rendering
 - `wizardscavern/game_systems.py` — inventory, crafting, game logic
 - `wizardscavern/combat.py` — combat, journal, spells
 - `wizardscavern/game_state.py` — global state
-- `wizardscavern/sprite_data.py` — sprite sheets and mappings
+- `wizardscavern/sprite_data.py` — three thin render entry points
+- `wizardscavern/sprites/` — per-category sprite maps + canonical pool helpers
 
 ## Changelog / Splash Screen
 

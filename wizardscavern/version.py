@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 141
+BUILD_NUMBER = 142
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Internal: app icons recompressed (-3.6 MB), repo cleanup of orphan + stale sprite reference files (-23 MB)",
     "Internal: trimmed ~9 MB of reserve sprites from the APK pool (kept the 1283 in-game ones, dropped 3968 unused reserves)",
     "FIX: playtest mode no longer crashes with TypeError when adding scrolls / lantern fuel",
     "Internal: deleted ~24 MB of legacy sprite-sheet base64 now that everything renders from the round-8 pool",
