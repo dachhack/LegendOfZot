@@ -5646,7 +5646,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                     <div style="font-family: monospace; font-size: 12px;">
                         {achievement_notifications}
-                        <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                        <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                         <div style="border: 1px solid gold; padding: 4px; border-radius: 4px; background: #1a1a1a; max-height: 500px; overflow-y: auto; margin-bottom: 5px;">{achievements_html}</div>
 
@@ -6051,7 +6051,7 @@ class WizardsCavernApp(toga.App):
                         <div style="font-family: monospace; font-size: 12px; width: 100%; max-width: 100vw; overflow-x: auto; box-sizing: border-box;">
                             <div style="min-width: 0; max-width: 100%;">
                                 {achievement_notifications}
-                                <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                                <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                                 {player_stats_html}
                                 <div style="border: 1px solid #4CAF50; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px; overflow-x: auto; max-width: 100%;">{player_inv_html}</div>
                                 {cb_inv_chips_html}
@@ -6293,7 +6293,7 @@ class WizardsCavernApp(toga.App):
 
                                 {achievement_notifications}
 
-                                <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                                <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                                 {player_stats_html}
 
@@ -6407,7 +6407,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     <div style="border: 1px solid #444; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{stats_html}</div>
 
@@ -6533,7 +6533,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div class="room-panel" style="width: 100%;">{crafting_html}</div>
                 </div>
@@ -6687,7 +6687,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     {memo_tabs_html}
 
@@ -6787,7 +6787,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     <div style="border: 1px solid gold; padding: 10px; max-height: 500px; overflow-y: auto;">
                         {journal_html}
@@ -7115,7 +7115,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="width: 100%; max-width: 300px; margin: 0 auto 4px auto;">
@@ -7263,7 +7263,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
 
@@ -7344,7 +7344,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
@@ -7441,7 +7441,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
 
@@ -7498,7 +7498,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
@@ -7585,7 +7585,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     {player_stats_html}
 
@@ -7819,7 +7819,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
@@ -7889,7 +7889,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
@@ -7952,7 +7952,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
@@ -8019,7 +8019,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
@@ -8096,7 +8096,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     {player_stats_html}
 
@@ -8166,7 +8166,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -8223,7 +8223,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -8286,7 +8286,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -8351,7 +8351,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -8413,7 +8413,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                         <div style="font-family: monospace; font-size: 12px;">
                             {achievement_notifications}
-                            <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                            <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                             {player_stats_html}
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                                 <div>{grid_html}</div>
@@ -8456,7 +8456,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -8554,7 +8554,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -8611,7 +8611,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -8720,7 +8720,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -8809,7 +8809,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -9020,7 +9020,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
@@ -9108,7 +9108,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="padding: 8px;">
                         {puzzle_html}
@@ -9147,7 +9147,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
                         <div>{grid_html}</div>
@@ -9215,7 +9215,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
 
                     {player_stats_html}
 
@@ -9456,7 +9456,7 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style="font-family: monospace; font-size: 16px;">
                     {achievement_notifications}
-                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
+                    <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     {lantern_info_html}
                     {grid_html}
