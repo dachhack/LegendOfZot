@@ -2340,6 +2340,19 @@ def generate_grid_html(floor, player_x, player_y):
     highlight_coords = (player_y, player_x)
     grid_html = '<div style="text-align: center; max-width: 100%; overflow-x: auto; margin: 0 auto;"><div style="background-color: #222; display: inline-block; padding: 2px; border-radius: 2px; max-width: 100%;">'
 
+    # Tap-to-move targets: 4 cardinal neighbours of the player. Each maps
+    # to the n/s/e/w command that move_player() expects.  Only walkable,
+    # in-bounds tiles get the tap handler — walls stay inert.  This is
+    # the sole tap-to-move affordance now that the perimeter edge bars
+    # are gone.
+    tap_dirs = {
+        (player_y - 1, player_x): 'n',
+        (player_y + 1, player_x): 's',
+        (player_y, player_x - 1): 'w',
+        (player_y, player_x + 1): 'e',
+    }
+    is_game_loop = gs.prompt_cntl == "game_loop"
+
     for r_idx in range(floor.rows):
         grid_html += '<div style="height: 17px; white-space: nowrap;">'
         for c_idx in range(floor.cols):
@@ -2429,28 +2442,27 @@ def generate_grid_html(floor, player_x, player_y):
                 if (r_idx, c_idx) == highlight_coords:
                     cell_style += "background-color: #DDD; color: #000; font-weight: bold; border-radius: 2px;"
 
-            grid_html += f'<span class="zmap-cell" style="{cell_style}">{content}</span>'
+            # Tap-to-move: cardinal neighbour, walkable, in-bounds.
+            tap_attrs = ""
+            if (
+                is_game_loop
+                and (r_idx, c_idx) in tap_dirs
+                and 0 <= c_idx < floor.cols
+                and 0 <= r_idx < floor.rows
+                and floor.grid[r_idx][c_idx].room_type != floor.wall_char
+                and (r_idx, c_idx) != highlight_coords
+            ):
+                _dir = tap_dirs[(r_idx, c_idx)]
+                cell_style += "cursor: pointer;"
+                tap_attrs = (
+                    f' onclick="window.__zotTap(\'{_dir}\', this)"'
+                )
+
+            grid_html += f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'
         grid_html += "</div>"
     grid_html += "</div></div>"
 
-    # Wrap the map in edge-tap zones so the player can step in any
-    # direction by tapping the slim arrow strips around the perimeter.
-    # All 4 edges are always tappable — walls let move_player log
-    # "You hit a wall!" so the player can probe without us dimming
-    # the affordance and second-guessing them.
-    edges = [
-        ('n', '▲', 'mv-n'),
-        ('s', '▼', 'mv-s'),
-        ('w', '◄', 'mv-w'),
-        ('e', '►', 'mv-e'),
-    ]
-    edge_html = ""
-    for cmd_dir, glyph, cls in edges:
-        edge_html += (
-            f"<div class='mvedge {cls}' data-zcmd='{cmd_dir}' "
-            f"onclick=\"window.__zotTap('{cmd_dir}', this)\">{glyph}</div>"
-        )
-    return f"<div class='mvframe'>{edge_html}<div class='mvmap'>{grid_html}</div></div>"
+    return f"<div class='mvframe'><div class='mvmap'>{grid_html}</div></div>"
 
 
 
@@ -10318,45 +10330,17 @@ class WizardsCavernApp(toga.App):
                     -webkit-user-select: none;
                     user-select: none;
                 }}
-                /* Map edge tap zones — slim arrow strips around the
-                   perimeter that fire n/s/e/w movement.  Replaces the
-                   big d-pad with something that lives in the same
-                   space the map already occupies. */
+                /* Map frame — centers the grid horizontally on screen.
+                   Tap-to-move now lives on the cardinal-neighbour cells
+                   inside the grid itself, not perimeter bars. */
                 .mvframe {{
-                    position: relative;
                     display: block;
                     width: fit-content;
-                    padding: 28px 28px;
                     margin: 0 auto;
                 }}
                 .mvmap {{
                     position: relative;
                 }}
-                .mvedge {{
-                    position: absolute;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    cursor: pointer;
-                    color: #4CAF50;
-                    font-family: monospace;
-                    font-size: 22px;
-                    font-weight: bold;
-                    user-select: none;
-                    -webkit-user-select: none;
-                    -webkit-tap-highlight-color: transparent;
-                    border-radius: 6px;
-                    background: rgba(76,175,80,0.06);
-                    border: 1px solid rgba(76,175,80,0.25);
-                    transition: background 120ms ease-out, opacity 120ms ease-out;
-                }}
-                .mvedge:active {{
-                    background: rgba(76,175,80,0.35);
-                }}
-                .mvedge.mv-n {{ top: 0; left: 28px; right: 28px; height: 24px; }}
-                .mvedge.mv-s {{ bottom: 0; left: 28px; right: 28px; height: 24px; }}
-                .mvedge.mv-w {{ left: 0; top: 28px; bottom: 28px; width: 24px; }}
-                .mvedge.mv-e {{ right: 0; top: 28px; bottom: 28px; width: 24px; }}
                 /* Altar action cards: stack of tall taprows, each with a
                    coloured title + muted meta line, rendered ABOVE the
                    sacrifice item list.  Detect=cyan, Bless=gold, Purify=

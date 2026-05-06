@@ -4,10 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 163
+BUILD_NUMBER = 164
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Cardinal cell-tap movement removed — only the slim ▲▼◄► edge strips around the map drive n/s/e/w now, so accidental taps on neighbour cells no longer step the player",
+    "Map movement: edge ▲▼◄► perimeter bars removed — tap directly on the four cardinal cells around the player to step n/s/e/w. Mvframe padding shrunk now that the bars are gone",
     "Map centering fix — mvframe now uses display:block + width:fit-content + margin:0 auto, so the full 15x21 floor renders centered on the screen instead of hugging the left edge",
     "Map edge tap zones now always tappable — walls log 'You hit a wall!' instead of greying out the affordance",
     "Map edge tap zones! Big in-body d-pad gone — tap the slim arrow strips around the map perimeter to step that direction. INV / LANT / STAIRS chips shrunk to compact pills",
