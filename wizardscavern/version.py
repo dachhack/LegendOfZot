@@ -4,9 +4,12 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 142
+BUILD_NUMBER = 145
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Tap-to-move map! D-pad and bottom button panel retired in game_loop — tap an adjacent tile to step that way; INVENTORY / LANTERN / STAIRS now live as HUD chip-buttons under the map",
+    "FIX: dying from status effects on room entry now actually kills you — caller no longer overrides death_screen back to game_loop after a failed move",
+    "Name-entry screen redesigned — big gold name slate with blinking cursor, tappable BACKSPACE / SEND cards, live letter feedback as you type",
     "Internal: app icons recompressed (-3.6 MB), repo cleanup of orphan + stale sprite reference files (-23 MB)",
     "Internal: trimmed ~9 MB of reserve sprites from the APK pool (kept the 1283 in-game ones, dropped 3968 unused reserves)",
     "FIX: playtest mode no longer crashes with TypeError when adding scrolls / lantern fuel",
@@ -16,7 +19,6 @@ CHANGELOG = [
     "Every item now has an inventory icon — weapons, armor, accessories, food, ingredients, treasures, runes, shards, trophies, lanterns, towels, bug armors",
     "Spells share a single placeholder ? icon — all spells look the same in inventory until you've cast them",
     "Potions, scrolls, and spells now have icons — each new game shuffles which sprite means what (NetHack-style)",
-    "Change Portrait button on the Character Stats screen — re-pick your avatar any time",
     "Pick your portrait! New character creation step shows all 73 avatars in a tappable grid",
     "Player avatar now picks from 73 round-8 character sprites — each new character gets a unique stable look",
     "Each monster instance now picks its own sprite variant — same Goblin always looks the same, different Goblins vary",

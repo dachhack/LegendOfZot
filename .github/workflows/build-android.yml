@@ -20,7 +20,9 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: write  # Needed for creating releases
+  contents: write       # Needed for creating releases
+  pull-requests: read   # Needed by `gh pr view` in the skip-if-merged step
+  actions: write        # Needed by `gh run cancel` when a PR is already merged
 
 jobs:
   build-android:
@@ -30,15 +32,27 @@ jobs:
         if: github.event_name == 'pull_request'
         env:
           GH_TOKEN: ${{ github.token }}
+          PR_NUMBER: ${{ github.event.pull_request.number }}
+          REPO: ${{ github.repository }}
+          RUN_ID: ${{ github.run_id }}
         run: |
           # When a PR is squash-merged quickly, the pull_request run may still
           # be in flight while the main push kicks off its own build. This step
           # aborts the now-redundant PR run so we don't burn minutes twice.
-          merged=$(gh pr view ${{ github.event.pull_request.number }} \
-            --repo ${{ github.repository }} --json merged --jq .merged)
+          # Defensive: if the gh check itself fails (permissions, transient
+          # API error, etc.) we log and proceed rather than nuking the build.
+          set +e
+          merged=$(gh pr view "$PR_NUMBER" --repo "$REPO" --json merged --jq .merged 2>&1)
+          rc=$?
+          set -e
+          echo "gh pr view exit=$rc result=$merged"
+          if [ "$rc" -ne 0 ]; then
+            echo "::warning::Could not determine merge status — proceeding with build anyway."
+            exit 0
+          fi
           if [ "$merged" = "true" ]; then
-            echo "PR #${{ github.event.pull_request.number }} already merged — cancelling this run."
-            gh run cancel ${{ github.run_id }} --repo ${{ github.repository }}
+            echo "PR #$PR_NUMBER already merged — cancelling this run."
+            gh run cancel "$RUN_ID" --repo "$REPO" || true
             # Sleep so subsequent steps don't start before the cancel lands
             sleep 60
             exit 1
