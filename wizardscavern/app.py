@@ -2495,7 +2495,7 @@ MODE_LAYOUTS = {
     'game_loaded_summary':    _EMPTY_LAYOUT,
     'game_loop':              _EMPTY_LAYOUT,  # in-body tap-to-move + HUD chips
     'save_load_mode':         lambda self, cmds: self.build_save_load_layout({}),
-    'player_name':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
+    'player_name':            _EMPTY_LAYOUT,  # body owns the HTML keyboard
     'puzzle_mode':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
     'zotle_teleporter_mode':  lambda self, cmds: self.build_teleporter_layout(),
     'combat_mode':            lambda self, cmds: self.build_combat_layout(
@@ -2505,7 +2505,7 @@ MODE_LAYOUTS = {
 # Modes that hide the entire bottom panel — the body owns all input
 # (taps on the map + HUD chips). Reclaiming the ~116px of bottom_panel
 # gives the map and log every pixel they can use.
-_MODES_NO_BOTTOM_PANEL = frozenset({'game_loop'})
+_MODES_NO_BOTTOM_PANEL = frozenset({'game_loop', 'player_name'})
 
 # Modes where pressing 'l' triggers the quick-use lantern hotkey.
 # These all show "l = lantern" in their hint line today.
@@ -3244,13 +3244,6 @@ class WizardsCavernApp(toga.App):
             self.bottom_panel.style.height = 0
             self.button_panel.style.height = 0
             self.commands_label.style.height = 0
-        elif gs.prompt_cntl == 'player_name':
-            # Body owns the BACKSPACE / SEND cards now, so the toga
-            # input_row is fully suppressed — no more duplicate controls.
-            # Bottom panel is QWERTY-only.
-            self.input_row.style.height = 0
-            self.bottom_panel.style.height = 160
-            self.button_panel.style.height = 114
         elif gs.prompt_cntl == 'puzzle_mode':
             # QWERTY keyboard: 3 rows × 34px keys + margins; wide text field.
             self.input_row_spacer.style.flex = 0
@@ -4218,6 +4211,16 @@ class WizardsCavernApp(toga.App):
                             self.input_field.value = current[:-1]
                             self._haptic('tap')
                             self.render()
+                            continue
+                        if cmd_str.startswith('__nm_k_') and len(cmd_str) == 8:
+                            # In-body QWERTY letter tap: __nm_k_<a-z>.
+                            letter = cmd_str[-1]
+                            if letter.isalpha():
+                                current = self.input_field.value or ""
+                                if len(current) < 12:
+                                    self.input_field.value = current + letter.upper()
+                                self._haptic('tap')
+                                self.render()
                             continue
                         if cmd_str == '__nm_send':
                             cmd_str = (self.input_field.value or "").strip()
@@ -5303,8 +5306,10 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "player_name":
             # PLAYER NAME INPUT SCREEN — big gold slate showing the typed
             # name with a blinking cursor, plus tappable BACKSPACE / SEND
-            # cards so the action is obvious even before the user notices
-            # the QWERTY at the bottom.
+            # cards. Includes an HTML QWERTY keyboard because the toga
+            # button_panel renders invisible on some devices (iOS-style
+            # browsers, certain Android skins) — the body-only flow
+            # works everywhere because taprows render reliably.
             typed = (self.input_field.value or "").upper()
             max_len = 12
             slot_html = ""
@@ -5327,6 +5332,27 @@ class WizardsCavernApp(toga.App):
             if not has_name:
                 send_cls += " nm-empty"
                 bs_cls += " nm-empty"
+
+            # In-body QWERTY keyboard — letter taps fire __nm_k_<letter>
+            # commands routed through the polling intercept so they append
+            # to input_field.value and re-render. Layout matches the toga
+            # version: 10/9/7 keys per row.
+            kbd_rows = [
+                ['Q','W','E','R','T','Y','U','I','O','P'],
+                ['A','S','D','F','G','H','J','K','L'],
+                ['Z','X','C','V','B','N','M'],
+            ]
+            kbd_html = ""
+            for row in kbd_rows:
+                row_html = ""
+                for letter in row:
+                    cmd = f"__nm_k_{letter.lower()}"
+                    row_html += (
+                        f"<div class='nm-key' data-zcmd='{cmd}' "
+                        f"onclick=\"window.__zotTap('{cmd}', this)\">{letter}</div>"
+                    )
+                kbd_html += f"<div class='nm-kbd-row'>{row_html}</div>"
+
             html_code = f"""
                 <style>
                   .nm-slate {{
@@ -5347,12 +5373,41 @@ class WizardsCavernApp(toga.App):
                   .nm-actions {{ display: flex; gap: 8px; margin-top: 6px; }}
                   .nm-actions .taprow {{ flex: 1; margin: 0; text-align: center;
                                           font-weight: bold; letter-spacing: 1.5px;
-                                          padding: 14px 8px; font-size: 14px; }}
+                                          padding: 12px 8px; font-size: 14px; }}
                   .nm-hint {{ font-size: 11px; color: #888; text-align: center;
                               margin: 2px 0 6px 0; }}
                   .nm-count {{ font-size: 10px; color: #5a5a5a; text-align: center;
                                 margin-top: -4px; }}
                   .nm-actions .taprow.nm-empty {{ opacity: 0.55; }}
+                  .nm-keyboard {{ margin: 14px 0 4px 0; user-select: none;
+                                   -webkit-user-select: none; }}
+                  .nm-kbd-row {{ display: flex; gap: 4px; justify-content: center;
+                                   margin: 4px 2px; }}
+                  .nm-key {{
+                    flex: 1 1 0;
+                    min-width: 0;
+                    max-width: 38px;
+                    height: 44px;
+                    line-height: 42px;
+                    background: linear-gradient(180deg, #3a3a3a 0%, #1f1f1f 100%);
+                    border: 1px solid #555;
+                    border-radius: 5px;
+                    color: #EEE;
+                    font-family: 'Courier New', monospace;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: transparent;
+                    box-shadow: 0 1px 0 #0a0a0a inset;
+                    transition: transform 60ms ease-out, background 100ms ease-out;
+                  }}
+                  .nm-key:active {{
+                    transform: scale(0.92);
+                    background: linear-gradient(180deg, #5a5a5a 0%, #303030 100%);
+                    box-shadow: 0 0 8px rgba(255,215,0,0.4),
+                                0 1px 0 #0a0a0a inset;
+                  }}
                 </style>
                 <div style="font-family: monospace; font-size: 12px; padding: 10px;">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 6px; color: #FFD700; text-align: center;">
@@ -5370,9 +5425,10 @@ class WizardsCavernApp(toga.App):
                         <div class="{send_cls}" data-zcmd="__nm_send"
                              onclick="window.__zotTap('__nm_send', this)">SEND &#9654;</div>
                     </div>
+                    <div class="nm-keyboard">{kbd_html}</div>
                 </div>
                 """
-            current_commands_text = "Tap letters · ⌫ · SEND"
+            current_commands_text = ""
 
         elif gs.prompt_cntl == "player_race":
             # PLAYER RACE SELECTION SCREEN — tappable race cards.
