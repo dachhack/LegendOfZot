@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 146
+BUILD_NUMBER = 147
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "FIX: name-entry screen — toga input row + duplicate ⌫/SEND row removed (HTML cards are now the single source of truth); SEND/BACKSPACE always tappable, dimmed when name is empty",
     "Big in-body d-pad! Chunky 70px N/S/E/W tap targets sit under the HUD chips so movement is finger-friendly; walls grey out so you see at a glance which way you can step",
     "Tap-to-move map! D-pad and bottom button panel retired in game_loop — tap an adjacent tile to step that way; INVENTORY / LANTERN / STAIRS now live as HUD chip-buttons under the map",
     "FIX: dying from status effects on room entry now actually kills you — caller no longer overrides death_screen back to game_loop after a failed move",

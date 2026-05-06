@@ -2524,11 +2524,11 @@ _MODES_WITH_NUMPAD = frozenset({
 })
 
 # Modes that need the input_field + SEND + backspace row rendered.
-# Text-entry screens only — teleporter coords, name, puzzle word.  Every
-# other mode hides the row and gets that ~32px back for the game view.
+# Text-entry screens only — teleporter coords + puzzle word.  player_name
+# moved to a body-only flow (HTML BACKSPACE / SEND cards), so the toga
+# input row stays orphaned to avoid the duplicate-controls confusion.
 _MODES_WITH_INPUT_FIELD = frozenset({
     'zotle_teleporter_mode',
-    'player_name',
     'puzzle_mode',
 })
 
@@ -3244,7 +3244,14 @@ class WizardsCavernApp(toga.App):
             self.bottom_panel.style.height = 0
             self.button_panel.style.height = 0
             self.commands_label.style.height = 0
-        elif gs.prompt_cntl in ('player_name', 'puzzle_mode'):
+        elif gs.prompt_cntl == 'player_name':
+            # Body owns the BACKSPACE / SEND cards now, so the toga
+            # input_row is fully suppressed — no more duplicate controls.
+            # Bottom panel is QWERTY-only.
+            self.input_row.style.height = 0
+            self.bottom_panel.style.height = 160
+            self.button_panel.style.height = 114
+        elif gs.prompt_cntl == 'puzzle_mode':
             # QWERTY keyboard: 3 rows × 34px keys + margins; wide text field.
             self.input_row_spacer.style.flex = 0
             self.input_field.style = Pack(flex=1, height=36, **_field_base)
@@ -5312,8 +5319,14 @@ class WizardsCavernApp(toga.App):
                 else:
                     slot_html += "<span class='nm-slot nm-empty'>_</span>"
             has_name = len(typed) > 0
-            send_cls = "taprow nm-send" if has_name else "taprow nm-send disabled"
-            bs_cls = "taprow cancel nm-bs" if has_name else "taprow cancel nm-bs disabled"
+            # SEND no-ops when empty (handled by the polling-loop intercept),
+            # so leave both cards visually active — users were tapping and
+            # getting nothing back from the disabled state.
+            send_cls = "taprow nm-send"
+            bs_cls = "taprow cancel nm-bs"
+            if not has_name:
+                send_cls += " nm-empty"
+                bs_cls += " nm-empty"
             html_code = f"""
                 <style>
                   .nm-slate {{
@@ -5339,6 +5352,7 @@ class WizardsCavernApp(toga.App):
                               margin: 2px 0 6px 0; }}
                   .nm-count {{ font-size: 10px; color: #5a5a5a; text-align: center;
                                 margin-top: -4px; }}
+                  .nm-actions .taprow.nm-empty {{ opacity: 0.55; }}
                 </style>
                 <div style="font-family: monospace; font-size: 12px; padding: 10px;">
                     <div style="font-size: 18px; font-weight: bold; margin-bottom: 6px; color: #FFD700; text-align: center;">
