@@ -10350,44 +10350,51 @@ class WizardsCavernApp(toga.App):
                     -webkit-user-select: none;
                     user-select: none;
                 }}
-                /* Map edge tap zones — slim arrow strips around the
-                   perimeter that fire n/s/e/w movement.  Replaces the
-                   big d-pad with something that lives in the same
-                   space the map already occupies. */
+                /* Map edge tap zones — invisible hot zones overlaid on
+                   the map perimeter that fire n/s/e/w movement. Layout:
+                       N spans the top third (full width)
+                       S spans the bottom third (full width)
+                       W is the left third of the middle row
+                       E is the right third of the middle row
+                   Center stays uncovered so the player's tile + close
+                   neighbours remain visible.  Subtle directional arrow
+                   sits at the outer edge of each zone for affordance. */
                 .mvframe {{
                     position: relative;
                     display: inline-block;
-                    padding: 28px 28px;
                     margin: 0 auto;
+                    line-height: 0;
                 }}
-                .mvmap {{
-                    position: relative;
-                }}
+                .mvmap {{ position: relative; line-height: 1.3; }}
                 .mvedge {{
                     position: absolute;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
                     cursor: pointer;
-                    color: #4CAF50;
+                    color: rgba(76,175,80,0.55);
                     font-family: monospace;
-                    font-size: 22px;
+                    font-size: 18px;
                     font-weight: bold;
                     user-select: none;
                     -webkit-user-select: none;
                     -webkit-tap-highlight-color: transparent;
-                    border-radius: 6px;
-                    background: rgba(76,175,80,0.06);
-                    border: 1px solid rgba(76,175,80,0.25);
-                    transition: background 120ms ease-out, opacity 120ms ease-out;
+                    background: transparent;
+                    z-index: 5;
+                    transition: background 100ms ease-out;
                 }}
                 .mvedge:active {{
-                    background: rgba(76,175,80,0.35);
+                    background: rgba(76,175,80,0.18);
                 }}
-                .mvedge.mv-n {{ top: 0; left: 28px; right: 28px; height: 24px; }}
-                .mvedge.mv-s {{ bottom: 0; left: 28px; right: 28px; height: 24px; }}
-                .mvedge.mv-w {{ left: 0; top: 28px; bottom: 28px; width: 24px; }}
-                .mvedge.mv-e {{ right: 0; top: 28px; bottom: 28px; width: 24px; }}
+                .mvedge.mv-n {{ top: 0; left: 0; right: 0; height: 33%;
+                                 display: flex; align-items: flex-start;
+                                 justify-content: center; padding-top: 1px; }}
+                .mvedge.mv-s {{ bottom: 0; left: 0; right: 0; height: 33%;
+                                 display: flex; align-items: flex-end;
+                                 justify-content: center; padding-bottom: 1px; }}
+                .mvedge.mv-w {{ left: 0; top: 33%; height: 34%; width: 33%;
+                                 display: flex; align-items: center;
+                                 justify-content: flex-start; padding-left: 2px; }}
+                .mvedge.mv-e {{ right: 0; top: 33%; height: 34%; width: 33%;
+                                 display: flex; align-items: center;
+                                 justify-content: flex-end; padding-right: 2px; }}
                 /* Altar action cards: stack of tall taprows, each with a
                    coloured title + muted meta line, rendered ABOVE the
                    sacrifice item list.  Detect=cyan, Bless=gold, Purify=
