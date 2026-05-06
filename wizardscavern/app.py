@@ -2498,8 +2498,7 @@ MODE_LAYOUTS = {
     'vendor_shop':            _EMPTY_LAYOUT,  # body owns EXIT chip + tabs
     'puzzle_mode':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
     'zotle_teleporter_mode':  lambda self, cmds: self.build_teleporter_layout(),
-    'combat_mode':            lambda self, cmds: self.build_combat_layout(
-                                  {k: l for k, l in self.parse_commands(cmds)}),
+    'combat_mode':            _EMPTY_LAYOUT,  # body owns ATTACK/CAST/INVENTORY/FLEE chips
 }
 
 # Modes that hide the entire bottom panel — the body owns all input
@@ -2508,6 +2507,8 @@ MODE_LAYOUTS = {
 _MODES_NO_BOTTOM_PANEL = frozenset({
     'game_loop', 'player_name',
     'starting_shop', 'vendor_shop',
+    'combat_mode',
+    'inventory',
 })
 
 # Modes where pressing 'l' triggers the quick-use lantern hotkey.
@@ -3285,6 +3286,12 @@ class WizardsCavernApp(toga.App):
         #     from the table, which we treat as "no-op".
         #   - everything else is the generic numpad/no-numpad builder
         #     keyed off needs_numbers.
+        # Modes that hide the bottom panel entirely don't need any toga
+        # buttons built — bottom_panel.height is already 0.  Skip the
+        # inventory special case + the MODE_LAYOUTS dispatch for them.
+        if gs.prompt_cntl in _MODES_NO_BOTTOM_PANEL:
+            return
+
         if gs.prompt_cntl == 'inventory' and not gs.inventory_filter:
             self.build_inventory_layout()
             return
@@ -6008,6 +6015,37 @@ class WizardsCavernApp(toga.App):
                 player_inv_html += "</div>"
                 player_inv_html += "</div>"
 
+                # HTML inventory chips for combat: BACK / DRINK FULL when
+                # filtering, JOURNAL + CLOSE otherwise.
+                _cb_chips = []
+                if gs.inventory_filter:
+                    if (gs.inventory_filter == 'use'
+                        and gs.player_character.health < gs.player_character.max_health
+                        and any(isinstance(i, Potion) and i.potion_type == 'healing'
+                                for i in gs.player_character.inventory.items)):
+                        _cb_chips.append(
+                            "<div class='hudchip lantern' data-zcmd='df' "
+                            "onclick=\"window.__zotTap('df', this)\">DRINK FULL</div>"
+                        )
+                    _cb_chips.append(
+                        "<div class='hudchip' data-zcmd='b' "
+                        "onclick=\"window.__zotTap('b', this)\">&larr; BACK</div>"
+                    )
+                else:
+                    _cb_chips.append(
+                        "<div class='hudchip' data-zcmd='j' "
+                        "onclick=\"window.__zotTap('j', this)\">JOURNAL</div>"
+                    )
+                    _cb_chips.append(
+                        "<div class='hudchip exit' data-zcmd='x' "
+                        "onclick=\"window.__zotTap('x', this)\">CLOSE</div>"
+                    )
+                cb_inv_chips_html = (
+                    "<div class='hudchips' style='margin-top:6px;'>"
+                    + "".join(_cb_chips) +
+                    "</div>"
+                )
+
                 # COMBAT LAYOUT - matching normal inventory structure
                 html_code = f"""
                         <div style="font-family: monospace; font-size: 12px; width: 100%; max-width: 100vw; overflow-x: auto; box-sizing: border-box;">
@@ -6016,6 +6054,7 @@ class WizardsCavernApp(toga.App):
                                 <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern</div>
                                 {player_stats_html}
                                 <div style="border: 1px solid #4CAF50; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px; overflow-x: auto; max-width: 100%;">{player_inv_html}</div>
+                                {cb_inv_chips_html}
                             </div>
                         </div>
                     """
@@ -6197,6 +6236,55 @@ class WizardsCavernApp(toga.App):
                         inv_commands += " | m = spells"
                     inv_commands += " | j = journal | q = quit game | x = exit"
 
+                # HTML inventory chips — replace the toga 3x3 grid (Journal /
+                # Craft / Spells / Exit / Quit / Save&Quit) that renders
+                # invisible on some devices.
+                _inv_chips = []
+                if gs.inventory_filter:
+                    if (gs.inventory_filter == 'use'
+                        and gs.player_character.health < gs.player_character.max_health
+                        and any(isinstance(i, Potion) and i.potion_type == 'healing'
+                                for i in gs.player_character.inventory.items)):
+                        _inv_chips.append(
+                            "<div class='hudchip lantern' data-zcmd='df' "
+                            "onclick=\"window.__zotTap('df', this)\">DRINK FULL</div>"
+                        )
+                    _inv_chips.append(
+                        "<div class='hudchip' data-zcmd='b' "
+                        "onclick=\"window.__zotTap('b', this)\">&larr; BACK</div>"
+                    )
+                else:
+                    _inv_chips.append(
+                        "<div class='hudchip' data-zcmd='c' "
+                        "onclick=\"window.__zotTap('c', this)\">CRAFT</div>"
+                    )
+                    if can_cast:
+                        _inv_chips.append(
+                            "<div class='hudchip combat-cast' data-zcmd='m' "
+                            "onclick=\"window.__zotTap('m', this)\">SPELLS</div>"
+                        )
+                    _inv_chips.append(
+                        "<div class='hudchip' data-zcmd='j' "
+                        "onclick=\"window.__zotTap('j', this)\">JOURNAL</div>"
+                    )
+                    _inv_chips.append(
+                        "<div class='hudchip' data-zcmd='sq' "
+                        "onclick=\"window.__zotTap('sq', this)\">SAVE &amp; QUIT</div>"
+                    )
+                    _inv_chips.append(
+                        "<div class='hudchip exit' data-zcmd='q' "
+                        "onclick=\"window.__zotTap('q', this)\">QUIT</div>"
+                    )
+                    _inv_chips.append(
+                        "<div class='hudchip exit' data-zcmd='x' "
+                        "onclick=\"window.__zotTap('x', this)\">CLOSE</div>"
+                    )
+                inv_chips_html = (
+                    "<div class='hudchips' style='margin-top:6px;'>"
+                    + "".join(_inv_chips) +
+                    "</div>"
+                )
+
                 html_code = f"""
 
                         <div style="font-family: monospace; font-size: 12px; width: 100%; max-width: 100vw; overflow-x: auto; box-sizing: border-box;">
@@ -6212,6 +6300,8 @@ class WizardsCavernApp(toga.App):
                                 {equipment_box_html}
 
                                 <div style="border: 1px solid #4CAF50; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px; overflow-x: auto; max-width: 100%;">{player_inv_html}</div>
+
+                                {inv_chips_html}
 
                             </div>
 
@@ -7141,6 +7231,35 @@ class WizardsCavernApp(toga.App):
                 """
                 combat_commands = "any key = continue channeling"
 
+            # HTML combat action chips — replace the toga C/A/F/I buttons
+            # that render invisible on some devices. Channeling pauses the
+            # action panel ("any key = continue") so we hide chips then
+            # and show the channeling progress instead.
+            combat_chips_html = ""
+            if not gs.spell_charging:
+                _chips = [
+                    "<div class='hudchip combat-attack' data-zcmd='a' "
+                    "onclick=\"window.__zotTap('a', this)\">ATTACK</div>"
+                ]
+                if can_cast:
+                    _chips.append(
+                        "<div class='hudchip combat-cast' data-zcmd='c' "
+                        "onclick=\"window.__zotTap('c', this)\">CAST</div>"
+                    )
+                _chips.append(
+                    "<div class='hudchip' data-zcmd='i' "
+                    "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
+                )
+                _chips.append(
+                    "<div class='hudchip exit' data-zcmd='f' "
+                    "onclick=\"window.__zotTap('f', this)\">FLEE</div>"
+                )
+                combat_chips_html = (
+                    "<div class='hudchips' style='margin-top:6px;'>"
+                    + "".join(_chips) +
+                    "</div>"
+                )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
@@ -7154,6 +7273,7 @@ class WizardsCavernApp(toga.App):
                             {monster_html}
                             {player_combat_html}
                             {channeling_html}
+                            {combat_chips_html}
                         </div>
                     </div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
@@ -9932,6 +10052,16 @@ class WizardsCavernApp(toga.App):
                     background: linear-gradient(180deg, #3a1a1a 0%, #1a0e0e 100%);
                     border-color: #8a3a3a;
                     color: #FF8A80;
+                }}
+                .hudchip.combat-attack {{
+                    background: linear-gradient(180deg, #3a1a1a 0%, #1a0808 100%);
+                    border-color: #B71C1C;
+                    color: #FF5252;
+                }}
+                .hudchip.combat-cast {{
+                    background: linear-gradient(180deg, #2a1a3a 0%, #1a0e24 100%);
+                    border-color: #5a3a7a;
+                    color: #E040FB;
                 }}
                 /* Map cells: smooth touch feedback on tappable neighbours. */
                 .zmap-cell {{
