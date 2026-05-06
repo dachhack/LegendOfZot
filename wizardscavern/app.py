@@ -2494,6 +2494,8 @@ MODE_LAYOUTS = {
     'game_loop':              _EMPTY_LAYOUT,  # in-body tap-to-move + HUD chips
     'save_load_mode':         lambda self, cmds: self.build_save_load_layout({}),
     'player_name':            _EMPTY_LAYOUT,  # body owns the HTML keyboard
+    'starting_shop':          _EMPTY_LAYOUT,  # body owns BUY ALL / EXIT chips
+    'vendor_shop':            _EMPTY_LAYOUT,  # body owns EXIT chip + tabs
     'puzzle_mode':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
     'zotle_teleporter_mode':  lambda self, cmds: self.build_teleporter_layout(),
     'combat_mode':            lambda self, cmds: self.build_combat_layout(
@@ -2503,7 +2505,10 @@ MODE_LAYOUTS = {
 # Modes that hide the entire bottom panel — the body owns all input
 # (taps on the map + HUD chips). Reclaiming the ~116px of bottom_panel
 # gives the map and log every pixel they can use.
-_MODES_NO_BOTTOM_PANEL = frozenset({'game_loop', 'player_name'})
+_MODES_NO_BOTTOM_PANEL = frozenset({
+    'game_loop', 'player_name',
+    'starting_shop', 'vendor_shop',
+})
 
 # Modes where pressing 'l' triggers the quick-use lantern hotkey.
 # These all show "l = lantern" in their hint line today.
@@ -5708,6 +5713,17 @@ class WizardsCavernApp(toga.App):
 
             vendor_html = starting_tabs_html + vendor_html
 
+            # HTML shop chips — replace the bottom-panel 'ba' / 'x' toga
+            # buttons that render invisible on some devices.
+            shop_chips_html = (
+                "<div class='hudchips' style='margin-top:8px;'>"
+                "<div class='hudchip' data-zcmd='ba' "
+                "onclick=\"window.__zotTap('ba', this)\">BUY ALL</div>"
+                "<div class='hudchip exit' data-zcmd='x' "
+                "onclick=\"window.__zotTap('x', this)\">EXIT</div>"
+                "</div>"
+            )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
                     {achievement_notifications}
@@ -5720,6 +5736,7 @@ class WizardsCavernApp(toga.App):
                         <div style="border: 1px solid grey; padding: 3px;">{vendor_html}</div>
                         <div style="border: 1px solid grey; padding: 3px;">{player_inv_html}</div>
                     </div>
+                    {shop_chips_html}
                 </div>
                 """
             if gs.vendor_action:
@@ -5867,6 +5884,16 @@ class WizardsCavernApp(toga.App):
             shop_title_color = '#c084fc' if is_magic else '#FFFFFF'
             shop_label = "Ye Olde Magic Shoppe" if is_magic else f"{gs.active_vendor.name}'s Shop"
 
+            # HTML shop chips — vendor_shop omits BUY ALL (starting-shop
+            # only feature per vendor.py:451) and just exposes EXIT so
+            # the player has a visible way out when toga buttons hide.
+            shop_chips_html = (
+                "<div class='hudchips' style='margin-top:8px;'>"
+                "<div class='hudchip exit' data-zcmd='x' "
+                "onclick=\"window.__zotTap('x', this)\">EXIT</div>"
+                "</div>"
+            )
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
                     {achievement_notifications}
@@ -5883,6 +5910,7 @@ class WizardsCavernApp(toga.App):
                         <div style="border: 1px solid grey; padding: 3px;">{vendor_html}</div>
                         <div style="border: 1px solid grey; padding: 3px;">{player_inv_html}</div>
                     </div>
+                    {shop_chips_html}
                 </div>
                 """
             if gs.prompt_cntl == "sell_quantity_mode":
@@ -9899,6 +9927,11 @@ class WizardsCavernApp(toga.App):
                     background: linear-gradient(180deg, #1a3a1a 0%, #0e1e0e 100%);
                     border-color: #4CAF50;
                     color: #8BC34A;
+                }}
+                .hudchip.exit {{
+                    background: linear-gradient(180deg, #3a1a1a 0%, #1a0e0e 100%);
+                    border-color: #8a3a3a;
+                    color: #FF8A80;
                 }}
                 /* Map cells: smooth touch feedback on tappable neighbours. */
                 .zmap-cell {{

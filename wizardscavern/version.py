@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 150
+BUILD_NUMBER = 151
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Shop chips: BUY ALL / EXIT now live as HTML chip-buttons in the body of starting_shop and vendor_shop — bottom toga panel collapsed for both modes",
     "Game-loop polish: map cell highlights gone, INVENTORY / LANTERN chips bigger and bolder, d-pad arrows trimmed from 70 to 52 px",
     "FIX: name-entry letters not appearing — set_input_visibility was wiping input_field.value on every render, erasing each letter the polling intercept just added",
     "FIX: in-body QWERTY keyboard on name-entry — toga keyboard renders invisible on some devices, so the body now owns the whole flow (slate + BACKSPACE/SEND + Q-Z keys); bottom panel collapsed for the screen",
