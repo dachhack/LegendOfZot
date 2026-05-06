@@ -2467,34 +2467,21 @@ def generate_grid_html(floor, player_x, player_y):
 
     # Wrap the map in edge-tap zones so the player can step in any
     # direction by tapping the slim arrow strips around the perimeter.
-    # Walkability is computed once per direction; non-walkable edges
-    # render dim and inert.  Only fires for map-view modes — modes
-    # without movement (player_name, vendor shops, etc.) won't reach
-    # this code path because they never call generate_grid_html().
-    px, py = player_x, player_y
-    rows = floor.rows
-    cols = floor.cols
-    wall = floor.wall_char
-    def _edge_walkable(nx, ny):
-        return (0 <= nx < cols and 0 <= ny < rows
-                and floor.grid[ny][nx].room_type != wall)
+    # All 4 edges are always tappable — walls let move_player log
+    # "You hit a wall!" so the player can probe without us dimming
+    # the affordance and second-guessing them.
     edges = [
-        ('n', '▲', _edge_walkable(px, py - 1), 'mv-n'),
-        ('s', '▼', _edge_walkable(px, py + 1), 'mv-s'),
-        ('w', '◄', _edge_walkable(px - 1, py), 'mv-w'),
-        ('e', '►', _edge_walkable(px + 1, py), 'mv-e'),
+        ('n', '▲', 'mv-n'),
+        ('s', '▼', 'mv-s'),
+        ('w', '◄', 'mv-w'),
+        ('e', '►', 'mv-e'),
     ]
     edge_html = ""
-    for cmd_dir, glyph, ok, cls in edges:
-        if ok:
-            edge_html += (
-                f"<div class='mvedge {cls}' data-zcmd='{cmd_dir}' "
-                f"onclick=\"window.__zotTap('{cmd_dir}', this)\">{glyph}</div>"
-            )
-        else:
-            edge_html += (
-                f"<div class='mvedge {cls} disabled'>{glyph}</div>"
-            )
+    for cmd_dir, glyph, cls in edges:
+        edge_html += (
+            f"<div class='mvedge {cls}' data-zcmd='{cmd_dir}' "
+            f"onclick=\"window.__zotTap('{cmd_dir}', this)\">{glyph}</div>"
+        )
     return f"<div class='mvframe'>{edge_html}<div class='mvmap'>{grid_html}</div></div>"
 
 
@@ -10396,12 +10383,6 @@ class WizardsCavernApp(toga.App):
                 }}
                 .mvedge:active {{
                     background: rgba(76,175,80,0.35);
-                }}
-                .mvedge.disabled {{
-                    color: #2a3a2a;
-                    background: transparent;
-                    border-color: #1a2a1a;
-                    pointer-events: none;
                 }}
                 .mvedge.mv-n {{ top: 0; left: 28px; right: 28px; height: 24px; }}
                 .mvedge.mv-s {{ bottom: 0; left: 28px; right: 28px; height: 24px; }}
