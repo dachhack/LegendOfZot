@@ -4,11 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 156
+BUILD_NUMBER = 157
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Toga panel retired everywhere: list-picker modes (spell cast/memorize, crafting, journal, save/load, sell quantity, character stats, scroll picks), plus an HTML numpad for the Zotle teleporter — every mode is now body-only",
     "Map-view room modes finished: warp, dungeon, fey garden, blacksmith, shrine, alchemist, war room, taxidermist, towel, altar — all on body-only HTML with HUD chips + d-pad, toga bottom panel collapsed",
-    "Room modes (chest, pool, library, tomb, garden, oracle, stairs up/down): HUD chips + d-pad now render in HTML, no more invisible bottom toga panel",
     "Zotle puzzle mode: HTML keyboard with Wordle-style letter coloring (green/yellow/grey hints), tappable BACKSPACE / ENTER / LEAVE chips, no more invisible toga keyboard",
     "Build number now appears next to 'Wizard's Cavern' header on every screen — easy to verify which build is running from a screenshot",
     "Combat + inventory chips: ATTACK / CAST / FLEE / INVENTORY in combat, CRAFT / SPELLS / JOURNAL / QUIT / SAVE&QUIT / CLOSE in inventory — all as HTML chips since the toga buttons render invisible",

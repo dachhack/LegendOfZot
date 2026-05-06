@@ -2497,7 +2497,7 @@ MODE_LAYOUTS = {
     'starting_shop':          _EMPTY_LAYOUT,  # body owns BUY ALL / EXIT chips
     'vendor_shop':            _EMPTY_LAYOUT,  # body owns EXIT chip + tabs
     'puzzle_mode':            _EMPTY_LAYOUT,  # body owns the HTML keyboard + chips
-    'zotle_teleporter_mode':  lambda self, cmds: self.build_teleporter_layout(),
+    'zotle_teleporter_mode':  _EMPTY_LAYOUT,  # body owns the HTML numpad
     'combat_mode':            _EMPTY_LAYOUT,  # body owns ATTACK/CAST/INVENTORY/FLEE chips
 }
 
@@ -2520,6 +2520,16 @@ _MODES_NO_BOTTOM_PANEL = frozenset({
     # Vendor-style or forced-choice modes (no map d-pad needed but the
     # toga panel is invisible and the body owns all interaction).
     'altar_mode', 'warp_mode',
+    # List-picker modes — already render their items as taprows; the
+    # toga numpad / command buttons were the only thing in the bottom
+    # panel and they're invisible anyway.
+    'spell_casting_mode', 'spell_memorization_mode',
+    'crafting_mode', 'sell_quantity_mode',
+    'journal_mode', 'character_stats_mode',
+    'save_load_mode',
+    'flare_direction_mode', 'library_read_decision_mode',
+    'upgrade_scroll_mode', 'identify_scroll_mode',
+    'zotle_teleporter_mode',
 })
 
 # Modes where pressing 'l' triggers the quick-use lantern hotkey.
@@ -2534,18 +2544,13 @@ _LANTERN_QUICK_USE_MODES = frozenset({
 # pass, only the Zotle teleporter still needs it (for x,y,z coord
 # entry).  All other filter-style modes drive item selection via
 # .taprow cards instead.  Adding a new mode here opts it back in.
-_MODES_WITH_NUMPAD = frozenset({
-    'zotle_teleporter_mode',
-})
+_MODES_WITH_NUMPAD = frozenset()
 
 # Modes that need the input_field + SEND + backspace row rendered.
-# Text-entry screens only — teleporter coords + puzzle word.  player_name
-# moved to a body-only flow (HTML BACKSPACE / SEND cards), so the toga
-# input row stays orphaned to avoid the duplicate-controls confusion.
-_MODES_WITH_INPUT_FIELD = frozenset({
-    'zotle_teleporter_mode',
-    'puzzle_mode',
-})
+# Text-entry screens only — used to also include zotle_teleporter_mode +
+# puzzle_mode + player_name, but those have moved to body-only HTML
+# flows.  Empty for now; kept as a frozenset so future modes can opt in.
+_MODES_WITH_INPUT_FIELD = frozenset()
 
 
 class WizardsCavernApp(toga.App):
@@ -3255,7 +3260,7 @@ class WizardsCavernApp(toga.App):
         # owns all input. Reset every render so transitioning out of
         # game_loop restores the label.
         self.commands_label.style.height = 14
-        if gs.prompt_cntl in _MODES_NO_BOTTOM_PANEL:
+        if gs.prompt_cntl in _MODES_NO_BOTTOM_PANEL or gs.prompt_cntl.startswith('journal_'):
             # No bottom panel at all — the HTML body owns all controls
             # (tap-to-move on the map, HUD chips for inventory/lantern).
             # Collapse everything so the web_view claims the full screen.
@@ -3293,7 +3298,7 @@ class WizardsCavernApp(toga.App):
         # Modes that hide the bottom panel entirely don't need any toga
         # buttons built — bottom_panel.height is already 0.  Skip the
         # inventory special case + the MODE_LAYOUTS dispatch for them.
-        if gs.prompt_cntl in _MODES_NO_BOTTOM_PANEL:
+        if gs.prompt_cntl in _MODES_NO_BOTTOM_PANEL or gs.prompt_cntl.startswith('journal_'):
             return
 
         if gs.prompt_cntl == 'inventory' and not gs.inventory_filter:
@@ -4307,6 +4312,30 @@ class WizardsCavernApp(toga.App):
                                 self.render()
                             continue
                         if cmd_str == '__nm_send':
+                            cmd_str = (self.input_field.value or "").strip()
+                            if not cmd_str:
+                                continue
+                            self.input_field.value = ""
+                    if gs.prompt_cntl == 'zotle_teleporter_mode':
+                        if cmd_str.startswith('__tp_d_') and len(cmd_str) == 8:
+                            digit = cmd_str[-1]
+                            if digit.isdigit():
+                                self.input_field.value = (self.input_field.value or "") + digit
+                                self._haptic('tap')
+                                self.render()
+                            continue
+                        if cmd_str == '__tp_comma':
+                            self.input_field.value = (self.input_field.value or "") + ","
+                            self._haptic('tap')
+                            self.render()
+                            continue
+                        if cmd_str == '__tp_bs':
+                            cur = self.input_field.value or ""
+                            self.input_field.value = cur[:-1]
+                            self._haptic('tap')
+                            self.render()
+                            continue
+                        if cmd_str == '__tp_send':
                             cmd_str = (self.input_field.value or "").strip()
                             if not cmd_str:
                                 continue
@@ -6790,6 +6819,11 @@ class WizardsCavernApp(toga.App):
                     <div style="border: 1px solid green; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{memorized_html}</div>
 
                     <div style="border: 1px solid blue; padding: 4px; border-radius: 4px; background: #1a1a1a; margin-bottom: 5px;">{available_spells_html}</div>
+
+                    <div class='hudchips' style='margin-top:6px;'>
+                        <div class='hudchip exit' data-zcmd='x'
+                             onclick="window.__zotTap('x', this)">EXIT</div>
+                    </div>
 </div>
                 """
             if gs.spell_memo_action:
@@ -6887,6 +6921,16 @@ class WizardsCavernApp(toga.App):
 
                     <div style="border: 1px solid gold; padding: 10px; max-height: 500px; overflow-y: auto;">
                         {journal_html}
+                    </div>
+                    <div class='hudchips' style='margin-top:8px;'>
+                        <div class='hudchip' data-zcmd='t'
+                             onclick="window.__zotTap('t', this)">{ 'Aa-' if gs.large_text_mode else 'Aa+' }</div>
+                        <div class='hudchip' data-zcmd='v'
+                             onclick="window.__zotTap('v', this)">{ 'VOL-' if gs.music_enabled else 'VOL+' }</div>
+                        <div class='hudchip lantern' data-zcmd='g'
+                             onclick="window.__zotTap('g', this)">SAVE</div>
+                        <div class='hudchip exit' data-zcmd='x'
+                             onclick="window.__zotTap('x', this)">BACK</div>
                     </div>
 </div>
                 """
@@ -9363,13 +9407,14 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "zotle_teleporter_mode":
             # ZOTLE TELEPORTER VIEW - Compact display for mobile
-            
+
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+
             # Calculate valid coordinate ranges
             max_floors = len(gs.my_tower.floors)
-            
+            typed_coords = (self.input_field.value or "").strip()
+
             teleporter_html = f"""
                 <div style="border: 2px solid #555; padding: 8px; border-radius: 6px;">
                     <div style="color: #CCC; font-weight: bold; font-size: 13px; text-align: center; margin-bottom: 4px;">
@@ -9384,10 +9429,74 @@ class WizardsCavernApp(toga.App):
                     <div style="color: #FF6B6B; font-size: 9px; text-align: center; margin-top: 2px;">
                         Cannot teleport into walls!
                     </div>
+                    <div class="tp-slate">{typed_coords or '&nbsp;'}</div>
                 </div>
             """
-            
+
+            # HTML numpad for the teleporter so the bottom toga numpad
+            # stops being a problem.  Digits append, comma separates
+            # x,y,z, BACKSPACE clears last char, SEND submits, CANCEL
+            # backs out.
+            tp_keys = [
+                ('1','2','3'),
+                ('4','5','6'),
+                ('7','8','9'),
+                (',','0','__tp_bs'),
+            ]
+            tp_pad_html = "<div class='tp-pad'>"
+            for row in tp_keys:
+                for k in row:
+                    if k == '__tp_bs':
+                        tp_pad_html += (
+                            "<div class='tp-key tp-bs' data-zcmd='__tp_bs' "
+                            "onclick=\"window.__zotTap('__tp_bs', this)\">&#9003;</div>"
+                        )
+                    else:
+                        cmd = f"__tp_d_{k}" if k != ',' else "__tp_comma"
+                        tp_pad_html += (
+                            f"<div class='tp-key' data-zcmd='{cmd}' "
+                            f"onclick=\"window.__zotTap('{cmd}', this)\">{k}</div>"
+                        )
+            tp_pad_html += "</div>"
+            tp_actions_html = (
+                "<div class='hudchips' style='margin-top:8px;'>"
+                "<div class='hudchip' data-zcmd='__tp_send' "
+                "onclick=\"window.__zotTap('__tp_send', this)\">TELEPORT &#9654;</div>"
+                "<div class='hudchip exit' data-zcmd='c' "
+                "onclick=\"window.__zotTap('c', this)\">CANCEL</div>"
+                "</div>"
+            )
+
             html_code = f"""
+                <style>
+                  .tp-slate {{
+                    font-family: 'Courier New', monospace; font-size: 22px;
+                    letter-spacing: 4px; font-weight: bold; color: #FFD700;
+                    text-align: center; padding: 10px; margin: 10px 0 0 0;
+                    background: linear-gradient(180deg, #1a1608 0%, #0a0804 100%);
+                    border: 2px solid #5a4a1a; border-radius: 6px;
+                    min-height: 32px;
+                  }}
+                  .tp-pad {{ display: grid;
+                              grid-template-columns: repeat(3, 64px);
+                              grid-template-rows: repeat(4, 56px);
+                              gap: 6px; justify-content: center;
+                              margin: 12px auto 4px auto; }}
+                  .tp-key {{
+                    background: linear-gradient(180deg, #3a3a3a 0%, #1f1f1f 100%);
+                    border: 1px solid #555; border-radius: 6px;
+                    color: #EEE; font-family: 'Courier New', monospace;
+                    font-size: 22px; font-weight: bold;
+                    line-height: 54px; text-align: center;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: transparent;
+                    box-shadow: 0 1px 0 #0a0a0a inset;
+                    transition: transform 60ms ease-out, background 100ms ease-out;
+                  }}
+                  .tp-key:active {{ transform: scale(0.92);
+                                     background: linear-gradient(180deg, #5a5a5a 0%, #303030 100%); }}
+                  .tp-key.tp-bs {{ color: #FF8A80; border-color: #6a3a3a; }}
+                </style>
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
@@ -9396,6 +9505,8 @@ class WizardsCavernApp(toga.App):
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{teleporter_html}</div>
                     </div>
+                    {tp_pad_html}
+                    {tp_actions_html}
                 </div>
             """
             current_commands_text = "0-9 = digits | , = comma | c = cancel"
