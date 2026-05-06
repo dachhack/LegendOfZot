@@ -4642,9 +4642,11 @@ class WizardsCavernApp(toga.App):
             pass
         else: # This 'else' block means gs.prompt_cntl is "game_loop" or similar map-based interaction.
             if cmd in ['n', 's', 'e', 'w']:
-                 moved = move_player(gs.player_character, gs.my_tower, cmd)
-                 if not moved:
-                     gs.prompt_cntl = "game_loop" # If movement failed, explicitly revert to game_loop.
+                # move_player returns False for both "hit a wall" and "died
+                # from status effects on room entry" — and it can also flip
+                # prompt_cntl to death_screen / combat_mode internally. Don't
+                # second-guess the result; it already reflects the intent.
+                move_player(gs.player_character, gs.my_tower, cmd)
 
     def _schedule_initiative_strike(self):
         """Auto-fire monster's initiative attack after init dice animation plays."""

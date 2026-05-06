@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 143
+BUILD_NUMBER = 144
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "FIX: dying from status effects on room entry now actually kills you — caller no longer overrides death_screen back to game_loop after a failed move",
     "Name-entry screen redesigned — big gold name slate with blinking cursor, tappable BACKSPACE / SEND cards, live letter feedback as you type",
     "Internal: app icons recompressed (-3.6 MB), repo cleanup of orphan + stale sprite reference files (-23 MB)",
     "Internal: trimmed ~9 MB of reserve sprites from the APK pool (kept the 1283 in-game ones, dropped 3968 unused reserves)",
