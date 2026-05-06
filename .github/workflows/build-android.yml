@@ -150,10 +150,13 @@ jobs:
           compression-level: 0
 
       - name: Create GitHub Release with APK
-        if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+        if: steps.find-apk.outputs.apk_path != ''
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
+          # Publish a release on every successful APK build (PR or push).
+          # Single-developer project — releases are the deploy signal, not
+          # a public artifact channel, so per-build churn is intentional.
           # Generate a tag from short SHA and date
           TAG="build-$(date -u +%Y%m%d-%H%M%S)"
           SHORT_SHA="${GITHUB_SHA:0:7}"
