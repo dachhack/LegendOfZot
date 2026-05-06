@@ -2496,7 +2496,7 @@ MODE_LAYOUTS = {
     'player_name':            _EMPTY_LAYOUT,  # body owns the HTML keyboard
     'starting_shop':          _EMPTY_LAYOUT,  # body owns BUY ALL / EXIT chips
     'vendor_shop':            _EMPTY_LAYOUT,  # body owns EXIT chip + tabs
-    'puzzle_mode':            lambda self, cmds: self.build_qwerty_keyboard_layout(),
+    'puzzle_mode':            _EMPTY_LAYOUT,  # body owns the HTML keyboard + chips
     'zotle_teleporter_mode':  lambda self, cmds: self.build_teleporter_layout(),
     'combat_mode':            _EMPTY_LAYOUT,  # body owns ATTACK/CAST/INVENTORY/FLEE chips
 }
@@ -2505,7 +2505,7 @@ MODE_LAYOUTS = {
 # (taps on the map + HUD chips). Reclaiming the ~116px of bottom_panel
 # gives the map and log every pixel they can use.
 _MODES_NO_BOTTOM_PANEL = frozenset({
-    'game_loop', 'player_name',
+    'game_loop', 'player_name', 'puzzle_mode',
     'starting_shop', 'vendor_shop',
     'combat_mode',
     'inventory',
@@ -3251,13 +3251,6 @@ class WizardsCavernApp(toga.App):
             self.bottom_panel.style.height = 0
             self.button_panel.style.height = 0
             self.commands_label.style.height = 0
-        elif gs.prompt_cntl == 'puzzle_mode':
-            # QWERTY keyboard: 3 rows × 34px keys + margins; wide text field.
-            self.input_row_spacer.style.flex = 0
-            self.input_field.style = Pack(flex=1, height=36, **_field_base)
-            self.input_row.style.height = 40
-            self.bottom_panel.style.height = 200
-            self.button_panel.style.height = 114
         elif _numpad_inline:
             # Numpad with input inline on the last row; input_row empty.
             # Button panel holds 4 numpad rows × 30px + margins.
@@ -4240,6 +4233,31 @@ class WizardsCavernApp(toga.App):
                             if not cmd_str:
                                 continue
                             self.input_field.value = ""
+                    if gs.prompt_cntl == 'puzzle_mode':
+                        if cmd_str.startswith('__pz_k_') and len(cmd_str) == 8:
+                            # In-body QWERTY letter tap: __pz_k_<a-z>.
+                            letter = cmd_str[-1].upper()
+                            if letter.isalpha() and gs.zotle_puzzle:
+                                for i in range(5):
+                                    if not gs.zotle_puzzle['current_guess'][i]:
+                                        gs.zotle_puzzle['current_guess'][i] = letter
+                                        break
+                                self._haptic('tap')
+                                self.render()
+                            continue
+                        if cmd_str == '__pz_bs':
+                            if gs.zotle_puzzle:
+                                for i in range(4, -1, -1):
+                                    if gs.zotle_puzzle['current_guess'][i]:
+                                        gs.zotle_puzzle['current_guess'][i] = ''
+                                        break
+                            self._haptic('tap')
+                            self.render()
+                            continue
+                        if cmd_str == '__pz_send':
+                            # Empty cmd to process_puzzle_action submits
+                            # the assembled guess (see room_actions.py:3421).
+                            cmd_str = ''
                     self.process_command(cmd_str)
                     if getattr(gs, 'game_should_quit', False):
                         return
@@ -9033,7 +9051,7 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "puzzle_mode":
             # ZOTLE PUZZLE VIEW - Wordle-style interface (no map, like inventory)
-            
+
             # Build previous guesses display (like Wordle rows)
             guesses_html = ""
             if gs.zotle_puzzle and gs.zotle_puzzle['guesses']:
@@ -9049,7 +9067,7 @@ class WizardsCavernApp(toga.App):
                         row_html += f'<div style="width: 40px; height: 40px; background: {bg_color}; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;">{letter}</div>'
                     row_html += '</div>'
                     guesses_html += row_html
-            
+
             # Current input row (empty boxes or current guess letters)
             current_guess = gs.zotle_puzzle.get('current_guess', ['', '', '', '', '']) if gs.zotle_puzzle else ['', '', '', '', '']
             current_row_html = '<div style="display: flex; justify-content: center; gap: 4px; margin: 4px 0;">'
@@ -9060,9 +9078,53 @@ class WizardsCavernApp(toga.App):
                 else:
                     current_row_html += f'<div style="width: 40px; height: 40px; background: #121213; border: 2px solid #3a3a3c; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 20px; color: #FFF; border-radius: 4px;"></div>'
             current_row_html += '</div>'
-            
+
             guess_count = len(gs.zotle_puzzle['guesses']) if gs.zotle_puzzle else 0
-            
+
+            # In-body QWERTY keyboard with Wordle-style letter coloring.
+            # keyboard_used maps letters to their best-known status; we
+            # tint each key accordingly so the player sees at a glance
+            # which letters are eliminated / present / nailed.
+            kbd_used = (gs.zotle_puzzle or {}).get('keyboard_used', {}) or {}
+            kbd_rows = [
+                ['Q','W','E','R','T','Y','U','I','O','P'],
+                ['A','S','D','F','G','H','J','K','L'],
+                ['Z','X','C','V','B','N','M'],
+            ]
+            pz_kbd_html = ""
+            for row in kbd_rows:
+                row_html = ""
+                for letter in row:
+                    cmd = f"__pz_k_{letter.lower()}"
+                    status = kbd_used.get(letter, '')
+                    cls = "pz-key"
+                    if status == 'correct':
+                        cls += " pz-correct"
+                    elif status == 'present':
+                        cls += " pz-present"
+                    elif status == 'absent':
+                        cls += " pz-absent"
+                    row_html += (
+                        f"<div class='{cls}' data-zcmd='{cmd}' "
+                        f"onclick=\"window.__zotTap('{cmd}', this)\">{letter}</div>"
+                    )
+                pz_kbd_html += f"<div class='pz-kbd-row'>{row_html}</div>"
+
+            # Action chips: ENTER (submits 5-letter guess), BACKSPACE,
+            # LEAVE (back to game_loop). ENTER dims when guess incomplete.
+            full_guess = ''.join(current_guess)
+            enter_cls = "hudchip" if len(full_guess) == 5 else "hudchip nm-empty"
+            pz_actions_html = (
+                "<div class='hudchips' style='margin: 8px 4px;'>"
+                "<div class='hudchip exit' data-zcmd='__pz_bs' "
+                "onclick=\"window.__zotTap('__pz_bs', this)\">&#9003; BACKSPACE</div>"
+                f"<div class='{enter_cls}' data-zcmd='__pz_send' "
+                "onclick=\"window.__zotTap('__pz_send', this)\">ENTER &#9654;</div>"
+                "<div class='hudchip exit' data-zcmd='x' "
+                "onclick=\"window.__zotTap('x', this)\">LEAVE</div>"
+                "</div>"
+            )
+
             # Dialog/instructions in the room box
             zotle_sprite = generate_room_sprite_html('Z', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             dialog_html = f"""
@@ -9089,23 +9151,62 @@ class WizardsCavernApp(toga.App):
                     <span style="color: #3a3a3c;">Grey</span> = Not in word
                 </div>
             """
-            
+
             puzzle_html = f"""
                 <div style="border: 2px solid #555; padding: 10px; border-radius: 4px;">
                     {dialog_html}
-                    
+
                     <div style="padding: 8px; background: #0a0a0a; border-radius: 3px; margin-bottom: 8px;">
                         {guesses_html}
                         {current_row_html}
                     </div>
-                    
+
                     <div style="text-align: center; color: #888; font-size: 12px;">
-                        Guesses: {guess_count} | Type letters, then press Send
+                        Guesses: {guess_count}
                     </div>
                 </div>
             """
-            
+
             html_code = f"""
+                <style>
+                  .pz-kbd-row {{ display: flex; gap: 4px; justify-content: center;
+                                   margin: 4px 2px; }}
+                  .pz-key {{
+                    flex: 1 1 0;
+                    min-width: 0;
+                    max-width: 38px;
+                    height: 44px;
+                    line-height: 42px;
+                    background: linear-gradient(180deg, #3a3a3a 0%, #1f1f1f 100%);
+                    border: 1px solid #555;
+                    border-radius: 5px;
+                    color: #EEE;
+                    font-family: 'Courier New', monospace;
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                    cursor: pointer;
+                    -webkit-tap-highlight-color: transparent;
+                    box-shadow: 0 1px 0 #0a0a0a inset;
+                    transition: transform 60ms ease-out, background 100ms ease-out;
+                  }}
+                  .pz-key:active {{
+                    transform: scale(0.92);
+                    background: linear-gradient(180deg, #5a5a5a 0%, #303030 100%);
+                  }}
+                  .pz-key.pz-correct {{
+                    background: linear-gradient(180deg, #538d4e 0%, #386033 100%);
+                    border-color: #6db263; color: #FFF;
+                  }}
+                  .pz-key.pz-present {{
+                    background: linear-gradient(180deg, #b59f3b 0%, #806f25 100%);
+                    border-color: #d4bc52; color: #FFF;
+                  }}
+                  .pz-key.pz-absent {{
+                    background: linear-gradient(180deg, #2a2a2c 0%, #161618 100%);
+                    border-color: #3a3a3c; color: #555;
+                  }}
+                </style>
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
@@ -9113,9 +9214,11 @@ class WizardsCavernApp(toga.App):
                     <div style="padding: 8px;">
                         {puzzle_html}
                     </div>
+                    {pz_actions_html}
+                    <div style="margin-top:6px;">{pz_kbd_html}</div>
                 </div>
             """
-            current_commands_text = "Type letters then Send | x = leave"
+            current_commands_text = ""
             needs_numbers = False
 
         elif gs.prompt_cntl == "zotle_teleporter_mode":

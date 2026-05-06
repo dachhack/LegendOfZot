@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 153
+BUILD_NUMBER = 154
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Zotle puzzle mode: HTML keyboard with Wordle-style letter coloring (green/yellow/grey hints), tappable BACKSPACE / ENTER / LEAVE chips, no more invisible toga keyboard",
     "Build number now appears next to 'Wizard's Cavern' header on every screen — easy to verify which build is running from a screenshot",
     "Combat + inventory chips: ATTACK / CAST / FLEE / INVENTORY in combat, CRAFT / SPELLS / JOURNAL / QUIT / SAVE&QUIT / CLOSE in inventory — all as HTML chips since the toga buttons render invisible",
     "Shop chips: BUY ALL / EXIT now live as HTML chip-buttons in the body of starting_shop and vendor_shop — bottom toga panel collapsed for both modes",
