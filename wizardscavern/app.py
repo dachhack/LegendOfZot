@@ -2514,6 +2514,12 @@ _MODES_NO_BOTTOM_PANEL = frozenset({
     'chest_mode', 'pool_mode', 'library_mode',
     'tomb_mode', 'garden_mode', 'oracle_mode',
     'stairs_up_mode', 'stairs_down_mode',
+    'fey_garden_mode', 'dungeon_mode', 'dungeon_unlocked_mode',
+    'blacksmith_mode', 'shrine_mode', 'alchemist_mode',
+    'war_room_mode', 'taxidermist_mode', 'towel_action_mode',
+    # Vendor-style or forced-choice modes (no map d-pad needed but the
+    # toga panel is invisible and the body owns all interaction).
+    'altar_mode', 'warp_mode',
 })
 
 # Modes where pressing 'l' triggers the quick-use lantern hotkey.
@@ -7822,6 +7828,12 @@ class WizardsCavernApp(toga.App):
                             </div>
                         </div>
                     </div>
+                    <div class='hudchips' style='margin-top:8px;'>
+                        <div class='hudchip' data-zcmd='i'
+                             onclick="window.__zotTap('i', this)">INVENTORY</div>
+                        <div class='hudchip exit' data-zcmd='x'
+                             onclick="window.__zotTap('x', this)">EXIT ALTAR</div>
+                    </div>
                 </div>
                 """
             # Rows + action cards carry every interaction; hint shows the
@@ -7932,10 +7944,14 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "warp_mode":
             # WARP MODE - 2 columns: Map | Warp Info
-            
+
             # Generate map HTML
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            # Warp is a forced binary choice (Resist / Enter), no movement —
+            # but the hud-chips helper still gives us INVENTORY / LANTERN /
+            # STAIRS chips that stay useful when relevant.
+            hud_chips_html, _bigdpad_warp = self._build_map_hud_and_dpad_html()
             
             # Check if this is a vault warp
             room = floor.grid[gs.player_character.y][gs.player_character.x]
@@ -7991,6 +8007,7 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{warp_html}</div>
+                        {hud_chips_html}
                     </div>
 
                 </div>
@@ -8229,6 +8246,7 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             has_key = coords in gs.dungeon_keys
             
@@ -8276,6 +8294,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8299,6 +8319,7 @@ class WizardsCavernApp(toga.App):
             
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             coords = (gs.player_character.x, gs.player_character.y, gs.player_character.z)
             already_looted = coords in gs.looted_dungeons
             
@@ -8333,6 +8354,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8482,6 +8505,7 @@ class WizardsCavernApp(toga.App):
             # FEY GARDEN VIEW - Special UI
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             # Get turns remaining
             turns_left = gs.ephemeral_gardens.get(gs.player_character.z, {}).get('turns_remaining', '?')
@@ -8529,6 +8553,8 @@ class WizardsCavernApp(toga.App):
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                                 <div>{grid_html}</div>
                                 <div class="room-panel" style="width: 100%;">{fey_html}</div>
+                                {hud_chips_html}
+                                {bigdpad_html}
                             </div>
                         </div>
                     """
@@ -8586,6 +8612,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "blacksmith_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
             weapon = gs.player_character.equipped_weapon
             armor  = gs.player_character.equipped_armor
@@ -8673,6 +8700,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{smith_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8681,6 +8710,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "shrine_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
             used = room.properties.get('shrine_used', False)
             shrine_sprite = generate_room_sprite_html('F', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
@@ -8730,6 +8760,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{shrine_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8741,6 +8773,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "alchemist_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
             uses_left = room.properties.get('alch_uses', 3)
             potions = [item for item in gs.player_character.inventory.items if isinstance(item, Potion)]
@@ -8839,6 +8872,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{alch_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8852,6 +8887,7 @@ class WizardsCavernApp(toga.App):
         elif gs.prompt_cntl == "war_room_mode":
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
             floor_level = gs.player_character.z
             raid_cost = 100 + floor_level * 5
@@ -8928,6 +8964,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{war_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """
@@ -8937,6 +8975,7 @@ class WizardsCavernApp(toga.App):
             # TAXIDERMIST VIEW
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
             room = floor.grid[gs.player_character.y][gs.player_character.x]
 
             is_bug_tax = room.properties.get('is_bug_taxidermist', False)
@@ -9033,21 +9072,24 @@ class WizardsCavernApp(toga.App):
             html_code = f"""
                 <div style='font-family: monospace; font-size: 12px;'>
                     {achievement_notifications}
-                    <div style='font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;'>Wizard's Cavern</div>
+                    <div style='font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;'>Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     <div style='display: flex; flex-direction: column; align-items: center; gap: 10px;'>
                         <div>{grid_html}</div>
                         <div class="room-panel" style='width: 100%;'>{tax_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>"""
             current_commands_text = "Tap a collection or Sell All | i = inventory | n/s/e/w = move"
 
         elif gs.prompt_cntl == "towel_action_mode":
             # TOWEL ACTION VIEW
-            
+
             floor = gs.my_tower.floors[gs.player_character.z]
             grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
             towel_wetness = ""
             if gs.active_towel_item:
                 # Handle both Towel objects and generic Items that are towels
@@ -9139,6 +9181,8 @@ class WizardsCavernApp(toga.App):
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
                         <div class="room-panel" style="width: 100%;">{towel_html}</div>
+                        {hud_chips_html}
+                        {bigdpad_html}
                     </div>
                 </div>
             """

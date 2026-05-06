@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 155
+BUILD_NUMBER = 156
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Map-view room modes finished: warp, dungeon, fey garden, blacksmith, shrine, alchemist, war room, taxidermist, towel, altar — all on body-only HTML with HUD chips + d-pad, toga bottom panel collapsed",
     "Room modes (chest, pool, library, tomb, garden, oracle, stairs up/down): HUD chips + d-pad now render in HTML, no more invisible bottom toga panel",
     "Zotle puzzle mode: HTML keyboard with Wordle-style letter coloring (green/yellow/grey hints), tappable BACKSPACE / ENTER / LEAVE chips, no more invisible toga keyboard",
     "Build number now appears next to 'Wizard's Cavern' header on every screen — easy to verify which build is running from a screenshot",
