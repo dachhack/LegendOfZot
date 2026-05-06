@@ -20,7 +20,9 @@ concurrency:
   cancel-in-progress: true
 
 permissions:
-  contents: write  # Needed for creating releases
+  contents: write       # Needed for creating releases
+  pull-requests: read   # Needed by `gh pr view` in the skip-if-merged step
+  actions: write        # Needed by `gh run cancel` when a PR is already merged
 
 jobs:
   build-android:
