@@ -2464,7 +2464,38 @@ def generate_grid_html(floor, player_x, player_y):
             grid_html += f'<span class="zmap-cell" style="{cell_style}"{tap_attrs}>{content}</span>'
         grid_html += "</div>"
     grid_html += "</div></div>"
-    return grid_html
+
+    # Wrap the map in edge-tap zones so the player can step in any
+    # direction by tapping the slim arrow strips around the perimeter.
+    # Walkability is computed once per direction; non-walkable edges
+    # render dim and inert.  Only fires for map-view modes — modes
+    # without movement (player_name, vendor shops, etc.) won't reach
+    # this code path because they never call generate_grid_html().
+    px, py = player_x, player_y
+    rows = floor.rows
+    cols = floor.cols
+    wall = floor.wall_char
+    def _edge_walkable(nx, ny):
+        return (0 <= nx < cols and 0 <= ny < rows
+                and floor.grid[ny][nx].room_type != wall)
+    edges = [
+        ('n', '▲', _edge_walkable(px, py - 1), 'mv-n'),
+        ('s', '▼', _edge_walkable(px, py + 1), 'mv-s'),
+        ('w', '◄', _edge_walkable(px - 1, py), 'mv-w'),
+        ('e', '►', _edge_walkable(px + 1, py), 'mv-e'),
+    ]
+    edge_html = ""
+    for cmd_dir, glyph, ok, cls in edges:
+        if ok:
+            edge_html += (
+                f"<div class='mvedge {cls}' data-zcmd='{cmd_dir}' "
+                f"onclick=\"window.__zotTap('{cmd_dir}', this)\">{glyph}</div>"
+            )
+        else:
+            edge_html += (
+                f"<div class='mvedge {cls} disabled'>{glyph}</div>"
+            )
+    return f"<div class='mvframe'>{edge_html}<div class='mvmap'>{grid_html}</div></div>"
 
 
 
@@ -3767,13 +3798,14 @@ class WizardsCavernApp(toga.App):
         self.update_button_panel(self.command_display.text, needs_numbers=False)
 
     def _build_map_hud_and_dpad_html(self):
-        """Return (hud_chips_html, bigdpad_html) for any map-view mode.
+        """Return (hud_chips_html, '') for any map-view mode.
 
         Used by game_loop and the room-interaction modes (chest, pool,
-        altar, library, oracle, tomb, garden, etc.) so movement +
-        INVENTORY / LANTERN / STAIRS chips render as HTML instead of
-        relying on the toga bottom panel that's invisible on some
-        devices.  Stairs chip only appears when standing on U or D.
+        altar, library, oracle, tomb, garden, etc.).  Movement now
+        lives on map-edge tap zones (see generate_grid_html), so the
+        d-pad return slot is always empty — kept for backwards
+        compatibility with the templates that still interpolate
+        {bigdpad_html}.
         """
         floor = gs.my_tower.floors[gs.player_character.z]
         here = floor.grid[gs.player_character.y][gs.player_character.x]
@@ -3784,54 +3816,24 @@ class WizardsCavernApp(toga.App):
         if here.room_type == 'U':
             chips.append(
                 "<div class='hudchip stairs' data-zcmd='u' "
-                "onclick=\"window.__zotTap('u', this)\">&#9650; STAIRS UP</div>"
+                "onclick=\"window.__zotTap('u', this)\">&#9650; UP</div>"
             )
         elif here.room_type == 'D':
             chips.append(
                 "<div class='hudchip stairs' data-zcmd='d' "
-                "onclick=\"window.__zotTap('d', this)\">&#9660; STAIRS DOWN</div>"
+                "onclick=\"window.__zotTap('d', this)\">&#9660; DOWN</div>"
             )
         chips.append(
             "<div class='hudchip' data-zcmd='i' "
-            "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
+            "onclick=\"window.__zotTap('i', this)\">INV</div>"
         )
         if has_lantern:
             chips.append(
                 "<div class='hudchip lantern' data-zcmd='l' "
-                "onclick=\"window.__zotTap('l', this)\">LANTERN</div>"
+                "onclick=\"window.__zotTap('l', this)\">LANT</div>"
             )
         hud_chips_html = "<div class='hudchips'>" + "".join(chips) + "</div>"
-
-        px, py = gs.player_character.x, gs.player_character.y
-        wall = floor.wall_char
-        def _can(nx, ny):
-            return (0 <= nx < floor.cols and 0 <= ny < floor.rows
-                    and floor.grid[ny][nx].room_type != wall)
-        dirs = [
-            ('n', '▲', _can(px, py - 1)),
-            ('s', '▼', _can(px, py + 1)),
-            ('e', '►', _can(px + 1, py)),
-            ('w', '◄', _can(px - 1, py)),
-        ]
-        btns = {}
-        for key, glyph, ok in dirs:
-            if ok:
-                btns[key] = (
-                    f"<div class='bigdpad-btn' data-zcmd='{key}' "
-                    f"onclick=\"window.__zotTap('{key}', this)\">{glyph}</div>"
-                )
-            else:
-                btns[key] = (
-                    f"<div class='bigdpad-btn disabled'>{glyph}</div>"
-                )
-        bigdpad_html = (
-            "<div class='bigdpad'>"
-            f"<div class='bigdpad-cell'></div>{btns['n']}<div class='bigdpad-cell'></div>"
-            f"{btns['w']}<div class='bigdpad-cell mid'></div>{btns['e']}"
-            f"<div class='bigdpad-cell'></div>{btns['s']}<div class='bigdpad-cell'></div>"
-            "</div>"
-        )
-        return hud_chips_html, bigdpad_html
+        return hud_chips_html, ""
 
     def zotle_backspace(self, widget):
         """Remove the last entered letter from the Zotle current guess."""
@@ -10305,20 +10307,20 @@ class WizardsCavernApp(toga.App):
                     display: flex;
                     flex-wrap: wrap;
                     justify-content: center;
-                    gap: 8px;
-                    margin: 12px 4px 8px 4px;
+                    gap: 6px;
+                    margin: 6px 4px 4px 4px;
                 }}
                 .hudchip {{
                     display: inline-block;
-                    padding: 14px 22px;
-                    border-radius: 24px;
+                    padding: 7px 12px;
+                    border-radius: 14px;
                     background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
                     border: 1px solid #555;
                     color: #EEE;
                     font-family: monospace;
-                    font-size: 15px;
+                    font-size: 12px;
                     font-weight: bold;
-                    letter-spacing: 1.5px;
+                    letter-spacing: 1px;
                     cursor: pointer;
                     user-select: none;
                     -webkit-user-select: none;
@@ -10361,52 +10363,50 @@ class WizardsCavernApp(toga.App):
                     -webkit-user-select: none;
                     user-select: none;
                 }}
-                /* Big in-body d-pad for game_loop. Sits under the HUD
-                   chips, filling the empty mid-screen real estate with
-                   chunky 70px tap targets. Disabled directions grey out
-                   so the player can see at a glance which way is wall. */
-                .bigdpad {{
-                    display: grid;
-                    grid-template-columns: repeat(3, 52px);
-                    grid-template-rows: repeat(3, 52px);
-                    gap: 4px;
+                /* Map edge tap zones — slim arrow strips around the
+                   perimeter that fire n/s/e/w movement.  Replaces the
+                   big d-pad with something that lives in the same
+                   space the map already occupies. */
+                .mvframe {{
+                    position: relative;
+                    display: inline-block;
+                    padding: 28px 28px;
+                    margin: 0 auto;
+                }}
+                .mvmap {{
+                    position: relative;
+                }}
+                .mvedge {{
+                    position: absolute;
+                    display: flex;
+                    align-items: center;
                     justify-content: center;
-                    margin: 10px auto 4px auto;
-                }}
-                .bigdpad-cell {{
-                    /* Empty corner / center fillers in the 3x3 grid. */
-                }}
-                .bigdpad-btn {{
-                    background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
-                    border: 1px solid #4CAF50;
-                    border-radius: 8px;
-                    color: #8BC34A;
-                    font-size: 26px;
-                    line-height: 50px;
-                    text-align: center;
                     cursor: pointer;
+                    color: #4CAF50;
+                    font-family: monospace;
+                    font-size: 22px;
+                    font-weight: bold;
                     user-select: none;
                     -webkit-user-select: none;
                     -webkit-tap-highlight-color: transparent;
-                    box-shadow: 0 1px 0 #0a0a0a inset,
-                                0 0 8px rgba(76,175,80,0.15);
-                    transition: transform 60ms ease-out, background 120ms ease-out,
-                                box-shadow 120ms ease-out;
+                    border-radius: 6px;
+                    background: rgba(76,175,80,0.06);
+                    border: 1px solid rgba(76,175,80,0.25);
+                    transition: background 120ms ease-out, opacity 120ms ease-out;
                 }}
-                .bigdpad-btn:active {{
-                    transform: scale(0.92);
-                    background: linear-gradient(180deg, #2a4a2a 0%, #1a301a 100%);
-                    box-shadow: 0 0 14px rgba(76,175,80,0.6),
-                                0 1px 0 #0a0a0a inset;
+                .mvedge:active {{
+                    background: rgba(76,175,80,0.35);
                 }}
-                .bigdpad-btn.disabled {{
-                    border-color: #2a2a2a;
-                    color: #2a2a2a;
-                    background: linear-gradient(180deg, #181818 0%, #101010 100%);
-                    box-shadow: none;
-                    cursor: not-allowed;
+                .mvedge.disabled {{
+                    color: #2a3a2a;
+                    background: transparent;
+                    border-color: #1a2a1a;
                     pointer-events: none;
                 }}
+                .mvedge.mv-n {{ top: 0; left: 28px; right: 28px; height: 24px; }}
+                .mvedge.mv-s {{ bottom: 0; left: 28px; right: 28px; height: 24px; }}
+                .mvedge.mv-w {{ left: 0; top: 28px; bottom: 28px; width: 24px; }}
+                .mvedge.mv-e {{ right: 0; top: 28px; bottom: 28px; width: 24px; }}
                 /* Altar action cards: stack of tall taprows, each with a
                    coloured title + muted meta line, rendered ABOVE the
                    sacrifice item list.  Detect=cyan, Bless=gold, Purify=
