@@ -22,7 +22,7 @@ from .game_state import (
 
 # Item classes and item functions
 from .items import (
-    Item, Potion, Scroll, Spell, Weapon, Armor,
+    Item, Potion, Scroll, Spell, Weapon, Armor, Treasure,
     Lantern, LanternFuel, Towel, Food, Flare, Ingredient,
     _create_item_copy,
     is_item_identified, identify_item,
@@ -32,6 +32,28 @@ from .items import (
 from .characters import Inventory, get_sorted_inventory
 from .item_templates import POTION_TEMPLATES, SCROLL_TEMPLATES, SPELL_TEMPLATES
 from .achievements import check_achievements
+
+
+def _auto_equip_starting_shop_item(player_character, item):
+    """Auto-equip a freshly-purchased gear item from the starting shop.
+
+    Weapons and armor go straight to their slots (replacing whatever's
+    there -- starting shop is fresh-start territory).  Passive
+    accessories fill the first empty slot.  Other item types
+    (potions, scrolls, food, etc.) are no-ops.
+    """
+    if isinstance(item, Weapon):
+        player_character.equipped_weapon = item
+    elif isinstance(item, Armor):
+        player_character.equipped_armor = item
+    elif isinstance(item, Treasure) and getattr(item, 'treasure_type', '') == 'passive':
+        slots = getattr(player_character, 'equipped_accessories', None)
+        if slots is None:
+            return
+        for i, acc in enumerate(slots):
+            if acc is None:
+                slots[i] = item
+                return
 
 
 def _get_enhanced_weapon(floor_level):
@@ -459,6 +481,7 @@ def process_vendor_action(player_character, vendor_character, cmd):
                 vendor_character.gold += total_cost
                 # Transfer all items and identify them
                 items_identified = 0
+                _is_starting = (gs.prompt_cntl == 'starting_shop')
                 for item_to_buy in list(vendor_character.inventory.items): # Iterate over a copy
                     new_item = _create_item_copy(item_to_buy)
                     player_character.inventory.add_item(new_item, notify=False)
@@ -466,6 +489,11 @@ def process_vendor_action(player_character, vendor_character, cmd):
                     if isinstance(new_item, (Potion, Scroll, Weapon, Armor)) and not is_item_identified(new_item):
                         identify_item(new_item, silent=True)
                         items_identified += 1
+                    # Auto-equip gear when shopping at the starting shop
+                    # so the player walks out ready to fight, no extra
+                    # taps in the inventory needed.
+                    if _is_starting:
+                        _auto_equip_starting_shop_item(player_character, new_item)
 
                 vendor_character.inventory.items.clear()
                 if items_identified > 0:
@@ -503,6 +531,12 @@ def process_vendor_action(player_character, vendor_character, cmd):
                     player_character.inventory.add_item(new_item, notify=False)
                     # Remove the actual item from vendor's inventory (not by index since we used sorted)
                     vendor_character.inventory.items.remove(item_to_buy)
+
+                    # Starting shop: auto-equip purchased gear so the
+                    # player doesn't need to dive into the inventory
+                    # before stepping into the dungeon.
+                    if gs.prompt_cntl == 'starting_shop':
+                        _auto_equip_starting_shop_item(player_character, new_item)
 
                     # Auto-identify item when purchased from vendor
                     # The vendor tells you what the item is when you buy it

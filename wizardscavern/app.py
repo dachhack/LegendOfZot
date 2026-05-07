@@ -6468,15 +6468,26 @@ class WizardsCavernApp(toga.App):
                                 _is_equipped = True
                         if _tap_prefix:
                             cmd_str = f"{_tap_prefix}{i + 1}"
-                            row_cls = 'taprow equipped' if _is_equipped else 'taprow'
-                            eq_badge = "<span class='eqbadge'>EQUIPPED &middot; tap to remove</span>" if _is_equipped else ""
-                            player_inv_html += (
-                                f"<div class='{row_cls}' data-zcmd='{cmd_str}' "
-                                f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                                f"{item_str}"
-                                f"{eq_badge}"
-                                f"</div>"
-                            )
+                            if _is_equipped:
+                                # Equipped item: row is NOT tappable as a
+                                # whole.  An inline UNEQUIP chip on the
+                                # right does the toggle (sends e<N>, which
+                                # auto-unequips when the slot already
+                                # holds this item).
+                                player_inv_html += (
+                                    f"<div class='taprow equipped' style='cursor: default;'>"
+                                    f"{item_str}"
+                                    f"<span class='unequip-chip' data-zcmd='{cmd_str}' "
+                                    f"onclick=\"event.stopPropagation(); window.__zotTap('{cmd_str}', this)\">UNEQUIP</span>"
+                                    f"</div>"
+                                )
+                            else:
+                                player_inv_html += (
+                                    f"<div class='taprow' data-zcmd='{cmd_str}' "
+                                    f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                                    f"{item_str}"
+                                    f"</div>"
+                                )
                         else:
                             player_inv_html += (
                                 f"<div style='margin: 2px 0; padding: 4px 0;'>"
@@ -10517,6 +10528,32 @@ class WizardsCavernApp(toga.App):
                     border-radius: 8px;
                     vertical-align: middle;
                     letter-spacing: 0.3px;
+                }}
+                /* UNEQUIP chip rendered next to an equipped item row -- a
+                   small red pill that's the only tappable element on
+                   the row (the row itself is non-tappable so the player
+                   can't accidentally unequip by mis-tapping the item
+                   name). */
+                .unequip-chip {{
+                    float: right;
+                    margin-top: 4px;
+                    padding: 6px 10px;
+                    font-size: 10px;
+                    font-weight: bold;
+                    letter-spacing: 0.5px;
+                    color: #FF8A80;
+                    background: linear-gradient(180deg, #3a1a1a 0%, #1a0e0e 100%);
+                    border: 1px solid #8a3a3a;
+                    border-radius: 12px;
+                    cursor: pointer;
+                    user-select: none;
+                    -webkit-user-select: none;
+                    -webkit-tap-highlight-color: transparent;
+                    transition: transform 60ms ease-out, background 120ms ease-out;
+                }}
+                .unequip-chip:active {{
+                    transform: scale(0.95);
+                    background: linear-gradient(180deg, #4a2424 0%, #2a1414 100%);
                 }}
                 /* Spell cast modal rows: purple/magenta theme. */
                 .taprow.spell {{
