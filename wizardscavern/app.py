@@ -2007,7 +2007,14 @@ def generate_dice_roll_js(dice_rolls):
         'top.textContent="CRIT!";'
         'top.style.color="#FFD700";'
         'top.style.textShadow="0 0 6px #FFD700";'
-        'var scr=document.getElementById("content-area");'
+        # Cinematic shake.  Important: do NOT shake #content-area (or
+        # any ancestor of the position:fixed strips) -- a transform on
+        # an ancestor re-roots fixed-position descendants to it,
+        # which would shove the map / chips out of place every time
+        # the player crits.  Target the room-panel (which holds the
+        # combat box on the combat screen) so only the panel shakes.
+        'var scr=document.querySelector(".bottom-pinned-zone .room-panel")'
+        '||document.querySelector(".room-panel");'
         'if(scr){'
         'scr.style.animation="none";'
         'void scr.offsetWidth;'
@@ -10235,7 +10242,7 @@ class WizardsCavernApp(toga.App):
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    height: 110px;
+                    height: 150px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -10248,11 +10255,11 @@ class WizardsCavernApp(toga.App):
                 }}
 
                 /* Scrollable content area - leave room for the fixed
-                   top strip (~56px), the bottom log (~110px) and the
+                   top strip (~56px), the bottom log (~150px) and the
                    bottom-pinned map+chips zone (~300px). */
                 #content-area {{
                     padding-top: 58px;
-                    padding-bottom: 420px;
+                    padding-bottom: 460px;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
@@ -10293,11 +10300,11 @@ class WizardsCavernApp(toga.App):
                    zone instead of escaping above the top strip. */
                 .bottom-pinned-zone {{
                     position: fixed;
-                    bottom: 110px;
+                    bottom: 150px;
                     left: 0;
                     right: 0;
                     z-index: 500;
-                    max-height: calc(100vh - 170px);
+                    max-height: calc(100vh - 210px);
                     overflow-y: auto;
                     background: #1a1a1a;
                     border-top: 1px solid #333;

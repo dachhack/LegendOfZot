@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 190
+BUILD_NUMBER = 191
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Toga bottom-panel collapsed on every body-only screen: splash, intro_story, main_menu, death_screen, game_loaded_summary, player_race, player_gender, player_sprite, confirm_quit, combat_victory, flee_direction_mode, foresight_direction_mode. The leftover SEND + backspace buttons that 'just barely peeked onto the screen below' were the toga input row sneaking through with bottom_panel height 116; with these modes added to _MODES_NO_BOTTOM_PANEL the panel collapses to height 0 and the web_view claims the full screen. Fixes the intro story screen which was being clipped",
+    "Bug fix: on a CRIT the map+chips were jumping to the top of the screen because the screen-shake animation set transform on #content-area, and any non-none transform on an ancestor re-roots position:fixed descendants to it -- so the bottom-pinned-zone (containing the map and chips) shifted out of place every time the player crit. Targeted the shake at the .room-panel only so the combat box twitches without disturbing the fixed strips. Bumped log height 110 -> 150 so 2-3 more lines are visible at a glance; bottom-pinned-zone shifted up to bottom: 150 + content-area padding-bottom 420 -> 460 to match",
+    "Toga bottom-panel collapsed on every body-only screen so the leftover SEND + backspace buttons stop peeking through, and the intro story screen has the full 88vh to render its content",
     "Intro/main-menu screen now mirrors the splash layout exactly so the rune-archway art lines up frame-for-frame when tapping past the splash",
     "Combat chips: stayed visible at the start of every fight. Switched to a JS .animating class that fades+disables chips only during the dice roll window. Lantern chip sprite bumped to size=32. Splash screen trimmed to top-3 changelog entries so the rune-archway artwork is visible behind it",
     "Gold toast: coin-pouch sprite + '+N gold' banner now fades in at the top-right whenever the player finds gold (monster drop, chest open, basin/pool gold materializes, vault treasure)",
