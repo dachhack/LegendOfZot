@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 171
+BUILD_NUMBER = 172
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Mobile UX: room interaction panels now render ABOVE the map (was below the inventory chips). Map drops into the bottom thumb-zone where every-turn movement taps live; room info card stays at the top where you only reach when you arrive on a special tile. Same content, same chips - just reordered across all 21 room modes (chest, tomb, pool, warp, stairs, library, dungeon, garden, fey, oracle, smith, shrine, alchemist, war, taxidermist, towel, teleporter, etc.)",
     "Intro/main-menu screen reuses the rune-archway splash backdrop. Backstory paragraph and NEW GAME / save-slot panel now sit over the dungeon art with darkening gradient + drop-shadows for legibility",
     "Splash + game-over screens now use full-bleed pixel-art backdrops (rune archway descending into the dungeon for splash; tombstone with skeleton remains for game-over). Watermarks trimmed off both. Title/version/changelog and final stats overlay the artwork with drop-shadows for legibility",
     "Tomb undead guardians toned down for the new HP curve: template pool tightened to player_floor +/-1 (no more F1 Wraiths from a +5 reach), buff multiplier 1.5x -> 1.25x, level bonus +2 -> +1",
