@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 186
+BUILD_NUMBER = 187
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Spell sprites: vendor wares now show the actual per-spell icon (vendors know what they're selling). Player inventory shows the per-spell icon ONCE the spell type is identified -- before that, the row falls back to a generic scroll/book placeholder. Plumbed for_vendor through render_item_icon -> format_item_for_display so the vendor branch reveals real sprites without affecting the inventory branch",
+    "Gold toast: a coin-pouch sprite + '+N gold' banner now fades in at the top-right whenever the player finds gold (monster drop, chest open, basin/pool gold materializes, vault treasure). Reuses the existing loot-toast queue infrastructure with a new notify_gold() helper hooked into the 5 main gold-finding sites",
+    "Spell sprites: vendor wares show the actual per-spell icon (vendors know what they're selling). Player inventory shows the per-spell icon ONCE the spell type is identified -- before that, the row falls back to a generic scroll/book placeholder",
     "Bug fix: potions found in basins/pools now stay UNIDENTIFIED until drunk or scroll-identified -- the 'Found: <potion>!' log line was leaking the real name (e.g. 'Found: Healing Potion!') instead of the cryptic name. Switched to get_item_display_name() so the log shows e.g. 'Found: red potion!' until you identify it",
     "Combat UX: chips (ATTACK / CAST / FLEE / INVENTORY) are hidden while dice roll and monster-defeat animations play. Comes back as soon as the animation cycle finishes -- prevents double-taps during the 1-3s resolution window. Channeling state still hides chips as before",
     "Mobile UX fixes: combat_victory, flee_direction_mode, foresight_direction_mode all switched to room-panel + bottom-pinned-zone shape so the map stays anchored. .room-panel clamped to max-height: 220px with overflow-y: auto so combat panels (tall monster + player block) scroll internally instead of pushing the map up. Browse-mode `<b>{i+1}.</b>` number prefixes stripped from inventory and vendor non-tappable rows",

@@ -983,6 +983,8 @@ def process_pool_action(player_character, my_tower, cmd):
             player_character.gold += gold
             add_log(f"{COLOR_YELLOW} Gold materializes in your hands!{COLOR_RESET}")
             add_log(f"{COLOR_YELLOW} Found {gold} gold! Total: {player_character.gold}{COLOR_RESET}")
+            from .sprites.loot_toast import notify_gold
+            notify_gold(gold)
             gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + gold
             check_achievements(player_character)
 
@@ -1585,7 +1587,9 @@ def process_dungeon_action(player_character, my_tower, cmd):
             gold_amount = random.randint(500, 800)
             player_character.gold += gold_amount
             add_log(f"{COLOR_YELLOW}You found {gold_amount} gold!{COLOR_RESET}")
-            
+            from .sprites.loot_toast import notify_gold
+            notify_gold(gold_amount)
+
             # Legendary weapon
             weapon = Weapon(
                 name="Master's Blade",

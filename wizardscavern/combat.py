@@ -447,6 +447,8 @@ def process_combat_action(player_character, my_tower, cmd):
         player_character.gain_experience(xp_reward)
         player_character.gold += gold_drop
         add_log(f"You found {gold_drop} gold.")
+        from .sprites.loot_toast import notify_gold
+        notify_gold(gold_drop)
         gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + gold_drop
         check_achievements(player_character)
 
