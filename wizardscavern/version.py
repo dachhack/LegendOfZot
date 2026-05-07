@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 189
+BUILD_NUMBER = 190
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Intro/main-menu screen now mirrors the splash layout exactly: same min-height (88vh), same center-top background-position, and the same top-thin / bottom-heavy gradient pair so the rune-archway art lines up frame-for-frame when tapping past the splash. Backstory compressed into a single tighter paragraph and the save-slot box trimmed so the artwork shows through the middle band",
+    "Toga bottom-panel collapsed on every body-only screen: splash, intro_story, main_menu, death_screen, game_loaded_summary, player_race, player_gender, player_sprite, confirm_quit, combat_victory, flee_direction_mode, foresight_direction_mode. The leftover SEND + backspace buttons that 'just barely peeked onto the screen below' were the toga input row sneaking through with bottom_panel height 116; with these modes added to _MODES_NO_BOTTOM_PANEL the panel collapses to height 0 and the web_view claims the full screen. Fixes the intro story screen which was being clipped",
+    "Intro/main-menu screen now mirrors the splash layout exactly so the rune-archway art lines up frame-for-frame when tapping past the splash",
     "Combat chips: stayed visible at the start of every fight. Switched to a JS .animating class that fades+disables chips only during the dice roll window. Lantern chip sprite bumped to size=32. Splash screen trimmed to top-3 changelog entries so the rune-archway artwork is visible behind it",
     "Gold toast: coin-pouch sprite + '+N gold' banner now fades in at the top-right whenever the player finds gold (monster drop, chest open, basin/pool gold materializes, vault treasure)",
     "Spell sprites: vendor wares show the actual per-spell icon (vendors know what they're selling). Player inventory shows the per-spell icon ONCE the spell type is identified -- before that, the row falls back to a generic scroll/book placeholder",
