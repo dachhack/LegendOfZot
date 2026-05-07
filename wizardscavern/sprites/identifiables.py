@@ -225,10 +225,17 @@ def render_inline_item_sprite(pid, size=24):
     )
 
 
-def render_item_icon(item, size=24):
+def render_item_icon(item, size=24, for_vendor=False):
     """One-call helper for format_item_for_display: pick the right pid
     for the item (cryptic for potions/scrolls/spells, named map for
     everything else) and return the inline canvas HTML.
+
+    ``for_vendor=True`` reveals the real per-spell sprite for spell
+    rows in vendor wares -- vendors know what they're selling, so the
+    spell book icon should match the actual spell.
+
+    Spells in the player's inventory show the real per-spell sprite
+    once identified, else fall back to the generic scroll/book icon.
 
     Returns '' if no sprite is mapped for this item type.
     """
@@ -238,6 +245,18 @@ def render_item_icon(item, size=24):
     if cls == 'Scroll':
         return render_inline_item_sprite(get_cryptic_sprite_pid(item, 'scrolls'), size=size)
     if cls == 'Spell':
+        # Per-spell sprite when the vendor is showing it OR the player
+        # has already identified this spell type; otherwise the generic
+        # scroll/book placeholder.
+        try:
+            from ..items import is_item_identified as _is_id
+            identified = _is_id(item)
+        except Exception:
+            identified = False
+        if for_vendor or identified:
+            pid = get_per_spell_sprite_pid(item)
+            if pid:
+                return render_inline_item_sprite(pid, size=size)
         return render_inline_item_sprite(get_cryptic_sprite_pid(item, 'spells'), size=size)
     return render_inline_item_sprite(get_named_item_pid(item), size=size)
 
