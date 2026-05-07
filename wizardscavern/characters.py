@@ -867,7 +867,9 @@ class Character:
 
     @property
     def max_health(self):
-        return 100 + (self.level * 10) + (self.strength * 2) + self.base_max_health_bonus
+        # Lv1 Human (str=10) starts at 10+20 = 30 HP.  Each level adds
+        # +10, each point of strength adds +2.
+        return (self.level * 10) + (self.strength * 2) + self.base_max_health_bonus
 
     @property
     def max_mana(

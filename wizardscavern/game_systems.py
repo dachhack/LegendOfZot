@@ -2677,40 +2677,18 @@ def _trigger_room_interaction(player_character, my_tower):
                         def_mult = dm
                         break
                 
-                # Apply evolution tier multiplier + linear floor scaling
-                # Linear scaling: ATK grows faster than DEF so monsters hit harder on deep floors
+                # Apply evolution tier multiplier + linear floor scaling.
+                # Linear scaling: ATK grows faster than DEF so monsters hit
+                # harder on deep floors.  Stat curve is purely per-floor
+                # (template base × evolution × linear) — no aggression
+                # scalar; weak monsters stay weak when they spawn at their
+                # native floor.
                 linear_hp = 1.0 + (floor_diff * 0.04)
                 linear_atk = 1.0 + (floor_diff * 0.03)
                 linear_def = 1.0 + (floor_diff * 0.015)
 
-                # Aggression scalar: self-correcting formula that tracks actual player
-                # defense and HP at each floor. Only boosts monster attack when natural
-                # scaling falls short of 7.5% HP per hit -- never dampens.
-                # Late floors (35+) are intentionally brutal: natural evolution tiers
-                # already push damage to 10-22% HP and we leave that intact.
-                #
-                # Estimates: upgrade accumulation ~0.7255*floor^0.8808 (capped 23),
-                #            avg defense base + racial bonuses = 9.0,
-                #            avg char level ~ 1 + floor*0.46.
-                _fl = target_lvl
-                _armor_pool = [a for a in ARMOR_TEMPLATES
-                               if max(0, _fl - 3) <= a.level <= _fl + 2]
-                if not _armor_pool:
-                    _armor_pool = [a for a in ARMOR_TEMPLATES if a.level >= 40]
-                _armor_base = sum(a._base_defense_bonus for a in _armor_pool) / len(_armor_pool)
-                _upg_est    = min(23.0, 0.7255 * (_fl ** 0.8808)) if _fl > 0 else 0.0
-                _pd_est     = 9.0 + _armor_base + _upg_est
-                _lv_est     = max(1, int(1 + _fl * 0.46))
-                _php_est    = 100 + _lv_est * 11 + 30
-
-                # Natural attack before scalar
-                _nat_atk    = m_data['attack'] * atk_mult * linear_atk
-                # Only boost when natural attack is below the 7.5% HP floor -- never reduce
-                _lo_atk     = _pd_est + _php_est * 0.107   # floor: 7.5% HP / 0.70 hit rate
-                aggression_scalar = max(1.0, _lo_atk / max(1.0, _nat_atk))
-
                 scaled_health = int(m_data['health'] * hp_mult * linear_hp)
-                scaled_attack = int(m_data['attack'] * atk_mult * linear_atk * aggression_scalar)
+                scaled_attack = int(m_data['attack'] * atk_mult * linear_atk)
                 scaled_defense = int(m_data['defense'] * def_mult * linear_def)
                 scaled_level = target_lvl  # Monster level matches floor
                 
@@ -3442,7 +3420,7 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
     }
 
     # Base stats for the 'Hero' class (since there's only one class now)
-    base_stats = {'health': 100, 'attack': 15, 'defense': 5, 'strength': 10, 'dexterity': 10, 'intelligence': 10}
+    base_stats = {'health': 30, 'attack': 15, 'defense': 5, 'strength': 10, 'dexterity': 10, 'intelligence': 10}
 
     # The set_player_helper function was not being called and is redundant.
     # Its logic will be directly integrated into the _cntl == "player_gender" block.
@@ -3462,7 +3440,7 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
 
             # Apply base stats (will be boosted in playtest mode)
             stats = {
-                'health': 100,
+                'health': 30,
                 'attack': 15,
                 'defense': 5,
                 'strength': 10,
@@ -3536,12 +3514,14 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
         stats['defense'] += gender_mods.get('defense_mod', 0)
 
         # Update player_character's attributes directly instead of creating a new object
-        player_character.health = stats['health']
         player_character._base_attack = stats['attack']
         player_character._base_defense = stats['defense']
         player_character.strength = stats['strength']
         player_character.dexterity = stats['dexterity']
         player_character.intelligence = stats['intelligence']
+        # Clamp starting health to max_health so race HP mods (e.g. dwarf
+        # +20) don't push the new character above its own ceiling.
+        player_character.health = min(stats['health'], player_character.max_health)
         player_character.character_class = "Adventurer"
         # player_character.race and player_character.gender are already set correctly
 
