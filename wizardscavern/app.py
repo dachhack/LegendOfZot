@@ -7470,11 +7470,16 @@ class WizardsCavernApp(toga.App):
                 combat_commands = "any key = continue channeling"
 
             # HTML combat action chips — replace the toga C/A/F/I buttons
-            # that render invisible on some devices. Channeling pauses the
+            # that render invisible on some devices.  Channeling pauses the
             # action panel ("any key = continue") so we hide chips then
-            # and show the channeling progress instead.
+            # and show the channeling progress instead.  Also hide chips
+            # while dice roll / monster-defeat animations are playing so
+            # the player can't double-tap during the resolution; chips
+            # come back as soon as the animation cycle finishes (next
+            # render has cleared last_dice_rolls).
             combat_chips_html = ""
-            if not gs.spell_charging:
+            _animating = bool(gs.last_dice_rolls) or bool(getattr(gs, 'monster_defeated_anim', None))
+            if not gs.spell_charging and not _animating:
                 _chips = [
                     "<div class='hudchip combat-attack' data-zcmd='a' "
                     "onclick=\"window.__zotTap('a', this)\">ATTACK</div>"

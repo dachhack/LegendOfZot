@@ -987,14 +987,16 @@ def process_pool_action(player_character, my_tower, cmd):
             check_achievements(player_character)
 
         elif chosen_outcome == 'item':
-            # Give random potion
+            # Give random potion -- log the cryptic name so the potion
+            # stays unidentified until the player drinks/identifies it.
             potion_choices = [p for p in POTION_TEMPLATES if p.level <= player_character.z + 2]
             if potion_choices:
                 item_template = random.choice(potion_choices)
                 new_item = _create_item_copy(item_template)
                 player_character.inventory.add_item(new_item)
+                display = get_item_display_name(new_item)
                 add_log(f"{COLOR_GREEN} Something materializes from the water!{COLOR_RESET}")
-                add_log(f"{COLOR_GREEN} Found: {new_item.name}!{COLOR_RESET}")
+                add_log(f"{COLOR_GREEN} Found: {display}!{COLOR_RESET}")
 
         elif chosen_outcome == 'mimic':
             if not check_pool_protection(player_character):

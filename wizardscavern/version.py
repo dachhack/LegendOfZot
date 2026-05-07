@@ -4,10 +4,12 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 184
+BUILD_NUMBER = 185
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Mobile UX fixes: combat_victory, flee_direction_mode, foresight_direction_mode all switched to the room-panel + bottom-pinned-zone shape so the map stays anchored at the bottom of the screen during these flows (was: defeating a monster, fleeing, or using the foresight scroll re-rendered the map at the top of the content area). Also stripped the `<b>{i+1}.</b>` number prefix from inventory and vendor browse-mode rows (the non-tappable view) -- 6 sites cleaned up; tappable rows already had no number",
+    "Bug fix: potions found in basins/pools now stay UNIDENTIFIED until drunk or scroll-identified -- the 'Found: <potion>!' log line was leaking the real name (e.g. 'Found: Healing Potion!') instead of the cryptic name. Switched to get_item_display_name() so the log shows e.g. 'Found: red potion!' until you identify it",
+    "Combat UX: chips (ATTACK / CAST / FLEE / INVENTORY) are hidden while dice roll and monster-defeat animations play. Comes back as soon as the animation cycle finishes -- prevents double-taps during the 1-3s resolution window. Channeling state still hides chips as before",
+    "Mobile UX fixes: combat_victory, flee_direction_mode, foresight_direction_mode all switched to room-panel + bottom-pinned-zone shape so the map stays anchored. .room-panel clamped to max-height: 220px with overflow-y: auto so combat panels (tall monster + player block) scroll internally instead of pushing the map up. Browse-mode `<b>{i+1}.</b>` number prefixes stripped from inventory and vendor non-tappable rows",
     "Bug fix + UX polish: spell memorization now defaults to the Memorize tab when you open the screen, so spell rows are tappable immediately. Stripped leading number prefixes from inventory and spell rows (16 sites). Added sprite mappings for Deathshroud, Infinite Lantern, Ruby Ring, Emerald Pendant, Crystal of Power, and Zot's Dimensional Key",
     "Mobile UX: room interaction + battle box stack inside the bottom-pinned-zone, on top of the map -- one block above the log instead of floating up under the stats bar",
     "Mobile UX: chips taller for thumb-friendly tap targets. .hudchip padding 6/9 -> 11/14, font-size 11 -> 13, min-height: 44px (Apple HIG tap target), border-radius 14 -> 18. Log shrunk 140 -> 110 to make room",
