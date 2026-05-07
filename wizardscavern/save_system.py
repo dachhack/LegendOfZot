@@ -541,9 +541,11 @@ class SaveSystem:
         character.base_max_health_bonus = data.get('base_max_health_bonus', 0)
         character.base_max_mana_bonus = data.get('base_max_mana_bonus', 0)
 
-        # Now set current health/mana (max_health and max_mana are now correct)
-        character.health = data['health']
-        character.mana = data['mana']
+        # Now set current health/mana (max_health and max_mana are now correct).
+        # Clamp to the new max so old saves with HP from the pre-rebalance
+        # 100-base formula don't load above the new ceiling.
+        character.health = min(data['health'], character.max_health)
+        character.mana = min(data['mana'], character.max_mana)
 
         character.gold = data['gold']
         character._base_attack = data['base_attack']
