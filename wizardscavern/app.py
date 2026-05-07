@@ -10206,7 +10206,7 @@ class WizardsCavernApp(toga.App):
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    height: 140px;
+                    height: 110px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -10219,12 +10219,11 @@ class WizardsCavernApp(toga.App):
                 }}
 
                 /* Scrollable content area - leave room for the fixed
-                   top strip (title bar ~18px + stats bar ~38px =
-                   ~56px), the bottom log (~140px) and the bottom-
-                   pinned map+chips zone (~280px). */
+                   top strip (~56px), the bottom log (~110px) and the
+                   bottom-pinned map+chips zone (~300px). */
                 #content-area {{
                     padding-top: 58px;
-                    padding-bottom: 430px;
+                    padding-bottom: 420px;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
@@ -10255,7 +10254,7 @@ class WizardsCavernApp(toga.App):
                    padding-bottom is sized to leave room for it. */
                 .bottom-pinned-zone {{
                     position: fixed;
-                    bottom: 140px;
+                    bottom: 110px;
                     left: 0;
                     right: 0;
                     z-index: 500;
@@ -10537,13 +10536,15 @@ class WizardsCavernApp(toga.App):
                 .hudchip {{
                     display: inline-flex;
                     align-items: center;
-                    padding: 6px 9px;
-                    border-radius: 14px;
+                    padding: 11px 14px;
+                    min-height: 44px;
+                    box-sizing: border-box;
+                    border-radius: 18px;
                     background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
                     border: 1px solid #555;
                     color: #EEE;
                     font-family: monospace;
-                    font-size: 11px;
+                    font-size: 13px;
                     font-weight: bold;
                     letter-spacing: 0.5px;
                     cursor: pointer;
@@ -10558,7 +10559,7 @@ class WizardsCavernApp(toga.App):
                    and tighten horizontal padding so the chip hugs the
                    sprite. */
                 .hudchip.lantern-icon {{
-                    padding: 4px 8px;
+                    padding: 8px 10px;
                 }}
                 .hudchip.lantern-icon canvas {{
                     margin-right: 0 !important;

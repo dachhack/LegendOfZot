@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 180
+BUILD_NUMBER = 181
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Mobile UX: log strip grown from 90px to 140px (more lines visible at a glance). Combat layout restructured: battle box (monster sprite + HP bar + player combat info + channeling) now lives in the room-panel slot ABOVE the map; battle chips (ATTACK / CAST / FLEE / INVENTORY) now live in the bottom-pinned-zone UNDER the map, replacing the lantern/inventory chips. So combat mirrors the regular gameplay layout exactly, just with combat content in the room+chip slots. .bottom-pinned-zone moved from bottom: 90 to bottom: 140 to clear the taller log; #content-area padding-bottom bumped 380 -> 430",
+    "Mobile UX: chips taller for thumb-friendly tap targets. .hudchip padding 6/9 -> 11/14, font-size 11 -> 13, min-height: 44px (Apple HIG tap target), border-radius 14 -> 18. Log shrunk 140 -> 110 to make room; .bottom-pinned-zone moved from bottom: 140 to bottom: 110 to match. Net layout still fits comfortably in the viewport",
+    "Mobile UX: log grown to 140px and combat layout restructured: battle box (monster + player combat + channeling) in the room-panel slot ABOVE the map; battle chips (ATTACK/CAST/FLEE/INVENTORY) in the bottom-pinned-zone UNDER the map, replacing the lantern/inventory chips. Combat mirrors regular gameplay layout exactly",
     "Mobile UX: 'Wizard's Cavern bXXX' title moved into the fixed top strip, stacked above the stats bar so the title is the first thing on every gameplay screen. Stripped the inline header from 34 per-mode templates",
     "Mobile UX: pin map+chips above the log via fixed-position. Switched .bottom-pinned-zone to position: fixed; bottom: 90px so it sits directly above the log regardless of content-area sizing",
     "Mobile UX (superseded): pin map+chips just above the log so there is no wasted vertical space. New .bottom-pinned-zone wrapper with margin-top: auto + min-height on flex containers",
