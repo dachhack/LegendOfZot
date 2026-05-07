@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 178
+BUILD_NUMBER = 179
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Mobile UX: pin map+chips above the log via fixed-position. The flex+min-height+margin-top:auto approach in b177 was overflowing the content-area on mobile WebView and pushing the entire flex (including the Wizard's Cavern header and the room panel) below the visible viewport, leaving an empty screen. Switched .bottom-pinned-zone to position: fixed; bottom: 90px so it sits directly above the log regardless of content-area sizing. Stripped the min-height calc and width: 100% from per-mode flex containers and the game-loop catch-all; bumped #content-area padding-bottom to 380px so room-panel content doesn't render under the fixed pinned zone",
+    "Mobile UX: 'Wizard's Cavern bXXX' title moved into the fixed top strip, stacked above the stats bar so the title is the first thing on every gameplay screen. Stripped the inline header from 34 per-mode templates (each was rendering its own copy in the scrollable content area). #content-area padding-top bumped from 40 to 58 to clear the taller strip",
+    "Mobile UX: pin map+chips above the log via fixed-position. Switched .bottom-pinned-zone to position: fixed; bottom: 90px so it sits directly above the log regardless of content-area sizing",
     "Mobile UX (superseded): pin map+chips just above the log so there is no wasted vertical space. New .bottom-pinned-zone wrapper with margin-top: auto + min-height on flex containers",
     "Mobile UX: pin the map's vertical position. The flex bottom-anchor trick (min-height + margin-top:auto) was misbehaving on screens where grid_html was empty (post-shopping transition for example), pushing the Wizard's Cavern header all the way to the bottom of the content area. Replaced with a CSS rule: every .room-panel has min-height: 110px so the slot height is consistent, and the map sits at the same Y regardless of which room card (or the empty-floor placeholder) is showing. Stripped min-height + margin-top:auto from 18 flex containers and 24 grid wrappers",
     "Mobile UX layout settled: stats bar pinned at the very top, room interaction card below (now ALWAYS present -- empty floors get a placeholder showing floor + flavor + lantern fuel), then map, then action chips, then log pinned at the bottom. The empty-room placeholder keeps the map's vertical position stable when the player walks off a special tile. Live-update path syncs stats html and body class so transitions stay in lockstep",
