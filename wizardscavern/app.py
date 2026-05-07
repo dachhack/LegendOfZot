@@ -2007,7 +2007,14 @@ def generate_dice_roll_js(dice_rolls):
         'top.textContent="CRIT!";'
         'top.style.color="#FFD700";'
         'top.style.textShadow="0 0 6px #FFD700";'
-        'var scr=document.getElementById("content-area");'
+        # Cinematic shake.  Important: do NOT shake #content-area (or
+        # any ancestor of the position:fixed strips) -- a transform on
+        # an ancestor re-roots fixed-position descendants to it,
+        # which would shove the map / chips out of place every time
+        # the player crits.  Target the room-panel (which holds the
+        # combat box on the combat screen) so only the panel shakes.
+        'var scr=document.querySelector(".bottom-pinned-zone .room-panel")'
+        '||document.querySelector(".room-panel");'
         'if(scr){'
         'scr.style.animation="none";'
         'void scr.offsetWidth;'
@@ -5128,7 +5135,7 @@ class WizardsCavernApp(toga.App):
 
             splash_uri = _load_screen_image_b64('splash')
             html_code = f"""
-                <div style="position: relative; font-family: monospace; min-height: 88vh;
+                <div style="position: relative; font-family: monospace; min-height: 100vh;
                             background-image: url('{splash_uri}');
                             background-size: cover;
                             background-position: center top;
@@ -5139,21 +5146,23 @@ class WizardsCavernApp(toga.App):
                     <!-- Lighter top gradient (lets the archway show through);
                          a stronger gradient at the very bottom so the chip is
                          legible without painting over the artwork. -->
-                    <div style="position: absolute; left:0; right:0; top:0; height: 18%;
+                    <div style="position: absolute; left:0; right:0; top:0; height: 14%;
+                                pointer-events: none;
                                 background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%,
                                             rgba(0,0,0,0) 100%);"></div>
-                    <div style="position: absolute; left:0; right:0; bottom:0; height: 38%;
+                    <div style="position: absolute; left:0; right:0; bottom:0; height: 42%;
+                                pointer-events: none;
                                 background: linear-gradient(180deg, rgba(0,0,0,0) 0%,
-                                            rgba(0,0,0,0.78) 60%, rgba(0,0,0,0.92) 100%);"></div>
-                    <div style="position: relative; padding: 12px 14px 12px;
+                                            rgba(0,0,0,0.78) 60%, rgba(0,0,0,0.95) 100%);"></div>
+                    <div style="position: relative; padding: 10px 14px 8px;
                                 display: flex; flex-direction: column; align-items: center;
-                                text-align: center; min-height: 88vh;">
-                        <div style="font-size: 24px; font-weight: bold; color: #FFD700;
+                                text-align: center; min-height: 100vh;">
+                        <div style="font-size: 22px; font-weight: bold; color: #FFD700;
                                     text-shadow: 0 2px 6px #000, 0 0 14px rgba(0,0,0,0.9);
                                     letter-spacing: 1px;">
                             WIZARD'S CAVERN
                         </div>
-                        <div style="font-size: 12px; color: #6FD3FF; margin-top: 2px;
+                        <div style="font-size: 11px; color: #6FD3FF; margin-top: 2px;
                                     text-shadow: 0 1px 4px #000;">
                             v{VERSION} (build {BUILD_NUMBER})
                         </div>
@@ -5169,7 +5178,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                         <div class='taprow altar-act blessing' data-zcmd=' '
                              onclick="window.__zotTap(' ', this)"
-                             style='margin-top: 8px; width: 100%; max-width: 360px;'>
+                             style='margin-top: 8px; margin-bottom: 0; width: 100%; max-width: 360px;'>
                             <div class='aname'>Enter the Cavern</div>
                             <div class='ameta'>Tap to continue (or wait a few seconds)</div>
                         </div>
@@ -5311,7 +5320,7 @@ class WizardsCavernApp(toga.App):
             splash_uri = _load_screen_image_b64('splash')
             # Mirror the splash screen layout exactly so the rune-archway
             # artwork doesn't shift when the player taps past the splash:
-            # min-height: 88vh, center-top background, thin top + thin
+            # min-height: 100vh, center-top background, thin top + thin
             # bottom gradient with the middle band fully transparent so
             # the archway/torch/stairs are clearly visible behind the
             # lore + save-slot panels.
@@ -5319,7 +5328,7 @@ class WizardsCavernApp(toga.App):
                         <div id="intro-tap-zone"
                              style="position: relative; font-family: monospace;
                                     font-size: 12px; padding: 0; text-align: center;
-                                    cursor: pointer; min-height: 88vh;
+                                    cursor: pointer; min-height: 100vh;
                                     background-image: url('{splash_uri}');
                                     background-size: cover;
                                     background-position: center top;
@@ -5332,15 +5341,17 @@ class WizardsCavernApp(toga.App):
                             <!-- Top gradient (thin, just enough for title legibility);
                                  bottom gradient (heavier, behind lore + save slots). -->
                             <div style="position: absolute; left:0; right:0; top:0; height: 14%;
+                                        pointer-events: none;
                                         background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%,
                                                     rgba(0,0,0,0) 100%);"></div>
                             <div style="position: absolute; left:0; right:0; bottom:0; height: 56%;
+                                        pointer-events: none;
                                         background: linear-gradient(180deg, rgba(0,0,0,0) 0%,
-                                                    rgba(0,0,0,0.78) 40%, rgba(0,0,0,0.92) 100%);"></div>
-                            <div style="position: relative; padding: 12px 14px 12px;
+                                                    rgba(0,0,0,0.78) 40%, rgba(0,0,0,0.95) 100%);"></div>
+                            <div style="position: relative; padding: 10px 14px 8px;
                                         display: flex; flex-direction: column; align-items: center;
-                                        text-align: center; min-height: 88vh;">
-                                <div style="font-size: 24px; font-weight: bold; color: #FFD700;
+                                        text-align: center; min-height: 100vh;">
+                                <div style="font-size: 22px; font-weight: bold; color: #FFD700;
                                             text-shadow: 0 2px 6px #000, 0 0 14px rgba(0,0,0,0.9);
                                             letter-spacing: 1px;">
                                      WIZARD'S CAVERN
@@ -5361,7 +5372,8 @@ class WizardsCavernApp(toga.App):
                                     Many a bold venturer has ventured in &mdash; <span style="color: #FF6A6A;">none have ever emerged.</span>
                                 </div>
                                 <div style="border: 1px solid rgba(255,215,0,0.3); border-radius: 5px;
-                                            padding: 8px; margin-top: 8px; width: 100%; max-width: 350px;
+                                            padding: 8px; margin-top: 8px; margin-bottom: 0;
+                                            width: 100%; max-width: 350px;
                                             background: rgba(0,0,0,0.65);">
                                     {save_slots_html}
                                 </div>
@@ -10235,7 +10247,7 @@ class WizardsCavernApp(toga.App):
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    height: 110px;
+                    height: 150px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -10248,11 +10260,11 @@ class WizardsCavernApp(toga.App):
                 }}
 
                 /* Scrollable content area - leave room for the fixed
-                   top strip (~56px), the bottom log (~110px) and the
+                   top strip (~56px), the bottom log (~150px) and the
                    bottom-pinned map+chips zone (~300px). */
                 #content-area {{
                     padding-top: 58px;
-                    padding-bottom: 420px;
+                    padding-bottom: 460px;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
@@ -10293,11 +10305,11 @@ class WizardsCavernApp(toga.App):
                    zone instead of escaping above the top strip. */
                 .bottom-pinned-zone {{
                     position: fixed;
-                    bottom: 110px;
+                    bottom: 150px;
                     left: 0;
                     right: 0;
                     z-index: 500;
-                    max-height: calc(100vh - 170px);
+                    max-height: calc(100vh - 210px);
                     overflow-y: auto;
                     background: #1a1a1a;
                     border-top: 1px solid #333;

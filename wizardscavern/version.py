@@ -4,10 +4,13 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 190
+BUILD_NUMBER = 193
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Toga bottom-panel collapsed on every body-only screen: splash, intro_story, main_menu, death_screen, game_loaded_summary, player_race, player_gender, player_sprite, confirm_quit, combat_victory, flee_direction_mode, foresight_direction_mode. The leftover SEND + backspace buttons that 'just barely peeked onto the screen below' were the toga input row sneaking through with bottom_panel height 116; with these modes added to _MODES_NO_BOTTOM_PANEL the panel collapses to height 0 and the web_view claims the full screen. Fixes the intro story screen which was being clipped",
+    "Splash + intro screens now fill 100vh (was 88vh) so the title/lore/save panels sit flush against the very bottom edge instead of leaving a 12vh gap. Title shrunk 24->22px and bottom padding tightened 12->8px so even more art shows through. pointer-events: none added to the gradient overlay divs as a defensive guard so they can never swallow taps meant for the Enter button or NEW GAME chip",
+    "Spell sprite fix: unidentified spell books were rendering as a CAT. Switched placeholder PID to S087 -- a tome with an arcane circle on the cover",
+    "Bug fix: on a CRIT the map+chips jumped to the top because the screen-shake set transform on #content-area, re-rooting position:fixed descendants. Targeted the shake at the .room-panel only. Log strip grown 110 -> 150 for 2-3 more visible lines",
+    "Toga bottom-panel collapsed on every body-only screen so the leftover SEND + backspace buttons stop peeking through, and the intro story screen has the full 88vh to render its content",
     "Intro/main-menu screen now mirrors the splash layout exactly so the rune-archway art lines up frame-for-frame when tapping past the splash",
     "Combat chips: stayed visible at the start of every fight. Switched to a JS .animating class that fades+disables chips only during the dice roll window. Lantern chip sprite bumped to size=32. Splash screen trimmed to top-3 changelog entries so the rune-archway artwork is visible behind it",
     "Gold toast: coin-pouch sprite + '+N gold' banner now fades in at the top-right whenever the player finds gold (monster drop, chest open, basin/pool gold materializes, vault treasure)",

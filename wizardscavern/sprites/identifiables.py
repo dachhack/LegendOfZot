@@ -49,13 +49,13 @@ _POOLS = {
     'spells':  _spells._SPELLS_POOL,
 }
 
-# All spells share a single placeholder icon (a scroll sprite). The user's
-# spec: "Spells should just be question marks (you can use the scroll ? icon)."
-# We pick a deterministic scroll pid and reuse it for every spell, identified
-# or not — spells are abstract knowledge, no need for per-spell visual.
-_SPELL_PLACEHOLDER_PID = (
-    _scrolls._SCROLLS_POOL[0] if _scrolls._SCROLLS_POOL else None
-)
+# Generic placeholder for UNIDENTIFIED spells -- shows as a tome with
+# a magic circle on the cover (a book the player hasn't cracked open
+# yet).  Once the spell is identified, render_item_icon falls through
+# to get_per_spell_sprite_pid for the real per-spell sprite.
+# (Was _SCROLLS_POOL[0] = S040, which is literally a cat sprite -- not
+# very book-like.)
+_SPELL_PLACEHOLDER_PID = 'S087'
 
 
 def get_cryptic_sprite_pid(item, category):
