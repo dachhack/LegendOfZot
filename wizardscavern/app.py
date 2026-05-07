@@ -5220,28 +5220,58 @@ class WizardsCavernApp(toga.App):
                             f"</div>"
                         )
 
+            splash_uri = _load_screen_image_b64('splash')
             html_code = f"""
-                        <div id="intro-tap-zone" style="font-family: monospace; font-size: 12px; padding: 10px; text-align: center; cursor: pointer;"
+                        <div id="intro-tap-zone"
+                             style="position: relative; font-family: monospace;
+                                    font-size: 12px; padding: 0; text-align: center;
+                                    cursor: pointer; min-height: 78vh;
+                                    background-image: url('{splash_uri}');
+                                    background-size: cover;
+                                    background-position: center top;
+                                    background-repeat: no-repeat;
+                                    background-color: #000;
+                                    border-radius: 6px;
+                                    overflow: hidden;"
                              onclick="(function(){{ if(window._musicEngine){{ window._musicEngine.resume(); var s=document.getElementById('music-status'); if(s){{ s.innerHTML='&#9835; MUSIC ON &mdash; press SEND to begin'; s.style.color='#69F0AE'; }} }} }})()"
                              ontouchstart="(function(){{ if(window._musicEngine){{ window._musicEngine.resume(); var s=document.getElementById('music-status'); if(s){{ s.innerHTML='&#9835; MUSIC ON &mdash; press SEND to begin'; s.style.color='#69F0AE'; }} }} }})()">
-                            <div style="font-size: 22px; font-weight: bold; margin-bottom: 12px; color: #FFD700;">
-                                 WIZARD'S CAVERN
-                            </div>
-                            <div id="music-status" style="font-size: 11px; color: #FFB74D; margin-bottom: 18px; letter-spacing: 1px;">
-                                &#9835; TAP THIS PANEL TO ENABLE MUSIC
-                            </div>
-                            <div style="font-size: 12px; line-height: 1.6; margin-bottom: 30px; color: #CCCCCC; text-align: left; max-width: 400px; margin-left: auto; margin-right: auto;">
-                                Many cycles ago, in the kingdom of Medium Earth, the gnomic wizard Zot forged his great ORB OF POWER.
-                                <br><br>
-                                He soon vanished, leaving behind his vast subterranean cavern filled with esurient monsters, fabulous treasures, and the incredible ORB OF ZOT.
-                                <br><br>
-                                From that time hence, many a bold venturer has ventured into the wizard's cavern. As of now, NONE has ever emerged victoriously!
-                                <br><br>
-                                <span style="color: #FF4444;">Beware!!</span>
-                            </div>
+                            <div style="position: absolute; inset: 0;
+                                        background: linear-gradient(180deg,
+                                            rgba(0,0,0,0.05) 0%,
+                                            rgba(0,0,0,0.55) 35%,
+                                            rgba(0,0,0,0.85) 70%,
+                                            rgba(0,0,0,0.92) 100%);"></div>
+                            <div style="position: relative; padding: 14px 12px;">
+                                <div style="font-size: 22px; font-weight: bold; margin-bottom: 8px; color: #FFD700;
+                                            text-shadow: 0 2px 6px #000, 0 0 14px rgba(0,0,0,0.9);
+                                            letter-spacing: 1px;">
+                                     WIZARD'S CAVERN
+                                </div>
+                                <div id="music-status" style="font-size: 11px; color: #FFB74D; margin-bottom: 14px; letter-spacing: 1px;
+                                            text-shadow: 0 1px 3px #000;">
+                                    &#9835; TAP THIS PANEL TO ENABLE MUSIC
+                                </div>
+                                <div style="font-size: 12px; line-height: 1.6; margin-bottom: 18px;
+                                            color: #E8E8E8; text-align: left; max-width: 400px;
+                                            margin-left: auto; margin-right: auto;
+                                            background: rgba(0,0,0,0.55);
+                                            border: 1px solid rgba(255,215,0,0.18);
+                                            border-radius: 4px; padding: 10px 12px;
+                                            text-shadow: 0 1px 2px #000;">
+                                    Many cycles ago, in the kingdom of Medium Earth, the gnomic wizard Zot forged his great ORB OF POWER.
+                                    <br><br>
+                                    He soon vanished, leaving behind his vast subterranean cavern filled with esurient monsters, fabulous treasures, and the incredible ORB OF ZOT.
+                                    <br><br>
+                                    From that time hence, many a bold venturer has ventured into the wizard's cavern. As of now, NONE has ever emerged victoriously!
+                                    <br><br>
+                                    <span style="color: #FF6A6A;">Beware!!</span>
+                                </div>
 
-                            <div style="border: 2px solid #555; border-radius: 5px; padding: 12px; margin: 20px auto; max-width: 350px; background: #1a1a1a;">
-                                {save_slots_html}
+                                <div style="border: 1px solid rgba(255,215,0,0.3); border-radius: 5px;
+                                            padding: 10px; margin: 12px auto; max-width: 350px;
+                                            background: rgba(0,0,0,0.65);">
+                                    {save_slots_html}
+                                </div>
                             </div>
                         </div>
                     """

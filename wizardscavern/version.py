@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 170
+BUILD_NUMBER = 171
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Intro/main-menu screen reuses the rune-archway splash backdrop. Backstory paragraph and NEW GAME / save-slot panel now sit over the dungeon art with darkening gradient + drop-shadows for legibility",
     "Splash + game-over screens now use full-bleed pixel-art backdrops (rune archway descending into the dungeon for splash; tombstone with skeleton remains for game-over). Watermarks trimmed off both. Title/version/changelog and final stats overlay the artwork with drop-shadows for legibility",
     "Tomb undead guardians toned down for the new HP curve: template pool tightened to player_floor +/-1 (no more F1 Wraiths from a +5 reach), buff multiplier 1.5x -> 1.25x, level bonus +2 -> +1",
     "Progression rebalance: aggression scalar removed (Lichen on F1 now hits for ~1 dmg, not 16). Player Lv1 max HP dropped from 130 to 30 (formula: lv*10 + str*2). Old saves clamped on load. Monster strength now scales purely via spawn-floor-range + linear floor scaling (3-4% per floor of overshoot) + evolution tiers (Hardened/Savage/Dread/Mythic at floor_diff 5+/13+/23+/35+)",
