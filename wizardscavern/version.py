@@ -4,9 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 172
+BUILD_NUMBER = 174
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Mobile UX: stats bar promoted into the fixed top strip ABOVE the log (was inline in 35 per-mode templates). Top strip now stacks stats-bar -> log-strip in the right visual order. Splash/intro/death/character-creation get a body.full-bleed class so the strip hides and their backdrops fill the screen as before. Live-update path (window.updateGame) now syncs stats html and body class so transitions don't desync",
+    "Mobile UX: log strip moved from bottom of screen to TOP (peripheral info doesn't waste thumb-zone). Map+chips now anchored to the bottom of every per-mode flex container via min-height + margin-top:auto, so the map sits in the same vertical position whether or not a room interaction panel is showing. Removed the dead 150px placeholder div at the end of the game-loop render that was left over from the previous log location",
     "Mobile UX: room interaction panels now render ABOVE the map (was below the inventory chips). Map drops into the bottom thumb-zone where every-turn movement taps live; room info card stays at the top where you only reach when you arrive on a special tile. Same content, same chips - just reordered across all 21 room modes (chest, tomb, pool, warp, stairs, library, dungeon, garden, fey, oracle, smith, shrine, alchemist, war, taxidermist, towel, teleporter, etc.)",
     "Intro/main-menu screen reuses the rune-archway splash backdrop. Backstory paragraph and NEW GAME / save-slot panel now sit over the dungeon art with darkening gradient + drop-shadows for legibility",
     "Splash + game-over screens now use full-bleed pixel-art backdrops (rune archway descending into the dungeon for splash; tombstone with skeleton remains for game-over). Watermarks trimmed off both. Title/version/changelog and final stats overlay the artwork with drop-shadows for legibility",
