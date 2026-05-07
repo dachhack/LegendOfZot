@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 181
+BUILD_NUMBER = 182
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Mobile UX: chips taller for thumb-friendly tap targets. .hudchip padding 6/9 -> 11/14, font-size 11 -> 13, min-height: 44px (Apple HIG tap target), border-radius 14 -> 18. Log shrunk 140 -> 110 to make room; .bottom-pinned-zone moved from bottom: 140 to bottom: 110 to match. Net layout still fits comfortably in the viewport",
+    "Mobile UX: room interaction + battle box now stack INSIDE the bottom-pinned-zone, on top of the map. Was floating up under the stats bar with a big empty gap below; now room card sits right above the map and chips, all together at the bottom of the screen. 18 per-mode templates updated (16 single-line + 2 multi-line panels) plus combat mode plus the empty-room placeholder. Zone gets max-height: calc(100vh - 170px) + overflow-y: auto so very tall room cards (vendor lists, library text) scroll within the zone instead of escaping above the top strip",
+    "Mobile UX: chips taller for thumb-friendly tap targets. .hudchip padding 6/9 -> 11/14, font-size 11 -> 13, min-height: 44px (Apple HIG tap target), border-radius 14 -> 18. Log shrunk 140 -> 110 to make room",
     "Mobile UX: log grown to 140px and combat layout restructured: battle box (monster + player combat + channeling) in the room-panel slot ABOVE the map; battle chips (ATTACK/CAST/FLEE/INVENTORY) in the bottom-pinned-zone UNDER the map, replacing the lantern/inventory chips. Combat mirrors regular gameplay layout exactly",
     "Mobile UX: 'Wizard's Cavern bXXX' title moved into the fixed top strip, stacked above the stats bar so the title is the first thing on every gameplay screen. Stripped the inline header from 34 per-mode templates",
     "Mobile UX: pin map+chips above the log via fixed-position. Switched .bottom-pinned-zone to position: fixed; bottom: 90px so it sits directly above the log regardless of content-area sizing",
