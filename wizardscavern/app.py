@@ -10238,11 +10238,14 @@ class WizardsCavernApp(toga.App):
                    a min-height so the map below them sits at the
                    same vertical position regardless of which panel
                    is showing (empty floor, chest, tomb, pool, etc.).
-                   Tall content (vendor lists, library text) keeps
-                   its natural height and pushes the map down -- but
-                   the common case stays pinned. */
+                   max-height + overflow-y: auto keeps tall panels
+                   (combat victory monster + player, library text,
+                   vendor lists) from pushing the map up the screen
+                   -- the panel scrolls internally instead. */
                 .room-panel {{
                     min-height: 110px;
+                    max-height: 220px;
+                    overflow-y: auto;
                 }}
 
                 /* Pin the map + action chips just above the log so
