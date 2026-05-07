@@ -2516,8 +2516,14 @@ MODE_LAYOUTS = {
 _MODES_NO_BOTTOM_PANEL = frozenset({
     'game_loop', 'player_name', 'puzzle_mode',
     'starting_shop', 'vendor_shop',
-    'combat_mode',
+    'combat_mode', 'combat_victory',
     'inventory',
+    # Splash + intro + character creation + game-over: full-bleed
+    # body owns the entire screen, no toga panel needed.
+    'splash', 'intro_story', 'main_menu', 'death_screen',
+    'game_loaded_summary',
+    'player_race', 'player_gender', 'player_sprite',
+    'confirm_quit',
     # Map-view room modes — body owns d-pad + HUD chips via
     # _build_map_hud_and_dpad_html().
     'chest_mode', 'pool_mode', 'library_mode',
@@ -2537,6 +2543,7 @@ _MODES_NO_BOTTOM_PANEL = frozenset({
     'journal_mode', 'character_stats_mode',
     'save_load_mode',
     'flare_direction_mode', 'library_read_decision_mode',
+    'flee_direction_mode', 'foresight_direction_mode',
     'upgrade_scroll_mode', 'identify_scroll_mode',
     'zotle_teleporter_mode',
 })
