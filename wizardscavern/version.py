@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 191
+BUILD_NUMBER = 192
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Bug fix: on a CRIT the map+chips were jumping to the top of the screen because the screen-shake animation set transform on #content-area, and any non-none transform on an ancestor re-roots position:fixed descendants to it -- so the bottom-pinned-zone (containing the map and chips) shifted out of place every time the player crit. Targeted the shake at the .room-panel only so the combat box twitches without disturbing the fixed strips. Bumped log height 110 -> 150 so 2-3 more lines are visible at a glance; bottom-pinned-zone shifted up to bottom: 150 + content-area padding-bottom 420 -> 460 to match",
+    "Spell sprite fix: unidentified spell books were rendering as a CAT (the placeholder PID was _SCROLLS_POOL[0] which happens to be S040, a cat sprite). Switched to S087 -- a tome with an arcane circle embossed on the cover. Identified spells still use their per-spell icon",
+    "Bug fix: on a CRIT the map+chips jumped to the top because the screen-shake animation set transform on #content-area, and a transform on an ancestor re-roots position:fixed descendants. Targeted the shake at the .room-panel only. Log strip grown 110 -> 150 for 2-3 more visible lines",
     "Toga bottom-panel collapsed on every body-only screen so the leftover SEND + backspace buttons stop peeking through, and the intro story screen has the full 88vh to render its content",
     "Intro/main-menu screen now mirrors the splash layout exactly so the rune-archway art lines up frame-for-frame when tapping past the splash",
     "Combat chips: stayed visible at the start of every fight. Switched to a JS .animating class that fades+disables chips only during the dice roll window. Lantern chip sprite bumped to size=32. Splash screen trimmed to top-3 changelog entries so the rune-archway artwork is visible behind it",
