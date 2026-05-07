@@ -4,11 +4,12 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 192
+BUILD_NUMBER = 193
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Spell sprite fix: unidentified spell books were rendering as a CAT (the placeholder PID was _SCROLLS_POOL[0] which happens to be S040, a cat sprite). Switched to S087 -- a tome with an arcane circle embossed on the cover. Identified spells still use their per-spell icon",
-    "Bug fix: on a CRIT the map+chips jumped to the top because the screen-shake animation set transform on #content-area, and a transform on an ancestor re-roots position:fixed descendants. Targeted the shake at the .room-panel only. Log strip grown 110 -> 150 for 2-3 more visible lines",
+    "Splash + intro screens now fill 100vh (was 88vh) so the title/lore/save panels sit flush against the very bottom edge instead of leaving a 12vh gap. Title shrunk 24->22px and bottom padding tightened 12->8px so even more art shows through. pointer-events: none added to the gradient overlay divs as a defensive guard so they can never swallow taps meant for the Enter button or NEW GAME chip",
+    "Spell sprite fix: unidentified spell books were rendering as a CAT. Switched placeholder PID to S087 -- a tome with an arcane circle on the cover",
+    "Bug fix: on a CRIT the map+chips jumped to the top because the screen-shake set transform on #content-area, re-rooting position:fixed descendants. Targeted the shake at the .room-panel only. Log strip grown 110 -> 150 for 2-3 more visible lines",
     "Toga bottom-panel collapsed on every body-only screen so the leftover SEND + backspace buttons stop peeking through, and the intro story screen has the full 88vh to render its content",
     "Intro/main-menu screen now mirrors the splash layout exactly so the rune-archway art lines up frame-for-frame when tapping past the splash",
     "Combat chips: stayed visible at the start of every fight. Switched to a JS .animating class that fades+disables chips only during the dice roll window. Lantern chip sprite bumped to size=32. Splash screen trimmed to top-3 changelog entries so the rune-archway artwork is visible behind it",
