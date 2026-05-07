@@ -4,10 +4,13 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 178
+BUILD_NUMBER = 181
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Mobile UX: pin map+chips above the log via fixed-position. The flex+min-height+margin-top:auto approach in b177 was overflowing the content-area on mobile WebView and pushing the entire flex (including the Wizard's Cavern header and the room panel) below the visible viewport, leaving an empty screen. Switched .bottom-pinned-zone to position: fixed; bottom: 90px so it sits directly above the log regardless of content-area sizing. Stripped the min-height calc and width: 100% from per-mode flex containers and the game-loop catch-all; bumped #content-area padding-bottom to 380px so room-panel content doesn't render under the fixed pinned zone",
+    "Mobile UX: chips taller for thumb-friendly tap targets. .hudchip padding 6/9 -> 11/14, font-size 11 -> 13, min-height: 44px (Apple HIG tap target), border-radius 14 -> 18. Log shrunk 140 -> 110 to make room; .bottom-pinned-zone moved from bottom: 140 to bottom: 110 to match. Net layout still fits comfortably in the viewport",
+    "Mobile UX: log grown to 140px and combat layout restructured: battle box (monster + player combat + channeling) in the room-panel slot ABOVE the map; battle chips (ATTACK/CAST/FLEE/INVENTORY) in the bottom-pinned-zone UNDER the map, replacing the lantern/inventory chips. Combat mirrors regular gameplay layout exactly",
+    "Mobile UX: 'Wizard's Cavern bXXX' title moved into the fixed top strip, stacked above the stats bar so the title is the first thing on every gameplay screen. Stripped the inline header from 34 per-mode templates",
+    "Mobile UX: pin map+chips above the log via fixed-position. Switched .bottom-pinned-zone to position: fixed; bottom: 90px so it sits directly above the log regardless of content-area sizing",
     "Mobile UX (superseded): pin map+chips just above the log so there is no wasted vertical space. New .bottom-pinned-zone wrapper with margin-top: auto + min-height on flex containers",
     "Mobile UX: pin the map's vertical position. The flex bottom-anchor trick (min-height + margin-top:auto) was misbehaving on screens where grid_html was empty (post-shopping transition for example), pushing the Wizard's Cavern header all the way to the bottom of the content area. Replaced with a CSS rule: every .room-panel has min-height: 110px so the slot height is consistent, and the map sits at the same Y regardless of which room card (or the empty-floor placeholder) is showing. Stripped min-height + margin-top:auto from 18 flex containers and 24 grid wrappers",
     "Mobile UX layout settled: stats bar pinned at the very top, room interaction card below (now ALWAYS present -- empty floors get a placeholder showing floor + flavor + lantern fuel), then map, then action chips, then log pinned at the bottom. The empty-room placeholder keeps the map's vertical position stable when the player walks off a special tile. Live-update path syncs stats html and body class so transitions stay in lockstep",
