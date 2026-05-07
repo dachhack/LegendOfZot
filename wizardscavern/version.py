@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 168
+BUILD_NUMBER = 169
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Tomb undead guardians toned down for the new HP curve: template pool tightened to player_floor +/-1 (no more F1 Wraiths from a +5 reach), buff multiplier 1.5x -> 1.25x, level bonus +2 -> +1",
     "Progression rebalance: aggression scalar removed (Lichen on F1 now hits for ~1 dmg, not 16). Player Lv1 max HP dropped from 130 to 30 (formula: lv*10 + str*2). Old saves clamped on load. Monster strength now scales purely via spawn-floor-range + linear floor scaling (3-4% per floor of overshoot) + evolution tiers (Hardened/Savage/Dread/Mythic at floor_diff 5+/13+/23+/35+)",
     "Map UI polish: tap-flash on map removed, room interaction panels now render BELOW the INVENTORY/lantern chips, INV chip spelled out as INVENTORY, lantern chip swapped for the lantern sprite, SAVE & QUIT chip removed from the inventory bar, hudchip dimensions trimmed so 5 chips (CRAFT/SPELLS/JOURNAL/QUIT/CLOSE) fit on one row even when spells are available",
     "Map arrows dimmed and shrunk — ▲▼◄► hint glyphs now render at 12px in 25% opacity green so they barely whisper at the edges of the map without competing with the dungeon glyphs",

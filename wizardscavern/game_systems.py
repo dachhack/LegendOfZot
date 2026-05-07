@@ -2560,30 +2560,32 @@ def _trigger_room_interaction(player_character, my_tower):
                 # Spawn tough undead guardian
                 target_lvl = player_character.z + 1  # Slightly above player level
                 min_lvl = max(0, target_lvl - 1)
-                max_lvl = target_lvl + 2
-                
-                # Prefer undead monster types
+                max_lvl = target_lvl + 1
+
+                # Prefer undead monster types.  Pool clamped to the player's
+                # floor (no +2 reach) so F1 tombs can't roll a Lv5 Wraith.
                 undead_types = ['Skeleton', 'Zombie', 'Ghost', 'Wraith', 'Vampire', 'Lich', 'Death Knight']
-                undead_monsters = [m for m in MONSTER_TEMPLATES if any(undead in m['name'] for undead in undead_types) and min_lvl <= m['level'] <= max_lvl + 2]
-                
+                undead_monsters = [m for m in MONSTER_TEMPLATES if any(undead in m['name'] for undead in undead_types) and min_lvl <= m['level'] <= max_lvl]
+
                 if undead_monsters:
                     m_data = random.choice(undead_monsters)
                 else:
                     # Fallback to any monster near level
-                    potential_monsters = [m for m in MONSTER_TEMPLATES if m['level'] >= target_lvl - 1 and m['level'] <= target_lvl + 2]
+                    potential_monsters = [m for m in MONSTER_TEMPLATES if min_lvl <= m['level'] <= max_lvl]
                     if not potential_monsters:
                         potential_monsters = MONSTER_TEMPLATES
                     m_data = random.choice(potential_monsters)
-                
-                # Buffed stats - 1.5x multiplier
+
+                # Buffed stats - 1.25x multiplier (was 1.5x; lowered after the
+                # base-30-HP rebalance made the old buff one-shot Lv1 players)
                 new_monster = Monster(
                     f" UNDEAD {m_data['name'].upper()}",
-                    int(m_data['health'] * 1.5),  # 50% more health
-                    int(m_data['attack'] * 1.5),  # 50% more attack
-                    int(m_data['defense'] * 1.5),  # 50% more defense
+                    int(m_data['health'] * 1.25),
+                    int(m_data['attack'] * 1.25),
+                    int(m_data['defense'] * 1.25),
                     m_data.get('elemental_weakness', []),
                     m_data.get('elemental_strength', []) + ['Darkness'],  # Add darkness resistance
-                    m_data.get('level', 1) + 2,  # +2 levels
+                    m_data.get('level', 1) + 1,  # +1 level (was +2)
                     m_data.get('attack_element', 'Darkness'),  # Darkness attacks
                     f"{COLOR_GREY}An undead guardian risen to protect the ancient tomb!{COLOR_RESET}",
                     f"{COLOR_PURPLE}The undead guardian crumbles to dust!{COLOR_RESET}",
