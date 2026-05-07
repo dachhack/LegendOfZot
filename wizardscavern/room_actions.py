@@ -983,18 +983,22 @@ def process_pool_action(player_character, my_tower, cmd):
             player_character.gold += gold
             add_log(f"{COLOR_YELLOW} Gold materializes in your hands!{COLOR_RESET}")
             add_log(f"{COLOR_YELLOW} Found {gold} gold! Total: {player_character.gold}{COLOR_RESET}")
+            from .sprites.loot_toast import notify_gold
+            notify_gold(gold)
             gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + gold
             check_achievements(player_character)
 
         elif chosen_outcome == 'item':
-            # Give random potion
+            # Give random potion -- log the cryptic name so the potion
+            # stays unidentified until the player drinks/identifies it.
             potion_choices = [p for p in POTION_TEMPLATES if p.level <= player_character.z + 2]
             if potion_choices:
                 item_template = random.choice(potion_choices)
                 new_item = _create_item_copy(item_template)
                 player_character.inventory.add_item(new_item)
+                display = get_item_display_name(new_item)
                 add_log(f"{COLOR_GREEN} Something materializes from the water!{COLOR_RESET}")
-                add_log(f"{COLOR_GREEN} Found: {new_item.name}!{COLOR_RESET}")
+                add_log(f"{COLOR_GREEN} Found: {display}!{COLOR_RESET}")
 
         elif chosen_outcome == 'mimic':
             if not check_pool_protection(player_character):
@@ -1583,7 +1587,9 @@ def process_dungeon_action(player_character, my_tower, cmd):
             gold_amount = random.randint(500, 800)
             player_character.gold += gold_amount
             add_log(f"{COLOR_YELLOW}You found {gold_amount} gold!{COLOR_RESET}")
-            
+            from .sprites.loot_toast import notify_gold
+            notify_gold(gold_amount)
+
             # Legendary weapon
             weapon = Weapon(
                 name="Master's Blade",

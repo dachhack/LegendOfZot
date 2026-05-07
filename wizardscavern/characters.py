@@ -565,7 +565,7 @@ def format_item_for_display(item, player_character=None, show_price=False, is_se
     # plain text.
     try:
         from .sprites.identifiables import render_item_icon
-        icon_html = render_item_icon(item, size=24)
+        icon_html = render_item_icon(item, size=24, for_vendor=for_vendor)
     except Exception:
         icon_html = ''
     if icon_html:

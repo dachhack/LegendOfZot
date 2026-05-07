@@ -3005,8 +3005,10 @@ def process_chest_action(player_character, my_tower, cmd):
             gold_found = random.randint(300, 600)
             add_log(f"{COLOR_GREEN}You found {gold_found} gold!{COLOR_RESET}")
             player_character.gold += gold_found
+            from .sprites.loot_toast import notify_gold
+            notify_gold(gold_found)
             gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + gold_found
-            
+
             # Guaranteed treasure item
             treasure_templates = [t for t in TREASURE_TEMPLATES if t.get('level', 1) <= player_character.z + 2]
             if treasure_templates:
@@ -3058,6 +3060,8 @@ def process_chest_action(player_character, my_tower, cmd):
             gold_found = random.randint(20, 80)
             player_character.gold += gold_found
             add_log(f"You also found {gold_found} gold.")
+            from .sprites.loot_toast import notify_gold
+            notify_gold(gold_found)
             gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + gold_found
             gs.game_stats['chests_opened'] = gs.game_stats.get('chests_opened', 0) + 1
         else:
@@ -3091,6 +3095,8 @@ def process_chest_action(player_character, my_tower, cmd):
                 gold_found *= 10
                 add_log(f"{COLOR_GREEN}You found {gold_found} gold!{COLOR_RESET}")
                 player_character.gold += gold_found
+                from .sprites.loot_toast import notify_gold
+                notify_gold(gold_found)
                 add_log(f"{COLOR_GREEN}Total gold: {player_character.gold}{COLOR_RESET}")
                 gs.game_stats['total_gold_collected'] = gs.game_stats.get('total_gold_collected', 0) + gold_found
                 gs.game_stats['chests_opened'] = gs.game_stats.get('chests_opened', 0) + 1

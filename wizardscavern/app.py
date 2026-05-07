@@ -5928,7 +5928,7 @@ class WizardsCavernApp(toga.App):
                             f"</div>"
                         )
                     else:
-                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
+                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
             vendor_html += "</div>"
 
             _player_tap_prefix = 's' if gs.vendor_action == 'sell' else ''
@@ -5949,7 +5949,7 @@ class WizardsCavernApp(toga.App):
                             f"</div>"
                         )
                     else:
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
+                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
             player_inv_html += "</div>"
 
             vendor_html = starting_tabs_html + vendor_html
@@ -6090,7 +6090,7 @@ class WizardsCavernApp(toga.App):
                             f"</div>"
                         )
                     else:
-                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
+                        vendor_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
             vendor_html += "</div>"
 
             # Player inventory: tappable when sell/repair/identify is active.
@@ -6112,7 +6112,7 @@ class WizardsCavernApp(toga.App):
                             f"</div>"
                         )
                     else:
-                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'><b>{i + 1}.</b> {item_str}</div>"
+                        player_inv_html += f"<div style='margin: 2px 0; padding: 4px 0;'>{item_str}</div>"
             player_inv_html += "</div>"
 
             # Prepend tabs above the wares list so the player sees them first.
@@ -6242,7 +6242,7 @@ class WizardsCavernApp(toga.App):
                         else:
                             player_inv_html += (
                                 f"<div style='margin: 2px 0; padding: 4px 0;'>"
-                                f"<b>{i + 1}.</b> {item_str}"
+                                f"{item_str}"
                                 f"</div>"
                             )
 
@@ -6441,7 +6441,7 @@ class WizardsCavernApp(toga.App):
                         else:
                             player_inv_html += (
                                 f"<div style='margin: 2px 0; padding: 4px 0;'>"
-                                f"<b>{i + 1}.</b> {item_str}"
+                                f"{item_str}"
                                 f"</div>"
                             )
 
@@ -7470,11 +7470,16 @@ class WizardsCavernApp(toga.App):
                 combat_commands = "any key = continue channeling"
 
             # HTML combat action chips — replace the toga C/A/F/I buttons
-            # that render invisible on some devices. Channeling pauses the
+            # that render invisible on some devices.  Channeling pauses the
             # action panel ("any key = continue") so we hide chips then
-            # and show the channeling progress instead.
+            # and show the channeling progress instead.  Also hide chips
+            # while dice roll / monster-defeat animations are playing so
+            # the player can't double-tap during the resolution; chips
+            # come back as soon as the animation cycle finishes (next
+            # render has cleared last_dice_rolls).
             combat_chips_html = ""
-            if not gs.spell_charging:
+            _animating = bool(gs.last_dice_rolls) or bool(getattr(gs, 'monster_defeated_anim', None))
+            if not gs.spell_charging and not _animating:
                 _chips = [
                     "<div class='hudchip combat-attack' data-zcmd='a' "
                     "onclick=\"window.__zotTap('a', this)\">ATTACK</div>"
@@ -7582,18 +7587,18 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%; max-width: 300px;">
+                    <div class="bottom-pinned-zone">
+                        <div class="room-panel" style="width: 100%;">
                             {monster_html}
                             {player_combat_html}
                         </div>
-                    </div>
-                    <div class='taprow altar-act bless' data-zcmd=' '
-                         onclick="window.__zotTap(' ', this)"
-                         style="margin-top: 12px;">
-                        <div class='aname'>Victory! Continue</div>
-                        <div class='ameta'>Tap anywhere or wait for auto-dismiss</div>
+                        {grid_html}
+                        <div class='taprow altar-act bless' data-zcmd=' '
+                             onclick="window.__zotTap(' ', this)"
+                             style="margin-top: 8px;">
+                            <div class='aname'>Victory! Continue</div>
+                            <div class='ameta'>Tap anywhere or wait for auto-dismiss</div>
+                        </div>
                     </div>
                     {generate_damage_float_js(victory_name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
                     {generate_hp_drain_js(0, 1, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
@@ -7679,16 +7684,15 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
 
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%; max-width: 300px;">
+                    <div class="bottom-pinned-zone">
+                        <div class="room-panel" style="width: 100%;">
                             {monster_html}
                             {player_combat_html}
+                            <div style="text-align:center; color:#F44336; font-weight:bold; margin-top:8px;">Flee which way?</div>
                         </div>
+                        {grid_html}
+                        {flee_dpad}
                     </div>
-
-                    <div style="text-align:center; color:#F44336; font-weight:bold; margin-top:8px;">Flee which way?</div>
-                    {flee_dpad}
 
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
                     {generate_hp_drain_js(gs.active_monster.health, gs.active_monster.max_health, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
@@ -7734,27 +7738,26 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%; max-width: 300px;">
+                    <div class="bottom-pinned-zone">
+                        <div class="room-panel" style="width: 100%;">
                             {scroll_html}
                             {player_info_html}
+                            <div style="margin-top: 8px; text-align:center; color:#E040FB; font-weight:bold;">
+                                Choose your direction of sight
+                            </div>
                         </div>
-                    </div>
-
-                    <div style="margin-top: 8px; text-align:center; color:#E040FB; font-weight:bold;">
-                        Choose your direction of sight
-                    </div>
-                    <div class='dpad'>
-                        <div class='dpad-slot empty'></div>
-                        <div class='taprow dpad-dir' data-zcmd='n' onclick="window.__zotTap('n', this)">N</div>
-                        <div class='dpad-slot empty'></div>
-                        <div class='taprow dpad-dir' data-zcmd='w' onclick="window.__zotTap('w', this)">W</div>
-                        <div class='taprow dpad-cancel' data-zcmd='c' onclick="window.__zotTap('c', this)">CANCEL</div>
-                        <div class='taprow dpad-dir' data-zcmd='e' onclick="window.__zotTap('e', this)">E</div>
-                        <div class='dpad-slot empty'></div>
-                        <div class='taprow dpad-dir' data-zcmd='s' onclick="window.__zotTap('s', this)">S</div>
-                        <div class='dpad-slot empty'></div>
+                        {grid_html}
+                        <div class='dpad'>
+                            <div class='dpad-slot empty'></div>
+                            <div class='taprow dpad-dir' data-zcmd='n' onclick="window.__zotTap('n', this)">N</div>
+                            <div class='dpad-slot empty'></div>
+                            <div class='taprow dpad-dir' data-zcmd='w' onclick="window.__zotTap('w', this)">W</div>
+                            <div class='taprow dpad-cancel' data-zcmd='c' onclick="window.__zotTap('c', this)">CANCEL</div>
+                            <div class='taprow dpad-dir' data-zcmd='e' onclick="window.__zotTap('e', this)">E</div>
+                            <div class='dpad-slot empty'></div>
+                            <div class='taprow dpad-dir' data-zcmd='s' onclick="window.__zotTap('s', this)">S</div>
+                            <div class='dpad-slot empty'></div>
+                        </div>
                     </div>
                 </div>
                 """
@@ -10240,11 +10243,14 @@ class WizardsCavernApp(toga.App):
                    a min-height so the map below them sits at the
                    same vertical position regardless of which panel
                    is showing (empty floor, chest, tomb, pool, etc.).
-                   Tall content (vendor lists, library text) keeps
-                   its natural height and pushes the map down -- but
-                   the common case stays pinned. */
+                   max-height + overflow-y: auto keeps tall panels
+                   (combat victory monster + player, library text,
+                   vendor lists) from pushing the map up the screen
+                   -- the panel scrolls internally instead. */
                 .room-panel {{
                     min-height: 110px;
+                    max-height: 220px;
+                    overflow-y: auto;
                 }}
 
                 /* Pin the map + action chips just above the log so

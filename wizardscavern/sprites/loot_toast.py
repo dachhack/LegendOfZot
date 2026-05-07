@@ -18,10 +18,13 @@ though the WebView replaces the toast HTML on every update.
 
 import time
 
-from .identifiables import render_item_icon
+from .identifiables import render_inline_item_sprite, render_item_icon
 
 _TOAST_LIFETIME = 4.0  # seconds
 _TOAST_QUEUE_CAP = 20
+
+# Gold coin pid -- borrowed from the 'Gold Coin Pouch' treasure entry.
+_GOLD_TOAST_PID = 'LN0085'
 
 _VOWELS = set('aeiouAEIOU')
 
@@ -68,6 +71,27 @@ def notify_loot(item, message=None):
         'created_at': time.time(),
     })
     # Cap queue size so a misbehaving caller can't blow up memory.
+    if len(gs.loot_toasts) > _TOAST_QUEUE_CAP:
+        gs.loot_toasts = gs.loot_toasts[-_TOAST_QUEUE_CAP:]
+
+
+def notify_gold(amount, message=None):
+    """Push a toast for gold the player just acquired.
+
+    Uses a gold-coin pouch sprite as the icon.  ``message`` overrides
+    the default "+N gold" text (e.g. "Reward: 50 gold!").
+    """
+    if amount is None or amount <= 0:
+        return
+    gs = _ensure_queue()
+    icon_html = render_inline_item_sprite(_GOLD_TOAST_PID, size=28)
+    if message is None:
+        message = f"+{amount} gold"
+    gs.loot_toasts.append({
+        'icon': icon_html,
+        'text': message,
+        'created_at': time.time(),
+    })
     if len(gs.loot_toasts) > _TOAST_QUEUE_CAP:
         gs.loot_toasts = gs.loot_toasts[-_TOAST_QUEUE_CAP:]
 
