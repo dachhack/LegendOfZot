@@ -3775,6 +3775,63 @@ class WizardsCavernApp(toga.App):
         # Rebuild the keyboard with new case
         self.update_button_panel(self.command_display.text, needs_numbers=False)
 
+    def _build_empty_room_panel_html(self):
+        """Placeholder room card for plain floor tiles.
+
+        Special rooms (chest, tomb, pool, etc.) render their own
+        room-panel above the map.  When the player is on a plain tile
+        the slot would otherwise collapse, jumping the map vertically.
+        This returns a thin info card (floor + flavor + lantern fuel)
+        so the layout stays stable.
+
+        Flavor line is picked deterministically from the player's
+        floor + position so it stays consistent until the player
+        moves.
+        """
+        flavors = (
+            "An empty stretch of dungeon -- silent and still.",
+            "Cool, damp stones underfoot.",
+            "Dust drifts in the still air.",
+            "Distant water drips somewhere far off.",
+            "Faint runes glow on a nearby wall and fade.",
+            "The torch-smoke of long-dead adventurers lingers.",
+            "Stone, shadow, and the smell of mildew.",
+            "A draft from somewhere chills the back of your neck.",
+        )
+        ch = gs.player_character
+        idx = (ch.z * 31 + ch.x * 7 + ch.y) % len(flavors)
+        flavor = flavors[idx]
+
+        # Lantern fuel readout if equipped/owned -- one-liner so it
+        # never grows the card much.
+        lantern = None
+        for item in ch.inventory.items:
+            if isinstance(item, Lantern):
+                lantern = item
+                break
+        lantern_line = ""
+        if lantern is not None:
+            fuel = lantern.fuel_amount
+            color = "#4CAF50" if fuel > 5 else ("#FFD700" if fuel > 2 else "#F44336")
+            lit = " (lit)" if getattr(lantern, 'is_lit', False) else ""
+            lantern_line = (
+                f'<div style="margin-top: 4px; color: #BBB; font-size: 11px;">'
+                f'Lantern: <span style="color: {color};">fuel {fuel}</span>{lit}'
+                f'</div>'
+            )
+
+        return (
+            '<div class="room-panel" style="width: 100%; padding: 8px 10px; '
+            'border: 1px solid #444; border-radius: 4px; background: #1c1c1c;">'
+            f'<div style="color: #FFD27A; font-size: 11px; letter-spacing: 1px; '
+            f'text-transform: uppercase; margin-bottom: 3px;">'
+            f'Floor {ch.z + 1}'
+            '</div>'
+            f'<div style="color: #CCC; font-size: 12px; line-height: 1.35;">{flavor}</div>'
+            f'{lantern_line}'
+            '</div>'
+        )
+
     def _build_map_hud_and_dpad_html(self):
         """Return (hud_chips_html, '') for any map-view mode.
 
@@ -9791,16 +9848,22 @@ class WizardsCavernApp(toga.App):
             # reliably on every device.
             hud_chips_html = ""
             bigdpad_html = ""
+            empty_room_html = ""
             if gs.prompt_cntl == "game_loop":
                 hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+                # Empty-room placeholder card.  Keeps the layout stable
+                # when the player isn't standing on a special tile --
+                # the room-panel slot is always filled, so the map's
+                # vertical position never shifts.
+                empty_room_html = self._build_empty_room_panel_html()
 
             html_code = f"""
                 <div style="font-family: monospace; font-size: 16px;
                             display: flex; flex-direction: column;
-                            min-height: calc(100vh - 180px);">
+                            min-height: calc(100vh - 150px);">
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
-                    {player_stats_html}
+                    {empty_room_html}
                     {lantern_info_html}
                     <div style="margin-top: auto;">{grid_html}</div>
                     {hud_chips_html}
@@ -10097,10 +10160,10 @@ class WizardsCavernApp(toga.App):
                     padding: 4px !important;
                 }}
                 
-                /* Top strip: a single fixed container holding the
-                   stats bar and the log, in that visual order.  Map
-                   and action chips remain in the bottom thumb-zone;
-                   stats + log are glance-only and live at the top. */
+                /* Stats bar pinned at the top of the viewport.  Glance-
+                   only info (HP/MP/level/floor/coords) -- not a tap
+                   target, so it doesn't compete with the map for
+                   thumb space. */
                 #top-strip {{
                     position: fixed;
                     top: 0;
@@ -10113,7 +10176,7 @@ class WizardsCavernApp(toga.App):
                 #stats-bar {{
                     background-color: #1a1a1a;
                     color: #EEE;
-                    padding: 4px 6px 0 6px;
+                    padding: 4px 6px;
                     font-family: monospace;
                     font-size: 12px;
                     line-height: 1.3;
@@ -10121,28 +10184,43 @@ class WizardsCavernApp(toga.App):
                 #stats-bar > div {{
                     margin-bottom: 0 !important;
                 }}
+
+                /* Log pinned at the BOTTOM of the viewport.  Recent
+                   events scroll past here while the map+chips above
+                   stay stable. */
                 #game-log {{
-                    height: 80px;
+                    position: fixed;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    height: 90px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
                     font-family: monospace;
                     font-size: 11px;
                     overflow-y: auto;
+                    border-top: 2px solid #444;
+                    z-index: 1000;
                     line-height: 1.2;
                 }}
 
                 /* Scrollable content area - leave room for the fixed
-                   top strip (stats bar ~38px + log 80px + borders). */
+                   top stats bar (~38px) and the bottom log (~95px). */
                 #content-area {{
-                    padding-top: 128px;
+                    padding-top: 40px;
+                    padding-bottom: 95px;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
-                   creation) hide the top strip so the backdrop art
-                   isn't pushed down by 128px of empty bar. */
+                   creation) hide both bars so backdrop art fills the
+                   viewport. */
                 body.full-bleed #top-strip {{ display: none; }}
-                body.full-bleed #content-area {{ padding-top: 0; }}
+                body.full-bleed #game-log {{ display: none; }}
+                body.full-bleed #content-area {{
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }}
                 
                 /* Tighter line spacing */
                 br {{
@@ -11206,11 +11284,11 @@ class WizardsCavernApp(toga.App):
             </script>
             <div id="top-strip">
                 <div id="stats-bar">{stats_html}</div>
-                <div id="game-log"></div>
             </div>
             <div id="content-area">
                 {content}
             </div>
+            <div id="game-log"></div>
             <script>
                 // Embed log lines from Python
                 window.logLines = {log_lines_json};
