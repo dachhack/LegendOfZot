@@ -70,6 +70,29 @@ from .game_systems import *
 from .game_systems import _handle, _trigger_room_interaction, _execute_warp
 from .version import VERSION, BUILD_NUMBER, CHANGELOG
 
+
+def _load_screen_image_b64(name):
+    """Load a webp screen background and return its base64 data URI.
+
+    Files live at ``wizardscavern/data/screens/<name>.webp``.  Cached
+    on first call.
+    """
+    import base64
+    cache = _load_screen_image_b64._cache
+    if name in cache:
+        return cache[name]
+    path = os.path.join(os.path.dirname(__file__), 'data', 'screens', f'{name}.webp')
+    try:
+        with open(path, 'rb') as fh:
+            cache[name] = 'data:image/webp;base64,' + base64.b64encode(fh.read()).decode('ascii')
+    except FileNotFoundError:
+        cache[name] = ''
+    return cache[name]
+
+
+_load_screen_image_b64._cache = {}
+
+
 def _extract_script_body(html_str):
     """Extract concatenated bodies of all <script> tags from a string.
 
@@ -5026,28 +5049,49 @@ class WizardsCavernApp(toga.App):
             for entry in CHANGELOG[:8]:
                 # Escape HTML in commit messages
                 safe_entry = entry.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-                changelog_html += f'<div style="color: #AAA; font-size: 11px; margin: 3px 0; padding-left: 10px; border-left: 2px solid #444;">{safe_entry}</div>'
+                changelog_html += f'<div style="color: #CFCFCF; font-size: 11px; margin: 3px 0; padding-left: 10px; border-left: 2px solid #2A4A6A;">{safe_entry}</div>'
 
+            splash_uri = _load_screen_image_b64('splash')
             html_code = f"""
-                <div style="font-family: monospace; font-size: 12px; padding: 20px; text-align: center;
-                            display: flex; flex-direction: column; justify-content: center; min-height: 60vh;">
-                    <div style="font-size: 24px; font-weight: bold; margin-bottom: 8px; color: #FFD700;">
-                        WIZARD'S CAVERN
-                    </div>
-                    <div style="font-size: 14px; color: #4FC3F7; margin-bottom: 30px;">
-                        v{VERSION} (build {BUILD_NUMBER})
-                    </div>
-                    <div style="text-align: left; max-width: 340px; margin: 0 auto;">
-                        <div style="color: #888; font-size: 11px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 1px;">
-                            Recent Changes
+                <div style="position: relative; font-family: monospace; min-height: 78vh;
+                            background-image: url('{splash_uri}');
+                            background-size: cover;
+                            background-position: center top;
+                            background-repeat: no-repeat;
+                            background-color: #000;
+                            border-radius: 6px;
+                            overflow: hidden;">
+                    <div style="position: absolute; inset: 0;
+                                background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%,
+                                            rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.85) 100%);"></div>
+                    <div style="position: relative; padding: 18px 16px 16px;
+                                display: flex; flex-direction: column; align-items: center;
+                                text-align: center; min-height: 78vh;">
+                        <div style="font-size: 26px; font-weight: bold; color: #FFD700;
+                                    text-shadow: 0 2px 6px #000, 0 0 14px rgba(0,0,0,0.9);
+                                    letter-spacing: 1px;">
+                            WIZARD'S CAVERN
                         </div>
-                        {changelog_html}
-                    </div>
-                    <div class='taprow altar-act blessing' data-zcmd=' '
-                         onclick="window.__zotTap(' ', this)"
-                         style='margin-top: 22px; max-width: 340px; margin-left:auto; margin-right:auto;'>
-                        <div class='aname'>Enter the Cavern</div>
-                        <div class='ameta'>Tap to continue (or wait a few seconds)</div>
+                        <div style="font-size: 13px; color: #6FD3FF; margin-top: 4px;
+                                    text-shadow: 0 1px 4px #000;">
+                            v{VERSION} (build {BUILD_NUMBER})
+                        </div>
+                        <div style="margin-top: auto; width: 100%; max-width: 360px;
+                                    background: rgba(0,0,0,0.55);
+                                    border: 1px solid rgba(255,215,0,0.18);
+                                    border-radius: 4px; padding: 10px 12px; text-align: left;">
+                            <div style="color: #FFD27A; font-size: 11px; margin-bottom: 6px;
+                                        text-transform: uppercase; letter-spacing: 1px;">
+                                Recent Changes
+                            </div>
+                            {changelog_html}
+                        </div>
+                        <div class='taprow altar-act blessing' data-zcmd=' '
+                             onclick="window.__zotTap(' ', this)"
+                             style='margin-top: 14px; width: 100%; max-width: 360px;'>
+                            <div class='aname'>Enter the Cavern</div>
+                            <div class='ameta'>Tap to continue (or wait a few seconds)</div>
+                        </div>
                     </div>
                 </div>
             """
@@ -5061,38 +5105,47 @@ class WizardsCavernApp(toga.App):
             floors_explored = gs.player_character.z + 1
             final_level = gs.player_character.level
             final_gold = gs.player_character.gold
-            
+            safe_name = (gs.player_character.name or "Adventurer").replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+            gameover_uri = _load_screen_image_b64('gameover')
+
             html_code = f"""
-                <div style="font-family: monospace; font-size: 12px; text-align: center; padding: 20px;">
-                    <div style="font-size: 24px; font-weight: bold; margin-bottom: 20px; color: #FF4444;">
-                         GAME OVER 
+                <div style="font-family: monospace; min-height: 78vh; display: flex;
+                            flex-direction: column; align-items: center; padding: 14px 12px;
+                            background: #000; border-radius: 6px;">
+                    <div style="position: relative; width: 100%; max-width: 520px;
+                                aspect-ratio: 1328 / 768; border-radius: 4px; overflow: hidden;
+                                background-image: url('{gameover_uri}');
+                                background-size: cover; background-position: center;
+                                box-shadow: 0 4px 16px rgba(0,0,0,0.8);">
+                        <div style="position: absolute; left: 0; right: 0; top: 6%;
+                                    text-align: center; font-size: 22px; font-weight: bold;
+                                    color: #FF4A4A; letter-spacing: 3px;
+                                    text-shadow: 0 2px 6px #000, 0 0 16px rgba(0,0,0,0.95);">
+                            GAME OVER
+                        </div>
+                        <div style="position: absolute; left: 0; right: 0; bottom: 4%;
+                                    text-align: center; color: #EEE; font-size: 13px;
+                                    text-shadow: 0 1px 4px #000;">
+                            <span style="color: #FFD27A;">{safe_name}</span>
+                            &mdash; fell on floor {floors_explored}
+                        </div>
                     </div>
-                    
-                    <div style="font-size: 18px; margin: 30px auto; max-width: 300px; color: #888;">
-                        <pre style="color: #666; line-height: 1.2;">
-    ___________
-   /           \\
-  /    R.I.P.   \\
- |    In Peace   |
- | {gs.player_character.name:^13}|
- |               |
- | Fell on Lv {floors_explored}|
- |               |
-  
-                        </pre>
+
+                    <div style="margin: 14px auto 0; width: 100%; max-width: 360px;
+                                text-align: left; font-size: 12px; color: #CCC;
+                                background: rgba(0,0,0,0.5);
+                                border: 1px solid rgba(255,74,74,0.25);
+                                border-radius: 4px; padding: 10px 14px;">
+                        <div style="margin: 5px 0;"><b>Final Level:</b> {final_level}</div>
+                        <div style="margin: 5px 0;"><b>Deepest Floor:</b> {floors_explored}</div>
+                        <div style="margin: 5px 0;"><b>Gold Collected:</b> {final_gold}</div>
+                        <div style="margin: 5px 0;"><b>Monsters Slain:</b> {gs.game_stats.get('monsters_killed', 0)}</div>
+                        <div style="margin: 5px 0;"><b>Spells Cast:</b> {gs.game_stats.get('spells_cast', 0)}</div>
                     </div>
-                    
-                    <div style="margin: 30px auto; max-width: 350px; text-align: left; font-size: 12px; color: #CCC;">
-                        <div style="margin: 8px 0;"><b>Final Level:</b> {final_level}</div>
-                        <div style="margin: 8px 0;"><b>Deepest Floor:</b> {floors_explored}</div>
-                        <div style="margin: 8px 0;"><b>Gold Collected:</b> {final_gold}</div>
-                        <div style="margin: 8px 0;"><b>Monsters Slain:</b> {gs.game_stats.get('monsters_killed', 0)}</div>
-                        <div style="margin: 8px 0;"><b>Spells Cast:</b> {gs.game_stats.get('spells_cast', 0)}</div>
-                    </div>
-                    
+
                     <div class='taprow altar-act reforge' data-zcmd=' '
                          onclick="window.__zotTap(' ', this)"
-                         style='margin: 30px auto 10px auto; max-width: 340px;'>
+                         style='margin-top: 12px; width: 100%; max-width: 360px;'>
                         <div class='aname'>Close Game</div>
                         <div class='ameta'>Saves will be wiped &mdash; permadeath is permanent</div>
                     </div>
