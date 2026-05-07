@@ -3866,7 +3866,9 @@ class WizardsCavernApp(toga.App):
             "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
         )
         if lantern_item is not None:
-            lantern_icon = render_item_icon(lantern_item, size=20)
+            # Bigger sprite (size=32) so the lantern is actually readable
+            # in the chip.
+            lantern_icon = render_item_icon(lantern_item, size=32)
             chips.append(
                 f"<div class='hudchip lantern lantern-icon' data-zcmd='l' "
                 f"onclick=\"window.__zotTap('l', this)\">{lantern_icon}</div>"
@@ -5104,15 +5106,22 @@ class WizardsCavernApp(toga.App):
 
         # SPLASH SCREEN - Show version and recent changes for 5 seconds
         if gs.prompt_cntl == "splash":
+            # Show only the top 3 changelog entries on splash so the
+            # artwork (rune archway + torch + descending stairs) is
+            # visible in the middle of the screen instead of buried
+            # under a tall changes panel.  Full list is still on the
+            # intro/main-menu screen.
             changelog_html = ""
-            for entry in CHANGELOG[:8]:
-                # Escape HTML in commit messages
+            for entry in CHANGELOG[:3]:
                 safe_entry = entry.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
-                changelog_html += f'<div style="color: #CFCFCF; font-size: 11px; margin: 3px 0; padding-left: 10px; border-left: 2px solid #2A4A6A;">{safe_entry}</div>'
+                # Cap each line at ~120 chars for the splash teaser.
+                if len(safe_entry) > 120:
+                    safe_entry = safe_entry[:117] + '...'
+                changelog_html += f'<div style="color: #DDD; font-size: 10px; margin: 2px 0; padding-left: 8px; border-left: 2px solid #2A4A6A; line-height: 1.35;">{safe_entry}</div>'
 
             splash_uri = _load_screen_image_b64('splash')
             html_code = f"""
-                <div style="position: relative; font-family: monospace; min-height: 78vh;
+                <div style="position: relative; font-family: monospace; min-height: 88vh;
                             background-image: url('{splash_uri}');
                             background-size: cover;
                             background-position: center top;
@@ -5120,34 +5129,40 @@ class WizardsCavernApp(toga.App):
                             background-color: #000;
                             border-radius: 6px;
                             overflow: hidden;">
-                    <div style="position: absolute; inset: 0;
-                                background: linear-gradient(180deg, rgba(0,0,0,0.10) 0%,
-                                            rgba(0,0,0,0.55) 55%, rgba(0,0,0,0.85) 100%);"></div>
-                    <div style="position: relative; padding: 18px 16px 16px;
+                    <!-- Lighter top gradient (lets the archway show through);
+                         a stronger gradient at the very bottom so the chip is
+                         legible without painting over the artwork. -->
+                    <div style="position: absolute; left:0; right:0; top:0; height: 18%;
+                                background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%,
+                                            rgba(0,0,0,0) 100%);"></div>
+                    <div style="position: absolute; left:0; right:0; bottom:0; height: 38%;
+                                background: linear-gradient(180deg, rgba(0,0,0,0) 0%,
+                                            rgba(0,0,0,0.78) 60%, rgba(0,0,0,0.92) 100%);"></div>
+                    <div style="position: relative; padding: 12px 14px 12px;
                                 display: flex; flex-direction: column; align-items: center;
-                                text-align: center; min-height: 78vh;">
-                        <div style="font-size: 26px; font-weight: bold; color: #FFD700;
+                                text-align: center; min-height: 88vh;">
+                        <div style="font-size: 24px; font-weight: bold; color: #FFD700;
                                     text-shadow: 0 2px 6px #000, 0 0 14px rgba(0,0,0,0.9);
                                     letter-spacing: 1px;">
                             WIZARD'S CAVERN
                         </div>
-                        <div style="font-size: 13px; color: #6FD3FF; margin-top: 4px;
+                        <div style="font-size: 12px; color: #6FD3FF; margin-top: 2px;
                                     text-shadow: 0 1px 4px #000;">
                             v{VERSION} (build {BUILD_NUMBER})
                         </div>
                         <div style="margin-top: auto; width: 100%; max-width: 360px;
-                                    background: rgba(0,0,0,0.55);
+                                    background: rgba(0,0,0,0.45);
                                     border: 1px solid rgba(255,215,0,0.18);
-                                    border-radius: 4px; padding: 10px 12px; text-align: left;">
-                            <div style="color: #FFD27A; font-size: 11px; margin-bottom: 6px;
+                                    border-radius: 4px; padding: 6px 10px; text-align: left;">
+                            <div style="color: #FFD27A; font-size: 10px; margin-bottom: 3px;
                                         text-transform: uppercase; letter-spacing: 1px;">
-                                Recent Changes
+                                Latest
                             </div>
                             {changelog_html}
                         </div>
                         <div class='taprow altar-act blessing' data-zcmd=' '
                              onclick="window.__zotTap(' ', this)"
-                             style='margin-top: 14px; width: 100%; max-width: 360px;'>
+                             style='margin-top: 8px; width: 100%; max-width: 360px;'>
                             <div class='aname'>Enter the Cavern</div>
                             <div class='ameta'>Tap to continue (or wait a few seconds)</div>
                         </div>
@@ -5287,11 +5302,17 @@ class WizardsCavernApp(toga.App):
                         )
 
             splash_uri = _load_screen_image_b64('splash')
+            # Mirror the splash screen layout exactly so the rune-archway
+            # artwork doesn't shift when the player taps past the splash:
+            # min-height: 88vh, center-top background, thin top + thin
+            # bottom gradient with the middle band fully transparent so
+            # the archway/torch/stairs are clearly visible behind the
+            # lore + save-slot panels.
             html_code = f"""
                         <div id="intro-tap-zone"
                              style="position: relative; font-family: monospace;
                                     font-size: 12px; padding: 0; text-align: center;
-                                    cursor: pointer; min-height: 78vh;
+                                    cursor: pointer; min-height: 88vh;
                                     background-image: url('{splash_uri}');
                                     background-size: cover;
                                     background-position: center top;
@@ -5301,40 +5322,39 @@ class WizardsCavernApp(toga.App):
                                     overflow: hidden;"
                              onclick="(function(){{ if(window._musicEngine){{ window._musicEngine.resume(); var s=document.getElementById('music-status'); if(s){{ s.innerHTML='&#9835; MUSIC ON &mdash; press SEND to begin'; s.style.color='#69F0AE'; }} }} }})()"
                              ontouchstart="(function(){{ if(window._musicEngine){{ window._musicEngine.resume(); var s=document.getElementById('music-status'); if(s){{ s.innerHTML='&#9835; MUSIC ON &mdash; press SEND to begin'; s.style.color='#69F0AE'; }} }} }})()">
-                            <div style="position: absolute; inset: 0;
-                                        background: linear-gradient(180deg,
-                                            rgba(0,0,0,0.05) 0%,
-                                            rgba(0,0,0,0.55) 35%,
-                                            rgba(0,0,0,0.85) 70%,
-                                            rgba(0,0,0,0.92) 100%);"></div>
-                            <div style="position: relative; padding: 14px 12px;">
-                                <div style="font-size: 22px; font-weight: bold; margin-bottom: 8px; color: #FFD700;
+                            <!-- Top gradient (thin, just enough for title legibility);
+                                 bottom gradient (heavier, behind lore + save slots). -->
+                            <div style="position: absolute; left:0; right:0; top:0; height: 14%;
+                                        background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%,
+                                                    rgba(0,0,0,0) 100%);"></div>
+                            <div style="position: absolute; left:0; right:0; bottom:0; height: 56%;
+                                        background: linear-gradient(180deg, rgba(0,0,0,0) 0%,
+                                                    rgba(0,0,0,0.78) 40%, rgba(0,0,0,0.92) 100%);"></div>
+                            <div style="position: relative; padding: 12px 14px 12px;
+                                        display: flex; flex-direction: column; align-items: center;
+                                        text-align: center; min-height: 88vh;">
+                                <div style="font-size: 24px; font-weight: bold; color: #FFD700;
                                             text-shadow: 0 2px 6px #000, 0 0 14px rgba(0,0,0,0.9);
                                             letter-spacing: 1px;">
                                      WIZARD'S CAVERN
                                 </div>
-                                <div id="music-status" style="font-size: 11px; color: #FFB74D; margin-bottom: 14px; letter-spacing: 1px;
+                                <div id="music-status" style="font-size: 11px; color: #FFB74D; margin-top: 4px; letter-spacing: 1px;
                                             text-shadow: 0 1px 3px #000;">
                                     &#9835; TAP THIS PANEL TO ENABLE MUSIC
                                 </div>
-                                <div style="font-size: 12px; line-height: 1.6; margin-bottom: 18px;
-                                            color: #E8E8E8; text-align: left; max-width: 400px;
-                                            margin-left: auto; margin-right: auto;
+                                <div style="margin-top: auto; width: 100%; max-width: 400px;
+                                            font-size: 12px; line-height: 1.55; color: #E8E8E8;
+                                            text-align: left;
                                             background: rgba(0,0,0,0.55);
                                             border: 1px solid rgba(255,215,0,0.18);
-                                            border-radius: 4px; padding: 10px 12px;
+                                            border-radius: 4px; padding: 8px 12px;
                                             text-shadow: 0 1px 2px #000;">
                                     Many cycles ago, in the kingdom of Medium Earth, the gnomic wizard Zot forged his great ORB OF POWER.
-                                    <br><br>
                                     He soon vanished, leaving behind his vast subterranean cavern filled with esurient monsters, fabulous treasures, and the incredible ORB OF ZOT.
-                                    <br><br>
-                                    From that time hence, many a bold venturer has ventured into the wizard's cavern. As of now, NONE has ever emerged victoriously!
-                                    <br><br>
-                                    <span style="color: #FF6A6A;">Beware!!</span>
+                                    Many a bold venturer has ventured in &mdash; <span style="color: #FF6A6A;">none have ever emerged.</span>
                                 </div>
-
                                 <div style="border: 1px solid rgba(255,215,0,0.3); border-radius: 5px;
-                                            padding: 10px; margin: 12px auto; max-width: 350px;
+                                            padding: 8px; margin-top: 8px; width: 100%; max-width: 350px;
                                             background: rgba(0,0,0,0.65);">
                                     {save_slots_html}
                                 </div>
@@ -7472,14 +7492,13 @@ class WizardsCavernApp(toga.App):
             # HTML combat action chips — replace the toga C/A/F/I buttons
             # that render invisible on some devices.  Channeling pauses the
             # action panel ("any key = continue") so we hide chips then
-            # and show the channeling progress instead.  Also hide chips
-            # while dice roll / monster-defeat animations are playing so
-            # the player can't double-tap during the resolution; chips
-            # come back as soon as the animation cycle finishes (next
-            # render has cleared last_dice_rolls).
+            # and show the channeling progress instead.  During dice-roll
+            # / monster-defeat animations the chips are momentarily faded
+            # out by JS (see updateGame in wrap_html) so the player can't
+            # double-tap mid-resolution -- but they always RENDER so the
+            # subsequent re-render after animation finds them in place.
             combat_chips_html = ""
-            _animating = bool(gs.last_dice_rolls) or bool(getattr(gs, 'monster_defeated_anim', None))
-            if not gs.spell_charging and not _animating:
+            if not gs.spell_charging:
                 _chips = [
                     "<div class='hudchip combat-attack' data-zcmd='a' "
                     "onclick=\"window.__zotTap('a', this)\">ATTACK</div>"
@@ -10540,6 +10559,15 @@ class WizardsCavernApp(toga.App):
                     justify-content: center;
                     gap: 6px;
                     margin: 6px 4px 4px 4px;
+                    transition: opacity 0.2s ease-out;
+                }}
+                /* Faded + un-tappable while a dice / defeat animation
+                   is mid-flight so the player can't queue an action
+                   during the resolution window.  Class is toggled by
+                   the JS shell in wrap_html. */
+                .hudchips.animating {{
+                    opacity: 0.35;
+                    pointer-events: none;
                 }}
                 /* Inventory chip row: force one-line so 5 chips
                    (CRAFT/SPELLS/JOURNAL/QUIT/CLOSE) never wrap on
@@ -10571,10 +10599,10 @@ class WizardsCavernApp(toga.App):
                     flex-shrink: 0;
                 }}
                 /* Icon-only chips: drop the trailing 4px canvas margin
-                   and tighten horizontal padding so the chip hugs the
-                   sprite. */
+                   and tighten padding so the (now 32px) sprite fills
+                   the chip with just a little breathing room. */
                 .hudchip.lantern-icon {{
-                    padding: 8px 10px;
+                    padding: 4px 6px;
                 }}
                 .hudchip.lantern-icon canvas {{
                     margin-right: 0 !important;
@@ -11310,17 +11338,33 @@ class WizardsCavernApp(toga.App):
                         window.hasDiceRolls = !!p.hasDiceRolls;
                         window.hasInitRoll = !!p.hasInitRoll;
                         var ld = document.getElementById('game-log');
+                        // Fade combat chips during the dice animation so
+                        // they can't be double-tapped during resolution.
+                        // Chips always RENDER server-side; JS toggles the
+                        // animating flag so opacity + pointer-events flip
+                        // off during the roll, on after it completes.
+                        var chipBars = document.querySelectorAll('.hudchips');
                         if (window.hasDiceRolls && ld) {{
                             ld.style.opacity = '0';
+                            for (var ci = 0; ci < chipBars.length; ci++) {{
+                                chipBars[ci].classList.add('animating');
+                            }}
                             var delay = window.hasInitRoll ? 1000 : 3300;
                             setTimeout(function() {{
                                 if (typeof updateLog === 'function') updateLog();
                                 ld.style.transition = 'opacity 0.3s';
                                 ld.style.opacity = '1';
+                                var bars = document.querySelectorAll('.hudchips');
+                                for (var ci = 0; ci < bars.length; ci++) {{
+                                    bars[ci].classList.remove('animating');
+                                }}
                             }}, delay);
                         }} else {{
                             if (typeof updateLog === 'function') updateLog();
                             if (ld) ld.style.opacity = '1';
+                            for (var ci = 0; ci < chipBars.length; ci++) {{
+                                chipBars[ci].classList.remove('animating');
+                            }}
                         }}
                     }}
                     // Run animation / SFX scripts from payload
@@ -11366,9 +11410,15 @@ class WizardsCavernApp(toga.App):
                 }}
                 // Delay log when dice are rolling so results aren't spoiled.
                 // Log stays hidden until after the reveal animation finishes.
+                // Combat chips fade during the same window so the player
+                // can't double-tap during the roll.
                 if (window.hasDiceRolls) {{
                     var logDiv = document.getElementById('game-log');
                     if (logDiv) logDiv.style.opacity = '0';
+                    var chipBars0 = document.querySelectorAll('.hudchips');
+                    for (var ci = 0; ci < chipBars0.length; ci++) {{
+                        chipBars0[ci].classList.add('animating');
+                    }}
                     // Reveal delay: ATK reveal ~1160ms, DEF reveal ~3060ms, init ~760ms
                     var delay = window.hasInitRoll ? 1000 : 3300;
                     window.addEventListener('load', function() {{
@@ -11376,6 +11426,10 @@ class WizardsCavernApp(toga.App):
                             updateLog();
                             var ld = document.getElementById('game-log');
                             if (ld) {{ ld.style.transition = 'opacity 0.3s'; ld.style.opacity = '1'; }}
+                            var bars = document.querySelectorAll('.hudchips');
+                            for (var ci = 0; ci < bars.length; ci++) {{
+                                bars[ci].classList.remove('animating');
+                            }}
                         }}, delay);
                     }});
                 }} else {{

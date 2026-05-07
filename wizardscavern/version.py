@@ -4,10 +4,12 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 187
+BUILD_NUMBER = 189
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Gold toast: a coin-pouch sprite + '+N gold' banner now fades in at the top-right whenever the player finds gold (monster drop, chest open, basin/pool gold materializes, vault treasure). Reuses the existing loot-toast queue infrastructure with a new notify_gold() helper hooked into the 5 main gold-finding sites",
+    "Intro/main-menu screen now mirrors the splash layout exactly: same min-height (88vh), same center-top background-position, and the same top-thin / bottom-heavy gradient pair so the rune-archway art lines up frame-for-frame when tapping past the splash. Backstory compressed into a single tighter paragraph and the save-slot box trimmed so the artwork shows through the middle band",
+    "Combat chips: stayed visible at the start of every fight. Switched to a JS .animating class that fades+disables chips only during the dice roll window. Lantern chip sprite bumped to size=32. Splash screen trimmed to top-3 changelog entries so the rune-archway artwork is visible behind it",
+    "Gold toast: coin-pouch sprite + '+N gold' banner now fades in at the top-right whenever the player finds gold (monster drop, chest open, basin/pool gold materializes, vault treasure)",
     "Spell sprites: vendor wares show the actual per-spell icon (vendors know what they're selling). Player inventory shows the per-spell icon ONCE the spell type is identified -- before that, the row falls back to a generic scroll/book placeholder",
     "Bug fix: potions found in basins/pools now stay UNIDENTIFIED until drunk or scroll-identified -- the 'Found: <potion>!' log line was leaking the real name (e.g. 'Found: Healing Potion!') instead of the cryptic name. Switched to get_item_display_name() so the log shows e.g. 'Found: red potion!' until you identify it",
     "Combat UX: chips (ATTACK / CAST / FLEE / INVENTORY) are hidden while dice roll and monster-defeat animations play. Comes back as soon as the animation cycle finishes -- prevents double-taps during the 1-3s resolution window. Channeling state still hides chips as before",
