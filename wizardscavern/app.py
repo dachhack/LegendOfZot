@@ -5302,11 +5302,17 @@ class WizardsCavernApp(toga.App):
                         )
 
             splash_uri = _load_screen_image_b64('splash')
+            # Mirror the splash screen layout exactly so the rune-archway
+            # artwork doesn't shift when the player taps past the splash:
+            # min-height: 88vh, center-top background, thin top + thin
+            # bottom gradient with the middle band fully transparent so
+            # the archway/torch/stairs are clearly visible behind the
+            # lore + save-slot panels.
             html_code = f"""
                         <div id="intro-tap-zone"
                              style="position: relative; font-family: monospace;
                                     font-size: 12px; padding: 0; text-align: center;
-                                    cursor: pointer; min-height: 78vh;
+                                    cursor: pointer; min-height: 88vh;
                                     background-image: url('{splash_uri}');
                                     background-size: cover;
                                     background-position: center top;
@@ -5316,40 +5322,39 @@ class WizardsCavernApp(toga.App):
                                     overflow: hidden;"
                              onclick="(function(){{ if(window._musicEngine){{ window._musicEngine.resume(); var s=document.getElementById('music-status'); if(s){{ s.innerHTML='&#9835; MUSIC ON &mdash; press SEND to begin'; s.style.color='#69F0AE'; }} }} }})()"
                              ontouchstart="(function(){{ if(window._musicEngine){{ window._musicEngine.resume(); var s=document.getElementById('music-status'); if(s){{ s.innerHTML='&#9835; MUSIC ON &mdash; press SEND to begin'; s.style.color='#69F0AE'; }} }} }})()">
-                            <div style="position: absolute; inset: 0;
-                                        background: linear-gradient(180deg,
-                                            rgba(0,0,0,0.05) 0%,
-                                            rgba(0,0,0,0.55) 35%,
-                                            rgba(0,0,0,0.85) 70%,
-                                            rgba(0,0,0,0.92) 100%);"></div>
-                            <div style="position: relative; padding: 14px 12px;">
-                                <div style="font-size: 22px; font-weight: bold; margin-bottom: 8px; color: #FFD700;
+                            <!-- Top gradient (thin, just enough for title legibility);
+                                 bottom gradient (heavier, behind lore + save slots). -->
+                            <div style="position: absolute; left:0; right:0; top:0; height: 14%;
+                                        background: linear-gradient(180deg, rgba(0,0,0,0.55) 0%,
+                                                    rgba(0,0,0,0) 100%);"></div>
+                            <div style="position: absolute; left:0; right:0; bottom:0; height: 56%;
+                                        background: linear-gradient(180deg, rgba(0,0,0,0) 0%,
+                                                    rgba(0,0,0,0.78) 40%, rgba(0,0,0,0.92) 100%);"></div>
+                            <div style="position: relative; padding: 12px 14px 12px;
+                                        display: flex; flex-direction: column; align-items: center;
+                                        text-align: center; min-height: 88vh;">
+                                <div style="font-size: 24px; font-weight: bold; color: #FFD700;
                                             text-shadow: 0 2px 6px #000, 0 0 14px rgba(0,0,0,0.9);
                                             letter-spacing: 1px;">
                                      WIZARD'S CAVERN
                                 </div>
-                                <div id="music-status" style="font-size: 11px; color: #FFB74D; margin-bottom: 14px; letter-spacing: 1px;
+                                <div id="music-status" style="font-size: 11px; color: #FFB74D; margin-top: 4px; letter-spacing: 1px;
                                             text-shadow: 0 1px 3px #000;">
                                     &#9835; TAP THIS PANEL TO ENABLE MUSIC
                                 </div>
-                                <div style="font-size: 12px; line-height: 1.6; margin-bottom: 18px;
-                                            color: #E8E8E8; text-align: left; max-width: 400px;
-                                            margin-left: auto; margin-right: auto;
+                                <div style="margin-top: auto; width: 100%; max-width: 400px;
+                                            font-size: 12px; line-height: 1.55; color: #E8E8E8;
+                                            text-align: left;
                                             background: rgba(0,0,0,0.55);
                                             border: 1px solid rgba(255,215,0,0.18);
-                                            border-radius: 4px; padding: 10px 12px;
+                                            border-radius: 4px; padding: 8px 12px;
                                             text-shadow: 0 1px 2px #000;">
                                     Many cycles ago, in the kingdom of Medium Earth, the gnomic wizard Zot forged his great ORB OF POWER.
-                                    <br><br>
                                     He soon vanished, leaving behind his vast subterranean cavern filled with esurient monsters, fabulous treasures, and the incredible ORB OF ZOT.
-                                    <br><br>
-                                    From that time hence, many a bold venturer has ventured into the wizard's cavern. As of now, NONE has ever emerged victoriously!
-                                    <br><br>
-                                    <span style="color: #FF6A6A;">Beware!!</span>
+                                    Many a bold venturer has ventured in &mdash; <span style="color: #FF6A6A;">none have ever emerged.</span>
                                 </div>
-
                                 <div style="border: 1px solid rgba(255,215,0,0.3); border-radius: 5px;
-                                            padding: 10px; margin: 12px auto; max-width: 350px;
+                                            padding: 8px; margin-top: 8px; width: 100%; max-width: 350px;
                                             background: rgba(0,0,0,0.65);">
                                     {save_slots_html}
                                 </div>
