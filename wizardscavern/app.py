@@ -3762,10 +3762,13 @@ class WizardsCavernApp(toga.App):
         compatibility with the templates that still interpolate
         {bigdpad_html}.
         """
+        from .sprites.identifiables import render_item_icon
         floor = gs.my_tower.floors[gs.player_character.z]
         here = floor.grid[gs.player_character.y][gs.player_character.x]
-        has_lantern = any(isinstance(it, Lantern)
-                          for it in gs.player_character.inventory.items)
+        lantern_item = next(
+            (it for it in gs.player_character.inventory.items if isinstance(it, Lantern)),
+            None,
+        )
 
         chips = []
         if here.room_type == 'U':
@@ -3780,12 +3783,13 @@ class WizardsCavernApp(toga.App):
             )
         chips.append(
             "<div class='hudchip' data-zcmd='i' "
-            "onclick=\"window.__zotTap('i', this)\">INV</div>"
+            "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
         )
-        if has_lantern:
+        if lantern_item is not None:
+            lantern_icon = render_item_icon(lantern_item, size=20)
             chips.append(
-                "<div class='hudchip lantern' data-zcmd='l' "
-                "onclick=\"window.__zotTap('l', this)\">LANT</div>"
+                f"<div class='hudchip lantern lantern-icon' data-zcmd='l' "
+                f"onclick=\"window.__zotTap('l', this)\">{lantern_icon}</div>"
             )
         hud_chips_html = "<div class='hudchips'>" + "".join(chips) + "</div>"
         return hud_chips_html, ""
@@ -6350,10 +6354,6 @@ class WizardsCavernApp(toga.App):
                         "onclick=\"window.__zotTap('j', this)\">JOURNAL</div>"
                     )
                     _inv_chips.append(
-                        "<div class='hudchip' data-zcmd='sq' "
-                        "onclick=\"window.__zotTap('sq', this)\">SAVE &amp; QUIT</div>"
-                    )
-                    _inv_chips.append(
                         "<div class='hudchip exit' data-zcmd='q' "
                         "onclick=\"window.__zotTap('q', this)\">QUIT</div>"
                     )
@@ -6362,7 +6362,7 @@ class WizardsCavernApp(toga.App):
                         "onclick=\"window.__zotTap('x', this)\">CLOSE</div>"
                     )
                 inv_chips_html = (
-                    "<div class='hudchips' style='margin-top:6px;'>"
+                    "<div class='hudchips inv-bar' style='margin-top:6px;'>"
                     + "".join(_inv_chips) +
                     "</div>"
                 )
@@ -7689,8 +7689,8 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{chest_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{chest_html}</div>
                         {bigdpad_html}
                     </div>
 </div>
@@ -7931,8 +7931,8 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{pool_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{pool_html}</div>
                         {bigdpad_html}
                     </div>
 </div>
@@ -8007,8 +8007,8 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{warp_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{warp_html}</div>
                     </div>
 
                 </div>
@@ -8072,8 +8072,8 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{stairs_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{stairs_html}</div>
                         {bigdpad_html}
                     </div>
 </div>
@@ -8142,8 +8142,8 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{stairs_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{stairs_html}</div>
                         {bigdpad_html}
                     </div>
 </div>
@@ -8223,8 +8223,8 @@ class WizardsCavernApp(toga.App):
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{library_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{library_html}</div>
                         {bigdpad_html}
                     </div>
 </div>
@@ -8294,8 +8294,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>
@@ -8354,8 +8354,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>
@@ -8420,6 +8420,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
+                        {hud_chips_html}
                         <div class="room-panel" style="width: 100%; padding: 8px; border: 1px solid #666; border-radius: 3px;">
                             <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
                                 <div style="flex-shrink:0;">{tomb_sprite}</div>
@@ -8427,7 +8428,6 @@ class WizardsCavernApp(toga.App):
                             </div>
                             {tomb_body}
                         </div>
-                        {hud_chips_html}
                         {bigdpad_html}
                     </div>
                 </div>
@@ -8488,8 +8488,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{garden_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{garden_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>
@@ -8553,8 +8553,8 @@ class WizardsCavernApp(toga.App):
                             {player_stats_html}
                             <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                                 <div>{grid_html}</div>
-                                <div class="room-panel" style="width: 100%;">{fey_html}</div>
                                 {hud_chips_html}
+                                <div class="room-panel" style="width: 100%;">{fey_html}</div>
                                 {bigdpad_html}
                             </div>
                         </div>
@@ -8599,8 +8599,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{oracle_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{oracle_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>
@@ -8700,8 +8700,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{smith_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{smith_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>
@@ -8760,8 +8760,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{shrine_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{shrine_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>
@@ -8872,8 +8872,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{alch_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{alch_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>
@@ -8964,8 +8964,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{war_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{war_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>
@@ -9077,8 +9077,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style='display: flex; flex-direction: column; align-items: center; gap: 10px;'>
                         <div>{grid_html}</div>
-                        <div class="room-panel" style='width: 100%;'>{tax_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style='width: 100%;'>{tax_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>"""
@@ -9181,8 +9181,8 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div>{grid_html}</div>
-                        <div class="room-panel" style="width: 100%;">{towel_html}</div>
                         {hud_chips_html}
+                        <div class="room-panel" style="width: 100%;">{towel_html}</div>
                         {bigdpad_html}
                     </div>
                 </div>
@@ -10265,23 +10265,42 @@ class WizardsCavernApp(toga.App):
                     gap: 6px;
                     margin: 6px 4px 4px 4px;
                 }}
+                /* Inventory chip row: force one-line so 5 chips
+                   (CRAFT/SPELLS/JOURNAL/QUIT/CLOSE) never wrap on
+                   narrower phones. */
+                .hudchips.inv-bar {{
+                    flex-wrap: nowrap;
+                    overflow-x: auto;
+                }}
                 .hudchip {{
-                    display: inline-block;
-                    padding: 7px 12px;
+                    display: inline-flex;
+                    align-items: center;
+                    padding: 6px 9px;
                     border-radius: 14px;
                     background: linear-gradient(180deg, #2a2a2a 0%, #1a1a1a 100%);
                     border: 1px solid #555;
                     color: #EEE;
                     font-family: monospace;
-                    font-size: 12px;
+                    font-size: 11px;
                     font-weight: bold;
-                    letter-spacing: 1px;
+                    letter-spacing: 0.5px;
                     cursor: pointer;
                     user-select: none;
                     -webkit-user-select: none;
                     -webkit-tap-highlight-color: transparent;
                     box-shadow: 0 1px 0 #0a0a0a inset;
                     transition: transform 60ms ease-out, background 120ms ease-out;
+                    flex-shrink: 0;
+                }}
+                /* Icon-only chips: drop the trailing 4px canvas margin
+                   and tighten horizontal padding so the chip hugs the
+                   sprite. */
+                .hudchip.lantern-icon {{
+                    padding: 4px 8px;
+                }}
+                .hudchip.lantern-icon canvas {{
+                    margin-right: 0 !important;
+                    vertical-align: middle;
                 }}
                 .hudchip:active {{
                     transform: scale(0.95);
@@ -10342,11 +10361,7 @@ class WizardsCavernApp(toga.App):
                     -webkit-user-select: none;
                     -webkit-tap-highlight-color: transparent;
                     background: transparent;
-                    transition: background 120ms ease-out;
                     z-index: 2;
-                }}
-                .mvtri:active {{
-                    background: rgba(76,175,80,0.20);
                 }}
                 .mvtri.mv-n {{
                     -webkit-clip-path: polygon(0% 0%, 100% 0%, 50% 50%);
