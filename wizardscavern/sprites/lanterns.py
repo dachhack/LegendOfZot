@@ -22,6 +22,12 @@ _LANTERNS_MAP = {
         ('CR0116', 1),  # sheet=CR1 src=r09c08
         ('CR0114', 2),  # sheet=CR1 src=r09c06
     ],
+    'Infinite Lantern': [
+        # Playtest-mode lantern with unlimited fuel; reuses Lantern sprites.
+        ('CR0108', 0),
+        ('CR0116', 1),
+        ('CR0114', 2),
+    ],
     'Lantern Fuel': [
         ('LF0080', 0),  # sheet=LF1 src=r06c07
     ],

@@ -1893,6 +1893,10 @@ def handle_inventory_menu(player_character, my_tower, cmd):
             add_log(f"{COLOR_YELLOW}You cannot use magic. (Requires Intelligence > 15){COLOR_RESET}")
             return
         gs.prompt_cntl = "spell_memorization_mode"
+        # Default to the Memorize tab so spells in the inventory list
+        # are immediately tappable -- otherwise the user would have to
+        # tap a tab first before any spell row responded to taps.
+        gs.spell_memo_action = 'memorize'
         process_spell_memorization_action(player_character, my_tower, "init")
         return
 

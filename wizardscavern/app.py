@@ -5924,7 +5924,7 @@ class WizardsCavernApp(toga.App):
                         vendor_html += (
                             f"<div class='taprow' data-zcmd='{cmd_str}' "
                             f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"{item_str}"
                             f"</div>"
                         )
                     else:
@@ -5945,7 +5945,7 @@ class WizardsCavernApp(toga.App):
                         player_inv_html += (
                             f"<div class='taprow' data-zcmd='{cmd_str}' "
                             f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"{item_str}"
                             f"</div>"
                         )
                     else:
@@ -6086,7 +6086,7 @@ class WizardsCavernApp(toga.App):
                         vendor_html += (
                             f"<div class='taprow' data-zcmd='{cmd_str}' "
                             f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"{item_str}"
                             f"</div>"
                         )
                     else:
@@ -6108,7 +6108,7 @@ class WizardsCavernApp(toga.App):
                         player_inv_html += (
                             f"<div class='taprow' data-zcmd='{cmd_str}' "
                             f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                            f"{item_str}"
                             f"</div>"
                         )
                     else:
@@ -6236,7 +6236,7 @@ class WizardsCavernApp(toga.App):
                             player_inv_html += (
                                 f"<div class='taprow' data-zcmd='{cmd_str}' "
                                 f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                                f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                                f"{item_str}"
                                 f"</div>"
                             )
                         else:
@@ -6434,7 +6434,7 @@ class WizardsCavernApp(toga.App):
                             player_inv_html += (
                                 f"<div class='{row_cls}' data-zcmd='{cmd_str}' "
                                 f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                                f"<span class='tapnum'>{i + 1}.</span>{item_str}"
+                                f"{item_str}"
                                 f"{eq_badge}"
                                 f"</div>"
                             )
@@ -6712,7 +6712,7 @@ class WizardsCavernApp(toga.App):
                             f"onclick=\"window.__zotTap('{cmd_str}', this)\" "
                             f"style='border-left: 3px solid {tier_color};'>"
                             f"<div class='rname' style='color:{tier_color};'>"
-                            f"<span class='tapnum'>{recipe_counter}.</span>{recipe_name}"
+                            f"{recipe_name}"
                             f"</div>"
                             f"<div class='rmeta'>Needs: {ingredients_text}</div>"
                             f"<div class='rdesc'>{crafted_item.description}</div>"
@@ -6816,7 +6816,7 @@ class WizardsCavernApp(toga.App):
                     else:
                         spell_info = f"<b>{display_name}</b> <span style='color: #888;'>[?]</span>"
 
-                    body = f"<span class='tapnum'>{i + 1}.</span>{spell_info}"
+                    body = f"{spell_info}"
                     if _can_memorize and not is_memorized:
                         cmd_str = f"m{i + 1}"
                         available_spells_html += (
@@ -6868,14 +6868,14 @@ class WizardsCavernApp(toga.App):
                         else:
                             detail = f"{spell.spell_type} (combat only)"
                         body = (
-                            f"<span class='tapnum'>{i + 1}.</span>"
+                            f""
                             f"<b>{spell.name}</b> ({spell.mana_cost} MP)<br>"
                             f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
                             f"Lvl {spell.level} | {detail}</span>"
                         )
                     else:
                         body = (
-                            f"<span class='tapnum'>{i + 1}.</span>"
+                            f""
                             f"<b>{spell.name}</b> "
                             f"<span style='color:#CE93D8; font-size:10px;'>"
                             f"({slots_used} slot{'s' if slots_used > 1 else ''})</span>"
@@ -7324,7 +7324,7 @@ class WizardsCavernApp(toga.App):
                         detail = ''
 
                     body = (
-                        f"<span class='tapnum'>{i + 1}.</span>"
+                        f""
                         f"<b>{spell.name}</b> ({spell.mana_cost} MP){charge_tag}<br>"
                         f"<span style='margin-left:22px; font-size:10px; color:#CE93D8;'>"
                         f"Lvl {spell.level} | {detail}</span>"
@@ -7888,7 +7888,7 @@ class WizardsCavernApp(toga.App):
                     inv_html += (
                         f"<div class='taprow' data-zcmd='{cmd_str}' "
                         f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                        f"<span class='tapnum'>{i + 1}.</span>{item_str}{sealed_tag}{buc_tag}"
+                        f"{item_str}{sealed_tag}{buc_tag}"
                         f"</div>"
                     )
 
@@ -8987,7 +8987,7 @@ class WizardsCavernApp(toga.App):
                         picker_html += (
                             f"<div class='taprow spell potion-pick' "
                             f"onclick=\"window.__alchSelect({i}, this)\">"
-                            f"<span class='tapnum'>{i}.</span>{p.name}"
+                            f"{p.name}"
                             f"</div>"
                         )
                 picker_html += (
@@ -9753,14 +9753,14 @@ class WizardsCavernApp(toga.App):
                         if maxed:
                             scroll_picker_html += (
                                 f"<div class='taprow spell disabled'>"
-                                f"<span class='tapnum'>{idx}.</span>{item_display}"
+                                f"{item_display}"
                                 f"<span class='tapnote'>MAX for this scroll</span></div>"
                             )
                         else:
                             scroll_picker_html += (
                                 f"<div class='taprow spell' data-zcmd='{idx}' "
                                 f"onclick=\"window.__zotTap('{idx}', this)\">"
-                                f"<span class='tapnum'>{idx}.</span>{item_display}</div>"
+                                f"{item_display}</div>"
                             )
                 scroll_picker_html += (
                     "<div class='taprow cancel' data-zcmd='c' "
@@ -9790,7 +9790,7 @@ class WizardsCavernApp(toga.App):
                         scroll_picker_html += (
                             f"<div class='taprow spell' data-zcmd='{idx}' "
                             f"onclick=\"window.__zotTap('{idx}', this)\">"
-                            f"<span class='tapnum'>{idx}.</span>{disp}</div>"
+                            f"{disp}</div>"
                         )
                 scroll_picker_html += (
                     "<div class='taprow cancel' data-zcmd='c' "
