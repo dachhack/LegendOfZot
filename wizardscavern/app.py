@@ -7448,7 +7448,7 @@ class WizardsCavernApp(toga.App):
 
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
                             {monster_html}
                             {player_combat_html}
@@ -7528,7 +7528,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
                             {monster_html}
                             {player_combat_html}
@@ -7626,7 +7626,7 @@ class WizardsCavernApp(toga.App):
 
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
                             {monster_html}
                             {player_combat_html}
@@ -7682,7 +7682,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
 
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         <div style="width: 100%; max-width: 300px;">
                             {scroll_html}
                             {player_info_html}
@@ -7770,9 +7770,9 @@ class WizardsCavernApp(toga.App):
 
                     {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{chest_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8012,9 +8012,9 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{pool_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8088,9 +8088,9 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{warp_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                     </div>
 
@@ -8153,9 +8153,9 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{stairs_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8223,9 +8223,9 @@ class WizardsCavernApp(toga.App):
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{stairs_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8304,9 +8304,9 @@ class WizardsCavernApp(toga.App):
 
                     {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{library_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8375,9 +8375,9 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8435,9 +8435,9 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{dungeon_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8501,7 +8501,7 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%; padding: 8px; border: 1px solid #666; border-radius: 3px;">
                             <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
                                 <div style="flex-shrink:0;">{tomb_sprite}</div>
@@ -8509,7 +8509,7 @@ class WizardsCavernApp(toga.App):
                             </div>
                             {tomb_body}
                         </div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8569,9 +8569,9 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{garden_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8634,9 +8634,9 @@ class WizardsCavernApp(toga.App):
                             {achievement_notifications}
                             <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                             {player_stats_html}
-                            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                            <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                                 <div class="room-panel" style="width: 100%;">{fey_html}</div>
-                                <div>{grid_html}</div>
+                                <div style="margin-top: auto;">{grid_html}</div>
                                 {hud_chips_html}
                                 {bigdpad_html}
                             </div>
@@ -8680,9 +8680,9 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{oracle_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8781,9 +8781,9 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{smith_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8841,9 +8841,9 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{shrine_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -8953,9 +8953,9 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{alch_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -9045,9 +9045,9 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{war_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -9160,7 +9160,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style='display: flex; flex-direction: column; align-items: center; gap: 10px;'>
                         <div class="room-panel" style='width: 100%;'>{tax_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -9262,9 +9262,9 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{towel_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                         {hud_chips_html}
                         {bigdpad_html}
                     </div>
@@ -9543,7 +9543,7 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 6px;">
                         <div class="room-panel" style="width: 100%;">{teleporter_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                     </div>
                     {tp_pad_html}
                     {tp_actions_html}
@@ -9613,9 +9613,9 @@ class WizardsCavernApp(toga.App):
 
                     {player_stats_html}
 
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px; min-height: calc(100vh - 180px);">
                         <div class="room-panel" style="width: 100%;">{library_html}</div>
-                        <div>{grid_html}</div>
+                        <div style="margin-top: auto;">{grid_html}</div>
                     </div>
 </div>
             """
@@ -9786,20 +9786,19 @@ class WizardsCavernApp(toga.App):
                 hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             html_code = f"""
-                <div style="font-family: monospace; font-size: 16px;">
+                <div style="font-family: monospace; font-size: 16px;
+                            display: flex; flex-direction: column;
+                            min-height: calc(100vh - 180px);">
                     {achievement_notifications}
                     <div style="font-size: 12px; font-weight: bold; margin-bottom: 4px; color: #03A9F4;">Wizard's Cavern <span style="color:#666; font-size:10px; font-weight:normal;">b{BUILD_NUMBER}</span></div>
                     {player_stats_html}
                     {lantern_info_html}
-                    {grid_html}
+                    <div style="margin-top: auto;">{grid_html}</div>
                     {hud_chips_html}
                     {bigdpad_html}
                     {dpad_overlay_html}
                     {scroll_picker_html}
                     {confirm_quit_html}
-                    <hr>
-
-                    <div style="height: 150px; overflow-y: auto; color: #EEE; padding: 3px; font-family: monospace; font-size: 12px;">
                 </div>
                 """
             # Check if player has a lantern
@@ -10064,10 +10063,13 @@ class WizardsCavernApp(toga.App):
                     padding: 4px !important;
                 }}
                 
-                /* Fixed log at bottom of viewport */
+                /* Fixed log at TOP of viewport (was bottom) -- the map
+                   and action chips are the most-tapped elements and
+                   belong in the bottom thumb-zone; the log is glance-
+                   only info and lives at the top. */
                 #game-log {{
                     position: fixed;
-                    bottom: 0;
+                    top: 0;
                     left: 0;
                     right: 0;
                     height: 90px;
@@ -10077,14 +10079,14 @@ class WizardsCavernApp(toga.App):
                     font-family: monospace;
                     font-size: 11px;
                     overflow-y: auto;
-                    border-top: 2px solid #444;
+                    border-bottom: 2px solid #444;
                     z-index: 1000;
                     line-height: 1.2;
                 }}
-                
-                /* Scrollable content area - add padding at bottom for log */
+
+                /* Scrollable content area - add padding at top for log */
                 #content-area {{
-                    padding-bottom: 85px; /* Space for fixed log */
+                    padding-top: 95px; /* Space for fixed log */
                 }}
                 
                 /* Tighter line spacing */
