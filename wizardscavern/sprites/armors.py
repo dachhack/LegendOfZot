@@ -186,6 +186,12 @@ _ARMORS_MAP = {
         ('AR0194', 1),  # sheet=A2 src=r09c07
         ('AR0167', 2),  # sheet=A2 src=r07c00
     ],
+    'Deathshroud': [
+        # Shrine reward armor; reuses the Shadow Cloak sprites for now.
+        ('AR0184', 0),
+        ('AR0167', 1),
+        ('AR0194', 2),
+    ],
     'Shadowsteel Mail': [
         ('AR0191', 0),  # sheet=A2 src=r09c04
     ],

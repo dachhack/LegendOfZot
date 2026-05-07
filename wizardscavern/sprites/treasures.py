@@ -91,4 +91,28 @@ _TREASURES_MAP = {
         ('TR0164', 1),  # sheet=TR2 src=r01c07
         ('TR0165', 2),  # sheet=TR2 src=r01c08
     ],
+    'Ruby Ring': [
+        # Reuses small-gem sprites (closest existing red-gem look).
+        ('TR0163', 0),
+        ('TR0165', 1),
+        ('TR0164', 2),
+    ],
+    'Emerald Pendant': [
+        # Reuses Silver Necklace sprites for the pendant chain.
+        ('TR0522', 0),
+        ('TR0492', 1),
+        ('TR0163', 2),
+    ],
+    'Crystal of Power': [
+        # Reuses Orb of Vitality crystal sprites.
+        ('CR0240', 0),
+        ('CR0254', 1),
+        ('CR0252', 2),
+    ],
+    "Zot's Dimensional Key": [
+        # Reuses Hourglass of Ages sprites for an arcane / time-magic look.
+        ('TR0248', 0),
+        ('TR0243', 1),
+        ('TR0241', 2),
+    ],
 }
