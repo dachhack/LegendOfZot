@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 176
+BUILD_NUMBER = 177
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Mobile UX: pin map+chips just above the log so there is no wasted vertical space. New .bottom-pinned-zone wrapper around grid + chips + bigdpad in 17 per-mode templates plus the game-loop catch-all; CSS adds margin-top: auto so the wrapper absorbs leftover flex space (this time the wrapper has guaranteed content -- chips at minimum -- so it doesn't break in transition states the way the empty-grid wrapper did in #113). Per-mode flex containers get min-height: calc(100vh - 145px) + width: 100%; #content-area gets min-height: 100vh + box-sizing: border-box so the flex actually has space to fill",
     "Mobile UX: pin the map's vertical position. The flex bottom-anchor trick (min-height + margin-top:auto) was misbehaving on screens where grid_html was empty (post-shopping transition for example), pushing the Wizard's Cavern header all the way to the bottom of the content area. Replaced with a CSS rule: every .room-panel has min-height: 110px so the slot height is consistent, and the map sits at the same Y regardless of which room card (or the empty-floor placeholder) is showing. Stripped min-height + margin-top:auto from 18 flex containers and 24 grid wrappers",
     "Mobile UX layout settled: stats bar pinned at the very top, room interaction card below (now ALWAYS present -- empty floors get a placeholder showing floor + flavor + lantern fuel), then map, then action chips, then log pinned at the bottom. The empty-room placeholder keeps the map's vertical position stable when the player walks off a special tile. Live-update path syncs stats html and body class so transitions stay in lockstep",
     "Mobile UX: room interaction panels now render ABOVE the map (was below the inventory chips). Map drops into the bottom thumb-zone where every-turn movement taps live; room info card stays at the top where you only reach when you arrive on a special tile. Same content, same chips - just reordered across all 21 room modes (chest, tomb, pool, warp, stairs, library, dungeon, garden, fey, oracle, smith, shrine, alchemist, war, taxidermist, towel, teleporter, etc.)",
