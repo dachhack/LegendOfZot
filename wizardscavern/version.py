@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 179
+BUILD_NUMBER = 180
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Mobile UX: 'Wizard's Cavern bXXX' title moved into the fixed top strip, stacked above the stats bar so the title is the first thing on every gameplay screen. Stripped the inline header from 34 per-mode templates (each was rendering its own copy in the scrollable content area). #content-area padding-top bumped from 40 to 58 to clear the taller strip",
+    "Mobile UX: log strip grown from 90px to 140px (more lines visible at a glance). Combat layout restructured: battle box (monster sprite + HP bar + player combat info + channeling) now lives in the room-panel slot ABOVE the map; battle chips (ATTACK / CAST / FLEE / INVENTORY) now live in the bottom-pinned-zone UNDER the map, replacing the lantern/inventory chips. So combat mirrors the regular gameplay layout exactly, just with combat content in the room+chip slots. .bottom-pinned-zone moved from bottom: 90 to bottom: 140 to clear the taller log; #content-area padding-bottom bumped 380 -> 430",
+    "Mobile UX: 'Wizard's Cavern bXXX' title moved into the fixed top strip, stacked above the stats bar so the title is the first thing on every gameplay screen. Stripped the inline header from 34 per-mode templates",
     "Mobile UX: pin map+chips above the log via fixed-position. Switched .bottom-pinned-zone to position: fixed; bottom: 90px so it sits directly above the log regardless of content-area sizing",
     "Mobile UX (superseded): pin map+chips just above the log so there is no wasted vertical space. New .bottom-pinned-zone wrapper with margin-top: auto + min-height on flex containers",
     "Mobile UX: pin the map's vertical position. The flex bottom-anchor trick (min-height + margin-top:auto) was misbehaving on screens where grid_html was empty (post-shopping transition for example), pushing the Wizard's Cavern header all the way to the bottom of the content area. Replaced with a CSS rule: every .room-panel has min-height: 110px so the slot height is consistent, and the map sits at the same Y regardless of which room card (or the empty-floor placeholder) is showing. Stripped min-height + margin-top:auto from 18 flex containers and 24 grid wrappers",

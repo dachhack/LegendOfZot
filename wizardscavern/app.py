@@ -7503,15 +7503,14 @@ class WizardsCavernApp(toga.App):
                     {achievement_notifications}
                     {player_stats_html}
 
-
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 8px;">
-                        <div>{grid_html}</div>
-                        <div style="width: 100%; max-width: 300px;">
-                            {monster_html}
-                            {player_combat_html}
-                            {channeling_html}
-                            {combat_chips_html}
-                        </div>
+                    <div class="room-panel" style="width: 100%;">
+                        {monster_html}
+                        {player_combat_html}
+                        {channeling_html}
+                    </div>
+                    <div class="bottom-pinned-zone">
+                        {grid_html}
+                        {combat_chips_html}
                     </div>
                     {generate_damage_float_js(gs.active_monster.name, gs.last_monster_damage, gs.last_player_damage, gs.last_player_blocked, gs.last_player_status, gs.last_monster_status, gs.last_player_heal, gs.last_monster_damage_badge, gs.last_player_damage_badge, _spell_element, _spell_level)}
                     {generate_hp_drain_js(gs.active_monster.health, gs.active_monster.max_health, gs.player_character.health, gs.player_character.max_health, gs.last_monster_damage, gs.last_player_damage, gs.last_player_heal, bool(gs.last_dice_rolls and any(r[3] == 'INIT' for r in gs.last_dice_rolls)))}
@@ -10207,7 +10206,7 @@ class WizardsCavernApp(toga.App):
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    height: 90px;
+                    height: 140px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -10221,11 +10220,11 @@ class WizardsCavernApp(toga.App):
 
                 /* Scrollable content area - leave room for the fixed
                    top strip (title bar ~18px + stats bar ~38px =
-                   ~56px), the bottom log (~90px) and the bottom-
+                   ~56px), the bottom log (~140px) and the bottom-
                    pinned map+chips zone (~280px). */
                 #content-area {{
                     padding-top: 58px;
-                    padding-bottom: 380px;
+                    padding-bottom: 430px;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
@@ -10256,7 +10255,7 @@ class WizardsCavernApp(toga.App):
                    padding-bottom is sized to leave room for it. */
                 .bottom-pinned-zone {{
                     position: fixed;
-                    bottom: 90px;
+                    bottom: 140px;
                     left: 0;
                     right: 0;
                     z-index: 500;
