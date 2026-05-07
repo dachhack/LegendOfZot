@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 166
+BUILD_NUMBER = 167
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Map UI polish: tap-flash on map removed, room interaction panels now render BELOW the INVENTORY/lantern chips, INV chip spelled out as INVENTORY, lantern chip swapped for the lantern sprite, SAVE & QUIT chip removed from the inventory bar, hudchip dimensions trimmed so 5 chips (CRAFT/SPELLS/JOURNAL/QUIT/CLOSE) fit on one row even when spells are available",
     "Map arrows dimmed and shrunk — ▲▼◄► hint glyphs now render at 12px in 25% opacity green so they barely whisper at the edges of the map without competing with the dungeon glyphs",
     "Map movement: X-quadrant triangle hotspots tile the whole map area — tap the top triangle to step n, right for e, bottom for s, left for w. Small ▲▼◄► glyphs at the edge midpoints serve as visual hints. No more cardinal-neighbour cell taps; no more perimeter bars",
     "Map centering fix — mvframe now uses display:block + width:fit-content + margin:0 auto, so the full 15x21 floor renders centered on the screen instead of hugging the left edge",
