@@ -1,20 +1,21 @@
 """
-Sprite pool for category: spells (generic — no item_name mapping)
+Sprite pool + named map for category: spells
 
-Generated from spells_library.json + canonical_pool_full.pkl.
+Each sprite in the round-8 spell pool was originally drawn for a specific
+spell, captured in spells_library.json under game_data.spell_name. We
+expose both:
 
-Shape: _SPELLS_POOL is a list of pids ordered by variant_index.
-These sprites are used dynamically (e.g. character creator picks one,
-potion identification rolls a random sprite, etc.). They are NOT tied
-to specific item names.
+  _SPELLS_POOL  -- ordered list of pids, used as a fallback when a spell
+                   has no explicit named mapping (e.g. modded / future
+                   spells added without a matching sprite).
+
+  _SPELLS_NAMED -- dict mapping the in-game spell name to the thematic
+                   pid drawn for it. Consulted first so Chain Lightning
+                   always shows the lightning sprite, Fireball always
+                   shows the flame sprite, etc.
 
 Stats:
   total sprites: 49
-
-Use:
-    pid = _SPELLS_POOL[index]                # if you want a specific one
-    pid = random.choice(_SPELLS_POOL)        # if assignment is random
-    img = canonical_pool[pid]["img_b64"]
 """
 
 _SPELLS_POOL = [
@@ -68,3 +69,58 @@ _SPELLS_POOL = [
     'W144',  # variant_index=0 sheet=ewck9w src=x1161y321-x1272y433
     'W146',  # variant_index=0 sheet=ewck9w src=x526y321-x635y430
 ]
+
+# Built from spells_library.json -- each pid was drawn for the named
+# spell, so this preserves visual thematic identity (Fireball looks
+# like fire, Chain Lightning looks like lightning, etc).
+_SPELLS_NAMED = {
+    'Inferno':              'I012',
+    'Flame Lance':          'I028',
+    'Fireball':             'I029',
+    'Divine Shield':        'I047',
+    'Time Stop':            'I056',
+    'Stone Skin':           'I058',
+    'Heal':                 'I062',
+    'Ultimate Shield':      'I087',
+    'Minor Heal':           'I096',
+    'Battle Hymn':          'I098',
+    'Purify':               'I099',
+    'Cure Weakness':        'I102',
+    'Acid Splash':          'I111',
+    'Full Restore':         'I114',
+    'Regeneration':         'I115',
+    'Mass Heal':            'I118',
+    'Psychic Scream':       'I120',
+    'Greater Heal':         'I124',
+    'Clarity':              'I131',
+    'Divine Intervention':  'I132',
+    'Ice Storm':            'I150',
+    'Ice Shard':            'I154',
+    'Absolute Zero':        'I159',
+    'Water Blast':          'I164',
+    'Blizzard':             'I168',
+    'Holy Light':           'I170',
+    'Tsunami':              'I171',
+    'Mind Spike':           'I181',
+    'Mind Blast':           'I185',
+    'Armageddon':           'I186',
+    "Titan's Strength":     'V054',
+    'Stone Throw':          'V060',
+    'Earthquake':           'V078',
+    'Spark':                'V109',
+    'Perfect Regeneration': 'V167',
+    'Darkness Bolt':        'V211',
+    'Shadow Strike':        'V213',
+    'Holy Smite':           'V215',
+    'Light Ray':            'V219',
+    'Shadow Bolt':          'V220',
+    'Freedom':              'V228',
+    'Wind Slash':           'V247',
+    'Black Hole':           'V289',
+    'Meteor Strike':        'V292',
+    'Supernova':            'V298',
+    'Void Beam':            'V335',
+    'Thunder Clap':         'W141',
+    'Chain Lightning':      'W144',
+    'Lightning Bolt':       'W146',
+}
