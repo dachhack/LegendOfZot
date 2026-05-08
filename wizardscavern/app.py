@@ -7890,9 +7890,11 @@ class WizardsCavernApp(toga.App):
 
         elif gs.prompt_cntl == "altar_mode":
             # ALTAR VIEW - room-panel + map shape (matches chest/pool/warp).
-            # The .room-panel CSS clamps height to 180px and scrolls
-            # internally, so a long sacrifice list lives inside the panel
-            # while the map stays anchored below for movement.
+            # The .room-panel CSS pins height at a uniform 220px with no
+            # internal scroll, so the layout is built from compact pieces:
+            # tight god header, one-line whisper, 2x2 action chip grid,
+            # and a 2-col sacrifice grid capped at 8 visible items.  The
+            # map stays anchored below for movement.
 
             gods = gs.active_altar_state.get('gods', {})
             blessed_id = gs.active_altar_state.get('blessed_id', 1)
@@ -7921,24 +7923,39 @@ class WizardsCavernApp(toga.App):
 
             sorted_items = get_sorted_inventory(gs.player_character.inventory)
             sacrificeable = [it for it in sorted_items if not isinstance(it, (Rune, Shard))]
+            # Hard cap at 8 visible items so the 2-col grid (4 rows ~28px
+            # each) fits in the fixed 220px panel without scrolling.  If
+            # the player has more, they can drop / use extras via the
+            # INVENTORY chip first.
+            visible_sacrifice = sacrificeable[:8]
+            extra_count = max(0, len(sacrificeable) - len(visible_sacrifice))
+
             inv_html = ""
             if not sacrificeable:
-                inv_html = "<div style='color:#888; font-size:11px; padding:4px;'>(Nothing to sacrifice)</div>"
+                inv_html = "<div style='color:#888; font-size:10px; padding:4px; grid-column:1/-1;'>(Nothing to sacrifice)</div>"
             else:
-                for i, item in enumerate(sacrificeable):
-                    item_str = format_item_for_display(item, gs.player_character, show_price=False)
-                    sealed_tag = " <span style='color:#E040FB;'>[SEALED]</span>" if getattr(item, 'is_sealed', False) else ""
+                for i, item in enumerate(visible_sacrifice):
+                    short_name = item.name if len(item.name) <= 14 else item.name[:13] + '…'
+                    sealed_tag = " <span style='color:#E040FB;'>◈</span>" if getattr(item, 'is_sealed', False) else ""
                     buc_tag = ""
                     if getattr(item, 'buc_known', False):
                         if item.buc_status == 'blessed':
-                            buc_tag = " <span style='color:#FFD700;'>[BLESSED]</span>"
+                            buc_tag = " <span style='color:#FFD700;'>+</span>"
                         elif item.buc_status == 'cursed':
-                            buc_tag = " <span style='color:#F44336;'>[CURSED]</span>"
+                            buc_tag = " <span style='color:#F44336;'>†</span>"
                     cmd_str = f"s{i + 1}"
                     inv_html += (
                         f"<div class='taprow' data-zcmd='{cmd_str}' "
-                        f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                        f"{item_str}{sealed_tag}{buc_tag}"
+                        f"onclick=\"window.__zotTap('{cmd_str}', this)\" "
+                        f"title='{item.name}'>"
+                        f"{short_name}{sealed_tag}{buc_tag}"
+                        f"</div>"
+                    )
+                if extra_count > 0:
+                    inv_html += (
+                        f"<div style='grid-column:1/-1; color:#888; font-size:9px; "
+                        f"text-align:center; padding:2px;'>"
+                        f"+{extra_count} more (drop/use via inventory)"
                         f"</div>"
                     )
 
@@ -7946,28 +7963,29 @@ class WizardsCavernApp(toga.App):
             _floor = _pc.z if _pc else 0
             _bless_cost = 100 + _floor * 10
             _purify_cost_pct = max(1, _pc.max_health // 10) if _pc else 0
-            action_cards_html = "<div class='altar-actions'>"
+            action_cards_html = "<div class='altar-actions compact'>"
             action_cards_html += (
                 "<div class='taprow altar-act detect' data-zcmd='d' "
                 "onclick=\"window.__zotTap('d', this)\">"
                 "<div class='aname'>Detect BUC</div>"
-                "<div class='ameta'>Reveal blessed / cursed status on gear</div>"
+                "<div class='ameta'>reveal status</div>"
                 "</div>"
             )
             action_cards_html += (
                 f"<div class='taprow altar-act bless' data-zcmd='b' "
                 f"onclick=\"window.__zotTap('b', this)\">"
-                f"<div class='aname'>Bless Equipment</div>"
-                f"<div class='ameta'>Costs {_bless_cost}g &middot; elevates one uncursed item</div>"
+                f"<div class='aname'>Bless</div>"
+                f"<div class='ameta'>{_bless_cost}g</div>"
                 f"</div>"
             )
             action_cards_html += (
                 f"<div class='taprow altar-act purify' data-zcmd='u' "
                 f"onclick=\"window.__zotTap('u', this)\">"
-                f"<div class='aname'>Purify Curse</div>"
-                f"<div class='ameta'>Costs ~{_purify_cost_pct} HP &middot; removes a curse</div>"
+                f"<div class='aname'>Purify</div>"
+                f"<div class='ameta'>~{_purify_cost_pct} HP</div>"
                 f"</div>"
             )
+            devotion_added = False
             if not gs.runes_obtained.get('devotion', False) and gs.player_character is not None:
                 gold_req = gs.rune_progress_reqs.get('gold_obtained', 500)
                 hp_req = gs.rune_progress_reqs.get('player_health_obtained', 50)
@@ -7975,34 +7993,38 @@ class WizardsCavernApp(toga.App):
                     action_cards_html += (
                         f"<div class='taprow altar-act devotion' data-zcmd='9' "
                         f"onclick=\"window.__zotTap('9', this)\">"
-                        f"<div class='aname'>Rune of Devotion</div>"
-                        f"<div class='ameta'>Costs {gold_req}g + {hp_req} HP &middot; ultimate offering</div>"
+                        f"<div class='aname'>Devotion</div>"
+                        f"<div class='ameta'>{gold_req}g + {hp_req}HP</div>"
                         f"</div>"
                     )
+                    devotion_added = True
+            if not devotion_added:
+                # Keep the grid balanced (2x2) when devotion isn't shown.
+                action_cards_html += (
+                    "<div style='visibility:hidden;'></div>"
+                )
             action_cards_html += "</div>"
 
             altar_sprite = generate_room_sprite_html('A', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             altar_html = f"""
-                <div style="border: 2px solid #555; border-radius: 3px; padding: 8px;">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
                         <div style="flex-shrink:0;">{altar_sprite}</div>
-                        <div style="flex:1;">
-                            <div style="font-size: 13px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
+                        <div style="flex:1; min-width:0;">
+                            <div style="font-size: 12px; font-weight: bold; color: {hunch_god.get('color','#DDD')}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
                                 {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
                             </div>
-                            <div style="font-size: 9px; color: #AAA; margin-top: 1px;">{hunch_god.get('title','')}</div>
+                            <div style="font-size: 9px; color: #AAA;">
+                                {hunch_god.get('title','')} &middot; <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
+                            </div>
                         </div>
                     </div>
-                    <div style="color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 10px; margin-bottom: 4px;">
+                    <div style="color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 9px; margin-bottom: 2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
                         "{whisper}"
                     </div>
-                    <div style="color: #AAA; font-size: 9px; margin-bottom: 6px;">
-                        Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
-                    </div>
                     {action_cards_html}
-                    <div style="border-top: 1px solid #444; padding-top: 4px; margin-top: 4px;">
-                        <div style="color: #DDD; font-size: 11px; font-weight: bold; margin-bottom: 3px;">Tap to sacrifice:</div>
+                    <div class='sacrifice-grid'>
                         {inv_html}
                     </div>
                 </div>
@@ -10244,7 +10266,7 @@ class WizardsCavernApp(toga.App):
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    height: 150px;
+                    height: 130px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -10257,11 +10279,11 @@ class WizardsCavernApp(toga.App):
                 }}
 
                 /* Scrollable content area - leave room for the fixed
-                   top strip (~56px), the bottom log (~150px) and the
-                   bottom-pinned map+chips zone (~300px). */
+                   top strip (~56px), the bottom log (~130px) and the
+                   bottom-pinned map+chips zone (~310px). */
                 #content-area {{
                     padding-top: 58px;
-                    padding-bottom: 460px;
+                    padding-bottom: 440px;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
@@ -10282,31 +10304,34 @@ class WizardsCavernApp(toga.App):
                    (combat victory monster + player, library text,
                    vendor lists) from pushing the map up the screen
                    -- the panel scrolls internally instead. */
+                /* Uniform fixed-size room interaction box.  Every
+                   room mode (chest, pool, altar, library, smith,
+                   shrine, garden, etc.) gets exactly the same 220px
+                   panel — no per-panel size variance, no internal
+                   scroll.  Content that doesn't fit must be
+                   redesigned (see altar's compact 2x2 action grid +
+                   2-col sacrifice grid). */
                 .room-panel {{
-                    min-height: 110px;
-                    max-height: 180px;
-                    overflow-y: auto;
+                    min-height: 220px;
+                    max-height: 220px;
+                    height: 220px;
+                    overflow: hidden;
+                    box-sizing: border-box;
                 }}
 
-                /* Pin the map + action chips just above the log so
-                   there's no wasted vertical space between the chips
-                   and the bottom of the screen.  Pulled out of normal
-                   flow via fixed positioning -- content-area
-                   padding-bottom is sized to leave room for it. */
-                /* Bottom-pinned zone now also holds the room-panel on
-                   top of the map+chips, so room interaction lives in
-                   one stacked block right above the log instead of
-                   floating up in content-area below the stats bar.
-                   max-height + overflow-y: auto so tall room cards
-                   (vendor lists, library text) scroll within the
-                   zone instead of escaping above the top strip. */
+                /* Pin the map + action chips just above the log.
+                   Holds the room-panel on top of the map+chips so
+                   room interaction lives in one stacked block right
+                   above the log.  bottom: 130px lines up with the
+                   shrunk log; max-height leaves headroom for the top
+                   strip + log + a tiny gap. */
                 .bottom-pinned-zone {{
                     position: fixed;
-                    bottom: 150px;
+                    bottom: 130px;
                     left: 0;
                     right: 0;
                     z-index: 500;
-                    max-height: calc(100vh - 210px);
+                    max-height: calc(100vh - 190px);
                     overflow-y: auto;
                     background: #1a1a1a;
                     border-top: 1px solid #333;
@@ -10741,6 +10766,44 @@ class WizardsCavernApp(toga.App):
                     flex-direction: column;
                     gap: 4px;
                     margin: 4px 0 8px 0;
+                }}
+                /* Compact 2x2 grid variant for altar_mode where the
+                   panel is fixed at 220px and the action chips have
+                   to leave room for the sacrifice grid below. */
+                .altar-actions.compact {{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 3px;
+                    margin: 3px 0 4px 0;
+                }}
+                .altar-actions.compact .taprow.altar-act {{
+                    padding: 3px 6px;
+                    line-height: 1.15;
+                }}
+                .altar-actions.compact .taprow.altar-act .aname {{
+                    font-size: 11px;
+                }}
+                .altar-actions.compact .taprow.altar-act .ameta {{
+                    font-size: 9px;
+                    margin-top: 0;
+                }}
+                /* Sacrifice grid: 2-column tappable inventory list for
+                   the altar.  Designed to fit ~8 items in ~110px so
+                   the room-panel stays at the uniform 220px without
+                   internal scrolling. */
+                .sacrifice-grid {{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 2px;
+                }}
+                .sacrifice-grid .taprow {{
+                    padding: 3px 5px;
+                    font-size: 10px;
+                    line-height: 1.2;
+                    text-align: left;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
                 }}
                 .taprow.altar-act {{
                     padding: 8px 10px;
