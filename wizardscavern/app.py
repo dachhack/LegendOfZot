@@ -2371,10 +2371,10 @@ def generate_grid_html(floor, player_x, player_y):
     grid_html = '<div style="text-align: center; max-width: 100%; overflow-x: auto; margin: 0 auto;"><div style="background-color: #222; display: inline-block; padding: 2px; border-radius: 2px; max-width: 100%;">'
 
     for r_idx in range(floor.rows):
-        grid_html += '<div style="height: 17px; white-space: nowrap;">'
+        grid_html += '<div style="height: 19px; white-space: nowrap;">'
         for c_idx in range(floor.cols):
             room = floor.grid[r_idx][c_idx]
-            cell_style = "display: inline-block; width: 17px; height: 17px; line-height: 17px; text-align: center; vertical-align: top; font-family: monospace; font-size: 13px;"
+            cell_style = "display: inline-block; width: 19px; height: 19px; line-height: 19px; text-align: center; vertical-align: top; font-family: monospace; font-size: 15px;"
             content = "&nbsp;"
 
             if room.discovered or (r_idx, c_idx) == highlight_coords:

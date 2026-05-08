@@ -250,7 +250,7 @@ EQUIPMENT_ID_THRESHOLD = 5
 # ============================================================================
 specified_chars = ['M', 'C', 'A', 'P', 'W', 'L', 'N', 'T', 'G', 'O', 'B', 'F', 'Q', 'K', 'X', '.']
 required_chars = ['D', 'U', 'V']
-grid_rows = 15
+grid_rows = 18
 grid_cols = 21
 wall_char = '#'
 floor_char = '.'
