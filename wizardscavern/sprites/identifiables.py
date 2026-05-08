@@ -88,21 +88,27 @@ def get_per_spell_sprite_pid(spell):
     """Return the unique round-8 pid for a specific spell (NOT the shared
     `?` placeholder used in inventory).
 
-    Used for cast-time animations where each spell should look distinct so
-    the player can learn the icon-to-spell association by sight.
+    Each round-8 sprite was drawn for a specific spell (see
+    spells_library.json). _SPELLS_NAMED maps the in-game spell name to
+    that thematic pid -- Fireball gets the flame sprite, Chain Lightning
+    gets the lightning sprite, etc. Spells without an explicit mapping
+    (modded / future spells) fall back to a stable hash into the pool.
     """
     pool = _POOLS.get('spells')
     if not pool:
         return None
+    name = getattr(spell, 'name', '') or ''
+    if not name:
+        return None
+    pid = _spells._SPELLS_NAMED.get(name)
+    if pid:
+        return pid
     try:
         from .. import game_state as _gs
         mapping = _gs.item_cryptic_mapping.get('spells', {}) if _gs.item_cryptic_mapping else {}
     except Exception:
         mapping = {}
-    name = getattr(spell, 'name', '') or ''
     cryptic = mapping.get(name, name)
-    if not cryptic:
-        return None
     return pool[_stable_seed(cryptic) % len(pool)]
 
 
