@@ -423,6 +423,16 @@ def process_altar_action(player_character, my_tower, cmd):
     if gs.altar_action == 'sacrifice' and cmd.isdigit():
         cmd = 's' + cmd
 
+    # Sacrifice picker: open / cancel.  The default altar view shows a
+    # "Sacrifice" action chip that sends 'sac' to flip into the picker
+    # sub-mode; the picker's BACK chip sends 'cancel' to flip back.
+    if cmd == 'sac':
+        gs.altar_action = 'sacrifice'
+        return
+    if cmd == 'cancel':
+        gs.altar_action = None
+        return
+
     # -------------------------------------------------------------------------
     # SPECIAL: Devotion Rune ultimate offering (cmd = '9' shortcut kept)
     # -------------------------------------------------------------------------

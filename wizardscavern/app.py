@@ -7889,162 +7889,171 @@ class WizardsCavernApp(toga.App):
             current_commands_text += " | n/s/e/w = move"
 
         elif gs.prompt_cntl == "altar_mode":
-            # ALTAR VIEW - room-panel + map shape (matches chest/pool/warp).
-            # The .room-panel CSS pins height at a uniform 220px with no
-            # internal scroll, so the layout is built from compact pieces:
-            # tight god header, one-line whisper, 2x2 action chip grid,
-            # and a 2-col sacrifice grid capped at 8 visible items.  The
-            # map stays anchored below for movement.
+            # ALTAR VIEW.  Two distinct layouts:
+            #
+            # 1. Default (gs.altar_action != 'sacrifice'):
+            #    Room-panel + map shape.  Compact god header + 5 action
+            #    chips (Detect / Bless / Purify / Sacrifice / Devotion).
+            #    Map stays anchored below for movement.
+            #
+            # 2. Sacrifice picker (gs.altar_action == 'sacrifice'):
+            #    Full-screen vendor-style item picker.  Map is hidden so
+            #    the inventory list has the whole content area to itself.
+            #    BACK chip returns to the default altar view.
 
             gods = gs.active_altar_state.get('gods', {})
             blessed_id = gs.active_altar_state.get('blessed_id', 1)
             blessed_god = gods.get(blessed_id, {})
 
-            floor = gs.my_tower.floors[gs.player_character.z]
-            grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
-            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
-
-            room = floor.grid[gs.player_character.y][gs.player_character.x]
+            room = gs.my_tower.floors[gs.player_character.z].grid[gs.player_character.y][gs.player_character.x]
             hunch_god_id = room.properties.get('hunch_god_id', blessed_id)
             hunch_god = gods.get(hunch_god_id, blessed_god)
-
-            import random as _rnd
-            spirit_whispers = [
-                "...place your offering upon the stone...",
-                "...the altar hums with ancient power...",
-                "...something watches... waiting for a gift...",
-                "...do you dare part with your possessions, mortal?...",
-                "...the air grows thick with divine presence...",
-                "...choose wisely... or do not choose at all...",
-                "...a faint pulse echoes from deep within the stone...",
-                "...the gods are always hungry...",
-            ]
-            whisper = _rnd.choice(spirit_whispers)
-
-            sorted_items = get_sorted_inventory(gs.player_character.inventory)
-            sacrificeable = [it for it in sorted_items if not isinstance(it, (Rune, Shard))]
-            # Hard cap at 8 visible items so the 2-col grid (4 rows ~28px
-            # each) fits in the fixed 220px panel without scrolling.  If
-            # the player has more, they can drop / use extras via the
-            # INVENTORY chip first.
-            visible_sacrifice = sacrificeable[:8]
-            extra_count = max(0, len(sacrificeable) - len(visible_sacrifice))
-
-            inv_html = ""
-            if not sacrificeable:
-                inv_html = "<div style='color:#888; font-size:10px; padding:4px; grid-column:1/-1;'>(Nothing to sacrifice)</div>"
-            else:
-                for i, item in enumerate(visible_sacrifice):
-                    short_name = item.name if len(item.name) <= 14 else item.name[:13] + '…'
-                    sealed_tag = " <span style='color:#E040FB;'>◈</span>" if getattr(item, 'is_sealed', False) else ""
-                    buc_tag = ""
-                    if getattr(item, 'buc_known', False):
-                        if item.buc_status == 'blessed':
-                            buc_tag = " <span style='color:#FFD700;'>+</span>"
-                        elif item.buc_status == 'cursed':
-                            buc_tag = " <span style='color:#F44336;'>†</span>"
-                    cmd_str = f"s{i + 1}"
-                    inv_html += (
-                        f"<div class='taprow' data-zcmd='{cmd_str}' "
-                        f"onclick=\"window.__zotTap('{cmd_str}', this)\" "
-                        f"title='{item.name}'>"
-                        f"{short_name}{sealed_tag}{buc_tag}"
-                        f"</div>"
-                    )
-                if extra_count > 0:
-                    inv_html += (
-                        f"<div style='grid-column:1/-1; color:#888; font-size:9px; "
-                        f"text-align:center; padding:2px;'>"
-                        f"+{extra_count} more (drop/use via inventory)"
-                        f"</div>"
-                    )
-
-            _pc = gs.player_character
-            _floor = _pc.z if _pc else 0
-            _bless_cost = 100 + _floor * 10
-            _purify_cost_pct = max(1, _pc.max_health // 10) if _pc else 0
-            action_cards_html = "<div class='altar-actions compact'>"
-            action_cards_html += (
-                "<div class='taprow altar-act detect' data-zcmd='d' "
-                "onclick=\"window.__zotTap('d', this)\">"
-                "<div class='aname'>Detect BUC</div>"
-                "<div class='ameta'>reveal status</div>"
-                "</div>"
-            )
-            action_cards_html += (
-                f"<div class='taprow altar-act bless' data-zcmd='b' "
-                f"onclick=\"window.__zotTap('b', this)\">"
-                f"<div class='aname'>Bless</div>"
-                f"<div class='ameta'>{_bless_cost}g</div>"
-                f"</div>"
-            )
-            action_cards_html += (
-                f"<div class='taprow altar-act purify' data-zcmd='u' "
-                f"onclick=\"window.__zotTap('u', this)\">"
-                f"<div class='aname'>Purify</div>"
-                f"<div class='ameta'>~{_purify_cost_pct} HP</div>"
-                f"</div>"
-            )
-            devotion_added = False
-            if not gs.runes_obtained.get('devotion', False) and gs.player_character is not None:
-                gold_req = gs.rune_progress_reqs.get('gold_obtained', 500)
-                hp_req = gs.rune_progress_reqs.get('player_health_obtained', 50)
-                if gs.player_character.gold >= gold_req and gs.player_character.health >= hp_req:
-                    action_cards_html += (
-                        f"<div class='taprow altar-act devotion' data-zcmd='9' "
-                        f"onclick=\"window.__zotTap('9', this)\">"
-                        f"<div class='aname'>Devotion</div>"
-                        f"<div class='ameta'>{gold_req}g + {hp_req}HP</div>"
-                        f"</div>"
-                    )
-                    devotion_added = True
-            if not devotion_added:
-                # Keep the grid balanced (2x2) when devotion isn't shown.
-                action_cards_html += (
-                    "<div style='visibility:hidden;'></div>"
-                )
-            action_cards_html += "</div>"
-
             altar_sprite = generate_room_sprite_html('A', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
-            altar_html = f"""
-                <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
-                    <div style="display:flex; align-items:center; gap:6px; margin-bottom:3px;">
-                        <div style="flex-shrink:0;">{altar_sprite}</div>
-                        <div style="flex:1; min-width:0;">
-                            <div style="font-size: 12px; font-weight: bold; color: {hunch_god.get('color','#DDD')}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-                                {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
-                            </div>
-                            <div style="font-size: 9px; color: #AAA;">
-                                {hunch_god.get('title','')} &middot; <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 9px; margin-bottom: 2px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-                        "{whisper}"
-                    </div>
-                    {action_cards_html}
-                    <div class='sacrifice-grid'>
-                        {inv_html}
-                    </div>
-                </div>
-            """
+            if gs.altar_action == 'sacrifice':
+                # ---------- SACRIFICE PICKER (full-screen, no map) ----------
+                sorted_items = get_sorted_inventory(gs.player_character.inventory)
+                sacrificeable = [it for it in sorted_items if not isinstance(it, (Rune, Shard))]
+                inv_html = ""
+                if not sacrificeable:
+                    inv_html = "<div style='color:#888; font-size:12px; padding:8px; text-align:center;'>(Nothing to sacrifice)</div>"
+                else:
+                    for i, item in enumerate(sacrificeable):
+                        item_str = format_item_for_display(item, gs.player_character, show_price=False)
+                        sealed_tag = " <span style='color:#E040FB;'>[SEALED]</span>" if getattr(item, 'is_sealed', False) else ""
+                        buc_tag = ""
+                        if getattr(item, 'buc_known', False):
+                            if item.buc_status == 'blessed':
+                                buc_tag = " <span style='color:#FFD700;'>[BLESSED]</span>"
+                            elif item.buc_status == 'cursed':
+                                buc_tag = " <span style='color:#F44336;'>[CURSED]</span>"
+                        cmd_str = f"s{i + 1}"
+                        inv_html += (
+                            f"<div class='taprow' data-zcmd='{cmd_str}' "
+                            f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
+                            f"{item_str}{sealed_tag}{buc_tag}"
+                            f"</div>"
+                        )
 
-            html_code = f"""
-                <div style="font-family: monospace; font-size: 12px;">
-                    {achievement_notifications}
-                    {player_stats_html}
-                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                        <div class="bottom-pinned-zone">
-                          <div class="room-panel" style="width: 100%;">{altar_html}</div>
-                          <div>{grid_html}</div>
-                          {hud_chips_html}
-                          {bigdpad_html}
+                html_code = f"""
+                    <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
+                        {achievement_notifications}
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                            <div style="flex-shrink:0;">{altar_sprite}</div>
+                            <div style="flex:1;">
+                                <div style="font-size: 14px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
+                                    Sacrifice to {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
+                                </div>
+                                <div style="font-size: 10px; color: #AAA;">
+                                    Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
+                                </div>
+                            </div>
+                        </div>
+                        {player_stats_html}
+                        <div style="color: #DDD; font-size: 11px; font-weight: bold; margin: 6px 0 4px 0;">Tap an item to offer:</div>
+                        <div style="border: 1px solid #555; padding: 4px; border-radius: 3px; max-height: calc(100vh - 280px); overflow-y: auto;">
+                            {inv_html}
+                        </div>
+                        <div class='hudchips' style='margin-top:8px;'>
+                            <div class='hudchip exit' data-zcmd='cancel'
+                                 onclick="window.__zotTap('cancel', this)">&larr; BACK</div>
+                            <div class='hudchip' data-zcmd='i'
+                                 onclick="window.__zotTap('i', this)">INVENTORY</div>
                         </div>
                     </div>
-                </div>
-            """
-            current_commands_text = "Tap an item to sacrifice | i = inventory | n/s/e/w = move"
+                """
+                current_commands_text = "Tap an item to sacrifice | BACK to return | i = inventory"
+
+            else:
+                # ---------- DEFAULT ALTAR VIEW (room-panel + map) ----------
+                floor = gs.my_tower.floors[gs.player_character.z]
+                grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+                hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
+                _pc = gs.player_character
+                _floor = _pc.z if _pc else 0
+                _bless_cost = 100 + _floor * 10
+                _purify_cost_pct = max(1, _pc.max_health // 10) if _pc else 0
+
+                action_cards_html = "<div class='altar-actions compact'>"
+                action_cards_html += (
+                    "<div class='taprow altar-act detect' data-zcmd='d' "
+                    "onclick=\"window.__zotTap('d', this)\">"
+                    "<div class='aname'>Detect</div>"
+                    "<div class='ameta'>reveal BUC</div>"
+                    "</div>"
+                )
+                action_cards_html += (
+                    f"<div class='taprow altar-act bless' data-zcmd='b' "
+                    f"onclick=\"window.__zotTap('b', this)\">"
+                    f"<div class='aname'>Bless</div>"
+                    f"<div class='ameta'>{_bless_cost}g</div>"
+                    f"</div>"
+                )
+                action_cards_html += (
+                    f"<div class='taprow altar-act purify' data-zcmd='u' "
+                    f"onclick=\"window.__zotTap('u', this)\">"
+                    f"<div class='aname'>Purify</div>"
+                    f"<div class='ameta'>~{_purify_cost_pct} HP</div>"
+                    f"</div>"
+                )
+                action_cards_html += (
+                    "<div class='taprow altar-act sacrifice' data-zcmd='sac' "
+                    "onclick=\"window.__zotTap('sac', this)\">"
+                    "<div class='aname'>Sacrifice</div>"
+                    "<div class='ameta'>offer item</div>"
+                    "</div>"
+                )
+                devotion_added = False
+                if not gs.runes_obtained.get('devotion', False) and gs.player_character is not None:
+                    gold_req = gs.rune_progress_reqs.get('gold_obtained', 500)
+                    hp_req = gs.rune_progress_reqs.get('player_health_obtained', 50)
+                    if gs.player_character.gold >= gold_req and gs.player_character.health >= hp_req:
+                        action_cards_html += (
+                            f"<div class='taprow altar-act devotion' data-zcmd='9' "
+                            f"onclick=\"window.__zotTap('9', this)\">"
+                            f"<div class='aname'>Devotion</div>"
+                            f"<div class='ameta'>{gold_req}g + {hp_req}HP</div>"
+                            f"</div>"
+                        )
+                        devotion_added = True
+                if not devotion_added:
+                    # Hidden filler keeps the 3-col grid balanced.
+                    action_cards_html += "<div style='visibility:hidden;'></div>"
+                action_cards_html += "</div>"
+
+                altar_html = f"""
+                    <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                        <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                            <div style="flex-shrink:0;">{altar_sprite}</div>
+                            <div style="flex:1; min-width:0;">
+                                <div style="font-size: 12px; font-weight: bold; color: {hunch_god.get('color','#DDD')}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                                    {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
+                                </div>
+                                <div style="font-size: 9px; color: #AAA;">
+                                    {hunch_god.get('title','')} &middot; hungers for <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
+                                </div>
+                            </div>
+                        </div>
+                        {action_cards_html}
+                    </div>
+                """
+
+                html_code = f"""
+                    <div style="font-family: monospace; font-size: 12px;">
+                        {achievement_notifications}
+                        {player_stats_html}
+                        <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                            <div class="bottom-pinned-zone">
+                              <div class="room-panel" style="width: 100%;">{altar_html}</div>
+                              <div>{grid_html}</div>
+                              {hud_chips_html}
+                              {bigdpad_html}
+                            </div>
+                        </div>
+                    </div>
+                """
+                current_commands_text = "Tap an action | n/s/e/w = step away"
 
         elif gs.prompt_cntl == "pool_mode":
             # POOL VIEW - Simplified: Map | Pool Info
@@ -10266,7 +10275,7 @@ class WizardsCavernApp(toga.App):
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    height: 130px;
+                    height: 110px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -10279,11 +10288,11 @@ class WizardsCavernApp(toga.App):
                 }}
 
                 /* Scrollable content area - leave room for the fixed
-                   top strip (~56px), the bottom log (~130px) and the
+                   top strip (~56px), the bottom log (~110px) and the
                    bottom-pinned map+chips zone (~310px). */
                 #content-area {{
                     padding-top: 58px;
-                    padding-bottom: 440px;
+                    padding-bottom: 420px;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
@@ -10306,32 +10315,30 @@ class WizardsCavernApp(toga.App):
                    -- the panel scrolls internally instead. */
                 /* Uniform fixed-size room interaction box.  Every
                    room mode (chest, pool, altar, library, smith,
-                   shrine, garden, etc.) gets exactly the same 220px
+                   shrine, garden, etc.) gets exactly the same 150px
                    panel — no per-panel size variance, no internal
                    scroll.  Content that doesn't fit must be
-                   redesigned (see altar's compact 2x2 action grid +
-                   2-col sacrifice grid). */
+                   redesigned (see altar's 5-chip action grid + the
+                   separate sacrifice picker sub-mode).  150px keeps
+                   the bottom-pinned-zone (panel + 18-row map + chips)
+                   inside the viewport on tall phones without
+                   scrolling. */
                 .room-panel {{
-                    min-height: 220px;
-                    max-height: 220px;
-                    height: 220px;
+                    min-height: 150px;
+                    max-height: 150px;
+                    height: 150px;
                     overflow: hidden;
                     box-sizing: border-box;
                 }}
 
-                /* Pin the map + action chips just above the log.
-                   Holds the room-panel on top of the map+chips so
-                   room interaction lives in one stacked block right
-                   above the log.  bottom: 130px lines up with the
-                   shrunk log; max-height leaves headroom for the top
-                   strip + log + a tiny gap. */
+                /* Pin the map + action chips just above the log. */
                 .bottom-pinned-zone {{
                     position: fixed;
-                    bottom: 130px;
+                    bottom: 110px;
                     left: 0;
                     right: 0;
                     z-index: 500;
-                    max-height: calc(100vh - 190px);
+                    max-height: calc(100vh - 170px);
                     overflow-y: auto;
                     background: #1a1a1a;
                     border-top: 1px solid #333;
@@ -10767,44 +10774,33 @@ class WizardsCavernApp(toga.App):
                     gap: 4px;
                     margin: 4px 0 8px 0;
                 }}
-                /* Compact 2x2 grid variant for altar_mode where the
-                   panel is fixed at 220px and the action chips have
-                   to leave room for the sacrifice grid below. */
+                /* Compact 2x3 grid for altar_mode action chips
+                   (Detect / Bless / Purify / Sacrifice / Devotion) +
+                   1 filler when devotion isn't shown.  Packs five
+                   actions into ~64px so the 150px room-panel still
+                   has room for the god header above. */
                 .altar-actions.compact {{
                     display: grid;
-                    grid-template-columns: 1fr 1fr;
+                    grid-template-columns: 1fr 1fr 1fr;
                     gap: 3px;
-                    margin: 3px 0 4px 0;
+                    margin: 3px 0 0 0;
                 }}
                 .altar-actions.compact .taprow.altar-act {{
-                    padding: 3px 6px;
+                    padding: 3px 4px;
                     line-height: 1.15;
                 }}
                 .altar-actions.compact .taprow.altar-act .aname {{
-                    font-size: 11px;
+                    font-size: 10px;
                 }}
                 .altar-actions.compact .taprow.altar-act .ameta {{
-                    font-size: 9px;
+                    font-size: 8px;
                     margin-top: 0;
                 }}
-                /* Sacrifice grid: 2-column tappable inventory list for
-                   the altar.  Designed to fit ~8 items in ~110px so
-                   the room-panel stays at the uniform 220px without
-                   internal scrolling. */
-                .sacrifice-grid {{
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    gap: 2px;
+                .taprow.altar-act.sacrifice {{
+                    background: linear-gradient(180deg, #2a1a1f 0%, #18101a 100%);
+                    border-color: #9a5a7a;
                 }}
-                .sacrifice-grid .taprow {{
-                    padding: 3px 5px;
-                    font-size: 10px;
-                    line-height: 1.2;
-                    text-align: left;
-                    overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: nowrap;
-                }}
+                .taprow.altar-act.sacrifice .aname {{ color: #F48FB1; }}
                 .taprow.altar-act {{
                     padding: 8px 10px;
                     line-height: 1.3;
