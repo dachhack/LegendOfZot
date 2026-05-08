@@ -8227,9 +8227,7 @@ class WizardsCavernApp(toga.App):
                 <div style="
                             border: 2px solid #555;
                             border-radius: 3px;
-                            padding: 12px;
-                            max-height: 300px;
-                            overflow-y: auto;
+                            padding: 8px;
                             ">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{stairs_sprite}</div>
@@ -8297,9 +8295,7 @@ class WizardsCavernApp(toga.App):
                 <div style="
                             border: 2px solid #555;
                             border-radius: 3px;
-                            padding: 12px;
-                            max-height: 300px;
-                            overflow-y: auto;
+                            padding: 8px;
                             ">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{stairs_down_sprite}</div>
@@ -10298,7 +10294,7 @@ class WizardsCavernApp(toga.App):
                    -- the panel scrolls internally instead. */
                 .room-panel {{
                     min-height: 110px;
-                    max-height: 220px;
+                    max-height: 180px;
                     overflow-y: auto;
                 }}
 
@@ -10370,13 +10366,6 @@ class WizardsCavernApp(toga.App):
                 .dungeon-map {{
                     overflow-x: auto;
                     white-space: nowrap;
-                }}
-
-                /* Constrain room interaction panels to prevent outer scrolling */
-                .room-panel {{
-                    max-height: calc(100vh - 340px);
-                    overflow-y: auto;
-                    -webkit-overflow-scrolling: touch;
                 }}
 
                 /* ===== TRANSITION ANIMATIONS ===== */
