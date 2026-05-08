@@ -7842,9 +7842,7 @@ class WizardsCavernApp(toga.App):
                <div style="
                             border: 2px solid #555;
                             border-radius: 3px;
-                            padding: 12px;
-                            max-height: 300px;
-                            overflow-y: auto;
+                            padding: 8px;
                             ">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{chest_sprite}</div>
@@ -8068,9 +8066,7 @@ class WizardsCavernApp(toga.App):
                 <div style="
                             border: 2px solid #555;
                             border-radius: 3px;
-                            padding: 12px;
-                            max-height: 300px;
-                            overflow-y: auto;
+                            padding: 8px;
                             ">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{pool_sprite}</div>
@@ -8163,9 +8159,7 @@ class WizardsCavernApp(toga.App):
                 <div style="
                             border: 2px solid #555;
                             border-radius: 3px;
-                            padding: 12px;
-                            max-height: 300px;
-                            overflow-y: auto;
+                            padding: 8px;
                             ">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{warp_sprite}</div>
