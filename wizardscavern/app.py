@@ -7454,7 +7454,7 @@ class WizardsCavernApp(toga.App):
 
             # Build player display name with title from get_player_title function
             player_title = get_player_title(gs.player_character)
-            player_display = f"{gs.player_character.name} the {player_title}"
+            player_display = f"{gs.player_character.name} {player_title}"
             
             # Compact Player Combat Info
             player_sprite_html_combat = generate_player_sprite_html(
