@@ -2741,11 +2741,25 @@ def get_monster_meat_info(monster_name):
         if key.lower() in monster_name.lower():
             return val
     # Default: most flesh-and-blood creatures are edible
-    # Skip obviously non-edible types
-    non_edible_keywords = ['slime', 'mold', 'golem', 'elemental', 'ghost', 'wraith',
-                           'skeleton', 'zombie', 'lich', 'vampire', 'specter', 'shade',
-                           'revenant', 'mummy', 'demon', 'construct', 'blob', 'ooze',
-                           'spore', 'myconid', 'fungal', 'mushroom', 'puff']
+    # Skip obviously non-edible types (undead, spirits, constructs,
+    # elementals, oozes, fungi, demons -- nothing with mortal flesh
+    # to harvest).
+    non_edible_keywords = [
+        # Undead / spirits / ghosts
+        'ghost', 'wraith', 'skeleton', 'zombie', 'lich', 'vampire',
+        'specter', 'spectre', 'shade', 'revenant', 'mummy', 'wight',
+        'ghoul', 'spirit', 'phantom', 'banshee', 'poltergeist',
+        'apparition', 'haunt', 'spook', 'undead', 'crypt',
+        'death knight',
+        # Constructs / golems / non-flesh
+        'golem', 'construct', 'animated', 'gargoyle',
+        # Slimes / amorphous / fungi
+        'slime', 'mold', 'blob', 'ooze', 'spore', 'myconid',
+        'fungal', 'mushroom', 'puff', 'jelly',
+        # Elementals / demons / abstract beings
+        'elemental', 'demon', 'devil', 'fiend', 'imp', 'efreeti',
+        'djinn', 'will-o', 'wisp',
+    ]
     for kw in non_edible_keywords:
         if kw in monster_name.lower():
             return None

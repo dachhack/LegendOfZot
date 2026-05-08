@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 195
+BUILD_NUMBER = 196
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Equip UX: equipped items now show a dedicated red UNEQUIP chip on the right of their inventory row (was: 'EQUIPPED - tap to remove' badge with the whole row tappable, easy to mis-trigger). The row itself is non-tappable when equipped; only the chip fires the unequip command. Starting shop auto-equips Weapon / Armor / passive-accessory purchases so the player walks out of character creation ready to fight",
+    "Bug fix: Wight, Ghoul, Spirit, Phantom, Banshee, Gargoyle, and other undead/spirit/construct monsters were dropping meat because they weren't in the MEAT_COOK_STYLES table OR the non_edible_keywords list -- they fell through to the default 'dubious steak'. Expanded the keyword list with wight/ghoul/spirit/phantom/banshee/poltergeist/apparition/haunt/spook/undead/crypt/death-knight/animated/gargoyle/jelly/devil/fiend/imp/efreeti/djinn/wisp/spectre so undead and incorporeal foes never harvest as meat. Goblin/Orc/Bat/etc. still drop meat as before",
+    "Equip UX: equipped items now show a dedicated red UNEQUIP chip; row itself is non-tappable. Starting shop auto-equips Weapon/Armor/passive-accessory purchases",
     "Splash + intro screens now fill 100vh (was 88vh) so the title/lore/save panels sit flush against the very bottom edge instead of leaving a 12vh gap. Title shrunk 24->22px and bottom padding tightened 12->8px so even more art shows through. pointer-events: none added to the gradient overlay divs as a defensive guard so they can never swallow taps meant for the Enter button or NEW GAME chip",
     "Spell sprite fix: unidentified spell books were rendering as a CAT. Switched placeholder PID to S087 -- a tome with an arcane circle on the cover",
     "Bug fix: on a CRIT the map+chips jumped to the top because the screen-shake set transform on #content-area, re-rooting position:fixed descendants. Targeted the shake at the .room-panel only. Log strip grown 110 -> 150 for 2-3 more visible lines",
