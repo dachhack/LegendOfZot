@@ -8484,14 +8484,17 @@ class WizardsCavernApp(toga.App):
             dungeon_sprite = generate_room_sprite_html('N', variant=dng_variant, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             dungeon_html = f"""
-                <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
                         <div style="flex-shrink:0;">{dungeon_sprite}</div>
-                        <div style="color: #DDD; font-size: 12px;">
+                        <div style="color: #DDD; font-size: 11px; line-height: 1.25;">
                             A heavy iron door bars your way. Ancient runes glow faintly on its surface.
                         </div>
                     </div>
-                    {'<div style="padding: 6px; margin-bottom: 8px; border-radius: 3px;"><div style="color: #4CAF50; font-size: 12px;">[LOCKED] Locked</div><div style="color: #DDD; font-size: 9px; margin-top: 2px;">A monster on this floor holds the key...</div></div>'}
+                    <div style="margin-bottom: 4px;">
+                        <span style="color: #4CAF50; font-size: 11px; font-weight: bold;">[LOCKED]</span>
+                        <span style="color: #AAA; font-size: 9px;"> a monster on this floor holds the key&hellip;</span>
+                    </div>
                     {action_html}
                 </div>
             """
@@ -8549,8 +8552,8 @@ class WizardsCavernApp(toga.App):
                     "</div>"
                 )
             dungeon_html = f"""
-                <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
-                    <div style="color: #DDD; font-size: 12px; margin-bottom: 8px;">
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                    <div style="color: #DDD; font-size: 11px; line-height: 1.25; margin-bottom: 6px;">
                         The iron door stands open. {'The chamber has been emptied.' if already_looted else 'Treasures glint in the darkness within.'}
                     </div>
                     {loot_body}
@@ -10275,7 +10278,7 @@ class WizardsCavernApp(toga.App):
                     bottom: 0;
                     left: 0;
                     right: 0;
-                    height: 110px;
+                    height: 80px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -10288,11 +10291,11 @@ class WizardsCavernApp(toga.App):
                 }}
 
                 /* Scrollable content area - leave room for the fixed
-                   top strip (~56px), the bottom log (~110px) and the
+                   top strip (~56px), the bottom log (~80px) and the
                    bottom-pinned map+chips zone (~310px). */
                 #content-area {{
                     padding-top: 58px;
-                    padding-bottom: 420px;
+                    padding-bottom: 390px;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
@@ -10331,18 +10334,21 @@ class WizardsCavernApp(toga.App):
                     box-sizing: border-box;
                 }}
 
-                /* Pin the map + action chips just above the log. */
+                /* Pin the map + action chips just above the log.
+                   max-height keeps the zone's TOP from sliding under
+                   the fixed top strip (~58px) — content over the cap
+                   scrolls within the zone instead. */
                 .bottom-pinned-zone {{
                     position: fixed;
-                    bottom: 110px;
+                    bottom: 80px;
                     left: 0;
                     right: 0;
                     z-index: 500;
-                    max-height: calc(100vh - 170px);
+                    max-height: calc(100vh - 140px);
                     overflow-y: auto;
                     background: #1a1a1a;
                     border-top: 1px solid #333;
-                    padding: 4px 0 6px 0;
+                    padding: 2px 0 4px 0;
                     text-align: center;
                 }}
                 body.full-bleed .bottom-pinned-zone {{ display: none; }}
