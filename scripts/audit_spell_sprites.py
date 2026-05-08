@@ -20,8 +20,9 @@ LIBRARY_PATH = ROOT / 'sprite_package' / 'libraries' / 'spells_library.json'
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument('--out', default=str(ROOT / 'spell_sprite_audit.html'))
+    ap.add_argument('--out', default=str(ROOT / 'docs' / 'spell_sprite_audit.html'))
     args = ap.parse_args()
+    Path(args.out).parent.mkdir(parents=True, exist_ok=True)
 
     with open(POOL_PATH, 'rb') as f:
         pool = pickle.load(f)
