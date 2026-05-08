@@ -419,18 +419,9 @@ def process_altar_action(player_character, my_tower, cmd):
     # SUB-ACTION ROUTING: sacrifice numpad mode
     # -------------------------------------------------------------------------
     # When altar_action is 'sacrifice', bare numbers prefix with 's'
+    # (legacy keyboard input; the tap UI sends 's1'/'s2'/... directly)
     if gs.altar_action == 'sacrifice' and cmd.isdigit():
         cmd = 's' + cmd
-
-    # Back button: clear sacrifice sub-action
-    if cmd == 'b' and gs.altar_action == 'sacrifice':
-        gs.altar_action = None
-        return
-
-    # Bare 's': enter sacrifice numpad mode
-    if cmd == 's':
-        gs.altar_action = 'sacrifice'
-        return
 
     # -------------------------------------------------------------------------
     # SPECIAL: Devotion Rune ultimate offering (cmd = '9' shortcut kept)
@@ -585,6 +576,11 @@ def process_altar_action(player_character, my_tower, cmd):
         add_log("You step away from the altar.")
         gs.altar_action = None
         gs.prompt_cntl = "game_loop"
+    elif cmd in ['n', 's', 'e', 'w']:
+        gs.altar_action = None
+        moved = move_player(player_character, my_tower, cmd)
+        if not moved:
+            gs.prompt_cntl = "altar_mode"
     elif cmd == 'i':
         gs.altar_action = None
         gs.prompt_cntl = "inventory"
@@ -594,7 +590,7 @@ def process_altar_action(player_character, my_tower, cmd):
         gs.game_should_quit = True
         add_log("You abandon the altar.")
     else:
-        add_log(f"{COLOR_YELLOW}Enter s# to sacrifice (e.g., s1), 'i' for inventory, or 'x' to exit.{COLOR_RESET}")
+        add_log(f"{COLOR_YELLOW}Enter s# to sacrifice (e.g., s1), 'i' for inventory, or step away.{COLOR_RESET}")
 
 def process_pool_action(player_character, my_tower, cmd):
 

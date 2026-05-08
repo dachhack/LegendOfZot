@@ -7889,22 +7889,26 @@ class WizardsCavernApp(toga.App):
             current_commands_text += " | n/s/e/w = move"
 
         elif gs.prompt_cntl == "altar_mode":
-            # ALTAR VIEW - Vendor-style full interaction (no map)
+            # ALTAR VIEW - room-panel + map shape (matches chest/pool/warp).
+            # The .room-panel CSS clamps height to 180px and scrolls
+            # internally, so a long sacrifice list lives inside the panel
+            # while the map stays anchored below for movement.
 
             gods = gs.active_altar_state.get('gods', {})
             blessed_id = gs.active_altar_state.get('blessed_id', 1)
             blessed_god = gods.get(blessed_id, {})
 
-            # Get hunch god info for display
-            current_floor = gs.my_tower.floors[gs.player_character.z]
-            room = current_floor.grid[gs.player_character.y][gs.player_character.x]
+            floor = gs.my_tower.floors[gs.player_character.z]
+            grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
+            hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
+
+            room = floor.grid[gs.player_character.y][gs.player_character.x]
             hunch_god_id = room.properties.get('hunch_god_id', blessed_id)
             hunch_god = gods.get(hunch_god_id, blessed_god)
 
-            # Generic spirit flavor text - no hints about which god
             import random as _rnd
             spirit_whispers = [
-                "...place your offering upon the stone... and pray...",
+                "...place your offering upon the stone...",
                 "...the altar hums with ancient power...",
                 "...something watches... waiting for a gift...",
                 "...do you dare part with your possessions, mortal?...",
@@ -7915,15 +7919,11 @@ class WizardsCavernApp(toga.App):
             ]
             whisper = _rnd.choice(spirit_whispers)
 
-            # Build sacrificeable inventory list (no Runes/Shards)
             sorted_items = get_sorted_inventory(gs.player_character.inventory)
             sacrificeable = [it for it in sorted_items if not isinstance(it, (Rune, Shard))]
-
-            # Tappable sacrifice rows — each sends s{N} directly to
-            # process_altar_action, which handles any altar_action state.
             inv_html = ""
             if not sacrificeable:
-                inv_html = "<div style='color:#888; font-size:12px;'>(Nothing to sacrifice)</div>"
+                inv_html = "<div style='color:#888; font-size:11px; padding:4px;'>(Nothing to sacrifice)</div>"
             else:
                 for i, item in enumerate(sacrificeable):
                     item_str = format_item_for_display(item, gs.player_character, show_price=False)
@@ -7942,9 +7942,6 @@ class WizardsCavernApp(toga.App):
                         f"</div>"
                     )
 
-            # Altar action buttons: Detect BUC / Bless / Purify / Devotion.
-            # Rendered as large taprow buttons so the player doesn't have to
-            # type d / b / u / 9.  Devotion only appears when qualified.
             _pc = gs.player_character
             _floor = _pc.z if _pc else 0
             _bless_cost = 100 + _floor * 10
@@ -7954,24 +7951,23 @@ class WizardsCavernApp(toga.App):
                 "<div class='taprow altar-act detect' data-zcmd='d' "
                 "onclick=\"window.__zotTap('d', this)\">"
                 "<div class='aname'>Detect BUC</div>"
-                "<div class='ameta'>Reveal blessed / cursed status on equipped gear</div>"
+                "<div class='ameta'>Reveal blessed / cursed status on gear</div>"
                 "</div>"
             )
             action_cards_html += (
                 f"<div class='taprow altar-act bless' data-zcmd='b' "
                 f"onclick=\"window.__zotTap('b', this)\">"
                 f"<div class='aname'>Bless Equipment</div>"
-                f"<div class='ameta'>Costs {_bless_cost} gold &middot; elevates one uncursed item</div>"
+                f"<div class='ameta'>Costs {_bless_cost}g &middot; elevates one uncursed item</div>"
                 f"</div>"
             )
             action_cards_html += (
                 f"<div class='taprow altar-act purify' data-zcmd='u' "
                 f"onclick=\"window.__zotTap('u', this)\">"
                 f"<div class='aname'>Purify Curse</div>"
-                f"<div class='ameta'>Costs ~{_purify_cost_pct} HP (10% max) &middot; remove curse from equipped gear</div>"
+                f"<div class='ameta'>Costs ~{_purify_cost_pct} HP &middot; removes a curse</div>"
                 f"</div>"
             )
-            devotion_hint = ""
             if not gs.runes_obtained.get('devotion', False) and gs.player_character is not None:
                 gold_req = gs.rune_progress_reqs.get('gold_obtained', 500)
                 hp_req = gs.rune_progress_reqs.get('player_health_obtained', 50)
@@ -7980,53 +7976,53 @@ class WizardsCavernApp(toga.App):
                         f"<div class='taprow altar-act devotion' data-zcmd='9' "
                         f"onclick=\"window.__zotTap('9', this)\">"
                         f"<div class='aname'>Rune of Devotion</div>"
-                        f"<div class='ameta'>Costs {gold_req}g + {hp_req} HP &middot; one-time ultimate offering</div>"
+                        f"<div class='ameta'>Costs {gold_req}g + {hp_req} HP &middot; ultimate offering</div>"
                         f"</div>"
                     )
             action_cards_html += "</div>"
 
             altar_sprite = generate_room_sprite_html('A', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
-            html_code = f"""
-                <div style="font-family: monospace; font-size: 12px; display: flex; flex-direction: column; max-height: 100%; overflow: hidden;">
-                    {achievement_notifications}
+            altar_html = f"""
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 8px;">
                     <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
                         <div style="flex-shrink:0;">{altar_sprite}</div>
-                        <div>
-                            <div style="font-size: 16px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
+                        <div style="flex:1;">
+                            <div style="font-size: 13px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
                                 {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
                             </div>
-                            <div style="font-size: 10px; color: #AAA;">{hunch_god.get('title','')}</div>
+                            <div style="font-size: 9px; color: #AAA; margin-top: 1px;">{hunch_god.get('title','')}</div>
                         </div>
                     </div>
-                    {player_stats_html}
-                    <div style="margin-bottom: 5px; color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 10px;">
-                        A spirit voice whispers: "{whisper}"
+                    <div style="color: {hunch_god.get('color','#9370DB')}; font-style: italic; font-size: 10px; margin-bottom: 4px;">
+                        "{whisper}"
                     </div>
-                    <div style="color: #AAA; font-size: 9px; margin-bottom: 5px;">
-                        INT {gs.player_character.intelligence} intuition | Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
-                        | <span style="color:#888;">Right offering = reward | Wrong = displeasure</span>
+                    <div style="color: #AAA; font-size: 9px; margin-bottom: 6px;">
+                        Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
                     </div>
                     {action_cards_html}
-                    <div style="display: flex; flex-direction: column; gap: 5px; flex: 1; min-height: 0; overflow: hidden;">
-                        <div style="border: 1px solid #555; padding: 3px;">
-                            <h3 style='margin: 0 0 5px 0; color: #DDD;'>Tap an item to sacrifice</h3>
-                            <div style='overflow-y: auto; border: 1px solid #444; padding: 3px; border-radius: 3px; max-height: 400px;'>
-                                {inv_html}
-                            </div>
-                        </div>
-                    </div>
-                    <div class='hudchips' style='margin-top:8px;'>
-                        <div class='hudchip' data-zcmd='i'
-                             onclick="window.__zotTap('i', this)">INVENTORY</div>
-                        <div class='hudchip exit' data-zcmd='x'
-                             onclick="window.__zotTap('x', this)">EXIT ALTAR</div>
+                    <div style="border-top: 1px solid #444; padding-top: 4px; margin-top: 4px;">
+                        <div style="color: #DDD; font-size: 11px; font-weight: bold; margin-bottom: 3px;">Tap to sacrifice:</div>
+                        {inv_html}
                     </div>
                 </div>
-                """
-            # Rows + action cards carry every interaction; hint shows the
-            # keyboard fallbacks plus the global exit.
-            current_commands_text = "Tap an item to sacrifice | i = inventory | x = exit"
+            """
+
+            html_code = f"""
+                <div style="font-family: monospace; font-size: 12px;">
+                    {achievement_notifications}
+                    {player_stats_html}
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                        <div class="bottom-pinned-zone">
+                          <div class="room-panel" style="width: 100%;">{altar_html}</div>
+                          <div>{grid_html}</div>
+                          {hud_chips_html}
+                          {bigdpad_html}
+                        </div>
+                    </div>
+                </div>
+            """
+            current_commands_text = "Tap an item to sacrifice | i = inventory | n/s/e/w = move"
 
         elif gs.prompt_cntl == "pool_mode":
             # POOL VIEW - Simplified: Map | Pool Info
