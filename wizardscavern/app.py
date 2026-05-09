@@ -6584,6 +6584,13 @@ class WizardsCavernApp(toga.App):
                             "<div class='hudchip lantern' data-zcmd='df' "
                             "onclick=\"window.__zotTap('df', this)\">DRINK FULL</div>"
                         )
+                    if (gs.inventory_filter == 'eat'
+                        and any(isinstance(i, Meat) and getattr(i, 'is_rotten', False)
+                                for i in gs.player_character.inventory.items)):
+                        _inv_chips.append(
+                            "<div class='hudchip exit' data-zcmd='dr' "
+                            "onclick=\"window.__zotTap('dr', this)\">DROP ROTTEN</div>"
+                        )
                     _inv_chips.append(
                         "<div class='hudchip' data-zcmd='b' "
                         "onclick=\"window.__zotTap('b', this)\">&larr; BACK</div>"
@@ -8671,19 +8678,16 @@ class WizardsCavernApp(toga.App):
                 )
             else:
                 tomb_body = (
-                    '<div style="color: #C8A96E; font-size: 12px; margin: 6px 0;">'
-                    'Greed or reverence? The dead are watching.'
-                    '</div>'
-                    "<div class='altar-actions'>"
+                    "<div class='altar-actions dual' style='margin-top:6px;'>"
                     "<div class='taprow altar-act reforge' data-zcmd='r' "
                     "onclick=\"window.__zotTap('r', this)\">"
-                    "<div class='aname'>Raid the Tomb</div>"
-                    "<div class='ameta'>Treasure now, vengeance later &mdash; may spawn a guardian</div>"
+                    "<div class='aname'>Raid Tomb</div>"
+                    "<div class='ameta'>treasure &middot; risk a guardian</div>"
                     "</div>"
                     "<div class='taprow altar-act blessing' data-zcmd='p' "
                     "onclick=\"window.__zotTap('p', this)\">"
                     "<div class='aname'>Pay Respects</div>"
-                    "<div class='ameta'>Honour the dead &mdash; a quiet blessing may follow</div>"
+                    "<div class='ameta'>honour &middot; quiet blessing</div>"
                     "</div>"
                     "</div>"
                 )
@@ -8694,12 +8698,17 @@ class WizardsCavernApp(toga.App):
                     {player_stats_html}
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
                         <div class="bottom-pinned-zone">
-                          <div class="room-panel" style="width: 100%; padding: 8px; border: 1px solid #666; border-radius: 3px;">
-                              <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
-                                  <div style="flex-shrink:0;">{tomb_sprite}</div>
-                                  <div style="color: #DDD; font-size: 12px;">An ancient tomb lies before you, its stone lid cracked with age.</div>
+                          <div class="room-panel" style="width: 100%;">
+                              <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                                  <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                                      <div style="flex-shrink:0;">{tomb_sprite}</div>
+                                      <div style="color: #DDD; font-size: 12px; line-height: 1.3;">
+                                          An ancient tomb lies before you, its stone lid cracked with age.
+                                          <span style="color:#C8A96E; font-style:italic;"> The dead are watching.</span>
+                                      </div>
+                                  </div>
+                                  {tomb_body}
                               </div>
-                              {tomb_body}
                           </div>
                           <div>{grid_html}</div>
                           {hud_chips_html}
@@ -9003,30 +9012,29 @@ class WizardsCavernApp(toga.App):
                 )
             else:
                 shrine_body = (
-                    "<div class='altar-actions'>"
+                    "<div class='altar-actions dual' style='margin-top:6px;'>"
                     "<div class='taprow altar-act blessing' data-zcmd='p' "
                     "onclick=\"window.__zotTap('p', this)\">"
                     "<div class='aname'>Pray</div>"
-                    "<div class='ameta'>Free &middot; 33% blessing / 33% map hint / 33% silence</div>"
+                    "<div class='ameta'>free &middot; bless / hint / silence</div>"
                     "</div>"
                     "<div class='taprow altar-act offering' data-zcmd='o' "
                     "onclick=\"window.__zotTap('o', this)\">"
-                    "<div class='aname'>Leave Offering</div>"
-                    "<div class='ameta'>50g &middot; guaranteed potion or scroll</div>"
+                    "<div class='aname'>Offering</div>"
+                    f"<div class='ameta'>50g &middot; potion / scroll</div>"
                     "</div>"
                     "</div>"
-                    f"<div style='color:#888; font-size:11px; margin-top:8px;'>Gold: {gs.player_character.gold}g</div>"
                 )
             shrine_html = f"""
-                <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
                         <div style="flex-shrink:0;">{shrine_sprite}</div>
-                        <div>
-                            <div style="color: #CCC; font-size: 13px; font-weight: bold; margin-bottom: 4px;">
+                        <div style="flex:1; min-width:0;">
+                            <div style="color: #CCC; font-size: 13px; font-weight: bold;">
                                 SHRINE OF THE FALLEN
                             </div>
-                            <div style="color: #DDD; font-size: 12px; font-style: italic;">
-                                Names scratched into stone. Someone fought hard here.
+                            <div style="color: #BBB; font-size: 11px; font-style: italic;">
+                                Names scratched into stone.
                             </div>
                         </div>
                     </div>
@@ -9770,37 +9778,36 @@ class WizardsCavernApp(toga.App):
             lib_variant = 'codex' if current_room.properties.get('has_codex') else None
             library_sprite = generate_room_sprite_html('L', variant=lib_variant, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
-            # Spell info line
+            # Spell info line — compact one-liner that includes the
+            # INT-gated reveal when the player can decipher it.
             spell_info = ""
             if found_spell:
                 if gs.player_character.intelligence >= 20:
-                    spell_info = f'<div style="color: #DAA520; font-size: 12px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555;"><b>{found_spell.name}</b> <span style="color: #AAA;">({found_spell.mana_cost} MP)</span></div>'
+                    spell_info = f'<div style="color: #DAA520; font-size: 12px; margin-top: 4px;"><b>{found_spell.name}</b> <span style="color: #AAA;">({found_spell.mana_cost} MP)</span></div>'
                 else:
-                    spell_info = '<div style="color: #888; font-size: 9px; margin-top: 6px; padding-top: 6px; border-top: 1px solid #555; font-style: italic;">The arcane symbols are difficult to decipher...</div>'
+                    spell_info = '<div style="color: #888; font-size: 10px; margin-top: 4px; font-style: italic;">Arcane symbols&hellip; hard to decipher.</div>'
 
-            # Library info box with grimoire decision — tappable Yes/No.
+            # Library info box with grimoire decision — tappable Yes/No
+            # in a 2-col grid so both buttons fit inside the 200px slot.
             library_html = f"""
-                <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
                         <div style="flex-shrink:0;">{library_sprite}</div>
-                        <div style="color: #DDD; font-size: 12px; line-height: 1.4;">
+                        <div style="color: #DDD; font-size: 12px; line-height: 1.3;">
                             You found a grimoire among the dusty shelves!
                         </div>
                     </div>
                     {spell_info}
-                    <div style="color: #DDD; font-size: 11px; margin-top: 8px; font-style: italic;">
-                        Reading may succeed or fail based on your intelligence&hellip;
-                    </div>
-                    <div class='altar-actions'>
+                    <div class='altar-actions dual' style='margin-top: 6px;'>
                         <div class='taprow altar-act offering' data-zcmd='y'
                              onclick="window.__zotTap('y', this)">
-                            <div class='aname'>Read the Grimoire</div>
-                            <div class='ameta'>Attempt to decipher its secrets</div>
+                            <div class='aname'>Read</div>
+                            <div class='ameta'>decipher it</div>
                         </div>
                         <div class='taprow altar-act purify' data-zcmd='n'
                              onclick="window.__zotTap('n', this)">
-                            <div class='aname'>Leave it Alone</div>
-                            <div class='ameta'>Return the grimoire to the shelf</div>
+                            <div class='aname'>Leave</div>
+                            <div class='ameta'>return to shelf</div>
                         </div>
                     </div>
                 </div>
@@ -10907,6 +10914,28 @@ class WizardsCavernApp(toga.App):
                     font-size: 13px;
                 }}
                 .altar-actions.compact .taprow.altar-act .ameta {{
+                    font-size: 10px;
+                    margin-top: 2px;
+                }}
+                /* Dual side-by-side variant for binary-choice room
+                   panels (grimoire decision, shrine pray/offering,
+                   tomb raid/respect).  Two columns instead of stacked
+                   so both options fit inside the 200px room-panel
+                   without clipping. */
+                .altar-actions.dual {{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 4px;
+                    margin: 4px 0 0 0;
+                }}
+                .altar-actions.dual .taprow.altar-act {{
+                    padding: 6px 8px;
+                    line-height: 1.2;
+                }}
+                .altar-actions.dual .taprow.altar-act .aname {{
+                    font-size: 13px;
+                }}
+                .altar-actions.dual .taprow.altar-act .ameta {{
                     font-size: 10px;
                     margin-top: 2px;
                 }}
