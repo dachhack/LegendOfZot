@@ -611,16 +611,9 @@ def process_altar_action(player_character, my_tower, cmd):
         add_log(f"{blessed_god_info['altar_desc']}")
         add_log("")
         add_log(f"<span style='color: {blessed_god_info['color']}; font-weight: bold;'>{blessed_god_info['symbol']} {blessed_god_info['name']}</span>")
-        add_log(f"{COLOR_CYAN}{blessed_god_info['title']} &middot; sacrifices: <b>{blessed_god_info['item_label']}</b>{COLOR_RESET}")
-        piety = gs.altar_piety.get(blessed_god_id, 0)
-        tier, to_next, target = _piety_to_next_tier(piety)
-        if to_next is None:
-            add_log(f"{COLOR_YELLOW}Your piety: ★★★ TIER 3 (max).{COLOR_RESET}")
-        else:
-            stars = '★' * tier + '☆' * (3 - tier)
-            add_log(f"{COLOR_YELLOW}Your piety: {stars} Tier {tier} ({piety}/{target} sacrifices to T{tier + 1}).{COLOR_RESET}")
-        add_log(f"{COLOR_GREEN}Pray (free) -> {blessed_god_info['tier_labels'][tier]}{COLOR_RESET}")
-        add_log(f"{COLOR_GREY}Sacrifice an item to build piety and unlock higher tiers.{COLOR_RESET}")
+        add_log(f"{COLOR_CYAN}{blessed_god_info['title']} &middot; craves: <b>{blessed_god_info['item_label']}</b>{COLOR_RESET}")
+        add_log(f"{COLOR_GREY}Pray to claim a blessing, or sacrifice to deepen your piety.{COLOR_RESET}")
+        add_log(f"{COLOR_GREY}(Visit an Oracle to gauge your standing with the gods.){COLOR_RESET}")
 
         gs.active_altar_state = {'gods': gods, 'blessed_id': blessed_god_id}
         return
@@ -2804,17 +2797,42 @@ def process_oracle_action(player_character, my_tower, cmd):
     elif cmd == 'g':  # Gaze into mirror
         add_log(f"{COLOR_PURPLE}You gaze into the Oracle's mirror...{COLOR_RESET}")
         add_log("")
-        
+
         hints = generate_oracle_hints(player_character, my_tower)
-        
+
         # Display hints
         for hint in hints[:3]:  # Show up to 3 hints at a time
             add_log(f"{COLOR_CYAN}> {hint}{COLOR_RESET}")
-        
+
         add_log("")
         gs.prompt_cntl = "oracle_mode"
         return
-    
+
+    elif cmd == 'pantheon':  # Reveal per-god piety + current Pray reward
+        add_log(f"{COLOR_PURPLE}You gaze deeper. The mirror reflects your standing with the eight gods...{COLOR_RESET}")
+        add_log("")
+        gods = _altar_gods()
+        for gid in range(1, 9):
+            gd = gods[gid]
+            piety = gs.altar_piety.get(gid, 0)
+            tier = altar_piety_tier(piety)
+            stars = '★' * tier + '☆' * (3 - tier)
+            tier_label = gd['tier_labels'][tier]
+            if tier >= 3:
+                progress = 'TIER 3 (max)'
+            else:
+                _, _, target = _piety_to_next_tier(piety)
+                progress = f"T{tier} ({piety}/{target} to T{tier + 1})"
+            add_log(
+                f"<span style='color:{gd['color']};'>{gd['symbol']} {gd['name']}</span> "
+                f"<span style='color:#FFD700;'>{stars}</span> "
+                f"<span style='color:#888;'>{progress}</span><br>"
+                f"<span style='color:#CCC;'>&nbsp;&nbsp;&nbsp;Pray &rarr; {tier_label}</span>"
+            )
+        add_log("")
+        gs.prompt_cntl = "oracle_mode"
+        return
+
     elif cmd == 'i':
         gs.prompt_cntl = "inventory"
         handle_inventory_menu(player_character, my_tower, "init")

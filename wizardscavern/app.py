@@ -7971,22 +7971,11 @@ class WizardsCavernApp(toga.App):
             #    the inventory list has the whole content area to itself.
             #    BACK chip returns to the default altar view.
 
-            from .room_actions import altar_piety_tier, _piety_to_next_tier
+            from .room_actions import altar_piety_tier
             gods = gs.active_altar_state.get('gods', {})
             blessed_id = gs.active_altar_state.get('blessed_id', 1)
             blessed_god = gods.get(blessed_id, {})
             altar_sprite = generate_room_sprite_html('A', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
-
-            piety = gs.altar_piety.get(blessed_id, 0)
-            tier_now = altar_piety_tier(piety)
-            _, to_next, target = _piety_to_next_tier(piety)
-            stars = '★' * tier_now + '☆' * (3 - tier_now)
-            tier_labels = blessed_god.get('tier_labels', ['', '', '', ''])
-            current_pray_label = tier_labels[tier_now] if tier_now < len(tier_labels) else ''
-            if to_next is None:
-                piety_line = f"{stars} TIER 3 (max)"
-            else:
-                piety_line = f"{stars} Tier {tier_now} ({piety}/{target} to T{tier_now + 1})"
 
             if gs.altar_action == 'sacrifice':
                 # ---------- SACRIFICE PICKER (full-screen, no map) ----------
@@ -8066,7 +8055,7 @@ class WizardsCavernApp(toga.App):
                     "<div class='taprow altar-act blessing' data-zcmd='pray' "
                     "onclick=\"window.__zotTap('pray', this)\">"
                     f"<div class='aname'>Pray</div>"
-                    f"<div class='ameta'>{current_pray_label}</div>"
+                    f"<div class='ameta'>claim blessing</div>"
                     "</div>"
                     "<div class='taprow altar-act sacrifice' data-zcmd='sac' "
                     "onclick=\"window.__zotTap('sac', this)\">"
@@ -8089,7 +8078,6 @@ class WizardsCavernApp(toga.App):
                                 </div>
                             </div>
                         </div>
-                        <div style="font-size: 11px; color: #FFD700; margin-bottom: 2px;">{piety_line}</div>
                         {action_cards_html}
                     </div>
                 """
@@ -8845,18 +8833,23 @@ class WizardsCavernApp(toga.App):
             hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
             oracle_html = f"""
-                <div style="border: 2px solid #555; border-radius: 3px; padding: 12px;">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:8px;">
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 8px 10px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
                         <div style="flex-shrink:0;">{generate_room_sprite_html('O', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))}</div>
-                        <div style="color: #DDD; font-size: 12px;">
-                            A mystical mirror stands before you, its silvered surface rippling with arcane energy. Swirling mists dance within, showing glimpses of your destiny.
+                        <div style="color: #DDD; font-size: 12px; line-height: 1.3;">
+                            A mystical mirror rippling with arcane energy. Glimpses of destiny dance within.
                         </div>
                     </div>
-                    <div class='altar-actions'>
+                    <div class='altar-actions dual' style='margin-top:6px;'>
                         <div class='taprow altar-act mystic' data-zcmd='g'
                              onclick="window.__zotTap('g', this)">
-                            <div class='aname'>Gaze into the Oracle</div>
-                            <div class='ameta'>Seek mystic guidance on your quest</div>
+                            <div class='aname'>Gaze</div>
+                            <div class='ameta'>quest hints</div>
+                        </div>
+                        <div class='taprow altar-act offering' data-zcmd='pantheon'
+                             onclick="window.__zotTap('pantheon', this)">
+                            <div class='aname'>Pantheon</div>
+                            <div class='ameta'>piety with each god</div>
                         </div>
                     </div>
                 </div>
@@ -8876,7 +8869,7 @@ class WizardsCavernApp(toga.App):
                     </div>
                 </div>
             """
-            current_commands_text = "Tap to gaze | i = inventory"
+            current_commands_text = "Tap Gaze or Pantheon | i = inventory"
             if has_lantern:
                 current_commands_text += " | l = lantern"
             current_commands_text += " | n/s/e/w = move"
