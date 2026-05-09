@@ -2805,6 +2805,7 @@ class WizardsCavernApp(toga.App):
             'battle': False, 'treasure': False, 'devotion': False, 'reflection': False,
             'knowledge': False, 'secrets': False, 'eternity': False, 'growth': False
         }
+        gs.altar_piety = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0}
         gs.shards_obtained = {
             'battle': False, 'treasure': False, 'devotion': False, 'reflection': False,
             'knowledge': False, 'secrets': False, 'eternity': False, 'growth': False
@@ -7960,23 +7961,32 @@ class WizardsCavernApp(toga.App):
             # ALTAR VIEW.  Two distinct layouts:
             #
             # 1. Default (gs.altar_action != 'sacrifice'):
-            #    Room-panel + map shape.  Compact god header + 5 action
-            #    chips (Detect / Bless / Purify / Sacrifice / Devotion).
-            #    Map stays anchored below for movement.
+            #    Room-panel + map shape.  God header + piety bar + 2
+            #    action chips (Pray / Sacrifice).  Pray's subtitle shows
+            #    the current-tier reward inline.  Map stays anchored
+            #    below for movement.
             #
             # 2. Sacrifice picker (gs.altar_action == 'sacrifice'):
             #    Full-screen vendor-style item picker.  Map is hidden so
             #    the inventory list has the whole content area to itself.
             #    BACK chip returns to the default altar view.
 
+            from .room_actions import altar_piety_tier, _piety_to_next_tier
             gods = gs.active_altar_state.get('gods', {})
             blessed_id = gs.active_altar_state.get('blessed_id', 1)
             blessed_god = gods.get(blessed_id, {})
-
-            room = gs.my_tower.floors[gs.player_character.z].grid[gs.player_character.y][gs.player_character.x]
-            hunch_god_id = room.properties.get('hunch_god_id', blessed_id)
-            hunch_god = gods.get(hunch_god_id, blessed_god)
             altar_sprite = generate_room_sprite_html('A', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
+
+            piety = gs.altar_piety.get(blessed_id, 0)
+            tier_now = altar_piety_tier(piety)
+            _, to_next, target = _piety_to_next_tier(piety)
+            stars = '★' * tier_now + '☆' * (3 - tier_now)
+            tier_labels = blessed_god.get('tier_labels', ['', '', '', ''])
+            current_pray_label = tier_labels[tier_now] if tier_now < len(tier_labels) else ''
+            if to_next is None:
+                piety_line = f"{stars} TIER 3 (max)"
+            else:
+                piety_line = f"{stars} Tier {tier_now} ({piety}/{target} to T{tier_now + 1})"
 
             if gs.altar_action == 'sacrifice':
                 # ---------- SACRIFICE PICKER (full-screen, no map) ----------
@@ -7995,11 +8005,21 @@ class WizardsCavernApp(toga.App):
                                 buc_tag = " <span style='color:#FFD700;'>[BLESSED]</span>"
                             elif item.buc_status == 'cursed':
                                 buc_tag = " <span style='color:#F44336;'>[CURSED]</span>"
+                        # Highlight items that match this god's preference
+                        from .room_actions import _altar_gods
+                        gd = _altar_gods()[blessed_id]
+                        match_glyph = ""
+                        if gd['item_type'] is None:
+                            match_glyph = ""  # Loki accepts anything
+                        elif gd['item_type'] == 'sealed' and getattr(item, 'is_sealed', False):
+                            match_glyph = " <span style='color:#4CAF50;'>✓</span>"
+                        elif gd['item_type'] is not None and gd['item_type'] != 'sealed' and isinstance(item, gd['item_type']):
+                            match_glyph = " <span style='color:#4CAF50;'>✓</span>"
                         cmd_str = f"s{i + 1}"
                         inv_html += (
                             f"<div class='taprow' data-zcmd='{cmd_str}' "
                             f"onclick=\"window.__zotTap('{cmd_str}', this)\">"
-                            f"{item_str}{sealed_tag}{buc_tag}"
+                            f"{item_str}{match_glyph}{sealed_tag}{buc_tag}"
                             f"</div>"
                         )
 
@@ -8009,11 +8029,11 @@ class WizardsCavernApp(toga.App):
                         <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
                             <div style="flex-shrink:0;">{altar_sprite}</div>
                             <div style="flex:1;">
-                                <div style="font-size: 14px; font-weight: bold; color: {hunch_god.get('color','#DDD')};">
-                                    Sacrifice to {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
+                                <div style="font-size: 14px; font-weight: bold; color: {blessed_god.get('color','#DDD')};">
+                                    Sacrifice to {blessed_god.get('symbol','?')} {blessed_god.get('name','Unknown')}
                                 </div>
                                 <div style="font-size: 10px; color: #AAA;">
-                                    Hungers for: <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
+                                    Craves: <b style="color:#FFD700;">{blessed_god.get('item_label','?')}</b> &middot; <span style='color:#4CAF50;'>✓</span> = match
                                 </div>
                             </div>
                         </div>
@@ -8030,79 +8050,46 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                 """
-                current_commands_text = "Tap an item to sacrifice | BACK to return | i = inventory"
+                current_commands_text = "Tap matching item to sacrifice | BACK to return"
 
             else:
                 # ---------- DEFAULT ALTAR VIEW (room-panel + map) ----------
+                # Two action chips: Pray (claim current tier reward) and
+                # Sacrifice (open the picker to feed piety).  The Pray
+                # chip's subtitle shows the current-tier reward inline.
                 floor = gs.my_tower.floors[gs.player_character.z]
                 grid_html = generate_grid_html(floor, gs.player_character.x, gs.player_character.y)
                 hud_chips_html, bigdpad_html = self._build_map_hud_and_dpad_html()
 
-                _pc = gs.player_character
-                _floor = _pc.z if _pc else 0
-                _bless_cost = 100 + _floor * 10
-                _purify_cost_pct = max(1, _pc.max_health // 10) if _pc else 0
-
-                action_cards_html = "<div class='altar-actions compact'>"
-                action_cards_html += (
-                    "<div class='taprow altar-act detect' data-zcmd='d' "
-                    "onclick=\"window.__zotTap('d', this)\">"
-                    "<div class='aname'>Detect</div>"
-                    "<div class='ameta'>reveal BUC</div>"
+                action_cards_html = (
+                    "<div class='altar-actions dual' style='margin-top:6px;'>"
+                    "<div class='taprow altar-act blessing' data-zcmd='pray' "
+                    "onclick=\"window.__zotTap('pray', this)\">"
+                    f"<div class='aname'>Pray</div>"
+                    f"<div class='ameta'>{current_pray_label}</div>"
                     "</div>"
-                )
-                action_cards_html += (
-                    f"<div class='taprow altar-act bless' data-zcmd='b' "
-                    f"onclick=\"window.__zotTap('b', this)\">"
-                    f"<div class='aname'>Bless</div>"
-                    f"<div class='ameta'>{_bless_cost}g</div>"
-                    f"</div>"
-                )
-                action_cards_html += (
-                    f"<div class='taprow altar-act purify' data-zcmd='u' "
-                    f"onclick=\"window.__zotTap('u', this)\">"
-                    f"<div class='aname'>Purify</div>"
-                    f"<div class='ameta'>~{_purify_cost_pct} HP</div>"
-                    f"</div>"
-                )
-                action_cards_html += (
                     "<div class='taprow altar-act sacrifice' data-zcmd='sac' "
                     "onclick=\"window.__zotTap('sac', this)\">"
                     "<div class='aname'>Sacrifice</div>"
-                    "<div class='ameta'>offer item</div>"
+                    f"<div class='ameta'>offer {blessed_god.get('item_label','?').lower()}</div>"
+                    "</div>"
                     "</div>"
                 )
-                devotion_added = False
-                if not gs.runes_obtained.get('devotion', False) and gs.player_character is not None:
-                    gold_req = gs.rune_progress_reqs.get('gold_obtained', 500)
-                    hp_req = gs.rune_progress_reqs.get('player_health_obtained', 50)
-                    if gs.player_character.gold >= gold_req and gs.player_character.health >= hp_req:
-                        action_cards_html += (
-                            f"<div class='taprow altar-act devotion' data-zcmd='9' "
-                            f"onclick=\"window.__zotTap('9', this)\">"
-                            f"<div class='aname'>Devotion</div>"
-                            f"<div class='ameta'>{gold_req}g + {hp_req}HP</div>"
-                            f"</div>"
-                        )
-                        devotion_added = True
-                if not devotion_added:
-                    # Hidden filler keeps the 3-col grid balanced.
-                    action_cards_html += "<div style='visibility:hidden;'></div>"
-                action_cards_html += "</div>"
 
                 altar_html = f"""
                     <div style="border: 2px solid #555; border-radius: 3px; padding: 8px 10px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
-                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
                             <div style="flex-shrink:0;">{altar_sprite}</div>
                             <div style="flex:1; min-width:0;">
-                                <div style="font-size: 16px; font-weight: bold; color: {hunch_god.get('color','#DDD')}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
-                                    {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
+                                <div style="font-size: 15px; font-weight: bold; color: {blessed_god.get('color','#DDD')}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                                    {blessed_god.get('symbol','?')} {blessed_god.get('name','Unknown')}
                                 </div>
-                                <div style="font-size: 12px; color: #AAA; margin-top: 2px;">
-                                    {hunch_god.get('title','')} &middot; hungers for <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
+                                <div style="font-size: 11px; color: #AAA;">
+                                    {blessed_god.get('title','')} &middot; craves <b style="color:#FFD700;">{blessed_god.get('item_label','?')}</b>
                                 </div>
                             </div>
                         </div>
+                        <div style="font-size: 11px; color: #FFD700; margin-bottom: 2px;">{piety_line}</div>
                         {action_cards_html}
                     </div>
                 """
@@ -8121,7 +8108,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                 """
-                current_commands_text = "Tap an action | n/s/e/w = step away"
+                current_commands_text = "Tap Pray or Sacrifice | n/s/e/w = step away"
 
         elif gs.prompt_cntl == "pool_mode":
             # POOL VIEW - Simplified: Map | Pool Info
