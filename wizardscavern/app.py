@@ -7550,14 +7550,14 @@ class WizardsCavernApp(toga.App):
                     )
                 _chips.append(
                     "<div class='hudchip' data-zcmd='i' "
-                    "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
+                    "onclick=\"window.__zotTap('i', this)\">INV</div>"
                 )
                 _chips.append(
                     "<div class='hudchip exit' data-zcmd='f' "
                     "onclick=\"window.__zotTap('f', this)\">FLEE</div>"
                 )
                 combat_chips_html = (
-                    "<div class='hudchips' style='margin-top:6px;'>"
+                    "<div class='hudchips combat-bar' style='margin-top:6px;'>"
                     + "".join(_chips) +
                     "</div>"
                 )
@@ -10284,9 +10284,13 @@ class WizardsCavernApp(toga.App):
                 /* Log pinned at the BOTTOM of the viewport.  Recent
                    events scroll past here while the map+chips above
                    stay stable. */
+                /* Log pinned to a fixed 130px so it stays the same
+                   size in every view (map, inventory, vendor, picker,
+                   etc.).  Previously flex: 1 1 auto, which made the
+                   log balloon in inventory mode where content-area is
+                   ~230px shorter than in map mode. */
                 #game-log {{
-                    flex: 1 1 auto;
-                    min-height: 80px;
+                    flex: 0 0 130px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -10298,16 +10302,17 @@ class WizardsCavernApp(toga.App):
                     line-height: 1.2;
                 }}
 
-                /* Content-area sits between the top-strip and the log.
-                   It hugs its content (room-panel + map + chips for
-                   game modes; whatever is rendered for menus / vendor
-                   / picker modes).  Whatever vertical space remains
-                   below it is taken by the log via flex: 1. */
+                /* Content-area sits between the top-strip and the
+                   pinned log and takes the remaining vertical space.
+                   On views with shorter content (inventory, vendor)
+                   that means there's some empty area below the
+                   content; on map view content fills it (room-panel +
+                   map + chips). */
                 #content-area {{
-                    flex: 0 0 auto;
+                    flex: 1 1 auto;
                     padding: 0;
                     overflow-y: auto;
-                    max-height: 100%;
+                    min-height: 0;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
@@ -10654,6 +10659,19 @@ class WizardsCavernApp(toga.App):
                 .hudchips.inv-bar {{
                     flex-wrap: nowrap;
                     overflow-x: auto;
+                }}
+                /* Combat chip row: ATTACK / CAST / INV / FLEE need to
+                   fit on one line on narrow phones (~360px wide), so
+                   force nowrap and tighten chip padding + font. */
+                .hudchips.combat-bar {{
+                    flex-wrap: nowrap;
+                }}
+                .hudchips.combat-bar .hudchip {{
+                    padding: 8px 10px;
+                    font-size: 12px;
+                    min-height: 38px;
+                    border-radius: 14px;
+                    letter-spacing: 0.3px;
                 }}
                 .hudchip {{
                     display: inline-flex;
