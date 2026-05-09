@@ -7607,7 +7607,7 @@ class WizardsCavernApp(toga.App):
                 """
 
             player_title = get_player_title(gs.player_character)
-            player_display = f"{gs.player_character.name} the {player_title}"
+            player_display = f"{gs.player_character.name} {player_title}"
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
                 getattr(gs.player_character, 'gender', 'male'),
@@ -10132,14 +10132,18 @@ class WizardsCavernApp(toga.App):
                     color: #ffffff;
                     font-family: 'Courier New', monospace;
                     margin: 0;
-                    padding: 4px;
+                    padding: 0;
                     font-size: 13px;
                     line-height: 1.3;
                     overflow-x: hidden;
+                    overflow-y: hidden;
+                    height: 100vh;
                     max-width: 100vw;
                     width: 100%;
                     word-wrap: break-word;
                     overflow-wrap: break-word;
+                    display: flex;
+                    flex-direction: column;
                     {zoom_css}
                 }}
                 
@@ -10236,13 +10240,11 @@ class WizardsCavernApp(toga.App):
                    target, so it doesn't compete with the map for
                    thumb space. */
                 #top-strip {{
-                    position: fixed;
-                    top: 0;
-                    left: 0;
-                    right: 0;
+                    flex: 0 0 auto;
                     z-index: 1000;
                     background-color: #1a1a1a;
                     border-bottom: 2px solid #444;
+                    padding: 0 4px;
                 }}
                 #title-bar {{
                     background-color: #1a1a1a;
@@ -10274,11 +10276,8 @@ class WizardsCavernApp(toga.App):
                    events scroll past here while the map+chips above
                    stay stable. */
                 #game-log {{
-                    position: fixed;
-                    bottom: 0;
-                    left: 0;
-                    right: 0;
-                    height: 80px;
+                    flex: 1 1 auto;
+                    min-height: 80px;
                     background-color: #111;
                     color: #EEE;
                     padding: 5px;
@@ -10290,12 +10289,16 @@ class WizardsCavernApp(toga.App):
                     line-height: 1.2;
                 }}
 
-                /* Scrollable content area - leave room for the fixed
-                   top strip (~56px), the bottom log (~80px) and the
-                   bottom-pinned map+chips zone (~310px). */
+                /* Content-area sits between the top-strip and the log.
+                   It hugs its content (room-panel + map + chips for
+                   game modes; whatever is rendered for menus / vendor
+                   / picker modes).  Whatever vertical space remains
+                   below it is taken by the log via flex: 1. */
                 #content-area {{
-                    padding-top: 58px;
-                    padding-bottom: 390px;
+                    flex: 0 0 auto;
+                    padding: 4px;
+                    overflow-y: auto;
+                    max-height: 100%;
                 }}
 
                 /* Full-bleed screens (splash, intro, death, character
@@ -10304,8 +10307,10 @@ class WizardsCavernApp(toga.App):
                 body.full-bleed #top-strip {{ display: none; }}
                 body.full-bleed #game-log {{ display: none; }}
                 body.full-bleed #content-area {{
-                    padding-top: 0;
-                    padding-bottom: 0;
+                    flex: 1 1 auto;
+                    padding: 0;
+                    max-height: 100%;
+                    overflow-y: auto;
                 }}
 
                 /* Room interaction panel slot.  All room panels share
@@ -10316,36 +10321,29 @@ class WizardsCavernApp(toga.App):
                    (combat victory monster + player, library text,
                    vendor lists) from pushing the map up the screen
                    -- the panel scrolls internally instead. */
-                /* Uniform fixed-size room interaction box.  Every
-                   room mode (chest, pool, altar, library, smith,
-                   shrine, garden, etc.) gets exactly the same 150px
-                   panel — no per-panel size variance, no internal
-                   scroll.  Content that doesn't fit must be
-                   redesigned (see altar's 5-chip action grid + the
-                   separate sacrifice picker sub-mode).  150px keeps
-                   the bottom-pinned-zone (panel + 18-row map + chips)
-                   inside the viewport on tall phones without
-                   scrolling. */
+                /* Uniform fixed-size interaction box.  Every game-mode
+                   panel (chest, pool, altar, library, smith, shrine,
+                   garden, combat, etc.) renders into the same 240px
+                   slot.  240px is sized for combat (monster card +
+                   player card stacked) and uses up some empty space
+                   for simpler rooms — that's the trade-off for a
+                   uniform silhouette across modes. */
                 .room-panel {{
-                    min-height: 150px;
-                    max-height: 150px;
-                    height: 150px;
+                    min-height: 240px;
+                    max-height: 240px;
+                    height: 240px;
                     overflow: hidden;
                     box-sizing: border-box;
                 }}
 
-                /* Pin the map + action chips just above the log.
-                   max-height keeps the zone's TOP from sliding under
-                   the fixed top strip (~58px) — content over the cap
-                   scrolls within the zone instead. */
+                /* Container that stacks the room-panel + map + action
+                   chips.  No longer fixed-positioned — it lives inside
+                   #content-area at its natural flow position.  The
+                   body's flex column then gives whatever space is
+                   left to the game log. */
                 .bottom-pinned-zone {{
-                    position: fixed;
-                    bottom: 80px;
-                    left: 0;
-                    right: 0;
+                    position: static;
                     z-index: 500;
-                    max-height: calc(100vh - 140px);
-                    overflow-y: auto;
                     background: #1a1a1a;
                     border-top: 1px solid #333;
                     padding: 2px 0 4px 0;
