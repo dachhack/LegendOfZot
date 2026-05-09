@@ -72,12 +72,12 @@ def _make_taxidermist_reward(cname, cdata):
 # 16. ROOM INTERACTIONS (altars, pools, libraries, dungeons, tombs, gardens, oracles)
 # --------------------------------------------------------------------------------
 
-def process_altar_action(player_character, my_tower, cmd):
-
-    # -------------------------------------------------------------------------
-    # GOD DEFINITIONS - each god aligned to an item type
-    # -------------------------------------------------------------------------
-    gods = {
+def _altar_gods():
+    """The 8-god roster for the altar tier system.  Each god has a
+    sacrifice-gate item type, a static altar description, and a
+    `tier_labels` list of 4 short strings (T0 / T1 / T2 / T3) used for
+    the inline 'Pray → ...' chip subtitle on the altar UI."""
+    return {
         1: {
             'name': 'Solara, the Radiant Dawn',
             'title': 'Goddess of Life',
@@ -86,8 +86,8 @@ def process_altar_action(player_character, my_tower, cmd):
             'item_type': Potion,
             'item_label': 'Potions',
             'altar_desc': 'A pristine altar of white marble radiates warmth. Golden light dances across inscriptions of healing hymns.',
-            'pleased_msg': 'Solara\'s divine light transmutes your offering into something greater!',
-            'displeased_msg': 'Solara recoils from your unworthy offering!',
+            'tier_labels': ['heal 50% HP + 50% hunger', 'heal 100% HP + fill hunger',
+                            'full HP + MP + hunger', 'full restore + clear status + +10/+10 max'],
         },
         2: {
             'name': 'Zephyros, the Windwalker',
@@ -97,8 +97,8 @@ def process_altar_action(player_character, my_tower, cmd):
             'item_type': Ingredient,
             'item_label': 'Ingredients',
             'altar_desc': 'Wind swirls around a sleek silver altar. Feathers float in an endless updraft, never touching the ground.',
-            'pleased_msg': 'The Windwalker breathes life into your offering, returning rare gifts from the wilds!',
-            'displeased_msg': 'Zephyros howls in displeasure at your mundane gift!',
+            'tier_labels': ['add a garden to floor', 'regrow all gardens',
+                            'teleport + restock vendor', 'spawn a Fey Garden'],
         },
         3: {
             'name': 'Athenaeum, the All-Knowing',
@@ -108,8 +108,8 @@ def process_altar_action(player_character, my_tower, cmd):
             'item_type': Scroll,
             'item_label': 'Scrolls',
             'altar_desc': 'Books orbit a crystalline altar in perfect geometric patterns. Ancient runes glow with arcane knowledge.',
-            'pleased_msg': 'Forbidden knowledge flows back to you, transmuted and amplified!',
-            'displeased_msg': 'Athenaeum is not amused by your ignorance.',
+            'tier_labels': ['reveal 2-room radius', 'reveal entire floor',
+                            'identify all + BUC reveal', 'identify all + BUC + spell scroll'],
         },
         4: {
             'name': 'Titanforge, the Unyielding',
@@ -119,8 +119,8 @@ def process_altar_action(player_character, my_tower, cmd):
             'item_type': Weapon,
             'item_label': 'Weapons',
             'altar_desc': 'An anvil-shaped altar of obsidian and iron. Ghostly hammers ring out in endless rhythm.',
-            'pleased_msg': 'The forge god\'s hammer rings! Your weapon is reborn, stronger than before!',
-            'displeased_msg': 'Titanforge sneers. A true warrior brings steel, not trinkets!',
+            'tier_labels': ['+1 ATK for 10 turns', 'bless weapon +1',
+                            'bless weapon +2', 'bless weapon +4 + upgrade scroll'],
         },
         5: {
             'name': 'Lunara, the Moon Sentinel',
@@ -130,8 +130,8 @@ def process_altar_action(player_character, my_tower, cmd):
             'item_type': Armor,
             'item_label': 'Armor',
             'altar_desc': 'A crescent altar of silver and moonstone pulses with ethereal energy. Starlight pools in its basin.',
-            'pleased_msg': 'Lunara\'s celestial power flows through your armor, reinforcing every plate and fibre!',
-            'displeased_msg': 'Lunara turns her back. She guards only those who bring worthy shields.',
+            'tier_labels': ['+1 DEF for 10 turns', 'bless armor +1',
+                            'bless armor +3', 'bless armor +4 + upgrade scroll'],
         },
         6: {
             'name': 'Loki the Trickster',
@@ -139,10 +139,10 @@ def process_altar_action(player_character, my_tower, cmd):
             'symbol': '?',
             'color': '#FF69B4',
             'item_type': None,  # Accepts anything
-            'item_label': 'Anything (wildcards favor rare items)',
+            'item_label': 'Anything',
             'altar_desc': 'The altar shifts and changes - stone to gold to smoke. Reality seems... negotiable here.',
-            'pleased_msg': 'The Trickster laughs! The cosmic dice tumble...',
-            'displeased_msg': 'Even the Trickster is bored by this offering.',
+            'tier_labels': ['small buff or 5-50 gold', 'random reward (stat/gold/HP)',
+                            'coin flip: ×2 gold or lose half', 'rare item drop'],
         },
         7: {
             'name': 'The Void',
@@ -150,10 +150,10 @@ def process_altar_action(player_character, my_tower, cmd):
             'symbol': 'O',
             'color': '#4B0082',
             'item_type': 'sealed',  # Special: only accepts sealed items
-            'item_label': 'Cursed items',
+            'item_label': 'Sealed/Cursed items',
             'altar_desc': 'There is no altar. Only absence. A space where something should be, but isn\'t.',
-            'pleased_msg': 'The Void consumes the seal, releasing pure energy...',
-            'displeased_msg': 'The Void rejects the unsealed. It hungers only for corruption.',
+            'tier_labels': ['reveal weapon BUC', 'remove one curse',
+                            'unseal one item', 'cleanse all sealed/cursed'],
         },
         8: {
             'name': 'Malachar, the Relentless',
@@ -161,12 +161,43 @@ def process_altar_action(player_character, my_tower, cmd):
             'symbol': '+',
             'color': '#8B0000',
             'item_type': Treasure,
-            'item_label': 'Treasures & Artifacts',
+            'item_label': 'Treasure',
             'altar_desc': 'A jagged altar of darkened iron pulses with raw vitality. Crimson runes glow with life force.',
-            'pleased_msg': 'MALACHAR ROARS! Your treasure is consumed and power flows into you!',
-            'displeased_msg': 'Malachar demands real treasure, not scraps!',
+            'tier_labels': ['+1 STR for 10 turns', '+1 random stat',
+                            '+10 max HP + 1 stat', '+20 max HP + 2 stats'],
         },
     }
+
+
+def altar_piety_tier(piety):
+    """Return the unlocked Pray tier (0-3) for a given sacrifice count.
+
+    Breakpoints: T1 = 1 sacrifice, T2 = 3 sacrifices, T3 = 5 sacrifices."""
+    if piety >= 5:
+        return 3
+    if piety >= 3:
+        return 2
+    if piety >= 1:
+        return 1
+    return 0
+
+
+def _piety_to_next_tier(piety):
+    """Return (current_tier, sacrifices_to_next, target_breakpoint) so
+    the UI can render '★★☆ Tier 2 (3/5 to T3)'.  Returns
+    (3, None, None) when already at max tier."""
+    if piety >= 5:
+        return (3, None, None)
+    if piety >= 3:
+        return (2, 5 - piety, 5)
+    if piety >= 1:
+        return (1, 3 - piety, 3)
+    return (0, 1 - piety, 1)
+
+
+def process_altar_action(player_character, my_tower, cmd):
+
+    gods = _altar_gods()
 
     def _get_upgrade_scroll(floor_level):
         """Return an upgrade scroll appropriate for the floor level."""
@@ -192,188 +223,374 @@ def process_altar_action(player_character, my_tower, cmd):
             return getattr(item, 'is_sealed', False)
         return isinstance(item, item_type)
 
-    def _apply_pleased_reward(player_character, item, god_id, god_info, floor_level):
-        """Apply the blessed reward when correct item type is sacrificed."""
-        add_log(f"<span style='color: {god_info['color']}; font-weight: bold;'>{god_info['symbol']} {god_info['pleased_msg']}</span>")
-        add_log("")
+    def _heal_pct(pc, pct):
+        """Heal pct of max HP (0-1)."""
+        amount = int(pc.max_health * pct)
+        actual = min(amount, pc.max_health - pc.health)
+        pc.health = min(pc.max_health, pc.health + amount)
+        return actual
 
-        if god_id == 1:
-            # Solara (Potions) - returns a better potion
-            roll = random.random()
-            if roll < 0.20:
-                reward = Potion("Superior Healing Potion", "Restores 150 HP.", value=150, level=4, potion_type='healing', effect_magnitude=150)
-                add_log(f"{COLOR_GREEN}Your offering is transmuted into a Superior Healing Potion!{COLOR_RESET}")
-            elif roll < 0.50:
-                reward = Potion("Greater Healing Potion", "Restores 100 HP.", value=100, level=2, potion_type='healing', effect_magnitude=100)
-                add_log(f"{COLOR_GREEN}Your offering is transmuted into a Greater Healing Potion!{COLOR_RESET}")
+    def _restore_mp_pct(pc, pct):
+        if pc.max_mana <= 0:
+            return 0
+        amount = int(pc.max_mana * pct)
+        actual = min(amount, pc.max_mana - pc.mana)
+        pc.mana = min(pc.max_mana, pc.mana + amount)
+        return actual
+
+    def _restore_hunger_pct(pc, pct):
+        # HUNGER_MAX is 100 in this codebase
+        amount = int(100 * pct)
+        actual = min(amount, 100 - pc.hunger)
+        pc.hunger = min(100, pc.hunger + amount)
+        return actual
+
+    def _apply_sacrifice_reward(player_character, item, god_id, god_info):
+        """Reward for a successful sacrifice (item already matched the
+        god's preferred type and was removed from inventory).  Each god
+        gets a small thematic gift -- separate from Pray-tier rewards.
+        See design/altar_rewards.csv for the spec."""
+        floor_level = player_character.z
+        add_log(f"<span style='color: {god_info['color']}; font-weight: bold;'>{god_info['symbol']} {god_info['name']} accepts your offering.</span>")
+
+        if god_id == 1:  # Solara: 10-25% HP healing
+            heal = _heal_pct(player_character, random.uniform(0.10, 0.25))
+            add_log(f"{COLOR_GREEN}Solara's warmth heals you for {heal} HP.{COLOR_RESET}")
+
+        elif god_id == 2:  # Zephyros: 10-25% HP, or MP if max_mana > 0 (50/50 if both)
+            pct = random.uniform(0.10, 0.25)
+            if player_character.max_mana > 0 and random.random() < 0.5:
+                amt = _restore_mp_pct(player_character, pct)
+                add_log(f"{COLOR_GREEN}A wild gust restores {amt} MP.{COLOR_RESET}")
             else:
-                # Heal and restore mana
-                heal = min(player_character.max_health - player_character.health, 80)
-                player_character.health += heal
-                mana_restore = 50
-                player_character.mana = min(player_character.max_mana, player_character.mana + mana_restore)
-                add_log(f"{COLOR_GREEN}Solara blesses you directly! +{heal} HP, +{mana_restore} MP{COLOR_RESET}")
-                reward = None
-            if reward:
-                player_character.inventory.add_item(reward)
+                amt = _heal_pct(player_character, pct)
+                add_log(f"{COLOR_GREEN}A wild gust restores {amt} HP.{COLOR_RESET}")
 
-        elif god_id == 2:
-            # Zephyros (Ingredients) - returns a rare ingredient or gold
-            roll = random.random()
-            if roll < 0.30 and FEY_GARDEN_INGREDIENTS:
-                chosen = random.choice(FEY_GARDEN_INGREDIENTS)
-                reward = Ingredient(name=chosen[0], description=chosen[1], value=chosen[2], level=chosen[3])
-                add_log(f"{COLOR_GREEN}The wilds return a rare gift: {reward.name}!{COLOR_RESET}")
-                player_character.inventory.add_item(reward)
+        elif god_id == 3:  # Athenaeum: reveal 5 random rooms on this floor
+            count = _reveal_random_rooms(player_character, my_tower, 5)
+            add_log(f"{COLOR_GREEN}Athenaeum's sight reveals {count} hidden room(s).{COLOR_RESET}")
+
+        elif god_id == 4:  # Titanforge: repair most damaged identified weapon, else 10-25% HP
+            target = _find_most_damaged_weapon(player_character)
+            if target is not None:
+                target.upgrade_level = min(target.upgrade_level + 1, 20)
+                add_log(f"{COLOR_GREEN}The forge-god's hammer mends your {target.name} (+1 upgrade).{COLOR_RESET}")
             else:
-                gold = item.value * random.randint(3, 6)
-                player_character.gold += gold
-                add_log(f"{COLOR_GREEN}Zephyros scatters {gold} gold coins from the winds!{COLOR_RESET}")
+                heal = _heal_pct(player_character, random.uniform(0.10, 0.25))
+                add_log(f"{COLOR_GREEN}No weapon to repair — Titanforge gifts you {heal} HP instead.{COLOR_RESET}")
 
-        elif god_id == 3:
-            # Athenaeum (Scrolls) - returns a better scroll
-            roll = random.random()
-            if roll < 0.40:
-                reward = _get_upgrade_scroll(floor_level)
-                add_log(f"{COLOR_GREEN}Knowledge transmuted: you receive a {reward.name}!{COLOR_RESET}")
+        elif god_id == 5:  # Lunara: repair most damaged identified armor, else 10-25% HP
+            target = _find_most_damaged_armor(player_character)
+            if target is not None:
+                target.upgrade_level = min(target.upgrade_level + 1, 20)
+                add_log(f"{COLOR_GREEN}Moonlight reinforces your {target.name} (+1 upgrade).{COLOR_RESET}")
             else:
-                # Return a spell scroll or identification scroll
-                choices = [s for s in SCROLL_TEMPLATES if s.level <= floor_level + 2 and s.scroll_type in ['spell_scroll', 'identification']]
-                if choices:
-                    reward = _create_item_copy(random.choice(choices))
-                    add_log(f"{COLOR_GREEN}Athenaeum returns a {reward.name}!{COLOR_RESET}")
-                else:
-                    reward = _get_upgrade_scroll(floor_level)
-                    add_log(f"{COLOR_GREEN}You receive a {reward.name}!{COLOR_RESET}")
-            player_character.inventory.add_item(reward)
+                heal = _heal_pct(player_character, random.uniform(0.10, 0.25))
+                add_log(f"{COLOR_GREEN}No armor to repair — Lunara gifts you {heal} HP instead.{COLOR_RESET}")
 
-        elif god_id == 4:
-            # Titanforge (Weapons) - upgrades the weapon or returns upgraded copy
-            if isinstance(item, Weapon):
-                roll = random.random()
-                bonus_upgrades = random.randint(1, 3) if floor_level < 15 else random.randint(2, 5)
-                item.upgrade_level = min(item.upgrade_level + bonus_upgrades, 20)
-                add_log(f"{COLOR_GREEN}The forge god's hammer strikes! Your {item.name} gains +{bonus_upgrades} upgrades!{COLOR_RESET}")
-                add_log(f"{COLOR_GREEN}Now: {item.get_display_name()} (Atk +{item.attack_bonus}){COLOR_RESET}")
-                player_character.inventory.add_item(item)
-                if roll < 0.25:
-                    scroll = _get_upgrade_scroll(floor_level)
-                    player_character.inventory.add_item(scroll)
-                    add_log(f"{COLOR_GREEN}And a {scroll.name} falls from the forge fires!{COLOR_RESET}")
-            else:
-                # Shouldn't happen, but fallback
-                player_character.inventory.add_item(item)
-
-        elif god_id == 5:
-            # Lunara (Armor) - upgrades the armor or returns upgraded copy
-            if isinstance(item, Armor):
-                roll = random.random()
-                bonus_upgrades = random.randint(1, 3) if floor_level < 15 else random.randint(2, 5)
-                item.upgrade_level = min(item.upgrade_level + bonus_upgrades, 20)
-                add_log(f"{COLOR_GREEN}Moonlight reinforces your {item.name}! +{bonus_upgrades} upgrades!{COLOR_RESET}")
-                add_log(f"{COLOR_GREEN}Now: {item.get_display_name()} (Def +{item.defense_bonus}){COLOR_RESET}")
-                player_character.inventory.add_item(item)
-                if roll < 0.25:
-                    scroll = _get_upgrade_scroll(floor_level)
-                    player_character.inventory.add_item(scroll)
-                    add_log(f"{COLOR_GREEN}A {scroll.name} materializes in moonlight!{COLOR_RESET}")
-            else:
-                player_character.inventory.add_item(item)
-
-        elif god_id == 6:
-            # Loki (Anything) - random outcome, quality scales with item value
-            item_rarity = item.value
-            is_rare = item_rarity >= 200
-            roll = random.random()
+        elif god_id == 6:  # Loki: random outcome scaled by item value
+            is_rare = item.value >= 200
             good_chance = 0.80 if is_rare else 0.50
-
-            if roll < good_chance:
-                # Good outcome - random reward
-                outcome = random.choice(['upgrade_scroll', 'gold', 'stat', 'better_item'])
+            if random.random() < good_chance:
+                outcome = random.choice(['upgrade_scroll', 'gold', 'stat'])
                 if outcome == 'upgrade_scroll':
-                    reward = _get_upgrade_scroll(floor_level)
-                    player_character.inventory.add_item(reward)
-                    add_log(f"{COLOR_GREEN}The Trickster grins - a {reward.name} appears!{COLOR_RESET}")
+                    scroll = _get_upgrade_scroll(floor_level)
+                    player_character.inventory.add_item(scroll)
+                    add_log(f"{COLOR_GREEN}The Trickster grins -- a {scroll.name} appears!{COLOR_RESET}")
                 elif outcome == 'gold':
                     gold = item.value * random.randint(4, 8)
                     player_character.gold += gold
                     add_log(f"{COLOR_GREEN}Gold rains down! +{gold} coins!{COLOR_RESET}")
-                elif outcome == 'stat':
+                else:
                     stat = random.choice(['strength', 'dexterity', 'intelligence'])
                     amt = 3 if is_rare else 1
                     setattr(player_character, stat, getattr(player_character, stat) + amt)
                     add_log(f"{COLOR_GREEN}The Trickster pokes your {stat}! +{amt}!{COLOR_RESET}")
-                else:
-                    reward = get_random_treasure(floor_level, allow_unique=is_rare)
-                    player_character.inventory.add_item(reward)
-                    add_log(f"{COLOR_GREEN}A {reward.name} tumbles from the chaos!{COLOR_RESET}")
             else:
-                # Bad outcome
-                _apply_displeased_punishment(player_character, god_info, floor_level)
-                return
-
-        elif god_id == 7:
-            # The Void (Cursed items) - cleanses curse, grants reward
-            if getattr(item, 'is_sealed', False):
-                item.is_sealed = False
-                add_log(f"{COLOR_CYAN}The curse is consumed by The Void!{COLOR_RESET}")
-                add_log(f"{COLOR_GREEN}{item.name} is now purified!{COLOR_RESET}")
-                player_character.inventory.add_item(item)
-                # Bonus reward
-                roll = random.random()
-                if roll < 0.50:
-                    scroll = _get_upgrade_scroll(floor_level)
-                    player_character.inventory.add_item(scroll)
-                    add_log(f"{COLOR_GREEN}Void energy crystallizes into a {scroll.name}!{COLOR_RESET}")
-                else:
-                    gold = random.randint(50, 150) * (floor_level + 1)
-                    player_character.gold += gold
-                    add_log(f"{COLOR_GREEN}Void energy dissolves into {gold} gold!{COLOR_RESET}")
-
-        elif god_id == 8:
-            # Malachar (Treasures) - stat boosts, possibly unique treasure back
-            roll = random.random()
-            if roll < 0.30:
-                # Return a better treasure
-                reward = get_random_treasure(floor_level + 2, allow_unique=True)
-                player_character.inventory.add_item(reward)
-                add_log(f"{COLOR_GREEN}Malachar returns power made manifest: {reward.name}!{COLOR_RESET}")
-            elif roll < 0.60:
-                # Stat boost
-                stat = random.choice(['strength', 'intelligence', 'dexterity'])
-                amt = random.randint(1, 3)
-                setattr(player_character, stat, getattr(player_character, stat) + amt)
-                player_character.base_max_health_bonus += 5
-                add_log(f"{COLOR_GREEN}Malachar's power surges through you! {stat.capitalize()} +{amt}, Max HP +5!{COLOR_RESET}")
-            else:
-                # Gold + max health
-                gold = item.value * random.randint(3, 5)
+                gold = random.randint(5, 20)
                 player_character.gold += gold
-                player_character.base_max_health_bonus += 10
-                add_log(f"{COLOR_GREEN}Malachar's relentless power: +{gold} gold, Max HP +10!{COLOR_RESET}")
+                add_log(f"{COLOR_YELLOW}The Trickster shrugs and tosses you {gold} gold.{COLOR_RESET}")
+
+        elif god_id == 7:  # The Void: +2 max MP if max_mana > 0, else fill hunger
+            if player_character.max_mana > 0:
+                player_character.base_max_health_bonus  # no-op; we modify mana via _max_mana
+                player_character._max_mana = (player_character._max_mana or player_character.max_mana) + 2
+                player_character.mana = min(player_character.max_mana, player_character.mana + 2)
+                add_log(f"{COLOR_GREEN}The Void grants +2 max MP.{COLOR_RESET}")
+            else:
+                _restore_hunger_pct(player_character, 1.0)
+                add_log(f"{COLOR_GREEN}The Void fills your hunger entirely.{COLOR_RESET}")
+
+        elif god_id == 8:  # Malachar: +2 max HP
+            player_character.base_max_health_bonus += 2
+            player_character.health = min(player_character.max_health, player_character.health + 2)
+            add_log(f"{COLOR_GREEN}Malachar steels your fortitude (+2 max HP).{COLOR_RESET}")
 
         gs.game_stats['altars_used'] = gs.game_stats.get('altars_used', 0) + 1
         check_achievements(player_character)
 
-    def _apply_displeased_punishment(player_character, god_info, floor_level):
-        """Apply punishment when wrong item type sacrificed."""
-        add_log(f"<span style='color: {god_info['color']}; font-weight: bold;'>{god_info['symbol']} {god_info['displeased_msg']}</span>")
+    def _apply_pray_reward(player_character, god_id, god_info, tier):
+        """Claim the Pray reward for a god at the player's current tier
+        (0-3).  See design/altar_rewards.csv for the canonical spec."""
+        floor_level = player_character.z
+        add_log(f"<span style='color: {god_info['color']}; font-weight: bold;'>{god_info['symbol']} You pray to {god_info['name']}.</span>")
+
+        # ----- SOLARA: Goddess of Life (healing, hunger, MP, perm max) -----
+        if god_id == 1:
+            if tier == 0:
+                heal = _heal_pct(player_character, 0.50)
+                hunger = _restore_hunger_pct(player_character, 0.50)
+                add_log(f"{COLOR_GREEN}+{heal} HP, +{hunger} hunger.{COLOR_RESET}")
+            elif tier == 1:
+                heal = _heal_pct(player_character, 1.00)
+                _restore_hunger_pct(player_character, 1.00)
+                add_log(f"{COLOR_GREEN}+{heal} HP, hunger filled.{COLOR_RESET}")
+            elif tier == 2:
+                heal = _heal_pct(player_character, 1.00)
+                mp = _restore_mp_pct(player_character, 1.00)
+                _restore_hunger_pct(player_character, 1.00)
+                add_log(f"{COLOR_GREEN}+{heal} HP, +{mp} MP, hunger filled.{COLOR_RESET}")
+            else:  # tier 3
+                _heal_pct(player_character, 1.00)
+                _restore_mp_pct(player_character, 1.00)
+                _restore_hunger_pct(player_character, 1.00)
+                player_character.status_effects.clear()
+                player_character.base_max_health_bonus += 10
+                player_character._max_mana = (player_character._max_mana or player_character.max_mana) + 10
+                player_character.health = player_character.max_health
+                player_character.mana = player_character.max_mana
+                add_log(f"{COLOR_GREEN}Full restore, status cleared, +10 max HP, +10 max MP.{COLOR_RESET}")
+
+        # ----- ZEPHYROS: God of the Wild (gardens, teleport, fey) -----
+        elif god_id == 2:
+            if tier == 0:
+                added = _spawn_garden_on_floor(player_character, my_tower, fey=False)
+                if added:
+                    add_log(f"{COLOR_GREEN}A garden sprouts somewhere on this floor.{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}No room for a garden -- the wind whispers apologies.{COLOR_RESET}")
+            elif tier == 1:
+                count = _regrow_all_gardens_on_floor(player_character)
+                add_log(f"{COLOR_GREEN}{count} garden(s) on this floor regrow.{COLOR_RESET}")
+            elif tier == 2:
+                ok = _teleport_to_vendor_and_restock(player_character, my_tower)
+                if not ok:
+                    add_log(f"{COLOR_YELLOW}No vendor on this floor; the wind has nowhere to carry you.{COLOR_RESET}")
+            else:  # tier 3
+                _spawn_fey_garden_now(player_character, my_tower)
+                add_log(f"{COLOR_GREEN}A Fey Garden blooms on this floor!{COLOR_RESET}")
+
+        # ----- ATHENAEUM: God of Wisdom (reveal, identify, BUC) -----
+        elif god_id == 3:
+            if tier == 0:
+                count = _reveal_radius(player_character, my_tower, 2)
+                add_log(f"{COLOR_GREEN}{count} room(s) revealed within 2 tiles.{COLOR_RESET}")
+            elif tier == 1:
+                count = _reveal_entire_floor(player_character, my_tower)
+                add_log(f"{COLOR_GREEN}The entire floor is revealed ({count} rooms).{COLOR_RESET}")
+            elif tier == 2:
+                _identify_all_unidentified(player_character)
+                _reveal_buc_on_equipped(player_character)
+                add_log(f"{COLOR_GREEN}All items identified; BUC revealed on equipped gear.{COLOR_RESET}")
+            else:  # tier 3
+                _identify_all_unidentified(player_character)
+                _reveal_buc_on_equipped(player_character)
+                _drop_random_spell_scroll(player_character, floor_level)
+                add_log(f"{COLOR_GREEN}Identification + BUC reveal complete; a spell scroll falls into your hands.{COLOR_RESET}")
+
+        # ----- TITANFORGE: God of the Forge (weapon buffs / blessings) -----
+        elif god_id == 4:
+            if tier == 0:
+                _grant_temp_buff(player_character, 'attack', 1, 10)
+                add_log(f"{COLOR_GREEN}+1 ATK for the next 10 turns.{COLOR_RESET}")
+            elif tier == 1:
+                if player_character.equipped_weapon:
+                    player_character.equipped_weapon.upgrade_level = min(player_character.equipped_weapon.upgrade_level + 1, 20)
+                    add_log(f"{COLOR_GREEN}{player_character.equipped_weapon.name} +1 upgrade.{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}No weapon equipped -- Titanforge sighs.{COLOR_RESET}")
+            elif tier == 2:
+                if player_character.equipped_weapon:
+                    player_character.equipped_weapon.upgrade_level = min(player_character.equipped_weapon.upgrade_level + 2, 20)
+                    add_log(f"{COLOR_GREEN}{player_character.equipped_weapon.name} +2 upgrades.{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}No weapon equipped -- Titanforge sighs.{COLOR_RESET}")
+            else:  # tier 3
+                if player_character.equipped_weapon:
+                    player_character.equipped_weapon.upgrade_level = min(player_character.equipped_weapon.upgrade_level + 4, 20)
+                    add_log(f"{COLOR_GREEN}{player_character.equipped_weapon.name} +4 upgrades!{COLOR_RESET}")
+                scroll = _get_upgrade_scroll(floor_level)
+                player_character.inventory.add_item(scroll)
+                add_log(f"{COLOR_GREEN}A {scroll.name} materializes from the forge.{COLOR_RESET}")
+
+        # ----- LUNARA: Goddess of Protection (armor buffs / blessings) -----
+        elif god_id == 5:
+            if tier == 0:
+                _grant_temp_buff(player_character, 'defense', 1, 10)
+                add_log(f"{COLOR_GREEN}+1 DEF for the next 10 turns.{COLOR_RESET}")
+            elif tier == 1:
+                if player_character.equipped_armor:
+                    player_character.equipped_armor.upgrade_level = min(player_character.equipped_armor.upgrade_level + 1, 20)
+                    add_log(f"{COLOR_GREEN}{player_character.equipped_armor.name} +1 upgrade.{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}No armor equipped -- Lunara turns away.{COLOR_RESET}")
+            elif tier == 2:
+                if player_character.equipped_armor:
+                    player_character.equipped_armor.upgrade_level = min(player_character.equipped_armor.upgrade_level + 3, 20)
+                    add_log(f"{COLOR_GREEN}{player_character.equipped_armor.name} +3 upgrades.{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}No armor equipped -- Lunara turns away.{COLOR_RESET}")
+            else:  # tier 3
+                if player_character.equipped_armor:
+                    player_character.equipped_armor.upgrade_level = min(player_character.equipped_armor.upgrade_level + 4, 20)
+                    add_log(f"{COLOR_GREEN}{player_character.equipped_armor.name} +4 upgrades!{COLOR_RESET}")
+                scroll = _get_upgrade_scroll(floor_level)
+                player_character.inventory.add_item(scroll)
+                add_log(f"{COLOR_GREEN}A {scroll.name} crystallises from moonlight.{COLOR_RESET}")
+
+        # ----- LOKI: God of Fortune (random) -----
+        elif god_id == 6:
+            if tier == 0:
+                roll = random.random()
+                if roll < 0.5:
+                    stat = random.choice(['strength', 'dexterity', 'intelligence'])
+                    setattr(player_character, stat, getattr(player_character, stat) + 1)
+                    add_log(f"{COLOR_GREEN}The Trickster pokes your {stat}! +1.{COLOR_RESET}")
+                else:
+                    gold = random.randint(5, 50)
+                    player_character.gold += gold
+                    add_log(f"{COLOR_GREEN}Loki tosses you {gold} gold.{COLOR_RESET}")
+            elif tier == 1:
+                outcome = random.choice(['stat', 'gold', 'hp'])
+                if outcome == 'stat':
+                    stat = random.choice(['strength', 'dexterity', 'intelligence'])
+                    setattr(player_character, stat, getattr(player_character, stat) + 1)
+                    add_log(f"{COLOR_GREEN}+1 {stat}!{COLOR_RESET}")
+                elif outcome == 'gold':
+                    player_character.gold += 50
+                    add_log(f"{COLOR_GREEN}+50 gold!{COLOR_RESET}")
+                else:
+                    healed = _heal_pct(player_character, 0.20)
+                    add_log(f"{COLOR_GREEN}+{healed} HP!{COLOR_RESET}")
+            elif tier == 2:
+                if random.random() < 0.5:
+                    player_character.gold *= 2
+                    add_log(f"{COLOR_GREEN}DOUBLE OR NOTHING -- you doubled your gold to {player_character.gold}!{COLOR_RESET}")
+                else:
+                    player_character.gold //= 2
+                    add_log(f"{COLOR_RED}DOUBLE OR NOTHING -- you lost half your gold to {player_character.gold}.{COLOR_RESET}")
+            else:  # tier 3
+                reward = get_random_treasure(floor_level + 5, allow_unique=True)
+                player_character.inventory.add_item(reward)
+                add_log(f"{COLOR_GREEN}Trickster's Boon: {reward.name}!{COLOR_RESET}")
+
+        # ----- THE VOID: Cleanser (BUC, curse, unseal) -----
+        elif god_id == 7:
+            if tier == 0:
+                w = player_character.equipped_weapon
+                if w and hasattr(w, 'buc_known') and not w.buc_known:
+                    w.buc_known = True
+                    color = COLOR_GREEN if w.buc_status == 'blessed' else (COLOR_RED if w.buc_status == 'cursed' else COLOR_GREY)
+                    add_log(f"{color}Your {w.name}'s aura is revealed: {w.buc_status}.{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}Your weapon's aura is already known (or no weapon equipped).{COLOR_RESET}")
+            elif tier == 1:
+                cursed = [(slot, item) for slot, item in [('weapon', player_character.equipped_weapon),
+                                                          ('armor', player_character.equipped_armor)]
+                          if item and getattr(item, 'buc_status', '') == 'cursed']
+                if cursed:
+                    slot, item = cursed[0]
+                    item.buc_status = 'uncursed'
+                    item.buc_known = True
+                    add_log(f"{COLOR_GREEN}The curse on {item.name} is cleansed.{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}No cursed equipment to cleanse.{COLOR_RESET}")
+            elif tier == 2:
+                sealed = [i for i in player_character.inventory.items
+                          if getattr(i, 'is_sealed', False)]
+                if sealed:
+                    target = max(sealed, key=lambda i: i.value)
+                    target.is_sealed = False
+                    if getattr(target, 'buc_status', '') == 'cursed':
+                        target.buc_status = 'uncursed'
+                    target.buc_known = True
+                    add_log(f"{COLOR_GREEN}{target.name} is unsealed.{COLOR_RESET}")
+                else:
+                    add_log(f"{COLOR_YELLOW}No sealed items to break open.{COLOR_RESET}")
+            else:  # tier 3
+                count = 0
+                for i in player_character.inventory.items:
+                    if getattr(i, 'is_sealed', False):
+                        i.is_sealed = False
+                        count += 1
+                    if getattr(i, 'buc_status', '') == 'cursed':
+                        i.buc_status = 'uncursed'
+                        i.buc_known = True
+                        count += 1
+                add_log(f"{COLOR_GREEN}{count} item(s) cleansed of seals and curses.{COLOR_RESET}")
+
+        # ----- MALACHAR: God of Fortitude (stats, max HP) -----
+        elif god_id == 8:
+            if tier == 0:
+                _grant_temp_buff(player_character, 'strength', 1, 10)
+                add_log(f"{COLOR_GREEN}+1 STR for the next 10 turns.{COLOR_RESET}")
+            elif tier == 1:
+                stat = random.choice(['strength', 'dexterity', 'intelligence'])
+                setattr(player_character, stat, getattr(player_character, stat) + 1)
+                add_log(f"{COLOR_GREEN}+1 {stat} (permanent).{COLOR_RESET}")
+            elif tier == 2:
+                stat = random.choice(['strength', 'dexterity', 'intelligence'])
+                setattr(player_character, stat, getattr(player_character, stat) + 1)
+                player_character.base_max_health_bonus += 10
+                player_character.health = min(player_character.max_health, player_character.health + 10)
+                add_log(f"{COLOR_GREEN}+10 max HP, +1 {stat}.{COLOR_RESET}")
+            else:  # tier 3
+                stats = random.sample(['strength', 'dexterity', 'intelligence'], 2)
+                for s in stats:
+                    setattr(player_character, s, getattr(player_character, s) + 1)
+                player_character.base_max_health_bonus += 20
+                player_character.health = min(player_character.max_health, player_character.health + 20)
+                add_log(f"{COLOR_GREEN}+20 max HP, +1 {stats[0]}, +1 {stats[1]}.{COLOR_RESET}")
+
+        gs.game_stats['altars_used'] = gs.game_stats.get('altars_used', 0) + 1
+        check_achievements(player_character)
+
+    def _check_devotion_unlock(player_character):
+        """If all 8 gods are at T3 (5+ sacrifices each) and the player
+        doesn't already have the Devotion rune, drop it into inventory
+        with a big banner."""
+        if gs.runes_obtained.get('devotion', False):
+            return
+        if not all(altar_piety_tier(gs.altar_piety.get(g, 0)) >= 3 for g in range(1, 9)):
+            return
+        # Devotion unlocked!
+        rune = Rune(name="Rune of Devotion", rune_type='devotion',
+                    description="A radiant rune pulsing with holy light.", value=0, level=0)
+        player_character.inventory.add_item(rune)
+        gs.runes_obtained['devotion'] = True
+        # Permanent stat bonus mirroring the old gate's reward
+        player_character.base_max_health_bonus += 20
+        player_character.strength += 2
+        player_character.intelligence += 2
         add_log("")
-        roll = random.random()
-        if roll < 0.50:
-            # Return a sealed weapon or armor (divine punishment — cannot be upgraded)
-            sealed_options = [
-                Weapon("Sealed Blade", "A blade bound by dark magic.", attack_bonus=max(1, player_character.z), value=10, level=player_character.z, is_sealed=True, buc_status='cursed'),
-                Armor("Sealed Mail", "Armor locked by a divine seal.", defense_bonus=max(1, player_character.z // 2), value=10, level=player_character.z, is_sealed=True, buc_status='cursed'),
-            ]
-            sealed_item = random.choice(sealed_options)
-            player_character.inventory.add_item(sealed_item)
-            add_log(f"{COLOR_RED}A {sealed_item.name} materializes in your hands - SEALED!{COLOR_RESET}")
-        else:
-            # Small gold pittance
-            gold = random.randint(5, 20)
-            player_character.gold += gold
-            add_log(f"{COLOR_YELLOW}The god tosses {gold} gold coins at your feet dismissively.{COLOR_RESET}")
+        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+        add_log(f"{COLOR_YELLOW}* THE RUNE OF DEVOTION IS YOURS! *{COLOR_RESET}")
+        add_log(f"{COLOR_YELLOW}All eight gods have welcomed your devotion.{COLOR_RESET}")
+        add_log(f"{COLOR_GREEN}Maximum Health +20 | Strength +2 | Intelligence +2{COLOR_RESET}")
+        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
+        check_achievements(player_character)
+
+    def _consume_altar():
+        """Crumble the altar tile, clear active state, and return the
+        player to game_loop via the standard room-interaction trigger."""
+        add_log("")
+        add_log(f"{COLOR_PURPLE}The altar crumbles to dust, its divine power spent.{COLOR_RESET}")
+        current_floor = my_tower.floors[player_character.z]
+        room = current_floor.grid[player_character.y][player_character.x]
+        room.room_type = '.'
+        gs.active_altar_state = None
+        gs.altar_action = None
+        _get_trigger_room_interaction()(player_character, my_tower)
 
     # -------------------------------------------------------------------------
     # INIT
@@ -382,50 +599,41 @@ def process_altar_action(player_character, my_tower, cmd):
         current_floor = my_tower.floors[player_character.z]
         room = current_floor.grid[player_character.y][player_character.x]
 
-        # Assign blessed god for this altar if not already set
+        # Assign blessed god for this altar if not already set.  No more
+        # hunch / guess mechanic -- the god is plainly identified.
         if 'blessed_god_id' not in room.properties:
             room.properties['blessed_god_id'] = random.choice(list(gods.keys()))
 
         blessed_god_id = room.properties['blessed_god_id']
         blessed_god_info = gods[blessed_god_id]
 
-        # Hunch - intelligence-based chance of seeing the true god
-        hunch_chance = min(0.95, max(0.10, 0.10 + (player_character.intelligence - 10) * 0.03))
-        if random.random() < hunch_chance:
-            room.properties['hunch_god_id'] = blessed_god_id
-        else:
-            room.properties['hunch_god_id'] = random.choice(list(gods.keys()))
-
         add_log(f"{COLOR_PURPLE}You enter a sacred chamber...{COLOR_RESET}")
         add_log(f"{blessed_god_info['altar_desc']}")
         add_log("")
-        hunch_god = gods[room.properties['hunch_god_id']]
-        add_log(f"{COLOR_CYAN}You sense this altar belongs to {hunch_god['name']}. It hungers for: {hunch_god['item_label']} (INT {player_character.intelligence} intuition){COLOR_RESET}")
-        add_log("")
-        add_log(f"{COLOR_YELLOW}Sacrifice an item from your inventory. Choose wisely - please the god for great rewards.{COLOR_RESET}")
-
-        # Show Devotion Rune hint if player qualifies
-        if not gs.runes_obtained.get('devotion', False):
-            gold_req = gs.rune_progress_reqs.get('gold_obtained', 500)
-            hp_req = gs.rune_progress_reqs.get('player_health_obtained', 50)
-            if player_character.gold >= gold_req and player_character.health >= hp_req:
-                add_log("")
-                add_log(f"{COLOR_YELLOW}[9] - Offer {gold_req} gold and {hp_req} HP to all gods for the Rune of Devotion.{COLOR_RESET}")
+        add_log(f"<span style='color: {blessed_god_info['color']}; font-weight: bold;'>{blessed_god_info['symbol']} {blessed_god_info['name']}</span>")
+        add_log(f"{COLOR_CYAN}{blessed_god_info['title']} &middot; sacrifices: <b>{blessed_god_info['item_label']}</b>{COLOR_RESET}")
+        piety = gs.altar_piety.get(blessed_god_id, 0)
+        tier, to_next, target = _piety_to_next_tier(piety)
+        if to_next is None:
+            add_log(f"{COLOR_YELLOW}Your piety: ★★★ TIER 3 (max).{COLOR_RESET}")
+        else:
+            stars = '★' * tier + '☆' * (3 - tier)
+            add_log(f"{COLOR_YELLOW}Your piety: {stars} Tier {tier} ({piety}/{target} sacrifices to T{tier + 1}).{COLOR_RESET}")
+        add_log(f"{COLOR_GREEN}Pray (free) -> {blessed_god_info['tier_labels'][tier]}{COLOR_RESET}")
+        add_log(f"{COLOR_GREY}Sacrifice an item to build piety and unlock higher tiers.{COLOR_RESET}")
 
         gs.active_altar_state = {'gods': gods, 'blessed_id': blessed_god_id}
         return
 
     # -------------------------------------------------------------------------
-    # SUB-ACTION ROUTING: sacrifice numpad mode
+    # SUB-ACTION ROUTING: sacrifice picker
     # -------------------------------------------------------------------------
     # When altar_action is 'sacrifice', bare numbers prefix with 's'
     # (legacy keyboard input; the tap UI sends 's1'/'s2'/... directly)
     if gs.altar_action == 'sacrifice' and cmd.isdigit():
         cmd = 's' + cmd
 
-    # Sacrifice picker: open / cancel.  The default altar view shows a
-    # "Sacrifice" action chip that sends 'sac' to flip into the picker
-    # sub-mode; the picker's BACK chip sends 'cancel' to flip back.
+    # Sacrifice picker: open / cancel.
     if cmd == 'sac':
         gs.altar_action = 'sacrifice'
         return
@@ -434,153 +642,62 @@ def process_altar_action(player_character, my_tower, cmd):
         return
 
     # -------------------------------------------------------------------------
-    # SPECIAL: Devotion Rune ultimate offering (cmd = '9' shortcut kept)
+    # PRAY: claim the current piety tier reward, then consume the altar
     # -------------------------------------------------------------------------
-    if cmd == '9' and not gs.runes_obtained['devotion'] and player_character.gold >= 500 and player_character.health >= 50:
-        add_log("")
-        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-        add_log(f"{COLOR_YELLOW}You offer 500 gold and 50 health to all the gods...{COLOR_RESET}")
-        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-        add_log("")
-        player_character.gold -= 500
-        player_character.health -= 50
-        player_character.base_max_health_bonus += 20
-        player_character.strength += 2
-        player_character.intelligence += 2
-        add_log(f"{COLOR_GREEN}The gods accept your ultimate sacrifice!{COLOR_RESET}")
-        add_log(f"{COLOR_GREEN}Maximum Health +20 | Strength +2 | Intelligence +2{COLOR_RESET}")
-        rune = Rune(name="Rune of Devotion", rune_type='devotion',
-                    description="A radiant rune pulsing with holy light.", value=0, level=0)
-        player_character.inventory.add_item(rune)
-        gs.runes_obtained['devotion'] = True
-        add_log("")
-        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-        add_log(f"{COLOR_YELLOW}* THE RUNE OF DEVOTION IS YOURS! *{COLOR_RESET}")
-        add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
-        current_floor = my_tower.floors[player_character.z]
-        room = current_floor.grid[player_character.y][player_character.x]
-        room.room_type = '.'
-        gs.active_altar_state = None
-        _get_trigger_room_interaction()(player_character, my_tower)
+    if cmd == 'pray':
+        blessed_id = gs.active_altar_state['blessed_id']
+        god_info = gods[blessed_id]
+        piety = gs.altar_piety.get(blessed_id, 0)
+        tier = altar_piety_tier(piety)
+        _apply_pray_reward(player_character, blessed_id, god_info, tier)
+        _consume_altar()
         return
 
     # -------------------------------------------------------------------------
-    # ITEM SACRIFICE - player types s# to sacrifice that inventory item (e.g., s1, s2)
+    # ITEM SACRIFICE - 's<n>' from the picker.
+    # Wrong-type item: rejected, item kept, altar NOT consumed.
+    # Right-type item: removed, +1 piety, sacrifice reward, altar consumed,
+    # Devotion check.
     # -------------------------------------------------------------------------
     if (cmd.startswith('s') and len(cmd) > 1 and cmd[1:].isdigit()):
         item_index = int(cmd[1:]) - 1
         sorted_items = get_sorted_inventory(player_character.inventory)
-        # Filter out Runes, Shards and Keys - those can't be sacrificed
         sacrificeable = [it for it in sorted_items if not isinstance(it, (Rune, Shard))]
 
-        if 0 <= item_index < len(sacrificeable):
-            item = sacrificeable[item_index]
-            blessed_id = gs.active_altar_state['blessed_id']
-            god_info = gods[blessed_id]
-            floor_level = player_character.z
+        if not (0 <= item_index < len(sacrificeable)):
+            add_log(f"{COLOR_YELLOW}No item at that number.{COLOR_RESET}")
+            return
 
-            add_log("")
-            add_log(f"{COLOR_PURPLE}You place {item.name} upon the altar...{COLOR_RESET}")
-            add_log("")
+        item = sacrificeable[item_index]
+        blessed_id = gs.active_altar_state['blessed_id']
+        god_info = gods[blessed_id]
 
-            # Remove item from inventory first
-            player_character.inventory.remove_item(item.name)
+        # Wrong type: reject, keep item, altar untouched.  Player can
+        # close the picker (cancel) or pick another item.
+        if not _item_matches_god(item, god_info):
+            add_log(f"{COLOR_YELLOW}{god_info['name']} has no use for {item.name}. The {god_info['item_label'].lower()} are what they crave.{COLOR_RESET}")
+            return
 
-            # Check if item matches god's affinity
-            if _item_matches_god(item, god_info):
-                _apply_pleased_reward(player_character, item, blessed_id, god_info, floor_level)
-            else:
-                _apply_displeased_punishment(player_character, god_info, floor_level)
+        # Right type: consume item + grant piety + sacrifice reward.
+        add_log("")
+        add_log(f"{COLOR_PURPLE}You place {item.name} upon the altar...{COLOR_RESET}")
+        player_character.inventory.remove_item(item.name)
+        gs.altar_piety[blessed_id] = gs.altar_piety.get(blessed_id, 0) + 1
+        new_piety = gs.altar_piety[blessed_id]
+        new_tier = altar_piety_tier(new_piety)
+        old_tier = altar_piety_tier(new_piety - 1)
 
-            # Destroy altar
-            add_log("")
-            add_log(f"{COLOR_PURPLE}The altar crumbles to dust, its divine power spent.{COLOR_RESET}")
-            current_floor = my_tower.floors[player_character.z]
-            room = current_floor.grid[player_character.y][player_character.x]
-            room.room_type = '.'
-            gs.active_altar_state = None
-            _get_trigger_room_interaction()(player_character, my_tower)
-        else:
-            add_log(f"{COLOR_YELLOW}No item at that number. Use s1-s{len(sacrificeable)} to sacrifice.{COLOR_RESET}")
+        _apply_sacrifice_reward(player_character, item, blessed_id, god_info)
+
+        if new_tier > old_tier:
+            add_log(f"{COLOR_YELLOW}Your piety with {god_info['name']} reaches <b>Tier {new_tier}</b>!{COLOR_RESET}")
+
+        _check_devotion_unlock(player_character)
+        _consume_altar()
         return
 
     # -------------------------------------------------------------------------
-    # -------------------------------------------------------------------------
-    # BUC ALTAR ACTIONS: Detect, Bless, Purify
-    # -------------------------------------------------------------------------
-    if cmd == 'd':
-        # DETECT BUC — reveals BUC status of all equipped items
-        equipped = [('weapon', player_character.equipped_weapon),
-                    ('armor', player_character.equipped_armor)]
-        equipped += [(f'acc {i+1}', acc) for i, acc in enumerate(player_character.equipped_accessories) if acc]
-        revealed_any = False
-        for slot_name, item in equipped:
-            if item and hasattr(item, 'buc_known') and not item.buc_known:
-                item.buc_known = True
-                revealed_any = True
-                if item.buc_status == 'blessed':
-                    add_log(f"{COLOR_GREEN}Your {slot_name} ({item.name}) glows BLUE — it is blessed!{COLOR_RESET}")
-                elif item.buc_status == 'cursed':
-                    add_log(f"{COLOR_RED}Your {slot_name} ({item.name}) glows BLACK — it is cursed!{COLOR_RESET}")
-                else:
-                    add_log(f"{COLOR_GREY}Your {slot_name} ({item.name}) glows WHITE — it is uncursed.{COLOR_RESET}")
-        if not revealed_any:
-            add_log(f"{COLOR_YELLOW}You already know the BUC status of all your equipped gear.{COLOR_RESET}")
-        else:
-            add_log(f"{COLOR_CYAN}The altar's light fades.{COLOR_RESET}")
-        return
-
-    elif cmd == 'b':
-        # BLESS ITEM — upgrade one equipped uncursed item to blessed (costs gold)
-        bless_cost = 100 + player_character.z * 10
-        candidates = []
-        if player_character.equipped_weapon and getattr(player_character.equipped_weapon, 'buc_status', '') == 'uncursed':
-            candidates.append(('weapon', player_character.equipped_weapon))
-        if player_character.equipped_armor and getattr(player_character.equipped_armor, 'buc_status', '') == 'uncursed':
-            candidates.append(('armor', player_character.equipped_armor))
-        if not candidates:
-            add_log(f"{COLOR_YELLOW}You have no uncursed equipped weapon or armor to bless.{COLOR_RESET}")
-            add_log(f"{COLOR_GREY}(Items must be uncursed. Remove curse first if cursed.){COLOR_RESET}")
-            return
-        if player_character.gold < bless_cost:
-            add_log(f"{COLOR_RED}Blessing requires {bless_cost} gold. You have {player_character.gold}.{COLOR_RESET}")
-            return
-        # Bless the first candidate (weapon priority)
-        slot_name, item = candidates[0]
-        player_character.gold -= bless_cost
-        item.buc_status = 'blessed'
-        item.buc_known = True
-        add_log(f"{COLOR_GREEN}You offer {bless_cost} gold to the altar...{COLOR_RESET}")
-        add_log(f"{COLOR_YELLOW}Divine light bathes your {item.name}! It is now BLESSED!{COLOR_RESET}")
-        add_log(f"{COLOR_CYAN}(Blessed equipment grants +2 attack or defense.){COLOR_RESET}")
-        return
-
-    elif cmd == 'u':
-        # PURIFY — remove curse from one equipped item (costs 10% max HP)
-        hp_cost = max(5, player_character.max_health // 10)
-        cursed_equipped = []
-        if player_character.equipped_weapon and getattr(player_character.equipped_weapon, 'buc_status', '') == 'cursed':
-            cursed_equipped.append(('weapon', player_character.equipped_weapon))
-        if player_character.equipped_armor and getattr(player_character.equipped_armor, 'buc_status', '') == 'cursed':
-            cursed_equipped.append(('armor', player_character.equipped_armor))
-        if not cursed_equipped:
-            add_log(f"{COLOR_YELLOW}None of your equipped items are cursed.{COLOR_RESET}")
-            return
-        if player_character.health <= hp_cost:
-            add_log(f"{COLOR_RED}Purification costs {hp_cost} HP as penance. You don't have enough health.{COLOR_RESET}")
-            return
-        # Purify the first cursed item
-        slot_name, item = cursed_equipped[0]
-        player_character.health -= hp_cost
-        item.buc_status = 'uncursed'
-        item.buc_known = True
-        add_log(f"{COLOR_RED}You offer {hp_cost} HP as penance to the altar...{COLOR_RESET}")
-        add_log(f"{COLOR_GREEN}The curse on {item.name} is purified! It is now uncursed.{COLOR_RESET}")
-        add_log(f"{COLOR_GREY}(You can now unequip it or bless it with gold.){COLOR_RESET}")
-        return
-
-    # -------------------------------------------------------------------------
-    # NAVIGATION / OTHER
+    # NAVIGATION
     # -------------------------------------------------------------------------
     if cmd == 'x':
         add_log("You step away from the altar.")
@@ -600,7 +717,205 @@ def process_altar_action(player_character, my_tower, cmd):
         gs.game_should_quit = True
         add_log("You abandon the altar.")
     else:
-        add_log(f"{COLOR_YELLOW}Enter s# to sacrifice (e.g., s1), 'i' for inventory, or step away.{COLOR_RESET}")
+        add_log(f"{COLOR_YELLOW}Tap Pray, Sacrifice, or step away.{COLOR_RESET}")
+
+
+# =========================================================================
+# ALTAR REWARD HELPERS
+# Used by _apply_sacrifice_reward and _apply_pray_reward inside
+# process_altar_action.  Module-level so they can be reused / tested
+# independently of the giant nested closure they're called from.
+# =========================================================================
+
+def _find_most_damaged_weapon(pc):
+    """Return the inventory weapon with the lowest durability ratio
+    (current/max), only considering identified weapons.  None if no
+    qualifying weapon exists."""
+    best = None
+    best_ratio = 1.0
+    for it in pc.inventory.items:
+        if not isinstance(it, Weapon):
+            continue
+        if not getattr(it, 'identified', True):
+            continue
+        max_d = getattr(it, 'max_durability', None)
+        cur_d = getattr(it, 'durability', None)
+        if not max_d or cur_d is None or max_d <= 0:
+            continue
+        ratio = cur_d / max_d
+        if ratio < best_ratio and ratio < 1.0:
+            best_ratio = ratio
+            best = it
+    return best
+
+
+def _find_most_damaged_armor(pc):
+    """Return the inventory armor with the lowest durability ratio."""
+    best = None
+    best_ratio = 1.0
+    for it in pc.inventory.items:
+        if not isinstance(it, Armor):
+            continue
+        if not getattr(it, 'identified', True):
+            continue
+        max_d = getattr(it, 'max_durability', None)
+        cur_d = getattr(it, 'durability', None)
+        if not max_d or cur_d is None or max_d <= 0:
+            continue
+        ratio = cur_d / max_d
+        if ratio < best_ratio and ratio < 1.0:
+            best_ratio = ratio
+            best = it
+    return best
+
+
+def _reveal_random_rooms(pc, my_tower, count):
+    """Reveal up to `count` random undiscovered rooms on the current floor.
+    Returns the actual number revealed."""
+    floor = my_tower.floors[pc.z]
+    candidates = []
+    for r in range(floor.rows):
+        for c in range(floor.cols):
+            room = floor.grid[r][c]
+            if room.room_type != '#' and not room.discovered:
+                candidates.append(room)
+    if not candidates:
+        return 0
+    chosen = random.sample(candidates, min(count, len(candidates)))
+    for room in chosen:
+        room.discovered = True
+    return len(chosen)
+
+
+def _reveal_radius(pc, my_tower, radius):
+    """Reveal all non-wall rooms within `radius` (Chebyshev) of the
+    player.  Returns the count of newly-revealed rooms."""
+    floor = my_tower.floors[pc.z]
+    revealed = 0
+    for r in range(max(0, pc.y - radius), min(floor.rows, pc.y + radius + 1)):
+        for c in range(max(0, pc.x - radius), min(floor.cols, pc.x + radius + 1)):
+            room = floor.grid[r][c]
+            if room.room_type != '#' and not room.discovered:
+                room.discovered = True
+                revealed += 1
+    return revealed
+
+
+def _reveal_entire_floor(pc, my_tower):
+    """Mark every non-wall tile on the current floor as discovered."""
+    floor = my_tower.floors[pc.z]
+    revealed = 0
+    for r in range(floor.rows):
+        for c in range(floor.cols):
+            room = floor.grid[r][c]
+            if room.room_type != '#' and not room.discovered:
+                room.discovered = True
+                revealed += 1
+    return revealed
+
+
+def _identify_all_unidentified(pc):
+    """Identify every unidentified item in the player's inventory."""
+    from .items import identify_item
+    for it in list(pc.inventory.items):
+        if not getattr(it, 'identified', True):
+            identify_item(it, silent=True)
+
+
+def _reveal_buc_on_equipped(pc):
+    """Set buc_known=True on every equipped item that has BUC tracking."""
+    for it in [pc.equipped_weapon, pc.equipped_armor] + list(pc.equipped_accessories):
+        if it is not None and hasattr(it, 'buc_known'):
+            it.buc_known = True
+
+
+def _drop_random_spell_scroll(pc, floor_level):
+    """Place a random spell scroll suited to the floor in inventory."""
+    candidates = [s for s in SCROLL_TEMPLATES
+                  if s.scroll_type == 'spell_scroll' and s.level <= floor_level + 2]
+    if not candidates:
+        return None
+    template = random.choice(candidates)
+    scroll = _create_item_copy(template)
+    pc.inventory.add_item(scroll)
+    return scroll
+
+
+def _grant_temp_buff(pc, stat, amount, turns):
+    """Apply a temporary additive buff to attack/defense/strength etc.
+    Stored in pc.status_effects as a countdown; the existing turn-tick
+    in game_systems decrements and reverts these.  Falls back to
+    permanent if status_effects isn't available."""
+    key = f"altar_buff_{stat}"
+    # Initialise status_effects entry mirroring how potion buffs work
+    if hasattr(pc, 'status_effects') and isinstance(pc.status_effects, dict):
+        pc.status_effects[key] = {'turns': turns, 'stat': stat, 'amount': amount}
+    # Apply immediately via underlying field if it exists
+    if stat == 'attack':
+        pc._base_attack = (getattr(pc, '_base_attack', 0) or 0) + amount
+    elif stat == 'defense':
+        pc._base_defense = (getattr(pc, '_base_defense', 0) or 0) + amount
+    elif hasattr(pc, stat):
+        setattr(pc, stat, getattr(pc, stat) + amount)
+
+
+def _spawn_garden_on_floor(pc, my_tower, fey=False):
+    """Convert one random empty floor tile into a Garden room.  Returns
+    True if a garden was placed, False if no valid tile exists."""
+    floor = my_tower.floors[pc.z]
+    candidates = []
+    for r in range(floor.rows):
+        for c in range(floor.cols):
+            room = floor.grid[r][c]
+            if room.room_type == '.' and (c != pc.x or r != pc.y):
+                candidates.append((c, r))
+    if not candidates:
+        return False
+    gx, gy = random.choice(candidates)
+    target = floor.grid[gy][gx]
+    target.room_type = 'G'
+    if fey:
+        target.properties['is_fey_garden'] = True
+        target.properties['fey_garden_floor_level'] = pc.z
+    return True
+
+
+def _spawn_fey_garden_now(pc, my_tower):
+    """Spawn a Fey Garden via the existing game_systems helper, which
+    also wires up the ephemeral-garden expiration timer."""
+    from .game_systems import _spawn_fey_garden
+    _spawn_fey_garden(pc, my_tower)
+
+
+def _regrow_all_gardens_on_floor(pc):
+    """Clear harvested-garden flags for the current floor so each
+    garden is harvestable again.  Returns the count of tiles that were
+    reset."""
+    floor_z = pc.z
+    keys_to_clear = [k for k in gs.harvested_gardens if k[2] == floor_z]
+    for k in keys_to_clear:
+        gs.harvested_gardens.pop(k, None)
+    return len(keys_to_clear)
+
+
+def _teleport_to_vendor_and_restock(pc, my_tower):
+    """Move the player to a random vendor tile on the current floor and
+    refresh that vendor's inventory.  Returns True on success."""
+    from .items import restock_vendor_at
+    floor = my_tower.floors[pc.z]
+    vendors = []
+    for r in range(floor.rows):
+        for c in range(floor.cols):
+            if floor.grid[r][c].room_type == 'V':
+                vendors.append((c, r))
+    if not vendors:
+        return False
+    vx, vy = random.choice(vendors)
+    pc.x, pc.y = vx, vy
+    floor.grid[vy][vx].discovered = True
+    restock_vendor_at(my_tower, pc, vx, vy)
+    return True
+
 
 def process_pool_action(player_character, my_tower, cmd):
 

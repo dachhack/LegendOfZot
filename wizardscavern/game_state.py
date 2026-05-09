@@ -314,6 +314,13 @@ runes_obtained = {
     'knowledge': False, 'secrets': False, 'eternity': False, 'growth': False,
 }
 
+# Per-god piety counter for the altar tier system (single-run; resets
+# on new game, not persisted in saves).  Keys are god IDs 1-8, values
+# are the count of successful sacrifices made to that god this run.
+# Tiers unlock at 1 / 3 / 5 sacrifices.  When all 8 gods reach T3,
+# the Rune of Devotion auto-drops into the player's inventory.
+altar_piety = {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0}
+
 shards_obtained = {
     'battle': False, 'treasure': False, 'devotion': False, 'reflection': False,
     'knowledge': False, 'secrets': False, 'eternity': False, 'growth': False,
