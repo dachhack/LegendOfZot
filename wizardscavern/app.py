@@ -3829,19 +3829,19 @@ class WizardsCavernApp(toga.App):
             color = "#4CAF50" if fuel > 5 else ("#FFD700" if fuel > 2 else "#F44336")
             lit = " (lit)" if getattr(lantern, 'is_lit', False) else ""
             lantern_line = (
-                f'<div style="margin-top: 4px; color: #BBB; font-size: 11px;">'
+                f'<div style="margin-top: 6px; color: #BBB; font-size: 13px;">'
                 f'Lantern: <span style="color: {color};">fuel {fuel}</span>{lit}'
                 f'</div>'
             )
 
         return (
-            '<div class="room-panel" style="width: 100%; padding: 8px 10px; '
+            '<div class="room-panel" style="width: 100%; padding: 10px 12px; '
             'border: 1px solid #444; border-radius: 4px; background: #1c1c1c;">'
-            f'<div style="color: #FFD27A; font-size: 11px; letter-spacing: 1px; '
-            f'text-transform: uppercase; margin-bottom: 3px;">'
+            f'<div style="color: #FFD27A; font-size: 13px; letter-spacing: 1px; '
+            f'text-transform: uppercase; margin-bottom: 5px;">'
             f'Floor {ch.z + 1}'
             '</div>'
-            f'<div style="color: #CCC; font-size: 12px; line-height: 1.35;">{flavor}</div>'
+            f'<div style="color: #DDD; font-size: 14px; line-height: 1.4;">{flavor}</div>'
             f'{lantern_line}'
             '</div>'
         )
@@ -8032,14 +8032,14 @@ class WizardsCavernApp(toga.App):
                 action_cards_html += "</div>"
 
                 altar_html = f"""
-                    <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
-                        <div style="display:flex; align-items:center; gap:6px; margin-bottom:4px;">
+                    <div style="border: 2px solid #555; border-radius: 3px; padding: 8px 10px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                        <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
                             <div style="flex-shrink:0;">{altar_sprite}</div>
                             <div style="flex:1; min-width:0;">
-                                <div style="font-size: 12px; font-weight: bold; color: {hunch_god.get('color','#DDD')}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
+                                <div style="font-size: 16px; font-weight: bold; color: {hunch_god.get('color','#DDD')}; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;">
                                     {hunch_god.get('symbol','?')} {hunch_god.get('name','Unknown')}
                                 </div>
-                                <div style="font-size: 9px; color: #AAA;">
+                                <div style="font-size: 12px; color: #AAA; margin-top: 2px;">
                                     {hunch_god.get('title','')} &middot; hungers for <b style="color:#FFD700;">{hunch_god.get('item_label','?')}</b>
                                 </div>
                             </div>
@@ -8493,16 +8493,16 @@ class WizardsCavernApp(toga.App):
             dungeon_sprite = generate_room_sprite_html('N', variant=dng_variant, seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
 
             dungeon_html = f"""
-                <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 8px 10px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
                         <div style="flex-shrink:0;">{dungeon_sprite}</div>
-                        <div style="color: #DDD; font-size: 11px; line-height: 1.25;">
+                        <div style="color: #DDD; font-size: 13px; line-height: 1.3;">
                             A heavy iron door bars your way. Ancient runes glow faintly on its surface.
                         </div>
                     </div>
-                    <div style="margin-bottom: 4px;">
-                        <span style="color: #4CAF50; font-size: 11px; font-weight: bold;">[LOCKED]</span>
-                        <span style="color: #AAA; font-size: 9px;"> a monster on this floor holds the key&hellip;</span>
+                    <div style="margin-bottom: 6px;">
+                        <span style="color: #4CAF50; font-size: 13px; font-weight: bold;">[LOCKED]</span>
+                        <span style="color: #BBB; font-size: 11px;"> a monster on this floor holds the key&hellip;</span>
                     </div>
                     {action_html}
                 </div>
@@ -8561,8 +8561,8 @@ class WizardsCavernApp(toga.App):
                     "</div>"
                 )
             dungeon_html = f"""
-                <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
-                    <div style="color: #DDD; font-size: 11px; line-height: 1.25; margin-bottom: 6px;">
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 8px 10px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                    <div style="color: #DDD; font-size: 13px; line-height: 1.3; margin-bottom: 8px;">
                         The iron door stands open. {'The chamber has been emptied.' if already_looted else 'Treasures glint in the darkness within.'}
                     </div>
                     {loot_body}
@@ -10789,25 +10789,24 @@ class WizardsCavernApp(toga.App):
                 }}
                 /* Compact 2x3 grid for altar_mode action chips
                    (Detect / Bless / Purify / Sacrifice / Devotion) +
-                   1 filler when devotion isn't shown.  Packs five
-                   actions into ~64px so the 150px room-panel still
-                   has room for the god header above. */
+                   1 filler when devotion isn't shown.  240px panel
+                   slot fits larger labels comfortably. */
                 .altar-actions.compact {{
                     display: grid;
                     grid-template-columns: 1fr 1fr 1fr;
-                    gap: 3px;
-                    margin: 3px 0 0 0;
+                    gap: 4px;
+                    margin: 6px 0 0 0;
                 }}
                 .altar-actions.compact .taprow.altar-act {{
-                    padding: 3px 4px;
-                    line-height: 1.15;
+                    padding: 6px 6px;
+                    line-height: 1.2;
                 }}
                 .altar-actions.compact .taprow.altar-act .aname {{
-                    font-size: 10px;
+                    font-size: 13px;
                 }}
                 .altar-actions.compact .taprow.altar-act .ameta {{
-                    font-size: 8px;
-                    margin-top: 0;
+                    font-size: 10px;
+                    margin-top: 2px;
                 }}
                 .taprow.altar-act.sacrifice {{
                     background: linear-gradient(180deg, #2a1a1f 0%, #18101a 100%);
@@ -10820,13 +10819,13 @@ class WizardsCavernApp(toga.App):
                 }}
                 .taprow.altar-act .aname {{
                     font-weight: bold;
-                    font-size: 12px;
+                    font-size: 14px;
                     letter-spacing: 0.3px;
                 }}
                 .taprow.altar-act .ameta {{
-                    font-size: 10px;
-                    color: #888;
-                    margin-top: 2px;
+                    font-size: 12px;
+                    color: #AAA;
+                    margin-top: 3px;
                 }}
                 .taprow.altar-act.detect {{
                     background: linear-gradient(180deg, #13272e 0%, #0c1a1f 100%);
