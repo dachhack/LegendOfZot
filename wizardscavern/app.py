@@ -7456,6 +7456,51 @@ class WizardsCavernApp(toga.App):
             player_title = get_player_title(gs.player_character)
             player_display = f"{gs.player_character.name} {player_title}"
             
+            # Combat layout: Map | Combat Info | (empty space for consistency)
+            # Generate combat commands based on spell capability
+            can_cast = can_cast_spells(gs.player_character)
+            combat_commands = "a = attack | f = flee | i = inventory"
+            if can_cast:
+                combat_commands += " | c = cast spell"
+
+            # Channeling indicator — overlays the right-side dice slot
+            # inside player_panel.  No dice are rolling while the player
+            # concentrates, so we reuse that real-estate instead of
+            # adding a separate row that pushes the map down.
+            channeling_overlay = ""
+            if gs.spell_charging:
+                ch = gs.spell_charging
+                spell_name = ch['spell'].name
+                turns_left = ch['turns_remaining']
+                total_turns = ch['total_turns']
+                filled = total_turns - turns_left
+                bar_segments = ''.join(
+                    f'<span style="color:#E040FB;">{"*" if i < filled else "."}</span>'
+                    for i in range(total_turns)
+                )
+                channeling_overlay = f"""
+                    <div style="position:absolute; right:4px; top:50%; transform:translateY(-50%);
+                                width:150px; padding:4px 6px; border:2px solid #E040FB;
+                                border-radius:4px; background:rgba(224,64,251,0.12);
+                                animation: channelPulse 1.5s ease-in-out infinite;
+                                z-index: 6; text-align: center;">
+                        <div style="color: #E040FB; font-weight: bold; font-size: 10px; line-height: 1.1;">
+                            CHANNELING
+                        </div>
+                        <div style="color: #CE93D8; font-size: 9px; line-height: 1.1; margin-top: 1px;
+                                    overflow:hidden; text-overflow:ellipsis; white-space:nowrap;">
+                            {spell_name}
+                        </div>
+                        <div style="font-size: 10px; color: #E040FB; margin-top: 2px; letter-spacing: 1px;">
+                            [{bar_segments}]
+                        </div>
+                        <div style="font-size: 8px; color: #CE93D8; margin-top: 1px;">
+                            {turns_left} turn{'s' if turns_left != 1 else ''} left
+                        </div>
+                    </div>
+                """
+                combat_commands = "any key = continue channeling"
+
             # Compact Player Combat Info
             player_sprite_html_combat = generate_player_sprite_html(
                 getattr(gs.player_character, 'race', 'human'),
@@ -7477,47 +7522,12 @@ class WizardsCavernApp(toga.App):
                             {f'<div style="font-size: 8px; color: #FFB74D; margin-top: 1px;"> {", ".join(gs.player_character.elemental_weaknesses)}</div>' if gs.player_character.elemental_weaknesses else ''}
                             {f'<div style="font-size: 8px; color: #FDD835; margin-top: 1px;">{", ".join(gs.player_character.status_effects.keys())}</div>' if gs.player_character.status_effects else ''}
                     <div id="player_init_dice" style="position:absolute;right:100px;top:50%;transform:translateY(-50%) scale(1.55);transform-origin:right center;width:58px;height:44px;z-index:5;"></div><div id="player_dice" style="position:absolute;right:4px;top:50%;transform:translateY(-50%) scale(1.3);transform-origin:right center;width:68px;height:52px;display:flex;gap:4px;"><div id="player_atk_dice" style="position:relative;width:32px;height:52px;"></div><div id="player_def_dice" style="position:relative;width:32px;height:52px;"></div></div>
+                    {channeling_overlay}
                 </div>
                     </div>
-                    
+
                 </div>
                 """
-
-            # Combat layout: Map | Combat Info | (empty space for consistency)
-            # Generate combat commands based on spell capability
-            can_cast = can_cast_spells(gs.player_character)
-            combat_commands = "a = attack | f = flee | i = inventory"
-            if can_cast:
-                combat_commands += " | c = cast spell"
-
-            # Channeling indicator — shown when player is mid-channel
-            channeling_html = ""
-            if gs.spell_charging:
-                ch = gs.spell_charging
-                spell_name = ch['spell'].name
-                turns_left = ch['turns_remaining']
-                total_turns = ch['total_turns']
-                # Progress bar: filled segments for completed turns
-                filled = total_turns - turns_left
-                bar_segments = ''.join(
-                    f'<span style="color:#E040FB;">{"*" if i < filled else "."}</span>'
-                    for i in range(total_turns)
-                )
-                channeling_html = f"""
-                <div style="padding: 6px; border: 2px solid #E040FB; border-radius: 4px; margin-top: 4px;
-                            background: rgba(224,64,251,0.08); animation: channelPulse 1.5s ease-in-out infinite;">
-                    <div style="color: #E040FB; font-weight: bold; font-size: 12px; margin-bottom: 2px;">
-                        CHANNELING: {spell_name}
-                    </div>
-                    <div style="font-size: 10px; color: #CE93D8;">
-                        [{bar_segments}] {turns_left} turn{'s' if turns_left != 1 else ''} remaining
-                    </div>
-                    <div style="font-size: 9px; color: #888; margin-top: 2px;">
-                        Concentration: d20 + INT/{gs.player_character.intelligence // 4}
-                    </div>
-                </div>
-                """
-                combat_commands = "any key = continue channeling"
 
             # HTML combat action chips — replace the toga C/A/F/I buttons
             # that render invisible on some devices.  Channeling pauses the
@@ -7561,7 +7571,6 @@ class WizardsCavernApp(toga.App):
                         <div class="room-panel" style="width: 100%;">
                             {monster_html}
                             {player_combat_html}
-                            {channeling_html}
                         </div>
                         {grid_html}
                         {combat_chips_html}
