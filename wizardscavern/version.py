@@ -4,9 +4,10 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 211
+BUILD_NUMBER = 212
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
+    "Stats banner HTML bars: replaced the ASCII '[######----] 999/999' HP / MP bars in the stats banner with compact coloured HTML bars (.statbar). Coloured fill + centered numerical overlay; HP bar shifts green -> orange -> red as percentage drops, MP bar is blue. ~70px each (vs ~150px for the text version at width=10), so the stats line no longer wraps onto a third line at high values. Combat panel HP/MP bars still use the text version since their JS animation hooks update textContent in place",
     "Chip overflow target swap: previous round mistakenly tightened combat-bar -- combat was already fine. The actual overflow is on the inventory bar (5 chips: CRAFT / SPELLS / JOURNAL / QUIT / CLOSE) when spells are available. Reverted INVENTORY label + combat-bar class in combat back to default sizing; moved the tighter chip styling (padding 8x10, font 12, min-height 38, radius 14) onto .hudchips.inv-bar instead so the inventory chips fit on one line",
     "Three quick fixes: pinned the game log to a fixed 130px so it stays the same size across map / inventory / vendor / picker views; #content-area is now flex: 1 1 auto. Playtest mode (Tourist) now sets base_max_health_bonus=839 + level=10 + str=30 to land on exactly 999/999 HP and 999/999 MP (was setting health=9999 with only ~160 max HP)",
     "Layout tightening: with the post-font-bump altar / library / dungeon panels still using only ~150-160px of the 240px .room-panel slot, dropped the uniform interaction box 240 -> 200px. Also stripped bottom-pinned-zone padding 2/4 + border-top, and content-area padding 4 -> 0, so the map sits flush against the room-panel and the chips flush against the log",
