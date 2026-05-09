@@ -7550,14 +7550,14 @@ class WizardsCavernApp(toga.App):
                     )
                 _chips.append(
                     "<div class='hudchip' data-zcmd='i' "
-                    "onclick=\"window.__zotTap('i', this)\">INV</div>"
+                    "onclick=\"window.__zotTap('i', this)\">INVENTORY</div>"
                 )
                 _chips.append(
                     "<div class='hudchip exit' data-zcmd='f' "
                     "onclick=\"window.__zotTap('f', this)\">FLEE</div>"
                 )
                 combat_chips_html = (
-                    "<div class='hudchips combat-bar' style='margin-top:6px;'>"
+                    "<div class='hudchips' style='margin-top:6px;'>"
                     + "".join(_chips) +
                     "</div>"
                 )
@@ -10653,20 +10653,18 @@ class WizardsCavernApp(toga.App):
                     opacity: 0.35;
                     pointer-events: none;
                 }}
-                /* Inventory chip row: force one-line so 5 chips
-                   (CRAFT/SPELLS/JOURNAL/QUIT/CLOSE) never wrap on
-                   narrower phones. */
+                /* Inventory chip row: 5 chips (CRAFT / SPELLS /
+                   JOURNAL / QUIT / CLOSE) when spells are available.
+                   At default chip sizing (~80-90px each) that
+                   overflows ~360px-wide phones, so tighten the chip
+                   padding + font here.  flex-wrap: nowrap keeps them
+                   on a single row. */
                 .hudchips.inv-bar {{
                     flex-wrap: nowrap;
                     overflow-x: auto;
+                    gap: 4px;
                 }}
-                /* Combat chip row: ATTACK / CAST / INV / FLEE need to
-                   fit on one line on narrow phones (~360px wide), so
-                   force nowrap and tighten chip padding + font. */
-                .hudchips.combat-bar {{
-                    flex-wrap: nowrap;
-                }}
-                .hudchips.combat-bar .hudchip {{
+                .hudchips.inv-bar .hudchip {{
                     padding: 8px 10px;
                     font-size: 12px;
                     min-height: 38px;
