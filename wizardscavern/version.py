@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 213
+BUILD_NUMBER = 214
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Compress 3 panels + add DROP ROTTEN chip. (1) library_read_decision_mode (grimoire prompt), shrine_mode, and tomb_mode were overflowing the 200px room-panel slot and clipping the 2nd action button. Added .altar-actions.dual CSS (2-col grid for binary-choice rooms), tightened panel padding 12 -> 6/8, and rewrote each to use shorter labels + side-by-side buttons so both options stay visible. (2) Wired a new 'dr' (drop rotten) command in handle_inventory_menu that bulk-removes all rotten Meat from inventory; surfaces as a DROP ROTTEN chip on the inventory bar whenever the player is in the Eat filter and has rotten meat",
+    "Warp portal panel compression: same overflow as grimoire/shrine/tomb -- 'Enter the Portal' button was clipped at the bottom of the 200px room-panel slot. Applied the .altar-actions.dual treatment (2-col side-by-side Resist / Enter buttons), tightened padding 8 -> 6/8, shortened the flavor text ('A swirling portal pulls at you. Reality bends.') and the vault warning to a single inline line so both buttons stay visible",
+    "Compress 3 panels + DROP ROTTEN chip. library_read_decision_mode, shrine_mode, and tomb_mode were overflowing the 200px room-panel slot. Added .altar-actions.dual CSS for binary-choice rooms, tightened padding, shortened labels. Also wired 'dr' command + DROP ROTTEN chip in inventory's Eat filter to bulk-discard rotten Meat",
     "Stats banner HTML bars: replaced the ASCII '[######----] 999/999' HP / MP bars with compact coloured HTML bars (.statbar). Fill shifts green -> orange -> red as HP drops, MP bar is blue. ~70px each (vs ~150px for the text version at width=10), so the stats line no longer wraps at high values",
     "Chip overflow target swap: previous round mistakenly tightened combat-bar -- combat was already fine. The actual overflow is on the inventory bar (5 chips: CRAFT / SPELLS / JOURNAL / QUIT / CLOSE) when spells are available. Reverted INVENTORY label + combat-bar class in combat back to default sizing; moved the tighter chip styling (padding 8x10, font 12, min-height 38, radius 14) onto .hudchips.inv-bar instead so the inventory chips fit on one line",
     "Three quick fixes: pinned the game log to a fixed 130px so it stays the same size across map / inventory / vendor / picker views; #content-area is now flex: 1 1 auto. Playtest mode (Tourist) now sets base_max_health_bonus=839 + level=10 + str=30 to land on exactly 999/999 HP and 999/999 MP (was setting health=9999 with only ~160 max HP)",

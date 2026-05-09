@@ -8241,38 +8241,34 @@ class WizardsCavernApp(toga.App):
             
             vault_warning = ""
             if is_vault_warp:
-                vault_warning = """
-                    <div style="padding: 6px; margin-top: 8px; border-radius: 3px; border-left: 3px solid #F44336;">
-                        <div style="color: #F44336; font-size: 12px; font-weight: bold;">Warning!</div>
-                        <div style="color: #DDD; font-size: 9px; margin-top: 2px;">This portal pulses with vault energy. You may be drawn to a sealed chamber with no escape!</div>
-                    </div>
-                """
-            
-            # Warp info box + binary tap choice.
+                vault_warning = (
+                    '<div style="color:#F44336; font-size:11px; font-weight:bold; margin-top:2px;">'
+                    '⚠ Vault energy &mdash; may seal you in.'
+                    '</div>'
+                )
+
+            # Warp info box + binary tap choice in a 2-col grid so both
+            # buttons fit inside the 200px room-panel slot.
             warp_sprite = generate_room_sprite_html('W', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             warp_html = f"""
-                <div style="
-                            border: 2px solid #555;
-                            border-radius: 3px;
-                            padding: 8px;
-                            ">
-                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:5px;">
+                <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
+                    <div style="display:flex; align-items:center; gap:8px; margin-bottom:4px;">
                         <div style="flex-shrink:0;">{warp_sprite}</div>
-                        <div style="color: #DDD; font-size: 12px; line-height: 1.4;">
-                             A swirling portal of magical energy appears before you! Reality bends and warps around its edges. You feel an irresistible pull drawing you toward the depths...
+                        <div style="color: #DDD; font-size: 12px; line-height: 1.3;">
+                             A swirling portal pulls at you. Reality bends.
                         </div>
                     </div>
                     {vault_warning}
-                    <div class='altar-actions'>
+                    <div class='altar-actions dual' style='margin-top:6px;'>
                         <div class='taprow altar-act blessing' data-zcmd='y'
                              onclick="window.__zotTap('y', this)">
-                            <div class='aname'>Resist the Warp</div>
-                            <div class='ameta'>Intelligence check &mdash; success keeps you here</div>
+                            <div class='aname'>Resist</div>
+                            <div class='ameta'>INT check</div>
                         </div>
                         <div class='taprow altar-act mystic' data-zcmd='n'
                              onclick="window.__zotTap('n', this)">
-                            <div class='aname'>Enter the Portal</div>
-                            <div class='ameta'>Step in willingly &mdash; reality will reshape around you</div>
+                            <div class='aname'>Enter</div>
+                            <div class='ameta'>step willingly</div>
                         </div>
                     </div>
                 </div>
