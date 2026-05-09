@@ -3573,21 +3573,25 @@ def activate_playtest_mode(player_character):
     add_log(f"{COLOR_YELLOW}     gs.PLAYTEST MODE ACTIVATED!          {COLOR_RESET}")
     add_log(f"{COLOR_YELLOW}========================================{COLOR_RESET}")
 
-    # Boost stats significantly
-    player_character.health = 9999
-    player_character._base_attack = 50
-    player_character._base_defense = 50
+    # Boost stats significantly. max_health is computed as
+    #   level*10 + strength*2 + base_max_health_bonus
+    # so to land on exactly 999 max HP with level 10 + str 30 (= 160
+    # from the formula) we set base_max_health_bonus = 839.
+    player_character.level = 10
     player_character.strength = 30
     player_character.dexterity = 30
     player_character.intelligence = 30
-    player_character.level = 10
+    player_character.base_max_health_bonus = 839
+    player_character.health = 999
+    player_character._base_attack = 50
+    player_character._base_defense = 50
     player_character.experience = 10000
     player_character.gold = 99999
     player_character.mana = 999
     player_character._max_mana = 999
 
     add_log(f"{COLOR_GREEN}Stats maxed out for testing!{COLOR_RESET}")
-    add_log(f"{COLOR_GREEN}HP: 9999, Mana: 999, Gold: 99999{COLOR_RESET}")
+    add_log(f"{COLOR_GREEN}HP: 999/999, Mana: 999/999, Gold: 99999{COLOR_RESET}")
 
     # Add powerful starting equipment (equipped)
     playtest_weapon = Weapon(
