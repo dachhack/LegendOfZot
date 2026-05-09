@@ -2031,6 +2031,22 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         gs.inventory_filter = 'eat'
         return
 
+    # --- Drop Rotten: bulk-discard all rotten Meat from inventory ---
+    if cmd == 'dr':
+        from .items import Meat
+        rotten = [i for i in player_character.inventory.items
+                  if isinstance(i, Meat) and getattr(i, 'is_rotten', False)]
+        if not rotten:
+            add_log(f"{COLOR_YELLOW}No rotten food to discard.{COLOR_RESET}")
+        else:
+            count = 0
+            for item in rotten:
+                player_character.inventory.remove_item(item.name)
+                count += 1
+            label = "piece" if count == 1 else "pieces"
+            add_log(f"{COLOR_GREEN}Discarded {count} rotten {label} of meat.{COLOR_RESET}")
+        return
+
     # Apply active inventory filter to narrow working_items for numbered commands.
     # Must stay in sync with the render filter in app.py (inventory view).
     if gs.inventory_filter == 'use':
