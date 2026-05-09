@@ -948,6 +948,58 @@ def mana_bar(current, maximum, width=20):
     return f"{bar} {cur_str}/{max_str}"
 
 
+def _statbar_format_pair(current, maximum):
+    """Format current/maximum as a compact 'cur/max' string with k-suffix
+    once values cross 1000 so the overlay stays inside the bar width."""
+    if maximum >= 1000:
+        cur_str = f"{current//1000}k" if current >= 1000 else str(current)
+        max_str = f"{maximum//1000}k"
+    else:
+        cur_str = str(current)
+        max_str = str(maximum)
+    return f"{cur_str}/{max_str}"
+
+
+def health_bar_html(current, maximum, width=70):
+    """Compact HTML HP bar — coloured fill + centered text overlay.
+
+    Used on the stats banner where the text-based bar (`[####----]
+    999/999`) eats too much horizontal space and forces the line to
+    wrap at high stats.  Combat panels still use the text version
+    because their JS hooks update textContent in place."""
+    if maximum <= 0:
+        pct = 0
+    else:
+        pct = max(0, min(100, (current / maximum) * 100))
+    if pct >= 60:
+        fill_color = "#4CAF50"  # green
+    elif pct >= 30:
+        fill_color = "#FFA726"  # orange
+    else:
+        fill_color = "#E53935"  # red
+    label = _statbar_format_pair(current, maximum)
+    return (
+        f'<span class="statbar" style="width:{width}px;">'
+        f'<span class="statbar-fill" style="width:{pct:.0f}%; background:{fill_color};"></span>'
+        f'<span class="statbar-text">{label}</span>'
+        f'</span>'
+    )
+
+
+def mana_bar_html(current, maximum, width=70):
+    """Compact HTML MP bar — same shape as health_bar_html, blue fill."""
+    if maximum <= 0:
+        return ""
+    pct = max(0, min(100, (current / maximum) * 100))
+    label = _statbar_format_pair(current, maximum)
+    return (
+        f'<span class="statbar" style="width:{width}px;">'
+        f'<span class="statbar-fill" style="width:{pct:.0f}%; background:#42A5F5;"></span>'
+        f'<span class="statbar-text">{label}</span>'
+        f'</span>'
+    )
+
+
 def generate_hp_drain_js(monster_cur_hp, monster_max_hp, player_cur_hp, player_max_hp,
                           monster_dmg, player_dmg, player_heal, has_init_roll):
     """Schedule HP bar text updates to land at the damage-float timing.
@@ -5258,7 +5310,7 @@ class WizardsCavernApp(toga.App):
             player_stats_html = f"""
                 <div style="font-family: monospace; font-size: 12px; margin-bottom: 4px; padding: 3px; background: #1a1a1a; border-radius: 2px;">
                     <b>{gs.player_character.name}</b> Lv{gs.player_character.level} | F{gs.player_character.z + 1} ({gs.player_character.x},{gs.player_character.y}) | {gs.player_character.gold}g | {gs.player_character.experience}xp<br>
-                    HP:<span class="player-hp-bar">{health_bar(_p_display_hp, gs.player_character.max_health, width=10)}</span> MP:{mana_bar(gs.player_character.mana, gs.player_character.max_mana, width=10)} | <span style="color:{hunger_color};">H:{gs.player_character.hunger}</span>
+                    HP:{health_bar_html(_p_display_hp, gs.player_character.max_health, width=70)} MP:{mana_bar_html(gs.player_character.mana, gs.player_character.max_mana, width=70)} <span style="color:{hunger_color};">H:{gs.player_character.hunger}</span>
                 </div>
             """
         else:
@@ -10276,6 +10328,41 @@ class WizardsCavernApp(toga.App):
                     font-family: monospace;
                     font-size: 12px;
                     line-height: 1.3;
+                }}
+
+                /* Compact HTML HP / MP bars used on the stats banner.
+                   Coloured fill + centered numerical overlay; takes
+                   ~70px instead of the ~150px the text-based [#####]
+                   bar consumed at width=10, so the line fits
+                   without wrapping even at 999/999 stats. */
+                .statbar {{
+                    display: inline-block;
+                    height: 13px;
+                    border: 1px solid #444;
+                    border-radius: 2px;
+                    position: relative;
+                    background: #2a2a2a;
+                    vertical-align: middle;
+                    margin: 0 4px 0 2px;
+                    overflow: hidden;
+                    font-size: 10px;
+                    line-height: 13px;
+                    box-sizing: border-box;
+                }}
+                .statbar-fill {{
+                    position: absolute;
+                    left: 0; top: 0; bottom: 0;
+                    transition: width 0.3s ease;
+                }}
+                .statbar-text {{
+                    position: relative;
+                    z-index: 2;
+                    width: 100%;
+                    text-align: center;
+                    color: #FFF;
+                    font-weight: bold;
+                    text-shadow: 0 0 2px #000, 0 0 2px #000, 0 0 2px #000;
+                    display: block;
                 }}
                 #stats-bar > div {{
                     margin-bottom: 0 !important;
