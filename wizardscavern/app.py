@@ -10305,7 +10305,7 @@ class WizardsCavernApp(toga.App):
                    below it is taken by the log via flex: 1. */
                 #content-area {{
                     flex: 0 0 auto;
-                    padding: 4px;
+                    padding: 0;
                     overflow-y: auto;
                     max-height: 100%;
                 }}
@@ -10332,30 +10332,29 @@ class WizardsCavernApp(toga.App):
                    -- the panel scrolls internally instead. */
                 /* Uniform fixed-size interaction box.  Every game-mode
                    panel (chest, pool, altar, library, smith, shrine,
-                   garden, combat, etc.) renders into the same 240px
-                   slot.  240px is sized for combat (monster card +
-                   player card stacked) and uses up some empty space
-                   for simpler rooms — that's the trade-off for a
-                   uniform silhouette across modes. */
+                   garden, combat, etc.) renders into the same 200px
+                   slot.  200px is sized for combat (monster card +
+                   player card stacked) with the new bumped fonts;
+                   simpler rooms have a little empty space — that's
+                   the trade-off for a uniform silhouette. */
                 .room-panel {{
-                    min-height: 240px;
-                    max-height: 240px;
-                    height: 240px;
+                    min-height: 200px;
+                    max-height: 200px;
+                    height: 200px;
                     overflow: hidden;
                     box-sizing: border-box;
                 }}
 
                 /* Container that stacks the room-panel + map + action
-                   chips.  No longer fixed-positioned — it lives inside
-                   #content-area at its natural flow position.  The
-                   body's flex column then gives whatever space is
-                   left to the game log. */
+                   chips, lives inside #content-area at its natural
+                   flow position.  No padding / border so the map can
+                   sit flush against the room-panel above and the
+                   chips can sit flush against the log below. */
                 .bottom-pinned-zone {{
                     position: static;
                     z-index: 500;
                     background: #1a1a1a;
-                    border-top: 1px solid #333;
-                    padding: 2px 0 4px 0;
+                    padding: 0;
                     text-align: center;
                 }}
                 body.full-bleed .bottom-pinned-zone {{ display: none; }}
