@@ -4,10 +4,11 @@ CHANGELOG is populated from recent git log entries.
 """
 
 VERSION = "0.1.2"
-BUILD_NUMBER = 217
+BUILD_NUMBER = 218
 # NOTE: Keep this list short (~8 entries). Remove old ones as new ones land.
 CHANGELOG = [
-    "Splash + character creation polish: (1) splash 'LATEST' changelog box now sits right under the version line at the top instead of being pushed to the bottom by margin-top: auto. The Enter the Cavern chip now uses margin-top: auto to push itself to the bottom; container is height: 100vh + overflow: hidden so the splash never scrolls. (2) Player name length cap bumped 12 -> 13 characters. (3) Character-creation keyboard now uses uniform 32px keys (was flex-grow which made row-1 keys narrower than row-3 keys) -- top row 10 keys, middle 9, bottom 7 naturally taper via justify-content: center, giving the real-keyboard silhouette",
+    "Intro screens lock to viewport: main_menu / intro_story (the lore + save-slot panel) and the splash screen both used min-height: 100vh which let content push the page taller and scroll. Switched both to height: 100vh + overflow: hidden + box-sizing: border-box so they fit exactly one viewport. Save-slots panel inside the intro is now flex-shrink: 0 with max-height: 50vh / overflow-y: auto so a player with many saves can scroll WITHIN that panel rather than scrolling the whole screen",
+    "Splash + character creation polish: splash 'LATEST' changelog box now sits right under the version line at the top, Enter the Cavern chip pinned to bottom via margin-top: auto. Player name length cap 12 -> 13 characters. Character-creation keyboard uses uniform 32px keys with natural 10/9/7-row taper",
     "Altar / Oracle info split: stripped the piety bar (★★☆ Tier N) and the Pray-reward subtitle preview off the altar UI -- altar now just shows god name, what it craves, and Pray/Sacrifice chips. Moved the per-god piety + tier-reward readout to the Oracle: tap the new PANTHEON chip alongside Gaze and the mirror logs all 8 gods with their piety stars, tier progress, and the current Pray reward. Also tightened the altar init log to skip the inline tier breakdown",
     "Altar rework: per-god identification + piety tier system. Each altar identified up-front (no more guess-the-god). Two chips: PRAY (claim current tier reward, altar consumed) and SACRIFICE (matching items grant +1 piety, wrong items returned uncostly). Tiers unlock at 1/3/5 sacrifices. 4 distinct Pray rewards per god across T0-T3 (see design/altar_rewards.csv). Rune of Devotion auto-drops when all 8 gods reach T3",
     "Warp portal panel compression: same overflow as grimoire/shrine/tomb -- 'Enter the Portal' button was clipped. Applied the .altar-actions.dual treatment, tightened padding, shortened flavor text",
