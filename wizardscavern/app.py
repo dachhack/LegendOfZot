@@ -8228,8 +8228,10 @@ class WizardsCavernApp(toga.App):
                     '</div>'
                 )
 
-            # Warp info box + binary tap choice in a 2-col grid so both
-            # buttons fit inside the 200px room-panel slot.
+            # Warp info box + binary tap choice.  Stacked (not dual)
+            # so Resist/Enter sit on top of each other -- the warp is a
+            # narrative beat and benefits from the more deliberate
+            # vertical pace.
             warp_sprite = generate_room_sprite_html('W', seed=(gs.player_character.x, gs.player_character.y, gs.player_character.z))
             warp_html = f"""
                 <div style="border: 2px solid #555; border-radius: 3px; padding: 6px 8px; height: 100%; box-sizing: border-box; display: flex; flex-direction: column;">
@@ -8240,32 +8242,32 @@ class WizardsCavernApp(toga.App):
                         </div>
                     </div>
                     {vault_warning}
-                    <div class='altar-actions dual' style='margin-top:6px;'>
+                    <div class='altar-actions' style='margin-top:4px;'>
                         <div class='taprow altar-act blessing' data-zcmd='y'
                              onclick="window.__zotTap('y', this)">
-                            <div class='aname'>Resist</div>
-                            <div class='ameta'>INT check</div>
+                            <div class='aname'>Resist the Warp</div>
+                            <div class='ameta'>INT check &mdash; stay here if you pass</div>
                         </div>
                         <div class='taprow altar-act mystic' data-zcmd='n'
                              onclick="window.__zotTap('n', this)">
-                            <div class='aname'>Enter</div>
-                            <div class='ameta'>step willingly</div>
+                            <div class='aname'>Enter the Portal</div>
+                            <div class='ameta'>step in willingly, wherever it leads</div>
                         </div>
                     </div>
                 </div>
                 """
-            
+
             html_code = f"""
                 <div style="font-family: monospace; font-size: 12px;">
                     {achievement_notifications}
                     {player_stats_html}
-
                     <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
-                        <div class="room-panel" style="width: 100%;">{warp_html}</div>
-                        <div>{grid_html}</div>
-                        {hud_chips_html}
+                        <div class="bottom-pinned-zone">
+                          <div class="room-panel" style="width: 100%;">{warp_html}</div>
+                          <div>{grid_html}</div>
+                          {hud_chips_html}
+                        </div>
                     </div>
-
                 </div>
                 """
             current_commands_text = "Tap Resist or Enter"
