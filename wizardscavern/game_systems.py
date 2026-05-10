@@ -3591,23 +3591,25 @@ def activate_playtest_mode(player_character):
 
     # Boost stats significantly. max_health is computed as
     #   level*10 + strength*2 + base_max_health_bonus
-    # so to land on exactly 999 max HP with level 10 + str 30 (= 160
-    # from the formula) we set base_max_health_bonus = 839.
-    player_character.level = 10
-    player_character.strength = 30
-    player_character.dexterity = 30
-    player_character.intelligence = 30
-    player_character.base_max_health_bonus = 839
-    player_character.health = 999
-    player_character._base_attack = 50
-    player_character._base_defense = 50
-    player_character.experience = 10000
-    player_character.gold = 99999
-    player_character.mana = 999
-    player_character._max_mana = 999
+    # so to land on exactly 9999 max HP with level 50 + str 99 (= 698
+    # from the formula) we set base_max_health_bonus = 9301.  These
+    # numbers are tuned to survive the level-98 endgame on a Tourist
+    # run without scaling exploits.
+    player_character.level = 50
+    player_character.strength = 99
+    player_character.dexterity = 99
+    player_character.intelligence = 99
+    player_character.base_max_health_bonus = 9301
+    player_character.health = 9999
+    player_character._base_attack = 250
+    player_character._base_defense = 250
+    player_character.experience = 100000
+    player_character.gold = 999999
+    player_character.mana = 9999
+    player_character._max_mana = 9999
 
-    add_log(f"{COLOR_GREEN}Stats maxed out for testing!{COLOR_RESET}")
-    add_log(f"{COLOR_GREEN}HP: 999/999, Mana: 999/999, Gold: 99999{COLOR_RESET}")
+    add_log(f"{COLOR_GREEN}Stats maxed out for endgame testing!{COLOR_RESET}")
+    add_log(f"{COLOR_GREEN}Lv50 | HP: 9999/9999 | MP: 9999/9999 | ATK 250 | DEF 250 | Gold 999999{COLOR_RESET}")
 
     # Add powerful starting equipment (equipped)
     playtest_weapon = Weapon(
