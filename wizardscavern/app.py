@@ -5209,7 +5209,8 @@ class WizardsCavernApp(toga.App):
                                             rgba(0,0,0,0.78) 60%, rgba(0,0,0,0.95) 100%);"></div>
                     <div style="position: relative; padding: 10px 14px 8px;
                                 display: flex; flex-direction: column; align-items: center;
-                                text-align: center; min-height: 100vh;">
+                                text-align: center; height: 100vh; box-sizing: border-box;
+                                overflow: hidden;">
                         <div style="font-size: 22px; font-weight: bold; color: #FFD700;
                                     text-shadow: 0 2px 6px #000, 0 0 14px rgba(0,0,0,0.9);
                                     letter-spacing: 1px;">
@@ -5219,8 +5220,8 @@ class WizardsCavernApp(toga.App):
                                     text-shadow: 0 1px 4px #000;">
                             v{VERSION} (build {BUILD_NUMBER})
                         </div>
-                        <div style="margin-top: auto; width: 100%; max-width: 360px;
-                                    background: rgba(0,0,0,0.45);
+                        <div style="margin-top: 10px; width: 100%; max-width: 360px;
+                                    background: rgba(0,0,0,0.55);
                                     border: 1px solid rgba(255,215,0,0.18);
                                     border-radius: 4px; padding: 6px 10px; text-align: left;">
                             <div style="color: #FFD27A; font-size: 10px; margin-bottom: 3px;
@@ -5231,7 +5232,7 @@ class WizardsCavernApp(toga.App):
                         </div>
                         <div class='taprow altar-act blessing' data-zcmd=' '
                              onclick="window.__zotTap(' ', this)"
-                             style='margin-top: 8px; margin-bottom: 0; width: 100%; max-width: 360px;'>
+                             style='margin-top: auto; margin-bottom: 0; width: 100%; max-width: 360px;'>
                             <div class='aname'>Enter the Cavern</div>
                             <div class='ameta'>Tap to continue (or wait a few seconds)</div>
                         </div>
@@ -5651,7 +5652,7 @@ class WizardsCavernApp(toga.App):
             # browsers, certain Android skins) — the body-only flow
             # works everywhere because taprows render reliably.
             typed = (self.input_field.value or "").upper()
-            max_len = 12
+            max_len = 13
             slot_html = ""
             for i in range(max_len):
                 if i < len(typed):
@@ -5721,12 +5722,14 @@ class WizardsCavernApp(toga.App):
                   .nm-actions .taprow.nm-empty {{ opacity: 0.55; }}
                   .nm-keyboard {{ margin: 14px 0 4px 0; user-select: none;
                                    -webkit-user-select: none; }}
+                  /* Real-keyboard look: uniform key width, top row (10
+                     keys) longest, middle (9) and bottom (7) naturally
+                     taper inward via justify-content: center. */
                   .nm-kbd-row {{ display: flex; gap: 4px; justify-content: center;
                                    margin: 4px 2px; }}
                   .nm-key {{
-                    flex: 1 1 0;
-                    min-width: 0;
-                    max-width: 38px;
+                    flex: 0 0 32px;
+                    width: 32px;
                     height: 44px;
                     line-height: 42px;
                     background: linear-gradient(180deg, #3a3a3a 0%, #1f1f1f 100%);
