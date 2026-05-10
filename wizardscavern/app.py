@@ -5188,7 +5188,8 @@ class WizardsCavernApp(toga.App):
 
             splash_uri = _load_screen_image_b64('splash')
             html_code = f"""
-                <div style="position: relative; font-family: monospace; min-height: 100vh;
+                <div style="position: relative; font-family: monospace; height: 100vh;
+                            box-sizing: border-box;
                             background-image: url('{splash_uri}');
                             background-size: cover;
                             background-position: center top;
@@ -5382,7 +5383,7 @@ class WizardsCavernApp(toga.App):
                         <div id="intro-tap-zone"
                              style="position: relative; font-family: monospace;
                                     font-size: 12px; padding: 0; text-align: center;
-                                    cursor: pointer; min-height: 100vh;
+                                    cursor: pointer; height: 100vh; box-sizing: border-box;
                                     background-image: url('{splash_uri}');
                                     background-size: cover;
                                     background-position: center top;
@@ -5404,7 +5405,8 @@ class WizardsCavernApp(toga.App):
                                                     rgba(0,0,0,0.78) 40%, rgba(0,0,0,0.95) 100%);"></div>
                             <div style="position: relative; padding: 10px 14px 8px;
                                         display: flex; flex-direction: column; align-items: center;
-                                        text-align: center; min-height: 100vh;">
+                                        text-align: center; height: 100%; box-sizing: border-box;
+                                        overflow: hidden;">
                                 <div style="font-size: 22px; font-weight: bold; color: #FFD700;
                                             text-shadow: 0 2px 6px #000, 0 0 14px rgba(0,0,0,0.9);
                                             letter-spacing: 1px;">
@@ -5415,7 +5417,7 @@ class WizardsCavernApp(toga.App):
                                     &#9835; TAP THIS PANEL TO ENABLE MUSIC
                                 </div>
                                 <div style="margin-top: auto; width: 100%; max-width: 400px;
-                                            font-size: 12px; line-height: 1.55; color: #E8E8E8;
+                                            font-size: 12px; line-height: 1.5; color: #E8E8E8;
                                             text-align: left;
                                             background: rgba(0,0,0,0.55);
                                             border: 1px solid rgba(255,215,0,0.18);
@@ -5427,8 +5429,9 @@ class WizardsCavernApp(toga.App):
                                 </div>
                                 <div style="border: 1px solid rgba(255,215,0,0.3); border-radius: 5px;
                                             padding: 8px; margin-top: 8px; margin-bottom: 0;
-                                            width: 100%; max-width: 350px;
-                                            background: rgba(0,0,0,0.65);">
+                                            width: 100%; max-width: 350px; flex-shrink: 0;
+                                            background: rgba(0,0,0,0.65);
+                                            max-height: 50vh; overflow-y: auto;">
                                     {save_slots_html}
                                 </div>
                             </div>
