@@ -3870,7 +3870,7 @@ def handle_puzzle_victory(player_character, my_tower, room):
     # Create and give the teleporter item
     teleporter = Treasure(
         name="Zot's Dimensional Key",
-        description="A mystical key that bends space itself. Teleport to any location in the dungeon by entering x,y,z coordinates. Warning: Cannot teleport into walls!",
+        description="A mystical key that bends space itself. Teleport to any location in the dungeon (floors 1-50) by entering x,y,z coordinates. Warning: Cannot teleport into walls!",
         gold_value=0,
         value=5000,
         level=10,
@@ -3909,7 +3909,7 @@ def use_zotle_teleporter(character, my_tower):
     add_log(f"{COLOR_CYAN}Enter coordinates to teleport (x,y,z):{COLOR_RESET}")
     add_log(f"{COLOR_GREY}Format: x,y,z (e.g., 5,3,2){COLOR_RESET}")
     add_log(f"{COLOR_GREY}Current location: ({character.x}, {character.y}, Floor {character.z + 1}){COLOR_RESET}")
-    add_log(f"{COLOR_GREY}Available floors: 1-{len(my_tower.floors)}{COLOR_RESET}")
+    add_log(f"{COLOR_GREY}Floors mapped so far: 1-{len(my_tower.floors)} (max depth: 50){COLOR_RESET}")
     add_log("")
     
     gs.active_zotle_teleporter = True
@@ -3940,6 +3940,17 @@ def process_zotle_teleporter_action(player_character, my_tower, cmd):
         # Validate floor exists or generate it
         if target_z < 0:
             add_log(f"{COLOR_RED}Floor must be 1 or higher!{COLOR_RESET}")
+            return
+
+        # Cap at the designed dungeon depth (50 floors, 0-indexed 0-49).
+        # Without this, the loop below would happily generate phantom
+        # floors past the boss arena -- those are outside the balance
+        # curve entirely (Mythic evolution caps catch every spawn) so
+        # they crush even god-mode characters.
+        MAX_FLOOR_Z = 49
+        if target_z > MAX_FLOOR_Z:
+            add_log(f"{COLOR_YELLOW}The key fizzles &mdash; Zot's experiments only mapped 50 floors.{COLOR_RESET}")
+            add_log(f"{COLOR_GREY}(Maximum floor is 50.){COLOR_RESET}")
             return
 
         # Generate floors if needed (for floors not yet visited)
