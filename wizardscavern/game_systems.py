@@ -2954,10 +2954,13 @@ def _execute_warp(player_character, my_tower, floor_params_ref, is_vault_warp, v
         # Normal random warp
         add_log(f"{COLOR_RED}The portal's power overwhelms you! You are sucked in...{COLOR_RESET}")
         
-        # New Floor Logic
+        # New Floor Logic. Capped at the designed dungeon depth (50
+        # floors, 0-indexed 0-49) so the warp can never spit the
+        # player into a phantom floor past the boss arena.
+        MAX_FLOOR_Z = 49
         current_z = player_character.z
         min_z = max(0, current_z - 2)
-        max_z = current_z + 2
+        max_z = min(MAX_FLOOR_Z, current_z + 2)
 
         # Generate needed floors
         while len(my_tower.floors) <= max_z:
@@ -3827,7 +3830,7 @@ def activate_playtest_mode(player_character):
     add_log(f"{COLOR_CYAN}Adding Zot's Dimensional Key...{COLOR_RESET}")
     teleporter = Treasure(
         name="Zot's Dimensional Key",
-        description="A mystical key that bends space itself. Teleport to any location in the dungeon by entering x,y,z coordinates. Warning: Cannot teleport into walls!",
+        description="A mystical key that bends space itself. Teleport to any location in the dungeon (floors 1-50) by entering x,y,z coordinates. Warning: Cannot teleport into walls!",
         gold_value=0,
         value=5000,
         level=10,
