@@ -3,7 +3,8 @@ __pycache__/
 *.pyo
 *.bak
 saves/
-.claude/
+.claude/*
+!.claude/agents/
 .DS_Store
 build/
 logs/
