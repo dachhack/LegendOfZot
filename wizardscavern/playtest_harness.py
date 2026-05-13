@@ -1,0 +1,484 @@
+"""
+Headless playtest harness for Wizard's Cavern.
+
+Drives the game logic without the Toga UI so scripted policies (or LLM
+playtest agents) can play turns, observe state, and surface bugs / balance
+issues. The game-logic modules (``game_systems``, ``combat``, ``dungeon``,
+``characters``, ``room_actions``) are UI-free; this module wires them up
+around the module-level ``game_state`` globals.
+
+CLI usage:
+
+    python -m wizardscavern.playtest_harness --seed 42 --turns 200 --policy random
+    python -m wizardscavern.playtest_harness --seed 42 --script actions.txt
+    python -m wizardscavern.playtest_harness --interactive
+    python -m wizardscavern.playtest_harness --seed 42 --turns 200 --policy random --jsonl
+
+Action vocabulary (mode-sensitive — see ``ACTION_HINTS``):
+
+    game_loop:   n s e w   d (descend) u (ascend) i (inventory)
+    combat_mode: a (attack) f (flee) c (cast) I (item) x (back)
+    inventory:   1..9 (item) x (back) e (equip filter) u (use) E (eat)
+    other modes: pass the raw key through; mode-specific handlers route it.
+"""
+
+import argparse
+import json
+import random as _stdlib_random
+import re
+import sys
+
+from . import game_state as gs
+from .characters import Character
+from .dungeon import Tower
+from .game_systems import (
+    _trigger_room_interaction,
+    handle_inventory_menu,
+    move_player,
+    process_chest_action,
+    process_combat_action,
+    process_stairs_down_action,
+    process_stairs_up_action,
+)
+from .items import initialize_identification_system
+
+
+_ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
+_HTML_RE = re.compile(r"<[^>]+>")
+
+
+def _strip_markup(s):
+    if not isinstance(s, str):
+        return s
+    return _HTML_RE.sub("", _ANSI_RE.sub("", s))
+
+
+def _strip_markup_list(lines):
+    return [_strip_markup(line) for line in lines]
+
+
+def new_game(seed=None, playtest_mode=False, name="Tester",
+             strength=12, dexterity=12, intelligence=12):
+    """Initialise a fresh headless game. Returns a ``PlaytestSession``."""
+    if seed is not None:
+        _stdlib_random.seed(seed)
+
+    # Reset every gs global the UI's new-game path resets. The game_state
+    # module is module-level mutable, so a previous run leaks unless we
+    # explicitly clear here.
+    gs.PLAYTEST = playtest_mode
+    gs.log_lines = []
+    gs.prompt_cntl = "game_loop"
+    gs.previous_prompt_cntl = ""
+    gs.game_should_quit = False
+    gs.lets_go = False
+    gs.html_cache = ""
+    gs.loot_toasts = []
+
+    gs.active_monster = None
+    gs.active_vendor = None
+    gs.active_altar_state = None
+    gs.active_scroll_item = None
+    gs.active_flare_item = None
+    gs.active_foresight_scroll = None
+    gs.active_flee_state = None
+    gs.active_spell_choice = None
+    gs.active_towel_item = None
+    gs.active_library_state = None
+    gs.inventory_filter = None
+    gs.vendor_action = None
+    gs.spell_memo_action = None
+    gs.altar_action = None
+    gs.shop_message = ""
+    gs.pending_sell_item = None
+    gs.pending_sell_item_index = None
+    gs.zotle_puzzle = None
+    gs.active_zotle_teleporter = False
+    gs._pending_load = None
+
+    initialize_identification_system()
+
+    gs.my_tower = Tower()
+    gs.my_tower.add_floor(
+        gs.specified_chars, gs.required_chars,
+        gs.grid_rows, gs.grid_cols,
+        gs.wall_char, gs.floor_char,
+        p_limits=gs.p_limits_val, c_limits=gs.c_limits_val,
+        w_limits=gs.w_limits_val, a_limits=gs.a_limits_val,
+        l_limits=gs.l_limits_val, dungeon_limits=gs.dungeon_limits_val,
+        t_limits=gs.t_limits_val, garden_limits=gs.garden_limits_val,
+        o_limits=gs.o_limits_val,
+        b_limits=gs.b_limits_val, f_limits=gs.f_limits_val,
+        q_limits=gs.q_limits_val, k_limits=gs.k_limits_val,
+        x_limits=gs.x_limits_val,
+    )
+
+    ch_x, ch_y = 1, 1
+    gs.player_character = Character(
+        name=name, health=1, attack=1, defense=1,
+        strength=strength, dexterity=dexterity, intelligence=intelligence,
+        x=ch_x, y=ch_y, z=0,
+    )
+    gs.player_character.health = gs.player_character.max_health
+    gs.player_character.gold = 500
+    gs.player_character.memorized_spells = []
+    gs.my_tower.floors[0].grid[ch_y][ch_x].discovered = True
+
+    gs.encountered_monsters = {}
+    gs.encountered_vendors = {}
+    gs.newly_unlocked_achievements = []
+    gs.curing_kit_stocked = False
+    gs.curing_kit_floor = _stdlib_random.randint(0, 9)
+    gs.achievement_notification_timer = 0
+
+    gs.dungeon_keys = {}
+    gs.unlocked_dungeons = {}
+    gs.looted_dungeons = {}
+    gs.looted_tombs = {}
+    gs.harvested_gardens = {}
+    gs.harvested_fey_floors = set()
+    gs.haunted_floors = {}
+    gs.ephemeral_gardens = {}
+    gs.pending_tomb_guardian_reward = None
+    gs.searched_libraries = {}
+
+    rune_keys = ('battle', 'treasure', 'devotion', 'reflection',
+                 'knowledge', 'secrets', 'eternity', 'growth')
+    gs.runes_obtained = {k: False for k in rune_keys}
+    gs.shards_obtained = {k: False for k in rune_keys}
+    gs.altar_piety = {i: 0 for i in range(1, 9)}
+    gs.rune_progress = {
+        'monsters_killed_total': 0,
+        'chests_opened_total': 0,
+        'pools_drunk_total': 0,
+        'spells_learned_total': 0,
+        'unique_spells_memorized': set(),
+        'dungeons_unlocked_total': 0,
+        'tombs_looted_total': 0,
+        'gardens_harvested_total': 0,
+    }
+    gs.champion_monster_available = False
+    gs.legendary_chest_available = False
+    gs.ancient_waters_available = False
+    gs.codex_available = False
+    gs.master_dungeon_available = False
+    gs.cursed_tomb_available = False
+    gs.world_tree_available = False
+    gs.gate_to_floor_50_unlocked = False
+
+    gs.game_stats = {
+        'monsters_killed': 0,
+        'max_floor_reached': 0,
+        'spells_learned': 0,
+        'spells_cast': 0,
+        'times_poisoned': 0,
+        'chests_opened': 0,
+        'dungeons_looted': 0,
+        'vendors_sold_to': set(),
+    }
+
+    _trigger_room_interaction(gs.player_character, gs.my_tower)
+    return PlaytestSession()
+
+
+ACTION_HINTS = {
+    "game_loop":     "n s e w | d (descend) u (ascend) | i (inventory)",
+    "combat_mode":   "a (attack) f (flee) c (cast) I (item) x (back)",
+    "inventory":     "1..9 (slot) x (back) e (equip-filter) u (use-filter)",
+    "chest_mode":    "o (open) l (leave)",
+    "vendor_shop":   "b (buy) s (sell) x (leave)",
+    "stairs_down_mode": "d (descend) x (cancel)",
+    "stairs_up_mode":   "u (ascend) x (cancel)",
+    "death_screen":  "<game over>",
+}
+
+
+class PlaytestSession:
+    """One playthrough. Holds a log-pointer + turn counter; state lives in gs."""
+
+    def __init__(self):
+        self._log_pointer = len(gs.log_lines)
+        self.turn = 0
+        self.last_action = None
+        self.last_error = None
+
+    # ------------------------------------------------------------------
+    # Observation
+    # ------------------------------------------------------------------
+    def observe(self):
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        room = floor.grid[pc.y][pc.x]
+        # log_lines is capped at 16 — if our pointer is past the end the
+        # log was rotated and we just take everything that's left.
+        if self._log_pointer > len(gs.log_lines):
+            self._log_pointer = 0
+        log_delta = gs.log_lines[self._log_pointer:]
+        self._log_pointer = len(gs.log_lines)
+        return {
+            "turn": self.turn,
+            "mode": gs.prompt_cntl,
+            "hint": ACTION_HINTS.get(gs.prompt_cntl, "(pass raw key)"),
+            "player": {
+                "name": pc.name,
+                "hp": pc.health,
+                "max_hp": pc.max_health,
+                "mana": pc.mana,
+                "max_mana": pc.max_mana,
+                "hunger": pc.hunger,
+                "gold": pc.gold,
+                "level": pc.level,
+                "xp": pc.experience,
+                "floor": pc.z + 1,
+                "x": pc.x,
+                "y": pc.y,
+                "status_effects": list(pc.status_effects.keys()),
+            },
+            "room": {
+                "type": room.room_type,
+                "properties": {
+                    k: v for k, v in room.properties.items()
+                    if isinstance(v, (bool, int, str, float))
+                },
+            },
+            "monster": self._monster_obs(),
+            "inventory": self._inventory_obs(),
+            "log": _strip_markup_list(log_delta),
+            "alive": pc.is_alive() and gs.prompt_cntl != "death_screen",
+            "done": self.is_done(),
+        }
+
+    def _monster_obs(self):
+        m = gs.active_monster
+        if m is None or gs.prompt_cntl != "combat_mode":
+            return None
+        return {
+            "name": _strip_markup(m.name).strip(),
+            "level": getattr(m, "level", None),
+            "hp": m.health,
+            "max_hp": getattr(m, "max_health", m.health),
+        }
+
+    def _inventory_obs(self):
+        items = getattr(gs.player_character.inventory, "items", [])
+        out = []
+        for i, item in enumerate(items):
+            count = getattr(item, "count", 1) or 1
+            out.append({
+                "slot": i + 1,
+                "name": getattr(item, "name", repr(item)),
+                "count": count,
+            })
+        return out
+
+    # ------------------------------------------------------------------
+    # ASCII map (debug / human-readable)
+    # ------------------------------------------------------------------
+    def ascii_map(self, show_undiscovered=False):
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        rows = []
+        for y in range(floor.rows):
+            row = []
+            for x in range(floor.cols):
+                cell = floor.grid[y][x]
+                if x == pc.x and y == pc.y:
+                    row.append("@")
+                elif not cell.discovered and not show_undiscovered:
+                    row.append(" ")
+                else:
+                    row.append(cell.room_type)
+            rows.append("".join(row))
+        return "\n".join(rows)
+
+    # ------------------------------------------------------------------
+    # Action dispatch
+    # ------------------------------------------------------------------
+    def step(self, action):
+        self.turn += 1
+        self.last_action = action
+        self.last_error = None
+        pc = gs.player_character
+        tw = gs.my_tower
+        mode = gs.prompt_cntl
+
+        try:
+            if mode == "death_screen":
+                pass  # game over, no-op
+            elif mode == "game_loop":
+                if action in ("n", "s", "e", "w"):
+                    move_player(pc, tw, action)
+                elif action == "d":
+                    process_stairs_down_action(pc, tw, "init")
+                elif action == "u":
+                    process_stairs_up_action(pc, tw, "init", gs.floor_params)
+                elif action == "i":
+                    gs.prompt_cntl = "inventory"
+                    gs.inventory_filter = None
+                    handle_inventory_menu(pc, tw, "init")
+                elif action == "pass":
+                    pass
+                else:
+                    self.last_error = f"unknown game_loop action: {action!r}"
+            elif mode == "combat_mode":
+                process_combat_action(pc, tw, action)
+            elif mode == "chest_mode":
+                process_chest_action(pc, tw, action)
+            elif mode == "stairs_down_mode":
+                process_stairs_down_action(pc, tw, action)
+            elif mode == "stairs_up_mode":
+                process_stairs_up_action(pc, tw, action, gs.floor_params)
+            elif mode == "inventory":
+                handle_inventory_menu(pc, tw, action)
+            else:
+                # Last-resort: many process_X_action handlers accept a back
+                # command of 'x' or 'l'. Route an explicit "back" to that;
+                # otherwise leave the harness in this mode for the agent to
+                # diagnose.
+                if action == "back":
+                    gs.prompt_cntl = "game_loop"
+                else:
+                    self.last_error = f"no headless dispatch for mode {mode!r}"
+        except Exception as e:  # surface, don't crash the harness
+            self.last_error = f"{type(e).__name__}: {e}"
+
+        return self.observe()
+
+    def is_done(self):
+        return (gs.game_should_quit
+                or gs.prompt_cntl == "death_screen"
+                or not gs.player_character.is_alive())
+
+
+# ----------------------------------------------------------------------
+# Policies
+# ----------------------------------------------------------------------
+def random_policy(obs, rng):
+    """Cheap-and-cheerful random policy for smoke-testing."""
+    mode = obs["mode"]
+    if mode == "game_loop":
+        # Bias toward exploration + occasional descend
+        choices = ["n", "s", "e", "w", "n", "s", "e", "w", "d"]
+        return rng.choice(choices)
+    if mode == "combat_mode":
+        # Mostly attack, sometimes flee
+        return "a" if rng.random() < 0.85 else "f"
+    if mode == "chest_mode":
+        return "o" if rng.random() < 0.7 else "l"
+    if mode == "stairs_down_mode":
+        return "d"
+    if mode == "stairs_up_mode":
+        return "u"
+    if mode == "inventory":
+        return "x"
+    return "back"
+
+
+# ----------------------------------------------------------------------
+# CLI
+# ----------------------------------------------------------------------
+def _summarise(obs, jsonl=False):
+    if jsonl:
+        safe = {k: v for k, v in obs.items() if k != "log"}
+        safe["log_tail"] = obs["log"][-3:]
+        return json.dumps(safe, default=str)
+    p = obs["player"]
+    parts = [
+        f"T{obs['turn']:>4} mode={obs['mode']:<14}",
+        f"F{p['floor']}@({p['x']:>2},{p['y']:>2})",
+        f"HP {p['hp']}/{p['max_hp']}",
+        f"MP {p['mana']}/{p['max_mana']}",
+        f"Hu{p['hunger']:>3}",
+        f"$ {p['gold']}",
+        f"room={obs['room']['type']}",
+    ]
+    if obs["monster"]:
+        m = obs["monster"]
+        parts.append(f"vs {m['name']}(L{m['level']} HP{m['hp']}/{m['max_hp']})")
+    line = " ".join(parts)
+    if obs["log"]:
+        line += "\n  " + "\n  ".join(obs["log"])
+    return line
+
+
+def _read_script_actions(path):
+    if path == "-":
+        src = sys.stdin.read()
+    else:
+        with open(path, "r", encoding="utf-8") as f:
+            src = f.read()
+    for raw in src.splitlines():
+        a = raw.split("#", 1)[0].strip()
+        if a:
+            yield a
+
+
+def main(argv=None):
+    parser = argparse.ArgumentParser(
+        prog="wizardscavern.playtest_harness",
+        description="Headless playtest driver for Wizard's Cavern.",
+    )
+    parser.add_argument("--seed", type=int, default=None,
+                        help="RNG seed for reproducible runs.")
+    parser.add_argument("--turns", type=int, default=200,
+                        help="Maximum turns to run.")
+    parser.add_argument("--policy", choices=("random", "script"),
+                        default="random",
+                        help="Action policy: random or scripted.")
+    parser.add_argument("--script", default=None,
+                        help="Script file (one action per line). '-' for stdin.")
+    parser.add_argument("--playtest-mode", action="store_true",
+                        help="Enable gs.PLAYTEST (vaults/zotle force-spawn).")
+    parser.add_argument("--jsonl", action="store_true",
+                        help="Emit one JSON object per turn (machine-readable).")
+    parser.add_argument("--interactive", action="store_true",
+                        help="Read one action per line from stdin.")
+    parser.add_argument("--name", default="Tester")
+    args = parser.parse_args(argv)
+
+    sess = new_game(seed=args.seed, playtest_mode=args.playtest_mode,
+                    name=args.name)
+    obs = sess.observe()
+    print(_summarise(obs, args.jsonl))
+
+    rng = _stdlib_random.Random(args.seed)
+
+    if args.interactive:
+        action_source = iter(sys.stdin)
+    elif args.policy == "script":
+        if not args.script:
+            parser.error("--policy script requires --script PATH (or '-')")
+        action_source = _read_script_actions(args.script)
+    else:
+        action_source = None
+
+    for _ in range(args.turns):
+        if sess.is_done():
+            break
+        if action_source is None:
+            action = random_policy(obs, rng)
+        else:
+            try:
+                raw = next(action_source)
+            except StopIteration:
+                break
+            action = raw.strip() if isinstance(raw, str) else raw
+            if not action or action.startswith("#"):
+                continue
+        obs = sess.step(action)
+        print(f"-> {action}")
+        print(_summarise(obs, args.jsonl))
+        if sess.last_error:
+            print(f"  ! {sess.last_error}", file=sys.stderr)
+
+    # Final summary
+    p = obs["player"]
+    print()
+    print(f"=== run finished: turns={sess.turn} "
+          f"floor={p['floor']} hp={p['hp']}/{p['max_hp']} "
+          f"gold={p['gold']} alive={obs['alive']} mode={obs['mode']} ===")
+    return 0 if obs["alive"] else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())
