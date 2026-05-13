@@ -3125,6 +3125,27 @@ def process_hunger(character):
             add_log(f"{COLOR_YELLOW}Your stomach growls. You are hungry.{COLOR_RESET}")
 
 
+def process_mana_regen(character):
+    """Out-of-combat mana regen: 1 MP per 5 moves while not starving.
+
+    Called from move_player only -- combat handlers don't invoke it, so the
+    'out of combat' gate is free. Silent (no log) by design: passive tick.
+    Starving players (hunger == 0) get no regen to avoid edge-case healing
+    via Minor Heal after the hunger tick zeroes them out.
+    """
+    if character.max_mana <= 0 or character.mana >= character.max_mana:
+        character.mana_regen_tracker = 0
+        return
+    if character.hunger <= 0:
+        return
+    tracker = getattr(character, 'mana_regen_tracker', 0) + 1
+    if tracker >= 5:
+        character.mana_regen_tracker = 0
+        character.mana = min(character.max_mana, character.mana + 1)
+    else:
+        character.mana_regen_tracker = tracker
+
+
 def get_hunger_label(hunger):
     """Return a text label for the current hunger level."""
     if hunger <= 0:
@@ -3430,12 +3451,12 @@ class Spell(Item):
 
 SPELL_TEMPLATES = [
     # ===== LEVEL 0 SPELLS (1 slot each) - Basic Cantrips =====
-    Spell(name="Ice Shard", description="Launches a sharp shard of ice.", mana_cost=8, damage_type='Ice', base_power=15, level=0),
-    Spell(name="Spark", description="A tiny jolt of electricity.", mana_cost=5, damage_type='Wind', base_power=12, level=0),
-    Spell(name="Stone Throw", description="Magically hurls a small rock.", mana_cost=6, damage_type='Earth', base_power=13, level=0),
-    Spell(name="Minor Heal", description="Restores a tiny amount of health.", mana_cost=8, damage_type='Healing', base_power=15, level=0, spell_type='healing'),
-    Spell(name="Shadow Bolt", description="A weak bolt of shadow energy.", mana_cost=7, damage_type='Darkness', base_power=14, level=0),
-    Spell(name="Light Ray", description="A beam of pure light.", mana_cost=7, damage_type='Light', base_power=14, level=0),
+    Spell(name="Ice Shard", description="Launches a sharp shard of ice.", mana_cost=5, damage_type='Ice', base_power=15, level=0),
+    Spell(name="Spark", description="A tiny jolt of electricity.", mana_cost=3, damage_type='Wind', base_power=12, level=0),
+    Spell(name="Stone Throw", description="Magically hurls a small rock.", mana_cost=4, damage_type='Earth', base_power=13, level=0),
+    Spell(name="Minor Heal", description="Restores a tiny amount of health.", mana_cost=5, damage_type='Healing', base_power=15, level=0, spell_type='healing'),
+    Spell(name="Shadow Bolt", description="A weak bolt of shadow energy.", mana_cost=4, damage_type='Darkness', base_power=14, level=0),
+    Spell(name="Light Ray", description="A beam of pure light.", mana_cost=4, damage_type='Light', base_power=14, level=0),
 
     # ===== LEVEL 1 SPELLS (2 slots each) - Intermediate =====
     Spell(name="Fireball", description="Hurls a ball of fire at the enemy.", mana_cost=10, damage_type='Fire', base_power=20, level=1),

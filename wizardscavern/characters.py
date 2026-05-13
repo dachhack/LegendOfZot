@@ -862,6 +862,7 @@ class Character:
         self.hunger = HUNGER_MAX  # Start full
         self.hunger_freeze_turns = 0  # Lembas wafer postpones hunger decay
         self.hunger_regen_tracker = 0  # Tracks moves for HP regen when well-fed
+        self.mana_regen_tracker = 0   # Tracks moves for out-of-combat MP regen
         # Now safe to call max_mana property
         self.mana = self.max_mana # Initialize mana to max_mana
 
@@ -875,14 +876,15 @@ class Character:
     def max_mana(
         self
     ):
-        # Max mana scales with intelligence and level
-        #int requirement
-        int_mp = max(0,(self.intelligence-15)*5)
-        #level requirement
-        lvl_mp = 0
-        if (self.intelligence>15):
-            lvl_mp = max(0, (self.level-4)*10)
-        return max(0, (int_mp+lvl_mp)) + self.base_max_mana_bonus
+        # Caster gate: int > 15 unlocks a mana pool. Threshold + slope chosen
+        # so the curve gives a real starter pool (int=16 -> 14 MP, int=18 ->
+        # 22 MP, enough for 2-4 L0 cantrips) but the endgame ceiling at int=25
+        # stays at 50 MP, matching the old curve.
+        if self.intelligence <= 15:
+            return self.base_max_mana_bonus
+        int_mp = (self.intelligence - 15) * 4 + 10
+        lvl_mp = max(0, (self.level - 4) * 10)
+        return int_mp + lvl_mp + self.base_max_mana_bonus
 
 
     @property

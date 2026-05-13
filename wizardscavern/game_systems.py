@@ -26,7 +26,7 @@ from .items import (Item, Potion, Weapon, Armor, Scroll, Spell, Treasure, Towel,
                    process_potion_effects_in_combat, process_potion_effects_on_monster_defeat,
                    process_regeneration_effect, degrade_equipment, apply_corrosion_effect,
                    apply_rust_effect, repair_item, get_repair_cost,
-                   process_hunger, tick_meat_rot, get_base_monster_name,
+                   process_hunger, process_mana_regen, tick_meat_rot, get_base_monster_name,
                    is_metal_item, generate_vendor_inventory, process_upgrade_scroll_action,
                    roll_buc_status, CORROSIVE_MONSTERS)
 from .item_templates import (WEAPON_TEMPLATES, ARMOR_TEMPLATES, SCROLL_TEMPLATES,
@@ -2848,6 +2848,7 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
         
         # Process hunger and meat rot each move
         process_hunger(character)
+        process_mana_regen(character)
         tick_meat_rot(character)
         
         # Process haunted floor effects (may trigger combat)
