@@ -37,10 +37,25 @@ from .game_systems import (
     move_player,
     process_chest_action,
     process_combat_action,
+    process_spell_casting_action,
     process_stairs_down_action,
     process_stairs_up_action,
 )
-from .items import initialize_identification_system
+from .items import initialize_identification_system, SPELL_TEMPLATES
+
+
+# Race stat modifiers, mirrored from game_systems.process_character_creation_action.
+# Base stats: health=30, attack=15, defense=5, str=10, dex=10, int=10.
+RACE_MODS = {
+    "human": {"health_mod": 0,   "attack_mod": 0, "defense_mod": 0,
+              "strength_mod": 0,  "dexterity_mod": 0, "intelligence_mod": 0},
+    "elf":   {"health_mod": -10, "attack_mod": 1, "defense_mod": -1,
+              "strength_mod": -1, "dexterity_mod": 2, "intelligence_mod": 2},
+    "dwarf": {"health_mod": 20,  "attack_mod": 2, "defense_mod": 2,
+              "strength_mod": 2,  "dexterity_mod": -2, "intelligence_mod": -2},
+}
+BASE_STATS = {"health": 30, "attack": 15, "defense": 5,
+              "strength": 10, "dexterity": 10, "intelligence": 10}
 
 
 _ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
@@ -58,10 +73,21 @@ def _strip_markup_list(lines):
 
 
 def new_game(seed=None, playtest_mode=False, name="Tester",
-             strength=12, dexterity=12, intelligence=12):
-    """Initialise a fresh headless game. Returns a ``PlaytestSession``."""
+             race="human", gender="non-binary",
+             int_bonus=0, spells=None):
+    """Initialise a fresh headless game. Returns a ``PlaytestSession``.
+
+    ``race`` applies the same stat modifiers the UI's character-creation
+    flow uses (see game_systems.process_character_creation_action). Pass
+    ``int_bonus`` to bump intelligence past the spell-casting threshold
+    (int > 15) so an Elf can actually cast on turn one. ``spells`` is an
+    iterable of SPELL_TEMPLATES names to pre-memorize.
+    """
     if seed is not None:
         _stdlib_random.seed(seed)
+    race = (race or "human").lower()
+    if race not in RACE_MODS:
+        raise ValueError(f"unknown race {race!r}; choose from {list(RACE_MODS)}")
 
     # Reset every gs global the UI's new-game path resets. The game_state
     # module is module-level mutable, so a previous run leaks unless we
@@ -114,14 +140,37 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     )
 
     ch_x, ch_y = 1, 1
-    gs.player_character = Character(
-        name=name, health=1, attack=1, defense=1,
-        strength=strength, dexterity=dexterity, intelligence=intelligence,
+    mods = RACE_MODS[race]
+    stats = {k: BASE_STATS[k] + mods[f"{k}_mod"] for k in BASE_STATS}
+    pc = Character(
+        name=name,
+        health=stats["health"],
+        attack=stats["attack"],
+        defense=stats["defense"],
+        strength=stats["strength"],
+        dexterity=stats["dexterity"],
+        intelligence=stats["intelligence"] + int_bonus,
         x=ch_x, y=ch_y, z=0,
     )
-    gs.player_character.health = gs.player_character.max_health
-    gs.player_character.gold = 500
-    gs.player_character.memorized_spells = []
+    pc.race = race
+    pc.gender = gender
+    pc.character_class = "Adventurer"
+    pc.health = min(stats["health"], pc.max_health)
+    pc.mana = pc.max_mana  # re-clamp after the int_bonus bumps max_mana
+    pc.gold = 500
+    pc.memorized_spells = []
+    if spells:
+        spell_index = {s.name.lower(): s for s in SPELL_TEMPLATES}
+        for raw in spells:
+            key = raw.strip().lower()
+            if not key:
+                continue
+            if key not in spell_index:
+                raise ValueError(
+                    f"unknown spell {raw!r}; check items.py:SPELL_TEMPLATES"
+                )
+            pc.memorized_spells.append(spell_index[key])
+    gs.player_character = pc
     gs.my_tower.floors[0].grid[ch_y][ch_x].discovered = True
 
     gs.encountered_monsters = {}
@@ -184,6 +233,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
 ACTION_HINTS = {
     "game_loop":     "n s e w | d (descend) u (ascend) | i (inventory)",
     "combat_mode":   "a (attack) f (flee) c (cast) I (item) x (back)",
+    "spell_casting_mode": "1..N (spell slot) x (cancel)",
     "inventory":     "1..9 (slot) x (back) e (equip-filter) u (use-filter)",
     "chest_mode":    "o (open) l (leave)",
     "vendor_shop":   "b (buy) s (sell) x (leave)",
@@ -221,6 +271,7 @@ class PlaytestSession:
             "hint": ACTION_HINTS.get(gs.prompt_cntl, "(pass raw key)"),
             "player": {
                 "name": pc.name,
+                "race": getattr(pc, "race", "human"),
                 "hp": pc.health,
                 "max_hp": pc.max_health,
                 "mana": pc.mana,
@@ -229,11 +280,18 @@ class PlaytestSession:
                 "gold": pc.gold,
                 "level": pc.level,
                 "xp": pc.experience,
+                "intelligence": pc.intelligence,
                 "floor": pc.z + 1,
                 "x": pc.x,
                 "y": pc.y,
                 "status_effects": list(pc.status_effects.keys()),
             },
+            "memorized_spells": [
+                {"slot": i + 1, "name": s.name,
+                 "mana_cost": s.mana_cost, "level": s.level,
+                 "type": s.spell_type}
+                for i, s in enumerate(pc.memorized_spells)
+            ],
             "room": {
                 "type": room.room_type,
                 "properties": {
@@ -322,6 +380,8 @@ class PlaytestSession:
                     self.last_error = f"unknown game_loop action: {action!r}"
             elif mode == "combat_mode":
                 process_combat_action(pc, tw, action)
+            elif mode == "spell_casting_mode":
+                process_spell_casting_action(pc, tw, action)
             elif mode == "chest_mode":
                 process_chest_action(pc, tw, action)
             elif mode == "stairs_down_mode":
@@ -361,8 +421,15 @@ def random_policy(obs, rng):
         choices = ["n", "s", "e", "w", "n", "s", "e", "w", "d"]
         return rng.choice(choices)
     if mode == "combat_mode":
-        # Mostly attack, sometimes flee
+        # Caster policy: if we have mana + a spell, sometimes cast; else attack
+        p = obs["player"]
+        has_spells = bool(obs.get("memorized_spells"))
+        if has_spells and p["mana"] >= 8 and rng.random() < 0.55:
+            return "c"
         return "a" if rng.random() < 0.85 else "f"
+    if mode == "spell_casting_mode":
+        # Pick the first memorized spell, then back out if no target
+        return "1"
     if mode == "chest_mode":
         return "o" if rng.random() < 0.7 else "l"
     if mode == "stairs_down_mode":
@@ -384,7 +451,8 @@ def _summarise(obs, jsonl=False):
         return json.dumps(safe, default=str)
     p = obs["player"]
     parts = [
-        f"T{obs['turn']:>4} mode={obs['mode']:<14}",
+        f"T{obs['turn']:>4} mode={obs['mode']:<19}",
+        f"{p['race'][:3]}",
         f"F{p['floor']}@({p['x']:>2},{p['y']:>2})",
         f"HP {p['hp']}/{p['max_hp']}",
         f"MP {p['mana']}/{p['max_mana']}",
@@ -392,6 +460,8 @@ def _summarise(obs, jsonl=False):
         f"$ {p['gold']}",
         f"room={obs['room']['type']}",
     ]
+    if obs.get("memorized_spells"):
+        parts.append(f"spells={len(obs['memorized_spells'])}")
     if obs["monster"]:
         m = obs["monster"]
         parts.append(f"vs {m['name']}(L{m['level']} HP{m['hp']}/{m['max_hp']})")
@@ -434,10 +504,21 @@ def main(argv=None):
     parser.add_argument("--interactive", action="store_true",
                         help="Read one action per line from stdin.")
     parser.add_argument("--name", default="Tester")
+    parser.add_argument("--race", choices=sorted(RACE_MODS.keys()),
+                        default="human",
+                        help="Race (applies the same stat mods as the UI).")
+    parser.add_argument("--int-bonus", type=int, default=0,
+                        help="Add to intelligence after race mods. "
+                             "Note: spell-casting requires int > 15.")
+    parser.add_argument("--spells", default="",
+                        help="Comma-separated SPELL_TEMPLATES names to "
+                             "pre-memorize, e.g. 'Ice Shard,Heal'.")
     args = parser.parse_args(argv)
 
+    spells = [s for s in args.spells.split(",") if s.strip()] if args.spells else None
     sess = new_game(seed=args.seed, playtest_mode=args.playtest_mode,
-                    name=args.name)
+                    name=args.name, race=args.race,
+                    int_bonus=args.int_bonus, spells=spells)
     obs = sess.observe()
     print(_summarise(obs, args.jsonl))
 

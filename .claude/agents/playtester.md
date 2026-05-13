@@ -37,6 +37,11 @@ python3 -m wizardscavern.playtest_harness --seed 42 --turns 200
 # PLAYTEST mode: force vaults / zotle / fey gardens to spawn
 python3 -m wizardscavern.playtest_harness --seed 42 --turns 300 --playtest-mode
 
+# Race + spellcaster setup. Note: in-game spell casting requires int > 15.
+# Elf base int is 12, so use --int-bonus to clear the threshold.
+python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 \
+    --race elf --int-bonus 6 --spells "Ice Shard,Heal,Fireball"
+
 # Scripted run — feed actions one-per-line
 python3 -m wizardscavern.playtest_harness --seed 42 --script - <<'EOF'
 s
@@ -51,6 +56,19 @@ EOF
 python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 --jsonl > run.jsonl
 ```
 
+### Race / spellcaster flags
+
+- `--race {human,elf,dwarf}` — applies the same stat modifiers as the
+  UI's character-creation screen. Elf is squishier (-10 HP) but smarter
+  (+2 Int, +2 Dex). Dwarf is the opposite (+20 HP, -2 Int, -2 Dex).
+- `--int-bonus N` — adds to intelligence AFTER race mods. Spell-casting
+  requires Int > 15 (see `game_systems.can_cast_spells`); for an Elf
+  that means at least `--int-bonus 4`.
+- `--spells "Name1,Name2,..."` — pre-memorize spells by name from
+  `items.py:SPELL_TEMPLATES`. Useful spell names to start with:
+  `Ice Shard` (L0, 8 mana), `Spark` (L0, 5 mana), `Minor Heal` (L0, 8 mana),
+  `Fireball` (L1, 10 mana), `Heal` (L1, 12 mana). Spelling matters.
+
 ## Action vocabulary (mode-sensitive)
 
 The harness prints `mode=<X>` each turn. Pick actions accordingly:
@@ -58,7 +76,8 @@ The harness prints `mode=<X>` each turn. Pick actions accordingly:
 | mode                  | actions                                                |
 |-----------------------|--------------------------------------------------------|
 | `game_loop`           | `n` `s` `e` `w` (move), `d` (descend), `u` (ascend), `i` (inventory) |
-| `combat_mode`         | `a` (attack), `f` (flee), `c` (cast), `I` (item), `x` (back) |
+| `combat_mode`         | `a` (attack), `f` (flee), `c` (cast spell), `I` (item), `x` (back) |
+| `spell_casting_mode`  | `1`..`N` (memorized-spell slot), `x` (cancel)          |
 | `inventory`           | `1`..`9` (slot), `x` (back), `e` (equip-filter), `u` (use-filter) |
 | `chest_mode`          | `o` (open), `l` (leave)                                |
 | `vendor_shop`         | `b` (buy), `s` (sell), `x` (leave)                     |
