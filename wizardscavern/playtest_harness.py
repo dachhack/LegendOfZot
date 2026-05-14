@@ -278,6 +278,11 @@ class PlaytestSession:
         self.turn = 0
         self.last_action = None
         self.last_error = None
+        # Feature tiles (vendor / chest / altar / etc.) the policy has
+        # already stepped onto -- exposed via `visited_features` in obs
+        # so the wayfinder can skip them and avoid oscillating between
+        # an altar tile and an empty neighbour for 50+ turns.
+        self.visited_features = set()
 
     # ------------------------------------------------------------------
     # Observation
@@ -320,6 +325,9 @@ class PlaytestSession:
                 for i, s in enumerate(pc.memorized_spells)
             ],
             "vendor_inventory": self._vendor_obs(),
+            "neighbors": self._neighbors_obs(),
+            "visited_neighbors": self._visited_neighbors_obs(),
+            "nearest_features": self._nearest_features_obs(),
             "room": {
                 "type": room.room_type,
                 "properties": {
@@ -417,6 +425,74 @@ class PlaytestSession:
             for i, item in enumerate(sorted_items)
         ]
 
+    def _nearest_features_obs(self):
+        """For each feature type the policy cares about (D, V, C), return
+        the (dx, dy) vector to the nearest unvisited instance on the current
+        floor by Manhattan distance. Lets the wayfinder walk *toward*
+        distant targets instead of relying on adjacency. Returns {} when
+        no unvisited instance exists. Cheaper than pathfinding and good
+        enough on the 18x21 floors here -- we just step in the dimension
+        with the larger absolute delta each turn.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        out = {}
+        for target in ("D", "V", "C"):
+            best = None
+            best_d = float("inf")
+            for y in range(floor.rows):
+                for x in range(floor.cols):
+                    if floor.grid[y][x].room_type != target:
+                        continue
+                    if (pc.z, x, y, target) in self.visited_features:
+                        continue
+                    if (x, y) == (pc.x, pc.y):
+                        continue
+                    d = abs(x - pc.x) + abs(y - pc.y)
+                    if d < best_d:
+                        best, best_d = (x - pc.x, y - pc.y), d
+            if best is not None:
+                out[target] = {"dx": best[0], "dy": best[1], "dist": best_d}
+        return out
+
+    def _visited_neighbors_obs(self):
+        """Mirror of _neighbors_obs but with a bool: is this neighbouring
+        feature tile already in visited_features? Lets the wayfinder skip
+        a vendor / altar / chest we've already interacted with."""
+        pc = gs.player_character
+        out = {}
+        for d, (dx, dy) in (("n", (0, -1)), ("s", (0, 1)),
+                            ("e", (1, 0)), ("w", (-1, 0))):
+            nx, ny = pc.x + dx, pc.y + dy
+            floor = gs.my_tower.floors[pc.z]
+            if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                out[d] = False
+                continue
+            rt = floor.grid[ny][nx].room_type
+            out[d] = (pc.z, nx, ny, rt) in self.visited_features
+        return out
+
+    def _neighbors_obs(self):
+        """Cardinal-neighbor room types so the policy can spot adjacent
+        features (D = downstairs, V = vendor, C = chest, etc.). Returns
+        the actual room_type regardless of `discovered` -- in normal play
+        only the tile you've stepped on flips `discovered=True`, and the
+        playtest agent needs to navigate without that fog-of-war handicap
+        (we're testing game balance, not vision rules). Returns '#' for
+        out-of-bounds.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        out = {}
+        for d, (dx, dy) in (("n", (0, -1)), ("s", (0, 1)),
+                            ("e", (1, 0)), ("w", (-1, 0))):
+            nx, ny = pc.x + dx, pc.y + dy
+            if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                out[d] = "#"
+                continue
+            out[d] = floor.grid[ny][nx].room_type
+        return out
+
     # ------------------------------------------------------------------
     # ASCII map (debug / human-readable)
     # ------------------------------------------------------------------
@@ -494,6 +570,19 @@ class PlaytestSession:
         except Exception as e:  # surface, don't crash the harness
             self.last_error = f"{type(e).__name__}: {e}"
 
+        # Record any feature tile the player is now standing on so the
+        # wayfinder can avoid bouncing back onto it once we exit the
+        # corresponding interaction mode. '.' / 'E' / '#' / 'D' aren't
+        # tracked -- '.' is empty, 'E' is the floor-start tile (we'll
+        # revisit it harmlessly), '#' is a wall, and 'D' is the descent
+        # goal that should always be re-targeted.
+        pc_after = gs.player_character
+        room_now = gs.my_tower.floors[pc_after.z].grid[pc_after.y][pc_after.x]
+        if room_now.room_type not in (".", "E", "#", "D"):
+            self.visited_features.add(
+                (pc_after.z, pc_after.x, pc_after.y, room_now.room_type)
+            )
+
         return self.observe()
 
     def is_done(self):
@@ -543,6 +632,54 @@ def smart_policy(obs, rng):
             return "i"
         if hunger < 50 and food_slot:
             return "i"
+        # Wayfinder: if any cardinal neighbour is a feature tile we
+        # haven't already interacted with, step into it. Without this,
+        # the random walker dies before ever bumping into the lone vendor
+        # / downstairs on the floor. Priority order is dynamic: if we're
+        # short on healing potions and have shopping money, prefer the
+        # vendor over the stairs; otherwise descend. U (upstairs) is
+        # intentionally omitted -- stepping back up rarely advances.
+        # Visited tiles are excluded so we don't bounce between an altar
+        # and an empty neighbour for 50+ turns -- D and V are never
+        # marked visited so we always re-target stairs / unvisited shops.
+        healing_count = sum(i.get("count", 1) for i in inv
+                            if i["category"] == "potion_healing")
+        wants_vendor = healing_count < 2 and p["gold"] >= 50
+        if wants_vendor:
+            PRIORITY = ("V", "D", "C", "A", "T", "N", "P", "L", "G", "O")
+        else:
+            PRIORITY = ("D", "V", "C", "A", "T", "N", "P", "L", "G", "O")
+        neighbors = obs.get("neighbors") or {}
+        visited = obs.get("visited_neighbors") or {}
+        best_dir, best_rank = None, len(PRIORITY)
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t in PRIORITY and not visited.get(d):
+                rank = PRIORITY.index(t)
+                if rank < best_rank:
+                    best_dir, best_rank = d, rank
+        if best_dir is not None:
+            return best_dir
+
+        # Distant wayfinder: no useful neighbour, but the floor has a known
+        # unvisited V (vendor) or D (downstairs). Step in the dimension
+        # with the larger absolute delta -- greedy walk that doesn't
+        # respect walls but, given enough turns, usually finds a route.
+        nearest = obs.get("nearest_features") or {}
+        if wants_vendor:
+            target = nearest.get("V") or nearest.get("D")
+        else:
+            target = nearest.get("D") or nearest.get("V")
+        if target is not None:
+            dx, dy = target["dx"], target["dy"]
+            # 30% chance to pick the smaller axis or random direction so
+            # we don't bash into the same wall forever on long detours.
+            if rng.random() < 0.30:
+                return rng.choice(["n", "s", "e", "w"])
+            if abs(dx) >= abs(dy):
+                return "e" if dx > 0 else "w"
+            return "s" if dy > 0 else "n"
+
         return rng.choice(["n", "s", "e", "w", "n", "s", "e", "w", "d"])
 
     if mode == "inventory":
@@ -560,16 +697,18 @@ def smart_policy(obs, rng):
         return "x"
 
     if mode == "combat_mode":
-        # Mid-fight heal: if a Heal-type spell fits the mana budget AND we're
-        # below 40% HP, queue a cast (next-turn spell_casting_mode picks Heal).
-        if hp_pct < 0.40 and heal_spell_slot:
+        # Mid-fight heal: queue a cast at HP < 55%. The 0.55 threshold was
+        # raised from 0.40 after a playtest pass found the tighter window
+        # almost never opened alive with mana banked -- the player would
+        # cross 40% and die in the same combat turn before reacting.
+        if hp_pct < 0.55 and heal_spell_slot:
             return "c"
         if affordable_dmg and rng.random() < 0.65:
             return "c"
         return "a" if rng.random() < 0.92 else "f"
 
     if mode == "spell_casting_mode":
-        if hp_pct < 0.40 and heal_spell_slot:
+        if hp_pct < 0.55 and heal_spell_slot:
             return str(heal_spell_slot)
         if affordable_dmg:
             return str(rng.choice(affordable_dmg)["slot"])
