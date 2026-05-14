@@ -610,7 +610,13 @@ class PlaytestSession:
         floor, return (dx, dy, dist) to the nearest one. Bypasses
         visited_features (re-targets a dungeon we walked past unkeyed
         before the key dropped) and visited filters on nearest_features.
-        Looted dungeons are excluded via gs.looted_dungeons."""
+        Looted dungeons are excluded via gs.looted_dungeons.
+
+        Returns dist=0 when the player is already standing on the keyed
+        tile -- the JSONL stream then carries the "this dungeon is
+        keyed" signal at the exact turn we unlock, useful for post-hoc
+        analysis. The wayfinder ignores dist==0 (uses == 1 for adjacent).
+        """
         pc = gs.player_character
         z = pc.z
         keys = getattr(gs, "dungeon_keys", {}) or {}
@@ -623,8 +629,6 @@ class PlaytestSession:
             if coord in looted:
                 continue
             x, y = coord[0], coord[1]
-            if (x, y) == (pc.x, pc.y):
-                continue
             d = abs(x - pc.x) + abs(y - pc.y)
             if d < best_d:
                 best, best_d = (x - pc.x, y - pc.y), d
@@ -1257,9 +1261,19 @@ def smart_policy(obs, rng, use_lantern=True):
         #   'r' (Raid)         -- spawns an undead guardian; if you win,
         #                         major reward (cursed weapon/armor).
         #   'p' (Pay Respects) -- safe heal or minor buff, no fight.
-        # Loot when healthy; pay respects when weak to use the tomb as
-        # a heal station instead of a death wish.
-        return "p" if is_weak else "r"
+        # Raid only when we have a real fallback for a bad fight.
+        # Tomb guardians can be Lv5 at floor 1-3 (dwarf/123 ate a 46-dmg
+        # Wraith one-shot at 91% HP with no escape route), so HP% alone
+        # is not enough. Two gates, EITHER triggers 'p':
+        #   1. is_weak            (HP < 50% or broken / missing gear)
+        #   2. no fallback option (no healing potion in bag AND no
+        #                          affordable Heal spell). If both are
+        #                          missing we have no way to recover
+        #                          from a bad guardian draw.
+        no_escape = (heal_pot_slot is None) and (heal_spell_slot is None)
+        if is_weak or no_escape:
+            return "p"
+        return "r"
     if mode == "dungeon_mode":
         # Locked dungeon. Send 'u' regardless: if we hold the key the
         # handler unlocks and flips us into dungeon_unlocked_mode (next
