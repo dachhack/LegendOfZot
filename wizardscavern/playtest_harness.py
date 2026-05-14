@@ -504,6 +504,7 @@ class PlaytestSession:
             "nearest_features": self._nearest_features_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
+            "nearest_undiscovered": self._nearest_undiscovered_obs(),
             "turns_on_floor": self.turn - self.floor_arrival_turn,
             "room": {
                 "type": room.room_type,
@@ -692,6 +693,34 @@ class PlaytestSession:
             if best is not None:
                 out[target] = {"dx": best[0], "dy": best[1], "dist": best_d}
         return out
+
+    def _nearest_undiscovered_obs(self):
+        """Return (dx, dy, dist) to the nearest undiscovered floor cell.
+        Lets the policy walk toward the fog frontier instead of falling
+        back to a directionless random walk -- the lantern will then
+        reveal whatever is there. Only counts walkable cells (room_type
+        != wall_char) so we don't aim at solid rock. Skips when
+        fog_of_war is off (everything is "visible" by default)."""
+        if not self.fog_of_war:
+            return None
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        wall = floor.wall_char
+        best = None
+        best_d = float("inf")
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                cell = floor.grid[y][x]
+                if cell.discovered:
+                    continue
+                if cell.room_type == wall:
+                    continue
+                d = abs(x - pc.x) + abs(y - pc.y)
+                if d < best_d:
+                    best, best_d = (x - pc.x, y - pc.y), d
+        if best is None:
+            return None
+        return {"dx": best[0], "dy": best[1], "dist": best_d}
 
     def _keyed_dungeon_target_obs(self):
         """If the player holds a key for an unlooted dungeon on this
@@ -1240,13 +1269,13 @@ def smart_policy(obs, rng, use_lantern=True):
                         return d
                 break
 
-        # Explore: random move biased toward UNDISCOVERED neighbours
-        # first (fog-of-war None tiles), then away from AVOID neighbours
-        # and already-interacted feature tiles. Without the
-        # undiscovered-first bias the random walk has no exploration
-        # gradient -- the agent loops around its known region while a
-        # whole floor sits unrevealed. Dwarf seed 7 covered only 42 of
-        # 108 walkable tiles in 1500 turns under the old rule.
+        # Frontier walker. When no feature beckons, head toward the
+        # nearest UNDISCOVERED tile so the lantern reveals new content.
+        # This replaces the prior directionless random walk -- the
+        # playtest agent should always have an objective for movement
+        # (vendor / chest / stairs / unexplored area). Survivor runs
+        # spent 49% of turns in game_loop just walking; the frontier
+        # walker converts that wandering into pure exploration progress.
         FEATURE_TILES = ("C", "G", "L", "O", "A", "P", "T", "N", "V")
         def _walkable(d):
             t = neighbors.get(d)
@@ -1256,12 +1285,38 @@ def smart_policy(obs, rng, use_lantern=True):
             if t in FEATURE_TILES and visited.get(d):
                 return False
             return True
+
+        # Aim at the fog frontier first.
+        frontier = obs.get("nearest_undiscovered")
+        if frontier is not None:
+            dx, dy = frontier["dx"], frontier["dy"]
+            # 20% jitter to escape walls on long detours.
+            if rng.random() >= 0.20:
+                # Greedy step along the larger axis first; fall back to
+                # the smaller axis if the primary direction is unwalkable.
+                if abs(dx) >= abs(dy):
+                    primary = "e" if dx > 0 else "w"
+                    secondary = "s" if dy > 0 else "n"
+                else:
+                    primary = "s" if dy > 0 else "n"
+                    secondary = "e" if dx > 0 else "w"
+                for d in (primary, secondary):
+                    if _walkable(d) and _fresh(d):
+                        return d
+                # Greedy axes blocked -- try any walkable+fresh.
+                for d in ("n", "s", "e", "w"):
+                    if _walkable(d) and _fresh(d):
+                        return d
+
+        # Random fallback only if the floor is fully discovered (or
+        # fog_of_war is off): pick any walkable, fresh direction,
+        # preferring an undiscovered neighbour if one happens to sit
+        # adjacent.
         candidates = [d for d in ("n", "s", "e", "w")
                       if _walkable(d) and _fresh(d)]
-        # Prefer undiscovered directions when any exist among candidates.
-        undiscovered = [d for d in candidates if neighbors.get(d) is None]
-        if undiscovered:
-            candidates = undiscovered
+        undiscovered_nbrs = [d for d in candidates if neighbors.get(d) is None]
+        if undiscovered_nbrs:
+            candidates = undiscovered_nbrs
         if not candidates:
             candidates = [d for d in ("n", "s", "e", "w") if _walkable(d)]
         if not candidates:
