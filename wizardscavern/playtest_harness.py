@@ -620,7 +620,19 @@ def smart_policy(obs, rng):
 
     heal_pot_slot = next((i["slot"] for i in inv
                           if i["category"] == "potion_healing"), None)
-    food_slot = next((i["slot"] for i in inv if i["category"] == "food"), None)
+    # eat<N> is the second class of slot-mismatch the harness has hit:
+    # handle_inventory_menu's eat<N> branch re-filters working_items to
+    # Food/Meat only, then indexes off THAT list -- not the broader
+    # sorted+combat-filtered inventory we report as `slot`. Compute the
+    # 1-based position in the edible-items filter (which includes rotten
+    # meat, so we count both 'food' and 'food_rotten' but prefer fresh).
+    food_slot = None
+    edible_count = 0
+    for i in inv:
+        if i["category"] in ("food", "food_rotten"):
+            edible_count += 1
+            if i["category"] == "food" and food_slot is None:
+                food_slot = edible_count
     heal_spell_slot = next((s["slot"] for s in spells
                             if s["type"] == "healing"
                             and s["mana_cost"] <= mana), None)
@@ -690,11 +702,22 @@ def smart_policy(obs, rng):
             return "x"
         # Heal first, then eat, then leave. Re-checks each turn so the slot
         # number stays valid if items were consumed.
+        proposed = None
         if hp_pct < 0.95 and heal_pot_slot:
-            return f"u{heal_pot_slot}"
-        if hunger < 80 and food_slot:
-            return f"eat{food_slot}"
-        return "x"
+            proposed = f"u{heal_pot_slot}"
+        elif hunger < 80 and food_slot:
+            proposed = f"eat{food_slot}"
+        if proposed is None:
+            return "x"
+        # Anti-stuck guard: if the last action was the same as what we're
+        # about to send and we're still in inventory mode, the handler is
+        # silently rejecting it (e.g. a slot-mismatch logging "Invalid
+        # item number" but not advancing state). Bail rather than spin --
+        # the playtester caught this pattern with `eat3` looping when the
+        # food was in edible-list slot 1.
+        if obs.get("last_action") == proposed:
+            return "x"
+        return proposed
 
     if mode == "combat_mode":
         # Mid-fight heal: queue a cast at HP < 55%. The 0.55 threshold was
