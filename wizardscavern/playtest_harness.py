@@ -41,7 +41,11 @@ from .game_systems import (
     process_stairs_down_action,
     process_stairs_up_action,
 )
-from .items import initialize_identification_system, SPELL_TEMPLATES
+from .vendor import handle_vendor_shop, handle_starting_shop
+from .items import (
+    initialize_identification_system, SPELL_TEMPLATES,
+    Potion, Food, Meat, Weapon, Armor, Spell,
+)
 
 
 # Race stat modifiers, mirrored from game_systems.process_character_creation_action.
@@ -70,6 +74,29 @@ def _strip_markup(s):
 
 def _strip_markup_list(lines):
     return [_strip_markup(line) for line in lines]
+
+
+def _item_category(item):
+    """Coarse category tag so the smart policy can filter inventory + vendor
+    listings without needing the full item class hierarchy."""
+    if isinstance(item, Potion):
+        ptype = getattr(item, "potion_type", "")
+        if ptype == "healing":
+            return "potion_healing"
+        if ptype == "mana":
+            return "potion_mana"
+        return f"potion_{ptype}" if ptype else "potion"
+    if isinstance(item, (Food, Meat)):
+        if isinstance(item, Meat) and getattr(item, "is_rotten", False):
+            return "food_rotten"
+        return "food"
+    if isinstance(item, Weapon):
+        return "weapon"
+    if isinstance(item, Armor):
+        return "armor"
+    if isinstance(item, Spell):
+        return "spell"
+    return "other"
 
 
 def new_game(seed=None, playtest_mode=False, name="Tester",
@@ -292,6 +319,7 @@ class PlaytestSession:
                  "type": s.spell_type}
                 for i, s in enumerate(pc.memorized_spells)
             ],
+            "vendor_inventory": self._vendor_obs(),
             "room": {
                 "type": room.room_type,
                 "properties": {
@@ -304,6 +332,8 @@ class PlaytestSession:
             "log": _strip_markup_list(log_delta),
             "alive": pc.is_alive() and gs.prompt_cntl != "death_screen",
             "done": self.is_done(),
+            "last_action": self.last_action,
+            "last_error": self.last_error,
         }
 
     def _monster_obs(self):
@@ -318,7 +348,41 @@ class PlaytestSession:
         }
 
     def _inventory_obs(self):
-        items = getattr(gs.player_character.inventory, "items", [])
+        # Must mirror handle_inventory_menu's `working_items` exactly --
+        # slot numbers in u<N>/eat<N>/e<N> index off the FILTERED sorted
+        # list, not raw inventory. Two filters apply:
+        #   1. If gs.active_monster is alive (player is in -- or fled --
+        #      combat), the handler restricts to combat-usable items
+        #      (Potions, Food, Meat, certain scrolls).
+        #   2. The inventory_filter sub-mode further narrows to use/equip/eat.
+        # Get them wrong and the policy spins on Invalid-item-number.
+        from .characters import get_sorted_inventory
+        from .items import (Potion, Scroll, Flare, Lantern, LanternFuel,
+                            Treasure, Towel, CookingKit, CuringKit,
+                            Weapon, Armor, Food, Meat)
+        items = get_sorted_inventory(gs.player_character.inventory)
+
+        in_combat = (gs.active_monster is not None
+                     and gs.active_monster.is_alive())
+        if in_combat:
+            combat_scrolls = ('spell_scroll', 'protection', 'restoration')
+            items = [
+                i for i in items
+                if isinstance(i, (Potion, Food, Meat))
+                or (isinstance(i, Scroll)
+                    and getattr(i, 'scroll_type', None) in combat_scrolls)
+            ]
+        if gs.inventory_filter == 'use':
+            items = [i for i in items if isinstance(i,
+                (Potion, Scroll, Flare, Lantern, LanternFuel,
+                 Treasure, Towel, CookingKit, CuringKit))]
+        elif gs.inventory_filter == 'equip':
+            items = [i for i in items if isinstance(i, (Weapon, Armor, Towel))
+                     or (isinstance(i, Treasure)
+                         and getattr(i, 'treasure_type', None) == 'passive')]
+        elif gs.inventory_filter == 'eat':
+            items = [i for i in items if isinstance(i, (Food, Meat))]
+
         out = []
         for i, item in enumerate(items):
             count = getattr(item, "count", 1) or 1
@@ -326,8 +390,28 @@ class PlaytestSession:
                 "slot": i + 1,
                 "name": getattr(item, "name", repr(item)),
                 "count": count,
+                "category": _item_category(item),
             })
         return out
+
+    def _vendor_obs(self):
+        if gs.prompt_cntl != "vendor_shop" or gs.active_vendor is None:
+            return None
+        # Vendor's "buy" command uses get_sorted_inventory, so the slot
+        # number we report must match the sorted order or 'b<N>' will buy
+        # the wrong item.
+        from .characters import get_sorted_inventory
+        sorted_items = get_sorted_inventory(gs.active_vendor.inventory)
+        return [
+            {
+                "slot": i + 1,
+                "name": getattr(item, "name", repr(item)),
+                "price": getattr(item, "calculated_value",
+                                 getattr(item, "value", 0)),
+                "category": _item_category(item),
+            }
+            for i, item in enumerate(sorted_items)
+        ]
 
     # ------------------------------------------------------------------
     # ASCII map (debug / human-readable)
@@ -390,6 +474,10 @@ class PlaytestSession:
                 process_stairs_up_action(pc, tw, action, gs.floor_params)
             elif mode == "inventory":
                 handle_inventory_menu(pc, tw, action)
+            elif mode == "vendor_shop":
+                handle_vendor_shop(pc, tw, action)
+            elif mode == "starting_shop":
+                handle_starting_shop(pc, tw, action)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -413,6 +501,105 @@ class PlaytestSession:
 # ----------------------------------------------------------------------
 # Policies
 # ----------------------------------------------------------------------
+def smart_policy(obs, rng):
+    """Priority-gated policy that actually plays the game.
+
+    Order of intents (highest priority wins):
+      1. Critical HP   -> drink healing potion / cast Heal
+      2. Hungry        -> eat food
+      3. In combat     -> cast best affordable spell, else attack
+      4. In a vendor   -> buy 1-2 healing potions + food, then leave
+      5. Otherwise     -> explore (random move + occasional descend)
+
+    Stateless: the policy re-derives intent from each observation. That keeps
+    multi-step actions (open-inventory -> use-slot -> back) coherent without
+    a hand-rolled FSM, since each step's gate condition resolves once the
+    goal is achieved (HP up -> stop wanting to heal -> exit inventory).
+    """
+    mode = obs["mode"]
+    p = obs["player"]
+    inv = obs.get("inventory") or []
+    spells = obs.get("memorized_spells") or []
+
+    hp_pct = p["hp"] / max(1, p["max_hp"])
+    hunger = p["hunger"]
+    mana = p["mana"]
+
+    heal_pot_slot = next((i["slot"] for i in inv
+                          if i["category"] == "potion_healing"), None)
+    food_slot = next((i["slot"] for i in inv if i["category"] == "food"), None)
+    heal_spell_slot = next((s["slot"] for s in spells
+                            if s["type"] == "healing"
+                            and s["mana_cost"] <= mana), None)
+    affordable_spells = [s for s in spells if s["mana_cost"] <= mana]
+    affordable_dmg = [s for s in affordable_spells if s["type"] == "damage"]
+
+    if mode == "game_loop":
+        if hp_pct < 0.30 and heal_pot_slot:
+            return "i"
+        if hunger < 50 and food_slot:
+            return "i"
+        return rng.choice(["n", "s", "e", "w", "n", "s", "e", "w", "d"])
+
+    if mode == "inventory":
+        # If the previous action raised an exception, bail out instead of
+        # retrying the same thing (e.g. a buggy use-handler would otherwise
+        # spin the policy forever). The harness records last_error per step.
+        if obs.get("last_error"):
+            return "x"
+        # Heal first, then eat, then leave. Re-checks each turn so the slot
+        # number stays valid if items were consumed.
+        if hp_pct < 0.95 and heal_pot_slot:
+            return f"u{heal_pot_slot}"
+        if hunger < 80 and food_slot:
+            return f"eat{food_slot}"
+        return "x"
+
+    if mode == "combat_mode":
+        # Mid-fight heal: if a Heal-type spell fits the mana budget AND we're
+        # below 40% HP, queue a cast (next-turn spell_casting_mode picks Heal).
+        if hp_pct < 0.40 and heal_spell_slot:
+            return "c"
+        if affordable_dmg and rng.random() < 0.65:
+            return "c"
+        return "a" if rng.random() < 0.92 else "f"
+
+    if mode == "spell_casting_mode":
+        if hp_pct < 0.40 and heal_spell_slot:
+            return str(heal_spell_slot)
+        if affordable_dmg:
+            return str(rng.choice(affordable_dmg)["slot"])
+        if affordable_spells:
+            return str(rng.choice(affordable_spells)["slot"])
+        return "x"
+
+    if mode == "vendor_shop":
+        vendor_inv = obs.get("vendor_inventory") or []
+        gold = p["gold"]
+        # Stockpile: keep at least a few uses of each survival staple.
+        # Sum item counts (not stack rows) so a single stack of 5 potions
+        # still counts as 5 and the policy doesn't over-buy.
+        STOCK = {"potion_healing": 3, "food": 2, "potion_mana": 2}
+        owned = {cat: sum(i.get("count", 1) for i in inv
+                          if i["category"] == cat)
+                 for cat in STOCK}
+        for v in vendor_inv:
+            if v["price"] > gold:
+                continue
+            cat = v["category"]
+            if cat in STOCK and owned.get(cat, 0) < STOCK[cat]:
+                return f"b{v['slot']}"
+        return "x"
+
+    if mode == "chest_mode":
+        return "o" if rng.random() < 0.85 else "l"
+    if mode == "stairs_down_mode":
+        return "d"
+    if mode == "stairs_up_mode":
+        return "u"
+    return "back"
+
+
 def random_policy(obs, rng):
     """Cheap-and-cheerful random policy for smoke-testing."""
     mode = obs["mode"]
@@ -500,9 +687,11 @@ def main(argv=None):
                         help="RNG seed for reproducible runs.")
     parser.add_argument("--turns", type=int, default=200,
                         help="Maximum turns to run.")
-    parser.add_argument("--policy", choices=("random", "script"),
+    parser.add_argument("--policy", choices=("random", "smart", "script"),
                         default="random",
-                        help="Action policy: random or scripted.")
+                        help="Action policy: random (cheap exploration), "
+                             "smart (heal/eat/buy gates), or script (read "
+                             "actions from --script).")
     parser.add_argument("--script", default=None,
                         help="Script file (one action per line). '-' for stdin.")
     parser.add_argument("--playtest-mode", action="store_true",
@@ -541,11 +730,13 @@ def main(argv=None):
     else:
         action_source = None
 
+    policy_fn = smart_policy if args.policy == "smart" else random_policy
+
     for _ in range(args.turns):
         if sess.is_done():
             break
         if action_source is None:
-            action = random_policy(obs, rng)
+            action = policy_fn(obs, rng)
         else:
             try:
                 raw = next(action_source)

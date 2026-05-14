@@ -2032,8 +2032,11 @@ def handle_inventory_menu(player_character, my_tower, cmd):
         return
 
     # --- Drop Rotten: bulk-discard all rotten Meat from inventory ---
+    # NOTE: Meat is imported at module top (line 20). Do NOT add a local
+    # `from .items import Meat` here -- Python would treat Meat as a local
+    # for the entire function and every prior use (lines 1685, 1795, etc.)
+    # would raise UnboundLocalError.
     if cmd == 'dr':
-        from .items import Meat
         rotten = [i for i in player_character.inventory.items
                   if isinstance(i, Meat) and getattr(i, 'is_rotten', False)]
         if not rotten:

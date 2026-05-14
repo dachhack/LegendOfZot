@@ -31,8 +31,13 @@ Keep it tight. The user wants signal, not transcripts.
 ## How to drive the harness
 
 ```bash
-# Smoke test, random policy
+# Smoke test, random policy (cheap exploration, no decisions)
 python3 -m wizardscavern.playtest_harness --seed 42 --turns 200
+
+# SMART policy: heal at low HP, eat when hungry, buy at vendors,
+# cast Heal in combat, prefer best damage spell. Use this for any
+# balance test where survival behavior matters.
+python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 --policy smart
 
 # PLAYTEST mode: force vaults / zotle / fey gardens to spawn
 python3 -m wizardscavern.playtest_harness --seed 42 --turns 300 --playtest-mode
