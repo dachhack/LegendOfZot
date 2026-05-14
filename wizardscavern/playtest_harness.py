@@ -737,9 +737,23 @@ def smart_policy(obs, rng):
     if mode == "chest_mode":
         return "o" if rng.random() < 0.85 else "l"
     if mode == "stairs_down_mode":
+        # The descent goal -- always confirm.
         return "d"
     if mode == "stairs_up_mode":
-        return "u"
+        # Stairs-up_mode fires as soon as you arrive on floor N+1 (your
+        # landing tile is the U). Confirming would immediately bounce
+        # the agent back to floor N's D, where stairs_down_mode would
+        # fire again and we'd loop forever -- the playtester observed
+        # 182/200 turns burned to this ping-pong. The handler accepts
+        # n/s/e/w as a "walk away from the stairs" move, so step in
+        # whatever direction has the most useful neighbour (or random
+        # if none) -- this matches the game_loop wayfinder's instinct.
+        neighbors = obs.get("neighbors") or {}
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t and t not in ("#", "U"):
+                return d
+        return rng.choice(["n", "s", "e", "w"])
     return "back"
 
 
