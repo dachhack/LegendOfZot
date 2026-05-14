@@ -3031,15 +3031,29 @@ def drop_monster_items(monster, player_character):
         display = get_item_display_name(item)
         add_log(f"{COLOR_CYAN}The {monster.name} dropped {get_article(display)} {display}!{COLOR_RESET}")
     else:
-        # Spell drop
+        # Spell drop. Clone all Spell fields from the template -- the
+        # previous version passed `effect_magnitude` / `value` / `element`
+        # kwargs that Spell.__init__ doesn't accept, raising
+        # AttributeError before the item was even created and silently
+        # losing the drop. Spell.__init__ at items.py:3418 lists the
+        # canonical field set.
         spell_candidates = [s for s in SPELL_TEMPLATES if s.level <= min(5, floor_lvl // 3 + 1)]
         if not spell_candidates:
             spell_candidates = [s for s in SPELL_TEMPLATES if s.level <= 1]
         base = random.choice(spell_candidates)
-        item = Spell(name=base.name, spell_type=base.spell_type,
-                     mana_cost=base.mana_cost, effect_magnitude=base.effect_magnitude,
-                     value=base.value, level=base.level, description=base.description,
-                     element=getattr(base, 'element', 'None'))
+        item = Spell(
+            name=base.name,
+            description=base.description,
+            mana_cost=base.mana_cost,
+            damage_type=base.damage_type,
+            base_power=base.base_power,
+            level=base.level,
+            spell_type=base.spell_type,
+            status_effect_name=base.status_effect_name,
+            status_effect_duration=base.status_effect_duration,
+            status_effect_type=base.status_effect_type,
+            status_effect_magnitude=base.status_effect_magnitude,
+        )
         display = get_item_display_name(item)
         add_log(f"{COLOR_PURPLE}The {monster.name} dropped {get_article(display)} {display}!{COLOR_RESET}")
 
