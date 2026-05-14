@@ -769,6 +769,21 @@ class PlaytestSession:
             elif mode in ("dungeon_mode", "dungeon_unlocked_mode"):
                 from .game_systems import process_dungeon_action
                 process_dungeon_action(pc, tw, action)
+            elif mode in ("garden_mode", "fey_garden_mode"):
+                from .game_systems import process_garden_action
+                process_garden_action(pc, tw, action)
+            elif mode == "library_mode":
+                from .game_systems import process_library_action
+                process_library_action(pc, tw, action)
+            elif mode == "library_read_decision_mode":
+                from .room_actions import process_library_read_decision
+                process_library_read_decision(pc, tw, action)
+            elif mode == "blacksmith_mode":
+                from .game_systems import process_blacksmith_action
+                process_blacksmith_action(pc, tw, action)
+            elif mode == "shrine_mode":
+                from .game_systems import process_shrine_action
+                process_shrine_action(pc, tw, action)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -1288,6 +1303,46 @@ def smart_policy(obs, rng, use_lantern=True):
         # Loot the dungeon. The 'r' command pays out gold + items (or
         # rolls a Master Dungeon for the rune).
         return "r"
+    if mode in ("garden_mode", "fey_garden_mode"):
+        # Harvest. Yields herbs / ingredients / food. Fey gardens are
+        # ephemeral and disappear if not harvested, so always grab.
+        return "h"
+    if mode == "library_mode":
+        # Read a tome. The handler rolls vs INT to find a grimoire;
+        # if it does, we get bumped into library_read_decision_mode
+        # for the y/n attempt.
+        return "r"
+    if mode == "library_read_decision_mode":
+        # Always attempt to read the grimoire. Risk is mostly upside --
+        # success teaches a spell (or XP); failure just wastes the find.
+        return "y"
+    if mode == "blacksmith_mode":
+        # Blacksmith repair is cheaper than vendors. Repair weapon then
+        # armor, in priority order, only when the gear is actually worn
+        # ( <100% durability). Otherwise leave. Reforge (3/4) is a
+        # gamble that re-rolls stats -- skip it for now, the playtest
+        # value is risk-bounded repair coverage.
+        w = equipped.get("weapon")
+        a = equipped.get("armor")
+        w_worn = w and (w.get("durability") or 0) < (w.get("max_durability") or 1)
+        a_worn = a and (a.get("durability") or 0) < (a.get("max_durability") or 1)
+        if w_worn and not w.get("is_sealed"):
+            return "1"
+        if a_worn and not a.get("is_sealed"):
+            return "2"
+        # Nothing to repair: handler doesn't auto-exit so we have to
+        # walk off. Step in any non-wall direction; on the next obs
+        # we'll be in game_loop and the wayfinder takes over.
+        neighbors = obs.get("neighbors") or {}
+        for d in ("n", "s", "e", "w"):
+            if neighbors.get(d) not in ("#", None):
+                return d
+        return rng.choice(["n", "s", "e", "w"])
+    if mode == "shrine_mode":
+        # One-shot stat boost (Shrine of the Fallen). Always pray --
+        # the property `shrine_used` makes this one-and-done so the
+        # visited_features tracker prevents oscillation.
+        return "p"
     return "back"
 
 
