@@ -656,6 +656,14 @@ class PlaytestSession:
                 entry["is_identified"] = bool(is_item_identified(item))
             except Exception:
                 entry["is_identified"] = True  # non-identifiable -> safe
+            # Surface scroll_type and potion_type so the usage policy
+            # can target specific item effects (read mapping when
+            # fog-blind, drink stone_skin before combat, etc.) without
+            # parsing display names.
+            if isinstance(item, Scroll):
+                entry["scroll_type"] = getattr(item, "scroll_type", None)
+            if isinstance(item, Potion):
+                entry["potion_type"] = getattr(item, "potion_type", None)
             out.append(entry)
         return out
 
@@ -1722,6 +1730,51 @@ def smart_policy(obs, rng, use_lantern=True):
             proposed = f"e{armor_upgrade_slot}"
         if proposed is None and hunger < 80 and food_slot:
             proposed = f"eat{food_slot}"
+        # Read safe identified scrolls -- one-shot beneficial effects
+        # the agent's been hoarding. Skip teleport (random
+        # destination, could land in a dangerous spot) and descent
+        # (skips the floor, defeats boon-collection). remove_curse
+        # only when actually cursed.
+        SAFE_SCROLL_TYPES = {
+            "mapping", "upgrade", "spell_scroll",
+            "lantern_upgrade", "restoration", "foresight",
+            "protection", "identify", "vendor_restock",
+        }
+        if proposed is None:
+            for entry in inv:
+                if entry["category"] != "scroll":
+                    continue
+                if not entry.get("is_identified"):
+                    continue
+                stype = entry.get("scroll_type")
+                if stype in SAFE_SCROLL_TYPES:
+                    proposed = f"u{entry['slot']}"
+                    break
+                if (stype == "remove_curse"
+                        and (cursed_weapon or cursed_armor)):
+                    proposed = f"u{entry['slot']}"
+                    break
+        # Drink identified buff potions when HP is decent but not
+        # full. The combat-buff potions (strength, defense, stone
+        # skin, regeneration, etc.) are tactical effects that
+        # otherwise sit in the bag until death. Drink them while
+        # the agent is alive to see -- worst case the duration runs
+        # out before a fight, best case it saves the next combat.
+        HELPFUL_POTION_TYPES = {
+            "strength", "defense", "stone_skin", "regeneration",
+            "berserker", "giant_strength", "haste", "vampirism",
+            "dexterity", "intelligence", "frost_armor",
+            "true_sight", "invisibility", "fortune", "experience",
+        }
+        if proposed is None and hp_pct < 0.95:
+            for entry in inv:
+                if not entry["category"].startswith("potion_"):
+                    continue
+                if not entry.get("is_identified"):
+                    continue
+                if entry.get("potion_type") in HELPFUL_POTION_TYPES:
+                    proposed = f"u{entry['slot']}"
+                    break
         if proposed is None:
             return "x"
         # Anti-stuck guard: if the last action was the same as what we're
@@ -1735,15 +1788,38 @@ def smart_policy(obs, rng, use_lantern=True):
         return proposed
 
     if mode == "combat_mode":
-        # Threat assessment: monster_too_tough = monster level > player
-        # level + 2, OR monster max_hp > 2x player max_hp.
+        # Threat assessment: monster_too_tough = monster level >
+        # player level + 1, OR monster max_hp > 1.5x player max_hp,
+        # OR monster is undead at any level >= player level. The F4
+        # audit caught 5 Lv2 agents dying to Lv3-4 UNDEAD WRAITHs
+        # because the old threshold (level > pc+2) had them fighting
+        # those at parity. Wraiths hit for 15-25 raw, so even a flee-
+        # capable agent burns 1-2 hits worth of HP per engagement;
+        # tighten to flee earlier. The undead check uses obs.monster's
+        # name; we don't have a type field but the name contains
+        # "wraith/lich/skeleton/vampire/ghost/zombie/spectral".
         m = obs.get("monster") or {}
         m_level = m.get("level") or 0
         m_max_hp = m.get("max_hp") or 0
         m_is_edible = m.get("is_edible", True)
+        m_name_low = (m.get("name") or "").lower()
         pc_level = p.get("level") or 1
-        monster_too_tough = (m_level > pc_level + 2
-                             or m_max_hp > 2 * p["max_hp"])
+        UNDEAD_NAMES = ("wraith", "lich", "skeleton", "vampire",
+                        "ghost", "zombie", "spectral", "phantom")
+        is_undead = any(k in m_name_low for k in UNDEAD_NAMES)
+        # Two-band threat assessment:
+        #  * general monsters: flee at m_level > pc.level + 2 (the
+        #    original threshold -- aggressive enough that Lv1 agents
+        #    fight Lv0-3 monsters and bank XP).
+        #  * undead (wraith/lich/skeleton/etc.): flee one tier
+        #    earlier (m_level >= pc.level + 1) because they hit for
+        #    raw damage and resist physical, often dropping no meat.
+        # max_hp gate (m_max_hp > 2x pc_max_hp) catches HP-bag bosses.
+        monster_too_tough = (
+            m_level > pc_level + 2
+            or m_max_hp > 2 * p["max_hp"]
+            or (is_undead and m_level > pc_level)
+        )
         # Starving + inedible monster: flee. Prior playtest showed
         # 39 starvation-override engagements, only 2 produced meat
         # because the agent kept fighting Wraiths/Liches/Lichen with
@@ -1823,6 +1899,35 @@ def smart_policy(obs, rng, use_lantern=True):
                 continue
             cat = v["category"]
             if cat in STOCK and owned.get(cat, 0) < STOCK[cat]:
+                return f"b{v['slot']}"
+
+        # 2.5) Magical / utility items the agent should keep one or two
+        # of around: stat-buff potions are pre-combat insurance
+        # (Strength Elixir / Defense Brew / Stone Skin / Regeneration
+        # / Berserker Rage / Giant's Might / Haste / Vampiric Elixir),
+        # scrolls are the high-EV grab bag (mapping reveals the floor,
+        # upgrade buffs equipment, remove_curse breaks welds, spell
+        # scrolls teach new spells). Buy one of each unknown
+        # potion_<type> beyond healing/mana, and up to 3 scrolls. Keep
+        # a 150g cushion for emergency healing-pot restock at the next
+        # vendor.
+        MAGIC_RESERVE = 150
+        SCROLL_BUY_CAP = 3
+        owned_scrolls = sum(1 for i in inv if i["category"] == "scroll")
+        owned_buff_potion_types = {
+            i["category"] for i in inv
+            if i["category"].startswith("potion_")
+            and i["category"] not in ("potion_healing", "potion_mana")
+        }
+        for v in vendor_inv:
+            if v["price"] > gold - MAGIC_RESERVE:
+                continue
+            cat = v["category"]
+            if cat == "scroll" and owned_scrolls < SCROLL_BUY_CAP:
+                return f"b{v['slot']}"
+            if (cat.startswith("potion_")
+                    and cat not in ("potion_healing", "potion_mana", "potion")
+                    and cat not in owned_buff_potion_types):
                 return f"b{v['slot']}"
 
         # 3) Replacement gear: if our equipped weapon or armor is broken
