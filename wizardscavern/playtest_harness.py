@@ -667,16 +667,33 @@ class PlaytestSession:
         # the wrong item.
         from .characters import get_sorted_inventory
         sorted_items = get_sorted_inventory(gs.active_vendor.inventory)
-        return [
-            {
+        out = []
+        for i, item in enumerate(sorted_items):
+            entry = {
                 "slot": i + 1,
                 "name": getattr(item, "name", repr(item)),
                 "price": getattr(item, "calculated_value",
                                  getattr(item, "value", 0)),
                 "category": _item_category(item),
             }
-            for i, item in enumerate(sorted_items)
-        ]
+            # Surface weapon / armor stats so the policy can compare
+            # against equipped gear and buy strict upgrades. Without
+            # these fields the vendor policy was only stocking
+            # potions / food and silently walking past a Longsword
+            # (atk+10) sitting at 100g while the agent went on to die
+            # holding a Dagger (atk+2) at floor 4.
+            if isinstance(item, (Weapon, Armor)):
+                entry["is_broken"] = bool(getattr(item, "is_broken", False))
+                entry["buc_status"] = getattr(item, "buc_status", "uncursed")
+                entry["buc_known"] = bool(getattr(item, "buc_known", False))
+                entry["is_sealed"] = bool(getattr(item, "is_sealed", False))
+                entry["item_level"] = getattr(item, "level", 0)
+                if isinstance(item, Weapon):
+                    entry["attack_bonus"] = getattr(item, "attack_bonus", 0)
+                else:
+                    entry["defense_bonus"] = getattr(item, "defense_bonus", 0)
+            out.append(entry)
+        return out
 
     def _nearest_features_obs(self):
         """For each feature type the policy cares about (D, V, C, plus
@@ -1821,7 +1838,36 @@ def smart_policy(obs, rng, use_lantern=True):
                 if v["category"] == "armor" and v["price"] <= gold:
                     return f"b{v['slot']}"
 
-        # 4) Identify unknown scrolls + potions. Upgrade scrolls are the
+        # 4) Equipment UPGRADES from the vendor. The biggest combat-
+        # balance gap surfaced by the F4 death cliff: vendors stock
+        # weapons (Longsword atk+10, Mace +6, Morningstar +8) and
+        # armor (Ring Mail def+4, Chainmail +6) that BLOW AWAY the
+        # starter Dagger / Leather Armor, but the policy was buying
+        # only stockpile items and walking past the upgrades. Now we
+        # scan vendor weapons / armor and buy any strict-bonus
+        # improvement we can afford, after keeping a healing-pot
+        # reserve. Skip known-cursed and sealed items -- can't be
+        # repaired and weld to hand on equip.
+        UPGRADE_RESERVE = 150  # keep this much for next vendor's potions
+        cur_w_bonus = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        cur_a_bonus = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        for v in vendor_inv:
+            if v["category"] not in ("weapon", "armor"):
+                continue
+            if v["price"] > gold - UPGRADE_RESERVE:
+                continue
+            if v.get("is_broken") or v.get("is_sealed"):
+                continue
+            if v.get("buc_known") and v.get("buc_status") == "cursed":
+                continue
+            if v["category"] == "weapon":
+                if (v.get("attack_bonus") or 0) > cur_w_bonus:
+                    return f"b{v['slot']}"
+            else:  # armor
+                if (v.get("defense_bonus") or 0) > cur_a_bonus:
+                    return f"b{v['slot']}"
+
+        # 5) Identify unknown scrolls + potions. Upgrade scrolls are the
         # high-value drop the user explicitly called out -- you can't
         # use one without knowing what it is, and the vendor identify
         # cost (25g per L0 item, scaled by level) is small relative to
@@ -1924,10 +1970,22 @@ def smart_policy(obs, rng, use_lantern=True):
         # value of guaranteed prayer boons is higher.
         return "pray"
     if mode == "pool_mode":
-        # Drink. Pool outcomes are RNG: healing pools restore HP, iron
-        # springs buff strength, but cursed wells poison. The playtest
-        # value is the data on whether the agent's risk tolerance pays
-        # off across seeds.
+        # Drink, but with an HP gate. Pool outcomes are RNG: healing
+        # restores HP, iron springs buff strength, BUT cursed wells
+        # deal 20-35 raw (no-defense) damage, golden pool mimic deals
+        # 50-100, mysterious explosion 15-40, all bypassing armor.
+        # The combat audit caught 4 deaths whose last log was "basin
+        # drains empty" -- agents drinking at low HP and being one-
+        # shot by the unlucky outcome. Skip the drink when HP < 50
+        # (covers cursed pool max + buffer; still some mimic risk on
+        # gold pools but those are 10% within the 10% gold-pool slice).
+        # When too weak, just walk away.
+        if p["hp"] < 50:
+            neighbors = obs.get("neighbors") or {}
+            for d in ("n", "s", "e", "w"):
+                if neighbors.get(d) not in ("#", None):
+                    return d
+            return "x"
         return "dr"
     if mode == "tomb_mode":
         # Tombs offer a binary risk choice each visit:
