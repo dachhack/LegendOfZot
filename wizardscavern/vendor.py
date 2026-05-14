@@ -110,7 +110,12 @@ class Vendor:
                 self.inventory.add_item_quiet(Weapon("Dagger", "A small, sharp blade.", attack_bonus=2, value=10, level=0, upgrade_level=0))
             self.inventory.add_item_quiet(Armor("Leather Armor","Light leather armor.", defense_bonus=3, value=50, level=0, upgrade_level=0))
             self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=50, light_radius=7, value=30, level=0))
-            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=3))
+            # Rations bumped 3 -> 5 after a playtest pass: 10/30 runs
+            # were dying with 0 food on floor 1-2 because the starter 3
+            # Rations + 1-2 monster meat drops ran out before reaching
+            # a vendor. 5 Rations = 200 nutrition uses, ~doubles the
+            # pre-vendor food cushion.
+            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=5))
             # Towel removed from starting vendor - now only randomly available from dungeon vendors
             # Add starting else
         else:

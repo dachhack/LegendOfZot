@@ -2736,9 +2736,16 @@ def get_monster_meat_info(monster_name):
     # Check exact name first
     if monster_name in MEAT_COOK_STYLES:
         return MEAT_COOK_STYLES[monster_name]
-    # Check if monster name contains a key
+    # Word-boundary key match. Without \b the lookup matches "Lich"
+    # inside "Lichen" (and returns None / inedible because Lich is
+    # the undead key), even though Lichen is a plant/fungal creature
+    # unrelated to undead Liches. \b also protects "Spore Puff" from
+    # matching "Bat" in "Combat" should that ever happen, and keeps
+    # "Sewer Rat" -> "Rat" working.
+    import re
+    name_lower = monster_name.lower()
     for key, val in MEAT_COOK_STYLES.items():
-        if key.lower() in monster_name.lower():
+        if re.search(rf"\b{re.escape(key.lower())}\b", name_lower):
             return val
     # Default: most flesh-and-blood creatures are edible
     # Skip obviously non-edible types (undead, spirits, constructs,
@@ -2760,8 +2767,12 @@ def get_monster_meat_info(monster_name):
         'elemental', 'demon', 'devil', 'fiend', 'imp', 'efreeti',
         'djinn', 'will-o', 'wisp',
     ]
+    # Same word-boundary trick as the MEAT_COOK_STYLES loop above:
+    # 'imp' must be a whole word, not a prefix of 'Impaler', etc.
+    # Multi-word keywords like 'death knight' still match the phrase
+    # because \b sits between word characters and spaces.
     for kw in non_edible_keywords:
-        if kw in monster_name.lower():
+        if re.search(rf"\b{re.escape(kw)}\b", name_lower):
             return None
     return (random.choice(MEAT_DEFAULT_CUTS), "dubious", 12)
 

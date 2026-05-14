@@ -334,7 +334,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         ))
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
-            value=10, level=0, nutrition=40, count=3,
+            value=10, level=0, nutrition=40, count=5,
         ))
         for _ in range(4):
             pc.inventory.add_item_quiet(Potion(
