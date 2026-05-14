@@ -23,6 +23,7 @@ Action vocabulary (mode-sensitive — see ``ACTION_HINTS``):
 """
 
 import argparse
+import collections
 import json
 import random as _stdlib_random
 import re
@@ -469,6 +470,9 @@ class PlaytestSession:
             self._log_pointer = 0
         log_delta = gs.log_lines[self._log_pointer:]
         self._log_pointer = len(gs.log_lines)
+        # Clear the per-turn BFS cache; the four path-obs methods will
+        # share one BFS pass on first access.
+        self._bfs_cache = None
         return {
             "turn": self.turn,
             "mode": gs.prompt_cntl,
@@ -502,6 +506,9 @@ class PlaytestSession:
             "neighbors": self._neighbors_obs(),
             "visited_neighbors": self._visited_neighbors_obs(),
             "nearest_features": self._nearest_features_obs(),
+            "feature_paths": self._feature_paths_obs(),
+            "frontier_step": self._frontier_step_obs(),
+            "nearest_monster_path": self._nearest_monster_path_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
             "nearest_undiscovered": self._nearest_undiscovered_obs(),
@@ -724,34 +731,52 @@ class PlaytestSession:
 
     def _keyed_dungeon_target_obs(self):
         """If the player holds a key for an unlooted dungeon on this
-        floor, return (dx, dy, dist) to the nearest one. Bypasses
+        floor, return navigation info to the nearest one. Bypasses
         visited_features (re-targets a dungeon we walked past unkeyed
         before the key dropped) and visited filters on nearest_features.
         Looted dungeons are excluded via gs.looted_dungeons.
 
-        Returns dist=0 when the player is already standing on the keyed
-        tile -- the JSONL stream then carries the "this dungeon is
-        keyed" signal at the exact turn we unlock, useful for post-hoc
-        analysis. The wayfinder ignores dist==0 (uses == 1 for adjacent).
+        Returns dx/dy/dist (Manhattan) for the adjacency check, plus
+        first_step/path_dist (BFS through discovered tiles) for the
+        distant wayfinder. first_step is None when the keyed dungeon
+        is not reachable through known passage.
         """
         pc = gs.player_character
         z = pc.z
         keys = getattr(gs, "dungeon_keys", {}) or {}
         looted = getattr(gs, "looted_dungeons", {}) or {}
-        best = None
-        best_d = float("inf")
+        dist_map, first_step = self._bfs_paths()
+        # Prefer BFS-closest; fall back to Manhattan-closest if no keyed
+        # tile is reachable through known passage (the agent then walks
+        # toward it via the frontier walker until it becomes reachable).
+        best_bfs = None  # (path_dist, x, y)
+        best_manhattan = None  # (manhattan_dist, x, y)
         for coord in keys.keys():
             if len(coord) < 3 or coord[2] != z:
                 continue
             if coord in looted:
                 continue
             x, y = coord[0], coord[1]
-            d = abs(x - pc.x) + abs(y - pc.y)
-            if d < best_d:
-                best, best_d = (x - pc.x, y - pc.y), d
-        if best is None:
+            md = abs(x - pc.x) + abs(y - pc.y)
+            if best_manhattan is None or md < best_manhattan[0]:
+                best_manhattan = (md, x, y)
+            if (x, y) in dist_map:
+                pd = dist_map[(x, y)]
+                if best_bfs is None or pd < best_bfs[0]:
+                    best_bfs = (pd, x, y)
+        chosen = best_bfs or best_manhattan
+        if chosen is None:
             return None
-        return {"dx": best[0], "dy": best[1], "dist": best_d}
+        _, x, y = chosen
+        fs = first_step.get((x, y))
+        pd = dist_map.get((x, y))
+        return {
+            "dx": x - pc.x,
+            "dy": y - pc.y,
+            "dist": abs(x - pc.x) + abs(y - pc.y),
+            "first_step": fs,
+            "path_dist": pd,
+        }
 
     def _visited_neighbors_obs(self):
         """Mirror of _neighbors_obs but with a bool: is this neighbouring
@@ -769,6 +794,169 @@ class PlaytestSession:
             rt = floor.grid[ny][nx].room_type
             out[d] = (pc.z, nx, ny, rt) in self.visited_features
         return out
+
+    def _bfs_paths(self):
+        """BFS from player over walkable, discovered tiles. Returns
+        (dist_map, first_step_map) keyed by (x, y).
+
+        Walkable transit excludes walls, undiscovered tiles (under fog),
+        and known hazards (M monsters, W warps). Feature tiles (D, V,
+        C, G, A, L, O, P, T, N) ARE walkable -- the agent steps onto
+        them to interact. To attack a monster, route to one of its
+        cardinal neighbours and step into the M tile.
+
+        Cached per observe() via self._bfs_cache so the three
+        path-obs methods share one BFS pass.
+        """
+        cache = getattr(self, "_bfs_cache", None)
+        if cache is not None:
+            return cache
+
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        wall = floor.wall_char
+        rows, cols = floor.rows, floor.cols
+        BLOCK_TRANSIT = {wall, "M", "W"}
+
+        dist = {(pc.x, pc.y): 0}
+        first_step = {(pc.x, pc.y): None}
+        queue = collections.deque([(pc.x, pc.y)])
+        DIRS = (("n", 0, -1), ("s", 0, 1), ("e", 1, 0), ("w", -1, 0))
+        while queue:
+            x, y = queue.popleft()
+            for d, dx, dy in DIRS:
+                nx, ny = x + dx, y + dy
+                if not (0 <= nx < cols and 0 <= ny < rows):
+                    continue
+                if (nx, ny) in dist:
+                    continue
+                cell = floor.grid[ny][nx]
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                if cell.room_type in BLOCK_TRANSIT:
+                    continue
+                dist[(nx, ny)] = dist[(x, y)] + 1
+                first_step[(nx, ny)] = (
+                    d if (x, y) == (pc.x, pc.y) else first_step[(x, y)]
+                )
+                queue.append((nx, ny))
+
+        self._bfs_cache = (dist, first_step)
+        return self._bfs_cache
+
+    def _feature_paths_obs(self):
+        """For each feature type, the BFS shortest path through
+        discovered, non-hazard tiles: first step direction + path
+        distance. Replaces Manhattan-vector greedy stepping with a
+        real navigator that respects walls + fog. {} for unreachable.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        dist, first_step = self._bfs_paths()
+        out = {}
+        for target in ("D", "V", "C", "G", "A", "L", "O", "P", "T", "N"):
+            best = None
+            best_d = float("inf")
+            for y in range(floor.rows):
+                for x in range(floor.cols):
+                    cell = floor.grid[y][x]
+                    if cell.room_type != target:
+                        continue
+                    if self.fog_of_war and not cell.discovered:
+                        continue
+                    if (pc.z, x, y, target) in self.visited_features:
+                        continue
+                    if (x, y) == (pc.x, pc.y):
+                        continue
+                    if (x, y) not in dist:
+                        continue
+                    d = dist[(x, y)]
+                    if d < best_d:
+                        best, best_d = (x, y), d
+            if best is not None:
+                out[target] = {
+                    "first_step": first_step[best],
+                    "path_dist": best_d,
+                }
+        return out
+
+    def _frontier_step_obs(self):
+        """BFS first-step toward the nearest reachable frontier: a
+        discovered, walkable tile with at least one undiscovered
+        neighbour. Lower-right tiebreak (SE-most wins ties on path_dist)
+        mirrors the player heuristic that D tends to be down-right.
+        """
+        if not self.fog_of_war:
+            return None
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        dist, first_step = self._bfs_paths()
+        best_xy = None
+        best_key = None
+        for (x, y), d in dist.items():
+            if (x, y) == (pc.x, pc.y):
+                continue
+            has_undiscovered = False
+            for dx, dy in ((0, -1), (0, 1), (1, 0), (-1, 0)):
+                nx, ny = x + dx, y + dy
+                if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                    continue
+                if not floor.grid[ny][nx].discovered:
+                    has_undiscovered = True
+                    break
+            if not has_undiscovered:
+                continue
+            key = (d, -(x + y))
+            if best_key is None or key < best_key:
+                best_key = key
+                best_xy = (x, y)
+        if best_xy is None:
+            return None
+        return {
+            "first_step": first_step[best_xy],
+            "path_dist": dist[best_xy],
+        }
+
+    def _nearest_monster_path_obs(self):
+        """BFS first-step + path distance to engaging the nearest
+        visible monster. M tiles aren't walkable transit, so we BFS to
+        their cardinal neighbours and report the approach + 1 step into
+        the M. Used by hunt-mode when the player is strong enough to
+        farm monsters for XP/gold. Returns None when no visible M is
+        reachable through discovered tiles.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        dist, first_step = self._bfs_paths()
+        opp = {"n": "s", "s": "n", "e": "w", "w": "e"}
+        best = None
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                cell = floor.grid[y][x]
+                if cell.room_type != "M":
+                    continue
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                approach = None
+                for d, dx, dy in (("n", 0, -1), ("s", 0, 1),
+                                  ("e", 1, 0), ("w", -1, 0)):
+                    nx, ny = x + dx, y + dy
+                    if (nx, ny) not in dist:
+                        continue
+                    step_into = opp[d]
+                    ad = dist[(nx, ny)]
+                    if approach is None or ad < approach[0]:
+                        approach = (ad, step_into, (nx, ny))
+                if approach is None:
+                    continue
+                approach_dist, step_into, neighbour_xy = approach
+                fs = step_into if approach_dist == 0 else first_step[neighbour_xy]
+                total = approach_dist + 1
+                if best is None or total < best[0]:
+                    best = (total, fs)
+        if best is None:
+            return None
+        return {"first_step": best[1], "path_dist": best[0]}
 
     def _neighbors_obs(self):
         """Cardinal-neighbor room types so the policy can spot adjacent
@@ -1067,6 +1255,16 @@ def smart_policy(obs, rng, use_lantern=True):
         or broken_armor
         or (equipped.get("weapon") is None)
     )
+    # Strength gate: level >= 3, HP >= 70%, weapon present + non-broken.
+    # Shifts behaviour from "rush descent" to "farm this floor for
+    # XP/gold/keys before descending." A real player builds momentum on
+    # a floor they can handle before risking deeper monster density.
+    is_strong = (
+        p["level"] >= 3
+        and hp_pct >= 0.70
+        and not broken_weapon
+        and equipped.get("weapon") is not None
+    )
     # Starving = critical hunger AND no food in bag. Hoisted because
     # combat_mode also gates on it (flee from inedible monsters when
     # starving). Threshold raised 15 -> 30 so the override fires while
@@ -1167,9 +1365,14 @@ def smart_policy(obs, rng, use_lantern=True):
         # remain so the playtester actually clears the floor before
         # moving on.
         BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P")
+        # Use BFS-aware feature_paths so we only delay descent for
+        # beneficials we can actually reach. The old Manhattan check
+        # (nearest_features) counted beneficials behind walls, leading
+        # to endless clear-before-descend loops on closed floors.
         nearest = obs.get("nearest_features") or {}
+        feature_paths_check = obs.get("feature_paths") or {}
         unvisited_beneficials_exist = any(
-            nearest.get(t) for t in BENEFICIAL_SAFE
+            feature_paths_check.get(t) for t in BENEFICIAL_SAFE
         )
         # Stuck-on-floor override: if we've spent more than this many
         # turns on the current floor, drop the clear-before-descend
@@ -1196,7 +1399,14 @@ def smart_policy(obs, rng, use_lantern=True):
         wants_vendor = ((healing_count < 2 or needs_repair)
                         and p["gold"] >= 50)
 
-        if is_weak:
+        if too_long_on_floor:
+            # Hard descent override: 300+ turns on one floor means
+            # whatever's left (an unreachable beneficial, a hunt-mode
+            # monster respawn loop) isn't worth more grinding. Push the
+            # agent toward the stairs and let the next floor reset the
+            # economy.
+            priority = ["D", "V"]
+        elif is_weak:
             priority = ["V"] + list(BENEFICIAL_SAFE)
             if not unvisited_beneficials_exist:
                 priority.append("D")  # only descend if nothing safer
@@ -1204,6 +1414,16 @@ def smart_policy(obs, rng, use_lantern=True):
             priority = ["V"] + list(BENEFICIAL_SAFE) + ["T", "N"]
             if not unvisited_beneficials_exist:
                 priority.append("D")
+        elif is_strong:
+            # Hunt-mode: clear safer rooms first, then chase monsters
+            # for XP/gold/keys, only descend when the floor is dry. M
+            # comes BEFORE D so a strong character squeezes value out
+            # of every floor instead of rushing the stairs. Bounded by
+            # too_long_on_floor above so hunt-mode can't loop forever
+            # on a respawning floor. nearest_monster_path filters out
+            # over-leveled monsters so the agent doesn't get baited
+            # into one-shot fights.
+            priority = list(BENEFICIAL_SAFE) + ["V", "T", "N", "M", "D"]
         elif unvisited_beneficials_exist:
             priority = list(BENEFICIAL_SAFE) + ["V", "T", "N"]
         else:
@@ -1234,48 +1454,45 @@ def smart_policy(obs, rng, use_lantern=True):
         if best_dir is not None:
             return best_dir
 
-        # Distant wayfinder: no useful adjacent feature, but the floor
-        # has a known unvisited target. Step in the dimension with the
-        # larger absolute delta -- greedy walk. Held-key dungeons jump
-        # ahead of the normal priority list because they're guaranteed
-        # loot (the key-holder monster is already dead).
-        target = obs.get("keyed_dungeon_target")
-        if target is None:
-            for t in priority:
-                cand = nearest.get(t)
-                if cand:
-                    target = cand
-                    break
-        if target is not None:
-            dx, dy = target["dx"], target["dy"]
-            # 30% jitter to escape walls on long detours, and avoid
-            # walking into an M/W neighbour while weak.
-            if rng.random() < 0.30:
-                safe_dirs = [d for d in ("n", "s", "e", "w")
-                             if neighbors.get(d) not in AVOID]
-                if safe_dirs:
-                    return rng.choice(safe_dirs)
-            # Prefer the greedy axis but skip it if that direction is
-            # an avoid-tile.
-            for axis in ("xy", "yx"):
-                primary = "e" if dx > 0 else "w"
-                secondary = "s" if dy > 0 else "n"
-                if axis == "xy" and abs(dx) >= abs(dy):
-                    order = (primary, secondary)
-                else:
-                    order = (secondary, primary)
-                for d in order:
-                    if neighbors.get(d) not in AVOID:
-                        return d
-                break
+        # Distant wayfinder via BFS first-step. Held-key dungeons jump
+        # ahead of the normal priority list (guaranteed loot, the
+        # key-holder monster is already dead). After that, walk through
+        # the priority list and take the BFS first_step toward the
+        # nearest reachable instance of each type. Reachability respects
+        # walls + fog + AVOID hazards, so no more bouncing off walls or
+        # walking into monsters/warps while weak.
+        feature_paths = obs.get("feature_paths") or {}
+        monster_path = obs.get("nearest_monster_path")
 
-        # Frontier walker. When no feature beckons, head toward the
-        # nearest UNDISCOVERED tile so the lantern reveals new content.
-        # This replaces the prior directionless random walk -- the
-        # playtest agent should always have an objective for movement
-        # (vendor / chest / stairs / unexplored area). Survivor runs
-        # spent 49% of turns in game_loop just walking; the frontier
-        # walker converts that wandering into pure exploration progress.
+        # Keyed dungeon (if any) via BFS first_step.
+        if keyed_tgt and keyed_tgt.get("first_step"):
+            return keyed_tgt["first_step"]
+
+        # Priority-ordered feature targeting via BFS.
+        for t in priority:
+            if t == "M":
+                # Monsters aren't in feature_paths -- use the dedicated
+                # monster-path obs which routes to an adjacent tile and
+                # steps into the M to initiate combat.
+                if monster_path and monster_path.get("first_step"):
+                    return monster_path["first_step"]
+                continue
+            path = feature_paths.get(t)
+            if path and path.get("first_step"):
+                return path["first_step"]
+
+        # Frontier walker via BFS. When no feature beckons, take the
+        # BFS first-step toward the nearest reachable discovered tile
+        # that borders the fog. Lower-right tiebreak in the obs mirrors
+        # the player heuristic that D tends to be down-right of the map.
+        frontier_step = obs.get("frontier_step")
+        if frontier_step and frontier_step.get("first_step"):
+            return frontier_step["first_step"]
+
+        # Random fallback only when the BFS has nothing reachable to
+        # offer (fully-explored floor or trapped behind a fog wall).
+        # Prefer an undiscovered neighbour if one happens to sit
+        # adjacent so the lantern still has a chance to break through.
         FEATURE_TILES = ("C", "G", "L", "O", "A", "P", "T", "N", "V")
         def _walkable(d):
             t = neighbors.get(d)
@@ -1285,33 +1502,6 @@ def smart_policy(obs, rng, use_lantern=True):
             if t in FEATURE_TILES and visited.get(d):
                 return False
             return True
-
-        # Aim at the fog frontier first.
-        frontier = obs.get("nearest_undiscovered")
-        if frontier is not None:
-            dx, dy = frontier["dx"], frontier["dy"]
-            # 20% jitter to escape walls on long detours.
-            if rng.random() >= 0.20:
-                # Greedy step along the larger axis first; fall back to
-                # the smaller axis if the primary direction is unwalkable.
-                if abs(dx) >= abs(dy):
-                    primary = "e" if dx > 0 else "w"
-                    secondary = "s" if dy > 0 else "n"
-                else:
-                    primary = "s" if dy > 0 else "n"
-                    secondary = "e" if dx > 0 else "w"
-                for d in (primary, secondary):
-                    if _walkable(d) and _fresh(d):
-                        return d
-                # Greedy axes blocked -- try any walkable+fresh.
-                for d in ("n", "s", "e", "w"):
-                    if _walkable(d) and _fresh(d):
-                        return d
-
-        # Random fallback only if the floor is fully discovered (or
-        # fog_of_war is off): pick any walkable, fresh direction,
-        # preferring an undiscovered neighbour if one happens to sit
-        # adjacent.
         candidates = [d for d in ("n", "s", "e", "w")
                       if _walkable(d) and _fresh(d)]
         undiscovered_nbrs = [d for d in candidates if neighbors.get(d) is None]
@@ -1517,22 +1707,26 @@ def smart_policy(obs, rng, use_lantern=True):
     if mode == "chest_mode":
         return "o" if rng.random() < 0.85 else "l"
     if mode == "stairs_down_mode":
-        # Clear beneficials before descending. If the floor has any
-        # unvisited safe-beneficial tiles we know about, step away from
-        # the stairs and let the wayfinder go grab them first. Skipped
-        # if we've been on this floor too long -- some beneficials are
-        # behind walls the greedy walker can't navigate around, and we'd
-        # rather descend than camp floor 1 for 5000 turns.
-        nearest = obs.get("nearest_features") or {}
+        # Clear beneficials before descending -- but only if BFS says
+        # they're CLOSE. The previous Manhattan-based check could pick a
+        # beneficial behind a wall, causing an endless step-away /
+        # step-back-onto-D ping-pong (seed=13 human burned 40 turns in
+        # this loop). With path_dist <= 3 the agent only detours for
+        # nearby beneficials and otherwise descends.
+        feature_paths = obs.get("feature_paths") or {}
         BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P")
         stuck = (obs.get("turns_on_floor") or 0) > 300
-        if not stuck and any(nearest.get(t) for t in BENEFICIAL_SAFE):
-            neighbors = obs.get("neighbors") or {}
-            for d in ("n", "s", "e", "w"):
-                t = neighbors.get(d)
-                if t and t not in ("#", "D"):
-                    return d
-            return rng.choice(["n", "s", "e", "w"])
+        nearby = [
+            feature_paths[t] for t in BENEFICIAL_SAFE
+            if feature_paths.get(t)
+            and feature_paths[t].get("path_dist") is not None
+            and feature_paths[t]["path_dist"] <= 3
+        ]
+        if not stuck and nearby:
+            best = min(nearby, key=lambda p: p["path_dist"])
+            fs = best.get("first_step")
+            if fs:
+                return fs
         return "d"
     if mode == "stairs_up_mode":
         # Stairs-up_mode fires as soon as you arrive on floor N+1 (your
