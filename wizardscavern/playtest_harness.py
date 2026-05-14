@@ -1255,15 +1255,18 @@ def smart_policy(obs, rng, use_lantern=True):
         or broken_armor
         or (equipped.get("weapon") is None)
     )
-    # Strength gate: level >= 3, HP >= 70%, weapon present + non-broken.
-    # Shifts behaviour from "rush descent" to "farm this floor for
-    # XP/gold/keys before descending." A real player builds momentum on
-    # a floor they can handle before risking deeper monster density.
-    is_strong = (
-        p["level"] >= 3
-        and hp_pct >= 0.70
-        and not broken_weapon
-        and equipped.get("weapon") is not None
+    # Resource pressure: lantern fuel + hunger together set a soft
+    # deadline on how long the agent can keep weaving the floor looking
+    # for boons before it MUST start efficiently clearing monsters (for
+    # meat / XP / gold) or descend. Without this clock the agent could
+    # spend the whole budget exploring fog while the food + light run
+    # out. Pressure says "stop dawdling, transition to hunt or descend."
+    # Each LanternFuel canister adds 10 to the fuel gauge on auto-refill
+    # (items.py: +10 per use), so spare units count as fuel * 10.
+    fuel_total = (lantern_fuel or 0) + (spare_fuel_uses or 0) * 10
+    resources_pressing = (
+        hunger < 60       # below comfort, need meat soon
+        or fuel_total < 15  # less than ~15 lantern fires of light left
     )
     # Starving = critical hunger AND no food in bag. Hoisted because
     # combat_mode also gates on it (flee from inedible monsters when
@@ -1374,6 +1377,19 @@ def smart_policy(obs, rng, use_lantern=True):
         unvisited_beneficials_exist = any(
             feature_paths_check.get(t) for t in BENEFICIAL_SAFE
         )
+        # Boon-exhaustion gate (replaces the old Lv>=3 character-strength
+        # gate). A real player squeezes every safe boon out of a floor
+        # before committing to monster clearing -- chests, gardens,
+        # altars, pools, libraries, oracles. Once those are gone (or
+        # resources are pressing so we can't afford more weaving) the
+        # agent shifts into efficient-clear mode: hunt M tiles for meat
+        # + XP + gold, then descend. Requires we're not is_weak so
+        # broken-gear / low-HP agents recover first instead of picking
+        # fights they can't win.
+        ready_to_clear = (
+            not is_weak
+            and (not unvisited_beneficials_exist or resources_pressing)
+        )
         # Stuck-on-floor override: if we've spent more than this many
         # turns on the current floor, drop the clear-before-descend
         # gate. Pulls the agent off floor 1 when an unreachable
@@ -1414,15 +1430,15 @@ def smart_policy(obs, rng, use_lantern=True):
             priority = ["V"] + list(BENEFICIAL_SAFE) + ["T", "N"]
             if not unvisited_beneficials_exist:
                 priority.append("D")
-        elif is_strong:
-            # Hunt-mode: clear safer rooms first, then chase monsters
-            # for XP/gold/keys, only descend when the floor is dry. M
-            # comes BEFORE D so a strong character squeezes value out
-            # of every floor instead of rushing the stairs. Bounded by
-            # too_long_on_floor above so hunt-mode can't loop forever
-            # on a respawning floor. nearest_monster_path filters out
-            # over-leveled monsters so the agent doesn't get baited
-            # into one-shot fights.
+        elif ready_to_clear:
+            # Hunt-mode: the floor's boon budget is spent (or resource
+            # pressure forces the issue), now we efficiently clear
+            # monsters for meat + XP + gold and head to the stairs.
+            # SAFE rooms stay at the top in case a beneficial respawns
+            # or was previously unreachable. M comes BEFORE D so we
+            # actually collect kill drops on the way out. Bounded by
+            # too_long_on_floor above so this can't loop forever on a
+            # respawning floor.
             priority = list(BENEFICIAL_SAFE) + ["V", "T", "N", "M", "D"]
         elif unvisited_beneficials_exist:
             priority = list(BENEFICIAL_SAFE) + ["V", "T", "N"]
