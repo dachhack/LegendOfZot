@@ -61,6 +61,27 @@ RACE_MODS = {
 BASE_STATS = {"health": 30, "attack": 15, "defense": 5,
               "strength": 10, "dexterity": 10, "intelligence": 10}
 
+# Race-themed name pools, LOTR-flavoured. Used when new_game() is called
+# with the default name="Tester" -- each run picks a seed-stable name so
+# transcripts read like adventurer logs instead of T200 spreadsheets.
+RACE_NAMES = {
+    "human": (
+        "Aragorn", "Boromir", "Faramir", "Theoden", "Eomer", "Eowyn",
+        "Denethor", "Isildur", "Elendil", "Beregond", "Imrahil",
+        "Bard", "Beorn", "Hama", "Halbarad", "Forlong", "Gilraen",
+    ),
+    "elf": (
+        "Elrond", "Legolas", "Galadriel", "Arwen", "Celeborn",
+        "Glorfindel", "Haldir", "Thranduil", "Luthien", "Tauriel",
+        "Finrod", "Earendil", "Feanor", "Idril", "Cirdan", "Galadhrim",
+    ),
+    "dwarf": (
+        "Gimli", "Thorin", "Balin", "Dwalin", "Gloin", "Oin",
+        "Bifur", "Bofur", "Bombur", "Fili", "Kili", "Dain",
+        "Nori", "Ori", "Dori", "Durin", "Thror", "Thrain",
+    ),
+}
+
 
 _ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
 _HTML_RE = re.compile(r"<[^>]+>")
@@ -151,6 +172,13 @@ def _item_category(item):
         return "armor"
     if isinstance(item, Spell):
         return "spell"
+    # Scrolls get their own tag so the policy can target them for
+    # vendor-identify (upgrade scrolls are the high-value find the
+    # user explicitly called out). Importing Scroll lazily keeps the
+    # module-level import block tight.
+    from .items import Scroll
+    if isinstance(item, Scroll):
+        return "scroll"
     # Lantern + LanternFuel get explicit tags so the policy can refuel
     # without needing isinstance checks across module boundaries.
     cls = type(item).__name__
@@ -235,6 +263,11 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     ch_x, ch_y = 1, 1
     mods = RACE_MODS[race]
     stats = {k: BASE_STATS[k] + mods[f"{k}_mod"] for k in BASE_STATS}
+    # Pick a race-themed name when the caller didn't override the
+    # default. _stdlib_random is already seeded above if a seed was
+    # passed, so the name is stable across reruns of the same seed.
+    if name == "Tester":
+        name = _stdlib_random.choice(RACE_NAMES.get(race, RACE_NAMES["human"]))
     pc = Character(
         name=name,
         health=stats["health"],
@@ -1218,6 +1251,38 @@ def smart_policy(obs, rng, use_lantern=True):
                 if v["category"] == "armor" and v["price"] <= gold:
                     return f"b{v['slot']}"
 
+        # 4) Identify unknown scrolls + potions. Upgrade scrolls are the
+        # high-value drop the user explicitly called out -- you can't
+        # use one without knowing what it is, and the vendor identify
+        # cost (25g per L0 item, scaled by level) is small relative to
+        # the upside. Equipment identify costs 2x and gives less
+        # actionable info, so skip weapons/armor here -- they get
+        # identified by use anyway after EQUIPMENT_ID_THRESHOLD uses.
+        # Leave a 100g cushion so we don't spend our healing potion
+        # money on consultations.
+        IDENT_BUDGET_FLOOR = 100
+        # Identify cost = 25 * (item.level + 1) for scrolls/potions
+        # (items.py:296). We don't have item.level in obs, so assume
+        # the cheapest case (25g) -- the handler aborts on insufficient
+        # gold anyway so a too-aggressive request is harmless.
+        IDENT_GUESS_COST = 25
+        if gold >= IDENT_BUDGET_FLOOR + IDENT_GUESS_COST:
+            IDENT_TARGETS = ("scroll", "spell")
+            for entry in inv:
+                if entry.get("is_identified"):
+                    continue
+                cat = entry["category"]
+                # Scrolls + spells = high-info identifies (the agent
+                # can't safely use them blind). Potions are still
+                # high-value but the policy auto-drinks any healing
+                # potion it sees, so paying for ID is less critical.
+                # Skip weapon/armor: 2x cost, learned by use anyway.
+                if cat not in IDENT_TARGETS and not cat.startswith("potion"):
+                    continue
+                proposed = f"id{entry['slot']}"
+                if obs.get("last_action") != proposed:
+                    return proposed
+
         return "x"
 
     if mode == "chest_mode":
@@ -1393,7 +1458,7 @@ def _summarise(obs, jsonl=False):
     p = obs["player"]
     parts = [
         f"T{obs['turn']:>4} mode={obs['mode']:<19}",
-        f"{p['race'][:3]}",
+        f"{p['name']}({p['race'][:3]})",
         f"F{p['floor']}@({p['x']:>2},{p['y']:>2})",
         f"HP {p['hp']}/{p['max_hp']}",
         f"MP {p['mana']}/{p['max_mana']}",
@@ -1524,6 +1589,32 @@ def main(argv=None):
     print(f"=== run finished: turns={sess.turn} "
           f"floor={p['floor']} hp={p['hp']}/{p['max_hp']} "
           f"gold={p['gold']} alive={obs['alive']} mode={obs['mode']} ===")
+
+    # Append a one-line summary to the run log. Lives at the repo root
+    # by default (gitignored) so you can `tail -f playtest_runs.log`
+    # while running smoke tests. WIZARDSCAVERN_PLAYTEST_LOG env var
+    # overrides the path; empty string disables.
+    import os as _os
+    import datetime as _dt
+    default_log = _os.path.join(
+        _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),
+        "playtest_runs.log",
+    )
+    log_path = _os.environ.get("WIZARDSCAVERN_PLAYTEST_LOG", default_log)
+    if log_path:
+        try:
+            with open(log_path, "a", encoding="utf-8") as f:
+                f.write(
+                    f"{_dt.datetime.now().isoformat(timespec='seconds')}"
+                    f" seed={args.seed} race={args.race}"
+                    f" name={p['name']} policy={args.policy}"
+                    f" turns={sess.turn} floor={p['floor']}"
+                    f" hp={p['hp']}/{p['max_hp']} gold={p['gold']}"
+                    f" alive={obs['alive']} mode={obs['mode']}\n"
+                )
+        except OSError:
+            pass  # logging is best-effort
+
     return 0 if obs["alive"] else 1
 
 
