@@ -525,11 +525,19 @@ class PlaytestSession:
         m = gs.active_monster
         if m is None or gs.prompt_cntl != "combat_mode":
             return None
+        name = _strip_markup(m.name).strip()
+        # Edibility check via items.get_monster_meat_info -- returns
+        # None for undead / constructs / oozes / fungi etc. Lets the
+        # starving-flee policy avoid throwing the agent at fights that
+        # produce no meat.
+        from .items import get_monster_meat_info
+        meat_info = get_monster_meat_info(name)
         return {
-            "name": _strip_markup(m.name).strip(),
+            "name": name,
             "level": getattr(m, "level", None),
             "hp": m.health,
             "max_hp": getattr(m, "max_health", m.health),
+            "is_edible": meat_info is not None,
         }
 
     def _inventory_obs(self):
@@ -1030,6 +1038,11 @@ def smart_policy(obs, rng, use_lantern=True):
         or broken_armor
         or (equipped.get("weapon") is None)
     )
+    # Starving = critical hunger AND no food in bag. Hoisted because
+    # combat_mode also gates on it (flee from inedible monsters when
+    # starving). Threshold raised 15 -> 30 so the override fires while
+    # the agent still has HP cushion.
+    starving = hunger <= 30 and food_slot is None
 
     if mode == "game_loop":
         # Tier 0 priorities -- self-care that takes precedence over
@@ -1110,7 +1123,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # slow-motion starvation pinning at HP=1 for 1500+ turns
         # (7/30 runs in the last playtest). When the chicken-and-egg
         # is "no meat -> can't fight" we'd rather try the fight.
-        starving = hunger <= 15 and food_slot is None
+        # `starving` is hoisted to the top of smart_policy.
         if starving:
             AVOID = ({"W"} if is_weak else set())  # still avoid warps
         else:
@@ -1310,32 +1323,30 @@ def smart_policy(obs, rng, use_lantern=True):
 
     if mode == "combat_mode":
         # Threat assessment: monster_too_tough = monster level > player
-        # level + 2, OR monster max_hp > 2x player max_hp. A prior
-        # playtest pass had a Lv1 Human at full HP step into a Lv5
-        # Undead Wraith one-shot for 30 dmg -- the HP-only weakness
-        # gate missed the encounter. Now we re-assess each combat turn
-        # and flee tough fights before they swing.
+        # level + 2, OR monster max_hp > 2x player max_hp.
         m = obs.get("monster") or {}
         m_level = m.get("level") or 0
         m_max_hp = m.get("max_hp") or 0
+        m_is_edible = m.get("is_edible", True)
         pc_level = p.get("level") or 1
         monster_too_tough = (m_level > pc_level + 2
                              or m_max_hp > 2 * p["max_hp"])
-        # Drink a healing potion mid-fight as a last resort: HP critical
-        # and Heal-spell unaffordable. The inventory u<N> path lives in
-        # the inventory branch; here we open inventory to trigger it.
-        # In-combat potion drink: raised from <0.30 to <0.50 after the
-        # death-cause analysis. The 30% threshold let many fights drop
-        # from 40% -> 0% in a single monster turn (Wraith one-shots,
-        # Lich slams) before the gate fired.
+        # Starving + inedible monster: flee. Prior playtest showed
+        # 39 starvation-override engagements, only 2 produced meat
+        # because the agent kept fighting Wraiths/Liches/Lichen with
+        # no meat return. Now we abort those fights immediately and
+        # keep looking for an edible target.
+        if starving and not m_is_edible:
+            return "f"
+        # Drink a healing potion mid-fight as a last resort.
         if hp_pct < 0.50 and heal_pot_slot and not heal_spell_slot:
             return "i"  # opens inventory; in_combat filter shows usables
-        # Mid-fight heal: queue a cast at HP < 55%. The 0.55 threshold was
-        # raised from 0.40 after a playtest pass found the tighter window
-        # almost never opened alive with mana banked.
+        # Mid-fight heal: queue a cast at HP < 55%.
         if hp_pct < 0.55 and heal_spell_slot:
             return "c"
-        if monster_too_tough:
+        # Threat-flee only when NOT starving -- a starving agent vs
+        # an edible monster needs to win this fight to live.
+        if monster_too_tough and not starving:
             return "f"
         if affordable_dmg and rng.random() < 0.65:
             return "c"
@@ -1384,7 +1395,11 @@ def smart_policy(obs, rng, use_lantern=True):
         # ending in slow-motion starvation pinning (HP=1, hunger=0,
         # 1500+ turns alive but doomed). 2 Rations stacks of 3 each = 6
         # nutrition uses, not enough for runs past floor 3.
-        STOCK = {"potion_healing": 3, "food": 5, "potion_mana": 2}
+        # Food target 5 -> 8 after the post-fix playtest: 8/30 runs
+        # still died at hunger=0 because the override couldn't
+        # consistently produce meat (5.1% conversion in fights). Buy
+        # harder to never get to the override stage.
+        STOCK = {"potion_healing": 3, "food": 8, "potion_mana": 2}
         if use_lantern and lantern_fuel < 20:
             STOCK["lantern_fuel"] = 2
         owned = {cat: sum(i.get("count", 1) for i in inv
