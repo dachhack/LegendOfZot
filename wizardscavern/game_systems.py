@@ -2580,8 +2580,14 @@ def _trigger_room_interaction(player_character, my_tower):
                 new_monster.properties['is_champion'] = True  # Mark as champion
             # Check if this is an Undead Guardian (spawned near tombs)
             elif room.properties.get('undead_guardian', False):
-                # Spawn tough undead guardian
-                target_lvl = player_character.z + 1  # Slightly above player level
+                # Spawn tough undead guardian. target_lvl previously
+                # ran one above the floor (z+1), giving F3 wraiths Lv4
+                # and one-shot territory damage on Lv1 explorers. Now
+                # tracks the floor 1:1 so STR / HP investment actually
+                # pays off in the fight -- F8 still gets Lv8 wraiths
+                # by the time you're there, but the early floors are
+                # survivable for fresh characters.
+                target_lvl = player_character.z
                 min_lvl = max(0, target_lvl - 1)
                 max_lvl = target_lvl + 1
 
@@ -2606,7 +2612,12 @@ def _trigger_room_interaction(player_character, my_tower):
                 # this +1 boost leaks an extra level above the player's floor,
                 # which let Lv5 Wraiths spawn next to floor-3 tombs and one-shot
                 # Lv1 characters (8/16 deaths in the 30-run death analysis).
-                level_floor_cap = player_character.z + 2
+                # Spawn level cap now matches the target_lvl floor:
+                # max(template+1, z+1) so a wraith on F3 caps at Lv3
+                # (was Lv4 with the +2 ceiling). Combined with the
+                # weaker target_lvl above this halves the "Lv5 Wraith
+                # on F3 one-shots a Lv1 elf" lottery.
+                level_floor_cap = player_character.z + 1
                 spawn_level = min(m_data.get('level', 1) + 1, level_floor_cap)
                 new_monster = Monster(
                     f" UNDEAD {m_data['name'].upper()}",
