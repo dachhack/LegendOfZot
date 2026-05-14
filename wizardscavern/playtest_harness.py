@@ -356,10 +356,14 @@ class PlaytestSession:
         #      (Potions, Food, Meat, certain scrolls).
         #   2. The inventory_filter sub-mode further narrows to use/equip/eat.
         # Get them wrong and the policy spins on Invalid-item-number.
+        # Pull a few extras only used here. (Don't import Potion/Weapon/Armor/
+        # Food/Meat -- those are at module top; importing them again in this
+        # function would shadow the module names and break helpers below
+        # if they ever pre-reference them. See the Meat shadow bug we just
+        # fixed in game_systems.py:handle_inventory_menu.)
         from .characters import get_sorted_inventory
-        from .items import (Potion, Scroll, Flare, Lantern, LanternFuel,
-                            Treasure, Towel, CookingKit, CuringKit,
-                            Weapon, Armor, Food, Meat)
+        from .items import (Scroll, Flare, Lantern, LanternFuel,
+                            Treasure, Towel, CookingKit, CuringKit)
         items = get_sorted_inventory(gs.player_character.inventory)
 
         in_combat = (gs.active_monster is not None
