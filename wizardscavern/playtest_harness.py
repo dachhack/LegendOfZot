@@ -76,6 +76,28 @@ def _strip_markup_list(lines):
     return [_strip_markup(line) for line in lines]
 
 
+def _lantern_obs(pc):
+    """Snapshot of lantern + spare-fuel state so the smart policy can
+    decide when to light up and when to buy refills. The Lantern lives
+    in inventory and ticks `fuel_amount`; LanternFuel items refill +10
+    per use (auto-applied when fuel hits 0)."""
+    from .items import Lantern as _L, LanternFuel as _LF
+    lantern = None
+    spare_fuel = 0
+    for it in pc.inventory.items:
+        if isinstance(it, _L):
+            lantern = it
+        elif isinstance(it, _LF):
+            spare_fuel += getattr(it, "count", 1) or 1
+    if lantern is None:
+        return None
+    return {
+        "fuel": lantern.fuel_amount,
+        "spare_fuel_uses": spare_fuel,
+        "upgrade_level": getattr(lantern, "upgrade_level", 0),
+    }
+
+
 def _equipped_obs(pc):
     """Snapshot of the player's equipped weapon + armor. Lets the smart
     policy notice when its gear is wearing out and walk to a vendor."""
@@ -115,6 +137,13 @@ def _item_category(item):
         return "armor"
     if isinstance(item, Spell):
         return "spell"
+    # Lantern + LanternFuel get explicit tags so the policy can refuel
+    # without needing isinstance checks across module boundaries.
+    cls = type(item).__name__
+    if cls == "Lantern":
+        return "lantern"
+    if cls == "LanternFuel":
+        return "lantern_fuel"
     return "other"
 
 
@@ -378,6 +407,7 @@ class PlaytestSession:
                 "y": pc.y,
                 "status_effects": list(pc.status_effects.keys()),
                 "equipped": _equipped_obs(pc),
+                "lantern": _lantern_obs(pc),
             },
             "memorized_spells": [
                 {"slot": i + 1, "name": s.name,
@@ -613,6 +643,15 @@ class PlaytestSession:
                     gs.prompt_cntl = "inventory"
                     gs.inventory_filter = None
                     handle_inventory_menu(pc, tw, "init")
+                elif action == "l":
+                    # Lantern quick-use. Reveals adjacent tiles (radius =
+                    # upgrade_level + 1) and consumes 1 fuel. No game turn
+                    # is ticked -- hunger / status / monster spawns don't
+                    # advance, just the lantern itself depletes. Auto-
+                    # refuels from Lantern Fuel items in inventory when
+                    # fuel hits 0.
+                    from .room_actions import process_lantern_quick_use
+                    process_lantern_quick_use(pc, tw)
                 elif action == "pass":
                     pass
                 else:
@@ -669,7 +708,7 @@ class PlaytestSession:
 # ----------------------------------------------------------------------
 # Policies
 # ----------------------------------------------------------------------
-def smart_policy(obs, rng):
+def smart_policy(obs, rng, use_lantern=True):
     """Priority-gated policy that actually plays the game.
 
     Order of intents (highest priority wins):
@@ -728,6 +767,16 @@ def smart_policy(obs, rng):
                             and s["mana_cost"] <= mana), None)
     affordable_spells = [s for s in spells if s["mana_cost"] <= mana]
     affordable_dmg = [s for s in affordable_spells if s["type"] == "damage"]
+
+    # Lantern state. With the omniscient nearest_features obs the agent
+    # doesn't NEED to reveal tiles, but a real player would, and the
+    # playtest answers a balance question: does spending fuel + turns on
+    # the lantern net-help survival? Honest answer is "probably no since
+    # tiles are already visible to the policy" -- the value here is the
+    # data, not the gameplay.
+    lantern = p.get("lantern")
+    lantern_fuel = lantern["fuel"] if lantern else 0
+    spare_fuel_uses = lantern["spare_fuel_uses"] if lantern else 0
 
     # Equipment damage signals: when an equipped weapon or armor is broken
     # or worn below 40%, we want to detour through a vendor for repair.
@@ -799,6 +848,18 @@ def smart_policy(obs, rng):
                     best_dir, best_rank = d, rank
         if best_dir is not None:
             return best_dir
+
+        # Periodic lantern light. Only between productive moves: if we
+        # didn't pick a feature neighbour, light up so any nearby tiles
+        # discovered get marked as such (mostly cosmetic for the harness,
+        # but the question this answers is whether the lantern as a
+        # mechanic adds anything to survival numbers). Fires every 8th
+        # turn while fuel > 5 -- the starter lantern's 50 fuel lasts
+        # ~400 turns of play at this cadence, refuelled +10/use from any
+        # Lantern Fuel items the agent has bought.
+        if (use_lantern and lantern_fuel > 5
+                and obs["turn"] % 8 == 0 and obs["turn"] > 0):
+            return "l"
 
         # Distant wayfinder: no useful neighbour, but the floor has a known
         # unvisited V (vendor) or D (downstairs). Step in the dimension
@@ -913,8 +974,12 @@ def smart_policy(obs, rng):
 
         # 2) Stockpile: keep at least a few uses of each survival staple.
         # Sum item counts (not stack rows) so a single stack of 5 potions
-        # still counts as 5 and the policy doesn't over-buy.
+        # still counts as 5 and the policy doesn't over-buy. Lantern Fuel
+        # only counts as a stockpile target if the agent is actually using
+        # the lantern -- otherwise it's gold wasted on a vanity item.
         STOCK = {"potion_healing": 3, "food": 2, "potion_mana": 2}
+        if use_lantern and lantern_fuel < 20:
+            STOCK["lantern_fuel"] = 2
         owned = {cat: sum(i.get("count", 1) for i in inv
                           if i["category"] == cat)
                  for cat in STOCK}
@@ -1077,6 +1142,10 @@ def main(argv=None):
                         help="Skip the starting_shop bundle. Default is to "
                              "ship with Dagger + Leather Armor equipped, "
                              "4 Minor Healing Potions, Lantern, and Rations.")
+    parser.add_argument("--no-lantern", action="store_true",
+                        help="Smart policy skips lantern use + Lantern Fuel "
+                             "buying. For A/B testing whether the lantern "
+                             "mechanic adds anything to survival numbers.")
     args = parser.parse_args(argv)
 
     spells = [s for s in args.spells.split(",") if s.strip()] if args.spells else None
@@ -1098,7 +1167,14 @@ def main(argv=None):
     else:
         action_source = None
 
-    policy_fn = smart_policy if args.policy == "smart" else random_policy
+    if args.policy == "smart":
+        # Bind the lantern toggle so the per-turn callsite stays the same
+        # shape as random_policy(obs, rng).
+        use_lantern = not args.no_lantern
+        def policy_fn(o, r, _ul=use_lantern):
+            return smart_policy(o, r, use_lantern=_ul)
+    else:
+        policy_fn = random_policy
 
     for _ in range(args.turns):
         if sess.is_done():
