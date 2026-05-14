@@ -147,6 +147,12 @@ def _equipped_obs(pc):
             "buc_status": getattr(it, "buc_status", "uncursed"),
             "buc_known": bool(getattr(it, "buc_known", False)),
             "is_sealed": bool(getattr(it, "is_sealed", False)),
+            # Power stat (already includes upgrade_level via the property).
+            # The bonus is 0 when the item is broken, but we report the
+            # raw value so the policy can decide based on intended power.
+            "attack_bonus": getattr(it, "attack_bonus", None),
+            "defense_bonus": getattr(it, "defense_bonus", None),
+            "item_level": getattr(it, "level", 0),
         }
     return {"weapon": slot(pc.equipped_weapon),
             "armor":  slot(pc.equipped_armor)}
@@ -569,6 +575,22 @@ class PlaytestSession:
                 entry["buc_status"] = getattr(item, "buc_status", "uncursed")
                 entry["buc_known"] = bool(getattr(item, "buc_known", False))
                 entry["is_sealed"] = bool(getattr(item, "is_sealed", False))
+                # Power stat for comparison. attack_bonus / defense_bonus
+                # are @properties that already fold in upgrade_level, so
+                # we don't need to expose upgrade_level separately --
+                # whatever the equipped property returns is what the
+                # Character.attack / Character.defense calc will use.
+                if isinstance(item, Weapon):
+                    entry["attack_bonus"] = getattr(item, "attack_bonus", 0)
+                else:
+                    entry["defense_bonus"] = getattr(item, "defense_bonus", 0)
+                entry["item_level"] = getattr(item, "level", 0)
+                # equipped flag so the policy can compare bag items
+                # against the slotted one without doing name matching.
+                pc = gs.player_character
+                entry["equipped"] = (
+                    item is pc.equipped_weapon or item is pc.equipped_armor
+                )
             # Identification status applies to potions / scrolls / spells
             # too -- knowing what's in your bag changes what's safe to
             # use. is_item_identified is the canonical check.
@@ -937,6 +959,36 @@ def smart_policy(obs, rng, use_lantern=True):
     armor_worn = _gear_needs_help(equipped.get("armor"))
     needs_repair = weapon_worn or armor_worn
 
+    # Equipment evaluation: find the strongest non-cursed weapon /
+    # armor in inventory that beats whatever is currently equipped.
+    # Returns the inventory slot to equip, or None if the current
+    # gear is already best. Skips items the agent KNOWS are cursed
+    # (welds to hand) or sealed (can't be repaired); unidentified
+    # items are eligible -- that's the gamble the upgrade economy
+    # is built around.
+    def _best_upgrade(category, bonus_key, current_bonus):
+        best_slot = None
+        best_bonus = current_bonus
+        for entry in inv:
+            if entry["category"] != category:
+                continue
+            if entry.get("equipped"):
+                continue
+            if entry.get("is_broken"):
+                continue
+            if entry.get("buc_known") and entry.get("buc_status") == "cursed":
+                continue
+            b = entry.get(bonus_key) or 0
+            if b > best_bonus:
+                best_bonus = b
+                best_slot = entry["slot"]
+        return best_slot, best_bonus
+    cur_w = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+    cur_a = (equipped.get("armor") or {}).get("defense_bonus") or 0
+    weapon_upgrade_slot, _ = _best_upgrade("weapon", "attack_bonus", cur_w)
+    armor_upgrade_slot, _ = _best_upgrade("armor", "defense_bonus", cur_a)
+    has_upgrade = weapon_upgrade_slot is not None or armor_upgrade_slot is not None
+
     # Hoisted out of game_loop so tomb_mode etc. can use the same gate.
     broken_weapon = bool(equipped.get("weapon")
                          and equipped["weapon"].get("is_broken"))
@@ -957,6 +1009,9 @@ def smart_policy(obs, rng, use_lantern=True):
         if urgent_meat is not None:
             return "i"
         # broken_weapon / broken_armor / is_weak are hoisted above.
+        # Open inventory to swap when current gear is broken AND we
+        # have a working spare, OR when an unequipped item beats what's
+        # in the slot (subsumes the prior broken-only check).
         if broken_weapon and any(
                 e["category"] == "weapon" and not e.get("is_broken")
                 and e["name"] != equipped["weapon"]["name"]
@@ -966,6 +1021,8 @@ def smart_policy(obs, rng, use_lantern=True):
                 e["category"] == "armor" and not e.get("is_broken")
                 and e["name"] != equipped["armor"]["name"]
                 for e in inv):
+            return "i"
+        if has_upgrade:
             return "i"
         if hunger < 50 and food_slot:
             return "i"
@@ -1118,9 +1175,10 @@ def smart_policy(obs, rng, use_lantern=True):
         # spin the policy forever). The harness records last_error per step.
         if obs.get("last_error"):
             return "x"
-        # Heal first, eat-meat-before-rot second, swap broken gear
-        # third, eat-when-hungry fourth, then leave. Re-checks each
-        # turn so the slot number stays valid if items were consumed.
+        # Priority order: heal -> eat-meat-before-rot -> swap broken
+        # gear -> equip upgrade -> eat-when-hungry -> leave. Re-checks
+        # each turn so the slot number stays valid if items were
+        # consumed and the inventory order shifted.
         proposed = None
         if hp_pct < 0.95 and heal_pot_slot:
             proposed = f"u{heal_pot_slot}"
@@ -1143,6 +1201,13 @@ def smart_policy(obs, rng, use_lantern=True):
                         and entry["name"] != equipped["armor"]["name"]):
                     proposed = f"e{entry['slot']}"
                     break
+        elif weapon_upgrade_slot is not None:
+            # Strict-bonus upgrade in the bag, equip it. The
+            # _best_upgrade helper already filtered known-cursed and
+            # sealed candidates.
+            proposed = f"e{weapon_upgrade_slot}"
+        elif armor_upgrade_slot is not None:
+            proposed = f"e{armor_upgrade_slot}"
         elif hunger < 80 and food_slot:
             proposed = f"eat{food_slot}"
         if proposed is None:
