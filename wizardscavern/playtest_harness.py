@@ -55,7 +55,9 @@ RACE_MODS = {
               "strength_mod": 0,  "dexterity_mod": 0, "intelligence_mod": 0},
     "elf":   {"health_mod": -10, "attack_mod": 1, "defense_mod": -1,
               "strength_mod": -1, "dexterity_mod": 2, "intelligence_mod": 2},
-    "dwarf": {"health_mod": 20,  "attack_mod": 2, "defense_mod": 2,
+    # Dwarf HP +30 (was +20) -- see game_systems.py:3455 for the death-
+    # cause-analysis rationale.
+    "dwarf": {"health_mod": 30,  "attack_mod": 2, "defense_mod": 2,
               "strength_mod": 2,  "dexterity_mod": -2, "intelligence_mod": -2},
 }
 BASE_STATS = {"health": 30, "attack": 15, "defense": 5,
@@ -285,6 +287,12 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         x=ch_x, y=ch_y, z=0,
     )
     pc.race = race
+    # Mirror game_systems.py: positive race health_mod feeds
+    # base_max_health_bonus so it actually raises max_health (which is a
+    # property over level + strength + base_max_health_bonus). Without
+    # this the dwarf +30 would clamp at the formula's natural max.
+    if mods["health_mod"] > 0:
+        pc.base_max_health_bonus = mods["health_mod"]
     pc.gender = gender
     pc.character_class = "Adventurer"
     pc.health = min(stats["health"], pc.max_health)
@@ -300,17 +308,25 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         # gear ALSO appears in inventory.items, which is what lets the
         # vendor repair handler at vendor.py:733-749 see it).
         from .items import Lantern as _Lantern, Food as _Food
-        dagger = Weapon(
-            "Dagger", "A small, sharp blade.",
-            attack_bonus=2, value=10, level=0, upgrade_level=0,
-        )
+        # Race-flavoured starter weapon, mirroring vendor.py:93+ now
+        # that the starting shop gives dwarves a Battleaxe.
+        if race == "dwarf":
+            starter_weapon = Weapon(
+                "Battleaxe", "A heavy two-handed axe of dwarven make.",
+                attack_bonus=4, value=25, level=0, upgrade_level=0,
+            )
+        else:
+            starter_weapon = Weapon(
+                "Dagger", "A small, sharp blade.",
+                attack_bonus=2, value=10, level=0, upgrade_level=0,
+            )
         leather = Armor(
             "Leather Armor", "Light leather armor.",
             defense_bonus=3, value=50, level=0, upgrade_level=0,
         )
-        pc.inventory.add_item_quiet(dagger)
+        pc.inventory.add_item_quiet(starter_weapon)
         pc.inventory.add_item_quiet(leather)
-        pc.equipped_weapon = dagger
+        pc.equipped_weapon = starter_weapon
         pc.equipped_armor = leather
         pc.inventory.add_item_quiet(_Lantern(
             "Lantern", "Provides continuous light with fuel.",

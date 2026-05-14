@@ -97,7 +97,17 @@ class Vendor:
             for _ in range(num_starting_potions):
                 self.inventory.add_item_quiet(Potion("Minor Healing Potion","A small vial of red liquid that heals minor wounds.",value=30,level=0,potion_type='healing',effect_magnitude=30))
             #self.inventory.add_item_quiet(Scroll("Scroll of Upgrade", "Enhances an item.", "Permanently increases an item's upgrade level.", value=100, level=2, scroll_type='upgrade'))
-            self.inventory.add_item_quiet(Weapon("Dagger", "A small, sharp blade.", attack_bonus=2, value=10, level=0, upgrade_level=0))
+            # Race-flavoured starter weapon. Dwarves are the no-spells
+            # tank/melee archetype with no Heal access (int gate >20), so
+            # they get a heavier opener to compensate for the death-cause
+            # analysis showing them as the worst-surviving race. Elves
+            # and humans keep the Dagger -- their answer to early-game
+            # damage is Ice Shard / Heal / kiting, not raw melee power.
+            race = (getattr(player_character, 'race', 'human') or 'human').lower()
+            if race == 'dwarf':
+                self.inventory.add_item_quiet(Weapon("Battleaxe", "A heavy two-handed axe of dwarven make.", attack_bonus=4, value=25, level=0, upgrade_level=0))
+            else:
+                self.inventory.add_item_quiet(Weapon("Dagger", "A small, sharp blade.", attack_bonus=2, value=10, level=0, upgrade_level=0))
             self.inventory.add_item_quiet(Armor("Leather Armor","Light leather armor.", defense_bonus=3, value=50, level=0, upgrade_level=0))
             self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=50, light_radius=7, value=30, level=0))
             self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=3))

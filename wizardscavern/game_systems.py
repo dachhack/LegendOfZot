@@ -3452,7 +3452,12 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
     character_races = {
         'human': {'health_mod': 0, 'attack_mod': 0, 'defense_mod': 0, 'strength_mod': 0, 'dexterity_mod': 0, 'intelligence_mod': 0},
         'elf': {'health_mod': -10, 'attack_mod': 1, 'defense_mod': -1, 'strength_mod': -1, 'dexterity_mod': 2, 'intelligence_mod': 2},
-        'dwarf': {'health_mod': 20, 'attack_mod': 2, 'defense_mod': 2, 'strength_mod': 2, 'dexterity_mod': -2, 'intelligence_mod': -2}
+        # Dwarf HP bumped +20 -> +30 after the death-cause analysis showed
+        # them as the worst-surviving race (median 700 turns vs elf 1019 /
+        # human 924). They have no Heal-spell access by design (int gate
+        # raised to >20), so the only mid-fight recovery is potions; the
+        # +20 HP cushion wasn't enough to absorb Wraith / Lich blows.
+        'dwarf': {'health_mod': 30, 'attack_mod': 2, 'defense_mod': 2, 'strength_mod': 2, 'dexterity_mod': -2, 'intelligence_mod': -2}
     }
 
     character_genders = {
@@ -3541,9 +3546,21 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
         # Apply base stats
         stats = base_stats.copy()
 
-        # Apply race modifiers using player_character.race
+        # Apply race modifiers using player_character.race.
+        # Positive health_mod routes through base_max_health_bonus so it
+        # raises the actual max_health ceiling -- max_health is a
+        # @property = level*10 + strength*2 + base_max_health_bonus, so
+        # adding race HP to `stats['health']` alone would just clamp
+        # right back at the formula's natural max (the prior dwarf +20
+        # was effectively a no-op for that reason). Negative health_mod
+        # stays as a starting-HP penalty (elf squishy-flavour intact).
         race_mods = character_races[player_character.race]
-        stats['health'] += race_mods.get('health_mod', 0)
+        hm = race_mods.get('health_mod', 0)
+        if hm > 0:
+            player_character.base_max_health_bonus = hm
+            stats['health'] += hm  # also start at higher current HP
+        else:
+            stats['health'] += hm
         stats['attack'] += race_mods.get('attack_mod', 0)
         stats['defense'] += race_mods.get('defense_mod', 0)
         stats['strength'] += race_mods.get('strength_mod', 0)
