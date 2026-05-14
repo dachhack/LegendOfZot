@@ -1539,36 +1539,50 @@ def smart_policy(obs, rng, use_lantern=True):
         # gear -> equip upgrade -> eat-when-hungry -> leave. Re-checks
         # each turn so the slot number stays valid if items were
         # consumed and the inventory order shifted.
+        # Sequential `if proposed is None` guards so a branch that
+        # ENTERS its condition but finds no candidate (e.g. broken
+        # weapon with no spare to swap to) doesn't short-circuit the
+        # later steps. The previous elif-cascade left a starving agent
+        # holding a broken weapon + no replacement bouncing i -> x
+        # forever, even with food in the bag (seed=314 dwarf: 1738
+        # consecutive turns standing on (8,11) at hunger=49 with food
+        # in slot 9 -- the broken-weapon block was entered, found no
+        # swap, and `elif hunger < 80 and food_slot:` was never reached).
         proposed = None
-        if hp_pct < 0.95 and heal_pot_slot:
+        if proposed is None and hp_pct < 0.95 and heal_pot_slot:
             proposed = f"u{heal_pot_slot}"
-        elif urgent_meat is not None:
+        if proposed is None and urgent_meat is not None:
             # Don't wait until starving -- consume the kill drop now.
             proposed = f"eat{urgent_meat}"
-        elif equipped.get("weapon", {}) and equipped["weapon"].get("is_broken"):
+        if (proposed is None
+                and equipped.get("weapon", {})
+                and equipped["weapon"].get("is_broken")):
             # Find a non-broken Weapon in inventory and equip it. e<N>
-            # indexes off working_items just like u<N> does.
+            # indexes off working_items just like u<N> does. Falls
+            # through to the next step if no spare exists.
             for entry in inv:
                 if (entry["category"] == "weapon"
                         and not entry.get("is_broken")
                         and entry["name"] != equipped["weapon"]["name"]):
                     proposed = f"e{entry['slot']}"
                     break
-        elif equipped.get("armor", {}) and equipped["armor"].get("is_broken"):
+        if (proposed is None
+                and equipped.get("armor", {})
+                and equipped["armor"].get("is_broken")):
             for entry in inv:
                 if (entry["category"] == "armor"
                         and not entry.get("is_broken")
                         and entry["name"] != equipped["armor"]["name"]):
                     proposed = f"e{entry['slot']}"
                     break
-        elif weapon_upgrade_slot is not None:
+        if proposed is None and weapon_upgrade_slot is not None:
             # Strict-bonus upgrade in the bag, equip it. The
             # _best_upgrade helper already filtered known-cursed and
             # sealed candidates.
             proposed = f"e{weapon_upgrade_slot}"
-        elif armor_upgrade_slot is not None:
+        if proposed is None and armor_upgrade_slot is not None:
             proposed = f"e{armor_upgrade_slot}"
-        elif hunger < 80 and food_slot:
+        if proposed is None and hunger < 80 and food_slot:
             proposed = f"eat{food_slot}"
         if proposed is None:
             return "x"
