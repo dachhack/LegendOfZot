@@ -2600,7 +2600,14 @@ def _trigger_room_interaction(player_character, my_tower):
                     m_data = random.choice(potential_monsters)
 
                 # Buffed stats - 1.25x multiplier (was 1.5x; lowered after the
-                # base-30-HP rebalance made the old buff one-shot Lv1 players)
+                # base-30-HP rebalance made the old buff one-shot Lv1 players).
+                # Level is template + 1 but capped at player_character.z + 2 --
+                # without the cap, the pool's natural max (target_lvl + 1) plus
+                # this +1 boost leaks an extra level above the player's floor,
+                # which let Lv5 Wraiths spawn next to floor-3 tombs and one-shot
+                # Lv1 characters (8/16 deaths in the 30-run death analysis).
+                level_floor_cap = player_character.z + 2
+                spawn_level = min(m_data.get('level', 1) + 1, level_floor_cap)
                 new_monster = Monster(
                     f" UNDEAD {m_data['name'].upper()}",
                     int(m_data['health'] * 1.25),
@@ -2608,7 +2615,7 @@ def _trigger_room_interaction(player_character, my_tower):
                     int(m_data['defense'] * 1.25),
                     m_data.get('elemental_weakness', []),
                     m_data.get('elemental_strength', []) + ['Darkness'],  # Add darkness resistance
-                    m_data.get('level', 1) + 1,  # +1 level (was +2)
+                    spawn_level,
                     m_data.get('attack_element', 'Darkness'),  # Darkness attacks
                     f"{COLOR_GREY}An undead guardian risen to protect the ancient tomb!{COLOR_RESET}",
                     f"{COLOR_PURPLE}The undead guardian crumbles to dust!{COLOR_RESET}",

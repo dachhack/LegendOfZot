@@ -1006,6 +1006,19 @@ def smart_policy(obs, rng, use_lantern=True):
         # any exploration / fighting decision.
         if hp_pct < 0.30 and heal_pot_slot:
             return "i"
+        # Pre-emptive heal: 11 of 16 deaths in the analysis pass died
+        # holding unused potions because the in-combat drink trigger
+        # (HP<30%) fired too late -- monsters that won initiative could
+        # take the agent 100% -> 5% in one hit, past the gate. Drink
+        # BEFORE stepping into adjacent combat when HP <80% and a
+        # potion is in the bag. The neighbors check is fog-of-war
+        # aware: only fires if we actually see an M tile next door.
+        neighbors_now = obs.get("neighbors") or {}
+        if (heal_pot_slot
+                and hp_pct < 0.80
+                and any(neighbors_now.get(d) == "M"
+                        for d in ("n", "s", "e", "w"))):
+            return "i"
         if urgent_meat is not None:
             return "i"
         # broken_weapon / broken_armor / is_weak are hoisted above.
@@ -1238,7 +1251,11 @@ def smart_policy(obs, rng, use_lantern=True):
         # Drink a healing potion mid-fight as a last resort: HP critical
         # and Heal-spell unaffordable. The inventory u<N> path lives in
         # the inventory branch; here we open inventory to trigger it.
-        if hp_pct < 0.30 and heal_pot_slot and not heal_spell_slot:
+        # In-combat potion drink: raised from <0.30 to <0.50 after the
+        # death-cause analysis. The 30% threshold let many fights drop
+        # from 40% -> 0% in a single monster turn (Wraith one-shots,
+        # Lich slams) before the gate fired.
+        if hp_pct < 0.50 and heal_pot_slot and not heal_spell_slot:
             return "i"  # opens inventory; in_combat filter shows usables
         # Mid-fight heal: queue a cast at HP < 55%. The 0.55 threshold was
         # raised from 0.40 after a playtest pass found the tighter window
