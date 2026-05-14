@@ -1343,9 +1343,15 @@ def process_pool_action(player_character, my_tower, cmd):
                 dmg = random.randint(outcome_data['min'], outcome_data['max'])
                 add_log(f"{COLOR_RED} The 'gold' was an illusion! Sharp pain shoots through you!{COLOR_RESET}")
                 if player_character.take_damage_no_def(dmg):
+                    # Lethal pool trap. Match the death pattern used in
+                    # combat.py (~10 call sites): set prompt_cntl to
+                    # death_screen and let process_command render.
+                    # render() was being called directly here but isn't
+                    # imported in this module -- same orphan-render bug
+                    # was fixed at lines 1736 / 1754 with the comment
+                    # "render() removed - will be called by process_command".
                     add_log(f"{COLOR_RED}The trap was lethal...{COLOR_RESET}")
-                    gs.game_should_quit = True
-                    render()
+                    gs.prompt_cntl = "death_screen"
                     return
                 add_log(f"{COLOR_RED} Took {dmg} damage from the trap!{COLOR_RESET}")
             else:
