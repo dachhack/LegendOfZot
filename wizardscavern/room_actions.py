@@ -835,21 +835,45 @@ def _drop_random_spell_scroll(pc, floor_level):
 
 
 def _grant_temp_buff(pc, stat, amount, turns):
-    """Apply a temporary additive buff to attack/defense/strength etc.
-    Stored in pc.status_effects as a countdown; the existing turn-tick
-    in game_systems decrements and reverts these.  Falls back to
-    permanent if status_effects isn't available."""
-    key = f"altar_buff_{stat}"
-    # Initialise status_effects entry mirroring how potion buffs work
-    if hasattr(pc, 'status_effects') and isinstance(pc.status_effects, dict):
-        pc.status_effects[key] = {'turns': turns, 'stat': stat, 'amount': amount}
-    # Apply immediately via underlying field if it exists
-    if stat == 'attack':
-        pc._base_attack = (getattr(pc, '_base_attack', 0) or 0) + amount
-    elif stat == 'defense':
-        pc._base_defense = (getattr(pc, '_base_defense', 0) or 0) + amount
-    elif hasattr(pc, stat):
-        setattr(pc, stat, getattr(pc, stat) + amount)
+    """Apply a temporary additive buff via the StatusEffect system.
+
+    The previous version stashed a raw dict into pc.status_effects and
+    mutated pc._base_attack / pc._base_defense directly, which (a) crashed
+    every later turn because the per-turn tick reads effect.effect_type
+    as an attribute (see Character.attack, combat.process_status_effects,
+    etc.), and (b) leaked the stat bump permanently because nothing ever
+    reverted the underlying field.
+
+    Now uses the same path the Strength / Dexterity potions take at
+    items.py:704+: add_status_effect with an effect_type that
+    Character.attack / Character.defense already understand. No need
+    to touch _base_attack / _base_defense -- the properties sum
+    status_effects.values() each access.
+    """
+    if not hasattr(pc, 'add_status_effect'):
+        return
+    # Map altar stat names to the canonical Character effect_types.
+    # Note: there's no first-class strength_boost effect_type, so a
+    # +1 STR altar prayer becomes a +1 attack_boost -- mirrors how the
+    # Strength Potion behaves at items.py:704-716 (the HP-from-STR
+    # bonus is intentionally not granted; this is a temp buff, not a
+    # permanent stat raise).
+    effect_type_by_stat = {
+        'attack': 'attack_boost',
+        'defense': 'defense_boost',
+        'strength': 'attack_boost',
+        'dexterity': 'dexterity_boost',
+        'intelligence': 'intelligence_boost',
+    }
+    effect_type = effect_type_by_stat.get(stat, 'attack_boost')
+    name = f"Altar {stat.title()} Boost"
+    pc.add_status_effect(
+        effect_name=name,
+        duration=turns,
+        effect_type=effect_type,
+        magnitude=amount,
+        description=f"Altar blessing: +{amount} {stat} for {turns} turns.",
+    )
 
 
 def _spawn_garden_on_floor(pc, my_tower, fey=False):
