@@ -1103,7 +1103,18 @@ def smart_policy(obs, rng, use_lantern=True):
         # monsters (M) or warps (W) because random teleport could drop
         # us into a deeper floor's monster room, and combat at low HP
         # / broken gear is a death sentence.
-        AVOID = ({"M", "W"} if is_weak else set())
+        # Starvation override: when hunger is critical AND we have no
+        # food in the bag, drop the M-avoid so the agent will engage
+        # monsters for meat drops. The prior policy made dying agents
+        # MORE timid (HP < 50% triggers AVOID), which trapped them in
+        # slow-motion starvation pinning at HP=1 for 1500+ turns
+        # (7/30 runs in the last playtest). When the chicken-and-egg
+        # is "no meat -> can't fight" we'd rather try the fight.
+        starving = hunger <= 15 and food_slot is None
+        if starving:
+            AVOID = ({"W"} if is_weak else set())  # still avoid warps
+        else:
+            AVOID = ({"M", "W"} if is_weak else set())
 
         # Clear-before-descend gate. Beneficials = rooms that pay off
         # without forced combat (chest, garden, library, oracle, altar,
@@ -1369,7 +1380,11 @@ def smart_policy(obs, rng, use_lantern=True):
         # still counts as 5 and the policy doesn't over-buy. Lantern Fuel
         # only counts as a stockpile target if the agent is actually using
         # the lantern -- otherwise it's gold wasted on a vanity item.
-        STOCK = {"potion_healing": 3, "food": 2, "potion_mana": 2}
+        # Food bumped 2 -> 5 after a playtest pass showed 7/30 runs
+        # ending in slow-motion starvation pinning (HP=1, hunger=0,
+        # 1500+ turns alive but doomed). 2 Rations stacks of 3 each = 6
+        # nutrition uses, not enough for runs past floor 3.
+        STOCK = {"potion_healing": 3, "food": 5, "potion_mana": 2}
         if use_lantern and lantern_fuel < 20:
             STOCK["lantern_fuel"] = 2
         owned = {cat: sum(i.get("count", 1) for i in inv
