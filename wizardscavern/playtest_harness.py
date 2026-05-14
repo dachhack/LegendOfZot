@@ -447,6 +447,14 @@ class PlaytestSession:
         # (or lantern-light) tiles before knowing what's there. The
         # in-game starting condition; default-on for realistic playtest.
         self.fog_of_war = fog_of_war
+        # Floor-arrival turn lets the policy force descent when it has
+        # been stuck on the same floor too long. Without it, a single
+        # unreachable beneficial (behind a wall the greedy walker can't
+        # navigate around) makes clear-before-descend loop forever --
+        # dwarf seed 7 spent 5000 turns on floor 1 in the last batch
+        # because of this.
+        self.floor_arrival_turn = 0
+        self._last_floor = 0
 
     # ------------------------------------------------------------------
     # Observation
@@ -496,6 +504,7 @@ class PlaytestSession:
             "nearest_features": self._nearest_features_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
+            "turns_on_floor": self.turn - self.floor_arrival_turn,
             "room": {
                 "type": room.room_type,
                 "properties": {
@@ -879,6 +888,11 @@ class PlaytestSession:
             self.visited_features.add(
                 (pc_after.z, pc_after.x, pc_after.y, room_now.room_type)
             )
+        # Reset floor-arrival counter when we change floors so the
+        # stuck-on-floor override fires per-floor, not cumulative.
+        if pc_after.z != self._last_floor:
+            self._last_floor = pc_after.z
+            self.floor_arrival_turn = self.turn
 
         return self.observe()
 
@@ -1065,8 +1079,24 @@ def smart_policy(obs, rng, use_lantern=True):
         neighbors = obs.get("neighbors") or {}
         visited = obs.get("visited_neighbors") or {}
         unknown_neighbours = sum(1 for v in neighbors.values() if v is None)
-        if use_lantern and lantern_fuel > 5 and unknown_neighbours >= 2:
-            return "l"
+        # Light up when fog-blind (>= 2 unknown neighbours), or when
+        # stuck and even one is unknown, or periodically (every 10
+        # turns) when truly stuck to reveal farther-out tiles past the
+        # immediate region. The radius-7 cardinal lantern reveals up to
+        # 28 cells per fire even when all four neighbours are already
+        # known -- the rays shoot down corridors. Without this the
+        # agent corners itself in a small explored region and never
+        # discovers the rest of the floor.
+        turns_on_floor = obs.get("turns_on_floor") or 0
+        stuck_on_floor = turns_on_floor > 100
+        very_stuck = turns_on_floor > 200
+        if use_lantern and lantern_fuel > 5:
+            if unknown_neighbours >= 2:
+                return "l"
+            if stuck_on_floor and unknown_neighbours >= 1:
+                return "l"
+            if very_stuck and obs["turn"] % 10 == 0:
+                return "l"
 
         # Weakness model (hoisted to top of smart_policy for reuse in
         # tomb_mode / pool_mode). When weak we avoid stepping onto
@@ -1088,6 +1118,16 @@ def smart_policy(obs, rng, use_lantern=True):
         unvisited_beneficials_exist = any(
             nearest.get(t) for t in BENEFICIAL_SAFE
         )
+        # Stuck-on-floor override: if we've spent more than this many
+        # turns on the current floor, drop the clear-before-descend
+        # gate. Pulls the agent off floor 1 when an unreachable
+        # beneficial (behind a wall the greedy walker can't navigate
+        # around) would otherwise loop forever. 300 turns is enough
+        # to do a thorough sweep of a 18x21 floor.
+        FLOOR_STUCK_TURNS = 300
+        too_long_on_floor = (obs.get("turns_on_floor") or 0) > FLOOR_STUCK_TURNS
+        if too_long_on_floor:
+            unvisited_beneficials_exist = False
 
         # Keyed dungeons get exposed via obs.keyed_dungeon_target,
         # which filters out looted dungeons -- referenced below in the
@@ -1176,11 +1216,13 @@ def smart_policy(obs, rng, use_lantern=True):
                         return d
                 break
 
-        # Explore: random move biased away from AVOID neighbours and
-        # away from already-interacted feature tiles (so we don't
-        # randomly step onto a locked-no-key dungeon for the 11th time
-        # this run). The exclusion is greedy -- if every cardinal is
-        # walled / avoided / visited, fall back to anything walkable.
+        # Explore: random move biased toward UNDISCOVERED neighbours
+        # first (fog-of-war None tiles), then away from AVOID neighbours
+        # and already-interacted feature tiles. Without the
+        # undiscovered-first bias the random walk has no exploration
+        # gradient -- the agent loops around its known region while a
+        # whole floor sits unrevealed. Dwarf seed 7 covered only 42 of
+        # 108 walkable tiles in 1500 turns under the old rule.
         FEATURE_TILES = ("C", "G", "L", "O", "A", "P", "T", "N", "V")
         def _walkable(d):
             t = neighbors.get(d)
@@ -1192,6 +1234,10 @@ def smart_policy(obs, rng, use_lantern=True):
             return True
         candidates = [d for d in ("n", "s", "e", "w")
                       if _walkable(d) and _fresh(d)]
+        # Prefer undiscovered directions when any exist among candidates.
+        undiscovered = [d for d in candidates if neighbors.get(d) is None]
+        if undiscovered:
+            candidates = undiscovered
         if not candidates:
             candidates = [d for d in ("n", "s", "e", "w") if _walkable(d)]
         if not candidates:
@@ -1388,10 +1434,14 @@ def smart_policy(obs, rng, use_lantern=True):
     if mode == "stairs_down_mode":
         # Clear beneficials before descending. If the floor has any
         # unvisited safe-beneficial tiles we know about, step away from
-        # the stairs and let the wayfinder go grab them first.
+        # the stairs and let the wayfinder go grab them first. Skipped
+        # if we've been on this floor too long -- some beneficials are
+        # behind walls the greedy walker can't navigate around, and we'd
+        # rather descend than camp floor 1 for 5000 turns.
         nearest = obs.get("nearest_features") or {}
         BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P")
-        if any(nearest.get(t) for t in BENEFICIAL_SAFE):
+        stuck = (obs.get("turns_on_floor") or 0) > 300
+        if not stuck and any(nearest.get(t) for t in BENEFICIAL_SAFE):
             neighbors = obs.get("neighbors") or {}
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)
@@ -1415,11 +1465,17 @@ def smart_policy(obs, rng, use_lantern=True):
                 return d
         return rng.choice(["n", "s", "e", "w"])
     if mode == "warp_mode":
-        # Warps are random teleports that can drop the agent into the
-        # next floor's monster room. Always try to resist -- the
-        # handler rolls dexterity-based escape, but even on a miss
-        # we'd rather take the gamble than blindly accept.
-        return "y"
+        # Floors are sometimes split into regions only connected via
+        # warps (verified empirically on seed 7 floor 1: D was in a
+        # region unreachable from the start). The default 'always
+        # resist' policy was leaving dwarves stuck on floor 1 for the
+        # full 5000-turn budget because they could never reach the
+        # downstairs. New rule: resist when fresh, accept when stuck.
+        # Accepting a warp drops us at a random (z +/- 2) location,
+        # so an accept on floor 1 either lands deeper or stays on
+        # floor 1 in a different region -- both moves help.
+        stuck = (obs.get("turns_on_floor") or 0) > 200
+        return "n" if stuck else "y"
     if mode == "altar_mode":
         # Pray once per altar -- claims the god's current tier reward
         # (HP heal, MP restore, hunger fill, blessing, eventually a
