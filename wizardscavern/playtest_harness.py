@@ -190,11 +190,15 @@ def _item_category(item):
         return "scroll"
     # Lantern + LanternFuel get explicit tags so the policy can refuel
     # without needing isinstance checks across module boundaries.
+    # Trophy gets its own tag so the taxidermist policy can detect
+    # whether there's anything to sell / hand in.
     cls = type(item).__name__
     if cls == "Lantern":
         return "lantern"
     if cls == "LanternFuel":
         return "lantern_fuel"
+    if cls == "Trophy":
+        return "trophy"
     return "other"
 
 
@@ -426,6 +430,10 @@ ACTION_HINTS = {
     "vendor_shop":   "b (buy) s (sell) x (leave)",
     "stairs_down_mode": "d (descend) x (cancel)",
     "stairs_up_mode":   "u (ascend) x (cancel)",
+    "oracle_mode":      "g (gaze) | n s e w to leave",
+    "alchemist_mode":   "c (combine) | '<a> <b>' to brew slots a+b | x (cancel) | n s e w to leave",
+    "war_room_mode":    "1 (intel - free) 2 (raid - 100+f*5g) | n s e w to leave",
+    "taxidermist_mode": "<N> (complete collection N) | s (sell trophies) | n s e w to leave",
     "death_screen":  "<game over>",
 }
 
@@ -688,7 +696,8 @@ class PlaytestSession:
         pc = gs.player_character
         floor = gs.my_tower.floors[pc.z]
         out = {}
-        for target in ("D", "V", "C", "G", "A", "L", "O", "P", "T", "N"):
+        for target in ("D", "V", "C", "G", "A", "L", "O", "P", "T", "N",
+                       "Q", "K", "X", "B", "F"):
             best = None
             best_d = float("inf")
             for y in range(floor.rows):
@@ -862,7 +871,8 @@ class PlaytestSession:
         floor = gs.my_tower.floors[pc.z]
         dist, first_step = self._bfs_paths()
         out = {}
-        for target in ("D", "V", "C", "G", "A", "L", "O", "P", "T", "N"):
+        for target in ("D", "V", "C", "G", "A", "L", "O", "P", "T", "N",
+                       "Q", "K", "X", "B", "F"):
             best = None
             best_d = float("inf")
             for y in range(floor.rows):
@@ -1117,6 +1127,18 @@ class PlaytestSession:
             elif mode == "shrine_mode":
                 from .game_systems import process_shrine_action
                 process_shrine_action(pc, tw, action)
+            elif mode == "oracle_mode":
+                from .game_systems import process_oracle_action
+                process_oracle_action(pc, tw, action)
+            elif mode == "alchemist_mode":
+                from .game_systems import process_alchemist_action
+                process_alchemist_action(pc, tw, action)
+            elif mode == "war_room_mode":
+                from .game_systems import process_war_room_action
+                process_war_room_action(pc, tw, action)
+            elif mode == "taxidermist_mode":
+                from .game_systems import process_taxidermist_action
+                process_taxidermist_action(pc, tw, action)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -1429,7 +1451,16 @@ def smart_policy(obs, rng, use_lantern=True):
         # descent for them. D is suppressed while unvisited beneficials
         # remain so the playtester actually clears the floor before
         # moving on.
-        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P")
+        # BENEFICIAL_SAFE = rooms that pay off without forced combat.
+        # Q (alchemist): combine 2 potions for stronger result.
+        # K (war room): free intel reveals next floor's special rooms.
+        # B (blacksmith): cheap repair of worn gear.
+        # F (shrine of the fallen): one-shot stat boost.
+        # X (taxidermist) deliberately omitted -- only useful when the
+        # agent has trophies, and adding it forces BFS detours for an
+        # often-empty handoff. Stepped onto incidentally still works
+        # via the mode handler, just not proactively targeted.
+        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P", "Q", "K", "B", "F")
         # Use BFS-aware feature_paths so we only delay descent for
         # beneficials we can actually reach. The old Manhattan check
         # (nearest_features) counted beneficials behind walls, leading
@@ -1834,7 +1865,16 @@ def smart_policy(obs, rng, use_lantern=True):
         # this loop). With path_dist <= 3 the agent only detours for
         # nearby beneficials and otherwise descends.
         feature_paths = obs.get("feature_paths") or {}
-        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P")
+        # BENEFICIAL_SAFE = rooms that pay off without forced combat.
+        # Q (alchemist): combine 2 potions for stronger result.
+        # K (war room): free intel reveals next floor's special rooms.
+        # B (blacksmith): cheap repair of worn gear.
+        # F (shrine of the fallen): one-shot stat boost.
+        # X (taxidermist) deliberately omitted -- only useful when the
+        # agent has trophies, and adding it forces BFS detours for an
+        # often-empty handoff. Stepped onto incidentally still works
+        # via the mode handler, just not proactively targeted.
+        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P", "Q", "K", "B", "F")
         stuck = (obs.get("turns_on_floor") or 0) > 300
         nearby = [
             feature_paths[t] for t in BENEFICIAL_SAFE
@@ -1961,6 +2001,116 @@ def smart_policy(obs, rng, use_lantern=True):
         # the property `shrine_used` makes this one-and-done so the
         # visited_features tracker prevents oscillation.
         return "p"
+
+    # ----------------------------------------------------------------
+    # Picker rooms (Q alchemist, X taxidermist, K war room) + oracle.
+    # Each opens its own prompt mode when the player steps onto the
+    # tile; the handlers below either claim the boon and walk away, or
+    # walk away immediately when there's nothing left to claim. Each
+    # of these modes accepts n/s/e/w as walk-away movement, so the
+    # _step_away helper routes through the same BFS first_step the
+    # game_loop wayfinder would use.
+    # ----------------------------------------------------------------
+    def _step_away():
+        """Walk off the current feature tile. Re-uses BFS first_step
+        toward whatever target the game_loop would pick (D, beneficial,
+        vendor) so the agent doesn't immediately step back. Falls
+        through to any non-recent walkable neighbour, then any walkable
+        neighbour, then any direction."""
+        fp = obs.get("feature_paths") or {}
+        ms = obs.get("nearest_monster_path")
+        fs = obs.get("frontier_step")
+        nb = obs.get("neighbors") or {}
+        rs = set(obs.get("recent_step_set") or [])
+        AVOID_TILES = {"#"}
+        # Try BFS-routed targets in roughly the game_loop priority.
+        for cand in (
+            fp.get("D"), fp.get("V"), fp.get("C"), fp.get("G"),
+            fp.get("L"), fp.get("O"), fp.get("A"), fp.get("P"),
+            fp.get("T"), fp.get("N"), ms, fs,
+        ):
+            if cand and cand.get("first_step"):
+                d = cand["first_step"]
+                # If the chosen step would re-enter a recent tile and
+                # alternatives exist, swap; same anti-backtrack pattern
+                # the main wayfinder uses.
+                if d not in rs:
+                    return d
+        # Fallback: any non-recent walkable direction (SE-biased).
+        for d in ("e", "s", "w", "n"):
+            if d in rs:
+                continue
+            if nb.get(d) in AVOID_TILES:
+                continue
+            return d
+        for d in ("e", "s", "w", "n"):
+            if nb.get(d) not in AVOID_TILES:
+                return d
+        return rng.choice(["n", "s", "e", "w"])
+
+    if mode == "oracle_mode":
+        # Hints from generate_oracle_hints are text-only -- they reveal
+        # vault / shard / boss locations as log lines but don't mutate
+        # game state in a way our policy can read. So gazing is a wash
+        # for us; skip it and walk away. visited_features marks O on
+        # arrival, so the wayfinder won't re-target the oracle.
+        return _step_away()
+
+    if mode == "war_room_mode":
+        # Free intel reveals all special rooms on the NEXT floor (or
+        # current floor if next isn't generated yet) -- pre-scouts the
+        # descent, real value. The raid mode option (2) is a gold-
+        # gated XP gamble (100 + floor*5 gold for +50% XP / +25%
+        # monster atk over 10 turns); skip it to keep gold reserves
+        # for vendor restock.
+        props = obs.get("room", {}).get("properties", {}) or {}
+        if not props.get("intel_used"):
+            return "1"
+        return _step_away()
+
+    if mode == "alchemist_mode":
+        # Combine 2 potions into 1 stronger one. 3 uses per lab.
+        # Two matching healing pots -> Superior Healing (~125 HP from
+        # 2*50). Mixed types -> random elixir (still beneficial).
+        # 10% botch -> poison / confusion potion (drinkable but
+        # harmful; our policy only auto-drinks potion_healing so a
+        # bad brew sits inert in the bag). Net EV positive.
+        # Need at least 2 potions in the bag and uses remaining.
+        props = obs.get("room", {}).get("properties", {}) or {}
+        uses_left = props.get("alch_uses", 3)
+        combining = bool(props.get("alch_combining"))
+        potion_categories = (
+            "potion_healing", "potion_mana", "potion",
+        )
+        potion_count = sum(
+            1 for i in inv
+            if (i.get("category") or "").startswith("potion")
+        )
+        if uses_left > 0 and potion_count >= 2:
+            if combining:
+                # Handler is awaiting "<a> <b>"; the alchemist's
+                # potion list iterates inventory.items in insertion
+                # order. Slot 1 + 2 is the safest pick -- starter
+                # bag has 4 Minor Heals up front, and even mixed
+                # types brew into a useful elixir.
+                return "1 2"
+            return "c"
+        # Lab exhausted or no potions to combine -- leave.
+        return _step_away()
+
+    if mode == "taxidermist_mode":
+        # 's' sells all trophies for gold (always +EV). We don't have
+        # enough obs to know which collections are completable without
+        # extending the harness; the gold sale is safe and frees a
+        # bag slot. Completion rewards (auto-equipped accessories) are
+        # left on the table for a future iteration with richer obs.
+        has_trophies = any(
+            i.get("category") == "trophy" for i in inv
+        )
+        if has_trophies:
+            return "s"
+        return _step_away()
+
     return "back"
 
 
