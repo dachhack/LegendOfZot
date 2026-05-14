@@ -876,14 +876,36 @@ class Character:
     def max_mana(
         self
     ):
-        # Caster gate: int > 15 unlocks a mana pool. Threshold + slope chosen
-        # so the curve gives a real starter pool (int=16 -> 14 MP, int=18 ->
-        # 22 MP, enough for 2-4 L0 cantrips) but the endgame ceiling at int=25
-        # stays at 50 MP, matching the old curve.
-        if self.intelligence <= 15:
-            return self.base_max_mana_bonus
-        int_mp = (self.intelligence - 15) * 4 + 10
-        lvl_mp = max(0, (self.level - 4) * 10)
+        # Race-flavored mana curve. Defaults keep every fresh character
+        # below the gate (human int=10, elf int=12, dwarf int=8) so
+        # no one casts at character creation -- magic is unlocked by
+        # investing in INT (oracles, potions, level-ups).
+        #
+        # Elf  (best caster): gate int>15, +4/int + 10 floor, +10/lvl past 4
+        #   int=16->14 MP, int=18->22 MP, int=25->50 MP
+        # Human (slow caster): gate int>15, +3/int + 5 floor, +6/lvl past 4
+        #   int=16-> 8 MP, int=18->14 MP, int=25->35 MP
+        # Dwarf (almost none): gate int>20, +2/int + 3 floor, +4/lvl past 4
+        #   int=21-> 5 MP, int=25->13 MP. No magic at typical INT levels.
+        race = (getattr(self, 'race', 'human') or 'human').lower()
+        int_score = self.intelligence
+
+        if race == 'dwarf':
+            if int_score <= 20:
+                return self.base_max_mana_bonus
+            int_mp = (int_score - 20) * 2 + 3
+            lvl_mp = max(0, (self.level - 4) * 4)
+        elif race == 'elf':
+            if int_score <= 15:
+                return self.base_max_mana_bonus
+            int_mp = (int_score - 15) * 4 + 10
+            lvl_mp = max(0, (self.level - 4) * 10)
+        else:  # human (default)
+            if int_score <= 15:
+                return self.base_max_mana_bonus
+            int_mp = (int_score - 15) * 3 + 5
+            lvl_mp = max(0, (self.level - 4) * 6)
+
         return int_mp + lvl_mp + self.base_max_mana_bonus
 
 

@@ -421,15 +421,23 @@ def random_policy(obs, rng):
         choices = ["n", "s", "e", "w", "n", "s", "e", "w", "d"]
         return rng.choice(choices)
     if mode == "combat_mode":
-        # Caster policy: if we have mana + a spell, sometimes cast; else attack
+        # Caster policy: if any affordable spell is memorized, sometimes cast
         p = obs["player"]
-        has_spells = bool(obs.get("memorized_spells"))
-        if has_spells and p["mana"] >= 8 and rng.random() < 0.55:
+        affordable = [s for s in obs.get("memorized_spells", [])
+                      if s["mana_cost"] <= p["mana"]]
+        if affordable and rng.random() < 0.55:
             return "c"
         return "a" if rng.random() < 0.85 else "f"
     if mode == "spell_casting_mode":
-        # Pick the first memorized spell, then back out if no target
-        return "1"
+        # Pick a random affordable spell (was hardcoded to slot 1, which
+        # meant Fireball / Heal never got tested). Falls back to 'x' if
+        # nothing is castable so the harness doesn't deadlock the turn.
+        p = obs["player"]
+        affordable = [s for s in obs.get("memorized_spells", [])
+                      if s["mana_cost"] <= p["mana"]]
+        if not affordable:
+            return "x"
+        return str(rng.choice(affordable)["slot"])
     if mode == "chest_mode":
         return "o" if rng.random() < 0.7 else "l"
     if mode == "stairs_down_mode":
