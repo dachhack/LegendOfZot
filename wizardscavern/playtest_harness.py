@@ -149,7 +149,8 @@ def _item_category(item):
 
 def new_game(seed=None, playtest_mode=False, name="Tester",
              race="human", gender="non-binary",
-             int_bonus=0, spells=None, starter_pack=True):
+             int_bonus=0, spells=None, starter_pack=True,
+             fog_of_war=True):
     """Initialise a fresh headless game. Returns a ``PlaytestSession``.
 
     ``race`` applies the same stat modifiers the UI's character-creation
@@ -343,7 +344,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     }
 
     _trigger_room_interaction(gs.player_character, gs.my_tower)
-    return PlaytestSession()
+    return PlaytestSession(fog_of_war=fog_of_war)
 
 
 ACTION_HINTS = {
@@ -362,7 +363,7 @@ ACTION_HINTS = {
 class PlaytestSession:
     """One playthrough. Holds a log-pointer + turn counter; state lives in gs."""
 
-    def __init__(self):
+    def __init__(self, fog_of_war=True):
         self._log_pointer = len(gs.log_lines)
         self.turn = 0
         self.last_action = None
@@ -372,6 +373,11 @@ class PlaytestSession:
         # so the wayfinder can skip them and avoid oscillating between
         # an altar tile and an empty neighbour for 50+ turns.
         self.visited_features = set()
+        # Fog of war: when True, the neighbour + nearest-feature obs
+        # respect room.discovered so the agent has to actually walk over
+        # (or lantern-light) tiles before knowing what's there. The
+        # in-game starting condition; default-on for realistic playtest.
+        self.fog_of_war = fog_of_war
 
     # ------------------------------------------------------------------
     # Observation
@@ -531,23 +537,32 @@ class PlaytestSession:
         ]
 
     def _nearest_features_obs(self):
-        """For each feature type the policy cares about (D, V, C), return
-        the (dx, dy) vector to the nearest unvisited instance on the current
-        floor by Manhattan distance. Lets the wayfinder walk *toward*
-        distant targets instead of relying on adjacency. Returns {} when
-        no unvisited instance exists. Cheaper than pathfinding and good
-        enough on the 18x21 floors here -- we just step in the dimension
-        with the larger absolute delta each turn.
+        """For each feature type the policy cares about (D, V, C, plus
+        beneficial-room set G, A, L, O, P, T, N), return the (dx, dy)
+        vector to the nearest unvisited instance on the current floor
+        by Manhattan distance. Lets the wayfinder walk *toward* distant
+        targets instead of relying on adjacency. Returns {} when no
+        unvisited instance exists. Cheaper than pathfinding and good
+        enough on the 18x21 floors here -- we step in the dimension with
+        the larger absolute delta each turn.
+
+        Respects `fog_of_war`: when on, the agent only sees features on
+        tiles it has actually walked over or lit up (room.discovered).
+        Off (--no-fog), the agent has god-mode view, useful for testing
+        upstream balance without the navigation gate.
         """
         pc = gs.player_character
         floor = gs.my_tower.floors[pc.z]
         out = {}
-        for target in ("D", "V", "C"):
+        for target in ("D", "V", "C", "G", "A", "L", "O", "P", "T", "N"):
             best = None
             best_d = float("inf")
             for y in range(floor.rows):
                 for x in range(floor.cols):
-                    if floor.grid[y][x].room_type != target:
+                    cell = floor.grid[y][x]
+                    if cell.room_type != target:
+                        continue
+                    if self.fog_of_war and not cell.discovered:
                         continue
                     if (pc.z, x, y, target) in self.visited_features:
                         continue
@@ -580,11 +595,10 @@ class PlaytestSession:
     def _neighbors_obs(self):
         """Cardinal-neighbor room types so the policy can spot adjacent
         features (D = downstairs, V = vendor, C = chest, etc.). Returns
-        the actual room_type regardless of `discovered` -- in normal play
-        only the tile you've stepped on flips `discovered=True`, and the
-        playtest agent needs to navigate without that fog-of-war handicap
-        (we're testing game balance, not vision rules). Returns '#' for
-        out-of-bounds.
+        '#' for out-of-bounds. Respects `fog_of_war`: when on, returns
+        None for undiscovered tiles so the agent must rely on the lantern
+        (or walking onto a tile to discover it) to plan. Off, the
+        actual room_type is always reported.
         """
         pc = gs.player_character
         floor = gs.my_tower.floors[pc.z]
@@ -595,7 +609,12 @@ class PlaytestSession:
             if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
                 out[d] = "#"
                 continue
-            out[d] = floor.grid[ny][nx].room_type
+            cell = floor.grid[ny][nx]
+            if self.fog_of_war and not cell.discovered:
+                out[d] = None
+                continue
+            out[d] = cell.room_type
+        return out
         return out
 
     # ------------------------------------------------------------------
@@ -672,6 +691,11 @@ class PlaytestSession:
                 handle_vendor_shop(pc, tw, action)
             elif mode == "starting_shop":
                 handle_starting_shop(pc, tw, action)
+            elif mode == "warp_mode":
+                # Warp = random teleport. The agent resists by default --
+                # see the smart_policy warp_mode branch.
+                from .game_systems import process_warp_action
+                process_warp_action(pc, tw, action, gs.floor_params)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -793,16 +817,12 @@ def smart_policy(obs, rng, use_lantern=True):
     needs_repair = weapon_worn or armor_worn
 
     if mode == "game_loop":
+        # Tier 0 priorities -- self-care that takes precedence over
+        # any exploration / fighting decision.
         if hp_pct < 0.30 and heal_pot_slot:
             return "i"
-        # Urgent meat: a kill drop is about to rot. Pop inventory and eat
-        # it before the food clock wastes it. Triggered regardless of
-        # hunger so we don't squander monster meat sitting at 99 hunger.
         if urgent_meat is not None:
             return "i"
-        # Broken-gear swap: if our equipped weapon or armor broke and we
-        # have a spare of the same kind in the bag, pop inventory to
-        # equip it. The inventory branch handles the actual e<N> call.
         broken_weapon = (equipped.get("weapon", {})
                          and equipped["weapon"].get("is_broken"))
         broken_armor = (equipped.get("armor", {})
@@ -819,68 +839,121 @@ def smart_policy(obs, rng, use_lantern=True):
             return "i"
         if hunger < 50 and food_slot:
             return "i"
-        # Wayfinder: if any cardinal neighbour is a feature tile we
-        # haven't already interacted with, step into it. Without this,
-        # the random walker dies before ever bumping into the lone vendor
-        # / downstairs on the floor. Priority order is dynamic: if we're
-        # short on healing potions OR carrying damaged gear, prefer the
-        # vendor over the stairs; otherwise descend. U (upstairs) is
-        # intentionally omitted -- stepping back up rarely advances.
-        # Visited tiles are excluded so we don't bounce between an altar
-        # and an empty neighbour for 50+ turns -- D and V are never
-        # marked visited so we always re-target stairs / unvisited shops.
+
+        # Lantern as exploration tool. With fog-of-war on, neighbours
+        # show None for undiscovered tiles -- light up so the wayfinder
+        # has something to work with. The new radius (light_radius +
+        # upgrade_level, was upgrade_level + 1) gives the starter a
+        # 7-tile reveal, so one light is enough for several moves of
+        # planning before fuel becomes a concern.
+        neighbors = obs.get("neighbors") or {}
+        visited = obs.get("visited_neighbors") or {}
+        unknown_neighbours = sum(1 for v in neighbors.values() if v is None)
+        if use_lantern and lantern_fuel > 5 and unknown_neighbours >= 2:
+            return "l"
+
+        # Weakness model. When weak we avoid stepping onto monsters (M)
+        # or warps (W) because random teleport could drop us into a deeper
+        # floor's monster room, and combat at low HP / broken gear is a
+        # death sentence. Out-of-mana casters don't count as weak --
+        # they can still melee.
+        is_weak = (
+            hp_pct < 0.50
+            or broken_weapon
+            or broken_armor
+            or (equipped.get("weapon") is None)
+        )
+        AVOID = ({"M", "W"} if is_weak else set())
+
+        # Clear-before-descend gate. Beneficials = rooms that pay off
+        # without forced combat (chest, garden, library, oracle, altar,
+        # pool). Tombs (T) and dungeons (N) are kept off the "must
+        # clear" list because they trigger guardian fights / locked
+        # gates -- the agent can still target them but won't refuse
+        # descent for them. D is suppressed while unvisited beneficials
+        # remain so the playtester actually clears the floor before
+        # moving on.
+        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P")
+        nearest = obs.get("nearest_features") or {}
+        unvisited_beneficials_exist = any(
+            nearest.get(t) for t in BENEFICIAL_SAFE
+        )
+
+        # Build the priority list. Order: vendor (if needed) > safe
+        # beneficials > risky beneficials > D. When weak, drop risky
+        # beneficials and put vendor first. M and W are NEVER targets
+        # (we don't actively walk into combat or warps) -- they appear
+        # incidentally when we walk through the floor.
         healing_count = sum(i.get("count", 1) for i in inv
                             if i["category"] == "potion_healing")
         wants_vendor = ((healing_count < 2 or needs_repair)
                         and p["gold"] >= 50)
-        if wants_vendor:
-            PRIORITY = ("V", "D", "C", "A", "T", "N", "P", "L", "G", "O")
+
+        if is_weak:
+            priority = ["V"] + list(BENEFICIAL_SAFE)
+            if not unvisited_beneficials_exist:
+                priority.append("D")  # only descend if nothing safer
+        elif wants_vendor:
+            priority = ["V"] + list(BENEFICIAL_SAFE) + ["T", "N"]
+            if not unvisited_beneficials_exist:
+                priority.append("D")
+        elif unvisited_beneficials_exist:
+            priority = list(BENEFICIAL_SAFE) + ["V", "T", "N"]
         else:
-            PRIORITY = ("D", "V", "C", "A", "T", "N", "P", "L", "G", "O")
-        neighbors = obs.get("neighbors") or {}
-        visited = obs.get("visited_neighbors") or {}
-        best_dir, best_rank = None, len(PRIORITY)
+            priority = ["D", "V", "T", "N"] + list(BENEFICIAL_SAFE)
+        priority = tuple(priority)
+
+        best_dir, best_rank = None, len(priority)
         for d in ("n", "s", "e", "w"):
             t = neighbors.get(d)
-            if t in PRIORITY and not visited.get(d):
-                rank = PRIORITY.index(t)
+            if t in AVOID:
+                continue
+            if t in priority and not visited.get(d):
+                rank = priority.index(t)
                 if rank < best_rank:
                     best_dir, best_rank = d, rank
         if best_dir is not None:
             return best_dir
 
-        # Periodic lantern light. Only between productive moves: if we
-        # didn't pick a feature neighbour, light up so any nearby tiles
-        # discovered get marked as such (mostly cosmetic for the harness,
-        # but the question this answers is whether the lantern as a
-        # mechanic adds anything to survival numbers). Fires every 8th
-        # turn while fuel > 5 -- the starter lantern's 50 fuel lasts
-        # ~400 turns of play at this cadence, refuelled +10/use from any
-        # Lantern Fuel items the agent has bought.
-        if (use_lantern and lantern_fuel > 5
-                and obs["turn"] % 8 == 0 and obs["turn"] > 0):
-            return "l"
-
-        # Distant wayfinder: no useful neighbour, but the floor has a known
-        # unvisited V (vendor) or D (downstairs). Step in the dimension
-        # with the larger absolute delta -- greedy walk that doesn't
-        # respect walls but, given enough turns, usually finds a route.
-        nearest = obs.get("nearest_features") or {}
-        if wants_vendor:
-            target = nearest.get("V") or nearest.get("D")
-        else:
-            target = nearest.get("D") or nearest.get("V")
+        # Distant wayfinder: no useful adjacent feature, but the floor
+        # has a known unvisited target. Step in the dimension with the
+        # larger absolute delta -- greedy walk. Same priority logic as
+        # above.
+        target = None
+        for t in priority:
+            cand = nearest.get(t)
+            if cand:
+                target = cand
+                break
         if target is not None:
             dx, dy = target["dx"], target["dy"]
-            # 30% chance to pick the smaller axis or random direction so
-            # we don't bash into the same wall forever on long detours.
+            # 30% jitter to escape walls on long detours, and avoid
+            # walking into an M/W neighbour while weak.
             if rng.random() < 0.30:
-                return rng.choice(["n", "s", "e", "w"])
-            if abs(dx) >= abs(dy):
-                return "e" if dx > 0 else "w"
-            return "s" if dy > 0 else "n"
+                safe_dirs = [d for d in ("n", "s", "e", "w")
+                             if neighbors.get(d) not in AVOID]
+                if safe_dirs:
+                    return rng.choice(safe_dirs)
+            # Prefer the greedy axis but skip it if that direction is
+            # an avoid-tile.
+            for axis in ("xy", "yx"):
+                primary = "e" if dx > 0 else "w"
+                secondary = "s" if dy > 0 else "n"
+                if axis == "xy" and abs(dx) >= abs(dy):
+                    order = (primary, secondary)
+                else:
+                    order = (secondary, primary)
+                for d in order:
+                    if neighbors.get(d) not in AVOID:
+                        return d
+                break
 
-        return rng.choice(["n", "s", "e", "w", "n", "s", "e", "w", "d"])
+        # Explore: random move biased away from AVOID neighbours.
+        safe_dirs = [d for d in ("n", "s", "e", "w")
+                     if neighbors.get(d) not in AVOID]
+        if not safe_dirs:
+            safe_dirs = ["n", "s", "e", "w"]
+        return rng.choice(safe_dirs)
 
     if mode == "inventory":
         # If the previous action raised an exception, bail out instead of
@@ -1008,7 +1081,18 @@ def smart_policy(obs, rng, use_lantern=True):
     if mode == "chest_mode":
         return "o" if rng.random() < 0.85 else "l"
     if mode == "stairs_down_mode":
-        # The descent goal -- always confirm.
+        # Clear beneficials before descending. If the floor has any
+        # unvisited safe-beneficial tiles we know about, step away from
+        # the stairs and let the wayfinder go grab them first.
+        nearest = obs.get("nearest_features") or {}
+        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P")
+        if any(nearest.get(t) for t in BENEFICIAL_SAFE):
+            neighbors = obs.get("neighbors") or {}
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t and t not in ("#", "D"):
+                    return d
+            return rng.choice(["n", "s", "e", "w"])
         return "d"
     if mode == "stairs_up_mode":
         # Stairs-up_mode fires as soon as you arrive on floor N+1 (your
@@ -1025,6 +1109,12 @@ def smart_policy(obs, rng, use_lantern=True):
             if t and t not in ("#", "U"):
                 return d
         return rng.choice(["n", "s", "e", "w"])
+    if mode == "warp_mode":
+        # Warps are random teleports that can drop the agent into the
+        # next floor's monster room. Always try to resist -- the
+        # handler rolls dexterity-based escape, but even on a miss
+        # we'd rather take the gamble than blindly accept.
+        return "y"
     return "back"
 
 
@@ -1146,12 +1236,17 @@ def main(argv=None):
                         help="Smart policy skips lantern use + Lantern Fuel "
                              "buying. For A/B testing whether the lantern "
                              "mechanic adds anything to survival numbers.")
+    parser.add_argument("--no-fog", action="store_true",
+                        help="Disable fog-of-war in obs (agent sees the full "
+                             "floor regardless of `discovered`). Useful for "
+                             "isolating upstream balance from navigation.")
     args = parser.parse_args(argv)
 
     spells = [s for s in args.spells.split(",") if s.strip()] if args.spells else None
     sess = new_game(seed=args.seed, playtest_mode=args.playtest_mode,
                     name=args.name, race=args.race,
                     starter_pack=not args.no_starter_pack,
+                    fog_of_war=not args.no_fog,
                     int_bonus=args.int_bonus, spells=spells)
     obs = sess.observe()
     print(_summarise(obs, args.jsonl))

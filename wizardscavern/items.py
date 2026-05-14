@@ -2590,10 +2590,13 @@ class Lantern(Item):
 
             current_floor = my_tower.floors[character.z]
 
-            # Circular reveal with radius based on light_radius
-            # Uses line-of-sight: walls block the lantern light
+            # Circular reveal with radius based on light_radius + upgrades.
+            # Previously this used `upgrade_level + 1`, which left the
+            # starter lantern (level 0) at radius 1 -- no better than
+            # walking. light_radius is a constructor arg (default 7 for
+            # the starter), upgrades stack on top.
             directions_to_reveal = []
-            radius = self.upgrade_level+1  # Or use self.light_radius if you want it variable
+            radius = self.light_radius + self.upgrade_level
 
             for dr in range(-radius, radius + 1):
                 for dc in range(-radius, radius + 1):

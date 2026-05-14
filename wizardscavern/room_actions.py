@@ -3586,10 +3586,13 @@ def process_lantern_quick_use(player_character, my_tower):
     if lantern.fuel_amount > 0:
         add_log(f"{COLOR_CYAN}You light your {lantern.name}...{COLOR_RESET}")
 
-        # Circular reveal with radius based on light_radius
-        # Uses line-of-sight: walls block the lantern light
+        # Circular reveal with radius based on light_radius + upgrades.
+        # Previously this used `upgrade_level + 1`, leaving the starter
+        # lantern (level 0) at radius 1 -- same as walking. light_radius
+        # is a constructor arg (default 7 for the starter); upgrades
+        # stack on top.
         directions_to_reveal = []
-        radius = lantern.upgrade_level+1  # Or use self.light_radius if you want it variable
+        radius = lantern.light_radius + lantern.upgrade_level
 
         for dr in range(-radius, radius + 1):
             for dc in range(-radius, radius + 1):
