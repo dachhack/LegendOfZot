@@ -443,6 +443,13 @@ class PlaytestSession:
         # so the wayfinder can skip them and avoid oscillating between
         # an altar tile and an empty neighbour for 50+ turns.
         self.visited_features = set()
+        # Recent positions for anti-backtrack. The BFS first_step + SE
+        # tiebreak can flip direction each turn when the agent is on a
+        # 2-tile saddle point between frontiers (seed=42 dwarf burned
+        # 4857 turns of a 5000-turn budget ping-ponging n/s). Tracking
+        # the last 4 (z, x, y) tuples lets the policy break ties by
+        # preferring directions that DON'T re-step on a recent tile.
+        self.recent_positions = []
         # Fog of war: when True, the neighbour + nearest-feature obs
         # respect room.discovered so the agent has to actually walk over
         # (or lantern-light) tiles before knowing what's there. The
@@ -509,6 +516,7 @@ class PlaytestSession:
             "feature_paths": self._feature_paths_obs(),
             "frontier_step": self._frontier_step_obs(),
             "nearest_monster_path": self._nearest_monster_path_obs(),
+            "recent_step_set": self._recent_step_set(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
             "nearest_undiscovered": self._nearest_undiscovered_obs(),
@@ -958,6 +966,26 @@ class PlaytestSession:
             return None
         return {"first_step": best[1], "path_dist": best[0]}
 
+    def _recent_step_set(self):
+        """List of cardinal directions (n/s/e/w) whose neighbour is in
+        recent_positions on the current floor. Used by the wayfinder
+        as a tiebreak: when a BFS first_step would re-step on a recent
+        tile AND an alternative direction is walkable, prefer the
+        alternative. Solves the 2-tile saddle-point oscillation
+        (seed=42 dwarf burned 4857/5000 turns alternating n/s through
+        a corridor). Returns a sorted list for JSON-friendliness."""
+        pc = gs.player_character
+        recent_on_floor = {(x, y) for (z, x, y) in self.recent_positions
+                           if z == pc.z}
+        if not recent_on_floor:
+            return []
+        out = []
+        for d, (dx, dy) in (("n", (0, -1)), ("s", (0, 1)),
+                            ("e", (1, 0)), ("w", (-1, 0))):
+            if (pc.x + dx, pc.y + dy) in recent_on_floor:
+                out.append(d)
+        return out
+
     def _neighbors_obs(self):
         """Cardinal-neighbor room types so the policy can spot adjacent
         features (D = downstairs, V = vendor, C = chest, etc.). Returns
@@ -1118,6 +1146,19 @@ class PlaytestSession:
         if pc_after.z != self._last_floor:
             self._last_floor = pc_after.z
             self.floor_arrival_turn = self.turn
+            # Clear the recent-position history on floor change so the
+            # anti-backtrack guard doesn't try to avoid a tile that's
+            # no longer reachable (different floor).
+            self.recent_positions = []
+        # Record the new position for anti-backtrack. Keep a short
+        # window (4 entries) -- long enough to detect 2-tile and
+        # 3-tile oscillations, short enough that the agent isn't
+        # blocked from genuinely retracing through a corridor.
+        cur_xy = (pc_after.z, pc_after.x, pc_after.y)
+        if not self.recent_positions or self.recent_positions[-1] != cur_xy:
+            self.recent_positions.append(cur_xy)
+            if len(self.recent_positions) > 4:
+                self.recent_positions.pop(0)
 
         return self.observe()
 
@@ -1240,8 +1281,26 @@ def smart_policy(obs, rng, use_lantern=True):
         return best_slot, best_bonus
     cur_w = (equipped.get("weapon") or {}).get("attack_bonus") or 0
     cur_a = (equipped.get("armor") or {}).get("defense_bonus") or 0
-    weapon_upgrade_slot, _ = _best_upgrade("weapon", "attack_bonus", cur_w)
-    armor_upgrade_slot, _ = _best_upgrade("armor", "defense_bonus", cur_a)
+    # Known-cursed equipped gear can't be unequipped (welds to hand),
+    # so any swap or upgrade attempt against that slot just burns
+    # i -> e<N> -> x turns. Skip the upgrade detection entirely when
+    # cursed -- the only way out is an altar uncurse.
+    cursed_weapon = bool(
+        equipped.get("weapon")
+        and equipped["weapon"].get("buc_known")
+        and equipped["weapon"].get("buc_status") == "cursed"
+    )
+    cursed_armor = bool(
+        equipped.get("armor")
+        and equipped["armor"].get("buc_known")
+        and equipped["armor"].get("buc_status") == "cursed"
+    )
+    weapon_upgrade_slot = None
+    if not cursed_weapon:
+        weapon_upgrade_slot, _ = _best_upgrade("weapon", "attack_bonus", cur_w)
+    armor_upgrade_slot = None
+    if not cursed_armor:
+        armor_upgrade_slot, _ = _best_upgrade("armor", "defense_bonus", cur_a)
     has_upgrade = weapon_upgrade_slot is not None or armor_upgrade_slot is not None
 
     # Hoisted out of game_loop so tomb_mode etc. can use the same gate.
@@ -1298,15 +1357,18 @@ def smart_policy(obs, rng, use_lantern=True):
         # Open inventory to swap when current gear is broken AND we
         # have a working spare, OR when an unequipped item beats what's
         # in the slot (subsumes the prior broken-only check).
-        if broken_weapon and any(
+        # cursed_weapon / cursed_armor: skip the swap if the broken
+        # slot is welded on -- equip attempts just bounce off and the
+        # agent burns 3 turns per i->e<N>->x cycle until uncurse.
+        if (broken_weapon and not cursed_weapon and any(
                 e["category"] == "weapon" and not e.get("is_broken")
                 and e["name"] != equipped["weapon"]["name"]
-                for e in inv):
+                for e in inv)):
             return "i"
-        if broken_armor and any(
+        if (broken_armor and not cursed_armor and any(
                 e["category"] == "armor" and not e.get("is_broken")
                 and e["name"] != equipped["armor"]["name"]
-                for e in inv):
+                for e in inv)):
             return "i"
         if has_upgrade:
             return "i"
@@ -1431,14 +1493,14 @@ def smart_policy(obs, rng, use_lantern=True):
             if not unvisited_beneficials_exist:
                 priority.append("D")
         elif ready_to_clear:
-            # Hunt-mode: the floor's boon budget is spent (or resource
-            # pressure forces the issue), now we efficiently clear
-            # monsters for meat + XP + gold and head to the stairs.
-            # SAFE rooms stay at the top in case a beneficial respawns
-            # or was previously unreachable. M comes BEFORE D so we
-            # actually collect kill drops on the way out. Bounded by
-            # too_long_on_floor above so this can't loop forever on a
-            # respawning floor.
+            # Boon budget spent OR resource pressure forces the shift:
+            # the agent transitions to efficient monster clearing for
+            # meat (food) + XP + gold. M comes BEFORE D so the agent
+            # banks value from the current floor rather than racing
+            # the stairs into harder content with no kill rewards. The
+            # too_long_on_floor escape (300+ turns) bounds this from
+            # looping on a respawning floor. SAFE rooms stay at the
+            # top for any beneficials that respawn or become reachable.
             priority = list(BENEFICIAL_SAFE) + ["V", "T", "N", "M", "D"]
         elif unvisited_beneficials_exist:
             priority = list(BENEFICIAL_SAFE) + ["V", "T", "N"]
@@ -1479,10 +1541,30 @@ def smart_policy(obs, rng, use_lantern=True):
         # walking into monsters/warps while weak.
         feature_paths = obs.get("feature_paths") or {}
         monster_path = obs.get("nearest_monster_path")
+        recent_steps = set(obs.get("recent_step_set") or [])
+
+        def _swap_if_backtrack(d):
+            """Anti-backtrack: if `d` would re-step on a recent tile and
+            a non-recent walkable alternative exists, use the
+            alternative instead. Breaks the SE-tiebreak ping-pong that
+            burned 4857/5000 turns on seed=42 dwarf F2 before the fix."""
+            if d not in recent_steps:
+                return d
+            alts = []
+            for alt in ("n", "s", "e", "w"):
+                if alt == d or alt in recent_steps:
+                    continue
+                t = neighbors.get(alt)
+                if t in AVOID or t == "#":
+                    continue
+                alts.append(alt)
+            if alts:
+                return rng.choice(alts)
+            return d
 
         # Keyed dungeon (if any) via BFS first_step.
         if keyed_tgt and keyed_tgt.get("first_step"):
-            return keyed_tgt["first_step"]
+            return _swap_if_backtrack(keyed_tgt["first_step"])
 
         # Priority-ordered feature targeting via BFS.
         for t in priority:
@@ -1491,11 +1573,11 @@ def smart_policy(obs, rng, use_lantern=True):
                 # monster-path obs which routes to an adjacent tile and
                 # steps into the M to initiate combat.
                 if monster_path and monster_path.get("first_step"):
-                    return monster_path["first_step"]
+                    return _swap_if_backtrack(monster_path["first_step"])
                 continue
             path = feature_paths.get(t)
             if path and path.get("first_step"):
-                return path["first_step"]
+                return _swap_if_backtrack(path["first_step"])
 
         # Frontier walker via BFS. When no feature beckons, take the
         # BFS first-step toward the nearest reachable discovered tile
@@ -1503,12 +1585,14 @@ def smart_policy(obs, rng, use_lantern=True):
         # the player heuristic that D tends to be down-right of the map.
         frontier_step = obs.get("frontier_step")
         if frontier_step and frontier_step.get("first_step"):
-            return frontier_step["first_step"]
+            return _swap_if_backtrack(frontier_step["first_step"])
 
         # Random fallback only when the BFS has nothing reachable to
         # offer (fully-explored floor or trapped behind a fog wall).
         # Prefer an undiscovered neighbour if one happens to sit
         # adjacent so the lantern still has a chance to break through.
+        # The anti-backtrack guard filters out recent tiles first so the
+        # random walk doesn't immediately re-feed the oscillation.
         FEATURE_TILES = ("C", "G", "L", "O", "A", "P", "T", "N", "V")
         def _walkable(d):
             t = neighbors.get(d)
@@ -1520,6 +1604,9 @@ def smart_policy(obs, rng, use_lantern=True):
             return True
         candidates = [d for d in ("n", "s", "e", "w")
                       if _walkable(d) and _fresh(d)]
+        non_recent = [d for d in candidates if d not in recent_steps]
+        if non_recent:
+            candidates = non_recent
         undiscovered_nbrs = [d for d in candidates if neighbors.get(d) is None]
         if undiscovered_nbrs:
             candidates = undiscovered_nbrs
@@ -1556,10 +1643,12 @@ def smart_policy(obs, rng, use_lantern=True):
             proposed = f"eat{urgent_meat}"
         if (proposed is None
                 and equipped.get("weapon", {})
-                and equipped["weapon"].get("is_broken")):
+                and equipped["weapon"].get("is_broken")
+                and not cursed_weapon):
             # Find a non-broken Weapon in inventory and equip it. e<N>
             # indexes off working_items just like u<N> does. Falls
-            # through to the next step if no spare exists.
+            # through to the next step if no spare exists or if the
+            # current weapon is welded on (cursed_weapon).
             for entry in inv:
                 if (entry["category"] == "weapon"
                         and not entry.get("is_broken")
@@ -1568,7 +1657,8 @@ def smart_policy(obs, rng, use_lantern=True):
                     break
         if (proposed is None
                 and equipped.get("armor", {})
-                and equipped["armor"].get("is_broken")):
+                and equipped["armor"].get("is_broken")
+                and not cursed_armor):
             for entry in inv:
                 if (entry["category"] == "armor"
                         and not entry.get("is_broken")
