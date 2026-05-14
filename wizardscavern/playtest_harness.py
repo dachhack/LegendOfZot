@@ -98,6 +98,17 @@ def _lantern_obs(pc):
     }
 
 
+def _neighbour_coord(player, direction):
+    """Translate an n/s/e/w direction key into the (x, y) cell the
+    player would step onto. Used by the wayfinder when it needs the
+    coords (not just the room_type) of an adjacent tile -- e.g. to
+    check whether a neighbouring N is a dungeon we already hold the
+    key for."""
+    dx, dy = {"n": (0, -1), "s": (0, 1),
+              "e": (1, 0), "w": (-1, 0)}.get(direction, (0, 0))
+    return player["x"] + dx, player["y"] + dy
+
+
 def _equipped_obs(pc):
     """Snapshot of the player's equipped weapon + armor. Lets the smart
     policy notice when its gear is wearing out and walk to a vendor."""
@@ -428,6 +439,8 @@ class PlaytestSession:
             "neighbors": self._neighbors_obs(),
             "visited_neighbors": self._visited_neighbors_obs(),
             "nearest_features": self._nearest_features_obs(),
+            "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
+            "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
             "room": {
                 "type": room.room_type,
                 "properties": {
@@ -592,6 +605,33 @@ class PlaytestSession:
                 out[target] = {"dx": best[0], "dy": best[1], "dist": best_d}
         return out
 
+    def _keyed_dungeon_target_obs(self):
+        """If the player holds a key for an unlooted dungeon on this
+        floor, return (dx, dy, dist) to the nearest one. Bypasses
+        visited_features (re-targets a dungeon we walked past unkeyed
+        before the key dropped) and visited filters on nearest_features.
+        Looted dungeons are excluded via gs.looted_dungeons."""
+        pc = gs.player_character
+        z = pc.z
+        keys = getattr(gs, "dungeon_keys", {}) or {}
+        looted = getattr(gs, "looted_dungeons", {}) or {}
+        best = None
+        best_d = float("inf")
+        for coord in keys.keys():
+            if len(coord) < 3 or coord[2] != z:
+                continue
+            if coord in looted:
+                continue
+            x, y = coord[0], coord[1]
+            if (x, y) == (pc.x, pc.y):
+                continue
+            d = abs(x - pc.x) + abs(y - pc.y)
+            if d < best_d:
+                best, best_d = (x - pc.x, y - pc.y), d
+        if best is None:
+            return None
+        return {"dx": best[0], "dy": best[1], "dist": best_d}
+
     def _visited_neighbors_obs(self):
         """Mirror of _neighbors_obs but with a bool: is this neighbouring
         feature tile already in visited_features? Lets the wayfinder skip
@@ -719,6 +759,12 @@ class PlaytestSession:
             elif mode == "pool_mode":
                 from .game_systems import process_pool_action
                 process_pool_action(pc, tw, action)
+            elif mode == "tomb_mode":
+                from .game_systems import process_tomb_action
+                process_tomb_action(pc, tw, action)
+            elif mode in ("dungeon_mode", "dungeon_unlocked_mode"):
+                from .game_systems import process_dungeon_action
+                process_dungeon_action(pc, tw, action)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -839,6 +885,18 @@ def smart_policy(obs, rng, use_lantern=True):
     armor_worn = _gear_needs_help(equipped.get("armor"))
     needs_repair = weapon_worn or armor_worn
 
+    # Hoisted out of game_loop so tomb_mode etc. can use the same gate.
+    broken_weapon = bool(equipped.get("weapon")
+                         and equipped["weapon"].get("is_broken"))
+    broken_armor = bool(equipped.get("armor")
+                        and equipped["armor"].get("is_broken"))
+    is_weak = (
+        hp_pct < 0.50
+        or broken_weapon
+        or broken_armor
+        or (equipped.get("weapon") is None)
+    )
+
     if mode == "game_loop":
         # Tier 0 priorities -- self-care that takes precedence over
         # any exploration / fighting decision.
@@ -846,10 +904,7 @@ def smart_policy(obs, rng, use_lantern=True):
             return "i"
         if urgent_meat is not None:
             return "i"
-        broken_weapon = (equipped.get("weapon", {})
-                         and equipped["weapon"].get("is_broken"))
-        broken_armor = (equipped.get("armor", {})
-                        and equipped["armor"].get("is_broken"))
+        # broken_weapon / broken_armor / is_weak are hoisted above.
         if broken_weapon and any(
                 e["category"] == "weapon" and not e.get("is_broken")
                 and e["name"] != equipped["weapon"]["name"]
@@ -875,17 +930,11 @@ def smart_policy(obs, rng, use_lantern=True):
         if use_lantern and lantern_fuel > 5 and unknown_neighbours >= 2:
             return "l"
 
-        # Weakness model. When weak we avoid stepping onto monsters (M)
-        # or warps (W) because random teleport could drop us into a deeper
-        # floor's monster room, and combat at low HP / broken gear is a
-        # death sentence. Out-of-mana casters don't count as weak --
-        # they can still melee.
-        is_weak = (
-            hp_pct < 0.50
-            or broken_weapon
-            or broken_armor
-            or (equipped.get("weapon") is None)
-        )
+        # Weakness model (hoisted to top of smart_policy for reuse in
+        # tomb_mode / pool_mode). When weak we avoid stepping onto
+        # monsters (M) or warps (W) because random teleport could drop
+        # us into a deeper floor's monster room, and combat at low HP
+        # / broken gear is a death sentence.
         AVOID = ({"M", "W"} if is_weak else set())
 
         # Clear-before-descend gate. Beneficials = rooms that pay off
@@ -902,11 +951,15 @@ def smart_policy(obs, rng, use_lantern=True):
             nearest.get(t) for t in BENEFICIAL_SAFE
         )
 
-        # Build the priority list. Order: vendor (if needed) > safe
-        # beneficials > risky beneficials > D. When weak, drop risky
-        # beneficials and put vendor first. M and W are NEVER targets
-        # (we don't actively walk into combat or warps) -- they appear
-        # incidentally when we walk through the floor.
+        # Keyed dungeons get exposed via obs.keyed_dungeon_target,
+        # which filters out looted dungeons -- referenced below in the
+        # adjacent-key shortcut and the distant wayfinder.
+
+        # Build the priority list. Order: keyed dungeons > vendor (if
+        # needed) > safe beneficials > unlocked tombs (when healthy) >
+        # plain N (only valuable once a key drops) > D. When weak,
+        # drop tombs/dungeons -- those have guardians that finish a
+        # low-HP run quickly. M and W are NEVER active targets.
         healing_count = sum(i.get("count", 1) for i in inv
                             if i["category"] == "potion_healing")
         wants_vendor = ((healing_count < 2 or needs_repair)
@@ -926,6 +979,18 @@ def smart_policy(obs, rng, use_lantern=True):
             priority = ["D", "V", "T", "N"] + list(BENEFICIAL_SAFE)
         priority = tuple(priority)
 
+        # First pass: a keyed dungeon adjacent to us is the best move
+        # -- bypass the priority list entirely. The keyed_dungeon_target
+        # obs filters out looted dungeons, so this won't loop on a tile
+        # we've already raided.
+        keyed_tgt = obs.get("keyed_dungeon_target")
+        if keyed_tgt and keyed_tgt["dist"] == 1:
+            kdx, kdy = keyed_tgt["dx"], keyed_tgt["dy"]
+            for d, (dx_d, dy_d) in (("e", (1, 0)), ("w", (-1, 0)),
+                                    ("s", (0, 1)), ("n", (0, -1))):
+                if (dx_d, dy_d) == (kdx, kdy):
+                    return d
+
         best_dir, best_rank = None, len(priority)
         for d in ("n", "s", "e", "w"):
             t = neighbors.get(d)
@@ -940,14 +1005,16 @@ def smart_policy(obs, rng, use_lantern=True):
 
         # Distant wayfinder: no useful adjacent feature, but the floor
         # has a known unvisited target. Step in the dimension with the
-        # larger absolute delta -- greedy walk. Same priority logic as
-        # above.
-        target = None
-        for t in priority:
-            cand = nearest.get(t)
-            if cand:
-                target = cand
-                break
+        # larger absolute delta -- greedy walk. Held-key dungeons jump
+        # ahead of the normal priority list because they're guaranteed
+        # loot (the key-holder monster is already dead).
+        target = obs.get("keyed_dungeon_target")
+        if target is None:
+            for t in priority:
+                cand = nearest.get(t)
+                if cand:
+                    target = cand
+                    break
         if target is not None:
             dx, dy = target["dx"], target["dy"]
             # 30% jitter to escape walls on long detours, and avoid
@@ -971,12 +1038,27 @@ def smart_policy(obs, rng, use_lantern=True):
                         return d
                 break
 
-        # Explore: random move biased away from AVOID neighbours.
-        safe_dirs = [d for d in ("n", "s", "e", "w")
-                     if neighbors.get(d) not in AVOID]
-        if not safe_dirs:
-            safe_dirs = ["n", "s", "e", "w"]
-        return rng.choice(safe_dirs)
+        # Explore: random move biased away from AVOID neighbours and
+        # away from already-interacted feature tiles (so we don't
+        # randomly step onto a locked-no-key dungeon for the 11th time
+        # this run). The exclusion is greedy -- if every cardinal is
+        # walled / avoided / visited, fall back to anything walkable.
+        FEATURE_TILES = ("C", "G", "L", "O", "A", "P", "T", "N", "V")
+        def _walkable(d):
+            t = neighbors.get(d)
+            return t not in AVOID and t != "#"
+        def _fresh(d):
+            t = neighbors.get(d)
+            if t in FEATURE_TILES and visited.get(d):
+                return False
+            return True
+        candidates = [d for d in ("n", "s", "e", "w")
+                      if _walkable(d) and _fresh(d)]
+        if not candidates:
+            candidates = [d for d in ("n", "s", "e", "w") if _walkable(d)]
+        if not candidates:
+            candidates = ["n", "s", "e", "w"]
+        return rng.choice(candidates)
 
     if mode == "inventory":
         # If the previous action raised an exception, bail out instead of
@@ -1170,6 +1252,28 @@ def smart_policy(obs, rng, use_lantern=True):
         # value is the data on whether the agent's risk tolerance pays
         # off across seeds.
         return "dr"
+    if mode == "tomb_mode":
+        # Tombs offer a binary risk choice each visit:
+        #   'r' (Raid)         -- spawns an undead guardian; if you win,
+        #                         major reward (cursed weapon/armor).
+        #   'p' (Pay Respects) -- safe heal or minor buff, no fight.
+        # Loot when healthy; pay respects when weak to use the tomb as
+        # a heal station instead of a death wish.
+        return "p" if is_weak else "r"
+    if mode == "dungeon_mode":
+        # Locked dungeon. Send 'u' regardless: if we hold the key the
+        # handler unlocks and flips us into dungeon_unlocked_mode (next
+        # turn we raid); if we don't, room_actions.py:1914 logs "no key"
+        # and sets prompt_cntl back to game_loop -- the wayfinder picks
+        # up from there. The handler does NOT accept n/s/e/w (it stays
+        # in dungeon_mode silently), so we can't escape via movement
+        # from inside this mode. visited_features keeps the wayfinder
+        # from re-targeting the same locked dungeon over and over.
+        return "u"
+    if mode == "dungeon_unlocked_mode":
+        # Loot the dungeon. The 'r' command pays out gold + items (or
+        # rolls a Master Dungeon for the rune).
+        return "r"
     return "back"
 
 
