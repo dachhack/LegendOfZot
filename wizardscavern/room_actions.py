@@ -3586,51 +3586,46 @@ def process_lantern_quick_use(player_character, my_tower):
     if lantern.fuel_amount > 0:
         add_log(f"{COLOR_CYAN}You light your {lantern.name}...{COLOR_RESET}")
 
-        # Circular reveal with radius based on light_radius + upgrades.
-        # Previously this used `upgrade_level + 1`, leaving the starter
-        # lantern (level 0) at radius 1 -- same as walking. light_radius
-        # is a constructor arg (default 7 for the starter); upgrades
-        # stack on top.
+        # Cardinal-only reveal: light shines N/S/E/W along the four
+        # cardinal axes up to `light_radius + upgrade_level` tiles,
+        # stopping when it hits a wall (line-of-sight per axis). The
+        # cross pattern matches the in-game minimap UI and is more
+        # honest about what one light "sees" down a corridor than the
+        # previous Euclidean disc (which leaked around walls via
+        # diagonal gaps). Same logic lives in items.py:Lantern.use.
         directions_to_reveal = []
         radius = lantern.light_radius + lantern.upgrade_level
-
-        for dr in range(-radius, radius + 1):
-            for dc in range(-radius, radius + 1):
-                # Calculate Euclidean distance
-                distance = (dr**2 + dc**2)**0.5
-
-                # Include if within radius and not the character's position
-                if distance <= radius and (dr, dc) != (0, 0):
-                    directions_to_reveal.append((dr, dc))
+        for step in range(1, radius + 1):
+            directions_to_reveal.extend([
+                (-step, 0), (step, 0),  # north, south
+                (0, -step), (0, step),  # west, east
+            ])
 
         revealed_any = False
-        revealed_count=0
+        revealed_count = 0
+        axis_open = {"n": True, "s": True, "e": True, "w": True}
         for dr, dc in directions_to_reveal:
+            axis = ("n" if dr < 0 else "s") if dc == 0 \
+                   else ("w" if dc < 0 else "e")
+            if not axis_open[axis]:
+                continue
             target_x, target_y = player_character.y + dr, player_character.x + dc
-
-            # Check boundaries (target_x is row/y, target_y is col/x)
-            if 0 <= target_x < current_floor.rows and 0 <= target_y < current_floor.cols:
-                # Line-of-sight check: walk from player to target,
-                # if any intermediate cell is a wall, light is blocked
-                blocked = False
-                pr, pc_ = player_character.y, player_character.x
-                tr, tc = target_x, target_y
-                # Bresenham-style ray: step through intermediate cells
-                steps = max(abs(tr - pr), abs(tc - pc_))
-                if steps > 1:
-                    for s in range(1, steps):
-                        ir = pr + round((tr - pr) * s / steps)
-                        ic = pc_ + round((tc - pc_) * s / steps)
-                        if current_floor.grid[ir][ic].room_type == current_floor.wall_char:
-                            blocked = True
-                            break
-
-                if not blocked:
-                    target_room = current_floor.grid[target_x][target_y]
-                    if not target_room.discovered:
-                        target_room.discovered = True
-                        revealed_any = True
-                        revealed_count+=1
+            if not (0 <= target_x < current_floor.rows
+                    and 0 <= target_y < current_floor.cols):
+                axis_open[axis] = False
+                continue
+            target_room = current_floor.grid[target_x][target_y]
+            if target_room.room_type == current_floor.wall_char:
+                if not target_room.discovered:
+                    target_room.discovered = True
+                    revealed_any = True
+                    revealed_count += 1
+                axis_open[axis] = False
+                continue
+            if not target_room.discovered:
+                target_room.discovered = True
+                revealed_any = True
+                revealed_count += 1
 
         if not revealed_any:
             add_log(f"{COLOR_CYAN}The lantern shines brightly, but reveals no new rooms nearby.{COLOR_RESET}")

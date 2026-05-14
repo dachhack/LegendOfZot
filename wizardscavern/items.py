@@ -2590,50 +2590,47 @@ class Lantern(Item):
 
             current_floor = my_tower.floors[character.z]
 
-            # Circular reveal with radius based on light_radius + upgrades.
-            # Previously this used `upgrade_level + 1`, which left the
-            # starter lantern (level 0) at radius 1 -- no better than
-            # walking. light_radius is a constructor arg (default 7 for
-            # the starter), upgrades stack on top.
+            # Cardinal-only reveal: light shines N/S/E/W along the four
+            # cardinal axes up to `light_radius + upgrade_level` tiles,
+            # stopping when it hits a wall (line-of-sight per axis).
+            # Previously this revealed an Euclidean disc, which (a)
+            # didn't match the in-game minimap UI, and (b) over-revealed
+            # corners through diagonal gaps. The cross pattern is more
+            # honest about what one light "sees" down a corridor and
+            # matches the player's intuition.
             directions_to_reveal = []
             radius = self.light_radius + self.upgrade_level
-
-            for dr in range(-radius, radius + 1):
-                for dc in range(-radius, radius + 1):
-                    # Calculate Euclidean distance
-                    distance = (dr**2 + dc**2)**0.5
-
-                    # Include if within radius and not the character's position
-                    if distance <= radius and (dr, dc) != (0, 0):
-                        directions_to_reveal.append((dr, dc))
+            for step in range(1, radius + 1):
+                directions_to_reveal.extend([
+                    (-step, 0), (step, 0),  # north, south
+                    (0, -step), (0, step),  # west, east
+                ])
 
             revealed_any = False
+            axis_open = {"n": True, "s": True, "e": True, "w": True}
             for dr, dc in directions_to_reveal:
+                axis = ("n" if dr < 0 else "s") if dc == 0 \
+                       else ("w" if dc < 0 else "e")
+                if not axis_open[axis]:
+                    continue
                 target_x, target_y = character.y + dr, character.x + dc
+                if not (0 <= target_x < current_floor.rows
+                        and 0 <= target_y < current_floor.cols):
+                    axis_open[axis] = False
+                    continue
+                target_room = current_floor.grid[target_x][target_y]
+                if target_room.room_type == current_floor.wall_char:
+                    # The wall surface itself becomes visible, then the
+                    # axis goes dark beyond it.
+                    if not target_room.discovered:
+                        target_room.discovered = True
+                        revealed_any = True
+                    axis_open[axis] = False
+                    continue
+                if not target_room.discovered:
+                    target_room.discovered = True
+                    revealed_any = True
 
-                # Check boundaries (target_x is row/y, target_y is col/x)
-                if 0 <= target_x < current_floor.rows and 0 <= target_y < current_floor.cols:
-                    # Line-of-sight check: walk from player to target,
-                    # if any intermediate cell is a wall, light is blocked
-                    blocked = False
-                    pr, pc_ = character.y, character.x
-                    tr, tc = target_x, target_y
-                    steps = max(abs(tr - pr), abs(tc - pc_))
-                    if steps > 1:
-                        for s in range(1, steps):
-                            ir = pr + round((tr - pr) * s / steps)
-                            ic = pc_ + round((tc - pc_) * s / steps)
-                            if current_floor.grid[ir][ic].room_type == current_floor.wall_char:
-                                blocked = True
-                                break
-
-                    if not blocked:
-                        target_room = current_floor.grid[target_x][target_y]
-                        if not target_room.discovered:
-                            target_room.discovered = True
-                            revealed_any = True
-
-            # FIX: Swap coordinates to (y, x) for row, col
             my_tower.floors[character.z].print_floor(highlight_coords=(character.x, character.y))
             if not revealed_any:
                 add_log("The lantern shines brightly, but no new undiscovered rooms were revealed nearby.")

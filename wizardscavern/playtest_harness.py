@@ -112,6 +112,9 @@ def _equipped_obs(pc):
             "max_durability": max_d,
             "is_broken": bool(getattr(it, "is_broken", False)),
             "durability_pct": (cur_d / max_d) if (max_d and max_d > 0) else None,
+            "buc_status": getattr(it, "buc_status", "uncursed"),
+            "buc_known": bool(getattr(it, "buc_known", False)),
+            "is_sealed": bool(getattr(it, "is_sealed", False)),
         }
     return {"weapon": slot(pc.equipped_weapon),
             "armor":  slot(pc.equipped_armor)}
@@ -514,6 +517,20 @@ class PlaytestSession:
                 entry["durability"] = getattr(item, "durability", None)
                 entry["max_durability"] = getattr(item, "max_durability", None)
                 entry["is_broken"] = bool(getattr(item, "is_broken", False))
+                # BUC + identification state. Cursed gear cannot be
+                # unequipped once worn; the policy avoids equipping a
+                # weapon/armor whose status it can't yet read.
+                entry["buc_status"] = getattr(item, "buc_status", "uncursed")
+                entry["buc_known"] = bool(getattr(item, "buc_known", False))
+                entry["is_sealed"] = bool(getattr(item, "is_sealed", False))
+            # Identification status applies to potions / scrolls / spells
+            # too -- knowing what's in your bag changes what's safe to
+            # use. is_item_identified is the canonical check.
+            from .items import is_item_identified
+            try:
+                entry["is_identified"] = bool(is_item_identified(item))
+            except Exception:
+                entry["is_identified"] = True  # non-identifiable -> safe
             out.append(entry)
         return out
 
@@ -696,6 +713,12 @@ class PlaytestSession:
                 # see the smart_policy warp_mode branch.
                 from .game_systems import process_warp_action
                 process_warp_action(pc, tw, action, gs.floor_params)
+            elif mode == "altar_mode":
+                from .game_systems import process_altar_action
+                process_altar_action(pc, tw, action)
+            elif mode == "pool_mode":
+                from .game_systems import process_pool_action
+                process_pool_action(pc, tw, action)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -1001,12 +1024,30 @@ def smart_policy(obs, rng, use_lantern=True):
         return proposed
 
     if mode == "combat_mode":
+        # Threat assessment: monster_too_tough = monster level > player
+        # level + 2, OR monster max_hp > 2x player max_hp. A prior
+        # playtest pass had a Lv1 Human at full HP step into a Lv5
+        # Undead Wraith one-shot for 30 dmg -- the HP-only weakness
+        # gate missed the encounter. Now we re-assess each combat turn
+        # and flee tough fights before they swing.
+        m = obs.get("monster") or {}
+        m_level = m.get("level") or 0
+        m_max_hp = m.get("max_hp") or 0
+        pc_level = p.get("level") or 1
+        monster_too_tough = (m_level > pc_level + 2
+                             or m_max_hp > 2 * p["max_hp"])
+        # Drink a healing potion mid-fight as a last resort: HP critical
+        # and Heal-spell unaffordable. The inventory u<N> path lives in
+        # the inventory branch; here we open inventory to trigger it.
+        if hp_pct < 0.30 and heal_pot_slot and not heal_spell_slot:
+            return "i"  # opens inventory; in_combat filter shows usables
         # Mid-fight heal: queue a cast at HP < 55%. The 0.55 threshold was
         # raised from 0.40 after a playtest pass found the tighter window
-        # almost never opened alive with mana banked -- the player would
-        # cross 40% and die in the same combat turn before reacting.
+        # almost never opened alive with mana banked.
         if hp_pct < 0.55 and heal_spell_slot:
             return "c"
+        if monster_too_tough:
+            return "f"
         if affordable_dmg and rng.random() < 0.65:
             return "c"
         return "a" if rng.random() < 0.92 else "f"
@@ -1115,6 +1156,20 @@ def smart_policy(obs, rng, use_lantern=True):
         # handler rolls dexterity-based escape, but even on a miss
         # we'd rather take the gamble than blindly accept.
         return "y"
+    if mode == "altar_mode":
+        # Pray once per altar -- claims the god's current tier reward
+        # (HP heal, MP restore, hunger fill, blessing, eventually a
+        # rune of devotion at T3). The altar is consumed by praying,
+        # so the visited_features tracker will keep us from oscillating.
+        # Sacrifice would be a multi-step item-picker; the playtest
+        # value of guaranteed prayer boons is higher.
+        return "pray"
+    if mode == "pool_mode":
+        # Drink. Pool outcomes are RNG: healing pools restore HP, iron
+        # springs buff strength, but cursed wells poison. The playtest
+        # value is the data on whether the agent's risk tolerance pays
+        # off across seeds.
+        return "dr"
     return "back"
 
 
