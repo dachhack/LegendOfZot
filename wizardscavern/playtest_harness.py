@@ -76,6 +76,25 @@ def _strip_markup_list(lines):
     return [_strip_markup(line) for line in lines]
 
 
+def _equipped_obs(pc):
+    """Snapshot of the player's equipped weapon + armor. Lets the smart
+    policy notice when its gear is wearing out and walk to a vendor."""
+    def slot(it):
+        if it is None:
+            return None
+        max_d = getattr(it, "max_durability", None)
+        cur_d = getattr(it, "durability", None)
+        return {
+            "name": it.name,
+            "durability": cur_d,
+            "max_durability": max_d,
+            "is_broken": bool(getattr(it, "is_broken", False)),
+            "durability_pct": (cur_d / max_d) if (max_d and max_d > 0) else None,
+        }
+    return {"weapon": slot(pc.equipped_weapon),
+            "armor":  slot(pc.equipped_armor)}
+
+
 def _item_category(item):
     """Coarse category tag so the smart policy can filter inventory + vendor
     listings without needing the full item class hierarchy."""
@@ -101,14 +120,17 @@ def _item_category(item):
 
 def new_game(seed=None, playtest_mode=False, name="Tester",
              race="human", gender="non-binary",
-             int_bonus=0, spells=None):
+             int_bonus=0, spells=None, starter_pack=True):
     """Initialise a fresh headless game. Returns a ``PlaytestSession``.
 
     ``race`` applies the same stat modifiers the UI's character-creation
     flow uses (see game_systems.process_character_creation_action). Pass
     ``int_bonus`` to bump intelligence past the spell-casting threshold
     (int > 15) so an Elf can actually cast on turn one. ``spells`` is an
-    iterable of SPELL_TEMPLATES names to pre-memorize.
+    iterable of SPELL_TEMPLATES names to pre-memorize. ``starter_pack``
+    seeds the same gear the in-game starting_shop hands out -- Dagger +
+    Leather Armor (auto-equipped), Lantern, 4 Minor Healing Potions,
+    3 Rations -- so the agent isn't punching monsters bare-fisted.
     """
     if seed is not None:
         _stdlib_random.seed(seed)
@@ -186,6 +208,44 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     pc.mana = pc.max_mana  # re-clamp after the int_bonus bumps max_mana
     pc.gold = 500
     pc.memorized_spells = []
+    if starter_pack:
+        # Mirror Vendor(starting=True) inventory at vendor.py:93-104,
+        # plus the _auto_equip_starting_shop_item behaviour: the weapon
+        # + armor land in BOTH the equipment slots and inventory.items
+        # (the in-game buy flow at vendor.py:485-499 adds the item to
+        # inventory first, then equips by reference -- so equipped
+        # gear ALSO appears in inventory.items, which is what lets the
+        # vendor repair handler at vendor.py:733-749 see it).
+        from .items import Lantern as _Lantern, Food as _Food
+        dagger = Weapon(
+            "Dagger", "A small, sharp blade.",
+            attack_bonus=2, value=10, level=0, upgrade_level=0,
+        )
+        leather = Armor(
+            "Leather Armor", "Light leather armor.",
+            defense_bonus=3, value=50, level=0, upgrade_level=0,
+        )
+        pc.inventory.add_item_quiet(dagger)
+        pc.inventory.add_item_quiet(leather)
+        pc.equipped_weapon = dagger
+        pc.equipped_armor = leather
+        pc.inventory.add_item_quiet(_Lantern(
+            "Lantern", "Provides continuous light with fuel.",
+            fuel_amount=50, light_radius=7, value=30, level=0,
+        ))
+        pc.inventory.add_item_quiet(_Food(
+            "Rations", "Standard travel rations.",
+            value=10, level=0, nutrition=40, count=3,
+        ))
+        for _ in range(4):
+            pc.inventory.add_item_quiet(Potion(
+                "Minor Healing Potion",
+                "A small vial of red liquid that heals minor wounds.",
+                value=30, level=0,
+                potion_type="healing", effect_magnitude=30,
+            ))
+        # Spent on the starting shop: 4*30 + 10 + 50 + 30 + 0 = 210g.
+        pc.gold = 500 - 210
     if spells:
         spell_index = {s.name.lower(): s for s in SPELL_TEMPLATES}
         for raw in spells:
@@ -317,6 +377,7 @@ class PlaytestSession:
                 "x": pc.x,
                 "y": pc.y,
                 "status_effects": list(pc.status_effects.keys()),
+                "equipped": _equipped_obs(pc),
             },
             "memorized_spells": [
                 {"slot": i + 1, "name": s.name,
@@ -398,12 +459,26 @@ class PlaytestSession:
         out = []
         for i, item in enumerate(items):
             count = getattr(item, "count", 1) or 1
-            out.append({
+            entry = {
                 "slot": i + 1,
                 "name": getattr(item, "name", repr(item)),
                 "count": count,
                 "category": _item_category(item),
-            })
+            }
+            # Meat: surface the rot timer + cooked flag so the policy
+            # can eat raw monster meat before it spoils (30 raw / 100
+            # cooked / 200 cooked-with-curing-kit moves before rot).
+            if isinstance(item, Meat):
+                entry["rot_timer"] = getattr(item, "rot_timer", None)
+                entry["is_cooked"] = bool(getattr(item, "is_cooked", False))
+                entry["is_rotten"] = bool(getattr(item, "is_rotten", False))
+            # Gear: surface durability so the policy can spot worn /
+            # broken equipment and budget for repairs at vendors.
+            if isinstance(item, (Weapon, Armor)):
+                entry["durability"] = getattr(item, "durability", None)
+                entry["max_durability"] = getattr(item, "max_durability", None)
+                entry["is_broken"] = bool(getattr(item, "is_broken", False))
+            out.append(entry)
         return out
 
     def _vendor_obs(self):
@@ -627,20 +702,71 @@ def smart_policy(obs, rng):
     # 1-based position in the edible-items filter (which includes rotten
     # meat, so we count both 'food' and 'food_rotten' but prefer fresh).
     food_slot = None
+    # `urgent_meat` is set when we hold a fresh meat with a low rot timer.
+    # Raw meat lasts 30 moves, cooked 100, preserved 200 -- eating slightly
+    # before rot lets the agent stretch its food budget instead of letting
+    # the kill drop go to waste. Tracks the 1-based edible-list index of
+    # the first fresh meat with the shortest fuse.
     edible_count = 0
+    urgent_meat = None
+    urgent_rot = None
+    MEAT_EAT_BEFORE = 8  # eat fresh meat once rot_timer <= 8 moves
     for i in inv:
         if i["category"] in ("food", "food_rotten"):
             edible_count += 1
             if i["category"] == "food" and food_slot is None:
                 food_slot = edible_count
+            # rot_timer is only set on Meat entries (Food rations don't rot).
+            rot = i.get("rot_timer")
+            if (i["category"] == "food" and rot is not None
+                    and rot <= MEAT_EAT_BEFORE):
+                if urgent_rot is None or rot < urgent_rot:
+                    urgent_rot = rot
+                    urgent_meat = edible_count
     heal_spell_slot = next((s["slot"] for s in spells
                             if s["type"] == "healing"
                             and s["mana_cost"] <= mana), None)
     affordable_spells = [s for s in spells if s["mana_cost"] <= mana]
     affordable_dmg = [s for s in affordable_spells if s["type"] == "damage"]
 
+    # Equipment damage signals: when an equipped weapon or armor is broken
+    # or worn below 40%, we want to detour through a vendor for repair.
+    equipped = p.get("equipped") or {}
+    def _gear_needs_help(slot):
+        if slot is None:
+            return False
+        if slot.get("is_broken"):
+            return True
+        pct = slot.get("durability_pct")
+        return pct is not None and pct < 0.40
+    weapon_worn = _gear_needs_help(equipped.get("weapon"))
+    armor_worn = _gear_needs_help(equipped.get("armor"))
+    needs_repair = weapon_worn or armor_worn
+
     if mode == "game_loop":
         if hp_pct < 0.30 and heal_pot_slot:
+            return "i"
+        # Urgent meat: a kill drop is about to rot. Pop inventory and eat
+        # it before the food clock wastes it. Triggered regardless of
+        # hunger so we don't squander monster meat sitting at 99 hunger.
+        if urgent_meat is not None:
+            return "i"
+        # Broken-gear swap: if our equipped weapon or armor broke and we
+        # have a spare of the same kind in the bag, pop inventory to
+        # equip it. The inventory branch handles the actual e<N> call.
+        broken_weapon = (equipped.get("weapon", {})
+                         and equipped["weapon"].get("is_broken"))
+        broken_armor = (equipped.get("armor", {})
+                        and equipped["armor"].get("is_broken"))
+        if broken_weapon and any(
+                e["category"] == "weapon" and not e.get("is_broken")
+                and e["name"] != equipped["weapon"]["name"]
+                for e in inv):
+            return "i"
+        if broken_armor and any(
+                e["category"] == "armor" and not e.get("is_broken")
+                and e["name"] != equipped["armor"]["name"]
+                for e in inv):
             return "i"
         if hunger < 50 and food_slot:
             return "i"
@@ -648,7 +774,7 @@ def smart_policy(obs, rng):
         # haven't already interacted with, step into it. Without this,
         # the random walker dies before ever bumping into the lone vendor
         # / downstairs on the floor. Priority order is dynamic: if we're
-        # short on healing potions and have shopping money, prefer the
+        # short on healing potions OR carrying damaged gear, prefer the
         # vendor over the stairs; otherwise descend. U (upstairs) is
         # intentionally omitted -- stepping back up rarely advances.
         # Visited tiles are excluded so we don't bounce between an altar
@@ -656,7 +782,8 @@ def smart_policy(obs, rng):
         # marked visited so we always re-target stairs / unvisited shops.
         healing_count = sum(i.get("count", 1) for i in inv
                             if i["category"] == "potion_healing")
-        wants_vendor = healing_count < 2 and p["gold"] >= 50
+        wants_vendor = ((healing_count < 2 or needs_repair)
+                        and p["gold"] >= 50)
         if wants_vendor:
             PRIORITY = ("V", "D", "C", "A", "T", "N", "P", "L", "G", "O")
         else:
@@ -700,11 +827,31 @@ def smart_policy(obs, rng):
         # spin the policy forever). The harness records last_error per step.
         if obs.get("last_error"):
             return "x"
-        # Heal first, then eat, then leave. Re-checks each turn so the slot
-        # number stays valid if items were consumed.
+        # Heal first, eat-meat-before-rot second, swap broken gear
+        # third, eat-when-hungry fourth, then leave. Re-checks each
+        # turn so the slot number stays valid if items were consumed.
         proposed = None
         if hp_pct < 0.95 and heal_pot_slot:
             proposed = f"u{heal_pot_slot}"
+        elif urgent_meat is not None:
+            # Don't wait until starving -- consume the kill drop now.
+            proposed = f"eat{urgent_meat}"
+        elif equipped.get("weapon", {}) and equipped["weapon"].get("is_broken"):
+            # Find a non-broken Weapon in inventory and equip it. e<N>
+            # indexes off working_items just like u<N> does.
+            for entry in inv:
+                if (entry["category"] == "weapon"
+                        and not entry.get("is_broken")
+                        and entry["name"] != equipped["weapon"]["name"]):
+                    proposed = f"e{entry['slot']}"
+                    break
+        elif equipped.get("armor", {}) and equipped["armor"].get("is_broken"):
+            for entry in inv:
+                if (entry["category"] == "armor"
+                        and not entry.get("is_broken")
+                        and entry["name"] != equipped["armor"]["name"]):
+                    proposed = f"e{entry['slot']}"
+                    break
         elif hunger < 80 and food_slot:
             proposed = f"eat{food_slot}"
         if proposed is None:
@@ -742,7 +889,29 @@ def smart_policy(obs, rng):
     if mode == "vendor_shop":
         vendor_inv = obs.get("vendor_inventory") or []
         gold = p["gold"]
-        # Stockpile: keep at least a few uses of each survival staple.
+
+        # 1) Repair damaged gear first while we have a vendor. The repair
+        # command 'r<N>' indexes off the whole sorted inventory (NOT a
+        # filtered damaged-only list), so we pass the inventory slot of
+        # any worn / broken gear. Equipped weapon + armor also appear in
+        # inventory.items, so they show up in obs.inventory like normal.
+        for entry in inv:
+            if entry["category"] not in ("weapon", "armor"):
+                continue
+            dur = entry.get("durability")
+            mx = entry.get("max_durability")
+            if not (dur and mx) or dur >= mx:
+                continue
+            broken = entry.get("is_broken")
+            pct = (dur / mx) if mx else 1.0
+            if broken or pct < 0.40:
+                # Skip if we've just tried it (silent reject ->
+                # stuck loop, same anti-stuck pattern as inventory).
+                proposed = f"r{entry['slot']}"
+                if obs.get("last_action") != proposed:
+                    return proposed
+
+        # 2) Stockpile: keep at least a few uses of each survival staple.
         # Sum item counts (not stack rows) so a single stack of 5 potions
         # still counts as 5 and the policy doesn't over-buy.
         STOCK = {"potion_healing": 3, "food": 2, "potion_mana": 2}
@@ -755,6 +924,20 @@ def smart_policy(obs, rng):
             cat = v["category"]
             if cat in STOCK and owned.get(cat, 0) < STOCK[cat]:
                 return f"b{v['slot']}"
+
+        # 3) Replacement gear: if our equipped weapon or armor is broken
+        # (durability hit 0 -- repair won't fix without cost we may not
+        # afford), buy a like-category replacement and trust the vendor's
+        # buy flow to leave it in our inventory for manual equip later.
+        if equipped.get("weapon", {}) and equipped["weapon"].get("is_broken"):
+            for v in vendor_inv:
+                if v["category"] == "weapon" and v["price"] <= gold:
+                    return f"b{v['slot']}"
+        if equipped.get("armor", {}) and equipped["armor"].get("is_broken"):
+            for v in vendor_inv:
+                if v["category"] == "armor" and v["price"] <= gold:
+                    return f"b{v['slot']}"
+
         return "x"
 
     if mode == "chest_mode":
@@ -890,11 +1073,16 @@ def main(argv=None):
     parser.add_argument("--spells", default="",
                         help="Comma-separated SPELL_TEMPLATES names to "
                              "pre-memorize, e.g. 'Ice Shard,Heal'.")
+    parser.add_argument("--no-starter-pack", action="store_true",
+                        help="Skip the starting_shop bundle. Default is to "
+                             "ship with Dagger + Leather Armor equipped, "
+                             "4 Minor Healing Potions, Lantern, and Rations.")
     args = parser.parse_args(argv)
 
     spells = [s for s in args.spells.split(",") if s.strip()] if args.spells else None
     sess = new_game(seed=args.seed, playtest_mode=args.playtest_mode,
                     name=args.name, race=args.race,
+                    starter_pack=not args.no_starter_pack,
                     int_bonus=args.int_bonus, spells=spells)
     obs = sess.observe()
     print(_summarise(obs, args.jsonl))
