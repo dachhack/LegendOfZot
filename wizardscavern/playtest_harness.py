@@ -1393,10 +1393,30 @@ def smart_policy(obs, rng, use_lantern=True):
         # potion is in the bag. The neighbors check is fog-of-war
         # aware: only fires if we actually see an M tile next door.
         neighbors_now = obs.get("neighbors") or {}
-        if (heal_pot_slot
-                and hp_pct < 0.80
-                and any(neighbors_now.get(d) == "M"
-                        for d in ("n", "s", "e", "w"))):
+        m_adjacent = any(neighbors_now.get(d) == "M"
+                         for d in ("n", "s", "e", "w"))
+        if heal_pot_slot and hp_pct < 0.80 and m_adjacent:
+            return "i"
+        # Pre-combat buff: when M is adjacent AND we have an identified
+        # combat-buff potion in the bag, open inventory to drink it
+        # BEFORE stepping into combat. Buff potions (Stone Skin /
+        # Strength / Defense / Regeneration / etc.) have 3-5 turn
+        # durations and are wasted when drunk far from a fight; this
+        # times them to the actual encounter. HP gate at >= 60%
+        # ensures we don't burn the inventory turn when healing is
+        # the higher priority.
+        BUFF_POTION_TYPES = {
+            "strength", "defense", "stone_skin", "regeneration",
+            "berserker", "giant_strength", "haste", "vampirism",
+            "frost_armor", "fortune",
+        }
+        has_buff_potion = any(
+            i.get("category", "").startswith("potion_")
+            and i.get("is_identified")
+            and i.get("potion_type") in BUFF_POTION_TYPES
+            for i in inv
+        )
+        if has_buff_potion and hp_pct >= 0.60 and m_adjacent:
             return "i"
         if urgent_meat is not None:
             return "i"
@@ -1557,11 +1577,21 @@ def smart_policy(obs, rng, use_lantern=True):
             # too_long_on_floor escape (300+ turns) bounds this from
             # looping on a respawning floor. SAFE rooms stay at the
             # top for any beneficials that respawn or become reachable.
-            priority = list(BENEFICIAL_SAFE) + ["V", "T", "N", "M", "D"]
+            priority = list(BENEFICIAL_SAFE) + ["V", "M", "T", "N", "D"]
         elif unvisited_beneficials_exist:
-            priority = list(BENEFICIAL_SAFE) + ["V", "T", "N"]
+            # Healthy + boons remain: opportunistic monster hunting
+            # while still preferring safer boons. M slots after V but
+            # before T/N so the agent banks XP on the way to chests /
+            # gardens / altars instead of dying at F4 with 0 kills
+            # (the audit caught mean kills/run = 0.5 across 30 runs
+            # before this -- BFS routing AROUND M tiles in transit
+            # meant the agent literally never fought unless M was in
+            # its priority list).
+            priority = list(BENEFICIAL_SAFE) + ["V", "M", "T", "N"]
         else:
-            priority = ["D", "V", "T", "N"] + list(BENEFICIAL_SAFE)
+            # Floor mostly explored, no boons remain: descend, but
+            # take a parting M kill if one is on the path.
+            priority = ["D", "V", "M", "T", "N"] + list(BENEFICIAL_SAFE)
         priority = tuple(priority)
 
         # First pass: a keyed dungeon adjacent to us is the best move
@@ -1837,7 +1867,13 @@ def smart_policy(obs, rng, use_lantern=True):
         # an edible monster needs to win this fight to live.
         if monster_too_tough and not starving:
             return "f"
-        if affordable_dmg and rng.random() < 0.65:
+        # Damage spells beat melee: more damage per turn, no weapon
+        # durability loss, scale with INT for casters. Mana regens at
+        # 1/5 moves so casting freely between fights is sustainable.
+        # Bumped 0.65 -> 0.90 to actually USE the spells the agent
+        # buys (Scroll of Fireball etc.) instead of saving mana for
+        # an emergency that never comes.
+        if affordable_dmg and rng.random() < 0.90:
             return "c"
         return "a" if rng.random() < 0.92 else "f"
 
