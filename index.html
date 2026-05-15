@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Wizard's Cavern — Playtest Reports</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+
+.runs th, .runs td { font-size: 13px; padding: 6px 8px; }
+.runs tr:hover { background: #1a1a1a; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 11px; }
+.tag.alive { background: #134e2b; color: #bbf7d0; }
+.tag.dead { background: #5a1313; color: #fecaca; }
+</style>
+</head>
+<body>
+<header class="card">
+  <h1>Wizard's Cavern · Playtest Reports</h1>
+  <p class="muted">1 runs · generated 2026-05-15T01:09:21+00:00</p>
+</header>
+
+<section class="card">
+  <h2>Runs</h2>
+  <table class="runs">
+    <tr>
+      <th>Hero</th><th>Race</th><th>Seed</th><th>Outcome</th>
+      <th>Turns</th><th>Floor</th><th>Level</th><th>HP</th>
+      <th>Gold</th><th>Kills</th><th>Cause</th>
+    </tr>
+    <tr><td><a href='00007_dwarf.html'>Kili</a></td><td>dwarf</td><td>7</td><td><span class='tag alive'>alive</span></td><td>100</td><td>F1</td><td>L1</td><td>64/64</td><td>966g</td><td>21</td><td>—</td></tr>
+  </table>
+</section>
+</body>
+</html>
