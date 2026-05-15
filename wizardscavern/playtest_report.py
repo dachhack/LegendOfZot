@@ -596,72 +596,147 @@ def write_index(out_dir):
 
 
 def deploy_gh_pages(out_dir, repo_root, branch="gh-pages", remote="origin"):
-    """Push `out_dir` contents to a gh-pages branch via a worktree.
+    """Push `out_dir` contents to a gh-pages branch.
 
-    Idempotent and additive: copies new / updated reports onto the
-    branch's existing files instead of force-replacing the whole tree,
-    so per-run deploys accumulate.
+    Uses git plumbing (hash-object / mktree / commit-tree) so the
+    deploy never modifies the working tree or index, never creates a
+    worktree (sandboxed environments often refuse signing on
+    auxiliary paths), and stays additive: existing files on the
+    branch are preserved unless a same-named report has been
+    regenerated. Index.html is always regenerated from the union of
+    old + new JSON sidecars present on the branch.
 
-    Returns the branch URL if a known remote URL can be derived.
+    Returns the remote URL on success, or None if the deploy was a
+    no-op (tree unchanged).
     """
-    import shutil
     import subprocess
 
     out_dir = Path(out_dir).resolve()
     repo_root = Path(repo_root).resolve()
-    worktree = repo_root.parent / f".{repo_root.name}-gh-pages"
 
-    def run(cmd, cwd, check=True):
-        return subprocess.run(cmd, cwd=str(cwd), check=check,
-                              capture_output=True, text=True)
-
-    # Set up worktree on branch (create orphan if missing).
-    branch_exists = run(["git", "rev-parse", "--verify", f"refs/remotes/{remote}/{branch}"],
-                        cwd=repo_root, check=False).returncode == 0
-    if not branch_exists:
-        # Try local-only branch ref
-        branch_exists = run(["git", "rev-parse", "--verify", f"refs/heads/{branch}"],
-                            cwd=repo_root, check=False).returncode == 0
-    # Clean up any leftover worktree
-    run(["git", "worktree", "remove", "--force", str(worktree)],
-        cwd=repo_root, check=False)
-    if worktree.exists():
-        shutil.rmtree(worktree, ignore_errors=True)
-
-    if branch_exists:
-        run(["git", "worktree", "add", str(worktree), branch], cwd=repo_root)
-    else:
-        # Orphan branch first time
-        run(["git", "worktree", "add", "--detach", str(worktree)], cwd=repo_root)
-        run(["git", "checkout", "--orphan", branch], cwd=worktree)
-        run(["git", "rm", "-rf", "--quiet", "."], cwd=worktree, check=False)
-        (worktree / ".nojekyll").write_text("")
-
-    # Copy reports into the worktree (preserves existing reports on
-    # the branch, just updates / adds new ones)
-    for f in out_dir.iterdir():
-        if f.is_file():
-            shutil.copy2(f, worktree / f.name)
-
-    # Regenerate index.html across all reports present in the worktree
-    write_index(worktree)
-
-    run(["git", "add", "."], cwd=worktree)
-    status = run(["git", "status", "--porcelain"], cwd=worktree).stdout
-    if not status.strip():
-        run(["git", "worktree", "remove", "--force", str(worktree)],
-            cwd=repo_root, check=False)
-        return None  # nothing to commit
-    commit_msg = (f"Playtest reports: {datetime.now(timezone.utc).isoformat(timespec='seconds')}")
-    run(["git", "commit", "-m", commit_msg], cwd=worktree)
-    push_res = run(["git", "push", "-u", remote, branch], cwd=worktree, check=False)
-    run(["git", "worktree", "remove", "--force", str(worktree)],
-        cwd=repo_root, check=False)
-    if push_res.returncode != 0:
-        raise RuntimeError(
-            f"gh-pages push failed: {push_res.stderr}"
+    def run(cmd, cwd=None, check=True, input_text=None):
+        res = subprocess.run(
+            cmd, cwd=str(cwd or repo_root), check=False,
+            capture_output=True, text=True, input=input_text,
         )
-    # Best-effort URL derivation
+        if check and res.returncode != 0:
+            raise RuntimeError(
+                f"git step failed (rc={res.returncode}): "
+                f"{' '.join(cmd)}\n  stdout: {res.stdout.strip()}\n"
+                f"  stderr: {res.stderr.strip()}"
+            )
+        return res
+
+    # 1. Fetch the remote branch so we can merge onto its latest state.
+    run(["git", "fetch", remote, branch], check=False)
+
+    # 2. Resolve the parent commit (None if branch is new on remote).
+    parent = None
+    for ref in (f"refs/remotes/{remote}/{branch}", f"refs/heads/{branch}"):
+        res = run(["git", "rev-parse", "--verify", ref], check=False)
+        if res.returncode == 0:
+            parent = res.stdout.strip()
+            break
+
+    # 3. Start from the parent's tree (preserves untouched files), or
+    #    an empty mapping for an orphan first push.
+    existing = {}
+    if parent:
+        ls = run(["git", "ls-tree", parent]).stdout
+        for line in ls.strip().split("\n"):
+            if not line:
+                continue
+            mode_type_sha, _, name = line.partition("\t")
+            parts = mode_type_sha.split()
+            if len(parts) >= 3 and parts[1] == "blob":
+                existing[name] = (parts[0], parts[2])
+
+    # 4. Stage every file in `out_dir` as a blob (hash-object writes
+    #    the blob into the object DB but doesn't touch the index).
+    for f in sorted(out_dir.iterdir()):
+        if not f.is_file():
+            continue
+        sha = run(["git", "hash-object", "-w", str(f)]).stdout.strip()
+        existing[f.name] = ("100644", sha)
+
+    # 5. Regenerate index.html from the UNION of all JSON sidecars in
+    #    the merged tree (so the index reflects reports already on the
+    #    branch, not just the ones we just deployed). Read each
+    #    sidecar's blob, sort by floor + level, render the table.
+    summaries = []
+    for name, (_mode, sha) in existing.items():
+        if not name.endswith(".json"):
+            continue
+        blob = run(["git", "cat-file", "blob", sha]).stdout
+        try:
+            summaries.append(json.loads(blob))
+        except json.JSONDecodeError:
+            continue
+    summaries.sort(key=lambda d: (-(d.get("max_floor") or 0),
+                                   -(d.get("level") or 0),
+                                   d.get("seed") or 0))
+    rows = []
+    for d in summaries:
+        alive_tag = "alive" if d.get("alive") else "dead"
+        outcome_label = "alive" if d.get("alive") else "dead"
+        rows.append(
+            f"<tr>"
+            f"<td><a href='{d['slug']}.html'>{html.escape(d.get('name','?'))}</a></td>"
+            f"<td>{html.escape(d.get('race','?'))}</td>"
+            f"<td>{d.get('seed','?')}</td>"
+            f"<td><span class='tag {alive_tag}'>{outcome_label}</span></td>"
+            f"<td>{d.get('turn','?')}</td>"
+            f"<td>F{d.get('max_floor','?')}</td>"
+            f"<td>L{d.get('level','?')}</td>"
+            f"<td>{d.get('hp','?')}/{d.get('max_hp','?')}</td>"
+            f"<td>{d.get('gold','?')}g</td>"
+            f"<td>{d.get('kills','?')}</td>"
+            f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
+            f"</tr>"
+        )
+    index_html = Template(_INDEX_TEMPLATE).safe_substitute(
+        count=len(summaries),
+        generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        rows="\n".join(rows) or "<tr><td colspan='11'>no runs yet</td></tr>",
+    )
+    index_sha = run(
+        ["git", "hash-object", "-w", "--stdin"], input_text=index_html
+    ).stdout.strip()
+    existing["index.html"] = ("100644", index_sha)
+
+    # 6. Ensure .nojekyll exists so GitHub Pages serves the directory
+    #    raw instead of running Jekyll over it.
+    if ".nojekyll" not in existing:
+        sha = run(["git", "hash-object", "-w", "--stdin"],
+                  input_text="").stdout.strip()
+        existing[".nojekyll"] = ("100644", sha)
+
+    # 7. Rebuild the tree.
+    tree_input = "".join(
+        f"{mode} blob {sha}\t{name}\n"
+        for name, (mode, sha) in sorted(existing.items())
+    )
+    tree_sha = run(["git", "mktree"], input_text=tree_input).stdout.strip()
+
+    # 8. Skip if tree matches parent's (no-op).
+    if parent:
+        parent_tree = run(["git", "rev-parse", f"{parent}^{{tree}}"]).stdout.strip()
+        if parent_tree == tree_sha:
+            return None
+
+    # 9. Commit + push. commit-tree runs from the repo root so any
+    #    signing hooks see a recognized source path.
+    commit_msg = (
+        f"Playtest reports: "
+        f"{datetime.now(timezone.utc).isoformat(timespec='seconds')}"
+    )
+    commit_args = ["git", "commit-tree", tree_sha, "-m", commit_msg]
+    if parent:
+        commit_args.extend(["-p", parent])
+    commit_sha = run(commit_args).stdout.strip()
+    run(["git", "push", remote, f"{commit_sha}:refs/heads/{branch}"])
+
+    # Best-effort URL derivation for the caller.
     remote_url = run(["git", "remote", "get-url", remote],
-                     cwd=repo_root, check=False).stdout.strip()
+                     check=False).stdout.strip()
     return remote_url
