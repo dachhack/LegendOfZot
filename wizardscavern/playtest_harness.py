@@ -576,6 +576,17 @@ class PlaytestSession:
         # mode policies switch from descend-and-clear into ascend-
         # back mode until pc.z <= max_z_via_stairs again.
         self.max_z_via_stairs = 0
+        # Post-flee recovery tracker: the turn at which the agent
+        # most recently issued a flee from combat_mode, plus the HP
+        # ratio at that flee. Only damage-fled flees (HP at flee was
+        # < ~70%) trigger the post-flee heal-up; tough-monster flees
+        # at full HP don't need recovery -- the agent should find a
+        # different path. User-flagged: Celeborn the elf was fleeing
+        # from a wraith at HP24, getting a free monster attack on
+        # every flee attempt, then immediately re-engaging without
+        # healing. None set means no recent flee.
+        self.last_flee_turn = None
+        self.last_flee_hp_pct = None
         # Fog of war: when True, the neighbour + nearest-feature obs
         # respect room.discovered so the agent has to actually walk over
         # (or lantern-light) tiles before knowing what's there. The
@@ -654,6 +665,18 @@ class PlaytestSession:
             "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
             "tomb_suspected_here": pc.z in self.suspected_tomb_floors,
             "max_z_via_stairs": self.max_z_via_stairs,
+            # Post-flee recovery window. True for the first 15 turns
+            # after a flee that triggered at low HP (< 70%). Tough-
+            # monster flees at full HP don't need recovery -- the
+            # agent should look for a different path. Outside the
+            # window the flag clears so a long-ago flee doesn't keep
+            # the agent in heal-up mode.
+            "recently_fled": (
+                self.last_flee_turn is not None
+                and self.last_flee_hp_pct is not None
+                and self.last_flee_hp_pct < 0.70
+                and (self.turn - self.last_flee_turn) <= 15
+            ),
             # Retreat target: when a warp drops the agent below the
             # deepest floor they've reached via canonical stairs, the
             # wayfinder switches into ascend-back mode and aims for
@@ -1268,6 +1291,15 @@ class PlaytestSession:
         pc = gs.player_character
         tw = gs.my_tower
         mode = gs.prompt_cntl
+        # Record flee attempts (both successful and failed) so the
+        # game_loop heal-up gate can fire before the agent walks back
+        # into another fight. Every flee costs one monster attack
+        # (combat.py:1158 unconditional), so the player is by
+        # definition wounded by the time the policy returns control.
+        if mode == "combat_mode" and action == "f":
+            self.last_flee_turn = self.turn
+            max_h = max(1, pc.max_health)
+            self.last_flee_hp_pct = pc.health / max_h
         # Capture pre-step position. The loop-prevention check below
         # only forces game_loop when the agent JUST LANDED on a
         # previously-visited feature tile -- not when they're
@@ -1675,6 +1707,14 @@ def smart_policy(obs, rng, use_lantern=True):
     # don't justify a full avoid-M policy that lets the agent
     # under-level. The cure-item open-inventory trigger still uses
     # has_bad_status so debuffs get treated when a cure is available.
+    # Recently fled? The post-flee window pulls the agent into
+    # heal-up-first mode so they don't blunder back into the same
+    # monster at low HP. Surfaced via obs.recently_fled (30-turn
+    # window) -- inside that window, the agent treats themselves as
+    # is_weak so the wayfinder avoids M tiles, and the game_loop
+    # heal trigger fires at hp_pct < 0.95 (vs the default 0.80 +
+    # m_adjacent gate) so the recovery is to FULL.
+    recently_fled = bool(obs.get("recently_fled"))
     is_weak = (
         hp_pct < 0.50
         or broken_weapon
@@ -1682,6 +1722,7 @@ def smart_policy(obs, rng, use_lantern=True):
         or (equipped.get("weapon") is None)
         or has_ticking_status
         or immobilised
+        or (recently_fled and hp_pct < 0.80)
     )
     # Resource pressure: lantern fuel + hunger together set a soft
     # deadline on how long the agent can keep weaving the floor looking
@@ -1718,6 +1759,18 @@ def smart_policy(obs, rng, use_lantern=True):
         m_adjacent = any(neighbors_now.get(d) == "M"
                          for d in ("n", "s", "e", "w"))
         if heal_pot_slot and hp_pct < 0.80 and m_adjacent:
+            return "i"
+        # Post-flee recovery: heal aggressively to FULL after a flee
+        # so we don't walk back into the same monster at low HP.
+        # Celeborn the elf seed=271 was fleeing wraiths at HP 24-26,
+        # taking the unconditional monster parting attack on every
+        # flee, then immediately re-engaging without healing -- the
+        # combat heal-pot gate at HP<50% never fired because each
+        # round started above it. Recovery uses the 0.95 ceiling the
+        # inventory branch's heal logic already targets. Burns
+        # potions, but losing a fight is more expensive than three
+        # healing potions.
+        if recently_fled and hp_pct < 0.80 and heal_pot_slot:
             return "i"
         # Pre-combat buff drink in game_loop: when M is adjacent AND
         # we have an identified buff potion (strength/defense/stone
