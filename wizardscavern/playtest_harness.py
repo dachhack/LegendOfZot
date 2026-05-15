@@ -98,6 +98,20 @@ RACE_NAMES = {
 _ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
 _HTML_RE = re.compile(r"<[^>]+>")
 
+# Substrings in a monster name that flag it as undead. Shared between
+# the combat threat-assessment branch and the tomb-proximity tracker
+# in _monster_obs -- a tomb is the ONLY way undead spawn at typical
+# playtest depths (game_systems.undead_guardian branch), so any
+# combat with one of these names is a reliable tell that the agent is
+# next to a tomb and a higher-tier ELITE UNDEAD waits at one of the
+# other adjacent guardian rooms.
+_UNDEAD_NAME_TOKENS = (
+    "wraith", "lich", "skeleton", "vampire",
+    "ghost", "zombie", "spectral", "phantom",
+    "mummy", "specter", "death knight", "demilich",
+    "undead",
+)
+
 
 def _strip_markup(s):
     if not isinstance(s, str):
@@ -508,6 +522,17 @@ class PlaytestSession:
         # into a wall because the BFS first_step kept resolving south
         # and anti-backtrack only fires on POSITION CHANGE.
         self.blocked_directions = set()
+        # Floors where the agent has fought (or is fighting) an undead.
+        # Tomb-adjacent guardian rooms are the only way undead spawn at
+        # those depths (see game_systems.py's undead_guardian branch),
+        # so seeing an undead is a near-100% reliable "there's a tomb
+        # on this floor and a higher-tier ELITE UNDEAD is one of the
+        # other adjacent guardians" tell. The wayfinder uses this when
+        # weak to drop M/T from priority and stay near already-revealed
+        # tiles instead of rushing into fog where another wraith may be
+        # waiting. Cleared whenever the agent changes floors (the next
+        # floor needs its own undead-sighting to be flagged).
+        self.suspected_tomb_floors = set()
         # Fog of war: when True, the neighbour + nearest-feature obs
         # respect room.discovered so the agent has to actually walk over
         # (or lantern-light) tiles before knowing what's there. The
@@ -577,6 +602,8 @@ class PlaytestSession:
             "nearest_monster_path": self._nearest_monster_path_obs(),
             "recent_step_set": self._recent_step_set(),
             "blocked_directions": sorted(self.blocked_directions),
+            "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
+            "tomb_suspected_here": pc.z in self.suspected_tomb_floors,
             "tile_coverage": self._tile_coverage_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
@@ -609,12 +636,23 @@ class PlaytestSession:
         # produce no meat.
         from .items import get_monster_meat_info
         meat_info = get_monster_meat_info(name)
+        # Tomb-proximity tell: undead spawn exclusively as tomb-adjacent
+        # guardians at typical playtest depths, so seeing one means a
+        # T tile is on this floor and (per the rebalance) one of the
+        # other 3 adjacent guardians is an ELITE UNDEAD at floor+1.
+        # Mark the floor; the wayfinder drops M/T from priority when
+        # weak on a flagged floor so the agent doesn't blunder into a
+        # second wraith while limping away from the first.
+        is_undead = any(k in name.lower() for k in _UNDEAD_NAME_TOKENS)
+        if is_undead:
+            self.suspected_tomb_floors.add(gs.player_character.z)
         return {
             "name": name,
             "level": getattr(m, "level", None),
             "hp": m.health,
             "max_hp": getattr(m, "max_health", m.health),
             "is_edible": meat_info is not None,
+            "is_undead": is_undead,
         }
 
     def _inventory_obs(self):
@@ -1761,6 +1799,18 @@ def smart_policy(obs, rng, use_lantern=True):
             coverage_pct >= 80 and d_reachable and not is_weak
         )
 
+        # Tomb-suspected on this floor: the agent has fought an undead
+        # here, which (per the rebalanced spawn logic) means there's a
+        # T tile somewhere on the floor and an ELITE UNDEAD waits at
+        # one of the other 3 tomb-adjacent guardian rooms. When weak,
+        # we want the agent to actively avoid blundering into another
+        # wraith while limping toward healing -- drop M from the
+        # priority and treat T as a NO-GO unless we're back at full
+        # strength. The flag is set by _monster_obs the first time the
+        # agent enters combat with an undead and stays set for the
+        # remainder of the floor.
+        tomb_suspected = bool(obs.get("tomb_suspected_here"))
+
         # Build tiered priority. Each tier is a tuple of feature types
         # that COMPETE BY DISTANCE -- within a tier the BFS-nearest
         # reachable target wins. Tiers are taken in order. V sits in
@@ -1788,6 +1838,20 @@ def smart_policy(obs, rng, use_lantern=True):
             tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
         else:
             tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
+        # Tomb-aware filter: when an undead has been encountered on
+        # this floor AND the agent is weak (low HP or broken gear),
+        # strip M and T/N from every tier. M because stepping into
+        # another tomb guardian at low HP is a death sentence; T/N
+        # because the elite guardian is sitting next to a T tile we
+        # might wander into while route-planning around. The agent
+        # keeps targeting V/SAFE/D so it can heal up or descend off
+        # the floor cleanly.
+        if tomb_suspected and is_weak:
+            tiers = [
+                tuple(t for t in tier if t not in ("M", "T", "N"))
+                for tier in tiers
+            ]
+            tiers = [tier for tier in tiers if tier]
         # Legacy flat-priority alias for the adjacent-feature shortcut
         # below, which iterates a flat list of types.
         priority = tuple(t for tier in tiers for t in tier)
@@ -2073,9 +2137,12 @@ def smart_policy(obs, rng, use_lantern=True):
         m_is_edible = m.get("is_edible", True)
         m_name_low = (m.get("name") or "").lower()
         pc_level = p.get("level") or 1
-        UNDEAD_NAMES = ("wraith", "lich", "skeleton", "vampire",
-                        "ghost", "zombie", "spectral", "phantom")
-        is_undead = any(k in m_name_low for k in UNDEAD_NAMES)
+        # Reuse the module-level token list; obs.monster.is_undead is
+        # already set by _monster_obs, but we recompute here so the
+        # combat threat assessment is self-contained.
+        is_undead = bool(m.get("is_undead")
+                         or any(k in m_name_low
+                                for k in _UNDEAD_NAME_TOKENS))
         # Two-band threat assessment:
         #  * general monsters: flee at m_level > pc.level + 2 (the
         #    original threshold -- aggressive enough that Lv1 agents

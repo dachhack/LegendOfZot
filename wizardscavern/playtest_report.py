@@ -31,6 +31,188 @@ def _strip(s):
     return _HTML_TAG_RE.sub("", s or "")
 
 
+# ---------------------------------------------------------------------------
+# Sprite helpers
+# ---------------------------------------------------------------------------
+# Pull base64 sprite data from the round-8 canonical pool and emit it as
+# inline `<img>` tags. We dedupe identical sprites across the page by
+# minting a CSS class per pid and pointing every reference at the same
+# background-image rule -- without dedupe a 50-monster kill list balloons
+# the page to 200+ KB of redundant base64 blobs.
+
+def _sprite_pid_for(category, name, seed_extra=""):
+    """Resolve a (category, item_name) pair to a sprite pid in the pool.
+
+    category: one of 'monster', 'weapon', 'armor', 'potion', 'scroll',
+              'food', 'lantern', 'ingredient', 'trophy', 'treasure'.
+    name: in-game item name. Best-effort match via _resolve_new_monster_key
+          (handles UNDEAD-prefixed / evo-prefixed names).
+    seed_extra: appended to the lookup seed so two distinct instances of
+                the same item type can deterministically land on
+                different variants (e.g. two Goblins on a kill list).
+
+    Returns a pid string, or None.
+    """
+    try:
+        from .sprites import (
+            monsters as _msprites,
+            weapons as _wsprites,
+            armors as _asprites,
+            bug_armors as _basprites,
+            potions as _psprites,
+            spells as _sspsprites,
+            scrolls as _scsprites,
+            foods as _fsprites,
+            lanterns as _lsprites,
+            ingredients as _isprites,
+            trophies as _tsprites,
+            treasures as _trsprites,
+            accessories as _accsprites,
+            get_named_variant, get_generic_variant,
+        )
+        from .sprite_data import _resolve_new_monster_key
+    except Exception:
+        return None
+
+    if not name:
+        return None
+    seed = (name, seed_extra)
+    if category == "monster":
+        cat_map = _msprites._MONSTERS_MAP
+        key = _resolve_new_monster_key(name, cat_map)
+        if key:
+            v = get_named_variant(cat_map, key, seed=seed)
+            return v[0] if v else None
+        return None
+    if category == "weapon":
+        v = get_named_variant(_wsprites._WEAPONS_MAP, name, seed=seed)
+        return v[0] if v else None
+    if category == "armor":
+        # Try standard armors first, then bug-sized armors.
+        v = get_named_variant(_asprites._ARMORS_MAP, name, seed=seed)
+        if v:
+            return v[0]
+        v = get_named_variant(_basprites._BUG_ARMORS_MAP, name, seed=seed)
+        return v[0] if v else None
+    if category == "potion":
+        # Generic pool -- one sprite per pid, name used as seed for
+        # deterministic colour pick.
+        return get_generic_variant(_psprites._POTIONS_POOL, seed=seed)
+    if category == "scroll":
+        cat_map = _scsprites._SCROLLS_MAP if hasattr(_scsprites, "_SCROLLS_MAP") else None
+        if cat_map:
+            v = get_named_variant(cat_map, name, seed=seed)
+            if v:
+                return v[0]
+        return None
+    if category == "spell":
+        return get_generic_variant(_sspsprites._SPELLS_POOL, seed=seed)
+    if category == "food":
+        v = get_named_variant(_fsprites._FOODS_MAP, name, seed=seed)
+        return v[0] if v else None
+    if category == "lantern":
+        v = get_named_variant(_lsprites._LANTERNS_MAP, name, seed=seed)
+        return v[0] if v else None
+    if category == "ingredient":
+        v = get_named_variant(_isprites._INGREDIENTS_MAP, name, seed=seed)
+        return v[0] if v else None
+    if category == "trophy":
+        v = get_named_variant(_tsprites._TROPHIES_MAP, name, seed=seed)
+        return v[0] if v else None
+    if category == "treasure":
+        cat_map = getattr(_trsprites, "_TREASURES_MAP", None)
+        if cat_map:
+            v = get_named_variant(cat_map, name, seed=seed)
+            if v:
+                return v[0]
+        return None
+    if category == "accessory":
+        v = get_named_variant(_accsprites._ACCESSORIES_MAP, name, seed=seed)
+        return v[0] if v else None
+    return None
+
+
+def _category_to_sprite_cat(inv_category):
+    """Map an obs.inventory entry's `category` string to the sprite
+    lookup key used by _sprite_pid_for. Returns None for categories
+    without sprites (e.g. trophies the pool doesn't cover)."""
+    if inv_category in ("weapon",):
+        return "weapon"
+    if inv_category in ("armor",):
+        return "armor"
+    if inv_category.startswith("potion"):
+        return "potion"
+    if inv_category in ("scroll",):
+        return "scroll"
+    if inv_category in ("spell",):
+        return "spell"
+    if inv_category in ("food", "food_rotten", "meat"):
+        return "food"
+    if inv_category in ("lantern",):
+        return "lantern"
+    if inv_category in ("lantern_fuel",):
+        return "lantern"
+    if inv_category in ("trophy",):
+        return "trophy"
+    if inv_category in ("ingredient",):
+        return "ingredient"
+    return None
+
+
+class SpriteRegistry:
+    """Per-page sprite deduplication.
+
+    Calling `cls(pid)` returns a stable CSS class name. After rendering,
+    `style_block()` emits a single <style> chunk with one
+    `.sprite-<class> { background-image: url(data:image/webp;base64,...) }`
+    rule per unique pid. Each reference in the HTML becomes a tiny
+    <span class="sprite sprite-<class>"></span> tag instead of a 4 KB
+    inline blob.
+    """
+
+    def __init__(self):
+        self._pid_to_class = {}
+
+    def cls(self, pid):
+        if not pid:
+            return None
+        klass = self._pid_to_class.get(pid)
+        if klass is None:
+            klass = f"p{len(self._pid_to_class):04d}"
+            self._pid_to_class[pid] = klass
+        return klass
+
+    def style_block(self):
+        try:
+            from .sprites import get_image_b64
+        except Exception:
+            return ""
+        rules = []
+        for pid, klass in self._pid_to_class.items():
+            b64 = get_image_b64(pid)
+            if not b64:
+                continue
+            rules.append(
+                f".sprite-{klass}{{background-image:"
+                f"url(data:image/webp;base64,{b64})}}"
+            )
+        return "\n".join(rules)
+
+
+def _sprite_span(registry, pid, size=32, extra_class=""):
+    """Emit an inline sprite reference using the registry for dedupe."""
+    if not pid:
+        return ""
+    klass = registry.cls(pid)
+    if not klass:
+        return ""
+    extra = f" {extra_class}" if extra_class else ""
+    return (
+        f"<span class='sprite sprite-{klass}{extra}' "
+        f"style='width:{size}px;height:{size}px'></span>"
+    )
+
+
 class RunReport:
     """Per-run accumulator. The harness pumps obs frames + final state
     here, and `to_html()` renders a page that can be dropped into a
@@ -54,11 +236,23 @@ class RunReport:
 
         # Lightweight per-turn snapshots
         self.hp_timeline = []  # [(turn, hp, max_hp)]
+        self.mana_timeline = []  # [(turn, mana, max_mana)]
+        self.hunger_timeline = []  # [(turn, hunger)]  -- hunger is 0-100
         self.events = []  # [(turn, kind, detail)]
         self.recent_log = []  # rolling buffer of last 60 lines
         self.recent_actions = []  # rolling buffer of last 12 (turn, mode, action)
         self.kills_by_monster = {}  # name -> count
         self.kills_by_floor = {}  # floor -> count
+        # Tomb-suspicion log -- floors where the agent fought an undead
+        # (a reliable tell for a tomb on that floor; see harness comment
+        # in _monster_obs). Each entry is (turn, floor, monster_name).
+        # The set form is also kept for quick "is this floor flagged"
+        # lookups during HTML rendering.
+        self.tomb_suspected_floors = set()
+        self.tomb_sightings = []  # [(turn, floor, monster_name)]
+        # First time the agent's character sprite is determined.
+        # generate_player_sprite_html is seed-based; we mirror that.
+        self.player_sprite_pid = None
         # Movement efficiency tracking. For each floor we keep:
         #   - the set of (x, y) tiles the agent has stood on
         #   - the per-floor counters: total game_loop moves, first-visit
@@ -93,6 +287,10 @@ class RunReport:
         p = obs.get("player") or {}
         if p:
             self.hp_timeline.append((turn, p.get("hp", 0), p.get("max_hp", 1)))
+            self.mana_timeline.append(
+                (turn, p.get("mana", 0), p.get("max_mana", 0) or 1)
+            )
+            self.hunger_timeline.append((turn, p.get("hunger", 0)))
             f = p.get("floor", 1)
             if f > self.max_floor:
                 self.max_floor = f
@@ -125,6 +323,21 @@ class RunReport:
                         self.first_visit_moves.get(floor, 0) + 1
                     )
             self._last_xy = cur_xyz
+
+        # Mirror the harness's tomb-suspicion tracker for the report.
+        # obs.suspected_tomb_floors is a sorted list of floor indices
+        # (0-based); add the 1-based floor to our set.
+        for z in obs.get("suspected_tomb_floors") or []:
+            self.tomb_suspected_floors.add(z + 1)
+        # First-time undead sighting on a floor: record it so the
+        # "Combat" tab can show the player WHEN the suspicion fired.
+        mon = obs.get("monster") or {}
+        if mon and mon.get("is_undead"):
+            floor_1based = (p.get("floor", 1))
+            if not any(s[1] == floor_1based for s in self.tomb_sightings):
+                self.tomb_sightings.append(
+                    (turn, floor_1based, mon.get("name") or "undead")
+                )
 
         for raw in gs_log_lines:
             line = _strip(raw)
@@ -269,8 +482,32 @@ class RunReport:
         alive_class = "alive" if f.get("alive") else "dead"
         outcome_label = "SURVIVED" if f.get("alive") else "FELL"
 
-        # HP timeline SVG
-        svg = self._hp_chart_svg()
+        # Per-page sprite registry -- collects every pid referenced
+        # on this page and emits a single dedup'd <style> block.
+        sprites = SpriteRegistry()
+
+        # Player sprite: generic character pool, seeded by (race, name).
+        try:
+            from .sprites import characters as _csprites, get_generic_variant
+            pid = get_generic_variant(
+                _csprites._CHARACTERS_POOL,
+                seed=(self.race, self.name),
+            )
+            player_sprite_html = _sprite_span(sprites, pid, size=96,
+                                              extra_class="player-sprite")
+        except Exception:
+            player_sprite_html = ""
+
+        # Equipped weapon + armor sprites for the overview banner.
+        wpn_pid = _sprite_pid_for("weapon", wpn.get("name")) if wpn else None
+        arm_pid = _sprite_pid_for("armor", arm.get("name")) if arm else None
+        wpn_sprite = _sprite_span(sprites, wpn_pid, size=48)
+        arm_sprite = _sprite_span(sprites, arm_pid, size=48)
+
+        # Charts
+        hp_chart = self._hp_chart_svg()
+        mana_chart = self._mana_chart_svg()
+        hunger_chart = self._hunger_chart_svg()
 
         kills_total = sum(self.kills_by_floor.values())
         kills_by_floor_lines = "".join(
@@ -308,9 +545,10 @@ class RunReport:
             f"<td>{overall_waste:.0f}%</td></tr>"
         )
         kills_by_monster_lines = "".join(
-            f"<tr><td>{html.escape(n)}</td><td>{c}</td></tr>"
+            f"<tr><td>{_sprite_span(sprites, _sprite_pid_for('monster', n), size=32)} "
+            f"{html.escape(n)}</td><td>{c}</td></tr>"
             for n, c in sorted(self.kills_by_monster.items(),
-                               key=lambda x: -x[1])[:15]
+                               key=lambda x: -x[1])[:20]
         )
         buys_total = len(self.buys)
         buy_lines = "".join(
@@ -326,6 +564,9 @@ class RunReport:
         inv_rows = ""
         for i in inv[:24]:
             cat = i.get("category", "")
+            sprite_cat = _category_to_sprite_cat(cat)
+            pid = _sprite_pid_for(sprite_cat, i.get("name")) if sprite_cat else None
+            sprite_cell = _sprite_span(sprites, pid, size=28)
             extra = ""
             if cat in ("weapon", "armor"):
                 bonus = i.get("attack_bonus") or i.get("defense_bonus") or 0
@@ -337,10 +578,25 @@ class RunReport:
                 extra = "identified" if i.get("is_identified") else "unidentified"
             inv_rows += (
                 f"<tr><td>{i.get('slot')}</td>"
+                f"<td class='sprite-cell'>{sprite_cell}</td>"
                 f"<td>{html.escape(i.get('name', ''))}</td>"
                 f"<td>{html.escape(cat)}</td>"
                 f"<td>{i.get('count', 1)}</td>"
                 f"<td>{html.escape(extra)}</td></tr>"
+            )
+
+        # Tomb-suspected floors list for the Combat tab.
+        if self.tomb_sightings:
+            tomb_sighting_lines = "".join(
+                f"<li>T{t}: F{fl} — encountered "
+                f"{_sprite_span(sprites, _sprite_pid_for('monster', n), size=24)}"
+                f" <strong>{html.escape(n)}</strong>"
+                f" → tomb suspected on Floor {fl}</li>"
+                for (t, fl, n) in self.tomb_sightings
+            )
+        else:
+            tomb_sighting_lines = (
+                "<li class='muted'>no undead encountered — no tombs suspected</li>"
             )
 
         actions_html = "".join(
@@ -356,20 +612,32 @@ class RunReport:
 
         spells_html = ", ".join(html.escape(s) for s in self.spells) or "—"
 
+        # Last-seen killer sprite for the death scene. Match the
+        # derived death-cause string against a monster name when
+        # possible -- "defeated by <name>" puts the killer's sprite at
+        # the top of the Combat tab.
+        killer_sprite = ""
+        if not f.get("alive") and self.death_cause:
+            m = re.search(r"defeated by (?:the )?(.+)$", self.death_cause)
+            if m:
+                killer_name = m.group(1).strip()
+                killer_pid = _sprite_pid_for("monster", killer_name)
+                killer_sprite = _sprite_span(sprites, killer_pid, size=64)
+
         death_block = ""
         if not f.get("alive"):
             death_block = f"""
-        <section class="card death">
-          <h2>Death Scene</h2>
+        <div class="death-banner">
+          {killer_sprite}
           <p class="cause">Cause: <strong>{html.escape(self.death_cause or '?')}</strong></p>
-          <h3>Last 30 log lines</h3>
-          <ol class="log">{log_html}</ol>
-          <h3>Last actions</h3>
-          <ol class="actions">{actions_html}</ol>
-        </section>
+        </div>
+        <h3>Last 30 log lines</h3>
+        <ol class="log">{log_html}</ol>
+        <h3>Last actions</h3>
+        <ol class="actions">{actions_html}</ol>
         """
 
-        return Template(INDEX_PAGE_TEMPLATE_RUN).safe_substitute(
+        page_html = Template(_TABBED_PAGE_TEMPLATE).safe_substitute(
             title=html.escape(f"{self.name} the {self.race}"),
             name=html.escape(self.name),
             race=html.escape(self.race),
@@ -397,37 +665,97 @@ class RunReport:
             weapon_dur=wpn.get("durability") or 0,
             weapon_mxd=wpn.get("max_durability") or 0,
             weapon_buc=html.escape(wpn.get("buc_status") or ""),
+            weapon_sprite=wpn_sprite,
             armor_name=html.escape(arm.get("name") or "—"),
             armor_def=arm.get("defense_bonus") or 0,
             armor_dur=arm.get("durability") or 0,
             armor_mxd=arm.get("max_durability") or 0,
             armor_buc=html.escape(arm.get("buc_status") or ""),
-            hp_chart=svg,
+            armor_sprite=arm_sprite,
+            player_sprite=player_sprite_html,
+            hp_chart=hp_chart,
+            mana_chart=mana_chart,
+            hunger_chart=hunger_chart,
             kills_by_floor=kills_by_floor_lines or "<tr><td colspan='2'>no kills logged</td></tr>",
             kills_by_monster=kills_by_monster_lines or "<tr><td colspan='2'>—</td></tr>",
             buy_lines=buy_lines or "<tr><td colspan='5'>no purchases</td></tr>",
             descent_lines=descent_lines or "<li>never descended past Floor 1</li>",
-            inventory_rows=inv_rows or "<tr><td colspan='5'>—</td></tr>",
+            inventory_rows=inv_rows or "<tr><td colspan='6'>—</td></tr>",
             movement_rows=movement_rows or "<tr><td colspan='6'>no movement logged</td></tr>",
             overall_waste=f"{overall_waste:.0f}",
+            tomb_sighting_lines=tomb_sighting_lines,
+            tomb_floor_count=len(self.tomb_suspected_floors),
             death_block=death_block,
+            sprite_styles=sprites.style_block(),
         )
+        return page_html
 
     def _hp_chart_svg(self):
-        if not self.hp_timeline:
-            return "<p class='nochart'>no HP samples</p>"
-        # Sample down to ~200 points for readability
-        pts = self.hp_timeline
+        return self._timeline_chart_svg(
+            self.hp_timeline, "#f43f5e", "HP", with_max=True,
+        )
+
+    def _mana_chart_svg(self):
+        return self._timeline_chart_svg(
+            self.mana_timeline, "#38bdf8", "Mana", with_max=True,
+        )
+
+    def _hunger_chart_svg(self):
+        # Hunger has a fixed 0-100 scale, so reuse the timeline helper
+        # with a "max value 100" override that doesn't read from the
+        # timeline tuples.
+        if not self.hunger_timeline:
+            return "<p class='nochart'>no hunger samples</p>"
+        pts = self.hunger_timeline
         if len(pts) > 200:
             stride = len(pts) // 200
             pts = pts[::stride] + [pts[-1]]
         max_turn = max(p[0] for p in pts) or 1
-        max_hp = max(p[2] for p in pts) or 1
         W, H = 800, 200
         coords = []
-        for (t, hp, _) in pts:
+        # Mark the starvation zone (hunger <= 30): a red band at the
+        # bottom of the chart so the eye can tell at a glance when the
+        # agent was starving.
+        starve_y = H - 10 - (30 / 100) * (H - 20)
+        for (t, h) in pts:
             x = (t / max_turn) * (W - 20) + 10
-            y = H - 10 - (hp / max_hp) * (H - 20)
+            y = H - 10 - ((h or 0) / 100) * (H - 20)
+            coords.append(f"{x:.1f},{y:.1f}")
+        path = " ".join(coords)
+        return (
+            f"<svg viewBox='0 0 {W} {H}' class='hpchart' "
+            f"xmlns='http://www.w3.org/2000/svg'>"
+            f"<rect x='0' y='0' width='{W}' height='{H}' fill='#1a1a1a'/>"
+            f"<rect x='10' y='{starve_y:.1f}' width='{W-20}' "
+            f"height='{H-10-starve_y:.1f}' fill='#5a131333'/>"
+            f"<polyline points='{path}' fill='none' "
+            f"stroke='#fb923c' stroke-width='1.5'/>"
+            f"<text x='10' y='15' fill='#aaa' font-size='11'>"
+            f"Hunger 0..100 over T0..T{max_turn} "
+            f"(red band = starving)</text>"
+            f"</svg>"
+        )
+
+    def _timeline_chart_svg(self, timeline, color, label, with_max=True):
+        if not timeline:
+            return f"<p class='nochart'>no {label} samples</p>"
+        # Sample down to ~200 points for readability
+        pts = timeline
+        if len(pts) > 200:
+            stride = len(pts) // 200
+            pts = pts[::stride] + [pts[-1]]
+        max_turn = max(p[0] for p in pts) or 1
+        if with_max:
+            scale_max = max((p[2] if len(p) > 2 else 1) for p in pts) or 1
+        else:
+            scale_max = max((p[1] for p in pts), default=1) or 1
+        W, H = 800, 200
+        coords = []
+        for entry in pts:
+            t = entry[0]
+            v = entry[1] or 0
+            x = (t / max_turn) * (W - 20) + 10
+            y = H - 10 - (v / scale_max) * (H - 20)
             coords.append(f"{x:.1f},{y:.1f}")
         path = " ".join(coords)
         return (
@@ -435,9 +763,9 @@ class RunReport:
             f"xmlns='http://www.w3.org/2000/svg'>"
             f"<rect x='0' y='0' width='{W}' height='{H}' fill='#1a1a1a'/>"
             f"<polyline points='{path}' fill='none' "
-            f"stroke='#f43f5e' stroke-width='1.5'/>"
+            f"stroke='{color}' stroke-width='1.5'/>"
             f"<text x='10' y='15' fill='#aaa' font-size='11'>"
-            f"HP over T0..T{max_turn}, max {max_hp}</text>"
+            f"{label} over T0..T{max_turn}, max {scale_max}</text>"
             f"</svg>"
         )
 
@@ -486,24 +814,126 @@ th { color: #94a3b8; font-weight: normal; }
 .mode { color: #94a3b8; font-size: 10px; }
 .cause strong { color: #fb923c; }
 .death { border-left: 3px solid #f43f5e; }
+.death-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#1a0c0c; border-left:3px solid #f43f5e;
+  border-radius:4px; margin-bottom:10px;
+}
 .hpchart { width: 100%; height: auto; border-radius: 4px; }
+
+/* Sprite system: each sprite renders as a background-image on a <span>,
+   so a sprite referenced N times only embeds the base64 webp once. */
+.sprite {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.player-sprite { display:block; margin: 0 auto; image-rendering: pixelated; }
+.sprite-cell { width: 36px; }
+
+/* Hero banner with portrait + headline stats side by side. */
+.hero-banner {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+.hero-portrait {
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 120px;
+}
+.hero-info p { margin: 4px 0; }
+.gear-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.gear-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 10px;
+}
+.gear-card .sprite { width: 48px; height: 48px; margin-right: 0; }
+.gear-card .gear-meta { flex: 1; }
+
+/* Tabs -- pure-CSS radio-button pattern, no JS required. */
+.tabs { margin-top: 14px; }
+.tabs input[type=radio] { position: absolute; opacity: 0; pointer-events: none; }
+.tabs > label {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-bottom: -1px;
+  transition: background .15s;
+}
+.tabs > label:hover { background: #1f1f1f; color: #fde68a; }
+.tabs > input[type=radio]:checked + label {
+  background: #2a1f0a;
+  color: #fbbf24;
+  border-bottom: 1px solid #2a1f0a;
+}
+.tab-panels { background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 0 6px 6px 6px; padding: 14px 18px; }
+.tab-panel { display: none; }
+/* Show the panel whose paired radio is :checked. ~ matches siblings
+   that follow the input, and the panels live right after the labels. */
+#tab-overview:checked ~ .tab-panels #panel-overview,
+#tab-stats:checked ~ .tab-panels #panel-stats,
+#tab-equipment:checked ~ .tab-panels #panel-equipment,
+#tab-combat:checked ~ .tab-panels #panel-combat,
+#tab-journey:checked ~ .tab-panels #panel-journey { display: block; }
+
+.chart-block { margin: 16px 0; }
+.chart-block h3 { margin-top: 0; }
+.tomb-list { list-style: none; padding: 0; }
+.tomb-list li { padding: 6px 0; border-bottom: 1px dotted #2a2a2a; }
+.tomb-list li:last-child { border: none; }
+.tomb-list strong { color: #f97316; }
 """
 
-INDEX_PAGE_TEMPLATE_RUN = """<!doctype html>
+_TABBED_PAGE_TEMPLATE = """<!doctype html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <title>$title — Wizard's Cavern Playtest</title>
-<style>""" + _CSS + """</style>
+<style>""" + _CSS + """
+$sprite_styles
+</style>
 </head>
 <body>
 <p class="muted"><a href="./index.html">← all runs</a></p>
 
 <header class="card">
-  <h1>$name, the $race</h1>
-  <p class="muted">$gender adventurer · seed $seed · started $started</p>
-  <p><span class="outcome $alive_class">$outcome_label</span></p>
-  <p class="muted">Memorised: $spells</p>
+  <div class="hero-banner">
+    <div class="hero-portrait">
+      $player_sprite
+      <p class="muted" style="margin-top:8px;font-size:11px;">$race</p>
+    </div>
+    <div class="hero-info">
+      <h1>$name, the $race</h1>
+      <p class="muted">$gender adventurer · seed $seed · started $started</p>
+      <p><span class="outcome $alive_class">$outcome_label</span></p>
+      <p class="muted">Memorised: $spells</p>
+    </div>
+  </div>
 </header>
 
 <section class="card">
@@ -525,70 +955,138 @@ INDEX_PAGE_TEMPLATE_RUN = """<!doctype html>
       <div class="stat"><span>Total kills</span><span class="v">$stats_kills</span></div>
       <div class="stat"><span>Items bought</span><span class="v">$stats_buys</span></div>
       <div class="stat"><span>Items identified</span><span class="v">$stats_identifies</span></div>
+      <div class="stat"><span>Tombs suspected</span><span class="v">$tomb_floor_count</span></div>
     </div>
   </div>
 </section>
 
-<section class="card">
-  <h2>HP over the run</h2>
-  $hp_chart
-</section>
+<div class="tabs">
+  <input type="radio" name="rep-tabs" id="tab-overview" checked>
+  <label for="tab-overview">Overview</label>
+  <input type="radio" name="rep-tabs" id="tab-stats">
+  <label for="tab-stats">Stats</label>
+  <input type="radio" name="rep-tabs" id="tab-equipment">
+  <label for="tab-equipment">Equipment</label>
+  <input type="radio" name="rep-tabs" id="tab-combat">
+  <label for="tab-combat">Combat</label>
+  <input type="radio" name="rep-tabs" id="tab-journey">
+  <label for="tab-journey">Journey</label>
 
-<section class="card">
-  <h2>Equipment at end</h2>
-  <div class="grid2">
-    <div>
-      <h3>Weapon</h3>
-      <p>$weapon_name <span class="muted">(+$weapon_atk atk · dur $weapon_dur/$weapon_mxd · $weapon_buc)</span></p>
+  <div class="tab-panels">
+    <!-- Overview -->
+    <div class="tab-panel" id="panel-overview">
+      <h2>Equipment at end</h2>
+      <div class="gear-cards">
+        <div class="gear-card">
+          $weapon_sprite
+          <div class="gear-meta">
+            <h3 style="margin:0;">Weapon</h3>
+            <p style="margin:4px 0;">$weapon_name</p>
+            <p class="muted" style="margin:0;">+$weapon_atk atk · dur $weapon_dur/$weapon_mxd · $weapon_buc</p>
+          </div>
+        </div>
+        <div class="gear-card">
+          $armor_sprite
+          <div class="gear-meta">
+            <h3 style="margin:0;">Armor</h3>
+            <p style="margin:4px 0;">$armor_name</p>
+            <p class="muted" style="margin:0;">+$armor_def def · dur $armor_dur/$armor_mxd · $armor_buc</p>
+          </div>
+        </div>
+      </div>
+      <div class="chart-block">
+        <h3>HP arc</h3>
+        $hp_chart
+      </div>
     </div>
-    <div>
-      <h3>Armor</h3>
-      <p>$armor_name <span class="muted">(+$armor_def def · dur $armor_dur/$armor_mxd · $armor_buc)</span></p>
+
+    <!-- Stats -->
+    <div class="tab-panel" id="panel-stats">
+      <div class="chart-block">
+        <h3>HP over the run</h3>
+        $hp_chart
+      </div>
+      <div class="chart-block">
+        <h3>Mana over the run</h3>
+        $mana_chart
+      </div>
+      <div class="chart-block">
+        <h3>Hunger over the run</h3>
+        $hunger_chart
+      </div>
+    </div>
+
+    <!-- Equipment + Inventory -->
+    <div class="tab-panel" id="panel-equipment">
+      <h2>Equipped</h2>
+      <div class="gear-cards">
+        <div class="gear-card">
+          $weapon_sprite
+          <div class="gear-meta">
+            <h3 style="margin:0;">Weapon</h3>
+            <p style="margin:4px 0;">$weapon_name</p>
+            <p class="muted" style="margin:0;">+$weapon_atk atk · dur $weapon_dur/$weapon_mxd · $weapon_buc</p>
+          </div>
+        </div>
+        <div class="gear-card">
+          $armor_sprite
+          <div class="gear-meta">
+            <h3 style="margin:0;">Armor</h3>
+            <p style="margin:4px 0;">$armor_name</p>
+            <p class="muted" style="margin:0;">+$armor_def def · dur $armor_dur/$armor_mxd · $armor_buc</p>
+          </div>
+        </div>
+      </div>
+      <h2 style="margin-top:18px;">Final Inventory</h2>
+      <table><tr><th>Slot</th><th></th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+      $inventory_rows
+      </table>
+    </div>
+
+    <!-- Combat -->
+    <div class="tab-panel" id="panel-combat">
+      <h2>Top Victims</h2>
+      <table><tr><th>Monster</th><th>Kills</th></tr>
+      $kills_by_monster
+      </table>
+      <h2 style="margin-top:18px;">Kills by floor</h2>
+      <table>$kills_by_floor</table>
+      <h2 style="margin-top:18px;">Tomb-suspected floors</h2>
+      <p class="muted">Encountering an undead is a reliable tell that a
+        tomb is on the floor; the policy drops M/T from its priority
+        list while weak on flagged floors to avoid blundering into the
+        elite guardian.</p>
+      <ul class="tomb-list">$tomb_sighting_lines</ul>
+      $death_block
+    </div>
+
+    <!-- Journey -->
+    <div class="tab-panel" id="panel-journey">
+      <h2>Descents</h2>
+      <ul>$descent_lines</ul>
+      <h2 style="margin-top:18px;">Movement Efficiency · overall waste $overall_waste%</h2>
+      <p class="muted">First-visit moves discover new ground; revisits
+        are moves that step onto a tile the agent has already stood on
+        this floor. High waste% = patrol-bouncing.</p>
+      <table>
+        <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+        $movement_rows
+      </table>
+      <h2 style="margin-top:18px;">Purchases ($stats_buys)</h2>
+      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+      $buy_lines
+      </table>
     </div>
   </div>
-</section>
-
-<section class="card">
-  <h2>Journey</h2>
-  <h3>Descents</h3>
-  <ul>$descent_lines</ul>
-  <h3>Kills by floor</h3>
-  <table>$kills_by_floor</table>
-  <h3>Top victims</h3>
-  <table>$kills_by_monster</table>
-</section>
-
-<section class="card">
-  <h2>Purchases ($stats_buys)</h2>
-  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
-  $buy_lines
-  </table>
-</section>
-
-<section class="card">
-  <h2>Final Inventory</h2>
-  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
-  $inventory_rows
-  </table>
-</section>
-
-<section class="card">
-  <h2>Movement Efficiency · overall waste $overall_waste%</h2>
-  <p class="muted">First-visit moves discover new ground; revisits are
-    moves that step onto a tile the agent has already stood on this
-    floor. High waste% = patrol-bouncing through already-discovered
-    rooms instead of pushing the frontier.</p>
-  <table>
-    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
-    $movement_rows
-  </table>
-</section>
-
-$death_block
+</div>
 
 </body>
 </html>
 """
+
+# Backwards-compatible alias: deployed older scripts may import this
+# name. Points at the new tabbed template.
+INDEX_PAGE_TEMPLATE_RUN = _TABBED_PAGE_TEMPLATE
 
 
 _INDEX_TEMPLATE = """<!doctype html>
