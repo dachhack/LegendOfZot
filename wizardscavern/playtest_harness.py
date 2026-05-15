@@ -1983,7 +1983,13 @@ def smart_policy(obs, rng, use_lantern=True):
         # kills, hunger ticked to 0 with no Rations left). 12 Rations
         # = 480 nutrition uses, enough for ~480 turns of comfort
         # eating after exhausting kill drops.
-        STOCK = {"potion_healing": 3, "food": 12, "potion_mana": 2}
+        # Stockpile bumped: 4 heal pots (was 3) covers ~1 emergency
+        # rescue per floor on a 6-8 floor run. 15 Rations (was 12)
+        # buys ~600 nutrition uses -- enough to outlast the long
+        # high-kill runs that previously died of starvation at F4
+        # with 100+ kills. 3 mana pots (was 2) extends spell
+        # pressure for caster races at deeper floors.
+        STOCK = {"potion_healing": 4, "food": 15, "potion_mana": 3}
         if use_lantern and lantern_fuel < 20:
             STOCK["lantern_fuel"] = 2
         owned = {cat: sum(i.get("count", 1) for i in inv
@@ -2102,6 +2108,15 @@ def smart_policy(obs, rng, use_lantern=True):
         return "x"
 
     if mode == "chest_mode":
+        # Chests can explode for 30-48 raw damage. The death dossier
+        # showed Lv4-5 agents getting one-shot by chest explosions
+        # at low HP with no heal pot in the bag -- a narrow safety
+        # net for those runs. When HP is critical AND heal pots are
+        # exhausted, walk away from the chest instead of gambling.
+        # All other states (healthy / has heal pot fallback) still
+        # open the chest at the original 85% rate.
+        if p["hp"] < 40 and heal_pot_slot is None:
+            return "l"
         return "o" if rng.random() < 0.85 else "l"
     if mode == "stairs_down_mode":
         # Clear beneficials before descending -- but only if BFS says
