@@ -1883,7 +1883,12 @@ class Scroll(Item):
                 status_effect_magnitude=int(self.spell_to_cast.status_effect_magnitude * self.spell_power_multiplier) if self.spell_to_cast.status_effect_magnitude else 0
             )
 
-            # Cast on active monster if in combat, otherwise heal/buff self
+            # Cast on active monster if in combat, otherwise heal/buff
+            # self. Damage spells out of combat have no valid target --
+            # cast_spell would crash on target.elemental_weakness because
+            # Character has `elemental_weaknesses` (plural list) while
+            # Monster has `elemental_weakness`. Refuse the cast and
+            # leave the scroll uncconsumed.
             if gs.active_monster and gs.active_monster.is_alive():
                 # Scrolls bypass Platino's defenses
                 if gs.active_monster.properties.get('is_platino'):
@@ -1894,8 +1899,12 @@ class Scroll(Item):
                 # Check if monster died
                 if not gs.active_monster.is_alive():
                     add_log(f"{COLOR_GREEN}The scroll's power obliterated the {gs.active_monster.name}!{COLOR_RESET}")
+            elif enhanced_spell.spell_type == 'damage':
+                # Out-of-combat damage scrolls have nothing to hit.
+                add_log(f"{COLOR_YELLOW}The {self.name}'s {enhanced_spell.name} crackles with power but finds no target. You stop reading.{COLOR_RESET}")
+                return False  # Don't consume
             else:
-                # Self-cast (healing/buff spells)
+                # Self-cast (healing / buff / remove_status spells)
                 character.cast_spell(enhanced_spell, character)
                 add_log(f"{COLOR_GREEN}The scroll's enhanced magic flows through you! (+{int((self.spell_power_multiplier - 1) * 100)}% power){COLOR_RESET}")
 
@@ -3226,15 +3235,24 @@ class Treasure(Item):
             return True  # Remove from inventory after collecting
 
         elif self.treasure_type == 'stat_boost':
-            # Apply permanent stat boosts
+            # Apply permanent stat boosts. max_health / max_mana are
+            # @property derived from level/str/int + base_max_*_bonus
+            # and have no setter; route those through the bonus fields
+            # so the property recomputes. defense/attack already had
+            # explicit special-cases for the same reason.
             for stat, amount in self.benefit.items():
-                # Handle properties that don't have setters
                 if stat == 'defense':
                     character._base_defense += amount
                     add_log(f"{COLOR_GREEN}Defense increased by {amount}! Now: {character.defense}{COLOR_RESET}")
                 elif stat == 'attack':
                     character._base_attack += amount
                     add_log(f"{COLOR_GREEN}Attack increased by {amount}! Now: {character.attack}{COLOR_RESET}")
+                elif stat == 'max_health':
+                    character.base_max_health_bonus += amount
+                    add_log(f"{COLOR_GREEN}Max HP increased by {amount}! Now: {character.max_health}{COLOR_RESET}")
+                elif stat == 'max_mana':
+                    character.base_max_mana_bonus += amount
+                    add_log(f"{COLOR_GREEN}Max Mana increased by {amount}! Now: {character.max_mana}{COLOR_RESET}")
                 elif hasattr(character, stat):
                     current = getattr(character, stat)
                     setattr(character, stat, current + amount)

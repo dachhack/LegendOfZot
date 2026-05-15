@@ -2116,10 +2116,17 @@ def smart_policy(obs, rng, use_lantern=True):
         # loop. Tauriel the elf seed=500 burned 957 turns on a
         # Commerce loop before this fix.
         SAFE_SCROLL_TYPES = {
-            "mapping", "upgrade", "spell_scroll",
+            "mapping", "upgrade",
             "lantern_upgrade", "restoration", "foresight",
             "protection", "identify",
         }
+        # spell_scroll is intentionally OMITTED here -- a Scroll of
+        # Fireball cast out of combat has no target and the game now
+        # refuses to consume it (items.py:1899). Leaving it in the
+        # set caused a 2-turn `u<N> -> x -> u<N>` ping-pong as the
+        # policy retried the scroll every inventory open. Combat-mode
+        # has its own branch that reads spell_scrolls with the live
+        # monster as target.
         if proposed is None:
             for entry in inv:
                 if entry["category"] != "scroll":

@@ -3050,8 +3050,17 @@ def process_shrine_action(player_character, my_tower, cmd):
         if roll < 0.33:
             buff = random.choice(['hp', 'str', 'dex', 'int'])
             if buff == 'hp':
-                player_character.max_health += 5
-                player_character.health = min(player_character.health + 5, player_character.max_health)
+                # max_health is an @property derived from level / str /
+                # base_max_health_bonus -- writing the property raises
+                # AttributeError ("no setter"). Route the +5 through the
+                # bonus field, which the property already folds in, and
+                # heal up to the new ceiling. Surfaced by the playtester:
+                # ~10% of shrine prayers hit this branch and crashed
+                # before the harness's try/except absorbed it, leaving
+                # the shrine consumed without granting the buff.
+                player_character.base_max_health_bonus += 5
+                player_character.health = min(player_character.health + 5,
+                                              player_character.max_health)
                 add_log(f"{COLOR_CYAN}A gentle warmth passes through you. Max HP +5!{COLOR_RESET}")
             elif buff == 'str':
                 player_character.strength += 1
