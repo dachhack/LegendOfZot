@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kili the dwarf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Kili, the dwarf</h1>
+  <p class="muted">non-binary adventurer · seed 800 · started 2026-05-15T08:55:58+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">137</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F4</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L2</span></div>
+      <div class="stat"><span>Experience</span><span class="v">122</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-4 / 76</span></div>
+      <div class="stat"><span>Mana</span><span class="v">5 / 11</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">91</span></div>
+      <div class="stat"><span>Gold</span><span class="v">1160g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">12</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">0</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">12</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,47.9 15.7,47.9 21.4,47.9 27.1,47.9 32.8,47.9 38.5,47.9 44.2,47.9 49.9,47.9 55.5,45.5 61.2,45.5 66.9,45.5 72.6,45.5 78.3,43.2 84.0,43.2 89.7,43.2 95.4,40.8 101.1,40.8 106.8,40.8 112.5,40.8 118.2,40.8 123.9,38.4 129.6,38.4 135.3,38.4 140.9,38.4 146.6,40.8 152.3,40.8 158.0,38.4 163.7,38.4 169.4,38.4 175.1,36.1 180.8,36.1 186.5,36.1 192.2,36.1 197.9,36.1 203.6,33.7 209.3,33.7 215.0,33.7 220.7,33.7 226.4,33.7 232.0,33.7 237.7,33.7 243.4,33.7 249.1,33.7 254.8,33.7 260.5,43.2 266.2,52.6 271.9,52.6 277.6,52.6 283.3,55.0 289.0,55.0 294.7,55.0 300.4,55.0 306.1,55.0 311.8,57.4 317.4,57.4 323.1,57.4 328.8,57.4 334.5,57.4 340.2,57.4 345.9,57.4 351.6,57.4 357.3,57.4 363.0,57.4 368.7,57.4 374.4,57.4 380.1,57.4 385.8,57.4 391.5,57.4 397.2,57.4 402.8,57.4 408.5,57.4 414.2,57.4 419.9,57.4 425.6,57.4 431.3,57.4 437.0,57.4 442.7,33.7 448.4,33.7 454.1,33.7 459.8,33.7 465.5,33.7 471.2,33.7 476.9,33.7 482.6,33.7 488.2,33.7 493.9,33.7 499.6,36.1 505.3,36.1 511.0,38.4 516.7,40.8 522.4,40.8 528.1,43.2 533.8,43.2 539.5,43.2 545.2,40.8 550.9,40.8 556.6,40.8 562.3,40.8 568.0,40.8 573.6,40.8 579.3,38.4 585.0,40.8 590.7,45.5 596.4,47.9 602.1,47.9 607.8,47.9 613.5,47.9 619.2,102.4 624.9,102.4 630.6,102.4 636.3,100.0 642.0,100.0 647.7,10.0 653.4,10.0 659.1,64.5 664.7,173.4 670.4,173.4 676.1,102.4 681.8,102.4 687.5,102.4 693.2,31.3 698.9,31.3 704.6,85.8 710.3,85.8 716.0,85.8 721.7,14.7 727.4,14.7 733.1,123.7 738.8,123.7 744.5,52.6 750.1,52.6 755.8,161.6 761.5,161.6 767.2,161.6 772.9,90.5 778.6,90.5 784.3,145.0 790.0,199.5' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T137, max 76</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Battleaxe <span class="muted">(+4 atk · dur 30/40 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Leather Armor <span class="muted">(+3 def · dur 40/50 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T3: arrived on Floor 2</li><li>T82: arrived on Floor 3</li><li>T97: arrived on Floor 4</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 2</td><td>10</td></tr><tr><td>Floor 4</td><td>2</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Kobold</td><td>6</td></tr><tr><td>Crawling Claw</td><td>2</td></tr><tr><td>Wight</td><td>2</td></tr><tr><td>Harpy</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (0)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td colspan='5'>no purchases</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Rations</td><td>food</td><td>4</td><td></td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Movement Efficiency · overall waste 13%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    <tr><td>Floor 2</td><td>12</td><td>10</td><td>10</td><td>2</td><td>17%</td></tr><tr><td>Floor 3</td><td>2</td><td>2</td><td>2</td><td>0</td><td>0%</td></tr><tr><td>Floor 4</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>15</td><td>13</td><td>13</td><td>2</td><td>13%</td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>defeated by UNDEAD WRAITH</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T128: Type &#x27;df&#x27; or tap Drink Full to heal to max.</li><li>T128: Returning to combat...</li><li>T128: Ouch!  UNDEAD WRAITH hit Kili!</li><li>T128: You took 23 damage!</li><li>T128: You successfully broke away from combat!</li><li>T128: Choose a direction to flee (n/s/e/w):</li><li>T128:  UNDEAD WRAITH missed Kili!</li><li>T128: Kili drinks Minor Healing Potion and recovers 30 HP!</li><li>T128: Removed Minor Healing Potion from inventory.</li><li>T128: Flee failed! The monster blocks your escape.</li><li>T132: Returning to combat...</li><li>T132: Ouch!  UNDEAD WRAITH hit Kili!</li><li>T132: You took 23 damage!</li><li>T132: Flee failed! The monster blocks your escape.</li><li>T132: Kili drinks Minor Healing Potion and recovers 30 HP!</li><li>T132: Removed Minor Healing Potion from inventory.</li><li>T132: Type &#x27;df&#x27; or tap Drink Full to heal to max.</li><li>T132: You successfully broke away from combat!</li><li>T132: Choose a direction to flee (n/s/e/w):</li><li>T136: Removed Minor Healing Potion from inventory.</li><li>T136: Type &#x27;df&#x27; or tap Drink Full to heal to max.</li><li>T136: Returning to combat...</li><li>T136: Ouch!  UNDEAD WRAITH hit Kili!</li><li>T136: You took 23 damage!</li><li>T136: You successfully broke away from combat!</li><li>T136: Choose a direction to flee (n/s/e/w):</li><li>T136: Kili drinks Minor Healing Potion and recovers 30 HP!</li><li>T136: Flee failed! The monster blocks your escape.</li><li>T136:  UNDEAD WRAITH missed Kili!</li><li>T137: You were defeated by the  UNDEAD WRAITH...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T126 <span class='mode'>combat_mode</span>: <code>x</code></li><li>T127 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T128 <span class='mode'>inventory</span>: <code>i</code></li><li>T129 <span class='mode'>inventory</span>: <code>u1</code></li><li>T130 <span class='mode'>combat_mode</span>: <code>x</code></li><li>T131 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T132 <span class='mode'>game_loop</span>: <code>back</code></li><li>T133 <span class='mode'>inventory</span>: <code>i</code></li><li>T134 <span class='mode'>inventory</span>: <code>u1</code></li><li>T135 <span class='mode'>combat_mode</span>: <code>x</code></li><li>T136 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T137 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        </section>
+        
+
+</body>
+</html>

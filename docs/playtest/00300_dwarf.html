@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Oin the dwarf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Oin, the dwarf</h1>
+  <p class="muted">non-binary adventurer · seed 300 · started 2026-05-15T08:55:55+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">908</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F6</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L5</span></div>
+      <div class="stat"><span>Experience</span><span class="v">782</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-10 / 108</span></div>
+      <div class="stat"><span>Mana</span><span class="v">3 / 9</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">58</span></div>
+      <div class="stat"><span>Gold</span><span class="v">1417g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">128</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">47</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">13</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,90.0 13.4,88.3 16.9,88.3 20.3,86.7 23.7,83.3 27.2,126.7 30.6,83.3 34.1,98.3 37.5,96.7 40.9,96.7 44.4,100.0 47.8,98.3 51.2,98.3 54.7,105.0 58.1,86.7 61.5,86.7 65.0,86.7 68.4,86.7 71.9,85.0 75.3,85.0 78.7,105.0 82.2,83.3 85.6,83.3 89.0,83.3 92.5,86.7 95.9,88.3 99.3,88.3 102.8,88.3 106.2,88.3 109.6,88.3 113.1,88.3 116.5,86.7 120.0,86.7 123.4,86.7 126.8,66.7 130.3,66.7 133.7,66.7 137.1,68.3 140.6,70.0 144.0,71.7 147.4,71.7 150.9,71.7 154.3,73.3 157.8,66.7 161.2,66.7 164.6,66.7 168.1,66.7 171.5,68.3 174.9,68.3 178.4,66.7 181.8,71.7 185.2,71.7 188.7,73.3 192.1,60.0 195.6,60.0 199.0,65.0 202.4,70.0 205.9,68.3 209.3,71.7 212.7,76.7 216.2,80.0 219.6,86.7 223.0,43.3 226.5,43.3 229.9,45.0 233.3,45.0 236.8,45.0 240.2,45.0 243.7,43.3 247.1,43.3 250.5,43.3 254.0,43.3 257.4,45.0 260.8,43.3 264.3,45.0 267.7,46.7 271.1,46.7 274.6,46.7 278.0,48.3 281.5,48.3 284.9,48.3 288.3,46.7 291.8,45.0 295.2,43.3 298.6,43.3 302.1,43.3 305.5,43.3 308.9,43.3 312.4,45.0 315.8,43.3 319.3,43.3 322.7,43.3 326.1,43.3 329.6,43.3 333.0,43.3 336.4,43.3 339.9,43.3 343.3,43.3 346.7,43.3 350.2,43.3 353.6,45.0 357.0,45.0 360.5,43.3 363.9,43.3 367.4,45.0 370.8,43.3 374.2,43.3 377.7,43.3 381.1,43.3 384.5,43.3 388.0,43.3 391.4,43.3 394.8,43.3 398.3,43.3 401.7,43.3 405.2,43.3 408.6,43.3 412.0,43.3 415.5,43.3 418.9,43.3 422.3,43.3 425.8,43.3 429.2,43.3 432.6,43.3 436.1,43.3 439.5,43.3 443.0,43.3 446.4,43.3 449.8,43.3 453.3,43.3 456.7,43.3 460.1,43.3 463.6,43.3 467.0,43.3 470.4,43.3 473.9,43.3 477.3,43.3 480.7,43.3 484.2,43.3 487.6,43.3 491.1,43.3 494.5,43.3 497.9,43.3 501.4,43.3 504.8,43.3 508.2,43.3 511.7,43.3 515.1,50.0 518.5,63.3 522.0,76.7 525.4,90.0 528.9,100.0 532.3,55.0 535.7,58.3 539.2,61.7 542.6,78.3 546.0,98.3 549.5,108.3 552.9,118.3 556.3,121.7 559.8,131.7 563.2,140.0 566.7,93.3 570.1,98.3 573.5,50.0 577.0,56.7 580.4,70.0 583.8,80.0 587.3,90.0 590.7,100.0 594.1,113.3 597.6,118.3 601.0,131.7 604.4,131.7 607.9,135.0 611.3,135.0 614.8,135.0 618.2,85.0 621.6,36.7 625.1,36.7 628.5,26.7 631.9,26.7 635.4,26.7 638.8,26.7 642.2,26.7 645.7,26.7 649.1,26.7 652.6,26.7 656.0,26.7 659.4,26.7 662.9,26.7 666.3,26.7 669.7,26.7 673.2,26.7 676.6,26.7 680.0,26.7 683.5,26.7 686.9,26.7 690.4,26.7 693.8,26.7 697.2,26.7 700.7,30.0 704.1,31.7 707.5,36.7 711.0,36.7 714.4,33.3 717.8,33.3 721.3,33.3 724.7,33.3 728.1,33.3 731.6,33.3 735.0,33.3 738.5,33.3 741.9,33.3 745.3,33.3 748.8,33.3 752.2,33.3 755.6,33.3 759.1,10.0 762.5,10.0 765.9,10.0 769.4,11.7 772.8,11.7 776.3,11.7 779.7,10.0 783.1,130.0 786.6,146.7 790.0,206.7 790.0,206.7' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T908, max 108</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Greatsword <span class="muted">(+10 atk · dur 88/112 · cursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Deathshroud <span class="muted">(+7 def · dur 0/50 · cursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T616: arrived on Floor 2</li><li>T689: arrived on Floor 3</li><li>T835: arrived on Floor 4</li><li>T881: arrived on Floor 5</li><li>T889: arrived on Floor 6</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>97</td></tr><tr><td>Floor 2</td><td>4</td></tr><tr><td>Floor 3</td><td>16</td></tr><tr><td>Floor 4</td><td>7</td></tr><tr><td>Floor 5</td><td>3</td></tr><tr><td>Floor 6</td><td>1</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Giant Rat</td><td>22</td></tr><tr><td>Kobold</td><td>19</td></tr><tr><td>Bat</td><td>13</td></tr><tr><td>Rust Monster</td><td>11</td></tr><tr><td>Sewer Rat</td><td>9</td></tr><tr><td>Slime Mold</td><td>8</td></tr><tr><td>Spore Puff</td><td>7</td></tr><tr><td>Zombie</td><td>6</td></tr><tr><td>Skeleton</td><td>6</td></tr><tr><td>Crawling Claw</td><td>6</td></tr><tr><td>UNDEAD SKELETON</td><td>6</td></tr><tr><td>Lichen</td><td>5</td></tr><tr><td>Stirge</td><td>5</td></tr><tr><td>UNDEAD ZOMBIE</td><td>5</td></tr><tr><td>Orc</td><td>5</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (47)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T284</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T288</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T367</td><td>F1</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T368</td><td>F1</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T372</td><td>F1</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T376</td><td>F1</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T380</td><td>F1</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T384</td><td>F1</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T697</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T700</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T700</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T701</td><td>F3</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T702</td><td>F3</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T703</td><td>F3</td><td>Potion of Earth Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T704</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T704</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T704</td><td>F3</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T704</td><td>F3</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T704</td><td>F3</td><td>Potion of Earth Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T704</td><td>F3</td><td>Halberd</td><td>1×</td><td>190g</td></tr><tr><td>T708</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T708</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T708</td><td>F3</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T708</td><td>F3</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T708</td><td>F3</td><td>Potion of Earth Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T708</td><td>F3</td><td>Halberd</td><td>1×</td><td>190g</td></tr><tr><td>T712</td><td>F3</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T712</td><td>F3</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T712</td><td>F3</td><td>Potion of Earth Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T712</td><td>F3</td><td>Halberd</td><td>1×</td><td>190g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Potion of Defense</td><td>potion_defense</td><td>1</td><td>identified</td></tr><tr><td>2</td><td>Potion of Earth Resistance</td><td>potion_resistance</td><td>1</td><td>identified</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Movement Efficiency · overall waste 64%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    <tr><td>Floor 1</td><td>241</td><td>66</td><td>66</td><td>175</td><td>73%</td></tr><tr><td>Floor 2</td><td>28</td><td>15</td><td>15</td><td>13</td><td>46%</td></tr><tr><td>Floor 3</td><td>59</td><td>33</td><td>33</td><td>26</td><td>44%</td></tr><tr><td>Floor 4</td><td>19</td><td>11</td><td>11</td><td>8</td><td>42%</td></tr><tr><td>Floor 5</td><td>1</td><td>1</td><td>1</td><td>0</td><td>0%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>348</td><td>126</td><td>126</td><td>222</td><td>64%</td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>defeated by Giant Spider</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T900: The Giant Spider strikes first!</li><li>T901: Giant Spider missed Oin!</li><li>T901: Your Deathshroud is badly damaged (5/50)!</li><li>T901: You missed the evil Giant Spider!</li><li>T902: Your Deathshroud is badly damaged (3/50)!</li><li>T903: Ouch! Giant Spider hit Oin!</li><li>T903: You took 5 damage!</li><li>T903: Your Deathshroud is badly damaged (1/50)!</li><li>T904: A Giant Spider (Level 5) appears! An enormous spider with eight glaring eyes. It&#x27;s a spiiiiiiiider.</li><li>T904: The Giant Spider strikes first!</li><li>T904: Giant Spider missed Oin!</li><li>T904: Your Deathshroud is badly damaged (5/50)!</li><li>T904: You missed the evil Giant Spider!</li><li>T904: Your Deathshroud is badly damaged (3/50)!</li><li>T904: Ouch! Giant Spider hit Oin!</li><li>T904: You took 5 damage!</li><li>T904: Your Deathshroud is badly damaged (1/50)!</li><li>T904: Your Deathshroud is broken! It gives no protection and needs repair before it is useful again!</li><li>T905: You took 12 damage!</li><li>T905: You hit the evil Giant Spider!</li><li>T905: Giant Spider took 28 damage.</li><li>T908: Ouch! Giant Spider hit Oin!</li><li>T908: You took 5 damage!</li><li>T908: Your Deathshroud is broken! It gives no protection and needs repair before it is useful again!</li><li>T908: You missed the evil Giant Spider!</li><li>T908: You took 12 damage!</li><li>T908: You hit the evil Giant Spider!</li><li>T908: Giant Spider took 28 damage.</li><li>T908: Giant Spider missed Oin!</li><li>T908: You were defeated by the Giant Spider...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T897 <span class='mode'>combat_mode</span>: <code>s</code></li><li>T898 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T899 <span class='mode'>game_loop</span>: <code>back</code></li><li>T900 <span class='mode'>combat_mode</span>: <code>s</code></li><li>T901 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T902 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T903 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T904 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T905 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T906 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T907 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T908 <span class='mode'>death_screen</span>: <code>a</code></li></ol>
+        </section>
+        
+
+</body>
+</html>

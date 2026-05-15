@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Imrahil the human — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Imrahil, the human</h1>
+  <p class="muted">non-binary adventurer · seed 800 · started 2026-05-15T08:56:01+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">374</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F4</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L3</span></div>
+      <div class="stat"><span>Experience</span><span class="v">240</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-2 / 52</span></div>
+      <div class="stat"><span>Mana</span><span class="v">5 / 35</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">73</span></div>
+      <div class="stat"><span>Gold</span><span class="v">903g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">36</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">22</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">22</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,86.2 12.1,86.2 14.2,86.2 16.3,86.2 18.3,86.2 20.4,86.2 22.5,86.2 24.6,86.2 26.7,86.2 28.8,86.2 30.9,86.2 32.9,86.2 35.0,86.2 37.1,86.2 39.2,86.2 41.3,86.2 43.4,86.2 45.5,86.2 47.5,86.2 49.6,86.2 51.7,86.2 53.8,86.2 55.9,86.2 58.0,86.2 60.1,100.0 62.1,100.0 64.2,100.0 66.3,100.0 68.4,100.0 70.5,100.0 72.6,100.0 74.7,96.5 76.7,96.5 78.8,96.5 80.9,93.1 83.0,106.9 85.1,120.8 87.2,120.8 89.3,120.8 91.3,120.8 93.4,120.8 95.5,117.3 97.6,117.3 99.7,117.3 101.8,117.3 103.9,117.3 105.9,117.3 108.0,117.3 110.1,117.3 112.2,86.2 114.3,86.2 116.4,86.2 118.4,86.2 120.5,110.4 122.6,110.4 124.7,110.4 126.8,110.4 128.9,110.4 131.0,110.4 133.0,110.4 135.1,110.4 137.2,110.4 139.3,110.4 141.4,110.4 143.5,110.4 145.6,110.4 147.6,148.5 149.7,148.5 151.8,86.2 153.9,86.2 156.0,124.2 158.1,124.2 160.2,141.5 162.2,141.5 164.3,86.2 166.4,86.2 168.5,86.2 170.6,86.2 172.7,86.2 174.8,86.2 176.8,86.2 178.9,86.2 181.0,86.2 183.1,86.2 185.2,86.2 187.3,86.2 189.4,86.2 191.4,86.2 193.5,86.2 195.6,86.2 197.7,86.2 199.8,86.2 201.9,86.2 204.0,86.2 206.0,86.2 208.1,86.2 210.2,86.2 212.3,86.2 214.4,86.2 216.5,86.2 218.6,86.2 220.6,86.2 222.7,86.2 224.8,86.2 226.9,86.2 229.0,145.0 231.1,145.0 233.2,145.0 235.2,145.0 237.3,145.0 239.4,145.0 241.5,145.0 243.6,145.0 245.7,86.2 247.8,86.2 249.8,86.2 251.9,86.2 254.0,86.2 256.1,86.2 258.2,86.2 260.3,86.2 262.4,86.2 264.4,89.6 266.5,89.6 268.6,89.6 270.7,89.6 272.8,89.6 274.9,89.6 277.0,89.6 279.0,89.6 281.1,93.1 283.2,93.1 285.3,93.1 287.4,93.1 289.5,93.1 291.6,93.1 293.6,51.5 295.7,51.5 297.8,51.5 299.9,55.0 302.0,55.0 304.1,55.0 306.1,55.0 308.2,55.0 310.3,55.0 312.4,55.0 314.5,55.0 316.6,51.5 318.7,51.5 320.7,51.5 322.8,51.5 324.9,51.5 327.0,51.5 329.1,51.5 331.2,51.5 333.3,51.5 335.3,51.5 337.4,51.5 339.5,51.5 341.6,51.5 343.7,51.5 345.8,51.5 347.9,51.5 349.9,51.5 352.0,51.5 354.1,51.5 356.2,51.5 358.3,51.5 360.4,51.5 362.5,51.5 364.5,51.5 366.6,51.5 368.7,51.5 370.8,51.5 372.9,51.5 375.0,51.5 377.1,51.5 379.1,51.5 381.2,51.5 383.3,51.5 385.4,51.5 387.5,51.5 389.6,51.5 391.7,51.5 393.7,51.5 395.8,51.5 397.9,51.5 400.0,51.5 402.1,51.5 404.2,51.5 406.3,51.5 408.3,51.5 410.4,51.5 412.5,51.5 414.6,51.5 416.7,51.5 418.8,51.5 420.9,51.5 422.9,51.5 425.0,51.5 427.1,51.5 429.2,51.5 431.3,51.5 433.4,51.5 435.5,51.5 437.5,51.5 439.6,51.5 441.7,51.5 443.8,51.5 445.9,51.5 448.0,51.5 450.1,51.5 452.1,65.4 454.2,79.2 456.3,79.2 458.4,79.2 460.5,79.2 462.6,79.2 464.7,79.2 466.7,79.2 468.8,79.2 470.9,79.2 473.0,79.2 475.1,79.2 477.2,79.2 479.3,79.2 481.3,79.2 483.4,79.2 485.5,79.2 487.6,79.2 489.7,79.2 491.8,79.2 493.9,79.2 495.9,79.2 498.0,51.5 500.1,51.5 502.2,51.5 504.3,51.5 506.4,51.5 508.4,51.5 510.5,51.5 512.6,55.0 514.7,55.0 516.8,55.0 518.9,55.0 521.0,55.0 523.0,51.5 525.1,51.5 527.2,51.5 529.3,51.5 531.4,51.5 533.5,51.5 535.6,51.5 537.6,51.5 539.7,51.5 541.8,51.5 543.9,51.5 546.0,51.5 548.1,51.5 550.2,51.5 552.2,51.5 554.3,51.5 556.4,51.5 558.5,51.5 560.6,51.5 562.7,51.5 564.8,51.5 566.8,51.5 568.9,51.5 571.0,51.5 573.1,51.5 575.2,51.5 577.3,51.5 579.4,51.5 581.4,51.5 583.5,55.0 585.6,55.0 587.7,55.0 589.8,55.0 591.9,58.5 594.0,58.5 596.0,58.5 598.1,58.5 600.2,61.9 602.3,61.9 604.4,61.9 606.5,61.9 608.6,51.5 610.6,51.5 612.7,55.0 614.8,58.5 616.9,58.5 619.0,58.5 621.1,58.5 623.2,61.9 625.2,61.9 627.3,61.9 629.4,51.5 631.5,51.5 633.6,55.0 635.7,55.0 637.8,55.0 639.8,55.0 641.9,58.5 644.0,58.5 646.1,58.5 648.2,58.5 650.3,61.9 652.4,61.9 654.4,61.9 656.5,61.9 658.6,51.5 660.7,51.5 662.8,51.5 664.9,51.5 667.0,51.5 669.0,51.5 671.1,51.5 673.2,51.5 675.3,51.5 677.4,51.5 679.5,51.5 681.6,51.5 683.6,55.0 685.7,55.0 687.8,55.0 689.9,55.0 692.0,58.5 694.1,58.5 696.1,58.5 698.2,58.5 700.3,58.5 702.4,61.9 704.5,61.9 706.6,61.9 708.7,61.9 710.7,61.9 712.8,65.4 714.9,65.4 717.0,65.4 719.1,68.8 721.2,72.3 723.3,75.8 725.3,75.8 727.4,75.8 729.5,72.3 731.6,72.3 733.7,72.3 735.8,72.3 737.9,72.3 739.9,72.3 742.0,72.3 744.1,72.3 746.2,72.3 748.3,72.3 750.4,72.3 752.5,72.3 754.5,72.3 756.6,72.3 758.7,100.0 760.8,127.7 762.9,127.7 765.0,127.7 767.1,127.7 769.1,127.7 771.2,127.7 773.3,127.7 775.4,127.7 777.5,127.7 779.6,127.7 781.7,127.7 783.7,127.7 785.8,127.7 787.9,127.7 790.0,196.9 790.0,196.9' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T374, max 52</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Spear <span class="muted">(+5 atk · dur 53/60 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Breastplate <span class="muted">(+6 def · dur 173/180 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T3: arrived on Floor 2</li><li>T207: arrived on Floor 3</li><li>T353: arrived on Floor 4</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 2</td><td>26</td></tr><tr><td>Floor 3</td><td>10</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Orc</td><td>8</td></tr><tr><td>Wight</td><td>6</td></tr><tr><td>Giant Spider</td><td>4</td></tr><tr><td>Goblin</td><td>3</td></tr><tr><td>UNDEAD LICHEN</td><td>3</td></tr><tr><td>Slime Mold</td><td>3</td></tr><tr><td>UNDEAD ZOMBIE</td><td>3</td></tr><tr><td>Giant Rat</td><td>2</td></tr><tr><td>Spore Puff</td><td>2</td></tr><tr><td>Zombie</td><td>1</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (22)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T257</td><td>F3</td><td>Healing Potion</td><td>1×</td><td>50g</td></tr><tr><td>T258</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T260</td><td>F3</td><td>Healing Potion</td><td>1×</td><td>50g</td></tr><tr><td>T260</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T260</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T261</td><td>F3</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T262</td><td>F3</td><td>Spear</td><td>1×</td><td>55g</td></tr><tr><td>T263</td><td>F3</td><td>Breastplate</td><td>1×</td><td>120g</td></tr><tr><td>T264</td><td>F3</td><td>Healing Potion</td><td>1×</td><td>50g</td></tr><tr><td>T264</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T264</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T264</td><td>F3</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T264</td><td>F3</td><td>Spear</td><td>1×</td><td>55g</td></tr><tr><td>T264</td><td>F3</td><td>Breastplate</td><td>1×</td><td>120g</td></tr><tr><td>T268</td><td>F3</td><td>Healing Potion</td><td>1×</td><td>50g</td></tr><tr><td>T268</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T268</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T268</td><td>F3</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T268</td><td>F3</td><td>Spear</td><td>1×</td><td>55g</td></tr><tr><td>T268</td><td>F3</td><td>Breastplate</td><td>1×</td><td>120g</td></tr><tr><td>T272</td><td>F3</td><td>Spear</td><td>1×</td><td>55g</td></tr><tr><td>T272</td><td>F3</td><td>Breastplate</td><td>1×</td><td>120g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Rations</td><td>food</td><td>6</td><td></td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Movement Efficiency · overall waste 47%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    <tr><td>Floor 2</td><td>62</td><td>25</td><td>25</td><td>37</td><td>60%</td></tr><tr><td>Floor 3</td><td>21</td><td>17</td><td>17</td><td>4</td><td>19%</td></tr><tr><td>Floor 4</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>88</td><td>47</td><td>47</td><td>41</td><td>47%</td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>unknown</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T368: Pray to claim a blessing, or sacrifice to deepen your piety.</li><li>T368: (Visit an Oracle to gauge your standing with the gods.)</li><li>T368: ) You pray to Lunara, the Moon Sentinel.</li><li>T368: Imrahil is now affected by Altar Defense Boost!</li><li>T368: +1 DEF for the next 10 turns.</li><li>T368: The altar crumbles to dust, its divine power spent.</li><li>T369: The lantern reveals 13 nearby rooms!</li><li>T369: Lantern fuel remaining: 27</li><li>T372: Goddess of Protection &amp;middot; craves: Armor</li><li>T372: Pray to claim a blessing, or sacrifice to deepen your piety.</li><li>T372: (Visit an Oracle to gauge your standing with the gods.)</li><li>T372: ) You pray to Lunara, the Moon Sentinel.</li><li>T372: Imrahil is now affected by Altar Defense Boost!</li><li>T372: +1 DEF for the next 10 turns.</li><li>T372: The altar crumbles to dust, its divine power spent.</li><li>T372: You light your Lantern...</li><li>T372: The lantern reveals 13 nearby rooms!</li><li>T372: Lantern fuel remaining: 27</li><li>T372: You found a sparkling treasure!</li><li>T372: Strength increased by 1! Now: 11</li><li>T372: Dexterity increased by 1! Now: 11</li><li>T372: Intelligence increased by 1! Now: 25</li><li>T372: You absorbed the power of Crystal of Power!</li><li>T373: A  UNDEAD WRAITH (Level 4) appears! An undead guardian risen to protect the ancient tomb!</li><li>T373: You seize the initiative!</li><li>T374: You successfully broke away from combat!</li><li>T374: Choose a direction to flee (n/s/e/w):</li><li>T374: Ouch!  UNDEAD WRAITH hit Imrahil!</li><li>T374: You took 20 damage!</li><li>T374: You were defeated...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T363 <span class='mode'>game_loop</span>: <code>back</code></li><li>T364 <span class='mode'>game_loop</span>: <code>l</code></li><li>T365 <span class='mode'>game_loop</span>: <code>s</code></li><li>T366 <span class='mode'>game_loop</span>: <code>s</code></li><li>T367 <span class='mode'>altar_mode</span>: <code>e</code></li><li>T368 <span class='mode'>game_loop</span>: <code>pray</code></li><li>T369 <span class='mode'>game_loop</span>: <code>l</code></li><li>T370 <span class='mode'>game_loop</span>: <code>s</code></li><li>T371 <span class='mode'>chest_mode</span>: <code>e</code></li><li>T372 <span class='mode'>game_loop</span>: <code>o</code></li><li>T373 <span class='mode'>combat_mode</span>: <code>e</code></li><li>T374 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        </section>
+        
+
+</body>
+</html>

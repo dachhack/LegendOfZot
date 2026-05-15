@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Finrod the elf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Finrod, the elf</h1>
+  <p class="muted">non-binary adventurer · seed 1800 · started 2026-05-15T08:56:18+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">420</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F2</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L3</span></div>
+      <div class="stat"><span>Experience</span><span class="v">244</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-2 / 48</span></div>
+      <div class="stat"><span>Mana</span><span class="v">11 / 50</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">0</span></div>
+      <div class="stat"><span>Gold</span><span class="v">631g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">54</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">29</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">16</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,115.0 13.7,115.0 17.4,85.0 21.1,88.8 24.9,88.8 28.6,88.8 32.3,85.0 36.0,85.0 39.7,85.0 43.4,85.0 47.1,85.0 50.9,85.0 54.6,85.0 58.3,92.5 62.0,100.0 65.7,107.5 69.4,85.0 73.1,88.8 76.9,88.8 80.6,88.8 84.3,85.0 88.0,85.0 91.7,85.0 95.4,85.0 99.1,85.0 102.9,85.0 106.6,85.0 110.3,85.0 114.0,85.0 117.7,85.0 121.4,92.5 125.1,92.5 128.9,92.5 132.6,88.8 136.3,85.0 140.0,85.0 143.7,85.0 147.4,85.0 151.1,85.0 154.9,85.0 158.6,85.0 162.3,85.0 166.0,85.0 169.7,85.0 173.4,85.0 177.1,85.0 180.9,85.0 184.6,85.0 188.3,85.0 192.0,85.0 195.7,85.0 199.4,92.5 203.1,92.5 206.9,92.5 210.6,92.5 214.3,88.8 218.0,88.8 221.7,85.0 225.4,85.0 229.1,92.5 232.9,92.5 236.6,92.5 240.3,92.5 244.0,92.5 247.7,92.5 251.4,92.5 255.1,126.2 258.9,126.2 262.6,130.0 266.3,137.5 270.0,141.2 273.7,141.2 277.4,85.0 281.1,88.8 284.9,88.8 288.6,88.8 292.3,88.8 296.0,88.8 299.7,88.8 303.4,88.8 307.1,88.8 310.9,88.8 314.6,88.8 318.3,88.8 322.0,88.8 325.7,88.8 329.4,88.8 333.1,88.8 336.9,88.8 340.6,88.8 344.3,88.8 348.0,88.8 351.7,85.0 355.4,103.8 359.1,103.8 362.9,103.8 366.6,47.5 370.3,47.5 374.0,47.5 377.7,51.2 381.4,51.2 385.1,55.0 388.9,58.8 392.6,58.8 396.3,58.8 400.0,55.0 403.7,55.0 407.4,58.8 411.1,58.8 414.9,55.0 418.6,55.0 422.3,62.5 426.0,58.8 429.7,58.8 433.4,58.8 437.1,58.8 440.9,55.0 444.6,55.0 448.3,55.0 452.0,55.0 455.7,55.0 459.4,55.0 463.1,55.0 466.9,55.0 470.6,55.0 474.3,55.0 478.0,55.0 481.7,55.0 485.4,55.0 489.1,55.0 492.9,55.0 496.6,55.0 500.3,58.8 504.0,58.8 507.7,58.8 511.4,58.8 515.1,66.2 518.9,70.0 522.6,70.0 526.3,73.8 530.0,73.8 533.7,77.5 537.4,81.2 541.1,81.2 544.9,47.5 548.6,51.2 552.3,51.2 556.0,10.0 559.7,10.0 563.4,10.0 567.1,10.0 570.9,17.5 574.6,25.0 578.3,28.8 582.0,32.5 585.7,40.0 589.4,40.0 593.1,40.0 596.9,40.0 600.6,40.0 604.3,40.0 608.0,40.0 611.7,40.0 615.4,40.0 619.1,40.0 622.9,40.0 626.6,40.0 630.3,43.8 634.0,43.8 637.7,43.8 641.4,43.8 645.1,43.8 648.9,43.8 652.6,43.8 656.3,43.8 660.0,43.8 663.7,43.8 667.4,43.8 671.1,43.8 674.9,43.8 678.6,43.8 682.3,43.8 686.0,43.8 689.7,43.8 693.4,43.8 697.1,43.8 700.9,43.8 704.6,43.8 708.3,43.8 712.0,43.8 715.7,43.8 719.4,43.8 723.1,43.8 726.9,51.2 730.6,58.8 734.3,10.0 738.0,17.5 741.7,32.5 745.4,47.5 749.1,62.5 752.9,77.5 756.6,92.5 760.3,107.5 764.0,122.5 767.7,137.5 771.4,152.5 775.1,167.5 778.9,175.0 782.6,182.5 786.3,182.5 790.0,197.5 790.0,197.5' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T420, max 48</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Spear <span class="muted">(+5 atk · dur 24/60 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Ring Mail <span class="muted">(+4 def · dur 65/106 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T250: arrived on Floor 2</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>46</td></tr><tr><td>Floor 2</td><td>8</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Kobold</td><td>12</td></tr><tr><td>Giant Rat</td><td>9</td></tr><tr><td>Skeleton</td><td>8</td></tr><tr><td>Rust Monster</td><td>6</td></tr><tr><td>Stirge</td><td>3</td></tr><tr><td>Crawling Claw</td><td>3</td></tr><tr><td>Goblin</td><td>3</td></tr><tr><td>UNDEAD ZOMBIE</td><td>3</td></tr><tr><td>Zombie</td><td>3</td></tr><tr><td>Spore Puff</td><td>2</td></tr><tr><td>Bat</td><td>2</td></tr><tr><td>Slime Mold</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (29)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T158</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T159</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T160</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T160</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T160</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T161</td><td>F1</td><td>Scroll of Foresight</td><td>1×</td><td>40g</td></tr><tr><td>T162</td><td>F1</td><td>Scroll of Protection</td><td>1×</td><td>80g</td></tr><tr><td>T163</td><td>F1</td><td>Handaxe</td><td>1×</td><td>45g</td></tr><tr><td>T164</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T164</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T164</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T164</td><td>F1</td><td>Scroll of Foresight</td><td>1×</td><td>40g</td></tr><tr><td>T164</td><td>F1</td><td>Scroll of Protection</td><td>1×</td><td>80g</td></tr><tr><td>T164</td><td>F1</td><td>Handaxe</td><td>1×</td><td>45g</td></tr><tr><td>T164</td><td>F1</td><td>Spear</td><td>1×</td><td>55g</td></tr><tr><td>T165</td><td>F1</td><td>Ring Mail</td><td>1×</td><td>80g</td></tr><tr><td>T168</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T168</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T168</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T168</td><td>F1</td><td>Scroll of Foresight</td><td>1×</td><td>40g</td></tr><tr><td>T168</td><td>F1</td><td>Scroll of Protection</td><td>1×</td><td>80g</td></tr><tr><td>T168</td><td>F1</td><td>Handaxe</td><td>1×</td><td>45g</td></tr><tr><td>T168</td><td>F1</td><td>Spear</td><td>1×</td><td>55g</td></tr><tr><td>T168</td><td>F1</td><td>Ring Mail</td><td>1×</td><td>80g</td></tr><tr><td>T172</td><td>F1</td><td>Scroll of Foresight</td><td>1×</td><td>40g</td></tr><tr><td>T172</td><td>F1</td><td>Scroll of Protection</td><td>1×</td><td>80g</td></tr><tr><td>T172</td><td>F1</td><td>Handaxe</td><td>1×</td><td>45g</td></tr><tr><td>T172</td><td>F1</td><td>Spear</td><td>1×</td><td>55g</td></tr><tr><td>T172</td><td>F1</td><td>Ring Mail</td><td>1×</td><td>80g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Minor Mana Potion</td><td>potion_mana</td><td>1</td><td>identified</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Movement Efficiency · overall waste 61%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    <tr><td>Floor 1</td><td>33</td><td>23</td><td>23</td><td>10</td><td>30%</td></tr><tr><td>Floor 2</td><td>80</td><td>21</td><td>21</td><td>59</td><td>74%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>113</td><td>44</td><td>44</td><td>69</td><td>61%</td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>starvation</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T414: Lantern fuel remaining: 16</li><li>T415: A  UNDEAD SKELETON (Level 2) appears! An undead guardian risen to protect the ancient tomb!</li><li>T415: You seize the initiative!</li><li>T416:  The complex enchantments here are clouding your understanding.</li><li>T416:    You sense magical power here. It might enhance you.</li><li>T416: Will you drink from the basin?</li><li>T416: You are STARVING! Lost 2 HP from hunger!</li><li>T416: This tomb lies empty and silent. Nothing remains.</li><li>T416: You light your Lantern...</li><li>T416: The lantern reveals 5 nearby rooms!</li><li>T416: Lantern fuel remaining: 16</li><li>T416: A  UNDEAD SKELETON (Level 2) appears! An undead guardian risen to protect the ancient tomb!</li><li>T416: You seize the initiative!</li><li>T416: You successfully broke away from combat!</li><li>T416: Choose a direction to flee (n/s/e/w):</li><li>T416:  UNDEAD SKELETON missed Finrod!</li><li>T418: The lantern reveals 7 nearby rooms!</li><li>T418: Lantern fuel remaining: 15</li><li>T420: A  UNDEAD SKELETON (Level 2) appears! An undead guardian risen to protect the ancient tomb!</li><li>T420: You seize the initiative!</li><li>T420: You successfully broke away from combat!</li><li>T420: Choose a direction to flee (n/s/e/w):</li><li>T420:  UNDEAD SKELETON missed Finrod!</li><li>T420: You light your Lantern...</li><li>T420: The lantern reveals 7 nearby rooms!</li><li>T420: Lantern fuel remaining: 15</li><li>T420: You are STARVING! Lost 2 HP from hunger!</li><li>T420: Ouch!  UNDEAD SKELETON hit Finrod!</li><li>T420: You took 3 damage!</li><li>T420: You were defeated...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T409 <span class='mode'>game_loop</span>: <code>s</code></li><li>T410 <span class='mode'>game_loop</span>: <code>e</code></li><li>T411 <span class='mode'>pool_mode</span>: <code>e</code></li><li>T412 <span class='mode'>game_loop</span>: <code>n</code></li><li>T413 <span class='mode'>game_loop</span>: <code>e</code></li><li>T414 <span class='mode'>game_loop</span>: <code>l</code></li><li>T415 <span class='mode'>combat_mode</span>: <code>s</code></li><li>T416 <span class='mode'>flee_direction_mode</span>: <code>f</code></li><li>T417 <span class='mode'>game_loop</span>: <code>back</code></li><li>T418 <span class='mode'>game_loop</span>: <code>l</code></li><li>T419 <span class='mode'>combat_mode</span>: <code>e</code></li><li>T420 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        </section>
+        
+
+</body>
+</html>
