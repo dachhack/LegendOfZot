@@ -2123,6 +2123,7 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                             # Foresight scroll changes prompt mode
                             pass
                     else:
+                        prompt_before_scroll = gs.prompt_cntl
                         consumed = item_to_use.use(player_character, my_tower)
                         if consumed:
                             # Handle stack: decrement count or remove if last one
@@ -2131,9 +2132,16 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                                 add_log(f"{COLOR_GREY}({item_to_use.count} remaining){COLOR_RESET}")
                             else:
                                 player_character.inventory.remove_item(item_to_use.name)
-                        gs.inventory_filter = 'use'
-                        gs.prompt_cntl = "inventory"
-                        handle_inventory_menu(player_character, my_tower, "init")
+                        # Only return to inventory if the scroll didn't
+                        # transition to a sub-mode (e.g. Scroll of Identify
+                        # opens identify_scroll_mode and needs the player
+                        # to pick an item; clobbering prompt_cntl here
+                        # reverted it to inventory and the scroll re-fired
+                        # forever -- Arwen elf seed=42 burned 600+ turns).
+                        if gs.prompt_cntl == prompt_before_scroll:
+                            gs.inventory_filter = 'use'
+                            gs.prompt_cntl = "inventory"
+                            handle_inventory_menu(player_character, my_tower, "init")
 
                 elif isinstance(item_to_use, Flare):
                     gs.prompt_cntl = "flare_direction_mode"
@@ -2835,6 +2843,11 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
     for effect_name, effect in character.status_effects.items():
         if effect.effect_type == 'web':
             add_log(f"{COLOR_YELLOW}You are stuck in a web and cannot move!{COLOR_RESET}")
+            # Still tick status effects so the web can expire from
+            # struggling -- without this the web is permanent (the
+            # only other ticking path is combat, but a webbed player
+            # away from monsters has no way to break free).
+            character.process_status_effects()
             return False
         # FIX: Check ignore_confusion flag to prevent recursion
         if effect.effect_type == 'confusion' and not ignore_confusion:

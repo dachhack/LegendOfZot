@@ -47,6 +47,15 @@ from .items import (
     initialize_identification_system, SPELL_TEMPLATES,
     Potion, Food, Meat, Weapon, Armor, Spell,
 )
+from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+
+# Names of bug-sized gear -- the only equipment a shrunk player can use.
+# Mirrors the check at game_systems.py:2239 so the policy can filter
+# upgrade candidates correctly when player_is_shrunk is True.
+_BUG_GEAR_NAMES = frozenset(
+    [t["name"] for t in BUG_WEAPON_TEMPLATES]
+    + [t["name"] for t in BUG_ARMOR_TEMPLATES]
+)
 
 
 # Race stat modifiers, mirrored from game_systems.process_character_creation_action.
@@ -256,6 +265,32 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     gs.active_zotle_teleporter = False
     gs._pending_load = None
 
+    # Combat / turn state — these leak between runs in batch testing,
+    # causing seed=42 Arwen to inherit Tauriel's shrunk status on bug
+    # floors and softlock in stairs_down_mode forever.
+    gs.player_is_shrunk = False
+    gs.bug_queen_defeated = False
+    gs.bug_level_floors = {}
+    gs.monster_acts_first = False
+    gs.monster_initiative_pending = False
+    gs.last_spell_cast = None
+    gs.spell_charging = None
+    gs.last_concentration_roll = None
+    gs.monster_defeated_anim = None
+    gs.victory_monster_name = None
+    gs.last_dice_rolls = []
+    gs.unique_treasures_spawned = set()
+    gs.last_monster_damage = 0
+    gs.last_player_damage = 0
+    gs.last_player_blocked = False
+    gs.last_player_status = None
+    gs.last_monster_status = None
+    gs.last_player_heal = 0
+    gs.last_monster_damage_badge = None
+    gs.last_player_damage_badge = None
+    gs.pre_round_monster_hp = None
+    gs.pre_round_player_hp = None
+
     initialize_identification_system()
 
     gs.my_tower = Tower()
@@ -463,6 +498,16 @@ class PlaytestSession:
         # by the policy's tile-coverage descent gate to leave a floor
         # once enough has been swept, even if a far beneficial remains.
         self.visited_tiles_this_floor = set()
+        # Blocked-directions tracker. When the agent issues a
+        # cardinal-direction action (n/s/e/w from game_loop or a
+        # flee/move-accepting mode) and the position doesn't change,
+        # that direction is added here. Cleared whenever the agent
+        # successfully moves OR changes floors. Surfaces in obs so the
+        # wayfinder can avoid retrying the same wall over and over --
+        # Oin/Legolas/Boromir burned 2592-2780 turns each sending 's'
+        # into a wall because the BFS first_step kept resolving south
+        # and anti-backtrack only fires on POSITION CHANGE.
+        self.blocked_directions = set()
         # Fog of war: when True, the neighbour + nearest-feature obs
         # respect room.discovered so the agent has to actually walk over
         # (or lantern-light) tiles before knowing what's there. The
@@ -515,6 +560,7 @@ class PlaytestSession:
                 "status_effects": list(pc.status_effects.keys()),
                 "equipped": _equipped_obs(pc),
                 "lantern": _lantern_obs(pc),
+                "is_shrunk": bool(gs.player_is_shrunk),
             },
             "memorized_spells": [
                 {"slot": i + 1, "name": s.name,
@@ -530,6 +576,7 @@ class PlaytestSession:
             "frontier_step": self._frontier_step_obs(),
             "nearest_monster_path": self._nearest_monster_path_obs(),
             "recent_step_set": self._recent_step_set(),
+            "blocked_directions": sorted(self.blocked_directions),
             "tile_coverage": self._tile_coverage_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
@@ -674,6 +721,12 @@ class PlaytestSession:
                 entry["equipped"] = (
                     item is pc.equipped_weapon or item is pc.equipped_armor
                 )
+                # Bug-sized: only flag bug gear can be equipped while
+                # the player is shrunk on a bug floor. Without this,
+                # Tauriel elf seed=13 burned 786 turns trying to equip
+                # her Falchion -- the handler silently rejected each
+                # attempt with "too tiny" and the policy never knew.
+                entry["is_bug_gear"] = item.name in _BUG_GEAR_NAMES
             # Identification status applies to potions / scrolls / spells
             # too -- knowing what's in your bag changes what's safe to
             # use. is_item_identified is the canonical check.
@@ -1228,6 +1281,12 @@ class PlaytestSession:
             elif mode == "taxidermist_mode":
                 from .game_systems import process_taxidermist_action
                 process_taxidermist_action(pc, tw, action)
+            elif mode == "identify_scroll_mode":
+                from .items import process_identify_scroll_action
+                process_identify_scroll_action(pc, tw, action)
+            elif mode == "upgrade_scroll_mode":
+                from .items import process_upgrade_scroll_action
+                process_upgrade_scroll_action(pc, tw, action)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -1298,8 +1357,22 @@ class PlaytestSession:
             # Reset tile-coverage tracking: the new floor starts at 0%
             # explored from the agent's perspective.
             self.visited_tiles_this_floor = set()
+            # Fresh floor, fresh walls to discover.
+            self.blocked_directions = set()
         # Track current-floor coverage for the policy's descent gate.
         self.visited_tiles_this_floor.add((pc_after.x, pc_after.y))
+        # Maintain blocked_directions: when a cardinal-move action
+        # fails to change position, that direction is a wall from the
+        # current tile. Cleared on any successful move.
+        if action in ("n", "s", "e", "w"):
+            if pre_step_xyz == post_step_xyz:
+                self.blocked_directions.add(action)
+            else:
+                self.blocked_directions.clear()
+        elif pre_step_xyz != post_step_xyz:
+            # Any other action that caused movement (e.g., flee
+            # direction processed differently) also resets blockers.
+            self.blocked_directions.clear()
         # Record the new position for anti-backtrack. Keep a short
         # window (4 entries) -- long enough to detect 2-tile and
         # 3-tile oscillations, short enough that the agent isn't
@@ -1412,6 +1485,7 @@ def smart_policy(obs, rng, use_lantern=True):
     # (welds to hand) or sealed (can't be repaired); unidentified
     # items are eligible -- that's the gamble the upgrade economy
     # is built around.
+    is_shrunk = bool(p.get("is_shrunk"))
     def _best_upgrade(category, bonus_key, current_bonus):
         best_slot = None
         best_bonus = current_bonus
@@ -1423,6 +1497,10 @@ def smart_policy(obs, rng, use_lantern=True):
             if entry.get("is_broken"):
                 continue
             if entry.get("buc_known") and entry.get("buc_status") == "cursed":
+                continue
+            # While shrunk, only bug-sized gear actually equips -- the
+            # handler silently rejects anything else with "too tiny".
+            if is_shrunk and not entry.get("is_bug_gear"):
                 continue
             b = entry.get(bonus_key) or 0
             if b > best_bonus:
@@ -1748,17 +1826,23 @@ def smart_policy(obs, rng, use_lantern=True):
         feature_paths = obs.get("feature_paths") or {}
         monster_path = obs.get("nearest_monster_path")
         recent_steps = set(obs.get("recent_step_set") or [])
+        blocked = set(obs.get("blocked_directions") or [])
 
         def _swap_if_backtrack(d):
-            """Anti-backtrack: if `d` would re-step on a recent tile and
-            a non-recent walkable alternative exists, use the
-            alternative instead. Breaks the SE-tiebreak ping-pong that
-            burned 4857/5000 turns on seed=42 dwarf F2 before the fix."""
-            if d not in recent_steps:
+            """Anti-backtrack + anti-wall guard: if `d` would re-step a
+            recent tile OR is a known-blocked direction (wall from
+            current position) AND an alternative walkable direction
+            exists, use the alternative instead. The blocked-directions
+            check breaks the south-into-wall wayfinder loops that
+            burned 2592-2780 turns on Oin/Legolas/Boromir before the
+            obs surfaced wall failures."""
+            if d not in recent_steps and d not in blocked:
                 return d
             alts = []
             for alt in ("n", "s", "e", "w"):
-                if alt == d or alt in recent_steps:
+                if alt == d:
+                    continue
+                if alt in recent_steps or alt in blocked:
                     continue
                 t = neighbors.get(alt)
                 if t in AVOID or t == "#":
@@ -1766,6 +1850,14 @@ def smart_policy(obs, rng, use_lantern=True):
                 alts.append(alt)
             if alts:
                 return rng.choice(alts)
+            # All non-recent / non-blocked alternatives also walls/
+            # recent. Try ANY walkable that isn't blocked.
+            for alt in ("n", "s", "e", "w"):
+                if alt in blocked:
+                    continue
+                t = neighbors.get(alt)
+                if t not in AVOID and t != "#":
+                    return alt
             return d
 
         # Keyed dungeon (if any) via BFS first_step.
@@ -1821,6 +1913,18 @@ def smart_policy(obs, rng, use_lantern=True):
         non_recent = [d for d in candidates if d not in recent_steps]
         if non_recent:
             candidates = non_recent
+        else:
+            # Every fresh walkable is also recent -- 2-tile oscillation
+            # in a dead-end corridor. If a non-recent walkable exists
+            # (typically a visited feature like a re-enterable dungeon
+            # or vendor), take that to break the loop. Boromir seed=1234
+            # human burned 2700 turns ping-ponging between (13,4) and
+            # (14,4); the only escape was south into a visited N tile
+            # that the freshness filter was excluding.
+            stuck_break = [d for d in ("n", "s", "e", "w")
+                           if _walkable(d) and d not in recent_steps]
+            if stuck_break:
+                candidates = stuck_break
         undiscovered_nbrs = [d for d in candidates if neighbors.get(d) is None]
         if undiscovered_nbrs:
             candidates = undiscovered_nbrs
@@ -1866,7 +1970,8 @@ def smart_policy(obs, rng, use_lantern=True):
             for entry in inv:
                 if (entry["category"] == "weapon"
                         and not entry.get("is_broken")
-                        and entry["name"] != equipped["weapon"]["name"]):
+                        and entry["name"] != equipped["weapon"]["name"]
+                        and (not is_shrunk or entry.get("is_bug_gear"))):
                     proposed = f"e{entry['slot']}"
                     break
         if (proposed is None
@@ -1876,7 +1981,8 @@ def smart_policy(obs, rng, use_lantern=True):
             for entry in inv:
                 if (entry["category"] == "armor"
                         and not entry.get("is_broken")
-                        and entry["name"] != equipped["armor"]["name"]):
+                        and entry["name"] != equipped["armor"]["name"]
+                        and (not is_shrunk or entry.get("is_bug_gear"))):
                     proposed = f"e{entry['slot']}"
                     break
         if proposed is None and weapon_upgrade_slot is not None:
@@ -2009,6 +2115,22 @@ def smart_policy(obs, rng, use_lantern=True):
         if affordable_dmg and rng.random() < 0.90:
             return "c"
         return "a" if rng.random() < 0.92 else "f"
+
+    if mode == "identify_scroll_mode":
+        # Scroll of Identify opened a sub-mode listing unidentified
+        # items (1..N) or 'c' to cancel. Cancel doesn't consume the
+        # scroll, so the agent loops `i -> u<scroll> -> back -> i`
+        # forever; Eowyn the human seed=5678 burned 1244 turns on
+        # this. Always pick '1' (first unidentified item) so the
+        # scroll consumes. If there's nothing to identify the
+        # handler returns to inventory on its own.
+        return "1"
+
+    if mode == "upgrade_scroll_mode":
+        # Same shape as identify -- '1' picks the first valid item
+        # and consumes the scroll. The handler self-exits when the
+        # bag has no upgradeable gear.
+        return "1"
 
     if mode == "flee_direction_mode":
         # Pick a walkable direction to actually flee. Without this
@@ -2219,14 +2341,23 @@ def smart_policy(obs, rng, use_lantern=True):
         # CHEST GAME BUG: the chest handler doesn't accept 'l' as a
         # leave command (only o / i / n / s / e / w); sending 'l'
         # logs "Invalid command" and stays in chest_mode, looping
-        # forever. Walk away via cardinal move instead.
+        # forever. Walk away via cardinal move instead. If ALL 4
+        # neighbours are walls (Cirdan elf seed=2200 was warp-landed
+        # on a chest with walls on all sides and burned 2815 turns
+        # sending `n` into the wall), open the chest as a last
+        # resort -- a 30-50 dmg gamble beats an infinite loop.
         neighbors = obs.get("neighbors") or {}
+        blocked = set(obs.get("blocked_directions") or [])
         def _walk_off_chest():
             for d in ("n", "s", "e", "w"):
+                if d in blocked:
+                    continue
                 t = neighbors.get(d)
-                if t and t != "#":
+                # Allow fog (None) -- could be walkable when explored.
+                # Only skip explicit walls.
+                if t != "#":
                     return d
-            return "n"  # last resort
+            return "o"  # walled in; open the chest and hope
         if p["hp"] < 40 and heal_pot_slot is None:
             return _walk_off_chest()
         return "o" if rng.random() < 0.85 else _walk_off_chest()
