@@ -458,6 +458,11 @@ class PlaytestSession:
         # the last 4 (z, x, y) tuples lets the policy break ties by
         # preferring directions that DON'T re-step on a recent tile.
         self.recent_positions = []
+        # Per-floor walkable-tile coverage: set of (x, y) the player
+        # has stood on for the current floor. Reset on descent. Used
+        # by the policy's tile-coverage descent gate to leave a floor
+        # once enough has been swept, even if a far beneficial remains.
+        self.visited_tiles_this_floor = set()
         # Fog of war: when True, the neighbour + nearest-feature obs
         # respect room.discovered so the agent has to actually walk over
         # (or lantern-light) tiles before knowing what's there. The
@@ -525,6 +530,7 @@ class PlaytestSession:
             "frontier_step": self._frontier_step_obs(),
             "nearest_monster_path": self._nearest_monster_path_obs(),
             "recent_step_set": self._recent_step_set(),
+            "tile_coverage": self._tile_coverage_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
             "nearest_undiscovered": self._nearest_undiscovered_obs(),
@@ -1001,6 +1007,24 @@ class PlaytestSession:
             return None
         return {"first_step": best[1], "path_dist": best[0]}
 
+    def _tile_coverage_obs(self):
+        """How much of the current floor's walkable area has the
+        agent stood on? Returns dict with `visited`, `walkable`, and
+        `pct` (0-100). Used by the policy's tile-coverage descent
+        gate to leave a floor early when a far beneficial would
+        require backtracking through already-explored ground."""
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        wall = floor.wall_char
+        walkable = 0
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                if floor.grid[y][x].room_type != wall:
+                    walkable += 1
+        visited = len(self.visited_tiles_this_floor)
+        pct = (visited / walkable * 100.0) if walkable else 0.0
+        return {"visited": visited, "walkable": walkable, "pct": pct}
+
     def _recent_step_set(self):
         """List of cardinal directions (n/s/e/w) whose neighbour is in
         recent_positions on the current floor. Used by the wayfinder
@@ -1197,6 +1221,11 @@ class PlaytestSession:
             # anti-backtrack guard doesn't try to avoid a tile that's
             # no longer reachable (different floor).
             self.recent_positions = []
+            # Reset tile-coverage tracking: the new floor starts at 0%
+            # explored from the agent's perspective.
+            self.visited_tiles_this_floor = set()
+        # Track current-floor coverage for the policy's descent gate.
+        self.visited_tiles_this_floor.add((pc_after.x, pc_after.y))
         # Record the new position for anti-backtrack. Keep a short
         # window (4 entries) -- long enough to detect 2-tile and
         # 3-tile oscillations, short enough that the agent isn't
@@ -1259,7 +1288,7 @@ def smart_policy(obs, rng, use_lantern=True):
     edible_count = 0
     urgent_meat = None
     urgent_rot = None
-    MEAT_EAT_BEFORE = 8  # eat fresh meat once rot_timer <= 8 moves
+    MEAT_EAT_BEFORE = 20  # eat fresh meat at rot_timer <= 20 moves so kill drops actually convert to nutrition
     for i in inv:
         if i["category"] in ("food", "food_rotten"):
             edible_count += 1
@@ -1439,7 +1468,12 @@ def smart_policy(obs, rng, use_lantern=True):
             return "i"
         if has_upgrade:
             return "i"
-        if hunger < 50 and food_slot:
+        # Eat at hunger < 70 so the agent doesn't drift down into the
+        # starvation band (HP-tick territory) on a long boon sweep.
+        # The dossier had 3 deaths whose finishing blow was hunger
+        # ticks even though the agent had Rations in the bag. Bumped
+        # 50 -> 70 to widen the eat window.
+        if hunger < 70 and food_slot:
             return "i"
 
         # Lantern as exploration tool. With fog-of-war on, neighbours
@@ -1510,10 +1544,13 @@ def smart_policy(obs, rng, use_lantern=True):
         # beneficials we can actually reach. The old Manhattan check
         # (nearest_features) counted beneficials behind walls, leading
         # to endless clear-before-descend loops on closed floors.
+        # Include V here so the agent never descends with an unvisited
+        # vendor reachable -- vendor-on-every-floor guarantee. Once V
+        # is visited it leaves feature_paths and the gate releases.
         nearest = obs.get("nearest_features") or {}
         feature_paths_check = obs.get("feature_paths") or {}
         unvisited_beneficials_exist = any(
-            feature_paths_check.get(t) for t in BENEFICIAL_SAFE
+            feature_paths_check.get(t) for t in BENEFICIAL_SAFE + ("V",)
         )
         # Boon-exhaustion gate (replaces the old Lv>=3 character-strength
         # gate). A real player squeezes every safe boon out of a floor
@@ -1553,15 +1590,37 @@ def smart_policy(obs, rng, use_lantern=True):
         wants_vendor = ((healing_count < 2 or needs_repair)
                         and p["gold"] >= 50)
 
+        # Tile-coverage descent gate: when we've swept >= 70% of this
+        # floor's walkable tiles AND D is reachable, descend even if
+        # a few SAFE rooms remain unvisited (probably stuck behind a
+        # wall the BFS can navigate but the cost-to-walk-there isn't
+        # worth it). The waste% audit caught agents burning 50+
+        # patrol-bouncing moves to retrieve one far beneficial after
+        # the bulk of the floor was explored.
+        coverage_pct = (obs.get("tile_coverage") or {}).get("pct", 0)
+        d_path = feature_paths_check.get("D")
+        d_reachable = bool(d_path and d_path.get("first_step"))
+        # 80% sweep before descending = enough thoroughness to grab
+        # most boons without the long-tail backtracking that drove
+        # the 47% revisit rate. Tighter gates (e.g., 70%) descended
+        # too early, dropping Lv climbs and survival in the smoke
+        # grid.
+        high_coverage_descend = (
+            coverage_pct >= 80 and d_reachable and not is_weak
+        )
+
         # Build tiered priority. Each tier is a tuple of feature types
         # that COMPETE BY DISTANCE -- within a tier the BFS-nearest
-        # reachable target wins. Tiers are taken in order. This
-        # replaces the old flat priority list, which made the agent
-        # walk to a far chest before a near garden purely because
-        # chest ranked first. The waste% audit caught that ranking-
-        # before-distance burns 47% of game_loop moves on revisits.
+        # reachable target wins. Tiers are taken in order. V sits in
+        # its own tier so the vendor is targeted once per floor (when
+        # SAFE rooms are exhausted OR via wants_vendor / is_weak when
+        # potions are low) -- merging V into tier 0 with SAFE caused
+        # over-shopping and dropped survival in the smoke grid.
         if too_long_on_floor:
             tiers = [("D",), ("V",)]
+        elif high_coverage_descend:
+            # Floor mostly swept + stairs in sight -- go.
+            tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
         elif is_weak:
             tiers = [("V",), tuple(BENEFICIAL_SAFE)]
             if not unvisited_beneficials_exist:
@@ -1571,19 +1630,12 @@ def smart_policy(obs, rng, use_lantern=True):
             if not unvisited_beneficials_exist:
                 tiers.append(("D",))
         elif ready_to_clear:
-            # Boons exhausted (or resources pressing): efficient
-            # monster clearing for meat / XP / gold, then descend.
             tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",),
                      ("T", "N"), ("D",)]
         elif unvisited_beneficials_exist:
-            # Healthy + boons remain: opportunistic hunting alongside
-            # boon collection. M follows the safe boons + vendor.
             tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
         else:
-            # No safe boons reachable: descend, but bank a kill on the
-            # way if one is on the path.
-            tiers = [("D",), ("V",), ("M",), ("T", "N"),
-                     tuple(BENEFICIAL_SAFE)]
+            tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
         # Legacy flat-priority alias for the adjacent-feature shortcut
         # below, which iterates a flat list of types.
         priority = tuple(t for tier in tiers for t in tier)
@@ -1926,7 +1978,12 @@ def smart_policy(obs, rng, use_lantern=True):
         # still died at hunger=0 because the override couldn't
         # consistently produce meat (5.1% conversion in fights). Buy
         # harder to never get to the override stage.
-        STOCK = {"potion_healing": 3, "food": 8, "potion_mana": 2}
+        # Food bumped 8 -> 12 after the death dossier showed
+        # starvation deaths at F4 L3-4 in long runs (Kili dwarf, 111
+        # kills, hunger ticked to 0 with no Rations left). 12 Rations
+        # = 480 nutrition uses, enough for ~480 turns of comfort
+        # eating after exhausting kill drops.
+        STOCK = {"potion_healing": 3, "food": 12, "potion_mana": 2}
         if use_lantern and lantern_fuel < 20:
             STOCK["lantern_fuel"] = 2
         owned = {cat: sum(i.get("count", 1) for i in inv
