@@ -415,6 +415,10 @@ class RunReport:
             "gold": p.get("gold"),
             "xp": p.get("xp"),
             "hunger": p.get("hunger"),
+            "strength": p.get("strength"),
+            "dexterity": p.get("dexterity"),
+            "intelligence": p.get("intelligence"),
+            "can_cast": p.get("can_cast"),
             "equipped": p.get("equipped") or {},
             "lantern": p.get("lantern") or {},
             "inventory": final_obs.get("inventory") or [],
@@ -655,6 +659,13 @@ class RunReport:
             stats_level=f.get("level"),
             stats_xp=f.get("xp"),
             stats_hunger=f.get("hunger"),
+            stats_str=f.get("strength") or "—",
+            stats_dex=f.get("dexterity") or "—",
+            stats_int=f.get("intelligence") or "—",
+            stats_can_cast=("yes" if f.get("can_cast") else "no (int <= 15)"),
+            start_str=self.starting_stats.get("strength") or "—",
+            start_dex=self.starting_stats.get("dexterity") or "—",
+            start_int=self.starting_stats.get("intelligence") or "—",
             stats_turn=f.get("turn"),
             stats_max_floor=self.max_floor,
             stats_kills=kills_total,
@@ -800,6 +811,10 @@ a:hover { text-decoration: underline; }
 .outcome.dead { background: #5a1313; color: #fecaca; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
+@media (max-width: 800px) {
+  .grid4 { grid-template-columns: 1fr 1fr; }
+}
 .stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
 .stat:last-child { border-bottom: none; }
 .stat .v { color: #fde68a; font-weight: 600; }
@@ -938,7 +953,7 @@ $sprite_styles
 
 <section class="card">
   <h2>Final Tally</h2>
-  <div class="grid3">
+  <div class="grid4">
     <div>
       <div class="stat"><span>Turns lived</span><span class="v">$stats_turn</span></div>
       <div class="stat"><span>Max floor reached</span><span class="v">F$stats_max_floor</span></div>
@@ -950,6 +965,12 @@ $sprite_styles
       <div class="stat"><span>Mana</span><span class="v">$stats_mana / $stats_max_mana</span></div>
       <div class="stat"><span>Hunger</span><span class="v">$stats_hunger</span></div>
       <div class="stat"><span>Gold</span><span class="v">${stats_gold}g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>STR</span><span class="v">$stats_str <span class="muted" style="font-weight:normal;">(start $start_str)</span></span></div>
+      <div class="stat"><span>DEX</span><span class="v">$stats_dex <span class="muted" style="font-weight:normal;">(start $start_dex)</span></span></div>
+      <div class="stat"><span>INT</span><span class="v">$stats_int <span class="muted" style="font-weight:normal;">(start $start_int)</span></span></div>
+      <div class="stat"><span>Can cast</span><span class="v">$stats_can_cast</span></div>
     </div>
     <div>
       <div class="stat"><span>Total kills</span><span class="v">$stats_kills</span></div>

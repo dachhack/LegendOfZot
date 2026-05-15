@@ -578,7 +578,10 @@ class PlaytestSession:
                 "gold": pc.gold,
                 "level": pc.level,
                 "xp": pc.experience,
+                "strength": pc.strength,
+                "dexterity": pc.dexterity,
                 "intelligence": pc.intelligence,
+                "can_cast": pc.intelligence > 15,
                 "floor": pc.z + 1,
                 "x": pc.x,
                 "y": pc.y,
@@ -1486,10 +1489,20 @@ def smart_policy(obs, rng, use_lantern=True):
                 if urgent_rot is None or rot < urgent_rot:
                     urgent_rot = rot
                     urgent_meat = edible_count
+    # Spell-cast gate: the game refuses any cast attempt with
+    # "Requires Intelligence > 15" (combat.py:1161) and consumes the
+    # turn. Pre-memorised spells in the bag are useless until int
+    # climbs past the threshold via level-ups, stat-boost potions,
+    # altar boons, or library reads. Without this gate a dwarf at
+    # int=8 with a memorised Heal would spin returning "c" in
+    # combat_mode and burn the budget trying to cast a spell the
+    # handler rejects every turn.
+    can_cast = bool(p.get("can_cast"))
     heal_spell_slot = next((s["slot"] for s in spells
                             if s["type"] == "healing"
-                            and s["mana_cost"] <= mana), None)
-    affordable_spells = [s for s in spells if s["mana_cost"] <= mana]
+                            and s["mana_cost"] <= mana), None) if can_cast else None
+    affordable_spells = ([s for s in spells if s["mana_cost"] <= mana]
+                         if can_cast else [])
     affordable_dmg = [s for s in affordable_spells if s["type"] == "damage"]
 
     # Lantern state. With the omniscient nearest_features obs the agent
