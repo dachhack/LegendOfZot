@@ -426,7 +426,7 @@ ACTION_HINTS = {
     "combat_mode":   "a (attack) f (flee) c (cast) I (item) x (back)",
     "spell_casting_mode": "1..N (spell slot) x (cancel)",
     "inventory":     "1..9 (slot) x (back) e (equip-filter) u (use-filter)",
-    "chest_mode":    "o (open) l (leave)",
+    "chest_mode":    "o (open) n s e w (walk off; chest handler doesn't accept 'l')",
     "vendor_shop":   "b (buy) s (sell) x (leave)",
     "stairs_down_mode": "d (descend) x (cancel)",
     "stairs_up_mode":   "u (ascend) x (cancel)",
@@ -2113,11 +2113,20 @@ def smart_policy(obs, rng, use_lantern=True):
         # at low HP with no heal pot in the bag -- a narrow safety
         # net for those runs. When HP is critical AND heal pots are
         # exhausted, walk away from the chest instead of gambling.
-        # All other states (healthy / has heal pot fallback) still
-        # open the chest at the original 85% rate.
+        # CHEST GAME BUG: the chest handler doesn't accept 'l' as a
+        # leave command (only o / i / n / s / e / w); sending 'l'
+        # logs "Invalid command" and stays in chest_mode, looping
+        # forever. Walk away via cardinal move instead.
+        neighbors = obs.get("neighbors") or {}
+        def _walk_off_chest():
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t and t != "#":
+                    return d
+            return "n"  # last resort
         if p["hp"] < 40 and heal_pot_slot is None:
-            return "l"
-        return "o" if rng.random() < 0.85 else "l"
+            return _walk_off_chest()
+        return "o" if rng.random() < 0.85 else _walk_off_chest()
     if mode == "stairs_down_mode":
         # Clear beneficials before descending -- but only if BFS says
         # they're CLOSE. The previous Manhattan-based check could pick a
@@ -2195,10 +2204,25 @@ def smart_policy(obs, rng, use_lantern=True):
         # (covers cursed pool max + buffer; still some mimic risk on
         # gold pools but those are 10% within the 10% gold-pool slice).
         # When too weak, just walk away.
+        # Anti-backtrack walk-away: visited pools stay walkable in BFS
+        # transit, so the wayfinder can route THROUGH a pool on the way
+        # to a target. Each transit triggers pool_mode, the HP-gate
+        # walks away, BFS routes back through the same pool from the
+        # neighbour tile. seed=200 elf burned 2925 turns oscillating
+        # e/w through a pool tile at HP 1/28 before this fix. Prefer
+        # non-recent walkable directions to escape the saddle point.
         if p["hp"] < 50:
             neighbors = obs.get("neighbors") or {}
+            recent = set(obs.get("recent_step_set") or [])
             for d in ("n", "s", "e", "w"):
-                if neighbors.get(d) not in ("#", None):
+                if d in recent:
+                    continue
+                t = neighbors.get(d)
+                if t not in ("#", None):
+                    return d
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t not in ("#", None):
                     return d
             return "x"
         return "dr"
