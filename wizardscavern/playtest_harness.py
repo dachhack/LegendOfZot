@@ -73,26 +73,81 @@ RACE_MODS = {
 BASE_STATS = {"health": 30, "attack": 15, "defense": 5,
               "strength": 10, "dexterity": 10, "intelligence": 10}
 
-# Race-themed name pools, LOTR-flavoured. Used when new_game() is called
-# with the default name="Tester" -- each run picks a seed-stable name so
-# transcripts read like adventurer logs instead of T200 spreadsheets.
-RACE_NAMES = {
+# Race-themed name pools, LOTR-flavoured. Used when new_game() is
+# called with the default name="Tester". Each run pairs a canonical
+# first name with a procedurally-picked epithet so 60-run grids
+# stop colliding (16 first names × 24 epithets ~= 384 combos per
+# race, well past the no-collision floor). Seed-stable so the same
+# seed always produces the same hero.
+RACE_FIRST_NAMES = {
     "human": (
         "Aragorn", "Boromir", "Faramir", "Theoden", "Eomer", "Eowyn",
         "Denethor", "Isildur", "Elendil", "Beregond", "Imrahil",
         "Bard", "Beorn", "Hama", "Halbarad", "Forlong", "Gilraen",
+        "Anborn", "Mablung", "Erkenbrand",
     ),
     "elf": (
         "Elrond", "Legolas", "Galadriel", "Arwen", "Celeborn",
         "Glorfindel", "Haldir", "Thranduil", "Luthien", "Tauriel",
         "Finrod", "Earendil", "Feanor", "Idril", "Cirdan", "Galadhrim",
+        "Maeglin", "Beleg", "Voronwe",
     ),
     "dwarf": (
         "Gimli", "Thorin", "Balin", "Dwalin", "Gloin", "Oin",
         "Bifur", "Bofur", "Bombur", "Fili", "Kili", "Dain",
         "Nori", "Ori", "Dori", "Durin", "Thror", "Thrain",
+        "Farin", "Nain", "Borin",
     ),
 }
+# Race-flavoured epithets / patronymics. Combined with a first name
+# to disambiguate hero identities across the playtest grid. Picked
+# to feel like LOTR rather than D&D one-shot characters.
+RACE_EPITHETS = {
+    "human": (
+        "the Brave", "the Stalwart", "the Wise", "the Younger",
+        "the Bold", "Stoneward", "Strider", "Oakheart",
+        "of Gondor", "of Rohan", "of Arnor", "of Bree",
+        "of the Mark", "of the White City", "Greycloak",
+        "Stormcrow", "the Tall", "the Quick", "II",
+        "III", "the Wanderer", "Crownless",
+        "Stonefoot", "the Vigilant",
+    ),
+    "elf": (
+        "the Fair", "Star-eyed", "Moonsinger", "Silver-tongued",
+        "of Lothlorien", "of Imladris", "of the Greenwood",
+        "of Mithlond", "the Sun-bright", "the Wise",
+        "the Singer", "the Bowyer", "the Pathfinder",
+        "Skywatcher", "Silverleaf", "Stareyed",
+        "Goldenbough", "the Ageless", "the Twice-Born",
+        "of the West", "the Quenya-tongued", "the Sea-stained",
+        "Whitepetal", "the Lorekeeper",
+    ),
+    "dwarf": (
+        "Ironbeard", "Stonefoot", "Goldfinder", "Anvilheart",
+        "Hammerhand", "the Stout", "the Mighty", "the Bold",
+        "of Erebor", "of the Iron Hills", "of Khazad-dum",
+        "of Belegost", "Forgewright", "Stonebreaker",
+        "Deepdelver", "Coalbeard", "the Younger", "II",
+        "III", "the Cup-Bearer", "Runesinger", "Axebreaker",
+        "Steelpalm", "Oakshield",
+    ),
+}
+# Back-compat alias: a few callers still import RACE_NAMES from the
+# pre-procedural era. Keep a flat name list per race so they don't
+# break. The procedural _race_name() below is what new_game() uses.
+RACE_NAMES = RACE_FIRST_NAMES
+
+
+def _race_name(race, rng):
+    """Pick a seed-stable LOTR-flavoured name for the hero.
+
+    Returns ``"<First> <Epithet>"``. ``rng`` is a ``random.Random``
+    instance, so two calls with the same seed/state produce the
+    same name. Falls back to the human pool for unknown races.
+    """
+    first_pool = RACE_FIRST_NAMES.get(race) or RACE_FIRST_NAMES["human"]
+    epi_pool = RACE_EPITHETS.get(race) or RACE_EPITHETS["human"]
+    return f"{rng.choice(first_pool)} {rng.choice(epi_pool)}"
 
 
 _ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
@@ -361,7 +416,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     # default. _stdlib_random is already seeded above if a seed was
     # passed, so the name is stable across reruns of the same seed.
     if name == "Tester":
-        name = _stdlib_random.choice(RACE_NAMES.get(race, RACE_NAMES["human"]))
+        name = _race_name(race, _stdlib_random)
     pc = Character(
         name=name,
         health=stats["health"],
