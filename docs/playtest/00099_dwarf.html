@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Thrain the dwarf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Thrain, the dwarf</h1>
+  <p class="muted">non-binary adventurer · seed 99 · started 2026-05-15T01:43:03+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">559</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F5</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L3</span></div>
+      <div class="stat"><span>Experience</span><span class="v">345</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-8 / 84</span></div>
+      <div class="stat"><span>Mana</span><span class="v">3 / 11</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">0</span></div>
+      <div class="stat"><span>Gold</span><span class="v">1127g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">86</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">37</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">26</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,61.4 12.8,61.4 15.6,61.4 18.4,59.3 21.2,59.3 24.0,59.3 26.7,57.1 29.5,55.0 32.3,52.9 35.1,59.3 37.9,65.7 40.7,72.1 43.5,72.1 46.3,70.0 49.1,70.0 51.9,52.9 54.7,52.9 57.4,52.9 60.2,52.9 63.0,52.9 65.8,52.9 68.6,52.9 71.4,52.9 74.2,52.9 77.0,52.9 79.8,55.0 82.6,55.0 85.3,55.0 88.1,59.3 90.9,59.3 93.7,61.4 96.5,65.7 99.3,65.7 102.1,70.0 104.9,70.0 107.7,72.1 110.5,72.1 113.3,72.1 116.0,72.1 118.8,72.1 121.6,72.1 124.4,80.7 127.2,82.9 130.0,82.9 132.8,52.9 135.6,52.9 138.4,55.0 141.2,55.0 144.0,55.0 146.7,52.9 149.5,52.9 152.3,52.9 155.1,52.9 157.9,52.9 160.7,52.9 163.5,52.9 166.3,57.1 169.1,57.1 171.9,55.0 174.7,55.0 177.4,52.9 180.2,52.9 183.0,52.9 185.8,52.9 188.6,52.9 191.4,52.9 194.2,52.9 197.0,52.9 199.8,52.9 202.6,52.9 205.3,52.9 208.1,52.9 210.9,55.0 213.7,57.1 216.5,57.1 219.3,59.3 222.1,63.6 224.9,63.6 227.7,61.4 230.5,61.4 233.3,63.6 236.0,67.9 238.8,70.0 241.6,70.0 244.4,67.9 247.2,67.9 250.0,67.9 252.8,52.9 255.6,52.9 258.4,52.9 261.2,52.9 264.0,52.9 266.7,52.9 269.5,52.9 272.3,52.9 275.1,52.9 277.9,52.9 280.7,52.9 283.5,52.9 286.3,52.9 289.1,52.9 291.9,52.9 294.7,52.9 297.4,52.9 300.2,52.9 303.0,52.9 305.8,52.9 308.6,52.9 311.4,52.9 314.2,52.9 317.0,55.0 319.8,57.1 322.6,57.1 325.3,59.3 328.1,59.3 330.9,59.3 333.7,59.3 336.5,59.3 339.3,59.3 342.1,59.3 344.9,59.3 347.7,59.3 350.5,61.4 353.3,63.6 356.0,31.4 358.8,31.4 361.6,31.4 364.4,33.6 367.2,33.6 370.0,33.6 372.8,33.6 375.6,33.6 378.4,37.9 381.2,40.0 384.0,40.0 386.7,31.4 389.5,31.4 392.3,31.4 395.1,35.7 397.9,37.9 400.7,37.9 403.5,37.9 406.3,37.9 409.1,46.4 411.9,48.6 414.7,48.6 417.4,48.6 420.2,48.6 423.0,48.6 425.8,31.4 428.6,31.4 431.4,31.4 434.2,31.4 437.0,31.4 439.8,35.7 442.6,35.7 445.3,35.7 448.1,33.6 450.9,37.9 453.7,37.9 456.5,40.0 459.3,40.0 462.1,37.9 464.9,37.9 467.7,35.7 470.5,40.0 473.3,40.0 476.0,37.9 478.8,37.9 481.6,37.9 484.4,40.0 487.2,42.1 490.0,42.1 492.8,42.1 495.6,42.1 498.4,42.1 501.2,42.1 504.0,42.1 506.7,42.1 509.5,42.1 512.3,42.1 515.1,42.1 517.9,42.1 520.7,42.1 523.5,42.1 526.3,42.1 529.1,42.1 531.9,42.1 534.7,42.1 537.4,42.1 540.2,42.1 543.0,42.1 545.8,42.1 548.6,42.1 551.4,42.1 554.2,42.1 557.0,42.1 559.8,42.1 562.6,42.1 565.3,42.1 568.1,42.1 570.9,42.1 573.7,42.1 576.5,42.1 579.3,44.3 582.1,44.3 584.9,44.3 587.7,44.3 590.5,44.3 593.3,44.3 596.0,44.3 598.8,10.0 601.6,10.0 604.4,10.0 607.2,10.0 610.0,10.0 612.8,10.0 615.6,10.0 618.4,10.0 621.2,10.0 624.0,10.0 626.7,10.0 629.5,10.0 632.3,10.0 635.1,14.3 637.9,22.9 640.7,27.1 643.5,35.7 646.3,40.0 649.1,48.6 651.9,52.9 654.7,10.0 657.4,10.0 660.2,14.3 663.0,18.6 665.8,18.6 668.6,18.6 671.4,18.6 674.2,18.6 677.0,18.6 679.8,18.6 682.6,18.6 685.3,18.6 688.1,18.6 690.9,18.6 693.7,18.6 696.5,18.6 699.3,27.1 702.1,27.1 704.9,31.4 707.7,35.7 710.5,40.0 713.3,44.3 716.0,48.6 718.8,57.1 721.6,65.7 724.4,74.3 727.2,78.6 730.0,78.6 732.8,82.9 735.6,82.9 738.4,10.0 741.2,14.3 744.0,14.3 746.7,22.9 749.5,31.4 752.3,40.0 755.1,44.3 757.9,48.6 760.7,14.3 763.5,22.9 766.3,27.1 769.1,31.4 771.9,40.0 774.7,48.6 777.4,52.9 780.2,10.0 783.0,14.3 785.8,14.3 788.6,112.9 790.0,207.1' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T559, max 84</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Iron Sword <span class="muted">(+5 atk · dur 12/60 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Studded Leather <span class="muted">(+4 def · dur 58/106 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T294: arrived on Floor 3</li><li>T472: arrived on Floor 5</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>52</td></tr><tr><td>Floor 3</td><td>29</td></tr><tr><td>Floor 5</td><td>5</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Goblin</td><td>13</td></tr><tr><td>Kobold</td><td>12</td></tr><tr><td>Stirge</td><td>10</td></tr><tr><td>Giant Centipede</td><td>9</td></tr><tr><td>UNDEAD SKELETON</td><td>7</td></tr><tr><td>Giant Rat</td><td>7</td></tr><tr><td>Rust Monster</td><td>6</td></tr><tr><td>Bat</td><td>5</td></tr><tr><td>Cockatrice</td><td>5</td></tr><tr><td>Skeleton</td><td>4</td></tr><tr><td>Zombie</td><td>4</td></tr><tr><td>Slime Mold</td><td>4</td></tr><tr><td>Crawling Claw</td><td>4</td></tr><tr><td>Spore Puff</td><td>3</td></tr><tr><td>Sewer Rat</td><td>3</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (37)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T200</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T200</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T200</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T200</td><td>F1</td><td>Scroll of Foresight</td><td>1×</td><td>40g</td></tr><tr><td>T200</td><td>F1</td><td>Iron Sword</td><td>1×</td><td>75g</td></tr><tr><td>T201</td><td>F1</td><td>Studded Leather</td><td>1×</td><td>70g</td></tr><tr><td>T204</td><td>F1</td><td>Healing Potion</td><td>1×</td><td>50g</td></tr><tr><td>T204</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T204</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T204</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T204</td><td>F1</td><td>Scroll of Foresight</td><td>1×</td><td>40g</td></tr><tr><td>T204</td><td>F1</td><td>Iron Sword</td><td>1×</td><td>75g</td></tr><tr><td>T204</td><td>F1</td><td>Studded Leather</td><td>1×</td><td>70g</td></tr><tr><td>T208</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T208</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T208</td><td>F1</td><td>Scroll of Foresight</td><td>1×</td><td>40g</td></tr><tr><td>T208</td><td>F1</td><td>Iron Sword</td><td>1×</td><td>75g</td></tr><tr><td>T208</td><td>F1</td><td>Studded Leather</td><td>1×</td><td>70g</td></tr><tr><td>T488</td><td>F5</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T489</td><td>F5</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T490</td><td>F5</td><td>Potion of Elemental Warding</td><td>1×</td><td>110g</td></tr><tr><td>T491</td><td>F5</td><td>Greatsword</td><td>1×</td><td>250g</td></tr><tr><td>T492</td><td>F5</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T492</td><td>F5</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T492</td><td>F5</td><td>Potion of Elemental Warding</td><td>1×</td><td>110g</td></tr><tr><td>T492</td><td>F5</td><td>Greatsword</td><td>1×</td><td>250g</td></tr><tr><td>T496</td><td>F5</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T496</td><td>F5</td><td>Lantern Fuel</td><td>1×</td><td>5g</td></tr><tr><td>T496</td><td>F5</td><td>Potion of Elemental Warding</td><td>1×</td><td>110g</td></tr><tr><td>T496</td><td>F5</td><td>Greatsword</td><td>1×</td><td>250g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Mana Potion</td><td>potion_mana</td><td>1</td><td>unidentified</td></tr><tr><td>2</td><td>Potion of Elemental Warding</td><td>potion_resistance</td><td>1</td><td>identified</td></tr><tr><td>3</td><td>Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>4</td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>5</td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>6</td><td>Minor Mana Potion</td><td>potion_mana</td><td>2</td><td>identified</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Movement Efficiency · overall waste 24%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    <tr><td>Floor 1</td><td>46</td><td>37</td><td>37</td><td>9</td><td>20%</td></tr><tr><td>Floor 3</td><td>63</td><td>47</td><td>47</td><td>16</td><td>25%</td></tr><tr><td>Floor 5</td><td>30</td><td>21</td><td>21</td><td>9</td><td>30%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>139</td><td>105</td><td>105</td><td>34</td><td>24%</td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>starvation</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T552: Thrain unfurls the Scroll of Foresight...</li><li>T552: Ancient runes glow, revealing the path ahead!</li><li>T552: Choose a direction to peer into (n/s/e/w) or &#x27;c&#x27; to cancel:</li><li>T554: A basin of water fills this chamber...</li><li>T554: The water has curious properties...</li><li>T554:  Your keen mind analyzes the water...</li><li>T554:    This looks safe - possibly beneficial.</li><li>T554: Will you drink from the basin?</li><li>T555: You drink deeply from the basin...</li><li>T555:  It was the Crystalline Spring! </li><li>T555:  The water surges with divine power!</li><li>T555:  FULLY RESTORED! Healed 2 HP!</li><li>T555: The basin drains empty, its magic spent.</li><li>T556:  Your keen mind analyzes the water...</li><li>T556:    This looks safe - possibly beneficial.</li><li>T556: Will you drink from the basin?</li><li>T556: You drink deeply from the basin...</li><li>T556:  It was the Crystalline Spring! </li><li>T556:  The water surges with divine power!</li><li>T556:  FULLY RESTORED! Healed 2 HP!</li><li>T556: The basin drains empty, its magic spent.</li><li>T556: You are STARVING! Lost 2 HP from hunger!</li><li>T557: A  UNDEAD WRAITH (Level 5) appears! An undead guardian risen to protect the ancient tomb!</li><li>T557: The  UNDEAD WRAITH strikes first!</li><li>T558: Ouch!  UNDEAD WRAITH hit Thrain!</li><li>T558: You took 22 damage!</li><li>T558: Flee failed! The monster blocks your escape.</li><li>T559: You successfully broke away from combat!</li><li>T559: Choose a direction to flee (n/s/e/w):</li><li>T559: You were defeated...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T548 <span class='mode'>game_loop</span>: <code>n</code></li><li>T549 <span class='mode'>game_loop</span>: <code>n</code></li><li>T550 <span class='mode'>inventory</span>: <code>i</code></li><li>T551 <span class='mode'>inventory</span>: <code>u12</code></li><li>T552 <span class='mode'>foresight_direction_mode</span>: <code>u7</code></li><li>T553 <span class='mode'>game_loop</span>: <code>back</code></li><li>T554 <span class='mode'>pool_mode</span>: <code>n</code></li><li>T555 <span class='mode'>game_loop</span>: <code>dr</code></li><li>T556 <span class='mode'>game_loop</span>: <code>e</code></li><li>T557 <span class='mode'>combat_mode</span>: <code>s</code></li><li>T558 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T559 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        </section>
+        
+
+</body>
+</html>

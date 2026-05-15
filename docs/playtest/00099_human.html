@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Aragorn the human — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Aragorn, the human</h1>
+  <p class="muted">non-binary adventurer · seed 99 · started 2026-05-15T01:43:05+00:00</p>
+  <p><span class="outcome alive">SURVIVED</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">2000</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F2</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L2</span></div>
+      <div class="stat"><span>Experience</span><span class="v">125</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">39 / 40</span></div>
+      <div class="stat"><span>Mana</span><span class="v">4 / 29</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">87</span></div>
+      <div class="stat"><span>Gold</span><span class="v">826g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">51</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">27</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">26</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,55.0 13.9,55.0 17.8,73.0 21.7,59.5 25.6,64.0 29.5,100.0 33.4,55.0 37.3,68.5 41.2,55.0 45.1,55.0 49.0,55.0 52.9,59.5 56.8,64.0 60.7,64.0 64.6,55.0 68.5,55.0 72.4,55.0 76.3,55.0 80.2,55.0 84.1,55.0 88.0,55.0 91.9,55.0 95.8,55.0 99.7,10.0 103.6,10.0 107.5,10.0 111.4,46.0 115.3,46.0 119.2,10.0 123.1,10.0 127.0,10.0 130.9,10.0 134.8,10.0 138.7,14.5 142.6,14.5 146.5,14.5 150.4,14.5 154.3,14.5 158.2,14.5 162.1,14.5 166.0,14.5 169.9,14.5 173.8,14.5 177.7,14.5 181.6,14.5 185.5,14.5 189.4,14.5 193.3,14.5 197.2,14.5 201.1,14.5 205.0,14.5 208.9,14.5 212.8,14.5 216.7,14.5 220.6,14.5 224.5,14.5 228.4,14.5 232.3,14.5 236.2,14.5 240.1,14.5 244.0,14.5 247.9,14.5 251.8,14.5 255.7,14.5 259.6,14.5 263.5,14.5 267.4,14.5 271.3,14.5 275.2,14.5 279.1,14.5 283.0,14.5 286.9,14.5 290.8,14.5 294.7,14.5 298.6,14.5 302.5,14.5 306.4,14.5 310.3,14.5 314.2,14.5 318.1,14.5 322.0,14.5 325.9,14.5 329.8,14.5 333.7,14.5 337.6,14.5 341.5,14.5 345.4,14.5 349.3,14.5 353.2,14.5 357.1,14.5 361.0,14.5 364.9,14.5 368.8,14.5 372.7,14.5 376.6,14.5 380.5,14.5 384.4,14.5 388.3,14.5 392.2,14.5 396.1,14.5 400.0,14.5 403.9,14.5 407.8,14.5 411.7,14.5 415.6,14.5 419.5,14.5 423.4,14.5 427.3,14.5 431.2,14.5 435.1,14.5 439.0,14.5 442.9,14.5 446.8,14.5 450.7,14.5 454.6,14.5 458.5,14.5 462.4,14.5 466.3,14.5 470.2,14.5 474.1,14.5 478.0,14.5 481.9,14.5 485.8,14.5 489.7,14.5 493.6,14.5 497.5,14.5 501.4,14.5 505.3,14.5 509.2,14.5 513.1,14.5 517.0,14.5 520.9,14.5 524.8,14.5 528.7,14.5 532.6,14.5 536.5,14.5 540.4,14.5 544.3,14.5 548.2,14.5 552.1,14.5 556.0,14.5 559.9,14.5 563.8,14.5 567.7,14.5 571.6,14.5 575.5,14.5 579.4,14.5 583.3,14.5 587.2,14.5 591.1,14.5 595.0,14.5 598.9,14.5 602.8,14.5 606.7,14.5 610.6,14.5 614.5,14.5 618.4,14.5 622.3,14.5 626.2,14.5 630.1,14.5 634.0,14.5 637.9,14.5 641.8,14.5 645.7,14.5 649.6,14.5 653.5,14.5 657.4,14.5 661.3,14.5 665.2,14.5 669.1,14.5 673.0,14.5 676.9,14.5 680.8,14.5 684.7,14.5 688.6,14.5 692.5,14.5 696.4,14.5 700.3,14.5 704.2,14.5 708.1,14.5 712.0,14.5 715.9,14.5 719.8,14.5 723.7,14.5 727.6,14.5 731.5,14.5 735.4,14.5 739.3,14.5 743.2,14.5 747.1,14.5 751.0,14.5 754.9,14.5 758.8,14.5 762.7,14.5 766.6,14.5 770.5,14.5 774.4,14.5 778.3,14.5 782.2,14.5 786.1,14.5 790.0,14.5 790.0,14.5' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T2000, max 40</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Short Sword <span class="muted">(+4 atk · dur 35/40 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Leather Armor <span class="muted">(+3 def · dur 17/50 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T265: arrived on Floor 2</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>41</td></tr><tr><td>Floor 2</td><td>10</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Lichen</td><td>10</td></tr><tr><td>Bat</td><td>10</td></tr><tr><td>Goblin</td><td>7</td></tr><tr><td>Kobold</td><td>6</td></tr><tr><td>Myconid Shaman</td><td>6</td></tr><tr><td>Skeleton</td><td>5</td></tr><tr><td>Giant Centipede</td><td>4</td></tr><tr><td>Giant Rat</td><td>3</td></tr><tr><td>Spore Puff</td><td>3</td></tr><tr><td>UNDEAD SKELETON</td><td>2</td></tr><tr><td>Slime Mold</td><td>2</td></tr><tr><td>Sewer Rat</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (27)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T163</td><td>F1</td><td>Healing Potion</td><td>1×</td><td>50g</td></tr><tr><td>T164</td><td>F1</td><td>Healing Potion</td><td>1×</td><td>50g</td></tr><tr><td>T164</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T165</td><td>F1</td><td>Scroll of Healing</td><td>1×</td><td>50g</td></tr><tr><td>T168</td><td>F1</td><td>Healing Potion</td><td>1×</td><td>50g</td></tr><tr><td>T168</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T168</td><td>F1</td><td>Scroll of Healing</td><td>1×</td><td>50g</td></tr><tr><td>T172</td><td>F1</td><td>Healing Potion</td><td>1×</td><td>50g</td></tr><tr><td>T172</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T172</td><td>F1</td><td>Scroll of Healing</td><td>1×</td><td>50g</td></tr><tr><td>T302</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T304</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T304</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T305</td><td>F2</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T306</td><td>F2</td><td>Short Sword</td><td>1×</td><td>25g</td></tr><tr><td>T308</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T308</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T308</td><td>F2</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T308</td><td>F2</td><td>Short Sword</td><td>1×</td><td>25g</td></tr><tr><td>T312</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T312</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T312</td><td>F2</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T312</td><td>F2</td><td>Short Sword</td><td>1×</td><td>25g</td></tr><tr><td>T316</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T316</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T316</td><td>F2</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T316</td><td>F2</td><td>Short Sword</td><td>1×</td><td>25g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Dagger</td><td>weapon</td><td>1</td><td>+2 | dur 40/40</td></tr><tr><td>2</td><td>Short Sword</td><td>weapon</td><td>1</td><td>+4 | dur 35/40 ★</td></tr><tr><td>3</td><td>Cloth Robes</td><td>armor</td><td>1</td><td>+1 | dur 50/50</td></tr><tr><td>4</td><td>Leather Armor</td><td>armor</td><td>1</td><td>+3 | dur 17/50 ★</td></tr><tr><td>5</td><td>Padded Armor</td><td>armor</td><td>1</td><td>+2 | dur 50/50</td></tr><tr><td>6</td><td>Potion of Defense</td><td>potion_defense</td><td>1</td><td>identified</td></tr><tr><td>7</td><td>Minor Healing Potion</td><td>potion_healing</td><td>3</td><td>identified</td></tr><tr><td>8</td><td>Chain Lightning</td><td>spell</td><td>1</td><td></td></tr><tr><td>9</td><td>Holy Light</td><td>spell</td><td>1</td><td></td></tr><tr><td>10</td><td>Lightning Bolt</td><td>spell</td><td>1</td><td></td></tr><tr><td>11</td><td>Thunder Clap</td><td>spell</td><td>1</td><td></td></tr><tr><td>12</td><td>Shadow Bolt</td><td>spell</td><td>1</td><td></td></tr><tr><td>13</td><td>Lantern</td><td>lantern</td><td>1</td><td></td></tr><tr><td>14</td><td>Ghost Pepper</td><td>other</td><td>3</td><td></td></tr><tr><td>15</td><td>Quicksilver Drop</td><td>other</td><td>2</td><td></td></tr><tr><td>16</td><td>Stone Flower</td><td>other</td><td>1</td><td></td></tr><tr><td>17</td><td>Essence Vial</td><td>other</td><td>1</td><td></td></tr><tr><td>18</td><td>Fire Pepper</td><td>other</td><td>1</td><td></td></tr><tr><td>19</td><td>Iron Bark</td><td>other</td><td>2</td><td></td></tr><tr><td>20</td><td>Moonpetal</td><td>other</td><td>1</td><td></td></tr><tr><td>21</td><td>Starbloom</td><td>other</td><td>1</td><td></td></tr><tr><td>22</td><td>Skeleton Bone Dust</td><td>trophy</td><td>1</td><td></td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Movement Efficiency · overall waste 40%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    <tr><td>Floor 1</td><td>65</td><td>36</td><td>36</td><td>29</td><td>45%</td></tr><tr><td>Floor 2</td><td>8</td><td>8</td><td>8</td><td>0</td><td>0%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>73</td><td>44</td><td>44</td><td>29</td><td>40%</td></tr>
+  </table>
+</section>
+
+
+
+</body>
+</html>

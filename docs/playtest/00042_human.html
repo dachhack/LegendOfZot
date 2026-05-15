@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hama the human — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Hama, the human</h1>
+  <p class="muted">non-binary adventurer · seed 42 · started 2026-05-15T01:43:02+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">707</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F6</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L2</span></div>
+      <div class="stat"><span>Experience</span><span class="v">185</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">0 / 38</span></div>
+      <div class="stat"><span>Mana</span><span class="v">4 / 29</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">0</span></div>
+      <div class="stat"><span>Gold</span><span class="v">1302g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">63</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">25</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">13</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,61.4 13.3,61.4 16.6,61.4 19.9,61.4 23.2,61.4 26.5,61.4 29.9,65.7 33.2,65.7 36.5,78.6 39.8,78.6 43.1,74.3 46.4,82.9 49.7,87.1 53.0,52.9 56.3,52.9 59.6,87.1 63.0,52.9 66.3,52.9 69.6,52.9 72.9,57.1 76.2,61.4 79.5,52.9 82.8,52.9 86.1,52.9 89.4,57.1 92.7,65.7 96.1,61.4 99.4,57.1 102.7,57.1 106.0,57.1 109.3,65.7 112.6,74.3 115.9,70.0 119.2,61.4 122.5,57.1 125.8,57.1 129.2,57.1 132.5,57.1 135.8,57.1 139.1,57.1 142.4,57.1 145.7,57.1 149.0,52.9 152.3,52.9 155.6,52.9 158.9,52.9 162.2,52.9 165.6,52.9 168.9,52.9 172.2,52.9 175.5,52.9 178.8,52.9 182.1,52.9 185.4,52.9 188.7,52.9 192.0,52.9 195.3,52.9 198.7,52.9 202.0,52.9 205.3,52.9 208.6,52.9 211.9,52.9 215.2,52.9 218.5,52.9 221.8,61.4 225.1,61.4 228.4,61.4 231.8,61.4 235.1,65.7 238.4,65.7 241.7,65.7 245.0,70.0 248.3,52.9 251.6,52.9 254.9,52.9 258.2,61.4 261.5,52.9 264.9,52.9 268.2,52.9 271.5,52.9 274.8,52.9 278.1,52.9 281.4,52.9 284.7,52.9 288.0,52.9 291.3,65.7 294.6,65.7 297.9,52.9 301.3,70.0 304.6,52.9 307.9,57.1 311.2,57.1 314.5,65.7 317.8,61.4 321.1,57.1 324.4,52.9 327.7,52.9 331.0,52.9 334.4,52.9 337.7,52.9 341.0,52.9 344.3,57.1 347.6,65.7 350.9,52.9 354.2,57.1 357.5,65.7 360.8,52.9 364.1,61.4 367.5,52.9 370.8,61.4 374.1,70.0 377.4,70.0 380.7,78.6 384.0,82.9 387.3,82.9 390.6,78.6 393.9,70.0 397.2,70.0 400.6,70.0 403.9,70.0 407.2,70.0 410.5,70.0 413.8,70.0 417.1,70.0 420.4,70.0 423.7,70.0 427.0,70.0 430.3,65.7 433.6,61.4 437.0,61.4 440.3,57.1 443.6,52.9 446.9,48.6 450.2,10.0 453.5,10.0 456.8,10.0 460.1,10.0 463.4,10.0 466.7,10.0 470.1,10.0 473.4,70.0 476.7,70.0 480.0,70.0 483.3,70.0 486.6,70.0 489.9,70.0 493.2,70.0 496.5,70.0 499.8,70.0 503.2,65.7 506.5,61.4 509.8,57.1 513.1,48.6 516.4,44.3 519.7,40.0 523.0,40.0 526.3,40.0 529.6,40.0 532.9,40.0 536.3,40.0 539.6,40.0 542.9,40.0 546.2,40.0 549.5,35.7 552.8,31.4 556.1,31.4 559.4,22.9 562.7,18.6 566.0,18.6 569.3,10.0 572.7,10.0 576.0,10.0 579.3,10.0 582.6,10.0 585.9,14.3 589.2,14.3 592.5,14.3 595.8,14.3 599.1,10.0 602.4,10.0 605.8,10.0 609.1,10.0 612.4,10.0 615.7,10.0 619.0,10.0 622.3,10.0 625.6,10.0 628.9,10.0 632.2,10.0 635.5,10.0 638.9,10.0 642.2,10.0 645.5,10.0 648.8,10.0 652.1,10.0 655.4,10.0 658.7,10.0 662.0,10.0 665.3,10.0 668.6,10.0 672.0,10.0 675.3,10.0 678.6,10.0 681.9,10.0 685.2,10.0 688.5,10.0 691.8,10.0 695.1,10.0 698.4,10.0 701.7,10.0 705.0,10.0 708.4,10.0 711.7,10.0 715.0,10.0 718.3,27.1 721.6,52.9 724.9,78.6 728.2,104.3 731.5,130.0 734.8,147.1 738.1,14.3 741.5,14.3 744.8,40.0 748.1,57.1 751.4,65.7 754.7,82.9 758.0,100.0 761.3,125.7 764.6,151.4 767.9,160.0 771.2,185.7 774.6,185.7 777.9,185.7 781.2,185.7 784.5,185.7 787.8,185.7 790.0,190.0' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T707, max 42</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Dagger <span class="muted">(+2 atk · dur 17/40 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Chainmail <span class="muted">(+5 def · dur 138/140 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T177: arrived on Floor 2</li><li>T462: arrived on Floor 4</li><li>T500: arrived on Floor 5</li><li>T676: arrived on Floor 6</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>30</td></tr><tr><td>Floor 2</td><td>15</td></tr><tr><td>Floor 5</td><td>18</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Goblin</td><td>9</td></tr><tr><td>Giant Rat</td><td>9</td></tr><tr><td>Slime Mold</td><td>7</td></tr><tr><td>Zombie</td><td>7</td></tr><tr><td>Kobold</td><td>6</td></tr><tr><td>UNDEAD LICHEN</td><td>6</td></tr><tr><td>UNDEAD SKELETON</td><td>4</td></tr><tr><td>LOST SOUL</td><td>4</td></tr><tr><td>Bat</td><td>4</td></tr><tr><td>Giant Centipede</td><td>2</td></tr><tr><td>Crawling Claw</td><td>2</td></tr><tr><td>Skeleton</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (25)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T285</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T288</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T288</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T289</td><td>F2</td><td>Potion of Dexterity</td><td>1×</td><td>60g</td></tr><tr><td>T290</td><td>F2</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T291</td><td>F2</td><td>Scroll of Ice Storm</td><td>1×</td><td>100g</td></tr><tr><td>T292</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T292</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T292</td><td>F2</td><td>Potion of Dexterity</td><td>1×</td><td>60g</td></tr><tr><td>T292</td><td>F2</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T292</td><td>F2</td><td>Scroll of Ice Storm</td><td>1×</td><td>100g</td></tr><tr><td>T292</td><td>F2</td><td>Chainmail</td><td>1×</td><td>90g</td></tr><tr><td>T296</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T296</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T296</td><td>F2</td><td>Potion of Dexterity</td><td>1×</td><td>60g</td></tr><tr><td>T296</td><td>F2</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T296</td><td>F2</td><td>Scroll of Ice Storm</td><td>1×</td><td>100g</td></tr><tr><td>T296</td><td>F2</td><td>Chainmail</td><td>1×</td><td>90g</td></tr><tr><td>T300</td><td>F2</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T300</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T300</td><td>F2</td><td>Potion of Dexterity</td><td>1×</td><td>60g</td></tr><tr><td>T300</td><td>F2</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T300</td><td>F2</td><td>Scroll of Ice Storm</td><td>1×</td><td>100g</td></tr><tr><td>T300</td><td>F2</td><td>Chainmail</td><td>1×</td><td>90g</td></tr><tr><td>T304</td><td>F2</td><td>Chainmail</td><td>1×</td><td>90g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td colspan='5'>—</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Movement Efficiency · overall waste 56%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    <tr><td>Floor 1</td><td>70</td><td>17</td><td>17</td><td>53</td><td>76%</td></tr><tr><td>Floor 2</td><td>92</td><td>64</td><td>64</td><td>28</td><td>30%</td></tr><tr><td>Floor 4</td><td>19</td><td>16</td><td>16</td><td>3</td><td>16%</td></tr><tr><td>Floor 5</td><td>120</td><td>30</td><td>30</td><td>90</td><td>75%</td></tr><tr><td>Floor 6</td><td>25</td><td>17</td><td>17</td><td>8</td><td>32%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>326</td><td>144</td><td>144</td><td>182</td><td>56%</td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>defeated by Displacer Beast</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T686: Invalid command. &#x27;o&#x27; to open, move keys to leave.</li><li>T687: You found 140 gold!</li><li>T687: Total gold: 1302</li><li>T688: You emerge disoriented in a new room at (18, 4) on Floor 6.</li><li>T688:  ACHIEVEMENT UNLOCKED: Deep Delver - Reach floor 5</li><li>T688: Reward: 100 gold!</li><li>T688: You are STARVING! Lost 2 HP from hunger!</li><li>T688: Invalid command. &#x27;o&#x27; to open, move keys to leave.</li><li>T688: You found 140 gold!</li><li>T688: Total gold: 1302</li><li>T692: You are STARVING! Lost 2 HP from hunger!</li><li>T692: Invalid command. &#x27;o&#x27; to open, move keys to leave.</li><li>T692: You found 140 gold!</li><li>T692: Total gold: 1302</li><li>T696: You are STARVING! Lost 2 HP from hunger!</li><li>T696: Invalid command. &#x27;o&#x27; to open, move keys to leave.</li><li>T696: You found 140 gold!</li><li>T696: Total gold: 1302</li><li>T700: Invalid command. &#x27;o&#x27; to open, move keys to leave.</li><li>T700: You found 140 gold!</li><li>T700: Total gold: 1302</li><li>T700: You are STARVING! Lost 2 HP from hunger!</li><li>T704: You are STARVING! Lost 2 HP from hunger!</li><li>T705: You found 1 Lantern Fuel!</li><li>T705:  Perfect! You can use this to refuel your lantern.</li><li>T706: A Displacer Beast (Level 5) appears! A six-legged panther with tentacles, its image shifts constantly.</li><li>T706: The Displacer Beast strikes first!</li><li>T707: Ouch! Displacer Beast hit Hama!</li><li>T707: You took 1 damage!</li><li>T707: You were defeated by the Displacer Beast...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T696 <span class='mode'>game_loop</span>: <code>e</code></li><li>T697 <span class='mode'>game_loop</span>: <code>e</code></li><li>T698 <span class='mode'>game_loop</span>: <code>s</code></li><li>T699 <span class='mode'>game_loop</span>: <code>w</code></li><li>T700 <span class='mode'>game_loop</span>: <code>s</code></li><li>T701 <span class='mode'>game_loop</span>: <code>e</code></li><li>T702 <span class='mode'>game_loop</span>: <code>s</code></li><li>T703 <span class='mode'>game_loop</span>: <code>s</code></li><li>T704 <span class='mode'>chest_mode</span>: <code>w</code></li><li>T705 <span class='mode'>game_loop</span>: <code>o</code></li><li>T706 <span class='mode'>combat_mode</span>: <code>s</code></li><li>T707 <span class='mode'>death_screen</span>: <code>a</code></li></ol>
+        </section>
+        
+
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Ori the dwarf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Ori, the dwarf</h1>
+  <p class="muted">non-binary adventurer · seed 1234 · started 2026-05-15T01:43:10+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">49</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F4</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L1</span></div>
+      <div class="stat"><span>Experience</span><span class="v">25</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-7 / 64</span></div>
+      <div class="stat"><span>Mana</span><span class="v">3 / 5</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">83</span></div>
+      <div class="stat"><span>Gold</span><span class="v">677g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">5</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">0</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">6</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,21.2 25.9,21.2 41.8,21.2 57.8,24.1 73.7,26.9 89.6,26.9 105.5,26.9 121.4,29.7 137.3,29.7 153.3,29.7 169.2,35.3 185.1,35.3 201.0,32.5 216.9,32.5 232.9,29.7 248.8,29.7 264.7,29.7 280.6,29.7 296.5,26.9 312.4,26.9 328.4,26.9 344.3,26.9 360.2,24.1 376.1,24.1 392.0,21.2 408.0,21.2 423.9,21.2 439.8,21.2 455.7,52.2 471.6,83.1 487.6,114.1 503.5,114.1 519.4,29.7 535.3,29.7 551.2,60.6 567.1,91.6 583.1,122.5 599.0,122.5 614.9,122.5 630.8,119.7 646.7,119.7 662.7,119.7 678.6,119.7 694.5,142.2 710.4,164.7 726.3,164.7 742.2,164.7 758.2,164.7 774.1,187.2 790.0,209.7' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T49, max 64</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Battleaxe <span class="muted">(+4 atk · dur 27/40 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Leather Armor <span class="muted">(+3 def · dur 37/50 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T8: arrived on Floor 2</li><li>T25: arrived on Floor 4</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>1</td></tr><tr><td>Floor 2</td><td>1</td></tr><tr><td>Floor 4</td><td>3</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Sewer Rat</td><td>2</td></tr><tr><td>Hell Hound</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (0)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td colspan='5'>no purchases</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Rations</td><td>food</td><td>5</td><td></td></tr><tr><td>2</td><td>Raw Hell Hound Chops</td><td>food</td><td>1</td><td></td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Movement Efficiency · overall waste 11%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    <tr><td>Floor 2</td><td>5</td><td>4</td><td>4</td><td>1</td><td>20%</td></tr><tr><td>Floor 4</td><td>4</td><td>4</td><td>4</td><td>0</td><td>0%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>9</td><td>8</td><td>8</td><td>1</td><td>11%</td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>defeated by Troll</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T40: Reward: 50 gold!</li><li>T40: The monster dropped a dungeon key for location (9, 9)!</li><li>T40: You harvested some raw Hell Hound meat.</li><li>T40: [Well-fed] +1 HP</li><li>T41: Ori is no longer affected by Hell Hound&#x27;s Burn.</li><li>T42: A Troll (Level 3) appears! A large troll. It&#x27;s drooling. Why is it drooling?</li><li>T42: The Troll strikes first!</li><li>T43: Ouch! Troll hit Ori!</li><li>T43: You took 8 damage!</li><li>T43: You missed the evil Troll!</li><li>T44: You gained 20 experience.</li><li>T44: You found 40 gold.</li><li>T44:  ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster</li><li>T44: Reward: 50 gold!</li><li>T44: The monster dropped a dungeon key for location (9, 9)!</li><li>T44: You harvested some raw Hell Hound meat.</li><li>T44: [Well-fed] +1 HP</li><li>T44: Ori is no longer affected by Hell Hound&#x27;s Burn.</li><li>T44: A Troll (Level 3) appears! A large troll. It&#x27;s drooling. Why is it drooling?</li><li>T44: The Troll strikes first!</li><li>T44: Ouch! Troll hit Ori!</li><li>T44: You took 8 damage!</li><li>T44: You missed the evil Troll!</li><li>T45: Troll missed Ori!</li><li>T48: The Troll strikes first!</li><li>T48: Ouch! Troll hit Ori!</li><li>T48: You took 8 damage!</li><li>T48: You missed the evil Troll!</li><li>T48: Troll missed Ori!</li><li>T49: You were defeated by the Troll...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T38 <span class='mode'>game_loop</span>: <code>back</code></li><li>T39 <span class='mode'>game_loop</span>: <code>e</code></li><li>T40 <span class='mode'>game_loop</span>: <code>e</code></li><li>T41 <span class='mode'>game_loop</span>: <code>e</code></li><li>T42 <span class='mode'>combat_mode</span>: <code>n</code></li><li>T43 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T44 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T45 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T46 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T47 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T48 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T49 <span class='mode'>death_screen</span>: <code>a</code></li></ol>
+        </section>
+        
+
+</body>
+</html>

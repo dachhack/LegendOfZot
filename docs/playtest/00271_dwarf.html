@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Bifur the dwarf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Bifur, the dwarf</h1>
+  <p class="muted">non-binary adventurer · seed 271 · started 2026-05-15T01:43:18+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">570</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F4</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L2</span></div>
+      <div class="stat"><span>Experience</span><span class="v">195</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-2 / 78</span></div>
+      <div class="stat"><span>Mana</span><span class="v">5 / 5</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">100</span></div>
+      <div class="stat"><span>Gold</span><span class="v">838g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">47</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">37</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">11</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,51.5 12.7,51.5 15.5,53.8 18.2,51.5 20.9,51.5 23.7,51.5 26.4,51.5 29.2,42.3 31.9,42.3 34.6,42.3 37.4,42.3 40.1,42.3 42.8,42.3 45.6,44.6 48.3,44.6 51.1,42.3 53.8,44.6 56.5,44.6 59.3,42.3 62.0,42.3 64.7,42.3 67.5,42.3 70.2,44.6 72.9,44.6 75.7,42.3 78.4,42.3 81.2,42.3 83.9,42.3 86.6,42.3 89.4,42.3 92.1,42.3 94.8,42.3 97.6,44.6 100.3,44.6 103.1,44.6 105.8,46.9 108.5,46.9 111.3,46.9 114.0,46.9 116.7,46.9 119.5,46.9 122.2,46.9 124.9,46.9 127.7,46.9 130.4,49.2 133.2,49.2 135.9,49.2 138.6,53.8 141.4,58.5 144.1,58.5 146.8,58.5 149.6,60.8 152.3,60.8 155.1,63.1 157.8,63.1 160.5,63.1 163.3,63.1 166.0,63.1 168.7,63.1 171.5,63.1 174.2,63.1 176.9,42.3 179.7,44.6 182.4,44.6 185.2,49.2 187.9,53.8 190.6,51.5 193.4,49.2 196.1,46.9 198.8,46.9 201.6,93.1 204.3,93.1 207.1,90.8 209.8,88.5 212.5,86.2 215.3,42.3 218.0,44.6 220.7,51.5 223.5,51.5 226.2,56.2 228.9,56.2 231.7,60.8 234.4,60.8 237.2,60.8 239.9,60.8 242.6,60.8 245.4,63.1 248.1,63.1 250.8,46.9 253.6,46.9 256.3,46.9 259.1,46.9 261.8,46.9 264.5,46.9 267.3,46.9 270.0,46.9 272.7,46.9 275.5,46.9 278.2,51.5 280.9,51.5 283.7,49.2 286.4,53.8 289.2,51.5 291.9,56.2 294.6,53.8 297.4,51.5 300.1,49.2 302.8,46.9 305.6,46.9 308.3,51.5 311.1,51.5 313.8,53.8 316.5,53.8 319.3,53.8 322.0,53.8 324.7,53.8 327.5,56.2 330.2,56.2 332.9,56.2 335.7,56.2 338.4,58.5 341.2,58.5 343.9,58.5 346.6,46.9 349.4,46.9 352.1,46.9 354.8,49.2 357.6,49.2 360.3,46.9 363.1,46.9 365.8,46.9 368.5,46.9 371.3,46.9 374.0,46.9 376.7,46.9 379.5,46.9 382.2,46.9 384.9,46.9 387.7,46.9 390.4,46.9 393.2,46.9 395.9,46.9 398.6,46.9 401.4,46.9 404.1,51.5 406.8,60.8 409.6,65.4 412.3,70.0 415.1,70.0 417.8,46.9 420.5,46.9 423.3,46.9 426.0,46.9 428.7,46.9 431.5,46.9 434.2,46.9 436.9,46.9 439.7,46.9 442.4,46.9 445.2,46.9 447.9,51.5 450.6,56.2 453.4,60.8 456.1,60.8 458.8,60.8 461.6,19.2 464.3,19.2 467.1,19.2 469.8,19.2 472.5,19.2 475.3,19.2 478.0,19.2 480.7,19.2 483.5,19.2 486.2,19.2 488.9,19.2 491.7,19.2 494.4,19.2 497.2,19.2 499.9,19.2 502.6,19.2 505.4,19.2 508.1,19.2 510.8,19.2 513.6,19.2 516.3,19.2 519.1,19.2 521.8,19.2 524.5,19.2 527.3,19.2 530.0,19.2 532.7,19.2 535.5,19.2 538.2,19.2 540.9,19.2 543.7,19.2 546.4,19.2 549.2,19.2 551.9,19.2 554.6,19.2 557.4,19.2 560.1,19.2 562.8,19.2 565.6,21.5 568.3,23.8 571.1,23.8 573.8,23.8 576.5,23.8 579.3,26.2 582.0,26.2 584.7,26.2 587.5,26.2 590.2,30.8 592.9,30.8 595.7,30.8 598.4,19.2 601.2,19.2 603.9,19.2 606.6,19.2 609.4,19.2 612.1,19.2 614.8,19.2 617.6,19.2 620.3,19.2 623.1,19.2 625.8,19.2 628.5,19.2 631.3,19.2 634.0,19.2 636.7,19.2 639.5,19.2 642.2,19.2 644.9,19.2 647.7,19.2 650.4,19.2 653.2,21.5 655.9,26.2 658.6,28.5 661.4,28.5 664.1,28.5 666.8,28.5 669.6,28.5 672.3,28.5 675.1,28.5 677.8,28.5 680.5,19.2 683.3,19.2 686.0,19.2 688.7,19.2 691.5,19.2 694.2,19.2 696.9,19.2 699.7,19.2 702.4,23.8 705.2,26.2 707.9,26.2 710.6,23.8 713.4,19.2 716.1,19.2 718.8,16.9 721.6,16.9 724.3,14.6 727.1,14.6 729.8,12.3 732.5,12.3 735.3,10.0 738.0,10.0 740.7,10.0 743.5,10.0 746.2,10.0 748.9,10.0 751.7,10.0 754.4,10.0 757.2,10.0 759.9,102.3 762.6,102.3 765.4,102.3 768.1,102.3 770.8,102.3 773.6,102.3 776.3,102.3 779.1,102.3 781.8,102.3 784.5,102.3 787.3,102.3 790.0,194.6 790.0,194.6' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T570, max 78</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>War Scythe <span class="muted">(+10 atk · dur 144/144 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Breastplate <span class="muted">(+6 def · dur 162/180 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T75: arrived on Floor 3</li><li>T495: arrived on Floor 4</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>16</td></tr><tr><td>Floor 2</td><td>7</td></tr><tr><td>Floor 3</td><td>21</td></tr><tr><td>Floor 4</td><td>3</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Gnoll</td><td>9</td></tr><tr><td>Rust Monster</td><td>6</td></tr><tr><td>Lichen</td><td>5</td></tr><tr><td>Giant Centipede</td><td>5</td></tr><tr><td>Giant Spider</td><td>4</td></tr><tr><td>Sewer Rat</td><td>3</td></tr><tr><td>Kobold</td><td>3</td></tr><tr><td>Harpy</td><td>3</td></tr><tr><td>Crawling Claw</td><td>3</td></tr><tr><td>Goblin</td><td>2</td></tr><tr><td>Spore Puff</td><td>2</td></tr><tr><td>Zombie</td><td>2</td></tr><tr><td>Skeleton</td><td>1</td></tr><tr><td>UNDEAD SKELETON</td><td>1</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (37)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T12</td><td>F1</td><td>Mace</td><td>1×</td><td>60g</td></tr><tr><td>T12</td><td>F1</td><td>Ring Mail</td><td>1×</td><td>120g</td></tr><tr><td>T16</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T16</td><td>F1</td><td>Scroll of Ice Shard</td><td>1×</td><td>30g</td></tr><tr><td>T16</td><td>F1</td><td>Mace</td><td>1×</td><td>60g</td></tr><tr><td>T16</td><td>F1</td><td>Ring Mail</td><td>1×</td><td>120g</td></tr><tr><td>T20</td><td>F1</td><td>Mace</td><td>1×</td><td>60g</td></tr><tr><td>T20</td><td>F1</td><td>Ring Mail</td><td>1×</td><td>120g</td></tr><tr><td>T268</td><td>F3</td><td>Greater Healing Potion</td><td>1×</td><td>80g</td></tr><tr><td>T269</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T270</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T271</td><td>F3</td><td>Potion of Fire Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T272</td><td>F3</td><td>Greater Healing Potion</td><td>1×</td><td>80g</td></tr><tr><td>T272</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T272</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T272</td><td>F3</td><td>Potion of Fire Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T272</td><td>F3</td><td>Falchion</td><td>1×</td><td>170g</td></tr><tr><td>T273</td><td>F3</td><td>Breastplate</td><td>1×</td><td>120g</td></tr><tr><td>T276</td><td>F3</td><td>Greater Healing Potion</td><td>1×</td><td>80g</td></tr><tr><td>T276</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T276</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T276</td><td>F3</td><td>Potion of Fire Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T276</td><td>F3</td><td>Falchion</td><td>1×</td><td>170g</td></tr><tr><td>T276</td><td>F3</td><td>Breastplate</td><td>1×</td><td>120g</td></tr><tr><td>T280</td><td>F3</td><td>Greater Healing Potion</td><td>1×</td><td>80g</td></tr><tr><td>T280</td><td>F3</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T280</td><td>F3</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T280</td><td>F3</td><td>Potion of Fire Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T280</td><td>F3</td><td>Falchion</td><td>1×</td><td>170g</td></tr><tr><td>T280</td><td>F3</td><td>Breastplate</td><td>1×</td><td>120g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Mana Potion</td><td>potion_mana</td><td>1</td><td>unidentified</td></tr><tr><td>2</td><td>Potion of Regeneration</td><td>potion_regeneration</td><td>1</td><td>unidentified</td></tr><tr><td>3</td><td>Potion of Fire Resistance</td><td>potion_resistance</td><td>1</td><td>identified</td></tr><tr><td>4</td><td>Rations</td><td>food</td><td>4</td><td></td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Movement Efficiency · overall waste 46%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    <tr><td>Floor 1</td><td>5</td><td>5</td><td>5</td><td>0</td><td>0%</td></tr><tr><td>Floor 2</td><td>4</td><td>4</td><td>4</td><td>0</td><td>0%</td></tr><tr><td>Floor 3</td><td>156</td><td>74</td><td>74</td><td>82</td><td>53%</td></tr><tr><td>Floor 4</td><td>25</td><td>19</td><td>19</td><td>6</td><td>24%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>190</td><td>102</td><td>102</td><td>88</td><td>46%</td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>unknown</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T560: You pray in silence. The spirit rests undisturbed. A faint peace settles over you.</li><li>T564: A  UNDEAD WRAITH (Level 4) appears! An undead guardian risen to protect the ancient tomb!</li><li>T564: The  UNDEAD WRAITH strikes first!</li><li>T564: Ouch!  UNDEAD WRAITH hit Bifur!</li><li>T564: You took 20 damage!</li><li>T564: You successfully broke away from combat!</li><li>T564: Choose a direction to flee (n/s/e/w):</li><li>T564: You light your Lantern...</li><li>T564: The lantern reveals 5 nearby rooms!</li><li>T564: Lantern fuel remaining: 5</li><li>T564: You found a weapon!</li><li>T564: Morningstar</li><li>T564: Attack: +6 | Level: 2</li><li>T564: You pray in silence. The spirit rests undisturbed. A faint peace settles over you.</li><li>T568: The  UNDEAD WRAITH strikes first!</li><li>T568: Ouch!  UNDEAD WRAITH hit Bifur!</li><li>T568: You took 20 damage!</li><li>T568: You successfully broke away from combat!</li><li>T568: Choose a direction to flee (n/s/e/w):</li><li>T568: You light your Lantern...</li><li>T568: The lantern reveals 5 nearby rooms!</li><li>T568: Lantern fuel remaining: 5</li><li>T568: You found a weapon!</li><li>T568: Morningstar</li><li>T568: Attack: +6 | Level: 2</li><li>T568: You pray in silence. The spirit rests undisturbed. A faint peace settles over you.</li><li>T568: You eat the Rations. Hunger restored by 31.</li><li>T568: (4 remaining)</li><li>T569: Returning to combat...</li><li>T570: You were defeated...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T559 <span class='mode'>game_loop</span>: <code>n</code></li><li>T560 <span class='mode'>game_loop</span>: <code>w</code></li><li>T561 <span class='mode'>game_loop</span>: <code>w</code></li><li>T562 <span class='mode'>game_loop</span>: <code>w</code></li><li>T563 <span class='mode'>game_loop</span>: <code>w</code></li><li>T564 <span class='mode'>game_loop</span>: <code>w</code></li><li>T565 <span class='mode'>game_loop</span>: <code>w</code></li><li>T566 <span class='mode'>game_loop</span>: <code>w</code></li><li>T567 <span class='mode'>inventory</span>: <code>i</code></li><li>T568 <span class='mode'>inventory</span>: <code>eat1</code></li><li>T569 <span class='mode'>combat_mode</span>: <code>x</code></li><li>T570 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        </section>
+        
+
+</body>
+</html>
