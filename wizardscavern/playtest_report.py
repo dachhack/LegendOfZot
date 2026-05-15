@@ -680,19 +680,26 @@ def write_index(out_dir):
     (out_dir / "index.html").write_text(body, encoding="utf-8")
 
 
-def deploy_gh_pages(out_dir, repo_root, branch="gh-pages", remote="origin"):
-    """Push `out_dir` contents to a gh-pages branch.
+def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
+                    sub_path="docs/playtest"):
+    """Push `out_dir` contents to `<branch>:<sub_path>/`.
 
-    Uses git plumbing (hash-object / mktree / commit-tree) so the
-    deploy never modifies the working tree or index, never creates a
-    worktree (sandboxed environments often refuse signing on
-    auxiliary paths), and stays additive: existing files on the
-    branch are preserved unless a same-named report has been
-    regenerated. Index.html is always regenerated from the union of
-    old + new JSON sidecars present on the branch.
+    Default target is `main:docs/playtest/` because dachhack/LegendOfZot
+    serves GitHub Pages from `main:docs/` (per repo settings), and we
+    don't want to clobber the existing spell-sprite-audit site. The
+    reports land at `https://dachhack.github.io/LegendOfZot/playtest/`
+    as a sibling of the existing audit pages.
+
+    Uses git plumbing (hash-object / ls-tree / mktree / commit-tree)
+    so the deploy never modifies the working tree or index, never
+    creates a worktree (sandboxed environments often refuse signing
+    on auxiliary paths), and stays additive: existing files at
+    `<sub_path>/` are preserved unless a same-named report has been
+    regenerated. Files outside `<sub_path>/` (the rest of the
+    repository) are passed through unchanged.
 
     Returns the remote URL on success, or None if the deploy was a
-    no-op (tree unchanged).
+    no-op (resulting commit tree matches parent's).
     """
     import subprocess
 
@@ -712,45 +719,83 @@ def deploy_gh_pages(out_dir, repo_root, branch="gh-pages", remote="origin"):
             )
         return res
 
-    # 1. Fetch the remote branch so we can merge onto its latest state.
+    def read_tree(sha):
+        """Return {name: (mode, type, sha)} for a tree object SHA, or
+        {} if the SHA is None / non-existent."""
+        if not sha:
+            return {}
+        ls = run(["git", "ls-tree", sha], check=False)
+        if ls.returncode != 0:
+            return {}
+        out = {}
+        for line in ls.stdout.strip().split("\n"):
+            if not line:
+                continue
+            mode_type_sha, _, name = line.partition("\t")
+            parts = mode_type_sha.split()
+            if len(parts) >= 3:
+                out[name] = (parts[0], parts[1], parts[2])
+        return out
+
+    def write_tree(entries):
+        """Build a new tree object from {name: (mode, type, sha)}.
+        Returns the new tree SHA."""
+        tree_input = "".join(
+            f"{mode} {typ} {sha}\t{name}\n"
+            for name, (mode, typ, sha) in sorted(entries.items())
+        )
+        return run(["git", "mktree"], input_text=tree_input).stdout.strip()
+
+    # 1. Fetch the remote branch so we apply on top of its latest tree.
     run(["git", "fetch", remote, branch], check=False)
 
-    # 2. Resolve the parent commit (None if branch is new on remote).
+    # 2. Resolve the parent commit.
     parent = None
     for ref in (f"refs/remotes/{remote}/{branch}", f"refs/heads/{branch}"):
         res = run(["git", "rev-parse", "--verify", ref], check=False)
         if res.returncode == 0:
             parent = res.stdout.strip()
             break
+    if not parent:
+        raise RuntimeError(
+            f"branch {branch!r} has no commits on remote or local refs; "
+            "cannot deploy into a subpath of a missing branch."
+        )
 
-    # 3. Start from the parent's tree (preserves untouched files), or
-    #    an empty mapping for an orphan first push.
-    existing = {}
-    if parent:
-        ls = run(["git", "ls-tree", parent]).stdout
-        for line in ls.strip().split("\n"):
-            if not line:
-                continue
-            mode_type_sha, _, name = line.partition("\t")
-            parts = mode_type_sha.split()
-            if len(parts) >= 3 and parts[1] == "blob":
-                existing[name] = (parts[0], parts[2])
+    # 3. Walk down the path components, reading each tree level so we
+    #    can rebuild from the leaf up. For `docs/playtest`:
+    #      level 0 = root (commit's tree)
+    #      level 1 = docs/
+    #      level 2 = docs/playtest/  <- target dir
+    path_parts = [p for p in sub_path.split("/") if p]
+    root_tree_sha = run(
+        ["git", "rev-parse", f"{parent}^{{tree}}"]
+    ).stdout.strip()
+    parent_trees = [read_tree(root_tree_sha)]
+    for part in path_parts:
+        cur_tree = parent_trees[-1]
+        sub = cur_tree.get(part)
+        if sub and sub[1] == "tree":
+            parent_trees.append(read_tree(sub[2]))
+        else:
+            parent_trees.append({})  # missing subdirectory; we'll create it
 
-    # 4. Stage every file in `out_dir` as a blob (hash-object writes
-    #    the blob into the object DB but doesn't touch the index).
+    # 4. Target directory: start from what's already at <sub_path>/
+    #    (preserves prior runs deployed to the same path), then
+    #    overlay every file in `out_dir` as a fresh blob.
+    target = dict(parent_trees[-1])
     for f in sorted(out_dir.iterdir()):
         if not f.is_file():
             continue
         sha = run(["git", "hash-object", "-w", str(f)]).stdout.strip()
-        existing[f.name] = ("100644", sha)
+        target[f.name] = ("100644", "blob", sha)
 
-    # 5. Regenerate index.html from the UNION of all JSON sidecars in
-    #    the merged tree (so the index reflects reports already on the
-    #    branch, not just the ones we just deployed). Read each
-    #    sidecar's blob, sort by floor + level, render the table.
+    # 5. Regenerate index.html from the union of all JSON sidecars in
+    #    the merged target tree (so reports already on the branch keep
+    #    their index entry even if not re-deployed this run).
     summaries = []
-    for name, (_mode, sha) in existing.items():
-        if not name.endswith(".json"):
+    for name, (_mode, typ, sha) in target.items():
+        if typ != "blob" or not name.endswith(".json"):
             continue
         blob = run(["git", "cat-file", "blob", sha]).stdout
         try:
@@ -788,41 +833,41 @@ def deploy_gh_pages(out_dir, repo_root, branch="gh-pages", remote="origin"):
     index_sha = run(
         ["git", "hash-object", "-w", "--stdin"], input_text=index_html
     ).stdout.strip()
-    existing["index.html"] = ("100644", index_sha)
+    target["index.html"] = ("100644", "blob", index_sha)
 
-    # 6. Ensure .nojekyll exists so GitHub Pages serves the directory
-    #    raw instead of running Jekyll over it.
-    if ".nojekyll" not in existing:
-        sha = run(["git", "hash-object", "-w", "--stdin"],
-                  input_text="").stdout.strip()
-        existing[".nojekyll"] = ("100644", sha)
+    # 6. Rebuild the tree chain leaf -> root.
+    new_sub_sha = write_tree(target)
+    for i in range(len(path_parts) - 1, -1, -1):
+        # parent_trees[i] is the directory that CONTAINS path_parts[i]
+        parent_dir = dict(parent_trees[i])
+        part_name = path_parts[i]
+        parent_dir[part_name] = ("040000", "tree", new_sub_sha)
+        # If this is the docs/ level (Pages site root), ensure
+        # .nojekyll is present so the site bypasses Jekyll
+        # processing -- matters for paths with underscores like
+        # `00007_dwarf.html`.
+        if path_parts[i] == "docs" and ".nojekyll" not in parent_dir:
+            empty_sha = run(
+                ["git", "hash-object", "-w", "--stdin"], input_text=""
+            ).stdout.strip()
+            parent_dir[".nojekyll"] = ("100644", "blob", empty_sha)
+        new_sub_sha = write_tree(parent_dir)
+    new_root_tree = new_sub_sha
 
-    # 7. Rebuild the tree.
-    tree_input = "".join(
-        f"{mode} blob {sha}\t{name}\n"
-        for name, (mode, sha) in sorted(existing.items())
-    )
-    tree_sha = run(["git", "mktree"], input_text=tree_input).stdout.strip()
+    # 7. Skip if rebuilt root tree matches parent's (no-op).
+    if new_root_tree == root_tree_sha:
+        return None
 
-    # 8. Skip if tree matches parent's (no-op).
-    if parent:
-        parent_tree = run(["git", "rev-parse", f"{parent}^{{tree}}"]).stdout.strip()
-        if parent_tree == tree_sha:
-            return None
-
-    # 9. Commit + push. commit-tree runs from the repo root so any
-    #    signing hooks see a recognized source path.
+    # 8. Commit and push to `branch`.
     commit_msg = (
         f"Playtest reports: "
         f"{datetime.now(timezone.utc).isoformat(timespec='seconds')}"
     )
-    commit_args = ["git", "commit-tree", tree_sha, "-m", commit_msg]
-    if parent:
-        commit_args.extend(["-p", parent])
-    commit_sha = run(commit_args).stdout.strip()
+    commit_sha = run(
+        ["git", "commit-tree", new_root_tree, "-p", parent, "-m", commit_msg]
+    ).stdout.strip()
     run(["git", "push", remote, f"{commit_sha}:refs/heads/{branch}"])
 
-    # Best-effort URL derivation for the caller.
     remote_url = run(["git", "remote", "get-url", remote],
                      check=False).stdout.strip()
     return remote_url
