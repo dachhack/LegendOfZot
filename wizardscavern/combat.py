@@ -401,7 +401,7 @@ def process_combat_action(player_character, my_tower, cmd):
         add_log(f"{COLOR_GREEN}The {gs.active_monster.name} succumbed to its status effects!{COLOR_RESET}")
         # XP, Gold, Room clearing logic should be here as well
          # Calculate base rewards
-        xp_reward = (gs.active_monster.level + 1) * 8
+        xp_reward = (gs.active_monster.level + 1) * 8 + gs.active_monster.level ** 2 * 2
 
         # Check if this is a legendary monster with custom gold drop
         if gs.active_monster.properties.get('is_legendary'):
@@ -602,7 +602,7 @@ def process_combat_action(player_character, my_tower, cmd):
                     add_log(f"{COLOR_GREEN}You defeated the {gs.active_monster.name}!{COLOR_RESET}")
                     add_log(f"{COLOR_GREEN}{gs.active_monster.victory_text}{COLOR_RESET}")
 
-                    xp_reward = (gs.active_monster.level + 1) * 8
+                    xp_reward = (gs.active_monster.level + 1) * 8 + gs.active_monster.level ** 2 * 2
                     gold_drop = random.randint(1, 10) * (gs.active_monster.level + 1)
 
                     if 'Fortune' in player_character.status_effects:
@@ -823,7 +823,7 @@ def process_combat_action(player_character, my_tower, cmd):
             #
             # CALCULATE BASE REWARDS
             #
-            xp_reward = (gs.active_monster.level + 1) * 8
+            xp_reward = (gs.active_monster.level + 1) * 8 + gs.active_monster.level ** 2 * 2
             gold_drop = random.randint(1, 10) * (gs.active_monster.level + 1)
 
             #
@@ -1665,7 +1665,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     add_log(f"{COLOR_GREEN}{gs.active_monster.victory_text}{COLOR_RESET}")
 
                     # Calculate base rewards
-                    xp_reward = (gs.active_monster.level + 1) * 8
+                    xp_reward = (gs.active_monster.level + 1) * 8 + gs.active_monster.level ** 2 * 2
                     gold_drop = random.randint(1, 10) * (gs.active_monster.level + 1)
 
                     # Apply Fortune bonus
