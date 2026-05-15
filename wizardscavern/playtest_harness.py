@@ -1553,46 +1553,40 @@ def smart_policy(obs, rng, use_lantern=True):
         wants_vendor = ((healing_count < 2 or needs_repair)
                         and p["gold"] >= 50)
 
+        # Build tiered priority. Each tier is a tuple of feature types
+        # that COMPETE BY DISTANCE -- within a tier the BFS-nearest
+        # reachable target wins. Tiers are taken in order. This
+        # replaces the old flat priority list, which made the agent
+        # walk to a far chest before a near garden purely because
+        # chest ranked first. The waste% audit caught that ranking-
+        # before-distance burns 47% of game_loop moves on revisits.
         if too_long_on_floor:
-            # Hard descent override: 300+ turns on one floor means
-            # whatever's left (an unreachable beneficial, a hunt-mode
-            # monster respawn loop) isn't worth more grinding. Push the
-            # agent toward the stairs and let the next floor reset the
-            # economy.
-            priority = ["D", "V"]
+            tiers = [("D",), ("V",)]
         elif is_weak:
-            priority = ["V"] + list(BENEFICIAL_SAFE)
+            tiers = [("V",), tuple(BENEFICIAL_SAFE)]
             if not unvisited_beneficials_exist:
-                priority.append("D")  # only descend if nothing safer
+                tiers.append(("D",))
         elif wants_vendor:
-            priority = ["V"] + list(BENEFICIAL_SAFE) + ["T", "N"]
+            tiers = [("V",), tuple(BENEFICIAL_SAFE), ("T", "N")]
             if not unvisited_beneficials_exist:
-                priority.append("D")
+                tiers.append(("D",))
         elif ready_to_clear:
-            # Boon budget spent OR resource pressure forces the shift:
-            # the agent transitions to efficient monster clearing for
-            # meat (food) + XP + gold. M comes BEFORE D so the agent
-            # banks value from the current floor rather than racing
-            # the stairs into harder content with no kill rewards. The
-            # too_long_on_floor escape (300+ turns) bounds this from
-            # looping on a respawning floor. SAFE rooms stay at the
-            # top for any beneficials that respawn or become reachable.
-            priority = list(BENEFICIAL_SAFE) + ["V", "M", "T", "N", "D"]
+            # Boons exhausted (or resources pressing): efficient
+            # monster clearing for meat / XP / gold, then descend.
+            tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",),
+                     ("T", "N"), ("D",)]
         elif unvisited_beneficials_exist:
-            # Healthy + boons remain: opportunistic monster hunting
-            # while still preferring safer boons. M slots after V but
-            # before T/N so the agent banks XP on the way to chests /
-            # gardens / altars instead of dying at F4 with 0 kills
-            # (the audit caught mean kills/run = 0.5 across 30 runs
-            # before this -- BFS routing AROUND M tiles in transit
-            # meant the agent literally never fought unless M was in
-            # its priority list).
-            priority = list(BENEFICIAL_SAFE) + ["V", "M", "T", "N"]
+            # Healthy + boons remain: opportunistic hunting alongside
+            # boon collection. M follows the safe boons + vendor.
+            tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
         else:
-            # Floor mostly explored, no boons remain: descend, but
-            # take a parting M kill if one is on the path.
-            priority = ["D", "V", "M", "T", "N"] + list(BENEFICIAL_SAFE)
-        priority = tuple(priority)
+            # No safe boons reachable: descend, but bank a kill on the
+            # way if one is on the path.
+            tiers = [("D",), ("V",), ("M",), ("T", "N"),
+                     tuple(BENEFICIAL_SAFE)]
+        # Legacy flat-priority alias for the adjacent-feature shortcut
+        # below, which iterates a flat list of types.
+        priority = tuple(t for tier in tiers for t in tier)
 
         # First pass: a keyed dungeon adjacent to us is the best move
         # -- bypass the priority list entirely. The keyed_dungeon_target
@@ -1652,18 +1646,26 @@ def smart_policy(obs, rng, use_lantern=True):
         if keyed_tgt and keyed_tgt.get("first_step"):
             return _swap_if_backtrack(keyed_tgt["first_step"])
 
-        # Priority-ordered feature targeting via BFS.
-        for t in priority:
-            if t == "M":
-                # Monsters aren't in feature_paths -- use the dedicated
-                # monster-path obs which routes to an adjacent tile and
-                # steps into the M to initiate combat.
-                if monster_path and monster_path.get("first_step"):
-                    return _swap_if_backtrack(monster_path["first_step"])
-                continue
-            path = feature_paths.get(t)
-            if path and path.get("first_step"):
-                return _swap_if_backtrack(path["first_step"])
+        # Tier-aware distant wayfinder: within each tier, pick the
+        # BFS-nearest reachable target. This is the routing fix for
+        # the 47% revisit waste -- the agent now goes to the closest
+        # beneficial instead of the highest-ranked-type-but-far one.
+        for tier in tiers:
+            candidates = []
+            for t in tier:
+                if t == "M":
+                    mp = monster_path
+                    if (mp and mp.get("first_step")
+                            and mp.get("path_dist") is not None):
+                        candidates.append((mp["path_dist"], mp["first_step"]))
+                    continue
+                path = feature_paths.get(t)
+                if (path and path.get("first_step")
+                        and path.get("path_dist") is not None):
+                    candidates.append((path["path_dist"], path["first_step"]))
+            if candidates:
+                candidates.sort(key=lambda c: c[0])
+                return _swap_if_backtrack(candidates[0][1])
 
         # Frontier walker via BFS. When no feature beckons, take the
         # BFS first-step toward the nearest reachable discovered tile
