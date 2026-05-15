@@ -1157,6 +1157,19 @@ class PlaytestSession:
                     self.last_error = f"unknown game_loop action: {action!r}"
             elif mode == "combat_mode":
                 process_combat_action(pc, tw, action)
+            elif mode == "flee_direction_mode":
+                # Mid-flee direction prompt. Handler accepts n/s/e/w to
+                # move + exit combat, or 'c' to cancel + return to
+                # combat. Anything else (incl. 'back') just logs an
+                # invalid-direction message and stays in flee_dir mode.
+                # Without this dispatch + policy branch, the agent fell
+                # into the catch-all 'back' which the harness mapped to
+                # game_loop, but the player was still on the monster
+                # tile so the next step walked right back into combat
+                # -- Finrod the elf burned ~10 turns this way taking
+                # 24-dmg Wraith hits between failed flees.
+                from .combat import process_flee_direction_action
+                process_flee_direction_action(pc, tw, action)
             elif mode == "spell_casting_mode":
                 process_spell_casting_action(pc, tw, action)
             elif mode == "chest_mode":
@@ -1991,6 +2004,30 @@ def smart_policy(obs, rng, use_lantern=True):
         if affordable_dmg and rng.random() < 0.90:
             return "c"
         return "a" if rng.random() < 0.92 else "f"
+
+    if mode == "flee_direction_mode":
+        # Pick a walkable direction to actually flee. Without this
+        # the policy fell into the catch-all and returned 'back',
+        # which the harness mapped to game_loop while leaving the
+        # player on the monster's tile -- Finrod the elf took
+        # consecutive 24-dmg Wraith hits between failed flees.
+        # Prefer non-recent walkable directions so the agent
+        # doesn't try to flee back through the same tile that just
+        # spawned the fight. Fall back to 'c' (cancel flee and
+        # stand to fight) if no walkable direction exists.
+        neighbors = obs.get("neighbors") or {}
+        recent = set(obs.get("recent_step_set") or [])
+        for d in ("n", "s", "e", "w"):
+            if d in recent:
+                continue
+            t = neighbors.get(d)
+            if t not in ("#", None):
+                return d
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t not in ("#", None):
+                return d
+        return "c"  # cornered; fight back
 
     if mode == "spell_casting_mode":
         if hp_pct < 0.55 and heal_spell_slot:

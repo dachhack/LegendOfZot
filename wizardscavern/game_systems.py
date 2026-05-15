@@ -2580,60 +2580,72 @@ def _trigger_room_interaction(player_character, my_tower):
                 new_monster.properties['is_champion'] = True  # Mark as champion
             # Check if this is an Undead Guardian (spawned near tombs)
             elif room.properties.get('undead_guardian', False):
-                # Spawn tough undead guardian. target_lvl previously
-                # ran one above the floor (z+1), giving F3 wraiths Lv4
-                # and one-shot territory damage on Lv1 explorers. Now
-                # tracks the floor 1:1 so STR / HP investment actually
-                # pays off in the fight -- F8 still gets Lv8 wraiths
-                # by the time you're there, but the early floors are
-                # survivable for fresh characters.
-                target_lvl = player_character.z
+                # Tomb-adjacent guardians: ALL are proper undead types
+                # at floor level. Exactly one per tomb is the
+                # `tomb_elite` (marked in setup_dungeons_and_tombs)
+                # and spawns at floor + 2 to gate the tomb's reward
+                # behind one real threat rather than four lethal
+                # ones. The "undead version of a mob" fallback (e.g.,
+                # UNDEAD GOBLIN, UNDEAD BAT) is removed -- if no
+                # undead template sits in the floor's level band we
+                # broaden to all undead templates rather than reach
+                # for a regular mob.
+                # Elite is one level over the floor. The 1.5x stat
+                # multiplier on top of +2 spawn_level made the F2
+                # ELITE UNDEAD SPECTER one-shot Lv1 explorers (8/47
+                # deaths in the prior tuning). +1 with 1.3x is
+                # noticeable but survivable.
+                is_elite = room.properties.get('tomb_elite', False)
+                target_lvl = player_character.z + (1 if is_elite else 0)
                 min_lvl = max(0, target_lvl - 1)
                 max_lvl = target_lvl + 1
 
-                # Prefer undead monster types.  Pool clamped to the player's
-                # floor (no +2 reach) so F1 tombs can't roll a Lv5 Wraith.
-                undead_types = ['Skeleton', 'Zombie', 'Ghost', 'Wraith', 'Vampire', 'Lich', 'Death Knight']
-                undead_monsters = [m for m in MONSTER_TEMPLATES if any(undead in m['name'] for undead in undead_types) and min_lvl <= m['level'] <= max_lvl]
+                undead_types = (
+                    'Skeleton', 'Zombie', 'Ghost', 'Wraith', 'Specter',
+                    'Mummy', 'Vampire', 'Lich', 'Demilich',
+                    'Death Knight',
+                )
+                all_undead = [
+                    m for m in MONSTER_TEMPLATES
+                    if any(t in m['name'] for t in undead_types)
+                ]
+                in_range = [
+                    m for m in all_undead
+                    if min_lvl <= m['level'] <= max_lvl
+                ]
+                # No regular-mob fallback. If no undead sits in the
+                # level band, broaden to all undead templates so we
+                # still spawn a proper undead type.
+                m_data = random.choice(in_range or all_undead)
 
-                if undead_monsters:
-                    m_data = random.choice(undead_monsters)
-                else:
-                    # Fallback to any monster near level
-                    potential_monsters = [m for m in MONSTER_TEMPLATES if min_lvl <= m['level'] <= max_lvl]
-                    if not potential_monsters:
-                        potential_monsters = MONSTER_TEMPLATES
-                    m_data = random.choice(potential_monsters)
-
-                # Buffed stats - 1.25x multiplier (was 1.5x; lowered after the
-                # base-30-HP rebalance made the old buff one-shot Lv1 players).
-                # Level is template + 1 but capped at player_character.z + 2 --
-                # without the cap, the pool's natural max (target_lvl + 1) plus
-                # this +1 boost leaks an extra level above the player's floor,
-                # which let Lv5 Wraiths spawn next to floor-3 tombs and one-shot
-                # Lv1 characters (8/16 deaths in the 30-run death analysis).
-                # Spawn level cap now matches the target_lvl floor:
-                # max(template+1, z+1) so a wraith on F3 caps at Lv3
-                # (was Lv4 with the +2 ceiling). Combined with the
-                # weaker target_lvl above this halves the "Lv5 Wraith
-                # on F3 one-shots a Lv1 elf" lottery.
-                level_floor_cap = player_character.z + 1
-                spawn_level = min(m_data.get('level', 1) + 1, level_floor_cap)
+                # Stats: 1.25x baseline (kept from prior balance pass).
+                # Spawn level = target_lvl directly (was template+1
+                # capped at z+1). target_lvl already encodes the
+                # floor-level + elite-bonus, so the +1 template boost
+                # would double-count.
+                spawn_level = target_lvl
+                name_prefix = " UNDEAD " if not is_elite else " ELITE UNDEAD "
+                stat_mult = 1.3 if is_elite else 1.25
                 new_monster = Monster(
-                    f" UNDEAD {m_data['name'].upper()}",
-                    int(m_data['health'] * 1.25),
-                    int(m_data['attack'] * 1.25),
-                    int(m_data['defense'] * 1.25),
+                    f"{name_prefix}{m_data['name'].upper()}",
+                    int(m_data['health'] * stat_mult),
+                    int(m_data['attack'] * stat_mult),
+                    int(m_data['defense'] * stat_mult),
                     m_data.get('elemental_weakness', []),
-                    m_data.get('elemental_strength', []) + ['Darkness'],  # Add darkness resistance
+                    m_data.get('elemental_strength', []) + ['Darkness'],
                     spawn_level,
-                    m_data.get('attack_element', 'Darkness'),  # Darkness attacks
-                    f"{COLOR_GREY}An undead guardian risen to protect the ancient tomb!{COLOR_RESET}",
+                    m_data.get('attack_element', 'Darkness'),
+                    (f"{COLOR_GREY}An undead guardian risen to protect the "
+                     f"ancient tomb!{COLOR_RESET}") if not is_elite else
+                    (f"{COLOR_PURPLE}An elite undead guardian -- the tomb's "
+                     f"true keeper!{COLOR_RESET}"),
                     f"{COLOR_PURPLE}The undead guardian crumbles to dust!{COLOR_RESET}",
-                    m_data.get('gold_min', 10) * 2,
-                    m_data.get('gold_max', 30) * 2
+                    m_data.get('gold_min', 10) * (3 if is_elite else 2),
+                    m_data.get('gold_max', 30) * (3 if is_elite else 2),
                 )
                 new_monster.properties['undead_guardian'] = True
+                if is_elite:
+                    new_monster.properties['tomb_elite'] = True
 
             # Bug Level: Spawn bug monsters on bug level floors
             elif room.properties.get('is_bug_monster'):
