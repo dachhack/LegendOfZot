@@ -642,6 +642,13 @@ class PlaytestSession:
         # healing. None set means no recent flee.
         self.last_flee_turn = None
         self.last_flee_hp_pct = None
+        # Kills logged on the current floor. Incremented every time
+        # the agent transitions into combat_victory mode (one entry
+        # per defeated monster). Reset on floor change. Used by the
+        # grind-first descent gate so under-levelled agents stay on
+        # the current floor banking XP instead of pushing into a
+        # depth they can't handle.
+        self.kills_on_floor = 0
         # Fog of war: when True, the neighbour + nearest-feature obs
         # respect room.discovered so the agent has to actually walk over
         # (or lantern-light) tiles before knowing what's there. The
@@ -720,6 +727,9 @@ class PlaytestSession:
             "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
             "tomb_suspected_here": pc.z in self.suspected_tomb_floors,
             "max_z_via_stairs": self.max_z_via_stairs,
+            # Per-floor kill counter. Used by the grind-first gate so
+            # under-levelled agents stay on the floor banking XP.
+            "kills_on_floor": self.kills_on_floor,
             # Post-flee recovery window. True for the first 15 turns
             # after a flee that triggered at low HP (< 70%). Tough-
             # monster flees at full HP don't need recovery -- the
@@ -1556,6 +1566,14 @@ class PlaytestSession:
             self.visited_tiles_this_floor = set()
             # Fresh floor, fresh walls to discover.
             self.blocked_directions = set()
+            # Reset per-floor kill counter so the grind-first descent
+            # gate measures kills on the CURRENT floor only.
+            self.kills_on_floor = 0
+        # Bump the kill counter on transitions INTO combat_victory.
+        # combat_victory fires exactly once per defeated monster, so
+        # this is a clean per-kill signal.
+        if mode != "combat_victory" and gs.prompt_cntl == "combat_victory":
+            self.kills_on_floor += 1
         # Track current-floor coverage for the policy's descent gate.
         self.visited_tiles_this_floor.add((pc_after.x, pc_after.y))
         # Maintain blocked_directions: when a cardinal-move action
@@ -2052,13 +2070,75 @@ def smart_policy(obs, rng, use_lantern=True):
         coverage_pct = (obs.get("tile_coverage") or {}).get("pct", 0)
         d_path = feature_paths_check.get("D")
         d_reachable = bool(d_path and d_path.get("first_step"))
-        # 80% sweep before descending = enough thoroughness to grab
-        # most boons without the long-tail backtracking that drove
-        # the 47% revisit rate. Tighter gates (e.g., 70%) descended
-        # too early, dropping Lv climbs and survival in the smoke
-        # grid.
+        # Grind gate. Roguelike convention: character level should
+        # roughly match floor depth. A Lv2 player on F4 is under-
+        # levelled and gets vaporised by the next wraith. When
+        # pc_level <= pc_z, the agent stays on the current floor
+        # banking XP before descending -- D is dropped from the
+        # priority tiers, the high-coverage descend gate gets a
+        # minimum-kills requirement, and the tier ordering pulls M
+        # ahead of D so the agent actively hunts for fights.
+        # M is in BLOCK_TRANSIT for the main BFS so feature_paths['M']
+        # would always be None. obs.nearest_monster_path uses a
+        # different BFS that walks to a cardinal neighbour of an M
+        # tile then steps in; that's the right reachability signal
+        # for the grind gate.
+        nm_path = obs.get("nearest_monster_path") or {}
+        m_reachable_via_path = bool(nm_path.get("first_step"))
+        m_reachable_adj = any(
+            (obs.get("neighbors") or {}).get(d) == "M"
+            for d in ("n", "s", "e", "w")
+        )
+        m_reachable = m_reachable_via_path or m_reachable_adj
+        # Minimum kills required before this floor's descend gate
+        # opens. Scales with depth: F1 needs 3, F3 needs 5, F5 needs
+        # 9. Past that the curve caps at 12 so deep floors don't
+        # demand impossible grind counts. Bumped from the earlier
+        # F4=5 / F8=9 curve because the lighter version didn't
+        # actually change the grid (existing tier order already
+        # preferred SAFE/V/M over D when boons remained, so the
+        # filter was a near no-op).
+        pc_z = (p.get("floor", 1) - 1)
+        min_kills_for_floor = min(12, max(3, pc_z * 2 + 1))
+        kills_so_far = obs.get("kills_on_floor") or 0
+        # under_leveled fires when:
+        #  - pc.level <= pc.z + 1 (Lv N on F N is "on-pace", anything
+        #    below is under-levelled -- Lv2 on F3 / Lv3 on F4 etc.
+        #    qualifies), AND
+        #  - this floor still has a reachable monster to fight.
+        # The pc.z comparison uses the 0-indexed floor; the user-
+        # facing floor is z+1, so "Lv equal to displayed floor" =
+        # pc.level == pc.z + 1.
+        # under_leveled drops the m_reachable check -- if there are
+        # NO visible monsters and the agent is under-levelled, we
+        # want them to explore (find more monsters in fog) before
+        # descending, not bolt for the stairs.
+        under_leveled = (p.get("level", 1) <= pc_z + 1)
+        # Grind is "not done" until one of:
+        #   - kills_so_far meets the per-floor minimum, OR
+        #   - no monsters remain reachable AND coverage >= 70%
+        #     (i.e., the floor has been thoroughly swept and the
+        #     visible M tiles are gone; remaining M tiles, if any,
+        #     are behind fog the BFS can't path through anyway).
+        # The 70% gate is softer than high_coverage_descend's 80%
+        # because grind cares about M tiles, not boons -- once 70%
+        # of walkable tiles are seen, most M spawns have been found.
+        grind_complete = (
+            kills_so_far >= min_kills_for_floor
+            or (not m_reachable and coverage_pct >= 70)
+        )
+        # 90% sweep + D reachable + not weak + grind done. Bumped
+        # 80 -> 90 because a 20% slice of an 18x21 floor still
+        # hides plenty of M spawns the agent hasn't fought; the
+        # earlier threshold descended before the floor's XP was
+        # banked. grind_complete (min_kills met OR thoroughly
+        # explored with no M visible) is the second gate -- ensures
+        # under-levelled agents don't rush past their depth.
         high_coverage_descend = (
-            coverage_pct >= 80 and d_reachable and not is_weak
+            coverage_pct >= 90
+            and d_reachable
+            and not is_weak
+            and grind_complete
         )
 
         # Tomb-suspected on this floor: the agent has fought an undead
@@ -2119,6 +2199,28 @@ def smart_policy(obs, rng, use_lantern=True):
         if tomb_suspected and is_weak:
             tiers = [
                 tuple(t for t in tier if t not in ("M", "T", "N"))
+                for tier in tiers
+            ]
+            tiers = [tier for tier in tiers if tier]
+        # Grind-first filter: when the agent is under-levelled and the
+        # floor still has reachable monsters AND they haven't met the
+        # minimum kill count yet, strip D from the tiers so the
+        # wayfinder targets SAFE / V / M / T / N instead. Don't shuffle
+        # tier ORDER -- the agent should still grab heal pools / chests
+        # / altars before walking into monsters (an earlier version
+        # pushed M to the front and the agent died with full bags).
+        # Skip the filter when retreat is active (retreat tiers are
+        # U-focused), when is_weak (recovering, not grinding), when
+        # too_long_on_floor (override -- the floor is stalled, get
+        # out), and when resources are pressing.
+        if (under_leveled
+                and not grind_complete
+                and not is_weak
+                and not retreat_to_floor
+                and not too_long_on_floor
+                and not resources_pressing):
+            tiers = [
+                tuple(t for t in tier if t != "D")
                 for tier in tiers
             ]
             tiers = [tier for tier in tiers if tier]
