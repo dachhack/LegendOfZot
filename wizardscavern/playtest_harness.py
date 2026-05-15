@@ -45,7 +45,7 @@ from .game_systems import (
 from .vendor import handle_vendor_shop, handle_starting_shop
 from .items import (
     initialize_identification_system, SPELL_TEMPLATES,
-    Potion, Food, Meat, Weapon, Armor, Spell,
+    Potion, Food, Meat, Weapon, Armor, Spell, Scroll,
 )
 from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
 
@@ -952,6 +952,10 @@ class PlaytestSession:
             # potions / food and silently walking past a Longsword
             # (atk+10) sitting at 100g while the agent went on to die
             # holding a Dagger (atk+2) at floor 4.
+            # Scroll metadata: vendor buy policy uses scroll_type to
+            # prioritise upgrade scrolls over generic ones.
+            if isinstance(item, Scroll):
+                entry["scroll_type"] = getattr(item, "scroll_type", None)
             if isinstance(item, (Weapon, Armor)):
                 entry["is_broken"] = bool(getattr(item, "is_broken", False))
                 entry["buc_status"] = getattr(item, "buc_status", "uncursed")
@@ -2724,6 +2728,23 @@ def smart_policy(obs, rng, use_lantern=True):
             if i["category"].startswith("potion_")
             and i["category"] not in ("potion_healing", "potion_mana")
         }
+        # First pass: prefer upgrade scrolls over any other scroll
+        # type. For non-caster races (dwarf, human) the upgrade
+        # scroll is the only weapon-power scaling lever they have --
+        # +1 attack_bonus per scroll, no level / int requirement,
+        # consumed via the new upgrade_scroll_mode dispatch. A
+        # generic scroll grab-bag mixes upgrades with identify /
+        # mapping / restoration, so the agent randomly skipped half
+        # the upgrades. Now we buy upgrades FIRST, fill remaining
+        # scroll slots with whatever else is on offer.
+        for v in vendor_inv:
+            if v["price"] > gold - MAGIC_RESERVE:
+                continue
+            cat = v["category"]
+            if (cat == "scroll"
+                    and v.get("scroll_type") == "upgrade"
+                    and owned_scrolls < SCROLL_BUY_CAP):
+                return f"b{v['slot']}"
         for v in vendor_inv:
             if v["price"] > gold - MAGIC_RESERVE:
                 continue
