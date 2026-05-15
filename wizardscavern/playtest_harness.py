@@ -589,8 +589,28 @@ class PlaytestSession:
                             Treasure, Towel, CookingKit, CuringKit)
         items = get_sorted_inventory(gs.player_character.inventory)
 
-        in_combat = (gs.active_monster is not None
-                     and gs.active_monster.is_alive())
+        # in_combat: ONLY when the game is actually in combat OR the
+        # player is currently in the inventory handler (which itself
+        # applies the same active_monster filter -- the harness must
+        # mirror the destination handler's slot numbering or u<N>
+        # hits the wrong item). A stale gs.active_monster lingers
+        # after the player flees, so checking the monster alone was
+        # filtering obs.inventory mid-VENDOR and causing slot-
+        # mismatch loops (vendor's id<N> uses the UNFILTERED sorted
+        # inventory): seed=1100 dwarf Fili burned 2926 turns sending
+        # `id2` to identify a Minor Healing Potion (obs view) that
+        # the vendor mapped to Studded Leather (unfiltered view) and
+        # replied "already identified". Now: filter only when the
+        # destination handler also filters.
+        in_combat = (
+            gs.active_monster is not None
+            and gs.active_monster.is_alive()
+            and gs.prompt_cntl in (
+                "combat_mode", "spell_casting_mode",
+                "flee_direction_mode", "combat_victory",
+                "inventory",
+            )
+        )
         if in_combat:
             combat_scrolls = ('spell_scroll', 'protection', 'restoration')
             items = [
@@ -1218,24 +1238,23 @@ class PlaytestSession:
         landing_key = (pc_after.z, pc_after.x, pc_after.y, room_now.room_type)
         was_visited = landing_key in self.visited_features
         post_step_xyz = (pc_after.z, pc_after.x, pc_after.y)
-        # The agent "just landed" only when the step caused a position
-        # change. Same-tile steps (e.g., issuing 'pray' inside a fresh
-        # altar_mode) don't trigger the override -- the boon-claiming
-        # interaction stays intact.
-        just_landed = (pre_step_xyz != post_step_xyz)
-        # Loop-prevention: feature-room modes re-fire their prompt every
-        # time the player steps onto the tile, even after the boon is
-        # consumed. The agent's wayfinder routes through visited
-        # features on the way to other targets; without this guard, each
-        # transit burns turns on a re-prompt the policy then has to
-        # 'back' out of (and BFS routes the agent right back). The HP
-        # charts on the report site exposed this: ~12 'alive' runs in
-        # the 60-run grid had HP flatlining from T300-T3000, stuck in
-        # chest / pool / blacksmith / stairs_up oscillations. Force
-        # visited feature tiles into pass-through tiles by resetting
-        # the mode to game_loop on the LANDING frame (move-step) only.
-        # stairs_down_mode is intentionally excluded: D isn't in
-        # visited_features and we want descent prompts to fire.
+        # Loop-prevention: feature-room modes re-fire their prompt
+        # every time the agent steps onto the tile, even after the
+        # boon is consumed. Two re-trigger paths:
+        #   - move-step lands on visited feature -> mode init fires
+        #   - inventory exit ('x') on a feature tile calls
+        #     _trigger_room_interaction(), which re-fires mode init
+        # Without this guard each visit burns turns on a re-prompt
+        # the policy then has to 'back' out of. HP charts on the
+        # deployed report site exposed this: many 'alive' runs were
+        # flat-lining HP from T300+ stuck in chest / pool / vendor /
+        # blacksmith oscillations. The override forces game_loop when
+        # we re-enter a loop-prone mode on a tile that's already been
+        # visited AND we weren't already in that same mode last step
+        # (the latter clause preserves multi-turn boon-claim
+        # dialogues like altar pray sequences). stairs_down_mode is
+        # excluded -- D isn't in visited_features and we want
+        # descent prompts to fire.
         LOOP_PRONE_MODES = {
             "altar_mode", "pool_mode", "garden_mode", "fey_garden_mode",
             "library_mode", "oracle_mode", "chest_mode", "tomb_mode",
@@ -1243,8 +1262,14 @@ class PlaytestSession:
             "stairs_up_mode", "alchemist_mode", "war_room_mode",
             "taxidermist_mode",
         }
-        if (just_landed and was_visited
-                and gs.prompt_cntl in LOOP_PRONE_MODES):
+        # The step transitioned INTO a loop-prone mode (either because
+        # the agent landed via movement, or _trigger_room_interaction
+        # re-fired the mode on inventory exit / similar).
+        transitioned_in = (
+            gs.prompt_cntl != mode
+            and gs.prompt_cntl in LOOP_PRONE_MODES
+        )
+        if was_visited and transitioned_in:
             gs.prompt_cntl = "game_loop"
         if room_now.room_type not in (".", "E", "#", "D"):
             self.visited_features.add(landing_key)
@@ -2240,27 +2265,36 @@ def smart_policy(obs, rng, use_lantern=True):
         # (covers cursed pool max + buffer; still some mimic risk on
         # gold pools but those are 10% within the 10% gold-pool slice).
         # When too weak, just walk away.
-        # Anti-backtrack walk-away: visited pools stay walkable in BFS
-        # transit, so the wayfinder can route THROUGH a pool on the way
-        # to a target. Each transit triggers pool_mode, the HP-gate
-        # walks away, BFS routes back through the same pool from the
-        # neighbour tile. seed=200 elf burned 2925 turns oscillating
-        # e/w through a pool tile at HP 1/28 before this fix. Prefer
-        # non-recent walkable directions to escape the saddle point.
-        if p["hp"] < 50:
-            neighbors = obs.get("neighbors") or {}
-            recent = set(obs.get("recent_step_set") or [])
-            for d in ("n", "s", "e", "w"):
-                if d in recent:
-                    continue
-                t = neighbors.get(d)
-                if t not in ("#", None):
-                    return d
-            for d in ("n", "s", "e", "w"):
-                t = neighbors.get(d)
-                if t not in ("#", None):
-                    return d
-            return "x"
+        # Pool drink gate: cursed pool max 35, mysterious explosion
+        # 15-40, golden mimic 50-100 -- all raw, bypass armor. Skip
+        # the drink when HP is below 60% of max (covers cursed pool
+        # damage with a buffer; still some mimic risk). Relative
+        # threshold matters: elf max_hp is 28, so an absolute HP<50
+        # gate ALWAYS fires for elves at full health and traps them
+        # in pool_mode forever sending 'x' (invalid command). Cirdan
+        # the elf burned 2695 turns at full HP 48/48 stuck in a
+        # warp-landed pool with all neighbours undiscovered before
+        # this fix. Now: drink at >=60% HP; below that, try to walk
+        # off; if no known walkable direction exists (warp landed in
+        # fog), drink anyway -- a 1% catastrophic-mimic risk beats
+        # an infinite loop.
+        hp_pct_now = p["hp"] / max(1, p["max_hp"])
+        if hp_pct_now >= 0.60:
+            return "dr"
+        neighbors = obs.get("neighbors") or {}
+        recent = set(obs.get("recent_step_set") or [])
+        for d in ("n", "s", "e", "w"):
+            if d in recent:
+                continue
+            t = neighbors.get(d)
+            if t not in ("#", None):
+                return d
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t not in ("#", None):
+                return d
+        # No known walkable direction (e.g., warp-landed in fog).
+        # Take the drink rather than loop forever.
         return "dr"
     if mode == "tomb_mode":
         # Tombs offer a binary risk choice each visit:
