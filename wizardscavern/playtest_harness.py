@@ -1699,10 +1699,20 @@ def smart_policy(obs, rng, use_lantern=True):
         turns_on_floor = obs.get("turns_on_floor") or 0
         stuck_on_floor = turns_on_floor > 100
         very_stuck = turns_on_floor > 200
+        # Lantern policy: bump aggressiveness so warps surface BEFORE
+        # the agent walks into them. The lantern reveals tiles along
+        # the four cardinal axes up to (light_radius + upgrade_level)
+        # -- 7+ cells per direction with the starter lantern -- so one
+        # fire often catches a W tile two rooms away. Starter pack
+        # ships 50 fuel + a refill canister; even with one fire every
+        # ~3 turns the agent has 150+ fires across a typical run,
+        # plenty for the 6-10 floors we currently reach. Prior policy
+        # waited for unknown_neighbours >= 2, which routinely had the
+        # agent step into a warp on a discovered-but-unscanned tile.
         if use_lantern and lantern_fuel > 5:
-            if unknown_neighbours >= 2:
-                return "l"
-            if stuck_on_floor and unknown_neighbours >= 1:
+            # Any unknown neighbour now triggers a fire. Cheap insurance
+            # against stepping into an undiscovered W tile.
+            if unknown_neighbours >= 1:
                 return "l"
             if very_stuck and obs["turn"] % 10 == 0:
                 return "l"
@@ -1720,10 +1730,34 @@ def smart_policy(obs, rng, use_lantern=True):
         # (7/30 runs in the last playtest). When the chicken-and-egg
         # is "no meat -> can't fight" we'd rather try the fight.
         # `starving` is hoisted to the top of smart_policy.
-        if starving:
-            AVOID = ({"W"} if is_weak else set())  # still avoid warps
-        else:
-            AVOID = ({"M", "W"} if is_weak else set())
+        #
+        # Warps are avoided on the early floors (z < 10): the
+        # warp_action drops the agent at random within +/- 2 floors,
+        # which routinely lands a fresh Lv1 dwarf next to a Wraith
+        # on F3 with no escape route. Even healthy agents shouldn't
+        # gamble that early; the 20-44% resist roll fails often
+        # enough that resisting isn't reliable cover. Once the agent
+        # is in the late game (z >= 10) the depth boost from a lucky
+        # warp can outweigh the downside, so the avoid drops.
+        #
+        # ESCAPE VALVE: if the agent is truly trapped on this floor
+        # -- 400+ turns spent here AND no D reachable on the
+        # discovered map -- the warp is the only way out, so we drop
+        # the W avoid. Without this, seeds with region-split floors
+        # (seed 7 F1, seed 500 F1) softlock at HP=1 alive forever.
+        early_floor = (gs.player_character.z < 10)
+        feature_paths_avoid = obs.get("feature_paths") or {}
+        d_avoid_reachable = bool(
+            (feature_paths_avoid.get("D") or {}).get("first_step")
+        )
+        turns_here = obs.get("turns_on_floor") or 0
+        trapped_no_d = (turns_here > 400) and (not d_avoid_reachable)
+        avoid_set = set()
+        if is_weak and not starving:
+            avoid_set.add("M")
+        if (is_weak or early_floor) and not trapped_no_d:
+            avoid_set.add("W")
+        AVOID = avoid_set
 
         # Clear-before-descend gate. Beneficials = rooms that pay off
         # without forced combat (chest, garden, library, oracle, altar,
@@ -2490,15 +2524,29 @@ def smart_policy(obs, rng, use_lantern=True):
     if mode == "warp_mode":
         # Floors are sometimes split into regions only connected via
         # warps (verified empirically on seed 7 floor 1: D was in a
-        # region unreachable from the start). The default 'always
-        # resist' policy was leaving dwarves stuck on floor 1 for the
-        # full 5000-turn budget because they could never reach the
-        # downstairs. New rule: resist when fresh, accept when stuck.
-        # Accepting a warp drops us at a random (z +/- 2) location,
-        # so an accept on floor 1 either lands deeper or stays on
-        # floor 1 in a different region -- both moves help.
-        stuck = (obs.get("turns_on_floor") or 0) > 200
-        return "n" if stuck else "y"
+        # region unreachable from the start), so we keep an accept
+        # path -- but the early-game cost is brutal. Warps drop the
+        # agent at random within +/- 2 floors, which routinely lands
+        # a fresh Lv1 next to a Wraith on F3 with no escape route.
+        # New rule (stricter than the prior turns_on_floor > 200
+        # gate): resist hard on early floors and only accept when
+        # ACTUALLY trapped (no reachable D + very stuck). Late game
+        # (z >= 10) keeps the prior loose gate -- a lucky warp there
+        # is more often a depth boost than a death sentence.
+        turns_on_floor = obs.get("turns_on_floor") or 0
+        pc_z = gs.player_character.z
+        early_floor = pc_z < 10
+        feature_paths = obs.get("feature_paths") or {}
+        d_reachable = bool((feature_paths.get("D") or {}).get("first_step"))
+        if early_floor:
+            # Only accept if very stuck AND no D reachable on this
+            # floor. Otherwise resist -- a failed resist still warps
+            # but at least the policy isn't choosing the gamble.
+            if turns_on_floor > 400 and not d_reachable:
+                return "n"
+            return "y"
+        # Late game: prior behavior.
+        return "n" if turns_on_floor > 200 else "y"
     if mode == "altar_mode":
         # Pray once per altar -- claims the god's current tier reward
         # (HP heal, MP restore, hunger fill, blessing, eventually a
