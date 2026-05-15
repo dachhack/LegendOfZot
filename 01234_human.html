@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Hama the human — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Hama, the human</h1>
+  <p class="muted">non-binary adventurer · seed 1234 · started 2026-05-15T01:09:55+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">220</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F4</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L1</span></div>
+      <div class="stat"><span>Experience</span><span class="v">5</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-1 / 30</span></div>
+      <div class="stat"><span>Mana</span><span class="v">9 / 29</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">89</span></div>
+      <div class="stat"><span>Gold</span><span class="v">824g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">2</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">0</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">9</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,10.0 13.5,10.0 17.1,10.0 20.6,16.0 24.2,22.0 27.7,22.0 31.3,22.0 34.8,34.0 38.4,34.0 41.9,34.0 45.5,40.0 49.0,40.0 52.5,40.0 56.1,34.0 59.6,34.0 63.2,34.0 66.7,28.0 70.3,28.0 73.8,28.0 77.4,28.0 80.9,22.0 84.5,22.0 88.0,22.0 91.5,16.0 95.1,16.0 98.6,16.0 102.2,16.0 105.7,10.0 109.3,82.0 112.8,82.0 116.4,154.0 119.9,154.0 123.5,154.0 127.0,10.0 130.5,10.0 134.1,82.0 137.6,82.0 141.2,82.0 144.7,82.0 148.3,82.0 151.8,10.0 155.4,10.0 158.9,82.0 162.5,82.0 166.0,76.0 169.5,76.0 173.1,76.0 176.6,142.0 180.2,142.0 183.7,142.0 187.3,142.0 190.8,142.0 194.4,142.0 197.9,142.0 201.5,142.0 205.0,142.0 208.5,142.0 212.1,142.0 215.6,142.0 219.2,142.0 222.7,142.0 226.3,142.0 229.8,142.0 233.4,142.0 236.9,142.0 240.5,142.0 244.0,142.0 247.5,142.0 251.1,142.0 254.6,142.0 258.2,142.0 261.7,142.0 265.3,142.0 268.8,142.0 272.4,142.0 275.9,142.0 279.5,142.0 283.0,142.0 286.5,142.0 290.1,142.0 293.6,142.0 297.2,142.0 300.7,142.0 304.3,142.0 307.8,142.0 311.4,142.0 314.9,142.0 318.5,142.0 322.0,142.0 325.5,142.0 329.1,142.0 332.6,142.0 336.2,142.0 339.7,142.0 343.3,142.0 346.8,142.0 350.4,142.0 353.9,142.0 357.5,142.0 361.0,142.0 364.5,76.0 368.1,142.0 371.6,142.0 375.2,142.0 378.7,136.0 382.3,136.0 385.8,130.0 389.4,130.0 392.9,130.0 396.5,130.0 400.0,130.0 403.5,130.0 407.1,130.0 410.6,130.0 414.2,130.0 417.7,130.0 421.3,130.0 424.8,130.0 428.4,130.0 431.9,130.0 435.5,130.0 439.0,130.0 442.5,130.0 446.1,130.0 449.6,130.0 453.2,130.0 456.7,130.0 460.3,130.0 463.8,130.0 467.4,130.0 470.9,130.0 474.5,130.0 478.0,130.0 481.5,130.0 485.1,130.0 488.6,130.0 492.2,130.0 495.7,130.0 499.3,130.0 502.8,130.0 506.4,130.0 509.9,130.0 513.5,130.0 517.0,130.0 520.5,130.0 524.1,130.0 527.6,130.0 531.2,130.0 534.7,130.0 538.3,130.0 541.8,130.0 545.4,130.0 548.9,130.0 552.5,130.0 556.0,130.0 559.5,130.0 563.1,130.0 566.6,130.0 570.2,130.0 573.7,76.0 577.3,142.0 580.8,142.0 584.4,76.0 587.9,142.0 591.5,142.0 595.0,142.0 598.5,136.0 602.1,136.0 605.6,130.0 609.2,130.0 612.7,130.0 616.3,130.0 619.8,130.0 623.4,130.0 626.9,130.0 630.5,130.0 634.0,130.0 637.5,130.0 641.1,130.0 644.6,130.0 648.2,130.0 651.7,130.0 655.3,130.0 658.8,130.0 662.4,130.0 665.9,130.0 669.5,130.0 673.0,130.0 676.5,130.0 680.1,130.0 683.6,130.0 687.2,130.0 690.7,130.0 694.3,130.0 697.8,130.0 701.4,130.0 704.9,130.0 708.5,130.0 712.0,130.0 715.5,130.0 719.1,130.0 722.6,130.0 726.2,130.0 729.7,130.0 733.3,130.0 736.8,130.0 740.4,130.0 743.9,130.0 747.5,130.0 751.0,130.0 754.5,130.0 758.1,130.0 761.6,130.0 765.2,130.0 768.7,130.0 772.3,130.0 775.8,130.0 779.4,130.0 782.9,130.0 786.5,130.0 790.0,196.0 790.0,196.0' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T220, max 30</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Dagger <span class="muted">(+2 atk · dur 39/40 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Leather Armor <span class="muted">(+3 def · dur 49/50 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T8: arrived on Floor 2</li><li>T25: arrived on Floor 4</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>1</td></tr><tr><td>Floor 2</td><td>1</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Sewer Rat</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (0)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td colspan='5'>no purchases</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Mana Potion</td><td>potion_mana</td><td>1</td><td>unidentified</td></tr><tr><td>2</td><td>Rations</td><td>food</td><td>2</td><td></td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>unknown</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T212: Lantern fuel remaining: 21</li><li>T216: You light your Lantern...</li><li>T216: The lantern reveals 8 nearby rooms!</li><li>T216: Lantern fuel remaining: 25</li><li>T216: The lantern reveals 2 nearby rooms!</li><li>T216: Lantern fuel remaining: 24</li><li>T216: Hama is no longer affected by Altar Strength Boost.</li><li>T216: The lantern reveals 5 nearby rooms!</li><li>T216: Lantern fuel remaining: 23</li><li>T216: Lantern fuel remaining: 22</li><li>T216: The lantern reveals 4 nearby rooms!</li><li>T216: Lantern fuel remaining: 21</li><li>T218: You eat the Rations. Hunger restored by 40.</li><li>T218: (2 remaining)</li><li>T219: Returning to combat...</li><li>T220: The lantern reveals 5 nearby rooms!</li><li>T220: Lantern fuel remaining: 23</li><li>T220: You light your Lantern...</li><li>T220: The lantern reveals 2 nearby rooms!</li><li>T220: Lantern fuel remaining: 22</li><li>T220: The lantern reveals 4 nearby rooms!</li><li>T220: Lantern fuel remaining: 21</li><li>T220: You eat the Rations. Hunger restored by 40.</li><li>T220: (2 remaining)</li><li>T220: Returning to combat...</li><li>T220: You successfully broke away from combat!</li><li>T220: Choose a direction to flee (n/s/e/w):</li><li>T220: Ouch! Minotaur hit Hama!</li><li>T220: You took 11 damage!</li><li>T220: You were defeated...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T209 <span class='mode'>game_loop</span>: <code>n</code></li><li>T210 <span class='mode'>game_loop</span>: <code>e</code></li><li>T211 <span class='mode'>game_loop</span>: <code>n</code></li><li>T212 <span class='mode'>game_loop</span>: <code>e</code></li><li>T213 <span class='mode'>game_loop</span>: <code>e</code></li><li>T214 <span class='mode'>game_loop</span>: <code>n</code></li><li>T215 <span class='mode'>game_loop</span>: <code>n</code></li><li>T216 <span class='mode'>game_loop</span>: <code>n</code></li><li>T217 <span class='mode'>inventory</span>: <code>i</code></li><li>T218 <span class='mode'>inventory</span>: <code>eat1</code></li><li>T219 <span class='mode'>combat_mode</span>: <code>x</code></li><li>T220 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        </section>
+        
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Idril the elf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Idril, the elf</h1>
+  <p class="muted">non-binary adventurer · seed 1234 · started 2026-05-15T01:09:55+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">84</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F4</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L1</span></div>
+      <div class="stat"><span>Experience</span><span class="v">5</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-16 / 28</span></div>
+      <div class="stat"><span>Mana</span><span class="v">39 / 50</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">67</span></div>
+      <div class="stat"><span>Gold</span><span class="v">687g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">2</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">0</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">7</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,61.4 19.3,61.4 28.6,61.4 37.9,10.0 47.1,10.0 56.4,10.0 65.7,16.4 75.0,22.9 84.3,22.9 93.6,22.9 102.9,35.7 112.1,35.7 121.4,35.7 130.7,42.1 140.0,42.1 149.3,42.1 158.6,35.7 167.9,35.7 177.1,35.7 186.4,29.3 195.7,29.3 205.0,29.3 214.3,29.3 223.6,22.9 232.9,22.9 242.1,22.9 251.4,16.4 260.7,16.4 270.0,16.4 279.3,16.4 288.6,10.0 297.9,87.1 307.1,87.1 316.4,164.3 325.7,164.3 335.0,164.3 344.3,10.0 353.6,10.0 362.9,10.0 372.1,10.0 381.4,10.0 390.7,10.0 400.0,10.0 409.3,10.0 418.6,10.0 427.9,10.0 437.1,10.0 446.4,100.0 455.7,100.0 465.0,100.0 474.3,100.0 483.6,10.0 492.9,10.0 502.1,55.0 511.4,100.0 520.7,145.0 530.0,55.0 539.3,100.0 548.6,100.0 557.9,100.0 567.1,10.0 576.4,10.0 585.7,100.0 595.0,100.0 604.3,100.0 613.6,100.0 622.9,100.0 632.1,100.0 641.4,100.0 650.7,100.0 660.0,100.0 669.3,100.0 678.6,100.0 687.9,100.0 697.1,100.0 706.4,100.0 715.7,100.0 725.0,100.0 734.3,100.0 743.6,100.0 752.9,100.0 762.1,100.0 771.4,100.0 780.7,100.0 790.0,292.9' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T84, max 28</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Dagger <span class="muted">(+2 atk · dur 39/40 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Leather Armor <span class="muted">(+3 def · dur 49/50 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T11: arrived on Floor 2</li><li>T28: arrived on Floor 4</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>1</td></tr><tr><td>Floor 2</td><td>1</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Sewer Rat</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (0)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td colspan='5'>no purchases</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Rations</td><td>food</td><td>5</td><td></td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>chest explosion</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T80: You found armor!</li><li>T80: Ring Mail</li><li>T80: Defense: +4 | Level: 2</li><li>T80: You found a weapon!</li><li>T80: Short Sword</li><li>T80: Attack: +4 | Level: 0</li><li>T80: You light your Lantern...</li><li>T80: The lantern reveals 11 nearby rooms!</li><li>T80: Lantern fuel remaining: 43</li><li>T80: You found 100 gold!</li><li>T80: Total gold: 687</li><li>T80: You also found a Slimy Potion tucked inside!</li><li>T80: The lantern reveals 8 nearby rooms!</li><li>T80: Lantern fuel remaining: 42</li><li>T83: Invalid command. &#x27;o&#x27; to open, move keys to leave.</li><li>T84: Short Sword</li><li>T84: Attack: +4 | Level: 0</li><li>T84: You light your Lantern...</li><li>T84: The lantern reveals 11 nearby rooms!</li><li>T84: Lantern fuel remaining: 43</li><li>T84: You found 100 gold!</li><li>T84: Total gold: 687</li><li>T84: You also found a Slimy Potion tucked inside!</li><li>T84: The lantern reveals 8 nearby rooms!</li><li>T84: Lantern fuel remaining: 42</li><li>T84: Invalid command. &#x27;o&#x27; to open, move keys to leave.</li><li>T84:  The chest explodes!!! </li><li>T84: Your Mana Potion was destroyed by the explosion!</li><li>T84: You took 30 damage!</li><li>T84: Idril has been defeated! Game Over.</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T73 <span class='mode'>game_loop</span>: <code>n</code></li><li>T74 <span class='mode'>game_loop</span>: <code>l</code></li><li>T75 <span class='mode'>chest_mode</span>: <code>n</code></li><li>T76 <span class='mode'>game_loop</span>: <code>o</code></li><li>T77 <span class='mode'>game_loop</span>: <code>n</code></li><li>T78 <span class='mode'>game_loop</span>: <code>w</code></li><li>T79 <span class='mode'>game_loop</span>: <code>l</code></li><li>T80 <span class='mode'>game_loop</span>: <code>s</code></li><li>T81 <span class='mode'>game_loop</span>: <code>s</code></li><li>T82 <span class='mode'>chest_mode</span>: <code>w</code></li><li>T83 <span class='mode'>chest_mode</span>: <code>l</code></li><li>T84 <span class='mode'>death_screen</span>: <code>o</code></li></ol>
+        </section>
+        
+
+</body>
+</html>

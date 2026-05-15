@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Haldir the elf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Haldir, the elf</h1>
+  <p class="muted">non-binary adventurer · seed 271 · started 2026-05-15T01:10:11+00:00</p>
+  <p><span class="outcome alive">SURVIVED</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">2000</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F2</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L1</span></div>
+      <div class="stat"><span>Experience</span><span class="v">20</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">1 / 28</span></div>
+      <div class="stat"><span>Mana</span><span class="v">39 / 50</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">0</span></div>
+      <div class="stat"><span>Gold</span><span class="v">251g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">9</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">17</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">4</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,61.4 13.9,16.4 17.8,16.4 21.7,10.0 25.6,10.0 29.5,10.0 33.4,10.0 37.3,10.0 41.2,10.0 45.1,10.0 49.0,10.0 52.9,10.0 56.8,10.0 60.7,22.9 64.6,151.4 68.5,183.6 72.4,183.6 76.3,183.6 80.2,183.6 84.1,183.6 88.0,183.6 91.9,183.6 95.8,183.6 99.7,183.6 103.6,183.6 107.5,183.6 111.4,183.6 115.3,183.6 119.2,183.6 123.1,183.6 127.0,183.6 130.9,183.6 134.8,183.6 138.7,183.6 142.6,183.6 146.5,183.6 150.4,183.6 154.3,183.6 158.2,183.6 162.1,183.6 166.0,183.6 169.9,183.6 173.8,183.6 177.7,183.6 181.6,183.6 185.5,183.6 189.4,183.6 193.3,183.6 197.2,183.6 201.1,183.6 205.0,183.6 208.9,183.6 212.8,183.6 216.7,183.6 220.6,183.6 224.5,183.6 228.4,183.6 232.3,183.6 236.2,183.6 240.1,183.6 244.0,183.6 247.9,183.6 251.8,183.6 255.7,183.6 259.6,183.6 263.5,183.6 267.4,183.6 271.3,183.6 275.2,183.6 279.1,183.6 283.0,183.6 286.9,183.6 290.8,183.6 294.7,183.6 298.6,183.6 302.5,183.6 306.4,183.6 310.3,183.6 314.2,183.6 318.1,183.6 322.0,183.6 325.9,183.6 329.8,183.6 333.7,183.6 337.6,183.6 341.5,183.6 345.4,183.6 349.3,183.6 353.2,183.6 357.1,183.6 361.0,183.6 364.9,183.6 368.8,183.6 372.7,183.6 376.6,183.6 380.5,183.6 384.4,183.6 388.3,183.6 392.2,183.6 396.1,183.6 400.0,183.6 403.9,183.6 407.8,183.6 411.7,183.6 415.6,183.6 419.5,183.6 423.4,183.6 427.3,183.6 431.2,183.6 435.1,183.6 439.0,183.6 442.9,183.6 446.8,183.6 450.7,183.6 454.6,183.6 458.5,183.6 462.4,183.6 466.3,183.6 470.2,183.6 474.1,183.6 478.0,183.6 481.9,183.6 485.8,183.6 489.7,183.6 493.6,183.6 497.5,183.6 501.4,183.6 505.3,183.6 509.2,183.6 513.1,183.6 517.0,183.6 520.9,183.6 524.8,183.6 528.7,183.6 532.6,183.6 536.5,183.6 540.4,183.6 544.3,183.6 548.2,183.6 552.1,183.6 556.0,183.6 559.9,183.6 563.8,183.6 567.7,183.6 571.6,183.6 575.5,183.6 579.4,183.6 583.3,183.6 587.2,183.6 591.1,183.6 595.0,183.6 598.9,183.6 602.8,183.6 606.7,183.6 610.6,183.6 614.5,183.6 618.4,183.6 622.3,183.6 626.2,183.6 630.1,183.6 634.0,183.6 637.9,183.6 641.8,183.6 645.7,183.6 649.6,183.6 653.5,183.6 657.4,183.6 661.3,183.6 665.2,183.6 669.1,183.6 673.0,183.6 676.9,183.6 680.8,183.6 684.7,183.6 688.6,183.6 692.5,183.6 696.4,183.6 700.3,183.6 704.2,183.6 708.1,183.6 712.0,183.6 715.9,183.6 719.8,183.6 723.7,183.6 727.6,183.6 731.5,183.6 735.4,183.6 739.3,183.6 743.2,183.6 747.1,183.6 751.0,183.6 754.9,183.6 758.8,183.6 762.7,183.6 766.6,183.6 770.5,183.6 774.4,183.6 778.3,183.6 782.2,183.6 786.1,183.6 790.0,183.6 790.0,183.6' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T2000, max 28</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Mace <span class="muted">(+5 atk · dur 60/60 · uncursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Ring Mail <span class="muted">(+4 def · dur 106/106 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T27: arrived on Floor 2</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>6</td></tr><tr><td>Floor 2</td><td>3</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Lichen</td><td>4</td></tr><tr><td>Giant Centipede</td><td>2</td></tr><tr><td>Rust Monster</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (17)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T10</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T11</td><td>F1</td><td>Scroll of Ice Shard</td><td>1×</td><td>30g</td></tr><tr><td>T12</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T12</td><td>F1</td><td>Scroll of Ice Shard</td><td>1×</td><td>30g</td></tr><tr><td>T12</td><td>F1</td><td>Handaxe</td><td>1×</td><td>45g</td></tr><tr><td>T13</td><td>F1</td><td>Mace</td><td>1×</td><td>60g</td></tr><tr><td>T14</td><td>F1</td><td>Ring Mail</td><td>1×</td><td>120g</td></tr><tr><td>T16</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T16</td><td>F1</td><td>Scroll of Ice Shard</td><td>1×</td><td>30g</td></tr><tr><td>T16</td><td>F1</td><td>Handaxe</td><td>1×</td><td>45g</td></tr><tr><td>T16</td><td>F1</td><td>Mace</td><td>1×</td><td>60g</td></tr><tr><td>T16</td><td>F1</td><td>Ring Mail</td><td>1×</td><td>120g</td></tr><tr><td>T20</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T20</td><td>F1</td><td>Scroll of Ice Shard</td><td>1×</td><td>30g</td></tr><tr><td>T20</td><td>F1</td><td>Handaxe</td><td>1×</td><td>45g</td></tr><tr><td>T20</td><td>F1</td><td>Mace</td><td>1×</td><td>60g</td></tr><tr><td>T20</td><td>F1</td><td>Ring Mail</td><td>1×</td><td>120g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Handaxe</td><td>weapon</td><td>1</td><td>+4 | dur 60/60</td></tr><tr><td>2</td><td>Mace</td><td>weapon</td><td>1</td><td>+5 | dur 60/60 ★</td></tr><tr><td>3</td><td>Dagger</td><td>weapon</td><td>1</td><td>+2 | dur 40/40</td></tr><tr><td>4</td><td>Ring Mail</td><td>armor</td><td>1</td><td>+4 | dur 106/106 ★</td></tr><tr><td>5</td><td>Leather Armor</td><td>armor</td><td>1</td><td>+3 | dur 50/50</td></tr><tr><td>6</td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>7</td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>8</td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>9</td><td>Scroll of Ice Shard</td><td>scroll</td><td>1</td><td>identified</td></tr><tr><td>10</td><td>Rations</td><td>food</td><td>8</td><td></td></tr><tr><td>11</td><td>Rotten Rust Monster Filet</td><td>food_rotten</td><td>1</td><td></td></tr><tr><td>12</td><td>Lantern</td><td>lantern</td><td>1</td><td></td></tr>
+  </table>
+</section>
+
+
+
+</body>
+</html>

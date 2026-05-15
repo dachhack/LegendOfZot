@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Finrod the elf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Finrod, the elf</h1>
+  <p class="muted">non-binary adventurer · seed 314 · started 2026-05-15T01:10:06+00:00</p>
+  <p><span class="outcome alive">SURVIVED</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">2000</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F2</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L1</span></div>
+      <div class="stat"><span>Experience</span><span class="v">45</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">27 / 28</span></div>
+      <div class="stat"><span>Mana</span><span class="v">1 / 50</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">100</span></div>
+      <div class="stat"><span>Gold</span><span class="v">268g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">20</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">18</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">10</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,61.4 13.9,10.0 17.8,35.7 21.7,42.1 25.6,35.7 29.5,29.3 33.4,35.7 37.3,61.4 41.2,61.4 45.1,16.4 49.0,16.4 52.9,16.4 56.8,16.4 60.7,16.4 64.6,16.4 68.5,16.4 72.4,16.4 76.3,16.4 80.2,16.4 84.1,16.4 88.0,16.4 91.9,16.4 95.8,16.4 99.7,16.4 103.6,16.4 107.5,16.4 111.4,16.4 115.3,16.4 119.2,16.4 123.1,16.4 127.0,16.4 130.9,16.4 134.8,16.4 138.7,16.4 142.6,16.4 146.5,16.4 150.4,16.4 154.3,16.4 158.2,16.4 162.1,16.4 166.0,16.4 169.9,16.4 173.8,16.4 177.7,16.4 181.6,16.4 185.5,16.4 189.4,16.4 193.3,16.4 197.2,16.4 201.1,16.4 205.0,16.4 208.9,16.4 212.8,16.4 216.7,16.4 220.6,16.4 224.5,16.4 228.4,16.4 232.3,16.4 236.2,16.4 240.1,16.4 244.0,16.4 247.9,16.4 251.8,16.4 255.7,16.4 259.6,16.4 263.5,16.4 267.4,16.4 271.3,16.4 275.2,16.4 279.1,16.4 283.0,16.4 286.9,16.4 290.8,16.4 294.7,16.4 298.6,16.4 302.5,16.4 306.4,16.4 310.3,16.4 314.2,16.4 318.1,16.4 322.0,16.4 325.9,16.4 329.8,16.4 333.7,16.4 337.6,16.4 341.5,16.4 345.4,16.4 349.3,16.4 353.2,16.4 357.1,16.4 361.0,16.4 364.9,16.4 368.8,16.4 372.7,16.4 376.6,16.4 380.5,16.4 384.4,16.4 388.3,16.4 392.2,16.4 396.1,16.4 400.0,16.4 403.9,16.4 407.8,16.4 411.7,16.4 415.6,16.4 419.5,16.4 423.4,16.4 427.3,16.4 431.2,16.4 435.1,16.4 439.0,16.4 442.9,16.4 446.8,16.4 450.7,16.4 454.6,16.4 458.5,16.4 462.4,16.4 466.3,16.4 470.2,16.4 474.1,16.4 478.0,16.4 481.9,16.4 485.8,16.4 489.7,16.4 493.6,16.4 497.5,16.4 501.4,16.4 505.3,16.4 509.2,16.4 513.1,16.4 517.0,16.4 520.9,16.4 524.8,16.4 528.7,16.4 532.6,16.4 536.5,16.4 540.4,16.4 544.3,16.4 548.2,16.4 552.1,16.4 556.0,16.4 559.9,16.4 563.8,16.4 567.7,16.4 571.6,16.4 575.5,16.4 579.4,16.4 583.3,16.4 587.2,16.4 591.1,16.4 595.0,16.4 598.9,16.4 602.8,16.4 606.7,16.4 610.6,16.4 614.5,16.4 618.4,16.4 622.3,16.4 626.2,16.4 630.1,16.4 634.0,16.4 637.9,16.4 641.8,16.4 645.7,16.4 649.6,16.4 653.5,16.4 657.4,16.4 661.3,16.4 665.2,16.4 669.1,16.4 673.0,16.4 676.9,16.4 680.8,16.4 684.7,16.4 688.6,16.4 692.5,16.4 696.4,16.4 700.3,16.4 704.2,16.4 708.1,16.4 712.0,16.4 715.9,16.4 719.8,16.4 723.7,16.4 727.6,16.4 731.5,16.4 735.4,16.4 739.3,16.4 743.2,16.4 747.1,16.4 751.0,16.4 754.9,16.4 758.8,16.4 762.7,16.4 766.6,16.4 770.5,16.4 774.4,16.4 778.3,16.4 782.2,16.4 786.1,16.4 790.0,16.4 790.0,16.4' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T2000, max 28</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Battle Axe <span class="muted">(+7 atk · dur 84/84 · cursed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Studded Leather <span class="muted">(+4 def · dur 106/106 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T70: arrived on Floor 2</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>15</td></tr><tr><td>Floor 2</td><td>5</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Zombie</td><td>5</td></tr><tr><td>Crawling Claw</td><td>4</td></tr><tr><td>UNDEAD SKELETON</td><td>3</td></tr><tr><td>Giant Centipede</td><td>3</td></tr><tr><td>Stirge</td><td>2</td></tr><tr><td>Rust Monster</td><td>2</td></tr><tr><td>Goblin</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (18)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T97</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T98</td><td>F2</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T99</td><td>F2</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T100</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T100</td><td>F2</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T100</td><td>F2</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T100</td><td>F2</td><td>Greatsword</td><td>1×</td><td>250g</td></tr><tr><td>T101</td><td>F2</td><td>Studded Leather</td><td>1×</td><td>70g</td></tr><tr><td>T104</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T104</td><td>F2</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T104</td><td>F2</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T104</td><td>F2</td><td>Greatsword</td><td>1×</td><td>250g</td></tr><tr><td>T104</td><td>F2</td><td>Studded Leather</td><td>1×</td><td>70g</td></tr><tr><td>T108</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T108</td><td>F2</td><td>Potion of Defense</td><td>1×</td><td>70g</td></tr><tr><td>T108</td><td>F2</td><td>Potion of Strength</td><td>1×</td><td>60g</td></tr><tr><td>T108</td><td>F2</td><td>Greatsword</td><td>1×</td><td>250g</td></tr><tr><td>T108</td><td>F2</td><td>Studded Leather</td><td>1×</td><td>70g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Greatsword</td><td>weapon</td><td>1</td><td>+10 | dur 112/112</td></tr><tr><td>2</td><td>Battle Axe</td><td>weapon</td><td>1</td><td>+7 | dur 84/84 ★</td></tr><tr><td>3</td><td>Dagger</td><td>weapon</td><td>1</td><td>+2 | dur 35/40</td></tr><tr><td>4</td><td>Studded Leather</td><td>armor</td><td>1</td><td>+4 | dur 106/106 ★</td></tr><tr><td>5</td><td>Leather Armor</td><td>armor</td><td>1</td><td>+3 | dur 45/50</td></tr><tr><td>6</td><td>Potion of Defense</td><td>potion_defense</td><td>1</td><td>identified</td></tr><tr><td>7</td><td>Potion of Strength</td><td>potion_strength</td><td>1</td><td>identified</td></tr><tr><td>8</td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>9</td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>10</td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>11</td><td>Gold Coin Pouch</td><td>other</td><td>1</td><td></td></tr><tr><td>12</td><td>Ornate Goblet</td><td>other</td><td>1</td><td></td></tr><tr><td>13</td><td>Rations</td><td>food</td><td>8</td><td></td></tr><tr><td>14</td><td>Lantern</td><td>lantern</td><td>1</td><td></td></tr><tr><td>15</td><td>Lantern Fuel</td><td>lantern_fuel</td><td>1</td><td></td></tr>
+  </table>
+</section>
+
+
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Imrahil the human — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Imrahil, the human</h1>
+  <p class="muted">non-binary adventurer · seed 256 · started 2026-05-15T01:09:54+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">940</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F8</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L3</span></div>
+      <div class="stat"><span>Experience</span><span class="v">270</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">0 / 50</span></div>
+      <div class="stat"><span>Mana</span><span class="v">0 / 29</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">75</span></div>
+      <div class="stat"><span>Gold</span><span class="v">860g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">95</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">44</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">42</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,82.0 13.3,82.0 16.6,82.0 20.0,85.6 23.3,85.6 26.6,82.0 29.9,82.0 33.2,82.0 36.6,96.4 39.9,96.4 43.2,100.0 46.5,100.0 49.8,100.0 53.1,128.8 56.5,82.0 59.8,82.0 63.1,85.6 66.4,121.6 69.7,85.6 73.1,92.8 76.4,92.8 79.7,92.8 83.0,96.4 86.3,100.0 89.7,100.0 93.0,107.2 96.3,82.0 99.6,82.0 102.9,82.0 106.3,82.0 109.6,82.0 112.9,89.2 116.2,89.2 119.5,82.0 122.9,82.0 126.2,82.0 129.5,82.0 132.8,82.0 136.1,82.0 139.4,82.0 142.8,82.0 146.1,103.6 149.4,82.0 152.7,82.0 156.0,82.0 159.4,82.0 162.7,82.0 166.0,82.0 169.3,89.2 172.6,89.2 176.0,89.2 179.3,89.2 182.6,89.2 185.9,89.2 189.2,92.8 192.6,46.0 195.9,46.0 199.2,49.6 202.5,49.6 205.8,49.6 209.1,49.6 212.5,49.6 215.8,49.6 219.1,49.6 222.4,49.6 225.7,49.6 229.1,49.6 232.4,46.0 235.7,46.0 239.0,46.0 242.3,46.0 245.7,46.0 249.0,46.0 252.3,46.0 255.6,46.0 258.9,49.6 262.3,46.0 265.6,46.0 268.9,46.0 272.2,46.0 275.5,46.0 278.9,49.6 282.2,56.8 285.5,64.0 288.8,64.0 292.1,64.0 295.4,64.0 298.8,64.0 302.1,64.0 305.4,64.0 308.7,46.0 312.0,46.0 315.4,46.0 318.7,46.0 322.0,46.0 325.3,46.0 328.6,46.0 332.0,46.0 335.3,46.0 338.6,46.0 341.9,46.0 345.2,46.0 348.6,46.0 351.9,46.0 355.2,46.0 358.5,46.0 361.8,46.0 365.1,46.0 368.5,53.2 371.8,82.0 375.1,110.8 378.4,139.6 381.7,154.0 385.1,46.0 388.4,53.2 391.7,82.0 395.0,103.6 398.3,132.4 401.7,146.8 405.0,46.0 408.3,46.0 411.6,46.0 414.9,46.0 418.3,46.0 421.6,46.0 424.9,46.0 428.2,46.0 431.5,46.0 434.9,46.0 438.2,46.0 441.5,46.0 444.8,46.0 448.1,46.0 451.4,46.0 454.8,46.0 458.1,46.0 461.4,46.0 464.7,46.0 468.0,49.6 471.4,49.6 474.7,49.6 478.0,49.6 481.3,49.6 484.6,49.6 488.0,49.6 491.3,49.6 494.6,49.6 497.9,46.0 501.2,46.0 504.6,46.0 507.9,46.0 511.2,46.0 514.5,46.0 517.8,46.0 521.1,46.0 524.5,46.0 527.8,46.0 531.1,46.0 534.4,46.0 537.7,46.0 541.1,46.0 544.4,46.0 547.7,46.0 551.0,46.0 554.3,46.0 557.7,46.0 561.0,46.0 564.3,46.0 567.6,46.0 570.9,46.0 574.3,46.0 577.6,49.6 580.9,49.6 584.2,49.6 587.5,56.8 590.9,64.0 594.2,64.0 597.5,64.0 600.8,64.0 604.1,64.0 607.4,64.0 610.8,10.0 614.1,10.0 617.4,10.0 620.7,10.0 624.0,10.0 627.4,10.0 630.7,13.6 634.0,13.6 637.3,13.6 640.6,13.6 644.0,13.6 647.3,10.0 650.6,110.8 653.9,60.4 657.2,60.4 660.6,60.4 663.9,161.2 667.2,161.2 670.5,110.8 673.8,110.8 677.1,110.8 680.5,110.8 683.8,103.6 687.1,103.6 690.4,103.6 693.7,103.6 697.1,103.6 700.4,103.6 703.7,103.6 707.0,107.2 710.3,17.2 713.7,28.0 717.0,31.6 720.3,38.8 723.6,42.4 726.9,42.4 730.3,42.4 733.6,42.4 736.9,49.6 740.2,67.6 743.5,78.4 746.9,89.2 750.2,96.4 753.5,107.2 756.8,114.4 760.1,125.2 763.4,132.4 766.8,136.0 770.1,136.0 773.4,136.0 776.7,139.6 780.0,150.4 783.4,161.2 786.7,175.6 790.0,190.0 790.0,190.0' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T940, max 50</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>— <span class="muted">(+0 atk · dur 0/0 · )</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>— <span class="muted">(+0 def · dur 0/0 · )</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T243: arrived on Floor 2</li><li>T506: arrived on Floor 3</li><li>T620: arrived on Floor 5</li><li>T756: arrived on Floor 6</li><li>T761: arrived on Floor 7</li><li>T836: arrived on Floor 8</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>41</td></tr><tr><td>Floor 2</td><td>25</td></tr><tr><td>Floor 3</td><td>7</td></tr><tr><td>Floor 5</td><td>21</td></tr><tr><td>Floor 6</td><td>1</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Goblin</td><td>22</td></tr><tr><td>Rust Monster</td><td>10</td></tr><tr><td>Spore Puff</td><td>9</td></tr><tr><td>Bat</td><td>7</td></tr><tr><td>Sewer Rat</td><td>6</td></tr><tr><td>Harpy</td><td>6</td></tr><tr><td>Giant Centipede</td><td>6</td></tr><tr><td>Zombie</td><td>5</td></tr><tr><td>Lichen</td><td>4</td></tr><tr><td>Stirge</td><td>3</td></tr><tr><td>Skeleton</td><td>3</td></tr><tr><td>UNDEAD ZOMBIE</td><td>3</td></tr><tr><td>Gray Ooze</td><td>3</td></tr><tr><td>Giant Spider</td><td>3</td></tr><tr><td>Slime Mold</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (44)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td>T356</td><td>F2</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T356</td><td>F2</td><td>Potion of Earth Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T356</td><td>F2</td><td>Scroll of Foresight</td><td>1×</td><td>40g</td></tr><tr><td>T356</td><td>F2</td><td>Ring Mail</td><td>1×</td><td>80g</td></tr><tr><td>T360</td><td>F2</td><td>Potion of Earth Resistance</td><td>1×</td><td>70g</td></tr><tr><td>T360</td><td>F2</td><td>Scroll of Foresight</td><td>1×</td><td>40g</td></tr><tr><td>T360</td><td>F2</td><td>Ring Mail</td><td>1×</td><td>80g</td></tr><tr><td>T623</td><td>F5</td><td>Superior Mana Potion</td><td>1×</td><td>120g</td></tr><tr><td>T624</td><td>F5</td><td>Superior Mana Potion</td><td>1×</td><td>120g</td></tr><tr><td>T624</td><td>F5</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T627</td><td>F5</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T628</td><td>F5</td><td>Superior Mana Potion</td><td>1×</td><td>120g</td></tr><tr><td>T628</td><td>F5</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T628</td><td>F5</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T628</td><td>F5</td><td>Potion of Stone Skin</td><td>1×</td><td>130g</td></tr><tr><td>T629</td><td>F5</td><td>Runic Hammer</td><td>1×</td><td>480g</td></tr><tr><td>T632</td><td>F5</td><td>Superior Mana Potion</td><td>1×</td><td>120g</td></tr><tr><td>T632</td><td>F5</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T632</td><td>F5</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T632</td><td>F5</td><td>Potion of Stone Skin</td><td>1×</td><td>130g</td></tr><tr><td>T632</td><td>F5</td><td>Runic Hammer</td><td>1×</td><td>480g</td></tr><tr><td>T636</td><td>F5</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T636</td><td>F5</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T636</td><td>F5</td><td>Potion of Stone Skin</td><td>1×</td><td>130g</td></tr><tr><td>T636</td><td>F5</td><td>Runic Hammer</td><td>1×</td><td>480g</td></tr><tr><td>T640</td><td>F5</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T640</td><td>F5</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T640</td><td>F5</td><td>Potion of Stone Skin</td><td>1×</td><td>130g</td></tr><tr><td>T640</td><td>F5</td><td>Runic Hammer</td><td>1×</td><td>480g</td></tr><tr><td>T644</td><td>F5</td><td>Runic Hammer</td><td>1×</td><td>480g</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Mana Potion</td><td>potion_mana</td><td>1</td><td>identified</td></tr><tr><td>2</td><td>Rations</td><td>food</td><td>2</td><td></td></tr><tr><td>3</td><td>Rotten Giant Centipede Filet</td><td>food_rotten</td><td>1</td><td></td></tr><tr><td>4</td><td>Rotten Goblin Burger</td><td>food_rotten</td><td>1</td><td></td></tr><tr><td>5</td><td>Rotten Harpy Burger</td><td>food_rotten</td><td>1</td><td></td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>unknown</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T932: Imrahil is now affected by Snail&#x27;s Defense Penalty!</li><li>T932:  The Snail coats you in corrosive slime!</li><li>T932: You missed the evil Snail!</li><li>T932: Snail missed Imrahil!</li><li>T932: Pounding on a Snail with your fists won&#x27;t hurt it much!</li><li>T932: You hit the evil Snail!</li><li>T932: Snail took 1 damage.</li><li>T932: Ouch! Snail hit Imrahil!</li><li>T933: Imrahil is no longer affected by Snail&#x27;s Defense Penalty.</li><li>T936: Snail took 1 damage.</li><li>T936: Ouch! Snail hit Imrahil!</li><li>T936: You took 1 damage!</li><li>T936: Pounding on a Snail with your fists won&#x27;t hurt it much!</li><li>T936: You hit the evil Snail!</li><li>T936: You missed the evil Snail!</li><li>T936: Flee failed! The monster blocks your escape.</li><li>T936: Imrahil is now affected by Snail&#x27;s Defense Penalty!</li><li>T936:  The Snail coats you in corrosive slime!</li><li>T939: Snail missed Imrahil!</li><li>T940: Pounding on a Snail with your fists won&#x27;t hurt it much!</li><li>T940: You hit the evil Snail!</li><li>T940: Snail took 1 damage.</li><li>T940: Snail missed Imrahil!</li><li>T940: Imrahil is no longer affected by Snail&#x27;s Defense Penalty.</li><li>T940: Ouch! Snail hit Imrahil!</li><li>T940: You took 1 damage!</li><li>T940: Imrahil is now affected by Snail&#x27;s Defense Penalty!</li><li>T940:  The Snail coats you in corrosive slime!</li><li>T940: Flee failed! The monster blocks your escape.</li><li>T940: You were defeated...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T929 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T930 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T931 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T932 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T933 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T934 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T935 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T936 <span class='mode'>combat_mode</span>: <code>f</code></li><li>T937 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T938 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T939 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T940 <span class='mode'>death_screen</span>: <code>f</code></li></ol>
+        </section>
+        
+
+</body>
+</html>

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Tauriel the elf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <h1>Tauriel, the elf</h1>
+  <p class="muted">non-binary adventurer · seed 9001 · started 2026-05-15T01:10:01+00:00</p>
+  <p><span class="outcome dead">FELL</span></p>
+  <p class="muted">Memorised: Ice Shard, Heal, Fireball</p>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid3">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">424</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F5</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L2</span></div>
+      <div class="stat"><span>Experience</span><span class="v">140</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-1 / 38</span></div>
+      <div class="stat"><span>Mana</span><span class="v">1 / 50</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">59</span></div>
+      <div class="stat"><span>Gold</span><span class="v">1417g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">67</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">0</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">14</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>HP over the run</h2>
+  <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,95.3 13.7,95.3 17.4,90.5 21.0,85.8 24.7,57.4 28.4,57.4 32.1,57.4 35.8,57.4 39.4,57.4 43.1,57.4 46.8,57.4 50.5,57.4 54.2,57.4 57.8,57.4 61.5,57.4 65.2,57.4 68.9,62.1 72.5,62.1 76.2,62.1 79.9,62.1 83.6,62.1 87.3,57.4 90.9,57.4 94.6,62.1 98.3,62.1 102.0,62.1 105.7,62.1 109.3,62.1 113.0,62.1 116.7,62.1 120.4,62.1 124.1,62.1 127.7,81.1 131.4,118.9 135.1,118.9 138.8,57.4 142.5,57.4 146.1,62.1 149.8,62.1 153.5,62.1 157.2,62.1 160.8,62.1 164.5,62.1 168.2,66.8 171.9,66.8 175.6,71.6 179.2,90.5 182.9,104.7 186.6,104.7 190.3,109.5 194.0,109.5 197.6,109.5 201.3,57.4 205.0,57.4 208.7,57.4 212.4,57.4 216.0,57.4 219.7,57.4 223.4,62.1 227.1,62.1 230.8,62.1 234.4,62.1 238.1,62.1 241.8,62.1 245.5,62.1 249.2,62.1 252.8,57.4 256.5,62.1 260.2,66.8 263.9,62.1 267.5,57.4 271.2,57.4 274.9,57.4 278.6,57.4 282.3,57.4 285.9,57.4 289.6,57.4 293.3,57.4 297.0,57.4 300.7,62.1 304.3,62.1 308.0,62.1 311.7,66.8 315.4,71.6 319.1,66.8 322.7,62.1 326.4,62.1 330.1,62.1 333.8,62.1 337.5,10.0 341.1,10.0 344.8,10.0 348.5,14.7 352.2,14.7 355.8,14.7 359.5,14.7 363.2,43.2 366.9,43.2 370.6,43.2 374.2,43.2 377.9,43.2 381.6,43.2 385.3,43.2 389.0,43.2 392.6,43.2 396.3,81.1 400.0,81.1 403.7,81.1 407.4,81.1 411.0,81.1 414.7,81.1 418.4,81.1 422.1,85.8 425.8,90.5 429.4,90.5 433.1,90.5 436.8,90.5 440.5,90.5 444.2,90.5 447.8,95.3 451.5,95.3 455.2,95.3 458.9,95.3 462.5,95.3 466.2,90.5 469.9,95.3 473.6,95.3 477.3,100.0 480.9,95.3 484.6,95.3 488.3,95.3 492.0,95.3 495.7,100.0 499.3,104.7 503.0,109.5 506.7,109.5 510.4,109.5 514.1,109.5 517.7,109.5 521.4,109.5 525.1,109.5 528.8,109.5 532.5,109.5 536.1,109.5 539.8,109.5 543.5,109.5 547.2,109.5 550.8,109.5 554.5,109.5 558.2,109.5 561.9,109.5 565.6,109.5 569.2,109.5 572.9,109.5 576.6,109.5 580.3,104.7 584.0,104.7 587.6,100.0 591.3,100.0 595.0,100.0 598.7,100.0 602.4,19.5 606.0,19.5 609.7,19.5 613.4,19.5 617.1,19.5 620.8,19.5 624.4,19.5 628.1,19.5 631.8,19.5 635.5,19.5 639.2,19.5 642.8,19.5 646.5,19.5 650.2,19.5 653.9,19.5 657.5,14.7 661.2,14.7 664.9,14.7 668.6,10.0 672.3,10.0 675.9,10.0 679.6,10.0 683.3,10.0 687.0,10.0 690.7,10.0 694.3,10.0 698.0,10.0 701.7,10.0 705.4,10.0 709.1,10.0 712.7,10.0 716.4,10.0 720.1,10.0 723.8,10.0 727.5,10.0 731.1,10.0 734.8,10.0 738.5,118.9 742.2,118.9 745.8,118.9 749.5,128.4 753.2,147.4 756.9,147.4 760.6,147.4 764.2,147.4 767.9,147.4 771.6,147.4 775.3,147.4 779.0,147.4 782.6,166.3 786.3,185.3 790.0,194.7 790.0,194.7' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T424, max 38</text></svg>
+</section>
+
+<section class="card">
+  <h2>Equipment at end</h2>
+  <div class="grid2">
+    <div>
+      <h3>Weapon</h3>
+      <p>Mace <span class="muted">(+5 atk · dur 18/60 · blessed)</span></p>
+    </div>
+    <div>
+      <h3>Armor</h3>
+      <p>Leather Armor <span class="muted">(+3 def · dur 8/50 · uncursed)</span></p>
+    </div>
+  </div>
+</section>
+
+<section class="card">
+  <h2>Journey</h2>
+  <h3>Descents</h3>
+  <ul><li>T340: arrived on Floor 3</li><li>T398: arrived on Floor 5</li></ul>
+  <h3>Kills by floor</h3>
+  <table><tr><td>Floor 1</td><td>65</td></tr><tr><td>Floor 3</td><td>2</td></tr></table>
+  <h3>Top victims</h3>
+  <table><tr><td>Crawling Claw</td><td>12</td></tr><tr><td>Goblin</td><td>10</td></tr><tr><td>Giant Centipede</td><td>9</td></tr><tr><td>Zombie</td><td>9</td></tr><tr><td>Giant Rat</td><td>8</td></tr><tr><td>Skeleton</td><td>6</td></tr><tr><td>Stirge</td><td>6</td></tr><tr><td>Lichen</td><td>5</td></tr><tr><td>Slime Mold</td><td>4</td></tr><tr><td>Rust Monster</td><td>3</td></tr><tr><td>UNDEAD SKELETON</td><td>3</td></tr><tr><td>Kobold</td><td>2</td></tr></table>
+</section>
+
+<section class="card">
+  <h2>Purchases (0)</h2>
+  <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+  <tr><td colspan='5'>no purchases</td></tr>
+  </table>
+</section>
+
+<section class="card">
+  <h2>Final Inventory</h2>
+  <table><tr><th>Slot</th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+  <tr><td>1</td><td>Rations</td><td>food</td><td>1</td><td></td></tr>
+  </table>
+</section>
+
+
+        <section class="card death">
+          <h2>Death Scene</h2>
+          <p class="cause">Cause: <strong>defeated by Displacer Beast</strong></p>
+          <h3>Last 30 log lines</h3>
+          <ol class="log"><li>T420:  ACHIEVEMENT UNLOCKED: Librarian - Successfully read 5 grimoires</li><li>T420:  ACHIEVEMENT UNLOCKED: Wealthy Adventurer - Collect 1000 total gold</li><li>T420: The library&#x27;s knowledge has been exhausted. The shelves are now empty.</li><li>T420: A Displacer Beast (Level 4) appears! A six-legged panther with tentacles, its image shifts constantly.</li><li>T420: You seize the initiative!</li><li>T420: You missed the evil Displacer Beast!</li><li>T420: Displacer Beast missed Tauriel!</li><li>T420: Ouch! Displacer Beast hit Tauriel!</li><li>T420: You took 2 damage!</li><li>T420: Your Leather Armor is badly damaged (12/50)!</li><li>T421: Your Leather Armor is badly damaged (11/50)!</li><li>T421: Tauriel is now affected by Displacer Beast&#x27;s Curse!</li><li>T421:  The Displacer Beast confuses your aim with its displacement!</li><li>T422: Your Leather Armor is badly damaged (10/50)!</li><li>T423: Your Leather Armor is badly damaged (9/50)!</li><li>T423: You hit the evil Displacer Beast!</li><li>T423: Displacer Beast took 20 damage.</li><li>T424: You missed the evil Displacer Beast!</li><li>T424: Ouch! Displacer Beast hit Tauriel!</li><li>T424: You took 2 damage!</li><li>T424: Your Leather Armor is badly damaged (9/50)!</li><li>T424: You hit the evil Displacer Beast!</li><li>T424: Displacer Beast took 20 damage.</li><li>T424: Displacer Beast missed Tauriel!</li><li>T424: Tauriel is no longer affected by Altar Attack Boost.</li><li>T424: Your Leather Armor is badly damaged (8/50)!</li><li>T424: Displacer Beast took 19 damage.</li><li>T424: Tauriel is now affected by Displacer Beast&#x27;s Curse!</li><li>T424:  The Displacer Beast confuses your aim with its displacement!</li><li>T424: You were defeated by the Displacer Beast...</li></ol>
+          <h3>Last actions</h3>
+          <ol class="actions"><li>T413 <span class='mode'>library_mode</span>: <code>s</code></li><li>T414 <span class='mode'>library_read_decision_mode</span>: <code>r</code></li><li>T415 <span class='mode'>game_loop</span>: <code>y</code></li><li>T416 <span class='mode'>game_loop</span>: <code>s</code></li><li>T417 <span class='mode'>combat_mode</span>: <code>w</code></li><li>T418 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T419 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T420 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T421 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T422 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T423 <span class='mode'>combat_mode</span>: <code>a</code></li><li>T424 <span class='mode'>death_screen</span>: <code>a</code></li></ol>
+        </section>
+        
+
+</body>
+</html>
