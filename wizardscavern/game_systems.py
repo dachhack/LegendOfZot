@@ -3145,16 +3145,23 @@ def process_chest_action(player_character, my_tower, cmd):
             # Base probabilities
             base_items = ['gold', 'gas', 'boom', 'empty', 'treasure', 'lantern_fuel', 'equipment']
             base_probs = [0.35, 0.08, 0.07, 0.05, 0.05, 0.20, 0.20]
-            
-            # Add upgrade scroll with floor-scaled probability
-            # Floor 1-4: 0%, Floor 5-9: 3-7%, Floor 10-14: 8-12%, Floor 15+: 13-17%
+
+            # Add upgrade scroll with floor-scaled probability.
+            # Bumped to give early floors a real chance: the prior
+            # gate (floor_level >= 5) meant F1-F4 chests NEVER
+            # dropped upgrades, and since playtest agents typically
+            # die on F1-F5 the chest path almost never contributed.
+            # New curve: F1-F4 = 5%, F5-9 = 8-16%, F10-14 = 17-25%,
+            # F15+ = 26-30% (capped at 30%).
             if floor_level >= 5:
-                upgrade_scroll_chance = min(0.17, 0.03 + (floor_level - 5) * 0.02)
-                base_items.append('upgrade_scroll')
-                base_probs.append(upgrade_scroll_chance)
-                # Normalize probabilities to sum to 1
-                total = sum(base_probs)
-                base_probs = [p / total for p in base_probs]
+                upgrade_scroll_chance = min(0.30, 0.08 + (floor_level - 5) * 0.02)
+            else:
+                upgrade_scroll_chance = 0.05
+            base_items.append('upgrade_scroll')
+            base_probs.append(upgrade_scroll_chance)
+            # Normalize probabilities to sum to 1
+            total = sum(base_probs)
+            base_probs = [p / total for p in base_probs]
             
             items = base_items
             probabilities = base_probs

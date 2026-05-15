@@ -3037,11 +3037,23 @@ def drop_monster_items(monster, player_character):
         display = get_item_display_name(item)
         add_log(f"{COLOR_CYAN}The {monster.name} dropped {get_article(display)} {display}!{COLOR_RESET}")
     elif roll < 0.85:
-        # Scroll drop
+        # Scroll drop. Bias toward upgrade scrolls -- they're the only
+        # weapon-power scaling lever for non-caster races (dwarf,
+        # human) and an even-pick across SCROLL_TEMPLATES makes
+        # upgrades ~1 in 8 drops. New rule: 50% chance the drop is
+        # a floor-tier upgrade scroll, 50% chance it's a random
+        # eligible template (which may itself include upgrades).
         scroll_candidates = [s for s in SCROLL_TEMPLATES if s.level <= floor_lvl + 2]
         if not scroll_candidates:
             scroll_candidates = SCROLL_TEMPLATES
-        base = random.choice(scroll_candidates)
+        # 50/50 bias: pick from upgrade scrolls if available, else
+        # fall back to the random pool.
+        upgrade_candidates = [s for s in scroll_candidates
+                              if s.scroll_type == 'upgrade']
+        if upgrade_candidates and random.random() < 0.50:
+            base = random.choice(upgrade_candidates)
+        else:
+            base = random.choice(scroll_candidates)
         item = Scroll(name=base.name, scroll_type=base.scroll_type,
                       spell_to_cast=base.spell_to_cast,
                       spell_power_multiplier=base.spell_power_multiplier,
