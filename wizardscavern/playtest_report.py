@@ -1200,22 +1200,30 @@ def write_index(out_dir):
 
 
 def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
-                    sub_path="docs/playtest"):
+                    sub_path="docs/playtest", replace=False):
     """Push `out_dir` contents to `<branch>:<sub_path>/`.
 
     Default target is `main:docs/playtest/` because dachhack/LegendOfZot
     serves GitHub Pages from `main:docs/` (per repo settings), and we
     don't want to clobber the existing spell-sprite-audit site. The
-    reports land at `https://dachhack.github.io/LegendOfZot/playtest/`
-    as a sibling of the existing audit pages.
+    reports land at `https://dachhack.github.io/LegendOfZot/playtest/`.
+
+    ``replace=False`` (default) is ADDITIVE: existing files at
+    ``<sub_path>/`` are preserved unless a same-named report has been
+    regenerated. Good for incremental runs that add a few new seeds.
+
+    ``replace=True`` purges the entire ``<sub_path>/`` tree before
+    overlaying the current ``out_dir``. Use after a report-template
+    change so old-format pages don't linger -- e.g., when the layout
+    moves from a single-page card list to the tabbed sprite-rich
+    format and a stale seed-1800 page from the prior format sticks
+    around because the current grid doesn't cover that seed.
 
     Uses git plumbing (hash-object / ls-tree / mktree / commit-tree)
     so the deploy never modifies the working tree or index, never
     creates a worktree (sandboxed environments often refuse signing
-    on auxiliary paths), and stays additive: existing files at
-    `<sub_path>/` are preserved unless a same-named report has been
-    regenerated. Files outside `<sub_path>/` (the rest of the
-    repository) are passed through unchanged.
+    on auxiliary paths). Files outside ``<sub_path>/`` (the rest of
+    the repository) are always passed through unchanged.
 
     Returns the remote URL on success, or None if the deploy was a
     no-op (resulting commit tree matches parent's).
@@ -1299,10 +1307,15 @@ def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
         else:
             parent_trees.append({})  # missing subdirectory; we'll create it
 
-    # 4. Target directory: start from what's already at <sub_path>/
-    #    (preserves prior runs deployed to the same path), then
-    #    overlay every file in `out_dir` as a fresh blob.
-    target = dict(parent_trees[-1])
+    # 4. Target directory: in replace mode start from empty (purges
+    #    old-format pages from prior templates); in additive mode
+    #    start from what's already at <sub_path>/ (preserves prior
+    #    runs deployed to the same path). Then overlay every file in
+    #    `out_dir` as a fresh blob.
+    if replace:
+        target = {}
+    else:
+        target = dict(parent_trees[-1])
     for f in sorted(out_dir.iterdir()):
         if not f.is_file():
             continue
