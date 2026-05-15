@@ -1100,6 +1100,13 @@ class PlaytestSession:
         pc = gs.player_character
         tw = gs.my_tower
         mode = gs.prompt_cntl
+        # Capture pre-step position. The loop-prevention check below
+        # only forces game_loop when the agent JUST LANDED on a
+        # previously-visited feature tile -- not when they're
+        # mid-dialog with a fresh feature (e.g., still inside an
+        # altar prayer sequence). Without this guard, the override
+        # short-circuits boon-claiming on first visit.
+        pre_step_xyz = (pc.z, pc.x, pc.y)
 
         try:
             if mode == "death_screen":
@@ -1208,10 +1215,39 @@ class PlaytestSession:
         # goal that should always be re-targeted.
         pc_after = gs.player_character
         room_now = gs.my_tower.floors[pc_after.z].grid[pc_after.y][pc_after.x]
+        landing_key = (pc_after.z, pc_after.x, pc_after.y, room_now.room_type)
+        was_visited = landing_key in self.visited_features
+        post_step_xyz = (pc_after.z, pc_after.x, pc_after.y)
+        # The agent "just landed" only when the step caused a position
+        # change. Same-tile steps (e.g., issuing 'pray' inside a fresh
+        # altar_mode) don't trigger the override -- the boon-claiming
+        # interaction stays intact.
+        just_landed = (pre_step_xyz != post_step_xyz)
+        # Loop-prevention: feature-room modes re-fire their prompt every
+        # time the player steps onto the tile, even after the boon is
+        # consumed. The agent's wayfinder routes through visited
+        # features on the way to other targets; without this guard, each
+        # transit burns turns on a re-prompt the policy then has to
+        # 'back' out of (and BFS routes the agent right back). The HP
+        # charts on the report site exposed this: ~12 'alive' runs in
+        # the 60-run grid had HP flatlining from T300-T3000, stuck in
+        # chest / pool / blacksmith / stairs_up oscillations. Force
+        # visited feature tiles into pass-through tiles by resetting
+        # the mode to game_loop on the LANDING frame (move-step) only.
+        # stairs_down_mode is intentionally excluded: D isn't in
+        # visited_features and we want descent prompts to fire.
+        LOOP_PRONE_MODES = {
+            "altar_mode", "pool_mode", "garden_mode", "fey_garden_mode",
+            "library_mode", "oracle_mode", "chest_mode", "tomb_mode",
+            "vendor_shop", "blacksmith_mode", "shrine_mode",
+            "stairs_up_mode", "alchemist_mode", "war_room_mode",
+            "taxidermist_mode",
+        }
+        if (just_landed and was_visited
+                and gs.prompt_cntl in LOOP_PRONE_MODES):
+            gs.prompt_cntl = "game_loop"
         if room_now.room_type not in (".", "E", "#", "D"):
-            self.visited_features.add(
-                (pc_after.z, pc_after.x, pc_after.y, room_now.room_type)
-            )
+            self.visited_features.add(landing_key)
         # Reset floor-arrival counter when we change floors so the
         # stuck-on-floor override fires per-floor, not cumulative.
         if pc_after.z != self._last_floor:
