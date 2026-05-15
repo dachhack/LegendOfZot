@@ -112,6 +112,38 @@ _UNDEAD_NAME_TOKENS = (
     "undead",
 )
 
+# Status effects that LOSE HP EVERY TURN -- poison ticks, fire burn,
+# damage-over-time, life-drain. With one of these active the agent
+# should bail out of combat (fleeing breaks the engagement, the tick
+# continues but the monster doesn't add hits). Used for the combat
+# flee branch + the game_loop avoid-step-into-M gate.
+_TICKING_STATUS_TYPES = frozenset({
+    "poison", "damage_over_time", "burn", "life_drain",
+})
+# Status effects that DEGRADE combat performance but don't kill on
+# their own (weakness reduces damage, defense_penalty / blindness
+# hurts hit rate, confusion randomises movement, sticky_hands blocks
+# attacks). Agent SHOULD still avoid stepping into NEW fights with
+# these active, but shouldn't disengage from a fight already in
+# progress -- fleeing wastes turns the status would have ticked off
+# anyway, and the monster is usually still there when the debuff
+# wears off.
+_DEBUFF_STATUS_TYPES = frozenset({
+    "weakness", "defense_penalty", "blindness", "confusion",
+    "sticky_hands",
+})
+# Status effects that immobilise -- web, paralysis, freeze. The
+# game refuses move + attack actions while these are active. Don't
+# flee (movement refused) and don't waste turns trying. Stand and
+# heal / cast / wait the duration out.
+_IMMOBILISING_STATUS_TYPES = frozenset({"web", "paralysis", "freeze"})
+# Union: any of these makes the agent treat itself as "weak" for the
+# game_loop AVOID gate, but only _TICKING_STATUS_TYPES forces a flee
+# mid-combat.
+_DANGEROUS_STATUS_TYPES = (
+    _TICKING_STATUS_TYPES | _DEBUFF_STATUS_TYPES | _IMMOBILISING_STATUS_TYPES
+)
+
 
 def _strip_markup(s):
     if not isinstance(s, str):
@@ -597,6 +629,9 @@ class PlaytestSession:
                 "x": pc.x,
                 "y": pc.y,
                 "status_effects": list(pc.status_effects.keys()),
+                "status_effect_types": [
+                    eff.effect_type for eff in pc.status_effects.values()
+                ],
                 "equipped": _equipped_obs(pc),
                 "lantern": _lantern_obs(pc),
                 "is_shrunk": bool(gs.player_is_shrunk),
@@ -1621,11 +1656,32 @@ def smart_policy(obs, rng, use_lantern=True):
                          and equipped["weapon"].get("is_broken"))
     broken_armor = bool(equipped.get("armor")
                         and equipped["armor"].get("is_broken"))
+    # Active dangerous status effects on the player (poison, web,
+    # paralysis, sticky_hands, weakness, burn, freeze, etc.). Mirrors
+    # gs.NEGATIVE_EFFECT_TYPES minus silence (gated separately by
+    # can_cast) and shrinking (equipment-fit only). Used by is_weak
+    # so the agent avoids new combat while statused, and by the
+    # combat_mode flee branch so it disengages from an active fight
+    # the moment a tick fires.
+    active_status_types = set(p.get("status_effect_types") or [])
+    has_bad_status = bool(active_status_types & _DANGEROUS_STATUS_TYPES)
+    has_ticking_status = bool(active_status_types & _TICKING_STATUS_TYPES)
+    immobilised = bool(active_status_types & _IMMOBILISING_STATUS_TYPES)
+    # is_weak gates "should I avoid M tiles and skip risky targets".
+    # Only ticking statuses (poison/burn/DoT/life_drain) and
+    # immobilisation (web/paralysis/freeze) make new combat actually
+    # dangerous; stat debuffs (weakness, blindness, confusion,
+    # sticky_hands, defense_penalty) are tolerable for melee and
+    # don't justify a full avoid-M policy that lets the agent
+    # under-level. The cure-item open-inventory trigger still uses
+    # has_bad_status so debuffs get treated when a cure is available.
     is_weak = (
         hp_pct < 0.50
         or broken_weapon
         or broken_armor
         or (equipped.get("weapon") is None)
+        or has_ticking_status
+        or immobilised
     )
     # Resource pressure: lantern fuel + hunger together set a soft
     # deadline on how long the agent can keep weaving the floor looking
@@ -1683,6 +1739,23 @@ def smart_policy(obs, rng, use_lantern=True):
         )
         if (has_buff_potion and 0.60 <= hp_pct < 0.95
                 and m_adjacent):
+            return "i"
+        # Bad-status cure: when the player has a curable negative
+        # effect (poison / web / sticky_hands / confusion etc.) AND
+        # a Scroll of Restoration or Antidote-style cure_all potion
+        # is in the bag, open inventory to consume it. Without this
+        # trigger the agent kept walking through poison ticks /
+        # confusion-spam until the duration ticked down naturally.
+        has_cure_item = any(
+            (i.get("category") == "scroll"
+             and i.get("is_identified")
+             and i.get("scroll_type") == "restoration")
+            or (i.get("category", "").startswith("potion_")
+                and i.get("is_identified")
+                and i.get("potion_type") == "cure_all")
+            for i in inv
+        )
+        if has_bad_status and has_cure_item:
             return "i"
         if urgent_meat is not None:
             return "i"
@@ -2204,6 +2277,17 @@ def smart_policy(obs, rng, use_lantern=True):
                 if entry.get("potion_type") in HELPFUL_POTION_TYPES:
                     proposed = f"u{entry['slot']}"
                     break
+        # Cure-all (Antidote) gets its own gate -- only drink when
+        # actually statused, otherwise it sits as insurance for the
+        # next nasty effect. has_bad_status is hoisted at the top of
+        # smart_policy.
+        if proposed is None and has_bad_status:
+            for entry in inv:
+                if (entry.get("category", "").startswith("potion_")
+                        and entry.get("is_identified")
+                        and entry.get("potion_type") == "cure_all"):
+                    proposed = f"u{entry['slot']}"
+                    break
         if proposed is None:
             return "x"
         # Anti-stuck guard: if the last action was the same as what we're
@@ -2265,6 +2349,28 @@ def smart_policy(obs, rng, use_lantern=True):
         # Mid-fight heal: queue a cast at HP < 55%.
         if hp_pct < 0.55 and heal_spell_slot:
             return "c"
+        # Ticking-status flee: poison / burn / DoT / life_drain
+        # ticks every round, and the monster's adding hits on top.
+        # Break off, let the duration tick down out of combat,
+        # re-engage when clean. Stat-debuff statuses (weakness,
+        # defense_penalty, blindness, confusion, sticky_hands) are
+        # NOT in this gate -- fleeing wastes turns the debuff would
+        # have ticked through anyway, and the monster is usually
+        # still there when the debuff wears off. Skip the flee when
+        # immobilised (move refused) and when starving + edible-
+        # monster (we need this kill to eat).
+        if (has_ticking_status and not immobilised
+                and not (starving and m_is_edible)):
+            return "f"
+        # Low-HP last-ditch flee: HP < 30%, no healing options at all,
+        # not starving. Better to disengage and look for a vendor /
+        # altar / pool than die on the next swing. Prior policy
+        # silently kept attacking and lost most of these fights.
+        if (hp_pct < 0.30
+                and not heal_pot_slot
+                and not heal_spell_slot
+                and not starving):
+            return "f"
         # Threat-flee only when NOT starving -- a starving agent vs
         # an edible monster needs to win this fight to live.
         if monster_too_tough and not starving:

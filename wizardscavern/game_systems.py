@@ -2099,8 +2099,14 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                                 if still_hurt and still_have:
                                     add_log(f"{COLOR_CYAN}Type 'df' or tap Drink Full to heal to max.{COLOR_RESET}")
                     else:
-                        # Non-healing potions: use one at a time
-                        consumed = item_to_use.use(player_character)
+                        # Non-healing potions: use one at a time. Pass
+                        # my_tower so map-touching potions (True Sight
+                        # reveals tiles, Invisibility marks the floor)
+                        # don't AttributeError on `my_tower.floors[z]`.
+                        # Surfaced by playtest: agent drank True Sight,
+                        # Potion.use hit `my_tower.floors[character.z]`
+                        # with my_tower=None and crashed.
+                        consumed = item_to_use.use(player_character, my_tower)
                         if consumed:
                             if getattr(item_to_use, 'count', 1) > 1:
                                 item_to_use.count -= 1
