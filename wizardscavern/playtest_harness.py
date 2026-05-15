@@ -2537,18 +2537,28 @@ def smart_policy(obs, rng, use_lantern=True):
         is_undead = bool(m.get("is_undead")
                          or any(k in m_name_low
                                 for k in _UNDEAD_NAME_TOKENS))
-        # Two-band threat assessment:
-        #  * general monsters: flee at m_level > pc.level + 2 (the
-        #    original threshold -- aggressive enough that Lv1 agents
-        #    fight Lv0-3 monsters and bank XP).
-        #  * undead (wraith/lich/skeleton/etc.): flee one tier
-        #    earlier (m_level >= pc.level + 1) because they hit for
-        #    raw damage and resist physical, often dropping no meat.
+        # ELITE undead are the tomb-elite guardians spawned at
+        # floor+1 with 1.3x stats and 3x gold (see game_systems.py's
+        # undead_guardian branch). At parity level they hit harder
+        # and tank more than a regular Lv-equal undead, so the
+        # threat assessment treats them as one tier above where
+        # they'd otherwise sit. Without this, Gloin Axebreaker the
+        # dwarf at Lv7 vs an ELITE UNDEAD DRAGON LICH (Lv7) chose
+        # 'a' (attack) instead of 'f' (flee) and lost the trade
+        # 13 dmg vs 19 dmg per round, dying in three rounds.
+        is_elite_undead = is_undead and "elite" in m_name_low
+        # Three-band threat assessment:
+        #  * general monsters: flee at m_level > pc.level + 2.
+        #  * regular undead (wraith/lich/skeleton/etc.): flee at
+        #    m_level > pc.level (one tier earlier than general).
+        #  * ELITE undead: flee at m_level >= pc.level (parity is
+        #    already too dangerous given the 1.3x stat multiplier).
         # max_hp gate (m_max_hp > 2x pc_max_hp) catches HP-bag bosses.
         monster_too_tough = (
             m_level > pc_level + 2
             or m_max_hp > 2 * p["max_hp"]
             or (is_undead and m_level > pc_level)
+            or (is_elite_undead and m_level >= pc_level)
         )
         # Starving + inedible monster: flee. Prior playtest showed
         # 39 starvation-override engagements, only 2 produced meat
