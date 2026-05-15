@@ -1500,14 +1500,13 @@ def smart_policy(obs, rng, use_lantern=True):
                          for d in ("n", "s", "e", "w"))
         if heal_pot_slot and hp_pct < 0.80 and m_adjacent:
             return "i"
-        # Pre-combat buff: when M is adjacent AND we have an identified
-        # combat-buff potion in the bag, open inventory to drink it
-        # BEFORE stepping into combat. Buff potions (Stone Skin /
-        # Strength / Defense / Regeneration / etc.) have 3-5 turn
-        # durations and are wasted when drunk far from a fight; this
-        # times them to the actual encounter. HP gate at >= 60%
-        # ensures we don't burn the inventory turn when healing is
-        # the higher priority.
+        # Pre-combat buff drink in game_loop: when M is adjacent AND
+        # we have an identified buff potion (strength/defense/stone
+        # skin/regeneration/berserker/etc.) AND HP is 60-95% (NOT at
+        # max -- if hp >= 95% the inventory branch's buff-drink gate
+        # rejects, falling through to a scroll read that may not
+        # consume; agent loops `i -> x -> i -> x`. Gate aligned to
+        # match the inventory branch).
         BUFF_POTION_TYPES = {
             "strength", "defense", "stone_skin", "regeneration",
             "berserker", "giant_strength", "haste", "vampirism",
@@ -1519,7 +1518,8 @@ def smart_policy(obs, rng, use_lantern=True):
             and i.get("potion_type") in BUFF_POTION_TYPES
             for i in inv
         )
-        if has_buff_potion and hp_pct >= 0.60 and m_adjacent:
+        if (has_buff_potion and 0.60 <= hp_pct < 0.95
+                and m_adjacent):
             return "i"
         if urgent_meat is not None:
             return "i"
@@ -1892,11 +1892,16 @@ def smart_policy(obs, rng, use_lantern=True):
         # the agent's been hoarding. Skip teleport (random
         # destination, could land in a dangerous spot) and descent
         # (skips the floor, defeats boon-collection). remove_curse
-        # only when actually cursed.
+        # only when actually cursed. vendor_restock (Scroll of
+        # Commerce) is excluded -- reading it restocks the floor's
+        # vendor, which then sells MORE Scrolls of Commerce, and the
+        # agent buys + reads them in an infinite buy-restock-buy
+        # loop. Tauriel the elf seed=500 burned 957 turns on a
+        # Commerce loop before this fix.
         SAFE_SCROLL_TYPES = {
             "mapping", "upgrade", "spell_scroll",
             "lantern_upgrade", "restoration", "foresight",
-            "protection", "identify", "vendor_restock",
+            "protection", "identify",
         }
         if proposed is None:
             for entry in inv:
