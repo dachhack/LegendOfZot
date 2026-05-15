@@ -59,6 +59,18 @@ class RunReport:
         self.recent_actions = []  # rolling buffer of last 12 (turn, mode, action)
         self.kills_by_monster = {}  # name -> count
         self.kills_by_floor = {}  # floor -> count
+        # Movement efficiency tracking. For each floor we keep:
+        #   - the set of (x, y) tiles the agent has stood on
+        #   - the per-floor counters: total game_loop moves, first-visit
+        #     moves (new (x,y) reached), revisit moves (already seen).
+        # Per-floor waste% = revisits / total_moves. Combined with
+        # turns_on_floor, this tells us how much of the floor budget
+        # was patrol-bouncing vs productive exploration.
+        self.visited_tiles_by_floor = {}  # floor -> set[(x,y)]
+        self.moves_by_floor = {}          # floor -> total game_loop moves
+        self.first_visit_moves = {}       # floor -> new-tile moves
+        self.revisit_moves = {}           # floor -> already-seen tile moves
+        self._last_xy = None              # (z, x, y) of prior frame
         self.buys = []  # (turn, floor, name, price, count)
         self.identifies = []  # (turn, item_name)
         self.descents = []  # turn at which each new floor was first entered
@@ -91,6 +103,28 @@ class RunReport:
             if cur != self.last_equip:
                 self.last_equip = cur
                 self.equipped_history.append((turn, cur[0], cur[1]))
+            # Movement-efficiency: when we observe a fresh position
+            # while in game_loop, classify it as first-visit or
+            # revisit relative to this floor's history. We count by
+            # position-CHANGE, not by action-issued, so step-blocked
+            # (walked into wall) doesn't inflate either counter.
+            cur_xyz = (p.get("floor", 1), p.get("x"), p.get("y"))
+            if (obs.get("mode") == "game_loop"
+                    and self._last_xy is not None
+                    and cur_xyz != self._last_xy):
+                # Different from prior frame -> a real move landed
+                floor = cur_xyz[0]
+                xy = (cur_xyz[1], cur_xyz[2])
+                seen = self.visited_tiles_by_floor.setdefault(floor, set())
+                self.moves_by_floor[floor] = self.moves_by_floor.get(floor, 0) + 1
+                if xy in seen:
+                    self.revisit_moves[floor] = self.revisit_moves.get(floor, 0) + 1
+                else:
+                    seen.add(xy)
+                    self.first_visit_moves[floor] = (
+                        self.first_visit_moves.get(floor, 0) + 1
+                    )
+            self._last_xy = cur_xyz
 
         for raw in gs_log_lines:
             line = _strip(raw)
@@ -203,6 +237,9 @@ class RunReport:
     def summary_row(self):
         """One-row dict used by index.html generation."""
         f = self.final or {}
+        total_moves = sum(self.moves_by_floor.values())
+        total_revisit = sum(self.revisit_moves.values())
+        wasted_pct = (total_revisit / total_moves * 100.0) if total_moves else 0
         return {
             "slug": self.slug,
             "name": self.name,
@@ -218,6 +255,9 @@ class RunReport:
             "alive": f.get("alive", False),
             "death_cause": self.death_cause or "—",
             "started": self.start_iso,
+            "moves_total": total_moves,
+            "moves_revisit": total_revisit,
+            "wasted_pct": round(wasted_pct, 1),
         }
 
     def to_html(self):
@@ -236,6 +276,36 @@ class RunReport:
         kills_by_floor_lines = "".join(
             f"<tr><td>Floor {fl}</td><td>{c}</td></tr>"
             for fl, c in sorted(self.kills_by_floor.items())
+        )
+        # Per-floor movement efficiency table
+        all_floors = sorted(set(self.moves_by_floor) | set(self.first_visit_moves)
+                            | set(self.revisit_moves) | set(self.visited_tiles_by_floor))
+        movement_rows = ""
+        total_moves = 0
+        total_first = 0
+        total_revisit = 0
+        total_unique = 0
+        for fl in all_floors:
+            moves = self.moves_by_floor.get(fl, 0)
+            first = self.first_visit_moves.get(fl, 0)
+            revisit = self.revisit_moves.get(fl, 0)
+            unique = len(self.visited_tiles_by_floor.get(fl, set()))
+            waste_pct = (revisit / moves * 100.0) if moves else 0
+            total_moves += moves
+            total_first += first
+            total_revisit += revisit
+            total_unique += unique
+            movement_rows += (
+                f"<tr><td>Floor {fl}</td><td>{moves}</td>"
+                f"<td>{unique}</td><td>{first}</td>"
+                f"<td>{revisit}</td><td>{waste_pct:.0f}%</td></tr>"
+            )
+        overall_waste = (total_revisit / total_moves * 100.0) if total_moves else 0
+        movement_rows += (
+            f"<tr style='font-weight:bold; border-top: 2px solid #444;'>"
+            f"<td>Total</td><td>{total_moves}</td><td>{total_unique}</td>"
+            f"<td>{total_first}</td><td>{total_revisit}</td>"
+            f"<td>{overall_waste:.0f}%</td></tr>"
         )
         kills_by_monster_lines = "".join(
             f"<tr><td>{html.escape(n)}</td><td>{c}</td></tr>"
@@ -338,6 +408,8 @@ class RunReport:
             buy_lines=buy_lines or "<tr><td colspan='5'>no purchases</td></tr>",
             descent_lines=descent_lines or "<li>never descended past Floor 1</li>",
             inventory_rows=inv_rows or "<tr><td colspan='5'>—</td></tr>",
+            movement_rows=movement_rows or "<tr><td colspan='6'>no movement logged</td></tr>",
+            overall_waste=f"{overall_waste:.0f}",
             death_block=death_block,
         )
 
@@ -500,6 +572,18 @@ INDEX_PAGE_TEMPLATE_RUN = """<!doctype html>
   </table>
 </section>
 
+<section class="card">
+  <h2>Movement Efficiency · overall waste $overall_waste%</h2>
+  <p class="muted">First-visit moves discover new ground; revisits are
+    moves that step onto a tile the agent has already stood on this
+    floor. High waste% = patrol-bouncing through already-discovered
+    rooms instead of pushing the frontier.</p>
+  <table>
+    <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+    $movement_rows
+  </table>
+</section>
+
 $death_block
 
 </body>
@@ -532,7 +616,7 @@ _INDEX_TEMPLATE = """<!doctype html>
     <tr>
       <th>Hero</th><th>Race</th><th>Seed</th><th>Outcome</th>
       <th>Turns</th><th>Floor</th><th>Level</th><th>HP</th>
-      <th>Gold</th><th>Kills</th><th>Cause</th>
+      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Cause</th>
     </tr>
     $rows
   </table>
@@ -584,13 +668,14 @@ def write_index(out_dir):
             f"<td>{d.get('hp','?')}/{d.get('max_hp','?')}</td>"
             f"<td>{d.get('gold','?')}g</td>"
             f"<td>{d.get('kills','?')}</td>"
+            f"<td>{d.get('wasted_pct','?')}%</td>"
             f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
             f"</tr>"
         )
     body = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='11'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='12'>no runs yet</td></tr>",
     )
     (out_dir / "index.html").write_text(body, encoding="utf-8")
 
@@ -691,13 +776,14 @@ def deploy_gh_pages(out_dir, repo_root, branch="gh-pages", remote="origin"):
             f"<td>{d.get('hp','?')}/{d.get('max_hp','?')}</td>"
             f"<td>{d.get('gold','?')}g</td>"
             f"<td>{d.get('kills','?')}</td>"
+            f"<td>{d.get('wasted_pct','?')}%</td>"
             f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
             f"</tr>"
         )
     index_html = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='11'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='12'>no runs yet</td></tr>",
     )
     index_sha = run(
         ["git", "hash-object", "-w", "--stdin"], input_text=index_html
