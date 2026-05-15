@@ -43,7 +43,99 @@ th { color: #94a3b8; font-weight: normal; }
 .mode { color: #94a3b8; font-size: 10px; }
 .cause strong { color: #fb923c; }
 .death { border-left: 3px solid #f43f5e; }
+.death-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#1a0c0c; border-left:3px solid #f43f5e;
+  border-radius:4px; margin-bottom:10px;
+}
 .hpchart { width: 100%; height: auto; border-radius: 4px; }
+
+/* Sprite system: each sprite renders as a background-image on a <span>,
+   so a sprite referenced N times only embeds the base64 webp once. */
+.sprite {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.player-sprite { display:block; margin: 0 auto; image-rendering: pixelated; }
+.sprite-cell { width: 36px; }
+
+/* Hero banner with portrait + headline stats side by side. */
+.hero-banner {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+.hero-portrait {
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 120px;
+}
+.hero-info p { margin: 4px 0; }
+.gear-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.gear-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 10px;
+}
+.gear-card .sprite { width: 48px; height: 48px; margin-right: 0; }
+.gear-card .gear-meta { flex: 1; }
+
+/* Tabs -- pure-CSS radio-button pattern, no JS required. */
+.tabs { margin-top: 14px; }
+.tabs input[type=radio] { position: absolute; opacity: 0; pointer-events: none; }
+.tabs > label {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-bottom: -1px;
+  transition: background .15s;
+}
+.tabs > label:hover { background: #1f1f1f; color: #fde68a; }
+.tabs > input[type=radio]:checked + label {
+  background: #2a1f0a;
+  color: #fbbf24;
+  border-bottom: 1px solid #2a1f0a;
+}
+.tab-panels { background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 0 6px 6px 6px; padding: 14px 18px; }
+.tab-panel { display: none; }
+/* Show the panel whose paired radio is :checked. ~ matches siblings
+   that follow the input, and the panels live right after the labels. */
+#tab-overview:checked ~ .tab-panels #panel-overview,
+#tab-stats:checked ~ .tab-panels #panel-stats,
+#tab-equipment:checked ~ .tab-panels #panel-equipment,
+#tab-combat:checked ~ .tab-panels #panel-combat,
+#tab-journey:checked ~ .tab-panels #panel-journey { display: block; }
+
+.chart-block { margin: 16px 0; }
+.chart-block h3 { margin-top: 0; }
+.tomb-list { list-style: none; padding: 0; }
+.tomb-list li { padding: 6px 0; border-bottom: 1px dotted #2a2a2a; }
+.tomb-list li:last-child { border: none; }
+.tomb-list strong { color: #f97316; }
 
 .runs th, .runs td { font-size: 13px; padding: 6px 8px; }
 .runs tr:hover { background: #1a1a1a; }
@@ -55,7 +147,7 @@ th { color: #94a3b8; font-weight: normal; }
 <body>
 <header class="card">
   <h1>Wizard's Cavern · Playtest Reports</h1>
-  <p class="muted">60 runs · generated 2026-05-15T14:42:28+00:00</p>
+  <p class="muted">72 runs · generated 2026-05-15T16:33:35+00:00</p>
 </header>
 
 <section class="card">
@@ -66,66 +158,78 @@ th { color: #94a3b8; font-weight: normal; }
       <th>Turns</th><th>Floor</th><th>Level</th><th>HP</th>
       <th>Gold</th><th>Kills</th><th>Waste %</th><th>Cause</th>
     </tr>
-    <tr><td><a href='00100_elf.html'>Celeborn</a></td><td>elf</td><td>100</td><td><span class='tag dead'>dead</span></td><td>1018</td><td>F8</td><td>L8</td><td>0/98</td><td>935g</td><td>98</td><td>47.1%</td><td>defeated by Hardened Goblin</td></tr>
-<tr><td><a href='00013_elf.html'>Tauriel</a></td><td>elf</td><td>13</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F8</td><td>L5</td><td>18/68</td><td>782g</td><td>67</td><td>43.5%</td><td>—</td></tr>
-<tr><td><a href='00200_human.html'>Hama</a></td><td>human</td><td>200</td><td><span class='tag dead'>dead</span></td><td>1187</td><td>F7</td><td>L8</td><td>-11/104</td><td>2201g</td><td>177</td><td>37.1%</td><td>defeated by UNDEAD VAMPIRE</td></tr>
-<tr><td><a href='00314_dwarf.html'>Durin</a></td><td>dwarf</td><td>314</td><td><span class='tag dead'>dead</span></td><td>973</td><td>F6</td><td>L7</td><td>-5/124</td><td>1040g</td><td>147</td><td>43.0%</td><td>unknown</td></tr>
+    <tr><td><a href='00200_elf.html'>Idril</a></td><td>elf</td><td>200</td><td><span class='tag dead'>dead</span></td><td>710</td><td>F9</td><td>L4</td><td>-9/58</td><td>151g</td><td>49</td><td>54.7%</td><td>starvation</td></tr>
+<tr><td><a href='00100_elf.html'>Celeborn</a></td><td>elf</td><td>100</td><td><span class='tag dead'>dead</span></td><td>1018</td><td>F8</td><td>L8</td><td>0/98</td><td>935g</td><td>98</td><td>47.1%</td><td>defeated by Hardened Goblin</td></tr>
+<tr><td><a href='00013_elf.html'>Tauriel</a></td><td>elf</td><td>13</td><td><span class='tag dead'>dead</span></td><td>785</td><td>F8</td><td>L5</td><td>0/76</td><td>1067g</td><td>107</td><td>46.2%</td><td>defeated by Titan Beetle</td></tr>
+<tr><td><a href='00999_human.html'>Forlong</a></td><td>human</td><td>999</td><td><span class='tag dead'>dead</span></td><td>1094</td><td>F7</td><td>L6</td><td>-34/80</td><td>461g</td><td>140</td><td>46.5%</td><td>unknown</td></tr>
+<tr><td><a href='01234_dwarf.html'>Thorin</a></td><td>dwarf</td><td>1234</td><td><span class='tag alive'>alive</span></td><td>6000</td><td>F7</td><td>L5</td><td>1/106</td><td>203g</td><td>48</td><td>97.7%</td><td>—</td></tr>
+<tr><td><a href='02500_human.html'>Eomer</a></td><td>human</td><td>2500</td><td><span class='tag dead'>dead</span></td><td>739</td><td>F7</td><td>L5</td><td>-33/70</td><td>575g</td><td>74</td><td>41.2%</td><td>defeated by UNDEAD VAMPIRE</td></tr>
+<tr><td><a href='00256_human.html'>Aragorn</a></td><td>human</td><td>256</td><td><span class='tag dead'>dead</span></td><td>705</td><td>F7</td><td>L4</td><td>-7/58</td><td>187g</td><td>79</td><td>34.4%</td><td>defeated by Otyugh</td></tr>
+<tr><td><a href='09001_elf.html'>Thranduil</a></td><td>elf</td><td>9001</td><td><span class='tag dead'>dead</span></td><td>621</td><td>F7</td><td>L4</td><td>-41/54</td><td>1028g</td><td>80</td><td>55.0%</td><td>defeated by ELITE UNDEAD LICH</td></tr>
+<tr><td><a href='02024_human.html'>Bard</a></td><td>human</td><td>2024</td><td><span class='tag dead'>dead</span></td><td>325</td><td>F7</td><td>L3</td><td>-28/54</td><td>676g</td><td>19</td><td>34.5%</td><td>defeated by ELITE UNDEAD LICH</td></tr>
 <tr><td><a href='00800_dwarf.html'>Gloin</a></td><td>dwarf</td><td>800</td><td><span class='tag dead'>dead</span></td><td>1000</td><td>F6</td><td>L7</td><td>0/124</td><td>719g</td><td>92</td><td>55.1%</td><td>starvation</td></tr>
 <tr><td><a href='01500_dwarf.html'>Fili</a></td><td>dwarf</td><td>1500</td><td><span class='tag dead'>dead</span></td><td>966</td><td>F6</td><td>L6</td><td>-11/118</td><td>1039g</td><td>75</td><td>54.5%</td><td>defeated by UNDEAD MUMMY</td></tr>
-<tr><td><a href='01234_dwarf.html'>Thorin</a></td><td>dwarf</td><td>1234</td><td><span class='tag dead'>dead</span></td><td>474</td><td>F6</td><td>L4</td><td>-2/102</td><td>212g</td><td>36</td><td>26.4%</td><td>defeated by Hell Hound</td></tr>
-<tr><td><a href='05678_dwarf.html'>Oin</a></td><td>dwarf</td><td>5678</td><td><span class='tag dead'>dead</span></td><td>469</td><td>F6</td><td>L4</td><td>0/100</td><td>836g</td><td>35</td><td>25.5%</td><td>defeated by Gnoll</td></tr>
-<tr><td><a href='00013_human.html'>Beregond</a></td><td>human</td><td>13</td><td><span class='tag dead'>dead</span></td><td>1140</td><td>F5</td><td>L6</td><td>-15/88</td><td>1412g</td><td>173</td><td>51.7%</td><td>defeated by ELITE UNDEAD MUMMY</td></tr>
-<tr><td><a href='02500_dwarf.html'>Gloin</a></td><td>dwarf</td><td>2500</td><td><span class='tag dead'>dead</span></td><td>845</td><td>F5</td><td>L5</td><td>0/102</td><td>2191g</td><td>114</td><td>45.4%</td><td>defeated by UNDEAD MUMMY</td></tr>
-<tr><td><a href='00500_human.html'>Beregond</a></td><td>human</td><td>500</td><td><span class='tag dead'>dead</span></td><td>151</td><td>F5</td><td>L3</td><td>-2/50</td><td>1067g</td><td>22</td><td>2.7%</td><td>unknown</td></tr>
+<tr><td><a href='12345_elf.html'>Galadriel</a></td><td>elf</td><td>12345</td><td><span class='tag dead'>dead</span></td><td>611</td><td>F6</td><td>L4</td><td>-1/58</td><td>370g</td><td>84</td><td>23.5%</td><td>defeated by Minotaur</td></tr>
+<tr><td><a href='00042_dwarf.html'>Dwalin</a></td><td>dwarf</td><td>42</td><td><span class='tag dead'>dead</span></td><td>385</td><td>F6</td><td>L1</td><td>-8/64</td><td>55g</td><td>27</td><td>33.6%</td><td>defeated by UNDEAD LICH</td></tr>
+<tr><td><a href='00042_elf.html'>Arwen</a></td><td>elf</td><td>42</td><td><span class='tag dead'>dead</span></td><td>931</td><td>F5</td><td>L6</td><td>-5/84</td><td>429g</td><td>126</td><td>62.2%</td><td>defeated by Troll</td></tr>
+<tr><td><a href='05678_human.html'>Eowyn</a></td><td>human</td><td>5678</td><td><span class='tag dead'>dead</span></td><td>608</td><td>F5</td><td>L6</td><td>-5/78</td><td>1160g</td><td>89</td><td>28.2%</td><td>defeated by ELITE UNDEAD MUMMY</td></tr>
+<tr><td><a href='09001_dwarf.html'>Bofur</a></td><td>dwarf</td><td>9001</td><td><span class='tag alive'>alive</span></td><td>6000</td><td>F5</td><td>L6</td><td>114/114</td><td>90g</td><td>91</td><td>33.7%</td><td>—</td></tr>
+<tr><td><a href='02500_elf.html'>Celeborn</a></td><td>elf</td><td>2500</td><td><span class='tag dead'>dead</span></td><td>348</td><td>F5</td><td>L4</td><td>-2/58</td><td>836g</td><td>50</td><td>21.8%</td><td>defeated by Giant Spider</td></tr>
+<tr><td><a href='00099_human.html'>Eomer</a></td><td>human</td><td>99</td><td><span class='tag dead'>dead</span></td><td>627</td><td>F5</td><td>L3</td><td>-24/56</td><td>420g</td><td>67</td><td>44.6%</td><td>defeated by UNDEAD MUMMY</td></tr>
+<tr><td><a href='00500_elf.html'>Tauriel</a></td><td>elf</td><td>500</td><td><span class='tag dead'>dead</span></td><td>622</td><td>F5</td><td>L3</td><td>0/44</td><td>237g</td><td>38</td><td>43.9%</td><td>defeated by Displacer Beast</td></tr>
+<tr><td><a href='00500_human.html'>Beregond</a></td><td>human</td><td>500</td><td><span class='tag dead'>dead</span></td><td>151</td><td>F5</td><td>L3</td><td>-2/50</td><td>767g</td><td>22</td><td>2.7%</td><td>unknown</td></tr>
 <tr><td><a href='01800_elf.html'>Feanor</a></td><td>elf</td><td>1800</td><td><span class='tag dead'>dead</span></td><td>242</td><td>F5</td><td>L3</td><td>0/48</td><td>292g</td><td>37</td><td>28.0%</td><td>unknown</td></tr>
-<tr><td><a href='02500_elf.html'>Celeborn</a></td><td>elf</td><td>2500</td><td><span class='tag dead'>dead</span></td><td>297</td><td>F5</td><td>L3</td><td>-6/48</td><td>1391g</td><td>49</td><td>7.9%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
-<tr><td><a href='09001_dwarf.html'>Bofur</a></td><td>dwarf</td><td>9001</td><td><span class='tag dead'>dead</span></td><td>335</td><td>F5</td><td>L3</td><td>0/114</td><td>253g</td><td>26</td><td>10.3%</td><td>defeated by UNDEAD SPECTER</td></tr>
-<tr><td><a href='09001_elf.html'>Thranduil</a></td><td>elf</td><td>9001</td><td><span class='tag dead'>dead</span></td><td>533</td><td>F5</td><td>L3</td><td>-6/48</td><td>1819g</td><td>58</td><td>46.4%</td><td>starvation</td></tr>
-<tr><td><a href='02200_dwarf.html'>Dori</a></td><td>dwarf</td><td>2200</td><td><span class='tag dead'>dead</span></td><td>802</td><td>F4</td><td>L6</td><td>-18/114</td><td>1261g</td><td>123</td><td>45.4%</td><td>unknown</td></tr>
-<tr><td><a href='05678_human.html'>Eowyn</a></td><td>human</td><td>5678</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F4</td><td>L5</td><td>52/68</td><td>1437g</td><td>66</td><td>29.9%</td><td>—</td></tr>
-<tr><td><a href='00042_elf.html'>Arwen</a></td><td>elf</td><td>42</td><td><span class='tag dead'>dead</span></td><td>379</td><td>F4</td><td>L4</td><td>0/60</td><td>476g</td><td>56</td><td>14.9%</td><td>unknown</td></tr>
-<tr><td><a href='00099_human.html'>Eomer</a></td><td>human</td><td>99</td><td><span class='tag dead'>dead</span></td><td>755</td><td>F4</td><td>L4</td><td>0/66</td><td>485g</td><td>93</td><td>52.4%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
-<tr><td><a href='00314_elf.html'>Galadhrim</a></td><td>elf</td><td>314</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F4</td><td>L4</td><td>55/60</td><td>1499g</td><td>99</td><td>26.7%</td><td>—</td></tr>
-<tr><td><a href='02200_human.html'>Halbarad</a></td><td>human</td><td>2200</td><td><span class='tag dead'>dead</span></td><td>410</td><td>F4</td><td>L4</td><td>-4/60</td><td>1168g</td><td>56</td><td>24.2%</td><td>starvation</td></tr>
-<tr><td><a href='02500_human.html'>Eomer</a></td><td>human</td><td>2500</td><td><span class='tag dead'>dead</span></td><td>517</td><td>F4</td><td>L4</td><td>-9/66</td><td>1040g</td><td>61</td><td>12.9%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
-<tr><td><a href='00200_elf.html'>Idril</a></td><td>elf</td><td>200</td><td><span class='tag dead'>dead</span></td><td>341</td><td>F4</td><td>L3</td><td>-4/48</td><td>1356g</td><td>43</td><td>14.7%</td><td>chest explosion</td></tr>
-<tr><td><a href='00300_elf.html'>Thranduil</a></td><td>elf</td><td>300</td><td><span class='tag dead'>dead</span></td><td>421</td><td>F4</td><td>L3</td><td>-6/48</td><td>821g</td><td>61</td><td>31.7%</td><td>unknown</td></tr>
+<tr><td><a href='07777_elf.html'>Luthien</a></td><td>elf</td><td>7777</td><td><span class='tag dead'>dead</span></td><td>397</td><td>F5</td><td>L3</td><td>-5/48</td><td>563g</td><td>51</td><td>48.4%</td><td>defeated by Fungal Hulk</td></tr>
+<tr><td><a href='00200_dwarf.html'>Ori</a></td><td>dwarf</td><td>200</td><td><span class='tag dead'>dead</span></td><td>836</td><td>F5</td><td>L2</td><td>-6/74</td><td>260g</td><td>43</td><td>17.4%</td><td>defeated by Hell Hound</td></tr>
+<tr><td><a href='00007_human.html'>Eowyn</a></td><td>human</td><td>7</td><td><span class='tag dead'>dead</span></td><td>570</td><td>F4</td><td>L5</td><td>-8/72</td><td>1150g</td><td>90</td><td>32.4%</td><td>defeated by UNDEAD SPECTER</td></tr>
+<tr><td><a href='00314_dwarf.html'>Durin</a></td><td>dwarf</td><td>314</td><td><span class='tag dead'>dead</span></td><td>588</td><td>F4</td><td>L5</td><td>-12/104</td><td>908g</td><td>94</td><td>37.1%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
+<tr><td><a href='00314_elf.html'>Galadhrim</a></td><td>elf</td><td>314</td><td><span class='tag dead'>dead</span></td><td>624</td><td>F4</td><td>L5</td><td>-2/70</td><td>945g</td><td>112</td><td>27.2%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
+<tr><td><a href='02200_dwarf.html'>Dori</a></td><td>dwarf</td><td>2200</td><td><span class='tag dead'>dead</span></td><td>1057</td><td>F4</td><td>L5</td><td>0/104</td><td>224g</td><td>88</td><td>80.0%</td><td>defeated by Kobold</td></tr>
+<tr><td><a href='02500_dwarf.html'>Gloin</a></td><td>dwarf</td><td>2500</td><td><span class='tag dead'>dead</span></td><td>825</td><td>F4</td><td>L5</td><td>0/108</td><td>1230g</td><td>113</td><td>48.6%</td><td>defeated by Giant Rat</td></tr>
+<tr><td><a href='00300_dwarf.html'>Bofur</a></td><td>dwarf</td><td>300</td><td><span class='tag dead'>dead</span></td><td>507</td><td>F4</td><td>L4</td><td>-16/94</td><td>340g</td><td>84</td><td>25.0%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
+<tr><td><a href='00500_dwarf.html'>Fili</a></td><td>dwarf</td><td>500</td><td><span class='tag dead'>dead</span></td><td>569</td><td>F4</td><td>L4</td><td>-13/94</td><td>780g</td><td>43</td><td>72.6%</td><td>defeated by UNDEAD WRAITH</td></tr>
+<tr><td><a href='00999_dwarf.html'>Durin</a></td><td>dwarf</td><td>999</td><td><span class='tag dead'>dead</span></td><td>857</td><td>F4</td><td>L4</td><td>-2/108</td><td>625g</td><td>88</td><td>42.8%</td><td>defeated by ELITE UNDEAD MUMMY</td></tr>
+<tr><td><a href='01234_elf.html'>Legolas</a></td><td>elf</td><td>1234</td><td><span class='tag dead'>dead</span></td><td>366</td><td>F4</td><td>L4</td><td>-6/58</td><td>373g</td><td>39</td><td>21.3%</td><td>defeated by UNDEAD WRAITH</td></tr>
+<tr><td><a href='01234_human.html'>Boromir</a></td><td>human</td><td>1234</td><td><span class='tag alive'>alive</span></td><td>6000</td><td>F4</td><td>L4</td><td>1/60</td><td>93g</td><td>74</td><td>97.3%</td><td>—</td></tr>
+<tr><td><a href='02024_dwarf.html'>Thrain</a></td><td>dwarf</td><td>2024</td><td><span class='tag dead'>dead</span></td><td>433</td><td>F4</td><td>L4</td><td>-11/94</td><td>52g</td><td>50</td><td>24.7%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
+<tr><td><a href='00042_human.html'>Theoden</a></td><td>human</td><td>42</td><td><span class='tag dead'>dead</span></td><td>426</td><td>F4</td><td>L3</td><td>-4/52</td><td>68g</td><td>37</td><td>26.2%</td><td>defeated by ELITE UNDEAD MUMMY</td></tr>
+<tr><td><a href='00999_elf.html'>Galadhrim</a></td><td>elf</td><td>999</td><td><span class='tag dead'>dead</span></td><td>410</td><td>F4</td><td>L3</td><td>0/48</td><td>743g</td><td>73</td><td>31.2%</td><td>defeated by Slime Mold</td></tr>
 <tr><td><a href='01500_elf.html'>Tauriel</a></td><td>elf</td><td>1500</td><td><span class='tag dead'>dead</span></td><td>374</td><td>F4</td><td>L3</td><td>-15/48</td><td>865g</td><td>36</td><td>31.6%</td><td>unknown</td></tr>
 <tr><td><a href='01800_dwarf.html'>Nori</a></td><td>dwarf</td><td>1800</td><td><span class='tag dead'>dead</span></td><td>587</td><td>F4</td><td>L3</td><td>-6/84</td><td>1460g</td><td>65</td><td>30.4%</td><td>defeated by UNDEAD SPECTER</td></tr>
 <tr><td><a href='01800_human.html'>Beorn</a></td><td>human</td><td>1800</td><td><span class='tag dead'>dead</span></td><td>487</td><td>F4</td><td>L3</td><td>-10/50</td><td>907g</td><td>77</td><td>29.5%</td><td>defeated by UNDEAD SPECTER</td></tr>
-<tr><td><a href='00042_human.html'>Theoden</a></td><td>human</td><td>42</td><td><span class='tag dead'>dead</span></td><td>331</td><td>F4</td><td>L2</td><td>-8/40</td><td>202g</td><td>34</td><td>23.8%</td><td>defeated by Hell Hound</td></tr>
-<tr><td><a href='00271_elf.html'>Celeborn</a></td><td>elf</td><td>271</td><td><span class='tag dead'>dead</span></td><td>182</td><td>F4</td><td>L2</td><td>0/38</td><td>179g</td><td>16</td><td>21.2%</td><td>unknown</td></tr>
-<tr><td><a href='00271_human.html'>Eomer</a></td><td>human</td><td>271</td><td><span class='tag dead'>dead</span></td><td>179</td><td>F4</td><td>L2</td><td>-17/40</td><td>174g</td><td>15</td><td>21.2%</td><td>defeated by UNDEAD WRAITH</td></tr>
-<tr><td><a href='00500_elf.html'>Tauriel</a></td><td>elf</td><td>500</td><td><span class='tag dead'>dead</span></td><td>193</td><td>F4</td><td>L2</td><td>-8/34</td><td>189g</td><td>12</td><td>17.0%</td><td>unknown</td></tr>
+<tr><td><a href='05678_dwarf.html'>Oin</a></td><td>dwarf</td><td>5678</td><td><span class='tag dead'>dead</span></td><td>313</td><td>F4</td><td>L3</td><td>-9/90</td><td>293g</td><td>31</td><td>9.0%</td><td>defeated by Minotaur</td></tr>
+<tr><td><a href='00007_dwarf.html'>Oin</a></td><td>dwarf</td><td>7</td><td><span class='tag dead'>dead</span></td><td>335</td><td>F4</td><td>L2</td><td>-10/70</td><td>1395g</td><td>46</td><td>36.9%</td><td>unknown</td></tr>
+<tr><td><a href='00271_elf.html'>Celeborn</a></td><td>elf</td><td>271</td><td><span class='tag dead'>dead</span></td><td>178</td><td>F4</td><td>L2</td><td>0/38</td><td>129g</td><td>16</td><td>21.2%</td><td>unknown</td></tr>
+<tr><td><a href='00271_human.html'>Eomer</a></td><td>human</td><td>271</td><td><span class='tag dead'>dead</span></td><td>176</td><td>F4</td><td>L2</td><td>-17/40</td><td>114g</td><td>13</td><td>21.2%</td><td>defeated by UNDEAD WRAITH</td></tr>
 <tr><td><a href='00800_human.html'>Eomer</a></td><td>human</td><td>800</td><td><span class='tag dead'>dead</span></td><td>245</td><td>F4</td><td>L2</td><td>-22/42</td><td>906g</td><td>19</td><td>18.8%</td><td>starvation</td></tr>
-<tr><td><a href='01100_dwarf.html'>Thrain</a></td><td>dwarf</td><td>1100</td><td><span class='tag dead'>dead</span></td><td>371</td><td>F4</td><td>L2</td><td>-19/74</td><td>781g</td><td>39</td><td>60.3%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
-<tr><td><a href='01234_elf.html'>Legolas</a></td><td>elf</td><td>1234</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F4</td><td>L2</td><td>21/38</td><td>835g</td><td>15</td><td>10.3%</td><td>—</td></tr>
-<tr><td><a href='01234_human.html'>Boromir</a></td><td>human</td><td>1234</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F4</td><td>L2</td><td>16/40</td><td>815g</td><td>15</td><td>10.3%</td><td>—</td></tr>
-<tr><td><a href='00013_dwarf.html'>Fili</a></td><td>dwarf</td><td>13</td><td><span class='tag dead'>dead</span></td><td>555</td><td>F3</td><td>L4</td><td>-14/94</td><td>1316g</td><td>102</td><td>28.8%</td><td>unknown</td></tr>
+<tr><td><a href='00013_dwarf.html'>Fili</a></td><td>dwarf</td><td>13</td><td><span class='tag dead'>dead</span></td><td>653</td><td>F3</td><td>L5</td><td>-14/106</td><td>1126g</td><td>106</td><td>35.3%</td><td>unknown</td></tr>
+<tr><td><a href='00013_human.html'>Beregond</a></td><td>human</td><td>13</td><td><span class='tag dead'>dead</span></td><td>1155</td><td>F3</td><td>L5</td><td>0/72</td><td>554g</td><td>155</td><td>62.3%</td><td>defeated by Zombie</td></tr>
+<tr><td><a href='00007_elf.html'>Glorfindel</a></td><td>elf</td><td>7</td><td><span class='tag dead'>dead</span></td><td>420</td><td>F3</td><td>L4</td><td>-11/60</td><td>284g</td><td>67</td><td>34.8%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
 <tr><td><a href='00100_human.html'>Eomer</a></td><td>human</td><td>100</td><td><span class='tag dead'>dead</span></td><td>533</td><td>F3</td><td>L4</td><td>-19/60</td><td>1042g</td><td>75</td><td>19.5%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
-<tr><td><a href='00300_human.html'>Isildur</a></td><td>human</td><td>300</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F3</td><td>L4</td><td>1/60</td><td>1191g</td><td>111</td><td>95.9%</td><td>—</td></tr>
-<tr><td><a href='01100_human.html'>Hama</a></td><td>human</td><td>1100</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F3</td><td>L4</td><td>10/66</td><td>1137g</td><td>67</td><td>14.1%</td><td>—</td></tr>
-<tr><td><a href='00042_dwarf.html'>Dwalin</a></td><td>dwarf</td><td>42</td><td><span class='tag dead'>dead</span></td><td>657</td><td>F3</td><td>L3</td><td>0/84</td><td>1125g</td><td>43</td><td>66.8%</td><td>defeated by Orc</td></tr>
-<tr><td><a href='00099_dwarf.html'>Gloin</a></td><td>dwarf</td><td>99</td><td><span class='tag dead'>dead</span></td><td>277</td><td>F3</td><td>L3</td><td>-13/86</td><td>1214g</td><td>43</td><td>12.8%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
-<tr><td><a href='00256_human.html'>Aragorn</a></td><td>human</td><td>256</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F3</td><td>L3</td><td>30/54</td><td>608g</td><td>91</td><td>44.9%</td><td>—</td></tr>
+<tr><td><a href='00271_dwarf.html'>Gloin</a></td><td>dwarf</td><td>271</td><td><span class='tag dead'>dead</span></td><td>725</td><td>F3</td><td>L4</td><td>-22/98</td><td>120g</td><td>74</td><td>53.6%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
+<tr><td><a href='00300_elf.html'>Thranduil</a></td><td>elf</td><td>300</td><td><span class='tag dead'>dead</span></td><td>488</td><td>F3</td><td>L4</td><td>-11/58</td><td>107g</td><td>66</td><td>27.8%</td><td>unknown</td></tr>
+<tr><td><a href='00300_human.html'>Isildur</a></td><td>human</td><td>300</td><td><span class='tag dead'>dead</span></td><td>823</td><td>F3</td><td>L4</td><td>-34/60</td><td>648g</td><td>116</td><td>64.2%</td><td>lethal pool trap</td></tr>
+<tr><td><a href='05678_elf.html'>Glorfindel</a></td><td>elf</td><td>5678</td><td><span class='tag dead'>dead</span></td><td>960</td><td>F3</td><td>L4</td><td>0/58</td><td>304g</td><td>94</td><td>76.0%</td><td>defeated by Gnoll</td></tr>
+<tr><td><a href='00099_dwarf.html'>Gloin</a></td><td>dwarf</td><td>99</td><td><span class='tag dead'>dead</span></td><td>278</td><td>F3</td><td>L3</td><td>-16/86</td><td>643g</td><td>51</td><td>17.1%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
+<tr><td><a href='00200_human.html'>Hama</a></td><td>human</td><td>200</td><td><span class='tag dead'>dead</span></td><td>383</td><td>F3</td><td>L3</td><td>-1/50</td><td>298g</td><td>56</td><td>37.1%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
+<tr><td><a href='00314_human.html'>Forlong</a></td><td>human</td><td>314</td><td><span class='tag dead'>dead</span></td><td>478</td><td>F3</td><td>L3</td><td>-14/56</td><td>220g</td><td>65</td><td>22.0%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
+<tr><td><a href='01100_elf.html'>Idril</a></td><td>elf</td><td>1100</td><td><span class='tag dead'>dead</span></td><td>430</td><td>F3</td><td>L3</td><td>-16/54</td><td>125g</td><td>53</td><td>56.2%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
+<tr><td><a href='01100_human.html'>Hama</a></td><td>human</td><td>1100</td><td><span class='tag dead'>dead</span></td><td>353</td><td>F3</td><td>L3</td><td>-14/56</td><td>307g</td><td>56</td><td>38.3%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
 <tr><td><a href='01500_human.html'>Beregond</a></td><td>human</td><td>1500</td><td><span class='tag dead'>dead</span></td><td>718</td><td>F3</td><td>L3</td><td>0/50</td><td>336g</td><td>56</td><td>74.0%</td><td>defeated by Zombie</td></tr>
-<tr><td><a href='05678_elf.html'>Glorfindel</a></td><td>elf</td><td>5678</td><td><span class='tag dead'>dead</span></td><td>637</td><td>F3</td><td>L3</td><td>-14/48</td><td>461g</td><td>42</td><td>75.2%</td><td>unknown</td></tr>
-<tr><td><a href='00200_dwarf.html'>Ori</a></td><td>dwarf</td><td>200</td><td><span class='tag dead'>dead</span></td><td>665</td><td>F3</td><td>L2</td><td>0/74</td><td>674g</td><td>52</td><td>16.7%</td><td>defeated by Zombie</td></tr>
-<tr><td><a href='00256_elf.html'>Elrond</a></td><td>elf</td><td>256</td><td><span class='tag dead'>dead</span></td><td>383</td><td>F3</td><td>L2</td><td>-5/40</td><td>257g</td><td>42</td><td>31.8%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
-<tr><td><a href='00271_dwarf.html'>Gloin</a></td><td>dwarf</td><td>271</td><td><span class='tag dead'>dead</span></td><td>147</td><td>F3</td><td>L2</td><td>-1/78</td><td>629g</td><td>26</td><td>0.0%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
-<tr><td><a href='01100_elf.html'>Idril</a></td><td>elf</td><td>1100</td><td><span class='tag dead'>dead</span></td><td>238</td><td>F3</td><td>L2</td><td>-4/44</td><td>696g</td><td>46</td><td>19.1%</td><td>chest explosion</td></tr>
-<tr><td><a href='00500_dwarf.html'>Fili</a></td><td>dwarf</td><td>500</td><td><span class='tag dead'>dead</span></td><td>74</td><td>F3</td><td>L1</td><td>-8/64</td><td>696g</td><td>5</td><td>0.0%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
+<tr><td><a href='02200_human.html'>Halbarad</a></td><td>human</td><td>2200</td><td><span class='tag dead'>dead</span></td><td>276</td><td>F3</td><td>L3</td><td>0/50</td><td>493g</td><td>56</td><td>18.2%</td><td>defeated by WANDERING GHOST</td></tr>
+<tr><td><a href='07777_dwarf.html'>Bombur</a></td><td>dwarf</td><td>7777</td><td><span class='tag dead'>dead</span></td><td>575</td><td>F3</td><td>L3</td><td>0/88</td><td>145g</td><td>72</td><td>39.5%</td><td>defeated by Bugbear</td></tr>
+<tr><td><a href='07777_human.html'>Elendil</a></td><td>human</td><td>7777</td><td><span class='tag dead'>dead</span></td><td>600</td><td>F3</td><td>L3</td><td>-19/50</td><td>243g</td><td>77</td><td>65.9%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
+<tr><td><a href='00256_elf.html'>Elrond</a></td><td>elf</td><td>256</td><td><span class='tag dead'>dead</span></td><td>380</td><td>F3</td><td>L2</td><td>-7/40</td><td>112g</td><td>42</td><td>31.8%</td><td>defeated by ELITE UNDEAD WRAITH</td></tr>
 <tr><td><a href='00800_elf.html'>Celeborn</a></td><td>elf</td><td>800</td><td><span class='tag dead'>dead</span></td><td>80</td><td>F3</td><td>L1</td><td>-8/28</td><td>573g</td><td>4</td><td>32.1%</td><td>unknown</td></tr>
-<tr><td><a href='02200_elf.html'>Cirdan</a></td><td>elf</td><td>2200</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F3</td><td>L1</td><td>13/28</td><td>919g</td><td>29</td><td>15.1%</td><td>—</td></tr>
-<tr><td><a href='00007_human.html'>Eowyn</a></td><td>human</td><td>7</td><td><span class='tag dead'>dead</span></td><td>611</td><td>F2</td><td>L3</td><td>0/50</td><td>740g</td><td>77</td><td>77.0%</td><td>defeated by UNDEAD ZOMBIE</td></tr>
+<tr><td><a href='01100_dwarf.html'>Thrain</a></td><td>dwarf</td><td>1100</td><td><span class='tag dead'>dead</span></td><td>46</td><td>F3</td><td>L1</td><td>-4/64</td><td>316g</td><td>7</td><td>18.2%</td><td>unknown</td></tr>
+<tr><td><a href='02024_elf.html'>Earendil</a></td><td>elf</td><td>2024</td><td><span class='tag dead'>dead</span></td><td>32</td><td>F3</td><td>L1</td><td>-2/28</td><td>301g</td><td>3</td><td>0.0%</td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
 <tr><td><a href='00100_dwarf.html'>Gloin</a></td><td>dwarf</td><td>100</td><td><span class='tag dead'>dead</span></td><td>512</td><td>F2</td><td>L3</td><td>0/84</td><td>1404g</td><td>60</td><td>57.3%</td><td>starvation</td></tr>
-<tr><td><a href='00314_human.html'>Forlong</a></td><td>human</td><td>314</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F2</td><td>L3</td><td>1/44</td><td>637g</td><td>55</td><td>97.0%</td><td>—</td></tr>
-<tr><td><a href='00300_dwarf.html'>Bofur</a></td><td>dwarf</td><td>300</td><td><span class='tag dead'>dead</span></td><td>495</td><td>F1</td><td>L3</td><td>0/84</td><td>683g</td><td>81</td><td>70.5%</td><td>starvation</td></tr>
-<tr><td><a href='00007_elf.html'>Glorfindel</a></td><td>elf</td><td>7</td><td><span class='tag alive'>alive</span></td><td>3000</td><td>F1</td><td>L2</td><td>1/38</td><td>1034g</td><td>59</td><td>98.5%</td><td>—</td></tr>
-<tr><td><a href='09001_human.html'>Isildur</a></td><td>human</td><td>9001</td><td><span class='tag dead'>dead</span></td><td>337</td><td>F1</td><td>L2</td><td>0/40</td><td>1165g</td><td>65</td><td>43.6%</td><td>defeated by Skeleton</td></tr>
-<tr><td><a href='00007_dwarf.html'>Oin</a></td><td>dwarf</td><td>7</td><td><span class='tag alive'>alive</span></td><td>30</td><td>F1</td><td>L1</td><td>64/64</td><td>553g</td><td>4</td><td>28.6%</td><td>—</td></tr>
-<tr><td><a href='00099_elf.html'>Celeborn</a></td><td>elf</td><td>99</td><td><span class='tag dead'>dead</span></td><td>91</td><td>F1</td><td>L1</td><td>-1/28</td><td>730g</td><td>16</td><td>26.3%</td><td>lethal pool trap</td></tr>
-<tr><td><a href='00256_dwarf.html'>Gimli</a></td><td>dwarf</td><td>256</td><td><span class='tag dead'>dead</span></td><td>61</td><td>F1</td><td>L1</td><td>-6/64</td><td>561g</td><td>5</td><td>0.0%</td><td>unknown</td></tr>
+<tr><td><a href='12345_dwarf.html'>Balin</a></td><td>dwarf</td><td>12345</td><td><span class='tag dead'>dead</span></td><td>304</td><td>F2</td><td>L2</td><td>-4/74</td><td>522g</td><td>46</td><td>26.5%</td><td>defeated by Harpy</td></tr>
+<tr><td><a href='02200_elf.html'>Cirdan</a></td><td>elf</td><td>2200</td><td><span class='tag dead'>dead</span></td><td>186</td><td>F2</td><td>L1</td><td>0/28</td><td>544g</td><td>29</td><td>25.8%</td><td>defeated by Giant Spider</td></tr>
+<tr><td><a href='09001_human.html'>Isildur</a></td><td>human</td><td>9001</td><td><span class='tag dead'>dead</span></td><td>337</td><td>F1</td><td>L2</td><td>0/40</td><td>590g</td><td>65</td><td>43.6%</td><td>defeated by Skeleton</td></tr>
+<tr><td><a href='12345_human.html'>Faramir</a></td><td>human</td><td>12345</td><td><span class='tag dead'>dead</span></td><td>165</td><td>F1</td><td>L2</td><td>-33/40</td><td>371g</td><td>31</td><td>23.8%</td><td>lethal pool trap</td></tr>
+<tr><td><a href='00099_elf.html'>Celeborn</a></td><td>elf</td><td>99</td><td><span class='tag dead'>dead</span></td><td>93</td><td>F1</td><td>L1</td><td>-1/28</td><td>430g</td><td>17</td><td>33.3%</td><td>lethal pool trap</td></tr>
+<tr><td><a href='00256_dwarf.html'>Gimli</a></td><td>dwarf</td><td>256</td><td><span class='tag dead'>dead</span></td><td>61</td><td>F1</td><td>L1</td><td>-6/64</td><td>311g</td><td>5</td><td>0.0%</td><td>unknown</td></tr>
   </table>
 </section>
 </body>
