@@ -533,6 +533,17 @@ class PlaytestSession:
         # waiting. Cleared whenever the agent changes floors (the next
         # floor needs its own undead-sighting to be flagged).
         self.suspected_tomb_floors = set()
+        # Deepest floor index reached via the canonical stairs-down
+        # path (the agent stood on a D tile and pressed 'd'). Used as
+        # the retreat target when a warp drops the agent below this
+        # depth: the user's framing is that warp-skipped floors are
+        # near-instakill because the agent doesn't have the gear /
+        # level / item supply for the deeper monsters. Whenever
+        # pc.z > max_z_via_stairs, obs.retreat_to_floor flags the
+        # floor we should ascend back to, and the wayfinder + stairs
+        # mode policies switch from descend-and-clear into ascend-
+        # back mode until pc.z <= max_z_via_stairs again.
+        self.max_z_via_stairs = 0
         # Fog of war: when True, the neighbour + nearest-feature obs
         # respect room.discovered so the agent has to actually walk over
         # (or lantern-light) tiles before knowing what's there. The
@@ -607,6 +618,14 @@ class PlaytestSession:
             "blocked_directions": sorted(self.blocked_directions),
             "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
             "tomb_suspected_here": pc.z in self.suspected_tomb_floors,
+            "max_z_via_stairs": self.max_z_via_stairs,
+            # Retreat target: when a warp drops the agent below the
+            # deepest floor they've reached via canonical stairs, the
+            # wayfinder switches into ascend-back mode and aims for
+            # this floor index. None when no retreat is needed.
+            "retreat_to_floor": (self.max_z_via_stairs
+                                 if pc.z > self.max_z_via_stairs
+                                 else None),
             "tile_coverage": self._tile_coverage_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
@@ -841,7 +860,7 @@ class PlaytestSession:
         pc = gs.player_character
         floor = gs.my_tower.floors[pc.z]
         out = {}
-        for target in ("D", "V", "C", "G", "A", "L", "O", "P", "T", "N",
+        for target in ("D", "U", "V", "C", "G", "A", "L", "O", "P", "T", "N",
                        "Q", "K", "X", "B", "F"):
             best = None
             best_d = float("inf")
@@ -1016,7 +1035,7 @@ class PlaytestSession:
         floor = gs.my_tower.floors[pc.z]
         dist, first_step = self._bfs_paths()
         out = {}
-        for target in ("D", "V", "C", "G", "A", "L", "O", "P", "T", "N",
+        for target in ("D", "U", "V", "C", "G", "A", "L", "O", "P", "T", "N",
                        "Q", "K", "X", "B", "F"):
             best = None
             best_d = float("inf")
@@ -1384,11 +1403,26 @@ class PlaytestSession:
         )
         if was_visited and transitioned_in:
             gs.prompt_cntl = "game_loop"
-        if room_now.room_type not in (".", "E", "#", "D"):
+        # Skip visited-tracking for traversal tiles (., E), walls (#),
+        # and stair tiles (D, U). The agent steps onto stairs to use
+        # them, and we want the wayfinder to re-target them when
+        # retreating up from a warp-skipped floor or descending later.
+        if room_now.room_type not in (".", "E", "#", "D", "U"):
             self.visited_features.add(landing_key)
         # Reset floor-arrival counter when we change floors so the
         # stuck-on-floor override fires per-floor, not cumulative.
         if pc_after.z != self._last_floor:
+            # Stairs descent vs warp-arrival: if the pre-step mode was
+            # stairs_down_mode AND the action was 'd' AND z went up by
+            # exactly 1, it's a canonical descent and we bank the new
+            # depth as max_z_via_stairs. Anything else (warp accept,
+            # warp-resist-fail, multi-floor jump) leaves the cap
+            # alone, which triggers retreat-mode in the wayfinder.
+            if (mode == "stairs_down_mode"
+                    and action == "d"
+                    and pc_after.z == self._last_floor + 1):
+                if pc_after.z > self.max_z_via_stairs:
+                    self.max_z_via_stairs = pc_after.z
             self._last_floor = pc_after.z
             self.floor_arrival_turn = self.turn
             # Clear the recent-position history on floor change so the
@@ -1858,14 +1892,22 @@ def smart_policy(obs, rng, use_lantern=True):
         # remainder of the floor.
         tomb_suspected = bool(obs.get("tomb_suspected_here"))
 
-        # Build tiered priority. Each tier is a tuple of feature types
-        # that COMPETE BY DISTANCE -- within a tier the BFS-nearest
-        # reachable target wins. Tiers are taken in order. V sits in
-        # its own tier so the vendor is targeted once per floor (when
-        # SAFE rooms are exhausted OR via wants_vendor / is_weak when
-        # potions are low) -- merging V into tier 0 with SAFE caused
-        # over-shopping and dropped survival in the smoke grid.
-        if too_long_on_floor:
+        # Retreat-after-warp override. obs.retreat_to_floor is set
+        # whenever pc.z exceeds max_z_via_stairs -- i.e. a warp dropped
+        # the agent onto a floor they haven't earned via stairs yet.
+        # Those floors are near-instakill on a fresh Lv1 / Lv2
+        # character per the user's framing: the monster pool is
+        # tuned for their floor depth, and the agent doesn't have
+        # the level / gear / item supply. Cut the wayfinder over to
+        # ascend mode: target U exclusively (with V as a fallback if
+        # U isn't visible yet) so the agent makes for the up stairs.
+        # The stairs_up_mode + stairs_down_mode branches below also
+        # check this flag to flip their descend / walk-away
+        # behaviour into ascend.
+        retreat_to_floor = obs.get("retreat_to_floor")
+        if retreat_to_floor is not None:
+            tiers = [("U",), ("V",)]
+        elif too_long_on_floor:
             tiers = [("D",), ("V",)]
         elif high_coverage_descend:
             # Floor mostly swept + stairs in sight -- go.
@@ -2483,13 +2525,31 @@ def smart_policy(obs, rng, use_lantern=True):
             return _walk_off_chest()
         return "o" if rng.random() < 0.85 else _walk_off_chest()
     if mode == "stairs_down_mode":
+        # Retreat-after-warp: if a warp landed us on a floor deeper
+        # than max_z_via_stairs, we DON'T want to descend further --
+        # we want to walk off this D tile and find the U tile so we
+        # can ascend back to known territory. The wayfinder is
+        # already targeting U in retreat mode, so steer toward it.
+        feature_paths = obs.get("feature_paths") or {}
+        if obs.get("retreat_to_floor") is not None:
+            u_path = feature_paths.get("U")
+            if u_path and u_path.get("first_step"):
+                return u_path["first_step"]
+            # No visible U yet -- step OFF the D tile in any walkable
+            # direction so the wayfinder can resume exploration on
+            # the next turn and find the up-stairs.
+            neighbors = obs.get("neighbors") or {}
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            return rng.choice(["n", "s", "e", "w"])
         # Clear beneficials before descending -- but only if BFS says
         # they're CLOSE. The previous Manhattan-based check could pick a
         # beneficial behind a wall, causing an endless step-away /
         # step-back-onto-D ping-pong (seed=13 human burned 40 turns in
         # this loop). With path_dist <= 3 the agent only detours for
         # nearby beneficials and otherwise descends.
-        feature_paths = obs.get("feature_paths") or {}
         # BENEFICIAL_SAFE = rooms that pay off without forced combat.
         # Q (alchemist): combine 2 potions for stronger result.
         # K (war room): free intel reveals next floor's special rooms.
@@ -2514,6 +2574,14 @@ def smart_policy(obs, rng, use_lantern=True):
                 return fs
         return "d"
     if mode == "stairs_up_mode":
+        # Retreat-after-warp: ASCEND. The agent landed on a U tile
+        # while pc.z > max_z_via_stairs, so going up is the goal.
+        # The default policy below walks AWAY from U to avoid the
+        # stairs ping-pong, but during retreat we want the
+        # ping-pong's opposite -- the trip back through familiar
+        # territory.
+        if obs.get("retreat_to_floor") is not None:
+            return "u"
         # Stairs-up_mode fires as soon as you arrive on floor N+1 (your
         # landing tile is the U). Confirming would immediately bounce
         # the agent back to floor N's D, where stairs_down_mode would
