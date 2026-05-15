@@ -2435,6 +2435,16 @@ def main(argv=None):
                         help="Disable fog-of-war in obs (agent sees the full "
                              "floor regardless of `discovered`). Useful for "
                              "isolating upstream balance from navigation.")
+    parser.add_argument("--report-dir", default=None,
+                        help="Write a per-run HTML report (and JSON sidecar) "
+                             "to this directory. The report covers the hero, "
+                             "their journey, victories, equipment, and death "
+                             "if any. Auto-regenerates index.html.")
+    parser.add_argument("--deploy", action="store_true",
+                        help="After writing the report, push the report "
+                             "directory to a gh-pages branch of this repo "
+                             "via a worktree. Idempotent and additive: each "
+                             "run accumulates onto the branch.")
     args = parser.parse_args(argv)
 
     spells = [s for s in args.spells.split(",") if s.strip()] if args.spells else None
@@ -2445,6 +2455,28 @@ def main(argv=None):
                     int_bonus=args.int_bonus, spells=spells)
     obs = sess.observe()
     print(_summarise(obs, args.jsonl))
+
+    # Report collector: tracks per-turn obs + log lines so we can
+    # render a hero-postmortem page after the run finishes. Cheap
+    # enough to leave on for every run; the rendering work happens
+    # at finalize.
+    report = None
+    if args.report_dir or args.deploy:
+        from .playtest_report import RunReport
+        pc = gs.player_character
+        starting_stats = {
+            "health": pc.max_health, "attack": pc.attack,
+            "defense": pc.defense, "strength": pc.strength,
+            "dexterity": pc.dexterity, "intelligence": pc.intelligence,
+            "max_mana": pc.max_mana,
+        }
+        report = RunReport(
+            seed=args.seed, race=args.race,
+            gender=getattr(pc, "gender", "non-binary"),
+            name=pc.name, spells=spells,
+            starting_stats=starting_stats,
+        )
+        report.record_obs(0, obs, gs.log_lines)
 
     rng = _stdlib_random.Random(args.seed)
 
@@ -2480,6 +2512,9 @@ def main(argv=None):
             if not action or action.startswith("#"):
                 continue
         obs = sess.step(action)
+        if report is not None:
+            report.record_action(sess.turn, obs["mode"], action)
+            report.record_obs(sess.turn, obs, gs.log_lines)
         print(f"-> {action}")
         print(_summarise(obs, args.jsonl))
         if sess.last_error:
@@ -2516,6 +2551,35 @@ def main(argv=None):
                 )
         except OSError:
             pass  # logging is best-effort
+
+    # Write HTML report and optionally deploy. Failures here are
+    # non-fatal -- the run already finished and the data is in
+    # game_state, but we don't want a bad git config to break runs.
+    if report is not None:
+        from .playtest_report import write_report, write_index, deploy_gh_pages
+        report.finalize(obs, gs.log_lines, sess.turn)
+        out_dir = args.report_dir or _os.path.join(
+            _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),
+            "playtest_reports",
+        )
+        try:
+            page_path = write_report(report, out_dir)
+            write_index(out_dir)
+            print(f"\n>>> Report: {page_path}")
+        except OSError as e:
+            print(f"  ! report write failed: {e}", file=sys.stderr)
+        if args.deploy:
+            try:
+                repo_root = _os.path.dirname(
+                    _os.path.dirname(_os.path.abspath(__file__))
+                )
+                url = deploy_gh_pages(out_dir, repo_root)
+                if url:
+                    print(f">>> Deployed to gh-pages branch ({url})")
+                else:
+                    print(">>> Deploy skipped (no changes).")
+            except Exception as e:
+                print(f"  ! deploy failed: {e}", file=sys.stderr)
 
     return 0 if obs["alive"] else 1
 
