@@ -2682,9 +2682,16 @@ def smart_policy(obs, rng, use_lantern=True):
         # turns on the current floor, drop the clear-before-descend
         # gate. Pulls the agent off floor 1 when an unreachable
         # beneficial (behind a wall the greedy walker can't navigate
-        # around) would otherwise loop forever. 300 turns is enough
-        # to do a thorough sweep of a 18x21 floor.
-        FLOOR_STUCK_TURNS = 300
+        # around) would otherwise loop forever.
+        # Depth-aware (build 316): F1-F3 cap at 200T because the
+        # build-315 grid showed 34/60 runs still burned >=300T on F1
+        # and F1-F3 mean was 334T vs F4+ 270T -- the early floors
+        # don't have the depth complexity to justify the extra time
+        # budget. F4+ keeps 300T because vendor/key hunts on those
+        # floors legitimately need the headroom (F4+ mean rose from
+        # 217 to 270 in build 315 as more agents survived deep).
+        pc_z_local = (p.get("floor", 1) - 1)
+        FLOOR_STUCK_TURNS = 200 if pc_z_local < 3 else 300
         too_long_on_floor = (obs.get("turns_on_floor") or 0) > FLOOR_STUCK_TURNS
         if too_long_on_floor:
             unvisited_beneficials_exist = False
