@@ -3601,16 +3601,19 @@ def create_player_character(my_tower, player_character, _cntl, cmd):
         return True
 
     if _cntl == "player_sprite":
-        # Commands look like 'sp1', 'sp2', ... mapping into the round-8
-        # _CHARACTERS_POOL by 1-based index. Routes back to whatever
-        # launched the picker — starting_shop for new characters, or
-        # gs.player_sprite_return_to for the "Change Portrait" flow.
-        from .sprites.characters import _CHARACTERS_POOL
+        # Commands look like 'sp1', 'sp2', ... mapping into the race-
+        # filtered character pool by 1-based index. Indices match what
+        # the picker UI rendered, so we resolve the pool the same way.
+        # Routes back to whatever launched the picker — starting_shop
+        # for new characters, or gs.player_sprite_return_to for the
+        # "Change Portrait" flow.
+        from .sprites.characters import get_race_pool
+        race_pool = get_race_pool(player_character.race)
         choice = (cmd or '').lower().strip()
         if choice.startswith('sp') and choice[2:].isdigit():
             idx = int(choice[2:])
-            if 1 <= idx <= len(_CHARACTERS_POOL):
-                player_character.sprite_pid = _CHARACTERS_POOL[idx - 1]
+            if 1 <= idx <= len(race_pool):
+                player_character.sprite_pid = race_pool[idx - 1]
                 return_to = gs.player_sprite_return_to
                 gs.player_sprite_return_to = None
                 if return_to:

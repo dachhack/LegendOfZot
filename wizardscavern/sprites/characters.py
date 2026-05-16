@@ -15,6 +15,17 @@ Use:
     pid = _CHARACTERS_POOL[index]                # if you want a specific one
     pid = random.choice(_CHARACTERS_POOL)        # if assignment is random
     img = canonical_pool[pid]["img_b64"]
+
+Race filtering
+--------------
+`_CHARACTERS_BY_RACE` maps 'human' / 'elf' / 'dwarf' to a list of pids
+that are visually appropriate for that race. Maintained by the
+sprite_package/picks_characters/picker.html tool — the JSON output from
+that picker gets transcribed into the dict below.
+
+Call `get_race_pool(race)` to fetch the filtered pool. If the race has
+no curated picks yet (empty list), it falls back to `_CHARACTERS_POOL`
+so character creation never breaks.
 """
 
 _CHARACTERS_POOL = [
@@ -92,3 +103,26 @@ _CHARACTERS_POOL = [
     'CH0400',  # variant_index=71 sheet=S6T src=r09c01
     'CH0405',  # variant_index=72 sheet=S6T src=r09c11
 ]
+
+
+# Race -> list of pids. Populated by hand from the picker.html export
+# (see sprite_package/picks_characters/). Empty list means "no curated
+# selection yet — fall back to the full pool".
+_CHARACTERS_BY_RACE = {
+    'human': [],
+    'elf':   [],
+    'dwarf': [],
+}
+
+
+def get_race_pool(race):
+    """Return the curated sprite pool for `race`, or the full pool if empty.
+
+    Accepts any casing; unknown races fall back to the full pool too.
+    """
+    key = (race or '').lower()
+    pool = _CHARACTERS_BY_RACE.get(key)
+    if pool:
+        return pool
+    return _CHARACTERS_POOL
+

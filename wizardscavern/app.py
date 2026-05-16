@@ -5842,13 +5842,16 @@ class WizardsCavernApp(toga.App):
             current_commands_text = "Tap a gender"
 
         elif gs.prompt_cntl == "player_sprite":
-            # PORTRAIT PICKER — scrollable grid of all 73 round-8 character
+            # PORTRAIT PICKER — scrollable grid of race-appropriate
             # avatars. Tap a card -> sends 'sp<n>' which stores the chosen
-            # pid and advances to the starting shop.
-            from .sprites.characters import _CHARACTERS_POOL
+            # pid and advances to the starting shop. The pool is filtered
+            # by gs.player_character.race; if no curated picks exist for
+            # that race, falls back to the full _CHARACTERS_POOL.
+            from .sprites.characters import get_race_pool
             from .sprites import get_image_b64
+            race_pool = get_race_pool(gs.player_character.race)
             tiles = []
-            for idx, pid in enumerate(_CHARACTERS_POOL, start=1):
+            for idx, pid in enumerate(race_pool, start=1):
                 img_b64 = get_image_b64(pid)
                 if not img_b64:
                     continue
