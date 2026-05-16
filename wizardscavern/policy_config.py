@@ -19,81 +19,103 @@ import json
 @dataclass
 class PolicyConfig:
     # --- Food / hunger triggers ---
-    eat_hunger_threshold: int = 50
+    eat_hunger_threshold: int = 45
     # Eat when hunger < this. Rations are 50 nutrition so 50 is near-optimal
     # for waste-free consumption; lower = more well-fed time but more food
-    # waste; higher = more eat-cycles but tighter food clock.
+    # waste; higher = more eat-cycles but tighter food clock. CMA-ES build
+    # 323 tuned this from 50 -> 45 -- slight under-shoot of ration value
+    # to keep hunger band slightly tighter against starvation.
 
-    urgent_meat_rot_threshold: int = 20
-    # Eat raw meat about-to-rot when rot_timer <= this. Lower = waste fresh
-    # meat protecting against rot; higher = lose meat to rot.
+    urgent_meat_rot_threshold: int = 12
+    # Eat raw meat about-to-rot when rot_timer <= this. Build 323 cut
+    # 20 -> 12: less wasted nutrition on near-fresh meat, only force-eat
+    # within ~12 turns of rotting.
 
-    starving_threshold: int = 30
-    # `starving` flag fires when hunger <= this AND no food in bag. Triggers
-    # combat-mode flee-from-inedible override.
+    starving_threshold: int = 44
+    # `starving` flag fires when hunger <= this AND no food in bag.
+    # Build 323 jumped 30 -> 44: trigger inedible-monster flee much
+    # earlier in the food crisis so the agent looks for vendor/edible
+    # mob before HP becomes the limiter.
 
     # --- Heal / potion triggers ---
-    heal_hp_critical_pct: float = 0.30
+    heal_hp_critical_pct: float = 0.158
     # Drink heal potion at this HP fraction (highest-priority self-care).
+    # Build 323 dropped 0.30 -> 0.158: trust the in-combat heal trigger
+    # to handle most cases, save crisis pots for HP-cliff moments.
 
-    heal_hp_preemptive_pct: float = 0.80
+    heal_hp_preemptive_pct: float = 0.734
     # Pre-emptive heal at this HP fraction when an M is adjacent (before
-    # combat absorbs the next hit).
+    # combat absorbs the next hit). Build 323 tightened 0.80 -> 0.734.
 
-    combat_heal_pot_pct: float = 0.50
+    combat_heal_pot_pct: float = 0.605
     # In combat_mode, open inventory to drink heal pot at this HP fraction.
+    # Build 323 raised 0.50 -> 0.605: drink earlier mid-fight.
 
-    combat_heal_spell_pct: float = 0.55
+    combat_heal_spell_pct: float = 0.613
     # In combat_mode, queue cast at this HP fraction if heal spell known.
 
-    buff_potion_hp_low: float = 0.60
+    buff_potion_hp_low: float = 0.566
     # Pre-combat buff potion lower HP gate.
 
-    buff_potion_hp_high: float = 0.95
+    buff_potion_hp_high: float = 0.916
     # Pre-combat buff potion upper HP gate.
 
     # --- Resource pressure ---
-    resource_hunger_threshold: int = 60
-    # `resources_pressing` fires when hunger < this. Tightens floor exit gates.
+    resource_hunger_threshold: int = 48
+    # `resources_pressing` fires when hunger < this. Build 323 tightened
+    # 60 -> 48 so the early-floor exploration doesn't drag.
 
-    resource_fuel_threshold: int = 15
+    resource_fuel_threshold: int = 11
     # `resources_pressing` fires when fuel_total < this.
 
     # --- Floor / exploration timing ---
-    floor_stuck_turns: int = 300
-    # Force descend tier when turns_on_floor > this.
+    floor_stuck_turns: int = 178
+    # Force descend tier when turns_on_floor > this. Build 323 cut 300 ->
+    # 178 -- agents abandon dead-end floors sooner. Build 316 showed a
+    # flat F1-F3 cap regressed; build 323 is paired with a tighter
+    # high_coverage_threshold so descent only triggers after meaningful
+    # exploration.
 
-    high_coverage_threshold: int = 50
-    # Coverage % at which `high_coverage_descend` fires. Build 315 lowered
-    # 90 -> 50 after grid showed 90% was dead code.
+    high_coverage_threshold: int = 64
+    # Coverage % at which `high_coverage_descend` fires. Build 315 first
+    # lowered 90 -> 50; build 323 raised back to 64 -- the 50% threshold
+    # was descending too eagerly when combined with the lower
+    # floor_stuck_turns.
 
     min_kills_floor_base: int = 3
     # Minimum kills required at F1 (and floor of the min-kills curve).
 
-    min_kills_floor_scale: int = 2
+    min_kills_floor_scale: int = 1
     # Per-floor kill increment: min_kills = min(12, max(base, pc_z * scale + 1)).
+    # Build 323 dropped 2 -> 1: less aggressive grind scaling. At pc_z=4
+    # (F5) the curve is now max(3, 5) = 5 kills vs the old max(3, 9) = 9.
 
-    wedge_visit_count: int = 6
-    # current_tile_visits >= this triggers wedge Hail Mary.
+    wedge_visit_count: int = 4
+    # current_tile_visits >= this triggers wedge Hail Mary. Build 323
+    # 6 -> 4: bail on stuck navigation earlier.
 
     # --- Combat threat assessment ---
-    flee_level_gap_general: int = 2
+    flee_level_gap_general: int = 1
     # Flee general monsters when m_level > pc_level + this.
 
     flee_level_gap_undead: int = 0
     # Flee undead when m_level > pc_level + this (0 = flee at +1).
 
-    flee_level_gap_elite: int = -1
-    # Flee elite undead when m_level >= pc_level + this + 1 (= -1 means parity).
+    flee_level_gap_elite: int = -3
+    # Flee elite undead when m_level >= pc_level + this + 1. Build 323
+    # dropped -1 -> -3: flee elite undead even when 2 levels BELOW you.
+    # Eliminates the chip-damage gauntlet that caused the F3-F5 wall.
 
-    flee_hp_bag_ratio: float = 2.0
+    flee_hp_bag_ratio: float = 2.151
     # Flee when m_max_hp > this * pc_max_hp.
 
-    spell_use_prob: float = 0.90
+    spell_use_prob: float = 0.996
     # In combat: rng.random() < this triggers spell cast (vs melee attack).
+    # Build 323 nudged 0.90 -> 0.996: ~always cast when possible.
 
-    attack_vs_flee_prob: float = 0.92
+    attack_vs_flee_prob: float = 0.979
     # In combat fallback: rng.random() < this triggers attack (vs flee).
+    # Build 323 0.92 -> 0.979: rarely flee when threat assessment says fight.
 
     # --- Vendor gates ---
     heal_pot_vendor_threshold: int = 2
