@@ -1598,6 +1598,7 @@ class PlaytestSession:
             "vendor_shop", "blacksmith_mode", "shrine_mode",
             "stairs_up_mode", "alchemist_mode", "war_room_mode",
             "taxidermist_mode",
+            "dungeon_mode", "dungeon_unlocked_mode",
         }
         # The step transitioned INTO a loop-prone mode (either because
         # the agent landed via movement, or _trigger_room_interaction
@@ -2026,13 +2027,22 @@ def smart_policy(obs, rng, use_lantern=True):
         # item twice in a row.
         current_tile_visits = obs.get("current_tile_visits") or 0
         wedged = current_tile_visits >= 6
-        has_any_scroll = any(e["category"] == "scroll" for e in inv)
-        has_unid_potion = any(
-            e["category"].startswith("potion")
-            and not e.get("is_identified")
+        attempted_already = set(obs.get("wedge_attempted_actions") or [])
+        WEDGE_SKIP_SCROLL_TRIGGER = {"spell_scroll", "vendor_restock"}
+        untried_scroll = any(
+            e["category"] == "scroll"
+            and not (e.get("is_identified")
+                     and e.get("scroll_type") in WEDGE_SKIP_SCROLL_TRIGGER)
+            and f"u{e['slot']}" not in attempted_already
             for e in inv
         )
-        if (wedged and (has_any_scroll or has_unid_potion)
+        untried_unid_potion = any(
+            e["category"].startswith("potion")
+            and not e.get("is_identified")
+            and f"u{e['slot']}" not in attempted_already
+            for e in inv
+        )
+        if (wedged and (untried_scroll or untried_unid_potion)
                 and obs.get("last_action") not in ("i", "x")):
             return "i"
         # Eat at hunger < 70 so the agent doesn't drift down into the
