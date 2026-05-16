@@ -2925,6 +2925,35 @@ def smart_policy(obs, rng, use_lantern=True):
         # turn -- without this the policy falls through to whatever
         # default the inventory tail returns, which has historically
         # been u<N>-loop fodder.
+        # Drink identified buff potions when HP is decent but not
+        # full. The combat-buff potions (strength, defense, stone
+        # skin, regeneration, etc.) are tactical effects that
+        # otherwise sit in the bag until death. Drink them while
+        # the agent is alive to see -- worst case the duration runs
+        # out before a fight, best case it saves the next combat.
+        # MUST run BEFORE the wedge Hail Mary: game_loop opens
+        # inventory specifically for this drink when m_adjacent
+        # and has_buff_potion, and if the wedge bail short-circuits
+        # to proposed='x' first the agent loops i->x->i->x forever.
+        # Dori of Belegost (s=2200 dwarf F4) burned 1800 turns at
+        # full HP with a Potion of Berserker Rage in slot 8 because
+        # the wedge bail consumed `proposed` before the buff-drink
+        # gate could fire.
+        HELPFUL_POTION_TYPES = {
+            "strength", "defense", "stone_skin", "regeneration",
+            "berserker", "giant_strength", "haste", "vampirism",
+            "dexterity", "intelligence", "frost_armor",
+            "true_sight", "invisibility", "fortune", "experience",
+        }
+        if proposed is None and hp_pct < 0.95:
+            for entry in inv:
+                if not entry["category"].startswith("potion_"):
+                    continue
+                if not entry.get("is_identified"):
+                    continue
+                if entry.get("potion_type") in HELPFUL_POTION_TYPES:
+                    proposed = f"u{entry['slot']}"
+                    break
         current_tile_visits_iv = obs.get("current_tile_visits") or 0
         wedged_iv = current_tile_visits_iv >= 6
         wedge_attempted = set(obs.get("wedge_attempted_actions") or [])
@@ -2960,27 +2989,6 @@ def smart_policy(obs, rng, use_lantern=True):
             # with the per-floor wedge_attempted_actions set, this
             # prevents the inventory loop entirely.
             proposed = "x"
-        # Drink identified buff potions when HP is decent but not
-        # full. The combat-buff potions (strength, defense, stone
-        # skin, regeneration, etc.) are tactical effects that
-        # otherwise sit in the bag until death. Drink them while
-        # the agent is alive to see -- worst case the duration runs
-        # out before a fight, best case it saves the next combat.
-        HELPFUL_POTION_TYPES = {
-            "strength", "defense", "stone_skin", "regeneration",
-            "berserker", "giant_strength", "haste", "vampirism",
-            "dexterity", "intelligence", "frost_armor",
-            "true_sight", "invisibility", "fortune", "experience",
-        }
-        if proposed is None and hp_pct < 0.95:
-            for entry in inv:
-                if not entry["category"].startswith("potion_"):
-                    continue
-                if not entry.get("is_identified"):
-                    continue
-                if entry.get("potion_type") in HELPFUL_POTION_TYPES:
-                    proposed = f"u{entry['slot']}"
-                    break
         # Cure-all (Antidote) gets its own gate -- only drink when
         # actually statused, otherwise it sits as insurance for the
         # next nasty effect. has_bad_status is hoisted at the top of
