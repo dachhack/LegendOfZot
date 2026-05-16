@@ -2988,6 +2988,32 @@ def smart_policy(obs, rng, use_lantern=True):
             fs = best.get("first_step")
             if fs:
                 return fs
+        # Under-levelled + grind incomplete + not stuck: step OFF the
+        # D tile so the agent finishes exploring + grinding the floor
+        # before descending. The wayfinder's tier-strip filter handles
+        # the targeting side, but an agent who frontier-walks INTO a
+        # D tile (or spawns next to one -- F1 Thorin spawned with D
+        # 2 tiles south and descended on turn 9 after 2 kills) lands
+        # here without the tier filter ever firing. User-flagged:
+        # "seeing a lot of runs with 1 or 2 moves on floor 1. That's
+        # an easy way to start off on the wrong foot."
+        kills_so_far_descend = obs.get("kills_on_floor") or 0
+        pc_z_descend = (p.get("floor", 1) - 1)
+        min_kills_descend = min(12, max(3, pc_z_descend * 2 + 1))
+        coverage_pct_descend = (obs.get("tile_coverage") or {}).get("pct", 0)
+        under_descend = p.get("level", 1) <= pc_z_descend + 1
+        grind_done_descend = (
+            kills_so_far_descend >= min_kills_descend
+            or coverage_pct_descend >= 70
+        )
+        if (under_descend and not grind_done_descend
+                and not stuck and not is_weak):
+            neighbors = obs.get("neighbors") or {}
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            return rng.choice(["n", "s", "e", "w"])
         return "d"
     if mode == "stairs_up_mode":
         # Retreat-after-warp: ASCEND. The agent landed on a U tile
