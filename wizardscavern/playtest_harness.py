@@ -614,6 +614,21 @@ class PlaytestSession:
         # by the policy's tile-coverage descent gate to leave a floor
         # once enough has been swept, even if a far beneficial remains.
         self.visited_tiles_this_floor = set()
+        # Per-floor revisit counter: dict {(x,y): visit_count}. Reset
+        # on floor change. Used by the wedge detector -- when the
+        # agent has revisited the current tile 6+ times the wayfinder
+        # has lost the plot and we fire Hail-Mary item use to break
+        # the loop (Durin seed=314 burned 2345 turns at HP=1 on F2
+        # bouncing e/w in a 3-tile corridor with no D reachable).
+        self.floor_visit_count = {}
+        # Per-floor set of inventory action strings already attempted
+        # during a wedge episode. Reset on floor change. Without
+        # this the Hail Mary in the inventory branch alternates
+        # u1<->u2 forever (last_action only blocks IMMEDIATE repeats,
+        # not 2-step loops): Forlong seed=314 human burned 2900 turns
+        # alternating two unidentified scrolls that both refused to
+        # consume out of combat.
+        self.wedge_attempted_actions = set()
         # Blocked-directions tracker. When the agent issues a
         # cardinal-direction action (n/s/e/w from game_loop or a
         # flee/move-accepting mode) and the position doesn't change,
@@ -772,6 +787,8 @@ class PlaytestSession:
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
             "nearest_undiscovered": self._nearest_undiscovered_obs(),
             "turns_on_floor": self.turn - self.floor_arrival_turn,
+            "current_tile_visits": self.floor_visit_count.get((pc.x, pc.y), 0),
+            "wedge_attempted_actions": sorted(self.wedge_attempted_actions),
             "room": {
                 "type": room.room_type,
                 "properties": {
@@ -1620,6 +1637,8 @@ class PlaytestSession:
             # Reset tile-coverage tracking: the new floor starts at 0%
             # explored from the agent's perspective.
             self.visited_tiles_this_floor = set()
+            self.floor_visit_count = {}
+            self.wedge_attempted_actions = set()
             # Fresh floor, fresh walls to discover.
             self.blocked_directions = set()
             # Reset per-floor kill counter so the grind-first descent
@@ -1644,6 +1663,26 @@ class PlaytestSession:
             self.max_z_via_stairs = pc_after.z
         # Track current-floor coverage for the policy's descent gate.
         self.visited_tiles_this_floor.add((pc_after.x, pc_after.y))
+        # Bump per-tile visit count ONLY on actual arrival (position
+        # changed this step). Standing still during inventory ops or
+        # multi-turn mode dialogues must NOT inflate the counter --
+        # the wedge detector reads "how many times have we arrived
+        # here from elsewhere" so a 2-tile bounce shows up cleanly.
+        if pre_step_xyz != post_step_xyz:
+            xy_now = (pc_after.x, pc_after.y)
+            self.floor_visit_count[xy_now] = self.floor_visit_count.get(xy_now, 0) + 1
+        # Wedge action tracker: when we're wedged (current tile
+        # visited 6+ times) AND the agent issues an inventory item
+        # use, remember the action so the Hail Mary doesn't re-try
+        # the same slot in this episode. Reset whenever the player
+        # actually moves -- a fresh tile = fresh wedge episode.
+        cur_visits = self.floor_visit_count.get(
+            (pc_after.x, pc_after.y), 0
+        )
+        if pre_step_xyz != post_step_xyz:
+            self.wedge_attempted_actions = set()
+        elif cur_visits >= 6 and isinstance(action, str) and action.startswith("u"):
+            self.wedge_attempted_actions.add(action)
         # Maintain blocked_directions: when a cardinal-move action
         # fails to change position, that direction is a wall from the
         # current tile. Cleared on any successful move.
@@ -1971,6 +2010,30 @@ def smart_policy(obs, rng, use_lantern=True):
                 for e in inv)):
             return "i"
         if has_upgrade:
+            return "i"
+        # Wedge escape: when the agent has ARRIVED at the current
+        # tile 6+ times on this floor (real bounces, not stand-still
+        # inventory ops -- floor_visit_count only bumps on movement),
+        # the wayfinder has lost the plot. Durin seed=314 dwarf on
+        # F2 burned 2345 turns at HP=1 in a (2,1)<->(3,1)<->(1,1) U
+        # corridor with no D reachable. Open inventory so the
+        # wedged-item-use block can read any escape scroll (mapping
+        # reveals fog, teleport relocates) or drink unidentified
+        # potions as Hail Marys. Gate on last_action != "i" so the
+        # trigger doesn't fire on the same turn we just exited
+        # inventory (that would be a 1-turn ping). The inventory
+        # branch's last_action guards prevent re-picking the same
+        # item twice in a row.
+        current_tile_visits = obs.get("current_tile_visits") or 0
+        wedged = current_tile_visits >= 6
+        has_any_scroll = any(e["category"] == "scroll" for e in inv)
+        has_unid_potion = any(
+            e["category"].startswith("potion")
+            and not e.get("is_identified")
+            for e in inv
+        )
+        if (wedged and (has_any_scroll or has_unid_potion)
+                and obs.get("last_action") not in ("i", "x")):
             return "i"
         # Eat at hunger < 70 so the agent doesn't drift down into the
         # starvation band (HP-tick territory) on a long boon sweep.
@@ -2683,6 +2746,53 @@ def smart_policy(obs, rng, use_lantern=True):
                         and (cursed_weapon or cursed_armor)):
                     proposed = f"u{entry['slot']}"
                     break
+        # Wedge Hail Mary: when the agent has arrived at this tile
+        # 6+ times AND the safer paths above produced nothing,
+        # try unidentified scrolls (skip known spell_scroll and
+        # vendor_restock -- both re-prompt without consuming a turn
+        # so they'd lock the agent in inventory) and unidentified
+        # potions. Skip any slot in wedge_attempted_actions (session
+        # tracker, reset on movement) so each slot is tried at most
+        # once per wedge episode. If every candidate is exhausted,
+        # send 'x' to exit inventory so the wayfinder gets another
+        # turn -- without this the policy falls through to whatever
+        # default the inventory tail returns, which has historically
+        # been u<N>-loop fodder.
+        current_tile_visits_iv = obs.get("current_tile_visits") or 0
+        wedged_iv = current_tile_visits_iv >= 6
+        wedge_attempted = set(obs.get("wedge_attempted_actions") or [])
+        WEDGE_SKIP_SCROLL_TYPES = {"spell_scroll", "vendor_restock"}
+        if proposed is None and wedged_iv:
+            for entry in inv:
+                if entry["category"] != "scroll":
+                    continue
+                stype = entry.get("scroll_type")
+                if entry.get("is_identified") and stype in WEDGE_SKIP_SCROLL_TYPES:
+                    continue
+                candidate = f"u{entry['slot']}"
+                if candidate in wedge_attempted:
+                    continue
+                proposed = candidate
+                break
+        if proposed is None and wedged_iv:
+            for entry in inv:
+                if not entry["category"].startswith("potion"):
+                    continue
+                if entry.get("is_identified"):
+                    continue
+                candidate = f"u{entry['slot']}"
+                if candidate in wedge_attempted:
+                    continue
+                proposed = candidate
+                break
+        if proposed is None and wedged_iv:
+            # All escape items exhausted -- back out of inventory so
+            # the game_loop wayfinder gets the next turn. The
+            # game_loop wedge trigger is gated on last_action not in
+            # ("i", "x"), which blocks immediate re-open. Combined
+            # with the per-floor wedge_attempted_actions set, this
+            # prevents the inventory loop entirely.
+            proposed = "x"
         # Drink identified buff potions when HP is decent but not
         # full. The combat-buff potions (strength, defense, stone
         # skin, regeneration, etc.) are tactical effects that
@@ -2835,7 +2945,20 @@ def smart_policy(obs, rng, use_lantern=True):
     if mode == "upgrade_scroll_mode":
         # Same shape as identify -- '1' picks the first valid item
         # and consumes the scroll. The handler self-exits when the
-        # bag has no upgradeable gear.
+        # bag has no upgradeable gear, BUT items at MAX upgrade for
+        # the scroll's tier return early without resetting the
+        # prompt (items.py:2159) so a re-fire of '1' loops forever.
+        # Walk through digits 1..6 by last_action then cancel out.
+        last_us = obs.get("last_action") or ""
+        digit_sequence = ("1", "2", "3", "4", "5", "6")
+        if last_us in digit_sequence:
+            try:
+                idx = digit_sequence.index(last_us)
+                if idx + 1 < len(digit_sequence):
+                    return digit_sequence[idx + 1]
+            except ValueError:
+                pass
+            return "c"
         return "1"
 
     if mode == "foresight_direction_mode":
