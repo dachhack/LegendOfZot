@@ -2770,15 +2770,19 @@ def smart_policy(obs, rng, use_lantern=True):
             kills_so_far >= min_kills_for_floor
             or (not m_reachable and coverage_pct >= 70)
         )
-        # 90% sweep + D reachable + not weak + grind done. Bumped
-        # 80 -> 90 because a 20% slice of an 18x21 floor still
-        # hides plenty of M spawns the agent hasn't fought; the
-        # earlier threshold descended before the floor's XP was
-        # banked. grind_complete (min_kills met OR thoroughly
-        # explored with no M visible) is the second gate -- ensures
-        # under-levelled agents don't rush past their depth.
+        # Coverage-based descend gate. The build-314 baseline grid
+        # showed mean max-coverage of 31-36% on F1-F4 across 188
+        # floor-visits and 0/188 ever hit 90%, so the prior threshold
+        # was dead code. Lowering to 50% targets the over-grinders
+        # specifically: runs that reach >=50% coverage have, in
+        # practice, only done so by spending 300+ turns on the floor
+        # (the spot-check showed F2=58, F1=64, F2=51 in the worst
+        # starvation runs). grind_complete (min_kills met OR
+        # thoroughly explored with no M visible) still gates this so
+        # under-levelled agents don't bolt past their depth. is_weak
+        # still gates so broken-gear / low-HP agents heal first.
         high_coverage_descend = (
-            coverage_pct >= 90
+            coverage_pct >= 50
             and d_reachable
             and not is_weak
             and grind_complete
