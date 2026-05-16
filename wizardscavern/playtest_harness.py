@@ -2803,6 +2803,21 @@ def smart_policy(obs, rng, use_lantern=True):
         # lantern every fog-adjacent step for 7-8 floors.
         if use_lantern and lantern_fuel < 30:
             STOCK["lantern_fuel"] = 4
+
+        # RATIONS FIRST: buy EVERY ration the vendor offers, before
+        # any other stockpile or magic-item check. User framing:
+        # "Buying all rations from every vendor on every floor
+        # should be a very high priority. It's pretty much top of
+        # the explorer priority list." Rations are cheap (10g
+        # apiece) and starvation is the silent floor-7 killer; the
+        # STOCK["food"] cap was leaving deficit on long runs.
+        # Vendor stocks 3-4 rations as a single stack -- one 'b' click
+        # buys the stack at floor-tier value (the vendor's
+        # calculated_value field).
+        for v in vendor_inv:
+            if v["category"] == "food" and v["price"] <= gold:
+                return f"b{v['slot']}"
+
         owned = {cat: sum(i.get("count", 1) for i in inv
                           if i["category"] == cat)
                  for cat in STOCK}

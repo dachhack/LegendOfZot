@@ -268,8 +268,27 @@ class RunReport:
         self.buys = []  # (turn, floor, name, price, count)
         self.identifies = []  # (turn, item_name)
         self.descents = []  # turn at which each new floor was first entered
+        # How each floor was LEFT. Populated from the (mode, action)
+        # pair that triggered the floor change, inferred at the
+        # moment record_obs sees a new floor index. Methods:
+        #   'stairs_down' -- pressed 'd' on a D tile
+        #   'stairs_up'   -- pressed 'u' on a U tile (retreat path)
+        #   'warp_accept' -- chose 'n' in warp_mode (took the warp)
+        #   'warp_forced' -- chose 'y' but the resist roll failed
+        #   'other'       -- couldn't identify (e.g., scroll teleport)
+        # Entry: (from_floor, to_floor, turn, method)
+        self.floor_exits = []
         self.equipped_history = []  # (turn, weapon_name, armor_name)
         self.last_equip = (None, None)
+        # Tracks the (mode, action) of the most-recently-issued
+        # action so floor-exit detection can read what caused the
+        # transition. Updated by record_action; read by record_obs.
+        self._last_action_mode = (None, None)
+        # name -> category mapping built from per-turn inventory
+        # snapshots. Lets the aggregated tables look up the
+        # category of a bought / found item by name without parsing
+        # log lines.
+        self.item_categories = {}
         # Items the agent picked up off the map (monster drops,
         # chest contents, garden harvests, tomb treasures, etc.) --
         # NOT bought from a vendor. Parsed from log messages like
@@ -310,6 +329,35 @@ class RunReport:
             if f > self.max_floor:
                 self.max_floor = f
                 self.descents.append((turn, f))
+            # Floor-exit detector. Any floor change (up OR down) gets
+            # an entry in floor_exits keyed on the action that
+            # triggered it. Re-visits of an already-known floor (via
+            # warp back) ARE counted so the user can see warp ping-
+            # pongs in the journey log.
+            prev_floor = getattr(self, "_last_floor_seen", None)
+            if prev_floor is not None and f != prev_floor:
+                mode_at, action_at = self._last_action_mode
+                if mode_at == "stairs_down_mode" and action_at == "d":
+                    method = "stairs_down"
+                elif mode_at == "stairs_up_mode" and action_at == "u":
+                    method = "stairs_up"
+                elif mode_at == "warp_mode" and action_at == "n":
+                    method = "warp_accept"
+                elif mode_at == "warp_mode" and action_at == "y":
+                    method = "warp_forced"
+                else:
+                    method = "other"
+                self.floor_exits.append((prev_floor, f, turn, method))
+            self._last_floor_seen = f
+            # name -> category map for the aggregated tables. Pull
+            # categories off every inventory snapshot so we have a
+            # lookup at write-time for items that were bought, used,
+            # and gone by the end of the run.
+            for item in obs.get("inventory") or []:
+                nm = item.get("name")
+                cat = item.get("category")
+                if nm and cat:
+                    self.item_categories[nm] = cat
             eq = p.get("equipped") or {}
             cur = ((eq.get("weapon") or {}).get("name"),
                    (eq.get("armor") or {}).get("name"))
@@ -375,6 +423,10 @@ class RunReport:
             self._categorise_log(turn, line, p)
 
     def record_action(self, turn, mode, action):
+        # Remember the action that's about to be dispatched -- the
+        # floor-exit detector reads this after step() observes a
+        # floor change.
+        self._last_action_mode = (mode, action)
         self.recent_actions.append((turn, mode, action))
         if len(self.recent_actions) > 12:
             self.recent_actions.pop(0)
@@ -632,33 +684,134 @@ class RunReport:
                 return ("in bag", "#fde68a")
             return ("used", "#94a3b8")
 
-        buy_lines = "".join(
-            (lambda status, color, n=n, t=t, fl=fl, p=p, c=c: (
-                f"<tr><td>T{t}</td><td>F{fl}</td>"
-                f"<td>{html.escape(n)}</td>"
-                f"<td>{c}×</td><td>{p}g</td>"
-                f"<td style='color:{color};'>{status}</td></tr>"
-            ))(*_item_status(n))
-            for (t, fl, n, p, c) in self.buys[-30:]
+        # Aggregated items table. The per-event lists (self.buys +
+        # self.found_items) had a lot of duplicates -- agents buy
+        # rations on every vendor, find healing potions from chests
+        # repeatedly, etc. User feedback: "There's a lot of dupes...
+        # I don't care what floor the item was found/purchased on,
+        # just how many were found/purchased and how many were used."
+        # Group by item NAME and report:
+        #   bought (sum across all vendor buys)
+        #   found  (sum across all map drops)
+        #   in bag (count in final inventory)
+        #   used   (max(0, total - in_bag - equipped_kept))
+        # Equipped items count as "in bag" if they're still on the
+        # character. Sorted by total acquired desc so the agent's
+        # most-trafficked items show first.
+        # Build per-name aggregates.
+        agg = {}  # name -> dict(bought, found, sources_set)
+        for (_t, _fl, n, _pr, c) in self.buys:
+            entry = agg.setdefault(n, {"bought": 0, "found": 0, "sources": set()})
+            entry["bought"] += c
+        for (_t, _fl, n, src) in self.found_items:
+            entry = agg.setdefault(n, {"bought": 0, "found": 0, "sources": set()})
+            entry["found"] += 1
+            entry["sources"].add(src)
+        final_inv_counts = {}
+        for it in (f.get("inventory") or []):
+            nm = (it.get("name") or "").strip()
+            cnt = it.get("count", 1) or 1
+            final_inv_counts[nm] = final_inv_counts.get(nm, 0) + cnt
+
+        def _agg_status(name, in_bag, total_acquired):
+            if name in self._ever_equipped_names and in_bag > 0:
+                return ("equipped", "#4ade80")
+            if in_bag >= total_acquired and in_bag > 0:
+                return ("in bag", "#fde68a")
+            if in_bag > 0:
+                return ("partial", "#fbbf24")
+            return ("used", "#94a3b8")
+
+        # Render rows sorted by total acquired desc.
+        agg_rows = sorted(
+            agg.items(),
+            key=lambda kv: -(kv[1]["bought"] + kv[1]["found"]),
         )
-        # Found-items table: dropped weapons / armor / scrolls etc.
-        # Shows whether the agent eventually equipped a dropped
-        # weapon -- the user's framing: "did the agent use the gear
-        # they picked up off the map?"
-        found_lines = "".join(
-            (lambda status, color, n=n, t=t, fl=fl, src=src: (
-                f"<tr><td>T{t}</td><td>F{fl}</td>"
-                f"<td>{html.escape(n)}</td>"
-                f"<td class='muted'>{html.escape(src)}</td>"
+        items_lines = ""
+        for name, info in agg_rows:
+            bought = info["bought"]
+            found = info["found"]
+            in_bag = final_inv_counts.get(name, 0)
+            total = bought + found
+            used = max(0, total - in_bag)
+            status, color = _agg_status(name, in_bag, total)
+            # Sprite: use the recorded category for the icon.
+            cat = self.item_categories.get(name)
+            sprite_cat = _category_to_sprite_cat(cat) if cat else None
+            pid = _sprite_pid_for(sprite_cat, name) if sprite_cat else None
+            sprite_cell = _sprite_span(sprites, pid, size=28) if pid else ""
+            items_lines += (
+                f"<tr>"
+                f"<td class='sprite-cell'>{sprite_cell}</td>"
+                f"<td>{html.escape(name)}</td>"
+                f"<td>{found}</td>"
+                f"<td>{bought}</td>"
+                f"<td>{in_bag}</td>"
+                f"<td>{used}</td>"
                 f"<td style='color:{color};'>{status}</td></tr>"
-            ))(*_item_status(n))
-            for (t, fl, n, src) in self.found_items[-40:]
-        )
+            )
+        items_total_rows = len(agg_rows)
+
+        # Per-vendor (per-floor) purchase breakdown grouped by
+        # category. User: "I'd like to know how many items were
+        # purchased by vendor by floor and of what category."
+        vendor_by_floor = {}  # floor -> {category: (count, gold_spent)}
+        for (_t, fl, n, price, c) in self.buys:
+            cat = self.item_categories.get(n, "other")
+            f_dict = vendor_by_floor.setdefault(fl, {})
+            cur = f_dict.get(cat, (0, 0))
+            f_dict[cat] = (cur[0] + c, cur[1] + price * c)
+        vendor_rows = ""
+        for fl in sorted(vendor_by_floor):
+            cats = vendor_by_floor[fl]
+            total_items = sum(c for c, _ in cats.values())
+            total_gold = sum(g for _, g in cats.values())
+            # One li per category, all on one row.
+            cat_breakdown = " · ".join(
+                f"{c} {html.escape(cat)} ({g}g)"
+                for cat, (c, g) in sorted(cats.items(),
+                                          key=lambda x: -x[1][0])
+            )
+            vendor_rows += (
+                f"<tr><td>F{fl}</td>"
+                f"<td>{total_items}</td>"
+                f"<td>{total_gold}g</td>"
+                f"<td>{cat_breakdown}</td></tr>"
+            )
+        vendor_floor_count = len(vendor_by_floor)
+        buys_total = len(self.buys)
         found_total = len(self.found_items)
-        descent_lines = "".join(
-            f"<li>T{t}: arrived on Floor {fl}</li>"
-            for (t, fl) in self.descents
-        )
+
+        # Floor-exit summary. Combines descents (first arrivals on
+        # each floor) with the per-transition method log so the
+        # user can see e.g. "F2 -> F3 at T203 (stairs_down)" or
+        # "F3 -> F5 at T314 (warp_forced -- skipped F4)".
+        method_label = {
+            "stairs_down": "stairs down",
+            "stairs_up":   "stairs up",
+            "warp_accept": "warp accepted",
+            "warp_forced": "warp forced (resist failed)",
+            "other":       "other",
+        }
+        method_color = {
+            "stairs_down": "#94a3b8",
+            "stairs_up":   "#94a3b8",
+            "warp_accept": "#fb923c",
+            "warp_forced": "#f43f5e",
+            "other":       "#94a3b8",
+        }
+        descent_lines = ""
+        if self.floor_exits:
+            for (fr, to, t, method) in self.floor_exits:
+                color = method_color.get(method, "#94a3b8")
+                label = method_label.get(method, method)
+                arrow = "↓" if to > fr else "↑"
+                descent_lines += (
+                    f"<li>T{t}: F{fr} {arrow} F{to} "
+                    f"<span style='color:{color};'>({label})</span></li>"
+                )
+        else:
+            descent_lines = "<li>never left Floor 1</li>"
 
         inv_rows = ""
         for i in inv[:24]:
@@ -793,10 +946,13 @@ class RunReport:
             hunger_chart=hunger_chart,
             kills_by_floor=kills_by_floor_lines or "<tr><td colspan='2'>no kills logged</td></tr>",
             kills_by_monster=kills_by_monster_lines or "<tr><td colspan='2'>—</td></tr>",
-            buy_lines=buy_lines or "<tr><td colspan='6'>no purchases</td></tr>",
-            found_lines=found_lines or "<tr><td colspan='5'>no items found</td></tr>",
+            items_lines=items_lines or "<tr><td colspan='7'>no items</td></tr>",
+            items_total_rows=items_total_rows,
+            vendor_rows=vendor_rows or "<tr><td colspan='4'>no vendor purchases</td></tr>",
+            vendor_floor_count=vendor_floor_count,
+            buys_total=buys_total,
             found_total=found_total,
-            descent_lines=descent_lines or "<li>never descended past Floor 1</li>",
+            descent_lines=descent_lines,
             inventory_rows=inv_rows or "<tr><td colspan='6'>—</td></tr>",
             movement_rows=movement_rows or "<tr><td colspan='6'>no movement logged</td></tr>",
             overall_waste=f"{overall_waste:.0f}",
@@ -1220,7 +1376,11 @@ $sprite_styles
 
     <!-- Journey -->
     <div class="tab-panel" id="panel-journey">
-      <h2>Descents</h2>
+      <h2>Floor Transitions</h2>
+      <p class="muted">How each floor was left.
+        <span style="color:#94a3b8;">stairs</span> = chosen,
+        <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.</p>
       <ul>$descent_lines</ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste $overall_waste%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
@@ -1230,22 +1390,22 @@ $sprite_styles
         <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
         $movement_rows
       </table>
-      <h2 style="margin-top:18px;">Purchases ($stats_buys)</h2>
-      <p class="muted">Status column: <span style="color:#4ade80;">equipped</span>
-        means the item was slotted at some point;
-        <span style="color:#fde68a;">in bag</span> means it's still
-        in the final inventory (not consumed);
-        <span style="color:#94a3b8;">used</span> means consumed or
-        dropped before death.</p>
-      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th><th>Status</th></tr>
-      $buy_lines
+      <h2 style="margin-top:18px;">Items ($items_total_rows unique · $buys_total bought · $found_total found)</h2>
+      <p class="muted">Aggregated by item name across the run. Status:
+        <span style="color:#4ade80;">equipped</span> at some point,
+        <span style="color:#fde68a;">in bag</span> still held at death/end,
+        <span style="color:#fbbf24;">partial</span> some held / some used,
+        <span style="color:#94a3b8;">used</span> fully consumed.</p>
+      <table>
+        <tr><th></th><th>Item</th><th>Found</th><th>Bought</th><th>In bag</th><th>Used</th><th>Status</th></tr>
+        $items_lines
       </table>
-      <h2 style="margin-top:18px;">Items Found ($found_total)</h2>
-      <p class="muted">Gear / scrolls / treasures picked up off the
-        map (monster drops, chests, gardens). Same status colour
-        scheme as purchases.</p>
-      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Source</th><th>Status</th></tr>
-      $found_lines
+      <h2 style="margin-top:18px;">Vendor Purchases by Floor ($vendor_floor_count vendors)</h2>
+      <p class="muted">Grouped by the floor's vendor. Category breakdown shows
+        what was bought + how much gold went toward each category.</p>
+      <table>
+        <tr><th>Floor</th><th>Items</th><th>Gold spent</th><th>By category</th></tr>
+        $vendor_rows
       </table>
     </div>
   </div>
