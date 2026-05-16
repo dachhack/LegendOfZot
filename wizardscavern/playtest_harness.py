@@ -781,36 +781,60 @@ class PlaytestSession:
         def _kill_xp(lvl):
             return (lvl + 1) * 8 + lvl * lvl * 2
 
-        # First arrival: count every static + dynamic tile from
-        # scratch. Re-arrival: count only M tiles (dynamic) and add
-        # the XP pool delta. The static-tile counters (C/G/L/etc.)
-        # don't change between visits, so re-counting them would
-        # double-include them on revisit.
-        new_M = 0
+        # Pool computation strategy: rebuild from scratch on every
+        # arrival using two sources of truth:
+        #   (1) gs.encountered_monsters[(x,y,z)] for any tile the
+        #       agent has ALREADY interacted with -- gives the real
+        #       monster.level (handles champion/platino/spirit/elite
+        #       upgrades + revisit respawns). Includes dead monsters
+        #       (the dict isn't pruned on death).
+        #   (2) Static tile scan for un-encountered M tiles, using
+        #       property markers to estimate spawn level.
+        # The previous accumulator double-counted on revisit because
+        # the same M tile got tallied each pass; this rebuild-from-
+        # source approach matches xp_earned which only logs once per
+        # kill.
         new_xp = 0
+        m_count = 0
+        floor_monsters = {
+            (x, y): m for (x, y, mz), m in
+            (getattr(gs, "encountered_monsters", {}) or {}).items()
+            if mz == z
+        }
+        # First, credit every encountered monster on this floor.
+        for (mx, my), monster in floor_monsters.items():
+            lvl = getattr(monster, "level", z)
+            props = getattr(monster, "properties", {}) or {}
+            m_count += 1
+            if props.get("has_zots_guardian") or props.get("is_boss_arena"):
+                new_xp += (lvl + 1) * 100
+            else:
+                new_xp += _kill_xp(lvl)
+        # Then walk static tiles for M's that haven't been
+        # encountered yet (no entry in floor_monsters).
         for y in range(floor.rows):
             for x in range(floor.cols):
                 cell = floor.grid[y][x]
                 t = cell.room_type
                 if not already_seen and t in counts:
                     counts[t] += 1
-                if t == "M":
-                    if already_seen:
-                        new_M += 1
+                if t == "M" and (x, y) not in floor_monsters:
+                    m_count += 1
                     props = cell.properties
-                    if props.get("has_zots_guardian") or props.get("is_boss_arena"):
+                    if props.get("is_platino"):
+                        new_xp += _kill_xp(42)
+                    elif props.get("has_zots_guardian") or props.get("is_boss_arena"):
                         new_xp += (z + 1) * 100
+                    elif props.get("is_champion"):
+                        new_xp += _kill_xp(z + 4)
                     elif props.get("tomb_elite"):
                         new_xp += _kill_xp(z + 1)
                     elif props.get("undead_guardian"):
                         new_xp += _kill_xp(z)
                     else:
                         new_xp += _kill_xp(z)
-        if already_seen:
-            counts["M"] += new_M
-            counts["xp_pool"] += new_xp
-        else:
-            counts["xp_pool"] = new_xp
+        counts["M"] = m_count
+        counts["xp_pool"] = new_xp
         self.floor_totals[z] = counts
 
     # ------------------------------------------------------------------
