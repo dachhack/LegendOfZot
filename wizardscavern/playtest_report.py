@@ -782,6 +782,15 @@ class RunReport:
         total_boons = sum(
             ft.get(k, 0) for ft in self.floor_totals.values() for k in boon_keys
         )
+        # Pool denominator is approximate -- dynamic spawns (haunted
+        # spirits from tomb raids, chest-gas monsters, multi-visit
+        # respawns on already-killed tiles) add to the numerator
+        # without updating the static M-tile count. Lift the
+        # denominator to at least the numerator so the ratio reads
+        # as "% of MINIMUM available pool". The trailing residual is
+        # honest "bonus" XP, not formula error.
+        total_monsters = max(total_monsters, total_kills)
+        total_xp_pool = max(total_xp_pool, total_xp_earned)
         kill_pct = (total_kills / total_monsters * 100.0) if total_monsters else 0
         xp_pct = (total_xp_earned / total_xp_pool * 100.0) if total_xp_pool else 0
         return {
@@ -1685,7 +1694,12 @@ $sprite_styles
       <p class="muted">Per-floor share of available monsters
         engaged and XP banked. Big gaps indicate unclaimed survival
         value (missed kills, missed level-ups). Boons = G/L/O/A/P/Q/K/B/F;
-        V = vendor rooms; T = tombs (each has 4 cardinal guardians).</p>
+        V = vendor rooms; T = tombs (each has 4 cardinal guardians).
+        Totals capped at 100% -- dynamic spawns (tomb-raid spirits,
+        same-coord respawns across revisits) can push the
+        numerator past the static M-tile pool, so the cap reads as
+        "% of MINIMUM available pool". Per-floor rows show raw
+        ratios for diagnosis.</p>
       <table>
         <tr><th>Floor</th><th>Kills</th><th>Kill %</th><th>XP</th><th>XP %</th><th>Chests</th><th>Boons</th><th>V</th><th>T</th></tr>
         $exploration_rows
