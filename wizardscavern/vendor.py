@@ -115,7 +115,7 @@ class Vendor:
             # Rations + 1-2 monster meat drops ran out before reaching
             # a vendor. 5 Rations = 200 nutrition uses, ~doubles the
             # pre-vendor food cushion.
-            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=5))
+            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=5))
             # Towel removed from starting vendor - now only randomly available from dungeon vendors
             # Add starting else
         else:
@@ -262,7 +262,7 @@ class Vendor:
 
             # All vendors stock rations (3-4)
             num_rations = random.randint(3, 4)
-            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=num_rations))
+            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=num_rations))
 
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:

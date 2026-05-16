@@ -2490,7 +2490,7 @@ def generate_vendor_inventory(floor_level, room):
     inventory.append(upgrade_scroll)
 
     # Always stock some food items
-    rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=1)
+    rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=1)
     inventory.append(_create_item_copy(rations))
     if floor_level >= 2:
         jerky = Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1)
@@ -3170,10 +3170,21 @@ def process_hunger(character):
         character.hunger_regen_tracker = 0
 
     if h <= 0:
-        # Starving: take damage
+        # Starving: take damage. Floor was max(1, hp - dmg) which made
+        # starvation un-killable -- an agent who depleted food sat at
+        # HP=1 wandering forever, neither dying nor recovering. The
+        # playtester surfaced ~3-5 alive flatlines per grid pinned at
+        # HP=1 hunger=0 in game_loop. Switched to max(0, ...) so the
+        # food clock can actually run out; move_player's post-tick
+        # is_alive() check (game_systems.py:2926) flips to
+        # death_screen on HP=0.
         dmg = 2
-        character.health = max(1, character.health - dmg)
-        add_log(f"{COLOR_RED}You are STARVING! Lost {dmg} HP from hunger!{COLOR_RESET}")
+        new_hp = max(0, character.health - dmg)
+        character.health = new_hp
+        if new_hp <= 0:
+            add_log(f"{COLOR_RED}You collapse from starvation...{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_RED}You are STARVING! Lost {dmg} HP from hunger!{COLOR_RESET}")
     elif h <= HUNGER_STARVING_THRESHOLD:
         # About to starve warning
         if h % 10 == 0:

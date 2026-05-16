@@ -619,6 +619,8 @@ class RunReport:
 
             if "starving" in low and "lost" in low:
                 return "starvation"
+            if "collapse from starvation" in low:
+                return "starvation"
         return "unknown"
 
     # Killer-name patterns from combat.py log strings. The leading

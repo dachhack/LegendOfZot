@@ -507,7 +507,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             ))
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
-            value=10, level=0, nutrition=40, count=5,
+            value=10, level=0, nutrition=50, count=8,
         ))
         for _ in range(4):
             pc.inventory.add_item_quiet(Potion(
@@ -2209,12 +2209,15 @@ def smart_policy(obs, rng, use_lantern=True):
         if (wedged and (untried_scroll or untried_unid_potion)
                 and obs.get("last_action") not in ("i", "x")):
             return "i"
-        # Eat at hunger < 70 so the agent doesn't drift down into the
-        # starvation band (HP-tick territory) on a long boon sweep.
-        # The dossier had 3 deaths whose finishing blow was hunger
-        # ticks even though the agent had Rations in the bag. Bumped
-        # 50 -> 70 to widen the eat window.
-        if hunger < 70 and food_slot:
+        # Eat at hunger < 50 so each ration delivers close to full
+        # nutrition value -- rations are 50 nutrition (build 305),
+        # so eating at 49 hits the 100 cap with one unit to spare,
+        # while eating at 70 wastes ~20 nutrition to the cap. Still
+        # well above HUNGER_STARVING_THRESHOLD (10) so the safety
+        # margin remains. User: 'work on balance so some are still
+        # alive without looping at the end' -- food efficiency
+        # extends the food-clock window proportionally.
+        if hunger < 50 and food_slot:
             return "i"
 
         # Lantern as exploration tool. With fog-of-war on, neighbours
