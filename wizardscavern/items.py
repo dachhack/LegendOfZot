@@ -3101,11 +3101,17 @@ def drop_monster_meat(monster, player_character, fire_killed=False):
     info = get_monster_meat_info(monster.name)
     if info is None:
         return  # Not edible
-    # 55% chance to drop meat (was 35% -- user-requested balance pass).
-    # Combined with the Cooking Kit being F1+ available, this gives
-    # agents who clear floors a meaningful steady food source so the
-    # food clock doesn't always end the run before depth does.
-    if random.random() > 0.55:
+    # 70% chance to drop meat (was 55% -- build 317). The build-316
+    # depth-aware FLOOR_STUCK_TURNS attempt regressed badly (max_floor
+    # 3.45 -> 2.72) because cutting F1-F3 beneficial-exploration
+    # stripped XP the agent needs to survive first contact. Attacking
+    # starvation deaths directly via the food drop rate is safer:
+    # build-315 had 36/60 starvation deaths, and at 55% drop rate on
+    # ONLY edible monsters the effective drop-per-kill on a mixed
+    # mob pool was likely <40%. Bumping to 70% adds ~0.5 extra
+    # drops per floor (3-5 edible kills) without touching item
+    # nutrition or decay rate.
+    if random.random() > 0.70:
         return
     cut, descriptor, nutrition = info
     raw_name = f"Raw {monster.name} {cut.capitalize()}"
