@@ -614,6 +614,12 @@ class PlaytestSession:
         # by the policy's tile-coverage descent gate to leave a floor
         # once enough has been swept, even if a far beneficial remains.
         self.visited_tiles_this_floor = set()
+        # Turn at which a NEW tile (not in visited_tiles_this_floor)
+        # was last entered. Used by the trapped detector: if the
+        # agent has stopped making exploration progress -- visiting
+        # the same tiles repeatedly without growing the set -- they
+        # are wedged on a tiny island. Reset on floor change.
+        self.last_new_tile_turn = 0
         # Per-floor revisit counter: dict {(x,y): visit_count}. Reset
         # on floor change. Used by the wedge detector -- when the
         # agent has revisited the current tile 6+ times the wayfinder
@@ -783,11 +789,13 @@ class PlaytestSession:
                                  if pc.z > self.max_z_via_stairs
                                  else None),
             "tile_coverage": self._tile_coverage_obs(),
+            "nearest_warp_path": self._nearest_warp_path_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
             "nearest_undiscovered": self._nearest_undiscovered_obs(),
             "turns_on_floor": self.turn - self.floor_arrival_turn,
             "current_tile_visits": self.floor_visit_count.get((pc.x, pc.y), 0),
+            "turns_since_new_tile": self.turn - self.last_new_tile_turn,
             "wedge_attempted_actions": sorted(self.wedge_attempted_actions),
             "room": {
                 "type": room.room_type,
@@ -1333,12 +1341,62 @@ class PlaytestSession:
             return None
         return {"first_step": best[1], "path_dist": best[0]}
 
+    def _nearest_warp_path_obs(self):
+        """BFS first-step + path distance to a tile ADJACENT to a
+        discovered W (warp), plus the cardinal step onto the W
+        itself. W is in BLOCK_TRANSIT so the regular feature_paths
+        BFS treats it as unreachable -- this companion computes the
+        approach explicitly, like nearest_monster_path does for M.
+        Returns None when no discovered W is reachable. Used by
+        the trapped-no-D escape valve: when the floor is region-
+        split and D is behind walls, the only way out is to walk
+        onto a known W and accept the random teleport.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        dist, first_step = self._bfs_paths()
+        opp = {"n": "s", "s": "n", "e": "w", "w": "e"}
+        best = None
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                cell = floor.grid[y][x]
+                if cell.room_type != "W":
+                    continue
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                approach = None
+                for d, dx, dy in (("n", 0, -1), ("s", 0, 1),
+                                  ("e", 1, 0), ("w", -1, 0)):
+                    nx, ny = x + dx, y + dy
+                    if (nx, ny) not in dist:
+                        continue
+                    step_into = opp[d]
+                    ad = dist[(nx, ny)]
+                    if approach is None or ad < approach[0]:
+                        approach = (ad, step_into, (nx, ny))
+                if approach is None:
+                    continue
+                approach_dist, step_into, neighbour_xy = approach
+                fs = step_into if approach_dist == 0 else first_step[neighbour_xy]
+                total = approach_dist + 1
+                if best is None or total < best[0]:
+                    best = (total, fs)
+        if best is None:
+            return None
+        return {"first_step": best[1], "path_dist": best[0]}
+
     def _tile_coverage_obs(self):
         """How much of the current floor's walkable area has the
-        agent stood on? Returns dict with `visited`, `walkable`, and
-        `pct` (0-100). Used by the policy's tile-coverage descent
-        gate to leave a floor early when a far beneficial would
-        require backtracking through already-explored ground."""
+        agent stood on? Returns dict with `visited`, `walkable`,
+        `pct` (0-100), `reachable` (BFS-reachable from current pos),
+        and `reach_pct` (visited / reachable * 100 -- "% of MY
+        island I've walked"). Region-split floors (D in another
+        part of the floor behind walls) leave the agent on a tiny
+        reachable island where global `pct` can never climb past
+        a few percent; `reach_pct` correctly hits 100% once the
+        island is swept, and that's the right signal for the
+        trapped-no-D escape valve.
+        """
         pc = gs.player_character
         floor = gs.my_tower.floors[pc.z]
         wall = floor.wall_char
@@ -1349,7 +1407,21 @@ class PlaytestSession:
                     walkable += 1
         visited = len(self.visited_tiles_this_floor)
         pct = (visited / walkable * 100.0) if walkable else 0.0
-        return {"visited": visited, "walkable": walkable, "pct": pct}
+        dist, _ = self._bfs_paths()
+        reachable = len(dist)
+        # visited may include tiles BFS can't currently reach if
+        # the agent walked through them earlier (W tile, dead
+        # monster tile that's since gone walls-elsewhere). Clamp
+        # reach_pct at 100 so the gate doesn't false-fire on the
+        # rare past-walked-now-unreachable case.
+        reach_pct = min(100.0, (visited / reachable * 100.0)) if reachable else 0.0
+        return {
+            "visited": visited,
+            "walkable": walkable,
+            "pct": pct,
+            "reachable": reachable,
+            "reach_pct": reach_pct,
+        }
 
     def _recent_step_set(self):
         """List of cardinal directions (n/s/e/w) whose neighbour is in
@@ -1607,7 +1679,25 @@ class PlaytestSession:
             gs.prompt_cntl != mode
             and gs.prompt_cntl in LOOP_PRONE_MODES
         )
-        if was_visited and transitioned_in:
+        # Keyed-dungeon exception: when the agent has the key for the
+        # dungeon they just stepped onto AND it isn't looted yet, keep
+        # the dungeon_mode prompt so the policy's 'u' (unlock) can
+        # fire. Gloin III s=99 dwarf burned 3000 turns on F1 because
+        # the key dropped AFTER his first un-keyed visit -- the N tile
+        # entered visited_features, then once keyed the agent kept
+        # re-targeting it via the adjacent-shortcut but the override
+        # reset dungeon_mode -> game_loop every step, so 'u' never
+        # fired and the dungeon stayed locked.
+        if (was_visited and transitioned_in
+                and gs.prompt_cntl in ("dungeon_mode", "dungeon_unlocked_mode")):
+            coord = (pc_after.x, pc_after.y, pc_after.z)
+            holds_key = coord in (getattr(gs, "dungeon_keys", {}) or {})
+            already_looted = coord in (getattr(gs, "looted_dungeons", {}) or {})
+            if holds_key and not already_looted:
+                pass  # let the unlock/loot prompts fire
+            else:
+                gs.prompt_cntl = "game_loop"
+        elif was_visited and transitioned_in:
             gs.prompt_cntl = "game_loop"
         # Skip visited-tracking for traversal tiles (., E), walls (#),
         # and stair tiles (D, U). The agent steps onto stairs to use
@@ -1639,6 +1729,7 @@ class PlaytestSession:
             # explored from the agent's perspective.
             self.visited_tiles_this_floor = set()
             self.floor_visit_count = {}
+            self.last_new_tile_turn = self.turn
             self.wedge_attempted_actions = set()
             # Fresh floor, fresh walls to discover.
             self.blocked_directions = set()
@@ -1663,7 +1754,10 @@ class PlaytestSession:
                 and (self.turn - self.floor_arrival_turn) > 800):
             self.max_z_via_stairs = pc_after.z
         # Track current-floor coverage for the policy's descent gate.
-        self.visited_tiles_this_floor.add((pc_after.x, pc_after.y))
+        xy_after = (pc_after.x, pc_after.y)
+        if xy_after not in self.visited_tiles_this_floor:
+            self.last_new_tile_turn = self.turn
+        self.visited_tiles_this_floor.add(xy_after)
         # Bump per-tile visit count ONLY on actual arrival (position
         # changed this step). Standing still during inventory ops or
         # multi-turn mode dialogues must NOT inflate the counter --
@@ -2167,14 +2261,31 @@ def smart_policy(obs, rng, use_lantern=True):
         d_avoid_reachable = bool(
             (feature_paths_avoid.get("D") or {}).get("first_step")
         )
-        coverage_pct_avoid = (obs.get("tile_coverage") or {}).get("pct", 0)
-        # Coverage-based "trapped" gate (user-requested over turn count):
-        # >= 50% of walkable tiles WALKED implies the discovered set is
-        # ~70-80% of the floor (lantern reveals past walked tiles), so
-        # if D still isn't reachable from here the floor really is
-        # region-split and the only way out is W. Turn count was a
-        # proxy for exploration; coverage measures it directly.
-        trapped_no_d = (coverage_pct_avoid >= 50) and (not d_avoid_reachable)
+        coverage_obs_avoid = obs.get("tile_coverage") or {}
+        coverage_pct_avoid = coverage_obs_avoid.get("pct", 0)
+        reach_pct_avoid = coverage_obs_avoid.get("reach_pct", 0)
+        frontier_avoid = obs.get("frontier_step")
+        # Behavioral trapped detector: D unreachable AND the agent
+        # has stopped making exploration progress (no new tile
+        # visited in 100+ turns). The agent is on an island, has
+        # walked it, and the wayfinder is just bouncing among
+        # already-visited tiles. Uses turns_since_new_tile (NOT
+        # global pct or reach_pct), because:
+        #  - global pct false-negatives on region-split floors
+        #    (Gloin III s=99 dwarf: 9-tile pocket of 122-tile F1,
+        #    max 7.4% global pct, prior gate never fired).
+        #  - reach_pct false-positives on early exploration
+        #    (Gimli s=256 dwarf at T17: 66% of 9 reachable tiles
+        #    walked, prior gate fired and he warped to a Lv2
+        #    Vault Keeper Wraith on the same floor).
+        # turns_since_new_tile measures actual progress: while the
+        # agent keeps reaching new tiles via walking + lantern
+        # reveals, no escape valve. Once stuck, fire after 100T.
+        turns_since_new = obs.get("turns_since_new_tile") or 0
+        trapped_no_d = (
+            (not d_avoid_reachable)
+            and (turns_since_new >= 100)
+        )
         # Cornered detection: agent's ONLY walkable cardinal
         # neighbour is an M tile (the rest are walls). Without this
         # override the agent can sit on the tile forever while M
@@ -2249,7 +2360,9 @@ def smart_policy(obs, rng, use_lantern=True):
         retreat_active = obs.get("retreat_to_floor") is not None
         retreat_u_path = (feature_paths_avoid.get("U") or {}).get("first_step")
         retreat_trapped = (
-            retreat_active and coverage_pct_avoid >= 50 and not retreat_u_path
+            retreat_active
+            and not retreat_u_path
+            and turns_since_new >= 100
         )
         if retreat_active and not trapped_no_d and not retreat_trapped:
             avoid_set.add("D")
@@ -2455,7 +2568,18 @@ def smart_policy(obs, rng, use_lantern=True):
         # check this flag to flip their descend / walk-away
         # behaviour into ascend.
         retreat_to_floor = obs.get("retreat_to_floor")
-        if retreat_to_floor is not None:
+        # Trapped-no-D escape: region-split floor where D is behind
+        # walls and the only way out is a known W tile. The W tier
+        # is handled specially in the tier-iteration below
+        # (feature_paths doesn't include W, but nearest_warp_path
+        # provides the approach + step-onto-W). This block takes
+        # priority over everything except retreat (which targets U
+        # back to known territory).
+        if (retreat_to_floor is None
+                and trapped_no_d
+                and obs.get("nearest_warp_path")):
+            tiers = [("W",), ("V",)]
+        elif retreat_to_floor is not None:
             tiers = [("U",), ("V",)]
         elif too_long_on_floor:
             tiers = [("D",), ("V",)]
@@ -2596,6 +2720,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # BFS-nearest reachable target. This is the routing fix for
         # the 47% revisit waste -- the agent now goes to the closest
         # beneficial instead of the highest-ranked-type-but-far one.
+        warp_path = obs.get("nearest_warp_path")
         for tier in tiers:
             candidates = []
             for t in tier:
@@ -2604,6 +2729,21 @@ def smart_policy(obs, rng, use_lantern=True):
                     if (mp and mp.get("first_step")
                             and mp.get("path_dist") is not None):
                         candidates.append((mp["path_dist"], mp["first_step"]))
+                    continue
+                if t == "W":
+                    wp = warp_path
+                    if (wp and wp.get("first_step")
+                            and wp.get("path_dist") is not None):
+                        # Escape from a trapped island -- the agent
+                        # NEEDS to walk through already-visited
+                        # tiles to reach the warp. Skip the
+                        # anti-backtrack swap that would otherwise
+                        # send them bouncing among the visited
+                        # tiles forever (Gloin III s=99 dwarf was
+                        # at the W's adjacent tile but the swap
+                        # kept redirecting south->east because
+                        # 's' was in recent_step_set).
+                        return wp["first_step"]
                     continue
                 path = feature_paths.get(t)
                 if (path and path.get("first_step")
@@ -3492,18 +3632,14 @@ def smart_policy(obs, rng, use_lantern=True):
         #     at sub-20% HP is a one-hit kill.
         feature_paths = obs.get("feature_paths") or {}
         d_reachable = bool((feature_paths.get("D") or {}).get("first_step"))
-        coverage_pct_warp = (obs.get("tile_coverage") or {}).get("pct", 0)
+        turns_since_new_warp = obs.get("turns_since_new_tile") or 0
         if starving or hp_pct < 0.20:
             return "y"
-        # User feedback on Gimli (s=256 dwarf F14 L6): "I would
-        # think players would be avoiding warps more". Coverage-
-        # based trapped gate (user requested over turn count):
-        # only accept the warp when we've swept >= 50% of the floor
-        # AND D is still unreachable -- which means the floor is
-        # genuinely region-split and stepping through W is the only
-        # way out. Turn count was a proxy for thoroughness;
-        # coverage measures it directly.
-        if coverage_pct_warp >= 50 and not d_reachable:
+        # Behavioral trapped gate (same shape as trapped_no_d in
+        # game_loop): D unreachable AND no new tile visited in
+        # 100+ turns means the wayfinder is bouncing on the island
+        # without progress. Accept the warp as escape.
+        if not d_reachable and turns_since_new_warp >= 100:
             return "n"
         return "y"
     if mode == "altar_mode":
