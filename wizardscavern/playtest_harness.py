@@ -2025,7 +2025,13 @@ def smart_policy(obs, rng, use_lantern=True):
     multi-step actions (open-inventory -> use-slot -> back) coherent without
     a hand-rolled FSM, since each step's gate condition resolves once the
     goal is achieved (HP up -> stop wanting to heal -> exit inventory).
+
+    Tunable thresholds live in policy_config.active_config(). CMA-ES driver
+    in policy_tune.py mutates the active config and re-runs grids to find
+    survival-optimised values.
     """
+    from .policy_config import active_config
+    _cfg = active_config()
     mode = obs["mode"]
     p = obs["player"]
     inv = obs.get("inventory") or []
@@ -2052,7 +2058,7 @@ def smart_policy(obs, rng, use_lantern=True):
     edible_count = 0
     urgent_meat = None
     urgent_rot = None
-    MEAT_EAT_BEFORE = 20  # eat fresh meat at rot_timer <= 20 moves so kill drops actually convert to nutrition
+    MEAT_EAT_BEFORE = _cfg.urgent_meat_rot_threshold  # tunable; default 20
     for i in inv:
         if i["category"] in ("food", "food_rotten"):
             edible_count += 1
@@ -2209,43 +2215,38 @@ def smart_policy(obs, rng, use_lantern=True):
     # (items.py: +10 per use), so spare units count as fuel * 10.
     fuel_total = (lantern_fuel or 0) + (spare_fuel_uses or 0) * 10
     resources_pressing = (
-        hunger < 60       # below comfort, need meat soon
-        or fuel_total < 15  # less than ~15 lantern fires of light left
+        hunger < _cfg.resource_hunger_threshold
+        or fuel_total < _cfg.resource_fuel_threshold
     )
     # Starving = critical hunger AND no food in bag. Hoisted because
     # combat_mode also gates on it (flee from inedible monsters when
-    # starving). Threshold raised 15 -> 30 so the override fires while
-    # the agent still has HP cushion.
-    starving = hunger <= 30 and food_slot is None
+    # starving). Threshold raised 15 -> 30 historically; now tunable.
+    starving = hunger <= _cfg.starving_threshold and food_slot is None
 
     if mode == "game_loop":
         # Tier 0 priorities -- self-care that takes precedence over
         # any exploration / fighting decision.
-        if hp_pct < 0.30 and heal_pot_slot:
+        if hp_pct < _cfg.heal_hp_critical_pct and heal_pot_slot:
             return "i"
         # Pre-emptive heal: 11 of 16 deaths in the analysis pass died
         # holding unused potions because the in-combat drink trigger
-        # (HP<30%) fired too late -- monsters that won initiative could
-        # take the agent 100% -> 5% in one hit, past the gate. Drink
-        # BEFORE stepping into adjacent combat when HP <80% and a
-        # potion is in the bag. The neighbors check is fog-of-war
+        # fired too late -- monsters that won initiative could take the
+        # agent 100% -> 5% in one hit. Drink BEFORE stepping into
+        # adjacent combat when HP is below the preemptive threshold and
+        # a potion is in the bag. The neighbors check is fog-of-war
         # aware: only fires if we actually see an M tile next door.
         neighbors_now = obs.get("neighbors") or {}
         m_adjacent = any(neighbors_now.get(d) == "M"
                          for d in ("n", "s", "e", "w"))
-        if heal_pot_slot and hp_pct < 0.80 and m_adjacent:
+        if heal_pot_slot and hp_pct < _cfg.heal_hp_preemptive_pct and m_adjacent:
             return "i"
-        # Post-flee recovery: heal aggressively to FULL after a flee
-        # so we don't walk back into the same monster at low HP.
-        # Celeborn the elf seed=271 was fleeing wraiths at HP 24-26,
-        # taking the unconditional monster parting attack on every
-        # flee, then immediately re-engaging without healing -- the
-        # combat heal-pot gate at HP<50% never fired because each
-        # round started above it. Recovery uses the 0.95 ceiling the
-        # inventory branch's heal logic already targets. Burns
-        # potions, but losing a fight is more expensive than three
-        # healing potions.
-        if recently_fled and hp_pct < 0.80 and heal_pot_slot:
+        # Post-flee recovery: heal aggressively after a flee so we don't
+        # walk back into the same monster at low HP. Celeborn the elf
+        # seed=271 was fleeing wraiths at HP 24-26, taking the
+        # unconditional monster parting attack on every flee, then
+        # immediately re-engaging without healing. Burns potions, but
+        # losing a fight is more expensive than three healing potions.
+        if recently_fled and hp_pct < _cfg.heal_hp_preemptive_pct and heal_pot_slot:
             return "i"
         # Pre-combat buff drink in game_loop: when M is adjacent AND
         # we have an identified buff potion (strength/defense/stone
@@ -2265,7 +2266,8 @@ def smart_policy(obs, rng, use_lantern=True):
             and i.get("potion_type") in BUFF_POTION_TYPES
             for i in inv
         )
-        if (has_buff_potion and 0.60 <= hp_pct < 0.95
+        if (has_buff_potion
+                and _cfg.buff_potion_hp_low <= hp_pct < _cfg.buff_potion_hp_high
                 and m_adjacent):
             return "i"
         # Bad-status cure: when the player has a curable negative
@@ -2337,7 +2339,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # branch's last_action guards prevent re-picking the same
         # item twice in a row.
         current_tile_visits = obs.get("current_tile_visits") or 0
-        wedged = current_tile_visits >= 6
+        wedged = current_tile_visits >= _cfg.wedge_visit_count
         attempted_already = set(obs.get("wedge_attempted_actions") or [])
         WEDGE_SKIP_SCROLL_TRIGGER = {"spell_scroll", "vendor_restock"}
         untried_scroll = any(
@@ -2356,15 +2358,13 @@ def smart_policy(obs, rng, use_lantern=True):
         if (wedged and (untried_scroll or untried_unid_potion)
                 and obs.get("last_action") not in ("i", "x")):
             return "i"
-        # Eat at hunger < 50 so each ration delivers close to full
-        # nutrition value -- rations are 50 nutrition (build 305),
-        # so eating at 49 hits the 100 cap with one unit to spare,
-        # while eating at 70 wastes ~20 nutrition to the cap. Still
-        # well above HUNGER_STARVING_THRESHOLD (10) so the safety
-        # margin remains. User: 'work on balance so some are still
-        # alive without looping at the end' -- food efficiency
-        # extends the food-clock window proportionally.
-        if hunger < 50 and food_slot:
+        # Eat trigger (tunable). Rations are 50 nutrition; eating at 49
+        # hits the 100 cap with one unit to spare. Eating at 70 wastes
+        # ~20 nutrition to the cap. Still well above
+        # HUNGER_STARVING_THRESHOLD (10) so the safety margin remains.
+        # CMA-ES may push this up (more well-fed time, more waste) or
+        # down (more food-clock window, more hunger band stress).
+        if hunger < _cfg.eat_hunger_threshold and food_slot:
             return "i"
 
         # Lantern as exploration tool. With fog-of-war on, neighbours
@@ -2678,20 +2678,14 @@ def smart_policy(obs, rng, use_lantern=True):
             not is_weak
             and (not unvisited_beneficials_exist or resources_pressing)
         )
-        # Stuck-on-floor override: if we've spent more than this many
-        # turns on the current floor, drop the clear-before-descend
-        # gate. Pulls the agent off floor 1 when an unreachable
-        # beneficial (behind a wall the greedy walker can't navigate
-        # around) would otherwise loop forever. 300 turns is enough
-        # to do a thorough sweep of a 18x21 floor.
-        # Build 316 tried depth-aware 200T/300T -- regressed badly
-        # (max_floor 3.45 -> 2.72, +10 combat deaths at F1 L1)
-        # because the gate only weakens unvisited_beneficials_exist;
-        # cutting F1-F3's beneficial-exploration window strips XP
-        # the agent needs to survive first contact. Reverted to flat
-        # 300T in build 317.
-        FLOOR_STUCK_TURNS = 300
-        too_long_on_floor = (obs.get("turns_on_floor") or 0) > FLOOR_STUCK_TURNS
+        # Stuck-on-floor override: drop the clear-before-descend gate
+        # once turns_on_floor exceeds the configured threshold. Pulls
+        # the agent off floor 1 when an unreachable beneficial (behind
+        # a wall) would otherwise loop forever. Build 316 tried
+        # depth-aware 200T/300T and regressed badly; flat 300T was the
+        # stable default. CMA-ES may move this higher (deeper sweeps)
+        # or lower (faster descent) depending on fitness.
+        too_long_on_floor = (obs.get("turns_on_floor") or 0) > _cfg.floor_stuck_turns
         if too_long_on_floor:
             unvisited_beneficials_exist = False
 
@@ -2706,7 +2700,8 @@ def smart_policy(obs, rng, use_lantern=True):
         # low-HP run quickly. M and W are NEVER active targets.
         healing_count = sum(i.get("count", 1) for i in inv
                             if i["category"] == "potion_healing")
-        wants_vendor = ((healing_count < 2 or needs_repair)
+        wants_vendor = ((healing_count < _cfg.heal_pot_vendor_threshold
+                         or needs_repair)
                         and p["gold"] >= 50)
 
         # Tile-coverage descent gate: when we've swept >= 70% of this
@@ -2748,7 +2743,10 @@ def smart_policy(obs, rng, use_lantern=True):
         # preferred SAFE/V/M over D when boons remained, so the
         # filter was a near no-op).
         pc_z = (p.get("floor", 1) - 1)
-        min_kills_for_floor = min(12, max(3, pc_z * 2 + 1))
+        min_kills_for_floor = min(
+            12,
+            max(_cfg.min_kills_floor_base, pc_z * _cfg.min_kills_floor_scale + 1),
+        )
         kills_so_far = obs.get("kills_on_floor") or 0
         # under_leveled fires when:
         #  - pc.level <= pc.z + 1 (Lv N on F N is "on-pace", anything
@@ -2788,7 +2786,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # under-levelled agents don't bolt past their depth. is_weak
         # still gates so broken-gear / low-HP agents heal first.
         high_coverage_descend = (
-            coverage_pct >= 50
+            coverage_pct >= _cfg.high_coverage_threshold
             and d_reachable
             and not is_weak
             and grind_complete
@@ -3253,7 +3251,7 @@ def smart_policy(obs, rng, use_lantern=True):
                     proposed = f"u{entry['slot']}"
                     break
         current_tile_visits_iv = obs.get("current_tile_visits") or 0
-        wedged_iv = current_tile_visits_iv >= 6
+        wedged_iv = current_tile_visits_iv >= _cfg.wedge_visit_count
         wedge_attempted = set(obs.get("wedge_attempted_actions") or [])
         WEDGE_SKIP_SCROLL_TYPES = {"spell_scroll", "vendor_restock"}
         if proposed is None and wedged_iv:
@@ -3349,10 +3347,11 @@ def smart_policy(obs, rng, use_lantern=True):
         #    already too dangerous given the 1.3x stat multiplier).
         # max_hp gate (m_max_hp > 2x pc_max_hp) catches HP-bag bosses.
         monster_too_tough = (
-            m_level > pc_level + 2
-            or m_max_hp > 2 * p["max_hp"]
-            or (is_undead and m_level > pc_level)
-            or (is_elite_undead and m_level >= pc_level)
+            m_level > pc_level + _cfg.flee_level_gap_general
+            or m_max_hp > _cfg.flee_hp_bag_ratio * p["max_hp"]
+            or (is_undead and m_level > pc_level + _cfg.flee_level_gap_undead)
+            or (is_elite_undead
+                and m_level >= pc_level + _cfg.flee_level_gap_elite + 1)
         )
         # Starving + inedible monster: flee. Prior playtest showed
         # 39 starvation-override engagements, only 2 produced meat
@@ -3362,10 +3361,10 @@ def smart_policy(obs, rng, use_lantern=True):
         if starving and not m_is_edible:
             return "f"
         # Drink a healing potion mid-fight as a last resort.
-        if hp_pct < 0.50 and heal_pot_slot and not heal_spell_slot:
+        if hp_pct < _cfg.combat_heal_pot_pct and heal_pot_slot and not heal_spell_slot:
             return "i"  # opens inventory; in_combat filter shows usables
-        # Mid-fight heal: queue a cast at HP < 55%.
-        if hp_pct < 0.55 and heal_spell_slot:
+        # Mid-fight heal: queue a cast at the configured threshold.
+        if hp_pct < _cfg.combat_heal_spell_pct and heal_spell_slot:
             return "c"
         # Ticking-status flee: poison / burn / DoT / life_drain
         # ticks every round, and the monster's adding hits on top.
@@ -3396,12 +3395,10 @@ def smart_policy(obs, rng, use_lantern=True):
         # Damage spells beat melee: more damage per turn, no weapon
         # durability loss, scale with INT for casters. Mana regens at
         # 1/5 moves so casting freely between fights is sustainable.
-        # Bumped 0.65 -> 0.90 to actually USE the spells the agent
-        # buys (Scroll of Fireball etc.) instead of saving mana for
-        # an emergency that never comes.
-        if affordable_dmg and rng.random() < 0.90:
+        # Probability is tunable via PolicyConfig.
+        if affordable_dmg and rng.random() < _cfg.spell_use_prob:
             return "c"
-        return "a" if rng.random() < 0.92 else "f"
+        return "a" if rng.random() < _cfg.attack_vs_flee_prob else "f"
 
     if mode == "identify_scroll_mode":
         # Scroll of Identify opened a sub-mode listing unidentified
