@@ -2619,9 +2619,18 @@ def _trigger_room_interaction(player_character, my_tower):
                     'Mummy', 'Vampire', 'Lich', 'Demilich',
                     'Death Knight',
                 )
+                # Word-boundary match: prior substring loop wrongly
+                # treated 'Lichen' (a fungal plant mob) as undead
+                # because 'Lich' is in 'Lichen', so the playtester
+                # surfaced an "ELITE UNDEAD LICHEN" tomb guardian.
+                # User-flagged: "Lichens don't signal a tomb."
+                import re as _re
+                _undead_re = _re.compile(
+                    r"\b(" + "|".join(_re.escape(t) for t in undead_types) + r")\b"
+                )
                 all_undead = [
                     m for m in MONSTER_TEMPLATES
-                    if any(t in m['name'] for t in undead_types)
+                    if _undead_re.search(m['name'])
                 ]
                 in_range = [
                     m for m in all_undead

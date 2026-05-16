@@ -31,6 +31,22 @@ def _strip(s):
     return _HTML_TAG_RE.sub("", s or "")
 
 
+def _normalize_monster_name(name):
+    """Canonicalize a captured monster name. Tomb-adjacent guardians
+    are spawned with a leading space (' UNDEAD WRAITH'), and the
+    combat log's 'The X strikes first!' line yields 'The  ELITE
+    UNDEAD WRAITH' when captured naively. This strips a leading
+    'the ' (case-insensitive) and collapses any internal whitespace
+    so the death-cause histogram doesn't fork the same monster into
+    'ELITE UNDEAD WRAITH' and 'The  ELITE UNDEAD WRAITH' buckets."""
+    if not name:
+        return name
+    out = " ".join(name.split()).strip()
+    if out.lower().startswith("the "):
+        out = out[4:].strip()
+    return out
+
+
 # ---------------------------------------------------------------------------
 # Sprite helpers
 # ---------------------------------------------------------------------------
@@ -581,7 +597,7 @@ class RunReport:
             m = re.search(r"you were defeated by(?: the)? ([^.]+?)\.\.\.",
                           line, re.IGNORECASE)
             if m:
-                return f"defeated by {m.group(1).strip()}"
+                return f"defeated by {_normalize_monster_name(m.group(1))}"
 
             # Generic 'You were defeated...' (no by-clause). Walk
             # back from this point to find the killer: most recent
@@ -616,7 +632,20 @@ class RunReport:
     def _extract_recent_attacker(self):
         """Find the most recent monster acting on the player. Scans
         the last 30 log lines (most recent first) for an attack /
-        miss / status-inflict from a named monster."""
+        miss / status-inflict from a named monster.
+
+        Name normalization: tomb-adjacent guardians are spawned with
+        a LEADING SPACE in the name (' UNDEAD WRAITH' / ' ELITE
+        UNDEAD WRAITH' -- see game_systems.py:2641). The combat log
+        renders them via 'The {name} strikes first!' -> 'The  ELITE
+        UNDEAD WRAITH strikes first!' (double space). The regex
+        used to capture 'The  ELITE UNDEAD WRAITH' (with the leading
+        'The' AND the double space) because the optional `(?:The )?`
+        was skipped when the greedy capture could match the whole
+        'The X' string. We post-strip 'the ' prefix + collapse
+        internal whitespace so the death-cause histogram doesn't
+        split the same monster into multiple buckets.
+        """
         for (_, line) in reversed(self.recent_log[-30:]):
             stripped = line.strip()
             # 'Wight missed X' / 'Wight hit X' / 'Wight drains your...'
@@ -627,7 +656,7 @@ class RunReport:
                 stripped,
             )
             if m:
-                name = m.group(1).strip()
+                name = _normalize_monster_name(m.group(1))
                 # Skip the player's own name and 'You' patterns.
                 if name.lower() == "you" or name == self.name:
                     continue
