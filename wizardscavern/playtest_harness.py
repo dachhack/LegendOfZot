@@ -1618,6 +1618,18 @@ class PlaytestSession:
         # this is a clean per-kill signal.
         if mode != "combat_victory" and gs.prompt_cntl == "combat_victory":
             self.kills_on_floor += 1
+        # Retreat give-up: if we've been retreat-active on this floor
+        # for more than 800 turns without resolving (no floor change
+        # back to <= max_z_via_stairs), bank current depth as the
+        # new max so the retreat flag clears and the agent resumes
+        # normal play. Faramir the Brave (human seed 12345) reached
+        # F2 only via warps (max_z_via_stairs stayed 0), then
+        # couldn't find an unreachable U for 1500+ turns -- retreat
+        # mode trapped him in the wander loop. Banking max_z = 1
+        # lets him drop retreat and try to descend normally instead.
+        if (pc_after.z > self.max_z_via_stairs
+                and (self.turn - self.floor_arrival_turn) > 800):
+            self.max_z_via_stairs = pc_after.z
         # Track current-floor coverage for the policy's descent gate.
         self.visited_tiles_this_floor.add((pc_after.x, pc_after.y))
         # Maintain blocked_directions: when a cardinal-move action
@@ -2061,8 +2073,26 @@ def smart_policy(obs, rng, use_lantern=True):
         )
         turns_here = obs.get("turns_on_floor") or 0
         trapped_no_d = (turns_here > 400) and (not d_avoid_reachable)
+        # Cornered detection: agent's ONLY walkable cardinal
+        # neighbour is an M tile (the rest are walls). Without this
+        # override the agent can sit on the tile forever while M
+        # stays in AVOID (e.g., Galadhrim Goldenbough elf seed 999
+        # lost his starter Dagger to durability decay, is_weak
+        # fires from "no weapon", AVOID adds M, agent oscillates
+        # s/e/w into walls for 1500+ turns). Forcing M-engagement
+        # in this corner case gives the agent a chance at a weapon
+        # drop from the kill -- better than the indefinite stuck
+        # state.
+        peek_neighbours = obs.get("neighbors") or {}
+        walkable_neighbour_types = {
+            peek_neighbours.get(d)
+            for d in ("n", "s", "e", "w")
+            if peek_neighbours.get(d) not in (None, "#")
+        }
+        only_m_walkable = walkable_neighbour_types == {"M"}
+
         avoid_set = set()
-        if is_weak and not starving:
+        if is_weak and not starving and not only_m_walkable:
             avoid_set.add("M")
         if (is_weak or early_floor) and not trapped_no_d:
             avoid_set.add("W")
@@ -2089,6 +2119,13 @@ def smart_policy(obs, rng, use_lantern=True):
         )
         if (avoid_under_leveled and not avoid_grind_done
                 and not is_weak and not trapped_no_d):
+            # Restore `not is_weak`: dropping it left HP=1 retreat
+            # agents (Thorin / Legolas / Boromir seed 1234) stuck
+            # on F1 because the BFS first_step was D, the AVOID-D
+            # filter swapped it, and there were no real alternatives
+            # so they oscillated. Better to let weak agents step on
+            # D and descend (or trigger the stairs_down step-off)
+            # than to lock them at F1.
             avoid_set.add("D")
         # Retreat-after-warp: agent wants to ASCEND, not descend.
         # Adding D to AVOID prevents the wayfinder's frontier walker
@@ -2418,13 +2455,13 @@ def smart_policy(obs, rng, use_lantern=True):
         blocked = set(obs.get("blocked_directions") or []) | blocked_guardian_dirs
 
         def _swap_if_backtrack(d):
-            """Anti-backtrack + anti-wall guard: if `d` would re-step a
-            recent tile OR is a known-blocked direction (wall from
-            current position) AND an alternative walkable direction
-            exists, use the alternative instead. The blocked-directions
-            check breaks the south-into-wall wayfinder loops that
-            burned 2592-2780 turns on Oin/Legolas/Boromir before the
-            obs surfaced wall failures."""
+            """Anti-backtrack + anti-wall guard: swap to an alternative
+            direction if `d` would re-step a recent tile OR is
+            known-blocked. (Earlier attempted to also swap when
+            t_main was in AVOID, but that left HP=1 retreat agents
+            stuck on F1 forever -- with no alternatives the fallback
+            returned `d` anyway and the AVOID check just added a
+            no-op detour. Reverted.)"""
             if d not in recent_steps and d not in blocked:
                 return d
             alts = []
@@ -3095,30 +3132,32 @@ def smart_policy(obs, rng, use_lantern=True):
             u_path = feature_paths.get("U")
             if u_path and u_path.get("first_step"):
                 return u_path["first_step"]
-            # No visible U yet -- step OFF the D tile in any walkable
-            # direction so the wayfinder can resume exploration on
-            # the next turn and find the up-stairs.
             neighbors = obs.get("neighbors") or {}
             recent_retreat = set(obs.get("recent_step_set") or [])
-            # Prefer non-recent so we don't immediately walk back
-            # onto D from the tile we just came from.
+            # Step OFF the D tile via a NON-RECENT walkable direction
+            # so we don't immediately walk back onto D from the tile
+            # we just came from.
             for d in ("n", "s", "e", "w"):
                 if d in recent_retreat:
                     continue
                 t = neighbors.get(d)
                 if t and t not in ("#", "M", "W"):
                     return d
+            # No non-recent step exists -- agent is oscillating
+            # between D and its single non-wall neighbour. ESCAPE
+            # VALVE: if we've been on this floor a long time, just
+            # descend. Worse than retreat but ends the loop.
+            # Faramir the Brave + Forlong of the Mark (human seeds
+            # 12345 + 314) hit this exact pattern on F3 / F5 with
+            # HP=1, 1000+ turns oscillating.
+            if (obs.get("turns_on_floor") or 0) > 400:
+                return "d"
+            # Otherwise fall back to a recent step (back to where we
+            # came from -- explore there one more time).
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)
                 if t and t not in ("#", "M", "W"):
                     return d
-            # ESCAPE VALVE: agent stuck on D with no walkable
-            # non-hazard step and U is unreachable AND we've been
-            # here a long time. Descend -- it's worse than retreat
-            # would be, but it ends the 2500-turn oscillation that
-            # killed Anborn of the White City (human seed 1100).
-            if (obs.get("turns_on_floor") or 0) > 400:
-                return "d"
             return rng.choice(["n", "s", "e", "w"])
         # Clear beneficials before descending -- but only if BFS says
         # they're CLOSE. The previous Manhattan-based check could pick a
