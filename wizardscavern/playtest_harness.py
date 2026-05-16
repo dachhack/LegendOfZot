@@ -2107,14 +2107,18 @@ def smart_policy(obs, rng, use_lantern=True):
             p.get("level", 1) >= p.get("floor", 1) + 2
         )
         strong_and_healthy = over_leveled_for_floor and hp_pct >= 0.80
-        # Critical fire: any fuel left + fog adjacent + not
-        # strong-and-healthy = burn it. The previous fuel_scarce
-        # gate (< 15 fuel) skipped reveals at the worst time,
-        # letting Forlong of the Mark step east into a fog tile
-        # that was W and getting force-warped F2->F4. A single
-        # warp is more expensive than a dozen fires.
+        # Critical fire: any fuel left + fog adjacent = burn it.
+        # User on Gimli the Mighty (s=256 dwarf, F14 L6, 147 kills):
+        # "I would think players would be avoiding warps more". Gimli
+        # warped 5+ times by stepping into fog tiles that turned out
+        # to be W -- the prior `not strong_and_healthy` gate let an
+        # over-levelled healthy agent skip the reveal because they
+        # could "tank a surprise wraith / warp / chest-gas". The cost
+        # asymmetry is wrong: an extra wraith is a few HP, a force-
+        # warp is 100-200 turns of recovery + retreat. ANY fuel +
+        # ANY fog neighbour = fire. Strong agents still skip when
+        # all four neighbours are already known (the gate below).
         if (use_lantern and not fuel_empty
-                and not strong_and_healthy
                 and unknown_neighbours >= 1):
             return "l"
         # Periodic stuck-fire even when other gates would skip --
@@ -2151,7 +2155,14 @@ def smart_policy(obs, rng, use_lantern=True):
         # discovered map -- the warp is the only way out, so we drop
         # the W avoid. Without this, seeds with region-split floors
         # (seed 7 F1, seed 500 F1) softlock at HP=1 alive forever.
-        early_floor = (gs.player_character.z < 10)
+        # NOTE: was `z < 10` -- the user flagged Gimli the Mighty
+        # (s=256 dwarf F14 L6) for "warping a lot" past z=10. The
+        # late-game release was meant to let lucky warps boost
+        # depth, but the cost asymmetry is wrong (warp = 100-200
+        # turn recovery vs minor depth bump). Always AVOID W
+        # unless trapped_no_d -- BFS still excludes W from transit
+        # so this only matters for fog steps and random fallbacks.
+        early_floor = True
         feature_paths_avoid = obs.get("feature_paths") or {}
         d_avoid_reachable = bool(
             (feature_paths_avoid.get("D") or {}).get("first_step")
@@ -3430,6 +3441,24 @@ def smart_policy(obs, rng, use_lantern=True):
             t = neighbors.get(d)
             if t and t not in ("#", "U", "M", "W"):
                 return d
+        # Drop the recent-step filter but KEEP the hazard filter --
+        # the earlier fallback excluded only ('#', 'U') so the agent
+        # stepped onto a W neighbour from a U tile and got force-
+        # warped. Gimli the Mighty (s=256 dwarf) walked off the F3 U
+        # tile south straight onto a W and lost ~150 turns of
+        # progress per warp. Hazards take precedence over recency.
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t and t not in ("#", "U", "M", "W"):
+                return d
+        # Truly cornered: U above and the only other neighbour is M
+        # or W. Prefer M over W (one fight vs a random teleport),
+        # then fall back to a random cardinal as a last resort so we
+        # don't hang the policy.
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t == "M":
+                return d
         for d in ("n", "s", "e", "w"):
             t = neighbors.get(d)
             if t and t not in ("#", "U"):
@@ -3456,21 +3485,20 @@ def smart_policy(obs, rng, use_lantern=True):
         #   * hp_pct < 0.20: random landing into a Lv(z+2) monster
         #     at sub-20% HP is a one-hit kill.
         turns_on_floor = obs.get("turns_on_floor") or 0
-        pc_z = gs.player_character.z
-        early_floor = pc_z < 10
         feature_paths = obs.get("feature_paths") or {}
         d_reachable = bool((feature_paths.get("D") or {}).get("first_step"))
         if starving or hp_pct < 0.20:
             return "y"
-        if early_floor:
-            # Only accept if very stuck AND no D reachable on this
-            # floor. Otherwise resist -- a failed resist still warps
-            # but at least the policy isn't choosing the gamble.
-            if turns_on_floor > 400 and not d_reachable:
-                return "n"
-            return "y"
-        # Late game: prior behavior.
-        return "n" if turns_on_floor > 200 else "y"
+        # User feedback on Gimli (s=256 dwarf F14 L6): "I would
+        # think players would be avoiding warps more". Dropped the
+        # late-game (z>=10) loose-accept gate -- a real player
+        # would also resist most warps deep in the run. Only
+        # accept when ACTUALLY trapped (400+ turns on floor AND
+        # no D reachable on the discovered map), same gate as the
+        # early-game branch used to be.
+        if turns_on_floor > 400 and not d_reachable:
+            return "n"
+        return "y"
     if mode == "altar_mode":
         # Pray once per altar -- claims the god's current tier reward
         # (HP heal, MP restore, hunger fill, blessing, eventually a
