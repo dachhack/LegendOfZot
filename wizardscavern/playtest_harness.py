@@ -2050,6 +2050,54 @@ def smart_policy(obs, rng, use_lantern=True):
             avoid_set.add("M")
         if (is_weak or early_floor) and not trapped_no_d:
             avoid_set.add("W")
+        # Avoid D while under-levelled and the floor's grind isn't
+        # done. Without this, an agent who walked OFF the D tile
+        # (stairs_down_mode's step-off branch) gets pulled BACK onto
+        # D by the wayfinder targeting fog past it -- Anborn of the
+        # White City (human seed 1100) burned 1260 game-loop turns
+        # walking west onto D and 1260 stairs_down_mode turns
+        # stepping east off D. The grind-gate tier filter strips D
+        # from priority, but BFS over walkable tiles still treats D
+        # as transit; adding D to AVOID prevents the step ENTIRELY
+        # until grind_complete releases (kills target met or floor
+        # 70% explored).
+        avoid_pc_floor = p.get("floor", 1)
+        avoid_pc_z = avoid_pc_floor - 1
+        avoid_under_leveled = p.get("level", 1) <= avoid_pc_z + 1
+        avoid_kills = obs.get("kills_on_floor") or 0
+        avoid_min_kills = min(12, max(3, avoid_pc_z * 2 + 1))
+        avoid_coverage = (obs.get("tile_coverage") or {}).get("pct", 0)
+        avoid_grind_done = (
+            avoid_kills >= avoid_min_kills
+            or avoid_coverage >= 70
+        )
+        if (avoid_under_leveled and not avoid_grind_done
+                and not is_weak and not trapped_no_d):
+            avoid_set.add("D")
+        # Retreat-after-warp: agent wants to ASCEND, not descend.
+        # Adding D to AVOID prevents the wayfinder's frontier walker
+        # from routing through a D tile (BFS treats D as walkable
+        # transit) and triggering stairs_down_mode where the agent
+        # then loops step-off/walk-back. Anborn of the White City
+        # (human seed 1100): warped F1->F3 at T464, retreated F3->F2
+        # at T476, then burned 2500 turns oscillating between F2's
+        # D tile and the tile next to it. Trapped_no_d still releases
+        # the avoid so the agent can warp out if truly stuck.
+        # Retreat-mode trapped check: if the agent is retreating but
+        # U isn't reachable on this floor AND they've spent enough
+        # turns trying, release the D-avoid so they can at least
+        # descend (probably into worse, but at least they leave the
+        # F2 ping-pong). Anborn of the White City (human seed 1100)
+        # was retreat-stuck on F2 D tile with all neighbours
+        # walls/M/D for 2500+ turns -- no path to U existed because
+        # the agent had only explored 2.7% of the floor.
+        retreat_active = obs.get("retreat_to_floor") is not None
+        retreat_u_path = (feature_paths_avoid.get("U") or {}).get("first_step")
+        retreat_trapped = (
+            retreat_active and turns_here > 400 and not retreat_u_path
+        )
+        if retreat_active and not trapped_no_d and not retreat_trapped:
+            avoid_set.add("D")
         AVOID = avoid_set
         # Targeted tomb-guardian avoid. Adjacent M tiles flagged as
         # `undead_guardian` are the 4 tomb-adjacent spawns (one elite
@@ -3013,10 +3061,26 @@ def smart_policy(obs, rng, use_lantern=True):
             # direction so the wayfinder can resume exploration on
             # the next turn and find the up-stairs.
             neighbors = obs.get("neighbors") or {}
+            recent_retreat = set(obs.get("recent_step_set") or [])
+            # Prefer non-recent so we don't immediately walk back
+            # onto D from the tile we just came from.
+            for d in ("n", "s", "e", "w"):
+                if d in recent_retreat:
+                    continue
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)
                 if t and t not in ("#", "M", "W"):
                     return d
+            # ESCAPE VALVE: agent stuck on D with no walkable
+            # non-hazard step and U is unreachable AND we've been
+            # here a long time. Descend -- it's worse than retreat
+            # would be, but it ends the 2500-turn oscillation that
+            # killed Anborn of the White City (human seed 1100).
+            if (obs.get("turns_on_floor") or 0) > 400:
+                return "d"
             return rng.choice(["n", "s", "e", "w"])
         # Clear beneficials before descending -- but only if BFS says
         # they're CLOSE. The previous Manhattan-based check could pick a
@@ -3067,11 +3131,33 @@ def smart_policy(obs, rng, use_lantern=True):
         if (under_descend and not grind_done_descend
                 and not stuck and not is_weak):
             neighbors = obs.get("neighbors") or {}
+            recent_descend = set(obs.get("recent_step_set") or [])
+            blocked_descend = set(obs.get("blocked_directions") or [])
+            # Prefer non-recent, non-blocked, non-hazard direction
+            # so the agent doesn't immediately walk back onto D the
+            # next turn.
             for d in ("n", "s", "e", "w"):
+                if d in recent_descend or d in blocked_descend:
+                    continue
                 t = neighbors.get(d)
                 if t and t not in ("#", "M", "W"):
                     return d
-            return rng.choice(["n", "s", "e", "w"])
+            # Fall back to any non-blocked non-hazard dir.
+            for d in ("n", "s", "e", "w"):
+                if d in blocked_descend:
+                    continue
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            # ESCAPE VALVE: no clean step-off direction exists --
+            # all neighbours are walls/monsters/warps/recent.
+            # Better to descend than oscillate forever. Anborn of
+            # the White City (human seed 1100) reached an F2 D tile
+            # with n=#, s=M, e=#, w=came-from -- the policy step-off
+            # rng.choice'd a wall, agent stayed on D, repeat. 2500+
+            # turns wasted. Descending into F3 is risky but at least
+            # the agent makes progress and eventually dies honestly.
+            return "d"
         return "d"
     if mode == "stairs_up_mode":
         # Retreat-after-warp: ASCEND. The agent landed on a U tile
