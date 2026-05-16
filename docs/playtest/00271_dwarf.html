@@ -217,7 +217,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Gloin Oakshield, the dwarf</h1>
-      <p class="muted">non-binary adventurer · seed 271 · started 2026-05-16T15:53:44+00:00</p>
+      <p class="muted">non-binary adventurer · seed 271 · started 2026-05-16T16:01:40+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -385,7 +385,12 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">Per-floor share of available monsters
         engaged and XP banked. Big gaps indicate unclaimed survival
         value (missed kills, missed level-ups). Boons = G/L/O/A/P/Q/K/B/F;
-        V = vendor rooms; T = tombs (each has 4 cardinal guardians).</p>
+        V = vendor rooms; T = tombs (each has 4 cardinal guardians).
+        Totals capped at 100% -- dynamic spawns (tomb-raid spirits,
+        same-coord respawns across revisits) can push the
+        numerator past the static M-tile pool, so the cap reads as
+        "% of MINIMUM available pool". Per-floor rows show raw
+        ratios for diagnosis.</p>
       <table>
         <tr><th>Floor</th><th>Kills</th><th>Kill %</th><th>XP</th><th>XP %</th><th>Chests</th><th>Boons</th><th>V</th><th>T</th></tr>
         <tr><td>Floor 1</td><td>36/46</td><td>78%</td><td>288/388</td><td>74%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr><td>Floor 2</td><td>0/15</td><td>0%</td><td>0/298</td><td>0%</td><td>7</td><td>13</td><td>1</td><td>2</td></tr><tr><td>Floor 3</td><td>10/15</td><td>67%</td><td>320/498</td><td>64%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr><td>Floor 4</td><td>0/14</td><td>0%</td><td>0/744</td><td>0%</td><td>7</td><td>13</td><td>1</td><td>2</td></tr><tr><td>Floor 5</td><td>12/18</td><td>67%</td><td>864/1348</td><td>64%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>58/108</td><td>54%</td><td>1472/3276</td><td>45%</td><td>35</td><td>62</td><td>5</td><td>10</td></tr>

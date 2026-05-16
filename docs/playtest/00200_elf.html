@@ -201,7 +201,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Idril Star-eyed, the elf</h1>
-      <p class="muted">non-binary adventurer · seed 200 · started 2026-05-16T15:53:38+00:00</p>
+      <p class="muted">non-binary adventurer · seed 200 · started 2026-05-16T16:01:34+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -369,7 +369,12 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">Per-floor share of available monsters
         engaged and XP banked. Big gaps indicate unclaimed survival
         value (missed kills, missed level-ups). Boons = G/L/O/A/P/Q/K/B/F;
-        V = vendor rooms; T = tombs (each has 4 cardinal guardians).</p>
+        V = vendor rooms; T = tombs (each has 4 cardinal guardians).
+        Totals capped at 100% -- dynamic spawns (tomb-raid spirits,
+        same-coord respawns across revisits) can push the
+        numerator past the static M-tile pool, so the cap reads as
+        "% of MINIMUM available pool". Per-floor rows show raw
+        ratios for diagnosis.</p>
       <table>
         <tr><th>Floor</th><th>Kills</th><th>Kill %</th><th>XP</th><th>XP %</th><th>Chests</th><th>Boons</th><th>V</th><th>T</th></tr>
         <tr><td>Floor 1</td><td>27/53</td><td>51%</td><td>216/444</td><td>49%</td><td>7</td><td>11</td><td>1</td><td>2</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>27/53</td><td>51%</td><td>216/444</td><td>49%</td><td>7</td><td>11</td><td>1</td><td>2</td></tr>

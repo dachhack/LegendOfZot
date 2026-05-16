@@ -221,7 +221,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Elendil Crownless, the human</h1>
-      <p class="muted">non-binary adventurer · seed 7777 · started 2026-05-16T15:54:13+00:00</p>
+      <p class="muted">non-binary adventurer · seed 7777 · started 2026-05-16T16:02:10+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -389,7 +389,12 @@ th { color: #94a3b8; font-weight: normal; }
       <p class="muted">Per-floor share of available monsters
         engaged and XP banked. Big gaps indicate unclaimed survival
         value (missed kills, missed level-ups). Boons = G/L/O/A/P/Q/K/B/F;
-        V = vendor rooms; T = tombs (each has 4 cardinal guardians).</p>
+        V = vendor rooms; T = tombs (each has 4 cardinal guardians).
+        Totals capped at 100% -- dynamic spawns (tomb-raid spirits,
+        same-coord respawns across revisits) can push the
+        numerator past the static M-tile pool, so the cap reads as
+        "% of MINIMUM available pool". Per-floor rows show raw
+        ratios for diagnosis.</p>
       <table>
         <tr><th>Floor</th><th>Kills</th><th>Kill %</th><th>XP</th><th>XP %</th><th>Chests</th><th>Boons</th><th>V</th><th>T</th></tr>
         <tr><td>Floor 1</td><td>32/55</td><td>58%</td><td>256/450</td><td>57%</td><td>7</td><td>11</td><td>1</td><td>2</td></tr><tr><td>Floor 2</td><td>30/19</td><td>158%</td><td>530/370</td><td>143%</td><td>7</td><td>13</td><td>1</td><td>2</td></tr><tr><td>Floor 3</td><td>15/16</td><td>94%</td><td>480/548</td><td>88%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr><td>Floor 4</td><td>6/16</td><td>38%</td><td>300/844</td><td>36%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr><td>Floor 5</td><td>3/13</td><td>23%</td><td>216/962</td><td>22%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr><td>Floor 6</td><td>3/17</td><td>18%</td><td>294/1726</td><td>17%</td><td>7</td><td>13</td><td>1</td><td>2</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>89/136</td><td>65%</td><td>2076/4900</td><td>42%</td><td>42</td><td>73</td><td>6</td><td>12</td></tr>
