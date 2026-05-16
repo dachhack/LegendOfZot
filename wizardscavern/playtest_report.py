@@ -669,10 +669,15 @@ class RunReport:
             extra = ""
             if cat in ("weapon", "armor"):
                 bonus = i.get("attack_bonus") or i.get("defense_bonus") or 0
+                base = (i.get("base_attack_bonus")
+                        if cat == "weapon"
+                        else i.get("base_defense_bonus")) or 0
+                upg = i.get("upgrade_level") or 0
                 dur = i.get("durability")
                 mx = i.get("max_durability")
                 eq_flag = " ★" if i.get("equipped") else ""
-                extra = f"+{bonus} | dur {dur}/{mx}{eq_flag}"
+                upg_note = f" ({base}+{upg})" if upg > 0 else ""
+                extra = f"+{bonus}{upg_note} | dur {dur}/{mx}{eq_flag}"
             elif cat.startswith("potion") or cat == "scroll":
                 extra = "identified" if i.get("is_identified") else "unidentified"
             inv_rows += (
@@ -768,12 +773,16 @@ class RunReport:
             stats_identifies=len(self.identifies),
             weapon_name=html.escape(wpn.get("name") or "—"),
             weapon_atk=wpn.get("attack_bonus") or 0,
+            weapon_base_atk=wpn.get("base_attack_bonus") or 0,
+            weapon_upgrades=wpn.get("upgrade_level") or 0,
             weapon_dur=wpn.get("durability") or 0,
             weapon_mxd=wpn.get("max_durability") or 0,
             weapon_buc=html.escape(wpn.get("buc_status") or ""),
             weapon_sprite=wpn_sprite,
             armor_name=html.escape(arm.get("name") or "—"),
             armor_def=arm.get("defense_bonus") or 0,
+            armor_base_def=arm.get("base_defense_bonus") or 0,
+            armor_upgrades=arm.get("upgrade_level") or 0,
             armor_dur=arm.get("durability") or 0,
             armor_mxd=arm.get("max_durability") or 0,
             armor_buc=html.escape(arm.get("buc_status") or ""),
@@ -1131,7 +1140,7 @@ $sprite_styles
           <div class="gear-meta">
             <h3 style="margin:0;">Weapon</h3>
             <p style="margin:4px 0;">$weapon_name</p>
-            <p class="muted" style="margin:0;">+$weapon_atk atk · dur $weapon_dur/$weapon_mxd · $weapon_buc</p>
+            <p class="muted" style="margin:0;">+$weapon_atk atk ($weapon_base_atk base + $weapon_upgrades upg) · dur $weapon_dur/$weapon_mxd · $weapon_buc</p>
           </div>
         </div>
         <div class="gear-card">
@@ -1139,7 +1148,7 @@ $sprite_styles
           <div class="gear-meta">
             <h3 style="margin:0;">Armor</h3>
             <p style="margin:4px 0;">$armor_name</p>
-            <p class="muted" style="margin:0;">+$armor_def def · dur $armor_dur/$armor_mxd · $armor_buc</p>
+            <p class="muted" style="margin:0;">+$armor_def def ($armor_base_def base + $armor_upgrades upg) · dur $armor_dur/$armor_mxd · $armor_buc</p>
           </div>
         </div>
       </div>
@@ -1174,7 +1183,7 @@ $sprite_styles
           <div class="gear-meta">
             <h3 style="margin:0;">Weapon</h3>
             <p style="margin:4px 0;">$weapon_name</p>
-            <p class="muted" style="margin:0;">+$weapon_atk atk · dur $weapon_dur/$weapon_mxd · $weapon_buc</p>
+            <p class="muted" style="margin:0;">+$weapon_atk atk ($weapon_base_atk base + $weapon_upgrades upg) · dur $weapon_dur/$weapon_mxd · $weapon_buc</p>
           </div>
         </div>
         <div class="gear-card">
@@ -1182,7 +1191,7 @@ $sprite_styles
           <div class="gear-meta">
             <h3 style="margin:0;">Armor</h3>
             <p style="margin:4px 0;">$armor_name</p>
-            <p class="muted" style="margin:0;">+$armor_def def · dur $armor_dur/$armor_mxd · $armor_buc</p>
+            <p class="muted" style="margin:0;">+$armor_def def ($armor_base_def base + $armor_upgrades upg) · dur $armor_dur/$armor_mxd · $armor_buc</p>
           </div>
         </div>
       </div>

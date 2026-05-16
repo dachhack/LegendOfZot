@@ -263,8 +263,14 @@ def _equipped_obs(pc):
             # Power stat (already includes upgrade_level via the property).
             # The bonus is 0 when the item is broken, but we report the
             # raw value so the policy can decide based on intended power.
+            # Also surface base_*_bonus (the template's intrinsic
+            # power) and upgrade_level (Scroll of Upgrade increments)
+            # so the report can show "+5 atk (3 base + 2 upgrades)".
             "attack_bonus": getattr(it, "attack_bonus", None),
             "defense_bonus": getattr(it, "defense_bonus", None),
+            "base_attack_bonus": getattr(it, "_base_attack_bonus", None),
+            "base_defense_bonus": getattr(it, "_base_defense_bonus", None),
+            "upgrade_level": getattr(it, "upgrade_level", 0),
             "item_level": getattr(it, "level", 0),
         }
     return {"weapon": slot(pc.equipped_weapon),
@@ -892,14 +898,18 @@ class PlaytestSession:
                 entry["buc_known"] = bool(getattr(item, "buc_known", False))
                 entry["is_sealed"] = bool(getattr(item, "is_sealed", False))
                 # Power stat for comparison. attack_bonus / defense_bonus
-                # are @properties that already fold in upgrade_level, so
-                # we don't need to expose upgrade_level separately --
-                # whatever the equipped property returns is what the
-                # Character.attack / Character.defense calc will use.
+                # are @properties that already fold in upgrade_level.
+                # Also expose the base / upgrade split so the report
+                # can render "+5 atk (3 base + 2 upgrades)" -- useful
+                # for tracking how the agent's scaling came from gear
+                # tier vs upgrade-scroll consumption.
                 if isinstance(item, Weapon):
                     entry["attack_bonus"] = getattr(item, "attack_bonus", 0)
+                    entry["base_attack_bonus"] = getattr(item, "_base_attack_bonus", 0)
                 else:
                     entry["defense_bonus"] = getattr(item, "defense_bonus", 0)
+                    entry["base_defense_bonus"] = getattr(item, "_base_defense_bonus", 0)
+                entry["upgrade_level"] = getattr(item, "upgrade_level", 0)
                 entry["item_level"] = getattr(item, "level", 0)
                 # equipped flag so the policy can compare bag items
                 # against the slotted one without doing name matching.
