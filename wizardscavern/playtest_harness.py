@@ -484,7 +484,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         else:
             starter_weapon = Weapon(
                 "Dagger", "A small, sharp blade.",
-                attack_bonus=2, value=10, level=0, upgrade_level=0,
+                attack_bonus=3, value=10, level=0, upgrade_level=0,
             )
         leather = Armor(
             "Leather Armor", "Light leather armor.",
