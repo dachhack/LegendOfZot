@@ -521,7 +521,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             "Military-grade rations. Tasteless but highly nutritious.",
             value=30, level=3, nutrition=70, count=2,
         ))
-        for _ in range(4):
+        for _ in range(6):
             pc.inventory.add_item_quiet(Potion(
                 "Minor Healing Potion",
                 "A small vial of red liquid that heals minor wounds.",
