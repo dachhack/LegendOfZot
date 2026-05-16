@@ -590,9 +590,20 @@ class RunReport:
             if "collapse from starvation" in low:
                 return "starvation"
             if "you were defeated by status effects" in low:
-                # Find the source status from prior log lines
+                # Find the source status from prior log lines.
+                # Starvation is checked FIRST because the prior
+                # build-308 ordering attempt only re-ordered the
+                # outer branches -- but the death log emits
+                # 'You collapse from starvation...' on the turn
+                # BEFORE the 'defeated by status effects' line,
+                # so the outer reverse walk hits status_effects
+                # first and never sees the collapse. The playtester
+                # found 33/33 sampled status-effects deaths were
+                # actually starvation. Now check inside.
                 for (_, prev) in reversed(self.recent_log):
                     pl = prev.lower()
+                    if "collapse from starvation" in pl:
+                        return "starvation"
                     if "poison" in pl and ("hp from" in pl or "damage" in pl):
                         return "defeated by poison"
                     if "burn" in pl and "damage" in pl:
