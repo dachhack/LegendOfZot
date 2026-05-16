@@ -1,192 +1,218 @@
-# Playtest Harness — Handoff
+# Playtest Harness — Handoff (build 314)
 
-This branch (`claude/game-playtest-agent-npMRR`) shipped a headless
-playtest harness for Wizard's Cavern plus dozens of policy iterations
-and game balance changes driven by what it found.
+Branch: `claude/wizards-cavern-playtest-4stBF`. Continuation of the
+playtest-harness work started on the previous branch
+(`claude/game-playtest-agent-npMRR`). Builds 280-314 in this session
+focused on **flatline elimination, balance tuning, and exploration
+analytics**. Site: https://dachhack.github.io/LegendOfZot/playtest/.
 
-## TL;DR
+## TL;DR — what's different from the last handoff
 
-`wizardscavern/playtest_harness.py` drives the game logic without the
-Toga UI. A smart policy plays the game like a careful adventurer
-would — explores by lantern, fights monsters, prays at altars,
-identifies scrolls, hunts dungeon keys, eats food before it rots.
-30-run grids surface balance issues and real game bugs in minutes.
+| | Before this session | After build 314 |
+|---|---|---|
+| Alive flatlines (HP=1 indefinite loops) | 3-6 per grid | **0/60** |
+| Max floor record | F8 | **F11** (briefly, build 303) |
+| Max level record | L6 | **L9** (Tauriel s=13 elf) |
+| Honest survivors at 3000T | 0/60 | 3/60 (build 306) → 0/60 (current) |
+| Warp avoidance | leaky | **0 voluntary warps** across grids |
+| Per-run report features | basic | + warp_pct + xp_pct + Exploration table |
 
-`.claude/agents/playtester.md` defines a Claude Code subagent that
-knows how to drive the harness. Spawn it whenever you want a
-multi-seed playtest run with analysis.
+The honest-survivor count dipped back to 0 after the food economy
+buffs because agents now push deeper and die deeper, instead of
+parking healthy on F4-F5. The wedges are gone; what remains is
+honest depth difficulty.
 
-## Running the harness directly
+## Running the harness
 
 ```bash
-# Smoke run, 200 turns, smart policy
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 --policy smart \
-    --race dwarf --int-bonus 13 --spells "Ice Shard,Heal,Fireball"
+# Smoke run
+python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 \
+    --policy smart --race dwarf
 
-# A/B exploration without fog-of-war
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 --policy smart \
-    --race elf --int-bonus 6 --no-fog
-
-# Bare-fisted run (no starter pack)
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 --policy smart \
-    --no-starter-pack
-
-# JSONL output for analysis
+# With report output (HTML + JSON)
 python3 -m wizardscavern.playtest_harness --seed 42 --turns 1500 \
-    --policy smart --race human --int-bonus 8 --jsonl > run.jsonl
+    --policy smart --race human --report-dir /tmp/myrun
+
+# Deploy grid (drives 20 seeds x 3 races, pushes reports to
+# main:docs/playtest/). Cap TURNS_BUDGET at 3000 for ~1min runs.
+python3 /tmp/deep_deploy.py
 ```
 
 A one-line summary per run is appended to `playtest_runs.log` at repo
-root (gitignored). Override path via `WIZARDSCAVERN_PLAYTEST_LOG`,
-empty disables.
+root (gitignored). The harness is also driven by the `playtester`
+subagent — spawn with a focused task and it'll set up grids, drill
+into specific runs, and post-analyse.
 
-## Spawning the playtester subagent
+## Site URLs
 
-The subagent type is `playtester`. Spawn it with a focused task — give
-it a hypothesis, a test matrix (seeds × races × turns), and the
-specific numbers you want. Two cautions from experience:
+- **Index of runs**: https://dachhack.github.io/LegendOfZot/playtest/
+- Per-run pages: same root + `<slug>.html`
+- Deploy mechanic: `deploy_gh_pages()` in `playtest_report.py` pushes
+  to `main:docs/playtest/` via git plumbing (additive by default,
+  `replace=True` purges old reports first).
 
-1. **Cap turns per run around 2000-3000.** 5000 turns × 30 runs
-   produces ~200 MB of JSONL transcripts and one playtester wedged
-   trying to load all of it at once. Always tell it to *stream-parse
-   files one at a time*.
+## Smart-policy priority chain (game_loop)
 
-2. **The playtester is a tester, not a fixer.** When it finds a bug it
-   should report file:line, not patch it. Code edits stay with the
-   main session.
+Each step re-derives intent from obs. Order of priorities, highest
+first:
 
-## Where data goes
+1. **Heal** at HP < 30% (open inventory)
+2. **Cure status** if bad status + cure item available
+3. **Pre-emptive heal** at HP < 80% with adjacent M
+4. **Pre-combat buff drink** when buff potion + M adjacent + HP 60-95%
+5. **Eat urgent meat** (rot_timer <= 20)
+6. **Swap broken gear** if spare exists + not cursed
+7. **Equip strongest non-cursed upgrade**
+8. **Eat at hunger < 50** (ration efficiency optimised)
+9. **Cook raw meat** if Cooking Kit + raw meat (any hunger)
+10. **Light lantern** on ANY fog-adjacent step (fuel > 0)
+11. **Wedge Hail Mary** if `current_tile_visits >= 6` + untried items
+12. **Wayfinder** (BFS-based, tier-prioritised — see below)
+
+## Wayfinder tier logic
+
+```
+if trapped_no_d AND has warp_path:   tiers = [(W,), (V,)]      # escape via known W
+elif trapped_no_d AND no_warp_path AND monster visible:
+                                     tiers = [(M,)]            # die fighting
+elif retreat_to_floor is set:        tiers = [(U,), (V,)]      # warp recovery
+elif too_long_on_floor:              tiers = [(D,), (V,)]      # press on
+elif high_coverage_descend:          tiers = [(D,), SAFE, ...] # sweep done
+elif is_weak:                        tiers = [(V,), SAFE, ...] # heal-first
+elif wants_vendor:                   tiers = [(V,), SAFE, ...]
+elif ready_to_clear:                 tiers = [SAFE, V, M, ...] # grind
+else:                                tiers = [SAFE, V, M, T, N] # normal
+```
+
+`BENEFICIAL_SAFE = (C, G, L, O, A, P, Q, K, B, F)` — rooms that pay
+off without forced combat.
+
+`trapped_no_d`: D unreachable AND no new tile visited in 100+ turns.
+Behavioural signal — replaces older turn-count / pct-of-floor gates.
+
+## Key invariants the playtester enforces
+
+- **AVOID-W is always on** (was z<10 gated). Only `trapped_no_d`
+  releases it. Build 296.
+- **Inferred guardian avoidance**: seeing a T tile flags the 4
+  cardinal-adjacent positions as guardian-suspect (`pc.level >=
+  pc.floor + 3` to engage). Build 303.
+- **Wedge detector**: `current_tile_visits >= 6` triggers Hail Mary
+  item-use (scrolls / unidentified potions). Build 294-295.
+- **Die-fighting override**: trapped agent with no escape items
+  walks toward the only visible M and commits. Build 304.
+- **Tomb inference is genuinely informational**: every tomb has 4
+  cardinal guardians per `dungeon.py:setup_dungeons_and_tombs`. The
+  policy uses this domain knowledge to avoid corners even when M
+  tiles are still in fog. Build 303.
+
+## Balance changes shipped this session
+
+| Build | Change | Source |
+|---|---|---|
+| 292 | Lantern fuel buff: starter 50→80, canisters 1-3@10 → 2-4@20 | F12 reach unlocked |
+| 296 | Warp avoidance: lantern on any fog step, AVOID-W always on, no late-game accept | User: "players would avoid warps more" |
+| 297 | Coverage-based trapped gates | User: "% of floor not turns" |
+| 298 | Behavioural trapped (turns_since_new_tile >= 100) + W-target wayfinder | Region-split floor escapes |
+| 305 | Tiered HP regen by hunger: 85+ = 1/2 moves, 60-84 = 1/4, <60 none | Smooths chip damage |
+| 306 | `max(1, hp-dmg)` → `max(0, …)`: starvation can kill | Ends the HP=1 wedge |
+| 306 | Rations 40→50 nutrition, starter 5→8 | Food economy buff |
+| 307 | Iron Rations F1+ vendor (was F3+) | Food economy buff |
+| 308 | Cooking Kit F3+ vendor (game default), policy cooks all raw meat | User: "cook all meat once you have the kit" |
+| 308 | Meat drop rate 35% → 55% | Food economy buff |
+| 311 | Carnyx of Doom XP bonus removed | User: "kill the exp bonus for the carnyx" |
+
+## Per-run report features (current state)
+
+The HTML page now surfaces:
+
+1. **Hero sprite** — race + gender + name → game's `_CHARACTERS_POOL`
+   pid (matches what character creation would show). Build 301.
+2. **Journey ledger** with floor exits colour-coded:
+   stairs / warp_accept / warp_forced. Includes the new
+   **Warp % share of floor changes** line.
+3. **Movement Efficiency** table: per-floor moves, unique tiles,
+   first-visit, revisit, waste %.
+4. **Exploration** table: per-floor kills/M, XP earned/pool, chests,
+   boons, vendor (V), tomb (T) counts with totals row. Build 309-314.
+5. **Items table** with status: equipped / in bag / used / partial.
+6. **Death scene block** with last 30 log lines + 12 actions.
+
+The **index page** has a sortable table with Warp % and XP %
+columns — sort ascending by xp_pct to find under-explorers, descending
+to find grinders.
+
+## Key analytical findings
+
+### Warps are mostly forced, not accepted (build 296+)
+- Mean grid warp_pct: ~25-30%, but **>95% are forced** (resist roll
+  failed) not accepted.
+- 0 voluntary warps across multiple grids since build 297.
+- User framing ("players would avoid warps more") is now enforced.
+
+### Elite undead deaths are ALL from corner-walks, never raids (build 301)
+- 15/15 ELITE UNDEAD deaths traced to `setup_dungeons_and_tombs`
+  cardinal-adjacent guardians.
+- 0 from `process_tomb_action` SEARCH outcome.
+- Build 303's tomb-inference avoidance reduced these 13/60 -> 3/60.
+
+### Exploration does NOT help survival (builds 309-314)
+- Mean xp_pct for starvation deaths: **97%**.
+- Mean xp_pct for combat deaths: **~50%**.
+- High-xp_pct correlates with starvation (over-foraging) not depth.
+- Pearson(xp_pct, max_floor) ≈ 0.09 — effectively zero.
+- **The smart policy is grinding floors clean and starving**.
+
+## Open questions / future work
+
+1. **Honest survival at 3000T**: how to get agents to live to the
+   budget AND stay healthy AND keep progressing? Build 306 had 3/60
+   honest survivors at F5-F7. Current state is 0/60 because the food
+   buff lets agents push deeper, where they die to combat. Worth
+   testing: bump max_health curve, slow hunger decay, more vendor
+   heals at depth.
+2. **The descend-sooner hypothesis** (build 314 verdict): the policy
+   over-grinds F1-F3. A "lower ready_to_clear threshold" or
+   "descend at 50% coverage instead of 80%" might let agents reach
+   deeper without starving. Untested.
+3. **XP-pool formula is approximate** by design — the cap at 100%
+   hides dynamic spawn bonuses (tomb spirits, chest-gas monsters,
+   same-coord respawns). Per-floor rows in the Exploration table
+   show raw ratios. Real fix would need a kill-event hook to
+   accumulate pool deltas as they spawn.
+4. **Experience Boost potion is a placebo** — `items.py:4225` logs
+   the bonus but never actually multiplies XP. Either finish the
+   implementation or remove the status effect.
+5. **Pre-T tomb-guardian ambushes** still happen (3/60 in build 303
+   grid): the four corner M tiles are sometimes revealed before the
+   T tile is. Inference could be extended: a discovered M with
+   `undead_guardian=True` + `tomb_location` property implies the T
+   and the other 3 corners. Untested.
+
+## Useful commits to skim cold
+
+- **752973b** — build 303: inferred tomb guardian avoidance (the
+  big elite-undead survival jump)
+- **2e49fd2** — build 304: die-fighting + canister-aware lantern
+- **3ee3a2f** — build 296: warp avoidance pass (Gimli's lesson)
+- **a006abd** — build 309: exploration efficiency metric
+- **a0e802e** — build 308 followup: death-cause walker fixes
+- **eacc021** — build 314: XP/kill ratio cap (final convergence)
+
+## Where data lives
 
 | Path | What |
 |---|---|
-| `playtest_runs.log` | One-line summary per run (gitignored) |
-| `/tmp/<test_name>/*.jsonl` | Per-run obs transcripts (gitignored, in tmp anyway) |
-| `/tmp/<test_name>/*.err` | Per-run stderr — anything non-empty is a crash |
-| `.claude/agents/playtester.md` | Subagent definition (tracked) |
-
-## Smart policy: the priority chain
-
-The policy is stateless — it re-derives intent from each observation.
-Order of priorities (highest wins):
-
-**game_loop:**
-1. Heal at HP < 30% (open inventory)
-2. Pre-emptive potion at HP < 80% with adjacent M
-3. Eat fresh meat about to rot (rot_timer ≤ 8)
-4. Swap broken gear if spare exists
-5. Equip strongest non-cursed upgrade
-6. Eat at hunger < 50
-7. Light lantern (≥ 2 unknown neighbours, or stuck-on-floor)
-8. Adjacent feature wayfinder (D / V / C / G / L / O / A / P / T / N)
-9. Distant nearest_features greedy walk
-10. Keyed-dungeon target
-11. **Frontier walker** — greedy step toward nearest undiscovered tile
-12. *Random fallback* (only when floor fully mapped)
-
-**combat_mode:**
-- Starving + monster inedible → flee immediately
-- HP < 50% with potion + no Heal mana → open inventory
-- HP < 55% with affordable Heal → cast
-- monster_too_tough (level > pc+2 OR maxhp > 2×pc.maxhp) → flee (unless starving + edible)
-- Affordable damage spell (65% chance) → cast
-- Else attack (92%) / flee (8%)
-
-**Other modes:** tomb pray-vs-raid based on weakness + fallback availability,
-dungeon unlock when keyed, pool drink, altar pray, library read, blacksmith
-repair when worn, shrine pray, warp resist (or accept when stuck-on-floor).
-
-## Real game bugs fixed (DO NOT reintroduce)
-
-| Commit | File:line | What it was |
-|---|---|---|
-| f930fa9 | `game_systems.py:2036` | `from .items import Meat` inside a function shadowed the module-top import, making `Meat` a function-local for the entire handler. Every prior reference raised UnboundLocalError. |
-| 71d2ed0 | `items.py:3039` | Spell drops in `drop_monster_items` passed kwargs (`effect_magnitude`, `element`, `value`) that don't exist on `Spell.__init__`. Drops were silently lost. |
-| 32e44b3 | `room_actions.py:837` `_grant_temp_buff` | Stored a raw dict in `pc.status_effects[key]` instead of a `StatusEffect` object. Every later tick raised `AttributeError: 'dict' has no attribute 'effect_type'`. Also mutated `_base_attack` permanently. Now uses `add_status_effect` with proper effect_type. |
-| e66617e | `room_actions.py:1348` | Lethal pool `mimic` branch called `render()` which isn't imported in the module. Crashed every lethal pool drink. Same orphan-render pattern was already fixed at lines 1736 / 1754. |
-| 56671b3 | `items.py:get_monster_meat_info` | Substring keyword matching: "Lich" matched inside "Lichen", misclassifying a plant/fungal creature as undead-inedible. Replaced both substring loops with word-boundary regex. |
-
-The pattern: short keywords as substrings + function-local imports that
-shadow module-tops + multi-arg constructor calls with stale kwargs.
-Worth grepping for at code-review time.
-
-## Game-side balance changes
-
-| Commit | What | Why |
-|---|---|---|
-| fb18080 | L0 cantrip costs trimmed (Ice Shard 8→5, etc.) | New spellcasters were cast-starved |
-| fb18080 | `max_mana` formula bumped: `(int-15)*4 + 10` floor | int=18 caster had 15 MP, now 22 MP |
-| fb18080 | Out-of-combat mana regen: 1 MP / 5 moves | No regen path made casters one-shot fighters |
-| ecfd30c | Race-flavored max_mana curves | Elf=natural caster, Human=slow, Dwarf=almost-none |
-| bf45af4 | Cardinal lantern (was Euclidean disc) | Matches in-game minimap, no diagonal leaks |
-| bf45af4 | Lantern uses `light_radius + upgrade_level` | Was `upgrade_level + 1` (always 1 for starter) |
-| 29b025d | Dwarf health_mod +20 → +30, routed through `base_max_health_bonus` | The +20 was clamped by the max_health formula, effectively a no-op. Lv1 dwarf now 60/64 (was 34/34). |
-| 29b025d | Race-aware starter weapon: dwarf gets Battleaxe (atk+4) | Dwarf has no spells, needs better opener |
-| 8a92e4c | Tomb-guardian level capped `min(template+1, player.z+2)` | Was spawning Lv5 wraiths on F3 with 40+ HP killing blows |
-| f18cb89 | Tomb-undead scale 1:1 with floor (target_lvl = z, was z+1) | F3 wraiths drop from Lv4 to Lv3, STR/HP investment now pays off |
-
-## Smart policy major features (in order of when they landed)
-
-| Feature | What |
-|---|---|
-| Starter pack | Mirrors `Vendor(starting=True)` — weapon, armor, potions, food, lantern, equipped |
-| Race-aware names | LOTR pool per race: Galadriel / Aragorn / Thorin / etc. seed-stable |
-| Fog of war (default on) | `obs.neighbors` / `obs.nearest_features` respect `room.discovered` |
-| Equipment evaluation | Equips strongest non-cursed weapon/armor; skips known-cursed |
-| Vendor flow | Buy stockpile (potions/food/mana/fuel), repair gear, identify scrolls |
-| Tomb policy | Pray if weak / no fallback, raid otherwise |
-| Dungeon keys | `obs.dungeon_keys` + key-target wayfinder; unlock+loot when keyed |
-| Threat-aware flee | Mid-combat: flee tough monsters (level > pc+2 OR maxhp > 2×pc.maxhp) |
-| Starvation override | hunger ≤ 30 + no food → engage edible monsters for meat |
-| Edibility check | Inedible (undead/golem) monsters get fled when starving |
-| Stuck-on-floor escapes | Force-descend at 300 turns, accept warps at 200 turns |
-| **Frontier walker** | Always-an-objective movement: nearest undiscovered tile when no feature beckons |
-
-## Known issues / future iterations
-
-1. **Greedy walker has no real pathfinding.** Wall mazes still
-   occasionally trap the agent. A BFS pathfinder over `discovered`
-   tiles would push deeper-floor reach significantly.
-
-2. **In-combat policy doesn't track "I just tried to flee."** Combat
-   sometimes loops on `f` if the monster blocks every escape direction.
-   Could track flee attempts per combat and switch to potion / attack
-   after 2 failures.
-
-3. **Picker rooms still on `back` fallback:** `Q` alchemist (recipe
-   picker), `X` taxidermist (trophy submission), `K` war room (item
-   identify). These need richer obs (which items to feed in) before
-   the policy can do anything useful.
-
-4. **Survivor inventory% is still 12%.** Each potion drink burns 3
-   turns (open → use → close). A "drink-to-full" shortcut already
-   exists in the inventory handler (`df` command) but the policy
-   doesn't use it. Would shave inventory time further.
-
-5. **Player.level rarely climbs in 2000-turn budgets.** Agents finish
-   most runs at Lv1-2. XP/kill might be too low, or the agent isn't
-   getting enough kills (fog-walking instead of combat-walking). Worth
-   diagnosing if you want deeper-floor combat to actually use the
-   leveling system.
-
-6. **Floor 50 boss arena untested.** No agent has reached `gate_to_floor_50_unlocked`
-   in any of the playtest grids. The 8-shard quest is beyond the
-   current depth budget. Would need long-running pure-explore runs.
-
-## Useful commits to skim if you're picking this up cold
-
-- **f930fa9** — original smart policy + the first 3 game bug fixes
-- **c7121f8** — wayfinder + fog of war
-- **ecfd30c** — race-flavored magic
-- **29b025d** — dwarf buff + base_max_health_bonus routing
-- **f18cb89** — tomb-undead per-floor scaling
-- **82056e6** — frontier walker (the big survival jump)
+| `wizardscavern/playtest_harness.py` | Headless game driver + smart_policy |
+| `wizardscavern/playtest_report.py` | HTML/JSON report builder + deploy |
+| `wizardscavern/version.py` | BUILD_NUMBER + CHANGELOG (~8 entries) |
+| `playtest_reports/` | Local report artifacts (gitignored) |
+| `docs/playtest/` | Deployed report site (on main) |
+| `playtest_runs.log` | One-line per-run summary (gitignored) |
+| `/tmp/deep_deploy.py` | Grid driver (lives in /tmp, not tracked) |
 
 ## Persona note
 
-The repo's `CLAUDE.md` defines a flirty German tabletop-nerd persona
-("Claudia") for the main conversation. The playtester subagent is
-deliberately clinical instead — it's the QA tester Claudia hands a
-build to before her hot date. Reports come back as numbers, file
-references, and bug write-ups.
-
-*Eine Wurst pro Iteration. Halt die Stellung, Schatz.*
+`CLAUDE.md` defines "Claudia" — flirty German tabletop-nerd — for the
+main conversation. The playtester subagent is clinical: numbers,
+file:line refs, bug write-ups. *Schatz, eine Wurst pro Iteration.*
