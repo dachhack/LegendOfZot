@@ -740,7 +740,14 @@ class PlaytestSession:
     def _snapshot_floor_totals(self, z):
         """Tally the floor's monster / chest / beneficial-room totals
         the first time the player arrives on it. Called once per
-        floor from the floor-change block in step()."""
+        floor from the floor-change block in step().
+
+        XP pool now respects per-M-tile property markers so the
+        formula doesn't underestimate elite undead / champions /
+        vault keepers / boss arenas. Earlier formula was a flat
+        `M * ((z+1)*8 + z*z*2)` per tile -- runs that killed even a
+        few +1 / +2 level monsters routinely sailed past 100% xp_pct.
+        """
         if z in self.floor_totals:
             return
         floor = gs.my_tower.floors[z]
@@ -749,17 +756,34 @@ class PlaytestSession:
             "V": 0, "T": 0, "N": 0, "Q": 0, "K": 0, "B": 0, "F": 0,
             "X": 0,
         }
+        # Per-monster XP estimate accounting for spawn-level offsets:
+        #   * tomb_elite -- spawn at floor+1 (game_systems.py:2613)
+        #   * undead_guardian (non-elite) -- spawn at floor (z)
+        #   * has_zots_guardian / is_boss_arena -- vault defender,
+        #     awards (level+1)*100 (4x baseline, game_systems.py:727)
+        #   * default -- spawn at z (game_systems.py:2771)
+        # The (L+1)*8 + L²*2 formula is the canonical per-kill XP.
+        def _kill_xp(lvl):
+            return (lvl + 1) * 8 + lvl * lvl * 2
+
+        xp_pool = 0
         for y in range(floor.rows):
             for x in range(floor.cols):
-                t = floor.grid[y][x].room_type
+                cell = floor.grid[y][x]
+                t = cell.room_type
                 if t in counts:
                     counts[t] += 1
-        # Expected XP if every M on the floor is killed at floor
-        # level. The kill XP formula in combat.py is
-        # `(L+1)*8 + L**2 * 2`. Monsters spawn at roughly floor
-        # level (z 0-indexed, so floor=z+1 in display terms).
-        xp_per_kill = (z + 1) * 8 + z * z * 2
-        counts["xp_pool"] = counts["M"] * xp_per_kill
+                if t == "M":
+                    props = cell.properties
+                    if props.get("has_zots_guardian") or props.get("is_boss_arena"):
+                        xp_pool += (z + 1) * 100
+                    elif props.get("tomb_elite"):
+                        xp_pool += _kill_xp(z + 1)
+                    elif props.get("undead_guardian"):
+                        xp_pool += _kill_xp(z)
+                    else:
+                        xp_pool += _kill_xp(z)
+        counts["xp_pool"] = xp_pool
         self.floor_totals[z] = counts
 
     # ------------------------------------------------------------------
