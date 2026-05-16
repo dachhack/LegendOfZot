@@ -6,6 +6,7 @@
 <style>
   body { background:#1a1a1a; color:#ddd; font-family:monospace; padding:24px; max-width:720px; margin:0 auto; }
   h1 { color:#FFD700; }
+  h2 { color:#FFD700; font-size:16px; margin-top:28px; border-bottom:1px solid #333; padding-bottom:4px; }
   a { color:#4FC3F7; }
   ul { line-height:1.8; }
   .meta { color:#888; font-size:12px; }
@@ -14,9 +15,18 @@
 <body>
 <h1>Legend of Zot — Audit Pages</h1>
 <p>Static audit pages generated from the source of truth in the repo. Re-run the matching script after content changes.</p>
+
+<h2>Audits</h2>
 <ul>
   <li><a href="spell_sprite_audit.html">Spell sprite audit</a> — every in-game spell name next to its assigned 64×64 sprite.
     <div class="meta">Source: <code>scripts/audit_spell_sprites.py</code></div>
+  </li>
+</ul>
+
+<h2>Playtest Reports</h2>
+<ul>
+  <li><a href="playtest/index.html">Headless playtest run index</a> — per-hero postmortems from the smart-policy playtest harness. Each report covers the hero's journey, kills, equipment, HP timeline, movement-efficiency, and death scene (if any).
+    <div class="meta">Source: <code>wizardscavern.playtest_harness --report-dir … --deploy</code></div>
   </li>
 </ul>
 </body>

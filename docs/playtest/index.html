@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Wizard's Cavern — Playtest Reports</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
+/* Mobile-friendly layout. Body padding shrinks, hero portrait stacks
+   above the info column, the Final Tally drops from 4 columns to 2,
+   gear cards stack, tab labels shrink, tables get a touch smaller.
+   The two breakpoints (800 / 600) cover tablet and phone-portrait. */
+@media (max-width: 800px) {
+  .grid4 { grid-template-columns: 1fr 1fr; }
+  .grid3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  .card { padding: 10px 12px; }
+  h1 { font-size: 18px; }
+  h2 { font-size: 14px; }
+  .grid4, .grid3, .grid2 { grid-template-columns: 1fr; }
+  .hero-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-portrait { min-height: auto; }
+  .gear-cards { grid-template-columns: 1fr; }
+  .tabs > label {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-right: 1px;
+  }
+  .tab-panels { padding: 10px 12px; }
+  table { font-size: 11px; }
+  th, td { padding: 3px 4px; }
+  .stat { font-size: 12px; }
+  .hpchart { /* Stretch the SVG full-width on small screens */
+    max-width: 100%;
+  }
+}
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.death-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#1a0c0c; border-left:3px solid #f43f5e;
+  border-radius:4px; margin-bottom:10px;
+}
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+
+/* Sprite system: each sprite renders as a background-image on a <span>,
+   so a sprite referenced N times only embeds the base64 webp once. */
+.sprite {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.player-sprite { display:block; margin: 0 auto; image-rendering: pixelated; }
+.sprite-cell { width: 36px; }
+
+/* Hero banner with portrait + headline stats side by side. */
+.hero-banner {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+.hero-portrait {
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 120px;
+}
+.hero-info p { margin: 4px 0; }
+.gear-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.gear-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 10px;
+}
+.gear-card .sprite { width: 48px; height: 48px; margin-right: 0; }
+.gear-card .gear-meta { flex: 1; }
+
+/* Tabs -- pure-CSS radio-button pattern, no JS required. */
+.tabs { margin-top: 14px; }
+.tabs input[type=radio] { position: absolute; opacity: 0; pointer-events: none; }
+.tabs > label {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-bottom: -1px;
+  transition: background .15s;
+}
+.tabs > label:hover { background: #1f1f1f; color: #fde68a; }
+.tabs > input[type=radio]:checked + label {
+  background: #2a1f0a;
+  color: #fbbf24;
+  border-bottom: 1px solid #2a1f0a;
+}
+.tab-panels { background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 0 6px 6px 6px; padding: 14px 18px; }
+.tab-panel { display: none; }
+/* Show the panel whose paired radio is :checked. ~ matches siblings
+   that follow the input, and the panels live right after the labels. */
+#tab-overview:checked ~ .tab-panels #panel-overview,
+#tab-stats:checked ~ .tab-panels #panel-stats,
+#tab-equipment:checked ~ .tab-panels #panel-equipment,
+#tab-combat:checked ~ .tab-panels #panel-combat,
+#tab-journey:checked ~ .tab-panels #panel-journey { display: block; }
+
+.chart-block { margin: 16px 0; }
+.chart-block h3 { margin-top: 0; }
+.tomb-list { list-style: none; padding: 0; }
+.tomb-list li { padding: 6px 0; border-bottom: 1px dotted #2a2a2a; }
+.tomb-list li:last-child { border: none; }
+.tomb-list strong { color: #f97316; }
+
+.runs th, .runs td { font-size: 13px; padding: 6px 8px; }
+.runs tr:hover { background: #1a1a1a; }
+.tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 11px; }
+.tag.alive { background: #134e2b; color: #bbf7d0; }
+.tag.dead { background: #5a1313; color: #fecaca; }
+</style>
+</head>
+<body>
+<header class="card">
+  <h1>Wizard's Cavern · Playtest Reports</h1>
+  <p class="muted">60 runs · generated 2026-05-16T16:04:22+00:00</p>
+</header>
+
+<section class="card">
+  <h2>Runs</h2>
+  <table class="runs">
+    <tr>
+      <th>Hero</th><th>Race</th><th>Seed</th><th>Outcome</th>
+      <th>Turns</th><th>Floor</th><th>Level</th><th>HP</th>
+      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Warp %</th><th>XP %</th><th>Cause</th>
+    </tr>
+    <tr><td><a href='00013_elf.html'>Tauriel the Singer</a></td><td>elf</td><td>13</td><td><span class='tag dead'>dead</span></td><td>1679</td><td>F8</td><td>L9</td><td>0/116</td><td>1467g</td><td>181</td><td>66.2%</td><td>50.0% <span style='color:#94a3b8;font-size:0.85em;'>(4/8)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(9740/9740)</span></td><td>starvation</td></tr>
+<tr><td><a href='12345_dwarf.html'>Balin Ironbeard</a></td><td>dwarf</td><td>12345</td><td><span class='tag dead'>dead</span></td><td>1628</td><td>F7</td><td>L6</td><td>0/116</td><td>452g</td><td>116</td><td>70.5%</td><td>25.0% <span style='color:#94a3b8;font-size:0.85em;'>(2/8)</span></td><td>65.9% <span style='color:#94a3b8;font-size:0.85em;'>(3574/5426)</span></td><td>starvation</td></tr>
+<tr><td><a href='00099_human.html'>Eomer II</a></td><td>human</td><td>99</td><td><span class='tag dead'>dead</span></td><td>1216</td><td>F7</td><td>L5</td><td>-10/72</td><td>1377g</td><td>115</td><td>67.7%</td><td>42.9% <span style='color:#94a3b8;font-size:0.85em;'>(3/7)</span></td><td>53.5% <span style='color:#94a3b8;font-size:0.85em;'>(3302/6170)</span></td><td>defeated by ELITE UNDEAD DRAGON LICH</td></tr>
+<tr><td><a href='01100_dwarf.html'>Thrain Stonebreaker</a></td><td>dwarf</td><td>1100</td><td><span class='tag dead'>dead</span></td><td>1430</td><td>F6</td><td>L5</td><td>-15/113</td><td>479g</td><td>109</td><td>71.2%</td><td>75.0% <span style='color:#94a3b8;font-size:0.85em;'>(3/4)</span></td><td>97.4% <span style='color:#94a3b8;font-size:0.85em;'>(4486/4608)</span></td><td>defeated by UNDEAD LICH</td></tr>
+<tr><td><a href='07777_human.html'>Elendil Crownless</a></td><td>human</td><td>7777</td><td><span class='tag dead'>dead</span></td><td>1048</td><td>F6</td><td>L5</td><td>0/76</td><td>353g</td><td>89</td><td>58.8%</td><td>14.3% <span style='color:#94a3b8;font-size:0.85em;'>(1/7)</span></td><td>42.4% <span style='color:#94a3b8;font-size:0.85em;'>(2076/4900)</span></td><td>defeated by Hardened Stirge</td></tr>
+<tr><td><a href='00256_human.html'>Aragorn Strider</a></td><td>human</td><td>256</td><td><span class='tag dead'>dead</span></td><td>1085</td><td>F5</td><td>L5</td><td>-3/70</td><td>829g</td><td>98</td><td>52.6%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/4)</span></td><td>84.3% <span style='color:#94a3b8;font-size:0.85em;'>(3046/3612)</span></td><td>defeated by Gargoyle</td></tr>
+<tr><td><a href='02500_human.html'>Eomer Crownless</a></td><td>human</td><td>2500</td><td><span class='tag dead'>dead</span></td><td>1188</td><td>F5</td><td>L5</td><td>-3/70</td><td>817g</td><td>104</td><td>62.0%</td><td>37.5% <span style='color:#94a3b8;font-size:0.85em;'>(3/8)</span></td><td>78.5% <span style='color:#94a3b8;font-size:0.85em;'>(2938/3742)</span></td><td>defeated by Troll</td></tr>
+<tr><td><a href='00271_dwarf.html'>Gloin Oakshield</a></td><td>dwarf</td><td>271</td><td><span class='tag dead'>dead</span></td><td>978</td><td>F5</td><td>L4</td><td>0/100</td><td>568g</td><td>58</td><td>31.9%</td><td>25.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/4)</span></td><td>44.9% <span style='color:#94a3b8;font-size:0.85em;'>(1472/3276)</span></td><td>starvation</td></tr>
+<tr><td><a href='00500_dwarf.html'>Fili Goldfinder</a></td><td>dwarf</td><td>500</td><td><span class='tag dead'>dead</span></td><td>1058</td><td>F5</td><td>L4</td><td>0/94</td><td>115g</td><td>72</td><td>63.3%</td><td>40.0% <span style='color:#94a3b8;font-size:0.85em;'>(2/5)</span></td><td>78.3% <span style='color:#94a3b8;font-size:0.85em;'>(2566/3278)</span></td><td>starvation</td></tr>
+<tr><td><a href='01234_dwarf.html'>Thorin of Belegost</a></td><td>dwarf</td><td>1234</td><td><span class='tag dead'>dead</span></td><td>1507</td><td>F5</td><td>L4</td><td>0/100</td><td>249g</td><td>56</td><td>72.3%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/4)</span></td><td>90.2% <span style='color:#94a3b8;font-size:0.85em;'>(3064/3396)</span></td><td>starvation</td></tr>
+<tr><td><a href='00500_human.html'>Beregond the Wise</a></td><td>human</td><td>500</td><td><span class='tag dead'>dead</span></td><td>1547</td><td>F5</td><td>L3</td><td>-4/50</td><td>309g</td><td>59</td><td>62.1%</td><td>25.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/4)</span></td><td>38.4% <span style='color:#94a3b8;font-size:0.85em;'>(1254/3264)</span></td><td>defeated by Minotaur</td></tr>
+<tr><td><a href='09001_elf.html'>Thranduil the Twice-Born</a></td><td>elf</td><td>9001</td><td><span class='tag dead'>dead</span></td><td>1420</td><td>F5</td><td>L2</td><td>0/50</td><td>25g</td><td>35</td><td>83.3%</td><td>37.5% <span style='color:#94a3b8;font-size:0.85em;'>(3/8)</span></td><td>13.6% <span style='color:#94a3b8;font-size:0.85em;'>(476/3494)</span></td><td>defeated by Goblin</td></tr>
+<tr><td><a href='05678_elf.html'>Glorfindel of Mithlond</a></td><td>elf</td><td>5678</td><td><span class='tag dead'>dead</span></td><td>525</td><td>F5</td><td>L1</td><td>-7/32</td><td>442g</td><td>19</td><td>82.5%</td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(2/2)</span></td><td>22.0% <span style='color:#94a3b8;font-size:0.85em;'>(536/2434)</span></td><td>chest explosion</td></tr>
+<tr><td><a href='01100_elf.html'>Beleg Skywatcher</a></td><td>elf</td><td>1100</td><td><span class='tag dead'>dead</span></td><td>1449</td><td>F4</td><td>L5</td><td>0/76</td><td>360g</td><td>159</td><td>64.6%</td><td>22.2% <span style='color:#94a3b8;font-size:0.85em;'>(2/9)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(3104/3104)</span></td><td>starvation</td></tr>
+<tr><td><a href='00007_human.html'>Eowyn the Wanderer</a></td><td>human</td><td>7</td><td><span class='tag dead'>dead</span></td><td>1492</td><td>F4</td><td>L4</td><td>-18/60</td><td>579g</td><td>117</td><td>62.2%</td><td>25.0% <span style='color:#94a3b8;font-size:0.85em;'>(2/8)</span></td><td>77.6% <span style='color:#94a3b8;font-size:0.85em;'>(1740/2242)</span></td><td>defeated by UNDEAD WRAITH</td></tr>
+<tr><td><a href='00314_dwarf.html'>Durin Forgewright</a></td><td>dwarf</td><td>314</td><td><span class='tag dead'>dead</span></td><td>1779</td><td>F4</td><td>L4</td><td>0/92</td><td>601g</td><td>188</td><td>71.1%</td><td>16.7% <span style='color:#94a3b8;font-size:0.85em;'>(1/6)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(5158/5158)</span></td><td>starvation</td></tr>
+<tr><td><a href='01100_human.html'>Anborn of the White City</a></td><td>human</td><td>1100</td><td><span class='tag dead'>dead</span></td><td>948</td><td>F4</td><td>L4</td><td>0/58</td><td>668g</td><td>100</td><td>66.8%</td><td>16.7% <span style='color:#94a3b8;font-size:0.85em;'>(1/6)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(2214/2214)</span></td><td>starvation</td></tr>
+<tr><td><a href='00013_human.html'>Beregond of Arnor</a></td><td>human</td><td>13</td><td><span class='tag dead'>dead</span></td><td>1436</td><td>F4</td><td>L3</td><td>0/50</td><td>835g</td><td>75</td><td>81.8%</td><td>50.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/2)</span></td><td>60.6% <span style='color:#94a3b8;font-size:0.85em;'>(1058/1746)</span></td><td>starvation</td></tr>
+<tr><td><a href='00042_dwarf.html'>Borin Steelpalm</a></td><td>dwarf</td><td>42</td><td><span class='tag dead'>dead</span></td><td>791</td><td>F4</td><td>L3</td><td>0/92</td><td>248g</td><td>56</td><td>53.2%</td><td>20.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/5)</span></td><td>60.2% <span style='color:#94a3b8;font-size:0.85em;'>(1300/2158)</span></td><td>starvation</td></tr>
+<tr><td><a href='00256_elf.html'>Elrond of the Greenwood</a></td><td>elf</td><td>256</td><td><span class='tag dead'>dead</span></td><td>1413</td><td>F4</td><td>L3</td><td>0/48</td><td>247g</td><td>81</td><td>76.9%</td><td>50.0% <span style='color:#94a3b8;font-size:0.85em;'>(2/4)</span></td><td>45.2% <span style='color:#94a3b8;font-size:0.85em;'>(1022/2262)</span></td><td>starvation</td></tr>
+<tr><td><a href='02500_elf.html'>Celeborn the Sea-stained</a></td><td>elf</td><td>2500</td><td><span class='tag dead'>dead</span></td><td>426</td><td>F4</td><td>L3</td><td>-16/48</td><td>367g</td><td>61</td><td>23.3%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/3)</span></td><td>33.1% <span style='color:#94a3b8;font-size:0.85em;'>(780/2360)</span></td><td>defeated by UNDEAD SPECTER</td></tr>
+<tr><td><a href='09001_dwarf.html'>Bofur III</a></td><td>dwarf</td><td>9001</td><td><span class='tag dead'>dead</span></td><td>1114</td><td>F4</td><td>L3</td><td>0/93</td><td>512g</td><td>92</td><td>70.6%</td><td>33.3% <span style='color:#94a3b8;font-size:0.85em;'>(1/3)</span></td><td>59.6% <span style='color:#94a3b8;font-size:0.85em;'>(1404/2354)</span></td><td>starvation</td></tr>
+<tr><td><a href='00042_human.html'>Theoden Greycloak</a></td><td>human</td><td>42</td><td><span class='tag dead'>dead</span></td><td>416</td><td>F4</td><td>L2</td><td>-5/40</td><td>350g</td><td>31</td><td>60.2%</td><td>33.3% <span style='color:#94a3b8;font-size:0.85em;'>(1/3)</span></td><td>22.9% <span style='color:#94a3b8;font-size:0.85em;'>(488/2130)</span></td><td>defeated by Owlbear</td></tr>
+<tr><td><a href='01234_human.html'>Boromir of Bree</a></td><td>human</td><td>1234</td><td><span class='tag dead'>dead</span></td><td>877</td><td>F4</td><td>L2</td><td>-16/40</td><td>515g</td><td>22</td><td>80.1%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/3)</span></td><td>23.0% <span style='color:#94a3b8;font-size:0.85em;'>(488/2120)</span></td><td>defeated by ELITE UNDEAD MUMMY</td></tr>
+<tr><td><a href='00042_elf.html'>Arwen Silverleaf</a></td><td>elf</td><td>42</td><td><span class='tag dead'>dead</span></td><td>350</td><td>F4</td><td>L1</td><td>-39/28</td><td>212g</td><td>18</td><td>82.8%</td><td>50.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/2)</span></td><td>18.8% <span style='color:#94a3b8;font-size:0.85em;'>(254/1350)</span></td><td>lethal pool trap</td></tr>
+<tr><td><a href='00314_elf.html'>Galadhrim the Pathfinder</a></td><td>elf</td><td>314</td><td><span class='tag dead'>dead</span></td><td>532</td><td>F4</td><td>L1</td><td>-4/32</td><td>107g</td><td>53</td><td>79.3%</td><td>50.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/2)</span></td><td>49.1% <span style='color:#94a3b8;font-size:0.85em;'>(724/1476)</span></td><td>chest explosion</td></tr>
+<tr><td><a href='01234_elf.html'>Legolas the Bowyer</a></td><td>elf</td><td>1234</td><td><span class='tag dead'>dead</span></td><td>609</td><td>F4</td><td>L1</td><td>0/28</td><td>382g</td><td>26</td><td>97.8%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/3)</span></td><td>12.6% <span style='color:#94a3b8;font-size:0.85em;'>(268/2120)</span></td><td>starvation</td></tr>
+<tr><td><a href='00007_dwarf.html'>Oin Runesinger</a></td><td>dwarf</td><td>7</td><td><span class='tag dead'>dead</span></td><td>1306</td><td>F3</td><td>L4</td><td>0/100</td><td>759g</td><td>102</td><td>84.0%</td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(3/3)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1702/1702)</span></td><td>starvation</td></tr>
+<tr><td><a href='00013_dwarf.html'>Fili of Khazad-dum</a></td><td>dwarf</td><td>13</td><td><span class='tag dead'>dead</span></td><td>1132</td><td>F3</td><td>L4</td><td>0/94</td><td>550g</td><td>152</td><td>63.6%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/2)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(2414/2414)</span></td><td>starvation</td></tr>
+<tr><td><a href='00300_elf.html'>Thranduil the Fair</a></td><td>elf</td><td>300</td><td><span class='tag dead'>dead</span></td><td>1622</td><td>F3</td><td>L4</td><td>0/56</td><td>345g</td><td>155</td><td>84.2%</td><td>66.7% <span style='color:#94a3b8;font-size:0.85em;'>(4/6)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1428/1428)</span></td><td>starvation</td></tr>
+<tr><td><a href='00500_elf.html'>Tauriel Moonsinger</a></td><td>elf</td><td>500</td><td><span class='tag dead'>dead</span></td><td>1522</td><td>F3</td><td>L4</td><td>0/58</td><td>51g</td><td>159</td><td>72.5%</td><td>57.1% <span style='color:#94a3b8;font-size:0.85em;'>(4/7)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1868/1868)</span></td><td>starvation</td></tr>
+<tr><td><a href='05678_dwarf.html'>Oin the Bold</a></td><td>dwarf</td><td>5678</td><td><span class='tag dead'>dead</span></td><td>1663</td><td>F3</td><td>L4</td><td>0/100</td><td>258g</td><td>116</td><td>91.2%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/2)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1960/1960)</span></td><td>starvation</td></tr>
+<tr><td><a href='00007_elf.html'>Glorfindel the Quenya-tongued</a></td><td>elf</td><td>7</td><td><span class='tag dead'>dead</span></td><td>1230</td><td>F3</td><td>L3</td><td>0/48</td><td>736g</td><td>147</td><td>79.9%</td><td>66.7% <span style='color:#94a3b8;font-size:0.85em;'>(2/3)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1818/1818)</span></td><td>starvation</td></tr>
+<tr><td><a href='00200_dwarf.html'>Ori Stonefoot</a></td><td>dwarf</td><td>200</td><td><span class='tag dead'>dead</span></td><td>1448</td><td>F3</td><td>L3</td><td>0/84</td><td>216g</td><td>94</td><td>80.8%</td><td>40.0% <span style='color:#94a3b8;font-size:0.85em;'>(2/5)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1302/1302)</span></td><td>starvation</td></tr>
+<tr><td><a href='00256_dwarf.html'>Gimli the Mighty</a></td><td>dwarf</td><td>256</td><td><span class='tag dead'>dead</span></td><td>1417</td><td>F3</td><td>L3</td><td>0/86</td><td>65g</td><td>66</td><td>89.2%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/2)</span></td><td>85.1% <span style='color:#94a3b8;font-size:0.85em;'>(1234/1450)</span></td><td>starvation</td></tr>
+<tr><td><a href='02200_elf.html'>Cirdan the Bowyer</a></td><td>elf</td><td>2200</td><td><span class='tag dead'>dead</span></td><td>1124</td><td>F3</td><td>L3</td><td>0/48</td><td>384g</td><td>58</td><td>83.4%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/2)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1370/1370)</span></td><td>starvation</td></tr>
+<tr><td><a href='05678_human.html'>Eowyn Oakheart</a></td><td>human</td><td>5678</td><td><span class='tag dead'>dead</span></td><td>1178</td><td>F3</td><td>L3</td><td>0/54</td><td>260g</td><td>98</td><td>89.8%</td><td>33.3% <span style='color:#94a3b8;font-size:0.85em;'>(2/6)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(2138/2138)</span></td><td>starvation</td></tr>
+<tr><td><a href='09001_human.html'>Isildur II</a></td><td>human</td><td>9001</td><td><span class='tag dead'>dead</span></td><td>570</td><td>F3</td><td>L3</td><td>0/52</td><td>275g</td><td>79</td><td>50.7%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/2)</span></td><td>81.9% <span style='color:#94a3b8;font-size:0.85em;'>(1184/1446)</span></td><td>starvation</td></tr>
+<tr><td><a href='00099_dwarf.html'>Gloin III</a></td><td>dwarf</td><td>99</td><td><span class='tag dead'>dead</span></td><td>596</td><td>F3</td><td>L2</td><td>-12/78</td><td>686g</td><td>53</td><td>65.8%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/2)</span></td><td>45.9% <span style='color:#94a3b8;font-size:0.85em;'>(594/1294)</span></td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
+<tr><td><a href='00200_human.html'>Hama the Stalwart</a></td><td>human</td><td>200</td><td><span class='tag dead'>dead</span></td><td>1216</td><td>F3</td><td>L2</td><td>-2/42</td><td>158g</td><td>44</td><td>83.9%</td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/1)</span></td><td>34.4% <span style='color:#94a3b8;font-size:0.85em;'>(352/1024)</span></td><td>defeated by Gnoll</td></tr>
+<tr><td><a href='02024_human.html'>Erkenbrand III</a></td><td>human</td><td>2024</td><td><span class='tag dead'>dead</span></td><td>358</td><td>F3</td><td>L2</td><td>0/40</td><td>652g</td><td>28</td><td>41.0%</td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/1)</span></td><td>69.3% <span style='color:#94a3b8;font-size:0.85em;'>(776/1120)</span></td><td>starvation</td></tr>
+<tr><td><a href='02200_dwarf.html'>Dori of Belegost</a></td><td>dwarf</td><td>2200</td><td><span class='tag dead'>dead</span></td><td>270</td><td>F3</td><td>L2</td><td>-10/74</td><td>300g</td><td>28</td><td>39.5%</td><td>50.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/2)</span></td><td>18.1% <span style='color:#94a3b8;font-size:0.85em;'>(224/1240)</span></td><td>defeated by ELITE UNDEAD SPECTER</td></tr>
+<tr><td><a href='12345_human.html'>Faramir the Brave</a></td><td>human</td><td>12345</td><td><span class='tag dead'>dead</span></td><td>1241</td><td>F2</td><td>L4</td><td>0/60</td><td>365g</td><td>121</td><td>79.2%</td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(3/3)</span></td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(1468/1468)</span></td><td>starvation</td></tr>
+<tr><td><a href='12345_elf.html'>Galadriel the Fair</a></td><td>elf</td><td>12345</td><td><span class='tag dead'>dead</span></td><td>719</td><td>F2</td><td>L3</td><td>0/48</td><td>199g</td><td>77</td><td>61.4%</td><td>100.0% <span style='color:#94a3b8;font-size:0.85em;'>(3/3)</span></td><td>74.0% <span style='color:#94a3b8;font-size:0.85em;'>(656/886)</span></td><td>defeated by Myconid Shaman</td></tr>
+<tr><td><a href='00099_elf.html'>Celeborn the Twice-Born</a></td><td>elf</td><td>99</td><td><span class='tag dead'>dead</span></td><td>603</td><td>F2</td><td>L2</td><td>0/38</td><td>271g</td><td>67</td><td>81.2%</td><td>50.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/2)</span></td><td>91.5% <span style='color:#94a3b8;font-size:0.85em;'>(666/728)</span></td><td>defeated by UNDEAD ZOMBIE</td></tr>
+<tr><td><a href='00271_elf.html'>Celeborn the Lorekeeper</a></td><td>elf</td><td>271</td><td><span class='tag dead'>dead</span></td><td>383</td><td>F2</td><td>L2</td><td>0/38</td><td>554g</td><td>62</td><td>62.7%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/1)</span></td><td>94.6% <span style='color:#94a3b8;font-size:0.85em;'>(666/704)</span></td><td>starvation</td></tr>
+<tr><td><a href='00271_human.html'>Eomer the Vigilant</a></td><td>human</td><td>271</td><td><span class='tag dead'>dead</span></td><td>381</td><td>F2</td><td>L2</td><td>0/45</td><td>584g</td><td>46</td><td>43.2%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/1)</span></td><td>60.9% <span style='color:#94a3b8;font-size:0.85em;'>(398/654)</span></td><td>starvation</td></tr>
+<tr><td><a href='00999_dwarf.html'>Borin Coalbeard</a></td><td>dwarf</td><td>999</td><td><span class='tag dead'>dead</span></td><td>1374</td><td>F2</td><td>L2</td><td>0/74</td><td>205g</td><td>55</td><td>91.8%</td><td>50.0% <span style='color:#94a3b8;font-size:0.85em;'>(1/2)</span></td><td>40.7% <span style='color:#94a3b8;font-size:0.85em;'>(440/1080)</span></td><td>starvation</td></tr>
+<tr><td><a href='02024_dwarf.html'>Nain the Cup-Bearer</a></td><td>dwarf</td><td>2024</td><td><span class='tag dead'>dead</span></td><td>300</td><td>F2</td><td>L2</td><td>0/74</td><td>369g</td><td>26</td><td>74.3%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/1)</span></td><td>34.7% <span style='color:#94a3b8;font-size:0.85em;'>(298/860)</span></td><td>starvation</td></tr>
+<tr><td><a href='02024_elf.html'>Beleg the Ageless</a></td><td>elf</td><td>2024</td><td><span class='tag dead'>dead</span></td><td>409</td><td>F2</td><td>L2</td><td>0/38</td><td>457g</td><td>51</td><td>59.3%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/1)</span></td><td>96.8% <span style='color:#94a3b8;font-size:0.85em;'>(798/824)</span></td><td>starvation</td></tr>
+<tr><td><a href='07777_elf.html'>Luthien the Sea-stained</a></td><td>elf</td><td>7777</td><td><span class='tag dead'>dead</span></td><td>1204</td><td>F2</td><td>L2</td><td>0/38</td><td>97g</td><td>59</td><td>87.7%</td><td>0.0% <span style='color:#94a3b8;font-size:0.85em;'>(0/1)</span></td><td>99.7% <span style='color:#94a3b8;font-size:0.85em;'>(732/734)</span></td><td>starvation</td></tr>
+<tr><td><a href='00300_dwarf.html'>Bofur Ironbeard</a></td><td>dwarf</td><td>300</td><td><span class='tag dead'>dead</span></td><td>593</td><td>F1</td><td>L2</td><td>0/74</td><td>245g</td><td>51</td><td>82.7%</td><td>0% <span style='color:#94a3b8;font-size:0.85em;'>(0/0)</span></td><td>65.0% <span style='color:#94a3b8;font-size:0.85em;'>(408/628)</span></td><td>starvation</td></tr>
+<tr><td><a href='00999_elf.html'>Galadhrim Goldenbough</a></td><td>elf</td><td>999</td><td><span class='tag dead'>dead</span></td><td>348</td><td>F1</td><td>L2</td><td>0/38</td><td>414g</td><td>62</td><td>68.4%</td><td>0% <span style='color:#94a3b8;font-size:0.85em;'>(0/0)</span></td><td>66.5% <span style='color:#94a3b8;font-size:0.85em;'>(496/746)</span></td><td>starvation</td></tr>
+<tr><td><a href='00999_human.html'>Forlong the Tall</a></td><td>human</td><td>999</td><td><span class='tag dead'>dead</span></td><td>277</td><td>F1</td><td>L2</td><td>-1/38</td><td>385g</td><td>51</td><td>58.3%</td><td>0% <span style='color:#94a3b8;font-size:0.85em;'>(0/0)</span></td><td>54.7% <span style='color:#94a3b8;font-size:0.85em;'>(408/746)</span></td><td>defeated by poison</td></tr>
+<tr><td><a href='02500_dwarf.html'>Gloin Axebreaker</a></td><td>dwarf</td><td>2500</td><td><span class='tag dead'>dead</span></td><td>313</td><td>F1</td><td>L2</td><td>0/74</td><td>376g</td><td>43</td><td>69.7%</td><td>0% <span style='color:#94a3b8;font-size:0.85em;'>(0/0)</span></td><td>47.5% <span style='color:#94a3b8;font-size:0.85em;'>(344/724)</span></td><td>defeated by Goblin</td></tr>
+<tr><td><a href='00200_elf.html'>Idril Star-eyed</a></td><td>elf</td><td>200</td><td><span class='tag dead'>dead</span></td><td>189</td><td>F1</td><td>L1</td><td>-4/28</td><td>360g</td><td>27</td><td>60.6%</td><td>0% <span style='color:#94a3b8;font-size:0.85em;'>(0/0)</span></td><td>48.6% <span style='color:#94a3b8;font-size:0.85em;'>(216/444)</span></td><td>defeated by poison</td></tr>
+<tr><td><a href='00300_human.html'>Isildur the Brave</a></td><td>human</td><td>300</td><td><span class='tag dead'>dead</span></td><td>67</td><td>F1</td><td>L1</td><td>0/30</td><td>353g</td><td>11</td><td>0.0%</td><td>0% <span style='color:#94a3b8;font-size:0.85em;'>(0/0)</span></td><td>14.0% <span style='color:#94a3b8;font-size:0.85em;'>(88/628)</span></td><td>defeated by poison</td></tr>
+<tr><td><a href='00314_human.html'>Forlong of the Mark</a></td><td>human</td><td>314</td><td><span class='tag dead'>dead</span></td><td>102</td><td>F1</td><td>L1</td><td>-2/30</td><td>329g</td><td>17</td><td>43.5%</td><td>0% <span style='color:#94a3b8;font-size:0.85em;'>(0/0)</span></td><td>45.6% <span style='color:#94a3b8;font-size:0.85em;'>(136/298)</span></td><td>unknown</td></tr>
+<tr><td><a href='02200_human.html'>Halbarad of Bree</a></td><td>human</td><td>2200</td><td><span class='tag dead'>dead</span></td><td>67</td><td>F1</td><td>L1</td><td>0/30</td><td>224g</td><td>13</td><td>0.0%</td><td>0% <span style='color:#94a3b8;font-size:0.85em;'>(0/0)</span></td><td>24.4% <span style='color:#94a3b8;font-size:0.85em;'>(104/426)</span></td><td>chest explosion</td></tr>
+<tr><td><a href='07777_dwarf.html'>Bombur Axebreaker</a></td><td>dwarf</td><td>7777</td><td><span class='tag dead'>dead</span></td><td>65</td><td>F1</td><td>L1</td><td>-25/64</td><td>330g</td><td>16</td><td>0.0%</td><td>0% <span style='color:#94a3b8;font-size:0.85em;'>(0/0)</span></td><td>28.4% <span style='color:#94a3b8;font-size:0.85em;'>(128/450)</span></td><td>lethal pool trap</td></tr>
+  </table>
+</section>
+</body>
+</html>

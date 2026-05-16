@@ -15,6 +15,17 @@ Use:
     pid = _CHARACTERS_POOL[index]                # if you want a specific one
     pid = random.choice(_CHARACTERS_POOL)        # if assignment is random
     img = canonical_pool[pid]["img_b64"]
+
+Race filtering
+--------------
+`_CHARACTERS_BY_RACE` maps 'human' / 'elf' / 'dwarf' to a list of pids
+that are visually appropriate for that race. Maintained by the
+sprite_package/picks_characters/picker.html tool — the JSON output from
+that picker gets transcribed into the dict below.
+
+Call `get_race_pool(race)` to fetch the filtered pool. If the race has
+no curated picks yet (empty list), it falls back to `_CHARACTERS_POOL`
+so character creation never breaks.
 """
 
 _CHARACTERS_POOL = [
@@ -92,3 +103,48 @@ _CHARACTERS_POOL = [
     'CH0400',  # variant_index=71 sheet=S6T src=r09c01
     'CH0405',  # variant_index=72 sheet=S6T src=r09c11
 ]
+
+
+# Race -> list of pids. Populated from
+# sprite_package/picks_characters/character_picks.json (export of the
+# picker.html tool). Order matches _CHARACTERS_POOL so re-running the
+# picker on top of the current state preserves the visual layout.
+# Empty list means "no curated selection yet — fall back to the full
+# pool" (handled by get_race_pool).
+_CHARACTERS_BY_RACE = {
+    'human': [
+        'CH0040', 'CH0042', 'CH0045', 'CH0048', 'CH0049',
+        'CH0057', 'CH0060', 'CH0061', 'CH0064', 'CH0065',
+        'CH0066', 'CH0068', 'CH0078', 'CH0081', 'CH0084',
+        'CH0093', 'CH0107', 'CH0108', 'CH0124', 'CH0138',
+        'CH0139', 'CH0140', 'CH0150', 'CH0152', 'CH0155',
+        'CH0156', 'CH0275', 'CH0284', 'CH0338', 'CH0341',
+        'CH0349', 'CH0353', 'CH0393',
+    ],
+    'elf': [
+        'CH0008', 'CH0009', 'CH0010', 'CH0022', 'CH0024',
+        'CH0025', 'CH0050', 'CH0051', 'CH0082', 'CH0119',
+        'CH0134', 'CH0135', 'CH0165', 'CH0167', 'CH0185',
+        'CH0186', 'CH0272', 'CH0282', 'CH0332', 'CH0347',
+        'CH0362', 'CH0377', 'CH0389', 'CH0400',
+    ],
+    'dwarf': [
+        'CH0012', 'CH0013', 'CH0014', 'CH0026', 'CH0028',
+        'CH0054', 'CH0055', 'CH0070', 'CH0145', 'CH0147',
+        'CH0161', 'CH0162', 'CH0313', 'CH0365', 'CH0397',
+        'CH0405',
+    ],
+}
+
+
+def get_race_pool(race):
+    """Return the curated sprite pool for `race`, or the full pool if empty.
+
+    Accepts any casing; unknown races fall back to the full pool too.
+    """
+    key = (race or '').lower()
+    pool = _CHARACTERS_BY_RACE.get(key)
+    if pool:
+        return pool
+    return _CHARACTERS_POOL
+

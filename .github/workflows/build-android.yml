@@ -6,11 +6,21 @@ name: Build Android APK
 #   - Manual         -> workflow_dispatch from the GitHub UI
 # Previously we also listened to `push: claude/*`, which caused duplicate
 # runs (push + PR) for the same commit during feature-branch development.
+#
+# `paths-ignore: docs/**` keeps the build from firing on docs-only
+# commits -- the playtest harness's --deploy flag auto-pushes reports
+# to docs/playtest/ and we don't want each report deploy to burn a
+# full APK build + release. Code changes under wizardscavern/ etc.
+# still trigger normally.
 on:
   push:
     branches: [ main, master ]
+    paths-ignore:
+      - 'docs/**'
   pull_request:
     branches: [ main, master ]
+    paths-ignore:
+      - 'docs/**'
   workflow_dispatch:
 
 # Cancel any in-progress run for the same ref when a new commit arrives.
