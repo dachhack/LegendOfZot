@@ -2040,7 +2040,13 @@ def smart_policy(obs, rng, use_lantern=True):
         # agent has to actually see the M before recognising it as
         # a guardian.
         guardian_dirs = set(obs.get("tomb_guardian_dirs") or [])
-        guardian_safe = p.get("level", 1) >= p.get("floor", 1) + 2
+        # Release threshold: pc.level >= pc.floor + 3 (was +2). The
+        # earlier +2 gate released for Lv4 elf on F2 (4 >= 4), but
+        # the elite mummy at Lv4 hits fragile races (elf base HP 28)
+        # for 28 per swing -- one-shot. +3 keeps the avoid active
+        # until the agent actually has the HP cushion to survive
+        # the trade.
+        guardian_safe = p.get("level", 1) >= p.get("floor", 1) + 3
         blocked_guardian_dirs = (
             guardian_dirs if guardian_dirs and not guardian_safe
             else set()
@@ -3077,17 +3083,29 @@ def smart_policy(obs, rng, use_lantern=True):
         #   'r' (Raid)         -- spawns an undead guardian; if you win,
         #                         major reward (cursed weapon/armor).
         #   'p' (Pay Respects) -- safe heal or minor buff, no fight.
-        # Raid only when we have a real fallback for a bad fight.
-        # Tomb guardians can be Lv5 at floor 1-3 (dwarf/123 ate a 46-dmg
-        # Wraith one-shot at 91% HP with no escape route), so HP% alone
-        # is not enough. Two gates, EITHER triggers 'p':
-        #   1. is_weak            (HP < 50% or broken / missing gear)
-        #   2. no fallback option (no healing potion in bag AND no
-        #                          affordable Heal spell). If both are
-        #                          missing we have no way to recover
-        #                          from a bad guardian draw.
+        # Raid only when we're flush AND not on a floor that's
+        # already proven to have undead. Four gates, ANY triggers 'p':
+        #   1. is_weak              (HP < 50% or broken / missing gear)
+        #   2. no fallback          (no healing potion in bag AND no
+        #                            affordable Heal spell -- no
+        #                            recovery from a bad guardian draw)
+        #   3. tomb_suspected_here  (already fought an undead on this
+        #                            floor; one more dragon-lich-tier
+        #                            fight is a coin flip on death)
+        #   4. not over-levelled    (pc.level < pc.floor + 2 -- the
+        #                            raid spawns a Lv(floor+2) guardian
+        #                            and fragile races (elf base HP 28)
+        #                            get one-shot at parity HP). User-
+        #                            flagged after Legolas the Bowyer
+        #                            seed=1234 elf raided an F2 tomb at
+        #                            Lv4, the elite mummy spawned at
+        #                            Lv4 and hit him for 28/swing,
+        #                            dead in 1-2 rounds.
         no_escape = (heal_pot_slot is None) and (heal_spell_slot is None)
-        if is_weak or no_escape:
+        tomb_floor = bool(obs.get("tomb_suspected_here"))
+        pc_floor = p.get("floor", 1)
+        under_for_raid = p.get("level", 1) < pc_floor + 2
+        if is_weak or no_escape or tomb_floor or under_for_raid:
             return "p"
         return "r"
     if mode == "dungeon_mode":
