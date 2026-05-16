@@ -1995,16 +1995,32 @@ def smart_policy(obs, rng, use_lantern=True):
         #      would have revealed -- the fuel cost outweighs the
         #      surprise cost.
         fuel_total = (lantern_fuel or 0) + (spare_fuel_uses or 0) * 10
-        fuel_scarce = fuel_total < 15
+        # Two-tier fuel gate. "Low" lets the agent skip frivolous
+        # fires (random fog-adjacent move on a known-safe area).
+        # "Empty" is the hard stop -- can't fire without fuel.
+        # Critical lanterns (fog-adjacent step IMMINENT) always fire
+        # while fuel > 0, even when fuel_low triggers -- a single
+        # warp is worth dozens of saved fires. User-flagged Forlong
+        # of the Mark (human seed 314): stepped east into a fog
+        # tile that was W, got forced-warped F2->F4, because fuel=10
+        # triggered the old 'fuel_scarce' gate and the lantern
+        # skipped the critical reveal.
+        fuel_empty = lantern_fuel <= 0
         over_leveled_for_floor = (
             p.get("level", 1) >= p.get("floor", 1) + 2
         )
         strong_and_healthy = over_leveled_for_floor and hp_pct >= 0.80
-        can_skip_lantern = fuel_scarce or strong_and_healthy
-        if use_lantern and not can_skip_lantern:
-            if unknown_neighbours >= 1:
-                return "l"
-        # Periodic stuck-fire even when can_skip_lantern is True --
+        # Critical fire: any fuel left + fog adjacent + not
+        # strong-and-healthy = burn it. The previous fuel_scarce
+        # gate (< 15 fuel) skipped reveals at the worst time,
+        # letting Forlong of the Mark step east into a fog tile
+        # that was W and getting force-warped F2->F4. A single
+        # warp is more expensive than a dozen fires.
+        if (use_lantern and not fuel_empty
+                and not strong_and_healthy
+                and unknown_neighbours >= 1):
+            return "l"
+        # Periodic stuck-fire even when other gates would skip --
         # reveals long-range tiles when the agent is truly cornered.
         if (use_lantern and lantern_fuel > 5
                 and very_stuck and obs["turn"] % 10 == 0):
