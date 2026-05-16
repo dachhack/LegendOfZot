@@ -3146,14 +3146,26 @@ def process_hunger(character):
 
     h = character.hunger
 
-    # HP regeneration: 1 HP every 2 moves when hunger >= 85
-    if h >= 85 and character.health < character.max_health:
+    # HP regeneration: tiered by hunger band so a fed agent keeps
+    # recovering chip damage instead of stalling once they drop
+    # below "stuffed". User-requested balance pass to push more
+    # honest survivors past 3000T without looping at HP=1:
+    #   hunger >= 85: 1 HP / 2 moves (well-fed sprint)
+    #   60 <= hunger < 85: 1 HP / 4 moves (sated cruise)
+    #   below 60: no regen (your meal is wearing off)
+    # Starving players (h <= 0) still TAKE damage via the gate
+    # below, so this never resurrects a doomed agent.
+    if character.health < character.max_health and h >= 60:
+        rate = 2 if h >= 85 else 4
         tracker = getattr(character, 'hunger_regen_tracker', 0) + 1
         character.hunger_regen_tracker = tracker
-        if tracker >= 2:
+        if tracker >= rate:
             character.hunger_regen_tracker = 0
             character.health = min(character.max_health, character.health + 1)
-            add_log(f"{COLOR_GREEN}[Well-fed] +1 HP{COLOR_RESET}")
+            if h >= 85:
+                add_log(f"{COLOR_GREEN}[Well-fed] +1 HP{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_GREEN}[Sated] +1 HP{COLOR_RESET}")
     else:
         character.hunger_regen_tracker = 0
 
