@@ -2168,21 +2168,22 @@ def smart_policy(obs, rng, use_lantern=True):
             return "i"
         if urgent_meat is not None:
             return "i"
-        # Cooking gate: when the agent holds a Cooking Kit AND has raw
-        # meat AND isn't urgently hungry (let urgent_meat fire first),
-        # open inventory to use the kit. Cooking extends rot timer
-        # (raw 30 -> cooked 100 moves) and bumps nutrition, so a kill
-        # drop converts to a 50-70 nutrition food item the agent can
-        # eat anywhere on the floor instead of having to gnaw raw
-        # meat before it spoils. The inventory branch handles the
-        # actual `u<cooking_slot>` selection.
+        # Cooking gate: user spec is "cook all their meat once they
+        # have the kit -- eating cooked meat is much better for
+        # survival." Fire whenever has_cooking_kit AND has_raw_meat,
+        # no hunger gate. The kit cooks ALL raw meat in one action
+        # (CookingKit.use()), so this triggers once per batch of
+        # fresh kills regardless of how much remains. urgent_meat
+        # still fires first when a raw meat is about to rot --
+        # better to eat it raw than to lose it before the cook turn
+        # completes.
         has_cooking_kit = any(i["category"] == "cooking_kit" for i in inv)
         has_raw_meat = any(
             i["category"] == "food" and i.get("rot_timer") is not None
             and not i.get("is_cooked")
             for i in inv
         )
-        if has_cooking_kit and has_raw_meat and hunger > 50:
+        if has_cooking_kit and has_raw_meat:
             return "i"
         # broken_weapon / broken_armor / is_weak are hoisted above.
         # Open inventory to swap when current gear is broken AND we
@@ -2993,13 +2994,12 @@ def smart_policy(obs, rng, use_lantern=True):
         if proposed is None and urgent_meat is not None:
             # Don't wait until starving -- consume the kill drop now.
             proposed = f"eat{urgent_meat}"
-        # Cook raw meat with the Cooking Kit when present + not
-        # urgently hungry. CookingKit.use() cooks ALL raw meat in
-        # inventory in a single action, so this fires once per
-        # batch of kills. Slot indexes off the working-items
-        # filter (same as scrolls/potions): find the CookingKit's
-        # slot and send u<N>.
-        if proposed is None and hunger > 50:
+        # Cook raw meat with the Cooking Kit. User: 'have the player
+        # cook all their meat once they have the kit. Eating cooked
+        # meat is much better for survival.' No hunger gate -- cook
+        # whenever raw meat exists. CookingKit.use() cooks ALL raw
+        # meat in inventory in a single action.
+        if proposed is None:
             has_raw_meat_iv = any(
                 e["category"] == "food"
                 and e.get("rot_timer") is not None

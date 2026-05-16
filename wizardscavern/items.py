@@ -2493,9 +2493,8 @@ def generate_vendor_inventory(floor_level, room):
     #   F1+: Rations + Iron Rations (user-requested -- was F3+;
     #        early-floor agents need the heavy-nutrition option).
     #   F2+: Salted Jerky.
-    #   F4+: Cooking Kit (was F3+; bumped to F4 per user spec --
-    #        floors 1-3 should be tight enough that hunger is a
-    #        real constraint without the cook-to-stretch lever).
+    #   F3+: Cooking Kit (original game tier; restored after a
+    #        brief F4 experiment).
     rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=1)
     inventory.append(_create_item_copy(rations))
     iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
@@ -2503,7 +2502,7 @@ def generate_vendor_inventory(floor_level, room):
     if floor_level >= 2:
         jerky = Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1)
         inventory.append(_create_item_copy(jerky))
-    if floor_level >= 4:
+    if floor_level >= 3:
         cooking_kit = CookingKit()
         inventory.append(cooking_kit)
 
