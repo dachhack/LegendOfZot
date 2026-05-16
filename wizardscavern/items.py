@@ -1883,7 +1883,12 @@ class Scroll(Item):
                 status_effect_magnitude=int(self.spell_to_cast.status_effect_magnitude * self.spell_power_multiplier) if self.spell_to_cast.status_effect_magnitude else 0
             )
 
-            # Cast on active monster if in combat, otherwise heal/buff self
+            # Cast on active monster if in combat, otherwise heal/buff
+            # self. Damage spells out of combat have no valid target --
+            # cast_spell would crash on target.elemental_weakness because
+            # Character has `elemental_weaknesses` (plural list) while
+            # Monster has `elemental_weakness`. Refuse the cast and
+            # leave the scroll uncconsumed.
             if gs.active_monster and gs.active_monster.is_alive():
                 # Scrolls bypass Platino's defenses
                 if gs.active_monster.properties.get('is_platino'):
@@ -1894,8 +1899,12 @@ class Scroll(Item):
                 # Check if monster died
                 if not gs.active_monster.is_alive():
                     add_log(f"{COLOR_GREEN}The scroll's power obliterated the {gs.active_monster.name}!{COLOR_RESET}")
+            elif enhanced_spell.spell_type == 'damage':
+                # Out-of-combat damage scrolls have nothing to hit.
+                add_log(f"{COLOR_YELLOW}The {self.name}'s {enhanced_spell.name} crackles with power but finds no target. You stop reading.{COLOR_RESET}")
+                return False  # Don't consume
             else:
-                # Self-cast (healing/buff spells)
+                # Self-cast (healing / buff / remove_status spells)
                 character.cast_spell(enhanced_spell, character)
                 add_log(f"{COLOR_GREEN}The scroll's enhanced magic flows through you! (+{int((self.spell_power_multiplier - 1) * 100)}% power){COLOR_RESET}")
 
@@ -2480,18 +2489,22 @@ def generate_vendor_inventory(floor_level, room):
         upgrade_scroll = Scroll("Scroll of Upgrade", "A mystical scroll of enhancement.", "Upgrade items to +3 maximum.", 150, 1, 'upgrade')
     inventory.append(upgrade_scroll)
 
-    # Always stock some food items
-    rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=1)
+    # Always stock some food items. Tiered by floor:
+    #   F1+: Rations + Iron Rations (user-requested -- was F3+;
+    #        early-floor agents need the heavy-nutrition option).
+    #   F2+: Salted Jerky.
+    #   F3+: Cooking Kit (original game tier; restored after a
+    #        brief F4 experiment).
+    rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=1)
     inventory.append(_create_item_copy(rations))
+    iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
+    inventory.append(_create_item_copy(iron_rations))
     if floor_level >= 2:
         jerky = Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1)
         inventory.append(_create_item_copy(jerky))
     if floor_level >= 3:
-        # Cooking Kit available from floor 3+
         cooking_kit = CookingKit()
         inventory.append(cooking_kit)
-        iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
-        inventory.append(_create_item_copy(iron_rations))
 
     # Curing Kit: stocked on the first vendor found on a specific random floor (1-10).
     # Safety net: if player has reached floor 10 without the kit being stocked yet,
@@ -2655,7 +2668,7 @@ class Lantern(Item):
                 return False # Not consumed
 
 class LanternFuel(Item):
-    def __init__(self, name="Lantern Fuel", description="A small flask of oil for your lantern.", value=5, level=0, fuel_restore_amount=10, count=1):
+    def __init__(self, name="Lantern Fuel", description="A small flask of oil for your lantern.", value=5, level=0, fuel_restore_amount=20, count=1):
         super().__init__(name, description, value, level)
         self.fuel_restore_amount = fuel_restore_amount
         self.count = count
@@ -3028,11 +3041,23 @@ def drop_monster_items(monster, player_character):
         display = get_item_display_name(item)
         add_log(f"{COLOR_CYAN}The {monster.name} dropped {get_article(display)} {display}!{COLOR_RESET}")
     elif roll < 0.85:
-        # Scroll drop
+        # Scroll drop. Bias toward upgrade scrolls -- they're the only
+        # weapon-power scaling lever for non-caster races (dwarf,
+        # human) and an even-pick across SCROLL_TEMPLATES makes
+        # upgrades ~1 in 8 drops. New rule: 50% chance the drop is
+        # a floor-tier upgrade scroll, 50% chance it's a random
+        # eligible template (which may itself include upgrades).
         scroll_candidates = [s for s in SCROLL_TEMPLATES if s.level <= floor_lvl + 2]
         if not scroll_candidates:
             scroll_candidates = SCROLL_TEMPLATES
-        base = random.choice(scroll_candidates)
+        # 50/50 bias: pick from upgrade scrolls if available, else
+        # fall back to the random pool.
+        upgrade_candidates = [s for s in scroll_candidates
+                              if s.scroll_type == 'upgrade']
+        if upgrade_candidates and random.random() < 0.50:
+            base = random.choice(upgrade_candidates)
+        else:
+            base = random.choice(scroll_candidates)
         item = Scroll(name=base.name, scroll_type=base.scroll_type,
                       spell_to_cast=base.spell_to_cast,
                       spell_power_multiplier=base.spell_power_multiplier,
@@ -3076,8 +3101,11 @@ def drop_monster_meat(monster, player_character, fire_killed=False):
     info = get_monster_meat_info(monster.name)
     if info is None:
         return  # Not edible
-    # 35% chance to drop meat
-    if random.random() > 0.35:
+    # 55% chance to drop meat (was 35% -- user-requested balance pass).
+    # Combined with the Cooking Kit being F1+ available, this gives
+    # agents who clear floors a meaningful steady food source so the
+    # food clock doesn't always end the run before depth does.
+    if random.random() > 0.55:
         return
     cut, descriptor, nutrition = info
     raw_name = f"Raw {monster.name} {cut.capitalize()}"
@@ -3125,22 +3153,45 @@ def process_hunger(character):
 
     h = character.hunger
 
-    # HP regeneration: 1 HP every 2 moves when hunger >= 85
-    if h >= 85 and character.health < character.max_health:
+    # HP regeneration: tiered by hunger band so a fed agent keeps
+    # recovering chip damage instead of stalling once they drop
+    # below "stuffed". User-requested balance pass to push more
+    # honest survivors past 3000T without looping at HP=1:
+    #   hunger >= 85: 1 HP / 2 moves (well-fed sprint)
+    #   60 <= hunger < 85: 1 HP / 4 moves (sated cruise)
+    #   below 60: no regen (your meal is wearing off)
+    # Starving players (h <= 0) still TAKE damage via the gate
+    # below, so this never resurrects a doomed agent.
+    if character.health < character.max_health and h >= 60:
+        rate = 2 if h >= 85 else 4
         tracker = getattr(character, 'hunger_regen_tracker', 0) + 1
         character.hunger_regen_tracker = tracker
-        if tracker >= 2:
+        if tracker >= rate:
             character.hunger_regen_tracker = 0
             character.health = min(character.max_health, character.health + 1)
-            add_log(f"{COLOR_GREEN}[Well-fed] +1 HP{COLOR_RESET}")
+            if h >= 85:
+                add_log(f"{COLOR_GREEN}[Well-fed] +1 HP{COLOR_RESET}")
+            else:
+                add_log(f"{COLOR_GREEN}[Sated] +1 HP{COLOR_RESET}")
     else:
         character.hunger_regen_tracker = 0
 
     if h <= 0:
-        # Starving: take damage
+        # Starving: take damage. Floor was max(1, hp - dmg) which made
+        # starvation un-killable -- an agent who depleted food sat at
+        # HP=1 wandering forever, neither dying nor recovering. The
+        # playtester surfaced ~3-5 alive flatlines per grid pinned at
+        # HP=1 hunger=0 in game_loop. Switched to max(0, ...) so the
+        # food clock can actually run out; move_player's post-tick
+        # is_alive() check (game_systems.py:2926) flips to
+        # death_screen on HP=0.
         dmg = 2
-        character.health = max(1, character.health - dmg)
-        add_log(f"{COLOR_RED}You are STARVING! Lost {dmg} HP from hunger!{COLOR_RESET}")
+        new_hp = max(0, character.health - dmg)
+        character.health = new_hp
+        if new_hp <= 0:
+            add_log(f"{COLOR_RED}You collapse from starvation...{COLOR_RESET}")
+        else:
+            add_log(f"{COLOR_RED}You are STARVING! Lost {dmg} HP from hunger!{COLOR_RESET}")
     elif h <= HUNGER_STARVING_THRESHOLD:
         # About to starve warning
         if h % 10 == 0:
@@ -3226,15 +3277,24 @@ class Treasure(Item):
             return True  # Remove from inventory after collecting
 
         elif self.treasure_type == 'stat_boost':
-            # Apply permanent stat boosts
+            # Apply permanent stat boosts. max_health / max_mana are
+            # @property derived from level/str/int + base_max_*_bonus
+            # and have no setter; route those through the bonus fields
+            # so the property recomputes. defense/attack already had
+            # explicit special-cases for the same reason.
             for stat, amount in self.benefit.items():
-                # Handle properties that don't have setters
                 if stat == 'defense':
                     character._base_defense += amount
                     add_log(f"{COLOR_GREEN}Defense increased by {amount}! Now: {character.defense}{COLOR_RESET}")
                 elif stat == 'attack':
                     character._base_attack += amount
                     add_log(f"{COLOR_GREEN}Attack increased by {amount}! Now: {character.attack}{COLOR_RESET}")
+                elif stat == 'max_health':
+                    character.base_max_health_bonus += amount
+                    add_log(f"{COLOR_GREEN}Max HP increased by {amount}! Now: {character.max_health}{COLOR_RESET}")
+                elif stat == 'max_mana':
+                    character.base_max_mana_bonus += amount
+                    add_log(f"{COLOR_GREEN}Max Mana increased by {amount}! Now: {character.max_mana}{COLOR_RESET}")
                 elif hasattr(character, stat):
                     current = getattr(character, stat)
                     setattr(character, stat, current + amount)

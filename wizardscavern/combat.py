@@ -401,7 +401,7 @@ def process_combat_action(player_character, my_tower, cmd):
         add_log(f"{COLOR_GREEN}The {gs.active_monster.name} succumbed to its status effects!{COLOR_RESET}")
         # XP, Gold, Room clearing logic should be here as well
          # Calculate base rewards
-        xp_reward = (gs.active_monster.level + 1) * 5
+        xp_reward = (gs.active_monster.level + 1) * 8 + gs.active_monster.level ** 2 * 2
 
         # Check if this is a legendary monster with custom gold drop
         if gs.active_monster.properties.get('is_legendary'):
@@ -602,7 +602,7 @@ def process_combat_action(player_character, my_tower, cmd):
                     add_log(f"{COLOR_GREEN}You defeated the {gs.active_monster.name}!{COLOR_RESET}")
                     add_log(f"{COLOR_GREEN}{gs.active_monster.victory_text}{COLOR_RESET}")
 
-                    xp_reward = (gs.active_monster.level + 1) * 5
+                    xp_reward = (gs.active_monster.level + 1) * 8 + gs.active_monster.level ** 2 * 2
                     gold_drop = random.randint(1, 10) * (gs.active_monster.level + 1)
 
                     if 'Fortune' in player_character.status_effects:
@@ -823,7 +823,7 @@ def process_combat_action(player_character, my_tower, cmd):
             #
             # CALCULATE BASE REWARDS
             #
-            xp_reward = (gs.active_monster.level + 1) * 5
+            xp_reward = (gs.active_monster.level + 1) * 8 + gs.active_monster.level ** 2 * 2
             gold_drop = random.randint(1, 10) * (gs.active_monster.level + 1)
 
             #
@@ -902,12 +902,18 @@ def process_combat_action(player_character, my_tower, cmd):
                 if gs.active_monster.properties.get('is_legendary'):
                     shard_type = gs.active_monster.properties.get('shard_type')
 
-                    # Shard passive bonuses
+                    # Shard passive bonuses. max_health / max_mana are
+                    # @property in Character (no setter) -- writing
+                    # them directly raises AttributeError. Route the
+                    # +20 through base_max_*_bonus so the property
+                    # picks it up, then heal/refill into the new
+                    # ceiling. Surfaced by the playtester catching
+                    # the same bug in room_actions.py shrine prayer.
                     shard_bonuses = {
                         'battle': ('Attack +3', lambda: setattr(player_character, 'base_attack', player_character.base_attack + 3)),
                         'treasure': ('Gold drops +10%', None),  # Implemented in gold calculation
-                        'devotion': ('Max HP +20', lambda: (setattr(player_character, 'max_health', player_character.max_health + 20), setattr(player_character, 'health', player_character.health + 20))),
-                        'reflection': ('Max Mana +20', lambda: (setattr(player_character, 'max_mana', player_character.max_mana + 20), setattr(player_character, 'mana', player_character.mana + 20))),
+                        'devotion': ('Max HP +20', lambda: (setattr(player_character, 'base_max_health_bonus', player_character.base_max_health_bonus + 20), setattr(player_character, 'health', player_character.health + 20))),
+                        'reflection': ('Max Mana +20', lambda: (setattr(player_character, 'base_max_mana_bonus', player_character.base_max_mana_bonus + 20), setattr(player_character, 'mana', player_character.mana + 20))),
                         'knowledge': ('Spell costs -20%', None),  # Implemented in spell casting
                         'secrets': ('Reveal hidden rooms', None),  # Special ability
                         'eternity': ('Defense +5', lambda: setattr(player_character, 'base_defense', player_character.base_defense + 5)),
@@ -1147,13 +1153,21 @@ def process_combat_action(player_character, my_tower, cmd):
                 add_log(f"{COLOR_GREEN}You successfully broke away from combat!{COLOR_RESET}")
                 add_log("Choose a direction to flee (n/s/e/w):")
                 gs.prompt_cntl = "flee_direction_mode"
+                # Clean break: a successful flee no longer eats a
+                # monster parting attack. Killed Thorin of Belegost
+                # (dwarf seed 1234) -- he fled successfully from a
+                # Hardened Stirge at HP=1 (starving + dipped from
+                # warp), the parting attack hit for 1 damage, he
+                # died on the "broke away" tick. The flee mechanic
+                # is supposed to be the escape valve; the free
+                # attack made every flee a HP gamble even on success.
             else:
                 add_log(f"{COLOR_RED}Flee failed! The monster blocks your escape.{COLOR_RESET}")
-            gs.active_monster.attack_target(player_character)
-            if not player_character.is_alive():
-                add_log(f"{COLOR_RED}You were defeated...{COLOR_RESET}")
-                gs.prompt_cntl = "death_screen"
-                return
+                gs.active_monster.attack_target(player_character)
+                if not player_character.is_alive():
+                    add_log(f"{COLOR_RED}You were defeated...{COLOR_RESET}")
+                    gs.prompt_cntl = "death_screen"
+                    return
 
     elif cmd == 'c':
         # Only allow spell casting if player can cast spells
@@ -1665,7 +1679,7 @@ def process_spell_casting_action(player_character, my_tower, cmd):
                     add_log(f"{COLOR_GREEN}{gs.active_monster.victory_text}{COLOR_RESET}")
 
                     # Calculate base rewards
-                    xp_reward = (gs.active_monster.level + 1) * 5
+                    xp_reward = (gs.active_monster.level + 1) * 8 + gs.active_monster.level ** 2 * 2
                     gold_drop = random.randint(1, 10) * (gs.active_monster.level + 1)
 
                     # Apply Fortune bonus

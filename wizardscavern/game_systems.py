@@ -848,10 +848,6 @@ def use_carnyx_of_doom(character, my_tower):
 
     if monsters_killed > 0:
         add_log(f"{COLOR_YELLOW}The Carnyx killed {monsters_killed} monster(s)!{COLOR_RESET}")
-        # Award XP for kills
-        xp_gain = monsters_killed * 50
-        character.gain_experience(xp_gain)
-        add_log(f"{COLOR_GREEN}Gained {xp_gain} XP from the carnyx kills!{COLOR_RESET}")
     else:
         add_log(f"{COLOR_YELLOW}No monsters were in range of the blast.{COLOR_RESET}")
 
@@ -2099,8 +2095,14 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                                 if still_hurt and still_have:
                                     add_log(f"{COLOR_CYAN}Type 'df' or tap Drink Full to heal to max.{COLOR_RESET}")
                     else:
-                        # Non-healing potions: use one at a time
-                        consumed = item_to_use.use(player_character)
+                        # Non-healing potions: use one at a time. Pass
+                        # my_tower so map-touching potions (True Sight
+                        # reveals tiles, Invisibility marks the floor)
+                        # don't AttributeError on `my_tower.floors[z]`.
+                        # Surfaced by playtest: agent drank True Sight,
+                        # Potion.use hit `my_tower.floors[character.z]`
+                        # with my_tower=None and crashed.
+                        consumed = item_to_use.use(player_character, my_tower)
                         if consumed:
                             if getattr(item_to_use, 'count', 1) > 1:
                                 item_to_use.count -= 1
@@ -2123,6 +2125,7 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                             # Foresight scroll changes prompt mode
                             pass
                     else:
+                        prompt_before_scroll = gs.prompt_cntl
                         consumed = item_to_use.use(player_character, my_tower)
                         if consumed:
                             # Handle stack: decrement count or remove if last one
@@ -2131,9 +2134,16 @@ def handle_inventory_menu(player_character, my_tower, cmd):
                                 add_log(f"{COLOR_GREY}({item_to_use.count} remaining){COLOR_RESET}")
                             else:
                                 player_character.inventory.remove_item(item_to_use.name)
-                        gs.inventory_filter = 'use'
-                        gs.prompt_cntl = "inventory"
-                        handle_inventory_menu(player_character, my_tower, "init")
+                        # Only return to inventory if the scroll didn't
+                        # transition to a sub-mode (e.g. Scroll of Identify
+                        # opens identify_scroll_mode and needs the player
+                        # to pick an item; clobbering prompt_cntl here
+                        # reverted it to inventory and the scroll re-fired
+                        # forever -- Arwen elf seed=42 burned 600+ turns).
+                        if gs.prompt_cntl == prompt_before_scroll:
+                            gs.inventory_filter = 'use'
+                            gs.prompt_cntl = "inventory"
+                            handle_inventory_menu(player_character, my_tower, "init")
 
                 elif isinstance(item_to_use, Flare):
                     gs.prompt_cntl = "flare_direction_mode"
@@ -2580,60 +2590,81 @@ def _trigger_room_interaction(player_character, my_tower):
                 new_monster.properties['is_champion'] = True  # Mark as champion
             # Check if this is an Undead Guardian (spawned near tombs)
             elif room.properties.get('undead_guardian', False):
-                # Spawn tough undead guardian. target_lvl previously
-                # ran one above the floor (z+1), giving F3 wraiths Lv4
-                # and one-shot territory damage on Lv1 explorers. Now
-                # tracks the floor 1:1 so STR / HP investment actually
-                # pays off in the fight -- F8 still gets Lv8 wraiths
-                # by the time you're there, but the early floors are
-                # survivable for fresh characters.
-                target_lvl = player_character.z
+                # Tomb-adjacent guardians: ALL are proper undead types
+                # at floor level. Exactly one per tomb is the
+                # `tomb_elite` (marked in setup_dungeons_and_tombs)
+                # and spawns at floor + 2 to gate the tomb's reward
+                # behind one real threat rather than four lethal
+                # ones. The "undead version of a mob" fallback (e.g.,
+                # UNDEAD GOBLIN, UNDEAD BAT) is removed -- if no
+                # undead template sits in the floor's level band we
+                # broaden to all undead templates rather than reach
+                # for a regular mob.
+                # Elite is one level over the floor. The 1.5x stat
+                # multiplier on top of +2 spawn_level made the F2
+                # ELITE UNDEAD SPECTER one-shot Lv1 explorers (8/47
+                # deaths in the prior tuning). +1 with 1.3x is
+                # noticeable but survivable.
+                is_elite = room.properties.get('tomb_elite', False)
+                target_lvl = player_character.z + (1 if is_elite else 0)
                 min_lvl = max(0, target_lvl - 1)
                 max_lvl = target_lvl + 1
 
-                # Prefer undead monster types.  Pool clamped to the player's
-                # floor (no +2 reach) so F1 tombs can't roll a Lv5 Wraith.
-                undead_types = ['Skeleton', 'Zombie', 'Ghost', 'Wraith', 'Vampire', 'Lich', 'Death Knight']
-                undead_monsters = [m for m in MONSTER_TEMPLATES if any(undead in m['name'] for undead in undead_types) and min_lvl <= m['level'] <= max_lvl]
+                undead_types = (
+                    'Skeleton', 'Zombie', 'Ghost', 'Wraith', 'Specter',
+                    'Mummy', 'Vampire', 'Lich', 'Demilich',
+                    'Death Knight',
+                )
+                # Word-boundary match: prior substring loop wrongly
+                # treated 'Lichen' (a fungal plant mob) as undead
+                # because 'Lich' is in 'Lichen', so the playtester
+                # surfaced an "ELITE UNDEAD LICHEN" tomb guardian.
+                # User-flagged: "Lichens don't signal a tomb."
+                import re as _re
+                _undead_re = _re.compile(
+                    r"\b(" + "|".join(_re.escape(t) for t in undead_types) + r")\b"
+                )
+                all_undead = [
+                    m for m in MONSTER_TEMPLATES
+                    if _undead_re.search(m['name'])
+                ]
+                in_range = [
+                    m for m in all_undead
+                    if min_lvl <= m['level'] <= max_lvl
+                ]
+                # No regular-mob fallback. If no undead sits in the
+                # level band, broaden to all undead templates so we
+                # still spawn a proper undead type.
+                m_data = random.choice(in_range or all_undead)
 
-                if undead_monsters:
-                    m_data = random.choice(undead_monsters)
-                else:
-                    # Fallback to any monster near level
-                    potential_monsters = [m for m in MONSTER_TEMPLATES if min_lvl <= m['level'] <= max_lvl]
-                    if not potential_monsters:
-                        potential_monsters = MONSTER_TEMPLATES
-                    m_data = random.choice(potential_monsters)
-
-                # Buffed stats - 1.25x multiplier (was 1.5x; lowered after the
-                # base-30-HP rebalance made the old buff one-shot Lv1 players).
-                # Level is template + 1 but capped at player_character.z + 2 --
-                # without the cap, the pool's natural max (target_lvl + 1) plus
-                # this +1 boost leaks an extra level above the player's floor,
-                # which let Lv5 Wraiths spawn next to floor-3 tombs and one-shot
-                # Lv1 characters (8/16 deaths in the 30-run death analysis).
-                # Spawn level cap now matches the target_lvl floor:
-                # max(template+1, z+1) so a wraith on F3 caps at Lv3
-                # (was Lv4 with the +2 ceiling). Combined with the
-                # weaker target_lvl above this halves the "Lv5 Wraith
-                # on F3 one-shots a Lv1 elf" lottery.
-                level_floor_cap = player_character.z + 1
-                spawn_level = min(m_data.get('level', 1) + 1, level_floor_cap)
+                # Stats: 1.25x baseline (kept from prior balance pass).
+                # Spawn level = target_lvl directly (was template+1
+                # capped at z+1). target_lvl already encodes the
+                # floor-level + elite-bonus, so the +1 template boost
+                # would double-count.
+                spawn_level = target_lvl
+                name_prefix = " UNDEAD " if not is_elite else " ELITE UNDEAD "
+                stat_mult = 1.3 if is_elite else 1.25
                 new_monster = Monster(
-                    f" UNDEAD {m_data['name'].upper()}",
-                    int(m_data['health'] * 1.25),
-                    int(m_data['attack'] * 1.25),
-                    int(m_data['defense'] * 1.25),
+                    f"{name_prefix}{m_data['name'].upper()}",
+                    int(m_data['health'] * stat_mult),
+                    int(m_data['attack'] * stat_mult),
+                    int(m_data['defense'] * stat_mult),
                     m_data.get('elemental_weakness', []),
-                    m_data.get('elemental_strength', []) + ['Darkness'],  # Add darkness resistance
+                    m_data.get('elemental_strength', []) + ['Darkness'],
                     spawn_level,
-                    m_data.get('attack_element', 'Darkness'),  # Darkness attacks
-                    f"{COLOR_GREY}An undead guardian risen to protect the ancient tomb!{COLOR_RESET}",
+                    m_data.get('attack_element', 'Darkness'),
+                    (f"{COLOR_GREY}An undead guardian risen to protect the "
+                     f"ancient tomb!{COLOR_RESET}") if not is_elite else
+                    (f"{COLOR_PURPLE}An elite undead guardian -- the tomb's "
+                     f"true keeper!{COLOR_RESET}"),
                     f"{COLOR_PURPLE}The undead guardian crumbles to dust!{COLOR_RESET}",
-                    m_data.get('gold_min', 10) * 2,
-                    m_data.get('gold_max', 30) * 2
+                    m_data.get('gold_min', 10) * (3 if is_elite else 2),
+                    m_data.get('gold_max', 30) * (3 if is_elite else 2),
                 )
                 new_monster.properties['undead_guardian'] = True
+                if is_elite:
+                    new_monster.properties['tomb_elite'] = True
 
             # Bug Level: Spawn bug monsters on bug level floors
             elif room.properties.get('is_bug_monster'):
@@ -2823,6 +2854,11 @@ def move_player(character, my_tower, direction, ignore_confusion=False):
     for effect_name, effect in character.status_effects.items():
         if effect.effect_type == 'web':
             add_log(f"{COLOR_YELLOW}You are stuck in a web and cannot move!{COLOR_RESET}")
+            # Still tick status effects so the web can expire from
+            # struggling -- without this the web is permanent (the
+            # only other ticking path is combat, but a webbed player
+            # away from monsters has no way to break free).
+            character.process_status_effects()
             return False
         # FIX: Check ignore_confusion flag to prevent recursion
         if effect.effect_type == 'confusion' and not ignore_confusion:
@@ -3114,16 +3150,23 @@ def process_chest_action(player_character, my_tower, cmd):
             # Base probabilities
             base_items = ['gold', 'gas', 'boom', 'empty', 'treasure', 'lantern_fuel', 'equipment']
             base_probs = [0.35, 0.08, 0.07, 0.05, 0.05, 0.20, 0.20]
-            
-            # Add upgrade scroll with floor-scaled probability
-            # Floor 1-4: 0%, Floor 5-9: 3-7%, Floor 10-14: 8-12%, Floor 15+: 13-17%
+
+            # Add upgrade scroll with floor-scaled probability.
+            # Bumped to give early floors a real chance: the prior
+            # gate (floor_level >= 5) meant F1-F4 chests NEVER
+            # dropped upgrades, and since playtest agents typically
+            # die on F1-F5 the chest path almost never contributed.
+            # New curve: F1-F4 = 5%, F5-9 = 8-16%, F10-14 = 17-25%,
+            # F15+ = 26-30% (capped at 30%).
             if floor_level >= 5:
-                upgrade_scroll_chance = min(0.17, 0.03 + (floor_level - 5) * 0.02)
-                base_items.append('upgrade_scroll')
-                base_probs.append(upgrade_scroll_chance)
-                # Normalize probabilities to sum to 1
-                total = sum(base_probs)
-                base_probs = [p / total for p in base_probs]
+                upgrade_scroll_chance = min(0.30, 0.08 + (floor_level - 5) * 0.02)
+            else:
+                upgrade_scroll_chance = 0.05
+            base_items.append('upgrade_scroll')
+            base_probs.append(upgrade_scroll_chance)
+            # Normalize probabilities to sum to 1
+            total = sum(base_probs)
+            base_probs = [p / total for p in base_probs]
             
             items = base_items
             probabilities = base_probs
@@ -3194,7 +3237,11 @@ def process_chest_action(player_character, my_tower, cmd):
 
             elif selected_item_np == 'lantern_fuel':
                 # NEW: Lantern Fuel drop
-                fuel_count = random.randint(1, 3)  # 1-3 fuel items
+                fuel_count = random.randint(2, 4)  # 2-4 fuel items
+                # Restore amount bumped 10 -> 20 per canister: with
+                # the aggressive lantern policy (every fog-adjacent
+                # step), 10 fuel per canister was draining mid-run.
+                # 20 doubles the depth of each chest-found fuel.
 
                 add_log(f"{COLOR_CYAN}{COLOR_RESET}")
                 add_log(f"{COLOR_CYAN}You found {fuel_count} Lantern Fuel!{COLOR_RESET}")
@@ -3206,7 +3253,7 @@ def process_chest_action(player_character, my_tower, cmd):
                         description="A small flask of oil for your lantern.",
                         value=5,
                         level=0,
-                        fuel_restore_amount=10
+                        fuel_restore_amount=20,
                     )
                     player_character.inventory.add_item(fuel_item)
 

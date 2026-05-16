@@ -115,7 +115,7 @@ class Vendor:
             # Rations + 1-2 monster meat drops ran out before reaching
             # a vendor. 5 Rations = 200 nutrition uses, ~doubles the
             # pre-vendor food cushion.
-            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=5))
+            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=5))
             # Towel removed from starting vendor - now only randomly available from dungeon vendors
             # Add starting else
         else:
@@ -192,6 +192,48 @@ class Vendor:
                     scroll_template = random.choice(available_scolls)
                     self.inventory.add_item_quiet(Scroll(scroll_template.name, scroll_template.description, scroll_template.effect_description, scroll_template.value, scroll_template.level, scroll_template.scroll_type))
 
+            # Every vendor guarantees 1 upgrade scroll, tier scaled to
+            # floor depth. Boosts melee viability for non-caster races
+            # (dwarf, human) who can't access damage spells -- weapon
+            # upgrade is the only scaling lever they have. Before this,
+            # the random scroll pool gave upgrade scrolls only ~25% of
+            # vendor visits (1/3 chance of 0 scrolls, plus competition
+            # with identify / mapping / restoration / etc. for the
+            # 1-2 slots). Choosing the tier dynamically (rather than
+            # always Scroll of Upgrade +3) means deeper-floor vendors
+            # sell stronger upgrades the agent's growing gold can
+            # afford.
+            if current_floor_level >= 25:
+                self.inventory.add_item_quiet(Scroll(
+                    "Scroll of Divine Upgrade",
+                    "The ultimate scroll of enhancement.",
+                    "Upgrade items to +20 maximum.", 1200, 25, 'upgrade'))
+            elif current_floor_level >= 20:
+                self.inventory.add_item_quiet(Scroll(
+                    "Scroll of Mythic Upgrade",
+                    "A scroll touched by the gods themselves.",
+                    "Upgrade items to +17 maximum.", 850, 20, 'upgrade'))
+            elif current_floor_level >= 15:
+                self.inventory.add_item_quiet(Scroll(
+                    "Scroll of Epic Upgrade",
+                    "A legendary scroll pulsing with raw power.",
+                    "Upgrade items to +14 maximum.", 600, 15, 'upgrade'))
+            elif current_floor_level >= 10:
+                self.inventory.add_item_quiet(Scroll(
+                    "Scroll of Superior Upgrade",
+                    "An ancient scroll that can enhance weapon or armor.",
+                    "Upgrade items to +10 maximum.", 400, 10, 'upgrade'))
+            elif current_floor_level >= 5:
+                self.inventory.add_item_quiet(Scroll(
+                    "Scroll of Greater Upgrade",
+                    "A powerful scroll that can enhance weapon or armor.",
+                    "Upgrade items to +6 maximum.", 250, 5, 'upgrade'))
+            else:
+                self.inventory.add_item_quiet(Scroll(
+                    "Scroll of Upgrade",
+                    "A mystical scroll that can enhance weapon or armor.",
+                    "Upgrade items to +3 maximum.", 150, 1, 'upgrade'))
+
             num_spells = random.randint(0, 2)
             for _ in range(num_spells):
                 if available_spells:
@@ -220,7 +262,7 @@ class Vendor:
 
             # All vendors stock rations (3-4)
             num_rations = random.randint(3, 4)
-            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=40, count=num_rations))
+            self.inventory.add_item_quiet(Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=num_rations))
 
             # 30% chance for vendor to stock a towel
             if random.random() < 0.30:
@@ -232,11 +274,20 @@ class Vendor:
                 player_has_lantern = True
                 break
 
-            # Add lantern fuel if character has lantern. If not, add lantern
+            # Lantern + fuel: every vendor now stocks 2-4 fuel
+            # canisters (was 1), each restoring 20 fuel (was 10).
+            # Aggressive lantern policy chews ~1 fuel per 3 moves,
+            # so a deep run needs ~80-100 fires per floor; 4
+            # canisters = 80 fires per vendor visit ensures the
+            # agent rarely sees fuel < 15 mid-floor.
             if not player_has_lantern:
-              self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=10, light_radius=7, value=30, level=0))
-            else:
-              self.inventory.add_item_quiet(LanternFuel("Lantern Fuel", "A small flask of oil for your lantern.", value=5, level=0, fuel_restore_amount=10))
+                self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=20, light_radius=7, value=30, level=0))
+            fuel_count = random.randint(2, 4)
+            for _ in range(fuel_count):
+                self.inventory.add_item_quiet(
+                    LanternFuel("Lantern Fuel", "A small flask of oil for your lantern.",
+                                value=5, level=0, fuel_restore_amount=20)
+                )
 
 
 # ============================================================================

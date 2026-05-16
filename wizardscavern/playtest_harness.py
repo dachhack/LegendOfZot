@@ -23,6 +23,7 @@ Action vocabulary (mode-sensitive — see ``ACTION_HINTS``):
 """
 
 import argparse
+import collections
 import json
 import random as _stdlib_random
 import re
@@ -44,7 +45,16 @@ from .game_systems import (
 from .vendor import handle_vendor_shop, handle_starting_shop
 from .items import (
     initialize_identification_system, SPELL_TEMPLATES,
-    Potion, Food, Meat, Weapon, Armor, Spell,
+    Potion, Food, Meat, Weapon, Armor, Spell, Scroll,
+)
+from .game_data import BUG_WEAPON_TEMPLATES, BUG_ARMOR_TEMPLATES
+
+# Names of bug-sized gear -- the only equipment a shrunk player can use.
+# Mirrors the check at game_systems.py:2239 so the policy can filter
+# upgrade candidates correctly when player_is_shrunk is True.
+_BUG_GEAR_NAMES = frozenset(
+    [t["name"] for t in BUG_WEAPON_TEMPLATES]
+    + [t["name"] for t in BUG_ARMOR_TEMPLATES]
 )
 
 
@@ -63,30 +73,148 @@ RACE_MODS = {
 BASE_STATS = {"health": 30, "attack": 15, "defense": 5,
               "strength": 10, "dexterity": 10, "intelligence": 10}
 
-# Race-themed name pools, LOTR-flavoured. Used when new_game() is called
-# with the default name="Tester" -- each run picks a seed-stable name so
-# transcripts read like adventurer logs instead of T200 spreadsheets.
-RACE_NAMES = {
+# Race-themed name pools, LOTR-flavoured. Used when new_game() is
+# called with the default name="Tester". Each run pairs a canonical
+# first name with a procedurally-picked epithet so 60-run grids
+# stop colliding (16 first names × 24 epithets ~= 384 combos per
+# race, well past the no-collision floor). Seed-stable so the same
+# seed always produces the same hero.
+RACE_FIRST_NAMES = {
     "human": (
         "Aragorn", "Boromir", "Faramir", "Theoden", "Eomer", "Eowyn",
         "Denethor", "Isildur", "Elendil", "Beregond", "Imrahil",
         "Bard", "Beorn", "Hama", "Halbarad", "Forlong", "Gilraen",
+        "Anborn", "Mablung", "Erkenbrand",
     ),
     "elf": (
         "Elrond", "Legolas", "Galadriel", "Arwen", "Celeborn",
         "Glorfindel", "Haldir", "Thranduil", "Luthien", "Tauriel",
         "Finrod", "Earendil", "Feanor", "Idril", "Cirdan", "Galadhrim",
+        "Maeglin", "Beleg", "Voronwe",
     ),
     "dwarf": (
         "Gimli", "Thorin", "Balin", "Dwalin", "Gloin", "Oin",
         "Bifur", "Bofur", "Bombur", "Fili", "Kili", "Dain",
         "Nori", "Ori", "Dori", "Durin", "Thror", "Thrain",
+        "Farin", "Nain", "Borin",
     ),
 }
+# Race-flavoured epithets / patronymics. Combined with a first name
+# to disambiguate hero identities across the playtest grid. Picked
+# to feel like LOTR rather than D&D one-shot characters.
+RACE_EPITHETS = {
+    "human": (
+        "the Brave", "the Stalwart", "the Wise", "the Younger",
+        "the Bold", "Stoneward", "Strider", "Oakheart",
+        "of Gondor", "of Rohan", "of Arnor", "of Bree",
+        "of the Mark", "of the White City", "Greycloak",
+        "Stormcrow", "the Tall", "the Quick", "II",
+        "III", "the Wanderer", "Crownless",
+        "Stonefoot", "the Vigilant",
+    ),
+    "elf": (
+        "the Fair", "Star-eyed", "Moonsinger", "Silver-tongued",
+        "of Lothlorien", "of Imladris", "of the Greenwood",
+        "of Mithlond", "the Sun-bright", "the Wise",
+        "the Singer", "the Bowyer", "the Pathfinder",
+        "Skywatcher", "Silverleaf", "Stareyed",
+        "Goldenbough", "the Ageless", "the Twice-Born",
+        "of the West", "the Quenya-tongued", "the Sea-stained",
+        "Whitepetal", "the Lorekeeper",
+    ),
+    "dwarf": (
+        "Ironbeard", "Stonefoot", "Goldfinder", "Anvilheart",
+        "Hammerhand", "the Stout", "the Mighty", "the Bold",
+        "of Erebor", "of the Iron Hills", "of Khazad-dum",
+        "of Belegost", "Forgewright", "Stonebreaker",
+        "Deepdelver", "Coalbeard", "the Younger", "II",
+        "III", "the Cup-Bearer", "Runesinger", "Axebreaker",
+        "Steelpalm", "Oakshield",
+    ),
+}
+# Back-compat alias: a few callers still import RACE_NAMES from the
+# pre-procedural era. Keep a flat name list per race so they don't
+# break. The procedural _race_name() below is what new_game() uses.
+RACE_NAMES = RACE_FIRST_NAMES
+
+
+def _race_name(race, rng):
+    """Pick a seed-stable LOTR-flavoured name for the hero.
+
+    Returns ``"<First> <Epithet>"``. ``rng`` is a ``random.Random``
+    instance, so two calls with the same seed/state produce the
+    same name. Falls back to the human pool for unknown races.
+    """
+    first_pool = RACE_FIRST_NAMES.get(race) or RACE_FIRST_NAMES["human"]
+    epi_pool = RACE_EPITHETS.get(race) or RACE_EPITHETS["human"]
+    return f"{rng.choice(first_pool)} {rng.choice(epi_pool)}"
 
 
 _ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
 _HTML_RE = re.compile(r"<[^>]+>")
+
+# Words in a monster name that flag it as undead. Shared between the
+# combat threat-assessment branch and the tomb-proximity tracker in
+# _monster_obs -- a tomb is the ONLY way undead spawn at typical
+# playtest depths (game_systems.undead_guardian branch), so any combat
+# with one of these names is a reliable tell that the agent is next to
+# a tomb and a higher-tier ELITE UNDEAD waits at one of the other
+# adjacent guardian rooms. Matched against word boundaries via the
+# `_is_undead_name` helper -- substring matching wrongly flagged
+# Lichen (a fungal plant creature) as undead because "lich" is in
+# "lichen". User-flagged: "Lichens don't signal a tomb."
+_UNDEAD_NAME_TOKENS = (
+    "wraith", "lich", "skeleton", "vampire",
+    "ghost", "zombie", "spectral", "phantom",
+    "mummy", "specter", "death knight", "demilich",
+    "undead",
+)
+import re as _re
+_UNDEAD_NAME_RE = _re.compile(
+    r"\b(" + "|".join(_re.escape(t) for t in _UNDEAD_NAME_TOKENS) + r")\b"
+)
+
+
+def _is_undead_name(name):
+    """Word-boundary match against _UNDEAD_NAME_TOKENS. Lower-case the
+    name first. Returns False for unrelated names that contain a token
+    as a substring (e.g. "Lichen" wrongly matched "lich" under the
+    prior substring loop)."""
+    if not name:
+        return False
+    return bool(_UNDEAD_NAME_RE.search(name.lower()))
+
+# Status effects that LOSE HP EVERY TURN -- poison ticks, fire burn,
+# damage-over-time, life-drain. With one of these active the agent
+# should bail out of combat (fleeing breaks the engagement, the tick
+# continues but the monster doesn't add hits). Used for the combat
+# flee branch + the game_loop avoid-step-into-M gate.
+_TICKING_STATUS_TYPES = frozenset({
+    "poison", "damage_over_time", "burn", "life_drain",
+})
+# Status effects that DEGRADE combat performance but don't kill on
+# their own (weakness reduces damage, defense_penalty / blindness
+# hurts hit rate, confusion randomises movement, sticky_hands blocks
+# attacks). Agent SHOULD still avoid stepping into NEW fights with
+# these active, but shouldn't disengage from a fight already in
+# progress -- fleeing wastes turns the status would have ticked off
+# anyway, and the monster is usually still there when the debuff
+# wears off.
+_DEBUFF_STATUS_TYPES = frozenset({
+    "weakness", "defense_penalty", "blindness", "confusion",
+    "sticky_hands",
+})
+# Status effects that immobilise -- web, paralysis, freeze. The
+# game refuses move + attack actions while these are active. Don't
+# flee (movement refused) and don't waste turns trying. Stand and
+# heal / cast / wait the duration out.
+_IMMOBILISING_STATUS_TYPES = frozenset({"web", "paralysis", "freeze"})
+# Union: any of these makes the agent treat itself as "weak" for the
+# game_loop AVOID gate, but only _TICKING_STATUS_TYPES forces a flee
+# mid-combat.
+_DANGEROUS_STATUS_TYPES = (
+    _TICKING_STATUS_TYPES | _DEBUFF_STATUS_TYPES | _IMMOBILISING_STATUS_TYPES
+)
 
 
 def _strip_markup(s):
@@ -152,8 +280,14 @@ def _equipped_obs(pc):
             # Power stat (already includes upgrade_level via the property).
             # The bonus is 0 when the item is broken, but we report the
             # raw value so the policy can decide based on intended power.
+            # Also surface base_*_bonus (the template's intrinsic
+            # power) and upgrade_level (Scroll of Upgrade increments)
+            # so the report can show "+5 atk (3 base + 2 upgrades)".
             "attack_bonus": getattr(it, "attack_bonus", None),
             "defense_bonus": getattr(it, "defense_bonus", None),
+            "base_attack_bonus": getattr(it, "_base_attack_bonus", None),
+            "base_defense_bonus": getattr(it, "_base_defense_bonus", None),
+            "upgrade_level": getattr(it, "upgrade_level", 0),
             "item_level": getattr(it, "level", 0),
         }
     return {"weapon": slot(pc.equipped_weapon),
@@ -189,11 +323,17 @@ def _item_category(item):
         return "scroll"
     # Lantern + LanternFuel get explicit tags so the policy can refuel
     # without needing isinstance checks across module boundaries.
+    # Trophy gets its own tag so the taxidermist policy can detect
+    # whether there's anything to sell / hand in.
     cls = type(item).__name__
     if cls == "Lantern":
         return "lantern"
     if cls == "LanternFuel":
         return "lantern_fuel"
+    if cls == "Trophy":
+        return "trophy"
+    if cls == "CookingKit":
+        return "cooking_kit"
     return "other"
 
 
@@ -251,6 +391,32 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     gs.active_zotle_teleporter = False
     gs._pending_load = None
 
+    # Combat / turn state — these leak between runs in batch testing,
+    # causing seed=42 Arwen to inherit Tauriel's shrunk status on bug
+    # floors and softlock in stairs_down_mode forever.
+    gs.player_is_shrunk = False
+    gs.bug_queen_defeated = False
+    gs.bug_level_floors = {}
+    gs.monster_acts_first = False
+    gs.monster_initiative_pending = False
+    gs.last_spell_cast = None
+    gs.spell_charging = None
+    gs.last_concentration_roll = None
+    gs.monster_defeated_anim = None
+    gs.victory_monster_name = None
+    gs.last_dice_rolls = []
+    gs.unique_treasures_spawned = set()
+    gs.last_monster_damage = 0
+    gs.last_player_damage = 0
+    gs.last_player_blocked = False
+    gs.last_player_status = None
+    gs.last_monster_status = None
+    gs.last_player_heal = 0
+    gs.last_monster_damage_badge = None
+    gs.last_player_damage_badge = None
+    gs.pre_round_monster_hp = None
+    gs.pre_round_player_hp = None
+
     initialize_identification_system()
 
     gs.my_tower = Tower()
@@ -275,7 +441,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
     # default. _stdlib_random is already seeded above if a seed was
     # passed, so the name is stable across reruns of the same seed.
     if name == "Tester":
-        name = _stdlib_random.choice(RACE_NAMES.get(race, RACE_NAMES["human"]))
+        name = _race_name(race, _stdlib_random)
     pc = Character(
         name=name,
         health=stats["health"],
@@ -307,7 +473,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         # inventory first, then equips by reference -- so equipped
         # gear ALSO appears in inventory.items, which is what lets the
         # vendor repair handler at vendor.py:733-749 see it).
-        from .items import Lantern as _Lantern, Food as _Food
+        from .items import Lantern as _Lantern, Food as _Food, LanternFuel as _LF
         # Race-flavoured starter weapon, mirroring vendor.py:93+ now
         # that the starting shop gives dwarves a Battleaxe.
         if race == "dwarf":
@@ -330,11 +496,30 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         pc.equipped_armor = leather
         pc.inventory.add_item_quiet(_Lantern(
             "Lantern", "Provides continuous light with fuel.",
-            fuel_amount=50, light_radius=7, value=30, level=0,
+            fuel_amount=80, light_radius=7, value=30, level=0,
         ))
+        # Starter pack also includes 2 fuel canisters (40 fires).
+        # Combined with the lantern's 80 base = 120 fires before
+        # the agent needs to hit a vendor for more, enough to
+        # explore F1-F3 thoroughly even with aggressive fog reveal.
+        for _ in range(2):
+            pc.inventory.add_item_quiet(_LF(
+                "Lantern Fuel", "A small flask of oil for your lantern.",
+                value=5, level=0, fuel_restore_amount=20,
+            ))
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
-            value=10, level=0, nutrition=40, count=5,
+            value=10, level=0, nutrition=50, count=8,
+        ))
+        # User-requested balance pass: Iron Rations in starter pack
+        # to extend the early-floor food window (70 nutrition each
+        # vs 50 for plain Rations). Cooking Kit deliberately NOT in
+        # starter -- agents have to reach a F4+ vendor to earn it,
+        # so cooking is a mid-game depth bonus, not a starter perk.
+        pc.inventory.add_item_quiet(_Food(
+            "Iron Rations",
+            "Military-grade rations. Tasteless but highly nutritious.",
+            value=30, level=3, nutrition=70, count=2,
         ))
         for _ in range(4):
             pc.inventory.add_item_quiet(Potion(
@@ -343,7 +528,6 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
                 value=30, level=0,
                 potion_type="healing", effect_magnitude=30,
             ))
-        # Spent on the starting shop: 4*30 + 10 + 50 + 30 + 0 = 210g.
         pc.gold = 500 - 210
     if spells:
         spell_index = {s.name.lower(): s for s in SPELL_TEMPLATES}
@@ -421,10 +605,14 @@ ACTION_HINTS = {
     "combat_mode":   "a (attack) f (flee) c (cast) I (item) x (back)",
     "spell_casting_mode": "1..N (spell slot) x (cancel)",
     "inventory":     "1..9 (slot) x (back) e (equip-filter) u (use-filter)",
-    "chest_mode":    "o (open) l (leave)",
+    "chest_mode":    "o (open) n s e w (walk off; chest handler doesn't accept 'l')",
     "vendor_shop":   "b (buy) s (sell) x (leave)",
     "stairs_down_mode": "d (descend) x (cancel)",
     "stairs_up_mode":   "u (ascend) x (cancel)",
+    "oracle_mode":      "g (gaze) | n s e w to leave",
+    "alchemist_mode":   "c (combine) | '<a> <b>' to brew slots a+b | x (cancel) | n s e w to leave",
+    "war_room_mode":    "1 (intel - free) 2 (raid - 100+f*5g) | n s e w to leave",
+    "taxidermist_mode": "<N> (complete collection N) | s (sell trophies) | n s e w to leave",
     "death_screen":  "<game over>",
 }
 
@@ -442,6 +630,89 @@ class PlaytestSession:
         # so the wayfinder can skip them and avoid oscillating between
         # an altar tile and an empty neighbour for 50+ turns.
         self.visited_features = set()
+        # Recent positions for anti-backtrack. The BFS first_step + SE
+        # tiebreak can flip direction each turn when the agent is on a
+        # 2-tile saddle point between frontiers (seed=42 dwarf burned
+        # 4857 turns of a 5000-turn budget ping-ponging n/s). Tracking
+        # the last 4 (z, x, y) tuples lets the policy break ties by
+        # preferring directions that DON'T re-step on a recent tile.
+        self.recent_positions = []
+        # Per-floor walkable-tile coverage: set of (x, y) the player
+        # has stood on for the current floor. Reset on descent. Used
+        # by the policy's tile-coverage descent gate to leave a floor
+        # once enough has been swept, even if a far beneficial remains.
+        self.visited_tiles_this_floor = set()
+        # Turn at which a NEW tile (not in visited_tiles_this_floor)
+        # was last entered. Used by the trapped detector: if the
+        # agent has stopped making exploration progress -- visiting
+        # the same tiles repeatedly without growing the set -- they
+        # are wedged on a tiny island. Reset on floor change.
+        self.last_new_tile_turn = 0
+        # Per-floor revisit counter: dict {(x,y): visit_count}. Reset
+        # on floor change. Used by the wedge detector -- when the
+        # agent has revisited the current tile 6+ times the wayfinder
+        # has lost the plot and we fire Hail-Mary item use to break
+        # the loop (Durin seed=314 burned 2345 turns at HP=1 on F2
+        # bouncing e/w in a 3-tile corridor with no D reachable).
+        self.floor_visit_count = {}
+        # Per-floor set of inventory action strings already attempted
+        # during a wedge episode. Reset on floor change. Without
+        # this the Hail Mary in the inventory branch alternates
+        # u1<->u2 forever (last_action only blocks IMMEDIATE repeats,
+        # not 2-step loops): Forlong seed=314 human burned 2900 turns
+        # alternating two unidentified scrolls that both refused to
+        # consume out of combat.
+        self.wedge_attempted_actions = set()
+        # Blocked-directions tracker. When the agent issues a
+        # cardinal-direction action (n/s/e/w from game_loop or a
+        # flee/move-accepting mode) and the position doesn't change,
+        # that direction is added here. Cleared whenever the agent
+        # successfully moves OR changes floors. Surfaces in obs so the
+        # wayfinder can avoid retrying the same wall over and over --
+        # Oin/Legolas/Boromir burned 2592-2780 turns each sending 's'
+        # into a wall because the BFS first_step kept resolving south
+        # and anti-backtrack only fires on POSITION CHANGE.
+        self.blocked_directions = set()
+        # Floors where the agent has fought (or is fighting) an undead.
+        # Tomb-adjacent guardian rooms are the only way undead spawn at
+        # those depths (see game_systems.py's undead_guardian branch),
+        # so seeing an undead is a near-100% reliable "there's a tomb
+        # on this floor and a higher-tier ELITE UNDEAD is one of the
+        # other adjacent guardians" tell. The wayfinder uses this when
+        # weak to drop M/T from priority and stay near already-revealed
+        # tiles instead of rushing into fog where another wraith may be
+        # waiting. Cleared whenever the agent changes floors (the next
+        # floor needs its own undead-sighting to be flagged).
+        self.suspected_tomb_floors = set()
+        # Deepest floor index reached via the canonical stairs-down
+        # path (the agent stood on a D tile and pressed 'd'). Used as
+        # the retreat target when a warp drops the agent below this
+        # depth: the user's framing is that warp-skipped floors are
+        # near-instakill because the agent doesn't have the gear /
+        # level / item supply for the deeper monsters. Whenever
+        # pc.z > max_z_via_stairs, obs.retreat_to_floor flags the
+        # floor we should ascend back to, and the wayfinder + stairs
+        # mode policies switch from descend-and-clear into ascend-
+        # back mode until pc.z <= max_z_via_stairs again.
+        self.max_z_via_stairs = 0
+        # Post-flee recovery tracker: the turn at which the agent
+        # most recently issued a flee from combat_mode, plus the HP
+        # ratio at that flee. Only damage-fled flees (HP at flee was
+        # < ~70%) trigger the post-flee heal-up; tough-monster flees
+        # at full HP don't need recovery -- the agent should find a
+        # different path. User-flagged: Celeborn the elf was fleeing
+        # from a wraith at HP24, getting a free monster attack on
+        # every flee attempt, then immediately re-engaging without
+        # healing. None set means no recent flee.
+        self.last_flee_turn = None
+        self.last_flee_hp_pct = None
+        # Kills logged on the current floor. Incremented every time
+        # the agent transitions into combat_victory mode (one entry
+        # per defeated monster). Reset on floor change. Used by the
+        # grind-first descent gate so under-levelled agents stay on
+        # the current floor banking XP instead of pushing into a
+        # depth they can't handle.
+        self.kills_on_floor = 0
         # Fog of war: when True, the neighbour + nearest-feature obs
         # respect room.discovered so the agent has to actually walk over
         # (or lantern-light) tiles before knowing what's there. The
@@ -455,6 +726,116 @@ class PlaytestSession:
         # because of this.
         self.floor_arrival_turn = 0
         self._last_floor = 0
+        # Per-floor exploration totals, snapshotted on first arrival.
+        # User-requested: 'evaluate exp + treasure left on each level
+        # to see if better exploring would help with survival.' For
+        # each floor we capture monsters / chests / beneficials /
+        # vendors / tombs / dungeons available, then the report
+        # combines with kills_by_floor + visited_features to compute
+        # the engagement ratios.
+        # Shape: floor_totals[z] = {"M":N, "C":N, "G":N, ...,
+        #   "xp_pool": expected XP if every M is killed}
+        self.floor_totals = {}
+
+    def _snapshot_floor_totals(self, z):
+        """Tally the floor's monster / chest / beneficial-room totals
+        the first time the player arrives on it AND on every later
+        arrival, accumulating the M / XP pool to account for
+        respawns. Static tiles (C / V / T / N / B / F / G / L / O /
+        A / P / Q / K / X) are captured once; only M tiles and the
+        derived xp_pool grow on re-arrivals.
+
+        Why re-snapshot M: build-309 grid surfaced runs with
+        kill_pct = 226% (Durin Forgewright s=314 dwarf F4) because
+        the snapshot was a one-shot at first floor visit. Agents
+        that revisit floors (warp + retreat + re-descend) encounter
+        FRESH M spawns each time, so the kill counter sails past
+        the static pool. Re-arrival accumulation closes the loop.
+
+        XP pool respects per-M-tile property markers so the formula
+        doesn't underestimate elite undead / champions / vault
+        keepers / boss arenas.
+        """
+        already_seen = z in self.floor_totals
+        floor = gs.my_tower.floors[z]
+        if not already_seen:
+            counts = {
+                "M": 0, "C": 0, "G": 0, "L": 0, "O": 0, "A": 0, "P": 0,
+                "V": 0, "T": 0, "N": 0, "Q": 0, "K": 0, "B": 0, "F": 0,
+                "X": 0,
+            }
+            counts["xp_pool"] = 0
+        else:
+            # On a return visit, keep the static-tile totals as they
+            # were and only re-tally M + xp_pool for the new spawns
+            # we're about to encounter. Tiles never UN-spawn -- we
+            # always add, never subtract.
+            counts = self.floor_totals[z]
+        # Per-monster XP estimate accounting for spawn-level offsets:
+        #   * tomb_elite -- spawn at floor+1 (game_systems.py:2613)
+        #   * undead_guardian (non-elite) -- spawn at floor (z)
+        #   * has_zots_guardian / is_boss_arena -- vault defender,
+        #     awards (level+1)*100 (4x baseline, game_systems.py:727)
+        #   * default -- spawn at z (game_systems.py:2771)
+        # The (L+1)*8 + L²*2 formula is the canonical per-kill XP.
+        def _kill_xp(lvl):
+            return (lvl + 1) * 8 + lvl * lvl * 2
+
+        # Pool computation strategy: rebuild from scratch on every
+        # arrival using two sources of truth:
+        #   (1) gs.encountered_monsters[(x,y,z)] for any tile the
+        #       agent has ALREADY interacted with -- gives the real
+        #       monster.level (handles champion/platino/spirit/elite
+        #       upgrades + revisit respawns). Includes dead monsters
+        #       (the dict isn't pruned on death).
+        #   (2) Static tile scan for un-encountered M tiles, using
+        #       property markers to estimate spawn level.
+        # The previous accumulator double-counted on revisit because
+        # the same M tile got tallied each pass; this rebuild-from-
+        # source approach matches xp_earned which only logs once per
+        # kill.
+        new_xp = 0
+        m_count = 0
+        floor_monsters = {
+            (x, y): m for (x, y, mz), m in
+            (getattr(gs, "encountered_monsters", {}) or {}).items()
+            if mz == z
+        }
+        # First, credit every encountered monster on this floor.
+        for (mx, my), monster in floor_monsters.items():
+            lvl = getattr(monster, "level", z)
+            props = getattr(monster, "properties", {}) or {}
+            m_count += 1
+            if props.get("has_zots_guardian") or props.get("is_boss_arena"):
+                new_xp += (lvl + 1) * 100
+            else:
+                new_xp += _kill_xp(lvl)
+        # Then walk static tiles for M's that haven't been
+        # encountered yet (no entry in floor_monsters).
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                cell = floor.grid[y][x]
+                t = cell.room_type
+                if not already_seen and t in counts:
+                    counts[t] += 1
+                if t == "M" and (x, y) not in floor_monsters:
+                    m_count += 1
+                    props = cell.properties
+                    if props.get("is_platino"):
+                        new_xp += _kill_xp(42)
+                    elif props.get("has_zots_guardian") or props.get("is_boss_arena"):
+                        new_xp += (z + 1) * 100
+                    elif props.get("is_champion"):
+                        new_xp += _kill_xp(z + 4)
+                    elif props.get("tomb_elite"):
+                        new_xp += _kill_xp(z + 1)
+                    elif props.get("undead_guardian"):
+                        new_xp += _kill_xp(z)
+                    else:
+                        new_xp += _kill_xp(z)
+        counts["M"] = m_count
+        counts["xp_pool"] = new_xp
+        self.floor_totals[z] = counts
 
     # ------------------------------------------------------------------
     # Observation
@@ -463,12 +844,23 @@ class PlaytestSession:
         pc = gs.player_character
         floor = gs.my_tower.floors[pc.z]
         room = floor.grid[pc.y][pc.x]
+        # Snapshot floor totals on arrival (first OR return visit).
+        # _last_snapshot_floor tracks the most recently snapshotted
+        # floor so we re-tally M (which respawns across visits) once
+        # per arrival rather than every observe(). The static-tile
+        # counters inside _snapshot_floor_totals are idempotent.
+        if getattr(self, "_last_snapshot_floor", None) != pc.z:
+            self._snapshot_floor_totals(pc.z)
+            self._last_snapshot_floor = pc.z
         # log_lines is capped at 16 — if our pointer is past the end the
         # log was rotated and we just take everything that's left.
         if self._log_pointer > len(gs.log_lines):
             self._log_pointer = 0
         log_delta = gs.log_lines[self._log_pointer:]
         self._log_pointer = len(gs.log_lines)
+        # Clear the per-turn BFS cache; the four path-obs methods will
+        # share one BFS pass on first access.
+        self._bfs_cache = None
         return {
             "turn": self.turn,
             "mode": gs.prompt_cntl,
@@ -484,13 +876,20 @@ class PlaytestSession:
                 "gold": pc.gold,
                 "level": pc.level,
                 "xp": pc.experience,
+                "strength": pc.strength,
+                "dexterity": pc.dexterity,
                 "intelligence": pc.intelligence,
+                "can_cast": pc.intelligence > 15,
                 "floor": pc.z + 1,
                 "x": pc.x,
                 "y": pc.y,
                 "status_effects": list(pc.status_effects.keys()),
+                "status_effect_types": [
+                    eff.effect_type for eff in pc.status_effects.values()
+                ],
                 "equipped": _equipped_obs(pc),
                 "lantern": _lantern_obs(pc),
+                "is_shrunk": bool(gs.player_is_shrunk),
             },
             "memorized_spells": [
                 {"slot": i + 1, "name": s.name,
@@ -502,10 +901,51 @@ class PlaytestSession:
             "neighbors": self._neighbors_obs(),
             "visited_neighbors": self._visited_neighbors_obs(),
             "nearest_features": self._nearest_features_obs(),
+            "feature_paths": self._feature_paths_obs(),
+            "frontier_step": self._frontier_step_obs(),
+            "nearest_monster_path": self._nearest_monster_path_obs(),
+            "recent_step_set": self._recent_step_set(),
+            "blocked_directions": sorted(self.blocked_directions),
+            "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
+            # Cardinal dirs adjacent to a known tomb-guardian M tile.
+            # The policy refuses to step into these unless over-levelled.
+            "tomb_guardian_dirs": self._tomb_guardian_dirs_obs(),
+            "suspected_guardian_coords": self._suspected_guardian_coords_obs(),
+            "inferred_guardian_dirs": self._inferred_guardian_dirs_obs(),
+            "tomb_suspected_here": pc.z in self.suspected_tomb_floors,
+            "max_z_via_stairs": self.max_z_via_stairs,
+            # Per-floor kill counter. Used by the grind-first gate so
+            # under-levelled agents stay on the floor banking XP.
+            "kills_on_floor": self.kills_on_floor,
+            # Post-flee recovery window. True for the first 15 turns
+            # after a flee that triggered at low HP (< 70%). Tough-
+            # monster flees at full HP don't need recovery -- the
+            # agent should look for a different path. Outside the
+            # window the flag clears so a long-ago flee doesn't keep
+            # the agent in heal-up mode.
+            "recently_fled": (
+                self.last_flee_turn is not None
+                and self.last_flee_hp_pct is not None
+                and self.last_flee_hp_pct < 0.70
+                and (self.turn - self.last_flee_turn) <= 15
+            ),
+            # Retreat target: when a warp drops the agent below the
+            # deepest floor they've reached via canonical stairs, the
+            # wayfinder switches into ascend-back mode and aims for
+            # this floor index. None when no retreat is needed.
+            "retreat_to_floor": (self.max_z_via_stairs
+                                 if pc.z > self.max_z_via_stairs
+                                 else None),
+            "tile_coverage": self._tile_coverage_obs(),
+            "nearest_warp_path": self._nearest_warp_path_obs(),
             "dungeon_keys": list(getattr(gs, "dungeon_keys", {}).keys()),
             "keyed_dungeon_target": self._keyed_dungeon_target_obs(),
             "nearest_undiscovered": self._nearest_undiscovered_obs(),
             "turns_on_floor": self.turn - self.floor_arrival_turn,
+            "current_tile_visits": self.floor_visit_count.get((pc.x, pc.y), 0),
+            "floor_totals": dict(self.floor_totals),
+            "turns_since_new_tile": self.turn - self.last_new_tile_turn,
+            "wedge_attempted_actions": sorted(self.wedge_attempted_actions),
             "room": {
                 "type": room.room_type,
                 "properties": {
@@ -533,12 +973,23 @@ class PlaytestSession:
         # produce no meat.
         from .items import get_monster_meat_info
         meat_info = get_monster_meat_info(name)
+        # Tomb-proximity tell: undead spawn exclusively as tomb-adjacent
+        # guardians at typical playtest depths, so seeing one means a
+        # T tile is on this floor and (per the rebalance) one of the
+        # other 3 adjacent guardians is an ELITE UNDEAD at floor+1.
+        # Mark the floor; the wayfinder drops M/T from priority when
+        # weak on a flagged floor so the agent doesn't blunder into a
+        # second wraith while limping away from the first.
+        is_undead = _is_undead_name(name)
+        if is_undead:
+            self.suspected_tomb_floors.add(gs.player_character.z)
         return {
             "name": name,
             "level": getattr(m, "level", None),
             "hp": m.health,
             "max_hp": getattr(m, "max_health", m.health),
             "is_edible": meat_info is not None,
+            "is_undead": is_undead,
         }
 
     def _inventory_obs(self):
@@ -560,8 +1011,28 @@ class PlaytestSession:
                             Treasure, Towel, CookingKit, CuringKit)
         items = get_sorted_inventory(gs.player_character.inventory)
 
-        in_combat = (gs.active_monster is not None
-                     and gs.active_monster.is_alive())
+        # in_combat: ONLY when the game is actually in combat OR the
+        # player is currently in the inventory handler (which itself
+        # applies the same active_monster filter -- the harness must
+        # mirror the destination handler's slot numbering or u<N>
+        # hits the wrong item). A stale gs.active_monster lingers
+        # after the player flees, so checking the monster alone was
+        # filtering obs.inventory mid-VENDOR and causing slot-
+        # mismatch loops (vendor's id<N> uses the UNFILTERED sorted
+        # inventory): seed=1100 dwarf Fili burned 2926 turns sending
+        # `id2` to identify a Minor Healing Potion (obs view) that
+        # the vendor mapped to Studded Leather (unfiltered view) and
+        # replied "already identified". Now: filter only when the
+        # destination handler also filters.
+        in_combat = (
+            gs.active_monster is not None
+            and gs.active_monster.is_alive()
+            and gs.prompt_cntl in (
+                "combat_mode", "spell_casting_mode",
+                "flee_direction_mode", "combat_victory",
+                "inventory",
+            )
+        )
         if in_combat:
             combat_scrolls = ('spell_scroll', 'protection', 'restoration')
             items = [
@@ -610,14 +1081,18 @@ class PlaytestSession:
                 entry["buc_known"] = bool(getattr(item, "buc_known", False))
                 entry["is_sealed"] = bool(getattr(item, "is_sealed", False))
                 # Power stat for comparison. attack_bonus / defense_bonus
-                # are @properties that already fold in upgrade_level, so
-                # we don't need to expose upgrade_level separately --
-                # whatever the equipped property returns is what the
-                # Character.attack / Character.defense calc will use.
+                # are @properties that already fold in upgrade_level.
+                # Also expose the base / upgrade split so the report
+                # can render "+5 atk (3 base + 2 upgrades)" -- useful
+                # for tracking how the agent's scaling came from gear
+                # tier vs upgrade-scroll consumption.
                 if isinstance(item, Weapon):
                     entry["attack_bonus"] = getattr(item, "attack_bonus", 0)
+                    entry["base_attack_bonus"] = getattr(item, "_base_attack_bonus", 0)
                 else:
                     entry["defense_bonus"] = getattr(item, "defense_bonus", 0)
+                    entry["base_defense_bonus"] = getattr(item, "_base_defense_bonus", 0)
+                entry["upgrade_level"] = getattr(item, "upgrade_level", 0)
                 entry["item_level"] = getattr(item, "level", 0)
                 # equipped flag so the policy can compare bag items
                 # against the slotted one without doing name matching.
@@ -625,6 +1100,12 @@ class PlaytestSession:
                 entry["equipped"] = (
                     item is pc.equipped_weapon or item is pc.equipped_armor
                 )
+                # Bug-sized: only flag bug gear can be equipped while
+                # the player is shrunk on a bug floor. Without this,
+                # Tauriel elf seed=13 burned 786 turns trying to equip
+                # her Falchion -- the handler silently rejected each
+                # attempt with "too tiny" and the policy never knew.
+                entry["is_bug_gear"] = item.name in _BUG_GEAR_NAMES
             # Identification status applies to potions / scrolls / spells
             # too -- knowing what's in your bag changes what's safe to
             # use. is_item_identified is the canonical check.
@@ -633,6 +1114,14 @@ class PlaytestSession:
                 entry["is_identified"] = bool(is_item_identified(item))
             except Exception:
                 entry["is_identified"] = True  # non-identifiable -> safe
+            # Surface scroll_type and potion_type so the usage policy
+            # can target specific item effects (read mapping when
+            # fog-blind, drink stone_skin before combat, etc.) without
+            # parsing display names.
+            if isinstance(item, Scroll):
+                entry["scroll_type"] = getattr(item, "scroll_type", None)
+            if isinstance(item, Potion):
+                entry["potion_type"] = getattr(item, "potion_type", None)
             out.append(entry)
         return out
 
@@ -644,16 +1133,37 @@ class PlaytestSession:
         # the wrong item.
         from .characters import get_sorted_inventory
         sorted_items = get_sorted_inventory(gs.active_vendor.inventory)
-        return [
-            {
+        out = []
+        for i, item in enumerate(sorted_items):
+            entry = {
                 "slot": i + 1,
                 "name": getattr(item, "name", repr(item)),
                 "price": getattr(item, "calculated_value",
                                  getattr(item, "value", 0)),
                 "category": _item_category(item),
             }
-            for i, item in enumerate(sorted_items)
-        ]
+            # Surface weapon / armor stats so the policy can compare
+            # against equipped gear and buy strict upgrades. Without
+            # these fields the vendor policy was only stocking
+            # potions / food and silently walking past a Longsword
+            # (atk+10) sitting at 100g while the agent went on to die
+            # holding a Dagger (atk+2) at floor 4.
+            # Scroll metadata: vendor buy policy uses scroll_type to
+            # prioritise upgrade scrolls over generic ones.
+            if isinstance(item, Scroll):
+                entry["scroll_type"] = getattr(item, "scroll_type", None)
+            if isinstance(item, (Weapon, Armor)):
+                entry["is_broken"] = bool(getattr(item, "is_broken", False))
+                entry["buc_status"] = getattr(item, "buc_status", "uncursed")
+                entry["buc_known"] = bool(getattr(item, "buc_known", False))
+                entry["is_sealed"] = bool(getattr(item, "is_sealed", False))
+                entry["item_level"] = getattr(item, "level", 0)
+                if isinstance(item, Weapon):
+                    entry["attack_bonus"] = getattr(item, "attack_bonus", 0)
+                else:
+                    entry["defense_bonus"] = getattr(item, "defense_bonus", 0)
+            out.append(entry)
+        return out
 
     def _nearest_features_obs(self):
         """For each feature type the policy cares about (D, V, C, plus
@@ -673,7 +1183,8 @@ class PlaytestSession:
         pc = gs.player_character
         floor = gs.my_tower.floors[pc.z]
         out = {}
-        for target in ("D", "V", "C", "G", "A", "L", "O", "P", "T", "N"):
+        for target in ("D", "U", "V", "C", "G", "A", "L", "O", "P", "T", "N",
+                       "Q", "K", "X", "B", "F"):
             best = None
             best_d = float("inf")
             for y in range(floor.rows):
@@ -724,34 +1235,52 @@ class PlaytestSession:
 
     def _keyed_dungeon_target_obs(self):
         """If the player holds a key for an unlooted dungeon on this
-        floor, return (dx, dy, dist) to the nearest one. Bypasses
+        floor, return navigation info to the nearest one. Bypasses
         visited_features (re-targets a dungeon we walked past unkeyed
         before the key dropped) and visited filters on nearest_features.
         Looted dungeons are excluded via gs.looted_dungeons.
 
-        Returns dist=0 when the player is already standing on the keyed
-        tile -- the JSONL stream then carries the "this dungeon is
-        keyed" signal at the exact turn we unlock, useful for post-hoc
-        analysis. The wayfinder ignores dist==0 (uses == 1 for adjacent).
+        Returns dx/dy/dist (Manhattan) for the adjacency check, plus
+        first_step/path_dist (BFS through discovered tiles) for the
+        distant wayfinder. first_step is None when the keyed dungeon
+        is not reachable through known passage.
         """
         pc = gs.player_character
         z = pc.z
         keys = getattr(gs, "dungeon_keys", {}) or {}
         looted = getattr(gs, "looted_dungeons", {}) or {}
-        best = None
-        best_d = float("inf")
+        dist_map, first_step = self._bfs_paths()
+        # Prefer BFS-closest; fall back to Manhattan-closest if no keyed
+        # tile is reachable through known passage (the agent then walks
+        # toward it via the frontier walker until it becomes reachable).
+        best_bfs = None  # (path_dist, x, y)
+        best_manhattan = None  # (manhattan_dist, x, y)
         for coord in keys.keys():
             if len(coord) < 3 or coord[2] != z:
                 continue
             if coord in looted:
                 continue
             x, y = coord[0], coord[1]
-            d = abs(x - pc.x) + abs(y - pc.y)
-            if d < best_d:
-                best, best_d = (x - pc.x, y - pc.y), d
-        if best is None:
+            md = abs(x - pc.x) + abs(y - pc.y)
+            if best_manhattan is None or md < best_manhattan[0]:
+                best_manhattan = (md, x, y)
+            if (x, y) in dist_map:
+                pd = dist_map[(x, y)]
+                if best_bfs is None or pd < best_bfs[0]:
+                    best_bfs = (pd, x, y)
+        chosen = best_bfs or best_manhattan
+        if chosen is None:
             return None
-        return {"dx": best[0], "dy": best[1], "dist": best_d}
+        _, x, y = chosen
+        fs = first_step.get((x, y))
+        pd = dist_map.get((x, y))
+        return {
+            "dx": x - pc.x,
+            "dy": y - pc.y,
+            "dist": abs(x - pc.x) + abs(y - pc.y),
+            "first_step": fs,
+            "path_dist": pd,
+        }
 
     def _visited_neighbors_obs(self):
         """Mirror of _neighbors_obs but with a bool: is this neighbouring
@@ -768,6 +1297,350 @@ class PlaytestSession:
                 continue
             rt = floor.grid[ny][nx].room_type
             out[d] = (pc.z, nx, ny, rt) in self.visited_features
+        return out
+
+    def _tomb_guardian_dirs_obs(self):
+        """Cardinal directions whose adjacent tile is an M room with the
+        `undead_guardian` property set -- one of the four tomb-adjacent
+        guardian spawns (one elite at floor+1, three regular undead at
+        floor). Restricted to DISCOVERED tiles so the agent doesn't get
+        god-mode info; the agent has to actually see the M tile (via
+        walking near or lantern-revealing) before recognising it as a
+        guardian. Used by the policy to refuse stepping into an elite
+        undead they're not over-levelled to handle.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        out = []
+        for d, (dx, dy) in (("n", (0, -1)), ("s", (0, 1)),
+                            ("e", (1, 0)), ("w", (-1, 0))):
+            nx, ny = pc.x + dx, pc.y + dy
+            if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                continue
+            cell = floor.grid[ny][nx]
+            if self.fog_of_war and not cell.discovered:
+                continue
+            if cell.room_type != "M":
+                continue
+            if cell.properties.get("undead_guardian"):
+                out.append(d)
+        return out
+
+    def _suspected_guardian_coords_obs(self):
+        """(x, y) tiles that are CARDINAL-ADJACENT to any discovered T
+        (tomb) on the current floor. Every tomb spawns exactly four
+        guardians in its cardinal neighbours (setup_dungeons_and_tombs
+        in dungeon.py), so once the agent sees a T tile they can infer
+        the four guardian positions WITHOUT having to discover the M
+        tiles directly. Used by the policy's inference-based avoid: a
+        Lv1 elf who lantern-reveals a T two tiles away now knows not
+        to step into the M positions around it, even before those Ms
+        are themselves discovered.
+
+        User-requested ('let's create playtests logic that detects "a
+        tomb might be here so there could be a guardian in one of
+        these adjacent rooms"').
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        out = set()
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                cell = floor.grid[y][x]
+                if cell.room_type != "T":
+                    continue
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < floor.cols and 0 <= ny < floor.rows:
+                        out.add((nx, ny))
+        return sorted(out)
+
+    def _inferred_guardian_dirs_obs(self):
+        """Cardinal directions whose adjacent tile is a suspected
+        guardian (cardinal-adjacent to a discovered T). Complements
+        tomb_guardian_dirs (which requires the M to be DISCOVERED and
+        flagged): this one fires purely off T-sighting, so a Lv1
+        agent can avoid stepping onto a fog-hidden guardian as long as
+        they've seen the tomb. Stops the four-corner-walk-in problem
+        without requiring lantern-reveal of every M tile first."""
+        pc = gs.player_character
+        suspected = set(self._suspected_guardian_coords_obs())
+        if not suspected:
+            return []
+        out = []
+        for d, (dx, dy) in (("n", (0, -1)), ("s", (0, 1)),
+                            ("e", (1, 0)), ("w", (-1, 0))):
+            nx, ny = pc.x + dx, pc.y + dy
+            if (nx, ny) in suspected:
+                out.append(d)
+        return out
+
+    def _bfs_paths(self):
+        """BFS from player over walkable, discovered tiles. Returns
+        (dist_map, first_step_map) keyed by (x, y).
+
+        Walkable transit excludes walls, undiscovered tiles (under fog),
+        and known hazards (M monsters, W warps). Feature tiles (D, V,
+        C, G, A, L, O, P, T, N) ARE walkable -- the agent steps onto
+        them to interact. To attack a monster, route to one of its
+        cardinal neighbours and step into the M tile.
+
+        Cached per observe() via self._bfs_cache so the three
+        path-obs methods share one BFS pass.
+        """
+        cache = getattr(self, "_bfs_cache", None)
+        if cache is not None:
+            return cache
+
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        wall = floor.wall_char
+        rows, cols = floor.rows, floor.cols
+        BLOCK_TRANSIT = {wall, "M", "W"}
+
+        dist = {(pc.x, pc.y): 0}
+        first_step = {(pc.x, pc.y): None}
+        queue = collections.deque([(pc.x, pc.y)])
+        DIRS = (("n", 0, -1), ("s", 0, 1), ("e", 1, 0), ("w", -1, 0))
+        while queue:
+            x, y = queue.popleft()
+            for d, dx, dy in DIRS:
+                nx, ny = x + dx, y + dy
+                if not (0 <= nx < cols and 0 <= ny < rows):
+                    continue
+                if (nx, ny) in dist:
+                    continue
+                cell = floor.grid[ny][nx]
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                if cell.room_type in BLOCK_TRANSIT:
+                    continue
+                dist[(nx, ny)] = dist[(x, y)] + 1
+                first_step[(nx, ny)] = (
+                    d if (x, y) == (pc.x, pc.y) else first_step[(x, y)]
+                )
+                queue.append((nx, ny))
+
+        self._bfs_cache = (dist, first_step)
+        return self._bfs_cache
+
+    def _feature_paths_obs(self):
+        """For each feature type, the BFS shortest path through
+        discovered, non-hazard tiles: first step direction + path
+        distance. Replaces Manhattan-vector greedy stepping with a
+        real navigator that respects walls + fog. {} for unreachable.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        dist, first_step = self._bfs_paths()
+        out = {}
+        for target in ("D", "U", "V", "C", "G", "A", "L", "O", "P", "T", "N",
+                       "Q", "K", "X", "B", "F"):
+            best = None
+            best_d = float("inf")
+            for y in range(floor.rows):
+                for x in range(floor.cols):
+                    cell = floor.grid[y][x]
+                    if cell.room_type != target:
+                        continue
+                    if self.fog_of_war and not cell.discovered:
+                        continue
+                    if (pc.z, x, y, target) in self.visited_features:
+                        continue
+                    if (x, y) == (pc.x, pc.y):
+                        continue
+                    if (x, y) not in dist:
+                        continue
+                    d = dist[(x, y)]
+                    if d < best_d:
+                        best, best_d = (x, y), d
+            if best is not None:
+                out[target] = {
+                    "first_step": first_step[best],
+                    "path_dist": best_d,
+                }
+        return out
+
+    def _frontier_step_obs(self):
+        """BFS first-step toward the nearest reachable frontier: a
+        discovered, walkable tile with at least one undiscovered
+        neighbour. Lower-right tiebreak (SE-most wins ties on path_dist)
+        mirrors the player heuristic that D tends to be down-right.
+        """
+        if not self.fog_of_war:
+            return None
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        dist, first_step = self._bfs_paths()
+        best_xy = None
+        best_key = None
+        for (x, y), d in dist.items():
+            if (x, y) == (pc.x, pc.y):
+                continue
+            has_undiscovered = False
+            for dx, dy in ((0, -1), (0, 1), (1, 0), (-1, 0)):
+                nx, ny = x + dx, y + dy
+                if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                    continue
+                if not floor.grid[ny][nx].discovered:
+                    has_undiscovered = True
+                    break
+            if not has_undiscovered:
+                continue
+            key = (d, -(x + y))
+            if best_key is None or key < best_key:
+                best_key = key
+                best_xy = (x, y)
+        if best_xy is None:
+            return None
+        return {
+            "first_step": first_step[best_xy],
+            "path_dist": dist[best_xy],
+        }
+
+    def _nearest_monster_path_obs(self):
+        """BFS first-step + path distance to engaging the nearest
+        visible monster. M tiles aren't walkable transit, so we BFS to
+        their cardinal neighbours and report the approach + 1 step into
+        the M. Used by hunt-mode when the player is strong enough to
+        farm monsters for XP/gold. Returns None when no visible M is
+        reachable through discovered tiles.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        dist, first_step = self._bfs_paths()
+        opp = {"n": "s", "s": "n", "e": "w", "w": "e"}
+        best = None
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                cell = floor.grid[y][x]
+                if cell.room_type != "M":
+                    continue
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                approach = None
+                for d, dx, dy in (("n", 0, -1), ("s", 0, 1),
+                                  ("e", 1, 0), ("w", -1, 0)):
+                    nx, ny = x + dx, y + dy
+                    if (nx, ny) not in dist:
+                        continue
+                    step_into = opp[d]
+                    ad = dist[(nx, ny)]
+                    if approach is None or ad < approach[0]:
+                        approach = (ad, step_into, (nx, ny))
+                if approach is None:
+                    continue
+                approach_dist, step_into, neighbour_xy = approach
+                fs = step_into if approach_dist == 0 else first_step[neighbour_xy]
+                total = approach_dist + 1
+                if best is None or total < best[0]:
+                    best = (total, fs)
+        if best is None:
+            return None
+        return {"first_step": best[1], "path_dist": best[0]}
+
+    def _nearest_warp_path_obs(self):
+        """BFS first-step + path distance to a tile ADJACENT to a
+        discovered W (warp), plus the cardinal step onto the W
+        itself. W is in BLOCK_TRANSIT so the regular feature_paths
+        BFS treats it as unreachable -- this companion computes the
+        approach explicitly, like nearest_monster_path does for M.
+        Returns None when no discovered W is reachable. Used by
+        the trapped-no-D escape valve: when the floor is region-
+        split and D is behind walls, the only way out is to walk
+        onto a known W and accept the random teleport.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        dist, first_step = self._bfs_paths()
+        opp = {"n": "s", "s": "n", "e": "w", "w": "e"}
+        best = None
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                cell = floor.grid[y][x]
+                if cell.room_type != "W":
+                    continue
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                approach = None
+                for d, dx, dy in (("n", 0, -1), ("s", 0, 1),
+                                  ("e", 1, 0), ("w", -1, 0)):
+                    nx, ny = x + dx, y + dy
+                    if (nx, ny) not in dist:
+                        continue
+                    step_into = opp[d]
+                    ad = dist[(nx, ny)]
+                    if approach is None or ad < approach[0]:
+                        approach = (ad, step_into, (nx, ny))
+                if approach is None:
+                    continue
+                approach_dist, step_into, neighbour_xy = approach
+                fs = step_into if approach_dist == 0 else first_step[neighbour_xy]
+                total = approach_dist + 1
+                if best is None or total < best[0]:
+                    best = (total, fs)
+        if best is None:
+            return None
+        return {"first_step": best[1], "path_dist": best[0]}
+
+    def _tile_coverage_obs(self):
+        """How much of the current floor's walkable area has the
+        agent stood on? Returns dict with `visited`, `walkable`,
+        `pct` (0-100), `reachable` (BFS-reachable from current pos),
+        and `reach_pct` (visited / reachable * 100 -- "% of MY
+        island I've walked"). Region-split floors (D in another
+        part of the floor behind walls) leave the agent on a tiny
+        reachable island where global `pct` can never climb past
+        a few percent; `reach_pct` correctly hits 100% once the
+        island is swept, and that's the right signal for the
+        trapped-no-D escape valve.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        wall = floor.wall_char
+        walkable = 0
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                if floor.grid[y][x].room_type != wall:
+                    walkable += 1
+        visited = len(self.visited_tiles_this_floor)
+        pct = (visited / walkable * 100.0) if walkable else 0.0
+        dist, _ = self._bfs_paths()
+        reachable = len(dist)
+        # visited may include tiles BFS can't currently reach if
+        # the agent walked through them earlier (W tile, dead
+        # monster tile that's since gone walls-elsewhere). Clamp
+        # reach_pct at 100 so the gate doesn't false-fire on the
+        # rare past-walked-now-unreachable case.
+        reach_pct = min(100.0, (visited / reachable * 100.0)) if reachable else 0.0
+        return {
+            "visited": visited,
+            "walkable": walkable,
+            "pct": pct,
+            "reachable": reachable,
+            "reach_pct": reach_pct,
+        }
+
+    def _recent_step_set(self):
+        """List of cardinal directions (n/s/e/w) whose neighbour is in
+        recent_positions on the current floor. Used by the wayfinder
+        as a tiebreak: when a BFS first_step would re-step on a recent
+        tile AND an alternative direction is walkable, prefer the
+        alternative. Solves the 2-tile saddle-point oscillation
+        (seed=42 dwarf burned 4857/5000 turns alternating n/s through
+        a corridor). Returns a sorted list for JSON-friendliness."""
+        pc = gs.player_character
+        recent_on_floor = {(x, y) for (z, x, y) in self.recent_positions
+                           if z == pc.z}
+        if not recent_on_floor:
+            return []
+        out = []
+        for d, (dx, dy) in (("n", (0, -1)), ("s", (0, 1)),
+                            ("e", (1, 0)), ("w", (-1, 0))):
+            if (pc.x + dx, pc.y + dy) in recent_on_floor:
+                out.append(d)
         return out
 
     def _neighbors_obs(self):
@@ -825,6 +1698,22 @@ class PlaytestSession:
         pc = gs.player_character
         tw = gs.my_tower
         mode = gs.prompt_cntl
+        # Record flee attempts (both successful and failed) so the
+        # game_loop heal-up gate can fire before the agent walks back
+        # into another fight. Every flee costs one monster attack
+        # (combat.py:1158 unconditional), so the player is by
+        # definition wounded by the time the policy returns control.
+        if mode == "combat_mode" and action == "f":
+            self.last_flee_turn = self.turn
+            max_h = max(1, pc.max_health)
+            self.last_flee_hp_pct = pc.health / max_h
+        # Capture pre-step position. The loop-prevention check below
+        # only forces game_loop when the agent JUST LANDED on a
+        # previously-visited feature tile -- not when they're
+        # mid-dialog with a fresh feature (e.g., still inside an
+        # altar prayer sequence). Without this guard, the override
+        # short-circuits boon-claiming on first visit.
+        pre_step_xyz = (pc.z, pc.x, pc.y)
 
         try:
             if mode == "death_screen":
@@ -855,6 +1744,19 @@ class PlaytestSession:
                     self.last_error = f"unknown game_loop action: {action!r}"
             elif mode == "combat_mode":
                 process_combat_action(pc, tw, action)
+            elif mode == "flee_direction_mode":
+                # Mid-flee direction prompt. Handler accepts n/s/e/w to
+                # move + exit combat, or 'c' to cancel + return to
+                # combat. Anything else (incl. 'back') just logs an
+                # invalid-direction message and stays in flee_dir mode.
+                # Without this dispatch + policy branch, the agent fell
+                # into the catch-all 'back' which the harness mapped to
+                # game_loop, but the player was still on the monster
+                # tile so the next step walked right back into combat
+                # -- Finrod the elf burned ~10 turns this way taking
+                # 24-dmg Wraith hits between failed flees.
+                from .combat import process_flee_direction_action
+                process_flee_direction_action(pc, tw, action)
             elif mode == "spell_casting_mode":
                 process_spell_casting_action(pc, tw, action)
             elif mode == "chest_mode":
@@ -901,6 +1803,27 @@ class PlaytestSession:
             elif mode == "shrine_mode":
                 from .game_systems import process_shrine_action
                 process_shrine_action(pc, tw, action)
+            elif mode == "oracle_mode":
+                from .game_systems import process_oracle_action
+                process_oracle_action(pc, tw, action)
+            elif mode == "alchemist_mode":
+                from .game_systems import process_alchemist_action
+                process_alchemist_action(pc, tw, action)
+            elif mode == "war_room_mode":
+                from .game_systems import process_war_room_action
+                process_war_room_action(pc, tw, action)
+            elif mode == "taxidermist_mode":
+                from .game_systems import process_taxidermist_action
+                process_taxidermist_action(pc, tw, action)
+            elif mode == "identify_scroll_mode":
+                from .items import process_identify_scroll_action
+                process_identify_scroll_action(pc, tw, action)
+            elif mode == "upgrade_scroll_mode":
+                from .items import process_upgrade_scroll_action
+                process_upgrade_scroll_action(pc, tw, action)
+            elif mode == "foresight_direction_mode":
+                from .combat import process_foresight_direction_action
+                process_foresight_direction_action(pc, tw, action)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -921,15 +1844,161 @@ class PlaytestSession:
         # goal that should always be re-targeted.
         pc_after = gs.player_character
         room_now = gs.my_tower.floors[pc_after.z].grid[pc_after.y][pc_after.x]
-        if room_now.room_type not in (".", "E", "#", "D"):
-            self.visited_features.add(
-                (pc_after.z, pc_after.x, pc_after.y, room_now.room_type)
-            )
+        landing_key = (pc_after.z, pc_after.x, pc_after.y, room_now.room_type)
+        was_visited = landing_key in self.visited_features
+        post_step_xyz = (pc_after.z, pc_after.x, pc_after.y)
+        # Loop-prevention: feature-room modes re-fire their prompt
+        # every time the agent steps onto the tile, even after the
+        # boon is consumed. Two re-trigger paths:
+        #   - move-step lands on visited feature -> mode init fires
+        #   - inventory exit ('x') on a feature tile calls
+        #     _trigger_room_interaction(), which re-fires mode init
+        # Without this guard each visit burns turns on a re-prompt
+        # the policy then has to 'back' out of. HP charts on the
+        # deployed report site exposed this: many 'alive' runs were
+        # flat-lining HP from T300+ stuck in chest / pool / vendor /
+        # blacksmith oscillations. The override forces game_loop when
+        # we re-enter a loop-prone mode on a tile that's already been
+        # visited AND we weren't already in that same mode last step
+        # (the latter clause preserves multi-turn boon-claim
+        # dialogues like altar pray sequences). stairs_down_mode is
+        # excluded -- D isn't in visited_features and we want
+        # descent prompts to fire.
+        LOOP_PRONE_MODES = {
+            "altar_mode", "pool_mode", "garden_mode", "fey_garden_mode",
+            "library_mode", "oracle_mode", "chest_mode", "tomb_mode",
+            "vendor_shop", "blacksmith_mode", "shrine_mode",
+            "stairs_up_mode", "alchemist_mode", "war_room_mode",
+            "taxidermist_mode",
+            "dungeon_mode", "dungeon_unlocked_mode",
+        }
+        # The step transitioned INTO a loop-prone mode (either because
+        # the agent landed via movement, or _trigger_room_interaction
+        # re-fired the mode on inventory exit / similar).
+        transitioned_in = (
+            gs.prompt_cntl != mode
+            and gs.prompt_cntl in LOOP_PRONE_MODES
+        )
+        # Keyed-dungeon exception: when the agent has the key for the
+        # dungeon they just stepped onto AND it isn't looted yet, keep
+        # the dungeon_mode prompt so the policy's 'u' (unlock) can
+        # fire. Gloin III s=99 dwarf burned 3000 turns on F1 because
+        # the key dropped AFTER his first un-keyed visit -- the N tile
+        # entered visited_features, then once keyed the agent kept
+        # re-targeting it via the adjacent-shortcut but the override
+        # reset dungeon_mode -> game_loop every step, so 'u' never
+        # fired and the dungeon stayed locked.
+        if (was_visited and transitioned_in
+                and gs.prompt_cntl in ("dungeon_mode", "dungeon_unlocked_mode")):
+            coord = (pc_after.x, pc_after.y, pc_after.z)
+            holds_key = coord in (getattr(gs, "dungeon_keys", {}) or {})
+            already_looted = coord in (getattr(gs, "looted_dungeons", {}) or {})
+            if holds_key and not already_looted:
+                pass  # let the unlock/loot prompts fire
+            else:
+                gs.prompt_cntl = "game_loop"
+        elif was_visited and transitioned_in:
+            gs.prompt_cntl = "game_loop"
+        # Skip visited-tracking for traversal tiles (., E), walls (#),
+        # and stair tiles (D, U). The agent steps onto stairs to use
+        # them, and we want the wayfinder to re-target them when
+        # retreating up from a warp-skipped floor or descending later.
+        if room_now.room_type not in (".", "E", "#", "D", "U"):
+            self.visited_features.add(landing_key)
         # Reset floor-arrival counter when we change floors so the
         # stuck-on-floor override fires per-floor, not cumulative.
         if pc_after.z != self._last_floor:
+            # Stairs descent vs warp-arrival: if the pre-step mode was
+            # stairs_down_mode AND the action was 'd' AND z went up by
+            # exactly 1, it's a canonical descent and we bank the new
+            # depth as max_z_via_stairs. Anything else (warp accept,
+            # warp-resist-fail, multi-floor jump) leaves the cap
+            # alone, which triggers retreat-mode in the wayfinder.
+            if (mode == "stairs_down_mode"
+                    and action == "d"
+                    and pc_after.z == self._last_floor + 1):
+                if pc_after.z > self.max_z_via_stairs:
+                    self.max_z_via_stairs = pc_after.z
             self._last_floor = pc_after.z
             self.floor_arrival_turn = self.turn
+            # Clear the recent-position history on floor change so the
+            # anti-backtrack guard doesn't try to avoid a tile that's
+            # no longer reachable (different floor).
+            self.recent_positions = []
+            # Reset tile-coverage tracking: the new floor starts at 0%
+            # explored from the agent's perspective.
+            self.visited_tiles_this_floor = set()
+            self.floor_visit_count = {}
+            self.last_new_tile_turn = self.turn
+            self.wedge_attempted_actions = set()
+            # Fresh floor, fresh walls to discover.
+            self.blocked_directions = set()
+            # Reset per-floor kill counter so the grind-first descent
+            # gate measures kills on the CURRENT floor only.
+            self.kills_on_floor = 0
+        # Bump the kill counter on transitions INTO combat_victory.
+        # combat_victory fires exactly once per defeated monster, so
+        # this is a clean per-kill signal.
+        if mode != "combat_victory" and gs.prompt_cntl == "combat_victory":
+            self.kills_on_floor += 1
+        # Retreat give-up: if we've been retreat-active on this floor
+        # for more than 800 turns without resolving (no floor change
+        # back to <= max_z_via_stairs), bank current depth as the
+        # new max so the retreat flag clears and the agent resumes
+        # normal play. Faramir the Brave (human seed 12345) reached
+        # F2 only via warps (max_z_via_stairs stayed 0), then
+        # couldn't find an unreachable U for 1500+ turns -- retreat
+        # mode trapped him in the wander loop. Banking max_z = 1
+        # lets him drop retreat and try to descend normally instead.
+        if (pc_after.z > self.max_z_via_stairs
+                and (self.turn - self.floor_arrival_turn) > 800):
+            self.max_z_via_stairs = pc_after.z
+        # Track current-floor coverage for the policy's descent gate.
+        xy_after = (pc_after.x, pc_after.y)
+        if xy_after not in self.visited_tiles_this_floor:
+            self.last_new_tile_turn = self.turn
+        self.visited_tiles_this_floor.add(xy_after)
+        # Bump per-tile visit count ONLY on actual arrival (position
+        # changed this step). Standing still during inventory ops or
+        # multi-turn mode dialogues must NOT inflate the counter --
+        # the wedge detector reads "how many times have we arrived
+        # here from elsewhere" so a 2-tile bounce shows up cleanly.
+        if pre_step_xyz != post_step_xyz:
+            xy_now = (pc_after.x, pc_after.y)
+            self.floor_visit_count[xy_now] = self.floor_visit_count.get(xy_now, 0) + 1
+        # Wedge action tracker: when we're wedged (current tile
+        # visited 6+ times) AND the agent issues an inventory item
+        # use, remember the action so the Hail Mary doesn't re-try
+        # the same slot in this episode. Reset whenever the player
+        # actually moves -- a fresh tile = fresh wedge episode.
+        cur_visits = self.floor_visit_count.get(
+            (pc_after.x, pc_after.y), 0
+        )
+        if pre_step_xyz != post_step_xyz:
+            self.wedge_attempted_actions = set()
+        elif cur_visits >= 6 and isinstance(action, str) and action.startswith("u"):
+            self.wedge_attempted_actions.add(action)
+        # Maintain blocked_directions: when a cardinal-move action
+        # fails to change position, that direction is a wall from the
+        # current tile. Cleared on any successful move.
+        if action in ("n", "s", "e", "w"):
+            if pre_step_xyz == post_step_xyz:
+                self.blocked_directions.add(action)
+            else:
+                self.blocked_directions.clear()
+        elif pre_step_xyz != post_step_xyz:
+            # Any other action that caused movement (e.g., flee
+            # direction processed differently) also resets blockers.
+            self.blocked_directions.clear()
+        # Record the new position for anti-backtrack. Keep a short
+        # window (4 entries) -- long enough to detect 2-tile and
+        # 3-tile oscillations, short enough that the agent isn't
+        # blocked from genuinely retracing through a corridor.
+        cur_xy = (pc_after.z, pc_after.x, pc_after.y)
+        if not self.recent_positions or self.recent_positions[-1] != cur_xy:
+            self.recent_positions.append(cur_xy)
+            if len(self.recent_positions) > 4:
+                self.recent_positions.pop(0)
 
         return self.observe()
 
@@ -983,7 +2052,7 @@ def smart_policy(obs, rng, use_lantern=True):
     edible_count = 0
     urgent_meat = None
     urgent_rot = None
-    MEAT_EAT_BEFORE = 8  # eat fresh meat once rot_timer <= 8 moves
+    MEAT_EAT_BEFORE = 20  # eat fresh meat at rot_timer <= 20 moves so kill drops actually convert to nutrition
     for i in inv:
         if i["category"] in ("food", "food_rotten"):
             edible_count += 1
@@ -996,10 +2065,20 @@ def smart_policy(obs, rng, use_lantern=True):
                 if urgent_rot is None or rot < urgent_rot:
                     urgent_rot = rot
                     urgent_meat = edible_count
+    # Spell-cast gate: the game refuses any cast attempt with
+    # "Requires Intelligence > 15" (combat.py:1161) and consumes the
+    # turn. Pre-memorised spells in the bag are useless until int
+    # climbs past the threshold via level-ups, stat-boost potions,
+    # altar boons, or library reads. Without this gate a dwarf at
+    # int=8 with a memorised Heal would spin returning "c" in
+    # combat_mode and burn the budget trying to cast a spell the
+    # handler rejects every turn.
+    can_cast = bool(p.get("can_cast"))
     heal_spell_slot = next((s["slot"] for s in spells
                             if s["type"] == "healing"
-                            and s["mana_cost"] <= mana), None)
-    affordable_spells = [s for s in spells if s["mana_cost"] <= mana]
+                            and s["mana_cost"] <= mana), None) if can_cast else None
+    affordable_spells = ([s for s in spells if s["mana_cost"] <= mana]
+                         if can_cast else [])
     affordable_dmg = [s for s in affordable_spells if s["type"] == "damage"]
 
     # Lantern state. With the omniscient nearest_features obs the agent
@@ -1033,6 +2112,7 @@ def smart_policy(obs, rng, use_lantern=True):
     # (welds to hand) or sealed (can't be repaired); unidentified
     # items are eligible -- that's the gamble the upgrade economy
     # is built around.
+    is_shrunk = bool(p.get("is_shrunk"))
     def _best_upgrade(category, bonus_key, current_bonus):
         best_slot = None
         best_bonus = current_bonus
@@ -1045,6 +2125,10 @@ def smart_policy(obs, rng, use_lantern=True):
                 continue
             if entry.get("buc_known") and entry.get("buc_status") == "cursed":
                 continue
+            # While shrunk, only bug-sized gear actually equips -- the
+            # handler silently rejects anything else with "too tiny".
+            if is_shrunk and not entry.get("is_bug_gear"):
+                continue
             b = entry.get(bonus_key) or 0
             if b > best_bonus:
                 best_bonus = b
@@ -1052,8 +2136,26 @@ def smart_policy(obs, rng, use_lantern=True):
         return best_slot, best_bonus
     cur_w = (equipped.get("weapon") or {}).get("attack_bonus") or 0
     cur_a = (equipped.get("armor") or {}).get("defense_bonus") or 0
-    weapon_upgrade_slot, _ = _best_upgrade("weapon", "attack_bonus", cur_w)
-    armor_upgrade_slot, _ = _best_upgrade("armor", "defense_bonus", cur_a)
+    # Known-cursed equipped gear can't be unequipped (welds to hand),
+    # so any swap or upgrade attempt against that slot just burns
+    # i -> e<N> -> x turns. Skip the upgrade detection entirely when
+    # cursed -- the only way out is an altar uncurse.
+    cursed_weapon = bool(
+        equipped.get("weapon")
+        and equipped["weapon"].get("buc_known")
+        and equipped["weapon"].get("buc_status") == "cursed"
+    )
+    cursed_armor = bool(
+        equipped.get("armor")
+        and equipped["armor"].get("buc_known")
+        and equipped["armor"].get("buc_status") == "cursed"
+    )
+    weapon_upgrade_slot = None
+    if not cursed_weapon:
+        weapon_upgrade_slot, _ = _best_upgrade("weapon", "attack_bonus", cur_w)
+    armor_upgrade_slot = None
+    if not cursed_armor:
+        armor_upgrade_slot, _ = _best_upgrade("armor", "defense_bonus", cur_a)
     has_upgrade = weapon_upgrade_slot is not None or armor_upgrade_slot is not None
 
     # Hoisted out of game_loop so tomb_mode etc. can use the same gate.
@@ -1061,11 +2163,54 @@ def smart_policy(obs, rng, use_lantern=True):
                          and equipped["weapon"].get("is_broken"))
     broken_armor = bool(equipped.get("armor")
                         and equipped["armor"].get("is_broken"))
+    # Active dangerous status effects on the player (poison, web,
+    # paralysis, sticky_hands, weakness, burn, freeze, etc.). Mirrors
+    # gs.NEGATIVE_EFFECT_TYPES minus silence (gated separately by
+    # can_cast) and shrinking (equipment-fit only). Used by is_weak
+    # so the agent avoids new combat while statused, and by the
+    # combat_mode flee branch so it disengages from an active fight
+    # the moment a tick fires.
+    active_status_types = set(p.get("status_effect_types") or [])
+    has_bad_status = bool(active_status_types & _DANGEROUS_STATUS_TYPES)
+    has_ticking_status = bool(active_status_types & _TICKING_STATUS_TYPES)
+    immobilised = bool(active_status_types & _IMMOBILISING_STATUS_TYPES)
+    # is_weak gates "should I avoid M tiles and skip risky targets".
+    # Only ticking statuses (poison/burn/DoT/life_drain) and
+    # immobilisation (web/paralysis/freeze) make new combat actually
+    # dangerous; stat debuffs (weakness, blindness, confusion,
+    # sticky_hands, defense_penalty) are tolerable for melee and
+    # don't justify a full avoid-M policy that lets the agent
+    # under-level. The cure-item open-inventory trigger still uses
+    # has_bad_status so debuffs get treated when a cure is available.
+    # Recently fled? The post-flee window pulls the agent into
+    # heal-up-first mode so they don't blunder back into the same
+    # monster at low HP. Surfaced via obs.recently_fled (30-turn
+    # window) -- inside that window, the agent treats themselves as
+    # is_weak so the wayfinder avoids M tiles, and the game_loop
+    # heal trigger fires at hp_pct < 0.95 (vs the default 0.80 +
+    # m_adjacent gate) so the recovery is to FULL.
+    recently_fled = bool(obs.get("recently_fled"))
     is_weak = (
         hp_pct < 0.50
         or broken_weapon
         or broken_armor
         or (equipped.get("weapon") is None)
+        or has_ticking_status
+        or immobilised
+        or (recently_fled and hp_pct < 0.80)
+    )
+    # Resource pressure: lantern fuel + hunger together set a soft
+    # deadline on how long the agent can keep weaving the floor looking
+    # for boons before it MUST start efficiently clearing monsters (for
+    # meat / XP / gold) or descend. Without this clock the agent could
+    # spend the whole budget exploring fog while the food + light run
+    # out. Pressure says "stop dawdling, transition to hunt or descend."
+    # Each LanternFuel canister adds 10 to the fuel gauge on auto-refill
+    # (items.py: +10 per use), so spare units count as fuel * 10.
+    fuel_total = (lantern_fuel or 0) + (spare_fuel_uses or 0) * 10
+    resources_pressing = (
+        hunger < 60       # below comfort, need meat soon
+        or fuel_total < 15  # less than ~15 lantern fires of light left
     )
     # Starving = critical hunger AND no food in bag. Hoisted because
     # combat_mode also gates on it (flee from inedible monsters when
@@ -1086,29 +2231,139 @@ def smart_policy(obs, rng, use_lantern=True):
         # potion is in the bag. The neighbors check is fog-of-war
         # aware: only fires if we actually see an M tile next door.
         neighbors_now = obs.get("neighbors") or {}
-        if (heal_pot_slot
-                and hp_pct < 0.80
-                and any(neighbors_now.get(d) == "M"
-                        for d in ("n", "s", "e", "w"))):
+        m_adjacent = any(neighbors_now.get(d) == "M"
+                         for d in ("n", "s", "e", "w"))
+        if heal_pot_slot and hp_pct < 0.80 and m_adjacent:
+            return "i"
+        # Post-flee recovery: heal aggressively to FULL after a flee
+        # so we don't walk back into the same monster at low HP.
+        # Celeborn the elf seed=271 was fleeing wraiths at HP 24-26,
+        # taking the unconditional monster parting attack on every
+        # flee, then immediately re-engaging without healing -- the
+        # combat heal-pot gate at HP<50% never fired because each
+        # round started above it. Recovery uses the 0.95 ceiling the
+        # inventory branch's heal logic already targets. Burns
+        # potions, but losing a fight is more expensive than three
+        # healing potions.
+        if recently_fled and hp_pct < 0.80 and heal_pot_slot:
+            return "i"
+        # Pre-combat buff drink in game_loop: when M is adjacent AND
+        # we have an identified buff potion (strength/defense/stone
+        # skin/regeneration/berserker/etc.) AND HP is 60-95% (NOT at
+        # max -- if hp >= 95% the inventory branch's buff-drink gate
+        # rejects, falling through to a scroll read that may not
+        # consume; agent loops `i -> x -> i -> x`. Gate aligned to
+        # match the inventory branch).
+        BUFF_POTION_TYPES = {
+            "strength", "defense", "stone_skin", "regeneration",
+            "berserker", "giant_strength", "haste", "vampirism",
+            "frost_armor", "fortune",
+        }
+        has_buff_potion = any(
+            i.get("category", "").startswith("potion_")
+            and i.get("is_identified")
+            and i.get("potion_type") in BUFF_POTION_TYPES
+            for i in inv
+        )
+        if (has_buff_potion and 0.60 <= hp_pct < 0.95
+                and m_adjacent):
+            return "i"
+        # Bad-status cure: when the player has a curable negative
+        # effect (poison / web / sticky_hands / confusion etc.) AND
+        # a Scroll of Restoration or Antidote-style cure_all potion
+        # is in the bag, open inventory to consume it. Without this
+        # trigger the agent kept walking through poison ticks /
+        # confusion-spam until the duration ticked down naturally.
+        has_cure_item = any(
+            (i.get("category") == "scroll"
+             and i.get("is_identified")
+             and i.get("scroll_type") == "restoration")
+            or (i.get("category", "").startswith("potion_")
+                and i.get("is_identified")
+                and i.get("potion_type") == "cure_all")
+            for i in inv
+        )
+        if has_bad_status and has_cure_item:
             return "i"
         if urgent_meat is not None:
+            return "i"
+        # Cooking gate: user spec is "cook all their meat once they
+        # have the kit -- eating cooked meat is much better for
+        # survival." Fire whenever has_cooking_kit AND has_raw_meat,
+        # no hunger gate. The kit cooks ALL raw meat in one action
+        # (CookingKit.use()), so this triggers once per batch of
+        # fresh kills regardless of how much remains. urgent_meat
+        # still fires first when a raw meat is about to rot --
+        # better to eat it raw than to lose it before the cook turn
+        # completes.
+        has_cooking_kit = any(i["category"] == "cooking_kit" for i in inv)
+        has_raw_meat = any(
+            i["category"] == "food" and i.get("rot_timer") is not None
+            and not i.get("is_cooked")
+            for i in inv
+        )
+        if has_cooking_kit and has_raw_meat:
             return "i"
         # broken_weapon / broken_armor / is_weak are hoisted above.
         # Open inventory to swap when current gear is broken AND we
         # have a working spare, OR when an unequipped item beats what's
         # in the slot (subsumes the prior broken-only check).
-        if broken_weapon and any(
+        # cursed_weapon / cursed_armor: skip the swap if the broken
+        # slot is welded on -- equip attempts just bounce off and the
+        # agent burns 3 turns per i->e<N>->x cycle until uncurse.
+        if (broken_weapon and not cursed_weapon and any(
                 e["category"] == "weapon" and not e.get("is_broken")
                 and e["name"] != equipped["weapon"]["name"]
-                for e in inv):
+                for e in inv)):
             return "i"
-        if broken_armor and any(
+        if (broken_armor and not cursed_armor and any(
                 e["category"] == "armor" and not e.get("is_broken")
                 and e["name"] != equipped["armor"]["name"]
-                for e in inv):
+                for e in inv)):
             return "i"
         if has_upgrade:
             return "i"
+        # Wedge escape: when the agent has ARRIVED at the current
+        # tile 6+ times on this floor (real bounces, not stand-still
+        # inventory ops -- floor_visit_count only bumps on movement),
+        # the wayfinder has lost the plot. Durin seed=314 dwarf on
+        # F2 burned 2345 turns at HP=1 in a (2,1)<->(3,1)<->(1,1) U
+        # corridor with no D reachable. Open inventory so the
+        # wedged-item-use block can read any escape scroll (mapping
+        # reveals fog, teleport relocates) or drink unidentified
+        # potions as Hail Marys. Gate on last_action != "i" so the
+        # trigger doesn't fire on the same turn we just exited
+        # inventory (that would be a 1-turn ping). The inventory
+        # branch's last_action guards prevent re-picking the same
+        # item twice in a row.
+        current_tile_visits = obs.get("current_tile_visits") or 0
+        wedged = current_tile_visits >= 6
+        attempted_already = set(obs.get("wedge_attempted_actions") or [])
+        WEDGE_SKIP_SCROLL_TRIGGER = {"spell_scroll", "vendor_restock"}
+        untried_scroll = any(
+            e["category"] == "scroll"
+            and not (e.get("is_identified")
+                     and e.get("scroll_type") in WEDGE_SKIP_SCROLL_TRIGGER)
+            and f"u{e['slot']}" not in attempted_already
+            for e in inv
+        )
+        untried_unid_potion = any(
+            e["category"].startswith("potion")
+            and not e.get("is_identified")
+            and f"u{e['slot']}" not in attempted_already
+            for e in inv
+        )
+        if (wedged and (untried_scroll or untried_unid_potion)
+                and obs.get("last_action") not in ("i", "x")):
+            return "i"
+        # Eat at hunger < 50 so each ration delivers close to full
+        # nutrition value -- rations are 50 nutrition (build 305),
+        # so eating at 49 hits the 100 cap with one unit to spare,
+        # while eating at 70 wastes ~20 nutrition to the cap. Still
+        # well above HUNGER_STARVING_THRESHOLD (10) so the safety
+        # margin remains. User: 'work on balance so some are still
+        # alive without looping at the end' -- food efficiency
+        # extends the food-clock window proportionally.
         if hunger < 50 and food_slot:
             return "i"
 
@@ -1132,13 +2387,68 @@ def smart_policy(obs, rng, use_lantern=True):
         turns_on_floor = obs.get("turns_on_floor") or 0
         stuck_on_floor = turns_on_floor > 100
         very_stuck = turns_on_floor > 200
-        if use_lantern and lantern_fuel > 5:
-            if unknown_neighbours >= 2:
-                return "l"
-            if stuck_on_floor and unknown_neighbours >= 1:
-                return "l"
-            if very_stuck and obs["turn"] % 10 == 0:
-                return "l"
+        # Lantern policy: KNOW what you're walking into. The lantern
+        # reveals tiles along the four cardinal axes up to
+        # (light_radius + upgrade_level) -- 7+ cells per direction
+        # with the starter lantern -- so one fire often catches a W
+        # or M tile several rooms away. Fire whenever the next step
+        # could land on an undiscovered tile (any fog-adjacent
+        # neighbour). Per user framing: "best way to stay alive is
+        # know what you are walking into for each room."
+        #
+        # TWO EXPLICIT RELEASE VALVES skip the fire:
+        #   1. fuel_scarce: lantern_fuel + spare canisters * 10 < 15
+        #      uses left. Conserve the last few fires for genuine
+        #      emergencies and trust the wayfinder's AVOID set.
+        #   2. strong_and_healthy: pc.level >= pc.floor + 2 AND
+        #      hp_pct >= 0.80. An over-levelled, full-HP agent can
+        #      tank a surprise wraith / warp / chest-gas the lantern
+        #      would have revealed -- the fuel cost outweighs the
+        #      surprise cost.
+        fuel_total = (lantern_fuel or 0) + (spare_fuel_uses or 0) * 10
+        # Two-tier fuel gate. "Low" lets the agent skip frivolous
+        # fires (random fog-adjacent move on a known-safe area).
+        # "Empty" is the hard stop -- can't fire without fuel.
+        # Critical lanterns (fog-adjacent step IMMINENT) always fire
+        # while fuel > 0, even when fuel_low triggers -- a single
+        # warp is worth dozens of saved fires. User-flagged Forlong
+        # of the Mark (human seed 314): stepped east into a fog
+        # tile that was W, got forced-warped F2->F4, because fuel=10
+        # triggered the old 'fuel_scarce' gate and the lantern
+        # skipped the critical reveal.
+        fuel_empty = lantern_fuel <= 0
+        over_leveled_for_floor = (
+            p.get("level", 1) >= p.get("floor", 1) + 2
+        )
+        strong_and_healthy = over_leveled_for_floor and hp_pct >= 0.80
+        # Critical fire: any fuel left + fog adjacent = burn it.
+        # User on Gimli the Mighty (s=256 dwarf, F14 L6, 147 kills):
+        # "I would think players would be avoiding warps more". Gimli
+        # warped 5+ times by stepping into fog tiles that turned out
+        # to be W -- the prior `not strong_and_healthy` gate let an
+        # over-levelled healthy agent skip the reveal because they
+        # could "tank a surprise wraith / warp / chest-gas". The cost
+        # asymmetry is wrong: an extra wraith is a few HP, a force-
+        # warp is 100-200 turns of recovery + retreat. ANY fuel +
+        # ANY fog neighbour = fire. Strong agents still skip when
+        # all four neighbours are already known (the gate below).
+        if (use_lantern and not fuel_empty
+                and unknown_neighbours >= 1):
+            return "l"
+        # Periodic stuck-fire even when other gates would skip --
+        # reveals long-range tiles when the agent is truly cornered.
+        # Uses fuel_total (lantern + spare canisters) instead of raw
+        # lantern_fuel so an agent with 2 spare cans at lantern_fuel=5
+        # still fires. Arwen Silverleaf (s=42 elf F1) burned 2960
+        # turns at HP=1 with 2 spare canisters because the prior
+        # `lantern_fuel > 5` gate gated on the in-lantern reservoir
+        # alone, and her four immediate neighbours were all known so
+        # the unknown-neighbours gate also skipped -- but the lantern
+        # would have revealed undiscovered tiles further down the
+        # corridor (radius 7 per cardinal).
+        if (use_lantern and fuel_total > 5
+                and very_stuck and obs["turn"] % 10 == 0):
+            return "l"
 
         # Weakness model (hoisted to top of smart_policy for reuse in
         # tomb_mode / pool_mode). When weak we avoid stepping onto
@@ -1153,10 +2463,177 @@ def smart_policy(obs, rng, use_lantern=True):
         # (7/30 runs in the last playtest). When the chicken-and-egg
         # is "no meat -> can't fight" we'd rather try the fight.
         # `starving` is hoisted to the top of smart_policy.
-        if starving:
-            AVOID = ({"W"} if is_weak else set())  # still avoid warps
-        else:
-            AVOID = ({"M", "W"} if is_weak else set())
+        #
+        # Warps are avoided on the early floors (z < 10): the
+        # warp_action drops the agent at random within +/- 2 floors,
+        # which routinely lands a fresh Lv1 dwarf next to a Wraith
+        # on F3 with no escape route. Even healthy agents shouldn't
+        # gamble that early; the 20-44% resist roll fails often
+        # enough that resisting isn't reliable cover. Once the agent
+        # is in the late game (z >= 10) the depth boost from a lucky
+        # warp can outweigh the downside, so the avoid drops.
+        #
+        # ESCAPE VALVE: if the agent is truly trapped on this floor
+        # -- 400+ turns spent here AND no D reachable on the
+        # discovered map -- the warp is the only way out, so we drop
+        # the W avoid. Without this, seeds with region-split floors
+        # (seed 7 F1, seed 500 F1) softlock at HP=1 alive forever.
+        # NOTE: was `z < 10` -- the user flagged Gimli the Mighty
+        # (s=256 dwarf F14 L6) for "warping a lot" past z=10. The
+        # late-game release was meant to let lucky warps boost
+        # depth, but the cost asymmetry is wrong (warp = 100-200
+        # turn recovery vs minor depth bump). Always AVOID W
+        # unless trapped_no_d -- BFS still excludes W from transit
+        # so this only matters for fog steps and random fallbacks.
+        early_floor = True
+        feature_paths_avoid = obs.get("feature_paths") or {}
+        d_avoid_reachable = bool(
+            (feature_paths_avoid.get("D") or {}).get("first_step")
+        )
+        coverage_obs_avoid = obs.get("tile_coverage") or {}
+        coverage_pct_avoid = coverage_obs_avoid.get("pct", 0)
+        reach_pct_avoid = coverage_obs_avoid.get("reach_pct", 0)
+        frontier_avoid = obs.get("frontier_step")
+        # Behavioral trapped detector: D unreachable AND the agent
+        # has stopped making exploration progress (no new tile
+        # visited in 100+ turns). The agent is on an island, has
+        # walked it, and the wayfinder is just bouncing among
+        # already-visited tiles. Uses turns_since_new_tile (NOT
+        # global pct or reach_pct), because:
+        #  - global pct false-negatives on region-split floors
+        #    (Gloin III s=99 dwarf: 9-tile pocket of 122-tile F1,
+        #    max 7.4% global pct, prior gate never fired).
+        #  - reach_pct false-positives on early exploration
+        #    (Gimli s=256 dwarf at T17: 66% of 9 reachable tiles
+        #    walked, prior gate fired and he warped to a Lv2
+        #    Vault Keeper Wraith on the same floor).
+        # turns_since_new_tile measures actual progress: while the
+        # agent keeps reaching new tiles via walking + lantern
+        # reveals, no escape valve. Once stuck, fire after 100T.
+        turns_since_new = obs.get("turns_since_new_tile") or 0
+        trapped_no_d = (
+            (not d_avoid_reachable)
+            and (turns_since_new >= 100)
+        )
+        # Cornered detection: agent's ONLY walkable cardinal
+        # neighbour is an M tile (the rest are walls). Without this
+        # override the agent can sit on the tile forever while M
+        # stays in AVOID (e.g., Galadhrim Goldenbough elf seed 999
+        # lost his starter Dagger to durability decay, is_weak
+        # fires from "no weapon", AVOID adds M, agent oscillates
+        # s/e/w into walls for 1500+ turns). Forcing M-engagement
+        # in this corner case gives the agent a chance at a weapon
+        # drop from the kill -- better than the indefinite stuck
+        # state.
+        peek_neighbours = obs.get("neighbors") or {}
+        walkable_neighbour_types = {
+            peek_neighbours.get(d)
+            for d in ("n", "s", "e", "w")
+            if peek_neighbours.get(d) not in (None, "#")
+        }
+        only_m_walkable = walkable_neighbour_types == {"M"}
+
+        avoid_set = set()
+        if is_weak and not starving and not only_m_walkable:
+            avoid_set.add("M")
+        if (is_weak or early_floor) and not trapped_no_d:
+            avoid_set.add("W")
+        # Avoid D while under-levelled and the floor's grind isn't
+        # done. Without this, an agent who walked OFF the D tile
+        # (stairs_down_mode's step-off branch) gets pulled BACK onto
+        # D by the wayfinder targeting fog past it -- Anborn of the
+        # White City (human seed 1100) burned 1260 game-loop turns
+        # walking west onto D and 1260 stairs_down_mode turns
+        # stepping east off D. The grind-gate tier filter strips D
+        # from priority, but BFS over walkable tiles still treats D
+        # as transit; adding D to AVOID prevents the step ENTIRELY
+        # until grind_complete releases (kills target met or floor
+        # 70% explored).
+        avoid_pc_floor = p.get("floor", 1)
+        avoid_pc_z = avoid_pc_floor - 1
+        avoid_under_leveled = p.get("level", 1) <= avoid_pc_z + 1
+        avoid_kills = obs.get("kills_on_floor") or 0
+        avoid_min_kills = min(12, max(3, avoid_pc_z * 2 + 1))
+        avoid_coverage = (obs.get("tile_coverage") or {}).get("pct", 0)
+        avoid_grind_done = (
+            avoid_kills >= avoid_min_kills
+            or avoid_coverage >= 70
+        )
+        if (avoid_under_leveled and not avoid_grind_done
+                and not is_weak and not trapped_no_d):
+            # Restore `not is_weak`: dropping it left HP=1 retreat
+            # agents (Thorin / Legolas / Boromir seed 1234) stuck
+            # on F1 because the BFS first_step was D, the AVOID-D
+            # filter swapped it, and there were no real alternatives
+            # so they oscillated. Better to let weak agents step on
+            # D and descend (or trigger the stairs_down step-off)
+            # than to lock them at F1.
+            avoid_set.add("D")
+        # Retreat-after-warp: agent wants to ASCEND, not descend.
+        # Adding D to AVOID prevents the wayfinder's frontier walker
+        # from routing through a D tile (BFS treats D as walkable
+        # transit) and triggering stairs_down_mode where the agent
+        # then loops step-off/walk-back. Anborn of the White City
+        # (human seed 1100): warped F1->F3 at T464, retreated F3->F2
+        # at T476, then burned 2500 turns oscillating between F2's
+        # D tile and the tile next to it. Trapped_no_d still releases
+        # the avoid so the agent can warp out if truly stuck.
+        # Retreat-mode trapped check: if the agent is retreating but
+        # U isn't reachable on this floor AND they've spent enough
+        # turns trying, release the D-avoid so they can at least
+        # descend (probably into worse, but at least they leave the
+        # F2 ping-pong). Anborn of the White City (human seed 1100)
+        # was retreat-stuck on F2 D tile with all neighbours
+        # walls/M/D for 2500+ turns -- no path to U existed because
+        # the agent had only explored 2.7% of the floor.
+        retreat_active = obs.get("retreat_to_floor") is not None
+        retreat_u_path = (feature_paths_avoid.get("U") or {}).get("first_step")
+        retreat_trapped = (
+            retreat_active
+            and not retreat_u_path
+            and turns_since_new >= 100
+        )
+        if retreat_active and not trapped_no_d and not retreat_trapped:
+            avoid_set.add("D")
+        AVOID = avoid_set
+        # Targeted tomb-guardian avoid. Adjacent M tiles flagged as
+        # `undead_guardian` are the 4 tomb-adjacent spawns (one elite
+        # at floor+1, three regular undead at floor). The agent
+        # should NOT step into one of these unless over-levelled
+        # enough to win the trade. Release valve: pc.level >=
+        # pc.floor + 2 (so F7 needs Lv9). Surgical -- only blocks
+        # the specific cardinal dirs that lead to a guardian; other
+        # M tiles remain valid targets for normal grinding.
+        # User-flagged after Gloin Axebreaker (seed 2500 dwarf, F7
+        # L7) walked east into a tomb-adjacent M and died to an
+        # ELITE UNDEAD DRAGON LICH. tomb_guardian_dirs is exposed
+        # via obs and only populated for DISCOVERED tiles -- the
+        # agent has to actually see the M before recognising it as
+        # a guardian.
+        guardian_dirs = set(obs.get("tomb_guardian_dirs") or [])
+        # Inferred guardians: cardinal-adjacent tile sits next to a
+        # DISCOVERED T. Every tomb spawns four cardinal guardians
+        # (dungeon.py setup_dungeons_and_tombs), so once the agent
+        # has SEEN a T they can rule out the four corner tiles
+        # WITHOUT having to step adjacent to each M first. User-
+        # requested: "create playtests logic that detects 'a tomb
+        # might be here so there could be a guardian in one of these
+        # adjacent rooms'". Folded into the same release-gate as
+        # the M-confirmed guardian_dirs -- once over-levelled, the
+        # agent will still engage the corner mobs for XP/gold.
+        inferred_guardian_dirs = set(obs.get("inferred_guardian_dirs") or [])
+        all_guardian_dirs = guardian_dirs | inferred_guardian_dirs
+        # Release threshold: pc.level >= pc.floor + 3 (was +2). The
+        # earlier +2 gate released for Lv4 elf on F2 (4 >= 4), but
+        # the elite mummy at Lv4 hits fragile races (elf base HP 28)
+        # for 28 per swing -- one-shot. +3 keeps the avoid active
+        # until the agent actually has the HP cushion to survive
+        # the trade.
+        guardian_safe = p.get("level", 1) >= p.get("floor", 1) + 3
+        blocked_guardian_dirs = (
+            all_guardian_dirs if all_guardian_dirs and not guardian_safe
+            else set()
+        )
 
         # Clear-before-descend gate. Beneficials = rooms that pay off
         # without forced combat (chest, garden, library, oracle, altar,
@@ -1166,10 +2643,40 @@ def smart_policy(obs, rng, use_lantern=True):
         # descent for them. D is suppressed while unvisited beneficials
         # remain so the playtester actually clears the floor before
         # moving on.
-        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P")
+        # BENEFICIAL_SAFE = rooms that pay off without forced combat.
+        # Q (alchemist): combine 2 potions for stronger result.
+        # K (war room): free intel reveals next floor's special rooms.
+        # B (blacksmith): cheap repair of worn gear.
+        # F (shrine of the fallen): one-shot stat boost.
+        # X (taxidermist) deliberately omitted -- only useful when the
+        # agent has trophies, and adding it forces BFS detours for an
+        # often-empty handoff. Stepped onto incidentally still works
+        # via the mode handler, just not proactively targeted.
+        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P", "Q", "K", "B", "F")
+        # Use BFS-aware feature_paths so we only delay descent for
+        # beneficials we can actually reach. The old Manhattan check
+        # (nearest_features) counted beneficials behind walls, leading
+        # to endless clear-before-descend loops on closed floors.
+        # Include V here so the agent never descends with an unvisited
+        # vendor reachable -- vendor-on-every-floor guarantee. Once V
+        # is visited it leaves feature_paths and the gate releases.
         nearest = obs.get("nearest_features") or {}
+        feature_paths_check = obs.get("feature_paths") or {}
         unvisited_beneficials_exist = any(
-            nearest.get(t) for t in BENEFICIAL_SAFE
+            feature_paths_check.get(t) for t in BENEFICIAL_SAFE + ("V",)
+        )
+        # Boon-exhaustion gate (replaces the old Lv>=3 character-strength
+        # gate). A real player squeezes every safe boon out of a floor
+        # before committing to monster clearing -- chests, gardens,
+        # altars, pools, libraries, oracles. Once those are gone (or
+        # resources are pressing so we can't afford more weaving) the
+        # agent shifts into efficient-clear mode: hunt M tiles for meat
+        # + XP + gold, then descend. Requires we're not is_weak so
+        # broken-gear / low-HP agents recover first instead of picking
+        # fights they can't win.
+        ready_to_clear = (
+            not is_weak
+            and (not unvisited_beneficials_exist or resources_pressing)
         )
         # Stuck-on-floor override: if we've spent more than this many
         # turns on the current floor, drop the clear-before-descend
@@ -1196,19 +2703,201 @@ def smart_policy(obs, rng, use_lantern=True):
         wants_vendor = ((healing_count < 2 or needs_repair)
                         and p["gold"] >= 50)
 
-        if is_weak:
-            priority = ["V"] + list(BENEFICIAL_SAFE)
+        # Tile-coverage descent gate: when we've swept >= 70% of this
+        # floor's walkable tiles AND D is reachable, descend even if
+        # a few SAFE rooms remain unvisited (probably stuck behind a
+        # wall the BFS can navigate but the cost-to-walk-there isn't
+        # worth it). The waste% audit caught agents burning 50+
+        # patrol-bouncing moves to retrieve one far beneficial after
+        # the bulk of the floor was explored.
+        coverage_pct = (obs.get("tile_coverage") or {}).get("pct", 0)
+        d_path = feature_paths_check.get("D")
+        d_reachable = bool(d_path and d_path.get("first_step"))
+        # Grind gate. Roguelike convention: character level should
+        # roughly match floor depth. A Lv2 player on F4 is under-
+        # levelled and gets vaporised by the next wraith. When
+        # pc_level <= pc_z, the agent stays on the current floor
+        # banking XP before descending -- D is dropped from the
+        # priority tiers, the high-coverage descend gate gets a
+        # minimum-kills requirement, and the tier ordering pulls M
+        # ahead of D so the agent actively hunts for fights.
+        # M is in BLOCK_TRANSIT for the main BFS so feature_paths['M']
+        # would always be None. obs.nearest_monster_path uses a
+        # different BFS that walks to a cardinal neighbour of an M
+        # tile then steps in; that's the right reachability signal
+        # for the grind gate.
+        nm_path = obs.get("nearest_monster_path") or {}
+        m_reachable_via_path = bool(nm_path.get("first_step"))
+        m_reachable_adj = any(
+            (obs.get("neighbors") or {}).get(d) == "M"
+            for d in ("n", "s", "e", "w")
+        )
+        m_reachable = m_reachable_via_path or m_reachable_adj
+        # Minimum kills required before this floor's descend gate
+        # opens. Scales with depth: F1 needs 3, F3 needs 5, F5 needs
+        # 9. Past that the curve caps at 12 so deep floors don't
+        # demand impossible grind counts. Bumped from the earlier
+        # F4=5 / F8=9 curve because the lighter version didn't
+        # actually change the grid (existing tier order already
+        # preferred SAFE/V/M over D when boons remained, so the
+        # filter was a near no-op).
+        pc_z = (p.get("floor", 1) - 1)
+        min_kills_for_floor = min(12, max(3, pc_z * 2 + 1))
+        kills_so_far = obs.get("kills_on_floor") or 0
+        # under_leveled fires when:
+        #  - pc.level <= pc.z + 1 (Lv N on F N is "on-pace", anything
+        #    below is under-levelled -- Lv2 on F3 / Lv3 on F4 etc.
+        #    qualifies), AND
+        #  - this floor still has a reachable monster to fight.
+        # The pc.z comparison uses the 0-indexed floor; the user-
+        # facing floor is z+1, so "Lv equal to displayed floor" =
+        # pc.level == pc.z + 1.
+        # under_leveled drops the m_reachable check -- if there are
+        # NO visible monsters and the agent is under-levelled, we
+        # want them to explore (find more monsters in fog) before
+        # descending, not bolt for the stairs.
+        under_leveled = (p.get("level", 1) <= pc_z + 1)
+        # Grind is "not done" until one of:
+        #   - kills_so_far meets the per-floor minimum, OR
+        #   - no monsters remain reachable AND coverage >= 70%
+        #     (i.e., the floor has been thoroughly swept and the
+        #     visible M tiles are gone; remaining M tiles, if any,
+        #     are behind fog the BFS can't path through anyway).
+        # The 70% gate is softer than high_coverage_descend's 80%
+        # because grind cares about M tiles, not boons -- once 70%
+        # of walkable tiles are seen, most M spawns have been found.
+        grind_complete = (
+            kills_so_far >= min_kills_for_floor
+            or (not m_reachable and coverage_pct >= 70)
+        )
+        # 90% sweep + D reachable + not weak + grind done. Bumped
+        # 80 -> 90 because a 20% slice of an 18x21 floor still
+        # hides plenty of M spawns the agent hasn't fought; the
+        # earlier threshold descended before the floor's XP was
+        # banked. grind_complete (min_kills met OR thoroughly
+        # explored with no M visible) is the second gate -- ensures
+        # under-levelled agents don't rush past their depth.
+        high_coverage_descend = (
+            coverage_pct >= 90
+            and d_reachable
+            and not is_weak
+            and grind_complete
+        )
+
+        # Tomb-suspected on this floor: the agent has fought an undead
+        # here, which (per the rebalanced spawn logic) means there's a
+        # T tile somewhere on the floor and an ELITE UNDEAD waits at
+        # one of the other 3 tomb-adjacent guardian rooms. When weak,
+        # we want the agent to actively avoid blundering into another
+        # wraith while limping toward healing -- drop M from the
+        # priority and treat T as a NO-GO unless we're back at full
+        # strength. The flag is set by _monster_obs the first time the
+        # agent enters combat with an undead and stays set for the
+        # remainder of the floor.
+        tomb_suspected = bool(obs.get("tomb_suspected_here"))
+
+        # Retreat-after-warp override. obs.retreat_to_floor is set
+        # whenever pc.z exceeds max_z_via_stairs -- i.e. a warp dropped
+        # the agent onto a floor they haven't earned via stairs yet.
+        # Those floors are near-instakill on a fresh Lv1 / Lv2
+        # character per the user's framing: the monster pool is
+        # tuned for their floor depth, and the agent doesn't have
+        # the level / gear / item supply. Cut the wayfinder over to
+        # ascend mode: target U exclusively (with V as a fallback if
+        # U isn't visible yet) so the agent makes for the up stairs.
+        # The stairs_up_mode + stairs_down_mode branches below also
+        # check this flag to flip their descend / walk-away
+        # behaviour into ascend.
+        retreat_to_floor = obs.get("retreat_to_floor")
+        # Trapped-no-D escape: region-split floor where D is behind
+        # walls and the only way out is a known W tile. The W tier
+        # is handled specially in the tier-iteration below
+        # (feature_paths doesn't include W, but nearest_warp_path
+        # provides the approach + step-onto-W). This block takes
+        # priority over everything except retreat (which targets U
+        # back to known territory).
+        if (retreat_to_floor is None
+                and trapped_no_d
+                and obs.get("nearest_warp_path")):
+            tiers = [("W",), ("V",)]
+        elif (retreat_to_floor is None
+                and trapped_no_d
+                and not obs.get("nearest_warp_path")
+                and obs.get("nearest_monster_path")):
+            # Trapped on island with no D, no W, but a visible M.
+            # Engage as last resort -- "die fighting" beats the
+            # indefinite HP=1 flatline. Arwen Silverleaf (s=42 elf
+            # F1) was wedged for 2960 turns at HP=1 with a tomb-
+            # guardian M blocking her only exit east; AVOID-M
+            # already drops when starving, but is_weak's priority
+            # list excludes M, so she paced two `.` tiles forever
+            # without ever stepping toward the only available
+            # threat. The M tier wires nearest_monster_path so
+            # she'll walk to the M and engage. Loss is bounded
+            # (one combat); the alternative is a 3000-turn flatline.
+            tiers = [("M",)]
+        elif retreat_to_floor is not None:
+            tiers = [("U",), ("V",)]
+        elif too_long_on_floor:
+            tiers = [("D",), ("V",)]
+        elif high_coverage_descend:
+            # Floor mostly swept + stairs in sight -- go.
+            tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
+        elif is_weak:
+            tiers = [("V",), tuple(BENEFICIAL_SAFE)]
             if not unvisited_beneficials_exist:
-                priority.append("D")  # only descend if nothing safer
+                tiers.append(("D",))
         elif wants_vendor:
-            priority = ["V"] + list(BENEFICIAL_SAFE) + ["T", "N"]
+            tiers = [("V",), tuple(BENEFICIAL_SAFE), ("T", "N")]
             if not unvisited_beneficials_exist:
-                priority.append("D")
+                tiers.append(("D",))
+        elif ready_to_clear:
+            tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",),
+                     ("T", "N"), ("D",)]
         elif unvisited_beneficials_exist:
-            priority = list(BENEFICIAL_SAFE) + ["V", "T", "N"]
+            tiers = [tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
         else:
-            priority = ["D", "V", "T", "N"] + list(BENEFICIAL_SAFE)
-        priority = tuple(priority)
+            tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
+        # Tomb-aware filter: when an undead has been encountered on
+        # this floor AND the agent is weak (low HP or broken gear),
+        # strip M and T/N from every tier. M because stepping into
+        # another tomb guardian at low HP is a death sentence; T/N
+        # because the elite guardian is sitting next to a T tile we
+        # might wander into while route-planning around. The agent
+        # keeps targeting V/SAFE/D so it can heal up or descend off
+        # the floor cleanly.
+        if tomb_suspected and is_weak:
+            tiers = [
+                tuple(t for t in tier if t not in ("M", "T", "N"))
+                for tier in tiers
+            ]
+            tiers = [tier for tier in tiers if tier]
+            tiers = [tier for tier in tiers if tier]
+        # Grind-first filter: when the agent is under-levelled and the
+        # floor still has reachable monsters AND they haven't met the
+        # minimum kill count yet, strip D from the tiers so the
+        # wayfinder targets SAFE / V / M / T / N instead. Don't shuffle
+        # tier ORDER -- the agent should still grab heal pools / chests
+        # / altars before walking into monsters (an earlier version
+        # pushed M to the front and the agent died with full bags).
+        # Skip the filter when retreat is active (retreat tiers are
+        # U-focused), when is_weak (recovering, not grinding), when
+        # too_long_on_floor (override -- the floor is stalled, get
+        # out), and when resources are pressing.
+        if (under_leveled
+                and not grind_complete
+                and not is_weak
+                and not retreat_to_floor
+                and not too_long_on_floor
+                and not resources_pressing):
+            tiers = [
+                tuple(t for t in tier if t != "D")
+                for tier in tiers
+            ]
+            tiers = [tier for tier in tiers if tier]
+        # Legacy flat-priority alias for the adjacent-feature shortcut
+        # below, which iterates a flat list of types.
+        priority = tuple(t for tier in tiers for t in tier)
 
         # First pass: a keyed dungeon adjacent to us is the best move
         # -- bypass the priority list entirely. The keyed_dungeon_target
@@ -1227,6 +2916,8 @@ def smart_policy(obs, rng, use_lantern=True):
             t = neighbors.get(d)
             if t in AVOID:
                 continue
+            if d in blocked_guardian_dirs:
+                continue
             if t in priority and not visited.get(d):
                 rank = priority.index(t)
                 if rank < best_rank:
@@ -1234,93 +2925,167 @@ def smart_policy(obs, rng, use_lantern=True):
         if best_dir is not None:
             return best_dir
 
-        # Distant wayfinder: no useful adjacent feature, but the floor
-        # has a known unvisited target. Step in the dimension with the
-        # larger absolute delta -- greedy walk. Held-key dungeons jump
-        # ahead of the normal priority list because they're guaranteed
-        # loot (the key-holder monster is already dead).
-        target = obs.get("keyed_dungeon_target")
-        if target is None:
-            for t in priority:
-                cand = nearest.get(t)
-                if cand:
-                    target = cand
-                    break
-        if target is not None:
-            dx, dy = target["dx"], target["dy"]
-            # 30% jitter to escape walls on long detours, and avoid
-            # walking into an M/W neighbour while weak.
-            if rng.random() < 0.30:
-                safe_dirs = [d for d in ("n", "s", "e", "w")
-                             if neighbors.get(d) not in AVOID]
-                if safe_dirs:
-                    return rng.choice(safe_dirs)
-            # Prefer the greedy axis but skip it if that direction is
-            # an avoid-tile.
-            for axis in ("xy", "yx"):
-                primary = "e" if dx > 0 else "w"
-                secondary = "s" if dy > 0 else "n"
-                if axis == "xy" and abs(dx) >= abs(dy):
-                    order = (primary, secondary)
-                else:
-                    order = (secondary, primary)
-                for d in order:
-                    if neighbors.get(d) not in AVOID:
-                        return d
-                break
+        # Distant wayfinder via BFS first-step. Held-key dungeons jump
+        # ahead of the normal priority list (guaranteed loot, the
+        # key-holder monster is already dead). After that, walk through
+        # the priority list and take the BFS first_step toward the
+        # nearest reachable instance of each type. Reachability respects
+        # walls + fog + AVOID hazards, so no more bouncing off walls or
+        # walking into monsters/warps while weak.
+        feature_paths = obs.get("feature_paths") or {}
+        monster_path = obs.get("nearest_monster_path")
+        recent_steps = set(obs.get("recent_step_set") or [])
+        blocked = set(obs.get("blocked_directions") or []) | blocked_guardian_dirs
 
-        # Frontier walker. When no feature beckons, head toward the
-        # nearest UNDISCOVERED tile so the lantern reveals new content.
-        # This replaces the prior directionless random walk -- the
-        # playtest agent should always have an objective for movement
-        # (vendor / chest / stairs / unexplored area). Survivor runs
-        # spent 49% of turns in game_loop just walking; the frontier
-        # walker converts that wandering into pure exploration progress.
+        def _swap_if_backtrack(d):
+            """Anti-backtrack + anti-wall guard: swap to an alternative
+            direction if `d` would re-step a recent tile OR is
+            known-blocked. (Earlier attempted to also swap when
+            t_main was in AVOID, but that left HP=1 retreat agents
+            stuck on F1 forever -- with no alternatives the fallback
+            returned `d` anyway and the AVOID check just added a
+            no-op detour. Reverted.)"""
+            if d not in recent_steps and d not in blocked:
+                return d
+            alts = []
+            for alt in ("n", "s", "e", "w"):
+                if alt == d:
+                    continue
+                if alt in recent_steps or alt in blocked:
+                    continue
+                t = neighbors.get(alt)
+                if t in AVOID or t == "#":
+                    continue
+                alts.append(alt)
+            if alts:
+                return rng.choice(alts)
+            # All non-recent / non-blocked alternatives also walls/
+            # recent. Try ANY walkable that isn't blocked.
+            for alt in ("n", "s", "e", "w"):
+                if alt in blocked:
+                    continue
+                t = neighbors.get(alt)
+                if t not in AVOID and t != "#":
+                    return alt
+            return d
+
+        # Keyed dungeon (if any) via BFS first_step.
+        if keyed_tgt and keyed_tgt.get("first_step"):
+            return _swap_if_backtrack(keyed_tgt["first_step"])
+
+        # Tier-aware distant wayfinder: within each tier, pick the
+        # BFS-nearest reachable target. This is the routing fix for
+        # the 47% revisit waste -- the agent now goes to the closest
+        # beneficial instead of the highest-ranked-type-but-far one.
+        warp_path = obs.get("nearest_warp_path")
+        for tier in tiers:
+            candidates = []
+            for t in tier:
+                if t == "M":
+                    mp = monster_path
+                    if (mp and mp.get("first_step")
+                            and mp.get("path_dist") is not None):
+                        # Trapped-engage-M (no D / no W island with a
+                        # visible monster) bypasses _swap_if_backtrack
+                        # for the same reason the W tier does -- the
+                        # agent must traverse already-walked tiles to
+                        # reach the only available threat.
+                        if (trapped_no_d
+                                and not obs.get("nearest_warp_path")):
+                            return mp["first_step"]
+                        candidates.append((mp["path_dist"], mp["first_step"]))
+                    continue
+                if t == "W":
+                    wp = warp_path
+                    if (wp and wp.get("first_step")
+                            and wp.get("path_dist") is not None):
+                        # Escape from a trapped island -- the agent
+                        # NEEDS to walk through already-visited
+                        # tiles to reach the warp. Skip the
+                        # anti-backtrack swap that would otherwise
+                        # send them bouncing among the visited
+                        # tiles forever (Gloin III s=99 dwarf was
+                        # at the W's adjacent tile but the swap
+                        # kept redirecting south->east because
+                        # 's' was in recent_step_set).
+                        return wp["first_step"]
+                    continue
+                path = feature_paths.get(t)
+                if (path and path.get("first_step")
+                        and path.get("path_dist") is not None):
+                    candidates.append((path["path_dist"], path["first_step"]))
+            if candidates:
+                candidates.sort(key=lambda c: c[0])
+                return _swap_if_backtrack(candidates[0][1])
+
+        # Frontier walker via BFS. When no feature beckons, take the
+        # BFS first-step toward the nearest reachable discovered tile
+        # that borders the fog. Lower-right tiebreak in the obs mirrors
+        # the player heuristic that D tends to be down-right of the map.
+        frontier_step = obs.get("frontier_step")
+        if frontier_step and frontier_step.get("first_step"):
+            return _swap_if_backtrack(frontier_step["first_step"])
+
+        # Random fallback only when the BFS has nothing reachable to
+        # offer (fully-explored floor or trapped behind a fog wall).
+        # Prefer an undiscovered neighbour if one happens to sit
+        # adjacent so the lantern still has a chance to break through.
+        # The anti-backtrack guard filters out recent tiles first so the
+        # random walk doesn't immediately re-feed the oscillation.
         FEATURE_TILES = ("C", "G", "L", "O", "A", "P", "T", "N", "V")
         def _walkable(d):
             t = neighbors.get(d)
-            return t not in AVOID and t != "#"
+            if t in AVOID or t == "#":
+                return False
+            # Also exclude inferred/known guardian directions so the
+            # random fallback doesn't blunder into a tomb-adjacent M.
+            if d in blocked_guardian_dirs:
+                return False
+            return True
         def _fresh(d):
             t = neighbors.get(d)
             if t in FEATURE_TILES and visited.get(d):
                 return False
             return True
-
-        # Aim at the fog frontier first.
-        frontier = obs.get("nearest_undiscovered")
-        if frontier is not None:
-            dx, dy = frontier["dx"], frontier["dy"]
-            # 20% jitter to escape walls on long detours.
-            if rng.random() >= 0.20:
-                # Greedy step along the larger axis first; fall back to
-                # the smaller axis if the primary direction is unwalkable.
-                if abs(dx) >= abs(dy):
-                    primary = "e" if dx > 0 else "w"
-                    secondary = "s" if dy > 0 else "n"
-                else:
-                    primary = "s" if dy > 0 else "n"
-                    secondary = "e" if dx > 0 else "w"
-                for d in (primary, secondary):
-                    if _walkable(d) and _fresh(d):
-                        return d
-                # Greedy axes blocked -- try any walkable+fresh.
-                for d in ("n", "s", "e", "w"):
-                    if _walkable(d) and _fresh(d):
-                        return d
-
-        # Random fallback only if the floor is fully discovered (or
-        # fog_of_war is off): pick any walkable, fresh direction,
-        # preferring an undiscovered neighbour if one happens to sit
-        # adjacent.
         candidates = [d for d in ("n", "s", "e", "w")
                       if _walkable(d) and _fresh(d)]
+        non_recent = [d for d in candidates if d not in recent_steps]
+        if non_recent:
+            candidates = non_recent
+        else:
+            # Every fresh walkable is also recent -- 2-tile oscillation
+            # in a dead-end corridor. If a non-recent walkable exists
+            # (typically a visited feature like a re-enterable dungeon
+            # or vendor), take that to break the loop. Boromir seed=1234
+            # human burned 2700 turns ping-ponging between (13,4) and
+            # (14,4); the only escape was south into a visited N tile
+            # that the freshness filter was excluding.
+            stuck_break = [d for d in ("n", "s", "e", "w")
+                           if _walkable(d) and d not in recent_steps]
+            if stuck_break:
+                candidates = stuck_break
         undiscovered_nbrs = [d for d in candidates if neighbors.get(d) is None]
         if undiscovered_nbrs:
             candidates = undiscovered_nbrs
         if not candidates:
             candidates = [d for d in ("n", "s", "e", "w") if _walkable(d)]
         if not candidates:
-            candidates = ["n", "s", "e", "w"]
+            # Truly cornered: every walkable direction is recent OR
+            # the only neighbours are walls/AVOID tiles. Don't just
+            # rng.choice all 4 dirs -- that picks W tiles when AVOID
+            # has W (Fili of Khazad-dum dwarf seed 13 stepped onto a
+            # known W via this exact path because rng landed on it
+            # uniformly across all 4 dirs). Prefer non-AVOID dirs
+            # even if walls -- a wall bump wastes one turn; a W
+            # step wastes 200+ turns of warp + retreat. Fall through
+            # to all 4 only if even the non-AVOID set is empty (no
+            # tile is safer than another).
+            safe_dirs = [d for d in ("n", "s", "e", "w")
+                         if neighbors.get(d) not in AVOID]
+            if safe_dirs:
+                candidates = safe_dirs
+            else:
+                candidates = ["n", "s", "e", "w"]
         return rng.choice(candidates)
 
     if mode == "inventory":
@@ -1333,37 +3098,196 @@ def smart_policy(obs, rng, use_lantern=True):
         # gear -> equip upgrade -> eat-when-hungry -> leave. Re-checks
         # each turn so the slot number stays valid if items were
         # consumed and the inventory order shifted.
+        # Sequential `if proposed is None` guards so a branch that
+        # ENTERS its condition but finds no candidate (e.g. broken
+        # weapon with no spare to swap to) doesn't short-circuit the
+        # later steps. The previous elif-cascade left a starving agent
+        # holding a broken weapon + no replacement bouncing i -> x
+        # forever, even with food in the bag (seed=314 dwarf: 1738
+        # consecutive turns standing on (8,11) at hunger=49 with food
+        # in slot 9 -- the broken-weapon block was entered, found no
+        # swap, and `elif hunger < 80 and food_slot:` was never reached).
         proposed = None
-        if hp_pct < 0.95 and heal_pot_slot:
+        if proposed is None and hp_pct < 0.95 and heal_pot_slot:
             proposed = f"u{heal_pot_slot}"
-        elif urgent_meat is not None:
+        if proposed is None and urgent_meat is not None:
             # Don't wait until starving -- consume the kill drop now.
             proposed = f"eat{urgent_meat}"
-        elif equipped.get("weapon", {}) and equipped["weapon"].get("is_broken"):
+        # Cook raw meat with the Cooking Kit. User: 'have the player
+        # cook all their meat once they have the kit. Eating cooked
+        # meat is much better for survival.' No hunger gate -- cook
+        # whenever raw meat exists. CookingKit.use() cooks ALL raw
+        # meat in inventory in a single action.
+        if proposed is None:
+            has_raw_meat_iv = any(
+                e["category"] == "food"
+                and e.get("rot_timer") is not None
+                and not e.get("is_cooked")
+                for e in inv
+            )
+            if has_raw_meat_iv:
+                for entry in inv:
+                    if entry["category"] == "cooking_kit":
+                        proposed = f"u{entry['slot']}"
+                        break
+        if (proposed is None
+                and equipped.get("weapon", {})
+                and equipped["weapon"].get("is_broken")
+                and not cursed_weapon):
             # Find a non-broken Weapon in inventory and equip it. e<N>
-            # indexes off working_items just like u<N> does.
+            # indexes off working_items just like u<N> does. Falls
+            # through to the next step if no spare exists or if the
+            # current weapon is welded on (cursed_weapon).
             for entry in inv:
                 if (entry["category"] == "weapon"
                         and not entry.get("is_broken")
-                        and entry["name"] != equipped["weapon"]["name"]):
+                        and entry["name"] != equipped["weapon"]["name"]
+                        and (not is_shrunk or entry.get("is_bug_gear"))):
                     proposed = f"e{entry['slot']}"
                     break
-        elif equipped.get("armor", {}) and equipped["armor"].get("is_broken"):
+        if (proposed is None
+                and equipped.get("armor", {})
+                and equipped["armor"].get("is_broken")
+                and not cursed_armor):
             for entry in inv:
                 if (entry["category"] == "armor"
                         and not entry.get("is_broken")
-                        and entry["name"] != equipped["armor"]["name"]):
+                        and entry["name"] != equipped["armor"]["name"]
+                        and (not is_shrunk or entry.get("is_bug_gear"))):
                     proposed = f"e{entry['slot']}"
                     break
-        elif weapon_upgrade_slot is not None:
+        if proposed is None and weapon_upgrade_slot is not None:
             # Strict-bonus upgrade in the bag, equip it. The
             # _best_upgrade helper already filtered known-cursed and
             # sealed candidates.
             proposed = f"e{weapon_upgrade_slot}"
-        elif armor_upgrade_slot is not None:
+        if proposed is None and armor_upgrade_slot is not None:
             proposed = f"e{armor_upgrade_slot}"
-        elif hunger < 80 and food_slot:
+        if proposed is None and hunger < 80 and food_slot:
             proposed = f"eat{food_slot}"
+        # Read safe identified scrolls -- one-shot beneficial effects
+        # the agent's been hoarding. Skip teleport (random
+        # destination, could land in a dangerous spot) and descent
+        # (skips the floor, defeats boon-collection). remove_curse
+        # only when actually cursed. vendor_restock (Scroll of
+        # Commerce) is excluded -- reading it restocks the floor's
+        # vendor, which then sells MORE Scrolls of Commerce, and the
+        # agent buys + reads them in an infinite buy-restock-buy
+        # loop. Tauriel the elf seed=500 burned 957 turns on a
+        # Commerce loop before this fix.
+        SAFE_SCROLL_TYPES = {
+            "mapping", "upgrade",
+            "lantern_upgrade", "restoration", "foresight",
+            "protection", "identify",
+        }
+        # spell_scroll is intentionally OMITTED here -- a Scroll of
+        # Fireball cast out of combat has no target and the game now
+        # refuses to consume it (items.py:1899). Leaving it in the
+        # set caused a 2-turn `u<N> -> x -> u<N>` ping-pong as the
+        # policy retried the scroll every inventory open. Combat-mode
+        # has its own branch that reads spell_scrolls with the live
+        # monster as target.
+        if proposed is None:
+            for entry in inv:
+                if entry["category"] != "scroll":
+                    continue
+                if not entry.get("is_identified"):
+                    continue
+                stype = entry.get("scroll_type")
+                if stype in SAFE_SCROLL_TYPES:
+                    proposed = f"u{entry['slot']}"
+                    break
+                if (stype == "remove_curse"
+                        and (cursed_weapon or cursed_armor)):
+                    proposed = f"u{entry['slot']}"
+                    break
+        # Wedge Hail Mary: when the agent has arrived at this tile
+        # 6+ times AND the safer paths above produced nothing,
+        # try unidentified scrolls (skip known spell_scroll and
+        # vendor_restock -- both re-prompt without consuming a turn
+        # so they'd lock the agent in inventory) and unidentified
+        # potions. Skip any slot in wedge_attempted_actions (session
+        # tracker, reset on movement) so each slot is tried at most
+        # once per wedge episode. If every candidate is exhausted,
+        # send 'x' to exit inventory so the wayfinder gets another
+        # turn -- without this the policy falls through to whatever
+        # default the inventory tail returns, which has historically
+        # been u<N>-loop fodder.
+        # Drink identified buff potions when HP is decent but not
+        # full. The combat-buff potions (strength, defense, stone
+        # skin, regeneration, etc.) are tactical effects that
+        # otherwise sit in the bag until death. Drink them while
+        # the agent is alive to see -- worst case the duration runs
+        # out before a fight, best case it saves the next combat.
+        # MUST run BEFORE the wedge Hail Mary: game_loop opens
+        # inventory specifically for this drink when m_adjacent
+        # and has_buff_potion, and if the wedge bail short-circuits
+        # to proposed='x' first the agent loops i->x->i->x forever.
+        # Dori of Belegost (s=2200 dwarf F4) burned 1800 turns at
+        # full HP with a Potion of Berserker Rage in slot 8 because
+        # the wedge bail consumed `proposed` before the buff-drink
+        # gate could fire.
+        HELPFUL_POTION_TYPES = {
+            "strength", "defense", "stone_skin", "regeneration",
+            "berserker", "giant_strength", "haste", "vampirism",
+            "dexterity", "intelligence", "frost_armor",
+            "true_sight", "invisibility", "fortune", "experience",
+        }
+        if proposed is None and hp_pct < 0.95:
+            for entry in inv:
+                if not entry["category"].startswith("potion_"):
+                    continue
+                if not entry.get("is_identified"):
+                    continue
+                if entry.get("potion_type") in HELPFUL_POTION_TYPES:
+                    proposed = f"u{entry['slot']}"
+                    break
+        current_tile_visits_iv = obs.get("current_tile_visits") or 0
+        wedged_iv = current_tile_visits_iv >= 6
+        wedge_attempted = set(obs.get("wedge_attempted_actions") or [])
+        WEDGE_SKIP_SCROLL_TYPES = {"spell_scroll", "vendor_restock"}
+        if proposed is None and wedged_iv:
+            for entry in inv:
+                if entry["category"] != "scroll":
+                    continue
+                stype = entry.get("scroll_type")
+                if entry.get("is_identified") and stype in WEDGE_SKIP_SCROLL_TYPES:
+                    continue
+                candidate = f"u{entry['slot']}"
+                if candidate in wedge_attempted:
+                    continue
+                proposed = candidate
+                break
+        if proposed is None and wedged_iv:
+            for entry in inv:
+                if not entry["category"].startswith("potion"):
+                    continue
+                if entry.get("is_identified"):
+                    continue
+                candidate = f"u{entry['slot']}"
+                if candidate in wedge_attempted:
+                    continue
+                proposed = candidate
+                break
+        if proposed is None and wedged_iv:
+            # All escape items exhausted -- back out of inventory so
+            # the game_loop wayfinder gets the next turn. The
+            # game_loop wedge trigger is gated on last_action not in
+            # ("i", "x"), which blocks immediate re-open. Combined
+            # with the per-floor wedge_attempted_actions set, this
+            # prevents the inventory loop entirely.
+            proposed = "x"
+        # Cure-all (Antidote) gets its own gate -- only drink when
+        # actually statused, otherwise it sits as insurance for the
+        # next nasty effect. has_bad_status is hoisted at the top of
+        # smart_policy.
+        if proposed is None and has_bad_status:
+            for entry in inv:
+                if (entry.get("category", "").startswith("potion_")
+                        and entry.get("is_identified")
+                        and entry.get("potion_type") == "cure_all"):
+                    proposed = f"u{entry['slot']}"
+                    break
         if proposed is None:
             return "x"
         # Anti-stuck guard: if the last action was the same as what we're
@@ -1377,15 +3301,49 @@ def smart_policy(obs, rng, use_lantern=True):
         return proposed
 
     if mode == "combat_mode":
-        # Threat assessment: monster_too_tough = monster level > player
-        # level + 2, OR monster max_hp > 2x player max_hp.
+        # Threat assessment: monster_too_tough = monster level >
+        # player level + 1, OR monster max_hp > 1.5x player max_hp,
+        # OR monster is undead at any level >= player level. The F4
+        # audit caught 5 Lv2 agents dying to Lv3-4 UNDEAD WRAITHs
+        # because the old threshold (level > pc+2) had them fighting
+        # those at parity. Wraiths hit for 15-25 raw, so even a flee-
+        # capable agent burns 1-2 hits worth of HP per engagement;
+        # tighten to flee earlier. The undead check uses obs.monster's
+        # name; we don't have a type field but the name contains
+        # "wraith/lich/skeleton/vampire/ghost/zombie/spectral".
         m = obs.get("monster") or {}
         m_level = m.get("level") or 0
         m_max_hp = m.get("max_hp") or 0
         m_is_edible = m.get("is_edible", True)
+        m_name_low = (m.get("name") or "").lower()
         pc_level = p.get("level") or 1
-        monster_too_tough = (m_level > pc_level + 2
-                             or m_max_hp > 2 * p["max_hp"])
+        # Reuse the module-level token list; obs.monster.is_undead is
+        # already set by _monster_obs, but we recompute here so the
+        # combat threat assessment is self-contained.
+        is_undead = bool(m.get("is_undead") or _is_undead_name(m_name_low))
+        # ELITE undead are the tomb-elite guardians spawned at
+        # floor+1 with 1.3x stats and 3x gold (see game_systems.py's
+        # undead_guardian branch). At parity level they hit harder
+        # and tank more than a regular Lv-equal undead, so the
+        # threat assessment treats them as one tier above where
+        # they'd otherwise sit. Without this, Gloin Axebreaker the
+        # dwarf at Lv7 vs an ELITE UNDEAD DRAGON LICH (Lv7) chose
+        # 'a' (attack) instead of 'f' (flee) and lost the trade
+        # 13 dmg vs 19 dmg per round, dying in three rounds.
+        is_elite_undead = is_undead and "elite" in m_name_low
+        # Three-band threat assessment:
+        #  * general monsters: flee at m_level > pc.level + 2.
+        #  * regular undead (wraith/lich/skeleton/etc.): flee at
+        #    m_level > pc.level (one tier earlier than general).
+        #  * ELITE undead: flee at m_level >= pc.level (parity is
+        #    already too dangerous given the 1.3x stat multiplier).
+        # max_hp gate (m_max_hp > 2x pc_max_hp) catches HP-bag bosses.
+        monster_too_tough = (
+            m_level > pc_level + 2
+            or m_max_hp > 2 * p["max_hp"]
+            or (is_undead and m_level > pc_level)
+            or (is_elite_undead and m_level >= pc_level)
+        )
         # Starving + inedible monster: flee. Prior playtest showed
         # 39 starvation-override engagements, only 2 produced meat
         # because the agent kept fighting Wraiths/Liches/Lichen with
@@ -1399,13 +3357,112 @@ def smart_policy(obs, rng, use_lantern=True):
         # Mid-fight heal: queue a cast at HP < 55%.
         if hp_pct < 0.55 and heal_spell_slot:
             return "c"
+        # Ticking-status flee: poison / burn / DoT / life_drain
+        # ticks every round, and the monster's adding hits on top.
+        # Break off, let the duration tick down out of combat,
+        # re-engage when clean. Stat-debuff statuses (weakness,
+        # defense_penalty, blindness, confusion, sticky_hands) are
+        # NOT in this gate -- fleeing wastes turns the debuff would
+        # have ticked through anyway, and the monster is usually
+        # still there when the debuff wears off. Skip the flee when
+        # immobilised (move refused) and when starving + edible-
+        # monster (we need this kill to eat).
+        if (has_ticking_status and not immobilised
+                and not (starving and m_is_edible)):
+            return "f"
+        # Low-HP last-ditch flee: HP < 30%, no healing options at all,
+        # not starving. Better to disengage and look for a vendor /
+        # altar / pool than die on the next swing. Prior policy
+        # silently kept attacking and lost most of these fights.
+        if (hp_pct < 0.30
+                and not heal_pot_slot
+                and not heal_spell_slot
+                and not starving):
+            return "f"
         # Threat-flee only when NOT starving -- a starving agent vs
         # an edible monster needs to win this fight to live.
         if monster_too_tough and not starving:
             return "f"
-        if affordable_dmg and rng.random() < 0.65:
+        # Damage spells beat melee: more damage per turn, no weapon
+        # durability loss, scale with INT for casters. Mana regens at
+        # 1/5 moves so casting freely between fights is sustainable.
+        # Bumped 0.65 -> 0.90 to actually USE the spells the agent
+        # buys (Scroll of Fireball etc.) instead of saving mana for
+        # an emergency that never comes.
+        if affordable_dmg and rng.random() < 0.90:
             return "c"
         return "a" if rng.random() < 0.92 else "f"
+
+    if mode == "identify_scroll_mode":
+        # Scroll of Identify opened a sub-mode listing unidentified
+        # items (1..N) or 'c' to cancel. Cancel doesn't consume the
+        # scroll, so the agent loops `i -> u<scroll> -> back -> i`
+        # forever; Eowyn the human seed=5678 burned 1244 turns on
+        # this. Always pick '1' (first unidentified item) so the
+        # scroll consumes. If there's nothing to identify the
+        # handler returns to inventory on its own.
+        return "1"
+
+    if mode == "upgrade_scroll_mode":
+        # Same shape as identify -- '1' picks the first valid item
+        # and consumes the scroll. The handler self-exits when the
+        # bag has no upgradeable gear, BUT items at MAX upgrade for
+        # the scroll's tier return early without resetting the
+        # prompt (items.py:2159) so a re-fire of '1' loops forever.
+        # Walk through digits 1..6 by last_action then cancel out.
+        last_us = obs.get("last_action") or ""
+        digit_sequence = ("1", "2", "3", "4", "5", "6")
+        if last_us in digit_sequence:
+            try:
+                idx = digit_sequence.index(last_us)
+                if idx + 1 < len(digit_sequence):
+                    return digit_sequence[idx + 1]
+            except ValueError:
+                pass
+            return "c"
+        return "1"
+
+    if mode == "foresight_direction_mode":
+        # Scroll of Foresight reveals 3 rows/cols toward n/s/e/w.
+        # The handler only accepts n/s/e/w/c -- anything else
+        # (including the catch-all 'back') just re-prompts. Eowyn
+        # seed=7 burned 682 turns looping `i -> u<scroll> -> back`
+        # because the policy fell into the default and returned
+        # 'back'. Pick a direction biased away from the wall the
+        # player is closest to so we maximise new map revealed.
+        neighbors = obs.get("neighbors") or {}
+        unseen = {}
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            unseen[d] = 1 if t is None else 0
+        for d in ("n", "s", "e", "w"):
+            if unseen[d]:
+                return d
+        return rng.choice(["n", "s", "e", "w"])
+
+    if mode == "flee_direction_mode":
+        # Pick a walkable direction to actually flee. Without this
+        # the policy fell into the catch-all and returned 'back',
+        # which the harness mapped to game_loop while leaving the
+        # player on the monster's tile -- Finrod the elf took
+        # consecutive 24-dmg Wraith hits between failed flees.
+        # Prefer non-recent walkable directions so the agent
+        # doesn't try to flee back through the same tile that just
+        # spawned the fight. Fall back to 'c' (cancel flee and
+        # stand to fight) if no walkable direction exists.
+        neighbors = obs.get("neighbors") or {}
+        recent = set(obs.get("recent_step_set") or [])
+        for d in ("n", "s", "e", "w"):
+            if d in recent:
+                continue
+            t = neighbors.get(d)
+            if t not in ("#", None):
+                return d
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t not in ("#", None):
+                return d
+        return "c"  # cornered; fight back
 
     if mode == "spell_casting_mode":
         if hp_pct < 0.55 and heal_spell_slot:
@@ -1454,9 +3511,50 @@ def smart_policy(obs, rng, use_lantern=True):
         # still died at hunger=0 because the override couldn't
         # consistently produce meat (5.1% conversion in fights). Buy
         # harder to never get to the override stage.
-        STOCK = {"potion_healing": 3, "food": 8, "potion_mana": 2}
-        if use_lantern and lantern_fuel < 20:
-            STOCK["lantern_fuel"] = 2
+        # Stockpile targets. Each vendor visit tops these up so the
+        # agent keeps buying every floor's vendor stock until the
+        # quota is full -- preventing the "only bought F4-F5" pattern
+        # where a player starves on F7 after the starter pack runs
+        # out. User-flagged after Thorin of Belegost (dwarf seed
+        # 1234): purchased only on F4 + F5, then starved into a warp
+        # surrender on F7 with no rations left.
+        # - food: 25 (was 15). 25 Rations = 1000 nutrition uses,
+        #   enough for ~1000 turns of comfort eating between meat
+        #   kills. The starter pack ships only 5 so the agent needs
+        #   most floors' vendors to fill.
+        # - potion_healing: 6 (was 4) -- one extra emergency per
+        #   deep floor pushes survival.
+        # - potion_mana: 3 (held).
+        STOCK = {"potion_healing": 6, "food": 25, "potion_mana": 3}
+        # Lantern fuel stockpile. Bumped trigger 20 -> 30 and target
+        # 2 -> 4 so the more-aggressive lantern policy doesn't run
+        # dry mid-floor. Four canisters = 40 fires; combined with the
+        # base fuel that's ~70 fires per vendor visit -- enough to
+        # lantern every fog-adjacent step for 7-8 floors.
+        # Fuel buys: trigger any time fuel < 45, target 6 canisters.
+        # With the every-fog-step lantern policy, fuel drains ~1 per
+        # 3-4 moves. Six canisters = 60 fires, base 50 starter,
+        # ~110 fires per vendor visit which covers 8-10 floors of
+        # aggressive lantern use. Bumped from 4 canisters/trigger
+        # 30 because Fili of Khazad-dum hit fuel=0 between vendor
+        # visits and stepped blind into a W.
+        if use_lantern and lantern_fuel < 45:
+            STOCK["lantern_fuel"] = 6
+
+        # RATIONS FIRST: buy EVERY ration the vendor offers, before
+        # any other stockpile or magic-item check. User framing:
+        # "Buying all rations from every vendor on every floor
+        # should be a very high priority. It's pretty much top of
+        # the explorer priority list." Rations are cheap (10g
+        # apiece) and starvation is the silent floor-7 killer; the
+        # STOCK["food"] cap was leaving deficit on long runs.
+        # Vendor stocks 3-4 rations as a single stack -- one 'b' click
+        # buys the stack at floor-tier value (the vendor's
+        # calculated_value field).
+        for v in vendor_inv:
+            if v["category"] == "food" and v["price"] <= gold:
+                return f"b{v['slot']}"
+
         owned = {cat: sum(i.get("count", 1) for i in inv
                           if i["category"] == cat)
                  for cat in STOCK}
@@ -1465,6 +3563,59 @@ def smart_policy(obs, rng, use_lantern=True):
                 continue
             cat = v["category"]
             if cat in STOCK and owned.get(cat, 0) < STOCK[cat]:
+                return f"b{v['slot']}"
+
+        # 2.5) Magical / utility items the agent should keep one or two
+        # of around: stat-buff potions are pre-combat insurance
+        # (Strength Elixir / Defense Brew / Stone Skin / Regeneration
+        # / Berserker Rage / Giant's Might / Haste / Vampiric Elixir),
+        # scrolls are the high-EV grab bag (mapping reveals the floor,
+        # upgrade buffs equipment, remove_curse breaks welds, spell
+        # scrolls teach new spells). Buy one of each unknown
+        # potion_<type> beyond healing/mana, and up to 3 scrolls. Keep
+        # a 150g cushion for emergency healing-pot restock at the next
+        # vendor.
+        MAGIC_RESERVE = 150
+        # Scroll cap bumped 3 -> 5. Upgrade scrolls in particular are
+        # the only melee-scaling lever for non-caster races; capping
+        # at 3 meant agents stopped buying after one or two vendors
+        # and walked past later vendors' guaranteed upgrade scroll.
+        # Five lets the agent keep stocking upgrade scrolls through
+        # mid-game vendors so the weapon attack_bonus actually
+        # scales with depth.
+        SCROLL_BUY_CAP = 5
+        owned_scrolls = sum(1 for i in inv if i["category"] == "scroll")
+        owned_buff_potion_types = {
+            i["category"] for i in inv
+            if i["category"].startswith("potion_")
+            and i["category"] not in ("potion_healing", "potion_mana")
+        }
+        # First pass: prefer upgrade scrolls over any other scroll
+        # type. For non-caster races (dwarf, human) the upgrade
+        # scroll is the only weapon-power scaling lever they have --
+        # +1 attack_bonus per scroll, no level / int requirement,
+        # consumed via the new upgrade_scroll_mode dispatch. A
+        # generic scroll grab-bag mixes upgrades with identify /
+        # mapping / restoration, so the agent randomly skipped half
+        # the upgrades. Now we buy upgrades FIRST, fill remaining
+        # scroll slots with whatever else is on offer.
+        for v in vendor_inv:
+            if v["price"] > gold - MAGIC_RESERVE:
+                continue
+            cat = v["category"]
+            if (cat == "scroll"
+                    and v.get("scroll_type") == "upgrade"
+                    and owned_scrolls < SCROLL_BUY_CAP):
+                return f"b{v['slot']}"
+        for v in vendor_inv:
+            if v["price"] > gold - MAGIC_RESERVE:
+                continue
+            cat = v["category"]
+            if cat == "scroll" and owned_scrolls < SCROLL_BUY_CAP:
+                return f"b{v['slot']}"
+            if (cat.startswith("potion_")
+                    and cat not in ("potion_healing", "potion_mana", "potion")
+                    and cat not in owned_buff_potion_types):
                 return f"b{v['slot']}"
 
         # 3) Replacement gear: if our equipped weapon or armor is broken
@@ -1480,7 +3631,36 @@ def smart_policy(obs, rng, use_lantern=True):
                 if v["category"] == "armor" and v["price"] <= gold:
                     return f"b{v['slot']}"
 
-        # 4) Identify unknown scrolls + potions. Upgrade scrolls are the
+        # 4) Equipment UPGRADES from the vendor. The biggest combat-
+        # balance gap surfaced by the F4 death cliff: vendors stock
+        # weapons (Longsword atk+10, Mace +6, Morningstar +8) and
+        # armor (Ring Mail def+4, Chainmail +6) that BLOW AWAY the
+        # starter Dagger / Leather Armor, but the policy was buying
+        # only stockpile items and walking past the upgrades. Now we
+        # scan vendor weapons / armor and buy any strict-bonus
+        # improvement we can afford, after keeping a healing-pot
+        # reserve. Skip known-cursed and sealed items -- can't be
+        # repaired and weld to hand on equip.
+        UPGRADE_RESERVE = 150  # keep this much for next vendor's potions
+        cur_w_bonus = (equipped.get("weapon") or {}).get("attack_bonus") or 0
+        cur_a_bonus = (equipped.get("armor") or {}).get("defense_bonus") or 0
+        for v in vendor_inv:
+            if v["category"] not in ("weapon", "armor"):
+                continue
+            if v["price"] > gold - UPGRADE_RESERVE:
+                continue
+            if v.get("is_broken") or v.get("is_sealed"):
+                continue
+            if v.get("buc_known") and v.get("buc_status") == "cursed":
+                continue
+            if v["category"] == "weapon":
+                if (v.get("attack_bonus") or 0) > cur_w_bonus:
+                    return f"b{v['slot']}"
+            else:  # armor
+                if (v.get("defense_bonus") or 0) > cur_a_bonus:
+                    return f"b{v['slot']}"
+
+        # 5) Identify unknown scrolls + potions. Upgrade scrolls are the
         # high-value drop the user explicitly called out -- you can't
         # use one without knowing what it is, and the vendor identify
         # cost (25g per L0 item, scaled by level) is small relative to
@@ -1515,26 +3695,170 @@ def smart_policy(obs, rng, use_lantern=True):
         return "x"
 
     if mode == "chest_mode":
-        return "o" if rng.random() < 0.85 else "l"
+        # Chests can explode for 30-48 raw damage. The death dossier
+        # showed Lv4-5 agents getting one-shot by chest explosions
+        # at low HP with no heal pot in the bag -- a narrow safety
+        # net for those runs. When HP is critical AND heal pots are
+        # exhausted, walk away from the chest instead of gambling.
+        # CHEST GAME BUG: the chest handler doesn't accept 'l' as a
+        # leave command (only o / i / n / s / e / w); sending 'l'
+        # logs "Invalid command" and stays in chest_mode, looping
+        # forever. Walk away via cardinal move instead. If ALL 4
+        # neighbours are walls (Cirdan elf seed=2200 was warp-landed
+        # on a chest with walls on all sides and burned 2815 turns
+        # sending `n` into the wall), open the chest as a last
+        # resort -- a 30-50 dmg gamble beats an infinite loop.
+        neighbors = obs.get("neighbors") or {}
+        blocked = set(obs.get("blocked_directions") or [])
+        recent_steps_chest = set(obs.get("recent_step_set") or [])
+        def _walk_off_chest():
+            # Prefer non-recent, non-blocked, non-wall directions
+            # first -- without this the agent bounces between two
+            # adjacent chest tiles forever, since the for-loop
+            # always returned 'n' if it was walkable. Thranduil the
+            # Twice-Born (elf seed 9001) burned 2720 turns at HP=1
+            # oscillating n/s between two stacked chests.
+            for d in ("n", "s", "e", "w"):
+                if d in blocked or d in recent_steps_chest:
+                    continue
+                t = neighbors.get(d)
+                if t != "#":
+                    return d
+            # Fall back to any non-blocked, non-wall direction.
+            for d in ("n", "s", "e", "w"):
+                if d in blocked:
+                    continue
+                t = neighbors.get(d)
+                if t != "#":
+                    return d
+            return "o"  # walled in; open the chest and hope
+        if p["hp"] < 40 and heal_pot_slot is None:
+            return _walk_off_chest()
+        return "o" if rng.random() < 0.85 else _walk_off_chest()
     if mode == "stairs_down_mode":
-        # Clear beneficials before descending. If the floor has any
-        # unvisited safe-beneficial tiles we know about, step away from
-        # the stairs and let the wayfinder go grab them first. Skipped
-        # if we've been on this floor too long -- some beneficials are
-        # behind walls the greedy walker can't navigate around, and we'd
-        # rather descend than camp floor 1 for 5000 turns.
-        nearest = obs.get("nearest_features") or {}
-        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P")
-        stuck = (obs.get("turns_on_floor") or 0) > 300
-        if not stuck and any(nearest.get(t) for t in BENEFICIAL_SAFE):
+        # Retreat-after-warp: if a warp landed us on a floor deeper
+        # than max_z_via_stairs, we DON'T want to descend further --
+        # we want to walk off this D tile and find the U tile so we
+        # can ascend back to known territory. The wayfinder is
+        # already targeting U in retreat mode, so steer toward it.
+        feature_paths = obs.get("feature_paths") or {}
+        if obs.get("retreat_to_floor") is not None:
+            u_path = feature_paths.get("U")
+            if u_path and u_path.get("first_step"):
+                return u_path["first_step"]
             neighbors = obs.get("neighbors") or {}
+            recent_retreat = set(obs.get("recent_step_set") or [])
+            # Step OFF the D tile via a NON-RECENT walkable direction
+            # so we don't immediately walk back onto D from the tile
+            # we just came from.
+            for d in ("n", "s", "e", "w"):
+                if d in recent_retreat:
+                    continue
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            # No non-recent step exists -- agent is oscillating
+            # between D and its single non-wall neighbour. ESCAPE
+            # VALVE: if we've been on this floor a long time, just
+            # descend. Worse than retreat but ends the loop.
+            # Faramir the Brave + Forlong of the Mark (human seeds
+            # 12345 + 314) hit this exact pattern on F3 / F5 with
+            # HP=1, 1000+ turns oscillating.
+            if (obs.get("turns_on_floor") or 0) > 400:
+                return "d"
+            # Otherwise fall back to a recent step (back to where we
+            # came from -- explore there one more time).
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)
-                if t and t not in ("#", "D"):
+                if t and t not in ("#", "M", "W"):
                     return d
             return rng.choice(["n", "s", "e", "w"])
+        # Clear beneficials before descending -- but only if BFS says
+        # they're CLOSE. The previous Manhattan-based check could pick a
+        # beneficial behind a wall, causing an endless step-away /
+        # step-back-onto-D ping-pong (seed=13 human burned 40 turns in
+        # this loop). With path_dist <= 3 the agent only detours for
+        # nearby beneficials and otherwise descends.
+        # BENEFICIAL_SAFE = rooms that pay off without forced combat.
+        # Q (alchemist): combine 2 potions for stronger result.
+        # K (war room): free intel reveals next floor's special rooms.
+        # B (blacksmith): cheap repair of worn gear.
+        # F (shrine of the fallen): one-shot stat boost.
+        # X (taxidermist) deliberately omitted -- only useful when the
+        # agent has trophies, and adding it forces BFS detours for an
+        # often-empty handoff. Stepped onto incidentally still works
+        # via the mode handler, just not proactively targeted.
+        BENEFICIAL_SAFE = ("C", "G", "L", "O", "A", "P", "Q", "K", "B", "F")
+        stuck = (obs.get("turns_on_floor") or 0) > 300
+        nearby = [
+            feature_paths[t] for t in BENEFICIAL_SAFE
+            if feature_paths.get(t)
+            and feature_paths[t].get("path_dist") is not None
+            and feature_paths[t]["path_dist"] <= 3
+        ]
+        if not stuck and nearby:
+            best = min(nearby, key=lambda p: p["path_dist"])
+            fs = best.get("first_step")
+            if fs:
+                return fs
+        # Under-levelled + grind incomplete + not stuck: step OFF the
+        # D tile so the agent finishes exploring + grinding the floor
+        # before descending. The wayfinder's tier-strip filter handles
+        # the targeting side, but an agent who frontier-walks INTO a
+        # D tile (or spawns next to one -- F1 Thorin spawned with D
+        # 2 tiles south and descended on turn 9 after 2 kills) lands
+        # here without the tier filter ever firing. User-flagged:
+        # "seeing a lot of runs with 1 or 2 moves on floor 1. That's
+        # an easy way to start off on the wrong foot."
+        kills_so_far_descend = obs.get("kills_on_floor") or 0
+        pc_z_descend = (p.get("floor", 1) - 1)
+        min_kills_descend = min(12, max(3, pc_z_descend * 2 + 1))
+        coverage_pct_descend = (obs.get("tile_coverage") or {}).get("pct", 0)
+        under_descend = p.get("level", 1) <= pc_z_descend + 1
+        grind_done_descend = (
+            kills_so_far_descend >= min_kills_descend
+            or coverage_pct_descend >= 70
+        )
+        if (under_descend and not grind_done_descend
+                and not stuck and not is_weak):
+            neighbors = obs.get("neighbors") or {}
+            recent_descend = set(obs.get("recent_step_set") or [])
+            blocked_descend = set(obs.get("blocked_directions") or [])
+            # Prefer non-recent, non-blocked, non-hazard direction
+            # so the agent doesn't immediately walk back onto D the
+            # next turn.
+            for d in ("n", "s", "e", "w"):
+                if d in recent_descend or d in blocked_descend:
+                    continue
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            # Fall back to any non-blocked non-hazard dir.
+            for d in ("n", "s", "e", "w"):
+                if d in blocked_descend:
+                    continue
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            # ESCAPE VALVE: no clean step-off direction exists --
+            # all neighbours are walls/monsters/warps/recent.
+            # Better to descend than oscillate forever. Anborn of
+            # the White City (human seed 1100) reached an F2 D tile
+            # with n=#, s=M, e=#, w=came-from -- the policy step-off
+            # rng.choice'd a wall, agent stayed on D, repeat. 2500+
+            # turns wasted. Descending into F3 is risky but at least
+            # the agent makes progress and eventually dies honestly.
+            return "d"
         return "d"
     if mode == "stairs_up_mode":
+        # Retreat-after-warp: ASCEND. The agent landed on a U tile
+        # while pc.z > max_z_via_stairs, so going up is the goal.
+        # The default policy below walks AWAY from U to avoid the
+        # stairs ping-pong, but during retreat we want the
+        # ping-pong's opposite -- the trip back through familiar
+        # territory.
+        if obs.get("retreat_to_floor") is not None:
+            return "u"
         # Stairs-up_mode fires as soon as you arrive on floor N+1 (your
         # landing tile is the U). Confirming would immediately bounce
         # the agent back to floor N's D, where stairs_down_mode would
@@ -1544,6 +3868,37 @@ def smart_policy(obs, rng, use_lantern=True):
         # whatever direction has the most useful neighbour (or random
         # if none) -- this matches the game_loop wayfinder's instinct.
         neighbors = obs.get("neighbors") or {}
+        recent_up = set(obs.get("recent_step_set") or [])
+        # Prefer non-recent walkable so we don't immediately walk
+        # back onto U from the same tile we came from. Without this,
+        # Durin Forgewright (dwarf seed 314) and Eomer Crownless
+        # (human seed 2500) bounced 415-1033 times between U and
+        # the tile next to it -- stairs_up_mode walked east off U,
+        # game_loop walked west back onto U, repeat.
+        for d in ("n", "s", "e", "w"):
+            if d in recent_up:
+                continue
+            t = neighbors.get(d)
+            if t and t not in ("#", "U", "M", "W"):
+                return d
+        # Drop the recent-step filter but KEEP the hazard filter --
+        # the earlier fallback excluded only ('#', 'U') so the agent
+        # stepped onto a W neighbour from a U tile and got force-
+        # warped. Gimli the Mighty (s=256 dwarf) walked off the F3 U
+        # tile south straight onto a W and lost ~150 turns of
+        # progress per warp. Hazards take precedence over recency.
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t and t not in ("#", "U", "M", "W"):
+                return d
+        # Truly cornered: U above and the only other neighbour is M
+        # or W. Prefer M over W (one fight vs a random teleport),
+        # then fall back to a random cardinal as a last resort so we
+        # don't hang the policy.
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t == "M":
+                return d
         for d in ("n", "s", "e", "w"):
             t = neighbors.get(d)
             if t and t not in ("#", "U"):
@@ -1552,15 +3907,35 @@ def smart_policy(obs, rng, use_lantern=True):
     if mode == "warp_mode":
         # Floors are sometimes split into regions only connected via
         # warps (verified empirically on seed 7 floor 1: D was in a
-        # region unreachable from the start). The default 'always
-        # resist' policy was leaving dwarves stuck on floor 1 for the
-        # full 5000-turn budget because they could never reach the
-        # downstairs. New rule: resist when fresh, accept when stuck.
-        # Accepting a warp drops us at a random (z +/- 2) location,
-        # so an accept on floor 1 either lands deeper or stays on
-        # floor 1 in a different region -- both moves help.
-        stuck = (obs.get("turns_on_floor") or 0) > 200
-        return "n" if stuck else "y"
+        # region unreachable from the start), so we keep an accept
+        # path -- but the early-game cost is brutal. Warps drop the
+        # agent at random within +/- 2 floors, which routinely lands
+        # a fresh Lv1 next to a Wraith on F3 with no escape route.
+        # Resist hard on early floors and only accept when ACTUALLY
+        # trapped (no reachable D + very stuck). Late game (z >= 10)
+        # keeps the prior loose gate -- a lucky warp there is more
+        # often a depth boost than a death sentence.
+        #
+        # HARD OVERRIDES (always resist, no matter how stuck):
+        #   * starving: a random teleport does not feed you. User-
+        #     flagged after Thorin of Belegost (dwarf seed 1234)
+        #     surrendered to a warp at HP-low + starving, landed
+        #     adjacent to a Lv6 Stirge on F7, died on the next
+        #     flee's parting attack.
+        #   * hp_pct < 0.20: random landing into a Lv(z+2) monster
+        #     at sub-20% HP is a one-hit kill.
+        feature_paths = obs.get("feature_paths") or {}
+        d_reachable = bool((feature_paths.get("D") or {}).get("first_step"))
+        turns_since_new_warp = obs.get("turns_since_new_tile") or 0
+        if starving or hp_pct < 0.20:
+            return "y"
+        # Behavioral trapped gate (same shape as trapped_no_d in
+        # game_loop): D unreachable AND no new tile visited in
+        # 100+ turns means the wayfinder is bouncing on the island
+        # without progress. Accept the warp as escape.
+        if not d_reachable and turns_since_new_warp >= 100:
+            return "n"
+        return "y"
     if mode == "altar_mode":
         # Pray once per altar -- claims the god's current tier reward
         # (HP heal, MP restore, hunger fill, blessing, eventually a
@@ -1570,27 +3945,75 @@ def smart_policy(obs, rng, use_lantern=True):
         # value of guaranteed prayer boons is higher.
         return "pray"
     if mode == "pool_mode":
-        # Drink. Pool outcomes are RNG: healing pools restore HP, iron
-        # springs buff strength, but cursed wells poison. The playtest
-        # value is the data on whether the agent's risk tolerance pays
-        # off across seeds.
+        # Drink, but with an HP gate. Pool outcomes are RNG: healing
+        # restores HP, iron springs buff strength, BUT cursed wells
+        # deal 20-35 raw (no-defense) damage, golden pool mimic deals
+        # 50-100, mysterious explosion 15-40, all bypassing armor.
+        # The combat audit caught 4 deaths whose last log was "basin
+        # drains empty" -- agents drinking at low HP and being one-
+        # shot by the unlucky outcome. Skip the drink when HP < 50
+        # (covers cursed pool max + buffer; still some mimic risk on
+        # gold pools but those are 10% within the 10% gold-pool slice).
+        # When too weak, just walk away.
+        # Pool drink gate: cursed pool max 35, mysterious explosion
+        # 15-40, golden mimic 50-100 -- all raw, bypass armor. Skip
+        # the drink when HP is below 60% of max (covers cursed pool
+        # damage with a buffer; still some mimic risk). Relative
+        # threshold matters: elf max_hp is 28, so an absolute HP<50
+        # gate ALWAYS fires for elves at full health and traps them
+        # in pool_mode forever sending 'x' (invalid command). Cirdan
+        # the elf burned 2695 turns at full HP 48/48 stuck in a
+        # warp-landed pool with all neighbours undiscovered before
+        # this fix. Now: drink at >=60% HP; below that, try to walk
+        # off; if no known walkable direction exists (warp landed in
+        # fog), drink anyway -- a 1% catastrophic-mimic risk beats
+        # an infinite loop.
+        hp_pct_now = p["hp"] / max(1, p["max_hp"])
+        if hp_pct_now >= 0.60:
+            return "dr"
+        neighbors = obs.get("neighbors") or {}
+        recent = set(obs.get("recent_step_set") or [])
+        for d in ("n", "s", "e", "w"):
+            if d in recent:
+                continue
+            t = neighbors.get(d)
+            if t not in ("#", None):
+                return d
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            if t not in ("#", None):
+                return d
+        # No known walkable direction (e.g., warp-landed in fog).
+        # Take the drink rather than loop forever.
         return "dr"
     if mode == "tomb_mode":
         # Tombs offer a binary risk choice each visit:
         #   'r' (Raid)         -- spawns an undead guardian; if you win,
         #                         major reward (cursed weapon/armor).
         #   'p' (Pay Respects) -- safe heal or minor buff, no fight.
-        # Raid only when we have a real fallback for a bad fight.
-        # Tomb guardians can be Lv5 at floor 1-3 (dwarf/123 ate a 46-dmg
-        # Wraith one-shot at 91% HP with no escape route), so HP% alone
-        # is not enough. Two gates, EITHER triggers 'p':
-        #   1. is_weak            (HP < 50% or broken / missing gear)
-        #   2. no fallback option (no healing potion in bag AND no
-        #                          affordable Heal spell). If both are
-        #                          missing we have no way to recover
-        #                          from a bad guardian draw.
+        # Raid only when we're flush AND not on a floor that's
+        # already proven to have undead. Four gates, ANY triggers 'p':
+        #   1. is_weak              (HP < 50% or broken / missing gear)
+        #   2. no fallback          (no healing potion in bag AND no
+        #                            affordable Heal spell -- no
+        #                            recovery from a bad guardian draw)
+        #   3. tomb_suspected_here  (already fought an undead on this
+        #                            floor; one more dragon-lich-tier
+        #                            fight is a coin flip on death)
+        #   4. not over-levelled    (pc.level < pc.floor + 2 -- the
+        #                            raid spawns a Lv(floor+2) guardian
+        #                            and fragile races (elf base HP 28)
+        #                            get one-shot at parity HP). User-
+        #                            flagged after Legolas the Bowyer
+        #                            seed=1234 elf raided an F2 tomb at
+        #                            Lv4, the elite mummy spawned at
+        #                            Lv4 and hit him for 28/swing,
+        #                            dead in 1-2 rounds.
         no_escape = (heal_pot_slot is None) and (heal_spell_slot is None)
-        if is_weak or no_escape:
+        tomb_floor = bool(obs.get("tomb_suspected_here"))
+        pc_floor = p.get("floor", 1)
+        under_for_raid = p.get("level", 1) < pc_floor + 2
+        if is_weak or no_escape or tomb_floor or under_for_raid:
             return "p"
         return "r"
     if mode == "dungeon_mode":
@@ -1647,6 +4070,116 @@ def smart_policy(obs, rng, use_lantern=True):
         # the property `shrine_used` makes this one-and-done so the
         # visited_features tracker prevents oscillation.
         return "p"
+
+    # ----------------------------------------------------------------
+    # Picker rooms (Q alchemist, X taxidermist, K war room) + oracle.
+    # Each opens its own prompt mode when the player steps onto the
+    # tile; the handlers below either claim the boon and walk away, or
+    # walk away immediately when there's nothing left to claim. Each
+    # of these modes accepts n/s/e/w as walk-away movement, so the
+    # _step_away helper routes through the same BFS first_step the
+    # game_loop wayfinder would use.
+    # ----------------------------------------------------------------
+    def _step_away():
+        """Walk off the current feature tile. Re-uses BFS first_step
+        toward whatever target the game_loop would pick (D, beneficial,
+        vendor) so the agent doesn't immediately step back. Falls
+        through to any non-recent walkable neighbour, then any walkable
+        neighbour, then any direction."""
+        fp = obs.get("feature_paths") or {}
+        ms = obs.get("nearest_monster_path")
+        fs = obs.get("frontier_step")
+        nb = obs.get("neighbors") or {}
+        rs = set(obs.get("recent_step_set") or [])
+        AVOID_TILES = {"#"}
+        # Try BFS-routed targets in roughly the game_loop priority.
+        for cand in (
+            fp.get("D"), fp.get("V"), fp.get("C"), fp.get("G"),
+            fp.get("L"), fp.get("O"), fp.get("A"), fp.get("P"),
+            fp.get("T"), fp.get("N"), ms, fs,
+        ):
+            if cand and cand.get("first_step"):
+                d = cand["first_step"]
+                # If the chosen step would re-enter a recent tile and
+                # alternatives exist, swap; same anti-backtrack pattern
+                # the main wayfinder uses.
+                if d not in rs:
+                    return d
+        # Fallback: any non-recent walkable direction (SE-biased).
+        for d in ("e", "s", "w", "n"):
+            if d in rs:
+                continue
+            if nb.get(d) in AVOID_TILES:
+                continue
+            return d
+        for d in ("e", "s", "w", "n"):
+            if nb.get(d) not in AVOID_TILES:
+                return d
+        return rng.choice(["n", "s", "e", "w"])
+
+    if mode == "oracle_mode":
+        # Hints from generate_oracle_hints are text-only -- they reveal
+        # vault / shard / boss locations as log lines but don't mutate
+        # game state in a way our policy can read. So gazing is a wash
+        # for us; skip it and walk away. visited_features marks O on
+        # arrival, so the wayfinder won't re-target the oracle.
+        return _step_away()
+
+    if mode == "war_room_mode":
+        # Free intel reveals all special rooms on the NEXT floor (or
+        # current floor if next isn't generated yet) -- pre-scouts the
+        # descent, real value. The raid mode option (2) is a gold-
+        # gated XP gamble (100 + floor*5 gold for +50% XP / +25%
+        # monster atk over 10 turns); skip it to keep gold reserves
+        # for vendor restock.
+        props = obs.get("room", {}).get("properties", {}) or {}
+        if not props.get("intel_used"):
+            return "1"
+        return _step_away()
+
+    if mode == "alchemist_mode":
+        # Combine 2 potions into 1 stronger one. 3 uses per lab.
+        # Two matching healing pots -> Superior Healing (~125 HP from
+        # 2*50). Mixed types -> random elixir (still beneficial).
+        # 10% botch -> poison / confusion potion (drinkable but
+        # harmful; our policy only auto-drinks potion_healing so a
+        # bad brew sits inert in the bag). Net EV positive.
+        # Need at least 2 potions in the bag and uses remaining.
+        props = obs.get("room", {}).get("properties", {}) or {}
+        uses_left = props.get("alch_uses", 3)
+        combining = bool(props.get("alch_combining"))
+        potion_categories = (
+            "potion_healing", "potion_mana", "potion",
+        )
+        potion_count = sum(
+            1 for i in inv
+            if (i.get("category") or "").startswith("potion")
+        )
+        if uses_left > 0 and potion_count >= 2:
+            if combining:
+                # Handler is awaiting "<a> <b>"; the alchemist's
+                # potion list iterates inventory.items in insertion
+                # order. Slot 1 + 2 is the safest pick -- starter
+                # bag has 4 Minor Heals up front, and even mixed
+                # types brew into a useful elixir.
+                return "1 2"
+            return "c"
+        # Lab exhausted or no potions to combine -- leave.
+        return _step_away()
+
+    if mode == "taxidermist_mode":
+        # 's' sells all trophies for gold (always +EV). We don't have
+        # enough obs to know which collections are completable without
+        # extending the harness; the gold sale is safe and frees a
+        # bag slot. Completion rewards (auto-equipped accessories) are
+        # left on the table for a future iteration with richer obs.
+        has_trophies = any(
+            i.get("category") == "trophy" for i in inv
+        )
+        if has_trophies:
+            return "s"
+        return _step_away()
+
     return "back"
 
 
@@ -1772,6 +4305,16 @@ def main(argv=None):
                         help="Disable fog-of-war in obs (agent sees the full "
                              "floor regardless of `discovered`). Useful for "
                              "isolating upstream balance from navigation.")
+    parser.add_argument("--report-dir", default=None,
+                        help="Write a per-run HTML report (and JSON sidecar) "
+                             "to this directory. The report covers the hero, "
+                             "their journey, victories, equipment, and death "
+                             "if any. Auto-regenerates index.html.")
+    parser.add_argument("--deploy", action="store_true",
+                        help="After writing the report, push the report "
+                             "directory to a gh-pages branch of this repo "
+                             "via a worktree. Idempotent and additive: each "
+                             "run accumulates onto the branch.")
     args = parser.parse_args(argv)
 
     spells = [s for s in args.spells.split(",") if s.strip()] if args.spells else None
@@ -1782,6 +4325,28 @@ def main(argv=None):
                     int_bonus=args.int_bonus, spells=spells)
     obs = sess.observe()
     print(_summarise(obs, args.jsonl))
+
+    # Report collector: tracks per-turn obs + log lines so we can
+    # render a hero-postmortem page after the run finishes. Cheap
+    # enough to leave on for every run; the rendering work happens
+    # at finalize.
+    report = None
+    if args.report_dir or args.deploy:
+        from .playtest_report import RunReport
+        pc = gs.player_character
+        starting_stats = {
+            "health": pc.max_health, "attack": pc.attack,
+            "defense": pc.defense, "strength": pc.strength,
+            "dexterity": pc.dexterity, "intelligence": pc.intelligence,
+            "max_mana": pc.max_mana,
+        }
+        report = RunReport(
+            seed=args.seed, race=args.race,
+            gender=getattr(pc, "gender", "non-binary"),
+            name=pc.name, spells=spells,
+            starting_stats=starting_stats,
+        )
+        report.record_obs(0, obs, gs.log_lines)
 
     rng = _stdlib_random.Random(args.seed)
 
@@ -1817,6 +4382,9 @@ def main(argv=None):
             if not action or action.startswith("#"):
                 continue
         obs = sess.step(action)
+        if report is not None:
+            report.record_action(sess.turn, obs["mode"], action)
+            report.record_obs(sess.turn, obs, gs.log_lines)
         print(f"-> {action}")
         print(_summarise(obs, args.jsonl))
         if sess.last_error:
@@ -1853,6 +4421,35 @@ def main(argv=None):
                 )
         except OSError:
             pass  # logging is best-effort
+
+    # Write HTML report and optionally deploy. Failures here are
+    # non-fatal -- the run already finished and the data is in
+    # game_state, but we don't want a bad git config to break runs.
+    if report is not None:
+        from .playtest_report import write_report, write_index, deploy_gh_pages
+        report.finalize(obs, gs.log_lines, sess.turn)
+        out_dir = args.report_dir or _os.path.join(
+            _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),
+            "playtest_reports",
+        )
+        try:
+            page_path = write_report(report, out_dir)
+            write_index(out_dir)
+            print(f"\n>>> Report: {page_path}")
+        except OSError as e:
+            print(f"  ! report write failed: {e}", file=sys.stderr)
+        if args.deploy:
+            try:
+                repo_root = _os.path.dirname(
+                    _os.path.dirname(_os.path.abspath(__file__))
+                )
+                url = deploy_gh_pages(out_dir, repo_root)
+                if url:
+                    print(f">>> Deployed to gh-pages branch ({url})")
+                else:
+                    print(">>> Deploy skipped (no changes).")
+            except Exception as e:
+                print(f"  ! deploy failed: {e}", file=sys.stderr)
 
     return 0 if obs["alive"] else 1
 

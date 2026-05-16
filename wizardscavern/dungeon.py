@@ -551,15 +551,27 @@ class Tower:
                 (tomb_x, tomb_y + 1),  # South
             ]
 
+            # Collect adjacent floor tiles that get converted to undead.
+            # ALL guardians spawn as floor-leveled proper undead types
+            # (no more "UNDEAD GOBLIN" via the regular-mob fallback);
+            # exactly ONE per tomb gets marked `tomb_elite=True` and
+            # spawns at floor + 2 instead -- the higher-level threat
+            # gates the tomb's deeper reward without making all four
+            # corner mobs lethal.
+            placed = []
             for adj_x, adj_y in adjacent_positions:
                 if 0 <= adj_x < floor.cols and 0 <= adj_y < floor.rows:
                     adj_room = floor.grid[adj_y][adj_x]
-                    # Only place on floor tiles (empty rooms)
                     if adj_room.room_type == '.':
-                        # Convert to undead monster
                         adj_room.room_type = 'M'
                         adj_room.properties['undead_guardian'] = True
-                        adj_room.properties['tomb_location'] = (tomb_x, tomb_y, tomb_z)
+                        adj_room.properties['tomb_location'] = (
+                            tomb_x, tomb_y, tomb_z
+                        )
+                        placed.append(adj_room)
+            if placed:
+                elite = random.choice(placed)
+                elite.properties['tomb_elite'] = True
 
     def _should_create_bug_level(self, floor_number):
         """Determine if this floor should be a bug level.
