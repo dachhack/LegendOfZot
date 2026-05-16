@@ -539,20 +539,124 @@ class RunReport:
             self.death_cause = self._derive_death_cause()
 
     def _derive_death_cause(self):
-        """Walk recent_log backwards for a recognisable killer."""
+        """Walk recent_log backwards for a recognisable killer.
+
+        Combat.py logs death four ways:
+          1. 'You were defeated by the {monster}...'    (most common)
+          2. 'You were defeated by status effects...'   (poison etc.)
+          3. 'You were defeated while channeling...'    (spell interrupt)
+          4. 'You were defeated...'                     (failed-flee
+             parting attack, status tick, chest explosion -- no
+             by-clause in the line itself; the killer is the most
+             recent monster name OR explicit hazard in the lead-up).
+
+        Forlong of the Mark (human, F3 Wight): the user-flagged
+        screenshot showed 'Cause: unknown' because the run hit
+        path #4 -- a failed flee at HP=1 with Wight life-drain
+        adjacent. The regex only matched #1.
+        """
+        # Explicit hazards first -- these supersede a generic
+        # 'defeated' line if both appear nearby.
         for (_, line) in reversed(self.recent_log):
             low = line.lower()
             if "the trap was lethal" in low or "the explosion was fatal" in low:
                 return "lethal pool trap"
-            if "the chest explodes" in low:
+            if "the chest explodes" in low or "chest explodes" in low:
                 return "chest explosion"
+            if "you were defeated by status effects" in low:
+                # Find the source status from prior log lines
+                for (_, prev) in reversed(self.recent_log):
+                    pl = prev.lower()
+                    if "poison" in pl and ("hp from" in pl or "damage" in pl):
+                        return "defeated by poison"
+                    if "burn" in pl and "damage" in pl:
+                        return "defeated by burn"
+                    if "life drain" in pl:
+                        return "defeated by life-drain"
+                return "defeated by status effects"
+            if "you were defeated while channeling" in low:
+                return "defeated while channeling spell"
+
+            # Explicit 'defeated by the X' form
             m = re.search(r"you were defeated by(?: the)? ([^.]+?)\.\.\.",
                           line, re.IGNORECASE)
             if m:
                 return f"defeated by {m.group(1).strip()}"
+
+            # Generic 'You were defeated...' (no by-clause). Walk
+            # back from this point to find the killer: most recent
+            # monster verb (hit / drains / poisons / burns / etc.).
+            if low.startswith("you were defeated"):
+                # Find most recent monster mention in the log.
+                killer = self._extract_recent_attacker()
+                if killer:
+                    # Also flag the killing-effect type for clarity.
+                    effect = self._extract_recent_effect()
+                    if effect:
+                        return f"defeated by {killer} ({effect})"
+                    return f"defeated by {killer}"
+                # Last resort: did we starve to a damage-source
+                # while at HP=1?
+                if self._was_starving_recently():
+                    return "starvation"
+                return "defeated"
+
             if "starving" in low and "lost" in low:
                 return "starvation"
         return "unknown"
+
+    # Killer-name patterns from combat.py log strings. The leading
+    # space in some monster names (legendary spawns sometimes
+    # render as ' BUG QUEEN') is tolerated by the \S+ pattern.
+    _ATTACK_VERBS = (
+        "hit", "missed", "drains your", "claws at", "bites",
+        "strikes", "slashes", "casts", "breathes",
+    )
+
+    def _extract_recent_attacker(self):
+        """Find the most recent monster acting on the player. Scans
+        the last 30 log lines (most recent first) for an attack /
+        miss / status-inflict from a named monster."""
+        for (_, line) in reversed(self.recent_log[-30:]):
+            stripped = line.strip()
+            # 'Wight missed X' / 'Wight hit X' / 'Wight drains your...'
+            m = re.match(
+                r"(?:Ouch! )?(?:The )?([A-Z][A-Za-z' \-]+?) "
+                r"(?:hit|missed|drains|claws|bites|strikes|slashes"
+                r"|casts|breathes|releases)\b",
+                stripped,
+            )
+            if m:
+                name = m.group(1).strip()
+                # Skip the player's own name and 'You' patterns.
+                if name.lower() == "you" or name == self.name:
+                    continue
+                return name
+        return None
+
+    def _extract_recent_effect(self):
+        """Identify a recent DoT / debuff effect that might have
+        landed the killing blow."""
+        for (_, line) in reversed(self.recent_log[-15:]):
+            low = line.lower()
+            if "life drain" in low or "life force" in low:
+                return "life drain"
+            if "poison" in low and "hp" in low:
+                return "poison tick"
+            if "burn" in low and "damage" in low:
+                return "burn"
+            if "freeze" in low and "damage" in low:
+                return "freeze"
+        return None
+
+    def _was_starving_recently(self):
+        """Did the agent take any starvation HP loss in the last 20
+        log lines? Catches HP=1 → starvation-tick → defeated paths."""
+        for (_, line) in reversed(self.recent_log[-20:]):
+            low = line.lower()
+            if "starving" in low and "lost" in low:
+                return True
+        return False
 
     # ------------------------------------------------------------------
     # Rendering
