@@ -671,6 +671,26 @@ class RunReport:
         total_moves = sum(self.moves_by_floor.values())
         total_revisit = sum(self.revisit_moves.values())
         wasted_pct = (total_revisit / total_moves * 100.0) if total_moves else 0
+        # Warp share of floor changes: every floor change is recorded
+        # in floor_exits with a method tag (stairs_down / stairs_up /
+        # warp_accept / warp_forced / other). When this number is
+        # high, the agent's warp-avoidance is leaking -- either the
+        # AVOID-W gate is dropping too eagerly or the agent keeps
+        # stepping onto W tiles via fog. Used to audit unwanted warp
+        # acceptance per the user's "I would think players would be
+        # avoiding warps more" framing.
+        n_exits = len(self.floor_exits)
+        n_warp = sum(
+            1 for (_fr, _to, _t, m) in self.floor_exits
+            if m in ("warp_accept", "warp_forced")
+        )
+        n_warp_accept = sum(
+            1 for (_fr, _to, _t, m) in self.floor_exits if m == "warp_accept"
+        )
+        n_warp_forced = sum(
+            1 for (_fr, _to, _t, m) in self.floor_exits if m == "warp_forced"
+        )
+        warp_pct = (n_warp / n_exits * 100.0) if n_exits else 0
         return {
             "slug": self.slug,
             "name": self.name,
@@ -689,6 +709,11 @@ class RunReport:
             "moves_total": total_moves,
             "moves_revisit": total_revisit,
             "wasted_pct": round(wasted_pct, 1),
+            "floor_changes": n_exits,
+            "warp_changes": n_warp,
+            "warp_accepts": n_warp_accept,
+            "warp_forced": n_warp_forced,
+            "warp_pct": round(warp_pct, 1),
         }
 
     def to_html(self):
@@ -1057,6 +1082,11 @@ class RunReport:
             buys_total=buys_total,
             found_total=found_total,
             descent_lines=descent_lines,
+            warp_pct=f"{(sum(1 for (_a, _b, _t, m) in self.floor_exits if m in ('warp_accept', 'warp_forced')) / len(self.floor_exits) * 100.0):.0f}" if self.floor_exits else "0",
+            floor_changes=len(self.floor_exits),
+            warp_changes=sum(1 for (_a, _b, _t, m) in self.floor_exits if m in ("warp_accept", "warp_forced")),
+            warp_accepts=sum(1 for (_a, _b, _t, m) in self.floor_exits if m == "warp_accept"),
+            warp_forced=sum(1 for (_a, _b, _t, m) in self.floor_exits if m == "warp_forced"),
             inventory_rows=inv_rows or "<tr><td colspan='6'>—</td></tr>",
             movement_rows=movement_rows or "<tr><td colspan='6'>no movement logged</td></tr>",
             overall_waste=f"{overall_waste:.0f}",
@@ -1484,7 +1514,9 @@ $sprite_styles
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.</p>
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <strong>Warp share of floor changes: $warp_pct%</strong>
+        ($warp_changes warp / $floor_changes total · $warp_accepts accepted, $warp_forced forced).</p>
       <ul>$descent_lines</ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste $overall_waste%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
@@ -1550,7 +1582,7 @@ _INDEX_TEMPLATE = """<!doctype html>
     <tr>
       <th>Hero</th><th>Race</th><th>Seed</th><th>Outcome</th>
       <th>Turns</th><th>Floor</th><th>Level</th><th>HP</th>
-      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Cause</th>
+      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Warp %</th><th>Cause</th>
     </tr>
     $rows
   </table>
@@ -1603,13 +1635,17 @@ def write_index(out_dir):
             f"<td>{d.get('gold','?')}g</td>"
             f"<td>{d.get('kills','?')}</td>"
             f"<td>{d.get('wasted_pct','?')}%</td>"
+            f"<td>{d.get('warp_pct','?')}% "
+            f"<span style='color:#94a3b8;font-size:0.85em;'>"
+            f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
+            f"</span></td>"
             f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
             f"</tr>"
         )
     body = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='12'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='13'>no runs yet</td></tr>",
     )
     (out_dir / "index.html").write_text(body, encoding="utf-8")
 
@@ -1769,13 +1805,17 @@ def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
             f"<td>{d.get('gold','?')}g</td>"
             f"<td>{d.get('kills','?')}</td>"
             f"<td>{d.get('wasted_pct','?')}%</td>"
+            f"<td>{d.get('warp_pct','?')}% "
+            f"<span style='color:#94a3b8;font-size:0.85em;'>"
+            f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
+            f"</span></td>"
             f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
             f"</tr>"
         )
     index_html = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='12'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='13'>no runs yet</td></tr>",
     )
     index_sha = run(
         ["git", "hash-object", "-w", "--stdin"], input_text=index_html
