@@ -1532,6 +1532,9 @@ class PlaytestSession:
             elif mode == "upgrade_scroll_mode":
                 from .items import process_upgrade_scroll_action
                 process_upgrade_scroll_action(pc, tw, action)
+            elif mode == "foresight_direction_mode":
+                from .combat import process_foresight_direction_action
+                process_foresight_direction_action(pc, tw, action)
             else:
                 # Last-resort: many process_X_action handlers accept a back
                 # command of 'x' or 'l'. Route an explicit "back" to that;
@@ -2835,6 +2838,24 @@ def smart_policy(obs, rng, use_lantern=True):
         # bag has no upgradeable gear.
         return "1"
 
+    if mode == "foresight_direction_mode":
+        # Scroll of Foresight reveals 3 rows/cols toward n/s/e/w.
+        # The handler only accepts n/s/e/w/c -- anything else
+        # (including the catch-all 'back') just re-prompts. Eowyn
+        # seed=7 burned 682 turns looping `i -> u<scroll> -> back`
+        # because the policy fell into the default and returned
+        # 'back'. Pick a direction biased away from the wall the
+        # player is closest to so we maximise new map revealed.
+        neighbors = obs.get("neighbors") or {}
+        unseen = {}
+        for d in ("n", "s", "e", "w"):
+            t = neighbors.get(d)
+            unseen[d] = 1 if t is None else 0
+        for d in ("n", "s", "e", "w"):
+            if unseen[d]:
+                return d
+        return rng.choice(["n", "s", "e", "w"])
+
     if mode == "flee_direction_mode":
         # Pick a walkable direction to actually flee. Without this
         # the policy fell into the catch-all and returned 'back',
@@ -3263,6 +3284,19 @@ def smart_policy(obs, rng, use_lantern=True):
         # whatever direction has the most useful neighbour (or random
         # if none) -- this matches the game_loop wayfinder's instinct.
         neighbors = obs.get("neighbors") or {}
+        recent_up = set(obs.get("recent_step_set") or [])
+        # Prefer non-recent walkable so we don't immediately walk
+        # back onto U from the same tile we came from. Without this,
+        # Durin Forgewright (dwarf seed 314) and Eomer Crownless
+        # (human seed 2500) bounced 415-1033 times between U and
+        # the tile next to it -- stairs_up_mode walked east off U,
+        # game_loop walked west back onto U, repeat.
+        for d in ("n", "s", "e", "w"):
+            if d in recent_up:
+                continue
+            t = neighbors.get(d)
+            if t and t not in ("#", "U", "M", "W"):
+                return d
         for d in ("n", "s", "e", "w"):
             t = neighbors.get(d)
             if t and t not in ("#", "U"):
