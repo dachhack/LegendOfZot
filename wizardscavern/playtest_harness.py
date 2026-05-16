@@ -2167,8 +2167,14 @@ def smart_policy(obs, rng, use_lantern=True):
         d_avoid_reachable = bool(
             (feature_paths_avoid.get("D") or {}).get("first_step")
         )
-        turns_here = obs.get("turns_on_floor") or 0
-        trapped_no_d = (turns_here > 400) and (not d_avoid_reachable)
+        coverage_pct_avoid = (obs.get("tile_coverage") or {}).get("pct", 0)
+        # Coverage-based "trapped" gate (user-requested over turn count):
+        # >= 50% of walkable tiles WALKED implies the discovered set is
+        # ~70-80% of the floor (lantern reveals past walked tiles), so
+        # if D still isn't reachable from here the floor really is
+        # region-split and the only way out is W. Turn count was a
+        # proxy for exploration; coverage measures it directly.
+        trapped_no_d = (coverage_pct_avoid >= 50) and (not d_avoid_reachable)
         # Cornered detection: agent's ONLY walkable cardinal
         # neighbour is an M tile (the rest are walls). Without this
         # override the agent can sit on the tile forever while M
@@ -2243,7 +2249,7 @@ def smart_policy(obs, rng, use_lantern=True):
         retreat_active = obs.get("retreat_to_floor") is not None
         retreat_u_path = (feature_paths_avoid.get("U") or {}).get("first_step")
         retreat_trapped = (
-            retreat_active and turns_here > 400 and not retreat_u_path
+            retreat_active and coverage_pct_avoid >= 50 and not retreat_u_path
         )
         if retreat_active and not trapped_no_d and not retreat_trapped:
             avoid_set.add("D")
@@ -3484,19 +3490,20 @@ def smart_policy(obs, rng, use_lantern=True):
         #     flee's parting attack.
         #   * hp_pct < 0.20: random landing into a Lv(z+2) monster
         #     at sub-20% HP is a one-hit kill.
-        turns_on_floor = obs.get("turns_on_floor") or 0
         feature_paths = obs.get("feature_paths") or {}
         d_reachable = bool((feature_paths.get("D") or {}).get("first_step"))
+        coverage_pct_warp = (obs.get("tile_coverage") or {}).get("pct", 0)
         if starving or hp_pct < 0.20:
             return "y"
         # User feedback on Gimli (s=256 dwarf F14 L6): "I would
-        # think players would be avoiding warps more". Dropped the
-        # late-game (z>=10) loose-accept gate -- a real player
-        # would also resist most warps deep in the run. Only
-        # accept when ACTUALLY trapped (400+ turns on floor AND
-        # no D reachable on the discovered map), same gate as the
-        # early-game branch used to be.
-        if turns_on_floor > 400 and not d_reachable:
+        # think players would be avoiding warps more". Coverage-
+        # based trapped gate (user requested over turn count):
+        # only accept the warp when we've swept >= 50% of the floor
+        # AND D is still unreachable -- which means the floor is
+        # genuinely region-split and stepping through W is the only
+        # way out. Turn count was a proxy for thoroughness;
+        # coverage measures it directly.
+        if coverage_pct_warp >= 50 and not d_reachable:
             return "n"
         return "y"
     if mode == "altar_mode":
