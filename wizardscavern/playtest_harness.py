@@ -726,6 +726,41 @@ class PlaytestSession:
         # because of this.
         self.floor_arrival_turn = 0
         self._last_floor = 0
+        # Per-floor exploration totals, snapshotted on first arrival.
+        # User-requested: 'evaluate exp + treasure left on each level
+        # to see if better exploring would help with survival.' For
+        # each floor we capture monsters / chests / beneficials /
+        # vendors / tombs / dungeons available, then the report
+        # combines with kills_by_floor + visited_features to compute
+        # the engagement ratios.
+        # Shape: floor_totals[z] = {"M":N, "C":N, "G":N, ...,
+        #   "xp_pool": expected XP if every M is killed}
+        self.floor_totals = {}
+
+    def _snapshot_floor_totals(self, z):
+        """Tally the floor's monster / chest / beneficial-room totals
+        the first time the player arrives on it. Called once per
+        floor from the floor-change block in step()."""
+        if z in self.floor_totals:
+            return
+        floor = gs.my_tower.floors[z]
+        counts = {
+            "M": 0, "C": 0, "G": 0, "L": 0, "O": 0, "A": 0, "P": 0,
+            "V": 0, "T": 0, "N": 0, "Q": 0, "K": 0, "B": 0, "F": 0,
+            "X": 0,
+        }
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                t = floor.grid[y][x].room_type
+                if t in counts:
+                    counts[t] += 1
+        # Expected XP if every M on the floor is killed at floor
+        # level. The kill XP formula in combat.py is
+        # `(L+1)*8 + L**2 * 2`. Monsters spawn at roughly floor
+        # level (z 0-indexed, so floor=z+1 in display terms).
+        xp_per_kill = (z + 1) * 8 + z * z * 2
+        counts["xp_pool"] = counts["M"] * xp_per_kill
+        self.floor_totals[z] = counts
 
     # ------------------------------------------------------------------
     # Observation
@@ -734,6 +769,10 @@ class PlaytestSession:
         pc = gs.player_character
         floor = gs.my_tower.floors[pc.z]
         room = floor.grid[pc.y][pc.x]
+        # First-touch snapshot of the floor's exploration totals so
+        # the report can compute per-floor engagement ratios at the
+        # end of the run.
+        self._snapshot_floor_totals(pc.z)
         # log_lines is capped at 16 — if our pointer is past the end the
         # log was rotated and we just take everything that's left.
         if self._log_pointer > len(gs.log_lines):
@@ -825,6 +864,7 @@ class PlaytestSession:
             "nearest_undiscovered": self._nearest_undiscovered_obs(),
             "turns_on_floor": self.turn - self.floor_arrival_turn,
             "current_tile_visits": self.floor_visit_count.get((pc.x, pc.y), 0),
+            "floor_totals": dict(self.floor_totals),
             "turns_since_new_tile": self.turn - self.last_new_tile_turn,
             "wedge_attempted_actions": sorted(self.wedge_attempted_actions),
             "room": {

@@ -284,6 +284,15 @@ class RunReport:
         self.buys = []  # (turn, floor, name, price, count)
         self.identifies = []  # (turn, item_name)
         self.descents = []  # turn at which each new floor was first entered
+        # Per-floor exploration totals: how many monsters / chests /
+        # boons exist on the floor, captured from obs.floor_totals
+        # the first time the agent stands on each floor. Combined
+        # with kills_by_floor + xp_by_floor + visited features at
+        # report time to compute engagement ratios. User-requested
+        # ('evaluate exp + treasure left on each level to see if
+        # better exploring would help with survival').
+        self.floor_totals = {}  # floor -> {"M":N, "C":N, ..., "xp_pool":N}
+        self.xp_by_floor = {}   # floor -> total kill-XP earned
         # How each floor was LEFT. Populated from the (mode, action)
         # pair that triggered the floor change, inferred at the
         # moment record_obs sees a new floor index. Methods:
@@ -365,50 +374,59 @@ class RunReport:
                     method = "other"
                 self.floor_exits.append((prev_floor, f, turn, method))
             self._last_floor_seen = f
-            # name -> category map for the aggregated tables. Pull
-            # categories off every inventory snapshot so we have a
-            # lookup at write-time for items that were bought, used,
-            # and gone by the end of the run.
-            for item in obs.get("inventory") or []:
-                nm = item.get("name")
-                cat = item.get("category")
-                if nm and cat:
-                    self.item_categories[nm] = cat
-            eq = p.get("equipped") or {}
-            cur = ((eq.get("weapon") or {}).get("name"),
-                   (eq.get("armor") or {}).get("name"))
-            if cur != self.last_equip:
-                self.last_equip = cur
-                self.equipped_history.append((turn, cur[0], cur[1]))
-                # Record any newly-slotted item so found / bought
-                # gear can be flagged "equipped" in the post-run
-                # tables.
-                if cur[0]:
-                    self._ever_equipped_names.add(cur[0])
-                if cur[1]:
-                    self._ever_equipped_names.add(cur[1])
-            # Movement-efficiency: when we observe a fresh position
-            # while in game_loop, classify it as first-visit or
-            # revisit relative to this floor's history. We count by
-            # position-CHANGE, not by action-issued, so step-blocked
-            # (walked into wall) doesn't inflate either counter.
-            cur_xyz = (p.get("floor", 1), p.get("x"), p.get("y"))
-            if (obs.get("mode") == "game_loop"
-                    and self._last_xy is not None
-                    and cur_xyz != self._last_xy):
-                # Different from prior frame -> a real move landed
-                floor = cur_xyz[0]
-                xy = (cur_xyz[1], cur_xyz[2])
-                seen = self.visited_tiles_by_floor.setdefault(floor, set())
-                self.moves_by_floor[floor] = self.moves_by_floor.get(floor, 0) + 1
-                if xy in seen:
-                    self.revisit_moves[floor] = self.revisit_moves.get(floor, 0) + 1
-                else:
-                    seen.add(xy)
-                    self.first_visit_moves[floor] = (
-                        self.first_visit_moves.get(floor, 0) + 1
-                    )
-            self._last_xy = cur_xyz
+        # Capture floor exploration totals on first observation of
+        # each floor (including F1 which doesn't trigger the floor-
+        # change block above). obs.floor_totals is keyed by INTERNAL
+        # z (0-indexed); we key everything else by 1-based floor.
+        ft = obs.get("floor_totals") or {}
+        z_now = f - 1
+        if z_now in ft and f not in self.floor_totals:
+            self.floor_totals[f] = ft[z_now]
+        # Per-frame stats that run regardless of floor change.
+        # name -> category map for the aggregated tables. Pull
+        # categories off every inventory snapshot so we have a
+        # lookup at write-time for items that were bought, used,
+        # and gone by the end of the run.
+        for item in obs.get("inventory") or []:
+            nm = item.get("name")
+            cat = item.get("category")
+            if nm and cat:
+                self.item_categories[nm] = cat
+        eq = p.get("equipped") or {}
+        cur = ((eq.get("weapon") or {}).get("name"),
+               (eq.get("armor") or {}).get("name"))
+        if cur != self.last_equip:
+            self.last_equip = cur
+            self.equipped_history.append((turn, cur[0], cur[1]))
+            # Record any newly-slotted item so found / bought
+            # gear can be flagged "equipped" in the post-run
+            # tables.
+            if cur[0]:
+                self._ever_equipped_names.add(cur[0])
+            if cur[1]:
+                self._ever_equipped_names.add(cur[1])
+        # Movement-efficiency: when we observe a fresh position
+        # while in game_loop, classify it as first-visit or
+        # revisit relative to this floor's history. We count by
+        # position-CHANGE, not by action-issued, so step-blocked
+        # (walked into wall) doesn't inflate either counter.
+        cur_xyz = (p.get("floor", 1), p.get("x"), p.get("y"))
+        if (obs.get("mode") == "game_loop"
+                and self._last_xy is not None
+                and cur_xyz != self._last_xy):
+            # Different from prior frame -> a real move landed
+            floor = cur_xyz[0]
+            xy = (cur_xyz[1], cur_xyz[2])
+            seen = self.visited_tiles_by_floor.setdefault(floor, set())
+            self.moves_by_floor[floor] = self.moves_by_floor.get(floor, 0) + 1
+            if xy in seen:
+                self.revisit_moves[floor] = self.revisit_moves.get(floor, 0) + 1
+            else:
+                seen.add(xy)
+                self.first_visit_moves[floor] = (
+                    self.first_visit_moves.get(floor, 0) + 1
+                )
+        self._last_xy = cur_xyz
 
         # Mirror the harness's tomb-suspicion tracker for the report.
         # obs.suspected_tomb_floors is a sorted list of floor indices
@@ -454,6 +472,12 @@ class RunReport:
         if "you gained" in low and "experience" in low:
             self.events.append((turn, "xp", line))
             self.kills_by_floor[floor] = self.kills_by_floor.get(floor, 0) + 1
+            # Sum kill-XP per floor. Log line: 'You gained N
+            # experience.' Capture N for the exploration metric.
+            xp_match = re.search(r"gained\s+(\d+)\s+experience", line, re.IGNORECASE)
+            if xp_match:
+                xp_n = int(xp_match.group(1))
+                self.xp_by_floor[floor] = self.xp_by_floor.get(floor, 0) + xp_n
 
         m = re.match(r"you defeated the ([\w '\-]+?)[.!]", line, re.IGNORECASE)
         if m:
@@ -743,6 +767,23 @@ class RunReport:
             1 for (_fr, _to, _t, m) in self.floor_exits if m == "warp_forced"
         )
         warp_pct = (n_warp / n_exits * 100.0) if n_exits else 0
+        # Exploration efficiency across all visited floors. User
+        # asked: 'evaluate exp + treasure left on each level to see
+        # if better exploring would help with survival.' For each
+        # floor we have totals (M / C / G / L / O / A / P / V / T /
+        # N / xp_pool) and kills_by_floor + xp_by_floor. Sum across
+        # visited floors and report engagement %.
+        total_monsters = sum(ft.get("M", 0) for ft in self.floor_totals.values())
+        total_kills = sum(self.kills_by_floor.values())
+        total_xp_pool = sum(ft.get("xp_pool", 0) for ft in self.floor_totals.values())
+        total_xp_earned = sum(self.xp_by_floor.values())
+        total_chests = sum(ft.get("C", 0) for ft in self.floor_totals.values())
+        boon_keys = ("G", "L", "O", "A", "P", "Q", "K", "B", "F")
+        total_boons = sum(
+            ft.get(k, 0) for ft in self.floor_totals.values() for k in boon_keys
+        )
+        kill_pct = (total_kills / total_monsters * 100.0) if total_monsters else 0
+        xp_pct = (total_xp_earned / total_xp_pool * 100.0) if total_xp_pool else 0
         return {
             "slug": self.slug,
             "name": self.name,
@@ -766,6 +807,14 @@ class RunReport:
             "warp_accepts": n_warp_accept,
             "warp_forced": n_warp_forced,
             "warp_pct": round(warp_pct, 1),
+            "monsters_total": total_monsters,
+            "monsters_killed": total_kills,
+            "kill_pct": round(kill_pct, 1),
+            "xp_pool": total_xp_pool,
+            "xp_earned": total_xp_earned,
+            "xp_pct": round(xp_pct, 1),
+            "chests_total": total_chests,
+            "boons_total": total_boons,
         }
 
     def to_html(self):
@@ -842,6 +891,48 @@ class RunReport:
                 f"<td>{revisit}</td><td>{waste_pct:.0f}%</td></tr>"
             )
         overall_waste = (total_revisit / total_moves * 100.0) if total_moves else 0
+        # Per-floor exploration efficiency. Shows what fraction of
+        # each floor's available monsters / XP / boon rooms the
+        # agent actually engaged. Big gaps here = unclaimed survival
+        # value. User-requested ('evaluate exp + treasure left').
+        exploration_rows = ""
+        sorted_floors = sorted(self.floor_totals.keys())
+        for fl in sorted_floors:
+            tot = self.floor_totals.get(fl) or {}
+            mt = tot.get("M", 0)
+            ct = tot.get("C", 0)
+            xp_pool_fl = tot.get("xp_pool", 0)
+            kills_fl = self.kills_by_floor.get(fl, 0)
+            xp_earned_fl = self.xp_by_floor.get(fl, 0)
+            boon_count = sum(tot.get(k, 0) for k in ("G", "L", "O", "A", "P", "Q", "K", "B", "F"))
+            kpct = (kills_fl / mt * 100.0) if mt else 0
+            xpct = (xp_earned_fl / xp_pool_fl * 100.0) if xp_pool_fl else 0
+            exploration_rows += (
+                f"<tr><td>Floor {fl}</td>"
+                f"<td>{kills_fl}/{mt}</td><td>{kpct:.0f}%</td>"
+                f"<td>{xp_earned_fl}/{xp_pool_fl}</td><td>{xpct:.0f}%</td>"
+                f"<td>{ct}</td><td>{boon_count}</td>"
+                f"<td>{tot.get('V', 0)}</td><td>{tot.get('T', 0)}</td></tr>"
+            )
+        total_M_all = sum(t.get("M", 0) for t in self.floor_totals.values())
+        total_xp_pool_all = sum(t.get("xp_pool", 0) for t in self.floor_totals.values())
+        total_kills_all = sum(self.kills_by_floor.values())
+        total_xp_earned_all = sum(self.xp_by_floor.values())
+        total_kpct = (total_kills_all / total_M_all * 100.0) if total_M_all else 0
+        total_xpct = (total_xp_earned_all / total_xp_pool_all * 100.0) if total_xp_pool_all else 0
+        total_ct = sum(t.get("C", 0) for t in self.floor_totals.values())
+        total_boons_all = sum(t.get(k, 0) for t in self.floor_totals.values()
+                              for k in ("G", "L", "O", "A", "P", "Q", "K", "B", "F"))
+        total_V_all = sum(t.get("V", 0) for t in self.floor_totals.values())
+        total_T_all = sum(t.get("T", 0) for t in self.floor_totals.values())
+        exploration_rows += (
+            f"<tr style='font-weight:bold; border-top: 2px solid #444;'>"
+            f"<td>Total</td>"
+            f"<td>{total_kills_all}/{total_M_all}</td><td>{total_kpct:.0f}%</td>"
+            f"<td>{total_xp_earned_all}/{total_xp_pool_all}</td><td>{total_xpct:.0f}%</td>"
+            f"<td>{total_ct}</td><td>{total_boons_all}</td>"
+            f"<td>{total_V_all}</td><td>{total_T_all}</td></tr>"
+        )
         movement_rows += (
             f"<tr style='font-weight:bold; border-top: 2px solid #444;'>"
             f"<td>Total</td><td>{total_moves}</td><td>{total_unique}</td>"
@@ -1151,6 +1242,9 @@ class RunReport:
             inventory_rows=inv_rows or "<tr><td colspan='6'>—</td></tr>",
             movement_rows=movement_rows or "<tr><td colspan='6'>no movement logged</td></tr>",
             overall_waste=f"{overall_waste:.0f}",
+            exploration_rows=exploration_rows or "<tr><td colspan='9'>no floor totals captured</td></tr>",
+            overall_kill_pct=f"{total_kpct:.0f}",
+            overall_xp_pct=f"{total_xpct:.0f}",
             tomb_sighting_lines=tomb_sighting_lines,
             tomb_floor_count=len(self.tomb_suspected_floors),
             death_block=death_block,
@@ -1587,6 +1681,15 @@ $sprite_styles
         <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
         $movement_rows
       </table>
+      <h2 style="margin-top:18px;">Exploration · kills $overall_kill_pct% · XP $overall_xp_pct%</h2>
+      <p class="muted">Per-floor share of available monsters
+        engaged and XP banked. Big gaps indicate unclaimed survival
+        value (missed kills, missed level-ups). Boons = G/L/O/A/P/Q/K/B/F;
+        V = vendor rooms; T = tombs (each has 4 cardinal guardians).</p>
+      <table>
+        <tr><th>Floor</th><th>Kills</th><th>Kill %</th><th>XP</th><th>XP %</th><th>Chests</th><th>Boons</th><th>V</th><th>T</th></tr>
+        $exploration_rows
+      </table>
       <h2 style="margin-top:18px;">Items ($items_total_rows unique · $buys_total bought · $found_total found)</h2>
       <p class="muted">Aggregated by item name across the run. Status:
         <span style="color:#4ade80;">equipped</span> at some point,
@@ -1643,7 +1746,7 @@ _INDEX_TEMPLATE = """<!doctype html>
     <tr>
       <th>Hero</th><th>Race</th><th>Seed</th><th>Outcome</th>
       <th>Turns</th><th>Floor</th><th>Level</th><th>HP</th>
-      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Warp %</th><th>Cause</th>
+      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Warp %</th><th>XP %</th><th>Cause</th>
     </tr>
     $rows
   </table>
@@ -1700,13 +1803,17 @@ def write_index(out_dir):
             f"<span style='color:#94a3b8;font-size:0.85em;'>"
             f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
             f"</span></td>"
+            f"<td>{d.get('xp_pct','?')}% "
+            f"<span style='color:#94a3b8;font-size:0.85em;'>"
+            f"({d.get('xp_earned', 0)}/{d.get('xp_pool', 0)})"
+            f"</span></td>"
             f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
             f"</tr>"
         )
     body = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='13'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='14'>no runs yet</td></tr>",
     )
     (out_dir / "index.html").write_text(body, encoding="utf-8")
 
@@ -1870,13 +1977,17 @@ def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
             f"<span style='color:#94a3b8;font-size:0.85em;'>"
             f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
             f"</span></td>"
+            f"<td>{d.get('xp_pct','?')}% "
+            f"<span style='color:#94a3b8;font-size:0.85em;'>"
+            f"({d.get('xp_earned', 0)}/{d.get('xp_pool', 0)})"
+            f"</span></td>"
             f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
             f"</tr>"
         )
     index_html = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='13'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='14'>no runs yet</td></tr>",
     )
     index_sha = run(
         ["git", "hash-object", "-w", "--stdin"], input_text=index_html
