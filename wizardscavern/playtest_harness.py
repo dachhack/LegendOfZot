@@ -736,6 +736,99 @@ class PlaytestSession:
         # Shape: floor_totals[z] = {"M":N, "C":N, "G":N, ...,
         #   "xp_pool": expected XP if every M is killed}
         self.floor_totals = {}
+        # Per-floor supply diagnostics (build 325 instrumentation).
+        # Captures whether the agent actually visits vendors / opens
+        # chests / buys the per-floor guaranteed supply items, so we
+        # can split starvation deaths into "supply never reached agent"
+        # (H1/H3 -- vendor / chest unvisited) vs "agent walked past
+        # supply" (H2 -- vendor visited, supplement items left in
+        # stock). Always on; the cost is one dict lookup per step.
+        # Shape: floor_diag[z] = {
+        #   "chests_existing": int,        # count of C tiles at first arrival
+        #   "chests_opened": int,          # subset agent successfully opened
+        #   "vendor_existed": bool,
+        #   "vendor_visited": bool,        # ever in vendor_shop mode here
+        #   "vendor_initial": {ration:N, upgrade:N, heal:N, fuel:N},
+        #   "vendor_final":   {ration:N, upgrade:N, heal:N, fuel:N},
+        #   "vendor_bought":  {ration:N, upgrade:N, heal:N, fuel:N},
+        #   "rations_consumed": int,       # delta where mode != vendor
+        #   "upgrade_scrolls_used": int,   # delta during upgrade_scroll_mode
+        #   "chest_bonus_queue_remaining": int,  # snapshotted at floor exit
+        #   "floor_level": int,
+        #   "turns_on_floor": int,
+        # }
+        self.floor_diag = {}
+        # Pre-step diagnostics scratch -- snapshot the state we need to
+        # diff against at the END of step(). Wiped each step.
+        self._diag_pre = None
+
+    @staticmethod
+    def _supply_item_kind(item):
+        """Classify an item as one of the supplement-tracked kinds, or
+        None if it's not a supplement-relevant item. Used to count what
+        the per-floor budget actually delivered to the agent."""
+        from .items import Scroll, Food, Potion, LanternFuel
+        name = getattr(item, "name", "") or ""
+        if isinstance(item, Scroll) and getattr(item, "scroll_type", None) == "upgrade":
+            return "upgrade"
+        if isinstance(item, Food) and name == "Rations":
+            return "ration"
+        if isinstance(item, Potion) and getattr(item, "potion_type", None) == "healing":
+            # Match any healing-potion tier (Minor / regular / Greater / Superior).
+            # Supplement only ships Minor, but counting all healing
+            # potions catches when the agent bought a deeper-tier heal
+            # in place of the supplement Minor.
+            return "heal"
+        if isinstance(item, LanternFuel):
+            return "fuel"
+        return None
+
+    @classmethod
+    def _count_supply_in_inventory(cls, inv):
+        """Aggregate supply-item counts (rations / upgrade / heal /
+        fuel) across an Inventory object. Stacks like Rations or
+        Lantern Fuel use item.count; everything else is one per slot.
+        """
+        out = {"ration": 0, "upgrade": 0, "heal": 0, "fuel": 0}
+        if inv is None:
+            return out
+        for it in getattr(inv, "items", []):
+            kind = cls._supply_item_kind(it)
+            if kind is None:
+                continue
+            out[kind] += getattr(it, "count", 1) or 1
+        return out
+
+    def _ensure_diag(self, z):
+        """Lazy-init the floor_diag entry for floor z."""
+        if z in self.floor_diag:
+            return self.floor_diag[z]
+        floor = gs.my_tower.floors[z]
+        chests_existing = 0
+        vendor_existed = False
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                t = floor.grid[y][x].room_type
+                if t == "C":
+                    chests_existing += 1
+                elif t == "V":
+                    vendor_existed = True
+        rec = {
+            "floor_level": z + 1,
+            "chests_existing": chests_existing,
+            "chests_opened": 0,
+            "vendor_existed": vendor_existed,
+            "vendor_visited": False,
+            "vendor_initial": None,
+            "vendor_final": None,
+            "vendor_bought": {"ration": 0, "upgrade": 0, "heal": 0, "fuel": 0},
+            "rations_consumed": 0,
+            "upgrade_scrolls_used": 0,
+            "chest_bonus_queue_remaining": None,
+            "turns_on_floor": 0,
+        }
+        self.floor_diag[z] = rec
+        return rec
 
     def _snapshot_floor_totals(self, z):
         """Tally the floor's monster / chest / beneficial-room totals
@@ -944,6 +1037,8 @@ class PlaytestSession:
             "turns_on_floor": self.turn - self.floor_arrival_turn,
             "current_tile_visits": self.floor_visit_count.get((pc.x, pc.y), 0),
             "floor_totals": dict(self.floor_totals),
+            "floor_diag": {str(z + 1): dict(rec)
+                           for z, rec in self.floor_diag.items()},
             "turns_since_new_tile": self.turn - self.last_new_tile_turn,
             "wedge_attempted_actions": sorted(self.wedge_attempted_actions),
             "room": {
@@ -1715,6 +1810,38 @@ class PlaytestSession:
         # short-circuits boon-claiming on first visit.
         pre_step_xyz = (pc.z, pc.x, pc.y)
 
+        # Per-floor supply diagnostics: snapshot pre-step state we'll
+        # diff after the action completes. Tracks ration / scroll
+        # consumption, vendor purchases, chest opens, queue drain. The
+        # _diag_pre dict is wiped at the end of step(); per-floor
+        # totals accumulate into self.floor_diag[z].
+        diag_rec = self._ensure_diag(pc.z)
+        pre_room = gs.my_tower.floors[pc.z].grid[pc.y][pc.x]
+        pre_supply_inv = self._count_supply_in_inventory(pc.inventory)
+        pre_vendor_inv = (
+            self._count_supply_in_inventory(gs.active_vendor.inventory)
+            if (mode == "vendor_shop" and gs.active_vendor is not None)
+            else None
+        )
+        self._diag_pre = {
+            "z": pc.z,
+            "mode": mode,
+            "room_type": pre_room.room_type,
+            "supply_inv": pre_supply_inv,
+            "vendor_inv": pre_vendor_inv,
+            "action": action,
+        }
+        # First-time vendor entry: lock the initial vendor inventory
+        # snapshot. We use the pre-step inventory rather than waiting
+        # for vendor_shop mode because handle_vendor_shop("init") fires
+        # synchronously on V-tile arrival and the supplement is already
+        # appended at vendor instantiation.
+        if (mode == "vendor_shop" and gs.active_vendor is not None
+                and not diag_rec["vendor_visited"]):
+            diag_rec["vendor_visited"] = True
+            diag_rec["vendor_initial"] = dict(pre_vendor_inv)
+            diag_rec["vendor_final"] = dict(pre_vendor_inv)
+
         try:
             if mode == "death_screen":
                 pass  # game over, no-op
@@ -1847,6 +1974,86 @@ class PlaytestSession:
         landing_key = (pc_after.z, pc_after.x, pc_after.y, room_now.room_type)
         was_visited = landing_key in self.visited_features
         post_step_xyz = (pc_after.z, pc_after.x, pc_after.y)
+
+        # ----- Floor-supply diagnostics (post-step diff) -----
+        if self._diag_pre is not None:
+            pre = self._diag_pre
+            pre_z = pre["z"]
+            pre_rec = self.floor_diag.get(pre_z)
+            if pre_rec is not None:
+                pre_mode = pre["mode"]
+                post_mode = gs.prompt_cntl
+                # Update vendor_final each step we're (still) in vendor_shop
+                # mode -- captures the state right before the agent
+                # leaves the V tile. Recomputes against the live
+                # vendor inventory which has shrunk on buys.
+                if (post_mode == "vendor_shop"
+                        and gs.active_vendor is not None
+                        and pre_rec["vendor_visited"]):
+                    pre_rec["vendor_final"] = self._count_supply_in_inventory(
+                        gs.active_vendor.inventory
+                    )
+                # Detect buy: pre-step in vendor_shop, action starts with 'b'
+                # (b1, b2, ba), vendor inventory supply counts dropped.
+                # Anything missing from vendor went to the player.
+                if (pre_mode == "vendor_shop"
+                        and isinstance(pre["action"], str)
+                        and pre["action"].startswith("b")
+                        and pre["vendor_inv"] is not None):
+                    post_v = (self._count_supply_in_inventory(
+                        gs.active_vendor.inventory)
+                              if gs.active_vendor is not None
+                              else pre["vendor_inv"])
+                    for k in ("ration", "upgrade", "heal", "fuel"):
+                        delta = pre["vendor_inv"][k] - post_v[k]
+                        if delta > 0:
+                            pre_rec["vendor_bought"][k] += delta
+                # Detect chest open: pre-step mode chest_mode, action
+                # 'o', pre-room was 'C' (or pre-room is 'C' -- chest
+                # tile turns to '.' on most outcomes; for boom/gas it
+                # also goes to '.'). Standing on a fresh C and pressing
+                # 'o' transitions the tile. We count any 'o' issued
+                # while standing on a chest tile.
+                if (pre_mode == "chest_mode"
+                        and pre["action"] == "o"
+                        and pre["room_type"] == "C"):
+                    pre_rec["chests_opened"] += 1
+                # Ration consumption: rations only drop when eaten
+                # (inventory use) or restocked via vendor buy. If pre
+                # mode is not vendor_shop and ration count fell, that
+                # delta is consumption. Don't credit vendor buys here
+                # (those go through vendor_bought which is separate
+                # from inventory state -- a 3-ration stack purchase
+                # would also LOOK like consumption from the player
+                # inv side, but we won't see negative delta because
+                # the player's count only ever grows on a buy.)
+                post_supply = self._count_supply_in_inventory(pc_after.inventory)
+                ration_delta = pre["supply_inv"]["ration"] - post_supply["ration"]
+                if ration_delta > 0 and pre_mode != "vendor_shop":
+                    pre_rec["rations_consumed"] += ration_delta
+                # Upgrade scroll usage: dropped while in upgrade_scroll_mode
+                # (the process_upgrade_scroll_action handler is invoked
+                # to apply the scroll). Only count drops that aren't
+                # explained by vendor sells.
+                scroll_delta = pre["supply_inv"]["upgrade"] - post_supply["upgrade"]
+                if scroll_delta > 0 and pre_mode == "upgrade_scroll_mode":
+                    pre_rec["upgrade_scrolls_used"] += scroll_delta
+                pre_rec["turns_on_floor"] = self.turn - self.floor_arrival_turn
+        self._diag_pre = None
+        # Snapshot the chest-bonus queue size as it stands NOW for the
+        # floor we just acted on (covers both stay-on-floor and
+        # floor-change steps; on floor change the next observation will
+        # overwrite for the new floor while preserving the leaving
+        # floor's snapshot).
+        try:
+            cur_floor_obj = gs.my_tower.floors[pre_step_xyz[0]]
+            q = getattr(cur_floor_obj, "guaranteed_chest_queue", None)
+            if pre_step_xyz[0] in self.floor_diag:
+                self.floor_diag[pre_step_xyz[0]]["chest_bonus_queue_remaining"] = (
+                    len(q) if q is not None else 0
+                )
+        except (IndexError, AttributeError):
+            pass
         # Loop-prevention: feature-room modes re-fire their prompt
         # every time the agent steps onto the tile, even after the
         # boon is consumed. Two re-trigger paths:
@@ -4322,6 +4529,12 @@ def main(argv=None):
                              "directory to a gh-pages branch of this repo "
                              "via a worktree. Idempotent and additive: each "
                              "run accumulates onto the branch.")
+    parser.add_argument("--diag-out", default=None,
+                        help="Write per-floor supply-diagnostic JSON to this "
+                             "path at run end. Used by the grid-analyzer to "
+                             "split starvation deaths by hypothesis (vendor "
+                             "unvisited vs. supplement unbought vs. chests "
+                             "unopened).")
     args = parser.parse_args(argv)
 
     spells = [s for s in args.spells.split(",") if s.strip()] if args.spells else None
@@ -4457,6 +4670,33 @@ def main(argv=None):
                     print(">>> Deploy skipped (no changes).")
             except Exception as e:
                 print(f"  ! deploy failed: {e}", file=sys.stderr)
+
+    # Floor-supply diagnostics dump (build 325 instrumentation). One
+    # JSON record per run capturing per-floor vendor/chest/consumption
+    # numbers; the grid analyzer then splits H1/H2/H3 across the run
+    # corpus. Cheap (one file write per run), no game-state effects.
+    if args.diag_out:
+        try:
+            import json as _json
+            with open(args.diag_out, "w", encoding="utf-8") as f:
+                _json.dump({
+                    "seed": args.seed,
+                    "race": args.race,
+                    "policy": args.policy,
+                    "turns": sess.turn,
+                    "alive": bool(obs.get("alive")),
+                    "final_floor": p["floor"],
+                    "max_z_via_stairs": sess.max_z_via_stairs + 1,
+                    "hp": p["hp"],
+                    "hunger": p["hunger"],
+                    "log_tail": (gs.log_lines[-30:] if gs.log_lines else []),
+                    "floor_diag": [
+                        {"floor": z + 1, **rec}
+                        for z, rec in sorted(sess.floor_diag.items())
+                    ],
+                }, f, default=str)
+        except OSError as e:
+            print(f"  ! diag write failed: {e}", file=sys.stderr)
 
     return 0 if obs["alive"] else 1
 
