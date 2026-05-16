@@ -2520,7 +2520,22 @@ def smart_policy(obs, rng, use_lantern=True):
         if not candidates:
             candidates = [d for d in ("n", "s", "e", "w") if _walkable(d)]
         if not candidates:
-            candidates = ["n", "s", "e", "w"]
+            # Truly cornered: every walkable direction is recent OR
+            # the only neighbours are walls/AVOID tiles. Don't just
+            # rng.choice all 4 dirs -- that picks W tiles when AVOID
+            # has W (Fili of Khazad-dum dwarf seed 13 stepped onto a
+            # known W via this exact path because rng landed on it
+            # uniformly across all 4 dirs). Prefer non-AVOID dirs
+            # even if walls -- a wall bump wastes one turn; a W
+            # step wastes 200+ turns of warp + retreat. Fall through
+            # to all 4 only if even the non-AVOID set is empty (no
+            # tile is safer than another).
+            safe_dirs = [d for d in ("n", "s", "e", "w")
+                         if neighbors.get(d) not in AVOID]
+            if safe_dirs:
+                candidates = safe_dirs
+            else:
+                candidates = ["n", "s", "e", "w"]
         return rng.choice(candidates)
 
     if mode == "inventory":
@@ -2865,8 +2880,15 @@ def smart_policy(obs, rng, use_lantern=True):
         # dry mid-floor. Four canisters = 40 fires; combined with the
         # base fuel that's ~70 fires per vendor visit -- enough to
         # lantern every fog-adjacent step for 7-8 floors.
-        if use_lantern and lantern_fuel < 30:
-            STOCK["lantern_fuel"] = 4
+        # Fuel buys: trigger any time fuel < 45, target 6 canisters.
+        # With the every-fog-step lantern policy, fuel drains ~1 per
+        # 3-4 moves. Six canisters = 60 fires, base 50 starter,
+        # ~110 fires per vendor visit which covers 8-10 floors of
+        # aggressive lantern use. Bumped from 4 canisters/trigger
+        # 30 because Fili of Khazad-dum hit fuel=0 between vendor
+        # visits and stepped blind into a W.
+        if use_lantern and lantern_fuel < 45:
+            STOCK["lantern_fuel"] = 6
 
         # RATIONS FIRST: buy EVERY ration the vendor offers, before
         # any other stockpile or magic-item check. User framing:
