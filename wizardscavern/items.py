@@ -3155,7 +3155,19 @@ def process_hunger(character):
         if character.hunger_freeze_turns == 0:
             add_log(f"{COLOR_YELLOW}The sustaining power of the lembas fades.{COLOR_RESET}")
     else:
-        character.hunger = max(0, character.hunger - HUNGER_DECAY_PER_MOVE)
+        # Build 320: skip decay every 3rd move (33% slower food clock).
+        # The build-318 12-ration starter pack solved starvation at
+        # 2000T but the build-319 3000T grid showed it returning
+        # (33/60 starve at depth as longer-budget runs exhaust food).
+        # Slowing decay scales naturally with run length, unlike
+        # bigger starter packs or stochastic drops. 2/3 effective
+        # rate means 3 moves consume 2 hunger (vs prior 3/3).
+        # Pure constant change; no new mechanics.
+        character._hunger_decay_tick = (
+            getattr(character, '_hunger_decay_tick', 0) + 1
+        )
+        if character._hunger_decay_tick % 3 != 0:
+            character.hunger = max(0, character.hunger - HUNGER_DECAY_PER_MOVE)
 
     h = character.hunger
 
