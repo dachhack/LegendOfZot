@@ -153,19 +153,36 @@ def _race_name(race, rng):
 _ANSI_RE = re.compile(r"\x1b\[[0-9;]*m")
 _HTML_RE = re.compile(r"<[^>]+>")
 
-# Substrings in a monster name that flag it as undead. Shared between
-# the combat threat-assessment branch and the tomb-proximity tracker
-# in _monster_obs -- a tomb is the ONLY way undead spawn at typical
-# playtest depths (game_systems.undead_guardian branch), so any
-# combat with one of these names is a reliable tell that the agent is
-# next to a tomb and a higher-tier ELITE UNDEAD waits at one of the
-# other adjacent guardian rooms.
+# Words in a monster name that flag it as undead. Shared between the
+# combat threat-assessment branch and the tomb-proximity tracker in
+# _monster_obs -- a tomb is the ONLY way undead spawn at typical
+# playtest depths (game_systems.undead_guardian branch), so any combat
+# with one of these names is a reliable tell that the agent is next to
+# a tomb and a higher-tier ELITE UNDEAD waits at one of the other
+# adjacent guardian rooms. Matched against word boundaries via the
+# `_is_undead_name` helper -- substring matching wrongly flagged
+# Lichen (a fungal plant creature) as undead because "lich" is in
+# "lichen". User-flagged: "Lichens don't signal a tomb."
 _UNDEAD_NAME_TOKENS = (
     "wraith", "lich", "skeleton", "vampire",
     "ghost", "zombie", "spectral", "phantom",
     "mummy", "specter", "death knight", "demilich",
     "undead",
 )
+import re as _re
+_UNDEAD_NAME_RE = _re.compile(
+    r"\b(" + "|".join(_re.escape(t) for t in _UNDEAD_NAME_TOKENS) + r")\b"
+)
+
+
+def _is_undead_name(name):
+    """Word-boundary match against _UNDEAD_NAME_TOKENS. Lower-case the
+    name first. Returns False for unrelated names that contain a token
+    as a substring (e.g. "Lichen" wrongly matched "lich" under the
+    prior substring loop)."""
+    if not name:
+        return False
+    return bool(_UNDEAD_NAME_RE.search(name.lower()))
 
 # Status effects that LOSE HP EVERY TURN -- poison ticks, fire burn,
 # damage-over-time, life-drain. With one of these active the agent
@@ -831,7 +848,7 @@ class PlaytestSession:
         # Mark the floor; the wayfinder drops M/T from priority when
         # weak on a flagged floor so the agent doesn't blunder into a
         # second wraith while limping away from the first.
-        is_undead = any(k in name.lower() for k in _UNDEAD_NAME_TOKENS)
+        is_undead = _is_undead_name(name)
         if is_undead:
             self.suspected_tomb_floors.add(gs.player_character.z)
         return {
@@ -3032,9 +3049,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # Reuse the module-level token list; obs.monster.is_undead is
         # already set by _monster_obs, but we recompute here so the
         # combat threat assessment is self-contained.
-        is_undead = bool(m.get("is_undead")
-                         or any(k in m_name_low
-                                for k in _UNDEAD_NAME_TOKENS))
+        is_undead = bool(m.get("is_undead") or _is_undead_name(m_name_low))
         # ELITE undead are the tomb-elite guardians spawned at
         # floor+1 with 1.3x stats and 3x gold (see game_systems.py's
         # undead_guardian branch). At parity level they hit harder

@@ -729,13 +729,22 @@ class RunReport:
         # on this page and emits a single dedup'd <style> block.
         sprites = SpriteRegistry()
 
-        # Player sprite: generic character pool, seeded by (race, name).
+        # Player sprite: mirror the IN-GAME character pick. The game's
+        # generate_player_sprite_html (sprite_data.py:182) seeds the
+        # pool with (race, gender, character_name) so a fresh
+        # character gets a stable-but-unique look that matches what
+        # they'd see launching this seed in the actual game. The
+        # playtest report previously used (race, name) which produced
+        # a DIFFERENT sprite for the same hero, breaking the visual
+        # link between reports and live runs. User-flagged: "use the
+        # race to sprite assignments in the game for the playtest."
         try:
             from .sprites import characters as _csprites, get_generic_variant
             pid = get_generic_variant(
                 _csprites._CHARACTERS_POOL,
-                seed=(self.race, self.name),
+                seed=(self.race, self.gender, self.name),
             )
+            self.player_sprite_pid = pid
             player_sprite_html = _sprite_span(sprites, pid, size=96,
                                               extra_class="player-sprite")
         except Exception:
