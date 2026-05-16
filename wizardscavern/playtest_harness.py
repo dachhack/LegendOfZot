@@ -2958,13 +2958,25 @@ def smart_policy(obs, rng, use_lantern=True):
         # resort -- a 30-50 dmg gamble beats an infinite loop.
         neighbors = obs.get("neighbors") or {}
         blocked = set(obs.get("blocked_directions") or [])
+        recent_steps_chest = set(obs.get("recent_step_set") or [])
         def _walk_off_chest():
+            # Prefer non-recent, non-blocked, non-wall directions
+            # first -- without this the agent bounces between two
+            # adjacent chest tiles forever, since the for-loop
+            # always returned 'n' if it was walkable. Thranduil the
+            # Twice-Born (elf seed 9001) burned 2720 turns at HP=1
+            # oscillating n/s between two stacked chests.
+            for d in ("n", "s", "e", "w"):
+                if d in blocked or d in recent_steps_chest:
+                    continue
+                t = neighbors.get(d)
+                if t != "#":
+                    return d
+            # Fall back to any non-blocked, non-wall direction.
             for d in ("n", "s", "e", "w"):
                 if d in blocked:
                     continue
                 t = neighbors.get(d)
-                # Allow fog (None) -- could be walkable when explored.
-                # Only skip explicit walls.
                 if t != "#":
                     return d
             return "o"  # walled in; open the chest and hope
