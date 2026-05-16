@@ -150,8 +150,8 @@ def summary(results):
 # ----- CMA-ES driver -----
 
 MODES = {
-    "quick":    dict(pop=10, gen=15, seeds=20, turns=2000),
-    "standard": dict(pop=15, gen=25, seeds=30, turns=2500),
+    "quick":    dict(pop=8,  gen=12, seeds=15, turns=3000),
+    "standard": dict(pop=15, gen=25, seeds=30, turns=3000),
     "thorough": dict(pop=20, gen=40, seeds=60, turns=3000),
 }
 
