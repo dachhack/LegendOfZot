@@ -105,13 +105,35 @@ _CHARACTERS_POOL = [
 ]
 
 
-# Race -> list of pids. Populated by hand from the picker.html export
-# (see sprite_package/picks_characters/). Empty list means "no curated
-# selection yet — fall back to the full pool".
+# Race -> list of pids. Populated from
+# sprite_package/picks_characters/character_picks.json (export of the
+# picker.html tool). Order matches _CHARACTERS_POOL so re-running the
+# picker on top of the current state preserves the visual layout.
+# Empty list means "no curated selection yet — fall back to the full
+# pool" (handled by get_race_pool).
 _CHARACTERS_BY_RACE = {
-    'human': [],
-    'elf':   [],
-    'dwarf': [],
+    'human': [
+        'CH0040', 'CH0042', 'CH0045', 'CH0048', 'CH0049',
+        'CH0057', 'CH0060', 'CH0061', 'CH0064', 'CH0065',
+        'CH0066', 'CH0068', 'CH0078', 'CH0081', 'CH0084',
+        'CH0093', 'CH0107', 'CH0108', 'CH0124', 'CH0138',
+        'CH0139', 'CH0140', 'CH0150', 'CH0152', 'CH0155',
+        'CH0156', 'CH0275', 'CH0284', 'CH0338', 'CH0341',
+        'CH0349', 'CH0353', 'CH0393',
+    ],
+    'elf': [
+        'CH0008', 'CH0009', 'CH0010', 'CH0022', 'CH0024',
+        'CH0025', 'CH0050', 'CH0051', 'CH0082', 'CH0119',
+        'CH0134', 'CH0135', 'CH0165', 'CH0167', 'CH0185',
+        'CH0186', 'CH0272', 'CH0282', 'CH0332', 'CH0347',
+        'CH0362', 'CH0377', 'CH0389', 'CH0400',
+    ],
+    'dwarf': [
+        'CH0012', 'CH0013', 'CH0014', 'CH0026', 'CH0028',
+        'CH0054', 'CH0055', 'CH0070', 'CH0145', 'CH0147',
+        'CH0161', 'CH0162', 'CH0313', 'CH0365', 'CH0397',
+        'CH0405',
+    ],
 }
 
 
