@@ -579,6 +579,16 @@ class RunReport:
                 return "lethal pool trap"
             if "the chest explodes" in low or "chest explodes" in low:
                 return "chest explosion"
+            # Starvation collapse must be checked BEFORE the status-
+            # effects branch -- combat.py logs the final defeat as
+            # 'You were defeated by status effects upon entering the
+            # new room...' AFTER 'You collapse from starvation...',
+            # so the backward walk would otherwise bucket starvation
+            # deaths as the generic 'defeated by status effects'.
+            # Playtester flagged 31/57 build-306 deaths landing in
+            # the wrong bucket.
+            if "collapse from starvation" in low:
+                return "starvation"
             if "you were defeated by status effects" in low:
                 # Find the source status from prior log lines
                 for (_, prev) in reversed(self.recent_log):
