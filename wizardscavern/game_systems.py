@@ -848,10 +848,6 @@ def use_carnyx_of_doom(character, my_tower):
 
     if monsters_killed > 0:
         add_log(f"{COLOR_YELLOW}The Carnyx killed {monsters_killed} monster(s)!{COLOR_RESET}")
-        # Award XP for kills
-        xp_gain = monsters_killed * 50
-        character.gain_experience(xp_gain)
-        add_log(f"{COLOR_GREEN}Gained {xp_gain} XP from the carnyx kills!{COLOR_RESET}")
     else:
         add_log(f"{COLOR_YELLOW}No monsters were in range of the blast.{COLOR_RESET}")
 
