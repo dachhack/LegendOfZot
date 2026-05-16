@@ -1976,23 +1976,39 @@ def smart_policy(obs, rng, use_lantern=True):
         turns_on_floor = obs.get("turns_on_floor") or 0
         stuck_on_floor = turns_on_floor > 100
         very_stuck = turns_on_floor > 200
-        # Lantern policy: bump aggressiveness so warps surface BEFORE
-        # the agent walks into them. The lantern reveals tiles along
-        # the four cardinal axes up to (light_radius + upgrade_level)
-        # -- 7+ cells per direction with the starter lantern -- so one
-        # fire often catches a W tile two rooms away. Starter pack
-        # ships 50 fuel + a refill canister; even with one fire every
-        # ~3 turns the agent has 150+ fires across a typical run,
-        # plenty for the 6-10 floors we currently reach. Prior policy
-        # waited for unknown_neighbours >= 2, which routinely had the
-        # agent step into a warp on a discovered-but-unscanned tile.
-        if use_lantern and lantern_fuel > 5:
-            # Any unknown neighbour now triggers a fire. Cheap insurance
-            # against stepping into an undiscovered W tile.
+        # Lantern policy: KNOW what you're walking into. The lantern
+        # reveals tiles along the four cardinal axes up to
+        # (light_radius + upgrade_level) -- 7+ cells per direction
+        # with the starter lantern -- so one fire often catches a W
+        # or M tile several rooms away. Fire whenever the next step
+        # could land on an undiscovered tile (any fog-adjacent
+        # neighbour). Per user framing: "best way to stay alive is
+        # know what you are walking into for each room."
+        #
+        # TWO EXPLICIT RELEASE VALVES skip the fire:
+        #   1. fuel_scarce: lantern_fuel + spare canisters * 10 < 15
+        #      uses left. Conserve the last few fires for genuine
+        #      emergencies and trust the wayfinder's AVOID set.
+        #   2. strong_and_healthy: pc.level >= pc.floor + 2 AND
+        #      hp_pct >= 0.80. An over-levelled, full-HP agent can
+        #      tank a surprise wraith / warp / chest-gas the lantern
+        #      would have revealed -- the fuel cost outweighs the
+        #      surprise cost.
+        fuel_total = (lantern_fuel or 0) + (spare_fuel_uses or 0) * 10
+        fuel_scarce = fuel_total < 15
+        over_leveled_for_floor = (
+            p.get("level", 1) >= p.get("floor", 1) + 2
+        )
+        strong_and_healthy = over_leveled_for_floor and hp_pct >= 0.80
+        can_skip_lantern = fuel_scarce or strong_and_healthy
+        if use_lantern and not can_skip_lantern:
             if unknown_neighbours >= 1:
                 return "l"
-            if very_stuck and obs["turn"] % 10 == 0:
-                return "l"
+        # Periodic stuck-fire even when can_skip_lantern is True --
+        # reveals long-range tiles when the agent is truly cornered.
+        if (use_lantern and lantern_fuel > 5
+                and very_stuck and obs["turn"] % 10 == 0):
+            return "l"
 
         # Weakness model (hoisted to top of smart_policy for reuse in
         # tomb_mode / pool_mode). When weak we avoid stepping onto
@@ -2780,8 +2796,13 @@ def smart_policy(obs, rng, use_lantern=True):
         #   deep floor pushes survival.
         # - potion_mana: 3 (held).
         STOCK = {"potion_healing": 6, "food": 25, "potion_mana": 3}
-        if use_lantern and lantern_fuel < 20:
-            STOCK["lantern_fuel"] = 2
+        # Lantern fuel stockpile. Bumped trigger 20 -> 30 and target
+        # 2 -> 4 so the more-aggressive lantern policy doesn't run
+        # dry mid-floor. Four canisters = 40 fires; combined with the
+        # base fuel that's ~70 fires per vendor visit -- enough to
+        # lantern every fog-adjacent step for 7-8 floors.
+        if use_lantern and lantern_fuel < 30:
+            STOCK["lantern_fuel"] = 4
         owned = {cat: sum(i.get("count", 1) for i in inv
                           if i["category"] == cat)
                  for cat in STOCK}
