@@ -3170,6 +3170,19 @@ def process_chest_action(player_character, my_tower, cmd):
             
             items = base_items
             probabilities = base_probs
+
+            # Per-floor guaranteed bonus (build 324): each floor has a
+            # queue of supplement items split across chest opens. Pop
+            # one BEFORE the RNG roll so the bonus lands first even if
+            # the RNG yields gas/boom (chest already paid out before
+            # the misfortune). Augments existing RNG; queue runs dry
+            # after the floor's budget is distributed.
+            from .floor_supply import pop_chest_bonus
+            _bonus = pop_chest_bonus(current_floor)
+            if _bonus is not None:
+                player_character.inventory.add_item(_bonus)
+                add_log(f"{COLOR_GREEN}Bonus: you found a {_bonus.name}!{COLOR_RESET}")
+
             selected_item_np = random.choices(items, weights=probabilities, k=1)[0]
 
             if selected_item_np == 'gold':

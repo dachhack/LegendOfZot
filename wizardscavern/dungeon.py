@@ -486,6 +486,14 @@ class Tower:
                     new_floor.grid[mr][mc].properties['is_magic_shop'] = True
                     add_log(f"{COLOR_PURPLE}You sense arcane commerce somewhere on this floor...{COLOR_RESET}")
 
+        # Per-floor guaranteed supply (build 324): each floor gets a fixed
+        # budget of upgrade scrolls / rations / heal pots / fuel split
+        # between the vendor inventory and a chest-bonus queue. Augments
+        # existing RNG; reduces run-to-run variance in the early-game
+        # economy so balance changes are testable.
+        from .floor_supply import attach_supply
+        attach_supply(new_floor, len(self.floors))
+
         self.floors.append(new_floor)
 
     def create_floor_50_boss_arena(self, floor):

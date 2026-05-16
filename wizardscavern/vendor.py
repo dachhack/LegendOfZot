@@ -289,6 +289,20 @@ class Vendor:
                                 value=5, level=0, fuel_restore_amount=20)
                 )
 
+            # Per-floor guaranteed supplement (build 324). Each floor has
+            # a fixed budget of upgrade scrolls / rations / heal pots /
+            # fuel; the vendor share is consumed once per floor (subsequent
+            # vendors on the same floor get nothing extra here, since the
+            # supply is per-FLOOR not per-vendor).
+            from . import game_state as _gs
+            from .floor_supply import consume_vendor_supply
+            try:
+                cur_floor = _gs.my_tower.floors[player_character.z]
+                for it in consume_vendor_supply(cur_floor):
+                    self.inventory.add_item_quiet(it)
+            except (AttributeError, IndexError):
+                pass
+
 
 # ============================================================================
 # VENDOR NAMES AND MESSAGES
