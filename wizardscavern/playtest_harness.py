@@ -2755,18 +2755,21 @@ def smart_policy(obs, rng, use_lantern=True):
         # still died at hunger=0 because the override couldn't
         # consistently produce meat (5.1% conversion in fights). Buy
         # harder to never get to the override stage.
-        # Food bumped 8 -> 12 after the death dossier showed
-        # starvation deaths at F4 L3-4 in long runs (Kili dwarf, 111
-        # kills, hunger ticked to 0 with no Rations left). 12 Rations
-        # = 480 nutrition uses, enough for ~480 turns of comfort
-        # eating after exhausting kill drops.
-        # Stockpile bumped: 4 heal pots (was 3) covers ~1 emergency
-        # rescue per floor on a 6-8 floor run. 15 Rations (was 12)
-        # buys ~600 nutrition uses -- enough to outlast the long
-        # high-kill runs that previously died of starvation at F4
-        # with 100+ kills. 3 mana pots (was 2) extends spell
-        # pressure for caster races at deeper floors.
-        STOCK = {"potion_healing": 4, "food": 15, "potion_mana": 3}
+        # Stockpile targets. Each vendor visit tops these up so the
+        # agent keeps buying every floor's vendor stock until the
+        # quota is full -- preventing the "only bought F4-F5" pattern
+        # where a player starves on F7 after the starter pack runs
+        # out. User-flagged after Thorin of Belegost (dwarf seed
+        # 1234): purchased only on F4 + F5, then starved into a warp
+        # surrender on F7 with no rations left.
+        # - food: 25 (was 15). 25 Rations = 1000 nutrition uses,
+        #   enough for ~1000 turns of comfort eating between meat
+        #   kills. The starter pack ships only 5 so the agent needs
+        #   most floors' vendors to fill.
+        # - potion_healing: 6 (was 4) -- one extra emergency per
+        #   deep floor pushes survival.
+        # - potion_mana: 3 (held).
+        STOCK = {"potion_healing": 6, "food": 25, "potion_mana": 3}
         if use_lantern and lantern_fuel < 20:
             STOCK["lantern_fuel"] = 2
         owned = {cat: sum(i.get("count", 1) for i in inv
@@ -2790,7 +2793,14 @@ def smart_policy(obs, rng, use_lantern=True):
         # a 150g cushion for emergency healing-pot restock at the next
         # vendor.
         MAGIC_RESERVE = 150
-        SCROLL_BUY_CAP = 3
+        # Scroll cap bumped 3 -> 5. Upgrade scrolls in particular are
+        # the only melee-scaling lever for non-caster races; capping
+        # at 3 meant agents stopped buying after one or two vendors
+        # and walked past later vendors' guaranteed upgrade scroll.
+        # Five lets the agent keep stocking upgrade scrolls through
+        # mid-game vendors so the weapon attack_bonus actually
+        # scales with depth.
+        SCROLL_BUY_CAP = 5
         owned_scrolls = sum(1 for i in inv if i["category"] == "scroll")
         owned_buff_potion_types = {
             i["category"] for i in inv
@@ -3009,16 +3019,26 @@ def smart_policy(obs, rng, use_lantern=True):
         # path -- but the early-game cost is brutal. Warps drop the
         # agent at random within +/- 2 floors, which routinely lands
         # a fresh Lv1 next to a Wraith on F3 with no escape route.
-        # New rule (stricter than the prior turns_on_floor > 200
-        # gate): resist hard on early floors and only accept when
-        # ACTUALLY trapped (no reachable D + very stuck). Late game
-        # (z >= 10) keeps the prior loose gate -- a lucky warp there
-        # is more often a depth boost than a death sentence.
+        # Resist hard on early floors and only accept when ACTUALLY
+        # trapped (no reachable D + very stuck). Late game (z >= 10)
+        # keeps the prior loose gate -- a lucky warp there is more
+        # often a depth boost than a death sentence.
+        #
+        # HARD OVERRIDES (always resist, no matter how stuck):
+        #   * starving: a random teleport does not feed you. User-
+        #     flagged after Thorin of Belegost (dwarf seed 1234)
+        #     surrendered to a warp at HP-low + starving, landed
+        #     adjacent to a Lv6 Stirge on F7, died on the next
+        #     flee's parting attack.
+        #   * hp_pct < 0.20: random landing into a Lv(z+2) monster
+        #     at sub-20% HP is a one-hit kill.
         turns_on_floor = obs.get("turns_on_floor") or 0
         pc_z = gs.player_character.z
         early_floor = pc_z < 10
         feature_paths = obs.get("feature_paths") or {}
         d_reachable = bool((feature_paths.get("D") or {}).get("first_step"))
+        if starving or hp_pct < 0.20:
+            return "y"
         if early_floor:
             # Only accept if very stuck AND no D reachable on this
             # floor. Otherwise resist -- a failed resist still warps

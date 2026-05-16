@@ -1153,13 +1153,21 @@ def process_combat_action(player_character, my_tower, cmd):
                 add_log(f"{COLOR_GREEN}You successfully broke away from combat!{COLOR_RESET}")
                 add_log("Choose a direction to flee (n/s/e/w):")
                 gs.prompt_cntl = "flee_direction_mode"
+                # Clean break: a successful flee no longer eats a
+                # monster parting attack. Killed Thorin of Belegost
+                # (dwarf seed 1234) -- he fled successfully from a
+                # Hardened Stirge at HP=1 (starving + dipped from
+                # warp), the parting attack hit for 1 damage, he
+                # died on the "broke away" tick. The flee mechanic
+                # is supposed to be the escape valve; the free
+                # attack made every flee a HP gamble even on success.
             else:
                 add_log(f"{COLOR_RED}Flee failed! The monster blocks your escape.{COLOR_RESET}")
-            gs.active_monster.attack_target(player_character)
-            if not player_character.is_alive():
-                add_log(f"{COLOR_RED}You were defeated...{COLOR_RESET}")
-                gs.prompt_cntl = "death_screen"
-                return
+                gs.active_monster.attack_target(player_character)
+                if not player_character.is_alive():
+                    add_log(f"{COLOR_RED}You were defeated...{COLOR_RESET}")
+                    gs.prompt_cntl = "death_screen"
+                    return
 
     elif cmd == 'c':
         # Only allow spell casting if player can cast spells
