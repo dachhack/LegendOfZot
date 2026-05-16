@@ -202,7 +202,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Borin Coalbeard, the dwarf</h1>
-      <p class="muted">non-binary adventurer · seed 999 · started 2026-05-16T00:14:06+00:00</p>
+      <p class="muted">non-binary adventurer · seed 999 · started 2026-05-16T00:24:14+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -361,8 +361,21 @@ th { color: #94a3b8; font-weight: normal; }
         <tr><td>Floor 1</td><td>13</td><td>11</td><td>11</td><td>2</td><td>15%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>13</td><td>11</td><td>11</td><td>2</td><td>15%</td></tr>
       </table>
       <h2 style="margin-top:18px;">Purchases (10)</h2>
-      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
-      <tr><td>T56</td><td>F1</td><td>Mana Potion</td><td>1×</td><td>50g</td></tr><tr><td>T57</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T60</td><td>F1</td><td>Mana Potion</td><td>1×</td><td>50g</td></tr><tr><td>T60</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T60</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T61</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr><tr><td>T64</td><td>F1</td><td>Mana Potion</td><td>1×</td><td>50g</td></tr><tr><td>T64</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td></tr><tr><td>T64</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td></tr><tr><td>T64</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td></tr>
+      <p class="muted">Status column: <span style="color:#4ade80;">equipped</span>
+        means the item was slotted at some point;
+        <span style="color:#fde68a;">in bag</span> means it's still
+        in the final inventory (not consumed);
+        <span style="color:#94a3b8;">used</span> means consumed or
+        dropped before death.</p>
+      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th><th>Status</th></tr>
+      <tr><td>T56</td><td>F1</td><td>Mana Potion</td><td>1×</td><td>50g</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T57</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T60</td><td>F1</td><td>Mana Potion</td><td>1×</td><td>50g</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T60</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T60</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T61</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T64</td><td>F1</td><td>Mana Potion</td><td>1×</td><td>50g</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T64</td><td>F1</td><td>Minor Healing Potion</td><td>1×</td><td>30g</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T64</td><td>F1</td><td>Minor Mana Potion</td><td>1×</td><td>30g</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T64</td><td>F1</td><td>Rations</td><td>1×</td><td>10g</td><td style='color:#fde68a;'>in bag</td></tr>
+      </table>
+      <h2 style="margin-top:18px;">Items Found (20)</h2>
+      <p class="muted">Gear / scrolls / treasures picked up off the
+        map (monster drops, chests, gardens). Same status colour
+        scheme as purchases.</p>
+      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Source</th><th>Status</th></tr>
+      <tr><td>T3</td><td>F1</td><td>Ring Mail</td><td class='muted'>monster_drop</td><td style='color:#4ade80;'>equipped</td></tr><tr><td>T4</td><td>F1</td><td>Ring Mail</td><td class='muted'>monster_drop</td><td style='color:#4ade80;'>equipped</td></tr><tr><td>T8</td><td>F1</td><td>Ring Mail</td><td class='muted'>monster_drop</td><td style='color:#4ade80;'>equipped</td></tr><tr><td>T12</td><td>F1</td><td>Ring Mail</td><td class='muted'>monster_drop</td><td style='color:#4ade80;'>equipped</td></tr><tr><td>T41</td><td>F1</td><td>sparkling treasure</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T44</td><td>F1</td><td>sparkling treasure</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T48</td><td>F1</td><td>sparkling treasure</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T97</td><td>F1</td><td>Fire Root</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T97</td><td>F1</td><td>Dragon Scale</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T97</td><td>F1</td><td>Starbloom</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T97</td><td>F1</td><td>Iron Bark</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T100</td><td>F1</td><td>Fire Root</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T100</td><td>F1</td><td>Dragon Scale</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T100</td><td>F1</td><td>Starbloom</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T100</td><td>F1</td><td>Iron Bark</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T104</td><td>F1</td><td>Dragon Scale</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T104</td><td>F1</td><td>Starbloom</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T104</td><td>F1</td><td>Iron Bark</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T110</td><td>F1</td><td>grimoire</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T112</td><td>F1</td><td>grimoire</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr>
       </table>
     </div>
   </div>
