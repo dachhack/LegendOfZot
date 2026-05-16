@@ -2287,7 +2287,16 @@ def smart_policy(obs, rng, use_lantern=True):
             return "l"
         # Periodic stuck-fire even when other gates would skip --
         # reveals long-range tiles when the agent is truly cornered.
-        if (use_lantern and lantern_fuel > 5
+        # Uses fuel_total (lantern + spare canisters) instead of raw
+        # lantern_fuel so an agent with 2 spare cans at lantern_fuel=5
+        # still fires. Arwen Silverleaf (s=42 elf F1) burned 2960
+        # turns at HP=1 with 2 spare canisters because the prior
+        # `lantern_fuel > 5` gate gated on the in-lantern reservoir
+        # alone, and her four immediate neighbours were all known so
+        # the unknown-neighbours gate also skipped -- but the lantern
+        # would have revealed undiscovered tiles further down the
+        # corridor (radius 7 per cardinal).
+        if (use_lantern and fuel_total > 5
                 and very_stuck and obs["turn"] % 10 == 0):
             return "l"
 
@@ -2661,6 +2670,22 @@ def smart_policy(obs, rng, use_lantern=True):
                 and trapped_no_d
                 and obs.get("nearest_warp_path")):
             tiers = [("W",), ("V",)]
+        elif (retreat_to_floor is None
+                and trapped_no_d
+                and not obs.get("nearest_warp_path")
+                and obs.get("nearest_monster_path")):
+            # Trapped on island with no D, no W, but a visible M.
+            # Engage as last resort -- "die fighting" beats the
+            # indefinite HP=1 flatline. Arwen Silverleaf (s=42 elf
+            # F1) was wedged for 2960 turns at HP=1 with a tomb-
+            # guardian M blocking her only exit east; AVOID-M
+            # already drops when starving, but is_weak's priority
+            # list excludes M, so she paced two `.` tiles forever
+            # without ever stepping toward the only available
+            # threat. The M tier wires nearest_monster_path so
+            # she'll walk to the M and engage. Loss is bounded
+            # (one combat); the alternative is a 3000-turn flatline.
+            tiers = [("M",)]
         elif retreat_to_floor is not None:
             tiers = [("U",), ("V",)]
         elif too_long_on_floor:
@@ -2810,6 +2835,14 @@ def smart_policy(obs, rng, use_lantern=True):
                     mp = monster_path
                     if (mp and mp.get("first_step")
                             and mp.get("path_dist") is not None):
+                        # Trapped-engage-M (no D / no W island with a
+                        # visible monster) bypasses _swap_if_backtrack
+                        # for the same reason the W tier does -- the
+                        # agent must traverse already-walked tiles to
+                        # reach the only available threat.
+                        if (trapped_no_d
+                                and not obs.get("nearest_warp_path")):
+                            return mp["first_step"]
                         candidates.append((mp["path_dist"], mp["first_step"]))
                     continue
                 if t == "W":
