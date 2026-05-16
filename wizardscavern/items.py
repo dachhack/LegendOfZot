@@ -2113,9 +2113,28 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
         next_tier_hint = "Scroll of Greater Upgrade (floor 5+)"
 
     upgradable_items = []
+    weapons_in_bag = []
+    armors_in_bag = []
     for item in player_character.inventory.items:
-        if isinstance(item, (Weapon, Armor)):
-            upgradable_items.append(item)
+        if isinstance(item, Weapon):
+            weapons_in_bag.append(item)
+        elif isinstance(item, Armor):
+            armors_in_bag.append(item)
+    # Build 325: sort so equipped weapon is slot 1, equipped armor next,
+    # then remaining items. The smart playtester always picks "1" and
+    # the build-324 grid showed +2 weapons sitting unwielded in the bag
+    # because the menu was insertion-ordered (Dagger sticks at slot 1
+    # after a stronger weapon gets picked up + equipped). Real players
+    # benefit too: the wielded item shouldn't be buried in the list.
+    equipped_weapon = getattr(player_character, 'equipped_weapon', None)
+    equipped_armor = getattr(player_character, 'equipped_armor', None)
+    if equipped_weapon is not None and equipped_weapon in weapons_in_bag:
+        weapons_in_bag.remove(equipped_weapon)
+        weapons_in_bag.insert(0, equipped_weapon)
+    if equipped_armor is not None and equipped_armor in armors_in_bag:
+        armors_in_bag.remove(equipped_armor)
+        armors_in_bag.insert(0, equipped_armor)
+    upgradable_items = weapons_in_bag + armors_in_bag
 
     if cmd == "init":
         # Show available items with upgrade limits
