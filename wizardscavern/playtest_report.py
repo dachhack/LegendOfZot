@@ -270,6 +270,21 @@ class RunReport:
         self.descents = []  # turn at which each new floor was first entered
         self.equipped_history = []  # (turn, weapon_name, armor_name)
         self.last_equip = (None, None)
+        # Items the agent picked up off the map (monster drops,
+        # chest contents, garden harvests, tomb treasures, etc.) --
+        # NOT bought from a vendor. Parsed from log messages like
+        # "The Goblin dropped a Longsword!" or "Found: 50 gold +
+        # Healing Potion!". Used by the report's Equipment-found
+        # table so the user can see which dropped weapons/armor the
+        # agent actually equipped vs left in the bag.
+        # Entry: (turn, floor, name, source) where source is one of
+        # 'monster_drop' / 'chest' / 'tomb' / 'garden' / 'altar' /
+        # 'shrine' / 'oracle' / 'library' / 'pool' / 'other'.
+        self.found_items = []
+        # Names of items ever equipped (weapon or armor) over the
+        # course of the run, derived from equipped_history. Used to
+        # mark found / bought gear as "equipped" vs "never equipped".
+        self._ever_equipped_names = set()
         self.max_floor = 1
         self.last_seen_log = set()
 
@@ -301,6 +316,13 @@ class RunReport:
             if cur != self.last_equip:
                 self.last_equip = cur
                 self.equipped_history.append((turn, cur[0], cur[1]))
+                # Record any newly-slotted item so found / bought
+                # gear can be flagged "equipped" in the post-run
+                # tables.
+                if cur[0]:
+                    self._ever_equipped_names.add(cur[0])
+                if cur[1]:
+                    self._ever_equipped_names.add(cur[1])
             # Movement-efficiency: when we observe a fresh position
             # while in game_loop, classify it as first-visit or
             # revisit relative to this floor's history. We count by
@@ -379,6 +401,42 @@ class RunReport:
                 price = int(m.group(3))
                 self.buys.append((turn, floor, name, price, count))
                 self.events.append((turn, "buy", f"{count}× {name} ({price}g)"))
+
+        # Map-found items: monster drops, chest contents, garden
+        # harvests, tomb treasures, altar prayers, etc. Patterns
+        # mirror the in-game log strings (see items.py
+        # drop_monster_items and game_systems.py chest payouts).
+        # The agent's intent — equip the dropped weapon or leave it
+        # — surfaces via _ever_equipped_names.
+        m = re.match(r"The [\w '\-]+ dropped (?:a |an |some )?([^.!]+?)[.!]",
+                     line)
+        if m:
+            name = m.group(1).strip()
+            self.found_items.append((turn, floor, name, "monster_drop"))
+        m = re.match(r"You found (?:a |an |some )?([^.!]+?)[.!]", line)
+        if m:
+            name = m.group(1).strip()
+            # Filter out gold-only / xp-only messages
+            low_name = name.lower()
+            if (low_name.startswith("gold")
+                    or "experience" in low_name
+                    or low_name.endswith(" gold")
+                    or low_name.endswith(" gold coins")):
+                pass
+            else:
+                self.found_items.append((turn, floor, name, "chest"))
+        m = re.match(r"Found: (?:\d+ )?([^.!\d][^.!]*?)$", line.strip())
+        if m:
+            name = m.group(1).strip()
+            low_name = name.lower()
+            if not (low_name.startswith("gold")
+                    or low_name.endswith(" gold")
+                    or low_name.endswith(" gold coins")):
+                self.found_items.append((turn, floor, name, "drop"))
+        m = re.match(r"Gathered:\s+(.+?)$", line.strip())
+        if m:
+            name = m.group(1).strip()
+            self.found_items.append((turn, floor, name, "garden"))
 
         m = re.search(r"identified: ([^!]+)!", line)
         if m:
@@ -555,11 +613,48 @@ class RunReport:
                                key=lambda x: -x[1])[:20]
         )
         buys_total = len(self.buys)
+        # Per-item usage check. An item is "in bag" if its name shows
+        # up in the final inventory, otherwise "used / consumed".
+        # Equipped gear counts as both "in bag" and "equipped".
+        final_inv_names = {
+            (i.get("name") or "").strip().lower()
+            for i in (f.get("inventory") or [])
+        }
+        equipped_names_lower = {
+            n.lower() for n in self._ever_equipped_names if n
+        }
+
+        def _item_status(name):
+            n_low = (name or "").strip().lower()
+            if n_low in equipped_names_lower:
+                return ("equipped", "#4ade80")
+            if n_low in final_inv_names:
+                return ("in bag", "#fde68a")
+            return ("used", "#94a3b8")
+
         buy_lines = "".join(
-            f"<tr><td>T{t}</td><td>F{fl}</td><td>{html.escape(n)}</td>"
-            f"<td>{c}×</td><td>{p}g</td></tr>"
+            (lambda status, color, n=n, t=t, fl=fl, p=p, c=c: (
+                f"<tr><td>T{t}</td><td>F{fl}</td>"
+                f"<td>{html.escape(n)}</td>"
+                f"<td>{c}×</td><td>{p}g</td>"
+                f"<td style='color:{color};'>{status}</td></tr>"
+            ))(*_item_status(n))
             for (t, fl, n, p, c) in self.buys[-30:]
         )
+        # Found-items table: dropped weapons / armor / scrolls etc.
+        # Shows whether the agent eventually equipped a dropped
+        # weapon -- the user's framing: "did the agent use the gear
+        # they picked up off the map?"
+        found_lines = "".join(
+            (lambda status, color, n=n, t=t, fl=fl, src=src: (
+                f"<tr><td>T{t}</td><td>F{fl}</td>"
+                f"<td>{html.escape(n)}</td>"
+                f"<td class='muted'>{html.escape(src)}</td>"
+                f"<td style='color:{color};'>{status}</td></tr>"
+            ))(*_item_status(n))
+            for (t, fl, n, src) in self.found_items[-40:]
+        )
+        found_total = len(self.found_items)
         descent_lines = "".join(
             f"<li>T{t}: arrived on Floor {fl}</li>"
             for (t, fl) in self.descents
@@ -689,7 +784,9 @@ class RunReport:
             hunger_chart=hunger_chart,
             kills_by_floor=kills_by_floor_lines or "<tr><td colspan='2'>no kills logged</td></tr>",
             kills_by_monster=kills_by_monster_lines or "<tr><td colspan='2'>—</td></tr>",
-            buy_lines=buy_lines or "<tr><td colspan='5'>no purchases</td></tr>",
+            buy_lines=buy_lines or "<tr><td colspan='6'>no purchases</td></tr>",
+            found_lines=found_lines or "<tr><td colspan='5'>no items found</td></tr>",
+            found_total=found_total,
             descent_lines=descent_lines or "<li>never descended past Floor 1</li>",
             inventory_rows=inv_rows or "<tr><td colspan='6'>—</td></tr>",
             movement_rows=movement_rows or "<tr><td colspan='6'>no movement logged</td></tr>",
@@ -1125,8 +1222,21 @@ $sprite_styles
         $movement_rows
       </table>
       <h2 style="margin-top:18px;">Purchases ($stats_buys)</h2>
-      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th></tr>
+      <p class="muted">Status column: <span style="color:#4ade80;">equipped</span>
+        means the item was slotted at some point;
+        <span style="color:#fde68a;">in bag</span> means it's still
+        in the final inventory (not consumed);
+        <span style="color:#94a3b8;">used</span> means consumed or
+        dropped before death.</p>
+      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th><th>Status</th></tr>
       $buy_lines
+      </table>
+      <h2 style="margin-top:18px;">Items Found ($found_total)</h2>
+      <p class="muted">Gear / scrolls / treasures picked up off the
+        map (monster drops, chests, gardens). Same status colour
+        scheme as purchases.</p>
+      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Source</th><th>Status</th></tr>
+      $found_lines
       </table>
     </div>
   </div>
