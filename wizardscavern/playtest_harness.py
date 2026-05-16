@@ -781,6 +781,8 @@ class PlaytestSession:
             # Cardinal dirs adjacent to a known tomb-guardian M tile.
             # The policy refuses to step into these unless over-levelled.
             "tomb_guardian_dirs": self._tomb_guardian_dirs_obs(),
+            "suspected_guardian_coords": self._suspected_guardian_coords_obs(),
+            "inferred_guardian_dirs": self._inferred_guardian_dirs_obs(),
             "tomb_suspected_here": pc.z in self.suspected_tomb_floors,
             "max_z_via_stairs": self.max_z_via_stairs,
             # Per-floor kill counter. Used by the grind-first gate so
@@ -1191,6 +1193,57 @@ class PlaytestSession:
             if cell.room_type != "M":
                 continue
             if cell.properties.get("undead_guardian"):
+                out.append(d)
+        return out
+
+    def _suspected_guardian_coords_obs(self):
+        """(x, y) tiles that are CARDINAL-ADJACENT to any discovered T
+        (tomb) on the current floor. Every tomb spawns exactly four
+        guardians in its cardinal neighbours (setup_dungeons_and_tombs
+        in dungeon.py), so once the agent sees a T tile they can infer
+        the four guardian positions WITHOUT having to discover the M
+        tiles directly. Used by the policy's inference-based avoid: a
+        Lv1 elf who lantern-reveals a T two tiles away now knows not
+        to step into the M positions around it, even before those Ms
+        are themselves discovered.
+
+        User-requested ('let's create playtests logic that detects "a
+        tomb might be here so there could be a guardian in one of
+        these adjacent rooms"').
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        out = set()
+        for y in range(floor.rows):
+            for x in range(floor.cols):
+                cell = floor.grid[y][x]
+                if cell.room_type != "T":
+                    continue
+                if self.fog_of_war and not cell.discovered:
+                    continue
+                for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1)):
+                    nx, ny = x + dx, y + dy
+                    if 0 <= nx < floor.cols and 0 <= ny < floor.rows:
+                        out.add((nx, ny))
+        return sorted(out)
+
+    def _inferred_guardian_dirs_obs(self):
+        """Cardinal directions whose adjacent tile is a suspected
+        guardian (cardinal-adjacent to a discovered T). Complements
+        tomb_guardian_dirs (which requires the M to be DISCOVERED and
+        flagged): this one fires purely off T-sighting, so a Lv1
+        agent can avoid stepping onto a fog-hidden guardian as long as
+        they've seen the tomb. Stops the four-corner-walk-in problem
+        without requiring lantern-reveal of every M tile first."""
+        pc = gs.player_character
+        suspected = set(self._suspected_guardian_coords_obs())
+        if not suspected:
+            return []
+        out = []
+        for d, (dx, dy) in (("n", (0, -1)), ("s", (0, 1)),
+                            ("e", (1, 0)), ("w", (-1, 0))):
+            nx, ny = pc.x + dx, pc.y + dy
+            if (nx, ny) in suspected:
                 out.append(d)
         return out
 
@@ -2399,6 +2452,18 @@ def smart_policy(obs, rng, use_lantern=True):
         # agent has to actually see the M before recognising it as
         # a guardian.
         guardian_dirs = set(obs.get("tomb_guardian_dirs") or [])
+        # Inferred guardians: cardinal-adjacent tile sits next to a
+        # DISCOVERED T. Every tomb spawns four cardinal guardians
+        # (dungeon.py setup_dungeons_and_tombs), so once the agent
+        # has SEEN a T they can rule out the four corner tiles
+        # WITHOUT having to step adjacent to each M first. User-
+        # requested: "create playtests logic that detects 'a tomb
+        # might be here so there could be a guardian in one of these
+        # adjacent rooms'". Folded into the same release-gate as
+        # the M-confirmed guardian_dirs -- once over-levelled, the
+        # agent will still engage the corner mobs for XP/gold.
+        inferred_guardian_dirs = set(obs.get("inferred_guardian_dirs") or [])
+        all_guardian_dirs = guardian_dirs | inferred_guardian_dirs
         # Release threshold: pc.level >= pc.floor + 3 (was +2). The
         # earlier +2 gate released for Lv4 elf on F2 (4 >= 4), but
         # the elite mummy at Lv4 hits fragile races (elf base HP 28)
@@ -2407,7 +2472,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # the trade.
         guardian_safe = p.get("level", 1) >= p.get("floor", 1) + 3
         blocked_guardian_dirs = (
-            guardian_dirs if guardian_dirs and not guardian_safe
+            all_guardian_dirs if all_guardian_dirs and not guardian_safe
             else set()
         )
 
@@ -2787,7 +2852,13 @@ def smart_policy(obs, rng, use_lantern=True):
         FEATURE_TILES = ("C", "G", "L", "O", "A", "P", "T", "N", "V")
         def _walkable(d):
             t = neighbors.get(d)
-            return t not in AVOID and t != "#"
+            if t in AVOID or t == "#":
+                return False
+            # Also exclude inferred/known guardian directions so the
+            # random fallback doesn't blunder into a tomb-adjacent M.
+            if d in blocked_guardian_dirs:
+                return False
+            return True
         def _fresh(d):
             t = neighbors.get(d)
             if t in FEATURE_TILES and visited.get(d):
