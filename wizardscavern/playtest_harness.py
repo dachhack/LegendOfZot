@@ -725,6 +725,9 @@ class PlaytestSession:
             "recent_step_set": self._recent_step_set(),
             "blocked_directions": sorted(self.blocked_directions),
             "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
+            # Cardinal dirs adjacent to a known tomb-guardian M tile.
+            # The policy refuses to step into these unless over-levelled.
+            "tomb_guardian_dirs": self._tomb_guardian_dirs_obs(),
             "tomb_suspected_here": pc.z in self.suspected_tomb_floors,
             "max_z_via_stairs": self.max_z_via_stairs,
             # Per-floor kill counter. Used by the grind-first gate so
@@ -1101,6 +1104,33 @@ class PlaytestSession:
                 continue
             rt = floor.grid[ny][nx].room_type
             out[d] = (pc.z, nx, ny, rt) in self.visited_features
+        return out
+
+    def _tomb_guardian_dirs_obs(self):
+        """Cardinal directions whose adjacent tile is an M room with the
+        `undead_guardian` property set -- one of the four tomb-adjacent
+        guardian spawns (one elite at floor+1, three regular undead at
+        floor). Restricted to DISCOVERED tiles so the agent doesn't get
+        god-mode info; the agent has to actually see the M tile (via
+        walking near or lantern-revealing) before recognising it as a
+        guardian. Used by the policy to refuse stepping into an elite
+        undead they're not over-levelled to handle.
+        """
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        out = []
+        for d, (dx, dy) in (("n", (0, -1)), ("s", (0, 1)),
+                            ("e", (1, 0)), ("w", (-1, 0))):
+            nx, ny = pc.x + dx, pc.y + dy
+            if not (0 <= nx < floor.cols and 0 <= ny < floor.rows):
+                continue
+            cell = floor.grid[ny][nx]
+            if self.fog_of_war and not cell.discovered:
+                continue
+            if cell.room_type != "M":
+                continue
+            if cell.properties.get("undead_guardian"):
+                out.append(d)
         return out
 
     def _bfs_paths(self):
@@ -1995,6 +2025,26 @@ def smart_policy(obs, rng, use_lantern=True):
         if (is_weak or early_floor) and not trapped_no_d:
             avoid_set.add("W")
         AVOID = avoid_set
+        # Targeted tomb-guardian avoid. Adjacent M tiles flagged as
+        # `undead_guardian` are the 4 tomb-adjacent spawns (one elite
+        # at floor+1, three regular undead at floor). The agent
+        # should NOT step into one of these unless over-levelled
+        # enough to win the trade. Release valve: pc.level >=
+        # pc.floor + 2 (so F7 needs Lv9). Surgical -- only blocks
+        # the specific cardinal dirs that lead to a guardian; other
+        # M tiles remain valid targets for normal grinding.
+        # User-flagged after Gloin Axebreaker (seed 2500 dwarf, F7
+        # L7) walked east into a tomb-adjacent M and died to an
+        # ELITE UNDEAD DRAGON LICH. tomb_guardian_dirs is exposed
+        # via obs and only populated for DISCOVERED tiles -- the
+        # agent has to actually see the M before recognising it as
+        # a guardian.
+        guardian_dirs = set(obs.get("tomb_guardian_dirs") or [])
+        guardian_safe = p.get("level", 1) >= p.get("floor", 1) + 2
+        blocked_guardian_dirs = (
+            guardian_dirs if guardian_dirs and not guardian_safe
+            else set()
+        )
 
         # Clear-before-descend gate. Beneficials = rooms that pay off
         # without forced combat (chest, garden, library, oracle, altar,
@@ -2206,6 +2256,7 @@ def smart_policy(obs, rng, use_lantern=True):
                 for tier in tiers
             ]
             tiers = [tier for tier in tiers if tier]
+            tiers = [tier for tier in tiers if tier]
         # Grind-first filter: when the agent is under-levelled and the
         # floor still has reachable monsters AND they haven't met the
         # minimum kill count yet, strip D from the tiers so the
@@ -2249,6 +2300,8 @@ def smart_policy(obs, rng, use_lantern=True):
             t = neighbors.get(d)
             if t in AVOID:
                 continue
+            if d in blocked_guardian_dirs:
+                continue
             if t in priority and not visited.get(d):
                 rank = priority.index(t)
                 if rank < best_rank:
@@ -2266,7 +2319,7 @@ def smart_policy(obs, rng, use_lantern=True):
         feature_paths = obs.get("feature_paths") or {}
         monster_path = obs.get("nearest_monster_path")
         recent_steps = set(obs.get("recent_step_set") or [])
-        blocked = set(obs.get("blocked_directions") or [])
+        blocked = set(obs.get("blocked_directions") or []) | blocked_guardian_dirs
 
         def _swap_if_backtrack(d):
             """Anti-backtrack + anti-wall guard: if `d` would re-step a
