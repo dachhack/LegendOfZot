@@ -194,7 +194,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Thorin of Belegost, the dwarf</h1>
-      <p class="muted">non-binary adventurer · seed 1234 · started 2026-05-16T00:53:57+00:00</p>
+      <p class="muted">non-binary adventurer · seed 1234 · started 2026-05-16T01:01:22+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -342,8 +342,12 @@ th { color: #94a3b8; font-weight: normal; }
 
     <!-- Journey -->
     <div class="tab-panel" id="panel-journey">
-      <h2>Descents</h2>
-      <ul><li>T126: arrived on Floor 2</li></ul>
+      <h2>Floor Transitions</h2>
+      <p class="muted">How each floor was left.
+        <span style="color:#94a3b8;">stairs</span> = chosen,
+        <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.</p>
+      <ul><li>T126: F1 ↓ F2 <span style='color:#94a3b8;'>(stairs down)</span></li></ul>
       <h2 style="margin-top:18px;">Movement Efficiency · overall waste 66%</h2>
       <p class="muted">First-visit moves discover new ground; revisits
         are moves that step onto a tile the agent has already stood on
@@ -352,22 +356,22 @@ th { color: #94a3b8; font-weight: normal; }
         <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
         <tr><td>Floor 1</td><td>67</td><td>3</td><td>3</td><td>64</td><td>96%</td></tr><tr><td>Floor 2</td><td>54</td><td>38</td><td>38</td><td>16</td><td>30%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>121</td><td>41</td><td>41</td><td>80</td><td>66%</td></tr>
       </table>
-      <h2 style="margin-top:18px;">Purchases (0)</h2>
-      <p class="muted">Status column: <span style="color:#4ade80;">equipped</span>
-        means the item was slotted at some point;
-        <span style="color:#fde68a;">in bag</span> means it's still
-        in the final inventory (not consumed);
-        <span style="color:#94a3b8;">used</span> means consumed or
-        dropped before death.</p>
-      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Count</th><th>Price</th><th>Status</th></tr>
-      <tr><td colspan='6'>no purchases</td></tr>
+      <h2 style="margin-top:18px;">Items (5 unique · 0 bought · 17 found)</h2>
+      <p class="muted">Aggregated by item name across the run. Status:
+        <span style="color:#4ade80;">equipped</span> at some point,
+        <span style="color:#fde68a;">in bag</span> still held at death/end,
+        <span style="color:#fbbf24;">partial</span> some held / some used,
+        <span style="color:#94a3b8;">used</span> fully consumed.</p>
+      <table>
+        <tr><th></th><th>Item</th><th>Found</th><th>Bought</th><th>In bag</th><th>Used</th><th>Status</th></tr>
+        <tr><td class='sprite-cell'></td><td>sparkling treasure</td><td>4</td><td>0</td><td>0</td><td>4</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>grimoire</td><td>4</td><td>0</td><td>0</td><td>4</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>passage leading down</td><td>3</td><td>0</td><td>0</td><td>3</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>Fire Root</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Stone Flower</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr>
       </table>
-      <h2 style="margin-top:18px;">Items Found (17)</h2>
-      <p class="muted">Gear / scrolls / treasures picked up off the
-        map (monster drops, chests, gardens). Same status colour
-        scheme as purchases.</p>
-      <table><tr><th>Turn</th><th>Floor</th><th>Item</th><th>Source</th><th>Status</th></tr>
-      <tr><td>T126</td><td>F2</td><td>passage leading down</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T128</td><td>F2</td><td>passage leading down</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T132</td><td>F2</td><td>passage leading down</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T183</td><td>F2</td><td>sparkling treasure</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T184</td><td>F2</td><td>sparkling treasure</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T188</td><td>F2</td><td>sparkling treasure</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T192</td><td>F2</td><td>sparkling treasure</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T195</td><td>F2</td><td>grimoire</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T196</td><td>F2</td><td>grimoire</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T215</td><td>F2</td><td>grimoire</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T216</td><td>F2</td><td>grimoire</td><td class='muted'>chest</td><td style='color:#94a3b8;'>used</td></tr><tr><td>T219</td><td>F2</td><td>Fire Root</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T219</td><td>F2</td><td>Stone Flower</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T220</td><td>F2</td><td>Fire Root</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T220</td><td>F2</td><td>Stone Flower</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T224</td><td>F2</td><td>Fire Root</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr><tr><td>T224</td><td>F2</td><td>Stone Flower</td><td class='muted'>garden</td><td style='color:#fde68a;'>in bag</td></tr>
+      <h2 style="margin-top:18px;">Vendor Purchases by Floor (0 vendors)</h2>
+      <p class="muted">Grouped by the floor's vendor. Category breakdown shows
+        what was bought + how much gold went toward each category.</p>
+      <table>
+        <tr><th>Floor</th><th>Items</th><th>Gold spent</th><th>By category</th></tr>
+        <tr><td colspan='4'>no vendor purchases</td></tr>
       </table>
     </div>
   </div>
