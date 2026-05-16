@@ -509,7 +509,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             ))
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
-            value=10, level=0, nutrition=50, count=8,
+            value=10, level=0, nutrition=50, count=12,
         ))
         # User-requested balance pass: Iron Rations in starter pack
         # to extend the early-floor food window (70 nutrition each
