@@ -2489,18 +2489,23 @@ def generate_vendor_inventory(floor_level, room):
         upgrade_scroll = Scroll("Scroll of Upgrade", "A mystical scroll of enhancement.", "Upgrade items to +3 maximum.", 150, 1, 'upgrade')
     inventory.append(upgrade_scroll)
 
-    # Always stock some food items
+    # Always stock some food items. Tiered by floor:
+    #   F1+: Rations + Iron Rations (user-requested -- was F3+;
+    #        early-floor agents need the heavy-nutrition option).
+    #   F2+: Salted Jerky.
+    #   F4+: Cooking Kit (was F3+; bumped to F4 per user spec --
+    #        floors 1-3 should be tight enough that hunger is a
+    #        real constraint without the cook-to-stretch lever).
     rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=1)
     inventory.append(_create_item_copy(rations))
+    iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
+    inventory.append(_create_item_copy(iron_rations))
     if floor_level >= 2:
         jerky = Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1)
         inventory.append(_create_item_copy(jerky))
-    if floor_level >= 3:
-        # Cooking Kit available from floor 3+
+    if floor_level >= 4:
         cooking_kit = CookingKit()
         inventory.append(cooking_kit)
-        iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
-        inventory.append(_create_item_copy(iron_rations))
 
     # Curing Kit: stocked on the first vendor found on a specific random floor (1-10).
     # Safety net: if player has reached floor 10 without the kit being stocked yet,
@@ -3097,8 +3102,11 @@ def drop_monster_meat(monster, player_character, fire_killed=False):
     info = get_monster_meat_info(monster.name)
     if info is None:
         return  # Not edible
-    # 35% chance to drop meat
-    if random.random() > 0.35:
+    # 55% chance to drop meat (was 35% -- user-requested balance pass).
+    # Combined with the Cooking Kit being F1+ available, this gives
+    # agents who clear floors a meaningful steady food source so the
+    # food clock doesn't always end the run before depth does.
+    if random.random() > 0.55:
         return
     cut, descriptor, nutrition = info
     raw_name = f"Raw {monster.name} {cut.capitalize()}"

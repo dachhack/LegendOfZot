@@ -332,6 +332,8 @@ def _item_category(item):
         return "lantern_fuel"
     if cls == "Trophy":
         return "trophy"
+    if cls == "CookingKit":
+        return "cooking_kit"
     return "other"
 
 
@@ -509,6 +511,16 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
             "Rations", "Standard travel rations.",
             value=10, level=0, nutrition=50, count=8,
         ))
+        # User-requested balance pass: Iron Rations in starter pack
+        # to extend the early-floor food window (70 nutrition each
+        # vs 50 for plain Rations). Cooking Kit deliberately NOT in
+        # starter -- agents have to reach a F4+ vendor to earn it,
+        # so cooking is a mid-game depth bonus, not a starter perk.
+        pc.inventory.add_item_quiet(_Food(
+            "Iron Rations",
+            "Military-grade rations. Tasteless but highly nutritious.",
+            value=30, level=3, nutrition=70, count=2,
+        ))
         for _ in range(4):
             pc.inventory.add_item_quiet(Potion(
                 "Minor Healing Potion",
@@ -516,7 +528,6 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
                 value=30, level=0,
                 potion_type="healing", effect_magnitude=30,
             ))
-        # Spent on the starting shop: 4*30 + 10 + 50 + 30 + 0 = 210g.
         pc.gold = 500 - 210
     if spells:
         spell_index = {s.name.lower(): s for s in SPELL_TEMPLATES}
@@ -2157,6 +2168,22 @@ def smart_policy(obs, rng, use_lantern=True):
             return "i"
         if urgent_meat is not None:
             return "i"
+        # Cooking gate: when the agent holds a Cooking Kit AND has raw
+        # meat AND isn't urgently hungry (let urgent_meat fire first),
+        # open inventory to use the kit. Cooking extends rot timer
+        # (raw 30 -> cooked 100 moves) and bumps nutrition, so a kill
+        # drop converts to a 50-70 nutrition food item the agent can
+        # eat anywhere on the floor instead of having to gnaw raw
+        # meat before it spoils. The inventory branch handles the
+        # actual `u<cooking_slot>` selection.
+        has_cooking_kit = any(i["category"] == "cooking_kit" for i in inv)
+        has_raw_meat = any(
+            i["category"] == "food" and i.get("rot_timer") is not None
+            and not i.get("is_cooked")
+            for i in inv
+        )
+        if has_cooking_kit and has_raw_meat and hunger > 50:
+            return "i"
         # broken_weapon / broken_armor / is_weak are hoisted above.
         # Open inventory to swap when current gear is broken AND we
         # have a working spare, OR when an unequipped item beats what's
@@ -2966,6 +2993,24 @@ def smart_policy(obs, rng, use_lantern=True):
         if proposed is None and urgent_meat is not None:
             # Don't wait until starving -- consume the kill drop now.
             proposed = f"eat{urgent_meat}"
+        # Cook raw meat with the Cooking Kit when present + not
+        # urgently hungry. CookingKit.use() cooks ALL raw meat in
+        # inventory in a single action, so this fires once per
+        # batch of kills. Slot indexes off the working-items
+        # filter (same as scrolls/potions): find the CookingKit's
+        # slot and send u<N>.
+        if proposed is None and hunger > 50:
+            has_raw_meat_iv = any(
+                e["category"] == "food"
+                and e.get("rot_timer") is not None
+                and not e.get("is_cooked")
+                for e in inv
+            )
+            if has_raw_meat_iv:
+                for entry in inv:
+                    if entry["category"] == "cooking_kit":
+                        proposed = f"u{entry['slot']}"
+                        break
         if (proposed is None
                 and equipped.get("weapon", {})
                 and equipped["weapon"].get("is_broken")
