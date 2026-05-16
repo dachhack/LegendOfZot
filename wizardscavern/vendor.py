@@ -274,11 +274,20 @@ class Vendor:
                 player_has_lantern = True
                 break
 
-            # Add lantern fuel if character has lantern. If not, add lantern
+            # Lantern + fuel: every vendor now stocks 2-4 fuel
+            # canisters (was 1), each restoring 20 fuel (was 10).
+            # Aggressive lantern policy chews ~1 fuel per 3 moves,
+            # so a deep run needs ~80-100 fires per floor; 4
+            # canisters = 80 fires per vendor visit ensures the
+            # agent rarely sees fuel < 15 mid-floor.
             if not player_has_lantern:
-              self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=10, light_radius=7, value=30, level=0))
-            else:
-              self.inventory.add_item_quiet(LanternFuel("Lantern Fuel", "A small flask of oil for your lantern.", value=5, level=0, fuel_restore_amount=10))
+                self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=20, light_radius=7, value=30, level=0))
+            fuel_count = random.randint(2, 4)
+            for _ in range(fuel_count):
+                self.inventory.add_item_quiet(
+                    LanternFuel("Lantern Fuel", "A small flask of oil for your lantern.",
+                                value=5, level=0, fuel_restore_amount=20)
+                )
 
 
 # ============================================================================

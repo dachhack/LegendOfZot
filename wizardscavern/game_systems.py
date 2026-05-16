@@ -3232,7 +3232,11 @@ def process_chest_action(player_character, my_tower, cmd):
 
             elif selected_item_np == 'lantern_fuel':
                 # NEW: Lantern Fuel drop
-                fuel_count = random.randint(1, 3)  # 1-3 fuel items
+                fuel_count = random.randint(2, 4)  # 2-4 fuel items
+                # Restore amount bumped 10 -> 20 per canister: with
+                # the aggressive lantern policy (every fog-adjacent
+                # step), 10 fuel per canister was draining mid-run.
+                # 20 doubles the depth of each chest-found fuel.
 
                 add_log(f"{COLOR_CYAN}{COLOR_RESET}")
                 add_log(f"{COLOR_CYAN}You found {fuel_count} Lantern Fuel!{COLOR_RESET}")
@@ -3244,7 +3248,7 @@ def process_chest_action(player_character, my_tower, cmd):
                         description="A small flask of oil for your lantern.",
                         value=5,
                         level=0,
-                        fuel_restore_amount=10
+                        fuel_restore_amount=20,
                     )
                     player_character.inventory.add_item(fuel_item)
 

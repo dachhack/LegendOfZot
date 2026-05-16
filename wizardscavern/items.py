@@ -2664,7 +2664,7 @@ class Lantern(Item):
                 return False # Not consumed
 
 class LanternFuel(Item):
-    def __init__(self, name="Lantern Fuel", description="A small flask of oil for your lantern.", value=5, level=0, fuel_restore_amount=10, count=1):
+    def __init__(self, name="Lantern Fuel", description="A small flask of oil for your lantern.", value=5, level=0, fuel_restore_amount=20, count=1):
         super().__init__(name, description, value, level)
         self.fuel_restore_amount = fuel_restore_amount
         self.count = count

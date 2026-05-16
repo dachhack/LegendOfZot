@@ -454,7 +454,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         # inventory first, then equips by reference -- so equipped
         # gear ALSO appears in inventory.items, which is what lets the
         # vendor repair handler at vendor.py:733-749 see it).
-        from .items import Lantern as _Lantern, Food as _Food
+        from .items import Lantern as _Lantern, Food as _Food, LanternFuel as _LF
         # Race-flavoured starter weapon, mirroring vendor.py:93+ now
         # that the starting shop gives dwarves a Battleaxe.
         if race == "dwarf":
@@ -477,8 +477,17 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         pc.equipped_armor = leather
         pc.inventory.add_item_quiet(_Lantern(
             "Lantern", "Provides continuous light with fuel.",
-            fuel_amount=50, light_radius=7, value=30, level=0,
+            fuel_amount=80, light_radius=7, value=30, level=0,
         ))
+        # Starter pack also includes 2 fuel canisters (40 fires).
+        # Combined with the lantern's 80 base = 120 fires before
+        # the agent needs to hit a vendor for more, enough to
+        # explore F1-F3 thoroughly even with aggressive fog reveal.
+        for _ in range(2):
+            pc.inventory.add_item_quiet(_LF(
+                "Lantern Fuel", "A small flask of oil for your lantern.",
+                value=5, level=0, fuel_restore_amount=20,
+            ))
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
             value=10, level=0, nutrition=40, count=5,
