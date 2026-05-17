@@ -2869,8 +2869,52 @@ def smart_policy(obs, rng, use_lantern=True):
         # is visited it leaves feature_paths and the gate releases.
         nearest = obs.get("nearest_features") or {}
         feature_paths_check = obs.get("feature_paths") or {}
-        unvisited_beneficials_exist = any(
-            feature_paths_check.get(t) for t in BENEFICIAL_SAFE + ("V",)
+        # Build 326 lever 1: V is split out from BENEFICIAL_SAFE so the
+        # floor_stuck override drops chests/gardens/altars without
+        # dropping V. Build-325 diagnostic showed V visit rate fell from
+        # 70.6% (F2) to 13.3% (F7) because the floor_stuck escape valve
+        # was releasing V along with everything else once combat got
+        # long. V is the highest-value tile (rations+scrolls+heal+fuel
+        # in one stop) so it deserves a sticker gate; only the
+        # 2x-stuck super-stuck escape releases V.
+        unvisited_safe_exist = any(
+            feature_paths_check.get(t) for t in BENEFICIAL_SAFE
+        )
+        unvisited_vendor_exist = bool(feature_paths_check.get("V"))
+        # Build 326 lever 2: chest-open-rate gate. If chests exist on
+        # this floor but the agent has opened < 60% AND coverage < 90%,
+        # treat the floor as not-cleared (probably undiscovered chests
+        # in fog). Build-325 diag: 41.5% mean open rate, 15.7% of
+        # chest-floors had ZERO chests opened. Coverage < 90% prevents
+        # softlock on chests truly unreachable behind walls -- once we
+        # know we've seen most of the floor, accept the loss.
+        cur_floor_diag = (obs.get("floor_diag") or {}).get(
+            str(p.get("floor", 1)), {}
+        )
+        chests_total = cur_floor_diag.get("chests_existing", 0) or 0
+        chests_open = cur_floor_diag.get("chests_opened", 0) or 0
+        coverage_for_chest_gate = (obs.get("tile_coverage") or {}).get("pct", 0)
+        chest_gate_blocks = False
+        if chests_total > 0:
+            chest_open_rate = chests_open / chests_total
+            if chest_open_rate < 0.6 and coverage_for_chest_gate < 90:
+                chest_gate_blocks = True
+        # Stuck-on-floor override: drop the clear-before-descend gate
+        # once turns_on_floor exceeds the configured threshold. Pulls
+        # the agent off floor 1 when an unreachable beneficial (behind
+        # a wall) would otherwise loop forever. Build 316 tried
+        # depth-aware 200T/300T and regressed badly; flat 300T was the
+        # stable default. CMA-ES may move this higher (deeper sweeps)
+        # or lower (faster descent) depending on fitness.
+        too_long_on_floor = (obs.get("turns_on_floor") or 0) > _cfg.floor_stuck_turns
+        super_stuck = (obs.get("turns_on_floor") or 0) > _cfg.floor_stuck_turns * 2
+        if too_long_on_floor:
+            unvisited_safe_exist = False
+            chest_gate_blocks = False
+        if super_stuck:
+            unvisited_vendor_exist = False
+        unvisited_beneficials_exist = (
+            unvisited_safe_exist or unvisited_vendor_exist or chest_gate_blocks
         )
         # Boon-exhaustion gate (replaces the old Lv>=3 character-strength
         # gate). A real player squeezes every safe boon out of a floor
@@ -2885,16 +2929,6 @@ def smart_policy(obs, rng, use_lantern=True):
             not is_weak
             and (not unvisited_beneficials_exist or resources_pressing)
         )
-        # Stuck-on-floor override: drop the clear-before-descend gate
-        # once turns_on_floor exceeds the configured threshold. Pulls
-        # the agent off floor 1 when an unreachable beneficial (behind
-        # a wall) would otherwise loop forever. Build 316 tried
-        # depth-aware 200T/300T and regressed badly; flat 300T was the
-        # stable default. CMA-ES may move this higher (deeper sweeps)
-        # or lower (faster descent) depending on fitness.
-        too_long_on_floor = (obs.get("turns_on_floor") or 0) > _cfg.floor_stuck_turns
-        if too_long_on_floor:
-            unvisited_beneficials_exist = False
 
         # Keyed dungeons get exposed via obs.keyed_dungeon_target,
         # which filters out looted dungeons -- referenced below in the

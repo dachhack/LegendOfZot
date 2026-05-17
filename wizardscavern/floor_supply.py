@@ -34,12 +34,17 @@ HEALING_POTIONS_PER_FLOOR = 3
 LANTERN_FUEL_PER_FLOOR = 3
 
 # Split between vendor inventory (always there when vendor stocks) and
-# chest-bonus queue (consumed on chest opens).
+# chest-bonus queue (consumed on chest opens). Build-325 diagnostic
+# showed 6/9 chest-queue items left undelivered per floor (chest open
+# rate 41.5%), while vendor visits buy nearly everything stocked
+# (rations 99%, scrolls 83%). Shift 1 ration + 1 heal + 1 fuel from
+# chest queue to vendor supplement: redirects budget toward the
+# higher-throughput delivery channel. Chest queue drops 9 -> 6 items.
 VENDOR_SHARE = {
     "upgrade_scrolls": 1,
-    "rations": 3,  # ration stack count, single item
-    "healing_potions": 1,
-    "lantern_fuel": 1,
+    "rations": 4,  # ration stack count, single item
+    "healing_potions": 2,
+    "lantern_fuel": 2,
 }
 
 
