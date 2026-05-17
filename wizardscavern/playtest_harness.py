@@ -507,19 +507,23 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
                 "Lantern Fuel", "A small flask of oil for your lantern.",
                 value=5, level=0, fuel_restore_amount=20,
             ))
+        # Build 329: bumped Rations 12 -> 18 and Iron Rations 2 -> 3
+        # (+50% starter nutrition, 740 -> 1110). The policy's
+        # resources_pressing flag fires at hunger < 48 and pulls the
+        # agent out of exploration mode into "descend / hunt"; the
+        # b328 grid showed 33% of deaths were starvation and the
+        # agent was rushing past F1-F3 chests because food was
+        # pressing too early. More starter food = more room to
+        # explore early floors thoroughly before the food clock
+        # forces transition.
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
-            value=10, level=0, nutrition=50, count=12,
+            value=10, level=0, nutrition=50, count=18,
         ))
-        # User-requested balance pass: Iron Rations in starter pack
-        # to extend the early-floor food window (70 nutrition each
-        # vs 50 for plain Rations). Cooking Kit deliberately NOT in
-        # starter -- agents have to reach a F4+ vendor to earn it,
-        # so cooking is a mid-game depth bonus, not a starter perk.
         pc.inventory.add_item_quiet(_Food(
             "Iron Rations",
             "Military-grade rations. Tasteless but highly nutritious.",
-            value=30, level=3, nutrition=70, count=2,
+            value=30, level=3, nutrition=70, count=3,
         ))
         for _ in range(6):
             pc.inventory.add_item_quiet(Potion(
