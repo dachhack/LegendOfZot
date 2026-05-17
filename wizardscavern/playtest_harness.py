@@ -2869,44 +2869,22 @@ def smart_policy(obs, rng, use_lantern=True):
         # is visited it leaves feature_paths and the gate releases.
         nearest = obs.get("nearest_features") or {}
         feature_paths_check = obs.get("feature_paths") or {}
-        # Build 326 lever 1: V is split out from BENEFICIAL_SAFE so the
-        # floor_stuck override drops chests/gardens/altars without
-        # dropping V. Build-325 diagnostic showed V visit rate fell from
-        # 70.6% (F2) to 13.3% (F7) because the floor_stuck escape valve
-        # was releasing V along with everything else once combat got
-        # long. V is the highest-value tile (rations+scrolls+heal+fuel
-        # in one stop) so it deserves a stickier gate; only the
-        # 2x-stuck super-stuck escape releases V.
-        # Build 327 (L1 v2): V-protection from floor_stuck only
-        # activates on F4+. Build-326 grid showed F2 V-visit collapsed
-        # 70.6 -> 46.0% when we kept V locked through floor_stuck on
-        # shallow floors -- the agent was healthy enough to push past
-        # without the vendor and the lock just trapped it. Original F7
-        # problem was deep-floor, so target the fix there.
-        cur_floor = p.get("floor", 1)
-        v_protected_from_stuck = cur_floor >= 4
-        unvisited_safe_exist = any(
-            feature_paths_check.get(t) for t in BENEFICIAL_SAFE
+        unvisited_beneficials_exist = any(
+            feature_paths_check.get(t) for t in BENEFICIAL_SAFE + ("V",)
         )
-        unvisited_vendor_exist = bool(feature_paths_check.get("V"))
-        # Build 326 lever 2: chest-open-rate gate. If chests exist on
-        # this floor but the agent has opened < 60% AND coverage < 90%,
-        # treat the floor as not-cleared (probably undiscovered chests
-        # in fog). Build-325 diag: 41.5% mean open rate, 15.7% of
-        # chest-floors had ZERO chests opened. Coverage < 90% prevents
-        # softlock on chests truly unreachable behind walls -- once we
-        # know we've seen most of the floor, accept the loss.
-        cur_floor_diag = (obs.get("floor_diag") or {}).get(
-            str(cur_floor), {}
+        # Boon-exhaustion gate (replaces the old Lv>=3 character-strength
+        # gate). A real player squeezes every safe boon out of a floor
+        # before committing to monster clearing -- chests, gardens,
+        # altars, pools, libraries, oracles. Once those are gone (or
+        # resources are pressing so we can't afford more weaving) the
+        # agent shifts into efficient-clear mode: hunt M tiles for meat
+        # + XP + gold, then descend. Requires we're not is_weak so
+        # broken-gear / low-HP agents recover first instead of picking
+        # fights they can't win.
+        ready_to_clear = (
+            not is_weak
+            and (not unvisited_beneficials_exist or resources_pressing)
         )
-        chests_total = cur_floor_diag.get("chests_existing", 0) or 0
-        chests_open = cur_floor_diag.get("chests_opened", 0) or 0
-        coverage_for_chest_gate = (obs.get("tile_coverage") or {}).get("pct", 0)
-        chest_gate_blocks = False
-        if chests_total > 0:
-            chest_open_rate = chests_open / chests_total
-            if chest_open_rate < 0.6 and coverage_for_chest_gate < 90:
-                chest_gate_blocks = True
         # Stuck-on-floor override: drop the clear-before-descend gate
         # once turns_on_floor exceeds the configured threshold. Pulls
         # the agent off floor 1 when an unreachable beneficial (behind
@@ -2915,28 +2893,8 @@ def smart_policy(obs, rng, use_lantern=True):
         # stable default. CMA-ES may move this higher (deeper sweeps)
         # or lower (faster descent) depending on fitness.
         too_long_on_floor = (obs.get("turns_on_floor") or 0) > _cfg.floor_stuck_turns
-        super_stuck = (obs.get("turns_on_floor") or 0) > _cfg.floor_stuck_turns * 2
         if too_long_on_floor:
-            unvisited_safe_exist = False
-            # Build 327 (L2 v2): chest gate is only released by
-            # floor_stuck when coverage has reached >= 70%. Build-326
-            # grid showed chest-open mean REGRESSED 41.5 -> 38.8%
-            # because floor_stuck (300T default) was preempting the
-            # chest gate before the agent finished sweeping. Hold the
-            # gate until we've actually seen most of the floor; below
-            # 70% coverage there are probably chests still in fog.
-            if coverage_for_chest_gate >= 70:
-                chest_gate_blocks = False
-            # V protection: shallow floors (F1-F3) get the old release
-            # so the F2 over-grip from build-326 doesn't reappear.
-            # F4+ keeps V locked until super_stuck fires.
-            if not v_protected_from_stuck:
-                unvisited_vendor_exist = False
-        if super_stuck:
-            unvisited_vendor_exist = False
-        unvisited_beneficials_exist = (
-            unvisited_safe_exist or unvisited_vendor_exist or chest_gate_blocks
-        )
+            unvisited_beneficials_exist = False
         # Boon-exhaustion gate (replaces the old Lv>=3 character-strength
         # gate). A real player squeezes every safe boon out of a floor
         # before committing to monster clearing -- chests, gardens,
