@@ -2885,15 +2885,19 @@ def smart_policy(obs, rng, use_lantern=True):
             # Resource pressure with D STILL in fog. Build-318 verified
             # the d_reachable-gated override above missed the worst
             # F1 dawdle runs (646-1048 turns on F1) because D was in
-            # fog the whole time. Push hard for unseen fog: drop M
-            # (more hunting deepens the hole) and beneficials we
-            # can't reach, prioritise V (last-chance restock) then
-            # BENEFICIAL_SAFE which the wayfinder's
-            # nearest-unseen-tile fallback walks toward. Doesn't
-            # help a genuinely region-split floor (W needed), but
-            # buys the agent more frontier exploration before the
-            # food clock runs out.
-            tiers = [("V",), tuple(BENEFICIAL_SAFE), ("D",)]
+            # fog the whole time. Build-319 added [V, SAFE, D]
+            # tiers; fog-walker fallback only fixed 22% / 18% of F1
+            # cases because region-split floors leave the staircase
+            # behind walls the BFS can't navigate around.
+            # Build-320 adds W (warp) ahead of D in the fallback
+            # tiers. trapped_no_d already wires W when turns_since_new
+            # >= 100, but the dawdle case keeps revealing one new
+            # tile every 50-90 turns (just under that threshold) so
+            # the warp branch never opens. Wiring W here lets the
+            # agent take the random-teleport gamble when food is
+            # genuinely about to run out -- better than starving on
+            # F1 with a known W tile two rooms over.
+            tiers = [("V",), tuple(BENEFICIAL_SAFE), ("W",), ("D",)]
         elif high_coverage_descend:
             # Floor mostly swept + stairs in sight -- go.
             tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
