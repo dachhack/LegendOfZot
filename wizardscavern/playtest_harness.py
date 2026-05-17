@@ -2875,8 +2875,16 @@ def smart_policy(obs, rng, use_lantern=True):
         # 70.6% (F2) to 13.3% (F7) because the floor_stuck escape valve
         # was releasing V along with everything else once combat got
         # long. V is the highest-value tile (rations+scrolls+heal+fuel
-        # in one stop) so it deserves a sticker gate; only the
+        # in one stop) so it deserves a stickier gate; only the
         # 2x-stuck super-stuck escape releases V.
+        # Build 327 (L1 v2): V-protection from floor_stuck only
+        # activates on F4+. Build-326 grid showed F2 V-visit collapsed
+        # 70.6 -> 46.0% when we kept V locked through floor_stuck on
+        # shallow floors -- the agent was healthy enough to push past
+        # without the vendor and the lock just trapped it. Original F7
+        # problem was deep-floor, so target the fix there.
+        cur_floor = p.get("floor", 1)
+        v_protected_from_stuck = cur_floor >= 4
         unvisited_safe_exist = any(
             feature_paths_check.get(t) for t in BENEFICIAL_SAFE
         )
@@ -2889,7 +2897,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # softlock on chests truly unreachable behind walls -- once we
         # know we've seen most of the floor, accept the loss.
         cur_floor_diag = (obs.get("floor_diag") or {}).get(
-            str(p.get("floor", 1)), {}
+            str(cur_floor), {}
         )
         chests_total = cur_floor_diag.get("chests_existing", 0) or 0
         chests_open = cur_floor_diag.get("chests_opened", 0) or 0
@@ -2910,7 +2918,20 @@ def smart_policy(obs, rng, use_lantern=True):
         super_stuck = (obs.get("turns_on_floor") or 0) > _cfg.floor_stuck_turns * 2
         if too_long_on_floor:
             unvisited_safe_exist = False
-            chest_gate_blocks = False
+            # Build 327 (L2 v2): chest gate is only released by
+            # floor_stuck when coverage has reached >= 70%. Build-326
+            # grid showed chest-open mean REGRESSED 41.5 -> 38.8%
+            # because floor_stuck (300T default) was preempting the
+            # chest gate before the agent finished sweeping. Hold the
+            # gate until we've actually seen most of the floor; below
+            # 70% coverage there are probably chests still in fog.
+            if coverage_for_chest_gate >= 70:
+                chest_gate_blocks = False
+            # V protection: shallow floors (F1-F3) get the old release
+            # so the F2 over-grip from build-326 doesn't reappear.
+            # F4+ keeps V locked until super_stuck fires.
+            if not v_protected_from_stuck:
+                unvisited_vendor_exist = False
         if super_stuck:
             unvisited_vendor_exist = False
         unvisited_beneficials_exist = (
