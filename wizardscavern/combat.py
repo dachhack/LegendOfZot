@@ -460,15 +460,15 @@ def process_combat_action(player_character, my_tower, cmd):
             potion_display = get_item_display_name(potion)
             add_log(f"{COLOR_CYAN}The {gs.active_monster.name} dropped {get_article(potion_display)} {potion_display}!{COLOR_RESET}")
 
-        # Food drop chance: graduated curve to attack F1-F5 starvation.
-        # Build-315 forensics: 58% of deaths starvation, 62% died with
-        # ZERO food in bag, dominantly on F2-F5 after starter rations
-        # run dry. Curve: F1=22%, F5=15%, F10+=10% (the prior flat
-        # rate). This targets the early-game cliff without inflating
-        # deep-floor food economy where vendors take over.
-        z = player_character.z
-        food_drop_chance = max(0.10, 0.22 - z * 0.015)
-        if random.random() < food_drop_chance:
+        # 10% chance to drop food (rations etc from monster packs/pouches).
+        # Build-316 tried a graduated curve (22% on F1 -> 10% on F10+) to
+        # attack F1-F5 starvation, but the build-316 verification grid
+        # showed it BACKFIRED -- the smart policy "felt rich" on F1, kept
+        # grinding for kills, ate through the stack and died shallower
+        # (median F4 -> F3, starvation 58% -> 67%). Real fix is the
+        # agent's descent gate, not the food economy. Reverted to flat
+        # 10% pending a smart-policy "stay-and-farm" fix.
+        if random.random() < 0.10:
             food = main.get_random_food(player_character.z)
             player_character.inventory.add_item(food)
             add_log(f"{COLOR_CYAN}You found some {food.name} among the {gs.active_monster.name}'s possessions!{COLOR_RESET}")
