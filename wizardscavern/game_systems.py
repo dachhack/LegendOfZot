@@ -3152,16 +3152,12 @@ def process_chest_action(player_character, my_tower, cmd):
             base_probs = [0.35, 0.08, 0.07, 0.05, 0.05, 0.20, 0.20]
 
             # Add upgrade scroll with floor-scaled probability.
-            # Bumped to give early floors a real chance: the prior
-            # gate (floor_level >= 5) meant F1-F4 chests NEVER
-            # dropped upgrades, and since playtest agents typically
-            # die on F1-F5 the chest path almost never contributed.
-            # New curve: F1-F4 = 5%, F5-9 = 8-16%, F10-14 = 17-25%,
-            # F15+ = 26-30% (capped at 30%).
-            if floor_level >= 5:
-                upgrade_scroll_chance = min(0.30, 0.08 + (floor_level - 5) * 0.02)
-            else:
-                upgrade_scroll_chance = 0.05
+            # Smooth curve (no F4->F5 cliff): build-315 playtest grid
+            # had 11/24 runs end with zero upgrade scrolls because the
+            # 0.05 floor through F4 was too thin and agents rarely
+            # survive past F5 to hit the bump. New curve linearises:
+            # F1=7.5%, F4=15%, F10=30% (capped).
+            upgrade_scroll_chance = min(0.30, 0.05 + floor_level * 0.025)
             base_items.append('upgrade_scroll')
             base_probs.append(upgrade_scroll_chance)
             # Normalize probabilities to sum to 1
@@ -3315,7 +3311,25 @@ def process_chest_action(player_character, my_tower, cmd):
             elif selected_item_np == 'upgrade_scroll':
                 # Upgrade scroll drop - tier based on floor level
                 floor_level = player_character.z
-                if floor_level >= 25:
+                if floor_level >= 40:
+                    scroll_name = "Scroll of Eternal Upgrade"
+                    scroll_desc = "A scroll from beyond time itself."
+                    scroll_effect = "Upgrade items to +35 maximum."
+                    scroll_value = 6000
+                    scroll_level = 40
+                elif floor_level >= 35:
+                    scroll_name = "Scroll of Cosmic Upgrade"
+                    scroll_desc = "A scroll woven from starlight."
+                    scroll_effect = "Upgrade items to +30 maximum."
+                    scroll_value = 3500
+                    scroll_level = 35
+                elif floor_level >= 30:
+                    scroll_name = "Scroll of Celestial Upgrade"
+                    scroll_desc = "A scroll that hums with celestial power."
+                    scroll_effect = "Upgrade items to +25 maximum."
+                    scroll_value = 2000
+                    scroll_level = 30
+                elif floor_level >= 25:
                     scroll_name = "Scroll of Divine Upgrade"
                     scroll_desc = "The ultimate scroll of enhancement, forged in celestial fire."
                     scroll_effect = "Upgrade items to +20 maximum."

@@ -983,19 +983,25 @@ POTION_TEMPLATES = [
     Potion(name="War Elixir", description="Doubles your combat prowess briefly.", value=300, level=12, potion_type='berserker', effect_magnitude=50, duration=6),
     Potion(name="Warlord Elixir", description="Fight like a god of war.", value=600, level=18, potion_type='berserker', effect_magnitude=80, duration=6),
 
-    # Permanent stat elixirs - rare, expensive, one-time boosts
-    Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=15, potion_type='permanent_strength', effect_magnitude=2),
-    Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
-    Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=15, potion_type='permanent_intelligence', effect_magnitude=2),
-    Potion(name="Greater Elixir of Might", description="Permanently increases STR by 4.", value=2000, level=25, potion_type='permanent_strength', effect_magnitude=4),
-    Potion(name="Greater Elixir of Grace", description="Permanently increases DEX by 4.", value=2000, level=25, potion_type='permanent_dexterity', effect_magnitude=4),
-    Potion(name="Greater Elixir of Brilliance", description="Permanently increases INT by 4.", value=2000, level=25, potion_type='permanent_intelligence', effect_magnitude=4),
-    Potion(name="Supreme Elixir of Might", description="Permanently increases STR by 6.", value=5000, level=35, potion_type='permanent_strength', effect_magnitude=6),
-    Potion(name="Supreme Elixir of Grace", description="Permanently increases DEX by 6.", value=5000, level=35, potion_type='permanent_dexterity', effect_magnitude=6),
-    Potion(name="Supreme Elixir of Brilliance", description="Permanently increases INT by 6.", value=5000, level=35, potion_type='permanent_intelligence', effect_magnitude=6),
-    Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=1200, level=15, potion_type='permanent_health', effect_magnitude=20),
-    Potion(name="Greater Elixir of Vitality", description="Permanently increases max HP by 40.", value=3000, level=25, potion_type='permanent_health', effect_magnitude=40),
-    Potion(name="Supreme Elixir of Vitality", description="Permanently increases max HP by 75.", value=6000, level=35, potion_type='permanent_health', effect_magnitude=75),
+    # Permanent stat elixirs - rare, expensive, one-time boosts.
+    # Build-315 playtest grid found 0/24 runs ever saw a permanent
+    # elixir because the level-15 minimum gated them past where
+    # agents survive. Floors lowered to 8/16/25 so the basic tier
+    # enters the F6+ chest pool (gate is level <= floor+2) and the
+    # F12+ magic shop. Values unchanged -- they remain aspirational
+    # gold sinks; only reachability improves.
+    Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=8, potion_type='permanent_strength', effect_magnitude=2),
+    Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=8, potion_type='permanent_dexterity', effect_magnitude=2),
+    Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=8, potion_type='permanent_intelligence', effect_magnitude=2),
+    Potion(name="Greater Elixir of Might", description="Permanently increases STR by 4.", value=2000, level=16, potion_type='permanent_strength', effect_magnitude=4),
+    Potion(name="Greater Elixir of Grace", description="Permanently increases DEX by 4.", value=2000, level=16, potion_type='permanent_dexterity', effect_magnitude=4),
+    Potion(name="Greater Elixir of Brilliance", description="Permanently increases INT by 4.", value=2000, level=16, potion_type='permanent_intelligence', effect_magnitude=4),
+    Potion(name="Supreme Elixir of Might", description="Permanently increases STR by 6.", value=5000, level=25, potion_type='permanent_strength', effect_magnitude=6),
+    Potion(name="Supreme Elixir of Grace", description="Permanently increases DEX by 6.", value=5000, level=25, potion_type='permanent_dexterity', effect_magnitude=6),
+    Potion(name="Supreme Elixir of Brilliance", description="Permanently increases INT by 6.", value=5000, level=25, potion_type='permanent_intelligence', effect_magnitude=6),
+    Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=1200, level=8, potion_type='permanent_health', effect_magnitude=20),
+    Potion(name="Greater Elixir of Vitality", description="Permanently increases max HP by 40.", value=3000, level=16, potion_type='permanent_health', effect_magnitude=40),
+    Potion(name="Supreme Elixir of Vitality", description="Permanently increases max HP by 75.", value=6000, level=25, potion_type='permanent_health', effect_magnitude=75),
 
     # Deep-floor healing potions
     Potion(name="Heroic Healing Potion", description="A radiant vial that mends grievous wounds.", value=250, level=10, potion_type='healing', effect_magnitude=200),
@@ -1467,6 +1473,30 @@ SCROLL_TEMPLATES = [
         effect_description="Upgrade items to +20 maximum.",
         value=1200,
         level=25,  # Floor 25+
+        scroll_type='upgrade'
+    ),
+    Scroll(
+        name="Scroll of Celestial Upgrade",
+        description="A scroll that hums with celestial power.",
+        effect_description="Upgrade items to +25 maximum.",
+        value=2000,
+        level=30,  # Floor 30+
+        scroll_type='upgrade'
+    ),
+    Scroll(
+        name="Scroll of Cosmic Upgrade",
+        description="A scroll woven from starlight.",
+        effect_description="Upgrade items to +30 maximum.",
+        value=3500,
+        level=35,  # Floor 35+
+        scroll_type='upgrade'
+    ),
+    Scroll(
+        name="Scroll of Eternal Upgrade",
+        description="A scroll from beyond time itself.",
+        effect_description="Upgrade items to +35 maximum.",
+        value=6000,
+        level=40,  # Floor 40+
         scroll_type='upgrade'
     ),
     Scroll(

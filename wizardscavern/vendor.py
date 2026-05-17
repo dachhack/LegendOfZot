@@ -352,8 +352,8 @@ MAGIC_SHOP_MESSAGES = {
     "Madame Stardust": "You have found Ye Olde Magic Shoppe. The cosmos provides, darling. For a modest fee.",
 }
 
-MAGIC_SHOP_CHANCE = 0.15  # 15% chance on floors 20+
-MAGIC_SHOP_MIN_FLOOR = 20
+MAGIC_SHOP_CHANCE = 0.20  # 20% chance per floor at or beyond MIN_FLOOR
+MAGIC_SHOP_MIN_FLOOR = 12  # Lowered from 20 -- F20+ was past the median death floor
 
 # ============================================================================
 # BUG MERCHANT DATA (Shrinking Bug Level)
@@ -894,27 +894,28 @@ def generate_magic_shop_inventory(floor_level, player_character):
         inventory.append(Scroll("Scroll of Mythic Upgrade", "A scroll touched by the gods.", "Upgrade items to +17 maximum.", 850, 20, 'upgrade'))
 
     # --- PERMANENT ELIXIRS: 1-2 based on floor ---
+    # Floor gates aligned to the rebalanced elixir levels (8/16/25).
     elixir_pool = []
-    if floor_level >= 35:
+    if floor_level >= 25:
         elixir_pool = [
-            Potion(name="Supreme Elixir of Might", description="Permanently increases STR by 6.", value=5000, level=35, potion_type='permanent_strength', effect_magnitude=6),
-            Potion(name="Supreme Elixir of Grace", description="Permanently increases DEX by 6.", value=5000, level=35, potion_type='permanent_dexterity', effect_magnitude=6),
-            Potion(name="Supreme Elixir of Brilliance", description="Permanently increases INT by 6.", value=5000, level=35, potion_type='permanent_intelligence', effect_magnitude=6),
-            Potion(name="Supreme Elixir of Vitality", description="Permanently increases max HP by 75.", value=6000, level=35, potion_type='permanent_health', effect_magnitude=75),
+            Potion(name="Supreme Elixir of Might", description="Permanently increases STR by 6.", value=5000, level=25, potion_type='permanent_strength', effect_magnitude=6),
+            Potion(name="Supreme Elixir of Grace", description="Permanently increases DEX by 6.", value=5000, level=25, potion_type='permanent_dexterity', effect_magnitude=6),
+            Potion(name="Supreme Elixir of Brilliance", description="Permanently increases INT by 6.", value=5000, level=25, potion_type='permanent_intelligence', effect_magnitude=6),
+            Potion(name="Supreme Elixir of Vitality", description="Permanently increases max HP by 75.", value=6000, level=25, potion_type='permanent_health', effect_magnitude=75),
         ]
-    elif floor_level >= 25:
+    elif floor_level >= 16:
         elixir_pool = [
-            Potion(name="Greater Elixir of Might", description="Permanently increases STR by 4.", value=2000, level=25, potion_type='permanent_strength', effect_magnitude=4),
-            Potion(name="Greater Elixir of Grace", description="Permanently increases DEX by 4.", value=2000, level=25, potion_type='permanent_dexterity', effect_magnitude=4),
-            Potion(name="Greater Elixir of Brilliance", description="Permanently increases INT by 4.", value=2000, level=25, potion_type='permanent_intelligence', effect_magnitude=4),
-            Potion(name="Greater Elixir of Vitality", description="Permanently increases max HP by 40.", value=3000, level=25, potion_type='permanent_health', effect_magnitude=40),
+            Potion(name="Greater Elixir of Might", description="Permanently increases STR by 4.", value=2000, level=16, potion_type='permanent_strength', effect_magnitude=4),
+            Potion(name="Greater Elixir of Grace", description="Permanently increases DEX by 4.", value=2000, level=16, potion_type='permanent_dexterity', effect_magnitude=4),
+            Potion(name="Greater Elixir of Brilliance", description="Permanently increases INT by 4.", value=2000, level=16, potion_type='permanent_intelligence', effect_magnitude=4),
+            Potion(name="Greater Elixir of Vitality", description="Permanently increases max HP by 40.", value=3000, level=16, potion_type='permanent_health', effect_magnitude=40),
         ]
     else:
         elixir_pool = [
-            Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=15, potion_type='permanent_strength', effect_magnitude=2),
-            Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=15, potion_type='permanent_dexterity', effect_magnitude=2),
-            Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=15, potion_type='permanent_intelligence', effect_magnitude=2),
-            Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=1200, level=15, potion_type='permanent_health', effect_magnitude=20),
+            Potion(name="Elixir of Might", description="Permanently increases STR by 2.", value=800, level=8, potion_type='permanent_strength', effect_magnitude=2),
+            Potion(name="Elixir of Grace", description="Permanently increases DEX by 2.", value=800, level=8, potion_type='permanent_dexterity', effect_magnitude=2),
+            Potion(name="Elixir of Brilliance", description="Permanently increases INT by 2.", value=800, level=8, potion_type='permanent_intelligence', effect_magnitude=2),
+            Potion(name="Elixir of Vitality", description="Permanently increases max HP by 20.", value=1200, level=8, potion_type='permanent_health', effect_magnitude=20),
         ]
     num_elixirs = random.randint(1, 2)
     for _ in range(num_elixirs):

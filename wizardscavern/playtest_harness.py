@@ -2257,7 +2257,8 @@ def smart_policy(obs, rng, use_lantern=True):
         BUFF_POTION_TYPES = {
             "strength", "defense", "stone_skin", "regeneration",
             "berserker", "giant_strength", "haste", "vampirism",
-            "frost_armor", "fortune",
+            "frost_armor", "fortune", "dexterity", "intelligence",
+            "experience", "true_sight", "invisibility",
         }
         has_buff_potion = any(
             i.get("category", "").startswith("potion_")
@@ -2267,6 +2268,24 @@ def smart_policy(obs, rng, use_lantern=True):
         )
         if (has_buff_potion and 0.60 <= hp_pct < 0.95
                 and m_adjacent):
+            return "i"
+        # Permanent elixirs (STR/DEX/INT/HP/DEF) are strictly positive
+        # one-shots; drink ASAP regardless of HP or adjacency. Build-315
+        # playtest grid found 0/24 elixir sightings, but even if one
+        # spawned the smart policy carried it to the grave. Inventory
+        # branch has the matching unconditional drink gate below.
+        PERMANENT_POTION_TYPES = {
+            "permanent_strength", "permanent_dexterity",
+            "permanent_intelligence", "permanent_health",
+            "permanent_defense",
+        }
+        has_permanent_potion = any(
+            i.get("category", "").startswith("potion_")
+            and i.get("is_identified")
+            and i.get("potion_type") in PERMANENT_POTION_TYPES
+            for i in inv
+        )
+        if has_permanent_potion:
             return "i"
         # Bad-status cure: when the player has a curable negative
         # effect (poison / web / sticky_hands / confusion etc.) AND
@@ -3233,6 +3252,25 @@ def smart_policy(obs, rng, use_lantern=True):
             "dexterity", "intelligence", "frost_armor",
             "true_sight", "invisibility", "fortune", "experience",
         }
+        # Permanent elixirs first, no HP gate -- pairs with the
+        # game_loop trigger that returns "i" whenever a permanent
+        # potion sits in the bag. Without this branch the HP<0.95
+        # gate below skips permanent_* at full HP and the agent
+        # loops i->x->i->x.
+        PERMANENT_POTION_TYPES_INV = {
+            "permanent_strength", "permanent_dexterity",
+            "permanent_intelligence", "permanent_health",
+            "permanent_defense",
+        }
+        if proposed is None:
+            for entry in inv:
+                if not entry["category"].startswith("potion_"):
+                    continue
+                if not entry.get("is_identified"):
+                    continue
+                if entry.get("potion_type") in PERMANENT_POTION_TYPES_INV:
+                    proposed = f"u{entry['slot']}"
+                    break
         if proposed is None and hp_pct < 0.95:
             for entry in inv:
                 if not entry["category"].startswith("potion_"):
