@@ -2939,22 +2939,35 @@ def smart_policy(obs, rng, use_lantern=True):
         avoid_pc_floor = p.get("floor", 1)
         avoid_pc_z = avoid_pc_floor - 1
         avoid_under_leveled = p.get("level", 1) <= avoid_pc_z + 1
-        avoid_kills = obs.get("kills_on_floor") or 0
-        avoid_min_kills = min(12, max(3, avoid_pc_z * 2 + 1))
-        avoid_coverage = (obs.get("tile_coverage") or {}).get("pct", 0)
-        avoid_grind_done = (
-            avoid_kills >= avoid_min_kills
-            or avoid_coverage >= 70
-        )
-        if (avoid_under_leveled and not avoid_grind_done
-                and not is_weak and not trapped_no_d):
-            # Restore `not is_weak`: dropping it left HP=1 retreat
+        avoid_severely_under = p.get("level", 1) <= avoid_pc_z - 1
+        avoid_turns_on_floor = obs.get("turns_on_floor") or 0
+        avoid_too_long = avoid_turns_on_floor > _cfg.floor_stuck_turns
+        # Build 333: dropped avoid_grind_done as a release. The tier-
+        # strip filter at L3333 was hardened to require level (not
+        # kills) for descent; the AVOID-D rule here mirrors that. Old
+        # code had `not avoid_grind_done` which let speed-descenders
+        # route through D once they'd swept the floor with 70%+
+        # coverage even at lvl <= floor. New rule: BFS avoids D while
+        # under-levelled, period -- except when too_long_on_floor (the
+        # safety valve preserved across both gates) or is_weak (the
+        # retreat-from-HP-1 fix called out in the historical comment).
+        if (avoid_under_leveled and not is_weak
+                and not trapped_no_d and not avoid_too_long):
+            # `not is_weak` preserved: dropping it left HP=1 retreat
             # agents (Thorin / Legolas / Boromir seed 1234) stuck
             # on F1 because the BFS first_step was D, the AVOID-D
             # filter swapped it, and there were no real alternatives
             # so they oscillated. Better to let weak agents step on
             # D and descend (or trigger the stairs_down step-off)
             # than to lock them at F1.
+            avoid_set.add("D")
+        # Build 333: severely under-levelled (lvl <= floor - 2) is a
+        # depth gap so dangerous that descending is suicide. Force
+        # AVOID-D even when is_weak fires -- the agent should retreat
+        # UP (W tile) or grind in place, not fall further. The same
+        # too_long safety valve still releases (stuck floors get out).
+        if (avoid_severely_under and not trapped_no_d
+                and not avoid_too_long):
             avoid_set.add("D")
         # Retreat-after-warp: agent wants to ASCEND, not descend.
         # Adding D to AVOID prevents the wayfinder's frontier walker
@@ -3316,12 +3329,48 @@ def smart_policy(obs, rng, use_lantern=True):
         # U-focused), when is_weak (recovering, not grinding), when
         # too_long_on_floor (override -- the floor is stalled, get
         # out), and when resources are pressing.
+        #
+        # Build 333: user said "have players only descend if they are
+        # tough enough." Dropped `not grind_complete` from the gate so
+        # level becomes the HARD descent rule, not just a soft tier
+        # filter. Previously grind_complete fired via the OR-clause
+        # (no_monsters_visible AND coverage>=70%), letting speed-
+        # descenders slip past on small floors -- the b332 6kT grid
+        # death log showed lvl-4 humans reaching F9 because they swept
+        # 7 floors in 1325T (165T/floor, ~14 kills/floor) without
+        # leveling enough. Owlbear / Mummy / Hell Hound / Dragon Lich
+        # then one-shot them. Safety valves still release: too_long
+        # (178T stuck), resources_pressing (food/fuel low), is_weak
+        # (need to heal), retreat_to_floor (already retreating). So no
+        # soft-lock when the floor genuinely has no XP left.
         if (under_leveled
-                and not grind_complete
                 and not is_weak
                 and not retreat_to_floor
                 and not too_long_on_floor
                 and not resources_pressing):
+            tiers = [
+                tuple(t for t in tier if t != "D")
+                for tier in tiers
+            ]
+            tiers = [tier for tier in tiers if tier]
+        # Severely under-leveled hard gate (build 333). The standard
+        # under_leveled gate above is bypassed when is_weak fires
+        # (hp_pct < 50%) or resources_pressing fires (hunger < 48, fuel
+        # < 11) -- correct in most cases (a weak agent with no benefits
+        # left must descend or die), but it lets extreme speed-
+        # descenders through. s100 human reached F9 at lvl 4 because
+        # each tough fight dropped their HP < 50, releasing the gate,
+        # and they fell down the stairs into deeper monsters that
+        # one-shot them. Severely under-leveled (lvl <= floor - 2) is
+        # a depth gap so dangerous that descending only makes it
+        # worse -- agents at that delta die regardless of HP or food.
+        # The only safety valve preserved is too_long_on_floor (178T),
+        # so a genuinely stuck floor still releases. resources_pressing
+        # is deliberately NOT a release here: an under-levelled agent
+        # who's also starving is better off DYING on the current floor
+        # than fleeing one floor deeper to be eaten by an Owlbear.
+        severely_under_leveled = p.get("level", 1) <= pc_z - 1
+        if severely_under_leveled and not too_long_on_floor:
             tiers = [
                 tuple(t for t in tier if t != "D")
                 for tier in tiers
@@ -4306,11 +4355,38 @@ def smart_policy(obs, rng, use_lantern=True):
         min_kills_descend = min(12, max(3, pc_z_descend * 2 + 1))
         coverage_pct_descend = (obs.get("tile_coverage") or {}).get("pct", 0)
         under_descend = p.get("level", 1) <= pc_z_descend + 1
-        grind_done_descend = (
-            kills_so_far_descend >= min_kills_descend
-            or coverage_pct_descend >= 70
-        )
-        if (under_descend and not grind_done_descend
+        severely_under_descend = p.get("level", 1) <= pc_z_descend - 1
+        # Build 333: dropped grind_done_descend from the release (it
+        # contained the leaky `coverage>=70` clause that let speed-
+        # descenders fall through small-floor D tiles). Now the
+        # standard gate steps OFF D while under-levelled unless stuck
+        # (>300T) or is_weak (HP<50%, retreat-from-HP-1 protection).
+        # SEVERELY under-levelled (lvl <= floor - 2) also bypasses
+        # is_weak -- at that gap, descending is suicide even when
+        # weak. Only `stuck` is preserved as a release for severely
+        # cases (>300T = floor genuinely stalled).
+        if severely_under_descend and not stuck:
+            # Hard step-off: force a step off D regardless of HP.
+            neighbors = obs.get("neighbors") or {}
+            recent_descend = set(obs.get("recent_step_set") or [])
+            blocked_descend = set(obs.get("blocked_directions") or [])
+            for d in ("n", "s", "e", "w"):
+                if d in recent_descend or d in blocked_descend:
+                    continue
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            for d in ("n", "s", "e", "w"):
+                if d in blocked_descend:
+                    continue
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            # Genuinely cornered (all neighbours are walls/M/W/recent).
+            # Fall through to the normal soft-gate logic below so the
+            # standard ESCAPE VALVE eventually descends rather than
+            # oscillating forever.
+        if (under_descend
                 and not stuck and not is_weak):
             neighbors = obs.get("neighbors") or {}
             recent_descend = set(obs.get("recent_step_set") or [])
