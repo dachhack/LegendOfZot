@@ -2813,7 +2813,16 @@ def smart_policy(obs, rng, use_lantern=True):
         # strength. The flag is set by _monster_obs the first time the
         # agent enters combat with an undead and stays set for the
         # remainder of the floor.
-        tomb_suspected = bool(obs.get("tomb_suspected_here"))
+        # False-positive gate: undead-named monsters can spawn naturally
+        # from MONSTER_TEMPLATES even on floors with NO T tiles (e.g.
+        # F1 since tombs gated to F2+ in build 316). Only honour the
+        # tomb_suspected flag when this floor actually has a T tile --
+        # otherwise the agent unnecessarily strips M/T/N from tiers,
+        # tanking kill rate and starving sooner.
+        floor_t_count = (obs.get("floor_totals") or {}).get(
+            pc_z, {}).get("T", 0)
+        tomb_suspected = (bool(obs.get("tomb_suspected_here"))
+                          and floor_t_count > 0)
 
         # Retreat-after-warp override. obs.retreat_to_floor is set
         # whenever pc.z exceeds max_z_via_stairs -- i.e. a warp dropped
@@ -2859,6 +2868,20 @@ def smart_policy(obs, rng, use_lantern=True):
             tiers = [("U",), ("V",)]
         elif too_long_on_floor:
             tiers = [("D",), ("V",)]
+        elif (resources_pressing
+              and (obs.get("turns_on_floor") or 0) > 150
+              and d_reachable):
+            # Resource pressure descent override. Build-316 verification
+            # found 5/30 runs spent 300-945 turns on F1 chasing
+            # unvisited beneficials while hunger ran down, killing 67%
+            # of agents to starvation. The existing too_long_on_floor
+            # (300) gate fires too late -- by then the food clock has
+            # already burned through the starter rations. This gate
+            # fires when hunger < 60 (or fuel < 15) AND we've been on
+            # the floor 150+ turns AND the staircase is reachable.
+            # Earlier than too_long_on_floor and gated on real resource
+            # pressure, so well-fed exploration runs aren't disturbed.
+            tiers = [("D",), ("V",), tuple(BENEFICIAL_SAFE)]
         elif high_coverage_descend:
             # Floor mostly swept + stairs in sight -- go.
             tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
