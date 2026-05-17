@@ -351,6 +351,16 @@ class Tower:
         # TAXIDERMIST (X): floors 10-45
         actual_x_limits = x_limits if 10 <= floor_number <= 45 else (0, 0)
 
+        # TOMBS (T): floors 2+. Build-315 forensics found 5/24 F1
+        # deaths and one elf-stuck-785-turns case where a tomb's
+        # undead-guardian surround (1.25x stats, plus a +2 elite)
+        # blocked a Level-1 starter from reaching the staircase.
+        # A Lvl1 agent simply cannot kill an L3 ELITE UNDEAD on F1,
+        # and the guardians fully wall off the tomb tile. Pushing
+        # T to F2+ gives agents a chance to gear up and hit Lvl 2
+        # before the first undead encounter.
+        actual_t_limits = t_limits if floor_number >= 2 else (0, 0)
+
         # FIX: Handle required_chars differently for first floor vs subsequent floors
         if not self.floors:  # First floor
             # First floor needs D and V, but not E (forced) or U (doesn't exist yet)
@@ -414,7 +424,7 @@ class Tower:
                              a_limits=a_limits,
                              l_limits=l_limits,
                              dungeon_limits=dungeon_limits,
-                             t_limits=t_limits,
+                             t_limits=actual_t_limits,
                              garden_limits=garden_limits,
                              o_limits=actual_o_limits,
                              m_limits=m_limits,

@@ -460,8 +460,15 @@ def process_combat_action(player_character, my_tower, cmd):
             potion_display = get_item_display_name(potion)
             add_log(f"{COLOR_CYAN}The {gs.active_monster.name} dropped {get_article(potion_display)} {potion_display}!{COLOR_RESET}")
 
-        # 10% chance to drop food (rations etc from monster packs/pouches)
-        if random.random() < 0.10:
+        # Food drop chance: graduated curve to attack F1-F5 starvation.
+        # Build-315 forensics: 58% of deaths starvation, 62% died with
+        # ZERO food in bag, dominantly on F2-F5 after starter rations
+        # run dry. Curve: F1=22%, F5=15%, F10+=10% (the prior flat
+        # rate). This targets the early-game cliff without inflating
+        # deep-floor food economy where vendors take over.
+        z = player_character.z
+        food_drop_chance = max(0.10, 0.22 - z * 0.015)
+        if random.random() < food_drop_chance:
             food = main.get_random_food(player_character.z)
             player_character.inventory.add_item(food)
             add_log(f"{COLOR_CYAN}You found some {food.name} among the {gs.active_monster.name}'s possessions!{COLOR_RESET}")
