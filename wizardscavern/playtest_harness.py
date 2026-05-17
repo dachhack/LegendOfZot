@@ -826,6 +826,18 @@ class PlaytestSession:
             "upgrade_scrolls_used": 0,
             "chest_bonus_queue_remaining": None,
             "turns_on_floor": 0,
+            # Pocket-aware exploration metrics (build 332). Track
+            # peak accessible/sealed pocket counts and what was left
+            # on the floor when the agent walked off. Lets us see if
+            # the wayfinder actually cleared its accessible pockets
+            # before descending or bailed early on real reveal-able
+            # territory.
+            "peak_accessible_pockets": 0,
+            "peak_sealed_pockets": 0,
+            "final_accessible_pockets": None,
+            "final_sealed_pockets": None,
+            "final_total_undiscovered": None,
+            "pocket_done_floor": False,
         }
         self.floor_diag[z] = rec
         return rec
@@ -996,6 +1008,7 @@ class PlaytestSession:
             "nearest_features": self._nearest_features_obs(),
             "feature_paths": self._feature_paths_obs(),
             "frontier_step": self._frontier_step_obs(),
+            "pockets": self._pockets_obs(),
             "nearest_monster_path": self._nearest_monster_path_obs(),
             "recent_step_set": self._recent_step_set(),
             "blocked_directions": sorted(self.blocked_directions),
@@ -1594,6 +1607,139 @@ class PlaytestSession:
             "first_step": first_step[best_xy],
             "path_dist": dist[best_xy],
         }
+
+    def _pockets_obs(self):
+        """Pocket-aware exploration map. Floods the undiscovered-tile
+        graph into 4-connected components ("pockets") and classifies
+        each as accessible (cardinal-adjacent to a discovered FLOOR
+        tile that the agent can BFS-reach) or sealed (only bounded by
+        discovered walls / unreachable from the current island).
+
+        The user's framing: "the playtest should be able to tell where
+        there are pockets of undiscovered rooms and work to explore
+        them or figure out if there is nothing there because it's not
+        carved out." Sealed pockets need no further attention -- the
+        boundary has been observed and the inside is rock or an
+        unreachable carved cell. Accessible pockets get a BFS-shortest
+        approach + a size-weighted score so the wayfinder prefers
+        large reveals over tiny crevices.
+
+        Returns:
+            {
+              "pockets": [
+                {"size": N, "accessible": bool, "first_step": dir|None,
+                 "path_dist": int|None, "entry_count": int}, ...
+              ],
+              "accessible_count": int,
+              "sealed_count": int,
+              "total_undiscovered": int,
+              "best_step": {"first_step": dir, "path_dist": int,
+                            "size": int}  # most appealing accessible
+            }
+        None when fog_of_war is off.
+        """
+        if not self.fog_of_war:
+            return None
+        pc = gs.player_character
+        floor = gs.my_tower.floors[pc.z]
+        wall = floor.wall_char
+        rows, cols = floor.rows, floor.cols
+        dist, first_step = self._bfs_paths()
+
+        seen = [[False] * cols for _ in range(rows)]
+        pockets_raw = []
+        for sy in range(rows):
+            for sx in range(cols):
+                if seen[sy][sx]:
+                    continue
+                if floor.grid[sy][sx].discovered:
+                    continue
+                comp = []
+                stack = [(sx, sy)]
+                seen[sy][sx] = True
+                while stack:
+                    cx, cy = stack.pop()
+                    comp.append((cx, cy))
+                    for dx, dy in ((0, -1), (0, 1), (1, 0), (-1, 0)):
+                        nx, ny = cx + dx, cy + dy
+                        if not (0 <= nx < cols and 0 <= ny < rows):
+                            continue
+                        if seen[ny][nx]:
+                            continue
+                        if floor.grid[ny][nx].discovered:
+                            continue
+                        seen[ny][nx] = True
+                        stack.append((nx, ny))
+                pockets_raw.append(comp)
+
+        pockets_out = []
+        accessible_count = 0
+        sealed_count = 0
+        # Score = path_dist - 0.5 * size. Lower wins so larger pockets
+        # pull the agent harder. 1 size-tile is worth ~0.5 BFS steps.
+        best = None  # (score, first_step, path_dist, size)
+        for comp in pockets_raw:
+            comp_set = set(comp)
+            entries = set()
+            for (cx, cy) in comp:
+                for dx, dy in ((0, -1), (0, 1), (1, 0), (-1, 0)):
+                    ex, ey = cx + dx, cy + dy
+                    if not (0 <= ex < cols and 0 <= ey < rows):
+                        continue
+                    ecell = floor.grid[ey][ex]
+                    if not ecell.discovered:
+                        continue
+                    if ecell.room_type == wall:
+                        continue
+                    if (ex, ey) not in dist:
+                        continue
+                    entries.add((ex, ey))
+            size = len(comp)
+            if entries:
+                accessible_count += 1
+                best_entry = min(entries, key=lambda xy: dist[xy])
+                pd = dist[best_entry]
+                fs = first_step.get(best_entry)
+                if fs is None:
+                    # Player is already standing on an entry tile. Walk
+                    # one cardinal step INTO the pocket so the lantern /
+                    # adjacency reveal can fire next turn.
+                    for d, dx, dy in (("n", 0, -1), ("s", 0, 1),
+                                      ("e", 1, 0), ("w", -1, 0)):
+                        nx, ny = pc.x + dx, pc.y + dy
+                        if (nx, ny) in comp_set:
+                            fs = d
+                            break
+                pockets_out.append({
+                    "size": size, "accessible": True,
+                    "first_step": fs, "path_dist": pd,
+                    "entry_count": len(entries),
+                })
+                score = pd - size * 0.5
+                if best is None or score < best[0]:
+                    best = (score, fs, pd, size)
+            else:
+                sealed_count += 1
+                pockets_out.append({
+                    "size": size, "accessible": False,
+                    "first_step": None, "path_dist": None,
+                    "entry_count": 0,
+                })
+
+        total_undiscovered = sum(p["size"] for p in pockets_out)
+        out = {
+            "pockets": pockets_out,
+            "accessible_count": accessible_count,
+            "sealed_count": sealed_count,
+            "total_undiscovered": total_undiscovered,
+        }
+        if best is not None and best[1] is not None:
+            out["best_step"] = {
+                "first_step": best[1],
+                "path_dist": best[2],
+                "size": best[3],
+            }
+        return out
 
     def _nearest_monster_path_obs(self):
         """BFS first-step + path distance to engaging the nearest
@@ -2220,7 +2366,28 @@ class PlaytestSession:
             if len(self.recent_positions) > 4:
                 self.recent_positions.pop(0)
 
-        return self.observe()
+        next_obs = self.observe()
+        # Pocket diagnostics: track peak accessible/sealed pocket counts
+        # for the floor we're now standing on and stamp the floor's
+        # final values whenever we leave (build 332). _pockets_obs uses
+        # discovered-state only -- safe to read every step.
+        pockets = next_obs.get("pockets")
+        if self.fog_of_war and pockets is not None:
+            rec = self._ensure_diag(pc_after.z)
+            acc = pockets.get("accessible_count", 0)
+            sealed = pockets.get("sealed_count", 0)
+            if acc > rec.get("peak_accessible_pockets", 0):
+                rec["peak_accessible_pockets"] = acc
+            if sealed > rec.get("peak_sealed_pockets", 0):
+                rec["peak_sealed_pockets"] = sealed
+            rec["final_accessible_pockets"] = acc
+            rec["final_sealed_pockets"] = sealed
+            rec["final_total_undiscovered"] = pockets.get(
+                "total_undiscovered", 0
+            )
+            if acc == 0 and rec.get("peak_accessible_pockets", 0) > 0:
+                rec["pocket_done_floor"] = True
+        return next_obs
 
     def is_done(self):
         return (gs.game_should_quit
@@ -3024,6 +3191,27 @@ def smart_policy(obs, rng, use_lantern=True):
             and not is_weak
             and grind_complete
         )
+        # Pocket-done descent gate (build 332). Once every accessible
+        # undiscovered pocket has been cleared on the floor, there's
+        # nothing left to reveal from the agent's island -- remaining
+        # undiscovered tiles are sealed behind walls (rock or
+        # unreachable carved area). Coverage% can still read low on
+        # region-split floors, so this gate fires independently of the
+        # high_coverage threshold. Same grind/weak/D-reachable guards
+        # apply so under-levelled / wounded agents still bank XP /
+        # heal first.
+        pockets_obs_gate = obs.get("pockets")
+        pockets_done = (
+            pockets_obs_gate is not None
+            and pockets_obs_gate.get("accessible_count", 0) == 0
+            and pockets_obs_gate.get("total_undiscovered", 0) > 0
+        )
+        pocket_done_descend = (
+            pockets_done
+            and d_reachable
+            and not is_weak
+            and grind_complete
+        )
 
         # Tomb-suspected on this floor: the agent has fought an undead
         # here, which (per the rebalanced spawn logic) means there's a
@@ -3081,8 +3269,11 @@ def smart_policy(obs, rng, use_lantern=True):
             tiers = [("U",), ("V",)]
         elif too_long_on_floor:
             tiers = [("D",), ("V",)]
-        elif high_coverage_descend:
-            # Floor mostly swept + stairs in sight -- go.
+        elif high_coverage_descend or pocket_done_descend:
+            # Floor mostly swept + stairs in sight -- go. Either we've
+            # hit the coverage threshold (high_coverage_descend) OR
+            # we've cleared every accessible undiscovered pocket and
+            # only sealed rock remains (pocket_done_descend).
             tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
         elif is_weak:
             tiers = [("V",), tuple(BENEFICIAL_SAFE)]
@@ -3131,6 +3322,55 @@ def smart_policy(obs, rng, use_lantern=True):
                 and not retreat_to_floor
                 and not too_long_on_floor
                 and not resources_pressing):
+            tiers = [
+                tuple(t for t in tier if t != "D")
+                for tier in tiers
+            ]
+            tiers = [tier for tier in tiers if tier]
+        # Explore-first filter (build 332). User framing: "there's
+        # enough food and lantern to explore all of the level. Let's
+        # focus on that." When meaningful undiscovered territory
+        # remains AND resources allow AND the agent isn't pressed
+        # for any other reason, drop D from every tier so the
+        # wayfinder is forced down to the pocket-aware fallback
+        # walker. Once pockets are exhausted (pocket_done_descend)
+        # or coverage threshold (high_coverage_descend) fires -- or
+        # food / fuel / HP / retreat pressures kick in -- D comes
+        # back into the priority list and the agent descends
+        # normally.
+        #
+        # Four thresholds gate the filter:
+        #   (1) At least one accessible pocket exists -- there is
+        #       somewhere to GO.
+        #   (2) BIG accessible pocket: at least one pocket has size
+        #       >= 6. Stops the agent from chasing single-tile
+        #       crevices that are probably wall-adjacency artefacts.
+        #   (3) Best-pocket BFS distance <= 12. A pocket 15 tiles
+        #       away with food running low isn't worth the detour.
+        #   (4) Coverage% < 50. Once half the floor is on the map,
+        #       residual pockets are mostly small / behind walls and
+        #       the agent should descend rather than chase scraps.
+        pockets_obs_filter = obs.get("pockets") or {}
+        explore_pocket_count = pockets_obs_filter.get("accessible_count", 0)
+        big_pocket_exists = any(
+            p.get("accessible") and p.get("size", 0) >= 6
+            for p in (pockets_obs_filter.get("pockets") or [])
+        )
+        best_pocket_filter = pockets_obs_filter.get("best_step") or {}
+        best_pocket_dist = best_pocket_filter.get("path_dist", 999)
+        explore_first = (
+            explore_pocket_count > 0
+            and big_pocket_exists
+            and best_pocket_dist <= 12
+            and coverage_pct < 50
+            and not resources_pressing
+            and not is_weak
+            and not too_long_on_floor
+            and not retreat_to_floor
+            and not high_coverage_descend
+            and not pocket_done_descend
+        )
+        if explore_first:
             tiers = [
                 tuple(t for t in tier if t != "D")
                 for tier in tiers
@@ -3259,10 +3499,21 @@ def smart_policy(obs, rng, use_lantern=True):
                 candidates.sort(key=lambda c: c[0])
                 return _swap_if_backtrack(candidates[0][1])
 
-        # Frontier walker via BFS. When no feature beckons, take the
-        # BFS first-step toward the nearest reachable discovered tile
-        # that borders the fog. Lower-right tiebreak in the obs mirrors
-        # the player heuristic that D tends to be down-right of the map.
+        # Pocket-aware frontier walker (build 332). Heads to the
+        # entry of the most-appealing accessible undiscovered pocket:
+        # score = path_dist - 0.5 * pocket_size, so big reveals pull
+        # the agent harder than tiny crevices. When every pocket is
+        # sealed (only bounded by discovered walls), best_step is
+        # None and we fall through to the nearest-frontier heuristic
+        # for legacy parity. Random fallback handles fully-explored
+        # floors.
+        pockets_obs = obs.get("pockets") or {}
+        best_pocket = pockets_obs.get("best_step")
+        if best_pocket and best_pocket.get("first_step"):
+            return _swap_if_backtrack(best_pocket["first_step"])
+        # Legacy frontier walker. Should be dead code now that pockets
+        # supplies the same entry set, but keep it as belt-and-braces
+        # in case _pockets_obs degenerates on a weird floor.
         frontier_step = obs.get("frontier_step")
         if frontier_step and frontier_step.get("first_step"):
             return _swap_if_backtrack(frontier_step["first_step"])
@@ -4480,6 +4731,11 @@ def _summarise(obs, jsonl=False):
     ]
     if obs.get("memorized_spells"):
         parts.append(f"spells={len(obs['memorized_spells'])}")
+    pockets = obs.get("pockets")
+    if pockets is not None:
+        parts.append(
+            f"pk{pockets.get('accessible_count', 0)}/{pockets.get('sealed_count', 0)}"
+        )
     if obs["monster"]:
         m = obs["monster"]
         parts.append(f"vs {m['name']}(L{m['level']} HP{m['hp']}/{m['max_hp']})")
