@@ -507,23 +507,19 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
                 "Lantern Fuel", "A small flask of oil for your lantern.",
                 value=5, level=0, fuel_restore_amount=20,
             ))
-        # Build 329: bumped Rations 12 -> 18 and Iron Rations 2 -> 3
-        # (+50% starter nutrition, 740 -> 1110). The policy's
-        # resources_pressing flag fires at hunger < 48 and pulls the
-        # agent out of exploration mode into "descend / hunt"; the
-        # b328 grid showed 33% of deaths were starvation and the
-        # agent was rushing past F1-F3 chests because food was
-        # pressing too early. More starter food = more room to
-        # explore early floors thoroughly before the food clock
-        # forces transition.
         pc.inventory.add_item_quiet(_Food(
             "Rations", "Standard travel rations.",
-            value=10, level=0, nutrition=50, count=18,
+            value=10, level=0, nutrition=50, count=12,
         ))
+        # User-requested balance pass: Iron Rations in starter pack
+        # to extend the early-floor food window (70 nutrition each
+        # vs 50 for plain Rations). Cooking Kit deliberately NOT in
+        # starter -- agents have to reach a F4+ vendor to earn it,
+        # so cooking is a mid-game depth bonus, not a starter perk.
         pc.inventory.add_item_quiet(_Food(
             "Iron Rations",
             "Military-grade rations. Tasteless but highly nutritious.",
-            value=30, level=3, nutrition=70, count=3,
+            value=30, level=3, nutrition=70, count=2,
         ))
         for _ in range(6):
             pc.inventory.add_item_quiet(Potion(
@@ -1700,12 +1696,24 @@ class PlaytestSession:
         floor = gs.my_tower.floors[pc.z]
         wall = floor.wall_char
         walkable = 0
+        discovered_walkable = 0
         for y in range(floor.rows):
             for x in range(floor.cols):
-                if floor.grid[y][x].room_type != wall:
+                cell = floor.grid[y][x]
+                if cell.room_type != wall:
                     walkable += 1
+                    if cell.discovered:
+                        discovered_walkable += 1
         visited = len(self.visited_tiles_this_floor)
         pct = (visited / walkable * 100.0) if walkable else 0.0
+        # Build 330: discovered_pct measures fog-lifted tiles, not
+        # tiles-stood-on. Lantern radius reveals neighbours, so
+        # discovered_pct is typically much higher than `pct`. The
+        # fog-aware descent gate uses (100 - discovered_pct) to
+        # decide whether the agent should keep sweeping or descend.
+        discovered_pct = (
+            (discovered_walkable / walkable * 100.0) if walkable else 0.0
+        )
         dist, _ = self._bfs_paths()
         reachable = len(dist)
         # visited may include tiles BFS can't currently reach if
@@ -1718,6 +1726,7 @@ class PlaytestSession:
             "visited": visited,
             "walkable": walkable,
             "pct": pct,
+            "discovered_pct": discovered_pct,
             "reachable": reachable,
             "reach_pct": reach_pct,
         }
@@ -3122,6 +3131,39 @@ def smart_policy(obs, rng, use_lantern=True):
                 and not retreat_to_floor
                 and not too_long_on_floor
                 and not resources_pressing):
+            tiers = [
+                tuple(t for t in tier if t != "D")
+                for tier in tiers
+            ]
+            tiers = [tier for tier in tiers if tier]
+        # Build 330: fog-aware descent gate. b329 chest-discovery diag
+        # found 75-94% of MISSED chests on each floor (F1-F8) were never
+        # discovered -- agents leave with massive fog patches. Root
+        # cause: feature_paths_obs hides fog-tiles from the wayfinder,
+        # so unvisited_beneficials_exist=False when chests are still in
+        # fog, and the agent falls into the default 'else' branch
+        # (tiers=[("D",), ...]) and descends. Fix: when fog is high
+        # AND we have a frontier to push, strip D from every tier so
+        # the wayfinder runs through features/M and ultimately falls
+        # back to frontier_step (line 3263), breaking new fog. Skip
+        # when retreat is active (U-focused), too_long_on_floor (the
+        # floor is stalled, get out), resources_pressing (food/fuel
+        # clock running out), and high_coverage_descend (floor is
+        # mostly-walked, descend is correct).
+        discovered_pct = (obs.get("tile_coverage") or {}).get(
+            "discovered_pct", 100.0
+        )
+        fog_pct_obs = 100.0 - discovered_pct
+        frontier_step_obs = obs.get("frontier_step")
+        fog_high = (
+            fog_pct_obs >= _cfg.fog_explore_threshold
+            and frontier_step_obs is not None
+            and not retreat_to_floor
+            and not too_long_on_floor
+            and not resources_pressing
+            and not high_coverage_descend
+        )
+        if fog_high:
             tiers = [
                 tuple(t for t in tier if t != "D")
                 for tier in tiers
