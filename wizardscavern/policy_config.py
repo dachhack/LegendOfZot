@@ -82,14 +82,6 @@ class PolicyConfig:
     # was descending too eagerly when combined with the lower
     # floor_stuck_turns.
 
-    fog_explore_threshold: int = 30
-    # Build 330: when (100 - discovered_pct) >= this threshold AND a
-    # frontier is reachable, strip D from the tier list so the agent
-    # keeps sweeping fog instead of descending. Diag b329: 75-94% of
-    # missed chests on F1-F8 were never discovered. fog_pct >= 30
-    # roughly corresponds to "less than 70% of walkable tiles seen,"
-    # which is the regime where chests are most likely still hidden.
-
     min_kills_floor_base: int = 3
     # Minimum kills required at F1 (and floor of the min-kills curve).
 
@@ -182,7 +174,6 @@ FIELD_BOUNDS = {
     "resource_fuel_threshold":   (5, 40),
     "floor_stuck_turns":         (100, 500),
     "high_coverage_threshold":   (30, 80),
-    "fog_explore_threshold":     (10, 50),
     "min_kills_floor_base":      (1, 8),
     "min_kills_floor_scale":     (0, 4),
     "wedge_visit_count":         (3, 12),

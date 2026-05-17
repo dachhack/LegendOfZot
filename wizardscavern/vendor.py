@@ -109,7 +109,12 @@ class Vendor:
             else:
                 self.inventory.add_item_quiet(Weapon("Dagger", "A small, sharp blade.", attack_bonus=2, value=10, level=0, upgrade_level=0))
             self.inventory.add_item_quiet(Armor("Leather Armor","Light leather armor.", defense_bonus=3, value=50, level=0, upgrade_level=0))
-            self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=50, light_radius=7, value=30, level=0))
+            # Build 331: lantern radius 7 -> 9. b330 chest-discovery
+            # diag found 75-94% of missed chests on F1-F8 were never
+            # discovered. Cardinal cross-pattern reveal: +2 tiles per
+            # axis = ~8 more revealed tiles per step. Fuel cost
+            # unchanged. Helps real players' QoL too.
+            self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=50, light_radius=9, value=30, level=0))
             # Rations bumped 3 -> 5 after a playtest pass: 10/30 runs
             # were dying with 0 food on floor 1-2 because the starter 3
             # Rations + 1-2 monster meat drops ran out before reaching
@@ -281,7 +286,7 @@ class Vendor:
             # canisters = 80 fires per vendor visit ensures the
             # agent rarely sees fuel < 15 mid-floor.
             if not player_has_lantern:
-                self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=20, light_radius=7, value=30, level=0))
+                self.inventory.add_item_quiet(Lantern("Lantern", "Provides continuous light with fuel.", fuel_amount=20, light_radius=9, value=30, level=0))
             fuel_count = random.randint(2, 4)
             for _ in range(fuel_count):
                 self.inventory.add_item_quiet(

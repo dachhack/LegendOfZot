@@ -2603,7 +2603,7 @@ room_discover_descriptions = {
 
 
 class Lantern(Item):
-    def __init__(self, name="Lantern", description="", fuel_amount=50, light_radius=7, value=0, level=0, upgrade_level=0):
+    def __init__(self, name="Lantern", description="", fuel_amount=50, light_radius=9, value=0, level=0, upgrade_level=0):
         super().__init__(name, description, value, level)
         self.fuel_amount = fuel_amount
         self.light_radius = light_radius

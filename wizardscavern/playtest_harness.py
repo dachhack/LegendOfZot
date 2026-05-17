@@ -496,7 +496,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         pc.equipped_armor = leather
         pc.inventory.add_item_quiet(_Lantern(
             "Lantern", "Provides continuous light with fuel.",
-            fuel_amount=80, light_radius=7, value=30, level=0,
+            fuel_amount=80, light_radius=9, value=30, level=0,
         ))
         # Starter pack also includes 2 fuel canisters (40 fires).
         # Combined with the lantern's 80 base = 120 fires before
@@ -3131,39 +3131,6 @@ def smart_policy(obs, rng, use_lantern=True):
                 and not retreat_to_floor
                 and not too_long_on_floor
                 and not resources_pressing):
-            tiers = [
-                tuple(t for t in tier if t != "D")
-                for tier in tiers
-            ]
-            tiers = [tier for tier in tiers if tier]
-        # Build 330: fog-aware descent gate. b329 chest-discovery diag
-        # found 75-94% of MISSED chests on each floor (F1-F8) were never
-        # discovered -- agents leave with massive fog patches. Root
-        # cause: feature_paths_obs hides fog-tiles from the wayfinder,
-        # so unvisited_beneficials_exist=False when chests are still in
-        # fog, and the agent falls into the default 'else' branch
-        # (tiers=[("D",), ...]) and descends. Fix: when fog is high
-        # AND we have a frontier to push, strip D from every tier so
-        # the wayfinder runs through features/M and ultimately falls
-        # back to frontier_step (line 3263), breaking new fog. Skip
-        # when retreat is active (U-focused), too_long_on_floor (the
-        # floor is stalled, get out), resources_pressing (food/fuel
-        # clock running out), and high_coverage_descend (floor is
-        # mostly-walked, descend is correct).
-        discovered_pct = (obs.get("tile_coverage") or {}).get(
-            "discovered_pct", 100.0
-        )
-        fog_pct_obs = 100.0 - discovered_pct
-        frontier_step_obs = obs.get("frontier_step")
-        fog_high = (
-            fog_pct_obs >= _cfg.fog_explore_threshold
-            and frontier_step_obs is not None
-            and not retreat_to_floor
-            and not too_long_on_floor
-            and not resources_pressing
-            and not high_coverage_descend
-        )
-        if fog_high:
             tiers = [
                 tuple(t for t in tier if t != "D")
                 for tier in tiers
