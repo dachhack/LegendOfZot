@@ -2871,17 +2871,29 @@ def smart_policy(obs, rng, use_lantern=True):
         elif (resources_pressing
               and (obs.get("turns_on_floor") or 0) > 150
               and d_reachable):
-            # Resource pressure descent override. Build-316 verification
-            # found 5/30 runs spent 300-945 turns on F1 chasing
-            # unvisited beneficials while hunger ran down, killing 67%
-            # of agents to starvation. The existing too_long_on_floor
-            # (300) gate fires too late -- by then the food clock has
-            # already burned through the starter rations. This gate
-            # fires when hunger < 60 (or fuel < 15) AND we've been on
-            # the floor 150+ turns AND the staircase is reachable.
-            # Earlier than too_long_on_floor and gated on real resource
-            # pressure, so well-fed exploration runs aren't disturbed.
+            # Resource pressure descent override (D visible). Earlier
+            # than the 300-turn too_long_on_floor fallback and gated
+            # on real resource pressure (hunger<60 or fuel<15) AND
+            # turns_on_floor>150 AND staircase reachable. Build-318
+            # verification: trimmed starvation deaths 67% -> 47% but
+            # the gate fires too rarely -- it requires D already
+            # visible, while the worst dawdle runs have D in fog.
             tiers = [("D",), ("V",), tuple(BENEFICIAL_SAFE)]
+        elif (resources_pressing
+              and (obs.get("turns_on_floor") or 0) > 150
+              and not d_reachable):
+            # Resource pressure with D STILL in fog. Build-318 verified
+            # the d_reachable-gated override above missed the worst
+            # F1 dawdle runs (646-1048 turns on F1) because D was in
+            # fog the whole time. Push hard for unseen fog: drop M
+            # (more hunting deepens the hole) and beneficials we
+            # can't reach, prioritise V (last-chance restock) then
+            # BENEFICIAL_SAFE which the wayfinder's
+            # nearest-unseen-tile fallback walks toward. Doesn't
+            # help a genuinely region-split floor (W needed), but
+            # buys the agent more frontier exploration before the
+            # food clock runs out.
+            tiers = [("V",), tuple(BENEFICIAL_SAFE), ("D",)]
         elif high_coverage_descend:
             # Floor mostly swept + stairs in sight -- go.
             tiers = [("D",), tuple(BENEFICIAL_SAFE), ("V",), ("M",), ("T", "N")]
