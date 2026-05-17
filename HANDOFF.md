@@ -1,218 +1,184 @@
-# Playtest Harness — Handoff (build 314)
+# Playtest Harness — Handoff (builds 333-334, session 4)
 
-Branch: `claude/wizards-cavern-playtest-4stBF`. Continuation of the
-playtest-harness work started on the previous branch
-(`claude/game-playtest-agent-npMRR`). Builds 280-314 in this session
-focused on **flatline elimination, balance tuning, and exploration
-analytics**. Site: https://dachhack.github.io/LegendOfZot/playtest/.
+Branch: `claude/continue-playtest-Y0932`. Picks up from build 332
+(pocket-aware exploration) and ships builds 333-334 attacking the
+**F10+ wall** — every grid since the CMA-ES tuning (b323) has produced
+zero F10+ runs at 3000T regardless of policy adjustments.
 
-## TL;DR — what's different from the last handoff
+Site: https://dachhack.github.io/LegendOfZot/playtest/
 
-| | Before this session | After build 314 |
+## TL;DR — what changed this session
+
+| | b332 baseline | b333 (gates) | b334 (supply) |
+|---|---|---|---|
+| alive | 12/60 | 14-15/60 | **15/60** |
+| mean_floor | 4.85 | 4.78-4.88 | 4.83 |
+| F4+ | 42 | 43-44 | 44 |
+| F6+ | 25 | 20-23 | 21 |
+| F8+ | 6 | 7 | 7 |
+| **alive at F9** | 0 | 0 | **2** ← new |
+| F10+ | 0 | 0 | 0 |
+| humans alive | 1/20 | 2/20 | **4/20** (×4) |
+
+Two firsts in b334: first ever alive agents at F9 (`s314 dwarf F9 lvl4`,
+`s100 human F9 lvl5`). `s100 human` is the canonical speed-descender —
+died at F9 lvl4 every single previous build, now survives the run at
+lvl5. Humans 4x'd survival across both fixes.
+
+## Key diagnostic from this session
+
+**The F10+ wall is mechanical, not budget and not policy.** Proof:
+b332 at **6000T** halved survival (12→6 alive) and produced **zero**
+new F10+ runs. Extra turns just gave the agent more chances to die,
+not more depth. Death log on the F7-F9 cohort: Owlbear, Mummy,
+Hell Hound, Dragon Lich, Grick — high-tier monsters one-shotting
+on-pace builds (lvl ~= floor).
+
+## Build 333: three under-levelled gates
+
+The user framing — *"have players only descend if they are tough
+enough"* — turned out to mean fixing **three separate** under_leveled
+gates in playtest_harness.py that each had their own copy of the same
+leaky release. All three had `grind_done` (kills met OR coverage≥70%)
+as a release, which speed-descenders satisfied on swept-then-small
+floors regardless of XP banked.
+
+| Gate | Line | Mechanism |
 |---|---|---|
-| Alive flatlines (HP=1 indefinite loops) | 3-6 per grid | **0/60** |
-| Max floor record | F8 | **F11** (briefly, build 303) |
-| Max level record | L6 | **L9** (Tauriel s=13 elf) |
-| Honest survivors at 3000T | 0/60 | 3/60 (build 306) → 0/60 (current) |
-| Warp avoidance | leaky | **0 voluntary warps** across grids |
-| Per-run report features | basic | + warp_pct + xp_pct + Exploration table |
+| Tier-strip filter | ~3333 | Removes D from priority tiers |
+| BFS `avoid_set` | ~2949 | BFS pathfinder avoids D transit |
+| `stairs_down_mode` handler | ~4362 | Step OFF D when standing on it |
 
-The honest-survivor count dipped back to 0 after the food economy
-buffs because agents now push deeper and die deeper, instead of
-parking healthy on F4-F5. The wedges are gone; what remains is
-honest depth difficulty.
+Each gate now has both a **soft** `under_leveled` (lvl ≤ floor+1)
+that's released by `is_weak` / `resources_pressing` (preserved for
+HP=1 retreat protection — see Anborn / Thorin / Legolas comments),
+and a **hard** `severely_under_leveled` (lvl ≤ floor-2) that bypasses
+those releases. Only `too_long_on_floor` (178T) releases the hard
+gate. Commit `aae4c64`.
+
+## Build 334: depth-scaled floor supply
+
+`floor_supply.py` now tiers BOTH counts and item strength:
+
+```
+F1-4   : 3 Minor pots (30 hp)   + 3 Scroll of Upgrade
+F5-9   : 4 Healing pots (50 hp) + 4 Scroll of Greater Upgrade
+F10-14 : 5 Greater pots (100 hp) + 5 Scroll of Superior Upgrade
+F15+   : 5 Heroic pots (200 hp) + 5 Scroll of Epic Upgrade
+```
+
+Plus vendor share scales with depth (1→2→3 scrolls; 2→3 pots) —
+b325 diagnostic showed vendor delivery channel is 52% vs chest 41.5%,
+so the extra budget lands where it'll actually be consumed.
+
+New helper `healing_potion_for_floor(floor_level)` mirrors the
+existing `upgrade_scroll_for_floor`. `_vendor_share(floor_level)`
+replaces the static `VENDOR_SHARE` dict. Commit `5ced956`.
+
+## Where the F10+ wall actually is now
+
+Two alive F9 agents in b334 show the supply scaling pushed the
+ceiling up by one floor. The next bottleneck:
+
+- F9 alive: `s314 dwarf F9 lvl4` (4 BELOW pace), `s100 human F9 lvl5`
+  (4 below pace). Both alive at end of 3000T budget — they've stopped
+  dying but they're also stuck descending further because the hard
+  gate now holds.
+- F9+ death causes (b333/b334): Elite Lich, Vampire, Dragon Lich,
+  Owlbear, Mummy. High-tier elites with HP/damage that outpaces
+  even the F5+ scaled gear.
+
+The agent is now *cautious* and *resourced*. What it lacks is
+**offensive capability** at F9+ — equipped weapons aren't keeping
+pace, and spell-use rate (0.996) is already maxed.
+
+## Open levers (in order of expected payoff)
+
+1. **F8+ offensive scrolls** — add a "Scroll of Power" tier or scale
+   Battle Trance / damage-buff potions into `floor_supply.py` at F7+.
+   Current scaling only helps survival, not damage output.
+2. **Weapon-upgrade ceiling check** — b325 diag showed equipped
+   weapon upgrade_level mean 0.59; b334 doesn't measure it post-fix.
+   If the agent has scrolls but doesn't use them on the equipped
+   weapon, depth stalls regardless of supply.
+3. **Race-specific tuning** — dwarves 6-8 alive, humans 1-4 alive.
+   Big gap. Possible fixes: humans get an extra starter heal pot,
+   or `flee_level_gap_general` tightens for humans.
+4. **CMA-ES with new fitness** — current optimizer targets `-mean_max_floor + survival_band_penalty`. Re-tune at 4500T with
+   fitness weighted by F8+ runs to find a new local optimum for
+   depth, not survival.
+5. **Elite-tag the killer monsters** — Owlbear, Mummy, Hell Hound,
+   Dragon Lich, Vampire are doing >50% of deep deaths but aren't
+   flagged as `elite_undead` / `elite` in game_data.py. Surgical
+   change: add the tags, agent's existing `flee_level_gap_elite=-3`
+   rule will route around them.
+
+## What we DID NOT do this session
+
+- **Dwarven mining** (user proposed, then tabled). Code search
+  confirmed no existing mining mechanic — only "Dwarven Instinct"
+  (food spotting at `room_actions.py:2534`) and "Dwarven Appetite"
+  (`items.py:2882`). Design forks documented in earlier turns.
+- **Race-specific descent gates** — humans clearly need different
+  thresholds, but the b333 gates are uniform.
+- **Reverted dead change**: an intermediate b333 attempt bumped
+  `min_kills_floor_scale` 1→2 and lifted the cap 12→20. Validation
+  showed flat results because the `coverage≥70` release valve was
+  already firing before kill quotas mattered. Reverted before commit.
+
+## Useful commits to skim cold
+
+- **5ced956** — b334 depth-scaled floor supply
+- **aae4c64** — b333 three-layer under_leveled gate fix
+- **7b31f6a** — b332 pocket-aware exploration (parent of this work)
 
 ## Running the harness
 
 ```bash
+# 60-cell grid + deploy (the script that drove this session)
+python3 /tmp/run_full_playtest.py   # 3000T per cell, ~40s on 4 cores
+
 # Smoke run
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 200 \
+python3 -m wizardscavern.playtest_harness --seed 42 --turns 3000 \
     --policy smart --race dwarf
 
-# With report output (HTML + JSON)
-python3 -m wizardscavern.playtest_harness --seed 42 --turns 1500 \
+# With report output
+python3 -m wizardscavern.playtest_harness --seed 42 --turns 3000 \
     --policy smart --race human --report-dir /tmp/myrun
-
-# Deploy grid (drives 20 seeds x 3 races, pushes reports to
-# main:docs/playtest/). Cap TURNS_BUDGET at 3000 for ~1min runs.
-python3 /tmp/deep_deploy.py
 ```
 
-A one-line summary per run is appended to `playtest_runs.log` at repo
-root (gitignored). The harness is also driven by the `playtester`
-subagent — spawn with a focused task and it'll set up grids, drill
-into specific runs, and post-analyse.
+The grid driver lives in `/tmp/run_full_playtest.py` (not committed —
+the prior session's `/tmp/deep_deploy.py` followed the same pattern).
+Recreate from these constants:
 
-## Site URLs
-
-- **Index of runs**: https://dachhack.github.io/LegendOfZot/playtest/
-- Per-run pages: same root + `<slug>.html`
-- Deploy mechanic: `deploy_gh_pages()` in `playtest_report.py` pushes
-  to `main:docs/playtest/` via git plumbing (additive by default,
-  `replace=True` purges old reports first).
-
-## Smart-policy priority chain (game_loop)
-
-Each step re-derives intent from obs. Order of priorities, highest
-first:
-
-1. **Heal** at HP < 30% (open inventory)
-2. **Cure status** if bad status + cure item available
-3. **Pre-emptive heal** at HP < 80% with adjacent M
-4. **Pre-combat buff drink** when buff potion + M adjacent + HP 60-95%
-5. **Eat urgent meat** (rot_timer <= 20)
-6. **Swap broken gear** if spare exists + not cursed
-7. **Equip strongest non-cursed upgrade**
-8. **Eat at hunger < 50** (ration efficiency optimised)
-9. **Cook raw meat** if Cooking Kit + raw meat (any hunger)
-10. **Light lantern** on ANY fog-adjacent step (fuel > 0)
-11. **Wedge Hail Mary** if `current_tile_visits >= 6` + untried items
-12. **Wayfinder** (BFS-based, tier-prioritised — see below)
-
-## Wayfinder tier logic
-
-```
-if trapped_no_d AND has warp_path:   tiers = [(W,), (V,)]      # escape via known W
-elif trapped_no_d AND no_warp_path AND monster visible:
-                                     tiers = [(M,)]            # die fighting
-elif retreat_to_floor is set:        tiers = [(U,), (V,)]      # warp recovery
-elif too_long_on_floor:              tiers = [(D,), (V,)]      # press on
-elif high_coverage_descend:          tiers = [(D,), SAFE, ...] # sweep done
-elif is_weak:                        tiers = [(V,), SAFE, ...] # heal-first
-elif wants_vendor:                   tiers = [(V,), SAFE, ...]
-elif ready_to_clear:                 tiers = [SAFE, V, M, ...] # grind
-else:                                tiers = [SAFE, V, M, T, N] # normal
+```python
+SEEDS = [42, 99, 100, 200, 256, 314, 500, 999, 1100, 1234,
+         7, 13, 1, 17, 23, 33, 71, 88, 333, 777]
+RACES = ['dwarf', 'elf', 'human']
+TURNS = 3000
 ```
 
-`BENEFICIAL_SAFE = (C, G, L, O, A, P, Q, K, B, F)` — rooms that pay
-off without forced combat.
-
-`trapped_no_d`: D unreachable AND no new tile visited in 100+ turns.
-Behavioural signal — replaces older turn-count / pct-of-floor gates.
-
-## Key invariants the playtester enforces
-
-- **AVOID-W is always on** (was z<10 gated). Only `trapped_no_d`
-  releases it. Build 296.
-- **Inferred guardian avoidance**: seeing a T tile flags the 4
-  cardinal-adjacent positions as guardian-suspect (`pc.level >=
-  pc.floor + 3` to engage). Build 303.
-- **Wedge detector**: `current_tile_visits >= 6` triggers Hail Mary
-  item-use (scrolls / unidentified potions). Build 294-295.
-- **Die-fighting override**: trapped agent with no escape items
-  walks toward the only visible M and commits. Build 304.
-- **Tomb inference is genuinely informational**: every tomb has 4
-  cardinal guardians per `dungeon.py:setup_dungeons_and_tombs`. The
-  policy uses this domain knowledge to avoid corners even when M
-  tiles are still in fog. Build 303.
-
-## Balance changes shipped this session
-
-| Build | Change | Source |
-|---|---|---|
-| 292 | Lantern fuel buff: starter 50→80, canisters 1-3@10 → 2-4@20 | F12 reach unlocked |
-| 296 | Warp avoidance: lantern on any fog step, AVOID-W always on, no late-game accept | User: "players would avoid warps more" |
-| 297 | Coverage-based trapped gates | User: "% of floor not turns" |
-| 298 | Behavioural trapped (turns_since_new_tile >= 100) + W-target wayfinder | Region-split floor escapes |
-| 305 | Tiered HP regen by hunger: 85+ = 1/2 moves, 60-84 = 1/4, <60 none | Smooths chip damage |
-| 306 | `max(1, hp-dmg)` → `max(0, …)`: starvation can kill | Ends the HP=1 wedge |
-| 306 | Rations 40→50 nutrition, starter 5→8 | Food economy buff |
-| 307 | Iron Rations F1+ vendor (was F3+) | Food economy buff |
-| 308 | Cooking Kit F3+ vendor (game default), policy cooks all raw meat | User: "cook all meat once you have the kit" |
-| 308 | Meat drop rate 35% → 55% | Food economy buff |
-| 311 | Carnyx of Doom XP bonus removed | User: "kill the exp bonus for the carnyx" |
-
-## Per-run report features (current state)
-
-The HTML page now surfaces:
-
-1. **Hero sprite** — race + gender + name → game's `_CHARACTERS_POOL`
-   pid (matches what character creation would show). Build 301.
-2. **Journey ledger** with floor exits colour-coded:
-   stairs / warp_accept / warp_forced. Includes the new
-   **Warp % share of floor changes** line.
-3. **Movement Efficiency** table: per-floor moves, unique tiles,
-   first-visit, revisit, waste %.
-4. **Exploration** table: per-floor kills/M, XP earned/pool, chests,
-   boons, vendor (V), tomb (T) counts with totals row. Build 309-314.
-5. **Items table** with status: equipped / in bag / used / partial.
-6. **Death scene block** with last 30 log lines + 12 actions.
-
-The **index page** has a sortable table with Warp % and XP %
-columns — sort ascending by xp_pct to find under-explorers, descending
-to find grinders.
-
-## Key analytical findings
-
-### Warps are mostly forced, not accepted (build 296+)
-- Mean grid warp_pct: ~25-30%, but **>95% are forced** (resist roll
-  failed) not accepted.
-- 0 voluntary warps across multiple grids since build 297.
-- User framing ("players would avoid warps more") is now enforced.
-
-### Elite undead deaths are ALL from corner-walks, never raids (build 301)
-- 15/15 ELITE UNDEAD deaths traced to `setup_dungeons_and_tombs`
-  cardinal-adjacent guardians.
-- 0 from `process_tomb_action` SEARCH outcome.
-- Build 303's tomb-inference avoidance reduced these 13/60 -> 3/60.
-
-### Exploration does NOT help survival (builds 309-314)
-- Mean xp_pct for starvation deaths: **97%**.
-- Mean xp_pct for combat deaths: **~50%**.
-- High-xp_pct correlates with starvation (over-foraging) not depth.
-- Pearson(xp_pct, max_floor) ≈ 0.09 — effectively zero.
-- **The smart policy is grinding floors clean and starving**.
-
-## Open questions / future work
-
-1. **Honest survival at 3000T**: how to get agents to live to the
-   budget AND stay healthy AND keep progressing? Build 306 had 3/60
-   honest survivors at F5-F7. Current state is 0/60 because the food
-   buff lets agents push deeper, where they die to combat. Worth
-   testing: bump max_health curve, slow hunger decay, more vendor
-   heals at depth.
-2. **The descend-sooner hypothesis** (build 314 verdict): the policy
-   over-grinds F1-F3. A "lower ready_to_clear threshold" or
-   "descend at 50% coverage instead of 80%" might let agents reach
-   deeper without starving. Untested.
-3. **XP-pool formula is approximate** by design — the cap at 100%
-   hides dynamic spawn bonuses (tomb spirits, chest-gas monsters,
-   same-coord respawns). Per-floor rows in the Exploration table
-   show raw ratios. Real fix would need a kill-event hook to
-   accumulate pool deltas as they spawn.
-4. **Experience Boost potion is a placebo** — `items.py:4225` logs
-   the bonus but never actually multiplies XP. Either finish the
-   implementation or remove the status effect.
-5. **Pre-T tomb-guardian ambushes** still happen (3/60 in build 303
-   grid): the four corner M tiles are sometimes revealed before the
-   T tile is. Inference could be extended: a discovered M with
-   `undead_guardian=True` + `tomb_location` property implies the T
-   and the other 3 corners. Untested.
-
-## Useful commits to skim cold
-
-- **752973b** — build 303: inferred tomb guardian avoidance (the
-  big elite-undead survival jump)
-- **2e49fd2** — build 304: die-fighting + canister-aware lantern
-- **3ee3a2f** — build 296: warp avoidance pass (Gimli's lesson)
-- **a006abd** — build 309: exploration efficiency metric
-- **a0e802e** — build 308 followup: death-cause walker fixes
-- **eacc021** — build 314: XP/kill ratio cap (final convergence)
+Pool of 4 workers via `multiprocessing.Pool`. Each worker runs
+`new_game → step loop → write_report`. After all 60 done,
+`write_index` regenerates index.html and `deploy_gh_pages` pushes
+`main:docs/playtest/` with `replace=True`.
 
 ## Where data lives
 
 | Path | What |
 |---|---|
-| `wizardscavern/playtest_harness.py` | Headless game driver + smart_policy |
-| `wizardscavern/playtest_report.py` | HTML/JSON report builder + deploy |
+| `wizardscavern/playtest_harness.py` | Headless driver + smart_policy (3 under_leveled gates) |
+| `wizardscavern/floor_supply.py` | Per-floor guaranteed items (now depth-tiered) |
+| `wizardscavern/policy_config.py` | PolicyConfig dataclass (CMA-ES tunable) |
+| `wizardscavern/playtest_report.py` | HTML/JSON builder + deploy |
 | `wizardscavern/version.py` | BUILD_NUMBER + CHANGELOG (~8 entries) |
-| `playtest_reports/` | Local report artifacts (gitignored) |
 | `docs/playtest/` | Deployed report site (on main) |
-| `playtest_runs.log` | One-line per-run summary (gitignored) |
-| `/tmp/deep_deploy.py` | Grid driver (lives in /tmp, not tracked) |
+| `playtest_reports/` | Local artifacts (gitignored) |
 
 ## Persona note
 
-`CLAUDE.md` defines "Claudia" — flirty German tabletop-nerd — for the
-main conversation. The playtester subagent is clinical: numbers,
-file:line refs, bug write-ups. *Schatz, eine Wurst pro Iteration.*
+`CLAUDE.md` defines **Claudia** — flirty German tabletop-nerd
+sausage-scholar — for main-conversation tone. Playtester subagent
+is clinical. This session was main-conversation only; no subagent
+spawned. *Schatz, two F9 survivors per grid is a smoked Krainer
+with snap.*
