@@ -733,6 +733,20 @@ class PlaytestSession:
         # because of this.
         self.floor_arrival_turn = 0
         self._last_floor = 0
+        # Oscillation tracker for the F1<->F2 bounce pathology surfaced
+        # by the build-326 starvation valve. Once the valve fires in
+        # stairs_up_mode, the agent ascends but the wayfinder often
+        # re-targets D on F(z-1) (no unvisited beneficial there
+        # either), valve fires in stairs_down_mode going back to F(z),
+        # repeat. 09999_elf burned 21 floor changes F1<->F2 in this
+        # shape. Deque of (turn,) entries; pruned to last 300T window.
+        # When >= 5 changes accumulate, the run is aborted -- agent
+        # is provably looping and won't generate legit_alive signal.
+        # Preserves harness throughput so a 120-grid still finishes
+        # in ~7min instead of 30+min of loop-grinding.
+        import collections as _collections
+        self._floor_changes_recent = _collections.deque()
+        self._oscillation_aborted = False
         # Floors where the M-cage escape fired in stairs_up_mode --
         # agent's BFS-reachable region was tiny vs walkable area
         # because M tiles wall them in. Build-323 forensics found
@@ -1958,6 +1972,16 @@ class PlaytestSession:
                     self.max_z_via_stairs = pc_after.z
             self._last_floor = pc_after.z
             self.floor_arrival_turn = self.turn
+            # Record this floor change in the oscillation tracker.
+            # Prune entries older than 300T from the deque so the
+            # detector only fires on RECENT bounce patterns, not
+            # legitimate descent across many floors over a long run.
+            self._floor_changes_recent.append(self.turn)
+            while (self._floor_changes_recent
+                   and self._floor_changes_recent[0] < self.turn - 300):
+                self._floor_changes_recent.popleft()
+            if len(self._floor_changes_recent) >= 5:
+                self._oscillation_aborted = True
             # Clear the recent-position history on floor change so the
             # anti-backtrack guard doesn't try to avoid a tile that's
             # no longer reachable (different floor).
@@ -2045,7 +2069,8 @@ class PlaytestSession:
     def is_done(self):
         return (gs.game_should_quit
                 or gs.prompt_cntl == "death_screen"
-                or not gs.player_character.is_alive())
+                or not gs.player_character.is_alive()
+                or self._oscillation_aborted)
 
 
 # ----------------------------------------------------------------------
@@ -3862,6 +3887,23 @@ def smart_policy(obs, rng, use_lantern=True):
             return _walk_off_chest()
         return "o" if rng.random() < 0.85 else _walk_off_chest()
     if mode == "stairs_down_mode":
+        # STARVATION ESCAPE VALVE -- highest priority.
+        # Build-326 autopsy on the 5 worst-loop runs in the B324
+        # 120-grid found that 4 of 5 died of starvation while
+        # standing on/near a stair tile:
+        #   00089_elf  F2: arrived on D starving, 43 final moves on
+        #              the single D-tile, step-off + drink + walk-back
+        #   00512_human F2: identical single-tile D loop, 43 moves
+        #   00013_dwarf F2: starved, 4-unique-tile loop around D
+        #   09999_elf  F2: F1<->F2 21 floor changes, ended on U starving
+        # The handler's step-off-stair logic (intended to prevent
+        # ping-pong) does not check hunger, so the food clock burns
+        # while the agent shuffles. When starving with no food in
+        # bag, descending into the next floor (refreshes fog + M
+        # drops = potential meat + new vendor) is strictly preferable
+        # to a guaranteed starvation death on this tile.
+        if starving:
+            return "d"
         # M-caged-floor refusal: if the next floor down is flagged
         # M-caged (we ascended out of it earlier because its
         # reachable region was tiny), DO NOT descend back into it.
@@ -4000,6 +4042,17 @@ def smart_policy(obs, rng, use_lantern=True):
             return "d"
         return "d"
     if mode == "stairs_up_mode":
+        # STARVATION ESCAPE VALVE -- highest priority. Symmetric to
+        # the one in stairs_down_mode (see build-326 autopsy comment
+        # there for the full pathology). 09999_elf burned 21 floor
+        # changes F1<->F2 with `tomb_suspected + is_weak` flipping
+        # the wayfinder back and forth -- final 30 turns sitting on
+        # F2 U starving, drinking heal-pots that hunger-bleed
+        # erased. When starving with no food, ascending to a known-
+        # cleared floor (where vendor/items/explored paths remain)
+        # is strictly preferable to standing on this U.
+        if starving:
+            return "u"
         # Retreat-after-warp: ASCEND. The agent landed on a U tile
         # while pc.z > max_z_via_stairs, so going up is the goal.
         # The default policy below walks AWAY from U to avoid the
