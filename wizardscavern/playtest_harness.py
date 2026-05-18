@@ -3274,15 +3274,30 @@ def smart_policy(obs, rng, use_lantern=True):
         # Shrunk filter: Zot's spell on bug-levels blocks stairs in
         # BOTH directions ('the drop is lethal' / 'stairs impossibly
         # tall'). Targeting D or U while shrunk burns the agent's
-        # turn budget on a stair tile the handler will reject. Strip
-        # both from the tiers so the wayfinder routes to monsters
-        # (Bug Queen drops the Growth Mushroom on defeat) and chests
-        # (one chest on each bug floor holds a guaranteed Mushroom
-        # backup). Caught as status=stuck on s=461 elf F8.
+        # turn budget on a stair tile the handler will reject.
+        #
+        # Build-336 reroute: when shrunk, ABANDON the normal tier
+        # mix and target chests first, then vendor (bug-gear),
+        # then monsters (Bug Queen spawns after the floor's bug
+        # monsters are cleared, dropping the Growth Mushroom),
+        # then other beneficials. Why chests first: the Growth
+        # Mushroom is guaranteed in one C on the floor
+        # (dungeon.py:674) and opening chests is bounded-risk vs
+        # the full-floor combat clear required to spawn the Bug
+        # Queen. With chest-first the agent gets a fast escape
+        # path AND only fights bug monsters incidentally en
+        # route, instead of trying to clear every M with bug-
+        # sized starter gear.
         if is_shrunk:
+            shrunk_beneficials = tuple(
+                t for t in BENEFICIAL_SAFE if t != "C"
+            )
             tiers = [
-                tuple(t for t in tier if t not in ("D", "U"))
-                for tier in tiers
+                ("C",),
+                ("V",),
+                ("M",),
+                shrunk_beneficials,
+                ("T", "N"),
             ]
             tiers = [tier for tier in tiers if tier]
         # Wedge-floor descent block: target floor (current_z + 1)
@@ -3919,14 +3934,23 @@ def smart_policy(obs, rng, use_lantern=True):
         # not starving. Better to disengage and look for a vendor /
         # altar / pool than die on the next swing. Prior policy
         # silently kept attacking and lost most of these fights.
+        # SHRUNK exception: on a sealed bug-level floor there is no
+        # 'find a vendor' option -- stairs refuse, warps refuse,
+        # the agent bounces flee->re-engage->flee in the same 3
+        # tiles forever. s=317 human F8 burned 1500T cycling
+        # combat (low HP) -> flee -> walk back -> combat. Commit
+        # to the fight instead.
         if (hp_pct < 0.30
                 and not heal_pot_slot
                 and not heal_spell_slot
-                and not starving):
+                and not starving
+                and not is_shrunk):
             return "f"
         # Threat-flee only when NOT starving -- a starving agent vs
-        # an edible monster needs to win this fight to live.
-        if monster_too_tough and not starving:
+        # an edible monster needs to win this fight to live. Same
+        # shrunk exception: with no escape route, fleeing just
+        # postpones the same fight.
+        if monster_too_tough and not starving and not is_shrunk:
             return "f"
         # Damage spells beat melee: more damage per turn, no weapon
         # durability loss, scale with INT for casters. Mana regens at
