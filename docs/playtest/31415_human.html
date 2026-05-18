@@ -201,7 +201,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Faramir the Wanderer, the human</h1>
-      <p class="muted">non-binary adventurer · seed 31415 · started 2026-05-18T17:43:23+00:00</p>
+      <p class="muted">non-binary adventurer · seed 31415 · started 2026-05-18T17:58:10+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -292,6 +292,31 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Hunger over the run</h3>
         <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><rect x='10' y='136.0' width='780' height='54.0' fill='#5a131333'/><polyline points='10.0,10.0 21.6,10.0 33.3,11.8 44.9,11.8 56.6,11.8 68.2,11.8 79.9,11.8 91.5,11.8 103.1,11.8 114.8,11.8 126.4,11.8 138.1,11.8 149.7,11.8 161.3,11.8 173.0,13.6 184.6,13.6 196.3,13.6 207.9,15.4 219.6,15.4 231.2,15.4 242.8,15.4 254.5,15.4 266.1,15.4 277.8,15.4 289.4,15.4 301.0,15.4 312.7,17.2 324.3,17.2 336.0,17.2 347.6,17.2 359.3,17.2 370.9,17.2 382.5,17.2 394.2,17.2 405.8,17.2 417.5,17.2 429.1,17.2 440.7,17.2 452.4,17.2 464.0,17.2 475.7,19.0 487.3,19.0 499.0,19.0 510.6,20.8 522.2,20.8 533.9,22.6 545.5,22.6 557.2,24.4 568.8,26.2 580.4,28.0 592.1,29.8 603.7,31.6 615.4,33.4 627.0,33.4 638.7,35.2 650.3,35.2 661.9,37.0 673.6,38.8 685.2,40.6 696.9,42.4 708.5,42.4 720.1,42.4 731.8,44.2 743.4,44.2 755.1,46.0 766.7,46.0 778.4,47.8 790.0,49.6' fill='none' stroke='#fb923c' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>Hunger 0..100 over T0..T67 (red band = starving)</text></svg>
       </div>
+      
+      <div class="chart-block">
+        <h3>Food &amp; Cooking</h3>
+        <div class="grid4">
+          <div class="stat"><span>Min hunger</span>
+            <span class="v" style="color:#fde68a;">78</span></div>
+          <div class="stat"><span>Avg hunger</span>
+            <span class="v">93</span></div>
+          <div class="stat"><span>Turns in starve zone (&le;30)</span>
+            <span class="v">0 <span class="muted" style="font-weight:normal;">(0%)</span></span></div>
+          <div class="stat"><span>Turns at hunger 0</span>
+            <span class="v" style="color:#fde68a;">0 <span class="muted" style="font-weight:normal;">(0%)</span></span></div>
+          <div class="stat"><span>Food items eaten</span>
+            <span class="v">0</span></div>
+          <div class="stat"><span>Total hunger restored</span>
+            <span class="v">0</span></div>
+          <div class="stat" style="grid-column: span 2;"><span>Cooking</span>
+            <span class="v" style="text-align:right;font-size:0.85em;">2 kit use(s) → cooked 2 piece(s)</span></div>
+        </div>
+        <table style="margin-top:10px;">
+          <tr><th>Food item</th><th>Found</th><th>Bought</th><th>Eaten</th><th>Hunger restored</th></tr>
+          <tr><td>Raw Goblin meat</td><td>4</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Rations</td><td>0</td><td>3</td><td>0</td><td>0</td></tr><tr><td>Iron Rations</td><td>0</td><td>3</td><td>0</td><td>0</td></tr>
+        </table>
+      </div>
+
     </div>
 
     <!-- Equipment + Inventory -->
@@ -381,7 +406,7 @@ th { color: #94a3b8; font-weight: normal; }
         <tr><th>Floor</th><th>Kills</th><th>Kill %</th><th>XP</th><th>XP %</th><th>Chests</th><th>Boons</th><th>V</th><th>T</th></tr>
         <tr><td>Floor 1</td><td>4/54</td><td>7%</td><td>32/432</td><td>7%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr><td>Floor 2</td><td>0/17</td><td>0%</td><td>0/334</td><td>0%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>4/71</td><td>6%</td><td>32/766</td><td>4%</td><td>14</td><td>24</td><td>2</td><td>4</td></tr>
       </table>
-      <h2 style="margin-top:18px;">Items (11 unique · 10 bought · 19 found)</h2>
+      <h2 style="margin-top:18px;">Items (12 unique · 10 bought · 23 found)</h2>
       <p class="muted">Aggregated by item name across the run. Status:
         <span style="color:#4ade80;">equipped</span> at some point,
         <span style="color:#fde68a;">in bag</span> still held at death/end,
@@ -389,7 +414,7 @@ th { color: #94a3b8; font-weight: normal; }
         <span style="color:#94a3b8;">used</span> fully consumed.</p>
       <table>
         <tr><th></th><th>Item</th><th>Found</th><th>Bought</th><th>In bag</th><th>Used</th><th>Status</th></tr>
-        <tr><td class='sprite-cell'></td><td>4 Lantern Fuel</td><td>4</td><td>0</td><td>0</td><td>4</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0004' style='width:28px;height:28px'></span></td><td>Iron Rations</td><td>0</td><td>3</td><td>3</td><td>0</td><td style='color:#fde68a;'>in bag</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0005' style='width:28px;height:28px'></span></td><td>Rations</td><td>0</td><td>3</td><td>12</td><td>0</td><td style='color:#fde68a;'>in bag</td></tr><tr><td class='sprite-cell'></td><td>Starbloom</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Crystal Dew</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Wisdom Moss</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Fire Pepper</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0006' style='width:28px;height:28px'></span></td><td>Minor Healing Potion</td><td>0</td><td>2</td><td>0</td><td>2</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0007' style='width:28px;height:28px'></span></td><td>Minor Mana Potion</td><td>0</td><td>2</td><td>1</td><td>1</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>passage leading down</td><td>2</td><td>0</td><td>0</td><td>2</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>grimoire</td><td>1</td><td>0</td><td>0</td><td>1</td><td style='color:#94a3b8;'>used</td></tr>
+        <tr><td class='sprite-cell'></td><td>4 Lantern Fuel</td><td>4</td><td>0</td><td>0</td><td>4</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>Raw Goblin meat</td><td>4</td><td>0</td><td>0</td><td>4</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0004' style='width:28px;height:28px'></span></td><td>Iron Rations</td><td>0</td><td>3</td><td>3</td><td>0</td><td style='color:#fde68a;'>in bag</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0005' style='width:28px;height:28px'></span></td><td>Rations</td><td>0</td><td>3</td><td>12</td><td>0</td><td style='color:#fde68a;'>in bag</td></tr><tr><td class='sprite-cell'></td><td>Starbloom</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Crystal Dew</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Wisdom Moss</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>Fire Pepper</td><td>3</td><td>0</td><td>1</td><td>2</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0006' style='width:28px;height:28px'></span></td><td>Minor Healing Potion</td><td>0</td><td>2</td><td>0</td><td>2</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0007' style='width:28px;height:28px'></span></td><td>Minor Mana Potion</td><td>0</td><td>2</td><td>1</td><td>1</td><td style='color:#fbbf24;'>partial</td></tr><tr><td class='sprite-cell'></td><td>passage leading down</td><td>2</td><td>0</td><td>0</td><td>2</td><td style='color:#94a3b8;'>used</td></tr><tr><td class='sprite-cell'></td><td>grimoire</td><td>1</td><td>0</td><td>0</td><td>1</td><td style='color:#94a3b8;'>used</td></tr>
       </table>
       <h2 style="margin-top:18px;">Vendor Purchases by Floor (1 vendors)</h2>
       <p class="muted">Grouped by the floor's vendor. Category breakdown shows

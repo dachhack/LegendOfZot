@@ -203,7 +203,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Thranduil the Singer, the elf</h1>
-      <p class="muted">non-binary adventurer · seed 777 · started 2026-05-18T17:43:04+00:00</p>
+      <p class="muted">non-binary adventurer · seed 777 · started 2026-05-18T17:57:50+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -294,6 +294,31 @@ th { color: #94a3b8; font-weight: normal; }
         <h3>Hunger over the run</h3>
         <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><rect x='10' y='136.0' width='780' height='54.0' fill='#5a131333'/><polyline points='10.0,10.0 22.2,10.0 34.4,11.8 46.6,11.8 58.8,11.8 70.9,11.8 83.1,11.8 95.3,11.8 107.5,13.6 119.7,13.6 131.9,13.6 144.1,13.6 156.2,13.6 168.4,13.6 180.6,13.6 192.8,13.6 205.0,15.4 217.2,15.4 229.4,15.4 241.6,15.4 253.8,17.2 265.9,17.2 278.1,17.2 290.3,19.0 302.5,19.0 314.7,19.0 326.9,19.0 339.1,19.0 351.2,19.0 363.4,19.0 375.6,20.8 387.8,20.8 400.0,20.8 412.2,22.6 424.4,22.6 436.6,24.4 448.8,24.4 460.9,24.4 473.1,24.4 485.3,24.4 497.5,24.4 509.7,24.4 521.9,24.4 534.1,24.4 546.2,26.2 558.4,26.2 570.6,26.2 582.8,28.0 595.0,28.0 607.2,29.8 619.4,29.8 631.6,29.8 643.8,29.8 655.9,29.8 668.1,29.8 680.3,29.8 692.5,31.6 704.7,31.6 716.9,31.6 729.1,31.6 741.2,31.6 753.4,31.6 765.6,33.4 777.8,33.4 790.0,33.4' fill='none' stroke='#fb923c' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>Hunger 0..100 over T0..T64 (red band = starving)</text></svg>
       </div>
+      
+      <div class="chart-block">
+        <h3>Food &amp; Cooking</h3>
+        <div class="grid4">
+          <div class="stat"><span>Min hunger</span>
+            <span class="v" style="color:#fde68a;">87</span></div>
+          <div class="stat"><span>Avg hunger</span>
+            <span class="v">94</span></div>
+          <div class="stat"><span>Turns in starve zone (&le;30)</span>
+            <span class="v">0 <span class="muted" style="font-weight:normal;">(0%)</span></span></div>
+          <div class="stat"><span>Turns at hunger 0</span>
+            <span class="v" style="color:#fde68a;">0 <span class="muted" style="font-weight:normal;">(0%)</span></span></div>
+          <div class="stat"><span>Food items eaten</span>
+            <span class="v">0</span></div>
+          <div class="stat"><span>Total hunger restored</span>
+            <span class="v">0</span></div>
+          <div class="stat" style="grid-column: span 2;"><span>Cooking</span>
+            <span class="v" style="text-align:right;font-size:0.85em;">2 kit use(s) → cooked 2 piece(s)</span></div>
+        </div>
+        <table style="margin-top:10px;">
+          <tr><th>Food item</th><th>Found</th><th>Bought</th><th>Eaten</th><th>Hunger restored</th></tr>
+          <tr><td>Raw Kobold meat</td><td>2</td><td>0</td><td>0</td><td>0</td></tr>
+        </table>
+      </div>
+
     </div>
 
     <!-- Equipment + Inventory -->
@@ -383,7 +408,7 @@ th { color: #94a3b8; font-weight: normal; }
         <tr><th>Floor</th><th>Kills</th><th>Kill %</th><th>XP</th><th>XP %</th><th>Chests</th><th>Boons</th><th>V</th><th>T</th></tr>
         <tr><td>Floor 1</td><td>9/92</td><td>10%</td><td>72/756</td><td>10%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>9/92</td><td>10%</td><td>72/756</td><td>10%</td><td>7</td><td>12</td><td>1</td><td>2</td></tr>
       </table>
-      <h2 style="margin-top:18px;">Items (0 unique · 0 bought · 0 found)</h2>
+      <h2 style="margin-top:18px;">Items (1 unique · 0 bought · 2 found)</h2>
       <p class="muted">Aggregated by item name across the run. Status:
         <span style="color:#4ade80;">equipped</span> at some point,
         <span style="color:#fde68a;">in bag</span> still held at death/end,
@@ -391,7 +416,7 @@ th { color: #94a3b8; font-weight: normal; }
         <span style="color:#94a3b8;">used</span> fully consumed.</p>
       <table>
         <tr><th></th><th>Item</th><th>Found</th><th>Bought</th><th>In bag</th><th>Used</th><th>Status</th></tr>
-        <tr><td colspan='7'>no items</td></tr>
+        <tr><td class='sprite-cell'></td><td>Raw Kobold meat</td><td>2</td><td>0</td><td>0</td><td>2</td><td style='color:#94a3b8;'>used</td></tr>
       </table>
       <h2 style="margin-top:18px;">Vendor Purchases by Floor (0 vendors)</h2>
       <p class="muted">Grouped by the floor's vendor. Category breakdown shows
