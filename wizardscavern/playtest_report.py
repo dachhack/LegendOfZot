@@ -415,13 +415,30 @@ class RunReport:
             prev_floor = getattr(self, "_last_floor_seen", None)
             if prev_floor is not None and f != prev_floor:
                 mode_at, action_at = self._last_action_mode
-                if mode_at == "stairs_down_mode" and action_at == "d":
+                jump = f - prev_floor
+                if mode_at == "stairs_down_mode" and action_at == "d" and jump == 1:
                     method = "stairs_down"
-                elif mode_at == "stairs_up_mode" and action_at == "u":
+                elif mode_at == "stairs_up_mode" and action_at == "u" and jump == -1:
                     method = "stairs_up"
                 elif mode_at == "warp_mode" and action_at == "n":
                     method = "warp_accept"
                 elif mode_at == "warp_mode" and action_at == "y":
+                    method = "warp_forced"
+                elif mode_at == "inventory":
+                    # Scroll of Descent (random 1-3 floor jump) or
+                    # another teleport-class scroll consumed from
+                    # inventory. Labelled uniformly as
+                    # 'scroll_descent' / 'scroll_ascent' by direction
+                    # so the Journey tab doesn't pretend a F3->F5
+                    # hop was a normal staircase. Includes the +1
+                    # roll case (jump==1) -- otherwise a Scroll of
+                    # Descent rolling 1 looks identical to a stairs
+                    # transition.
+                    method = "scroll_descent" if jump > 0 else "scroll_ascent"
+                elif abs(jump) >= 2:
+                    # Multi-floor jump from somewhere we didn't tag --
+                    # forced warp without the warp_mode prompt (vault
+                    # exit, gas-trap teleport, etc.). Still a warp.
                     method = "warp_forced"
                 else:
                     method = "other"
@@ -1354,18 +1371,22 @@ class RunReport:
         # user can see e.g. "F2 -> F3 at T203 (stairs_down)" or
         # "F3 -> F5 at T314 (warp_forced -- skipped F4)".
         method_label = {
-            "stairs_down": "stairs down",
-            "stairs_up":   "stairs up",
-            "warp_accept": "warp accepted",
-            "warp_forced": "warp forced (resist failed)",
-            "other":       "other",
+            "stairs_down":    "stairs down",
+            "stairs_up":      "stairs up",
+            "warp_accept":    "warp accepted",
+            "warp_forced":    "warp forced (resist failed)",
+            "scroll_descent": "Scroll of Descent",
+            "scroll_ascent":  "scroll ascent",
+            "other":          "other",
         }
         method_color = {
-            "stairs_down": "#94a3b8",
-            "stairs_up":   "#94a3b8",
-            "warp_accept": "#fb923c",
-            "warp_forced": "#f43f5e",
-            "other":       "#94a3b8",
+            "stairs_down":    "#94a3b8",
+            "stairs_up":      "#94a3b8",
+            "warp_accept":    "#fb923c",
+            "warp_forced":    "#f43f5e",
+            "scroll_descent": "#a78bfa",
+            "scroll_ascent":  "#a78bfa",
+            "other":          "#94a3b8",
         }
         descent_lines = ""
         if self.floor_exits:
@@ -1373,8 +1394,15 @@ class RunReport:
                 color = method_color.get(method, "#94a3b8")
                 label = method_label.get(method, method)
                 arrow = "↓" if to > fr else "↑"
+                jump = abs(to - fr)
+                skip_note = (
+                    f" <span style='color:#a78bfa;font-size:0.85em;'>"
+                    f"(skipped {jump - 1} floor{'s' if jump > 2 else ''})</span>"
+                    if jump >= 2 else ""
+                )
                 descent_lines += (
-                    f"<li>T{t}: F{fr} {arrow} F{to} "
+                    f"<li>T{t}: F{fr} {arrow} F{to}"
+                    f"{skip_note} "
                     f"<span style='color:{color};'>({label})</span></li>"
                 )
         else:
@@ -2004,7 +2032,8 @@ $sprite_styles
       <p class="muted">How each floor was left.
         <span style="color:#94a3b8;">stairs</span> = chosen,
         <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
-        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed,
+        <span style="color:#a78bfa;">Scroll of Descent</span> = consumed-from-bag teleport (jumps 1-3 floors).
         <strong>Warp share of floor changes: $warp_pct%</strong>
         ($warp_changes warp / $floor_changes total · $warp_accepts accepted, $warp_forced forced).</p>
       <ul>$descent_lines</ul>

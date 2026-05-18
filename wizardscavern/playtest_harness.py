@@ -4681,9 +4681,19 @@ def main(argv=None):
             action = raw.strip() if isinstance(raw, str) else raw
             if not action or action.startswith("#"):
                 continue
+        # Capture the PRE-step mode so record_action sees the mode
+        # the agent was actually issuing the action from. Before
+        # this fix, the call ran with obs['mode'] AFTER step() --
+        # so e.g. a descent ('d' in stairs_down_mode) recorded as
+        # ('stairs_up_mode', 'd') because step() landed the agent
+        # on the new floor's U tile by the time we measured. The
+        # floor-exit classifier then never matched 'stairs_down_mode
+        # + d' and labelled every transition 'other'. User caught
+        # it on s=461 human's Journey tab.
+        pre_mode = obs["mode"]
         obs = sess.step(action)
         if report is not None:
-            report.record_action(sess.turn, obs["mode"], action)
+            report.record_action(sess.turn, pre_mode, action)
             report.record_obs(sess.turn, obs, gs.log_lines)
         print(f"-> {action}")
         print(_summarise(obs, args.jsonl))
