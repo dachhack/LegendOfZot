@@ -3977,6 +3977,27 @@ def _trigger_shrinking_spell(player_character):
         description="Zot's shrinking spell - you are tiny!"
     )
 
+    # Emergency starter kit so a player arriving by warp-forced has at
+    # least one bug-sized weapon and a healing potion -- without this
+    # they punch bug monsters for 1 damage with their fists (regular
+    # gear is too big to wield while shrunk) and die in 30T. Playtest
+    # audit on F6->F8 warp-forced runs (s=88 elf, 167 dwarf, 500 human)
+    # showed all three had zero bug weapons and zero heal pots on
+    # arrival and died within 36T of the shrink trigger.
+    from .game_data import BUG_WEAPON_TEMPLATES
+    starter = BUG_WEAPON_TEMPLATES[0]  # Stinger Blade
+    player_character.inventory.add_item(Weapon(
+        name=starter['name'], description=starter['description'],
+        attack_bonus=starter['attack_bonus'], value=starter['value'],
+        level=starter['level'], upgrade_level=0,
+        elemental_strength=starter.get('elemental_strength', ["None"]),
+    ))
+    player_character.inventory.add_item(Potion(
+        "Nectar Vial",
+        "A drop of flower nectar -- a full meal at this size.",
+        value=25, level=1, potion_type='healing', effect_magnitude=35,
+    ))
+
     add_log("")
     add_log(f"{COLOR_PURPLE}============================================================{COLOR_RESET}")
     add_log(f"{COLOR_RED}*** ZOT'S SHRINKING SPELL ***{COLOR_RESET}")

@@ -3299,25 +3299,26 @@ def smart_policy(obs, rng, use_lantern=True):
         # tall'). Targeting D or U while shrunk burns the agent's
         # turn budget on a stair tile the handler will reject.
         #
-        # Build-336 reroute: when shrunk, ABANDON the normal tier
-        # mix and target chests first, then vendor (bug-gear),
-        # then monsters (Bug Queen spawns after the floor's bug
-        # monsters are cleared, dropping the Growth Mushroom),
-        # then other beneficials. Why chests first: the Growth
-        # Mushroom is guaranteed in one C on the floor
-        # (dungeon.py:674) and opening chests is bounded-risk vs
-        # the full-floor combat clear required to spawn the Bug
-        # Queen. With chest-first the agent gets a fast escape
-        # path AND only fights bug monsters incidentally en
-        # route, instead of trying to clear every M with bug-
-        # sized starter gear.
+        # Build-338 reroute: when shrunk, ABANDON the normal tier
+        # mix and target vendor first, then chests, then monsters,
+        # then other beneficials. Vendor wins #1 because the bug
+        # merchant stocks 2 bug weapons + 2 bug armors + 2-3 heal
+        # pots (vendor.py:generate_bug_merchant_inventory) -- the
+        # agent's only path to a working loadout when the
+        # shrinking spell triggered via warp-forced from F6 with
+        # no chance to prep. Chests come second (one holds the
+        # Growth Mushroom, dungeon.py:674). Monsters third (Bug
+        # Queen spawns after every bug M on the floor is cleared,
+        # dropping the Growth Mushroom). The build-337 starter
+        # kit (game_systems.py:_trigger_shrinking_spell) covers
+        # the truly-stranded case where no V is reachable.
         if is_shrunk:
             shrunk_beneficials = tuple(
                 t for t in BENEFICIAL_SAFE if t != "C"
             )
             tiers = [
-                ("C",),
                 ("V",),
+                ("C",),
                 ("M",),
                 shrunk_beneficials,
                 ("T", "N"),
