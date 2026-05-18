@@ -2387,8 +2387,13 @@ def restock_vendor_at(tower, character, vendor_x, vendor_y):
         return
 
     # Generate new vendor inventory
-    # This is similar to how vendors are initially populated
-    new_inventory = generate_vendor_inventory(floor_level)
+    # This is similar to how vendors are initially populated.
+    # Build-324 grid surfaced a TypeError (s=167 dwarf):
+    # generate_vendor_inventory expects (floor_level, room) -- the
+    # `room` arg is used to scale the restock-penalty markup at
+    # items.py:2537. Pass the actual vendor_room rather than
+    # dropping the kwarg.
+    new_inventory = generate_vendor_inventory(floor_level, vendor_room)
     # Track in game stats
     gs.game_stats['vendors_restocked'] = gs.game_stats.get('vendors_restocked', 0) + 1
     check_achievements(character)
