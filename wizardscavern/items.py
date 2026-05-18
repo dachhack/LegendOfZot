@@ -2762,7 +2762,18 @@ MEAT_DEFAULT = ("steak", "dubious", 12)
 MEAT_DEFAULT_CUTS = ["steak", "burger", "chops", "filet", "kebab"]
 
 HUNGER_MAX = 100
-HUNGER_DECAY_PER_MOVE = 1  # hunger decreases 1 per move
+# Hunger decays 7 units per 10 moves -- 0.7/move averaged. Earlier
+# rate was 1/move flat. The 5000-turn carnage round (build 327)
+# audit showed agents hit a per-floor deficit on vendor-less
+# floors (~65 nut short per floor), compounding into ~60 turns at
+# hunger 0 even though they were eating constantly. Slowing the
+# clock by 30% stretches every food source -- starter pack,
+# vendor stock, monster meat -- proportionally, so more agents
+# push past the F3-F4 starvation gate and into the F5+ tomb
+# grinder where the real carnage lives. The tracker-pair below
+# keeps decay integer (no float drift) and deterministic.
+HUNGER_DECAY_PER_MOVE = 7
+HUNGER_DECAY_INTERVAL = 10
 HUNGER_STARVING_THRESHOLD = 10   # below this: starving, take 1 dmg per move
 HUNGER_HUNGRY_THRESHOLD = 40     # below this: hungry, slight combat penalty
 HUNGER_PECKISH_THRESHOLD = 70     # below this: peckish, just a cute British word
@@ -3130,11 +3141,14 @@ def drop_monster_meat(monster, player_character, fire_killed=False):
     info = get_monster_meat_info(monster.name)
     if info is None:
         return  # Not edible
-    # 55% chance to drop meat (was 35% -- user-requested balance pass).
-    # Combined with the Cooking Kit being F1+ available, this gives
-    # agents who clear floors a meaningful steady food source so the
-    # food clock doesn't always end the run before depth does.
-    if random.random() > 0.55:
+    # 70% chance to drop meat (was 55%, originally 35%). Build-327
+    # food audit showed agents averaging only ~15 kills per floor
+    # past F3 with a 55% drop rate, generating roughly 75 nut of
+    # meat against a 140 nut per-floor exploration cost. Bumping
+    # to 70% pushes meat supply to ~100 nut per floor and meets
+    # the 5000-turn 'deep death' carnage goal alongside the slower
+    # hunger decay and bigger Iron Rations stash.
+    if random.random() > 0.70:
         return
     cut, descriptor, nutrition = info
     raw_name = f"Raw {monster.name} {cut.capitalize()}"
@@ -3178,7 +3192,17 @@ def process_hunger(character):
         if character.hunger_freeze_turns == 0:
             add_log(f"{COLOR_YELLOW}The sustaining power of the lembas fades.{COLOR_RESET}")
     else:
-        character.hunger = max(0, character.hunger - HUNGER_DECAY_PER_MOVE)
+        # Fractional decay via integer tracker: accumulate
+        # HUNGER_DECAY_PER_MOVE per call and drain one hunger
+        # point every time the tracker reaches HUNGER_DECAY_INTERVAL.
+        # At the 7/10 ratio that averages 0.7 hunger/move while
+        # keeping every decrement an integer step.
+        tracker = getattr(character, 'hunger_decay_tracker', 0)
+        tracker += HUNGER_DECAY_PER_MOVE
+        while tracker >= HUNGER_DECAY_INTERVAL:
+            character.hunger = max(0, character.hunger - 1)
+            tracker -= HUNGER_DECAY_INTERVAL
+        character.hunger_decay_tracker = tracker
 
     h = character.hunger
 

@@ -283,7 +283,11 @@ class Vendor:
             # (dominated by F1-F3 deaths), the missing food tiers were
             # the bottleneck. current_floor_level is character.z, so
             # z>=1 == F2+ and z>=2 == F3+.
-            self.inventory.add_item_quiet(Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1))
+            # Iron Rations stack bumped from 1 -> 3 (build 328) for
+            # the same carnage-round push: 70 nut each * 3 = 210
+            # nut per vendor visit on top of the Rations stack,
+            # roughly doubling the vendor's food payload.
+            self.inventory.add_item_quiet(Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=3))
             if current_floor_level >= 1:  # F2+
                 self.inventory.add_item_quiet(Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1))
             if current_floor_level >= 2:  # F3+

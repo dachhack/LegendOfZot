@@ -562,7 +562,7 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         pc.inventory.add_item_quiet(_Food(
             "Iron Rations",
             "Military-grade rations. Tasteless but highly nutritious.",
-            value=30, level=3, nutrition=70, count=2,
+            value=30, level=3, nutrition=70, count=4,
         ))
         # Cooking Kit also in the starter pack. Earlier balance pass
         # framed cooking as a "mid-game depth bonus" gated on a F3+
