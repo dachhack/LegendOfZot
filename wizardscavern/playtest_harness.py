@@ -699,6 +699,26 @@ class PlaytestSession:
         # returning the same direction). 16 entries covers period-2
         # / period-3 / period-4 bounces with margin.
         self.position_history = []  # last 16 (z, x, y)
+        # Consecutive turns the 2-tile oscillation detector has been
+        # tripping. Lets the policy distinguish a transient wobble
+        # (a few turns of n/s while the wayfinder rebuilds its
+        # target) from a real wedge (50+ turns stuck on the same
+        # 2-tile pair). Used by the stairs_up_mode 'use the stairs
+        # to escape' valve so it only fires on persistent loops,
+        # avoiding the descend/ascend cancellation that killed the
+        # earlier symmetric stair-island valve in build 318.
+        self.osc_streak = 0
+        self._last_osc_pair = None  # the (a, b) pair the streak is on
+        # z-indexes of floors the agent escaped from via the stairs_up
+        # osc-valve. Recorded the moment the policy issues 'u' to
+        # break a 50-turn 2-tile wedge. stairs_down_mode reads this
+        # set to refuse re-descent into a region-split fragment --
+        # otherwise the escape valve fires, the agent lands on
+        # F(N-1)'s D and the default 'd' sends them right back into
+        # the same wedge floor. Caught on s=88 human F2 (1,1)U <->
+        # (1,2): without this set the agent ping-ponged for 1500+
+        # turns alternating stair-floor and wedge-floor.
+        self.wedge_floors = set()
         # Per-floor walkable-tile coverage: set of (x, y) the player
         # has stood on for the current floor. Reset on descent. Used
         # by the policy's tile-coverage descent gate to leave a floor
@@ -977,6 +997,11 @@ class PlaytestSession:
             "inferred_guardian_dirs": self._inferred_guardian_dirs_obs(),
             "tomb_suspected_here": pc.z in self.suspected_tomb_floors,
             "max_z_via_stairs": self.max_z_via_stairs,
+            # Z-indexes (0-based) the policy has escaped from via the
+            # osc-streak 'u' valve. stairs_down_mode skips re-descent
+            # into these so the agent doesn't bounce back into a
+            # region-split wedge.
+            "wedge_floors": sorted(self.wedge_floors),
             # Name of the scroll currently driving upgrade_scroll_mode
             # / identify_scroll_mode -- empty otherwise. Lets the
             # smart_policy compute the scroll's tier cap (Basic +3,
@@ -1721,15 +1746,43 @@ class PlaytestSession:
         pc = gs.player_character
         tail = [(x, y) for (z, x, y) in self.position_history[-12:]
                 if z == pc.z]
-        if len(tail) < 12:
-            return {"detected": False, "pair": []}
-        uniq = set(tail)
-        if len(uniq) != 2:
-            return {"detected": False, "pair": []}
-        a, b = list(uniq)
-        if tail.count(a) < 5 or tail.count(b) < 5:
-            return {"detected": False, "pair": []}
-        return {"detected": True, "pair": [a, b]}
+        detected = False
+        pair = []
+        if len(tail) >= 12:
+            uniq = set(tail)
+            if len(uniq) == 2:
+                a, b = list(uniq)
+                if tail.count(a) >= 5 and tail.count(b) >= 5:
+                    detected = True
+                    pair = [a, b]
+            elif len(uniq) == 1:
+                # Position frozen (agent stopped to use inventory /
+                # mid-handler turn / etc). Don't break the streak
+                # just because of a pause; treat the single-tile
+                # window as 'consistent with the current pair' if
+                # we already had a pair tripping. Otherwise leave
+                # detected=False so a truly idle agent doesn't get
+                # flagged.
+                if self.osc_streak > 0 and self._last_osc_pair and \
+                        list(uniq)[0] in self._last_osc_pair:
+                    detected = True
+                    pair = self._last_osc_pair
+        # Maintain the consecutive-oscillation streak so callers can
+        # gate escape valves on persistence (e.g. stairs_up_mode
+        # should only force 'u' after 50+ turns of confirmed wedge).
+        # Streak survives single-tile pauses (inventory / handler
+        # turns) when the pair stays the same -- s=88 human spent
+        # ~1500 turns oscillating on F2 (1,1)U <-> (1,2) with
+        # frequent inventory eats breaking the detector and
+        # resetting the streak. The pause-tolerant logic above
+        # closes that hole.
+        if detected:
+            self.osc_streak += 1
+            self._last_osc_pair = pair
+        else:
+            self.osc_streak = 0
+            self._last_osc_pair = None
+        return {"detected": detected, "pair": pair, "streak": self.osc_streak}
 
     def _recent_step_set(self):
         """List of cardinal directions (n/s/e/w) whose neighbour is in
@@ -1806,6 +1859,16 @@ class PlaytestSession:
         pc = gs.player_character
         tw = gs.my_tower
         mode = gs.prompt_cntl
+        # Detect a policy-issued 'u' escape from a persistent 2-tile
+        # oscillation in stairs_up_mode. Record the current z so the
+        # stairs_down_mode policy refuses to re-descend into a known
+        # region-split wedge. s=88 human F2 (1,1)U <-> (1,2): without
+        # this the agent ascended out, hit F1's D, and immediately
+        # descended right back, ping-ponging another 1500 turns.
+        if (mode == "stairs_up_mode"
+                and action == "u"
+                and self.osc_streak >= 50):
+            self.wedge_floors.add(pc.z)
         # Record flee attempts (both successful and failed) so the
         # game_loop heal-up gate can fire before the agent walks back
         # into another fight. Every flee costs one monster attack
@@ -2035,6 +2098,8 @@ class PlaytestSession:
             self.recent_positions = []
             # Same reasoning for the oscillation detector's history.
             self.position_history = []
+            self.osc_streak = 0  # fresh floor, fresh wedge count
+            self._last_osc_pair = None
             # Reset tile-coverage tracking: the new floor starts at 0%
             # explored from the agent's perspective.
             self.visited_tiles_this_floor = set()
@@ -3038,6 +3103,22 @@ def smart_policy(obs, rng, use_lantern=True):
                 for tier in tiers
             ]
             tiers = [tier for tier in tiers if tier]
+        # Wedge-floor descent block: target floor (current_z + 1)
+        # has been escaped from before via the osc 'u' valve. Strip
+        # D from priority so the wayfinder doesn't route the agent
+        # back onto the D tile and re-descend into the wedge. Also
+        # add D to avoid_set so the random fallback skips it. Goal:
+        # the agent stays on the current floor and finds a W tile
+        # (warp) or Scroll of Descent to skip past the wedge.
+        avoid_descent_to = set(obs.get("wedge_floors") or [])
+        cur_z_for_wedge = p.get("floor", 1) - 1
+        if (cur_z_for_wedge + 1) in avoid_descent_to:
+            tiers = [
+                tuple(t for t in tier if t != "D")
+                for tier in tiers
+            ]
+            tiers = [tier for tier in tiers if tier]
+            avoid_set.add("D")
         # Grind-first filter: when the agent is under-levelled and the
         # floor still has reachable monsters AND they haven't met the
         # minimum kill count yet, strip D from the tiers so the
@@ -4128,6 +4209,30 @@ def smart_policy(obs, rng, use_lantern=True):
                 if neighbors.get(d) not in ("#", None):
                     return d
             return rng.choice(["n", "s", "e", "w"])
+        # Refuse to re-descend into a floor we already had to escape
+        # from via the stairs_up osc-valve. Target z = current z + 1
+        # (going down). If that z is in wedge_floors, the agent
+        # descended once, hit a 2-tile region-split, ascended, and
+        # would just bounce right back without this gate. Step off
+        # the D tile instead so the wayfinder can keep exploring the
+        # current floor (find a W, level up, find Scroll of Descent
+        # to skip the wedge floor entirely). Caught on s=88 human
+        # F2 (1,1)U <-> (1,2).
+        avoid_descent_to = set(obs.get("wedge_floors") or [])
+        cur_z = (p.get("floor", 1) - 1)
+        if (cur_z + 1) in avoid_descent_to:
+            neighbors = obs.get("neighbors") or {}
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t and t not in ("#", "M", "W", "D"):
+                    return d
+            # No clean step-off: take any non-wall non-hazard non-D.
+            for d in ("n", "s", "e", "w"):
+                t = neighbors.get(d)
+                if t and t not in ("#", "D"):
+                    return d
+            # Truly cornered (only D in non-wall neighbours). Fall
+            # through to the normal descent logic -- we tried.
         # Retreat-after-warp: if a warp landed us on a floor deeper
         # than max_z_via_stairs, we DON'T want to descend further --
         # we want to walk off this D tile and find the U tile so we
@@ -4274,6 +4379,24 @@ def smart_policy(obs, rng, use_lantern=True):
         # ping-pong's opposite -- the trip back through familiar
         # territory.
         if obs.get("retreat_to_floor") is not None:
+            return "u"
+        # Persistent-oscillation escape: when the agent has been
+        # stuck on a 2-tile fragment of this floor for 50+ turns
+        # AND we're now on the U tile, ascend back to the prior
+        # floor. Region-split layouts (e.g. s=88 human F2 with U at
+        # (1,1) and a single '.' neighbour, surrounded by walls)
+        # leave the smart-policy's normal step-off bouncing forever
+        # because the only non-pair neighbour is the other stair-
+        # adjacent tile. Build 318 tried a symmetric stair-island
+        # 'u' valve but it cancelled out with stairs_down's 'd'
+        # valve on descend/ascend, surfacing as 87/159 stuck.
+        # Gating on osc_streak >= 50 fixes that -- the descend
+        # valve fires immediately on entering a stair-island, then
+        # we explore the new floor; only if exploration produces
+        # a real 50-turn wedge does the ascend valve fire, bounded
+        # by the 50T threshold per island visit.
+        osc = obs.get("oscillation") or {}
+        if osc.get("streak", 0) >= 50:
             return "u"
         # Stairs-up_mode fires as soon as you arrive on floor N+1 (your
         # landing tile is the U). Confirming would immediately bounce
