@@ -1535,7 +1535,7 @@ T 759 mode=combat_mode         Celeborn Skywatcher(elf) F3@(18, 1) HP 37/38 MP 0
 -> a
 T 760 mode=combat_mode         Celeborn Skywatcher(elf) F3@(18, 1) HP 36/38 MP 0/0 Hu 64 $ 40 room=M vs Myconid Shaman(L2 HP45/45)
 -> a
-T 761 mode=combat_mode         Celeborn Skywatcher(elf) F3@(18, 1) HP 35/38 MP 0/0 Hu 64 $ 40 room=M vs Myconid Shaman(L2 HP17/45)
+T 761 mode=combat_mode         Celeborn Skywatcher(elf) F3@(18, 1) HP 35/38 MP 0/0 Hu 64 $ 40 room=M vs Myconid Shaman(L2 HP16/45)
 -> f
 T 762 mode=flee_direction_mode Celeborn Skywatcher(elf) F3@(18, 1) HP 34/38 MP 0/0 Hu 64 $ 40 room=M
 -> w
@@ -1804,634 +1804,708 @@ T 893 mode=garden_mode         Celeborn Skywatcher(elf) F2@( 9, 4) HP 26/44 MP 0
 T 894 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 4) HP 26/44 MP 0/0 Hu  0 $ 140 room=.
 -> n
 T 895 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 140 room=V
--> r3
-T 896 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 100 room=V
 -> b15
-T 897 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 90 room=V
+T 896 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 130 room=V
 -> b6
-T 898 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 40 room=V
+T 897 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 80 room=V
 -> b6
-T 899 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 10 room=V
--> b13
-T 900 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 5 room=V
--> b13
-T 901 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 0 room=V
+T 898 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 50 room=V
+-> b6
+T 899 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 20 room=V
+-> b12
+T 900 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 15 room=V
+-> b12
+T 901 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 10 room=V
+-> b12
+T 902 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 5 room=V
+-> b12
+T 903 mode=vendor_shop         Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 0 room=V
 -> x
-T 902 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 0 room=V
+T 904 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 0 room=V
 -> i
-T 903 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 0 room=V
+T 905 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 3) HP 24/44 MP 0/0 Hu  0 $ 0 room=V
 -> u7
-T 904 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 3) HP 44/44 MP 0/0 Hu  0 $ 0 room=V
--> x
-T 905 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 3) HP 44/44 MP 0/0 Hu  0 $ 0 room=V
--> i
 T 906 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 3) HP 44/44 MP 0/0 Hu  0 $ 0 room=V
--> eat1
-T 907 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 3) HP 44/44 MP 0/0 Hu 50 $ 0 room=V
 -> x
-T 908 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 3) HP 44/44 MP 0/0 Hu 50 $ 0 room=V
--> n
-T 909 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 2) HP 44/44 MP 0/0 Hu 49 $ 0 room=.
+T 907 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 3) HP 44/44 MP 0/0 Hu  0 $ 0 room=V
 -> i
-T 910 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 2) HP 44/44 MP 0/0 Hu 49 $ 0 room=.
+T 908 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 3) HP 44/44 MP 0/0 Hu  0 $ 0 room=V
 -> eat1
-T 911 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 2) HP 44/44 MP 0/0 Hu 99 $ 0 room=.
+T 909 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 3) HP 44/44 MP 0/0 Hu 50 $ 0 room=V
 -> x
-T 912 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 2) HP 44/44 MP 0/0 Hu 99 $ 0 room=.
+T 910 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 3) HP 44/44 MP 0/0 Hu 50 $ 0 room=V
 -> n
-T 913 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 9, 1) HP 44/44 MP 0/0 Hu 98 $ 0 room=M vs Giant Centipede(L1 HP15/15)
+T 911 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 2) HP 44/44 MP 0/0 Hu 49 $ 0 room=.
+-> i
+T 912 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 2) HP 44/44 MP 0/0 Hu 49 $ 0 room=.
+-> eat1
+T 913 mode=inventory           Celeborn Skywatcher(elf) F2@( 9, 2) HP 44/44 MP 0/0 Hu 99 $ 0 room=.
+-> x
+T 914 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 2) HP 44/44 MP 0/0 Hu 99 $ 0 room=.
+-> n
+T 915 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 9, 1) HP 44/44 MP 0/0 Hu 98 $ 0 room=M vs Giant Centipede(L1 HP15/15)
 -> a
-T 914 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 9, 1) HP 44/44 MP 0/0 Hu 98 $ 0 room=M vs Giant Centipede(L1 HP15/15)
+T 916 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 9, 1) HP 44/44 MP 0/0 Hu 98 $ 0 room=M vs Giant Centipede(L1 HP15/15)
 -> a
-T 915 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 9, 1) HP 43/44 MP 0/0 Hu 98 $ 0 room=M vs Giant Centipede(L1 HP15/15)
+T 917 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 9, 1) HP 43/44 MP 0/0 Hu 98 $ 0 room=M vs Giant Centipede(L1 HP15/15)
 -> a
-T 916 mode=combat_victory      Celeborn Skywatcher(elf) F2@( 9, 1) HP 43/44 MP 0/0 Hu 98 $ 2 room=.
+T 918 mode=combat_victory      Celeborn Skywatcher(elf) F2@( 9, 1) HP 43/44 MP 0/0 Hu 98 $ 2 room=.
 -> back
-T 917 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 1) HP 43/44 MP 0/0 Hu 98 $ 2 room=.
+T 919 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 1) HP 43/44 MP 0/0 Hu 98 $ 2 room=.
 -> w
-T 918 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 1) HP 43/44 MP 0/0 Hu 97 $ 2 room=.
+T 920 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 1) HP 43/44 MP 0/0 Hu 97 $ 2 room=.
 -> w
-T 919 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 1) HP 44/44 MP 0/0 Hu 96 $ 2 room=.
+T 921 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 1) HP 44/44 MP 0/0 Hu 96 $ 2 room=.
 -> s
-T 920 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 2) HP 44/44 MP 0/0 Hu 95 $ 2 room=.
+T 922 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 2) HP 44/44 MP 0/0 Hu 95 $ 2 room=.
 -> s
-T 921 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 3) HP 44/44 MP 0/0 Hu 94 $ 2 room=.
+T 923 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 3) HP 44/44 MP 0/0 Hu 94 $ 2 room=.
 -> w
-T 922 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 3) HP 44/44 MP 0/0 Hu 93 $ 2 room=.
+T 924 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 3) HP 44/44 MP 0/0 Hu 93 $ 2 room=.
 -> n
-T 923 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 2) HP 44/44 MP 0/0 Hu 92 $ 2 room=.
+T 925 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 2) HP 44/44 MP 0/0 Hu 92 $ 2 room=.
 -> n
-T 924 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 1) HP 44/44 MP 0/0 Hu 91 $ 2 room=.
+T 926 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 1) HP 44/44 MP 0/0 Hu 91 $ 2 room=.
 -> w
-T 925 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 1) HP 44/44 MP 0/0 Hu 90 $ 2 room=.
+T 927 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 1) HP 44/44 MP 0/0 Hu 90 $ 2 room=.
 -> w
-T 926 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 1) HP 44/44 MP 0/0 Hu 89 $ 2 room=.
+T 928 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 1) HP 44/44 MP 0/0 Hu 89 $ 2 room=.
 -> s
-T 927 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 2) HP 44/44 MP 0/0 Hu 88 $ 2 room=.
+T 929 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 2) HP 44/44 MP 0/0 Hu 88 $ 2 room=.
 -> i
-T 928 mode=inventory           Celeborn Skywatcher(elf) F2@( 4, 2) HP 44/44 MP 0/0 Hu 88 $ 2 room=.
+T 930 mode=inventory           Celeborn Skywatcher(elf) F2@( 4, 2) HP 44/44 MP 0/0 Hu 88 $ 2 room=.
 -> eat2
-T 929 mode=inventory           Celeborn Skywatcher(elf) F2@( 4, 2) HP 44/44 MP 0/0 Hu 93 $ 2 room=.
+T 931 mode=inventory           Celeborn Skywatcher(elf) F2@( 4, 2) HP 44/44 MP 0/0 Hu 93 $ 2 room=.
 -> x
-T 930 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 2) HP 44/44 MP 0/0 Hu 93 $ 2 room=.
+T 932 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 2) HP 44/44 MP 0/0 Hu 93 $ 2 room=.
 -> s
-T 931 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 3) HP 44/44 MP 0/0 Hu 92 $ 2 room=.
+T 933 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 3) HP 44/44 MP 0/0 Hu 92 $ 2 room=.
 -> e
-T 932 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 3) HP 44/44 MP 0/0 Hu 91 $ 2 room=.
+T 934 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 3) HP 44/44 MP 0/0 Hu 91 $ 2 room=.
 -> s
-T 933 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 4) HP 44/44 MP 0/0 Hu 90 $ 2 room=.
+T 935 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 4) HP 44/44 MP 0/0 Hu 90 $ 2 room=.
 -> s
-T 934 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 5) HP 44/44 MP 0/0 Hu 89 $ 2 room=.
+T 936 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 5) HP 44/44 MP 0/0 Hu 89 $ 2 room=.
 -> s
-T 935 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 6) HP 44/44 MP 0/0 Hu 88 $ 2 room=.
+T 937 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 6) HP 44/44 MP 0/0 Hu 88 $ 2 room=.
 -> e
-T 936 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 6) HP 44/44 MP 0/0 Hu 87 $ 2 room=.
+T 938 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 6) HP 44/44 MP 0/0 Hu 87 $ 2 room=.
 -> e
-T 937 mode=garden_mode         Celeborn Skywatcher(elf) F2@( 7, 6) HP 44/44 MP 0/0 Hu 86 $ 2 room=G
+T 939 mode=garden_mode         Celeborn Skywatcher(elf) F2@( 7, 6) HP 44/44 MP 0/0 Hu 86 $ 2 room=G
 -> h
-T 938 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 6) HP 44/44 MP 0/0 Hu 86 $ 2 room=.
+T 940 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 6) HP 44/44 MP 0/0 Hu 86 $ 2 room=.
 -> n
-T 939 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 5) HP 44/44 MP 0/0 Hu 85 $ 2 room=.
+T 941 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 5) HP 44/44 MP 0/0 Hu 85 $ 2 room=.
 -> e
-T 940 mode=chest_mode          Celeborn Skywatcher(elf) F2@( 8, 5) HP 44/44 MP 0/0 Hu 84 $ 2 room=C
+T 942 mode=chest_mode          Celeborn Skywatcher(elf) F2@( 8, 5) HP 44/44 MP 0/0 Hu 84 $ 2 room=C
 -> o
-T 941 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 5) HP 28/44 MP 0/0 Hu 84 $ 2 room=.
+T 943 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 5) HP 28/44 MP 0/0 Hu 84 $ 2 room=.
 -> n
-T 942 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 4) HP 28/44 MP 0/0 Hu 83 $ 2 room=.
+T 944 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 4) HP 28/44 MP 0/0 Hu 83 $ 2 room=.
 -> n
-T 943 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 3) HP 28/44 MP 0/0 Hu 82 $ 2 room=.
+T 945 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 3) HP 28/44 MP 0/0 Hu 82 $ 2 room=.
 -> e
-T 944 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 3) HP 28/44 MP 0/0 Hu 81 $ 2 room=V
+T 946 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 3) HP 28/44 MP 0/0 Hu 81 $ 2 room=V
 -> s
-T 945 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 4) HP 29/44 MP 0/0 Hu 80 $ 2 room=.
+T 947 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 4) HP 29/44 MP 0/0 Hu 80 $ 2 room=.
 -> e
-T 946 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 4) HP 29/44 MP 0/0 Hu 79 $ 2 room=.
+T 948 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 4) HP 29/44 MP 0/0 Hu 79 $ 2 room=.
 -> n
-T 947 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 3) HP 29/44 MP 0/0 Hu 78 $ 2 room=.
+T 949 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 3) HP 29/44 MP 0/0 Hu 78 $ 2 room=.
 -> e
-T 948 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 3) HP 29/44 MP 0/0 Hu 77 $ 2 room=.
+T 950 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 3) HP 29/44 MP 0/0 Hu 77 $ 2 room=.
 -> s
-T 949 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 4) HP 30/44 MP 0/0 Hu 76 $ 2 room=.
+T 951 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 4) HP 30/44 MP 0/0 Hu 76 $ 2 room=.
 -> e
-T 950 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 4) HP 30/44 MP 0/0 Hu 75 $ 2 room=.
+T 952 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 4) HP 30/44 MP 0/0 Hu 75 $ 2 room=.
 -> s
-T 951 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 5) HP 30/44 MP 0/0 Hu 74 $ 2 room=.
+T 953 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 5) HP 30/44 MP 0/0 Hu 74 $ 2 room=.
 -> e
-T 952 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 5) HP 30/44 MP 0/0 Hu 73 $ 2 room=.
+T 954 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 5) HP 30/44 MP 0/0 Hu 73 $ 2 room=.
 -> s
-T 953 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 6) HP 31/44 MP 0/0 Hu 72 $ 2 room=.
+T 955 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 6) HP 31/44 MP 0/0 Hu 72 $ 2 room=.
 -> e
-T 954 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 6) HP 31/44 MP 0/0 Hu 71 $ 2 room=.
+T 956 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 6) HP 31/44 MP 0/0 Hu 71 $ 2 room=.
 -> s
-T 955 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 7) HP 31/44 MP 0/0 Hu 70 $ 2 room=.
+T 957 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 7) HP 31/44 MP 0/0 Hu 70 $ 2 room=.
 -> w
-T 956 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 7) HP 31/44 MP 0/0 Hu 69 $ 2 room=.
+T 958 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 7) HP 31/44 MP 0/0 Hu 69 $ 2 room=.
 -> s
-T 957 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 8) HP 32/44 MP 0/0 Hu 68 $ 2 room=.
+T 959 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 8) HP 32/44 MP 0/0 Hu 68 $ 2 room=.
 -> w
-T 958 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 8) HP 32/44 MP 0/0 Hu 67 $ 2 room=.
+T 960 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 8) HP 32/44 MP 0/0 Hu 67 $ 2 room=.
 -> s
-T 959 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 32/44 MP 0/0 Hu 66 $ 2 room=.
+T 961 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 32/44 MP 0/0 Hu 66 $ 2 room=.
 -> w
-T 960 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 9) HP 32/44 MP 0/0 Hu 65 $ 2 room=.
+T 962 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 9) HP 32/44 MP 0/0 Hu 65 $ 2 room=.
 -> n
-T 961 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 8) HP 33/44 MP 0/0 Hu 64 $ 2 room=.
+T 963 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 8) HP 33/44 MP 0/0 Hu 64 $ 2 room=.
 -> n
-T 962 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 7) HP 33/44 MP 0/0 Hu 63 $ 2 room=.
+T 964 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 7) HP 33/44 MP 0/0 Hu 63 $ 2 room=.
 -> e
-T 963 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 7) HP 33/44 MP 0/0 Hu 62 $ 2 room=.
+T 965 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 7) HP 33/44 MP 0/0 Hu 62 $ 2 room=.
 -> n
-T 964 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 6) HP 33/44 MP 0/0 Hu 61 $ 2 room=.
+T 966 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 6) HP 33/44 MP 0/0 Hu 61 $ 2 room=.
 -> n
-T 965 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 5) HP 34/44 MP 0/0 Hu 60 $ 2 room=.
+T 967 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 5) HP 34/44 MP 0/0 Hu 60 $ 2 room=.
 -> n
-T 966 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 4) HP 34/44 MP 0/0 Hu 59 $ 2 room=.
+T 968 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 4) HP 34/44 MP 0/0 Hu 59 $ 2 room=.
 -> w
-T 967 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 4) HP 34/44 MP 0/0 Hu 58 $ 2 room=.
+T 969 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 4) HP 34/44 MP 0/0 Hu 58 $ 2 room=.
 -> s
-T 968 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 5) HP 34/44 MP 0/0 Hu 57 $ 2 room=.
+T 970 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 5) HP 34/44 MP 0/0 Hu 57 $ 2 room=.
 -> s
-T 969 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 6) HP 34/44 MP 0/0 Hu 56 $ 2 room=.
+T 971 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 6) HP 34/44 MP 0/0 Hu 56 $ 2 room=.
 -> s
-T 970 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 7) HP 34/44 MP 0/0 Hu 55 $ 2 room=.
+T 972 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 7) HP 34/44 MP 0/0 Hu 55 $ 2 room=.
 -> e
-T 971 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 7) HP 34/44 MP 0/0 Hu 54 $ 2 room=.
+T 973 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 7) HP 34/44 MP 0/0 Hu 54 $ 2 room=.
 -> s
-T 972 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 8) HP 34/44 MP 0/0 Hu 53 $ 2 room=.
+T 974 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 8) HP 34/44 MP 0/0 Hu 53 $ 2 room=.
 -> s
-T 973 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 34/44 MP 0/0 Hu 52 $ 2 room=.
+T 975 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 34/44 MP 0/0 Hu 52 $ 2 room=.
 -> w
-T 974 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 9) HP 34/44 MP 0/0 Hu 51 $ 2 room=.
+T 976 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 9) HP 34/44 MP 0/0 Hu 51 $ 2 room=.
 -> w
-T 975 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 9) HP 34/44 MP 0/0 Hu 50 $ 2 room=.
+T 977 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 9) HP 34/44 MP 0/0 Hu 50 $ 2 room=.
 -> n
-T 976 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 8) HP 34/44 MP 0/0 Hu 49 $ 2 room=.
+T 978 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 8) HP 34/44 MP 0/0 Hu 49 $ 2 room=.
 -> i
-T 977 mode=inventory           Celeborn Skywatcher(elf) F2@(10, 8) HP 34/44 MP 0/0 Hu 49 $ 2 room=.
+T 979 mode=inventory           Celeborn Skywatcher(elf) F2@(10, 8) HP 34/44 MP 0/0 Hu 49 $ 2 room=.
 -> u7
-T 978 mode=inventory           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 49 $ 2 room=.
--> x
-T 979 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 49 $ 2 room=.
--> i
 T 980 mode=inventory           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 49 $ 2 room=.
+-> x
+T 981 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 49 $ 2 room=.
+-> i
+T 982 mode=inventory           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 49 $ 2 room=.
 -> eat1
-T 981 mode=inventory           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 99 $ 2 room=.
+T 983 mode=inventory           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 99 $ 2 room=.
 -> x
-T 982 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 99 $ 2 room=.
+T 984 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 99 $ 2 room=.
 -> e
-T 983 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 8) HP 44/44 MP 0/0 Hu 98 $ 2 room=.
+T 985 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 8) HP 44/44 MP 0/0 Hu 98 $ 2 room=.
 -> n
-T 984 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 7) HP 44/44 MP 0/0 Hu 97 $ 2 room=.
+T 986 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 7) HP 44/44 MP 0/0 Hu 97 $ 2 room=.
 -> n
-T 985 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 6) HP 44/44 MP 0/0 Hu 96 $ 2 room=.
+T 987 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 6) HP 44/44 MP 0/0 Hu 96 $ 2 room=.
 -> n
-T 986 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 5) HP 44/44 MP 0/0 Hu 95 $ 2 room=.
+T 988 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 5) HP 44/44 MP 0/0 Hu 95 $ 2 room=.
 -> e
-T 987 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 5) HP 44/44 MP 0/0 Hu 94 $ 2 room=.
+T 989 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 5) HP 44/44 MP 0/0 Hu 94 $ 2 room=.
 -> e
-T 988 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 5) HP 44/44 MP 0/0 Hu 93 $ 2 room=.
+T 990 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 5) HP 44/44 MP 0/0 Hu 93 $ 2 room=.
 -> s
-T 989 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 6) HP 44/44 MP 0/0 Hu 92 $ 2 room=.
+T 991 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 6) HP 44/44 MP 0/0 Hu 92 $ 2 room=.
 -> e
-T 990 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 91 $ 2 room=.
+T 992 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 91 $ 2 room=.
 -> s
-T 991 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 7) HP 44/44 MP 0/0 Hu 90 $ 2 room=.
+T 993 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 7) HP 44/44 MP 0/0 Hu 90 $ 2 room=.
 -> s
-T 992 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 8) HP 44/44 MP 0/0 Hu 89 $ 2 room=.
+T 994 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 8) HP 44/44 MP 0/0 Hu 89 $ 2 room=.
 -> w
-T 993 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 8) HP 44/44 MP 0/0 Hu 88 $ 2 room=.
+T 995 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 8) HP 44/44 MP 0/0 Hu 88 $ 2 room=.
 -> s
-T 994 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 9) HP 44/44 MP 0/0 Hu 87 $ 2 room=.
+T 996 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 9) HP 44/44 MP 0/0 Hu 87 $ 2 room=.
 -> w
-T 995 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 44/44 MP 0/0 Hu 86 $ 2 room=.
+T 997 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 44/44 MP 0/0 Hu 86 $ 2 room=.
 -> n
-T 996 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 8) HP 44/44 MP 0/0 Hu 85 $ 2 room=.
+T 998 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 8) HP 44/44 MP 0/0 Hu 85 $ 2 room=.
 -> n
-T 997 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 7) HP 44/44 MP 0/0 Hu 84 $ 2 room=.
+T 999 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 7) HP 44/44 MP 0/0 Hu 84 $ 2 room=.
 -> e
-T 998 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 7) HP 44/44 MP 0/0 Hu 83 $ 2 room=.
+T1000 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 7) HP 44/44 MP 0/0 Hu 83 $ 2 room=.
 -> s
-T 999 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 8) HP 44/44 MP 0/0 Hu 82 $ 2 room=.
+T1001 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 8) HP 44/44 MP 0/0 Hu 82 $ 2 room=.
 -> s
-T1000 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 9) HP 44/44 MP 0/0 Hu 81 $ 2 room=.
+T1002 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 9) HP 44/44 MP 0/0 Hu 81 $ 2 room=.
 -> w
-T1001 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 44/44 MP 0/0 Hu 80 $ 2 room=.
+T1003 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 44/44 MP 0/0 Hu 80 $ 2 room=.
 -> s
-T1002 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,10) HP 44/44 MP 0/0 Hu 79 $ 2 room=.
+T1004 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,10) HP 44/44 MP 0/0 Hu 79 $ 2 room=.
 -> s
-T1003 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,11) HP 44/44 MP 0/0 Hu 78 $ 2 room=.
+T1005 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,11) HP 44/44 MP 0/0 Hu 78 $ 2 room=.
 -> s
-T1004 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,12) HP 44/44 MP 0/0 Hu 77 $ 2 room=.
+T1006 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,12) HP 44/44 MP 0/0 Hu 77 $ 2 room=.
 -> s
-T1005 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,13) HP 44/44 MP 0/0 Hu 76 $ 2 room=.
+T1007 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,13) HP 44/44 MP 0/0 Hu 76 $ 2 room=.
 -> w
-T1006 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,13) HP 44/44 MP 0/0 Hu 75 $ 2 room=.
+T1008 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,13) HP 44/44 MP 0/0 Hu 75 $ 2 room=.
 -> n
-T1007 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,12) HP 44/44 MP 0/0 Hu 74 $ 2 room=.
+T1009 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,12) HP 44/44 MP 0/0 Hu 74 $ 2 room=.
 -> w
-T1008 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,12) HP 44/44 MP 0/0 Hu 73 $ 2 room=.
+T1010 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,12) HP 44/44 MP 0/0 Hu 73 $ 2 room=.
 -> n
-T1009 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP50/50)
+T1011 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP50/50)
 -> a
-T1010 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 40/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP22/50)
+T1012 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 40/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP21/50)
 -> a
-T1011 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 40/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP22/50)
+T1013 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 40/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP21/50)
 -> a
-T1012 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 36/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP22/50)
+T1014 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 36/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP21/50)
 -> a
-T1013 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 32/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP22/50)
+T1015 mode=combat_mode         Celeborn Skywatcher(elf) F2@(10,11) HP 32/44 MP 0/0 Hu 72 $ 2 room=M vs Orc(L1 HP21/50)
 -> a
-T1014 mode=combat_victory      Celeborn Skywatcher(elf) F2@(10,11) HP 32/44 MP 0/0 Hu 72 $ 10 room=.
+T1016 mode=combat_victory      Celeborn Skywatcher(elf) F2@(10,11) HP 32/44 MP 0/0 Hu 72 $ 10 room=.
 -> back
-T1015 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 32/44 MP 0/0 Hu 72 $ 10 room=.
+T1017 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 32/44 MP 0/0 Hu 72 $ 10 room=.
 -> e
-T1016 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,11) HP 32/44 MP 0/0 Hu 71 $ 10 room=.
+T1018 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,11) HP 32/44 MP 0/0 Hu 71 $ 10 room=.
 -> e
-T1017 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,11) HP 32/44 MP 0/0 Hu 70 $ 10 room=.
+T1019 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,11) HP 32/44 MP 0/0 Hu 70 $ 10 room=.
 -> n
-T1018 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,10) HP 32/44 MP 0/0 Hu 69 $ 10 room=.
+T1020 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,10) HP 32/44 MP 0/0 Hu 69 $ 10 room=.
 -> e
-T1019 mode=game_loop           Celeborn Skywatcher(elf) F2@(13,10) HP 33/44 MP 0/0 Hu 68 $ 10 room=.
+T1021 mode=game_loop           Celeborn Skywatcher(elf) F2@(13,10) HP 33/44 MP 0/0 Hu 68 $ 10 room=.
 -> n
-T1020 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 9) HP 33/44 MP 0/0 Hu 67 $ 10 room=.
+T1022 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 9) HP 33/44 MP 0/0 Hu 67 $ 10 room=.
 -> w
-T1021 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 33/44 MP 0/0 Hu 66 $ 10 room=.
+T1023 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 33/44 MP 0/0 Hu 66 $ 10 room=.
 -> w
-T1022 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 9) HP 33/44 MP 0/0 Hu 65 $ 10 room=.
+T1024 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 9) HP 33/44 MP 0/0 Hu 65 $ 10 room=.
 -> w
-T1023 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 9) HP 34/44 MP 0/0 Hu 64 $ 10 room=.
+T1025 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 9) HP 34/44 MP 0/0 Hu 64 $ 10 room=.
 -> s
-T1024 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,10) HP 34/44 MP 0/0 Hu 63 $ 10 room=.
+T1026 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,10) HP 34/44 MP 0/0 Hu 63 $ 10 room=.
 -> s
-T1025 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 34/44 MP 0/0 Hu 62 $ 10 room=.
+T1027 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 34/44 MP 0/0 Hu 62 $ 10 room=.
 -> i
-T1026 mode=inventory           Celeborn Skywatcher(elf) F2@(10,11) HP 34/44 MP 0/0 Hu 62 $ 10 room=.
+T1028 mode=inventory           Celeborn Skywatcher(elf) F2@(10,11) HP 34/44 MP 0/0 Hu 62 $ 10 room=.
 -> u7
-T1027 mode=inventory           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 62 $ 10 room=.
--> x
-T1028 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 62 $ 10 room=.
--> i
 T1029 mode=inventory           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 62 $ 10 room=.
+-> x
+T1030 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 62 $ 10 room=.
+-> i
+T1031 mode=inventory           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 62 $ 10 room=.
 -> eat2
-T1030 mode=inventory           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 67 $ 10 room=.
+T1032 mode=inventory           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 67 $ 10 room=.
 -> eat1
-T1031 mode=inventory           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu100 $ 10 room=.
+T1033 mode=inventory           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu100 $ 10 room=.
 -> x
-T1032 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu100 $ 10 room=.
+T1034 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu100 $ 10 room=.
 -> e
-T1033 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,11) HP 44/44 MP 0/0 Hu 99 $ 10 room=.
+T1035 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,11) HP 44/44 MP 0/0 Hu 99 $ 10 room=.
 -> e
-T1034 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,11) HP 44/44 MP 0/0 Hu 98 $ 10 room=.
+T1036 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,11) HP 44/44 MP 0/0 Hu 98 $ 10 room=.
 -> n
-T1035 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,10) HP 44/44 MP 0/0 Hu 97 $ 10 room=.
+T1037 mode=game_loop           Celeborn Skywatcher(elf) F2@(12,10) HP 44/44 MP 0/0 Hu 97 $ 10 room=.
 -> e
-T1036 mode=game_loop           Celeborn Skywatcher(elf) F2@(13,10) HP 44/44 MP 0/0 Hu 96 $ 10 room=.
+T1038 mode=game_loop           Celeborn Skywatcher(elf) F2@(13,10) HP 44/44 MP 0/0 Hu 96 $ 10 room=.
 -> n
-T1037 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 9) HP 44/44 MP 0/0 Hu 95 $ 10 room=.
+T1039 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 9) HP 44/44 MP 0/0 Hu 95 $ 10 room=.
 -> w
-T1038 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 44/44 MP 0/0 Hu 94 $ 10 room=.
+T1040 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 9) HP 44/44 MP 0/0 Hu 94 $ 10 room=.
 -> n
-T1039 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 8) HP 44/44 MP 0/0 Hu 93 $ 10 room=.
+T1041 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 8) HP 44/44 MP 0/0 Hu 93 $ 10 room=.
 -> e
-T1040 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 8) HP 44/44 MP 0/0 Hu 92 $ 10 room=.
+T1042 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 8) HP 44/44 MP 0/0 Hu 92 $ 10 room=.
 -> e
-T1041 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 8) HP 44/44 MP 0/0 Hu 91 $ 10 room=.
+T1043 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 8) HP 44/44 MP 0/0 Hu 91 $ 10 room=.
 -> n
-T1042 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 7) HP 44/44 MP 0/0 Hu 90 $ 10 room=.
+T1044 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 7) HP 44/44 MP 0/0 Hu 90 $ 10 room=.
 -> n
-T1043 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 89 $ 10 room=.
+T1045 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 89 $ 10 room=.
 -> n
-T1044 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 5) HP 44/44 MP 0/0 Hu 88 $ 10 room=.
+T1046 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 5) HP 44/44 MP 0/0 Hu 88 $ 10 room=.
 -> e
-T1045 mode=game_loop           Celeborn Skywatcher(elf) F2@(15, 5) HP 44/44 MP 0/0 Hu 87 $ 10 room=.
+T1047 mode=game_loop           Celeborn Skywatcher(elf) F2@(15, 5) HP 44/44 MP 0/0 Hu 87 $ 10 room=.
 -> s
-T1046 mode=game_loop           Celeborn Skywatcher(elf) F2@(15, 6) HP 44/44 MP 0/0 Hu 86 $ 10 room=.
+T1048 mode=game_loop           Celeborn Skywatcher(elf) F2@(15, 6) HP 44/44 MP 0/0 Hu 86 $ 10 room=.
 -> e
-T1047 mode=game_loop           Celeborn Skywatcher(elf) F2@(16, 6) HP 44/44 MP 0/0 Hu 85 $ 10 room=.
+T1049 mode=game_loop           Celeborn Skywatcher(elf) F2@(16, 6) HP 44/44 MP 0/0 Hu 85 $ 10 room=.
 -> e
-T1048 mode=game_loop           Celeborn Skywatcher(elf) F2@(17, 6) HP 44/44 MP 0/0 Hu 84 $ 10 room=.
--> e
-T1049 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 6) HP 44/44 MP 0/0 Hu 83 $ 10 room=.
--> e
-T1050 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 6) HP 44/44 MP 0/0 Hu 82 $ 10 room=.
+T1050 mode=game_loop           Celeborn Skywatcher(elf) F2@(17, 6) HP 44/44 MP 0/0 Hu 84 $ 10 room=.
 -> l
-T1051 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 6) HP 44/44 MP 0/0 Hu 82 $ 10 room=.
+T1051 mode=game_loop           Celeborn Skywatcher(elf) F2@(17, 6) HP 44/44 MP 0/0 Hu 84 $ 10 room=.
 -> l
-T1052 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 6) HP 44/44 MP 0/0 Hu 82 $ 10 room=.
+T1052 mode=game_loop           Celeborn Skywatcher(elf) F2@(17, 6) HP 44/44 MP 0/0 Hu 84 $ 10 room=.
+-> e
+T1053 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 6) HP 44/44 MP 0/0 Hu 83 $ 10 room=.
+-> l
+T1054 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 6) HP 44/44 MP 0/0 Hu 83 $ 10 room=.
+-> e
+T1055 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 6) HP 44/44 MP 0/0 Hu 82 $ 10 room=.
+-> l
+T1056 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 6) HP 44/44 MP 0/0 Hu 82 $ 10 room=.
 -> n
-T1053 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 5) HP 44/44 MP 0/0 Hu 81 $ 10 room=.
--> l
-T1054 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 5) HP 44/44 MP 0/0 Hu 81 $ 10 room=.
+T1057 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 5) HP 44/44 MP 0/0 Hu 81 $ 10 room=.
 -> n
-T1055 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 4) HP 44/44 MP 0/0 Hu 80 $ 10 room=.
--> l
-T1056 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 4) HP 44/44 MP 0/0 Hu 80 $ 10 room=.
+T1058 mode=game_loop           Celeborn Skywatcher(elf) F2@(19, 4) HP 44/44 MP 0/0 Hu 80 $ 10 room=.
 -> w
-T1057 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 4) HP 44/44 MP 0/0 Hu 79 $ 10 room=.
--> l
-T1058 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 4) HP 44/44 MP 0/0 Hu 79 $ 10 room=.
+T1059 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 4) HP 44/44 MP 0/0 Hu 79 $ 10 room=.
 -> n
-T1059 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 3) HP 44/44 MP 0/0 Hu 78 $ 10 room=.
+T1060 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 3) HP 44/44 MP 0/0 Hu 78 $ 10 room=.
+-> l
+T1061 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 3) HP 44/44 MP 0/0 Hu 78 $ 10 room=.
 -> s
-T1060 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 4) HP 44/44 MP 0/0 Hu 77 $ 10 room=.
--> l
-T1061 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 4) HP 44/44 MP 0/0 Hu 77 $ 10 room=.
+T1062 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 4) HP 44/44 MP 0/0 Hu 77 $ 10 room=.
 -> s
-T1062 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 5) HP 44/44 MP 0/0 Hu 76 $ 10 room=.
+T1063 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 5) HP 44/44 MP 0/0 Hu 76 $ 10 room=.
 -> s
-T1063 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 6) HP 44/44 MP 0/0 Hu 75 $ 10 room=.
+T1064 mode=game_loop           Celeborn Skywatcher(elf) F2@(18, 6) HP 44/44 MP 0/0 Hu 75 $ 10 room=.
 -> w
-T1064 mode=game_loop           Celeborn Skywatcher(elf) F2@(17, 6) HP 44/44 MP 0/0 Hu 74 $ 10 room=.
+T1065 mode=game_loop           Celeborn Skywatcher(elf) F2@(17, 6) HP 44/44 MP 0/0 Hu 74 $ 10 room=.
 -> w
-T1065 mode=game_loop           Celeborn Skywatcher(elf) F2@(16, 6) HP 44/44 MP 0/0 Hu 73 $ 10 room=.
+T1066 mode=game_loop           Celeborn Skywatcher(elf) F2@(16, 6) HP 44/44 MP 0/0 Hu 73 $ 10 room=.
 -> w
-T1066 mode=game_loop           Celeborn Skywatcher(elf) F2@(15, 6) HP 44/44 MP 0/0 Hu 72 $ 10 room=.
+T1067 mode=game_loop           Celeborn Skywatcher(elf) F2@(15, 6) HP 44/44 MP 0/0 Hu 72 $ 10 room=.
 -> n
-T1067 mode=game_loop           Celeborn Skywatcher(elf) F2@(15, 5) HP 44/44 MP 0/0 Hu 71 $ 10 room=.
+T1068 mode=game_loop           Celeborn Skywatcher(elf) F2@(15, 5) HP 44/44 MP 0/0 Hu 71 $ 10 room=.
 -> w
-T1068 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 5) HP 44/44 MP 0/0 Hu 70 $ 10 room=.
--> l
 T1069 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 5) HP 44/44 MP 0/0 Hu 70 $ 10 room=.
--> w
-T1070 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 5) HP 44/44 MP 0/0 Hu 69 $ 10 room=.
 -> l
+T1070 mode=game_loop           Celeborn Skywatcher(elf) F2@(14, 5) HP 44/44 MP 0/0 Hu 70 $ 10 room=.
+-> w
 T1071 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 5) HP 44/44 MP 0/0 Hu 69 $ 10 room=.
--> s
-T1072 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 6) HP 44/44 MP 0/0 Hu 68 $ 10 room=.
--> w
-T1073 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 6) HP 44/44 MP 0/0 Hu 67 $ 10 room=.
--> w
-T1074 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 6) HP 44/44 MP 0/0 Hu 66 $ 10 room=.
 -> l
+T1072 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 5) HP 44/44 MP 0/0 Hu 69 $ 10 room=.
+-> s
+T1073 mode=game_loop           Celeborn Skywatcher(elf) F2@(13, 6) HP 44/44 MP 0/0 Hu 68 $ 10 room=.
+-> w
+T1074 mode=game_loop           Celeborn Skywatcher(elf) F2@(12, 6) HP 44/44 MP 0/0 Hu 67 $ 10 room=.
+-> w
 T1075 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 6) HP 44/44 MP 0/0 Hu 66 $ 10 room=.
--> s
-T1076 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 7) HP 44/44 MP 0/0 Hu 65 $ 10 room=.
--> s
-T1077 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 8) HP 44/44 MP 0/0 Hu 64 $ 10 room=.
--> s
-T1078 mode=game_loop           Celeborn Skywatcher(elf) F2@(11, 9) HP 44/44 MP 0/0 Hu 63 $ 10 room=.
--> s
-T1079 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,10) HP 44/44 MP 0/0 Hu 62 $ 10 room=.
 -> w
-T1080 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,10) HP 44/44 MP 0/0 Hu 61 $ 10 room=.
+T1076 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 6) HP 44/44 MP 0/0 Hu 65 $ 10 room=.
 -> l
+T1077 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 6) HP 44/44 MP 0/0 Hu 65 $ 10 room=.
+-> s
+T1078 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 7) HP 44/44 MP 0/0 Hu 64 $ 10 room=.
+-> s
+T1079 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 8) HP 44/44 MP 0/0 Hu 63 $ 10 room=.
+-> s
+T1080 mode=game_loop           Celeborn Skywatcher(elf) F2@(10, 9) HP 44/44 MP 0/0 Hu 62 $ 10 room=.
+-> s
 T1081 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,10) HP 44/44 MP 0/0 Hu 61 $ 10 room=.
--> s
-T1082 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 60 $ 10 room=.
 -> l
+T1082 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,10) HP 44/44 MP 0/0 Hu 61 $ 10 room=.
+-> s
 T1083 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 60 $ 10 room=.
+-> l
+T1084 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,11) HP 44/44 MP 0/0 Hu 60 $ 10 room=.
 -> s
-T1084 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,12) HP 44/44 MP 0/0 Hu 59 $ 10 room=.
+T1085 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,12) HP 44/44 MP 0/0 Hu 59 $ 10 room=.
 -> s
-T1085 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,13) HP 44/44 MP 0/0 Hu 58 $ 10 room=.
+T1086 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,13) HP 44/44 MP 0/0 Hu 58 $ 10 room=.
 -> s
-T1086 mode=pool_mode           Celeborn Skywatcher(elf) F2@(10,14) HP 44/44 MP 0/0 Hu 57 $ 10 room=P
+T1087 mode=pool_mode           Celeborn Skywatcher(elf) F2@(10,14) HP 44/44 MP 0/0 Hu 57 $ 10 room=P
 -> dr
-T1087 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,14) HP 44/44 MP 0/0 Hu 57 $ 10 room=.
+T1088 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,14) HP 44/44 MP 0/0 Hu 57 $ 10 room=.
 -> w
-T1088 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 44/44 MP 0/0 Hu 56 $ 10 room=.
+T1089 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 44/44 MP 0/0 Hu 56 $ 10 room=.
 -> w
-T1089 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu 55 $ 10 room=.
--> n
-T1090 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 44/44 MP 0/0 Hu 54 $ 10 room=.
--> e
-T1091 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,13) HP 44/44 MP 0/0 Hu 53 $ 10 room=.
--> e
-T1092 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,13) HP 44/44 MP 0/0 Hu 52 $ 10 room=.
+T1090 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu 55 $ 10 room=.
+-> l
+T1091 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu 55 $ 10 room=.
 -> s
-T1093 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,14) HP 44/44 MP 0/0 Hu 51 $ 10 room=.
--> w
-T1094 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 44/44 MP 0/0 Hu 50 $ 10 room=.
--> w
-T1095 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu 49 $ 10 room=.
--> n
-T1096 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 44/44 MP 0/0 Hu 48 $ 10 room=.
--> e
-T1097 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,13) HP 44/44 MP 0/0 Hu 47 $ 10 room=.
--> e
-T1098 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,13) HP 44/44 MP 0/0 Hu 46 $ 10 room=.
+T1092 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,15) HP 44/44 MP 0/0 Hu 54 $ 10 room=.
 -> s
-T1099 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,14) HP 44/44 MP 0/0 Hu 45 $ 10 room=.
--> w
-T1100 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 44/44 MP 0/0 Hu 44 $ 10 room=.
--> w
-T1101 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu 43 $ 10 room=.
--> n
-T1102 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 44/44 MP 0/0 Hu 42 $ 10 room=.
--> n
-T1103 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,12) HP 44/44 MP 0/0 Hu 41 $ 10 room=.
--> n
-T1104 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,11) HP 44/44 MP 0/0 Hu 40 $ 10 room=.
--> w
-T1105 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7,11) HP 44/44 MP 0/0 Hu 39 $ 10 room=.
--> s
-T1106 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7,12) HP 44/44 MP 0/0 Hu 38 $ 10 room=.
--> s
-T1107 mode=stairs_down_mode    Celeborn Skywatcher(elf) F2@( 7,13) HP 44/44 MP 0/0 Hu 37 $ 10 room=D
--> e
-T1108 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 44/44 MP 0/0 Hu 36 $ 10 room=.
--> s
-T1109 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu 35 $ 10 room=.
--> e
-T1110 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 44/44 MP 0/0 Hu 34 $ 10 room=.
--> n
-T1111 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,13) HP 44/44 MP 0/0 Hu 33 $ 10 room=.
--> n
-T1112 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,12) HP 44/44 MP 0/0 Hu 32 $ 10 room=.
--> e
-T1113 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,12) HP 44/44 MP 0/0 Hu 31 $ 10 room=.
--> s
-T1114 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,13) HP 44/44 MP 0/0 Hu 30 $ 10 room=.
--> s
-T1115 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,14) HP 44/44 MP 0/0 Hu 29 $ 10 room=.
--> w
-T1116 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 44/44 MP 0/0 Hu 28 $ 10 room=.
--> w
-T1117 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu 27 $ 10 room=.
--> n
-T1118 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 44/44 MP 0/0 Hu 26 $ 10 room=.
--> n
-T1119 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,12) HP 44/44 MP 0/0 Hu 25 $ 10 room=.
--> n
-T1120 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,11) HP 44/44 MP 0/0 Hu 24 $ 10 room=.
--> w
-T1121 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7,11) HP 44/44 MP 0/0 Hu 23 $ 10 room=.
--> s
-T1122 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7,12) HP 44/44 MP 0/0 Hu 22 $ 10 room=.
--> s
-T1123 mode=stairs_down_mode    Celeborn Skywatcher(elf) F2@( 7,13) HP 44/44 MP 0/0 Hu 21 $ 10 room=D
--> e
-T1124 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 44/44 MP 0/0 Hu 20 $ 10 room=.
--> s
-T1125 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu 19 $ 10 room=.
--> e
-T1126 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 44/44 MP 0/0 Hu 18 $ 10 room=.
--> n
-T1127 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,13) HP 44/44 MP 0/0 Hu 17 $ 10 room=.
--> n
-T1128 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,12) HP 44/44 MP 0/0 Hu 16 $ 10 room=.
--> w
-T1129 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,12) HP 44/44 MP 0/0 Hu 15 $ 10 room=.
--> s
-T1130 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 44/44 MP 0/0 Hu 14 $ 10 room=.
--> s
-T1131 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu 13 $ 10 room=.
--> s
-T1132 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,15) HP 44/44 MP 0/0 Hu 12 $ 10 room=.
--> s
-T1133 mode=chest_mode          Celeborn Skywatcher(elf) F2@( 8,16) HP 44/44 MP 0/0 Hu 11 $ 10 room=C
--> e
-T1134 mode=chest_mode          Celeborn Skywatcher(elf) F2@( 9,16) HP 44/44 MP 0/0 Hu 10 $ 10 room=C
+T1093 mode=chest_mode          Celeborn Skywatcher(elf) F2@( 8,16) HP 44/44 MP 0/0 Hu 53 $ 10 room=C
 -> o
-T1135 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,16) HP 44/44 MP 0/0 Hu 10 $ 10 room=.
+T1094 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 44/44 MP 0/0 Hu 53 $ 10 room=.
+-> w
+T1095 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7,16) HP 44/44 MP 0/0 Hu 52 $ 10 room=.
 -> e
-T1136 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 44/44 MP 0/0 Hu  9 $ 10 room=.
+T1096 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 44/44 MP 0/0 Hu 51 $ 10 room=.
 -> e
-T1137 mode=combat_mode         Celeborn Skywatcher(elf) F2@(11,16) HP 44/44 MP 0/0 Hu  8 $ 10 room=M vs Goblin(L1 HP30/30)
+T1097 mode=chest_mode          Celeborn Skywatcher(elf) F2@( 9,16) HP 44/44 MP 0/0 Hu 50 $ 10 room=C
+-> o
+T1098 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,16) HP 44/44 MP 0/0 Hu 50 $ 150 room=.
+-> e
+T1099 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 44/44 MP 0/0 Hu 49 $ 150 room=.
+-> e
+T1100 mode=combat_mode         Celeborn Skywatcher(elf) F2@(11,16) HP 44/44 MP 0/0 Hu 48 $ 150 room=M vs Sewer Rat(L1 HP10/10)
 -> a
-T1138 mode=combat_victory      Celeborn Skywatcher(elf) F2@(11,16) HP 44/44 MP 0/0 Hu  8 $ 22 room=.
+T1101 mode=combat_mode         Celeborn Skywatcher(elf) F2@(11,16) HP 43/44 MP 0/0 Hu 48 $ 150 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T1102 mode=combat_victory      Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu 48 $ 162 room=.
 -> back
-T1139 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 44/44 MP 0/0 Hu  8 $ 22 room=.
--> w
-T1140 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 44/44 MP 0/0 Hu  7 $ 22 room=.
--> e
-T1141 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 44/44 MP 0/0 Hu  6 $ 22 room=.
--> w
-T1142 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 44/44 MP 0/0 Hu  5 $ 22 room=.
--> w
-T1143 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,16) HP 44/44 MP 0/0 Hu  4 $ 22 room=.
--> w
-T1144 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 44/44 MP 0/0 Hu  3 $ 22 room=C
--> n
-T1145 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,15) HP 44/44 MP 0/0 Hu  2 $ 22 room=.
--> n
-T1146 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu  1 $ 22 room=.
+T1103 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu 48 $ 162 room=.
 -> i
-T1147 mode=inventory           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu  1 $ 22 room=.
+T1104 mode=inventory           Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu 48 $ 162 room=.
+-> eat1
+T1105 mode=inventory           Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu 53 $ 162 room=.
 -> u8
-T1148 mode=upgrade_scroll_mode Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu  1 $ 22 room=.
+T1106 mode=upgrade_scroll_mode Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu 53 $ 162 room=.
 -> 1
-T1149 mode=inventory           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu  1 $ 22 room=.
+T1107 mode=inventory           Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu 53 $ 162 room=.
 -> x
-T1150 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 44/44 MP 0/0 Hu  1 $ 22 room=.
+T1108 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu 53 $ 162 room=.
+-> w
+T1109 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 42/44 MP 0/0 Hu 52 $ 162 room=.
 -> e
-T1151 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 42/44 MP 0/0 Hu  0 $ 22 room=.
+T1110 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu 51 $ 162 room=.
+-> w
+T1111 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 42/44 MP 0/0 Hu 50 $ 162 room=.
+-> w
+T1112 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,16) HP 42/44 MP 0/0 Hu 49 $ 162 room=.
+-> w
+T1113 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 42/44 MP 0/0 Hu 48 $ 162 room=.
 -> n
-T1152 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,13) HP 40/44 MP 0/0 Hu  0 $ 22 room=.
+T1114 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,15) HP 42/44 MP 0/0 Hu 47 $ 162 room=.
 -> n
-T1153 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,12) HP 38/44 MP 0/0 Hu  0 $ 22 room=.
+T1115 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 42/44 MP 0/0 Hu 46 $ 162 room=.
+-> n
+T1116 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 42/44 MP 0/0 Hu 45 $ 162 room=.
 -> w
-T1154 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,12) HP 36/44 MP 0/0 Hu  0 $ 22 room=.
--> s
-T1155 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 34/44 MP 0/0 Hu  0 $ 22 room=.
--> s
-T1156 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 32/44 MP 0/0 Hu  0 $ 22 room=.
--> s
-T1157 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,15) HP 30/44 MP 0/0 Hu  0 $ 22 room=.
--> s
-T1158 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 28/44 MP 0/0 Hu  0 $ 22 room=C
+T1117 mode=stairs_down_mode    Celeborn Skywatcher(elf) F2@( 7,13) HP 42/44 MP 0/0 Hu 44 $ 162 room=D
+-> n
+T1118 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7,12) HP 42/44 MP 0/0 Hu 43 $ 162 room=.
+-> n
+T1119 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7,11) HP 42/44 MP 0/0 Hu 42 $ 162 room=.
+-> n
+T1120 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7,10) HP 42/44 MP 0/0 Hu 41 $ 162 room=.
+-> n
+T1121 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 9) HP 42/44 MP 0/0 Hu 40 $ 162 room=.
+-> n
+T1122 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 8) HP 42/44 MP 0/0 Hu 39 $ 162 room=.
+-> n
+T1123 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 7) HP 42/44 MP 0/0 Hu 38 $ 162 room=.
+-> n
+T1124 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 6) HP 42/44 MP 0/0 Hu 37 $ 162 room=.
+-> n
+T1125 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 5) HP 42/44 MP 0/0 Hu 36 $ 162 room=.
+-> w
+T1126 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 5) HP 42/44 MP 0/0 Hu 35 $ 162 room=.
+-> w
+T1127 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 5) HP 42/44 MP 0/0 Hu 34 $ 162 room=.
+-> n
+T1128 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 4) HP 42/44 MP 0/0 Hu 33 $ 162 room=.
+-> n
+T1129 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 3) HP 42/44 MP 0/0 Hu 32 $ 162 room=.
 -> e
-T1159 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,16) HP 26/44 MP 0/0 Hu  0 $ 22 room=.
+T1130 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 3) HP 42/44 MP 0/0 Hu 31 $ 162 room=.
 -> e
-T1160 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 24/44 MP 0/0 Hu  0 $ 22 room=.
+T1131 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 3) HP 42/44 MP 0/0 Hu 30 $ 162 room=.
+-> n
+T1132 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 2) HP 42/44 MP 0/0 Hu 29 $ 162 room=.
+-> n
+T1133 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 1) HP 42/44 MP 0/0 Hu 28 $ 162 room=.
+-> w
+T1134 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 1) HP 42/44 MP 0/0 Hu 27 $ 162 room=.
+-> s
+T1135 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 2) HP 42/44 MP 0/0 Hu 26 $ 162 room=.
+-> s
+T1136 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 3) HP 42/44 MP 0/0 Hu 25 $ 162 room=.
 -> e
-T1161 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 22/44 MP 0/0 Hu  0 $ 22 room=.
--> w
-T1162 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 20/44 MP 0/0 Hu  0 $ 22 room=.
+T1137 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 3) HP 42/44 MP 0/0 Hu 24 $ 162 room=.
+-> n
+T1138 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 2) HP 42/44 MP 0/0 Hu 23 $ 162 room=.
+-> n
+T1139 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 1) HP 42/44 MP 0/0 Hu 22 $ 162 room=.
 -> e
-T1163 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 18/44 MP 0/0 Hu  0 $ 22 room=.
+T1140 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 1) HP 42/44 MP 0/0 Hu 21 $ 162 room=.
+-> e
+T1141 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 1) HP 42/44 MP 0/0 Hu 20 $ 162 room=.
+-> s
+T1142 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 2) HP 42/44 MP 0/0 Hu 19 $ 162 room=.
+-> s
+T1143 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 3) HP 42/44 MP 0/0 Hu 18 $ 162 room=V
+-> s
+T1144 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9, 4) HP 42/44 MP 0/0 Hu 17 $ 162 room=.
 -> w
-T1164 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 16/44 MP 0/0 Hu  0 $ 22 room=.
+T1145 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 4) HP 42/44 MP 0/0 Hu 16 $ 162 room=.
+-> s
+T1146 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8, 5) HP 42/44 MP 0/0 Hu 15 $ 162 room=.
 -> w
-T1165 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,16) HP 14/44 MP 0/0 Hu  0 $ 22 room=.
+T1147 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 5) HP 42/44 MP 0/0 Hu 14 $ 162 room=.
 -> w
-T1166 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 12/44 MP 0/0 Hu  0 $ 22 room=C
+T1148 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 5) HP 42/44 MP 0/0 Hu 13 $ 162 room=.
+-> n
+T1149 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 4) HP 42/44 MP 0/0 Hu 12 $ 162 room=.
+-> e
+T1150 mode=altar_mode          Celeborn Skywatcher(elf) F2@( 7, 4) HP 42/44 MP 0/0 Hu 11 $ 162 room=A
+-> pray
+T1151 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 4) HP 42/44 MP 0/0 Hu 11 $ 162 room=.
+-> n
+T1152 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7, 3) HP 42/44 MP 0/0 Hu 10 $ 162 room=.
+-> w
+T1153 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 3) HP 42/44 MP 0/0 Hu  9 $ 162 room=.
+-> w
+T1154 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 3) HP 42/44 MP 0/0 Hu  8 $ 162 room=.
+-> w
+T1155 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 3) HP 42/44 MP 0/0 Hu  7 $ 162 room=.
+-> n
+T1156 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 2) HP 42/44 MP 0/0 Hu  6 $ 162 room=.
+-> e
+T1157 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 5, 2) HP 42/44 MP 0/0 Hu  5 $ 162 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T1158 mode=combat_victory      Celeborn Skywatcher(elf) F2@( 5, 2) HP 42/54 MP 0/0 Hu  5 $ 182 room=.
+-> back
+T1159 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 2) HP 42/54 MP 0/0 Hu  5 $ 182 room=.
+-> e
+T1160 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 2) HP 42/54 MP 0/0 Hu  4 $ 182 room=.
+-> s
+T1161 mode=game_loop           Celeborn Skywatcher(elf) F2@( 6, 3) HP 42/54 MP 0/0 Hu  3 $ 182 room=.
+-> w
+T1162 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 3) HP 42/54 MP 0/0 Hu  2 $ 182 room=.
+-> w
+T1163 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 3) HP 42/54 MP 0/0 Hu  1 $ 182 room=.
+-> n
+T1164 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 2) HP 40/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1165 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 1) HP 38/54 MP 0/0 Hu  0 $ 182 room=.
+-> e
+T1166 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 1) HP 36/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1167 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 2) HP 34/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1168 mode=game_loop           Celeborn Skywatcher(elf) F2@( 5, 3) HP 32/54 MP 0/0 Hu  0 $ 182 room=.
+-> w
+T1169 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 3) HP 30/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1170 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 2) HP 28/54 MP 0/0 Hu  0 $ 182 room=.
+-> w
+T1171 mode=garden_mode         Celeborn Skywatcher(elf) F2@( 3, 2) HP 26/54 MP 0/0 Hu  0 $ 182 room=G
+-> h
+T1172 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 2) HP 26/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1173 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 3) HP 24/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1174 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 4) HP 22/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1175 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 5) HP 20/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1176 mode=chest_mode          Celeborn Skywatcher(elf) F2@( 3, 6) HP 18/54 MP 0/0 Hu  0 $ 182 room=C
+-> o
+T1177 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 6) HP 18/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1178 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 7) HP 16/54 MP 0/0 Hu  0 $ 182 room=.
 -> i
-T1167 mode=inventory           Celeborn Skywatcher(elf) F2@( 8,16) HP 12/44 MP 0/0 Hu  0 $ 22 room=C
--> u7
-T1168 mode=inventory           Celeborn Skywatcher(elf) F2@( 8,16) HP 42/44 MP 0/0 Hu  0 $ 22 room=C
+T1179 mode=inventory           Celeborn Skywatcher(elf) F2@( 3, 7) HP 16/54 MP 0/0 Hu  0 $ 182 room=.
+-> u8
+T1180 mode=inventory           Celeborn Skywatcher(elf) F2@( 3, 7) HP 46/54 MP 0/0 Hu  0 $ 182 room=.
+-> u3
+T1181 mode=inventory           Celeborn Skywatcher(elf) F2@( 3, 7) HP 54/54 MP 0/0 Hu  0 $ 182 room=.
 -> x
-T1169 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 42/44 MP 0/0 Hu  0 $ 22 room=C
--> n
-T1170 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,15) HP 40/44 MP 0/0 Hu  0 $ 22 room=.
--> n
-T1171 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 38/44 MP 0/0 Hu  0 $ 22 room=.
--> n
-T1172 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 36/44 MP 0/0 Hu  0 $ 22 room=.
--> n
-T1173 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,12) HP 34/44 MP 0/0 Hu  0 $ 22 room=.
+T1182 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 7) HP 54/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1183 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 8) HP 52/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1184 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 9) HP 50/54 MP 0/0 Hu  0 $ 182 room=.
 -> e
-T1174 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,12) HP 32/44 MP 0/0 Hu  0 $ 22 room=.
--> s
-T1175 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,13) HP 30/44 MP 0/0 Hu  0 $ 22 room=.
--> s
-T1176 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 28/44 MP 0/0 Hu  0 $ 22 room=.
+T1185 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 4, 9) HP 48/54 MP 0/0 Hu  0 $ 182 room=M vs Stirge(L1 HP6/6)
+-> a
+T1186 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 4, 9) HP 44/54 MP 0/0 Hu  0 $ 182 room=M vs Stirge(L1 HP6/6)
+-> f
+T1187 mode=flee_direction_mode Celeborn Skywatcher(elf) F2@( 4, 9) HP 44/54 MP 0/0 Hu  0 $ 182 room=M
+-> n
+T1188 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 8) HP 44/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1189 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 7) HP 42/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1190 mode=game_loop           Celeborn Skywatcher(elf) F2@( 4, 6) HP 40/54 MP 0/0 Hu  0 $ 182 room=.
 -> w
-T1177 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 26/44 MP 0/0 Hu  0 $ 22 room=.
--> s
-T1178 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,15) HP 24/44 MP 0/0 Hu  0 $ 22 room=.
--> s
-T1179 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 22/44 MP 0/0 Hu  0 $ 22 room=C
--> e
-T1180 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,16) HP 20/44 MP 0/0 Hu  0 $ 22 room=.
--> e
-T1181 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 18/44 MP 0/0 Hu  0 $ 22 room=.
--> e
-T1182 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 16/44 MP 0/0 Hu  0 $ 22 room=.
+T1191 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 6) HP 38/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1192 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 5) HP 36/54 MP 0/0 Hu  0 $ 182 room=.
 -> w
-T1183 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 14/44 MP 0/0 Hu  0 $ 22 room=.
+T1193 mode=game_loop           Celeborn Skywatcher(elf) F2@( 2, 5) HP 34/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1194 mode=game_loop           Celeborn Skywatcher(elf) F2@( 2, 4) HP 32/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1195 mode=game_loop           Celeborn Skywatcher(elf) F2@( 2, 3) HP 30/54 MP 0/0 Hu  0 $ 182 room=.
+-> w
+T1196 mode=game_loop           Celeborn Skywatcher(elf) F2@( 1, 3) HP 28/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1197 mode=game_loop           Celeborn Skywatcher(elf) F2@( 1, 4) HP 26/54 MP 0/0 Hu  0 $ 182 room=.
+-> s
+T1198 mode=combat_mode         Celeborn Skywatcher(elf) F2@( 1, 5) HP 24/54 MP 0/0 Hu  0 $ 182 room=M vs Myconid Shaman(L1 HP45/45)
+-> f
+T1199 mode=flee_direction_mode Celeborn Skywatcher(elf) F2@( 1, 5) HP 23/54 MP 0/0 Hu  0 $ 182 room=M
 -> e
-T1184 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 12/44 MP 0/0 Hu  0 $ 22 room=.
+T1200 mode=game_loop           Celeborn Skywatcher(elf) F2@( 2, 5) HP 23/54 MP 0/0 Hu  0 $ 182 room=.
 -> i
-T1185 mode=inventory           Celeborn Skywatcher(elf) F2@(11,16) HP 12/44 MP 0/0 Hu  0 $ 22 room=.
--> u7
-T1186 mode=inventory           Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu  0 $ 22 room=.
+T1201 mode=inventory           Celeborn Skywatcher(elf) F2@( 2, 5) HP 23/54 MP 0/0 Hu  0 $ 182 room=.
+-> u8
+T1202 mode=inventory           Celeborn Skywatcher(elf) F2@( 2, 5) HP 53/54 MP 0/0 Hu  0 $ 182 room=.
 -> x
-T1187 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 42/44 MP 0/0 Hu  0 $ 22 room=.
--> w
-T1188 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 40/44 MP 0/0 Hu  0 $ 22 room=.
--> w
-T1189 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,16) HP 38/44 MP 0/0 Hu  0 $ 22 room=.
--> w
-T1190 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 36/44 MP 0/0 Hu  0 $ 22 room=C
--> n
-T1191 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,15) HP 34/44 MP 0/0 Hu  0 $ 22 room=.
--> n
-T1192 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 32/44 MP 0/0 Hu  0 $ 22 room=.
+T1203 mode=game_loop           Celeborn Skywatcher(elf) F2@( 2, 5) HP 53/54 MP 0/0 Hu  0 $ 182 room=.
 -> e
-T1193 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,14) HP 30/44 MP 0/0 Hu  0 $ 22 room=.
--> n
-T1194 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,13) HP 28/44 MP 0/0 Hu  0 $ 22 room=.
--> n
-T1195 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,12) HP 26/44 MP 0/0 Hu  0 $ 22 room=.
--> w
-T1196 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,12) HP 24/44 MP 0/0 Hu  0 $ 22 room=.
+T1204 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 5) HP 51/54 MP 0/0 Hu  0 $ 182 room=.
 -> s
-T1197 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,13) HP 22/44 MP 0/0 Hu  0 $ 22 room=.
+T1205 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 6) HP 49/54 MP 0/0 Hu  0 $ 182 room=.
 -> s
-T1198 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,14) HP 20/44 MP 0/0 Hu  0 $ 22 room=.
+T1206 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 7) HP 47/54 MP 0/0 Hu  0 $ 182 room=.
+-> w
+T1207 mode=game_loop           Celeborn Skywatcher(elf) F2@( 2, 7) HP 45/54 MP 0/0 Hu  0 $ 182 room=.
+-> w
+T1208 mode=game_loop           Celeborn Skywatcher(elf) F2@( 1, 7) HP 43/54 MP 0/0 Hu  0 $ 182 room=.
 -> s
-T1199 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,15) HP 18/44 MP 0/0 Hu  0 $ 22 room=.
+T1209 mode=game_loop           Celeborn Skywatcher(elf) F2@( 1, 8) HP 41/54 MP 0/0 Hu  0 $ 182 room=.
+-> e
+T1210 mode=game_loop           Celeborn Skywatcher(elf) F2@( 2, 8) HP 39/54 MP 0/0 Hu  0 $ 182 room=.
+-> e
+T1211 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 8) HP 37/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1212 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 7) HP 35/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1213 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 6) HP 33/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1214 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 5) HP 31/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1215 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 4) HP 29/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1216 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 3) HP 27/54 MP 0/0 Hu  0 $ 182 room=.
+-> n
+T1217 mode=game_loop           Celeborn Skywatcher(elf) F2@( 3, 2) HP 25/54 MP 0/0 Hu  0 $ 182 room=.
+-> w
+T1218 mode=warp_mode           Celeborn Skywatcher(elf) F2@( 2, 2) HP 23/54 MP 0/0 Hu  0 $ 182 room=W
+-> y
+T1219 mode=combat_mode         Celeborn Skywatcher(elf) F4@(10, 7) HP 23/54 MP 0/0 Hu  0 $ 182 room=M vs Displacer Beast(L3 HP42/42)
+-> a
+T1220 mode=combat_mode         Celeborn Skywatcher(elf) F4@(10, 7) HP 21/54 MP 0/0 Hu  0 $ 182 room=M vs Displacer Beast(L3 HP42/42)
+-> a
+T1221 mode=combat_mode         Celeborn Skywatcher(elf) F4@(10, 7) HP 19/54 MP 0/0 Hu  0 $ 182 room=M vs Displacer Beast(L3 HP16/42)
+-> a
+T1222 mode=combat_mode         Celeborn Skywatcher(elf) F4@(10, 7) HP 17/54 MP 0/0 Hu  0 $ 182 room=M vs Displacer Beast(L3 HP16/42)
+-> a
+T1223 mode=combat_mode         Celeborn Skywatcher(elf) F4@(10, 7) HP 15/54 MP 0/0 Hu  0 $ 182 room=M vs Displacer Beast(L3 HP16/42)
+-> a
+T1224 mode=combat_mode         Celeborn Skywatcher(elf) F4@(10, 7) HP 13/54 MP 0/0 Hu  0 $ 182 room=M vs Displacer Beast(L3 HP16/42)
+-> a
+T1225 mode=combat_mode         Celeborn Skywatcher(elf) F4@(10, 7) HP 11/54 MP 0/0 Hu  0 $ 182 room=M vs Displacer Beast(L3 HP16/42)
+-> a
+T1226 mode=combat_mode         Celeborn Skywatcher(elf) F4@(10, 7) HP 11/54 MP 0/0 Hu  0 $ 182 room=M vs Displacer Beast(L3 HP16/42)
+-> a
+T1227 mode=combat_mode         Celeborn Skywatcher(elf) F4@(10, 7) HP 9/54 MP 0/0 Hu  0 $ 182 room=M vs Displacer Beast(L3 HP16/42)
+-> a
+T1228 mode=combat_victory      Celeborn Skywatcher(elf) F4@(10, 7) HP 9/54 MP 0/0 Hu  0 $ 206 room=.
+-> back
+T1229 mode=game_loop           Celeborn Skywatcher(elf) F4@(10, 7) HP 9/54 MP 0/0 Hu  0 $ 206 room=.
+-> i
+T1230 mode=inventory           Celeborn Skywatcher(elf) F4@(10, 7) HP 9/54 MP 0/0 Hu  0 $ 206 room=.
+-> eat1
+T1231 mode=inventory           Celeborn Skywatcher(elf) F4@(10, 7) HP 9/54 MP 0/0 Hu  6 $ 206 room=.
+-> u7
+T1232 mode=inventory           Celeborn Skywatcher(elf) F4@(10, 7) HP 9/54 MP 0/0 Hu  6 $ 206 room=.
+-> x
+T1233 mode=game_loop           Celeborn Skywatcher(elf) F4@(10, 7) HP 9/54 MP 0/0 Hu  6 $ 206 room=.
 -> s
-T1200 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 16/44 MP 0/0 Hu  0 $ 22 room=C
+T1234 mode=game_loop           Celeborn Skywatcher(elf) F4@(10, 8) HP 9/54 MP 0/0 Hu  5 $ 206 room=.
 -> w
-T1201 mode=game_loop           Celeborn Skywatcher(elf) F2@( 7,16) HP 14/44 MP 0/0 Hu  0 $ 22 room=.
--> e
-T1202 mode=game_loop           Celeborn Skywatcher(elf) F2@( 8,16) HP 12/44 MP 0/0 Hu  0 $ 22 room=C
--> e
-T1203 mode=game_loop           Celeborn Skywatcher(elf) F2@( 9,16) HP 10/44 MP 0/0 Hu  0 $ 22 room=.
--> e
-T1204 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 8/44 MP 0/0 Hu  0 $ 22 room=.
--> e
-T1205 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 6/44 MP 0/0 Hu  0 $ 22 room=.
+T1235 mode=chest_mode          Celeborn Skywatcher(elf) F4@( 9, 8) HP 9/54 MP 0/0 Hu  4 $ 206 room=C
+-> n
+T1236 mode=oracle_mode         Celeborn Skywatcher(elf) F4@( 9, 7) HP 9/54 MP 0/0 Hu  3 $ 206 room=O
 -> w
-T1206 mode=game_loop           Celeborn Skywatcher(elf) F2@(10,16) HP 4/44 MP 0/0 Hu  0 $ 22 room=.
--> e
-T1207 mode=game_loop           Celeborn Skywatcher(elf) F2@(11,16) HP 2/44 MP 0/0 Hu  0 $ 22 room=.
+T1237 mode=shrine_mode         Celeborn Skywatcher(elf) F4@( 8, 7) HP 9/54 MP 0/0 Hu  2 $ 206 room=F
+-> p
+T1238 mode=game_loop           Celeborn Skywatcher(elf) F4@( 8, 7) HP 9/54 MP 0/0 Hu  2 $ 206 room=.
 -> w
-T1208 mode=death_screen        Celeborn Skywatcher(elf) F2@(10,16) HP 0/44 MP 0/0 Hu  0 $ 22 room=.
+T1239 mode=game_loop           Celeborn Skywatcher(elf) F4@( 7, 7) HP 9/54 MP 0/0 Hu  1 $ 206 room=.
+-> s
+T1240 mode=altar_mode          Celeborn Skywatcher(elf) F4@( 7, 8) HP 7/54 MP 0/0 Hu  0 $ 206 room=A
+-> pray
+T1241 mode=game_loop           Celeborn Skywatcher(elf) F4@( 7, 8) HP 7/54 MP 0/0 Hu  0 $ 206 room=.
+-> e
+T1242 mode=game_loop           Celeborn Skywatcher(elf) F4@( 8, 8) HP 5/54 MP 0/0 Hu  0 $ 206 room=.
+-> e
+T1243 mode=game_loop           Celeborn Skywatcher(elf) F4@( 9, 8) HP 3/54 MP 0/0 Hu  0 $ 206 room=C
+-> e
+T1244 mode=game_loop           Celeborn Skywatcher(elf) F4@(10, 8) HP 1/54 MP 0/0 Hu  0 $ 206 room=.
+-> n
+T1245 mode=death_screen        Celeborn Skywatcher(elf) F4@(10, 7) HP 0/54 MP 0/0 Hu  0 $ 206 room=.
 
-=== run finished: turns=1208 floor=2 hp=0/44 gold=22 alive=False mode=death_screen ===
+=== run finished: turns=1245 floor=4 hp=0/54 gold=206 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00333_elf.html

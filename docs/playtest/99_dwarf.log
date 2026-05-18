@@ -1758,17 +1758,17 @@ T 870 mode=game_loop           Gloin III(dwa) F5@(13, 3) HP 53/96 MP 0/0 Hu 60 $
 -> n
 T 871 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 53/96 MP 0/0 Hu 59 $ 172 room=M vs Hell Hound(L4 HP67/67)
 -> a
-T 872 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 44/96 MP 0/0 Hu 59 $ 172 room=M vs Hell Hound(L4 HP43/67)
+T 872 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 44/96 MP 0/0 Hu 59 $ 172 room=M vs Hell Hound(L4 HP42/67)
 -> i
 T 873 mode=inventory           Gloin III(dwa) F5@(13, 2) HP 44/96 MP 0/0 Hu 59 $ 172 room=M
 -> u2
 T 874 mode=inventory           Gloin III(dwa) F5@(13, 2) HP 74/96 MP 0/0 Hu 59 $ 172 room=M
 -> x
-T 875 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 74/96 MP 0/0 Hu 59 $ 172 room=M vs Hell Hound(L4 HP43/67)
+T 875 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 74/96 MP 0/0 Hu 59 $ 172 room=M vs Hell Hound(L4 HP42/67)
 -> a
-T 876 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 65/96 MP 0/0 Hu 59 $ 172 room=M vs Hell Hound(L4 HP19/67)
+T 876 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 65/96 MP 0/0 Hu 59 $ 172 room=M vs Hell Hound(L4 HP17/67)
 -> a
-T 877 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 56/96 MP 0/0 Hu 59 $ 172 room=M vs Hell Hound(L4 HP19/67)
+T 877 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 56/96 MP 0/0 Hu 59 $ 172 room=M vs Hell Hound(L4 HP17/67)
 -> f
 T 878 mode=flee_direction_mode Gloin III(dwa) F5@(13, 2) HP 47/96 MP 0/0 Hu 59 $ 172 room=M
 -> s
@@ -1938,7 +1938,7 @@ T 960 mode=game_loop           Gloin III(dwa) F5@(11, 2) HP 57/96 MP 0/0 Hu 90 $
 -> e
 T 961 mode=game_loop           Gloin III(dwa) F5@(12, 2) HP 58/96 MP 0/0 Hu 89 $ 172 room=.
 -> e
-T 962 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 58/96 MP 0/0 Hu 88 $ 172 room=M vs Hell Hound(L4 HP19/67)
+T 962 mode=combat_mode         Gloin III(dwa) F5@(13, 2) HP 58/96 MP 0/0 Hu 88 $ 172 room=M vs Hell Hound(L4 HP17/67)
 -> a
 T 963 mode=combat_victory      Gloin III(dwa) F5@(13, 2) HP 49/96 MP 0/0 Hu 88 $ 192 room=.
 -> back
@@ -2070,7 +2070,7 @@ T1026 mode=game_loop           Gloin III(dwa) F5@(19, 5) HP 66/96 MP 0/0 Hu 92 $
 -> w
 T1027 mode=combat_mode         Gloin III(dwa) F5@(18, 5) HP 67/96 MP 0/0 Hu 91 $ 192 room=M vs Gnoll(L4 HP48/48)
 -> a
-T1028 mode=combat_mode         Gloin III(dwa) F5@(18, 5) HP 66/96 MP 0/0 Hu 91 $ 192 room=M vs Gnoll(L4 HP22/48)
+T1028 mode=combat_mode         Gloin III(dwa) F5@(18, 5) HP 66/96 MP 0/0 Hu 91 $ 192 room=M vs Gnoll(L4 HP21/48)
 -> a
 T1029 mode=combat_victory      Gloin III(dwa) F5@(18, 5) HP 66/96 MP 0/0 Hu 91 $ 202 room=.
 -> back
@@ -2218,13 +2218,13 @@ T1100 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 95/96 MP 0/0 Hu 50 $
 -> a
 T1101 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 94/96 MP 0/0 Hu 50 $ 332 room=M vs Ettercap(L5 HP49/49)
 -> a
-T1102 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 94/96 MP 0/0 Hu 50 $ 332 room=M vs Ettercap(L5 HP27/49)
+T1102 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 94/96 MP 0/0 Hu 50 $ 332 room=M vs Ettercap(L5 HP26/49)
 -> a
-T1103 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 93/96 MP 0/0 Hu 50 $ 332 room=M vs Ettercap(L5 HP27/49)
+T1103 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 93/96 MP 0/0 Hu 50 $ 332 room=M vs Ettercap(L5 HP26/49)
 -> a
-T1104 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 93/96 MP 0/0 Hu 50 $ 332 room=M vs Ettercap(L5 HP27/49)
+T1104 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 93/96 MP 0/0 Hu 50 $ 332 room=M vs Ettercap(L5 HP26/49)
 -> a
-T1105 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 92/96 MP 0/0 Hu 50 $ 332 room=M vs Ettercap(L5 HP5/49)
+T1105 mode=combat_mode         Gloin III(dwa) F6@( 3, 7) HP 92/96 MP 0/0 Hu 50 $ 332 room=M vs Ettercap(L5 HP3/49)
 -> f
 T1106 mode=flee_direction_mode Gloin III(dwa) F6@( 3, 7) HP 86/96 MP 0/0 Hu 50 $ 332 room=M
 -> e
@@ -2276,7 +2276,7 @@ T1129 mode=game_loop           Gloin III(dwa) F6@(11,12) HP 75/96 MP 0/0 Hu 84 $
 -> e
 T1130 mode=combat_mode         Gloin III(dwa) F6@(12,12) HP 75/96 MP 0/0 Hu 83 $ 492 room=M vs Wight(L5 HP44/44)
 -> a
-T1131 mode=combat_mode         Gloin III(dwa) F6@(12,12) HP 72/96 MP 0/0 Hu 83 $ 492 room=M vs Wight(L5 HP19/44)
+T1131 mode=combat_mode         Gloin III(dwa) F6@(12,12) HP 72/96 MP 0/0 Hu 83 $ 492 room=M vs Wight(L5 HP18/44)
 -> a
 T1132 mode=combat_victory      Gloin III(dwa) F6@(12,12) HP 69/106 MP 0/0 Hu 83 $ 598 room=.
 -> back
@@ -2292,9 +2292,9 @@ T1137 mode=game_loop           Gloin III(dwa) F6@(13,13) HP 70/106 MP 0/0 Hu 79 
 -> w
 T1138 mode=combat_mode         Gloin III(dwa) F6@(12,13) HP 70/106 MP 0/0 Hu 78 $ 598 room=M vs Gelatinous Cube(L5 HP48/48)
 -> a
-T1139 mode=combat_mode         Gloin III(dwa) F6@(12,13) HP 69/106 MP 0/0 Hu 78 $ 598 room=M vs Gelatinous Cube(L5 HP21/48)
+T1139 mode=combat_mode         Gloin III(dwa) F6@(12,13) HP 69/106 MP 0/0 Hu 78 $ 598 room=M vs Gelatinous Cube(L5 HP20/48)
 -> a
-T1140 mode=combat_mode         Gloin III(dwa) F6@(12,13) HP 69/106 MP 0/0 Hu 78 $ 598 room=M vs Gelatinous Cube(L5 HP21/48)
+T1140 mode=combat_mode         Gloin III(dwa) F6@(12,13) HP 69/106 MP 0/0 Hu 78 $ 598 room=M vs Gelatinous Cube(L5 HP20/48)
 -> a
 T1141 mode=combat_victory      Gloin III(dwa) F6@(12,13) HP 69/106 MP 0/0 Hu 78 $ 634 room=.
 -> back

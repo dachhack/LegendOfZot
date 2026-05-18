@@ -2509,7 +2509,7 @@ T1245 mode=combat_mode         Beregond Strider(hum) F2@(10,12) HP 60/60 MP 0/0 
 -> f
 T1246 mode=combat_mode         Beregond Strider(hum) F2@(10,12) HP 59/60 MP 0/0 Hu 71 $ 414 room=M vs Zombie(L1 HP35/35)
 -> a
-T1247 mode=combat_mode         Beregond Strider(hum) F2@(10,12) HP 58/60 MP 0/0 Hu 71 $ 414 room=M vs Zombie(L1 HP10/35)
+T1247 mode=combat_mode         Beregond Strider(hum) F2@(10,12) HP 58/60 MP 0/0 Hu 71 $ 414 room=M vs Zombie(L1 HP9/35)
 -> a
 T1248 mode=combat_victory      Beregond Strider(hum) F2@(10,12) HP 58/60 MP 0/0 Hu 71 $ 424 room=.
 -> back
@@ -2759,11 +2759,11 @@ T1370 mode=game_loop           Beregond Strider(hum) F2@( 7,10) HP 64/64 MP 0/0 
 -> w
 T1371 mode=combat_mode         Beregond Strider(hum) F2@( 6,10) HP 64/64 MP 0/0 Hu 83 $ 762 room=M vs Myconid Shaman(L1 HP45/45)
 -> a
-T1372 mode=combat_mode         Beregond Strider(hum) F2@( 6,10) HP 63/64 MP 0/0 Hu 83 $ 762 room=M vs Myconid Shaman(L1 HP21/45)
+T1372 mode=combat_mode         Beregond Strider(hum) F2@( 6,10) HP 63/64 MP 0/0 Hu 83 $ 762 room=M vs Myconid Shaman(L1 HP19/45)
 -> a
-T1373 mode=combat_mode         Beregond Strider(hum) F2@( 6,10) HP 63/64 MP 0/0 Hu 83 $ 762 room=M vs Myconid Shaman(L1 HP21/45)
+T1373 mode=combat_mode         Beregond Strider(hum) F2@( 6,10) HP 63/64 MP 0/0 Hu 83 $ 762 room=M vs Myconid Shaman(L1 HP19/45)
 -> a
-T1374 mode=combat_mode         Beregond Strider(hum) F2@( 6,10) HP 62/64 MP 0/0 Hu 83 $ 762 room=M vs Myconid Shaman(L1 HP21/45)
+T1374 mode=combat_mode         Beregond Strider(hum) F2@( 6,10) HP 62/64 MP 0/0 Hu 83 $ 762 room=M vs Myconid Shaman(L1 HP19/45)
 -> f
 T1375 mode=flee_direction_mode Beregond Strider(hum) F2@( 6,10) HP 61/64 MP 0/0 Hu 83 $ 762 room=M
 -> n
@@ -2801,7 +2801,7 @@ T1391 mode=game_loop           Beregond Strider(hum) F2@( 2, 8) HP 64/64 MP 0/0 
 -> n
 T1392 mode=combat_mode         Beregond Strider(hum) F2@( 2, 7) HP 64/64 MP 0/0 Hu 67 $ 762 room=M vs Wight(L1 HP40/40)
 -> a
-T1393 mode=combat_mode         Beregond Strider(hum) F2@( 2, 7) HP 64/64 MP 0/0 Hu 67 $ 762 room=M vs Wight(L1 HP17/40)
+T1393 mode=combat_mode         Beregond Strider(hum) F2@( 2, 7) HP 64/64 MP 0/0 Hu 67 $ 762 room=M vs Wight(L1 HP15/40)
 -> f
 T1394 mode=flee_direction_mode Beregond Strider(hum) F2@( 2, 7) HP 64/64 MP 0/0 Hu 67 $ 762 room=M
 -> e
@@ -2823,7 +2823,7 @@ T1402 mode=game_loop           Beregond Strider(hum) F2@( 1, 8) HP 64/64 MP 0/0 
 -> e
 T1403 mode=game_loop           Beregond Strider(hum) F2@( 2, 8) HP 64/64 MP 0/0 Hu 59 $ 762 room=.
 -> n
-T1404 mode=combat_mode         Beregond Strider(hum) F2@( 2, 7) HP 64/64 MP 0/0 Hu 58 $ 762 room=M vs Wight(L1 HP17/40)
+T1404 mode=combat_mode         Beregond Strider(hum) F2@( 2, 7) HP 64/64 MP 0/0 Hu 58 $ 762 room=M vs Wight(L1 HP15/40)
 -> a
 T1405 mode=combat_victory      Beregond Strider(hum) F2@( 2, 7) HP 55/74 MP 0/0 Hu 58 $ 870 room=.
 -> back
@@ -2889,7 +2889,7 @@ T1435 mode=game_loop           Beregond Strider(hum) F2@( 7, 9) HP 74/74 MP 0/0 
 -> s
 T1436 mode=game_loop           Beregond Strider(hum) F2@( 7,10) HP 74/74 MP 0/0 Hu 84 $ 870 room=.
 -> w
-T1437 mode=combat_mode         Beregond Strider(hum) F2@( 6,10) HP 74/74 MP 0/0 Hu 83 $ 870 room=M vs Myconid Shaman(L1 HP21/45)
+T1437 mode=combat_mode         Beregond Strider(hum) F2@( 6,10) HP 74/74 MP 0/0 Hu 83 $ 870 room=M vs Myconid Shaman(L1 HP19/45)
 -> a
 T1438 mode=combat_victory      Beregond Strider(hum) F2@( 6,10) HP 74/74 MP 0/0 Hu 83 $ 886 room=.
 -> back
@@ -2937,9 +2937,9 @@ T1459 mode=combat_mode         Beregond Strider(hum) F2@( 9, 7) HP 74/74 MP 0/0 
 -> a
 T1460 mode=combat_mode         Beregond Strider(hum) F2@( 9, 7) HP 73/74 MP 0/0 Hu 63 $ 886 room=M vs UNDEAD ZOMBIE(L1 HP43/43)
 -> a
-T1461 mode=combat_mode         Beregond Strider(hum) F2@( 9, 7) HP 73/74 MP 0/0 Hu 63 $ 886 room=M vs UNDEAD ZOMBIE(L1 HP17/43)
+T1461 mode=combat_mode         Beregond Strider(hum) F2@( 9, 7) HP 73/74 MP 0/0 Hu 63 $ 886 room=M vs UNDEAD ZOMBIE(L1 HP15/43)
 -> a
-T1462 mode=combat_mode         Beregond Strider(hum) F2@( 9, 7) HP 72/74 MP 0/0 Hu 63 $ 886 room=M vs UNDEAD ZOMBIE(L1 HP17/43)
+T1462 mode=combat_mode         Beregond Strider(hum) F2@( 9, 7) HP 72/74 MP 0/0 Hu 63 $ 886 room=M vs UNDEAD ZOMBIE(L1 HP15/43)
 -> a
 T1463 mode=combat_victory      Beregond Strider(hum) F2@( 9, 7) HP 72/74 MP 0/0 Hu 63 $ 1138 room=.
 -> back
@@ -3253,9 +3253,9 @@ T1617 mode=game_loop           Beregond Strider(hum) F2@(15, 4) HP 74/74 MP 0/0 
 -> n
 T1618 mode=combat_mode         Beregond Strider(hum) F2@(15, 3) HP 74/74 MP 0/0 Hu 15 $ 1138 room=M vs Harpy(L1 HP28/28)
 -> a
-T1619 mode=combat_mode         Beregond Strider(hum) F2@(15, 3) HP 73/74 MP 0/0 Hu 15 $ 1138 room=M vs Harpy(L1 HP4/28)
+T1619 mode=combat_mode         Beregond Strider(hum) F2@(15, 3) HP 73/74 MP 0/0 Hu 15 $ 1138 room=M vs Harpy(L1 HP2/28)
 -> a
-T1620 mode=combat_mode         Beregond Strider(hum) F2@(15, 3) HP 73/74 MP 0/0 Hu 15 $ 1138 room=M vs Harpy(L1 HP4/28)
+T1620 mode=combat_mode         Beregond Strider(hum) F2@(15, 3) HP 73/74 MP 0/0 Hu 15 $ 1138 room=M vs Harpy(L1 HP2/28)
 -> a
 T1621 mode=combat_victory      Beregond Strider(hum) F2@(15, 3) HP 73/74 MP 0/0 Hu 15 $ 1144 room=.
 -> back

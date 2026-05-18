@@ -921,1526 +921,278 @@ T 451 mode=game_loop           Gloin Oakshield(dwa) F2@(15,16) HP 78/78 MP 0/0 H
 T 452 mode=game_loop           Gloin Oakshield(dwa) F2@(14,16) HP 78/78 MP 0/0 Hu 95 $ 214 room=.
 -> l
 T 453 mode=game_loop           Gloin Oakshield(dwa) F2@(14,16) HP 78/78 MP 0/0 Hu 95 $ 214 room=.
--> w
-T 454 mode=combat_mode         Gloin Oakshield(dwa) F2@(13,16) HP 78/78 MP 0/0 Hu 94 $ 214 room=M vs Giant Centipede(L1 HP15/15)
--> a
-T 455 mode=combat_victory      Gloin Oakshield(dwa) F2@(13,16) HP 78/78 MP 0/0 Hu 94 $ 226 room=.
--> back
-T 456 mode=game_loop           Gloin Oakshield(dwa) F2@(13,16) HP 78/78 MP 0/0 Hu 94 $ 226 room=.
--> l
-T 457 mode=game_loop           Gloin Oakshield(dwa) F2@(13,16) HP 78/78 MP 0/0 Hu 94 $ 226 room=.
--> n
-T 458 mode=game_loop           Gloin Oakshield(dwa) F2@(13,15) HP 78/78 MP 0/0 Hu 93 $ 226 room=.
--> l
-T 459 mode=game_loop           Gloin Oakshield(dwa) F2@(13,15) HP 78/78 MP 0/0 Hu 93 $ 226 room=.
--> s
-T 460 mode=game_loop           Gloin Oakshield(dwa) F2@(13,16) HP 78/78 MP 0/0 Hu 92 $ 226 room=.
--> l
-T 461 mode=game_loop           Gloin Oakshield(dwa) F2@(13,16) HP 78/78 MP 0/0 Hu 92 $ 226 room=.
--> w
-T 462 mode=game_loop           Gloin Oakshield(dwa) F2@(12,16) HP 78/78 MP 0/0 Hu 91 $ 226 room=.
 -> e
-T 463 mode=game_loop           Gloin Oakshield(dwa) F2@(13,16) HP 78/78 MP 0/0 Hu 90 $ 226 room=.
+T 454 mode=game_loop           Gloin Oakshield(dwa) F2@(15,16) HP 78/78 MP 0/0 Hu 94 $ 214 room=.
 -> e
-T 464 mode=game_loop           Gloin Oakshield(dwa) F2@(14,16) HP 78/78 MP 0/0 Hu 89 $ 226 room=.
+T 455 mode=game_loop           Gloin Oakshield(dwa) F2@(16,16) HP 78/78 MP 0/0 Hu 93 $ 214 room=.
 -> e
-T 465 mode=game_loop           Gloin Oakshield(dwa) F2@(15,16) HP 78/78 MP 0/0 Hu 88 $ 226 room=.
--> e
-T 466 mode=game_loop           Gloin Oakshield(dwa) F2@(16,16) HP 78/78 MP 0/0 Hu 87 $ 226 room=.
--> e
-T 467 mode=game_loop           Gloin Oakshield(dwa) F2@(17,16) HP 78/78 MP 0/0 Hu 86 $ 226 room=.
+T 456 mode=game_loop           Gloin Oakshield(dwa) F2@(17,16) HP 78/78 MP 0/0 Hu 92 $ 214 room=.
 -> n
-T 468 mode=game_loop           Gloin Oakshield(dwa) F2@(17,15) HP 78/78 MP 0/0 Hu 85 $ 226 room=.
+T 457 mode=game_loop           Gloin Oakshield(dwa) F2@(17,15) HP 78/78 MP 0/0 Hu 91 $ 214 room=.
 -> n
-T 469 mode=game_loop           Gloin Oakshield(dwa) F2@(17,14) HP 78/78 MP 0/0 Hu 84 $ 226 room=.
+T 458 mode=game_loop           Gloin Oakshield(dwa) F2@(17,14) HP 78/78 MP 0/0 Hu 90 $ 214 room=.
 -> e
-T 470 mode=game_loop           Gloin Oakshield(dwa) F2@(18,14) HP 78/78 MP 0/0 Hu 83 $ 226 room=.
+T 459 mode=game_loop           Gloin Oakshield(dwa) F2@(18,14) HP 78/78 MP 0/0 Hu 89 $ 214 room=.
+-> n
+T 460 mode=game_loop           Gloin Oakshield(dwa) F2@(18,13) HP 78/78 MP 0/0 Hu 88 $ 214 room=.
 -> l
-T 471 mode=game_loop           Gloin Oakshield(dwa) F2@(18,14) HP 78/78 MP 0/0 Hu 83 $ 226 room=.
+T 461 mode=game_loop           Gloin Oakshield(dwa) F2@(18,13) HP 78/78 MP 0/0 Hu 88 $ 214 room=.
 -> n
-T 472 mode=game_loop           Gloin Oakshield(dwa) F2@(18,13) HP 78/78 MP 0/0 Hu 82 $ 226 room=.
--> n
-T 473 mode=game_loop           Gloin Oakshield(dwa) F2@(18,12) HP 78/78 MP 0/0 Hu 81 $ 226 room=.
+T 462 mode=game_loop           Gloin Oakshield(dwa) F2@(18,12) HP 78/78 MP 0/0 Hu 87 $ 214 room=.
 -> w
-T 474 mode=game_loop           Gloin Oakshield(dwa) F2@(17,12) HP 78/78 MP 0/0 Hu 80 $ 226 room=.
+T 463 mode=game_loop           Gloin Oakshield(dwa) F2@(17,12) HP 78/78 MP 0/0 Hu 86 $ 214 room=.
 -> n
-T 475 mode=game_loop           Gloin Oakshield(dwa) F2@(17,11) HP 78/78 MP 0/0 Hu 79 $ 226 room=.
+T 464 mode=game_loop           Gloin Oakshield(dwa) F2@(17,11) HP 78/78 MP 0/0 Hu 85 $ 214 room=.
 -> n
-T 476 mode=game_loop           Gloin Oakshield(dwa) F2@(17,10) HP 78/78 MP 0/0 Hu 78 $ 226 room=.
+T 465 mode=game_loop           Gloin Oakshield(dwa) F2@(17,10) HP 78/78 MP 0/0 Hu 84 $ 214 room=.
 -> n
-T 477 mode=game_loop           Gloin Oakshield(dwa) F2@(17, 9) HP 78/78 MP 0/0 Hu 77 $ 226 room=.
+T 466 mode=game_loop           Gloin Oakshield(dwa) F2@(17, 9) HP 78/78 MP 0/0 Hu 83 $ 214 room=.
 -> n
-T 478 mode=game_loop           Gloin Oakshield(dwa) F2@(17, 8) HP 78/78 MP 0/0 Hu 76 $ 226 room=.
+T 467 mode=game_loop           Gloin Oakshield(dwa) F2@(17, 8) HP 78/78 MP 0/0 Hu 82 $ 214 room=.
 -> n
-T 479 mode=game_loop           Gloin Oakshield(dwa) F2@(17, 7) HP 78/78 MP 0/0 Hu 75 $ 226 room=.
+T 468 mode=game_loop           Gloin Oakshield(dwa) F2@(17, 7) HP 78/78 MP 0/0 Hu 81 $ 214 room=.
 -> n
-T 480 mode=game_loop           Gloin Oakshield(dwa) F2@(17, 6) HP 78/78 MP 0/0 Hu 74 $ 226 room=.
+T 469 mode=game_loop           Gloin Oakshield(dwa) F2@(17, 6) HP 78/78 MP 0/0 Hu 80 $ 214 room=.
+-> w
+T 470 mode=game_loop           Gloin Oakshield(dwa) F2@(16, 6) HP 78/78 MP 0/0 Hu 79 $ 214 room=.
 -> l
-T 481 mode=game_loop           Gloin Oakshield(dwa) F2@(17, 6) HP 78/78 MP 0/0 Hu 74 $ 226 room=.
+T 471 mode=game_loop           Gloin Oakshield(dwa) F2@(16, 6) HP 78/78 MP 0/0 Hu 79 $ 214 room=.
 -> w
-T 482 mode=game_loop           Gloin Oakshield(dwa) F2@(16, 6) HP 78/78 MP 0/0 Hu 73 $ 226 room=.
+T 472 mode=game_loop           Gloin Oakshield(dwa) F2@(15, 6) HP 78/78 MP 0/0 Hu 78 $ 214 room=.
 -> w
-T 483 mode=game_loop           Gloin Oakshield(dwa) F2@(15, 6) HP 78/78 MP 0/0 Hu 72 $ 226 room=.
+T 473 mode=game_loop           Gloin Oakshield(dwa) F2@(14, 6) HP 78/78 MP 0/0 Hu 77 $ 214 room=.
 -> w
-T 484 mode=game_loop           Gloin Oakshield(dwa) F2@(14, 6) HP 78/78 MP 0/0 Hu 71 $ 226 room=.
+T 474 mode=game_loop           Gloin Oakshield(dwa) F2@(13, 6) HP 78/78 MP 0/0 Hu 76 $ 214 room=.
 -> w
-T 485 mode=game_loop           Gloin Oakshield(dwa) F2@(13, 6) HP 78/78 MP 0/0 Hu 70 $ 226 room=.
+T 475 mode=game_loop           Gloin Oakshield(dwa) F2@(12, 6) HP 78/78 MP 0/0 Hu 75 $ 214 room=.
 -> w
-T 486 mode=game_loop           Gloin Oakshield(dwa) F2@(12, 6) HP 78/78 MP 0/0 Hu 69 $ 226 room=.
+T 476 mode=game_loop           Gloin Oakshield(dwa) F2@(11, 6) HP 78/78 MP 0/0 Hu 74 $ 214 room=.
 -> w
-T 487 mode=game_loop           Gloin Oakshield(dwa) F2@(11, 6) HP 78/78 MP 0/0 Hu 68 $ 226 room=.
+T 477 mode=game_loop           Gloin Oakshield(dwa) F2@(10, 6) HP 78/78 MP 0/0 Hu 73 $ 214 room=.
 -> w
-T 488 mode=game_loop           Gloin Oakshield(dwa) F2@(10, 6) HP 78/78 MP 0/0 Hu 67 $ 226 room=.
+T 478 mode=game_loop           Gloin Oakshield(dwa) F2@( 9, 6) HP 78/78 MP 0/0 Hu 72 $ 214 room=.
 -> w
-T 489 mode=game_loop           Gloin Oakshield(dwa) F2@( 9, 6) HP 78/78 MP 0/0 Hu 66 $ 226 room=.
+T 479 mode=game_loop           Gloin Oakshield(dwa) F2@( 8, 6) HP 78/78 MP 0/0 Hu 71 $ 214 room=.
 -> w
-T 490 mode=game_loop           Gloin Oakshield(dwa) F2@( 8, 6) HP 78/78 MP 0/0 Hu 65 $ 226 room=.
+T 480 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 6) HP 78/78 MP 0/0 Hu 70 $ 214 room=.
 -> l
-T 491 mode=game_loop           Gloin Oakshield(dwa) F2@( 8, 6) HP 78/78 MP 0/0 Hu 65 $ 226 room=.
+T 481 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 6) HP 78/78 MP 0/0 Hu 70 $ 214 room=.
+-> n
+T 482 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 5) HP 78/78 MP 0/0 Hu 69 $ 214 room=.
+-> n
+T 483 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 4) HP 78/78 MP 0/0 Hu 68 $ 214 room=.
+-> n
+T 484 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 3) HP 78/78 MP 0/0 Hu 67 $ 214 room=.
 -> w
-T 492 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 6) HP 78/78 MP 0/0 Hu 64 $ 226 room=.
+T 485 mode=game_loop           Gloin Oakshield(dwa) F2@( 6, 3) HP 78/78 MP 0/0 Hu 66 $ 214 room=.
 -> n
-T 493 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 5) HP 78/78 MP 0/0 Hu 63 $ 226 room=.
--> n
-T 494 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 4) HP 78/78 MP 0/0 Hu 62 $ 226 room=.
--> n
-T 495 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 3) HP 78/78 MP 0/0 Hu 61 $ 226 room=.
+T 486 mode=game_loop           Gloin Oakshield(dwa) F2@( 6, 2) HP 78/78 MP 0/0 Hu 65 $ 214 room=.
 -> w
-T 496 mode=game_loop           Gloin Oakshield(dwa) F2@( 6, 3) HP 78/78 MP 0/0 Hu 60 $ 226 room=.
--> n
-T 497 mode=game_loop           Gloin Oakshield(dwa) F2@( 6, 2) HP 78/78 MP 0/0 Hu 59 $ 226 room=.
--> w
-T 498 mode=garden_mode         Gloin Oakshield(dwa) F2@( 5, 2) HP 78/78 MP 0/0 Hu 58 $ 226 room=G
+T 487 mode=garden_mode         Gloin Oakshield(dwa) F2@( 5, 2) HP 78/78 MP 0/0 Hu 64 $ 214 room=G
 -> h
-T 499 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 2) HP 78/78 MP 0/0 Hu 58 $ 226 room=.
+T 488 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 2) HP 78/78 MP 0/0 Hu 64 $ 214 room=.
 -> s
-T 500 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 3) HP 78/78 MP 0/0 Hu 57 $ 226 room=.
+T 489 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 3) HP 78/78 MP 0/0 Hu 63 $ 214 room=.
+-> w
+T 490 mode=game_loop           Gloin Oakshield(dwa) F2@( 4, 3) HP 78/78 MP 0/0 Hu 62 $ 214 room=.
 -> l
-T 501 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 3) HP 78/78 MP 0/0 Hu 57 $ 226 room=.
--> w
-T 502 mode=game_loop           Gloin Oakshield(dwa) F2@( 4, 3) HP 78/78 MP 0/0 Hu 56 $ 226 room=.
+T 491 mode=game_loop           Gloin Oakshield(dwa) F2@( 4, 3) HP 78/78 MP 0/0 Hu 62 $ 214 room=.
 -> s
-T 503 mode=game_loop           Gloin Oakshield(dwa) F2@( 4, 4) HP 78/78 MP 0/0 Hu 55 $ 226 room=.
--> w
-T 504 mode=game_loop           Gloin Oakshield(dwa) F2@( 3, 4) HP 78/78 MP 0/0 Hu 54 $ 226 room=.
--> w
-T 505 mode=game_loop           Gloin Oakshield(dwa) F2@( 2, 4) HP 78/78 MP 0/0 Hu 53 $ 226 room=.
--> w
-T 506 mode=dungeon_mode        Gloin Oakshield(dwa) F2@( 1, 4) HP 78/78 MP 0/0 Hu 52 $ 226 room=N
--> u
-T 507 mode=game_loop           Gloin Oakshield(dwa) F2@( 1, 4) HP 78/78 MP 0/0 Hu 52 $ 226 room=N
+T 492 mode=game_loop           Gloin Oakshield(dwa) F2@( 4, 4) HP 78/78 MP 0/0 Hu 61 $ 214 room=.
 -> s
-T 508 mode=game_loop           Gloin Oakshield(dwa) F2@( 1, 5) HP 78/78 MP 0/0 Hu 51 $ 226 room=.
+T 493 mode=game_loop           Gloin Oakshield(dwa) F2@( 4, 5) HP 78/78 MP 0/0 Hu 60 $ 214 room=.
 -> e
-T 509 mode=game_loop           Gloin Oakshield(dwa) F2@( 2, 5) HP 78/78 MP 0/0 Hu 50 $ 226 room=.
+T 494 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 5) HP 78/78 MP 0/0 Hu 59 $ 214 room=.
+-> s
+T 495 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 6) HP 78/78 MP 0/0 Hu 58 $ 214 room=.
 -> e
-T 510 mode=combat_mode         Gloin Oakshield(dwa) F2@( 3, 5) HP 78/78 MP 0/0 Hu 49 $ 226 room=M vs Goblin(L1 HP12/12)
--> a
-T 511 mode=combat_mode         Gloin Oakshield(dwa) F2@( 3, 5) HP 78/78 MP 0/0 Hu 49 $ 226 room=M vs Goblin(L1 HP12/12)
--> a
-T 512 mode=combat_mode         Gloin Oakshield(dwa) F2@( 3, 5) HP 78/78 MP 0/0 Hu 49 $ 226 room=M vs Goblin(L1 HP12/12)
--> a
-T 513 mode=combat_mode         Gloin Oakshield(dwa) F2@( 3, 5) HP 77/78 MP 0/0 Hu 49 $ 226 room=M vs Goblin(L1 HP12/12)
--> a
-T 514 mode=combat_mode         Gloin Oakshield(dwa) F2@( 3, 5) HP 77/78 MP 0/0 Hu 49 $ 226 room=M vs Goblin(L1 HP12/12)
--> a
-T 515 mode=combat_victory      Gloin Oakshield(dwa) F2@( 3, 5) HP 76/78 MP 0/0 Hu 49 $ 240 room=.
--> back
-T 516 mode=game_loop           Gloin Oakshield(dwa) F2@( 3, 5) HP 76/78 MP 0/0 Hu 49 $ 240 room=.
--> i
-T 517 mode=inventory           Gloin Oakshield(dwa) F2@( 3, 5) HP 76/78 MP 0/0 Hu 49 $ 240 room=.
--> eat1
-T 518 mode=inventory           Gloin Oakshield(dwa) F2@( 3, 5) HP 76/78 MP 0/0 Hu 99 $ 240 room=.
--> x
-T 519 mode=game_loop           Gloin Oakshield(dwa) F2@( 3, 5) HP 76/78 MP 0/0 Hu 99 $ 240 room=.
+T 496 mode=game_loop           Gloin Oakshield(dwa) F2@( 6, 6) HP 78/78 MP 0/0 Hu 57 $ 214 room=.
 -> e
-T 520 mode=game_loop           Gloin Oakshield(dwa) F2@( 4, 5) HP 76/78 MP 0/0 Hu 98 $ 240 room=.
+T 497 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 6) HP 78/78 MP 0/0 Hu 56 $ 214 room=.
+-> e
+T 498 mode=game_loop           Gloin Oakshield(dwa) F2@( 8, 6) HP 78/78 MP 0/0 Hu 55 $ 214 room=.
+-> e
+T 499 mode=game_loop           Gloin Oakshield(dwa) F2@( 9, 6) HP 78/78 MP 0/0 Hu 54 $ 214 room=.
+-> e
+T 500 mode=game_loop           Gloin Oakshield(dwa) F2@(10, 6) HP 78/78 MP 0/0 Hu 53 $ 214 room=.
 -> l
-T 521 mode=game_loop           Gloin Oakshield(dwa) F2@( 4, 5) HP 76/78 MP 0/0 Hu 98 $ 240 room=.
+T 501 mode=game_loop           Gloin Oakshield(dwa) F2@(10, 6) HP 78/78 MP 0/0 Hu 53 $ 214 room=.
 -> e
-T 522 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 5) HP 77/78 MP 0/0 Hu 97 $ 240 room=.
--> s
-T 523 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 6) HP 77/78 MP 0/0 Hu 96 $ 240 room=.
--> s
-T 524 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 7) HP 78/78 MP 0/0 Hu 95 $ 240 room=.
--> s
-T 525 mode=game_loop           Gloin Oakshield(dwa) F2@( 5, 8) HP 78/78 MP 0/0 Hu 94 $ 240 room=.
--> e
-T 526 mode=game_loop           Gloin Oakshield(dwa) F2@( 6, 8) HP 78/78 MP 0/0 Hu 93 $ 240 room=.
--> e
-T 527 mode=game_loop           Gloin Oakshield(dwa) F2@( 7, 8) HP 78/78 MP 0/0 Hu 92 $ 240 room=.
--> e
-T 528 mode=game_loop           Gloin Oakshield(dwa) F2@( 8, 8) HP 78/78 MP 0/0 Hu 91 $ 240 room=.
--> e
-T 529 mode=game_loop           Gloin Oakshield(dwa) F2@( 9, 8) HP 78/78 MP 0/0 Hu 90 $ 240 room=.
+T 502 mode=game_loop           Gloin Oakshield(dwa) F2@(11, 6) HP 78/78 MP 0/0 Hu 52 $ 214 room=.
 -> n
-T 530 mode=game_loop           Gloin Oakshield(dwa) F2@( 9, 7) HP 78/78 MP 0/0 Hu 89 $ 240 room=.
--> i
-T 531 mode=inventory           Gloin Oakshield(dwa) F2@( 9, 7) HP 78/78 MP 0/0 Hu 89 $ 240 room=.
--> eat2
-T 532 mode=inventory           Gloin Oakshield(dwa) F2@( 9, 7) HP 78/78 MP 0/0 Hu 94 $ 240 room=.
--> x
-T 533 mode=game_loop           Gloin Oakshield(dwa) F2@( 9, 7) HP 78/78 MP 0/0 Hu 94 $ 240 room=.
--> n
-T 534 mode=game_loop           Gloin Oakshield(dwa) F2@( 9, 6) HP 78/78 MP 0/0 Hu 93 $ 240 room=.
+T 503 mode=game_loop           Gloin Oakshield(dwa) F2@(11, 5) HP 78/78 MP 0/0 Hu 51 $ 214 room=.
 -> e
-T 535 mode=game_loop           Gloin Oakshield(dwa) F2@(10, 6) HP 78/78 MP 0/0 Hu 92 $ 240 room=.
+T 504 mode=game_loop           Gloin Oakshield(dwa) F2@(12, 5) HP 78/78 MP 0/0 Hu 50 $ 214 room=.
 -> e
-T 536 mode=game_loop           Gloin Oakshield(dwa) F2@(11, 6) HP 78/78 MP 0/0 Hu 91 $ 240 room=.
--> n
-T 537 mode=game_loop           Gloin Oakshield(dwa) F2@(11, 5) HP 78/78 MP 0/0 Hu 90 $ 240 room=.
--> e
-T 538 mode=game_loop           Gloin Oakshield(dwa) F2@(12, 5) HP 78/78 MP 0/0 Hu 89 $ 240 room=.
--> e
-T 539 mode=stairs_down_mode    Gloin Oakshield(dwa) F2@(13, 5) HP 78/78 MP 0/0 Hu 88 $ 240 room=D
+T 505 mode=stairs_down_mode    Gloin Oakshield(dwa) F2@(13, 5) HP 78/78 MP 0/0 Hu 49 $ 214 room=D
 -> d
-T 540 mode=stairs_up_mode      Gloin Oakshield(dwa) F3@( 1, 1) HP 78/78 MP 0/0 Hu 88 $ 240 room=U
--> w
-T 541 mode=stairs_up_mode      Gloin Oakshield(dwa) F3@( 1, 1) HP 78/78 MP 0/0 Hu 88 $ 240 room=U
+T 506 mode=stairs_up_mode      Gloin Oakshield(dwa) F3@( 1, 1) HP 78/78 MP 0/0 Hu 49 $ 214 room=U
 -> n
-T 542 mode=stairs_up_mode      Gloin Oakshield(dwa) F3@( 1, 1) HP 78/78 MP 0/0 Hu 88 $ 240 room=U
+T 507 mode=stairs_up_mode      Gloin Oakshield(dwa) F3@( 1, 1) HP 78/78 MP 0/0 Hu 49 $ 214 room=U
 -> s
-T 543 mode=game_loop           Gloin Oakshield(dwa) F3@( 1, 2) HP 78/78 MP 0/0 Hu 87 $ 240 room=.
--> l
-T 544 mode=game_loop           Gloin Oakshield(dwa) F3@( 1, 2) HP 78/78 MP 0/0 Hu 87 $ 240 room=.
--> e
-T 545 mode=game_loop           Gloin Oakshield(dwa) F3@( 2, 2) HP 78/78 MP 0/0 Hu 86 $ 240 room=.
--> l
-T 546 mode=game_loop           Gloin Oakshield(dwa) F3@( 2, 2) HP 78/78 MP 0/0 Hu 86 $ 240 room=.
--> n
-T 547 mode=library_mode        Gloin Oakshield(dwa) F3@( 2, 1) HP 78/78 MP 0/0 Hu 85 $ 240 room=L
--> r
-T 548 mode=library_read_decision_mode Gloin Oakshield(dwa) F3@( 2, 1) HP 78/78 MP 0/0 Hu 85 $ 240 room=L
--> y
-T 549 mode=game_loop           Gloin Oakshield(dwa) F3@( 2, 1) HP 78/78 MP 0/0 Hu 85 $ 340 room=.
--> l
-T 550 mode=game_loop           Gloin Oakshield(dwa) F3@( 2, 1) HP 78/78 MP 0/0 Hu 85 $ 340 room=.
--> e
-T 551 mode=stairs_up_mode      Gloin Oakshield(dwa) F3@( 1, 1) HP 78/78 MP 0/0 Hu 84 $ 340 room=U
--> s
-T 552 mode=game_loop           Gloin Oakshield(dwa) F3@( 1, 2) HP 78/78 MP 0/0 Hu 83 $ 340 room=.
--> s
-T 553 mode=combat_mode         Gloin Oakshield(dwa) F3@( 1, 3) HP 78/78 MP 0/0 Hu 82 $ 340 room=M vs Goblin(L2 HP31/31)
--> f
-T 554 mode=flee_direction_mode Gloin Oakshield(dwa) F3@( 1, 3) HP 78/78 MP 0/0 Hu 82 $ 340 room=M
--> e
-T 555 mode=game_loop           Gloin Oakshield(dwa) F3@( 2, 3) HP 78/78 MP 0/0 Hu 82 $ 340 room=.
--> l
-T 556 mode=game_loop           Gloin Oakshield(dwa) F3@( 2, 3) HP 78/78 MP 0/0 Hu 82 $ 340 room=.
--> e
-T 557 mode=game_loop           Gloin Oakshield(dwa) F3@( 3, 3) HP 78/78 MP 0/0 Hu 81 $ 340 room=.
--> l
-T 558 mode=game_loop           Gloin Oakshield(dwa) F3@( 3, 3) HP 78/78 MP 0/0 Hu 81 $ 340 room=.
--> e
-T 559 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 3) HP 78/78 MP 0/0 Hu 80 $ 340 room=.
--> l
-T 560 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 3) HP 78/78 MP 0/0 Hu 80 $ 340 room=.
--> n
-T 561 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 2) HP 78/78 MP 0/0 Hu 79 $ 340 room=.
--> e
-T 562 mode=dungeon_mode        Gloin Oakshield(dwa) F3@( 5, 2) HP 78/78 MP 0/0 Hu 78 $ 340 room=N
--> u
-T 563 mode=game_loop           Gloin Oakshield(dwa) F3@( 5, 2) HP 78/78 MP 0/0 Hu 78 $ 340 room=N
--> s
-T 564 mode=game_loop           Gloin Oakshield(dwa) F3@( 5, 3) HP 78/78 MP 0/0 Hu 77 $ 340 room=.
--> l
-T 565 mode=game_loop           Gloin Oakshield(dwa) F3@( 5, 3) HP 78/78 MP 0/0 Hu 77 $ 340 room=.
--> s
-T 566 mode=game_loop           Gloin Oakshield(dwa) F3@( 5, 4) HP 78/78 MP 0/0 Hu 76 $ 340 room=.
--> s
-T 567 mode=game_loop           Gloin Oakshield(dwa) F3@( 5, 5) HP 78/78 MP 0/0 Hu 75 $ 340 room=.
--> l
-T 568 mode=game_loop           Gloin Oakshield(dwa) F3@( 5, 5) HP 78/78 MP 0/0 Hu 75 $ 340 room=.
--> e
-T 569 mode=game_loop           Gloin Oakshield(dwa) F3@( 6, 5) HP 78/78 MP 0/0 Hu 74 $ 340 room=.
--> l
-T 570 mode=game_loop           Gloin Oakshield(dwa) F3@( 6, 5) HP 78/78 MP 0/0 Hu 74 $ 340 room=.
--> e
-T 571 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 5) HP 78/78 MP 0/0 Hu 73 $ 340 room=.
--> l
-T 572 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 5) HP 78/78 MP 0/0 Hu 73 $ 340 room=.
--> s
-T 573 mode=garden_mode         Gloin Oakshield(dwa) F3@( 7, 6) HP 78/78 MP 0/0 Hu 72 $ 340 room=G
--> h
-T 574 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 6) HP 78/78 MP 0/0 Hu 72 $ 340 room=.
--> w
-T 575 mode=combat_mode         Gloin Oakshield(dwa) F3@( 6, 6) HP 78/78 MP 0/0 Hu 71 $ 340 room=M vs Harpy(L2 HP28/28)
+T 508 mode=combat_mode         Gloin Oakshield(dwa) F3@( 1, 2) HP 78/78 MP 0/0 Hu 48 $ 214 room=M vs Giant Rat(L2 HP22/22)
 -> a
-T 576 mode=combat_mode         Gloin Oakshield(dwa) F3@( 6, 6) HP 77/78 MP 0/0 Hu 71 $ 340 room=M vs Harpy(L2 HP4/28)
+T 509 mode=combat_mode         Gloin Oakshield(dwa) F3@( 1, 2) HP 77/78 MP 0/0 Hu 48 $ 214 room=M vs Giant Rat(L2 HP22/22)
 -> a
-T 577 mode=combat_mode         Gloin Oakshield(dwa) F3@( 6, 6) HP 77/78 MP 0/0 Hu 71 $ 340 room=M vs Harpy(L2 HP4/28)
+T 510 mode=combat_mode         Gloin Oakshield(dwa) F3@( 1, 2) HP 77/78 MP 0/0 Hu 48 $ 214 room=M vs Giant Rat(L2 HP22/22)
 -> a
-T 578 mode=combat_victory      Gloin Oakshield(dwa) F3@( 6, 6) HP 77/78 MP 0/0 Hu 71 $ 352 room=.
+T 511 mode=combat_victory      Gloin Oakshield(dwa) F3@( 1, 2) HP 76/78 MP 0/0 Hu 48 $ 223 room=.
 -> back
-T 579 mode=game_loop           Gloin Oakshield(dwa) F3@( 6, 6) HP 77/78 MP 0/0 Hu 71 $ 352 room=.
--> w
-T 580 mode=game_loop           Gloin Oakshield(dwa) F3@( 5, 6) HP 77/78 MP 0/0 Hu 70 $ 352 room=.
--> n
-T 581 mode=game_loop           Gloin Oakshield(dwa) F3@( 5, 5) HP 77/78 MP 0/0 Hu 69 $ 352 room=.
--> e
-T 582 mode=game_loop           Gloin Oakshield(dwa) F3@( 6, 5) HP 77/78 MP 0/0 Hu 68 $ 352 room=.
--> e
-T 583 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 5) HP 78/78 MP 0/0 Hu 67 $ 352 room=.
--> e
-T 584 mode=game_loop           Gloin Oakshield(dwa) F3@( 8, 5) HP 78/78 MP 0/0 Hu 66 $ 352 room=.
--> e
-T 585 mode=game_loop           Gloin Oakshield(dwa) F3@( 9, 5) HP 78/78 MP 0/0 Hu 65 $ 352 room=.
--> l
-T 586 mode=game_loop           Gloin Oakshield(dwa) F3@( 9, 5) HP 78/78 MP 0/0 Hu 65 $ 352 room=.
--> e
-T 587 mode=game_loop           Gloin Oakshield(dwa) F3@(10, 5) HP 78/78 MP 0/0 Hu 64 $ 352 room=.
--> l
-T 588 mode=game_loop           Gloin Oakshield(dwa) F3@(10, 5) HP 78/78 MP 0/0 Hu 64 $ 352 room=.
--> e
-T 589 mode=chest_mode          Gloin Oakshield(dwa) F3@(11, 5) HP 78/78 MP 0/0 Hu 63 $ 352 room=C
--> o
-T 590 mode=game_loop           Gloin Oakshield(dwa) F3@(11, 5) HP 78/78 MP 0/0 Hu 63 $ 432 room=.
--> l
-T 591 mode=game_loop           Gloin Oakshield(dwa) F3@(11, 5) HP 78/78 MP 0/0 Hu 63 $ 432 room=.
--> s
-T 592 mode=chest_mode          Gloin Oakshield(dwa) F3@(11, 6) HP 78/78 MP 0/0 Hu 62 $ 432 room=C
--> o
-T 593 mode=game_loop           Gloin Oakshield(dwa) F3@(11, 5) HP 78/78 MP 0/0 Hu 61 $ 432 room=.
--> s
-T 594 mode=game_loop           Gloin Oakshield(dwa) F3@(11, 6) HP 78/78 MP 0/0 Hu 60 $ 432 room=.
--> l
-T 595 mode=game_loop           Gloin Oakshield(dwa) F3@(11, 6) HP 78/78 MP 0/0 Hu 60 $ 432 room=.
--> e
-T 596 mode=library_mode        Gloin Oakshield(dwa) F3@(12, 6) HP 78/78 MP 0/0 Hu 59 $ 432 room=L
--> r
-T 597 mode=library_read_decision_mode Gloin Oakshield(dwa) F3@(12, 6) HP 78/78 MP 0/0 Hu 59 $ 432 room=L
--> y
-T 598 mode=game_loop           Gloin Oakshield(dwa) F3@(12, 6) HP 78/78 MP 0/0 Hu 59 $ 432 room=.
--> l
-T 599 mode=game_loop           Gloin Oakshield(dwa) F3@(12, 6) HP 78/78 MP 0/0 Hu 59 $ 432 room=.
--> s
-T 600 mode=game_loop           Gloin Oakshield(dwa) F3@(12, 7) HP 78/78 MP 0/0 Hu 58 $ 432 room=.
--> w
-T 601 mode=game_loop           Gloin Oakshield(dwa) F3@(11, 7) HP 78/78 MP 0/0 Hu 57 $ 432 room=.
--> s
-T 602 mode=game_loop           Gloin Oakshield(dwa) F3@(11, 8) HP 78/78 MP 0/0 Hu 56 $ 432 room=.
--> s
-T 603 mode=game_loop           Gloin Oakshield(dwa) F3@(11, 9) HP 78/78 MP 0/0 Hu 55 $ 432 room=.
--> e
-T 604 mode=chest_mode          Gloin Oakshield(dwa) F3@(12, 9) HP 78/78 MP 0/0 Hu 54 $ 432 room=C
--> o
-T 605 mode=game_loop           Gloin Oakshield(dwa) F3@(12, 9) HP 78/78 MP 0/0 Hu 54 $ 542 room=.
--> l
-T 606 mode=game_loop           Gloin Oakshield(dwa) F3@(12, 9) HP 78/78 MP 0/0 Hu 54 $ 542 room=.
--> e
-T 607 mode=combat_mode         Gloin Oakshield(dwa) F3@(13, 9) HP 78/78 MP 0/0 Hu 53 $ 542 room=M vs Spore Puff(L2 HP18/18)
--> a
-T 608 mode=combat_victory      Gloin Oakshield(dwa) F3@(13, 9) HP 77/78 MP 0/0 Hu 53 $ 548 room=.
--> back
-T 609 mode=game_loop           Gloin Oakshield(dwa) F3@(13, 9) HP 77/78 MP 0/0 Hu 53 $ 548 room=.
--> l
-T 610 mode=game_loop           Gloin Oakshield(dwa) F3@(13, 9) HP 77/78 MP 0/0 Hu 53 $ 548 room=.
--> s
-T 611 mode=combat_mode         Gloin Oakshield(dwa) F3@(13,10) HP 77/78 MP 0/0 Hu 52 $ 548 room=M vs Zombie(L2 HP36/36)
--> a
-T 612 mode=combat_mode         Gloin Oakshield(dwa) F3@(13,10) HP 76/78 MP 0/0 Hu 52 $ 548 room=M vs Zombie(L2 HP10/36)
--> a
-T 613 mode=combat_mode         Gloin Oakshield(dwa) F3@(13,10) HP 75/78 MP 0/0 Hu 52 $ 548 room=M vs Zombie(L2 HP10/36)
--> a
-T 614 mode=combat_mode         Gloin Oakshield(dwa) F3@(13,10) HP 74/78 MP 0/0 Hu 52 $ 548 room=M vs Zombie(L2 HP10/36)
--> a
-T 615 mode=combat_victory      Gloin Oakshield(dwa) F3@(13,10) HP 74/88 MP 0/0 Hu 52 $ 563 room=.
--> back
-T 616 mode=game_loop           Gloin Oakshield(dwa) F3@(13,10) HP 74/88 MP 0/0 Hu 52 $ 563 room=.
--> l
-T 617 mode=game_loop           Gloin Oakshield(dwa) F3@(13,10) HP 74/88 MP 0/0 Hu 52 $ 563 room=.
--> e
-T 618 mode=game_loop           Gloin Oakshield(dwa) F3@(14,10) HP 74/88 MP 0/0 Hu 51 $ 563 room=.
--> l
-T 619 mode=game_loop           Gloin Oakshield(dwa) F3@(14,10) HP 74/88 MP 0/0 Hu 51 $ 563 room=.
--> s
-T 620 mode=pool_mode           Gloin Oakshield(dwa) F3@(14,11) HP 74/88 MP 0/0 Hu 50 $ 563 room=P
--> dr
-T 621 mode=game_loop           Gloin Oakshield(dwa) F3@(14,11) HP 88/88 MP 0/0 Hu 50 $ 563 room=.
--> l
-T 622 mode=game_loop           Gloin Oakshield(dwa) F3@(14,11) HP 88/88 MP 0/0 Hu 50 $ 563 room=.
--> e
-T 623 mode=game_loop           Gloin Oakshield(dwa) F3@(15,11) HP 88/88 MP 0/0 Hu 49 $ 563 room=.
--> l
-T 624 mode=game_loop           Gloin Oakshield(dwa) F3@(15,11) HP 88/88 MP 0/0 Hu 49 $ 563 room=.
--> e
-T 625 mode=chest_mode          Gloin Oakshield(dwa) F3@(16,11) HP 88/88 MP 0/0 Hu 48 $ 563 room=C
--> o
-T 626 mode=game_loop           Gloin Oakshield(dwa) F3@(16,11) HP 88/88 MP 0/0 Hu 48 $ 663 room=.
--> l
-T 627 mode=game_loop           Gloin Oakshield(dwa) F3@(16,11) HP 88/88 MP 0/0 Hu 48 $ 663 room=.
--> n
-T 628 mode=game_loop           Gloin Oakshield(dwa) F3@(16,10) HP 88/88 MP 0/0 Hu 47 $ 663 room=.
--> w
-T 629 mode=pool_mode           Gloin Oakshield(dwa) F3@(15,10) HP 88/88 MP 0/0 Hu 46 $ 663 room=P
--> dr
-T 630 mode=game_loop           Gloin Oakshield(dwa) F3@(15,10) HP 88/88 MP 0/0 Hu 46 $ 663 room=.
--> w
-T 631 mode=game_loop           Gloin Oakshield(dwa) F3@(14,10) HP 88/88 MP 0/0 Hu 45 $ 663 room=.
--> s
-T 632 mode=game_loop           Gloin Oakshield(dwa) F3@(14,11) HP 88/88 MP 0/0 Hu 44 $ 663 room=.
--> s
-T 633 mode=stairs_down_mode    Gloin Oakshield(dwa) F3@(14,12) HP 88/88 MP 0/0 Hu 43 $ 663 room=D
--> s
-T 634 mode=game_loop           Gloin Oakshield(dwa) F3@(14,13) HP 88/88 MP 0/0 Hu 42 $ 663 room=.
--> s
-T 635 mode=pool_mode           Gloin Oakshield(dwa) F3@(14,14) HP 88/88 MP 0/0 Hu 41 $ 663 room=P
--> dr
-T 636 mode=game_loop           Gloin Oakshield(dwa) F3@(14,14) HP 88/88 MP 0/0 Hu 41 $ 706 room=.
--> w
-T 637 mode=game_loop           Gloin Oakshield(dwa) F3@(13,14) HP 88/88 MP 0/0 Hu 40 $ 706 room=.
--> l
-T 638 mode=game_loop           Gloin Oakshield(dwa) F3@(13,14) HP 88/88 MP 0/0 Hu 40 $ 706 room=.
--> n
-T 639 mode=game_loop           Gloin Oakshield(dwa) F3@(13,13) HP 88/88 MP 0/0 Hu 39 $ 706 room=.
--> l
-T 640 mode=game_loop           Gloin Oakshield(dwa) F3@(13,13) HP 88/88 MP 0/0 Hu 39 $ 706 room=.
--> n
-T 641 mode=game_loop           Gloin Oakshield(dwa) F3@(13,12) HP 88/88 MP 0/0 Hu 38 $ 706 room=.
--> l
-T 642 mode=game_loop           Gloin Oakshield(dwa) F3@(13,12) HP 88/88 MP 0/0 Hu 38 $ 706 room=.
--> n
-T 643 mode=game_loop           Gloin Oakshield(dwa) F3@(13,11) HP 88/88 MP 0/0 Hu 37 $ 706 room=.
--> n
-T 644 mode=game_loop           Gloin Oakshield(dwa) F3@(13,10) HP 88/88 MP 0/0 Hu 36 $ 706 room=.
--> n
-T 645 mode=game_loop           Gloin Oakshield(dwa) F3@(13, 9) HP 88/88 MP 0/0 Hu 35 $ 706 room=.
--> w
-T 646 mode=game_loop           Gloin Oakshield(dwa) F3@(12, 9) HP 88/88 MP 0/0 Hu 34 $ 706 room=.
--> w
-T 647 mode=game_loop           Gloin Oakshield(dwa) F3@(11, 9) HP 88/88 MP 0/0 Hu 33 $ 706 room=.
--> w
-T 648 mode=garden_mode         Gloin Oakshield(dwa) F3@(10, 9) HP 88/88 MP 0/0 Hu 32 $ 706 room=G
--> h
-T 649 mode=game_loop           Gloin Oakshield(dwa) F3@(10, 9) HP 88/88 MP 0/0 Hu 32 $ 706 room=.
--> s
-T 650 mode=game_loop           Gloin Oakshield(dwa) F3@(10,10) HP 88/88 MP 0/0 Hu 31 $ 706 room=.
--> e
-T 651 mode=game_loop           Gloin Oakshield(dwa) F3@(11,10) HP 88/88 MP 0/0 Hu 30 $ 706 room=.
--> e
-T 652 mode=game_loop           Gloin Oakshield(dwa) F3@(12,10) HP 88/88 MP 0/0 Hu 29 $ 706 room=.
--> e
-T 653 mode=game_loop           Gloin Oakshield(dwa) F3@(13,10) HP 88/88 MP 0/0 Hu 28 $ 706 room=.
--> s
-T 654 mode=game_loop           Gloin Oakshield(dwa) F3@(13,11) HP 88/88 MP 0/0 Hu 27 $ 706 room=.
--> s
-T 655 mode=game_loop           Gloin Oakshield(dwa) F3@(13,12) HP 88/88 MP 0/0 Hu 26 $ 706 room=.
--> e
-T 656 mode=stairs_down_mode    Gloin Oakshield(dwa) F3@(14,12) HP 88/88 MP 0/0 Hu 25 $ 706 room=D
--> n
-T 657 mode=game_loop           Gloin Oakshield(dwa) F3@(14,11) HP 88/88 MP 0/0 Hu 24 $ 706 room=.
--> e
-T 658 mode=game_loop           Gloin Oakshield(dwa) F3@(15,11) HP 88/88 MP 0/0 Hu 23 $ 706 room=.
--> s
-T 659 mode=game_loop           Gloin Oakshield(dwa) F3@(15,12) HP 88/88 MP 0/0 Hu 22 $ 706 room=.
--> s
-T 660 mode=game_loop           Gloin Oakshield(dwa) F3@(15,13) HP 88/88 MP 0/0 Hu 21 $ 706 room=.
--> w
-T 661 mode=game_loop           Gloin Oakshield(dwa) F3@(14,13) HP 88/88 MP 0/0 Hu 20 $ 706 room=.
--> n
-T 662 mode=stairs_down_mode    Gloin Oakshield(dwa) F3@(14,12) HP 88/88 MP 0/0 Hu 19 $ 706 room=D
--> n
-T 663 mode=game_loop           Gloin Oakshield(dwa) F3@(14,11) HP 88/88 MP 0/0 Hu 18 $ 706 room=.
--> w
-T 664 mode=game_loop           Gloin Oakshield(dwa) F3@(13,11) HP 88/88 MP 0/0 Hu 17 $ 706 room=.
--> s
-T 665 mode=game_loop           Gloin Oakshield(dwa) F3@(13,12) HP 88/88 MP 0/0 Hu 16 $ 706 room=.
--> s
-T 666 mode=game_loop           Gloin Oakshield(dwa) F3@(13,13) HP 88/88 MP 0/0 Hu 15 $ 706 room=.
--> s
-T 667 mode=game_loop           Gloin Oakshield(dwa) F3@(13,14) HP 88/88 MP 0/0 Hu 14 $ 706 room=.
--> s
-T 668 mode=game_loop           Gloin Oakshield(dwa) F3@(13,15) HP 88/88 MP 0/0 Hu 13 $ 706 room=.
--> l
-T 669 mode=game_loop           Gloin Oakshield(dwa) F3@(13,15) HP 88/88 MP 0/0 Hu 13 $ 706 room=.
--> w
-T 670 mode=game_loop           Gloin Oakshield(dwa) F3@(12,15) HP 88/88 MP 0/0 Hu 12 $ 706 room=.
--> l
-T 671 mode=game_loop           Gloin Oakshield(dwa) F3@(12,15) HP 88/88 MP 0/0 Hu 12 $ 706 room=.
--> n
-T 672 mode=game_loop           Gloin Oakshield(dwa) F3@(12,14) HP 88/88 MP 0/0 Hu 11 $ 706 room=.
--> n
-T 673 mode=combat_mode         Gloin Oakshield(dwa) F3@(12,13) HP 88/88 MP 0/0 Hu 10 $ 706 room=M vs Gnoll(L2 HP45/45)
--> a
-T 674 mode=combat_mode         Gloin Oakshield(dwa) F3@(12,13) HP 87/88 MP 0/0 Hu 10 $ 706 room=M vs Gnoll(L2 HP21/45)
--> a
-T 675 mode=combat_victory      Gloin Oakshield(dwa) F3@(12,13) HP 86/88 MP 0/0 Hu 10 $ 715 room=.
--> back
-T 676 mode=game_loop           Gloin Oakshield(dwa) F3@(12,13) HP 86/88 MP 0/0 Hu 10 $ 715 room=.
--> w
-T 677 mode=game_loop           Gloin Oakshield(dwa) F3@(11,13) HP 86/88 MP 0/0 Hu  9 $ 715 room=.
--> w
-T 678 mode=altar_mode          Gloin Oakshield(dwa) F3@(10,13) HP 86/88 MP 0/0 Hu  8 $ 715 room=A
--> pray
-T 679 mode=game_loop           Gloin Oakshield(dwa) F3@(10,13) HP 86/88 MP 0/0 Hu  8 $ 715 room=.
--> l
-T 680 mode=game_loop           Gloin Oakshield(dwa) F3@(10,13) HP 86/88 MP 0/0 Hu  8 $ 715 room=.
--> n
-T 681 mode=combat_mode         Gloin Oakshield(dwa) F3@(10,12) HP 86/88 MP 0/0 Hu  7 $ 715 room=M vs Harpy(L2 HP28/28)
--> a
-T 682 mode=combat_mode         Gloin Oakshield(dwa) F3@(10,12) HP 85/88 MP 0/0 Hu  7 $ 715 room=M vs Harpy(L2 HP28/28)
--> a
-T 683 mode=combat_mode         Gloin Oakshield(dwa) F3@(10,12) HP 84/88 MP 0/0 Hu  7 $ 715 room=M vs Harpy(L2 HP4/28)
--> a
-T 684 mode=combat_mode         Gloin Oakshield(dwa) F3@(10,12) HP 83/88 MP 0/0 Hu  7 $ 715 room=M vs Harpy(L2 HP4/28)
--> a
-T 685 mode=combat_victory      Gloin Oakshield(dwa) F3@(10,12) HP 83/88 MP 0/0 Hu  7 $ 736 room=.
--> back
-T 686 mode=game_loop           Gloin Oakshield(dwa) F3@(10,12) HP 83/88 MP 0/0 Hu  7 $ 736 room=.
+T 512 mode=game_loop           Gloin Oakshield(dwa) F3@( 1, 2) HP 76/78 MP 0/0 Hu 48 $ 223 room=.
 -> i
-T 687 mode=inventory           Gloin Oakshield(dwa) F3@(10,12) HP 83/88 MP 0/0 Hu  7 $ 736 room=.
--> u7
-T 688 mode=inventory           Gloin Oakshield(dwa) F3@(10,12) HP 88/88 MP 0/0 Hu  7 $ 736 room=.
--> x
-T 689 mode=game_loop           Gloin Oakshield(dwa) F3@(10,12) HP 88/88 MP 0/0 Hu  7 $ 736 room=.
--> i
-T 690 mode=inventory           Gloin Oakshield(dwa) F3@(10,12) HP 88/88 MP 0/0 Hu  7 $ 736 room=.
+T 513 mode=inventory           Gloin Oakshield(dwa) F3@( 1, 2) HP 76/78 MP 0/0 Hu 48 $ 223 room=.
 -> eat1
-T 691 mode=inventory           Gloin Oakshield(dwa) F3@(10,12) HP 88/88 MP 0/0 Hu 13 $ 736 room=.
+T 514 mode=inventory           Gloin Oakshield(dwa) F3@( 1, 2) HP 76/78 MP 0/0 Hu 98 $ 223 room=.
 -> x
-T 692 mode=game_loop           Gloin Oakshield(dwa) F3@(10,12) HP 88/88 MP 0/0 Hu 13 $ 736 room=.
--> e
-T 693 mode=game_loop           Gloin Oakshield(dwa) F3@(11,12) HP 88/88 MP 0/0 Hu 12 $ 736 room=.
+T 515 mode=game_loop           Gloin Oakshield(dwa) F3@( 1, 2) HP 76/78 MP 0/0 Hu 98 $ 223 room=.
+-> l
+T 516 mode=game_loop           Gloin Oakshield(dwa) F3@( 1, 2) HP 76/78 MP 0/0 Hu 98 $ 223 room=.
 -> s
-T 694 mode=game_loop           Gloin Oakshield(dwa) F3@(11,13) HP 88/88 MP 0/0 Hu 11 $ 736 room=.
+T 517 mode=game_loop           Gloin Oakshield(dwa) F3@( 1, 3) HP 74/78 MP 0/0 Hu 97 $ 223 room=.
+-> l
+T 518 mode=game_loop           Gloin Oakshield(dwa) F3@( 1, 3) HP 74/78 MP 0/0 Hu 97 $ 223 room=.
 -> e
-T 695 mode=game_loop           Gloin Oakshield(dwa) F3@(12,13) HP 88/88 MP 0/0 Hu 10 $ 736 room=.
+T 519 mode=game_loop           Gloin Oakshield(dwa) F3@( 2, 3) HP 73/78 MP 0/0 Hu 96 $ 223 room=.
+-> l
+T 520 mode=game_loop           Gloin Oakshield(dwa) F3@( 2, 3) HP 73/78 MP 0/0 Hu 96 $ 223 room=.
 -> e
-T 696 mode=game_loop           Gloin Oakshield(dwa) F3@(13,13) HP 88/88 MP 0/0 Hu  9 $ 736 room=.
--> n
-T 697 mode=game_loop           Gloin Oakshield(dwa) F3@(13,12) HP 88/88 MP 0/0 Hu  8 $ 736 room=.
+T 521 mode=game_loop           Gloin Oakshield(dwa) F3@( 3, 3) HP 71/78 MP 0/0 Hu 95 $ 223 room=.
+-> l
+T 522 mode=game_loop           Gloin Oakshield(dwa) F3@( 3, 3) HP 71/78 MP 0/0 Hu 95 $ 223 room=.
 -> e
-T 698 mode=stairs_down_mode    Gloin Oakshield(dwa) F3@(14,12) HP 88/88 MP 0/0 Hu  7 $ 736 room=D
+T 523 mode=library_mode        Gloin Oakshield(dwa) F3@( 4, 3) HP 72/78 MP 0/0 Hu 94 $ 223 room=L
+-> r
+T 524 mode=library_read_decision_mode Gloin Oakshield(dwa) F3@( 4, 3) HP 72/78 MP 0/0 Hu 94 $ 223 room=L
+-> y
+T 525 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 3) HP 72/78 MP 0/0 Hu 94 $ 323 room=.
+-> l
+T 526 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 3) HP 72/78 MP 0/0 Hu 94 $ 323 room=.
+-> s
+T 527 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 4) HP 72/78 MP 0/0 Hu 93 $ 323 room=.
+-> l
+T 528 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 4) HP 72/78 MP 0/0 Hu 93 $ 323 room=.
+-> w
+T 529 mode=pool_mode           Gloin Oakshield(dwa) F3@( 3, 4) HP 73/78 MP 0/0 Hu 92 $ 323 room=P
+-> dr
+T 530 mode=game_loop           Gloin Oakshield(dwa) F3@( 3, 4) HP 73/78 MP 0/0 Hu 92 $ 323 room=.
+-> s
+T 531 mode=game_loop           Gloin Oakshield(dwa) F3@( 3, 5) HP 73/78 MP 0/0 Hu 91 $ 323 room=.
+-> e
+T 532 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 5) HP 74/78 MP 0/0 Hu 90 $ 323 room=.
+-> l
+T 533 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 5) HP 74/78 MP 0/0 Hu 90 $ 323 room=.
+-> s
+T 534 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 6) HP 74/78 MP 0/0 Hu 89 $ 323 room=.
+-> l
+T 535 mode=game_loop           Gloin Oakshield(dwa) F3@( 4, 6) HP 74/78 MP 0/0 Hu 89 $ 323 room=.
+-> e
+T 536 mode=game_loop           Gloin Oakshield(dwa) F3@( 5, 6) HP 75/78 MP 0/0 Hu 88 $ 323 room=.
+-> e
+T 537 mode=game_loop           Gloin Oakshield(dwa) F3@( 6, 6) HP 75/78 MP 0/0 Hu 87 $ 323 room=.
+-> l
+T 538 mode=game_loop           Gloin Oakshield(dwa) F3@( 6, 6) HP 75/78 MP 0/0 Hu 87 $ 323 room=.
+-> s
+T 539 mode=game_loop           Gloin Oakshield(dwa) F3@( 6, 7) HP 76/78 MP 0/0 Hu 86 $ 323 room=.
+-> l
+T 540 mode=game_loop           Gloin Oakshield(dwa) F3@( 6, 7) HP 76/78 MP 0/0 Hu 86 $ 323 room=.
+-> e
+T 541 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 7) HP 76/78 MP 0/0 Hu 85 $ 323 room=.
+-> l
+T 542 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 7) HP 76/78 MP 0/0 Hu 85 $ 323 room=.
+-> s
+T 543 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 8) HP 76/78 MP 0/0 Hu 84 $ 323 room=.
+-> l
+T 544 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 8) HP 76/78 MP 0/0 Hu 84 $ 323 room=.
+-> s
+T 545 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 9) HP 76/78 MP 0/0 Hu 83 $ 323 room=.
+-> l
+T 546 mode=game_loop           Gloin Oakshield(dwa) F3@( 7, 9) HP 76/78 MP 0/0 Hu 83 $ 323 room=.
+-> e
+T 547 mode=altar_mode          Gloin Oakshield(dwa) F3@( 8, 9) HP 77/78 MP 0/0 Hu 82 $ 323 room=A
+-> pray
+T 548 mode=game_loop           Gloin Oakshield(dwa) F3@( 8, 9) HP 77/78 MP 0/0 Hu 82 $ 323 room=.
+-> l
+T 549 mode=game_loop           Gloin Oakshield(dwa) F3@( 8, 9) HP 77/78 MP 0/0 Hu 82 $ 323 room=.
+-> s
+T 550 mode=game_loop           Gloin Oakshield(dwa) F3@( 8,10) HP 77/78 MP 0/0 Hu 81 $ 323 room=.
+-> l
+T 551 mode=game_loop           Gloin Oakshield(dwa) F3@( 8,10) HP 77/78 MP 0/0 Hu 81 $ 323 room=.
+-> e
+T 552 mode=game_loop           Gloin Oakshield(dwa) F3@( 9,10) HP 77/78 MP 0/0 Hu 80 $ 323 room=.
+-> l
+T 553 mode=game_loop           Gloin Oakshield(dwa) F3@( 9,10) HP 77/78 MP 0/0 Hu 80 $ 323 room=.
+-> e
+T 554 mode=game_loop           Gloin Oakshield(dwa) F3@(10,10) HP 77/78 MP 0/0 Hu 79 $ 323 room=.
+-> l
+T 555 mode=game_loop           Gloin Oakshield(dwa) F3@(10,10) HP 77/78 MP 0/0 Hu 79 $ 323 room=.
+-> e
+T 556 mode=stairs_down_mode    Gloin Oakshield(dwa) F3@(11,10) HP 78/78 MP 0/0 Hu 78 $ 323 room=D
 -> d
-T 699 mode=stairs_up_mode      Gloin Oakshield(dwa) F4@( 1, 1) HP 88/88 MP 0/0 Hu  7 $ 736 room=U
--> n
-T 700 mode=stairs_up_mode      Gloin Oakshield(dwa) F4@( 1, 1) HP 88/88 MP 0/0 Hu  7 $ 736 room=U
--> w
-T 701 mode=stairs_up_mode      Gloin Oakshield(dwa) F4@( 1, 1) HP 88/88 MP 0/0 Hu  7 $ 736 room=U
+T 557 mode=stairs_up_mode      Gloin Oakshield(dwa) F4@( 1, 1) HP 78/78 MP 0/0 Hu 78 $ 323 room=U
 -> e
-T 702 mode=game_loop           Gloin Oakshield(dwa) F4@( 2, 1) HP 88/88 MP 0/0 Hu  6 $ 736 room=.
--> l
-T 703 mode=game_loop           Gloin Oakshield(dwa) F4@( 2, 1) HP 88/88 MP 0/0 Hu  6 $ 736 room=.
--> e
-T 704 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 1) HP 88/88 MP 0/0 Hu  5 $ 736 room=.
--> l
-T 705 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 1) HP 88/88 MP 0/0 Hu  5 $ 736 room=.
--> e
-T 706 mode=library_mode        Gloin Oakshield(dwa) F4@( 4, 1) HP 88/88 MP 0/0 Hu  4 $ 736 room=L
--> r
-T 707 mode=library_read_decision_mode Gloin Oakshield(dwa) F4@( 4, 1) HP 88/88 MP 0/0 Hu  4 $ 736 room=L
--> y
-T 708 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 1) HP 88/88 MP 0/0 Hu  4 $ 736 room=.
--> l
-T 709 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 1) HP 88/88 MP 0/0 Hu  4 $ 736 room=.
--> s
-T 710 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 2) HP 88/88 MP 0/0 Hu  3 $ 736 room=.
--> l
-T 711 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 2) HP 88/88 MP 0/0 Hu  3 $ 736 room=.
--> w
-T 712 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 2) HP 88/88 MP 0/0 Hu  2 $ 736 room=.
--> w
-T 713 mode=game_loop           Gloin Oakshield(dwa) F4@( 2, 2) HP 88/88 MP 0/0 Hu  1 $ 736 room=.
--> w
-T 714 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 736 room=V
--> r4
-T 715 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 666 room=V
--> b15
-T 716 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 656 room=V
--> b15
-T 717 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 651 room=V
--> b15
-T 718 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 646 room=V
--> b14
-T 719 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 496 room=V
--> b4
-T 720 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 346 room=V
--> b4
-T 721 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 256 room=V
--> b11
-T 722 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 176 room=V
--> id6
-T 723 mode=vendor_shop         Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 51 room=V
--> x
-T 724 mode=game_loop           Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 51 room=V
--> i
-T 725 mode=inventory           Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu  0 $ 51 room=V
--> eat1
-T 726 mode=inventory           Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu 50 $ 51 room=V
--> x
-T 727 mode=game_loop           Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu 50 $ 51 room=V
--> l
-T 728 mode=game_loop           Gloin Oakshield(dwa) F4@( 1, 2) HP 86/88 MP 0/0 Hu 50 $ 51 room=V
--> s
-T 729 mode=tomb_mode           Gloin Oakshield(dwa) F4@( 1, 3) HP 86/88 MP 0/0 Hu 49 $ 51 room=T
--> p
-T 730 mode=game_loop           Gloin Oakshield(dwa) F4@( 1, 3) HP 88/88 MP 0/0 Hu 49 $ 51 room=T
--> i
-T 731 mode=inventory           Gloin Oakshield(dwa) F4@( 1, 3) HP 88/88 MP 0/0 Hu 49 $ 51 room=T
--> eat1
-T 732 mode=inventory           Gloin Oakshield(dwa) F4@( 1, 3) HP 88/88 MP 0/0 Hu 99 $ 51 room=T
--> u13
-T 733 mode=upgrade_scroll_mode Gloin Oakshield(dwa) F4@( 1, 3) HP 88/88 MP 0/0 Hu 99 $ 51 room=T
--> 1
-T 734 mode=inventory           Gloin Oakshield(dwa) F4@( 1, 3) HP 88/88 MP 0/0 Hu 99 $ 51 room=T
--> x
-T 735 mode=game_loop           Gloin Oakshield(dwa) F4@( 1, 3) HP 88/88 MP 0/0 Hu 99 $ 51 room=T
--> n
-T 736 mode=game_loop           Gloin Oakshield(dwa) F4@( 1, 2) HP 88/88 MP 0/0 Hu 98 $ 51 room=V
--> n
-T 737 mode=stairs_up_mode      Gloin Oakshield(dwa) F4@( 1, 1) HP 88/88 MP 0/0 Hu 97 $ 51 room=U
--> e
-T 738 mode=game_loop           Gloin Oakshield(dwa) F4@( 2, 1) HP 88/88 MP 0/0 Hu 96 $ 51 room=.
--> s
-T 739 mode=game_loop           Gloin Oakshield(dwa) F4@( 2, 2) HP 88/88 MP 0/0 Hu 95 $ 51 room=.
--> e
-T 740 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 2) HP 88/88 MP 0/0 Hu 94 $ 51 room=.
--> s
-T 741 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 3) HP 88/88 MP 0/0 Hu 93 $ 51 room=.
--> e
-T 742 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 3) HP 88/88 MP 0/0 Hu 92 $ 51 room=.
--> l
-T 743 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 3) HP 88/88 MP 0/0 Hu 92 $ 51 room=.
--> e
-T 744 mode=chest_mode          Gloin Oakshield(dwa) F4@( 5, 3) HP 88/88 MP 0/0 Hu 91 $ 51 room=C
--> o
-T 745 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 3) HP 88/113 MP 0/0 Hu 91 $ 51 room=.
--> l
-T 746 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 3) HP 88/113 MP 0/0 Hu 91 $ 51 room=.
--> s
-T 747 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 4) HP 88/113 MP 0/0 Hu 90 $ 51 room=.
--> l
-T 748 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 4) HP 88/113 MP 0/0 Hu 90 $ 51 room=.
--> e
-T 749 mode=chest_mode          Gloin Oakshield(dwa) F4@( 6, 4) HP 89/113 MP 0/0 Hu 89 $ 51 room=C
--> o
-T 750 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 4) HP 89/113 MP 0/0 Hu 89 $ 51 room=.
--> l
-T 751 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 4) HP 89/113 MP 0/0 Hu 89 $ 51 room=.
--> n
-T 752 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 3) HP 89/113 MP 0/0 Hu 88 $ 51 room=.
--> n
-T 753 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 2) HP 90/113 MP 0/0 Hu 87 $ 51 room=.
--> w
-T 754 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 2) HP 90/113 MP 0/0 Hu 86 $ 51 room=.
--> s
-T 755 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 3) HP 91/113 MP 0/0 Hu 85 $ 51 room=.
--> s
-T 756 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 4) HP 91/113 MP 0/0 Hu 84 $ 51 room=.
--> w
-T 757 mode=oracle_mode         Gloin Oakshield(dwa) F4@( 4, 4) HP 91/113 MP 0/0 Hu 83 $ 51 room=O
--> n
-T 758 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 3) HP 91/113 MP 0/0 Hu 82 $ 51 room=.
--> w
-T 759 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 3) HP 92/113 MP 0/0 Hu 81 $ 51 room=.
--> n
-T 760 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 2) HP 92/113 MP 0/0 Hu 80 $ 51 room=.
--> w
-T 761 mode=game_loop           Gloin Oakshield(dwa) F4@( 2, 2) HP 92/113 MP 0/0 Hu 79 $ 51 room=.
--> n
-T 762 mode=game_loop           Gloin Oakshield(dwa) F4@( 2, 1) HP 92/113 MP 0/0 Hu 78 $ 51 room=.
--> w
-T 763 mode=stairs_up_mode      Gloin Oakshield(dwa) F4@( 1, 1) HP 93/113 MP 0/0 Hu 77 $ 51 room=U
--> s
-T 764 mode=game_loop           Gloin Oakshield(dwa) F4@( 1, 2) HP 93/113 MP 0/0 Hu 76 $ 51 room=V
--> s
-T 765 mode=game_loop           Gloin Oakshield(dwa) F4@( 1, 3) HP 93/113 MP 0/0 Hu 75 $ 51 room=T
--> e
-T 766 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 3) HP 93/113 MP 0/0 Hu 74 $ 51 room=M vs ELITE UNDEAD MUMMY(L4 HP123/123)
+T 558 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 78/78 MP 0/0 Hu 77 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
 -> f
-T 767 mode=flee_direction_mode Gloin Oakshield(dwa) F4@( 2, 3) HP 93/113 MP 0/0 Hu 74 $ 51 room=M
--> n
-T 768 mode=game_loop           Gloin Oakshield(dwa) F4@( 2, 2) HP 93/113 MP 0/0 Hu 74 $ 51 room=.
--> n
-T 769 mode=game_loop           Gloin Oakshield(dwa) F4@( 2, 1) HP 94/113 MP 0/0 Hu 73 $ 51 room=.
--> e
-T 770 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 1) HP 94/113 MP 0/0 Hu 72 $ 51 room=.
--> s
-T 771 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 2) HP 94/113 MP 0/0 Hu 71 $ 51 room=.
--> s
-T 772 mode=game_loop           Gloin Oakshield(dwa) F4@( 3, 3) HP 94/113 MP 0/0 Hu 70 $ 51 room=.
--> e
-T 773 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 3) HP 95/113 MP 0/0 Hu 69 $ 51 room=.
--> n
-T 774 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 2) HP 95/113 MP 0/0 Hu 68 $ 51 room=.
--> e
-T 775 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 2) HP 95/113 MP 0/0 Hu 67 $ 51 room=.
--> s
-T 776 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 3) HP 95/113 MP 0/0 Hu 66 $ 51 room=.
--> e
-T 777 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 3) HP 96/113 MP 0/0 Hu 65 $ 51 room=.
--> n
-T 778 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 2) HP 96/113 MP 0/0 Hu 64 $ 51 room=.
--> s
-T 779 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 3) HP 96/113 MP 0/0 Hu 63 $ 51 room=.
--> s
-T 780 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 4) HP 96/113 MP 0/0 Hu 62 $ 51 room=.
--> s
-T 781 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 5) HP 97/113 MP 0/0 Hu 61 $ 51 room=.
--> s
-T 782 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 6) HP 97/113 MP 0/0 Hu 60 $ 51 room=.
--> l
-T 783 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 6) HP 97/113 MP 0/0 Hu 60 $ 51 room=.
--> e
-T 784 mode=combat_mode         Gloin Oakshield(dwa) F4@( 7, 6) HP 97/113 MP 0/0 Hu 59 $ 51 room=M vs Displacer Beast(L3 HP42/42)
--> a
-T 785 mode=combat_mode         Gloin Oakshield(dwa) F4@( 7, 6) HP 97/113 MP 0/0 Hu 59 $ 51 room=M vs Displacer Beast(L3 HP42/42)
--> a
-T 786 mode=combat_mode         Gloin Oakshield(dwa) F4@( 7, 6) HP 96/113 MP 0/0 Hu 59 $ 51 room=M vs Displacer Beast(L3 HP23/42)
--> a
-T 787 mode=combat_mode         Gloin Oakshield(dwa) F4@( 7, 6) HP 95/113 MP 0/0 Hu 59 $ 51 room=M vs Displacer Beast(L3 HP23/42)
--> a
-T 788 mode=combat_mode         Gloin Oakshield(dwa) F4@( 7, 6) HP 94/113 MP 0/0 Hu 59 $ 51 room=M vs Displacer Beast(L3 HP23/42)
--> a
-T 789 mode=combat_mode         Gloin Oakshield(dwa) F4@( 7, 6) HP 93/113 MP 0/0 Hu 59 $ 51 room=M vs Displacer Beast(L3 HP23/42)
--> a
-T 790 mode=combat_mode         Gloin Oakshield(dwa) F4@( 7, 6) HP 92/113 MP 0/0 Hu 59 $ 51 room=M vs Displacer Beast(L3 HP4/42)
--> a
-T 791 mode=combat_mode         Gloin Oakshield(dwa) F4@( 7, 6) HP 91/113 MP 0/0 Hu 59 $ 51 room=M vs Displacer Beast(L3 HP4/42)
--> a
-T 792 mode=combat_mode         Gloin Oakshield(dwa) F4@( 7, 6) HP 90/113 MP 0/0 Hu 59 $ 51 room=M vs Displacer Beast(L3 HP4/42)
--> a
-T 793 mode=combat_victory      Gloin Oakshield(dwa) F4@( 7, 6) HP 90/113 MP 0/0 Hu 59 $ 75 room=.
--> back
-T 794 mode=game_loop           Gloin Oakshield(dwa) F4@( 7, 6) HP 90/113 MP 0/0 Hu 59 $ 75 room=.
+T 559 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 30/78 MP 0/0 Hu 77 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
 -> i
-T 795 mode=inventory           Gloin Oakshield(dwa) F4@( 7, 6) HP 90/113 MP 0/0 Hu 59 $ 75 room=.
--> u10
-T 796 mode=inventory           Gloin Oakshield(dwa) F4@( 7, 6) HP 113/113 MP 0/0 Hu 59 $ 75 room=.
--> x
-T 797 mode=game_loop           Gloin Oakshield(dwa) F4@( 7, 6) HP 113/113 MP 0/0 Hu 59 $ 75 room=.
--> l
-T 798 mode=game_loop           Gloin Oakshield(dwa) F4@( 7, 6) HP 113/113 MP 0/0 Hu 59 $ 75 room=.
--> e
-T 799 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 113/113 MP 0/0 Hu 58 $ 75 room=M vs Ogre(L3 HP80/80)
--> a
-T 800 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 109/113 MP 0/0 Hu 58 $ 75 room=M vs Ogre(L3 HP80/80)
--> f
-T 801 mode=flee_direction_mode Gloin Oakshield(dwa) F4@( 8, 6) HP 105/113 MP 0/0 Hu 58 $ 75 room=M
--> e
-T 802 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 6) HP 105/113 MP 0/0 Hu 58 $ 75 room=.
--> l
-T 803 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 6) HP 105/113 MP 0/0 Hu 58 $ 75 room=.
--> s
-T 804 mode=chest_mode          Gloin Oakshield(dwa) F4@( 9, 7) HP 105/113 MP 0/0 Hu 57 $ 75 room=C
--> o
-T 805 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 7) HP 79/113 MP 0/0 Hu 57 $ 75 room=.
--> l
-T 806 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 7) HP 79/113 MP 0/0 Hu 57 $ 75 room=.
--> s
-T 807 mode=chest_mode          Gloin Oakshield(dwa) F4@( 9, 8) HP 79/113 MP 0/0 Hu 56 $ 75 room=C
--> o
-T 808 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 8) HP 79/113 MP 0/0 Hu 56 $ 75 room=.
--> l
-T 809 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 8) HP 79/113 MP 0/0 Hu 56 $ 75 room=.
--> w
-T 810 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 8) HP 79/113 MP 0/0 Hu 55 $ 75 room=.
--> l
-T 811 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 8) HP 79/113 MP 0/0 Hu 55 $ 75 room=.
--> s
-T 812 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 9) HP 79/113 MP 0/0 Hu 54 $ 75 room=.
--> l
-T 813 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 9) HP 79/113 MP 0/0 Hu 54 $ 75 room=.
--> s
-T 814 mode=altar_mode          Gloin Oakshield(dwa) F4@( 8,10) HP 79/113 MP 0/0 Hu 53 $ 75 room=A
--> pray
-T 815 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,10) HP 79/113 MP 0/0 Hu 53 $ 275 room=.
--> l
-T 816 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,10) HP 79/113 MP 0/0 Hu 53 $ 275 room=.
--> e
-T 817 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,10) HP 79/113 MP 0/0 Hu 52 $ 275 room=.
--> e
-T 818 mode=game_loop           Gloin Oakshield(dwa) F4@(10,10) HP 79/113 MP 0/0 Hu 51 $ 275 room=.
--> l
-T 819 mode=game_loop           Gloin Oakshield(dwa) F4@(10,10) HP 79/113 MP 0/0 Hu 51 $ 275 room=.
--> e
-T 820 mode=game_loop           Gloin Oakshield(dwa) F4@(11,10) HP 79/113 MP 0/0 Hu 50 $ 275 room=.
--> e
-T 821 mode=garden_mode         Gloin Oakshield(dwa) F4@(12,10) HP 79/113 MP 0/0 Hu 49 $ 275 room=G
--> h
-T 822 mode=game_loop           Gloin Oakshield(dwa) F4@(12,10) HP 79/113 MP 0/0 Hu 49 $ 275 room=.
--> i
-T 823 mode=inventory           Gloin Oakshield(dwa) F4@(12,10) HP 79/113 MP 0/0 Hu 49 $ 275 room=.
--> u10
-T 824 mode=inventory           Gloin Oakshield(dwa) F4@(12,10) HP 109/113 MP 0/0 Hu 49 $ 275 room=.
--> x
-T 825 mode=game_loop           Gloin Oakshield(dwa) F4@(12,10) HP 109/113 MP 0/0 Hu 49 $ 275 room=.
--> i
-T 826 mode=inventory           Gloin Oakshield(dwa) F4@(12,10) HP 109/113 MP 0/0 Hu 49 $ 275 room=.
--> eat1
-T 827 mode=inventory           Gloin Oakshield(dwa) F4@(12,10) HP 109/113 MP 0/0 Hu 99 $ 275 room=.
--> x
-T 828 mode=game_loop           Gloin Oakshield(dwa) F4@(12,10) HP 109/113 MP 0/0 Hu 99 $ 275 room=.
--> w
-T 829 mode=game_loop           Gloin Oakshield(dwa) F4@(11,10) HP 109/113 MP 0/0 Hu 98 $ 275 room=.
--> n
-T 830 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 9) HP 110/113 MP 0/0 Hu 97 $ 275 room=.
--> w
-T 831 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 9) HP 110/113 MP 0/0 Hu 96 $ 275 room=.
--> w
-T 832 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 9) HP 111/113 MP 0/0 Hu 95 $ 275 room=.
--> w
-T 833 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 9) HP 111/113 MP 0/0 Hu 94 $ 275 room=.
--> w
-T 834 mode=game_loop           Gloin Oakshield(dwa) F4@( 7, 9) HP 112/113 MP 0/0 Hu 93 $ 275 room=.
--> w
-T 835 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 9) HP 112/113 MP 0/0 Hu 92 $ 275 room=.
--> w
-T 836 mode=pool_mode           Gloin Oakshield(dwa) F4@( 5, 9) HP 113/113 MP 0/0 Hu 91 $ 275 room=P
--> dr
-T 837 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 9) HP 113/113 MP 0/0 Hu 91 $ 332 room=.
--> s
-T 838 mode=game_loop           Gloin Oakshield(dwa) F4@( 5,10) HP 113/113 MP 0/0 Hu 90 $ 332 room=.
--> l
-T 839 mode=game_loop           Gloin Oakshield(dwa) F4@( 5,10) HP 113/113 MP 0/0 Hu 90 $ 332 room=.
--> s
-T 840 mode=pool_mode           Gloin Oakshield(dwa) F4@( 5,11) HP 113/113 MP 0/0 Hu 89 $ 332 room=P
--> dr
-T 841 mode=game_loop           Gloin Oakshield(dwa) F4@( 5,11) HP 113/113 MP 0/0 Hu 89 $ 524 room=.
--> l
-T 842 mode=game_loop           Gloin Oakshield(dwa) F4@( 5,11) HP 113/113 MP 0/0 Hu 89 $ 524 room=.
--> w
-T 843 mode=tomb_mode           Gloin Oakshield(dwa) F4@( 4,11) HP 113/113 MP 0/0 Hu 88 $ 524 room=T
--> p
-T 844 mode=game_loop           Gloin Oakshield(dwa) F4@( 4,11) HP 113/113 MP 0/0 Hu 88 $ 524 room=T
--> e
-T 845 mode=game_loop           Gloin Oakshield(dwa) F4@( 5,11) HP 113/113 MP 0/0 Hu 87 $ 524 room=.
--> e
-T 846 mode=game_loop           Gloin Oakshield(dwa) F4@( 6,11) HP 113/113 MP 0/0 Hu 86 $ 524 room=.
--> e
-T 847 mode=game_loop           Gloin Oakshield(dwa) F4@( 7,11) HP 113/113 MP 0/0 Hu 85 $ 524 room=.
--> l
-T 848 mode=game_loop           Gloin Oakshield(dwa) F4@( 7,11) HP 113/113 MP 0/0 Hu 85 $ 524 room=.
--> e
-T 849 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,11) HP 113/113 MP 0/0 Hu 84 $ 524 room=.
--> s
-T 850 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,12) HP 113/113 MP 0/0 Hu 83 $ 524 room=.
--> e
-T 851 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,12) HP 113/113 MP 0/0 Hu 82 $ 524 room=.
--> s
-T 852 mode=combat_mode         Gloin Oakshield(dwa) F4@( 9,13) HP 113/113 MP 0/0 Hu 81 $ 524 room=M vs Giant Centipede(L3 HP16/16)
--> a
-T 853 mode=combat_mode         Gloin Oakshield(dwa) F4@( 9,13) HP 113/113 MP 0/0 Hu 81 $ 524 room=M vs Giant Centipede(L3 HP16/16)
--> a
-T 854 mode=combat_victory      Gloin Oakshield(dwa) F4@( 9,13) HP 113/123 MP 0/0 Hu 81 $ 564 room=.
--> back
-T 855 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,13) HP 113/123 MP 0/0 Hu 81 $ 564 room=.
--> s
-T 856 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,14) HP 113/123 MP 0/0 Hu 80 $ 564 room=.
--> e
-T 857 mode=pool_mode           Gloin Oakshield(dwa) F4@(10,14) HP 113/123 MP 0/0 Hu 79 $ 564 room=P
--> dr
-T 858 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 113/123 MP 0/0 Hu 79 $ 564 room=.
--> l
-T 859 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 113/123 MP 0/0 Hu 79 $ 564 room=.
--> e
-T 860 mode=game_loop           Gloin Oakshield(dwa) F4@(11,14) HP 113/123 MP 0/0 Hu 78 $ 564 room=.
--> l
-T 861 mode=game_loop           Gloin Oakshield(dwa) F4@(11,14) HP 113/123 MP 0/0 Hu 78 $ 564 room=.
--> s
-T 862 mode=dungeon_mode        Gloin Oakshield(dwa) F4@(11,15) HP 114/123 MP 0/0 Hu 77 $ 564 room=N
--> u
-T 863 mode=game_loop           Gloin Oakshield(dwa) F4@(11,15) HP 114/123 MP 0/0 Hu 77 $ 564 room=N
--> l
-T 864 mode=game_loop           Gloin Oakshield(dwa) F4@(11,15) HP 114/123 MP 0/0 Hu 77 $ 564 room=N
--> e
-T 865 mode=game_loop           Gloin Oakshield(dwa) F4@(12,15) HP 114/123 MP 0/0 Hu 76 $ 564 room=.
--> l
-T 866 mode=game_loop           Gloin Oakshield(dwa) F4@(12,15) HP 114/123 MP 0/0 Hu 76 $ 564 room=.
--> s
-T 867 mode=library_mode        Gloin Oakshield(dwa) F4@(12,16) HP 114/123 MP 0/0 Hu 75 $ 564 room=L
--> r
-T 868 mode=library_read_decision_mode Gloin Oakshield(dwa) F4@(12,16) HP 114/123 MP 0/0 Hu 75 $ 564 room=L
--> y
-T 869 mode=game_loop           Gloin Oakshield(dwa) F4@(12,16) HP 114/123 MP 0/0 Hu 75 $ 564 room=.
--> w
-T 870 mode=game_loop           Gloin Oakshield(dwa) F4@(11,16) HP 114/123 MP 0/0 Hu 74 $ 564 room=.
--> w
-T 871 mode=game_loop           Gloin Oakshield(dwa) F4@(10,16) HP 115/123 MP 0/0 Hu 73 $ 564 room=.
--> n
-T 872 mode=game_loop           Gloin Oakshield(dwa) F4@(10,15) HP 115/123 MP 0/0 Hu 72 $ 564 room=.
--> n
-T 873 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 115/123 MP 0/0 Hu 71 $ 564 room=.
--> i
-T 874 mode=inventory           Gloin Oakshield(dwa) F4@(10,14) HP 115/123 MP 0/0 Hu 71 $ 564 room=.
--> u10
-T 875 mode=inventory           Gloin Oakshield(dwa) F4@(10,14) HP 123/123 MP 0/0 Hu 71 $ 564 room=.
--> x
-T 876 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 123/123 MP 0/0 Hu 71 $ 564 room=.
--> i
-T 877 mode=inventory           Gloin Oakshield(dwa) F4@(10,14) HP 123/123 MP 0/0 Hu 71 $ 564 room=.
--> eat2
-T 878 mode=inventory           Gloin Oakshield(dwa) F4@(10,14) HP 123/123 MP 0/0 Hu 76 $ 564 room=.
--> eat1
-T 879 mode=inventory           Gloin Oakshield(dwa) F4@(10,14) HP 123/123 MP 0/0 Hu100 $ 564 room=.
--> x
-T 880 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 123/123 MP 0/0 Hu100 $ 564 room=.
--> e
-T 881 mode=game_loop           Gloin Oakshield(dwa) F4@(11,14) HP 123/123 MP 0/0 Hu 99 $ 564 room=.
--> e
-T 882 mode=game_loop           Gloin Oakshield(dwa) F4@(12,14) HP 123/123 MP 0/0 Hu 98 $ 564 room=.
--> e
-T 883 mode=game_loop           Gloin Oakshield(dwa) F4@(13,14) HP 123/123 MP 0/0 Hu 97 $ 564 room=.
--> s
-T 884 mode=combat_mode         Gloin Oakshield(dwa) F4@(13,15) HP 123/123 MP 0/0 Hu 96 $ 564 room=M vs Stirge(L3 HP6/6)
--> a
-T 885 mode=combat_victory      Gloin Oakshield(dwa) F4@(13,15) HP 123/123 MP 0/0 Hu 96 $ 584 room=.
--> back
-T 886 mode=game_loop           Gloin Oakshield(dwa) F4@(13,15) HP 123/123 MP 0/0 Hu 96 $ 584 room=.
--> e
-T 887 mode=combat_mode         Gloin Oakshield(dwa) F4@(14,15) HP 123/123 MP 0/0 Hu 95 $ 584 room=M vs Crawling Claw(L3 HP5/5)
--> a
-T 888 mode=combat_victory      Gloin Oakshield(dwa) F4@(14,15) HP 123/123 MP 0/0 Hu 95 $ 616 room=.
--> back
-T 889 mode=game_loop           Gloin Oakshield(dwa) F4@(14,15) HP 123/123 MP 0/0 Hu 95 $ 616 room=.
--> n
-T 890 mode=dungeon_mode        Gloin Oakshield(dwa) F4@(14,14) HP 123/123 MP 0/0 Hu 94 $ 616 room=N
--> u
-T 891 mode=game_loop           Gloin Oakshield(dwa) F4@(14,14) HP 123/123 MP 0/0 Hu 94 $ 616 room=N
--> e
-T 892 mode=chest_mode          Gloin Oakshield(dwa) F4@(15,14) HP 123/123 MP 0/0 Hu 93 $ 616 room=C
--> o
-T 893 mode=game_loop           Gloin Oakshield(dwa) F4@(15,14) HP 91/123 MP 0/0 Hu 93 $ 616 room=.
--> s
-T 894 mode=game_loop           Gloin Oakshield(dwa) F4@(15,15) HP 91/123 MP 0/0 Hu 92 $ 616 room=.
--> e
-T 895 mode=game_loop           Gloin Oakshield(dwa) F4@(16,15) HP 92/123 MP 0/0 Hu 91 $ 616 room=.
--> e
-T 896 mode=game_loop           Gloin Oakshield(dwa) F4@(17,15) HP 92/123 MP 0/0 Hu 90 $ 616 room=.
--> i
-T 897 mode=inventory           Gloin Oakshield(dwa) F4@(17,15) HP 92/123 MP 0/0 Hu 90 $ 616 room=.
--> u9
-T 898 mode=inventory           Gloin Oakshield(dwa) F4@(17,15) HP 122/123 MP 0/0 Hu 90 $ 616 room=.
--> x
-T 899 mode=game_loop           Gloin Oakshield(dwa) F4@(17,15) HP 122/123 MP 0/0 Hu 90 $ 616 room=.
--> e
-T 900 mode=combat_mode         Gloin Oakshield(dwa) F4@(18,15) HP 123/123 MP 0/0 Hu 89 $ 616 room=M vs Gnoll(L3 HP46/46)
--> a
-T 901 mode=combat_mode         Gloin Oakshield(dwa) F4@(18,15) HP 122/123 MP 0/0 Hu 89 $ 616 room=M vs Gnoll(L3 HP46/46)
--> a
-T 902 mode=combat_mode         Gloin Oakshield(dwa) F4@(18,15) HP 121/123 MP 0/0 Hu 89 $ 616 room=M vs Gnoll(L3 HP22/46)
--> a
-T 903 mode=combat_mode         Gloin Oakshield(dwa) F4@(18,15) HP 121/123 MP 0/0 Hu 89 $ 616 room=M vs Gnoll(L3 HP22/46)
--> a
-T 904 mode=combat_mode         Gloin Oakshield(dwa) F4@(18,15) HP 120/123 MP 0/0 Hu 89 $ 616 room=M vs Gnoll(L3 HP22/46)
--> a
-T 905 mode=combat_victory      Gloin Oakshield(dwa) F4@(18,15) HP 119/123 MP 0/0 Hu 89 $ 640 room=.
--> back
-T 906 mode=game_loop           Gloin Oakshield(dwa) F4@(18,15) HP 119/123 MP 0/0 Hu 89 $ 640 room=.
--> e
-T 907 mode=game_loop           Gloin Oakshield(dwa) F4@(19,15) HP 119/123 MP 0/0 Hu 88 $ 640 room=.
--> s
-T 908 mode=game_loop           Gloin Oakshield(dwa) F4@(19,16) HP 120/123 MP 0/0 Hu 87 $ 640 room=.
--> w
-T 909 mode=game_loop           Gloin Oakshield(dwa) F4@(18,16) HP 120/123 MP 0/0 Hu 86 $ 640 room=.
--> w
-T 910 mode=game_loop           Gloin Oakshield(dwa) F4@(17,16) HP 121/123 MP 0/0 Hu 85 $ 640 room=.
--> n
-T 911 mode=game_loop           Gloin Oakshield(dwa) F4@(17,15) HP 121/123 MP 0/0 Hu 84 $ 640 room=.
--> w
-T 912 mode=game_loop           Gloin Oakshield(dwa) F4@(16,15) HP 121/123 MP 0/0 Hu 83 $ 640 room=.
--> w
-T 913 mode=game_loop           Gloin Oakshield(dwa) F4@(15,15) HP 121/123 MP 0/0 Hu 82 $ 640 room=.
--> n
-T 914 mode=game_loop           Gloin Oakshield(dwa) F4@(15,14) HP 122/123 MP 0/0 Hu 81 $ 640 room=.
--> w
-T 915 mode=dungeon_mode        Gloin Oakshield(dwa) F4@(14,14) HP 122/123 MP 0/0 Hu 80 $ 640 room=N
--> u
-T 916 mode=dungeon_unlocked_mode Gloin Oakshield(dwa) F4@(14,14) HP 122/123 MP 0/0 Hu 80 $ 640 room=N
--> r
-T 917 mode=game_loop           Gloin Oakshield(dwa) F4@(14,14) HP 122/123 MP 0/0 Hu 80 $ 842 room=N
--> s
-T 918 mode=game_loop           Gloin Oakshield(dwa) F4@(14,15) HP 122/123 MP 0/0 Hu 79 $ 842 room=.
--> i
-T 919 mode=inventory           Gloin Oakshield(dwa) F4@(14,15) HP 122/123 MP 0/0 Hu 79 $ 842 room=.
--> eat2
-T 920 mode=inventory           Gloin Oakshield(dwa) F4@(14,15) HP 122/123 MP 0/0 Hu 86 $ 842 room=.
--> x
-T 921 mode=game_loop           Gloin Oakshield(dwa) F4@(14,15) HP 122/123 MP 0/0 Hu 86 $ 842 room=.
--> s
-T 922 mode=game_loop           Gloin Oakshield(dwa) F4@(14,16) HP 123/123 MP 0/0 Hu 85 $ 842 room=.
--> w
-T 923 mode=game_loop           Gloin Oakshield(dwa) F4@(13,16) HP 123/123 MP 0/0 Hu 84 $ 842 room=.
--> n
-T 924 mode=game_loop           Gloin Oakshield(dwa) F4@(13,15) HP 123/123 MP 0/0 Hu 83 $ 842 room=.
--> n
-T 925 mode=game_loop           Gloin Oakshield(dwa) F4@(13,14) HP 123/123 MP 0/0 Hu 82 $ 842 room=.
--> e
-T 926 mode=game_loop           Gloin Oakshield(dwa) F4@(14,14) HP 123/123 MP 0/0 Hu 81 $ 842 room=N
--> s
-T 927 mode=game_loop           Gloin Oakshield(dwa) F4@(14,15) HP 123/123 MP 0/0 Hu 80 $ 842 room=.
--> s
-T 928 mode=game_loop           Gloin Oakshield(dwa) F4@(14,16) HP 123/123 MP 0/0 Hu 79 $ 842 room=.
--> w
-T 929 mode=game_loop           Gloin Oakshield(dwa) F4@(13,16) HP 123/123 MP 0/0 Hu 78 $ 842 room=.
--> w
-T 930 mode=game_loop           Gloin Oakshield(dwa) F4@(12,16) HP 123/123 MP 0/0 Hu 77 $ 842 room=.
--> w
-T 931 mode=game_loop           Gloin Oakshield(dwa) F4@(11,16) HP 123/123 MP 0/0 Hu 76 $ 842 room=.
--> w
-T 932 mode=game_loop           Gloin Oakshield(dwa) F4@(10,16) HP 123/123 MP 0/0 Hu 75 $ 842 room=.
--> n
-T 933 mode=game_loop           Gloin Oakshield(dwa) F4@(10,15) HP 123/123 MP 0/0 Hu 74 $ 842 room=.
--> w
-T 934 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,15) HP 123/123 MP 0/0 Hu 73 $ 842 room=.
--> n
-T 935 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,14) HP 123/123 MP 0/0 Hu 72 $ 842 room=.
--> w
-T 936 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,14) HP 123/123 MP 0/0 Hu 71 $ 842 room=M vs Sewer Rat(L3 HP11/11)
--> a
-T 937 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,14) HP 122/123 MP 0/0 Hu 71 $ 842 room=M vs Sewer Rat(L3 HP11/11)
--> a
-T 938 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,14) HP 122/123 MP 0/0 Hu 71 $ 842 room=M vs Sewer Rat(L3 HP11/11)
--> a
-T 939 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,14) HP 122/123 MP 0/0 Hu 71 $ 842 room=M vs Sewer Rat(L3 HP11/11)
--> a
-T 940 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,14) HP 121/123 MP 0/0 Hu 71 $ 842 room=M vs Sewer Rat(L3 HP11/11)
--> a
-T 941 mode=combat_victory      Gloin Oakshield(dwa) F4@( 8,14) HP 121/123 MP 0/0 Hu 71 $ 874 room=.
--> back
-T 942 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,14) HP 121/123 MP 0/0 Hu 71 $ 874 room=.
--> n
-T 943 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,13) HP 121/123 MP 0/0 Hu 70 $ 874 room=.
--> w
-T 944 mode=game_loop           Gloin Oakshield(dwa) F4@( 7,13) HP 121/123 MP 0/0 Hu 69 $ 874 room=.
--> s
-T 945 mode=game_loop           Gloin Oakshield(dwa) F4@( 7,14) HP 121/123 MP 0/0 Hu 68 $ 874 room=.
--> s
-T 946 mode=game_loop           Gloin Oakshield(dwa) F4@( 7,15) HP 122/123 MP 0/0 Hu 67 $ 874 room=.
--> e
-T 947 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,15) HP 122/123 MP 0/0 Hu 66 $ 874 room=M vs Rust Monster(L3 HP19/19)
--> a
-T 948 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,15) HP 121/123 MP 0/0 Hu 66 $ 874 room=M vs Rust Monster(L3 HP19/19)
--> a
-T 949 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,15) HP 121/123 MP 0/0 Hu 66 $ 874 room=M vs Rust Monster(L3 HP19/19)
--> f
-T 950 mode=flee_direction_mode Gloin Oakshield(dwa) F4@( 8,15) HP 121/123 MP 0/0 Hu 66 $ 874 room=M
--> n
-T 951 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,14) HP 121/123 MP 0/0 Hu 66 $ 874 room=.
--> e
-T 952 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,14) HP 121/123 MP 0/0 Hu 65 $ 874 room=.
--> s
-T 953 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,15) HP 121/123 MP 0/0 Hu 64 $ 874 room=.
--> e
-T 954 mode=game_loop           Gloin Oakshield(dwa) F4@(10,15) HP 122/123 MP 0/0 Hu 63 $ 874 room=.
--> s
-T 955 mode=game_loop           Gloin Oakshield(dwa) F4@(10,16) HP 122/123 MP 0/0 Hu 62 $ 874 room=.
--> w
-T 956 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,16) HP 122/123 MP 0/0 Hu 61 $ 874 room=.
--> n
-T 957 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,15) HP 122/123 MP 0/0 Hu 60 $ 874 room=.
--> n
-T 958 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,14) HP 122/123 MP 0/0 Hu 59 $ 874 room=.
--> e
-T 959 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 122/123 MP 0/0 Hu 58 $ 874 room=.
--> e
-T 960 mode=game_loop           Gloin Oakshield(dwa) F4@(11,14) HP 122/123 MP 0/0 Hu 57 $ 874 room=.
--> e
-T 961 mode=game_loop           Gloin Oakshield(dwa) F4@(12,14) HP 122/123 MP 0/0 Hu 56 $ 874 room=.
--> e
-T 962 mode=game_loop           Gloin Oakshield(dwa) F4@(13,14) HP 122/123 MP 0/0 Hu 55 $ 874 room=.
--> e
-T 963 mode=game_loop           Gloin Oakshield(dwa) F4@(14,14) HP 122/123 MP 0/0 Hu 54 $ 874 room=N
--> s
-T 964 mode=game_loop           Gloin Oakshield(dwa) F4@(14,15) HP 122/123 MP 0/0 Hu 53 $ 874 room=.
--> s
-T 965 mode=game_loop           Gloin Oakshield(dwa) F4@(14,16) HP 122/123 MP 0/0 Hu 52 $ 874 room=.
--> e
-T 966 mode=combat_mode         Gloin Oakshield(dwa) F4@(15,16) HP 122/123 MP 0/0 Hu 51 $ 874 room=M vs Goblin(L3 HP12/12)
--> a
-T 967 mode=combat_victory      Gloin Oakshield(dwa) F4@(15,16) HP 122/133 MP 0/0 Hu 51 $ 1002 room=.
--> back
-T 968 mode=game_loop           Gloin Oakshield(dwa) F4@(15,16) HP 122/133 MP 0/0 Hu 51 $ 1002 room=.
--> n
-T 969 mode=game_loop           Gloin Oakshield(dwa) F4@(15,15) HP 122/133 MP 0/0 Hu 50 $ 1002 room=.
--> e
-T 970 mode=game_loop           Gloin Oakshield(dwa) F4@(16,15) HP 122/133 MP 0/0 Hu 49 $ 1002 room=.
--> i
-T 971 mode=inventory           Gloin Oakshield(dwa) F4@(16,15) HP 122/133 MP 0/0 Hu 49 $ 1002 room=.
--> u9
-T 972 mode=inventory           Gloin Oakshield(dwa) F4@(16,15) HP 133/133 MP 0/0 Hu 49 $ 1002 room=.
--> x
-T 973 mode=game_loop           Gloin Oakshield(dwa) F4@(16,15) HP 133/133 MP 0/0 Hu 49 $ 1002 room=.
--> i
-T 974 mode=inventory           Gloin Oakshield(dwa) F4@(16,15) HP 133/133 MP 0/0 Hu 49 $ 1002 room=.
--> eat1
-T 975 mode=inventory           Gloin Oakshield(dwa) F4@(16,15) HP 133/133 MP 0/0 Hu 67 $ 1002 room=.
--> x
-T 976 mode=game_loop           Gloin Oakshield(dwa) F4@(16,15) HP 133/133 MP 0/0 Hu 67 $ 1002 room=.
--> e
-T 977 mode=game_loop           Gloin Oakshield(dwa) F4@(17,15) HP 133/133 MP 0/0 Hu 66 $ 1002 room=.
--> s
-T 978 mode=game_loop           Gloin Oakshield(dwa) F4@(17,16) HP 133/133 MP 0/0 Hu 65 $ 1002 room=.
--> e
-T 979 mode=game_loop           Gloin Oakshield(dwa) F4@(18,16) HP 133/133 MP 0/0 Hu 64 $ 1002 room=.
--> n
-T 980 mode=game_loop           Gloin Oakshield(dwa) F4@(18,15) HP 133/133 MP 0/0 Hu 63 $ 1002 room=.
--> e
-T 981 mode=game_loop           Gloin Oakshield(dwa) F4@(19,15) HP 133/133 MP 0/0 Hu 62 $ 1002 room=.
--> s
-T 982 mode=game_loop           Gloin Oakshield(dwa) F4@(19,16) HP 133/133 MP 0/0 Hu 61 $ 1002 room=.
--> n
-T 983 mode=game_loop           Gloin Oakshield(dwa) F4@(19,15) HP 133/133 MP 0/0 Hu 60 $ 1002 room=.
--> s
-T 984 mode=game_loop           Gloin Oakshield(dwa) F4@(19,16) HP 133/133 MP 0/0 Hu 59 $ 1002 room=.
--> i
-T 985 mode=inventory           Gloin Oakshield(dwa) F4@(19,16) HP 133/133 MP 0/0 Hu 59 $ 1002 room=.
--> eat1
-T 986 mode=inventory           Gloin Oakshield(dwa) F4@(19,16) HP 133/133 MP 0/0 Hu 64 $ 1002 room=.
--> x
-T 987 mode=game_loop           Gloin Oakshield(dwa) F4@(19,16) HP 133/133 MP 0/0 Hu 64 $ 1002 room=.
--> w
-T 988 mode=game_loop           Gloin Oakshield(dwa) F4@(18,16) HP 133/133 MP 0/0 Hu 63 $ 1002 room=.
--> n
-T 989 mode=game_loop           Gloin Oakshield(dwa) F4@(18,15) HP 133/133 MP 0/0 Hu 62 $ 1002 room=.
--> w
-T 990 mode=game_loop           Gloin Oakshield(dwa) F4@(17,15) HP 133/133 MP 0/0 Hu 61 $ 1002 room=.
--> w
-T 991 mode=game_loop           Gloin Oakshield(dwa) F4@(16,15) HP 133/133 MP 0/0 Hu 60 $ 1002 room=.
--> w
-T 992 mode=game_loop           Gloin Oakshield(dwa) F4@(15,15) HP 133/133 MP 0/0 Hu 59 $ 1002 room=.
--> w
-T 993 mode=game_loop           Gloin Oakshield(dwa) F4@(14,15) HP 133/133 MP 0/0 Hu 58 $ 1002 room=.
--> w
-T 994 mode=game_loop           Gloin Oakshield(dwa) F4@(13,15) HP 133/133 MP 0/0 Hu 57 $ 1002 room=.
--> w
-T 995 mode=game_loop           Gloin Oakshield(dwa) F4@(12,15) HP 133/133 MP 0/0 Hu 56 $ 1002 room=.
--> w
-T 996 mode=dungeon_mode        Gloin Oakshield(dwa) F4@(11,15) HP 133/133 MP 0/0 Hu 55 $ 1002 room=N
--> u
-T 997 mode=dungeon_unlocked_mode Gloin Oakshield(dwa) F4@(11,15) HP 133/133 MP 0/0 Hu 55 $ 1002 room=N
--> r
-T 998 mode=game_loop           Gloin Oakshield(dwa) F4@(11,15) HP 133/133 MP 0/0 Hu 55 $ 1174 room=N
--> n
-T 999 mode=game_loop           Gloin Oakshield(dwa) F4@(11,14) HP 133/133 MP 0/0 Hu 54 $ 1174 room=.
--> e
-T1000 mode=game_loop           Gloin Oakshield(dwa) F4@(12,14) HP 133/133 MP 0/0 Hu 53 $ 1174 room=.
--> e
-T1001 mode=game_loop           Gloin Oakshield(dwa) F4@(13,14) HP 133/133 MP 0/0 Hu 52 $ 1174 room=.
--> e
-T1002 mode=game_loop           Gloin Oakshield(dwa) F4@(14,14) HP 133/133 MP 0/0 Hu 51 $ 1174 room=N
--> s
-T1003 mode=game_loop           Gloin Oakshield(dwa) F4@(14,15) HP 133/133 MP 0/0 Hu 50 $ 1174 room=.
--> i
-T1004 mode=inventory           Gloin Oakshield(dwa) F4@(14,15) HP 133/133 MP 0/0 Hu 50 $ 1174 room=.
--> u10
-T1005 mode=inventory           Gloin Oakshield(dwa) F4@(14,15) HP 133/133 MP 0/0 Hu 50 $ 1174 room=.
--> x
-T1006 mode=game_loop           Gloin Oakshield(dwa) F4@(14,15) HP 133/133 MP 0/0 Hu 50 $ 1174 room=.
--> e
-T1007 mode=game_loop           Gloin Oakshield(dwa) F4@(15,15) HP 133/133 MP 0/0 Hu 49 $ 1174 room=.
--> s
-T1008 mode=game_loop           Gloin Oakshield(dwa) F4@(15,16) HP 133/133 MP 0/0 Hu 48 $ 1174 room=.
--> e
-T1009 mode=chest_mode          Gloin Oakshield(dwa) F4@(16,16) HP 133/133 MP 0/0 Hu 47 $ 1174 room=C
--> n
-T1010 mode=game_loop           Gloin Oakshield(dwa) F4@(16,15) HP 133/133 MP 0/0 Hu 46 $ 1174 room=.
--> e
-T1011 mode=game_loop           Gloin Oakshield(dwa) F4@(17,15) HP 133/133 MP 0/0 Hu 45 $ 1174 room=.
--> e
-T1012 mode=game_loop           Gloin Oakshield(dwa) F4@(18,15) HP 133/133 MP 0/0 Hu 44 $ 1174 room=.
--> s
-T1013 mode=game_loop           Gloin Oakshield(dwa) F4@(18,16) HP 133/133 MP 0/0 Hu 43 $ 1174 room=.
--> e
-T1014 mode=game_loop           Gloin Oakshield(dwa) F4@(19,16) HP 133/133 MP 0/0 Hu 42 $ 1174 room=.
--> n
-T1015 mode=game_loop           Gloin Oakshield(dwa) F4@(19,15) HP 133/133 MP 0/0 Hu 41 $ 1174 room=.
--> s
-T1016 mode=game_loop           Gloin Oakshield(dwa) F4@(19,16) HP 133/133 MP 0/0 Hu 40 $ 1174 room=.
--> n
-T1017 mode=game_loop           Gloin Oakshield(dwa) F4@(19,15) HP 133/133 MP 0/0 Hu 39 $ 1174 room=.
--> w
-T1018 mode=game_loop           Gloin Oakshield(dwa) F4@(18,15) HP 133/133 MP 0/0 Hu 38 $ 1174 room=.
--> w
-T1019 mode=game_loop           Gloin Oakshield(dwa) F4@(17,15) HP 133/133 MP 0/0 Hu 37 $ 1174 room=.
--> w
-T1020 mode=game_loop           Gloin Oakshield(dwa) F4@(16,15) HP 133/133 MP 0/0 Hu 36 $ 1174 room=.
--> w
-T1021 mode=game_loop           Gloin Oakshield(dwa) F4@(15,15) HP 133/133 MP 0/0 Hu 35 $ 1174 room=.
--> n
-T1022 mode=game_loop           Gloin Oakshield(dwa) F4@(15,14) HP 133/133 MP 0/0 Hu 34 $ 1174 room=.
--> w
-T1023 mode=game_loop           Gloin Oakshield(dwa) F4@(14,14) HP 133/133 MP 0/0 Hu 33 $ 1174 room=N
--> w
-T1024 mode=game_loop           Gloin Oakshield(dwa) F4@(13,14) HP 133/133 MP 0/0 Hu 32 $ 1174 room=.
--> s
-T1025 mode=game_loop           Gloin Oakshield(dwa) F4@(13,15) HP 133/133 MP 0/0 Hu 31 $ 1174 room=.
--> s
-T1026 mode=game_loop           Gloin Oakshield(dwa) F4@(13,16) HP 133/133 MP 0/0 Hu 30 $ 1174 room=.
--> w
-T1027 mode=game_loop           Gloin Oakshield(dwa) F4@(12,16) HP 133/133 MP 0/0 Hu 29 $ 1174 room=.
--> n
-T1028 mode=game_loop           Gloin Oakshield(dwa) F4@(12,15) HP 133/133 MP 0/0 Hu 28 $ 1174 room=.
--> n
-T1029 mode=game_loop           Gloin Oakshield(dwa) F4@(12,14) HP 133/133 MP 0/0 Hu 27 $ 1174 room=.
--> e
-T1030 mode=game_loop           Gloin Oakshield(dwa) F4@(13,14) HP 133/133 MP 0/0 Hu 26 $ 1174 room=.
--> e
-T1031 mode=game_loop           Gloin Oakshield(dwa) F4@(14,14) HP 133/133 MP 0/0 Hu 25 $ 1174 room=N
--> n
-T1032 mode=garden_mode         Gloin Oakshield(dwa) F4@(14,13) HP 133/133 MP 0/0 Hu 24 $ 1174 room=G
--> h
-T1033 mode=game_loop           Gloin Oakshield(dwa) F4@(14,13) HP 133/133 MP 0/0 Hu 24 $ 1174 room=.
--> w
-T1034 mode=game_loop           Gloin Oakshield(dwa) F4@(13,13) HP 133/133 MP 0/0 Hu 23 $ 1174 room=.
--> w
-T1035 mode=game_loop           Gloin Oakshield(dwa) F4@(12,13) HP 133/133 MP 0/0 Hu 22 $ 1174 room=.
--> w
-T1036 mode=game_loop           Gloin Oakshield(dwa) F4@(11,13) HP 133/133 MP 0/0 Hu 21 $ 1174 room=.
--> w
-T1037 mode=game_loop           Gloin Oakshield(dwa) F4@(10,13) HP 133/133 MP 0/0 Hu 20 $ 1174 room=.
--> n
-T1038 mode=game_loop           Gloin Oakshield(dwa) F4@(10,12) HP 133/133 MP 0/0 Hu 19 $ 1174 room=.
--> n
-T1039 mode=game_loop           Gloin Oakshield(dwa) F4@(10,11) HP 133/133 MP 0/0 Hu 18 $ 1174 room=.
--> n
-T1040 mode=game_loop           Gloin Oakshield(dwa) F4@(10,10) HP 133/133 MP 0/0 Hu 17 $ 1174 room=.
--> n
-T1041 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 9) HP 133/133 MP 0/0 Hu 16 $ 1174 room=.
--> n
-T1042 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 8) HP 133/133 MP 0/0 Hu 15 $ 1174 room=.
--> e
-T1043 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 8) HP 133/133 MP 0/0 Hu 14 $ 1174 room=.
--> n
-T1044 mode=altar_mode          Gloin Oakshield(dwa) F4@(11, 7) HP 133/133 MP 0/0 Hu 13 $ 1174 room=A
--> pray
-T1045 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 7) HP 133/133 MP 0/0 Hu 13 $ 1174 room=.
--> n
-T1046 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 6) HP 133/133 MP 0/0 Hu 12 $ 1174 room=.
--> w
-T1047 mode=combat_mode         Gloin Oakshield(dwa) F4@(10, 6) HP 133/133 MP 0/0 Hu 11 $ 1174 room=M vs Lichen(L3 HP11/11)
--> a
-T1048 mode=combat_victory      Gloin Oakshield(dwa) F4@(10, 6) HP 133/133 MP 0/0 Hu 11 $ 1206 room=.
--> back
-T1049 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 6) HP 133/133 MP 0/0 Hu 11 $ 1206 room=.
--> i
-T1050 mode=inventory           Gloin Oakshield(dwa) F4@(10, 6) HP 133/133 MP 0/0 Hu 11 $ 1206 room=.
--> eat1
-T1051 mode=inventory           Gloin Oakshield(dwa) F4@(10, 6) HP 133/133 MP 0/0 Hu 17 $ 1206 room=.
--> x
-T1052 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 6) HP 133/133 MP 0/0 Hu 17 $ 1206 room=.
--> w
-T1053 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 6) HP 133/133 MP 0/0 Hu 16 $ 1206 room=.
--> w
-T1054 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 133/133 MP 0/0 Hu 15 $ 1206 room=M vs Ogre(L3 HP80/80)
--> a
-T1055 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 129/133 MP 0/0 Hu 15 $ 1206 room=M vs Ogre(L3 HP80/80)
--> a
-T1056 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 125/133 MP 0/0 Hu 15 $ 1206 room=M vs Ogre(L3 HP59/80)
--> a
-T1057 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 121/133 MP 0/0 Hu 15 $ 1206 room=M vs Ogre(L3 HP38/80)
--> a
-T1058 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 117/133 MP 0/0 Hu 15 $ 1206 room=M vs Ogre(L3 HP17/80)
--> a
-T1059 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 117/133 MP 0/0 Hu 15 $ 1206 room=M vs Ogre(L3 HP17/80)
--> a
-T1060 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 113/133 MP 0/0 Hu 15 $ 1206 room=M vs Ogre(L3 HP17/80)
--> a
-T1061 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8, 6) HP 109/133 MP 0/0 Hu 15 $ 1206 room=M vs Ogre(L3 HP17/80)
--> a
-T1062 mode=combat_victory      Gloin Oakshield(dwa) F4@( 8, 6) HP 105/133 MP 0/0 Hu 15 $ 1226 room=.
--> back
-T1063 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 6) HP 105/133 MP 0/0 Hu 15 $ 1226 room=.
--> i
-T1064 mode=inventory           Gloin Oakshield(dwa) F4@( 8, 6) HP 105/133 MP 0/0 Hu 15 $ 1226 room=.
--> u9
-T1065 mode=inventory           Gloin Oakshield(dwa) F4@( 8, 6) HP 133/133 MP 0/0 Hu 15 $ 1226 room=.
--> x
-T1066 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 6) HP 133/133 MP 0/0 Hu 15 $ 1226 room=.
--> i
-T1067 mode=inventory           Gloin Oakshield(dwa) F4@( 8, 6) HP 133/133 MP 0/0 Hu 15 $ 1226 room=.
--> eat1
-T1068 mode=inventory           Gloin Oakshield(dwa) F4@( 8, 6) HP 133/133 MP 0/0 Hu 26 $ 1226 room=.
--> x
-T1069 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 6) HP 133/133 MP 0/0 Hu 26 $ 1226 room=.
--> w
-T1070 mode=game_loop           Gloin Oakshield(dwa) F4@( 7, 6) HP 133/133 MP 0/0 Hu 25 $ 1226 room=.
--> s
-T1071 mode=game_loop           Gloin Oakshield(dwa) F4@( 7, 7) HP 133/133 MP 0/0 Hu 24 $ 1226 room=.
--> w
-T1072 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 7) HP 133/133 MP 0/0 Hu 23 $ 1226 room=.
--> n
-T1073 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 6) HP 133/133 MP 0/0 Hu 22 $ 1226 room=.
--> n
-T1074 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 5) HP 133/133 MP 0/0 Hu 21 $ 1226 room=.
--> n
-T1075 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 4) HP 133/133 MP 0/0 Hu 20 $ 1226 room=.
--> w
-T1076 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 4) HP 133/133 MP 0/0 Hu 19 $ 1226 room=.
--> n
-T1077 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 3) HP 133/133 MP 0/0 Hu 18 $ 1226 room=.
--> e
-T1078 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 3) HP 133/133 MP 0/0 Hu 17 $ 1226 room=.
--> n
-T1079 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 2) HP 133/133 MP 0/0 Hu 16 $ 1226 room=.
--> w
-T1080 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 2) HP 133/133 MP 0/0 Hu 15 $ 1226 room=.
--> w
-T1081 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 2) HP 133/133 MP 0/0 Hu 14 $ 1226 room=.
--> s
-T1082 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 3) HP 133/133 MP 0/0 Hu 13 $ 1226 room=.
--> s
-T1083 mode=game_loop           Gloin Oakshield(dwa) F4@( 4, 4) HP 133/133 MP 0/0 Hu 12 $ 1226 room=O
--> e
-T1084 mode=game_loop           Gloin Oakshield(dwa) F4@( 5, 4) HP 133/133 MP 0/0 Hu 11 $ 1226 room=.
--> e
-T1085 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 4) HP 133/133 MP 0/0 Hu 10 $ 1226 room=.
--> s
-T1086 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 5) HP 133/133 MP 0/0 Hu  9 $ 1226 room=.
--> s
-T1087 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 6) HP 133/133 MP 0/0 Hu  8 $ 1226 room=.
--> e
-T1088 mode=game_loop           Gloin Oakshield(dwa) F4@( 7, 6) HP 133/133 MP 0/0 Hu  7 $ 1226 room=.
--> e
-T1089 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 6) HP 133/133 MP 0/0 Hu  6 $ 1226 room=.
--> e
-T1090 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 6) HP 133/133 MP 0/0 Hu  5 $ 1226 room=.
--> e
-T1091 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 6) HP 133/133 MP 0/0 Hu  4 $ 1226 room=.
--> e
-T1092 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 6) HP 133/133 MP 0/0 Hu  3 $ 1226 room=.
--> s
-T1093 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 7) HP 133/133 MP 0/0 Hu  2 $ 1226 room=.
--> s
-T1094 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 8) HP 133/133 MP 0/0 Hu  1 $ 1226 room=.
--> w
-T1095 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 8) HP 131/133 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1096 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 9) HP 129/133 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1097 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 9) HP 127/133 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1098 mode=game_loop           Gloin Oakshield(dwa) F4@(11,10) HP 125/133 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1099 mode=game_loop           Gloin Oakshield(dwa) F4@(12,10) HP 123/133 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1100 mode=game_loop           Gloin Oakshield(dwa) F4@(11,10) HP 121/133 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1101 mode=game_loop           Gloin Oakshield(dwa) F4@(10,10) HP 119/133 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1102 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 9) HP 117/133 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1103 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 8) HP 115/133 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1104 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 8) HP 113/133 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1105 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 7) HP 111/133 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1106 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 6) HP 109/133 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1107 mode=game_loop           Gloin Oakshield(dwa) F4@(12, 6) HP 107/133 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1108 mode=shrine_mode         Gloin Oakshield(dwa) F4@(12, 7) HP 105/133 MP 0/0 Hu  0 $ 1226 room=F
--> p
-T1109 mode=game_loop           Gloin Oakshield(dwa) F4@(12, 7) HP 105/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1110 mode=game_loop           Gloin Oakshield(dwa) F4@(12, 6) HP 103/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1111 mode=game_loop           Gloin Oakshield(dwa) F4@(12, 7) HP 101/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1112 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 7) HP 99/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1113 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 6) HP 97/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1114 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 6) HP 95/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1115 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 6) HP 93/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1116 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 5) HP 91/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1117 mode=library_mode        Gloin Oakshield(dwa) F4@(10, 5) HP 89/135 MP 0/0 Hu  0 $ 1226 room=L
--> r
-T1118 mode=library_read_decision_mode Gloin Oakshield(dwa) F4@(10, 5) HP 89/135 MP 0/0 Hu  0 $ 1226 room=L
--> y
-T1119 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 5) HP 89/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1120 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 5) HP 87/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1121 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 5) HP 85/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1122 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 6) HP 83/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1123 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 6) HP 81/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1124 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 6) HP 79/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1125 mode=game_loop           Gloin Oakshield(dwa) F4@( 7, 6) HP 77/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1126 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 6) HP 75/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1127 mode=game_loop           Gloin Oakshield(dwa) F4@( 6, 7) HP 73/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1128 mode=game_loop           Gloin Oakshield(dwa) F4@( 7, 7) HP 71/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1129 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 7) HP 69/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1130 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 7) HP 67/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1131 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 6) HP 65/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1132 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 5) HP 63/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1133 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 5) HP 61/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1134 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 6) HP 59/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1135 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 6) HP 57/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1136 mode=game_loop           Gloin Oakshield(dwa) F4@(12, 6) HP 55/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1137 mode=game_loop           Gloin Oakshield(dwa) F4@(12, 7) HP 53/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1138 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 7) HP 51/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1139 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 8) HP 49/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1140 mode=game_loop           Gloin Oakshield(dwa) F4@(11, 9) HP 47/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1141 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 9) HP 45/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1142 mode=game_loop           Gloin Oakshield(dwa) F4@(10, 8) HP 43/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1143 mode=game_loop           Gloin Oakshield(dwa) F4@( 9, 8) HP 41/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1144 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 8) HP 39/135 MP 0/0 Hu  0 $ 1226 room=.
--> i
-T1145 mode=inventory           Gloin Oakshield(dwa) F4@( 8, 8) HP 39/135 MP 0/0 Hu  0 $ 1226 room=.
--> u9
-T1146 mode=inventory           Gloin Oakshield(dwa) F4@( 8, 8) HP 69/135 MP 0/0 Hu  0 $ 1226 room=.
--> u3
-T1147 mode=inventory           Gloin Oakshield(dwa) F4@( 8, 8) HP 99/135 MP 0/0 Hu  0 $ 1226 room=.
+T 560 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 30/78 MP 0/0 Hu 77 $ 323 room=M
 -> u1
-T1148 mode=inventory           Gloin Oakshield(dwa) F4@( 8, 8) HP 99/135 MP 0/0 Hu  0 $ 1226 room=.
+T 561 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 60/78 MP 0/0 Hu 77 $ 323 room=M
 -> x
-T1149 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 8) HP 99/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1150 mode=game_loop           Gloin Oakshield(dwa) F4@( 8, 9) HP 97/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1151 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,10) HP 95/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1152 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,11) HP 93/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1153 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,12) HP 91/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1154 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,12) HP 89/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1155 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,13) HP 87/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1156 mode=game_loop           Gloin Oakshield(dwa) F4@(10,13) HP 85/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1157 mode=game_loop           Gloin Oakshield(dwa) F4@(11,13) HP 83/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1158 mode=game_loop           Gloin Oakshield(dwa) F4@(11,14) HP 81/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1159 mode=game_loop           Gloin Oakshield(dwa) F4@(12,14) HP 79/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1160 mode=game_loop           Gloin Oakshield(dwa) F4@(12,15) HP 77/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1161 mode=game_loop           Gloin Oakshield(dwa) F4@(12,16) HP 75/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1162 mode=game_loop           Gloin Oakshield(dwa) F4@(11,16) HP 73/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1163 mode=game_loop           Gloin Oakshield(dwa) F4@(10,16) HP 71/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1164 mode=game_loop           Gloin Oakshield(dwa) F4@(10,15) HP 69/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1165 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 67/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1166 mode=game_loop           Gloin Oakshield(dwa) F4@(11,14) HP 65/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1167 mode=game_loop           Gloin Oakshield(dwa) F4@(11,13) HP 63/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1168 mode=combat_mode         Gloin Oakshield(dwa) F4@(11,12) HP 61/135 MP 0/0 Hu  0 $ 1226 room=M vs Owlbear(L3 HP50/50)
--> a
-T1169 mode=combat_mode         Gloin Oakshield(dwa) F4@(11,12) HP 60/135 MP 0/0 Hu  0 $ 1226 room=M vs Owlbear(L3 HP50/50)
--> a
-T1170 mode=combat_mode         Gloin Oakshield(dwa) F4@(11,12) HP 59/135 MP 0/0 Hu  0 $ 1226 room=M vs Owlbear(L3 HP29/50)
--> a
-T1171 mode=combat_mode         Gloin Oakshield(dwa) F4@(11,12) HP 58/135 MP 0/0 Hu  0 $ 1226 room=M vs Owlbear(L3 HP29/50)
--> a
-T1172 mode=combat_mode         Gloin Oakshield(dwa) F4@(11,12) HP 58/135 MP 0/0 Hu  0 $ 1226 room=M vs Owlbear(L3 HP29/50)
--> a
-T1173 mode=combat_mode         Gloin Oakshield(dwa) F4@(11,12) HP 57/135 MP 0/0 Hu  0 $ 1226 room=M vs Owlbear(L3 HP28/50)
+T 562 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 60/78 MP 0/0 Hu 77 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
 -> f
-T1174 mode=flee_direction_mode Gloin Oakshield(dwa) F4@(11,12) HP 57/135 MP 0/0 Hu  0 $ 1226 room=M
--> w
-T1175 mode=game_loop           Gloin Oakshield(dwa) F4@(10,12) HP 57/135 MP 0/0 Hu  0 $ 1226 room=.
+T 563 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 36/78 MP 0/0 Hu 77 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
 -> i
-T1176 mode=inventory           Gloin Oakshield(dwa) F4@(10,12) HP 57/135 MP 0/0 Hu  0 $ 1226 room=.
--> e2
-T1177 mode=inventory           Gloin Oakshield(dwa) F4@(10,12) HP 57/135 MP 0/0 Hu  0 $ 1226 room=.
+T 564 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 36/78 MP 0/0 Hu 77 $ 323 room=M
+-> u1
+T 565 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 66/78 MP 0/0 Hu 77 $ 323 room=M
 -> x
-T1178 mode=game_loop           Gloin Oakshield(dwa) F4@(10,12) HP 57/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1179 mode=game_loop           Gloin Oakshield(dwa) F4@(10,13) HP 55/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1180 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,13) HP 53/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1181 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,14) HP 51/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1182 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 49/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1183 mode=game_loop           Gloin Oakshield(dwa) F4@(11,14) HP 47/135 MP 0/0 Hu  0 $ 1226 room=.
--> e
-T1184 mode=game_loop           Gloin Oakshield(dwa) F4@(12,14) HP 45/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1185 mode=game_loop           Gloin Oakshield(dwa) F4@(12,15) HP 43/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1186 mode=game_loop           Gloin Oakshield(dwa) F4@(12,16) HP 41/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1187 mode=game_loop           Gloin Oakshield(dwa) F4@(11,16) HP 39/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1188 mode=game_loop           Gloin Oakshield(dwa) F4@(10,16) HP 37/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1189 mode=game_loop           Gloin Oakshield(dwa) F4@(10,15) HP 35/135 MP 0/0 Hu  0 $ 1226 room=.
--> n
-T1190 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 33/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1191 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,14) HP 31/135 MP 0/0 Hu  0 $ 1226 room=.
--> w
-T1192 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,14) HP 29/135 MP 0/0 Hu  0 $ 1226 room=.
--> s
-T1193 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,15) HP 27/135 MP 0/0 Hu  0 $ 1226 room=M vs Rust Monster(L3 HP19/19)
+T 566 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 66/78 MP 0/0 Hu 77 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
 -> f
-T1194 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,15) HP 26/135 MP 0/0 Hu  0 $ 1226 room=M vs Rust Monster(L3 HP19/19)
--> a
-T1195 mode=combat_mode         Gloin Oakshield(dwa) F4@( 8,15) HP 26/135 MP 0/0 Hu  0 $ 1226 room=M vs Rust Monster(L3 HP19/19)
--> a
-T1196 mode=combat_victory      Gloin Oakshield(dwa) F4@( 8,15) HP 26/135 MP 0/0 Hu  0 $ 1234 room=.
--> back
-T1197 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,15) HP 26/135 MP 0/0 Hu  0 $ 1234 room=.
--> w
-T1198 mode=game_loop           Gloin Oakshield(dwa) F4@( 7,15) HP 24/135 MP 0/0 Hu  0 $ 1234 room=.
--> n
-T1199 mode=game_loop           Gloin Oakshield(dwa) F4@( 7,14) HP 22/135 MP 0/0 Hu  0 $ 1234 room=.
--> n
-T1200 mode=game_loop           Gloin Oakshield(dwa) F4@( 7,13) HP 20/135 MP 0/0 Hu  0 $ 1234 room=.
--> e
-T1201 mode=game_loop           Gloin Oakshield(dwa) F4@( 8,13) HP 18/135 MP 0/0 Hu  0 $ 1234 room=.
--> e
-T1202 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,13) HP 16/135 MP 0/0 Hu  0 $ 1234 room=.
--> s
-T1203 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,14) HP 14/135 MP 0/0 Hu  0 $ 1234 room=.
--> s
-T1204 mode=game_loop           Gloin Oakshield(dwa) F4@( 9,15) HP 12/135 MP 0/0 Hu  0 $ 1234 room=.
--> e
-T1205 mode=game_loop           Gloin Oakshield(dwa) F4@(10,15) HP 10/135 MP 0/0 Hu  0 $ 1234 room=.
--> n
-T1206 mode=game_loop           Gloin Oakshield(dwa) F4@(10,14) HP 8/135 MP 0/0 Hu  0 $ 1234 room=.
--> n
-T1207 mode=game_loop           Gloin Oakshield(dwa) F4@(10,13) HP 6/135 MP 0/0 Hu  0 $ 1234 room=.
--> n
-T1208 mode=game_loop           Gloin Oakshield(dwa) F4@(10,12) HP 4/135 MP 0/0 Hu  0 $ 1234 room=.
--> e
-T1209 mode=combat_mode         Gloin Oakshield(dwa) F4@(11,12) HP 2/135 MP 0/0 Hu  0 $ 1234 room=M vs Owlbear(L3 HP28/50)
+T 567 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 18/78 MP 0/0 Hu 77 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> i
+T 568 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 18/78 MP 0/0 Hu 77 $ 323 room=M
+-> u1
+T 569 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 48/78 MP 0/0 Hu 77 $ 323 room=M
+-> x
+T 570 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 48/78 MP 0/0 Hu 77 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
 -> f
-T1210 mode=flee_direction_mode Gloin Oakshield(dwa) F4@(11,12) HP 2/135 MP 0/0 Hu  0 $ 1234 room=M
--> s
-T1211 mode=game_loop           Gloin Oakshield(dwa) F4@(11,13) HP 2/135 MP 0/0 Hu  0 $ 1234 room=.
--> s
-T1212 mode=death_screen        Gloin Oakshield(dwa) F4@(11,14) HP 0/135 MP 0/0 Hu  0 $ 1234 room=.
+T 571 mode=flee_direction_mode Gloin Oakshield(dwa) F4@( 2, 1) HP 24/78 MP 0/0 Hu 77 $ 323 room=M
+-> w
+T 572 mode=stairs_up_mode      Gloin Oakshield(dwa) F4@( 1, 1) HP 24/78 MP 0/0 Hu 77 $ 323 room=U
+-> e
+T 573 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 24/78 MP 0/0 Hu 76 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> i
+T 574 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 24/78 MP 0/0 Hu 76 $ 323 room=M
+-> u1
+T 575 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 54/78 MP 0/0 Hu 76 $ 323 room=M
+-> x
+T 576 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 54/78 MP 0/0 Hu 76 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> f
+T 577 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 30/78 MP 0/0 Hu 76 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> i
+T 578 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 30/78 MP 0/0 Hu 76 $ 323 room=M
+-> u1
+T 579 mode=inventory           Gloin Oakshield(dwa) F4@( 2, 1) HP 60/78 MP 0/0 Hu 76 $ 323 room=M
+-> x
+T 580 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 60/78 MP 0/0 Hu 76 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> f
+T 581 mode=flee_direction_mode Gloin Oakshield(dwa) F4@( 2, 1) HP 36/78 MP 0/0 Hu 76 $ 323 room=M
+-> w
+T 582 mode=stairs_up_mode      Gloin Oakshield(dwa) F4@( 1, 1) HP 36/78 MP 0/0 Hu 76 $ 323 room=U
+-> e
+T 583 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 36/78 MP 0/0 Hu 75 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> f
+T 584 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 12/78 MP 0/0 Hu 75 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> f
+T 585 mode=flee_direction_mode Gloin Oakshield(dwa) F4@( 2, 1) HP 12/78 MP 0/0 Hu 75 $ 323 room=M
+-> w
+T 586 mode=stairs_up_mode      Gloin Oakshield(dwa) F4@( 1, 1) HP 12/78 MP 0/0 Hu 75 $ 323 room=U
+-> e
+T 587 mode=combat_mode         Gloin Oakshield(dwa) F4@( 2, 1) HP 12/78 MP 0/0 Hu 74 $ 323 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> f
+T 588 mode=death_screen        Gloin Oakshield(dwa) F4@( 2, 1) HP -12/78 MP 0/0 Hu 74 $ 323 room=M
 
-=== run finished: turns=1212 floor=4 hp=0/135 gold=1234 alive=False mode=death_screen ===
+=== run finished: turns=588 floor=4 hp=-12/78 gold=323 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00271_dwarf.html

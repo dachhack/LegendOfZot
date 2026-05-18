@@ -343,7 +343,7 @@ T 162 mode=inventory           Galadhrim the Pathfinder(elf) F1@(15, 9) HP 32/32
 T 163 mode=inventory           Galadhrim the Pathfinder(elf) F1@(15, 9) HP 32/32 MP 0/0 Hu 91 $ 114 room=.
 -> u7
 T 164 mode=upgrade_scroll_mode Galadhrim the Pathfinder(elf) F1@(15, 9) HP 32/32 MP 0/0 Hu 91 $ 114 room=.
--> 1
+-> 2
 T 165 mode=inventory           Galadhrim the Pathfinder(elf) F1@(15, 9) HP 32/32 MP 0/0 Hu 91 $ 114 room=.
 -> x
 T 166 mode=game_loop           Galadhrim the Pathfinder(elf) F1@(15, 9) HP 32/32 MP 0/0 Hu 91 $ 114 room=.
@@ -550,7 +550,7 @@ T 266 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@(11, 6) HP 31/32
 -> a
 T 267 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@(11, 6) HP 31/32 MP 0/0 Hu 75 $ 110 room=M vs Gnoll(L1 HP32/32)
 -> a
-T 268 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@(11, 6) HP 30/32 MP 0/0 Hu 75 $ 110 room=M vs Gnoll(L1 HP11/32)
+T 268 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@(11, 6) HP 30/32 MP 0/0 Hu 75 $ 110 room=M vs Gnoll(L1 HP10/32)
 -> a
 T 269 mode=combat_victory      Galadhrim the Pathfinder(elf) F2@(11, 6) HP 30/42 MP 0/0 Hu 75 $ 112 room=.
 -> back
@@ -660,7 +660,7 @@ T 321 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@( 7,11) HP 41/42
 -> a
 T 322 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@( 7,11) HP 40/42 MP 0/0 Hu 85 $ 164 room=M vs Cockatrice(L1 HP25/25)
 -> a
-T 323 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@( 7,11) HP 40/42 MP 0/0 Hu 85 $ 164 room=M vs Cockatrice(L1 HP4/25)
+T 323 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@( 7,11) HP 40/42 MP 0/0 Hu 85 $ 164 room=M vs Cockatrice(L1 HP3/25)
 -> a
 T 324 mode=combat_victory      Galadhrim the Pathfinder(elf) F2@( 7,11) HP 40/42 MP 0/0 Hu 85 $ 178 room=.
 -> back
@@ -992,7 +992,7 @@ T 487 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@( 9, 2) HP 34/42
 -> a
 T 488 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@( 9, 2) HP 33/42 MP 0/0 Hu  0 $ 260 room=M vs Harpy(L1 HP28/28)
 -> a
-T 489 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@( 9, 2) HP 33/42 MP 0/0 Hu  0 $ 260 room=M vs Harpy(L1 HP6/28)
+T 489 mode=combat_mode         Galadhrim the Pathfinder(elf) F2@( 9, 2) HP 33/42 MP 0/0 Hu  0 $ 260 room=M vs Harpy(L1 HP5/28)
 -> a
 T 490 mode=combat_victory      Galadhrim the Pathfinder(elf) F2@( 9, 2) HP 33/42 MP 0/0 Hu  0 $ 266 room=.
 -> back

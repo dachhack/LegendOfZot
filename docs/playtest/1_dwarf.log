@@ -821,7 +821,7 @@ T 402 mode=game_loop           Durin III(dwa) F3@( 1, 4) HP 64/64 MP 0/0 Hu 82 $
 -> s
 T 403 mode=combat_mode         Durin III(dwa) F3@( 1, 5) HP 64/64 MP 0/0 Hu 81 $ 435 room=M vs Myconid Shaman(L2 HP45/45)
 -> a
-T 404 mode=combat_mode         Durin III(dwa) F3@( 1, 5) HP 64/64 MP 0/0 Hu 81 $ 435 room=M vs Myconid Shaman(L2 HP18/45)
+T 404 mode=combat_mode         Durin III(dwa) F3@( 1, 5) HP 64/64 MP 0/0 Hu 81 $ 435 room=M vs Myconid Shaman(L2 HP17/45)
 -> a
 T 405 mode=combat_victory      Durin III(dwa) F3@( 1, 5) HP 63/74 MP 0/0 Hu 81 $ 459 room=.
 -> back
@@ -895,7 +895,7 @@ T 439 mode=chest_mode          Durin III(dwa) F3@( 3, 8) HP 74/74 MP 0/0 Hu 62 $
 -> n
 T 440 mode=combat_mode         Durin III(dwa) F3@( 3, 7) HP 74/74 MP 0/0 Hu 61 $ 459 room=M vs UNDEAD ZOMBIE(L2 HP43/43)
 -> a
-T 441 mode=combat_mode         Durin III(dwa) F3@( 3, 7) HP 74/74 MP 0/0 Hu 61 $ 459 room=M vs UNDEAD ZOMBIE(L2 HP14/43)
+T 441 mode=combat_mode         Durin III(dwa) F3@( 3, 7) HP 74/74 MP 0/0 Hu 61 $ 459 room=M vs UNDEAD ZOMBIE(L2 HP13/43)
 -> a
 T 442 mode=combat_victory      Durin III(dwa) F3@( 3, 7) HP 73/74 MP 0/0 Hu 61 $ 474 room=.
 -> back
@@ -1076,716 +1076,1454 @@ T 529 mode=vendor_shop         Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $
 T 530 mode=vendor_shop         Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 492 room=V
 -> b7
 T 531 mode=vendor_shop         Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 342 room=V
--> b1
-T 532 mode=vendor_shop         Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 152 room=V
+-> b2
+T 532 mode=vendor_shop         Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 252 room=V
 -> id17
-T 533 mode=vendor_shop         Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
+T 533 mode=vendor_shop         Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 177 room=V
+-> id18
+T 534 mode=vendor_shop         Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 127 room=V
+-> id19
+T 535 mode=vendor_shop         Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
 -> x
-T 534 mode=game_loop           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
+T 536 mode=game_loop           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
 -> i
-T 535 mode=inventory           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
--> e1
-T 536 mode=inventory           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
+T 537 mode=inventory           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
+-> e4
+T 538 mode=inventory           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
 -> x
-T 537 mode=game_loop           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
+T 539 mode=game_loop           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
 -> l
-T 538 mode=game_loop           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
+T 540 mode=game_loop           Durin III(dwa) F3@(11, 2) HP 74/70 MP 0/0 Hu 64 $ 77 room=V
 -> n
-T 539 mode=game_loop           Durin III(dwa) F3@(11, 1) HP 74/70 MP 0/0 Hu 63 $ 77 room=.
+T 541 mode=game_loop           Durin III(dwa) F3@(11, 1) HP 74/70 MP 0/0 Hu 63 $ 77 room=.
 -> l
-T 540 mode=game_loop           Durin III(dwa) F3@(11, 1) HP 74/70 MP 0/0 Hu 63 $ 77 room=.
+T 542 mode=game_loop           Durin III(dwa) F3@(11, 1) HP 74/70 MP 0/0 Hu 63 $ 77 room=.
 -> w
-T 541 mode=chest_mode          Durin III(dwa) F3@(10, 1) HP 74/70 MP 0/0 Hu 62 $ 77 room=C
+T 543 mode=chest_mode          Durin III(dwa) F3@(10, 1) HP 74/70 MP 0/0 Hu 62 $ 77 room=C
 -> o
-T 542 mode=game_loop           Durin III(dwa) F3@(10, 1) HP 74/70 MP 0/0 Hu 62 $ 77 room=.
+T 544 mode=game_loop           Durin III(dwa) F3@(10, 1) HP 74/70 MP 0/0 Hu 62 $ 77 room=.
 -> s
-T 543 mode=game_loop           Durin III(dwa) F3@(10, 2) HP 74/70 MP 0/0 Hu 61 $ 77 room=.
+T 545 mode=game_loop           Durin III(dwa) F3@(10, 2) HP 74/70 MP 0/0 Hu 61 $ 77 room=.
 -> w
-T 544 mode=game_loop           Durin III(dwa) F3@( 9, 2) HP 74/70 MP 0/0 Hu 60 $ 77 room=.
+T 546 mode=game_loop           Durin III(dwa) F3@( 9, 2) HP 74/70 MP 0/0 Hu 60 $ 77 room=.
 -> l
-T 545 mode=game_loop           Durin III(dwa) F3@( 9, 2) HP 74/70 MP 0/0 Hu 60 $ 77 room=.
+T 547 mode=game_loop           Durin III(dwa) F3@( 9, 2) HP 74/70 MP 0/0 Hu 60 $ 77 room=.
 -> s
-T 546 mode=game_loop           Durin III(dwa) F3@( 9, 3) HP 74/70 MP 0/0 Hu 59 $ 77 room=.
+T 548 mode=game_loop           Durin III(dwa) F3@( 9, 3) HP 74/70 MP 0/0 Hu 59 $ 77 room=.
 -> e
-T 547 mode=game_loop           Durin III(dwa) F3@(10, 3) HP 74/70 MP 0/0 Hu 58 $ 77 room=.
+T 549 mode=game_loop           Durin III(dwa) F3@(10, 3) HP 74/70 MP 0/0 Hu 58 $ 77 room=.
 -> s
-T 548 mode=game_loop           Durin III(dwa) F3@(10, 4) HP 74/70 MP 0/0 Hu 57 $ 77 room=.
+T 550 mode=game_loop           Durin III(dwa) F3@(10, 4) HP 74/70 MP 0/0 Hu 57 $ 77 room=.
 -> e
-T 549 mode=game_loop           Durin III(dwa) F3@(11, 4) HP 74/70 MP 0/0 Hu 56 $ 77 room=.
+T 551 mode=game_loop           Durin III(dwa) F3@(11, 4) HP 74/70 MP 0/0 Hu 56 $ 77 room=.
 -> e
-T 550 mode=game_loop           Durin III(dwa) F3@(12, 4) HP 74/70 MP 0/0 Hu 55 $ 77 room=.
+T 552 mode=game_loop           Durin III(dwa) F3@(12, 4) HP 74/70 MP 0/0 Hu 55 $ 77 room=.
 -> n
-T 551 mode=game_loop           Durin III(dwa) F3@(12, 3) HP 74/70 MP 0/0 Hu 54 $ 77 room=.
+T 553 mode=game_loop           Durin III(dwa) F3@(12, 3) HP 74/70 MP 0/0 Hu 54 $ 77 room=.
 -> n
-T 552 mode=game_loop           Durin III(dwa) F3@(12, 2) HP 74/70 MP 0/0 Hu 53 $ 77 room=.
+T 554 mode=game_loop           Durin III(dwa) F3@(12, 2) HP 74/70 MP 0/0 Hu 53 $ 77 room=.
 -> e
-T 553 mode=game_loop           Durin III(dwa) F3@(13, 2) HP 74/70 MP 0/0 Hu 52 $ 77 room=.
+T 555 mode=game_loop           Durin III(dwa) F3@(13, 2) HP 74/70 MP 0/0 Hu 52 $ 77 room=.
 -> e
-T 554 mode=game_loop           Durin III(dwa) F3@(14, 2) HP 74/70 MP 0/0 Hu 51 $ 77 room=.
+T 556 mode=game_loop           Durin III(dwa) F3@(14, 2) HP 74/70 MP 0/0 Hu 51 $ 77 room=.
 -> e
-T 555 mode=dungeon_mode        Durin III(dwa) F3@(15, 2) HP 74/70 MP 0/0 Hu 50 $ 77 room=N
+T 557 mode=dungeon_mode        Durin III(dwa) F3@(15, 2) HP 74/70 MP 0/0 Hu 50 $ 77 room=N
 -> u
-T 556 mode=game_loop           Durin III(dwa) F3@(15, 2) HP 74/70 MP 0/0 Hu 50 $ 77 room=N
+T 558 mode=game_loop           Durin III(dwa) F3@(15, 2) HP 74/70 MP 0/0 Hu 50 $ 77 room=N
 -> n
-T 557 mode=combat_mode         Durin III(dwa) F3@(15, 1) HP 74/70 MP 0/0 Hu 49 $ 77 room=M vs Giant Centipede(L2 HP16/16)
+T 559 mode=combat_mode         Durin III(dwa) F3@(15, 1) HP 74/70 MP 0/0 Hu 49 $ 77 room=M vs Giant Centipede(L2 HP16/16)
 -> a
-T 558 mode=combat_victory      Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 49 $ 101 room=.
+T 560 mode=combat_victory      Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 49 $ 101 room=.
 -> back
-T 559 mode=game_loop           Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 49 $ 101 room=.
+T 561 mode=game_loop           Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 49 $ 101 room=.
 -> i
-T 560 mode=inventory           Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 49 $ 101 room=.
+T 562 mode=inventory           Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 49 $ 101 room=.
 -> eat1
-T 561 mode=inventory           Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 99 $ 101 room=.
--> u15
-T 562 mode=upgrade_scroll_mode Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 99 $ 101 room=.
--> 1
 T 563 mode=inventory           Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 99 $ 101 room=.
+-> u15
+T 564 mode=upgrade_scroll_mode Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 99 $ 101 room=.
+-> 1
+T 565 mode=inventory           Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 99 $ 101 room=.
 -> x
-T 564 mode=game_loop           Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 99 $ 101 room=.
+T 566 mode=game_loop           Durin III(dwa) F3@(15, 1) HP 73/70 MP 0/0 Hu 99 $ 101 room=.
 -> e
-T 565 mode=garden_mode         Durin III(dwa) F3@(16, 1) HP 73/70 MP 0/0 Hu 98 $ 101 room=G
+T 567 mode=garden_mode         Durin III(dwa) F3@(16, 1) HP 73/70 MP 0/0 Hu 98 $ 101 room=G
 -> h
-T 566 mode=game_loop           Durin III(dwa) F3@(16, 1) HP 73/70 MP 0/0 Hu 98 $ 101 room=.
+T 568 mode=game_loop           Durin III(dwa) F3@(16, 1) HP 73/70 MP 0/0 Hu 98 $ 101 room=.
 -> s
-T 567 mode=game_loop           Durin III(dwa) F3@(16, 2) HP 73/70 MP 0/0 Hu 97 $ 101 room=.
+T 569 mode=game_loop           Durin III(dwa) F3@(16, 2) HP 73/70 MP 0/0 Hu 97 $ 101 room=.
 -> s
-T 568 mode=game_loop           Durin III(dwa) F3@(16, 3) HP 73/70 MP 0/0 Hu 96 $ 101 room=.
+T 570 mode=game_loop           Durin III(dwa) F3@(16, 3) HP 73/70 MP 0/0 Hu 96 $ 101 room=.
 -> e
-T 569 mode=shrine_mode         Durin III(dwa) F3@(17, 3) HP 73/70 MP 0/0 Hu 95 $ 101 room=F
+T 571 mode=shrine_mode         Durin III(dwa) F3@(17, 3) HP 73/70 MP 0/0 Hu 95 $ 101 room=F
 -> p
-T 570 mode=game_loop           Durin III(dwa) F3@(17, 3) HP 73/72 MP 0/0 Hu 95 $ 101 room=.
+T 572 mode=game_loop           Durin III(dwa) F3@(17, 3) HP 73/72 MP 0/0 Hu 95 $ 101 room=.
 -> s
-T 571 mode=game_loop           Durin III(dwa) F3@(17, 4) HP 73/72 MP 0/0 Hu 94 $ 101 room=.
+T 573 mode=game_loop           Durin III(dwa) F3@(17, 4) HP 73/72 MP 0/0 Hu 94 $ 101 room=.
 -> w
-T 572 mode=combat_mode         Durin III(dwa) F3@(16, 4) HP 73/72 MP 0/0 Hu 93 $ 101 room=M vs Slime Mold(L2 HP16/16)
+T 574 mode=combat_mode         Durin III(dwa) F3@(16, 4) HP 73/72 MP 0/0 Hu 93 $ 101 room=M vs Slime Mold(L2 HP16/16)
 -> a
-T 573 mode=combat_victory      Durin III(dwa) F3@(16, 4) HP 73/72 MP 0/0 Hu 93 $ 228 room=.
+T 575 mode=combat_victory      Durin III(dwa) F3@(16, 4) HP 73/72 MP 0/0 Hu 93 $ 228 room=.
 -> back
-T 574 mode=game_loop           Durin III(dwa) F3@(16, 4) HP 73/72 MP 0/0 Hu 93 $ 228 room=.
+T 576 mode=game_loop           Durin III(dwa) F3@(16, 4) HP 73/72 MP 0/0 Hu 93 $ 228 room=.
 -> w
-T 575 mode=game_loop           Durin III(dwa) F3@(15, 4) HP 73/72 MP 0/0 Hu 92 $ 228 room=.
+T 577 mode=game_loop           Durin III(dwa) F3@(15, 4) HP 73/72 MP 0/0 Hu 92 $ 228 room=.
 -> l
-T 576 mode=game_loop           Durin III(dwa) F3@(15, 4) HP 73/72 MP 0/0 Hu 92 $ 228 room=.
+T 578 mode=game_loop           Durin III(dwa) F3@(15, 4) HP 73/72 MP 0/0 Hu 92 $ 228 room=.
 -> n
-T 577 mode=combat_mode         Durin III(dwa) F3@(15, 3) HP 73/72 MP 0/0 Hu 91 $ 228 room=M vs Gnoll(L2 HP45/45)
+T 579 mode=combat_mode         Durin III(dwa) F3@(15, 3) HP 73/72 MP 0/0 Hu 91 $ 228 room=M vs Gnoll(L2 HP45/45)
 -> a
-T 578 mode=combat_mode         Durin III(dwa) F3@(15, 3) HP 72/72 MP 0/0 Hu 91 $ 228 room=M vs Gnoll(L2 HP45/45)
+T 580 mode=combat_mode         Durin III(dwa) F3@(15, 3) HP 72/72 MP 0/0 Hu 91 $ 228 room=M vs Gnoll(L2 HP45/45)
 -> a
-T 579 mode=combat_mode         Durin III(dwa) F3@(15, 3) HP 71/72 MP 0/0 Hu 91 $ 228 room=M vs Gnoll(L2 HP45/45)
+T 581 mode=combat_mode         Durin III(dwa) F3@(15, 3) HP 71/72 MP 0/0 Hu 91 $ 228 room=M vs Gnoll(L2 HP16/45)
 -> a
-T 580 mode=combat_mode         Durin III(dwa) F3@(15, 3) HP 70/72 MP 0/0 Hu 91 $ 228 room=M vs Gnoll(L2 HP17/45)
+T 582 mode=combat_mode         Durin III(dwa) F3@(15, 3) HP 70/72 MP 0/0 Hu 91 $ 228 room=M vs Gnoll(L2 HP16/45)
 -> a
-T 581 mode=combat_mode         Durin III(dwa) F3@(15, 3) HP 69/72 MP 0/0 Hu 91 $ 228 room=M vs Gnoll(L2 HP17/45)
--> a
-T 582 mode=combat_victory      Durin III(dwa) F3@(15, 3) HP 68/82 MP 0/0 Hu 91 $ 240 room=.
+T 583 mode=combat_victory      Durin III(dwa) F3@(15, 3) HP 69/82 MP 0/0 Hu 91 $ 240 room=.
 -> back
-T 583 mode=game_loop           Durin III(dwa) F3@(15, 3) HP 68/82 MP 0/0 Hu 91 $ 240 room=.
+T 584 mode=game_loop           Durin III(dwa) F3@(15, 3) HP 69/82 MP 0/0 Hu 91 $ 240 room=.
 -> n
-T 584 mode=game_loop           Durin III(dwa) F3@(15, 2) HP 68/82 MP 0/0 Hu 90 $ 240 room=N
+T 585 mode=game_loop           Durin III(dwa) F3@(15, 2) HP 69/82 MP 0/0 Hu 90 $ 240 room=N
 -> w
-T 585 mode=game_loop           Durin III(dwa) F3@(14, 2) HP 69/82 MP 0/0 Hu 89 $ 240 room=.
+T 586 mode=game_loop           Durin III(dwa) F3@(14, 2) HP 70/82 MP 0/0 Hu 89 $ 240 room=.
 -> s
-T 586 mode=game_loop           Durin III(dwa) F3@(14, 3) HP 69/82 MP 0/0 Hu 88 $ 240 room=.
+T 587 mode=game_loop           Durin III(dwa) F3@(14, 3) HP 70/82 MP 0/0 Hu 88 $ 240 room=.
 -> s
-T 587 mode=game_loop           Durin III(dwa) F3@(14, 4) HP 70/82 MP 0/0 Hu 87 $ 240 room=.
+T 588 mode=game_loop           Durin III(dwa) F3@(14, 4) HP 71/82 MP 0/0 Hu 87 $ 240 room=.
 -> w
-T 588 mode=game_loop           Durin III(dwa) F3@(13, 4) HP 70/82 MP 0/0 Hu 86 $ 240 room=.
+T 589 mode=game_loop           Durin III(dwa) F3@(13, 4) HP 71/82 MP 0/0 Hu 86 $ 240 room=.
 -> s
-T 589 mode=game_loop           Durin III(dwa) F3@(13, 5) HP 71/82 MP 0/0 Hu 85 $ 240 room=.
+T 590 mode=game_loop           Durin III(dwa) F3@(13, 5) HP 72/82 MP 0/0 Hu 85 $ 240 room=.
 -> s
-T 590 mode=game_loop           Durin III(dwa) F3@(13, 6) HP 71/82 MP 0/0 Hu 84 $ 240 room=.
+T 591 mode=game_loop           Durin III(dwa) F3@(13, 6) HP 72/82 MP 0/0 Hu 84 $ 240 room=.
 -> s
-T 591 mode=game_loop           Durin III(dwa) F3@(13, 7) HP 71/82 MP 0/0 Hu 83 $ 240 room=.
+T 592 mode=game_loop           Durin III(dwa) F3@(13, 7) HP 72/82 MP 0/0 Hu 83 $ 240 room=.
 -> s
-T 592 mode=game_loop           Durin III(dwa) F3@(13, 8) HP 71/82 MP 0/0 Hu 82 $ 240 room=.
+T 593 mode=game_loop           Durin III(dwa) F3@(13, 8) HP 72/82 MP 0/0 Hu 82 $ 240 room=.
 -> s
-T 593 mode=game_loop           Durin III(dwa) F3@(13, 9) HP 72/82 MP 0/0 Hu 81 $ 240 room=.
+T 594 mode=game_loop           Durin III(dwa) F3@(13, 9) HP 73/82 MP 0/0 Hu 81 $ 240 room=.
 -> w
-T 594 mode=game_loop           Durin III(dwa) F3@(12, 9) HP 72/82 MP 0/0 Hu 80 $ 240 room=.
+T 595 mode=game_loop           Durin III(dwa) F3@(12, 9) HP 73/82 MP 0/0 Hu 80 $ 240 room=.
 -> s
-T 595 mode=game_loop           Durin III(dwa) F3@(12,10) HP 72/82 MP 0/0 Hu 79 $ 240 room=.
+T 596 mode=game_loop           Durin III(dwa) F3@(12,10) HP 73/82 MP 0/0 Hu 79 $ 240 room=.
 -> s
-T 596 mode=game_loop           Durin III(dwa) F3@(12,11) HP 72/82 MP 0/0 Hu 78 $ 240 room=.
+T 597 mode=game_loop           Durin III(dwa) F3@(12,11) HP 73/82 MP 0/0 Hu 78 $ 240 room=.
 -> s
-T 597 mode=game_loop           Durin III(dwa) F3@(12,12) HP 73/82 MP 0/0 Hu 77 $ 240 room=.
+T 598 mode=game_loop           Durin III(dwa) F3@(12,12) HP 74/82 MP 0/0 Hu 77 $ 240 room=.
 -> l
-T 598 mode=game_loop           Durin III(dwa) F3@(12,12) HP 73/82 MP 0/0 Hu 77 $ 240 room=.
+T 599 mode=game_loop           Durin III(dwa) F3@(12,12) HP 74/82 MP 0/0 Hu 77 $ 240 room=.
 -> s
-T 599 mode=game_loop           Durin III(dwa) F3@(12,13) HP 73/82 MP 0/0 Hu 76 $ 240 room=.
+T 600 mode=game_loop           Durin III(dwa) F3@(12,13) HP 74/82 MP 0/0 Hu 76 $ 240 room=.
 -> i
-T 600 mode=inventory           Durin III(dwa) F3@(12,13) HP 73/82 MP 0/0 Hu 76 $ 240 room=.
+T 601 mode=inventory           Durin III(dwa) F3@(12,13) HP 74/82 MP 0/0 Hu 76 $ 240 room=.
 -> u7
-T 601 mode=inventory           Durin III(dwa) F3@(12,13) HP 82/82 MP 0/0 Hu 76 $ 240 room=.
+T 602 mode=inventory           Durin III(dwa) F3@(12,13) HP 82/82 MP 0/0 Hu 76 $ 240 room=.
 -> x
-T 602 mode=game_loop           Durin III(dwa) F3@(12,13) HP 82/82 MP 0/0 Hu 76 $ 240 room=.
--> l
 T 603 mode=game_loop           Durin III(dwa) F3@(12,13) HP 82/82 MP 0/0 Hu 76 $ 240 room=.
--> s
-T 604 mode=combat_mode         Durin III(dwa) F3@(12,14) HP 82/82 MP 0/0 Hu 75 $ 240 room=M vs Gnoll(L2 HP45/45)
--> a
-T 605 mode=combat_mode         Durin III(dwa) F3@(12,14) HP 82/82 MP 0/0 Hu 75 $ 240 room=M vs Gnoll(L2 HP17/45)
--> a
-T 606 mode=combat_victory      Durin III(dwa) F3@(12,14) HP 82/82 MP 0/0 Hu 75 $ 358 room=.
--> back
-T 607 mode=game_loop           Durin III(dwa) F3@(12,14) HP 82/82 MP 0/0 Hu 75 $ 358 room=.
 -> l
+T 604 mode=game_loop           Durin III(dwa) F3@(12,13) HP 82/82 MP 0/0 Hu 76 $ 240 room=.
+-> s
+T 605 mode=combat_mode         Durin III(dwa) F3@(12,14) HP 82/82 MP 0/0 Hu 75 $ 240 room=M vs Gnoll(L2 HP45/45)
+-> a
+T 606 mode=combat_mode         Durin III(dwa) F3@(12,14) HP 82/82 MP 0/0 Hu 75 $ 240 room=M vs Gnoll(L2 HP16/45)
+-> a
+T 607 mode=combat_victory      Durin III(dwa) F3@(12,14) HP 82/82 MP 0/0 Hu 75 $ 358 room=.
+-> back
 T 608 mode=game_loop           Durin III(dwa) F3@(12,14) HP 82/82 MP 0/0 Hu 75 $ 358 room=.
--> e
-T 609 mode=combat_mode         Durin III(dwa) F3@(13,14) HP 82/82 MP 0/0 Hu 74 $ 358 room=M vs Zombie(L2 HP36/36)
--> a
-T 610 mode=combat_mode         Durin III(dwa) F3@(13,14) HP 81/82 MP 0/0 Hu 74 $ 358 room=M vs Zombie(L2 HP36/36)
--> a
-T 611 mode=combat_mode         Durin III(dwa) F3@(13,14) HP 80/82 MP 0/0 Hu 74 $ 358 room=M vs Zombie(L2 HP6/36)
--> a
-T 612 mode=combat_victory      Durin III(dwa) F3@(13,14) HP 79/82 MP 0/0 Hu 74 $ 370 room=.
--> back
-T 613 mode=game_loop           Durin III(dwa) F3@(13,14) HP 79/82 MP 0/0 Hu 74 $ 370 room=.
 -> l
-T 614 mode=game_loop           Durin III(dwa) F3@(13,14) HP 79/82 MP 0/0 Hu 74 $ 370 room=.
+T 609 mode=game_loop           Durin III(dwa) F3@(12,14) HP 82/82 MP 0/0 Hu 75 $ 358 room=.
 -> e
-T 615 mode=altar_mode          Durin III(dwa) F3@(14,14) HP 79/82 MP 0/0 Hu 73 $ 370 room=A
+T 610 mode=combat_mode         Durin III(dwa) F3@(13,14) HP 82/82 MP 0/0 Hu 74 $ 358 room=M vs Zombie(L2 HP36/36)
+-> a
+T 611 mode=combat_mode         Durin III(dwa) F3@(13,14) HP 81/82 MP 0/0 Hu 74 $ 358 room=M vs Zombie(L2 HP36/36)
+-> a
+T 612 mode=combat_mode         Durin III(dwa) F3@(13,14) HP 80/82 MP 0/0 Hu 74 $ 358 room=M vs Zombie(L2 HP5/36)
+-> a
+T 613 mode=combat_victory      Durin III(dwa) F3@(13,14) HP 79/82 MP 0/0 Hu 74 $ 364 room=.
+-> back
+T 614 mode=game_loop           Durin III(dwa) F3@(13,14) HP 79/82 MP 0/0 Hu 74 $ 364 room=.
+-> l
+T 615 mode=game_loop           Durin III(dwa) F3@(13,14) HP 79/82 MP 0/0 Hu 74 $ 364 room=.
+-> e
+T 616 mode=altar_mode          Durin III(dwa) F3@(14,14) HP 79/82 MP 0/0 Hu 73 $ 364 room=A
 -> pray
-T 616 mode=game_loop           Durin III(dwa) F3@(14,14) HP 79/82 MP 0/0 Hu 73 $ 370 room=.
+T 617 mode=game_loop           Durin III(dwa) F3@(14,14) HP 79/82 MP 0/0 Hu 73 $ 364 room=.
 -> l
-T 617 mode=game_loop           Durin III(dwa) F3@(14,14) HP 79/82 MP 0/0 Hu 73 $ 370 room=.
+T 618 mode=game_loop           Durin III(dwa) F3@(14,14) HP 79/82 MP 0/0 Hu 73 $ 364 room=.
 -> e
-T 618 mode=game_loop           Durin III(dwa) F3@(15,14) HP 79/82 MP 0/0 Hu 72 $ 370 room=.
+T 619 mode=game_loop           Durin III(dwa) F3@(15,14) HP 79/82 MP 0/0 Hu 72 $ 364 room=.
 -> e
-T 619 mode=game_loop           Durin III(dwa) F3@(16,14) HP 79/82 MP 0/0 Hu 71 $ 370 room=.
+T 620 mode=game_loop           Durin III(dwa) F3@(16,14) HP 79/82 MP 0/0 Hu 71 $ 364 room=.
 -> l
-T 620 mode=game_loop           Durin III(dwa) F3@(16,14) HP 79/82 MP 0/0 Hu 71 $ 370 room=.
--> l
-T 621 mode=game_loop           Durin III(dwa) F3@(16,14) HP 79/82 MP 0/0 Hu 71 $ 370 room=.
+T 621 mode=game_loop           Durin III(dwa) F3@(16,14) HP 79/82 MP 0/0 Hu 71 $ 364 room=.
 -> e
-T 622 mode=pool_mode           Durin III(dwa) F3@(17,14) HP 80/82 MP 0/0 Hu 70 $ 370 room=P
+T 622 mode=pool_mode           Durin III(dwa) F3@(17,14) HP 80/82 MP 0/0 Hu 70 $ 364 room=P
 -> dr
-T 623 mode=game_loop           Durin III(dwa) F3@(17,14) HP 80/82 MP 0/0 Hu 70 $ 370 room=.
+T 623 mode=game_loop           Durin III(dwa) F3@(17,14) HP 80/82 MP 0/0 Hu 70 $ 364 room=.
 -> l
-T 624 mode=game_loop           Durin III(dwa) F3@(17,14) HP 80/82 MP 0/0 Hu 70 $ 370 room=.
+T 624 mode=game_loop           Durin III(dwa) F3@(17,14) HP 80/82 MP 0/0 Hu 70 $ 364 room=.
 -> n
-T 625 mode=game_loop           Durin III(dwa) F3@(17,13) HP 80/82 MP 0/0 Hu 69 $ 370 room=.
+T 625 mode=game_loop           Durin III(dwa) F3@(17,13) HP 80/82 MP 0/0 Hu 69 $ 364 room=.
 -> e
-T 626 mode=combat_mode         Durin III(dwa) F3@(18,13) HP 80/82 MP 0/0 Hu 68 $ 370 room=M vs Orc(L2 HP50/50)
+T 626 mode=combat_mode         Durin III(dwa) F3@(18,13) HP 80/82 MP 0/0 Hu 68 $ 364 room=M vs Rust Monster(L2 HP18/18)
 -> a
-T 627 mode=combat_mode         Durin III(dwa) F3@(18,13) HP 77/82 MP 0/0 Hu 68 $ 370 room=M vs Orc(L2 HP50/50)
+T 627 mode=combat_mode         Durin III(dwa) F3@(18,13) HP 80/82 MP 0/0 Hu 68 $ 364 room=M vs Rust Monster(L2 HP18/18)
 -> a
-T 628 mode=combat_mode         Durin III(dwa) F3@(18,13) HP 77/82 MP 0/0 Hu 68 $ 370 room=M vs Orc(L2 HP50/50)
--> a
-T 629 mode=combat_mode         Durin III(dwa) F3@(18,13) HP 74/82 MP 0/0 Hu 68 $ 370 room=M vs Orc(L2 HP50/50)
--> a
-T 630 mode=combat_mode         Durin III(dwa) F3@(18,13) HP 71/82 MP 0/0 Hu 68 $ 370 room=M vs Orc(L2 HP24/50)
--> a
-T 631 mode=combat_victory      Durin III(dwa) F3@(18,13) HP 71/82 MP 0/0 Hu 68 $ 397 room=.
+T 628 mode=combat_victory      Durin III(dwa) F3@(18,13) HP 79/82 MP 0/0 Hu 68 $ 370 room=.
 -> back
-T 632 mode=game_loop           Durin III(dwa) F3@(18,13) HP 71/82 MP 0/0 Hu 68 $ 397 room=.
+T 629 mode=game_loop           Durin III(dwa) F3@(18,13) HP 79/82 MP 0/0 Hu 68 $ 370 room=.
 -> n
-T 633 mode=game_loop           Durin III(dwa) F3@(18,12) HP 71/82 MP 0/0 Hu 67 $ 397 room=.
+T 630 mode=game_loop           Durin III(dwa) F3@(18,12) HP 79/82 MP 0/0 Hu 67 $ 370 room=.
+-> l
+T 631 mode=game_loop           Durin III(dwa) F3@(18,12) HP 79/82 MP 0/0 Hu 67 $ 370 room=.
 -> e
-T 634 mode=garden_mode         Durin III(dwa) F3@(19,12) HP 72/82 MP 0/0 Hu 66 $ 397 room=G
+T 632 mode=garden_mode         Durin III(dwa) F3@(19,12) HP 80/82 MP 0/0 Hu 66 $ 370 room=G
 -> h
-T 635 mode=game_loop           Durin III(dwa) F3@(19,12) HP 72/82 MP 0/0 Hu 66 $ 397 room=.
+T 633 mode=game_loop           Durin III(dwa) F3@(19,12) HP 80/82 MP 0/0 Hu 66 $ 370 room=.
 -> l
-T 636 mode=game_loop           Durin III(dwa) F3@(19,12) HP 72/82 MP 0/0 Hu 66 $ 397 room=.
+T 634 mode=game_loop           Durin III(dwa) F3@(19,12) HP 80/82 MP 0/0 Hu 66 $ 370 room=.
 -> n
-T 637 mode=chest_mode          Durin III(dwa) F3@(19,11) HP 72/82 MP 0/0 Hu 65 $ 397 room=C
+T 635 mode=chest_mode          Durin III(dwa) F3@(19,11) HP 80/82 MP 0/0 Hu 65 $ 370 room=C
 -> o
-T 638 mode=game_loop           Durin III(dwa) F3@(19,11) HP 72/82 MP 0/0 Hu 65 $ 397 room=.
--> i
-T 639 mode=inventory           Durin III(dwa) F3@(19,11) HP 72/82 MP 0/0 Hu 65 $ 397 room=.
--> u9
-T 640 mode=inventory           Durin III(dwa) F3@(19,11) HP 82/82 MP 0/0 Hu 65 $ 397 room=.
--> x
-T 641 mode=game_loop           Durin III(dwa) F3@(19,11) HP 82/82 MP 0/0 Hu 65 $ 397 room=.
+T 636 mode=game_loop           Durin III(dwa) F3@(19,11) HP 80/82 MP 0/0 Hu 65 $ 370 room=.
 -> n
-T 642 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 82/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP40/40)
+T 637 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 80/82 MP 0/0 Hu 64 $ 370 room=M vs Myconid Shaman(L2 HP45/45)
 -> a
-T 643 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 76/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP40/40)
+T 638 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 79/82 MP 0/0 Hu 64 $ 370 room=M vs Myconid Shaman(L2 HP16/45)
 -> a
-T 644 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 70/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP40/40)
--> a
-T 645 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 64/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP40/40)
--> a
-T 646 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 58/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP40/40)
--> a
-T 647 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 52/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP40/40)
--> a
-T 648 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 52/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP13/40)
--> a
-T 649 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 46/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP13/40)
--> a
-T 650 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 40/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP13/40)
--> i
-T 651 mode=inventory           Durin III(dwa) F3@(19,10) HP 40/82 MP 0/0 Hu 64 $ 397 room=M
--> u3
-T 652 mode=inventory           Durin III(dwa) F3@(19,10) HP 70/82 MP 0/0 Hu 64 $ 397 room=M
--> x
-T 653 mode=combat_mode         Durin III(dwa) F3@(19,10) HP 70/82 MP 0/0 Hu 64 $ 397 room=M vs Giant Spider(L2 HP13/40)
--> a
-T 654 mode=combat_victory      Durin III(dwa) F3@(19,10) HP 70/82 MP 0/0 Hu 64 $ 406 room=.
+T 639 mode=combat_victory      Durin III(dwa) F3@(19,10) HP 78/82 MP 0/0 Hu 64 $ 400 room=.
 -> back
-T 655 mode=game_loop           Durin III(dwa) F3@(19,10) HP 70/82 MP 0/0 Hu 64 $ 406 room=.
--> l
-T 656 mode=game_loop           Durin III(dwa) F3@(19,10) HP 70/82 MP 0/0 Hu 64 $ 406 room=.
--> w
-T 657 mode=game_loop           Durin III(dwa) F3@(18,10) HP 70/82 MP 0/0 Hu 63 $ 406 room=.
--> w
-T 658 mode=game_loop           Durin III(dwa) F3@(17,10) HP 70/82 MP 0/0 Hu 62 $ 406 room=.
--> s
-T 659 mode=game_loop           Durin III(dwa) F3@(17,11) HP 70/82 MP 0/0 Hu 61 $ 406 room=.
--> s
-T 660 mode=game_loop           Durin III(dwa) F3@(17,12) HP 71/82 MP 0/0 Hu 60 $ 406 room=.
--> l
-T 661 mode=game_loop           Durin III(dwa) F3@(17,12) HP 71/82 MP 0/0 Hu 60 $ 406 room=.
--> s
-T 662 mode=game_loop           Durin III(dwa) F3@(17,13) HP 71/82 MP 0/0 Hu 59 $ 406 room=.
--> w
-T 663 mode=game_loop           Durin III(dwa) F3@(16,13) HP 71/82 MP 0/0 Hu 58 $ 406 room=.
+T 640 mode=game_loop           Durin III(dwa) F3@(19,10) HP 78/82 MP 0/0 Hu 64 $ 400 room=.
 -> i
-T 664 mode=inventory           Durin III(dwa) F3@(16,13) HP 71/82 MP 0/0 Hu 58 $ 406 room=.
--> u9
-T 665 mode=inventory           Durin III(dwa) F3@(16,13) HP 82/82 MP 0/0 Hu 58 $ 406 room=.
--> x
-T 666 mode=game_loop           Durin III(dwa) F3@(16,13) HP 82/82 MP 0/0 Hu 58 $ 406 room=.
--> i
-T 667 mode=inventory           Durin III(dwa) F3@(16,13) HP 82/82 MP 0/0 Hu 58 $ 406 room=.
--> eat2
-T 668 mode=inventory           Durin III(dwa) F3@(16,13) HP 82/82 MP 0/0 Hu 63 $ 406 room=.
+T 641 mode=inventory           Durin III(dwa) F3@(19,10) HP 78/82 MP 0/0 Hu 64 $ 400 room=.
 -> eat1
-T 669 mode=inventory           Durin III(dwa) F3@(16,13) HP 82/82 MP 0/0 Hu100 $ 406 room=.
+T 642 mode=inventory           Durin III(dwa) F3@(19,10) HP 78/82 MP 0/0 Hu 70 $ 400 room=.
 -> x
-T 670 mode=game_loop           Durin III(dwa) F3@(16,13) HP 82/82 MP 0/0 Hu100 $ 406 room=.
+T 643 mode=game_loop           Durin III(dwa) F3@(19,10) HP 78/82 MP 0/0 Hu 70 $ 400 room=.
+-> l
+T 644 mode=game_loop           Durin III(dwa) F3@(19,10) HP 78/82 MP 0/0 Hu 70 $ 400 room=.
 -> w
-T 671 mode=game_loop           Durin III(dwa) F3@(15,13) HP 82/82 MP 0/0 Hu 99 $ 406 room=.
--> n
-T 672 mode=game_loop           Durin III(dwa) F3@(15,12) HP 82/82 MP 0/0 Hu 98 $ 406 room=.
+T 645 mode=game_loop           Durin III(dwa) F3@(18,10) HP 78/82 MP 0/0 Hu 69 $ 400 room=.
 -> w
-T 673 mode=game_loop           Durin III(dwa) F3@(14,12) HP 82/82 MP 0/0 Hu 97 $ 406 room=.
--> n
-T 674 mode=game_loop           Durin III(dwa) F3@(14,11) HP 82/82 MP 0/0 Hu 96 $ 406 room=.
+T 646 mode=game_loop           Durin III(dwa) F3@(17,10) HP 79/82 MP 0/0 Hu 68 $ 400 room=.
+-> s
+T 647 mode=game_loop           Durin III(dwa) F3@(17,11) HP 79/82 MP 0/0 Hu 67 $ 400 room=.
+-> s
+T 648 mode=game_loop           Durin III(dwa) F3@(17,12) HP 79/82 MP 0/0 Hu 66 $ 400 room=.
+-> s
+T 649 mode=game_loop           Durin III(dwa) F3@(17,13) HP 79/82 MP 0/0 Hu 65 $ 400 room=.
 -> w
-T 675 mode=game_loop           Durin III(dwa) F3@(13,11) HP 82/82 MP 0/0 Hu 95 $ 406 room=.
+T 650 mode=game_loop           Durin III(dwa) F3@(16,13) HP 80/82 MP 0/0 Hu 64 $ 400 room=.
+-> l
+T 651 mode=game_loop           Durin III(dwa) F3@(16,13) HP 80/82 MP 0/0 Hu 64 $ 400 room=.
 -> w
-T 676 mode=game_loop           Durin III(dwa) F3@(12,11) HP 82/82 MP 0/0 Hu 94 $ 406 room=.
+T 652 mode=game_loop           Durin III(dwa) F3@(15,13) HP 80/82 MP 0/0 Hu 63 $ 400 room=.
 -> n
-T 677 mode=game_loop           Durin III(dwa) F3@(12,10) HP 82/82 MP 0/0 Hu 93 $ 406 room=.
+T 653 mode=game_loop           Durin III(dwa) F3@(15,12) HP 80/82 MP 0/0 Hu 62 $ 400 room=.
+-> w
+T 654 mode=game_loop           Durin III(dwa) F3@(14,12) HP 80/82 MP 0/0 Hu 61 $ 400 room=.
 -> n
-T 678 mode=game_loop           Durin III(dwa) F3@(12, 9) HP 82/82 MP 0/0 Hu 92 $ 406 room=.
+T 655 mode=game_loop           Durin III(dwa) F3@(14,11) HP 81/82 MP 0/0 Hu 60 $ 400 room=.
+-> w
+T 656 mode=game_loop           Durin III(dwa) F3@(13,11) HP 81/82 MP 0/0 Hu 59 $ 400 room=.
+-> w
+T 657 mode=game_loop           Durin III(dwa) F3@(12,11) HP 81/82 MP 0/0 Hu 58 $ 400 room=.
 -> n
-T 679 mode=game_loop           Durin III(dwa) F3@(12, 8) HP 82/82 MP 0/0 Hu 91 $ 406 room=.
+T 658 mode=game_loop           Durin III(dwa) F3@(12,10) HP 81/82 MP 0/0 Hu 57 $ 400 room=.
 -> n
-T 680 mode=game_loop           Durin III(dwa) F3@(12, 7) HP 82/82 MP 0/0 Hu 90 $ 406 room=.
+T 659 mode=game_loop           Durin III(dwa) F3@(12, 9) HP 81/82 MP 0/0 Hu 56 $ 400 room=.
 -> n
-T 681 mode=game_loop           Durin III(dwa) F3@(12, 6) HP 82/82 MP 0/0 Hu 89 $ 406 room=.
+T 660 mode=game_loop           Durin III(dwa) F3@(12, 8) HP 81/82 MP 0/0 Hu 55 $ 400 room=.
+-> n
+T 661 mode=game_loop           Durin III(dwa) F3@(12, 7) HP 81/82 MP 0/0 Hu 54 $ 400 room=.
+-> n
+T 662 mode=game_loop           Durin III(dwa) F3@(12, 6) HP 81/82 MP 0/0 Hu 53 $ 400 room=.
 -> e
-T 682 mode=game_loop           Durin III(dwa) F3@(13, 6) HP 82/82 MP 0/0 Hu 88 $ 406 room=.
+T 663 mode=game_loop           Durin III(dwa) F3@(13, 6) HP 81/82 MP 0/0 Hu 52 $ 400 room=.
 -> n
-T 683 mode=game_loop           Durin III(dwa) F3@(13, 5) HP 82/82 MP 0/0 Hu 87 $ 406 room=.
+T 664 mode=game_loop           Durin III(dwa) F3@(13, 5) HP 81/82 MP 0/0 Hu 51 $ 400 room=.
 -> n
-T 684 mode=game_loop           Durin III(dwa) F3@(13, 4) HP 82/82 MP 0/0 Hu 86 $ 406 room=.
+T 665 mode=game_loop           Durin III(dwa) F3@(13, 4) HP 81/82 MP 0/0 Hu 50 $ 400 room=.
 -> n
-T 685 mode=game_loop           Durin III(dwa) F3@(13, 3) HP 82/82 MP 0/0 Hu 85 $ 406 room=.
+T 666 mode=game_loop           Durin III(dwa) F3@(13, 3) HP 81/82 MP 0/0 Hu 49 $ 400 room=.
 -> n
-T 686 mode=game_loop           Durin III(dwa) F3@(13, 2) HP 82/82 MP 0/0 Hu 84 $ 406 room=.
+T 667 mode=game_loop           Durin III(dwa) F3@(13, 2) HP 81/82 MP 0/0 Hu 48 $ 400 room=.
 -> e
-T 687 mode=game_loop           Durin III(dwa) F3@(14, 2) HP 82/82 MP 0/0 Hu 83 $ 406 room=.
+T 668 mode=game_loop           Durin III(dwa) F3@(14, 2) HP 81/82 MP 0/0 Hu 47 $ 400 room=.
 -> e
-T 688 mode=dungeon_mode        Durin III(dwa) F3@(15, 2) HP 82/82 MP 0/0 Hu 82 $ 406 room=N
+T 669 mode=dungeon_mode        Durin III(dwa) F3@(15, 2) HP 81/82 MP 0/0 Hu 46 $ 400 room=N
 -> u
-T 689 mode=dungeon_unlocked_mode Durin III(dwa) F3@(15, 2) HP 82/82 MP 0/0 Hu 82 $ 406 room=N
+T 670 mode=dungeon_unlocked_mode Durin III(dwa) F3@(15, 2) HP 81/82 MP 0/0 Hu 46 $ 400 room=N
 -> r
-T 690 mode=game_loop           Durin III(dwa) F3@(15, 2) HP 82/82 MP 0/0 Hu 82 $ 653 room=N
+T 671 mode=game_loop           Durin III(dwa) F3@(15, 2) HP 81/82 MP 0/0 Hu 46 $ 400 room=N
 -> s
-T 691 mode=game_loop           Durin III(dwa) F3@(15, 3) HP 82/82 MP 0/0 Hu 81 $ 653 room=.
+T 672 mode=game_loop           Durin III(dwa) F3@(15, 3) HP 81/82 MP 0/0 Hu 45 $ 400 room=.
 -> s
-T 692 mode=game_loop           Durin III(dwa) F3@(15, 4) HP 82/82 MP 0/0 Hu 80 $ 653 room=.
+T 673 mode=game_loop           Durin III(dwa) F3@(15, 4) HP 81/82 MP 0/0 Hu 44 $ 400 room=.
 -> w
-T 693 mode=game_loop           Durin III(dwa) F3@(14, 4) HP 82/82 MP 0/0 Hu 79 $ 653 room=.
+T 674 mode=game_loop           Durin III(dwa) F3@(14, 4) HP 81/82 MP 0/0 Hu 43 $ 400 room=.
 -> w
-T 694 mode=game_loop           Durin III(dwa) F3@(13, 4) HP 82/82 MP 0/0 Hu 78 $ 653 room=.
+T 675 mode=game_loop           Durin III(dwa) F3@(13, 4) HP 81/82 MP 0/0 Hu 42 $ 400 room=.
 -> s
-T 695 mode=game_loop           Durin III(dwa) F3@(13, 5) HP 82/82 MP 0/0 Hu 77 $ 653 room=.
+T 676 mode=game_loop           Durin III(dwa) F3@(13, 5) HP 81/82 MP 0/0 Hu 41 $ 400 room=.
 -> s
-T 696 mode=game_loop           Durin III(dwa) F3@(13, 6) HP 82/82 MP 0/0 Hu 76 $ 653 room=.
+T 677 mode=game_loop           Durin III(dwa) F3@(13, 6) HP 81/82 MP 0/0 Hu 40 $ 400 room=.
 -> s
-T 697 mode=game_loop           Durin III(dwa) F3@(13, 7) HP 82/82 MP 0/0 Hu 75 $ 653 room=.
+T 678 mode=game_loop           Durin III(dwa) F3@(13, 7) HP 81/82 MP 0/0 Hu 39 $ 400 room=.
 -> s
-T 698 mode=game_loop           Durin III(dwa) F3@(13, 8) HP 82/82 MP 0/0 Hu 74 $ 653 room=.
+T 679 mode=game_loop           Durin III(dwa) F3@(13, 8) HP 81/82 MP 0/0 Hu 38 $ 400 room=.
 -> s
-T 699 mode=game_loop           Durin III(dwa) F3@(13, 9) HP 82/82 MP 0/0 Hu 73 $ 653 room=.
+T 680 mode=game_loop           Durin III(dwa) F3@(13, 9) HP 81/82 MP 0/0 Hu 37 $ 400 room=.
 -> w
-T 700 mode=game_loop           Durin III(dwa) F3@(12, 9) HP 82/82 MP 0/0 Hu 72 $ 653 room=.
+T 681 mode=game_loop           Durin III(dwa) F3@(12, 9) HP 81/82 MP 0/0 Hu 36 $ 400 room=.
 -> s
-T 701 mode=game_loop           Durin III(dwa) F3@(12,10) HP 82/82 MP 0/0 Hu 71 $ 653 room=.
--> w
-T 702 mode=game_loop           Durin III(dwa) F3@(11,10) HP 82/82 MP 0/0 Hu 70 $ 653 room=.
--> w
-T 703 mode=game_loop           Durin III(dwa) F3@(10,10) HP 82/82 MP 0/0 Hu 69 $ 653 room=.
--> w
-T 704 mode=game_loop           Durin III(dwa) F3@( 9,10) HP 82/82 MP 0/0 Hu 68 $ 653 room=.
+T 682 mode=game_loop           Durin III(dwa) F3@(12,10) HP 81/82 MP 0/0 Hu 35 $ 400 room=.
 -> s
-T 705 mode=stairs_down_mode    Durin III(dwa) F3@( 9,11) HP 82/82 MP 0/0 Hu 67 $ 653 room=D
+T 683 mode=game_loop           Durin III(dwa) F3@(12,11) HP 81/82 MP 0/0 Hu 34 $ 400 room=.
+-> s
+T 684 mode=game_loop           Durin III(dwa) F3@(12,12) HP 81/82 MP 0/0 Hu 33 $ 400 room=.
+-> s
+T 685 mode=game_loop           Durin III(dwa) F3@(12,13) HP 81/82 MP 0/0 Hu 32 $ 400 room=.
+-> w
+T 686 mode=game_loop           Durin III(dwa) F3@(11,13) HP 81/82 MP 0/0 Hu 31 $ 400 room=.
+-> s
+T 687 mode=combat_mode         Durin III(dwa) F3@(11,14) HP 81/82 MP 0/0 Hu 30 $ 400 room=M vs Gnoll(L2 HP45/45)
+-> a
+T 688 mode=combat_mode         Durin III(dwa) F3@(11,14) HP 81/82 MP 0/0 Hu 30 $ 400 room=M vs Gnoll(L2 HP16/45)
+-> a
+T 689 mode=combat_victory      Durin III(dwa) F3@(11,14) HP 81/82 MP 0/0 Hu 30 $ 415 room=.
+-> back
+T 690 mode=game_loop           Durin III(dwa) F3@(11,14) HP 81/82 MP 0/0 Hu 30 $ 415 room=.
+-> i
+T 691 mode=inventory           Durin III(dwa) F3@(11,14) HP 81/82 MP 0/0 Hu 30 $ 415 room=.
+-> eat1
+T 692 mode=inventory           Durin III(dwa) F3@(11,14) HP 81/82 MP 0/0 Hu 37 $ 415 room=.
+-> x
+T 693 mode=game_loop           Durin III(dwa) F3@(11,14) HP 81/82 MP 0/0 Hu 37 $ 415 room=.
+-> w
+T 694 mode=game_loop           Durin III(dwa) F3@(10,14) HP 81/82 MP 0/0 Hu 36 $ 415 room=.
+-> w
+T 695 mode=game_loop           Durin III(dwa) F3@( 9,14) HP 81/82 MP 0/0 Hu 35 $ 415 room=.
+-> l
+T 696 mode=game_loop           Durin III(dwa) F3@( 9,14) HP 81/82 MP 0/0 Hu 35 $ 415 room=.
+-> n
+T 697 mode=combat_mode         Durin III(dwa) F3@( 9,13) HP 81/82 MP 0/0 Hu 34 $ 415 room=M vs Lichen(L2 HP10/10)
+-> a
+T 698 mode=combat_victory      Durin III(dwa) F3@( 9,13) HP 80/92 MP 0/0 Hu 34 $ 439 room=.
+-> back
+T 699 mode=game_loop           Durin III(dwa) F3@( 9,13) HP 80/92 MP 0/0 Hu 34 $ 439 room=.
+-> i
+T 700 mode=inventory           Durin III(dwa) F3@( 9,13) HP 80/92 MP 0/0 Hu 34 $ 439 room=.
+-> u10
+T 701 mode=inventory           Durin III(dwa) F3@( 9,13) HP 92/92 MP 0/0 Hu 34 $ 439 room=.
+-> x
+T 702 mode=game_loop           Durin III(dwa) F3@( 9,13) HP 92/92 MP 0/0 Hu 34 $ 439 room=.
+-> i
+T 703 mode=inventory           Durin III(dwa) F3@( 9,13) HP 92/92 MP 0/0 Hu 34 $ 439 room=.
+-> eat1
+T 704 mode=inventory           Durin III(dwa) F3@( 9,13) HP 92/92 MP 0/0 Hu 40 $ 439 room=.
+-> x
+T 705 mode=game_loop           Durin III(dwa) F3@( 9,13) HP 92/92 MP 0/0 Hu 40 $ 439 room=.
+-> w
+T 706 mode=game_loop           Durin III(dwa) F3@( 8,13) HP 92/92 MP 0/0 Hu 39 $ 439 room=.
+-> n
+T 707 mode=game_loop           Durin III(dwa) F3@( 8,12) HP 92/92 MP 0/0 Hu 38 $ 439 room=.
+-> n
+T 708 mode=game_loop           Durin III(dwa) F3@( 8,11) HP 92/92 MP 0/0 Hu 37 $ 439 room=.
+-> e
+T 709 mode=stairs_down_mode    Durin III(dwa) F3@( 9,11) HP 92/92 MP 0/0 Hu 36 $ 439 room=D
 -> d
-T 706 mode=stairs_up_mode      Durin III(dwa) F4@( 1, 1) HP 82/82 MP 0/0 Hu 67 $ 653 room=U
+T 710 mode=stairs_up_mode      Durin III(dwa) F4@( 1, 1) HP 92/92 MP 0/0 Hu 36 $ 439 room=U
 -> e
-T 707 mode=game_loop           Durin III(dwa) F4@( 2, 1) HP 82/82 MP 0/0 Hu 66 $ 653 room=.
--> l
-T 708 mode=game_loop           Durin III(dwa) F4@( 2, 1) HP 82/82 MP 0/0 Hu 66 $ 653 room=.
+T 711 mode=stairs_up_mode      Durin III(dwa) F4@( 1, 1) HP 92/92 MP 0/0 Hu 36 $ 439 room=U
+-> n
+T 712 mode=stairs_up_mode      Durin III(dwa) F4@( 1, 1) HP 92/92 MP 0/0 Hu 36 $ 439 room=U
 -> s
-T 709 mode=combat_mode         Durin III(dwa) F4@( 2, 2) HP 82/82 MP 0/0 Hu 65 $ 653 room=M vs Slime Mold(L3 HP16/16)
+T 713 mode=game_loop           Durin III(dwa) F4@( 1, 2) HP 92/92 MP 0/0 Hu 35 $ 439 room=.
+-> l
+T 714 mode=game_loop           Durin III(dwa) F4@( 1, 2) HP 92/92 MP 0/0 Hu 35 $ 439 room=.
+-> s
+T 715 mode=combat_mode         Durin III(dwa) F4@( 1, 3) HP 92/92 MP 0/0 Hu 34 $ 439 room=M vs Giant Rat(L3 HP23/23)
 -> a
-T 710 mode=combat_mode         Durin III(dwa) F4@( 2, 2) HP 81/82 MP 0/0 Hu 65 $ 653 room=M vs Slime Mold(L3 HP16/16)
--> a
-T 711 mode=combat_mode         Durin III(dwa) F4@( 2, 2) HP 80/82 MP 0/0 Hu 65 $ 653 room=M vs Slime Mold(L3 HP16/16)
--> a
-T 712 mode=combat_victory      Durin III(dwa) F4@( 2, 2) HP 79/92 MP 0/0 Hu 65 $ 689 room=.
+T 716 mode=combat_victory      Durin III(dwa) F4@( 1, 3) HP 92/92 MP 0/0 Hu 34 $ 471 room=.
 -> back
-T 713 mode=game_loop           Durin III(dwa) F4@( 2, 2) HP 79/92 MP 0/0 Hu 65 $ 689 room=.
+T 717 mode=game_loop           Durin III(dwa) F4@( 1, 3) HP 92/92 MP 0/0 Hu 34 $ 471 room=.
 -> l
-T 714 mode=game_loop           Durin III(dwa) F4@( 2, 2) HP 79/92 MP 0/0 Hu 65 $ 689 room=.
--> i
-T 715 mode=inventory           Durin III(dwa) F4@( 2, 2) HP 79/92 MP 0/0 Hu 65 $ 689 room=.
--> u9
-T 716 mode=inventory           Durin III(dwa) F4@( 2, 2) HP 92/92 MP 0/0 Hu 65 $ 689 room=.
--> x
-T 717 mode=game_loop           Durin III(dwa) F4@( 2, 2) HP 92/92 MP 0/0 Hu 65 $ 689 room=.
+T 718 mode=game_loop           Durin III(dwa) F4@( 1, 3) HP 92/92 MP 0/0 Hu 34 $ 471 room=.
 -> e
-T 718 mode=combat_mode         Durin III(dwa) F4@( 3, 2) HP 92/92 MP 0/0 Hu 64 $ 689 room=M vs Owlbear(L3 HP50/50)
+T 719 mode=game_loop           Durin III(dwa) F4@( 2, 3) HP 92/92 MP 0/0 Hu 33 $ 471 room=.
+-> l
+T 720 mode=game_loop           Durin III(dwa) F4@( 2, 3) HP 92/92 MP 0/0 Hu 33 $ 471 room=.
+-> e
+T 721 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 92/92 MP 0/0 Hu 32 $ 471 room=.
+-> l
+T 722 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 92/92 MP 0/0 Hu 32 $ 471 room=.
+-> e
+T 723 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 92/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP41/41)
 -> a
-T 719 mode=combat_mode         Durin III(dwa) F4@( 3, 2) HP 90/92 MP 0/0 Hu 64 $ 689 room=M vs Owlbear(L3 HP25/50)
+T 724 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 88/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP41/41)
 -> a
-T 720 mode=combat_mode         Durin III(dwa) F4@( 3, 2) HP 88/92 MP 0/0 Hu 64 $ 689 room=M vs Owlbear(L3 HP25/50)
+T 725 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 88/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP41/41)
 -> a
-T 721 mode=combat_mode         Durin III(dwa) F4@( 3, 2) HP 88/92 MP 0/0 Hu 64 $ 689 room=M vs Owlbear(L3 HP25/50)
+T 726 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 84/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP41/41)
 -> a
-T 722 mode=combat_victory      Durin III(dwa) F4@( 3, 2) HP 88/92 MP 0/0 Hu 64 $ 693 room=.
+T 727 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 84/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 728 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 80/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 729 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 80/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 730 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 76/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 731 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 72/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 732 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 68/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP13/41)
+-> a
+T 733 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 64/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP13/41)
+-> a
+T 734 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 60/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP13/41)
+-> a
+T 735 mode=combat_mode         Durin III(dwa) F4@( 4, 3) HP 56/92 MP 0/0 Hu 31 $ 471 room=M vs Giant Spider(L3 HP13/41)
+-> a
+T 736 mode=combat_victory      Durin III(dwa) F4@( 4, 3) HP 56/92 MP 0/0 Hu 31 $ 511 room=.
 -> back
-T 723 mode=game_loop           Durin III(dwa) F4@( 3, 2) HP 88/92 MP 0/0 Hu 64 $ 693 room=.
--> l
-T 724 mode=game_loop           Durin III(dwa) F4@( 3, 2) HP 88/92 MP 0/0 Hu 64 $ 693 room=.
--> s
-T 725 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 88/92 MP 0/0 Hu 63 $ 693 room=.
--> l
-T 726 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 88/92 MP 0/0 Hu 63 $ 693 room=.
--> s
-T 727 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 88/92 MP 0/0 Hu 62 $ 693 room=.
--> l
-T 728 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 88/92 MP 0/0 Hu 62 $ 693 room=.
--> w
-T 729 mode=library_mode        Durin III(dwa) F4@( 2, 4) HP 88/92 MP 0/0 Hu 61 $ 693 room=L
--> r
-T 730 mode=library_read_decision_mode Durin III(dwa) F4@( 2, 4) HP 88/92 MP 0/0 Hu 61 $ 693 room=L
--> y
-T 731 mode=game_loop           Durin III(dwa) F4@( 2, 4) HP 88/92 MP 0/0 Hu 61 $ 993 room=.
--> s
-T 732 mode=game_loop           Durin III(dwa) F4@( 2, 5) HP 89/92 MP 0/0 Hu 60 $ 993 room=.
--> e
-T 733 mode=altar_mode          Durin III(dwa) F4@( 3, 5) HP 89/92 MP 0/0 Hu 59 $ 993 room=A
--> pray
-T 734 mode=game_loop           Durin III(dwa) F4@( 3, 5) HP 89/92 MP 0/0 Hu 59 $ 1193 room=.
--> e
-T 735 mode=game_loop           Durin III(dwa) F4@( 4, 5) HP 89/92 MP 0/0 Hu 58 $ 1193 room=.
--> s
-T 736 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 89/92 MP 0/0 Hu 57 $ 1193 room=M vs Ogre(L3 HP80/80)
--> f
-T 737 mode=flee_direction_mode Durin III(dwa) F4@( 4, 6) HP 89/92 MP 0/0 Hu 57 $ 1193 room=M
--> n
-T 738 mode=game_loop           Durin III(dwa) F4@( 4, 5) HP 89/92 MP 0/0 Hu 57 $ 1193 room=.
--> e
-T 739 mode=game_loop           Durin III(dwa) F4@( 5, 5) HP 89/92 MP 0/0 Hu 56 $ 1193 room=.
--> n
-T 740 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 89/92 MP 0/0 Hu 55 $ 1193 room=.
--> n
-T 741 mode=game_loop           Durin III(dwa) F4@( 5, 3) HP 89/92 MP 0/0 Hu 54 $ 1193 room=.
--> w
-T 742 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 89/92 MP 0/0 Hu 53 $ 1193 room=.
--> w
-T 743 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 89/92 MP 0/0 Hu 52 $ 1193 room=.
--> s
-T 744 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 89/92 MP 0/0 Hu 51 $ 1193 room=.
--> s
-T 745 mode=game_loop           Durin III(dwa) F4@( 3, 5) HP 89/92 MP 0/0 Hu 50 $ 1193 room=.
--> w
-T 746 mode=game_loop           Durin III(dwa) F4@( 2, 5) HP 89/92 MP 0/0 Hu 49 $ 1193 room=.
+T 737 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 56/92 MP 0/0 Hu 31 $ 511 room=.
 -> i
-T 747 mode=inventory           Durin III(dwa) F4@( 2, 5) HP 89/92 MP 0/0 Hu 49 $ 1193 room=.
--> eat1
-T 748 mode=inventory           Durin III(dwa) F4@( 2, 5) HP 89/92 MP 0/0 Hu 99 $ 1193 room=.
--> x
-T 749 mode=game_loop           Durin III(dwa) F4@( 2, 5) HP 89/92 MP 0/0 Hu 99 $ 1193 room=.
--> n
-T 750 mode=game_loop           Durin III(dwa) F4@( 2, 4) HP 89/92 MP 0/0 Hu 98 $ 1193 room=.
--> w
-T 751 mode=game_loop           Durin III(dwa) F4@( 1, 4) HP 90/92 MP 0/0 Hu 97 $ 1193 room=.
--> e
-T 752 mode=game_loop           Durin III(dwa) F4@( 2, 4) HP 90/92 MP 0/0 Hu 96 $ 1193 room=.
--> e
-T 753 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 91/92 MP 0/0 Hu 95 $ 1193 room=.
--> s
-T 754 mode=game_loop           Durin III(dwa) F4@( 3, 5) HP 91/92 MP 0/0 Hu 94 $ 1193 room=.
--> w
-T 755 mode=game_loop           Durin III(dwa) F4@( 2, 5) HP 92/92 MP 0/0 Hu 93 $ 1193 room=.
--> s
-T 756 mode=game_loop           Durin III(dwa) F4@( 2, 6) HP 92/92 MP 0/0 Hu 92 $ 1193 room=.
--> s
-T 757 mode=game_loop           Durin III(dwa) F4@( 2, 7) HP 92/92 MP 0/0 Hu 91 $ 1193 room=.
--> e
-T 758 mode=game_loop           Durin III(dwa) F4@( 3, 7) HP 92/92 MP 0/0 Hu 90 $ 1193 room=.
--> e
-T 759 mode=oracle_mode         Durin III(dwa) F4@( 4, 7) HP 92/92 MP 0/0 Hu 89 $ 1193 room=O
--> n
-T 760 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 92/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP80/80)
--> a
-T 761 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 86/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP56/80)
--> a
-T 762 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 80/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP56/80)
--> f
-T 763 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 80/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP56/80)
--> a
-T 764 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 74/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP32/80)
--> a
-T 765 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 68/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP32/80)
--> a
-T 766 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 62/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP32/80)
--> a
-T 767 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 56/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP32/80)
--> a
-T 768 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 50/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP32/80)
--> a
-T 769 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 44/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP8/80)
--> i
-T 770 mode=inventory           Durin III(dwa) F4@( 4, 6) HP 44/92 MP 0/0 Hu 88 $ 1193 room=M
+T 738 mode=inventory           Durin III(dwa) F4@( 4, 3) HP 56/92 MP 0/0 Hu 31 $ 511 room=.
+-> u10
+T 739 mode=inventory           Durin III(dwa) F4@( 4, 3) HP 86/92 MP 0/0 Hu 31 $ 511 room=.
 -> u3
-T 771 mode=inventory           Durin III(dwa) F4@( 4, 6) HP 74/92 MP 0/0 Hu 88 $ 1193 room=M
+T 740 mode=inventory           Durin III(dwa) F4@( 4, 3) HP 92/92 MP 0/0 Hu 31 $ 511 room=.
 -> x
-T 772 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 74/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP8/80)
+T 741 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 92/92 MP 0/0 Hu 31 $ 511 room=.
+-> e
+T 742 mode=combat_mode         Durin III(dwa) F4@( 5, 3) HP 92/92 MP 0/0 Hu 30 $ 511 room=M vs Slime Mold(L3 HP16/16)
+-> f
+T 743 mode=flee_direction_mode Durin III(dwa) F4@( 5, 3) HP 92/92 MP 0/0 Hu 30 $ 511 room=M
+-> w
+T 744 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 92/92 MP 0/0 Hu 30 $ 511 room=.
+-> s
+T 745 mode=game_loop           Durin III(dwa) F4@( 4, 4) HP 92/92 MP 0/0 Hu 29 $ 511 room=.
+-> e
+T 746 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 92/92 MP 0/0 Hu 28 $ 511 room=.
+-> s
+T 747 mode=game_loop           Durin III(dwa) F4@( 5, 5) HP 92/92 MP 0/0 Hu 27 $ 511 room=.
+-> w
+T 748 mode=game_loop           Durin III(dwa) F4@( 4, 5) HP 92/92 MP 0/0 Hu 26 $ 511 room=.
+-> w
+T 749 mode=game_loop           Durin III(dwa) F4@( 3, 5) HP 92/92 MP 0/0 Hu 25 $ 511 room=.
+-> n
+T 750 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 92/92 MP 0/0 Hu 24 $ 511 room=.
+-> e
+T 751 mode=game_loop           Durin III(dwa) F4@( 4, 4) HP 92/92 MP 0/0 Hu 23 $ 511 room=.
+-> e
+T 752 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 92/92 MP 0/0 Hu 22 $ 511 room=.
+-> n
+T 753 mode=combat_mode         Durin III(dwa) F4@( 5, 3) HP 92/92 MP 0/0 Hu 21 $ 511 room=M vs Slime Mold(L3 HP16/16)
+-> f
+T 754 mode=combat_mode         Durin III(dwa) F4@( 5, 3) HP 91/92 MP 0/0 Hu 21 $ 511 room=M vs Slime Mold(L3 HP16/16)
+-> f
+T 755 mode=flee_direction_mode Durin III(dwa) F4@( 5, 3) HP 91/92 MP 0/0 Hu 21 $ 511 room=M
+-> w
+T 756 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 91/92 MP 0/0 Hu 21 $ 511 room=.
+-> w
+T 757 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 91/92 MP 0/0 Hu 20 $ 511 room=.
+-> s
+T 758 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 91/92 MP 0/0 Hu 19 $ 511 room=.
+-> e
+T 759 mode=game_loop           Durin III(dwa) F4@( 4, 4) HP 91/92 MP 0/0 Hu 18 $ 511 room=.
+-> e
+T 760 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 91/92 MP 0/0 Hu 17 $ 511 room=.
+-> n
+T 761 mode=combat_mode         Durin III(dwa) F4@( 5, 3) HP 91/92 MP 0/0 Hu 16 $ 511 room=M vs Slime Mold(L3 HP16/16)
+-> f
+T 762 mode=flee_direction_mode Durin III(dwa) F4@( 5, 3) HP 91/92 MP 0/0 Hu 16 $ 511 room=M
+-> w
+T 763 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 91/92 MP 0/0 Hu 16 $ 511 room=.
+-> w
+T 764 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 91/92 MP 0/0 Hu 15 $ 511 room=.
+-> s
+T 765 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 91/92 MP 0/0 Hu 14 $ 511 room=.
+-> e
+T 766 mode=game_loop           Durin III(dwa) F4@( 4, 4) HP 91/92 MP 0/0 Hu 13 $ 511 room=.
+-> e
+T 767 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 91/92 MP 0/0 Hu 12 $ 511 room=.
+-> n
+T 768 mode=combat_mode         Durin III(dwa) F4@( 5, 3) HP 91/92 MP 0/0 Hu 11 $ 511 room=M vs Slime Mold(L3 HP16/16)
+-> f
+T 769 mode=flee_direction_mode Durin III(dwa) F4@( 5, 3) HP 91/92 MP 0/0 Hu 11 $ 511 room=M
+-> w
+T 770 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 91/92 MP 0/0 Hu 11 $ 511 room=.
+-> w
+T 771 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 91/92 MP 0/0 Hu 10 $ 511 room=.
+-> s
+T 772 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 91/92 MP 0/0 Hu  9 $ 511 room=.
+-> e
+T 773 mode=game_loop           Durin III(dwa) F4@( 4, 4) HP 91/92 MP 0/0 Hu  8 $ 511 room=.
+-> e
+T 774 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 91/92 MP 0/0 Hu  7 $ 511 room=.
+-> n
+T 775 mode=combat_mode         Durin III(dwa) F4@( 5, 3) HP 91/92 MP 0/0 Hu  6 $ 511 room=M vs Slime Mold(L3 HP16/16)
+-> f
+T 776 mode=combat_mode         Durin III(dwa) F4@( 5, 3) HP 90/92 MP 0/0 Hu  6 $ 511 room=M vs Slime Mold(L3 HP16/16)
+-> f
+T 777 mode=flee_direction_mode Durin III(dwa) F4@( 5, 3) HP 89/92 MP 0/0 Hu  6 $ 511 room=M
+-> w
+T 778 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 89/92 MP 0/0 Hu  6 $ 511 room=.
+-> w
+T 779 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 89/92 MP 0/0 Hu  5 $ 511 room=.
+-> w
+T 780 mode=game_loop           Durin III(dwa) F4@( 2, 3) HP 89/92 MP 0/0 Hu  4 $ 511 room=.
+-> w
+T 781 mode=game_loop           Durin III(dwa) F4@( 1, 3) HP 89/92 MP 0/0 Hu  3 $ 511 room=.
+-> n
+T 782 mode=game_loop           Durin III(dwa) F4@( 1, 2) HP 89/92 MP 0/0 Hu  2 $ 511 room=.
+-> e
+T 783 mode=game_loop           Durin III(dwa) F4@( 2, 2) HP 89/92 MP 0/0 Hu  1 $ 511 room=.
+-> s
+T 784 mode=game_loop           Durin III(dwa) F4@( 2, 3) HP 87/92 MP 0/0 Hu  0 $ 511 room=.
+-> e
+T 785 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 85/92 MP 0/0 Hu  0 $ 511 room=.
+-> e
+T 786 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 83/92 MP 0/0 Hu  0 $ 511 room=.
+-> i
+T 787 mode=inventory           Durin III(dwa) F4@( 4, 3) HP 83/92 MP 0/0 Hu  0 $ 511 room=.
+-> u10
+T 788 mode=inventory           Durin III(dwa) F4@( 4, 3) HP 92/92 MP 0/0 Hu  0 $ 511 room=.
+-> x
+T 789 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 92/92 MP 0/0 Hu  0 $ 511 room=.
+-> e
+T 790 mode=combat_mode         Durin III(dwa) F4@( 5, 3) HP 90/92 MP 0/0 Hu  0 $ 511 room=M vs Slime Mold(L3 HP16/16)
+-> f
+T 791 mode=flee_direction_mode Durin III(dwa) F4@( 5, 3) HP 89/92 MP 0/0 Hu  0 $ 511 room=M
+-> s
+T 792 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 89/92 MP 0/0 Hu  0 $ 511 room=.
+-> s
+T 793 mode=game_loop           Durin III(dwa) F4@( 5, 5) HP 87/92 MP 0/0 Hu  0 $ 511 room=.
+-> e
+T 794 mode=combat_mode         Durin III(dwa) F4@( 6, 5) HP 85/92 MP 0/0 Hu  0 $ 511 room=M vs Kobold(L3 HP8/8)
 -> a
-T 773 mode=combat_mode         Durin III(dwa) F4@( 4, 6) HP 68/92 MP 0/0 Hu 88 $ 1193 room=M vs Ogre(L3 HP8/80)
+T 795 mode=combat_mode         Durin III(dwa) F4@( 6, 5) HP 84/92 MP 0/0 Hu  0 $ 511 room=M vs Kobold(L3 HP8/8)
 -> a
-T 774 mode=combat_victory      Durin III(dwa) F4@( 4, 6) HP 68/92 MP 0/0 Hu 88 $ 1197 room=.
+T 796 mode=combat_victory      Durin III(dwa) F4@( 6, 5) HP 84/92 MP 0/0 Hu  0 $ 539 room=.
 -> back
-T 775 mode=game_loop           Durin III(dwa) F4@( 4, 6) HP 68/92 MP 0/0 Hu 88 $ 1197 room=.
--> n
-T 776 mode=game_loop           Durin III(dwa) F4@( 4, 5) HP 68/92 MP 0/0 Hu 87 $ 1197 room=.
--> w
-T 777 mode=game_loop           Durin III(dwa) F4@( 3, 5) HP 69/92 MP 0/0 Hu 86 $ 1197 room=.
--> n
-T 778 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 69/92 MP 0/0 Hu 85 $ 1197 room=.
--> n
-T 779 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 69/92 MP 0/0 Hu 84 $ 1197 room=.
--> n
-T 780 mode=game_loop           Durin III(dwa) F4@( 3, 2) HP 69/92 MP 0/0 Hu 83 $ 1197 room=.
--> w
-T 781 mode=game_loop           Durin III(dwa) F4@( 2, 2) HP 70/92 MP 0/0 Hu 82 $ 1197 room=.
--> n
-T 782 mode=game_loop           Durin III(dwa) F4@( 2, 1) HP 70/92 MP 0/0 Hu 81 $ 1197 room=.
--> w
-T 783 mode=stairs_up_mode      Durin III(dwa) F4@( 1, 1) HP 70/92 MP 0/0 Hu 80 $ 1197 room=U
--> e
-T 784 mode=game_loop           Durin III(dwa) F4@( 2, 1) HP 70/92 MP 0/0 Hu 79 $ 1197 room=.
--> s
-T 785 mode=game_loop           Durin III(dwa) F4@( 2, 2) HP 71/92 MP 0/0 Hu 78 $ 1197 room=.
+T 797 mode=game_loop           Durin III(dwa) F4@( 6, 5) HP 84/92 MP 0/0 Hu  0 $ 539 room=.
 -> i
-T 786 mode=inventory           Durin III(dwa) F4@( 2, 2) HP 71/92 MP 0/0 Hu 78 $ 1197 room=.
--> u9
-T 787 mode=inventory           Durin III(dwa) F4@( 2, 2) HP 92/92 MP 0/0 Hu 78 $ 1197 room=.
+T 798 mode=inventory           Durin III(dwa) F4@( 6, 5) HP 84/92 MP 0/0 Hu  0 $ 539 room=.
+-> u10
+T 799 mode=inventory           Durin III(dwa) F4@( 6, 5) HP 92/92 MP 0/0 Hu  0 $ 539 room=.
 -> x
-T 788 mode=game_loop           Durin III(dwa) F4@( 2, 2) HP 92/92 MP 0/0 Hu 78 $ 1197 room=.
+T 800 mode=game_loop           Durin III(dwa) F4@( 6, 5) HP 92/92 MP 0/0 Hu  0 $ 539 room=.
 -> i
-T 789 mode=inventory           Durin III(dwa) F4@( 2, 2) HP 92/92 MP 0/0 Hu 78 $ 1197 room=.
--> eat2
-T 790 mode=inventory           Durin III(dwa) F4@( 2, 2) HP 92/92 MP 0/0 Hu 89 $ 1197 room=.
--> x
-T 791 mode=game_loop           Durin III(dwa) F4@( 2, 2) HP 92/92 MP 0/0 Hu 89 $ 1197 room=.
--> e
-T 792 mode=game_loop           Durin III(dwa) F4@( 3, 2) HP 92/92 MP 0/0 Hu 88 $ 1197 room=.
--> s
-T 793 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 92/92 MP 0/0 Hu 87 $ 1197 room=.
--> s
-T 794 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 92/92 MP 0/0 Hu 86 $ 1197 room=.
--> s
-T 795 mode=game_loop           Durin III(dwa) F4@( 3, 5) HP 92/92 MP 0/0 Hu 85 $ 1197 room=.
--> e
-T 796 mode=game_loop           Durin III(dwa) F4@( 4, 5) HP 92/92 MP 0/0 Hu 84 $ 1197 room=.
--> s
-T 797 mode=game_loop           Durin III(dwa) F4@( 4, 6) HP 92/92 MP 0/0 Hu 83 $ 1197 room=.
--> s
-T 798 mode=game_loop           Durin III(dwa) F4@( 4, 7) HP 92/92 MP 0/0 Hu 82 $ 1197 room=O
--> e
-T 799 mode=game_loop           Durin III(dwa) F4@( 5, 7) HP 92/92 MP 0/0 Hu 81 $ 1197 room=.
--> s
-T 800 mode=game_loop           Durin III(dwa) F4@( 5, 8) HP 92/92 MP 0/0 Hu 80 $ 1197 room=.
--> w
-T 801 mode=game_loop           Durin III(dwa) F4@( 4, 8) HP 92/92 MP 0/0 Hu 79 $ 1197 room=.
--> s
-T 802 mode=game_loop           Durin III(dwa) F4@( 4, 9) HP 92/92 MP 0/0 Hu 78 $ 1197 room=.
--> e
-T 803 mode=game_loop           Durin III(dwa) F4@( 5, 9) HP 92/92 MP 0/0 Hu 77 $ 1197 room=.
--> e
-T 804 mode=game_loop           Durin III(dwa) F4@( 6, 9) HP 92/92 MP 0/0 Hu 76 $ 1197 room=.
--> n
-T 805 mode=combat_mode         Durin III(dwa) F4@( 6, 8) HP 92/92 MP 0/0 Hu 75 $ 1197 room=M vs Rust Monster(L3 HP19/19)
--> a
-T 806 mode=combat_victory      Durin III(dwa) F4@( 6, 8) HP 91/92 MP 0/0 Hu 75 $ 1213 room=.
--> back
-T 807 mode=game_loop           Durin III(dwa) F4@( 6, 8) HP 91/92 MP 0/0 Hu 75 $ 1213 room=.
--> n
-T 808 mode=game_loop           Durin III(dwa) F4@( 6, 7) HP 91/92 MP 0/0 Hu 74 $ 1213 room=.
--> w
-T 809 mode=game_loop           Durin III(dwa) F4@( 5, 7) HP 91/92 MP 0/0 Hu 73 $ 1213 room=.
--> w
-T 810 mode=game_loop           Durin III(dwa) F4@( 4, 7) HP 91/92 MP 0/0 Hu 72 $ 1213 room=O
--> s
-T 811 mode=game_loop           Durin III(dwa) F4@( 4, 8) HP 92/92 MP 0/0 Hu 71 $ 1213 room=.
--> s
-T 812 mode=game_loop           Durin III(dwa) F4@( 4, 9) HP 92/92 MP 0/0 Hu 70 $ 1213 room=.
--> s
-T 813 mode=game_loop           Durin III(dwa) F4@( 4,10) HP 92/92 MP 0/0 Hu 69 $ 1213 room=.
--> n
-T 814 mode=game_loop           Durin III(dwa) F4@( 4, 9) HP 92/92 MP 0/0 Hu 68 $ 1213 room=.
--> w
-T 815 mode=game_loop           Durin III(dwa) F4@( 3, 9) HP 92/92 MP 0/0 Hu 67 $ 1213 room=.
--> n
-T 816 mode=pool_mode           Durin III(dwa) F4@( 3, 8) HP 92/92 MP 0/0 Hu 66 $ 1213 room=P
--> dr
-T 817 mode=game_loop           Durin III(dwa) F4@( 3, 8) HP 92/92 MP 0/0 Hu 66 $ 1213 room=.
--> w
-T 818 mode=game_loop           Durin III(dwa) F4@( 2, 8) HP 92/92 MP 0/0 Hu 65 $ 1213 room=.
--> n
-T 819 mode=game_loop           Durin III(dwa) F4@( 2, 7) HP 92/92 MP 0/0 Hu 64 $ 1213 room=.
--> w
-T 820 mode=game_loop           Durin III(dwa) F4@( 1, 7) HP 92/92 MP 0/0 Hu 63 $ 1213 room=.
--> s
-T 821 mode=game_loop           Durin III(dwa) F4@( 1, 8) HP 92/92 MP 0/0 Hu 62 $ 1213 room=.
--> n
-T 822 mode=game_loop           Durin III(dwa) F4@( 1, 7) HP 92/92 MP 0/0 Hu 61 $ 1213 room=.
--> s
-T 823 mode=game_loop           Durin III(dwa) F4@( 1, 8) HP 92/92 MP 0/0 Hu 60 $ 1213 room=.
--> e
-T 824 mode=game_loop           Durin III(dwa) F4@( 2, 8) HP 92/92 MP 0/0 Hu 59 $ 1213 room=.
--> e
-T 825 mode=game_loop           Durin III(dwa) F4@( 3, 8) HP 92/92 MP 0/0 Hu 58 $ 1213 room=.
--> s
-T 826 mode=game_loop           Durin III(dwa) F4@( 3, 9) HP 92/92 MP 0/0 Hu 57 $ 1213 room=.
--> w
-T 827 mode=game_loop           Durin III(dwa) F4@( 2, 9) HP 92/92 MP 0/0 Hu 56 $ 1213 room=.
--> n
-T 828 mode=game_loop           Durin III(dwa) F4@( 2, 8) HP 92/92 MP 0/0 Hu 55 $ 1213 room=.
--> n
-T 829 mode=game_loop           Durin III(dwa) F4@( 2, 7) HP 92/92 MP 0/0 Hu 54 $ 1213 room=.
--> e
-T 830 mode=game_loop           Durin III(dwa) F4@( 3, 7) HP 92/92 MP 0/0 Hu 53 $ 1213 room=.
--> e
-T 831 mode=game_loop           Durin III(dwa) F4@( 4, 7) HP 92/92 MP 0/0 Hu 52 $ 1213 room=O
--> e
-T 832 mode=game_loop           Durin III(dwa) F4@( 5, 7) HP 92/92 MP 0/0 Hu 51 $ 1213 room=.
--> e
-T 833 mode=game_loop           Durin III(dwa) F4@( 6, 7) HP 92/92 MP 0/0 Hu 50 $ 1213 room=.
--> n
-T 834 mode=combat_mode         Durin III(dwa) F4@( 6, 6) HP 92/92 MP 0/0 Hu 49 $ 1213 room=M vs Orc(L3 HP52/52)
--> a
-T 835 mode=combat_mode         Durin III(dwa) F4@( 6, 6) HP 92/92 MP 0/0 Hu 49 $ 1213 room=M vs Orc(L3 HP52/52)
--> a
-T 836 mode=combat_mode         Durin III(dwa) F4@( 6, 6) HP 92/92 MP 0/0 Hu 49 $ 1213 room=M vs Orc(L3 HP52/52)
--> a
-T 837 mode=combat_mode         Durin III(dwa) F4@( 6, 6) HP 89/92 MP 0/0 Hu 49 $ 1213 room=M vs Orc(L3 HP52/52)
--> a
-T 838 mode=combat_mode         Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 49 $ 1213 room=M vs Orc(L3 HP52/52)
--> a
-T 839 mode=combat_mode         Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 49 $ 1213 room=M vs Orc(L3 HP26/52)
--> a
-T 840 mode=combat_mode         Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 49 $ 1213 room=M vs Orc(L3 HP26/52)
--> a
-T 841 mode=combat_victory      Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 49 $ 1245 room=.
--> back
-T 842 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 49 $ 1245 room=.
--> i
-T 843 mode=inventory           Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 49 $ 1245 room=.
--> e5
-T 844 mode=inventory           Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 49 $ 1245 room=.
--> x
-T 845 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 49 $ 1245 room=.
--> i
-T 846 mode=inventory           Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 49 $ 1245 room=.
+T 801 mode=inventory           Durin III(dwa) F4@( 6, 5) HP 92/92 MP 0/0 Hu  0 $ 539 room=.
 -> eat1
-T 847 mode=inventory           Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 99 $ 1245 room=.
--> u8
-T 848 mode=inventory           Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 99 $ 1245 room=.
+T 802 mode=inventory           Durin III(dwa) F4@( 6, 5) HP 92/92 MP 0/0 Hu  5 $ 539 room=.
 -> x
-T 849 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 86/92 MP 0/0 Hu 99 $ 1245 room=.
+T 803 mode=game_loop           Durin III(dwa) F4@( 6, 5) HP 92/92 MP 0/0 Hu  5 $ 539 room=.
+-> s
+T 804 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 92/92 MP 0/0 Hu  4 $ 539 room=.
 -> e
-T 850 mode=game_loop           Durin III(dwa) F4@( 7, 6) HP 86/92 MP 0/0 Hu 98 $ 1245 room=.
--> s
-T 851 mode=game_loop           Durin III(dwa) F4@( 7, 7) HP 87/92 MP 0/0 Hu 97 $ 1245 room=.
--> e
-T 852 mode=game_loop           Durin III(dwa) F4@( 8, 7) HP 87/92 MP 0/0 Hu 96 $ 1245 room=.
--> w
-T 853 mode=game_loop           Durin III(dwa) F4@( 7, 7) HP 88/92 MP 0/0 Hu 95 $ 1245 room=.
--> w
-T 854 mode=game_loop           Durin III(dwa) F4@( 6, 7) HP 88/92 MP 0/0 Hu 94 $ 1245 room=.
--> n
-T 855 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 89/92 MP 0/0 Hu 93 $ 1245 room=.
--> e
-T 856 mode=game_loop           Durin III(dwa) F4@( 7, 6) HP 89/92 MP 0/0 Hu 92 $ 1245 room=.
--> n
-T 857 mode=game_loop           Durin III(dwa) F4@( 7, 5) HP 90/92 MP 0/0 Hu 91 $ 1245 room=.
--> w
-T 858 mode=game_loop           Durin III(dwa) F4@( 6, 5) HP 90/92 MP 0/0 Hu 90 $ 1245 room=.
--> w
-T 859 mode=game_loop           Durin III(dwa) F4@( 5, 5) HP 91/92 MP 0/0 Hu 89 $ 1245 room=.
--> n
-T 860 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 91/92 MP 0/0 Hu 88 $ 1245 room=.
--> n
-T 861 mode=game_loop           Durin III(dwa) F4@( 5, 3) HP 92/92 MP 0/0 Hu 87 $ 1245 room=.
--> w
-T 862 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 92/92 MP 0/0 Hu 86 $ 1245 room=.
--> w
-T 863 mode=game_loop           Durin III(dwa) F4@( 3, 3) HP 92/92 MP 0/0 Hu 85 $ 1245 room=.
--> s
-T 864 mode=game_loop           Durin III(dwa) F4@( 3, 4) HP 92/92 MP 0/0 Hu 84 $ 1245 room=.
--> s
-T 865 mode=game_loop           Durin III(dwa) F4@( 3, 5) HP 92/92 MP 0/0 Hu 83 $ 1245 room=.
--> e
-T 866 mode=game_loop           Durin III(dwa) F4@( 4, 5) HP 92/92 MP 0/0 Hu 82 $ 1245 room=.
--> s
-T 867 mode=game_loop           Durin III(dwa) F4@( 4, 6) HP 92/92 MP 0/0 Hu 81 $ 1245 room=.
--> s
-T 868 mode=game_loop           Durin III(dwa) F4@( 4, 7) HP 92/92 MP 0/0 Hu 80 $ 1245 room=O
--> e
-T 869 mode=game_loop           Durin III(dwa) F4@( 5, 7) HP 92/92 MP 0/0 Hu 79 $ 1245 room=.
--> e
-T 870 mode=game_loop           Durin III(dwa) F4@( 6, 7) HP 92/92 MP 0/0 Hu 78 $ 1245 room=.
--> n
-T 871 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 92/92 MP 0/0 Hu 77 $ 1245 room=.
--> e
-T 872 mode=game_loop           Durin III(dwa) F4@( 7, 6) HP 92/92 MP 0/0 Hu 76 $ 1245 room=.
--> s
-T 873 mode=game_loop           Durin III(dwa) F4@( 7, 7) HP 92/92 MP 0/0 Hu 75 $ 1245 room=.
--> e
-T 874 mode=game_loop           Durin III(dwa) F4@( 8, 7) HP 92/92 MP 0/0 Hu 74 $ 1245 room=.
--> w
-T 875 mode=game_loop           Durin III(dwa) F4@( 7, 7) HP 92/92 MP 0/0 Hu 73 $ 1245 room=.
--> w
-T 876 mode=game_loop           Durin III(dwa) F4@( 6, 7) HP 92/92 MP 0/0 Hu 72 $ 1245 room=.
--> n
-T 877 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 92/92 MP 0/0 Hu 71 $ 1245 room=.
--> w
-T 878 mode=game_loop           Durin III(dwa) F4@( 5, 6) HP 92/92 MP 0/0 Hu 70 $ 1245 room=.
--> s
-T 879 mode=game_loop           Durin III(dwa) F4@( 5, 7) HP 92/92 MP 0/0 Hu 69 $ 1245 room=.
--> s
-T 880 mode=game_loop           Durin III(dwa) F4@( 5, 8) HP 92/92 MP 0/0 Hu 68 $ 1245 room=.
--> s
-T 881 mode=game_loop           Durin III(dwa) F4@( 5, 9) HP 92/92 MP 0/0 Hu 67 $ 1245 room=.
--> e
-T 882 mode=game_loop           Durin III(dwa) F4@( 6, 9) HP 92/92 MP 0/0 Hu 66 $ 1245 room=.
--> s
-T 883 mode=combat_mode         Durin III(dwa) F4@( 6,10) HP 92/92 MP 0/0 Hu 65 $ 1245 room=M vs ELITE UNDEAD WRAITH(L4 HP104/104)
+T 805 mode=combat_mode         Durin III(dwa) F4@( 7, 6) HP 92/92 MP 0/0 Hu  3 $ 539 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 806 mode=combat_mode         Durin III(dwa) F4@( 7, 6) HP 92/92 MP 0/0 Hu  3 $ 539 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 807 mode=combat_mode         Durin III(dwa) F4@( 7, 6) HP 91/92 MP 0/0 Hu  3 $ 539 room=M vs Crawling Claw(L3 HP5/5)
 -> f
-T 884 mode=combat_mode         Durin III(dwa) F4@( 6,10) HP 36/92 MP 0/0 Hu 65 $ 1245 room=M vs ELITE UNDEAD WRAITH(L4 HP104/104)
--> f
-T 885 mode=death_screen        Durin III(dwa) F4@( 6,10) HP -20/92 MP 0/0 Hu 65 $ 1245 room=M
+T 808 mode=flee_direction_mode Durin III(dwa) F4@( 7, 6) HP 91/92 MP 0/0 Hu  3 $ 539 room=M
+-> w
+T 809 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 91/92 MP 0/0 Hu  3 $ 539 room=.
+-> s
+T 810 mode=game_loop           Durin III(dwa) F4@( 6, 7) HP 91/92 MP 0/0 Hu  2 $ 539 room=.
+-> e
+T 811 mode=game_loop           Durin III(dwa) F4@( 7, 7) HP 91/92 MP 0/0 Hu  1 $ 539 room=.
+-> s
+T 812 mode=game_loop           Durin III(dwa) F4@( 7, 8) HP 89/92 MP 0/0 Hu  0 $ 539 room=.
+-> s
+T 813 mode=game_loop           Durin III(dwa) F4@( 7, 9) HP 87/92 MP 0/0 Hu  0 $ 539 room=.
+-> e
+T 814 mode=chest_mode          Durin III(dwa) F4@( 8, 9) HP 85/92 MP 0/0 Hu  0 $ 539 room=C
+-> n
+T 815 mode=game_loop           Durin III(dwa) F4@( 8, 8) HP 83/92 MP 0/0 Hu  0 $ 539 room=.
+-> e
+T 816 mode=game_loop           Durin III(dwa) F4@( 9, 8) HP 81/92 MP 0/0 Hu  0 $ 539 room=.
+-> s
+T 817 mode=game_loop           Durin III(dwa) F4@( 9, 9) HP 79/92 MP 0/0 Hu  0 $ 539 room=.
+-> e
+T 818 mode=game_loop           Durin III(dwa) F4@(10, 9) HP 77/92 MP 0/0 Hu  0 $ 539 room=.
+-> e
+T 819 mode=game_loop           Durin III(dwa) F4@(11, 9) HP 75/92 MP 0/0 Hu  0 $ 539 room=.
+-> s
+T 820 mode=game_loop           Durin III(dwa) F4@(11,10) HP 73/92 MP 0/0 Hu  0 $ 539 room=.
+-> s
+T 821 mode=garden_mode         Durin III(dwa) F4@(11,11) HP 71/92 MP 0/0 Hu  0 $ 539 room=G
+-> h
+T 822 mode=game_loop           Durin III(dwa) F4@(11,11) HP 71/92 MP 0/0 Hu  0 $ 539 room=.
+-> w
+T 823 mode=altar_mode          Durin III(dwa) F4@(10,11) HP 69/92 MP 0/0 Hu  0 $ 539 room=A
+-> pray
+T 824 mode=game_loop           Durin III(dwa) F4@(10,11) HP 69/92 MP 0/0 Hu  0 $ 739 room=.
+-> i
+T 825 mode=inventory           Durin III(dwa) F4@(10,11) HP 69/92 MP 0/0 Hu  0 $ 739 room=.
+-> u10
+T 826 mode=inventory           Durin III(dwa) F4@(10,11) HP 92/92 MP 0/0 Hu  0 $ 739 room=.
+-> x
+T 827 mode=game_loop           Durin III(dwa) F4@(10,11) HP 92/92 MP 0/0 Hu  0 $ 739 room=.
+-> s
+T 828 mode=game_loop           Durin III(dwa) F4@(10,12) HP 90/92 MP 0/0 Hu  0 $ 739 room=.
+-> w
+T 829 mode=oracle_mode         Durin III(dwa) F4@( 9,12) HP 88/92 MP 0/0 Hu  0 $ 739 room=O
+-> s
+T 830 mode=game_loop           Durin III(dwa) F4@( 9,13) HP 86/92 MP 0/0 Hu  0 $ 739 room=.
+-> e
+T 831 mode=game_loop           Durin III(dwa) F4@(10,13) HP 84/92 MP 0/0 Hu  0 $ 739 room=.
+-> e
+T 832 mode=game_loop           Durin III(dwa) F4@(11,13) HP 82/92 MP 0/0 Hu  0 $ 739 room=.
+-> e
+T 833 mode=garden_mode         Durin III(dwa) F4@(12,13) HP 80/92 MP 0/0 Hu  0 $ 739 room=G
+-> h
+T 834 mode=game_loop           Durin III(dwa) F4@(12,13) HP 80/92 MP 0/0 Hu  0 $ 739 room=.
+-> n
+T 835 mode=game_loop           Durin III(dwa) F4@(12,12) HP 78/92 MP 0/0 Hu  0 $ 739 room=.
+-> n
+T 836 mode=game_loop           Durin III(dwa) F4@(12,11) HP 76/92 MP 0/0 Hu  0 $ 739 room=.
+-> n
+T 837 mode=game_loop           Durin III(dwa) F4@(12,10) HP 74/92 MP 0/0 Hu  0 $ 739 room=.
+-> w
+T 838 mode=game_loop           Durin III(dwa) F4@(11,10) HP 72/92 MP 0/0 Hu  0 $ 739 room=.
+-> w
+T 839 mode=game_loop           Durin III(dwa) F4@(10,10) HP 70/92 MP 0/0 Hu  0 $ 739 room=.
+-> w
+T 840 mode=dungeon_mode        Durin III(dwa) F4@( 9,10) HP 68/92 MP 0/0 Hu  0 $ 739 room=N
+-> u
+T 841 mode=game_loop           Durin III(dwa) F4@( 9,10) HP 68/92 MP 0/0 Hu  0 $ 739 room=N
+-> i
+T 842 mode=inventory           Durin III(dwa) F4@( 9,10) HP 68/92 MP 0/0 Hu  0 $ 739 room=N
+-> u10
+T 843 mode=inventory           Durin III(dwa) F4@( 9,10) HP 92/92 MP 0/0 Hu  0 $ 739 room=N
+-> x
+T 844 mode=game_loop           Durin III(dwa) F4@( 9,10) HP 92/92 MP 0/0 Hu  0 $ 739 room=N
+-> n
+T 845 mode=game_loop           Durin III(dwa) F4@( 9, 9) HP 90/92 MP 0/0 Hu  0 $ 739 room=.
+-> n
+T 846 mode=game_loop           Durin III(dwa) F4@( 9, 8) HP 88/92 MP 0/0 Hu  0 $ 739 room=.
+-> w
+T 847 mode=game_loop           Durin III(dwa) F4@( 8, 8) HP 86/92 MP 0/0 Hu  0 $ 739 room=.
+-> w
+T 848 mode=game_loop           Durin III(dwa) F4@( 7, 8) HP 84/92 MP 0/0 Hu  0 $ 739 room=.
+-> w
+T 849 mode=combat_mode         Durin III(dwa) F4@( 6, 8) HP 82/92 MP 0/0 Hu  0 $ 739 room=M vs Sewer Rat(L3 HP11/11)
+-> a
+T 850 mode=combat_victory      Durin III(dwa) F4@( 6, 8) HP 82/102 MP 0/0 Hu  0 $ 863 room=.
+-> back
+T 851 mode=game_loop           Durin III(dwa) F4@( 6, 8) HP 82/102 MP 0/0 Hu  0 $ 863 room=.
+-> w
+T 852 mode=game_loop           Durin III(dwa) F4@( 5, 8) HP 80/102 MP 0/0 Hu  0 $ 863 room=.
+-> n
+T 853 mode=altar_mode          Durin III(dwa) F4@( 5, 7) HP 78/102 MP 0/0 Hu  0 $ 863 room=A
+-> pray
+T 854 mode=game_loop           Durin III(dwa) F4@( 5, 7) HP 78/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 855 mode=game_loop           Durin III(dwa) F4@( 6, 7) HP 76/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 856 mode=game_loop           Durin III(dwa) F4@( 7, 7) HP 74/102 MP 0/0 Hu  0 $ 863 room=.
+-> i
+T 857 mode=inventory           Durin III(dwa) F4@( 7, 7) HP 74/102 MP 0/0 Hu  0 $ 863 room=.
+-> u9
+T 858 mode=inventory           Durin III(dwa) F4@( 7, 7) HP 74/102 MP 0/0 Hu  0 $ 863 room=.
+-> x
+T 859 mode=game_loop           Durin III(dwa) F4@( 7, 7) HP 74/102 MP 0/0 Hu  0 $ 863 room=.
+-> s
+T 860 mode=game_loop           Durin III(dwa) F4@( 7, 8) HP 72/102 MP 0/0 Hu  0 $ 863 room=.
+-> s
+T 861 mode=game_loop           Durin III(dwa) F4@( 7, 9) HP 70/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 862 mode=game_loop           Durin III(dwa) F4@( 8, 9) HP 68/102 MP 0/0 Hu  0 $ 863 room=C
+-> e
+T 863 mode=game_loop           Durin III(dwa) F4@( 9, 9) HP 66/102 MP 0/0 Hu  0 $ 863 room=.
+-> s
+T 864 mode=dungeon_mode        Durin III(dwa) F4@( 9,10) HP 64/102 MP 0/0 Hu  0 $ 863 room=N
+-> u
+T 865 mode=dungeon_unlocked_mode Durin III(dwa) F4@( 9,10) HP 64/102 MP 0/0 Hu  0 $ 863 room=N
+-> r
+T 866 mode=game_loop           Durin III(dwa) F4@( 9,10) HP 64/102 MP 0/0 Hu  0 $ 863 room=N
+-> i
+T 867 mode=inventory           Durin III(dwa) F4@( 9,10) HP 64/102 MP 0/0 Hu  0 $ 863 room=N
+-> e1
+T 868 mode=inventory           Durin III(dwa) F4@( 9,10) HP 64/102 MP 0/0 Hu  0 $ 863 room=N
+-> x
+T 869 mode=game_loop           Durin III(dwa) F4@( 9,10) HP 64/102 MP 0/0 Hu  0 $ 863 room=N
+-> e
+T 870 mode=game_loop           Durin III(dwa) F4@(10,10) HP 62/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 871 mode=game_loop           Durin III(dwa) F4@(11,10) HP 60/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 872 mode=game_loop           Durin III(dwa) F4@(12,10) HP 58/102 MP 0/0 Hu  0 $ 863 room=.
+-> n
+T 873 mode=game_loop           Durin III(dwa) F4@(12, 9) HP 56/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 874 mode=game_loop           Durin III(dwa) F4@(13, 9) HP 54/102 MP 0/0 Hu  0 $ 863 room=.
+-> s
+T 875 mode=pool_mode           Durin III(dwa) F4@(13,10) HP 52/102 MP 0/0 Hu  0 $ 863 room=P
+-> n
+T 876 mode=game_loop           Durin III(dwa) F4@(13, 9) HP 50/102 MP 0/0 Hu  0 $ 863 room=.
+-> n
+T 877 mode=chest_mode          Durin III(dwa) F4@(13, 8) HP 48/102 MP 0/0 Hu  0 $ 863 room=C
+-> o
+T 878 mode=game_loop           Durin III(dwa) F4@(13, 8) HP 48/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 879 mode=game_loop           Durin III(dwa) F4@(14, 8) HP 46/102 MP 0/0 Hu  0 $ 863 room=.
+-> s
+T 880 mode=game_loop           Durin III(dwa) F4@(14, 9) HP 44/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 881 mode=game_loop           Durin III(dwa) F4@(15, 9) HP 42/102 MP 0/0 Hu  0 $ 863 room=.
+-> n
+T 882 mode=game_loop           Durin III(dwa) F4@(15, 8) HP 40/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 883 mode=dungeon_mode        Durin III(dwa) F4@(16, 8) HP 38/102 MP 0/0 Hu  0 $ 863 room=N
+-> u
+T 884 mode=game_loop           Durin III(dwa) F4@(16, 8) HP 38/102 MP 0/0 Hu  0 $ 863 room=N
+-> s
+T 885 mode=game_loop           Durin III(dwa) F4@(16, 9) HP 36/102 MP 0/0 Hu  0 $ 863 room=.
+-> s
+T 886 mode=game_loop           Durin III(dwa) F4@(16,10) HP 34/102 MP 0/0 Hu  0 $ 863 room=.
+-> s
+T 887 mode=game_loop           Durin III(dwa) F4@(16,11) HP 32/102 MP 0/0 Hu  0 $ 863 room=.
+-> e
+T 888 mode=warp_mode           Durin III(dwa) F4@(17,11) HP 30/102 MP 0/0 Hu  0 $ 863 room=W
+-> y
+T 889 mode=game_loop           Durin III(dwa) F4@(17,11) HP 30/102 MP 0/0 Hu  0 $ 863 room=W
+-> s
+T 890 mode=game_loop           Durin III(dwa) F4@(17,12) HP 28/102 MP 0/0 Hu  0 $ 863 room=.
+-> w
+T 891 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 863 room=V
+-> b14
+T 892 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 853 room=V
+-> b8
+T 893 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 823 room=V
+-> b8
+T 894 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 793 room=V
+-> b8
+T 895 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 763 room=V
+-> b11
+T 896 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 758 room=V
+-> b11
+T 897 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 753 room=V
+-> b11
+T 898 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 748 room=V
+-> b11
+T 899 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 743 room=V
+-> b9
+T 900 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 593 room=V
+-> b5
+T 901 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 453 room=V
+-> b5
+T 902 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 313 room=V
+-> b6
+T 903 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 213 room=V
+-> id20
+T 904 mode=vendor_shop         Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 188 room=V
+-> x
+T 905 mode=game_loop           Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 188 room=V
+-> i
+T 906 mode=inventory           Durin III(dwa) F4@(16,12) HP 26/102 MP 0/0 Hu  0 $ 188 room=V
+-> u12
+T 907 mode=inventory           Durin III(dwa) F4@(16,12) HP 56/102 MP 0/0 Hu  0 $ 188 room=V
+-> u4
+T 908 mode=inventory           Durin III(dwa) F4@(16,12) HP 86/102 MP 0/0 Hu  0 $ 188 room=V
+-> x
+T 909 mode=game_loop           Durin III(dwa) F4@(16,12) HP 86/102 MP 0/0 Hu  0 $ 188 room=V
+-> i
+T 910 mode=inventory           Durin III(dwa) F4@(16,12) HP 86/102 MP 0/0 Hu  0 $ 188 room=V
+-> u12
+T 911 mode=inventory           Durin III(dwa) F4@(16,12) HP 102/102 MP 0/0 Hu  0 $ 188 room=V
+-> u5
+T 912 mode=upgrade_scroll_mode Durin III(dwa) F4@(16,12) HP 102/102 MP 0/0 Hu  0 $ 188 room=V
+-> 1
+T 913 mode=inventory           Durin III(dwa) F4@(16,12) HP 102/102 MP 0/0 Hu  0 $ 188 room=V
+-> x
+T 914 mode=game_loop           Durin III(dwa) F4@(16,12) HP 102/102 MP 0/0 Hu  0 $ 188 room=V
+-> i
+T 915 mode=inventory           Durin III(dwa) F4@(16,12) HP 102/102 MP 0/0 Hu  0 $ 188 room=V
+-> eat1
+T 916 mode=inventory           Durin III(dwa) F4@(16,12) HP 102/102 MP 0/0 Hu 50 $ 188 room=V
+-> x
+T 917 mode=game_loop           Durin III(dwa) F4@(16,12) HP 102/102 MP 0/0 Hu 50 $ 188 room=V
+-> s
+T 918 mode=game_loop           Durin III(dwa) F4@(16,13) HP 102/102 MP 0/0 Hu 49 $ 188 room=.
+-> i
+T 919 mode=inventory           Durin III(dwa) F4@(16,13) HP 102/102 MP 0/0 Hu 49 $ 188 room=.
+-> eat1
+T 920 mode=inventory           Durin III(dwa) F4@(16,13) HP 102/102 MP 0/0 Hu 99 $ 188 room=.
+-> x
+T 921 mode=game_loop           Durin III(dwa) F4@(16,13) HP 102/102 MP 0/0 Hu 99 $ 188 room=.
+-> s
+T 922 mode=game_loop           Durin III(dwa) F4@(16,14) HP 102/102 MP 0/0 Hu 98 $ 188 room=.
+-> s
+T 923 mode=game_loop           Durin III(dwa) F4@(16,15) HP 102/102 MP 0/0 Hu 97 $ 188 room=.
+-> e
+T 924 mode=game_loop           Durin III(dwa) F4@(17,15) HP 102/102 MP 0/0 Hu 96 $ 188 room=.
+-> e
+T 925 mode=game_loop           Durin III(dwa) F4@(18,15) HP 102/102 MP 0/0 Hu 95 $ 188 room=.
+-> n
+T 926 mode=chest_mode          Durin III(dwa) F4@(18,14) HP 102/102 MP 0/0 Hu 94 $ 188 room=C
+-> o
+T 927 mode=game_loop           Durin III(dwa) F4@(18,14) HP 102/102 MP 0/0 Hu 94 $ 188 room=.
+-> w
+T 928 mode=game_loop           Durin III(dwa) F4@(17,14) HP 102/102 MP 0/0 Hu 93 $ 188 room=.
+-> w
+T 929 mode=game_loop           Durin III(dwa) F4@(16,14) HP 102/102 MP 0/0 Hu 92 $ 188 room=.
+-> s
+T 930 mode=game_loop           Durin III(dwa) F4@(16,15) HP 102/102 MP 0/0 Hu 91 $ 188 room=.
+-> l
+T 931 mode=game_loop           Durin III(dwa) F4@(16,15) HP 102/102 MP 0/0 Hu 91 $ 188 room=.
+-> l
+T 932 mode=game_loop           Durin III(dwa) F4@(16,15) HP 102/102 MP 0/0 Hu 91 $ 188 room=.
+-> s
+T 933 mode=game_loop           Durin III(dwa) F4@(16,16) HP 102/102 MP 0/0 Hu 90 $ 188 room=.
+-> l
+T 934 mode=game_loop           Durin III(dwa) F4@(16,16) HP 102/102 MP 0/0 Hu 90 $ 188 room=.
+-> w
+T 935 mode=game_loop           Durin III(dwa) F4@(15,16) HP 102/102 MP 0/0 Hu 89 $ 188 room=.
+-> n
+T 936 mode=game_loop           Durin III(dwa) F4@(15,15) HP 102/102 MP 0/0 Hu 88 $ 188 room=.
+-> l
+T 937 mode=game_loop           Durin III(dwa) F4@(15,15) HP 102/102 MP 0/0 Hu 88 $ 188 room=.
+-> n
+T 938 mode=game_loop           Durin III(dwa) F4@(15,14) HP 102/102 MP 0/0 Hu 87 $ 188 room=.
+-> l
+T 939 mode=game_loop           Durin III(dwa) F4@(15,14) HP 102/102 MP 0/0 Hu 87 $ 188 room=.
+-> w
+T 940 mode=game_loop           Durin III(dwa) F4@(14,14) HP 102/102 MP 0/0 Hu 86 $ 188 room=.
+-> l
+T 941 mode=game_loop           Durin III(dwa) F4@(14,14) HP 102/102 MP 0/0 Hu 86 $ 188 room=.
+-> n
+T 942 mode=library_mode        Durin III(dwa) F4@(14,13) HP 102/102 MP 0/0 Hu 85 $ 188 room=L
+-> r
+T 943 mode=library_read_decision_mode Durin III(dwa) F4@(14,13) HP 102/102 MP 0/0 Hu 85 $ 188 room=L
+-> y
+T 944 mode=game_loop           Durin III(dwa) F4@(14,13) HP 102/102 MP 0/0 Hu 85 $ 488 room=.
+-> l
+T 945 mode=game_loop           Durin III(dwa) F4@(14,13) HP 102/102 MP 0/0 Hu 85 $ 488 room=.
+-> w
+T 946 mode=game_loop           Durin III(dwa) F4@(13,13) HP 102/102 MP 0/0 Hu 84 $ 488 room=.
+-> s
+T 947 mode=altar_mode          Durin III(dwa) F4@(13,14) HP 102/102 MP 0/0 Hu 83 $ 488 room=A
+-> pray
+T 948 mode=game_loop           Durin III(dwa) F4@(13,14) HP 102/102 MP 0/0 Hu 83 $ 488 room=.
+-> w
+T 949 mode=game_loop           Durin III(dwa) F4@(12,14) HP 102/102 MP 0/0 Hu 82 $ 488 room=.
+-> w
+T 950 mode=chest_mode          Durin III(dwa) F4@(11,14) HP 102/102 MP 0/0 Hu 81 $ 488 room=C
+-> o
+T 951 mode=game_loop           Durin III(dwa) F4@(11,14) HP 102/102 MP 0/0 Hu 81 $ 488 room=.
+-> s
+T 952 mode=pool_mode           Durin III(dwa) F4@(11,15) HP 102/102 MP 0/0 Hu 80 $ 488 room=P
+-> dr
+T 953 mode=game_loop           Durin III(dwa) F4@(11,15) HP 102/102 MP 0/0 Hu 80 $ 488 room=.
+-> w
+T 954 mode=game_loop           Durin III(dwa) F4@(10,15) HP 102/102 MP 0/0 Hu 79 $ 488 room=.
+-> l
+T 955 mode=game_loop           Durin III(dwa) F4@(10,15) HP 102/102 MP 0/0 Hu 79 $ 488 room=.
+-> n
+T 956 mode=game_loop           Durin III(dwa) F4@(10,14) HP 102/102 MP 0/0 Hu 78 $ 488 room=.
+-> n
+T 957 mode=game_loop           Durin III(dwa) F4@(10,13) HP 102/102 MP 0/0 Hu 77 $ 488 room=.
+-> n
+T 958 mode=game_loop           Durin III(dwa) F4@(10,12) HP 102/102 MP 0/0 Hu 76 $ 488 room=.
+-> w
+T 959 mode=game_loop           Durin III(dwa) F4@( 9,12) HP 102/102 MP 0/0 Hu 75 $ 488 room=O
+-> n
+T 960 mode=combat_mode         Durin III(dwa) F4@( 9,11) HP 102/102 MP 0/0 Hu 74 $ 488 room=M vs Gnoll(L3 HP33/33)
+-> a
+T 961 mode=combat_mode         Durin III(dwa) F4@( 9,11) HP 101/102 MP 0/0 Hu 74 $ 488 room=M vs Gnoll(L3 HP1/33)
+-> a
+T 962 mode=combat_victory      Durin III(dwa) F4@( 9,11) HP 100/102 MP 0/0 Hu 74 $ 516 room=.
+-> back
+T 963 mode=game_loop           Durin III(dwa) F4@( 9,11) HP 100/102 MP 0/0 Hu 74 $ 516 room=.
+-> e
+T 964 mode=game_loop           Durin III(dwa) F4@(10,11) HP 100/102 MP 0/0 Hu 73 $ 516 room=.
+-> n
+T 965 mode=game_loop           Durin III(dwa) F4@(10,10) HP 100/102 MP 0/0 Hu 72 $ 516 room=.
+-> n
+T 966 mode=game_loop           Durin III(dwa) F4@(10, 9) HP 100/102 MP 0/0 Hu 71 $ 516 room=.
+-> w
+T 967 mode=game_loop           Durin III(dwa) F4@( 9, 9) HP 101/102 MP 0/0 Hu 70 $ 516 room=.
+-> n
+T 968 mode=game_loop           Durin III(dwa) F4@( 9, 8) HP 101/102 MP 0/0 Hu 69 $ 516 room=.
+-> w
+T 969 mode=game_loop           Durin III(dwa) F4@( 8, 8) HP 101/102 MP 0/0 Hu 68 $ 516 room=.
+-> l
+T 970 mode=game_loop           Durin III(dwa) F4@( 8, 8) HP 101/102 MP 0/0 Hu 68 $ 516 room=.
+-> l
+T 971 mode=game_loop           Durin III(dwa) F4@( 8, 8) HP 101/102 MP 0/0 Hu 68 $ 516 room=.
+-> n
+T 972 mode=chest_mode          Durin III(dwa) F4@( 8, 7) HP 101/102 MP 0/0 Hu 67 $ 516 room=C
+-> o
+T 973 mode=game_loop           Durin III(dwa) F4@( 8, 7) HP 101/102 MP 0/0 Hu 67 $ 516 room=.
+-> n
+T 974 mode=library_mode        Durin III(dwa) F4@( 8, 6) HP 102/102 MP 0/0 Hu 66 $ 516 room=L
+-> r
+T 975 mode=library_read_decision_mode Durin III(dwa) F4@( 8, 6) HP 102/102 MP 0/0 Hu 66 $ 516 room=L
+-> y
+T 976 mode=game_loop           Durin III(dwa) F4@( 8, 6) HP 102/102 MP 0/0 Hu 66 $ 516 room=.
+-> w
+T 977 mode=combat_mode         Durin III(dwa) F4@( 7, 6) HP 102/102 MP 0/0 Hu 65 $ 516 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 978 mode=combat_mode         Durin III(dwa) F4@( 7, 6) HP 101/102 MP 0/0 Hu 65 $ 516 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 979 mode=combat_mode         Durin III(dwa) F4@( 7, 6) HP 100/102 MP 0/0 Hu 65 $ 516 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 980 mode=combat_mode         Durin III(dwa) F4@( 7, 6) HP 99/102 MP 0/0 Hu 65 $ 516 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 981 mode=combat_victory      Durin III(dwa) F4@( 7, 6) HP 99/102 MP 0/0 Hu 65 $ 532 room=.
+-> back
+T 982 mode=game_loop           Durin III(dwa) F4@( 7, 6) HP 99/102 MP 0/0 Hu 65 $ 532 room=.
+-> w
+T 983 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 99/102 MP 0/0 Hu 64 $ 532 room=.
+-> i
+T 984 mode=inventory           Durin III(dwa) F4@( 6, 6) HP 99/102 MP 0/0 Hu 64 $ 532 room=.
+-> eat3
+T 985 mode=inventory           Durin III(dwa) F4@( 6, 6) HP 99/102 MP 0/0 Hu 71 $ 532 room=.
+-> eat1
+T 986 mode=inventory           Durin III(dwa) F4@( 6, 6) HP 99/102 MP 0/0 Hu100 $ 532 room=.
+-> x
+T 987 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 99/102 MP 0/0 Hu100 $ 532 room=.
+-> n
+T 988 mode=game_loop           Durin III(dwa) F4@( 6, 5) HP 100/102 MP 0/0 Hu 99 $ 532 room=.
+-> w
+T 989 mode=game_loop           Durin III(dwa) F4@( 5, 5) HP 100/102 MP 0/0 Hu 98 $ 532 room=.
+-> n
+T 990 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 101/102 MP 0/0 Hu 97 $ 532 room=.
+-> l
+T 991 mode=game_loop           Durin III(dwa) F4@( 5, 4) HP 101/102 MP 0/0 Hu 97 $ 532 room=.
+-> n
+T 992 mode=combat_mode         Durin III(dwa) F4@( 5, 3) HP 101/102 MP 0/0 Hu 96 $ 532 room=M vs Slime Mold(L3 HP16/16)
+-> a
+T 993 mode=combat_victory      Durin III(dwa) F4@( 5, 3) HP 100/102 MP 0/0 Hu 96 $ 540 room=.
+-> back
+T 994 mode=game_loop           Durin III(dwa) F4@( 5, 3) HP 100/102 MP 0/0 Hu 96 $ 540 room=.
+-> w
+T 995 mode=game_loop           Durin III(dwa) F4@( 4, 3) HP 101/102 MP 0/0 Hu 95 $ 540 room=.
+-> s
+T 996 mode=game_loop           Durin III(dwa) F4@( 4, 4) HP 101/102 MP 0/0 Hu 94 $ 540 room=.
+-> s
+T 997 mode=game_loop           Durin III(dwa) F4@( 4, 5) HP 102/102 MP 0/0 Hu 93 $ 540 room=.
+-> e
+T 998 mode=game_loop           Durin III(dwa) F4@( 5, 5) HP 102/102 MP 0/0 Hu 92 $ 540 room=.
+-> e
+T 999 mode=game_loop           Durin III(dwa) F4@( 6, 5) HP 102/102 MP 0/0 Hu 91 $ 540 room=.
+-> i
+T1000 mode=inventory           Durin III(dwa) F4@( 6, 5) HP 102/102 MP 0/0 Hu 91 $ 540 room=.
+-> eat2
+T1001 mode=inventory           Durin III(dwa) F4@( 6, 5) HP 102/102 MP 0/0 Hu 97 $ 540 room=.
+-> x
+T1002 mode=game_loop           Durin III(dwa) F4@( 6, 5) HP 102/102 MP 0/0 Hu 97 $ 540 room=.
+-> s
+T1003 mode=game_loop           Durin III(dwa) F4@( 6, 6) HP 102/102 MP 0/0 Hu 96 $ 540 room=.
+-> s
+T1004 mode=game_loop           Durin III(dwa) F4@( 6, 7) HP 102/102 MP 0/0 Hu 95 $ 540 room=.
+-> s
+T1005 mode=game_loop           Durin III(dwa) F4@( 6, 8) HP 102/102 MP 0/0 Hu 94 $ 540 room=.
+-> e
+T1006 mode=game_loop           Durin III(dwa) F4@( 7, 8) HP 102/102 MP 0/0 Hu 93 $ 540 room=.
+-> s
+T1007 mode=game_loop           Durin III(dwa) F4@( 7, 9) HP 102/102 MP 0/0 Hu 92 $ 540 room=.
+-> e
+T1008 mode=game_loop           Durin III(dwa) F4@( 8, 9) HP 102/102 MP 0/0 Hu 91 $ 540 room=C
+-> e
+T1009 mode=game_loop           Durin III(dwa) F4@( 9, 9) HP 102/102 MP 0/0 Hu 90 $ 540 room=.
+-> s
+T1010 mode=game_loop           Durin III(dwa) F4@( 9,10) HP 102/102 MP 0/0 Hu 89 $ 540 room=N
+-> l
+T1011 mode=game_loop           Durin III(dwa) F4@( 9,10) HP 102/102 MP 0/0 Hu 89 $ 540 room=N
+-> s
+T1012 mode=game_loop           Durin III(dwa) F4@( 9,11) HP 102/102 MP 0/0 Hu 88 $ 540 room=.
+-> s
+T1013 mode=game_loop           Durin III(dwa) F4@( 9,12) HP 102/102 MP 0/0 Hu 87 $ 540 room=O
+-> s
+T1014 mode=game_loop           Durin III(dwa) F4@( 9,13) HP 102/102 MP 0/0 Hu 86 $ 540 room=.
+-> w
+T1015 mode=game_loop           Durin III(dwa) F4@( 8,13) HP 102/102 MP 0/0 Hu 85 $ 540 room=.
+-> l
+T1016 mode=game_loop           Durin III(dwa) F4@( 8,13) HP 102/102 MP 0/0 Hu 85 $ 540 room=.
+-> e
+T1017 mode=game_loop           Durin III(dwa) F4@( 9,13) HP 102/102 MP 0/0 Hu 84 $ 540 room=.
+-> e
+T1018 mode=game_loop           Durin III(dwa) F4@(10,13) HP 102/102 MP 0/0 Hu 83 $ 540 room=.
+-> s
+T1019 mode=game_loop           Durin III(dwa) F4@(10,14) HP 102/102 MP 0/0 Hu 82 $ 540 room=.
+-> s
+T1020 mode=game_loop           Durin III(dwa) F4@(10,15) HP 102/102 MP 0/0 Hu 81 $ 540 room=.
+-> l
+T1021 mode=game_loop           Durin III(dwa) F4@(10,15) HP 102/102 MP 0/0 Hu 81 $ 540 room=.
+-> s
+T1022 mode=game_loop           Durin III(dwa) F4@(10,16) HP 102/102 MP 0/0 Hu 80 $ 540 room=.
+-> n
+T1023 mode=game_loop           Durin III(dwa) F4@(10,15) HP 102/102 MP 0/0 Hu 79 $ 540 room=.
+-> e
+T1024 mode=game_loop           Durin III(dwa) F4@(11,15) HP 102/102 MP 0/0 Hu 78 $ 540 room=.
+-> n
+T1025 mode=game_loop           Durin III(dwa) F4@(11,14) HP 102/102 MP 0/0 Hu 77 $ 540 room=.
+-> e
+T1026 mode=game_loop           Durin III(dwa) F4@(12,14) HP 102/102 MP 0/0 Hu 76 $ 540 room=.
+-> e
+T1027 mode=game_loop           Durin III(dwa) F4@(13,14) HP 102/102 MP 0/0 Hu 75 $ 540 room=.
+-> s
+T1028 mode=game_loop           Durin III(dwa) F4@(13,15) HP 102/102 MP 0/0 Hu 74 $ 540 room=.
+-> e
+T1029 mode=game_loop           Durin III(dwa) F4@(14,15) HP 102/102 MP 0/0 Hu 73 $ 540 room=.
+-> e
+T1030 mode=game_loop           Durin III(dwa) F4@(15,15) HP 102/102 MP 0/0 Hu 72 $ 540 room=.
+-> l
+T1031 mode=game_loop           Durin III(dwa) F4@(15,15) HP 102/102 MP 0/0 Hu 72 $ 540 room=.
+-> e
+T1032 mode=game_loop           Durin III(dwa) F4@(16,15) HP 102/102 MP 0/0 Hu 71 $ 540 room=.
+-> e
+T1033 mode=game_loop           Durin III(dwa) F4@(17,15) HP 102/102 MP 0/0 Hu 70 $ 540 room=.
+-> e
+T1034 mode=game_loop           Durin III(dwa) F4@(18,15) HP 102/102 MP 0/0 Hu 69 $ 540 room=.
+-> s
+T1035 mode=game_loop           Durin III(dwa) F4@(18,16) HP 102/102 MP 0/0 Hu 68 $ 540 room=.
+-> e
+T1036 mode=game_loop           Durin III(dwa) F4@(19,16) HP 102/102 MP 0/0 Hu 67 $ 540 room=.
+-> n
+T1037 mode=game_loop           Durin III(dwa) F4@(19,15) HP 102/102 MP 0/0 Hu 66 $ 540 room=.
+-> s
+T1038 mode=game_loop           Durin III(dwa) F4@(19,16) HP 102/102 MP 0/0 Hu 65 $ 540 room=.
+-> n
+T1039 mode=game_loop           Durin III(dwa) F4@(19,15) HP 102/102 MP 0/0 Hu 64 $ 540 room=.
+-> w
+T1040 mode=game_loop           Durin III(dwa) F4@(18,15) HP 102/102 MP 0/0 Hu 63 $ 540 room=.
+-> l
+T1041 mode=game_loop           Durin III(dwa) F4@(18,15) HP 102/102 MP 0/0 Hu 63 $ 540 room=.
+-> n
+T1042 mode=game_loop           Durin III(dwa) F4@(18,14) HP 102/102 MP 0/0 Hu 62 $ 540 room=.
+-> w
+T1043 mode=game_loop           Durin III(dwa) F4@(17,14) HP 102/102 MP 0/0 Hu 61 $ 540 room=.
+-> w
+T1044 mode=game_loop           Durin III(dwa) F4@(16,14) HP 102/102 MP 0/0 Hu 60 $ 540 room=.
+-> n
+T1045 mode=game_loop           Durin III(dwa) F4@(16,13) HP 102/102 MP 0/0 Hu 59 $ 540 room=.
+-> n
+T1046 mode=game_loop           Durin III(dwa) F4@(16,12) HP 102/102 MP 0/0 Hu 58 $ 540 room=V
+-> n
+T1047 mode=game_loop           Durin III(dwa) F4@(16,11) HP 102/102 MP 0/0 Hu 57 $ 540 room=.
+-> n
+T1048 mode=game_loop           Durin III(dwa) F4@(16,10) HP 102/102 MP 0/0 Hu 56 $ 540 room=.
+-> l
+T1049 mode=game_loop           Durin III(dwa) F4@(16,10) HP 102/102 MP 0/0 Hu 56 $ 540 room=.
+-> n
+T1050 mode=game_loop           Durin III(dwa) F4@(16, 9) HP 102/102 MP 0/0 Hu 55 $ 540 room=.
+-> n
+T1051 mode=game_loop           Durin III(dwa) F4@(16, 8) HP 102/102 MP 0/0 Hu 54 $ 540 room=N
+-> n
+T1052 mode=game_loop           Durin III(dwa) F4@(16, 7) HP 102/102 MP 0/0 Hu 53 $ 540 room=.
+-> n
+T1053 mode=game_loop           Durin III(dwa) F4@(16, 6) HP 102/102 MP 0/0 Hu 52 $ 540 room=.
+-> l
+T1054 mode=game_loop           Durin III(dwa) F4@(16, 6) HP 102/102 MP 0/0 Hu 52 $ 540 room=.
+-> w
+T1055 mode=shrine_mode         Durin III(dwa) F4@(15, 6) HP 102/102 MP 0/0 Hu 51 $ 540 room=F
+-> p
+T1056 mode=game_loop           Durin III(dwa) F4@(15, 6) HP 102/102 MP 0/0 Hu 51 $ 540 room=.
+-> l
+T1057 mode=game_loop           Durin III(dwa) F4@(15, 6) HP 102/102 MP 0/0 Hu 51 $ 540 room=.
+-> n
+T1058 mode=game_loop           Durin III(dwa) F4@(15, 5) HP 102/102 MP 0/0 Hu 50 $ 540 room=.
+-> l
+T1059 mode=game_loop           Durin III(dwa) F4@(15, 5) HP 102/102 MP 0/0 Hu 50 $ 540 room=.
+-> w
+T1060 mode=combat_mode         Durin III(dwa) F4@(14, 5) HP 102/102 MP 0/0 Hu 49 $ 540 room=M vs Myconid Shaman(L3 HP46/46)
+-> a
+T1061 mode=combat_mode         Durin III(dwa) F4@(14, 5) HP 102/102 MP 0/0 Hu 49 $ 540 room=M vs Myconid Shaman(L3 HP14/46)
+-> a
+T1062 mode=combat_victory      Durin III(dwa) F4@(14, 5) HP 101/102 MP 0/0 Hu 49 $ 548 room=.
+-> back
+T1063 mode=game_loop           Durin III(dwa) F4@(14, 5) HP 101/102 MP 0/0 Hu 49 $ 548 room=.
+-> i
+T1064 mode=inventory           Durin III(dwa) F4@(14, 5) HP 101/102 MP 0/0 Hu 49 $ 548 room=.
+-> eat1
+T1065 mode=inventory           Durin III(dwa) F4@(14, 5) HP 101/102 MP 0/0 Hu 99 $ 548 room=.
+-> x
+T1066 mode=game_loop           Durin III(dwa) F4@(14, 5) HP 101/102 MP 0/0 Hu 99 $ 548 room=.
+-> e
+T1067 mode=game_loop           Durin III(dwa) F4@(15, 5) HP 101/102 MP 0/0 Hu 98 $ 548 room=.
+-> e
+T1068 mode=combat_mode         Durin III(dwa) F4@(16, 5) HP 102/102 MP 0/0 Hu 97 $ 548 room=M vs Stirge(L3 HP6/6)
+-> a
+T1069 mode=combat_victory      Durin III(dwa) F4@(16, 5) HP 98/102 MP 0/0 Hu 97 $ 580 room=.
+-> back
+T1070 mode=game_loop           Durin III(dwa) F4@(16, 5) HP 98/102 MP 0/0 Hu 97 $ 580 room=.
+-> s
+T1071 mode=game_loop           Durin III(dwa) F4@(16, 6) HP 98/102 MP 0/0 Hu 96 $ 580 room=.
+-> s
+T1072 mode=game_loop           Durin III(dwa) F4@(16, 7) HP 99/102 MP 0/0 Hu 95 $ 580 room=.
+-> s
+T1073 mode=dungeon_mode        Durin III(dwa) F4@(16, 8) HP 99/102 MP 0/0 Hu 94 $ 580 room=N
+-> u
+T1074 mode=dungeon_unlocked_mode Durin III(dwa) F4@(16, 8) HP 99/102 MP 0/0 Hu 94 $ 580 room=N
+-> r
+T1075 mode=game_loop           Durin III(dwa) F4@(16, 8) HP 99/102 MP 0/0 Hu 94 $ 580 room=N
+-> s
+T1076 mode=game_loop           Durin III(dwa) F4@(16, 9) HP 100/102 MP 0/0 Hu 93 $ 580 room=.
+-> w
+T1077 mode=game_loop           Durin III(dwa) F4@(15, 9) HP 100/102 MP 0/0 Hu 92 $ 580 room=.
+-> n
+T1078 mode=game_loop           Durin III(dwa) F4@(15, 8) HP 101/102 MP 0/0 Hu 91 $ 580 room=.
+-> w
+T1079 mode=game_loop           Durin III(dwa) F4@(14, 8) HP 101/102 MP 0/0 Hu 90 $ 580 room=.
+-> w
+T1080 mode=game_loop           Durin III(dwa) F4@(13, 8) HP 102/102 MP 0/0 Hu 89 $ 580 room=.
+-> s
+T1081 mode=game_loop           Durin III(dwa) F4@(13, 9) HP 102/102 MP 0/0 Hu 88 $ 580 room=.
+-> e
+T1082 mode=game_loop           Durin III(dwa) F4@(14, 9) HP 102/102 MP 0/0 Hu 87 $ 580 room=.
+-> i
+T1083 mode=inventory           Durin III(dwa) F4@(14, 9) HP 102/102 MP 0/0 Hu 87 $ 580 room=.
+-> eat1
+T1084 mode=inventory           Durin III(dwa) F4@(14, 9) HP 102/102 MP 0/0 Hu 93 $ 580 room=.
+-> x
+T1085 mode=game_loop           Durin III(dwa) F4@(14, 9) HP 102/102 MP 0/0 Hu 93 $ 580 room=.
+-> e
+T1086 mode=game_loop           Durin III(dwa) F4@(15, 9) HP 102/102 MP 0/0 Hu 92 $ 580 room=.
+-> n
+T1087 mode=game_loop           Durin III(dwa) F4@(15, 8) HP 102/102 MP 0/0 Hu 91 $ 580 room=.
+-> e
+T1088 mode=game_loop           Durin III(dwa) F4@(16, 8) HP 102/102 MP 0/0 Hu 90 $ 580 room=N
+-> n
+T1089 mode=game_loop           Durin III(dwa) F4@(16, 7) HP 102/102 MP 0/0 Hu 89 $ 580 room=.
+-> n
+T1090 mode=game_loop           Durin III(dwa) F4@(16, 6) HP 102/102 MP 0/0 Hu 88 $ 580 room=.
+-> n
+T1091 mode=game_loop           Durin III(dwa) F4@(16, 5) HP 102/102 MP 0/0 Hu 87 $ 580 room=.
+-> e
+T1092 mode=game_loop           Durin III(dwa) F4@(17, 5) HP 102/102 MP 0/0 Hu 86 $ 580 room=.
+-> l
+T1093 mode=game_loop           Durin III(dwa) F4@(17, 5) HP 102/102 MP 0/0 Hu 86 $ 580 room=.
+-> n
+T1094 mode=library_mode        Durin III(dwa) F4@(17, 4) HP 102/102 MP 0/0 Hu 85 $ 580 room=L
+-> r
+T1095 mode=library_read_decision_mode Durin III(dwa) F4@(17, 4) HP 102/102 MP 0/0 Hu 85 $ 580 room=L
+-> y
+T1096 mode=game_loop           Durin III(dwa) F4@(17, 4) HP 102/102 MP 0/0 Hu 85 $ 580 room=.
+-> e
+T1097 mode=tomb_mode           Durin III(dwa) F4@(18, 4) HP 102/102 MP 0/0 Hu 84 $ 580 room=T
+-> p
+T1098 mode=game_loop           Durin III(dwa) F4@(18, 4) HP 102/102 MP 0/0 Hu 84 $ 580 room=T
+-> w
+T1099 mode=game_loop           Durin III(dwa) F4@(17, 4) HP 102/102 MP 0/0 Hu 83 $ 580 room=.
+-> w
+T1100 mode=combat_mode         Durin III(dwa) F4@(16, 4) HP 102/102 MP 0/0 Hu 82 $ 580 room=M vs Sewer Rat(L3 HP11/11)
+-> a
+T1101 mode=combat_victory      Durin III(dwa) F4@(16, 4) HP 101/112 MP 0/0 Hu 82 $ 584 room=.
+-> back
+T1102 mode=game_loop           Durin III(dwa) F4@(16, 4) HP 101/112 MP 0/0 Hu 82 $ 584 room=.
+-> i
+T1103 mode=inventory           Durin III(dwa) F4@(16, 4) HP 101/112 MP 0/0 Hu 82 $ 584 room=.
+-> u13
+T1104 mode=inventory           Durin III(dwa) F4@(16, 4) HP 112/112 MP 0/0 Hu 82 $ 584 room=.
+-> x
+T1105 mode=game_loop           Durin III(dwa) F4@(16, 4) HP 112/112 MP 0/0 Hu 82 $ 584 room=.
+-> s
+T1106 mode=game_loop           Durin III(dwa) F4@(16, 5) HP 112/112 MP 0/0 Hu 81 $ 584 room=.
+-> s
+T1107 mode=game_loop           Durin III(dwa) F4@(16, 6) HP 112/112 MP 0/0 Hu 80 $ 584 room=.
+-> s
+T1108 mode=game_loop           Durin III(dwa) F4@(16, 7) HP 112/112 MP 0/0 Hu 79 $ 584 room=.
+-> s
+T1109 mode=game_loop           Durin III(dwa) F4@(16, 8) HP 112/112 MP 0/0 Hu 78 $ 584 room=N
+-> w
+T1110 mode=game_loop           Durin III(dwa) F4@(15, 8) HP 112/112 MP 0/0 Hu 77 $ 584 room=.
+-> w
+T1111 mode=game_loop           Durin III(dwa) F4@(14, 8) HP 112/112 MP 0/0 Hu 76 $ 584 room=.
+-> w
+T1112 mode=game_loop           Durin III(dwa) F4@(13, 8) HP 112/112 MP 0/0 Hu 75 $ 584 room=.
+-> s
+T1113 mode=game_loop           Durin III(dwa) F4@(13, 9) HP 112/112 MP 0/0 Hu 74 $ 584 room=.
+-> w
+T1114 mode=game_loop           Durin III(dwa) F4@(12, 9) HP 112/112 MP 0/0 Hu 73 $ 584 room=.
+-> w
+T1115 mode=game_loop           Durin III(dwa) F4@(11, 9) HP 112/112 MP 0/0 Hu 72 $ 584 room=.
+-> w
+T1116 mode=game_loop           Durin III(dwa) F4@(10, 9) HP 112/112 MP 0/0 Hu 71 $ 584 room=.
+-> w
+T1117 mode=game_loop           Durin III(dwa) F4@( 9, 9) HP 112/112 MP 0/0 Hu 70 $ 584 room=.
+-> i
+T1118 mode=inventory           Durin III(dwa) F4@( 9, 9) HP 112/112 MP 0/0 Hu 70 $ 584 room=.
+-> u11
+T1119 mode=inventory           Durin III(dwa) F4@( 9, 9) HP 112/112 MP 0/0 Hu 70 $ 584 room=.
+-> x
+T1120 mode=game_loop           Durin III(dwa) F4@( 9, 9) HP 112/112 MP 0/0 Hu 70 $ 584 room=.
+-> n
+T1121 mode=game_loop           Durin III(dwa) F4@( 9, 8) HP 112/112 MP 0/0 Hu 69 $ 584 room=.
+-> w
+T1122 mode=game_loop           Durin III(dwa) F4@( 8, 8) HP 112/112 MP 0/0 Hu 68 $ 584 room=.
+-> w
+T1123 mode=game_loop           Durin III(dwa) F4@( 7, 8) HP 112/112 MP 0/0 Hu 67 $ 584 room=.
+-> w
+T1124 mode=game_loop           Durin III(dwa) F4@( 6, 8) HP 112/112 MP 0/0 Hu 66 $ 584 room=.
+-> w
+T1125 mode=game_loop           Durin III(dwa) F4@( 5, 8) HP 112/112 MP 0/0 Hu 65 $ 584 room=.
+-> n
+T1126 mode=game_loop           Durin III(dwa) F4@( 5, 7) HP 112/112 MP 0/0 Hu 64 $ 584 room=.
+-> w
+T1127 mode=game_loop           Durin III(dwa) F4@( 4, 7) HP 112/112 MP 0/0 Hu 63 $ 584 room=.
+-> e
+T1128 mode=game_loop           Durin III(dwa) F4@( 5, 7) HP 112/112 MP 0/0 Hu 62 $ 584 room=.
+-> e
+T1129 mode=game_loop           Durin III(dwa) F4@( 6, 7) HP 112/112 MP 0/0 Hu 61 $ 584 room=.
+-> s
+T1130 mode=game_loop           Durin III(dwa) F4@( 6, 8) HP 112/112 MP 0/0 Hu 60 $ 584 room=.
+-> w
+T1131 mode=game_loop           Durin III(dwa) F4@( 5, 8) HP 112/112 MP 0/0 Hu 59 $ 584 room=.
+-> s
+T1132 mode=stairs_down_mode    Durin III(dwa) F4@( 5, 9) HP 112/112 MP 0/0 Hu 58 $ 584 room=D
+-> d
+T1133 mode=stairs_up_mode      Durin III(dwa) F5@( 1, 1) HP 112/112 MP 0/0 Hu 58 $ 584 room=U
+-> n
+T1134 mode=stairs_up_mode      Durin III(dwa) F5@( 1, 1) HP 112/112 MP 0/0 Hu 58 $ 584 room=U
+-> e
+T1135 mode=combat_mode         Durin III(dwa) F5@( 2, 1) HP 112/112 MP 0/0 Hu 57 $ 584 room=M vs ELITE UNDEAD SPECTER(L5 HP91/91)
+-> a
+T1136 mode=combat_mode         Durin III(dwa) F5@( 2, 1) HP 93/112 MP 0/0 Hu 57 $ 584 room=M vs ELITE UNDEAD SPECTER(L5 HP63/91)
+-> a
+T1137 mode=combat_mode         Durin III(dwa) F5@( 2, 1) HP 74/112 MP 0/0 Hu 57 $ 584 room=M vs ELITE UNDEAD SPECTER(L5 HP35/91)
+-> a
+T1138 mode=combat_mode         Durin III(dwa) F5@( 2, 1) HP 55/112 MP 0/0 Hu 57 $ 584 room=M vs ELITE UNDEAD SPECTER(L5 HP35/91)
+-> i
+T1139 mode=inventory           Durin III(dwa) F5@( 2, 1) HP 55/112 MP 0/0 Hu 57 $ 584 room=M
+-> u4
+T1140 mode=inventory           Durin III(dwa) F5@( 2, 1) HP 80/112 MP 0/0 Hu 57 $ 584 room=M
+-> x
+T1141 mode=combat_mode         Durin III(dwa) F5@( 2, 1) HP 80/112 MP 0/0 Hu 57 $ 584 room=M vs ELITE UNDEAD SPECTER(L5 HP35/91)
+-> a
+T1142 mode=combat_mode         Durin III(dwa) F5@( 2, 1) HP 80/112 MP 0/0 Hu 57 $ 584 room=M vs ELITE UNDEAD SPECTER(L5 HP35/91)
+-> a
+T1143 mode=combat_mode         Durin III(dwa) F5@( 2, 1) HP 61/112 MP 0/0 Hu 57 $ 584 room=M vs ELITE UNDEAD SPECTER(L5 HP7/91)
+-> a
+T1144 mode=combat_mode         Durin III(dwa) F5@( 2, 1) HP 61/112 MP 0/0 Hu 57 $ 584 room=M vs ELITE UNDEAD SPECTER(L5 HP7/91)
+-> a
+T1145 mode=combat_victory      Durin III(dwa) F5@( 2, 1) HP 42/112 MP 0/0 Hu 57 $ 608 room=.
+-> back
+T1146 mode=game_loop           Durin III(dwa) F5@( 2, 1) HP 42/112 MP 0/0 Hu 57 $ 608 room=.
+-> e
+T1147 mode=tomb_mode           Durin III(dwa) F5@( 3, 1) HP 42/112 MP 0/0 Hu 56 $ 608 room=T
+-> p
+T1148 mode=game_loop           Durin III(dwa) F5@( 3, 1) HP 42/112 MP 0/0 Hu 56 $ 608 room=T
+-> w
+T1149 mode=game_loop           Durin III(dwa) F5@( 2, 1) HP 42/112 MP 0/0 Hu 55 $ 608 room=.
+-> s
+T1150 mode=pool_mode           Durin III(dwa) F5@( 2, 2) HP 42/112 MP 0/0 Hu 54 $ 608 room=P
+-> n
+T1151 mode=game_loop           Durin III(dwa) F5@( 2, 1) HP 42/112 MP 0/0 Hu 53 $ 608 room=.
+-> w
+T1152 mode=stairs_up_mode      Durin III(dwa) F5@( 1, 1) HP 42/112 MP 0/0 Hu 52 $ 608 room=U
+-> e
+T1153 mode=game_loop           Durin III(dwa) F5@( 2, 1) HP 42/112 MP 0/0 Hu 51 $ 608 room=.
+-> e
+T1154 mode=game_loop           Durin III(dwa) F5@( 3, 1) HP 42/112 MP 0/0 Hu 50 $ 608 room=T
+-> w
+T1155 mode=game_loop           Durin III(dwa) F5@( 2, 1) HP 42/112 MP 0/0 Hu 49 $ 608 room=.
+-> s
+T1156 mode=game_loop           Durin III(dwa) F5@( 2, 2) HP 42/112 MP 0/0 Hu 48 $ 608 room=P
+-> s
+T1157 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 47 $ 608 room=.
+-> w
+T1158 mode=game_loop           Durin III(dwa) F5@( 1, 3) HP 42/112 MP 0/0 Hu 46 $ 608 room=.
+-> e
+T1159 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 45 $ 608 room=.
+-> s
+T1160 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu 44 $ 608 room=.
+-> s
+T1161 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 42/112 MP 0/0 Hu 43 $ 608 room=.
+-> n
+T1162 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu 42 $ 608 room=.
+-> n
+T1163 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 41 $ 608 room=.
+-> n
+T1164 mode=game_loop           Durin III(dwa) F5@( 2, 2) HP 42/112 MP 0/0 Hu 40 $ 608 room=P
+-> s
+T1165 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 39 $ 608 room=.
+-> e
+T1166 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 42/112 MP 0/0 Hu 38 $ 608 room=.
+-> w
+T1167 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 37 $ 608 room=.
+-> w
+T1168 mode=game_loop           Durin III(dwa) F5@( 1, 3) HP 42/112 MP 0/0 Hu 36 $ 608 room=.
+-> e
+T1169 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 35 $ 608 room=.
+-> s
+T1170 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu 34 $ 608 room=.
+-> s
+T1171 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 42/112 MP 0/0 Hu 33 $ 608 room=.
+-> n
+T1172 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu 32 $ 608 room=.
+-> n
+T1173 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 31 $ 608 room=.
+-> e
+T1174 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 42/112 MP 0/0 Hu 30 $ 608 room=.
+-> w
+T1175 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 29 $ 608 room=.
+-> w
+T1176 mode=game_loop           Durin III(dwa) F5@( 1, 3) HP 42/112 MP 0/0 Hu 28 $ 608 room=.
+-> e
+T1177 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 27 $ 608 room=.
+-> s
+T1178 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu 26 $ 608 room=.
+-> s
+T1179 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 42/112 MP 0/0 Hu 25 $ 608 room=.
+-> n
+T1180 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu 24 $ 608 room=.
+-> n
+T1181 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 23 $ 608 room=.
+-> e
+T1182 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 42/112 MP 0/0 Hu 22 $ 608 room=.
+-> w
+T1183 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 21 $ 608 room=.
+-> n
+T1184 mode=game_loop           Durin III(dwa) F5@( 2, 2) HP 42/112 MP 0/0 Hu 20 $ 608 room=P
+-> s
+T1185 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 19 $ 608 room=.
+-> s
+T1186 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu 18 $ 608 room=.
+-> s
+T1187 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 42/112 MP 0/0 Hu 17 $ 608 room=.
+-> n
+T1188 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu 16 $ 608 room=.
+-> n
+T1189 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 15 $ 608 room=.
+-> e
+T1190 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 42/112 MP 0/0 Hu 14 $ 608 room=.
+-> w
+T1191 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 13 $ 608 room=.
+-> n
+T1192 mode=game_loop           Durin III(dwa) F5@( 2, 2) HP 42/112 MP 0/0 Hu 12 $ 608 room=P
+-> s
+T1193 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu 11 $ 608 room=.
+-> s
+T1194 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu 10 $ 608 room=.
+-> s
+T1195 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 42/112 MP 0/0 Hu  9 $ 608 room=.
+-> n
+T1196 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu  8 $ 608 room=.
+-> n
+T1197 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu  7 $ 608 room=.
+-> e
+T1198 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 42/112 MP 0/0 Hu  6 $ 608 room=.
+-> w
+T1199 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu  5 $ 608 room=.
+-> w
+T1200 mode=game_loop           Durin III(dwa) F5@( 1, 3) HP 42/112 MP 0/0 Hu  4 $ 608 room=.
+-> e
+T1201 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 42/112 MP 0/0 Hu  3 $ 608 room=.
+-> s
+T1202 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 42/112 MP 0/0 Hu  2 $ 608 room=.
+-> s
+T1203 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 42/112 MP 0/0 Hu  1 $ 608 room=.
+-> n
+T1204 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 40/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1205 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 38/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1206 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 36/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1207 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 34/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1208 mode=game_loop           Durin III(dwa) F5@( 1, 3) HP 32/112 MP 0/0 Hu  0 $ 608 room=.
+-> i
+T1209 mode=inventory           Durin III(dwa) F5@( 1, 3) HP 32/112 MP 0/0 Hu  0 $ 608 room=.
+-> u12
+T1210 mode=inventory           Durin III(dwa) F5@( 1, 3) HP 57/112 MP 0/0 Hu  0 $ 608 room=.
+-> u4
+T1211 mode=inventory           Durin III(dwa) F5@( 1, 3) HP 82/112 MP 0/0 Hu  0 $ 608 room=.
+-> u1
+T1212 mode=inventory           Durin III(dwa) F5@( 1, 3) HP 82/112 MP 0/0 Hu  0 $ 608 room=.
+-> x
+T1213 mode=game_loop           Durin III(dwa) F5@( 1, 3) HP 82/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1214 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 80/112 MP 0/0 Hu  0 $ 608 room=.
+-> s
+T1215 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 78/112 MP 0/0 Hu  0 $ 608 room=.
+-> s
+T1216 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 76/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1217 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 74/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1218 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 72/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1219 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 70/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1220 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 68/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1221 mode=game_loop           Durin III(dwa) F5@( 2, 2) HP 66/112 MP 0/0 Hu  0 $ 608 room=P
+-> s
+T1222 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 64/112 MP 0/0 Hu  0 $ 608 room=.
+-> s
+T1223 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 62/112 MP 0/0 Hu  0 $ 608 room=.
+-> s
+T1224 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 60/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1225 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 58/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1226 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 56/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1227 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 54/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1228 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 52/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1229 mode=game_loop           Durin III(dwa) F5@( 1, 3) HP 50/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1230 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 48/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1231 mode=game_loop           Durin III(dwa) F5@( 2, 2) HP 46/112 MP 0/0 Hu  0 $ 608 room=P
+-> s
+T1232 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 44/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1233 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 42/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1234 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 40/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1235 mode=game_loop           Durin III(dwa) F5@( 1, 3) HP 38/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1236 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 36/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1237 mode=game_loop           Durin III(dwa) F5@( 2, 2) HP 34/112 MP 0/0 Hu  0 $ 608 room=P
+-> s
+T1238 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 32/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1239 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 30/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1240 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 28/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1241 mode=game_loop           Durin III(dwa) F5@( 1, 3) HP 26/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1242 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 24/112 MP 0/0 Hu  0 $ 608 room=.
+-> s
+T1243 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 22/112 MP 0/0 Hu  0 $ 608 room=.
+-> s
+T1244 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 20/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1245 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 18/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1246 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 16/112 MP 0/0 Hu  0 $ 608 room=.
+-> e
+T1247 mode=game_loop           Durin III(dwa) F5@( 3, 3) HP 14/112 MP 0/0 Hu  0 $ 608 room=.
+-> w
+T1248 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 12/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1249 mode=game_loop           Durin III(dwa) F5@( 2, 2) HP 10/112 MP 0/0 Hu  0 $ 608 room=P
+-> s
+T1250 mode=game_loop           Durin III(dwa) F5@( 2, 3) HP 8/112 MP 0/0 Hu  0 $ 608 room=.
+-> s
+T1251 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 6/112 MP 0/0 Hu  0 $ 608 room=.
+-> s
+T1252 mode=game_loop           Durin III(dwa) F5@( 2, 5) HP 4/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1253 mode=game_loop           Durin III(dwa) F5@( 2, 4) HP 2/112 MP 0/0 Hu  0 $ 608 room=.
+-> n
+T1254 mode=death_screen        Durin III(dwa) F5@( 2, 3) HP 0/112 MP 0/0 Hu  0 $ 608 room=.
 
-=== run finished: turns=885 floor=4 hp=-20/92 gold=1245 alive=False mode=death_screen ===
+=== run finished: turns=1254 floor=5 hp=0/112 gold=608 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00001_dwarf.html

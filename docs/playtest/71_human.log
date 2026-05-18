@@ -1283,7 +1283,7 @@ T 632 mode=inventory           Denethor Strider(hum) F3@( 8, 7) HP 50/50 MP 0/0 
 T 633 mode=inventory           Denethor Strider(hum) F3@( 8, 7) HP 50/50 MP 0/0 Hu 99 $ 202 room=.
 -> u13
 T 634 mode=upgrade_scroll_mode Denethor Strider(hum) F3@( 8, 7) HP 50/50 MP 0/0 Hu 99 $ 202 room=.
--> 1
+-> 2
 T 635 mode=inventory           Denethor Strider(hum) F3@( 8, 7) HP 50/50 MP 0/0 Hu 99 $ 202 room=.
 -> x
 T 636 mode=game_loop           Denethor Strider(hum) F3@( 8, 7) HP 50/50 MP 0/0 Hu 99 $ 202 room=.
@@ -1464,17 +1464,17 @@ T 723 mode=game_loop           Denethor Strider(hum) F3@(11, 9) HP 56/56 MP 0/0 
 -> n
 T 724 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 56/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP45/45)
 -> a
-T 725 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 54/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP26/45)
+T 725 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 54/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP25/45)
 -> a
-T 726 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 52/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP26/45)
+T 726 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 52/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP25/45)
 -> a
-T 727 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 50/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP7/45)
+T 727 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 50/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP5/45)
 -> a
-T 728 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 50/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP7/45)
+T 728 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 50/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP5/45)
 -> a
-T 729 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 48/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP7/45)
+T 729 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 48/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP5/45)
 -> a
-T 730 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 46/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP7/45)
+T 730 mode=combat_mode         Denethor Strider(hum) F3@(11, 8) HP 46/56 MP 0/0 Hu 42 $ 447 room=M vs Myconid Shaman(L2 HP5/45)
 -> a
 T 731 mode=combat_victory      Denethor Strider(hum) F3@(11, 8) HP 44/56 MP 0/0 Hu 42 $ 471 room=.
 -> back
@@ -1612,9 +1612,9 @@ T 797 mode=combat_mode         Denethor Strider(hum) F3@( 9, 4) HP 54/56 MP 0/0 
 -> a
 T 798 mode=combat_mode         Denethor Strider(hum) F3@( 9, 4) HP 49/56 MP 0/0 Hu  0 $ 471 room=M vs Orc(L2 HP50/50)
 -> a
-T 799 mode=combat_mode         Denethor Strider(hum) F3@( 9, 4) HP 44/56 MP 0/0 Hu  0 $ 471 room=M vs Orc(L2 HP33/50)
+T 799 mode=combat_mode         Denethor Strider(hum) F3@( 9, 4) HP 44/56 MP 0/0 Hu  0 $ 471 room=M vs Orc(L2 HP32/50)
 -> a
-T 800 mode=combat_mode         Denethor Strider(hum) F3@( 9, 4) HP 39/56 MP 0/0 Hu  0 $ 471 room=M vs Orc(L2 HP16/50)
+T 800 mode=combat_mode         Denethor Strider(hum) F3@( 9, 4) HP 39/56 MP 0/0 Hu  0 $ 471 room=M vs Orc(L2 HP14/50)
 -> a
 T 801 mode=combat_victory      Denethor Strider(hum) F3@( 9, 4) HP 34/56 MP 0/0 Hu  0 $ 474 room=.
 -> back

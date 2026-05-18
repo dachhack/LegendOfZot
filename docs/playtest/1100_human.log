@@ -1042,7 +1042,7 @@ T 512 mode=game_loop           Anborn of the White City(hum) F2@( 9,11) HP 42/42
 -> e
 T 513 mode=combat_mode         Anborn of the White City(hum) F2@(10,11) HP 42/42 MP 0/0 Hu 97 $ 251 room=M vs Giant Spider(L1 HP40/40)
 -> a
-T 514 mode=combat_mode         Anborn of the White City(hum) F2@(10,11) HP 42/42 MP 0/0 Hu 97 $ 251 room=M vs Giant Spider(L1 HP7/40)
+T 514 mode=combat_mode         Anborn of the White City(hum) F2@(10,11) HP 42/42 MP 0/0 Hu 97 $ 251 room=M vs Giant Spider(L1 HP4/40)
 -> f
 T 515 mode=flee_direction_mode Anborn of the White City(hum) F2@(10,11) HP 42/42 MP 0/0 Hu 97 $ 251 room=M
 -> n
@@ -1076,7 +1076,7 @@ T 529 mode=combat_mode         Anborn of the White City(hum) F2@( 8,13) HP 42/42
 -> a
 T 530 mode=combat_mode         Anborn of the White City(hum) F2@( 8,13) HP 42/42 MP 0/0 Hu 84 $ 251 room=M vs Skeleton(L1 HP25/25)
 -> a
-T 531 mode=combat_mode         Anborn of the White City(hum) F2@( 8,13) HP 42/42 MP 0/0 Hu 84 $ 251 room=M vs Skeleton(L1 HP3/25)
+T 531 mode=combat_mode         Anborn of the White City(hum) F2@( 8,13) HP 42/42 MP 0/0 Hu 84 $ 251 room=M vs Skeleton(L1 HP1/25)
 -> a
 T 532 mode=combat_victory      Anborn of the White City(hum) F2@( 8,13) HP 41/42 MP 0/0 Hu 84 $ 267 room=.
 -> back
@@ -1166,11 +1166,11 @@ T 574 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 42/42
 -> a
 T 575 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP57/57)
 -> a
-T 576 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP36/57)
+T 576 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP34/57)
 -> a
-T 577 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 39/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP36/57)
+T 577 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 39/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP34/57)
 -> a
-T 578 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 36/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP15/57)
+T 578 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 36/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP11/57)
 -> a
 T 579 mode=combat_victory      Anborn of the White City(hum) F4@(10,13) HP 33/42 MP 0/0 Hu 93 $ 237 room=.
 -> back
@@ -1298,9 +1298,9 @@ T 640 mode=game_loop           Anborn of the White City(hum) F4@(18, 9) HP 42/42
 -> w
 T 641 mode=combat_mode         Anborn of the White City(hum) F4@(17, 9) HP 42/42 MP 0/0 Hu 54 $ 374 room=M vs Owlbear(L3 HP50/50)
 -> a
-T 642 mode=combat_mode         Anborn of the White City(hum) F4@(17, 9) HP 42/42 MP 0/0 Hu 54 $ 374 room=M vs Owlbear(L3 HP19/50)
+T 642 mode=combat_mode         Anborn of the White City(hum) F4@(17, 9) HP 42/42 MP 0/0 Hu 54 $ 374 room=M vs Owlbear(L3 HP16/50)
 -> a
-T 643 mode=combat_mode         Anborn of the White City(hum) F4@(17, 9) HP 39/42 MP 0/0 Hu 54 $ 374 room=M vs Owlbear(L3 HP19/50)
+T 643 mode=combat_mode         Anborn of the White City(hum) F4@(17, 9) HP 39/42 MP 0/0 Hu 54 $ 374 room=M vs Owlbear(L3 HP16/50)
 -> a
 T 644 mode=combat_victory      Anborn of the White City(hum) F4@(17, 9) HP 39/52 MP 0/0 Hu 54 $ 406 room=.
 -> back

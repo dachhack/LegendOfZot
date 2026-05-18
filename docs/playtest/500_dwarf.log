@@ -1201,1140 +1201,1146 @@ T 591 mode=upgrade_scroll_mode Fili Goldfinder(dwa) F5@(10,13) HP 84/84 MP 0/0 H
 T 592 mode=inventory           Fili Goldfinder(dwa) F5@(10,13) HP 84/84 MP 0/0 Hu 65 $ 291 room=.
 -> x
 T 593 mode=game_loop           Fili Goldfinder(dwa) F5@(10,13) HP 84/84 MP 0/0 Hu 65 $ 291 room=.
--> n
-T 594 mode=game_loop           Fili Goldfinder(dwa) F5@(10,12) HP 84/84 MP 0/0 Hu 64 $ 291 room=.
--> n
-T 595 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 84/84 MP 0/0 Hu 63 $ 291 room=.
--> n
-T 596 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 84/84 MP 0/0 Hu 62 $ 291 room=.
--> l
-T 597 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 84/84 MP 0/0 Hu 62 $ 291 room=.
--> n
-T 598 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu 61 $ 291 room=.
 -> i
-T 599 mode=inventory           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu 61 $ 291 room=.
--> eat2
-T 600 mode=inventory           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu 71 $ 291 room=.
--> eat1
-T 601 mode=inventory           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu100 $ 291 room=.
+T 594 mode=inventory           Fili Goldfinder(dwa) F5@(10,13) HP 84/84 MP 0/0 Hu 65 $ 291 room=.
+-> e1
+T 595 mode=inventory           Fili Goldfinder(dwa) F5@(10,13) HP 84/84 MP 0/0 Hu 65 $ 291 room=.
 -> x
-T 602 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu100 $ 291 room=.
--> l
-T 603 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu100 $ 291 room=.
+T 596 mode=game_loop           Fili Goldfinder(dwa) F5@(10,13) HP 84/84 MP 0/0 Hu 65 $ 291 room=.
 -> n
-T 604 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 84/84 MP 0/0 Hu 99 $ 291 room=.
--> l
-T 605 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 84/84 MP 0/0 Hu 99 $ 291 room=.
+T 597 mode=game_loop           Fili Goldfinder(dwa) F5@(10,12) HP 84/84 MP 0/0 Hu 64 $ 291 room=.
 -> n
-T 606 mode=dungeon_mode        Fili Goldfinder(dwa) F5@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 291 room=N
+T 598 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 84/84 MP 0/0 Hu 63 $ 291 room=.
+-> n
+T 599 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 84/84 MP 0/0 Hu 62 $ 291 room=.
+-> l
+T 600 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 84/84 MP 0/0 Hu 62 $ 291 room=.
+-> n
+T 601 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu 61 $ 291 room=.
+-> i
+T 602 mode=inventory           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu 61 $ 291 room=.
+-> eat2
+T 603 mode=inventory           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu 71 $ 291 room=.
+-> eat1
+T 604 mode=inventory           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu100 $ 291 room=.
+-> x
+T 605 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu100 $ 291 room=.
+-> l
+T 606 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 9) HP 84/84 MP 0/0 Hu100 $ 291 room=.
+-> n
+T 607 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 84/84 MP 0/0 Hu 99 $ 291 room=.
+-> l
+T 608 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 84/84 MP 0/0 Hu 99 $ 291 room=.
+-> n
+T 609 mode=dungeon_mode        Fili Goldfinder(dwa) F5@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 291 room=N
 -> u
-T 607 mode=dungeon_unlocked_mode Fili Goldfinder(dwa) F5@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 291 room=N
+T 610 mode=dungeon_unlocked_mode Fili Goldfinder(dwa) F5@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 291 room=N
 -> r
-T 608 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 432 room=N
+T 611 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 432 room=N
 -> l
-T 609 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 432 room=N
+T 612 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 84/84 MP 0/0 Hu 98 $ 432 room=N
 -> n
-T 610 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 84/84 MP 0/0 Hu 97 $ 432 room=.
+T 613 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 84/84 MP 0/0 Hu 97 $ 432 room=.
 -> l
-T 611 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 84/84 MP 0/0 Hu 97 $ 432 room=.
+T 614 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 84/84 MP 0/0 Hu 97 $ 432 room=.
 -> w
-T 612 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 84/84 MP 0/0 Hu 96 $ 432 room=.
+T 615 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 84/84 MP 0/0 Hu 96 $ 432 room=.
 -> l
-T 613 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 84/84 MP 0/0 Hu 96 $ 432 room=.
+T 616 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 84/84 MP 0/0 Hu 96 $ 432 room=.
 -> n
-T 614 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 5) HP 84/84 MP 0/0 Hu 95 $ 432 room=.
+T 617 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 5) HP 84/84 MP 0/0 Hu 95 $ 432 room=.
 -> l
-T 615 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 5) HP 84/84 MP 0/0 Hu 95 $ 432 room=.
+T 618 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 5) HP 84/84 MP 0/0 Hu 95 $ 432 room=.
 -> w
-T 616 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 84/84 MP 0/0 Hu 94 $ 432 room=.
+T 619 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 84/84 MP 0/0 Hu 94 $ 432 room=.
 -> l
-T 617 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 84/84 MP 0/0 Hu 94 $ 432 room=.
+T 620 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 84/84 MP 0/0 Hu 94 $ 432 room=.
 -> n
-T 618 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 4) HP 84/84 MP 0/0 Hu 93 $ 432 room=.
+T 621 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 4) HP 84/84 MP 0/0 Hu 93 $ 432 room=.
 -> l
-T 619 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 4) HP 84/84 MP 0/0 Hu 93 $ 432 room=.
+T 622 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 4) HP 84/84 MP 0/0 Hu 93 $ 432 room=.
 -> n
-T 620 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 3) HP 84/84 MP 0/0 Hu 92 $ 432 room=.
+T 623 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 3) HP 84/84 MP 0/0 Hu 92 $ 432 room=.
 -> l
-T 621 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 3) HP 84/84 MP 0/0 Hu 92 $ 432 room=.
+T 624 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 3) HP 84/84 MP 0/0 Hu 92 $ 432 room=.
 -> n
-T 622 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 2) HP 84/84 MP 0/0 Hu 91 $ 432 room=.
+T 625 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 2) HP 84/84 MP 0/0 Hu 91 $ 432 room=.
 -> l
-T 623 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 2) HP 84/84 MP 0/0 Hu 91 $ 432 room=.
+T 626 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 2) HP 84/84 MP 0/0 Hu 91 $ 432 room=.
 -> n
-T 624 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 1) HP 84/84 MP 0/0 Hu 90 $ 432 room=.
+T 627 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 1) HP 84/84 MP 0/0 Hu 90 $ 432 room=.
 -> e
-T 625 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 1) HP 84/84 MP 0/0 Hu 89 $ 432 room=.
+T 628 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 1) HP 84/84 MP 0/0 Hu 89 $ 432 room=.
 -> s
-T 626 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 2) HP 84/84 MP 0/0 Hu 88 $ 432 room=.
+T 629 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 2) HP 84/84 MP 0/0 Hu 88 $ 432 room=.
 -> s
-T 627 mode=library_mode        Fili Goldfinder(dwa) F5@( 9, 3) HP 84/84 MP 0/0 Hu 87 $ 432 room=L
+T 630 mode=library_mode        Fili Goldfinder(dwa) F5@( 9, 3) HP 84/84 MP 0/0 Hu 87 $ 432 room=L
 -> r
-T 628 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 3) HP 84/84 MP 0/0 Hu 87 $ 432 room=.
+T 631 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 3) HP 84/84 MP 0/0 Hu 87 $ 432 room=.
 -> w
-T 629 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 3) HP 84/84 MP 0/0 Hu 86 $ 432 room=.
+T 632 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 3) HP 84/84 MP 0/0 Hu 86 $ 432 room=.
 -> s
-T 630 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 4) HP 84/84 MP 0/0 Hu 85 $ 432 room=.
+T 633 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 4) HP 84/84 MP 0/0 Hu 85 $ 432 room=.
 -> w
-T 631 mode=garden_mode         Fili Goldfinder(dwa) F5@( 7, 4) HP 84/84 MP 0/0 Hu 84 $ 432 room=G
+T 634 mode=garden_mode         Fili Goldfinder(dwa) F5@( 7, 4) HP 84/84 MP 0/0 Hu 84 $ 432 room=G
 -> h
-T 632 mode=game_loop           Fili Goldfinder(dwa) F5@( 7, 4) HP 84/84 MP 0/0 Hu 84 $ 432 room=.
+T 635 mode=game_loop           Fili Goldfinder(dwa) F5@( 7, 4) HP 84/84 MP 0/0 Hu 84 $ 432 room=.
 -> w
-T 633 mode=game_loop           Fili Goldfinder(dwa) F5@( 6, 4) HP 84/84 MP 0/0 Hu 83 $ 432 room=.
+T 636 mode=game_loop           Fili Goldfinder(dwa) F5@( 6, 4) HP 84/84 MP 0/0 Hu 83 $ 432 room=.
 -> w
-T 634 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 4) HP 84/84 MP 0/0 Hu 82 $ 432 room=.
+T 637 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 4) HP 84/84 MP 0/0 Hu 82 $ 432 room=.
 -> l
-T 635 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 4) HP 84/84 MP 0/0 Hu 82 $ 432 room=.
+T 638 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 4) HP 84/84 MP 0/0 Hu 82 $ 432 room=.
 -> s
-T 636 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 5) HP 84/84 MP 0/0 Hu 81 $ 432 room=.
+T 639 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 5) HP 84/84 MP 0/0 Hu 81 $ 432 room=.
 -> l
-T 637 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 5) HP 84/84 MP 0/0 Hu 81 $ 432 room=.
+T 640 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 5) HP 84/84 MP 0/0 Hu 81 $ 432 room=.
 -> w
-T 638 mode=game_loop           Fili Goldfinder(dwa) F5@( 4, 5) HP 84/84 MP 0/0 Hu 80 $ 432 room=.
+T 641 mode=game_loop           Fili Goldfinder(dwa) F5@( 4, 5) HP 84/84 MP 0/0 Hu 80 $ 432 room=.
 -> s
-T 639 mode=game_loop           Fili Goldfinder(dwa) F5@( 4, 6) HP 84/84 MP 0/0 Hu 79 $ 432 room=.
+T 642 mode=game_loop           Fili Goldfinder(dwa) F5@( 4, 6) HP 84/84 MP 0/0 Hu 79 $ 432 room=.
 -> e
-T 640 mode=combat_mode         Fili Goldfinder(dwa) F5@( 5, 6) HP 84/84 MP 0/0 Hu 78 $ 432 room=M vs Bat(L4 HP13/13)
+T 643 mode=combat_mode         Fili Goldfinder(dwa) F5@( 5, 6) HP 84/84 MP 0/0 Hu 78 $ 432 room=M vs Bat(L4 HP13/13)
 -> a
-T 641 mode=combat_mode         Fili Goldfinder(dwa) F5@( 5, 6) HP 83/84 MP 0/0 Hu 78 $ 432 room=M vs Bat(L4 HP13/13)
+T 644 mode=combat_mode         Fili Goldfinder(dwa) F5@( 5, 6) HP 83/84 MP 0/0 Hu 78 $ 432 room=M vs Bat(L4 HP13/13)
 -> f
-T 642 mode=combat_mode         Fili Goldfinder(dwa) F5@( 5, 6) HP 82/84 MP 0/0 Hu 78 $ 432 room=M vs Bat(L4 HP13/13)
+T 645 mode=combat_mode         Fili Goldfinder(dwa) F5@( 5, 6) HP 82/84 MP 0/0 Hu 78 $ 432 room=M vs Bat(L4 HP13/13)
 -> a
-T 643 mode=combat_victory      Fili Goldfinder(dwa) F5@( 5, 6) HP 82/94 MP 0/0 Hu 78 $ 477 room=.
+T 646 mode=combat_victory      Fili Goldfinder(dwa) F5@( 5, 6) HP 82/94 MP 0/0 Hu 78 $ 477 room=.
 -> back
-T 644 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 6) HP 82/94 MP 0/0 Hu 78 $ 477 room=.
+T 647 mode=game_loop           Fili Goldfinder(dwa) F5@( 5, 6) HP 82/94 MP 0/0 Hu 78 $ 477 room=.
 -> e
-T 645 mode=game_loop           Fili Goldfinder(dwa) F5@( 6, 6) HP 82/94 MP 0/0 Hu 77 $ 477 room=.
+T 648 mode=game_loop           Fili Goldfinder(dwa) F5@( 6, 6) HP 82/94 MP 0/0 Hu 77 $ 477 room=.
 -> e
-T 646 mode=pool_mode           Fili Goldfinder(dwa) F5@( 7, 6) HP 82/94 MP 0/0 Hu 76 $ 477 room=P
+T 649 mode=pool_mode           Fili Goldfinder(dwa) F5@( 7, 6) HP 82/94 MP 0/0 Hu 76 $ 477 room=P
 -> dr
-T 647 mode=game_loop           Fili Goldfinder(dwa) F5@( 7, 6) HP 82/94 MP 0/0 Hu 76 $ 477 room=.
+T 650 mode=game_loop           Fili Goldfinder(dwa) F5@( 7, 6) HP 82/94 MP 0/0 Hu 76 $ 477 room=.
 -> e
-T 648 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 6) HP 82/94 MP 0/0 Hu 75 $ 477 room=.
+T 651 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 6) HP 82/94 MP 0/0 Hu 75 $ 477 room=.
 -> s
-T 649 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 7) HP 83/94 MP 0/0 Hu 74 $ 477 room=.
+T 652 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 7) HP 83/94 MP 0/0 Hu 74 $ 477 room=.
 -> e
-T 650 mode=chest_mode          Fili Goldfinder(dwa) F5@( 9, 7) HP 83/94 MP 0/0 Hu 73 $ 477 room=C
+T 653 mode=chest_mode          Fili Goldfinder(dwa) F5@( 9, 7) HP 83/94 MP 0/0 Hu 73 $ 477 room=C
 -> n
-T 651 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 83/94 MP 0/0 Hu 72 $ 477 room=.
+T 654 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 83/94 MP 0/0 Hu 72 $ 477 room=.
 -> e
-T 652 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 83/94 MP 0/0 Hu 71 $ 477 room=.
+T 655 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 83/94 MP 0/0 Hu 71 $ 477 room=.
 -> s
-T 653 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 84/94 MP 0/0 Hu 70 $ 477 room=N
+T 656 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 84/94 MP 0/0 Hu 70 $ 477 room=N
 -> e
-T 654 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 7) HP 84/94 MP 0/0 Hu 69 $ 477 room=.
+T 657 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 7) HP 84/94 MP 0/0 Hu 69 $ 477 room=.
 -> e
-T 655 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 7) HP 84/94 MP 0/0 Hu 68 $ 477 room=.
+T 658 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 7) HP 84/94 MP 0/0 Hu 68 $ 477 room=.
 -> n
-T 656 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 6) HP 84/94 MP 0/0 Hu 67 $ 477 room=.
+T 659 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 6) HP 84/94 MP 0/0 Hu 67 $ 477 room=.
 -> n
-T 657 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 5) HP 85/94 MP 0/0 Hu 66 $ 477 room=.
+T 660 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 5) HP 85/94 MP 0/0 Hu 66 $ 477 room=.
 -> l
-T 658 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 5) HP 85/94 MP 0/0 Hu 66 $ 477 room=.
+T 661 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 5) HP 85/94 MP 0/0 Hu 66 $ 477 room=.
 -> e
-T 659 mode=game_loop           Fili Goldfinder(dwa) F5@(13, 5) HP 85/94 MP 0/0 Hu 65 $ 477 room=.
+T 662 mode=game_loop           Fili Goldfinder(dwa) F5@(13, 5) HP 85/94 MP 0/0 Hu 65 $ 477 room=.
 -> e
-T 660 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 85/94 MP 0/0 Hu 64 $ 477 room=.
+T 663 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 85/94 MP 0/0 Hu 64 $ 477 room=.
 -> l
-T 661 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 85/94 MP 0/0 Hu 64 $ 477 room=.
+T 664 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 85/94 MP 0/0 Hu 64 $ 477 room=.
 -> s
-T 662 mode=library_mode        Fili Goldfinder(dwa) F5@(14, 6) HP 85/94 MP 0/0 Hu 63 $ 477 room=L
+T 665 mode=library_mode        Fili Goldfinder(dwa) F5@(14, 6) HP 85/94 MP 0/0 Hu 63 $ 477 room=L
 -> r
-T 663 mode=library_read_decision_mode Fili Goldfinder(dwa) F5@(14, 6) HP 85/94 MP 0/0 Hu 63 $ 477 room=L
+T 666 mode=library_read_decision_mode Fili Goldfinder(dwa) F5@(14, 6) HP 85/94 MP 0/0 Hu 63 $ 477 room=L
 -> y
-T 664 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 6) HP 44/94 MP 0/0 Hu 63 $ 477 room=.
+T 667 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 6) HP 44/94 MP 0/0 Hu 63 $ 477 room=.
 -> n
-T 665 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 45/94 MP 0/0 Hu 62 $ 477 room=.
+T 668 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 45/94 MP 0/0 Hu 62 $ 477 room=.
 -> e
-T 666 mode=game_loop           Fili Goldfinder(dwa) F5@(15, 5) HP 45/94 MP 0/0 Hu 61 $ 477 room=.
+T 669 mode=game_loop           Fili Goldfinder(dwa) F5@(15, 5) HP 45/94 MP 0/0 Hu 61 $ 477 room=.
 -> e
-T 667 mode=game_loop           Fili Goldfinder(dwa) F5@(16, 5) HP 45/94 MP 0/0 Hu 60 $ 477 room=.
+T 670 mode=game_loop           Fili Goldfinder(dwa) F5@(16, 5) HP 45/94 MP 0/0 Hu 60 $ 477 room=.
 -> l
-T 668 mode=game_loop           Fili Goldfinder(dwa) F5@(16, 5) HP 45/94 MP 0/0 Hu 60 $ 477 room=.
+T 671 mode=game_loop           Fili Goldfinder(dwa) F5@(16, 5) HP 45/94 MP 0/0 Hu 60 $ 477 room=.
 -> e
-T 669 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 5) HP 45/94 MP 0/0 Hu 59 $ 477 room=.
+T 672 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 5) HP 45/94 MP 0/0 Hu 59 $ 477 room=.
 -> l
-T 670 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 5) HP 45/94 MP 0/0 Hu 59 $ 477 room=.
--> l
-T 671 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 5) HP 45/94 MP 0/0 Hu 59 $ 477 room=.
+T 673 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 5) HP 45/94 MP 0/0 Hu 59 $ 477 room=.
 -> n
-T 672 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 4) HP 45/94 MP 0/0 Hu 58 $ 477 room=.
+T 674 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 4) HP 45/94 MP 0/0 Hu 58 $ 477 room=.
 -> l
-T 673 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 4) HP 45/94 MP 0/0 Hu 58 $ 477 room=.
+T 675 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 4) HP 45/94 MP 0/0 Hu 58 $ 477 room=.
 -> e
-T 674 mode=game_loop           Fili Goldfinder(dwa) F5@(18, 4) HP 45/94 MP 0/0 Hu 57 $ 477 room=.
+T 676 mode=game_loop           Fili Goldfinder(dwa) F5@(18, 4) HP 45/94 MP 0/0 Hu 57 $ 477 room=.
 -> l
-T 675 mode=game_loop           Fili Goldfinder(dwa) F5@(18, 4) HP 45/94 MP 0/0 Hu 57 $ 477 room=.
+T 677 mode=game_loop           Fili Goldfinder(dwa) F5@(18, 4) HP 45/94 MP 0/0 Hu 57 $ 477 room=.
 -> i
-T 676 mode=inventory           Fili Goldfinder(dwa) F5@(18, 4) HP 45/94 MP 0/0 Hu 57 $ 477 room=.
+T 678 mode=inventory           Fili Goldfinder(dwa) F5@(18, 4) HP 45/94 MP 0/0 Hu 57 $ 477 room=.
 -> u5
-T 677 mode=inventory           Fili Goldfinder(dwa) F5@(18, 4) HP 75/94 MP 0/0 Hu 57 $ 477 room=.
+T 679 mode=inventory           Fili Goldfinder(dwa) F5@(18, 4) HP 75/94 MP 0/0 Hu 57 $ 477 room=.
 -> u1
-T 678 mode=inventory           Fili Goldfinder(dwa) F5@(18, 4) HP 94/94 MP 0/0 Hu 57 $ 477 room=.
+T 680 mode=inventory           Fili Goldfinder(dwa) F5@(18, 4) HP 94/94 MP 0/0 Hu 57 $ 477 room=.
 -> x
-T 679 mode=game_loop           Fili Goldfinder(dwa) F5@(18, 4) HP 94/94 MP 0/0 Hu 57 $ 477 room=.
+T 681 mode=game_loop           Fili Goldfinder(dwa) F5@(18, 4) HP 94/94 MP 0/0 Hu 57 $ 477 room=.
 -> e
-T 680 mode=game_loop           Fili Goldfinder(dwa) F5@(19, 4) HP 94/94 MP 0/0 Hu 56 $ 477 room=.
+T 682 mode=game_loop           Fili Goldfinder(dwa) F5@(19, 4) HP 94/94 MP 0/0 Hu 56 $ 477 room=.
 -> l
-T 681 mode=game_loop           Fili Goldfinder(dwa) F5@(19, 4) HP 94/94 MP 0/0 Hu 56 $ 477 room=.
+T 683 mode=game_loop           Fili Goldfinder(dwa) F5@(19, 4) HP 94/94 MP 0/0 Hu 56 $ 477 room=.
 -> n
-T 682 mode=game_loop           Fili Goldfinder(dwa) F5@(19, 3) HP 94/94 MP 0/0 Hu 55 $ 477 room=.
+T 684 mode=game_loop           Fili Goldfinder(dwa) F5@(19, 3) HP 94/94 MP 0/0 Hu 55 $ 477 room=.
 -> w
-T 683 mode=combat_mode         Fili Goldfinder(dwa) F5@(18, 3) HP 94/94 MP 0/0 Hu 54 $ 477 room=M vs Orc(L4 HP54/54)
+T 685 mode=combat_mode         Fili Goldfinder(dwa) F5@(18, 3) HP 94/94 MP 0/0 Hu 54 $ 477 room=M vs Orc(L4 HP54/54)
 -> a
-T 684 mode=combat_mode         Fili Goldfinder(dwa) F5@(18, 3) HP 91/94 MP 0/0 Hu 54 $ 477 room=M vs Orc(L4 HP30/54)
+T 686 mode=combat_mode         Fili Goldfinder(dwa) F5@(18, 3) HP 91/94 MP 0/0 Hu 54 $ 477 room=M vs Orc(L4 HP30/54)
 -> f
-T 685 mode=flee_direction_mode Fili Goldfinder(dwa) F5@(18, 3) HP 91/94 MP 0/0 Hu 54 $ 477 room=M
+T 687 mode=flee_direction_mode Fili Goldfinder(dwa) F5@(18, 3) HP 91/94 MP 0/0 Hu 54 $ 477 room=M
 -> s
-T 686 mode=game_loop           Fili Goldfinder(dwa) F5@(18, 4) HP 91/94 MP 0/0 Hu 54 $ 477 room=.
+T 688 mode=game_loop           Fili Goldfinder(dwa) F5@(18, 4) HP 91/94 MP 0/0 Hu 54 $ 477 room=.
 -> w
-T 687 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 4) HP 91/94 MP 0/0 Hu 53 $ 477 room=.
+T 689 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 4) HP 91/94 MP 0/0 Hu 53 $ 477 room=.
 -> s
-T 688 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 5) HP 91/94 MP 0/0 Hu 52 $ 477 room=.
--> w
-T 689 mode=game_loop           Fili Goldfinder(dwa) F5@(16, 5) HP 91/94 MP 0/0 Hu 51 $ 477 room=.
--> w
-T 690 mode=game_loop           Fili Goldfinder(dwa) F5@(15, 5) HP 91/94 MP 0/0 Hu 50 $ 477 room=.
+T 690 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 5) HP 91/94 MP 0/0 Hu 52 $ 477 room=.
 -> l
-T 691 mode=game_loop           Fili Goldfinder(dwa) F5@(15, 5) HP 91/94 MP 0/0 Hu 50 $ 477 room=.
+T 691 mode=game_loop           Fili Goldfinder(dwa) F5@(17, 5) HP 91/94 MP 0/0 Hu 52 $ 477 room=.
 -> w
-T 692 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 91/94 MP 0/0 Hu 49 $ 477 room=.
+T 692 mode=game_loop           Fili Goldfinder(dwa) F5@(16, 5) HP 91/94 MP 0/0 Hu 51 $ 477 room=.
+-> w
+T 693 mode=game_loop           Fili Goldfinder(dwa) F5@(15, 5) HP 91/94 MP 0/0 Hu 50 $ 477 room=.
+-> w
+T 694 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 91/94 MP 0/0 Hu 49 $ 477 room=.
 -> i
-T 693 mode=inventory           Fili Goldfinder(dwa) F5@(14, 5) HP 91/94 MP 0/0 Hu 49 $ 477 room=.
+T 695 mode=inventory           Fili Goldfinder(dwa) F5@(14, 5) HP 91/94 MP 0/0 Hu 49 $ 477 room=.
 -> eat1
-T 694 mode=inventory           Fili Goldfinder(dwa) F5@(14, 5) HP 91/94 MP 0/0 Hu 99 $ 477 room=.
+T 696 mode=inventory           Fili Goldfinder(dwa) F5@(14, 5) HP 91/94 MP 0/0 Hu 99 $ 477 room=.
 -> x
-T 695 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 91/94 MP 0/0 Hu 99 $ 477 room=.
+T 697 mode=game_loop           Fili Goldfinder(dwa) F5@(14, 5) HP 91/94 MP 0/0 Hu 99 $ 477 room=.
 -> w
-T 696 mode=game_loop           Fili Goldfinder(dwa) F5@(13, 5) HP 91/94 MP 0/0 Hu 98 $ 477 room=.
+T 698 mode=game_loop           Fili Goldfinder(dwa) F5@(13, 5) HP 91/94 MP 0/0 Hu 98 $ 477 room=.
 -> w
-T 697 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 5) HP 92/94 MP 0/0 Hu 97 $ 477 room=.
+T 699 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 5) HP 92/94 MP 0/0 Hu 97 $ 477 room=.
 -> s
-T 698 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 6) HP 92/94 MP 0/0 Hu 96 $ 477 room=.
--> s
-T 699 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 7) HP 93/94 MP 0/0 Hu 95 $ 477 room=.
--> s
-T 700 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 8) HP 93/94 MP 0/0 Hu 94 $ 477 room=.
+T 700 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 6) HP 92/94 MP 0/0 Hu 96 $ 477 room=.
 -> l
-T 701 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 8) HP 93/94 MP 0/0 Hu 94 $ 477 room=.
+T 701 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 6) HP 92/94 MP 0/0 Hu 96 $ 477 room=.
 -> s
-T 702 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 9) HP 94/94 MP 0/0 Hu 93 $ 477 room=.
+T 702 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 7) HP 93/94 MP 0/0 Hu 95 $ 477 room=.
 -> s
-T 703 mode=game_loop           Fili Goldfinder(dwa) F5@(12,10) HP 94/94 MP 0/0 Hu 92 $ 477 room=.
+T 703 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 8) HP 93/94 MP 0/0 Hu 94 $ 477 room=.
 -> s
-T 704 mode=chest_mode          Fili Goldfinder(dwa) F5@(12,11) HP 94/94 MP 0/0 Hu 91 $ 477 room=C
+T 704 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 9) HP 94/94 MP 0/0 Hu 93 $ 477 room=.
+-> s
+T 705 mode=game_loop           Fili Goldfinder(dwa) F5@(12,10) HP 94/94 MP 0/0 Hu 92 $ 477 room=.
+-> s
+T 706 mode=chest_mode          Fili Goldfinder(dwa) F5@(12,11) HP 94/94 MP 0/0 Hu 91 $ 477 room=C
 -> o
-T 705 mode=game_loop           Fili Goldfinder(dwa) F5@(13,11) HP 94/94 MP 0/0 Hu 90 $ 477 room=.
+T 707 mode=game_loop           Fili Goldfinder(dwa) F5@(13,11) HP 94/94 MP 0/0 Hu 90 $ 477 room=.
 -> s
-T 706 mode=game_loop           Fili Goldfinder(dwa) F5@(13,12) HP 94/94 MP 0/0 Hu 89 $ 477 room=.
+T 708 mode=game_loop           Fili Goldfinder(dwa) F5@(13,12) HP 94/94 MP 0/0 Hu 89 $ 477 room=.
 -> e
-T 707 mode=game_loop           Fili Goldfinder(dwa) F5@(14,12) HP 94/94 MP 0/0 Hu 88 $ 477 room=.
+T 709 mode=game_loop           Fili Goldfinder(dwa) F5@(14,12) HP 94/94 MP 0/0 Hu 88 $ 477 room=.
 -> e
-T 708 mode=game_loop           Fili Goldfinder(dwa) F5@(15,12) HP 94/94 MP 0/0 Hu 87 $ 477 room=.
--> s
-T 709 mode=chest_mode          Fili Goldfinder(dwa) F5@(15,13) HP 94/94 MP 0/0 Hu 86 $ 477 room=C
--> s
-T 710 mode=game_loop           Fili Goldfinder(dwa) F5@(15,14) HP 94/94 MP 0/0 Hu 85 $ 477 room=.
+T 710 mode=game_loop           Fili Goldfinder(dwa) F5@(15,12) HP 94/94 MP 0/0 Hu 87 $ 477 room=.
 -> l
-T 711 mode=game_loop           Fili Goldfinder(dwa) F5@(15,14) HP 94/94 MP 0/0 Hu 85 $ 477 room=.
+T 711 mode=game_loop           Fili Goldfinder(dwa) F5@(15,12) HP 94/94 MP 0/0 Hu 87 $ 477 room=.
 -> s
-T 712 mode=game_loop           Fili Goldfinder(dwa) F5@(15,15) HP 94/94 MP 0/0 Hu 84 $ 477 room=.
+T 712 mode=chest_mode          Fili Goldfinder(dwa) F5@(15,13) HP 94/94 MP 0/0 Hu 86 $ 477 room=C
 -> s
-T 713 mode=game_loop           Fili Goldfinder(dwa) F5@(15,16) HP 94/94 MP 0/0 Hu 83 $ 477 room=.
+T 713 mode=game_loop           Fili Goldfinder(dwa) F5@(15,14) HP 94/94 MP 0/0 Hu 85 $ 477 room=.
+-> s
+T 714 mode=game_loop           Fili Goldfinder(dwa) F5@(15,15) HP 94/94 MP 0/0 Hu 84 $ 477 room=.
+-> s
+T 715 mode=game_loop           Fili Goldfinder(dwa) F5@(15,16) HP 94/94 MP 0/0 Hu 83 $ 477 room=.
 -> w
-T 714 mode=game_loop           Fili Goldfinder(dwa) F5@(14,16) HP 94/94 MP 0/0 Hu 82 $ 477 room=.
+T 716 mode=game_loop           Fili Goldfinder(dwa) F5@(14,16) HP 94/94 MP 0/0 Hu 82 $ 477 room=.
 -> w
-T 715 mode=game_loop           Fili Goldfinder(dwa) F5@(13,16) HP 94/94 MP 0/0 Hu 81 $ 477 room=.
+T 717 mode=game_loop           Fili Goldfinder(dwa) F5@(13,16) HP 94/94 MP 0/0 Hu 81 $ 477 room=.
 -> l
-T 716 mode=game_loop           Fili Goldfinder(dwa) F5@(13,16) HP 94/94 MP 0/0 Hu 81 $ 477 room=.
+T 718 mode=game_loop           Fili Goldfinder(dwa) F5@(13,16) HP 94/94 MP 0/0 Hu 81 $ 477 room=.
 -> e
-T 717 mode=game_loop           Fili Goldfinder(dwa) F5@(14,16) HP 94/94 MP 0/0 Hu 80 $ 477 room=.
+T 719 mode=game_loop           Fili Goldfinder(dwa) F5@(14,16) HP 94/94 MP 0/0 Hu 80 $ 477 room=.
 -> n
-T 718 mode=combat_mode         Fili Goldfinder(dwa) F5@(14,15) HP 94/94 MP 0/0 Hu 79 $ 477 room=M vs Gelatinous Cube(L4 HP46/46)
+T 720 mode=combat_mode         Fili Goldfinder(dwa) F5@(14,15) HP 94/94 MP 0/0 Hu 79 $ 477 room=M vs Gelatinous Cube(L4 HP46/46)
 -> a
-T 719 mode=combat_mode         Fili Goldfinder(dwa) F5@(14,15) HP 93/94 MP 0/0 Hu 79 $ 477 room=M vs Gelatinous Cube(L4 HP19/46)
+T 721 mode=combat_mode         Fili Goldfinder(dwa) F5@(14,15) HP 93/94 MP 0/0 Hu 79 $ 477 room=M vs Gelatinous Cube(L4 HP19/46)
 -> a
-T 720 mode=combat_mode         Fili Goldfinder(dwa) F5@(14,15) HP 93/94 MP 0/0 Hu 79 $ 477 room=M vs Gelatinous Cube(L4 HP19/46)
+T 722 mode=combat_mode         Fili Goldfinder(dwa) F5@(14,15) HP 93/94 MP 0/0 Hu 79 $ 477 room=M vs Gelatinous Cube(L4 HP19/46)
 -> a
-T 721 mode=combat_victory      Fili Goldfinder(dwa) F5@(14,15) HP 93/94 MP 0/0 Hu 79 $ 517 room=.
+T 723 mode=combat_victory      Fili Goldfinder(dwa) F5@(14,15) HP 93/94 MP 0/0 Hu 79 $ 517 room=.
 -> back
-T 722 mode=game_loop           Fili Goldfinder(dwa) F5@(14,15) HP 93/94 MP 0/0 Hu 79 $ 517 room=.
+T 724 mode=game_loop           Fili Goldfinder(dwa) F5@(14,15) HP 93/94 MP 0/0 Hu 79 $ 517 room=.
 -> n
-T 723 mode=game_loop           Fili Goldfinder(dwa) F5@(14,14) HP 93/94 MP 0/0 Hu 78 $ 517 room=.
+T 725 mode=game_loop           Fili Goldfinder(dwa) F5@(14,14) HP 93/94 MP 0/0 Hu 78 $ 517 room=.
 -> e
-T 724 mode=game_loop           Fili Goldfinder(dwa) F5@(15,14) HP 93/94 MP 0/0 Hu 77 $ 517 room=.
+T 726 mode=game_loop           Fili Goldfinder(dwa) F5@(15,14) HP 93/94 MP 0/0 Hu 77 $ 517 room=.
 -> n
-T 725 mode=game_loop           Fili Goldfinder(dwa) F5@(15,13) HP 93/94 MP 0/0 Hu 76 $ 517 room=C
+T 727 mode=game_loop           Fili Goldfinder(dwa) F5@(15,13) HP 93/94 MP 0/0 Hu 76 $ 517 room=C
 -> n
-T 726 mode=game_loop           Fili Goldfinder(dwa) F5@(15,12) HP 94/94 MP 0/0 Hu 75 $ 517 room=.
+T 728 mode=game_loop           Fili Goldfinder(dwa) F5@(15,12) HP 94/94 MP 0/0 Hu 75 $ 517 room=.
 -> n
-T 727 mode=game_loop           Fili Goldfinder(dwa) F5@(15,11) HP 94/94 MP 0/0 Hu 74 $ 517 room=.
+T 729 mode=game_loop           Fili Goldfinder(dwa) F5@(15,11) HP 94/94 MP 0/0 Hu 74 $ 517 room=.
 -> n
-T 728 mode=game_loop           Fili Goldfinder(dwa) F5@(15,10) HP 94/94 MP 0/0 Hu 73 $ 517 room=.
--> w
-T 729 mode=game_loop           Fili Goldfinder(dwa) F5@(14,10) HP 94/94 MP 0/0 Hu 72 $ 517 room=.
--> w
-T 730 mode=game_loop           Fili Goldfinder(dwa) F5@(13,10) HP 94/94 MP 0/0 Hu 71 $ 517 room=.
+T 730 mode=game_loop           Fili Goldfinder(dwa) F5@(15,10) HP 94/94 MP 0/0 Hu 73 $ 517 room=.
 -> l
-T 731 mode=game_loop           Fili Goldfinder(dwa) F5@(13,10) HP 94/94 MP 0/0 Hu 71 $ 517 room=.
+T 731 mode=game_loop           Fili Goldfinder(dwa) F5@(15,10) HP 94/94 MP 0/0 Hu 73 $ 517 room=.
 -> w
-T 732 mode=game_loop           Fili Goldfinder(dwa) F5@(12,10) HP 94/94 MP 0/0 Hu 70 $ 517 room=.
+T 732 mode=game_loop           Fili Goldfinder(dwa) F5@(14,10) HP 94/94 MP 0/0 Hu 72 $ 517 room=.
 -> w
-T 733 mode=stairs_down_mode    Fili Goldfinder(dwa) F5@(11,10) HP 94/94 MP 0/0 Hu 69 $ 517 room=D
+T 733 mode=game_loop           Fili Goldfinder(dwa) F5@(13,10) HP 94/94 MP 0/0 Hu 71 $ 517 room=.
+-> w
+T 734 mode=game_loop           Fili Goldfinder(dwa) F5@(12,10) HP 94/94 MP 0/0 Hu 70 $ 517 room=.
+-> w
+T 735 mode=stairs_down_mode    Fili Goldfinder(dwa) F5@(11,10) HP 94/94 MP 0/0 Hu 69 $ 517 room=D
 -> n
-T 734 mode=chest_mode          Fili Goldfinder(dwa) F5@(11, 9) HP 94/94 MP 0/0 Hu 68 $ 517 room=C
+T 736 mode=chest_mode          Fili Goldfinder(dwa) F5@(11, 9) HP 94/94 MP 0/0 Hu 68 $ 517 room=C
 -> o
-T 735 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 9) HP 94/94 MP 0/0 Hu 68 $ 517 room=.
+T 737 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 9) HP 94/94 MP 0/0 Hu 68 $ 517 room=.
 -> n
-T 736 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 8) HP 94/94 MP 0/0 Hu 67 $ 517 room=.
+T 738 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 8) HP 94/94 MP 0/0 Hu 67 $ 517 room=.
 -> w
-T 737 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 94/94 MP 0/0 Hu 66 $ 517 room=.
+T 739 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 94/94 MP 0/0 Hu 66 $ 517 room=.
 -> w
-T 738 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 94/94 MP 0/0 Hu 65 $ 517 room=.
--> n
-T 739 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 94/94 MP 0/0 Hu 64 $ 517 room=C
--> e
-T 740 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 94/94 MP 0/0 Hu 63 $ 517 room=N
+T 740 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 94/94 MP 0/0 Hu 65 $ 517 room=.
 -> l
-T 741 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 94/94 MP 0/0 Hu 63 $ 517 room=N
+T 741 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 94/94 MP 0/0 Hu 65 $ 517 room=.
 -> n
-T 742 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 94/94 MP 0/0 Hu 62 $ 517 room=.
+T 742 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 94/94 MP 0/0 Hu 64 $ 517 room=C
 -> e
-T 743 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 94/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP27/27)
+T 743 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 94/94 MP 0/0 Hu 63 $ 517 room=N
+-> n
+T 744 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 94/94 MP 0/0 Hu 62 $ 517 room=.
+-> e
+T 745 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 94/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP27/27)
 -> a
-T 744 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 94/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP27/27)
+T 746 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 94/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP27/27)
 -> a
-T 745 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP27/27)
+T 747 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP27/27)
 -> a
-T 746 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 92/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
+T 748 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 92/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
 -> a
-T 747 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 91/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
+T 749 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 91/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
 -> a
-T 748 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 90/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
+T 750 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 90/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
 -> a
-T 749 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 89/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
+T 751 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 89/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
 -> a
-T 750 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 88/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
+T 752 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 88/94 MP 0/0 Hu 61 $ 517 room=M vs Cockatrice(L4 HP2/27)
 -> f
-T 751 mode=flee_direction_mode Fili Goldfinder(dwa) F5@(11, 6) HP 88/94 MP 0/0 Hu 61 $ 517 room=M
+T 753 mode=flee_direction_mode Fili Goldfinder(dwa) F5@(11, 6) HP 88/94 MP 0/0 Hu 61 $ 517 room=M
 -> s
-T 752 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 7) HP 88/94 MP 0/0 Hu 61 $ 517 room=.
+T 754 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 7) HP 88/94 MP 0/0 Hu 61 $ 517 room=.
 -> s
-T 753 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 8) HP 88/94 MP 0/0 Hu 60 $ 517 room=.
+T 755 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 8) HP 88/94 MP 0/0 Hu 60 $ 517 room=.
 -> w
-T 754 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 88/94 MP 0/0 Hu 59 $ 517 room=.
+T 756 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 88/94 MP 0/0 Hu 59 $ 517 room=.
 -> w
-T 755 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 88/94 MP 0/0 Hu 58 $ 517 room=.
+T 757 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 88/94 MP 0/0 Hu 58 $ 517 room=.
 -> n
-T 756 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 88/94 MP 0/0 Hu 57 $ 517 room=C
+T 758 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 88/94 MP 0/0 Hu 57 $ 517 room=C
 -> n
-T 757 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 88/94 MP 0/0 Hu 56 $ 517 room=.
+T 759 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 88/94 MP 0/0 Hu 56 $ 517 room=.
 -> e
-T 758 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 55 $ 517 room=.
--> s
-T 759 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 88/94 MP 0/0 Hu 54 $ 517 room=N
--> s
-T 760 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 88/94 MP 0/0 Hu 53 $ 517 room=.
+T 760 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 55 $ 517 room=.
 -> l
-T 761 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 88/94 MP 0/0 Hu 53 $ 517 room=.
+T 761 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 55 $ 517 room=.
+-> s
+T 762 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 88/94 MP 0/0 Hu 54 $ 517 room=N
+-> s
+T 763 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 88/94 MP 0/0 Hu 53 $ 517 room=.
 -> w
-T 762 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 88/94 MP 0/0 Hu 52 $ 517 room=.
+T 764 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 88/94 MP 0/0 Hu 52 $ 517 room=.
 -> n
-T 763 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 88/94 MP 0/0 Hu 51 $ 517 room=C
+T 765 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 88/94 MP 0/0 Hu 51 $ 517 room=C
 -> n
-T 764 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 88/94 MP 0/0 Hu 50 $ 517 room=.
+T 766 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 88/94 MP 0/0 Hu 50 $ 517 room=.
 -> e
-T 765 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 49 $ 517 room=.
+T 767 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 49 $ 517 room=.
 -> i
-T 766 mode=inventory           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 49 $ 517 room=.
+T 768 mode=inventory           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 49 $ 517 room=.
 -> eat1
-T 767 mode=inventory           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 99 $ 517 room=.
+T 769 mode=inventory           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 99 $ 517 room=.
 -> x
-T 768 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 99 $ 517 room=.
--> s
-T 769 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 88/94 MP 0/0 Hu 98 $ 517 room=N
--> s
-T 770 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 89/94 MP 0/0 Hu 97 $ 517 room=.
+T 770 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 99 $ 517 room=.
 -> l
-T 771 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 89/94 MP 0/0 Hu 97 $ 517 room=.
+T 771 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 6) HP 88/94 MP 0/0 Hu 99 $ 517 room=.
+-> s
+T 772 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 7) HP 88/94 MP 0/0 Hu 98 $ 517 room=N
+-> s
+T 773 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 89/94 MP 0/0 Hu 97 $ 517 room=.
 -> w
-T 772 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 89/94 MP 0/0 Hu 96 $ 517 room=.
+T 774 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 89/94 MP 0/0 Hu 96 $ 517 room=.
 -> n
-T 773 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 90/94 MP 0/0 Hu 95 $ 517 room=C
+T 775 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 90/94 MP 0/0 Hu 95 $ 517 room=C
 -> n
-T 774 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 90/94 MP 0/0 Hu 94 $ 517 room=.
+T 776 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 90/94 MP 0/0 Hu 94 $ 517 room=.
 -> n
-T 775 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 5) HP 91/94 MP 0/0 Hu 93 $ 517 room=.
+T 777 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 5) HP 91/94 MP 0/0 Hu 93 $ 517 room=.
 -> w
-T 776 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 91/94 MP 0/0 Hu 92 $ 517 room=.
+T 778 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 91/94 MP 0/0 Hu 92 $ 517 room=.
 -> s
-T 777 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 6) HP 92/94 MP 0/0 Hu 91 $ 517 room=.
+T 779 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 6) HP 92/94 MP 0/0 Hu 91 $ 517 room=.
 -> s
-T 778 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 7) HP 92/94 MP 0/0 Hu 90 $ 517 room=.
--> e
-T 779 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 93/94 MP 0/0 Hu 89 $ 517 room=C
--> s
-T 780 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 93/94 MP 0/0 Hu 88 $ 517 room=.
+T 780 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 7) HP 92/94 MP 0/0 Hu 90 $ 517 room=.
 -> l
-T 781 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 93/94 MP 0/0 Hu 88 $ 517 room=.
+T 781 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 7) HP 92/94 MP 0/0 Hu 90 $ 517 room=.
 -> e
-T 782 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 94/94 MP 0/0 Hu 87 $ 517 room=.
+T 782 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 93/94 MP 0/0 Hu 89 $ 517 room=C
+-> s
+T 783 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 93/94 MP 0/0 Hu 88 $ 517 room=.
 -> e
-T 783 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 8) HP 94/94 MP 0/0 Hu 86 $ 517 room=.
+T 784 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 94/94 MP 0/0 Hu 87 $ 517 room=.
+-> e
+T 785 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 8) HP 94/94 MP 0/0 Hu 86 $ 517 room=.
 -> n
-T 784 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 7) HP 94/94 MP 0/0 Hu 85 $ 517 room=.
+T 786 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 7) HP 94/94 MP 0/0 Hu 85 $ 517 room=.
 -> n
-T 785 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 94/94 MP 0/0 Hu 84 $ 517 room=M vs Cockatrice(L4 HP2/27)
+T 787 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 94/94 MP 0/0 Hu 84 $ 517 room=M vs Cockatrice(L4 HP2/27)
 -> a
-T 786 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 517 room=M vs Cockatrice(L4 HP2/27)
+T 788 mode=combat_mode         Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 517 room=M vs Cockatrice(L4 HP2/27)
 -> a
-T 787 mode=combat_victory      Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
+T 789 mode=combat_victory      Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
 -> back
-T 788 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
+T 790 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
 -> i
-T 789 mode=inventory           Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
+T 791 mode=inventory           Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
 -> e4
-T 790 mode=inventory           Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
+T 792 mode=inventory           Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
 -> x
-T 791 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
+T 793 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 6) HP 93/94 MP 0/0 Hu 84 $ 527 room=.
 -> e
-T 792 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 6) HP 93/94 MP 0/0 Hu 83 $ 527 room=.
+T 794 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 6) HP 93/94 MP 0/0 Hu 83 $ 527 room=.
 -> s
-T 793 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 7) HP 93/94 MP 0/0 Hu 82 $ 527 room=.
+T 795 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 7) HP 93/94 MP 0/0 Hu 82 $ 527 room=.
 -> s
-T 794 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 8) HP 93/94 MP 0/0 Hu 81 $ 527 room=.
+T 796 mode=game_loop           Fili Goldfinder(dwa) F5@(12, 8) HP 93/94 MP 0/0 Hu 81 $ 527 room=.
 -> w
-T 795 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 8) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
+T 797 mode=game_loop           Fili Goldfinder(dwa) F5@(11, 8) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
 -> w
-T 796 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
+T 798 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
 -> w
-T 797 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
+T 799 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
 -> n
-T 798 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 94/94 MP 0/0 Hu 77 $ 527 room=C
--> n
-T 799 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
--> n
-T 800 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 5) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+T 800 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 94/94 MP 0/0 Hu 77 $ 527 room=C
 -> l
-T 801 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 5) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+T 801 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 94/94 MP 0/0 Hu 77 $ 527 room=C
+-> n
+T 802 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 6) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
+-> n
+T 803 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 5) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
 -> w
-T 802 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
+T 804 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
 -> i
-T 803 mode=inventory           Fili Goldfinder(dwa) F5@( 8, 5) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
+T 805 mode=inventory           Fili Goldfinder(dwa) F5@( 8, 5) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
 -> eat2
-T 804 mode=inventory           Fili Goldfinder(dwa) F5@( 8, 5) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
+T 806 mode=inventory           Fili Goldfinder(dwa) F5@( 8, 5) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
 -> x
-T 805 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
+T 807 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 5) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
 -> s
-T 806 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 6) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
+T 808 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 6) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
 -> s
-T 807 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 7) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
+T 809 mode=game_loop           Fili Goldfinder(dwa) F5@( 8, 7) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
 -> e
-T 808 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 94/94 MP 0/0 Hu 77 $ 527 room=C
--> s
-T 809 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
--> e
-T 810 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+T 810 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 94/94 MP 0/0 Hu 77 $ 527 room=C
 -> l
-T 811 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+T 811 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 7) HP 94/94 MP 0/0 Hu 77 $ 527 room=C
 -> s
-T 812 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 9) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
--> s
-T 813 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
--> w
-T 814 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
--> s
-T 815 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
--> w
-T 816 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
+T 812 mode=game_loop           Fili Goldfinder(dwa) F5@( 9, 8) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
 -> e
-T 817 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
--> e
-T 818 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
--> n
-T 819 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
+T 813 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 8) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+-> s
+T 814 mode=game_loop           Fili Goldfinder(dwa) F5@(10, 9) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
+-> s
+T 815 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
 -> w
-T 820 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
+T 816 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
+-> s
+T 817 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
+-> w
+T 818 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
+-> e
+T 819 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
+-> e
+T 820 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
 -> l
-T 821 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
--> s
-T 822 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
--> w
-T 823 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
--> e
-T 824 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
--> e
-T 825 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
+T 821 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
 -> n
-T 826 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
+T 822 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
 -> w
-T 827 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
+T 823 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
 -> s
-T 828 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
+T 824 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
 -> w
-T 829 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
+T 825 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
 -> e
-T 830 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
+T 826 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
+-> e
+T 827 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
+-> n
+T 828 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
+-> w
+T 829 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
+-> s
+T 830 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
 -> l
-T 831 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
--> e
-T 832 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
--> n
-T 833 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
+T 831 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
 -> w
-T 834 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
+T 832 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
+-> e
+T 833 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
+-> e
+T 834 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
+-> n
+T 835 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
+-> w
+T 836 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
 -> s
-T 835 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
+T 837 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
 -> w
-T 836 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
+T 838 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
 -> e
-T 837 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
+T 839 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
 -> e
-T 838 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
+T 840 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
+-> l
+T 841 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
 -> n
-T 839 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
+T 842 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
 -> i
-T 840 mode=inventory           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
+T 843 mode=inventory           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
 -> eat1
-T 841 mode=inventory           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
+T 844 mode=inventory           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
 -> x
-T 842 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
+T 845 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
 -> w
-T 843 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 98 $ 527 room=.
+T 846 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 98 $ 527 room=.
 -> s
-T 844 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 97 $ 527 room=.
+T 847 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 97 $ 527 room=.
 -> w
-T 845 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 96 $ 527 room=.
+T 848 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 96 $ 527 room=.
 -> e
-T 846 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 95 $ 527 room=.
+T 849 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 95 $ 527 room=.
 -> e
-T 847 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 94 $ 527 room=.
--> n
-T 848 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 93 $ 527 room=.
--> w
-T 849 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 92 $ 527 room=.
--> s
-T 850 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 91 $ 527 room=.
+T 850 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 94 $ 527 room=.
 -> l
-T 851 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 91 $ 527 room=.
--> w
-T 852 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
--> e
-T 853 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 89 $ 527 room=.
--> e
-T 854 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 88 $ 527 room=.
+T 851 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 94 $ 527 room=.
 -> n
-T 855 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 87 $ 527 room=.
+T 852 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 93 $ 527 room=.
 -> w
-T 856 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 86 $ 527 room=.
+T 853 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 92 $ 527 room=.
 -> s
-T 857 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 85 $ 527 room=.
+T 854 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 91 $ 527 room=.
 -> w
-T 858 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 84 $ 527 room=.
+T 855 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
 -> e
-T 859 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 83 $ 527 room=.
+T 856 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 89 $ 527 room=.
 -> e
-T 860 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 82 $ 527 room=.
+T 857 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 88 $ 527 room=.
+-> n
+T 858 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 87 $ 527 room=.
+-> w
+T 859 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 86 $ 527 room=.
+-> s
+T 860 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 85 $ 527 room=.
 -> l
-T 861 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 82 $ 527 room=.
--> n
-T 862 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
+T 861 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 85 $ 527 room=.
 -> w
-T 863 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
--> s
-T 864 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
--> w
-T 865 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
+T 862 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 84 $ 527 room=.
 -> e
-T 866 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 77 $ 527 room=.
+T 863 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 83 $ 527 room=.
 -> e
-T 867 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
+T 864 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 82 $ 527 room=.
 -> n
-T 868 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+T 865 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
 -> w
-T 869 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
+T 866 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
 -> s
-T 870 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
+T 867 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
+-> w
+T 868 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
+-> e
+T 869 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 77 $ 527 room=.
+-> e
+T 870 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
 -> l
-T 871 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
--> w
-T 872 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
--> e
-T 873 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
--> e
-T 874 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
+T 871 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
 -> n
-T 875 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
+T 872 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
 -> w
-T 876 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
+T 873 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
 -> s
-T 877 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
+T 874 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
 -> w
-T 878 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
+T 875 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
 -> e
-T 879 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
+T 876 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
 -> e
-T 880 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
+T 877 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
+-> n
+T 878 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
+-> w
+T 879 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
+-> s
+T 880 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
 -> l
-T 881 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
--> n
-T 882 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
+T 881 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
 -> w
-T 883 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
--> s
-T 884 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
--> w
-T 885 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
+T 882 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
 -> e
-T 886 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
+T 883 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
 -> e
-T 887 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
+T 884 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
 -> n
-T 888 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
+T 885 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
 -> w
-T 889 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
+T 886 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
 -> s
-T 890 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
+T 887 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
+-> w
+T 888 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
+-> e
+T 889 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
+-> e
+T 890 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
 -> l
-T 891 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
--> w
-T 892 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
--> e
-T 893 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
--> e
-T 894 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
+T 891 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
 -> n
-T 895 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
+T 892 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
 -> w
-T 896 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
+T 893 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
 -> s
-T 897 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
+T 894 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
+-> w
+T 895 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
+-> e
+T 896 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
+-> e
+T 897 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
+-> n
+T 898 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
+-> w
+T 899 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
+-> s
+T 900 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
 -> i
-T 898 mode=inventory           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
+T 901 mode=inventory           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
 -> eat1
-T 899 mode=inventory           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
+T 902 mode=inventory           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
 -> x
-T 900 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
+T 903 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
+-> w
+T 904 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 98 $ 527 room=.
+-> e
+T 905 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 97 $ 527 room=.
+-> e
+T 906 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 96 $ 527 room=.
+-> n
+T 907 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 95 $ 527 room=.
+-> w
+T 908 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 94 $ 527 room=.
+-> s
+T 909 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 93 $ 527 room=.
+-> w
+T 910 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 92 $ 527 room=.
 -> l
-T 901 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
--> w
-T 902 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 98 $ 527 room=.
+T 911 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 92 $ 527 room=.
 -> e
-T 903 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 97 $ 527 room=.
+T 912 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 91 $ 527 room=.
 -> e
-T 904 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 96 $ 527 room=.
+T 913 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
 -> n
-T 905 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 95 $ 527 room=.
+T 914 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 89 $ 527 room=.
 -> w
-T 906 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 94 $ 527 room=.
+T 915 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 88 $ 527 room=.
 -> s
-T 907 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 93 $ 527 room=.
+T 916 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 87 $ 527 room=.
 -> w
-T 908 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 92 $ 527 room=.
+T 917 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 86 $ 527 room=.
 -> e
-T 909 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 91 $ 527 room=.
+T 918 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 85 $ 527 room=.
 -> e
-T 910 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
+T 919 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 84 $ 527 room=.
+-> n
+T 920 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 83 $ 527 room=.
 -> l
-T 911 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
--> n
-T 912 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 89 $ 527 room=.
+T 921 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 83 $ 527 room=.
 -> w
-T 913 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 88 $ 527 room=.
+T 922 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 82 $ 527 room=.
 -> s
-T 914 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 87 $ 527 room=.
+T 923 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
 -> w
-T 915 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 86 $ 527 room=.
+T 924 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
 -> e
-T 916 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 85 $ 527 room=.
+T 925 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
 -> e
-T 917 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 84 $ 527 room=.
+T 926 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
 -> n
-T 918 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 83 $ 527 room=.
+T 927 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 77 $ 527 room=.
 -> w
-T 919 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 82 $ 527 room=.
+T 928 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
 -> s
-T 920 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
+T 929 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+-> w
+T 930 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
 -> l
-T 921 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
--> w
-T 922 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
+T 931 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
 -> e
-T 923 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
+T 932 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
 -> e
-T 924 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
+T 933 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
 -> n
-T 925 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 77 $ 527 room=.
+T 934 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
 -> w
-T 926 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
+T 935 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
 -> s
-T 927 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+T 936 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
 -> w
-T 928 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
+T 937 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
 -> e
-T 929 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
+T 938 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
 -> e
-T 930 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
+T 939 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
+-> n
+T 940 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
 -> l
-T 931 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
--> n
-T 932 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
+T 941 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
 -> w
-T 933 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
+T 942 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
 -> s
-T 934 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
+T 943 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
 -> w
-T 935 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
+T 944 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
 -> e
-T 936 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
+T 945 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
 -> e
-T 937 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
+T 946 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
 -> n
-T 938 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
+T 947 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
 -> w
-T 939 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
+T 948 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
 -> s
-T 940 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
+T 949 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
+-> w
+T 950 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
 -> l
-T 941 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
--> w
-T 942 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
+T 951 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
 -> e
-T 943 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
+T 952 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
 -> e
-T 944 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
+T 953 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
 -> n
-T 945 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
+T 954 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
 -> w
-T 946 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
+T 955 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
 -> s
-T 947 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
+T 956 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
 -> w
-T 948 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
+T 957 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
 -> e
-T 949 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
--> e
-T 950 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
--> l
-T 951 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
--> n
-T 952 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
--> w
-T 953 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
--> s
-T 954 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
--> w
-T 955 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
--> e
-T 956 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
+T 958 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
 -> i
-T 957 mode=inventory           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
+T 959 mode=inventory           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
 -> eat1
-T 958 mode=inventory           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
+T 960 mode=inventory           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
 -> x
-T 959 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
+T 961 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
 -> e
-T 960 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 98 $ 527 room=.
+T 962 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 98 $ 527 room=.
+-> n
+T 963 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 97 $ 527 room=.
+-> w
+T 964 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 96 $ 527 room=.
+-> s
+T 965 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 95 $ 527 room=.
+-> w
+T 966 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 94 $ 527 room=.
+-> e
+T 967 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 93 $ 527 room=.
+-> e
+T 968 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 92 $ 527 room=.
+-> n
+T 969 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 91 $ 527 room=.
+-> w
+T 970 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
 -> l
-T 961 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 98 $ 527 room=.
--> n
-T 962 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 97 $ 527 room=.
--> w
-T 963 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 96 $ 527 room=.
+T 971 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
 -> s
-T 964 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 95 $ 527 room=.
+T 972 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 89 $ 527 room=.
 -> w
-T 965 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 94 $ 527 room=.
+T 973 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 88 $ 527 room=.
 -> e
-T 966 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 93 $ 527 room=.
+T 974 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 87 $ 527 room=.
 -> e
-T 967 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 92 $ 527 room=.
+T 975 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 86 $ 527 room=.
 -> n
-T 968 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 91 $ 527 room=.
+T 976 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 85 $ 527 room=.
 -> w
-T 969 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
+T 977 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 84 $ 527 room=.
 -> s
-T 970 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 89 $ 527 room=.
+T 978 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 83 $ 527 room=.
+-> w
+T 979 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 82 $ 527 room=.
+-> e
+T 980 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
 -> l
-T 971 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 89 $ 527 room=.
--> w
-T 972 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 88 $ 527 room=.
+T 981 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
 -> e
-T 973 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 87 $ 527 room=.
--> e
-T 974 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 86 $ 527 room=.
+T 982 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
 -> n
-T 975 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 85 $ 527 room=.
+T 983 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
 -> w
-T 976 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 84 $ 527 room=.
+T 984 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
 -> s
-T 977 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 83 $ 527 room=.
+T 985 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 77 $ 527 room=.
 -> w
-T 978 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 82 $ 527 room=.
+T 986 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
 -> e
-T 979 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
+T 987 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
 -> e
-T 980 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
+T 988 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
 -> n
-T 981 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
+T 989 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
 -> w
-T 982 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
+T 990 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
+-> l
+T 991 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
 -> s
-T 983 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 77 $ 527 room=.
+T 992 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
 -> w
-T 984 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
+T 993 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
 -> e
-T 985 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+T 994 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
 -> e
-T 986 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
+T 995 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
 -> n
-T 987 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
+T 996 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
 -> w
-T 988 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
+T 997 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
 -> s
-T 989 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
+T 998 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
 -> w
-T 990 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
+T 999 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
 -> e
-T 991 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
+T1000 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
 -> e
-T 992 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
+T1001 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
 -> n
-T 993 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
+T1002 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
 -> w
-T 994 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
+T1003 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
 -> s
-T 995 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
+T1004 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
 -> w
-T 996 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
+T1005 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
 -> e
-T 997 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
+T1006 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
 -> e
-T 998 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
+T1007 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
 -> n
-T 999 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
+T1008 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
 -> w
-T1000 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
+T1009 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
 -> s
-T1001 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
+T1010 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
 -> w
-T1002 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
+T1011 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
 -> e
-T1003 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
+T1012 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
 -> e
-T1004 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
+T1013 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
 -> n
-T1005 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
--> w
-T1006 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
--> s
-T1007 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
--> w
-T1008 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
--> e
-T1009 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
--> e
-T1010 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
--> n
-T1011 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
+T1014 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
 -> i
-T1012 mode=inventory           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
+T1015 mode=inventory           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
 -> eat1
-T1013 mode=inventory           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
+T1016 mode=inventory           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
 -> x
-T1014 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
+T1017 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 99 $ 527 room=.
 -> w
-T1015 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 98 $ 527 room=.
+T1018 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 98 $ 527 room=.
 -> s
-T1016 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 97 $ 527 room=.
+T1019 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 97 $ 527 room=.
 -> w
-T1017 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 96 $ 527 room=.
+T1020 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 96 $ 527 room=.
 -> e
-T1018 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 95 $ 527 room=.
+T1021 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 95 $ 527 room=.
 -> e
-T1019 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 94 $ 527 room=.
+T1022 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 94 $ 527 room=.
 -> n
-T1020 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 93 $ 527 room=.
+T1023 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 93 $ 527 room=.
 -> w
-T1021 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 92 $ 527 room=.
+T1024 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 92 $ 527 room=.
 -> s
-T1022 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 91 $ 527 room=.
+T1025 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 91 $ 527 room=.
 -> w
-T1023 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
+T1026 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 90 $ 527 room=.
 -> e
-T1024 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 89 $ 527 room=.
+T1027 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 89 $ 527 room=.
 -> e
-T1025 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 88 $ 527 room=.
+T1028 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 88 $ 527 room=.
 -> n
-T1026 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 87 $ 527 room=.
+T1029 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 87 $ 527 room=.
 -> w
-T1027 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 86 $ 527 room=.
+T1030 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 86 $ 527 room=.
 -> s
-T1028 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 85 $ 527 room=.
+T1031 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 85 $ 527 room=.
 -> w
-T1029 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 84 $ 527 room=.
+T1032 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 84 $ 527 room=.
 -> e
-T1030 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 83 $ 527 room=.
+T1033 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 83 $ 527 room=.
 -> e
-T1031 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 82 $ 527 room=.
+T1034 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 82 $ 527 room=.
 -> n
-T1032 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
+T1035 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 81 $ 527 room=.
 -> w
-T1033 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
+T1036 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 80 $ 527 room=.
 -> s
-T1034 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
+T1037 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 79 $ 527 room=.
 -> w
-T1035 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
+T1038 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 78 $ 527 room=.
 -> e
-T1036 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 77 $ 527 room=.
+T1039 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 77 $ 527 room=.
 -> e
-T1037 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
+T1040 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 76 $ 527 room=.
 -> n
-T1038 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
+T1041 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 75 $ 527 room=.
 -> w
-T1039 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
+T1042 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 74 $ 527 room=.
 -> s
-T1040 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
+T1043 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 73 $ 527 room=.
 -> w
-T1041 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
+T1044 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 72 $ 527 room=.
 -> e
-T1042 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
+T1045 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 71 $ 527 room=.
 -> e
-T1043 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
+T1046 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 70 $ 527 room=.
 -> n
-T1044 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
+T1047 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 69 $ 527 room=.
 -> w
-T1045 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
+T1048 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 68 $ 527 room=.
 -> s
-T1046 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
+T1049 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 67 $ 527 room=.
 -> w
-T1047 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
+T1050 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 66 $ 527 room=.
 -> e
-T1048 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
+T1051 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 65 $ 527 room=.
 -> e
-T1049 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
+T1052 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 64 $ 527 room=.
 -> n
-T1050 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
+T1053 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 63 $ 527 room=.
 -> w
-T1051 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
+T1054 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 62 $ 527 room=.
 -> s
-T1052 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
+T1055 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 61 $ 527 room=.
 -> w
-T1053 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
+T1056 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 60 $ 527 room=.
 -> e
-T1054 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
+T1057 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 59 $ 527 room=.
 -> e
-T1055 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
+T1058 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 58 $ 527 room=.
 -> n
-T1056 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
+T1059 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 57 $ 527 room=.
 -> w
-T1057 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
+T1060 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 56 $ 527 room=.
 -> s
-T1058 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
+T1061 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 55 $ 527 room=.
 -> w
-T1059 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
+T1062 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 54 $ 527 room=.
 -> e
-T1060 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
+T1063 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 53 $ 527 room=.
 -> e
-T1061 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
+T1064 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 52 $ 527 room=.
 -> n
-T1062 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
+T1065 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 51 $ 527 room=.
 -> w
-T1063 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
+T1066 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 50 $ 527 room=.
 -> s
-T1064 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
+T1067 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 49 $ 527 room=.
 -> w
-T1065 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 48 $ 527 room=.
+T1068 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 48 $ 527 room=.
 -> e
-T1066 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 47 $ 527 room=.
+T1069 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 47 $ 527 room=.
 -> e
-T1067 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 46 $ 527 room=.
+T1070 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 46 $ 527 room=.
 -> n
-T1068 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 45 $ 527 room=.
+T1071 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 45 $ 527 room=.
 -> w
-T1069 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 44 $ 527 room=.
+T1072 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 44 $ 527 room=.
 -> s
-T1070 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 43 $ 527 room=.
+T1073 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 43 $ 527 room=.
 -> w
-T1071 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 42 $ 527 room=.
+T1074 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 42 $ 527 room=.
 -> e
-T1072 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 41 $ 527 room=.
+T1075 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 41 $ 527 room=.
 -> e
-T1073 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 40 $ 527 room=.
+T1076 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 40 $ 527 room=.
 -> n
-T1074 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 39 $ 527 room=.
+T1077 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 39 $ 527 room=.
 -> w
-T1075 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 38 $ 527 room=.
+T1078 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 38 $ 527 room=.
 -> s
-T1076 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 37 $ 527 room=.
+T1079 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 37 $ 527 room=.
 -> w
-T1077 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 36 $ 527 room=.
+T1080 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 36 $ 527 room=.
 -> e
-T1078 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 35 $ 527 room=.
+T1081 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 35 $ 527 room=.
 -> e
-T1079 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 34 $ 527 room=.
+T1082 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 34 $ 527 room=.
 -> n
-T1080 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 33 $ 527 room=.
+T1083 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 33 $ 527 room=.
 -> w
-T1081 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 32 $ 527 room=.
+T1084 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 32 $ 527 room=.
 -> s
-T1082 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 31 $ 527 room=.
+T1085 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 31 $ 527 room=.
 -> w
-T1083 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 30 $ 527 room=.
+T1086 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 30 $ 527 room=.
 -> e
-T1084 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 29 $ 527 room=.
+T1087 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 29 $ 527 room=.
 -> e
-T1085 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 28 $ 527 room=.
+T1088 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 28 $ 527 room=.
 -> n
-T1086 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 27 $ 527 room=.
+T1089 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 27 $ 527 room=.
 -> w
-T1087 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 26 $ 527 room=.
+T1090 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 26 $ 527 room=.
 -> s
-T1088 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 25 $ 527 room=.
+T1091 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 25 $ 527 room=.
 -> w
-T1089 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 24 $ 527 room=.
+T1092 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 24 $ 527 room=.
 -> e
-T1090 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 23 $ 527 room=.
+T1093 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 23 $ 527 room=.
 -> e
-T1091 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 22 $ 527 room=.
+T1094 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 22 $ 527 room=.
 -> n
-T1092 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 21 $ 527 room=.
+T1095 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 21 $ 527 room=.
 -> w
-T1093 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 20 $ 527 room=.
+T1096 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 20 $ 527 room=.
 -> s
-T1094 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 19 $ 527 room=.
+T1097 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 19 $ 527 room=.
 -> w
-T1095 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 18 $ 527 room=.
+T1098 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 18 $ 527 room=.
 -> e
-T1096 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 17 $ 527 room=.
+T1099 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 17 $ 527 room=.
 -> e
-T1097 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 16 $ 527 room=.
+T1100 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 16 $ 527 room=.
 -> n
-T1098 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 15 $ 527 room=.
+T1101 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu 15 $ 527 room=.
 -> w
-T1099 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 14 $ 527 room=.
+T1102 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu 14 $ 527 room=.
 -> s
-T1100 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 13 $ 527 room=.
+T1103 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 13 $ 527 room=.
 -> w
-T1101 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 12 $ 527 room=.
+T1104 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu 12 $ 527 room=.
 -> e
-T1102 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 11 $ 527 room=.
+T1105 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu 11 $ 527 room=.
 -> e
-T1103 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 10 $ 527 room=.
+T1106 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu 10 $ 527 room=.
 -> n
-T1104 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu  9 $ 527 room=.
+T1107 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu  9 $ 527 room=.
 -> w
-T1105 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu  8 $ 527 room=.
+T1108 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu  8 $ 527 room=.
 -> s
-T1106 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu  7 $ 527 room=.
+T1109 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu  7 $ 527 room=.
 -> w
-T1107 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu  6 $ 527 room=.
+T1110 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 94/94 MP 0/0 Hu  6 $ 527 room=.
 -> e
-T1108 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu  5 $ 527 room=.
+T1111 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu  5 $ 527 room=.
 -> e
-T1109 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu  4 $ 527 room=.
+T1112 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 94/94 MP 0/0 Hu  4 $ 527 room=.
 -> n
-T1110 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu  3 $ 527 room=.
+T1113 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 94/94 MP 0/0 Hu  3 $ 527 room=.
 -> w
-T1111 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu  2 $ 527 room=.
+T1114 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 94/94 MP 0/0 Hu  2 $ 527 room=.
 -> s
-T1112 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu  1 $ 527 room=.
+T1115 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 94/94 MP 0/0 Hu  1 $ 527 room=.
 -> w
-T1113 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 92/94 MP 0/0 Hu  0 $ 527 room=.
+T1116 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 92/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1114 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 90/94 MP 0/0 Hu  0 $ 527 room=.
+T1117 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 90/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1115 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 88/94 MP 0/0 Hu  0 $ 527 room=.
+T1118 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 88/94 MP 0/0 Hu  0 $ 527 room=.
 -> n
-T1116 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 86/94 MP 0/0 Hu  0 $ 527 room=.
+T1119 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 86/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1117 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 84/94 MP 0/0 Hu  0 $ 527 room=.
+T1120 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 84/94 MP 0/0 Hu  0 $ 527 room=.
 -> s
-T1118 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 82/94 MP 0/0 Hu  0 $ 527 room=.
+T1121 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 82/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1119 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 80/94 MP 0/0 Hu  0 $ 527 room=.
+T1122 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 80/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1120 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 78/94 MP 0/0 Hu  0 $ 527 room=.
+T1123 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 78/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1121 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 76/94 MP 0/0 Hu  0 $ 527 room=.
+T1124 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 76/94 MP 0/0 Hu  0 $ 527 room=.
 -> n
-T1122 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 74/94 MP 0/0 Hu  0 $ 527 room=.
+T1125 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 74/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1123 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 72/94 MP 0/0 Hu  0 $ 527 room=.
+T1126 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 72/94 MP 0/0 Hu  0 $ 527 room=.
 -> s
-T1124 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 70/94 MP 0/0 Hu  0 $ 527 room=.
+T1127 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 70/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1125 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 68/94 MP 0/0 Hu  0 $ 527 room=.
+T1128 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 68/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1126 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 66/94 MP 0/0 Hu  0 $ 527 room=.
+T1129 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 66/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1127 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 64/94 MP 0/0 Hu  0 $ 527 room=.
+T1130 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 64/94 MP 0/0 Hu  0 $ 527 room=.
 -> n
-T1128 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 62/94 MP 0/0 Hu  0 $ 527 room=.
+T1131 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 62/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1129 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 60/94 MP 0/0 Hu  0 $ 527 room=.
+T1132 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 60/94 MP 0/0 Hu  0 $ 527 room=.
 -> s
-T1130 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 58/94 MP 0/0 Hu  0 $ 527 room=.
+T1133 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 58/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1131 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 56/94 MP 0/0 Hu  0 $ 527 room=.
+T1134 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 56/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1132 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 54/94 MP 0/0 Hu  0 $ 527 room=.
+T1135 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 54/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1133 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 52/94 MP 0/0 Hu  0 $ 527 room=.
+T1136 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 52/94 MP 0/0 Hu  0 $ 527 room=.
 -> n
-T1134 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 50/94 MP 0/0 Hu  0 $ 527 room=.
+T1137 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 50/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1135 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 48/94 MP 0/0 Hu  0 $ 527 room=.
+T1138 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 48/94 MP 0/0 Hu  0 $ 527 room=.
 -> s
-T1136 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 46/94 MP 0/0 Hu  0 $ 527 room=.
+T1139 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 46/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1137 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 44/94 MP 0/0 Hu  0 $ 527 room=.
+T1140 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 44/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1138 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 42/94 MP 0/0 Hu  0 $ 527 room=.
+T1141 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 42/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1139 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 40/94 MP 0/0 Hu  0 $ 527 room=.
+T1142 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 40/94 MP 0/0 Hu  0 $ 527 room=.
 -> n
-T1140 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 38/94 MP 0/0 Hu  0 $ 527 room=.
+T1143 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 38/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1141 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 36/94 MP 0/0 Hu  0 $ 527 room=.
+T1144 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 36/94 MP 0/0 Hu  0 $ 527 room=.
 -> s
-T1142 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 34/94 MP 0/0 Hu  0 $ 527 room=.
+T1145 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 34/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1143 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 32/94 MP 0/0 Hu  0 $ 527 room=.
+T1146 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 32/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1144 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 30/94 MP 0/0 Hu  0 $ 527 room=.
+T1147 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 30/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1145 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 28/94 MP 0/0 Hu  0 $ 527 room=.
+T1148 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 28/94 MP 0/0 Hu  0 $ 527 room=.
 -> n
-T1146 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 26/94 MP 0/0 Hu  0 $ 527 room=.
+T1149 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 26/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1147 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 24/94 MP 0/0 Hu  0 $ 527 room=.
+T1150 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 24/94 MP 0/0 Hu  0 $ 527 room=.
 -> s
-T1148 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 22/94 MP 0/0 Hu  0 $ 527 room=.
+T1151 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 22/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1149 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 20/94 MP 0/0 Hu  0 $ 527 room=.
+T1152 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 20/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1150 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 18/94 MP 0/0 Hu  0 $ 527 room=.
+T1153 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 18/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1151 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 16/94 MP 0/0 Hu  0 $ 527 room=.
+T1154 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 16/94 MP 0/0 Hu  0 $ 527 room=.
 -> n
-T1152 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 14/94 MP 0/0 Hu  0 $ 527 room=.
+T1155 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 14/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1153 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 12/94 MP 0/0 Hu  0 $ 527 room=.
+T1156 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,10) HP 12/94 MP 0/0 Hu  0 $ 527 room=.
 -> s
-T1154 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 10/94 MP 0/0 Hu  0 $ 527 room=.
+T1157 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 10/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1155 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 8/94 MP 0/0 Hu  0 $ 527 room=.
+T1158 mode=game_loop           Fili Goldfinder(dwa) F5@( 8,11) HP 8/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1156 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 6/94 MP 0/0 Hu  0 $ 527 room=.
+T1159 mode=game_loop           Fili Goldfinder(dwa) F5@( 9,11) HP 6/94 MP 0/0 Hu  0 $ 527 room=.
 -> e
-T1157 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 4/94 MP 0/0 Hu  0 $ 527 room=.
+T1160 mode=game_loop           Fili Goldfinder(dwa) F5@(10,11) HP 4/94 MP 0/0 Hu  0 $ 527 room=.
 -> n
-T1158 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 2/94 MP 0/0 Hu  0 $ 527 room=.
+T1161 mode=game_loop           Fili Goldfinder(dwa) F5@(10,10) HP 2/94 MP 0/0 Hu  0 $ 527 room=.
 -> w
-T1159 mode=death_screen        Fili Goldfinder(dwa) F5@( 9,10) HP 0/94 MP 0/0 Hu  0 $ 527 room=.
+T1162 mode=death_screen        Fili Goldfinder(dwa) F5@( 9,10) HP 0/94 MP 0/0 Hu  0 $ 527 room=.
 
-=== run finished: turns=1159 floor=5 hp=0/94 gold=527 alive=False mode=death_screen ===
+=== run finished: turns=1162 floor=5 hp=0/94 gold=527 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00500_dwarf.html

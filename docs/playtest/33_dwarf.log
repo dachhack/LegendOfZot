@@ -544,9 +544,9 @@ T 263 mode=game_loop           Gimli Runesinger(dwa) F2@( 9,13) HP 74/74 MP 0/0 
 -> n
 T 264 mode=combat_mode         Gimli Runesinger(dwa) F2@( 9,12) HP 74/74 MP 0/0 Hu 69 $ 329 room=M vs Goblin(L1 HP30/30)
 -> a
-T 265 mode=combat_mode         Gimli Runesinger(dwa) F2@( 9,12) HP 73/74 MP 0/0 Hu 69 $ 329 room=M vs Goblin(L1 HP2/30)
+T 265 mode=combat_mode         Gimli Runesinger(dwa) F2@( 9,12) HP 73/74 MP 0/0 Hu 69 $ 329 room=M vs Goblin(L1 HP1/30)
 -> a
-T 266 mode=combat_mode         Gimli Runesinger(dwa) F2@( 9,12) HP 72/74 MP 0/0 Hu 69 $ 329 room=M vs Goblin(L1 HP2/30)
+T 266 mode=combat_mode         Gimli Runesinger(dwa) F2@( 9,12) HP 72/74 MP 0/0 Hu 69 $ 329 room=M vs Goblin(L1 HP1/30)
 -> a
 T 267 mode=combat_victory      Gimli Runesinger(dwa) F2@( 9,12) HP 71/74 MP 0/0 Hu 69 $ 349 room=.
 -> back
@@ -714,11 +714,11 @@ T 348 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,15) HP 74/74 MP 0/0 
 -> a
 T 349 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,15) HP 74/74 MP 0/0 Hu 49 $ 399 room=M vs Zombie(L1 HP35/35)
 -> a
-T 350 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,15) HP 73/74 MP 0/0 Hu 49 $ 399 room=M vs Zombie(L1 HP6/35)
+T 350 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,15) HP 73/74 MP 0/0 Hu 49 $ 399 room=M vs Zombie(L1 HP5/35)
 -> a
-T 351 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,15) HP 72/74 MP 0/0 Hu 49 $ 399 room=M vs Zombie(L1 HP6/35)
+T 351 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,15) HP 72/74 MP 0/0 Hu 49 $ 399 room=M vs Zombie(L1 HP5/35)
 -> a
-T 352 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,15) HP 71/74 MP 0/0 Hu 49 $ 399 room=M vs Zombie(L1 HP6/35)
+T 352 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,15) HP 71/74 MP 0/0 Hu 49 $ 399 room=M vs Zombie(L1 HP5/35)
 -> a
 T 353 mode=combat_victory      Gimli Runesinger(dwa) F2@( 1,15) HP 70/74 MP 0/0 Hu 49 $ 411 room=.
 -> back
@@ -742,13 +742,13 @@ T 362 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 74/74 MP 0/0 
 -> a
 T 363 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 73/74 MP 0/0 Hu 98 $ 411 room=M vs Bugbear(L1 HP35/35)
 -> a
-T 364 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 72/74 MP 0/0 Hu 98 $ 411 room=M vs Bugbear(L1 HP10/35)
+T 364 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 72/74 MP 0/0 Hu 98 $ 411 room=M vs Bugbear(L1 HP9/35)
 -> f
-T 365 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 71/74 MP 0/0 Hu 98 $ 411 room=M vs Bugbear(L1 HP10/35)
+T 365 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 71/74 MP 0/0 Hu 98 $ 411 room=M vs Bugbear(L1 HP9/35)
 -> a
-T 366 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 70/74 MP 0/0 Hu 98 $ 411 room=M vs Bugbear(L1 HP10/35)
+T 366 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 70/74 MP 0/0 Hu 98 $ 411 room=M vs Bugbear(L1 HP9/35)
 -> a
-T 367 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 69/74 MP 0/0 Hu 98 $ 411 room=M vs Bugbear(L1 HP10/35)
+T 367 mode=combat_mode         Gimli Runesinger(dwa) F2@( 1,16) HP 69/74 MP 0/0 Hu 98 $ 411 room=M vs Bugbear(L1 HP9/35)
 -> a
 T 368 mode=combat_victory      Gimli Runesinger(dwa) F2@( 1,16) HP 68/74 MP 0/0 Hu 98 $ 427 room=.
 -> back
@@ -1386,11 +1386,11 @@ T 684 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 81/84 MP 0/0 
 -> a
 T 685 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 78/84 MP 0/0 Hu 60 $ 830 room=M vs Orc(L2 HP50/50)
 -> a
-T 686 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 75/84 MP 0/0 Hu 60 $ 830 room=M vs Orc(L2 HP25/50)
+T 686 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 75/84 MP 0/0 Hu 60 $ 830 room=M vs Orc(L2 HP24/50)
 -> a
-T 687 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 72/84 MP 0/0 Hu 60 $ 830 room=M vs Orc(L2 HP25/50)
+T 687 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 72/84 MP 0/0 Hu 60 $ 830 room=M vs Orc(L2 HP24/50)
 -> a
-T 688 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 69/84 MP 0/0 Hu 60 $ 830 room=M vs Orc(L2 HP25/50)
+T 688 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 69/84 MP 0/0 Hu 60 $ 830 room=M vs Orc(L2 HP24/50)
 -> f
 T 689 mode=flee_direction_mode Gimli Runesinger(dwa) F3@(13,14) HP 69/84 MP 0/0 Hu 60 $ 830 room=M
 -> e
@@ -1472,7 +1472,7 @@ T 727 mode=game_loop           Gimli Runesinger(dwa) F3@(13,12) HP 84/84 MP 0/0 
 -> s
 T 728 mode=game_loop           Gimli Runesinger(dwa) F3@(13,13) HP 84/84 MP 0/0 Hu 96 $ 839 room=.
 -> s
-T 729 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 84/84 MP 0/0 Hu 95 $ 839 room=M vs Orc(L2 HP25/50)
+T 729 mode=combat_mode         Gimli Runesinger(dwa) F3@(13,14) HP 84/84 MP 0/0 Hu 95 $ 839 room=M vs Orc(L2 HP24/50)
 -> a
 T 730 mode=combat_victory      Gimli Runesinger(dwa) F3@(13,14) HP 84/84 MP 0/0 Hu 95 $ 863 room=.
 -> back
@@ -1510,13 +1510,13 @@ T 746 mode=game_loop           Gimli Runesinger(dwa) F4@( 2, 1) HP 84/84 MP 0/0 
 -> e
 T 747 mode=combat_mode         Gimli Runesinger(dwa) F4@( 3, 1) HP 84/84 MP 0/0 Hu 91 $ 863 room=M vs Zombie(L3 HP37/37)
 -> a
-T 748 mode=combat_mode         Gimli Runesinger(dwa) F4@( 3, 1) HP 84/84 MP 0/0 Hu 91 $ 863 room=M vs Zombie(L3 HP8/37)
+T 748 mode=combat_mode         Gimli Runesinger(dwa) F4@( 3, 1) HP 84/84 MP 0/0 Hu 91 $ 863 room=M vs Zombie(L3 HP7/37)
 -> a
-T 749 mode=combat_mode         Gimli Runesinger(dwa) F4@( 3, 1) HP 83/84 MP 0/0 Hu 91 $ 863 room=M vs Zombie(L3 HP8/37)
+T 749 mode=combat_mode         Gimli Runesinger(dwa) F4@( 3, 1) HP 83/84 MP 0/0 Hu 91 $ 863 room=M vs Zombie(L3 HP7/37)
 -> a
-T 750 mode=combat_mode         Gimli Runesinger(dwa) F4@( 3, 1) HP 82/84 MP 0/0 Hu 91 $ 863 room=M vs Zombie(L3 HP8/37)
+T 750 mode=combat_mode         Gimli Runesinger(dwa) F4@( 3, 1) HP 82/84 MP 0/0 Hu 91 $ 863 room=M vs Zombie(L3 HP7/37)
 -> a
-T 751 mode=combat_mode         Gimli Runesinger(dwa) F4@( 3, 1) HP 81/84 MP 0/0 Hu 91 $ 863 room=M vs Zombie(L3 HP8/37)
+T 751 mode=combat_mode         Gimli Runesinger(dwa) F4@( 3, 1) HP 81/84 MP 0/0 Hu 91 $ 863 room=M vs Zombie(L3 HP7/37)
 -> a
 T 752 mode=combat_victory      Gimli Runesinger(dwa) F4@( 3, 1) HP 80/84 MP 0/0 Hu 91 $ 903 room=.
 -> back

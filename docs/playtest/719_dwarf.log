@@ -1535,1164 +1535,816 @@ T 758 mode=inventory           Nori Runesinger(dwa) F2@(16, 5) HP 74/74 MP 0/0 H
 T 759 mode=upgrade_scroll_mode Nori Runesinger(dwa) F2@(16, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
 -> 1
 T 760 mode=inventory           Nori Runesinger(dwa) F2@(16, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
--> e5
-T 761 mode=inventory           Nori Runesinger(dwa) F2@(16, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
 -> x
-T 762 mode=game_loop           Nori Runesinger(dwa) F2@(16, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
+T 761 mode=game_loop           Nori Runesinger(dwa) F2@(16, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
 -> n
-T 763 mode=game_loop           Nori Runesinger(dwa) F2@(16, 4) HP 74/74 MP 0/0 Hu 98 $ 104 room=.
+T 762 mode=game_loop           Nori Runesinger(dwa) F2@(16, 4) HP 74/74 MP 0/0 Hu 98 $ 104 room=.
 -> n
-T 764 mode=altar_mode          Nori Runesinger(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 97 $ 104 room=A
+T 763 mode=altar_mode          Nori Runesinger(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 97 $ 104 room=A
 -> pray
-T 765 mode=game_loop           Nori Runesinger(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 97 $ 104 room=.
+T 764 mode=game_loop           Nori Runesinger(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 97 $ 104 room=.
 -> n
+T 765 mode=game_loop           Nori Runesinger(dwa) F2@(16, 2) HP 74/74 MP 0/0 Hu 96 $ 104 room=.
+-> l
 T 766 mode=game_loop           Nori Runesinger(dwa) F2@(16, 2) HP 74/74 MP 0/0 Hu 96 $ 104 room=.
--> l
-T 767 mode=game_loop           Nori Runesinger(dwa) F2@(16, 2) HP 74/74 MP 0/0 Hu 96 $ 104 room=.
 -> n
+T 767 mode=game_loop           Nori Runesinger(dwa) F2@(16, 1) HP 74/74 MP 0/0 Hu 95 $ 104 room=.
+-> l
 T 768 mode=game_loop           Nori Runesinger(dwa) F2@(16, 1) HP 74/74 MP 0/0 Hu 95 $ 104 room=.
+-> e
+T 769 mode=game_loop           Nori Runesinger(dwa) F2@(17, 1) HP 74/74 MP 0/0 Hu 94 $ 104 room=.
+-> e
+T 770 mode=game_loop           Nori Runesinger(dwa) F2@(18, 1) HP 74/74 MP 0/0 Hu 93 $ 104 room=.
+-> s
+T 771 mode=game_loop           Nori Runesinger(dwa) F2@(18, 2) HP 74/74 MP 0/0 Hu 92 $ 104 room=.
+-> n
+T 772 mode=game_loop           Nori Runesinger(dwa) F2@(18, 1) HP 74/74 MP 0/0 Hu 91 $ 104 room=.
+-> s
+T 773 mode=game_loop           Nori Runesinger(dwa) F2@(18, 2) HP 74/74 MP 0/0 Hu 90 $ 104 room=.
+-> n
+T 774 mode=game_loop           Nori Runesinger(dwa) F2@(18, 1) HP 74/74 MP 0/0 Hu 89 $ 104 room=.
+-> w
+T 775 mode=game_loop           Nori Runesinger(dwa) F2@(17, 1) HP 74/74 MP 0/0 Hu 88 $ 104 room=.
+-> w
+T 776 mode=game_loop           Nori Runesinger(dwa) F2@(16, 1) HP 74/74 MP 0/0 Hu 87 $ 104 room=.
+-> w
+T 777 mode=game_loop           Nori Runesinger(dwa) F2@(15, 1) HP 74/74 MP 0/0 Hu 86 $ 104 room=.
+-> w
+T 778 mode=game_loop           Nori Runesinger(dwa) F2@(14, 1) HP 74/74 MP 0/0 Hu 85 $ 104 room=.
+-> w
+T 779 mode=game_loop           Nori Runesinger(dwa) F2@(13, 1) HP 74/74 MP 0/0 Hu 84 $ 104 room=.
+-> w
+T 780 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 83 $ 104 room=.
+-> w
+T 781 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 82 $ 104 room=.
+-> s
+T 782 mode=garden_mode         Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 81 $ 104 room=G
+-> h
+T 783 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 81 $ 104 room=.
+-> s
+T 784 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 80 $ 104 room=D
+-> s
+T 785 mode=game_loop           Nori Runesinger(dwa) F2@(11, 4) HP 74/74 MP 0/0 Hu 79 $ 104 room=.
+-> w
+T 786 mode=garden_mode         Nori Runesinger(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 78 $ 104 room=G
+-> h
+T 787 mode=game_loop           Nori Runesinger(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 78 $ 104 room=.
+-> w
+T 788 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 4) HP 74/74 MP 0/0 Hu 77 $ 104 room=.
+-> n
+T 789 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 76 $ 104 room=.
 -> l
-T 769 mode=game_loop           Nori Runesinger(dwa) F2@(16, 1) HP 74/74 MP 0/0 Hu 95 $ 104 room=.
--> e
-T 770 mode=game_loop           Nori Runesinger(dwa) F2@(17, 1) HP 74/74 MP 0/0 Hu 94 $ 104 room=.
--> e
-T 771 mode=game_loop           Nori Runesinger(dwa) F2@(18, 1) HP 74/74 MP 0/0 Hu 93 $ 104 room=.
--> s
-T 772 mode=game_loop           Nori Runesinger(dwa) F2@(18, 2) HP 74/74 MP 0/0 Hu 92 $ 104 room=.
--> n
-T 773 mode=game_loop           Nori Runesinger(dwa) F2@(18, 1) HP 74/74 MP 0/0 Hu 91 $ 104 room=.
--> s
-T 774 mode=game_loop           Nori Runesinger(dwa) F2@(18, 2) HP 74/74 MP 0/0 Hu 90 $ 104 room=.
--> n
-T 775 mode=game_loop           Nori Runesinger(dwa) F2@(18, 1) HP 74/74 MP 0/0 Hu 89 $ 104 room=.
--> w
-T 776 mode=game_loop           Nori Runesinger(dwa) F2@(17, 1) HP 74/74 MP 0/0 Hu 88 $ 104 room=.
--> w
-T 777 mode=game_loop           Nori Runesinger(dwa) F2@(16, 1) HP 74/74 MP 0/0 Hu 87 $ 104 room=.
--> w
-T 778 mode=game_loop           Nori Runesinger(dwa) F2@(15, 1) HP 74/74 MP 0/0 Hu 86 $ 104 room=.
--> w
-T 779 mode=game_loop           Nori Runesinger(dwa) F2@(14, 1) HP 74/74 MP 0/0 Hu 85 $ 104 room=.
--> w
-T 780 mode=game_loop           Nori Runesinger(dwa) F2@(13, 1) HP 74/74 MP 0/0 Hu 84 $ 104 room=.
--> w
-T 781 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 83 $ 104 room=.
--> w
-T 782 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 82 $ 104 room=.
--> s
-T 783 mode=garden_mode         Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 81 $ 104 room=G
--> h
-T 784 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 81 $ 104 room=.
--> s
-T 785 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 80 $ 104 room=D
--> s
-T 786 mode=game_loop           Nori Runesinger(dwa) F2@(11, 4) HP 74/74 MP 0/0 Hu 79 $ 104 room=.
--> w
-T 787 mode=garden_mode         Nori Runesinger(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 78 $ 104 room=G
--> h
-T 788 mode=game_loop           Nori Runesinger(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 78 $ 104 room=.
--> w
-T 789 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 4) HP 74/74 MP 0/0 Hu 77 $ 104 room=.
--> n
 T 790 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 76 $ 104 room=.
--> l
-T 791 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 3) HP 74/74 MP 0/0 Hu 76 $ 104 room=.
 -> w
-T 792 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 3) HP 74/74 MP 0/0 Hu 75 $ 104 room=.
+T 791 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 3) HP 74/74 MP 0/0 Hu 75 $ 104 room=.
 -> s
-T 793 mode=chest_mode          Nori Runesinger(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 74 $ 104 room=C
+T 792 mode=chest_mode          Nori Runesinger(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 74 $ 104 room=C
 -> o
+T 793 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 74 $ 104 room=.
+-> l
 T 794 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 74 $ 104 room=.
--> l
-T 795 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 74 $ 104 room=.
 -> s
-T 796 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 5) HP 74/74 MP 0/0 Hu 73 $ 104 room=.
+T 795 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 5) HP 74/74 MP 0/0 Hu 73 $ 104 room=.
 -> n
-T 797 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 72 $ 104 room=.
+T 796 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 4) HP 74/74 MP 0/0 Hu 72 $ 104 room=.
 -> e
-T 798 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 4) HP 74/74 MP 0/0 Hu 71 $ 104 room=.
+T 797 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 4) HP 74/74 MP 0/0 Hu 71 $ 104 room=.
 -> e
-T 799 mode=game_loop           Nori Runesinger(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 70 $ 104 room=.
+T 798 mode=game_loop           Nori Runesinger(dwa) F2@(10, 4) HP 74/74 MP 0/0 Hu 70 $ 104 room=.
 -> s
-T 800 mode=game_loop           Nori Runesinger(dwa) F2@(10, 5) HP 74/74 MP 0/0 Hu 69 $ 104 room=.
+T 799 mode=game_loop           Nori Runesinger(dwa) F2@(10, 5) HP 74/74 MP 0/0 Hu 69 $ 104 room=.
 -> s
-T 801 mode=game_loop           Nori Runesinger(dwa) F2@(10, 6) HP 74/74 MP 0/0 Hu 68 $ 104 room=.
+T 800 mode=game_loop           Nori Runesinger(dwa) F2@(10, 6) HP 74/74 MP 0/0 Hu 68 $ 104 room=.
 -> s
-T 802 mode=game_loop           Nori Runesinger(dwa) F2@(10, 7) HP 74/74 MP 0/0 Hu 67 $ 104 room=.
+T 801 mode=game_loop           Nori Runesinger(dwa) F2@(10, 7) HP 74/74 MP 0/0 Hu 67 $ 104 room=.
 -> s
-T 803 mode=game_loop           Nori Runesinger(dwa) F2@(10, 8) HP 74/74 MP 0/0 Hu 66 $ 104 room=.
+T 802 mode=game_loop           Nori Runesinger(dwa) F2@(10, 8) HP 74/74 MP 0/0 Hu 66 $ 104 room=.
 -> w
-T 804 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 8) HP 74/74 MP 0/0 Hu 65 $ 104 room=.
+T 803 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 8) HP 74/74 MP 0/0 Hu 65 $ 104 room=.
 -> w
-T 805 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 64 $ 104 room=.
+T 804 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 64 $ 104 room=.
 -> w
+T 805 mode=game_loop           Nori Runesinger(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 63 $ 104 room=.
+-> l
 T 806 mode=game_loop           Nori Runesinger(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 63 $ 104 room=.
--> l
-T 807 mode=game_loop           Nori Runesinger(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 63 $ 104 room=.
 -> s
-T 808 mode=game_loop           Nori Runesinger(dwa) F2@( 7, 9) HP 74/74 MP 0/0 Hu 62 $ 104 room=.
+T 807 mode=game_loop           Nori Runesinger(dwa) F2@( 7, 9) HP 74/74 MP 0/0 Hu 62 $ 104 room=.
 -> e
-T 809 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 9) HP 74/74 MP 0/0 Hu 61 $ 104 room=.
+T 808 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 9) HP 74/74 MP 0/0 Hu 61 $ 104 room=.
 -> e
-T 810 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 9) HP 74/74 MP 0/0 Hu 60 $ 104 room=.
+T 809 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 9) HP 74/74 MP 0/0 Hu 60 $ 104 room=.
 -> n
-T 811 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 8) HP 74/74 MP 0/0 Hu 59 $ 104 room=.
+T 810 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 8) HP 74/74 MP 0/0 Hu 59 $ 104 room=.
 -> w
-T 812 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 58 $ 104 room=.
+T 811 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 58 $ 104 room=.
 -> w
-T 813 mode=game_loop           Nori Runesinger(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 57 $ 104 room=.
+T 812 mode=game_loop           Nori Runesinger(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 57 $ 104 room=.
 -> w
-T 814 mode=game_loop           Nori Runesinger(dwa) F2@( 6, 8) HP 74/74 MP 0/0 Hu 56 $ 104 room=.
+T 813 mode=game_loop           Nori Runesinger(dwa) F2@( 6, 8) HP 74/74 MP 0/0 Hu 56 $ 104 room=.
 -> w
+T 814 mode=game_loop           Nori Runesinger(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 55 $ 104 room=.
+-> l
 T 815 mode=game_loop           Nori Runesinger(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 55 $ 104 room=.
--> l
-T 816 mode=game_loop           Nori Runesinger(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 55 $ 104 room=.
 -> n
+T 816 mode=game_loop           Nori Runesinger(dwa) F2@( 5, 7) HP 74/74 MP 0/0 Hu 54 $ 104 room=.
+-> l
 T 817 mode=game_loop           Nori Runesinger(dwa) F2@( 5, 7) HP 74/74 MP 0/0 Hu 54 $ 104 room=.
--> l
-T 818 mode=game_loop           Nori Runesinger(dwa) F2@( 5, 7) HP 74/74 MP 0/0 Hu 54 $ 104 room=.
 -> w
+T 818 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 7) HP 74/74 MP 0/0 Hu 53 $ 104 room=.
+-> l
 T 819 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 7) HP 74/74 MP 0/0 Hu 53 $ 104 room=.
--> l
-T 820 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 7) HP 74/74 MP 0/0 Hu 53 $ 104 room=.
--> l
-T 821 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 7) HP 74/74 MP 0/0 Hu 53 $ 104 room=.
 -> n
-T 822 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 52 $ 104 room=.
+T 820 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 52 $ 104 room=.
 -> l
-T 823 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 52 $ 104 room=.
+T 821 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 52 $ 104 room=.
 -> w
-T 824 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 51 $ 104 room=.
+T 822 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 51 $ 104 room=.
 -> l
-T 825 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 51 $ 104 room=.
+T 823 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 51 $ 104 room=.
 -> n
-T 826 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 50 $ 104 room=.
+T 824 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 50 $ 104 room=.
 -> l
-T 827 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 50 $ 104 room=.
+T 825 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 50 $ 104 room=.
 -> w
-T 828 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 49 $ 104 room=.
+T 826 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 49 $ 104 room=.
 -> i
-T 829 mode=inventory           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 49 $ 104 room=.
+T 827 mode=inventory           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 49 $ 104 room=.
 -> eat1
-T 830 mode=inventory           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
+T 828 mode=inventory           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
 -> x
+T 829 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
+-> l
+T 830 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
+-> l
 T 831 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
--> l
-T 832 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 99 $ 104 room=.
 -> n
+T 832 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 98 $ 104 room=.
+-> l
 T 833 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 98 $ 104 room=.
--> l
-T 834 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 98 $ 104 room=.
 -> n
+T 834 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 97 $ 104 room=.
+-> l
 T 835 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 97 $ 104 room=.
--> l
-T 836 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 3) HP 74/74 MP 0/0 Hu 97 $ 104 room=.
 -> n
+T 836 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 2) HP 74/74 MP 0/0 Hu 96 $ 104 room=.
+-> l
 T 837 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 2) HP 74/74 MP 0/0 Hu 96 $ 104 room=.
--> l
-T 838 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 2) HP 74/74 MP 0/0 Hu 96 $ 104 room=.
 -> n
+T 838 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 95 $ 104 room=.
+-> l
 T 839 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 95 $ 104 room=.
--> l
-T 840 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 95 $ 104 room=.
--> l
-T 841 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 1) HP 74/74 MP 0/0 Hu 95 $ 104 room=.
 -> w
+T 840 mode=stairs_up_mode      Nori Runesinger(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 94 $ 104 room=U
+-> u
+T 841 mode=stairs_down_mode    Nori Runesinger(dwa) F1@(18, 8) HP 74/74 MP 0/0 Hu 94 $ 104 room=D
+-> d
 T 842 mode=stairs_up_mode      Nori Runesinger(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 94 $ 104 room=U
--> u
-T 843 mode=stairs_down_mode    Nori Runesinger(dwa) F1@(18, 8) HP 74/74 MP 0/0 Hu 94 $ 104 room=D
--> d
-T 844 mode=stairs_up_mode      Nori Runesinger(dwa) F2@( 1, 1) HP 74/74 MP 0/0 Hu 94 $ 104 room=U
 -> s
-T 845 mode=game_loop           Nori Runesinger(dwa) F2@( 1, 2) HP 74/74 MP 0/0 Hu 93 $ 104 room=.
+T 843 mode=game_loop           Nori Runesinger(dwa) F2@( 1, 2) HP 74/74 MP 0/0 Hu 93 $ 104 room=.
 -> s
-T 846 mode=game_loop           Nori Runesinger(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 92 $ 104 room=.
+T 844 mode=game_loop           Nori Runesinger(dwa) F2@( 1, 3) HP 74/74 MP 0/0 Hu 92 $ 104 room=.
 -> s
-T 847 mode=game_loop           Nori Runesinger(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 91 $ 104 room=.
+T 845 mode=game_loop           Nori Runesinger(dwa) F2@( 1, 4) HP 74/74 MP 0/0 Hu 91 $ 104 room=.
 -> e
-T 848 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 90 $ 104 room=.
--> s
-T 849 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 89 $ 104 room=.
--> s
-T 850 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 6) HP 74/74 MP 0/0 Hu 88 $ 104 room=.
--> s
-T 851 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 7) HP 74/74 MP 0/0 Hu 87 $ 104 room=.
--> s
-T 852 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 86 $ 104 room=.
+T 846 mode=game_loop           Nori Runesinger(dwa) F2@( 2, 4) HP 74/74 MP 0/0 Hu 90 $ 104 room=.
 -> e
-T 853 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 8) HP 74/74 MP 0/0 Hu 85 $ 104 room=.
--> e
-T 854 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 8) HP 74/74 MP 0/0 Hu 84 $ 104 room=.
--> e
-T 855 mode=game_loop           Nori Runesinger(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 83 $ 104 room=.
--> e
-T 856 mode=game_loop           Nori Runesinger(dwa) F2@( 6, 8) HP 74/74 MP 0/0 Hu 82 $ 104 room=.
--> e
-T 857 mode=game_loop           Nori Runesinger(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 81 $ 104 room=.
--> e
-T 858 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 80 $ 104 room=.
--> n
-T 859 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 7) HP 74/74 MP 0/0 Hu 79 $ 104 room=.
--> e
-T 860 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 7) HP 74/74 MP 0/0 Hu 78 $ 104 room=.
--> e
-T 861 mode=game_loop           Nori Runesinger(dwa) F2@(10, 7) HP 74/74 MP 0/0 Hu 77 $ 104 room=.
--> e
-T 862 mode=game_loop           Nori Runesinger(dwa) F2@(11, 7) HP 74/74 MP 0/0 Hu 76 $ 104 room=.
--> e
-T 863 mode=chest_mode          Nori Runesinger(dwa) F2@(12, 7) HP 74/74 MP 0/0 Hu 75 $ 104 room=C
--> o
-T 864 mode=game_loop           Nori Runesinger(dwa) F2@(12, 7) HP 74/74 MP 0/0 Hu 75 $ 174 room=.
--> n
-T 865 mode=game_loop           Nori Runesinger(dwa) F2@(12, 6) HP 74/74 MP 0/0 Hu 74 $ 174 room=.
--> n
-T 866 mode=game_loop           Nori Runesinger(dwa) F2@(12, 5) HP 74/74 MP 0/0 Hu 73 $ 174 room=.
--> n
-T 867 mode=game_loop           Nori Runesinger(dwa) F2@(12, 4) HP 74/74 MP 0/0 Hu 72 $ 174 room=.
--> n
-T 868 mode=library_mode        Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 71 $ 174 room=L
--> r
-T 869 mode=library_read_decision_mode Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 71 $ 174 room=L
--> y
-T 870 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 71 $ 349 room=.
--> w
-T 871 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 66/74 MP 0/0 Hu 70 $ 349 room=D
--> d
-T 872 mode=stairs_up_mode      Nori Runesinger(dwa) F3@( 1, 1) HP 66/74 MP 0/0 Hu 70 $ 349 room=U
--> s
-T 873 mode=chest_mode          Nori Runesinger(dwa) F3@( 1, 2) HP 58/74 MP 0/0 Hu 69 $ 349 room=C
--> s
-T 874 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 3) HP 50/74 MP 0/0 Hu 68 $ 349 room=.
--> l
-T 875 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 3) HP 50/74 MP 0/0 Hu 68 $ 349 room=.
--> s
-T 876 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 4) HP 43/74 MP 0/0 Hu 67 $ 349 room=.
--> l
-T 877 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 4) HP 43/74 MP 0/0 Hu 67 $ 349 room=.
--> e
-T 878 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 4) HP 43/74 MP 0/0 Hu 66 $ 349 room=.
--> l
-T 879 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 4) HP 43/74 MP 0/0 Hu 66 $ 349 room=.
--> e
-T 880 mode=pool_mode           Nori Runesinger(dwa) F3@( 3, 4) HP 43/74 MP 0/0 Hu 65 $ 349 room=P
--> w
-T 881 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 4) HP 43/74 MP 0/0 Hu 64 $ 349 room=.
--> s
-T 882 mode=dungeon_mode        Nori Runesinger(dwa) F3@( 2, 5) HP 44/74 MP 0/0 Hu 63 $ 349 room=N
--> u
-T 883 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 44/74 MP 0/0 Hu 63 $ 349 room=N
--> l
-T 884 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 44/74 MP 0/0 Hu 63 $ 349 room=N
--> s
-T 885 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 44/74 MP 0/0 Hu 62 $ 349 room=.
--> i
-T 886 mode=inventory           Nori Runesinger(dwa) F3@( 2, 6) HP 44/74 MP 0/0 Hu 62 $ 349 room=.
--> u9
-T 887 mode=inventory           Nori Runesinger(dwa) F3@( 2, 6) HP 74/74 MP 0/0 Hu 62 $ 349 room=.
--> x
-T 888 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 74/74 MP 0/0 Hu 62 $ 349 room=.
--> l
-T 889 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 74/74 MP 0/0 Hu 62 $ 349 room=.
--> e
-T 890 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 6) HP 74/74 MP 0/0 Hu 61 $ 349 room=.
--> e
-T 891 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 6) HP 74/74 MP 0/0 Hu 60 $ 349 room=.
--> e
-T 892 mode=game_loop           Nori Runesinger(dwa) F3@( 5, 6) HP 74/74 MP 0/0 Hu 59 $ 349 room=.
--> e
-T 893 mode=game_loop           Nori Runesinger(dwa) F3@( 6, 6) HP 74/74 MP 0/0 Hu 58 $ 349 room=.
--> e
-T 894 mode=game_loop           Nori Runesinger(dwa) F3@( 7, 6) HP 74/74 MP 0/0 Hu 57 $ 349 room=.
--> e
-T 895 mode=game_loop           Nori Runesinger(dwa) F3@( 8, 6) HP 74/74 MP 0/0 Hu 56 $ 349 room=.
--> e
-T 896 mode=game_loop           Nori Runesinger(dwa) F3@( 9, 6) HP 74/74 MP 0/0 Hu 55 $ 349 room=.
--> e
-T 897 mode=game_loop           Nori Runesinger(dwa) F3@(10, 6) HP 74/74 MP 0/0 Hu 54 $ 349 room=.
--> n
-T 898 mode=game_loop           Nori Runesinger(dwa) F3@(10, 5) HP 74/74 MP 0/0 Hu 53 $ 349 room=.
--> n
-T 899 mode=game_loop           Nori Runesinger(dwa) F3@(10, 4) HP 74/74 MP 0/0 Hu 52 $ 349 room=.
--> n
-T 900 mode=library_mode        Nori Runesinger(dwa) F3@(10, 3) HP 74/74 MP 0/0 Hu 51 $ 349 room=L
--> r
-T 901 mode=library_read_decision_mode Nori Runesinger(dwa) F3@(10, 3) HP 74/74 MP 0/0 Hu 51 $ 349 room=L
--> y
-T 902 mode=game_loop           Nori Runesinger(dwa) F3@(10, 3) HP 74/74 MP 0/0 Hu 51 $ 349 room=.
--> w
-T 903 mode=game_loop           Nori Runesinger(dwa) F3@( 9, 3) HP 74/74 MP 0/0 Hu 50 $ 349 room=.
--> w
-T 904 mode=game_loop           Nori Runesinger(dwa) F3@( 8, 3) HP 74/74 MP 0/0 Hu 49 $ 349 room=.
--> i
-T 905 mode=inventory           Nori Runesinger(dwa) F3@( 8, 3) HP 74/74 MP 0/0 Hu 49 $ 349 room=.
--> eat1
-T 906 mode=inventory           Nori Runesinger(dwa) F3@( 8, 3) HP 74/74 MP 0/0 Hu 99 $ 349 room=.
--> x
-T 907 mode=game_loop           Nori Runesinger(dwa) F3@( 8, 3) HP 74/74 MP 0/0 Hu 99 $ 349 room=.
--> n
-T 908 mode=game_loop           Nori Runesinger(dwa) F3@( 8, 2) HP 74/74 MP 0/0 Hu 98 $ 349 room=.
--> w
-T 909 mode=game_loop           Nori Runesinger(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 97 $ 349 room=.
--> n
-T 910 mode=warp_mode           Nori Runesinger(dwa) F3@( 7, 1) HP 74/74 MP 0/0 Hu 96 $ 349 room=W
--> y
-T 911 mode=tomb_mode           Nori Runesinger(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 96 $ 349 room=T
--> p
-T 912 mode=game_loop           Nori Runesinger(dwa) F2@( 7,14) HP 74/74 MP 0/0 Hu 96 $ 349 room=T
--> n
-T 913 mode=combat_mode         Nori Runesinger(dwa) F2@( 7,13) HP 74/74 MP 0/0 Hu 95 $ 349 room=M vs UNDEAD ZOMBIE(L1 HP43/43)
+T 847 mode=combat_mode         Nori Runesinger(dwa) F2@( 3, 4) HP 74/74 MP 0/0 Hu 89 $ 104 room=M vs Sewer Rat(L1 HP10/10)
 -> a
-T 914 mode=combat_mode         Nori Runesinger(dwa) F2@( 7,13) HP 73/74 MP 0/0 Hu 95 $ 349 room=M vs UNDEAD ZOMBIE(L1 HP13/43)
+T 848 mode=combat_victory      Nori Runesinger(dwa) F2@( 3, 4) HP 73/74 MP 0/0 Hu 89 $ 120 room=.
+-> back
+T 849 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 4) HP 73/74 MP 0/0 Hu 89 $ 120 room=.
+-> s
+T 850 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 5) HP 73/74 MP 0/0 Hu 88 $ 120 room=.
+-> s
+T 851 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 87 $ 120 room=.
+-> s
+T 852 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 7) HP 74/74 MP 0/0 Hu 86 $ 120 room=.
+-> s
+T 853 mode=game_loop           Nori Runesinger(dwa) F2@( 3, 8) HP 74/74 MP 0/0 Hu 85 $ 120 room=.
+-> e
+T 854 mode=game_loop           Nori Runesinger(dwa) F2@( 4, 8) HP 74/74 MP 0/0 Hu 84 $ 120 room=.
+-> e
+T 855 mode=game_loop           Nori Runesinger(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 83 $ 120 room=.
+-> e
+T 856 mode=game_loop           Nori Runesinger(dwa) F2@( 6, 8) HP 74/74 MP 0/0 Hu 82 $ 120 room=.
+-> e
+T 857 mode=game_loop           Nori Runesinger(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 81 $ 120 room=.
+-> e
+T 858 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 80 $ 120 room=.
+-> n
+T 859 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 7) HP 74/74 MP 0/0 Hu 79 $ 120 room=.
+-> i
+T 860 mode=inventory           Nori Runesinger(dwa) F2@( 8, 7) HP 74/74 MP 0/0 Hu 79 $ 120 room=.
+-> eat2
+T 861 mode=inventory           Nori Runesinger(dwa) F2@( 8, 7) HP 74/74 MP 0/0 Hu 84 $ 120 room=.
+-> x
+T 862 mode=game_loop           Nori Runesinger(dwa) F2@( 8, 7) HP 74/74 MP 0/0 Hu 84 $ 120 room=.
+-> e
+T 863 mode=game_loop           Nori Runesinger(dwa) F2@( 9, 7) HP 74/74 MP 0/0 Hu 83 $ 120 room=.
+-> e
+T 864 mode=game_loop           Nori Runesinger(dwa) F2@(10, 7) HP 74/74 MP 0/0 Hu 82 $ 120 room=.
+-> e
+T 865 mode=game_loop           Nori Runesinger(dwa) F2@(11, 7) HP 74/74 MP 0/0 Hu 81 $ 120 room=.
+-> e
+T 866 mode=chest_mode          Nori Runesinger(dwa) F2@(12, 7) HP 74/74 MP 0/0 Hu 80 $ 120 room=C
+-> o
+T 867 mode=game_loop           Nori Runesinger(dwa) F2@(12, 7) HP 74/74 MP 0/0 Hu 80 $ 170 room=.
+-> n
+T 868 mode=game_loop           Nori Runesinger(dwa) F2@(12, 6) HP 74/74 MP 0/0 Hu 79 $ 170 room=.
+-> n
+T 869 mode=game_loop           Nori Runesinger(dwa) F2@(12, 5) HP 74/74 MP 0/0 Hu 78 $ 170 room=.
+-> n
+T 870 mode=game_loop           Nori Runesinger(dwa) F2@(12, 4) HP 74/74 MP 0/0 Hu 77 $ 170 room=.
+-> n
+T 871 mode=library_mode        Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 76 $ 170 room=L
+-> r
+T 872 mode=library_read_decision_mode Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 76 $ 170 room=L
+-> y
+T 873 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 76 $ 170 room=.
+-> e
+T 874 mode=combat_mode         Nori Runesinger(dwa) F2@(13, 3) HP 74/74 MP 0/0 Hu 75 $ 170 room=M vs Giant Rat(L1 HP22/22)
 -> f
-T 915 mode=flee_direction_mode Nori Runesinger(dwa) F2@( 7,13) HP 72/74 MP 0/0 Hu 95 $ 349 room=M
+T 875 mode=flee_direction_mode Nori Runesinger(dwa) F2@(13, 3) HP 74/74 MP 0/0 Hu 75 $ 170 room=M
+-> n
+T 876 mode=game_loop           Nori Runesinger(dwa) F2@(13, 2) HP 74/74 MP 0/0 Hu 75 $ 170 room=.
 -> e
-T 916 mode=game_loop           Nori Runesinger(dwa) F2@( 8,13) HP 72/74 MP 0/0 Hu 95 $ 349 room=.
+T 877 mode=game_loop           Nori Runesinger(dwa) F2@(14, 2) HP 74/74 MP 0/0 Hu 74 $ 170 room=.
+-> s
+T 878 mode=game_loop           Nori Runesinger(dwa) F2@(14, 3) HP 74/74 MP 0/0 Hu 73 $ 170 room=.
+-> s
+T 879 mode=game_loop           Nori Runesinger(dwa) F2@(14, 4) HP 74/74 MP 0/0 Hu 72 $ 170 room=.
+-> s
+T 880 mode=game_loop           Nori Runesinger(dwa) F2@(14, 5) HP 74/74 MP 0/0 Hu 71 $ 170 room=.
+-> s
+T 881 mode=game_loop           Nori Runesinger(dwa) F2@(14, 6) HP 74/74 MP 0/0 Hu 70 $ 170 room=.
+-> s
+T 882 mode=game_loop           Nori Runesinger(dwa) F2@(14, 7) HP 74/74 MP 0/0 Hu 69 $ 170 room=.
+-> s
+T 883 mode=game_loop           Nori Runesinger(dwa) F2@(14, 8) HP 74/74 MP 0/0 Hu 68 $ 170 room=.
+-> s
+T 884 mode=game_loop           Nori Runesinger(dwa) F2@(14, 9) HP 74/74 MP 0/0 Hu 67 $ 170 room=.
 -> e
-T 917 mode=garden_mode         Nori Runesinger(dwa) F2@( 9,13) HP 72/74 MP 0/0 Hu 94 $ 349 room=G
+T 885 mode=game_loop           Nori Runesinger(dwa) F2@(15, 9) HP 74/74 MP 0/0 Hu 66 $ 170 room=.
+-> s
+T 886 mode=combat_mode         Nori Runesinger(dwa) F2@(15,10) HP 74/74 MP 0/0 Hu 65 $ 170 room=M vs Gnoll(L1 HP45/45)
+-> a
+T 887 mode=combat_mode         Nori Runesinger(dwa) F2@(15,10) HP 73/74 MP 0/0 Hu 65 $ 170 room=M vs Gnoll(L1 HP45/45)
+-> a
+T 888 mode=combat_mode         Nori Runesinger(dwa) F2@(15,10) HP 73/74 MP 0/0 Hu 65 $ 170 room=M vs Gnoll(L1 HP45/45)
+-> a
+T 889 mode=combat_mode         Nori Runesinger(dwa) F2@(15,10) HP 72/74 MP 0/0 Hu 65 $ 170 room=M vs Gnoll(L1 HP16/45)
+-> a
+T 890 mode=combat_victory      Nori Runesinger(dwa) F2@(15,10) HP 72/74 MP 0/0 Hu 65 $ 180 room=.
+-> back
+T 891 mode=game_loop           Nori Runesinger(dwa) F2@(15,10) HP 72/74 MP 0/0 Hu 65 $ 180 room=.
+-> w
+T 892 mode=game_loop           Nori Runesinger(dwa) F2@(14,10) HP 72/74 MP 0/0 Hu 64 $ 180 room=.
+-> w
+T 893 mode=game_loop           Nori Runesinger(dwa) F2@(13,10) HP 72/74 MP 0/0 Hu 63 $ 180 room=.
+-> s
+T 894 mode=game_loop           Nori Runesinger(dwa) F2@(13,11) HP 72/74 MP 0/0 Hu 62 $ 180 room=.
+-> s
+T 895 mode=game_loop           Nori Runesinger(dwa) F2@(13,12) HP 73/74 MP 0/0 Hu 61 $ 180 room=.
+-> w
+T 896 mode=oracle_mode         Nori Runesinger(dwa) F2@(12,12) HP 73/74 MP 0/0 Hu 60 $ 180 room=O
+-> n
+T 897 mode=game_loop           Nori Runesinger(dwa) F2@(12,11) HP 73/74 MP 0/0 Hu 59 $ 180 room=.
+-> w
+T 898 mode=game_loop           Nori Runesinger(dwa) F2@(11,11) HP 73/74 MP 0/0 Hu 58 $ 180 room=.
+-> s
+T 899 mode=game_loop           Nori Runesinger(dwa) F2@(11,12) HP 73/74 MP 0/0 Hu 57 $ 180 room=.
+-> s
+T 900 mode=combat_mode         Nori Runesinger(dwa) F2@(11,13) HP 73/74 MP 0/0 Hu 56 $ 180 room=M vs Cockatrice(L1 HP25/25)
+-> a
+T 901 mode=combat_victory      Nori Runesinger(dwa) F2@(11,13) HP 73/74 MP 0/0 Hu 56 $ 194 room=.
+-> back
+T 902 mode=game_loop           Nori Runesinger(dwa) F2@(11,13) HP 73/74 MP 0/0 Hu 56 $ 194 room=.
+-> w
+T 903 mode=game_loop           Nori Runesinger(dwa) F2@(10,13) HP 73/74 MP 0/0 Hu 55 $ 194 room=N
+-> w
+T 904 mode=garden_mode         Nori Runesinger(dwa) F2@( 9,13) HP 73/74 MP 0/0 Hu 54 $ 194 room=G
 -> h
-T 918 mode=game_loop           Nori Runesinger(dwa) F2@( 9,13) HP 72/74 MP 0/0 Hu 94 $ 349 room=.
+T 905 mode=game_loop           Nori Runesinger(dwa) F2@( 9,13) HP 73/74 MP 0/0 Hu 54 $ 194 room=.
 -> n
-T 919 mode=game_loop           Nori Runesinger(dwa) F2@( 9,12) HP 73/74 MP 0/0 Hu 93 $ 349 room=.
+T 906 mode=game_loop           Nori Runesinger(dwa) F2@( 9,12) HP 73/74 MP 0/0 Hu 53 $ 194 room=.
 -> e
-T 920 mode=game_loop           Nori Runesinger(dwa) F2@(10,12) HP 73/74 MP 0/0 Hu 92 $ 349 room=.
--> e
-T 921 mode=game_loop           Nori Runesinger(dwa) F2@(11,12) HP 74/74 MP 0/0 Hu 91 $ 349 room=.
--> e
-T 922 mode=oracle_mode         Nori Runesinger(dwa) F2@(12,12) HP 74/74 MP 0/0 Hu 90 $ 349 room=O
+T 907 mode=game_loop           Nori Runesinger(dwa) F2@(10,12) HP 73/74 MP 0/0 Hu 52 $ 194 room=.
 -> n
-T 923 mode=game_loop           Nori Runesinger(dwa) F2@(12,11) HP 74/74 MP 0/0 Hu 89 $ 349 room=.
+T 908 mode=game_loop           Nori Runesinger(dwa) F2@(10,11) HP 73/74 MP 0/0 Hu 51 $ 194 room=.
 -> n
-T 924 mode=game_loop           Nori Runesinger(dwa) F2@(12,10) HP 74/74 MP 0/0 Hu 88 $ 349 room=.
+T 909 mode=game_loop           Nori Runesinger(dwa) F2@(10,10) HP 73/74 MP 0/0 Hu 50 $ 194 room=.
 -> n
-T 925 mode=game_loop           Nori Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 87 $ 349 room=.
+T 910 mode=game_loop           Nori Runesinger(dwa) F2@(10, 9) HP 73/74 MP 0/0 Hu 49 $ 194 room=.
+-> i
+T 911 mode=inventory           Nori Runesinger(dwa) F2@(10, 9) HP 73/74 MP 0/0 Hu 49 $ 194 room=.
+-> eat1
+T 912 mode=inventory           Nori Runesinger(dwa) F2@(10, 9) HP 73/74 MP 0/0 Hu 99 $ 194 room=.
+-> x
+T 913 mode=game_loop           Nori Runesinger(dwa) F2@(10, 9) HP 73/74 MP 0/0 Hu 99 $ 194 room=.
 -> e
-T 926 mode=game_loop           Nori Runesinger(dwa) F2@(13, 9) HP 74/74 MP 0/0 Hu 86 $ 349 room=.
+T 914 mode=game_loop           Nori Runesinger(dwa) F2@(11, 9) HP 73/74 MP 0/0 Hu 98 $ 194 room=.
 -> e
-T 927 mode=game_loop           Nori Runesinger(dwa) F2@(14, 9) HP 74/74 MP 0/0 Hu 85 $ 349 room=.
+T 915 mode=game_loop           Nori Runesinger(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 97 $ 194 room=.
 -> e
-T 928 mode=game_loop           Nori Runesinger(dwa) F2@(15, 9) HP 74/74 MP 0/0 Hu 84 $ 349 room=.
+T 916 mode=game_loop           Nori Runesinger(dwa) F2@(13, 9) HP 74/74 MP 0/0 Hu 96 $ 194 room=.
+-> i
+T 917 mode=inventory           Nori Runesinger(dwa) F2@(13, 9) HP 74/74 MP 0/0 Hu 96 $ 194 room=.
+-> eat2
+T 918 mode=inventory           Nori Runesinger(dwa) F2@(13, 9) HP 74/74 MP 0/0 Hu100 $ 194 room=.
+-> x
+T 919 mode=game_loop           Nori Runesinger(dwa) F2@(13, 9) HP 74/74 MP 0/0 Hu100 $ 194 room=.
 -> e
-T 929 mode=game_loop           Nori Runesinger(dwa) F2@(16, 9) HP 74/74 MP 0/0 Hu 83 $ 349 room=.
+T 920 mode=game_loop           Nori Runesinger(dwa) F2@(14, 9) HP 74/74 MP 0/0 Hu 99 $ 194 room=.
 -> e
-T 930 mode=library_mode        Nori Runesinger(dwa) F2@(17, 9) HP 74/74 MP 0/0 Hu 82 $ 349 room=L
+T 921 mode=game_loop           Nori Runesinger(dwa) F2@(15, 9) HP 74/74 MP 0/0 Hu 98 $ 194 room=.
+-> e
+T 922 mode=game_loop           Nori Runesinger(dwa) F2@(16, 9) HP 74/74 MP 0/0 Hu 97 $ 194 room=.
+-> e
+T 923 mode=library_mode        Nori Runesinger(dwa) F2@(17, 9) HP 74/74 MP 0/0 Hu 96 $ 194 room=L
 -> r
-T 931 mode=library_read_decision_mode Nori Runesinger(dwa) F2@(17, 9) HP 74/74 MP 0/0 Hu 82 $ 349 room=L
+T 924 mode=library_read_decision_mode Nori Runesinger(dwa) F2@(17, 9) HP 74/74 MP 0/0 Hu 96 $ 194 room=L
 -> y
-T 932 mode=game_loop           Nori Runesinger(dwa) F2@(17, 9) HP 74/74 MP 0/0 Hu 82 $ 349 room=.
+T 925 mode=game_loop           Nori Runesinger(dwa) F2@(17, 9) HP 74/74 MP 0/0 Hu 96 $ 194 room=.
+-> e
+T 926 mode=game_loop           Nori Runesinger(dwa) F2@(18, 9) HP 74/74 MP 0/0 Hu 95 $ 194 room=.
 -> s
-T 933 mode=game_loop           Nori Runesinger(dwa) F2@(17,10) HP 74/74 MP 0/0 Hu 81 $ 349 room=.
--> w
-T 934 mode=game_loop           Nori Runesinger(dwa) F2@(16,10) HP 74/74 MP 0/0 Hu 80 $ 349 room=.
--> w
-T 935 mode=combat_mode         Nori Runesinger(dwa) F2@(15,10) HP 74/74 MP 0/0 Hu 79 $ 349 room=M vs Wight(L1 HP40/40)
+T 927 mode=combat_mode         Nori Runesinger(dwa) F2@(18,10) HP 74/74 MP 0/0 Hu 94 $ 194 room=M vs Spore Puff(L1 HP18/18)
 -> a
-T 936 mode=combat_mode         Nori Runesinger(dwa) F2@(15,10) HP 72/74 MP 0/0 Hu 79 $ 349 room=M vs Wight(L1 HP13/40)
--> a
-T 937 mode=combat_victory      Nori Runesinger(dwa) F2@(15,10) HP 70/74 MP 0/0 Hu 79 $ 355 room=.
+T 928 mode=combat_victory      Nori Runesinger(dwa) F2@(18,10) HP 73/74 MP 0/0 Hu 94 $ 214 room=.
 -> back
-T 938 mode=game_loop           Nori Runesinger(dwa) F2@(15,10) HP 70/74 MP 0/0 Hu 79 $ 355 room=.
--> n
-T 939 mode=game_loop           Nori Runesinger(dwa) F2@(15, 9) HP 70/74 MP 0/0 Hu 78 $ 355 room=.
--> n
-T 940 mode=game_loop           Nori Runesinger(dwa) F2@(15, 8) HP 70/74 MP 0/0 Hu 77 $ 355 room=.
--> n
-T 941 mode=game_loop           Nori Runesinger(dwa) F2@(15, 7) HP 70/74 MP 0/0 Hu 76 $ 355 room=.
--> n
-T 942 mode=game_loop           Nori Runesinger(dwa) F2@(15, 6) HP 71/74 MP 0/0 Hu 75 $ 355 room=.
--> n
-T 943 mode=game_loop           Nori Runesinger(dwa) F2@(15, 5) HP 71/74 MP 0/0 Hu 74 $ 355 room=.
--> n
-T 944 mode=game_loop           Nori Runesinger(dwa) F2@(15, 4) HP 71/74 MP 0/0 Hu 73 $ 355 room=V
+T 929 mode=game_loop           Nori Runesinger(dwa) F2@(18,10) HP 73/74 MP 0/0 Hu 94 $ 214 room=.
+-> s
+T 930 mode=game_loop           Nori Runesinger(dwa) F2@(18,11) HP 73/74 MP 0/0 Hu 93 $ 214 room=.
+-> e
+T 931 mode=game_loop           Nori Runesinger(dwa) F2@(19,11) HP 74/74 MP 0/0 Hu 92 $ 214 room=.
+-> s
+T 932 mode=combat_mode         Nori Runesinger(dwa) F2@(19,12) HP 74/74 MP 0/0 Hu 91 $ 214 room=M vs Goblin(L1 HP30/30)
+-> a
+T 933 mode=combat_mode         Nori Runesinger(dwa) F2@(19,12) HP 73/74 MP 0/0 Hu 91 $ 214 room=M vs Goblin(L1 HP30/30)
+-> a
+T 934 mode=combat_victory      Nori Runesinger(dwa) F2@(19,12) HP 73/84 MP 0/0 Hu 91 $ 220 room=.
+-> back
+T 935 mode=game_loop           Nori Runesinger(dwa) F2@(19,12) HP 73/84 MP 0/0 Hu 91 $ 220 room=.
+-> s
+T 936 mode=game_loop           Nori Runesinger(dwa) F2@(19,13) HP 73/84 MP 0/0 Hu 90 $ 220 room=.
+-> s
+T 937 mode=game_loop           Nori Runesinger(dwa) F2@(19,14) HP 74/84 MP 0/0 Hu 89 $ 220 room=.
+-> s
+T 938 mode=game_loop           Nori Runesinger(dwa) F2@(19,15) HP 74/84 MP 0/0 Hu 88 $ 220 room=.
 -> w
-T 945 mode=game_loop           Nori Runesinger(dwa) F2@(14, 4) HP 71/74 MP 0/0 Hu 72 $ 355 room=.
+T 939 mode=game_loop           Nori Runesinger(dwa) F2@(18,15) HP 75/84 MP 0/0 Hu 87 $ 220 room=.
 -> w
-T 946 mode=game_loop           Nori Runesinger(dwa) F2@(13, 4) HP 72/74 MP 0/0 Hu 71 $ 355 room=.
+T 940 mode=game_loop           Nori Runesinger(dwa) F2@(17,15) HP 75/84 MP 0/0 Hu 86 $ 220 room=N
 -> w
-T 947 mode=game_loop           Nori Runesinger(dwa) F2@(12, 4) HP 72/74 MP 0/0 Hu 70 $ 355 room=.
--> n
-T 948 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 72/74 MP 0/0 Hu 69 $ 355 room=.
+T 941 mode=game_loop           Nori Runesinger(dwa) F2@(16,15) HP 76/84 MP 0/0 Hu 85 $ 220 room=.
 -> w
-T 949 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 72/74 MP 0/0 Hu 68 $ 355 room=D
--> n
-T 950 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 73/74 MP 0/0 Hu 67 $ 355 room=.
--> e
-T 951 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 73/74 MP 0/0 Hu 66 $ 355 room=.
--> n
-T 952 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 73/74 MP 0/0 Hu 65 $ 355 room=.
+T 942 mode=game_loop           Nori Runesinger(dwa) F2@(15,15) HP 76/84 MP 0/0 Hu 84 $ 220 room=.
 -> w
-T 953 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 73/74 MP 0/0 Hu 64 $ 355 room=.
--> s
-T 954 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 63 $ 355 room=.
--> s
-T 955 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 62 $ 355 room=D
--> s
-T 956 mode=game_loop           Nori Runesinger(dwa) F2@(11, 4) HP 74/74 MP 0/0 Hu 61 $ 355 room=.
--> e
-T 957 mode=game_loop           Nori Runesinger(dwa) F2@(12, 4) HP 74/74 MP 0/0 Hu 60 $ 355 room=.
--> n
-T 958 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 59 $ 355 room=.
--> n
-T 959 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 58 $ 355 room=.
--> n
-T 960 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 57 $ 355 room=.
--> e
-T 961 mode=game_loop           Nori Runesinger(dwa) F2@(13, 1) HP 74/74 MP 0/0 Hu 56 $ 355 room=.
--> s
-T 962 mode=game_loop           Nori Runesinger(dwa) F2@(13, 2) HP 74/74 MP 0/0 Hu 55 $ 355 room=.
--> e
-T 963 mode=game_loop           Nori Runesinger(dwa) F2@(14, 2) HP 74/74 MP 0/0 Hu 54 $ 355 room=.
--> n
-T 964 mode=game_loop           Nori Runesinger(dwa) F2@(14, 1) HP 74/74 MP 0/0 Hu 53 $ 355 room=.
--> e
-T 965 mode=game_loop           Nori Runesinger(dwa) F2@(15, 1) HP 74/74 MP 0/0 Hu 52 $ 355 room=.
--> s
-T 966 mode=game_loop           Nori Runesinger(dwa) F2@(15, 2) HP 74/74 MP 0/0 Hu 51 $ 355 room=.
--> e
-T 967 mode=game_loop           Nori Runesinger(dwa) F2@(16, 2) HP 74/74 MP 0/0 Hu 50 $ 355 room=.
--> s
-T 968 mode=game_loop           Nori Runesinger(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 49 $ 355 room=.
+T 943 mode=game_loop           Nori Runesinger(dwa) F2@(14,15) HP 76/84 MP 0/0 Hu 83 $ 220 room=.
 -> i
-T 969 mode=inventory           Nori Runesinger(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 49 $ 355 room=.
--> eat1
-T 970 mode=inventory           Nori Runesinger(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 99 $ 355 room=.
+T 944 mode=inventory           Nori Runesinger(dwa) F2@(14,15) HP 76/84 MP 0/0 Hu 83 $ 220 room=.
+-> u9
+T 945 mode=inventory           Nori Runesinger(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 83 $ 220 room=.
 -> x
-T 971 mode=game_loop           Nori Runesinger(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 99 $ 355 room=.
+T 946 mode=game_loop           Nori Runesinger(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 83 $ 220 room=.
 -> s
-T 972 mode=game_loop           Nori Runesinger(dwa) F2@(16, 4) HP 74/74 MP 0/0 Hu 98 $ 355 room=.
+T 947 mode=combat_mode         Nori Runesinger(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 82 $ 220 room=M vs Crawling Claw(L1 HP5/5)
+-> a
+T 948 mode=combat_victory      Nori Runesinger(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 82 $ 222 room=.
+-> back
+T 949 mode=game_loop           Nori Runesinger(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 82 $ 222 room=.
 -> w
-T 973 mode=game_loop           Nori Runesinger(dwa) F2@(15, 4) HP 74/74 MP 0/0 Hu 97 $ 355 room=V
--> w
-T 974 mode=game_loop           Nori Runesinger(dwa) F2@(14, 4) HP 74/74 MP 0/0 Hu 96 $ 355 room=.
--> w
-T 975 mode=game_loop           Nori Runesinger(dwa) F2@(13, 4) HP 74/74 MP 0/0 Hu 95 $ 355 room=.
--> w
-T 976 mode=game_loop           Nori Runesinger(dwa) F2@(12, 4) HP 74/74 MP 0/0 Hu 94 $ 355 room=.
+T 950 mode=game_loop           Nori Runesinger(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 81 $ 222 room=.
 -> n
-T 977 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 93 $ 355 room=.
+T 951 mode=game_loop           Nori Runesinger(dwa) F2@(13,15) HP 84/84 MP 0/0 Hu 80 $ 222 room=.
 -> w
-T 978 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 92 $ 355 room=D
+T 952 mode=game_loop           Nori Runesinger(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 79 $ 222 room=.
 -> n
-T 979 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 91 $ 355 room=.
--> n
-T 980 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 90 $ 355 room=.
+T 953 mode=combat_mode         Nori Runesinger(dwa) F2@(12,14) HP 84/84 MP 0/0 Hu 78 $ 222 room=M vs Slime Mold(L1 HP15/15)
+-> a
+T 954 mode=combat_mode         Nori Runesinger(dwa) F2@(12,14) HP 83/84 MP 0/0 Hu 78 $ 222 room=M vs Slime Mold(L1 HP15/15)
+-> a
+T 955 mode=combat_victory      Nori Runesinger(dwa) F2@(12,14) HP 83/84 MP 0/0 Hu 78 $ 224 room=.
+-> back
+T 956 mode=game_loop           Nori Runesinger(dwa) F2@(12,14) HP 83/84 MP 0/0 Hu 78 $ 224 room=.
 -> e
-T 981 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 89 $ 355 room=.
--> s
-T 982 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 88 $ 355 room=.
--> s
-T 983 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 87 $ 355 room=.
--> w
-T 984 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 86 $ 355 room=D
+T 957 mode=game_loop           Nori Runesinger(dwa) F2@(13,14) HP 83/84 MP 0/0 Hu 77 $ 224 room=.
 -> n
-T 985 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 85 $ 355 room=.
+T 958 mode=game_loop           Nori Runesinger(dwa) F2@(13,13) HP 83/84 MP 0/0 Hu 76 $ 224 room=.
 -> n
-T 986 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 84 $ 355 room=.
+T 959 mode=game_loop           Nori Runesinger(dwa) F2@(13,12) HP 83/84 MP 0/0 Hu 75 $ 224 room=.
 -> e
-T 987 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 83 $ 355 room=.
--> s
-T 988 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 82 $ 355 room=.
--> s
-T 989 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 81 $ 355 room=.
--> w
-T 990 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 80 $ 355 room=D
+T 960 mode=game_loop           Nori Runesinger(dwa) F2@(14,12) HP 84/84 MP 0/0 Hu 74 $ 224 room=.
 -> n
-T 991 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 79 $ 355 room=.
+T 961 mode=game_loop           Nori Runesinger(dwa) F2@(14,11) HP 84/84 MP 0/0 Hu 73 $ 224 room=.
 -> n
-T 992 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 78 $ 355 room=.
+T 962 mode=game_loop           Nori Runesinger(dwa) F2@(14,10) HP 84/84 MP 0/0 Hu 72 $ 224 room=.
+-> n
+T 963 mode=game_loop           Nori Runesinger(dwa) F2@(14, 9) HP 84/84 MP 0/0 Hu 71 $ 224 room=.
+-> n
+T 964 mode=game_loop           Nori Runesinger(dwa) F2@(14, 8) HP 84/84 MP 0/0 Hu 70 $ 224 room=.
 -> e
-T 993 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 77 $ 355 room=.
+T 965 mode=game_loop           Nori Runesinger(dwa) F2@(15, 8) HP 84/84 MP 0/0 Hu 69 $ 224 room=.
 -> s
-T 994 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 76 $ 355 room=.
+T 966 mode=game_loop           Nori Runesinger(dwa) F2@(15, 9) HP 84/84 MP 0/0 Hu 68 $ 224 room=.
 -> s
-T 995 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 75 $ 355 room=.
--> w
-T 996 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 74 $ 355 room=D
--> n
-T 997 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 73 $ 355 room=.
--> n
-T 998 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 72 $ 355 room=.
+T 967 mode=game_loop           Nori Runesinger(dwa) F2@(15,10) HP 84/84 MP 0/0 Hu 67 $ 224 room=.
 -> e
-T 999 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 71 $ 355 room=.
--> s
-T1000 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 70 $ 355 room=.
--> s
-T1001 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 69 $ 355 room=.
--> w
-T1002 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 68 $ 355 room=D
--> n
-T1003 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 67 $ 355 room=.
--> n
-T1004 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 66 $ 355 room=.
+T 968 mode=game_loop           Nori Runesinger(dwa) F2@(16,10) HP 84/84 MP 0/0 Hu 66 $ 224 room=.
 -> e
-T1005 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 65 $ 355 room=.
--> s
-T1006 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 64 $ 355 room=.
--> s
-T1007 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 63 $ 355 room=.
--> w
-T1008 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 62 $ 355 room=D
--> n
-T1009 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 61 $ 355 room=.
--> n
-T1010 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 60 $ 355 room=.
+T 969 mode=game_loop           Nori Runesinger(dwa) F2@(17,10) HP 84/84 MP 0/0 Hu 65 $ 224 room=.
 -> e
-T1011 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 59 $ 355 room=.
+T 970 mode=game_loop           Nori Runesinger(dwa) F2@(18,10) HP 84/84 MP 0/0 Hu 64 $ 224 room=.
 -> s
-T1012 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 58 $ 355 room=.
+T 971 mode=game_loop           Nori Runesinger(dwa) F2@(18,11) HP 84/84 MP 0/0 Hu 63 $ 224 room=.
 -> s
-T1013 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 57 $ 355 room=.
+T 972 mode=game_loop           Nori Runesinger(dwa) F2@(18,12) HP 84/84 MP 0/0 Hu 62 $ 224 room=.
+-> s
+T 973 mode=game_loop           Nori Runesinger(dwa) F2@(18,13) HP 84/84 MP 0/0 Hu 61 $ 224 room=.
+-> s
+T 974 mode=game_loop           Nori Runesinger(dwa) F2@(18,14) HP 84/84 MP 0/0 Hu 60 $ 224 room=.
+-> s
+T 975 mode=game_loop           Nori Runesinger(dwa) F2@(18,15) HP 84/84 MP 0/0 Hu 59 $ 224 room=.
 -> w
-T1014 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 56 $ 355 room=D
--> n
-T1015 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 55 $ 355 room=.
--> n
-T1016 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 54 $ 355 room=.
--> e
-T1017 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 53 $ 355 room=.
--> s
-T1018 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 52 $ 355 room=.
--> s
-T1019 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 51 $ 355 room=.
--> w
-T1020 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 50 $ 355 room=D
--> n
-T1021 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 49 $ 355 room=.
+T 976 mode=dungeon_mode        Nori Runesinger(dwa) F2@(17,15) HP 84/84 MP 0/0 Hu 58 $ 224 room=N
+-> u
+T 977 mode=dungeon_unlocked_mode Nori Runesinger(dwa) F2@(17,15) HP 84/84 MP 0/0 Hu 58 $ 224 room=N
+-> r
+T 978 mode=game_loop           Nori Runesinger(dwa) F2@(17,15) HP 84/84 MP 0/0 Hu 58 $ 224 room=N
 -> i
-T1022 mode=inventory           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 49 $ 355 room=.
--> eat1
-T1023 mode=inventory           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 99 $ 355 room=.
+T 979 mode=inventory           Nori Runesinger(dwa) F2@(17,15) HP 84/84 MP 0/0 Hu 58 $ 224 room=N
+-> e5
+T 980 mode=inventory           Nori Runesinger(dwa) F2@(17,15) HP 84/84 MP 0/0 Hu 58 $ 224 room=N
 -> x
-T1024 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 99 $ 355 room=.
--> n
-T1025 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 98 $ 355 room=.
--> e
-T1026 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 97 $ 355 room=.
--> s
-T1027 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 96 $ 355 room=.
--> s
-T1028 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 95 $ 355 room=.
+T 981 mode=game_loop           Nori Runesinger(dwa) F2@(17,15) HP 84/84 MP 0/0 Hu 58 $ 224 room=N
 -> w
-T1029 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 94 $ 355 room=D
--> n
-T1030 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 93 $ 355 room=.
--> n
-T1031 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 92 $ 355 room=.
--> e
-T1032 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 91 $ 355 room=.
--> s
-T1033 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 90 $ 355 room=.
--> s
-T1034 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 89 $ 355 room=.
+T 982 mode=game_loop           Nori Runesinger(dwa) F2@(16,15) HP 84/84 MP 0/0 Hu 57 $ 224 room=.
 -> w
-T1035 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 88 $ 355 room=D
--> n
-T1036 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 87 $ 355 room=.
--> n
-T1037 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 86 $ 355 room=.
--> e
-T1038 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 85 $ 355 room=.
--> s
-T1039 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 84 $ 355 room=.
--> s
-T1040 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 83 $ 355 room=.
+T 983 mode=game_loop           Nori Runesinger(dwa) F2@(15,15) HP 84/84 MP 0/0 Hu 56 $ 224 room=.
 -> w
-T1041 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 82 $ 355 room=D
--> n
-T1042 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 81 $ 355 room=.
--> n
-T1043 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 80 $ 355 room=.
--> e
-T1044 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 79 $ 355 room=.
--> s
-T1045 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 78 $ 355 room=.
--> s
-T1046 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 77 $ 355 room=.
+T 984 mode=game_loop           Nori Runesinger(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 55 $ 224 room=.
 -> w
-T1047 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 76 $ 355 room=D
--> n
-T1048 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 75 $ 355 room=.
--> n
-T1049 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 74 $ 355 room=.
--> e
-T1050 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 73 $ 355 room=.
--> s
-T1051 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 72 $ 355 room=.
--> s
-T1052 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 71 $ 355 room=.
+T 985 mode=game_loop           Nori Runesinger(dwa) F2@(13,15) HP 84/84 MP 0/0 Hu 54 $ 224 room=.
 -> w
-T1053 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 70 $ 355 room=D
--> n
-T1054 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 69 $ 355 room=.
--> n
-T1055 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 68 $ 355 room=.
--> e
-T1056 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 67 $ 355 room=.
--> s
-T1057 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 66 $ 355 room=.
--> s
-T1058 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 65 $ 355 room=.
+T 986 mode=game_loop           Nori Runesinger(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 53 $ 224 room=.
 -> w
-T1059 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 64 $ 355 room=D
--> n
-T1060 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 63 $ 355 room=.
--> n
-T1061 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 62 $ 355 room=.
--> e
-T1062 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 61 $ 355 room=.
--> s
-T1063 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 60 $ 355 room=.
--> s
-T1064 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 59 $ 355 room=.
+T 987 mode=combat_mode         Nori Runesinger(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 52 $ 224 room=M vs Rust Monster(L1 HP18/18)
+-> a
+T 988 mode=combat_mode         Nori Runesinger(dwa) F2@(11,15) HP 83/84 MP 0/0 Hu 52 $ 224 room=M vs Rust Monster(L1 HP18/18)
+-> a
+T 989 mode=combat_mode         Nori Runesinger(dwa) F2@(11,15) HP 82/84 MP 0/0 Hu 52 $ 224 room=M vs Rust Monster(L1 HP18/18)
+-> a
+T 990 mode=combat_victory      Nori Runesinger(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 52 $ 244 room=.
+-> back
+T 991 mode=game_loop           Nori Runesinger(dwa) F2@(11,15) HP 81/84 MP 0/0 Hu 52 $ 244 room=.
 -> w
-T1065 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 58 $ 355 room=D
--> n
-T1066 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 57 $ 355 room=.
--> n
-T1067 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 56 $ 355 room=.
--> e
-T1068 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 55 $ 355 room=.
--> s
-T1069 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 54 $ 355 room=.
--> s
-T1070 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 53 $ 355 room=.
+T 992 mode=game_loop           Nori Runesinger(dwa) F2@(10,15) HP 81/84 MP 0/0 Hu 51 $ 244 room=.
 -> w
-T1071 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 52 $ 355 room=D
--> n
-T1072 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 51 $ 355 room=.
--> n
-T1073 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 50 $ 355 room=.
+T 993 mode=game_loop           Nori Runesinger(dwa) F2@( 9,15) HP 81/84 MP 0/0 Hu 50 $ 244 room=.
+-> w
+T 994 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 81/84 MP 0/0 Hu 49 $ 244 room=.
+-> s
+T 995 mode=game_loop           Nori Runesinger(dwa) F2@( 8,16) HP 81/84 MP 0/0 Hu 48 $ 244 room=.
 -> e
-T1074 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 49 $ 355 room=.
+T 996 mode=game_loop           Nori Runesinger(dwa) F2@( 9,16) HP 81/84 MP 0/0 Hu 47 $ 244 room=.
+-> e
+T 997 mode=game_loop           Nori Runesinger(dwa) F2@(10,16) HP 81/84 MP 0/0 Hu 46 $ 244 room=.
+-> n
+T 998 mode=game_loop           Nori Runesinger(dwa) F2@(10,15) HP 81/84 MP 0/0 Hu 45 $ 244 room=.
+-> w
+T 999 mode=game_loop           Nori Runesinger(dwa) F2@( 9,15) HP 81/84 MP 0/0 Hu 44 $ 244 room=.
+-> w
+T1000 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 81/84 MP 0/0 Hu 43 $ 244 room=.
+-> s
+T1001 mode=game_loop           Nori Runesinger(dwa) F2@( 8,16) HP 81/84 MP 0/0 Hu 42 $ 244 room=.
+-> e
+T1002 mode=game_loop           Nori Runesinger(dwa) F2@( 9,16) HP 81/84 MP 0/0 Hu 41 $ 244 room=.
+-> e
+T1003 mode=game_loop           Nori Runesinger(dwa) F2@(10,16) HP 81/84 MP 0/0 Hu 40 $ 244 room=.
+-> n
+T1004 mode=game_loop           Nori Runesinger(dwa) F2@(10,15) HP 81/84 MP 0/0 Hu 39 $ 244 room=.
+-> w
+T1005 mode=game_loop           Nori Runesinger(dwa) F2@( 9,15) HP 81/84 MP 0/0 Hu 38 $ 244 room=.
+-> w
+T1006 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 81/84 MP 0/0 Hu 37 $ 244 room=.
+-> s
+T1007 mode=game_loop           Nori Runesinger(dwa) F2@( 8,16) HP 81/84 MP 0/0 Hu 36 $ 244 room=.
+-> w
+T1008 mode=game_loop           Nori Runesinger(dwa) F2@( 7,16) HP 81/84 MP 0/0 Hu 35 $ 244 room=.
+-> w
+T1009 mode=game_loop           Nori Runesinger(dwa) F2@( 6,16) HP 81/84 MP 0/0 Hu 34 $ 244 room=.
+-> n
+T1010 mode=game_loop           Nori Runesinger(dwa) F2@( 6,15) HP 81/84 MP 0/0 Hu 33 $ 244 room=.
+-> s
+T1011 mode=game_loop           Nori Runesinger(dwa) F2@( 6,16) HP 81/84 MP 0/0 Hu 32 $ 244 room=.
+-> n
+T1012 mode=game_loop           Nori Runesinger(dwa) F2@( 6,15) HP 81/84 MP 0/0 Hu 31 $ 244 room=.
+-> s
+T1013 mode=game_loop           Nori Runesinger(dwa) F2@( 6,16) HP 81/84 MP 0/0 Hu 30 $ 244 room=.
+-> e
+T1014 mode=game_loop           Nori Runesinger(dwa) F2@( 7,16) HP 81/84 MP 0/0 Hu 29 $ 244 room=.
+-> e
+T1015 mode=game_loop           Nori Runesinger(dwa) F2@( 8,16) HP 81/84 MP 0/0 Hu 28 $ 244 room=.
+-> n
+T1016 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 81/84 MP 0/0 Hu 27 $ 244 room=.
+-> e
+T1017 mode=game_loop           Nori Runesinger(dwa) F2@( 9,15) HP 81/84 MP 0/0 Hu 26 $ 244 room=.
+-> n
+T1018 mode=game_loop           Nori Runesinger(dwa) F2@( 9,14) HP 81/84 MP 0/0 Hu 25 $ 244 room=.
+-> e
+T1019 mode=game_loop           Nori Runesinger(dwa) F2@(10,14) HP 81/84 MP 0/0 Hu 24 $ 244 room=.
+-> n
+T1020 mode=game_loop           Nori Runesinger(dwa) F2@(10,13) HP 81/84 MP 0/0 Hu 23 $ 244 room=N
+-> w
+T1021 mode=game_loop           Nori Runesinger(dwa) F2@( 9,13) HP 81/84 MP 0/0 Hu 22 $ 244 room=.
+-> w
+T1022 mode=game_loop           Nori Runesinger(dwa) F2@( 8,13) HP 81/84 MP 0/0 Hu 21 $ 244 room=.
+-> e
+T1023 mode=game_loop           Nori Runesinger(dwa) F2@( 9,13) HP 81/84 MP 0/0 Hu 20 $ 244 room=.
+-> s
+T1024 mode=game_loop           Nori Runesinger(dwa) F2@( 9,14) HP 81/84 MP 0/0 Hu 19 $ 244 room=.
+-> s
+T1025 mode=game_loop           Nori Runesinger(dwa) F2@( 9,15) HP 81/84 MP 0/0 Hu 18 $ 244 room=.
+-> w
+T1026 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 81/84 MP 0/0 Hu 17 $ 244 room=.
+-> s
+T1027 mode=game_loop           Nori Runesinger(dwa) F2@( 8,16) HP 81/84 MP 0/0 Hu 16 $ 244 room=.
+-> e
+T1028 mode=game_loop           Nori Runesinger(dwa) F2@( 9,16) HP 81/84 MP 0/0 Hu 15 $ 244 room=.
+-> e
+T1029 mode=game_loop           Nori Runesinger(dwa) F2@(10,16) HP 81/84 MP 0/0 Hu 14 $ 244 room=.
+-> n
+T1030 mode=game_loop           Nori Runesinger(dwa) F2@(10,15) HP 81/84 MP 0/0 Hu 13 $ 244 room=.
+-> w
+T1031 mode=game_loop           Nori Runesinger(dwa) F2@( 9,15) HP 81/84 MP 0/0 Hu 12 $ 244 room=.
+-> w
+T1032 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 81/84 MP 0/0 Hu 11 $ 244 room=.
+-> s
+T1033 mode=game_loop           Nori Runesinger(dwa) F2@( 8,16) HP 81/84 MP 0/0 Hu 10 $ 244 room=.
+-> e
+T1034 mode=game_loop           Nori Runesinger(dwa) F2@( 9,16) HP 81/84 MP 0/0 Hu  9 $ 244 room=.
+-> e
+T1035 mode=game_loop           Nori Runesinger(dwa) F2@(10,16) HP 81/84 MP 0/0 Hu  8 $ 244 room=.
+-> n
+T1036 mode=game_loop           Nori Runesinger(dwa) F2@(10,15) HP 81/84 MP 0/0 Hu  7 $ 244 room=.
+-> w
+T1037 mode=game_loop           Nori Runesinger(dwa) F2@( 9,15) HP 81/84 MP 0/0 Hu  6 $ 244 room=.
+-> w
+T1038 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 81/84 MP 0/0 Hu  5 $ 244 room=.
+-> s
+T1039 mode=game_loop           Nori Runesinger(dwa) F2@( 8,16) HP 81/84 MP 0/0 Hu  4 $ 244 room=.
+-> e
+T1040 mode=game_loop           Nori Runesinger(dwa) F2@( 9,16) HP 81/84 MP 0/0 Hu  3 $ 244 room=.
+-> e
+T1041 mode=game_loop           Nori Runesinger(dwa) F2@(10,16) HP 81/84 MP 0/0 Hu  2 $ 244 room=.
+-> n
+T1042 mode=game_loop           Nori Runesinger(dwa) F2@(10,15) HP 81/84 MP 0/0 Hu  1 $ 244 room=.
+-> w
+T1043 mode=game_loop           Nori Runesinger(dwa) F2@( 9,15) HP 79/84 MP 0/0 Hu  0 $ 244 room=.
+-> w
+T1044 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 77/84 MP 0/0 Hu  0 $ 244 room=.
 -> i
-T1075 mode=inventory           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 49 $ 355 room=.
--> eat1
-T1076 mode=inventory           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 99 $ 355 room=.
+T1045 mode=inventory           Nori Runesinger(dwa) F2@( 8,15) HP 77/84 MP 0/0 Hu  0 $ 244 room=.
+-> u10
+T1046 mode=inventory           Nori Runesinger(dwa) F2@( 8,15) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
 -> x
-T1077 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 99 $ 355 room=.
+T1047 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
 -> s
-T1078 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 98 $ 355 room=.
--> s
-T1079 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 97 $ 355 room=.
+T1048 mode=game_loop           Nori Runesinger(dwa) F2@( 8,16) HP 82/84 MP 0/0 Hu  0 $ 244 room=.
 -> w
-T1080 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 96 $ 355 room=D
--> n
-T1081 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 95 $ 355 room=.
--> n
-T1082 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 94 $ 355 room=.
--> e
-T1083 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 93 $ 355 room=.
--> s
-T1084 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 92 $ 355 room=.
--> s
-T1085 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 91 $ 355 room=.
+T1049 mode=game_loop           Nori Runesinger(dwa) F2@( 7,16) HP 80/84 MP 0/0 Hu  0 $ 244 room=.
 -> w
-T1086 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 90 $ 355 room=D
+T1050 mode=game_loop           Nori Runesinger(dwa) F2@( 6,16) HP 78/84 MP 0/0 Hu  0 $ 244 room=.
+-> l
+T1051 mode=game_loop           Nori Runesinger(dwa) F2@( 6,16) HP 78/84 MP 0/0 Hu  0 $ 244 room=.
 -> n
-T1087 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 89 $ 355 room=.
--> n
-T1088 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 88 $ 355 room=.
--> e
-T1089 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 87 $ 355 room=.
--> s
-T1090 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 86 $ 355 room=.
--> s
-T1091 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 85 $ 355 room=.
--> w
-T1092 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 84 $ 355 room=D
--> n
-T1093 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 83 $ 355 room=.
--> n
-T1094 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 82 $ 355 room=.
--> e
-T1095 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 81 $ 355 room=.
--> s
-T1096 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 80 $ 355 room=.
--> s
-T1097 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 79 $ 355 room=.
--> w
-T1098 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 78 $ 355 room=D
--> n
-T1099 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 77 $ 355 room=.
--> n
-T1100 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 76 $ 355 room=.
--> e
-T1101 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 75 $ 355 room=.
--> s
-T1102 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 74 $ 355 room=.
--> s
-T1103 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 73 $ 355 room=.
--> w
-T1104 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 72 $ 355 room=D
--> n
-T1105 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 71 $ 355 room=.
--> n
-T1106 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 70 $ 355 room=.
--> e
-T1107 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 69 $ 355 room=.
--> s
-T1108 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 68 $ 355 room=.
--> s
-T1109 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 67 $ 355 room=.
--> w
-T1110 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 66 $ 355 room=D
--> n
-T1111 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 65 $ 355 room=.
--> n
-T1112 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 64 $ 355 room=.
--> e
-T1113 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 63 $ 355 room=.
--> s
-T1114 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 62 $ 355 room=.
--> s
-T1115 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 61 $ 355 room=.
--> w
-T1116 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 60 $ 355 room=D
--> n
-T1117 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 59 $ 355 room=.
--> n
-T1118 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 58 $ 355 room=.
--> e
-T1119 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 57 $ 355 room=.
--> s
-T1120 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 56 $ 355 room=.
--> s
-T1121 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 55 $ 355 room=.
--> w
-T1122 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 54 $ 355 room=D
--> n
-T1123 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 53 $ 355 room=.
--> n
-T1124 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 52 $ 355 room=.
--> e
-T1125 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 51 $ 355 room=.
--> s
-T1126 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 50 $ 355 room=.
--> s
-T1127 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 49 $ 355 room=.
+T1052 mode=game_loop           Nori Runesinger(dwa) F2@( 6,15) HP 76/84 MP 0/0 Hu  0 $ 244 room=.
 -> i
-T1128 mode=inventory           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 49 $ 355 room=.
--> eat1
-T1129 mode=inventory           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 99 $ 355 room=.
+T1053 mode=inventory           Nori Runesinger(dwa) F2@( 6,15) HP 76/84 MP 0/0 Hu  0 $ 244 room=.
+-> u10
+T1054 mode=inventory           Nori Runesinger(dwa) F2@( 6,15) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
 -> x
-T1130 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 99 $ 355 room=.
--> w
-T1131 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 98 $ 355 room=D
+T1055 mode=game_loop           Nori Runesinger(dwa) F2@( 6,15) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
+-> s
+T1056 mode=game_loop           Nori Runesinger(dwa) F2@( 6,16) HP 82/84 MP 0/0 Hu  0 $ 244 room=.
 -> n
-T1132 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 97 $ 355 room=.
--> n
-T1133 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 96 $ 355 room=.
+T1057 mode=game_loop           Nori Runesinger(dwa) F2@( 6,15) HP 80/84 MP 0/0 Hu  0 $ 244 room=.
+-> s
+T1058 mode=game_loop           Nori Runesinger(dwa) F2@( 6,16) HP 78/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1134 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 95 $ 355 room=.
--> s
-T1135 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 94 $ 355 room=.
--> s
-T1136 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 93 $ 355 room=.
--> w
-T1137 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 92 $ 355 room=D
--> n
-T1138 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 91 $ 355 room=.
--> n
-T1139 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 90 $ 355 room=.
+T1059 mode=game_loop           Nori Runesinger(dwa) F2@( 7,16) HP 76/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1140 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 89 $ 355 room=.
--> s
-T1141 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 88 $ 355 room=.
--> s
-T1142 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 87 $ 355 room=.
--> w
-T1143 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 86 $ 355 room=D
+T1060 mode=game_loop           Nori Runesinger(dwa) F2@( 8,16) HP 74/84 MP 0/0 Hu  0 $ 244 room=.
 -> n
-T1144 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 85 $ 355 room=.
--> n
-T1145 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 84 $ 355 room=.
+T1061 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 72/84 MP 0/0 Hu  0 $ 244 room=.
+-> i
+T1062 mode=inventory           Nori Runesinger(dwa) F2@( 8,15) HP 72/84 MP 0/0 Hu  0 $ 244 room=.
+-> u10
+T1063 mode=inventory           Nori Runesinger(dwa) F2@( 8,15) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
+-> x
+T1064 mode=game_loop           Nori Runesinger(dwa) F2@( 8,15) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1146 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 83 $ 355 room=.
--> s
-T1147 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 82 $ 355 room=.
--> s
-T1148 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 81 $ 355 room=.
--> w
-T1149 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 80 $ 355 room=D
--> n
-T1150 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 79 $ 355 room=.
--> n
-T1151 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 78 $ 355 room=.
+T1065 mode=game_loop           Nori Runesinger(dwa) F2@( 9,15) HP 82/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1152 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 77 $ 355 room=.
--> s
-T1153 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 76 $ 355 room=.
--> s
-T1154 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 75 $ 355 room=.
--> w
-T1155 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 74 $ 355 room=D
--> n
-T1156 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 73 $ 355 room=.
--> n
-T1157 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 72 $ 355 room=.
+T1066 mode=game_loop           Nori Runesinger(dwa) F2@(10,15) HP 80/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1158 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 71 $ 355 room=.
--> s
-T1159 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 70 $ 355 room=.
--> s
-T1160 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 69 $ 355 room=.
--> w
-T1161 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 68 $ 355 room=D
--> n
-T1162 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 67 $ 355 room=.
--> n
-T1163 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 66 $ 355 room=.
+T1067 mode=game_loop           Nori Runesinger(dwa) F2@(11,15) HP 78/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1164 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 65 $ 355 room=.
--> s
-T1165 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 64 $ 355 room=.
--> s
-T1166 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 63 $ 355 room=.
+T1068 mode=game_loop           Nori Runesinger(dwa) F2@(12,15) HP 76/84 MP 0/0 Hu  0 $ 244 room=.
+-> n
+T1069 mode=game_loop           Nori Runesinger(dwa) F2@(12,14) HP 74/84 MP 0/0 Hu  0 $ 244 room=.
 -> w
-T1167 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 62 $ 355 room=D
+T1070 mode=game_loop           Nori Runesinger(dwa) F2@(11,14) HP 72/84 MP 0/0 Hu  0 $ 244 room=.
+-> w
+T1071 mode=game_loop           Nori Runesinger(dwa) F2@(10,14) HP 70/84 MP 0/0 Hu  0 $ 244 room=.
+-> w
+T1072 mode=game_loop           Nori Runesinger(dwa) F2@( 9,14) HP 68/84 MP 0/0 Hu  0 $ 244 room=.
+-> i
+T1073 mode=inventory           Nori Runesinger(dwa) F2@( 9,14) HP 68/84 MP 0/0 Hu  0 $ 244 room=.
+-> u10
+T1074 mode=inventory           Nori Runesinger(dwa) F2@( 9,14) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
+-> x
+T1075 mode=game_loop           Nori Runesinger(dwa) F2@( 9,14) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
 -> n
-T1168 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 61 $ 355 room=.
--> n
-T1169 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 60 $ 355 room=.
+T1076 mode=game_loop           Nori Runesinger(dwa) F2@( 9,13) HP 82/84 MP 0/0 Hu  0 $ 244 room=.
+-> w
+T1077 mode=game_loop           Nori Runesinger(dwa) F2@( 8,13) HP 80/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1170 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 59 $ 355 room=.
--> s
-T1171 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 58 $ 355 room=.
--> s
-T1172 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 57 $ 355 room=.
--> w
-T1173 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 56 $ 355 room=D
--> n
-T1174 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 55 $ 355 room=.
--> n
-T1175 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 54 $ 355 room=.
+T1078 mode=game_loop           Nori Runesinger(dwa) F2@( 9,13) HP 78/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1176 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 53 $ 355 room=.
--> s
-T1177 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 52 $ 355 room=.
--> s
-T1178 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 51 $ 355 room=.
--> w
-T1179 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 50 $ 355 room=D
--> n
-T1180 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 49 $ 355 room=.
--> n
-T1181 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 48 $ 355 room=.
+T1079 mode=game_loop           Nori Runesinger(dwa) F2@(10,13) HP 76/84 MP 0/0 Hu  0 $ 244 room=N
 -> e
-T1182 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 47 $ 355 room=.
--> s
-T1183 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 46 $ 355 room=.
--> s
-T1184 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 45 $ 355 room=.
+T1080 mode=game_loop           Nori Runesinger(dwa) F2@(11,13) HP 74/84 MP 0/0 Hu  0 $ 244 room=.
+-> n
+T1081 mode=game_loop           Nori Runesinger(dwa) F2@(11,12) HP 72/84 MP 0/0 Hu  0 $ 244 room=.
+-> n
+T1082 mode=game_loop           Nori Runesinger(dwa) F2@(11,11) HP 70/84 MP 0/0 Hu  0 $ 244 room=.
+-> n
+T1083 mode=game_loop           Nori Runesinger(dwa) F2@(11,10) HP 68/84 MP 0/0 Hu  0 $ 244 room=.
+-> n
+T1084 mode=game_loop           Nori Runesinger(dwa) F2@(11, 9) HP 66/84 MP 0/0 Hu  0 $ 244 room=.
+-> n
+T1085 mode=game_loop           Nori Runesinger(dwa) F2@(11, 8) HP 64/84 MP 0/0 Hu  0 $ 244 room=.
+-> n
+T1086 mode=game_loop           Nori Runesinger(dwa) F2@(11, 7) HP 62/84 MP 0/0 Hu  0 $ 244 room=.
+-> n
+T1087 mode=game_loop           Nori Runesinger(dwa) F2@(11, 6) HP 60/84 MP 0/0 Hu  0 $ 244 room=.
 -> w
-T1185 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 44 $ 355 room=D
+T1088 mode=game_loop           Nori Runesinger(dwa) F2@(10, 6) HP 58/84 MP 0/0 Hu  0 $ 244 room=.
 -> n
-T1186 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 43 $ 355 room=.
+T1089 mode=game_loop           Nori Runesinger(dwa) F2@(10, 5) HP 56/84 MP 0/0 Hu  0 $ 244 room=.
 -> n
-T1187 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 42 $ 355 room=.
+T1090 mode=game_loop           Nori Runesinger(dwa) F2@(10, 4) HP 54/84 MP 0/0 Hu  0 $ 244 room=.
+-> i
+T1091 mode=inventory           Nori Runesinger(dwa) F2@(10, 4) HP 54/84 MP 0/0 Hu  0 $ 244 room=.
+-> u10
+T1092 mode=inventory           Nori Runesinger(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
+-> x
+T1093 mode=game_loop           Nori Runesinger(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1188 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 41 $ 355 room=.
--> s
-T1189 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 40 $ 355 room=.
--> s
-T1190 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 39 $ 355 room=.
--> w
-T1191 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 38 $ 355 room=D
+T1094 mode=game_loop           Nori Runesinger(dwa) F2@(11, 4) HP 82/84 MP 0/0 Hu  0 $ 244 room=.
 -> n
-T1192 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 37 $ 355 room=.
--> n
-T1193 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 36 $ 355 room=.
--> e
-T1194 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 35 $ 355 room=.
--> s
-T1195 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 34 $ 355 room=.
--> s
-T1196 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 33 $ 355 room=.
--> w
-T1197 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 32 $ 355 room=D
--> n
-T1198 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 31 $ 355 room=.
--> n
-T1199 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 30 $ 355 room=.
--> e
-T1200 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 29 $ 355 room=.
--> s
-T1201 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 28 $ 355 room=.
--> s
-T1202 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 27 $ 355 room=.
--> w
-T1203 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 26 $ 355 room=D
--> n
-T1204 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 25 $ 355 room=.
--> n
-T1205 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 24 $ 355 room=.
--> e
-T1206 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 23 $ 355 room=.
--> s
-T1207 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 22 $ 355 room=.
--> s
-T1208 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 21 $ 355 room=.
--> w
-T1209 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 20 $ 355 room=D
--> n
-T1210 mode=game_loop           Nori Runesinger(dwa) F2@(11, 2) HP 74/74 MP 0/0 Hu 19 $ 355 room=.
--> n
-T1211 mode=game_loop           Nori Runesinger(dwa) F2@(11, 1) HP 74/74 MP 0/0 Hu 18 $ 355 room=.
--> e
-T1212 mode=game_loop           Nori Runesinger(dwa) F2@(12, 1) HP 74/74 MP 0/0 Hu 17 $ 355 room=.
--> s
-T1213 mode=game_loop           Nori Runesinger(dwa) F2@(12, 2) HP 74/74 MP 0/0 Hu 16 $ 355 room=.
--> s
-T1214 mode=game_loop           Nori Runesinger(dwa) F2@(12, 3) HP 74/74 MP 0/0 Hu 15 $ 355 room=.
--> w
-T1215 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 74/74 MP 0/0 Hu 14 $ 355 room=D
+T1095 mode=stairs_down_mode    Nori Runesinger(dwa) F2@(11, 3) HP 80/84 MP 0/0 Hu  0 $ 244 room=D
 -> d
-T1216 mode=stairs_up_mode      Nori Runesinger(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 14 $ 355 room=U
--> s
-T1217 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 2) HP 74/74 MP 0/0 Hu 13 $ 355 room=C
--> s
-T1218 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 3) HP 74/74 MP 0/0 Hu 12 $ 355 room=.
--> s
-T1219 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 4) HP 74/74 MP 0/0 Hu 11 $ 355 room=.
--> e
-T1220 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 4) HP 74/74 MP 0/0 Hu 10 $ 355 room=.
--> s
-T1221 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 74/74 MP 0/0 Hu  9 $ 355 room=N
--> s
-T1222 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 74/74 MP 0/0 Hu  8 $ 355 room=.
--> e
-T1223 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 6) HP 74/74 MP 0/0 Hu  7 $ 355 room=.
--> e
-T1224 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 6) HP 74/74 MP 0/0 Hu  6 $ 355 room=.
--> e
-T1225 mode=game_loop           Nori Runesinger(dwa) F3@( 5, 6) HP 74/74 MP 0/0 Hu  5 $ 355 room=.
--> e
-T1226 mode=game_loop           Nori Runesinger(dwa) F3@( 6, 6) HP 74/74 MP 0/0 Hu  4 $ 355 room=.
--> e
-T1227 mode=game_loop           Nori Runesinger(dwa) F3@( 7, 6) HP 74/74 MP 0/0 Hu  3 $ 355 room=.
--> e
-T1228 mode=game_loop           Nori Runesinger(dwa) F3@( 8, 6) HP 74/74 MP 0/0 Hu  2 $ 355 room=.
--> e
-T1229 mode=game_loop           Nori Runesinger(dwa) F3@( 9, 6) HP 74/74 MP 0/0 Hu  1 $ 355 room=.
--> e
-T1230 mode=game_loop           Nori Runesinger(dwa) F3@(10, 6) HP 72/74 MP 0/0 Hu  0 $ 355 room=.
--> n
-T1231 mode=game_loop           Nori Runesinger(dwa) F3@(10, 5) HP 70/74 MP 0/0 Hu  0 $ 355 room=.
--> e
-T1232 mode=game_loop           Nori Runesinger(dwa) F3@(11, 5) HP 68/74 MP 0/0 Hu  0 $ 355 room=.
--> s
-T1233 mode=game_loop           Nori Runesinger(dwa) F3@(11, 6) HP 66/74 MP 0/0 Hu  0 $ 355 room=.
--> s
-T1234 mode=combat_mode         Nori Runesinger(dwa) F3@(11, 7) HP 64/74 MP 0/0 Hu  0 $ 355 room=M vs Kobold(L2 HP8/8)
--> a
-T1235 mode=combat_mode         Nori Runesinger(dwa) F3@(11, 7) HP 63/74 MP 0/0 Hu  0 $ 355 room=M vs Kobold(L2 HP8/8)
--> a
-T1236 mode=combat_mode         Nori Runesinger(dwa) F3@(11, 7) HP 62/74 MP 0/0 Hu  0 $ 355 room=M vs Kobold(L2 HP8/8)
--> a
-T1237 mode=combat_mode         Nori Runesinger(dwa) F3@(11, 7) HP 61/74 MP 0/0 Hu  0 $ 355 room=M vs Kobold(L2 HP8/8)
--> a
-T1238 mode=combat_mode         Nori Runesinger(dwa) F3@(11, 7) HP 61/74 MP 0/0 Hu  0 $ 355 room=M vs Kobold(L2 HP8/8)
--> f
-T1239 mode=flee_direction_mode Nori Runesinger(dwa) F3@(11, 7) HP 61/74 MP 0/0 Hu  0 $ 355 room=M
--> n
-T1240 mode=game_loop           Nori Runesinger(dwa) F3@(11, 6) HP 61/74 MP 0/0 Hu  0 $ 355 room=.
--> i
-T1241 mode=inventory           Nori Runesinger(dwa) F3@(11, 6) HP 61/74 MP 0/0 Hu  0 $ 355 room=.
--> u9
-T1242 mode=inventory           Nori Runesinger(dwa) F3@(11, 6) HP 74/74 MP 0/0 Hu  0 $ 355 room=.
--> x
-T1243 mode=game_loop           Nori Runesinger(dwa) F3@(11, 6) HP 74/74 MP 0/0 Hu  0 $ 355 room=.
--> e
-T1244 mode=game_loop           Nori Runesinger(dwa) F3@(12, 6) HP 72/74 MP 0/0 Hu  0 $ 355 room=.
--> e
-T1245 mode=game_loop           Nori Runesinger(dwa) F3@(13, 6) HP 70/74 MP 0/0 Hu  0 $ 355 room=.
--> s
-T1246 mode=game_loop           Nori Runesinger(dwa) F3@(13, 7) HP 68/74 MP 0/0 Hu  0 $ 355 room=.
--> s
-T1247 mode=game_loop           Nori Runesinger(dwa) F3@(13, 8) HP 66/74 MP 0/0 Hu  0 $ 355 room=.
+T1096 mode=stairs_up_mode      Nori Runesinger(dwa) F3@( 1, 1) HP 80/84 MP 0/0 Hu  0 $ 244 room=U
 -> w
-T1248 mode=game_loop           Nori Runesinger(dwa) F3@(12, 8) HP 64/74 MP 0/0 Hu  0 $ 355 room=.
+T1097 mode=stairs_up_mode      Nori Runesinger(dwa) F3@( 1, 1) HP 80/84 MP 0/0 Hu  0 $ 244 room=U
 -> w
-T1249 mode=game_loop           Nori Runesinger(dwa) F3@(11, 8) HP 62/74 MP 0/0 Hu  0 $ 355 room=.
--> i
-T1250 mode=inventory           Nori Runesinger(dwa) F3@(11, 8) HP 62/74 MP 0/0 Hu  0 $ 355 room=.
--> u9
-T1251 mode=inventory           Nori Runesinger(dwa) F3@(11, 8) HP 74/74 MP 0/0 Hu  0 $ 355 room=.
--> x
-T1252 mode=game_loop           Nori Runesinger(dwa) F3@(11, 8) HP 74/74 MP 0/0 Hu  0 $ 355 room=.
--> w
-T1253 mode=combat_mode         Nori Runesinger(dwa) F3@(10, 8) HP 72/74 MP 0/0 Hu  0 $ 355 room=M vs Giant Centipede(L2 HP16/16)
--> a
-T1254 mode=combat_victory      Nori Runesinger(dwa) F3@(10, 8) HP 71/74 MP 0/0 Hu  0 $ 385 room=.
--> back
-T1255 mode=game_loop           Nori Runesinger(dwa) F3@(10, 8) HP 71/74 MP 0/0 Hu  0 $ 385 room=.
--> n
-T1256 mode=game_loop           Nori Runesinger(dwa) F3@(10, 7) HP 69/74 MP 0/0 Hu  0 $ 385 room=.
--> i
-T1257 mode=inventory           Nori Runesinger(dwa) F3@(10, 7) HP 69/74 MP 0/0 Hu  0 $ 385 room=.
--> u9
-T1258 mode=inventory           Nori Runesinger(dwa) F3@(10, 7) HP 74/74 MP 0/0 Hu  0 $ 385 room=.
--> x
-T1259 mode=game_loop           Nori Runesinger(dwa) F3@(10, 7) HP 74/74 MP 0/0 Hu  0 $ 385 room=.
--> n
-T1260 mode=game_loop           Nori Runesinger(dwa) F3@(10, 6) HP 72/74 MP 0/0 Hu  0 $ 385 room=.
--> w
-T1261 mode=game_loop           Nori Runesinger(dwa) F3@( 9, 6) HP 70/74 MP 0/0 Hu  0 $ 385 room=.
--> w
-T1262 mode=game_loop           Nori Runesinger(dwa) F3@( 8, 6) HP 68/74 MP 0/0 Hu  0 $ 385 room=.
+T1098 mode=stairs_up_mode      Nori Runesinger(dwa) F3@( 1, 1) HP 80/84 MP 0/0 Hu  0 $ 244 room=U
 -> s
-T1263 mode=game_loop           Nori Runesinger(dwa) F3@( 8, 7) HP 66/74 MP 0/0 Hu  0 $ 385 room=.
--> s
-T1264 mode=game_loop           Nori Runesinger(dwa) F3@( 8, 8) HP 64/74 MP 0/0 Hu  0 $ 385 room=.
--> e
-T1265 mode=game_loop           Nori Runesinger(dwa) F3@( 9, 8) HP 62/74 MP 0/0 Hu  0 $ 385 room=.
--> e
-T1266 mode=game_loop           Nori Runesinger(dwa) F3@(10, 8) HP 60/74 MP 0/0 Hu  0 $ 385 room=.
--> e
-T1267 mode=game_loop           Nori Runesinger(dwa) F3@(11, 8) HP 58/74 MP 0/0 Hu  0 $ 385 room=.
--> i
-T1268 mode=inventory           Nori Runesinger(dwa) F3@(11, 8) HP 58/74 MP 0/0 Hu  0 $ 385 room=.
--> u9
-T1269 mode=inventory           Nori Runesinger(dwa) F3@(11, 8) HP 74/74 MP 0/0 Hu  0 $ 385 room=.
--> x
-T1270 mode=game_loop           Nori Runesinger(dwa) F3@(11, 8) HP 74/74 MP 0/0 Hu  0 $ 385 room=.
--> e
-T1271 mode=game_loop           Nori Runesinger(dwa) F3@(12, 8) HP 72/74 MP 0/0 Hu  0 $ 385 room=.
--> e
-T1272 mode=game_loop           Nori Runesinger(dwa) F3@(13, 8) HP 70/74 MP 0/0 Hu  0 $ 385 room=.
--> n
-T1273 mode=game_loop           Nori Runesinger(dwa) F3@(13, 7) HP 68/74 MP 0/0 Hu  0 $ 385 room=.
--> n
-T1274 mode=game_loop           Nori Runesinger(dwa) F3@(13, 6) HP 66/74 MP 0/0 Hu  0 $ 385 room=.
--> w
-T1275 mode=game_loop           Nori Runesinger(dwa) F3@(12, 6) HP 64/74 MP 0/0 Hu  0 $ 385 room=.
--> s
-T1276 mode=game_loop           Nori Runesinger(dwa) F3@(12, 7) HP 62/74 MP 0/0 Hu  0 $ 385 room=.
--> i
-T1277 mode=inventory           Nori Runesinger(dwa) F3@(12, 7) HP 62/74 MP 0/0 Hu  0 $ 385 room=.
--> u9
-T1278 mode=inventory           Nori Runesinger(dwa) F3@(12, 7) HP 74/74 MP 0/0 Hu  0 $ 385 room=.
--> x
-T1279 mode=game_loop           Nori Runesinger(dwa) F3@(12, 7) HP 74/74 MP 0/0 Hu  0 $ 385 room=.
--> s
-T1280 mode=game_loop           Nori Runesinger(dwa) F3@(12, 8) HP 72/74 MP 0/0 Hu  0 $ 385 room=.
--> e
-T1281 mode=game_loop           Nori Runesinger(dwa) F3@(13, 8) HP 70/74 MP 0/0 Hu  0 $ 385 room=.
--> n
-T1282 mode=game_loop           Nori Runesinger(dwa) F3@(13, 7) HP 68/74 MP 0/0 Hu  0 $ 385 room=.
--> e
-T1283 mode=chest_mode          Nori Runesinger(dwa) F3@(14, 7) HP 66/74 MP 0/0 Hu  0 $ 385 room=C
+T1099 mode=chest_mode          Nori Runesinger(dwa) F3@( 1, 2) HP 78/84 MP 0/0 Hu  0 $ 244 room=C
 -> o
-T1284 mode=game_loop           Nori Runesinger(dwa) F3@(14, 7) HP 66/74 MP 0/0 Hu  0 $ 385 room=.
+T1100 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 2) HP 78/84 MP 0/0 Hu  0 $ 244 room=.
+-> l
+T1101 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 2) HP 78/84 MP 0/0 Hu  0 $ 244 room=.
 -> s
-T1285 mode=game_loop           Nori Runesinger(dwa) F3@(14, 8) HP 64/74 MP 0/0 Hu  0 $ 385 room=.
+T1102 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 3) HP 76/84 MP 0/0 Hu  0 $ 244 room=.
+-> s
+T1103 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 4) HP 74/84 MP 0/0 Hu  0 $ 244 room=.
+-> l
+T1104 mode=game_loop           Nori Runesinger(dwa) F3@( 1, 4) HP 74/84 MP 0/0 Hu  0 $ 244 room=.
 -> e
-T1286 mode=game_loop           Nori Runesinger(dwa) F3@(15, 8) HP 62/74 MP 0/0 Hu  0 $ 385 room=.
--> s
-T1287 mode=game_loop           Nori Runesinger(dwa) F3@(15, 9) HP 60/74 MP 0/0 Hu  0 $ 385 room=.
--> w
-T1288 mode=pool_mode           Nori Runesinger(dwa) F3@(14, 9) HP 58/74 MP 0/0 Hu  0 $ 385 room=P
+T1105 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 4) HP 72/84 MP 0/0 Hu  0 $ 244 room=.
+-> l
+T1106 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 4) HP 72/84 MP 0/0 Hu  0 $ 244 room=.
+-> e
+T1107 mode=pool_mode           Nori Runesinger(dwa) F3@( 3, 4) HP 70/84 MP 0/0 Hu  0 $ 244 room=P
 -> dr
-T1289 mode=game_loop           Nori Runesinger(dwa) F3@(14, 9) HP 58/74 MP 0/0 Hu  0 $ 564 room=.
+T1108 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 4) HP 70/84 MP 0/0 Hu  0 $ 304 room=.
+-> l
+T1109 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 4) HP 70/84 MP 0/0 Hu  0 $ 304 room=.
 -> s
-T1290 mode=warp_mode           Nori Runesinger(dwa) F3@(14,10) HP 56/74 MP 0/0 Hu  0 $ 564 room=W
--> y
-T1291 mode=game_loop           Nori Runesinger(dwa) F3@(14,10) HP 56/74 MP 0/0 Hu  0 $ 564 room=W
--> e
-T1292 mode=game_loop           Nori Runesinger(dwa) F3@(15,10) HP 54/74 MP 0/0 Hu  0 $ 564 room=.
--> n
-T1293 mode=game_loop           Nori Runesinger(dwa) F3@(15, 9) HP 52/74 MP 0/0 Hu  0 $ 564 room=.
--> n
-T1294 mode=game_loop           Nori Runesinger(dwa) F3@(15, 8) HP 50/74 MP 0/0 Hu  0 $ 564 room=.
+T1110 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 5) HP 68/84 MP 0/0 Hu  0 $ 304 room=.
+-> l
+T1111 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 5) HP 68/84 MP 0/0 Hu  0 $ 304 room=.
 -> w
-T1295 mode=game_loop           Nori Runesinger(dwa) F3@(14, 8) HP 48/74 MP 0/0 Hu  0 $ 564 room=.
+T1112 mode=dungeon_mode        Nori Runesinger(dwa) F3@( 2, 5) HP 66/84 MP 0/0 Hu  0 $ 304 room=N
+-> u
+T1113 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 66/84 MP 0/0 Hu  0 $ 304 room=N
 -> s
-T1296 mode=game_loop           Nori Runesinger(dwa) F3@(14, 9) HP 46/74 MP 0/0 Hu  0 $ 564 room=.
--> w
-T1297 mode=game_loop           Nori Runesinger(dwa) F3@(13, 9) HP 44/74 MP 0/0 Hu  0 $ 564 room=.
--> n
-T1298 mode=game_loop           Nori Runesinger(dwa) F3@(13, 8) HP 42/74 MP 0/0 Hu  0 $ 564 room=.
--> n
-T1299 mode=game_loop           Nori Runesinger(dwa) F3@(13, 7) HP 40/74 MP 0/0 Hu  0 $ 564 room=.
--> n
-T1300 mode=game_loop           Nori Runesinger(dwa) F3@(13, 6) HP 38/74 MP 0/0 Hu  0 $ 564 room=.
--> w
-T1301 mode=game_loop           Nori Runesinger(dwa) F3@(12, 6) HP 36/74 MP 0/0 Hu  0 $ 564 room=.
--> n
-T1302 mode=chest_mode          Nori Runesinger(dwa) F3@(12, 5) HP 34/74 MP 0/0 Hu  0 $ 564 room=C
--> e
-T1303 mode=warp_mode           Nori Runesinger(dwa) F3@(13, 5) HP 32/74 MP 0/0 Hu  0 $ 564 room=W
--> y
-T1304 mode=game_loop           Nori Runesinger(dwa) F4@(13, 9) HP 32/74 MP 0/0 Hu  0 $ 564 room=.
--> w
-T1305 mode=game_loop           Nori Runesinger(dwa) F4@(12, 9) HP 30/74 MP 0/0 Hu  0 $ 564 room=.
--> n
-T1306 mode=game_loop           Nori Runesinger(dwa) F4@(12, 8) HP 28/74 MP 0/0 Hu  0 $ 564 room=.
--> e
-T1307 mode=warp_mode           Nori Runesinger(dwa) F4@(13, 8) HP 26/74 MP 0/0 Hu  0 $ 564 room=W
--> y
-T1308 mode=game_loop           Nori Runesinger(dwa) F4@(13, 8) HP 26/74 MP 0/0 Hu  0 $ 564 room=W
--> s
-T1309 mode=game_loop           Nori Runesinger(dwa) F4@(13, 9) HP 24/74 MP 0/0 Hu  0 $ 564 room=.
--> e
-T1310 mode=combat_mode         Nori Runesinger(dwa) F4@(14, 9) HP 22/74 MP 0/0 Hu  0 $ 564 room=M vs Giant Rat(L3 HP23/23)
--> a
-T1311 mode=combat_mode         Nori Runesinger(dwa) F4@(14, 9) HP 22/74 MP 0/0 Hu  0 $ 564 room=M vs Giant Rat(L3 HP23/23)
--> a
-T1312 mode=combat_mode         Nori Runesinger(dwa) F4@(14, 9) HP 21/74 MP 0/0 Hu  0 $ 564 room=M vs Giant Rat(L3 HP23/23)
--> a
-T1313 mode=combat_victory      Nori Runesinger(dwa) F4@(14, 9) HP 20/84 MP 0/0 Hu  0 $ 584 room=.
--> back
-T1314 mode=game_loop           Nori Runesinger(dwa) F4@(14, 9) HP 20/84 MP 0/0 Hu  0 $ 584 room=.
+T1114 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 64/84 MP 0/0 Hu  0 $ 304 room=.
 -> i
-T1315 mode=inventory           Nori Runesinger(dwa) F4@(14, 9) HP 20/84 MP 0/0 Hu  0 $ 584 room=.
--> eat1
-T1316 mode=inventory           Nori Runesinger(dwa) F4@(14, 9) HP 20/84 MP 0/0 Hu  5 $ 584 room=.
--> u8
-T1317 mode=inventory           Nori Runesinger(dwa) F4@(14, 9) HP 20/84 MP 0/0 Hu  5 $ 584 room=.
+T1115 mode=inventory           Nori Runesinger(dwa) F3@( 2, 6) HP 64/84 MP 0/0 Hu  0 $ 304 room=.
+-> u10
+T1116 mode=inventory           Nori Runesinger(dwa) F3@( 2, 6) HP 84/84 MP 0/0 Hu  0 $ 304 room=.
+-> u3
+T1117 mode=upgrade_scroll_mode Nori Runesinger(dwa) F3@( 2, 6) HP 84/84 MP 0/0 Hu  0 $ 304 room=.
+-> 1
+T1118 mode=inventory           Nori Runesinger(dwa) F3@( 2, 6) HP 84/84 MP 0/0 Hu  0 $ 304 room=.
 -> x
-T1318 mode=game_loop           Nori Runesinger(dwa) F4@(14, 9) HP 20/84 MP 0/0 Hu  5 $ 584 room=.
+T1119 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 84/84 MP 0/0 Hu  0 $ 304 room=.
 -> e
-T1319 mode=garden_mode         Nori Runesinger(dwa) F4@(15, 9) HP 20/84 MP 0/0 Hu  4 $ 584 room=G
--> h
-T1320 mode=game_loop           Nori Runesinger(dwa) F4@(15, 9) HP 20/84 MP 0/0 Hu  4 $ 584 room=.
--> n
-T1321 mode=chest_mode          Nori Runesinger(dwa) F4@(15, 8) HP 20/84 MP 0/0 Hu  3 $ 584 room=C
+T1120 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 6) HP 82/84 MP 0/0 Hu  0 $ 304 room=.
 -> e
-T1322 mode=game_loop           Nori Runesinger(dwa) F4@(16, 8) HP 20/84 MP 0/0 Hu  2 $ 584 room=.
--> e
-T1323 mode=game_loop           Nori Runesinger(dwa) F4@(17, 8) HP 20/84 MP 0/0 Hu  1 $ 584 room=.
+T1121 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 6) HP 80/84 MP 0/0 Hu  0 $ 304 room=.
 -> n
-T1324 mode=game_loop           Nori Runesinger(dwa) F4@(17, 7) HP 18/84 MP 0/0 Hu  0 $ 584 room=.
--> n
-T1325 mode=game_loop           Nori Runesinger(dwa) F4@(17, 6) HP 16/84 MP 0/0 Hu  0 $ 584 room=.
--> n
-T1326 mode=combat_mode         Nori Runesinger(dwa) F4@(17, 5) HP 14/84 MP 0/0 Hu  0 $ 584 room=M vs Slime Mold(L3 HP16/16)
--> f
-T1327 mode=flee_direction_mode Nori Runesinger(dwa) F4@(17, 5) HP 14/84 MP 0/0 Hu  0 $ 584 room=M
--> s
-T1328 mode=game_loop           Nori Runesinger(dwa) F4@(17, 6) HP 14/84 MP 0/0 Hu  0 $ 584 room=.
--> n
-T1329 mode=combat_mode         Nori Runesinger(dwa) F4@(17, 5) HP 12/84 MP 0/0 Hu  0 $ 584 room=M vs Slime Mold(L3 HP16/16)
--> f
-T1330 mode=flee_direction_mode Nori Runesinger(dwa) F4@(17, 5) HP 12/84 MP 0/0 Hu  0 $ 584 room=M
--> s
-T1331 mode=game_loop           Nori Runesinger(dwa) F4@(17, 6) HP 12/84 MP 0/0 Hu  0 $ 584 room=.
--> s
-T1332 mode=game_loop           Nori Runesinger(dwa) F4@(17, 7) HP 10/84 MP 0/0 Hu  0 $ 584 room=.
--> s
-T1333 mode=game_loop           Nori Runesinger(dwa) F4@(17, 8) HP 8/84 MP 0/0 Hu  0 $ 584 room=.
+T1122 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 5) HP 78/84 MP 0/0 Hu  0 $ 304 room=.
 -> w
-T1334 mode=game_loop           Nori Runesinger(dwa) F4@(16, 8) HP 6/84 MP 0/0 Hu  0 $ 584 room=.
--> s
-T1335 mode=combat_mode         Nori Runesinger(dwa) F4@(16, 9) HP 4/84 MP 0/0 Hu  0 $ 584 room=M vs Wight(L3 HP41/41)
--> f
-T1336 mode=flee_direction_mode Nori Runesinger(dwa) F4@(16, 9) HP 2/84 MP 0/0 Hu  0 $ 584 room=M
+T1123 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 5) HP 76/84 MP 0/0 Hu  0 $ 304 room=.
 -> w
-T1337 mode=game_loop           Nori Runesinger(dwa) F4@(15, 9) HP 2/84 MP 0/0 Hu  0 $ 584 room=.
+T1124 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 74/84 MP 0/0 Hu  0 $ 304 room=N
+-> s
+T1125 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 72/84 MP 0/0 Hu  0 $ 304 room=.
+-> i
+T1126 mode=inventory           Nori Runesinger(dwa) F3@( 2, 6) HP 72/84 MP 0/0 Hu  0 $ 304 room=.
+-> u8
+T1127 mode=inventory           Nori Runesinger(dwa) F3@( 2, 6) HP 72/84 MP 0/0 Hu  0 $ 304 room=.
+-> x
+T1128 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 72/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1129 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 6) HP 70/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1130 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 6) HP 68/84 MP 0/0 Hu  0 $ 304 room=.
 -> n
-T1338 mode=death_screen        Nori Runesinger(dwa) F4@(15, 8) HP 0/84 MP 0/0 Hu  0 $ 584 room=C
+T1131 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 5) HP 66/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1132 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 5) HP 64/84 MP 0/0 Hu  0 $ 304 room=.
+-> n
+T1133 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 4) HP 62/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1134 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 4) HP 60/84 MP 0/0 Hu  0 $ 304 room=.
+-> s
+T1135 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 58/84 MP 0/0 Hu  0 $ 304 room=N
+-> s
+T1136 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 56/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1137 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 6) HP 54/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1138 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 6) HP 52/84 MP 0/0 Hu  0 $ 304 room=.
+-> n
+T1139 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 5) HP 50/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1140 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 5) HP 48/84 MP 0/0 Hu  0 $ 304 room=.
+-> n
+T1141 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 4) HP 46/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1142 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 4) HP 44/84 MP 0/0 Hu  0 $ 304 room=.
+-> s
+T1143 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 42/84 MP 0/0 Hu  0 $ 304 room=N
+-> s
+T1144 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 40/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1145 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 6) HP 38/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1146 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 6) HP 36/84 MP 0/0 Hu  0 $ 304 room=.
+-> n
+T1147 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 5) HP 34/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1148 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 5) HP 32/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1149 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 30/84 MP 0/0 Hu  0 $ 304 room=N
+-> s
+T1150 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 28/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1151 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 6) HP 26/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1152 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 6) HP 24/84 MP 0/0 Hu  0 $ 304 room=.
+-> n
+T1153 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 5) HP 22/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1154 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 5) HP 20/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1155 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 18/84 MP 0/0 Hu  0 $ 304 room=N
+-> s
+T1156 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 16/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1157 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 6) HP 14/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1158 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 6) HP 12/84 MP 0/0 Hu  0 $ 304 room=.
+-> n
+T1159 mode=game_loop           Nori Runesinger(dwa) F3@( 4, 5) HP 10/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1160 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 5) HP 8/84 MP 0/0 Hu  0 $ 304 room=.
+-> w
+T1161 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 5) HP 6/84 MP 0/0 Hu  0 $ 304 room=N
+-> s
+T1162 mode=game_loop           Nori Runesinger(dwa) F3@( 2, 6) HP 4/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1163 mode=game_loop           Nori Runesinger(dwa) F3@( 3, 6) HP 2/84 MP 0/0 Hu  0 $ 304 room=.
+-> e
+T1164 mode=death_screen        Nori Runesinger(dwa) F3@( 4, 6) HP 0/84 MP 0/0 Hu  0 $ 304 room=.
 
-=== run finished: turns=1338 floor=4 hp=0/84 gold=584 alive=False mode=death_screen ===
+=== run finished: turns=1164 floor=3 hp=0/84 gold=304 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00719_dwarf.html

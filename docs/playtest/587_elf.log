@@ -819,7 +819,7 @@ T 399 mode=game_loop           Legolas the Lorekeeper(elf) F2@(13, 3) HP 40/40 M
 -> n
 T 400 mode=combat_mode         Legolas the Lorekeeper(elf) F2@(13, 2) HP 40/40 MP 0/0 Hu 74 $ 201 room=M vs Zombie(L1 HP35/35)
 -> a
-T 401 mode=combat_mode         Legolas the Lorekeeper(elf) F2@(13, 2) HP 39/40 MP 0/0 Hu 74 $ 201 room=M vs Zombie(L1 HP8/35)
+T 401 mode=combat_mode         Legolas the Lorekeeper(elf) F2@(13, 2) HP 39/40 MP 0/0 Hu 74 $ 201 room=M vs Zombie(L1 HP7/35)
 -> a
 T 402 mode=combat_victory      Legolas the Lorekeeper(elf) F2@(13, 2) HP 38/40 MP 0/0 Hu 74 $ 305 room=.
 -> back
@@ -857,7 +857,7 @@ T 418 mode=game_loop           Legolas the Lorekeeper(elf) F2@(18, 8) HP 40/40 M
 -> s
 T 419 mode=combat_mode         Legolas the Lorekeeper(elf) F2@(18, 9) HP 40/40 MP 0/0 Hu 60 $ 560 room=M vs Zombie(L1 HP35/35)
 -> a
-T 420 mode=combat_mode         Legolas the Lorekeeper(elf) F2@(18, 9) HP 39/40 MP 0/0 Hu 60 $ 560 room=M vs Zombie(L1 HP8/35)
+T 420 mode=combat_mode         Legolas the Lorekeeper(elf) F2@(18, 9) HP 39/40 MP 0/0 Hu 60 $ 560 room=M vs Zombie(L1 HP7/35)
 -> a
 T 421 mode=combat_victory      Legolas the Lorekeeper(elf) F2@(18, 9) HP 38/40 MP 0/0 Hu 60 $ 574 room=.
 -> back
@@ -1321,7 +1321,7 @@ T 650 mode=game_loop           Legolas the Lorekeeper(elf) F3@( 7, 7) HP 38/50 M
 -> n
 T 651 mode=combat_mode         Legolas the Lorekeeper(elf) F3@( 7, 6) HP 38/50 MP 0/0 Hu 75 $ 550 room=M vs Bugbear(L2 HP35/35)
 -> a
-T 652 mode=combat_mode         Legolas the Lorekeeper(elf) F3@( 7, 6) HP 37/50 MP 0/0 Hu 75 $ 550 room=M vs Bugbear(L2 HP12/35)
+T 652 mode=combat_mode         Legolas the Lorekeeper(elf) F3@( 7, 6) HP 37/50 MP 0/0 Hu 75 $ 550 room=M vs Bugbear(L2 HP11/35)
 -> a
 T 653 mode=combat_victory      Legolas the Lorekeeper(elf) F3@( 7, 6) HP 37/50 MP 0/0 Hu 75 $ 571 room=.
 -> back
@@ -2401,7 +2401,7 @@ T1190 mode=combat_mode         Legolas the Lorekeeper(elf) F4@(17, 9) HP 41/50 M
 -> a
 T1191 mode=combat_mode         Legolas the Lorekeeper(elf) F4@(17, 9) HP 40/50 MP 0/0 Hu 73 $ 680 room=M vs Gray Ooze(L3 HP36/36)
 -> a
-T1192 mode=combat_mode         Legolas the Lorekeeper(elf) F4@(17, 9) HP 40/50 MP 0/0 Hu 73 $ 680 room=M vs Gray Ooze(L3 HP9/36)
+T1192 mode=combat_mode         Legolas the Lorekeeper(elf) F4@(17, 9) HP 40/50 MP 0/0 Hu 73 $ 680 room=M vs Gray Ooze(L3 HP8/36)
 -> a
 T1193 mode=combat_victory      Legolas the Lorekeeper(elf) F4@(17, 9) HP 39/60 MP 0/0 Hu 73 $ 696 room=.
 -> back

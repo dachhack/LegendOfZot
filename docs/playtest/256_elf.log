@@ -818,7 +818,7 @@ T 400 mode=game_loop           Elrond of the Greenwood(elf) F2@( 5, 2) HP 38/38 
 T 401 mode=inventory           Elrond of the Greenwood(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 92 $ 814 room=.
 -> u6
 T 402 mode=upgrade_scroll_mode Elrond of the Greenwood(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 92 $ 814 room=.
--> 1
+-> 2
 T 403 mode=inventory           Elrond of the Greenwood(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 92 $ 814 room=.
 -> x
 T 404 mode=game_loop           Elrond of the Greenwood(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 92 $ 814 room=.
@@ -2000,7 +2000,7 @@ T 991 mode=inventory           Elrond of the Greenwood(elf) F3@( 9, 7) HP 38/38 
 T 992 mode=inventory           Elrond of the Greenwood(elf) F3@( 9, 7) HP 38/38 MP 0/0 Hu 99 $ 166 room=.
 -> u9
 T 993 mode=upgrade_scroll_mode Elrond of the Greenwood(elf) F3@( 9, 7) HP 38/38 MP 0/0 Hu 99 $ 166 room=.
--> 1
+-> 2
 T 994 mode=inventory           Elrond of the Greenwood(elf) F3@( 9, 7) HP 38/38 MP 0/0 Hu 99 $ 166 room=.
 -> x
 T 995 mode=game_loop           Elrond of the Greenwood(elf) F3@( 9, 7) HP 38/38 MP 0/0 Hu 99 $ 166 room=.
@@ -2683,17 +2683,17 @@ T1333 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 33/38 
 -> a
 T1334 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 33/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP50/50)
 -> a
-T1335 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 30/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP34/50)
+T1335 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 30/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP33/50)
 -> a
-T1336 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 27/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP34/50)
+T1336 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 27/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP33/50)
 -> a
-T1337 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 24/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP34/50)
+T1337 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 24/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP33/50)
 -> a
-T1338 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 24/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP34/50)
+T1338 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 24/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP33/50)
 -> a
-T1339 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 24/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP18/50)
+T1339 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 24/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP16/50)
 -> a
-T1340 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 21/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP18/50)
+T1340 mode=combat_mode         Elrond of the Greenwood(elf) F3@(11, 8) HP 21/38 MP 0/0 Hu  0 $ 166 room=M vs Orc(L2 HP16/50)
 -> f
 T1341 mode=flee_direction_mode Elrond of the Greenwood(elf) F3@(11, 8) HP 18/38 MP 0/0 Hu  0 $ 166 room=M
 -> s

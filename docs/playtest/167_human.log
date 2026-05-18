@@ -1816,7 +1816,7 @@ T 899 mode=game_loop           Bard II(hum) F3@( 2, 5) HP 40/40 MP 0/0 Hu 70 $ 4
 -> w
 T 900 mode=combat_mode         Bard II(hum) F3@( 1, 5) HP 40/40 MP 0/0 Hu 69 $ 475 room=M vs Cockatrice(L2 HP25/25)
 -> a
-T 901 mode=combat_mode         Bard II(hum) F3@( 1, 5) HP 39/40 MP 0/0 Hu 69 $ 475 room=M vs Cockatrice(L2 HP4/25)
+T 901 mode=combat_mode         Bard II(hum) F3@( 1, 5) HP 39/40 MP 0/0 Hu 69 $ 475 room=M vs Cockatrice(L2 HP3/25)
 -> a
 T 902 mode=combat_victory      Bard II(hum) F3@( 1, 5) HP 38/50 MP 0/0 Hu 69 $ 496 room=.
 -> back
@@ -1844,393 +1844,749 @@ T 913 mode=combat_mode         Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 4
 -> a
 T 914 mode=combat_mode         Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 496 room=M vs Myconid Shaman(L2 HP45/45)
 -> a
-T 915 mode=combat_mode         Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 496 room=M vs Myconid Shaman(L2 HP23/45)
+T 915 mode=combat_mode         Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 496 room=M vs Myconid Shaman(L2 HP22/45)
 -> a
-T 916 mode=combat_mode         Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 496 room=M vs Myconid Shaman(L2 HP1/45)
--> a
-T 917 mode=combat_mode         Bard II(hum) F3@( 5, 3) HP 49/50 MP 0/0 Hu 63 $ 496 room=M vs Myconid Shaman(L2 HP1/45)
--> a
-T 918 mode=combat_mode         Bard II(hum) F3@( 5, 3) HP 48/50 MP 0/0 Hu 63 $ 496 room=M vs Myconid Shaman(L2 HP1/45)
--> a
-T 919 mode=combat_mode         Bard II(hum) F3@( 5, 3) HP 47/50 MP 0/0 Hu 63 $ 496 room=M vs Myconid Shaman(L2 HP1/45)
--> a
-T 920 mode=combat_victory      Bard II(hum) F3@( 5, 3) HP 47/50 MP 0/0 Hu 63 $ 502 room=.
+T 916 mode=combat_victory      Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 505 room=.
 -> back
-T 921 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 47/50 MP 0/0 Hu 63 $ 502 room=.
+T 917 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 505 room=.
+-> n
+T 918 mode=game_loop           Bard II(hum) F3@( 5, 2) HP 50/50 MP 0/0 Hu 62 $ 505 room=.
+-> n
+T 919 mode=game_loop           Bard II(hum) F3@( 5, 1) HP 50/50 MP 0/0 Hu 61 $ 505 room=.
+-> e
+T 920 mode=altar_mode          Bard II(hum) F3@( 6, 1) HP 50/50 MP 0/0 Hu 60 $ 505 room=A
+-> pray
+T 921 mode=game_loop           Bard II(hum) F3@( 6, 1) HP 50/50 MP 0/0 Hu 60 $ 505 room=.
+-> s
+T 922 mode=game_loop           Bard II(hum) F3@( 6, 2) HP 50/50 MP 0/0 Hu 59 $ 505 room=.
 -> i
-T 922 mode=inventory           Bard II(hum) F3@( 5, 3) HP 47/50 MP 0/0 Hu 63 $ 502 room=.
--> u10
-T 923 mode=inventory           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 502 room=.
--> x
-T 924 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 502 room=.
--> i
-T 925 mode=inventory           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 63 $ 502 room=.
+T 923 mode=inventory           Bard II(hum) F3@( 6, 2) HP 50/50 MP 0/0 Hu 59 $ 505 room=.
+-> eat2
+T 924 mode=inventory           Bard II(hum) F3@( 6, 2) HP 50/50 MP 0/0 Hu 65 $ 505 room=.
 -> eat1
-T 926 mode=inventory           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 69 $ 502 room=.
+T 925 mode=inventory           Bard II(hum) F3@( 6, 2) HP 50/50 MP 0/0 Hu100 $ 505 room=.
 -> x
-T 927 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 69 $ 502 room=.
--> n
-T 928 mode=game_loop           Bard II(hum) F3@( 5, 2) HP 50/50 MP 0/0 Hu 68 $ 502 room=.
--> n
-T 929 mode=game_loop           Bard II(hum) F3@( 5, 1) HP 50/50 MP 0/0 Hu 67 $ 502 room=.
+T 926 mode=game_loop           Bard II(hum) F3@( 6, 2) HP 50/50 MP 0/0 Hu100 $ 505 room=.
 -> e
-T 930 mode=altar_mode          Bard II(hum) F3@( 6, 1) HP 50/50 MP 0/0 Hu 66 $ 502 room=A
--> pray
-T 931 mode=game_loop           Bard II(hum) F3@( 6, 1) HP 50/50 MP 0/0 Hu100 $ 502 room=.
--> s
-T 932 mode=game_loop           Bard II(hum) F3@( 6, 2) HP 50/50 MP 0/0 Hu 99 $ 502 room=.
--> e
-T 933 mode=dungeon_mode        Bard II(hum) F3@( 7, 2) HP 50/50 MP 0/0 Hu 98 $ 502 room=N
+T 927 mode=dungeon_mode        Bard II(hum) F3@( 7, 2) HP 50/50 MP 0/0 Hu 99 $ 505 room=N
 -> u
-T 934 mode=game_loop           Bard II(hum) F3@( 7, 2) HP 50/50 MP 0/0 Hu 98 $ 502 room=N
+T 928 mode=game_loop           Bard II(hum) F3@( 7, 2) HP 50/50 MP 0/0 Hu 99 $ 505 room=N
 -> s
-T 935 mode=game_loop           Bard II(hum) F3@( 7, 3) HP 50/50 MP 0/0 Hu 97 $ 502 room=.
+T 929 mode=game_loop           Bard II(hum) F3@( 7, 3) HP 50/50 MP 0/0 Hu 98 $ 505 room=.
 -> w
-T 936 mode=game_loop           Bard II(hum) F3@( 6, 3) HP 50/50 MP 0/0 Hu 96 $ 502 room=.
+T 930 mode=game_loop           Bard II(hum) F3@( 6, 3) HP 50/50 MP 0/0 Hu 97 $ 505 room=.
 -> w
-T 937 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 95 $ 502 room=.
+T 931 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 96 $ 505 room=.
 -> s
-T 938 mode=game_loop           Bard II(hum) F3@( 5, 4) HP 50/50 MP 0/0 Hu 94 $ 502 room=.
+T 932 mode=game_loop           Bard II(hum) F3@( 5, 4) HP 50/50 MP 0/0 Hu 95 $ 505 room=.
 -> s
-T 939 mode=game_loop           Bard II(hum) F3@( 5, 5) HP 50/50 MP 0/0 Hu 93 $ 502 room=.
+T 933 mode=game_loop           Bard II(hum) F3@( 5, 5) HP 50/50 MP 0/0 Hu 94 $ 505 room=.
 -> s
-T 940 mode=game_loop           Bard II(hum) F3@( 5, 6) HP 50/50 MP 0/0 Hu 92 $ 502 room=.
+T 934 mode=game_loop           Bard II(hum) F3@( 5, 6) HP 50/50 MP 0/0 Hu 93 $ 505 room=.
 -> e
-T 941 mode=game_loop           Bard II(hum) F3@( 6, 6) HP 50/50 MP 0/0 Hu 91 $ 502 room=.
+T 935 mode=game_loop           Bard II(hum) F3@( 6, 6) HP 50/50 MP 0/0 Hu 92 $ 505 room=.
 -> s
-T 942 mode=game_loop           Bard II(hum) F3@( 6, 7) HP 50/50 MP 0/0 Hu 90 $ 502 room=.
+T 936 mode=game_loop           Bard II(hum) F3@( 6, 7) HP 50/50 MP 0/0 Hu 91 $ 505 room=.
 -> s
-T 943 mode=game_loop           Bard II(hum) F3@( 6, 8) HP 50/50 MP 0/0 Hu 89 $ 502 room=.
+T 937 mode=game_loop           Bard II(hum) F3@( 6, 8) HP 50/50 MP 0/0 Hu 90 $ 505 room=.
 -> s
-T 944 mode=game_loop           Bard II(hum) F3@( 6, 9) HP 50/50 MP 0/0 Hu 88 $ 502 room=.
+T 938 mode=game_loop           Bard II(hum) F3@( 6, 9) HP 50/50 MP 0/0 Hu 89 $ 505 room=.
 -> s
-T 945 mode=game_loop           Bard II(hum) F3@( 6,10) HP 50/50 MP 0/0 Hu 87 $ 502 room=.
+T 939 mode=game_loop           Bard II(hum) F3@( 6,10) HP 50/50 MP 0/0 Hu 88 $ 505 room=.
 -> e
-T 946 mode=game_loop           Bard II(hum) F3@( 7,10) HP 50/50 MP 0/0 Hu 86 $ 502 room=.
+T 940 mode=game_loop           Bard II(hum) F3@( 7,10) HP 50/50 MP 0/0 Hu 87 $ 505 room=.
 -> s
-T 947 mode=game_loop           Bard II(hum) F3@( 7,11) HP 50/50 MP 0/0 Hu 85 $ 502 room=.
+T 941 mode=game_loop           Bard II(hum) F3@( 7,11) HP 50/50 MP 0/0 Hu 86 $ 505 room=.
 -> s
-T 948 mode=chest_mode          Bard II(hum) F3@( 7,12) HP 50/50 MP 0/0 Hu 84 $ 502 room=C
+T 942 mode=chest_mode          Bard II(hum) F3@( 7,12) HP 50/50 MP 0/0 Hu 85 $ 505 room=C
 -> o
-T 949 mode=game_loop           Bard II(hum) F3@( 7,12) HP 50/50 MP 0/0 Hu 84 $ 562 room=.
+T 943 mode=game_loop           Bard II(hum) F3@( 7,12) HP 50/50 MP 0/0 Hu 85 $ 505 room=.
 -> w
-T 950 mode=game_loop           Bard II(hum) F3@( 6,12) HP 50/50 MP 0/0 Hu 83 $ 562 room=.
+T 944 mode=game_loop           Bard II(hum) F3@( 6,12) HP 50/50 MP 0/0 Hu 84 $ 505 room=.
 -> w
-T 951 mode=altar_mode          Bard II(hum) F3@( 5,12) HP 50/50 MP 0/0 Hu 82 $ 562 room=A
+T 945 mode=altar_mode          Bard II(hum) F3@( 5,12) HP 50/50 MP 0/0 Hu 83 $ 505 room=A
 -> pray
-T 952 mode=game_loop           Bard II(hum) F3@( 5,12) HP 50/50 MP 0/0 Hu 82 $ 562 room=.
+T 946 mode=game_loop           Bard II(hum) F3@( 5,12) HP 50/50 MP 0/0 Hu 83 $ 505 room=.
 -> s
-T 953 mode=game_loop           Bard II(hum) F3@( 5,13) HP 50/50 MP 0/0 Hu 81 $ 562 room=.
--> w
-T 954 mode=game_loop           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu 80 $ 562 room=.
+T 947 mode=game_loop           Bard II(hum) F3@( 5,13) HP 50/50 MP 0/0 Hu 82 $ 505 room=.
 -> s
-T 955 mode=game_loop           Bard II(hum) F3@( 4,14) HP 50/50 MP 0/0 Hu 79 $ 562 room=.
--> l
-T 956 mode=game_loop           Bard II(hum) F3@( 4,14) HP 50/50 MP 0/0 Hu 79 $ 562 room=.
--> s
-T 957 mode=game_loop           Bard II(hum) F3@( 4,15) HP 50/50 MP 0/0 Hu 78 $ 562 room=.
--> l
-T 958 mode=game_loop           Bard II(hum) F3@( 4,15) HP 50/50 MP 0/0 Hu 78 $ 562 room=.
--> w
-T 959 mode=pool_mode           Bard II(hum) F3@( 3,15) HP 50/50 MP 0/0 Hu 77 $ 562 room=P
--> dr
-T 960 mode=game_loop           Bard II(hum) F3@( 3,15) HP 50/50 MP 0/0 Hu 77 $ 562 room=.
--> n
-T 961 mode=game_loop           Bard II(hum) F3@( 3,14) HP 50/50 MP 0/0 Hu 76 $ 562 room=.
--> n
-T 962 mode=game_loop           Bard II(hum) F3@( 3,13) HP 50/50 MP 0/0 Hu 75 $ 562 room=.
--> e
-T 963 mode=game_loop           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu 74 $ 562 room=.
--> s
-T 964 mode=game_loop           Bard II(hum) F3@( 4,14) HP 50/50 MP 0/0 Hu 73 $ 562 room=.
--> s
-T 965 mode=game_loop           Bard II(hum) F3@( 4,15) HP 50/50 MP 0/0 Hu 72 $ 562 room=.
--> s
-T 966 mode=game_loop           Bard II(hum) F3@( 4,16) HP 50/50 MP 0/0 Hu 71 $ 562 room=.
--> l
-T 967 mode=game_loop           Bard II(hum) F3@( 4,16) HP 50/50 MP 0/0 Hu 71 $ 562 room=.
--> e
-T 968 mode=chest_mode          Bard II(hum) F3@( 5,16) HP 50/50 MP 0/0 Hu 70 $ 562 room=C
--> o
-T 969 mode=game_loop           Bard II(hum) F3@( 5,16) HP 50/50 MP 0/0 Hu 70 $ 642 room=.
--> e
-T 970 mode=game_loop           Bard II(hum) F3@( 6,16) HP 50/50 MP 0/0 Hu 69 $ 642 room=.
--> w
-T 971 mode=game_loop           Bard II(hum) F3@( 5,16) HP 50/50 MP 0/0 Hu 68 $ 642 room=.
--> n
-T 972 mode=game_loop           Bard II(hum) F3@( 5,15) HP 50/50 MP 0/0 Hu 67 $ 642 room=.
--> w
-T 973 mode=game_loop           Bard II(hum) F3@( 4,15) HP 50/50 MP 0/0 Hu 66 $ 642 room=.
--> n
-T 974 mode=game_loop           Bard II(hum) F3@( 4,14) HP 50/50 MP 0/0 Hu 65 $ 642 room=.
--> n
-T 975 mode=game_loop           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu 64 $ 642 room=.
--> e
-T 976 mode=game_loop           Bard II(hum) F3@( 5,13) HP 50/50 MP 0/0 Hu 63 $ 642 room=.
--> n
-T 977 mode=game_loop           Bard II(hum) F3@( 5,12) HP 50/50 MP 0/0 Hu 62 $ 642 room=.
--> e
-T 978 mode=game_loop           Bard II(hum) F3@( 6,12) HP 50/50 MP 0/0 Hu 61 $ 642 room=.
--> e
-T 979 mode=game_loop           Bard II(hum) F3@( 7,12) HP 50/50 MP 0/0 Hu 60 $ 642 room=.
--> n
-T 980 mode=game_loop           Bard II(hum) F3@( 7,11) HP 50/50 MP 0/0 Hu 59 $ 642 room=.
--> n
-T 981 mode=game_loop           Bard II(hum) F3@( 7,10) HP 50/50 MP 0/0 Hu 58 $ 642 room=.
--> n
-T 982 mode=game_loop           Bard II(hum) F3@( 7, 9) HP 50/50 MP 0/0 Hu 57 $ 642 room=.
--> n
-T 983 mode=game_loop           Bard II(hum) F3@( 7, 8) HP 50/50 MP 0/0 Hu 56 $ 642 room=.
--> w
-T 984 mode=game_loop           Bard II(hum) F3@( 6, 8) HP 50/50 MP 0/0 Hu 55 $ 642 room=.
--> n
-T 985 mode=game_loop           Bard II(hum) F3@( 6, 7) HP 50/50 MP 0/0 Hu 54 $ 642 room=.
--> n
-T 986 mode=game_loop           Bard II(hum) F3@( 6, 6) HP 50/50 MP 0/0 Hu 53 $ 642 room=.
--> w
-T 987 mode=game_loop           Bard II(hum) F3@( 5, 6) HP 50/50 MP 0/0 Hu 52 $ 642 room=.
--> n
-T 988 mode=game_loop           Bard II(hum) F3@( 5, 5) HP 50/50 MP 0/0 Hu 51 $ 642 room=.
--> n
-T 989 mode=game_loop           Bard II(hum) F3@( 5, 4) HP 50/50 MP 0/0 Hu 50 $ 642 room=.
--> n
-T 990 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 49 $ 642 room=.
--> n
-T 991 mode=game_loop           Bard II(hum) F3@( 5, 2) HP 50/50 MP 0/0 Hu 48 $ 642 room=.
--> n
-T 992 mode=game_loop           Bard II(hum) F3@( 5, 1) HP 50/50 MP 0/0 Hu 47 $ 642 room=.
--> e
-T 993 mode=game_loop           Bard II(hum) F3@( 6, 1) HP 50/50 MP 0/0 Hu 46 $ 642 room=.
--> e
-T 994 mode=game_loop           Bard II(hum) F3@( 7, 1) HP 50/50 MP 0/0 Hu 45 $ 642 room=.
--> s
-T 995 mode=game_loop           Bard II(hum) F3@( 7, 2) HP 50/50 MP 0/0 Hu 44 $ 642 room=N
--> w
-T 996 mode=game_loop           Bard II(hum) F3@( 6, 2) HP 50/50 MP 0/0 Hu 43 $ 642 room=.
--> w
-T 997 mode=game_loop           Bard II(hum) F3@( 5, 2) HP 50/50 MP 0/0 Hu 42 $ 642 room=.
--> w
-T 998 mode=game_loop           Bard II(hum) F3@( 4, 2) HP 50/50 MP 0/0 Hu 41 $ 642 room=.
--> n
-T 999 mode=game_loop           Bard II(hum) F3@( 4, 1) HP 50/50 MP 0/0 Hu 40 $ 642 room=.
--> e
-T1000 mode=game_loop           Bard II(hum) F3@( 5, 1) HP 50/50 MP 0/0 Hu 39 $ 642 room=.
--> e
-T1001 mode=game_loop           Bard II(hum) F3@( 6, 1) HP 50/50 MP 0/0 Hu 38 $ 642 room=.
--> e
-T1002 mode=game_loop           Bard II(hum) F3@( 7, 1) HP 50/50 MP 0/0 Hu 37 $ 642 room=.
--> s
-T1003 mode=game_loop           Bard II(hum) F3@( 7, 2) HP 50/50 MP 0/0 Hu 36 $ 642 room=N
--> s
-T1004 mode=game_loop           Bard II(hum) F3@( 7, 3) HP 50/50 MP 0/0 Hu 35 $ 642 room=.
--> w
-T1005 mode=game_loop           Bard II(hum) F3@( 6, 3) HP 50/50 MP 0/0 Hu 34 $ 642 room=.
--> n
-T1006 mode=game_loop           Bard II(hum) F3@( 6, 2) HP 50/50 MP 0/0 Hu 33 $ 642 room=.
--> w
-T1007 mode=game_loop           Bard II(hum) F3@( 5, 2) HP 50/50 MP 0/0 Hu 32 $ 642 room=.
--> n
-T1008 mode=game_loop           Bard II(hum) F3@( 5, 1) HP 50/50 MP 0/0 Hu 31 $ 642 room=.
--> e
-T1009 mode=game_loop           Bard II(hum) F3@( 6, 1) HP 50/50 MP 0/0 Hu 30 $ 642 room=.
--> e
-T1010 mode=game_loop           Bard II(hum) F3@( 7, 1) HP 50/50 MP 0/0 Hu 29 $ 642 room=.
--> s
-T1011 mode=game_loop           Bard II(hum) F3@( 7, 2) HP 50/50 MP 0/0 Hu 28 $ 642 room=N
--> s
-T1012 mode=game_loop           Bard II(hum) F3@( 7, 3) HP 50/50 MP 0/0 Hu 27 $ 642 room=.
--> w
-T1013 mode=game_loop           Bard II(hum) F3@( 6, 3) HP 50/50 MP 0/0 Hu 26 $ 642 room=.
--> w
-T1014 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 25 $ 642 room=.
--> n
-T1015 mode=game_loop           Bard II(hum) F3@( 5, 2) HP 50/50 MP 0/0 Hu 24 $ 642 room=.
--> w
-T1016 mode=game_loop           Bard II(hum) F3@( 4, 2) HP 50/50 MP 0/0 Hu 23 $ 642 room=.
--> n
-T1017 mode=game_loop           Bard II(hum) F3@( 4, 1) HP 50/50 MP 0/0 Hu 22 $ 642 room=.
--> e
-T1018 mode=game_loop           Bard II(hum) F3@( 5, 1) HP 50/50 MP 0/0 Hu 21 $ 642 room=.
--> e
-T1019 mode=game_loop           Bard II(hum) F3@( 6, 1) HP 50/50 MP 0/0 Hu 20 $ 642 room=.
--> e
-T1020 mode=game_loop           Bard II(hum) F3@( 7, 1) HP 50/50 MP 0/0 Hu 19 $ 642 room=.
--> s
-T1021 mode=game_loop           Bard II(hum) F3@( 7, 2) HP 50/50 MP 0/0 Hu 18 $ 642 room=N
--> w
-T1022 mode=game_loop           Bard II(hum) F3@( 6, 2) HP 50/50 MP 0/0 Hu 17 $ 642 room=.
--> s
-T1023 mode=game_loop           Bard II(hum) F3@( 6, 3) HP 50/50 MP 0/0 Hu 16 $ 642 room=.
--> w
-T1024 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 15 $ 642 room=.
--> n
-T1025 mode=game_loop           Bard II(hum) F3@( 5, 2) HP 50/50 MP 0/0 Hu 14 $ 642 room=.
--> w
-T1026 mode=game_loop           Bard II(hum) F3@( 4, 2) HP 50/50 MP 0/0 Hu 13 $ 642 room=.
--> n
-T1027 mode=game_loop           Bard II(hum) F3@( 4, 1) HP 50/50 MP 0/0 Hu 12 $ 642 room=.
--> w
-T1028 mode=game_loop           Bard II(hum) F3@( 3, 1) HP 50/50 MP 0/0 Hu 11 $ 642 room=.
--> w
-T1029 mode=game_loop           Bard II(hum) F3@( 2, 1) HP 50/50 MP 0/0 Hu 10 $ 642 room=.
--> w
-T1030 mode=stairs_up_mode      Bard II(hum) F3@( 1, 1) HP 50/50 MP 0/0 Hu  9 $ 642 room=U
--> s
-T1031 mode=game_loop           Bard II(hum) F3@( 1, 2) HP 50/50 MP 0/0 Hu  8 $ 642 room=.
--> e
-T1032 mode=game_loop           Bard II(hum) F3@( 2, 2) HP 50/50 MP 0/0 Hu  7 $ 642 room=.
--> s
-T1033 mode=game_loop           Bard II(hum) F3@( 2, 3) HP 50/50 MP 0/0 Hu  6 $ 642 room=.
--> s
-T1034 mode=game_loop           Bard II(hum) F3@( 2, 4) HP 50/50 MP 0/0 Hu  5 $ 642 room=.
--> s
-T1035 mode=game_loop           Bard II(hum) F3@( 2, 5) HP 50/50 MP 0/0 Hu  4 $ 642 room=.
--> w
-T1036 mode=game_loop           Bard II(hum) F3@( 1, 5) HP 50/50 MP 0/0 Hu  3 $ 642 room=.
--> e
-T1037 mode=game_loop           Bard II(hum) F3@( 2, 5) HP 50/50 MP 0/0 Hu  2 $ 642 room=.
--> n
-T1038 mode=game_loop           Bard II(hum) F3@( 2, 4) HP 50/50 MP 0/0 Hu  1 $ 642 room=.
--> e
-T1039 mode=game_loop           Bard II(hum) F3@( 3, 4) HP 48/50 MP 0/0 Hu  0 $ 642 room=.
--> n
-T1040 mode=game_loop           Bard II(hum) F3@( 3, 3) HP 46/50 MP 0/0 Hu  0 $ 642 room=.
--> w
-T1041 mode=game_loop           Bard II(hum) F3@( 2, 3) HP 44/50 MP 0/0 Hu  0 $ 642 room=.
--> n
-T1042 mode=game_loop           Bard II(hum) F3@( 2, 2) HP 42/50 MP 0/0 Hu  0 $ 642 room=.
--> w
-T1043 mode=game_loop           Bard II(hum) F3@( 1, 2) HP 40/50 MP 0/0 Hu  0 $ 642 room=.
--> n
-T1044 mode=stairs_up_mode      Bard II(hum) F3@( 1, 1) HP 38/50 MP 0/0 Hu  0 $ 642 room=U
--> e
-T1045 mode=game_loop           Bard II(hum) F3@( 2, 1) HP 36/50 MP 0/0 Hu  0 $ 642 room=.
--> e
-T1046 mode=game_loop           Bard II(hum) F3@( 3, 1) HP 34/50 MP 0/0 Hu  0 $ 642 room=.
--> e
-T1047 mode=game_loop           Bard II(hum) F3@( 4, 1) HP 32/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1048 mode=game_loop           Bard II(hum) F3@( 4, 2) HP 30/50 MP 0/0 Hu  0 $ 642 room=.
--> e
-T1049 mode=game_loop           Bard II(hum) F3@( 5, 2) HP 28/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1050 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 26/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1051 mode=game_loop           Bard II(hum) F3@( 5, 4) HP 24/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1052 mode=game_loop           Bard II(hum) F3@( 5, 5) HP 22/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1053 mode=game_loop           Bard II(hum) F3@( 5, 6) HP 20/50 MP 0/0 Hu  0 $ 642 room=.
--> i
-T1054 mode=inventory           Bard II(hum) F3@( 5, 6) HP 20/50 MP 0/0 Hu  0 $ 642 room=.
--> u10
-T1055 mode=inventory           Bard II(hum) F3@( 5, 6) HP 50/50 MP 0/0 Hu  0 $ 642 room=.
--> x
-T1056 mode=game_loop           Bard II(hum) F3@( 5, 6) HP 50/50 MP 0/0 Hu  0 $ 642 room=.
--> e
-T1057 mode=game_loop           Bard II(hum) F3@( 6, 6) HP 48/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1058 mode=game_loop           Bard II(hum) F3@( 6, 7) HP 46/50 MP 0/0 Hu  0 $ 642 room=.
--> i
-T1059 mode=inventory           Bard II(hum) F3@( 6, 7) HP 46/50 MP 0/0 Hu  0 $ 642 room=.
--> u10
-T1060 mode=inventory           Bard II(hum) F3@( 6, 7) HP 50/50 MP 0/0 Hu  0 $ 642 room=.
--> x
-T1061 mode=game_loop           Bard II(hum) F3@( 6, 7) HP 50/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1062 mode=game_loop           Bard II(hum) F3@( 6, 8) HP 48/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1063 mode=game_loop           Bard II(hum) F3@( 6, 9) HP 46/50 MP 0/0 Hu  0 $ 642 room=.
--> e
-T1064 mode=game_loop           Bard II(hum) F3@( 7, 9) HP 44/50 MP 0/0 Hu  0 $ 642 room=.
--> e
-T1065 mode=game_loop           Bard II(hum) F3@( 8, 9) HP 42/50 MP 0/0 Hu  0 $ 642 room=.
--> i
-T1066 mode=inventory           Bard II(hum) F3@( 8, 9) HP 42/50 MP 0/0 Hu  0 $ 642 room=.
--> u10
-T1067 mode=inventory           Bard II(hum) F3@( 8, 9) HP 50/50 MP 0/0 Hu  0 $ 642 room=.
--> x
-T1068 mode=game_loop           Bard II(hum) F3@( 8, 9) HP 50/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1069 mode=game_loop           Bard II(hum) F3@( 8,10) HP 48/50 MP 0/0 Hu  0 $ 642 room=.
--> w
-T1070 mode=game_loop           Bard II(hum) F3@( 7,10) HP 46/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1071 mode=game_loop           Bard II(hum) F3@( 7,11) HP 44/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1072 mode=game_loop           Bard II(hum) F3@( 7,12) HP 42/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1073 mode=game_loop           Bard II(hum) F3@( 7,13) HP 40/50 MP 0/0 Hu  0 $ 642 room=.
--> w
-T1074 mode=game_loop           Bard II(hum) F3@( 6,13) HP 38/50 MP 0/0 Hu  0 $ 642 room=.
--> w
-T1075 mode=game_loop           Bard II(hum) F3@( 5,13) HP 36/50 MP 0/0 Hu  0 $ 642 room=.
--> i
-T1076 mode=inventory           Bard II(hum) F3@( 5,13) HP 36/50 MP 0/0 Hu  0 $ 642 room=.
--> u10
-T1077 mode=inventory           Bard II(hum) F3@( 5,13) HP 50/50 MP 0/0 Hu  0 $ 642 room=.
--> x
-T1078 mode=game_loop           Bard II(hum) F3@( 5,13) HP 50/50 MP 0/0 Hu  0 $ 642 room=.
--> s
-T1079 mode=combat_mode         Bard II(hum) F3@( 5,14) HP 48/50 MP 0/0 Hu  0 $ 642 room=M vs Rust Monster(L2 HP18/18)
+T 948 mode=combat_mode         Bard II(hum) F3@( 5,14) HP 50/50 MP 0/0 Hu 81 $ 505 room=M vs Harpy(L2 HP28/28)
 -> a
-T1080 mode=combat_mode         Bard II(hum) F3@( 5,14) HP 47/50 MP 0/0 Hu  0 $ 642 room=M vs Rust Monster(L2 HP18/18)
+T 949 mode=combat_mode         Bard II(hum) F3@( 5,14) HP 49/50 MP 0/0 Hu 81 $ 505 room=M vs Harpy(L2 HP5/28)
 -> a
-T1081 mode=combat_victory      Bard II(hum) F3@( 5,14) HP 47/50 MP 0/0 Hu  0 $ 660 room=.
+T 950 mode=combat_mode         Bard II(hum) F3@( 5,14) HP 48/50 MP 0/0 Hu 81 $ 505 room=M vs Harpy(L2 HP5/28)
+-> a
+T 951 mode=combat_mode         Bard II(hum) F3@( 5,14) HP 47/50 MP 0/0 Hu 81 $ 505 room=M vs Harpy(L2 HP5/28)
+-> a
+T 952 mode=combat_mode         Bard II(hum) F3@( 5,14) HP 46/50 MP 0/0 Hu 81 $ 505 room=M vs Harpy(L2 HP5/28)
+-> a
+T 953 mode=combat_mode         Bard II(hum) F3@( 5,14) HP 45/50 MP 0/0 Hu 81 $ 505 room=M vs Harpy(L2 HP5/28)
+-> a
+T 954 mode=combat_victory      Bard II(hum) F3@( 5,14) HP 45/50 MP 0/0 Hu 81 $ 529 room=.
 -> back
-T1082 mode=game_loop           Bard II(hum) F3@( 5,14) HP 47/50 MP 0/0 Hu  0 $ 660 room=.
--> e
-T1083 mode=game_loop           Bard II(hum) F3@( 6,14) HP 45/50 MP 0/0 Hu  0 $ 660 room=.
--> e
-T1084 mode=game_loop           Bard II(hum) F3@( 7,14) HP 43/50 MP 0/0 Hu  0 $ 660 room=.
--> n
-T1085 mode=game_loop           Bard II(hum) F3@( 7,13) HP 41/50 MP 0/0 Hu  0 $ 660 room=.
--> e
-T1086 mode=game_loop           Bard II(hum) F3@( 8,13) HP 39/50 MP 0/0 Hu  0 $ 660 room=.
--> n
-T1087 mode=game_loop           Bard II(hum) F3@( 8,12) HP 37/50 MP 0/0 Hu  0 $ 660 room=.
--> e
-T1088 mode=game_loop           Bard II(hum) F3@( 9,12) HP 35/50 MP 0/0 Hu  0 $ 660 room=.
--> s
-T1089 mode=game_loop           Bard II(hum) F3@( 9,13) HP 33/50 MP 0/0 Hu  0 $ 660 room=.
--> w
-T1090 mode=game_loop           Bard II(hum) F3@( 8,13) HP 31/50 MP 0/0 Hu  0 $ 660 room=.
--> w
-T1091 mode=game_loop           Bard II(hum) F3@( 7,13) HP 29/50 MP 0/0 Hu  0 $ 660 room=.
--> n
-T1092 mode=game_loop           Bard II(hum) F3@( 7,12) HP 27/50 MP 0/0 Hu  0 $ 660 room=.
--> n
-T1093 mode=game_loop           Bard II(hum) F3@( 7,11) HP 25/50 MP 0/0 Hu  0 $ 660 room=.
--> n
-T1094 mode=game_loop           Bard II(hum) F3@( 7,10) HP 23/50 MP 0/0 Hu  0 $ 660 room=.
--> e
-T1095 mode=game_loop           Bard II(hum) F3@( 8,10) HP 21/50 MP 0/0 Hu  0 $ 660 room=.
--> s
-T1096 mode=game_loop           Bard II(hum) F3@( 8,11) HP 19/50 MP 0/0 Hu  0 $ 660 room=.
--> s
-T1097 mode=game_loop           Bard II(hum) F3@( 8,12) HP 17/50 MP 0/0 Hu  0 $ 660 room=.
--> s
-T1098 mode=game_loop           Bard II(hum) F3@( 8,13) HP 15/50 MP 0/0 Hu  0 $ 660 room=.
--> w
-T1099 mode=game_loop           Bard II(hum) F3@( 7,13) HP 13/50 MP 0/0 Hu  0 $ 660 room=.
--> s
-T1100 mode=game_loop           Bard II(hum) F3@( 7,14) HP 11/50 MP 0/0 Hu  0 $ 660 room=.
+T 955 mode=game_loop           Bard II(hum) F3@( 5,14) HP 45/50 MP 0/0 Hu 81 $ 529 room=.
 -> l
-T1101 mode=game_loop           Bard II(hum) F3@( 7,14) HP 11/50 MP 0/0 Hu  0 $ 660 room=.
--> w
-T1102 mode=game_loop           Bard II(hum) F3@( 6,14) HP 9/50 MP 0/0 Hu  0 $ 660 room=.
--> w
-T1103 mode=game_loop           Bard II(hum) F3@( 5,14) HP 7/50 MP 0/0 Hu  0 $ 660 room=.
--> n
-T1104 mode=game_loop           Bard II(hum) F3@( 5,13) HP 5/50 MP 0/0 Hu  0 $ 660 room=.
--> n
-T1105 mode=game_loop           Bard II(hum) F3@( 5,12) HP 3/50 MP 0/0 Hu  0 $ 660 room=.
--> n
-T1106 mode=game_loop           Bard II(hum) F3@( 5,11) HP 1/50 MP 0/0 Hu  0 $ 660 room=.
+T 956 mode=game_loop           Bard II(hum) F3@( 5,14) HP 45/50 MP 0/0 Hu 81 $ 529 room=.
 -> s
-T1107 mode=death_screen        Bard II(hum) F3@( 5,12) HP 0/50 MP 0/0 Hu  0 $ 660 room=.
+T 957 mode=game_loop           Bard II(hum) F3@( 5,15) HP 45/50 MP 0/0 Hu 80 $ 529 room=.
+-> l
+T 958 mode=game_loop           Bard II(hum) F3@( 5,15) HP 45/50 MP 0/0 Hu 80 $ 529 room=.
+-> s
+T 959 mode=chest_mode          Bard II(hum) F3@( 5,16) HP 45/50 MP 0/0 Hu 79 $ 529 room=C
+-> o
+T 960 mode=game_loop           Bard II(hum) F3@( 5,16) HP 45/50 MP 0/0 Hu 79 $ 529 room=.
+-> l
+T 961 mode=game_loop           Bard II(hum) F3@( 5,16) HP 45/50 MP 0/0 Hu 79 $ 529 room=.
+-> e
+T 962 mode=game_loop           Bard II(hum) F3@( 6,16) HP 45/50 MP 0/0 Hu 78 $ 529 room=.
+-> w
+T 963 mode=game_loop           Bard II(hum) F3@( 5,16) HP 46/50 MP 0/0 Hu 77 $ 529 room=.
+-> w
+T 964 mode=game_loop           Bard II(hum) F3@( 4,16) HP 46/50 MP 0/0 Hu 76 $ 529 room=.
+-> n
+T 965 mode=game_loop           Bard II(hum) F3@( 4,15) HP 46/50 MP 0/0 Hu 75 $ 529 room=.
+-> w
+T 966 mode=pool_mode           Bard II(hum) F3@( 3,15) HP 46/50 MP 0/0 Hu 74 $ 529 room=P
+-> dr
+T 967 mode=game_loop           Bard II(hum) F3@( 3,15) HP 33/50 MP 0/0 Hu 74 $ 529 room=.
+-> n
+T 968 mode=game_loop           Bard II(hum) F3@( 3,14) HP 28/50 MP 0/0 Hu 73 $ 529 room=.
+-> n
+T 969 mode=game_loop           Bard II(hum) F3@( 3,13) HP 22/50 MP 0/0 Hu 72 $ 529 room=.
+-> e
+T 970 mode=game_loop           Bard II(hum) F3@( 4,13) HP 16/50 MP 0/0 Hu 71 $ 529 room=.
+-> i
+T 971 mode=inventory           Bard II(hum) F3@( 4,13) HP 16/50 MP 0/0 Hu 71 $ 529 room=.
+-> u11
+T 972 mode=inventory           Bard II(hum) F3@( 4,13) HP 46/50 MP 0/0 Hu 71 $ 529 room=.
+-> u4
+T 973 mode=inventory           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu 71 $ 529 room=.
+-> u6
+T 974 mode=upgrade_scroll_mode Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu 71 $ 529 room=.
+-> 1
+T 975 mode=inventory           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu 71 $ 529 room=.
+-> x
+T 976 mode=game_loop           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu 71 $ 529 room=.
+-> i
+T 977 mode=inventory           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu 71 $ 529 room=.
+-> eat2
+T 978 mode=inventory           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu 77 $ 529 room=.
+-> eat1
+T 979 mode=inventory           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu100 $ 529 room=.
+-> x
+T 980 mode=game_loop           Bard II(hum) F3@( 4,13) HP 50/50 MP 0/0 Hu100 $ 529 room=.
+-> e
+T 981 mode=game_loop           Bard II(hum) F3@( 5,13) HP 45/50 MP 0/0 Hu 99 $ 529 room=.
+-> n
+T 982 mode=game_loop           Bard II(hum) F3@( 5,12) HP 45/50 MP 0/0 Hu 98 $ 529 room=.
+-> e
+T 983 mode=game_loop           Bard II(hum) F3@( 6,12) HP 46/50 MP 0/0 Hu 97 $ 529 room=.
+-> e
+T 984 mode=game_loop           Bard II(hum) F3@( 7,12) HP 46/50 MP 0/0 Hu 96 $ 529 room=.
+-> n
+T 985 mode=game_loop           Bard II(hum) F3@( 7,11) HP 47/50 MP 0/0 Hu 95 $ 529 room=.
+-> e
+T 986 mode=game_loop           Bard II(hum) F3@( 8,11) HP 47/50 MP 0/0 Hu 94 $ 529 room=.
+-> e
+T 987 mode=game_loop           Bard II(hum) F3@( 9,11) HP 48/50 MP 0/0 Hu 93 $ 529 room=.
+-> n
+T 988 mode=combat_mode         Bard II(hum) F3@( 9,10) HP 48/50 MP 0/0 Hu 92 $ 529 room=M vs Kobold(L2 HP8/8)
+-> f
+T 989 mode=combat_mode         Bard II(hum) F3@( 9,10) HP 48/50 MP 0/0 Hu 92 $ 529 room=M vs Kobold(L2 HP8/8)
+-> a
+T 990 mode=combat_victory      Bard II(hum) F3@( 9,10) HP 48/50 MP 0/0 Hu 92 $ 622 room=.
+-> back
+T 991 mode=game_loop           Bard II(hum) F3@( 9,10) HP 48/50 MP 0/0 Hu 92 $ 622 room=.
+-> e
+T 992 mode=combat_mode         Bard II(hum) F3@(10,10) HP 49/50 MP 0/0 Hu 91 $ 622 room=M vs Bugbear(L2 HP35/35)
+-> f
+T 993 mode=flee_direction_mode Bard II(hum) F3@(10,10) HP 49/50 MP 0/0 Hu 91 $ 622 room=M
+-> n
+T 994 mode=game_loop           Bard II(hum) F3@(10, 9) HP 49/50 MP 0/0 Hu 91 $ 622 room=.
+-> l
+T 995 mode=game_loop           Bard II(hum) F3@(10, 9) HP 49/50 MP 0/0 Hu 91 $ 622 room=.
+-> e
+T 996 mode=game_loop           Bard II(hum) F3@(11, 9) HP 49/50 MP 0/0 Hu 90 $ 622 room=.
+-> l
+T 997 mode=game_loop           Bard II(hum) F3@(11, 9) HP 49/50 MP 0/0 Hu 90 $ 622 room=.
+-> e
+T 998 mode=chest_mode          Bard II(hum) F3@(12, 9) HP 50/50 MP 0/0 Hu 89 $ 622 room=C
+-> o
+T 999 mode=game_loop           Bard II(hum) F3@(12, 9) HP 50/50 MP 0/0 Hu 89 $ 622 room=.
+-> i
+T1000 mode=inventory           Bard II(hum) F3@(12, 9) HP 50/50 MP 0/0 Hu 89 $ 622 room=.
+-> e5
+T1001 mode=inventory           Bard II(hum) F3@(12, 9) HP 50/50 MP 0/0 Hu 89 $ 622 room=.
+-> x
+T1002 mode=game_loop           Bard II(hum) F3@(12, 9) HP 50/50 MP 0/0 Hu 89 $ 622 room=.
+-> l
+T1003 mode=game_loop           Bard II(hum) F3@(12, 9) HP 50/50 MP 0/0 Hu 89 $ 622 room=.
+-> n
+T1004 mode=chest_mode          Bard II(hum) F3@(12, 8) HP 50/50 MP 0/0 Hu 88 $ 622 room=C
+-> o
+T1005 mode=game_loop           Bard II(hum) F3@(11, 8) HP 50/50 MP 0/0 Hu 87 $ 622 room=.
+-> n
+T1006 mode=game_loop           Bard II(hum) F3@(11, 7) HP 50/50 MP 0/0 Hu 86 $ 622 room=.
+-> n
+T1007 mode=game_loop           Bard II(hum) F3@(11, 6) HP 50/50 MP 0/0 Hu 85 $ 622 room=.
+-> l
+T1008 mode=game_loop           Bard II(hum) F3@(11, 6) HP 50/50 MP 0/0 Hu 85 $ 622 room=.
+-> n
+T1009 mode=game_loop           Bard II(hum) F3@(11, 5) HP 50/50 MP 0/0 Hu 84 $ 622 room=.
+-> l
+T1010 mode=game_loop           Bard II(hum) F3@(11, 5) HP 50/50 MP 0/0 Hu 84 $ 622 room=.
+-> n
+T1011 mode=game_loop           Bard II(hum) F3@(11, 4) HP 50/50 MP 0/0 Hu 83 $ 622 room=.
+-> l
+T1012 mode=game_loop           Bard II(hum) F3@(11, 4) HP 50/50 MP 0/0 Hu 83 $ 622 room=.
+-> n
+T1013 mode=pool_mode           Bard II(hum) F3@(11, 3) HP 50/50 MP 0/0 Hu 82 $ 622 room=P
+-> dr
+T1014 mode=game_loop           Bard II(hum) F3@(11, 3) HP 50/50 MP 0/0 Hu 82 $ 622 room=.
+-> s
+T1015 mode=game_loop           Bard II(hum) F3@(11, 4) HP 50/50 MP 0/0 Hu 81 $ 622 room=.
+-> w
+T1016 mode=combat_mode         Bard II(hum) F3@(10, 4) HP 50/50 MP 0/0 Hu 80 $ 622 room=M vs Wight(L2 HP40/40)
+-> a
+T1017 mode=combat_mode         Bard II(hum) F3@(10, 4) HP 48/50 MP 0/0 Hu 80 $ 622 room=M vs Wight(L2 HP18/40)
+-> f
+T1018 mode=combat_mode         Bard II(hum) F3@(10, 4) HP 40/50 MP 0/0 Hu 80 $ 622 room=M vs Wight(L2 HP24/40)
+-> a
+T1019 mode=combat_mode         Bard II(hum) F3@(10, 4) HP 38/50 MP 0/0 Hu 80 $ 622 room=M vs Wight(L2 HP24/40)
+-> a
+T1020 mode=combat_mode         Bard II(hum) F3@(10, 4) HP 36/50 MP 0/0 Hu 80 $ 622 room=M vs Wight(L2 HP2/40)
+-> a
+T1021 mode=combat_victory      Bard II(hum) F3@(10, 4) HP 34/50 MP 0/0 Hu 80 $ 625 room=.
+-> back
+T1022 mode=game_loop           Bard II(hum) F3@(10, 4) HP 34/50 MP 0/0 Hu 80 $ 625 room=.
+-> w
+T1023 mode=game_loop           Bard II(hum) F3@( 9, 4) HP 34/50 MP 0/0 Hu 79 $ 625 room=.
+-> s
+T1024 mode=game_loop           Bard II(hum) F3@( 9, 5) HP 34/50 MP 0/0 Hu 78 $ 625 room=.
+-> w
+T1025 mode=game_loop           Bard II(hum) F3@( 8, 5) HP 34/50 MP 0/0 Hu 77 $ 625 room=.
+-> s
+T1026 mode=game_loop           Bard II(hum) F3@( 8, 6) HP 35/50 MP 0/0 Hu 76 $ 625 room=.
+-> s
+T1027 mode=game_loop           Bard II(hum) F3@( 8, 7) HP 35/50 MP 0/0 Hu 75 $ 625 room=.
+-> i
+T1028 mode=inventory           Bard II(hum) F3@( 8, 7) HP 35/50 MP 0/0 Hu 75 $ 625 room=.
+-> u12
+T1029 mode=inventory           Bard II(hum) F3@( 8, 7) HP 50/50 MP 0/0 Hu 75 $ 625 room=.
+-> x
+T1030 mode=game_loop           Bard II(hum) F3@( 8, 7) HP 50/50 MP 0/0 Hu 75 $ 625 room=.
+-> s
+T1031 mode=combat_mode         Bard II(hum) F3@( 8, 8) HP 50/50 MP 0/0 Hu 74 $ 625 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1032 mode=combat_mode         Bard II(hum) F3@( 8, 8) HP 50/50 MP 0/0 Hu 74 $ 625 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T1033 mode=combat_victory      Bard II(hum) F3@( 8, 8) HP 50/50 MP 0/0 Hu 74 $ 655 room=.
+-> back
+T1034 mode=game_loop           Bard II(hum) F3@( 8, 8) HP 50/50 MP 0/0 Hu 74 $ 655 room=.
+-> w
+T1035 mode=game_loop           Bard II(hum) F3@( 7, 8) HP 50/50 MP 0/0 Hu 73 $ 655 room=.
+-> s
+T1036 mode=game_loop           Bard II(hum) F3@( 7, 9) HP 50/50 MP 0/0 Hu 72 $ 655 room=.
+-> s
+T1037 mode=game_loop           Bard II(hum) F3@( 7,10) HP 50/50 MP 0/0 Hu 71 $ 655 room=.
+-> w
+T1038 mode=game_loop           Bard II(hum) F3@( 6,10) HP 50/50 MP 0/0 Hu 70 $ 655 room=.
+-> n
+T1039 mode=game_loop           Bard II(hum) F3@( 6, 9) HP 50/50 MP 0/0 Hu 69 $ 655 room=.
+-> n
+T1040 mode=game_loop           Bard II(hum) F3@( 6, 8) HP 50/50 MP 0/0 Hu 68 $ 655 room=.
+-> n
+T1041 mode=game_loop           Bard II(hum) F3@( 6, 7) HP 50/50 MP 0/0 Hu 67 $ 655 room=.
+-> n
+T1042 mode=game_loop           Bard II(hum) F3@( 6, 6) HP 50/50 MP 0/0 Hu 66 $ 655 room=.
+-> w
+T1043 mode=game_loop           Bard II(hum) F3@( 5, 6) HP 50/50 MP 0/0 Hu 65 $ 655 room=.
+-> n
+T1044 mode=game_loop           Bard II(hum) F3@( 5, 5) HP 50/50 MP 0/0 Hu 64 $ 655 room=.
+-> i
+T1045 mode=inventory           Bard II(hum) F3@( 5, 5) HP 50/50 MP 0/0 Hu 64 $ 655 room=.
+-> eat2
+T1046 mode=inventory           Bard II(hum) F3@( 5, 5) HP 50/50 MP 0/0 Hu 70 $ 655 room=.
+-> eat1
+T1047 mode=inventory           Bard II(hum) F3@( 5, 5) HP 50/50 MP 0/0 Hu100 $ 655 room=.
+-> x
+T1048 mode=game_loop           Bard II(hum) F3@( 5, 5) HP 50/50 MP 0/0 Hu100 $ 655 room=.
+-> n
+T1049 mode=game_loop           Bard II(hum) F3@( 5, 4) HP 50/50 MP 0/0 Hu 99 $ 655 room=.
+-> n
+T1050 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 98 $ 655 room=.
+-> n
+T1051 mode=game_loop           Bard II(hum) F3@( 5, 2) HP 50/50 MP 0/0 Hu 97 $ 655 room=.
+-> n
+T1052 mode=game_loop           Bard II(hum) F3@( 5, 1) HP 50/50 MP 0/0 Hu 96 $ 655 room=.
+-> e
+T1053 mode=game_loop           Bard II(hum) F3@( 6, 1) HP 50/50 MP 0/0 Hu 95 $ 655 room=.
+-> e
+T1054 mode=game_loop           Bard II(hum) F3@( 7, 1) HP 50/50 MP 0/0 Hu 94 $ 655 room=.
+-> s
+T1055 mode=game_loop           Bard II(hum) F3@( 7, 2) HP 50/50 MP 0/0 Hu 93 $ 655 room=N
+-> s
+T1056 mode=game_loop           Bard II(hum) F3@( 7, 3) HP 50/50 MP 0/0 Hu 92 $ 655 room=.
+-> w
+T1057 mode=game_loop           Bard II(hum) F3@( 6, 3) HP 50/50 MP 0/0 Hu 91 $ 655 room=.
+-> w
+T1058 mode=game_loop           Bard II(hum) F3@( 5, 3) HP 50/50 MP 0/0 Hu 90 $ 655 room=.
+-> s
+T1059 mode=game_loop           Bard II(hum) F3@( 5, 4) HP 50/50 MP 0/0 Hu 89 $ 655 room=.
+-> s
+T1060 mode=game_loop           Bard II(hum) F3@( 5, 5) HP 50/50 MP 0/0 Hu 88 $ 655 room=.
+-> s
+T1061 mode=game_loop           Bard II(hum) F3@( 5, 6) HP 50/50 MP 0/0 Hu 87 $ 655 room=.
+-> e
+T1062 mode=game_loop           Bard II(hum) F3@( 6, 6) HP 50/50 MP 0/0 Hu 86 $ 655 room=.
+-> s
+T1063 mode=game_loop           Bard II(hum) F3@( 6, 7) HP 50/50 MP 0/0 Hu 85 $ 655 room=.
+-> s
+T1064 mode=game_loop           Bard II(hum) F3@( 6, 8) HP 50/50 MP 0/0 Hu 84 $ 655 room=.
+-> e
+T1065 mode=game_loop           Bard II(hum) F3@( 7, 8) HP 50/50 MP 0/0 Hu 83 $ 655 room=.
+-> e
+T1066 mode=game_loop           Bard II(hum) F3@( 8, 8) HP 50/50 MP 0/0 Hu 82 $ 655 room=.
+-> n
+T1067 mode=game_loop           Bard II(hum) F3@( 8, 7) HP 50/50 MP 0/0 Hu 81 $ 655 room=.
+-> n
+T1068 mode=game_loop           Bard II(hum) F3@( 8, 6) HP 50/50 MP 0/0 Hu 80 $ 655 room=.
+-> n
+T1069 mode=game_loop           Bard II(hum) F3@( 8, 5) HP 50/50 MP 0/0 Hu 79 $ 655 room=.
+-> e
+T1070 mode=game_loop           Bard II(hum) F3@( 9, 5) HP 50/50 MP 0/0 Hu 78 $ 655 room=.
+-> e
+T1071 mode=game_loop           Bard II(hum) F3@(10, 5) HP 50/50 MP 0/0 Hu 77 $ 655 room=.
+-> s
+T1072 mode=game_loop           Bard II(hum) F3@(10, 6) HP 50/50 MP 0/0 Hu 76 $ 655 room=.
+-> e
+T1073 mode=game_loop           Bard II(hum) F3@(11, 6) HP 50/50 MP 0/0 Hu 75 $ 655 room=.
+-> s
+T1074 mode=game_loop           Bard II(hum) F3@(11, 7) HP 50/50 MP 0/0 Hu 74 $ 655 room=.
+-> e
+T1075 mode=game_loop           Bard II(hum) F3@(12, 7) HP 50/50 MP 0/0 Hu 73 $ 655 room=.
+-> l
+T1076 mode=game_loop           Bard II(hum) F3@(12, 7) HP 50/50 MP 0/0 Hu 73 $ 655 room=.
+-> e
+T1077 mode=game_loop           Bard II(hum) F3@(13, 7) HP 50/50 MP 0/0 Hu 72 $ 655 room=.
+-> w
+T1078 mode=game_loop           Bard II(hum) F3@(12, 7) HP 50/50 MP 0/0 Hu 71 $ 655 room=.
+-> s
+T1079 mode=game_loop           Bard II(hum) F3@(12, 8) HP 50/50 MP 0/0 Hu 70 $ 655 room=.
+-> s
+T1080 mode=game_loop           Bard II(hum) F3@(12, 9) HP 50/50 MP 0/0 Hu 69 $ 655 room=.
+-> w
+T1081 mode=game_loop           Bard II(hum) F3@(11, 9) HP 50/50 MP 0/0 Hu 68 $ 655 room=.
+-> w
+T1082 mode=game_loop           Bard II(hum) F3@(10, 9) HP 50/50 MP 0/0 Hu 67 $ 655 room=.
+-> s
+T1083 mode=combat_mode         Bard II(hum) F3@(10,10) HP 50/50 MP 0/0 Hu 66 $ 655 room=M vs Bugbear(L2 HP35/35)
+-> a
+T1084 mode=combat_mode         Bard II(hum) F3@(10,10) HP 49/50 MP 0/0 Hu 66 $ 655 room=M vs Bugbear(L2 HP14/35)
+-> f
+T1085 mode=flee_direction_mode Bard II(hum) F3@(10,10) HP 49/50 MP 0/0 Hu 66 $ 655 room=M
+-> s
+T1086 mode=combat_mode         Bard II(hum) F3@(10,11) HP 49/50 MP 0/0 Hu 66 $ 655 room=M vs Sewer Rat(L2 HP10/10)
+-> a
+T1087 mode=combat_victory      Bard II(hum) F3@(10,11) HP 48/60 MP 0/0 Hu 66 $ 682 room=.
+-> back
+T1088 mode=game_loop           Bard II(hum) F3@(10,11) HP 48/60 MP 0/0 Hu 66 $ 682 room=.
+-> i
+T1089 mode=inventory           Bard II(hum) F3@(10,11) HP 48/60 MP 0/0 Hu 66 $ 682 room=.
+-> u12
+T1090 mode=inventory           Bard II(hum) F3@(10,11) HP 60/60 MP 0/0 Hu 66 $ 682 room=.
+-> x
+T1091 mode=game_loop           Bard II(hum) F3@(10,11) HP 60/60 MP 0/0 Hu 66 $ 682 room=.
+-> s
+T1092 mode=game_loop           Bard II(hum) F3@(10,12) HP 60/60 MP 0/0 Hu 65 $ 682 room=.
+-> w
+T1093 mode=game_loop           Bard II(hum) F3@( 9,12) HP 60/60 MP 0/0 Hu 64 $ 682 room=.
+-> n
+T1094 mode=game_loop           Bard II(hum) F3@( 9,11) HP 60/60 MP 0/0 Hu 63 $ 682 room=.
+-> w
+T1095 mode=game_loop           Bard II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 62 $ 682 room=.
+-> n
+T1096 mode=game_loop           Bard II(hum) F3@( 8,10) HP 60/60 MP 0/0 Hu 61 $ 682 room=.
+-> e
+T1097 mode=game_loop           Bard II(hum) F3@( 9,10) HP 60/60 MP 0/0 Hu 60 $ 682 room=.
+-> e
+T1098 mode=combat_mode         Bard II(hum) F3@(10,10) HP 60/60 MP 0/0 Hu 59 $ 682 room=M vs Bugbear(L2 HP14/35)
+-> a
+T1099 mode=combat_victory      Bard II(hum) F3@(10,10) HP 60/60 MP 0/0 Hu 59 $ 685 room=.
+-> back
+T1100 mode=game_loop           Bard II(hum) F3@(10,10) HP 60/60 MP 0/0 Hu 59 $ 685 room=.
+-> l
+T1101 mode=game_loop           Bard II(hum) F3@(10,10) HP 60/60 MP 0/0 Hu 59 $ 685 room=.
+-> e
+T1102 mode=game_loop           Bard II(hum) F3@(11,10) HP 60/60 MP 0/0 Hu 58 $ 685 room=.
+-> e
+T1103 mode=game_loop           Bard II(hum) F3@(12,10) HP 60/60 MP 0/0 Hu 57 $ 685 room=.
+-> n
+T1104 mode=game_loop           Bard II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 56 $ 685 room=.
+-> i
+T1105 mode=inventory           Bard II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 56 $ 685 room=.
+-> eat2
+T1106 mode=inventory           Bard II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 61 $ 685 room=.
+-> eat1
+T1107 mode=inventory           Bard II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu100 $ 685 room=.
+-> x
+T1108 mode=game_loop           Bard II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu100 $ 685 room=.
+-> w
+T1109 mode=game_loop           Bard II(hum) F3@(11, 9) HP 60/60 MP 0/0 Hu 99 $ 685 room=.
+-> w
+T1110 mode=game_loop           Bard II(hum) F3@(10, 9) HP 60/60 MP 0/0 Hu 98 $ 685 room=.
+-> l
+T1111 mode=game_loop           Bard II(hum) F3@(10, 9) HP 60/60 MP 0/0 Hu 98 $ 685 room=.
+-> n
+T1112 mode=game_loop           Bard II(hum) F3@(10, 8) HP 60/60 MP 0/0 Hu 97 $ 685 room=.
+-> e
+T1113 mode=game_loop           Bard II(hum) F3@(11, 8) HP 60/60 MP 0/0 Hu 96 $ 685 room=.
+-> e
+T1114 mode=game_loop           Bard II(hum) F3@(12, 8) HP 60/60 MP 0/0 Hu 95 $ 685 room=.
+-> s
+T1115 mode=game_loop           Bard II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 94 $ 685 room=.
+-> s
+T1116 mode=game_loop           Bard II(hum) F3@(12,10) HP 60/60 MP 0/0 Hu 93 $ 685 room=.
+-> w
+T1117 mode=game_loop           Bard II(hum) F3@(11,10) HP 60/60 MP 0/0 Hu 92 $ 685 room=.
+-> w
+T1118 mode=game_loop           Bard II(hum) F3@(10,10) HP 60/60 MP 0/0 Hu 91 $ 685 room=.
+-> n
+T1119 mode=game_loop           Bard II(hum) F3@(10, 9) HP 60/60 MP 0/0 Hu 90 $ 685 room=.
+-> e
+T1120 mode=game_loop           Bard II(hum) F3@(11, 9) HP 60/60 MP 0/0 Hu 89 $ 685 room=.
+-> l
+T1121 mode=game_loop           Bard II(hum) F3@(11, 9) HP 60/60 MP 0/0 Hu 89 $ 685 room=.
+-> n
+T1122 mode=game_loop           Bard II(hum) F3@(11, 8) HP 60/60 MP 0/0 Hu 88 $ 685 room=.
+-> e
+T1123 mode=game_loop           Bard II(hum) F3@(12, 8) HP 60/60 MP 0/0 Hu 87 $ 685 room=.
+-> n
+T1124 mode=game_loop           Bard II(hum) F3@(12, 7) HP 60/60 MP 0/0 Hu 86 $ 685 room=.
+-> w
+T1125 mode=game_loop           Bard II(hum) F3@(11, 7) HP 60/60 MP 0/0 Hu 85 $ 685 room=.
+-> n
+T1126 mode=game_loop           Bard II(hum) F3@(11, 6) HP 60/60 MP 0/0 Hu 84 $ 685 room=.
+-> w
+T1127 mode=game_loop           Bard II(hum) F3@(10, 6) HP 60/60 MP 0/0 Hu 83 $ 685 room=.
+-> n
+T1128 mode=game_loop           Bard II(hum) F3@(10, 5) HP 60/60 MP 0/0 Hu 82 $ 685 room=.
+-> w
+T1129 mode=game_loop           Bard II(hum) F3@( 9, 5) HP 60/60 MP 0/0 Hu 81 $ 685 room=.
+-> n
+T1130 mode=game_loop           Bard II(hum) F3@( 9, 4) HP 60/60 MP 0/0 Hu 80 $ 685 room=.
+-> l
+T1131 mode=game_loop           Bard II(hum) F3@( 9, 4) HP 60/60 MP 0/0 Hu 80 $ 685 room=.
+-> e
+T1132 mode=game_loop           Bard II(hum) F3@(10, 4) HP 60/60 MP 0/0 Hu 79 $ 685 room=.
+-> e
+T1133 mode=game_loop           Bard II(hum) F3@(11, 4) HP 60/60 MP 0/0 Hu 78 $ 685 room=.
+-> n
+T1134 mode=game_loop           Bard II(hum) F3@(11, 3) HP 60/60 MP 0/0 Hu 77 $ 685 room=.
+-> s
+T1135 mode=game_loop           Bard II(hum) F3@(11, 4) HP 60/60 MP 0/0 Hu 76 $ 685 room=.
+-> s
+T1136 mode=game_loop           Bard II(hum) F3@(11, 5) HP 60/60 MP 0/0 Hu 75 $ 685 room=.
+-> s
+T1137 mode=game_loop           Bard II(hum) F3@(11, 6) HP 60/60 MP 0/0 Hu 74 $ 685 room=.
+-> w
+T1138 mode=game_loop           Bard II(hum) F3@(10, 6) HP 60/60 MP 0/0 Hu 73 $ 685 room=.
+-> n
+T1139 mode=game_loop           Bard II(hum) F3@(10, 5) HP 60/60 MP 0/0 Hu 72 $ 685 room=.
+-> w
+T1140 mode=game_loop           Bard II(hum) F3@( 9, 5) HP 60/60 MP 0/0 Hu 71 $ 685 room=.
+-> l
+T1141 mode=game_loop           Bard II(hum) F3@( 9, 5) HP 60/60 MP 0/0 Hu 71 $ 685 room=.
+-> n
+T1142 mode=game_loop           Bard II(hum) F3@( 9, 4) HP 60/60 MP 0/0 Hu 70 $ 685 room=.
+-> e
+T1143 mode=game_loop           Bard II(hum) F3@(10, 4) HP 60/60 MP 0/0 Hu 69 $ 685 room=.
+-> e
+T1144 mode=game_loop           Bard II(hum) F3@(11, 4) HP 60/60 MP 0/0 Hu 68 $ 685 room=.
+-> e
+T1145 mode=game_loop           Bard II(hum) F3@(12, 4) HP 60/60 MP 0/0 Hu 67 $ 685 room=.
+-> s
+T1146 mode=game_loop           Bard II(hum) F3@(12, 5) HP 60/60 MP 0/0 Hu 66 $ 685 room=.
+-> w
+T1147 mode=game_loop           Bard II(hum) F3@(11, 5) HP 60/60 MP 0/0 Hu 65 $ 685 room=.
+-> s
+T1148 mode=game_loop           Bard II(hum) F3@(11, 6) HP 60/60 MP 0/0 Hu 64 $ 685 room=.
+-> s
+T1149 mode=game_loop           Bard II(hum) F3@(11, 7) HP 60/60 MP 0/0 Hu 63 $ 685 room=.
+-> e
+T1150 mode=game_loop           Bard II(hum) F3@(12, 7) HP 60/60 MP 0/0 Hu 62 $ 685 room=.
+-> l
+T1151 mode=game_loop           Bard II(hum) F3@(12, 7) HP 60/60 MP 0/0 Hu 62 $ 685 room=.
+-> e
+T1152 mode=game_loop           Bard II(hum) F3@(13, 7) HP 60/60 MP 0/0 Hu 61 $ 685 room=.
+-> w
+T1153 mode=game_loop           Bard II(hum) F3@(12, 7) HP 60/60 MP 0/0 Hu 60 $ 685 room=.
+-> s
+T1154 mode=game_loop           Bard II(hum) F3@(12, 8) HP 60/60 MP 0/0 Hu 59 $ 685 room=.
+-> w
+T1155 mode=game_loop           Bard II(hum) F3@(11, 8) HP 60/60 MP 0/0 Hu 58 $ 685 room=.
+-> s
+T1156 mode=game_loop           Bard II(hum) F3@(11, 9) HP 60/60 MP 0/0 Hu 57 $ 685 room=.
+-> w
+T1157 mode=game_loop           Bard II(hum) F3@(10, 9) HP 60/60 MP 0/0 Hu 56 $ 685 room=.
+-> n
+T1158 mode=game_loop           Bard II(hum) F3@(10, 8) HP 60/60 MP 0/0 Hu 55 $ 685 room=.
+-> e
+T1159 mode=game_loop           Bard II(hum) F3@(11, 8) HP 60/60 MP 0/0 Hu 54 $ 685 room=.
+-> e
+T1160 mode=game_loop           Bard II(hum) F3@(12, 8) HP 60/60 MP 0/0 Hu 53 $ 685 room=.
+-> l
+T1161 mode=game_loop           Bard II(hum) F3@(12, 8) HP 60/60 MP 0/0 Hu 53 $ 685 room=.
+-> s
+T1162 mode=game_loop           Bard II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 52 $ 685 room=.
+-> s
+T1163 mode=game_loop           Bard II(hum) F3@(12,10) HP 60/60 MP 0/0 Hu 51 $ 685 room=.
+-> w
+T1164 mode=game_loop           Bard II(hum) F3@(11,10) HP 60/60 MP 0/0 Hu 50 $ 685 room=.
+-> n
+T1165 mode=game_loop           Bard II(hum) F3@(11, 9) HP 60/60 MP 0/0 Hu 49 $ 685 room=.
+-> n
+T1166 mode=game_loop           Bard II(hum) F3@(11, 8) HP 60/60 MP 0/0 Hu 48 $ 685 room=.
+-> e
+T1167 mode=game_loop           Bard II(hum) F3@(12, 8) HP 60/60 MP 0/0 Hu 47 $ 685 room=.
+-> s
+T1168 mode=game_loop           Bard II(hum) F3@(12, 9) HP 60/60 MP 0/0 Hu 46 $ 685 room=.
+-> s
+T1169 mode=game_loop           Bard II(hum) F3@(12,10) HP 60/60 MP 0/0 Hu 45 $ 685 room=.
+-> w
+T1170 mode=game_loop           Bard II(hum) F3@(11,10) HP 60/60 MP 0/0 Hu 44 $ 685 room=.
+-> l
+T1171 mode=game_loop           Bard II(hum) F3@(11,10) HP 60/60 MP 0/0 Hu 44 $ 685 room=.
+-> s
+T1172 mode=game_loop           Bard II(hum) F3@(11,11) HP 60/60 MP 0/0 Hu 43 $ 685 room=.
+-> w
+T1173 mode=game_loop           Bard II(hum) F3@(10,11) HP 60/60 MP 0/0 Hu 42 $ 685 room=.
+-> s
+T1174 mode=game_loop           Bard II(hum) F3@(10,12) HP 60/60 MP 0/0 Hu 41 $ 685 room=.
+-> w
+T1175 mode=game_loop           Bard II(hum) F3@( 9,12) HP 60/60 MP 0/0 Hu 40 $ 685 room=.
+-> n
+T1176 mode=game_loop           Bard II(hum) F3@( 9,11) HP 60/60 MP 0/0 Hu 39 $ 685 room=.
+-> n
+T1177 mode=game_loop           Bard II(hum) F3@( 9,10) HP 60/60 MP 0/0 Hu 38 $ 685 room=.
+-> e
+T1178 mode=game_loop           Bard II(hum) F3@(10,10) HP 60/60 MP 0/0 Hu 37 $ 685 room=.
+-> s
+T1179 mode=game_loop           Bard II(hum) F3@(10,11) HP 60/60 MP 0/0 Hu 36 $ 685 room=.
+-> e
+T1180 mode=game_loop           Bard II(hum) F3@(11,11) HP 60/60 MP 0/0 Hu 35 $ 685 room=.
+-> l
+T1181 mode=game_loop           Bard II(hum) F3@(11,11) HP 60/60 MP 0/0 Hu 35 $ 685 room=.
+-> n
+T1182 mode=game_loop           Bard II(hum) F3@(11,10) HP 60/60 MP 0/0 Hu 34 $ 685 room=.
+-> n
+T1183 mode=game_loop           Bard II(hum) F3@(11, 9) HP 60/60 MP 0/0 Hu 33 $ 685 room=.
+-> w
+T1184 mode=game_loop           Bard II(hum) F3@(10, 9) HP 60/60 MP 0/0 Hu 32 $ 685 room=.
+-> s
+T1185 mode=game_loop           Bard II(hum) F3@(10,10) HP 60/60 MP 0/0 Hu 31 $ 685 room=.
+-> w
+T1186 mode=game_loop           Bard II(hum) F3@( 9,10) HP 60/60 MP 0/0 Hu 30 $ 685 room=.
+-> s
+T1187 mode=game_loop           Bard II(hum) F3@( 9,11) HP 60/60 MP 0/0 Hu 29 $ 685 room=.
+-> w
+T1188 mode=game_loop           Bard II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 28 $ 685 room=.
+-> n
+T1189 mode=game_loop           Bard II(hum) F3@( 8,10) HP 60/60 MP 0/0 Hu 27 $ 685 room=.
+-> w
+T1190 mode=game_loop           Bard II(hum) F3@( 7,10) HP 60/60 MP 0/0 Hu 26 $ 685 room=.
+-> l
+T1191 mode=game_loop           Bard II(hum) F3@( 7,10) HP 60/60 MP 0/0 Hu 26 $ 685 room=.
+-> s
+T1192 mode=game_loop           Bard II(hum) F3@( 7,11) HP 60/60 MP 0/0 Hu 25 $ 685 room=.
+-> s
+T1193 mode=game_loop           Bard II(hum) F3@( 7,12) HP 60/60 MP 0/0 Hu 24 $ 685 room=.
+-> s
+T1194 mode=game_loop           Bard II(hum) F3@( 7,13) HP 60/60 MP 0/0 Hu 23 $ 685 room=.
+-> e
+T1195 mode=game_loop           Bard II(hum) F3@( 8,13) HP 60/60 MP 0/0 Hu 22 $ 685 room=.
+-> n
+T1196 mode=game_loop           Bard II(hum) F3@( 8,12) HP 60/60 MP 0/0 Hu 21 $ 685 room=.
+-> n
+T1197 mode=game_loop           Bard II(hum) F3@( 8,11) HP 60/60 MP 0/0 Hu 20 $ 685 room=.
+-> w
+T1198 mode=game_loop           Bard II(hum) F3@( 7,11) HP 60/60 MP 0/0 Hu 19 $ 685 room=.
+-> s
+T1199 mode=game_loop           Bard II(hum) F3@( 7,12) HP 60/60 MP 0/0 Hu 18 $ 685 room=.
+-> w
+T1200 mode=game_loop           Bard II(hum) F3@( 6,12) HP 60/60 MP 0/0 Hu 17 $ 685 room=.
+-> l
+T1201 mode=game_loop           Bard II(hum) F3@( 6,12) HP 60/60 MP 0/0 Hu 17 $ 685 room=.
+-> w
+T1202 mode=game_loop           Bard II(hum) F3@( 5,12) HP 60/60 MP 0/0 Hu 16 $ 685 room=.
+-> n
+T1203 mode=game_loop           Bard II(hum) F3@( 5,11) HP 60/60 MP 0/0 Hu 15 $ 685 room=.
+-> s
+T1204 mode=game_loop           Bard II(hum) F3@( 5,12) HP 60/60 MP 0/0 Hu 14 $ 685 room=.
+-> s
+T1205 mode=game_loop           Bard II(hum) F3@( 5,13) HP 60/60 MP 0/0 Hu 13 $ 685 room=.
+-> e
+T1206 mode=game_loop           Bard II(hum) F3@( 6,13) HP 60/60 MP 0/0 Hu 12 $ 685 room=.
+-> n
+T1207 mode=game_loop           Bard II(hum) F3@( 6,12) HP 60/60 MP 0/0 Hu 11 $ 685 room=.
+-> e
+T1208 mode=game_loop           Bard II(hum) F3@( 7,12) HP 60/60 MP 0/0 Hu 10 $ 685 room=.
+-> s
+T1209 mode=game_loop           Bard II(hum) F3@( 7,13) HP 60/60 MP 0/0 Hu  9 $ 685 room=.
+-> s
+T1210 mode=game_loop           Bard II(hum) F3@( 7,14) HP 60/60 MP 0/0 Hu  8 $ 685 room=.
+-> l
+T1211 mode=game_loop           Bard II(hum) F3@( 7,14) HP 60/60 MP 0/0 Hu  8 $ 685 room=.
+-> w
+T1212 mode=game_loop           Bard II(hum) F3@( 6,14) HP 60/60 MP 0/0 Hu  7 $ 685 room=.
+-> w
+T1213 mode=game_loop           Bard II(hum) F3@( 5,14) HP 60/60 MP 0/0 Hu  6 $ 685 room=.
+-> s
+T1214 mode=game_loop           Bard II(hum) F3@( 5,15) HP 60/60 MP 0/0 Hu  5 $ 685 room=.
+-> w
+T1215 mode=game_loop           Bard II(hum) F3@( 4,15) HP 60/60 MP 0/0 Hu  4 $ 685 room=.
+-> n
+T1216 mode=game_loop           Bard II(hum) F3@( 4,14) HP 60/60 MP 0/0 Hu  3 $ 685 room=.
+-> w
+T1217 mode=game_loop           Bard II(hum) F3@( 3,14) HP 60/60 MP 0/0 Hu  2 $ 685 room=.
+-> s
+T1218 mode=game_loop           Bard II(hum) F3@( 3,15) HP 60/60 MP 0/0 Hu  1 $ 685 room=.
+-> n
+T1219 mode=game_loop           Bard II(hum) F3@( 3,14) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1220 mode=game_loop           Bard II(hum) F3@( 3,13) HP 56/60 MP 0/0 Hu  0 $ 685 room=.
+-> l
+T1221 mode=game_loop           Bard II(hum) F3@( 3,13) HP 56/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1222 mode=game_loop           Bard II(hum) F3@( 4,13) HP 54/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1223 mode=game_loop           Bard II(hum) F3@( 4,14) HP 52/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1224 mode=game_loop           Bard II(hum) F3@( 5,14) HP 50/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1225 mode=game_loop           Bard II(hum) F3@( 5,13) HP 48/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1226 mode=game_loop           Bard II(hum) F3@( 6,13) HP 46/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1227 mode=game_loop           Bard II(hum) F3@( 6,14) HP 44/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1228 mode=game_loop           Bard II(hum) F3@( 7,14) HP 42/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1229 mode=game_loop           Bard II(hum) F3@( 7,13) HP 40/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1230 mode=game_loop           Bard II(hum) F3@( 8,13) HP 38/60 MP 0/0 Hu  0 $ 685 room=.
+-> l
+T1231 mode=game_loop           Bard II(hum) F3@( 8,13) HP 38/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1232 mode=game_loop           Bard II(hum) F3@( 9,13) HP 36/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1233 mode=game_loop           Bard II(hum) F3@( 9,12) HP 34/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1234 mode=game_loop           Bard II(hum) F3@( 9,11) HP 32/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1235 mode=game_loop           Bard II(hum) F3@(10,11) HP 30/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1236 mode=game_loop           Bard II(hum) F3@(10,10) HP 28/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1237 mode=game_loop           Bard II(hum) F3@(11,10) HP 26/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1238 mode=game_loop           Bard II(hum) F3@(11,11) HP 24/60 MP 0/0 Hu  0 $ 685 room=.
+-> i
+T1239 mode=inventory           Bard II(hum) F3@(11,11) HP 24/60 MP 0/0 Hu  0 $ 685 room=.
+-> u12
+T1240 mode=inventory           Bard II(hum) F3@(11,11) HP 54/60 MP 0/0 Hu  0 $ 685 room=.
+-> u2
+T1241 mode=inventory           Bard II(hum) F3@(11,11) HP 54/60 MP 0/0 Hu  0 $ 685 room=.
+-> x
+T1242 mode=game_loop           Bard II(hum) F3@(11,11) HP 54/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1243 mode=game_loop           Bard II(hum) F3@(11,10) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1244 mode=game_loop           Bard II(hum) F3@(12,10) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1245 mode=game_loop           Bard II(hum) F3@(12, 9) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> w
+T1246 mode=game_loop           Bard II(hum) F3@(11, 9) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> w
+T1247 mode=game_loop           Bard II(hum) F3@(10, 9) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1248 mode=game_loop           Bard II(hum) F3@(10, 8) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1249 mode=game_loop           Bard II(hum) F3@(11, 8) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1250 mode=game_loop           Bard II(hum) F3@(11, 7) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> l
+T1251 mode=game_loop           Bard II(hum) F3@(11, 7) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1252 mode=game_loop           Bard II(hum) F3@(12, 7) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1253 mode=game_loop           Bard II(hum) F3@(12, 8) HP 58/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1254 mode=game_loop           Bard II(hum) F3@(12, 9) HP 56/60 MP 0/0 Hu  0 $ 685 room=.
+-> w
+T1255 mode=game_loop           Bard II(hum) F3@(11, 9) HP 54/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1256 mode=game_loop           Bard II(hum) F3@(11,10) HP 52/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1257 mode=game_loop           Bard II(hum) F3@(12,10) HP 50/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1258 mode=game_loop           Bard II(hum) F3@(12, 9) HP 48/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1259 mode=game_loop           Bard II(hum) F3@(12, 8) HP 46/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1260 mode=game_loop           Bard II(hum) F3@(12, 7) HP 44/60 MP 0/0 Hu  0 $ 685 room=.
+-> l
+T1261 mode=game_loop           Bard II(hum) F3@(12, 7) HP 44/60 MP 0/0 Hu  0 $ 685 room=.
+-> w
+T1262 mode=game_loop           Bard II(hum) F3@(11, 7) HP 42/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1263 mode=game_loop           Bard II(hum) F3@(11, 8) HP 40/60 MP 0/0 Hu  0 $ 685 room=.
+-> w
+T1264 mode=game_loop           Bard II(hum) F3@(10, 8) HP 38/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1265 mode=game_loop           Bard II(hum) F3@(10, 9) HP 36/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1266 mode=game_loop           Bard II(hum) F3@(11, 9) HP 34/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1267 mode=game_loop           Bard II(hum) F3@(12, 9) HP 32/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1268 mode=game_loop           Bard II(hum) F3@(12,10) HP 30/60 MP 0/0 Hu  0 $ 685 room=.
+-> w
+T1269 mode=game_loop           Bard II(hum) F3@(11,10) HP 28/60 MP 0/0 Hu  0 $ 685 room=.
+-> w
+T1270 mode=game_loop           Bard II(hum) F3@(10,10) HP 26/60 MP 0/0 Hu  0 $ 685 room=.
+-> l
+T1271 mode=game_loop           Bard II(hum) F3@(10,10) HP 26/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1272 mode=game_loop           Bard II(hum) F3@(10, 9) HP 24/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1273 mode=game_loop           Bard II(hum) F3@(11, 9) HP 22/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1274 mode=game_loop           Bard II(hum) F3@(11, 8) HP 20/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1275 mode=game_loop           Bard II(hum) F3@(11, 7) HP 18/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1276 mode=game_loop           Bard II(hum) F3@(12, 7) HP 16/60 MP 0/0 Hu  0 $ 685 room=.
+-> e
+T1277 mode=game_loop           Bard II(hum) F3@(13, 7) HP 14/60 MP 0/0 Hu  0 $ 685 room=.
+-> w
+T1278 mode=game_loop           Bard II(hum) F3@(12, 7) HP 12/60 MP 0/0 Hu  0 $ 685 room=.
+-> s
+T1279 mode=game_loop           Bard II(hum) F3@(12, 8) HP 10/60 MP 0/0 Hu  0 $ 685 room=.
+-> w
+T1280 mode=game_loop           Bard II(hum) F3@(11, 8) HP 8/60 MP 0/0 Hu  0 $ 685 room=.
+-> l
+T1281 mode=game_loop           Bard II(hum) F3@(11, 8) HP 8/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1282 mode=game_loop           Bard II(hum) F3@(11, 7) HP 6/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1283 mode=game_loop           Bard II(hum) F3@(11, 6) HP 4/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1284 mode=game_loop           Bard II(hum) F3@(11, 5) HP 2/60 MP 0/0 Hu  0 $ 685 room=.
+-> n
+T1285 mode=death_screen        Bard II(hum) F3@(11, 4) HP 0/60 MP 0/0 Hu  0 $ 685 room=.
 
-=== run finished: turns=1107 floor=3 hp=0/50 gold=660 alive=False mode=death_screen ===
+=== run finished: turns=1285 floor=3 hp=0/60 gold=685 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00167_human.html

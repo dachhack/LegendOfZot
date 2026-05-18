@@ -1036,7 +1036,7 @@ T 509 mode=game_loop           Aragorn II(hum) F2@(13,15) HP 50/50 MP 0/0 Hu 73 
 -> e
 T 510 mode=combat_mode         Aragorn II(hum) F2@(14,15) HP 50/50 MP 0/0 Hu 72 $ 233 room=M vs Gray Ooze(L1 HP35/35)
 -> a
-T 511 mode=combat_mode         Aragorn II(hum) F2@(14,15) HP 49/50 MP 0/0 Hu 72 $ 233 room=M vs Gray Ooze(L1 HP12/35)
+T 511 mode=combat_mode         Aragorn II(hum) F2@(14,15) HP 49/50 MP 0/0 Hu 72 $ 233 room=M vs Gray Ooze(L1 HP11/35)
 -> f
 T 512 mode=flee_direction_mode Aragorn II(hum) F2@(14,15) HP 48/50 MP 0/0 Hu 72 $ 233 room=M
 -> n
@@ -1062,9 +1062,9 @@ T 522 mode=game_loop           Aragorn II(hum) F2@(16,14) HP 49/50 MP 0/0 Hu 66 
 -> e
 T 523 mode=combat_mode         Aragorn II(hum) F2@(17,14) HP 49/50 MP 0/0 Hu 65 $ 233 room=M vs Gnoll(L1 HP32/32)
 -> a
-T 524 mode=combat_mode         Aragorn II(hum) F2@(17,14) HP 48/50 MP 0/0 Hu 65 $ 233 room=M vs Gnoll(L1 HP12/32)
+T 524 mode=combat_mode         Aragorn II(hum) F2@(17,14) HP 48/50 MP 0/0 Hu 65 $ 233 room=M vs Gnoll(L1 HP11/32)
 -> a
-T 525 mode=combat_mode         Aragorn II(hum) F2@(17,14) HP 47/50 MP 0/0 Hu 65 $ 233 room=M vs Gnoll(L1 HP12/32)
+T 525 mode=combat_mode         Aragorn II(hum) F2@(17,14) HP 47/50 MP 0/0 Hu 65 $ 233 room=M vs Gnoll(L1 HP11/32)
 -> f
 T 526 mode=flee_direction_mode Aragorn II(hum) F2@(17,14) HP 47/50 MP 0/0 Hu 65 $ 233 room=M
 -> n
@@ -1146,9 +1146,9 @@ T 564 mode=combat_mode         Aragorn II(hum) F2@(14, 9) HP 49/50 MP 0/0 Hu 42 
 -> a
 T 565 mode=combat_mode         Aragorn II(hum) F2@(14, 9) HP 48/50 MP 0/0 Hu 42 $ 239 room=M vs Bugbear(L1 HP35/35)
 -> a
-T 566 mode=combat_mode         Aragorn II(hum) F2@(14, 9) HP 48/50 MP 0/0 Hu 42 $ 239 room=M vs Bugbear(L1 HP16/35)
+T 566 mode=combat_mode         Aragorn II(hum) F2@(14, 9) HP 48/50 MP 0/0 Hu 42 $ 239 room=M vs Bugbear(L1 HP15/35)
 -> a
-T 567 mode=combat_mode         Aragorn II(hum) F2@(14, 9) HP 47/50 MP 0/0 Hu 42 $ 239 room=M vs Bugbear(L1 HP16/35)
+T 567 mode=combat_mode         Aragorn II(hum) F2@(14, 9) HP 47/50 MP 0/0 Hu 42 $ 239 room=M vs Bugbear(L1 HP15/35)
 -> a
 T 568 mode=combat_victory      Aragorn II(hum) F2@(14, 9) HP 47/50 MP 0/0 Hu 42 $ 255 room=.
 -> back
@@ -1342,9 +1342,9 @@ T 662 mode=combat_mode         Aragorn II(hum) F2@(14,11) HP 4/50 MP 0/0 Hu  0 $
 -> a
 T 663 mode=combat_mode         Aragorn II(hum) F2@(14,11) HP 4/50 MP 0/0 Hu  0 $ 653 room=M vs Orc(L1 HP50/50)
 -> a
-T 664 mode=combat_mode         Aragorn II(hum) F2@(14,11) HP 1/50 MP 0/0 Hu  0 $ 653 room=M vs Orc(L1 HP31/50)
+T 664 mode=combat_mode         Aragorn II(hum) F2@(14,11) HP 1/50 MP 0/0 Hu  0 $ 653 room=M vs Orc(L1 HP30/50)
 -> a
-T 665 mode=combat_mode         Aragorn II(hum) F2@(14,11) HP 1/50 MP 0/0 Hu  0 $ 653 room=M vs Orc(L1 HP12/50)
+T 665 mode=combat_mode         Aragorn II(hum) F2@(14,11) HP 1/50 MP 0/0 Hu  0 $ 653 room=M vs Orc(L1 HP10/50)
 -> f
 T 666 mode=flee_direction_mode Aragorn II(hum) F2@(14,11) HP 1/50 MP 0/0 Hu  0 $ 653 room=M
 -> n
