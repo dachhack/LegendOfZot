@@ -3176,77 +3176,77 @@ T1579 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 2, 1) HP 17/68 MP 0/0 
 T1580 mode=inventory           Voronwe Stareyed(elf) F9@( 2, 1) HP 17/68 MP 0/0 Hu  0 $ 1171 room=.
 -> x
 T1581 mode=game_loop           Voronwe Stareyed(elf) F9@( 2, 1) HP 17/68 MP 0/0 Hu  0 $ 1171 room=.
+-> w
+T1582 mode=stairs_up_mode      Voronwe Stareyed(elf) F9@( 1, 1) HP 15/68 MP 0/0 Hu  0 $ 1171 room=U
 -> e
-T1582 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 1) HP 15/68 MP 0/0 Hu  0 $ 1171 room=X
+T1583 mode=game_loop           Voronwe Stareyed(elf) F9@( 2, 1) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
 -> i
-T1583 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 1) HP 15/68 MP 0/0 Hu  0 $ 1171 room=X
+T1584 mode=inventory           Voronwe Stareyed(elf) F9@( 2, 1) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
 -> u10
-T1584 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 1) HP 15/68 MP 0/0 Hu  0 $ 1171 room=X
+T1585 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 2, 1) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
 -> 1
-T1585 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 1) HP 15/68 MP 0/0 Hu  0 $ 1171 room=X
+T1586 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 2, 1) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
 -> c
-T1586 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 1) HP 15/68 MP 0/0 Hu  0 $ 1171 room=X
+T1587 mode=inventory           Voronwe Stareyed(elf) F9@( 2, 1) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
 -> x
-T1587 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 1) HP 15/68 MP 0/0 Hu  0 $ 1171 room=X
--> s
-T1588 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 2) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
+T1588 mode=game_loop           Voronwe Stareyed(elf) F9@( 2, 1) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
+-> e
+T1589 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 1) HP 11/68 MP 0/0 Hu  0 $ 1171 room=X
 -> i
-T1589 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 2) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
+T1590 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 1) HP 11/68 MP 0/0 Hu  0 $ 1171 room=X
 -> u10
-T1590 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 2) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
+T1591 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 1) HP 11/68 MP 0/0 Hu  0 $ 1171 room=X
 -> 1
-T1591 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 2) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
+T1592 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 1) HP 11/68 MP 0/0 Hu  0 $ 1171 room=X
 -> c
-T1592 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 2) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
+T1593 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 1) HP 11/68 MP 0/0 Hu  0 $ 1171 room=X
 -> x
-T1593 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 2) HP 13/68 MP 0/0 Hu  0 $ 1171 room=.
+T1594 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 1) HP 11/68 MP 0/0 Hu  0 $ 1171 room=X
 -> s
-T1594 mode=combat_mode         Voronwe Stareyed(elf) F9@( 3, 3) HP 11/68 MP 0/0 Hu  0 $ 1171 room=M vs Pill Bug Golem(L2 HP40/40)
+T1595 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 2) HP 9/68 MP 0/0 Hu  0 $ 1171 room=.
+-> i
+T1596 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 2) HP 9/68 MP 0/0 Hu  0 $ 1171 room=.
+-> u10
+T1597 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 2) HP 9/68 MP 0/0 Hu  0 $ 1171 room=.
+-> 1
+T1598 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 2) HP 9/68 MP 0/0 Hu  0 $ 1171 room=.
+-> c
+T1599 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 2) HP 9/68 MP 0/0 Hu  0 $ 1171 room=.
+-> x
+T1600 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 2) HP 9/68 MP 0/0 Hu  0 $ 1171 room=.
+-> s
+T1601 mode=combat_mode         Voronwe Stareyed(elf) F9@( 3, 3) HP 7/68 MP 0/0 Hu  0 $ 1171 room=M vs Pill Bug Golem(L2 HP40/40)
 -> f
-T1595 mode=flee_direction_mode Voronwe Stareyed(elf) F9@( 3, 3) HP 11/68 MP 0/0 Hu  0 $ 1171 room=M
+T1602 mode=flee_direction_mode Voronwe Stareyed(elf) F9@( 3, 3) HP 7/68 MP 0/0 Hu  0 $ 1171 room=M
 -> n
-T1596 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 2) HP 11/68 MP 0/0 Hu  0 $ 1171 room=.
+T1603 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 2) HP 7/68 MP 0/0 Hu  0 $ 1171 room=.
 -> i
-T1597 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 2) HP 11/68 MP 0/0 Hu  0 $ 1171 room=.
+T1604 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 2) HP 7/68 MP 0/0 Hu  0 $ 1171 room=.
 -> u10
-T1598 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 2) HP 11/68 MP 0/0 Hu  0 $ 1171 room=.
+T1605 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 2) HP 7/68 MP 0/0 Hu  0 $ 1171 room=.
 -> 1
-T1599 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 2) HP 11/68 MP 0/0 Hu  0 $ 1171 room=.
+T1606 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 2) HP 7/68 MP 0/0 Hu  0 $ 1171 room=.
 -> c
-T1600 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 2) HP 11/68 MP 0/0 Hu  0 $ 1171 room=.
+T1607 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 2) HP 7/68 MP 0/0 Hu  0 $ 1171 room=.
 -> x
-T1601 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 2) HP 11/68 MP 0/0 Hu  0 $ 1171 room=.
+T1608 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 2) HP 7/68 MP 0/0 Hu  0 $ 1171 room=.
 -> e
-T1602 mode=game_loop           Voronwe Stareyed(elf) F9@( 4, 2) HP 9/68 MP 0/0 Hu  0 $ 1171 room=.
+T1609 mode=game_loop           Voronwe Stareyed(elf) F9@( 4, 2) HP 5/68 MP 0/0 Hu  0 $ 1171 room=.
 -> n
-T1603 mode=game_loop           Voronwe Stareyed(elf) F9@( 4, 1) HP 7/68 MP 0/0 Hu  0 $ 1171 room=.
+T1610 mode=game_loop           Voronwe Stareyed(elf) F9@( 4, 1) HP 3/68 MP 0/0 Hu  0 $ 1171 room=.
 -> w
-T1604 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 1) HP 5/68 MP 0/0 Hu  0 $ 1171 room=X
+T1611 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 1) HP 1/68 MP 0/0 Hu  0 $ 1171 room=X
 -> i
-T1605 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 1) HP 5/68 MP 0/0 Hu  0 $ 1171 room=X
+T1612 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 1) HP 1/68 MP 0/0 Hu  0 $ 1171 room=X
 -> u10
-T1606 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 1) HP 5/68 MP 0/0 Hu  0 $ 1171 room=X
+T1613 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 1) HP 1/68 MP 0/0 Hu  0 $ 1171 room=X
 -> 1
-T1607 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 1) HP 5/68 MP 0/0 Hu  0 $ 1171 room=X
+T1614 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 3, 1) HP 1/68 MP 0/0 Hu  0 $ 1171 room=X
 -> c
-T1608 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 1) HP 5/68 MP 0/0 Hu  0 $ 1171 room=X
+T1615 mode=inventory           Voronwe Stareyed(elf) F9@( 3, 1) HP 1/68 MP 0/0 Hu  0 $ 1171 room=X
 -> x
-T1609 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 1) HP 5/68 MP 0/0 Hu  0 $ 1171 room=X
+T1616 mode=game_loop           Voronwe Stareyed(elf) F9@( 3, 1) HP 1/68 MP 0/0 Hu  0 $ 1171 room=X
 -> w
-T1610 mode=game_loop           Voronwe Stareyed(elf) F9@( 2, 1) HP 3/68 MP 0/0 Hu  0 $ 1171 room=.
--> i
-T1611 mode=inventory           Voronwe Stareyed(elf) F9@( 2, 1) HP 3/68 MP 0/0 Hu  0 $ 1171 room=.
--> u10
-T1612 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 2, 1) HP 3/68 MP 0/0 Hu  0 $ 1171 room=.
--> 1
-T1613 mode=upgrade_scroll_mode Voronwe Stareyed(elf) F9@( 2, 1) HP 3/68 MP 0/0 Hu  0 $ 1171 room=.
--> c
-T1614 mode=inventory           Voronwe Stareyed(elf) F9@( 2, 1) HP 3/68 MP 0/0 Hu  0 $ 1171 room=.
--> x
-T1615 mode=game_loop           Voronwe Stareyed(elf) F9@( 2, 1) HP 3/68 MP 0/0 Hu  0 $ 1171 room=.
--> w
-T1616 mode=stairs_up_mode      Voronwe Stareyed(elf) F9@( 1, 1) HP 1/68 MP 0/0 Hu  0 $ 1171 room=U
--> e
 T1617 mode=death_screen        Voronwe Stareyed(elf) F9@( 2, 1) HP 0/68 MP 0/0 Hu  0 $ 1171 room=.
 
 === run finished: turns=1617 floor=9 hp=0/68 gold=1171 alive=False mode=death_screen ===

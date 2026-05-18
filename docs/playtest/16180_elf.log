@@ -379,464 +379,498 @@ T 180 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 1,13) HP 37/38
 T 181 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 2,13) HP 37/38 MP 0/0 Hu 94 $ 273 room=M vs Spore Puff(L0 HP18/18)
 -> a
 T 182 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 2,13) HP 36/38 MP 0/0 Hu 94 $ 273 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 183 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 2,13) HP 36/38 MP 0/0 Hu 94 $ 274 room=.
--> back
-T 184 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 36/38 MP 0/0 Hu 94 $ 274 room=.
--> i
-T 185 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,13) HP 36/38 MP 0/0 Hu 94 $ 274 room=.
--> u5
-T 186 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu 94 $ 274 room=.
--> x
-T 187 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu 94 $ 274 room=.
--> i
-T 188 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu 94 $ 274 room=.
--> eat1
-T 189 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu 99 $ 274 room=.
--> x
-T 190 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu 99 $ 274 room=.
--> l
-T 191 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu 99 $ 274 room=.
--> s
-T 192 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,14) HP 38/38 MP 0/0 Hu 98 $ 274 room=.
--> i
-T 193 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,14) HP 38/38 MP 0/0 Hu 98 $ 274 room=.
--> eat1
-T 194 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,14) HP 38/38 MP 0/0 Hu100 $ 274 room=.
--> x
-T 195 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,14) HP 38/38 MP 0/0 Hu100 $ 274 room=.
--> e
-T 196 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,14) HP 38/38 MP 0/0 Hu 99 $ 274 room=.
--> e
-T 197 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,14) HP 38/38 MP 0/0 Hu 98 $ 274 room=M vs Kobold(L0 HP8/8)
--> a
-T 198 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,14) HP 38/38 MP 0/0 Hu 98 $ 274 room=M vs Kobold(L0 HP8/8)
--> a
-T 199 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,14) HP 37/38 MP 0/0 Hu 98 $ 274 room=M vs Kobold(L0 HP8/8)
--> a
-T 200 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,14) HP 37/38 MP 0/0 Hu 98 $ 274 room=M vs Kobold(L0 HP8/8)
--> a
-T 201 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 4,14) HP 37/38 MP 0/0 Hu 98 $ 275 room=.
--> back
-T 202 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,14) HP 37/38 MP 0/0 Hu 98 $ 275 room=.
--> n
-T 203 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,13) HP 37/38 MP 0/0 Hu 97 $ 275 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 204 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,13) HP 36/38 MP 0/0 Hu 97 $ 275 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 205 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 4,13) HP 35/38 MP 0/0 Hu 97 $ 285 room=.
--> back
-T 206 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,13) HP 35/38 MP 0/0 Hu 97 $ 285 room=.
--> n
-T 207 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,12) HP 36/38 MP 0/0 Hu 96 $ 285 room=.
--> e
-T 208 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5,12) HP 36/38 MP 0/0 Hu 95 $ 285 room=.
--> e
-T 209 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,12) HP 37/38 MP 0/0 Hu 94 $ 285 room=.
--> n
-T 210 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,11) HP 37/38 MP 0/0 Hu 93 $ 285 room=.
--> l
-T 211 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,11) HP 37/38 MP 0/0 Hu 93 $ 285 room=.
--> e
-T 212 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,11) HP 38/38 MP 0/0 Hu 92 $ 285 room=.
--> e
-T 213 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 91 $ 285 room=.
--> e
-T 214 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 90 $ 285 room=.
--> n
-T 215 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 89 $ 285 room=.
--> e
-T 216 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 88 $ 285 room=.
--> n
-T 217 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 87 $ 285 room=V
--> n
-T 218 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 86 $ 285 room=.
--> w
-T 219 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 85 $ 285 room=.
--> w
-T 220 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 84 $ 285 room=.
--> l
-T 221 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 84 $ 285 room=.
--> n
-T 222 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 83 $ 285 room=.
--> n
-T 223 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 82 $ 285 room=.
--> n
-T 224 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 5) HP 38/38 MP 0/0 Hu 81 $ 285 room=.
--> n
-T 225 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 4) HP 38/38 MP 0/0 Hu 80 $ 285 room=.
--> w
-T 226 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 79 $ 285 room=.
--> w
-T 227 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 78 $ 285 room=.
--> w
-T 228 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 77 $ 285 room=.
--> w
-T 229 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 76 $ 285 room=.
--> w
-T 230 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 4) HP 38/38 MP 0/0 Hu 75 $ 285 room=.
--> l
-T 231 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 4) HP 38/38 MP 0/0 Hu 75 $ 285 room=.
--> n
-T 232 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 3) HP 38/38 MP 0/0 Hu 74 $ 285 room=.
--> w
-T 233 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 73 $ 285 room=.
--> w
-T 234 mode=chest_mode          Tauriel of the Greenwood(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 72 $ 285 room=C
--> o
-T 235 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 72 $ 285 room=.
--> n
-T 236 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 1, 2) HP 38/38 MP 0/0 Hu 71 $ 285 room=.
--> n
-T 237 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 1, 1) HP 38/38 MP 0/0 Hu 70 $ 285 room=E
--> e
-T 238 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 1) HP 38/38 MP 0/0 Hu 69 $ 285 room=.
--> e
-T 239 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 1) HP 38/38 MP 0/0 Hu 68 $ 285 room=.
--> e
-T 240 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 1) HP 38/38 MP 0/0 Hu 67 $ 285 room=.
--> l
-T 241 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 1) HP 38/38 MP 0/0 Hu 67 $ 285 room=.
--> e
-T 242 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 1) HP 38/38 MP 0/0 Hu 66 $ 285 room=.
--> s
-T 243 mode=dungeon_mode        Tauriel of the Greenwood(elf) F1@( 5, 2) HP 38/38 MP 0/0 Hu 65 $ 285 room=N
--> u
-T 244 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 2) HP 38/38 MP 0/0 Hu 65 $ 285 room=N
--> s
-T 245 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 64 $ 285 room=.
--> e
-T 246 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6, 3) HP 38/38 MP 0/0 Hu 63 $ 285 room=.
--> e
-T 247 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 3) HP 38/38 MP 0/0 Hu 62 $ 285 room=.
--> l
-T 248 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 3) HP 38/38 MP 0/0 Hu 62 $ 285 room=.
--> s
-T 249 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 61 $ 285 room=.
--> w
-T 250 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 60 $ 285 room=.
--> l
-T 251 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 60 $ 285 room=.
--> w
-T 252 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 59 $ 285 room=.
--> s
-T 253 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 5) HP 38/38 MP 0/0 Hu 58 $ 285 room=.
--> s
-T 254 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 6) HP 38/38 MP 0/0 Hu 57 $ 285 room=.
--> w
-T 255 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 56 $ 285 room=.
--> w
-T 256 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 55 $ 285 room=.
--> w
-T 257 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 6) HP 38/38 MP 0/0 Hu 54 $ 285 room=.
--> n
-T 258 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 5) HP 38/38 MP 0/0 Hu 53 $ 285 room=.
--> n
-T 259 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 52 $ 285 room=.
--> e
-T 260 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 4) HP 38/38 MP 0/0 Hu 51 $ 285 room=.
--> l
-T 261 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 4) HP 38/38 MP 0/0 Hu 51 $ 285 room=.
--> e
-T 262 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 50 $ 285 room=.
--> e
-T 263 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 49 $ 285 room=.
--> e
-T 264 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 48 $ 285 room=.
--> e
-T 265 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 47 $ 285 room=.
--> s
-T 266 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 46 $ 285 room=.
--> e
-T 267 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 5) HP 38/38 MP 0/0 Hu 45 $ 285 room=.
--> s
-T 268 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 44 $ 285 room=.
--> s
-T 269 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 43 $ 285 room=.
--> s
-T 270 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 42 $ 285 room=.
--> l
-T 271 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 42 $ 285 room=.
--> e
-T 272 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 41 $ 285 room=.
--> e
-T 273 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 40 $ 285 room=.
--> s
-T 274 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 39 $ 285 room=V
--> s
-T 275 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 38 $ 285 room=.
--> s
-T 276 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,11) HP 38/38 MP 0/0 Hu 37 $ 285 room=.
--> s
-T 277 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,12) HP 38/38 MP 0/0 Hu 36 $ 285 room=.
--> s
-T 278 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,13) HP 38/38 MP 0/0 Hu 35 $ 285 room=.
--> l
-T 279 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,13) HP 38/38 MP 0/0 Hu 35 $ 285 room=.
--> e
-T 280 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,13) HP 38/38 MP 0/0 Hu 34 $ 285 room=.
--> l
-T 281 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,13) HP 38/38 MP 0/0 Hu 34 $ 285 room=.
--> e
-T 282 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,13) HP 38/38 MP 0/0 Hu 33 $ 285 room=.
--> n
-T 283 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,12) HP 38/38 MP 0/0 Hu 32 $ 285 room=.
--> n
-T 284 mode=combat_mode         Tauriel of the Greenwood(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 31 $ 285 room=M vs Lichen(L0 HP10/10)
--> a
-T 285 mode=combat_victory      Tauriel of the Greenwood(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 31 $ 288 room=.
--> back
-T 286 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 31 $ 288 room=.
--> i
-T 287 mode=inventory           Tauriel of the Greenwood(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 31 $ 288 room=.
--> eat1
-T 288 mode=inventory           Tauriel of the Greenwood(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 37 $ 288 room=.
--> u7
-T 289 mode=upgrade_scroll_mode Tauriel of the Greenwood(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 37 $ 288 room=.
--> 1
-T 290 mode=inventory           Tauriel of the Greenwood(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 37 $ 288 room=.
--> x
-T 291 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 37 $ 288 room=.
--> w
-T 292 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,11) HP 38/38 MP 0/0 Hu 36 $ 288 room=.
--> s
-T 293 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 35 $ 288 room=.
--> w
-T 294 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,12) HP 38/38 MP 0/0 Hu 34 $ 288 room=.
--> s
-T 295 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,13) HP 38/38 MP 0/0 Hu 33 $ 288 room=.
--> e
-T 296 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,13) HP 38/38 MP 0/0 Hu 32 $ 288 room=.
--> e
-T 297 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,13) HP 38/38 MP 0/0 Hu 31 $ 288 room=.
--> n
-T 298 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,12) HP 38/38 MP 0/0 Hu 30 $ 288 room=.
--> w
-T 299 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 29 $ 288 room=.
--> n
-T 300 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,11) HP 38/38 MP 0/0 Hu 28 $ 288 room=.
--> l
-T 301 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,11) HP 38/38 MP 0/0 Hu 28 $ 288 room=.
--> e
-T 302 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 27 $ 288 room=.
--> s
-T 303 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,12) HP 38/38 MP 0/0 Hu 26 $ 288 room=.
--> s
-T 304 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,13) HP 38/38 MP 0/0 Hu 25 $ 288 room=.
--> w
-T 305 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,13) HP 38/38 MP 0/0 Hu 24 $ 288 room=.
--> w
-T 306 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,13) HP 38/38 MP 0/0 Hu 23 $ 288 room=.
--> n
-T 307 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,12) HP 38/38 MP 0/0 Hu 22 $ 288 room=.
--> e
-T 308 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 21 $ 288 room=.
--> n
-T 309 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,11) HP 38/38 MP 0/0 Hu 20 $ 288 room=.
--> w
-T 310 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,11) HP 38/38 MP 0/0 Hu 19 $ 288 room=.
--> l
-T 311 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,11) HP 38/38 MP 0/0 Hu 19 $ 288 room=.
--> w
-T 312 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 18 $ 288 room=.
--> w
-T 313 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 17 $ 288 room=.
--> n
-T 314 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 16 $ 288 room=M vs Lichen(L0 HP10/10)
--> a
-T 315 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 16 $ 295 room=.
--> back
-T 316 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 16 $ 295 room=.
--> i
-T 317 mode=inventory           Tauriel of the Greenwood(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 16 $ 295 room=.
--> eat1
-T 318 mode=inventory           Tauriel of the Greenwood(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 22 $ 295 room=.
--> x
-T 319 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 22 $ 295 room=.
--> w
-T 320 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 21 $ 295 room=.
--> l
-T 321 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 21 $ 295 room=.
--> s
-T 322 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,11) HP 38/38 MP 0/0 Hu 20 $ 295 room=.
--> s
-T 323 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 7,12) HP 38/38 MP 0/0 Hu 19 $ 295 room=M vs Kobold(L0 HP20/20)
--> a
-T 324 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 7,12) HP 37/38 MP 0/0 Hu 19 $ 295 room=M vs Kobold(L0 HP20/20)
--> a
-T 325 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 7,12) HP 36/38 MP 0/0 Hu 19 $ 301 room=.
--> back
-T 326 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,12) HP 36/38 MP 0/0 Hu 19 $ 301 room=.
--> i
-T 327 mode=inventory           Tauriel of the Greenwood(elf) F1@( 7,12) HP 36/38 MP 0/0 Hu 19 $ 301 room=.
--> u5
-T 328 mode=inventory           Tauriel of the Greenwood(elf) F1@( 7,12) HP 38/38 MP 0/0 Hu 19 $ 301 room=.
--> x
-T 329 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,12) HP 38/38 MP 0/0 Hu 19 $ 301 room=.
--> i
-T 330 mode=inventory           Tauriel of the Greenwood(elf) F1@( 7,12) HP 38/38 MP 0/0 Hu 19 $ 301 room=.
--> eat1
-T 331 mode=inventory           Tauriel of the Greenwood(elf) F1@( 7,12) HP 38/38 MP 0/0 Hu 24 $ 301 room=.
--> x
-T 332 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,12) HP 38/38 MP 0/0 Hu 24 $ 301 room=.
--> w
-T 333 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,12) HP 38/38 MP 0/0 Hu 23 $ 301 room=.
--> w
-T 334 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5,12) HP 38/38 MP 0/0 Hu 22 $ 301 room=.
--> w
-T 335 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,12) HP 38/38 MP 0/0 Hu 21 $ 301 room=.
--> s
-T 336 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,13) HP 38/38 MP 0/0 Hu 20 $ 301 room=.
--> s
-T 337 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,14) HP 38/38 MP 0/0 Hu 19 $ 301 room=.
--> w
-T 338 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,14) HP 38/38 MP 0/0 Hu 18 $ 301 room=.
--> w
-T 339 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,14) HP 38/38 MP 0/0 Hu 17 $ 301 room=.
--> n
-T 340 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu 16 $ 301 room=.
--> l
-T 341 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu 16 $ 301 room=.
--> e
-T 342 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 3,13) HP 38/38 MP 0/0 Hu 15 $ 301 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T 343 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 3,13) HP 37/38 MP 0/0 Hu 15 $ 302 room=.
--> back
-T 344 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,13) HP 37/38 MP 0/0 Hu 15 $ 302 room=.
--> i
-T 345 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,13) HP 37/38 MP 0/0 Hu 15 $ 302 room=.
--> eat1
-T 346 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,13) HP 37/38 MP 0/0 Hu 20 $ 302 room=.
--> x
-T 347 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,13) HP 37/38 MP 0/0 Hu 20 $ 302 room=.
--> e
-T 348 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,13) HP 37/38 MP 0/0 Hu 19 $ 302 room=.
--> n
-T 349 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,12) HP 37/38 MP 0/0 Hu 18 $ 302 room=.
--> e
-T 350 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5,12) HP 37/38 MP 0/0 Hu 17 $ 302 room=.
--> l
-T 351 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5,12) HP 37/38 MP 0/0 Hu 17 $ 302 room=.
--> e
-T 352 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,12) HP 37/38 MP 0/0 Hu 16 $ 302 room=.
--> e
-T 353 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,12) HP 37/38 MP 0/0 Hu 15 $ 302 room=.
--> e
-T 354 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,12) HP 37/38 MP 0/0 Hu 14 $ 302 room=.
--> e
-T 355 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,12) HP 37/38 MP 0/0 Hu 13 $ 302 room=.
--> n
-T 356 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,11) HP 37/38 MP 0/0 Hu 12 $ 302 room=.
--> n
-T 357 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,10) HP 37/38 MP 0/0 Hu 11 $ 302 room=.
--> w
-T 358 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,10) HP 37/38 MP 0/0 Hu 10 $ 302 room=.
--> s
-T 359 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,11) HP 37/38 MP 0/0 Hu  9 $ 302 room=.
--> s
-T 360 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,12) HP 37/38 MP 0/0 Hu  8 $ 302 room=.
--> l
-T 361 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,12) HP 37/38 MP 0/0 Hu  8 $ 302 room=.
--> w
-T 362 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,12) HP 37/38 MP 0/0 Hu  7 $ 302 room=.
--> w
-T 363 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,12) HP 37/38 MP 0/0 Hu  6 $ 302 room=.
--> n
-T 364 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,11) HP 37/38 MP 0/0 Hu  5 $ 302 room=.
--> e
-T 365 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,11) HP 37/38 MP 0/0 Hu  4 $ 302 room=.
--> e
-T 366 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,11) HP 37/38 MP 0/0 Hu  3 $ 302 room=.
--> s
-T 367 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,12) HP 37/38 MP 0/0 Hu  2 $ 302 room=.
--> w
-T 368 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,12) HP 37/38 MP 0/0 Hu  1 $ 302 room=.
--> w
-T 369 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,12) HP 35/38 MP 0/0 Hu  0 $ 302 room=.
--> w
-T 370 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5,12) HP 33/38 MP 0/0 Hu  0 $ 302 room=.
--> l
-T 371 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5,12) HP 33/38 MP 0/0 Hu  0 $ 302 room=.
--> w
-T 372 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,12) HP 31/38 MP 0/0 Hu  0 $ 302 room=.
--> s
-T 373 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,13) HP 29/38 MP 0/0 Hu  0 $ 302 room=.
--> s
-T 374 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,14) HP 27/38 MP 0/0 Hu  0 $ 302 room=.
--> w
-T 375 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,14) HP 25/38 MP 0/0 Hu  0 $ 302 room=.
--> w
-T 376 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,14) HP 23/38 MP 0/0 Hu  0 $ 302 room=.
--> n
-T 377 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 21/38 MP 0/0 Hu  0 $ 302 room=.
--> i
-T 378 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,13) HP 21/38 MP 0/0 Hu  0 $ 302 room=.
--> u5
-T 379 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu  0 $ 302 room=.
--> x
-T 380 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu  0 $ 302 room=.
--> l
-T 381 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 38/38 MP 0/0 Hu  0 $ 302 room=.
--> n
-T 382 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 2,12) HP 36/38 MP 0/0 Hu  0 $ 302 room=M vs Lichen(L0 HP10/10)
--> a
-T 383 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 2,12) HP 36/38 MP 0/0 Hu  0 $ 311 room=.
--> back
-T 384 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,12) HP 36/38 MP 0/0 Hu  0 $ 311 room=.
--> n
-T 385 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 34/38 MP 0/0 Hu  0 $ 311 room=.
--> n
-T 386 mode=altar_mode          Tauriel of the Greenwood(elf) F1@( 2,10) HP 32/38 MP 0/0 Hu  0 $ 311 room=A
--> pray
-T 387 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,10) HP 32/38 MP 0/0 Hu  0 $ 311 room=.
--> s
-T 388 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 30/38 MP 0/0 Hu  0 $ 311 room=.
--> e
-T 389 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 3,11) HP 28/38 MP 0/0 Hu  0 $ 311 room=M vs Goblin(L0 HP12/12)
--> a
-T 390 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 3,11) HP 28/38 MP 0/0 Hu  0 $ 317 room=.
--> back
-T 391 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,11) HP 28/38 MP 0/0 Hu  0 $ 317 room=.
--> s
-T 392 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,12) HP 26/38 MP 0/0 Hu  0 $ 317 room=.
--> s
-T 393 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,13) HP 24/38 MP 0/0 Hu  0 $ 317 room=.
--> s
-T 394 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,14) HP 22/38 MP 0/0 Hu  0 $ 317 room=.
--> w
-T 395 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,14) HP 20/38 MP 0/0 Hu  0 $ 317 room=.
--> n
-T 396 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,13) HP 18/38 MP 0/0 Hu  0 $ 317 room=.
--> n
-T 397 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,12) HP 16/38 MP 0/0 Hu  0 $ 317 room=.
--> n
-T 398 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 14/38 MP 0/0 Hu  0 $ 317 room=.
--> n
-T 399 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,10) HP 12/38 MP 0/0 Hu  0 $ 317 room=.
--> s
-T 400 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 10/38 MP 0/0 Hu  0 $ 317 room=.
--> l
-T 401 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 10/38 MP 0/0 Hu  0 $ 317 room=.
--> e
-T 402 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,11) HP 8/38 MP 0/0 Hu  0 $ 317 room=.
--> e
-T 403 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,11) HP 6/38 MP 0/0 Hu  0 $ 317 room=M vs Slime Mold(L0 HP15/15)
 -> f
-T 404 mode=flee_direction_mode Tauriel of the Greenwood(elf) F1@( 4,11) HP 6/38 MP 0/0 Hu  0 $ 317 room=M
+T 183 mode=flee_direction_mode Tauriel of the Greenwood(elf) F1@( 2,13) HP 36/38 MP 0/0 Hu 94 $ 273 room=M
+-> e
+T 184 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 3,13) HP 36/38 MP 0/0 Hu 94 $ 273 room=M vs Lichen(L0 HP10/10)
+-> a
+T 185 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 3,13) HP 35/38 MP 0/0 Hu 94 $ 279 room=.
+-> back
+T 186 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,13) HP 35/38 MP 0/0 Hu 94 $ 279 room=.
+-> i
+T 187 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,13) HP 35/38 MP 0/0 Hu 94 $ 279 room=.
+-> u5
+T 188 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,13) HP 38/38 MP 0/0 Hu 94 $ 279 room=.
+-> x
+T 189 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,13) HP 38/38 MP 0/0 Hu 94 $ 279 room=.
+-> i
+T 190 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,13) HP 38/38 MP 0/0 Hu 94 $ 279 room=.
+-> eat1
+T 191 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,13) HP 38/38 MP 0/0 Hu 99 $ 279 room=.
+-> x
+T 192 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,13) HP 38/38 MP 0/0 Hu 99 $ 279 room=.
 -> n
-T 405 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,10) HP 6/38 MP 0/0 Hu  0 $ 317 room=.
+T 193 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,12) HP 38/38 MP 0/0 Hu 98 $ 279 room=.
+-> i
+T 194 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,12) HP 38/38 MP 0/0 Hu 98 $ 279 room=.
+-> eat1
+T 195 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,12) HP 38/38 MP 0/0 Hu100 $ 279 room=.
+-> x
+T 196 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,12) HP 38/38 MP 0/0 Hu100 $ 279 room=.
 -> e
-T 406 mode=stairs_down_mode    Tauriel of the Greenwood(elf) F1@( 5,10) HP 4/38 MP 0/0 Hu  0 $ 317 room=D
--> d
-T 407 mode=stairs_up_mode      Tauriel of the Greenwood(elf) F2@( 1, 1) HP 4/38 MP 0/0 Hu  0 $ 317 room=U
+T 197 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,12) HP 38/38 MP 0/0 Hu 99 $ 279 room=.
 -> e
-T 408 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 1) HP 2/38 MP 0/0 Hu  0 $ 317 room=.
+T 198 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5,12) HP 38/38 MP 0/0 Hu 98 $ 279 room=.
+-> e
+T 199 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,12) HP 38/38 MP 0/0 Hu 97 $ 279 room=.
+-> n
+T 200 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,11) HP 38/38 MP 0/0 Hu 96 $ 279 room=.
+-> e
+T 201 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,11) HP 38/38 MP 0/0 Hu 95 $ 279 room=.
+-> e
+T 202 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 94 $ 279 room=.
+-> e
+T 203 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 93 $ 279 room=.
+-> n
+T 204 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 92 $ 279 room=.
+-> e
+T 205 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 91 $ 279 room=.
+-> i
+T 206 mode=inventory           Tauriel of the Greenwood(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 91 $ 279 room=.
+-> eat1
+T 207 mode=inventory           Tauriel of the Greenwood(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 97 $ 279 room=.
+-> x
+T 208 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 97 $ 279 room=.
+-> n
+T 209 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 96 $ 279 room=V
+-> n
+T 210 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 95 $ 279 room=.
 -> l
-T 409 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 1) HP 2/38 MP 0/0 Hu  0 $ 317 room=.
+T 211 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 95 $ 279 room=.
+-> w
+T 212 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 94 $ 279 room=.
+-> w
+T 213 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 93 $ 279 room=.
+-> n
+T 214 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 92 $ 279 room=.
+-> n
+T 215 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 91 $ 279 room=.
+-> n
+T 216 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 5) HP 38/38 MP 0/0 Hu 90 $ 279 room=.
+-> n
+T 217 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 4) HP 38/38 MP 0/0 Hu 89 $ 279 room=.
+-> w
+T 218 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 88 $ 279 room=.
+-> w
+T 219 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 87 $ 279 room=.
+-> w
+T 220 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 86 $ 279 room=.
+-> l
+T 221 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 86 $ 279 room=.
+-> w
+T 222 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 85 $ 279 room=.
+-> w
+T 223 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 4) HP 38/38 MP 0/0 Hu 84 $ 279 room=.
+-> n
+T 224 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 3) HP 38/38 MP 0/0 Hu 83 $ 279 room=.
+-> w
+T 225 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 82 $ 279 room=.
+-> w
+T 226 mode=chest_mode          Tauriel of the Greenwood(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 81 $ 279 room=C
+-> o
+T 227 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 81 $ 279 room=.
+-> n
+T 228 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 1, 2) HP 38/38 MP 0/0 Hu 80 $ 279 room=.
+-> n
+T 229 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 279 room=E
 -> e
-T 410 mode=death_screen        Tauriel of the Greenwood(elf) F2@( 3, 1) HP 0/38 MP 0/0 Hu  0 $ 317 room=O
+T 230 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 279 room=.
+-> l
+T 231 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 279 room=.
+-> e
+T 232 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 1) HP 38/38 MP 0/0 Hu 77 $ 279 room=.
+-> e
+T 233 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 1) HP 38/38 MP 0/0 Hu 76 $ 279 room=.
+-> e
+T 234 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 1) HP 38/38 MP 0/0 Hu 75 $ 279 room=.
+-> s
+T 235 mode=dungeon_mode        Tauriel of the Greenwood(elf) F1@( 5, 2) HP 38/38 MP 0/0 Hu 74 $ 279 room=N
+-> u
+T 236 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 2) HP 38/38 MP 0/0 Hu 74 $ 279 room=N
+-> s
+T 237 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 73 $ 279 room=.
+-> e
+T 238 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6, 3) HP 38/38 MP 0/0 Hu 72 $ 279 room=.
+-> e
+T 239 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 3) HP 38/38 MP 0/0 Hu 71 $ 279 room=.
+-> l
+T 240 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 3) HP 38/38 MP 0/0 Hu 71 $ 279 room=.
+-> l
+T 241 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 3) HP 38/38 MP 0/0 Hu 71 $ 279 room=.
+-> s
+T 242 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 70 $ 279 room=.
+-> w
+T 243 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 69 $ 279 room=.
+-> w
+T 244 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 68 $ 279 room=.
+-> s
+T 245 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 5) HP 38/38 MP 0/0 Hu 67 $ 279 room=.
+-> s
+T 246 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 6) HP 38/38 MP 0/0 Hu 66 $ 279 room=.
+-> w
+T 247 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 65 $ 279 room=.
+-> w
+T 248 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 64 $ 279 room=.
+-> w
+T 249 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 6) HP 38/38 MP 0/0 Hu 63 $ 279 room=.
+-> s
+T 250 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 62 $ 279 room=.
+-> l
+T 251 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 62 $ 279 room=.
+-> s
+T 252 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 8) HP 38/38 MP 0/0 Hu 61 $ 279 room=.
+-> n
+T 253 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 60 $ 279 room=.
+-> e
+T 254 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 59 $ 279 room=M vs Kobold(L0 HP8/8)
+-> a
+T 255 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 3, 7) HP 37/38 MP 0/0 Hu 59 $ 282 room=.
+-> back
+T 256 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 7) HP 37/38 MP 0/0 Hu 59 $ 282 room=.
+-> n
+T 257 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 6) HP 37/38 MP 0/0 Hu 58 $ 282 room=.
+-> n
+T 258 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 5) HP 37/38 MP 0/0 Hu 57 $ 282 room=.
+-> n
+T 259 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3, 4) HP 37/38 MP 0/0 Hu 56 $ 282 room=.
+-> e
+T 260 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 4) HP 37/38 MP 0/0 Hu 55 $ 282 room=.
+-> l
+T 261 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4, 4) HP 37/38 MP 0/0 Hu 55 $ 282 room=.
+-> e
+T 262 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5, 4) HP 37/38 MP 0/0 Hu 54 $ 282 room=.
+-> e
+T 263 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6, 4) HP 37/38 MP 0/0 Hu 53 $ 282 room=.
+-> e
+T 264 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 4) HP 37/38 MP 0/0 Hu 52 $ 282 room=.
+-> s
+T 265 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7, 5) HP 37/38 MP 0/0 Hu 51 $ 282 room=.
+-> e
+T 266 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 5) HP 37/38 MP 0/0 Hu 50 $ 282 room=.
+-> s
+T 267 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 6) HP 37/38 MP 0/0 Hu 49 $ 282 room=.
+-> i
+T 268 mode=inventory           Tauriel of the Greenwood(elf) F1@( 8, 6) HP 37/38 MP 0/0 Hu 49 $ 282 room=.
+-> eat1
+T 269 mode=inventory           Tauriel of the Greenwood(elf) F1@( 8, 6) HP 37/38 MP 0/0 Hu 54 $ 282 room=.
+-> u7
+T 270 mode=upgrade_scroll_mode Tauriel of the Greenwood(elf) F1@( 8, 6) HP 37/38 MP 0/0 Hu 54 $ 282 room=.
+-> 1
+T 271 mode=inventory           Tauriel of the Greenwood(elf) F1@( 8, 6) HP 37/38 MP 0/0 Hu 54 $ 282 room=.
+-> x
+T 272 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 6) HP 37/38 MP 0/0 Hu 54 $ 282 room=.
+-> s
+T 273 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 7) HP 37/38 MP 0/0 Hu 53 $ 282 room=.
+-> s
+T 274 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8, 8) HP 37/38 MP 0/0 Hu 52 $ 282 room=.
+-> e
+T 275 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9, 8) HP 37/38 MP 0/0 Hu 51 $ 282 room=.
+-> e
+T 276 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10, 8) HP 37/38 MP 0/0 Hu 50 $ 282 room=.
+-> s
+T 277 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10, 9) HP 37/38 MP 0/0 Hu 49 $ 282 room=V
+-> s
+T 278 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,10) HP 37/38 MP 0/0 Hu 48 $ 282 room=.
+-> s
+T 279 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,11) HP 37/38 MP 0/0 Hu 47 $ 282 room=.
+-> s
+T 280 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,12) HP 37/38 MP 0/0 Hu 46 $ 282 room=.
+-> l
+T 281 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,12) HP 37/38 MP 0/0 Hu 46 $ 282 room=.
+-> s
+T 282 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,13) HP 37/38 MP 0/0 Hu 45 $ 282 room=.
+-> l
+T 283 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,13) HP 37/38 MP 0/0 Hu 45 $ 282 room=.
+-> e
+T 284 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,13) HP 37/38 MP 0/0 Hu 44 $ 282 room=.
+-> e
+T 285 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,13) HP 37/38 MP 0/0 Hu 43 $ 282 room=.
+-> n
+T 286 mode=game_loop           Tauriel of the Greenwood(elf) F1@(12,12) HP 37/38 MP 0/0 Hu 42 $ 282 room=.
+-> w
+T 287 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,12) HP 37/38 MP 0/0 Hu 41 $ 282 room=.
+-> n
+T 288 mode=game_loop           Tauriel of the Greenwood(elf) F1@(11,11) HP 37/38 MP 0/0 Hu 40 $ 282 room=.
+-> w
+T 289 mode=game_loop           Tauriel of the Greenwood(elf) F1@(10,11) HP 37/38 MP 0/0 Hu 39 $ 282 room=.
+-> w
+T 290 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,11) HP 37/38 MP 0/0 Hu 38 $ 282 room=.
+-> l
+T 291 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 9,11) HP 37/38 MP 0/0 Hu 38 $ 282 room=.
+-> w
+T 292 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 8,11) HP 37/38 MP 0/0 Hu 37 $ 282 room=.
+-> w
+T 293 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 7,11) HP 37/38 MP 0/0 Hu 36 $ 282 room=.
+-> w
+T 294 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,11) HP 37/38 MP 0/0 Hu 35 $ 282 room=.
+-> s
+T 295 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 6,12) HP 37/38 MP 0/0 Hu 34 $ 282 room=.
+-> w
+T 296 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 5,12) HP 37/38 MP 0/0 Hu 33 $ 282 room=.
+-> w
+T 297 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,12) HP 37/38 MP 0/0 Hu 32 $ 282 room=.
+-> w
+T 298 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,12) HP 37/38 MP 0/0 Hu 31 $ 282 room=.
+-> s
+T 299 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,13) HP 37/38 MP 0/0 Hu 30 $ 282 room=.
+-> s
+T 300 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,14) HP 37/38 MP 0/0 Hu 29 $ 282 room=.
+-> l
+T 301 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,14) HP 37/38 MP 0/0 Hu 29 $ 282 room=.
+-> w
+T 302 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,14) HP 37/38 MP 0/0 Hu 28 $ 282 room=.
+-> n
+T 303 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 2,13) HP 37/38 MP 0/0 Hu 27 $ 282 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T 304 mode=flee_direction_mode Tauriel of the Greenwood(elf) F1@( 2,13) HP 37/38 MP 0/0 Hu 27 $ 282 room=M
+-> n
+T 305 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 2,12) HP 37/38 MP 0/0 Hu 27 $ 282 room=M vs Lichen(L0 HP10/10)
+-> a
+T 306 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 2,12) HP 37/38 MP 0/0 Hu 27 $ 292 room=.
+-> back
+T 307 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,12) HP 37/38 MP 0/0 Hu 27 $ 292 room=.
+-> i
+T 308 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,12) HP 37/38 MP 0/0 Hu 27 $ 292 room=.
+-> eat1
+T 309 mode=inventory           Tauriel of the Greenwood(elf) F1@( 2,12) HP 37/38 MP 0/0 Hu 33 $ 292 room=.
+-> x
+T 310 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,12) HP 37/38 MP 0/0 Hu 33 $ 292 room=.
+-> l
+T 311 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,12) HP 37/38 MP 0/0 Hu 33 $ 292 room=.
+-> n
+T 312 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 37/38 MP 0/0 Hu 32 $ 292 room=.
+-> n
+T 313 mode=altar_mode          Tauriel of the Greenwood(elf) F1@( 2,10) HP 37/38 MP 0/0 Hu 31 $ 292 room=A
+-> pray
+T 314 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,10) HP 37/38 MP 0/0 Hu 31 $ 292 room=.
+-> s
+T 315 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 37/38 MP 0/0 Hu 30 $ 292 room=.
+-> e
+T 316 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 3,11) HP 37/38 MP 0/0 Hu 29 $ 292 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 317 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 3,11) HP 37/38 MP 0/0 Hu 29 $ 296 room=.
+-> back
+T 318 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,11) HP 37/38 MP 0/0 Hu 29 $ 296 room=.
+-> i
+T 319 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,11) HP 37/38 MP 0/0 Hu 29 $ 296 room=.
+-> eat1
+T 320 mode=inventory           Tauriel of the Greenwood(elf) F1@( 3,11) HP 37/38 MP 0/0 Hu 34 $ 296 room=.
+-> x
+T 321 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,11) HP 37/38 MP 0/0 Hu 34 $ 296 room=.
+-> s
+T 322 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,12) HP 37/38 MP 0/0 Hu 33 $ 296 room=.
+-> e
+T 323 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,12) HP 37/38 MP 0/0 Hu 32 $ 296 room=.
+-> s
+T 324 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,13) HP 37/38 MP 0/0 Hu 31 $ 296 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 325 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 4,13) HP 37/38 MP 0/0 Hu 31 $ 304 room=.
+-> back
+T 326 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,13) HP 37/38 MP 0/0 Hu 31 $ 304 room=.
+-> w
+T 327 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,13) HP 37/38 MP 0/0 Hu 30 $ 304 room=.
+-> w
+T 328 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 2,13) HP 37/38 MP 0/0 Hu 29 $ 304 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T 329 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 2,13) HP 36/38 MP 0/0 Hu 29 $ 304 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T 330 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 2,13) HP 35/38 MP 0/0 Hu 29 $ 304 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T 331 mode=flee_direction_mode Tauriel of the Greenwood(elf) F1@( 2,13) HP 35/38 MP 0/0 Hu 29 $ 304 room=M
+-> n
+T 332 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,12) HP 35/38 MP 0/0 Hu 29 $ 304 room=.
+-> n
+T 333 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 35/38 MP 0/0 Hu 28 $ 304 room=.
+-> n
+T 334 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,10) HP 35/38 MP 0/0 Hu 27 $ 304 room=.
+-> s
+T 335 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 35/38 MP 0/0 Hu 26 $ 304 room=.
+-> e
+T 336 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,11) HP 35/38 MP 0/0 Hu 25 $ 304 room=.
+-> s
+T 337 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,12) HP 35/38 MP 0/0 Hu 24 $ 304 room=.
+-> w
+T 338 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,12) HP 35/38 MP 0/0 Hu 23 $ 304 room=.
+-> s
+T 339 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 2,13) HP 35/38 MP 0/0 Hu 22 $ 304 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T 340 mode=flee_direction_mode Tauriel of the Greenwood(elf) F1@( 2,13) HP 35/38 MP 0/0 Hu 22 $ 304 room=M
+-> s
+T 341 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,14) HP 35/38 MP 0/0 Hu 22 $ 304 room=.
+-> e
+T 342 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,14) HP 35/38 MP 0/0 Hu 21 $ 304 room=.
+-> n
+T 343 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,13) HP 35/38 MP 0/0 Hu 20 $ 304 room=.
+-> n
+T 344 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,12) HP 35/38 MP 0/0 Hu 19 $ 304 room=.
+-> n
+T 345 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,11) HP 35/38 MP 0/0 Hu 18 $ 304 room=.
+-> w
+T 346 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 35/38 MP 0/0 Hu 17 $ 304 room=.
+-> n
+T 347 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,10) HP 35/38 MP 0/0 Hu 16 $ 304 room=.
+-> s
+T 348 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,11) HP 35/38 MP 0/0 Hu 15 $ 304 room=.
+-> s
+T 349 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 2,12) HP 35/38 MP 0/0 Hu 14 $ 304 room=.
+-> e
+T 350 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,12) HP 35/38 MP 0/0 Hu 13 $ 304 room=.
+-> l
+T 351 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,12) HP 35/38 MP 0/0 Hu 13 $ 304 room=.
+-> n
+T 352 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 3,11) HP 35/38 MP 0/0 Hu 12 $ 304 room=.
+-> e
+T 353 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,11) HP 35/38 MP 0/0 Hu 11 $ 304 room=M vs Kobold(L0 HP8/8)
+-> a
+T 354 mode=combat_mode         Tauriel of the Greenwood(elf) F1@( 4,11) HP 35/38 MP 0/0 Hu 11 $ 304 room=M vs Kobold(L0 HP8/8)
+-> a
+T 355 mode=combat_victory      Tauriel of the Greenwood(elf) F1@( 4,11) HP 35/38 MP 0/0 Hu 11 $ 305 room=.
+-> back
+T 356 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,11) HP 35/38 MP 0/0 Hu 11 $ 305 room=.
+-> i
+T 357 mode=inventory           Tauriel of the Greenwood(elf) F1@( 4,11) HP 35/38 MP 0/0 Hu 11 $ 305 room=.
+-> u5
+T 358 mode=inventory           Tauriel of the Greenwood(elf) F1@( 4,11) HP 38/38 MP 0/0 Hu 11 $ 305 room=.
+-> x
+T 359 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,11) HP 38/38 MP 0/0 Hu 11 $ 305 room=.
+-> i
+T 360 mode=inventory           Tauriel of the Greenwood(elf) F1@( 4,11) HP 38/38 MP 0/0 Hu 11 $ 305 room=.
+-> eat1
+T 361 mode=inventory           Tauriel of the Greenwood(elf) F1@( 4,11) HP 38/38 MP 0/0 Hu 16 $ 305 room=.
+-> x
+T 362 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,11) HP 38/38 MP 0/0 Hu 16 $ 305 room=.
+-> n
+T 363 mode=game_loop           Tauriel of the Greenwood(elf) F1@( 4,10) HP 38/38 MP 0/0 Hu 15 $ 305 room=.
+-> e
+T 364 mode=stairs_down_mode    Tauriel of the Greenwood(elf) F1@( 5,10) HP 38/38 MP 0/0 Hu 14 $ 305 room=D
+-> d
+T 365 mode=stairs_up_mode      Tauriel of the Greenwood(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 14 $ 305 room=U
+-> n
+T 366 mode=stairs_up_mode      Tauriel of the Greenwood(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 14 $ 305 room=U
+-> e
+T 367 mode=pool_mode           Tauriel of the Greenwood(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 13 $ 305 room=P
+-> dr
+T 368 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 1) HP 38/34 MP 0/0 Hu 13 $ 305 room=.
+-> l
+T 369 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 1) HP 38/34 MP 0/0 Hu 13 $ 305 room=.
+-> e
+T 370 mode=tomb_mode           Tauriel of the Greenwood(elf) F2@( 3, 1) HP 38/34 MP 0/0 Hu 12 $ 305 room=T
+-> p
+T 371 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 1) HP 34/34 MP 0/0 Hu 12 $ 305 room=T
+-> l
+T 372 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 1) HP 34/34 MP 0/0 Hu 12 $ 305 room=T
+-> e
+T 373 mode=dungeon_mode        Tauriel of the Greenwood(elf) F2@( 4, 1) HP 34/34 MP 0/0 Hu 11 $ 305 room=N
+-> u
+T 374 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 1) HP 34/34 MP 0/0 Hu 11 $ 305 room=N
+-> l
+T 375 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 1) HP 34/34 MP 0/0 Hu 11 $ 305 room=N
+-> s
+T 376 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 2) HP 34/34 MP 0/0 Hu 10 $ 305 room=.
+-> l
+T 377 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 2) HP 34/34 MP 0/0 Hu 10 $ 305 room=.
+-> e
+T 378 mode=oracle_mode         Tauriel of the Greenwood(elf) F2@( 5, 2) HP 34/34 MP 0/0 Hu  9 $ 305 room=O
+-> e
+T 379 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 2) HP 34/34 MP 0/0 Hu  8 $ 305 room=.
+-> l
+T 380 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 2) HP 34/34 MP 0/0 Hu  8 $ 305 room=.
+-> s
+T 381 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 3) HP 34/34 MP 0/0 Hu  7 $ 305 room=.
+-> l
+T 382 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 3) HP 34/34 MP 0/0 Hu  7 $ 305 room=.
+-> s
+T 383 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 4) HP 34/34 MP 0/0 Hu  6 $ 305 room=.
+-> l
+T 384 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 4) HP 34/34 MP 0/0 Hu  6 $ 305 room=.
+-> s
+T 385 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 5) HP 34/34 MP 0/0 Hu  5 $ 305 room=.
+-> l
+T 386 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 5) HP 34/34 MP 0/0 Hu  5 $ 305 room=.
+-> w
+T 387 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 5, 5) HP 34/34 MP 0/0 Hu  4 $ 305 room=.
+-> l
+T 388 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 5, 5) HP 34/34 MP 0/0 Hu  4 $ 305 room=.
+-> w
+T 389 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 5) HP 34/34 MP 0/0 Hu  3 $ 305 room=.
+-> w
+T 390 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 5) HP 34/34 MP 0/0 Hu  2 $ 305 room=.
+-> w
+T 391 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 5) HP 34/34 MP 0/0 Hu  1 $ 305 room=.
+-> w
+T 392 mode=stairs_down_mode    Tauriel of the Greenwood(elf) F2@( 1, 5) HP 32/34 MP 0/0 Hu  0 $ 305 room=D
+-> e
+T 393 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 5) HP 30/34 MP 0/0 Hu  0 $ 305 room=.
+-> n
+T 394 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 4) HP 28/34 MP 0/0 Hu  0 $ 305 room=.
+-> e
+T 395 mode=combat_mode         Tauriel of the Greenwood(elf) F2@( 3, 4) HP 26/34 MP 0/0 Hu  0 $ 305 room=M vs Harpy(L1 HP28/28)
+-> a
+T 396 mode=combat_mode         Tauriel of the Greenwood(elf) F2@( 3, 4) HP 26/34 MP 0/0 Hu  0 $ 305 room=M vs Harpy(L1 HP28/28)
+-> a
+T 397 mode=combat_mode         Tauriel of the Greenwood(elf) F2@( 3, 4) HP 25/34 MP 0/0 Hu  0 $ 305 room=M vs Harpy(L1 HP7/28)
+-> a
+T 398 mode=combat_victory      Tauriel of the Greenwood(elf) F2@( 3, 4) HP 25/34 MP 0/0 Hu  0 $ 315 room=.
+-> back
+T 399 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 4) HP 25/34 MP 0/0 Hu  0 $ 315 room=.
+-> s
+T 400 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 5) HP 23/34 MP 0/0 Hu  0 $ 315 room=.
+-> s
+T 401 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 6) HP 21/34 MP 0/0 Hu  0 $ 315 room=.
+-> e
+T 402 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 6) HP 19/34 MP 0/0 Hu  0 $ 315 room=.
+-> n
+T 403 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 5) HP 17/34 MP 0/0 Hu  0 $ 315 room=.
+-> n
+T 404 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 4) HP 15/34 MP 0/0 Hu  0 $ 315 room=.
+-> w
+T 405 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 4) HP 13/34 MP 0/0 Hu  0 $ 315 room=.
+-> s
+T 406 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 5) HP 11/34 MP 0/0 Hu  0 $ 315 room=.
+-> w
+T 407 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 5) HP 9/34 MP 0/0 Hu  0 $ 315 room=.
+-> i
+T 408 mode=inventory           Tauriel of the Greenwood(elf) F2@( 2, 5) HP 9/34 MP 0/0 Hu  0 $ 315 room=.
+-> u5
+T 409 mode=inventory           Tauriel of the Greenwood(elf) F2@( 2, 5) HP 34/34 MP 0/0 Hu  0 $ 315 room=.
+-> x
+T 410 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 5) HP 34/34 MP 0/0 Hu  0 $ 315 room=.
+-> w
+T 411 mode=stairs_down_mode    Tauriel of the Greenwood(elf) F2@( 1, 5) HP 32/34 MP 0/0 Hu  0 $ 315 room=D
+-> e
+T 412 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 5) HP 30/34 MP 0/0 Hu  0 $ 315 room=.
+-> n
+T 413 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 2, 4) HP 28/34 MP 0/0 Hu  0 $ 315 room=.
+-> e
+T 414 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 4) HP 26/34 MP 0/0 Hu  0 $ 315 room=.
+-> s
+T 415 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 3, 5) HP 24/34 MP 0/0 Hu  0 $ 315 room=.
+-> e
+T 416 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 5) HP 22/34 MP 0/0 Hu  0 $ 315 room=.
+-> n
+T 417 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 4) HP 20/34 MP 0/0 Hu  0 $ 315 room=.
+-> n
+T 418 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 3) HP 18/34 MP 0/0 Hu  0 $ 315 room=.
+-> n
+T 419 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 2) HP 16/34 MP 0/0 Hu  0 $ 315 room=.
+-> e
+T 420 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 5, 2) HP 14/34 MP 0/0 Hu  0 $ 315 room=O
+-> s
+T 421 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 5, 3) HP 12/34 MP 0/0 Hu  0 $ 315 room=.
+-> e
+T 422 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 3) HP 10/34 MP 0/0 Hu  0 $ 315 room=.
+-> s
+T 423 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 4) HP 8/34 MP 0/0 Hu  0 $ 315 room=.
+-> s
+T 424 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 6, 5) HP 6/34 MP 0/0 Hu  0 $ 315 room=.
+-> w
+T 425 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 5, 5) HP 4/34 MP 0/0 Hu  0 $ 315 room=.
+-> w
+T 426 mode=game_loop           Tauriel of the Greenwood(elf) F2@( 4, 5) HP 2/34 MP 0/0 Hu  0 $ 315 room=.
+-> w
+T 427 mode=death_screen        Tauriel of the Greenwood(elf) F2@( 3, 5) HP 0/34 MP 0/0 Hu  0 $ 315 room=.
 
-=== run finished: turns=410 floor=2 hp=0/38 gold=317 alive=False mode=death_screen ===
+=== run finished: turns=427 floor=2 hp=0/34 gold=315 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/16180_elf.html

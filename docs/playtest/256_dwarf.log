@@ -2946,140 +2946,84 @@ T1464 mode=inventory           Gimli the Mighty(dwa) F5@( 9, 7) HP 55/106 MP 0/0
 T1465 mode=inventory           Gimli the Mighty(dwa) F5@( 9, 7) HP 55/106 MP 0/0 Hu  0 $ 532 room=.
 -> x
 T1466 mode=game_loop           Gimli the Mighty(dwa) F5@( 9, 7) HP 55/106 MP 0/0 Hu  0 $ 532 room=.
--> s
-T1467 mode=game_loop           Gimli the Mighty(dwa) F5@( 9, 8) HP 53/106 MP 0/0 Hu  0 $ 532 room=.
--> e
-T1468 mode=chest_mode          Gimli the Mighty(dwa) F5@(10, 8) HP 51/106 MP 0/0 Hu  0 $ 532 room=C
--> o
-T1469 mode=game_loop           Gimli the Mighty(dwa) F5@(10, 8) HP 51/106 MP 0/0 Hu  0 $ 532 room=.
--> s
-T1470 mode=pool_mode           Gimli the Mighty(dwa) F5@(10, 9) HP 49/106 MP 0/0 Hu  0 $ 532 room=P
 -> n
-T1471 mode=game_loop           Gimli the Mighty(dwa) F5@(10, 8) HP 47/106 MP 0/0 Hu  0 $ 532 room=.
--> e
-T1472 mode=game_loop           Gimli the Mighty(dwa) F5@(11, 8) HP 45/106 MP 0/0 Hu  0 $ 532 room=.
+T1467 mode=game_loop           Gimli the Mighty(dwa) F5@( 9, 6) HP 53/106 MP 0/0 Hu  0 $ 532 room=.
 -> n
-T1473 mode=game_loop           Gimli the Mighty(dwa) F5@(11, 7) HP 43/106 MP 0/0 Hu  0 $ 532 room=.
+T1468 mode=game_loop           Gimli the Mighty(dwa) F5@( 9, 5) HP 51/106 MP 0/0 Hu  0 $ 532 room=.
 -> n
-T1474 mode=game_loop           Gimli the Mighty(dwa) F5@(11, 6) HP 41/106 MP 0/0 Hu  0 $ 532 room=.
--> e
-T1475 mode=altar_mode          Gimli the Mighty(dwa) F5@(12, 6) HP 39/106 MP 0/0 Hu  0 $ 532 room=A
--> pray
-T1476 mode=game_loop           Gimli the Mighty(dwa) F5@(12, 6) HP 39/106 MP 0/0 Hu  0 $ 532 room=.
--> e
-T1477 mode=game_loop           Gimli the Mighty(dwa) F5@(13, 6) HP 37/106 MP 0/0 Hu  0 $ 532 room=.
+T1469 mode=game_loop           Gimli the Mighty(dwa) F5@( 9, 4) HP 49/106 MP 0/0 Hu  0 $ 532 room=.
 -> w
-T1478 mode=game_loop           Gimli the Mighty(dwa) F5@(12, 6) HP 35/106 MP 0/0 Hu  0 $ 532 room=.
--> e
-T1479 mode=game_loop           Gimli the Mighty(dwa) F5@(13, 6) HP 33/106 MP 0/0 Hu  0 $ 532 room=.
+T1470 mode=game_loop           Gimli the Mighty(dwa) F5@( 8, 4) HP 47/106 MP 0/0 Hu  0 $ 532 room=.
+-> n
+T1471 mode=game_loop           Gimli the Mighty(dwa) F5@( 8, 3) HP 45/106 MP 0/0 Hu  0 $ 532 room=P
 -> w
-T1480 mode=game_loop           Gimli the Mighty(dwa) F5@(12, 6) HP 31/106 MP 0/0 Hu  0 $ 532 room=.
+T1472 mode=game_loop           Gimli the Mighty(dwa) F5@( 7, 3) HP 43/106 MP 0/0 Hu  0 $ 532 room=.
 -> w
-T1481 mode=game_loop           Gimli the Mighty(dwa) F5@(11, 6) HP 29/106 MP 0/0 Hu  0 $ 532 room=.
--> s
-T1482 mode=game_loop           Gimli the Mighty(dwa) F5@(11, 7) HP 27/106 MP 0/0 Hu  0 $ 532 room=.
+T1473 mode=game_loop           Gimli the Mighty(dwa) F5@( 6, 3) HP 41/106 MP 0/0 Hu  0 $ 532 room=.
 -> w
-T1483 mode=game_loop           Gimli the Mighty(dwa) F5@(10, 7) HP 25/106 MP 0/0 Hu  0 $ 532 room=.
+T1474 mode=game_loop           Gimli the Mighty(dwa) F5@( 5, 3) HP 39/106 MP 0/0 Hu  0 $ 532 room=.
+-> s
+T1475 mode=game_loop           Gimli the Mighty(dwa) F5@( 5, 4) HP 37/106 MP 0/0 Hu  0 $ 532 room=.
 -> w
-T1484 mode=game_loop           Gimli the Mighty(dwa) F5@( 9, 7) HP 23/106 MP 0/0 Hu  0 $ 532 room=.
--> n
-T1485 mode=game_loop           Gimli the Mighty(dwa) F5@( 9, 6) HP 21/106 MP 0/0 Hu  0 $ 532 room=.
--> n
-T1486 mode=game_loop           Gimli the Mighty(dwa) F5@( 9, 5) HP 19/106 MP 0/0 Hu  0 $ 532 room=.
--> n
-T1487 mode=game_loop           Gimli the Mighty(dwa) F5@( 9, 4) HP 17/106 MP 0/0 Hu  0 $ 532 room=.
--> e
-T1488 mode=stairs_down_mode    Gimli the Mighty(dwa) F5@(10, 4) HP 15/106 MP 0/0 Hu  0 $ 532 room=D
--> d
-T1489 mode=stairs_up_mode      Gimli the Mighty(dwa) F6@( 1, 1) HP 15/106 MP 0/0 Hu  0 $ 532 room=U
--> e
-T1490 mode=warp_mode           Gimli the Mighty(dwa) F6@( 2, 1) HP 13/106 MP 0/0 Hu  0 $ 632 room=W
--> y
-T1491 mode=game_loop           Gimli the Mighty(dwa) F6@( 2, 1) HP 13/106 MP 0/0 Hu  0 $ 632 room=W
--> e
-T1492 mode=combat_mode         Gimli the Mighty(dwa) F6@( 3, 1) HP 11/106 MP 0/0 Hu  0 $ 632 room=M vs Carrion Crawler(L5 HP54/54)
--> a
-T1493 mode=combat_mode         Gimli the Mighty(dwa) F6@( 3, 1) HP 10/106 MP 0/0 Hu  0 $ 632 room=M vs Carrion Crawler(L5 HP34/54)
--> a
-T1494 mode=combat_mode         Gimli the Mighty(dwa) F6@( 3, 1) HP 10/106 MP 0/0 Hu  0 $ 632 room=M vs Carrion Crawler(L5 HP14/54)
--> a
-T1495 mode=combat_mode         Gimli the Mighty(dwa) F6@( 3, 1) HP 9/106 MP 0/0 Hu  0 $ 632 room=M vs Carrion Crawler(L5 HP14/54)
--> a
-T1496 mode=combat_victory      Gimli the Mighty(dwa) F6@( 3, 1) HP 8/106 MP 0/0 Hu  0 $ 644 room=.
--> back
-T1497 mode=game_loop           Gimli the Mighty(dwa) F6@( 3, 1) HP 8/106 MP 0/0 Hu  0 $ 644 room=.
--> i
-T1498 mode=inventory           Gimli the Mighty(dwa) F6@( 3, 1) HP 8/106 MP 0/0 Hu  0 $ 644 room=.
--> eat1
-T1499 mode=inventory           Gimli the Mighty(dwa) F6@( 3, 1) HP 8/106 MP 0/0 Hu  6 $ 644 room=.
--> x
-T1500 mode=game_loop           Gimli the Mighty(dwa) F6@( 3, 1) HP 8/106 MP 0/0 Hu  6 $ 644 room=.
+T1476 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 4) HP 35/106 MP 0/0 Hu  0 $ 532 room=.
 -> s
-T1501 mode=chest_mode          Gimli the Mighty(dwa) F6@( 3, 2) HP 8/106 MP 0/0 Hu  5 $ 644 room=C
+T1477 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 5) HP 33/106 MP 0/0 Hu  0 $ 532 room=.
 -> s
-T1502 mode=game_loop           Gimli the Mighty(dwa) F6@( 3, 3) HP 8/106 MP 0/0 Hu  4 $ 644 room=.
+T1478 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 6) HP 31/106 MP 0/0 Hu  0 $ 532 room=.
 -> s
-T1503 mode=game_loop           Gimli the Mighty(dwa) F6@( 3, 4) HP 8/106 MP 0/0 Hu  3 $ 644 room=.
--> s
-T1504 mode=combat_mode         Gimli the Mighty(dwa) F6@( 3, 5) HP 8/106 MP 0/0 Hu  2 $ 644 room=M vs Hardened Stirge(L5 HP9/9)
--> a
-T1505 mode=combat_mode         Gimli the Mighty(dwa) F6@( 3, 5) HP 7/106 MP 0/0 Hu  2 $ 644 room=M vs Hardened Stirge(L5 HP9/9)
--> a
-T1506 mode=combat_victory      Gimli the Mighty(dwa) F6@( 3, 5) HP 7/106 MP 0/0 Hu  2 $ 656 room=.
--> back
-T1507 mode=game_loop           Gimli the Mighty(dwa) F6@( 3, 5) HP 7/106 MP 0/0 Hu  2 $ 656 room=.
--> i
-T1508 mode=inventory           Gimli the Mighty(dwa) F6@( 3, 5) HP 7/106 MP 0/0 Hu  2 $ 656 room=.
--> eat1
-T1509 mode=inventory           Gimli the Mighty(dwa) F6@( 3, 5) HP 7/106 MP 0/0 Hu  8 $ 656 room=.
--> x
-T1510 mode=game_loop           Gimli the Mighty(dwa) F6@( 3, 5) HP 7/106 MP 0/0 Hu  8 $ 656 room=.
--> e
-T1511 mode=game_loop           Gimli the Mighty(dwa) F6@( 4, 5) HP 7/106 MP 0/0 Hu  7 $ 656 room=.
--> n
-T1512 mode=game_loop           Gimli the Mighty(dwa) F6@( 4, 4) HP 7/106 MP 0/0 Hu  6 $ 656 room=.
--> e
-T1513 mode=game_loop           Gimli the Mighty(dwa) F6@( 5, 4) HP 7/106 MP 0/0 Hu  5 $ 656 room=.
--> s
-T1514 mode=combat_mode         Gimli the Mighty(dwa) F6@( 5, 5) HP 7/106 MP 0/0 Hu  4 $ 656 room=M vs Cockatrice(L5 HP28/28)
--> a
-T1515 mode=combat_mode         Gimli the Mighty(dwa) F6@( 5, 5) HP 6/106 MP 0/0 Hu  4 $ 656 room=M vs Cockatrice(L5 HP6/28)
--> a
-T1516 mode=combat_victory      Gimli the Mighty(dwa) F6@( 5, 5) HP 6/116 MP 0/0 Hu  4 $ 662 room=.
--> back
-T1517 mode=game_loop           Gimli the Mighty(dwa) F6@( 5, 5) HP 6/116 MP 0/0 Hu  4 $ 662 room=.
--> i
-T1518 mode=inventory           Gimli the Mighty(dwa) F6@( 5, 5) HP 6/116 MP 0/0 Hu  4 $ 662 room=.
--> eat1
-T1519 mode=inventory           Gimli the Mighty(dwa) F6@( 5, 5) HP 6/116 MP 0/0 Hu 10 $ 662 room=.
--> x
-T1520 mode=game_loop           Gimli the Mighty(dwa) F6@( 5, 5) HP 6/116 MP 0/0 Hu 10 $ 662 room=.
--> n
-T1521 mode=game_loop           Gimli the Mighty(dwa) F6@( 5, 4) HP 6/116 MP 0/0 Hu  9 $ 662 room=.
--> e
-T1522 mode=game_loop           Gimli the Mighty(dwa) F6@( 6, 4) HP 6/116 MP 0/0 Hu  8 $ 662 room=.
--> e
-T1523 mode=game_loop           Gimli the Mighty(dwa) F6@( 7, 4) HP 6/116 MP 0/0 Hu  7 $ 662 room=.
--> n
-T1524 mode=garden_mode         Gimli the Mighty(dwa) F6@( 7, 3) HP 6/116 MP 0/0 Hu  6 $ 662 room=G
--> h
-T1525 mode=game_loop           Gimli the Mighty(dwa) F6@( 7, 3) HP 6/116 MP 0/0 Hu  6 $ 662 room=.
--> n
-T1526 mode=dungeon_mode        Gimli the Mighty(dwa) F6@( 7, 2) HP 6/116 MP 0/0 Hu  5 $ 662 room=N
+T1479 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 7) HP 29/106 MP 0/0 Hu  0 $ 532 room=.
+-> w
+T1480 mode=dungeon_mode        Gimli the Mighty(dwa) F5@( 3, 7) HP 27/106 MP 0/0 Hu  0 $ 532 room=N
 -> u
-T1527 mode=game_loop           Gimli the Mighty(dwa) F6@( 7, 2) HP 6/116 MP 0/0 Hu  5 $ 662 room=N
+T1481 mode=dungeon_unlocked_mode Gimli the Mighty(dwa) F5@( 3, 7) HP 27/106 MP 0/0 Hu  0 $ 532 room=N
+-> r
+T1482 mode=game_loop           Gimli the Mighty(dwa) F5@( 3, 7) HP 27/106 MP 0/0 Hu  0 $ 729 room=N
 -> n
-T1528 mode=game_loop           Gimli the Mighty(dwa) F6@( 7, 1) HP 6/116 MP 0/0 Hu  4 $ 662 room=.
+T1483 mode=game_loop           Gimli the Mighty(dwa) F5@( 3, 6) HP 25/106 MP 0/0 Hu  0 $ 729 room=.
+-> n
+T1484 mode=combat_mode         Gimli the Mighty(dwa) F5@( 3, 5) HP 23/106 MP 0/0 Hu  0 $ 729 room=M vs Zombie(L4 HP39/39)
+-> f
+T1485 mode=combat_mode         Gimli the Mighty(dwa) F5@( 3, 5) HP 22/106 MP 0/0 Hu  0 $ 729 room=M vs Zombie(L4 HP39/39)
+-> f
+T1486 mode=combat_mode         Gimli the Mighty(dwa) F5@( 3, 5) HP 21/106 MP 0/0 Hu  0 $ 729 room=M vs Zombie(L4 HP39/39)
+-> f
+T1487 mode=combat_mode         Gimli the Mighty(dwa) F5@( 3, 5) HP 21/106 MP 0/0 Hu  0 $ 729 room=M vs Zombie(L4 HP39/39)
+-> f
+T1488 mode=combat_mode         Gimli the Mighty(dwa) F5@( 3, 5) HP 21/106 MP 0/0 Hu  0 $ 729 room=M vs Zombie(L4 HP39/39)
+-> f
+T1489 mode=combat_mode         Gimli the Mighty(dwa) F5@( 3, 5) HP 20/106 MP 0/0 Hu  0 $ 729 room=M vs Zombie(L4 HP39/39)
+-> f
+T1490 mode=combat_mode         Gimli the Mighty(dwa) F5@( 3, 5) HP 20/106 MP 0/0 Hu  0 $ 729 room=M vs Zombie(L4 HP39/39)
+-> f
+T1491 mode=flee_direction_mode Gimli the Mighty(dwa) F5@( 3, 5) HP 20/106 MP 0/0 Hu  0 $ 729 room=M
+-> n
+T1492 mode=game_loop           Gimli the Mighty(dwa) F5@( 3, 4) HP 20/106 MP 0/0 Hu  0 $ 729 room=.
 -> e
-T1529 mode=game_loop           Gimli the Mighty(dwa) F6@( 8, 1) HP 6/116 MP 0/0 Hu  3 $ 662 room=.
+T1493 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 4) HP 18/106 MP 0/0 Hu  0 $ 729 room=.
 -> s
-T1530 mode=game_loop           Gimli the Mighty(dwa) F6@( 8, 2) HP 6/116 MP 0/0 Hu  2 $ 662 room=.
+T1494 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 5) HP 16/106 MP 0/0 Hu  0 $ 729 room=.
 -> s
-T1531 mode=combat_mode         Gimli the Mighty(dwa) F6@( 8, 3) HP 6/116 MP 0/0 Hu  1 $ 662 room=M vs ELITE UNDEAD DRAGON LICH(L6 HP106/106)
--> a
-T1532 mode=death_screen        Gimli the Mighty(dwa) F6@( 8, 3) HP -12/116 MP 0/0 Hu  1 $ 662 room=M
+T1495 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 6) HP 14/106 MP 0/0 Hu  0 $ 729 room=.
+-> w
+T1496 mode=game_loop           Gimli the Mighty(dwa) F5@( 3, 6) HP 12/106 MP 0/0 Hu  0 $ 729 room=.
+-> n
+T1497 mode=combat_mode         Gimli the Mighty(dwa) F5@( 3, 5) HP 10/106 MP 0/0 Hu  0 $ 729 room=M vs Zombie(L4 HP39/39)
+-> f
+T1498 mode=flee_direction_mode Gimli the Mighty(dwa) F5@( 3, 5) HP 10/106 MP 0/0 Hu  0 $ 729 room=M
+-> n
+T1499 mode=game_loop           Gimli the Mighty(dwa) F5@( 3, 4) HP 10/106 MP 0/0 Hu  0 $ 729 room=.
+-> e
+T1500 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 4) HP 8/106 MP 0/0 Hu  0 $ 729 room=.
+-> s
+T1501 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 5) HP 6/106 MP 0/0 Hu  0 $ 729 room=.
+-> s
+T1502 mode=game_loop           Gimli the Mighty(dwa) F5@( 4, 6) HP 4/106 MP 0/0 Hu  0 $ 729 room=.
+-> w
+T1503 mode=game_loop           Gimli the Mighty(dwa) F5@( 3, 6) HP 2/106 MP 0/0 Hu  0 $ 729 room=.
+-> n
+T1504 mode=death_screen        Gimli the Mighty(dwa) F5@( 3, 5) HP 0/106 MP 0/0 Hu  0 $ 729 room=M
 
-=== run finished: turns=1532 floor=6 hp=-12/116 gold=662 alive=False mode=death_screen ===
+=== run finished: turns=1504 floor=5 hp=0/106 gold=729 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00256_dwarf.html

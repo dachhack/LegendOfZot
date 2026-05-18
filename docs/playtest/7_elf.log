@@ -1787,25 +1787,25 @@ T 884 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 
 T 885 mode=combat_victory      Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 39/48 MP 0/0 Hu 90 $ 830 room=.
 -> back
 T 886 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 39/48 MP 0/0 Hu 90 $ 830 room=.
--> e
-T 887 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 39/48 MP 0/0 Hu 89 $ 830 room=.
+-> s
+T 887 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 39/48 MP 0/0 Hu 89 $ 830 room=.
+-> s
+T 888 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 40/48 MP 0/0 Hu 88 $ 830 room=.
 -> w
-T 888 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 40/48 MP 0/0 Hu 88 $ 830 room=.
--> s
-T 889 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 40/48 MP 0/0 Hu 87 $ 830 room=.
+T 889 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 40/48 MP 0/0 Hu 87 $ 830 room=.
 -> i
-T 890 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 40/48 MP 0/0 Hu 87 $ 830 room=.
+T 890 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 40/48 MP 0/0 Hu 87 $ 830 room=.
 -> u7
-T 891 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 87 $ 830 room=.
+T 891 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 87 $ 830 room=.
 -> x
-T 892 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 87 $ 830 room=.
+T 892 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 87 $ 830 room=.
 -> i
-T 893 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 87 $ 830 room=.
+T 893 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 87 $ 830 room=.
 -> eat2
-T 894 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 93 $ 830 room=.
+T 894 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 93 $ 830 room=.
 -> x
-T 895 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 93 $ 830 room=.
--> s
+T 895 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 93 $ 830 room=.
+-> e
 T 896 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 92 $ 830 room=. vs WANDERING GHOST(L1 HP40/40)
 -> a
 T 897 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 92 $ 830 room=. vs WANDERING GHOST(L1 HP21/40)
@@ -1815,626 +1815,652 @@ T 898 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 
 T 899 mode=combat_victory      Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 92 $ 836 room=.
 -> back
 T 900 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 92 $ 836 room=.
--> s
-T 901 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP40/40)
+-> n
+T 901 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP40/40)
 -> a
-T 902 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP21/40)
+T 902 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP21/40)
 -> a
-T 903 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP2/40)
+T 903 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP2/40)
 -> a
-T 904 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 47/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP2/40)
--> f
-T 905 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 45/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP2/40)
+T 904 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 47/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP2/40)
 -> a
-T 906 mode=combat_victory      Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 44/48 MP 0/0 Hu 91 $ 856 room=.
+T 905 mode=combat_mode         Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 46/48 MP 0/0 Hu 91 $ 836 room=. vs RESTLESS SPIRIT(L1 HP2/40)
+-> a
+T 906 mode=combat_victory      Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 45/48 MP 0/0 Hu 91 $ 846 room=.
 -> back
-T 907 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 44/48 MP 0/0 Hu 91 $ 856 room=.
+T 907 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 45/48 MP 0/0 Hu 91 $ 846 room=.
 -> n
-T 908 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 44/48 MP 0/0 Hu 90 $ 856 room=.
+T 908 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 45/48 MP 0/0 Hu 90 $ 846 room=.
 -> w
-T 909 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 45/48 MP 0/0 Hu 89 $ 856 room=.
+T 909 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 46/48 MP 0/0 Hu 89 $ 846 room=.
+-> e
+T 910 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 46/48 MP 0/0 Hu 88 $ 846 room=.
+-> e
+T 911 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 47/48 MP 0/0 Hu 87 $ 846 room=.
+-> w
+T 912 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 47/48 MP 0/0 Hu 86 $ 846 room=.
+-> s
+T 913 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 85 $ 846 room=.
+-> s
+T 914 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 84 $ 846 room=.
+-> s
+T 915 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 83 $ 846 room=.
+-> n
+T 916 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 82 $ 846 room=.
+-> w
+T 917 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 81 $ 846 room=.
+-> e
+T 918 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 80 $ 846 room=.
+-> n
+T 919 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 79 $ 846 room=.
+-> n
+T 920 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 78 $ 846 room=.
+-> w
+T 921 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 48/48 MP 0/0 Hu 77 $ 846 room=.
+-> e
+T 922 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 76 $ 846 room=.
+-> e
+T 923 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 75 $ 846 room=.
+-> w
+T 924 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 74 $ 846 room=.
+-> s
+T 925 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 73 $ 846 room=.
+-> s
+T 926 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 72 $ 846 room=.
+-> w
+T 927 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 71 $ 846 room=.
+-> e
+T 928 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 70 $ 846 room=.
+-> s
+T 929 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 69 $ 846 room=.
+-> n
+T 930 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 68 $ 846 room=.
+-> n
+T 931 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 67 $ 846 room=.
+-> n
+T 932 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 66 $ 846 room=.
+-> e
+T 933 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 65 $ 846 room=.
+-> w
+T 934 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 64 $ 846 room=.
+-> w
+T 935 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 48/48 MP 0/0 Hu 63 $ 846 room=.
+-> e
+T 936 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 62 $ 846 room=.
+-> s
+T 937 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 61 $ 846 room=.
+-> s
+T 938 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 60 $ 846 room=.
+-> w
+T 939 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 59 $ 846 room=.
+-> e
+T 940 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 58 $ 846 room=.
+-> s
+T 941 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 57 $ 846 room=.
+-> n
+T 942 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 56 $ 846 room=.
+-> n
+T 943 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 55 $ 846 room=.
+-> n
+T 944 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 54 $ 846 room=.
+-> e
+T 945 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 53 $ 846 room=.
+-> w
+T 946 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 52 $ 846 room=.
+-> w
+T 947 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 48/48 MP 0/0 Hu 51 $ 846 room=.
+-> e
+T 948 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 50 $ 846 room=.
+-> s
+T 949 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 49 $ 846 room=.
 -> i
-T 910 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 45/48 MP 0/0 Hu 89 $ 856 room=.
--> u7
-T 911 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 89 $ 856 room=.
--> x
-T 912 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 89 $ 856 room=.
--> e
-T 913 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 88 $ 856 room=.
--> n
-T 914 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 87 $ 856 room=.
--> n
-T 915 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 86 $ 856 room=.
--> e
-T 916 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 85 $ 856 room=.
--> w
-T 917 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 84 $ 856 room=.
--> w
-T 918 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 48/48 MP 0/0 Hu 83 $ 856 room=.
--> e
-T 919 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 82 $ 856 room=.
--> s
-T 920 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 81 $ 856 room=.
--> s
-T 921 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 80 $ 856 room=.
--> w
-T 922 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 79 $ 856 room=.
--> e
-T 923 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 78 $ 856 room=.
--> s
-T 924 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 77 $ 856 room=.
--> n
-T 925 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 76 $ 856 room=.
--> n
-T 926 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 75 $ 856 room=.
--> n
-T 927 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 74 $ 856 room=.
--> w
-T 928 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 48/48 MP 0/0 Hu 73 $ 856 room=.
--> e
-T 929 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 72 $ 856 room=.
--> e
-T 930 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 71 $ 856 room=.
--> w
-T 931 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 70 $ 856 room=.
--> s
-T 932 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 69 $ 856 room=.
--> s
-T 933 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 68 $ 856 room=.
--> s
-T 934 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 67 $ 856 room=.
--> n
-T 935 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 66 $ 856 room=.
--> w
-T 936 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 65 $ 856 room=.
--> e
-T 937 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 64 $ 856 room=.
--> n
-T 938 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 63 $ 856 room=.
--> n
-T 939 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 62 $ 856 room=.
--> w
-T 940 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 48/48 MP 0/0 Hu 61 $ 856 room=.
--> e
-T 941 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 60 $ 856 room=.
--> e
-T 942 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 59 $ 856 room=.
--> w
-T 943 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 58 $ 856 room=.
--> s
-T 944 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 57 $ 856 room=.
--> s
-T 945 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 56 $ 856 room=.
--> s
-T 946 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 55 $ 856 room=.
--> n
-T 947 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 54 $ 856 room=.
--> w
-T 948 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 53 $ 856 room=.
--> e
-T 949 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 52 $ 856 room=.
--> n
-T 950 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 51 $ 856 room=.
--> n
-T 951 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 50 $ 856 room=.
--> e
-T 952 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 49 $ 856 room=.
--> i
-T 953 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 49 $ 856 room=.
+T 950 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 49 $ 846 room=.
 -> eat1
-T 954 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 99 $ 856 room=.
+T 951 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 99 $ 846 room=.
 -> x
-T 955 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 1) HP 48/48 MP 0/0 Hu 99 $ 856 room=.
+T 952 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 99 $ 846 room=.
+-> s
+T 953 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 98 $ 846 room=.
+-> s
+T 954 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 4) HP 48/48 MP 0/0 Hu 97 $ 846 room=.
+-> n
+T 955 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 96 $ 846 room=.
 -> w
-T 956 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 98 $ 856 room=.
--> w
-T 957 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 48/48 MP 0/0 Hu 97 $ 856 room=.
+T 956 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 3) HP 48/48 MP 0/0 Hu 95 $ 846 room=.
 -> e
-T 958 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 96 $ 856 room=.
--> s
-T 959 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 95 $ 856 room=.
+T 957 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 3) HP 48/48 MP 0/0 Hu 94 $ 846 room=.
 -> n
-T 960 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 94 $ 856 room=.
--> w
-T 961 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 48/48 MP 0/0 Hu 93 $ 856 room=.
--> w
-T 962 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 1) HP 48/48 MP 0/0 Hu 92 $ 856 room=.
--> w
-T 963 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 1) HP 48/48 MP 0/0 Hu 91 $ 856 room=.
--> w
-T 964 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 1) HP 48/48 MP 0/0 Hu 90 $ 856 room=.
--> s
-T 965 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 89 $ 856 room=.
--> w
-T 966 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 88 $ 856 room=.
--> w
-T 967 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 2) HP 48/48 MP 0/0 Hu 87 $ 856 room=.
--> s
-T 968 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 86 $ 856 room=.
--> s
-T 969 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 85 $ 856 room=.
--> w
-T 970 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 84 $ 856 room=.
--> s
-T 971 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 48/48 MP 0/0 Hu 83 $ 856 room=.
--> w
-T 972 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 5) HP 48/48 MP 0/0 Hu 82 $ 856 room=.
+T 958 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 2) HP 48/48 MP 0/0 Hu 93 $ 846 room=.
 -> n
-T 973 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 81 $ 856 room=.
--> n
-T 974 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 3) HP 48/48 MP 0/0 Hu 80 $ 856 room=.
--> n
-T 975 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 2) HP 48/48 MP 0/0 Hu 79 $ 856 room=.
--> n
-T 976 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 1) HP 48/48 MP 0/0 Hu 78 $ 856 room=E
+T 959 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 1) HP 48/48 MP 0/0 Hu 92 $ 846 room=.
+-> w
+T 960 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 1) HP 48/48 MP 0/0 Hu 91 $ 846 room=.
+-> w
+T 961 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 1) HP 48/48 MP 0/0 Hu 90 $ 846 room=.
+-> w
+T 962 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 1) HP 48/48 MP 0/0 Hu 89 $ 846 room=.
+-> w
+T 963 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 1) HP 48/48 MP 0/0 Hu 88 $ 846 room=.
+-> w
+T 964 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 1) HP 48/48 MP 0/0 Hu 87 $ 846 room=.
 -> s
-T 977 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 2) HP 48/48 MP 0/0 Hu 77 $ 856 room=.
+T 965 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 86 $ 846 room=.
+-> w
+T 966 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 2) HP 48/48 MP 0/0 Hu 85 $ 846 room=.
 -> s
-T 978 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 3) HP 48/48 MP 0/0 Hu 76 $ 856 room=.
--> s
-T 979 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 75 $ 856 room=.
+T 967 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 84 $ 846 room=.
 -> e
-T 980 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 74 $ 856 room=.
+T 968 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 83 $ 846 room=.
+-> s
+T 969 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 82 $ 846 room=.
 -> e
-T 981 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 73 $ 856 room=.
+T 970 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 81 $ 846 room=.
 -> n
-T 982 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 72 $ 856 room=.
+T 971 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 80 $ 846 room=.
 -> n
-T 983 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 2) HP 48/48 MP 0/0 Hu 71 $ 856 room=.
--> e
-T 984 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 70 $ 856 room=.
--> n
-T 985 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 1) HP 48/48 MP 0/0 Hu 69 $ 856 room=.
--> e
-T 986 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 1) HP 48/48 MP 0/0 Hu 68 $ 856 room=.
--> s
-T 987 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 67 $ 856 room=.
--> s
-T 988 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 66 $ 856 room=.
--> e
-T 989 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 65 $ 856 room=.
--> s
-T 990 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 64 $ 856 room=.
--> s
-T 991 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 63 $ 856 room=.
+T 972 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 79 $ 846 room=.
 -> w
-T 992 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 62 $ 856 room=.
--> w
-T 993 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 61 $ 856 room=.
--> n
-T 994 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 60 $ 856 room=.
--> n
-T 995 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 59 $ 856 room=.
--> w
-T 996 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 58 $ 856 room=.
--> n
-T 997 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 2) HP 48/48 MP 0/0 Hu 57 $ 856 room=.
--> e
-T 998 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 56 $ 856 room=.
--> e
-T 999 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 55 $ 856 room=.
--> n
-T1000 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 1) HP 48/48 MP 0/0 Hu 54 $ 856 room=.
--> e
-T1001 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 1) HP 48/48 MP 0/0 Hu 53 $ 856 room=.
--> w
-T1002 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 1) HP 48/48 MP 0/0 Hu 52 $ 856 room=.
--> w
-T1003 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 1) HP 48/48 MP 0/0 Hu 51 $ 856 room=.
+T 973 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 78 $ 846 room=.
 -> s
-T1004 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 50 $ 856 room=.
+T 974 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 77 $ 846 room=.
 -> s
-T1005 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 49 $ 856 room=.
+T 975 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 76 $ 846 room=.
+-> e
+T 976 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 75 $ 846 room=.
+-> s
+T 977 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 74 $ 846 room=.
+-> w
+T 978 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 73 $ 846 room=.
+-> s
+T 979 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 72 $ 846 room=.
+-> s
+T 980 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 71 $ 846 room=.
+-> e
+T 981 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 70 $ 846 room=.
+-> w
+T 982 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 69 $ 846 room=.
+-> n
+T 983 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 68 $ 846 room=.
+-> n
+T 984 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 67 $ 846 room=.
+-> n
+T 985 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 66 $ 846 room=.
+-> n
+T 986 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 65 $ 846 room=.
+-> e
+T 987 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 64 $ 846 room=.
+-> s
+T 988 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 63 $ 846 room=.
+-> s
+T 989 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 62 $ 846 room=.
+-> w
+T 990 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 61 $ 846 room=.
+-> s
+T 991 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 60 $ 846 room=.
+-> s
+T 992 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 59 $ 846 room=.
+-> e
+T 993 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 58 $ 846 room=.
+-> w
+T 994 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 57 $ 846 room=.
+-> n
+T 995 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 56 $ 846 room=.
+-> n
+T 996 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 55 $ 846 room=.
+-> n
+T 997 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 54 $ 846 room=.
+-> n
+T 998 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 53 $ 846 room=.
+-> e
+T 999 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 52 $ 846 room=.
+-> e
+T1000 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 51 $ 846 room=.
+-> s
+T1001 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 50 $ 846 room=.
+-> w
+T1002 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 49 $ 846 room=.
 -> i
-T1006 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 49 $ 856 room=.
+T1003 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 49 $ 846 room=.
 -> eat1
-T1007 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 99 $ 856 room=.
+T1004 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 99 $ 846 room=.
 -> x
-T1008 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 99 $ 856 room=.
--> e
-T1009 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 98 $ 856 room=.
+T1005 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 99 $ 846 room=.
 -> s
-T1010 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 97 $ 856 room=.
+T1006 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 98 $ 846 room=.
 -> w
-T1011 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 96 $ 856 room=.
+T1007 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 97 $ 846 room=.
 -> s
-T1012 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 95 $ 856 room=.
+T1008 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 96 $ 846 room=.
 -> s
-T1013 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 94 $ 856 room=.
--> s
-T1014 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 93 $ 856 room=.
+T1009 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 95 $ 846 room=.
 -> e
-T1015 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 92 $ 856 room=.
+T1010 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 94 $ 846 room=.
 -> w
-T1016 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 91 $ 856 room=.
+T1011 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 93 $ 846 room=.
 -> e
-T1017 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 90 $ 856 room=.
+T1012 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 92 $ 846 room=.
 -> w
-T1018 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 89 $ 856 room=.
+T1013 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 91 $ 846 room=.
 -> n
-T1019 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 88 $ 856 room=.
+T1014 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 90 $ 846 room=.
 -> n
-T1020 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 87 $ 856 room=.
--> n
-T1021 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 86 $ 856 room=.
--> w
-T1022 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 85 $ 856 room=.
--> w
-T1023 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 84 $ 856 room=.
--> s
-T1024 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 48/48 MP 0/0 Hu 83 $ 856 room=.
--> s
-T1025 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 6) HP 48/48 MP 0/0 Hu 82 $ 856 room=.
--> w
-T1026 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 6) HP 48/48 MP 0/0 Hu 81 $ 856 room=.
--> n
-T1027 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 5) HP 48/48 MP 0/0 Hu 80 $ 856 room=.
--> n
-T1028 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 79 $ 856 room=.
--> n
-T1029 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 3) HP 48/48 MP 0/0 Hu 78 $ 856 room=.
--> n
-T1030 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 2) HP 48/48 MP 0/0 Hu 77 $ 856 room=.
--> n
-T1031 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 1) HP 48/48 MP 0/0 Hu 76 $ 856 room=E
--> s
-T1032 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 2) HP 48/48 MP 0/0 Hu 75 $ 856 room=.
--> s
-T1033 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 3) HP 48/48 MP 0/0 Hu 74 $ 856 room=.
--> s
-T1034 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 73 $ 856 room=.
--> s
-T1035 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 5) HP 48/48 MP 0/0 Hu 72 $ 856 room=.
--> s
-T1036 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 6) HP 48/48 MP 0/0 Hu 71 $ 856 room=.
+T1015 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 89 $ 846 room=.
 -> e
-T1037 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 6) HP 48/48 MP 0/0 Hu 70 $ 856 room=.
+T1016 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 88 $ 846 room=.
 -> n
-T1038 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 48/48 MP 0/0 Hu 69 $ 856 room=.
+T1017 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 87 $ 846 room=.
 -> n
-T1039 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 68 $ 856 room=.
--> e
-T1040 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 67 $ 856 room=.
--> e
-T1041 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 66 $ 856 room=.
--> n
-T1042 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 65 $ 856 room=.
+T1018 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 86 $ 846 room=.
 -> w
-T1043 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 64 $ 856 room=.
+T1019 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 85 $ 846 room=.
+-> w
+T1020 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 84 $ 846 room=.
+-> s
+T1021 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 83 $ 846 room=.
+-> e
+T1022 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 82 $ 846 room=.
+-> s
+T1023 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 81 $ 846 room=.
+-> s
+T1024 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 80 $ 846 room=.
+-> s
+T1025 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 79 $ 846 room=.
+-> e
+T1026 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 78 $ 846 room=.
+-> w
+T1027 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 77 $ 846 room=.
 -> n
-T1044 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 2) HP 48/48 MP 0/0 Hu 63 $ 856 room=.
--> e
-T1045 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 62 $ 856 room=.
--> e
-T1046 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 61 $ 856 room=.
--> s
-T1047 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 60 $ 856 room=.
--> s
-T1048 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 59 $ 856 room=.
--> e
-T1049 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 58 $ 856 room=.
+T1028 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 76 $ 846 room=.
 -> n
-T1050 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 57 $ 856 room=.
--> s
-T1051 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 56 $ 856 room=.
--> s
-T1052 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 55 $ 856 room=.
--> w
-T1053 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 54 $ 856 room=.
--> w
-T1054 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 53 $ 856 room=.
--> s
-T1055 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 52 $ 856 room=.
--> s
-T1056 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 51 $ 856 room=.
+T1029 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 75 $ 846 room=.
+-> n
+T1030 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 74 $ 846 room=.
 -> e
-T1057 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 50 $ 856 room=.
+T1031 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 73 $ 846 room=.
+-> s
+T1032 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 72 $ 846 room=.
+-> e
+T1033 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 71 $ 846 room=.
+-> n
+T1034 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 70 $ 846 room=.
+-> n
+T1035 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 69 $ 846 room=.
 -> w
-T1058 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 49 $ 856 room=.
+T1036 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 68 $ 846 room=.
+-> s
+T1037 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 67 $ 846 room=.
+-> s
+T1038 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 66 $ 846 room=.
+-> w
+T1039 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 65 $ 846 room=.
+-> n
+T1040 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 64 $ 846 room=.
+-> n
+T1041 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 63 $ 846 room=.
+-> w
+T1042 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 62 $ 846 room=.
+-> n
+T1043 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 2) HP 48/48 MP 0/0 Hu 61 $ 846 room=.
+-> e
+T1044 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 60 $ 846 room=.
+-> e
+T1045 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 59 $ 846 room=.
+-> n
+T1046 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 1) HP 48/48 MP 0/0 Hu 58 $ 846 room=.
+-> w
+T1047 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 1) HP 48/48 MP 0/0 Hu 57 $ 846 room=.
+-> s
+T1048 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 56 $ 846 room=.
+-> s
+T1049 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 55 $ 846 room=.
+-> s
+T1050 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 54 $ 846 room=.
+-> w
+T1051 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 53 $ 846 room=.
+-> w
+T1052 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 52 $ 846 room=.
+-> w
+T1053 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 51 $ 846 room=.
+-> s
+T1054 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 5) HP 48/48 MP 0/0 Hu 50 $ 846 room=.
+-> s
+T1055 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 6) HP 48/48 MP 0/0 Hu 49 $ 846 room=.
 -> i
-T1059 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 49 $ 856 room=.
+T1056 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 1, 6) HP 48/48 MP 0/0 Hu 49 $ 846 room=.
 -> eat1
-T1060 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 99 $ 856 room=.
+T1057 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 1, 6) HP 48/48 MP 0/0 Hu 99 $ 846 room=.
 -> x
-T1061 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 99 $ 856 room=.
--> n
-T1062 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 98 $ 856 room=.
--> n
-T1063 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 97 $ 856 room=.
--> n
-T1064 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 96 $ 856 room=.
--> w
-T1065 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 95 $ 856 room=.
--> n
-T1066 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 94 $ 856 room=.
+T1058 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 6) HP 48/48 MP 0/0 Hu 99 $ 846 room=.
 -> e
-T1067 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 93 $ 856 room=.
+T1059 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 6) HP 48/48 MP 0/0 Hu 98 $ 846 room=.
+-> n
+T1060 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 48/48 MP 0/0 Hu 97 $ 846 room=.
+-> n
+T1061 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 96 $ 846 room=.
 -> e
-T1068 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 92 $ 856 room=.
+T1062 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 95 $ 846 room=.
+-> n
+T1063 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 94 $ 846 room=.
+-> n
+T1064 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 2) HP 48/48 MP 0/0 Hu 93 $ 846 room=.
 -> e
-T1069 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 91 $ 856 room=.
+T1065 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 92 $ 846 room=.
 -> s
-T1070 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 90 $ 856 room=.
+T1066 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 91 $ 846 room=.
+-> e
+T1067 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 90 $ 846 room=.
+-> e
+T1068 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 89 $ 846 room=.
 -> s
-T1071 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 89 $ 856 room=.
--> e
-T1072 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 48/48 MP 0/0 Hu 88 $ 856 room=.
+T1069 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 88 $ 846 room=.
 -> s
-T1073 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 48/48 MP 0/0 Hu 87 $ 856 room=.
+T1070 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 87 $ 846 room=.
+-> w
+T1071 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 86 $ 846 room=.
+-> n
+T1072 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 85 $ 846 room=.
+-> w
+T1073 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 84 $ 846 room=.
 -> s
-T1074 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 7) HP 48/48 MP 0/0 Hu 86 $ 856 room=.
--> e
-T1075 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 48/48 MP 0/0 Hu 85 $ 856 room=.
--> e
-T1076 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 7) HP 48/48 MP 0/0 Hu 84 $ 856 room=.
--> e
-T1077 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 7) HP 48/48 MP 0/0 Hu 83 $ 856 room=.
+T1074 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 83 $ 846 room=.
 -> s
-T1078 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 48/48 MP 0/0 Hu 82 $ 856 room=.
--> e
-T1079 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 48/48 MP 0/0 Hu 81 $ 856 room=.
--> e
-T1080 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(12, 8) HP 48/48 MP 0/0 Hu 80 $ 856 room=.
--> w
-T1081 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 48/48 MP 0/0 Hu 79 $ 856 room=.
+T1075 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 82 $ 846 room=.
 -> s
-T1082 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 9) HP 48/48 MP 0/0 Hu 78 $ 856 room=.
--> w
-T1083 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 48/48 MP 0/0 Hu 77 $ 856 room=.
--> w
-T1084 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 48/48 MP 0/0 Hu 76 $ 856 room=.
--> w
-T1085 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 9) HP 48/48 MP 0/0 Hu 75 $ 856 room=.
+T1076 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 81 $ 846 room=.
 -> e
-T1086 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 48/48 MP 0/0 Hu 74 $ 856 room=.
+T1077 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 80 $ 846 room=.
 -> w
-T1087 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 9) HP 48/48 MP 0/0 Hu 73 $ 856 room=.
+T1078 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 79 $ 846 room=.
 -> e
-T1088 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 48/48 MP 0/0 Hu 72 $ 856 room=.
--> e
-T1089 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 48/48 MP 0/0 Hu 71 $ 856 room=.
+T1079 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 78 $ 846 room=.
+-> w
+T1080 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 77 $ 846 room=.
 -> n
-T1090 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 48/48 MP 0/0 Hu 70 $ 856 room=.
--> e
-T1091 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 48/48 MP 0/0 Hu 69 $ 856 room=.
--> e
-T1092 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(12, 8) HP 48/48 MP 0/0 Hu 68 $ 856 room=.
+T1081 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 76 $ 846 room=.
+-> n
+T1082 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 75 $ 846 room=.
+-> n
+T1083 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 74 $ 846 room=.
 -> w
-T1093 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 48/48 MP 0/0 Hu 67 $ 856 room=.
+T1084 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 73 $ 846 room=.
+-> n
+T1085 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 72 $ 846 room=.
+-> e
+T1086 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 71 $ 846 room=.
+-> n
+T1087 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 70 $ 846 room=.
+-> e
+T1088 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 69 $ 846 room=.
+-> n
+T1089 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 1) HP 48/48 MP 0/0 Hu 68 $ 846 room=.
+-> w
+T1090 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 1) HP 48/48 MP 0/0 Hu 67 $ 846 room=.
+-> e
+T1091 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 1) HP 48/48 MP 0/0 Hu 66 $ 846 room=.
+-> e
+T1092 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 1) HP 48/48 MP 0/0 Hu 65 $ 846 room=.
+-> w
+T1093 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 1) HP 48/48 MP 0/0 Hu 64 $ 846 room=.
 -> s
-T1094 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 9) HP 48/48 MP 0/0 Hu 66 $ 856 room=.
+T1094 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 63 $ 846 room=.
 -> w
-T1095 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 48/48 MP 0/0 Hu 65 $ 856 room=.
--> w
-T1096 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 48/48 MP 0/0 Hu 64 $ 856 room=.
--> w
-T1097 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 9) HP 48/48 MP 0/0 Hu 63 $ 856 room=.
--> e
-T1098 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 48/48 MP 0/0 Hu 62 $ 856 room=.
--> e
-T1099 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 48/48 MP 0/0 Hu 61 $ 856 room=.
+T1095 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 62 $ 846 room=.
 -> n
-T1100 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 48/48 MP 0/0 Hu 60 $ 856 room=.
--> n
-T1101 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 7) HP 48/48 MP 0/0 Hu 59 $ 856 room=.
--> w
-T1102 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 7) HP 48/48 MP 0/0 Hu 58 $ 856 room=.
--> w
-T1103 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 48/48 MP 0/0 Hu 57 $ 856 room=.
--> n
-T1104 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 6) HP 48/48 MP 0/0 Hu 56 $ 856 room=.
--> w
-T1105 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 48/48 MP 0/0 Hu 55 $ 856 room=.
--> n
-T1106 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 48/48 MP 0/0 Hu 54 $ 856 room=.
--> w
-T1107 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 53 $ 856 room=.
--> n
-T1108 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 52 $ 856 room=.
--> w
-T1109 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 51 $ 856 room=.
+T1096 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 1) HP 48/48 MP 0/0 Hu 61 $ 846 room=.
 -> s
-T1110 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 50 $ 856 room=.
+T1097 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 60 $ 846 room=.
+-> s
+T1098 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 59 $ 846 room=.
 -> w
-T1111 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 49 $ 856 room=.
+T1099 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 58 $ 846 room=.
 -> n
-T1112 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 48 $ 856 room=.
--> n
-T1113 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 47 $ 856 room=.
--> n
-T1114 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 46 $ 856 room=.
--> e
-T1115 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 45 $ 856 room=.
+T1100 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 2) HP 48/48 MP 0/0 Hu 57 $ 846 room=.
 -> s
-T1116 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 44 $ 856 room=.
--> e
-T1117 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 43 $ 856 room=.
+T1101 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 56 $ 846 room=.
 -> s
-T1118 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 42 $ 856 room=.
--> s
-T1119 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 41 $ 856 room=.
+T1102 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 55 $ 846 room=.
 -> w
-T1120 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 40 $ 856 room=.
+T1103 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 54 $ 846 room=.
+-> s
+T1104 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 48/48 MP 0/0 Hu 53 $ 846 room=.
 -> w
-T1121 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 39 $ 856 room=.
+T1105 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 5) HP 48/48 MP 0/0 Hu 52 $ 846 room=.
+-> n
+T1106 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 51 $ 846 room=.
+-> n
+T1107 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 3) HP 48/48 MP 0/0 Hu 50 $ 846 room=.
+-> n
+T1108 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 2) HP 48/48 MP 0/0 Hu 49 $ 846 room=.
+-> n
+T1109 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 1) HP 48/48 MP 0/0 Hu 48 $ 846 room=E
 -> s
-T1122 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 38 $ 856 room=.
+T1110 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 2) HP 48/48 MP 0/0 Hu 47 $ 846 room=.
 -> s
-T1123 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 37 $ 856 room=.
+T1111 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 3) HP 48/48 MP 0/0 Hu 46 $ 846 room=.
+-> s
+T1112 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 45 $ 846 room=.
+-> s
+T1113 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 5) HP 48/48 MP 0/0 Hu 44 $ 846 room=.
+-> s
+T1114 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 6) HP 48/48 MP 0/0 Hu 43 $ 846 room=.
 -> e
-T1124 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 36 $ 856 room=.
+T1115 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 6) HP 48/48 MP 0/0 Hu 42 $ 846 room=.
+-> n
+T1116 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 48/48 MP 0/0 Hu 41 $ 846 room=.
+-> n
+T1117 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 40 $ 846 room=.
 -> w
-T1125 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 48/48 MP 0/0 Hu 35 $ 856 room=.
+T1118 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 39 $ 846 room=.
 -> n
-T1126 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 48/48 MP 0/0 Hu 34 $ 856 room=.
+T1119 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 3) HP 48/48 MP 0/0 Hu 38 $ 846 room=.
 -> n
-T1127 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 33 $ 856 room=.
+T1120 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 2) HP 48/48 MP 0/0 Hu 37 $ 846 room=.
+-> n
+T1121 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 1) HP 48/48 MP 0/0 Hu 36 $ 846 room=E
+-> s
+T1122 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 2) HP 48/48 MP 0/0 Hu 35 $ 846 room=.
+-> s
+T1123 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 3) HP 48/48 MP 0/0 Hu 34 $ 846 room=.
+-> s
+T1124 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 33 $ 846 room=.
 -> e
-T1128 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 32 $ 856 room=.
--> e
-T1129 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 31 $ 856 room=.
--> n
-T1130 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 30 $ 856 room=.
--> n
-T1131 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 29 $ 856 room=.
+T1125 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 32 $ 846 room=.
+-> s
+T1126 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 48/48 MP 0/0 Hu 31 $ 846 room=.
 -> w
-T1132 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 28 $ 856 room=.
+T1127 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 5) HP 48/48 MP 0/0 Hu 30 $ 846 room=.
+-> s
+T1128 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 6) HP 48/48 MP 0/0 Hu 29 $ 846 room=.
+-> e
+T1129 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 6) HP 48/48 MP 0/0 Hu 28 $ 846 room=.
+-> n
+T1130 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 48/48 MP 0/0 Hu 27 $ 846 room=.
+-> n
+T1131 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 26 $ 846 room=.
+-> e
+T1132 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 48/48 MP 0/0 Hu 25 $ 846 room=.
+-> e
+T1133 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 24 $ 846 room=.
+-> s
+T1134 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 23 $ 846 room=.
+-> e
+T1135 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 22 $ 846 room=.
+-> n
+T1136 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 21 $ 846 room=.
+-> e
+T1137 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 20 $ 846 room=.
+-> s
+T1138 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 19 $ 846 room=.
+-> e
+T1139 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 48/48 MP 0/0 Hu 18 $ 846 room=.
+-> s
+T1140 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 48/48 MP 0/0 Hu 17 $ 846 room=.
+-> e
+T1141 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 6) HP 48/48 MP 0/0 Hu 16 $ 846 room=.
+-> s
+T1142 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 48/48 MP 0/0 Hu 15 $ 846 room=.
+-> e
+T1143 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 7) HP 48/48 MP 0/0 Hu 14 $ 846 room=.
+-> e
+T1144 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 7) HP 48/48 MP 0/0 Hu 13 $ 846 room=.
+-> s
+T1145 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 48/48 MP 0/0 Hu 12 $ 846 room=.
+-> s
+T1146 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 48/48 MP 0/0 Hu 11 $ 846 room=.
 -> w
-T1133 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 27 $ 856 room=.
--> s
-T1134 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 48/48 MP 0/0 Hu 26 $ 856 room=.
--> e
-T1135 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 25 $ 856 room=.
--> e
-T1136 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 24 $ 856 room=.
--> n
-T1137 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 23 $ 856 room=.
+T1147 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 48/48 MP 0/0 Hu 10 $ 846 room=.
 -> w
-T1138 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 22 $ 856 room=.
+T1148 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 9) HP 48/48 MP 0/0 Hu  9 $ 846 room=.
+-> e
+T1149 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 48/48 MP 0/0 Hu  8 $ 846 room=.
 -> w
-T1139 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 21 $ 856 room=.
+T1150 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 9) HP 48/48 MP 0/0 Hu  7 $ 846 room=.
+-> e
+T1151 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 48/48 MP 0/0 Hu  6 $ 846 room=.
+-> e
+T1152 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 48/48 MP 0/0 Hu  5 $ 846 room=.
+-> n
+T1153 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 48/48 MP 0/0 Hu  4 $ 846 room=.
+-> e
+T1154 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 48/48 MP 0/0 Hu  3 $ 846 room=.
+-> e
+T1155 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(12, 8) HP 48/48 MP 0/0 Hu  2 $ 846 room=.
 -> w
-T1140 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 20 $ 856 room=.
--> n
-T1141 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 2) HP 48/48 MP 0/0 Hu 19 $ 856 room=.
--> e
-T1142 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 2) HP 48/48 MP 0/0 Hu 18 $ 856 room=.
--> e
-T1143 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 2) HP 48/48 MP 0/0 Hu 17 $ 856 room=.
+T1156 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 48/48 MP 0/0 Hu  1 $ 846 room=.
 -> s
-T1144 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 16 $ 856 room=.
--> s
-T1145 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 48/48 MP 0/0 Hu 15 $ 856 room=.
--> e
-T1146 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 14 $ 856 room=.
--> n
-T1147 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 13 $ 856 room=.
--> s
-T1148 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 48/48 MP 0/0 Hu 12 $ 856 room=.
--> s
-T1149 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu 11 $ 856 room=.
--> e
-T1150 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 48/48 MP 0/0 Hu 10 $ 856 room=.
--> s
-T1151 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 48/48 MP 0/0 Hu  9 $ 856 room=.
--> e
-T1152 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 6) HP 48/48 MP 0/0 Hu  8 $ 856 room=.
--> s
-T1153 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 48/48 MP 0/0 Hu  7 $ 856 room=.
+T1157 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 9) HP 46/48 MP 0/0 Hu  0 $ 846 room=.
 -> w
-T1154 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 7) HP 48/48 MP 0/0 Hu  6 $ 856 room=.
--> s
-T1155 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 8) HP 48/48 MP 0/0 Hu  5 $ 856 room=.
+T1158 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 44/48 MP 0/0 Hu  0 $ 846 room=.
 -> n
-T1156 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 7) HP 48/48 MP 0/0 Hu  4 $ 856 room=.
+T1159 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 42/48 MP 0/0 Hu  0 $ 846 room=.
 -> n
-T1157 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 48/48 MP 0/0 Hu  3 $ 856 room=.
--> n
-T1158 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 48/48 MP 0/0 Hu  2 $ 856 room=.
+T1160 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 7) HP 40/48 MP 0/0 Hu  0 $ 846 room=.
 -> w
-T1159 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 48/48 MP 0/0 Hu  1 $ 856 room=.
+T1161 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 7) HP 38/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1162 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 36/48 MP 0/0 Hu  0 $ 846 room=.
 -> n
-T1160 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 46/48 MP 0/0 Hu  0 $ 856 room=.
+T1163 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 6) HP 34/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1164 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 32/48 MP 0/0 Hu  0 $ 846 room=.
+-> s
+T1165 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 7) HP 30/48 MP 0/0 Hu  0 $ 846 room=.
+-> s
+T1166 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 8) HP 28/48 MP 0/0 Hu  0 $ 846 room=.
 -> n
-T1161 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 44/48 MP 0/0 Hu  0 $ 856 room=.
+T1167 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 7) HP 26/48 MP 0/0 Hu  0 $ 846 room=.
+-> e
+T1168 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 24/48 MP 0/0 Hu  0 $ 846 room=.
+-> e
+T1169 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 7) HP 22/48 MP 0/0 Hu  0 $ 846 room=.
+-> e
+T1170 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 7) HP 20/48 MP 0/0 Hu  0 $ 846 room=.
+-> s
+T1171 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 18/48 MP 0/0 Hu  0 $ 846 room=.
+-> e
+T1172 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 16/48 MP 0/0 Hu  0 $ 846 room=.
+-> e
+T1173 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(12, 8) HP 14/48 MP 0/0 Hu  0 $ 846 room=.
 -> i
-T1162 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 44/48 MP 0/0 Hu  0 $ 856 room=.
+T1174 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@(12, 8) HP 14/48 MP 0/0 Hu  0 $ 846 room=.
 -> u7
-T1163 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu  0 $ 856 room=.
--> x
-T1164 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1165 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 46/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1166 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 44/48 MP 0/0 Hu  0 $ 856 room=.
--> s
-T1167 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 42/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1168 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 40/48 MP 0/0 Hu  0 $ 856 room=.
--> s
-T1169 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 38/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1170 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 36/48 MP 0/0 Hu  0 $ 856 room=.
--> s
-T1171 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 34/48 MP 0/0 Hu  0 $ 856 room=.
--> s
-T1172 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 32/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1173 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 30/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1174 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 28/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1175 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 7) HP 26/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1176 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 7) HP 24/48 MP 0/0 Hu  0 $ 856 room=.
--> n
-T1177 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 6) HP 22/48 MP 0/0 Hu  0 $ 856 room=.
--> n
-T1178 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 5) HP 20/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1179 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 18/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1180 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 16/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1181 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 14/48 MP 0/0 Hu  0 $ 856 room=.
--> i
-T1182 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 14/48 MP 0/0 Hu  0 $ 856 room=.
--> u7
-T1183 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 44/48 MP 0/0 Hu  0 $ 856 room=.
+T1175 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@(12, 8) HP 44/48 MP 0/0 Hu  0 $ 846 room=.
 -> u4
-T1184 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 48/48 MP 0/0 Hu  0 $ 856 room=.
+T1176 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@(12, 8) HP 48/48 MP 0/0 Hu  0 $ 846 room=.
 -> x
-T1185 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 48/48 MP 0/0 Hu  0 $ 856 room=.
+T1177 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(12, 8) HP 48/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1178 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 46/48 MP 0/0 Hu  0 $ 846 room=.
 -> s
-T1186 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 46/48 MP 0/0 Hu  0 $ 856 room=.
--> s
-T1187 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 7) HP 44/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1188 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 42/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1189 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 7) HP 40/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1190 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 7) HP 38/48 MP 0/0 Hu  0 $ 856 room=.
--> s
-T1191 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 36/48 MP 0/0 Hu  0 $ 856 room=.
--> s
-T1192 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 34/48 MP 0/0 Hu  0 $ 856 room=.
--> e
-T1193 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 9) HP 32/48 MP 0/0 Hu  0 $ 856 room=.
+T1179 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 9) HP 44/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1180 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 42/48 MP 0/0 Hu  0 $ 846 room=.
 -> n
-T1194 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 30/48 MP 0/0 Hu  0 $ 856 room=.
+T1181 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 40/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1182 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 7) HP 38/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1183 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 7) HP 36/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1184 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 34/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1185 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 6) HP 32/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1186 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 30/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1187 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 28/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1188 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 26/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1189 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 24/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1190 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 22/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1191 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 20/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1192 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 18/48 MP 0/0 Hu  0 $ 846 room=.
 -> e
-T1195 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(12, 8) HP 28/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1196 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(11, 8) HP 26/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1197 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 24/48 MP 0/0 Hu  0 $ 856 room=.
+T1193 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 16/48 MP 0/0 Hu  0 $ 846 room=.
+-> e
+T1194 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 14/48 MP 0/0 Hu  0 $ 846 room=.
+-> i
+T1195 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 14/48 MP 0/0 Hu  0 $ 846 room=.
+-> u7
+T1196 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 44/48 MP 0/0 Hu  0 $ 846 room=.
+-> u4
+T1197 mode=inventory           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu  0 $ 846 room=.
+-> x
+T1198 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu  0 $ 846 room=.
 -> s
-T1198 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 22/48 MP 0/0 Hu  0 $ 856 room=.
+T1199 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 4) HP 46/48 MP 0/0 Hu  0 $ 846 room=.
 -> w
-T1199 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 20/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1200 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 9) HP 18/48 MP 0/0 Hu  0 $ 856 room=.
+T1200 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 44/48 MP 0/0 Hu  0 $ 846 room=.
+-> s
+T1201 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 42/48 MP 0/0 Hu  0 $ 846 room=.
 -> e
-T1201 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 9) HP 16/48 MP 0/0 Hu  0 $ 856 room=.
+T1202 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 40/48 MP 0/0 Hu  0 $ 846 room=.
 -> e
-T1202 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 9) HP 14/48 MP 0/0 Hu  0 $ 856 room=.
--> n
-T1203 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 8) HP 12/48 MP 0/0 Hu  0 $ 856 room=.
--> n
-T1204 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@(10, 7) HP 10/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1205 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 9, 7) HP 8/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1206 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 6/48 MP 0/0 Hu  0 $ 856 room=.
--> w
-T1207 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 7) HP 4/48 MP 0/0 Hu  0 $ 856 room=.
--> n
-T1208 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 2/48 MP 0/0 Hu  0 $ 856 room=.
+T1203 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 38/48 MP 0/0 Hu  0 $ 846 room=.
+-> s
+T1204 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 36/48 MP 0/0 Hu  0 $ 846 room=.
+-> s
+T1205 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 7) HP 34/48 MP 0/0 Hu  0 $ 846 room=.
 -> e
-T1209 mode=death_screen        Glorfindel the Quenya-tongued(elf) F1@( 8, 6) HP 0/48 MP 0/0 Hu  0 $ 856 room=.
+T1206 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 7) HP 32/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1207 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 8, 6) HP 30/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1208 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 6) HP 28/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1209 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 7, 5) HP 26/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1210 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 6, 5) HP 24/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1211 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 5) HP 22/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1212 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 4) HP 20/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1213 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 5, 3) HP 18/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1214 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 3) HP 16/48 MP 0/0 Hu  0 $ 846 room=.
+-> s
+T1215 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 4, 4) HP 14/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1216 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 3, 4) HP 12/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1217 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 4) HP 10/48 MP 0/0 Hu  0 $ 846 room=.
+-> s
+T1218 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 8/48 MP 0/0 Hu  0 $ 846 room=.
+-> w
+T1219 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 5) HP 6/48 MP 0/0 Hu  0 $ 846 room=.
+-> s
+T1220 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 1, 6) HP 4/48 MP 0/0 Hu  0 $ 846 room=.
+-> e
+T1221 mode=game_loop           Glorfindel the Quenya-tongued(elf) F1@( 2, 6) HP 2/48 MP 0/0 Hu  0 $ 846 room=.
+-> n
+T1222 mode=death_screen        Glorfindel the Quenya-tongued(elf) F1@( 2, 5) HP 0/48 MP 0/0 Hu  0 $ 846 room=.
 
-=== run finished: turns=1209 floor=1 hp=0/48 gold=856 alive=False mode=death_screen ===
+=== run finished: turns=1222 floor=1 hp=0/48 gold=846 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00007_elf.html

@@ -193,102 +193,562 @@ T  87 mode=combat_victory      Tauriel of Imladris(elf) F1@( 3, 5) HP 26/28 MP 0
 T  88 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 5) HP 26/28 MP 0/0 Hu 94 $ 417 room=.
 -> l
 T  89 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 5) HP 26/28 MP 0/0 Hu 94 $ 417 room=.
+-> n
+T  90 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 4) HP 27/28 MP 0/0 Hu 93 $ 417 room=.
 -> e
-T  90 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 93 $ 417 room=.
--> e
-T  91 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 92 $ 417 room=M vs Goblin(L0 HP30/30)
--> a
-T  92 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 5) HP 26/28 MP 0/0 Hu 92 $ 417 room=M vs Goblin(L0 HP10/30)
--> a
-T  93 mode=combat_victory      Tauriel of Imladris(elf) F1@( 5, 5) HP 26/28 MP 0/0 Hu 92 $ 527 room=.
--> back
-T  94 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 26/28 MP 0/0 Hu 92 $ 527 room=.
+T  91 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 92 $ 417 room=.
 -> s
-T  95 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 91 $ 527 room=M vs Lichen(L0 HP10/10)
+T  92 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 91 $ 417 room=.
+-> e
+T  93 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 90 $ 417 room=M vs Goblin(L0 HP30/30)
+-> a
+T  94 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 90 $ 417 room=M vs Goblin(L0 HP10/30)
+-> a
+T  95 mode=combat_victory      Tauriel of Imladris(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 90 $ 527 room=.
+-> back
+T  96 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 90 $ 527 room=.
+-> s
+T  97 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 89 $ 527 room=M vs Lichen(L0 HP10/10)
 -> f
-T  96 mode=flee_direction_mode Tauriel of Imladris(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 91 $ 527 room=M
+T  98 mode=flee_direction_mode Tauriel of Imladris(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 89 $ 527 room=M
 -> e
-T  97 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 91 $ 527 room=M vs Zombie(L0 HP35/35)
+T  99 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 89 $ 527 room=M vs Zombie(L0 HP35/35)
 -> a
-T  98 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6, 6) HP 26/28 MP 0/0 Hu 91 $ 527 room=M vs Zombie(L0 HP14/35)
+T 100 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6, 6) HP 26/28 MP 0/0 Hu 89 $ 527 room=M vs Zombie(L0 HP14/35)
 -> a
-T  99 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 91 $ 527 room=M vs Zombie(L0 HP14/35)
+T 101 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 89 $ 527 room=M vs Zombie(L0 HP14/35)
 -> a
-T 100 mode=combat_victory      Tauriel of Imladris(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 91 $ 533 room=.
+T 102 mode=combat_victory      Tauriel of Imladris(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 89 $ 533 room=.
 -> back
-T 101 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 91 $ 533 room=.
+T 103 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 89 $ 533 room=.
 -> l
-T 102 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 91 $ 533 room=.
+T 104 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 89 $ 533 room=.
 -> n
-T 103 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 5) HP 25/28 MP 0/0 Hu 90 $ 533 room=.
--> n
-T 104 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6, 4) HP 26/28 MP 0/0 Hu 89 $ 533 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 105 mode=combat_victory      Tauriel of Imladris(elf) F1@( 6, 4) HP 25/28 MP 0/0 Hu 89 $ 541 room=.
--> back
-T 106 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 4) HP 25/28 MP 0/0 Hu 89 $ 541 room=.
--> w
-T 107 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 4) HP 25/28 MP 0/0 Hu 88 $ 541 room=.
+T 105 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 5) HP 26/28 MP 0/0 Hu 88 $ 533 room=.
 -> i
-T 108 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 4) HP 25/28 MP 0/0 Hu 88 $ 541 room=.
+T 106 mode=inventory           Tauriel of Imladris(elf) F1@( 6, 5) HP 26/28 MP 0/0 Hu 88 $ 533 room=.
 -> u3
-T 109 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 88 $ 541 room=.
+T 107 mode=inventory           Tauriel of Imladris(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 88 $ 533 room=.
 -> x
-T 110 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 88 $ 541 room=.
+T 108 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 88 $ 533 room=.
 -> i
-T 111 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 88 $ 541 room=.
+T 109 mode=inventory           Tauriel of Imladris(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 88 $ 533 room=.
 -> eat5
-T 112 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 93 $ 541 room=.
+T 110 mode=inventory           Tauriel of Imladris(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 93 $ 533 room=.
 -> x
-T 113 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 93 $ 541 room=.
--> l
-T 114 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 93 $ 541 room=.
--> s
-T 115 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 541 room=.
--> i
-T 116 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 541 room=.
--> eat3
-T 117 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 97 $ 541 room=.
--> x
-T 118 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 97 $ 541 room=.
+T 111 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 93 $ 533 room=.
 -> w
-T 119 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 96 $ 541 room=.
--> s
-T 120 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 95 $ 541 room=.
--> l
-T 121 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 95 $ 541 room=.
--> s
-T 122 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 94 $ 541 room=.
--> e
-T 123 mode=chest_mode          Tauriel of Imladris(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 93 $ 541 room=C
--> o
-T 124 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 93 $ 541 room=.
--> e
-T 125 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 92 $ 541 room=.
+T 112 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 533 room=.
 -> i
-T 126 mode=inventory           Tauriel of Imladris(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 92 $ 541 room=.
+T 113 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 533 room=.
 -> eat3
-T 127 mode=inventory           Tauriel of Imladris(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 97 $ 541 room=.
+T 114 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 97 $ 533 room=.
 -> x
-T 128 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 97 $ 541 room=.
+T 115 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 97 $ 533 room=.
+-> w
+T 116 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 96 $ 533 room=.
+-> s
+T 117 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 95 $ 533 room=.
 -> l
-T 129 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 97 $ 541 room=.
--> e
-T 130 mode=game_loop           Tauriel of Imladris(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 96 $ 541 room=.
--> e
-T 131 mode=game_loop           Tauriel of Imladris(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 95 $ 541 room=.
+T 118 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 95 $ 533 room=.
+-> s
+T 119 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 94 $ 533 room=.
 -> l
-T 132 mode=game_loop           Tauriel of Imladris(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 95 $ 541 room=.
+T 120 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 94 $ 533 room=.
 -> e
-T 133 mode=game_loop           Tauriel of Imladris(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 94 $ 541 room=.
+T 121 mode=chest_mode          Tauriel of Imladris(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 93 $ 533 room=C
+-> o
+T 122 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 93 $ 533 room=.
 -> l
-T 134 mode=game_loop           Tauriel of Imladris(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 94 $ 541 room=.
+T 123 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 93 $ 533 room=.
 -> e
-T 135 mode=pool_mode           Tauriel of Imladris(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu 93 $ 541 room=P
+T 124 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 92 $ 533 room=.
+-> s
+T 125 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 91 $ 533 room=.
+-> w
+T 126 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 90 $ 533 room=.
+-> i
+T 127 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 90 $ 533 room=.
+-> eat3
+T 128 mode=inventory           Tauriel of Imladris(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 95 $ 533 room=.
+-> x
+T 129 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 95 $ 533 room=.
+-> w
+T 130 mode=combat_mode         Tauriel of Imladris(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 94 $ 533 room=M vs Goblin(L0 HP12/12)
+-> a
+T 131 mode=combat_victory      Tauriel of Imladris(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 94 $ 637 room=.
+-> back
+T 132 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 94 $ 637 room=.
+-> w
+T 133 mode=library_mode        Tauriel of Imladris(elf) F1@( 3, 8) HP 28/28 MP 0/0 Hu 93 $ 637 room=L
+-> r
+T 134 mode=library_read_decision_mode Tauriel of Imladris(elf) F1@( 3, 8) HP 28/28 MP 0/0 Hu 93 $ 637 room=L
+-> y
+T 135 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 8) HP 28/28 MP 0/0 Hu 93 $ 687 room=.
+-> n
+T 136 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 92 $ 687 room=.
+-> e
+T 137 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 91 $ 687 room=.
+-> e
+T 138 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 90 $ 687 room=.
+-> e
+T 139 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 89 $ 687 room=.
+-> e
+T 140 mode=game_loop           Tauriel of Imladris(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 88 $ 687 room=.
+-> e
+T 141 mode=game_loop           Tauriel of Imladris(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 87 $ 687 room=.
+-> l
+T 142 mode=game_loop           Tauriel of Imladris(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 87 $ 687 room=.
+-> e
+T 143 mode=game_loop           Tauriel of Imladris(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 86 $ 687 room=.
+-> l
+T 144 mode=game_loop           Tauriel of Imladris(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 86 $ 687 room=.
+-> e
+T 145 mode=pool_mode           Tauriel of Imladris(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu 85 $ 687 room=P
 -> dr
-T 136 mode=pool_mode           Tauriel of Imladris(elf) F1@(10, 7) HP -7/28 MP 0/0 Hu 93 $ 541 room=P
+T 146 mode=game_loop           Tauriel of Imladris(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu 85 $ 927 room=.
+-> l
+T 147 mode=game_loop           Tauriel of Imladris(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu 85 $ 927 room=.
+-> s
+T 148 mode=game_loop           Tauriel of Imladris(elf) F1@(10, 8) HP 28/28 MP 0/0 Hu 84 $ 927 room=.
+-> l
+T 149 mode=game_loop           Tauriel of Imladris(elf) F1@(10, 8) HP 28/28 MP 0/0 Hu 84 $ 927 room=.
+-> e
+T 150 mode=game_loop           Tauriel of Imladris(elf) F1@(11, 8) HP 28/28 MP 0/0 Hu 83 $ 927 room=.
+-> l
+T 151 mode=game_loop           Tauriel of Imladris(elf) F1@(11, 8) HP 28/28 MP 0/0 Hu 83 $ 927 room=.
+-> s
+T 152 mode=combat_mode         Tauriel of Imladris(elf) F1@(11, 9) HP 28/28 MP 0/0 Hu 82 $ 927 room=M vs Stirge(L0 HP6/6)
+-> a
+T 153 mode=combat_victory      Tauriel of Imladris(elf) F1@(11, 9) HP 28/38 MP 0/0 Hu 82 $ 932 room=.
+-> back
+T 154 mode=game_loop           Tauriel of Imladris(elf) F1@(11, 9) HP 28/38 MP 0/0 Hu 82 $ 932 room=.
+-> i
+T 155 mode=inventory           Tauriel of Imladris(elf) F1@(11, 9) HP 28/38 MP 0/0 Hu 82 $ 932 room=.
+-> u3
+T 156 mode=inventory           Tauriel of Imladris(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 82 $ 932 room=.
+-> x
+T 157 mode=game_loop           Tauriel of Imladris(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 82 $ 932 room=.
+-> w
+T 158 mode=combat_mode         Tauriel of Imladris(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 81 $ 932 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 159 mode=combat_victory      Tauriel of Imladris(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 81 $ 937 room=.
+-> back
+T 160 mode=game_loop           Tauriel of Imladris(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 81 $ 937 room=.
+-> n
+T 161 mode=game_loop           Tauriel of Imladris(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 80 $ 937 room=.
+-> n
+T 162 mode=game_loop           Tauriel of Imladris(elf) F1@(10, 7) HP 38/38 MP 0/0 Hu 79 $ 937 room=.
+-> w
+T 163 mode=game_loop           Tauriel of Imladris(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 78 $ 937 room=.
+-> w
+T 164 mode=game_loop           Tauriel of Imladris(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 77 $ 937 room=.
+-> w
+T 165 mode=game_loop           Tauriel of Imladris(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 76 $ 937 room=.
+-> w
+T 166 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 75 $ 937 room=.
+-> s
+T 167 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 8) HP 38/38 MP 0/0 Hu 74 $ 937 room=.
+-> s
+T 168 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 9) HP 38/38 MP 0/0 Hu 73 $ 937 room=.
+-> l
+T 169 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 9) HP 38/38 MP 0/0 Hu 73 $ 937 room=.
+-> e
+T 170 mode=combat_mode         Tauriel of Imladris(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu 72 $ 937 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 171 mode=combat_victory      Tauriel of Imladris(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu 72 $ 939 room=.
+-> back
+T 172 mode=game_loop           Tauriel of Imladris(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu 72 $ 939 room=.
+-> i
+T 173 mode=inventory           Tauriel of Imladris(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu 72 $ 939 room=.
+-> eat5
+T 174 mode=inventory           Tauriel of Imladris(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu 78 $ 939 room=.
+-> eat1
+T 175 mode=inventory           Tauriel of Imladris(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu100 $ 939 room=.
+-> x
+T 176 mode=game_loop           Tauriel of Imladris(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu100 $ 939 room=.
+-> l
+T 177 mode=game_loop           Tauriel of Imladris(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu100 $ 939 room=.
+-> s
+T 178 mode=game_loop           Tauriel of Imladris(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 99 $ 939 room=.
+-> i
+T 179 mode=inventory           Tauriel of Imladris(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 99 $ 939 room=.
+-> eat4
+T 180 mode=inventory           Tauriel of Imladris(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu100 $ 939 room=.
+-> x
+T 181 mode=game_loop           Tauriel of Imladris(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu100 $ 939 room=.
+-> s
+T 182 mode=combat_mode         Tauriel of Imladris(elf) F1@( 7,11) HP 38/38 MP 0/0 Hu 99 $ 939 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 183 mode=combat_victory      Tauriel of Imladris(elf) F1@( 7,11) HP 37/38 MP 0/0 Hu 99 $ 944 room=.
+-> back
+T 184 mode=game_loop           Tauriel of Imladris(elf) F1@( 7,11) HP 37/38 MP 0/0 Hu 99 $ 944 room=.
+-> s
+T 185 mode=game_loop           Tauriel of Imladris(elf) F1@( 7,12) HP 37/38 MP 0/0 Hu 98 $ 944 room=.
+-> w
+T 186 mode=game_loop           Tauriel of Imladris(elf) F1@( 6,12) HP 38/38 MP 0/0 Hu 97 $ 944 room=.
+-> l
+T 187 mode=game_loop           Tauriel of Imladris(elf) F1@( 6,12) HP 38/38 MP 0/0 Hu 97 $ 944 room=.
+-> w
+T 188 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5,12) HP 38/38 MP 0/0 Hu 96 $ 944 room=M vs Stirge(L0 HP6/6)
+-> f
+T 189 mode=flee_direction_mode Tauriel of Imladris(elf) F1@( 5,12) HP 38/38 MP 0/0 Hu 96 $ 944 room=M
+-> w
+T 190 mode=combat_mode         Tauriel of Imladris(elf) F1@( 4,12) HP 38/38 MP 0/0 Hu 96 $ 944 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 191 mode=combat_victory      Tauriel of Imladris(elf) F1@( 4,12) HP 38/38 MP 0/0 Hu 96 $ 951 room=.
+-> back
+T 192 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,12) HP 38/38 MP 0/0 Hu 96 $ 951 room=.
+-> l
+T 193 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,12) HP 38/38 MP 0/0 Hu 96 $ 951 room=.
+-> n
+T 194 mode=dungeon_mode        Tauriel of Imladris(elf) F1@( 4,11) HP 38/38 MP 0/0 Hu 95 $ 951 room=N
+-> u
+T 195 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,11) HP 38/38 MP 0/0 Hu 95 $ 951 room=N
+-> l
+T 196 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,11) HP 38/38 MP 0/0 Hu 95 $ 951 room=N
+-> n
+T 197 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,10) HP 38/38 MP 0/0 Hu 94 $ 951 room=.
+-> l
+T 198 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,10) HP 38/38 MP 0/0 Hu 94 $ 951 room=.
+-> e
+T 199 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5,10) HP 38/38 MP 0/0 Hu 93 $ 951 room=M vs Lichen(L0 HP10/10)
+-> a
+T 200 mode=combat_victory      Tauriel of Imladris(elf) F1@( 5,10) HP 37/38 MP 0/0 Hu 93 $ 960 room=.
+-> back
+T 201 mode=game_loop           Tauriel of Imladris(elf) F1@( 5,10) HP 37/38 MP 0/0 Hu 93 $ 960 room=.
+-> e
+T 202 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6,10) HP 37/38 MP 0/0 Hu 92 $ 960 room=M vs Goblin(L0 HP12/12)
+-> a
+T 203 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6,10) HP 37/38 MP 0/0 Hu 92 $ 960 room=M vs Goblin(L0 HP12/12)
+-> a
+T 204 mode=combat_victory      Tauriel of Imladris(elf) F1@( 6,10) HP 37/38 MP 0/0 Hu 92 $ 964 room=.
+-> back
+T 205 mode=game_loop           Tauriel of Imladris(elf) F1@( 6,10) HP 37/38 MP 0/0 Hu 92 $ 964 room=.
+-> s
+T 206 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6,11) HP 38/38 MP 0/0 Hu 91 $ 964 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 207 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6,11) HP 37/38 MP 0/0 Hu 91 $ 964 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 208 mode=combat_victory      Tauriel of Imladris(elf) F1@( 6,11) HP 36/38 MP 0/0 Hu 91 $ 967 room=.
+-> back
+T 209 mode=game_loop           Tauriel of Imladris(elf) F1@( 6,11) HP 36/38 MP 0/0 Hu 91 $ 967 room=.
+-> i
+T 210 mode=inventory           Tauriel of Imladris(elf) F1@( 6,11) HP 36/38 MP 0/0 Hu 91 $ 967 room=.
+-> eat3
+T 211 mode=inventory           Tauriel of Imladris(elf) F1@( 6,11) HP 36/38 MP 0/0 Hu 97 $ 967 room=.
+-> eat2
+T 212 mode=inventory           Tauriel of Imladris(elf) F1@( 6,11) HP 36/38 MP 0/0 Hu100 $ 967 room=.
+-> eat1
+T 213 mode=inventory           Tauriel of Imladris(elf) F1@( 6,11) HP 36/38 MP 0/0 Hu100 $ 967 room=.
+-> x
+T 214 mode=game_loop           Tauriel of Imladris(elf) F1@( 6,11) HP 36/38 MP 0/0 Hu100 $ 967 room=.
+-> w
+T 215 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5,11) HP 36/38 MP 0/0 Hu 99 $ 967 room=M vs Goblin(L0 HP30/30)
+-> f
+T 216 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5,11) HP 35/38 MP 0/0 Hu 99 $ 967 room=M vs Goblin(L0 HP30/30)
+-> a
+T 217 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5,11) HP 35/38 MP 0/0 Hu 99 $ 967 room=M vs Goblin(L0 HP30/30)
+-> a
+T 218 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5,11) HP 34/38 MP 0/0 Hu 99 $ 967 room=M vs Goblin(L0 HP10/30)
+-> f
+T 219 mode=flee_direction_mode Tauriel of Imladris(elf) F1@( 5,11) HP 34/38 MP 0/0 Hu 99 $ 967 room=M
+-> s
+T 220 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5,12) HP 34/38 MP 0/0 Hu 99 $ 967 room=M vs Stirge(L0 HP6/6)
+-> a
+T 221 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5,12) HP 33/38 MP 0/0 Hu 99 $ 967 room=M vs Stirge(L0 HP2/6)
+-> a
+T 222 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5,12) HP 32/38 MP 0/0 Hu 99 $ 967 room=M vs Stirge(L0 HP2/6)
+-> a
+T 223 mode=combat_victory      Tauriel of Imladris(elf) F1@( 5,12) HP 32/38 MP 0/0 Hu 99 $ 974 room=.
+-> back
+T 224 mode=game_loop           Tauriel of Imladris(elf) F1@( 5,12) HP 32/38 MP 0/0 Hu 99 $ 974 room=.
+-> w
+T 225 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,12) HP 33/38 MP 0/0 Hu 98 $ 974 room=.
+-> n
+T 226 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,11) HP 33/38 MP 0/0 Hu 97 $ 974 room=N
+-> w
+T 227 mode=game_loop           Tauriel of Imladris(elf) F1@( 3,11) HP 34/38 MP 0/0 Hu 96 $ 974 room=.
+-> w
+T 228 mode=game_loop           Tauriel of Imladris(elf) F1@( 2,11) HP 34/38 MP 0/0 Hu 95 $ 974 room=.
+-> e
+T 229 mode=game_loop           Tauriel of Imladris(elf) F1@( 3,11) HP 35/38 MP 0/0 Hu 94 $ 974 room=.
+-> e
+T 230 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,11) HP 35/38 MP 0/0 Hu 93 $ 974 room=N
+-> l
+T 231 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,11) HP 35/38 MP 0/0 Hu 93 $ 974 room=N
+-> n
+T 232 mode=game_loop           Tauriel of Imladris(elf) F1@( 4,10) HP 36/38 MP 0/0 Hu 92 $ 974 room=.
+-> e
+T 233 mode=game_loop           Tauriel of Imladris(elf) F1@( 5,10) HP 36/38 MP 0/0 Hu 91 $ 974 room=.
+-> e
+T 234 mode=game_loop           Tauriel of Imladris(elf) F1@( 6,10) HP 37/38 MP 0/0 Hu 90 $ 974 room=.
+-> n
+T 235 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 9) HP 37/38 MP 0/0 Hu 89 $ 974 room=.
+-> n
+T 236 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 8) HP 38/38 MP 0/0 Hu 88 $ 974 room=.
+-> n
+T 237 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 87 $ 974 room=.
+-> w
+T 238 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 7) HP 38/38 MP 0/0 Hu 86 $ 974 room=.
+-> w
+T 239 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 85 $ 974 room=.
+-> n
+T 240 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 84 $ 974 room=.
+-> l
+T 241 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 84 $ 974 room=.
+-> w
+T 242 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 83 $ 974 room=.
+-> w
+T 243 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 6) HP 38/38 MP 0/0 Hu 82 $ 974 room=.
+-> w
+T 244 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 6) HP 38/38 MP 0/0 Hu 81 $ 974 room=.
+-> s
+T 245 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 7) HP 38/38 MP 0/0 Hu 80 $ 974 room=.
+-> n
+T 246 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 6) HP 38/38 MP 0/0 Hu 79 $ 974 room=.
+-> n
+T 247 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 5) HP 38/38 MP 0/0 Hu 78 $ 974 room=.
+-> n
+T 248 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 4) HP 38/38 MP 0/0 Hu 77 $ 974 room=.
+-> n
+T 249 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 76 $ 974 room=.
+-> e
+T 250 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 75 $ 974 room=.
+-> l
+T 251 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 75 $ 974 room=.
+-> s
+T 252 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 74 $ 974 room=.
+-> s
+T 253 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 5) HP 38/38 MP 0/0 Hu 73 $ 974 room=.
+-> e
+T 254 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 5) HP 38/38 MP 0/0 Hu 72 $ 974 room=.
+-> s
+T 255 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 71 $ 974 room=.
+-> w
+T 256 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 6) HP 38/38 MP 0/0 Hu 70 $ 974 room=.
+-> w
+T 257 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 6) HP 38/38 MP 0/0 Hu 69 $ 974 room=.
+-> n
+T 258 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 5) HP 38/38 MP 0/0 Hu 68 $ 974 room=.
+-> n
+T 259 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 4) HP 38/38 MP 0/0 Hu 67 $ 974 room=.
+-> n
+T 260 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 66 $ 974 room=.
+-> l
+T 261 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 66 $ 974 room=.
+-> n
+T 262 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 2) HP 38/38 MP 0/0 Hu 65 $ 974 room=.
+-> e
+T 263 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 2) HP 38/38 MP 0/0 Hu 64 $ 974 room=.
+-> e
+T 264 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 2) HP 38/38 MP 0/0 Hu 63 $ 974 room=.
+-> s
+T 265 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 3) HP 38/38 MP 0/0 Hu 62 $ 974 room=.
+-> w
+T 266 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 61 $ 974 room=.
+-> s
+T 267 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 60 $ 974 room=.
+-> w
+T 268 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 4) HP 38/38 MP 0/0 Hu 59 $ 974 room=.
+-> s
+T 269 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 5) HP 38/38 MP 0/0 Hu 58 $ 974 room=.
+-> e
+T 270 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 5) HP 38/38 MP 0/0 Hu 57 $ 974 room=.
+-> l
+T 271 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 5) HP 38/38 MP 0/0 Hu 57 $ 974 room=.
+-> e
+T 272 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 5) HP 38/38 MP 0/0 Hu 56 $ 974 room=.
+-> e
+T 273 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 5) HP 38/38 MP 0/0 Hu 55 $ 974 room=.
+-> e
+T 274 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 38/38 MP 0/0 Hu 54 $ 974 room=.
+-> n
+T 275 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 53 $ 974 room=.
+-> w
+T 276 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 52 $ 974 room=.
+-> w
+T 277 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 4) HP 38/38 MP 0/0 Hu 51 $ 974 room=.
+-> w
+T 278 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 50 $ 974 room=.
+-> s
+T 279 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 5) HP 38/38 MP 0/0 Hu 49 $ 974 room=.
+-> s
+T 280 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 6) HP 38/38 MP 0/0 Hu 48 $ 974 room=.
+-> l
+T 281 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 6) HP 38/38 MP 0/0 Hu 48 $ 974 room=.
+-> w
+T 282 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 6) HP 38/38 MP 0/0 Hu 47 $ 974 room=.
+-> n
+T 283 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 5) HP 38/38 MP 0/0 Hu 46 $ 974 room=.
+-> n
+T 284 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 4) HP 38/38 MP 0/0 Hu 45 $ 974 room=.
+-> n
+T 285 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 44 $ 974 room=.
+-> n
+T 286 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 2) HP 38/38 MP 0/0 Hu 43 $ 974 room=.
+-> e
+T 287 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 2) HP 38/38 MP 0/0 Hu 42 $ 974 room=.
+-> n
+T 288 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 1) HP 38/38 MP 0/0 Hu 41 $ 974 room=.
+-> e
+T 289 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 1) HP 38/38 MP 0/0 Hu 40 $ 974 room=.
+-> e
+T 290 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 1) HP 38/38 MP 0/0 Hu 39 $ 974 room=.
+-> l
+T 291 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 1) HP 38/38 MP 0/0 Hu 39 $ 974 room=.
+-> w
+T 292 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 1) HP 38/38 MP 0/0 Hu 38 $ 974 room=.
+-> i
+T 293 mode=inventory           Tauriel of Imladris(elf) F1@( 3, 1) HP 38/38 MP 0/0 Hu 38 $ 974 room=.
+-> u2
+T 294 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 38 $ 974 room=.
+-> w
+T 295 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 37 $ 974 room=.
+-> s
+T 296 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 4) HP 38/38 MP 0/0 Hu 36 $ 974 room=.
+-> e
+T 297 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 35 $ 974 room=.
+-> s
+T 298 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 5) HP 38/38 MP 0/0 Hu 34 $ 974 room=.
+-> s
+T 299 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 6) HP 38/38 MP 0/0 Hu 33 $ 974 room=.
+-> w
+T 300 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 6) HP 38/38 MP 0/0 Hu 32 $ 974 room=.
+-> l
+T 301 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 6) HP 38/38 MP 0/0 Hu 32 $ 974 room=.
+-> n
+T 302 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 5) HP 38/38 MP 0/0 Hu 31 $ 974 room=.
+-> n
+T 303 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 4) HP 38/38 MP 0/0 Hu 30 $ 974 room=.
+-> n
+T 304 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 29 $ 974 room=.
+-> n
+T 305 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 2) HP 38/38 MP 0/0 Hu 28 $ 974 room=.
+-> n
+T 306 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 1) HP 38/38 MP 0/0 Hu 27 $ 974 room=E
+-> e
+T 307 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 1) HP 38/38 MP 0/0 Hu 26 $ 974 room=.
+-> s
+T 308 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 2) HP 38/38 MP 0/0 Hu 25 $ 974 room=.
+-> s
+T 309 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 24 $ 974 room=.
+-> e
+T 310 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 3) HP 38/38 MP 0/0 Hu 23 $ 974 room=.
+-> l
+T 311 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 3) HP 38/38 MP 0/0 Hu 23 $ 974 room=.
+-> s
+T 312 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 4) HP 38/38 MP 0/0 Hu 22 $ 974 room=.
+-> e
+T 313 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 21 $ 974 room=.
+-> e
+T 314 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 20 $ 974 room=.
+-> s
+T 315 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 38/38 MP 0/0 Hu 19 $ 974 room=.
+-> w
+T 316 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 5) HP 38/38 MP 0/0 Hu 18 $ 974 room=.
+-> w
+T 317 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 5) HP 38/38 MP 0/0 Hu 17 $ 974 room=.
+-> n
+T 318 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 4) HP 38/38 MP 0/0 Hu 16 $ 974 room=.
+-> e
+T 319 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 15 $ 974 room=.
+-> e
+T 320 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 14 $ 974 room=.
+-> l
+T 321 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 14 $ 974 room=.
+-> e
+T 322 mode=combat_mode         Tauriel of Imladris(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 13 $ 974 room=M vs Kobold(L0 HP20/20)
+-> f
+T 323 mode=flee_direction_mode Tauriel of Imladris(elf) F1@( 6, 4) HP 37/38 MP 0/0 Hu 13 $ 974 room=M
+-> s
+T 324 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 5) HP 37/38 MP 0/0 Hu 13 $ 974 room=.
+-> s
+T 325 mode=game_loop           Tauriel of Imladris(elf) F1@( 6, 6) HP 37/38 MP 0/0 Hu 12 $ 974 room=.
+-> w
+T 326 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 37/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP10/10)
+-> a
+T 327 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 36/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP10/10)
+-> a
+T 328 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 35/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP10/10)
+-> a
+T 329 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 34/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP10/10)
+-> a
+T 330 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 33/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP6/10)
+-> a
+T 331 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 32/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP6/10)
+-> a
+T 332 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 32/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP2/10)
+-> a
+T 333 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 32/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP2/10)
+-> a
+T 334 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 31/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP2/10)
+-> a
+T 335 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 30/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP2/10)
+-> a
+T 336 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 29/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP2/10)
+-> f
+T 337 mode=combat_mode         Tauriel of Imladris(elf) F1@( 5, 6) HP 28/38 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP2/10)
+-> a
+T 338 mode=combat_victory      Tauriel of Imladris(elf) F1@( 5, 6) HP 27/38 MP 0/0 Hu 11 $ 976 room=.
+-> back
+T 339 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 6) HP 27/38 MP 0/0 Hu 11 $ 976 room=.
+-> n
+T 340 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 27/38 MP 0/0 Hu 10 $ 976 room=.
+-> l
+T 341 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 27/38 MP 0/0 Hu 10 $ 976 room=.
+-> n
+T 342 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 4) HP 27/38 MP 0/0 Hu  9 $ 976 room=.
+-> w
+T 343 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 4) HP 27/38 MP 0/0 Hu  8 $ 976 room=.
+-> w
+T 344 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 4) HP 27/38 MP 0/0 Hu  7 $ 976 room=.
+-> n
+T 345 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 3) HP 27/38 MP 0/0 Hu  6 $ 976 room=.
+-> n
+T 346 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 2) HP 27/38 MP 0/0 Hu  5 $ 976 room=.
+-> w
+T 347 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 2) HP 27/38 MP 0/0 Hu  4 $ 976 room=.
+-> n
+T 348 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 1) HP 27/38 MP 0/0 Hu  3 $ 976 room=.
+-> e
+T 349 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 1) HP 27/38 MP 0/0 Hu  2 $ 976 room=.
+-> e
+T 350 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 1) HP 27/38 MP 0/0 Hu  1 $ 976 room=.
+-> l
+T 351 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 1) HP 27/38 MP 0/0 Hu  1 $ 976 room=.
+-> w
+T 352 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 1) HP 25/38 MP 0/0 Hu  0 $ 976 room=.
+-> s
+T 353 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 2) HP 23/38 MP 0/0 Hu  0 $ 976 room=.
+-> w
+T 354 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 2) HP 21/38 MP 0/0 Hu  0 $ 976 room=.
+-> s
+T 355 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 3) HP 19/38 MP 0/0 Hu  0 $ 976 room=.
+-> w
+T 356 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 3) HP 17/38 MP 0/0 Hu  0 $ 976 room=.
+-> s
+T 357 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 4) HP 15/38 MP 0/0 Hu  0 $ 976 room=.
+-> s
+T 358 mode=game_loop           Tauriel of Imladris(elf) F1@( 1, 5) HP 13/38 MP 0/0 Hu  0 $ 976 room=.
+-> e
+T 359 mode=game_loop           Tauriel of Imladris(elf) F1@( 2, 5) HP 11/38 MP 0/0 Hu  0 $ 976 room=.
+-> e
+T 360 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 5) HP 9/38 MP 0/0 Hu  0 $ 976 room=.
+-> l
+T 361 mode=game_loop           Tauriel of Imladris(elf) F1@( 3, 5) HP 9/38 MP 0/0 Hu  0 $ 976 room=.
+-> e
+T 362 mode=game_loop           Tauriel of Imladris(elf) F1@( 4, 5) HP 7/38 MP 0/0 Hu  0 $ 976 room=.
+-> e
+T 363 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 5) HP 5/38 MP 0/0 Hu  0 $ 976 room=.
+-> s
+T 364 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 6) HP 3/38 MP 0/0 Hu  0 $ 976 room=.
+-> s
+T 365 mode=game_loop           Tauriel of Imladris(elf) F1@( 5, 7) HP 1/38 MP 0/0 Hu  0 $ 976 room=.
+-> s
+T 366 mode=death_screen        Tauriel of Imladris(elf) F1@( 5, 8) HP 0/38 MP 0/0 Hu  0 $ 976 room=.
 
-=== run finished: turns=136 floor=1 hp=-7/28 gold=541 alive=False mode=pool_mode ===
+=== run finished: turns=366 floor=1 hp=0/38 gold=976 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/27182_elf.html

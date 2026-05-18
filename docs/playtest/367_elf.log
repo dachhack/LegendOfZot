@@ -2249,28 +2249,48 @@ T1115 mode=game_loop           Finrod of the West(elf) F4@( 2, 1) HP 24/40 MP 0/
 T1116 mode=stairs_up_mode      Finrod of the West(elf) F4@( 1, 1) HP 22/40 MP 0/0 Hu  0 $ 431 room=U
 -> e
 T1117 mode=game_loop           Finrod of the West(elf) F4@( 2, 1) HP 20/40 MP 0/0 Hu  0 $ 431 room=T
--> w
-T1118 mode=stairs_up_mode      Finrod of the West(elf) F4@( 1, 1) HP 18/40 MP 0/0 Hu  0 $ 431 room=U
+-> s
+T1118 mode=combat_mode         Finrod of the West(elf) F4@( 2, 2) HP 18/40 MP 0/0 Hu  0 $ 431 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> f
+T1119 mode=flee_direction_mode Finrod of the West(elf) F4@( 2, 2) HP 18/40 MP 0/0 Hu  0 $ 431 room=M
+-> s
+T1120 mode=game_loop           Finrod of the West(elf) F4@( 2, 3) HP 18/40 MP 0/0 Hu  0 $ 431 room=.
+-> l
+T1121 mode=game_loop           Finrod of the West(elf) F4@( 2, 3) HP 18/40 MP 0/0 Hu  0 $ 431 room=.
 -> e
-T1119 mode=game_loop           Finrod of the West(elf) F4@( 2, 1) HP 16/40 MP 0/0 Hu  0 $ 431 room=T
--> w
-T1120 mode=stairs_up_mode      Finrod of the West(elf) F4@( 1, 1) HP 14/40 MP 0/0 Hu  0 $ 431 room=U
+T1122 mode=game_loop           Finrod of the West(elf) F4@( 3, 3) HP 16/40 MP 0/0 Hu  0 $ 431 room=.
+-> l
+T1123 mode=game_loop           Finrod of the West(elf) F4@( 3, 3) HP 16/40 MP 0/0 Hu  0 $ 431 room=.
 -> e
-T1121 mode=game_loop           Finrod of the West(elf) F4@( 2, 1) HP 12/40 MP 0/0 Hu  0 $ 431 room=T
--> w
-T1122 mode=stairs_up_mode      Finrod of the West(elf) F4@( 1, 1) HP 10/40 MP 0/0 Hu  0 $ 431 room=U
+T1124 mode=game_loop           Finrod of the West(elf) F4@( 4, 3) HP 14/40 MP 0/0 Hu  0 $ 431 room=.
+-> l
+T1125 mode=game_loop           Finrod of the West(elf) F4@( 4, 3) HP 14/40 MP 0/0 Hu  0 $ 431 room=.
 -> e
-T1123 mode=game_loop           Finrod of the West(elf) F4@( 2, 1) HP 8/40 MP 0/0 Hu  0 $ 431 room=T
--> w
-T1124 mode=stairs_up_mode      Finrod of the West(elf) F4@( 1, 1) HP 6/40 MP 0/0 Hu  0 $ 431 room=U
+T1126 mode=chest_mode          Finrod of the West(elf) F4@( 5, 3) HP 12/40 MP 0/0 Hu  0 $ 431 room=C
 -> e
-T1125 mode=game_loop           Finrod of the West(elf) F4@( 2, 1) HP 4/40 MP 0/0 Hu  0 $ 431 room=T
+T1127 mode=game_loop           Finrod of the West(elf) F4@( 6, 3) HP 10/40 MP 0/0 Hu  0 $ 431 room=.
+-> l
+T1128 mode=game_loop           Finrod of the West(elf) F4@( 6, 3) HP 10/40 MP 0/0 Hu  0 $ 431 room=.
+-> n
+T1129 mode=game_loop           Finrod of the West(elf) F4@( 6, 2) HP 8/40 MP 0/0 Hu  0 $ 431 room=.
+-> s
+T1130 mode=game_loop           Finrod of the West(elf) F4@( 6, 3) HP 6/40 MP 0/0 Hu  0 $ 431 room=.
+-> s
+T1131 mode=combat_mode         Finrod of the West(elf) F4@( 6, 4) HP 4/40 MP 0/0 Hu  0 $ 431 room=M vs Fungal Hulk(L3 HP80/80)
+-> f
+T1132 mode=flee_direction_mode Finrod of the West(elf) F4@( 6, 4) HP 4/40 MP 0/0 Hu  0 $ 431 room=M
+-> s
+T1133 mode=game_loop           Finrod of the West(elf) F4@( 6, 5) HP 4/40 MP 0/0 Hu  0 $ 431 room=.
+-> l
+T1134 mode=game_loop           Finrod of the West(elf) F4@( 6, 5) HP 4/40 MP 0/0 Hu  0 $ 431 room=.
 -> w
-T1126 mode=stairs_up_mode      Finrod of the West(elf) F4@( 1, 1) HP 2/40 MP 0/0 Hu  0 $ 431 room=U
--> e
-T1127 mode=death_screen        Finrod of the West(elf) F4@( 2, 1) HP 0/40 MP 0/0 Hu  0 $ 431 room=T
+T1135 mode=game_loop           Finrod of the West(elf) F4@( 5, 5) HP 2/40 MP 0/0 Hu  0 $ 431 room=.
+-> l
+T1136 mode=game_loop           Finrod of the West(elf) F4@( 5, 5) HP 2/40 MP 0/0 Hu  0 $ 431 room=.
+-> s
+T1137 mode=death_screen        Finrod of the West(elf) F4@( 5, 6) HP 0/40 MP 0/0 Hu  0 $ 431 room=.
 
-=== run finished: turns=1127 floor=4 hp=0/40 gold=431 alive=False mode=death_screen ===
+=== run finished: turns=1137 floor=4 hp=0/40 gold=431 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00367_elf.html
