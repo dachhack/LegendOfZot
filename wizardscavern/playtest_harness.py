@@ -733,6 +733,15 @@ class PlaytestSession:
         # because of this.
         self.floor_arrival_turn = 0
         self._last_floor = 0
+        # Build-321 verification surfaced U-camping (s999_human 858T,
+        # s512_human 649T, s999_elf 393T): agent walks onto U, enters
+        # stairs_up_mode, policy walks off in a direction, game_loop
+        # picks the step back to U because that's the only walkable
+        # neighbor in a dead-end corridor. Track cancellations per
+        # floor; after 3 consecutive cancels in stairs_up_mode, the
+        # policy forces ascent ('u') to break the loop. Reset on
+        # floor change.
+        self.stairs_up_cancels_this_floor = 0
         # Per-floor exploration totals, snapshotted on first arrival.
         # User-requested: 'evaluate exp + treasure left on each level
         # to see if better exploring would help with survival.' For
@@ -913,6 +922,7 @@ class PlaytestSession:
             "nearest_monster_path": self._nearest_monster_path_obs(),
             "recent_step_set": self._recent_step_set(),
             "blocked_directions": sorted(self.blocked_directions),
+            "stairs_up_cancels_this_floor": self.stairs_up_cancels_this_floor,
             "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
             # Cardinal dirs adjacent to a known tomb-guardian M tile.
             # The policy refuses to step into these unless over-levelled.
@@ -1714,6 +1724,17 @@ class PlaytestSession:
             self.last_flee_turn = self.turn
             max_h = max(1, pc.max_health)
             self.last_flee_hp_pct = pc.health / max_h
+        # U-camp detection: any non-'u' action issued from
+        # stairs_up_mode is effectively a cancel (walk away, open
+        # inventory, etc.). Increment the per-floor counter; the
+        # stairs_up_mode policy escalates to a forced 'u' after 3
+        # consecutive cancels. Reset to 0 on actual ascent ('u') or
+        # on floor change (handled elsewhere).
+        if mode == "stairs_up_mode":
+            if action == "u":
+                self.stairs_up_cancels_this_floor = 0
+            else:
+                self.stairs_up_cancels_this_floor += 1
         # Capture pre-step position. The loop-prevention check below
         # only forces game_loop when the agent JUST LANDED on a
         # previously-visited feature tile -- not when they're
@@ -1940,6 +1961,8 @@ class PlaytestSession:
             self.wedge_attempted_actions = set()
             # Fresh floor, fresh walls to discover.
             self.blocked_directions = set()
+            # Fresh floor, fresh U-camp window.
+            self.stairs_up_cancels_this_floor = 0
             # Reset per-floor kill counter so the grind-first descent
             # gate measures kills on the CURRENT floor only.
             self.kills_on_floor = 0
@@ -3942,6 +3965,16 @@ def smart_policy(obs, rng, use_lantern=True):
         # ping-pong's opposite -- the trip back through familiar
         # territory.
         if obs.get("retreat_to_floor") is not None:
+            return "u"
+        # U-camp escape: build-321 verification found s999_human
+        # burned 858T, s512_human 649T, s999_elf 393T cycling U <-> A
+        # in dead-end corridors. After 3 cancels on this floor with
+        # no other route opening up, force the ascent. The previous
+        # floor isn't a fresh layout but the agent at least breaks
+        # the loop and can re-attempt descent with whatever they
+        # picked up in transit (or trigger the retreat-after-warp
+        # branch if they came in via warp).
+        if (obs.get("stairs_up_cancels_this_floor") or 0) >= 3:
             return "u"
         # Stairs-up_mode fires as soon as you arrive on floor N+1 (your
         # landing tile is the U). Confirming would immediately bounce
