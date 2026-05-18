@@ -2353,1346 +2353,378 @@ T1167 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 
 T1168 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
 -> n
 T1169 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> s
-T1170 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
+-> n
+T1170 mode=stairs_up_mode      Durin the Bold(dwa) F5@( 1, 1) HP 104/104 MP 0/0 Hu 49 $ 703 room=U
+-> e
+T1171 mode=game_loop           Durin the Bold(dwa) F5@( 2, 1) HP 104/104 MP 0/0 Hu 48 $ 703 room=T
 -> i
-T1171 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
+T1172 mode=inventory           Durin the Bold(dwa) F5@( 2, 1) HP 104/104 MP 0/0 Hu 48 $ 703 room=T
 -> eat4
-T1172 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
+T1173 mode=inventory           Durin the Bold(dwa) F5@( 2, 1) HP 104/104 MP 0/0 Hu 58 $ 703 room=T
 -> x
-T1173 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> n
-T1174 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
+T1174 mode=game_loop           Durin the Bold(dwa) F5@( 2, 1) HP 104/104 MP 0/0 Hu 58 $ 703 room=T
 -> s
-T1175 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
+T1175 mode=game_loop           Durin the Bold(dwa) F5@( 2, 2) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
 -> e
-T1176 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> w
-T1177 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> n
-T1178 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> s
-T1179 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> n
-T1180 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> s
-T1181 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
+T1176 mode=game_loop           Durin the Bold(dwa) F5@( 3, 2) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
 -> e
-T1182 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> w
-T1183 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
+T1177 mode=game_loop           Durin the Bold(dwa) F5@( 4, 2) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
 -> n
-T1184 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> s
-T1185 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> n
-T1186 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> i
-T1187 mode=inventory           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> eat4
-T1188 mode=inventory           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> x
-T1189 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> s
-T1190 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
+T1178 mode=game_loop           Durin the Bold(dwa) F5@( 4, 1) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
 -> e
-T1191 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> w
-T1192 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> n
-T1193 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> s
-T1194 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> n
-T1195 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> s
-T1196 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
+T1179 mode=game_loop           Durin the Bold(dwa) F5@( 5, 1) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
 -> e
-T1197 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> w
-T1198 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> n
-T1199 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
+T1180 mode=game_loop           Durin the Bold(dwa) F5@( 6, 1) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
 -> s
-T1200 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> n
-T1201 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> s
-T1202 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> e
-T1203 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> w
-T1204 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> n
-T1205 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> s
-T1206 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> n
-T1207 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> i
-T1208 mode=inventory           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> eat4
-T1209 mode=inventory           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> x
-T1210 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> s
-T1211 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> e
-T1212 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> w
-T1213 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> n
-T1214 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> s
-T1215 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> n
-T1216 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> s
-T1217 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> e
-T1218 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> w
-T1219 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> n
-T1220 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> s
-T1221 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> n
-T1222 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> s
-T1223 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> e
-T1224 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> w
-T1225 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> n
-T1226 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> s
-T1227 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> i
-T1228 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> eat4
-T1229 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> x
-T1230 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> n
-T1231 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> s
-T1232 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> e
-T1233 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> w
-T1234 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> n
-T1235 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> s
-T1236 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> n
-T1237 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> s
-T1238 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> e
-T1239 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> w
-T1240 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> n
-T1241 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> s
-T1242 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> n
-T1243 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> s
-T1244 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> e
-T1245 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> w
-T1246 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> n
-T1247 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> i
-T1248 mode=inventory           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> eat1
-T1249 mode=inventory           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> x
-T1250 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> s
-T1251 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> n
-T1252 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 99 $ 703 room=.
--> s
-T1253 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 98 $ 703 room=.
--> e
-T1254 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 98 $ 703 room=.
--> w
-T1255 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 97 $ 703 room=.
--> n
-T1256 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 96 $ 703 room=.
--> s
-T1257 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 96 $ 703 room=.
--> n
-T1258 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 95 $ 703 room=.
--> s
-T1259 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 94 $ 703 room=.
--> e
-T1260 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 93 $ 703 room=.
--> w
-T1261 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 93 $ 703 room=.
--> n
-T1262 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 92 $ 703 room=.
--> s
-T1263 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 91 $ 703 room=.
--> n
-T1264 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 91 $ 703 room=.
--> s
-T1265 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 90 $ 703 room=.
--> e
-T1266 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 89 $ 703 room=.
--> w
-T1267 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 89 $ 703 room=.
--> n
-T1268 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 88 $ 703 room=.
--> s
-T1269 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 87 $ 703 room=.
--> n
-T1270 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 86 $ 703 room=.
--> s
-T1271 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 86 $ 703 room=.
--> e
-T1272 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 85 $ 703 room=.
--> w
-T1273 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 84 $ 703 room=.
--> n
-T1274 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 84 $ 703 room=.
--> s
-T1275 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 83 $ 703 room=.
--> n
-T1276 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 82 $ 703 room=.
--> s
-T1277 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 82 $ 703 room=.
--> e
-T1278 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 81 $ 703 room=.
--> w
-T1279 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 80 $ 703 room=.
--> n
-T1280 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 79 $ 703 room=.
--> s
-T1281 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 79 $ 703 room=.
--> n
-T1282 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 78 $ 703 room=.
--> s
-T1283 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 77 $ 703 room=.
--> e
-T1284 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 77 $ 703 room=.
--> w
-T1285 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 76 $ 703 room=.
--> n
-T1286 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 75 $ 703 room=.
--> s
-T1287 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 75 $ 703 room=.
--> n
-T1288 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 74 $ 703 room=.
--> s
-T1289 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 73 $ 703 room=.
--> e
-T1290 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 72 $ 703 room=.
--> w
-T1291 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 72 $ 703 room=.
--> n
-T1292 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 71 $ 703 room=.
--> s
-T1293 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 70 $ 703 room=.
--> n
-T1294 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 70 $ 703 room=.
--> s
-T1295 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
--> e
-T1296 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> w
-T1297 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> n
-T1298 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> s
-T1299 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 66 $ 703 room=.
--> n
-T1300 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 65 $ 703 room=.
--> s
-T1301 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 65 $ 703 room=.
--> e
-T1302 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 64 $ 703 room=.
--> w
-T1303 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 63 $ 703 room=.
--> n
-T1304 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 63 $ 703 room=.
--> s
-T1305 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> n
-T1306 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> s
-T1307 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> e
-T1308 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> w
-T1309 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> n
-T1310 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> s
-T1311 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> n
-T1312 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> s
-T1313 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> e
-T1314 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> w
-T1315 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> n
-T1316 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> s
-T1317 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> n
-T1318 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> s
-T1319 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> e
-T1320 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> w
-T1321 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> n
-T1322 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> s
-T1323 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> i
-T1324 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> eat1
-T1325 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> x
-T1326 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> n
-T1327 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> s
-T1328 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 99 $ 703 room=.
--> e
-T1329 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 98 $ 703 room=.
--> w
-T1330 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 98 $ 703 room=.
--> n
-T1331 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 97 $ 703 room=.
--> s
-T1332 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 96 $ 703 room=.
--> n
-T1333 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 95 $ 703 room=.
--> s
-T1334 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 95 $ 703 room=.
--> e
-T1335 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 94 $ 703 room=.
--> w
-T1336 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 93 $ 703 room=.
--> n
-T1337 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 93 $ 703 room=.
--> s
-T1338 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 92 $ 703 room=.
--> n
-T1339 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 91 $ 703 room=.
--> s
-T1340 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 91 $ 703 room=.
--> e
-T1341 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 90 $ 703 room=.
--> w
-T1342 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 89 $ 703 room=.
--> n
-T1343 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 88 $ 703 room=.
--> s
-T1344 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 88 $ 703 room=.
--> n
-T1345 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 87 $ 703 room=.
--> s
-T1346 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 86 $ 703 room=.
--> e
-T1347 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 86 $ 703 room=.
--> w
-T1348 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 85 $ 703 room=.
--> n
-T1349 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 84 $ 703 room=.
--> s
-T1350 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 84 $ 703 room=.
--> n
-T1351 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 83 $ 703 room=.
--> s
-T1352 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 82 $ 703 room=.
--> e
-T1353 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 81 $ 703 room=.
--> w
-T1354 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 81 $ 703 room=.
--> n
-T1355 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 80 $ 703 room=.
--> s
-T1356 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 79 $ 703 room=.
--> n
-T1357 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 79 $ 703 room=.
--> s
-T1358 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 78 $ 703 room=.
--> e
-T1359 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 77 $ 703 room=.
--> w
-T1360 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 77 $ 703 room=.
+T1181 mode=game_loop           Durin the Bold(dwa) F5@( 6, 2) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
 -> l
-T1361 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 77 $ 703 room=.
--> n
-T1362 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 76 $ 703 room=.
--> s
-T1363 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 75 $ 703 room=.
--> n
-T1364 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 74 $ 703 room=.
--> s
-T1365 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 74 $ 703 room=.
+T1182 mode=game_loop           Durin the Bold(dwa) F5@( 6, 2) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
 -> e
-T1366 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 73 $ 703 room=.
--> w
-T1367 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 72 $ 703 room=.
--> n
-T1368 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 72 $ 703 room=.
--> s
-T1369 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 71 $ 703 room=.
--> n
-T1370 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 70 $ 703 room=.
+T1183 mode=game_loop           Durin the Bold(dwa) F5@( 7, 2) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
 -> l
-T1371 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 70 $ 703 room=.
+T1184 mode=game_loop           Durin the Bold(dwa) F5@( 7, 2) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
 -> s
-T1372 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 70 $ 703 room=.
--> e
-T1373 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
--> w
-T1374 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> n
-T1375 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> s
-T1376 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> n
-T1377 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 66 $ 703 room=.
--> s
-T1378 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 65 $ 703 room=.
--> e
-T1379 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 65 $ 703 room=.
--> w
-T1380 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 64 $ 703 room=.
--> n
-T1381 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 63 $ 703 room=.
--> s
-T1382 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 63 $ 703 room=.
--> n
-T1383 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> s
-T1384 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> e
-T1385 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> w
-T1386 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> n
-T1387 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> s
-T1388 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> n
-T1389 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> s
-T1390 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> e
-T1391 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> w
-T1392 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> n
-T1393 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> s
-T1394 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> n
-T1395 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> s
-T1396 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> e
-T1397 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> w
-T1398 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> n
-T1399 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> s
-T1400 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> n
-T1401 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> i
-T1402 mode=inventory           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> eat1
-T1403 mode=inventory           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> x
-T1404 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> s
-T1405 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> e
-T1406 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 99 $ 703 room=.
--> w
-T1407 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 98 $ 703 room=.
--> n
-T1408 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 97 $ 703 room=.
--> s
-T1409 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 97 $ 703 room=.
--> n
-T1410 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 96 $ 703 room=.
--> s
-T1411 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 95 $ 703 room=.
--> e
-T1412 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 95 $ 703 room=.
--> w
-T1413 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 94 $ 703 room=.
--> n
-T1414 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 93 $ 703 room=.
--> s
-T1415 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 93 $ 703 room=.
--> n
-T1416 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 92 $ 703 room=.
--> s
-T1417 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 91 $ 703 room=.
--> e
-T1418 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 90 $ 703 room=.
--> w
-T1419 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 90 $ 703 room=.
--> n
-T1420 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 89 $ 703 room=.
--> s
-T1421 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 88 $ 703 room=.
--> n
-T1422 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 88 $ 703 room=.
--> s
-T1423 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 87 $ 703 room=.
--> e
-T1424 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 86 $ 703 room=.
--> w
-T1425 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 86 $ 703 room=.
--> n
-T1426 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 85 $ 703 room=.
--> s
-T1427 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 84 $ 703 room=.
--> n
-T1428 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 83 $ 703 room=.
--> s
-T1429 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 83 $ 703 room=.
--> e
-T1430 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 82 $ 703 room=.
--> w
-T1431 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 81 $ 703 room=.
--> n
-T1432 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 81 $ 703 room=.
--> s
-T1433 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 80 $ 703 room=.
--> n
-T1434 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 79 $ 703 room=.
--> s
-T1435 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 79 $ 703 room=.
--> e
-T1436 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 78 $ 703 room=.
--> w
-T1437 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 77 $ 703 room=.
--> n
-T1438 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 76 $ 703 room=.
--> s
-T1439 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 76 $ 703 room=.
--> n
-T1440 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 75 $ 703 room=.
--> s
-T1441 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 74 $ 703 room=.
--> e
-T1442 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 74 $ 703 room=.
--> w
-T1443 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 73 $ 703 room=.
--> n
-T1444 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 72 $ 703 room=.
--> s
-T1445 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 72 $ 703 room=.
--> n
-T1446 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 71 $ 703 room=.
--> s
-T1447 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 70 $ 703 room=.
--> e
-T1448 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
--> w
-T1449 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
--> n
-T1450 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> s
-T1451 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> n
-T1452 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> s
-T1453 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 66 $ 703 room=.
--> e
-T1454 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 65 $ 703 room=.
--> w
-T1455 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 65 $ 703 room=.
--> n
-T1456 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 64 $ 703 room=.
--> s
-T1457 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 63 $ 703 room=.
--> n
-T1458 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> s
-T1459 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> e
-T1460 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> w
-T1461 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> n
-T1462 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> s
-T1463 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> n
-T1464 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> s
-T1465 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> e
-T1466 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> w
-T1467 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> n
-T1468 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> s
-T1469 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> n
-T1470 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> s
-T1471 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> e
-T1472 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> w
-T1473 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> n
-T1474 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> s
-T1475 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> n
-T1476 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> s
-T1477 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> i
-T1478 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> eat1
-T1479 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> x
-T1480 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> e
-T1481 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 99 $ 703 room=.
--> w
-T1482 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 99 $ 703 room=.
--> n
-T1483 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 98 $ 703 room=.
--> s
-T1484 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 97 $ 703 room=.
--> n
-T1485 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 97 $ 703 room=.
--> s
-T1486 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 96 $ 703 room=.
--> e
-T1487 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 95 $ 703 room=.
--> w
-T1488 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 95 $ 703 room=.
--> n
-T1489 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 94 $ 703 room=.
--> s
-T1490 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 93 $ 703 room=.
--> n
-T1491 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 92 $ 703 room=.
--> s
-T1492 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 92 $ 703 room=.
--> e
-T1493 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 91 $ 703 room=.
--> w
-T1494 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 90 $ 703 room=.
--> n
-T1495 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 90 $ 703 room=.
--> s
-T1496 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 89 $ 703 room=.
--> n
-T1497 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 88 $ 703 room=.
--> s
-T1498 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 88 $ 703 room=.
--> e
-T1499 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 87 $ 703 room=.
--> w
-T1500 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 86 $ 703 room=.
--> n
-T1501 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 85 $ 703 room=.
--> s
-T1502 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 85 $ 703 room=.
--> n
-T1503 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 84 $ 703 room=.
--> s
-T1504 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 83 $ 703 room=.
--> e
-T1505 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 83 $ 703 room=.
--> w
-T1506 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 82 $ 703 room=.
--> n
-T1507 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 81 $ 703 room=.
--> s
-T1508 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 81 $ 703 room=.
--> n
-T1509 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 80 $ 703 room=.
--> s
-T1510 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 79 $ 703 room=.
--> e
-T1511 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 78 $ 703 room=.
--> w
-T1512 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 78 $ 703 room=.
--> n
-T1513 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 77 $ 703 room=.
--> s
-T1514 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 76 $ 703 room=.
--> n
-T1515 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 76 $ 703 room=.
--> s
-T1516 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 75 $ 703 room=.
--> e
-T1517 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 74 $ 703 room=.
--> w
-T1518 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 74 $ 703 room=.
--> n
-T1519 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 73 $ 703 room=.
--> s
-T1520 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 72 $ 703 room=.
--> n
-T1521 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 71 $ 703 room=.
--> s
-T1522 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 71 $ 703 room=.
--> e
-T1523 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 70 $ 703 room=.
--> w
-T1524 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
--> n
-T1525 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
--> s
-T1526 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> n
-T1527 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> s
-T1528 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> e
-T1529 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 66 $ 703 room=.
--> w
-T1530 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 65 $ 703 room=.
--> n
-T1531 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 64 $ 703 room=.
--> s
-T1532 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 64 $ 703 room=.
--> n
-T1533 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 63 $ 703 room=.
--> s
-T1534 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> e
-T1535 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> w
-T1536 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> n
-T1537 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> s
-T1538 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> n
-T1539 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> s
-T1540 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> e
-T1541 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> w
-T1542 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> n
-T1543 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> s
-T1544 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> n
-T1545 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> s
-T1546 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> e
-T1547 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> w
-T1548 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> n
-T1549 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> s
-T1550 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> n
-T1551 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> s
-T1552 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> e
-T1553 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> i
-T1554 mode=inventory           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> eat1
-T1555 mode=inventory           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> x
-T1556 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> w
-T1557 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 99 $ 703 room=.
--> n
-T1558 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 99 $ 703 room=.
--> s
-T1559 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 98 $ 703 room=.
--> n
-T1560 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 97 $ 703 room=.
--> s
-T1561 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 97 $ 703 room=.
--> e
-T1562 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 96 $ 703 room=.
--> w
-T1563 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 95 $ 703 room=.
--> n
-T1564 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 94 $ 703 room=.
--> s
-T1565 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 94 $ 703 room=.
--> n
-T1566 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 93 $ 703 room=.
--> s
-T1567 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 92 $ 703 room=.
--> e
-T1568 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 92 $ 703 room=.
--> w
-T1569 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 91 $ 703 room=.
--> n
-T1570 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 90 $ 703 room=.
--> s
-T1571 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 90 $ 703 room=.
--> n
-T1572 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 89 $ 703 room=.
--> s
-T1573 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 88 $ 703 room=.
--> e
-T1574 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 87 $ 703 room=.
--> w
-T1575 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 87 $ 703 room=.
--> n
-T1576 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 86 $ 703 room=.
--> s
-T1577 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 85 $ 703 room=.
--> n
-T1578 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 85 $ 703 room=.
--> s
-T1579 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 84 $ 703 room=.
--> e
-T1580 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 83 $ 703 room=.
--> w
-T1581 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 83 $ 703 room=.
--> n
-T1582 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 82 $ 703 room=.
--> s
-T1583 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 81 $ 703 room=.
--> n
-T1584 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 80 $ 703 room=.
--> s
-T1585 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 80 $ 703 room=.
--> e
-T1586 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 79 $ 703 room=.
--> w
-T1587 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 78 $ 703 room=.
--> n
-T1588 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 78 $ 703 room=.
--> s
-T1589 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 77 $ 703 room=.
--> n
-T1590 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 76 $ 703 room=.
--> s
-T1591 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 76 $ 703 room=.
--> e
-T1592 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 75 $ 703 room=.
--> w
-T1593 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 74 $ 703 room=.
--> n
-T1594 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 73 $ 703 room=.
--> s
-T1595 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 73 $ 703 room=.
--> n
-T1596 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 72 $ 703 room=.
--> s
-T1597 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 71 $ 703 room=.
--> e
-T1598 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 71 $ 703 room=.
--> w
-T1599 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 70 $ 703 room=.
--> n
-T1600 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
--> s
-T1601 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
--> n
-T1602 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> s
-T1603 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> e
-T1604 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 66 $ 703 room=.
--> w
-T1605 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 66 $ 703 room=.
--> n
-T1606 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 65 $ 703 room=.
--> s
-T1607 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 64 $ 703 room=.
--> n
-T1608 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 64 $ 703 room=.
--> s
-T1609 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 63 $ 703 room=.
--> e
-T1610 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> w
-T1611 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 62 $ 703 room=.
--> n
-T1612 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 61 $ 703 room=.
--> s
-T1613 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 60 $ 703 room=.
--> n
-T1614 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> s
-T1615 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 59 $ 703 room=.
--> e
-T1616 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 58 $ 703 room=.
--> w
-T1617 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> n
-T1618 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 57 $ 703 room=.
--> s
-T1619 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 56 $ 703 room=.
--> n
-T1620 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> s
-T1621 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 55 $ 703 room=.
--> e
-T1622 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 54 $ 703 room=.
--> w
-T1623 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 53 $ 703 room=.
--> n
-T1624 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> s
-T1625 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
--> n
-T1626 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
--> s
-T1627 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> e
-T1628 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 50 $ 703 room=.
--> w
-T1629 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> i
-T1630 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 49 $ 703 room=.
--> eat1
-T1631 mode=inventory           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> x
-T1632 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu100 $ 703 room=.
--> n
-T1633 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 99 $ 703 room=.
--> s
-T1634 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 99 $ 703 room=.
--> n
-T1635 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 98 $ 703 room=.
--> s
-T1636 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 97 $ 703 room=.
--> e
-T1637 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 96 $ 703 room=.
--> w
-T1638 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 96 $ 703 room=.
--> n
-T1639 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 95 $ 703 room=.
--> s
-T1640 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 94 $ 703 room=.
--> n
-T1641 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 94 $ 703 room=.
--> s
-T1642 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 93 $ 703 room=.
--> e
-T1643 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 92 $ 703 room=.
--> w
-T1644 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 92 $ 703 room=.
--> n
-T1645 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 91 $ 703 room=.
--> s
-T1646 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 90 $ 703 room=.
--> n
-T1647 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 89 $ 703 room=.
--> s
-T1648 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 89 $ 703 room=.
--> e
-T1649 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 88 $ 703 room=.
--> w
-T1650 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 87 $ 703 room=.
--> n
-T1651 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 87 $ 703 room=.
--> s
-T1652 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 86 $ 703 room=.
--> n
-T1653 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 85 $ 703 room=.
--> s
-T1654 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 85 $ 703 room=.
--> e
-T1655 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 84 $ 703 room=.
--> w
-T1656 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 83 $ 703 room=.
--> n
-T1657 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 82 $ 703 room=.
--> s
-T1658 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 82 $ 703 room=.
--> n
-T1659 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 81 $ 703 room=.
--> s
-T1660 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 80 $ 703 room=.
--> e
-T1661 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 80 $ 703 room=.
--> w
-T1662 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 79 $ 703 room=.
--> n
-T1663 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 78 $ 703 room=.
--> s
-T1664 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 78 $ 703 room=.
--> n
-T1665 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 77 $ 703 room=.
--> s
-T1666 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 76 $ 703 room=.
--> e
-T1667 mode=game_loop           Durin the Bold(dwa) F5@( 2, 3) HP 104/104 MP 0/0 Hu 75 $ 703 room=.
--> w
-T1668 mode=game_loop           Durin the Bold(dwa) F5@( 1, 3) HP 104/104 MP 0/0 Hu 75 $ 703 room=.
--> n
-T1669 mode=game_loop           Durin the Bold(dwa) F5@( 1, 2) HP 104/104 MP 0/0 Hu 74 $ 703 room=.
--> e
-T1670 mode=game_loop           Durin the Bold(dwa) F5@( 2, 2) HP 104/104 MP 0/0 Hu 73 $ 703 room=.
--> e
-T1671 mode=game_loop           Durin the Bold(dwa) F5@( 3, 2) HP 104/104 MP 0/0 Hu 73 $ 703 room=.
--> e
-T1672 mode=game_loop           Durin the Bold(dwa) F5@( 4, 2) HP 104/104 MP 0/0 Hu 72 $ 703 room=.
--> n
-T1673 mode=game_loop           Durin the Bold(dwa) F5@( 4, 1) HP 104/104 MP 0/0 Hu 71 $ 703 room=.
--> e
-T1674 mode=game_loop           Durin the Bold(dwa) F5@( 5, 1) HP 104/104 MP 0/0 Hu 71 $ 703 room=.
--> e
-T1675 mode=game_loop           Durin the Bold(dwa) F5@( 6, 1) HP 104/104 MP 0/0 Hu 70 $ 703 room=.
--> s
-T1676 mode=game_loop           Durin the Bold(dwa) F5@( 6, 2) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
+T1185 mode=game_loop           Durin the Bold(dwa) F5@( 7, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
 -> l
-T1677 mode=game_loop           Durin the Bold(dwa) F5@( 6, 2) HP 104/104 MP 0/0 Hu 69 $ 703 room=.
--> s
-T1678 mode=game_loop           Durin the Bold(dwa) F5@( 6, 3) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> l
-T1679 mode=game_loop           Durin the Bold(dwa) F5@( 6, 3) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> s
-T1680 mode=game_loop           Durin the Bold(dwa) F5@( 6, 4) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> l
-T1681 mode=game_loop           Durin the Bold(dwa) F5@( 6, 4) HP 104/104 MP 0/0 Hu 68 $ 703 room=.
--> s
-T1682 mode=game_loop           Durin the Bold(dwa) F5@( 6, 5) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> l
-T1683 mode=game_loop           Durin the Bold(dwa) F5@( 6, 5) HP 104/104 MP 0/0 Hu 67 $ 703 room=.
--> e
-T1684 mode=stairs_down_mode    Durin the Bold(dwa) F5@( 7, 5) HP 104/104 MP 0/0 Hu 66 $ 703 room=D
--> d
-T1685 mode=stairs_up_mode      Durin the Bold(dwa) F6@( 1, 1) HP 104/104 MP 0/0 Hu 66 $ 703 room=U
--> s
-T1686 mode=chest_mode          Durin the Bold(dwa) F6@( 1, 2) HP 104/104 MP 0/0 Hu 66 $ 803 room=C
--> o
-T1687 mode=game_loop           Durin the Bold(dwa) F6@( 1, 2) HP 104/104 MP 0/0 Hu 66 $ 933 room=.
--> l
-T1688 mode=game_loop           Durin the Bold(dwa) F6@( 1, 2) HP 104/104 MP 0/0 Hu 66 $ 933 room=.
--> s
-T1689 mode=game_loop           Durin the Bold(dwa) F6@( 1, 3) HP 104/104 MP 0/0 Hu 65 $ 933 room=.
--> s
-T1690 mode=game_loop           Durin the Bold(dwa) F6@( 1, 4) HP 104/104 MP 0/0 Hu 64 $ 933 room=.
--> s
-T1691 mode=blacksmith_mode     Durin the Bold(dwa) F6@( 1, 5) HP 104/104 MP 0/0 Hu 64 $ 933 room=B
--> 1
-T1692 mode=blacksmith_mode     Durin the Bold(dwa) F6@( 1, 5) HP 104/104 MP 0/0 Hu 64 $ 804 room=B
--> 2
-T1693 mode=blacksmith_mode     Durin the Bold(dwa) F6@( 1, 5) HP 104/104 MP 0/0 Hu 64 $ 675 room=B
--> n
-T1694 mode=game_loop           Durin the Bold(dwa) F6@( 1, 4) HP 104/104 MP 0/0 Hu 63 $ 675 room=.
--> e
-T1695 mode=game_loop           Durin the Bold(dwa) F6@( 2, 4) HP 104/104 MP 0/0 Hu 62 $ 675 room=.
--> e
-T1696 mode=game_loop           Durin the Bold(dwa) F6@( 3, 4) HP 104/104 MP 0/0 Hu 61 $ 675 room=.
--> s
-T1697 mode=game_loop           Durin the Bold(dwa) F6@( 3, 5) HP 104/104 MP 0/0 Hu 61 $ 675 room=.
+T1186 mode=game_loop           Durin the Bold(dwa) F5@( 7, 3) HP 104/104 MP 0/0 Hu 52 $ 703 room=.
 -> w
-T1698 mode=game_loop           Durin the Bold(dwa) F6@( 2, 5) HP 104/104 MP 0/0 Hu 60 $ 675 room=.
+T1187 mode=game_loop           Durin the Bold(dwa) F5@( 6, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=.
 -> w
-T1699 mode=game_loop           Durin the Bold(dwa) F6@( 1, 5) HP 104/104 MP 0/0 Hu 59 $ 675 room=B
--> s
-T1700 mode=game_loop           Durin the Bold(dwa) F6@( 1, 6) HP 104/104 MP 0/0 Hu 59 $ 675 room=.
--> n
-T1701 mode=game_loop           Durin the Bold(dwa) F6@( 1, 5) HP 104/104 MP 0/0 Hu 58 $ 675 room=B
--> n
-T1702 mode=game_loop           Durin the Bold(dwa) F6@( 1, 4) HP 104/104 MP 0/0 Hu 57 $ 675 room=.
--> e
-T1703 mode=game_loop           Durin the Bold(dwa) F6@( 2, 4) HP 104/104 MP 0/0 Hu 57 $ 675 room=.
--> e
-T1704 mode=game_loop           Durin the Bold(dwa) F6@( 3, 4) HP 104/104 MP 0/0 Hu 56 $ 675 room=.
--> s
-T1705 mode=game_loop           Durin the Bold(dwa) F6@( 3, 5) HP 104/104 MP 0/0 Hu 55 $ 675 room=.
--> e
-T1706 mode=game_loop           Durin the Bold(dwa) F6@( 4, 5) HP 104/104 MP 0/0 Hu 54 $ 675 room=.
--> s
-T1707 mode=game_loop           Durin the Bold(dwa) F6@( 4, 6) HP 104/104 MP 0/0 Hu 54 $ 675 room=.
--> e
-T1708 mode=game_loop           Durin the Bold(dwa) F6@( 5, 6) HP 104/104 MP 0/0 Hu 53 $ 675 room=.
--> n
-T1709 mode=combat_mode         Durin the Bold(dwa) F6@( 5, 5) HP 104/104 MP 0/0 Hu 52 $ 675 room=M vs Ettercap(L5 HP49/49)
+T1188 mode=combat_mode         Durin the Bold(dwa) F5@( 5, 3) HP 104/104 MP 0/0 Hu 51 $ 703 room=M vs Cockatrice(L4 HP27/27)
 -> a
-T1710 mode=combat_mode         Durin the Bold(dwa) F6@( 5, 5) HP 103/104 MP 0/0 Hu 52 $ 675 room=M vs Ettercap(L5 HP24/49)
+T1189 mode=combat_mode         Durin the Bold(dwa) F5@( 5, 3) HP 103/104 MP 0/0 Hu 51 $ 703 room=M vs Cockatrice(L4 HP27/27)
 -> a
-T1711 mode=combat_mode         Durin the Bold(dwa) F6@( 5, 5) HP 102/104 MP 0/0 Hu 52 $ 675 room=M vs Ettercap(L5 HP24/49)
--> a
-T1712 mode=combat_mode         Durin the Bold(dwa) F6@( 5, 5) HP 101/104 MP 0/0 Hu 52 $ 675 room=M vs Ettercap(L5 HP24/49)
--> f
-T1713 mode=flee_direction_mode Durin the Bold(dwa) F6@( 5, 5) HP 100/104 MP 0/0 Hu 52 $ 675 room=M
--> s
-T1714 mode=game_loop           Durin the Bold(dwa) F6@( 5, 6) HP 94/104 MP 0/0 Hu 52 $ 675 room=.
--> s
-T1715 mode=chest_mode          Durin the Bold(dwa) F6@( 5, 7) HP 88/104 MP 0/0 Hu 52 $ 675 room=C
--> n
-T1716 mode=game_loop           Durin the Bold(dwa) F6@( 5, 6) HP 82/104 MP 0/0 Hu 51 $ 675 room=.
--> i
-T1717 mode=inventory           Durin the Bold(dwa) F6@( 5, 6) HP 82/104 MP 0/0 Hu 51 $ 675 room=.
--> u10
-T1718 mode=inventory           Durin the Bold(dwa) F6@( 5, 6) HP 104/104 MP 0/0 Hu 51 $ 675 room=.
--> x
-T1719 mode=game_loop           Durin the Bold(dwa) F6@( 5, 6) HP 104/104 MP 0/0 Hu 51 $ 675 room=.
--> e
-T1720 mode=library_mode        Durin the Bold(dwa) F6@( 6, 6) HP 98/104 MP 0/0 Hu 50 $ 675 room=L
--> r
-T1721 mode=library_read_decision_mode Durin the Bold(dwa) F6@( 6, 6) HP 98/104 MP 0/0 Hu 50 $ 675 room=L
--> y
-T1722 mode=game_loop           Durin the Bold(dwa) F6@( 6, 6) HP 98/104 MP 0/0 Hu 50 $ 725 room=.
--> s
-T1723 mode=dungeon_mode        Durin the Bold(dwa) F6@( 6, 7) HP 98/104 MP 0/0 Hu 50 $ 725 room=N
--> u
-T1724 mode=game_loop           Durin the Bold(dwa) F6@( 6, 7) HP 98/104 MP 0/0 Hu 50 $ 725 room=N
--> s
-T1725 mode=combat_mode         Durin the Bold(dwa) F6@( 6, 8) HP 98/104 MP 0/0 Hu 49 $ 725 room=M vs ELITE UNDEAD MUMMY(L6 HP123/123)
--> f
-T1726 mode=combat_mode         Durin the Bold(dwa) F6@( 6, 8) HP 52/104 MP 0/0 Hu 49 $ 725 room=M vs ELITE UNDEAD MUMMY(L6 HP123/123)
--> f
-T1727 mode=flee_direction_mode Durin the Bold(dwa) F6@( 6, 8) HP 29/104 MP 0/0 Hu 49 $ 725 room=M
--> n
-T1728 mode=game_loop           Durin the Bold(dwa) F6@( 6, 7) HP 29/104 MP 0/0 Hu 49 $ 725 room=N
--> i
-T1729 mode=inventory           Durin the Bold(dwa) F6@( 6, 7) HP 29/104 MP 0/0 Hu 49 $ 725 room=N
--> u10
-T1730 mode=inventory           Durin the Bold(dwa) F6@( 6, 7) HP 59/104 MP 0/0 Hu 49 $ 725 room=N
--> u2
-T1731 mode=inventory           Durin the Bold(dwa) F6@( 6, 7) HP 89/104 MP 0/0 Hu 49 $ 725 room=N
--> x
-T1732 mode=game_loop           Durin the Bold(dwa) F6@( 6, 7) HP 89/104 MP 0/0 Hu 49 $ 725 room=N
--> i
-T1733 mode=inventory           Durin the Bold(dwa) F6@( 6, 7) HP 89/104 MP 0/0 Hu 49 $ 725 room=N
--> u10
-T1734 mode=inventory           Durin the Bold(dwa) F6@( 6, 7) HP 104/104 MP 0/0 Hu 49 $ 725 room=N
--> x
-T1735 mode=game_loop           Durin the Bold(dwa) F6@( 6, 7) HP 104/104 MP 0/0 Hu 49 $ 725 room=N
--> i
-T1736 mode=inventory           Durin the Bold(dwa) F6@( 6, 7) HP 104/104 MP 0/0 Hu 49 $ 725 room=N
--> eat1
-T1737 mode=inventory           Durin the Bold(dwa) F6@( 6, 7) HP 104/104 MP 0/0 Hu100 $ 725 room=N
--> x
-T1738 mode=game_loop           Durin the Bold(dwa) F6@( 6, 7) HP 104/104 MP 0/0 Hu100 $ 725 room=N
--> w
-T1739 mode=game_loop           Durin the Bold(dwa) F6@( 5, 7) HP 104/104 MP 0/0 Hu 99 $ 725 room=C
--> n
-T1740 mode=game_loop           Durin the Bold(dwa) F6@( 5, 6) HP 104/104 MP 0/0 Hu 98 $ 725 room=.
--> e
-T1741 mode=game_loop           Durin the Bold(dwa) F6@( 6, 6) HP 104/104 MP 0/0 Hu 98 $ 725 room=.
--> n
-T1742 mode=game_loop           Durin the Bold(dwa) F6@( 6, 5) HP 104/104 MP 0/0 Hu 97 $ 725 room=.
--> n
-T1743 mode=garden_mode         Durin the Bold(dwa) F6@( 6, 4) HP 104/104 MP 0/0 Hu 96 $ 725 room=G
--> h
-T1744 mode=game_loop           Durin the Bold(dwa) F6@( 6, 4) HP 104/104 MP 0/0 Hu 96 $ 725 room=.
--> e
-T1745 mode=game_loop           Durin the Bold(dwa) F6@( 7, 4) HP 104/104 MP 0/0 Hu 96 $ 725 room=.
--> e
-T1746 mode=game_loop           Durin the Bold(dwa) F6@( 8, 4) HP 104/104 MP 0/0 Hu 95 $ 725 room=.
--> n
-T1747 mode=game_loop           Durin the Bold(dwa) F6@( 8, 3) HP 104/104 MP 0/0 Hu 94 $ 725 room=.
--> e
-T1748 mode=game_loop           Durin the Bold(dwa) F6@( 9, 3) HP 104/104 MP 0/0 Hu 94 $ 725 room=.
--> e
-T1749 mode=game_loop           Durin the Bold(dwa) F6@(10, 3) HP 104/104 MP 0/0 Hu 93 $ 725 room=.
--> s
-T1750 mode=combat_mode         Durin the Bold(dwa) F6@(10, 4) HP 104/104 MP 0/0 Hu 92 $ 725 room=M vs Hardened Kobold(L5 HP12/12)
--> a
-T1751 mode=combat_victory      Durin the Bold(dwa) F6@(10, 4) HP 104/104 MP 0/0 Hu 92 $ 773 room=.
+T1190 mode=combat_victory      Durin the Bold(dwa) F5@( 5, 3) HP 102/104 MP 0/0 Hu 51 $ 728 room=.
 -> back
-T1752 mode=game_loop           Durin the Bold(dwa) F6@(10, 4) HP 104/104 MP 0/0 Hu 92 $ 773 room=.
--> i
-T1753 mode=inventory           Durin the Bold(dwa) F6@(10, 4) HP 104/104 MP 0/0 Hu 92 $ 773 room=.
--> u18
-T1754 mode=inventory           Durin the Bold(dwa) F6@(10, 4) HP 104/104 MP 0/0 Hu 92 $ 773 room=.
--> x
-T1755 mode=game_loop           Durin the Bold(dwa) F6@(10, 4) HP 104/104 MP 0/0 Hu 92 $ 773 room=.
--> e
-T1756 mode=pool_mode           Durin the Bold(dwa) F6@(11, 4) HP 104/104 MP 0/0 Hu 91 $ 773 room=P
--> dr
-T1757 mode=game_loop           Durin the Bold(dwa) F6@(11, 4) HP 104/104 MP 0/0 Hu 91 $ 773 room=.
--> e
-T1758 mode=game_loop           Durin the Bold(dwa) F6@(12, 4) HP 104/104 MP 0/0 Hu 91 $ 773 room=.
+T1191 mode=game_loop           Durin the Bold(dwa) F5@( 5, 3) HP 102/104 MP 0/0 Hu 51 $ 728 room=.
+-> l
+T1192 mode=game_loop           Durin the Bold(dwa) F5@( 5, 3) HP 102/104 MP 0/0 Hu 51 $ 728 room=.
 -> s
-T1759 mode=game_loop           Durin the Bold(dwa) F6@(12, 5) HP 104/104 MP 0/0 Hu 90 $ 773 room=.
--> w
-T1760 mode=game_loop           Durin the Bold(dwa) F6@(11, 5) HP 104/104 MP 0/0 Hu 89 $ 773 room=.
--> w
-T1761 mode=chest_mode          Durin the Bold(dwa) F6@(10, 5) HP 104/104 MP 0/0 Hu 89 $ 773 room=C
--> o
-T1762 mode=game_loop           Durin the Bold(dwa) F6@(10, 5) HP 104/104 MP 0/0 Hu 89 $ 1043 room=.
--> s
-T1763 mode=game_loop           Durin the Bold(dwa) F6@(10, 6) HP 104/104 MP 0/0 Hu 88 $ 1043 room=.
--> s
-T1764 mode=game_loop           Durin the Bold(dwa) F6@(10, 7) HP 104/104 MP 0/0 Hu 87 $ 1043 room=.
--> e
-T1765 mode=library_mode        Durin the Bold(dwa) F6@(11, 7) HP 104/104 MP 0/0 Hu 87 $ 1043 room=L
+T1193 mode=library_mode        Durin the Bold(dwa) F5@( 5, 4) HP 102/104 MP 0/0 Hu 50 $ 728 room=L
 -> r
-T1766 mode=game_loop           Durin the Bold(dwa) F6@(11, 7) HP 104/104 MP 0/0 Hu 87 $ 1043 room=.
--> e
-T1767 mode=game_loop           Durin the Bold(dwa) F6@(12, 7) HP 104/104 MP 0/0 Hu 86 $ 1043 room=.
--> s
-T1768 mode=game_loop           Durin the Bold(dwa) F6@(12, 8) HP 104/104 MP 0/0 Hu 85 $ 1043 room=.
--> w
-T1769 mode=game_loop           Durin the Bold(dwa) F6@(11, 8) HP 104/104 MP 0/0 Hu 84 $ 1043 room=.
--> w
-T1770 mode=game_loop           Durin the Bold(dwa) F6@(10, 8) HP 104/104 MP 0/0 Hu 84 $ 1043 room=.
--> n
-T1771 mode=game_loop           Durin the Bold(dwa) F6@(10, 7) HP 104/104 MP 0/0 Hu 83 $ 1043 room=.
--> n
-T1772 mode=game_loop           Durin the Bold(dwa) F6@(10, 6) HP 104/104 MP 0/0 Hu 82 $ 1043 room=.
--> n
-T1773 mode=game_loop           Durin the Bold(dwa) F6@(10, 5) HP 104/104 MP 0/0 Hu 82 $ 1043 room=.
--> n
-T1774 mode=game_loop           Durin the Bold(dwa) F6@(10, 4) HP 104/104 MP 0/0 Hu 81 $ 1043 room=.
--> w
-T1775 mode=game_loop           Durin the Bold(dwa) F6@( 9, 4) HP 104/104 MP 0/0 Hu 80 $ 1043 room=.
--> s
-T1776 mode=game_loop           Durin the Bold(dwa) F6@( 9, 5) HP 104/104 MP 0/0 Hu 80 $ 1043 room=.
--> s
-T1777 mode=game_loop           Durin the Bold(dwa) F6@( 9, 6) HP 104/104 MP 0/0 Hu 79 $ 1043 room=.
--> e
-T1778 mode=game_loop           Durin the Bold(dwa) F6@(10, 6) HP 104/104 MP 0/0 Hu 78 $ 1043 room=.
--> s
-T1779 mode=game_loop           Durin the Bold(dwa) F6@(10, 7) HP 104/104 MP 0/0 Hu 77 $ 1043 room=.
--> s
-T1780 mode=fey_garden_mode     Durin the Bold(dwa) F6@(10, 8) HP 104/104 MP 0/0 Hu 77 $ 1043 room=G
--> h
-T1781 mode=game_loop           Durin the Bold(dwa) F6@(10, 8) HP 104/104 MP 0/0 Hu 77 $ 1043 room=.
--> e
-T1782 mode=game_loop           Durin the Bold(dwa) F6@(11, 8) HP 104/104 MP 0/0 Hu 76 $ 1043 room=.
--> e
-T1783 mode=game_loop           Durin the Bold(dwa) F6@(12, 8) HP 104/104 MP 0/0 Hu 75 $ 1043 room=.
--> n
-T1784 mode=game_loop           Durin the Bold(dwa) F6@(12, 7) HP 104/104 MP 0/0 Hu 75 $ 1043 room=.
--> n
-T1785 mode=game_loop           Durin the Bold(dwa) F6@(12, 6) HP 104/104 MP 0/0 Hu 74 $ 1043 room=.
--> w
-T1786 mode=stairs_down_mode    Durin the Bold(dwa) F6@(11, 6) HP 104/104 MP 0/0 Hu 73 $ 1043 room=D
--> n
-T1787 mode=game_loop           Durin the Bold(dwa) F6@(11, 5) HP 104/104 MP 0/0 Hu 73 $ 1043 room=.
--> e
-T1788 mode=game_loop           Durin the Bold(dwa) F6@(12, 5) HP 104/104 MP 0/0 Hu 72 $ 1043 room=.
--> n
-T1789 mode=game_loop           Durin the Bold(dwa) F6@(12, 4) HP 104/104 MP 0/0 Hu 71 $ 1043 room=.
--> w
-T1790 mode=game_loop           Durin the Bold(dwa) F6@(11, 4) HP 104/104 MP 0/0 Hu 70 $ 1043 room=.
--> w
-T1791 mode=game_loop           Durin the Bold(dwa) F6@(10, 4) HP 104/104 MP 0/0 Hu 70 $ 1043 room=.
--> s
-T1792 mode=game_loop           Durin the Bold(dwa) F6@(10, 5) HP 104/104 MP 0/0 Hu 69 $ 1043 room=.
--> s
-T1793 mode=game_loop           Durin the Bold(dwa) F6@(10, 6) HP 104/104 MP 0/0 Hu 68 $ 1043 room=.
--> e
-T1794 mode=stairs_down_mode    Durin the Bold(dwa) F6@(11, 6) HP 104/104 MP 0/0 Hu 68 $ 1043 room=D
--> n
-T1795 mode=game_loop           Durin the Bold(dwa) F6@(11, 5) HP 104/104 MP 0/0 Hu 67 $ 1043 room=.
--> e
-T1796 mode=game_loop           Durin the Bold(dwa) F6@(12, 5) HP 104/104 MP 0/0 Hu 66 $ 1043 room=.
--> s
-T1797 mode=game_loop           Durin the Bold(dwa) F6@(12, 6) HP 104/104 MP 0/0 Hu 66 $ 1043 room=.
--> s
-T1798 mode=game_loop           Durin the Bold(dwa) F6@(12, 7) HP 104/104 MP 0/0 Hu 65 $ 1043 room=.
--> s
-T1799 mode=game_loop           Durin the Bold(dwa) F6@(12, 8) HP 104/104 MP 0/0 Hu 64 $ 1043 room=.
--> w
-T1800 mode=game_loop           Durin the Bold(dwa) F6@(11, 8) HP 104/104 MP 0/0 Hu 63 $ 1043 room=.
--> n
-T1801 mode=game_loop           Durin the Bold(dwa) F6@(11, 7) HP 104/104 MP 0/0 Hu 63 $ 1043 room=.
--> n
-T1802 mode=stairs_down_mode    Durin the Bold(dwa) F6@(11, 6) HP 104/104 MP 0/0 Hu 62 $ 1043 room=D
--> n
-T1803 mode=game_loop           Durin the Bold(dwa) F6@(11, 5) HP 104/104 MP 0/0 Hu 61 $ 1043 room=.
--> w
-T1804 mode=game_loop           Durin the Bold(dwa) F6@(10, 5) HP 104/104 MP 0/0 Hu 61 $ 1043 room=.
--> s
-T1805 mode=game_loop           Durin the Bold(dwa) F6@(10, 6) HP 104/104 MP 0/0 Hu 60 $ 1043 room=.
--> w
-T1806 mode=game_loop           Durin the Bold(dwa) F6@( 9, 6) HP 104/104 MP 0/0 Hu 59 $ 1043 room=.
--> s
-T1807 mode=game_loop           Durin the Bold(dwa) F6@( 9, 7) HP 104/104 MP 0/0 Hu 59 $ 1043 room=.
--> e
-T1808 mode=game_loop           Durin the Bold(dwa) F6@(10, 7) HP 104/104 MP 0/0 Hu 58 $ 1043 room=.
--> e
-T1809 mode=game_loop           Durin the Bold(dwa) F6@(11, 7) HP 104/104 MP 0/0 Hu 57 $ 1043 room=.
--> n
-T1810 mode=stairs_down_mode    Durin the Bold(dwa) F6@(11, 6) HP 104/104 MP 0/0 Hu 56 $ 1043 room=D
--> n
-T1811 mode=game_loop           Durin the Bold(dwa) F6@(11, 5) HP 104/104 MP 0/0 Hu 56 $ 1043 room=.
--> e
-T1812 mode=game_loop           Durin the Bold(dwa) F6@(12, 5) HP 104/104 MP 0/0 Hu 55 $ 1043 room=.
--> s
-T1813 mode=game_loop           Durin the Bold(dwa) F6@(12, 6) HP 104/104 MP 0/0 Hu 54 $ 1043 room=.
--> s
-T1814 mode=game_loop           Durin the Bold(dwa) F6@(12, 7) HP 104/104 MP 0/0 Hu 54 $ 1043 room=.
--> s
-T1815 mode=game_loop           Durin the Bold(dwa) F6@(12, 8) HP 104/104 MP 0/0 Hu 53 $ 1043 room=.
--> s
-T1816 mode=warp_mode           Durin the Bold(dwa) F6@(12, 9) HP 104/104 MP 0/0 Hu 52 $ 1043 room=W
+T1194 mode=library_read_decision_mode Durin the Bold(dwa) F5@( 5, 4) HP 102/104 MP 0/0 Hu 50 $ 728 room=L
 -> y
-T1817 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 104/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
--> f
-T1818 mode=flee_direction_mode Durin the Bold(dwa) F8@( 4,10) HP 89/104 MP 0/0 Hu 52 $ 1043 room=M
--> c
-T1819 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 89/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
--> f
-T1820 mode=flee_direction_mode Durin the Bold(dwa) F8@( 4,10) HP 89/104 MP 0/0 Hu 52 $ 1043 room=M
--> c
-T1821 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 89/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
--> f
-T1822 mode=flee_direction_mode Durin the Bold(dwa) F8@( 4,10) HP 74/104 MP 0/0 Hu 52 $ 1043 room=M
--> c
-T1823 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 74/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
--> f
-T1824 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 59/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
--> f
-T1825 mode=flee_direction_mode Durin the Bold(dwa) F8@( 4,10) HP 44/104 MP 0/0 Hu 52 $ 1043 room=M
--> c
-T1826 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 44/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
+T1195 mode=game_loop           Durin the Bold(dwa) F5@( 5, 4) HP 102/104 MP 0/0 Hu 50 $ 728 room=.
 -> i
-T1827 mode=inventory           Durin the Bold(dwa) F8@( 4,10) HP 44/104 MP 0/0 Hu 52 $ 1043 room=M
--> u2
-T1828 mode=inventory           Durin the Bold(dwa) F8@( 4,10) HP 74/104 MP 0/0 Hu 52 $ 1043 room=M
+T1196 mode=inventory           Durin the Bold(dwa) F5@( 5, 4) HP 102/104 MP 0/0 Hu 50 $ 728 room=.
+-> eat4
+T1197 mode=inventory           Durin the Bold(dwa) F5@( 5, 4) HP 102/104 MP 0/0 Hu 62 $ 728 room=.
 -> x
-T1829 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 74/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
+T1198 mode=game_loop           Durin the Bold(dwa) F5@( 5, 4) HP 102/104 MP 0/0 Hu 62 $ 728 room=.
+-> l
+T1199 mode=game_loop           Durin the Bold(dwa) F5@( 5, 4) HP 102/104 MP 0/0 Hu 62 $ 728 room=.
+-> s
+T1200 mode=game_loop           Durin the Bold(dwa) F5@( 4, 4) HP 102/104 MP 0/0 Hu 61 $ 728 room=.
+-> l
+T1201 mode=game_loop           Durin the Bold(dwa) F5@( 4, 4) HP 102/104 MP 0/0 Hu 61 $ 728 room=.
+-> w
+T1202 mode=garden_mode         Durin the Bold(dwa) F5@( 3, 4) HP 102/104 MP 0/0 Hu 60 $ 728 room=G
+-> h
+T1203 mode=game_loop           Durin the Bold(dwa) F5@( 3, 4) HP 102/104 MP 0/0 Hu 60 $ 728 room=.
+-> e
+T1204 mode=warp_mode           Durin the Bold(dwa) F5@( 3, 3) HP 102/104 MP 0/0 Hu 60 $ 728 room=W
+-> y
+T1205 mode=game_loop           Durin the Bold(dwa) F7@(16,11) HP 102/104 MP 0/0 Hu 60 $ 728 room=.
+-> l
+T1206 mode=game_loop           Durin the Bold(dwa) F7@(16,11) HP 102/104 MP 0/0 Hu 60 $ 728 room=.
+-> e
+T1207 mode=game_loop           Durin the Bold(dwa) F7@(17,11) HP 102/104 MP 0/0 Hu 59 $ 828 room=.
+-> e
+T1208 mode=vendor_shop         Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 828 room=V
+-> b12
+T1209 mode=vendor_shop         Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 798 room=V
+-> b12
+T1210 mode=vendor_shop         Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 783 room=V
+-> b12
+T1211 mode=vendor_shop         Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 773 room=V
+-> b6
+T1212 mode=vendor_shop         Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 653 room=V
+-> b12
+T1213 mode=vendor_shop         Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 648 room=V
+-> b12
+T1214 mode=vendor_shop         Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 643 room=V
+-> b10
+T1215 mode=vendor_shop         Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 393 room=V
+-> b5
+T1216 mode=vendor_shop         Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 213 room=V
+-> x
+T1217 mode=game_loop           Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 58 $ 213 room=V
+-> s
+T1218 mode=game_loop           Durin the Bold(dwa) F7@(18,12) HP 102/104 MP 0/0 Hu 58 $ 213 room=.
+-> e
+T1219 mode=game_loop           Durin the Bold(dwa) F7@(19,12) HP 102/104 MP 0/0 Hu 57 $ 213 room=.
+-> s
+T1220 mode=game_loop           Durin the Bold(dwa) F7@(19,13) HP 102/104 MP 0/0 Hu 56 $ 213 room=.
+-> w
+T1221 mode=game_loop           Durin the Bold(dwa) F7@(18,13) HP 102/104 MP 0/0 Hu 56 $ 213 room=.
+-> s
+T1222 mode=game_loop           Durin the Bold(dwa) F7@(18,14) HP 102/104 MP 0/0 Hu 55 $ 213 room=.
+-> e
+T1223 mode=chest_mode          Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 54 $ 213 room=C
+-> o
+T1224 mode=game_loop           Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 54 $ 213 room=.
+-> i
+T1225 mode=inventory           Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 54 $ 213 room=.
+-> e1
+T1226 mode=inventory           Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 54 $ 213 room=.
+-> x
+T1227 mode=game_loop           Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 54 $ 213 room=.
+-> s
+T1228 mode=tomb_mode           Durin the Bold(dwa) F7@(19,15) HP 102/104 MP 0/0 Hu 53 $ 213 room=T
+-> p
+T1229 mode=game_loop           Durin the Bold(dwa) F7@(19,15) HP 102/104 MP 0/0 Hu 53 $ 213 room=T
+-> n
+T1230 mode=game_loop           Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 53 $ 213 room=.
+-> n
+T1231 mode=game_loop           Durin the Bold(dwa) F7@(19,13) HP 102/104 MP 0/0 Hu 52 $ 213 room=.
+-> w
+T1232 mode=game_loop           Durin the Bold(dwa) F7@(18,13) HP 102/104 MP 0/0 Hu 51 $ 213 room=.
+-> n
+T1233 mode=game_loop           Durin the Bold(dwa) F7@(18,12) HP 102/104 MP 0/0 Hu 51 $ 213 room=.
+-> w
+T1234 mode=stairs_down_mode    Durin the Bold(dwa) F7@(17,12) HP 102/104 MP 0/0 Hu 50 $ 213 room=D
+-> n
+T1235 mode=game_loop           Durin the Bold(dwa) F7@(17,11) HP 102/104 MP 0/0 Hu 49 $ 213 room=.
+-> i
+T1236 mode=inventory           Durin the Bold(dwa) F7@(17,11) HP 102/104 MP 0/0 Hu 49 $ 213 room=.
+-> eat4
+T1237 mode=inventory           Durin the Bold(dwa) F7@(17,11) HP 102/104 MP 0/0 Hu 61 $ 213 room=.
+-> u15
+T1238 mode=upgrade_scroll_mode Durin the Bold(dwa) F7@(17,11) HP 102/104 MP 0/0 Hu 61 $ 213 room=.
+-> 1
+T1239 mode=inventory           Durin the Bold(dwa) F7@(17,11) HP 102/104 MP 0/0 Hu 61 $ 213 room=.
+-> x
+T1240 mode=game_loop           Durin the Bold(dwa) F7@(17,11) HP 102/104 MP 0/0 Hu 61 $ 213 room=.
+-> e
+T1241 mode=game_loop           Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 61 $ 213 room=V
+-> s
+T1242 mode=game_loop           Durin the Bold(dwa) F7@(18,12) HP 102/104 MP 0/0 Hu 60 $ 213 room=.
+-> s
+T1243 mode=game_loop           Durin the Bold(dwa) F7@(18,13) HP 102/104 MP 0/0 Hu 59 $ 213 room=.
+-> s
+T1244 mode=game_loop           Durin the Bold(dwa) F7@(18,14) HP 102/104 MP 0/0 Hu 58 $ 213 room=.
+-> e
+T1245 mode=game_loop           Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 58 $ 213 room=.
+-> s
+T1246 mode=game_loop           Durin the Bold(dwa) F7@(19,15) HP 102/104 MP 0/0 Hu 57 $ 213 room=T
+-> n
+T1247 mode=game_loop           Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 56 $ 213 room=.
+-> n
+T1248 mode=game_loop           Durin the Bold(dwa) F7@(19,13) HP 102/104 MP 0/0 Hu 56 $ 213 room=.
+-> w
+T1249 mode=game_loop           Durin the Bold(dwa) F7@(18,13) HP 102/104 MP 0/0 Hu 55 $ 213 room=.
+-> n
+T1250 mode=game_loop           Durin the Bold(dwa) F7@(18,12) HP 102/104 MP 0/0 Hu 54 $ 213 room=.
+-> e
+T1251 mode=game_loop           Durin the Bold(dwa) F7@(19,12) HP 102/104 MP 0/0 Hu 54 $ 213 room=.
+-> s
+T1252 mode=game_loop           Durin the Bold(dwa) F7@(19,13) HP 102/104 MP 0/0 Hu 53 $ 213 room=.
+-> s
+T1253 mode=game_loop           Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 52 $ 213 room=.
+-> s
+T1254 mode=game_loop           Durin the Bold(dwa) F7@(19,15) HP 102/104 MP 0/0 Hu 51 $ 213 room=T
+-> n
+T1255 mode=game_loop           Durin the Bold(dwa) F7@(19,14) HP 102/104 MP 0/0 Hu 51 $ 213 room=.
+-> w
+T1256 mode=game_loop           Durin the Bold(dwa) F7@(18,14) HP 102/104 MP 0/0 Hu 50 $ 213 room=.
+-> n
+T1257 mode=game_loop           Durin the Bold(dwa) F7@(18,13) HP 102/104 MP 0/0 Hu 49 $ 213 room=.
+-> i
+T1258 mode=inventory           Durin the Bold(dwa) F7@(18,13) HP 102/104 MP 0/0 Hu 49 $ 213 room=.
+-> eat4
+T1259 mode=inventory           Durin the Bold(dwa) F7@(18,13) HP 102/104 MP 0/0 Hu 61 $ 213 room=.
+-> x
+T1260 mode=game_loop           Durin the Bold(dwa) F7@(18,13) HP 102/104 MP 0/0 Hu 61 $ 213 room=.
+-> n
+T1261 mode=game_loop           Durin the Bold(dwa) F7@(18,12) HP 102/104 MP 0/0 Hu 61 $ 213 room=.
+-> n
+T1262 mode=game_loop           Durin the Bold(dwa) F7@(18,11) HP 102/104 MP 0/0 Hu 60 $ 213 room=V
+-> w
+T1263 mode=fey_garden_mode     Durin the Bold(dwa) F7@(17,11) HP 102/104 MP 0/0 Hu 59 $ 213 room=G
+-> h
+T1264 mode=game_loop           Durin the Bold(dwa) F7@(17,11) HP 102/104 MP 0/0 Hu 59 $ 213 room=.
+-> s
+T1265 mode=stairs_down_mode    Durin the Bold(dwa) F7@(17,12) HP 102/104 MP 0/0 Hu 59 $ 213 room=D
+-> w
+T1266 mode=game_loop           Durin the Bold(dwa) F7@(16,12) HP 102/104 MP 0/0 Hu 58 $ 213 room=.
+-> n
+T1267 mode=game_loop           Durin the Bold(dwa) F7@(16,11) HP 102/104 MP 0/0 Hu 57 $ 213 room=.
+-> n
+T1268 mode=game_loop           Durin the Bold(dwa) F7@(16,10) HP 102/104 MP 0/0 Hu 56 $ 213 room=.
+-> w
+T1269 mode=game_loop           Durin the Bold(dwa) F7@(15,10) HP 102/104 MP 0/0 Hu 56 $ 213 room=.
+-> s
+T1270 mode=game_loop           Durin the Bold(dwa) F7@(15,11) HP 102/104 MP 0/0 Hu 55 $ 213 room=.
+-> w
+T1271 mode=game_loop           Durin the Bold(dwa) F7@(14,11) HP 102/104 MP 0/0 Hu 54 $ 213 room=.
+-> w
+T1272 mode=game_loop           Durin the Bold(dwa) F7@(13,11) HP 102/104 MP 0/0 Hu 54 $ 213 room=.
+-> n
+T1273 mode=game_loop           Durin the Bold(dwa) F7@(13,10) HP 102/104 MP 0/0 Hu 53 $ 213 room=.
+-> w
+T1274 mode=chest_mode          Durin the Bold(dwa) F7@(12,10) HP 102/104 MP 0/0 Hu 52 $ 213 room=C
+-> e
+T1275 mode=game_loop           Durin the Bold(dwa) F7@(13,10) HP 102/104 MP 0/0 Hu 52 $ 213 room=.
+-> e
+T1276 mode=game_loop           Durin the Bold(dwa) F7@(14,10) HP 102/104 MP 0/0 Hu 51 $ 213 room=.
+-> s
+T1277 mode=game_loop           Durin the Bold(dwa) F7@(14,11) HP 102/104 MP 0/0 Hu 50 $ 213 room=.
+-> e
+T1278 mode=game_loop           Durin the Bold(dwa) F7@(15,11) HP 102/104 MP 0/0 Hu 49 $ 213 room=.
+-> i
+T1279 mode=inventory           Durin the Bold(dwa) F7@(15,11) HP 102/104 MP 0/0 Hu 49 $ 213 room=.
+-> eat1
+T1280 mode=inventory           Durin the Bold(dwa) F7@(15,11) HP 102/104 MP 0/0 Hu100 $ 213 room=.
+-> x
+T1281 mode=game_loop           Durin the Bold(dwa) F7@(15,11) HP 102/104 MP 0/0 Hu100 $ 213 room=.
+-> n
+T1282 mode=game_loop           Durin the Bold(dwa) F7@(15,10) HP 102/104 MP 0/0 Hu100 $ 213 room=.
+-> e
+T1283 mode=game_loop           Durin the Bold(dwa) F7@(16,10) HP 103/104 MP 0/0 Hu 99 $ 213 room=.
+-> s
+T1284 mode=game_loop           Durin the Bold(dwa) F7@(16,11) HP 103/104 MP 0/0 Hu 98 $ 213 room=.
+-> s
+T1285 mode=game_loop           Durin the Bold(dwa) F7@(16,12) HP 104/104 MP 0/0 Hu 98 $ 213 room=.
+-> e
+T1286 mode=stairs_down_mode    Durin the Bold(dwa) F7@(17,12) HP 104/104 MP 0/0 Hu 97 $ 213 room=D
+-> n
+T1287 mode=game_loop           Durin the Bold(dwa) F7@(17,11) HP 104/104 MP 0/0 Hu 96 $ 213 room=.
+-> e
+T1288 mode=game_loop           Durin the Bold(dwa) F7@(18,11) HP 104/104 MP 0/0 Hu 96 $ 213 room=V
+-> s
+T1289 mode=game_loop           Durin the Bold(dwa) F7@(18,12) HP 104/104 MP 0/0 Hu 95 $ 213 room=.
+-> s
+T1290 mode=game_loop           Durin the Bold(dwa) F7@(18,13) HP 104/104 MP 0/0 Hu 94 $ 213 room=.
+-> s
+T1291 mode=game_loop           Durin the Bold(dwa) F7@(18,14) HP 104/104 MP 0/0 Hu 93 $ 213 room=.
+-> e
+T1292 mode=game_loop           Durin the Bold(dwa) F7@(19,14) HP 104/104 MP 0/0 Hu 93 $ 213 room=.
+-> s
+T1293 mode=game_loop           Durin the Bold(dwa) F7@(19,15) HP 104/104 MP 0/0 Hu 92 $ 213 room=T
+-> n
+T1294 mode=game_loop           Durin the Bold(dwa) F7@(19,14) HP 104/104 MP 0/0 Hu 91 $ 213 room=.
+-> n
+T1295 mode=game_loop           Durin the Bold(dwa) F7@(19,13) HP 104/104 MP 0/0 Hu 91 $ 213 room=.
+-> w
+T1296 mode=game_loop           Durin the Bold(dwa) F7@(18,13) HP 104/104 MP 0/0 Hu 90 $ 213 room=.
+-> n
+T1297 mode=game_loop           Durin the Bold(dwa) F7@(18,12) HP 104/104 MP 0/0 Hu 89 $ 213 room=.
+-> n
+T1298 mode=game_loop           Durin the Bold(dwa) F7@(18,11) HP 104/104 MP 0/0 Hu 89 $ 213 room=V
+-> w
+T1299 mode=game_loop           Durin the Bold(dwa) F7@(17,11) HP 104/104 MP 0/0 Hu 88 $ 213 room=.
+-> s
+T1300 mode=stairs_down_mode    Durin the Bold(dwa) F7@(17,12) HP 104/104 MP 0/0 Hu 87 $ 213 room=D
+-> w
+T1301 mode=game_loop           Durin the Bold(dwa) F7@(16,12) HP 104/104 MP 0/0 Hu 86 $ 213 room=.
+-> n
+T1302 mode=game_loop           Durin the Bold(dwa) F7@(16,11) HP 104/104 MP 0/0 Hu 86 $ 213 room=.
+-> w
+T1303 mode=game_loop           Durin the Bold(dwa) F7@(15,11) HP 104/104 MP 0/0 Hu 85 $ 213 room=.
+-> n
+T1304 mode=game_loop           Durin the Bold(dwa) F7@(15,10) HP 104/104 MP 0/0 Hu 84 $ 213 room=.
+-> w
+T1305 mode=game_loop           Durin the Bold(dwa) F7@(14,10) HP 104/104 MP 0/0 Hu 84 $ 213 room=.
+-> s
+T1306 mode=game_loop           Durin the Bold(dwa) F7@(14,11) HP 104/104 MP 0/0 Hu 83 $ 213 room=.
+-> s
+T1307 mode=warp_mode           Durin the Bold(dwa) F7@(14,12) HP 104/104 MP 0/0 Hu 82 $ 213 room=W
+-> y
+T1308 mode=game_loop           Durin the Bold(dwa) F5@(13,13) HP 104/104 MP 0/0 Hu 82 $ 213 room=.
+-> w
+T1309 mode=combat_mode         Durin the Bold(dwa) F5@(12,13) HP 104/104 MP 0/0 Hu 82 $ 213 room=M vs Zombie(L4 HP39/39)
+-> a
+T1310 mode=combat_mode         Durin the Bold(dwa) F5@(12,13) HP 103/104 MP 0/0 Hu 82 $ 213 room=M vs Zombie(L4 HP2/39)
+-> a
+T1311 mode=combat_mode         Durin the Bold(dwa) F5@(12,13) HP 102/104 MP 0/0 Hu 82 $ 213 room=M vs Zombie(L4 HP2/39)
+-> a
+T1312 mode=combat_victory      Durin the Bold(dwa) F5@(12,13) HP 102/104 MP 0/0 Hu 82 $ 233 room=.
+-> back
+T1313 mode=game_loop           Durin the Bold(dwa) F5@(12,13) HP 102/104 MP 0/0 Hu 82 $ 233 room=.
+-> n
+T1314 mode=game_loop           Durin the Bold(dwa) F5@(12,12) HP 102/104 MP 0/0 Hu 81 $ 233 room=.
+-> n
+T1315 mode=game_loop           Durin the Bold(dwa) F5@(12,11) HP 102/104 MP 0/0 Hu 80 $ 233 room=.
+-> e
+T1316 mode=game_loop           Durin the Bold(dwa) F5@(13,11) HP 102/104 MP 0/0 Hu 79 $ 233 room=.
+-> s
+T1317 mode=game_loop           Durin the Bold(dwa) F5@(13,12) HP 103/104 MP 0/0 Hu 79 $ 233 room=.
+-> s
+T1318 mode=game_loop           Durin the Bold(dwa) F5@(13,13) HP 103/104 MP 0/0 Hu 78 $ 233 room=.
+-> w
+T1319 mode=game_loop           Durin the Bold(dwa) F5@(12,13) HP 103/104 MP 0/0 Hu 77 $ 233 room=.
+-> n
+T1320 mode=game_loop           Durin the Bold(dwa) F5@(12,12) HP 103/104 MP 0/0 Hu 77 $ 233 room=.
+-> n
+T1321 mode=game_loop           Durin the Bold(dwa) F5@(12,11) HP 104/104 MP 0/0 Hu 76 $ 233 room=.
+-> w
+T1322 mode=warp_mode           Durin the Bold(dwa) F5@(11,11) HP 104/104 MP 0/0 Hu 75 $ 233 room=W
+-> y
+T1323 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 104/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
 -> f
-T1830 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 74/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
+T1324 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 66/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
 -> f
-T1831 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 44/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
+T1325 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 66/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
 -> f
-T1832 mode=flee_direction_mode Durin the Bold(dwa) F8@( 4,10) HP 44/104 MP 0/0 Hu 52 $ 1043 room=M
--> c
-T1833 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 44/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
+T1326 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 28/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> i
+T1327 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 28/104 MP 0/0 Hu 75 $ 233 room=M
+-> u2
+T1328 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 104/104 MP 0/0 Hu 75 $ 233 room=M
+-> x
+T1329 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 104/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
 -> f
-T1834 mode=flee_direction_mode Durin the Bold(dwa) F8@( 4,10) HP 29/104 MP 0/0 Hu 52 $ 1043 room=M
--> c
-T1835 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 29/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
+T1330 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 104/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
 -> f
-T1836 mode=flee_direction_mode Durin the Bold(dwa) F8@( 4,10) HP 14/104 MP 0/0 Hu 52 $ 1043 room=M
--> c
-T1837 mode=combat_mode         Durin the Bold(dwa) F8@( 4,10) HP 14/104 MP 0/0 Hu 52 $ 1043 room=M vs Mummy(L7 HP102/102)
+T1331 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 66/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
 -> f
-T1838 mode=death_screen        Durin the Bold(dwa) F8@( 4,10) HP -1/104 MP 0/0 Hu 52 $ 1043 room=M
+T1332 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 28/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> i
+T1333 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 28/104 MP 0/0 Hu 75 $ 233 room=M
+-> u2
+T1334 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 58/104 MP 0/0 Hu 75 $ 233 room=M
+-> x
+T1335 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 58/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> f
+T1336 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 20/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> i
+T1337 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 20/104 MP 0/0 Hu 75 $ 233 room=M
+-> u2
+T1338 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 50/104 MP 0/0 Hu 75 $ 233 room=M
+-> x
+T1339 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 50/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> i
+T1340 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 50/104 MP 0/0 Hu 75 $ 233 room=M
+-> u2
+T1341 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 80/104 MP 0/0 Hu 75 $ 233 room=M
+-> x
+T1342 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 80/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> f
+T1343 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 42/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> i
+T1344 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 42/104 MP 0/0 Hu 75 $ 233 room=M
+-> u2
+T1345 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 72/104 MP 0/0 Hu 75 $ 233 room=M
+-> x
+T1346 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 72/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> f
+T1347 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 34/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> i
+T1348 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 34/104 MP 0/0 Hu 75 $ 233 room=M
+-> u2
+T1349 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 64/104 MP 0/0 Hu 75 $ 233 room=M
+-> u1
+T1350 mode=inventory           Durin the Bold(dwa) F5@( 5,14) HP 64/104 MP 0/0 Hu 75 $ 233 room=M
+-> x
+T1351 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 64/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> f
+T1352 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 26/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> f
+T1353 mode=combat_mode         Durin the Bold(dwa) F5@( 5,14) HP 26/104 MP 0/0 Hu 75 $ 233 room=M vs Vault Keeper Wraith(L6 HP220/220)
+-> f
+T1354 mode=death_screen        Durin the Bold(dwa) F5@( 5,14) HP -12/104 MP 0/0 Hu 75 $ 233 room=M
 
-=== run finished: turns=1838 floor=8 hp=-1/104 gold=1043 alive=False mode=death_screen ===
+=== run finished: turns=1354 floor=5 hp=-12/104 gold=233 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00089_dwarf.html

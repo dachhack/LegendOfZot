@@ -1901,2674 +1901,570 @@ T 941 mode=game_loop           Balin Runesinger(dwa) F4@(19,15) HP 100/100 MP 0/
 T 942 mode=game_loop           Balin Runesinger(dwa) F4@(18,15) HP 100/100 MP 0/0 Hu 64 $ 856 room=.
 -> n
 T 943 mode=game_loop           Balin Runesinger(dwa) F4@(18,14) HP 100/100 MP 0/0 Hu 63 $ 856 room=.
--> s
-T 944 mode=game_loop           Balin Runesinger(dwa) F4@(18,15) HP 100/100 MP 0/0 Hu 62 $ 856 room=.
--> s
-T 945 mode=game_loop           Balin Runesinger(dwa) F4@(18,16) HP 100/100 MP 0/0 Hu 62 $ 856 room=.
 -> w
-T 946 mode=game_loop           Balin Runesinger(dwa) F4@(17,16) HP 100/100 MP 0/0 Hu 61 $ 856 room=.
--> w
-T 947 mode=game_loop           Balin Runesinger(dwa) F4@(16,16) HP 100/100 MP 0/0 Hu 60 $ 856 room=.
--> l
-T 948 mode=game_loop           Balin Runesinger(dwa) F4@(16,16) HP 100/100 MP 0/0 Hu 60 $ 856 room=.
--> n
-T 949 mode=game_loop           Balin Runesinger(dwa) F4@(16,15) HP 100/100 MP 0/0 Hu 60 $ 856 room=.
--> l
-T 950 mode=game_loop           Balin Runesinger(dwa) F4@(16,15) HP 100/100 MP 0/0 Hu 60 $ 856 room=.
--> n
-T 951 mode=game_loop           Balin Runesinger(dwa) F4@(16,14) HP 100/100 MP 0/0 Hu 59 $ 856 room=.
--> l
-T 952 mode=game_loop           Balin Runesinger(dwa) F4@(16,14) HP 100/100 MP 0/0 Hu 59 $ 856 room=.
--> w
-T 953 mode=oracle_mode         Balin Runesinger(dwa) F4@(15,14) HP 100/100 MP 0/0 Hu 58 $ 856 room=O
--> s
-T 954 mode=game_loop           Balin Runesinger(dwa) F4@(15,15) HP 100/100 MP 0/0 Hu 57 $ 856 room=.
--> w
-T 955 mode=game_loop           Balin Runesinger(dwa) F4@(14,15) HP 100/100 MP 0/0 Hu 57 $ 856 room=.
--> w
-T 956 mode=game_loop           Balin Runesinger(dwa) F4@(13,15) HP 100/100 MP 0/0 Hu 56 $ 856 room=.
--> w
-T 957 mode=chest_mode          Balin Runesinger(dwa) F4@(12,15) HP 100/100 MP 0/0 Hu 55 $ 856 room=C
--> o
-T 958 mode=game_loop           Balin Runesinger(dwa) F4@(12,15) HP 100/100 MP 0/0 Hu 55 $ 856 room=.
--> s
-T 959 mode=library_mode        Balin Runesinger(dwa) F4@(12,16) HP 100/100 MP 0/0 Hu 55 $ 856 room=L
+T 944 mode=library_mode        Balin Runesinger(dwa) F4@(17,14) HP 100/100 MP 0/0 Hu 62 $ 856 room=L
 -> r
-T 960 mode=library_read_decision_mode Balin Runesinger(dwa) F4@(12,16) HP 100/100 MP 0/0 Hu 55 $ 856 room=L
--> y
-T 961 mode=game_loop           Balin Runesinger(dwa) F4@(12,16) HP 100/100 MP 0/0 Hu 55 $ 856 room=.
--> w
-T 962 mode=combat_mode         Balin Runesinger(dwa) F4@(11,16) HP 100/100 MP 0/0 Hu 54 $ 856 room=M vs Myconid Shaman(L3 HP46/46)
--> a
-T 963 mode=combat_mode         Balin Runesinger(dwa) F4@(11,16) HP 99/100 MP 0/0 Hu 54 $ 856 room=M vs Myconid Shaman(L3 HP46/46)
--> a
-T 964 mode=combat_mode         Balin Runesinger(dwa) F4@(11,16) HP 99/100 MP 0/0 Hu 54 $ 856 room=M vs Myconid Shaman(L3 HP46/46)
--> a
-T 965 mode=combat_mode         Balin Runesinger(dwa) F4@(11,16) HP 98/100 MP 0/0 Hu 54 $ 856 room=M vs Myconid Shaman(L3 HP15/46)
--> a
-T 966 mode=combat_victory      Balin Runesinger(dwa) F4@(11,16) HP 98/100 MP 0/0 Hu 54 $ 896 room=.
--> back
-T 967 mode=game_loop           Balin Runesinger(dwa) F4@(11,16) HP 98/100 MP 0/0 Hu 54 $ 896 room=.
--> e
-T 968 mode=game_loop           Balin Runesinger(dwa) F4@(12,16) HP 98/100 MP 0/0 Hu 53 $ 896 room=.
--> e
-T 969 mode=game_loop           Balin Runesinger(dwa) F4@(13,16) HP 98/100 MP 0/0 Hu 53 $ 896 room=.
--> e
-T 970 mode=combat_mode         Balin Runesinger(dwa) F4@(14,16) HP 98/100 MP 0/0 Hu 52 $ 896 room=M vs Stirge(L3 HP6/6)
--> a
-T 971 mode=combat_victory      Balin Runesinger(dwa) F4@(14,16) HP 98/110 MP 0/0 Hu 52 $ 1028 room=.
--> back
-T 972 mode=game_loop           Balin Runesinger(dwa) F4@(14,16) HP 98/110 MP 0/0 Hu 52 $ 1028 room=.
+T 945 mode=game_loop           Balin Runesinger(dwa) F4@(17,14) HP 100/100 MP 0/0 Hu 62 $ 856 room=.
 -> n
-T 973 mode=game_loop           Balin Runesinger(dwa) F4@(14,15) HP 98/110 MP 0/0 Hu 51 $ 1028 room=.
--> n
-T 974 mode=game_loop           Balin Runesinger(dwa) F4@(14,14) HP 98/110 MP 0/0 Hu 50 $ 1028 room=.
--> l
-T 975 mode=game_loop           Balin Runesinger(dwa) F4@(14,14) HP 98/110 MP 0/0 Hu 50 $ 1028 room=.
--> e
-T 976 mode=game_loop           Balin Runesinger(dwa) F4@(15,14) HP 98/110 MP 0/0 Hu 50 $ 1028 room=O
--> l
-T 977 mode=game_loop           Balin Runesinger(dwa) F4@(15,14) HP 98/110 MP 0/0 Hu 50 $ 1028 room=O
--> e
-T 978 mode=game_loop           Balin Runesinger(dwa) F4@(16,14) HP 98/110 MP 0/0 Hu 49 $ 1028 room=.
--> i
-T 979 mode=inventory           Balin Runesinger(dwa) F4@(16,14) HP 98/110 MP 0/0 Hu 49 $ 1028 room=.
--> u7
-T 980 mode=inventory           Balin Runesinger(dwa) F4@(16,14) HP 110/110 MP 0/0 Hu 49 $ 1028 room=.
--> u5
-T 981 mode=upgrade_scroll_mode Balin Runesinger(dwa) F4@(16,14) HP 110/110 MP 0/0 Hu 49 $ 1028 room=.
--> 1
-T 982 mode=inventory           Balin Runesinger(dwa) F4@(16,14) HP 110/110 MP 0/0 Hu 49 $ 1028 room=.
--> x
-T 983 mode=game_loop           Balin Runesinger(dwa) F4@(16,14) HP 110/110 MP 0/0 Hu 49 $ 1028 room=.
--> i
-T 984 mode=inventory           Balin Runesinger(dwa) F4@(16,14) HP 110/110 MP 0/0 Hu 49 $ 1028 room=.
--> eat4
-T 985 mode=inventory           Balin Runesinger(dwa) F4@(16,14) HP 110/110 MP 0/0 Hu 59 $ 1028 room=.
--> x
-T 986 mode=game_loop           Balin Runesinger(dwa) F4@(16,14) HP 110/110 MP 0/0 Hu 59 $ 1028 room=.
--> s
-T 987 mode=game_loop           Balin Runesinger(dwa) F4@(16,15) HP 110/110 MP 0/0 Hu 58 $ 1028 room=.
--> s
-T 988 mode=game_loop           Balin Runesinger(dwa) F4@(16,16) HP 110/110 MP 0/0 Hu 58 $ 1028 room=.
--> w
-T 989 mode=game_loop           Balin Runesinger(dwa) F4@(15,16) HP 110/110 MP 0/0 Hu 57 $ 1028 room=.
--> n
-T 990 mode=game_loop           Balin Runesinger(dwa) F4@(15,15) HP 110/110 MP 0/0 Hu 56 $ 1028 room=.
--> n
-T 991 mode=game_loop           Balin Runesinger(dwa) F4@(15,14) HP 110/110 MP 0/0 Hu 56 $ 1028 room=O
--> e
-T 992 mode=game_loop           Balin Runesinger(dwa) F4@(16,14) HP 110/110 MP 0/0 Hu 55 $ 1028 room=.
--> s
-T 993 mode=game_loop           Balin Runesinger(dwa) F4@(16,15) HP 110/110 MP 0/0 Hu 54 $ 1028 room=.
--> e
-T 994 mode=combat_mode         Balin Runesinger(dwa) F4@(17,15) HP 110/110 MP 0/0 Hu 53 $ 1028 room=M vs Hell Hound(L3 HP65/65)
--> a
-T 995 mode=combat_mode         Balin Runesinger(dwa) F4@(17,15) HP 100/110 MP 0/0 Hu 53 $ 1028 room=M vs Hell Hound(L3 HP35/65)
--> a
-T 996 mode=combat_mode         Balin Runesinger(dwa) F4@(17,15) HP 90/110 MP 0/0 Hu 53 $ 1028 room=M vs Hell Hound(L3 HP35/65)
--> f
-T 997 mode=flee_direction_mode Balin Runesinger(dwa) F4@(17,15) HP 80/110 MP 0/0 Hu 53 $ 1028 room=M
--> n
-T 998 mode=library_mode        Balin Runesinger(dwa) F4@(17,14) HP 80/110 MP 0/0 Hu 53 $ 1028 room=L
--> r
-T 999 mode=game_loop           Balin Runesinger(dwa) F4@(17,14) HP 80/110 MP 0/0 Hu 53 $ 1028 room=.
--> e
-T1000 mode=game_loop           Balin Runesinger(dwa) F4@(18,14) HP 80/110 MP 0/0 Hu 53 $ 1028 room=.
--> s
-T1001 mode=game_loop           Balin Runesinger(dwa) F4@(18,15) HP 80/110 MP 0/0 Hu 52 $ 1028 room=.
--> e
-T1002 mode=game_loop           Balin Runesinger(dwa) F4@(19,15) HP 80/110 MP 0/0 Hu 51 $ 1028 room=.
--> n
-T1003 mode=game_loop           Balin Runesinger(dwa) F4@(19,14) HP 80/110 MP 0/0 Hu 51 $ 1028 room=.
--> n
-T1004 mode=game_loop           Balin Runesinger(dwa) F4@(19,13) HP 80/110 MP 0/0 Hu 50 $ 1028 room=.
--> n
-T1005 mode=game_loop           Balin Runesinger(dwa) F4@(19,12) HP 80/110 MP 0/0 Hu 49 $ 1028 room=.
--> i
-T1006 mode=inventory           Balin Runesinger(dwa) F4@(19,12) HP 80/110 MP 0/0 Hu 49 $ 1028 room=.
--> eat1
-T1007 mode=inventory           Balin Runesinger(dwa) F4@(19,12) HP 80/110 MP 0/0 Hu100 $ 1028 room=.
--> x
-T1008 mode=game_loop           Balin Runesinger(dwa) F4@(19,12) HP 80/110 MP 0/0 Hu100 $ 1028 room=.
--> n
-T1009 mode=game_loop           Balin Runesinger(dwa) F4@(19,11) HP 80/110 MP 0/0 Hu100 $ 1028 room=.
--> w
-T1010 mode=game_loop           Balin Runesinger(dwa) F4@(18,11) HP 81/110 MP 0/0 Hu 99 $ 1028 room=.
--> w
-T1011 mode=game_loop           Balin Runesinger(dwa) F4@(17,11) HP 81/110 MP 0/0 Hu 98 $ 1028 room=.
--> n
-T1012 mode=game_loop           Balin Runesinger(dwa) F4@(17,10) HP 82/110 MP 0/0 Hu 97 $ 1028 room=.
--> w
-T1013 mode=game_loop           Balin Runesinger(dwa) F4@(16,10) HP 82/110 MP 0/0 Hu 97 $ 1028 room=.
--> w
-T1014 mode=game_loop           Balin Runesinger(dwa) F4@(15,10) HP 83/110 MP 0/0 Hu 96 $ 1028 room=.
--> w
-T1015 mode=game_loop           Balin Runesinger(dwa) F4@(14,10) HP 83/110 MP 0/0 Hu 95 $ 1028 room=.
--> w
-T1016 mode=game_loop           Balin Runesinger(dwa) F4@(13,10) HP 84/110 MP 0/0 Hu 95 $ 1028 room=.
--> n
-T1017 mode=game_loop           Balin Runesinger(dwa) F4@(13, 9) HP 84/110 MP 0/0 Hu 94 $ 1028 room=.
--> w
-T1018 mode=game_loop           Balin Runesinger(dwa) F4@(12, 9) HP 85/110 MP 0/0 Hu 93 $ 1028 room=.
--> w
-T1019 mode=game_loop           Balin Runesinger(dwa) F4@(11, 9) HP 85/110 MP 0/0 Hu 93 $ 1028 room=.
--> w
-T1020 mode=game_loop           Balin Runesinger(dwa) F4@(10, 9) HP 86/110 MP 0/0 Hu 92 $ 1028 room=.
--> n
-T1021 mode=game_loop           Balin Runesinger(dwa) F4@(10, 8) HP 86/110 MP 0/0 Hu 91 $ 1028 room=.
--> w
-T1022 mode=game_loop           Balin Runesinger(dwa) F4@( 9, 8) HP 87/110 MP 0/0 Hu 90 $ 1028 room=N
--> n
-T1023 mode=game_loop           Balin Runesinger(dwa) F4@( 9, 7) HP 87/110 MP 0/0 Hu 90 $ 1028 room=.
--> w
-T1024 mode=game_loop           Balin Runesinger(dwa) F4@( 8, 7) HP 88/110 MP 0/0 Hu 89 $ 1028 room=.
--> w
-T1025 mode=game_loop           Balin Runesinger(dwa) F4@( 7, 7) HP 88/110 MP 0/0 Hu 88 $ 1028 room=.
--> w
-T1026 mode=game_loop           Balin Runesinger(dwa) F4@( 6, 7) HP 89/110 MP 0/0 Hu 88 $ 1028 room=.
--> n
-T1027 mode=game_loop           Balin Runesinger(dwa) F4@( 6, 6) HP 89/110 MP 0/0 Hu 87 $ 1028 room=.
--> n
-T1028 mode=game_loop           Balin Runesinger(dwa) F4@( 6, 5) HP 90/110 MP 0/0 Hu 86 $ 1028 room=.
--> w
-T1029 mode=game_loop           Balin Runesinger(dwa) F4@( 5, 5) HP 90/110 MP 0/0 Hu 86 $ 1028 room=.
--> n
-T1030 mode=game_loop           Balin Runesinger(dwa) F4@( 5, 4) HP 91/110 MP 0/0 Hu 85 $ 1028 room=.
--> n
-T1031 mode=game_loop           Balin Runesinger(dwa) F4@( 5, 3) HP 91/110 MP 0/0 Hu 84 $ 1028 room=.
--> w
-T1032 mode=game_loop           Balin Runesinger(dwa) F4@( 4, 3) HP 91/110 MP 0/0 Hu 83 $ 1028 room=.
--> n
-T1033 mode=game_loop           Balin Runesinger(dwa) F4@( 4, 2) HP 91/110 MP 0/0 Hu 83 $ 1028 room=.
--> w
-T1034 mode=stairs_down_mode    Balin Runesinger(dwa) F4@( 3, 2) HP 92/110 MP 0/0 Hu 82 $ 1028 room=D
--> d
-T1035 mode=stairs_up_mode      Balin Runesinger(dwa) F5@( 1, 1) HP 92/110 MP 0/0 Hu 82 $ 1028 room=U
--> e
-T1036 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 1) HP 92/110 MP 0/0 Hu 81 $ 1028 room=.
--> s
-T1037 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 2) HP 92/110 MP 0/0 Hu 81 $ 1028 room=.
--> e
-T1038 mode=altar_mode          Balin Runesinger(dwa) F5@( 3, 2) HP 92/110 MP 0/0 Hu 80 $ 1028 room=A
--> pray
-T1039 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 2) HP 92/110 MP 0/0 Hu 80 $ 1028 room=.
--> s
-T1040 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 3) HP 93/110 MP 0/0 Hu 79 $ 1028 room=.
--> s
-T1041 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 4) HP 93/110 MP 0/0 Hu 79 $ 1028 room=.
--> w
-T1042 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 4) HP 93/110 MP 0/0 Hu 78 $ 1028 room=.
--> n
-T1043 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 3) HP 93/110 MP 0/0 Hu 77 $ 1028 room=.
--> n
-T1044 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 2) HP 94/110 MP 0/0 Hu 76 $ 1028 room=.
--> w
-T1045 mode=garden_mode         Balin Runesinger(dwa) F5@( 1, 2) HP 94/110 MP 0/0 Hu 76 $ 1028 room=G
--> h
-T1046 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 2) HP 94/110 MP 0/0 Hu 76 $ 1028 room=.
--> s
-T1047 mode=combat_mode         Balin Runesinger(dwa) F5@( 1, 3) HP 94/110 MP 0/0 Hu 75 $ 1028 room=M vs Kobold(L4 HP22/22)
--> a
-T1048 mode=combat_victory      Balin Runesinger(dwa) F5@( 1, 3) HP 94/110 MP 0/0 Hu 75 $ 1073 room=.
--> back
-T1049 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 3) HP 94/110 MP 0/0 Hu 75 $ 1073 room=.
--> i
-T1050 mode=inventory           Balin Runesinger(dwa) F5@( 1, 3) HP 94/110 MP 0/0 Hu 75 $ 1073 room=.
--> u15
-T1051 mode=inventory           Balin Runesinger(dwa) F5@( 1, 3) HP 94/110 MP 0/0 Hu 75 $ 1073 room=.
--> x
-T1052 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 3) HP 94/110 MP 0/0 Hu 75 $ 1073 room=.
--> s
-T1053 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 4) HP 94/110 MP 0/0 Hu 74 $ 1073 room=.
--> e
-T1054 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 4) HP 95/110 MP 0/0 Hu 74 $ 1073 room=.
--> e
-T1055 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 4) HP 95/110 MP 0/0 Hu 73 $ 1073 room=.
--> s
-T1056 mode=combat_mode         Balin Runesinger(dwa) F5@( 3, 5) HP 95/110 MP 0/0 Hu 72 $ 1073 room=M vs Ogre(L4 HP83/83)
--> a
-T1057 mode=combat_mode         Balin Runesinger(dwa) F5@( 3, 5) HP 90/110 MP 0/0 Hu 72 $ 1073 room=M vs Ogre(L4 HP55/83)
--> f
-T1058 mode=flee_direction_mode Balin Runesinger(dwa) F5@( 3, 5) HP 90/110 MP 0/0 Hu 72 $ 1073 room=M
--> n
-T1059 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 4) HP 90/110 MP 0/0 Hu 72 $ 1073 room=.
--> n
-T1060 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 3) HP 90/110 MP 0/0 Hu 72 $ 1073 room=.
--> w
-T1061 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 3) HP 91/110 MP 0/0 Hu 71 $ 1073 room=.
--> s
-T1062 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 4) HP 91/110 MP 0/0 Hu 70 $ 1073 room=.
--> w
-T1063 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 4) HP 91/110 MP 0/0 Hu 69 $ 1073 room=.
--> n
-T1064 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 3) HP 91/110 MP 0/0 Hu 69 $ 1073 room=.
--> n
-T1065 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 2) HP 92/110 MP 0/0 Hu 68 $ 1073 room=.
--> e
-T1066 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 2) HP 92/110 MP 0/0 Hu 67 $ 1073 room=.
--> s
-T1067 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 3) HP 92/110 MP 0/0 Hu 67 $ 1073 room=.
--> s
-T1068 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 4) HP 92/110 MP 0/0 Hu 66 $ 1073 room=.
--> w
-T1069 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 4) HP 93/110 MP 0/0 Hu 65 $ 1073 room=.
--> s
-T1070 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 5) HP 93/110 MP 0/0 Hu 65 $ 1073 room=.
--> s
-T1071 mode=chest_mode          Balin Runesinger(dwa) F5@( 1, 6) HP 93/110 MP 0/0 Hu 64 $ 1073 room=C
--> o
-T1072 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 6) HP 93/110 MP 0/0 Hu 64 $ 1223 room=.
--> s
-T1073 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 7) HP 93/110 MP 0/0 Hu 63 $ 1223 room=.
--> e
-T1074 mode=combat_mode         Balin Runesinger(dwa) F5@( 2, 7) HP 94/110 MP 0/0 Hu 62 $ 1223 room=M vs Gargoyle(L4 HP62/62)
--> a
-T1075 mode=combat_mode         Balin Runesinger(dwa) F5@( 2, 7) HP 82/110 MP 0/0 Hu 62 $ 1223 room=M vs Gargoyle(L4 HP62/62)
--> a
-T1076 mode=combat_mode         Balin Runesinger(dwa) F5@( 2, 7) HP 70/110 MP 0/0 Hu 62 $ 1223 room=M vs Gargoyle(L4 HP62/62)
--> a
-T1077 mode=combat_mode         Balin Runesinger(dwa) F5@( 2, 7) HP 58/110 MP 0/0 Hu 62 $ 1223 room=M vs Gargoyle(L4 HP35/62)
--> a
-T1078 mode=combat_mode         Balin Runesinger(dwa) F5@( 2, 7) HP 46/110 MP 0/0 Hu 62 $ 1223 room=M vs Gargoyle(L4 HP8/62)
--> a
-T1079 mode=combat_victory      Balin Runesinger(dwa) F5@( 2, 7) HP 34/110 MP 0/0 Hu 62 $ 1263 room=.
--> back
-T1080 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 7) HP 34/110 MP 0/0 Hu 62 $ 1263 room=.
--> e
-T1081 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 7) HP 34/110 MP 0/0 Hu 62 $ 1263 room=.
--> n
-T1082 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 6) HP 34/110 MP 0/0 Hu 61 $ 1263 room=.
--> w
-T1083 mode=combat_mode         Balin Runesinger(dwa) F5@( 2, 6) HP 34/110 MP 0/0 Hu 60 $ 1263 room=M vs Gray Ooze(L4 HP37/37)
--> a
-T1084 mode=combat_mode         Balin Runesinger(dwa) F5@( 2, 6) HP 33/110 MP 0/0 Hu 60 $ 1263 room=M vs Gray Ooze(L4 HP37/37)
--> a
-T1085 mode=combat_mode         Balin Runesinger(dwa) F5@( 2, 6) HP 32/110 MP 0/0 Hu 60 $ 1263 room=M vs Gray Ooze(L4 HP37/37)
--> f
-T1086 mode=flee_direction_mode Balin Runesinger(dwa) F5@( 2, 6) HP 32/110 MP 0/0 Hu 60 $ 1263 room=M
--> w
-T1087 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 6) HP 32/110 MP 0/0 Hu 60 $ 1263 room=.
--> s
-T1088 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 7) HP 33/110 MP 0/0 Hu 60 $ 1263 room=.
--> e
-T1089 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 7) HP 33/110 MP 0/0 Hu 59 $ 1263 room=.
--> e
-T1090 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 7) HP 33/110 MP 0/0 Hu 58 $ 1263 room=.
--> n
-T1091 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 6) HP 33/110 MP 0/0 Hu 58 $ 1263 room=.
--> e
-T1092 mode=combat_mode         Balin Runesinger(dwa) F5@( 4, 6) HP 33/110 MP 0/0 Hu 57 $ 1263 room=M vs Displacer Beast(L4 HP43/43)
--> a
-T1093 mode=combat_mode         Balin Runesinger(dwa) F5@( 4, 6) HP 33/110 MP 0/0 Hu 57 $ 1263 room=M vs Displacer Beast(L4 HP43/43)
--> a
-T1094 mode=combat_mode         Balin Runesinger(dwa) F5@( 4, 6) HP 33/110 MP 0/0 Hu 57 $ 1263 room=M vs Displacer Beast(L4 HP43/43)
--> a
-T1095 mode=combat_mode         Balin Runesinger(dwa) F5@( 4, 6) HP 33/110 MP 0/0 Hu 57 $ 1263 room=M vs Displacer Beast(L4 HP43/43)
--> a
-T1096 mode=combat_mode         Balin Runesinger(dwa) F5@( 4, 6) HP 33/110 MP 0/0 Hu 57 $ 1263 room=M vs Displacer Beast(L4 HP43/43)
--> a
-T1097 mode=combat_mode         Balin Runesinger(dwa) F5@( 4, 6) HP 32/110 MP 0/0 Hu 57 $ 1263 room=M vs Displacer Beast(L4 HP43/43)
--> f
-T1098 mode=flee_direction_mode Balin Runesinger(dwa) F5@( 4, 6) HP 32/110 MP 0/0 Hu 57 $ 1263 room=M
--> w
-T1099 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 6) HP 32/110 MP 0/0 Hu 57 $ 1263 room=.
--> s
-T1100 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 7) HP 32/110 MP 0/0 Hu 56 $ 1263 room=.
--> w
-T1101 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 7) HP 32/110 MP 0/0 Hu 55 $ 1263 room=.
--> w
-T1102 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 7) HP 32/110 MP 0/0 Hu 55 $ 1263 room=.
--> n
-T1103 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 6) HP 32/110 MP 0/0 Hu 54 $ 1263 room=.
--> n
-T1104 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 5) HP 32/110 MP 0/0 Hu 53 $ 1263 room=.
--> n
-T1105 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 4) HP 32/110 MP 0/0 Hu 53 $ 1263 room=.
--> e
-T1106 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 4) HP 32/110 MP 0/0 Hu 52 $ 1263 room=.
--> e
-T1107 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 4) HP 32/110 MP 0/0 Hu 51 $ 1263 room=.
--> n
-T1108 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 3) HP 32/110 MP 0/0 Hu 51 $ 1263 room=.
--> n
-T1109 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 2) HP 32/110 MP 0/0 Hu 50 $ 1263 room=.
--> e
-T1110 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 2) HP 32/110 MP 0/0 Hu 49 $ 1263 room=.
--> i
-T1111 mode=inventory           Balin Runesinger(dwa) F5@( 4, 2) HP 32/110 MP 0/0 Hu 49 $ 1263 room=.
--> eat4
-T1112 mode=inventory           Balin Runesinger(dwa) F5@( 4, 2) HP 32/110 MP 0/0 Hu 64 $ 1263 room=.
--> x
-T1113 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 2) HP 32/110 MP 0/0 Hu 64 $ 1263 room=.
--> e
-T1114 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 2) HP 32/110 MP 0/0 Hu 63 $ 1263 room=.
--> s
-T1115 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 3) HP 32/110 MP 0/0 Hu 63 $ 1263 room=.
--> n
-T1116 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 2) HP 32/110 MP 0/0 Hu 62 $ 1263 room=.
--> n
-T1117 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 1) HP 33/110 MP 0/0 Hu 61 $ 1263 room=.
--> w
-T1118 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 1) HP 33/110 MP 0/0 Hu 61 $ 1263 room=.
--> s
-T1119 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 2) HP 33/110 MP 0/0 Hu 60 $ 1263 room=.
--> w
-T1120 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 2) HP 33/110 MP 0/0 Hu 59 $ 1263 room=.
--> w
-T1121 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 2) HP 33/110 MP 0/0 Hu 59 $ 1263 room=.
--> s
-T1122 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 3) HP 33/110 MP 0/0 Hu 58 $ 1263 room=.
--> s
-T1123 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 4) HP 33/110 MP 0/0 Hu 57 $ 1263 room=.
--> w
-T1124 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 4) HP 33/110 MP 0/0 Hu 56 $ 1263 room=.
--> s
-T1125 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 5) HP 33/110 MP 0/0 Hu 56 $ 1263 room=.
--> s
-T1126 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 6) HP 33/110 MP 0/0 Hu 55 $ 1263 room=.
--> s
-T1127 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 7) HP 33/110 MP 0/0 Hu 54 $ 1263 room=.
--> e
-T1128 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 7) HP 33/110 MP 0/0 Hu 54 $ 1263 room=.
--> e
-T1129 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 7) HP 33/110 MP 0/0 Hu 53 $ 1263 room=.
--> e
-T1130 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 7) HP 33/110 MP 0/0 Hu 52 $ 1263 room=.
--> s
-T1131 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 8) HP 33/110 MP 0/0 Hu 52 $ 1263 room=.
--> e
-T1132 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 8) HP 33/110 MP 0/0 Hu 51 $ 1263 room=.
--> s
-T1133 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 9) HP 33/110 MP 0/0 Hu 50 $ 1263 room=.
--> w
-T1134 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 9) HP 33/110 MP 0/0 Hu 49 $ 1263 room=.
--> i
-T1135 mode=inventory           Balin Runesinger(dwa) F5@( 4, 9) HP 33/110 MP 0/0 Hu 49 $ 1263 room=.
--> eat1
-T1136 mode=inventory           Balin Runesinger(dwa) F5@( 4, 9) HP 33/110 MP 0/0 Hu100 $ 1263 room=.
--> x
-T1137 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 9) HP 33/110 MP 0/0 Hu100 $ 1263 room=.
--> w
-T1138 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 9) HP 33/110 MP 0/0 Hu100 $ 1263 room=.
--> s
-T1139 mode=game_loop           Balin Runesinger(dwa) F5@( 3,10) HP 34/110 MP 0/0 Hu 99 $ 1263 room=.
--> e
-T1140 mode=game_loop           Balin Runesinger(dwa) F5@( 4,10) HP 34/110 MP 0/0 Hu 98 $ 1263 room=.
--> e
-T1141 mode=chest_mode          Balin Runesinger(dwa) F5@( 5,10) HP 35/110 MP 0/0 Hu 98 $ 1263 room=C
--> n
-T1142 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 9) HP 35/110 MP 0/0 Hu 97 $ 1263 room=.
--> e
-T1143 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 9) HP 36/110 MP 0/0 Hu 96 $ 1263 room=.
--> n
-T1144 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 8) HP 36/110 MP 0/0 Hu 96 $ 1263 room=.
--> n
-T1145 mode=library_mode        Balin Runesinger(dwa) F5@( 6, 7) HP 37/110 MP 0/0 Hu 95 $ 1263 room=L
--> r
-T1146 mode=library_read_decision_mode Balin Runesinger(dwa) F5@( 6, 7) HP 37/110 MP 0/0 Hu 95 $ 1263 room=L
--> y
-T1147 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 7) HP 37/110 MP 0/0 Hu 95 $ 1338 room=.
--> e
-T1148 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 29/110 MP 0/0 Hu 94 $ 1338 room=.
--> e
-T1149 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 22/110 MP 0/0 Hu 93 $ 1338 room=.
--> s
-T1150 mode=garden_mode         Balin Runesinger(dwa) F5@( 8, 8) HP 14/110 MP 0/0 Hu 93 $ 1338 room=G
--> h
-T1151 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 14/110 MP 0/0 Hu 93 $ 1338 room=.
--> w
-T1152 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 7/110 MP 0/0 Hu 92 $ 1338 room=.
--> s
-T1153 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 9) HP 7/110 MP 0/0 Hu 91 $ 1338 room=.
--> w
-T1154 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 9) HP 8/110 MP 0/0 Hu 91 $ 1338 room=.
--> n
-T1155 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 8) HP 8/110 MP 0/0 Hu 90 $ 1338 room=.
--> w
-T1156 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 8) HP 9/110 MP 0/0 Hu 89 $ 1338 room=.
--> w
-T1157 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 8) HP 9/110 MP 0/0 Hu 89 $ 1338 room=.
--> s
-T1158 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 9) HP 10/110 MP 0/0 Hu 88 $ 1338 room=.
--> w
-T1159 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 9) HP 10/110 MP 0/0 Hu 87 $ 1338 room=.
--> s
-T1160 mode=game_loop           Balin Runesinger(dwa) F5@( 3,10) HP 11/110 MP 0/0 Hu 86 $ 1338 room=.
--> w
-T1161 mode=game_loop           Balin Runesinger(dwa) F5@( 2,10) HP 11/110 MP 0/0 Hu 86 $ 1338 room=.
--> w
-T1162 mode=game_loop           Balin Runesinger(dwa) F5@( 1,10) HP 12/110 MP 0/0 Hu 85 $ 1338 room=.
--> s
-T1163 mode=chest_mode          Balin Runesinger(dwa) F5@( 1,11) HP 12/110 MP 0/0 Hu 84 $ 1338 room=C
--> n
-T1164 mode=game_loop           Balin Runesinger(dwa) F5@( 1,10) HP 12/110 MP 0/0 Hu 84 $ 1338 room=.
--> n
-T1165 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 9) HP 12/110 MP 0/0 Hu 83 $ 1338 room=.
--> e
-T1166 mode=combat_mode         Balin Runesinger(dwa) F5@( 2, 9) HP 13/110 MP 0/0 Hu 82 $ 1338 room=M vs Gargoyle(L4 HP62/62)
--> f
-T1167 mode=flee_direction_mode Balin Runesinger(dwa) F5@( 2, 9) HP 13/110 MP 0/0 Hu 82 $ 1338 room=M
--> s
-T1168 mode=game_loop           Balin Runesinger(dwa) F5@( 2,10) HP 13/110 MP 0/0 Hu 82 $ 1338 room=.
--> e
-T1169 mode=game_loop           Balin Runesinger(dwa) F5@( 3,10) HP 13/110 MP 0/0 Hu 82 $ 1338 room=.
--> n
-T1170 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 9) HP 13/110 MP 0/0 Hu 81 $ 1338 room=.
--> n
-T1171 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 8) HP 13/110 MP 0/0 Hu 80 $ 1338 room=.
--> w
-T1172 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 8) HP 14/110 MP 0/0 Hu 79 $ 1338 room=.
--> n
-T1173 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 7) HP 14/110 MP 0/0 Hu 79 $ 1338 room=.
--> e
-T1174 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 7) HP 14/110 MP 0/0 Hu 78 $ 1338 room=.
--> e
-T1175 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 7) HP 14/110 MP 0/0 Hu 77 $ 1338 room=.
--> s
-T1176 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 8) HP 15/110 MP 0/0 Hu 77 $ 1338 room=.
--> e
-T1177 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 8) HP 15/110 MP 0/0 Hu 76 $ 1338 room=.
--> s
-T1178 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 9) HP 15/110 MP 0/0 Hu 75 $ 1338 room=.
--> s
-T1179 mode=game_loop           Balin Runesinger(dwa) F5@( 5,10) HP 15/110 MP 0/0 Hu 75 $ 1338 room=C
--> e
-T1180 mode=game_loop           Balin Runesinger(dwa) F5@( 6,10) HP 16/110 MP 0/0 Hu 74 $ 1338 room=.
--> n
-T1181 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 9) HP 16/110 MP 0/0 Hu 73 $ 1338 room=.
--> e
-T1182 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 9) HP 16/110 MP 0/0 Hu 72 $ 1338 room=.
--> n
-T1183 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 16/110 MP 0/0 Hu 72 $ 1338 room=.
--> w
-T1184 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 8) HP 17/110 MP 0/0 Hu 71 $ 1338 room=.
--> n
-T1185 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 7) HP 17/110 MP 0/0 Hu 70 $ 1338 room=.
--> e
-T1186 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 17/110 MP 0/0 Hu 70 $ 1338 room=.
--> e
-T1187 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 17/110 MP 0/0 Hu 69 $ 1338 room=.
--> s
-T1188 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 18/110 MP 0/0 Hu 68 $ 1338 room=.
--> w
-T1189 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 18/110 MP 0/0 Hu 68 $ 1338 room=.
--> s
-T1190 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 9) HP 18/110 MP 0/0 Hu 67 $ 1338 room=.
--> e
-T1191 mode=warp_mode           Balin Runesinger(dwa) F5@( 8, 9) HP 18/110 MP 0/0 Hu 66 $ 1338 room=W
--> y
-T1192 mode=game_loop           Balin Runesinger(dwa) F7@(16, 9) HP 18/110 MP 0/0 Hu 66 $ 1338 room=.
--> s
-T1193 mode=game_loop           Balin Runesinger(dwa) F7@(16,10) HP 19/110 MP 0/0 Hu 65 $ 1438 room=.
--> e
-T1194 mode=chest_mode          Balin Runesinger(dwa) F7@(17,10) HP 19/110 MP 0/0 Hu 65 $ 1438 room=C
--> w
-T1195 mode=game_loop           Balin Runesinger(dwa) F7@(16,10) HP 19/110 MP 0/0 Hu 64 $ 1438 room=.
--> n
-T1196 mode=game_loop           Balin Runesinger(dwa) F7@(16, 9) HP 19/110 MP 0/0 Hu 63 $ 1438 room=.
--> n
-T1197 mode=chest_mode          Balin Runesinger(dwa) F7@(16, 8) HP 20/110 MP 0/0 Hu 63 $ 1438 room=C
--> s
-T1198 mode=game_loop           Balin Runesinger(dwa) F7@(16, 9) HP 20/110 MP 0/0 Hu 62 $ 1438 room=.
--> n
-T1199 mode=game_loop           Balin Runesinger(dwa) F7@(16, 8) HP 20/110 MP 0/0 Hu 61 $ 1438 room=C
--> n
-T1200 mode=library_mode        Balin Runesinger(dwa) F7@(16, 7) HP 20/110 MP 0/0 Hu 61 $ 1438 room=L
--> r
-T1201 mode=library_read_decision_mode Balin Runesinger(dwa) F7@(16, 7) HP 20/110 MP 0/0 Hu 61 $ 1438 room=L
--> y
-T1202 mode=game_loop           Balin Runesinger(dwa) F7@(16, 7) HP 20/110 MP 0/0 Hu 61 $ 1438 room=.
--> w
-T1203 mode=chest_mode          Balin Runesinger(dwa) F7@(15, 7) HP 21/110 MP 0/0 Hu 60 $ 1438 room=C
--> e
-T1204 mode=game_loop           Balin Runesinger(dwa) F7@(16, 7) HP 21/110 MP 0/0 Hu 59 $ 1438 room=.
--> s
-T1205 mode=game_loop           Balin Runesinger(dwa) F7@(16, 8) HP 21/110 MP 0/0 Hu 58 $ 1438 room=C
--> s
-T1206 mode=game_loop           Balin Runesinger(dwa) F7@(16, 9) HP 21/110 MP 0/0 Hu 58 $ 1438 room=.
--> s
-T1207 mode=game_loop           Balin Runesinger(dwa) F7@(16,10) HP 21/110 MP 0/0 Hu 57 $ 1438 room=.
--> e
-T1208 mode=game_loop           Balin Runesinger(dwa) F7@(17,10) HP 21/110 MP 0/0 Hu 56 $ 1438 room=C
--> e
-T1209 mode=game_loop           Balin Runesinger(dwa) F7@(18,10) HP 21/110 MP 0/0 Hu 56 $ 1438 room=.
--> s
-T1210 mode=game_loop           Balin Runesinger(dwa) F7@(18,11) HP 21/110 MP 0/0 Hu 55 $ 1438 room=.
--> s
-T1211 mode=game_loop           Balin Runesinger(dwa) F7@(18,12) HP 21/110 MP 0/0 Hu 54 $ 1438 room=.
--> s
-T1212 mode=game_loop           Balin Runesinger(dwa) F7@(18,13) HP 21/110 MP 0/0 Hu 54 $ 1438 room=.
--> w
-T1213 mode=game_loop           Balin Runesinger(dwa) F7@(17,13) HP 21/110 MP 0/0 Hu 53 $ 1438 room=.
--> w
-T1214 mode=chest_mode          Balin Runesinger(dwa) F7@(16,13) HP 21/110 MP 0/0 Hu 52 $ 1438 room=C
--> e
-T1215 mode=game_loop           Balin Runesinger(dwa) F7@(17,13) HP 21/110 MP 0/0 Hu 51 $ 1438 room=.
--> s
-T1216 mode=game_loop           Balin Runesinger(dwa) F7@(17,14) HP 21/110 MP 0/0 Hu 51 $ 1438 room=.
--> s
-T1217 mode=dungeon_mode        Balin Runesinger(dwa) F7@(17,15) HP 21/110 MP 0/0 Hu 50 $ 1438 room=N
--> u
-T1218 mode=game_loop           Balin Runesinger(dwa) F7@(17,15) HP 21/110 MP 0/0 Hu 50 $ 1438 room=N
--> e
-T1219 mode=chest_mode          Balin Runesinger(dwa) F7@(18,15) HP 21/110 MP 0/0 Hu 49 $ 1438 room=C
--> w
-T1220 mode=game_loop           Balin Runesinger(dwa) F7@(17,15) HP 21/110 MP 0/0 Hu 49 $ 1438 room=N
--> i
-T1221 mode=inventory           Balin Runesinger(dwa) F7@(17,15) HP 21/110 MP 0/0 Hu 49 $ 1438 room=N
--> eat1
-T1222 mode=inventory           Balin Runesinger(dwa) F7@(17,15) HP 21/110 MP 0/0 Hu100 $ 1438 room=N
--> x
-T1223 mode=game_loop           Balin Runesinger(dwa) F7@(17,15) HP 21/110 MP 0/0 Hu100 $ 1438 room=N
--> s
-T1224 mode=altar_mode          Balin Runesinger(dwa) F7@(17,16) HP 21/110 MP 0/0 Hu 99 $ 1438 room=A
--> pray
-T1225 mode=game_loop           Balin Runesinger(dwa) F7@(17,16) HP 21/110 MP 0/0 Hu 99 $ 1638 room=.
--> e
-T1226 mode=game_loop           Balin Runesinger(dwa) F7@(18,16) HP 22/110 MP 0/0 Hu 98 $ 1638 room=.
--> e
-T1227 mode=game_loop           Balin Runesinger(dwa) F7@(19,16) HP 22/110 MP 0/0 Hu 98 $ 1638 room=.
--> n
-T1228 mode=game_loop           Balin Runesinger(dwa) F7@(19,15) HP 23/110 MP 0/0 Hu 97 $ 1638 room=.
--> w
-T1229 mode=game_loop           Balin Runesinger(dwa) F7@(18,15) HP 23/110 MP 0/0 Hu 96 $ 1638 room=C
--> n
-T1230 mode=game_loop           Balin Runesinger(dwa) F7@(18,14) HP 24/110 MP 0/0 Hu 95 $ 1638 room=.
--> w
-T1231 mode=game_loop           Balin Runesinger(dwa) F7@(17,14) HP 24/110 MP 0/0 Hu 95 $ 1638 room=.
--> s
-T1232 mode=game_loop           Balin Runesinger(dwa) F7@(17,15) HP 25/110 MP 0/0 Hu 94 $ 1638 room=N
--> s
-T1233 mode=game_loop           Balin Runesinger(dwa) F7@(17,16) HP 25/110 MP 0/0 Hu 93 $ 1638 room=.
--> e
-T1234 mode=game_loop           Balin Runesinger(dwa) F7@(18,16) HP 26/110 MP 0/0 Hu 93 $ 1638 room=.
--> e
-T1235 mode=game_loop           Balin Runesinger(dwa) F7@(19,16) HP 26/110 MP 0/0 Hu 92 $ 1638 room=.
--> n
-T1236 mode=game_loop           Balin Runesinger(dwa) F7@(19,15) HP 27/110 MP 0/0 Hu 91 $ 1638 room=.
--> w
-T1237 mode=game_loop           Balin Runesinger(dwa) F7@(18,15) HP 27/110 MP 0/0 Hu 91 $ 1638 room=C
--> w
-T1238 mode=game_loop           Balin Runesinger(dwa) F7@(17,15) HP 28/110 MP 0/0 Hu 90 $ 1638 room=N
--> s
-T1239 mode=game_loop           Balin Runesinger(dwa) F7@(17,16) HP 28/110 MP 0/0 Hu 89 $ 1638 room=.
--> w
-T1240 mode=game_loop           Balin Runesinger(dwa) F7@(16,16) HP 29/110 MP 0/0 Hu 88 $ 1638 room=.
--> n
-T1241 mode=game_loop           Balin Runesinger(dwa) F7@(16,15) HP 29/110 MP 0/0 Hu 88 $ 1638 room=.
--> w
-T1242 mode=game_loop           Balin Runesinger(dwa) F7@(15,15) HP 30/110 MP 0/0 Hu 87 $ 1638 room=.
--> s
-T1243 mode=game_loop           Balin Runesinger(dwa) F7@(15,16) HP 30/110 MP 0/0 Hu 86 $ 1638 room=.
--> n
-T1244 mode=game_loop           Balin Runesinger(dwa) F7@(15,15) HP 31/110 MP 0/0 Hu 86 $ 1638 room=.
--> s
-T1245 mode=game_loop           Balin Runesinger(dwa) F7@(15,16) HP 31/110 MP 0/0 Hu 85 $ 1638 room=.
--> e
-T1246 mode=game_loop           Balin Runesinger(dwa) F7@(16,16) HP 31/110 MP 0/0 Hu 84 $ 1638 room=.
--> n
-T1247 mode=game_loop           Balin Runesinger(dwa) F7@(16,15) HP 31/110 MP 0/0 Hu 84 $ 1638 room=.
--> e
-T1248 mode=game_loop           Balin Runesinger(dwa) F7@(17,15) HP 32/110 MP 0/0 Hu 83 $ 1638 room=N
--> e
-T1249 mode=game_loop           Balin Runesinger(dwa) F7@(18,15) HP 32/110 MP 0/0 Hu 82 $ 1638 room=C
--> e
-T1250 mode=game_loop           Balin Runesinger(dwa) F7@(19,15) HP 32/110 MP 0/0 Hu 81 $ 1638 room=.
--> s
-T1251 mode=game_loop           Balin Runesinger(dwa) F7@(19,16) HP 32/110 MP 0/0 Hu 81 $ 1638 room=.
--> w
-T1252 mode=game_loop           Balin Runesinger(dwa) F7@(18,16) HP 33/110 MP 0/0 Hu 80 $ 1638 room=.
--> w
-T1253 mode=game_loop           Balin Runesinger(dwa) F7@(17,16) HP 33/110 MP 0/0 Hu 79 $ 1638 room=.
--> n
-T1254 mode=game_loop           Balin Runesinger(dwa) F7@(17,15) HP 33/110 MP 0/0 Hu 79 $ 1638 room=N
--> e
-T1255 mode=game_loop           Balin Runesinger(dwa) F7@(18,15) HP 33/110 MP 0/0 Hu 78 $ 1638 room=C
--> e
-T1256 mode=game_loop           Balin Runesinger(dwa) F7@(19,15) HP 34/110 MP 0/0 Hu 77 $ 1638 room=.
--> n
-T1257 mode=game_loop           Balin Runesinger(dwa) F7@(19,14) HP 34/110 MP 0/0 Hu 77 $ 1638 room=.
--> w
-T1258 mode=game_loop           Balin Runesinger(dwa) F7@(18,14) HP 34/110 MP 0/0 Hu 76 $ 1638 room=.
--> n
-T1259 mode=game_loop           Balin Runesinger(dwa) F7@(18,13) HP 34/110 MP 0/0 Hu 75 $ 1638 room=.
--> n
-T1260 mode=game_loop           Balin Runesinger(dwa) F7@(18,12) HP 35/110 MP 0/0 Hu 74 $ 1638 room=.
--> n
-T1261 mode=game_loop           Balin Runesinger(dwa) F7@(18,11) HP 35/110 MP 0/0 Hu 74 $ 1638 room=.
--> n
-T1262 mode=game_loop           Balin Runesinger(dwa) F7@(18,10) HP 35/110 MP 0/0 Hu 73 $ 1638 room=.
--> e
-T1263 mode=game_loop           Balin Runesinger(dwa) F7@(19,10) HP 35/110 MP 0/0 Hu 72 $ 1638 room=.
--> s
-T1264 mode=combat_mode         Balin Runesinger(dwa) F7@(19,11) HP 36/110 MP 0/0 Hu 72 $ 1638 room=M vs Hardened Stirge(L6 HP9/9)
--> a
-T1265 mode=combat_mode         Balin Runesinger(dwa) F7@(19,11) HP 35/110 MP 0/0 Hu 72 $ 1638 room=M vs Hardened Stirge(L6 HP9/9)
--> f
-T1266 mode=flee_direction_mode Balin Runesinger(dwa) F7@(19,11) HP 34/110 MP 0/0 Hu 72 $ 1638 room=M
--> n
-T1267 mode=game_loop           Balin Runesinger(dwa) F7@(19,10) HP 34/110 MP 0/0 Hu 72 $ 1638 room=.
--> w
-T1268 mode=game_loop           Balin Runesinger(dwa) F7@(18,10) HP 34/110 MP 0/0 Hu 71 $ 1638 room=.
--> s
-T1269 mode=game_loop           Balin Runesinger(dwa) F7@(18,11) HP 34/110 MP 0/0 Hu 70 $ 1638 room=.
--> s
-T1270 mode=game_loop           Balin Runesinger(dwa) F7@(18,12) HP 34/110 MP 0/0 Hu 70 $ 1638 room=.
--> s
-T1271 mode=game_loop           Balin Runesinger(dwa) F7@(18,13) HP 35/110 MP 0/0 Hu 69 $ 1638 room=.
--> w
-T1272 mode=game_loop           Balin Runesinger(dwa) F7@(17,13) HP 35/110 MP 0/0 Hu 68 $ 1638 room=.
--> w
-T1273 mode=game_loop           Balin Runesinger(dwa) F7@(16,13) HP 35/110 MP 0/0 Hu 67 $ 1638 room=C
--> w
-T1274 mode=game_loop           Balin Runesinger(dwa) F7@(15,13) HP 35/110 MP 0/0 Hu 67 $ 1638 room=.
--> w
-T1275 mode=game_loop           Balin Runesinger(dwa) F7@(14,13) HP 36/110 MP 0/0 Hu 66 $ 1638 room=.
--> e
-T1276 mode=game_loop           Balin Runesinger(dwa) F7@(15,13) HP 36/110 MP 0/0 Hu 65 $ 1638 room=.
--> e
-T1277 mode=game_loop           Balin Runesinger(dwa) F7@(16,13) HP 36/110 MP 0/0 Hu 65 $ 1638 room=C
--> e
-T1278 mode=game_loop           Balin Runesinger(dwa) F7@(17,13) HP 36/110 MP 0/0 Hu 64 $ 1638 room=.
--> e
-T1279 mode=game_loop           Balin Runesinger(dwa) F7@(18,13) HP 37/110 MP 0/0 Hu 63 $ 1638 room=.
--> n
-T1280 mode=game_loop           Balin Runesinger(dwa) F7@(18,12) HP 37/110 MP 0/0 Hu 63 $ 1638 room=.
--> n
-T1281 mode=game_loop           Balin Runesinger(dwa) F7@(18,11) HP 37/110 MP 0/0 Hu 62 $ 1638 room=.
--> n
-T1282 mode=game_loop           Balin Runesinger(dwa) F7@(18,10) HP 37/110 MP 0/0 Hu 61 $ 1638 room=.
--> w
-T1283 mode=game_loop           Balin Runesinger(dwa) F7@(17,10) HP 38/110 MP 0/0 Hu 60 $ 1638 room=C
--> w
-T1284 mode=game_loop           Balin Runesinger(dwa) F7@(16,10) HP 38/110 MP 0/0 Hu 60 $ 1638 room=.
--> n
-T1285 mode=game_loop           Balin Runesinger(dwa) F7@(16, 9) HP 38/110 MP 0/0 Hu 59 $ 1638 room=.
--> n
-T1286 mode=game_loop           Balin Runesinger(dwa) F7@(16, 8) HP 38/110 MP 0/0 Hu 58 $ 1638 room=C
--> n
-T1287 mode=game_loop           Balin Runesinger(dwa) F7@(16, 7) HP 38/110 MP 0/0 Hu 58 $ 1638 room=.
--> w
-T1288 mode=game_loop           Balin Runesinger(dwa) F7@(15, 7) HP 38/110 MP 0/0 Hu 57 $ 1638 room=C
--> s
-T1289 mode=game_loop           Balin Runesinger(dwa) F7@(15, 8) HP 38/110 MP 0/0 Hu 56 $ 1638 room=.
--> w
-T1290 mode=game_loop           Balin Runesinger(dwa) F7@(14, 8) HP 38/110 MP 0/0 Hu 56 $ 1638 room=.
--> s
-T1291 mode=game_loop           Balin Runesinger(dwa) F7@(14, 9) HP 38/110 MP 0/0 Hu 55 $ 1638 room=.
--> w
-T1292 mode=game_loop           Balin Runesinger(dwa) F7@(13, 9) HP 38/110 MP 0/0 Hu 54 $ 1638 room=.
--> s
-T1293 mode=game_loop           Balin Runesinger(dwa) F7@(13,10) HP 38/110 MP 0/0 Hu 53 $ 1638 room=.
--> s
-T1294 mode=game_loop           Balin Runesinger(dwa) F7@(13,11) HP 38/110 MP 0/0 Hu 53 $ 1638 room=.
--> s
-T1295 mode=game_loop           Balin Runesinger(dwa) F7@(13,12) HP 38/110 MP 0/0 Hu 52 $ 1638 room=.
--> w
-T1296 mode=game_loop           Balin Runesinger(dwa) F7@(12,12) HP 38/110 MP 0/0 Hu 51 $ 1638 room=.
--> w
-T1297 mode=game_loop           Balin Runesinger(dwa) F7@(11,12) HP 38/110 MP 0/0 Hu 51 $ 1638 room=.
--> n
-T1298 mode=game_loop           Balin Runesinger(dwa) F7@(11,11) HP 38/110 MP 0/0 Hu 50 $ 1638 room=.
--> n
-T1299 mode=warp_mode           Balin Runesinger(dwa) F7@(11,10) HP 38/110 MP 0/0 Hu 49 $ 1638 room=W
--> y
-T1300 mode=game_loop           Balin Runesinger(dwa) F6@( 8,11) HP 38/110 MP 0/0 Hu 49 $ 1638 room=.
--> i
-T1301 mode=inventory           Balin Runesinger(dwa) F6@( 8,11) HP 38/110 MP 0/0 Hu 49 $ 1638 room=.
--> eat1
-T1302 mode=inventory           Balin Runesinger(dwa) F6@( 8,11) HP 38/110 MP 0/0 Hu100 $ 1638 room=.
--> x
-T1303 mode=game_loop           Balin Runesinger(dwa) F6@( 8,11) HP 38/110 MP 0/0 Hu100 $ 1638 room=.
--> e
-T1304 mode=game_loop           Balin Runesinger(dwa) F6@( 9,11) HP 38/110 MP 0/0 Hu100 $ 1638 room=.
--> e
-T1305 mode=game_loop           Balin Runesinger(dwa) F6@(10,11) HP 39/110 MP 0/0 Hu 99 $ 1638 room=.
--> s
-T1306 mode=combat_mode         Balin Runesinger(dwa) F6@(10,12) HP 39/110 MP 0/0 Hu 98 $ 1638 room=M vs Wight(L5 HP44/44)
--> a
-T1307 mode=combat_mode         Balin Runesinger(dwa) F6@(10,12) HP 35/110 MP 0/0 Hu 98 $ 1638 room=M vs Wight(L5 HP44/44)
--> a
-T1308 mode=combat_mode         Balin Runesinger(dwa) F6@(10,12) HP 31/110 MP 0/0 Hu 98 $ 1638 room=M vs Wight(L5 HP13/44)
--> f
-T1309 mode=flee_direction_mode Balin Runesinger(dwa) F6@(10,12) HP 27/110 MP 0/0 Hu 98 $ 1638 room=M
--> n
-T1310 mode=game_loop           Balin Runesinger(dwa) F6@(10,11) HP 27/110 MP 0/0 Hu 98 $ 1638 room=.
--> n
-T1311 mode=game_loop           Balin Runesinger(dwa) F6@(10,10) HP 28/110 MP 0/0 Hu 97 $ 1638 room=.
--> e
-T1312 mode=game_loop           Balin Runesinger(dwa) F6@(11,10) HP 28/110 MP 0/0 Hu 97 $ 1638 room=.
--> s
-T1313 mode=game_loop           Balin Runesinger(dwa) F6@(11,11) HP 29/110 MP 0/0 Hu 96 $ 1638 room=.
--> s
-T1314 mode=chest_mode          Balin Runesinger(dwa) F6@(11,12) HP 29/110 MP 0/0 Hu 95 $ 1638 room=C
--> n
-T1315 mode=game_loop           Balin Runesinger(dwa) F6@(11,11) HP 30/110 MP 0/0 Hu 95 $ 1638 room=.
--> w
-T1316 mode=game_loop           Balin Runesinger(dwa) F6@(10,11) HP 30/110 MP 0/0 Hu 94 $ 1638 room=.
--> n
-T1317 mode=game_loop           Balin Runesinger(dwa) F6@(10,10) HP 31/110 MP 0/0 Hu 93 $ 1638 room=.
--> e
-T1318 mode=game_loop           Balin Runesinger(dwa) F6@(11,10) HP 31/110 MP 0/0 Hu 93 $ 1638 room=.
--> e
-T1319 mode=game_loop           Balin Runesinger(dwa) F6@(12,10) HP 32/110 MP 0/0 Hu 92 $ 1638 room=.
--> n
-T1320 mode=dungeon_mode        Balin Runesinger(dwa) F6@(12, 9) HP 32/110 MP 0/0 Hu 91 $ 1638 room=N
--> u
-T1321 mode=game_loop           Balin Runesinger(dwa) F6@(12, 9) HP 32/110 MP 0/0 Hu 91 $ 1638 room=N
--> w
-T1322 mode=chest_mode          Balin Runesinger(dwa) F6@(11, 9) HP 33/110 MP 0/0 Hu 90 $ 1638 room=C
--> s
-T1323 mode=game_loop           Balin Runesinger(dwa) F6@(11,10) HP 33/110 MP 0/0 Hu 90 $ 1638 room=.
--> s
-T1324 mode=game_loop           Balin Runesinger(dwa) F6@(11,11) HP 34/110 MP 0/0 Hu 89 $ 1638 room=.
--> s
-T1325 mode=game_loop           Balin Runesinger(dwa) F6@(11,12) HP 34/110 MP 0/0 Hu 88 $ 1638 room=C
--> e
-T1326 mode=game_loop           Balin Runesinger(dwa) F6@(12,12) HP 35/110 MP 0/0 Hu 88 $ 1638 room=.
--> n
-T1327 mode=game_loop           Balin Runesinger(dwa) F6@(12,11) HP 35/110 MP 0/0 Hu 87 $ 1638 room=.
--> e
-T1328 mode=game_loop           Balin Runesinger(dwa) F6@(13,11) HP 36/110 MP 0/0 Hu 86 $ 1638 room=.
--> n
-T1329 mode=game_loop           Balin Runesinger(dwa) F6@(13,10) HP 36/110 MP 0/0 Hu 86 $ 1638 room=.
--> w
-T1330 mode=game_loop           Balin Runesinger(dwa) F6@(12,10) HP 37/110 MP 0/0 Hu 85 $ 1638 room=.
--> n
-T1331 mode=game_loop           Balin Runesinger(dwa) F6@(12, 9) HP 37/110 MP 0/0 Hu 84 $ 1638 room=N
--> w
-T1332 mode=game_loop           Balin Runesinger(dwa) F6@(11, 9) HP 37/110 MP 0/0 Hu 83 $ 1638 room=C
--> s
-T1333 mode=game_loop           Balin Runesinger(dwa) F6@(11,10) HP 37/110 MP 0/0 Hu 83 $ 1638 room=.
--> s
-T1334 mode=game_loop           Balin Runesinger(dwa) F6@(11,11) HP 38/110 MP 0/0 Hu 82 $ 1638 room=.
--> s
-T1335 mode=game_loop           Balin Runesinger(dwa) F6@(11,12) HP 38/110 MP 0/0 Hu 81 $ 1638 room=C
--> e
-T1336 mode=game_loop           Balin Runesinger(dwa) F6@(12,12) HP 38/110 MP 0/0 Hu 81 $ 1638 room=.
--> e
-T1337 mode=warp_mode           Balin Runesinger(dwa) F6@(13,12) HP 38/110 MP 0/0 Hu 80 $ 1638 room=W
--> y
-T1338 mode=game_loop           Balin Runesinger(dwa) F6@(13,12) HP 38/110 MP 0/0 Hu 80 $ 1638 room=W
--> n
-T1339 mode=game_loop           Balin Runesinger(dwa) F6@(13,11) HP 39/110 MP 0/0 Hu 79 $ 1638 room=.
--> n
-T1340 mode=game_loop           Balin Runesinger(dwa) F6@(13,10) HP 39/110 MP 0/0 Hu 79 $ 1638 room=.
--> w
-T1341 mode=game_loop           Balin Runesinger(dwa) F6@(12,10) HP 39/110 MP 0/0 Hu 78 $ 1638 room=.
--> s
-T1342 mode=game_loop           Balin Runesinger(dwa) F6@(12,11) HP 39/110 MP 0/0 Hu 77 $ 1638 room=.
--> s
-T1343 mode=game_loop           Balin Runesinger(dwa) F6@(12,12) HP 40/110 MP 0/0 Hu 76 $ 1638 room=.
--> w
-T1344 mode=game_loop           Balin Runesinger(dwa) F6@(11,12) HP 40/110 MP 0/0 Hu 76 $ 1638 room=C
--> s
-T1345 mode=tomb_mode           Balin Runesinger(dwa) F6@(11,13) HP 40/110 MP 0/0 Hu 75 $ 1638 room=T
+T 946 mode=tomb_mode           Balin Runesinger(dwa) F4@(17,13) HP 100/100 MP 0/0 Hu 62 $ 856 room=T
 -> p
-T1346 mode=game_loop           Balin Runesinger(dwa) F6@(11,13) HP 40/110 MP 0/0 Hu 75 $ 1638 room=T
--> n
-T1347 mode=game_loop           Balin Runesinger(dwa) F6@(11,12) HP 40/110 MP 0/0 Hu 74 $ 1638 room=C
--> n
-T1348 mode=game_loop           Balin Runesinger(dwa) F6@(11,11) HP 41/110 MP 0/0 Hu 74 $ 1638 room=.
--> n
-T1349 mode=game_loop           Balin Runesinger(dwa) F6@(11,10) HP 41/110 MP 0/0 Hu 73 $ 1638 room=.
--> n
-T1350 mode=game_loop           Balin Runesinger(dwa) F6@(11, 9) HP 41/110 MP 0/0 Hu 72 $ 1638 room=C
--> e
-T1351 mode=game_loop           Balin Runesinger(dwa) F6@(12, 9) HP 41/110 MP 0/0 Hu 72 $ 1638 room=N
+T 947 mode=game_loop           Balin Runesinger(dwa) F4@(17,13) HP 100/100 MP 0/0 Hu 62 $ 856 room=T
 -> s
-T1352 mode=game_loop           Balin Runesinger(dwa) F6@(12,10) HP 42/110 MP 0/0 Hu 71 $ 1638 room=.
+T 948 mode=game_loop           Balin Runesinger(dwa) F4@(17,14) HP 100/100 MP 0/0 Hu 61 $ 856 room=.
+-> s
+T 949 mode=combat_mode         Balin Runesinger(dwa) F4@(17,15) HP 100/100 MP 0/0 Hu 60 $ 856 room=M vs Harpy(L3 HP29/29)
+-> f
+T 950 mode=flee_direction_mode Balin Runesinger(dwa) F4@(17,15) HP 99/100 MP 0/0 Hu 60 $ 856 room=M
+-> s
+T 951 mode=game_loop           Balin Runesinger(dwa) F4@(17,16) HP 99/100 MP 0/0 Hu 60 $ 856 room=.
 -> e
-T1353 mode=game_loop           Balin Runesinger(dwa) F6@(13,10) HP 42/110 MP 0/0 Hu 70 $ 1638 room=.
--> s
-T1354 mode=game_loop           Balin Runesinger(dwa) F6@(13,11) HP 42/110 MP 0/0 Hu 69 $ 1638 room=.
--> e
-T1355 mode=game_loop           Balin Runesinger(dwa) F6@(14,11) HP 42/110 MP 0/0 Hu 69 $ 1638 room=.
--> s
-T1356 mode=game_loop           Balin Runesinger(dwa) F6@(14,12) HP 43/110 MP 0/0 Hu 68 $ 1638 room=.
--> s
-T1357 mode=warp_mode           Balin Runesinger(dwa) F6@(14,13) HP 43/110 MP 0/0 Hu 67 $ 1638 room=W
--> y
-T1358 mode=game_loop           Balin Runesinger(dwa) F5@( 7,12) HP 43/110 MP 0/0 Hu 67 $ 1638 room=.
+T 952 mode=game_loop           Balin Runesinger(dwa) F4@(18,16) HP 99/100 MP 0/0 Hu 60 $ 856 room=.
 -> n
-T1359 mode=combat_mode         Balin Runesinger(dwa) F5@( 7,11) HP 43/110 MP 0/0 Hu 67 $ 1638 room=M vs Goblin(L4 HP13/13)
--> a
-T1360 mode=combat_victory      Balin Runesinger(dwa) F5@( 7,11) HP 43/110 MP 0/0 Hu 67 $ 1668 room=.
--> back
-T1361 mode=game_loop           Balin Runesinger(dwa) F5@( 7,11) HP 43/110 MP 0/0 Hu 67 $ 1668 room=.
--> i
-T1362 mode=inventory           Balin Runesinger(dwa) F5@( 7,11) HP 43/110 MP 0/0 Hu 67 $ 1668 room=.
--> u15
-T1363 mode=inventory           Balin Runesinger(dwa) F5@( 7,11) HP 43/110 MP 0/0 Hu 67 $ 1668 room=.
--> x
-T1364 mode=game_loop           Balin Runesinger(dwa) F5@( 7,11) HP 43/110 MP 0/0 Hu 67 $ 1668 room=.
--> e
-T1365 mode=game_loop           Balin Runesinger(dwa) F5@( 8,11) HP 43/110 MP 0/0 Hu 66 $ 1668 room=.
+T 953 mode=game_loop           Balin Runesinger(dwa) F4@(18,15) HP 99/100 MP 0/0 Hu 59 $ 856 room=.
 -> n
-T1366 mode=game_loop           Balin Runesinger(dwa) F5@( 8,10) HP 44/110 MP 0/0 Hu 65 $ 1668 room=.
+T 954 mode=game_loop           Balin Runesinger(dwa) F4@(18,14) HP 99/100 MP 0/0 Hu 58 $ 856 room=.
 -> e
-T1367 mode=game_loop           Balin Runesinger(dwa) F5@( 9,10) HP 44/110 MP 0/0 Hu 65 $ 1668 room=.
--> e
-T1368 mode=warp_mode           Balin Runesinger(dwa) F5@(10,10) HP 44/110 MP 0/0 Hu 64 $ 1668 room=W
--> y
-T1369 mode=game_loop           Balin Runesinger(dwa) F5@(10,10) HP 44/110 MP 0/0 Hu 64 $ 1668 room=W
--> s
-T1370 mode=game_loop           Balin Runesinger(dwa) F5@(10,11) HP 44/110 MP 0/0 Hu 63 $ 1668 room=.
+T 955 mode=game_loop           Balin Runesinger(dwa) F4@(19,14) HP 99/100 MP 0/0 Hu 57 $ 856 room=.
+-> n
+T 956 mode=game_loop           Balin Runesinger(dwa) F4@(19,13) HP 99/100 MP 0/0 Hu 57 $ 856 room=.
+-> n
+T 957 mode=game_loop           Balin Runesinger(dwa) F4@(19,12) HP 99/100 MP 0/0 Hu 56 $ 856 room=.
+-> n
+T 958 mode=game_loop           Balin Runesinger(dwa) F4@(19,11) HP 99/100 MP 0/0 Hu 55 $ 856 room=.
 -> w
-T1371 mode=game_loop           Balin Runesinger(dwa) F5@( 9,11) HP 45/110 MP 0/0 Hu 62 $ 1668 room=.
+T 959 mode=game_loop           Balin Runesinger(dwa) F4@(18,11) HP 99/100 MP 0/0 Hu 55 $ 856 room=.
 -> w
-T1372 mode=game_loop           Balin Runesinger(dwa) F5@( 8,11) HP 45/110 MP 0/0 Hu 62 $ 1668 room=.
+T 960 mode=game_loop           Balin Runesinger(dwa) F4@(17,11) HP 99/100 MP 0/0 Hu 54 $ 856 room=.
 -> w
-T1373 mode=game_loop           Balin Runesinger(dwa) F5@( 7,11) HP 45/110 MP 0/0 Hu 61 $ 1668 room=.
+T 961 mode=game_loop           Balin Runesinger(dwa) F4@(16,11) HP 99/100 MP 0/0 Hu 53 $ 856 room=.
+-> w
+T 962 mode=game_loop           Balin Runesinger(dwa) F4@(15,11) HP 99/100 MP 0/0 Hu 53 $ 856 room=.
+-> l
+T 963 mode=game_loop           Balin Runesinger(dwa) F4@(15,11) HP 99/100 MP 0/0 Hu 53 $ 856 room=.
 -> s
-T1374 mode=game_loop           Balin Runesinger(dwa) F5@( 7,12) HP 45/110 MP 0/0 Hu 60 $ 1668 room=.
--> e
-T1375 mode=combat_mode         Balin Runesinger(dwa) F5@( 8,12) HP 46/110 MP 0/0 Hu 60 $ 1668 room=M vs Crawling Claw(L4 HP5/5)
--> a
-T1376 mode=combat_victory      Balin Runesinger(dwa) F5@( 8,12) HP 46/120 MP 0/0 Hu 60 $ 1683 room=.
--> back
-T1377 mode=game_loop           Balin Runesinger(dwa) F5@( 8,12) HP 46/120 MP 0/0 Hu 60 $ 1683 room=.
--> i
-T1378 mode=inventory           Balin Runesinger(dwa) F5@( 8,12) HP 46/120 MP 0/0 Hu 60 $ 1683 room=.
--> u16
-T1379 mode=inventory           Balin Runesinger(dwa) F5@( 8,12) HP 46/120 MP 0/0 Hu 60 $ 1683 room=.
--> x
-T1380 mode=game_loop           Balin Runesinger(dwa) F5@( 8,12) HP 46/120 MP 0/0 Hu 60 $ 1683 room=.
--> e
-T1381 mode=game_loop           Balin Runesinger(dwa) F5@( 9,12) HP 46/120 MP 0/0 Hu 59 $ 1683 room=.
--> n
-T1382 mode=game_loop           Balin Runesinger(dwa) F5@( 9,11) HP 46/120 MP 0/0 Hu 58 $ 1683 room=.
--> e
-T1383 mode=game_loop           Balin Runesinger(dwa) F5@(10,11) HP 46/120 MP 0/0 Hu 58 $ 1683 room=.
--> e
-T1384 mode=chest_mode          Balin Runesinger(dwa) F5@(11,11) HP 46/120 MP 0/0 Hu 57 $ 1683 room=C
--> o
-T1385 mode=game_loop           Balin Runesinger(dwa) F5@(11,11) HP 46/120 MP 0/0 Hu 57 $ 1813 room=.
--> e
-T1386 mode=game_loop           Balin Runesinger(dwa) F5@(12,11) HP 46/120 MP 0/0 Hu 56 $ 1813 room=.
--> e
-T1387 mode=game_loop           Balin Runesinger(dwa) F5@(13,11) HP 46/120 MP 0/0 Hu 55 $ 1813 room=.
--> n
-T1388 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 46/120 MP 0/0 Hu 55 $ 1813 room=.
--> n
-T1389 mode=pool_mode           Balin Runesinger(dwa) F5@(13, 9) HP 46/120 MP 0/0 Hu 54 $ 1813 room=P
+T 964 mode=game_loop           Balin Runesinger(dwa) F4@(15,12) HP 99/100 MP 0/0 Hu 52 $ 856 room=.
+-> l
+T 965 mode=game_loop           Balin Runesinger(dwa) F4@(15,12) HP 99/100 MP 0/0 Hu 52 $ 856 room=.
 -> s
-T1390 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 46/120 MP 0/0 Hu 53 $ 1813 room=.
--> w
-T1391 mode=game_loop           Balin Runesinger(dwa) F5@(12,10) HP 46/120 MP 0/0 Hu 53 $ 1813 room=.
--> w
-T1392 mode=game_loop           Balin Runesinger(dwa) F5@(11,10) HP 46/120 MP 0/0 Hu 52 $ 1813 room=.
--> n
-T1393 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 9) HP 46/120 MP 0/0 Hu 51 $ 1813 room=M vs Rust Monster(L4 HP20/20)
--> i
-T1394 mode=inventory           Balin Runesinger(dwa) F5@(11, 9) HP 46/120 MP 0/0 Hu 51 $ 1813 room=M
--> u2
-T1395 mode=inventory           Balin Runesinger(dwa) F5@(11, 9) HP 71/120 MP 0/0 Hu 51 $ 1813 room=M
--> x
-T1396 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 9) HP 71/120 MP 0/0 Hu 51 $ 1813 room=M vs Rust Monster(L4 HP20/20)
--> a
-T1397 mode=combat_victory      Balin Runesinger(dwa) F5@(11, 9) HP 71/120 MP 0/0 Hu 51 $ 1818 room=.
--> back
-T1398 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 71/120 MP 0/0 Hu 51 $ 1818 room=.
--> i
-T1399 mode=inventory           Balin Runesinger(dwa) F5@(11, 9) HP 71/120 MP 0/0 Hu 51 $ 1818 room=.
--> u18
-T1400 mode=inventory           Balin Runesinger(dwa) F5@(11, 9) HP 71/120 MP 0/0 Hu 51 $ 1818 room=.
--> x
-T1401 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 71/120 MP 0/0 Hu 51 $ 1818 room=.
--> e
-T1402 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 71/120 MP 0/0 Hu 51 $ 1818 room=.
--> e
-T1403 mode=game_loop           Balin Runesinger(dwa) F5@(13, 9) HP 71/120 MP 0/0 Hu 50 $ 1818 room=P
+T 966 mode=game_loop           Balin Runesinger(dwa) F4@(15,13) HP 99/100 MP 0/0 Hu 51 $ 856 room=.
+-> l
+T 967 mode=game_loop           Balin Runesinger(dwa) F4@(15,13) HP 99/100 MP 0/0 Hu 51 $ 856 room=.
 -> s
-T1404 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 71/120 MP 0/0 Hu 49 $ 1818 room=.
+T 968 mode=oracle_mode         Balin Runesinger(dwa) F4@(15,14) HP 99/100 MP 0/0 Hu 50 $ 856 room=O
+-> e
+T 969 mode=game_loop           Balin Runesinger(dwa) F4@(16,14) HP 99/100 MP 0/0 Hu 50 $ 856 room=.
+-> e
+T 970 mode=game_loop           Balin Runesinger(dwa) F4@(17,14) HP 99/100 MP 0/0 Hu 49 $ 856 room=.
 -> i
-T1405 mode=inventory           Balin Runesinger(dwa) F5@(13,10) HP 71/120 MP 0/0 Hu 49 $ 1818 room=.
+T 971 mode=inventory           Balin Runesinger(dwa) F4@(17,14) HP 99/100 MP 0/0 Hu 49 $ 856 room=.
 -> eat4
-T1406 mode=inventory           Balin Runesinger(dwa) F5@(13,10) HP 71/120 MP 0/0 Hu 67 $ 1818 room=.
+T 972 mode=inventory           Balin Runesinger(dwa) F4@(17,14) HP 99/100 MP 0/0 Hu 59 $ 856 room=.
 -> x
-T1407 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 71/120 MP 0/0 Hu 67 $ 1818 room=.
--> s
-T1408 mode=game_loop           Balin Runesinger(dwa) F5@(13,11) HP 71/120 MP 0/0 Hu 66 $ 1818 room=.
--> w
-T1409 mode=game_loop           Balin Runesinger(dwa) F5@(12,11) HP 71/120 MP 0/0 Hu 66 $ 1818 room=.
+T 973 mode=game_loop           Balin Runesinger(dwa) F4@(17,14) HP 99/100 MP 0/0 Hu 59 $ 856 room=.
 -> n
-T1410 mode=game_loop           Balin Runesinger(dwa) F5@(12,10) HP 71/120 MP 0/0 Hu 65 $ 1818 room=.
--> w
-T1411 mode=game_loop           Balin Runesinger(dwa) F5@(11,10) HP 72/120 MP 0/0 Hu 64 $ 1818 room=.
--> n
-T1412 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 72/120 MP 0/0 Hu 64 $ 1818 room=.
--> e
-T1413 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 72/120 MP 0/0 Hu 63 $ 1818 room=.
--> e
-T1414 mode=game_loop           Balin Runesinger(dwa) F5@(13, 9) HP 72/120 MP 0/0 Hu 62 $ 1818 room=P
+T 974 mode=game_loop           Balin Runesinger(dwa) F4@(17,13) HP 99/100 MP 0/0 Hu 58 $ 856 room=T
 -> s
-T1415 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 73/120 MP 0/0 Hu 62 $ 1818 room=.
+T 975 mode=game_loop           Balin Runesinger(dwa) F4@(17,14) HP 99/100 MP 0/0 Hu 58 $ 856 room=.
 -> s
-T1416 mode=game_loop           Balin Runesinger(dwa) F5@(13,11) HP 73/120 MP 0/0 Hu 61 $ 1818 room=.
+T 976 mode=combat_mode         Balin Runesinger(dwa) F4@(17,15) HP 99/100 MP 0/0 Hu 57 $ 856 room=M vs Harpy(L3 HP29/29)
+-> a
+T 977 mode=combat_victory      Balin Runesinger(dwa) F4@(17,15) HP 99/100 MP 0/0 Hu 57 $ 884 room=.
+-> back
+T 978 mode=game_loop           Balin Runesinger(dwa) F4@(17,15) HP 99/100 MP 0/0 Hu 57 $ 884 room=.
 -> e
-T1417 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 73/120 MP 0/0 Hu 60 $ 1818 room=.
+T 979 mode=game_loop           Balin Runesinger(dwa) F4@(18,15) HP 99/100 MP 0/0 Hu 56 $ 884 room=.
+-> n
+T 980 mode=game_loop           Balin Runesinger(dwa) F4@(18,14) HP 99/100 MP 0/0 Hu 56 $ 884 room=.
 -> e
-T1418 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 73/120 MP 0/0 Hu 59 $ 1818 room=.
--> n
-T1419 mode=game_loop           Balin Runesinger(dwa) F5@(15,10) HP 73/120 MP 0/0 Hu 59 $ 1818 room=.
--> w
-T1420 mode=game_loop           Balin Runesinger(dwa) F5@(14,10) HP 73/120 MP 0/0 Hu 58 $ 1818 room=.
--> w
-T1421 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 73/120 MP 0/0 Hu 57 $ 1818 room=.
--> n
-T1422 mode=game_loop           Balin Runesinger(dwa) F5@(13, 9) HP 73/120 MP 0/0 Hu 57 $ 1818 room=P
--> w
-T1423 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 73/120 MP 0/0 Hu 56 $ 1818 room=.
+T 981 mode=game_loop           Balin Runesinger(dwa) F4@(19,14) HP 99/100 MP 0/0 Hu 55 $ 884 room=.
 -> s
-T1424 mode=game_loop           Balin Runesinger(dwa) F5@(12,10) HP 73/120 MP 0/0 Hu 55 $ 1818 room=.
+T 982 mode=game_loop           Balin Runesinger(dwa) F4@(19,15) HP 99/100 MP 0/0 Hu 54 $ 884 room=.
 -> s
-T1425 mode=game_loop           Balin Runesinger(dwa) F5@(12,11) HP 73/120 MP 0/0 Hu 55 $ 1818 room=.
--> e
-T1426 mode=game_loop           Balin Runesinger(dwa) F5@(13,11) HP 73/120 MP 0/0 Hu 54 $ 1818 room=.
--> e
-T1427 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 73/120 MP 0/0 Hu 53 $ 1818 room=.
--> e
-T1428 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 73/120 MP 0/0 Hu 52 $ 1818 room=.
+T 983 mode=game_loop           Balin Runesinger(dwa) F4@(19,16) HP 99/100 MP 0/0 Hu 53 $ 884 room=.
+-> w
+T 984 mode=game_loop           Balin Runesinger(dwa) F4@(18,16) HP 99/100 MP 0/0 Hu 53 $ 884 room=.
 -> n
-T1429 mode=game_loop           Balin Runesinger(dwa) F5@(15,10) HP 73/120 MP 0/0 Hu 52 $ 1818 room=.
+T 985 mode=game_loop           Balin Runesinger(dwa) F4@(18,15) HP 99/100 MP 0/0 Hu 52 $ 884 room=.
+-> n
+T 986 mode=game_loop           Balin Runesinger(dwa) F4@(18,14) HP 99/100 MP 0/0 Hu 51 $ 884 room=.
 -> w
-T1430 mode=game_loop           Balin Runesinger(dwa) F5@(14,10) HP 73/120 MP 0/0 Hu 51 $ 1818 room=.
+T 987 mode=game_loop           Balin Runesinger(dwa) F4@(17,14) HP 99/100 MP 0/0 Hu 51 $ 884 room=.
 -> w
-T1431 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 73/120 MP 0/0 Hu 50 $ 1818 room=.
+T 988 mode=game_loop           Balin Runesinger(dwa) F4@(16,14) HP 99/100 MP 0/0 Hu 50 $ 884 room=.
+-> w
+T 989 mode=game_loop           Balin Runesinger(dwa) F4@(15,14) HP 99/100 MP 0/0 Hu 49 $ 884 room=O
 -> i
-T1432 mode=inventory           Balin Runesinger(dwa) F5@(13,10) HP 73/120 MP 0/0 Hu 50 $ 1818 room=.
--> x
-T1433 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 73/120 MP 0/0 Hu 50 $ 1818 room=.
--> n
-T1434 mode=game_loop           Balin Runesinger(dwa) F5@(13, 9) HP 73/120 MP 0/0 Hu 50 $ 1818 room=P
--> w
-T1435 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 73/120 MP 0/0 Hu 49 $ 1818 room=.
--> i
-T1436 mode=inventory           Balin Runesinger(dwa) F5@(12, 9) HP 73/120 MP 0/0 Hu 49 $ 1818 room=.
--> eat4
-T1437 mode=inventory           Balin Runesinger(dwa) F5@(12, 9) HP 73/120 MP 0/0 Hu 56 $ 1818 room=.
--> x
-T1438 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 73/120 MP 0/0 Hu 56 $ 1818 room=.
--> s
-T1439 mode=game_loop           Balin Runesinger(dwa) F5@(12,10) HP 73/120 MP 0/0 Hu 55 $ 1818 room=.
--> w
-T1440 mode=game_loop           Balin Runesinger(dwa) F5@(11,10) HP 73/120 MP 0/0 Hu 55 $ 1818 room=.
--> n
-T1441 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 73/120 MP 0/0 Hu 54 $ 1818 room=.
--> n
-T1442 mode=pool_mode           Balin Runesinger(dwa) F5@(11, 8) HP 73/120 MP 0/0 Hu 53 $ 1818 room=P
--> dr
-T1443 mode=game_loop           Balin Runesinger(dwa) F5@(11, 8) HP 73/120 MP 0/0 Hu 53 $ 1818 room=.
--> w
-T1444 mode=game_loop           Balin Runesinger(dwa) F5@(10, 8) HP 73/120 MP 0/0 Hu 52 $ 1818 room=.
--> w
-T1445 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 73/120 MP 0/0 Hu 52 $ 1818 room=.
--> n
-T1446 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 7) HP 73/120 MP 0/0 Hu 51 $ 1818 room=.
--> w
-T1447 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 73/120 MP 0/0 Hu 50 $ 1818 room=.
--> s
-T1448 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 73/120 MP 0/0 Hu 50 $ 1818 room=.
--> w
-T1449 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 73/120 MP 0/0 Hu 49 $ 1818 room=.
--> i
-T1450 mode=inventory           Balin Runesinger(dwa) F5@( 7, 8) HP 73/120 MP 0/0 Hu 49 $ 1818 room=.
--> eat4
-T1451 mode=inventory           Balin Runesinger(dwa) F5@( 7, 8) HP 73/120 MP 0/0 Hu 67 $ 1818 room=.
--> x
-T1452 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 73/120 MP 0/0 Hu 67 $ 1818 room=.
--> s
-T1453 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 9) HP 73/120 MP 0/0 Hu 66 $ 1818 room=.
--> w
-T1454 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 9) HP 73/120 MP 0/0 Hu 66 $ 1818 room=.
--> s
-T1455 mode=game_loop           Balin Runesinger(dwa) F5@( 6,10) HP 73/120 MP 0/0 Hu 65 $ 1818 room=.
--> w
-T1456 mode=game_loop           Balin Runesinger(dwa) F5@( 5,10) HP 74/120 MP 0/0 Hu 64 $ 1818 room=C
--> w
-T1457 mode=game_loop           Balin Runesinger(dwa) F5@( 4,10) HP 74/120 MP 0/0 Hu 63 $ 1818 room=.
--> w
-T1458 mode=game_loop           Balin Runesinger(dwa) F5@( 3,10) HP 74/120 MP 0/0 Hu 63 $ 1818 room=.
--> w
-T1459 mode=game_loop           Balin Runesinger(dwa) F5@( 2,10) HP 74/120 MP 0/0 Hu 62 $ 1818 room=.
--> s
-T1460 mode=game_loop           Balin Runesinger(dwa) F5@( 2,11) HP 75/120 MP 0/0 Hu 61 $ 1818 room=.
--> w
-T1461 mode=game_loop           Balin Runesinger(dwa) F5@( 1,11) HP 75/120 MP 0/0 Hu 61 $ 1818 room=C
--> s
-T1462 mode=dungeon_mode        Balin Runesinger(dwa) F5@( 1,12) HP 75/120 MP 0/0 Hu 60 $ 1818 room=N
--> u
-T1463 mode=game_loop           Balin Runesinger(dwa) F5@( 1,12) HP 75/120 MP 0/0 Hu 60 $ 1818 room=N
--> s
-T1464 mode=game_loop           Balin Runesinger(dwa) F5@( 1,13) HP 75/120 MP 0/0 Hu 59 $ 1818 room=.
--> s
-T1465 mode=game_loop           Balin Runesinger(dwa) F5@( 1,14) HP 75/120 MP 0/0 Hu 59 $ 1818 room=.
--> e
-T1466 mode=game_loop           Balin Runesinger(dwa) F5@( 2,14) HP 75/120 MP 0/0 Hu 58 $ 1818 room=.
--> s
-T1467 mode=game_loop           Balin Runesinger(dwa) F5@( 2,15) HP 75/120 MP 0/0 Hu 57 $ 1818 room=.
--> n
-T1468 mode=game_loop           Balin Runesinger(dwa) F5@( 2,14) HP 75/120 MP 0/0 Hu 56 $ 1818 room=.
--> n
-T1469 mode=game_loop           Balin Runesinger(dwa) F5@( 2,13) HP 75/120 MP 0/0 Hu 56 $ 1818 room=.
--> w
-T1470 mode=game_loop           Balin Runesinger(dwa) F5@( 1,13) HP 75/120 MP 0/0 Hu 55 $ 1818 room=.
--> s
-T1471 mode=game_loop           Balin Runesinger(dwa) F5@( 1,14) HP 75/120 MP 0/0 Hu 54 $ 1818 room=.
--> n
-T1472 mode=game_loop           Balin Runesinger(dwa) F5@( 1,13) HP 75/120 MP 0/0 Hu 54 $ 1818 room=.
--> n
-T1473 mode=game_loop           Balin Runesinger(dwa) F5@( 1,12) HP 75/120 MP 0/0 Hu 53 $ 1818 room=N
--> n
-T1474 mode=game_loop           Balin Runesinger(dwa) F5@( 1,11) HP 75/120 MP 0/0 Hu 52 $ 1818 room=C
--> e
-T1475 mode=game_loop           Balin Runesinger(dwa) F5@( 2,11) HP 75/120 MP 0/0 Hu 52 $ 1818 room=.
--> n
-T1476 mode=game_loop           Balin Runesinger(dwa) F5@( 2,10) HP 75/120 MP 0/0 Hu 51 $ 1818 room=.
--> w
-T1477 mode=game_loop           Balin Runesinger(dwa) F5@( 1,10) HP 75/120 MP 0/0 Hu 50 $ 1818 room=.
--> n
-T1478 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 9) HP 75/120 MP 0/0 Hu 49 $ 1818 room=.
--> i
-T1479 mode=inventory           Balin Runesinger(dwa) F5@( 1, 9) HP 75/120 MP 0/0 Hu 49 $ 1818 room=.
+T 990 mode=inventory           Balin Runesinger(dwa) F4@(15,14) HP 99/100 MP 0/0 Hu 49 $ 884 room=O
 -> eat1
-T1480 mode=inventory           Balin Runesinger(dwa) F5@( 1, 9) HP 75/120 MP 0/0 Hu100 $ 1818 room=.
+T 991 mode=inventory           Balin Runesinger(dwa) F4@(15,14) HP 99/100 MP 0/0 Hu100 $ 884 room=O
 -> x
-T1481 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 9) HP 75/120 MP 0/0 Hu100 $ 1818 room=.
+T 992 mode=game_loop           Balin Runesinger(dwa) F4@(15,14) HP 99/100 MP 0/0 Hu100 $ 884 room=O
+-> l
+T 993 mode=game_loop           Balin Runesinger(dwa) F4@(15,14) HP 99/100 MP 0/0 Hu100 $ 884 room=O
 -> n
-T1482 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 8) HP 75/120 MP 0/0 Hu100 $ 1818 room=.
+T 994 mode=game_loop           Balin Runesinger(dwa) F4@(15,13) HP 99/100 MP 0/0 Hu100 $ 884 room=.
 -> n
-T1483 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 7) HP 76/120 MP 0/0 Hu 99 $ 1818 room=.
+T 995 mode=game_loop           Balin Runesinger(dwa) F4@(15,12) HP 100/100 MP 0/0 Hu 99 $ 884 room=.
 -> n
-T1484 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 6) HP 76/120 MP 0/0 Hu 98 $ 1818 room=.
+T 996 mode=game_loop           Balin Runesinger(dwa) F4@(15,11) HP 100/100 MP 0/0 Hu 98 $ 884 room=.
 -> n
-T1485 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 5) HP 77/120 MP 0/0 Hu 98 $ 1818 room=.
--> n
-T1486 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 4) HP 77/120 MP 0/0 Hu 97 $ 1818 room=.
--> n
-T1487 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 3) HP 78/120 MP 0/0 Hu 96 $ 1818 room=.
--> n
-T1488 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 2) HP 78/120 MP 0/0 Hu 96 $ 1818 room=.
--> e
-T1489 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 2) HP 79/120 MP 0/0 Hu 95 $ 1818 room=.
--> s
-T1490 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 3) HP 79/120 MP 0/0 Hu 94 $ 1818 room=.
--> s
-T1491 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 4) HP 80/120 MP 0/0 Hu 93 $ 1818 room=.
+T 997 mode=game_loop           Balin Runesinger(dwa) F4@(15,10) HP 100/100 MP 0/0 Hu 97 $ 884 room=.
 -> w
-T1492 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 4) HP 80/120 MP 0/0 Hu 93 $ 1818 room=.
--> s
-T1493 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 5) HP 81/120 MP 0/0 Hu 92 $ 1818 room=.
--> e
-T1494 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 5) HP 81/120 MP 0/0 Hu 91 $ 1818 room=.
--> e
-T1495 mode=combat_mode         Balin Runesinger(dwa) F5@( 3, 5) HP 82/120 MP 0/0 Hu 91 $ 1818 room=M vs Ogre(L4 HP55/83)
--> a
-T1496 mode=combat_mode         Balin Runesinger(dwa) F5@( 3, 5) HP 82/120 MP 0/0 Hu 91 $ 1818 room=M vs Ogre(L4 HP27/83)
--> a
-T1497 mode=combat_victory      Balin Runesinger(dwa) F5@( 3, 5) HP 78/120 MP 0/0 Hu 91 $ 1858 room=.
--> back
-T1498 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 5) HP 78/120 MP 0/0 Hu 91 $ 1858 room=.
--> i
-T1499 mode=inventory           Balin Runesinger(dwa) F5@( 3, 5) HP 78/120 MP 0/0 Hu 91 $ 1858 room=.
--> u16
-T1500 mode=inventory           Balin Runesinger(dwa) F5@( 3, 5) HP 78/120 MP 0/0 Hu 91 $ 1858 room=.
--> x
-T1501 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 5) HP 78/120 MP 0/0 Hu 91 $ 1858 room=.
--> s
-T1502 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 6) HP 78/120 MP 0/0 Hu 90 $ 1858 room=.
--> s
-T1503 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 7) HP 79/120 MP 0/0 Hu 89 $ 1858 room=.
--> e
-T1504 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 7) HP 79/120 MP 0/0 Hu 89 $ 1858 room=.
--> s
-T1505 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 8) HP 80/120 MP 0/0 Hu 88 $ 1858 room=.
--> e
-T1506 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 8) HP 80/120 MP 0/0 Hu 87 $ 1858 room=.
--> e
-T1507 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 8) HP 81/120 MP 0/0 Hu 86 $ 1858 room=.
+T 998 mode=game_loop           Balin Runesinger(dwa) F4@(14,10) HP 100/100 MP 0/0 Hu 97 $ 884 room=.
+-> w
+T 999 mode=game_loop           Balin Runesinger(dwa) F4@(13,10) HP 100/100 MP 0/0 Hu 96 $ 884 room=.
 -> n
-T1508 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 7) HP 81/120 MP 0/0 Hu 86 $ 1858 room=.
--> e
-T1509 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 82/120 MP 0/0 Hu 85 $ 1858 room=.
--> e
-T1510 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 82/120 MP 0/0 Hu 84 $ 1858 room=.
--> e
-T1511 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 7) HP 82/120 MP 0/0 Hu 84 $ 1858 room=.
--> s
-T1512 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 82/120 MP 0/0 Hu 83 $ 1858 room=.
--> e
-T1513 mode=game_loop           Balin Runesinger(dwa) F5@(10, 8) HP 83/120 MP 0/0 Hu 82 $ 1858 room=.
--> e
-T1514 mode=game_loop           Balin Runesinger(dwa) F5@(11, 8) HP 83/120 MP 0/0 Hu 82 $ 1858 room=.
--> s
-T1515 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 83/120 MP 0/0 Hu 81 $ 1858 room=.
--> e
-T1516 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 83/120 MP 0/0 Hu 80 $ 1858 room=.
--> e
-T1517 mode=game_loop           Balin Runesinger(dwa) F5@(13, 9) HP 84/120 MP 0/0 Hu 79 $ 1858 room=P
--> i
-T1518 mode=inventory           Balin Runesinger(dwa) F5@(13, 9) HP 84/120 MP 0/0 Hu 79 $ 1858 room=P
--> x
-T1519 mode=game_loop           Balin Runesinger(dwa) F5@(13, 9) HP 84/120 MP 0/0 Hu 79 $ 1858 room=P
--> s
-T1520 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 84/120 MP 0/0 Hu 79 $ 1858 room=.
--> i
-T1521 mode=inventory           Balin Runesinger(dwa) F5@(13,10) HP 84/120 MP 0/0 Hu 79 $ 1858 room=.
--> x
-T1522 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 84/120 MP 0/0 Hu 79 $ 1858 room=.
--> e
-T1523 mode=game_loop           Balin Runesinger(dwa) F5@(14,10) HP 84/120 MP 0/0 Hu 78 $ 1858 room=.
--> s
-T1524 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 84/120 MP 0/0 Hu 77 $ 1858 room=.
--> e
-T1525 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 85/120 MP 0/0 Hu 77 $ 1858 room=.
+T1000 mode=game_loop           Balin Runesinger(dwa) F4@(13, 9) HP 100/100 MP 0/0 Hu 95 $ 884 room=.
+-> w
+T1001 mode=game_loop           Balin Runesinger(dwa) F4@(12, 9) HP 100/100 MP 0/0 Hu 95 $ 884 room=.
+-> w
+T1002 mode=game_loop           Balin Runesinger(dwa) F4@(11, 9) HP 100/100 MP 0/0 Hu 94 $ 884 room=.
+-> w
+T1003 mode=game_loop           Balin Runesinger(dwa) F4@(10, 9) HP 100/100 MP 0/0 Hu 93 $ 884 room=.
 -> n
-T1526 mode=game_loop           Balin Runesinger(dwa) F5@(15,10) HP 85/120 MP 0/0 Hu 76 $ 1858 room=.
+T1004 mode=game_loop           Balin Runesinger(dwa) F4@(10, 8) HP 100/100 MP 0/0 Hu 93 $ 884 room=.
+-> w
+T1005 mode=game_loop           Balin Runesinger(dwa) F4@( 9, 8) HP 100/100 MP 0/0 Hu 92 $ 884 room=N
 -> n
-T1527 mode=dungeon_mode        Balin Runesinger(dwa) F5@(15, 9) HP 85/120 MP 0/0 Hu 75 $ 1858 room=N
--> u
-T1528 mode=game_loop           Balin Runesinger(dwa) F5@(15, 9) HP 85/120 MP 0/0 Hu 75 $ 1858 room=N
+T1006 mode=game_loop           Balin Runesinger(dwa) F4@( 9, 7) HP 100/100 MP 0/0 Hu 91 $ 884 room=.
+-> l
+T1007 mode=game_loop           Balin Runesinger(dwa) F4@( 9, 7) HP 100/100 MP 0/0 Hu 91 $ 884 room=.
 -> w
-T1529 mode=game_loop           Balin Runesinger(dwa) F5@(14, 9) HP 85/120 MP 0/0 Hu 75 $ 1858 room=.
--> s
-T1530 mode=game_loop           Balin Runesinger(dwa) F5@(14,10) HP 86/120 MP 0/0 Hu 74 $ 1858 room=.
--> s
-T1531 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 86/120 MP 0/0 Hu 73 $ 1858 room=.
--> e
-T1532 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 86/120 MP 0/0 Hu 72 $ 1858 room=.
--> e
-T1533 mode=game_loop           Balin Runesinger(dwa) F5@(16,11) HP 86/120 MP 0/0 Hu 72 $ 1858 room=.
--> e
-T1534 mode=game_loop           Balin Runesinger(dwa) F5@(17,11) HP 87/120 MP 0/0 Hu 71 $ 1858 room=.
--> e
-T1535 mode=game_loop           Balin Runesinger(dwa) F5@(18,11) HP 87/120 MP 0/0 Hu 70 $ 1858 room=.
--> s
-T1536 mode=game_loop           Balin Runesinger(dwa) F5@(18,12) HP 87/120 MP 0/0 Hu 70 $ 1858 room=.
--> e
-T1537 mode=game_loop           Balin Runesinger(dwa) F5@(19,12) HP 87/120 MP 0/0 Hu 69 $ 1858 room=.
+T1008 mode=game_loop           Balin Runesinger(dwa) F4@( 8, 7) HP 100/100 MP 0/0 Hu 90 $ 884 room=.
 -> w
-T1538 mode=game_loop           Balin Runesinger(dwa) F5@(18,12) HP 88/120 MP 0/0 Hu 68 $ 1858 room=.
--> s
-T1539 mode=game_loop           Balin Runesinger(dwa) F5@(18,13) HP 88/120 MP 0/0 Hu 68 $ 1858 room=.
--> s
-T1540 mode=game_loop           Balin Runesinger(dwa) F5@(18,14) HP 88/120 MP 0/0 Hu 67 $ 1858 room=.
--> e
-T1541 mode=game_loop           Balin Runesinger(dwa) F5@(19,14) HP 88/120 MP 0/0 Hu 66 $ 1858 room=.
--> s
-T1542 mode=game_loop           Balin Runesinger(dwa) F5@(19,15) HP 89/120 MP 0/0 Hu 65 $ 1858 room=.
--> s
-T1543 mode=game_loop           Balin Runesinger(dwa) F5@(19,16) HP 89/120 MP 0/0 Hu 65 $ 1858 room=.
+T1009 mode=game_loop           Balin Runesinger(dwa) F4@( 7, 7) HP 100/100 MP 0/0 Hu 90 $ 884 room=.
 -> w
-T1544 mode=combat_mode         Balin Runesinger(dwa) F5@(18,16) HP 89/120 MP 0/0 Hu 64 $ 1858 room=M vs Crawling Claw(L4 HP5/5)
--> a
-T1545 mode=combat_victory      Balin Runesinger(dwa) F5@(18,16) HP 89/120 MP 0/0 Hu 64 $ 1873 room=.
--> back
-T1546 mode=game_loop           Balin Runesinger(dwa) F5@(18,16) HP 89/120 MP 0/0 Hu 64 $ 1873 room=.
--> w
-T1547 mode=game_loop           Balin Runesinger(dwa) F5@(17,16) HP 89/120 MP 0/0 Hu 63 $ 1873 room=.
+T1010 mode=game_loop           Balin Runesinger(dwa) F4@( 6, 7) HP 100/100 MP 0/0 Hu 89 $ 884 room=.
 -> n
-T1548 mode=chest_mode          Balin Runesinger(dwa) F5@(17,15) HP 90/120 MP 0/0 Hu 63 $ 1873 room=C
--> o
-T1549 mode=game_loop           Balin Runesinger(dwa) F5@(17,15) HP 90/120 MP 0/0 Hu 63 $ 1873 room=.
--> i
-T1550 mode=inventory           Balin Runesinger(dwa) F5@(17,15) HP 90/120 MP 0/0 Hu 63 $ 1873 room=.
--> e4
-T1551 mode=inventory           Balin Runesinger(dwa) F5@(17,15) HP 90/120 MP 0/0 Hu 63 $ 1873 room=.
--> x
-T1552 mode=game_loop           Balin Runesinger(dwa) F5@(17,15) HP 90/120 MP 0/0 Hu 63 $ 1873 room=.
+T1011 mode=game_loop           Balin Runesinger(dwa) F4@( 6, 6) HP 100/100 MP 0/0 Hu 88 $ 884 room=.
 -> n
-T1553 mode=game_loop           Balin Runesinger(dwa) F5@(17,14) HP 90/120 MP 0/0 Hu 62 $ 1873 room=.
--> e
-T1554 mode=game_loop           Balin Runesinger(dwa) F5@(18,14) HP 90/120 MP 0/0 Hu 61 $ 1873 room=.
+T1012 mode=game_loop           Balin Runesinger(dwa) F4@( 6, 5) HP 100/100 MP 0/0 Hu 88 $ 884 room=.
+-> w
+T1013 mode=game_loop           Balin Runesinger(dwa) F4@( 5, 5) HP 100/100 MP 0/0 Hu 87 $ 884 room=.
 -> n
-T1555 mode=game_loop           Balin Runesinger(dwa) F5@(18,13) HP 90/120 MP 0/0 Hu 61 $ 1873 room=.
+T1014 mode=game_loop           Balin Runesinger(dwa) F4@( 5, 4) HP 100/100 MP 0/0 Hu 86 $ 884 room=.
 -> n
-T1556 mode=game_loop           Balin Runesinger(dwa) F5@(18,12) HP 91/120 MP 0/0 Hu 60 $ 1873 room=.
+T1015 mode=game_loop           Balin Runesinger(dwa) F4@( 5, 3) HP 100/100 MP 0/0 Hu 86 $ 884 room=.
+-> w
+T1016 mode=game_loop           Balin Runesinger(dwa) F4@( 4, 3) HP 100/100 MP 0/0 Hu 85 $ 884 room=.
 -> n
-T1557 mode=game_loop           Balin Runesinger(dwa) F5@(18,11) HP 91/120 MP 0/0 Hu 59 $ 1873 room=.
+T1017 mode=game_loop           Balin Runesinger(dwa) F4@( 4, 2) HP 100/100 MP 0/0 Hu 84 $ 884 room=.
 -> w
-T1558 mode=game_loop           Balin Runesinger(dwa) F5@(17,11) HP 91/120 MP 0/0 Hu 58 $ 1873 room=.
--> w
-T1559 mode=game_loop           Balin Runesinger(dwa) F5@(16,11) HP 91/120 MP 0/0 Hu 58 $ 1873 room=.
--> w
-T1560 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 91/120 MP 0/0 Hu 57 $ 1873 room=.
--> n
-T1561 mode=game_loop           Balin Runesinger(dwa) F5@(15,10) HP 91/120 MP 0/0 Hu 56 $ 1873 room=.
--> n
-T1562 mode=dungeon_mode        Balin Runesinger(dwa) F5@(15, 9) HP 91/120 MP 0/0 Hu 56 $ 1873 room=N
--> u
-T1563 mode=dungeon_unlocked_mode Balin Runesinger(dwa) F5@(15, 9) HP 91/120 MP 0/0 Hu 56 $ 1873 room=N
--> r
-T1564 mode=game_loop           Balin Runesinger(dwa) F5@(15, 9) HP 91/120 MP 0/0 Hu 56 $ 2133 room=N
--> w
-T1565 mode=game_loop           Balin Runesinger(dwa) F5@(14, 9) HP 91/120 MP 0/0 Hu 55 $ 2133 room=.
--> s
-T1566 mode=game_loop           Balin Runesinger(dwa) F5@(14,10) HP 91/120 MP 0/0 Hu 54 $ 2133 room=.
--> s
-T1567 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 91/120 MP 0/0 Hu 54 $ 2133 room=.
--> e
-T1568 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 91/120 MP 0/0 Hu 53 $ 2133 room=.
--> i
-T1569 mode=inventory           Balin Runesinger(dwa) F5@(15,11) HP 91/120 MP 0/0 Hu 53 $ 2133 room=.
--> x
-T1570 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 91/120 MP 0/0 Hu 53 $ 2133 room=.
--> e
-T1571 mode=game_loop           Balin Runesinger(dwa) F5@(16,11) HP 91/120 MP 0/0 Hu 52 $ 2133 room=.
--> e
-T1572 mode=game_loop           Balin Runesinger(dwa) F5@(17,11) HP 91/120 MP 0/0 Hu 51 $ 2133 room=.
--> e
-T1573 mode=game_loop           Balin Runesinger(dwa) F5@(18,11) HP 91/120 MP 0/0 Hu 51 $ 2133 room=.
--> s
-T1574 mode=game_loop           Balin Runesinger(dwa) F5@(18,12) HP 91/120 MP 0/0 Hu 50 $ 2133 room=.
--> s
-T1575 mode=game_loop           Balin Runesinger(dwa) F5@(18,13) HP 91/120 MP 0/0 Hu 49 $ 2133 room=.
--> i
-T1576 mode=inventory           Balin Runesinger(dwa) F5@(18,13) HP 91/120 MP 0/0 Hu 49 $ 2133 room=.
--> eat4
-T1577 mode=inventory           Balin Runesinger(dwa) F5@(18,13) HP 91/120 MP 0/0 Hu 82 $ 2133 room=.
--> x
-T1578 mode=game_loop           Balin Runesinger(dwa) F5@(18,13) HP 91/120 MP 0/0 Hu 82 $ 2133 room=.
--> s
-T1579 mode=game_loop           Balin Runesinger(dwa) F5@(18,14) HP 91/120 MP 0/0 Hu 82 $ 2133 room=.
--> w
-T1580 mode=game_loop           Balin Runesinger(dwa) F5@(17,14) HP 91/120 MP 0/0 Hu 81 $ 2133 room=.
--> s
-T1581 mode=game_loop           Balin Runesinger(dwa) F5@(17,15) HP 91/120 MP 0/0 Hu 80 $ 2133 room=.
--> w
-T1582 mode=game_loop           Balin Runesinger(dwa) F5@(16,15) HP 92/120 MP 0/0 Hu 80 $ 2133 room=.
--> w
-T1583 mode=game_loop           Balin Runesinger(dwa) F5@(15,15) HP 92/120 MP 0/0 Hu 79 $ 2133 room=.
--> n
-T1584 mode=game_loop           Balin Runesinger(dwa) F5@(15,14) HP 92/120 MP 0/0 Hu 78 $ 2133 room=.
--> e
-T1585 mode=game_loop           Balin Runesinger(dwa) F5@(16,14) HP 92/120 MP 0/0 Hu 77 $ 2133 room=.
--> e
-T1586 mode=game_loop           Balin Runesinger(dwa) F5@(17,14) HP 93/120 MP 0/0 Hu 77 $ 2133 room=.
--> s
-T1587 mode=game_loop           Balin Runesinger(dwa) F5@(17,15) HP 93/120 MP 0/0 Hu 76 $ 2133 room=.
--> s
-T1588 mode=game_loop           Balin Runesinger(dwa) F5@(17,16) HP 93/120 MP 0/0 Hu 75 $ 2133 room=.
--> e
-T1589 mode=game_loop           Balin Runesinger(dwa) F5@(18,16) HP 93/120 MP 0/0 Hu 75 $ 2133 room=.
--> e
-T1590 mode=game_loop           Balin Runesinger(dwa) F5@(19,16) HP 94/120 MP 0/0 Hu 74 $ 2133 room=.
--> n
-T1591 mode=game_loop           Balin Runesinger(dwa) F5@(19,15) HP 94/120 MP 0/0 Hu 73 $ 2133 room=.
--> n
-T1592 mode=game_loop           Balin Runesinger(dwa) F5@(19,14) HP 94/120 MP 0/0 Hu 73 $ 2133 room=.
--> w
-T1593 mode=game_loop           Balin Runesinger(dwa) F5@(18,14) HP 94/120 MP 0/0 Hu 72 $ 2133 room=.
--> n
-T1594 mode=game_loop           Balin Runesinger(dwa) F5@(18,13) HP 95/120 MP 0/0 Hu 71 $ 2133 room=.
--> w
-T1595 mode=game_loop           Balin Runesinger(dwa) F5@(17,13) HP 95/120 MP 0/0 Hu 70 $ 2133 room=.
--> s
-T1596 mode=game_loop           Balin Runesinger(dwa) F5@(17,14) HP 95/120 MP 0/0 Hu 70 $ 2133 room=.
--> s
-T1597 mode=game_loop           Balin Runesinger(dwa) F5@(17,15) HP 95/120 MP 0/0 Hu 69 $ 2133 room=.
--> s
-T1598 mode=game_loop           Balin Runesinger(dwa) F5@(17,16) HP 96/120 MP 0/0 Hu 68 $ 2133 room=.
--> e
-T1599 mode=game_loop           Balin Runesinger(dwa) F5@(18,16) HP 96/120 MP 0/0 Hu 68 $ 2133 room=.
--> e
-T1600 mode=game_loop           Balin Runesinger(dwa) F5@(19,16) HP 96/120 MP 0/0 Hu 67 $ 2133 room=.
--> n
-T1601 mode=game_loop           Balin Runesinger(dwa) F5@(19,15) HP 96/120 MP 0/0 Hu 66 $ 2133 room=.
--> w
-T1602 mode=altar_mode          Balin Runesinger(dwa) F5@(18,15) HP 97/120 MP 0/0 Hu 66 $ 2133 room=A
--> pray
-T1603 mode=game_loop           Balin Runesinger(dwa) F5@(18,15) HP 97/120 MP 0/0 Hu 66 $ 2133 room=.
--> n
-T1604 mode=game_loop           Balin Runesinger(dwa) F5@(18,14) HP 97/120 MP 0/0 Hu 65 $ 2133 room=.
--> n
-T1605 mode=game_loop           Balin Runesinger(dwa) F5@(18,13) HP 97/120 MP 0/0 Hu 64 $ 2133 room=.
--> n
-T1606 mode=game_loop           Balin Runesinger(dwa) F5@(18,12) HP 97/120 MP 0/0 Hu 63 $ 2133 room=.
--> n
-T1607 mode=game_loop           Balin Runesinger(dwa) F5@(18,11) HP 98/120 MP 0/0 Hu 63 $ 2133 room=.
--> w
-T1608 mode=game_loop           Balin Runesinger(dwa) F5@(17,11) HP 98/120 MP 0/0 Hu 62 $ 2133 room=.
--> w
-T1609 mode=game_loop           Balin Runesinger(dwa) F5@(16,11) HP 98/120 MP 0/0 Hu 61 $ 2133 room=.
--> w
-T1610 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 98/120 MP 0/0 Hu 61 $ 2133 room=.
--> i
-T1611 mode=inventory           Balin Runesinger(dwa) F5@(15,11) HP 98/120 MP 0/0 Hu 61 $ 2133 room=.
--> x
-T1612 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 98/120 MP 0/0 Hu 61 $ 2133 room=.
--> w
-T1613 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 99/120 MP 0/0 Hu 60 $ 2133 room=.
--> i
-T1614 mode=inventory           Balin Runesinger(dwa) F5@(14,11) HP 99/120 MP 0/0 Hu 60 $ 2133 room=.
--> x
-T1615 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 99/120 MP 0/0 Hu 60 $ 2133 room=.
--> w
-T1616 mode=game_loop           Balin Runesinger(dwa) F5@(13,11) HP 99/120 MP 0/0 Hu 59 $ 2133 room=.
--> n
-T1617 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 99/120 MP 0/0 Hu 59 $ 2133 room=.
--> i
-T1618 mode=inventory           Balin Runesinger(dwa) F5@(13,10) HP 99/120 MP 0/0 Hu 59 $ 2133 room=.
--> x
-T1619 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 99/120 MP 0/0 Hu 59 $ 2133 room=.
--> n
-T1620 mode=game_loop           Balin Runesinger(dwa) F5@(13, 9) HP 99/120 MP 0/0 Hu 58 $ 2133 room=P
--> i
-T1621 mode=inventory           Balin Runesinger(dwa) F5@(13, 9) HP 99/120 MP 0/0 Hu 58 $ 2133 room=P
--> x
-T1622 mode=game_loop           Balin Runesinger(dwa) F5@(13, 9) HP 99/120 MP 0/0 Hu 58 $ 2133 room=P
--> w
-T1623 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 99/120 MP 0/0 Hu 57 $ 2133 room=.
--> i
-T1624 mode=inventory           Balin Runesinger(dwa) F5@(12, 9) HP 99/120 MP 0/0 Hu 57 $ 2133 room=.
--> x
-T1625 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 99/120 MP 0/0 Hu 57 $ 2133 room=.
--> w
-T1626 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 99/120 MP 0/0 Hu 56 $ 2133 room=.
--> s
-T1627 mode=game_loop           Balin Runesinger(dwa) F5@(11,10) HP 99/120 MP 0/0 Hu 56 $ 2133 room=.
--> s
-T1628 mode=game_loop           Balin Runesinger(dwa) F5@(11,11) HP 99/120 MP 0/0 Hu 55 $ 2133 room=.
--> w
-T1629 mode=game_loop           Balin Runesinger(dwa) F5@(10,11) HP 99/120 MP 0/0 Hu 54 $ 2133 room=.
--> w
-T1630 mode=game_loop           Balin Runesinger(dwa) F5@( 9,11) HP 99/120 MP 0/0 Hu 54 $ 2133 room=.
--> n
-T1631 mode=game_loop           Balin Runesinger(dwa) F5@( 9,10) HP 99/120 MP 0/0 Hu 53 $ 2133 room=.
--> w
-T1632 mode=game_loop           Balin Runesinger(dwa) F5@( 8,10) HP 99/120 MP 0/0 Hu 52 $ 2133 room=.
--> s
-T1633 mode=game_loop           Balin Runesinger(dwa) F5@( 8,11) HP 99/120 MP 0/0 Hu 52 $ 2133 room=.
--> w
-T1634 mode=game_loop           Balin Runesinger(dwa) F5@( 7,11) HP 99/120 MP 0/0 Hu 51 $ 2133 room=.
--> s
-T1635 mode=game_loop           Balin Runesinger(dwa) F5@( 7,12) HP 99/120 MP 0/0 Hu 50 $ 2133 room=.
--> e
-T1636 mode=game_loop           Balin Runesinger(dwa) F5@( 8,12) HP 99/120 MP 0/0 Hu 49 $ 2133 room=.
--> i
-T1637 mode=inventory           Balin Runesinger(dwa) F5@( 8,12) HP 99/120 MP 0/0 Hu 49 $ 2133 room=.
--> eat1
-T1638 mode=inventory           Balin Runesinger(dwa) F5@( 8,12) HP 99/120 MP 0/0 Hu100 $ 2133 room=.
--> x
-T1639 mode=game_loop           Balin Runesinger(dwa) F5@( 8,12) HP 99/120 MP 0/0 Hu100 $ 2133 room=.
--> e
-T1640 mode=game_loop           Balin Runesinger(dwa) F5@( 9,12) HP 99/120 MP 0/0 Hu100 $ 2133 room=.
--> n
-T1641 mode=game_loop           Balin Runesinger(dwa) F5@( 9,11) HP 100/120 MP 0/0 Hu 99 $ 2133 room=.
--> n
-T1642 mode=game_loop           Balin Runesinger(dwa) F5@( 9,10) HP 100/120 MP 0/0 Hu 98 $ 2133 room=.
--> w
-T1643 mode=game_loop           Balin Runesinger(dwa) F5@( 8,10) HP 101/120 MP 0/0 Hu 98 $ 2133 room=.
--> w
-T1644 mode=game_loop           Balin Runesinger(dwa) F5@( 7,10) HP 101/120 MP 0/0 Hu 97 $ 2133 room=.
--> s
-T1645 mode=game_loop           Balin Runesinger(dwa) F5@( 7,11) HP 102/120 MP 0/0 Hu 96 $ 2133 room=.
--> e
-T1646 mode=game_loop           Balin Runesinger(dwa) F5@( 8,11) HP 102/120 MP 0/0 Hu 96 $ 2133 room=.
--> e
-T1647 mode=game_loop           Balin Runesinger(dwa) F5@( 9,11) HP 103/120 MP 0/0 Hu 95 $ 2133 room=.
--> n
-T1648 mode=game_loop           Balin Runesinger(dwa) F5@( 9,10) HP 103/120 MP 0/0 Hu 94 $ 2133 room=.
--> w
-T1649 mode=game_loop           Balin Runesinger(dwa) F5@( 8,10) HP 104/120 MP 0/0 Hu 93 $ 2133 room=.
--> w
-T1650 mode=game_loop           Balin Runesinger(dwa) F5@( 7,10) HP 104/120 MP 0/0 Hu 93 $ 2133 room=.
--> n
-T1651 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 9) HP 105/120 MP 0/0 Hu 92 $ 2133 room=.
--> n
-T1652 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 105/120 MP 0/0 Hu 91 $ 2133 room=.
--> n
-T1653 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 106/120 MP 0/0 Hu 91 $ 2133 room=.
--> w
-T1654 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 7) HP 106/120 MP 0/0 Hu 90 $ 2133 room=.
--> n
-T1655 mode=pool_mode           Balin Runesinger(dwa) F5@( 6, 6) HP 107/120 MP 0/0 Hu 89 $ 2133 room=P
--> dr
-T1656 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 6) HP 107/120 MP 0/0 Hu 89 $ 2133 room=.
--> e
-T1657 mode=library_mode        Balin Runesinger(dwa) F5@( 7, 6) HP 107/120 MP 0/0 Hu 89 $ 2133 room=L
--> r
-T1658 mode=library_read_decision_mode Balin Runesinger(dwa) F5@( 7, 6) HP 107/120 MP 0/0 Hu 89 $ 2133 room=L
--> y
-T1659 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 6) HP 107/118 MP 0/0 Hu 89 $ 2133 room=.
--> s
-T1660 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 108/118 MP 0/0 Hu 88 $ 2133 room=.
--> s
-T1661 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 108/118 MP 0/0 Hu 87 $ 2133 room=.
--> e
-T1662 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 109/118 MP 0/0 Hu 86 $ 2133 room=.
--> e
-T1663 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 109/118 MP 0/0 Hu 86 $ 2133 room=.
--> e
-T1664 mode=game_loop           Balin Runesinger(dwa) F5@(10, 8) HP 110/118 MP 0/0 Hu 85 $ 2133 room=.
--> e
-T1665 mode=game_loop           Balin Runesinger(dwa) F5@(11, 8) HP 110/118 MP 0/0 Hu 84 $ 2133 room=.
--> s
-T1666 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 110/118 MP 0/0 Hu 84 $ 2133 room=.
--> i
-T1667 mode=inventory           Balin Runesinger(dwa) F5@(11, 9) HP 110/118 MP 0/0 Hu 84 $ 2133 room=.
--> x
-T1668 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 110/118 MP 0/0 Hu 84 $ 2133 room=.
--> e
-T1669 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 110/118 MP 0/0 Hu 83 $ 2133 room=.
--> i
-T1670 mode=inventory           Balin Runesinger(dwa) F5@(12, 9) HP 110/118 MP 0/0 Hu 83 $ 2133 room=.
--> x
-T1671 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 110/118 MP 0/0 Hu 83 $ 2133 room=.
--> s
-T1672 mode=game_loop           Balin Runesinger(dwa) F5@(12,10) HP 111/118 MP 0/0 Hu 82 $ 2133 room=.
--> s
-T1673 mode=game_loop           Balin Runesinger(dwa) F5@(12,11) HP 111/118 MP 0/0 Hu 82 $ 2133 room=.
--> e
-T1674 mode=game_loop           Balin Runesinger(dwa) F5@(13,11) HP 111/118 MP 0/0 Hu 81 $ 2133 room=.
--> i
-T1675 mode=inventory           Balin Runesinger(dwa) F5@(13,11) HP 111/118 MP 0/0 Hu 81 $ 2133 room=.
--> x
-T1676 mode=game_loop           Balin Runesinger(dwa) F5@(13,11) HP 111/118 MP 0/0 Hu 81 $ 2133 room=.
--> e
-T1677 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 111/118 MP 0/0 Hu 80 $ 2133 room=.
--> i
-T1678 mode=inventory           Balin Runesinger(dwa) F5@(14,11) HP 111/118 MP 0/0 Hu 80 $ 2133 room=.
--> x
-T1679 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 111/118 MP 0/0 Hu 80 $ 2133 room=.
--> e
-T1680 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 112/118 MP 0/0 Hu 79 $ 2133 room=.
--> i
-T1681 mode=inventory           Balin Runesinger(dwa) F5@(15,11) HP 112/118 MP 0/0 Hu 79 $ 2133 room=.
--> x
-T1682 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 112/118 MP 0/0 Hu 79 $ 2133 room=.
--> e
-T1683 mode=game_loop           Balin Runesinger(dwa) F5@(16,11) HP 112/118 MP 0/0 Hu 79 $ 2133 room=.
--> e
-T1684 mode=game_loop           Balin Runesinger(dwa) F5@(17,11) HP 112/118 MP 0/0 Hu 78 $ 2133 room=.
--> e
-T1685 mode=game_loop           Balin Runesinger(dwa) F5@(18,11) HP 112/118 MP 0/0 Hu 77 $ 2133 room=.
--> s
-T1686 mode=game_loop           Balin Runesinger(dwa) F5@(18,12) HP 113/118 MP 0/0 Hu 77 $ 2133 room=.
--> i
-T1687 mode=inventory           Balin Runesinger(dwa) F5@(18,12) HP 113/118 MP 0/0 Hu 77 $ 2133 room=.
--> x
-T1688 mode=game_loop           Balin Runesinger(dwa) F5@(18,12) HP 113/118 MP 0/0 Hu 77 $ 2133 room=.
--> s
-T1689 mode=game_loop           Balin Runesinger(dwa) F5@(18,13) HP 113/118 MP 0/0 Hu 76 $ 2133 room=.
--> i
-T1690 mode=inventory           Balin Runesinger(dwa) F5@(18,13) HP 113/118 MP 0/0 Hu 76 $ 2133 room=.
--> x
-T1691 mode=game_loop           Balin Runesinger(dwa) F5@(18,13) HP 113/118 MP 0/0 Hu 76 $ 2133 room=.
--> s
-T1692 mode=game_loop           Balin Runesinger(dwa) F5@(18,14) HP 113/118 MP 0/0 Hu 75 $ 2133 room=.
--> i
-T1693 mode=inventory           Balin Runesinger(dwa) F5@(18,14) HP 113/118 MP 0/0 Hu 75 $ 2133 room=.
--> x
-T1694 mode=game_loop           Balin Runesinger(dwa) F5@(18,14) HP 113/118 MP 0/0 Hu 75 $ 2133 room=.
--> s
-T1695 mode=game_loop           Balin Runesinger(dwa) F5@(18,15) HP 113/118 MP 0/0 Hu 75 $ 2133 room=.
--> w
-T1696 mode=game_loop           Balin Runesinger(dwa) F5@(17,15) HP 114/118 MP 0/0 Hu 74 $ 2133 room=.
--> n
-T1697 mode=game_loop           Balin Runesinger(dwa) F5@(17,14) HP 114/118 MP 0/0 Hu 73 $ 2133 room=.
--> n
-T1698 mode=game_loop           Balin Runesinger(dwa) F5@(17,13) HP 114/118 MP 0/0 Hu 72 $ 2133 room=.
--> n
-T1699 mode=game_loop           Balin Runesinger(dwa) F5@(17,12) HP 114/118 MP 0/0 Hu 72 $ 2133 room=.
--> n
-T1700 mode=game_loop           Balin Runesinger(dwa) F5@(17,11) HP 115/118 MP 0/0 Hu 71 $ 2133 room=.
--> i
-T1701 mode=inventory           Balin Runesinger(dwa) F5@(17,11) HP 115/118 MP 0/0 Hu 71 $ 2133 room=.
--> x
-T1702 mode=game_loop           Balin Runesinger(dwa) F5@(17,11) HP 115/118 MP 0/0 Hu 71 $ 2133 room=.
--> w
-T1703 mode=game_loop           Balin Runesinger(dwa) F5@(16,11) HP 115/118 MP 0/0 Hu 70 $ 2133 room=.
--> i
-T1704 mode=inventory           Balin Runesinger(dwa) F5@(16,11) HP 115/118 MP 0/0 Hu 70 $ 2133 room=.
--> x
-T1705 mode=game_loop           Balin Runesinger(dwa) F5@(16,11) HP 115/118 MP 0/0 Hu 70 $ 2133 room=.
--> w
-T1706 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 115/118 MP 0/0 Hu 70 $ 2133 room=.
--> i
-T1707 mode=inventory           Balin Runesinger(dwa) F5@(15,11) HP 115/118 MP 0/0 Hu 70 $ 2133 room=.
--> x
-T1708 mode=game_loop           Balin Runesinger(dwa) F5@(15,11) HP 115/118 MP 0/0 Hu 70 $ 2133 room=.
--> w
-T1709 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 115/118 MP 0/0 Hu 69 $ 2133 room=.
--> i
-T1710 mode=inventory           Balin Runesinger(dwa) F5@(14,11) HP 115/118 MP 0/0 Hu 69 $ 2133 room=.
--> x
-T1711 mode=game_loop           Balin Runesinger(dwa) F5@(14,11) HP 115/118 MP 0/0 Hu 69 $ 2133 room=.
--> w
-T1712 mode=game_loop           Balin Runesinger(dwa) F5@(13,11) HP 116/118 MP 0/0 Hu 68 $ 2133 room=.
--> i
-T1713 mode=inventory           Balin Runesinger(dwa) F5@(13,11) HP 116/118 MP 0/0 Hu 68 $ 2133 room=.
--> x
-T1714 mode=game_loop           Balin Runesinger(dwa) F5@(13,11) HP 116/118 MP 0/0 Hu 68 $ 2133 room=.
--> w
-T1715 mode=game_loop           Balin Runesinger(dwa) F5@(12,11) HP 116/118 MP 0/0 Hu 68 $ 2133 room=.
--> w
-T1716 mode=game_loop           Balin Runesinger(dwa) F5@(11,11) HP 116/118 MP 0/0 Hu 67 $ 2133 room=.
--> n
-T1717 mode=game_loop           Balin Runesinger(dwa) F5@(11,10) HP 116/118 MP 0/0 Hu 66 $ 2133 room=.
--> n
-T1718 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 117/118 MP 0/0 Hu 65 $ 2133 room=.
--> i
-T1719 mode=inventory           Balin Runesinger(dwa) F5@(11, 9) HP 117/118 MP 0/0 Hu 65 $ 2133 room=.
--> x
-T1720 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 117/118 MP 0/0 Hu 65 $ 2133 room=.
--> e
-T1721 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 117/118 MP 0/0 Hu 65 $ 2133 room=.
--> i
-T1722 mode=inventory           Balin Runesinger(dwa) F5@(12, 9) HP 117/118 MP 0/0 Hu 65 $ 2133 room=.
--> x
-T1723 mode=game_loop           Balin Runesinger(dwa) F5@(12, 9) HP 117/118 MP 0/0 Hu 65 $ 2133 room=.
--> n
-T1724 mode=game_loop           Balin Runesinger(dwa) F5@(12, 8) HP 117/118 MP 0/0 Hu 64 $ 2133 room=.
--> w
-T1725 mode=game_loop           Balin Runesinger(dwa) F5@(11, 8) HP 117/118 MP 0/0 Hu 63 $ 2133 room=.
--> w
-T1726 mode=game_loop           Balin Runesinger(dwa) F5@(10, 8) HP 118/118 MP 0/0 Hu 63 $ 2133 room=.
--> w
-T1727 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 118/118 MP 0/0 Hu 62 $ 2133 room=.
--> w
-T1728 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 118/118 MP 0/0 Hu 61 $ 2133 room=.
--> w
-T1729 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 118/118 MP 0/0 Hu 61 $ 2133 room=.
--> n
-T1730 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 118/118 MP 0/0 Hu 60 $ 2133 room=.
--> w
-T1731 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 7) HP 118/118 MP 0/0 Hu 59 $ 2133 room=.
--> n
-T1732 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 6) HP 118/118 MP 0/0 Hu 58 $ 2133 room=.
--> e
-T1733 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 6) HP 118/118 MP 0/0 Hu 58 $ 2133 room=.
--> s
-T1734 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 118/118 MP 0/0 Hu 57 $ 2133 room=.
--> s
-T1735 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 118/118 MP 0/0 Hu 56 $ 2133 room=.
--> e
-T1736 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 118/118 MP 0/0 Hu 56 $ 2133 room=.
--> e
-T1737 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 118/118 MP 0/0 Hu 55 $ 2133 room=.
--> e
-T1738 mode=game_loop           Balin Runesinger(dwa) F5@(10, 8) HP 118/118 MP 0/0 Hu 54 $ 2133 room=.
--> e
-T1739 mode=game_loop           Balin Runesinger(dwa) F5@(11, 8) HP 118/118 MP 0/0 Hu 54 $ 2133 room=.
--> s
-T1740 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 118/118 MP 0/0 Hu 53 $ 2133 room=.
--> i
-T1741 mode=inventory           Balin Runesinger(dwa) F5@(11, 9) HP 118/118 MP 0/0 Hu 53 $ 2133 room=.
--> x
-T1742 mode=game_loop           Balin Runesinger(dwa) F5@(11, 9) HP 118/118 MP 0/0 Hu 53 $ 2133 room=.
--> w
-T1743 mode=game_loop           Balin Runesinger(dwa) F5@(10, 9) HP 118/118 MP 0/0 Hu 52 $ 2133 room=.
--> w
-T1744 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 9) HP 118/118 MP 0/0 Hu 51 $ 2133 room=.
--> n
-T1745 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 118/118 MP 0/0 Hu 51 $ 2133 room=.
--> i
-T1746 mode=inventory           Balin Runesinger(dwa) F5@( 9, 8) HP 118/118 MP 0/0 Hu 51 $ 2133 room=.
--> x
-T1747 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 118/118 MP 0/0 Hu 51 $ 2133 room=.
--> e
-T1748 mode=game_loop           Balin Runesinger(dwa) F5@(10, 8) HP 118/118 MP 0/0 Hu 50 $ 2133 room=.
--> i
-T1749 mode=inventory           Balin Runesinger(dwa) F5@(10, 8) HP 118/118 MP 0/0 Hu 50 $ 2133 room=.
--> x
-T1750 mode=game_loop           Balin Runesinger(dwa) F5@(10, 8) HP 118/118 MP 0/0 Hu 50 $ 2133 room=.
--> e
-T1751 mode=game_loop           Balin Runesinger(dwa) F5@(11, 8) HP 118/118 MP 0/0 Hu 49 $ 2133 room=.
--> i
-T1752 mode=inventory           Balin Runesinger(dwa) F5@(11, 8) HP 118/118 MP 0/0 Hu 49 $ 2133 room=.
--> eat1
-T1753 mode=inventory           Balin Runesinger(dwa) F5@(11, 8) HP 118/118 MP 0/0 Hu100 $ 2133 room=.
--> x
-T1754 mode=game_loop           Balin Runesinger(dwa) F5@(11, 8) HP 118/118 MP 0/0 Hu100 $ 2133 room=.
--> e
-T1755 mode=game_loop           Balin Runesinger(dwa) F5@(12, 8) HP 118/118 MP 0/0 Hu100 $ 2133 room=.
--> n
-T1756 mode=game_loop           Balin Runesinger(dwa) F5@(12, 7) HP 118/118 MP 0/0 Hu 99 $ 2133 room=.
--> n
-T1757 mode=game_loop           Balin Runesinger(dwa) F5@(12, 6) HP 118/118 MP 0/0 Hu 98 $ 2133 room=.
--> w
-T1758 mode=game_loop           Balin Runesinger(dwa) F5@(11, 6) HP 118/118 MP 0/0 Hu 98 $ 2133 room=.
--> n
-T1759 mode=game_loop           Balin Runesinger(dwa) F5@(11, 5) HP 118/118 MP 0/0 Hu 97 $ 2133 room=.
--> n
-T1760 mode=game_loop           Balin Runesinger(dwa) F5@(11, 4) HP 118/118 MP 0/0 Hu 96 $ 2133 room=.
--> n
-T1761 mode=stairs_down_mode    Balin Runesinger(dwa) F5@(11, 3) HP 118/118 MP 0/0 Hu 95 $ 2133 room=D
+T1018 mode=stairs_down_mode    Balin Runesinger(dwa) F4@( 3, 2) HP 100/100 MP 0/0 Hu 83 $ 884 room=D
 -> d
-T1762 mode=stairs_up_mode      Balin Runesinger(dwa) F6@( 1, 1) HP 118/118 MP 0/0 Hu 95 $ 2133 room=U
--> e
-T1763 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 1) HP 118/118 MP 0/0 Hu 95 $ 2133 room=.
+T1019 mode=stairs_up_mode      Balin Runesinger(dwa) F5@( 1, 1) HP 100/100 MP 0/0 Hu 83 $ 884 room=U
 -> s
-T1764 mode=dungeon_mode        Balin Runesinger(dwa) F6@( 2, 2) HP 118/118 MP 0/0 Hu 94 $ 2133 room=N
--> u
-T1765 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 2) HP 118/118 MP 0/0 Hu 94 $ 2133 room=N
--> w
-T1766 mode=game_loop           Balin Runesinger(dwa) F6@( 1, 2) HP 118/118 MP 0/0 Hu 93 $ 2133 room=.
--> s
-T1767 mode=game_loop           Balin Runesinger(dwa) F6@( 1, 3) HP 118/118 MP 0/0 Hu 93 $ 2133 room=.
+T1020 mode=game_loop           Balin Runesinger(dwa) F5@( 1, 2) HP 100/100 MP 0/0 Hu 83 $ 884 room=.
 -> e
-T1768 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 3) HP 118/118 MP 0/0 Hu 92 $ 2133 room=.
--> s
-T1769 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 4) HP 118/118 MP 0/0 Hu 91 $ 2133 room=.
--> w
-T1770 mode=game_loop           Balin Runesinger(dwa) F6@( 1, 4) HP 118/118 MP 0/0 Hu 91 $ 2133 room=.
--> s
-T1771 mode=game_loop           Balin Runesinger(dwa) F6@( 1, 5) HP 118/118 MP 0/0 Hu 90 $ 2133 room=.
--> e
-T1772 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 5) HP 118/118 MP 0/0 Hu 89 $ 2133 room=.
--> e
-T1773 mode=game_loop           Balin Runesinger(dwa) F6@( 3, 5) HP 118/118 MP 0/0 Hu 88 $ 2133 room=.
--> e
-T1774 mode=game_loop           Balin Runesinger(dwa) F6@( 4, 5) HP 118/118 MP 0/0 Hu 88 $ 2133 room=.
+T1021 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 2) HP 100/100 MP 0/0 Hu 82 $ 884 room=.
 -> n
-T1775 mode=oracle_mode         Balin Runesinger(dwa) F6@( 4, 4) HP 118/118 MP 0/0 Hu 87 $ 2133 room=O
--> s
-T1776 mode=game_loop           Balin Runesinger(dwa) F6@( 4, 5) HP 118/118 MP 0/0 Hu 86 $ 2133 room=.
--> e
-T1777 mode=combat_mode         Balin Runesinger(dwa) F6@( 5, 5) HP 118/118 MP 0/0 Hu 86 $ 2133 room=M vs Basilisk(L5 HP93/93)
--> a
-T1778 mode=combat_mode         Balin Runesinger(dwa) F6@( 5, 5) HP 118/118 MP 0/0 Hu 86 $ 2133 room=M vs Basilisk(L5 HP68/93)
--> a
-T1779 mode=combat_mode         Balin Runesinger(dwa) F6@( 5, 5) HP 118/118 MP 0/0 Hu 86 $ 2133 room=M vs Basilisk(L5 HP43/93)
--> a
-T1780 mode=combat_mode         Balin Runesinger(dwa) F6@( 5, 5) HP 107/118 MP 0/0 Hu 86 $ 2133 room=M vs Basilisk(L5 HP18/93)
--> a
-T1781 mode=combat_mode         Balin Runesinger(dwa) F6@( 5, 5) HP 96/118 MP 0/0 Hu 86 $ 2133 room=M vs Basilisk(L5 HP18/93)
--> a
-T1782 mode=combat_mode         Balin Runesinger(dwa) F6@( 5, 5) HP 96/118 MP 0/0 Hu 86 $ 2133 room=M vs Basilisk(L5 HP18/93)
--> a
-T1783 mode=combat_victory      Balin Runesinger(dwa) F6@( 5, 5) HP 85/128 MP 0/0 Hu 86 $ 2169 room=.
--> back
-T1784 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 5) HP 85/128 MP 0/0 Hu 86 $ 2169 room=.
--> n
-T1785 mode=garden_mode         Balin Runesinger(dwa) F6@( 5, 4) HP 85/128 MP 0/0 Hu 85 $ 2169 room=G
--> h
-T1786 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 4) HP 85/128 MP 0/0 Hu 85 $ 2169 room=.
--> n
-T1787 mode=combat_mode         Balin Runesinger(dwa) F6@( 5, 3) HP 85/128 MP 0/0 Hu 84 $ 2169 room=M vs Hardened Sewer Rat(L5 HP15/15)
--> a
-T1788 mode=combat_victory      Balin Runesinger(dwa) F6@( 5, 3) HP 85/128 MP 0/0 Hu 84 $ 2175 room=.
--> back
-T1789 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 3) HP 85/128 MP 0/0 Hu 84 $ 2175 room=.
--> i
-T1790 mode=inventory           Balin Runesinger(dwa) F6@( 5, 3) HP 85/128 MP 0/0 Hu 84 $ 2175 room=.
--> u17
-T1791 mode=inventory           Balin Runesinger(dwa) F6@( 5, 3) HP 85/128 MP 0/0 Hu 84 $ 2175 room=.
--> x
-T1792 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 3) HP 85/128 MP 0/0 Hu 84 $ 2175 room=.
--> n
-T1793 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 2) HP 85/128 MP 0/0 Hu 84 $ 2175 room=.
--> n
-T1794 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 1) HP 86/128 MP 0/0 Hu 83 $ 2175 room=.
--> w
-T1795 mode=combat_mode         Balin Runesinger(dwa) F6@( 4, 1) HP 86/128 MP 0/0 Hu 82 $ 2175 room=M vs Hill Giant(L5 HP135/135)
--> a
-T1796 mode=combat_mode         Balin Runesinger(dwa) F6@( 4, 1) HP 86/128 MP 0/0 Hu 82 $ 2175 room=M vs Hill Giant(L5 HP135/135)
--> a
-T1797 mode=combat_mode         Balin Runesinger(dwa) F6@( 4, 1) HP 86/128 MP 0/0 Hu 82 $ 2175 room=M vs Hill Giant(L5 HP108/135)
--> f
-T1798 mode=flee_direction_mode Balin Runesinger(dwa) F6@( 4, 1) HP 86/128 MP 0/0 Hu 82 $ 2175 room=M
--> e
-T1799 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 1) HP 86/128 MP 0/0 Hu 82 $ 2175 room=.
--> e
-T1800 mode=game_loop           Balin Runesinger(dwa) F6@( 6, 1) HP 86/128 MP 0/0 Hu 81 $ 2175 room=.
--> s
-T1801 mode=game_loop           Balin Runesinger(dwa) F6@( 6, 2) HP 86/128 MP 0/0 Hu 81 $ 2175 room=.
--> w
-T1802 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 2) HP 87/128 MP 0/0 Hu 80 $ 2175 room=.
--> s
-T1803 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 3) HP 87/128 MP 0/0 Hu 79 $ 2175 room=.
--> e
-T1804 mode=game_loop           Balin Runesinger(dwa) F6@( 6, 3) HP 87/128 MP 0/0 Hu 79 $ 2175 room=.
--> e
-T1805 mode=game_loop           Balin Runesinger(dwa) F6@( 7, 3) HP 87/128 MP 0/0 Hu 78 $ 2175 room=.
--> e
-T1806 mode=game_loop           Balin Runesinger(dwa) F6@( 8, 3) HP 88/128 MP 0/0 Hu 77 $ 2175 room=.
--> e
-T1807 mode=game_loop           Balin Runesinger(dwa) F6@( 9, 3) HP 88/128 MP 0/0 Hu 77 $ 2175 room=.
--> s
-T1808 mode=game_loop           Balin Runesinger(dwa) F6@( 9, 4) HP 88/128 MP 0/0 Hu 76 $ 2175 room=.
--> s
-T1809 mode=game_loop           Balin Runesinger(dwa) F6@( 9, 5) HP 88/128 MP 0/0 Hu 75 $ 2175 room=.
--> s
-T1810 mode=combat_mode         Balin Runesinger(dwa) F6@( 9, 6) HP 89/128 MP 0/0 Hu 74 $ 2175 room=M vs UNDEAD MUMMY(L5 HP118/118)
--> a
-T1811 mode=combat_mode         Balin Runesinger(dwa) F6@( 9, 6) HP 66/128 MP 0/0 Hu 74 $ 2175 room=M vs UNDEAD MUMMY(L5 HP95/118)
--> a
-T1812 mode=combat_mode         Balin Runesinger(dwa) F6@( 9, 6) HP 43/128 MP 0/0 Hu 74 $ 2175 room=M vs UNDEAD MUMMY(L5 HP95/118)
--> a
-T1813 mode=combat_mode         Balin Runesinger(dwa) F6@( 9, 6) HP 20/128 MP 0/0 Hu 74 $ 2175 room=M vs UNDEAD MUMMY(L5 HP72/118)
--> f
-T1814 mode=flee_direction_mode Balin Runesinger(dwa) F6@( 9, 6) HP 20/128 MP 0/0 Hu 74 $ 2175 room=M
--> n
-T1815 mode=game_loop           Balin Runesinger(dwa) F6@( 9, 5) HP 20/128 MP 0/0 Hu 74 $ 2175 room=.
--> w
-T1816 mode=pool_mode           Balin Runesinger(dwa) F6@( 8, 5) HP 20/128 MP 0/0 Hu 74 $ 2175 room=P
--> e
-T1817 mode=game_loop           Balin Runesinger(dwa) F6@( 9, 5) HP 20/128 MP 0/0 Hu 73 $ 2175 room=.
--> n
-T1818 mode=game_loop           Balin Runesinger(dwa) F6@( 9, 4) HP 20/128 MP 0/0 Hu 72 $ 2175 room=.
--> e
-T1819 mode=game_loop           Balin Runesinger(dwa) F6@(10, 4) HP 21/128 MP 0/0 Hu 72 $ 2175 room=.
--> s
-T1820 mode=game_loop           Balin Runesinger(dwa) F6@(10, 5) HP 21/128 MP 0/0 Hu 71 $ 2175 room=.
--> s
-T1821 mode=game_loop           Balin Runesinger(dwa) F6@(10, 6) HP 21/128 MP 0/0 Hu 70 $ 2175 room=.
--> s
-T1822 mode=game_loop           Balin Runesinger(dwa) F6@(10, 7) HP 21/128 MP 0/0 Hu 70 $ 2175 room=.
--> s
-T1823 mode=game_loop           Balin Runesinger(dwa) F6@(10, 8) HP 22/128 MP 0/0 Hu 69 $ 2175 room=.
--> e
-T1824 mode=game_loop           Balin Runesinger(dwa) F6@(11, 8) HP 22/128 MP 0/0 Hu 68 $ 2175 room=.
--> s
-T1825 mode=game_loop           Balin Runesinger(dwa) F6@(11, 9) HP 22/128 MP 0/0 Hu 67 $ 2175 room=C
--> e
-T1826 mode=game_loop           Balin Runesinger(dwa) F6@(12, 9) HP 22/128 MP 0/0 Hu 67 $ 2175 room=N
--> e
-T1827 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 2175 room=V
--> r5
-T1828 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 2111 room=V
--> b11
-T1829 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 2081 room=V
--> b11
-T1830 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 2066 room=V
--> b11
-T1831 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 2056 room=V
--> b6
-T1832 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 1996 room=V
--> b6
-T1833 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 1936 room=V
--> b6
-T1834 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 1876 room=V
+T1022 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 884 room=V
+-> b12
+T1023 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 854 room=V
+-> b12
+T1024 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 839 room=V
+-> b12
+T1025 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 829 room=V
+-> b4
+T1026 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 799 room=V
+-> b4
+T1027 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 769 room=V
+-> b4
+T1028 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 739 room=V
+-> b4
+T1029 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 709 room=V
 -> b9
-T1835 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 1871 room=V
+T1030 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 704 room=V
 -> b9
-T1836 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 1866 room=V
--> b6
-T1837 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 1616 room=V
--> b6
-T1838 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 1366 room=V
--> b5
-T1839 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 1246 room=V
--> b1
-T1840 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 746 room=V
--> b1
-T1841 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 266 room=V
--> id13
-T1842 mode=vendor_shop         Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 116 room=V
+T1031 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 699 room=V
+-> b9
+T1032 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 694 room=V
+-> b9
+T1033 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 689 room=V
+-> b4
+T1034 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 439 room=V
+-> b4
+T1035 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 289 room=V
+-> id11
+T1036 mode=vendor_shop         Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 139 room=V
 -> x
-T1843 mode=game_loop           Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 116 room=V
+T1037 mode=game_loop           Balin Runesinger(dwa) F5@( 2, 1) HP 100/100 MP 0/0 Hu 81 $ 139 room=V
+-> e
+T1038 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 1) HP 100/100 MP 0/0 Hu 81 $ 139 room=.
+-> s
+T1039 mode=game_loop           Balin Runesinger(dwa) F5@( 3, 2) HP 100/100 MP 0/0 Hu 80 $ 139 room=.
+-> e
+T1040 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 2) HP 100/100 MP 0/0 Hu 79 $ 139 room=.
+-> s
+T1041 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 3) HP 100/100 MP 0/0 Hu 79 $ 139 room=.
+-> e
+T1042 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 3) HP 100/100 MP 0/0 Hu 78 $ 139 room=.
+-> s
+T1043 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 4) HP 100/100 MP 0/0 Hu 77 $ 139 room=.
+-> e
+T1044 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 4) HP 100/100 MP 0/0 Hu 76 $ 139 room=.
+-> n
+T1045 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 3) HP 100/100 MP 0/0 Hu 76 $ 139 room=.
+-> n
+T1046 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 2) HP 100/100 MP 0/0 Hu 75 $ 139 room=.
+-> w
+T1047 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 2) HP 100/100 MP 0/0 Hu 74 $ 139 room=.
+-> n
+T1048 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 1) HP 100/100 MP 0/0 Hu 74 $ 139 room=.
+-> w
+T1049 mode=pool_mode           Balin Runesinger(dwa) F5@( 4, 1) HP 100/100 MP 0/0 Hu 73 $ 139 room=P
+-> dr
+T1050 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 1) HP 100/100 MP 0/0 Hu 73 $ 139 room=.
+-> s
+T1051 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 2) HP 100/100 MP 0/0 Hu 72 $ 139 room=.
+-> s
+T1052 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 3) HP 100/100 MP 0/0 Hu 72 $ 139 room=.
+-> e
+T1053 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 3) HP 100/100 MP 0/0 Hu 71 $ 139 room=.
+-> s
+T1054 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 4) HP 100/100 MP 0/0 Hu 70 $ 139 room=.
+-> e
+T1055 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 4) HP 100/100 MP 0/0 Hu 69 $ 139 room=.
+-> n
+T1056 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 3) HP 100/100 MP 0/0 Hu 69 $ 139 room=.
+-> n
+T1057 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 2) HP 100/100 MP 0/0 Hu 68 $ 139 room=.
+-> w
+T1058 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 2) HP 100/100 MP 0/0 Hu 67 $ 139 room=.
+-> w
+T1059 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 2) HP 100/100 MP 0/0 Hu 67 $ 139 room=.
+-> s
+T1060 mode=game_loop           Balin Runesinger(dwa) F5@( 4, 3) HP 100/100 MP 0/0 Hu 66 $ 139 room=.
+-> e
+T1061 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 3) HP 100/100 MP 0/0 Hu 65 $ 139 room=.
+-> s
+T1062 mode=game_loop           Balin Runesinger(dwa) F5@( 5, 4) HP 100/100 MP 0/0 Hu 65 $ 139 room=.
+-> e
+T1063 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 4) HP 100/100 MP 0/0 Hu 64 $ 139 room=.
+-> s
+T1064 mode=game_loop           Balin Runesinger(dwa) F5@( 6, 5) HP 100/100 MP 0/0 Hu 63 $ 139 room=.
+-> e
+T1065 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 5) HP 100/100 MP 0/0 Hu 62 $ 139 room=.
+-> s
+T1066 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 6) HP 100/100 MP 0/0 Hu 62 $ 139 room=.
+-> e
+T1067 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 6) HP 100/100 MP 0/0 Hu 61 $ 139 room=.
+-> s
+T1068 mode=chest_mode          Balin Runesinger(dwa) F5@( 8, 7) HP 100/100 MP 0/0 Hu 60 $ 139 room=C
+-> o
+T1069 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 100/100 MP 0/0 Hu 60 $ 289 room=.
+-> w
+T1070 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 100/100 MP 0/0 Hu 60 $ 289 room=.
+-> s
+T1071 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu 59 $ 289 room=.
+-> e
+T1072 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 100/100 MP 0/0 Hu 58 $ 289 room=.
+-> e
+T1073 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 58 $ 289 room=.
+-> n
+T1074 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 7) HP 100/100 MP 0/0 Hu 57 $ 289 room=.
+-> w
+T1075 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 100/100 MP 0/0 Hu 56 $ 289 room=.
+-> n
+T1076 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 6) HP 100/100 MP 0/0 Hu 55 $ 289 room=.
+-> w
+T1077 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 6) HP 100/100 MP 0/0 Hu 55 $ 289 room=.
+-> s
+T1078 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 100/100 MP 0/0 Hu 54 $ 289 room=.
+-> s
+T1079 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu 53 $ 289 room=.
+-> e
+T1080 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 100/100 MP 0/0 Hu 53 $ 289 room=.
+-> e
+T1081 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 52 $ 289 room=.
+-> n
+T1082 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 7) HP 100/100 MP 0/0 Hu 51 $ 289 room=.
+-> w
+T1083 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 100/100 MP 0/0 Hu 51 $ 289 room=.
+-> w
+T1084 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 100/100 MP 0/0 Hu 50 $ 289 room=.
+-> s
+T1085 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu 49 $ 289 room=.
 -> i
-T1844 mode=inventory           Balin Runesinger(dwa) F6@(13, 9) HP 23/128 MP 0/0 Hu 66 $ 116 room=V
+T1086 mode=inventory           Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu 49 $ 289 room=.
+-> eat1
+T1087 mode=inventory           Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu100 $ 289 room=.
 -> u9
-T1845 mode=inventory           Balin Runesinger(dwa) F6@(13, 9) HP 83/128 MP 0/0 Hu 66 $ 116 room=V
--> u2
-T1846 mode=inventory           Balin Runesinger(dwa) F6@(13, 9) HP 128/128 MP 0/0 Hu 66 $ 116 room=V
--> u4
-T1847 mode=upgrade_scroll_mode Balin Runesinger(dwa) F6@(13, 9) HP 128/128 MP 0/0 Hu 66 $ 116 room=V
--> 6
-T1848 mode=inventory           Balin Runesinger(dwa) F6@(13, 9) HP 128/128 MP 0/0 Hu 66 $ 116 room=V
--> x
-T1849 mode=game_loop           Balin Runesinger(dwa) F6@(13, 9) HP 128/128 MP 0/0 Hu 66 $ 116 room=V
--> i
-T1850 mode=inventory           Balin Runesinger(dwa) F6@(13, 9) HP 128/128 MP 0/0 Hu 66 $ 116 room=V
--> e1
-T1851 mode=inventory           Balin Runesinger(dwa) F6@(13, 9) HP 128/128 MP 0/0 Hu 66 $ 116 room=V
--> x
-T1852 mode=game_loop           Balin Runesinger(dwa) F6@(13, 9) HP 128/128 MP 0/0 Hu 66 $ 116 room=V
--> s
-T1853 mode=game_loop           Balin Runesinger(dwa) F6@(13,10) HP 128/128 MP 0/0 Hu 65 $ 116 room=.
--> s
-T1854 mode=game_loop           Balin Runesinger(dwa) F6@(13,11) HP 128/128 MP 0/0 Hu 65 $ 116 room=.
--> e
-T1855 mode=game_loop           Balin Runesinger(dwa) F6@(14,11) HP 128/128 MP 0/0 Hu 64 $ 116 room=.
--> s
-T1856 mode=game_loop           Balin Runesinger(dwa) F6@(14,12) HP 128/128 MP 0/0 Hu 63 $ 116 room=.
--> e
-T1857 mode=game_loop           Balin Runesinger(dwa) F6@(15,12) HP 128/128 MP 0/0 Hu 63 $ 116 room=.
--> s
-T1858 mode=chest_mode          Balin Runesinger(dwa) F6@(15,13) HP 128/128 MP 0/0 Hu 62 $ 116 room=C
--> o
-T1859 mode=game_loop           Balin Runesinger(dwa) F6@(15,13) HP 128/128 MP 0/0 Hu 62 $ 116 room=.
--> s
-T1860 mode=game_loop           Balin Runesinger(dwa) F6@(15,14) HP 128/128 MP 0/0 Hu 61 $ 116 room=.
--> w
-T1861 mode=game_loop           Balin Runesinger(dwa) F6@(14,14) HP 128/128 MP 0/0 Hu 60 $ 116 room=.
--> w
-T1862 mode=combat_mode         Balin Runesinger(dwa) F6@(13,14) HP 128/128 MP 0/0 Hu 60 $ 116 room=M vs Carrion Crawler(L5 HP54/54)
--> a
-T1863 mode=combat_mode         Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 116 room=M vs Carrion Crawler(L5 HP54/54)
--> a
-T1864 mode=combat_mode         Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 116 room=M vs Carrion Crawler(L5 HP22/54)
--> a
-T1865 mode=combat_mode         Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 116 room=M vs Carrion Crawler(L5 HP22/54)
--> a
-T1866 mode=combat_victory      Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 122 room=.
--> back
-T1867 mode=game_loop           Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 122 room=.
--> i
-T1868 mode=inventory           Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 122 room=.
--> u23
-T1869 mode=inventory           Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 122 room=.
--> u12
-T1870 mode=upgrade_scroll_mode Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 122 room=.
+T1088 mode=upgrade_scroll_mode Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu100 $ 289 room=.
 -> 1
-T1871 mode=inventory           Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 122 room=.
+T1089 mode=inventory           Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu100 $ 289 room=.
 -> x
-T1872 mode=game_loop           Balin Runesinger(dwa) F6@(13,14) HP 127/128 MP 0/0 Hu 60 $ 122 room=.
--> s
-T1873 mode=game_loop           Balin Runesinger(dwa) F6@(13,15) HP 127/128 MP 0/0 Hu 59 $ 122 room=.
+T1090 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu100 $ 289 room=.
 -> e
-T1874 mode=game_loop           Balin Runesinger(dwa) F6@(14,15) HP 127/128 MP 0/0 Hu 58 $ 122 room=.
--> s
-T1875 mode=game_loop           Balin Runesinger(dwa) F6@(14,16) HP 127/128 MP 0/0 Hu 58 $ 122 room=.
--> w
-T1876 mode=pool_mode           Balin Runesinger(dwa) F6@(13,16) HP 127/128 MP 0/0 Hu 57 $ 122 room=P
--> dr
-T1877 mode=game_loop           Balin Runesinger(dwa) F6@(13,16) HP 128/128 MP 0/0 Hu 57 $ 122 room=.
--> w
-T1878 mode=game_loop           Balin Runesinger(dwa) F6@(12,16) HP 128/128 MP 0/0 Hu 56 $ 122 room=.
--> n
-T1879 mode=chest_mode          Balin Runesinger(dwa) F6@(12,15) HP 128/128 MP 0/0 Hu 56 $ 122 room=C
--> o
-T1880 mode=game_loop           Balin Runesinger(dwa) F6@(12,15) HP 128/128 MP 0/0 Hu 56 $ 122 room=.
--> w
-T1881 mode=combat_mode         Balin Runesinger(dwa) F6@(11,15) HP 128/128 MP 0/0 Hu 55 $ 122 room=M vs Hardened Sewer Rat(L5 HP15/15)
--> a
-T1882 mode=combat_mode         Balin Runesinger(dwa) F6@(11,15) HP 127/128 MP 0/0 Hu 55 $ 122 room=M vs Hardened Sewer Rat(L5 HP15/15)
--> a
-T1883 mode=combat_victory      Balin Runesinger(dwa) F6@(11,15) HP 126/128 MP 0/0 Hu 55 $ 152 room=.
--> back
-T1884 mode=game_loop           Balin Runesinger(dwa) F6@(11,15) HP 126/128 MP 0/0 Hu 55 $ 152 room=.
--> i
-T1885 mode=inventory           Balin Runesinger(dwa) F6@(11,15) HP 126/128 MP 0/0 Hu 55 $ 152 room=.
--> u23
-T1886 mode=inventory           Balin Runesinger(dwa) F6@(11,15) HP 126/128 MP 0/0 Hu 55 $ 152 room=.
--> x
-T1887 mode=game_loop           Balin Runesinger(dwa) F6@(11,15) HP 126/128 MP 0/0 Hu 55 $ 152 room=.
--> w
-T1888 mode=library_mode        Balin Runesinger(dwa) F6@(10,15) HP 126/128 MP 0/0 Hu 54 $ 152 room=L
--> r
-T1889 mode=game_loop           Balin Runesinger(dwa) F6@(10,15) HP 126/128 MP 0/0 Hu 54 $ 152 room=.
--> n
-T1890 mode=game_loop           Balin Runesinger(dwa) F6@(10,14) HP 126/128 MP 0/0 Hu 53 $ 152 room=.
--> w
-T1891 mode=game_loop           Balin Runesinger(dwa) F6@( 9,14) HP 126/128 MP 0/0 Hu 53 $ 152 room=.
--> n
-T1892 mode=game_loop           Balin Runesinger(dwa) F6@( 9,13) HP 126/128 MP 0/0 Hu 52 $ 152 room=.
--> n
-T1893 mode=pool_mode           Balin Runesinger(dwa) F6@( 9,12) HP 126/128 MP 0/0 Hu 51 $ 152 room=P
--> dr
-T1894 mode=game_loop           Balin Runesinger(dwa) F6@( 9,12) HP 126/128 MP 0/0 Hu 51 $ 380 room=.
--> n
-T1895 mode=game_loop           Balin Runesinger(dwa) F6@( 9,11) HP 126/128 MP 0/0 Hu 51 $ 380 room=.
+T1091 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 100/100 MP 0/0 Hu 99 $ 289 room=.
 -> e
-T1896 mode=game_loop           Balin Runesinger(dwa) F6@(10,11) HP 126/128 MP 0/0 Hu 50 $ 380 room=.
+T1092 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 99 $ 289 room=.
 -> n
-T1897 mode=game_loop           Balin Runesinger(dwa) F6@(10,10) HP 126/128 MP 0/0 Hu 49 $ 380 room=.
--> i
-T1898 mode=inventory           Balin Runesinger(dwa) F6@(10,10) HP 126/128 MP 0/0 Hu 49 $ 380 room=.
--> eat4
-T1899 mode=inventory           Balin Runesinger(dwa) F6@(10,10) HP 126/128 MP 0/0 Hu 67 $ 380 room=.
--> x
-T1900 mode=game_loop           Balin Runesinger(dwa) F6@(10,10) HP 126/128 MP 0/0 Hu 67 $ 380 room=.
+T1093 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 7) HP 100/100 MP 0/0 Hu 98 $ 289 room=.
+-> w
+T1094 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 100/100 MP 0/0 Hu 97 $ 289 room=.
+-> w
+T1095 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 100/100 MP 0/0 Hu 97 $ 289 room=.
+-> s
+T1096 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu 96 $ 289 room=.
 -> e
-T1901 mode=game_loop           Balin Runesinger(dwa) F6@(11,10) HP 126/128 MP 0/0 Hu 67 $ 380 room=.
--> n
-T1902 mode=game_loop           Balin Runesinger(dwa) F6@(11, 9) HP 126/128 MP 0/0 Hu 66 $ 380 room=C
--> n
-T1903 mode=game_loop           Balin Runesinger(dwa) F6@(11, 8) HP 126/128 MP 0/0 Hu 65 $ 380 room=.
--> w
-T1904 mode=game_loop           Balin Runesinger(dwa) F6@(10, 8) HP 127/128 MP 0/0 Hu 64 $ 380 room=.
--> n
-T1905 mode=game_loop           Balin Runesinger(dwa) F6@(10, 7) HP 127/128 MP 0/0 Hu 64 $ 380 room=.
--> n
-T1906 mode=game_loop           Balin Runesinger(dwa) F6@(10, 6) HP 127/128 MP 0/0 Hu 63 $ 380 room=.
--> n
-T1907 mode=game_loop           Balin Runesinger(dwa) F6@(10, 5) HP 127/128 MP 0/0 Hu 62 $ 380 room=.
--> n
-T1908 mode=game_loop           Balin Runesinger(dwa) F6@(10, 4) HP 128/128 MP 0/0 Hu 62 $ 380 room=.
--> w
-T1909 mode=game_loop           Balin Runesinger(dwa) F6@( 9, 4) HP 128/128 MP 0/0 Hu 61 $ 380 room=.
--> n
-T1910 mode=game_loop           Balin Runesinger(dwa) F6@( 9, 3) HP 128/128 MP 0/0 Hu 60 $ 380 room=.
--> w
-T1911 mode=game_loop           Balin Runesinger(dwa) F6@( 8, 3) HP 128/128 MP 0/0 Hu 60 $ 380 room=.
--> w
-T1912 mode=game_loop           Balin Runesinger(dwa) F6@( 7, 3) HP 128/128 MP 0/0 Hu 59 $ 380 room=.
--> w
-T1913 mode=game_loop           Balin Runesinger(dwa) F6@( 6, 3) HP 128/128 MP 0/0 Hu 58 $ 380 room=.
--> w
-T1914 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 3) HP 128/128 MP 0/0 Hu 57 $ 380 room=.
--> s
-T1915 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 4) HP 128/128 MP 0/0 Hu 57 $ 380 room=.
--> s
-T1916 mode=game_loop           Balin Runesinger(dwa) F6@( 5, 5) HP 128/128 MP 0/0 Hu 56 $ 380 room=.
--> w
-T1917 mode=game_loop           Balin Runesinger(dwa) F6@( 4, 5) HP 128/128 MP 0/0 Hu 55 $ 380 room=.
--> w
-T1918 mode=game_loop           Balin Runesinger(dwa) F6@( 3, 5) HP 128/128 MP 0/0 Hu 55 $ 380 room=.
--> w
-T1919 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 5) HP 128/128 MP 0/0 Hu 54 $ 380 room=.
--> n
-T1920 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 4) HP 128/128 MP 0/0 Hu 53 $ 380 room=.
--> n
-T1921 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 3) HP 128/128 MP 0/0 Hu 53 $ 380 room=.
--> n
-T1922 mode=dungeon_mode        Balin Runesinger(dwa) F6@( 2, 2) HP 128/128 MP 0/0 Hu 52 $ 380 room=N
--> u
-T1923 mode=dungeon_unlocked_mode Balin Runesinger(dwa) F6@( 2, 2) HP 128/128 MP 0/0 Hu 52 $ 380 room=N
--> r
-T1924 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 2) HP 128/128 MP 0/0 Hu 52 $ 581 room=N
--> n
-T1925 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 1) HP 128/128 MP 0/0 Hu 51 $ 581 room=.
--> w
-T1926 mode=stairs_up_mode      Balin Runesinger(dwa) F6@( 1, 1) HP 128/128 MP 0/0 Hu 50 $ 581 room=U
--> s
-T1927 mode=game_loop           Balin Runesinger(dwa) F6@( 1, 2) HP 128/128 MP 0/0 Hu 50 $ 581 room=.
--> s
-T1928 mode=game_loop           Balin Runesinger(dwa) F6@( 1, 3) HP 128/128 MP 0/0 Hu 49 $ 581 room=.
--> i
-T1929 mode=inventory           Balin Runesinger(dwa) F6@( 1, 3) HP 128/128 MP 0/0 Hu 49 $ 581 room=.
--> eat4
-T1930 mode=inventory           Balin Runesinger(dwa) F6@( 1, 3) HP 128/128 MP 0/0 Hu 61 $ 581 room=.
--> x
-T1931 mode=game_loop           Balin Runesinger(dwa) F6@( 1, 3) HP 128/128 MP 0/0 Hu 61 $ 581 room=.
--> s
-T1932 mode=game_loop           Balin Runesinger(dwa) F6@( 1, 4) HP 128/128 MP 0/0 Hu 60 $ 581 room=.
--> s
-T1933 mode=game_loop           Balin Runesinger(dwa) F6@( 1, 5) HP 128/128 MP 0/0 Hu 60 $ 581 room=.
+T1097 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 100/100 MP 0/0 Hu 95 $ 289 room=.
 -> e
-T1934 mode=game_loop           Balin Runesinger(dwa) F6@( 2, 5) HP 128/128 MP 0/0 Hu 59 $ 581 room=.
--> e
-T1935 mode=game_loop           Balin Runesinger(dwa) F6@( 3, 5) HP 128/128 MP 0/0 Hu 58 $ 581 room=.
--> e
-T1936 mode=game_loop           Balin Runesinger(dwa) F6@( 4, 5) HP 128/128 MP 0/0 Hu 58 $ 581 room=.
+T1098 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 95 $ 289 room=.
 -> n
-T1937 mode=game_loop           Balin Runesinger(dwa) F6@( 4, 4) HP 128/128 MP 0/0 Hu 57 $ 581 room=O
--> n
-T1938 mode=stairs_down_mode    Balin Runesinger(dwa) F6@( 4, 3) HP 128/128 MP 0/0 Hu 56 $ 581 room=D
--> d
-T1939 mode=stairs_up_mode      Balin Runesinger(dwa) F7@( 1, 1) HP 128/128 MP 0/0 Hu 56 $ 581 room=U
--> s
-T1940 mode=stairs_up_mode      Balin Runesinger(dwa) F7@( 1, 1) HP 128/128 MP 0/0 Hu 56 $ 581 room=U
--> n
-T1941 mode=stairs_up_mode      Balin Runesinger(dwa) F7@( 1, 1) HP 128/128 MP 0/0 Hu 56 $ 581 room=U
--> n
-T1942 mode=stairs_up_mode      Balin Runesinger(dwa) F7@( 1, 1) HP 128/128 MP 0/0 Hu 56 $ 581 room=U
--> s
-T1943 mode=stairs_up_mode      Balin Runesinger(dwa) F7@( 1, 1) HP 128/128 MP 0/0 Hu 56 $ 581 room=U
+T1099 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 7) HP 100/100 MP 0/0 Hu 94 $ 289 room=.
 -> w
-T1944 mode=stairs_up_mode      Balin Runesinger(dwa) F7@( 1, 1) HP 128/128 MP 0/0 Hu 56 $ 581 room=U
--> e
-T1945 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 1) HP 128/128 MP 0/0 Hu 55 $ 581 room=.
--> s
-T1946 mode=combat_mode         Balin Runesinger(dwa) F7@( 2, 2) HP 128/128 MP 0/0 Hu 55 $ 581 room=M vs Bugbear(L6 HP40/40)
--> a
-T1947 mode=combat_mode         Balin Runesinger(dwa) F7@( 2, 2) HP 127/128 MP 0/0 Hu 55 $ 581 room=M vs Bugbear(L6 HP6/40)
--> a
-T1948 mode=combat_mode         Balin Runesinger(dwa) F7@( 2, 2) HP 126/128 MP 0/0 Hu 55 $ 581 room=M vs Bugbear(L6 HP6/40)
--> a
-T1949 mode=combat_victory      Balin Runesinger(dwa) F7@( 2, 2) HP 125/138 MP 0/0 Hu 55 $ 651 room=.
--> back
-T1950 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 2) HP 125/138 MP 0/0 Hu 55 $ 651 room=.
--> i
-T1951 mode=inventory           Balin Runesinger(dwa) F7@( 2, 2) HP 125/138 MP 0/0 Hu 55 $ 651 room=.
--> u10
-T1952 mode=inventory           Balin Runesinger(dwa) F7@( 2, 2) HP 138/138 MP 0/0 Hu 55 $ 651 room=.
--> x
-T1953 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 2) HP 138/138 MP 0/0 Hu 55 $ 651 room=.
--> i
-T1954 mode=inventory           Balin Runesinger(dwa) F7@( 2, 2) HP 138/138 MP 0/0 Hu 55 $ 651 room=.
--> u21
-T1955 mode=inventory           Balin Runesinger(dwa) F7@( 2, 2) HP 138/138 MP 0/0 Hu 55 $ 651 room=.
--> x
-T1956 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 2) HP 138/138 MP 0/0 Hu 55 $ 651 room=.
--> s
-T1957 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 3) HP 138/138 MP 0/0 Hu 54 $ 651 room=.
+T1100 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 100/100 MP 0/0 Hu 93 $ 289 room=.
 -> w
-T1958 mode=game_loop           Balin Runesinger(dwa) F7@( 1, 3) HP 138/138 MP 0/0 Hu 53 $ 651 room=.
+T1101 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 7) HP 100/100 MP 0/0 Hu 92 $ 289 room=.
 -> s
-T1959 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 651 room=V
--> b12
-T1960 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 621 room=V
--> b12
-T1961 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 606 room=V
--> b12
-T1962 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 596 room=V
--> b4
-T1963 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 476 room=V
--> b4
-T1964 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 416 room=V
--> b4
-T1965 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 356 room=V
--> b4
-T1966 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 296 room=V
--> b4
-T1967 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 236 room=V
--> id14
-T1968 mode=vendor_shop         Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 111 room=V
--> x
-T1969 mode=game_loop           Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 53 $ 111 room=V
--> s
-T1970 mode=game_loop           Balin Runesinger(dwa) F7@( 1, 5) HP 138/138 MP 0/0 Hu 52 $ 111 room=.
--> s
-T1971 mode=combat_mode         Balin Runesinger(dwa) F7@( 1, 6) HP 138/138 MP 0/0 Hu 51 $ 111 room=M vs Hardened Lichen(L6 HP16/16)
--> a
-T1972 mode=combat_victory      Balin Runesinger(dwa) F7@( 1, 6) HP 138/138 MP 0/0 Hu 51 $ 118 room=.
--> back
-T1973 mode=game_loop           Balin Runesinger(dwa) F7@( 1, 6) HP 138/138 MP 0/0 Hu 51 $ 118 room=.
--> i
-T1974 mode=inventory           Balin Runesinger(dwa) F7@( 1, 6) HP 138/138 MP 0/0 Hu 51 $ 118 room=.
--> u24
-T1975 mode=inventory           Balin Runesinger(dwa) F7@( 1, 6) HP 138/138 MP 0/0 Hu 51 $ 118 room=.
--> x
-T1976 mode=game_loop           Balin Runesinger(dwa) F7@( 1, 6) HP 138/138 MP 0/0 Hu 51 $ 118 room=.
+T1102 mode=game_loop           Balin Runesinger(dwa) F5@( 7, 8) HP 100/100 MP 0/0 Hu 92 $ 289 room=.
 -> e
-T1977 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 6) HP 138/138 MP 0/0 Hu 51 $ 118 room=.
+T1103 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 100/100 MP 0/0 Hu 91 $ 289 room=.
 -> e
-T1978 mode=game_loop           Balin Runesinger(dwa) F7@( 3, 6) HP 138/138 MP 0/0 Hu 50 $ 118 room=.
--> s
-T1979 mode=game_loop           Balin Runesinger(dwa) F7@( 3, 7) HP 138/138 MP 0/0 Hu 49 $ 118 room=.
--> i
-T1980 mode=inventory           Balin Runesinger(dwa) F7@( 3, 7) HP 138/138 MP 0/0 Hu 49 $ 118 room=.
--> eat4
-T1981 mode=inventory           Balin Runesinger(dwa) F7@( 3, 7) HP 138/138 MP 0/0 Hu 67 $ 118 room=.
--> x
-T1982 mode=game_loop           Balin Runesinger(dwa) F7@( 3, 7) HP 138/138 MP 0/0 Hu 67 $ 118 room=.
--> e
-T1983 mode=game_loop           Balin Runesinger(dwa) F7@( 4, 7) HP 138/138 MP 0/0 Hu 66 $ 118 room=.
--> e
-T1984 mode=game_loop           Balin Runesinger(dwa) F7@( 5, 7) HP 138/138 MP 0/0 Hu 66 $ 118 room=.
+T1104 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 90 $ 289 room=.
 -> n
-T1985 mode=altar_mode          Balin Runesinger(dwa) F7@( 5, 6) HP 138/138 MP 0/0 Hu 65 $ 118 room=A
--> pray
-T1986 mode=game_loop           Balin Runesinger(dwa) F7@( 5, 6) HP 138/138 MP 0/0 Hu 65 $ 118 room=.
+T1105 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 7) HP 100/100 MP 0/0 Hu 90 $ 289 room=.
+-> e
+T1106 mode=game_loop           Balin Runesinger(dwa) F5@(10, 7) HP 100/100 MP 0/0 Hu 89 $ 289 room=.
 -> n
-T1987 mode=game_loop           Balin Runesinger(dwa) F7@( 5, 5) HP 138/138 MP 0/0 Hu 64 $ 118 room=.
--> w
-T1988 mode=blacksmith_mode     Balin Runesinger(dwa) F7@( 4, 5) HP 138/138 MP 0/0 Hu 64 $ 118 room=B
+T1107 mode=game_loop           Balin Runesinger(dwa) F5@(10, 6) HP 100/100 MP 0/0 Hu 88 $ 289 room=.
+-> e
+T1108 mode=blacksmith_mode     Balin Runesinger(dwa) F5@(11, 6) HP 100/100 MP 0/0 Hu 88 $ 289 room=B
+-> 1
+T1109 mode=blacksmith_mode     Balin Runesinger(dwa) F5@(11, 6) HP 100/100 MP 0/0 Hu 88 $ 59 room=B
 -> 2
-T1989 mode=blacksmith_mode     Balin Runesinger(dwa) F7@( 4, 5) HP 138/138 MP 0/0 Hu 64 $ 13 room=B
--> s
-T1990 mode=game_loop           Balin Runesinger(dwa) F7@( 4, 6) HP 138/138 MP 0/0 Hu 63 $ 13 room=.
+T1110 mode=blacksmith_mode     Balin Runesinger(dwa) F5@(11, 6) HP 100/100 MP 0/0 Hu 88 $ 34 room=B
 -> w
-T1991 mode=game_loop           Balin Runesinger(dwa) F7@( 3, 6) HP 138/138 MP 0/0 Hu 62 $ 13 room=.
--> n
-T1992 mode=game_loop           Balin Runesinger(dwa) F7@( 3, 5) HP 138/138 MP 0/0 Hu 62 $ 13 room=.
+T1111 mode=game_loop           Balin Runesinger(dwa) F5@(10, 6) HP 100/100 MP 0/0 Hu 87 $ 34 room=.
 -> w
-T1993 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 5) HP 138/138 MP 0/0 Hu 61 $ 13 room=.
+T1112 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 6) HP 100/100 MP 0/0 Hu 86 $ 34 room=.
 -> w
-T1994 mode=game_loop           Balin Runesinger(dwa) F7@( 1, 5) HP 138/138 MP 0/0 Hu 60 $ 13 room=.
--> n
-T1995 mode=game_loop           Balin Runesinger(dwa) F7@( 1, 4) HP 138/138 MP 0/0 Hu 59 $ 13 room=V
--> e
-T1996 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 4) HP 138/138 MP 0/0 Hu 59 $ 13 room=.
--> n
-T1997 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 3) HP 138/138 MP 0/0 Hu 58 $ 13 room=.
--> n
-T1998 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 2) HP 138/138 MP 0/0 Hu 57 $ 13 room=.
--> n
-T1999 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 1) HP 138/138 MP 0/0 Hu 57 $ 13 room=.
--> w
-T2000 mode=stairs_up_mode      Balin Runesinger(dwa) F7@( 1, 1) HP 138/138 MP 0/0 Hu 56 $ 13 room=U
--> e
-T2001 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 1) HP 138/138 MP 0/0 Hu 55 $ 13 room=.
+T1113 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 6) HP 100/100 MP 0/0 Hu 85 $ 34 room=.
 -> s
-T2002 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 2) HP 138/138 MP 0/0 Hu 55 $ 13 room=.
--> s
-T2003 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 3) HP 138/138 MP 0/0 Hu 54 $ 13 room=.
--> s
-T2004 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 4) HP 138/138 MP 0/0 Hu 53 $ 13 room=.
--> s
-T2005 mode=game_loop           Balin Runesinger(dwa) F7@( 2, 5) HP 138/138 MP 0/0 Hu 52 $ 13 room=.
--> e
-T2006 mode=game_loop           Balin Runesinger(dwa) F7@( 3, 5) HP 138/138 MP 0/0 Hu 52 $ 13 room=.
--> e
-T2007 mode=game_loop           Balin Runesinger(dwa) F7@( 4, 5) HP 138/138 MP 0/0 Hu 51 $ 13 room=B
--> e
-T2008 mode=game_loop           Balin Runesinger(dwa) F7@( 5, 5) HP 138/138 MP 0/0 Hu 50 $ 13 room=.
--> n
-T2009 mode=game_loop           Balin Runesinger(dwa) F7@( 5, 4) HP 138/138 MP 0/0 Hu 50 $ 13 room=.
--> e
-T2010 mode=game_loop           Balin Runesinger(dwa) F7@( 6, 4) HP 138/138 MP 0/0 Hu 49 $ 13 room=.
+T1114 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 100/100 MP 0/0 Hu 85 $ 34 room=.
 -> i
-T2011 mode=inventory           Balin Runesinger(dwa) F7@( 6, 4) HP 138/138 MP 0/0 Hu 49 $ 13 room=.
--> eat4
-T2012 mode=inventory           Balin Runesinger(dwa) F7@( 6, 4) HP 138/138 MP 0/0 Hu 67 $ 13 room=.
+T1115 mode=inventory           Balin Runesinger(dwa) F5@( 8, 7) HP 100/100 MP 0/0 Hu 85 $ 34 room=.
 -> x
-T2013 mode=game_loop           Balin Runesinger(dwa) F7@( 6, 4) HP 138/138 MP 0/0 Hu 67 $ 13 room=.
--> e
-T2014 mode=garden_mode         Balin Runesinger(dwa) F7@( 7, 4) HP 138/138 MP 0/0 Hu 66 $ 13 room=G
--> h
-T2015 mode=game_loop           Balin Runesinger(dwa) F7@( 7, 4) HP 138/138 MP 0/0 Hu 66 $ 13 room=.
+T1116 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 7) HP 100/100 MP 0/0 Hu 85 $ 34 room=.
 -> s
-T2016 mode=game_loop           Balin Runesinger(dwa) F7@( 7, 5) HP 138/138 MP 0/0 Hu 66 $ 13 room=.
--> s
-T2017 mode=game_loop           Balin Runesinger(dwa) F7@( 7, 6) HP 138/138 MP 0/0 Hu 65 $ 13 room=.
--> s
-T2018 mode=game_loop           Balin Runesinger(dwa) F7@( 7, 7) HP 138/138 MP 0/0 Hu 64 $ 13 room=.
--> s
-T2019 mode=game_loop           Balin Runesinger(dwa) F7@( 7, 8) HP 138/138 MP 0/0 Hu 63 $ 13 room=.
--> e
-T2020 mode=pool_mode           Balin Runesinger(dwa) F7@( 8, 8) HP 138/138 MP 0/0 Hu 63 $ 13 room=P
--> dr
-T2021 mode=game_loop           Balin Runesinger(dwa) F7@( 8, 8) HP 138/138 MP 0/0 Hu 63 $ 13 room=.
--> e
-T2022 mode=game_loop           Balin Runesinger(dwa) F7@( 9, 8) HP 138/138 MP 0/0 Hu 62 $ 13 room=.
--> s
-T2023 mode=garden_mode         Balin Runesinger(dwa) F7@( 9, 9) HP 138/138 MP 0/0 Hu 61 $ 13 room=G
--> h
-T2024 mode=game_loop           Balin Runesinger(dwa) F7@( 9, 9) HP 138/138 MP 0/0 Hu 61 $ 13 room=.
--> s
-T2025 mode=game_loop           Balin Runesinger(dwa) F7@( 9,10) HP 138/138 MP 0/0 Hu 61 $ 13 room=.
--> e
-T2026 mode=game_loop           Balin Runesinger(dwa) F7@(10,10) HP 138/138 MP 0/0 Hu 60 $ 13 room=.
--> s
-T2027 mode=game_loop           Balin Runesinger(dwa) F7@(10,11) HP 138/138 MP 0/0 Hu 59 $ 13 room=.
--> e
-T2028 mode=game_loop           Balin Runesinger(dwa) F7@(11,11) HP 138/138 MP 0/0 Hu 59 $ 13 room=.
--> s
-T2029 mode=game_loop           Balin Runesinger(dwa) F7@(11,12) HP 138/138 MP 0/0 Hu 58 $ 13 room=.
--> e
-T2030 mode=game_loop           Balin Runesinger(dwa) F7@(12,12) HP 138/138 MP 0/0 Hu 57 $ 13 room=.
--> e
-T2031 mode=game_loop           Balin Runesinger(dwa) F7@(13,12) HP 138/138 MP 0/0 Hu 56 $ 13 room=.
--> n
-T2032 mode=game_loop           Balin Runesinger(dwa) F7@(13,11) HP 138/138 MP 0/0 Hu 56 $ 13 room=.
--> n
-T2033 mode=game_loop           Balin Runesinger(dwa) F7@(13,10) HP 138/138 MP 0/0 Hu 55 $ 13 room=.
--> n
-T2034 mode=game_loop           Balin Runesinger(dwa) F7@(13, 9) HP 138/138 MP 0/0 Hu 54 $ 13 room=.
--> e
-T2035 mode=game_loop           Balin Runesinger(dwa) F7@(14, 9) HP 138/138 MP 0/0 Hu 54 $ 13 room=.
--> n
-T2036 mode=game_loop           Balin Runesinger(dwa) F7@(14, 8) HP 138/138 MP 0/0 Hu 53 $ 13 room=.
--> e
-T2037 mode=game_loop           Balin Runesinger(dwa) F7@(15, 8) HP 138/138 MP 0/0 Hu 52 $ 13 room=.
--> e
-T2038 mode=game_loop           Balin Runesinger(dwa) F7@(16, 8) HP 138/138 MP 0/0 Hu 52 $ 13 room=C
--> s
-T2039 mode=game_loop           Balin Runesinger(dwa) F7@(16, 9) HP 138/138 MP 0/0 Hu 51 $ 13 room=.
--> s
-T2040 mode=game_loop           Balin Runesinger(dwa) F7@(16,10) HP 138/138 MP 0/0 Hu 50 $ 13 room=.
--> e
-T2041 mode=game_loop           Balin Runesinger(dwa) F7@(17,10) HP 138/138 MP 0/0 Hu 49 $ 13 room=C
+T1117 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 100/100 MP 0/0 Hu 84 $ 34 room=.
 -> i
-T2042 mode=inventory           Balin Runesinger(dwa) F7@(17,10) HP 138/138 MP 0/0 Hu 49 $ 13 room=C
--> eat4
-T2043 mode=inventory           Balin Runesinger(dwa) F7@(17,10) HP 138/138 MP 0/0 Hu 61 $ 13 room=C
+T1118 mode=inventory           Balin Runesinger(dwa) F5@( 8, 8) HP 100/100 MP 0/0 Hu 84 $ 34 room=.
 -> x
-T2044 mode=game_loop           Balin Runesinger(dwa) F7@(17,10) HP 138/138 MP 0/0 Hu 61 $ 13 room=C
+T1119 mode=game_loop           Balin Runesinger(dwa) F5@( 8, 8) HP 100/100 MP 0/0 Hu 84 $ 34 room=.
 -> e
-T2045 mode=game_loop           Balin Runesinger(dwa) F7@(18,10) HP 138/138 MP 0/0 Hu 61 $ 13 room=.
+T1120 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 83 $ 34 room=.
+-> i
+T1121 mode=inventory           Balin Runesinger(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 83 $ 34 room=.
+-> x
+T1122 mode=game_loop           Balin Runesinger(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 83 $ 34 room=.
 -> e
-T2046 mode=game_loop           Balin Runesinger(dwa) F7@(19,10) HP 138/138 MP 0/0 Hu 60 $ 13 room=.
--> s
-T2047 mode=combat_mode         Balin Runesinger(dwa) F7@(19,11) HP 138/138 MP 0/0 Hu 59 $ 13 room=M vs Hardened Stirge(L6 HP9/9)
+T1123 mode=game_loop           Balin Runesinger(dwa) F5@(10, 8) HP 100/100 MP 0/0 Hu 83 $ 34 room=.
+-> n
+T1124 mode=game_loop           Balin Runesinger(dwa) F5@(10, 7) HP 100/100 MP 0/0 Hu 82 $ 34 room=.
+-> e
+T1125 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 100/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
 -> a
-T2048 mode=combat_victory      Balin Runesinger(dwa) F7@(19,11) HP 137/138 MP 0/0 Hu 59 $ 55 room=.
--> back
-T2049 mode=game_loop           Balin Runesinger(dwa) F7@(19,11) HP 137/138 MP 0/0 Hu 59 $ 55 room=.
--> w
-T2050 mode=game_loop           Balin Runesinger(dwa) F7@(18,11) HP 137/138 MP 0/0 Hu 59 $ 55 room=.
--> s
-T2051 mode=game_loop           Balin Runesinger(dwa) F7@(18,12) HP 137/138 MP 0/0 Hu 58 $ 55 room=.
--> s
-T2052 mode=game_loop           Balin Runesinger(dwa) F7@(18,13) HP 137/138 MP 0/0 Hu 57 $ 55 room=.
--> s
-T2053 mode=game_loop           Balin Runesinger(dwa) F7@(18,14) HP 137/138 MP 0/0 Hu 57 $ 55 room=.
--> s
-T2054 mode=game_loop           Balin Runesinger(dwa) F7@(18,15) HP 137/138 MP 0/0 Hu 56 $ 55 room=C
--> w
-T2055 mode=game_loop           Balin Runesinger(dwa) F7@(17,15) HP 137/138 MP 0/0 Hu 55 $ 55 room=N
--> n
-T2056 mode=game_loop           Balin Runesinger(dwa) F7@(17,14) HP 137/138 MP 0/0 Hu 54 $ 55 room=.
--> n
-T2057 mode=game_loop           Balin Runesinger(dwa) F7@(17,13) HP 137/138 MP 0/0 Hu 54 $ 55 room=.
--> e
-T2058 mode=game_loop           Balin Runesinger(dwa) F7@(18,13) HP 137/138 MP 0/0 Hu 53 $ 55 room=.
--> n
-T2059 mode=game_loop           Balin Runesinger(dwa) F7@(18,12) HP 137/138 MP 0/0 Hu 52 $ 55 room=.
--> n
-T2060 mode=game_loop           Balin Runesinger(dwa) F7@(18,11) HP 137/138 MP 0/0 Hu 52 $ 55 room=.
--> n
-T2061 mode=game_loop           Balin Runesinger(dwa) F7@(18,10) HP 137/138 MP 0/0 Hu 51 $ 55 room=.
--> w
-T2062 mode=game_loop           Balin Runesinger(dwa) F7@(17,10) HP 137/138 MP 0/0 Hu 50 $ 55 room=C
--> w
-T2063 mode=game_loop           Balin Runesinger(dwa) F7@(16,10) HP 137/138 MP 0/0 Hu 50 $ 55 room=.
--> n
-T2064 mode=game_loop           Balin Runesinger(dwa) F7@(16, 9) HP 137/138 MP 0/0 Hu 49 $ 55 room=.
--> i
-T2065 mode=inventory           Balin Runesinger(dwa) F7@(16, 9) HP 137/138 MP 0/0 Hu 49 $ 55 room=.
--> eat1
-T2066 mode=inventory           Balin Runesinger(dwa) F7@(16, 9) HP 137/138 MP 0/0 Hu100 $ 55 room=.
--> x
-T2067 mode=game_loop           Balin Runesinger(dwa) F7@(16, 9) HP 137/138 MP 0/0 Hu100 $ 55 room=.
--> n
-T2068 mode=game_loop           Balin Runesinger(dwa) F7@(16, 8) HP 137/138 MP 0/0 Hu 99 $ 55 room=C
--> n
-T2069 mode=game_loop           Balin Runesinger(dwa) F7@(16, 7) HP 138/138 MP 0/0 Hu 98 $ 55 room=.
--> w
-T2070 mode=game_loop           Balin Runesinger(dwa) F7@(15, 7) HP 138/138 MP 0/0 Hu 98 $ 55 room=C
--> s
-T2071 mode=game_loop           Balin Runesinger(dwa) F7@(15, 8) HP 138/138 MP 0/0 Hu 97 $ 55 room=.
--> w
-T2072 mode=game_loop           Balin Runesinger(dwa) F7@(14, 8) HP 138/138 MP 0/0 Hu 96 $ 55 room=.
--> s
-T2073 mode=game_loop           Balin Runesinger(dwa) F7@(14, 9) HP 138/138 MP 0/0 Hu 96 $ 55 room=.
--> w
-T2074 mode=game_loop           Balin Runesinger(dwa) F7@(13, 9) HP 138/138 MP 0/0 Hu 95 $ 55 room=.
--> s
-T2075 mode=game_loop           Balin Runesinger(dwa) F7@(13,10) HP 138/138 MP 0/0 Hu 94 $ 55 room=.
--> s
-T2076 mode=game_loop           Balin Runesinger(dwa) F7@(13,11) HP 138/138 MP 0/0 Hu 94 $ 55 room=.
--> s
-T2077 mode=game_loop           Balin Runesinger(dwa) F7@(13,12) HP 138/138 MP 0/0 Hu 93 $ 55 room=.
--> w
-T2078 mode=game_loop           Balin Runesinger(dwa) F7@(12,12) HP 138/138 MP 0/0 Hu 92 $ 55 room=.
--> w
-T2079 mode=game_loop           Balin Runesinger(dwa) F7@(11,12) HP 138/138 MP 0/0 Hu 91 $ 55 room=.
--> w
-T2080 mode=combat_mode         Balin Runesinger(dwa) F7@(10,12) HP 138/138 MP 0/0 Hu 91 $ 55 room=M vs Hardened Lichen(L6 HP16/16)
+T1126 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 94/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
 -> a
-T2081 mode=combat_victory      Balin Runesinger(dwa) F7@(10,12) HP 138/148 MP 0/0 Hu 91 $ 62 room=.
--> back
-T2082 mode=game_loop           Balin Runesinger(dwa) F7@(10,12) HP 138/148 MP 0/0 Hu 91 $ 62 room=.
--> i
-T2083 mode=inventory           Balin Runesinger(dwa) F7@(10,12) HP 138/148 MP 0/0 Hu 91 $ 62 room=.
--> u11
-T2084 mode=inventory           Balin Runesinger(dwa) F7@(10,12) HP 148/148 MP 0/0 Hu 91 $ 62 room=.
--> x
-T2085 mode=game_loop           Balin Runesinger(dwa) F7@(10,12) HP 148/148 MP 0/0 Hu 91 $ 62 room=.
--> i
-T2086 mode=inventory           Balin Runesinger(dwa) F7@(10,12) HP 148/148 MP 0/0 Hu 91 $ 62 room=.
--> u22
-T2087 mode=inventory           Balin Runesinger(dwa) F7@(10,12) HP 148/148 MP 0/0 Hu 91 $ 62 room=.
--> x
-T2088 mode=game_loop           Balin Runesinger(dwa) F7@(10,12) HP 148/148 MP 0/0 Hu 91 $ 62 room=.
--> n
-T2089 mode=game_loop           Balin Runesinger(dwa) F7@(10,11) HP 148/148 MP 0/0 Hu 90 $ 62 room=.
--> w
-T2090 mode=game_loop           Balin Runesinger(dwa) F7@( 9,11) HP 148/148 MP 0/0 Hu 89 $ 62 room=.
--> n
-T2091 mode=game_loop           Balin Runesinger(dwa) F7@( 9,10) HP 148/148 MP 0/0 Hu 89 $ 62 room=.
--> n
-T2092 mode=game_loop           Balin Runesinger(dwa) F7@( 9, 9) HP 148/148 MP 0/0 Hu 88 $ 62 room=.
--> n
-T2093 mode=game_loop           Balin Runesinger(dwa) F7@( 9, 8) HP 148/148 MP 0/0 Hu 87 $ 62 room=.
--> n
-T2094 mode=game_loop           Balin Runesinger(dwa) F7@( 9, 7) HP 148/148 MP 0/0 Hu 87 $ 62 room=.
--> e
-T2095 mode=game_loop           Balin Runesinger(dwa) F7@(10, 7) HP 148/148 MP 0/0 Hu 86 $ 62 room=.
--> s
-T2096 mode=game_loop           Balin Runesinger(dwa) F7@(10, 8) HP 148/148 MP 0/0 Hu 85 $ 62 room=.
--> s
-T2097 mode=stairs_down_mode    Balin Runesinger(dwa) F7@(10, 9) HP 148/148 MP 0/0 Hu 84 $ 62 room=D
--> d
-T2098 mode=stairs_up_mode      Balin Runesinger(dwa) F8@( 1, 1) HP 148/148 MP 0/0 Hu 84 $ 62 room=U
--> w
-T2099 mode=stairs_up_mode      Balin Runesinger(dwa) F8@( 1, 1) HP 148/148 MP 0/0 Hu 84 $ 62 room=U
--> w
-T2100 mode=stairs_up_mode      Balin Runesinger(dwa) F8@( 1, 1) HP 148/148 MP 0/0 Hu 84 $ 62 room=U
--> e
-T2101 mode=game_loop           Balin Runesinger(dwa) F8@( 2, 1) HP 148/148 MP 0/0 Hu 84 $ 62 room=.
--> s
-T2102 mode=combat_mode         Balin Runesinger(dwa) F8@( 2, 2) HP 148/148 MP 0/0 Hu 83 $ 62 room=M vs Wraith(L7 HP89/89)
+T1127 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 88/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
 -> a
-T2103 mode=combat_mode         Balin Runesinger(dwa) F8@( 2, 2) HP 148/148 MP 0/0 Hu 83 $ 62 room=M vs Wraith(L7 HP57/89)
+T1128 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 82/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
+-> a
+T1129 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 76/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
+-> a
+T1130 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 70/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
+-> a
+T1131 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 70/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
+-> a
+T1132 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 64/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
 -> f
-T2104 mode=flee_direction_mode Balin Runesinger(dwa) F8@( 2, 2) HP 133/148 MP 0/0 Hu 83 $ 62 room=M
+T1133 mode=flee_direction_mode Balin Runesinger(dwa) F5@(11, 7) HP 58/100 MP 0/0 Hu 81 $ 34 room=M
 -> n
-T2105 mode=game_loop           Balin Runesinger(dwa) F8@( 2, 1) HP 133/148 MP 0/0 Hu 83 $ 62 room=.
--> s
-T2106 mode=combat_mode         Balin Runesinger(dwa) F8@( 2, 2) HP 133/148 MP 0/0 Hu 82 $ 62 room=M vs Wraith(L7 HP57/89)
--> a
-T2107 mode=combat_mode         Balin Runesinger(dwa) F8@( 2, 2) HP 108/148 MP 0/0 Hu 82 $ 62 room=M vs Wraith(L7 HP35/89)
--> a
-T2108 mode=combat_mode         Balin Runesinger(dwa) F8@( 2, 2) HP 108/148 MP 0/0 Hu 82 $ 62 room=M vs Wraith(L7 HP3/89)
--> a
-T2109 mode=combat_victory      Balin Runesinger(dwa) F8@( 2, 2) HP 83/148 MP 0/0 Hu 82 $ 94 room=.
--> back
-T2110 mode=game_loop           Balin Runesinger(dwa) F8@( 2, 2) HP 83/148 MP 0/0 Hu 82 $ 94 room=.
--> w
-T2111 mode=tomb_mode           Balin Runesinger(dwa) F8@( 1, 2) HP 83/148 MP 0/0 Hu 82 $ 94 room=T
--> p
-T2112 mode=game_loop           Balin Runesinger(dwa) F8@( 1, 2) HP 83/148 MP 0/0 Hu 82 $ 94 room=T
--> e
-T2113 mode=game_loop           Balin Runesinger(dwa) F8@( 2, 2) HP 83/148 MP 0/0 Hu 81 $ 94 room=.
--> e
-T2114 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 2) HP 84/148 MP 0/0 Hu 80 $ 94 room=.
--> s
-T2115 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 3) HP 84/148 MP 0/0 Hu 80 $ 94 room=.
--> s
-T2116 mode=combat_mode         Balin Runesinger(dwa) F8@( 3, 4) HP 84/148 MP 0/0 Hu 79 $ 94 room=M vs Hardened Wight(L7 HP62/62)
--> a
-T2117 mode=combat_mode         Balin Runesinger(dwa) F8@( 3, 4) HP 84/148 MP 0/0 Hu 79 $ 94 room=M vs Hardened Wight(L7 HP25/62)
--> a
-T2118 mode=combat_mode         Balin Runesinger(dwa) F8@( 3, 4) HP 74/148 MP 0/0 Hu 79 $ 94 room=M vs Hardened Wight(L7 HP25/62)
--> a
-T2119 mode=combat_victory      Balin Runesinger(dwa) F8@( 3, 4) HP 64/148 MP 0/0 Hu 79 $ 174 room=.
--> back
-T2120 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 4) HP 64/148 MP 0/0 Hu 79 $ 174 room=.
--> s
-T2121 mode=pool_mode           Balin Runesinger(dwa) F8@( 3, 5) HP 64/148 MP 0/0 Hu 78 $ 174 room=P
--> n
-T2122 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 4) HP 65/148 MP 0/0 Hu 77 $ 174 room=.
--> n
-T2123 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 3) HP 65/148 MP 0/0 Hu 77 $ 174 room=.
--> n
-T2124 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 2) HP 65/148 MP 0/0 Hu 76 $ 174 room=.
--> s
-T2125 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 3) HP 65/148 MP 0/0 Hu 75 $ 174 room=.
--> n
-T2126 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 2) HP 66/148 MP 0/0 Hu 75 $ 174 room=.
--> s
-T2127 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 3) HP 66/148 MP 0/0 Hu 74 $ 174 room=.
--> s
-T2128 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 4) HP 66/148 MP 0/0 Hu 73 $ 174 room=.
--> s
-T2129 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 5) HP 66/148 MP 0/0 Hu 73 $ 174 room=P
--> e
-T2130 mode=blacksmith_mode     Balin Runesinger(dwa) F8@( 4, 5) HP 67/148 MP 0/0 Hu 72 $ 174 room=B
--> 2
-T2131 mode=blacksmith_mode     Balin Runesinger(dwa) F8@( 4, 5) HP 67/148 MP 0/0 Hu 72 $ 131 room=B
--> w
-T2132 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 5) HP 67/148 MP 0/0 Hu 71 $ 131 room=P
--> s
-T2133 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 6) HP 67/148 MP 0/0 Hu 70 $ 131 room=.
--> s
-T2134 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 7) HP 67/148 MP 0/0 Hu 70 $ 131 room=.
--> w
-T2135 mode=pool_mode           Balin Runesinger(dwa) F8@( 2, 7) HP 68/148 MP 0/0 Hu 69 $ 131 room=P
--> e
-T2136 mode=game_loop           Balin Runesinger(dwa) F8@( 3, 7) HP 68/148 MP 0/0 Hu 68 $ 131 room=.
--> e
-T2137 mode=game_loop           Balin Runesinger(dwa) F8@( 4, 7) HP 68/148 MP 0/0 Hu 68 $ 131 room=.
--> s
-T2138 mode=altar_mode          Balin Runesinger(dwa) F8@( 4, 8) HP 68/148 MP 0/0 Hu 67 $ 131 room=A
--> pray
-T2139 mode=game_loop           Balin Runesinger(dwa) F8@( 4, 8) HP 68/148 MP 0/0 Hu 67 $ 131 room=.
--> e
-T2140 mode=game_loop           Balin Runesinger(dwa) F8@( 5, 8) HP 69/148 MP 0/0 Hu 66 $ 131 room=.
--> e
-T2141 mode=game_loop           Balin Runesinger(dwa) F8@( 6, 8) HP 69/148 MP 0/0 Hu 66 $ 131 room=.
--> s
-T2142 mode=game_loop           Balin Runesinger(dwa) F8@( 6, 9) HP 69/148 MP 0/0 Hu 65 $ 131 room=.
--> w
-T2143 mode=game_loop           Balin Runesinger(dwa) F8@( 5, 9) HP 69/148 MP 0/0 Hu 64 $ 131 room=.
--> w
-T2144 mode=game_loop           Balin Runesinger(dwa) F8@( 4, 9) HP 70/148 MP 0/0 Hu 63 $ 131 room=.
--> n
-T2145 mode=game_loop           Balin Runesinger(dwa) F8@( 4, 8) HP 70/148 MP 0/0 Hu 63 $ 131 room=.
--> e
-T2146 mode=game_loop           Balin Runesinger(dwa) F8@( 5, 8) HP 70/148 MP 0/0 Hu 62 $ 131 room=.
--> n
-T2147 mode=game_loop           Balin Runesinger(dwa) F8@( 5, 7) HP 70/148 MP 0/0 Hu 61 $ 131 room=.
--> w
-T2148 mode=game_loop           Balin Runesinger(dwa) F8@( 4, 7) HP 71/148 MP 0/0 Hu 61 $ 131 room=.
--> n
-T2149 mode=game_loop           Balin Runesinger(dwa) F8@( 4, 6) HP 71/148 MP 0/0 Hu 60 $ 131 room=.
--> n
-T2150 mode=game_loop           Balin Runesinger(dwa) F8@( 4, 5) HP 71/148 MP 0/0 Hu 59 $ 131 room=B
--> e
-T2151 mode=game_loop           Balin Runesinger(dwa) F8@( 5, 5) HP 71/148 MP 0/0 Hu 59 $ 131 room=.
--> e
-T2152 mode=game_loop           Balin Runesinger(dwa) F8@( 6, 5) HP 71/148 MP 0/0 Hu 58 $ 131 room=.
--> e
-T2153 mode=game_loop           Balin Runesinger(dwa) F8@( 7, 5) HP 71/148 MP 0/0 Hu 57 $ 131 room=.
--> s
-T2154 mode=game_loop           Balin Runesinger(dwa) F8@( 7, 6) HP 71/148 MP 0/0 Hu 56 $ 131 room=.
--> w
-T2155 mode=game_loop           Balin Runesinger(dwa) F8@( 6, 6) HP 71/148 MP 0/0 Hu 56 $ 131 room=.
--> w
-T2156 mode=game_loop           Balin Runesinger(dwa) F8@( 5, 6) HP 71/148 MP 0/0 Hu 55 $ 131 room=.
--> s
-T2157 mode=game_loop           Balin Runesinger(dwa) F8@( 5, 7) HP 71/148 MP 0/0 Hu 54 $ 131 room=.
--> s
-T2158 mode=game_loop           Balin Runesinger(dwa) F8@( 5, 8) HP 71/148 MP 0/0 Hu 54 $ 131 room=.
--> s
-T2159 mode=game_loop           Balin Runesinger(dwa) F8@( 5, 9) HP 71/148 MP 0/0 Hu 53 $ 131 room=.
--> e
-T2160 mode=game_loop           Balin Runesinger(dwa) F8@( 6, 9) HP 71/148 MP 0/0 Hu 52 $ 131 room=.
--> n
-T2161 mode=game_loop           Balin Runesinger(dwa) F8@( 6, 8) HP 71/148 MP 0/0 Hu 52 $ 131 room=.
--> e
-T2162 mode=stairs_down_mode    Balin Runesinger(dwa) F8@( 7, 8) HP 71/148 MP 0/0 Hu 51 $ 131 room=D
--> d
-T2163 mode=stairs_up_mode      Balin Runesinger(dwa) F9@( 1, 1) HP 71/148 MP 0/0 Hu 51 $ 131 room=U
--> n
-T2164 mode=stairs_up_mode      Balin Runesinger(dwa) F9@( 1, 1) HP 71/148 MP 0/0 Hu 51 $ 131 room=U
--> w
-T2165 mode=stairs_up_mode      Balin Runesinger(dwa) F9@( 1, 1) HP 71/148 MP 0/0 Hu 51 $ 131 room=U
--> n
-T2166 mode=stairs_up_mode      Balin Runesinger(dwa) F9@( 1, 1) HP 71/148 MP 0/0 Hu 51 $ 131 room=U
--> n
-T2167 mode=stairs_up_mode      Balin Runesinger(dwa) F9@( 1, 1) HP 71/148 MP 0/0 Hu 51 $ 131 room=U
--> s
-T2168 mode=game_loop           Balin Runesinger(dwa) F9@( 1, 2) HP 71/148 MP 0/0 Hu 50 $ 131 room=.
--> e
-T2169 mode=game_loop           Balin Runesinger(dwa) F9@( 2, 2) HP 71/148 MP 0/0 Hu 49 $ 131 room=.
+T1134 mode=game_loop           Balin Runesinger(dwa) F5@(11, 6) HP 58/100 MP 0/0 Hu 81 $ 34 room=B
 -> i
-T2170 mode=inventory           Balin Runesinger(dwa) F9@( 2, 2) HP 71/148 MP 0/0 Hu 49 $ 131 room=.
--> u11
-T2171 mode=inventory           Balin Runesinger(dwa) F9@( 2, 2) HP 131/148 MP 0/0 Hu 49 $ 131 room=.
+T1135 mode=inventory           Balin Runesinger(dwa) F5@(11, 6) HP 58/100 MP 0/0 Hu 81 $ 34 room=B
+-> u7
+T1136 mode=inventory           Balin Runesinger(dwa) F5@(11, 6) HP 88/100 MP 0/0 Hu 81 $ 34 room=B
 -> u3
-T2172 mode=inventory           Balin Runesinger(dwa) F9@( 2, 2) HP 148/148 MP 0/0 Hu 49 $ 131 room=.
+T1137 mode=inventory           Balin Runesinger(dwa) F5@(11, 6) HP 100/100 MP 0/0 Hu 81 $ 34 room=B
 -> x
-T2173 mode=game_loop           Balin Runesinger(dwa) F9@( 2, 2) HP 148/148 MP 0/0 Hu 49 $ 131 room=.
--> i
-T2174 mode=inventory           Balin Runesinger(dwa) F9@( 2, 2) HP 148/148 MP 0/0 Hu 49 $ 131 room=.
--> eat4
-T2175 mode=inventory           Balin Runesinger(dwa) F9@( 2, 2) HP 148/148 MP 0/0 Hu 67 $ 131 room=.
--> x
-T2176 mode=game_loop           Balin Runesinger(dwa) F9@( 2, 2) HP 148/148 MP 0/0 Hu 67 $ 131 room=.
+T1138 mode=game_loop           Balin Runesinger(dwa) F5@(11, 6) HP 100/100 MP 0/0 Hu 81 $ 34 room=B
+-> w
+T1139 mode=game_loop           Balin Runesinger(dwa) F5@(11, 6) HP 100/100 MP 0/0 Hu 81 $ 34 room=B
 -> e
-T2177 mode=game_loop           Balin Runesinger(dwa) F9@( 3, 2) HP 148/148 MP 0/0 Hu 67 $ 131 room=.
--> e
-T2178 mode=game_loop           Balin Runesinger(dwa) F9@( 4, 2) HP 148/148 MP 0/0 Hu 66 $ 131 room=.
--> n
-T2179 mode=combat_mode         Balin Runesinger(dwa) F9@( 4, 1) HP 148/148 MP 0/0 Hu 65 $ 131 room=M vs Hardened Kobold(L8 HP33/33)
+T1140 mode=game_loop           Balin Runesinger(dwa) F5@(11, 6) HP 100/100 MP 0/0 Hu 81 $ 34 room=B
+-> w
+T1141 mode=game_loop           Balin Runesinger(dwa) F5@(11, 6) HP 100/100 MP 0/0 Hu 81 $ 34 room=B
+-> s
+T1142 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 100/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
 -> a
-T2180 mode=combat_mode         Balin Runesinger(dwa) F9@( 4, 1) HP 147/148 MP 0/0 Hu 65 $ 131 room=M vs Hardened Kobold(L8 HP33/33)
+T1143 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 94/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
 -> a
-T2181 mode=combat_victory      Balin Runesinger(dwa) F9@( 4, 1) HP 147/158 MP 0/0 Hu 65 $ 462 room=.
+T1144 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 94/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
+-> a
+T1145 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 88/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
+-> a
+T1146 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 88/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP43/43)
+-> a
+T1147 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 88/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP12/43)
+-> a
+T1148 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 88/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP12/43)
+-> a
+T1149 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 82/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP12/43)
+-> a
+T1150 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 82/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP12/43)
+-> a
+T1151 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 82/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP12/43)
+-> a
+T1152 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 76/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP12/43)
+-> a
+T1153 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 76/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP12/43)
+-> a
+T1154 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 76/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP12/43)
+-> a
+T1155 mode=combat_mode         Balin Runesinger(dwa) F5@(11, 7) HP 70/100 MP 0/0 Hu 81 $ 34 room=M vs Giant Spider(L4 HP12/43)
+-> a
+T1156 mode=combat_victory      Balin Runesinger(dwa) F5@(11, 7) HP 64/110 MP 0/0 Hu 81 $ 139 room=.
 -> back
-T2182 mode=game_loop           Balin Runesinger(dwa) F9@( 4, 1) HP 147/158 MP 0/0 Hu 65 $ 462 room=.
+T1157 mode=game_loop           Balin Runesinger(dwa) F5@(11, 7) HP 64/110 MP 0/0 Hu 81 $ 139 room=.
 -> i
-T2183 mode=inventory           Balin Runesinger(dwa) F9@( 4, 1) HP 147/158 MP 0/0 Hu 65 $ 462 room=.
--> u11
-T2184 mode=inventory           Balin Runesinger(dwa) F9@( 4, 1) HP 158/158 MP 0/0 Hu 65 $ 462 room=.
+T1158 mode=inventory           Balin Runesinger(dwa) F5@(11, 7) HP 64/110 MP 0/0 Hu 81 $ 139 room=.
+-> u7
+T1159 mode=inventory           Balin Runesinger(dwa) F5@(11, 7) HP 94/110 MP 0/0 Hu 81 $ 139 room=.
+-> u3
+T1160 mode=inventory           Balin Runesinger(dwa) F5@(11, 7) HP 110/110 MP 0/0 Hu 81 $ 139 room=.
 -> x
-T2185 mode=game_loop           Balin Runesinger(dwa) F9@( 4, 1) HP 158/158 MP 0/0 Hu 65 $ 462 room=.
+T1161 mode=game_loop           Balin Runesinger(dwa) F5@(11, 7) HP 110/110 MP 0/0 Hu 81 $ 139 room=.
 -> i
-T2186 mode=inventory           Balin Runesinger(dwa) F9@( 4, 1) HP 158/158 MP 0/0 Hu 65 $ 462 room=.
--> u21
-T2187 mode=inventory           Balin Runesinger(dwa) F9@( 4, 1) HP 158/158 MP 0/0 Hu 65 $ 462 room=.
+T1162 mode=inventory           Balin Runesinger(dwa) F5@(11, 7) HP 110/110 MP 0/0 Hu 81 $ 139 room=.
+-> u18
+T1163 mode=inventory           Balin Runesinger(dwa) F5@(11, 7) HP 110/110 MP 0/0 Hu 81 $ 139 room=.
 -> x
-T2188 mode=game_loop           Balin Runesinger(dwa) F9@( 4, 1) HP 158/158 MP 0/0 Hu 65 $ 462 room=.
--> w
-T2189 mode=game_loop           Balin Runesinger(dwa) F9@( 3, 1) HP 158/158 MP 0/0 Hu 65 $ 462 room=.
--> w
-T2190 mode=game_loop           Balin Runesinger(dwa) F9@( 2, 1) HP 158/158 MP 0/0 Hu 64 $ 462 room=.
--> s
-T2191 mode=game_loop           Balin Runesinger(dwa) F9@( 2, 2) HP 158/158 MP 0/0 Hu 63 $ 462 room=.
+T1164 mode=game_loop           Balin Runesinger(dwa) F5@(11, 7) HP 110/110 MP 0/0 Hu 81 $ 139 room=.
 -> e
-T2192 mode=game_loop           Balin Runesinger(dwa) F9@( 3, 2) HP 158/158 MP 0/0 Hu 63 $ 462 room=.
--> e
-T2193 mode=game_loop           Balin Runesinger(dwa) F9@( 4, 2) HP 158/158 MP 0/0 Hu 62 $ 462 room=.
--> n
-T2194 mode=game_loop           Balin Runesinger(dwa) F9@( 4, 1) HP 158/158 MP 0/0 Hu 61 $ 462 room=.
--> e
-T2195 mode=game_loop           Balin Runesinger(dwa) F9@( 5, 1) HP 158/158 MP 0/0 Hu 60 $ 462 room=.
--> s
-T2196 mode=game_loop           Balin Runesinger(dwa) F9@( 5, 2) HP 158/158 MP 0/0 Hu 60 $ 462 room=.
--> s
-T2197 mode=game_loop           Balin Runesinger(dwa) F9@( 5, 3) HP 158/158 MP 0/0 Hu 59 $ 462 room=.
--> s
-T2198 mode=game_loop           Balin Runesinger(dwa) F9@( 5, 4) HP 158/158 MP 0/0 Hu 58 $ 462 room=.
--> w
-T2199 mode=game_loop           Balin Runesinger(dwa) F9@( 4, 4) HP 158/158 MP 0/0 Hu 58 $ 462 room=.
--> w
-T2200 mode=game_loop           Balin Runesinger(dwa) F9@( 3, 4) HP 158/158 MP 0/0 Hu 57 $ 462 room=.
--> n
-T2201 mode=chest_mode          Balin Runesinger(dwa) F9@( 3, 3) HP 158/158 MP 0/0 Hu 56 $ 462 room=C
--> o
-T2202 mode=game_loop           Balin Runesinger(dwa) F9@( 3, 3) HP 158/158 MP 0/0 Hu 56 $ 652 room=.
--> e
-T2203 mode=game_loop           Balin Runesinger(dwa) F9@( 4, 3) HP 158/158 MP 0/0 Hu 56 $ 652 room=.
--> n
-T2204 mode=game_loop           Balin Runesinger(dwa) F9@( 4, 2) HP 158/158 MP 0/0 Hu 55 $ 652 room=.
--> e
-T2205 mode=game_loop           Balin Runesinger(dwa) F9@( 5, 2) HP 158/158 MP 0/0 Hu 54 $ 652 room=.
--> s
-T2206 mode=game_loop           Balin Runesinger(dwa) F9@( 5, 3) HP 158/158 MP 0/0 Hu 53 $ 652 room=.
--> s
-T2207 mode=game_loop           Balin Runesinger(dwa) F9@( 5, 4) HP 158/158 MP 0/0 Hu 53 $ 652 room=.
--> e
-T2208 mode=game_loop           Balin Runesinger(dwa) F9@( 6, 4) HP 158/158 MP 0/0 Hu 52 $ 652 room=.
--> e
-T2209 mode=game_loop           Balin Runesinger(dwa) F9@( 7, 4) HP 158/158 MP 0/0 Hu 51 $ 652 room=.
--> e
-T2210 mode=game_loop           Balin Runesinger(dwa) F9@( 8, 4) HP 158/158 MP 0/0 Hu 51 $ 652 room=.
--> s
-T2211 mode=game_loop           Balin Runesinger(dwa) F9@( 8, 5) HP 158/158 MP 0/0 Hu 50 $ 652 room=.
--> s
-T2212 mode=vendor_shop         Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 652 room=V
--> b11
-T2213 mode=vendor_shop         Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 622 room=V
--> b11
-T2214 mode=vendor_shop         Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 607 room=V
--> b11
-T2215 mode=vendor_shop         Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 597 room=V
--> b6
-T2216 mode=vendor_shop         Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 537 room=V
--> b6
-T2217 mode=vendor_shop         Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 477 room=V
--> b6
-T2218 mode=vendor_shop         Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 417 room=V
--> b6
-T2219 mode=vendor_shop         Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 357 room=V
--> x
-T2220 mode=game_loop           Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 357 room=V
--> i
-T2221 mode=inventory           Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 49 $ 357 room=V
--> eat4
-T2222 mode=inventory           Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 64 $ 357 room=V
--> x
-T2223 mode=game_loop           Balin Runesinger(dwa) F9@( 8, 6) HP 158/158 MP 0/0 Hu 64 $ 357 room=V
--> e
-T2224 mode=game_loop           Balin Runesinger(dwa) F9@( 9, 6) HP 158/158 MP 0/0 Hu 64 $ 357 room=.
--> s
-T2225 mode=game_loop           Balin Runesinger(dwa) F9@( 9, 7) HP 158/158 MP 0/0 Hu 63 $ 357 room=.
--> s
-T2226 mode=library_mode        Balin Runesinger(dwa) F9@( 9, 8) HP 158/158 MP 0/0 Hu 62 $ 357 room=L
+T1165 mode=library_mode        Balin Runesinger(dwa) F5@(12, 7) HP 110/110 MP 0/0 Hu 80 $ 139 room=L
 -> r
-T2227 mode=library_read_decision_mode Balin Runesinger(dwa) F9@( 9, 8) HP 158/158 MP 0/0 Hu 62 $ 357 room=L
+T1166 mode=library_read_decision_mode Balin Runesinger(dwa) F5@(12, 7) HP 110/110 MP 0/0 Hu 80 $ 139 room=L
 -> y
-T2228 mode=game_loop           Balin Runesinger(dwa) F9@( 9, 8) HP 158/158 MP 0/0 Hu 62 $ 657 room=.
+T1167 mode=game_loop           Balin Runesinger(dwa) F5@(12, 7) HP 110/110 MP 0/0 Hu 80 $ 139 room=.
 -> s
-T2229 mode=game_loop           Balin Runesinger(dwa) F9@( 9, 9) HP 158/158 MP 0/0 Hu 61 $ 657 room=.
+T1168 mode=game_loop           Balin Runesinger(dwa) F5@(12, 8) HP 110/110 MP 0/0 Hu 79 $ 139 room=.
+-> e
+T1169 mode=game_loop           Balin Runesinger(dwa) F5@(13, 8) HP 110/110 MP 0/0 Hu 78 $ 139 room=.
 -> s
-T2230 mode=game_loop           Balin Runesinger(dwa) F9@( 9,10) HP 158/158 MP 0/0 Hu 61 $ 657 room=.
--> e
-T2231 mode=game_loop           Balin Runesinger(dwa) F9@(10,10) HP 158/158 MP 0/0 Hu 60 $ 657 room=.
--> n
-T2232 mode=game_loop           Balin Runesinger(dwa) F9@(10, 9) HP 158/158 MP 0/0 Hu 59 $ 657 room=.
--> e
-T2233 mode=game_loop           Balin Runesinger(dwa) F9@(11, 9) HP 158/158 MP 0/0 Hu 59 $ 657 room=.
--> n
-T2234 mode=game_loop           Balin Runesinger(dwa) F9@(11, 8) HP 158/158 MP 0/0 Hu 58 $ 657 room=.
+T1170 mode=game_loop           Balin Runesinger(dwa) F5@(13, 9) HP 110/110 MP 0/0 Hu 78 $ 139 room=.
+-> s
+T1171 mode=combat_mode         Balin Runesinger(dwa) F5@(13,10) HP 110/110 MP 0/0 Hu 77 $ 139 room=M vs Goblin(L4 HP13/13)
+-> a
+T1172 mode=combat_victory      Balin Runesinger(dwa) F5@(13,10) HP 110/110 MP 0/0 Hu 77 $ 154 room=.
+-> back
+T1173 mode=game_loop           Balin Runesinger(dwa) F5@(13,10) HP 110/110 MP 0/0 Hu 77 $ 154 room=.
 -> w
-T2235 mode=game_loop           Balin Runesinger(dwa) F9@(10, 8) HP 158/158 MP 0/0 Hu 57 $ 657 room=.
+T1174 mode=game_loop           Balin Runesinger(dwa) F5@(12,10) HP 110/110 MP 0/0 Hu 76 $ 154 room=.
+-> s
+T1175 mode=game_loop           Balin Runesinger(dwa) F5@(12,11) HP 110/110 MP 0/0 Hu 76 $ 154 room=.
+-> s
+T1176 mode=game_loop           Balin Runesinger(dwa) F5@(12,12) HP 110/110 MP 0/0 Hu 75 $ 154 room=.
 -> w
-T2236 mode=game_loop           Balin Runesinger(dwa) F9@( 9, 8) HP 158/158 MP 0/0 Hu 57 $ 657 room=.
+T1177 mode=pool_mode           Balin Runesinger(dwa) F5@(11,12) HP 110/110 MP 0/0 Hu 74 $ 154 room=P
+-> dr
+T1178 mode=game_loop           Balin Runesinger(dwa) F5@(11,12) HP 110/110 MP 0/0 Hu 74 $ 154 room=.
+-> w
+T1179 mode=game_loop           Balin Runesinger(dwa) F5@(10,12) HP 110/110 MP 0/0 Hu 74 $ 154 room=.
+-> w
+T1180 mode=garden_mode         Balin Runesinger(dwa) F5@( 9,12) HP 110/110 MP 0/0 Hu 73 $ 154 room=G
+-> h
+T1181 mode=game_loop           Balin Runesinger(dwa) F5@( 9,12) HP 110/110 MP 0/0 Hu 73 $ 154 room=.
 -> s
-T2237 mode=game_loop           Balin Runesinger(dwa) F9@( 9, 9) HP 158/158 MP 0/0 Hu 56 $ 657 room=.
--> s
-T2238 mode=game_loop           Balin Runesinger(dwa) F9@( 9,10) HP 158/158 MP 0/0 Hu 55 $ 657 room=.
--> e
-T2239 mode=game_loop           Balin Runesinger(dwa) F9@(10,10) HP 158/158 MP 0/0 Hu 54 $ 657 room=.
--> e
-T2240 mode=game_loop           Balin Runesinger(dwa) F9@(11,10) HP 158/158 MP 0/0 Hu 54 $ 657 room=.
+T1182 mode=combat_mode         Balin Runesinger(dwa) F5@( 9,13) HP 110/110 MP 0/0 Hu 72 $ 154 room=M vs ELITE UNDEAD WRAITH(L5 HP104/104)
+-> f
+T1183 mode=flee_direction_mode Balin Runesinger(dwa) F5@( 9,13) HP 110/110 MP 0/0 Hu 72 $ 154 room=M
 -> n
-T2241 mode=game_loop           Balin Runesinger(dwa) F9@(11, 9) HP 158/158 MP 0/0 Hu 53 $ 657 room=.
--> e
-T2242 mode=game_loop           Balin Runesinger(dwa) F9@(12, 9) HP 158/158 MP 0/0 Hu 52 $ 657 room=.
--> s
-T2243 mode=game_loop           Balin Runesinger(dwa) F9@(12,10) HP 158/158 MP 0/0 Hu 52 $ 657 room=.
--> e
-T2244 mode=altar_mode          Balin Runesinger(dwa) F9@(13,10) HP 158/158 MP 0/0 Hu 51 $ 657 room=A
--> pray
-T2245 mode=game_loop           Balin Runesinger(dwa) F9@(13,10) HP 158/158 MP 0/0 Hu 51 $ 657 room=.
--> s
-T2246 mode=game_loop           Balin Runesinger(dwa) F9@(13,11) HP 158/158 MP 0/0 Hu 50 $ 657 room=.
--> e
-T2247 mode=game_loop           Balin Runesinger(dwa) F9@(14,11) HP 158/158 MP 0/0 Hu 50 $ 657 room=.
--> s
-T2248 mode=game_loop           Balin Runesinger(dwa) F9@(14,12) HP 158/158 MP 0/0 Hu 49 $ 657 room=.
--> i
-T2249 mode=inventory           Balin Runesinger(dwa) F9@(14,12) HP 158/158 MP 0/0 Hu 49 $ 657 room=.
--> eat1
-T2250 mode=inventory           Balin Runesinger(dwa) F9@(14,12) HP 158/158 MP 0/0 Hu100 $ 657 room=.
--> x
-T2251 mode=game_loop           Balin Runesinger(dwa) F9@(14,12) HP 158/158 MP 0/0 Hu100 $ 657 room=.
--> s
-T2252 mode=game_loop           Balin Runesinger(dwa) F9@(14,13) HP 158/158 MP 0/0 Hu 99 $ 657 room=.
--> s
-T2253 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 158/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP214/214)
+T1184 mode=game_loop           Balin Runesinger(dwa) F5@( 9,12) HP 110/110 MP 0/0 Hu 72 $ 154 room=.
+-> w
+T1185 mode=combat_mode         Balin Runesinger(dwa) F5@( 8,12) HP 110/110 MP 0/0 Hu 71 $ 154 room=M vs UNDEAD SPECTER(L4 HP87/87)
 -> a
-T2254 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 106/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP207/214)
+T1186 mode=combat_mode         Balin Runesinger(dwa) F5@( 8,12) HP 110/110 MP 0/0 Hu 71 $ 154 room=M vs UNDEAD SPECTER(L4 HP59/87)
 -> a
-T2255 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 54/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP207/214)
--> i
-T2256 mode=inventory           Balin Runesinger(dwa) F9@(14,14) HP 54/158 MP 0/0 Hu 98 $ 657 room=M
--> u3
-T2257 mode=inventory           Balin Runesinger(dwa) F9@(14,14) HP 114/158 MP 0/0 Hu 98 $ 657 room=M
--> x
-T2258 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 114/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP207/214)
--> a
-T2259 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 114/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP200/214)
--> a
-T2260 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 62/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP193/214)
--> i
-T2261 mode=inventory           Balin Runesinger(dwa) F9@(14,14) HP 62/158 MP 0/0 Hu 98 $ 657 room=M
--> u3
-T2262 mode=inventory           Balin Runesinger(dwa) F9@(14,14) HP 122/158 MP 0/0 Hu 98 $ 657 room=M
--> x
-T2263 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 122/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP193/214)
--> a
-T2264 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 70/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP187/214)
--> i
-T2265 mode=inventory           Balin Runesinger(dwa) F9@(14,14) HP 70/158 MP 0/0 Hu 98 $ 657 room=M
--> u3
-T2266 mode=inventory           Balin Runesinger(dwa) F9@(14,14) HP 130/158 MP 0/0 Hu 98 $ 657 room=M
--> x
-T2267 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 130/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP187/214)
--> a
-T2268 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 78/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP187/214)
--> i
-T2269 mode=inventory           Balin Runesinger(dwa) F9@(14,14) HP 78/158 MP 0/0 Hu 98 $ 657 room=M
--> u3
-T2270 mode=inventory           Balin Runesinger(dwa) F9@(14,14) HP 138/158 MP 0/0 Hu 98 $ 657 room=M
--> x
-T2271 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 138/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP187/214)
--> a
-T2272 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 86/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP181/214)
--> a
-T2273 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 86/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP175/214)
--> a
-T2274 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 34/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP169/214)
+T1187 mode=combat_mode         Balin Runesinger(dwa) F5@( 8,12) HP 92/110 MP 0/0 Hu 71 $ 154 room=M vs UNDEAD SPECTER(L4 HP59/87)
 -> f
-T2275 mode=combat_mode         Balin Runesinger(dwa) F9@(14,14) HP 34/158 MP 0/0 Hu 98 $ 657 room=M vs ELITE UNDEAD DEATH KNIGHT(L9 HP169/214)
+T1188 mode=flee_direction_mode Balin Runesinger(dwa) F5@( 8,12) HP 92/110 MP 0/0 Hu 71 $ 154 room=M
+-> e
+T1189 mode=game_loop           Balin Runesinger(dwa) F5@( 9,12) HP 92/110 MP 0/0 Hu 71 $ 154 room=.
+-> e
+T1190 mode=game_loop           Balin Runesinger(dwa) F5@(10,12) HP 92/110 MP 0/0 Hu 71 $ 154 room=.
+-> e
+T1191 mode=game_loop           Balin Runesinger(dwa) F5@(11,12) HP 92/110 MP 0/0 Hu 70 $ 154 room=.
+-> s
+T1192 mode=game_loop           Balin Runesinger(dwa) F5@(11,13) HP 92/110 MP 0/0 Hu 69 $ 154 room=.
+-> w
+T1193 mode=game_loop           Balin Runesinger(dwa) F5@(10,13) HP 93/110 MP 0/0 Hu 69 $ 154 room=.
+-> s
+T1194 mode=game_loop           Balin Runesinger(dwa) F5@(10,14) HP 93/110 MP 0/0 Hu 68 $ 154 room=.
+-> w
+T1195 mode=game_loop           Balin Runesinger(dwa) F5@( 9,14) HP 93/110 MP 0/0 Hu 67 $ 154 room=.
+-> e
+T1196 mode=game_loop           Balin Runesinger(dwa) F5@(10,14) HP 93/110 MP 0/0 Hu 67 $ 154 room=.
+-> n
+T1197 mode=game_loop           Balin Runesinger(dwa) F5@(10,13) HP 94/110 MP 0/0 Hu 66 $ 154 room=.
+-> n
+T1198 mode=game_loop           Balin Runesinger(dwa) F5@(10,12) HP 94/110 MP 0/0 Hu 65 $ 154 room=.
+-> e
+T1199 mode=game_loop           Balin Runesinger(dwa) F5@(11,12) HP 94/110 MP 0/0 Hu 64 $ 154 room=.
+-> n
+T1200 mode=warp_mode           Balin Runesinger(dwa) F5@(11,11) HP 94/110 MP 0/0 Hu 64 $ 154 room=W
+-> y
+T1201 mode=tomb_mode           Balin Runesinger(dwa) F7@(13,15) HP 94/110 MP 0/0 Hu 64 $ 154 room=T
+-> p
+T1202 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 94/110 MP 0/0 Hu 64 $ 154 room=T
+-> e
+T1203 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 94/110 MP 0/0 Hu 64 $ 154 room=T
+-> w
+T1204 mode=combat_mode         Balin Runesinger(dwa) F7@(12,15) HP 95/110 MP 0/0 Hu 63 $ 254 room=M vs Fungal Hulk(L6 HP89/89)
 -> f
-T2276 mode=death_screen        Balin Runesinger(dwa) F9@(14,14) HP -18/158 MP 0/0 Hu 98 $ 657 room=M
+T1205 mode=flee_direction_mode Balin Runesinger(dwa) F7@(12,15) HP 95/110 MP 0/0 Hu 63 $ 254 room=M
+-> e
+T1206 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 95/110 MP 0/0 Hu 63 $ 254 room=T
+-> e
+T1207 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 95/110 MP 0/0 Hu 63 $ 254 room=T
+-> n
+T1208 mode=combat_mode         Balin Runesinger(dwa) F7@(13,14) HP 95/110 MP 0/0 Hu 62 $ 254 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
+-> f
+T1209 mode=flee_direction_mode Balin Runesinger(dwa) F7@(13,14) HP 51/110 MP 0/0 Hu 62 $ 254 room=M
+-> s
+T1210 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 51/110 MP 0/0 Hu 62 $ 254 room=T
+-> i
+T1211 mode=inventory           Balin Runesinger(dwa) F7@(13,15) HP 51/110 MP 0/0 Hu 62 $ 254 room=T
+-> u7
+T1212 mode=inventory           Balin Runesinger(dwa) F7@(13,15) HP 81/110 MP 0/0 Hu 62 $ 254 room=T
+-> x
+T1213 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 81/110 MP 0/0 Hu 62 $ 254 room=T
+-> n
+T1214 mode=combat_mode         Balin Runesinger(dwa) F7@(13,14) HP 81/110 MP 0/0 Hu 62 $ 254 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
+-> f
+T1215 mode=flee_direction_mode Balin Runesinger(dwa) F7@(13,14) HP 37/110 MP 0/0 Hu 62 $ 254 room=M
+-> s
+T1216 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 37/110 MP 0/0 Hu 62 $ 254 room=T
+-> s
+T1217 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 37/110 MP 0/0 Hu 62 $ 254 room=T
+-> s
+T1218 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 37/110 MP 0/0 Hu 62 $ 254 room=T
+-> s
+T1219 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 37/110 MP 0/0 Hu 62 $ 254 room=T
+-> s
+T1220 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 37/110 MP 0/0 Hu 62 $ 254 room=T
+-> e
+T1221 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 37/110 MP 0/0 Hu 62 $ 254 room=T
+-> s
+T1222 mode=game_loop           Balin Runesinger(dwa) F7@(13,15) HP 37/110 MP 0/0 Hu 62 $ 254 room=T
+-> n
+T1223 mode=combat_mode         Balin Runesinger(dwa) F7@(13,14) HP 37/110 MP 0/0 Hu 61 $ 254 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
+-> f
+T1224 mode=death_screen        Balin Runesinger(dwa) F7@(13,14) HP -7/110 MP 0/0 Hu 61 $ 254 room=M
 
-=== run finished: turns=2276 floor=9 hp=-18/158 gold=657 alive=False mode=death_screen ===
+=== run finished: turns=1224 floor=7 hp=-7/110 gold=254 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/31415_dwarf.html

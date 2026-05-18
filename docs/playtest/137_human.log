@@ -3228,188 +3228,140 @@ T1605 mode=game_loop           Bard Stormcrow(hum) F5@(16,15) HP 64/66 MP 0/0 Hu
 T1606 mode=altar_mode          Bard Stormcrow(hum) F5@(15,15) HP 65/66 MP 0/0 Hu 88 $ 278 room=A
 -> pray
 T1607 mode=game_loop           Bard Stormcrow(hum) F5@(15,15) HP 65/66 MP 0/0 Hu 88 $ 278 room=.
--> n
-T1608 mode=game_loop           Bard Stormcrow(hum) F5@(15,14) HP 65/66 MP 0/0 Hu 87 $ 278 room=.
 -> w
-T1609 mode=game_loop           Bard Stormcrow(hum) F5@(14,14) HP 66/66 MP 0/0 Hu 87 $ 278 room=.
--> w
-T1610 mode=game_loop           Bard Stormcrow(hum) F5@(13,14) HP 66/66 MP 0/0 Hu 86 $ 278 room=.
--> w
-T1611 mode=game_loop           Bard Stormcrow(hum) F5@(12,14) HP 66/66 MP 0/0 Hu 85 $ 278 room=.
--> n
-T1612 mode=game_loop           Bard Stormcrow(hum) F5@(12,13) HP 66/66 MP 0/0 Hu 85 $ 278 room=.
--> w
-T1613 mode=combat_mode         Bard Stormcrow(hum) F5@(11,13) HP 66/66 MP 0/0 Hu 84 $ 278 room=M vs Gelatinous Cube(L4 HP46/46)
--> f
-T1614 mode=flee_direction_mode Bard Stormcrow(hum) F5@(11,13) HP 65/66 MP 0/0 Hu 84 $ 278 room=M
--> n
-T1615 mode=game_loop           Bard Stormcrow(hum) F5@(11,12) HP 65/66 MP 0/0 Hu 84 $ 278 room=.
--> n
-T1616 mode=game_loop           Bard Stormcrow(hum) F5@(11,11) HP 65/66 MP 0/0 Hu 83 $ 278 room=.
--> n
-T1617 mode=game_loop           Bard Stormcrow(hum) F5@(11,10) HP 65/66 MP 0/0 Hu 83 $ 278 room=.
--> e
-T1618 mode=game_loop           Bard Stormcrow(hum) F5@(12,10) HP 65/66 MP 0/0 Hu 82 $ 278 room=.
--> e
-T1619 mode=game_loop           Bard Stormcrow(hum) F5@(13,10) HP 66/66 MP 0/0 Hu 81 $ 278 room=.
--> n
-T1620 mode=game_loop           Bard Stormcrow(hum) F5@(13, 9) HP 66/66 MP 0/0 Hu 80 $ 278 room=.
--> e
-T1621 mode=stairs_down_mode    Bard Stormcrow(hum) F5@(14, 9) HP 66/66 MP 0/0 Hu 80 $ 278 room=D
--> d
-T1622 mode=stairs_up_mode      Bard Stormcrow(hum) F6@( 1, 1) HP 66/66 MP 0/0 Hu 80 $ 278 room=U
+T1608 mode=library_mode        Bard Stormcrow(hum) F5@(14,15) HP 65/66 MP 0/0 Hu 87 $ 278 room=L
+-> r
+T1609 mode=library_read_decision_mode Bard Stormcrow(hum) F5@(14,15) HP 65/66 MP 0/0 Hu 87 $ 278 room=L
+-> y
+T1610 mode=game_loop           Bard Stormcrow(hum) F5@(14,15) HP 65/66 MP 0/0 Hu 87 $ 578 room=.
 -> s
-T1623 mode=chest_mode          Bard Stormcrow(hum) F6@( 1, 2) HP 66/66 MP 0/0 Hu 79 $ 378 room=C
--> o
-T1624 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 2) HP 66/66 MP 0/0 Hu 79 $ 518 room=.
--> l
-T1625 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 2) HP 66/66 MP 0/0 Hu 79 $ 518 room=.
--> e
-T1626 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 2) HP 66/66 MP 0/0 Hu 78 $ 518 room=.
--> l
-T1627 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 2) HP 66/66 MP 0/0 Hu 78 $ 518 room=.
--> s
-T1628 mode=altar_mode          Bard Stormcrow(hum) F6@( 2, 3) HP 66/66 MP 0/0 Hu 78 $ 518 room=A
--> pray
-T1629 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 3) HP 66/66 MP 0/0 Hu 78 $ 518 room=.
--> l
-T1630 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 3) HP 66/66 MP 0/0 Hu 78 $ 518 room=.
--> e
-T1631 mode=game_loop           Bard Stormcrow(hum) F6@( 3, 3) HP 66/66 MP 0/0 Hu 77 $ 518 room=.
--> e
-T1632 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 518 room=V
--> r1
-T1633 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 448 room=V
--> r3
-T1634 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 193 room=V
--> b14
-T1635 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 163 room=V
--> b14
-T1636 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 148 room=V
--> b14
-T1637 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 138 room=V
--> b7
-T1638 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 78 room=V
--> b7
-T1639 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 18 room=V
--> b13
-T1640 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 13 room=V
--> b13
-T1641 mode=vendor_shop         Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 8 room=V
--> x
-T1642 mode=game_loop           Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 76 $ 8 room=V
--> n
-T1643 mode=shrine_mode         Bard Stormcrow(hum) F6@( 4, 2) HP 66/66 MP 0/0 Hu 76 $ 8 room=F
+T1611 mode=tomb_mode           Bard Stormcrow(hum) F5@(14,16) HP 66/66 MP 0/0 Hu 87 $ 578 room=T
 -> p
-T1644 mode=game_loop           Bard Stormcrow(hum) F6@( 4, 2) HP 66/66 MP 0/0 Hu 76 $ 8 room=.
+T1612 mode=game_loop           Bard Stormcrow(hum) F5@(14,16) HP 66/66 MP 0/0 Hu 87 $ 578 room=T
+-> n
+T1613 mode=game_loop           Bard Stormcrow(hum) F5@(14,15) HP 66/66 MP 0/0 Hu 86 $ 578 room=.
+-> n
+T1614 mode=game_loop           Bard Stormcrow(hum) F5@(14,14) HP 66/66 MP 0/0 Hu 85 $ 578 room=.
 -> w
-T1645 mode=pool_mode           Bard Stormcrow(hum) F6@( 3, 2) HP 66/66 MP 0/0 Hu 75 $ 8 room=P
--> dr
-T1646 mode=game_loop           Bard Stormcrow(hum) F6@( 3, 2) HP 66/66 MP 0/0 Hu 75 $ 8 room=.
--> w
-T1647 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 2) HP 66/66 MP 0/0 Hu 74 $ 8 room=.
--> s
-T1648 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 3) HP 66/66 MP 0/0 Hu 73 $ 8 room=.
--> s
-T1649 mode=stairs_down_mode    Bard Stormcrow(hum) F6@( 2, 4) HP 66/66 MP 0/0 Hu 73 $ 8 room=D
--> s
-T1650 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 5) HP 66/66 MP 0/0 Hu 72 $ 8 room=.
--> w
-T1651 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 5) HP 66/66 MP 0/0 Hu 71 $ 8 room=.
--> s
-T1652 mode=altar_mode          Bard Stormcrow(hum) F6@( 1, 6) HP 66/66 MP 0/0 Hu 71 $ 8 room=A
--> pray
-T1653 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 6) HP 66/66 MP 0/0 Hu 71 $ 208 room=.
+T1615 mode=game_loop           Bard Stormcrow(hum) F5@(13,14) HP 66/66 MP 0/0 Hu 85 $ 578 room=.
 -> n
-T1654 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 5) HP 66/66 MP 0/0 Hu 70 $ 208 room=.
+T1616 mode=game_loop           Bard Stormcrow(hum) F5@(13,13) HP 66/66 MP 0/0 Hu 84 $ 578 room=.
 -> n
-T1655 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 4) HP 66/66 MP 0/0 Hu 69 $ 208 room=.
+T1617 mode=game_loop           Bard Stormcrow(hum) F5@(13,12) HP 66/66 MP 0/0 Hu 83 $ 578 room=.
 -> n
-T1656 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 3) HP 66/66 MP 0/0 Hu 69 $ 208 room=.
--> e
-T1657 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 3) HP 66/66 MP 0/0 Hu 68 $ 208 room=.
--> e
-T1658 mode=game_loop           Bard Stormcrow(hum) F6@( 3, 3) HP 66/66 MP 0/0 Hu 67 $ 208 room=.
--> e
-T1659 mode=game_loop           Bard Stormcrow(hum) F6@( 4, 3) HP 66/66 MP 0/0 Hu 66 $ 208 room=V
--> e
-T1660 mode=game_loop           Bard Stormcrow(hum) F6@( 5, 3) HP 66/66 MP 0/0 Hu 66 $ 208 room=.
--> e
-T1661 mode=game_loop           Bard Stormcrow(hum) F6@( 6, 3) HP 66/66 MP 0/0 Hu 65 $ 208 room=.
+T1618 mode=game_loop           Bard Stormcrow(hum) F5@(13,11) HP 66/66 MP 0/0 Hu 83 $ 578 room=.
 -> n
-T1662 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 66/66 MP 0/0 Hu 64 $ 208 room=M vs Basilisk(L5 HP93/93)
--> a
-T1663 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 66/66 MP 0/0 Hu 64 $ 208 room=M vs Basilisk(L5 HP79/93)
--> a
-T1664 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 66/66 MP 0/0 Hu 64 $ 208 room=M vs Basilisk(L5 HP66/93)
--> a
-T1665 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 55/66 MP 0/0 Hu 64 $ 208 room=M vs Basilisk(L5 HP53/93)
--> f
-T1666 mode=flee_direction_mode Bard Stormcrow(hum) F6@( 6, 2) HP 55/66 MP 0/0 Hu 64 $ 208 room=M
+T1619 mode=game_loop           Bard Stormcrow(hum) F5@(13,10) HP 66/66 MP 0/0 Hu 82 $ 578 room=.
+-> n
+T1620 mode=game_loop           Bard Stormcrow(hum) F5@(13, 9) HP 66/66 MP 0/0 Hu 81 $ 578 room=.
 -> e
-T1667 mode=game_loop           Bard Stormcrow(hum) F6@( 7, 2) HP 55/66 MP 0/0 Hu 64 $ 208 room=.
--> e
-T1668 mode=game_loop           Bard Stormcrow(hum) F6@( 8, 2) HP 55/66 MP 0/0 Hu 64 $ 208 room=.
+T1621 mode=stairs_down_mode    Bard Stormcrow(hum) F5@(14, 9) HP 66/66 MP 0/0 Hu 80 $ 578 room=D
+-> d
+T1622 mode=stairs_up_mode      Bard Stormcrow(hum) F6@( 1, 1) HP 66/66 MP 0/0 Hu 80 $ 578 room=U
 -> s
-T1669 mode=combat_mode         Bard Stormcrow(hum) F6@( 8, 3) HP 55/66 MP 0/0 Hu 63 $ 208 room=M vs Wraith(L5 HP83/83)
+T1623 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 2) HP 66/66 MP 0/0 Hu 80 $ 678 room=.
+-> l
+T1624 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 2) HP 66/66 MP 0/0 Hu 80 $ 678 room=.
+-> s
+T1625 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 3) HP 66/66 MP 0/0 Hu 79 $ 678 room=.
+-> l
+T1626 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 3) HP 66/66 MP 0/0 Hu 79 $ 678 room=.
+-> s
+T1627 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 4) HP 66/66 MP 0/0 Hu 78 $ 678 room=.
+-> l
+T1628 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 4) HP 66/66 MP 0/0 Hu 78 $ 678 room=.
+-> s
+T1629 mode=chest_mode          Bard Stormcrow(hum) F6@( 1, 5) HP 66/66 MP 0/0 Hu 78 $ 678 room=C
+-> o
+T1630 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 5) HP 66/66 MP 0/0 Hu 78 $ 678 room=.
+-> e
+T1631 mode=combat_mode         Bard Stormcrow(hum) F6@( 2, 5) HP 66/66 MP 0/0 Hu 77 $ 678 room=M vs UNDEAD MUMMY(L5 HP118/118)
 -> a
-T1670 mode=combat_mode         Bard Stormcrow(hum) F6@( 8, 3) HP 41/66 MP 0/0 Hu 63 $ 208 room=M vs Wraith(L5 HP67/83)
+T1632 mode=combat_mode         Bard Stormcrow(hum) F6@( 2, 5) HP 43/66 MP 0/0 Hu 77 $ 678 room=M vs UNDEAD MUMMY(L5 HP107/118)
 -> a
-T1671 mode=combat_mode         Bard Stormcrow(hum) F6@( 8, 3) HP 17/66 MP 0/0 Hu 63 $ 208 room=M vs Wraith(L5 HP61/83)
+T1633 mode=combat_mode         Bard Stormcrow(hum) F6@( 2, 5) HP 20/66 MP 0/0 Hu 77 $ 678 room=M vs UNDEAD MUMMY(L5 HP96/118)
 -> i
-T1672 mode=inventory           Bard Stormcrow(hum) F6@( 8, 3) HP 17/66 MP 0/0 Hu 63 $ 208 room=M
+T1634 mode=inventory           Bard Stormcrow(hum) F6@( 2, 5) HP 20/66 MP 0/0 Hu 77 $ 678 room=M
 -> u5
-T1673 mode=inventory           Bard Stormcrow(hum) F6@( 8, 3) HP 66/66 MP 0/0 Hu 63 $ 208 room=M
+T1635 mode=inventory           Bard Stormcrow(hum) F6@( 2, 5) HP 66/66 MP 0/0 Hu 77 $ 678 room=M
 -> x
-T1674 mode=combat_mode         Bard Stormcrow(hum) F6@( 8, 3) HP 66/66 MP 0/0 Hu 63 $ 208 room=M vs Wraith(L5 HP61/83)
+T1636 mode=combat_mode         Bard Stormcrow(hum) F6@( 2, 5) HP 66/66 MP 0/0 Hu 77 $ 678 room=M vs UNDEAD MUMMY(L5 HP96/118)
 -> a
-T1675 mode=combat_mode         Bard Stormcrow(hum) F6@( 8, 3) HP 66/66 MP 0/0 Hu 63 $ 208 room=M vs Wraith(L5 HP61/83)
--> f
-T1676 mode=flee_direction_mode Bard Stormcrow(hum) F6@( 8, 3) HP 66/66 MP 0/0 Hu 63 $ 208 room=M
--> w
-T1677 mode=game_loop           Bard Stormcrow(hum) F6@( 7, 3) HP 66/66 MP 0/0 Hu 63 $ 208 room=.
--> s
-T1678 mode=game_loop           Bard Stormcrow(hum) F6@( 7, 4) HP 66/66 MP 0/0 Hu 62 $ 208 room=.
--> w
-T1679 mode=game_loop           Bard Stormcrow(hum) F6@( 6, 4) HP 66/66 MP 0/0 Hu 62 $ 208 room=.
--> n
-T1680 mode=game_loop           Bard Stormcrow(hum) F6@( 6, 3) HP 66/66 MP 0/0 Hu 61 $ 208 room=.
--> n
-T1681 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 66/66 MP 0/0 Hu 60 $ 208 room=M vs Basilisk(L5 HP53/93)
+T1637 mode=combat_mode         Bard Stormcrow(hum) F6@( 2, 5) HP 43/66 MP 0/0 Hu 77 $ 678 room=M vs UNDEAD MUMMY(L5 HP85/118)
 -> a
-T1682 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 55/66 MP 0/0 Hu 60 $ 208 room=M vs Basilisk(L5 HP40/93)
--> a
-T1683 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 44/66 MP 0/0 Hu 60 $ 208 room=M vs Basilisk(L5 HP27/93)
--> a
-T1684 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 33/66 MP 0/0 Hu 60 $ 208 room=M vs Basilisk(L5 HP27/93)
--> a
-T1685 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 22/66 MP 0/0 Hu 60 $ 208 room=M vs Basilisk(L5 HP27/93)
+T1638 mode=combat_mode         Bard Stormcrow(hum) F6@( 2, 5) HP 20/66 MP 0/0 Hu 77 $ 678 room=M vs UNDEAD MUMMY(L5 HP85/118)
 -> i
-T1686 mode=inventory           Bard Stormcrow(hum) F6@( 6, 2) HP 22/66 MP 0/0 Hu 60 $ 208 room=M
+T1639 mode=inventory           Bard Stormcrow(hum) F6@( 2, 5) HP 20/66 MP 0/0 Hu 77 $ 678 room=M
 -> u5
-T1687 mode=inventory           Bard Stormcrow(hum) F6@( 6, 2) HP 66/66 MP 0/0 Hu 60 $ 208 room=M
+T1640 mode=inventory           Bard Stormcrow(hum) F6@( 2, 5) HP 50/66 MP 0/0 Hu 77 $ 678 room=M
+-> u3
+T1641 mode=inventory           Bard Stormcrow(hum) F6@( 2, 5) HP 50/66 MP 0/0 Hu 77 $ 678 room=M
 -> x
-T1688 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 66/66 MP 0/0 Hu 60 $ 208 room=M vs Basilisk(L5 HP27/93)
--> a
-T1689 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 66/66 MP 0/0 Hu 60 $ 208 room=M vs Basilisk(L5 HP14/93)
--> a
-T1690 mode=combat_mode         Bard Stormcrow(hum) F6@( 6, 2) HP 66/66 MP 0/0 Hu 60 $ 208 room=M vs Basilisk(L5 HP14/93)
+T1642 mode=combat_mode         Bard Stormcrow(hum) F6@( 2, 5) HP 50/66 MP 0/0 Hu 77 $ 678 room=M vs UNDEAD MUMMY(L5 HP85/118)
 -> f
-T1691 mode=flee_direction_mode Bard Stormcrow(hum) F6@( 6, 2) HP 66/66 MP 0/0 Hu 60 $ 208 room=M
+T1643 mode=flee_direction_mode Bard Stormcrow(hum) F6@( 2, 5) HP 27/66 MP 0/0 Hu 77 $ 678 room=M
+-> w
+T1644 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 5) HP 27/66 MP 0/0 Hu 77 $ 678 room=.
+-> n
+T1645 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 4) HP 27/66 MP 0/0 Hu 76 $ 678 room=.
+-> n
+T1646 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 3) HP 27/66 MP 0/0 Hu 76 $ 678 room=.
+-> n
+T1647 mode=game_loop           Bard Stormcrow(hum) F6@( 1, 2) HP 27/66 MP 0/0 Hu 75 $ 678 room=.
 -> e
-T1692 mode=game_loop           Bard Stormcrow(hum) F6@( 7, 2) HP 66/66 MP 0/0 Hu 60 $ 208 room=.
+T1648 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 2) HP 28/66 MP 0/0 Hu 74 $ 678 room=.
 -> s
-T1693 mode=game_loop           Bard Stormcrow(hum) F6@( 7, 3) HP 66/66 MP 0/0 Hu 59 $ 208 room=.
+T1649 mode=game_loop           Bard Stormcrow(hum) F6@( 2, 3) HP 28/66 MP 0/0 Hu 73 $ 678 room=.
 -> e
-T1694 mode=combat_mode         Bard Stormcrow(hum) F6@( 8, 3) HP 66/66 MP 0/0 Hu 59 $ 208 room=M vs Wraith(L5 HP61/83)
+T1650 mode=game_loop           Bard Stormcrow(hum) F6@( 3, 3) HP 28/66 MP 0/0 Hu 73 $ 678 room=.
+-> s
+T1651 mode=game_loop           Bard Stormcrow(hum) F6@( 3, 4) HP 28/66 MP 0/0 Hu 72 $ 678 room=.
+-> s
+T1652 mode=garden_mode         Bard Stormcrow(hum) F6@( 3, 5) HP 29/66 MP 0/0 Hu 71 $ 678 room=G
+-> h
+T1653 mode=game_loop           Bard Stormcrow(hum) F6@( 3, 5) HP 29/66 MP 0/0 Hu 71 $ 678 room=.
+-> e
+T1654 mode=combat_mode         Bard Stormcrow(hum) F6@( 4, 5) HP 29/66 MP 0/0 Hu 71 $ 678 room=M vs Displacer Beast(L5 HP45/45)
 -> a
-T1695 mode=combat_mode         Bard Stormcrow(hum) F6@( 8, 3) HP 52/66 MP 0/0 Hu 59 $ 208 room=M vs Wraith(L5 HP61/83)
+T1655 mode=combat_mode         Bard Stormcrow(hum) F6@( 4, 5) HP 28/66 MP 0/0 Hu 71 $ 678 room=M vs Displacer Beast(L5 HP45/45)
 -> a
-T1696 mode=combat_mode         Bard Stormcrow(hum) F6@( 8, 3) HP 38/66 MP 0/0 Hu 59 $ 208 room=M vs Wraith(L5 HP45/83)
+T1656 mode=combat_mode         Bard Stormcrow(hum) F6@( 4, 5) HP 27/66 MP 0/0 Hu 71 $ 678 room=M vs Displacer Beast(L5 HP45/45)
+-> a
+T1657 mode=combat_mode         Bard Stormcrow(hum) F6@( 4, 5) HP 27/66 MP 0/0 Hu 71 $ 678 room=M vs Displacer Beast(L5 HP44/45)
 -> f
-T1697 mode=death_screen        Bard Stormcrow(hum) F6@( 8, 3) HP 0/66 MP 0/0 Hu 59 $ 208 room=M
+T1658 mode=flee_direction_mode Bard Stormcrow(hum) F6@( 4, 5) HP 26/66 MP 0/0 Hu 71 $ 678 room=M
+-> w
+T1659 mode=game_loop           Bard Stormcrow(hum) F6@( 3, 5) HP 26/66 MP 0/0 Hu 71 $ 678 room=.
+-> i
+T1660 mode=inventory           Bard Stormcrow(hum) F6@( 3, 5) HP 26/66 MP 0/0 Hu 71 $ 678 room=.
+-> e1
+T1661 mode=inventory           Bard Stormcrow(hum) F6@( 3, 5) HP 26/66 MP 0/0 Hu 71 $ 678 room=.
+-> x
+T1662 mode=game_loop           Bard Stormcrow(hum) F6@( 3, 5) HP 26/66 MP 0/0 Hu 71 $ 678 room=.
+-> s
+T1663 mode=library_mode        Bard Stormcrow(hum) F6@( 3, 6) HP 26/66 MP 0/0 Hu 70 $ 678 room=L
+-> r
+T1664 mode=library_read_decision_mode Bard Stormcrow(hum) F6@( 3, 6) HP 26/66 MP 0/0 Hu 70 $ 678 room=L
+-> y
+T1665 mode=game_loop           Bard Stormcrow(hum) F6@( 3, 6) HP 26/66 MP 0/0 Hu 70 $ 678 room=.
+-> e
+T1666 mode=game_loop           Bard Stormcrow(hum) F6@( 4, 6) HP 26/66 MP 0/0 Hu 69 $ 678 room=.
+-> e
+T1667 mode=library_mode        Bard Stormcrow(hum) F6@( 5, 6) HP 27/66 MP 0/0 Hu 69 $ 678 room=L
+-> r
+T1668 mode=library_read_decision_mode Bard Stormcrow(hum) F6@( 5, 6) HP 27/66 MP 0/0 Hu 69 $ 678 room=L
+-> y
+T1669 mode=game_loop           Bard Stormcrow(hum) F6@( 5, 6) HP 27/66 MP 0/0 Hu 69 $ 678 room=.
+-> e
+T1670 mode=game_loop           Bard Stormcrow(hum) F6@( 6, 6) HP 19/66 MP 0/0 Hu 68 $ 678 room=.
+-> s
+T1671 mode=game_loop           Bard Stormcrow(hum) F6@( 6, 7) HP 11/66 MP 0/0 Hu 67 $ 678 room=.
+-> w
+T1672 mode=game_loop           Bard Stormcrow(hum) F6@( 5, 7) HP 3/66 MP 0/0 Hu 66 $ 678 room=.
+-> s
+T1673 mode=death_screen        Bard Stormcrow(hum) F6@( 5, 8) HP -4/66 MP 0/0 Hu 66 $ 678 room=.
 
-=== run finished: turns=1697 floor=6 hp=0/66 gold=208 alive=False mode=death_screen ===
+=== run finished: turns=1673 floor=6 hp=-4/66 gold=678 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00137_human.html

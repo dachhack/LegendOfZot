@@ -1217,830 +1217,348 @@ T 599 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 7,10) HP 38/38 
 T 600 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 78 $ 774 room=.
 -> l
 T 601 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 78 $ 774 room=.
--> e
-T 602 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 77 $ 774 room=.
--> s
-T 603 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
--> w
-T 604 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 76 $ 774 room=N
 -> n
-T 605 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 75 $ 774 room=.
--> n
-T 606 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
--> n
-T 607 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
+T 602 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 77 $ 774 room=.
 -> e
-T 608 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 73 $ 774 room=.
--> s
-T 609 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 72 $ 774 room=.
+T 603 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
 -> e
-T 610 mode=game_loop           Thranduil of Lothlorien(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 72 $ 774 room=.
+T 604 mode=game_loop           Thranduil of Lothlorien(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
+-> n
+T 605 mode=warp_mode           Thranduil of Lothlorien(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 75 $ 774 room=W
+-> n
+T 606 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 1) HP 38/38 MP 0/0 Hu 75 $ 774 room=.
 -> l
-T 611 mode=game_loop           Thranduil of Lothlorien(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 72 $ 774 room=.
--> e
-T 612 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
+T 607 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 1) HP 38/38 MP 0/0 Hu 75 $ 774 room=.
+-> s
+T 608 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 2) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
 -> n
-T 613 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 8) HP 38/38 MP 0/0 Hu 70 $ 774 room=.
--> n
-T 614 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 7) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
--> e
-T 615 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 7) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
--> e
-T 616 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 7) HP 38/38 MP 0/0 Hu 68 $ 774 room=.
--> n
-T 617 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 6) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
--> n
-T 618 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 5) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
--> n
-T 619 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 4) HP 38/38 MP 0/0 Hu 66 $ 774 room=.
--> n
-T 620 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 3) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
+T 609 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 1) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
+-> w
+T 610 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 7, 1) HP 38/38 MP 0/0 Hu 73 $ 774 room=.
+-> w
+T 611 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 6, 1) HP 38/38 MP 0/0 Hu 72 $ 774 room=.
+-> w
+T 612 mode=dungeon_mode        Thranduil of Lothlorien(elf) F2@( 5, 1) HP 38/38 MP 0/0 Hu 72 $ 774 room=N
+-> u
+T 613 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 1) HP 38/38 MP 0/0 Hu 72 $ 774 room=N
 -> l
-T 621 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 3) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
--> w
-T 622 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 3) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
--> n
-T 623 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 2) HP 38/38 MP 0/0 Hu 64 $ 774 room=.
--> e
-T 624 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 2) HP 38/38 MP 0/0 Hu 63 $ 774 room=.
--> n
-T 625 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 1) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
+T 614 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 1) HP 38/38 MP 0/0 Hu 72 $ 774 room=N
 -> s
-T 626 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 2) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
--> s
-T 627 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 3) HP 38/38 MP 0/0 Hu 61 $ 774 room=.
--> s
-T 628 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 4) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
--> s
-T 629 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 5) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
--> w
-T 630 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 5) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
--> l
-T 631 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 5) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
--> s
-T 632 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 6) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
--> e
-T 633 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 6) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
--> s
-T 634 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 7) HP 38/38 MP 0/0 Hu 57 $ 774 room=.
--> w
-T 635 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 7) HP 38/38 MP 0/0 Hu 56 $ 774 room=.
--> w
-T 636 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 7) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> s
-T 637 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 8) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> s
-T 638 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 54 $ 774 room=.
--> w
-T 639 mode=game_loop           Thranduil of Lothlorien(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
--> w
-T 640 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
--> l
-T 641 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
--> w
-T 642 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 52 $ 774 room=.
--> n
-T 643 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 51 $ 774 room=.
--> e
-T 644 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 51 $ 774 room=.
--> s
-T 645 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 50 $ 774 room=.
--> s
-T 646 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> i
-T 647 mode=inventory           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> eat1
-T 648 mode=inventory           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu100 $ 774 room=.
--> x
-T 649 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu100 $ 774 room=.
--> w
-T 650 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> l
-T 651 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> n
-T 652 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> n
-T 653 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 98 $ 774 room=.
--> e
-T 654 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 97 $ 774 room=.
--> s
-T 655 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 97 $ 774 room=.
--> e
-T 656 mode=game_loop           Thranduil of Lothlorien(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 96 $ 774 room=.
--> e
-T 657 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 95 $ 774 room=.
--> n
-T 658 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 8) HP 38/38 MP 0/0 Hu 95 $ 774 room=.
--> n
-T 659 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 7) HP 38/38 MP 0/0 Hu 94 $ 774 room=.
--> e
-T 660 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 7) HP 38/38 MP 0/0 Hu 93 $ 774 room=.
--> l
-T 661 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 7) HP 38/38 MP 0/0 Hu 93 $ 774 room=.
--> n
-T 662 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 6) HP 38/38 MP 0/0 Hu 92 $ 774 room=.
--> n
-T 663 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 5) HP 38/38 MP 0/0 Hu 92 $ 774 room=.
--> e
-T 664 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 5) HP 38/38 MP 0/0 Hu 91 $ 774 room=.
--> n
-T 665 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 4) HP 38/38 MP 0/0 Hu 90 $ 774 room=.
--> n
-T 666 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 3) HP 38/38 MP 0/0 Hu 90 $ 774 room=.
--> n
-T 667 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 2) HP 38/38 MP 0/0 Hu 89 $ 774 room=.
--> w
-T 668 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 2) HP 38/38 MP 0/0 Hu 88 $ 774 room=.
--> s
-T 669 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 3) HP 38/38 MP 0/0 Hu 88 $ 774 room=.
--> n
-T 670 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 2) HP 38/38 MP 0/0 Hu 87 $ 774 room=.
--> l
-T 671 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 2) HP 38/38 MP 0/0 Hu 87 $ 774 room=.
--> s
-T 672 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 3) HP 38/38 MP 0/0 Hu 86 $ 774 room=.
--> e
-T 673 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 3) HP 38/38 MP 0/0 Hu 85 $ 774 room=.
--> n
-T 674 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 2) HP 38/38 MP 0/0 Hu 85 $ 774 room=.
--> e
-T 675 mode=game_loop           Thranduil of Lothlorien(elf) F1@(14, 2) HP 38/38 MP 0/0 Hu 84 $ 774 room=.
--> s
-T 676 mode=game_loop           Thranduil of Lothlorien(elf) F1@(14, 3) HP 38/38 MP 0/0 Hu 83 $ 774 room=.
--> w
-T 677 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 3) HP 38/38 MP 0/0 Hu 83 $ 774 room=.
--> s
-T 678 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 4) HP 38/38 MP 0/0 Hu 82 $ 774 room=.
--> s
-T 679 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 5) HP 38/38 MP 0/0 Hu 81 $ 774 room=.
--> w
-T 680 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 5) HP 38/38 MP 0/0 Hu 81 $ 774 room=.
--> l
-T 681 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 5) HP 38/38 MP 0/0 Hu 81 $ 774 room=.
--> s
-T 682 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 6) HP 38/38 MP 0/0 Hu 80 $ 774 room=.
--> e
-T 683 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 6) HP 38/38 MP 0/0 Hu 79 $ 774 room=.
--> s
-T 684 mode=game_loop           Thranduil of Lothlorien(elf) F1@(13, 7) HP 38/38 MP 0/0 Hu 78 $ 774 room=.
--> w
-T 685 mode=game_loop           Thranduil of Lothlorien(elf) F1@(12, 7) HP 38/38 MP 0/0 Hu 78 $ 774 room=.
--> w
-T 686 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 7) HP 38/38 MP 0/0 Hu 77 $ 774 room=.
--> s
-T 687 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 8) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
--> s
-T 688 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
--> w
-T 689 mode=game_loop           Thranduil of Lothlorien(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 75 $ 774 room=.
--> w
-T 690 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
--> l
-T 691 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
--> n
-T 692 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
--> w
-T 693 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 73 $ 774 room=.
--> s
-T 694 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 72 $ 774 room=.
--> s
-T 695 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
--> w
-T 696 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
--> e
-T 697 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 70 $ 774 room=.
--> e
-T 698 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
--> s
-T 699 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
--> w
-T 700 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 68 $ 774 room=N
--> l
-T 701 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 68 $ 774 room=N
--> e
-T 702 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
--> n
-T 703 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
--> n
-T 704 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 66 $ 774 room=.
--> w
-T 705 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
--> n
-T 706 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 64 $ 774 room=.
--> e
-T 707 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 64 $ 774 room=.
--> w
-T 708 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 63 $ 774 room=.
--> n
-T 709 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 62 $ 774 room=C
--> s
-T 710 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
--> l
-T 711 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
--> s
-T 712 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 61 $ 774 room=.
--> s
-T 713 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
--> e
-T 714 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
--> n
-T 715 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
--> n
-T 716 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
--> w
-T 717 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 57 $ 774 room=.
--> s
-T 718 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 57 $ 774 room=.
--> s
-T 719 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 56 $ 774 room=.
--> w
-T 720 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> l
-T 721 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> e
-T 722 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> e
-T 723 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 54 $ 774 room=.
--> s
-T 724 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
--> w
-T 725 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 53 $ 774 room=N
--> n
-T 726 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 52 $ 774 room=.
--> w
-T 727 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 51 $ 774 room=.
--> e
-T 728 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 50 $ 774 room=.
--> e
-T 729 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 50 $ 774 room=.
--> n
-T 730 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> i
-T 731 mode=inventory           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> eat1
-T 732 mode=inventory           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu100 $ 774 room=.
--> x
-T 733 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu100 $ 774 room=.
--> n
-T 734 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> w
-T 735 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> s
-T 736 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 98 $ 774 room=.
--> s
-T 737 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 97 $ 774 room=.
--> w
-T 738 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 97 $ 774 room=.
--> e
-T 739 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 96 $ 774 room=.
--> e
-T 740 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 95 $ 774 room=.
--> l
-T 741 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 95 $ 774 room=.
--> s
-T 742 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 94 $ 774 room=.
--> w
-T 743 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 94 $ 774 room=N
--> n
-T 744 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 93 $ 774 room=.
--> n
-T 745 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 92 $ 774 room=.
--> n
-T 746 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 92 $ 774 room=.
--> e
-T 747 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 91 $ 774 room=.
--> s
-T 748 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 90 $ 774 room=.
--> e
-T 749 mode=game_loop           Thranduil of Lothlorien(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 90 $ 774 room=.
--> e
-T 750 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 89 $ 774 room=.
--> l
-T 751 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 89 $ 774 room=.
--> n
-T 752 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 8) HP 38/38 MP 0/0 Hu 88 $ 774 room=.
--> n
-T 753 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 7) HP 38/38 MP 0/0 Hu 87 $ 774 room=.
--> n
-T 754 mode=game_loop           Thranduil of Lothlorien(elf) F1@(11, 6) HP 38/38 MP 0/0 Hu 87 $ 774 room=.
--> w
-T 755 mode=game_loop           Thranduil of Lothlorien(elf) F1@(10, 6) HP 38/38 MP 0/0 Hu 86 $ 774 room=.
--> w
-T 756 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 6) HP 38/38 MP 0/0 Hu 85 $ 774 room=.
--> n
-T 757 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 5) HP 38/38 MP 0/0 Hu 85 $ 774 room=.
--> n
-T 758 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 9, 4) HP 38/38 MP 0/0 Hu 84 $ 774 room=.
--> w
-T 759 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 8, 4) HP 38/38 MP 0/0 Hu 83 $ 774 room=.
--> w
-T 760 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 83 $ 774 room=.
--> l
-T 761 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 83 $ 774 room=.
--> w
-T 762 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 82 $ 774 room=.
--> w
-T 763 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 81 $ 774 room=.
--> w
-T 764 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 80 $ 774 room=.
--> n
-T 765 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 3) HP 38/38 MP 0/0 Hu 80 $ 774 room=.
--> n
-T 766 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 2) HP 38/38 MP 0/0 Hu 79 $ 774 room=.
--> w
-T 767 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 2) HP 38/38 MP 0/0 Hu 78 $ 774 room=.
--> s
-T 768 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 3) HP 38/38 MP 0/0 Hu 78 $ 774 room=.
--> w
-T 769 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 77 $ 774 room=.
--> s
-T 770 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
--> l
-T 771 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
--> s
-T 772 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 5) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
--> w
-T 773 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 1, 5) HP 38/38 MP 0/0 Hu 75 $ 774 room=.
--> n
-T 774 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 1, 4) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
--> n
-T 775 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 1, 3) HP 38/38 MP 0/0 Hu 73 $ 774 room=.
--> e
-T 776 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 73 $ 774 room=.
--> n
-T 777 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 2) HP 38/38 MP 0/0 Hu 72 $ 774 room=.
--> n
-T 778 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 1) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
--> e
-T 779 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 1) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
--> s
-T 780 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 2) HP 38/38 MP 0/0 Hu 70 $ 774 room=.
--> l
-T 781 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 2) HP 38/38 MP 0/0 Hu 70 $ 774 room=.
--> s
-T 782 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 3) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
--> w
-T 783 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 3) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
--> s
-T 784 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 68 $ 774 room=.
--> s
-T 785 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 5) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
--> e
-T 786 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 5) HP 38/38 MP 0/0 Hu 66 $ 774 room=.
--> s
-T 787 mode=warp_mode           Thranduil of Lothlorien(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 66 $ 774 room=W
+T 615 mode=library_mode        Thranduil of Lothlorien(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 71 $ 774 room=L
+-> r
+T 616 mode=library_read_decision_mode Thranduil of Lothlorien(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 71 $ 774 room=L
 -> y
-T 788 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 66 $ 774 room=W
--> s
-T 789 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
+T 617 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
 -> l
-T 790 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
+T 618 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
+-> w
+T 619 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 70 $ 774 room=.
 -> l
-T 791 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
--> w
-T 792 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 64 $ 774 room=.
--> e
-T 793 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 64 $ 774 room=.
--> e
-T 794 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 63 $ 774 room=.
--> n
-T 795 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
+T 620 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 70 $ 774 room=.
 -> s
-T 796 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
--> w
-T 797 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 61 $ 774 room=.
--> w
-T 798 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
--> e
-T 799 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
--> w
-T 800 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
+T 621 mode=dungeon_mode        Thranduil of Lothlorien(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 69 $ 774 room=N
+-> u
+T 622 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 69 $ 774 room=N
 -> l
-T 801 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
--> e
-T 802 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
--> e
-T 803 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 57 $ 774 room=.
--> n
-T 804 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 57 $ 774 room=.
+T 623 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 69 $ 774 room=N
 -> s
-T 805 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 56 $ 774 room=.
--> n
-T 806 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> s
-T 807 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> w
-T 808 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 54 $ 774 room=.
--> w
-T 809 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
--> e
-T 810 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 52 $ 774 room=.
+T 624 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 4) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
 -> l
-T 811 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 52 $ 774 room=.
--> e
-T 812 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 52 $ 774 room=.
--> n
-T 813 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 51 $ 774 room=.
+T 625 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 4) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
 -> s
-T 814 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 50 $ 774 room=.
--> w
-T 815 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 50 $ 774 room=.
--> w
-T 816 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> i
-T 817 mode=inventory           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> eat1
-T 818 mode=inventory           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> x
-T 819 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> e
-T 820 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 98 $ 774 room=.
+T 626 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 5) HP 38/38 MP 0/0 Hu 68 $ 774 room=.
 -> l
-T 821 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 98 $ 774 room=.
+T 627 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 5) HP 38/38 MP 0/0 Hu 68 $ 774 room=.
 -> e
-T 822 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 98 $ 774 room=.
+T 628 mode=chest_mode          Thranduil of Lothlorien(elf) F2@( 5, 5) HP 38/38 MP 0/0 Hu 67 $ 774 room=C
 -> n
-T 823 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 97 $ 774 room=.
+T 629 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 4) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
 -> s
-T 824 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 96 $ 774 room=.
--> w
-T 825 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 95 $ 774 room=.
--> w
-T 826 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 95 $ 774 room=.
--> e
-T 827 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 94 $ 774 room=.
--> e
-T 828 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 93 $ 774 room=.
--> n
-T 829 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 93 $ 774 room=.
--> s
-T 830 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 92 $ 774 room=.
+T 630 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 5) HP 38/38 MP 0/0 Hu 66 $ 774 room=C
 -> l
-T 831 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 92 $ 774 room=.
--> n
-T 832 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 91 $ 774 room=.
+T 631 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 5) HP 38/38 MP 0/0 Hu 66 $ 774 room=C
 -> s
-T 833 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 91 $ 774 room=.
--> w
-T 834 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 90 $ 774 room=.
--> w
-T 835 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 89 $ 774 room=.
--> e
-T 836 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 88 $ 774 room=.
--> e
-T 837 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 88 $ 774 room=.
--> n
-T 838 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 87 $ 774 room=.
--> s
-T 839 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 86 $ 774 room=.
--> w
-T 840 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 86 $ 774 room=.
+T 632 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 6) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
 -> l
-T 841 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 86 $ 774 room=.
--> w
-T 842 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 85 $ 774 room=.
--> e
-T 843 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 84 $ 774 room=.
--> w
-T 844 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 84 $ 774 room=.
--> e
-T 845 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 83 $ 774 room=.
--> e
-T 846 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 82 $ 774 room=.
--> n
-T 847 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 81 $ 774 room=.
+T 633 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 6) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
 -> s
-T 848 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 81 $ 774 room=.
--> n
-T 849 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 80 $ 774 room=.
--> s
-T 850 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 79 $ 774 room=.
+T 634 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 7) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
 -> l
-T 851 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 79 $ 774 room=.
--> w
-T 852 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 79 $ 774 room=.
--> w
-T 853 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 78 $ 774 room=.
+T 635 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 7) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
 -> e
-T 854 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 77 $ 774 room=.
--> w
-T 855 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 77 $ 774 room=.
+T 636 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 6, 7) HP 38/38 MP 0/0 Hu 64 $ 774 room=.
 -> e
-T 856 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
+T 637 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 7, 7) HP 38/38 MP 0/0 Hu 63 $ 774 room=.
 -> e
-T 857 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 75 $ 774 room=.
--> n
-T 858 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
--> s
-T 859 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
--> n
-T 860 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 73 $ 774 room=.
+T 638 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 7) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
+-> e
+T 639 mode=garden_mode         Thranduil of Lothlorien(elf) F2@( 9, 7) HP 38/38 MP 0/0 Hu 62 $ 774 room=G
+-> h
+T 640 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 9, 7) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
 -> l
-T 861 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 73 $ 774 room=.
--> s
-T 862 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 72 $ 774 room=.
--> w
-T 863 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 72 $ 774 room=.
--> w
-T 864 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
--> e
-T 865 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 70 $ 774 room=.
--> e
-T 866 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 70 $ 774 room=.
+T 641 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 9, 7) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
 -> n
-T 867 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
--> s
-T 868 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 68 $ 774 room=.
+T 642 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 9, 6) HP 38/38 MP 0/0 Hu 61 $ 774 room=.
+-> e
+T 643 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 6) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
 -> n
-T 869 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
--> s
-T 870 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
+T 644 mode=library_mode        Thranduil of Lothlorien(elf) F2@(10, 5) HP 38/38 MP 0/0 Hu 60 $ 774 room=L
+-> r
+T 645 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 5) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
+-> n
+T 646 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 4) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
+-> e
+T 647 mode=garden_mode         Thranduil of Lothlorien(elf) F2@(11, 4) HP 38/38 MP 0/0 Hu 58 $ 774 room=G
+-> h
+T 648 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 4) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
 -> l
-T 871 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
--> w
-T 872 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 66 $ 774 room=.
--> w
-T 873 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
--> e
-T 874 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
--> w
-T 875 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 64 $ 774 room=.
--> e
-T 876 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 63 $ 774 room=.
--> e
-T 877 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 63 $ 774 room=.
+T 649 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 4) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
 -> n
-T 878 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
+T 650 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 3) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
 -> s
-T 879 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 61 $ 774 room=.
--> w
-T 880 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
--> l
-T 881 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
--> w
-T 882 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
--> e
-T 883 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
--> e
-T 884 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
--> n
-T 885 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
+T 651 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 4) HP 38/38 MP 0/0 Hu 57 $ 774 room=.
 -> s
-T 886 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 57 $ 774 room=.
--> n
-T 887 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 56 $ 774 room=.
+T 652 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 5) HP 38/38 MP 0/0 Hu 56 $ 774 room=.
 -> s
-T 888 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 56 $ 774 room=.
--> w
-T 889 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> w
-T 890 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 54 $ 774 room=.
--> l
-T 891 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 54 $ 774 room=.
+T 653 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 6) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
 -> e
-T 892 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
--> e
-T 893 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
--> n
-T 894 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 52 $ 774 room=.
--> s
-T 895 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 51 $ 774 room=.
--> n
-T 896 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 51 $ 774 room=.
--> s
-T 897 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 50 $ 774 room=.
--> w
-T 898 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> i
-T 899 mode=inventory           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> eat1
-T 900 mode=inventory           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> x
-T 901 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> w
-T 902 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> e
-T 903 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 98 $ 774 room=.
--> w
-T 904 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 97 $ 774 room=.
--> e
-T 905 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 96 $ 774 room=.
--> e
-T 906 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 96 $ 774 room=.
--> n
-T 907 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 95 $ 774 room=.
--> s
-T 908 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 94 $ 774 room=.
--> n
-T 909 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 94 $ 774 room=.
--> s
-T 910 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 93 $ 774 room=.
--> l
-T 911 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 93 $ 774 room=.
--> w
-T 912 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 92 $ 774 room=.
--> w
-T 913 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 92 $ 774 room=.
--> e
-T 914 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 91 $ 774 room=.
--> w
-T 915 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 90 $ 774 room=.
--> e
-T 916 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 89 $ 774 room=.
--> e
-T 917 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 89 $ 774 room=.
--> n
-T 918 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 88 $ 774 room=.
--> s
-T 919 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 87 $ 774 room=.
--> n
-T 920 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 87 $ 774 room=.
--> l
-T 921 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 87 $ 774 room=.
--> s
-T 922 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 86 $ 774 room=.
--> w
-T 923 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 85 $ 774 room=.
--> w
-T 924 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 85 $ 774 room=.
--> e
-T 925 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 84 $ 774 room=.
--> e
-T 926 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 83 $ 774 room=.
--> n
-T 927 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 82 $ 774 room=.
--> s
-T 928 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 82 $ 774 room=.
--> w
-T 929 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 81 $ 774 room=.
--> w
-T 930 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 80 $ 774 room=.
--> l
-T 931 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 80 $ 774 room=.
--> e
-T 932 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 80 $ 774 room=.
--> w
-T 933 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 79 $ 774 room=.
--> e
-T 934 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 78 $ 774 room=.
--> e
-T 935 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 78 $ 774 room=.
--> n
-T 936 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 77 $ 774 room=.
--> s
-T 937 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 76 $ 774 room=.
--> w
-T 938 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 75 $ 774 room=.
--> w
-T 939 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 75 $ 774 room=.
--> e
-T 940 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
--> l
-T 941 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 74 $ 774 room=.
--> e
-T 942 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 73 $ 774 room=.
--> n
-T 943 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 73 $ 774 room=.
--> s
-T 944 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 72 $ 774 room=.
--> w
-T 945 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
--> w
-T 946 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 71 $ 774 room=.
--> e
-T 947 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 70 $ 774 room=.
--> w
-T 948 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 69 $ 774 room=.
--> e
-T 949 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 68 $ 774 room=.
--> e
-T 950 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 68 $ 774 room=.
--> l
-T 951 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 68 $ 774 room=.
--> n
-T 952 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 67 $ 774 room=.
--> s
-T 953 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 66 $ 774 room=.
--> w
-T 954 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 66 $ 774 room=.
--> w
-T 955 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 65 $ 774 room=.
--> e
-T 956 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 64 $ 774 room=.
--> w
-T 957 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 64 $ 774 room=.
--> e
-T 958 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 63 $ 774 room=.
--> e
-T 959 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 62 $ 774 room=.
--> n
-T 960 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 61 $ 774 room=.
--> l
-T 961 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 61 $ 774 room=.
--> s
-T 962 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 61 $ 774 room=.
--> n
-T 963 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 60 $ 774 room=.
--> s
-T 964 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
--> w
-T 965 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 59 $ 774 room=.
--> w
-T 966 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 58 $ 774 room=.
--> e
-T 967 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 57 $ 774 room=.
--> w
-T 968 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 57 $ 774 room=.
--> e
-T 969 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 56 $ 774 room=.
--> e
-T 970 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> l
-T 971 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
--> n
-T 972 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 54 $ 774 room=.
--> s
-T 973 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 54 $ 774 room=.
--> n
-T 974 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
--> s
-T 975 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 52 $ 774 room=.
--> w
-T 976 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 52 $ 774 room=.
--> w
-T 977 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 51 $ 774 room=.
--> e
-T 978 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 50 $ 774 room=.
--> w
-T 979 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 50 $ 774 room=.
--> e
-T 980 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> i
-T 981 mode=inventory           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
--> eat1
-T 982 mode=inventory           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> x
-T 983 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
--> e
-T 984 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 98 $ 774 room=.
--> n
-T 985 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 97 $ 774 room=.
--> s
-T 986 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 97 $ 774 room=.
--> n
-T 987 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 96 $ 774 room=.
--> s
-T 988 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 95 $ 774 room=.
--> w
-T 989 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 95 $ 774 room=.
--> w
-T 990 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 94 $ 774 room=.
--> l
-T 991 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 94 $ 774 room=.
--> e
-T 992 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 93 $ 774 room=.
--> e
-T 993 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 93 $ 774 room=.
--> n
-T 994 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 92 $ 774 room=.
--> s
-T 995 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 91 $ 774 room=.
--> w
-T 996 mode=game_loop           Thranduil of Lothlorien(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 90 $ 774 room=.
--> n
-T 997 mode=warp_mode           Thranduil of Lothlorien(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 90 $ 774 room=W
--> n
-T 998 mode=combat_mode         Thranduil of Lothlorien(elf) F2@( 4, 9) HP 38/38 MP 0/0 Hu 90 $ 774 room=M vs Crawling Claw(L1 HP5/5)
--> a
-T 999 mode=combat_victory      Thranduil of Lothlorien(elf) F2@( 4, 9) HP 37/38 MP 0/0 Hu 90 $ 782 room=.
--> back
-T1000 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 9) HP 37/38 MP 0/0 Hu 90 $ 782 room=.
--> i
-T1001 mode=inventory           Thranduil of Lothlorien(elf) F2@( 4, 9) HP 37/38 MP 0/0 Hu 90 $ 782 room=.
--> u7
-T1002 mode=inventory           Thranduil of Lothlorien(elf) F2@( 4, 9) HP 37/38 MP 0/0 Hu 90 $ 782 room=.
--> x
-T1003 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 9) HP 37/38 MP 0/0 Hu 90 $ 782 room=.
--> l
-T1004 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 9) HP 37/38 MP 0/0 Hu 90 $ 782 room=.
--> n
-T1005 mode=pool_mode           Thranduil of Lothlorien(elf) F2@( 4, 8) HP 37/38 MP 0/0 Hu 89 $ 782 room=P
+T 654 mode=pool_mode           Thranduil of Lothlorien(elf) F2@(12, 6) HP 38/38 MP 0/0 Hu 55 $ 774 room=P
 -> dr
-T1006 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 8) HP 19/38 MP 0/0 Hu 89 $ 782 room=.
+T 655 mode=game_loop           Thranduil of Lothlorien(elf) F2@(12, 6) HP 38/38 MP 0/0 Hu 55 $ 774 room=.
+-> s
+T 656 mode=game_loop           Thranduil of Lothlorien(elf) F2@(12, 7) HP 38/38 MP 0/0 Hu 54 $ 774 room=.
 -> l
-T1007 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 8) HP 19/38 MP 0/0 Hu 89 $ 782 room=.
+T 657 mode=game_loop           Thranduil of Lothlorien(elf) F2@(12, 7) HP 38/38 MP 0/0 Hu 54 $ 774 room=.
+-> s
+T 658 mode=game_loop           Thranduil of Lothlorien(elf) F2@(12, 8) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
+-> l
+T 659 mode=game_loop           Thranduil of Lothlorien(elf) F2@(12, 8) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
+-> w
+T 660 mode=pool_mode           Thranduil of Lothlorien(elf) F2@(11, 8) HP 38/38 MP 0/0 Hu 53 $ 774 room=P
+-> dr
+T 661 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 8) HP 38/38 MP 0/0 Hu 53 $ 774 room=.
+-> n
+T 662 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 7) HP 38/38 MP 0/0 Hu 52 $ 774 room=.
+-> n
+T 663 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 6) HP 38/38 MP 0/0 Hu 51 $ 774 room=.
+-> n
+T 664 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 5) HP 38/38 MP 0/0 Hu 51 $ 774 room=.
+-> n
+T 665 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 4) HP 38/38 MP 0/0 Hu 50 $ 774 room=.
+-> w
+T 666 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 4) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
+-> i
+T 667 mode=inventory           Thranduil of Lothlorien(elf) F2@(10, 4) HP 38/38 MP 0/0 Hu 49 $ 774 room=.
+-> eat1
+T 668 mode=inventory           Thranduil of Lothlorien(elf) F2@(10, 4) HP 38/38 MP 0/0 Hu100 $ 774 room=.
+-> x
+T 669 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 4) HP 38/38 MP 0/0 Hu100 $ 774 room=.
+-> w
+T 670 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 9, 4) HP 38/38 MP 0/0 Hu 99 $ 774 room=.
+-> w
+T 671 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 874 room=V
+-> b12
+T 672 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 844 room=V
+-> b12
+T 673 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 829 room=V
+-> b12
+T 674 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 819 room=V
+-> b3
+T 675 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 789 room=V
+-> b3
+T 676 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 759 room=V
+-> b3
+T 677 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 729 room=V
+-> b3
+T 678 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 699 room=V
+-> b3
+T 679 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 669 room=V
+-> b3
+T 680 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 639 room=V
+-> b6
+T 681 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 634 room=V
+-> b6
+T 682 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 629 room=V
+-> b5
+T 683 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 479 room=V
+-> b3
+T 684 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 359 room=V
+-> b3
+T 685 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 279 room=V
+-> b2
+T 686 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 229 room=V
+-> id10
+T 687 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 154 room=V
+-> id11
+T 688 mode=vendor_shop         Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 104 room=V
+-> x
+T 689 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 99 $ 104 room=V
+-> s
+T 690 mode=chest_mode          Thranduil of Lothlorien(elf) F2@( 8, 5) HP 38/38 MP 0/0 Hu 98 $ 104 room=C
+-> o
+T 691 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 5) HP 38/38 MP 0/0 Hu 98 $ 154 room=.
+-> n
+T 692 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 97 $ 154 room=V
+-> w
+T 693 mode=tomb_mode           Thranduil of Lothlorien(elf) F2@( 7, 4) HP 38/38 MP 0/0 Hu 97 $ 154 room=T
+-> p
+T 694 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 7, 4) HP 38/38 MP 0/0 Hu 97 $ 154 room=T
 -> e
-T1008 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 8) HP 11/38 MP 0/0 Hu 88 $ 782 room=.
+T 695 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 4) HP 38/38 MP 0/0 Hu 96 $ 154 room=V
+-> e
+T 696 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 9, 4) HP 38/38 MP 0/0 Hu 95 $ 154 room=.
+-> e
+T 697 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 4) HP 38/38 MP 0/0 Hu 95 $ 154 room=.
+-> s
+T 698 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 5) HP 38/38 MP 0/0 Hu 94 $ 154 room=.
+-> s
+T 699 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 6) HP 38/38 MP 0/0 Hu 93 $ 154 room=.
+-> s
+T 700 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 7) HP 38/38 MP 0/0 Hu 92 $ 154 room=.
+-> s
+T 701 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 8) HP 38/38 MP 0/0 Hu 92 $ 154 room=.
 -> l
-T1009 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 8) HP 11/38 MP 0/0 Hu 88 $ 782 room=.
--> n
-T1010 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 7) HP 2/38 MP 0/0 Hu 88 $ 782 room=.
+T 702 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 8) HP 38/38 MP 0/0 Hu 92 $ 154 room=.
+-> s
+T 703 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10, 9) HP 38/38 MP 0/0 Hu 91 $ 154 room=.
+-> s
+T 704 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10,10) HP 38/38 MP 0/0 Hu 90 $ 154 room=.
+-> s
+T 705 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10,11) HP 38/38 MP 0/0 Hu 90 $ 154 room=.
+-> e
+T 706 mode=chest_mode          Thranduil of Lothlorien(elf) F2@(11,11) HP 38/38 MP 0/0 Hu 89 $ 154 room=C
+-> o
+T 707 mode=game_loop           Thranduil of Lothlorien(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 88 $ 154 room=.
 -> l
-T1011 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 7) HP 2/38 MP 0/0 Hu 88 $ 782 room=.
+T 708 mode=game_loop           Thranduil of Lothlorien(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 88 $ 154 room=.
+-> e
+T 709 mode=game_loop           Thranduil of Lothlorien(elf) F2@(13,11) HP 38/38 MP 0/0 Hu 88 $ 154 room=.
+-> l
+T 710 mode=game_loop           Thranduil of Lothlorien(elf) F2@(13,11) HP 38/38 MP 0/0 Hu 88 $ 154 room=.
 -> n
-T1012 mode=death_screen        Thranduil of Lothlorien(elf) F2@( 5, 6) HP -6/38 MP 0/0 Hu 87 $ 782 room=.
+T 711 mode=game_loop           Thranduil of Lothlorien(elf) F2@(13,10) HP 38/38 MP 0/0 Hu 87 $ 154 room=.
+-> l
+T 712 mode=game_loop           Thranduil of Lothlorien(elf) F2@(13,10) HP 38/38 MP 0/0 Hu 87 $ 154 room=.
+-> e
+T 713 mode=chest_mode          Thranduil of Lothlorien(elf) F2@(14,10) HP 38/38 MP 0/0 Hu 86 $ 154 room=C
+-> o
+T 714 mode=game_loop           Thranduil of Lothlorien(elf) F2@(14,10) HP 38/38 MP 0/0 Hu 86 $ 174 room=.
+-> l
+T 715 mode=game_loop           Thranduil of Lothlorien(elf) F2@(14,10) HP 38/38 MP 0/0 Hu 86 $ 174 room=.
+-> w
+T 716 mode=game_loop           Thranduil of Lothlorien(elf) F2@(13,10) HP 38/38 MP 0/0 Hu 85 $ 174 room=.
+-> n
+T 717 mode=game_loop           Thranduil of Lothlorien(elf) F2@(13, 9) HP 38/38 MP 0/0 Hu 85 $ 174 room=.
+-> n
+T 718 mode=game_loop           Thranduil of Lothlorien(elf) F2@(13, 8) HP 38/38 MP 0/0 Hu 84 $ 174 room=.
+-> w
+T 719 mode=game_loop           Thranduil of Lothlorien(elf) F2@(12, 8) HP 38/38 MP 0/0 Hu 83 $ 174 room=.
+-> w
+T 720 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 8) HP 38/38 MP 0/0 Hu 83 $ 174 room=.
+-> s
+T 721 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11, 9) HP 38/38 MP 0/0 Hu 82 $ 174 room=.
+-> s
+T 722 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 81 $ 174 room=.
+-> s
+T 723 mode=game_loop           Thranduil of Lothlorien(elf) F2@(11,11) HP 38/38 MP 0/0 Hu 81 $ 174 room=.
+-> w
+T 724 mode=game_loop           Thranduil of Lothlorien(elf) F2@(10,11) HP 38/38 MP 0/0 Hu 80 $ 174 room=.
+-> w
+T 725 mode=library_mode        Thranduil of Lothlorien(elf) F2@( 9,11) HP 38/38 MP 0/0 Hu 79 $ 174 room=L
+-> r
+T 726 mode=library_read_decision_mode Thranduil of Lothlorien(elf) F2@( 9,11) HP 38/38 MP 0/0 Hu 79 $ 174 room=L
+-> y
+T 727 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 9,11) HP 38/34 MP 0/0 Hu 79 $ 274 room=.
+-> n
+T 728 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 9,10) HP 38/34 MP 0/0 Hu 78 $ 274 room=.
+-> w
+T 729 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8,10) HP 38/34 MP 0/0 Hu 78 $ 274 room=.
+-> l
+T 730 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8,10) HP 38/34 MP 0/0 Hu 78 $ 274 room=.
+-> n
+T 731 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 9) HP 38/34 MP 0/0 Hu 77 $ 274 room=.
+-> n
+T 732 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 8) HP 38/34 MP 0/0 Hu 76 $ 274 room=.
+-> n
+T 733 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 8, 7) HP 38/34 MP 0/0 Hu 76 $ 274 room=.
+-> w
+T 734 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 7, 7) HP 38/34 MP 0/0 Hu 75 $ 274 room=.
+-> w
+T 735 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 6, 7) HP 38/34 MP 0/0 Hu 74 $ 274 room=.
+-> w
+T 736 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 7) HP 38/34 MP 0/0 Hu 74 $ 274 room=.
+-> w
+T 737 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 7) HP 38/34 MP 0/0 Hu 73 $ 274 room=.
+-> l
+T 738 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 7) HP 38/34 MP 0/0 Hu 73 $ 274 room=.
+-> w
+T 739 mode=altar_mode          Thranduil of Lothlorien(elf) F2@( 3, 7) HP 38/34 MP 0/0 Hu 72 $ 274 room=A
+-> pray
+T 740 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 3, 7) HP 34/34 MP 0/0 Hu100 $ 274 room=.
+-> l
+T 741 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 3, 7) HP 34/34 MP 0/0 Hu100 $ 274 room=.
+-> s
+T 742 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 3, 8) HP 34/34 MP 0/0 Hu 99 $ 274 room=.
+-> e
+T 743 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 4, 8) HP 34/34 MP 0/0 Hu 99 $ 274 room=.
+-> e
+T 744 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 8) HP 34/34 MP 0/0 Hu 98 $ 274 room=.
+-> n
+T 745 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 5, 7) HP 34/34 MP 0/0 Hu 97 $ 274 room=.
+-> e
+T 746 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 6, 7) HP 34/34 MP 0/0 Hu 97 $ 274 room=.
+-> e
+T 747 mode=game_loop           Thranduil of Lothlorien(elf) F2@( 7, 7) HP 34/34 MP 0/0 Hu 96 $ 274 room=.
+-> n
+T 748 mode=stairs_down_mode    Thranduil of Lothlorien(elf) F2@( 7, 6) HP 34/34 MP 0/0 Hu 95 $ 274 room=D
+-> d
+T 749 mode=stairs_up_mode      Thranduil of Lothlorien(elf) F3@( 1, 1) HP 34/34 MP 0/0 Hu 95 $ 274 room=U
+-> s
+T 750 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 1, 2) HP 34/34 MP 0/0 Hu 95 $ 274 room=.
+-> l
+T 751 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 1, 2) HP 34/34 MP 0/0 Hu 95 $ 274 room=.
+-> s
+T 752 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 1, 3) HP 34/34 MP 0/0 Hu 94 $ 274 room=.
+-> l
+T 753 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 1, 3) HP 34/34 MP 0/0 Hu 94 $ 274 room=.
+-> s
+T 754 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 1, 4) HP 34/34 MP 0/0 Hu 93 $ 274 room=.
+-> l
+T 755 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 1, 4) HP 34/34 MP 0/0 Hu 93 $ 274 room=.
+-> s
+T 756 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 1, 5) HP 34/34 MP 0/0 Hu 92 $ 274 room=.
+-> l
+T 757 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 1, 5) HP 34/34 MP 0/0 Hu 92 $ 274 room=.
+-> e
+T 758 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 2, 5) HP 34/34 MP 0/0 Hu 92 $ 274 room=.
+-> l
+T 759 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 2, 5) HP 34/34 MP 0/0 Hu 92 $ 274 room=.
+-> e
+T 760 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 3, 5) HP 34/34 MP 0/0 Hu 91 $ 274 room=.
+-> l
+T 761 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 3, 5) HP 34/34 MP 0/0 Hu 91 $ 274 room=.
+-> e
+T 762 mode=altar_mode          Thranduil of Lothlorien(elf) F3@( 4, 5) HP 34/34 MP 0/0 Hu 90 $ 274 room=A
+-> pray
+T 763 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 4, 5) HP 34/34 MP 0/0 Hu 90 $ 274 room=.
+-> s
+T 764 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 4, 6) HP 34/34 MP 0/0 Hu 90 $ 274 room=.
+-> w
+T 765 mode=pool_mode           Thranduil of Lothlorien(elf) F3@( 3, 6) HP 34/34 MP 0/0 Hu 89 $ 274 room=P
+-> dr
+T 766 mode=game_loop           Thranduil of Lothlorien(elf) F3@( 3, 6) HP 34/34 MP 0/0 Hu 89 $ 274 room=.
+-> s
+T 767 mode=stairs_down_mode    Thranduil of Lothlorien(elf) F3@( 3, 7) HP 34/34 MP 0/0 Hu 88 $ 274 room=D
+-> d
+T 768 mode=stairs_up_mode      Thranduil of Lothlorien(elf) F4@( 1, 1) HP 34/34 MP 0/0 Hu 88 $ 274 room=U
+-> e
+T 769 mode=combat_mode         Thranduil of Lothlorien(elf) F4@( 2, 1) HP 34/34 MP 0/0 Hu 88 $ 274 room=M vs Gargoyle(L3 HP60/60)
+-> a
+T 770 mode=combat_mode         Thranduil of Lothlorien(elf) F4@( 2, 1) HP 17/34 MP 0/0 Hu 88 $ 274 room=M vs Gargoyle(L3 HP44/60)
+-> a
+T 771 mode=death_screen        Thranduil of Lothlorien(elf) F4@( 2, 1) HP 0/34 MP 0/0 Hu 88 $ 274 room=M
 
-=== run finished: turns=1012 floor=2 hp=-6/38 gold=782 alive=False mode=death_screen ===
+=== run finished: turns=771 floor=4 hp=0/34 gold=274 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00666_elf.html

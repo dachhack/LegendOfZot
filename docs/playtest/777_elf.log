@@ -29,134 +29,1894 @@ T   5 mode=inventory           Thranduil the Singer(elf) F1@( 2, 1) HP 28/28 MP 
 T   6 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=T
 -> l
 T   7 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=T
--> e
-T   8 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
--> a
-T   9 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 1) HP 27/28 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
--> a
-T  10 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 1) HP 27/28 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP43/43)
--> a
-T  11 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 1) HP 27/28 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP20/43)
--> a
-T  12 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 1) HP 26/28 MP 0/0 Hu 99 $ 290 room=M vs UNDEAD ZOMBIE(L0 HP20/43)
--> a
-T  13 mode=combat_victory      Thranduil the Singer(elf) F1@( 3, 1) HP 26/28 MP 0/0 Hu 99 $ 347 room=.
--> back
-T  14 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 1) HP 26/28 MP 0/0 Hu 99 $ 347 room=.
--> l
-T  15 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 1) HP 26/28 MP 0/0 Hu 99 $ 347 room=.
+-> w
+T   8 mode=game_loop           Thranduil the Singer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=E
 -> s
-T  16 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 2) HP 26/28 MP 0/0 Hu 98 $ 347 room=M vs Giant Rat(L0 HP22/22)
--> a
-T  17 mode=combat_victory      Thranduil the Singer(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 98 $ 354 room=.
--> back
-T  18 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 98 $ 354 room=.
--> i
-T  19 mode=inventory           Thranduil the Singer(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 98 $ 354 room=.
--> u3
-T  20 mode=inventory           Thranduil the Singer(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 354 room=.
--> x
-T  21 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 354 room=.
--> i
-T  22 mode=inventory           Thranduil the Singer(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 354 room=.
--> u8
-T  23 mode=inventory           Thranduil the Singer(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 354 room=.
--> x
-T  24 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 354 room=.
--> l
-T  25 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 354 room=.
+T   9 mode=game_loop           Thranduil the Singer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 290 room=.
+-> s
+T  10 mode=game_loop           Thranduil the Singer(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 98 $ 290 room=.
 -> e
-T  26 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 98 $ 354 room=M vs Goblin(L0 HP30/30)
--> f
-T  27 mode=flee_direction_mode Thranduil the Singer(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 98 $ 354 room=M
+T  11 mode=combat_mode         Thranduil the Singer(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 97 $ 290 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  12 mode=combat_mode         Thranduil the Singer(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 290 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  13 mode=combat_victory      Thranduil the Singer(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 341 room=.
+-> back
+T  14 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 341 room=.
+-> l
+T  15 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 341 room=.
+-> e
+T  16 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 3) HP 27/28 MP 0/0 Hu 96 $ 341 room=.
+-> l
+T  17 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 3) HP 27/28 MP 0/0 Hu 96 $ 341 room=.
 -> n
-T  28 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 98 $ 354 room=.
--> e
-T  29 mode=combat_mode         Thranduil the Singer(elf) F1@( 5, 1) HP 28/28 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP25/25)
+T  18 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 96 $ 341 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T  30 mode=combat_mode         Thranduil the Singer(elf) F1@( 5, 1) HP 27/28 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP25/25)
+T  19 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 2) HP 27/28 MP 0/0 Hu 96 $ 341 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T  31 mode=combat_mode         Thranduil the Singer(elf) F1@( 5, 1) HP 27/28 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP25/25)
+T  20 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 2) HP 26/28 MP 0/0 Hu 96 $ 341 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T  32 mode=combat_mode         Thranduil the Singer(elf) F1@( 5, 1) HP 26/28 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP6/25)
--> a
-T  33 mode=combat_mode         Thranduil the Singer(elf) F1@( 5, 1) HP 25/28 MP 0/0 Hu 97 $ 354 room=M vs Skeleton(L0 HP6/25)
--> f
-T  34 mode=flee_direction_mode Thranduil the Singer(elf) F1@( 5, 1) HP 25/28 MP 0/0 Hu 97 $ 354 room=M
--> w
-T  35 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 1) HP 25/28 MP 0/0 Hu 97 $ 354 room=.
--> s
-T  36 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 2) HP 25/28 MP 0/0 Hu 96 $ 354 room=M vs Goblin(L0 HP30/30)
--> f
-T  37 mode=flee_direction_mode Thranduil the Singer(elf) F1@( 4, 2) HP 25/28 MP 0/0 Hu 96 $ 354 room=M
--> w
-T  38 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 96 $ 354 room=.
--> s
-T  39 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 3) HP 26/28 MP 0/0 Hu 96 $ 354 room=.
--> l
-T  40 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 3) HP 26/28 MP 0/0 Hu 96 $ 354 room=.
--> s
-T  41 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 4) HP 26/28 MP 0/0 Hu 95 $ 354 room=M vs Slime Mold(L0 HP15/15)
--> a
-T  42 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 4) HP 25/28 MP 0/0 Hu 95 $ 354 room=M vs Slime Mold(L0 HP15/15)
--> a
-T  43 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 4) HP 24/28 MP 0/0 Hu 95 $ 354 room=M vs Slime Mold(L0 HP15/15)
--> a
-T  44 mode=combat_victory      Thranduil the Singer(elf) F1@( 3, 4) HP 23/28 MP 0/0 Hu 95 $ 363 room=.
+T  21 mode=combat_victory      Thranduil the Singer(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 96 $ 343 room=.
 -> back
-T  45 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 4) HP 23/28 MP 0/0 Hu 95 $ 363 room=.
+T  22 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 96 $ 343 room=.
 -> l
-T  46 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 4) HP 23/28 MP 0/0 Hu 95 $ 363 room=.
+T  23 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 2) HP 25/28 MP 0/0 Hu 96 $ 343 room=.
 -> e
-T  47 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 4) HP 24/28 MP 0/0 Hu 94 $ 363 room=M vs Skeleton(L0 HP25/25)
--> f
-T  48 mode=flee_direction_mode Thranduil the Singer(elf) F1@( 4, 4) HP 24/28 MP 0/0 Hu 94 $ 363 room=M
--> w
-T  49 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 4) HP 24/28 MP 0/0 Hu 94 $ 363 room=.
--> s
-T  50 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 5) HP 24/28 MP 0/0 Hu 93 $ 363 room=.
--> l
-T  51 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 5) HP 24/28 MP 0/0 Hu 93 $ 363 room=.
--> e
-T  52 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 93 $ 363 room=M vs Kobold(L0 HP8/8)
+T  24 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 2) HP 25/28 MP 0/0 Hu 95 $ 343 room=M vs Stirge(L0 HP6/6)
 -> a
-T  53 mode=combat_victory      Thranduil the Singer(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 93 $ 370 room=.
+T  25 mode=combat_victory      Thranduil the Singer(elf) F1@( 4, 2) HP 21/28 MP 0/0 Hu 95 $ 353 room=.
 -> back
-T  54 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 93 $ 370 room=.
+T  26 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 2) HP 21/28 MP 0/0 Hu 95 $ 353 room=.
 -> i
-T  55 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 93 $ 370 room=.
+T  27 mode=inventory           Thranduil the Singer(elf) F1@( 4, 2) HP 21/28 MP 0/0 Hu 95 $ 353 room=.
 -> u3
-T  56 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 93 $ 370 room=.
+T  28 mode=inventory           Thranduil the Singer(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 95 $ 353 room=.
 -> x
-T  57 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 93 $ 370 room=.
+T  29 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 95 $ 353 room=.
 -> i
-T  58 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 93 $ 370 room=.
+T  30 mode=inventory           Thranduil the Singer(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 95 $ 353 room=.
 -> u8
-T  59 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 93 $ 370 room=.
+T  31 mode=inventory           Thranduil the Singer(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 95 $ 353 room=.
 -> x
-T  60 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 93 $ 370 room=.
+T  32 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 95 $ 353 room=.
+-> s
+T  33 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 94 $ 353 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  34 mode=combat_victory      Thranduil the Singer(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 94 $ 454 room=.
+-> back
+T  35 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 94 $ 454 room=.
 -> l
-T  61 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 93 $ 370 room=.
--> e
-T  62 mode=pool_mode           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 370 room=P
--> dr
-T  63 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 8/28 MP 0/0 Hu 92 $ 370 room=.
+T  36 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 94 $ 454 room=.
+-> s
+T  37 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 93 $ 454 room=M vs Lichen(L0 HP10/10)
+-> a
+T  38 mode=combat_victory      Thranduil the Singer(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 93 $ 458 room=.
+-> back
+T  39 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 93 $ 458 room=.
+-> s
+T  40 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 93 $ 458 room=M vs Kobold(L0 HP20/20)
+-> a
+T  41 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 93 $ 458 room=M vs Kobold(L0 HP20/20)
+-> a
+T  42 mode=combat_victory      Thranduil the Singer(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 93 $ 464 room=.
+-> back
+T  43 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 93 $ 464 room=.
 -> i
-T  64 mode=inventory           Thranduil the Singer(elf) F1@( 5, 5) HP 8/28 MP 0/0 Hu 92 $ 370 room=.
--> u3
-T  65 mode=inventory           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 370 room=.
+T  44 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 93 $ 464 room=.
+-> u9
+T  45 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 93 $ 464 room=.
 -> x
-T  66 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 370 room=.
+T  46 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 93 $ 464 room=.
 -> l
-T  67 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 92 $ 370 room=.
+T  47 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 93 $ 464 room=.
+-> e
+T  48 mode=pool_mode           Thranduil the Singer(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 92 $ 464 room=P
+-> dr
+T  49 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 92 $ 464 room=.
+-> l
+T  50 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 92 $ 464 room=.
 -> s
-T  68 mode=combat_mode         Thranduil the Singer(elf) F1@( 5, 6) HP 18/28 MP 0/0 Hu 91 $ 370 room=M vs Giant Rat(L0 HP22/22)
+T  51 mode=combat_mode         Thranduil the Singer(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 91 $ 464 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  52 mode=combat_victory      Thranduil the Singer(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 91 $ 468 room=.
+-> back
+T  53 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 91 $ 468 room=.
+-> i
+T  54 mode=inventory           Thranduil the Singer(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 91 $ 468 room=.
+-> u10
+T  55 mode=inventory           Thranduil the Singer(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 91 $ 468 room=.
+-> x
+T  56 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 91 $ 468 room=.
+-> l
+T  57 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 91 $ 468 room=.
+-> e
+T  58 mode=combat_mode         Thranduil the Singer(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 91 $ 468 room=M vs Lichen(L0 HP10/10)
+-> a
+T  59 mode=combat_victory      Thranduil the Singer(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 91 $ 474 room=.
+-> back
+T  60 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 91 $ 474 room=.
+-> i
+T  61 mode=inventory           Thranduil the Singer(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 91 $ 474 room=.
+-> u11
+T  62 mode=inventory           Thranduil the Singer(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 91 $ 474 room=.
+-> x
+T  63 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 91 $ 474 room=.
+-> l
+T  64 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 6) HP 27/28 MP 0/0 Hu 91 $ 474 room=.
+-> e
+T  65 mode=library_mode        Thranduil the Singer(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 90 $ 474 room=L
+-> r
+T  66 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 90 $ 474 room=.
+-> l
+T  67 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 90 $ 474 room=.
+-> n
+T  68 mode=combat_mode         Thranduil the Singer(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 89 $ 474 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  69 mode=combat_victory      Thranduil the Singer(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 89 $ 483 room=.
+-> back
+T  70 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 89 $ 483 room=.
+-> l
+T  71 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 89 $ 483 room=.
+-> n
+T  72 mode=combat_mode         Thranduil the Singer(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 89 $ 483 room=M vs Goblin(L0 HP12/12)
+-> a
+T  73 mode=combat_victory      Thranduil the Singer(elf) F1@( 7, 4) HP 27/28 MP 0/0 Hu 89 $ 588 room=.
+-> back
+T  74 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 4) HP 27/28 MP 0/0 Hu 89 $ 588 room=.
+-> l
+T  75 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 4) HP 27/28 MP 0/0 Hu 89 $ 588 room=.
+-> e
+T  76 mode=combat_mode         Thranduil the Singer(elf) F1@( 8, 4) HP 27/28 MP 0/0 Hu 88 $ 588 room=M vs Bat(L0 HP12/12)
+-> a
+T  77 mode=combat_mode         Thranduil the Singer(elf) F1@( 8, 4) HP 27/28 MP 0/0 Hu 88 $ 588 room=M vs Bat(L0 HP12/12)
 -> f
-T  69 mode=flee_direction_mode Thranduil the Singer(elf) F1@( 5, 6) HP 8/28 MP 0/0 Hu 91 $ 370 room=M
+T  78 mode=combat_mode         Thranduil the Singer(elf) F1@( 8, 4) HP 25/28 MP 0/0 Hu 88 $ 588 room=M vs Bat(L0 HP12/12)
+-> a
+T  79 mode=combat_victory      Thranduil the Singer(elf) F1@( 8, 4) HP 25/28 MP 0/0 Hu 88 $ 594 room=.
+-> back
+T  80 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 4) HP 25/28 MP 0/0 Hu 88 $ 594 room=.
 -> s
-T  70 mode=flee_direction_mode Thranduil the Singer(elf) F1@( 5, 7) HP -2/28 MP 0/0 Hu 91 $ 370 room=.
+T  81 mode=combat_mode         Thranduil the Singer(elf) F1@( 8, 5) HP 26/28 MP 0/0 Hu 87 $ 594 room=M vs Kobold(L0 HP20/20)
+-> a
+T  82 mode=combat_victory      Thranduil the Singer(elf) F1@( 8, 5) HP 26/28 MP 0/0 Hu 87 $ 602 room=.
+-> back
+T  83 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 5) HP 26/28 MP 0/0 Hu 87 $ 602 room=.
+-> i
+T  84 mode=inventory           Thranduil the Singer(elf) F1@( 8, 5) HP 26/28 MP 0/0 Hu 87 $ 602 room=.
+-> u3
+T  85 mode=inventory           Thranduil the Singer(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 87 $ 602 room=.
+-> x
+T  86 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 87 $ 602 room=.
+-> i
+T  87 mode=inventory           Thranduil the Singer(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 87 $ 602 room=.
+-> u11
+T  88 mode=inventory           Thranduil the Singer(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 87 $ 602 room=.
+-> x
+T  89 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 87 $ 602 room=.
+-> s
+T  90 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 6) HP 28/28 MP 0/0 Hu 86 $ 602 room=.
+-> e
+T  91 mode=game_loop           Thranduil the Singer(elf) F1@( 9, 6) HP 28/28 MP 0/0 Hu 86 $ 602 room=.
+-> l
+T  92 mode=game_loop           Thranduil the Singer(elf) F1@( 9, 6) HP 28/28 MP 0/0 Hu 86 $ 602 room=.
+-> e
+T  93 mode=game_loop           Thranduil the Singer(elf) F1@(10, 6) HP 28/28 MP 0/0 Hu 85 $ 602 room=.
+-> n
+T  94 mode=garden_mode         Thranduil the Singer(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 84 $ 602 room=G
+-> h
+T  95 mode=game_loop           Thranduil the Singer(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 84 $ 602 room=.
+-> l
+T  96 mode=game_loop           Thranduil the Singer(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 84 $ 602 room=.
+-> w
+T  97 mode=combat_mode         Thranduil the Singer(elf) F1@( 9, 5) HP 28/28 MP 0/0 Hu 84 $ 602 room=M vs Stirge(L0 HP6/6)
+-> a
+T  98 mode=combat_victory      Thranduil the Singer(elf) F1@( 9, 5) HP 28/38 MP 0/0 Hu 84 $ 604 room=.
+-> back
+T  99 mode=game_loop           Thranduil the Singer(elf) F1@( 9, 5) HP 28/38 MP 0/0 Hu 84 $ 604 room=.
+-> i
+T 100 mode=inventory           Thranduil the Singer(elf) F1@( 9, 5) HP 28/38 MP 0/0 Hu 84 $ 604 room=.
+-> u3
+T 101 mode=inventory           Thranduil the Singer(elf) F1@( 9, 5) HP 38/38 MP 0/0 Hu 84 $ 604 room=.
+-> x
+T 102 mode=game_loop           Thranduil the Singer(elf) F1@( 9, 5) HP 38/38 MP 0/0 Hu 84 $ 604 room=.
+-> i
+T 103 mode=inventory           Thranduil the Singer(elf) F1@( 9, 5) HP 38/38 MP 0/0 Hu 84 $ 604 room=.
+-> u11
+T 104 mode=inventory           Thranduil the Singer(elf) F1@( 9, 5) HP 38/38 MP 0/0 Hu 84 $ 604 room=.
+-> x
+T 105 mode=game_loop           Thranduil the Singer(elf) F1@( 9, 5) HP 38/38 MP 0/0 Hu 84 $ 604 room=.
+-> w
+T 106 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 5) HP 38/38 MP 0/0 Hu 83 $ 604 room=.
+-> s
+T 107 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 82 $ 604 room=.
+-> w
+T 108 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 82 $ 604 room=.
+-> w
+T 109 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 6) HP 38/38 MP 0/0 Hu 81 $ 604 room=.
+-> w
+T 110 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 6) HP 38/38 MP 0/0 Hu 80 $ 604 room=.
+-> s
+T 111 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 7) HP 38/38 MP 0/0 Hu 79 $ 604 room=.
+-> s
+T 112 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 8) HP 38/38 MP 0/0 Hu 79 $ 604 room=.
+-> l
+T 113 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 8) HP 38/38 MP 0/0 Hu 79 $ 604 room=.
+-> s
+T 114 mode=shrine_mode         Thranduil the Singer(elf) F1@( 5, 9) HP 38/38 MP 0/0 Hu 78 $ 604 room=F
+-> p
+T 115 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 9) HP 38/38 MP 0/0 Hu 78 $ 604 room=.
+-> l
+T 116 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 9) HP 38/38 MP 0/0 Hu 78 $ 604 room=.
+-> s
+T 117 mode=pool_mode           Thranduil the Singer(elf) F1@( 5,10) HP 38/38 MP 0/0 Hu 77 $ 604 room=P
+-> dr
+T 118 mode=game_loop           Thranduil the Singer(elf) F1@( 5,10) HP 38/38 MP 0/0 Hu 77 $ 604 room=.
+-> l
+T 119 mode=game_loop           Thranduil the Singer(elf) F1@( 5,10) HP 38/38 MP 0/0 Hu 77 $ 604 room=.
+-> s
+T 120 mode=altar_mode          Thranduil the Singer(elf) F1@( 5,11) HP 38/38 MP 0/0 Hu 77 $ 604 room=A
+-> pray
+T 121 mode=game_loop           Thranduil the Singer(elf) F1@( 5,11) HP 38/38 MP 0/0 Hu 77 $ 604 room=.
+-> e
+T 122 mode=combat_mode         Thranduil the Singer(elf) F1@( 6,11) HP 38/38 MP 0/0 Hu 76 $ 604 room=M vs Lichen(L0 HP10/10)
+-> a
+T 123 mode=combat_victory      Thranduil the Singer(elf) F1@( 6,11) HP 38/38 MP 0/0 Hu 76 $ 611 room=.
+-> back
+T 124 mode=game_loop           Thranduil the Singer(elf) F1@( 6,11) HP 38/38 MP 0/0 Hu 76 $ 611 room=.
+-> i
+T 125 mode=inventory           Thranduil the Singer(elf) F1@( 6,11) HP 38/38 MP 0/0 Hu 76 $ 611 room=.
+-> u12
+T 126 mode=inventory           Thranduil the Singer(elf) F1@( 6,11) HP 38/38 MP 0/0 Hu 76 $ 611 room=.
+-> x
+T 127 mode=game_loop           Thranduil the Singer(elf) F1@( 6,11) HP 38/38 MP 0/0 Hu 76 $ 611 room=.
+-> n
+T 128 mode=combat_mode         Thranduil the Singer(elf) F1@( 6,10) HP 38/38 MP 0/0 Hu 75 $ 611 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 129 mode=combat_mode         Thranduil the Singer(elf) F1@( 6,10) HP 37/38 MP 0/0 Hu 75 $ 611 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 130 mode=combat_mode         Thranduil the Singer(elf) F1@( 6,10) HP 36/38 MP 0/0 Hu 75 $ 611 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 131 mode=combat_mode         Thranduil the Singer(elf) F1@( 6,10) HP 35/38 MP 0/0 Hu 75 $ 611 room=M vs Skeleton(L0 HP6/25)
+-> a
+T 132 mode=combat_victory      Thranduil the Singer(elf) F1@( 6,10) HP 35/38 MP 0/0 Hu 75 $ 619 room=.
+-> back
+T 133 mode=game_loop           Thranduil the Singer(elf) F1@( 6,10) HP 35/38 MP 0/0 Hu 75 $ 619 room=.
+-> w
+T 134 mode=game_loop           Thranduil the Singer(elf) F1@( 5,10) HP 35/38 MP 0/0 Hu 75 $ 619 room=.
+-> n
+T 135 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 9) HP 35/38 MP 0/0 Hu 74 $ 619 room=.
+-> n
+T 136 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 8) HP 35/38 MP 0/0 Hu 73 $ 619 room=.
+-> e
+T 137 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 8) HP 36/38 MP 0/0 Hu 72 $ 619 room=.
+-> e
+T 138 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 8) HP 36/38 MP 0/0 Hu 72 $ 619 room=.
+-> s
+T 139 mode=garden_mode         Thranduil the Singer(elf) F1@( 7, 9) HP 36/38 MP 0/0 Hu 71 $ 619 room=G
+-> h
+T 140 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 9) HP 36/38 MP 0/0 Hu 71 $ 619 room=.
+-> e
+T 141 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 9) HP 36/38 MP 0/0 Hu 70 $ 619 room=.
+-> s
+T 142 mode=game_loop           Thranduil the Singer(elf) F1@( 8,10) HP 37/38 MP 0/0 Hu 70 $ 619 room=.
+-> e
+T 143 mode=game_loop           Thranduil the Singer(elf) F1@( 9,10) HP 37/38 MP 0/0 Hu 69 $ 619 room=.
+-> s
+T 144 mode=combat_mode         Thranduil the Singer(elf) F1@( 9,11) HP 37/38 MP 0/0 Hu 68 $ 619 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 145 mode=combat_victory      Thranduil the Singer(elf) F1@( 9,11) HP 37/38 MP 0/0 Hu 68 $ 725 room=.
+-> back
+T 146 mode=game_loop           Thranduil the Singer(elf) F1@( 9,11) HP 37/38 MP 0/0 Hu 68 $ 725 room=.
+-> l
+T 147 mode=game_loop           Thranduil the Singer(elf) F1@( 9,11) HP 37/38 MP 0/0 Hu 68 $ 725 room=.
+-> e
+T 148 mode=chest_mode          Thranduil the Singer(elf) F1@(10,11) HP 37/38 MP 0/0 Hu 68 $ 725 room=C
+-> w
+T 149 mode=game_loop           Thranduil the Singer(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 67 $ 725 room=.
+-> s
+T 150 mode=combat_mode         Thranduil the Singer(elf) F1@( 9,12) HP 38/38 MP 0/0 Hu 66 $ 725 room=M vs Bat(L0 HP12/12)
+-> a
+T 151 mode=combat_victory      Thranduil the Singer(elf) F1@( 9,12) HP 38/38 MP 0/0 Hu 66 $ 733 room=.
+-> back
+T 152 mode=game_loop           Thranduil the Singer(elf) F1@( 9,12) HP 38/38 MP 0/0 Hu 66 $ 733 room=.
+-> i
+T 153 mode=inventory           Thranduil the Singer(elf) F1@( 9,12) HP 38/38 MP 0/0 Hu 66 $ 733 room=.
+-> u13
+T 154 mode=inventory           Thranduil the Singer(elf) F1@( 9,12) HP 38/38 MP 0/0 Hu 66 $ 733 room=.
+-> x
+T 155 mode=game_loop           Thranduil the Singer(elf) F1@( 9,12) HP 38/38 MP 0/0 Hu 66 $ 733 room=.
+-> l
+T 156 mode=game_loop           Thranduil the Singer(elf) F1@( 9,12) HP 38/38 MP 0/0 Hu 66 $ 733 room=.
+-> e
+T 157 mode=game_loop           Thranduil the Singer(elf) F1@(10,12) HP 38/38 MP 0/0 Hu 65 $ 733 room=.
+-> l
+T 158 mode=game_loop           Thranduil the Singer(elf) F1@(10,12) HP 38/38 MP 0/0 Hu 65 $ 733 room=.
+-> e
+T 159 mode=game_loop           Thranduil the Singer(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 65 $ 733 room=.
+-> l
+T 160 mode=game_loop           Thranduil the Singer(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 65 $ 733 room=.
+-> e
+T 161 mode=combat_mode         Thranduil the Singer(elf) F1@(12,12) HP 38/38 MP 0/0 Hu 64 $ 733 room=M vs Zombie(L0 HP35/35)
+-> a
+T 162 mode=combat_mode         Thranduil the Singer(elf) F1@(12,12) HP 38/38 MP 0/0 Hu 64 $ 733 room=M vs Zombie(L0 HP35/35)
+-> a
+T 163 mode=combat_mode         Thranduil the Singer(elf) F1@(12,12) HP 37/38 MP 0/0 Hu 64 $ 733 room=M vs Zombie(L0 HP35/35)
+-> a
+T 164 mode=combat_mode         Thranduil the Singer(elf) F1@(12,12) HP 36/38 MP 0/0 Hu 64 $ 733 room=M vs Zombie(L0 HP35/35)
+-> a
+T 165 mode=combat_mode         Thranduil the Singer(elf) F1@(12,12) HP 36/38 MP 0/0 Hu 64 $ 733 room=M vs Zombie(L0 HP14/35)
+-> a
+T 166 mode=combat_mode         Thranduil the Singer(elf) F1@(12,12) HP 36/38 MP 0/0 Hu 64 $ 733 room=M vs Zombie(L0 HP14/35)
+-> a
+T 167 mode=combat_victory      Thranduil the Singer(elf) F1@(12,12) HP 36/38 MP 0/0 Hu 64 $ 735 room=.
+-> back
+T 168 mode=game_loop           Thranduil the Singer(elf) F1@(12,12) HP 36/38 MP 0/0 Hu 64 $ 735 room=.
+-> l
+T 169 mode=game_loop           Thranduil the Singer(elf) F1@(12,12) HP 36/38 MP 0/0 Hu 64 $ 735 room=.
+-> s
+T 170 mode=game_loop           Thranduil the Singer(elf) F1@(12,13) HP 36/38 MP 0/0 Hu 63 $ 735 room=.
+-> l
+T 171 mode=game_loop           Thranduil the Singer(elf) F1@(12,13) HP 36/38 MP 0/0 Hu 63 $ 735 room=.
+-> s
+T 172 mode=combat_mode         Thranduil the Singer(elf) F1@(12,14) HP 36/38 MP 0/0 Hu 63 $ 735 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 173 mode=combat_victory      Thranduil the Singer(elf) F1@(12,14) HP 36/38 MP 0/0 Hu 63 $ 740 room=.
+-> back
+T 174 mode=game_loop           Thranduil the Singer(elf) F1@(12,14) HP 36/38 MP 0/0 Hu 63 $ 740 room=.
+-> l
+T 175 mode=game_loop           Thranduil the Singer(elf) F1@(12,14) HP 36/38 MP 0/0 Hu 63 $ 740 room=.
+-> e
+T 176 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 740 room=V
+-> r1
+T 177 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 708 room=V
+-> r2
+T 178 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 676 room=V
+-> b16
+T 179 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 646 room=V
+-> b16
+T 180 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 636 room=V
+-> b5
+T 181 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 586 room=V
+-> b5
+T 182 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 536 room=V
+-> b5
+T 183 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 486 room=V
+-> b5
+T 184 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 456 room=V
+-> b5
+T 185 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 426 room=V
+-> b5
+T 186 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 396 room=V
+-> b5
+T 187 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 366 room=V
+-> b5
+T 188 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 336 room=V
+-> b5
+T 189 mode=vendor_shop         Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 186 room=V
+-> x
+T 190 mode=game_loop           Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 186 room=V
+-> l
+T 191 mode=game_loop           Thranduil the Singer(elf) F1@(13,14) HP 36/38 MP 0/0 Hu 62 $ 186 room=V
+-> n
+T 192 mode=combat_mode         Thranduil the Singer(elf) F1@(13,13) HP 37/38 MP 0/0 Hu 61 $ 186 room=M vs Stirge(L0 HP6/6)
+-> a
+T 193 mode=combat_victory      Thranduil the Singer(elf) F1@(13,13) HP 37/38 MP 0/0 Hu 61 $ 191 room=.
+-> back
+T 194 mode=game_loop           Thranduil the Singer(elf) F1@(13,13) HP 37/38 MP 0/0 Hu 61 $ 191 room=.
+-> i
+T 195 mode=inventory           Thranduil the Singer(elf) F1@(13,13) HP 37/38 MP 0/0 Hu 61 $ 191 room=.
+-> u18
+T 196 mode=inventory           Thranduil the Singer(elf) F1@(13,13) HP 37/38 MP 0/0 Hu 61 $ 191 room=.
+-> u6
+T 197 mode=upgrade_scroll_mode Thranduil the Singer(elf) F1@(13,13) HP 37/38 MP 0/0 Hu 61 $ 191 room=.
+-> 1
+T 198 mode=inventory           Thranduil the Singer(elf) F1@(13,13) HP 37/38 MP 0/0 Hu 61 $ 191 room=.
+-> x
+T 199 mode=game_loop           Thranduil the Singer(elf) F1@(13,13) HP 37/38 MP 0/0 Hu 61 $ 191 room=.
+-> e
+T 200 mode=chest_mode          Thranduil the Singer(elf) F1@(14,13) HP 37/38 MP 0/0 Hu 61 $ 191 room=C
+-> o
+T 201 mode=game_loop           Thranduil the Singer(elf) F1@(14,13) HP 37/38 MP 0/0 Hu 61 $ 231 room=.
+-> s
+T 202 mode=combat_mode         Thranduil the Singer(elf) F1@(14,14) HP 37/38 MP 0/0 Hu 60 $ 231 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 203 mode=combat_victory      Thranduil the Singer(elf) F1@(14,14) HP 36/38 MP 0/0 Hu 60 $ 238 room=.
+-> back
+T 204 mode=game_loop           Thranduil the Singer(elf) F1@(14,14) HP 36/38 MP 0/0 Hu 60 $ 238 room=.
+-> i
+T 205 mode=inventory           Thranduil the Singer(elf) F1@(14,14) HP 36/38 MP 0/0 Hu 60 $ 238 room=.
+-> u3
+T 206 mode=inventory           Thranduil the Singer(elf) F1@(14,14) HP 38/38 MP 0/0 Hu 60 $ 238 room=.
+-> x
+T 207 mode=game_loop           Thranduil the Singer(elf) F1@(14,14) HP 38/38 MP 0/0 Hu 60 $ 238 room=.
+-> i
+T 208 mode=inventory           Thranduil the Singer(elf) F1@(14,14) HP 38/38 MP 0/0 Hu 60 $ 238 room=.
+-> u17
+T 209 mode=inventory           Thranduil the Singer(elf) F1@(14,14) HP 38/38 MP 0/0 Hu 60 $ 238 room=.
+-> x
+T 210 mode=game_loop           Thranduil the Singer(elf) F1@(14,14) HP 38/38 MP 0/0 Hu 60 $ 238 room=.
+-> l
+T 211 mode=game_loop           Thranduil the Singer(elf) F1@(14,14) HP 38/38 MP 0/0 Hu 60 $ 238 room=.
+-> e
+T 212 mode=combat_mode         Thranduil the Singer(elf) F1@(15,14) HP 38/38 MP 0/0 Hu 59 $ 238 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 213 mode=combat_victory      Thranduil the Singer(elf) F1@(15,14) HP 37/38 MP 0/0 Hu 59 $ 247 room=.
+-> back
+T 214 mode=game_loop           Thranduil the Singer(elf) F1@(15,14) HP 37/38 MP 0/0 Hu 59 $ 247 room=.
+-> i
+T 215 mode=inventory           Thranduil the Singer(elf) F1@(15,14) HP 37/38 MP 0/0 Hu 59 $ 247 room=.
+-> u18
+T 216 mode=inventory           Thranduil the Singer(elf) F1@(15,14) HP 37/38 MP 0/0 Hu 59 $ 247 room=.
+-> x
+T 217 mode=game_loop           Thranduil the Singer(elf) F1@(15,14) HP 37/38 MP 0/0 Hu 59 $ 247 room=.
+-> l
+T 218 mode=game_loop           Thranduil the Singer(elf) F1@(15,14) HP 37/38 MP 0/0 Hu 59 $ 247 room=.
+-> s
+T 219 mode=library_mode        Thranduil the Singer(elf) F1@(15,15) HP 37/38 MP 0/0 Hu 58 $ 247 room=L
+-> r
+T 220 mode=game_loop           Thranduil the Singer(elf) F1@(15,15) HP 37/38 MP 0/0 Hu 58 $ 247 room=.
+-> l
+T 221 mode=game_loop           Thranduil the Singer(elf) F1@(15,15) HP 37/38 MP 0/0 Hu 58 $ 247 room=.
+-> s
+T 222 mode=combat_mode         Thranduil the Singer(elf) F1@(15,16) HP 37/38 MP 0/0 Hu 58 $ 247 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 223 mode=combat_mode         Thranduil the Singer(elf) F1@(15,16) HP 36/38 MP 0/0 Hu 58 $ 247 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 224 mode=combat_victory      Thranduil the Singer(elf) F1@(15,16) HP 36/38 MP 0/0 Hu 58 $ 256 room=.
+-> back
+T 225 mode=game_loop           Thranduil the Singer(elf) F1@(15,16) HP 36/38 MP 0/0 Hu 58 $ 256 room=.
+-> i
+T 226 mode=inventory           Thranduil the Singer(elf) F1@(15,16) HP 36/38 MP 0/0 Hu 58 $ 256 room=.
+-> u4
+T 227 mode=inventory           Thranduil the Singer(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 58 $ 256 room=.
+-> x
+T 228 mode=game_loop           Thranduil the Singer(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 58 $ 256 room=.
+-> i
+T 229 mode=inventory           Thranduil the Singer(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 58 $ 256 room=.
+-> u19
+T 230 mode=inventory           Thranduil the Singer(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 58 $ 256 room=.
+-> x
+T 231 mode=game_loop           Thranduil the Singer(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 58 $ 256 room=.
+-> l
+T 232 mode=game_loop           Thranduil the Singer(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 58 $ 256 room=.
+-> e
+T 233 mode=combat_mode         Thranduil the Singer(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 57 $ 256 room=M vs Goblin(L0 HP30/30)
+-> a
+T 234 mode=combat_mode         Thranduil the Singer(elf) F1@(16,16) HP 37/38 MP 0/0 Hu 57 $ 256 room=M vs Goblin(L0 HP9/30)
+-> a
+T 235 mode=combat_mode         Thranduil the Singer(elf) F1@(16,16) HP 37/38 MP 0/0 Hu 57 $ 256 room=M vs Goblin(L0 HP9/30)
+-> a
+T 236 mode=combat_mode         Thranduil the Singer(elf) F1@(16,16) HP 36/38 MP 0/0 Hu 57 $ 256 room=M vs Goblin(L0 HP9/30)
+-> a
+T 237 mode=combat_victory      Thranduil the Singer(elf) F1@(16,16) HP 36/38 MP 0/0 Hu 57 $ 262 room=.
+-> back
+T 238 mode=game_loop           Thranduil the Singer(elf) F1@(16,16) HP 36/38 MP 0/0 Hu 57 $ 262 room=.
+-> i
+T 239 mode=inventory           Thranduil the Singer(elf) F1@(16,16) HP 36/38 MP 0/0 Hu 57 $ 262 room=.
+-> u4
+T 240 mode=inventory           Thranduil the Singer(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 57 $ 262 room=.
+-> x
+T 241 mode=game_loop           Thranduil the Singer(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 57 $ 262 room=.
+-> i
+T 242 mode=inventory           Thranduil the Singer(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 57 $ 262 room=.
+-> u20
+T 243 mode=inventory           Thranduil the Singer(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 57 $ 262 room=.
+-> x
+T 244 mode=game_loop           Thranduil the Singer(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 57 $ 262 room=.
+-> n
+T 245 mode=combat_mode         Thranduil the Singer(elf) F1@(16,15) HP 38/38 MP 0/0 Hu 56 $ 262 room=M vs Zombie(L0 HP35/35)
+-> a
+T 246 mode=combat_mode         Thranduil the Singer(elf) F1@(16,15) HP 37/38 MP 0/0 Hu 56 $ 262 room=M vs Zombie(L0 HP13/35)
+-> a
+T 247 mode=combat_mode         Thranduil the Singer(elf) F1@(16,15) HP 36/38 MP 0/0 Hu 56 $ 262 room=M vs Zombie(L0 HP13/35)
+-> a
+T 248 mode=combat_victory      Thranduil the Singer(elf) F1@(16,15) HP 35/38 MP 0/0 Hu 56 $ 263 room=.
+-> back
+T 249 mode=game_loop           Thranduil the Singer(elf) F1@(16,15) HP 35/38 MP 0/0 Hu 56 $ 263 room=.
+-> e
+T 250 mode=combat_mode         Thranduil the Singer(elf) F1@(17,15) HP 35/38 MP 0/0 Hu 56 $ 263 room=M vs Lichen(L0 HP10/10)
+-> a
+T 251 mode=combat_victory      Thranduil the Singer(elf) F1@(17,15) HP 34/38 MP 0/0 Hu 56 $ 269 room=.
+-> back
+T 252 mode=game_loop           Thranduil the Singer(elf) F1@(17,15) HP 34/38 MP 0/0 Hu 56 $ 269 room=.
+-> s
+T 253 mode=combat_mode         Thranduil the Singer(elf) F1@(17,16) HP 34/38 MP 0/0 Hu 55 $ 269 room=M vs Stirge(L0 HP6/6)
+-> a
+T 254 mode=combat_victory      Thranduil the Singer(elf) F1@(17,16) HP 34/38 MP 0/0 Hu 55 $ 276 room=.
+-> back
+T 255 mode=game_loop           Thranduil the Singer(elf) F1@(17,16) HP 34/38 MP 0/0 Hu 55 $ 276 room=.
+-> i
+T 256 mode=inventory           Thranduil the Singer(elf) F1@(17,16) HP 34/38 MP 0/0 Hu 55 $ 276 room=.
+-> u4
+T 257 mode=inventory           Thranduil the Singer(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 55 $ 276 room=.
+-> x
+T 258 mode=game_loop           Thranduil the Singer(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 55 $ 276 room=.
+-> i
+T 259 mode=inventory           Thranduil the Singer(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 55 $ 276 room=.
+-> u21
+T 260 mode=inventory           Thranduil the Singer(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 55 $ 276 room=.
+-> x
+T 261 mode=game_loop           Thranduil the Singer(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 55 $ 276 room=.
+-> e
+T 262 mode=combat_mode         Thranduil the Singer(elf) F1@(18,16) HP 38/38 MP 0/0 Hu 54 $ 276 room=M vs Bat(L0 HP12/12)
+-> a
+T 263 mode=combat_victory      Thranduil the Singer(elf) F1@(18,16) HP 38/38 MP 0/0 Hu 54 $ 279 room=.
+-> back
+T 264 mode=game_loop           Thranduil the Singer(elf) F1@(18,16) HP 38/38 MP 0/0 Hu 54 $ 279 room=.
+-> e
+T 265 mode=combat_mode         Thranduil the Singer(elf) F1@(19,16) HP 38/38 MP 0/0 Hu 54 $ 279 room=M vs Stirge(L0 HP6/6)
+-> a
+T 266 mode=combat_victory      Thranduil the Singer(elf) F1@(19,16) HP 38/48 MP 0/0 Hu 54 $ 284 room=.
+-> back
+T 267 mode=game_loop           Thranduil the Singer(elf) F1@(19,16) HP 38/48 MP 0/0 Hu 54 $ 284 room=.
+-> n
+T 268 mode=game_loop           Thranduil the Singer(elf) F1@(19,15) HP 38/48 MP 0/0 Hu 53 $ 284 room=.
+-> w
+T 269 mode=game_loop           Thranduil the Singer(elf) F1@(18,15) HP 38/48 MP 0/0 Hu 52 $ 284 room=.
+-> i
+T 270 mode=inventory           Thranduil the Singer(elf) F1@(18,15) HP 38/48 MP 0/0 Hu 52 $ 284 room=.
+-> u4
+T 271 mode=inventory           Thranduil the Singer(elf) F1@(18,15) HP 48/48 MP 0/0 Hu 52 $ 284 room=.
+-> x
+T 272 mode=game_loop           Thranduil the Singer(elf) F1@(18,15) HP 48/48 MP 0/0 Hu 52 $ 284 room=.
+-> w
+T 273 mode=game_loop           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu 51 $ 284 room=.
+-> n
+T 274 mode=game_loop           Thranduil the Singer(elf) F1@(17,14) HP 48/48 MP 0/0 Hu 51 $ 284 room=.
+-> w
+T 275 mode=game_loop           Thranduil the Singer(elf) F1@(16,14) HP 48/48 MP 0/0 Hu 50 $ 284 room=.
+-> w
+T 276 mode=game_loop           Thranduil the Singer(elf) F1@(15,14) HP 48/48 MP 0/0 Hu 49 $ 284 room=.
+-> i
+T 277 mode=inventory           Thranduil the Singer(elf) F1@(15,14) HP 48/48 MP 0/0 Hu 49 $ 284 room=.
+-> eat3
+T 278 mode=inventory           Thranduil the Singer(elf) F1@(15,14) HP 48/48 MP 0/0 Hu 62 $ 284 room=.
+-> x
+T 279 mode=game_loop           Thranduil the Singer(elf) F1@(15,14) HP 48/48 MP 0/0 Hu 62 $ 284 room=.
+-> w
+T 280 mode=game_loop           Thranduil the Singer(elf) F1@(14,14) HP 48/48 MP 0/0 Hu 62 $ 284 room=.
+-> l
+T 281 mode=game_loop           Thranduil the Singer(elf) F1@(14,14) HP 48/48 MP 0/0 Hu 62 $ 284 room=.
+-> n
+T 282 mode=game_loop           Thranduil the Singer(elf) F1@(14,13) HP 48/48 MP 0/0 Hu 61 $ 284 room=.
+-> n
+T 283 mode=game_loop           Thranduil the Singer(elf) F1@(14,12) HP 48/48 MP 0/0 Hu 60 $ 284 room=.
+-> e
+T 284 mode=dungeon_mode        Thranduil the Singer(elf) F1@(15,12) HP 48/48 MP 0/0 Hu 60 $ 284 room=N
+-> u
+T 285 mode=game_loop           Thranduil the Singer(elf) F1@(15,12) HP 48/48 MP 0/0 Hu 60 $ 284 room=N
+-> e
+T 286 mode=game_loop           Thranduil the Singer(elf) F1@(16,12) HP 48/48 MP 0/0 Hu 59 $ 284 room=.
+-> e
+T 287 mode=game_loop           Thranduil the Singer(elf) F1@(17,12) HP 48/48 MP 0/0 Hu 58 $ 284 room=.
+-> l
+T 288 mode=game_loop           Thranduil the Singer(elf) F1@(17,12) HP 48/48 MP 0/0 Hu 58 $ 284 room=.
+-> n
+T 289 mode=game_loop           Thranduil the Singer(elf) F1@(17,11) HP 48/48 MP 0/0 Hu 57 $ 284 room=.
+-> l
+T 290 mode=game_loop           Thranduil the Singer(elf) F1@(17,11) HP 48/48 MP 0/0 Hu 57 $ 284 room=.
+-> l
+T 291 mode=game_loop           Thranduil the Singer(elf) F1@(17,11) HP 48/48 MP 0/0 Hu 57 $ 284 room=.
+-> e
+T 292 mode=game_loop           Thranduil the Singer(elf) F1@(18,11) HP 48/48 MP 0/0 Hu 57 $ 284 room=.
+-> l
+T 293 mode=game_loop           Thranduil the Singer(elf) F1@(18,11) HP 48/48 MP 0/0 Hu 57 $ 284 room=.
+-> n
+T 294 mode=dungeon_mode        Thranduil the Singer(elf) F1@(18,10) HP 48/48 MP 0/0 Hu 56 $ 284 room=N
+-> u
+T 295 mode=game_loop           Thranduil the Singer(elf) F1@(18,10) HP 48/48 MP 0/0 Hu 56 $ 284 room=N
+-> l
+T 296 mode=game_loop           Thranduil the Singer(elf) F1@(18,10) HP 48/48 MP 0/0 Hu 56 $ 284 room=N
+-> e
+T 297 mode=game_loop           Thranduil the Singer(elf) F1@(19,10) HP 48/48 MP 0/0 Hu 55 $ 284 room=.
+-> s
+T 298 mode=combat_mode         Thranduil the Singer(elf) F1@(19,11) HP 48/48 MP 0/0 Hu 55 $ 284 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 299 mode=combat_mode         Thranduil the Singer(elf) F1@(19,11) HP 47/48 MP 0/0 Hu 55 $ 284 room=M vs Skeleton(L0 HP5/25)
+-> a
+T 300 mode=combat_victory      Thranduil the Singer(elf) F1@(19,11) HP 47/48 MP 0/0 Hu 55 $ 293 room=.
+-> back
+T 301 mode=game_loop           Thranduil the Singer(elf) F1@(19,11) HP 47/48 MP 0/0 Hu 55 $ 293 room=.
+-> n
+T 302 mode=game_loop           Thranduil the Singer(elf) F1@(19,10) HP 47/48 MP 0/0 Hu 54 $ 293 room=.
+-> s
+T 303 mode=game_loop           Thranduil the Singer(elf) F1@(19,11) HP 47/48 MP 0/0 Hu 53 $ 293 room=.
+-> w
+T 304 mode=game_loop           Thranduil the Singer(elf) F1@(18,11) HP 47/48 MP 0/0 Hu 53 $ 293 room=.
+-> w
+T 305 mode=game_loop           Thranduil the Singer(elf) F1@(17,11) HP 47/48 MP 0/0 Hu 52 $ 293 room=.
+-> s
+T 306 mode=game_loop           Thranduil the Singer(elf) F1@(17,12) HP 47/48 MP 0/0 Hu 51 $ 293 room=.
+-> w
+T 307 mode=game_loop           Thranduil the Singer(elf) F1@(16,12) HP 47/48 MP 0/0 Hu 50 $ 293 room=.
+-> w
+T 308 mode=game_loop           Thranduil the Singer(elf) F1@(15,12) HP 47/48 MP 0/0 Hu 50 $ 293 room=N
+-> w
+T 309 mode=game_loop           Thranduil the Singer(elf) F1@(14,12) HP 47/48 MP 0/0 Hu 49 $ 293 room=.
+-> i
+T 310 mode=inventory           Thranduil the Singer(elf) F1@(14,12) HP 47/48 MP 0/0 Hu 49 $ 293 room=.
+-> eat3
+T 311 mode=inventory           Thranduil the Singer(elf) F1@(14,12) HP 47/48 MP 0/0 Hu 67 $ 293 room=.
+-> x
+T 312 mode=game_loop           Thranduil the Singer(elf) F1@(14,12) HP 47/48 MP 0/0 Hu 67 $ 293 room=.
+-> s
+T 313 mode=game_loop           Thranduil the Singer(elf) F1@(14,13) HP 47/48 MP 0/0 Hu 66 $ 293 room=.
+-> w
+T 314 mode=game_loop           Thranduil the Singer(elf) F1@(13,13) HP 47/48 MP 0/0 Hu 66 $ 293 room=.
+-> w
+T 315 mode=game_loop           Thranduil the Singer(elf) F1@(12,13) HP 47/48 MP 0/0 Hu 65 $ 293 room=.
+-> n
+T 316 mode=game_loop           Thranduil the Singer(elf) F1@(12,12) HP 48/48 MP 0/0 Hu 64 $ 293 room=.
+-> w
+T 317 mode=game_loop           Thranduil the Singer(elf) F1@(11,12) HP 48/48 MP 0/0 Hu 64 $ 293 room=.
+-> w
+T 318 mode=game_loop           Thranduil the Singer(elf) F1@(10,12) HP 48/48 MP 0/0 Hu 63 $ 293 room=.
+-> n
+T 319 mode=game_loop           Thranduil the Singer(elf) F1@(10,11) HP 48/48 MP 0/0 Hu 62 $ 293 room=C
+-> w
+T 320 mode=game_loop           Thranduil the Singer(elf) F1@( 9,11) HP 48/48 MP 0/0 Hu 61 $ 293 room=.
+-> l
+T 321 mode=game_loop           Thranduil the Singer(elf) F1@( 9,11) HP 48/48 MP 0/0 Hu 61 $ 293 room=.
+-> n
+T 322 mode=game_loop           Thranduil the Singer(elf) F1@( 9,10) HP 48/48 MP 0/0 Hu 61 $ 293 room=.
+-> w
+T 323 mode=game_loop           Thranduil the Singer(elf) F1@( 8,10) HP 48/48 MP 0/0 Hu 60 $ 293 room=.
+-> n
+T 324 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 9) HP 48/48 MP 0/0 Hu 59 $ 293 room=.
+-> w
+T 325 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 9) HP 48/48 MP 0/0 Hu 59 $ 293 room=.
+-> n
+T 326 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 8) HP 48/48 MP 0/0 Hu 58 $ 293 room=.
+-> w
+T 327 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 8) HP 48/48 MP 0/0 Hu 57 $ 293 room=.
+-> w
+T 328 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 8) HP 48/48 MP 0/0 Hu 57 $ 293 room=.
+-> n
+T 329 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 7) HP 48/48 MP 0/0 Hu 56 $ 293 room=.
+-> n
+T 330 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 6) HP 48/48 MP 0/0 Hu 55 $ 293 room=.
+-> l
+T 331 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 6) HP 48/48 MP 0/0 Hu 55 $ 293 room=.
+-> n
+T 332 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 48/48 MP 0/0 Hu 54 $ 293 room=.
+-> w
+T 333 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 48/48 MP 0/0 Hu 54 $ 293 room=.
+-> w
+T 334 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 5) HP 48/48 MP 0/0 Hu 53 $ 293 room=.
+-> w
+T 335 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 5) HP 48/48 MP 0/0 Hu 52 $ 293 room=.
+-> n
+T 336 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 4) HP 48/48 MP 0/0 Hu 52 $ 293 room=.
+-> w
+T 337 mode=game_loop           Thranduil the Singer(elf) F1@( 1, 4) HP 48/48 MP 0/0 Hu 51 $ 293 room=.
+-> n
+T 338 mode=game_loop           Thranduil the Singer(elf) F1@( 1, 3) HP 48/48 MP 0/0 Hu 50 $ 293 room=.
+-> e
+T 339 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 3) HP 48/48 MP 0/0 Hu 50 $ 293 room=.
+-> e
+T 340 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 49 $ 293 room=.
+-> i
+T 341 mode=inventory           Thranduil the Singer(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 49 $ 293 room=.
+-> eat3
+T 342 mode=inventory           Thranduil the Singer(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 67 $ 293 room=.
+-> x
+T 343 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 3) HP 48/48 MP 0/0 Hu 67 $ 293 room=.
+-> e
+T 344 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 3) HP 48/48 MP 0/0 Hu 66 $ 293 room=.
+-> e
+T 345 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 3) HP 48/48 MP 0/0 Hu 65 $ 293 room=.
+-> e
+T 346 mode=combat_mode         Thranduil the Singer(elf) F1@( 6, 3) HP 48/48 MP 0/0 Hu 65 $ 293 room=M vs Lichen(L0 HP10/10)
+-> a
+T 347 mode=combat_victory      Thranduil the Singer(elf) F1@( 6, 3) HP 47/48 MP 0/0 Hu 65 $ 295 room=.
+-> back
+T 348 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 3) HP 47/48 MP 0/0 Hu 65 $ 295 room=.
+-> n
+T 349 mode=chest_mode          Thranduil the Singer(elf) F1@( 6, 2) HP 47/48 MP 0/0 Hu 64 $ 295 room=C
+-> o
+T 350 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 2) HP 47/48 MP 0/0 Hu 64 $ 295 room=.
+-> l
+T 351 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 2) HP 47/48 MP 0/0 Hu 64 $ 295 room=.
+-> w
+T 352 mode=combat_mode         Thranduil the Singer(elf) F1@( 5, 2) HP 47/48 MP 0/0 Hu 63 $ 295 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 353 mode=combat_victory      Thranduil the Singer(elf) F1@( 5, 2) HP 46/48 MP 0/0 Hu 63 $ 297 room=.
+-> back
+T 354 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 2) HP 46/48 MP 0/0 Hu 63 $ 297 room=.
+-> w
+T 355 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 2) HP 46/48 MP 0/0 Hu 63 $ 297 room=.
+-> w
+T 356 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 2) HP 47/48 MP 0/0 Hu 62 $ 297 room=.
+-> s
+T 357 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 3) HP 47/48 MP 0/0 Hu 61 $ 297 room=.
+-> w
+T 358 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 3) HP 47/48 MP 0/0 Hu 61 $ 297 room=.
+-> s
+T 359 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 4) HP 47/48 MP 0/0 Hu 60 $ 297 room=.
+-> e
+T 360 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 4) HP 47/48 MP 0/0 Hu 59 $ 297 room=M vs Goblin(L0 HP30/30)
+-> a
+T 361 mode=combat_mode         Thranduil the Singer(elf) F1@( 3, 4) HP 46/48 MP 0/0 Hu 59 $ 297 room=M vs Goblin(L0 HP9/30)
+-> a
+T 362 mode=combat_victory      Thranduil the Singer(elf) F1@( 3, 4) HP 46/48 MP 0/0 Hu 59 $ 303 room=.
+-> back
+T 363 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 4) HP 46/48 MP 0/0 Hu 59 $ 303 room=.
+-> i
+T 364 mode=inventory           Thranduil the Singer(elf) F1@( 3, 4) HP 46/48 MP 0/0 Hu 59 $ 303 room=.
+-> u20
+T 365 mode=inventory           Thranduil the Singer(elf) F1@( 3, 4) HP 46/48 MP 0/0 Hu 59 $ 303 room=.
+-> x
+T 366 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 4) HP 46/48 MP 0/0 Hu 59 $ 303 room=.
+-> e
+T 367 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 4) HP 46/48 MP 0/0 Hu 58 $ 303 room=.
+-> n
+T 368 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 3) HP 46/48 MP 0/0 Hu 58 $ 303 room=.
+-> w
+T 369 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 3) HP 46/48 MP 0/0 Hu 57 $ 303 room=.
+-> w
+T 370 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 3) HP 46/48 MP 0/0 Hu 56 $ 303 room=.
+-> l
+T 371 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 3) HP 46/48 MP 0/0 Hu 56 $ 303 room=.
+-> w
+T 372 mode=game_loop           Thranduil the Singer(elf) F1@( 1, 3) HP 46/48 MP 0/0 Hu 56 $ 303 room=.
+-> s
+T 373 mode=game_loop           Thranduil the Singer(elf) F1@( 1, 4) HP 46/48 MP 0/0 Hu 55 $ 303 room=.
+-> e
+T 374 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 4) HP 46/48 MP 0/0 Hu 54 $ 303 room=.
+-> e
+T 375 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 4) HP 46/48 MP 0/0 Hu 54 $ 303 room=.
+-> s
+T 376 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 5) HP 46/48 MP 0/0 Hu 53 $ 303 room=.
+-> e
+T 377 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 46/48 MP 0/0 Hu 52 $ 303 room=.
+-> e
+T 378 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 46/48 MP 0/0 Hu 51 $ 303 room=.
+-> s
+T 379 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 6) HP 46/48 MP 0/0 Hu 51 $ 303 room=.
+-> s
+T 380 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 7) HP 46/48 MP 0/0 Hu 50 $ 303 room=.
+-> l
+T 381 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 7) HP 46/48 MP 0/0 Hu 50 $ 303 room=.
+-> s
+T 382 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 8) HP 46/48 MP 0/0 Hu 49 $ 303 room=.
+-> i
+T 383 mode=inventory           Thranduil the Singer(elf) F1@( 5, 8) HP 46/48 MP 0/0 Hu 49 $ 303 room=.
+-> eat3
+T 384 mode=inventory           Thranduil the Singer(elf) F1@( 5, 8) HP 46/48 MP 0/0 Hu 55 $ 303 room=.
+-> x
+T 385 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 8) HP 46/48 MP 0/0 Hu 55 $ 303 room=.
+-> e
+T 386 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 8) HP 46/48 MP 0/0 Hu 55 $ 303 room=.
+-> n
+T 387 mode=combat_mode         Thranduil the Singer(elf) F1@( 6, 7) HP 46/48 MP 0/0 Hu 54 $ 303 room=M vs Goblin(L0 HP12/12)
+-> f
+T 388 mode=flee_direction_mode Thranduil the Singer(elf) F1@( 6, 7) HP 46/48 MP 0/0 Hu 54 $ 303 room=M
+-> n
+T 389 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 6) HP 46/48 MP 0/0 Hu 54 $ 303 room=.
+-> w
+T 390 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 6) HP 46/48 MP 0/0 Hu 53 $ 303 room=.
+-> l
+T 391 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 6) HP 46/48 MP 0/0 Hu 53 $ 303 room=.
+-> s
+T 392 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 7) HP 46/48 MP 0/0 Hu 53 $ 303 room=.
+-> s
+T 393 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 8) HP 46/48 MP 0/0 Hu 52 $ 303 room=.
+-> s
+T 394 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 9) HP 46/48 MP 0/0 Hu 51 $ 303 room=.
+-> w
+T 395 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 9) HP 46/48 MP 0/0 Hu 50 $ 303 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 396 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 9) HP 45/48 MP 0/0 Hu 50 $ 303 room=M vs Skeleton(L0 HP5/25)
+-> a
+T 397 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 9) HP 45/48 MP 0/0 Hu 50 $ 303 room=M vs Skeleton(L0 HP5/25)
+-> a
+T 398 mode=combat_victory      Thranduil the Singer(elf) F1@( 4, 9) HP 45/48 MP 0/0 Hu 50 $ 305 room=.
+-> back
+T 399 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 9) HP 45/48 MP 0/0 Hu 50 $ 305 room=.
+-> w
+T 400 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 9) HP 45/48 MP 0/0 Hu 50 $ 305 room=.
+-> l
+T 401 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 9) HP 45/48 MP 0/0 Hu 50 $ 305 room=.
+-> w
+T 402 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 9) HP 45/48 MP 0/0 Hu 49 $ 305 room=.
+-> i
+T 403 mode=inventory           Thranduil the Singer(elf) F1@( 2, 9) HP 45/48 MP 0/0 Hu 49 $ 305 room=.
+-> u5
+T 404 mode=inventory           Thranduil the Singer(elf) F1@( 2, 9) HP 48/48 MP 0/0 Hu 49 $ 305 room=.
+-> x
+T 405 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 9) HP 48/48 MP 0/0 Hu 49 $ 305 room=.
+-> i
+T 406 mode=inventory           Thranduil the Singer(elf) F1@( 2, 9) HP 48/48 MP 0/0 Hu 49 $ 305 room=.
+-> eat3
+T 407 mode=inventory           Thranduil the Singer(elf) F1@( 2, 9) HP 48/48 MP 0/0 Hu 56 $ 305 room=.
+-> x
+T 408 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 9) HP 48/48 MP 0/0 Hu 56 $ 305 room=.
+-> s
+T 409 mode=combat_mode         Thranduil the Singer(elf) F1@( 2,10) HP 48/48 MP 0/0 Hu 55 $ 305 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 410 mode=combat_victory      Thranduil the Singer(elf) F1@( 2,10) HP 48/48 MP 0/0 Hu 55 $ 313 room=.
+-> back
+T 411 mode=game_loop           Thranduil the Singer(elf) F1@( 2,10) HP 48/48 MP 0/0 Hu 55 $ 313 room=.
+-> l
+T 412 mode=game_loop           Thranduil the Singer(elf) F1@( 2,10) HP 48/48 MP 0/0 Hu 55 $ 313 room=.
+-> s
+T 413 mode=game_loop           Thranduil the Singer(elf) F1@( 2,11) HP 48/48 MP 0/0 Hu 55 $ 313 room=.
+-> e
+T 414 mode=game_loop           Thranduil the Singer(elf) F1@( 3,11) HP 48/48 MP 0/0 Hu 54 $ 313 room=.
+-> e
+T 415 mode=combat_mode         Thranduil the Singer(elf) F1@( 4,11) HP 48/48 MP 0/0 Hu 53 $ 313 room=M vs Kobold(L0 HP8/8)
+-> a
+T 416 mode=combat_mode         Thranduil the Singer(elf) F1@( 4,11) HP 47/48 MP 0/0 Hu 53 $ 313 room=M vs Kobold(L0 HP8/8)
+-> a
+T 417 mode=combat_victory      Thranduil the Singer(elf) F1@( 4,11) HP 46/48 MP 0/0 Hu 53 $ 314 room=.
+-> back
+T 418 mode=game_loop           Thranduil the Singer(elf) F1@( 4,11) HP 46/48 MP 0/0 Hu 53 $ 314 room=.
+-> i
+T 419 mode=inventory           Thranduil the Singer(elf) F1@( 4,11) HP 46/48 MP 0/0 Hu 53 $ 314 room=.
+-> u18
+T 420 mode=inventory           Thranduil the Singer(elf) F1@( 4,11) HP 46/48 MP 0/0 Hu 53 $ 314 room=.
+-> x
+T 421 mode=game_loop           Thranduil the Singer(elf) F1@( 4,11) HP 46/48 MP 0/0 Hu 53 $ 314 room=.
+-> n
+T 422 mode=combat_mode         Thranduil the Singer(elf) F1@( 4,10) HP 46/48 MP 0/0 Hu 53 $ 314 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 423 mode=combat_victory      Thranduil the Singer(elf) F1@( 4,10) HP 46/48 MP 0/0 Hu 53 $ 321 room=.
+-> back
+T 424 mode=game_loop           Thranduil the Singer(elf) F1@( 4,10) HP 46/48 MP 0/0 Hu 53 $ 321 room=.
+-> n
+T 425 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 9) HP 46/48 MP 0/0 Hu 52 $ 321 room=.
+-> w
+T 426 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 9) HP 46/48 MP 0/0 Hu 51 $ 321 room=.
+-> w
+T 427 mode=game_loop           Thranduil the Singer(elf) F1@( 2, 9) HP 46/48 MP 0/0 Hu 50 $ 321 room=.
+-> w
+T 428 mode=combat_mode         Thranduil the Singer(elf) F1@( 1, 9) HP 46/48 MP 0/0 Hu 50 $ 321 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 429 mode=combat_victory      Thranduil the Singer(elf) F1@( 1, 9) HP 46/48 MP 0/0 Hu 50 $ 324 room=.
+-> back
+T 430 mode=game_loop           Thranduil the Singer(elf) F1@( 1, 9) HP 46/48 MP 0/0 Hu 50 $ 324 room=.
+-> i
+T 431 mode=inventory           Thranduil the Singer(elf) F1@( 1, 9) HP 46/48 MP 0/0 Hu 50 $ 324 room=.
+-> u19
+T 432 mode=inventory           Thranduil the Singer(elf) F1@( 1, 9) HP 46/48 MP 0/0 Hu 50 $ 324 room=.
+-> x
+T 433 mode=game_loop           Thranduil the Singer(elf) F1@( 1, 9) HP 46/48 MP 0/0 Hu 50 $ 324 room=.
+-> s
+T 434 mode=game_loop           Thranduil the Singer(elf) F1@( 1,10) HP 46/48 MP 0/0 Hu 49 $ 324 room=.
+-> i
+T 435 mode=inventory           Thranduil the Singer(elf) F1@( 1,10) HP 46/48 MP 0/0 Hu 49 $ 324 room=.
+-> eat3
+T 436 mode=inventory           Thranduil the Singer(elf) F1@( 1,10) HP 46/48 MP 0/0 Hu 56 $ 324 room=.
+-> x
+T 437 mode=game_loop           Thranduil the Singer(elf) F1@( 1,10) HP 46/48 MP 0/0 Hu 56 $ 324 room=.
+-> e
+T 438 mode=game_loop           Thranduil the Singer(elf) F1@( 2,10) HP 46/48 MP 0/0 Hu 55 $ 324 room=.
+-> s
+T 439 mode=game_loop           Thranduil the Singer(elf) F1@( 2,11) HP 46/48 MP 0/0 Hu 55 $ 324 room=.
+-> s
+T 440 mode=combat_mode         Thranduil the Singer(elf) F1@( 2,12) HP 46/48 MP 0/0 Hu 54 $ 324 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 441 mode=combat_mode         Thranduil the Singer(elf) F1@( 2,12) HP 45/48 MP 0/0 Hu 54 $ 324 room=M vs Skeleton(L0 HP5/25)
+-> a
+T 442 mode=combat_victory      Thranduil the Singer(elf) F1@( 2,12) HP 44/48 MP 0/0 Hu 54 $ 325 room=.
+-> back
+T 443 mode=game_loop           Thranduil the Singer(elf) F1@( 2,12) HP 44/48 MP 0/0 Hu 54 $ 325 room=.
+-> l
+T 444 mode=game_loop           Thranduil the Singer(elf) F1@( 2,12) HP 44/48 MP 0/0 Hu 54 $ 325 room=.
+-> w
+T 445 mode=game_loop           Thranduil the Singer(elf) F1@( 1,12) HP 44/48 MP 0/0 Hu 53 $ 325 room=.
+-> e
+T 446 mode=game_loop           Thranduil the Singer(elf) F1@( 2,12) HP 44/48 MP 0/0 Hu 53 $ 325 room=.
+-> e
+T 447 mode=combat_mode         Thranduil the Singer(elf) F1@( 3,12) HP 44/48 MP 0/0 Hu 52 $ 325 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 448 mode=combat_victory      Thranduil the Singer(elf) F1@( 3,12) HP 43/48 MP 0/0 Hu 52 $ 333 room=.
+-> back
+T 449 mode=game_loop           Thranduil the Singer(elf) F1@( 3,12) HP 43/48 MP 0/0 Hu 52 $ 333 room=.
+-> i
+T 450 mode=inventory           Thranduil the Singer(elf) F1@( 3,12) HP 43/48 MP 0/0 Hu 52 $ 333 room=.
+-> u19
+T 451 mode=inventory           Thranduil the Singer(elf) F1@( 3,12) HP 43/48 MP 0/0 Hu 52 $ 333 room=.
+-> x
+T 452 mode=game_loop           Thranduil the Singer(elf) F1@( 3,12) HP 43/48 MP 0/0 Hu 52 $ 333 room=.
+-> n
+T 453 mode=game_loop           Thranduil the Singer(elf) F1@( 3,11) HP 43/48 MP 0/0 Hu 51 $ 333 room=.
+-> e
+T 454 mode=game_loop           Thranduil the Singer(elf) F1@( 4,11) HP 43/48 MP 0/0 Hu 50 $ 333 room=.
+-> n
+T 455 mode=game_loop           Thranduil the Singer(elf) F1@( 4,10) HP 43/48 MP 0/0 Hu 50 $ 333 room=.
+-> n
+T 456 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 9) HP 43/48 MP 0/0 Hu 49 $ 333 room=.
+-> i
+T 457 mode=inventory           Thranduil the Singer(elf) F1@( 4, 9) HP 43/48 MP 0/0 Hu 49 $ 333 room=.
+-> eat3
+T 458 mode=inventory           Thranduil the Singer(elf) F1@( 4, 9) HP 43/48 MP 0/0 Hu 55 $ 333 room=.
+-> x
+T 459 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 9) HP 43/48 MP 0/0 Hu 55 $ 333 room=.
+-> n
+T 460 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 8) HP 43/48 MP 0/0 Hu 54 $ 333 room=.
+-> l
+T 461 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 8) HP 43/48 MP 0/0 Hu 54 $ 333 room=.
+-> e
+T 462 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 8) HP 43/48 MP 0/0 Hu 54 $ 333 room=.
+-> e
+T 463 mode=game_loop           Thranduil the Singer(elf) F1@( 6, 8) HP 43/48 MP 0/0 Hu 53 $ 333 room=.
+-> e
+T 464 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 8) HP 43/48 MP 0/0 Hu 52 $ 333 room=.
+-> s
+T 465 mode=game_loop           Thranduil the Singer(elf) F1@( 7, 9) HP 43/48 MP 0/0 Hu 52 $ 333 room=.
+-> e
+T 466 mode=game_loop           Thranduil the Singer(elf) F1@( 8, 9) HP 43/48 MP 0/0 Hu 51 $ 333 room=.
+-> s
+T 467 mode=game_loop           Thranduil the Singer(elf) F1@( 8,10) HP 43/48 MP 0/0 Hu 50 $ 333 room=.
+-> e
+T 468 mode=game_loop           Thranduil the Singer(elf) F1@( 9,10) HP 43/48 MP 0/0 Hu 49 $ 333 room=.
+-> i
+T 469 mode=inventory           Thranduil the Singer(elf) F1@( 9,10) HP 43/48 MP 0/0 Hu 49 $ 333 room=.
+-> eat3
+T 470 mode=inventory           Thranduil the Singer(elf) F1@( 9,10) HP 43/48 MP 0/0 Hu 64 $ 333 room=.
+-> x
+T 471 mode=game_loop           Thranduil the Singer(elf) F1@( 9,10) HP 43/48 MP 0/0 Hu 64 $ 333 room=.
+-> s
+T 472 mode=game_loop           Thranduil the Singer(elf) F1@( 9,11) HP 43/48 MP 0/0 Hu 64 $ 333 room=.
+-> s
+T 473 mode=game_loop           Thranduil the Singer(elf) F1@( 9,12) HP 43/48 MP 0/0 Hu 63 $ 333 room=.
+-> e
+T 474 mode=game_loop           Thranduil the Singer(elf) F1@(10,12) HP 43/48 MP 0/0 Hu 62 $ 333 room=.
+-> e
+T 475 mode=game_loop           Thranduil the Singer(elf) F1@(11,12) HP 44/48 MP 0/0 Hu 62 $ 333 room=.
+-> e
+T 476 mode=game_loop           Thranduil the Singer(elf) F1@(12,12) HP 44/48 MP 0/0 Hu 61 $ 333 room=.
+-> s
+T 477 mode=game_loop           Thranduil the Singer(elf) F1@(12,13) HP 44/48 MP 0/0 Hu 60 $ 333 room=.
+-> e
+T 478 mode=game_loop           Thranduil the Singer(elf) F1@(13,13) HP 44/48 MP 0/0 Hu 60 $ 333 room=.
+-> e
+T 479 mode=game_loop           Thranduil the Singer(elf) F1@(14,13) HP 44/48 MP 0/0 Hu 59 $ 333 room=.
+-> i
+T 480 mode=inventory           Thranduil the Singer(elf) F1@(14,13) HP 44/48 MP 0/0 Hu 59 $ 333 room=.
+-> eat11
+T 481 mode=inventory           Thranduil the Singer(elf) F1@(14,13) HP 44/48 MP 0/0 Hu 77 $ 333 room=.
+-> x
+T 482 mode=game_loop           Thranduil the Singer(elf) F1@(14,13) HP 44/48 MP 0/0 Hu 77 $ 333 room=.
+-> n
+T 483 mode=game_loop           Thranduil the Singer(elf) F1@(14,12) HP 44/48 MP 0/0 Hu 76 $ 333 room=.
+-> e
+T 484 mode=game_loop           Thranduil the Singer(elf) F1@(15,12) HP 44/48 MP 0/0 Hu 75 $ 333 room=N
+-> e
+T 485 mode=game_loop           Thranduil the Singer(elf) F1@(16,12) HP 44/48 MP 0/0 Hu 75 $ 333 room=.
+-> e
+T 486 mode=game_loop           Thranduil the Singer(elf) F1@(17,12) HP 45/48 MP 0/0 Hu 74 $ 333 room=.
+-> n
+T 487 mode=game_loop           Thranduil the Singer(elf) F1@(17,11) HP 45/48 MP 0/0 Hu 73 $ 333 room=.
+-> i
+T 488 mode=inventory           Thranduil the Singer(elf) F1@(17,11) HP 45/48 MP 0/0 Hu 73 $ 333 room=.
+-> eat8
+T 489 mode=inventory           Thranduil the Singer(elf) F1@(17,11) HP 45/48 MP 0/0 Hu 85 $ 333 room=.
+-> x
+T 490 mode=game_loop           Thranduil the Singer(elf) F1@(17,11) HP 45/48 MP 0/0 Hu 85 $ 333 room=.
+-> l
+T 491 mode=game_loop           Thranduil the Singer(elf) F1@(17,11) HP 45/48 MP 0/0 Hu 85 $ 333 room=.
+-> e
+T 492 mode=game_loop           Thranduil the Singer(elf) F1@(18,11) HP 46/48 MP 0/0 Hu 85 $ 333 room=.
+-> i
+T 493 mode=inventory           Thranduil the Singer(elf) F1@(18,11) HP 46/48 MP 0/0 Hu 85 $ 333 room=.
+-> eat5
+T 494 mode=inventory           Thranduil the Singer(elf) F1@(18,11) HP 46/48 MP 0/0 Hu100 $ 333 room=.
+-> x
+T 495 mode=game_loop           Thranduil the Singer(elf) F1@(18,11) HP 46/48 MP 0/0 Hu100 $ 333 room=.
+-> n
+T 496 mode=dungeon_mode        Thranduil the Singer(elf) F1@(18,10) HP 46/48 MP 0/0 Hu 99 $ 333 room=N
+-> u
+T 497 mode=dungeon_unlocked_mode Thranduil the Singer(elf) F1@(18,10) HP 46/48 MP 0/0 Hu 99 $ 333 room=N
+-> r
+T 498 mode=game_loop           Thranduil the Singer(elf) F1@(18,10) HP 46/48 MP 0/0 Hu 99 $ 520 room=N
+-> e
+T 499 mode=game_loop           Thranduil the Singer(elf) F1@(19,10) HP 47/48 MP 0/0 Hu 98 $ 520 room=.
+-> s
+T 500 mode=game_loop           Thranduil the Singer(elf) F1@(19,11) HP 47/48 MP 0/0 Hu 98 $ 520 room=.
+-> l
+T 501 mode=game_loop           Thranduil the Singer(elf) F1@(19,11) HP 47/48 MP 0/0 Hu 98 $ 520 room=.
+-> n
+T 502 mode=game_loop           Thranduil the Singer(elf) F1@(19,10) HP 48/48 MP 0/0 Hu 97 $ 520 room=.
+-> s
+T 503 mode=game_loop           Thranduil the Singer(elf) F1@(19,11) HP 48/48 MP 0/0 Hu 96 $ 520 room=.
+-> i
+T 504 mode=inventory           Thranduil the Singer(elf) F1@(19,11) HP 48/48 MP 0/0 Hu 96 $ 520 room=.
+-> eat3
+T 505 mode=inventory           Thranduil the Singer(elf) F1@(19,11) HP 48/48 MP 0/0 Hu100 $ 520 room=.
+-> x
+T 506 mode=game_loop           Thranduil the Singer(elf) F1@(19,11) HP 48/48 MP 0/0 Hu100 $ 520 room=.
+-> w
+T 507 mode=game_loop           Thranduil the Singer(elf) F1@(18,11) HP 48/48 MP 0/0 Hu 99 $ 520 room=.
+-> w
+T 508 mode=game_loop           Thranduil the Singer(elf) F1@(17,11) HP 48/48 MP 0/0 Hu 99 $ 520 room=.
+-> s
+T 509 mode=game_loop           Thranduil the Singer(elf) F1@(17,12) HP 48/48 MP 0/0 Hu 98 $ 520 room=.
+-> e
+T 510 mode=combat_mode         Thranduil the Singer(elf) F1@(18,12) HP 48/48 MP 0/0 Hu 97 $ 520 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 511 mode=combat_victory      Thranduil the Singer(elf) F1@(18,12) HP 48/48 MP 0/0 Hu 97 $ 530 room=.
+-> back
+T 512 mode=game_loop           Thranduil the Singer(elf) F1@(18,12) HP 48/48 MP 0/0 Hu 97 $ 530 room=.
+-> s
+T 513 mode=combat_mode         Thranduil the Singer(elf) F1@(18,13) HP 48/48 MP 0/0 Hu 97 $ 530 room=M vs Kobold(L0 HP8/8)
+-> a
+T 514 mode=combat_victory      Thranduil the Singer(elf) F1@(18,13) HP 48/48 MP 0/0 Hu 97 $ 538 room=.
+-> back
+T 515 mode=game_loop           Thranduil the Singer(elf) F1@(18,13) HP 48/48 MP 0/0 Hu 97 $ 538 room=.
+-> i
+T 516 mode=inventory           Thranduil the Singer(elf) F1@(18,13) HP 48/48 MP 0/0 Hu 97 $ 538 room=.
+-> eat8
+T 517 mode=inventory           Thranduil the Singer(elf) F1@(18,13) HP 48/48 MP 0/0 Hu100 $ 538 room=.
+-> u13
+T 518 mode=inventory           Thranduil the Singer(elf) F1@(18,13) HP 48/48 MP 0/0 Hu100 $ 538 room=.
+-> x
+T 519 mode=game_loop           Thranduil the Singer(elf) F1@(18,13) HP 48/48 MP 0/0 Hu100 $ 538 room=.
+-> e
+T 520 mode=game_loop           Thranduil the Singer(elf) F1@(19,13) HP 48/48 MP 0/0 Hu 99 $ 538 room=.
+-> l
+T 521 mode=game_loop           Thranduil the Singer(elf) F1@(19,13) HP 48/48 MP 0/0 Hu 99 $ 538 room=.
+-> w
+T 522 mode=game_loop           Thranduil the Singer(elf) F1@(18,13) HP 48/48 MP 0/0 Hu 98 $ 538 room=.
+-> s
+T 523 mode=combat_mode         Thranduil the Singer(elf) F1@(18,14) HP 48/48 MP 0/0 Hu 98 $ 538 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 524 mode=combat_victory      Thranduil the Singer(elf) F1@(18,14) HP 48/48 MP 0/0 Hu 98 $ 543 room=.
+-> back
+T 525 mode=game_loop           Thranduil the Singer(elf) F1@(18,14) HP 48/48 MP 0/0 Hu 98 $ 543 room=.
+-> s
+T 526 mode=game_loop           Thranduil the Singer(elf) F1@(18,15) HP 48/48 MP 0/0 Hu 97 $ 543 room=.
+-> s
+T 527 mode=game_loop           Thranduil the Singer(elf) F1@(18,16) HP 48/48 MP 0/0 Hu 96 $ 543 room=.
+-> e
+T 528 mode=game_loop           Thranduil the Singer(elf) F1@(19,16) HP 48/48 MP 0/0 Hu 95 $ 543 room=.
+-> n
+T 529 mode=game_loop           Thranduil the Singer(elf) F1@(19,15) HP 48/48 MP 0/0 Hu 95 $ 543 room=.
+-> w
+T 530 mode=game_loop           Thranduil the Singer(elf) F1@(18,15) HP 48/48 MP 0/0 Hu 94 $ 543 room=.
+-> l
+T 531 mode=game_loop           Thranduil the Singer(elf) F1@(18,15) HP 48/48 MP 0/0 Hu 94 $ 543 room=.
+-> n
+T 532 mode=game_loop           Thranduil the Singer(elf) F1@(18,14) HP 48/48 MP 0/0 Hu 93 $ 543 room=.
+-> w
+T 533 mode=game_loop           Thranduil the Singer(elf) F1@(17,14) HP 48/48 MP 0/0 Hu 93 $ 543 room=.
+-> s
+T 534 mode=game_loop           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu 92 $ 543 room=.
+-> i
+T 535 mode=inventory           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu 92 $ 543 room=.
+-> eat5
+T 536 mode=inventory           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu100 $ 543 room=.
+-> x
+T 537 mode=game_loop           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu100 $ 543 room=.
+-> s
+T 538 mode=game_loop           Thranduil the Singer(elf) F1@(17,16) HP 48/48 MP 0/0 Hu 99 $ 543 room=.
+-> w
+T 539 mode=game_loop           Thranduil the Singer(elf) F1@(16,16) HP 48/48 MP 0/0 Hu 99 $ 543 room=.
+-> n
+T 540 mode=game_loop           Thranduil the Singer(elf) F1@(16,15) HP 48/48 MP 0/0 Hu 98 $ 543 room=.
+-> l
+T 541 mode=game_loop           Thranduil the Singer(elf) F1@(16,15) HP 48/48 MP 0/0 Hu 98 $ 543 room=.
+-> w
+T 542 mode=game_loop           Thranduil the Singer(elf) F1@(15,15) HP 48/48 MP 0/0 Hu 97 $ 543 room=.
+-> n
+T 543 mode=game_loop           Thranduil the Singer(elf) F1@(15,14) HP 48/48 MP 0/0 Hu 96 $ 543 room=.
+-> w
+T 544 mode=game_loop           Thranduil the Singer(elf) F1@(14,14) HP 48/48 MP 0/0 Hu 96 $ 543 room=.
+-> n
+T 545 mode=game_loop           Thranduil the Singer(elf) F1@(14,13) HP 48/48 MP 0/0 Hu 95 $ 543 room=.
+-> w
+T 546 mode=game_loop           Thranduil the Singer(elf) F1@(13,13) HP 48/48 MP 0/0 Hu 94 $ 543 room=.
+-> n
+T 547 mode=combat_mode         Thranduil the Singer(elf) F1@(13,12) HP 48/48 MP 0/0 Hu 94 $ 543 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 548 mode=combat_victory      Thranduil the Singer(elf) F1@(13,12) HP 48/48 MP 0/0 Hu 94 $ 544 room=.
+-> back
+T 549 mode=game_loop           Thranduil the Singer(elf) F1@(13,12) HP 48/48 MP 0/0 Hu 94 $ 544 room=.
+-> i
+T 550 mode=inventory           Thranduil the Singer(elf) F1@(13,12) HP 48/48 MP 0/0 Hu 94 $ 544 room=.
+-> e1
+T 551 mode=inventory           Thranduil the Singer(elf) F1@(13,12) HP 48/48 MP 0/0 Hu 94 $ 544 room=.
+-> x
+T 552 mode=game_loop           Thranduil the Singer(elf) F1@(13,12) HP 48/48 MP 0/0 Hu 94 $ 544 room=.
+-> e
+T 553 mode=game_loop           Thranduil the Singer(elf) F1@(14,12) HP 48/48 MP 0/0 Hu 93 $ 544 room=.
+-> e
+T 554 mode=game_loop           Thranduil the Singer(elf) F1@(15,12) HP 48/48 MP 0/0 Hu 92 $ 544 room=N
+-> e
+T 555 mode=game_loop           Thranduil the Singer(elf) F1@(16,12) HP 48/48 MP 0/0 Hu 92 $ 544 room=.
+-> e
+T 556 mode=game_loop           Thranduil the Singer(elf) F1@(17,12) HP 48/48 MP 0/0 Hu 91 $ 544 room=.
+-> s
+T 557 mode=combat_mode         Thranduil the Singer(elf) F1@(17,13) HP 48/48 MP 0/0 Hu 90 $ 544 room=M vs Goblin(L0 HP12/12)
+-> a
+T 558 mode=combat_victory      Thranduil the Singer(elf) F1@(17,13) HP 48/48 MP 0/0 Hu 90 $ 547 room=.
+-> back
+T 559 mode=game_loop           Thranduil the Singer(elf) F1@(17,13) HP 48/48 MP 0/0 Hu 90 $ 547 room=.
+-> i
+T 560 mode=inventory           Thranduil the Singer(elf) F1@(17,13) HP 48/48 MP 0/0 Hu 90 $ 547 room=.
+-> u14
+T 561 mode=inventory           Thranduil the Singer(elf) F1@(17,13) HP 48/48 MP 0/0 Hu 90 $ 547 room=.
+-> x
+T 562 mode=game_loop           Thranduil the Singer(elf) F1@(17,13) HP 48/48 MP 0/0 Hu 90 $ 547 room=.
+-> s
+T 563 mode=game_loop           Thranduil the Singer(elf) F1@(17,14) HP 48/48 MP 0/0 Hu 89 $ 547 room=.
+-> s
+T 564 mode=game_loop           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu 89 $ 547 room=.
+-> s
+T 565 mode=game_loop           Thranduil the Singer(elf) F1@(17,16) HP 48/48 MP 0/0 Hu 88 $ 547 room=.
+-> e
+T 566 mode=game_loop           Thranduil the Singer(elf) F1@(18,16) HP 48/48 MP 0/0 Hu 87 $ 547 room=.
+-> n
+T 567 mode=game_loop           Thranduil the Singer(elf) F1@(18,15) HP 48/48 MP 0/0 Hu 87 $ 547 room=.
+-> n
+T 568 mode=game_loop           Thranduil the Singer(elf) F1@(18,14) HP 48/48 MP 0/0 Hu 86 $ 547 room=.
+-> w
+T 569 mode=game_loop           Thranduil the Singer(elf) F1@(17,14) HP 48/48 MP 0/0 Hu 85 $ 547 room=.
+-> i
+T 570 mode=inventory           Thranduil the Singer(elf) F1@(17,14) HP 48/48 MP 0/0 Hu 85 $ 547 room=.
+-> eat8
+T 571 mode=inventory           Thranduil the Singer(elf) F1@(17,14) HP 48/48 MP 0/0 Hu100 $ 547 room=.
+-> x
+T 572 mode=game_loop           Thranduil the Singer(elf) F1@(17,14) HP 48/48 MP 0/0 Hu100 $ 547 room=.
+-> s
+T 573 mode=game_loop           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu100 $ 547 room=.
+-> w
+T 574 mode=game_loop           Thranduil the Singer(elf) F1@(16,15) HP 48/48 MP 0/0 Hu 99 $ 547 room=.
+-> n
+T 575 mode=game_loop           Thranduil the Singer(elf) F1@(16,14) HP 48/48 MP 0/0 Hu 98 $ 547 room=.
+-> w
+T 576 mode=game_loop           Thranduil the Singer(elf) F1@(15,14) HP 48/48 MP 0/0 Hu 97 $ 547 room=.
+-> s
+T 577 mode=game_loop           Thranduil the Singer(elf) F1@(15,15) HP 48/48 MP 0/0 Hu 97 $ 547 room=.
+-> s
+T 578 mode=game_loop           Thranduil the Singer(elf) F1@(15,16) HP 48/48 MP 0/0 Hu 96 $ 547 room=.
+-> e
+T 579 mode=game_loop           Thranduil the Singer(elf) F1@(16,16) HP 48/48 MP 0/0 Hu 95 $ 547 room=.
+-> e
+T 580 mode=game_loop           Thranduil the Singer(elf) F1@(17,16) HP 48/48 MP 0/0 Hu 95 $ 547 room=.
+-> l
+T 581 mode=game_loop           Thranduil the Singer(elf) F1@(17,16) HP 48/48 MP 0/0 Hu 95 $ 547 room=.
+-> n
+T 582 mode=game_loop           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu 94 $ 547 room=.
+-> i
+T 583 mode=inventory           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu 94 $ 547 room=.
+-> eat7
+T 584 mode=inventory           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu100 $ 547 room=.
+-> x
+T 585 mode=game_loop           Thranduil the Singer(elf) F1@(17,15) HP 48/48 MP 0/0 Hu100 $ 547 room=.
+-> w
+T 586 mode=game_loop           Thranduil the Singer(elf) F1@(16,15) HP 48/48 MP 0/0 Hu 99 $ 547 room=.
+-> w
+T 587 mode=game_loop           Thranduil the Singer(elf) F1@(15,15) HP 48/48 MP 0/0 Hu 99 $ 547 room=.
+-> s
+T 588 mode=game_loop           Thranduil the Singer(elf) F1@(15,16) HP 48/48 MP 0/0 Hu 98 $ 547 room=.
+-> w
+T 589 mode=combat_mode         Thranduil the Singer(elf) F1@(14,16) HP 48/48 MP 0/0 Hu 97 $ 547 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 590 mode=combat_mode         Thranduil the Singer(elf) F1@(14,16) HP 47/48 MP 0/0 Hu 97 $ 547 room=M vs Giant Rat(L0 HP22/22)
+-> f
+T 591 mode=combat_mode         Thranduil the Singer(elf) F1@(14,16) HP 44/48 MP 0/0 Hu 97 $ 547 room=M vs Giant Rat(L0 HP22/22)
+-> f
+T 592 mode=flee_direction_mode Thranduil the Singer(elf) F1@(14,16) HP 42/48 MP 0/0 Hu 97 $ 547 room=M
+-> w
+T 593 mode=chest_mode          Thranduil the Singer(elf) F1@(13,16) HP 40/48 MP 0/0 Hu 97 $ 547 room=C
+-> o
+T 594 mode=game_loop           Thranduil the Singer(elf) F1@(13,16) HP 40/48 MP 0/0 Hu 97 $ 577 room=.
+-> w
+T 595 mode=game_loop           Thranduil the Singer(elf) F1@(12,16) HP 38/48 MP 0/0 Hu 96 $ 577 room=.
+-> e
+T 596 mode=game_loop           Thranduil the Singer(elf) F1@(13,16) HP 39/48 MP 0/0 Hu 96 $ 577 room=.
+-> n
+T 597 mode=combat_mode         Thranduil the Singer(elf) F1@(13,15) HP 39/48 MP 0/0 Hu 95 $ 577 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 598 mode=combat_victory      Thranduil the Singer(elf) F1@(13,15) HP 39/48 MP 0/0 Hu 95 $ 586 room=.
+-> back
+T 599 mode=game_loop           Thranduil the Singer(elf) F1@(13,15) HP 39/48 MP 0/0 Hu 95 $ 586 room=.
+-> i
+T 600 mode=inventory           Thranduil the Singer(elf) F1@(13,15) HP 39/48 MP 0/0 Hu 95 $ 586 room=.
+-> u13
+T 601 mode=inventory           Thranduil the Singer(elf) F1@(13,15) HP 39/48 MP 0/0 Hu 95 $ 586 room=.
+-> x
+T 602 mode=game_loop           Thranduil the Singer(elf) F1@(13,15) HP 39/48 MP 0/0 Hu 95 $ 586 room=.
+-> n
+T 603 mode=game_loop           Thranduil the Singer(elf) F1@(13,14) HP 40/48 MP 0/0 Hu 94 $ 586 room=V
+-> n
+T 604 mode=game_loop           Thranduil the Singer(elf) F1@(13,13) HP 40/48 MP 0/0 Hu 94 $ 586 room=.
+-> n
+T 605 mode=game_loop           Thranduil the Singer(elf) F1@(13,12) HP 41/48 MP 0/0 Hu 93 $ 586 room=.
+-> w
+T 606 mode=game_loop           Thranduil the Singer(elf) F1@(12,12) HP 41/48 MP 0/0 Hu 92 $ 586 room=.
+-> n
+T 607 mode=warp_mode           Thranduil the Singer(elf) F1@(12,11) HP 42/48 MP 0/0 Hu 92 $ 586 room=W
+-> n
+T 608 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 42/48 MP 0/0 Hu 92 $ 586 room=.
+-> l
+T 609 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 42/48 MP 0/0 Hu 92 $ 586 room=.
+-> s
+T 610 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 42/48 MP 0/0 Hu 91 $ 586 room=.
+-> l
+T 611 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 42/48 MP 0/0 Hu 91 $ 586 room=.
+-> s
+T 612 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 43/48 MP 0/0 Hu 90 $ 586 room=.
+-> l
+T 613 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 43/48 MP 0/0 Hu 90 $ 586 room=.
+-> e
+T 614 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 43/48 MP 0/0 Hu 89 $ 586 room=.
+-> n
+T 615 mode=combat_mode         Thranduil the Singer(elf) F2@(19,15) HP 44/48 MP 0/0 Hu 89 $ 586 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 616 mode=combat_victory      Thranduil the Singer(elf) F2@(19,15) HP 44/48 MP 0/0 Hu 89 $ 598 room=.
+-> back
+T 617 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 44/48 MP 0/0 Hu 89 $ 598 room=.
+-> i
+T 618 mode=inventory           Thranduil the Singer(elf) F2@(19,15) HP 44/48 MP 0/0 Hu 89 $ 598 room=.
+-> u14
+T 619 mode=inventory           Thranduil the Singer(elf) F2@(19,15) HP 44/48 MP 0/0 Hu 89 $ 598 room=.
+-> x
+T 620 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 44/48 MP 0/0 Hu 89 $ 598 room=.
+-> n
+T 621 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 44/48 MP 0/0 Hu 88 $ 598 room=.
+-> w
+T 622 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 45/48 MP 0/0 Hu 87 $ 598 room=.
+-> n
+T 623 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 45/48 MP 0/0 Hu 87 $ 598 room=.
+-> s
+T 624 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 46/48 MP 0/0 Hu 86 $ 598 room=.
+-> s
+T 625 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 46/48 MP 0/0 Hu 85 $ 598 room=.
+-> w
+T 626 mode=combat_mode         Thranduil the Singer(elf) F2@(17,15) HP 47/48 MP 0/0 Hu 85 $ 598 room=M vs Gnoll(L1 HP45/45)
+-> a
+T 627 mode=combat_mode         Thranduil the Singer(elf) F2@(17,15) HP 45/48 MP 0/0 Hu 85 $ 598 room=M vs Gnoll(L1 HP24/45)
+-> a
+T 628 mode=combat_mode         Thranduil the Singer(elf) F2@(17,15) HP 45/48 MP 0/0 Hu 85 $ 598 room=M vs Gnoll(L1 HP24/45)
+-> a
+T 629 mode=combat_mode         Thranduil the Singer(elf) F2@(17,15) HP 43/48 MP 0/0 Hu 85 $ 598 room=M vs Gnoll(L1 HP3/45)
+-> a
+T 630 mode=combat_victory      Thranduil the Singer(elf) F2@(17,15) HP 43/58 MP 0/0 Hu 85 $ 616 room=.
+-> back
+T 631 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 43/58 MP 0/0 Hu 85 $ 616 room=.
+-> i
+T 632 mode=inventory           Thranduil the Singer(elf) F2@(17,15) HP 43/58 MP 0/0 Hu 85 $ 616 room=.
+-> u15
+T 633 mode=inventory           Thranduil the Singer(elf) F2@(17,15) HP 43/58 MP 0/0 Hu 85 $ 616 room=.
+-> x
+T 634 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 43/58 MP 0/0 Hu 85 $ 616 room=.
+-> w
+T 635 mode=combat_mode         Thranduil the Singer(elf) F2@(16,15) HP 43/58 MP 0/0 Hu 84 $ 616 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 636 mode=combat_mode         Thranduil the Singer(elf) F2@(16,15) HP 42/58 MP 0/0 Hu 84 $ 616 room=M vs Myconid Shaman(L1 HP24/45)
+-> a
+T 637 mode=combat_mode         Thranduil the Singer(elf) F2@(16,15) HP 41/58 MP 0/0 Hu 84 $ 616 room=M vs Myconid Shaman(L1 HP3/45)
+-> a
+T 638 mode=combat_victory      Thranduil the Singer(elf) F2@(16,15) HP 40/58 MP 0/0 Hu 84 $ 618 room=.
+-> back
+T 639 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 40/58 MP 0/0 Hu 84 $ 618 room=.
+-> w
+T 640 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 40/58 MP 0/0 Hu 83 $ 618 room=.
+-> e
+T 641 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 40/58 MP 0/0 Hu 82 $ 618 room=.
+-> s
+T 642 mode=combat_mode         Thranduil the Singer(elf) F2@(16,16) HP 41/58 MP 0/0 Hu 82 $ 618 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 643 mode=combat_mode         Thranduil the Singer(elf) F2@(16,16) HP 41/58 MP 0/0 Hu 82 $ 618 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 644 mode=combat_victory      Thranduil the Singer(elf) F2@(16,16) HP 41/58 MP 0/0 Hu 82 $ 1026 room=.
+-> back
+T 645 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 41/58 MP 0/0 Hu 82 $ 1026 room=.
+-> i
+T 646 mode=inventory           Thranduil the Singer(elf) F2@(16,16) HP 41/58 MP 0/0 Hu 82 $ 1026 room=.
+-> u13
+T 647 mode=inventory           Thranduil the Singer(elf) F2@(16,16) HP 41/58 MP 0/0 Hu 82 $ 1026 room=.
+-> e3
+T 648 mode=inventory           Thranduil the Singer(elf) F2@(16,16) HP 41/58 MP 0/0 Hu 82 $ 1026 room=.
+-> x
+T 649 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 41/58 MP 0/0 Hu 82 $ 1026 room=.
+-> n
+T 650 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 41/58 MP 0/0 Hu 81 $ 1026 room=.
+-> e
+T 651 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 41/58 MP 0/0 Hu 80 $ 1026 room=.
+-> e
+T 652 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 41/58 MP 0/0 Hu 80 $ 1026 room=.
+-> s
+T 653 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 42/58 MP 0/0 Hu 79 $ 1026 room=.
+-> e
+T 654 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 42/58 MP 0/0 Hu 78 $ 1026 room=.
+-> n
+T 655 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 42/58 MP 0/0 Hu 78 $ 1026 room=.
+-> n
+T 656 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 42/58 MP 0/0 Hu 77 $ 1026 room=.
+-> w
+T 657 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 43/58 MP 0/0 Hu 76 $ 1026 room=.
+-> s
+T 658 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 43/58 MP 0/0 Hu 75 $ 1026 room=.
+-> w
+T 659 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 43/58 MP 0/0 Hu 75 $ 1026 room=.
+-> w
+T 660 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 43/58 MP 0/0 Hu 74 $ 1026 room=.
+-> w
+T 661 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 44/58 MP 0/0 Hu 73 $ 1026 room=.
+-> e
+T 662 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 44/58 MP 0/0 Hu 73 $ 1026 room=.
+-> s
+T 663 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 44/58 MP 0/0 Hu 72 $ 1026 room=.
+-> n
+T 664 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 44/58 MP 0/0 Hu 71 $ 1026 room=.
+-> e
+T 665 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 45/58 MP 0/0 Hu 71 $ 1026 room=.
+-> e
+T 666 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 45/58 MP 0/0 Hu 70 $ 1026 room=.
+-> n
+T 667 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 45/58 MP 0/0 Hu 69 $ 1026 room=.
+-> n
+T 668 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 45/58 MP 0/0 Hu 68 $ 1026 room=.
+-> s
+T 669 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 46/58 MP 0/0 Hu 68 $ 1026 room=.
+-> e
+T 670 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 46/58 MP 0/0 Hu 67 $ 1026 room=.
+-> i
+T 671 mode=inventory           Thranduil the Singer(elf) F2@(19,14) HP 46/58 MP 0/0 Hu 67 $ 1026 room=.
+-> eat6
+T 672 mode=inventory           Thranduil the Singer(elf) F2@(19,14) HP 46/58 MP 0/0 Hu 82 $ 1026 room=.
+-> x
+T 673 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 46/58 MP 0/0 Hu 82 $ 1026 room=.
+-> s
+T 674 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 46/58 MP 0/0 Hu 81 $ 1026 room=.
+-> w
+T 675 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 46/58 MP 0/0 Hu 81 $ 1026 room=.
+-> i
+T 676 mode=inventory           Thranduil the Singer(elf) F2@(18,15) HP 46/58 MP 0/0 Hu 81 $ 1026 room=.
+-> eat1
+T 677 mode=inventory           Thranduil the Singer(elf) F2@(18,15) HP 46/58 MP 0/0 Hu 87 $ 1026 room=.
+-> x
+T 678 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 46/58 MP 0/0 Hu 87 $ 1026 room=.
+-> w
+T 679 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 47/58 MP 0/0 Hu 86 $ 1026 room=.
+-> w
+T 680 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 47/58 MP 0/0 Hu 85 $ 1026 room=.
+-> i
+T 681 mode=inventory           Thranduil the Singer(elf) F2@(16,15) HP 47/58 MP 0/0 Hu 85 $ 1026 room=.
+-> eat1
+T 682 mode=inventory           Thranduil the Singer(elf) F2@(16,15) HP 47/58 MP 0/0 Hu 97 $ 1026 room=.
+-> x
+T 683 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 47/58 MP 0/0 Hu 97 $ 1026 room=.
+-> w
+T 684 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 48/58 MP 0/0 Hu 97 $ 1026 room=.
+-> e
+T 685 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 48/58 MP 0/0 Hu 96 $ 1026 room=.
+-> s
+T 686 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 49/58 MP 0/0 Hu 95 $ 1026 room=.
+-> n
+T 687 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 49/58 MP 0/0 Hu 94 $ 1026 room=.
+-> e
+T 688 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 50/58 MP 0/0 Hu 94 $ 1026 room=.
+-> e
+T 689 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 50/58 MP 0/0 Hu 93 $ 1026 room=.
+-> e
+T 690 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 51/58 MP 0/0 Hu 92 $ 1026 room=.
+-> n
+T 691 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 51/58 MP 0/0 Hu 92 $ 1026 room=.
+-> w
+T 692 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 52/58 MP 0/0 Hu 91 $ 1026 room=.
+-> n
+T 693 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 52/58 MP 0/0 Hu 90 $ 1026 room=.
+-> s
+T 694 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 53/58 MP 0/0 Hu 90 $ 1026 room=.
+-> s
+T 695 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 53/58 MP 0/0 Hu 89 $ 1026 room=.
+-> e
+T 696 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 54/58 MP 0/0 Hu 88 $ 1026 room=.
+-> n
+T 697 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 54/58 MP 0/0 Hu 87 $ 1026 room=.
+-> w
+T 698 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 55/58 MP 0/0 Hu 87 $ 1026 room=.
+-> n
+T 699 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 55/58 MP 0/0 Hu 86 $ 1026 room=.
+-> s
+T 700 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 56/58 MP 0/0 Hu 85 $ 1026 room=.
+-> s
+T 701 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 56/58 MP 0/0 Hu 85 $ 1026 room=.
+-> w
+T 702 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 56/58 MP 0/0 Hu 84 $ 1026 room=.
+-> w
+T 703 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 56/58 MP 0/0 Hu 83 $ 1026 room=.
+-> i
+T 704 mode=inventory           Thranduil the Singer(elf) F2@(16,15) HP 56/58 MP 0/0 Hu 83 $ 1026 room=.
+-> eat4
+T 705 mode=inventory           Thranduil the Singer(elf) F2@(16,15) HP 56/58 MP 0/0 Hu 98 $ 1026 room=.
+-> x
+T 706 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 56/58 MP 0/0 Hu 98 $ 1026 room=.
+-> w
+T 707 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 57/58 MP 0/0 Hu 98 $ 1026 room=.
+-> e
+T 708 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 57/58 MP 0/0 Hu 97 $ 1026 room=.
+-> s
+T 709 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 58/58 MP 0/0 Hu 96 $ 1026 room=.
+-> n
+T 710 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 95 $ 1026 room=.
+-> e
+T 711 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 95 $ 1026 room=.
+-> e
+T 712 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 94 $ 1026 room=.
+-> s
+T 713 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 93 $ 1026 room=.
+-> e
+T 714 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 93 $ 1026 room=.
+-> n
+T 715 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 92 $ 1026 room=.
+-> n
+T 716 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 91 $ 1026 room=.
+-> w
+T 717 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 91 $ 1026 room=.
+-> n
+T 718 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 90 $ 1026 room=.
+-> i
+T 719 mode=inventory           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 90 $ 1026 room=.
+-> eat3
+T 720 mode=inventory           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 97 $ 1026 room=.
+-> x
+T 721 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 97 $ 1026 room=.
+-> s
+T 722 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 96 $ 1026 room=.
+-> s
+T 723 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 95 $ 1026 room=.
+-> e
+T 724 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 95 $ 1026 room=.
+-> s
+T 725 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 94 $ 1026 room=.
+-> w
+T 726 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 93 $ 1026 room=.
+-> n
+T 727 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 93 $ 1026 room=.
+-> n
+T 728 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 92 $ 1026 room=.
+-> e
+T 729 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 91 $ 1026 room=.
+-> s
+T 730 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 91 $ 1026 room=.
+-> s
+T 731 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 90 $ 1026 room=.
+-> w
+T 732 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 89 $ 1026 room=.
+-> n
+T 733 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 88 $ 1026 room=.
+-> w
+T 734 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 88 $ 1026 room=.
+-> i
+T 735 mode=inventory           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 88 $ 1026 room=.
+-> eat3
+T 736 mode=inventory           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu100 $ 1026 room=.
+-> x
+T 737 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu100 $ 1026 room=.
+-> w
+T 738 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 99 $ 1026 room=.
+-> s
+T 739 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 58/58 MP 0/0 Hu 98 $ 1026 room=.
+-> n
+T 740 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 98 $ 1026 room=.
+-> w
+T 741 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 58/58 MP 0/0 Hu 97 $ 1026 room=.
+-> e
+T 742 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 96 $ 1026 room=.
+-> e
+T 743 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 96 $ 1026 room=.
+-> i
+T 744 mode=inventory           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 96 $ 1026 room=.
+-> eat2
+T 745 mode=inventory           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu100 $ 1026 room=.
+-> x
+T 746 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu100 $ 1026 room=.
+-> e
+T 747 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 99 $ 1026 room=.
+-> n
+T 748 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 98 $ 1026 room=.
+-> n
+T 749 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 97 $ 1026 room=.
+-> s
+T 750 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 97 $ 1026 room=.
+-> e
+T 751 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 96 $ 1026 room=.
+-> s
+T 752 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 95 $ 1026 room=.
+-> s
+T 753 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 95 $ 1026 room=.
+-> w
+T 754 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 94 $ 1026 room=.
+-> n
+T 755 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 93 $ 1026 room=.
+-> n
+T 756 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 93 $ 1026 room=.
+-> n
+T 757 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 92 $ 1026 room=.
+-> s
+T 758 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 91 $ 1026 room=.
+-> e
+T 759 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 90 $ 1026 room=.
+-> s
+T 760 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 90 $ 1026 room=.
+-> s
+T 761 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 89 $ 1026 room=.
+-> w
+T 762 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 88 $ 1026 room=.
+-> n
+T 763 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 88 $ 1026 room=.
+-> n
+T 764 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 87 $ 1026 room=.
+-> n
+T 765 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 86 $ 1026 room=.
+-> s
+T 766 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 86 $ 1026 room=.
+-> e
+T 767 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 85 $ 1026 room=.
+-> s
+T 768 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 84 $ 1026 room=.
+-> w
+T 769 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 83 $ 1026 room=.
+-> s
+T 770 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 83 $ 1026 room=.
+-> e
+T 771 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 82 $ 1026 room=.
+-> w
+T 772 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 81 $ 1026 room=.
+-> n
+T 773 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 81 $ 1026 room=.
+-> w
+T 774 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 80 $ 1026 room=.
+-> w
+T 775 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 79 $ 1026 room=.
+-> w
+T 776 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 58/58 MP 0/0 Hu 79 $ 1026 room=.
+-> e
+T 777 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 78 $ 1026 room=.
+-> s
+T 778 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 58/58 MP 0/0 Hu 77 $ 1026 room=.
+-> n
+T 779 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 76 $ 1026 room=.
+-> e
+T 780 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 76 $ 1026 room=.
+-> e
+T 781 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 75 $ 1026 room=.
+-> s
+T 782 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 74 $ 1026 room=.
+-> e
+T 783 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 74 $ 1026 room=.
+-> n
+T 784 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 73 $ 1026 room=.
+-> n
+T 785 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 72 $ 1026 room=.
+-> w
+T 786 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 72 $ 1026 room=.
+-> n
+T 787 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 71 $ 1026 room=.
+-> s
+T 788 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 70 $ 1026 room=.
+-> s
+T 789 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 69 $ 1026 room=.
+-> s
+T 790 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 69 $ 1026 room=.
+-> e
+T 791 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 68 $ 1026 room=.
+-> n
+T 792 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 67 $ 1026 room=.
+-> n
+T 793 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 67 $ 1026 room=.
+-> w
+T 794 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 66 $ 1026 room=.
+-> n
+T 795 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 65 $ 1026 room=.
+-> s
+T 796 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 65 $ 1026 room=.
+-> s
+T 797 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 64 $ 1026 room=.
+-> s
+T 798 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 63 $ 1026 room=.
+-> e
+T 799 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 62 $ 1026 room=.
+-> n
+T 800 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 62 $ 1026 room=.
+-> n
+T 801 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 61 $ 1026 room=.
+-> w
+T 802 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 60 $ 1026 room=.
+-> n
+T 803 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 60 $ 1026 room=.
+-> s
+T 804 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 59 $ 1026 room=.
+-> s
+T 805 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 58 $ 1026 room=.
+-> e
+T 806 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 58 $ 1026 room=.
+-> n
+T 807 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 57 $ 1026 room=.
+-> w
+T 808 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 56 $ 1026 room=.
+-> n
+T 809 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 55 $ 1026 room=.
+-> s
+T 810 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 55 $ 1026 room=.
+-> l
+T 811 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 55 $ 1026 room=.
+-> s
+T 812 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 54 $ 1026 room=.
+-> s
+T 813 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 53 $ 1026 room=.
+-> e
+T 814 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 53 $ 1026 room=.
+-> n
+T 815 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 52 $ 1026 room=.
+-> n
+T 816 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 51 $ 1026 room=.
+-> w
+T 817 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 51 $ 1026 room=.
+-> s
+T 818 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 50 $ 1026 room=.
+-> w
+T 819 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 49 $ 1026 room=.
+-> i
+T 820 mode=inventory           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 49 $ 1026 room=.
+-> eat1
+T 821 mode=inventory           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 61 $ 1026 room=.
+-> x
+T 822 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 61 $ 1026 room=.
+-> w
+T 823 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 60 $ 1026 room=.
+-> w
+T 824 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 58/58 MP 0/0 Hu 60 $ 1026 room=.
+-> e
+T 825 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 59 $ 1026 room=.
+-> s
+T 826 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 58/58 MP 0/0 Hu 58 $ 1026 room=.
+-> n
+T 827 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 58 $ 1026 room=.
+-> e
+T 828 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 57 $ 1026 room=.
+-> e
+T 829 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 56 $ 1026 room=.
+-> e
+T 830 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 56 $ 1026 room=.
+-> l
+T 831 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 56 $ 1026 room=.
+-> s
+T 832 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 55 $ 1026 room=.
+-> w
+T 833 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 54 $ 1026 room=.
+-> n
+T 834 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 53 $ 1026 room=.
+-> n
+T 835 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 53 $ 1026 room=.
+-> n
+T 836 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 52 $ 1026 room=.
+-> s
+T 837 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 51 $ 1026 room=.
+-> e
+T 838 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 51 $ 1026 room=.
+-> s
+T 839 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 50 $ 1026 room=.
+-> s
+T 840 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 49 $ 1026 room=.
+-> l
+T 841 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 49 $ 1026 room=.
+-> w
+T 842 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 49 $ 1026 room=.
+-> w
+T 843 mode=warp_mode           Thranduil the Singer(elf) F2@(17,16) HP 58/58 MP 0/0 Hu 48 $ 1026 room=W
+-> y
+T 844 mode=game_loop           Thranduil the Singer(elf) F2@(17,16) HP 58/58 MP 0/0 Hu 48 $ 1026 room=W
+-> w
+T 845 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 58/58 MP 0/0 Hu 47 $ 1026 room=.
+-> n
+T 846 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 46 $ 1026 room=.
+-> w
+T 847 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 58/58 MP 0/0 Hu 46 $ 1026 room=.
+-> e
+T 848 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 45 $ 1026 room=.
+-> e
+T 849 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 44 $ 1026 room=.
+-> e
+T 850 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 44 $ 1026 room=.
+-> l
+T 851 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 44 $ 1026 room=.
+-> e
+T 852 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 43 $ 1026 room=.
+-> n
+T 853 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 42 $ 1026 room=.
+-> w
+T 854 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 42 $ 1026 room=.
+-> n
+T 855 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 41 $ 1026 room=.
+-> s
+T 856 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 40 $ 1026 room=.
+-> s
+T 857 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 39 $ 1026 room=.
+-> e
+T 858 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 39 $ 1026 room=.
+-> n
+T 859 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 38 $ 1026 room=.
+-> w
+T 860 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 37 $ 1026 room=.
+-> l
+T 861 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 37 $ 1026 room=.
+-> n
+T 862 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu 37 $ 1026 room=.
+-> s
+T 863 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 36 $ 1026 room=.
+-> s
+T 864 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 35 $ 1026 room=.
+-> w
+T 865 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 35 $ 1026 room=.
+-> w
+T 866 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 34 $ 1026 room=.
+-> w
+T 867 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 58/58 MP 0/0 Hu 33 $ 1026 room=.
+-> e
+T 868 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 32 $ 1026 room=.
+-> s
+T 869 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 58/58 MP 0/0 Hu 32 $ 1026 room=.
+-> n
+T 870 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 31 $ 1026 room=.
+-> l
+T 871 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 31 $ 1026 room=.
+-> e
+T 872 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 30 $ 1026 room=.
+-> e
+T 873 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 30 $ 1026 room=.
+-> n
+T 874 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 29 $ 1026 room=.
+-> e
+T 875 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 28 $ 1026 room=.
+-> s
+T 876 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 28 $ 1026 room=.
+-> s
+T 877 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 27 $ 1026 room=.
+-> w
+T 878 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 26 $ 1026 room=.
+-> n
+T 879 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 25 $ 1026 room=.
+-> n
+T 880 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 25 $ 1026 room=.
+-> l
+T 881 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 25 $ 1026 room=.
+-> e
+T 882 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 24 $ 1026 room=.
+-> s
+T 883 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 23 $ 1026 room=.
+-> s
+T 884 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 23 $ 1026 room=.
+-> w
+T 885 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 22 $ 1026 room=.
+-> n
+T 886 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 21 $ 1026 room=.
+-> w
+T 887 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 21 $ 1026 room=.
+-> w
+T 888 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 20 $ 1026 room=.
+-> s
+T 889 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 58/58 MP 0/0 Hu 19 $ 1026 room=.
+-> n
+T 890 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 18 $ 1026 room=.
+-> l
+T 891 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 18 $ 1026 room=.
+-> w
+T 892 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 58/58 MP 0/0 Hu 18 $ 1026 room=.
+-> e
+T 893 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 58/58 MP 0/0 Hu 17 $ 1026 room=.
+-> e
+T 894 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu 16 $ 1026 room=.
+-> e
+T 895 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 16 $ 1026 room=.
+-> s
+T 896 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 15 $ 1026 room=.
+-> e
+T 897 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 14 $ 1026 room=.
+-> n
+T 898 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu 14 $ 1026 room=.
+-> n
+T 899 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu 13 $ 1026 room=.
+-> w
+T 900 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 12 $ 1026 room=.
+-> l
+T 901 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu 12 $ 1026 room=.
+-> s
+T 902 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu 11 $ 1026 room=.
+-> s
+T 903 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu 11 $ 1026 room=.
+-> e
+T 904 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu 10 $ 1026 room=.
+-> n
+T 905 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu  9 $ 1026 room=.
+-> n
+T 906 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu  9 $ 1026 room=.
+-> w
+T 907 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu  8 $ 1026 room=.
+-> s
+T 908 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu  7 $ 1026 room=.
+-> s
+T 909 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 58/58 MP 0/0 Hu  7 $ 1026 room=.
+-> e
+T 910 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu  6 $ 1026 room=.
+-> l
+T 911 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 58/58 MP 0/0 Hu  6 $ 1026 room=.
+-> n
+T 912 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 58/58 MP 0/0 Hu  5 $ 1026 room=.
+-> n
+T 913 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 58/58 MP 0/0 Hu  4 $ 1026 room=.
+-> w
+T 914 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu  4 $ 1026 room=.
+-> n
+T 915 mode=game_loop           Thranduil the Singer(elf) F2@(18,13) HP 58/58 MP 0/0 Hu  3 $ 1026 room=.
+-> s
+T 916 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 58/58 MP 0/0 Hu  2 $ 1026 room=.
+-> s
+T 917 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 58/58 MP 0/0 Hu  2 $ 1026 room=.
+-> w
+T 918 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 58/58 MP 0/0 Hu  1 $ 1026 room=.
+-> w
+T 919 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 56/58 MP 0/0 Hu  0 $ 1026 room=.
+-> w
+T 920 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 54/58 MP 0/0 Hu  0 $ 1026 room=.
+-> l
+T 921 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 54/58 MP 0/0 Hu  0 $ 1026 room=.
+-> e
+T 922 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 52/58 MP 0/0 Hu  0 $ 1026 room=.
+-> s
+T 923 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 50/58 MP 0/0 Hu  0 $ 1026 room=.
+-> n
+T 924 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 48/58 MP 0/0 Hu  0 $ 1026 room=.
+-> e
+T 925 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 46/58 MP 0/0 Hu  0 $ 1026 room=.
+-> e
+T 926 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 44/58 MP 0/0 Hu  0 $ 1026 room=.
+-> e
+T 927 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 42/58 MP 0/0 Hu  0 $ 1026 room=.
+-> s
+T 928 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 40/58 MP 0/0 Hu  0 $ 1026 room=.
+-> w
+T 929 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 38/58 MP 0/0 Hu  0 $ 1026 room=.
+-> n
+T 930 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 36/58 MP 0/0 Hu  0 $ 1026 room=.
+-> l
+T 931 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 36/58 MP 0/0 Hu  0 $ 1026 room=.
+-> w
+T 932 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 34/58 MP 0/0 Hu  0 $ 1026 room=.
+-> w
+T 933 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 32/58 MP 0/0 Hu  0 $ 1026 room=.
+-> w
+T 934 mode=game_loop           Thranduil the Singer(elf) F2@(15,15) HP 30/58 MP 0/0 Hu  0 $ 1026 room=.
+-> e
+T 935 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 28/58 MP 0/0 Hu  0 $ 1026 room=.
+-> s
+T 936 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 26/58 MP 0/0 Hu  0 $ 1026 room=.
+-> n
+T 937 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 24/58 MP 0/0 Hu  0 $ 1026 room=.
+-> e
+T 938 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 22/58 MP 0/0 Hu  0 $ 1026 room=.
+-> e
+T 939 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 20/58 MP 0/0 Hu  0 $ 1026 room=.
+-> s
+T 940 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 18/58 MP 0/0 Hu  0 $ 1026 room=.
+-> l
+T 941 mode=game_loop           Thranduil the Singer(elf) F2@(18,16) HP 18/58 MP 0/0 Hu  0 $ 1026 room=.
+-> e
+T 942 mode=game_loop           Thranduil the Singer(elf) F2@(19,16) HP 16/58 MP 0/0 Hu  0 $ 1026 room=.
+-> n
+T 943 mode=game_loop           Thranduil the Singer(elf) F2@(19,15) HP 14/58 MP 0/0 Hu  0 $ 1026 room=.
+-> n
+T 944 mode=game_loop           Thranduil the Singer(elf) F2@(19,14) HP 12/58 MP 0/0 Hu  0 $ 1026 room=.
+-> w
+T 945 mode=game_loop           Thranduil the Singer(elf) F2@(18,14) HP 10/58 MP 0/0 Hu  0 $ 1026 room=.
+-> s
+T 946 mode=game_loop           Thranduil the Singer(elf) F2@(18,15) HP 8/58 MP 0/0 Hu  0 $ 1026 room=.
+-> w
+T 947 mode=game_loop           Thranduil the Singer(elf) F2@(17,15) HP 6/58 MP 0/0 Hu  0 $ 1026 room=.
+-> w
+T 948 mode=game_loop           Thranduil the Singer(elf) F2@(16,15) HP 4/58 MP 0/0 Hu  0 $ 1026 room=.
+-> s
+T 949 mode=game_loop           Thranduil the Singer(elf) F2@(16,16) HP 2/58 MP 0/0 Hu  0 $ 1026 room=.
+-> n
+T 950 mode=death_screen        Thranduil the Singer(elf) F2@(16,15) HP 0/58 MP 0/0 Hu  0 $ 1026 room=.
 
-=== run finished: turns=70 floor=1 hp=-2/28 gold=370 alive=False mode=flee_direction_mode ===
+=== run finished: turns=950 floor=2 hp=0/58 gold=1026 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00777_elf.html

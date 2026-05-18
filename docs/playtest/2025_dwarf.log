@@ -1387,1204 +1387,1178 @@ T 684 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 65/78 MP 0/0 
 T 685 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 66/78 MP 0/0 Hu 91 $ 866 room=.
 -> e
 T 686 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 66/78 MP 0/0 Hu 90 $ 866 room=.
--> n
-T 687 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 67/78 MP 0/0 Hu 89 $ 866 room=.
--> s
-T 688 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 67/78 MP 0/0 Hu 89 $ 866 room=.
--> n
-T 689 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 68/78 MP 0/0 Hu 88 $ 866 room=.
--> s
-T 690 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 68/78 MP 0/0 Hu 87 $ 866 room=.
--> w
-T 691 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 69/78 MP 0/0 Hu 87 $ 866 room=.
--> s
-T 692 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 69/78 MP 0/0 Hu 86 $ 866 room=.
--> s
-T 693 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 70/78 MP 0/0 Hu 85 $ 866 room=.
--> s
-T 694 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 70/78 MP 0/0 Hu 84 $ 866 room=.
--> s
-T 695 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 70/78 MP 0/0 Hu 84 $ 866 room=.
--> s
-T 696 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 70/78 MP 0/0 Hu 83 $ 866 room=.
--> l
-T 697 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 70/78 MP 0/0 Hu 83 $ 866 room=.
 -> e
-T 698 mode=shrine_mode         Farin Runesinger(dwa) F1@( 4,13) HP 71/78 MP 0/0 Hu 82 $ 866 room=F
+T 687 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 67/78 MP 0/0 Hu 89 $ 866 room=.
+-> e
+T 688 mode=tomb_mode           Farin Runesinger(dwa) F1@( 6, 8) HP 67/78 MP 0/0 Hu 89 $ 866 room=T
 -> p
-T 699 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 71/78 MP 0/0 Hu 82 $ 866 room=.
--> l
-T 700 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 71/78 MP 0/0 Hu 82 $ 866 room=.
+T 689 mode=game_loop           Farin Runesinger(dwa) F1@( 6, 8) HP 67/78 MP 0/0 Hu 89 $ 866 room=T
+-> w
+T 690 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 68/78 MP 0/0 Hu 88 $ 866 room=.
 -> s
-T 701 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 71/78 MP 0/0 Hu 82 $ 866 room=.
+T 691 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 9) HP 68/78 MP 0/0 Hu 87 $ 866 room=.
+-> n
+T 692 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 69/78 MP 0/0 Hu 87 $ 866 room=.
+-> w
+T 693 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 69/78 MP 0/0 Hu 86 $ 866 room=.
+-> w
+T 694 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 70/78 MP 0/0 Hu 85 $ 866 room=.
+-> s
+T 695 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 70/78 MP 0/0 Hu 84 $ 866 room=.
+-> s
+T 696 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 70/78 MP 0/0 Hu 84 $ 866 room=.
+-> s
+T 697 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 70/78 MP 0/0 Hu 83 $ 866 room=.
+-> s
+T 698 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 71/78 MP 0/0 Hu 82 $ 866 room=.
+-> s
+T 699 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 71/78 MP 0/0 Hu 82 $ 866 room=.
 -> l
-T 702 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 71/78 MP 0/0 Hu 82 $ 866 room=.
+T 700 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 71/78 MP 0/0 Hu 82 $ 866 room=.
 -> e
-T 703 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 71/78 MP 0/0 Hu 81 $ 866 room=.
+T 701 mode=shrine_mode         Farin Runesinger(dwa) F1@( 4,13) HP 71/78 MP 0/0 Hu 81 $ 866 room=F
+-> p
+T 702 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 71/78 MP 0/0 Hu 81 $ 866 room=.
 -> l
-T 704 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 71/78 MP 0/0 Hu 81 $ 866 room=.
+T 703 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 71/78 MP 0/0 Hu 81 $ 866 room=.
 -> s
-T 705 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 71/78 MP 0/0 Hu 80 $ 866 room=.
+T 704 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 71/78 MP 0/0 Hu 80 $ 866 room=.
 -> l
-T 706 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 71/78 MP 0/0 Hu 80 $ 866 room=.
+T 705 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 71/78 MP 0/0 Hu 80 $ 866 room=.
+-> e
+T 706 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 72/78 MP 0/0 Hu 80 $ 866 room=.
+-> l
+T 707 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 72/78 MP 0/0 Hu 80 $ 866 room=.
 -> s
-T 707 mode=pool_mode           Farin Runesinger(dwa) F1@( 5,16) HP 72/78 MP 0/0 Hu 80 $ 866 room=P
+T 708 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 72/78 MP 0/0 Hu 79 $ 866 room=.
+-> l
+T 709 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 72/78 MP 0/0 Hu 79 $ 866 room=.
+-> s
+T 710 mode=pool_mode           Farin Runesinger(dwa) F1@( 5,16) HP 72/78 MP 0/0 Hu 78 $ 866 room=P
 -> dr
-T 708 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+T 711 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
 -> l
-T 709 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+T 712 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
 -> n
-T 710 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
+T 713 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
 -> n
-T 711 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
+T 714 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
 -> w
-T 712 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
+T 715 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
 -> w
-T 713 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
+T 716 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
 -> w
-T 714 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
+T 717 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
 -> e
-T 715 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+T 718 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
 -> n
-T 716 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+T 719 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
 -> n
-T 717 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+T 720 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
 -> n
-T 718 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
+T 721 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
 -> n
-T 719 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
--> n
-T 720 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
--> n
-T 721 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> e
-T 722 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
--> n
-T 723 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
--> s
-T 724 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
--> n
-T 725 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
--> s
-T 726 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
+T 722 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
 -> w
-T 727 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
--> s
-T 728 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
--> s
-T 729 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
--> s
-T 730 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
--> s
-T 731 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
--> s
-T 732 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
--> s
-T 733 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
+T 723 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
+-> n
+T 724 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
+-> n
+T 725 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
 -> e
-T 734 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
--> n
-T 735 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
+T 726 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
 -> s
-T 736 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
+T 727 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
+-> s
+T 728 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+-> s
+T 729 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
+-> s
+T 730 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
+-> s
+T 731 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
 -> e
-T 737 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
+T 732 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
 -> s
-T 738 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
--> s
-T 739 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
--> n
-T 740 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
--> n
-T 741 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
+T 733 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
 -> w
-T 742 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
--> n
-T 743 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+T 734 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
 -> w
-T 744 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
--> n
-T 745 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> n
-T 746 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> n
-T 747 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
--> n
-T 748 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
--> n
-T 749 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+T 735 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
 -> e
-T 750 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+T 736 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
 -> n
-T 751 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+T 737 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
+-> n
+T 738 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
+-> n
+T 739 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+-> n
+T 740 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+-> n
+T 741 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
+-> w
+T 742 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
 -> s
-T 752 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+T 743 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+-> w
+T 744 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+-> s
+T 745 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
+-> n
+T 746 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
+-> s
+T 747 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
+-> n
+T 748 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+-> e
+T 749 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+-> e
+T 750 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+-> e
+T 751 mode=game_loop           Farin Runesinger(dwa) F1@( 4,10) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+-> w
+T 752 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+-> s
+T 753 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
 -> i
-T 753 mode=inventory           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+T 754 mode=inventory           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
 -> eat1
-T 754 mode=inventory           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+T 755 mode=inventory           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
 -> x
-T 755 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
--> n
-T 756 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+T 756 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
 -> s
-T 757 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
+T 757 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+-> s
+T 758 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
+-> s
+T 759 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
 -> w
-T 758 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
--> s
-T 759 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
+T 760 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
+-> e
+T 761 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
+-> e
+T 762 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
+-> n
+T 763 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
 -> w
-T 760 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
+T 764 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
 -> n
-T 761 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
+T 765 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
 -> n
-T 762 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
--> s
-T 763 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
--> e
-T 764 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
--> e
-T 765 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
+T 766 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
 -> n
-T 766 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
--> s
-T 767 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
--> n
-T 768 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
--> s
-T 769 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
+T 767 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
 -> w
-T 770 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
--> s
-T 771 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
--> s
-T 772 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
+T 768 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
+-> n
+T 769 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
+-> n
+T 770 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
 -> e
-T 773 mode=game_loop           Farin Runesinger(dwa) F1@( 4,10) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
+T 771 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
+-> s
+T 772 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
+-> s
+T 773 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
+-> e
+T 774 mode=game_loop           Farin Runesinger(dwa) F1@( 4,10) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
 -> w
-T 774 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
+T 775 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
+-> s
+T 776 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
+-> s
+T 777 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
+-> s
+T 778 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
+-> s
+T 779 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
 -> w
-T 775 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
--> n
-T 776 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
--> n
-T 777 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
+T 780 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
 -> e
-T 778 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
+T 781 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
 -> e
-T 779 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
+T 782 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
 -> n
-T 780 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
--> s
-T 781 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
--> n
-T 782 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
--> s
-T 783 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+T 783 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
 -> w
-T 784 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
+T 784 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+-> n
+T 785 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
+-> n
+T 786 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
+-> n
+T 787 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
+-> e
+T 788 mode=game_loop           Farin Runesinger(dwa) F1@( 4,10) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
 -> w
-T 785 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
--> n
-T 786 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
--> s
-T 787 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
--> s
-T 788 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
--> s
-T 789 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
+T 789 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
 -> w
-T 790 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+T 790 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
+-> n
+T 791 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+-> e
+T 792 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+-> n
+T 793 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+-> w
+T 794 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
+-> n
+T 795 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
 -> s
-T 791 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
--> n
-T 792 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+T 796 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
 -> s
-T 793 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
--> n
-T 794 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
--> e
-T 795 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> n
-T 796 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> n
-T 797 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
--> e
-T 798 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
--> e
-T 799 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
--> n
-T 800 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
+T 797 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
+-> s
+T 798 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
+-> w
+T 799 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
+-> s
+T 800 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
 -> l
-T 801 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
--> s
-T 802 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+T 801 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
 -> n
-T 803 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
--> s
-T 804 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
--> w
-T 805 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
--> s
-T 806 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
--> s
-T 807 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
+T 802 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
 -> e
-T 808 mode=game_loop           Farin Runesinger(dwa) F1@( 4,10) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
+T 803 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+-> e
+T 804 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+-> s
+T 805 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
+-> s
+T 806 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
+-> s
+T 807 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
+-> s
+T 808 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
 -> w
-T 809 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
--> w
-T 810 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
+T 809 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
+-> e
+T 810 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
 -> l
-T 811 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
--> n
-T 812 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
--> n
-T 813 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
+T 811 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
 -> e
-T 814 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
--> e
-T 815 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+T 812 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
 -> n
-T 816 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
--> s
-T 817 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
--> n
-T 818 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
--> s
-T 819 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+T 813 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
 -> w
-T 820 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
+T 814 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
+-> n
+T 815 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
+-> n
+T 816 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+-> n
+T 817 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
+-> w
+T 818 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
+-> n
+T 819 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
+-> n
+T 820 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
 -> l
-T 821 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
--> w
-T 822 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
--> s
-T 823 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> s
-T 824 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
--> w
-T 825 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
--> s
-T 826 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+T 821 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
 -> n
-T 827 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+T 822 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
 -> s
-T 828 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
--> n
-T 829 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+T 823 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
 -> e
-T 830 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+T 824 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
+-> s
+T 825 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+-> w
+T 826 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+-> s
+T 827 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+-> e
+T 828 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+-> s
+T 829 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+-> s
+T 830 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+-> l
+T 831 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+-> s
+T 832 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
 -> i
-T 831 mode=inventory           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+T 833 mode=inventory           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
 -> eat1
-T 832 mode=inventory           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+T 834 mode=inventory           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
 -> x
-T 833 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
--> n
-T 834 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
--> n
-T 835 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
--> e
-T 836 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
--> e
-T 837 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
--> n
-T 838 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
+T 835 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
 -> s
-T 839 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
--> n
-T 840 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
+T 836 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
+-> w
+T 837 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
+-> e
+T 838 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
+-> e
+T 839 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
+-> e
+T 840 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
 -> l
-T 841 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
+T 841 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
 -> s
-T 842 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
--> w
-T 843 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
+T 842 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
 -> s
-T 844 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
--> w
-T 845 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
+T 843 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
 -> n
-T 846 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
+T 844 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
 -> n
-T 847 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
--> s
-T 848 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
+T 845 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
+-> w
+T 846 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
+-> w
+T 847 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
+-> w
+T 848 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
 -> e
-T 849 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
--> e
-T 850 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
+T 849 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
+-> n
+T 850 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
 -> l
-T 851 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
--> n
-T 852 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
--> s
-T 853 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
--> n
-T 854 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
--> s
-T 855 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
--> w
-T 856 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
--> s
-T 857 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
--> s
-T 858 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
--> s
-T 859 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
--> s
-T 860 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
--> l
-T 861 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
--> s
-T 862 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
--> s
-T 863 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+T 851 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
 -> e
-T 864 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
--> n
-T 865 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
+T 852 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
 -> s
-T 866 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
+T 853 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
 -> e
-T 867 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
+T 854 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
 -> s
-T 868 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
+T 855 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
 -> s
-T 869 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
+T 856 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
 -> n
-T 870 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
--> l
-T 871 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+T 857 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
 -> n
-T 872 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+T 858 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
 -> w
-T 873 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+T 859 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
 -> n
-T 874 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
--> w
-T 875 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
--> n
-T 876 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
--> n
-T 877 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> n
-T 878 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
--> n
-T 879 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
--> n
-T 880 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
+T 860 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
 -> l
-T 881 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
+T 861 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
+-> w
+T 862 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
+-> s
+T 863 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
+-> w
+T 864 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
 -> e
-T 882 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
--> n
-T 883 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
--> s
-T 884 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
--> n
-T 885 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
--> s
-T 886 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
--> w
-T 887 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
--> w
-T 888 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
--> s
-T 889 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
--> s
-T 890 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
--> l
-T 891 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
--> w
-T 892 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
--> s
-T 893 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
--> n
-T 894 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
--> s
-T 895 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
--> n
-T 896 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+T 865 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
 -> e
-T 897 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
+T 866 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
 -> n
-T 898 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
--> n
-T 899 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
--> e
-T 900 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
--> l
-T 901 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
--> e
-T 902 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
--> n
-T 903 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
--> s
-T 904 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> n
-T 905 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> s
-T 906 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+T 867 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
 -> w
-T 907 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
--> s
-T 908 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
--> w
-T 909 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+T 868 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
 -> n
-T 910 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+T 869 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
+-> n
+T 870 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
 -> l
-T 911 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+T 871 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
 -> n
-T 912 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+T 872 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
+-> e
+T 873 mode=game_loop           Farin Runesinger(dwa) F1@( 4,10) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+-> w
+T 874 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+-> n
+T 875 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+-> n
+T 876 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
+-> e
+T 877 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
+-> e
+T 878 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
+-> s
+T 879 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 9) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
+-> n
+T 880 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
+-> l
+T 881 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
+-> e
+T 882 mode=game_loop           Farin Runesinger(dwa) F1@( 6, 8) HP 78/78 MP 0/0 Hu 70 $ 866 room=T
+-> w
+T 883 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
+-> w
+T 884 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
+-> w
+T 885 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
+-> s
+T 886 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+-> w
+T 887 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
+-> n
+T 888 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
+-> n
+T 889 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
+-> s
+T 890 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
+-> l
+T 891 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
+-> e
+T 892 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
+-> s
+T 893 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
+-> w
+T 894 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
+-> s
+T 895 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
+-> w
+T 896 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
+-> s
+T 897 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
+-> n
+T 898 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+-> e
+T 899 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
+-> n
+T 900 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
+-> l
+T 901 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
+-> n
+T 902 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
+-> n
+T 903 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+-> s
+T 904 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+-> e
+T 905 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
+-> e
+T 906 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
+-> n
+T 907 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
+-> s
+T 908 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+-> e
+T 909 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+-> s
+T 910 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 9) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+-> l
+T 911 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 9) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+-> n
+T 912 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+-> e
+T 913 mode=game_loop           Farin Runesinger(dwa) F1@( 6, 8) HP 78/78 MP 0/0 Hu 50 $ 866 room=T
+-> w
+T 914 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
 -> i
-T 913 mode=inventory           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+T 915 mode=inventory           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
 -> eat1
-T 914 mode=inventory           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+T 916 mode=inventory           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
 -> x
-T 915 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+T 917 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+-> w
+T 918 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+-> w
+T 919 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
+-> s
+T 920 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
+-> l
+T 921 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
+-> s
+T 922 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
+-> s
+T 923 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
+-> s
+T 924 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
+-> s
+T 925 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
+-> e
+T 926 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
+-> s
+T 927 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
+-> e
+T 928 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
+-> s
+T 929 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
+-> s
+T 930 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
+-> l
+T 931 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
 -> n
-T 916 mode=warp_mode           Farin Runesinger(dwa) F1@( 2, 6) HP 78/78 MP 0/0 Hu 99 $ 866 room=W
+T 932 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
+-> n
+T 933 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
+-> w
+T 934 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
+-> n
+T 935 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
+-> w
+T 936 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
+-> n
+T 937 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
+-> n
+T 938 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
+-> n
+T 939 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
+-> w
+T 940 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
+-> l
+T 941 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
+-> w
+T 942 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
+-> s
+T 943 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
+-> n
+T 944 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
+-> e
+T 945 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
+-> n
+T 946 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
+-> n
+T 947 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+-> n
+T 948 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+-> s
+T 949 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
+-> e
+T 950 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
+-> l
+T 951 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
+-> s
+T 952 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
+-> w
+T 953 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
+-> s
+T 954 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
+-> w
+T 955 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
+-> s
+T 956 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+-> n
+T 957 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+-> s
+T 958 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
+-> n
+T 959 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
+-> e
+T 960 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
+-> l
+T 961 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
+-> e
+T 962 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
+-> e
+T 963 mode=game_loop           Farin Runesinger(dwa) F1@( 4,10) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
+-> w
+T 964 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
+-> n
+T 965 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
+-> n
+T 966 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
+-> w
+T 967 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
+-> n
+T 968 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+-> s
+T 969 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
+-> s
+T 970 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
+-> l
+T 971 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
+-> s
+T 972 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
+-> e
+T 973 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
+-> e
+T 974 mode=game_loop           Farin Runesinger(dwa) F1@( 4,10) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
+-> w
+T 975 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
+-> n
+T 976 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
+-> w
+T 977 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
+-> s
+T 978 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
+-> w
+T 979 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
+-> s
+T 980 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+-> l
+T 981 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+-> n
+T 982 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+-> s
+T 983 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
+-> n
+T 984 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
+-> e
+T 985 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
+-> e
+T 986 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+-> n
+T 987 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
+-> n
+T 988 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
+-> w
+T 989 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
+-> s
+T 990 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+-> l
+T 991 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+-> s
+T 992 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+-> w
+T 993 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+-> s
+T 994 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+-> n
+T 995 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+-> s
+T 996 mode=game_loop           Farin Runesinger(dwa) F1@( 1,11) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+-> n
+T 997 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+-> i
+T 998 mode=inventory           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+-> eat1
+T 999 mode=inventory           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+-> x
+T1000 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+-> l
+T1001 mode=game_loop           Farin Runesinger(dwa) F1@( 1,10) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+-> e
+T1002 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
+-> e
+T1003 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
+-> n
+T1004 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
+-> w
+T1005 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
+-> n
+T1006 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
+-> e
+T1007 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
+-> e
+T1008 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
+-> n
+T1009 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
+-> s
+T1010 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
+-> l
+T1011 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
+-> e
+T1012 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
+-> s
+T1013 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 9) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
+-> n
+T1014 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
+-> e
+T1015 mode=game_loop           Farin Runesinger(dwa) F1@( 6, 8) HP 78/78 MP 0/0 Hu 90 $ 866 room=T
+-> w
+T1016 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
+-> w
+T1017 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
+-> w
+T1018 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
+-> s
+T1019 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
+-> w
+T1020 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
+-> l
+T1021 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
+-> s
+T1022 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
+-> e
+T1023 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
+-> s
+T1024 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
+-> s
+T1025 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
+-> s
+T1026 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
+-> s
+T1027 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
+-> e
+T1028 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
+-> n
+T1029 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
+-> s
+T1030 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+-> l
+T1031 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+-> e
+T1032 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
+-> s
+T1033 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
+-> s
+T1034 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
+-> n
+T1035 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
+-> s
+T1036 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
+-> n
+T1037 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
+-> n
+T1038 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
+-> w
+T1039 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+-> n
+T1040 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+-> l
+T1041 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
+-> w
+T1042 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
+-> n
+T1043 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
+-> n
+T1044 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
+-> n
+T1045 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
+-> w
+T1046 mode=game_loop           Farin Runesinger(dwa) F1@( 2,10) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
+-> n
+T1047 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 9) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
+-> n
+T1048 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
+-> n
+T1049 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
+-> s
+T1050 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+-> l
+T1051 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+-> e
+T1052 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+-> e
+T1053 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
+-> e
+T1054 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
+-> s
+T1055 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 9) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
+-> n
+T1056 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
+-> e
+T1057 mode=game_loop           Farin Runesinger(dwa) F1@( 6, 8) HP 78/78 MP 0/0 Hu 63 $ 866 room=T
+-> w
+T1058 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
+-> w
+T1059 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
+-> n
+T1060 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
+-> l
+T1061 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 7) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
+-> s
+T1062 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
+-> w
+T1063 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
+-> s
+T1064 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
+-> s
+T1065 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
+-> s
+T1066 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
+-> s
+T1067 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
+-> s
+T1068 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+-> s
+T1069 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+-> e
+T1070 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
+-> l
+T1071 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
+-> e
+T1072 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
+-> s
+T1073 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+-> s
+T1074 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+-> n
+T1075 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+-> s
+T1076 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+-> n
+T1077 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
+-> n
+T1078 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+-> w
+T1079 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+-> i
+T1080 mode=inventory           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+-> eat1
+T1081 mode=inventory           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+-> x
+T1082 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+-> n
+T1083 mode=game_loop           Farin Runesinger(dwa) F1@( 4,13) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
+-> w
+T1084 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
+-> s
+T1085 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
+-> w
+T1086 mode=game_loop           Farin Runesinger(dwa) F1@( 2,14) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
+-> e
+T1087 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
+-> e
+T1088 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
+-> e
+T1089 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
+-> s
+T1090 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
+-> l
+T1091 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
+-> s
+T1092 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
+-> n
+T1093 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
+-> s
+T1094 mode=game_loop           Farin Runesinger(dwa) F1@( 5,16) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
+-> n
+T1095 mode=game_loop           Farin Runesinger(dwa) F1@( 5,15) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
+-> n
+T1096 mode=game_loop           Farin Runesinger(dwa) F1@( 5,14) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
+-> w
+T1097 mode=game_loop           Farin Runesinger(dwa) F1@( 4,14) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
+-> w
+T1098 mode=game_loop           Farin Runesinger(dwa) F1@( 3,14) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
+-> n
+T1099 mode=game_loop           Farin Runesinger(dwa) F1@( 3,13) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
+-> n
+T1100 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
+-> l
+T1101 mode=game_loop           Farin Runesinger(dwa) F1@( 3,12) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
+-> n
+T1102 mode=game_loop           Farin Runesinger(dwa) F1@( 3,11) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
+-> n
+T1103 mode=game_loop           Farin Runesinger(dwa) F1@( 3,10) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
+-> n
+T1104 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 9) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
+-> n
+T1105 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
+-> e
+T1106 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
+-> e
+T1107 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 8) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
+-> w
+T1108 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 8) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
+-> w
+T1109 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 8) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
+-> w
+T1110 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
+-> l
+T1111 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 8) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
+-> n
+T1112 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 7) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
+-> n
+T1113 mode=warp_mode           Farin Runesinger(dwa) F1@( 2, 6) HP 78/78 MP 0/0 Hu 80 $ 866 room=W
 -> y
-T 917 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 6) HP 78/78 MP 0/0 Hu 99 $ 866 room=W
--> n
-T 918 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
--> n
-T 919 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
--> n
-T 920 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
+T1114 mode=game_loop           Farin Runesinger(dwa) F1@(18,15) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
 -> l
-T 921 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
--> e
-T 922 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
--> e
-T 923 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
--> e
-T 924 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 3) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
+T1115 mode=game_loop           Farin Runesinger(dwa) F1@(18,15) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
 -> s
-T 925 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 4) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
--> w
-T 926 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
--> w
-T 927 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
--> w
-T 928 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
--> n
-T 929 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
--> e
-T 930 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
+T1116 mode=game_loop           Farin Runesinger(dwa) F1@(18,16) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
 -> l
-T 931 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
+T1117 mode=game_loop           Farin Runesinger(dwa) F1@(18,16) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
 -> e
-T 932 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
--> n
-T 933 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 2) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
--> n
-T 934 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 1) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
--> w
-T 935 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
--> s
-T 936 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
--> s
-T 937 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
--> w
-T 938 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
--> s
-T 939 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
--> w
-T 940 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
--> l
-T 941 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
--> n
-T 942 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
--> n
-T 943 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
--> n
-T 944 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 82 $ 866 room=E
--> e
-T 945 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
--> s
-T 946 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
--> s
-T 947 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
--> w
-T 948 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
--> s
-T 949 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
--> e
-T 950 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
--> l
-T 951 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
--> s
-T 952 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
--> n
-T 953 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
--> n
-T 954 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
--> n
-T 955 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
--> w
-T 956 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
--> n
-T 957 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 73 $ 866 room=E
--> e
-T 958 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
--> e
-T 959 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
--> s
-T 960 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> l
-T 961 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> e
-T 962 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 2) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> n
-T 963 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 1) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
--> e
-T 964 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 1) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
--> e
-T 965 mode=game_loop           Farin Runesinger(dwa) F1@( 6, 1) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
--> e
-T 966 mode=game_loop           Farin Runesinger(dwa) F1@( 7, 1) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
--> e
-T 967 mode=game_loop           Farin Runesinger(dwa) F1@( 8, 1) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
--> e
-T 968 mode=game_loop           Farin Runesinger(dwa) F1@( 9, 1) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
--> e
-T 969 mode=game_loop           Farin Runesinger(dwa) F1@(10, 1) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
--> s
-T 970 mode=game_loop           Farin Runesinger(dwa) F1@(10, 2) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
--> l
-T 971 mode=game_loop           Farin Runesinger(dwa) F1@(10, 2) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
--> e
-T 972 mode=game_loop           Farin Runesinger(dwa) F1@(11, 2) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
--> e
-T 973 mode=game_loop           Farin Runesinger(dwa) F1@(12, 2) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
--> w
-T 974 mode=game_loop           Farin Runesinger(dwa) F1@(11, 2) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
--> e
-T 975 mode=game_loop           Farin Runesinger(dwa) F1@(12, 2) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
--> w
-T 976 mode=game_loop           Farin Runesinger(dwa) F1@(11, 2) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
--> w
-T 977 mode=game_loop           Farin Runesinger(dwa) F1@(10, 2) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
--> n
-T 978 mode=game_loop           Farin Runesinger(dwa) F1@(10, 1) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
--> w
-T 979 mode=game_loop           Farin Runesinger(dwa) F1@( 9, 1) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
--> w
-T 980 mode=game_loop           Farin Runesinger(dwa) F1@( 8, 1) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
--> l
-T 981 mode=game_loop           Farin Runesinger(dwa) F1@( 8, 1) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
--> s
-T 982 mode=game_loop           Farin Runesinger(dwa) F1@( 8, 2) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
--> w
-T 983 mode=game_loop           Farin Runesinger(dwa) F1@( 7, 2) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
--> s
-T 984 mode=game_loop           Farin Runesinger(dwa) F1@( 7, 3) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
--> w
-T 985 mode=game_loop           Farin Runesinger(dwa) F1@( 6, 3) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
--> w
-T 986 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 3) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
--> s
-T 987 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 4) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
--> w
-T 988 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> w
-T 989 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
--> n
-T 990 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
--> l
-T 991 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
--> w
-T 992 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
--> s
-T 993 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
--> w
-T 994 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
--> n
-T 995 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
--> n
-T 996 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
--> i
-T 997 mode=inventory           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
--> eat1
-T 998 mode=inventory           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
--> x
-T 999 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
--> n
-T1000 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 98 $ 866 room=E
--> l
-T1001 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 98 $ 866 room=E
--> e
-T1002 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
--> s
-T1003 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
--> e
-T1004 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
--> s
-T1005 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
--> w
-T1006 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
--> w
-T1007 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
--> n
-T1008 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
--> e
-T1009 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
--> n
-T1010 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
--> l
-T1011 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
--> w
-T1012 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 91 $ 866 room=E
--> s
-T1013 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
--> s
-T1014 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
--> s
-T1015 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
--> e
-T1016 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
--> e
-T1017 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
--> n
-T1018 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
--> n
-T1019 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
--> n
-T1020 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
--> l
-T1021 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
--> w
-T1022 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
--> s
-T1023 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
--> w
-T1024 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
--> s
-T1025 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
--> e
-T1026 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
--> e
-T1027 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
--> n
-T1028 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
--> n
-T1029 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
--> e
-T1030 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 1) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
--> l
-T1031 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 1) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
--> s
-T1032 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 2) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
--> e
-T1033 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 2) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
--> s
-T1034 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 3) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
--> s
-T1035 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 4) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
--> w
-T1036 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
--> w
-T1037 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
--> w
-T1038 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
--> w
-T1039 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
--> n
-T1040 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
--> l
-T1041 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
--> n
-T1042 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
--> n
-T1043 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 72 $ 866 room=E
--> e
-T1044 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> e
-T1045 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
--> s
-T1046 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
--> s
-T1047 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
--> s
-T1048 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
--> w
-T1049 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
--> s
-T1050 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
--> l
-T1051 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
--> n
-T1052 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
--> n
-T1053 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
--> n
-T1054 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
--> e
-T1055 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
--> e
-T1056 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 2) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
--> n
-T1057 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 1) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
--> w
-T1058 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
--> w
-T1059 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
--> w
-T1060 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 60 $ 866 room=E
--> l
-T1061 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 60 $ 866 room=E
--> s
-T1062 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
--> s
-T1063 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
--> s
-T1064 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
--> e
-T1065 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
--> s
-T1066 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
--> n
-T1067 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
--> e
-T1068 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
--> n
-T1069 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
--> e
-T1070 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> l
-T1071 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> n
-T1072 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 2) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
--> n
-T1073 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 1) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
--> e
-T1074 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 1) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
--> s
-T1075 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 2) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
--> s
-T1076 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 3) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
--> s
-T1077 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 4) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
--> w
-T1078 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
--> i
-T1079 mode=inventory           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
--> eat1
-T1080 mode=inventory           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
--> x
-T1081 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
--> n
-T1082 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 99 $ 866 room=.
--> w
-T1083 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 98 $ 866 room=.
--> w
-T1084 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 97 $ 866 room=.
--> n
-T1085 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
--> e
-T1086 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 96 $ 866 room=.
--> n
-T1087 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 95 $ 866 room=.
--> w
-T1088 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 94 $ 866 room=.
--> w
-T1089 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 94 $ 866 room=E
--> s
-T1090 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
--> l
-T1091 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 93 $ 866 room=.
--> s
-T1092 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
--> s
-T1093 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 92 $ 866 room=.
--> e
-T1094 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 91 $ 866 room=.
--> s
-T1095 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu 90 $ 866 room=.
--> n
-T1096 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
--> e
-T1097 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 89 $ 866 room=.
--> n
-T1098 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 88 $ 866 room=.
--> n
-T1099 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
--> n
-T1100 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
--> l
-T1101 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 87 $ 866 room=.
--> w
-T1102 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 86 $ 866 room=.
--> s
-T1103 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
--> w
-T1104 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 85 $ 866 room=.
--> s
-T1105 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 84 $ 866 room=.
--> s
-T1106 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 83 $ 866 room=.
--> e
-T1107 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
--> e
-T1108 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 82 $ 866 room=.
--> e
-T1109 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 81 $ 866 room=.
--> n
-T1110 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
--> l
-T1111 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
--> w
-T1112 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 80 $ 866 room=.
--> n
-T1113 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 79 $ 866 room=.
--> n
-T1114 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
--> w
-T1115 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
--> s
-T1116 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
--> s
-T1117 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
--> w
-T1118 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
--> s
-T1119 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
--> e
-T1120 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
--> l
-T1121 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
--> e
-T1122 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
--> e
-T1123 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
--> n
-T1124 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
--> e
-T1125 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 3) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> n
-T1126 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 2) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
--> w
-T1127 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 2) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
--> w
-T1128 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 69 $ 866 room=.
--> s
-T1129 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
--> s
-T1130 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
--> l
-T1131 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
--> w
-T1132 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
--> n
-T1133 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
--> w
-T1134 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
--> n
-T1135 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 65 $ 866 room=.
--> n
-T1136 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 64 $ 866 room=E
--> e
-T1137 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
--> s
-T1138 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
--> s
-T1139 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
--> w
-T1140 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
--> l
-T1141 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
--> s
-T1142 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
--> e
-T1143 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
--> s
-T1144 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
--> n
-T1145 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
--> e
-T1146 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
--> n
-T1147 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
--> e
-T1148 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
--> s
-T1149 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
--> e
-T1150 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 4) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
--> l
-T1151 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 4) HP 78/78 MP 0/0 Hu 55 $ 866 room=.
--> n
-T1152 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 3) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> e
-T1153 mode=game_loop           Farin Runesinger(dwa) F1@( 6, 3) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
--> e
-T1154 mode=game_loop           Farin Runesinger(dwa) F1@( 7, 3) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
--> n
-T1155 mode=game_loop           Farin Runesinger(dwa) F1@( 7, 2) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
--> n
-T1156 mode=game_loop           Farin Runesinger(dwa) F1@( 7, 1) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
--> e
-T1157 mode=game_loop           Farin Runesinger(dwa) F1@( 8, 1) HP 78/78 MP 0/0 Hu 51 $ 866 room=.
--> s
-T1158 mode=game_loop           Farin Runesinger(dwa) F1@( 8, 2) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
--> n
-T1159 mode=game_loop           Farin Runesinger(dwa) F1@( 8, 1) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
--> e
-T1160 mode=game_loop           Farin Runesinger(dwa) F1@( 9, 1) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
--> l
-T1161 mode=game_loop           Farin Runesinger(dwa) F1@( 9, 1) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
--> e
-T1162 mode=game_loop           Farin Runesinger(dwa) F1@(10, 1) HP 78/78 MP 0/0 Hu 48 $ 866 room=.
--> s
-T1163 mode=game_loop           Farin Runesinger(dwa) F1@(10, 2) HP 78/78 MP 0/0 Hu 47 $ 866 room=.
--> e
-T1164 mode=game_loop           Farin Runesinger(dwa) F1@(11, 2) HP 78/78 MP 0/0 Hu 47 $ 866 room=.
--> e
-T1165 mode=game_loop           Farin Runesinger(dwa) F1@(12, 2) HP 78/78 MP 0/0 Hu 46 $ 866 room=.
--> w
-T1166 mode=game_loop           Farin Runesinger(dwa) F1@(11, 2) HP 78/78 MP 0/0 Hu 45 $ 866 room=.
--> e
-T1167 mode=game_loop           Farin Runesinger(dwa) F1@(12, 2) HP 78/78 MP 0/0 Hu 45 $ 866 room=.
--> w
-T1168 mode=game_loop           Farin Runesinger(dwa) F1@(11, 2) HP 78/78 MP 0/0 Hu 44 $ 866 room=.
--> w
-T1169 mode=game_loop           Farin Runesinger(dwa) F1@(10, 2) HP 78/78 MP 0/0 Hu 43 $ 866 room=.
--> n
-T1170 mode=game_loop           Farin Runesinger(dwa) F1@(10, 1) HP 78/78 MP 0/0 Hu 43 $ 866 room=.
--> l
-T1171 mode=game_loop           Farin Runesinger(dwa) F1@(10, 1) HP 78/78 MP 0/0 Hu 43 $ 866 room=.
--> w
-T1172 mode=game_loop           Farin Runesinger(dwa) F1@( 9, 1) HP 78/78 MP 0/0 Hu 42 $ 866 room=.
--> w
-T1173 mode=game_loop           Farin Runesinger(dwa) F1@( 8, 1) HP 78/78 MP 0/0 Hu 41 $ 866 room=.
--> s
-T1174 mode=game_loop           Farin Runesinger(dwa) F1@( 8, 2) HP 78/78 MP 0/0 Hu 40 $ 866 room=.
--> w
-T1175 mode=game_loop           Farin Runesinger(dwa) F1@( 7, 2) HP 78/78 MP 0/0 Hu 40 $ 866 room=.
--> n
-T1176 mode=game_loop           Farin Runesinger(dwa) F1@( 7, 1) HP 78/78 MP 0/0 Hu 39 $ 866 room=.
--> w
-T1177 mode=game_loop           Farin Runesinger(dwa) F1@( 6, 1) HP 78/78 MP 0/0 Hu 38 $ 866 room=.
--> w
-T1178 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 1) HP 78/78 MP 0/0 Hu 38 $ 866 room=.
--> w
-T1179 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 1) HP 78/78 MP 0/0 Hu 37 $ 866 room=.
--> w
-T1180 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 36 $ 866 room=.
--> l
-T1181 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 36 $ 866 room=.
--> s
-T1182 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 36 $ 866 room=.
--> w
-T1183 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 35 $ 866 room=.
--> n
-T1184 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 34 $ 866 room=.
--> w
-T1185 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 33 $ 866 room=E
--> s
-T1186 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 33 $ 866 room=.
--> s
-T1187 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 32 $ 866 room=.
--> s
-T1188 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 31 $ 866 room=.
--> e
-T1189 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 31 $ 866 room=.
--> s
-T1190 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu 30 $ 866 room=.
--> l
-T1191 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu 30 $ 866 room=.
--> n
-T1192 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 29 $ 866 room=.
--> n
-T1193 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu 29 $ 866 room=.
--> n
-T1194 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu 28 $ 866 room=.
--> e
-T1195 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 27 $ 866 room=.
--> s
-T1196 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 26 $ 866 room=.
--> s
-T1197 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 26 $ 866 room=.
--> e
-T1198 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 4) HP 78/78 MP 0/0 Hu 25 $ 866 room=.
--> e
-T1199 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 4) HP 78/78 MP 0/0 Hu 24 $ 866 room=.
--> n
-T1200 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 3) HP 78/78 MP 0/0 Hu 24 $ 866 room=.
--> l
-T1201 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 3) HP 78/78 MP 0/0 Hu 24 $ 866 room=.
--> n
-T1202 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 2) HP 78/78 MP 0/0 Hu 23 $ 866 room=.
--> w
-T1203 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 2) HP 78/78 MP 0/0 Hu 22 $ 866 room=.
--> w
-T1204 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 22 $ 866 room=.
--> s
-T1205 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 21 $ 866 room=.
--> s
-T1206 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 4) HP 78/78 MP 0/0 Hu 20 $ 866 room=.
--> w
-T1207 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu 19 $ 866 room=.
--> w
-T1208 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu 19 $ 866 room=.
--> n
-T1209 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu 18 $ 866 room=.
--> n
-T1210 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 17 $ 866 room=.
--> l
-T1211 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu 17 $ 866 room=.
--> n
-T1212 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu 17 $ 866 room=E
--> e
-T1213 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu 16 $ 866 room=.
--> e
-T1214 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 15 $ 866 room=.
--> s
-T1215 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 2) HP 78/78 MP 0/0 Hu 15 $ 866 room=.
--> s
-T1216 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 3) HP 78/78 MP 0/0 Hu 14 $ 866 room=.
--> e
-T1217 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 3) HP 78/78 MP 0/0 Hu 13 $ 866 room=.
--> n
-T1218 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 2) HP 78/78 MP 0/0 Hu 12 $ 866 room=.
--> e
-T1219 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 2) HP 78/78 MP 0/0 Hu 12 $ 866 room=.
--> n
-T1220 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 1) HP 78/78 MP 0/0 Hu 11 $ 866 room=.
--> l
-T1221 mode=game_loop           Farin Runesinger(dwa) F1@( 5, 1) HP 78/78 MP 0/0 Hu 11 $ 866 room=.
--> w
-T1222 mode=game_loop           Farin Runesinger(dwa) F1@( 4, 1) HP 78/78 MP 0/0 Hu 10 $ 866 room=.
--> w
-T1223 mode=game_loop           Farin Runesinger(dwa) F1@( 3, 1) HP 78/78 MP 0/0 Hu 10 $ 866 room=.
--> w
-T1224 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu  9 $ 866 room=.
--> w
-T1225 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 1) HP 78/78 MP 0/0 Hu  8 $ 866 room=E
--> s
-T1226 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 2) HP 78/78 MP 0/0 Hu  8 $ 866 room=.
--> s
-T1227 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 3) HP 78/78 MP 0/0 Hu  7 $ 866 room=.
--> s
-T1228 mode=game_loop           Farin Runesinger(dwa) F1@( 1, 4) HP 78/78 MP 0/0 Hu  6 $ 866 room=.
--> e
-T1229 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu  5 $ 866 room=.
--> n
-T1230 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu  5 $ 866 room=.
--> l
-T1231 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu  5 $ 866 room=.
--> n
-T1232 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu  4 $ 866 room=.
--> n
-T1233 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 1) HP 78/78 MP 0/0 Hu  3 $ 866 room=.
--> s
-T1234 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 2) HP 78/78 MP 0/0 Hu  3 $ 866 room=.
--> s
-T1235 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 3) HP 78/78 MP 0/0 Hu  2 $ 866 room=.
--> s
-T1236 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 4) HP 78/78 MP 0/0 Hu  1 $ 866 room=.
--> s
-T1237 mode=game_loop           Farin Runesinger(dwa) F1@( 2, 5) HP 78/78 MP 0/0 Hu  1 $ 866 room=.
--> s
-T1238 mode=warp_mode           Farin Runesinger(dwa) F1@( 2, 6) HP 76/78 MP 0/0 Hu  0 $ 866 room=W
--> y
-T1239 mode=game_loop           Farin Runesinger(dwa) F1@(18,15) HP 76/78 MP 0/0 Hu  0 $ 866 room=.
--> l
-T1240 mode=game_loop           Farin Runesinger(dwa) F1@(18,15) HP 76/78 MP 0/0 Hu  0 $ 866 room=.
--> l
-T1241 mode=game_loop           Farin Runesinger(dwa) F1@(18,15) HP 76/78 MP 0/0 Hu  0 $ 866 room=.
--> s
-T1242 mode=game_loop           Farin Runesinger(dwa) F1@(18,16) HP 74/78 MP 0/0 Hu  0 $ 866 room=.
--> l
-T1243 mode=game_loop           Farin Runesinger(dwa) F1@(18,16) HP 74/78 MP 0/0 Hu  0 $ 866 room=.
--> e
-T1244 mode=chest_mode          Farin Runesinger(dwa) F1@(19,16) HP 72/78 MP 0/0 Hu  0 $ 866 room=C
+T1118 mode=chest_mode          Farin Runesinger(dwa) F1@(19,16) HP 78/78 MP 0/0 Hu 78 $ 866 room=C
 -> o
-T1245 mode=game_loop           Farin Runesinger(dwa) F1@(19,16) HP 72/78 MP 0/0 Hu  0 $ 866 room=.
+T1119 mode=game_loop           Farin Runesinger(dwa) F1@(19,16) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
 -> n
-T1246 mode=game_loop           Farin Runesinger(dwa) F1@(19,15) HP 70/78 MP 0/0 Hu  0 $ 866 room=.
+T1120 mode=game_loop           Farin Runesinger(dwa) F1@(19,15) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
 -> l
-T1247 mode=game_loop           Farin Runesinger(dwa) F1@(19,15) HP 70/78 MP 0/0 Hu  0 $ 866 room=.
+T1121 mode=game_loop           Farin Runesinger(dwa) F1@(19,15) HP 78/78 MP 0/0 Hu 78 $ 866 room=.
 -> s
-T1248 mode=game_loop           Farin Runesinger(dwa) F1@(19,16) HP 68/78 MP 0/0 Hu  0 $ 866 room=.
+T1122 mode=game_loop           Farin Runesinger(dwa) F1@(19,16) HP 78/78 MP 0/0 Hu 77 $ 866 room=.
 -> n
-T1249 mode=game_loop           Farin Runesinger(dwa) F1@(19,15) HP 66/78 MP 0/0 Hu  0 $ 866 room=.
+T1123 mode=game_loop           Farin Runesinger(dwa) F1@(19,15) HP 78/78 MP 0/0 Hu 76 $ 866 room=.
 -> w
-T1250 mode=game_loop           Farin Runesinger(dwa) F1@(18,15) HP 64/78 MP 0/0 Hu  0 $ 866 room=.
--> l
-T1251 mode=game_loop           Farin Runesinger(dwa) F1@(18,15) HP 64/78 MP 0/0 Hu  0 $ 866 room=.
+T1124 mode=game_loop           Farin Runesinger(dwa) F1@(18,15) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
 -> n
-T1252 mode=game_loop           Farin Runesinger(dwa) F1@(18,14) HP 62/78 MP 0/0 Hu  0 $ 866 room=.
+T1125 mode=game_loop           Farin Runesinger(dwa) F1@(18,14) HP 78/78 MP 0/0 Hu 75 $ 866 room=.
 -> n
-T1253 mode=game_loop           Farin Runesinger(dwa) F1@(18,13) HP 60/78 MP 0/0 Hu  0 $ 866 room=.
+T1126 mode=game_loop           Farin Runesinger(dwa) F1@(18,13) HP 78/78 MP 0/0 Hu 74 $ 866 room=.
 -> e
-T1254 mode=stairs_down_mode    Farin Runesinger(dwa) F1@(19,13) HP 58/78 MP 0/0 Hu  0 $ 866 room=D
+T1127 mode=stairs_down_mode    Farin Runesinger(dwa) F1@(19,13) HP 78/78 MP 0/0 Hu 73 $ 866 room=D
 -> d
-T1255 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 58/78 MP 0/0 Hu  0 $ 866 room=U
+T1128 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 73 $ 866 room=U
 -> s
-T1256 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 56/78 MP 0/0 Hu  0 $ 866 room=.
+T1129 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 73 $ 866 room=.
 -> e
-T1257 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 54/78 MP 0/0 Hu  0 $ 866 room=.
+T1130 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 72 $ 866 room=.
 -> n
-T1258 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 52/78 MP 0/0 Hu  0 $ 866 room=.
+T1131 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
 -> e
-T1259 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 50/78 MP 0/0 Hu  0 $ 866 room=.
+T1132 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 71 $ 866 room=.
 -> w
-T1260 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 48/78 MP 0/0 Hu  0 $ 866 room=.
+T1133 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 70 $ 866 room=.
 -> w
-T1261 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 46/78 MP 0/0 Hu  0 $ 866 room=U
+T1134 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 69 $ 866 room=U
 -> s
-T1262 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 44/78 MP 0/0 Hu  0 $ 866 room=.
+T1135 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
 -> e
-T1263 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 42/78 MP 0/0 Hu  0 $ 866 room=.
+T1136 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 68 $ 866 room=.
+-> w
+T1137 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 67 $ 866 room=.
+-> e
+T1138 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
 -> n
-T1264 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 40/78 MP 0/0 Hu  0 $ 866 room=.
--> e
-T1265 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 38/78 MP 0/0 Hu  0 $ 866 room=.
+T1139 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 66 $ 866 room=.
 -> w
-T1266 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 36/78 MP 0/0 Hu  0 $ 866 room=.
--> w
-T1267 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 34/78 MP 0/0 Hu  0 $ 866 room=U
+T1140 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 65 $ 866 room=U
 -> s
-T1268 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 32/78 MP 0/0 Hu  0 $ 866 room=.
--> e
-T1269 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 30/78 MP 0/0 Hu  0 $ 866 room=.
+T1141 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 64 $ 866 room=.
 -> n
-T1270 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 28/78 MP 0/0 Hu  0 $ 866 room=.
--> e
-T1271 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 26/78 MP 0/0 Hu  0 $ 866 room=.
--> w
-T1272 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 24/78 MP 0/0 Hu  0 $ 866 room=.
--> w
-T1273 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 22/78 MP 0/0 Hu  0 $ 866 room=U
+T1142 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 64 $ 866 room=U
 -> s
-T1274 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 20/78 MP 0/0 Hu  0 $ 866 room=.
+T1143 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 63 $ 866 room=.
 -> e
-T1275 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 18/78 MP 0/0 Hu  0 $ 866 room=.
+T1144 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 62 $ 866 room=.
 -> n
-T1276 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 16/78 MP 0/0 Hu  0 $ 866 room=.
+T1145 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
 -> e
-T1277 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 14/78 MP 0/0 Hu  0 $ 866 room=.
+T1146 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 61 $ 866 room=.
 -> w
-T1278 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 12/78 MP 0/0 Hu  0 $ 866 room=.
+T1147 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 60 $ 866 room=.
 -> w
-T1279 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 10/78 MP 0/0 Hu  0 $ 866 room=U
+T1148 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 59 $ 866 room=U
 -> s
-T1280 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 8/78 MP 0/0 Hu  0 $ 866 room=.
+T1149 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 59 $ 866 room=.
 -> e
-T1281 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 6/78 MP 0/0 Hu  0 $ 866 room=.
--> w
-T1282 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 4/78 MP 0/0 Hu  0 $ 866 room=.
+T1150 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 58 $ 866 room=.
 -> n
-T1283 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 2/78 MP 0/0 Hu  0 $ 866 room=U
+T1151 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
 -> e
-T1284 mode=death_screen        Farin Runesinger(dwa) F2@( 2, 1) HP 0/78 MP 0/0 Hu  0 $ 866 room=.
+T1152 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 57 $ 866 room=.
+-> w
+T1153 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 56 $ 866 room=.
+-> w
+T1154 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 55 $ 866 room=U
+-> s
+T1155 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
+-> e
+T1156 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 54 $ 866 room=.
+-> n
+T1157 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 53 $ 866 room=.
+-> e
+T1158 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+-> w
+T1159 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 52 $ 866 room=.
+-> w
+T1160 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 51 $ 866 room=U
+-> s
+T1161 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+-> e
+T1162 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 50 $ 866 room=.
+-> w
+T1163 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 49 $ 866 room=.
+-> n
+T1164 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 48 $ 866 room=U
+-> e
+T1165 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 47 $ 866 room=.
+-> e
+T1166 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 47 $ 866 room=.
+-> w
+T1167 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 46 $ 866 room=.
+-> s
+T1168 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 45 $ 866 room=.
+-> w
+T1169 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 45 $ 866 room=.
+-> n
+T1170 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 44 $ 866 room=U
+-> s
+T1171 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 43 $ 866 room=.
+-> e
+T1172 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 43 $ 866 room=.
+-> n
+T1173 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 42 $ 866 room=.
+-> e
+T1174 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 41 $ 866 room=.
+-> w
+T1175 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 40 $ 866 room=.
+-> w
+T1176 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 40 $ 866 room=U
+-> s
+T1177 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 39 $ 866 room=.
+-> e
+T1178 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 38 $ 866 room=.
+-> n
+T1179 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 38 $ 866 room=.
+-> e
+T1180 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 37 $ 866 room=.
+-> w
+T1181 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 36 $ 866 room=.
+-> w
+T1182 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 36 $ 866 room=U
+-> s
+T1183 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 35 $ 866 room=.
+-> e
+T1184 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 34 $ 866 room=.
+-> n
+T1185 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 33 $ 866 room=.
+-> e
+T1186 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 33 $ 866 room=.
+-> w
+T1187 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 32 $ 866 room=.
+-> w
+T1188 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 31 $ 866 room=U
+-> s
+T1189 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 31 $ 866 room=.
+-> e
+T1190 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 30 $ 866 room=.
+-> w
+T1191 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 29 $ 866 room=.
+-> e
+T1192 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 29 $ 866 room=.
+-> n
+T1193 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 28 $ 866 room=.
+-> w
+T1194 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 27 $ 866 room=U
+-> s
+T1195 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 26 $ 866 room=.
+-> e
+T1196 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 26 $ 866 room=.
+-> w
+T1197 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 25 $ 866 room=.
+-> e
+T1198 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 24 $ 866 room=.
+-> n
+T1199 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 24 $ 866 room=.
+-> w
+T1200 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 23 $ 866 room=U
+-> s
+T1201 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 22 $ 866 room=.
+-> n
+T1202 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 22 $ 866 room=U
+-> s
+T1203 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 21 $ 866 room=.
+-> e
+T1204 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 20 $ 866 room=.
+-> n
+T1205 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 19 $ 866 room=.
+-> e
+T1206 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 19 $ 866 room=.
+-> w
+T1207 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 18 $ 866 room=.
+-> w
+T1208 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 17 $ 866 room=U
+-> s
+T1209 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 17 $ 866 room=.
+-> e
+T1210 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 16 $ 866 room=.
+-> w
+T1211 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 15 $ 866 room=.
+-> n
+T1212 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 15 $ 866 room=U
+-> e
+T1213 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 14 $ 866 room=.
+-> e
+T1214 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu 13 $ 866 room=.
+-> w
+T1215 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu 12 $ 866 room=.
+-> s
+T1216 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu 12 $ 866 room=.
+-> w
+T1217 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 11 $ 866 room=.
+-> n
+T1218 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu 10 $ 866 room=U
+-> s
+T1219 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu 10 $ 866 room=.
+-> e
+T1220 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu  9 $ 866 room=.
+-> n
+T1221 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu  8 $ 866 room=.
+-> e
+T1222 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu  8 $ 866 room=.
+-> w
+T1223 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu  7 $ 866 room=.
+-> w
+T1224 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu  6 $ 866 room=U
+-> s
+T1225 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu  5 $ 866 room=.
+-> e
+T1226 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu  5 $ 866 room=.
+-> n
+T1227 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu  4 $ 866 room=.
+-> e
+T1228 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 78/78 MP 0/0 Hu  3 $ 866 room=.
+-> w
+T1229 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 78/78 MP 0/0 Hu  3 $ 866 room=.
+-> w
+T1230 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 78/78 MP 0/0 Hu  2 $ 866 room=U
+-> s
+T1231 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 78/78 MP 0/0 Hu  1 $ 866 room=.
+-> e
+T1232 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 78/78 MP 0/0 Hu  1 $ 866 room=.
+-> n
+T1233 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 76/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1234 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 74/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1235 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 72/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1236 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 70/78 MP 0/0 Hu  0 $ 866 room=U
+-> s
+T1237 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 68/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1238 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 66/78 MP 0/0 Hu  0 $ 866 room=.
+-> n
+T1239 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 64/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1240 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 62/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1241 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 60/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1242 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 58/78 MP 0/0 Hu  0 $ 866 room=U
+-> s
+T1243 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 56/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1244 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 54/78 MP 0/0 Hu  0 $ 866 room=.
+-> n
+T1245 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 52/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1246 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 50/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1247 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 48/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1248 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 46/78 MP 0/0 Hu  0 $ 866 room=U
+-> s
+T1249 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 44/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1250 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 42/78 MP 0/0 Hu  0 $ 866 room=.
+-> n
+T1251 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 40/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1252 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 38/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1253 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 36/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1254 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 34/78 MP 0/0 Hu  0 $ 866 room=U
+-> s
+T1255 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 32/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1256 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 30/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1257 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 28/78 MP 0/0 Hu  0 $ 866 room=.
+-> n
+T1258 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 26/78 MP 0/0 Hu  0 $ 866 room=U
+-> e
+T1259 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 24/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1260 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 22/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1261 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 20/78 MP 0/0 Hu  0 $ 866 room=.
+-> s
+T1262 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 18/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1263 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 16/78 MP 0/0 Hu  0 $ 866 room=.
+-> n
+T1264 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 14/78 MP 0/0 Hu  0 $ 866 room=U
+-> s
+T1265 mode=game_loop           Farin Runesinger(dwa) F2@( 1, 2) HP 12/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1266 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 2) HP 10/78 MP 0/0 Hu  0 $ 866 room=.
+-> n
+T1267 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 8/78 MP 0/0 Hu  0 $ 866 room=.
+-> e
+T1268 mode=game_loop           Farin Runesinger(dwa) F2@( 3, 1) HP 6/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1269 mode=game_loop           Farin Runesinger(dwa) F2@( 2, 1) HP 4/78 MP 0/0 Hu  0 $ 866 room=.
+-> w
+T1270 mode=stairs_up_mode      Farin Runesinger(dwa) F2@( 1, 1) HP 2/78 MP 0/0 Hu  0 $ 866 room=U
+-> s
+T1271 mode=death_screen        Farin Runesinger(dwa) F2@( 1, 2) HP 0/78 MP 0/0 Hu  0 $ 866 room=.
 
-=== run finished: turns=1284 floor=2 hp=0/78 gold=866 alive=False mode=death_screen ===
+=== run finished: turns=1271 floor=2 hp=0/78 gold=866 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/02025_dwarf.html

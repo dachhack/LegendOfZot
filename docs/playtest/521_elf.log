@@ -993,88 +993,64 @@ T 487 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 2) HP 10/38 MP 0/0
 T 488 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 1) HP 10/38 MP 0/0 Hu 16 $ 813 room=.
 -> w
 T 489 mode=game_loop           Cirdan the Bowyer(elf) F1@( 2, 1) HP 10/38 MP 0/0 Hu 16 $ 813 room=.
--> e
-T 490 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 1) HP 10/38 MP 0/0 Hu 15 $ 813 room=.
+-> w
+T 490 mode=game_loop           Cirdan the Bowyer(elf) F1@( 1, 1) HP 10/38 MP 0/0 Hu 15 $ 813 room=E
 -> l
-T 491 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 1) HP 10/38 MP 0/0 Hu 15 $ 813 room=.
+T 491 mode=game_loop           Cirdan the Bowyer(elf) F1@( 1, 1) HP 10/38 MP 0/0 Hu 15 $ 813 room=E
+-> s
+T 492 mode=tomb_mode           Cirdan the Bowyer(elf) F1@( 1, 2) HP 10/38 MP 0/0 Hu 14 $ 813 room=T
+-> p
+T 493 mode=game_loop           Cirdan the Bowyer(elf) F1@( 1, 2) HP 10/38 MP 0/0 Hu 14 $ 813 room=T
+-> n
+T 494 mode=game_loop           Cirdan the Bowyer(elf) F1@( 1, 1) HP 10/38 MP 0/0 Hu 13 $ 813 room=E
 -> e
-T 492 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 10/38 MP 0/0 Hu 14 $ 813 room=M vs Goblin(L0 HP30/30)
--> a
-T 493 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 9/38 MP 0/0 Hu 14 $ 813 room=M vs Goblin(L0 HP28/30)
--> f
-T 494 mode=flee_direction_mode Cirdan the Bowyer(elf) F1@( 4, 1) HP 9/38 MP 0/0 Hu 14 $ 813 room=M
--> s
-T 495 mode=game_loop           Cirdan the Bowyer(elf) F1@( 4, 2) HP 9/38 MP 0/0 Hu 14 $ 813 room=.
--> w
-T 496 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 2) HP 9/38 MP 0/0 Hu 13 $ 813 room=.
--> s
-T 497 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 3) HP 9/38 MP 0/0 Hu 13 $ 813 room=.
+T 495 mode=game_loop           Cirdan the Bowyer(elf) F1@( 2, 1) HP 10/38 MP 0/0 Hu 13 $ 813 room=.
 -> e
-T 498 mode=game_loop           Cirdan the Bowyer(elf) F1@( 4, 3) HP 9/38 MP 0/0 Hu 12 $ 813 room=.
+T 496 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 1) HP 10/38 MP 0/0 Hu 12 $ 813 room=.
 -> s
-T 499 mode=game_loop           Cirdan the Bowyer(elf) F1@( 4, 4) HP 9/38 MP 0/0 Hu 11 $ 813 room=.
--> w
-T 500 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 4) HP 9/38 MP 0/0 Hu 11 $ 813 room=.
--> l
-T 501 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 4) HP 9/38 MP 0/0 Hu 11 $ 813 room=.
--> s
-T 502 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 5) HP 9/38 MP 0/0 Hu 10 $ 813 room=.
--> s
-T 503 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 6) HP 9/38 MP 0/0 Hu  9 $ 813 room=.
--> w
-T 504 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 9/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP30/30)
+T 497 mode=game_loop           Cirdan the Bowyer(elf) F1@( 3, 2) HP 10/38 MP 0/0 Hu 11 $ 813 room=.
+-> e
+T 498 mode=game_loop           Cirdan the Bowyer(elf) F1@( 4, 2) HP 10/38 MP 0/0 Hu 11 $ 813 room=.
+-> n
+T 499 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 10/38 MP 0/0 Hu 10 $ 813 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T 505 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 9/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP28/30)
+T 500 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 9/38 MP 0/0 Hu 10 $ 813 room=M vs Giant Rat(L0 HP19/22)
 -> a
-T 506 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 9/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP26/30)
+T 501 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 8/38 MP 0/0 Hu 10 $ 813 room=M vs Giant Rat(L0 HP16/22)
 -> a
-T 507 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 9/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP24/30)
+T 502 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 8/38 MP 0/0 Hu 10 $ 813 room=M vs Giant Rat(L0 HP13/22)
 -> a
-T 508 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 8/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP22/30)
+T 503 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 8/38 MP 0/0 Hu 10 $ 813 room=M vs Giant Rat(L0 HP10/22)
 -> a
-T 509 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 8/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP22/30)
+T 504 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 8/38 MP 0/0 Hu 10 $ 813 room=M vs Giant Rat(L0 HP7/22)
 -> a
-T 510 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 8/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP20/30)
+T 505 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 7/38 MP 0/0 Hu 10 $ 813 room=M vs Giant Rat(L0 HP4/22)
 -> a
-T 511 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 7/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP18/30)
+T 506 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 6/38 MP 0/0 Hu 10 $ 813 room=M vs Giant Rat(L0 HP1/22)
 -> a
-T 512 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 7/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP16/30)
+T 507 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 4, 1) HP 5/38 MP 0/0 Hu 10 $ 813 room=M vs Giant Rat(L0 HP1/22)
 -> a
-T 513 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 7/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP16/30)
+T 508 mode=combat_victory      Cirdan the Bowyer(elf) F1@( 4, 1) HP 5/38 MP 0/0 Hu 10 $ 819 room=.
+-> back
+T 509 mode=game_loop           Cirdan the Bowyer(elf) F1@( 4, 1) HP 5/38 MP 0/0 Hu 10 $ 819 room=.
+-> e
+T 510 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 5, 1) HP 5/38 MP 0/0 Hu  9 $ 819 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T 514 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 6/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP14/30)
+T 511 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 5, 1) HP 4/38 MP 0/0 Hu  9 $ 819 room=M vs Giant Rat(L0 HP19/22)
 -> a
-T 515 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 5/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP12/30)
+T 512 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 5, 1) HP 3/38 MP 0/0 Hu  9 $ 819 room=M vs Giant Rat(L0 HP16/22)
 -> a
-T 516 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 5/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP12/30)
--> a
-T 517 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 4/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP10/30)
--> a
-T 518 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 3/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP10/30)
+T 513 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 5, 1) HP 3/38 MP 0/0 Hu  9 $ 819 room=M vs Giant Rat(L0 HP13/22)
 -> f
-T 519 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 3/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP10/30)
+T 514 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 5, 1) HP 2/38 MP 0/0 Hu  9 $ 819 room=M vs Giant Rat(L0 HP13/22)
 -> a
-T 520 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 2/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP10/30)
+T 515 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 5, 1) HP 2/38 MP 0/0 Hu  9 $ 819 room=M vs Giant Rat(L0 HP13/22)
 -> a
-T 521 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 2, 6) HP 2/38 MP 0/0 Hu  9 $ 813 room=M vs Goblin(L0 HP8/30)
--> f
-T 522 mode=flee_direction_mode Cirdan the Bowyer(elf) F1@( 2, 6) HP 2/38 MP 0/0 Hu  9 $ 813 room=M
--> w
-T 523 mode=garden_mode         Cirdan the Bowyer(elf) F1@( 1, 6) HP 2/38 MP 0/0 Hu  9 $ 813 room=G
--> h
-T 524 mode=game_loop           Cirdan the Bowyer(elf) F1@( 1, 6) HP 2/38 MP 0/0 Hu  9 $ 813 room=.
--> l
-T 525 mode=game_loop           Cirdan the Bowyer(elf) F1@( 1, 6) HP 2/38 MP 0/0 Hu  9 $ 813 room=.
--> s
-T 526 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 1, 7) HP 2/38 MP 0/0 Hu  8 $ 813 room=M vs Sewer Rat(L0 HP10/10)
+T 516 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 5, 1) HP 1/38 MP 0/0 Hu  9 $ 819 room=M vs Giant Rat(L0 HP13/22)
 -> a
-T 527 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 1, 7) HP 1/38 MP 0/0 Hu  8 $ 813 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T 528 mode=combat_mode         Cirdan the Bowyer(elf) F1@( 1, 7) HP 1/38 MP 0/0 Hu  8 $ 813 room=M vs Sewer Rat(L0 HP6/10)
--> a
-T 529 mode=death_screen        Cirdan the Bowyer(elf) F1@( 1, 7) HP 0/38 MP 0/0 Hu  8 $ 813 room=M
+T 517 mode=death_screen        Cirdan the Bowyer(elf) F1@( 5, 1) HP 0/38 MP 0/0 Hu  9 $ 819 room=M
 
-=== run finished: turns=529 floor=1 hp=0/38 gold=813 alive=False mode=death_screen ===
+=== run finished: turns=517 floor=1 hp=0/38 gold=819 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00521_elf.html
