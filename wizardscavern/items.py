@@ -2112,8 +2112,17 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
         scroll_tier = "Basic"
         next_tier_hint = "Scroll of Greater Upgrade (floor 5+)"
 
+    # Iterate the sorted view to match the rest of the game's slot
+    # numbering (vendor identify, use-item-slot, equip-item-slot all
+    # use get_sorted_inventory). Without this, the scroll menu numbers
+    # items by insertion order, so picking '1' in the menu doesn't
+    # correspond to the equipped weapon the player sees first in their
+    # bag. Playtester scanned 9 upgrade scrolls consumed on s=1 dwarf
+    # yet the equipped Halberd ended +0 upg -- the upgrades were being
+    # applied to junk weapons that got dropped later.
+    from .characters import get_sorted_inventory
     upgradable_items = []
-    for item in player_character.inventory.items:
+    for item in get_sorted_inventory(player_character.inventory):
         if isinstance(item, (Weapon, Armor)):
             upgradable_items.append(item)
 
@@ -2221,9 +2230,11 @@ def process_identify_scroll_action(player_character, my_tower, cmd):
         handle_inventory_menu(player_character, my_tower, "init")
         return
     
-    # Build list of unidentified items
+    # Sorted view for consistent slot numbering with the rest of
+    # the game (see upgrade-scroll comment above).
+    from .characters import get_sorted_inventory
     unidentified_items = []
-    for item in player_character.inventory.items:
+    for item in get_sorted_inventory(player_character.inventory):
         if isinstance(item, (Potion, Scroll, Spell, Weapon, Armor)):
             if not is_item_identified(item):
                 unidentified_items.append(item)

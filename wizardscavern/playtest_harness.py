@@ -635,7 +635,7 @@ ACTION_HINTS = {
     "oracle_mode":      "g (gaze) | n s e w to leave",
     "alchemist_mode":   "c (combine) | '<a> <b>' to brew slots a+b | x (cancel) | n s e w to leave",
     "war_room_mode":    "1 (intel - free) 2 (raid - 100+f*5g) | n s e w to leave",
-    "taxidermist_mode": "<N> (complete collection N) | s (sell trophies) | n s e w to leave",
+    "taxidermist_mode": "<N> (complete collection N) | s (sell trophies) | x (leave)",
     "death_screen":  "<game over>",
 }
 
@@ -937,6 +937,14 @@ class PlaytestSession:
             "inferred_guardian_dirs": self._inferred_guardian_dirs_obs(),
             "tomb_suspected_here": pc.z in self.suspected_tomb_floors,
             "max_z_via_stairs": self.max_z_via_stairs,
+            # Name of the scroll currently driving upgrade_scroll_mode
+            # / identify_scroll_mode -- empty otherwise. Lets the
+            # smart_policy compute the scroll's tier cap (Basic +3,
+            # Greater +6, ... Eternal +35) and skip consuming when
+            # the equipped weapon is already at cap.
+            "active_scroll_item": getattr(
+                getattr(gs, "active_scroll_item", None), "name", ""
+            ) or "",
             # Per-floor kill counter. Used by the grind-first gate so
             # under-levelled agents stay on the floor banking XP.
             "kills_on_floor": self.kills_on_floor,
@@ -1143,6 +1151,12 @@ class PlaytestSession:
             # parsing display names.
             if isinstance(item, Scroll):
                 entry["scroll_type"] = getattr(item, "scroll_type", None)
+                # Raw name for tier-word detection (Basic / Greater /
+                # Superior / Epic / Mythic / Divine / Celestial /
+                # Cosmic / Eternal upgrade scrolls). Lets the
+                # inventory-use branch skip an upgrade scroll whose
+                # cap the equipped weapon has already hit.
+                entry["scroll_name"] = getattr(item, "name", "")
             if isinstance(item, Potion):
                 entry["potion_type"] = getattr(item, "potion_type", None)
             out.append(entry)
@@ -3224,6 +3238,22 @@ def smart_policy(obs, rng, use_lantern=True):
         # policy retried the scroll every inventory open. Combat-mode
         # has its own branch that reads spell_scrolls with the live
         # monster as target.
+        # Equipped weapon's current upgrade level, used to gate
+        # upgrade scrolls (skip a tier whose cap we've already hit
+        # so the scroll isn't wasted on junk or stuck in a
+        # u-then-cancel re-prompt loop).
+        eq_weapon = equipped.get("weapon") or {}
+        eq_weapon_upg = eq_weapon.get("upgrade_level", 0) if eq_weapon else 0
+        UPG_TIER_CAPS = (
+            ("Eternal", 35), ("Cosmic", 30), ("Celestial", 25),
+            ("Divine", 20), ("Mythic", 17), ("Epic", 14),
+            ("Superior", 10), ("Greater", 6),
+        )
+        def _upgrade_scroll_cap(name):
+            for tag, cap in UPG_TIER_CAPS:
+                if tag in (name or ""):
+                    return cap
+            return 3  # Basic
         if proposed is None:
             for entry in inv:
                 if entry["category"] != "scroll":
@@ -3231,6 +3261,25 @@ def smart_policy(obs, rng, use_lantern=True):
                 if not entry.get("is_identified"):
                     continue
                 stype = entry.get("scroll_type")
+                # Hold an upgrade scroll when the equipped weapon is
+                # already at this scroll's tier cap -- consuming it
+                # would either error (handler keeps the scroll, the
+                # policy re-prompts forever) or waste the +1 on
+                # junk. Saving it for a higher-tier scroll later is
+                # the patient play.
+                if (stype == "upgrade"
+                        and (not eq_weapon
+                             or eq_weapon_upg >= _upgrade_scroll_cap(
+                                 entry.get("scroll_name")))):
+                    # No equipped weapon (broke or never had one) OR
+                    # equipped weapon at this scroll's cap -- either
+                    # way reading the scroll either errors and stays
+                    # (handler doesn't consume on MAX / out-of-range)
+                    # or wastes the +1 on a junk bag item. Hold for
+                    # later. Caught s=941 elf F9 at 497 idle turns:
+                    # broken Halberd, no equip, scroll u12 -> 1 -> c
+                    # ping-ponging forever.
+                    continue
                 if stype in SAFE_SCROLL_TYPES:
                     proposed = f"u{entry['slot']}"
                     break
@@ -3289,6 +3338,15 @@ def smart_policy(obs, rng, use_lantern=True):
                     continue
                 stype = entry.get("scroll_type")
                 if entry.get("is_identified") and stype in WEDGE_SKIP_SCROLL_TYPES:
+                    continue
+                # An identified upgrade scroll at cap won't consume
+                # itself -- it just re-prompts. Excluding it here
+                # closes the wedge re-entry path that previously
+                # spun s=941 elf 60+ times around the same scroll.
+                if (entry.get("is_identified") and stype == "upgrade"
+                        and eq_weapon
+                        and eq_weapon_upg >= _upgrade_scroll_cap(
+                            entry.get("scroll_name"))):
                     continue
                 candidate = f"u{entry['slot']}"
                 if candidate in wedge_attempted:
@@ -3441,22 +3499,67 @@ def smart_policy(obs, rng, use_lantern=True):
         return "1"
 
     if mode == "upgrade_scroll_mode":
-        # Same shape as identify -- '1' picks the first valid item
-        # and consumes the scroll. The handler self-exits when the
-        # bag has no upgradeable gear, BUT items at MAX upgrade for
-        # the scroll's tier return early without resetting the
-        # prompt (items.py:2159) so a re-fire of '1' loops forever.
-        # Walk through digits 1..6 by last_action then cancel out.
+        # Pick the equipped weapon by its position in the gear-only
+        # filtered view of the bag. After build-316, the scroll
+        # handler iterates get_sorted_inventory filtered to Weapon |
+        # Armor (items.py:2115), the same order obs.inventory uses,
+        # so we can mirror it cleanly here. Before the fix the menu
+        # ran in raw insertion order, so smart_policy's '1' upgraded
+        # whichever piece of junk landed in the bag first --
+        # playtester audit on s=1 dwarf showed 9 scrolls consumed
+        # and the equipped Halberd ended +0 upg.
+        #
+        # Scroll-tier cap: each tier maxes the upgrade level it can
+        # push to (Basic +3, Greater +6, Superior +10, Epic +14,
+        # Mythic +17, Divine +20, Celestial +25, Cosmic +30, Eternal
+        # +35). If the equipped weapon is already at the cap for
+        # THIS scroll, the handler rejects without consuming the
+        # scroll. Cancel rather than fall through to a junk slot --
+        # save the scroll for a stronger upgrade scroll later.
+        scroll_name = obs.get("active_scroll_item") or ""
+        tier_caps = (
+            ("Eternal", 35), ("Cosmic", 30), ("Celestial", 25),
+            ("Divine", 20), ("Mythic", 17), ("Epic", 14),
+            ("Superior", 10), ("Greater", 6),
+        )
+        scroll_cap = 3  # Basic
+        for tag, cap in tier_caps:
+            if tag in scroll_name:
+                scroll_cap = cap
+                break
         last_us = obs.get("last_action") or ""
-        digit_sequence = ("1", "2", "3", "4", "5", "6")
-        if last_us in digit_sequence:
-            try:
-                idx = digit_sequence.index(last_us)
-                if idx + 1 < len(digit_sequence):
-                    return digit_sequence[idx + 1]
-            except ValueError:
-                pass
+        # If we just picked a slot but the mode persisted, the handler
+        # rejected the choice (MAX-upgrade or out-of-range -- neither
+        # consumes the scroll). Cancel rather than walk junk slots.
+        if last_us and last_us.isdigit():
             return "c"
+        gear_idx = 0
+        equipped_idx = None
+        equipped_upg = 0
+        equipped_cat = None
+        for entry in inv:
+            if entry["category"] not in ("weapon", "armor"):
+                continue
+            gear_idx += 1
+            if entry.get("equipped"):
+                # Prefer weapon over armor when both are equipped --
+                # weapon-bonus scales kill speed; armor only soaks.
+                if entry["category"] == "weapon":
+                    equipped_idx = gear_idx
+                    equipped_upg = entry.get("upgrade_level", 0)
+                    equipped_cat = "weapon"
+                    break
+                if equipped_idx is None:
+                    equipped_idx = gear_idx
+                    equipped_upg = entry.get("upgrade_level", 0)
+                    equipped_cat = "armor"
+        # Weapon already at this scroll's cap -- cancel and hold the
+        # scroll for a higher tier. (If only armor is equipped and
+        # IT is at the cap, same deal.)
+        if equipped_idx is not None and equipped_upg >= scroll_cap:
+            return "c"
+        if equipped_idx is not None and equipped_idx <= 9:
+            return str(equipped_idx)
         return "1"
 
     if mode == "foresight_direction_mode":
@@ -4247,12 +4350,19 @@ def smart_policy(obs, rng, use_lantern=True):
         # extending the harness; the gold sale is safe and frees a
         # bag slot. Completion rewards (auto-equipped accessories) are
         # left on the table for a future iteration with richer obs.
+        #
+        # NB: room_actions.process_taxidermist_action only accepts
+        # digit / 's' / 'i' / 'x' -- NOT n/s/e/w (the action hint at
+        # line 638 lies about that). Returning a direction here used
+        # to softlock the agent on the X tile (caught as stuck=loop
+        # on s=941 elf F9: 500+ idle turns mashing 'w' at hunger=0).
+        # 'x' returns to game_loop where the wayfinder takes over.
         has_trophies = any(
             i.get("category") == "trophy" for i in inv
         )
         if has_trophies:
             return "s"
-        return _step_away()
+        return "x"
 
     return "back"
 

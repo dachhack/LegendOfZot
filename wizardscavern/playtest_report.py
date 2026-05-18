@@ -286,6 +286,11 @@ class RunReport:
         self.first_visit_moves = {}       # floor -> new-tile moves
         self.revisit_moves = {}           # floor -> already-seen tile moves
         self._last_xy = None              # (z, x, y) of prior frame
+        # Last turn we reached a tile we hadn't seen before (anywhere
+        # on the run). Combined with progress-event timestamps to
+        # gate the flatline classifier so an exploring agent doesn't
+        # get flagged stuck just because it hasn't killed anything.
+        self.last_new_tile_turn = 0
         self.buys = []  # (turn, floor, name, price, count)
         self.identifies = []  # (turn, item_name)
         self.descents = []  # turn at which each new floor was first entered
@@ -437,6 +442,12 @@ class RunReport:
                 self.revisit_moves[floor] = self.revisit_moves.get(floor, 0) + 1
             else:
                 seen.add(xy)
+                # Stamp "new tile reached" as a progress event so the
+                # flatline classifier counts cartographic progress
+                # alongside kill / xp / descent. Without this, an agent
+                # who's exploring fog but hasn't killed anything for a
+                # long stretch can still be productively scouting.
+                self.last_new_tile_turn = turn
                 self.first_visit_moves[floor] = (
                     self.first_visit_moves.get(floor, 0) + 1
                 )
@@ -609,10 +620,9 @@ class RunReport:
 
         Stuck signals (alive only):
           1. flatline -- no progress event (kill / xp / level_up /
-             buy / identify / descent) AND HP did not change AND no
-             new floor reached for a long stretch of recent turns.
-             Window = max(100, turns // 4) so short runs need a
-             smaller idle period to qualify.
+             buy / identify / descent / NEW TILE reached) AND HP
+             roughly flat in a recent window. Window = max(80, turns
+             // 5); HP stable = max-min <= 3 in that window.
           2. loop -- the last N action strings form a tight
              repeating cycle (1, 2, 3, or 4-action period covering
              at least 12 of the last 20 actions). Catches the
@@ -626,6 +636,11 @@ class RunReport:
             return "dead", None
 
         # ---- flatline check -----------------------------------------
+        # 'Progress' = any signal the agent is still making forward
+        # motion: a kill, XP gain, level-up, vendor buy, identify,
+        # fuel drop, tomb fight, descent to a new floor, OR reaching
+        # a tile not previously stood on (cartographic progress).
+        # The last-progress turn is the latest of any of these.
         progress_kinds = {
             "kill", "xp", "level_up", "buy", "identify",
             "fuel_drop", "tomb_fight",
@@ -638,16 +653,24 @@ class RunReport:
             last_progress = max(last_progress, max(t for (t, _f) in self.descents))
         if self.identifies:
             last_progress = max(last_progress, max(t for (t, _n) in self.identifies))
+        last_progress = max(last_progress, self.last_new_tile_turn)
 
         idle_turns = max(0, turns - last_progress)
-        window = max(100, turns // 4)
+        # Tighter window than the earlier max(100, turns//4): at
+        # 2000-turn budgets that was 500 idle, which let a lot of
+        # softly-stuck runs pass. The new-tile signal above makes
+        # the gate honest about exploration progress, so we can
+        # narrow the idle window without false positives.
+        window = max(80, turns // 5)
 
-        # HP-stability check inside the idle window. If HP moved at
-        # all, we're not flatlined (the agent is still fighting or
-        # taking ticks). Look at every sample with turn >= window-start.
+        # HP must be roughly stable in the idle window (no fights, no
+        # ticks). max-min <= 3 lets passive regen + 1 hunger-tick
+        # count as 'stable' so a turn-budget-bound exploring agent
+        # whose HP creeps from 60 -> 63 over 400 turns still
+        # qualifies as flatlined when nothing else is happening.
         window_start = max(0, turns - window)
         hp_samples = [hp for (t, hp, _mx) in self.hp_timeline if t >= window_start]
-        hp_stable = bool(hp_samples) and (max(hp_samples) - min(hp_samples) <= 1)
+        hp_stable = bool(hp_samples) and (max(hp_samples) - min(hp_samples) <= 3)
 
         flatlined = (
             turns >= 80          # need enough runtime to be confident
