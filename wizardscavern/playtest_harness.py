@@ -289,6 +289,13 @@ def _equipped_obs(pc):
             "base_defense_bonus": getattr(it, "_base_defense_bonus", None),
             "upgrade_level": getattr(it, "upgrade_level", 0),
             "item_level": getattr(it, "level", 0),
+            # Surfaced so the policy can compute blacksmith repair cost
+            # without a side import: cost = missing * (max(1, value//50)
+            # + level) * 0.80. Without this gate s100_elf wedged 562T
+            # on '2' at the F5 blacksmith because policy couldn't tell
+            # the smith would reject 'repair armor' for insufficient
+            # gold and just kept resending the same key.
+            "item_value": getattr(it, "value", 0),
         }
     return {"weapon": slot(pc.equipped_weapon),
             "armor":  slot(pc.equipped_armor)}
@@ -4123,20 +4130,37 @@ def smart_policy(obs, rng, use_lantern=True):
     if mode == "blacksmith_mode":
         # Blacksmith repair is cheaper than vendors. Repair weapon then
         # armor, in priority order, only when the gear is actually worn
-        # ( <100% durability). Otherwise leave. Reforge (3/4) is a
+        # ( <100% durability) AND we can afford it. Reforge (3/4) is a
         # gamble that re-rolls stats -- skip it for now, the playtest
         # value is risk-bounded repair coverage.
+        # Affordability gate added build 321: s100_elf wedged 562T
+        # spamming '2' at the F5 blacksmith because the prior code
+        # checked only "is gear worn?" not "can I pay?". The smith
+        # rejects with "Not enough gold" + keeps prompt_cntl in
+        # blacksmith_mode, agent re-issues '2' forever until starvation.
+        def _smith_repair_cost(slot):
+            if not slot:
+                return None
+            missing = (slot.get("max_durability") or 0) - (slot.get("durability") or 0)
+            if missing <= 0:
+                return None
+            cost_per = max(1, (slot.get("item_value") or 0) // 50) + (slot.get("item_level") or 0)
+            return max(1, int(missing * cost_per * 0.80))
         w = equipped.get("weapon")
         a = equipped.get("armor")
         w_worn = w and (w.get("durability") or 0) < (w.get("max_durability") or 1)
         a_worn = a and (a.get("durability") or 0) < (a.get("max_durability") or 1)
-        if w_worn and not w.get("is_sealed"):
+        gold = p.get("gold", 0)
+        w_cost = _smith_repair_cost(w) if w_worn else None
+        a_cost = _smith_repair_cost(a) if a_worn else None
+        if w_worn and not w.get("is_sealed") and w_cost is not None and gold >= w_cost:
             return "1"
-        if a_worn and not a.get("is_sealed"):
+        if a_worn and not a.get("is_sealed") and a_cost is not None and gold >= a_cost:
             return "2"
-        # Nothing to repair: handler doesn't auto-exit so we have to
-        # walk off. Step in any non-wall direction; on the next obs
-        # we'll be in game_loop and the wayfinder takes over.
+        # Nothing to repair (or can't afford anything): handler doesn't
+        # auto-exit so we walk off. Step in any non-wall direction; on
+        # the next obs we'll be in game_loop and the wayfinder takes
+        # over.
         neighbors = obs.get("neighbors") or {}
         for d in ("n", "s", "e", "w"):
             if neighbors.get(d) not in ("#", None):

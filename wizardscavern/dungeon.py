@@ -116,6 +116,43 @@ def carve_grid(grid_rows_param, grid_cols_param, grid, floor_char_param, top_ste
 
    maxed = count<4
 
+   # Orphan-pocket cleanup. Drunk-carve can leave small disconnected
+   # floor islands separate from the main start->end region. Build-320
+   # forensics found 4/50 runs flatlining because U landed in a 2-tile
+   # sealed pocket (s233_human 563T cycling 2 tiles, s42_human 180T
+   # cycling 3 tiles, etc.). Wall off every floor tile that isn't BFS-
+   # reachable from start_r,start_c. The previous path check
+   # (does_path_not_exist) only validates start->end connectivity, not
+   # that other carved tiles are part of the same component.
+   if (0 <= start_r < grid_rows_param
+           and 0 <= start_c < grid_cols_param
+           and grid[start_r][start_c] == floor_char_param):
+       from collections import deque
+       # Infer wall char from any non-floor cell on the rim (always
+       # initialised to wall_char by generate_carved_layout's new_grid).
+       wall_char_local = '#'
+       for rr in range(grid_rows_param):
+           cc0 = grid[rr][0]
+           if cc0 != floor_char_param:
+               wall_char_local = cc0
+               break
+       reachable = [[False] * grid_cols_param for _ in range(grid_rows_param)]
+       q = deque([(start_r, start_c)])
+       reachable[start_r][start_c] = True
+       while q:
+           r, c = q.popleft()
+           for dr, dc in ((-1, 0), (1, 0), (0, -1), (0, 1)):
+               nr, nc = r + dr, c + dc
+               if (0 <= nr < grid_rows_param and 0 <= nc < grid_cols_param
+                       and not reachable[nr][nc]
+                       and grid[nr][nc] == floor_char_param):
+                   reachable[nr][nc] = True
+                   q.append((nr, nc))
+       for r in range(grid_rows_param):
+           for c in range(grid_cols_param):
+               if grid[r][c] == floor_char_param and not reachable[r][c]:
+                   grid[r][c] = wall_char_local
+
    return grid, maxed
 
 
