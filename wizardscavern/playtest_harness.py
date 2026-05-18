@@ -660,6 +660,14 @@ class PlaytestSession:
         # the last 4 (z, x, y) tuples lets the policy break ties by
         # preferring directions that DON'T re-step on a recent tile.
         self.recent_positions = []
+        # Longer history just for 2-tile-oscillation detection. The
+        # 4-entry recent_positions above is meant for anti-backtrack
+        # tiebreaking; an actual stable oscillation needs a wider
+        # window to identify (both tiles are 'recent' so swap-if-
+        # backtrack finds no alternative and the wayfinder keeps
+        # returning the same direction). 16 entries covers period-2
+        # / period-3 / period-4 bounces with margin.
+        self.position_history = []  # last 16 (z, x, y)
         # Per-floor walkable-tile coverage: set of (x, y) the player
         # has stood on for the current floor. Reset on descent. Used
         # by the policy's tile-coverage descent gate to leave a floor
@@ -928,6 +936,7 @@ class PlaytestSession:
             "frontier_step": self._frontier_step_obs(),
             "nearest_monster_path": self._nearest_monster_path_obs(),
             "recent_step_set": self._recent_step_set(),
+            "oscillation": self._oscillation_state(),
             "blocked_directions": sorted(self.blocked_directions),
             "suspected_tomb_floors": sorted(self.suspected_tomb_floors),
             # Cardinal dirs adjacent to a known tomb-guardian M tile.
@@ -1660,6 +1669,37 @@ class PlaytestSession:
             "reach_pct": reach_pct,
         }
 
+    def _oscillation_state(self):
+        """Detect a stable 2-tile oscillation in the last 12 position
+        snapshots. Returns a dict consumed by the smart-policy
+        anti-oscillation branch: {"detected": bool, "pair":
+        [(x1,y1), (x2,y2)]}. The 4-entry recent_positions is too
+        short to catch this (both tiles are 'recent' so swap-if-
+        backtrack finds no alternative and the wayfinder keeps
+        returning the same BFS first_step). We need the wider
+        position_history window. Caught on s=23 dwarf F1 (9,14)
+        <-> (10,14) for 392 turns post-shrine.
+
+        3-tile cycle detection was tried but regressed the total
+        turns-wasted: it false-positives on legitimate short-
+        corridor exploration (an agent BFS-walking n/e/n through
+        a 3-cell pinch toward a fog frontier looks identical to
+        an n/e/n oscillation in raw position snapshots). Sticking
+        with 2-tile only for now; the 3-tile patterns surface in
+        the report's mid-run-loop table for diagnosis."""
+        pc = gs.player_character
+        tail = [(x, y) for (z, x, y) in self.position_history[-12:]
+                if z == pc.z]
+        if len(tail) < 12:
+            return {"detected": False, "pair": []}
+        uniq = set(tail)
+        if len(uniq) != 2:
+            return {"detected": False, "pair": []}
+        a, b = list(uniq)
+        if tail.count(a) < 5 or tail.count(b) < 5:
+            return {"detected": False, "pair": []}
+        return {"detected": True, "pair": [a, b]}
+
     def _recent_step_set(self):
         """List of cardinal directions (n/s/e/w) whose neighbour is in
         recent_positions on the current floor. Used by the wayfinder
@@ -1962,6 +2002,8 @@ class PlaytestSession:
             # anti-backtrack guard doesn't try to avoid a tile that's
             # no longer reachable (different floor).
             self.recent_positions = []
+            # Same reasoning for the oscillation detector's history.
+            self.position_history = []
             # Reset tile-coverage tracking: the new floor starts at 0%
             # explored from the agent's perspective.
             self.visited_tiles_this_floor = set()
@@ -2036,6 +2078,15 @@ class PlaytestSession:
             self.recent_positions.append(cur_xy)
             if len(self.recent_positions) > 4:
                 self.recent_positions.pop(0)
+        # Wider buffer for the oscillation detector. Recorded EVERY
+        # step (not just position changes) so a no-op step (action
+        # bounced off a wall, inventory open, etc.) still consumes a
+        # slot -- otherwise long stretches in inventory mode would
+        # leave the buffer full of stale positions and the detector
+        # would mis-fire after returning to game_loop.
+        self.position_history.append(cur_xy)
+        if len(self.position_history) > 16:
+            self.position_history.pop(0)
 
         return self.observe()
 
@@ -2975,6 +3026,55 @@ def smart_policy(obs, rng, use_lantern=True):
                     best_dir, best_rank = d, rank
         if best_dir is not None:
             return best_dir
+
+        # 2-tile oscillation guard: when the agent has been bouncing
+        # between exactly two tiles for the last 12 frames, the BFS
+        # wayfinder + anti-backtrack swap can't break out (both tiles
+        # are 'recent', so the swap has no alternative to offer).
+        # Force a direction whose neighbour is NOT in the
+        # oscillation pair, preferring '.' / known walkable tiles
+        # but accepting M (combat) when the agent is surrounded by
+        # hazards -- one fight beats 400 turns ping-ponging. Caught
+        # s=23 dwarf F1 (9,14) <-> (10,14) for 392 turns with 3
+        # monsters adjacent the policy was avoiding while waiting
+        # for vendor-repair gold to a broken armor (the is_weak
+        # mask included broken armor; relaxed here to HP-only
+        # because oscillation has worse EV than one fight even
+        # with damaged gear). HP gate kept conservative -- a 30%-
+        # HP agent shouldn't be shoved into M.
+        osc = obs.get("oscillation") or {}
+        oscillation_can_fight = hp_pct >= 0.50 and not immobilised
+        if osc.get("detected") and oscillation_can_fight:
+            pair = set(tuple(t) for t in osc.get("pair", []))
+            px, py = p["x"], p["y"]
+            DIRS = (("n", (0, -1)), ("s", (0, 1)),
+                    ("e", (1, 0)), ("w", (-1, 0)))
+            nb_now = obs.get("neighbors") or {}
+            # Pass 1: a safe non-pair step (any walkable that isn't
+            # M / W / # / a pair-tile).
+            for d, (dx, dy) in DIRS:
+                if (px + dx, py + dy) in pair:
+                    continue
+                t = nb_now.get(d)
+                if t and t not in ("#", "M", "W"):
+                    return d
+            # Pass 2: accept M (engage combat). The flee gate inside
+            # combat is HP-aware so a desperate agent can still flee
+            # in the right direction.
+            for d, (dx, dy) in DIRS:
+                if (px + dx, py + dy) in pair:
+                    continue
+                if nb_now.get(d) == "M":
+                    return d
+            # Pass 3: accept W (warp). Last-resort -- random teleport
+            # is better than 400 idle turns.
+            for d, (dx, dy) in DIRS:
+                if (px + dx, py + dy) in pair:
+                    continue
+                if nb_now.get(d) == "W":
+                    return d
+            # Truly cornered -- no non-pair direction. Fall through
+            # to the wayfinder which will pick from the pair as usual.
 
         # Distant wayfinder via BFS first-step. Held-key dungeons jump
         # ahead of the normal priority list (guaranteed loot, the

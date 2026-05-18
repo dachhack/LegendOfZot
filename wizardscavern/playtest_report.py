@@ -814,6 +814,18 @@ class RunReport:
                 self._action_history[j][2]
                 for j in range(cycle_start, min(cycle_start + period, end + 1))
             )
+            # Skip combat-mode runs: a long fight is the agent
+            # repeatedly attacking the same monster (action 'a'
+            # period-1) or flee+attack ping-ponging at low HP --
+            # not a softlock, the monster's HP is ticking down.
+            # HP changes alongside the period-1 action so it doesn't
+            # match the 'no progress' definition either. Filter at
+            # the report level so the loop-episodes table surfaces
+            # only real wedges.
+            COMBAT_MODES = ("combat_mode", "combat_victory",
+                            "spell_casting_mode", "flee_direction_mode")
+            if mode in COMBAT_MODES:
+                continue
             if length >= 50:  # filter transient wedges
                 episodes.append({
                     "start": start_turn,
