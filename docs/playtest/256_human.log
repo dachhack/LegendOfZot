@@ -5612,684 +5612,686 @@ T2797 mode=game_loop           Aragorn Strider(hum) F4@( 2, 1) HP 76/76 MP 0/0 H
 T2798 mode=stairs_up_mode      Aragorn Strider(hum) F4@( 1, 1) HP 76/76 MP 0/0 Hu 55 $ 2165 room=U
 -> e
 T2799 mode=game_loop           Aragorn Strider(hum) F4@( 2, 1) HP 76/76 MP 0/0 Hu 55 $ 2165 room=.
+-> e
+T2800 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu 54 $ 2165 room=.
+-> e
+T2801 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
+-> e
+T2802 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
+-> e
+T2803 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
 -> s
-T2800 mode=game_loop           Aragorn Strider(hum) F4@( 2, 2) HP 76/76 MP 0/0 Hu 54 $ 2165 room=.
+T2804 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
 -> e
-T2801 mode=game_loop           Aragorn Strider(hum) F4@( 3, 2) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
--> n
-T2802 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
--> e
-T2803 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
--> e
-T2804 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
--> e
-T2805 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
+T2805 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
 -> s
-T2806 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
--> e
-T2807 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
+T2806 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
+-> s
+T2807 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
 -> i
-T2808 mode=inventory           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
+T2808 mode=inventory           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
 -> eat1
-T2809 mode=inventory           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
+T2809 mode=inventory           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
 -> x
-T2810 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
+T2810 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
 -> s
-T2811 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
--> s
-T2812 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
--> s
-T2813 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 97 $ 2165 room=.
+T2811 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
 -> e
-T2814 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 96 $ 2165 room=.
--> s
-T2815 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 96 $ 2165 room=.
+T2812 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
 -> e
-T2816 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 95 $ 2165 room=.
--> s
-T2817 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 94 $ 2165 room=.
+T2813 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 97 $ 2165 room=O
 -> e
-T2818 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
+T2814 mode=game_loop           Aragorn Strider(hum) F4@(10, 5) HP 76/76 MP 0/0 Hu 96 $ 2165 room=.
+-> s
+T2815 mode=warp_mode           Aragorn Strider(hum) F4@(10, 6) HP 76/76 MP 0/0 Hu 96 $ 2165 room=W
+-> y
+T2816 mode=game_loop           Aragorn Strider(hum) F4@(10, 6) HP 76/76 MP 0/0 Hu 96 $ 2165 room=W
+-> s
+T2817 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 95 $ 2165 room=.
+-> w
+T2818 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 94 $ 2165 room=.
+-> s
+T2819 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
 -> e
-T2819 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
--> s
-T2820 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 92 $ 2165 room=.
--> w
-T2821 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
--> w
-T2822 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
--> n
-T2823 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 90 $ 2165 room=.
--> n
-T2824 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 89 $ 2165 room=.
--> n
-T2825 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 89 $ 2165 room=O
--> w
-T2826 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 88 $ 2165 room=.
--> s
-T2827 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 87 $ 2165 room=.
--> n
-T2828 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 86 $ 2165 room=.
--> w
-T2829 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 86 $ 2165 room=.
--> n
-T2830 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 85 $ 2165 room=.
--> w
-T2831 mode=game_loop           Aragorn Strider(hum) F4@( 6, 4) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
+T2820 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
 -> e
-T2832 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
+T2821 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 92 $ 2165 room=.
 -> n
-T2833 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 83 $ 2165 room=.
--> n
-T2834 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 82 $ 2165 room=.
--> n
-T2835 mode=game_loop           Aragorn Strider(hum) F4@( 7, 1) HP 76/76 MP 0/0 Hu 82 $ 2165 room=.
+T2822 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
 -> w
-T2836 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 81 $ 2165 room=.
+T2823 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
+-> w
+T2824 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 90 $ 2165 room=.
 -> s
-T2837 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 80 $ 2165 room=.
+T2825 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 89 $ 2165 room=.
+-> e
+T2826 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 89 $ 2165 room=.
+-> e
+T2827 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 88 $ 2165 room=.
 -> n
-T2838 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
+T2828 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 87 $ 2165 room=.
 -> w
-T2839 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
+T2829 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 86 $ 2165 room=.
 -> w
-T2840 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 78 $ 2165 room=.
+T2830 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 86 $ 2165 room=.
 -> s
-T2841 mode=game_loop           Aragorn Strider(hum) F4@( 4, 2) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
--> w
-T2842 mode=game_loop           Aragorn Strider(hum) F4@( 3, 2) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
+T2831 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 85 $ 2165 room=.
+-> s
+T2832 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
+-> s
+T2833 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
+-> e
+T2834 mode=game_loop           Aragorn Strider(hum) F4@(10,10) HP 76/76 MP 0/0 Hu 83 $ 2165 room=.
 -> n
-T2843 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu 76 $ 2165 room=.
--> w
-T2844 mode=game_loop           Aragorn Strider(hum) F4@( 2, 1) HP 76/76 MP 0/0 Hu 75 $ 2165 room=.
--> s
-T2845 mode=game_loop           Aragorn Strider(hum) F4@( 2, 2) HP 76/76 MP 0/0 Hu 75 $ 2165 room=.
+T2835 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 82 $ 2165 room=.
 -> n
-T2846 mode=game_loop           Aragorn Strider(hum) F4@( 2, 1) HP 76/76 MP 0/0 Hu 74 $ 2165 room=.
--> w
-T2847 mode=stairs_up_mode      Aragorn Strider(hum) F4@( 1, 1) HP 76/76 MP 0/0 Hu 73 $ 2165 room=U
--> e
-T2848 mode=game_loop           Aragorn Strider(hum) F4@( 2, 1) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
--> e
-T2849 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
--> e
-T2850 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 71 $ 2165 room=.
--> e
-T2851 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
--> e
-T2852 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
--> s
-T2853 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 69 $ 2165 room=.
--> e
-T2854 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 68 $ 2165 room=.
--> s
-T2855 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 68 $ 2165 room=.
--> s
-T2856 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 67 $ 2165 room=.
--> s
-T2857 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 66 $ 2165 room=.
--> e
-T2858 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
--> s
-T2859 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
--> e
-T2860 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 64 $ 2165 room=.
--> s
-T2861 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
--> s
-T2862 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
--> s
-T2863 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 62 $ 2165 room=.
--> s
-T2864 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 76/76 MP 0/0 Hu 61 $ 2165 room=.
--> e
-T2865 mode=game_loop           Aragorn Strider(hum) F4@(10,10) HP 76/76 MP 0/0 Hu 61 $ 2165 room=.
+T2836 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 82 $ 2165 room=.
 -> n
-T2866 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 60 $ 2165 room=.
--> n
-T2867 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 59 $ 2165 room=.
--> n
-T2868 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
+T2837 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 81 $ 2165 room=.
 -> w
-T2869 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
+T2838 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 80 $ 2165 room=.
 -> s
-T2870 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 57 $ 2165 room=.
+T2839 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
 -> s
-T2871 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 56 $ 2165 room=.
+T2840 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
 -> e
-T2872 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 56 $ 2165 room=.
+T2841 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 78 $ 2165 room=.
 -> n
-T2873 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 55 $ 2165 room=.
+T2842 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
 -> n
-T2874 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 54 $ 2165 room=.
+T2843 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
 -> w
-T2875 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 54 $ 2165 room=.
+T2844 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 76 $ 2165 room=.
 -> s
-T2876 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
+T2845 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 75 $ 2165 room=.
 -> s
-T2877 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
+T2846 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 75 $ 2165 room=.
+-> s
+T2847 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 76/76 MP 0/0 Hu 74 $ 2165 room=.
+-> e
+T2848 mode=game_loop           Aragorn Strider(hum) F4@(10,10) HP 76/76 MP 0/0 Hu 73 $ 2165 room=.
+-> n
+T2849 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
+-> n
+T2850 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
+-> n
+T2851 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 71 $ 2165 room=.
 -> w
-T2878 mode=game_loop           Aragorn Strider(hum) F4@( 8, 9) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
+T2852 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
+-> n
+T2853 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
+-> n
+T2854 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 69 $ 2165 room=O
+-> e
+T2855 mode=game_loop           Aragorn Strider(hum) F4@(10, 5) HP 76/76 MP 0/0 Hu 68 $ 2165 room=.
+-> e
+T2856 mode=game_loop           Aragorn Strider(hum) F4@(11, 5) HP 76/76 MP 0/0 Hu 68 $ 2165 room=.
 -> s
-T2879 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
+T2857 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 76/76 MP 0/0 Hu 67 $ 2165 room=.
+-> s
+T2858 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 66 $ 2165 room=.
 -> w
-T2880 mode=game_loop           Aragorn Strider(hum) F4@( 7,10) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
+T2859 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
+-> w
+T2860 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
 -> s
-T2881 mode=game_loop           Aragorn Strider(hum) F4@( 7,11) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
+T2861 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 64 $ 2165 room=.
+-> s
+T2862 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
+-> s
+T2863 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
+-> s
+T2864 mode=game_loop           Aragorn Strider(hum) F4@( 9,11) HP 76/76 MP 0/0 Hu 62 $ 2165 room=.
+-> e
+T2865 mode=game_loop           Aragorn Strider(hum) F4@(10,11) HP 76/76 MP 0/0 Hu 61 $ 2165 room=N
+-> n
+T2866 mode=game_loop           Aragorn Strider(hum) F4@(10,10) HP 76/76 MP 0/0 Hu 61 $ 2165 room=.
+-> n
+T2867 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 60 $ 2165 room=.
+-> n
+T2868 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 59 $ 2165 room=.
+-> n
+T2869 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
+-> w
+T2870 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
+-> n
+T2871 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 57 $ 2165 room=.
+-> n
+T2872 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 56 $ 2165 room=O
+-> w
+T2873 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 56 $ 2165 room=.
+-> s
+T2874 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 55 $ 2165 room=.
+-> n
+T2875 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 54 $ 2165 room=.
+-> w
+T2876 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 54 $ 2165 room=.
+-> n
+T2877 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
+-> w
+T2878 mode=game_loop           Aragorn Strider(hum) F4@( 6, 4) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
+-> e
+T2879 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
+-> n
+T2880 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
+-> n
+T2881 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
+-> w
+T2882 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
 -> i
-T2882 mode=inventory           Aragorn Strider(hum) F4@( 7,11) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
+T2883 mode=inventory           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
 -> eat1
-T2883 mode=inventory           Aragorn Strider(hum) F4@( 7,11) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
+T2884 mode=inventory           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
 -> x
-T2884 mode=game_loop           Aragorn Strider(hum) F4@( 7,11) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
+T2885 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
+-> n
+T2886 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
 -> w
-T2885 mode=game_loop           Aragorn Strider(hum) F4@( 6,11) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
--> n
-T2886 mode=game_loop           Aragorn Strider(hum) F4@( 6,10) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
--> n
-T2887 mode=game_loop           Aragorn Strider(hum) F4@( 6, 9) HP 76/76 MP 0/0 Hu 97 $ 2165 room=.
--> n
-T2888 mode=game_loop           Aragorn Strider(hum) F4@( 6, 8) HP 76/76 MP 0/0 Hu 97 $ 2165 room=.
--> s
-T2889 mode=game_loop           Aragorn Strider(hum) F4@( 6, 9) HP 76/76 MP 0/0 Hu 96 $ 2165 room=.
--> n
-T2890 mode=game_loop           Aragorn Strider(hum) F4@( 6, 8) HP 76/76 MP 0/0 Hu 95 $ 2165 room=.
--> s
-T2891 mode=game_loop           Aragorn Strider(hum) F4@( 6, 9) HP 76/76 MP 0/0 Hu 94 $ 2165 room=.
--> s
-T2892 mode=game_loop           Aragorn Strider(hum) F4@( 6,10) HP 76/76 MP 0/0 Hu 94 $ 2165 room=.
--> e
-T2893 mode=game_loop           Aragorn Strider(hum) F4@( 7,10) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
--> e
-T2894 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 92 $ 2165 room=.
--> n
-T2895 mode=game_loop           Aragorn Strider(hum) F4@( 8, 9) HP 76/76 MP 0/0 Hu 92 $ 2165 room=.
--> e
-T2896 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
--> n
-T2897 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 90 $ 2165 room=.
--> n
-T2898 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 90 $ 2165 room=.
--> e
-T2899 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 89 $ 2165 room=.
--> e
-T2900 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 88 $ 2165 room=.
--> e
-T2901 mode=game_loop           Aragorn Strider(hum) F4@(12, 7) HP 76/76 MP 0/0 Hu 87 $ 2165 room=.
--> n
-T2902 mode=game_loop           Aragorn Strider(hum) F4@(12, 6) HP 76/76 MP 0/0 Hu 87 $ 2165 room=.
--> e
-T2903 mode=game_loop           Aragorn Strider(hum) F4@(13, 6) HP 76/76 MP 0/0 Hu 86 $ 2165 room=.
--> s
-T2904 mode=game_loop           Aragorn Strider(hum) F4@(13, 7) HP 76/76 MP 0/0 Hu 85 $ 2165 room=.
--> e
-T2905 mode=game_loop           Aragorn Strider(hum) F4@(14, 7) HP 76/76 MP 0/0 Hu 85 $ 2165 room=.
--> s
-T2906 mode=game_loop           Aragorn Strider(hum) F4@(14, 8) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
--> e
-T2907 mode=game_loop           Aragorn Strider(hum) F4@(15, 8) HP 76/76 MP 0/0 Hu 83 $ 2165 room=.
--> n
-T2908 mode=game_loop           Aragorn Strider(hum) F4@(15, 7) HP 76/76 MP 0/0 Hu 83 $ 2165 room=.
--> n
-T2909 mode=game_loop           Aragorn Strider(hum) F4@(15, 6) HP 76/76 MP 0/0 Hu 82 $ 2165 room=.
+T2887 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
 -> w
-T2910 mode=game_loop           Aragorn Strider(hum) F4@(14, 6) HP 76/76 MP 0/0 Hu 81 $ 2165 room=.
--> s
-T2911 mode=game_loop           Aragorn Strider(hum) F4@(14, 7) HP 76/76 MP 0/0 Hu 80 $ 2165 room=.
+T2888 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 97 $ 2165 room=.
 -> w
-T2912 mode=game_loop           Aragorn Strider(hum) F4@(13, 7) HP 76/76 MP 0/0 Hu 80 $ 2165 room=.
+T2889 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu 97 $ 2165 room=.
 -> w
-T2913 mode=game_loop           Aragorn Strider(hum) F4@(12, 7) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
+T2890 mode=game_loop           Aragorn Strider(hum) F4@( 2, 1) HP 76/76 MP 0/0 Hu 96 $ 2165 room=.
 -> w
-T2914 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 78 $ 2165 room=.
--> w
-T2915 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 78 $ 2165 room=.
--> w
-T2916 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
--> s
-T2917 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 76 $ 2165 room=.
+T2891 mode=stairs_up_mode      Aragorn Strider(hum) F4@( 1, 1) HP 76/76 MP 0/0 Hu 95 $ 2165 room=U
 -> e
-T2918 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 76 $ 2165 room=.
+T2892 mode=game_loop           Aragorn Strider(hum) F4@( 2, 1) HP 76/76 MP 0/0 Hu 94 $ 2165 room=.
+-> s
+T2893 mode=game_loop           Aragorn Strider(hum) F4@( 2, 2) HP 76/76 MP 0/0 Hu 94 $ 2165 room=.
 -> e
-T2919 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 75 $ 2165 room=.
+T2894 mode=game_loop           Aragorn Strider(hum) F4@( 3, 2) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
 -> n
-T2920 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 74 $ 2165 room=.
--> w
-T2921 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 73 $ 2165 room=.
--> w
-T2922 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 73 $ 2165 room=.
+T2895 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu 92 $ 2165 room=.
+-> e
+T2896 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 92 $ 2165 room=.
+-> e
+T2897 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
+-> e
+T2898 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 90 $ 2165 room=.
+-> s
+T2899 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 90 $ 2165 room=.
+-> e
+T2900 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 89 $ 2165 room=.
+-> s
+T2901 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 88 $ 2165 room=.
+-> s
+T2902 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 87 $ 2165 room=.
+-> s
+T2903 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 87 $ 2165 room=.
+-> e
+T2904 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 86 $ 2165 room=.
+-> s
+T2905 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 85 $ 2165 room=.
+-> e
+T2906 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 85 $ 2165 room=.
+-> s
+T2907 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
+-> s
+T2908 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 83 $ 2165 room=.
+-> e
+T2909 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 83 $ 2165 room=.
 -> n
-T2923 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
+T2910 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 82 $ 2165 room=.
+-> e
+T2911 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 81 $ 2165 room=.
 -> n
-T2924 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 71 $ 2165 room=O
--> w
-T2925 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 71 $ 2165 room=.
--> s
-T2926 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
+T2912 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 76/76 MP 0/0 Hu 80 $ 2165 room=.
 -> n
-T2927 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 69 $ 2165 room=.
+T2913 mode=game_loop           Aragorn Strider(hum) F4@(11, 5) HP 76/76 MP 0/0 Hu 80 $ 2165 room=.
 -> w
-T2928 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 69 $ 2165 room=.
+T2914 mode=game_loop           Aragorn Strider(hum) F4@(10, 5) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
+-> w
+T2915 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 78 $ 2165 room=O
+-> s
+T2916 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 78 $ 2165 room=.
+-> s
+T2917 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
+-> e
+T2918 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 76 $ 2165 room=.
+-> e
+T2919 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 76 $ 2165 room=.
+-> s
+T2920 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 75 $ 2165 room=.
+-> s
+T2921 mode=game_loop           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 74 $ 2165 room=.
+-> s
+T2922 mode=game_loop           Aragorn Strider(hum) F4@(11,10) HP 76/76 MP 0/0 Hu 73 $ 2165 room=.
+-> w
+T2923 mode=game_loop           Aragorn Strider(hum) F4@(10,10) HP 76/76 MP 0/0 Hu 73 $ 2165 room=.
 -> n
-T2929 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 68 $ 2165 room=.
--> w
-T2930 mode=game_loop           Aragorn Strider(hum) F4@( 6, 4) HP 76/76 MP 0/0 Hu 67 $ 2165 room=.
--> e
-T2931 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 66 $ 2165 room=.
+T2924 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
 -> n
-T2932 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 66 $ 2165 room=.
--> e
-T2933 mode=game_loop           Aragorn Strider(hum) F4@( 8, 3) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
+T2925 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 71 $ 2165 room=.
 -> n
-T2934 mode=game_loop           Aragorn Strider(hum) F4@( 8, 2) HP 76/76 MP 0/0 Hu 64 $ 2165 room=.
--> e
-T2935 mode=game_loop           Aragorn Strider(hum) F4@( 9, 2) HP 76/76 MP 0/0 Hu 64 $ 2165 room=.
+T2926 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 71 $ 2165 room=.
 -> w
-T2936 mode=game_loop           Aragorn Strider(hum) F4@( 8, 2) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
--> w
-T2937 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 62 $ 2165 room=.
+T2927 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
 -> s
-T2938 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 62 $ 2165 room=.
+T2928 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 69 $ 2165 room=.
 -> s
-T2939 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 61 $ 2165 room=.
--> s
-T2940 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 60 $ 2165 room=.
+T2929 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 69 $ 2165 room=.
 -> e
-T2941 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 59 $ 2165 room=.
--> s
-T2942 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 59 $ 2165 room=.
--> e
-T2943 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
--> s
-T2944 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 57 $ 2165 room=.
--> e
-T2945 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 57 $ 2165 room=.
--> e
-T2946 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 56 $ 2165 room=.
+T2930 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 68 $ 2165 room=.
 -> n
-T2947 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 76/76 MP 0/0 Hu 55 $ 2165 room=.
+T2931 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 67 $ 2165 room=.
 -> n
-T2948 mode=game_loop           Aragorn Strider(hum) F4@(11, 5) HP 76/76 MP 0/0 Hu 55 $ 2165 room=.
+T2932 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 66 $ 2165 room=.
 -> w
-T2949 mode=game_loop           Aragorn Strider(hum) F4@(10, 5) HP 76/76 MP 0/0 Hu 54 $ 2165 room=.
+T2933 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 66 $ 2165 room=.
+-> s
+T2934 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
+-> s
+T2935 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 64 $ 2165 room=.
+-> e
+T2936 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 64 $ 2165 room=.
+-> n
+T2937 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
+-> n
+T2938 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 62 $ 2165 room=.
 -> w
-T2950 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 53 $ 2165 room=O
+T2939 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 62 $ 2165 room=.
 -> s
-T2951 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
+T2940 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 61 $ 2165 room=.
 -> s
-T2952 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
+T2941 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 60 $ 2165 room=.
+-> w
+T2942 mode=game_loop           Aragorn Strider(hum) F4@( 8, 9) HP 76/76 MP 0/0 Hu 59 $ 2165 room=.
+-> s
+T2943 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 59 $ 2165 room=.
+-> w
+T2944 mode=game_loop           Aragorn Strider(hum) F4@( 7,10) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
+-> w
+T2945 mode=game_loop           Aragorn Strider(hum) F4@( 6,10) HP 76/76 MP 0/0 Hu 57 $ 2165 room=.
+-> s
+T2946 mode=game_loop           Aragorn Strider(hum) F4@( 6,11) HP 76/76 MP 0/0 Hu 57 $ 2165 room=.
 -> e
-T2953 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
+T2947 mode=game_loop           Aragorn Strider(hum) F4@( 7,11) HP 76/76 MP 0/0 Hu 56 $ 2165 room=.
 -> s
-T2954 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
+T2948 mode=game_loop           Aragorn Strider(hum) F4@( 7,12) HP 76/76 MP 0/0 Hu 55 $ 2165 room=.
 -> s
-T2955 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
+T2949 mode=game_loop           Aragorn Strider(hum) F4@( 7,13) HP 76/76 MP 0/0 Hu 55 $ 2165 room=.
 -> e
-T2956 mode=game_loop           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
+T2950 mode=game_loop           Aragorn Strider(hum) F4@( 8,13) HP 76/76 MP 0/0 Hu 54 $ 2165 room=.
+-> e
+T2951 mode=game_loop           Aragorn Strider(hum) F4@( 9,13) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
+-> s
+T2952 mode=game_loop           Aragorn Strider(hum) F4@( 9,14) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
+-> e
+T2953 mode=game_loop           Aragorn Strider(hum) F4@(10,14) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
+-> e
+T2954 mode=game_loop           Aragorn Strider(hum) F4@(11,14) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
+-> n
+T2955 mode=game_loop           Aragorn Strider(hum) F4@(11,13) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
+-> n
+T2956 mode=game_loop           Aragorn Strider(hum) F4@(11,12) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
+-> n
+T2957 mode=game_loop           Aragorn Strider(hum) F4@(11,11) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
 -> i
-T2957 mode=inventory           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
+T2958 mode=inventory           Aragorn Strider(hum) F4@(11,11) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
 -> eat1
-T2958 mode=inventory           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
+T2959 mode=inventory           Aragorn Strider(hum) F4@(11,11) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
 -> x
-T2959 mode=game_loop           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
+T2960 mode=game_loop           Aragorn Strider(hum) F4@(11,11) HP 76/76 MP 0/0 Hu 99 $ 2165 room=.
 -> n
-T2960 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
+T2961 mode=game_loop           Aragorn Strider(hum) F4@(11,10) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
 -> n
-T2961 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
+T2962 mode=game_loop           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 98 $ 2165 room=.
+-> n
+T2963 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 97 $ 2165 room=.
+-> n
+T2964 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 96 $ 2165 room=.
 -> w
-T2962 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 97 $ 2165 room=.
+T2965 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 95 $ 2165 room=.
 -> w
-T2963 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 96 $ 2165 room=.
+T2966 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 95 $ 2165 room=.
 -> s
-T2964 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 95 $ 2165 room=.
+T2967 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 94 $ 2165 room=.
 -> e
-T2965 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 95 $ 2165 room=.
+T2968 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
 -> s
-T2966 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 94 $ 2165 room=.
+T2969 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
 -> w
-T2967 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
+T2970 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 92 $ 2165 room=.
 -> w
-T2968 mode=game_loop           Aragorn Strider(hum) F4@( 8, 9) HP 76/76 MP 0/0 Hu 93 $ 2165 room=.
+T2971 mode=game_loop           Aragorn Strider(hum) F4@( 8, 9) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
 -> s
-T2969 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 92 $ 2165 room=.
+T2972 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
 -> e
-T2970 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
+T2973 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 76/76 MP 0/0 Hu 90 $ 2165 room=.
 -> e
-T2971 mode=game_loop           Aragorn Strider(hum) F4@(10,10) HP 76/76 MP 0/0 Hu 91 $ 2165 room=.
+T2974 mode=game_loop           Aragorn Strider(hum) F4@(10,10) HP 76/76 MP 0/0 Hu 89 $ 2165 room=.
 -> n
-T2972 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 90 $ 2165 room=.
+T2975 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 88 $ 2165 room=.
 -> n
-T2973 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 89 $ 2165 room=.
+T2976 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 88 $ 2165 room=.
 -> n
-T2974 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 88 $ 2165 room=.
+T2977 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 87 $ 2165 room=.
 -> w
-T2975 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 88 $ 2165 room=.
+T2978 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 86 $ 2165 room=.
 -> n
-T2976 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 87 $ 2165 room=.
+T2979 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 86 $ 2165 room=.
 -> n
-T2977 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 86 $ 2165 room=O
+T2980 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 85 $ 2165 room=O
 -> e
-T2978 mode=game_loop           Aragorn Strider(hum) F4@(10, 5) HP 76/76 MP 0/0 Hu 86 $ 2165 room=.
+T2981 mode=game_loop           Aragorn Strider(hum) F4@(10, 5) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
 -> e
-T2979 mode=game_loop           Aragorn Strider(hum) F4@(11, 5) HP 76/76 MP 0/0 Hu 85 $ 2165 room=.
+T2982 mode=game_loop           Aragorn Strider(hum) F4@(11, 5) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
 -> s
-T2980 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
+T2983 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 76/76 MP 0/0 Hu 83 $ 2165 room=.
 -> s
-T2981 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 84 $ 2165 room=.
+T2984 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 82 $ 2165 room=.
 -> w
-T2982 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 83 $ 2165 room=.
+T2985 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 81 $ 2165 room=.
 -> w
-T2983 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 82 $ 2165 room=.
+T2986 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 81 $ 2165 room=.
 -> s
-T2984 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 81 $ 2165 room=.
+T2987 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 80 $ 2165 room=.
 -> e
-T2985 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 81 $ 2165 room=.
+T2988 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
 -> s
-T2986 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 80 $ 2165 room=.
+T2989 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
 -> e
-T2987 mode=game_loop           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
+T2990 mode=game_loop           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 78 $ 2165 room=.
 -> n
-T2988 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 79 $ 2165 room=.
+T2991 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
 -> n
-T2989 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 78 $ 2165 room=.
+T2992 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
 -> w
-T2990 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
+T2993 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 76 $ 2165 room=.
 -> w
-T2991 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 77 $ 2165 room=.
+T2994 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 75 $ 2165 room=.
 -> s
-T2992 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 76 $ 2165 room=.
+T2995 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 74 $ 2165 room=.
 -> s
-T2993 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 75 $ 2165 room=.
+T2996 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 74 $ 2165 room=.
 -> s
-T2994 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 76/76 MP 0/0 Hu 74 $ 2165 room=.
+T2997 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 76/76 MP 0/0 Hu 73 $ 2165 room=.
 -> w
-T2995 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 74 $ 2165 room=.
+T2998 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
 -> n
-T2996 mode=game_loop           Aragorn Strider(hum) F4@( 8, 9) HP 76/76 MP 0/0 Hu 73 $ 2165 room=.
+T2999 mode=game_loop           Aragorn Strider(hum) F4@( 8, 9) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
 -> s
-T2997 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
+T3000 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 71 $ 2165 room=.
 -> w
-T2998 mode=game_loop           Aragorn Strider(hum) F4@( 7,10) HP 76/76 MP 0/0 Hu 72 $ 2165 room=.
+T3001 mode=game_loop           Aragorn Strider(hum) F4@( 7,10) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
 -> s
-T2999 mode=game_loop           Aragorn Strider(hum) F4@( 7,11) HP 76/76 MP 0/0 Hu 71 $ 2165 room=.
+T3002 mode=game_loop           Aragorn Strider(hum) F4@( 7,11) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
 -> s
-T3000 mode=game_loop           Aragorn Strider(hum) F4@( 7,12) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
+T3003 mode=game_loop           Aragorn Strider(hum) F4@( 7,12) HP 76/76 MP 0/0 Hu 69 $ 2165 room=.
 -> s
-T3001 mode=game_loop           Aragorn Strider(hum) F4@( 7,13) HP 76/76 MP 0/0 Hu 70 $ 2165 room=.
+T3004 mode=game_loop           Aragorn Strider(hum) F4@( 7,13) HP 76/76 MP 0/0 Hu 68 $ 2165 room=.
 -> w
-T3002 mode=game_loop           Aragorn Strider(hum) F4@( 6,13) HP 76/76 MP 0/0 Hu 69 $ 2165 room=.
+T3005 mode=game_loop           Aragorn Strider(hum) F4@( 6,13) HP 76/76 MP 0/0 Hu 67 $ 2165 room=.
 -> s
-T3003 mode=game_loop           Aragorn Strider(hum) F4@( 6,14) HP 76/76 MP 0/0 Hu 68 $ 2165 room=.
+T3006 mode=game_loop           Aragorn Strider(hum) F4@( 6,14) HP 76/76 MP 0/0 Hu 67 $ 2165 room=.
 -> e
-T3004 mode=game_loop           Aragorn Strider(hum) F4@( 7,14) HP 76/76 MP 0/0 Hu 67 $ 2165 room=.
+T3007 mode=game_loop           Aragorn Strider(hum) F4@( 7,14) HP 76/76 MP 0/0 Hu 66 $ 2165 room=.
 -> n
-T3005 mode=game_loop           Aragorn Strider(hum) F4@( 7,13) HP 76/76 MP 0/0 Hu 67 $ 2165 room=.
+T3008 mode=game_loop           Aragorn Strider(hum) F4@( 7,13) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
 -> n
-T3006 mode=game_loop           Aragorn Strider(hum) F4@( 7,12) HP 76/76 MP 0/0 Hu 66 $ 2165 room=.
+T3009 mode=game_loop           Aragorn Strider(hum) F4@( 7,12) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
 -> n
-T3007 mode=game_loop           Aragorn Strider(hum) F4@( 7,11) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
+T3010 mode=game_loop           Aragorn Strider(hum) F4@( 7,11) HP 76/76 MP 0/0 Hu 64 $ 2165 room=.
 -> n
-T3008 mode=game_loop           Aragorn Strider(hum) F4@( 7,10) HP 76/76 MP 0/0 Hu 65 $ 2165 room=.
+T3011 mode=game_loop           Aragorn Strider(hum) F4@( 7,10) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
 -> e
-T3009 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 64 $ 2165 room=.
+T3012 mode=game_loop           Aragorn Strider(hum) F4@( 8,10) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
 -> n
-T3010 mode=game_loop           Aragorn Strider(hum) F4@( 8, 9) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
+T3013 mode=game_loop           Aragorn Strider(hum) F4@( 8, 9) HP 76/76 MP 0/0 Hu 62 $ 2165 room=.
 -> e
-T3011 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 63 $ 2165 room=.
+T3014 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 76/76 MP 0/0 Hu 61 $ 2165 room=.
 -> n
-T3012 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 62 $ 2165 room=.
+T3015 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 60 $ 2165 room=.
 -> n
-T3013 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 61 $ 2165 room=.
+T3016 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 60 $ 2165 room=.
 -> e
-T3014 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 60 $ 2165 room=.
+T3017 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 59 $ 2165 room=.
 -> s
-T3015 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 60 $ 2165 room=.
+T3018 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
 -> s
-T3016 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 59 $ 2165 room=.
+T3019 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
 -> e
-T3017 mode=game_loop           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
+T3020 mode=game_loop           Aragorn Strider(hum) F4@(11, 9) HP 76/76 MP 0/0 Hu 57 $ 2165 room=.
 -> n
-T3018 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 58 $ 2165 room=.
+T3021 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 56 $ 2165 room=.
 -> n
-T3019 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 57 $ 2165 room=.
+T3022 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 56 $ 2165 room=.
 -> w
-T3020 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 56 $ 2165 room=.
+T3023 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 55 $ 2165 room=.
 -> w
-T3021 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 56 $ 2165 room=.
+T3024 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 54 $ 2165 room=.
 -> n
-T3022 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 55 $ 2165 room=.
+T3025 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
 -> n
-T3023 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 54 $ 2165 room=O
+T3026 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 53 $ 2165 room=O
 -> w
-T3024 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
+T3027 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
 -> s
-T3025 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 53 $ 2165 room=.
+T3028 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
 -> n
-T3026 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 52 $ 2165 room=.
+T3029 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
 -> w
-T3027 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
+T3030 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
 -> n
-T3028 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 51 $ 2165 room=.
+T3031 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
 -> w
-T3029 mode=game_loop           Aragorn Strider(hum) F4@( 6, 4) HP 76/76 MP 0/0 Hu 50 $ 2165 room=.
+T3032 mode=game_loop           Aragorn Strider(hum) F4@( 6, 4) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
 -> e
-T3030 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
+T3033 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 48 $ 2165 room=.
 -> n
-T3031 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 49 $ 2165 room=.
+T3034 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 47 $ 2165 room=.
 -> e
-T3032 mode=game_loop           Aragorn Strider(hum) F4@( 8, 3) HP 76/76 MP 0/0 Hu 48 $ 2165 room=.
+T3035 mode=game_loop           Aragorn Strider(hum) F4@( 8, 3) HP 76/76 MP 0/0 Hu 46 $ 2165 room=.
 -> n
-T3033 mode=game_loop           Aragorn Strider(hum) F4@( 8, 2) HP 76/76 MP 0/0 Hu 47 $ 2165 room=.
+T3036 mode=game_loop           Aragorn Strider(hum) F4@( 8, 2) HP 76/76 MP 0/0 Hu 46 $ 2165 room=.
 -> w
-T3034 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 46 $ 2165 room=.
+T3037 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 45 $ 2165 room=.
 -> n
-T3035 mode=game_loop           Aragorn Strider(hum) F4@( 7, 1) HP 76/76 MP 0/0 Hu 46 $ 2165 room=.
+T3038 mode=game_loop           Aragorn Strider(hum) F4@( 7, 1) HP 76/76 MP 0/0 Hu 44 $ 2165 room=.
 -> w
-T3036 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 45 $ 2165 room=.
+T3039 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 44 $ 2165 room=.
 -> s
-T3037 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 44 $ 2165 room=.
+T3040 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 43 $ 2165 room=.
 -> n
-T3038 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 44 $ 2165 room=.
+T3041 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 42 $ 2165 room=.
 -> w
-T3039 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 43 $ 2165 room=.
+T3042 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 42 $ 2165 room=.
 -> w
-T3040 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 42 $ 2165 room=.
+T3043 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 41 $ 2165 room=.
 -> w
-T3041 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu 42 $ 2165 room=.
+T3044 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu 40 $ 2165 room=.
 -> s
-T3042 mode=game_loop           Aragorn Strider(hum) F4@( 3, 2) HP 76/76 MP 0/0 Hu 41 $ 2165 room=.
+T3045 mode=game_loop           Aragorn Strider(hum) F4@( 3, 2) HP 76/76 MP 0/0 Hu 39 $ 2165 room=.
 -> e
-T3043 mode=game_loop           Aragorn Strider(hum) F4@( 4, 2) HP 76/76 MP 0/0 Hu 40 $ 2165 room=.
+T3046 mode=game_loop           Aragorn Strider(hum) F4@( 4, 2) HP 76/76 MP 0/0 Hu 39 $ 2165 room=.
 -> n
-T3044 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 39 $ 2165 room=.
+T3047 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu 38 $ 2165 room=.
 -> e
-T3045 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 39 $ 2165 room=.
+T3048 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu 37 $ 2165 room=.
 -> e
-T3046 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 38 $ 2165 room=.
+T3049 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu 37 $ 2165 room=.
 -> s
-T3047 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 37 $ 2165 room=.
+T3050 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu 36 $ 2165 room=.
 -> e
-T3048 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 37 $ 2165 room=.
+T3051 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 35 $ 2165 room=.
 -> s
-T3049 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 36 $ 2165 room=.
+T3052 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 35 $ 2165 room=.
 -> s
-T3050 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 35 $ 2165 room=.
+T3053 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 34 $ 2165 room=.
 -> s
-T3051 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 35 $ 2165 room=.
+T3054 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 33 $ 2165 room=.
 -> e
-T3052 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 34 $ 2165 room=.
+T3055 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 32 $ 2165 room=.
 -> s
-T3053 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 33 $ 2165 room=.
+T3056 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 32 $ 2165 room=.
 -> e
-T3054 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 32 $ 2165 room=.
+T3057 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 31 $ 2165 room=.
 -> s
-T3055 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 32 $ 2165 room=.
+T3058 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 30 $ 2165 room=.
 -> s
-T3056 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 31 $ 2165 room=.
+T3059 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 76/76 MP 0/0 Hu 30 $ 2165 room=.
 -> e
-T3057 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 30 $ 2165 room=.
+T3060 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 76/76 MP 0/0 Hu 29 $ 2165 room=.
 -> n
-T3058 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 30 $ 2165 room=.
+T3061 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 28 $ 2165 room=.
 -> e
-T3059 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 29 $ 2165 room=.
+T3062 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 28 $ 2165 room=.
 -> n
-T3060 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 76/76 MP 0/0 Hu 28 $ 2165 room=.
+T3063 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 76/76 MP 0/0 Hu 27 $ 2165 room=.
 -> e
-T3061 mode=game_loop           Aragorn Strider(hum) F4@(12, 6) HP 76/76 MP 0/0 Hu 28 $ 2165 room=.
+T3064 mode=game_loop           Aragorn Strider(hum) F4@(12, 6) HP 76/76 MP 0/0 Hu 26 $ 2165 room=.
 -> s
-T3062 mode=game_loop           Aragorn Strider(hum) F4@(12, 7) HP 76/76 MP 0/0 Hu 27 $ 2165 room=.
+T3065 mode=game_loop           Aragorn Strider(hum) F4@(12, 7) HP 76/76 MP 0/0 Hu 25 $ 2165 room=.
 -> e
-T3063 mode=game_loop           Aragorn Strider(hum) F4@(13, 7) HP 76/76 MP 0/0 Hu 26 $ 2165 room=.
+T3066 mode=game_loop           Aragorn Strider(hum) F4@(13, 7) HP 76/76 MP 0/0 Hu 25 $ 2165 room=.
 -> s
-T3064 mode=game_loop           Aragorn Strider(hum) F4@(13, 8) HP 76/76 MP 0/0 Hu 25 $ 2165 room=.
+T3067 mode=game_loop           Aragorn Strider(hum) F4@(13, 8) HP 76/76 MP 0/0 Hu 24 $ 2165 room=.
 -> w
-T3065 mode=game_loop           Aragorn Strider(hum) F4@(12, 8) HP 76/76 MP 0/0 Hu 25 $ 2165 room=.
+T3068 mode=game_loop           Aragorn Strider(hum) F4@(12, 8) HP 76/76 MP 0/0 Hu 23 $ 2165 room=.
 -> w
-T3066 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 24 $ 2165 room=.
+T3069 mode=game_loop           Aragorn Strider(hum) F4@(11, 8) HP 76/76 MP 0/0 Hu 23 $ 2165 room=.
 -> n
-T3067 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 23 $ 2165 room=.
+T3070 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 22 $ 2165 room=.
 -> w
-T3068 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 23 $ 2165 room=.
+T3071 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 21 $ 2165 room=.
 -> w
-T3069 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 22 $ 2165 room=.
+T3072 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 21 $ 2165 room=.
 -> n
-T3070 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 21 $ 2165 room=.
+T3073 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 20 $ 2165 room=.
 -> n
-T3071 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 21 $ 2165 room=O
+T3074 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 19 $ 2165 room=O
 -> e
-T3072 mode=game_loop           Aragorn Strider(hum) F4@(10, 5) HP 76/76 MP 0/0 Hu 20 $ 2165 room=.
+T3075 mode=game_loop           Aragorn Strider(hum) F4@(10, 5) HP 76/76 MP 0/0 Hu 18 $ 2165 room=.
 -> e
-T3073 mode=game_loop           Aragorn Strider(hum) F4@(11, 5) HP 76/76 MP 0/0 Hu 19 $ 2165 room=.
+T3076 mode=game_loop           Aragorn Strider(hum) F4@(11, 5) HP 76/76 MP 0/0 Hu 18 $ 2165 room=.
 -> s
-T3074 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 76/76 MP 0/0 Hu 18 $ 2165 room=.
+T3077 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 76/76 MP 0/0 Hu 17 $ 2165 room=.
 -> s
-T3075 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 18 $ 2165 room=.
+T3078 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 76/76 MP 0/0 Hu 16 $ 2165 room=.
 -> w
-T3076 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 17 $ 2165 room=.
+T3079 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 76/76 MP 0/0 Hu 16 $ 2165 room=.
 -> w
-T3077 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 16 $ 2165 room=.
+T3080 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 76/76 MP 0/0 Hu 15 $ 2165 room=.
 -> n
-T3078 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 16 $ 2165 room=.
+T3081 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 76/76 MP 0/0 Hu 14 $ 2165 room=.
 -> n
-T3079 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 15 $ 2165 room=O
+T3082 mode=game_loop           Aragorn Strider(hum) F4@( 9, 5) HP 76/76 MP 0/0 Hu 14 $ 2165 room=O
 -> w
-T3080 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 14 $ 2165 room=.
+T3083 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 13 $ 2165 room=.
 -> s
-T3081 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 14 $ 2165 room=.
+T3084 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 76/76 MP 0/0 Hu 12 $ 2165 room=.
 -> n
-T3082 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 13 $ 2165 room=.
+T3085 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 76/76 MP 0/0 Hu 11 $ 2165 room=.
 -> w
-T3083 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 12 $ 2165 room=.
+T3086 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 76/76 MP 0/0 Hu 11 $ 2165 room=.
 -> n
-T3084 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 11 $ 2165 room=.
+T3087 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 76/76 MP 0/0 Hu 10 $ 2165 room=.
 -> n
-T3085 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu 11 $ 2165 room=.
+T3088 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu  9 $ 2165 room=.
 -> n
-T3086 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu 10 $ 2165 room=.
+T3089 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu  9 $ 2165 room=.
 -> w
-T3087 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu  9 $ 2165 room=.
+T3090 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu  8 $ 2165 room=.
 -> n
-T3088 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu  9 $ 2165 room=.
+T3091 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu  7 $ 2165 room=.
 -> w
-T3089 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu  8 $ 2165 room=.
+T3092 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu  7 $ 2165 room=.
 -> w
-T3090 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu  7 $ 2165 room=.
+T3093 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu  6 $ 2165 room=.
 -> w
-T3091 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu  7 $ 2165 room=.
+T3094 mode=game_loop           Aragorn Strider(hum) F4@( 3, 1) HP 76/76 MP 0/0 Hu  5 $ 2165 room=.
 -> s
-T3092 mode=game_loop           Aragorn Strider(hum) F4@( 3, 2) HP 76/76 MP 0/0 Hu  6 $ 2165 room=.
+T3095 mode=game_loop           Aragorn Strider(hum) F4@( 3, 2) HP 76/76 MP 0/0 Hu  4 $ 2165 room=.
 -> e
-T3093 mode=game_loop           Aragorn Strider(hum) F4@( 4, 2) HP 76/76 MP 0/0 Hu  5 $ 2165 room=.
+T3096 mode=game_loop           Aragorn Strider(hum) F4@( 4, 2) HP 76/76 MP 0/0 Hu  4 $ 2165 room=.
 -> n
-T3094 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu  4 $ 2165 room=.
+T3097 mode=game_loop           Aragorn Strider(hum) F4@( 4, 1) HP 76/76 MP 0/0 Hu  3 $ 2165 room=.
 -> e
-T3095 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu  4 $ 2165 room=.
+T3098 mode=game_loop           Aragorn Strider(hum) F4@( 5, 1) HP 76/76 MP 0/0 Hu  2 $ 2165 room=.
 -> e
-T3096 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu  3 $ 2165 room=.
+T3099 mode=game_loop           Aragorn Strider(hum) F4@( 6, 1) HP 76/76 MP 0/0 Hu  2 $ 2165 room=.
 -> s
-T3097 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu  2 $ 2165 room=.
+T3100 mode=game_loop           Aragorn Strider(hum) F4@( 6, 2) HP 76/76 MP 0/0 Hu  1 $ 2165 room=.
 -> e
-T3098 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 76/76 MP 0/0 Hu  2 $ 2165 room=.
+T3101 mode=game_loop           Aragorn Strider(hum) F4@( 7, 2) HP 74/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3099 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 76/76 MP 0/0 Hu  1 $ 2165 room=.
+T3102 mode=game_loop           Aragorn Strider(hum) F4@( 7, 3) HP 72/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3100 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 74/76 MP 0/0 Hu  0 $ 2165 room=.
+T3103 mode=game_loop           Aragorn Strider(hum) F4@( 7, 4) HP 70/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3101 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 72/76 MP 0/0 Hu  0 $ 2165 room=.
+T3104 mode=game_loop           Aragorn Strider(hum) F4@( 7, 5) HP 68/76 MP 0/0 Hu  0 $ 2165 room=.
 -> e
-T3102 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 70/76 MP 0/0 Hu  0 $ 2165 room=.
+T3105 mode=game_loop           Aragorn Strider(hum) F4@( 8, 5) HP 66/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3103 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 68/76 MP 0/0 Hu  0 $ 2165 room=.
+T3106 mode=game_loop           Aragorn Strider(hum) F4@( 8, 6) HP 64/76 MP 0/0 Hu  0 $ 2165 room=.
 -> e
-T3104 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 66/76 MP 0/0 Hu  0 $ 2165 room=.
+T3107 mode=game_loop           Aragorn Strider(hum) F4@( 9, 6) HP 62/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3105 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 64/76 MP 0/0 Hu  0 $ 2165 room=.
+T3108 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 60/76 MP 0/0 Hu  0 $ 2165 room=.
 -> e
-T3106 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 62/76 MP 0/0 Hu  0 $ 2165 room=.
+T3109 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 58/76 MP 0/0 Hu  0 $ 2165 room=.
 -> e
-T3107 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 60/76 MP 0/0 Hu  0 $ 2165 room=.
+T3110 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 56/76 MP 0/0 Hu  0 $ 2165 room=.
 -> n
-T3108 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 58/76 MP 0/0 Hu  0 $ 2165 room=.
+T3111 mode=game_loop           Aragorn Strider(hum) F4@(11, 6) HP 54/76 MP 0/0 Hu  0 $ 2165 room=.
 -> e
-T3109 mode=game_loop           Aragorn Strider(hum) F4@(12, 6) HP 56/76 MP 0/0 Hu  0 $ 2165 room=.
+T3112 mode=game_loop           Aragorn Strider(hum) F4@(12, 6) HP 52/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3110 mode=game_loop           Aragorn Strider(hum) F4@(12, 7) HP 54/76 MP 0/0 Hu  0 $ 2165 room=.
+T3113 mode=game_loop           Aragorn Strider(hum) F4@(12, 7) HP 50/76 MP 0/0 Hu  0 $ 2165 room=.
 -> e
-T3111 mode=game_loop           Aragorn Strider(hum) F4@(13, 7) HP 52/76 MP 0/0 Hu  0 $ 2165 room=.
+T3114 mode=game_loop           Aragorn Strider(hum) F4@(13, 7) HP 48/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3112 mode=game_loop           Aragorn Strider(hum) F4@(13, 8) HP 50/76 MP 0/0 Hu  0 $ 2165 room=.
+T3115 mode=game_loop           Aragorn Strider(hum) F4@(13, 8) HP 46/76 MP 0/0 Hu  0 $ 2165 room=.
 -> e
-T3113 mode=game_loop           Aragorn Strider(hum) F4@(14, 8) HP 48/76 MP 0/0 Hu  0 $ 2165 room=.
+T3116 mode=game_loop           Aragorn Strider(hum) F4@(14, 8) HP 44/76 MP 0/0 Hu  0 $ 2165 room=.
 -> n
-T3114 mode=game_loop           Aragorn Strider(hum) F4@(14, 7) HP 46/76 MP 0/0 Hu  0 $ 2165 room=.
+T3117 mode=game_loop           Aragorn Strider(hum) F4@(14, 7) HP 42/76 MP 0/0 Hu  0 $ 2165 room=.
 -> n
-T3115 mode=game_loop           Aragorn Strider(hum) F4@(14, 6) HP 44/76 MP 0/0 Hu  0 $ 2165 room=.
+T3118 mode=game_loop           Aragorn Strider(hum) F4@(14, 6) HP 40/76 MP 0/0 Hu  0 $ 2165 room=.
 -> w
-T3116 mode=game_loop           Aragorn Strider(hum) F4@(13, 6) HP 42/76 MP 0/0 Hu  0 $ 2165 room=.
+T3119 mode=game_loop           Aragorn Strider(hum) F4@(13, 6) HP 38/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3117 mode=game_loop           Aragorn Strider(hum) F4@(13, 7) HP 40/76 MP 0/0 Hu  0 $ 2165 room=.
+T3120 mode=game_loop           Aragorn Strider(hum) F4@(13, 7) HP 36/76 MP 0/0 Hu  0 $ 2165 room=.
 -> w
-T3118 mode=game_loop           Aragorn Strider(hum) F4@(12, 7) HP 38/76 MP 0/0 Hu  0 $ 2165 room=.
+T3121 mode=game_loop           Aragorn Strider(hum) F4@(12, 7) HP 34/76 MP 0/0 Hu  0 $ 2165 room=.
 -> w
-T3119 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 36/76 MP 0/0 Hu  0 $ 2165 room=.
+T3122 mode=game_loop           Aragorn Strider(hum) F4@(11, 7) HP 32/76 MP 0/0 Hu  0 $ 2165 room=.
 -> w
-T3120 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 34/76 MP 0/0 Hu  0 $ 2165 room=.
+T3123 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 30/76 MP 0/0 Hu  0 $ 2165 room=.
 -> w
-T3121 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 32/76 MP 0/0 Hu  0 $ 2165 room=.
+T3124 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 28/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3122 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 30/76 MP 0/0 Hu  0 $ 2165 room=.
+T3125 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 26/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3123 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 28/76 MP 0/0 Hu  0 $ 2165 room=.
+T3126 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 24/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3124 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 26/76 MP 0/0 Hu  0 $ 2165 room=.
+T3127 mode=game_loop           Aragorn Strider(hum) F4@( 9,10) HP 22/76 MP 0/0 Hu  0 $ 2165 room=.
 -> e
-T3125 mode=game_loop           Aragorn Strider(hum) F4@(10,10) HP 24/76 MP 0/0 Hu  0 $ 2165 room=.
+T3128 mode=game_loop           Aragorn Strider(hum) F4@(10,10) HP 20/76 MP 0/0 Hu  0 $ 2165 room=.
 -> n
-T3126 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 22/76 MP 0/0 Hu  0 $ 2165 room=.
+T3129 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 18/76 MP 0/0 Hu  0 $ 2165 room=.
 -> n
-T3127 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 20/76 MP 0/0 Hu  0 $ 2165 room=.
+T3130 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 16/76 MP 0/0 Hu  0 $ 2165 room=.
 -> n
-T3128 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 18/76 MP 0/0 Hu  0 $ 2165 room=.
+T3131 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 14/76 MP 0/0 Hu  0 $ 2165 room=.
 -> w
-T3129 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 16/76 MP 0/0 Hu  0 $ 2165 room=.
+T3132 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 12/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3130 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 14/76 MP 0/0 Hu  0 $ 2165 room=.
+T3133 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 10/76 MP 0/0 Hu  0 $ 2165 room=.
 -> s
-T3131 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 12/76 MP 0/0 Hu  0 $ 2165 room=.
+T3134 mode=game_loop           Aragorn Strider(hum) F4@( 9, 9) HP 8/76 MP 0/0 Hu  0 $ 2165 room=.
 -> e
-T3132 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 10/76 MP 0/0 Hu  0 $ 2165 room=.
+T3135 mode=game_loop           Aragorn Strider(hum) F4@(10, 9) HP 6/76 MP 0/0 Hu  0 $ 2165 room=.
 -> n
-T3133 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 8/76 MP 0/0 Hu  0 $ 2165 room=.
+T3136 mode=game_loop           Aragorn Strider(hum) F4@(10, 8) HP 4/76 MP 0/0 Hu  0 $ 2165 room=.
 -> n
-T3134 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 6/76 MP 0/0 Hu  0 $ 2165 room=.
+T3137 mode=game_loop           Aragorn Strider(hum) F4@(10, 7) HP 2/76 MP 0/0 Hu  0 $ 2165 room=.
 -> w
-T3135 mode=game_loop           Aragorn Strider(hum) F4@( 9, 7) HP 4/76 MP 0/0 Hu  0 $ 2165 room=.
--> s
-T3136 mode=game_loop           Aragorn Strider(hum) F4@( 9, 8) HP 2/76 MP 0/0 Hu  0 $ 2165 room=.
--> s
-T3137 mode=death_screen        Aragorn Strider(hum) F4@( 9, 9) HP 0/76 MP 0/0 Hu  0 $ 2165 room=.
+T3138 mode=death_screen        Aragorn Strider(hum) F4@( 9, 7) HP 0/76 MP 0/0 Hu  0 $ 2165 room=.
 
-=== run finished: turns=3137 floor=4 hp=0/76 gold=2165 alive=False mode=death_screen ===
+=== run finished: turns=3138 floor=4 hp=0/76 gold=2165 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00256_human.html
