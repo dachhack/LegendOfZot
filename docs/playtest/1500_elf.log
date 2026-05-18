@@ -4015,8 +4015,1782 @@ T1998 mode=game_loop           Tauriel of the West(elf) F9@(13,13) HP 90/90 MP 0
 T1999 mode=game_loop           Tauriel of the West(elf) F9@(13,12) HP 90/90 MP 0/0 Hu 93 $ 1950 room=.
 -> w
 T2000 mode=game_loop           Tauriel of the West(elf) F9@(12,12) HP 90/90 MP 0/0 Hu 92 $ 1950 room=.
+-> n
+T2001 mode=game_loop           Tauriel of the West(elf) F9@(12,11) HP 90/90 MP 0/0 Hu 91 $ 1950 room=.
+-> e
+T2002 mode=game_loop           Tauriel of the West(elf) F9@(13,11) HP 90/90 MP 0/0 Hu 90 $ 1950 room=.
+-> n
+T2003 mode=altar_mode          Tauriel of the West(elf) F9@(13,10) HP 90/90 MP 0/0 Hu 89 $ 1950 room=A
+-> pray
+T2004 mode=game_loop           Tauriel of the West(elf) F9@(13,10) HP 90/90 MP 0/0 Hu100 $ 1950 room=.
+-> w
+T2005 mode=game_loop           Tauriel of the West(elf) F9@(12,10) HP 90/90 MP 0/0 Hu 99 $ 1950 room=.
+-> n
+T2006 mode=chest_mode          Tauriel of the West(elf) F9@(12, 9) HP 90/90 MP 0/0 Hu 98 $ 1950 room=C
+-> o
+T2007 mode=game_loop           Tauriel of the West(elf) F9@(12, 9) HP 90/90 MP 0/0 Hu 98 $ 1950 room=.
+-> n
+T2008 mode=chest_mode          Tauriel of the West(elf) F9@(12, 8) HP 90/90 MP 0/0 Hu 97 $ 1950 room=C
+-> o
+T2009 mode=game_loop           Tauriel of the West(elf) F9@(12, 8) HP 90/90 MP 0/0 Hu 97 $ 2190 room=.
+-> e
+T2010 mode=game_loop           Tauriel of the West(elf) F9@(13, 8) HP 90/90 MP 0/0 Hu 96 $ 2190 room=.
+-> e
+T2011 mode=game_loop           Tauriel of the West(elf) F9@(14, 8) HP 90/90 MP 0/0 Hu 95 $ 2190 room=.
+-> e
+T2012 mode=warp_mode           Tauriel of the West(elf) F9@(15, 8) HP 90/90 MP 0/0 Hu 94 $ 2190 room=W
+-> y
+T2013 mode=game_loop           Tauriel of the West(elf) F9@(15, 8) HP 90/90 MP 0/0 Hu 94 $ 2190 room=W
+-> s
+T2014 mode=game_loop           Tauriel of the West(elf) F9@(15, 9) HP 90/90 MP 0/0 Hu 93 $ 2190 room=.
+-> s
+T2015 mode=game_loop           Tauriel of the West(elf) F9@(15,10) HP 90/90 MP 0/0 Hu 92 $ 2190 room=.
+-> w
+T2016 mode=game_loop           Tauriel of the West(elf) F9@(14,10) HP 90/90 MP 0/0 Hu 91 $ 2190 room=.
+-> w
+T2017 mode=game_loop           Tauriel of the West(elf) F9@(13,10) HP 90/90 MP 0/0 Hu 90 $ 2190 room=.
+-> s
+T2018 mode=game_loop           Tauriel of the West(elf) F9@(13,11) HP 90/90 MP 0/0 Hu 89 $ 2190 room=.
+-> s
+T2019 mode=game_loop           Tauriel of the West(elf) F9@(13,12) HP 90/90 MP 0/0 Hu 88 $ 2190 room=.
+-> s
+T2020 mode=game_loop           Tauriel of the West(elf) F9@(13,13) HP 90/90 MP 0/0 Hu 87 $ 2190 room=.
+-> e
+T2021 mode=combat_mode         Tauriel of the West(elf) F9@(14,13) HP 90/90 MP 0/0 Hu 86 $ 2190 room=M vs Hardened Giant Centipede(L8 HP25/25)
+-> a
+T2022 mode=combat_victory      Tauriel of the West(elf) F9@(14,13) HP 89/100 MP 0/0 Hu 86 $ 2262 room=.
+-> back
+T2023 mode=game_loop           Tauriel of the West(elf) F9@(14,13) HP 89/100 MP 0/0 Hu 86 $ 2262 room=.
+-> i
+T2024 mode=inventory           Tauriel of the West(elf) F9@(14,13) HP 89/100 MP 0/0 Hu 86 $ 2262 room=.
+-> u31
+T2025 mode=inventory           Tauriel of the West(elf) F9@(14,13) HP 89/100 MP 0/0 Hu 86 $ 2262 room=.
+-> x
+T2026 mode=game_loop           Tauriel of the West(elf) F9@(14,13) HP 89/100 MP 0/0 Hu 86 $ 2262 room=.
+-> e
+T2027 mode=altar_mode          Tauriel of the West(elf) F9@(15,13) HP 89/100 MP 0/0 Hu 85 $ 2262 room=A
+-> pray
+T2028 mode=game_loop           Tauriel of the West(elf) F9@(15,13) HP 89/100 MP 0/0 Hu 85 $ 2262 room=.
+-> n
+T2029 mode=game_loop           Tauriel of the West(elf) F9@(15,12) HP 89/100 MP 0/0 Hu 84 $ 2262 room=.
+-> e
+T2030 mode=game_loop           Tauriel of the West(elf) F9@(16,12) HP 89/100 MP 0/0 Hu 83 $ 2262 room=.
+-> n
+T2031 mode=game_loop           Tauriel of the West(elf) F9@(16,11) HP 90/100 MP 0/0 Hu 82 $ 2262 room=.
+-> e
+T2032 mode=game_loop           Tauriel of the West(elf) F9@(17,11) HP 90/100 MP 0/0 Hu 81 $ 2262 room=.
+-> e
+T2033 mode=library_mode        Tauriel of the West(elf) F9@(18,11) HP 90/100 MP 0/0 Hu 80 $ 2262 room=L
+-> r
+T2034 mode=library_read_decision_mode Tauriel of the West(elf) F9@(18,11) HP 90/100 MP 0/0 Hu 80 $ 2262 room=L
+-> y
+T2035 mode=game_loop           Tauriel of the West(elf) F9@(18,11) HP 90/100 MP 0/0 Hu 80 $ 2262 room=.
+-> s
+T2036 mode=game_loop           Tauriel of the West(elf) F9@(18,12) HP 90/100 MP 0/0 Hu 79 $ 2262 room=.
+-> s
+T2037 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 91/100 MP 0/0 Hu 78 $ 2262 room=.
+-> w
+T2038 mode=game_loop           Tauriel of the West(elf) F9@(17,13) HP 91/100 MP 0/0 Hu 77 $ 2262 room=.
+-> w
+T2039 mode=game_loop           Tauriel of the West(elf) F9@(16,13) HP 91/100 MP 0/0 Hu 76 $ 2262 room=.
+-> s
+T2040 mode=game_loop           Tauriel of the West(elf) F9@(16,14) HP 91/100 MP 0/0 Hu 75 $ 2262 room=.
+-> s
+T2041 mode=garden_mode         Tauriel of the West(elf) F9@(16,15) HP 92/100 MP 0/0 Hu 74 $ 2262 room=G
+-> h
+T2042 mode=game_loop           Tauriel of the West(elf) F9@(16,15) HP 92/100 MP 0/0 Hu 74 $ 2262 room=.
+-> s
+T2043 mode=game_loop           Tauriel of the West(elf) F9@(16,16) HP 92/100 MP 0/0 Hu 73 $ 2262 room=.
+-> w
+T2044 mode=game_loop           Tauriel of the West(elf) F9@(15,16) HP 92/100 MP 0/0 Hu 72 $ 2262 room=.
+-> w
+T2045 mode=game_loop           Tauriel of the West(elf) F9@(14,16) HP 92/100 MP 0/0 Hu 71 $ 2262 room=.
+-> n
+T2046 mode=game_loop           Tauriel of the West(elf) F9@(14,15) HP 93/100 MP 0/0 Hu 70 $ 2262 room=.
+-> n
+T2047 mode=game_loop           Tauriel of the West(elf) F9@(14,14) HP 93/100 MP 0/0 Hu 69 $ 2262 room=.
+-> n
+T2048 mode=game_loop           Tauriel of the West(elf) F9@(14,13) HP 93/100 MP 0/0 Hu 68 $ 2262 room=.
+-> w
+T2049 mode=game_loop           Tauriel of the West(elf) F9@(13,13) HP 93/100 MP 0/0 Hu 67 $ 2262 room=.
+-> i
+T2050 mode=inventory           Tauriel of the West(elf) F9@(13,13) HP 93/100 MP 0/0 Hu 67 $ 2262 room=.
+-> eat2
+T2051 mode=inventory           Tauriel of the West(elf) F9@(13,13) HP 93/100 MP 0/0 Hu 73 $ 2262 room=.
+-> eat1
+T2052 mode=inventory           Tauriel of the West(elf) F9@(13,13) HP 93/100 MP 0/0 Hu100 $ 2262 room=.
+-> u21
+T2053 mode=upgrade_scroll_mode Tauriel of the West(elf) F9@(13,13) HP 93/100 MP 0/0 Hu100 $ 2262 room=.
+-> 1
+T2054 mode=inventory           Tauriel of the West(elf) F9@(13,13) HP 93/100 MP 0/0 Hu100 $ 2262 room=.
+-> x
+T2055 mode=game_loop           Tauriel of the West(elf) F9@(13,13) HP 93/100 MP 0/0 Hu100 $ 2262 room=.
+-> s
+T2056 mode=game_loop           Tauriel of the West(elf) F9@(13,14) HP 94/100 MP 0/0 Hu 99 $ 2262 room=.
+-> s
+T2057 mode=game_loop           Tauriel of the West(elf) F9@(13,15) HP 94/100 MP 0/0 Hu 98 $ 2262 room=.
+-> e
+T2058 mode=game_loop           Tauriel of the West(elf) F9@(14,15) HP 95/100 MP 0/0 Hu 97 $ 2262 room=.
+-> n
+T2059 mode=game_loop           Tauriel of the West(elf) F9@(14,14) HP 95/100 MP 0/0 Hu 96 $ 2262 room=.
+-> n
+T2060 mode=game_loop           Tauriel of the West(elf) F9@(14,13) HP 96/100 MP 0/0 Hu 95 $ 2262 room=.
+-> n
+T2061 mode=game_loop           Tauriel of the West(elf) F9@(14,12) HP 96/100 MP 0/0 Hu 94 $ 2262 room=.
+-> e
+T2062 mode=game_loop           Tauriel of the West(elf) F9@(15,12) HP 97/100 MP 0/0 Hu 93 $ 2262 room=.
+-> s
+T2063 mode=game_loop           Tauriel of the West(elf) F9@(15,13) HP 97/100 MP 0/0 Hu 92 $ 2262 room=.
+-> e
+T2064 mode=game_loop           Tauriel of the West(elf) F9@(16,13) HP 98/100 MP 0/0 Hu 91 $ 2262 room=.
+-> s
+T2065 mode=game_loop           Tauriel of the West(elf) F9@(16,14) HP 98/100 MP 0/0 Hu 90 $ 2262 room=.
+-> s
+T2066 mode=game_loop           Tauriel of the West(elf) F9@(16,15) HP 99/100 MP 0/0 Hu 89 $ 2262 room=.
+-> s
+T2067 mode=game_loop           Tauriel of the West(elf) F9@(16,16) HP 99/100 MP 0/0 Hu 88 $ 2262 room=.
+-> e
+T2068 mode=game_loop           Tauriel of the West(elf) F9@(17,16) HP 100/100 MP 0/0 Hu 87 $ 2262 room=.
+-> e
+T2069 mode=combat_mode         Tauriel of the West(elf) F9@(18,16) HP 100/100 MP 0/0 Hu 86 $ 2262 room=M vs Hardened Rust Monster(L8 HP29/29)
+-> a
+T2070 mode=combat_mode         Tauriel of the West(elf) F9@(18,16) HP 99/100 MP 0/0 Hu 86 $ 2262 room=M vs Hardened Rust Monster(L8 HP29/29)
+-> a
+T2071 mode=combat_mode         Tauriel of the West(elf) F9@(18,16) HP 99/100 MP 0/0 Hu 86 $ 2262 room=M vs Hardened Rust Monster(L8 HP29/29)
+-> a
+T2072 mode=combat_victory      Tauriel of the West(elf) F9@(18,16) HP 98/100 MP 0/0 Hu 86 $ 2334 room=.
+-> back
+T2073 mode=game_loop           Tauriel of the West(elf) F9@(18,16) HP 98/100 MP 0/0 Hu 86 $ 2334 room=.
+-> i
+T2074 mode=inventory           Tauriel of the West(elf) F9@(18,16) HP 98/100 MP 0/0 Hu 86 $ 2334 room=.
+-> u30
+T2075 mode=inventory           Tauriel of the West(elf) F9@(18,16) HP 98/100 MP 0/0 Hu 86 $ 2334 room=.
+-> x
+T2076 mode=game_loop           Tauriel of the West(elf) F9@(18,16) HP 98/100 MP 0/0 Hu 86 $ 2334 room=.
+-> n
+T2077 mode=game_loop           Tauriel of the West(elf) F9@(18,15) HP 98/100 MP 0/0 Hu 85 $ 2334 room=.
+-> n
+T2078 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 98/100 MP 0/0 Hu 84 $ 2334 room=.
+-> n
+T2079 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 98/100 MP 0/0 Hu 83 $ 2334 room=.
+-> w
+T2080 mode=game_loop           Tauriel of the West(elf) F9@(17,13) HP 99/100 MP 0/0 Hu 82 $ 2334 room=.
+-> w
+T2081 mode=game_loop           Tauriel of the West(elf) F9@(16,13) HP 99/100 MP 0/0 Hu 81 $ 2334 room=.
+-> s
+T2082 mode=game_loop           Tauriel of the West(elf) F9@(16,14) HP 99/100 MP 0/0 Hu 80 $ 2334 room=.
+-> s
+T2083 mode=game_loop           Tauriel of the West(elf) F9@(16,15) HP 99/100 MP 0/0 Hu 79 $ 2334 room=.
+-> w
+T2084 mode=game_loop           Tauriel of the West(elf) F9@(15,15) HP 100/100 MP 0/0 Hu 78 $ 2334 room=.
+-> s
+T2085 mode=game_loop           Tauriel of the West(elf) F9@(15,16) HP 100/100 MP 0/0 Hu 77 $ 2334 room=.
+-> e
+T2086 mode=game_loop           Tauriel of the West(elf) F9@(16,16) HP 100/100 MP 0/0 Hu 76 $ 2334 room=.
+-> e
+T2087 mode=game_loop           Tauriel of the West(elf) F9@(17,16) HP 100/100 MP 0/0 Hu 75 $ 2334 room=.
+-> e
+T2088 mode=game_loop           Tauriel of the West(elf) F9@(18,16) HP 100/100 MP 0/0 Hu 74 $ 2334 room=.
+-> n
+T2089 mode=game_loop           Tauriel of the West(elf) F9@(18,15) HP 100/100 MP 0/0 Hu 73 $ 2334 room=.
+-> n
+T2090 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 100/100 MP 0/0 Hu 72 $ 2334 room=.
+-> n
+T2091 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 100/100 MP 0/0 Hu 71 $ 2334 room=.
+-> w
+T2092 mode=game_loop           Tauriel of the West(elf) F9@(17,13) HP 100/100 MP 0/0 Hu 70 $ 2334 room=.
+-> w
+T2093 mode=game_loop           Tauriel of the West(elf) F9@(16,13) HP 100/100 MP 0/0 Hu 69 $ 2334 room=.
+-> n
+T2094 mode=game_loop           Tauriel of the West(elf) F9@(16,12) HP 100/100 MP 0/0 Hu 68 $ 2334 room=.
+-> n
+T2095 mode=game_loop           Tauriel of the West(elf) F9@(16,11) HP 100/100 MP 0/0 Hu 67 $ 2334 room=.
+-> w
+T2096 mode=game_loop           Tauriel of the West(elf) F9@(15,11) HP 100/100 MP 0/0 Hu 66 $ 2334 room=.
+-> s
+T2097 mode=game_loop           Tauriel of the West(elf) F9@(15,12) HP 100/100 MP 0/0 Hu 65 $ 2334 room=.
+-> s
+T2098 mode=game_loop           Tauriel of the West(elf) F9@(15,13) HP 100/100 MP 0/0 Hu 64 $ 2334 room=.
+-> e
+T2099 mode=game_loop           Tauriel of the West(elf) F9@(16,13) HP 100/100 MP 0/0 Hu 63 $ 2334 room=.
+-> s
+T2100 mode=game_loop           Tauriel of the West(elf) F9@(16,14) HP 100/100 MP 0/0 Hu 62 $ 2334 room=.
+-> s
+T2101 mode=game_loop           Tauriel of the West(elf) F9@(16,15) HP 100/100 MP 0/0 Hu 61 $ 2334 room=.
+-> w
+T2102 mode=game_loop           Tauriel of the West(elf) F9@(15,15) HP 100/100 MP 0/0 Hu 60 $ 2334 room=.
+-> n
+T2103 mode=game_loop           Tauriel of the West(elf) F9@(15,14) HP 100/100 MP 0/0 Hu 59 $ 2334 room=.
+-> n
+T2104 mode=game_loop           Tauriel of the West(elf) F9@(15,13) HP 100/100 MP 0/0 Hu 58 $ 2334 room=.
+-> e
+T2105 mode=game_loop           Tauriel of the West(elf) F9@(16,13) HP 100/100 MP 0/0 Hu 57 $ 2334 room=.
+-> s
+T2106 mode=game_loop           Tauriel of the West(elf) F9@(16,14) HP 100/100 MP 0/0 Hu 56 $ 2334 room=.
+-> s
+T2107 mode=game_loop           Tauriel of the West(elf) F9@(16,15) HP 100/100 MP 0/0 Hu 55 $ 2334 room=.
+-> s
+T2108 mode=game_loop           Tauriel of the West(elf) F9@(16,16) HP 100/100 MP 0/0 Hu 54 $ 2334 room=.
+-> e
+T2109 mode=game_loop           Tauriel of the West(elf) F9@(17,16) HP 100/100 MP 0/0 Hu 53 $ 2334 room=.
+-> e
+T2110 mode=game_loop           Tauriel of the West(elf) F9@(18,16) HP 100/100 MP 0/0 Hu 52 $ 2334 room=.
+-> n
+T2111 mode=game_loop           Tauriel of the West(elf) F9@(18,15) HP 100/100 MP 0/0 Hu 51 $ 2334 room=.
+-> n
+T2112 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 100/100 MP 0/0 Hu 50 $ 2334 room=.
+-> e
+T2113 mode=library_mode        Tauriel of the West(elf) F9@(19,14) HP 100/100 MP 0/0 Hu 49 $ 2334 room=L
+-> r
+T2114 mode=library_read_decision_mode Tauriel of the West(elf) F9@(19,14) HP 100/100 MP 0/0 Hu 49 $ 2334 room=L
+-> y
+T2115 mode=game_loop           Tauriel of the West(elf) F9@(19,14) HP 100/100 MP 0/0 Hu 49 $ 2334 room=.
+-> i
+T2116 mode=inventory           Tauriel of the West(elf) F9@(19,14) HP 100/100 MP 0/0 Hu 49 $ 2334 room=.
+-> eat2
+T2117 mode=inventory           Tauriel of the West(elf) F9@(19,14) HP 100/100 MP 0/0 Hu 67 $ 2334 room=.
+-> eat1
+T2118 mode=inventory           Tauriel of the West(elf) F9@(19,14) HP 100/100 MP 0/0 Hu100 $ 2334 room=.
+-> x
+T2119 mode=game_loop           Tauriel of the West(elf) F9@(19,14) HP 100/100 MP 0/0 Hu100 $ 2334 room=.
+-> n
+T2120 mode=game_loop           Tauriel of the West(elf) F9@(19,13) HP 100/100 MP 0/0 Hu 99 $ 2334 room=.
+-> w
+T2121 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 100/100 MP 0/0 Hu 98 $ 2334 room=.
+-> n
+T2122 mode=game_loop           Tauriel of the West(elf) F9@(18,12) HP 100/100 MP 0/0 Hu 97 $ 2334 room=.
+-> n
+T2123 mode=game_loop           Tauriel of the West(elf) F9@(18,11) HP 100/100 MP 0/0 Hu 96 $ 2334 room=.
+-> w
+T2124 mode=game_loop           Tauriel of the West(elf) F9@(17,11) HP 100/100 MP 0/0 Hu 95 $ 2334 room=.
+-> s
+T2125 mode=game_loop           Tauriel of the West(elf) F9@(17,12) HP 100/100 MP 0/0 Hu 94 $ 2334 room=.
+-> s
+T2126 mode=game_loop           Tauriel of the West(elf) F9@(17,13) HP 100/100 MP 0/0 Hu 93 $ 2334 room=.
+-> e
+T2127 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 100/100 MP 0/0 Hu 92 $ 2334 room=.
+-> s
+T2128 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 100/100 MP 0/0 Hu 91 $ 2334 room=.
+-> s
+T2129 mode=game_loop           Tauriel of the West(elf) F9@(18,15) HP 100/100 MP 0/0 Hu 90 $ 2334 room=.
+-> s
+T2130 mode=game_loop           Tauriel of the West(elf) F9@(18,16) HP 100/100 MP 0/0 Hu 89 $ 2334 room=.
+-> e
+T2131 mode=game_loop           Tauriel of the West(elf) F9@(19,16) HP 100/100 MP 0/0 Hu 88 $ 2334 room=.
+-> n
+T2132 mode=game_loop           Tauriel of the West(elf) F9@(19,15) HP 100/100 MP 0/0 Hu 87 $ 2334 room=.
+-> n
+T2133 mode=game_loop           Tauriel of the West(elf) F9@(19,14) HP 100/100 MP 0/0 Hu 86 $ 2334 room=.
+-> n
+T2134 mode=game_loop           Tauriel of the West(elf) F9@(19,13) HP 100/100 MP 0/0 Hu 85 $ 2334 room=.
+-> n
+T2135 mode=game_loop           Tauriel of the West(elf) F9@(19,12) HP 100/100 MP 0/0 Hu 84 $ 2334 room=.
+-> w
+T2136 mode=game_loop           Tauriel of the West(elf) F9@(18,12) HP 100/100 MP 0/0 Hu 83 $ 2334 room=.
+-> n
+T2137 mode=game_loop           Tauriel of the West(elf) F9@(18,11) HP 100/100 MP 0/0 Hu 82 $ 2334 room=.
+-> w
+T2138 mode=game_loop           Tauriel of the West(elf) F9@(17,11) HP 100/100 MP 0/0 Hu 81 $ 2334 room=.
+-> s
+T2139 mode=game_loop           Tauriel of the West(elf) F9@(17,12) HP 100/100 MP 0/0 Hu 80 $ 2334 room=.
+-> s
+T2140 mode=game_loop           Tauriel of the West(elf) F9@(17,13) HP 100/100 MP 0/0 Hu 79 $ 2334 room=.
+-> e
+T2141 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 100/100 MP 0/0 Hu 78 $ 2334 room=.
+-> s
+T2142 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 100/100 MP 0/0 Hu 77 $ 2334 room=.
+-> s
+T2143 mode=game_loop           Tauriel of the West(elf) F9@(18,15) HP 100/100 MP 0/0 Hu 76 $ 2334 room=.
+-> s
+T2144 mode=game_loop           Tauriel of the West(elf) F9@(18,16) HP 100/100 MP 0/0 Hu 75 $ 2334 room=.
+-> e
+T2145 mode=game_loop           Tauriel of the West(elf) F9@(19,16) HP 100/100 MP 0/0 Hu 74 $ 2334 room=.
+-> n
+T2146 mode=game_loop           Tauriel of the West(elf) F9@(19,15) HP 100/100 MP 0/0 Hu 73 $ 2334 room=.
+-> n
+T2147 mode=game_loop           Tauriel of the West(elf) F9@(19,14) HP 100/100 MP 0/0 Hu 72 $ 2334 room=.
+-> n
+T2148 mode=game_loop           Tauriel of the West(elf) F9@(19,13) HP 100/100 MP 0/0 Hu 71 $ 2334 room=.
+-> n
+T2149 mode=game_loop           Tauriel of the West(elf) F9@(19,12) HP 100/100 MP 0/0 Hu 70 $ 2334 room=.
+-> w
+T2150 mode=game_loop           Tauriel of the West(elf) F9@(18,12) HP 100/100 MP 0/0 Hu 69 $ 2334 room=.
+-> n
+T2151 mode=game_loop           Tauriel of the West(elf) F9@(18,11) HP 100/100 MP 0/0 Hu 68 $ 2334 room=.
+-> w
+T2152 mode=game_loop           Tauriel of the West(elf) F9@(17,11) HP 100/100 MP 0/0 Hu 67 $ 2334 room=.
+-> n
+T2153 mode=game_loop           Tauriel of the West(elf) F9@(17,10) HP 100/100 MP 0/0 Hu 66 $ 2334 room=.
+-> e
+T2154 mode=game_loop           Tauriel of the West(elf) F9@(18,10) HP 100/100 MP 0/0 Hu 65 $ 2334 room=.
+-> n
+T2155 mode=chest_mode          Tauriel of the West(elf) F9@(18, 9) HP 100/100 MP 0/0 Hu 64 $ 2334 room=C
+-> o
+T2156 mode=game_loop           Tauriel of the West(elf) F9@(18, 9) HP 100/100 MP 0/0 Hu 64 $ 2334 room=.
+-> n
+T2157 mode=combat_mode         Tauriel of the West(elf) F9@(18, 8) HP 100/100 MP 0/0 Hu 63 $ 2334 room=M vs ELITE UNDEAD DEMILICH(L9 HP234/234)
+-> f
+T2158 mode=flee_direction_mode Tauriel of the West(elf) F9@(18, 8) HP 44/100 MP 0/0 Hu 63 $ 2334 room=M
+-> s
+T2159 mode=game_loop           Tauriel of the West(elf) F9@(18, 9) HP 44/100 MP 0/0 Hu 63 $ 2334 room=.
+-> e
+T2160 mode=stairs_down_mode    Tauriel of the West(elf) F9@(19, 9) HP 44/100 MP 0/0 Hu 62 $ 2334 room=D
+-> d
+T2161 mode=stairs_up_mode      Tauriel of the West(elf) F10@( 1, 1) HP 44/100 MP 0/0 Hu 62 $ 2334 room=U
+-> w
+T2162 mode=stairs_up_mode      Tauriel of the West(elf) F10@( 1, 1) HP 44/100 MP 0/0 Hu 62 $ 2334 room=U
+-> w
+T2163 mode=stairs_up_mode      Tauriel of the West(elf) F10@( 1, 1) HP 44/100 MP 0/0 Hu 62 $ 2334 room=U
+-> s
+T2164 mode=game_loop           Tauriel of the West(elf) F10@( 1, 2) HP 44/100 MP 0/0 Hu 61 $ 2334 room=.
+-> e
+T2165 mode=game_loop           Tauriel of the West(elf) F10@( 2, 2) HP 44/100 MP 0/0 Hu 60 $ 2334 room=.
+-> e
+T2166 mode=game_loop           Tauriel of the West(elf) F10@( 3, 2) HP 44/100 MP 0/0 Hu 59 $ 2334 room=.
+-> s
+T2167 mode=warp_mode           Tauriel of the West(elf) F10@( 3, 3) HP 44/100 MP 0/0 Hu 58 $ 2334 room=W
+-> y
+T2168 mode=game_loop           Tauriel of the West(elf) F9@(12,12) HP 44/100 MP 0/0 Hu 58 $ 2334 room=.
+-> e
+T2169 mode=game_loop           Tauriel of the West(elf) F9@(13,12) HP 44/100 MP 0/0 Hu 57 $ 2334 room=.
+-> e
+T2170 mode=game_loop           Tauriel of the West(elf) F9@(14,12) HP 44/100 MP 0/0 Hu 56 $ 2334 room=.
+-> e
+T2171 mode=game_loop           Tauriel of the West(elf) F9@(15,12) HP 44/100 MP 0/0 Hu 55 $ 2334 room=.
+-> n
+T2172 mode=game_loop           Tauriel of the West(elf) F9@(15,11) HP 44/100 MP 0/0 Hu 54 $ 2334 room=.
+-> e
+T2173 mode=game_loop           Tauriel of the West(elf) F9@(16,11) HP 44/100 MP 0/0 Hu 53 $ 2334 room=.
+-> e
+T2174 mode=game_loop           Tauriel of the West(elf) F9@(17,11) HP 44/100 MP 0/0 Hu 52 $ 2334 room=.
+-> n
+T2175 mode=game_loop           Tauriel of the West(elf) F9@(17,10) HP 44/100 MP 0/0 Hu 51 $ 2334 room=.
+-> e
+T2176 mode=game_loop           Tauriel of the West(elf) F9@(18,10) HP 44/100 MP 0/0 Hu 50 $ 2334 room=.
+-> n
+T2177 mode=game_loop           Tauriel of the West(elf) F9@(18, 9) HP 44/100 MP 0/0 Hu 49 $ 2334 room=.
+-> i
+T2178 mode=inventory           Tauriel of the West(elf) F9@(18, 9) HP 44/100 MP 0/0 Hu 49 $ 2334 room=.
+-> eat1
+T2179 mode=inventory           Tauriel of the West(elf) F9@(18, 9) HP 44/100 MP 0/0 Hu 99 $ 2334 room=.
+-> x
+T2180 mode=game_loop           Tauriel of the West(elf) F9@(18, 9) HP 44/100 MP 0/0 Hu 99 $ 2334 room=.
+-> e
+T2181 mode=stairs_down_mode    Tauriel of the West(elf) F9@(19, 9) HP 44/100 MP 0/0 Hu 98 $ 2334 room=D
+-> d
+T2182 mode=stairs_up_mode      Tauriel of the West(elf) F10@( 1, 1) HP 44/100 MP 0/0 Hu 98 $ 2334 room=U
+-> s
+T2183 mode=game_loop           Tauriel of the West(elf) F10@( 1, 2) HP 45/100 MP 0/0 Hu 97 $ 2334 room=.
+-> e
+T2184 mode=game_loop           Tauriel of the West(elf) F10@( 2, 2) HP 45/100 MP 0/0 Hu 96 $ 2334 room=.
+-> e
+T2185 mode=game_loop           Tauriel of the West(elf) F10@( 3, 2) HP 46/100 MP 0/0 Hu 95 $ 2334 room=.
+-> e
+T2186 mode=game_loop           Tauriel of the West(elf) F10@( 4, 2) HP 46/100 MP 0/0 Hu 94 $ 2334 room=.
+-> e
+T2187 mode=game_loop           Tauriel of the West(elf) F10@( 5, 2) HP 47/100 MP 0/0 Hu 93 $ 2334 room=.
+-> s
+T2188 mode=game_loop           Tauriel of the West(elf) F10@( 5, 3) HP 47/100 MP 0/0 Hu 92 $ 2334 room=.
+-> e
+T2189 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 2334 room=V
+-> r5
+T2190 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 2196 room=V
+-> r14
+T2191 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1920 room=V
+-> b12
+T2192 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1890 room=V
+-> b12
+T2193 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1875 room=V
+-> b12
+T2194 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1865 room=V
+-> b6
+T2195 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1805 room=V
+-> b6
+T2196 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1745 room=V
+-> b6
+T2197 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1685 room=V
+-> b6
+T2198 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1625 room=V
+-> b9
+T2199 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1620 room=V
+-> b9
+T2200 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1615 room=V
+-> b9
+T2201 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1610 room=V
+-> b6
+T2202 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 1210 room=V
+-> b6
+T2203 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 960 room=V
+-> b5
+T2204 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 760 room=V
+-> id25
+T2205 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 610 room=V
+-> id27
+T2206 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 535 room=V
+-> id29
+T2207 mode=vendor_shop         Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 510 room=V
+-> x
+T2208 mode=game_loop           Tauriel of the West(elf) F10@( 6, 3) HP 48/100 MP 0/0 Hu 91 $ 510 room=V
+-> e
+T2209 mode=game_loop           Tauriel of the West(elf) F10@( 7, 3) HP 48/100 MP 0/0 Hu 90 $ 510 room=.
+-> s
+T2210 mode=game_loop           Tauriel of the West(elf) F10@( 7, 4) HP 49/100 MP 0/0 Hu 89 $ 510 room=.
+-> s
+T2211 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 49/100 MP 0/0 Hu 88 $ 510 room=.
+-> s
+T2212 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 50/100 MP 0/0 Hu 87 $ 510 room=M vs Hardened Basilisk(L9 HP85/85)
+-> a
+T2213 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 46/100 MP 0/0 Hu 87 $ 510 room=M vs Hardened Basilisk(L9 HP85/85)
+-> i
+T2214 mode=inventory           Tauriel of the West(elf) F10@( 7, 6) HP 46/100 MP 0/0 Hu 87 $ 510 room=M
+-> u2
+T2215 mode=inventory           Tauriel of the West(elf) F10@( 7, 6) HP 100/100 MP 0/0 Hu 87 $ 510 room=M
+-> x
+T2216 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 100/100 MP 0/0 Hu 87 $ 510 room=M vs Hardened Basilisk(L9 HP85/85)
+-> f
+T2217 mode=flee_direction_mode Tauriel of the West(elf) F10@( 7, 6) HP 96/100 MP 0/0 Hu 87 $ 510 room=M
+-> n
+T2218 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 96/100 MP 0/0 Hu 87 $ 510 room=.
+-> w
+T2219 mode=game_loop           Tauriel of the West(elf) F10@( 6, 5) HP 96/100 MP 0/0 Hu 86 $ 510 room=.
+-> w
+T2220 mode=game_loop           Tauriel of the West(elf) F10@( 5, 5) HP 97/100 MP 0/0 Hu 85 $ 510 room=.
+-> n
+T2221 mode=game_loop           Tauriel of the West(elf) F10@( 5, 4) HP 97/100 MP 0/0 Hu 84 $ 510 room=.
+-> w
+T2222 mode=game_loop           Tauriel of the West(elf) F10@( 4, 4) HP 97/100 MP 0/0 Hu 83 $ 510 room=.
+-> n
+T2223 mode=altar_mode          Tauriel of the West(elf) F10@( 4, 3) HP 97/100 MP 0/0 Hu 82 $ 510 room=A
+-> pray
+T2224 mode=game_loop           Tauriel of the West(elf) F10@( 4, 3) HP 97/100 MP 0/0 Hu 82 $ 510 room=.
+-> e
+T2225 mode=game_loop           Tauriel of the West(elf) F10@( 5, 3) HP 98/100 MP 0/0 Hu 81 $ 510 room=.
+-> n
+T2226 mode=game_loop           Tauriel of the West(elf) F10@( 5, 2) HP 98/100 MP 0/0 Hu 80 $ 510 room=.
+-> e
+T2227 mode=warp_mode           Tauriel of the West(elf) F10@( 6, 2) HP 98/100 MP 0/0 Hu 79 $ 510 room=W
+-> y
+T2228 mode=game_loop           Tauriel of the West(elf) F10@( 6, 2) HP 98/100 MP 0/0 Hu 79 $ 510 room=W
+-> s
+T2229 mode=game_loop           Tauriel of the West(elf) F10@( 6, 3) HP 98/100 MP 0/0 Hu 78 $ 510 room=V
+-> e
+T2230 mode=game_loop           Tauriel of the West(elf) F10@( 7, 3) HP 99/100 MP 0/0 Hu 77 $ 510 room=.
+-> s
+T2231 mode=game_loop           Tauriel of the West(elf) F10@( 7, 4) HP 99/100 MP 0/0 Hu 76 $ 510 room=.
+-> s
+T2232 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 99/100 MP 0/0 Hu 75 $ 510 room=.
+-> s
+T2233 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 99/100 MP 0/0 Hu 74 $ 510 room=M vs Hardened Basilisk(L9 HP85/85)
+-> a
+T2234 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 96/100 MP 0/0 Hu 74 $ 510 room=M vs Hardened Basilisk(L9 HP85/85)
+-> a
+T2235 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 96/100 MP 0/0 Hu 74 $ 510 room=M vs Hardened Basilisk(L9 HP60/85)
+-> a
+T2236 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 96/100 MP 0/0 Hu 74 $ 510 room=M vs Hardened Basilisk(L9 HP60/85)
+-> f
+T2237 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 88/100 MP 0/0 Hu 74 $ 510 room=M vs Hardened Basilisk(L9 HP60/85)
+-> a
+T2238 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 84/100 MP 0/0 Hu 74 $ 510 room=M vs Hardened Basilisk(L9 HP35/85)
+-> a
+T2239 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 80/100 MP 0/0 Hu 74 $ 510 room=M vs Hardened Basilisk(L9 HP35/85)
+-> a
+T2240 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 76/100 MP 0/0 Hu 74 $ 510 room=M vs Hardened Basilisk(L9 HP35/85)
+-> a
+T2241 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 72/100 MP 0/0 Hu 74 $ 510 room=M vs Hardened Basilisk(L9 HP10/85)
+-> f
+T2242 mode=flee_direction_mode Tauriel of the West(elf) F10@( 7, 6) HP 68/100 MP 0/0 Hu 74 $ 510 room=M
+-> n
+T2243 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 68/100 MP 0/0 Hu 74 $ 510 room=.
+-> i
+T2244 mode=inventory           Tauriel of the West(elf) F10@( 7, 5) HP 68/100 MP 0/0 Hu 74 $ 510 room=.
+-> u21
+T2245 mode=inventory           Tauriel of the West(elf) F10@( 7, 5) HP 100/100 MP 0/0 Hu 74 $ 510 room=.
+-> u4
+T2246 mode=upgrade_scroll_mode Tauriel of the West(elf) F10@( 7, 5) HP 100/100 MP 0/0 Hu 74 $ 510 room=.
+-> 8
+T2247 mode=inventory           Tauriel of the West(elf) F10@( 7, 5) HP 100/100 MP 0/0 Hu 74 $ 510 room=.
+-> u4
+T2248 mode=upgrade_scroll_mode Tauriel of the West(elf) F10@( 7, 5) HP 100/100 MP 0/0 Hu 74 $ 510 room=.
+-> 1
+T2249 mode=inventory           Tauriel of the West(elf) F10@( 7, 5) HP 100/100 MP 0/0 Hu 74 $ 510 room=.
+-> x
+T2250 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 100/100 MP 0/0 Hu 74 $ 510 room=.
+-> w
+T2251 mode=game_loop           Tauriel of the West(elf) F10@( 6, 5) HP 100/100 MP 0/0 Hu 73 $ 510 room=.
+-> w
+T2252 mode=game_loop           Tauriel of the West(elf) F10@( 5, 5) HP 100/100 MP 0/0 Hu 72 $ 510 room=.
+-> n
+T2253 mode=game_loop           Tauriel of the West(elf) F10@( 5, 4) HP 100/100 MP 0/0 Hu 71 $ 510 room=.
+-> n
+T2254 mode=game_loop           Tauriel of the West(elf) F10@( 5, 3) HP 100/100 MP 0/0 Hu 70 $ 510 room=.
+-> e
+T2255 mode=game_loop           Tauriel of the West(elf) F10@( 6, 3) HP 100/100 MP 0/0 Hu 69 $ 510 room=V
+-> e
+T2256 mode=game_loop           Tauriel of the West(elf) F10@( 7, 3) HP 100/100 MP 0/0 Hu 68 $ 510 room=.
+-> s
+T2257 mode=game_loop           Tauriel of the West(elf) F10@( 7, 4) HP 100/100 MP 0/0 Hu 67 $ 510 room=.
+-> s
+T2258 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 100/100 MP 0/0 Hu 66 $ 510 room=.
+-> s
+T2259 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 100/100 MP 0/0 Hu 65 $ 510 room=M vs Hardened Basilisk(L9 HP10/85)
+-> a
+T2260 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 100/100 MP 0/0 Hu 65 $ 510 room=M vs Hardened Basilisk(L9 HP10/85)
+-> a
+T2261 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 6) HP 97/100 MP 0/0 Hu 65 $ 510 room=M vs Hardened Basilisk(L9 HP10/85)
+-> a
+T2262 mode=combat_victory      Tauriel of the West(elf) F10@( 7, 6) HP 94/110 MP 0/0 Hu 65 $ 560 room=.
+-> back
+T2263 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 94/110 MP 0/0 Hu 65 $ 560 room=.
+-> w
+T2264 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 94/110 MP 0/0 Hu 64 $ 560 room=.
+-> n
+T2265 mode=game_loop           Tauriel of the West(elf) F10@( 6, 5) HP 94/110 MP 0/0 Hu 63 $ 560 room=.
+-> w
+T2266 mode=game_loop           Tauriel of the West(elf) F10@( 5, 5) HP 94/110 MP 0/0 Hu 62 $ 560 room=.
+-> s
+T2267 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 95/110 MP 0/0 Hu 61 $ 560 room=.
+-> w
+T2268 mode=chest_mode          Tauriel of the West(elf) F10@( 4, 6) HP 95/110 MP 0/0 Hu 60 $ 560 room=C
+-> e
+T2269 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 95/110 MP 0/0 Hu 59 $ 560 room=.
+-> e
+T2270 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 95/110 MP 0/0 Hu 58 $ 560 room=.
+-> e
+T2271 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 95/110 MP 0/0 Hu 57 $ 560 room=.
+-> s
+T2272 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 95/110 MP 0/0 Hu 56 $ 560 room=M vs Manticore(L9 HP78/78)
+-> a
+T2273 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 90/110 MP 0/0 Hu 56 $ 560 room=M vs Manticore(L9 HP49/78)
+-> f
+T2274 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 73/110 MP 0/0 Hu 56 $ 560 room=M vs Manticore(L9 HP49/78)
+-> f
+T2275 mode=flee_direction_mode Tauriel of the West(elf) F10@( 7, 7) HP 61/110 MP 0/0 Hu 56 $ 560 room=M
+-> n
+T2276 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 54/110 MP 0/0 Hu 56 $ 560 room=.
+-> i
+T2277 mode=inventory           Tauriel of the West(elf) F10@( 7, 6) HP 54/110 MP 0/0 Hu 56 $ 560 room=.
+-> u22
+T2278 mode=inventory           Tauriel of the West(elf) F10@( 7, 6) HP 110/110 MP 0/0 Hu 56 $ 560 room=.
+-> x
+T2279 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 110/110 MP 0/0 Hu 56 $ 560 room=.
+-> n
+T2280 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 110/110 MP 0/0 Hu 55 $ 560 room=.
+-> w
+T2281 mode=game_loop           Tauriel of the West(elf) F10@( 6, 5) HP 110/110 MP 0/0 Hu 54 $ 560 room=.
+-> s
+T2282 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 110/110 MP 0/0 Hu 53 $ 560 room=.
+-> w
+T2283 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 110/110 MP 0/0 Hu 52 $ 560 room=.
+-> s
+T2284 mode=game_loop           Tauriel of the West(elf) F10@( 5, 7) HP 110/110 MP 0/0 Hu 51 $ 560 room=.
+-> w
+T2285 mode=game_loop           Tauriel of the West(elf) F10@( 4, 7) HP 110/110 MP 0/0 Hu 50 $ 560 room=.
+-> n
+T2286 mode=game_loop           Tauriel of the West(elf) F10@( 4, 6) HP 110/110 MP 0/0 Hu 49 $ 560 room=C
+-> i
+T2287 mode=inventory           Tauriel of the West(elf) F10@( 4, 6) HP 110/110 MP 0/0 Hu 49 $ 560 room=C
+-> eat1
+T2288 mode=inventory           Tauriel of the West(elf) F10@( 4, 6) HP 110/110 MP 0/0 Hu100 $ 560 room=C
+-> x
+T2289 mode=game_loop           Tauriel of the West(elf) F10@( 4, 6) HP 110/110 MP 0/0 Hu100 $ 560 room=C
+-> w
+T2290 mode=game_loop           Tauriel of the West(elf) F10@( 3, 6) HP 110/110 MP 0/0 Hu 99 $ 560 room=.
+-> e
+T2291 mode=game_loop           Tauriel of the West(elf) F10@( 4, 6) HP 110/110 MP 0/0 Hu 98 $ 560 room=C
+-> e
+T2292 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 110/110 MP 0/0 Hu 97 $ 560 room=.
+-> s
+T2293 mode=game_loop           Tauriel of the West(elf) F10@( 5, 7) HP 110/110 MP 0/0 Hu 96 $ 560 room=.
+-> w
+T2294 mode=game_loop           Tauriel of the West(elf) F10@( 4, 7) HP 110/110 MP 0/0 Hu 95 $ 560 room=.
+-> s
+T2295 mode=chest_mode          Tauriel of the West(elf) F10@( 4, 8) HP 110/110 MP 0/0 Hu 94 $ 560 room=C
+-> o
+T2296 mode=game_loop           Tauriel of the West(elf) F10@( 4, 8) HP 110/110 MP 0/0 Hu 94 $ 560 room=.
+-> e
+T2297 mode=game_loop           Tauriel of the West(elf) F10@( 5, 8) HP 110/110 MP 0/0 Hu 93 $ 560 room=.
+-> e
+T2298 mode=game_loop           Tauriel of the West(elf) F10@( 6, 8) HP 110/110 MP 0/0 Hu 92 $ 560 room=.
+-> n
+T2299 mode=library_mode        Tauriel of the West(elf) F10@( 6, 7) HP 110/110 MP 0/0 Hu 91 $ 560 room=L
+-> r
+T2300 mode=library_read_decision_mode Tauriel of the West(elf) F10@( 6, 7) HP 110/110 MP 0/0 Hu 91 $ 560 room=L
+-> y
+T2301 mode=game_loop           Tauriel of the West(elf) F10@( 6, 7) HP 110/110 MP 0/0 Hu 91 $ 560 room=.
+-> e
+T2302 mode=game_loop           Tauriel of the West(elf) F10@( 5, 7) HP 110/110 MP 0/0 Hu 90 $ 560 room=.
+-> w
+T2303 mode=game_loop           Tauriel of the West(elf) F10@( 5, 8) HP 110/110 MP 0/0 Hu 89 $ 560 room=.
+-> w
+T2304 mode=game_loop           Tauriel of the West(elf) F10@( 5, 9) HP 110/110 MP 0/0 Hu 88 $ 560 room=.
+-> e
+T2305 mode=game_loop           Tauriel of the West(elf) F10@( 5, 8) HP 110/110 MP 0/0 Hu 87 $ 560 room=.
+-> w
+T2306 mode=game_loop           Tauriel of the West(elf) F10@( 4, 8) HP 110/110 MP 0/0 Hu 86 $ 560 room=.
+-> n
+T2307 mode=game_loop           Tauriel of the West(elf) F10@( 4, 7) HP 110/110 MP 0/0 Hu 85 $ 560 room=.
+-> e
+T2308 mode=game_loop           Tauriel of the West(elf) F10@( 5, 7) HP 110/110 MP 0/0 Hu 84 $ 560 room=.
+-> n
+T2309 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 110/110 MP 0/0 Hu 83 $ 560 room=.
+-> e
+T2310 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 110/110 MP 0/0 Hu 82 $ 560 room=.
+-> e
+T2311 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 110/110 MP 0/0 Hu 81 $ 560 room=.
+-> n
+T2312 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 110/110 MP 0/0 Hu 80 $ 560 room=.
+-> w
+T2313 mode=game_loop           Tauriel of the West(elf) F10@( 6, 5) HP 110/110 MP 0/0 Hu 79 $ 560 room=.
+-> w
+T2314 mode=game_loop           Tauriel of the West(elf) F10@( 5, 5) HP 110/110 MP 0/0 Hu 78 $ 560 room=.
+-> s
+T2315 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 110/110 MP 0/0 Hu 77 $ 560 room=.
+-> e
+T2316 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 110/110 MP 0/0 Hu 76 $ 560 room=.
+-> e
+T2317 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 110/110 MP 0/0 Hu 75 $ 560 room=.
+-> n
+T2318 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 110/110 MP 0/0 Hu 74 $ 560 room=.
+-> n
+T2319 mode=game_loop           Tauriel of the West(elf) F10@( 7, 4) HP 110/110 MP 0/0 Hu 73 $ 560 room=.
+-> w
+T2320 mode=game_loop           Tauriel of the West(elf) F10@( 6, 4) HP 110/110 MP 0/0 Hu 72 $ 560 room=.
+-> w
+T2321 mode=game_loop           Tauriel of the West(elf) F10@( 5, 4) HP 110/110 MP 0/0 Hu 71 $ 560 room=.
+-> w
+T2322 mode=game_loop           Tauriel of the West(elf) F10@( 4, 4) HP 110/110 MP 0/0 Hu 70 $ 560 room=.
+-> n
+T2323 mode=game_loop           Tauriel of the West(elf) F10@( 4, 3) HP 110/110 MP 0/0 Hu 69 $ 560 room=.
+-> n
+T2324 mode=game_loop           Tauriel of the West(elf) F10@( 4, 2) HP 110/110 MP 0/0 Hu 68 $ 560 room=.
+-> w
+T2325 mode=game_loop           Tauriel of the West(elf) F10@( 3, 2) HP 110/110 MP 0/0 Hu 67 $ 560 room=.
+-> n
+T2326 mode=game_loop           Tauriel of the West(elf) F10@( 3, 1) HP 110/110 MP 0/0 Hu 66 $ 560 room=.
+-> e
+T2327 mode=library_mode        Tauriel of the West(elf) F10@( 4, 1) HP 110/110 MP 0/0 Hu 65 $ 560 room=L
+-> r
+T2328 mode=library_read_decision_mode Tauriel of the West(elf) F10@( 4, 1) HP 110/110 MP 0/0 Hu 65 $ 560 room=L
+-> y
+T2329 mode=game_loop           Tauriel of the West(elf) F10@( 4, 1) HP 110/110 MP 0/0 Hu 65 $ 560 room=.
+-> s
+T2330 mode=game_loop           Tauriel of the West(elf) F10@( 4, 2) HP 110/110 MP 0/0 Hu 64 $ 560 room=.
+-> s
+T2331 mode=game_loop           Tauriel of the West(elf) F10@( 4, 3) HP 110/110 MP 0/0 Hu 63 $ 560 room=.
+-> s
+T2332 mode=game_loop           Tauriel of the West(elf) F10@( 4, 4) HP 110/110 MP 0/0 Hu 62 $ 560 room=.
+-> e
+T2333 mode=game_loop           Tauriel of the West(elf) F10@( 5, 4) HP 110/110 MP 0/0 Hu 61 $ 560 room=.
+-> s
+T2334 mode=game_loop           Tauriel of the West(elf) F10@( 5, 5) HP 110/110 MP 0/0 Hu 60 $ 560 room=.
+-> s
+T2335 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 110/110 MP 0/0 Hu 59 $ 560 room=.
+-> s
+T2336 mode=game_loop           Tauriel of the West(elf) F10@( 5, 7) HP 110/110 MP 0/0 Hu 58 $ 560 room=.
+-> e
+T2337 mode=fey_garden_mode     Tauriel of the West(elf) F10@( 6, 7) HP 110/110 MP 0/0 Hu 57 $ 560 room=G
+-> h
+T2338 mode=game_loop           Tauriel of the West(elf) F10@( 6, 7) HP 110/110 MP 0/0 Hu 57 $ 560 room=.
+-> s
+T2339 mode=game_loop           Tauriel of the West(elf) F10@( 6, 8) HP 110/110 MP 0/0 Hu 56 $ 560 room=.
+-> w
+T2340 mode=game_loop           Tauriel of the West(elf) F10@( 5, 8) HP 110/110 MP 0/0 Hu 55 $ 560 room=.
+-> s
+T2341 mode=game_loop           Tauriel of the West(elf) F10@( 5, 9) HP 110/110 MP 0/0 Hu 54 $ 560 room=.
+-> e
+T2342 mode=game_loop           Tauriel of the West(elf) F10@( 6, 9) HP 110/110 MP 0/0 Hu 53 $ 560 room=.
+-> s
+T2343 mode=game_loop           Tauriel of the West(elf) F10@( 6,10) HP 110/110 MP 0/0 Hu 52 $ 560 room=.
+-> e
+T2344 mode=game_loop           Tauriel of the West(elf) F10@( 7,10) HP 110/110 MP 0/0 Hu 51 $ 560 room=.
+-> s
+T2345 mode=game_loop           Tauriel of the West(elf) F10@( 7,11) HP 110/110 MP 0/0 Hu 50 $ 560 room=.
+-> s
+T2346 mode=game_loop           Tauriel of the West(elf) F10@( 7,12) HP 110/110 MP 0/0 Hu 49 $ 560 room=.
+-> i
+T2347 mode=inventory           Tauriel of the West(elf) F10@( 7,12) HP 110/110 MP 0/0 Hu 49 $ 560 room=.
+-> eat1
+T2348 mode=inventory           Tauriel of the West(elf) F10@( 7,12) HP 110/110 MP 0/0 Hu 84 $ 560 room=.
+-> x
+T2349 mode=game_loop           Tauriel of the West(elf) F10@( 7,12) HP 110/110 MP 0/0 Hu 84 $ 560 room=.
+-> s
+T2350 mode=game_loop           Tauriel of the West(elf) F10@( 7,13) HP 110/110 MP 0/0 Hu 83 $ 560 room=.
+-> w
+T2351 mode=warp_mode           Tauriel of the West(elf) F10@( 6,13) HP 110/110 MP 0/0 Hu 82 $ 560 room=W
+-> y
+T2352 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 110/110 MP 0/0 Hu 82 $ 560 room=.
+-> s
+T2353 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 110/110 MP 0/0 Hu 81 $ 560 room=.
+-> s
+T2354 mode=game_loop           Tauriel of the West(elf) F9@(18,15) HP 110/110 MP 0/0 Hu 80 $ 560 room=.
+-> e
+T2355 mode=game_loop           Tauriel of the West(elf) F9@(19,15) HP 110/110 MP 0/0 Hu 79 $ 560 room=.
+-> n
+T2356 mode=game_loop           Tauriel of the West(elf) F9@(19,14) HP 110/110 MP 0/0 Hu 78 $ 560 room=.
+-> n
+T2357 mode=game_loop           Tauriel of the West(elf) F9@(19,13) HP 110/110 MP 0/0 Hu 77 $ 560 room=.
+-> n
+T2358 mode=game_loop           Tauriel of the West(elf) F9@(19,12) HP 110/110 MP 0/0 Hu 76 $ 560 room=.
+-> w
+T2359 mode=game_loop           Tauriel of the West(elf) F9@(18,12) HP 110/110 MP 0/0 Hu 75 $ 560 room=.
+-> w
+T2360 mode=game_loop           Tauriel of the West(elf) F9@(17,12) HP 110/110 MP 0/0 Hu 74 $ 560 room=.
+-> s
+T2361 mode=game_loop           Tauriel of the West(elf) F9@(17,13) HP 110/110 MP 0/0 Hu 73 $ 560 room=.
+-> e
+T2362 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 110/110 MP 0/0 Hu 72 $ 560 room=.
+-> s
+T2363 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 110/110 MP 0/0 Hu 71 $ 560 room=.
+-> s
+T2364 mode=game_loop           Tauriel of the West(elf) F9@(18,15) HP 110/110 MP 0/0 Hu 70 $ 560 room=.
+-> e
+T2365 mode=game_loop           Tauriel of the West(elf) F9@(19,15) HP 110/110 MP 0/0 Hu 69 $ 560 room=.
+-> n
+T2366 mode=game_loop           Tauriel of the West(elf) F9@(19,14) HP 110/110 MP 0/0 Hu 68 $ 560 room=.
+-> n
+T2367 mode=game_loop           Tauriel of the West(elf) F9@(19,13) HP 110/110 MP 0/0 Hu 67 $ 560 room=.
+-> n
+T2368 mode=game_loop           Tauriel of the West(elf) F9@(19,12) HP 110/110 MP 0/0 Hu 66 $ 560 room=.
+-> w
+T2369 mode=game_loop           Tauriel of the West(elf) F9@(18,12) HP 110/110 MP 0/0 Hu 65 $ 560 room=.
+-> s
+T2370 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 110/110 MP 0/0 Hu 64 $ 560 room=.
+-> s
+T2371 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 110/110 MP 0/0 Hu 63 $ 560 room=.
+-> s
+T2372 mode=game_loop           Tauriel of the West(elf) F9@(18,15) HP 110/110 MP 0/0 Hu 62 $ 560 room=.
+-> s
+T2373 mode=game_loop           Tauriel of the West(elf) F9@(18,16) HP 110/110 MP 0/0 Hu 61 $ 560 room=.
+-> w
+T2374 mode=game_loop           Tauriel of the West(elf) F9@(17,16) HP 110/110 MP 0/0 Hu 60 $ 560 room=.
+-> w
+T2375 mode=game_loop           Tauriel of the West(elf) F9@(16,16) HP 110/110 MP 0/0 Hu 59 $ 560 room=.
+-> n
+T2376 mode=game_loop           Tauriel of the West(elf) F9@(16,15) HP 110/110 MP 0/0 Hu 58 $ 560 room=.
+-> n
+T2377 mode=game_loop           Tauriel of the West(elf) F9@(16,14) HP 110/110 MP 0/0 Hu 57 $ 560 room=.
+-> n
+T2378 mode=game_loop           Tauriel of the West(elf) F9@(16,13) HP 110/110 MP 0/0 Hu 56 $ 560 room=.
+-> n
+T2379 mode=game_loop           Tauriel of the West(elf) F9@(16,12) HP 110/110 MP 0/0 Hu 55 $ 560 room=.
+-> n
+T2380 mode=game_loop           Tauriel of the West(elf) F9@(16,11) HP 110/110 MP 0/0 Hu 54 $ 560 room=.
+-> e
+T2381 mode=game_loop           Tauriel of the West(elf) F9@(17,11) HP 110/110 MP 0/0 Hu 53 $ 560 room=.
+-> n
+T2382 mode=game_loop           Tauriel of the West(elf) F9@(17,10) HP 110/110 MP 0/0 Hu 52 $ 560 room=.
+-> w
+T2383 mode=game_loop           Tauriel of the West(elf) F9@(16,10) HP 110/110 MP 0/0 Hu 51 $ 560 room=.
+-> n
+T2384 mode=game_loop           Tauriel of the West(elf) F9@(16, 9) HP 110/110 MP 0/0 Hu 50 $ 560 room=.
+-> w
+T2385 mode=game_loop           Tauriel of the West(elf) F9@(15, 9) HP 110/110 MP 0/0 Hu 49 $ 560 room=.
+-> i
+T2386 mode=inventory           Tauriel of the West(elf) F9@(15, 9) HP 110/110 MP 0/0 Hu 49 $ 560 room=.
+-> eat1
+T2387 mode=inventory           Tauriel of the West(elf) F9@(15, 9) HP 110/110 MP 0/0 Hu 99 $ 560 room=.
+-> x
+T2388 mode=game_loop           Tauriel of the West(elf) F9@(15, 9) HP 110/110 MP 0/0 Hu 99 $ 560 room=.
+-> s
+T2389 mode=game_loop           Tauriel of the West(elf) F9@(15,10) HP 110/110 MP 0/0 Hu 98 $ 560 room=.
+-> s
+T2390 mode=game_loop           Tauriel of the West(elf) F9@(15,11) HP 110/110 MP 0/0 Hu 97 $ 560 room=.
+-> s
+T2391 mode=game_loop           Tauriel of the West(elf) F9@(15,12) HP 110/110 MP 0/0 Hu 96 $ 560 room=.
+-> e
+T2392 mode=game_loop           Tauriel of the West(elf) F9@(16,12) HP 110/110 MP 0/0 Hu 95 $ 560 room=.
+-> s
+T2393 mode=game_loop           Tauriel of the West(elf) F9@(16,13) HP 110/110 MP 0/0 Hu 94 $ 560 room=.
+-> s
+T2394 mode=game_loop           Tauriel of the West(elf) F9@(16,14) HP 110/110 MP 0/0 Hu 93 $ 560 room=.
+-> s
+T2395 mode=game_loop           Tauriel of the West(elf) F9@(16,15) HP 110/110 MP 0/0 Hu 92 $ 560 room=.
+-> e
+T2396 mode=combat_mode         Tauriel of the West(elf) F9@(17,15) HP 110/110 MP 0/0 Hu 91 $ 560 room=M vs Hardened Bat(L8 HP20/20)
+-> a
+T2397 mode=combat_mode         Tauriel of the West(elf) F9@(17,15) HP 110/110 MP 0/0 Hu 91 $ 560 room=M vs Hardened Bat(L8 HP20/20)
+-> a
+T2398 mode=combat_mode         Tauriel of the West(elf) F9@(17,15) HP 109/110 MP 0/0 Hu 91 $ 560 room=M vs Hardened Bat(L8 HP20/20)
+-> a
+T2399 mode=combat_victory      Tauriel of the West(elf) F9@(17,15) HP 108/110 MP 0/0 Hu 91 $ 578 room=.
+-> back
+T2400 mode=game_loop           Tauriel of the West(elf) F9@(17,15) HP 108/110 MP 0/0 Hu 91 $ 578 room=.
+-> i
+T2401 mode=inventory           Tauriel of the West(elf) F9@(17,15) HP 108/110 MP 0/0 Hu 91 $ 578 room=.
+-> u35
+T2402 mode=inventory           Tauriel of the West(elf) F9@(17,15) HP 108/110 MP 0/0 Hu 91 $ 578 room=.
+-> x
+T2403 mode=game_loop           Tauriel of the West(elf) F9@(17,15) HP 108/110 MP 0/0 Hu 91 $ 578 room=.
+-> e
+T2404 mode=game_loop           Tauriel of the West(elf) F9@(18,15) HP 108/110 MP 0/0 Hu 90 $ 578 room=.
+-> n
+T2405 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 109/110 MP 0/0 Hu 89 $ 578 room=.
+-> w
+T2406 mode=game_loop           Tauriel of the West(elf) F9@(17,14) HP 109/110 MP 0/0 Hu 88 $ 578 room=.
+-> n
+T2407 mode=game_loop           Tauriel of the West(elf) F9@(17,13) HP 110/110 MP 0/0 Hu 87 $ 578 room=.
+-> n
+T2408 mode=game_loop           Tauriel of the West(elf) F9@(17,12) HP 110/110 MP 0/0 Hu 86 $ 578 room=.
+-> e
+T2409 mode=game_loop           Tauriel of the West(elf) F9@(18,12) HP 110/110 MP 0/0 Hu 85 $ 578 room=.
+-> s
+T2410 mode=game_loop           Tauriel of the West(elf) F9@(18,13) HP 110/110 MP 0/0 Hu 84 $ 578 room=.
+-> s
+T2411 mode=fey_garden_mode     Tauriel of the West(elf) F9@(18,14) HP 110/110 MP 0/0 Hu 83 $ 578 room=G
+-> h
+T2412 mode=game_loop           Tauriel of the West(elf) F9@(18,14) HP 110/110 MP 0/0 Hu 83 $ 578 room=.
+-> w
+T2413 mode=game_loop           Tauriel of the West(elf) F9@(17,14) HP 110/110 MP 0/0 Hu 82 $ 578 room=.
+-> n
+T2414 mode=game_loop           Tauriel of the West(elf) F9@(17,13) HP 110/110 MP 0/0 Hu 81 $ 578 room=.
+-> n
+T2415 mode=game_loop           Tauriel of the West(elf) F9@(17,12) HP 110/110 MP 0/0 Hu 80 $ 578 room=.
+-> e
+T2416 mode=game_loop           Tauriel of the West(elf) F9@(18,12) HP 110/110 MP 0/0 Hu 79 $ 578 room=.
+-> e
+T2417 mode=game_loop           Tauriel of the West(elf) F9@(19,12) HP 110/110 MP 0/0 Hu 78 $ 578 room=.
+-> n
+T2418 mode=game_loop           Tauriel of the West(elf) F9@(19,11) HP 110/110 MP 0/0 Hu 77 $ 578 room=.
+-> w
+T2419 mode=game_loop           Tauriel of the West(elf) F9@(18,11) HP 110/110 MP 0/0 Hu 76 $ 578 room=.
+-> n
+T2420 mode=game_loop           Tauriel of the West(elf) F9@(18,10) HP 110/110 MP 0/0 Hu 75 $ 578 room=.
+-> w
+T2421 mode=game_loop           Tauriel of the West(elf) F9@(17,10) HP 110/110 MP 0/0 Hu 74 $ 578 room=.
+-> w
+T2422 mode=game_loop           Tauriel of the West(elf) F9@(16,10) HP 110/110 MP 0/0 Hu 73 $ 578 room=.
+-> n
+T2423 mode=game_loop           Tauriel of the West(elf) F9@(16, 9) HP 110/110 MP 0/0 Hu 72 $ 578 room=.
+-> w
+T2424 mode=game_loop           Tauriel of the West(elf) F9@(15, 9) HP 110/110 MP 0/0 Hu 71 $ 578 room=.
+-> s
+T2425 mode=game_loop           Tauriel of the West(elf) F9@(15,10) HP 110/110 MP 0/0 Hu 70 $ 578 room=.
+-> s
+T2426 mode=game_loop           Tauriel of the West(elf) F9@(15,11) HP 110/110 MP 0/0 Hu 69 $ 578 room=.
+-> s
+T2427 mode=game_loop           Tauriel of the West(elf) F9@(15,12) HP 110/110 MP 0/0 Hu 68 $ 578 room=.
+-> w
+T2428 mode=game_loop           Tauriel of the West(elf) F9@(14,12) HP 110/110 MP 0/0 Hu 67 $ 578 room=.
+-> w
+T2429 mode=game_loop           Tauriel of the West(elf) F9@(13,12) HP 110/110 MP 0/0 Hu 66 $ 578 room=.
+-> n
+T2430 mode=game_loop           Tauriel of the West(elf) F9@(13,11) HP 110/110 MP 0/0 Hu 65 $ 578 room=.
+-> n
+T2431 mode=game_loop           Tauriel of the West(elf) F9@(13,10) HP 110/110 MP 0/0 Hu 64 $ 578 room=.
+-> n
+T2432 mode=game_loop           Tauriel of the West(elf) F9@(13, 9) HP 110/110 MP 0/0 Hu 63 $ 578 room=.
+-> n
+T2433 mode=game_loop           Tauriel of the West(elf) F9@(13, 8) HP 110/110 MP 0/0 Hu 62 $ 578 room=.
+-> e
+T2434 mode=game_loop           Tauriel of the West(elf) F9@(14, 8) HP 110/110 MP 0/0 Hu 61 $ 578 room=.
+-> n
+T2435 mode=game_loop           Tauriel of the West(elf) F9@(14, 7) HP 110/110 MP 0/0 Hu 60 $ 578 room=.
+-> w
+T2436 mode=game_loop           Tauriel of the West(elf) F9@(13, 7) HP 110/110 MP 0/0 Hu 59 $ 578 room=.
+-> n
+T2437 mode=game_loop           Tauriel of the West(elf) F9@(13, 6) HP 110/110 MP 0/0 Hu 58 $ 578 room=.
+-> e
+T2438 mode=game_loop           Tauriel of the West(elf) F9@(14, 6) HP 110/110 MP 0/0 Hu 57 $ 578 room=.
+-> n
+T2439 mode=game_loop           Tauriel of the West(elf) F9@(14, 5) HP 110/110 MP 0/0 Hu 56 $ 578 room=.
+-> w
+T2440 mode=game_loop           Tauriel of the West(elf) F9@(13, 5) HP 110/110 MP 0/0 Hu 55 $ 578 room=.
+-> n
+T2441 mode=game_loop           Tauriel of the West(elf) F9@(13, 4) HP 110/110 MP 0/0 Hu 54 $ 578 room=.
+-> w
+T2442 mode=game_loop           Tauriel of the West(elf) F9@(12, 4) HP 110/110 MP 0/0 Hu 53 $ 578 room=.
+-> s
+T2443 mode=game_loop           Tauriel of the West(elf) F9@(12, 5) HP 110/110 MP 0/0 Hu 52 $ 578 room=.
+-> w
+T2444 mode=combat_mode         Tauriel of the West(elf) F9@(11, 5) HP 110/110 MP 0/0 Hu 51 $ 578 room=M vs Ettercap(L8 HP55/55)
+-> a
+T2445 mode=combat_mode         Tauriel of the West(elf) F9@(11, 5) HP 109/110 MP 0/0 Hu 51 $ 578 room=M vs Ettercap(L8 HP55/55)
+-> f
+T2446 mode=combat_mode         Tauriel of the West(elf) F9@(11, 5) HP 103/110 MP 0/0 Hu 51 $ 578 room=M vs Ettercap(L8 HP55/55)
+-> f
+T2447 mode=flee_direction_mode Tauriel of the West(elf) F9@(11, 5) HP 97/110 MP 0/0 Hu 51 $ 578 room=M
+-> e
+T2448 mode=game_loop           Tauriel of the West(elf) F9@(12, 5) HP 91/110 MP 0/0 Hu 51 $ 578 room=.
+-> e
+T2449 mode=game_loop           Tauriel of the West(elf) F9@(13, 5) HP 85/110 MP 0/0 Hu 50 $ 578 room=.
+-> s
+T2450 mode=game_loop           Tauriel of the West(elf) F9@(13, 6) HP 85/110 MP 0/0 Hu 49 $ 578 room=.
+-> i
+T2451 mode=inventory           Tauriel of the West(elf) F9@(13, 6) HP 85/110 MP 0/0 Hu 49 $ 578 room=.
+-> u22
+T2452 mode=inventory           Tauriel of the West(elf) F9@(13, 6) HP 110/110 MP 0/0 Hu 49 $ 578 room=.
+-> x
+T2453 mode=game_loop           Tauriel of the West(elf) F9@(13, 6) HP 110/110 MP 0/0 Hu 49 $ 578 room=.
+-> i
+T2454 mode=inventory           Tauriel of the West(elf) F9@(13, 6) HP 110/110 MP 0/0 Hu 49 $ 578 room=.
+-> eat2
+T2455 mode=inventory           Tauriel of the West(elf) F9@(13, 6) HP 110/110 MP 0/0 Hu 62 $ 578 room=.
+-> eat1
+T2456 mode=inventory           Tauriel of the West(elf) F9@(13, 6) HP 110/110 MP 0/0 Hu100 $ 578 room=.
+-> x
+T2457 mode=game_loop           Tauriel of the West(elf) F9@(13, 6) HP 110/110 MP 0/0 Hu100 $ 578 room=.
+-> s
+T2458 mode=game_loop           Tauriel of the West(elf) F9@(13, 7) HP 110/110 MP 0/0 Hu 99 $ 578 room=.
+-> e
+T2459 mode=game_loop           Tauriel of the West(elf) F9@(14, 7) HP 110/110 MP 0/0 Hu 98 $ 578 room=.
+-> s
+T2460 mode=game_loop           Tauriel of the West(elf) F9@(14, 8) HP 110/110 MP 0/0 Hu 97 $ 578 room=.
+-> w
+T2461 mode=game_loop           Tauriel of the West(elf) F9@(13, 8) HP 110/110 MP 0/0 Hu 96 $ 578 room=.
+-> s
+T2462 mode=game_loop           Tauriel of the West(elf) F9@(13, 9) HP 110/110 MP 0/0 Hu 95 $ 578 room=.
+-> w
+T2463 mode=game_loop           Tauriel of the West(elf) F9@(12, 9) HP 110/110 MP 0/0 Hu 94 $ 578 room=.
+-> s
+T2464 mode=game_loop           Tauriel of the West(elf) F9@(12,10) HP 110/110 MP 0/0 Hu 93 $ 578 room=.
+-> w
+T2465 mode=game_loop           Tauriel of the West(elf) F9@(11,10) HP 110/110 MP 0/0 Hu 92 $ 578 room=.
+-> w
+T2466 mode=game_loop           Tauriel of the West(elf) F9@(10,10) HP 110/110 MP 0/0 Hu 91 $ 578 room=.
+-> s
+T2467 mode=game_loop           Tauriel of the West(elf) F9@(10,11) HP 110/110 MP 0/0 Hu 90 $ 578 room=N
+-> s
+T2468 mode=game_loop           Tauriel of the West(elf) F9@(10,12) HP 110/110 MP 0/0 Hu 89 $ 578 room=.
+-> e
+T2469 mode=game_loop           Tauriel of the West(elf) F9@(11,12) HP 110/110 MP 0/0 Hu 88 $ 578 room=.
+-> s
+T2470 mode=game_loop           Tauriel of the West(elf) F9@(11,13) HP 110/110 MP 0/0 Hu 87 $ 578 room=.
+-> e
+T2471 mode=game_loop           Tauriel of the West(elf) F9@(12,13) HP 110/110 MP 0/0 Hu 86 $ 578 room=.
+-> e
+T2472 mode=game_loop           Tauriel of the West(elf) F9@(13,13) HP 110/110 MP 0/0 Hu 85 $ 578 room=.
+-> s
+T2473 mode=game_loop           Tauriel of the West(elf) F9@(13,14) HP 110/110 MP 0/0 Hu 84 $ 578 room=.
+-> s
+T2474 mode=game_loop           Tauriel of the West(elf) F9@(13,15) HP 110/110 MP 0/0 Hu 83 $ 578 room=.
+-> e
+T2475 mode=game_loop           Tauriel of the West(elf) F9@(14,15) HP 110/110 MP 0/0 Hu 82 $ 578 room=.
+-> s
+T2476 mode=game_loop           Tauriel of the West(elf) F9@(14,16) HP 110/110 MP 0/0 Hu 81 $ 578 room=.
+-> e
+T2477 mode=game_loop           Tauriel of the West(elf) F9@(15,16) HP 110/110 MP 0/0 Hu 80 $ 578 room=.
+-> n
+T2478 mode=game_loop           Tauriel of the West(elf) F9@(15,15) HP 110/110 MP 0/0 Hu 79 $ 578 room=.
+-> e
+T2479 mode=game_loop           Tauriel of the West(elf) F9@(16,15) HP 110/110 MP 0/0 Hu 78 $ 578 room=.
+-> n
+T2480 mode=game_loop           Tauriel of the West(elf) F9@(16,14) HP 110/110 MP 0/0 Hu 77 $ 578 room=.
+-> w
+T2481 mode=game_loop           Tauriel of the West(elf) F9@(15,14) HP 110/110 MP 0/0 Hu 76 $ 578 room=.
+-> w
+T2482 mode=game_loop           Tauriel of the West(elf) F9@(14,14) HP 110/110 MP 0/0 Hu 75 $ 578 room=.
+-> w
+T2483 mode=game_loop           Tauriel of the West(elf) F9@(13,14) HP 110/110 MP 0/0 Hu 74 $ 578 room=.
+-> s
+T2484 mode=game_loop           Tauriel of the West(elf) F9@(13,15) HP 110/110 MP 0/0 Hu 73 $ 578 room=.
+-> w
+T2485 mode=game_loop           Tauriel of the West(elf) F9@(12,15) HP 110/110 MP 0/0 Hu 72 $ 578 room=.
+-> n
+T2486 mode=game_loop           Tauriel of the West(elf) F9@(12,14) HP 110/110 MP 0/0 Hu 71 $ 578 room=.
+-> w
+T2487 mode=game_loop           Tauriel of the West(elf) F9@(11,14) HP 110/110 MP 0/0 Hu 70 $ 578 room=.
+-> n
+T2488 mode=game_loop           Tauriel of the West(elf) F9@(11,13) HP 110/110 MP 0/0 Hu 69 $ 578 room=.
+-> w
+T2489 mode=game_loop           Tauriel of the West(elf) F9@(10,13) HP 110/110 MP 0/0 Hu 68 $ 578 room=.
+-> w
+T2490 mode=game_loop           Tauriel of the West(elf) F9@( 9,13) HP 110/110 MP 0/0 Hu 67 $ 578 room=.
+-> s
+T2491 mode=game_loop           Tauriel of the West(elf) F9@( 9,14) HP 110/110 MP 0/0 Hu 66 $ 578 room=.
+-> s
+T2492 mode=game_loop           Tauriel of the West(elf) F9@( 9,15) HP 110/110 MP 0/0 Hu 65 $ 578 room=.
+-> e
+T2493 mode=game_loop           Tauriel of the West(elf) F9@(10,15) HP 110/110 MP 0/0 Hu 64 $ 578 room=.
+-> n
+T2494 mode=game_loop           Tauriel of the West(elf) F9@(10,14) HP 110/110 MP 0/0 Hu 63 $ 578 room=.
+-> n
+T2495 mode=game_loop           Tauriel of the West(elf) F9@(10,13) HP 110/110 MP 0/0 Hu 62 $ 578 room=.
+-> w
+T2496 mode=game_loop           Tauriel of the West(elf) F9@( 9,13) HP 110/110 MP 0/0 Hu 61 $ 578 room=.
+-> s
+T2497 mode=game_loop           Tauriel of the West(elf) F9@( 9,14) HP 110/110 MP 0/0 Hu 60 $ 578 room=.
+-> s
+T2498 mode=game_loop           Tauriel of the West(elf) F9@( 9,15) HP 110/110 MP 0/0 Hu 59 $ 578 room=.
+-> s
+T2499 mode=game_loop           Tauriel of the West(elf) F9@( 9,16) HP 110/110 MP 0/0 Hu 58 $ 578 room=.
+-> w
+T2500 mode=game_loop           Tauriel of the West(elf) F9@( 8,16) HP 110/110 MP 0/0 Hu 57 $ 578 room=.
+-> e
+T2501 mode=game_loop           Tauriel of the West(elf) F9@( 9,16) HP 110/110 MP 0/0 Hu 56 $ 578 room=.
+-> e
+T2502 mode=game_loop           Tauriel of the West(elf) F9@(10,16) HP 110/110 MP 0/0 Hu 55 $ 578 room=.
+-> n
+T2503 mode=game_loop           Tauriel of the West(elf) F9@(10,15) HP 110/110 MP 0/0 Hu 54 $ 578 room=.
+-> n
+T2504 mode=game_loop           Tauriel of the West(elf) F9@(10,14) HP 110/110 MP 0/0 Hu 53 $ 578 room=.
+-> n
+T2505 mode=game_loop           Tauriel of the West(elf) F9@(10,13) HP 110/110 MP 0/0 Hu 52 $ 578 room=.
+-> n
+T2506 mode=game_loop           Tauriel of the West(elf) F9@(10,12) HP 110/110 MP 0/0 Hu 51 $ 578 room=.
+-> n
+T2507 mode=game_loop           Tauriel of the West(elf) F9@(10,11) HP 110/110 MP 0/0 Hu 50 $ 578 room=N
+-> n
+T2508 mode=game_loop           Tauriel of the West(elf) F9@(10,10) HP 110/110 MP 0/0 Hu 49 $ 578 room=.
+-> i
+T2509 mode=inventory           Tauriel of the West(elf) F9@(10,10) HP 110/110 MP 0/0 Hu 49 $ 578 room=.
+-> eat1
+T2510 mode=inventory           Tauriel of the West(elf) F9@(10,10) HP 110/110 MP 0/0 Hu 99 $ 578 room=.
+-> x
+T2511 mode=game_loop           Tauriel of the West(elf) F9@(10,10) HP 110/110 MP 0/0 Hu 99 $ 578 room=.
+-> e
+T2512 mode=game_loop           Tauriel of the West(elf) F9@(11,10) HP 110/110 MP 0/0 Hu 98 $ 578 room=.
+-> e
+T2513 mode=game_loop           Tauriel of the West(elf) F9@(12,10) HP 110/110 MP 0/0 Hu 97 $ 578 room=.
+-> n
+T2514 mode=game_loop           Tauriel of the West(elf) F9@(12, 9) HP 110/110 MP 0/0 Hu 96 $ 578 room=.
+-> e
+T2515 mode=game_loop           Tauriel of the West(elf) F9@(13, 9) HP 110/110 MP 0/0 Hu 95 $ 578 room=.
+-> n
+T2516 mode=game_loop           Tauriel of the West(elf) F9@(13, 8) HP 110/110 MP 0/0 Hu 94 $ 578 room=.
+-> n
+T2517 mode=game_loop           Tauriel of the West(elf) F9@(13, 7) HP 110/110 MP 0/0 Hu 93 $ 578 room=.
+-> e
+T2518 mode=game_loop           Tauriel of the West(elf) F9@(14, 7) HP 110/110 MP 0/0 Hu 92 $ 578 room=.
+-> s
+T2519 mode=game_loop           Tauriel of the West(elf) F9@(14, 8) HP 110/110 MP 0/0 Hu 91 $ 578 room=.
+-> s
+T2520 mode=game_loop           Tauriel of the West(elf) F9@(14, 9) HP 110/110 MP 0/0 Hu 90 $ 578 room=.
+-> s
+T2521 mode=game_loop           Tauriel of the West(elf) F9@(14,10) HP 110/110 MP 0/0 Hu 89 $ 578 room=.
+-> e
+T2522 mode=game_loop           Tauriel of the West(elf) F9@(15,10) HP 110/110 MP 0/0 Hu 88 $ 578 room=.
+-> s
+T2523 mode=game_loop           Tauriel of the West(elf) F9@(15,11) HP 110/110 MP 0/0 Hu 87 $ 578 room=.
+-> s
+T2524 mode=game_loop           Tauriel of the West(elf) F9@(15,12) HP 110/110 MP 0/0 Hu 86 $ 578 room=.
+-> w
+T2525 mode=game_loop           Tauriel of the West(elf) F9@(14,12) HP 110/110 MP 0/0 Hu 85 $ 578 room=.
+-> w
+T2526 mode=game_loop           Tauriel of the West(elf) F9@(13,12) HP 110/110 MP 0/0 Hu 84 $ 578 room=.
+-> s
+T2527 mode=game_loop           Tauriel of the West(elf) F9@(13,13) HP 110/110 MP 0/0 Hu 83 $ 578 room=.
+-> e
+T2528 mode=game_loop           Tauriel of the West(elf) F9@(14,13) HP 110/110 MP 0/0 Hu 82 $ 578 room=.
+-> s
+T2529 mode=game_loop           Tauriel of the West(elf) F9@(14,14) HP 110/110 MP 0/0 Hu 81 $ 578 room=.
+-> w
+T2530 mode=game_loop           Tauriel of the West(elf) F9@(13,14) HP 110/110 MP 0/0 Hu 80 $ 578 room=.
+-> s
+T2531 mode=game_loop           Tauriel of the West(elf) F9@(13,15) HP 110/110 MP 0/0 Hu 79 $ 578 room=.
+-> w
+T2532 mode=game_loop           Tauriel of the West(elf) F9@(12,15) HP 110/110 MP 0/0 Hu 78 $ 578 room=.
+-> n
+T2533 mode=game_loop           Tauriel of the West(elf) F9@(12,14) HP 110/110 MP 0/0 Hu 77 $ 578 room=.
+-> n
+T2534 mode=game_loop           Tauriel of the West(elf) F9@(12,13) HP 110/110 MP 0/0 Hu 76 $ 578 room=.
+-> e
+T2535 mode=game_loop           Tauriel of the West(elf) F9@(13,13) HP 110/110 MP 0/0 Hu 75 $ 578 room=.
+-> n
+T2536 mode=game_loop           Tauriel of the West(elf) F9@(13,12) HP 110/110 MP 0/0 Hu 74 $ 578 room=.
+-> e
+T2537 mode=game_loop           Tauriel of the West(elf) F9@(14,12) HP 110/110 MP 0/0 Hu 73 $ 578 room=.
+-> e
+T2538 mode=game_loop           Tauriel of the West(elf) F9@(15,12) HP 110/110 MP 0/0 Hu 72 $ 578 room=.
+-> n
+T2539 mode=game_loop           Tauriel of the West(elf) F9@(15,11) HP 110/110 MP 0/0 Hu 71 $ 578 room=.
+-> n
+T2540 mode=game_loop           Tauriel of the West(elf) F9@(15,10) HP 110/110 MP 0/0 Hu 70 $ 578 room=.
+-> n
+T2541 mode=game_loop           Tauriel of the West(elf) F9@(15, 9) HP 110/110 MP 0/0 Hu 69 $ 578 room=.
+-> e
+T2542 mode=game_loop           Tauriel of the West(elf) F9@(16, 9) HP 110/110 MP 0/0 Hu 68 $ 578 room=.
+-> s
+T2543 mode=game_loop           Tauriel of the West(elf) F9@(16,10) HP 110/110 MP 0/0 Hu 67 $ 578 room=.
+-> e
+T2544 mode=game_loop           Tauriel of the West(elf) F9@(17,10) HP 110/110 MP 0/0 Hu 66 $ 578 room=.
+-> e
+T2545 mode=game_loop           Tauriel of the West(elf) F9@(18,10) HP 110/110 MP 0/0 Hu 65 $ 578 room=.
+-> s
+T2546 mode=game_loop           Tauriel of the West(elf) F9@(18,11) HP 110/110 MP 0/0 Hu 64 $ 578 room=.
+-> e
+T2547 mode=game_loop           Tauriel of the West(elf) F9@(19,11) HP 110/110 MP 0/0 Hu 63 $ 578 room=.
+-> n
+T2548 mode=game_loop           Tauriel of the West(elf) F9@(19,10) HP 110/110 MP 0/0 Hu 62 $ 578 room=.
+-> n
+T2549 mode=stairs_down_mode    Tauriel of the West(elf) F9@(19, 9) HP 110/110 MP 0/0 Hu 61 $ 578 room=D
+-> w
+T2550 mode=game_loop           Tauriel of the West(elf) F9@(18, 9) HP 110/110 MP 0/0 Hu 60 $ 578 room=.
+-> s
+T2551 mode=game_loop           Tauriel of the West(elf) F9@(18,10) HP 110/110 MP 0/0 Hu 59 $ 578 room=.
+-> w
+T2552 mode=game_loop           Tauriel of the West(elf) F9@(17,10) HP 110/110 MP 0/0 Hu 58 $ 578 room=.
+-> s
+T2553 mode=game_loop           Tauriel of the West(elf) F9@(17,11) HP 110/110 MP 0/0 Hu 57 $ 578 room=.
+-> w
+T2554 mode=game_loop           Tauriel of the West(elf) F9@(16,11) HP 110/110 MP 0/0 Hu 56 $ 578 room=.
+-> n
+T2555 mode=game_loop           Tauriel of the West(elf) F9@(16,10) HP 110/110 MP 0/0 Hu 55 $ 578 room=.
+-> w
+T2556 mode=game_loop           Tauriel of the West(elf) F9@(15,10) HP 110/110 MP 0/0 Hu 54 $ 578 room=.
+-> n
+T2557 mode=game_loop           Tauriel of the West(elf) F9@(15, 9) HP 110/110 MP 0/0 Hu 53 $ 578 room=.
+-> e
+T2558 mode=game_loop           Tauriel of the West(elf) F9@(16, 9) HP 110/110 MP 0/0 Hu 52 $ 578 room=.
+-> n
+T2559 mode=game_loop           Tauriel of the West(elf) F9@(16, 8) HP 110/110 MP 0/0 Hu 51 $ 578 room=.
+-> n
+T2560 mode=game_loop           Tauriel of the West(elf) F9@(16, 7) HP 110/110 MP 0/0 Hu 50 $ 578 room=.
+-> l
+T2561 mode=game_loop           Tauriel of the West(elf) F9@(16, 7) HP 110/110 MP 0/0 Hu 50 $ 578 room=.
+-> l
+T2562 mode=game_loop           Tauriel of the West(elf) F9@(16, 7) HP 110/110 MP 0/0 Hu 50 $ 578 room=.
+-> w
+T2563 mode=game_loop           Tauriel of the West(elf) F9@(15, 7) HP 110/110 MP 0/0 Hu 49 $ 578 room=.
+-> l
+T2564 mode=game_loop           Tauriel of the West(elf) F9@(15, 7) HP 110/110 MP 0/0 Hu 49 $ 578 room=.
+-> w
+T2565 mode=game_loop           Tauriel of the West(elf) F9@(14, 7) HP 110/110 MP 0/0 Hu 48 $ 578 room=.
+-> w
+T2566 mode=game_loop           Tauriel of the West(elf) F9@(13, 7) HP 110/110 MP 0/0 Hu 47 $ 578 room=.
+-> w
+T2567 mode=game_loop           Tauriel of the West(elf) F9@(12, 7) HP 110/110 MP 0/0 Hu 46 $ 578 room=.
+-> l
+T2568 mode=game_loop           Tauriel of the West(elf) F9@(12, 7) HP 110/110 MP 0/0 Hu 46 $ 578 room=.
+-> w
+T2569 mode=game_loop           Tauriel of the West(elf) F9@(11, 7) HP 110/110 MP 0/0 Hu 45 $ 578 room=.
+-> l
+T2570 mode=game_loop           Tauriel of the West(elf) F9@(11, 7) HP 110/110 MP 0/0 Hu 45 $ 578 room=.
+-> l
+T2571 mode=game_loop           Tauriel of the West(elf) F9@(11, 7) HP 110/110 MP 0/0 Hu 45 $ 578 room=.
+-> w
+T2572 mode=chest_mode          Tauriel of the West(elf) F9@(10, 7) HP 110/110 MP 0/0 Hu 44 $ 578 room=C
+-> o
+T2573 mode=game_loop           Tauriel of the West(elf) F9@(10, 7) HP 110/110 MP 0/0 Hu 44 $ 578 room=.
+-> l
+T2574 mode=game_loop           Tauriel of the West(elf) F9@(10, 7) HP 110/110 MP 0/0 Hu 44 $ 578 room=.
+-> s
+T2575 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 578 room=V
+-> b11
+T2576 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 548 room=V
+-> b11
+T2577 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 533 room=V
+-> b11
+T2578 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 523 room=V
+-> b5
+T2579 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 343 room=V
+-> b5
+T2580 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 283 room=V
+-> b5
+T2581 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 223 room=V
+-> b5
+T2582 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 163 room=V
+-> b5
+T2583 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 103 room=V
+-> b7
+T2584 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 98 room=V
+-> b7
+T2585 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 93 room=V
+-> b7
+T2586 mode=vendor_shop         Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 88 room=V
+-> x
+T2587 mode=game_loop           Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 88 room=V
+-> i
+T2588 mode=inventory           Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu 43 $ 88 room=V
+-> eat1
+T2589 mode=inventory           Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu100 $ 88 room=V
+-> x
+T2590 mode=game_loop           Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu100 $ 88 room=V
+-> l
+T2591 mode=game_loop           Tauriel of the West(elf) F9@(10, 8) HP 110/110 MP 0/0 Hu100 $ 88 room=V
+-> s
+T2592 mode=pool_mode           Tauriel of the West(elf) F9@(10, 9) HP 110/110 MP 0/0 Hu 99 $ 88 room=P
+-> dr
+T2593 mode=game_loop           Tauriel of the West(elf) F9@(10, 9) HP 110/110 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T2594 mode=game_loop           Tauriel of the West(elf) F9@(10, 9) HP 110/110 MP 0/0 Hu 99 $ 290 room=.
+-> w
+T2595 mode=combat_mode         Tauriel of the West(elf) F9@( 9, 9) HP 110/110 MP 0/0 Hu 98 $ 290 room=M vs Hardened Giant Centipede(L8 HP25/25)
+-> a
+T2596 mode=combat_victory      Tauriel of the West(elf) F9@( 9, 9) HP 110/120 MP 0/0 Hu 98 $ 594 room=.
+-> back
+T2597 mode=game_loop           Tauriel of the West(elf) F9@( 9, 9) HP 110/120 MP 0/0 Hu 98 $ 594 room=.
+-> i
+T2598 mode=inventory           Tauriel of the West(elf) F9@( 9, 9) HP 110/120 MP 0/0 Hu 98 $ 594 room=.
+-> u22
+T2599 mode=inventory           Tauriel of the West(elf) F9@( 9, 9) HP 120/120 MP 0/0 Hu 98 $ 594 room=.
+-> x
+T2600 mode=game_loop           Tauriel of the West(elf) F9@( 9, 9) HP 120/120 MP 0/0 Hu 98 $ 594 room=.
+-> i
+T2601 mode=inventory           Tauriel of the West(elf) F9@( 9, 9) HP 120/120 MP 0/0 Hu 98 $ 594 room=.
+-> u36
+T2602 mode=inventory           Tauriel of the West(elf) F9@( 9, 9) HP 120/120 MP 0/0 Hu 98 $ 594 room=.
+-> x
+T2603 mode=game_loop           Tauriel of the West(elf) F9@( 9, 9) HP 120/120 MP 0/0 Hu 98 $ 594 room=.
+-> w
+T2604 mode=combat_mode         Tauriel of the West(elf) F9@( 8, 9) HP 120/120 MP 0/0 Hu 97 $ 594 room=M vs Ochre Jelly(L8 HP63/63)
+-> a
+T2605 mode=combat_mode         Tauriel of the West(elf) F9@( 8, 9) HP 119/120 MP 0/0 Hu 97 $ 594 room=M vs Ochre Jelly(L8 HP63/63)
+-> f
+T2606 mode=flee_direction_mode Tauriel of the West(elf) F9@( 8, 9) HP 116/120 MP 0/0 Hu 97 $ 594 room=M
+-> n
+T2607 mode=game_loop           Tauriel of the West(elf) F9@( 8, 8) HP 113/120 MP 0/0 Hu 97 $ 594 room=.
+-> n
+T2608 mode=game_loop           Tauriel of the West(elf) F9@( 8, 7) HP 110/120 MP 0/0 Hu 96 $ 594 room=.
+-> l
+T2609 mode=game_loop           Tauriel of the West(elf) F9@( 8, 7) HP 110/120 MP 0/0 Hu 96 $ 594 room=.
+-> e
+T2610 mode=shrine_mode         Tauriel of the West(elf) F9@( 9, 7) HP 111/120 MP 0/0 Hu 95 $ 594 room=F
+-> p
+T2611 mode=game_loop           Tauriel of the West(elf) F9@( 9, 7) HP 111/120 MP 0/0 Hu 95 $ 594 room=.
+-> l
+T2612 mode=game_loop           Tauriel of the West(elf) F9@( 9, 7) HP 111/120 MP 0/0 Hu 95 $ 594 room=.
+-> n
+T2613 mode=combat_mode         Tauriel of the West(elf) F9@( 9, 6) HP 111/120 MP 0/0 Hu 94 $ 594 room=M vs Hardened Goblin(L8 HP19/19)
+-> a
+T2614 mode=combat_mode         Tauriel of the West(elf) F9@( 9, 6) HP 110/120 MP 0/0 Hu 94 $ 594 room=M vs Hardened Goblin(L8 HP19/19)
+-> a
+T2615 mode=combat_victory      Tauriel of the West(elf) F9@( 9, 6) HP 110/120 MP 0/0 Hu 94 $ 621 room=.
+-> back
+T2616 mode=game_loop           Tauriel of the West(elf) F9@( 9, 6) HP 110/120 MP 0/0 Hu 94 $ 621 room=.
+-> i
+T2617 mode=inventory           Tauriel of the West(elf) F9@( 9, 6) HP 110/120 MP 0/0 Hu 94 $ 621 room=.
+-> u22
+T2618 mode=inventory           Tauriel of the West(elf) F9@( 9, 6) HP 120/120 MP 0/0 Hu 94 $ 621 room=.
+-> x
+T2619 mode=game_loop           Tauriel of the West(elf) F9@( 9, 6) HP 120/120 MP 0/0 Hu 94 $ 621 room=.
+-> i
+T2620 mode=inventory           Tauriel of the West(elf) F9@( 9, 6) HP 120/120 MP 0/0 Hu 94 $ 621 room=.
+-> u37
+T2621 mode=inventory           Tauriel of the West(elf) F9@( 9, 6) HP 120/120 MP 0/0 Hu 94 $ 621 room=.
+-> x
+T2622 mode=game_loop           Tauriel of the West(elf) F9@( 9, 6) HP 120/120 MP 0/0 Hu 94 $ 621 room=.
+-> e
+T2623 mode=dungeon_mode        Tauriel of the West(elf) F9@(10, 6) HP 120/120 MP 0/0 Hu 93 $ 621 room=N
+-> u
+T2624 mode=dungeon_unlocked_mode Tauriel of the West(elf) F9@(10, 6) HP 120/120 MP 0/0 Hu 93 $ 621 room=N
+-> r
+T2625 mode=game_loop           Tauriel of the West(elf) F9@(10, 6) HP 120/120 MP 0/0 Hu 93 $ 621 room=N
+-> n
+T2626 mode=chest_mode          Tauriel of the West(elf) F9@(10, 5) HP 120/120 MP 0/0 Hu 92 $ 621 room=C
+-> o
+T2627 mode=game_loop           Tauriel of the West(elf) F9@(10, 5) HP 120/120 MP 0/0 Hu 92 $ 921 room=.
+-> e
+T2628 mode=combat_mode         Tauriel of the West(elf) F9@(11, 5) HP 120/120 MP 0/0 Hu 91 $ 921 room=M vs Ettercap(L8 HP55/55)
+-> a
+T2629 mode=combat_mode         Tauriel of the West(elf) F9@(11, 5) HP 119/120 MP 0/0 Hu 91 $ 921 room=M vs Ettercap(L8 HP55/55)
+-> a
+T2630 mode=combat_mode         Tauriel of the West(elf) F9@(11, 5) HP 118/120 MP 0/0 Hu 91 $ 921 room=M vs Ettercap(L8 HP55/55)
+-> a
+T2631 mode=combat_mode         Tauriel of the West(elf) F9@(11, 5) HP 117/120 MP 0/0 Hu 91 $ 921 room=M vs Ettercap(L8 HP25/55)
+-> a
+T2632 mode=combat_mode         Tauriel of the West(elf) F9@(11, 5) HP 116/120 MP 0/0 Hu 91 $ 921 room=M vs Ettercap(L8 HP25/55)
+-> f
+T2633 mode=flee_direction_mode Tauriel of the West(elf) F9@(11, 5) HP 109/120 MP 0/0 Hu 91 $ 921 room=M
+-> n
+T2634 mode=game_loop           Tauriel of the West(elf) F9@(11, 4) HP 103/120 MP 0/0 Hu 91 $ 921 room=.
+-> e
+T2635 mode=game_loop           Tauriel of the West(elf) F9@(12, 4) HP 97/120 MP 0/0 Hu 90 $ 921 room=.
+-> s
+T2636 mode=game_loop           Tauriel of the West(elf) F9@(12, 5) HP 92/120 MP 0/0 Hu 89 $ 921 room=.
+-> i
+T2637 mode=inventory           Tauriel of the West(elf) F9@(12, 5) HP 92/120 MP 0/0 Hu 89 $ 921 room=.
+-> u22
+T2638 mode=inventory           Tauriel of the West(elf) F9@(12, 5) HP 120/120 MP 0/0 Hu 89 $ 921 room=.
+-> x
+T2639 mode=game_loop           Tauriel of the West(elf) F9@(12, 5) HP 120/120 MP 0/0 Hu 89 $ 921 room=.
+-> s
+T2640 mode=game_loop           Tauriel of the West(elf) F9@(12, 6) HP 120/120 MP 0/0 Hu 88 $ 921 room=.
+-> l
+T2641 mode=game_loop           Tauriel of the West(elf) F9@(12, 6) HP 120/120 MP 0/0 Hu 88 $ 921 room=.
+-> s
+T2642 mode=game_loop           Tauriel of the West(elf) F9@(12, 7) HP 120/120 MP 0/0 Hu 87 $ 921 room=.
+-> w
+T2643 mode=game_loop           Tauriel of the West(elf) F9@(11, 7) HP 120/120 MP 0/0 Hu 86 $ 921 room=.
+-> w
+T2644 mode=game_loop           Tauriel of the West(elf) F9@(10, 7) HP 120/120 MP 0/0 Hu 85 $ 921 room=.
+-> w
+T2645 mode=game_loop           Tauriel of the West(elf) F9@( 9, 7) HP 120/120 MP 0/0 Hu 84 $ 921 room=.
+-> w
+T2646 mode=game_loop           Tauriel of the West(elf) F9@( 8, 7) HP 120/120 MP 0/0 Hu 83 $ 921 room=.
+-> w
+T2647 mode=game_loop           Tauriel of the West(elf) F9@( 7, 7) HP 120/120 MP 0/0 Hu 82 $ 921 room=.
+-> w
+T2648 mode=garden_mode         Tauriel of the West(elf) F9@( 6, 7) HP 120/120 MP 0/0 Hu 81 $ 921 room=G
+-> h
+T2649 mode=game_loop           Tauriel of the West(elf) F9@( 6, 7) HP 120/120 MP 0/0 Hu 81 $ 921 room=.
+-> l
+T2650 mode=game_loop           Tauriel of the West(elf) F9@( 6, 7) HP 120/120 MP 0/0 Hu 81 $ 921 room=.
+-> l
+T2651 mode=game_loop           Tauriel of the West(elf) F9@( 6, 7) HP 120/120 MP 0/0 Hu 81 $ 921 room=.
+-> s
+T2652 mode=pool_mode           Tauriel of the West(elf) F9@( 6, 8) HP 120/120 MP 0/0 Hu 80 $ 921 room=P
+-> dr
+T2653 mode=game_loop           Tauriel of the West(elf) F9@( 6, 8) HP 120/120 MP 0/0 Hu 80 $ 921 room=.
+-> l
+T2654 mode=game_loop           Tauriel of the West(elf) F9@( 6, 8) HP 120/120 MP 0/0 Hu 80 $ 921 room=.
+-> s
+T2655 mode=game_loop           Tauriel of the West(elf) F9@( 6, 9) HP 120/120 MP 0/0 Hu 79 $ 921 room=.
+-> l
+T2656 mode=game_loop           Tauriel of the West(elf) F9@( 6, 9) HP 120/120 MP 0/0 Hu 79 $ 921 room=.
+-> s
+T2657 mode=game_loop           Tauriel of the West(elf) F9@( 6,10) HP 120/120 MP 0/0 Hu 78 $ 921 room=.
+-> l
+T2658 mode=game_loop           Tauriel of the West(elf) F9@( 6,10) HP 120/120 MP 0/0 Hu 78 $ 921 room=.
+-> e
+T2659 mode=game_loop           Tauriel of the West(elf) F9@( 7,10) HP 120/120 MP 0/0 Hu 77 $ 921 room=.
+-> e
+T2660 mode=game_loop           Tauriel of the West(elf) F9@( 8,10) HP 120/120 MP 0/0 Hu 76 $ 921 room=.
+-> e
+T2661 mode=game_loop           Tauriel of the West(elf) F9@( 9,10) HP 120/120 MP 0/0 Hu 75 $ 921 room=.
+-> e
+T2662 mode=game_loop           Tauriel of the West(elf) F9@(10,10) HP 120/120 MP 0/0 Hu 74 $ 921 room=.
+-> e
+T2663 mode=game_loop           Tauriel of the West(elf) F9@(11,10) HP 120/120 MP 0/0 Hu 73 $ 921 room=.
+-> e
+T2664 mode=game_loop           Tauriel of the West(elf) F9@(12,10) HP 120/120 MP 0/0 Hu 72 $ 921 room=.
+-> e
+T2665 mode=game_loop           Tauriel of the West(elf) F9@(13,10) HP 120/120 MP 0/0 Hu 71 $ 921 room=.
+-> e
+T2666 mode=game_loop           Tauriel of the West(elf) F9@(14,10) HP 120/120 MP 0/0 Hu 70 $ 921 room=.
+-> l
+T2667 mode=game_loop           Tauriel of the West(elf) F9@(14,10) HP 120/120 MP 0/0 Hu 70 $ 921 room=.
+-> e
+T2668 mode=game_loop           Tauriel of the West(elf) F9@(15,10) HP 120/120 MP 0/0 Hu 69 $ 921 room=.
+-> i
+T2669 mode=inventory           Tauriel of the West(elf) F9@(15,10) HP 120/120 MP 0/0 Hu 69 $ 921 room=.
+-> eat3
+T2670 mode=inventory           Tauriel of the West(elf) F9@(15,10) HP 120/120 MP 0/0 Hu 75 $ 921 room=.
+-> x
+T2671 mode=game_loop           Tauriel of the West(elf) F9@(15,10) HP 120/120 MP 0/0 Hu 75 $ 921 room=.
+-> e
+T2672 mode=game_loop           Tauriel of the West(elf) F9@(16,10) HP 120/120 MP 0/0 Hu 74 $ 921 room=.
+-> e
+T2673 mode=game_loop           Tauriel of the West(elf) F9@(17,10) HP 120/120 MP 0/0 Hu 73 $ 921 room=.
+-> e
+T2674 mode=game_loop           Tauriel of the West(elf) F9@(18,10) HP 120/120 MP 0/0 Hu 72 $ 921 room=.
+-> n
+T2675 mode=game_loop           Tauriel of the West(elf) F9@(18, 9) HP 120/120 MP 0/0 Hu 71 $ 921 room=.
+-> e
+T2676 mode=stairs_down_mode    Tauriel of the West(elf) F9@(19, 9) HP 120/120 MP 0/0 Hu 70 $ 921 room=D
+-> d
+T2677 mode=stairs_up_mode      Tauriel of the West(elf) F10@( 1, 1) HP 120/120 MP 0/0 Hu 70 $ 921 room=U
+-> s
+T2678 mode=game_loop           Tauriel of the West(elf) F10@( 1, 2) HP 120/120 MP 0/0 Hu 69 $ 921 room=.
+-> l
+T2679 mode=game_loop           Tauriel of the West(elf) F10@( 1, 2) HP 120/120 MP 0/0 Hu 69 $ 921 room=.
+-> e
+T2680 mode=game_loop           Tauriel of the West(elf) F10@( 2, 2) HP 120/120 MP 0/0 Hu 68 $ 921 room=.
+-> l
+T2681 mode=game_loop           Tauriel of the West(elf) F10@( 2, 2) HP 120/120 MP 0/0 Hu 68 $ 921 room=.
+-> e
+T2682 mode=game_loop           Tauriel of the West(elf) F10@( 3, 2) HP 120/120 MP 0/0 Hu 67 $ 921 room=.
+-> e
+T2683 mode=game_loop           Tauriel of the West(elf) F10@( 4, 2) HP 120/120 MP 0/0 Hu 66 $ 921 room=.
+-> s
+T2684 mode=game_loop           Tauriel of the West(elf) F10@( 4, 3) HP 120/120 MP 0/0 Hu 65 $ 921 room=.
+-> s
+T2685 mode=game_loop           Tauriel of the West(elf) F10@( 4, 4) HP 120/120 MP 0/0 Hu 64 $ 921 room=.
+-> l
+T2686 mode=game_loop           Tauriel of the West(elf) F10@( 4, 4) HP 120/120 MP 0/0 Hu 64 $ 921 room=.
+-> e
+T2687 mode=game_loop           Tauriel of the West(elf) F10@( 5, 4) HP 120/120 MP 0/0 Hu 63 $ 921 room=.
+-> s
+T2688 mode=game_loop           Tauriel of the West(elf) F10@( 5, 5) HP 120/120 MP 0/0 Hu 62 $ 921 room=.
+-> s
+T2689 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 120/120 MP 0/0 Hu 61 $ 921 room=.
+-> e
+T2690 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 120/120 MP 0/0 Hu 60 $ 921 room=.
+-> e
+T2691 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 120/120 MP 0/0 Hu 59 $ 921 room=.
+-> s
+T2692 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 120/120 MP 0/0 Hu 58 $ 921 room=M vs Manticore(L9 HP49/78)
+-> a
+T2693 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 115/120 MP 0/0 Hu 58 $ 921 room=M vs Manticore(L9 HP49/78)
+-> a
+T2694 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 110/120 MP 0/0 Hu 58 $ 921 room=M vs Manticore(L9 HP49/78)
+-> f
+T2695 mode=flee_direction_mode Tauriel of the West(elf) F10@( 7, 7) HP 110/120 MP 0/0 Hu 58 $ 921 room=M
+-> w
+T2696 mode=game_loop           Tauriel of the West(elf) F10@( 6, 7) HP 110/120 MP 0/0 Hu 58 $ 921 room=.
+-> s
+T2697 mode=game_loop           Tauriel of the West(elf) F10@( 6, 8) HP 110/120 MP 0/0 Hu 57 $ 921 room=.
+-> s
+T2698 mode=game_loop           Tauriel of the West(elf) F10@( 6, 9) HP 110/120 MP 0/0 Hu 56 $ 921 room=.
+-> w
+T2699 mode=game_loop           Tauriel of the West(elf) F10@( 5, 9) HP 110/120 MP 0/0 Hu 55 $ 921 room=.
+-> n
+T2700 mode=game_loop           Tauriel of the West(elf) F10@( 5, 8) HP 110/120 MP 0/0 Hu 54 $ 921 room=.
+-> n
+T2701 mode=game_loop           Tauriel of the West(elf) F10@( 5, 7) HP 110/120 MP 0/0 Hu 53 $ 921 room=.
+-> e
+T2702 mode=game_loop           Tauriel of the West(elf) F10@( 6, 7) HP 110/120 MP 0/0 Hu 52 $ 921 room=.
+-> e
+T2703 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 110/120 MP 0/0 Hu 51 $ 921 room=M vs Manticore(L9 HP49/78)
+-> a
+T2704 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 105/120 MP 0/0 Hu 51 $ 921 room=M vs Manticore(L9 HP20/78)
+-> f
+T2705 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 88/120 MP 0/0 Hu 51 $ 921 room=M vs Manticore(L9 HP20/78)
+-> f
+T2706 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 76/120 MP 0/0 Hu 51 $ 921 room=M vs Manticore(L9 HP20/78)
+-> f
+T2707 mode=flee_direction_mode Tauriel of the West(elf) F10@( 7, 7) HP 64/120 MP 0/0 Hu 51 $ 921 room=M
+-> n
+T2708 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 57/120 MP 0/0 Hu 51 $ 921 room=.
+-> i
+T2709 mode=inventory           Tauriel of the West(elf) F10@( 7, 6) HP 57/120 MP 0/0 Hu 51 $ 921 room=.
+-> u22
+T2710 mode=inventory           Tauriel of the West(elf) F10@( 7, 6) HP 117/120 MP 0/0 Hu 51 $ 921 room=.
+-> x
+T2711 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 117/120 MP 0/0 Hu 51 $ 921 room=.
+-> w
+T2712 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 117/120 MP 0/0 Hu 50 $ 921 room=.
+-> w
+T2713 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 117/120 MP 0/0 Hu 49 $ 921 room=.
+-> i
+T2714 mode=inventory           Tauriel of the West(elf) F10@( 5, 6) HP 117/120 MP 0/0 Hu 49 $ 921 room=.
+-> eat3
+T2715 mode=inventory           Tauriel of the West(elf) F10@( 5, 6) HP 117/120 MP 0/0 Hu 56 $ 921 room=.
+-> eat1
+T2716 mode=inventory           Tauriel of the West(elf) F10@( 5, 6) HP 117/120 MP 0/0 Hu 91 $ 921 room=.
+-> x
+T2717 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 117/120 MP 0/0 Hu 91 $ 921 room=.
+-> s
+T2718 mode=game_loop           Tauriel of the West(elf) F10@( 5, 7) HP 117/120 MP 0/0 Hu 90 $ 921 room=.
+-> e
+T2719 mode=game_loop           Tauriel of the West(elf) F10@( 6, 7) HP 118/120 MP 0/0 Hu 89 $ 921 room=.
+-> e
+T2720 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 118/120 MP 0/0 Hu 88 $ 921 room=M vs Manticore(L9 HP20/78)
+-> a
+T2721 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 113/120 MP 0/0 Hu 88 $ 921 room=M vs Manticore(L9 HP20/78)
+-> f
+T2722 mode=flee_direction_mode Tauriel of the West(elf) F10@( 7, 7) HP 101/120 MP 0/0 Hu 88 $ 921 room=M
+-> n
+T2723 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 94/120 MP 0/0 Hu 88 $ 921 room=.
+-> i
+T2724 mode=inventory           Tauriel of the West(elf) F10@( 7, 6) HP 94/120 MP 0/0 Hu 88 $ 921 room=.
+-> u22
+T2725 mode=inventory           Tauriel of the West(elf) F10@( 7, 6) HP 120/120 MP 0/0 Hu 88 $ 921 room=.
+-> x
+T2726 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 120/120 MP 0/0 Hu 88 $ 921 room=.
+-> w
+T2727 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 114/120 MP 0/0 Hu 87 $ 921 room=.
+-> w
+T2728 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 114/120 MP 0/0 Hu 86 $ 921 room=.
+-> w
+T2729 mode=game_loop           Tauriel of the West(elf) F10@( 4, 6) HP 115/120 MP 0/0 Hu 85 $ 921 room=C
+-> s
+T2730 mode=game_loop           Tauriel of the West(elf) F10@( 4, 7) HP 115/120 MP 0/0 Hu 84 $ 921 room=.
+-> e
+T2731 mode=game_loop           Tauriel of the West(elf) F10@( 5, 7) HP 115/120 MP 0/0 Hu 83 $ 921 room=.
+-> e
+T2732 mode=game_loop           Tauriel of the West(elf) F10@( 6, 7) HP 115/120 MP 0/0 Hu 82 $ 921 room=.
+-> e
+T2733 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 116/120 MP 0/0 Hu 81 $ 921 room=M vs Manticore(L9 HP20/78)
+-> a
+T2734 mode=combat_mode         Tauriel of the West(elf) F10@( 7, 7) HP 116/120 MP 0/0 Hu 81 $ 921 room=M vs Manticore(L9 HP20/78)
+-> a
+T2735 mode=combat_victory      Tauriel of the West(elf) F10@( 7, 7) HP 116/120 MP 0/0 Hu 81 $ 931 room=.
+-> back
+T2736 mode=game_loop           Tauriel of the West(elf) F10@( 7, 7) HP 116/120 MP 0/0 Hu 81 $ 931 room=.
+-> i
+T2737 mode=inventory           Tauriel of the West(elf) F10@( 7, 7) HP 116/120 MP 0/0 Hu 81 $ 931 room=.
+-> u36
+T2738 mode=inventory           Tauriel of the West(elf) F10@( 7, 7) HP 116/120 MP 0/0 Hu 81 $ 931 room=.
+-> x
+T2739 mode=game_loop           Tauriel of the West(elf) F10@( 7, 7) HP 116/120 MP 0/0 Hu 81 $ 931 room=.
+-> n
+T2740 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 116/120 MP 0/0 Hu 80 $ 931 room=.
+-> n
+T2741 mode=game_loop           Tauriel of the West(elf) F10@( 7, 5) HP 116/120 MP 0/0 Hu 79 $ 931 room=.
+-> w
+T2742 mode=game_loop           Tauriel of the West(elf) F10@( 6, 5) HP 116/120 MP 0/0 Hu 78 $ 931 room=.
+-> s
+T2743 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 117/120 MP 0/0 Hu 77 $ 931 room=.
+-> w
+T2744 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 117/120 MP 0/0 Hu 76 $ 931 room=.
+-> n
+T2745 mode=game_loop           Tauriel of the West(elf) F10@( 5, 5) HP 117/120 MP 0/0 Hu 75 $ 931 room=.
+-> n
+T2746 mode=game_loop           Tauriel of the West(elf) F10@( 5, 4) HP 117/120 MP 0/0 Hu 74 $ 931 room=.
+-> n
+T2747 mode=game_loop           Tauriel of the West(elf) F10@( 5, 3) HP 118/120 MP 0/0 Hu 73 $ 931 room=.
+-> w
+T2748 mode=game_loop           Tauriel of the West(elf) F10@( 4, 3) HP 118/120 MP 0/0 Hu 72 $ 931 room=.
+-> n
+T2749 mode=game_loop           Tauriel of the West(elf) F10@( 4, 2) HP 118/120 MP 0/0 Hu 71 $ 931 room=.
+-> w
+T2750 mode=game_loop           Tauriel of the West(elf) F10@( 3, 2) HP 118/120 MP 0/0 Hu 70 $ 931 room=.
+-> w
+T2751 mode=game_loop           Tauriel of the West(elf) F10@( 2, 2) HP 119/120 MP 0/0 Hu 69 $ 931 room=.
+-> s
+T2752 mode=game_loop           Tauriel of the West(elf) F10@( 2, 3) HP 119/120 MP 0/0 Hu 68 $ 931 room=.
+-> w
+T2753 mode=game_loop           Tauriel of the West(elf) F10@( 1, 3) HP 119/120 MP 0/0 Hu 67 $ 931 room=.
+-> n
+T2754 mode=game_loop           Tauriel of the West(elf) F10@( 1, 2) HP 119/120 MP 0/0 Hu 66 $ 931 room=.
+-> n
+T2755 mode=stairs_up_mode      Tauriel of the West(elf) F10@( 1, 1) HP 120/120 MP 0/0 Hu 65 $ 931 room=U
+-> e
+T2756 mode=game_loop           Tauriel of the West(elf) F10@( 2, 1) HP 120/120 MP 0/0 Hu 64 $ 931 room=.
+-> s
+T2757 mode=game_loop           Tauriel of the West(elf) F10@( 2, 2) HP 120/120 MP 0/0 Hu 63 $ 931 room=.
+-> e
+T2758 mode=game_loop           Tauriel of the West(elf) F10@( 3, 2) HP 120/120 MP 0/0 Hu 62 $ 931 room=.
+-> e
+T2759 mode=game_loop           Tauriel of the West(elf) F10@( 4, 2) HP 120/120 MP 0/0 Hu 61 $ 931 room=.
+-> s
+T2760 mode=game_loop           Tauriel of the West(elf) F10@( 4, 3) HP 120/120 MP 0/0 Hu 60 $ 931 room=.
+-> s
+T2761 mode=game_loop           Tauriel of the West(elf) F10@( 4, 4) HP 120/120 MP 0/0 Hu 59 $ 931 room=.
+-> e
+T2762 mode=game_loop           Tauriel of the West(elf) F10@( 5, 4) HP 120/120 MP 0/0 Hu 58 $ 931 room=.
+-> s
+T2763 mode=game_loop           Tauriel of the West(elf) F10@( 5, 5) HP 120/120 MP 0/0 Hu 57 $ 931 room=.
+-> s
+T2764 mode=game_loop           Tauriel of the West(elf) F10@( 5, 6) HP 120/120 MP 0/0 Hu 56 $ 931 room=.
+-> e
+T2765 mode=game_loop           Tauriel of the West(elf) F10@( 6, 6) HP 120/120 MP 0/0 Hu 55 $ 931 room=.
+-> e
+T2766 mode=game_loop           Tauriel of the West(elf) F10@( 7, 6) HP 120/120 MP 0/0 Hu 54 $ 931 room=.
+-> s
+T2767 mode=game_loop           Tauriel of the West(elf) F10@( 7, 7) HP 120/120 MP 0/0 Hu 53 $ 931 room=.
+-> w
+T2768 mode=game_loop           Tauriel of the West(elf) F10@( 6, 7) HP 120/120 MP 0/0 Hu 52 $ 931 room=.
+-> s
+T2769 mode=game_loop           Tauriel of the West(elf) F10@( 6, 8) HP 120/120 MP 0/0 Hu 51 $ 931 room=.
+-> s
+T2770 mode=game_loop           Tauriel of the West(elf) F10@( 6, 9) HP 120/120 MP 0/0 Hu 50 $ 931 room=.
+-> s
+T2771 mode=game_loop           Tauriel of the West(elf) F10@( 6,10) HP 120/120 MP 0/0 Hu 49 $ 931 room=.
+-> i
+T2772 mode=inventory           Tauriel of the West(elf) F10@( 6,10) HP 120/120 MP 0/0 Hu 49 $ 931 room=.
+-> eat2
+T2773 mode=inventory           Tauriel of the West(elf) F10@( 6,10) HP 120/120 MP 0/0 Hu 67 $ 931 room=.
+-> eat1
+T2774 mode=inventory           Tauriel of the West(elf) F10@( 6,10) HP 120/120 MP 0/0 Hu100 $ 931 room=.
+-> x
+T2775 mode=game_loop           Tauriel of the West(elf) F10@( 6,10) HP 120/120 MP 0/0 Hu100 $ 931 room=.
+-> e
+T2776 mode=game_loop           Tauriel of the West(elf) F10@( 7,10) HP 120/120 MP 0/0 Hu 99 $ 931 room=.
+-> s
+T2777 mode=game_loop           Tauriel of the West(elf) F10@( 7,11) HP 120/120 MP 0/0 Hu 98 $ 931 room=.
+-> s
+T2778 mode=game_loop           Tauriel of the West(elf) F10@( 7,12) HP 120/120 MP 0/0 Hu 97 $ 931 room=.
+-> s
+T2779 mode=game_loop           Tauriel of the West(elf) F10@( 7,13) HP 120/120 MP 0/0 Hu 96 $ 931 room=.
+-> s
+T2780 mode=game_loop           Tauriel of the West(elf) F10@( 7,14) HP 120/120 MP 0/0 Hu 95 $ 931 room=.
+-> s
+T2781 mode=game_loop           Tauriel of the West(elf) F10@( 7,15) HP 120/120 MP 0/0 Hu 94 $ 931 room=.
+-> w
+T2782 mode=game_loop           Tauriel of the West(elf) F10@( 6,15) HP 120/120 MP 0/0 Hu 93 $ 931 room=.
+-> s
+T2783 mode=pool_mode           Tauriel of the West(elf) F10@( 6,16) HP 120/120 MP 0/0 Hu 92 $ 931 room=P
+-> dr
+T2784 mode=game_loop           Tauriel of the West(elf) F10@( 6,16) HP 120/120 MP 0/0 Hu 92 $ 931 room=.
+-> w
+T2785 mode=game_loop           Tauriel of the West(elf) F10@( 5,16) HP 120/120 MP 0/0 Hu 91 $ 931 room=.
+-> w
+T2786 mode=game_loop           Tauriel of the West(elf) F10@( 4,16) HP 120/120 MP 0/0 Hu 90 $ 931 room=.
+-> w
+T2787 mode=game_loop           Tauriel of the West(elf) F10@( 3,16) HP 120/120 MP 0/0 Hu 89 $ 931 room=.
+-> n
+T2788 mode=game_loop           Tauriel of the West(elf) F10@( 3,15) HP 120/120 MP 0/0 Hu 88 $ 931 room=.
+-> w
+T2789 mode=game_loop           Tauriel of the West(elf) F10@( 2,15) HP 120/120 MP 0/0 Hu 87 $ 931 room=.
+-> w
+T2790 mode=game_loop           Tauriel of the West(elf) F10@( 1,15) HP 120/120 MP 0/0 Hu 86 $ 931 room=.
+-> s
+T2791 mode=game_loop           Tauriel of the West(elf) F10@( 1,16) HP 120/120 MP 0/0 Hu 85 $ 931 room=.
+-> e
+T2792 mode=game_loop           Tauriel of the West(elf) F10@( 2,16) HP 120/120 MP 0/0 Hu 84 $ 931 room=.
+-> e
+T2793 mode=game_loop           Tauriel of the West(elf) F10@( 3,16) HP 120/120 MP 0/0 Hu 83 $ 931 room=.
+-> n
+T2794 mode=game_loop           Tauriel of the West(elf) F10@( 3,15) HP 120/120 MP 0/0 Hu 82 $ 931 room=.
+-> w
+T2795 mode=game_loop           Tauriel of the West(elf) F10@( 2,15) HP 120/120 MP 0/0 Hu 81 $ 931 room=.
+-> w
+T2796 mode=game_loop           Tauriel of the West(elf) F10@( 1,15) HP 120/120 MP 0/0 Hu 80 $ 931 room=.
+-> s
+T2797 mode=game_loop           Tauriel of the West(elf) F10@( 1,16) HP 120/120 MP 0/0 Hu 79 $ 931 room=.
+-> e
+T2798 mode=game_loop           Tauriel of the West(elf) F10@( 2,16) HP 120/120 MP 0/0 Hu 78 $ 931 room=.
+-> e
+T2799 mode=game_loop           Tauriel of the West(elf) F10@( 3,16) HP 120/120 MP 0/0 Hu 77 $ 931 room=.
+-> n
+T2800 mode=game_loop           Tauriel of the West(elf) F10@( 3,15) HP 120/120 MP 0/0 Hu 76 $ 931 room=.
+-> w
+T2801 mode=game_loop           Tauriel of the West(elf) F10@( 2,15) HP 120/120 MP 0/0 Hu 75 $ 931 room=.
+-> n
+T2802 mode=dungeon_mode        Tauriel of the West(elf) F10@( 2,14) HP 120/120 MP 0/0 Hu 74 $ 931 room=N
+-> u
+T2803 mode=game_loop           Tauriel of the West(elf) F10@( 2,14) HP 120/120 MP 0/0 Hu 74 $ 931 room=N
+-> n
+T2804 mode=combat_mode         Tauriel of the West(elf) F10@( 2,13) HP 120/120 MP 0/0 Hu 73 $ 931 room=M vs Hardened Ochre Jelly(L9 HP85/85)
+-> a
+T2805 mode=combat_mode         Tauriel of the West(elf) F10@( 2,13) HP 120/120 MP 0/0 Hu 73 $ 931 room=M vs Hardened Ochre Jelly(L9 HP85/85)
+-> a
+T2806 mode=combat_mode         Tauriel of the West(elf) F10@( 2,13) HP 120/120 MP 0/0 Hu 73 $ 931 room=M vs Hardened Ochre Jelly(L9 HP85/85)
+-> a
+T2807 mode=combat_mode         Tauriel of the West(elf) F10@( 2,13) HP 120/120 MP 0/0 Hu 73 $ 931 room=M vs Hardened Ochre Jelly(L9 HP48/85)
+-> a
+T2808 mode=combat_mode         Tauriel of the West(elf) F10@( 2,13) HP 120/120 MP 0/0 Hu 73 $ 931 room=M vs Hardened Ochre Jelly(L9 HP48/85)
+-> a
+T2809 mode=combat_mode         Tauriel of the West(elf) F10@( 2,13) HP 119/120 MP 0/0 Hu 73 $ 931 room=M vs Hardened Ochre Jelly(L9 HP48/85)
+-> a
+T2810 mode=combat_mode         Tauriel of the West(elf) F10@( 2,13) HP 118/120 MP 0/0 Hu 73 $ 931 room=M vs Hardened Ochre Jelly(L9 HP11/85)
+-> a
+T2811 mode=combat_victory      Tauriel of the West(elf) F10@( 2,13) HP 118/130 MP 0/0 Hu 73 $ 991 room=.
+-> back
+T2812 mode=game_loop           Tauriel of the West(elf) F10@( 2,13) HP 118/130 MP 0/0 Hu 73 $ 991 room=.
+-> n
+T2813 mode=game_loop           Tauriel of the West(elf) F10@( 2,12) HP 118/130 MP 0/0 Hu 72 $ 991 room=.
+-> n
+T2814 mode=game_loop           Tauriel of the West(elf) F10@( 2,11) HP 118/130 MP 0/0 Hu 71 $ 991 room=.
+-> s
+T2815 mode=game_loop           Tauriel of the West(elf) F10@( 2,12) HP 118/130 MP 0/0 Hu 70 $ 991 room=.
+-> w
+T2816 mode=game_loop           Tauriel of the West(elf) F10@( 1,12) HP 119/130 MP 0/0 Hu 69 $ 991 room=.
+-> s
+T2817 mode=game_loop           Tauriel of the West(elf) F10@( 1,13) HP 119/130 MP 0/0 Hu 68 $ 991 room=.
+-> e
+T2818 mode=game_loop           Tauriel of the West(elf) F10@( 2,13) HP 119/130 MP 0/0 Hu 67 $ 991 room=.
+-> s
+T2819 mode=game_loop           Tauriel of the West(elf) F10@( 2,14) HP 119/130 MP 0/0 Hu 66 $ 991 room=N
+-> s
+T2820 mode=game_loop           Tauriel of the West(elf) F10@( 2,15) HP 120/130 MP 0/0 Hu 65 $ 991 room=.
+-> w
+T2821 mode=game_loop           Tauriel of the West(elf) F10@( 1,15) HP 120/130 MP 0/0 Hu 64 $ 991 room=.
+-> s
+T2822 mode=game_loop           Tauriel of the West(elf) F10@( 1,16) HP 120/130 MP 0/0 Hu 63 $ 991 room=.
+-> e
+T2823 mode=game_loop           Tauriel of the West(elf) F10@( 2,16) HP 120/130 MP 0/0 Hu 62 $ 991 room=.
+-> e
+T2824 mode=game_loop           Tauriel of the West(elf) F10@( 3,16) HP 121/130 MP 0/0 Hu 61 $ 991 room=.
+-> e
+T2825 mode=game_loop           Tauriel of the West(elf) F10@( 4,16) HP 121/130 MP 0/0 Hu 60 $ 991 room=.
+-> e
+T2826 mode=game_loop           Tauriel of the West(elf) F10@( 5,16) HP 121/130 MP 0/0 Hu 59 $ 991 room=.
+-> e
+T2827 mode=game_loop           Tauriel of the West(elf) F10@( 6,16) HP 121/130 MP 0/0 Hu 58 $ 991 room=.
+-> n
+T2828 mode=game_loop           Tauriel of the West(elf) F10@( 6,15) HP 121/130 MP 0/0 Hu 57 $ 991 room=.
+-> e
+T2829 mode=game_loop           Tauriel of the West(elf) F10@( 7,15) HP 121/130 MP 0/0 Hu 56 $ 991 room=.
+-> n
+T2830 mode=game_loop           Tauriel of the West(elf) F10@( 7,14) HP 121/130 MP 0/0 Hu 55 $ 991 room=.
+-> n
+T2831 mode=game_loop           Tauriel of the West(elf) F10@( 7,13) HP 121/130 MP 0/0 Hu 54 $ 991 room=.
+-> n
+T2832 mode=game_loop           Tauriel of the West(elf) F10@( 7,12) HP 121/130 MP 0/0 Hu 53 $ 991 room=.
+-> n
+T2833 mode=game_loop           Tauriel of the West(elf) F10@( 7,11) HP 121/130 MP 0/0 Hu 52 $ 991 room=.
+-> w
+T2834 mode=game_loop           Tauriel of the West(elf) F10@( 6,11) HP 121/130 MP 0/0 Hu 51 $ 991 room=.
+-> w
+T2835 mode=game_loop           Tauriel of the West(elf) F10@( 5,11) HP 121/130 MP 0/0 Hu 50 $ 991 room=.
+-> s
+T2836 mode=game_loop           Tauriel of the West(elf) F10@( 5,12) HP 121/130 MP 0/0 Hu 49 $ 991 room=.
+-> i
+T2837 mode=inventory           Tauriel of the West(elf) F10@( 5,12) HP 121/130 MP 0/0 Hu 49 $ 991 room=.
+-> u22
+T2838 mode=inventory           Tauriel of the West(elf) F10@( 5,12) HP 130/130 MP 0/0 Hu 49 $ 991 room=.
+-> x
+T2839 mode=game_loop           Tauriel of the West(elf) F10@( 5,12) HP 130/130 MP 0/0 Hu 49 $ 991 room=.
+-> i
+T2840 mode=inventory           Tauriel of the West(elf) F10@( 5,12) HP 130/130 MP 0/0 Hu 49 $ 991 room=.
+-> eat1
+T2841 mode=inventory           Tauriel of the West(elf) F10@( 5,12) HP 130/130 MP 0/0 Hu 99 $ 991 room=.
+-> x
+T2842 mode=game_loop           Tauriel of the West(elf) F10@( 5,12) HP 130/130 MP 0/0 Hu 99 $ 991 room=.
+-> s
+T2843 mode=game_loop           Tauriel of the West(elf) F10@( 5,13) HP 130/130 MP 0/0 Hu 98 $ 991 room=.
+-> w
+T2844 mode=game_loop           Tauriel of the West(elf) F10@( 4,13) HP 130/130 MP 0/0 Hu 97 $ 991 room=.
+-> n
+T2845 mode=game_loop           Tauriel of the West(elf) F10@( 4,12) HP 130/130 MP 0/0 Hu 96 $ 991 room=.
+-> w
+T2846 mode=game_loop           Tauriel of the West(elf) F10@( 3,12) HP 130/130 MP 0/0 Hu 95 $ 991 room=.
+-> w
+T2847 mode=game_loop           Tauriel of the West(elf) F10@( 2,12) HP 130/130 MP 0/0 Hu 94 $ 991 room=.
+-> n
+T2848 mode=game_loop           Tauriel of the West(elf) F10@( 2,11) HP 130/130 MP 0/0 Hu 93 $ 991 room=.
+-> s
+T2849 mode=game_loop           Tauriel of the West(elf) F10@( 2,12) HP 130/130 MP 0/0 Hu 92 $ 991 room=.
+-> w
+T2850 mode=game_loop           Tauriel of the West(elf) F10@( 1,12) HP 130/130 MP 0/0 Hu 91 $ 991 room=.
+-> s
+T2851 mode=game_loop           Tauriel of the West(elf) F10@( 1,13) HP 130/130 MP 0/0 Hu 90 $ 991 room=.
+-> e
+T2852 mode=game_loop           Tauriel of the West(elf) F10@( 2,13) HP 130/130 MP 0/0 Hu 89 $ 991 room=.
+-> s
+T2853 mode=game_loop           Tauriel of the West(elf) F10@( 2,14) HP 130/130 MP 0/0 Hu 88 $ 991 room=N
+-> s
+T2854 mode=game_loop           Tauriel of the West(elf) F10@( 2,15) HP 130/130 MP 0/0 Hu 87 $ 991 room=.
+-> e
+T2855 mode=game_loop           Tauriel of the West(elf) F10@( 3,15) HP 130/130 MP 0/0 Hu 86 $ 991 room=.
+-> s
+T2856 mode=game_loop           Tauriel of the West(elf) F10@( 3,16) HP 130/130 MP 0/0 Hu 85 $ 991 room=.
+-> e
+T2857 mode=game_loop           Tauriel of the West(elf) F10@( 4,16) HP 130/130 MP 0/0 Hu 84 $ 991 room=.
+-> e
+T2858 mode=game_loop           Tauriel of the West(elf) F10@( 5,16) HP 130/130 MP 0/0 Hu 83 $ 991 room=.
+-> e
+T2859 mode=game_loop           Tauriel of the West(elf) F10@( 6,16) HP 130/130 MP 0/0 Hu 82 $ 991 room=.
+-> n
+T2860 mode=game_loop           Tauriel of the West(elf) F10@( 6,15) HP 130/130 MP 0/0 Hu 81 $ 991 room=.
+-> e
+T2861 mode=game_loop           Tauriel of the West(elf) F10@( 7,15) HP 130/130 MP 0/0 Hu 80 $ 991 room=.
+-> n
+T2862 mode=game_loop           Tauriel of the West(elf) F10@( 7,14) HP 130/130 MP 0/0 Hu 79 $ 991 room=.
+-> e
+T2863 mode=game_loop           Tauriel of the West(elf) F10@( 8,14) HP 130/130 MP 0/0 Hu 78 $ 991 room=.
+-> e
+T2864 mode=game_loop           Tauriel of the West(elf) F10@( 9,14) HP 130/130 MP 0/0 Hu 77 $ 991 room=.
+-> s
+T2865 mode=dungeon_mode        Tauriel of the West(elf) F10@( 9,15) HP 130/130 MP 0/0 Hu 76 $ 991 room=N
+-> u
+T2866 mode=game_loop           Tauriel of the West(elf) F10@( 9,15) HP 130/130 MP 0/0 Hu 76 $ 991 room=N
+-> w
+T2867 mode=game_loop           Tauriel of the West(elf) F10@( 8,15) HP 130/130 MP 0/0 Hu 75 $ 991 room=.
+-> w
+T2868 mode=game_loop           Tauriel of the West(elf) F10@( 7,15) HP 130/130 MP 0/0 Hu 74 $ 991 room=.
+-> n
+T2869 mode=game_loop           Tauriel of the West(elf) F10@( 7,14) HP 130/130 MP 0/0 Hu 73 $ 991 room=.
+-> e
+T2870 mode=game_loop           Tauriel of the West(elf) F10@( 8,14) HP 130/130 MP 0/0 Hu 72 $ 991 room=.
+-> e
+T2871 mode=game_loop           Tauriel of the West(elf) F10@( 9,14) HP 130/130 MP 0/0 Hu 71 $ 991 room=.
+-> s
+T2872 mode=game_loop           Tauriel of the West(elf) F10@( 9,15) HP 130/130 MP 0/0 Hu 70 $ 991 room=N
+-> e
+T2873 mode=game_loop           Tauriel of the West(elf) F10@(10,15) HP 130/130 MP 0/0 Hu 69 $ 991 room=.
+-> e
+T2874 mode=game_loop           Tauriel of the West(elf) F10@(11,15) HP 130/130 MP 0/0 Hu 68 $ 991 room=.
+-> n
+T2875 mode=game_loop           Tauriel of the West(elf) F10@(11,14) HP 130/130 MP 0/0 Hu 67 $ 991 room=.
+-> e
+T2876 mode=altar_mode          Tauriel of the West(elf) F10@(12,14) HP 130/130 MP 0/0 Hu 66 $ 991 room=A
+-> pray
+T2877 mode=game_loop           Tauriel of the West(elf) F10@(12,14) HP 130/130 MP 0/0 Hu 66 $ 991 room=.
+-> s
+T2878 mode=combat_mode         Tauriel of the West(elf) F10@(12,15) HP 130/130 MP 0/0 Hu 65 $ 991 room=M vs UNDEAD DEMILICH(L9 HP225/225)
+-> a
+T2879 mode=combat_mode         Tauriel of the West(elf) F10@(12,15) HP 78/130 MP 0/0 Hu 65 $ 991 room=M vs UNDEAD DEMILICH(L9 HP225/225)
+-> a
+T2880 mode=combat_mode         Tauriel of the West(elf) F10@(12,15) HP 26/130 MP 0/0 Hu 65 $ 991 room=M vs UNDEAD DEMILICH(L9 HP225/225)
+-> i
+T2881 mode=inventory           Tauriel of the West(elf) F10@(12,15) HP 26/130 MP 0/0 Hu 65 $ 991 room=M
+-> u3
+T2882 mode=inventory           Tauriel of the West(elf) F10@(12,15) HP 126/130 MP 0/0 Hu 65 $ 991 room=M
+-> x
+T2883 mode=combat_mode         Tauriel of the West(elf) F10@(12,15) HP 126/130 MP 0/0 Hu 65 $ 991 room=M vs UNDEAD DEMILICH(L9 HP225/225)
+-> a
+T2884 mode=combat_mode         Tauriel of the West(elf) F10@(12,15) HP 126/130 MP 0/0 Hu 65 $ 991 room=M vs UNDEAD DEMILICH(L9 HP224/225)
+-> a
+T2885 mode=combat_mode         Tauriel of the West(elf) F10@(12,15) HP 74/130 MP 0/0 Hu 65 $ 991 room=M vs UNDEAD DEMILICH(L9 HP224/225)
+-> a
+T2886 mode=combat_mode         Tauriel of the West(elf) F10@(12,15) HP 22/130 MP 0/0 Hu 65 $ 991 room=M vs UNDEAD DEMILICH(L9 HP224/225)
+-> f
+T2887 mode=death_screen        Tauriel of the West(elf) F10@(12,15) HP -30/130 MP 0/0 Hu 65 $ 991 room=M
 
-=== run finished: turns=2000 floor=9 hp=90/90 gold=1950 alive=True mode=game_loop ===
-    status=alive
+=== run finished: turns=2887 floor=10 hp=-30/130 gold=991 alive=False mode=death_screen ===
+    status=dead
 
 >>> Report: /tmp/pt_hunt/01500_elf.html

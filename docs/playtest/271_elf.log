@@ -4015,8 +4015,260 @@ T1998 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 4, 2) HP 27/97 
 T1999 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 3, 2) HP 27/97 MP 0/0 Hu 54 $ 856 room=.
 -> w
 T2000 mode=combat_mode         Celeborn the Lorekeeper(elf) F6@( 2, 2) HP 27/97 MP 0/0 Hu 53 $ 856 room=M vs UNDEAD DRAGON LICH(L5 HP102/102)
+-> f
+T2001 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F6@( 2, 2) HP 27/97 MP 0/0 Hu 53 $ 856 room=M
+-> n
+T2002 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 2, 1) HP 27/97 MP 0/0 Hu 53 $ 856 room=.
+-> e
+T2003 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 3, 1) HP 27/97 MP 0/0 Hu 52 $ 856 room=.
+-> e
+T2004 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 4, 1) HP 27/97 MP 0/0 Hu 51 $ 856 room=.
+-> e
+T2005 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 5, 1) HP 27/97 MP 0/0 Hu 50 $ 856 room=.
+-> s
+T2006 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 5, 2) HP 27/97 MP 0/0 Hu 49 $ 856 room=.
+-> i
+T2007 mode=inventory           Celeborn the Lorekeeper(elf) F6@( 5, 2) HP 27/97 MP 0/0 Hu 49 $ 856 room=.
+-> eat1
+T2008 mode=inventory           Celeborn the Lorekeeper(elf) F6@( 5, 2) HP 27/97 MP 0/0 Hu 99 $ 856 room=.
+-> x
+T2009 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 5, 2) HP 27/97 MP 0/0 Hu 99 $ 856 room=.
+-> s
+T2010 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 5, 3) HP 27/97 MP 0/0 Hu 98 $ 856 room=.
+-> s
+T2011 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 5, 4) HP 28/97 MP 0/0 Hu 97 $ 856 room=.
+-> e
+T2012 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 6, 4) HP 28/97 MP 0/0 Hu 96 $ 856 room=.
+-> s
+T2013 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 6, 5) HP 29/97 MP 0/0 Hu 95 $ 856 room=.
+-> w
+T2014 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 5, 5) HP 29/97 MP 0/0 Hu 94 $ 856 room=.
+-> s
+T2015 mode=game_loop           Celeborn the Lorekeeper(elf) F6@( 5, 6) HP 30/97 MP 0/0 Hu 93 $ 856 room=.
+-> w
+T2016 mode=warp_mode           Celeborn the Lorekeeper(elf) F6@( 4, 6) HP 30/97 MP 0/0 Hu 92 $ 856 room=W
+-> y
+T2017 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 5,12) HP 30/97 MP 0/0 Hu 92 $ 856 room=.
+-> n
+T2018 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 5,11) HP 31/97 MP 0/0 Hu 91 $ 856 room=.
+-> n
+T2019 mode=warp_mode           Celeborn the Lorekeeper(elf) F7@( 5,10) HP 31/97 MP 0/0 Hu 90 $ 856 room=W
+-> y
+T2020 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 5,10) HP 31/97 MP 0/0 Hu 90 $ 856 room=W
+-> e
+T2021 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 6,10) HP 32/97 MP 0/0 Hu 89 $ 856 room=.
+-> n
+T2022 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 6, 9) HP 32/97 MP 0/0 Hu 88 $ 856 room=.
+-> n
+T2023 mode=combat_mode         Celeborn the Lorekeeper(elf) F7@( 6, 8) HP 33/97 MP 0/0 Hu 87 $ 856 room=M vs Gray Ooze(L6 HP40/40)
+-> a
+T2024 mode=combat_mode         Celeborn the Lorekeeper(elf) F7@( 6, 8) HP 32/97 MP 0/0 Hu 87 $ 856 room=M vs Gray Ooze(L6 HP13/40)
+-> f
+T2025 mode=combat_mode         Celeborn the Lorekeeper(elf) F7@( 6, 8) HP 30/97 MP 0/0 Hu 87 $ 856 room=M vs Gray Ooze(L6 HP13/40)
+-> a
+T2026 mode=combat_victory      Celeborn the Lorekeeper(elf) F7@( 6, 8) HP 29/97 MP 0/0 Hu 87 $ 877 room=.
+-> back
+T2027 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 6, 8) HP 29/97 MP 0/0 Hu 87 $ 877 room=.
+-> n
+T2028 mode=altar_mode          Celeborn the Lorekeeper(elf) F7@( 6, 7) HP 29/97 MP 0/0 Hu 86 $ 877 room=A
+-> pray
+T2029 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 6, 7) HP 29/97 MP 0/0 Hu 86 $ 877 room=.
+-> w
+T2030 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 5, 7) HP 30/97 MP 0/0 Hu 85 $ 877 room=.
+-> n
+T2031 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 5, 6) HP 30/97 MP 0/0 Hu 84 $ 877 room=.
+-> n
+T2032 mode=garden_mode         Celeborn the Lorekeeper(elf) F7@( 5, 5) HP 30/97 MP 0/0 Hu 83 $ 877 room=G
+-> h
+T2033 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 5, 5) HP 30/97 MP 0/0 Hu 83 $ 877 room=.
+-> n
+T2034 mode=chest_mode          Celeborn the Lorekeeper(elf) F7@( 5, 4) HP 30/97 MP 0/0 Hu 82 $ 877 room=C
+-> s
+T2035 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 5, 5) HP 31/97 MP 0/0 Hu 81 $ 877 room=.
+-> n
+T2036 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 5, 4) HP 31/97 MP 0/0 Hu 80 $ 877 room=C
+-> e
+T2037 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 6, 4) HP 31/97 MP 0/0 Hu 79 $ 877 room=.
+-> n
+T2038 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 6, 3) HP 31/97 MP 0/0 Hu 78 $ 877 room=.
+-> w
+T2039 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 5, 3) HP 32/97 MP 0/0 Hu 77 $ 877 room=.
+-> w
+T2040 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 4, 3) HP 32/97 MP 0/0 Hu 76 $ 877 room=.
+-> s
+T2041 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 4, 4) HP 32/97 MP 0/0 Hu 75 $ 877 room=.
+-> w
+T2042 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 3, 4) HP 32/97 MP 0/0 Hu 74 $ 877 room=.
+-> w
+T2043 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 2, 4) HP 33/97 MP 0/0 Hu 73 $ 877 room=.
+-> n
+T2044 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 2, 3) HP 33/97 MP 0/0 Hu 72 $ 877 room=.
+-> w
+T2045 mode=blacksmith_mode     Celeborn the Lorekeeper(elf) F7@( 1, 3) HP 33/97 MP 0/0 Hu 71 $ 877 room=B
+-> 1
+T2046 mode=blacksmith_mode     Celeborn the Lorekeeper(elf) F7@( 1, 3) HP 33/97 MP 0/0 Hu 71 $ 829 room=B
+-> 2
+T2047 mode=blacksmith_mode     Celeborn the Lorekeeper(elf) F7@( 1, 3) HP 33/97 MP 0/0 Hu 71 $ 814 room=B
+-> e
+T2048 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 2, 3) HP 33/97 MP 0/0 Hu 70 $ 814 room=.
+-> n
+T2049 mode=game_loop           Celeborn the Lorekeeper(elf) F7@( 2, 2) HP 34/97 MP 0/0 Hu 69 $ 814 room=.
+-> n
+T2050 mode=warp_mode           Celeborn the Lorekeeper(elf) F7@( 2, 1) HP 34/97 MP 0/0 Hu 68 $ 814 room=W
+-> y
+T2051 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 34/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2052 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 33/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2053 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 33/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2054 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 33/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2055 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 33/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2056 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 33/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2057 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 33/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2058 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 33/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2059 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 33/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2060 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 32/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2061 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 32/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2062 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 32/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2063 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 31/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2064 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 31/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2065 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 30/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2066 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 29/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2067 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 29/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2068 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 28/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2069 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 28/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2070 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 27/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2071 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 27/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2072 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 26/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2073 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 26/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2074 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 25/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2075 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 25/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2076 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 24/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2077 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 24/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2078 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 24/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2079 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 24/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2080 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 23/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2081 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 23/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2082 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 22/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2083 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 22/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2084 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 21/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2085 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 20/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2086 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 20/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2087 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 20/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2088 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 20/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2089 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 18/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2090 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 17/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2091 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 17/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2092 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 17/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2093 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 17/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2094 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 16/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2095 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 16/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2096 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 15/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2097 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 15/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2098 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 15/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2099 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 15/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2100 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 14/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2101 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 14/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2102 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 13/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2103 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 13/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2104 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 12/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2105 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 12/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2106 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 11/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2107 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 11/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2108 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 11/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2109 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 11/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2110 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 10/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2111 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 9/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2112 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 9/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2113 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 7/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2114 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 7/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2115 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 7/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2116 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 5/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2117 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 4/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2118 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 4/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2119 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 4/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2120 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 4/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2121 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 3/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2122 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 3/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2123 mode=flee_direction_mode Celeborn the Lorekeeper(elf) F9@(16,11) HP 3/97 MP 0/0 Hu 68 $ 814 room=M
+-> c
+T2124 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 3/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2125 mode=combat_mode         Celeborn the Lorekeeper(elf) F9@(16,11) HP 1/97 MP 0/0 Hu 68 $ 814 room=M vs Hardened Gray Ooze(L8 HP56/56)
+-> f
+T2126 mode=death_screen        Celeborn the Lorekeeper(elf) F9@(16,11) HP 0/97 MP 0/0 Hu 68 $ 814 room=M
 
-=== run finished: turns=2000 floor=6 hp=27/97 gold=856 alive=True mode=combat_mode ===
-    status=alive
+=== run finished: turns=2126 floor=9 hp=0/97 gold=814 alive=False mode=death_screen ===
+    status=dead
 
 >>> Report: /tmp/pt_hunt/00271_elf.html
