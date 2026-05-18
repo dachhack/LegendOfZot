@@ -205,558 +205,548 @@ T  93 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 29/30 MP 0/
 T  94 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 29/30 MP 0/0 Hu 89 $ 527 room=M vs Lichen(L0 HP10/10)
 -> f
 T  95 mode=flee_direction_mode Beregond Stoneward(hum) F1@( 5, 6) HP 29/30 MP 0/0 Hu 89 $ 527 room=M
--> e
-T  96 mode=combat_mode         Beregond Stoneward(hum) F1@( 6, 6) HP 29/30 MP 0/0 Hu 89 $ 527 room=M vs Zombie(L0 HP35/35)
--> a
-T  97 mode=combat_mode         Beregond Stoneward(hum) F1@( 6, 6) HP 28/30 MP 0/0 Hu 89 $ 527 room=M vs Zombie(L0 HP14/35)
--> a
-T  98 mode=combat_mode         Beregond Stoneward(hum) F1@( 6, 6) HP 27/30 MP 0/0 Hu 89 $ 527 room=M vs Zombie(L0 HP14/35)
--> a
-T  99 mode=combat_victory      Beregond Stoneward(hum) F1@( 6, 6) HP 27/30 MP 0/0 Hu 89 $ 533 room=.
--> back
-T 100 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 6) HP 27/30 MP 0/0 Hu 89 $ 533 room=.
+-> w
+T  96 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 29/30 MP 0/0 Hu 89 $ 527 room=.
 -> l
-T 101 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 6) HP 27/30 MP 0/0 Hu 89 $ 533 room=.
--> n
-T 102 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 5) HP 28/30 MP 0/0 Hu 88 $ 533 room=.
+T  97 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 29/30 MP 0/0 Hu 89 $ 527 room=.
+-> s
+T  98 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 88 $ 527 room=.
 -> i
-T 103 mode=inventory           Beregond Stoneward(hum) F1@( 6, 5) HP 28/30 MP 0/0 Hu 88 $ 533 room=.
--> u3
-T 104 mode=inventory           Beregond Stoneward(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 88 $ 533 room=.
--> x
-T 105 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 88 $ 533 room=.
--> i
-T 106 mode=inventory           Beregond Stoneward(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 88 $ 533 room=.
+T  99 mode=inventory           Beregond Stoneward(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 88 $ 527 room=.
 -> eat5
-T 107 mode=inventory           Beregond Stoneward(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 93 $ 533 room=.
+T 100 mode=inventory           Beregond Stoneward(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 93 $ 527 room=.
 -> x
-T 108 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 93 $ 533 room=.
--> w
-T 109 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 92 $ 533 room=.
--> i
-T 110 mode=inventory           Beregond Stoneward(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 92 $ 533 room=.
--> eat3
-T 111 mode=inventory           Beregond Stoneward(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 97 $ 533 room=.
--> x
-T 112 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 97 $ 533 room=.
--> w
-T 113 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 96 $ 533 room=.
--> s
-T 114 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 30/30 MP 0/0 Hu 95 $ 533 room=.
+T 101 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 93 $ 527 room=.
 -> l
-T 115 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 30/30 MP 0/0 Hu 95 $ 533 room=.
--> s
-T 116 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 94 $ 533 room=.
--> l
-T 117 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 94 $ 533 room=.
+T 102 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 93 $ 527 room=.
 -> e
-T 118 mode=chest_mode          Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 93 $ 533 room=C
+T 103 mode=chest_mode          Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 92 $ 527 room=C
 -> o
-T 119 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 93 $ 533 room=.
--> l
-T 120 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 93 $ 533 room=.
--> e
-T 121 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 92 $ 533 room=.
--> s
-T 122 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 30/30 MP 0/0 Hu 91 $ 533 room=.
--> w
-T 123 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 90 $ 533 room=.
+T 104 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 92 $ 527 room=.
 -> i
-T 124 mode=inventory           Beregond Stoneward(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 90 $ 533 room=.
+T 105 mode=inventory           Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 92 $ 527 room=.
 -> eat3
-T 125 mode=inventory           Beregond Stoneward(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 95 $ 533 room=.
+T 106 mode=inventory           Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 527 room=.
 -> x
-T 126 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 8) HP 30/30 MP 0/0 Hu 95 $ 533 room=.
--> w
-T 127 mode=combat_mode         Beregond Stoneward(hum) F1@( 4, 8) HP 30/30 MP 0/0 Hu 94 $ 533 room=M vs Goblin(L0 HP12/12)
--> a
-T 128 mode=combat_victory      Beregond Stoneward(hum) F1@( 4, 8) HP 30/30 MP 0/0 Hu 94 $ 637 room=.
--> back
-T 129 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 8) HP 30/30 MP 0/0 Hu 94 $ 637 room=.
--> w
-T 130 mode=library_mode        Beregond Stoneward(hum) F1@( 3, 8) HP 30/30 MP 0/0 Hu 93 $ 637 room=L
--> r
-T 131 mode=library_read_decision_mode Beregond Stoneward(hum) F1@( 3, 8) HP 30/30 MP 0/0 Hu 93 $ 637 room=L
--> y
-T 132 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 8) HP 30/30 MP 0/0 Hu 93 $ 687 room=.
+T 107 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 527 room=.
+-> l
+T 108 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 527 room=.
+-> e
+T 109 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 96 $ 527 room=.
+-> l
+T 110 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 96 $ 527 room=.
 -> n
-T 133 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 92 $ 687 room=.
+T 111 mode=combat_mode         Beregond Stoneward(hum) F1@( 6, 6) HP 30/30 MP 0/0 Hu 95 $ 527 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 112 mode=combat_victory      Beregond Stoneward(hum) F1@( 6, 6) HP 30/30 MP 0/0 Hu 95 $ 636 room=.
+-> back
+T 113 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 6) HP 30/30 MP 0/0 Hu 95 $ 636 room=.
 -> e
-T 134 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 687 room=.
+T 114 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 6) HP 30/30 MP 0/0 Hu 94 $ 636 room=M vs Goblin(L0 HP12/12)
+-> a
+T 115 mode=combat_victory      Beregond Stoneward(hum) F1@( 7, 6) HP 30/30 MP 0/0 Hu 94 $ 641 room=.
+-> back
+T 116 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 6) HP 30/30 MP 0/0 Hu 94 $ 641 room=.
+-> s
+T 117 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 7) HP 30/30 MP 0/0 Hu 93 $ 641 room=.
 -> e
-T 135 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 90 $ 687 room=.
--> e
-T 136 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 89 $ 687 room=.
--> e
-T 137 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 7) HP 30/30 MP 0/0 Hu 88 $ 687 room=.
--> e
-T 138 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 7) HP 30/30 MP 0/0 Hu 87 $ 687 room=.
+T 118 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 7) HP 30/30 MP 0/0 Hu 92 $ 641 room=.
 -> l
-T 139 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 7) HP 30/30 MP 0/0 Hu 87 $ 687 room=.
+T 119 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 7) HP 30/30 MP 0/0 Hu 92 $ 641 room=.
 -> e
-T 140 mode=game_loop           Beregond Stoneward(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 86 $ 687 room=.
+T 120 mode=game_loop           Beregond Stoneward(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 91 $ 641 room=.
 -> l
-T 141 mode=game_loop           Beregond Stoneward(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 86 $ 687 room=.
+T 121 mode=game_loop           Beregond Stoneward(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 91 $ 641 room=.
 -> e
-T 142 mode=pool_mode           Beregond Stoneward(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 85 $ 687 room=P
+T 122 mode=pool_mode           Beregond Stoneward(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 90 $ 641 room=P
 -> dr
-T 143 mode=game_loop           Beregond Stoneward(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 85 $ 927 room=.
--> l
-T 144 mode=game_loop           Beregond Stoneward(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 85 $ 927 room=.
--> s
-T 145 mode=game_loop           Beregond Stoneward(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 84 $ 927 room=.
--> l
-T 146 mode=game_loop           Beregond Stoneward(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 84 $ 927 room=.
--> e
-T 147 mode=game_loop           Beregond Stoneward(hum) F1@(11, 8) HP 30/30 MP 0/0 Hu 83 $ 927 room=.
--> l
-T 148 mode=game_loop           Beregond Stoneward(hum) F1@(11, 8) HP 30/30 MP 0/0 Hu 83 $ 927 room=.
--> s
-T 149 mode=combat_mode         Beregond Stoneward(hum) F1@(11, 9) HP 30/30 MP 0/0 Hu 82 $ 927 room=M vs Stirge(L0 HP6/6)
--> a
-T 150 mode=combat_victory      Beregond Stoneward(hum) F1@(11, 9) HP 30/40 MP 0/0 Hu 82 $ 932 room=.
--> back
-T 151 mode=game_loop           Beregond Stoneward(hum) F1@(11, 9) HP 30/40 MP 0/0 Hu 82 $ 932 room=.
+T 123 mode=game_loop           Beregond Stoneward(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 90 $ 835 room=.
 -> i
-T 152 mode=inventory           Beregond Stoneward(hum) F1@(11, 9) HP 30/40 MP 0/0 Hu 82 $ 932 room=.
--> u3
-T 153 mode=inventory           Beregond Stoneward(hum) F1@(11, 9) HP 40/40 MP 0/0 Hu 82 $ 932 room=.
--> x
-T 154 mode=game_loop           Beregond Stoneward(hum) F1@(11, 9) HP 40/40 MP 0/0 Hu 82 $ 932 room=.
--> w
-T 155 mode=combat_mode         Beregond Stoneward(hum) F1@(10, 9) HP 40/40 MP 0/0 Hu 81 $ 932 room=M vs Rust Monster(L0 HP18/18)
--> a
-T 156 mode=combat_victory      Beregond Stoneward(hum) F1@(10, 9) HP 40/40 MP 0/0 Hu 81 $ 937 room=.
--> back
-T 157 mode=game_loop           Beregond Stoneward(hum) F1@(10, 9) HP 40/40 MP 0/0 Hu 81 $ 937 room=.
--> n
-T 158 mode=game_loop           Beregond Stoneward(hum) F1@(10, 8) HP 40/40 MP 0/0 Hu 80 $ 937 room=.
--> n
-T 159 mode=game_loop           Beregond Stoneward(hum) F1@(10, 7) HP 40/40 MP 0/0 Hu 79 $ 937 room=.
--> w
-T 160 mode=game_loop           Beregond Stoneward(hum) F1@( 9, 7) HP 40/40 MP 0/0 Hu 78 $ 937 room=.
--> w
-T 161 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 7) HP 40/40 MP 0/0 Hu 77 $ 937 room=.
--> w
-T 162 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 7) HP 40/40 MP 0/0 Hu 76 $ 937 room=.
--> w
-T 163 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 40/40 MP 0/0 Hu 75 $ 937 room=.
--> s
-T 164 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 40/40 MP 0/0 Hu 74 $ 937 room=.
--> s
-T 165 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 9) HP 40/40 MP 0/0 Hu 73 $ 937 room=.
--> l
-T 166 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 9) HP 40/40 MP 0/0 Hu 73 $ 937 room=.
--> e
-T 167 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 72 $ 937 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T 168 mode=combat_victory      Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 72 $ 939 room=.
--> back
-T 169 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 72 $ 939 room=.
--> i
-T 170 mode=inventory           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 72 $ 939 room=.
--> eat5
-T 171 mode=inventory           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 78 $ 939 room=.
--> eat1
-T 172 mode=inventory           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu100 $ 939 room=.
--> x
-T 173 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu100 $ 939 room=.
--> l
-T 174 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu100 $ 939 room=.
--> s
-T 175 mode=game_loop           Beregond Stoneward(hum) F1@( 7,10) HP 40/40 MP 0/0 Hu 99 $ 939 room=.
--> i
-T 176 mode=inventory           Beregond Stoneward(hum) F1@( 7,10) HP 40/40 MP 0/0 Hu 99 $ 939 room=.
--> eat4
-T 177 mode=inventory           Beregond Stoneward(hum) F1@( 7,10) HP 40/40 MP 0/0 Hu100 $ 939 room=.
--> x
-T 178 mode=game_loop           Beregond Stoneward(hum) F1@( 7,10) HP 40/40 MP 0/0 Hu100 $ 939 room=.
--> s
-T 179 mode=combat_mode         Beregond Stoneward(hum) F1@( 7,11) HP 40/40 MP 0/0 Hu 99 $ 939 room=M vs Rust Monster(L0 HP18/18)
--> a
-T 180 mode=combat_victory      Beregond Stoneward(hum) F1@( 7,11) HP 39/40 MP 0/0 Hu 99 $ 944 room=.
--> back
-T 181 mode=game_loop           Beregond Stoneward(hum) F1@( 7,11) HP 39/40 MP 0/0 Hu 99 $ 944 room=.
--> s
-T 182 mode=game_loop           Beregond Stoneward(hum) F1@( 7,12) HP 39/40 MP 0/0 Hu 98 $ 944 room=.
--> w
-T 183 mode=game_loop           Beregond Stoneward(hum) F1@( 6,12) HP 40/40 MP 0/0 Hu 97 $ 944 room=.
--> l
-T 184 mode=game_loop           Beregond Stoneward(hum) F1@( 6,12) HP 40/40 MP 0/0 Hu 97 $ 944 room=.
--> w
-T 185 mode=combat_mode         Beregond Stoneward(hum) F1@( 5,12) HP 40/40 MP 0/0 Hu 96 $ 944 room=M vs Stirge(L0 HP6/6)
--> f
-T 186 mode=flee_direction_mode Beregond Stoneward(hum) F1@( 5,12) HP 40/40 MP 0/0 Hu 96 $ 944 room=M
--> w
-T 187 mode=combat_mode         Beregond Stoneward(hum) F1@( 4,12) HP 40/40 MP 0/0 Hu 96 $ 944 room=M vs Slime Mold(L0 HP15/15)
--> a
-T 188 mode=combat_victory      Beregond Stoneward(hum) F1@( 4,12) HP 40/40 MP 0/0 Hu 96 $ 951 room=.
--> back
-T 189 mode=game_loop           Beregond Stoneward(hum) F1@( 4,12) HP 40/40 MP 0/0 Hu 96 $ 951 room=.
--> l
-T 190 mode=game_loop           Beregond Stoneward(hum) F1@( 4,12) HP 40/40 MP 0/0 Hu 96 $ 951 room=.
--> n
-T 191 mode=dungeon_mode        Beregond Stoneward(hum) F1@( 4,11) HP 40/40 MP 0/0 Hu 95 $ 951 room=N
--> u
-T 192 mode=game_loop           Beregond Stoneward(hum) F1@( 4,11) HP 40/40 MP 0/0 Hu 95 $ 951 room=N
--> l
-T 193 mode=game_loop           Beregond Stoneward(hum) F1@( 4,11) HP 40/40 MP 0/0 Hu 95 $ 951 room=N
--> n
-T 194 mode=game_loop           Beregond Stoneward(hum) F1@( 4,10) HP 40/40 MP 0/0 Hu 94 $ 951 room=.
--> l
-T 195 mode=game_loop           Beregond Stoneward(hum) F1@( 4,10) HP 40/40 MP 0/0 Hu 94 $ 951 room=.
--> e
-T 196 mode=combat_mode         Beregond Stoneward(hum) F1@( 5,10) HP 40/40 MP 0/0 Hu 93 $ 951 room=M vs Lichen(L0 HP10/10)
--> a
-T 197 mode=combat_victory      Beregond Stoneward(hum) F1@( 5,10) HP 39/40 MP 0/0 Hu 93 $ 960 room=.
--> back
-T 198 mode=game_loop           Beregond Stoneward(hum) F1@( 5,10) HP 39/40 MP 0/0 Hu 93 $ 960 room=.
--> e
-T 199 mode=combat_mode         Beregond Stoneward(hum) F1@( 6,10) HP 39/40 MP 0/0 Hu 92 $ 960 room=M vs Goblin(L0 HP12/12)
--> a
-T 200 mode=combat_mode         Beregond Stoneward(hum) F1@( 6,10) HP 39/40 MP 0/0 Hu 92 $ 960 room=M vs Goblin(L0 HP12/12)
--> a
-T 201 mode=combat_victory      Beregond Stoneward(hum) F1@( 6,10) HP 39/40 MP 0/0 Hu 92 $ 964 room=.
--> back
-T 202 mode=game_loop           Beregond Stoneward(hum) F1@( 6,10) HP 39/40 MP 0/0 Hu 92 $ 964 room=.
--> s
-T 203 mode=combat_mode         Beregond Stoneward(hum) F1@( 6,11) HP 40/40 MP 0/0 Hu 91 $ 964 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 204 mode=combat_mode         Beregond Stoneward(hum) F1@( 6,11) HP 39/40 MP 0/0 Hu 91 $ 964 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 205 mode=combat_victory      Beregond Stoneward(hum) F1@( 6,11) HP 38/40 MP 0/0 Hu 91 $ 967 room=.
--> back
-T 206 mode=game_loop           Beregond Stoneward(hum) F1@( 6,11) HP 38/40 MP 0/0 Hu 91 $ 967 room=.
--> i
-T 207 mode=inventory           Beregond Stoneward(hum) F1@( 6,11) HP 38/40 MP 0/0 Hu 91 $ 967 room=.
+T 124 mode=inventory           Beregond Stoneward(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 90 $ 835 room=.
 -> eat3
-T 208 mode=inventory           Beregond Stoneward(hum) F1@( 6,11) HP 38/40 MP 0/0 Hu 97 $ 967 room=.
--> eat2
-T 209 mode=inventory           Beregond Stoneward(hum) F1@( 6,11) HP 38/40 MP 0/0 Hu100 $ 967 room=.
--> eat1
-T 210 mode=inventory           Beregond Stoneward(hum) F1@( 6,11) HP 38/40 MP 0/0 Hu100 $ 967 room=.
+T 125 mode=inventory           Beregond Stoneward(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 95 $ 835 room=.
 -> x
-T 211 mode=game_loop           Beregond Stoneward(hum) F1@( 6,11) HP 38/40 MP 0/0 Hu100 $ 967 room=.
--> w
-T 212 mode=combat_mode         Beregond Stoneward(hum) F1@( 5,11) HP 38/40 MP 0/0 Hu 99 $ 967 room=M vs Goblin(L0 HP30/30)
--> f
-T 213 mode=combat_mode         Beregond Stoneward(hum) F1@( 5,11) HP 37/40 MP 0/0 Hu 99 $ 967 room=M vs Goblin(L0 HP30/30)
--> a
-T 214 mode=combat_mode         Beregond Stoneward(hum) F1@( 5,11) HP 37/40 MP 0/0 Hu 99 $ 967 room=M vs Goblin(L0 HP30/30)
--> a
-T 215 mode=combat_mode         Beregond Stoneward(hum) F1@( 5,11) HP 36/40 MP 0/0 Hu 99 $ 967 room=M vs Goblin(L0 HP10/30)
--> f
-T 216 mode=flee_direction_mode Beregond Stoneward(hum) F1@( 5,11) HP 36/40 MP 0/0 Hu 99 $ 967 room=M
+T 126 mode=game_loop           Beregond Stoneward(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 95 $ 835 room=.
+-> l
+T 127 mode=game_loop           Beregond Stoneward(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 95 $ 835 room=.
 -> s
-T 217 mode=combat_mode         Beregond Stoneward(hum) F1@( 5,12) HP 36/40 MP 0/0 Hu 99 $ 967 room=M vs Stirge(L0 HP6/6)
+T 128 mode=game_loop           Beregond Stoneward(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 94 $ 835 room=.
+-> l
+T 129 mode=game_loop           Beregond Stoneward(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 94 $ 835 room=.
+-> w
+T 130 mode=game_loop           Beregond Stoneward(hum) F1@( 9, 8) HP 30/30 MP 0/0 Hu 93 $ 835 room=.
+-> w
+T 131 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 30/30 MP 0/0 Hu 92 $ 835 room=M vs Kobold(L0 HP20/20)
 -> a
-T 218 mode=combat_mode         Beregond Stoneward(hum) F1@( 5,12) HP 35/40 MP 0/0 Hu 99 $ 967 room=M vs Stirge(L0 HP3/6)
+T 132 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 29/30 MP 0/0 Hu 92 $ 835 room=M vs Kobold(L0 HP20/20)
 -> a
-T 219 mode=combat_mode         Beregond Stoneward(hum) F1@( 5,12) HP 34/40 MP 0/0 Hu 99 $ 967 room=M vs Stirge(L0 HP3/6)
+T 133 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 28/30 MP 0/0 Hu 92 $ 835 room=M vs Kobold(L0 HP20/20)
 -> a
-T 220 mode=combat_victory      Beregond Stoneward(hum) F1@( 5,12) HP 34/40 MP 0/0 Hu 99 $ 974 room=.
+T 134 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 27/30 MP 0/0 Hu 92 $ 835 room=M vs Kobold(L0 HP20/20)
+-> a
+T 135 mode=combat_victory      Beregond Stoneward(hum) F1@( 8, 8) HP 27/40 MP 0/0 Hu 92 $ 838 room=.
 -> back
-T 221 mode=game_loop           Beregond Stoneward(hum) F1@( 5,12) HP 34/40 MP 0/0 Hu 99 $ 974 room=.
--> w
-T 222 mode=game_loop           Beregond Stoneward(hum) F1@( 4,12) HP 35/40 MP 0/0 Hu 98 $ 974 room=.
--> n
-T 223 mode=game_loop           Beregond Stoneward(hum) F1@( 4,11) HP 35/40 MP 0/0 Hu 97 $ 974 room=N
--> w
-T 224 mode=game_loop           Beregond Stoneward(hum) F1@( 3,11) HP 36/40 MP 0/0 Hu 96 $ 974 room=.
--> w
-T 225 mode=game_loop           Beregond Stoneward(hum) F1@( 2,11) HP 36/40 MP 0/0 Hu 95 $ 974 room=.
--> e
-T 226 mode=game_loop           Beregond Stoneward(hum) F1@( 3,11) HP 37/40 MP 0/0 Hu 94 $ 974 room=.
--> e
-T 227 mode=game_loop           Beregond Stoneward(hum) F1@( 4,11) HP 37/40 MP 0/0 Hu 93 $ 974 room=N
--> n
-T 228 mode=game_loop           Beregond Stoneward(hum) F1@( 4,10) HP 38/40 MP 0/0 Hu 92 $ 974 room=.
--> e
-T 229 mode=game_loop           Beregond Stoneward(hum) F1@( 5,10) HP 38/40 MP 0/0 Hu 91 $ 974 room=.
--> e
-T 230 mode=game_loop           Beregond Stoneward(hum) F1@( 6,10) HP 39/40 MP 0/0 Hu 90 $ 974 room=.
--> l
-T 231 mode=game_loop           Beregond Stoneward(hum) F1@( 6,10) HP 39/40 MP 0/0 Hu 90 $ 974 room=.
--> n
-T 232 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 9) HP 39/40 MP 0/0 Hu 89 $ 974 room=.
--> n
-T 233 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 40/40 MP 0/0 Hu 88 $ 974 room=.
--> n
-T 234 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 40/40 MP 0/0 Hu 87 $ 974 room=.
--> w
-T 235 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 40/40 MP 0/0 Hu 86 $ 974 room=.
--> w
-T 236 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 85 $ 974 room=.
--> n
-T 237 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 40/40 MP 0/0 Hu 84 $ 974 room=.
--> w
-T 238 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 6) HP 40/40 MP 0/0 Hu 83 $ 974 room=.
--> w
-T 239 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 6) HP 40/40 MP 0/0 Hu 82 $ 974 room=.
--> w
-T 240 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 81 $ 974 room=.
--> l
-T 241 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 81 $ 974 room=.
--> s
-T 242 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 7) HP 40/40 MP 0/0 Hu 80 $ 974 room=.
--> n
-T 243 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 79 $ 974 room=.
--> n
-T 244 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 5) HP 40/40 MP 0/0 Hu 78 $ 974 room=.
--> n
-T 245 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 77 $ 974 room=.
--> n
-T 246 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 76 $ 974 room=.
--> e
-T 247 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu 75 $ 974 room=.
--> s
-T 248 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 74 $ 974 room=.
--> s
-T 249 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu 73 $ 974 room=.
--> e
-T 250 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 72 $ 974 room=.
--> l
-T 251 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 72 $ 974 room=.
--> s
-T 252 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 6) HP 40/40 MP 0/0 Hu 71 $ 974 room=.
--> w
-T 253 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 6) HP 40/40 MP 0/0 Hu 70 $ 974 room=.
--> w
-T 254 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 69 $ 974 room=.
--> n
-T 255 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 5) HP 40/40 MP 0/0 Hu 68 $ 974 room=.
--> n
-T 256 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 67 $ 974 room=.
--> n
-T 257 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 66 $ 974 room=.
--> n
-T 258 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 2) HP 40/40 MP 0/0 Hu 65 $ 974 room=.
--> e
-T 259 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 2) HP 40/40 MP 0/0 Hu 64 $ 974 room=.
--> e
-T 260 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu 63 $ 974 room=.
--> l
-T 261 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu 63 $ 974 room=.
--> s
-T 262 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 3) HP 40/40 MP 0/0 Hu 62 $ 974 room=.
--> w
-T 263 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu 61 $ 974 room=.
--> s
-T 264 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 60 $ 974 room=.
--> w
-T 265 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 59 $ 974 room=.
--> s
-T 266 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 5) HP 40/40 MP 0/0 Hu 58 $ 974 room=.
--> e
-T 267 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu 57 $ 974 room=.
--> e
-T 268 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 56 $ 974 room=.
--> e
-T 269 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 5) HP 40/40 MP 0/0 Hu 55 $ 974 room=.
--> e
-T 270 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 40/40 MP 0/0 Hu 54 $ 974 room=.
--> l
-T 271 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 40/40 MP 0/0 Hu 54 $ 974 room=.
--> n
-T 272 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 4) HP 40/40 MP 0/0 Hu 53 $ 974 room=.
--> w
-T 273 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 4) HP 40/40 MP 0/0 Hu 52 $ 974 room=.
--> w
-T 274 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 4) HP 40/40 MP 0/0 Hu 51 $ 974 room=.
--> w
-T 275 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 50 $ 974 room=.
--> s
-T 276 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu 49 $ 974 room=.
--> s
-T 277 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 6) HP 40/40 MP 0/0 Hu 48 $ 974 room=.
--> w
-T 278 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 47 $ 974 room=.
--> n
-T 279 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 5) HP 40/40 MP 0/0 Hu 46 $ 974 room=.
--> n
-T 280 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 45 $ 974 room=.
--> l
-T 281 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 45 $ 974 room=.
--> n
-T 282 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 44 $ 974 room=.
--> n
-T 283 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 2) HP 40/40 MP 0/0 Hu 43 $ 974 room=.
--> e
-T 284 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 2) HP 40/40 MP 0/0 Hu 42 $ 974 room=.
--> n
-T 285 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 1) HP 40/40 MP 0/0 Hu 41 $ 974 room=.
--> e
-T 286 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 1) HP 40/40 MP 0/0 Hu 40 $ 974 room=.
--> e
-T 287 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 1) HP 40/40 MP 0/0 Hu 39 $ 974 room=.
--> w
-T 288 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 1) HP 40/40 MP 0/0 Hu 38 $ 974 room=.
+T 136 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 8) HP 27/40 MP 0/0 Hu 92 $ 838 room=.
 -> i
-T 289 mode=inventory           Beregond Stoneward(hum) F1@( 3, 1) HP 40/40 MP 0/0 Hu 38 $ 974 room=.
+T 137 mode=inventory           Beregond Stoneward(hum) F1@( 8, 8) HP 27/40 MP 0/0 Hu 92 $ 838 room=.
 -> u3
-T 290 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu 38 $ 974 room=.
--> l
-T 291 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu 38 $ 974 room=.
--> w
-T 292 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 37 $ 974 room=.
--> s
-T 293 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 36 $ 974 room=.
--> e
-T 294 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 35 $ 974 room=.
--> s
-T 295 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu 34 $ 974 room=.
--> s
-T 296 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 6) HP 40/40 MP 0/0 Hu 33 $ 974 room=.
--> w
-T 297 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 32 $ 974 room=.
--> n
-T 298 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 5) HP 40/40 MP 0/0 Hu 31 $ 974 room=.
--> n
-T 299 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 30 $ 974 room=.
--> n
-T 300 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 29 $ 974 room=.
--> l
-T 301 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 29 $ 974 room=.
--> n
-T 302 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 2) HP 40/40 MP 0/0 Hu 28 $ 974 room=.
--> n
-T 303 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 1) HP 40/40 MP 0/0 Hu 27 $ 974 room=E
--> e
-T 304 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 1) HP 40/40 MP 0/0 Hu 26 $ 974 room=.
--> s
-T 305 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 2) HP 40/40 MP 0/0 Hu 25 $ 974 room=.
--> s
-T 306 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu 24 $ 974 room=.
--> e
-T 307 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 3) HP 40/40 MP 0/0 Hu 23 $ 974 room=.
--> s
-T 308 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 4) HP 40/40 MP 0/0 Hu 22 $ 974 room=.
--> e
-T 309 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 4) HP 40/40 MP 0/0 Hu 21 $ 974 room=.
--> e
-T 310 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 4) HP 40/40 MP 0/0 Hu 20 $ 974 room=.
--> l
-T 311 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 4) HP 40/40 MP 0/0 Hu 20 $ 974 room=.
--> s
-T 312 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 40/40 MP 0/0 Hu 19 $ 974 room=.
--> w
-T 313 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 5) HP 40/40 MP 0/0 Hu 18 $ 974 room=.
--> w
-T 314 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 17 $ 974 room=.
--> n
-T 315 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 4) HP 40/40 MP 0/0 Hu 16 $ 974 room=.
--> e
-T 316 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 4) HP 40/40 MP 0/0 Hu 15 $ 974 room=.
--> e
-T 317 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 4) HP 40/40 MP 0/0 Hu 14 $ 974 room=.
--> e
-T 318 mode=combat_mode         Beregond Stoneward(hum) F1@( 6, 4) HP 40/40 MP 0/0 Hu 13 $ 974 room=M vs Kobold(L0 HP20/20)
--> f
-T 319 mode=flee_direction_mode Beregond Stoneward(hum) F1@( 6, 4) HP 39/40 MP 0/0 Hu 13 $ 974 room=M
--> s
-T 320 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 5) HP 39/40 MP 0/0 Hu 13 $ 974 room=.
--> l
-T 321 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 5) HP 39/40 MP 0/0 Hu 13 $ 974 room=.
--> s
-T 322 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 6) HP 39/40 MP 0/0 Hu 12 $ 974 room=.
--> w
-T 323 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 39/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP10/10)
--> a
-T 324 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 38/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP10/10)
--> a
-T 325 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 37/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP10/10)
--> a
-T 326 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 36/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP10/10)
--> a
-T 327 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 35/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP7/10)
--> a
-T 328 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 34/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP7/10)
--> a
-T 329 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 34/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP4/10)
--> a
-T 330 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 34/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP4/10)
--> a
-T 331 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 33/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP4/10)
--> a
-T 332 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 32/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP4/10)
--> a
-T 333 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 31/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP4/10)
--> f
-T 334 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 30/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP4/10)
--> a
-T 335 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 29/40 MP 0/0 Hu 11 $ 974 room=M vs Lichen(L0 HP1/10)
--> a
-T 336 mode=combat_victory      Beregond Stoneward(hum) F1@( 5, 6) HP 29/40 MP 0/0 Hu 11 $ 978 room=.
--> back
-T 337 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 6) HP 29/40 MP 0/0 Hu 11 $ 978 room=.
--> s
-T 338 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 29/40 MP 0/0 Hu 10 $ 978 room=.
--> e
-T 339 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 29/40 MP 0/0 Hu  9 $ 978 room=.
--> s
-T 340 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 29/40 MP 0/0 Hu  8 $ 978 room=.
--> l
-T 341 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 29/40 MP 0/0 Hu  8 $ 978 room=.
--> s
-T 342 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 9) HP 29/40 MP 0/0 Hu  7 $ 978 room=.
--> e
-T 343 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 9) HP 29/40 MP 0/0 Hu  6 $ 978 room=.
--> i
-T 344 mode=inventory           Beregond Stoneward(hum) F1@( 7, 9) HP 29/40 MP 0/0 Hu  6 $ 978 room=.
--> u2
-T 345 mode=inventory           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu  6 $ 978 room=.
+T 138 mode=inventory           Beregond Stoneward(hum) F1@( 8, 8) HP 40/40 MP 0/0 Hu 92 $ 838 room=.
 -> x
-T 346 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu  6 $ 978 room=.
+T 139 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 8) HP 40/40 MP 0/0 Hu 92 $ 838 room=.
+-> n
+T 140 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 7) HP 40/40 MP 0/0 Hu 91 $ 838 room=.
+-> w
+T 141 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 7) HP 40/40 MP 0/0 Hu 90 $ 838 room=.
+-> w
+T 142 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 40/40 MP 0/0 Hu 89 $ 838 room=.
+-> w
+T 143 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 40/40 MP 0/0 Hu 88 $ 838 room=.
+-> w
+T 144 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 87 $ 838 room=.
+-> w
+T 145 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 7) HP 40/40 MP 0/0 Hu 86 $ 838 room=.
 -> s
-T 347 mode=game_loop           Beregond Stoneward(hum) F1@( 7,10) HP 40/40 MP 0/0 Hu  5 $ 978 room=.
--> s
-T 348 mode=game_loop           Beregond Stoneward(hum) F1@( 7,11) HP 40/40 MP 0/0 Hu  4 $ 978 room=.
+T 146 mode=library_mode        Beregond Stoneward(hum) F1@( 3, 8) HP 40/40 MP 0/0 Hu 85 $ 838 room=L
+-> r
+T 147 mode=library_read_decision_mode Beregond Stoneward(hum) F1@( 3, 8) HP 40/40 MP 0/0 Hu 85 $ 838 room=L
+-> y
+T 148 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 8) HP 40/40 MP 0/0 Hu 85 $ 888 room=.
 -> e
-T 349 mode=combat_mode         Beregond Stoneward(hum) F1@( 8,11) HP 40/40 MP 0/0 Hu  3 $ 978 room=M vs Kobold(L0 HP8/8)
--> f
-T 350 mode=flee_direction_mode Beregond Stoneward(hum) F1@( 8,11) HP 40/40 MP 0/0 Hu  3 $ 978 room=M
--> n
-T 351 mode=combat_mode         Beregond Stoneward(hum) F1@( 8,10) HP 40/40 MP 0/0 Hu  3 $ 978 room=M vs ELITE UNDEAD ZOMBIE(L1 HP45/45)
--> f
-T 352 mode=flee_direction_mode Beregond Stoneward(hum) F1@( 8,10) HP 37/40 MP 0/0 Hu  3 $ 978 room=M
--> n
-T 353 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 9) HP 37/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP15/15)
+T 149 mode=combat_mode         Beregond Stoneward(hum) F1@( 4, 8) HP 40/40 MP 0/0 Hu 84 $ 888 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T 354 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 9) HP 36/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP12/15)
--> f
-T 355 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 9) HP 31/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP12/15)
--> f
-T 356 mode=flee_direction_mode Beregond Stoneward(hum) F1@( 8, 9) HP 28/40 MP 0/0 Hu  3 $ 978 room=M
--> n
-T 357 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 25/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T 358 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 24/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP12/15)
--> a
-T 359 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 20/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP9/15)
--> a
-T 360 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 16/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP9/15)
--> a
-T 361 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 12/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP9/15)
--> a
-T 362 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 9/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP6/15)
--> a
-T 363 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 8) HP 5/40 MP 0/0 Hu  3 $ 978 room=M vs Giant Centipede(L0 HP3/15)
--> a
-T 364 mode=combat_victory      Beregond Stoneward(hum) F1@( 8, 8) HP 4/40 MP 0/0 Hu  3 $ 980 room=.
+T 150 mode=combat_victory      Beregond Stoneward(hum) F1@( 4, 8) HP 39/40 MP 0/0 Hu 84 $ 892 room=.
 -> back
-T 365 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 8) HP 4/40 MP 0/0 Hu  3 $ 980 room=.
+T 151 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 8) HP 39/40 MP 0/0 Hu 84 $ 892 room=.
+-> e
+T 152 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 8) HP 39/40 MP 0/0 Hu 83 $ 892 room=.
+-> e
+T 153 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 39/40 MP 0/0 Hu 82 $ 892 room=.
 -> i
-T 366 mode=inventory           Beregond Stoneward(hum) F1@( 8, 8) HP 4/40 MP 0/0 Hu  3 $ 980 room=.
+T 154 mode=inventory           Beregond Stoneward(hum) F1@( 6, 8) HP 39/40 MP 0/0 Hu 82 $ 892 room=.
+-> eat3
+T 155 mode=inventory           Beregond Stoneward(hum) F1@( 6, 8) HP 39/40 MP 0/0 Hu 87 $ 892 room=.
+-> x
+T 156 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 39/40 MP 0/0 Hu 87 $ 892 room=.
+-> s
+T 157 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 9) HP 40/40 MP 0/0 Hu 86 $ 892 room=.
+-> l
+T 158 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 9) HP 40/40 MP 0/0 Hu 86 $ 892 room=.
+-> e
+T 159 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 85 $ 892 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 160 mode=combat_victory      Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 85 $ 902 room=.
+-> back
+T 161 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 85 $ 902 room=.
+-> l
+T 162 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 9) HP 40/40 MP 0/0 Hu 85 $ 902 room=.
+-> e
+T 163 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 9) HP 40/40 MP 0/0 Hu 84 $ 902 room=M vs Goblin(L0 HP12/12)
+-> a
+T 164 mode=combat_victory      Beregond Stoneward(hum) F1@( 8, 9) HP 40/40 MP 0/0 Hu 84 $ 909 room=.
+-> back
+T 165 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 9) HP 40/40 MP 0/0 Hu 84 $ 909 room=.
+-> n
+T 166 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 8) HP 40/40 MP 0/0 Hu 83 $ 909 room=.
+-> n
+T 167 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 7) HP 40/40 MP 0/0 Hu 82 $ 909 room=.
+-> w
+T 168 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 7) HP 40/40 MP 0/0 Hu 81 $ 909 room=.
+-> w
+T 169 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 40/40 MP 0/0 Hu 80 $ 909 room=.
+-> w
+T 170 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 40/40 MP 0/0 Hu 79 $ 909 room=.
+-> w
+T 171 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 78 $ 909 room=.
+-> n
+T 172 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 40/40 MP 0/0 Hu 77 $ 909 room=.
+-> w
+T 173 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 6) HP 40/40 MP 0/0 Hu 76 $ 909 room=.
+-> w
+T 174 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 6) HP 40/40 MP 0/0 Hu 75 $ 909 room=.
+-> w
+T 175 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 74 $ 909 room=.
+-> i
+T 176 mode=inventory           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 74 $ 909 room=.
+-> eat3
+T 177 mode=inventory           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 79 $ 909 room=.
 -> eat1
-T 367 mode=inventory           Beregond Stoneward(hum) F1@( 8, 8) HP 4/40 MP 0/0 Hu  8 $ 980 room=.
+T 178 mode=inventory           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu100 $ 909 room=.
 -> x
-T 368 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 8) HP 4/40 MP 0/0 Hu  8 $ 980 room=.
+T 179 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu100 $ 909 room=.
+-> s
+T 180 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 7) HP 40/40 MP 0/0 Hu 99 $ 909 room=.
 -> n
-T 369 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 7) HP 1/40 MP 0/0 Hu  7 $ 980 room=.
+T 181 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 98 $ 909 room=.
+-> n
+T 182 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 5) HP 40/40 MP 0/0 Hu 97 $ 909 room=.
+-> n
+T 183 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 96 $ 909 room=.
+-> n
+T 184 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 95 $ 909 room=.
+-> n
+T 185 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 2) HP 40/40 MP 0/0 Hu 94 $ 909 room=.
+-> n
+T 186 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 1) HP 40/40 MP 0/0 Hu 93 $ 909 room=E
+-> e
+T 187 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 1) HP 40/40 MP 0/0 Hu 92 $ 909 room=.
+-> e
+T 188 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 1) HP 40/40 MP 0/0 Hu 91 $ 909 room=.
+-> e
+T 189 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 1) HP 40/40 MP 0/0 Hu 90 $ 909 room=.
 -> w
-T 370 mode=death_screen        Beregond Stoneward(hum) F1@( 7, 7) HP -2/40 MP 0/0 Hu  6 $ 980 room=.
+T 190 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 1) HP 40/40 MP 0/0 Hu 89 $ 909 room=.
+-> s
+T 191 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu 88 $ 909 room=.
+-> w
+T 192 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 2) HP 40/40 MP 0/0 Hu 87 $ 909 room=.
+-> n
+T 193 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 1) HP 40/40 MP 0/0 Hu 86 $ 909 room=.
+-> w
+T 194 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 1) HP 40/40 MP 0/0 Hu 85 $ 909 room=E
+-> s
+T 195 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 2) HP 40/40 MP 0/0 Hu 84 $ 909 room=.
+-> s
+T 196 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 83 $ 909 room=.
+-> s
+T 197 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 82 $ 909 room=.
+-> s
+T 198 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 5) HP 40/40 MP 0/0 Hu 81 $ 909 room=.
+-> s
+T 199 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu 80 $ 909 room=.
+-> e
+T 200 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 6) HP 40/40 MP 0/0 Hu 79 $ 909 room=.
+-> n
+T 201 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu 78 $ 909 room=.
+-> n
+T 202 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 77 $ 909 room=.
+-> w
+T 203 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 76 $ 909 room=.
+-> n
+T 204 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 75 $ 909 room=.
+-> n
+T 205 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 2) HP 40/40 MP 0/0 Hu 74 $ 909 room=.
+-> e
+T 206 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 2) HP 40/40 MP 0/0 Hu 73 $ 909 room=.
+-> e
+T 207 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu 72 $ 909 room=.
+-> s
+T 208 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 3) HP 40/40 MP 0/0 Hu 71 $ 909 room=.
+-> w
+T 209 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu 70 $ 909 room=.
+-> s
+T 210 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 69 $ 909 room=.
+-> l
+T 211 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 69 $ 909 room=.
+-> e
+T 212 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 4) HP 40/40 MP 0/0 Hu 68 $ 909 room=.
+-> e
+T 213 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 4) HP 40/40 MP 0/0 Hu 67 $ 909 room=.
+-> s
+T 214 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 5) HP 40/40 MP 0/0 Hu 66 $ 909 room=.
+-> s
+T 215 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 40/40 MP 0/0 Hu 65 $ 909 room=.
+-> s
+T 216 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 64 $ 909 room=.
+-> w
+T 217 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 7) HP 40/40 MP 0/0 Hu 63 $ 909 room=.
+-> n
+T 218 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 6) HP 40/40 MP 0/0 Hu 62 $ 909 room=.
+-> n
+T 219 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 61 $ 909 room=.
+-> e
+T 220 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 5) HP 40/40 MP 0/0 Hu 60 $ 909 room=.
+-> l
+T 221 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 5) HP 40/40 MP 0/0 Hu 60 $ 909 room=.
+-> e
+T 222 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 40/40 MP 0/0 Hu 59 $ 909 room=.
+-> s
+T 223 mode=combat_mode         Beregond Stoneward(hum) F1@( 5, 6) HP 40/40 MP 0/0 Hu 58 $ 909 room=M vs Lichen(L0 HP10/10)
+-> a
+T 224 mode=combat_victory      Beregond Stoneward(hum) F1@( 5, 6) HP 40/40 MP 0/0 Hu 58 $ 910 room=.
+-> back
+T 225 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 6) HP 40/40 MP 0/0 Hu 58 $ 910 room=.
+-> w
+T 226 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 40/40 MP 0/0 Hu 57 $ 910 room=.
+-> w
+T 227 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 6) HP 40/40 MP 0/0 Hu 56 $ 910 room=.
+-> s
+T 228 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 7) HP 40/40 MP 0/0 Hu 55 $ 910 room=.
+-> e
+T 229 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 54 $ 910 room=.
+-> s
+T 230 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 8) HP 40/40 MP 0/0 Hu 53 $ 910 room=.
+-> l
+T 231 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 8) HP 40/40 MP 0/0 Hu 53 $ 910 room=.
+-> w
+T 232 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 8) HP 40/40 MP 0/0 Hu 52 $ 910 room=.
+-> s
+T 233 mode=combat_mode         Beregond Stoneward(hum) F1@( 3, 9) HP 40/40 MP 0/0 Hu 51 $ 910 room=M vs Zombie(L0 HP35/35)
+-> a
+T 234 mode=combat_mode         Beregond Stoneward(hum) F1@( 3, 9) HP 39/40 MP 0/0 Hu 51 $ 910 room=M vs Zombie(L0 HP14/35)
+-> a
+T 235 mode=combat_mode         Beregond Stoneward(hum) F1@( 3, 9) HP 39/40 MP 0/0 Hu 51 $ 910 room=M vs Zombie(L0 HP14/35)
+-> a
+T 236 mode=combat_mode         Beregond Stoneward(hum) F1@( 3, 9) HP 39/40 MP 0/0 Hu 51 $ 910 room=M vs Zombie(L0 HP14/35)
+-> a
+T 237 mode=combat_victory      Beregond Stoneward(hum) F1@( 3, 9) HP 39/40 MP 0/0 Hu 51 $ 914 room=.
+-> back
+T 238 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 9) HP 39/40 MP 0/0 Hu 51 $ 914 room=.
+-> l
+T 239 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 9) HP 39/40 MP 0/0 Hu 51 $ 914 room=.
+-> s
+T 240 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 39/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 241 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 38/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 242 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 37/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 243 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 36/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 244 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 35/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 245 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 34/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 246 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 33/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 247 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 32/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP15/18)
+-> a
+T 248 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 32/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP12/18)
+-> a
+T 249 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 31/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP9/18)
+-> a
+T 250 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 30/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP6/18)
+-> a
+T 251 mode=combat_mode         Beregond Stoneward(hum) F1@( 3,10) HP 29/40 MP 0/0 Hu 50 $ 914 room=M vs Spore Puff(L0 HP3/18)
+-> a
+T 252 mode=combat_victory      Beregond Stoneward(hum) F1@( 3,10) HP 28/40 MP 0/0 Hu 50 $ 917 room=.
+-> back
+T 253 mode=game_loop           Beregond Stoneward(hum) F1@( 3,10) HP 28/40 MP 0/0 Hu 50 $ 917 room=.
+-> l
+T 254 mode=game_loop           Beregond Stoneward(hum) F1@( 3,10) HP 28/40 MP 0/0 Hu 50 $ 917 room=.
+-> i
+T 255 mode=inventory           Beregond Stoneward(hum) F1@( 3,10) HP 28/40 MP 0/0 Hu 50 $ 917 room=.
+-> u3
+T 256 mode=inventory           Beregond Stoneward(hum) F1@( 3,10) HP 40/40 MP 0/0 Hu 50 $ 917 room=.
+-> x
+T 257 mode=game_loop           Beregond Stoneward(hum) F1@( 3,10) HP 40/40 MP 0/0 Hu 50 $ 917 room=.
+-> s
+T 258 mode=game_loop           Beregond Stoneward(hum) F1@( 3,11) HP 40/40 MP 0/0 Hu 49 $ 917 room=.
+-> l
+T 259 mode=game_loop           Beregond Stoneward(hum) F1@( 3,11) HP 40/40 MP 0/0 Hu 49 $ 917 room=.
+-> e
+T 260 mode=dungeon_mode        Beregond Stoneward(hum) F1@( 4,11) HP 40/40 MP 0/0 Hu 48 $ 917 room=N
+-> u
+T 261 mode=game_loop           Beregond Stoneward(hum) F1@( 4,11) HP 40/40 MP 0/0 Hu 48 $ 917 room=N
+-> l
+T 262 mode=game_loop           Beregond Stoneward(hum) F1@( 4,11) HP 40/40 MP 0/0 Hu 48 $ 917 room=N
+-> n
+T 263 mode=game_loop           Beregond Stoneward(hum) F1@( 4,10) HP 40/40 MP 0/0 Hu 47 $ 917 room=.
+-> s
+T 264 mode=game_loop           Beregond Stoneward(hum) F1@( 4,11) HP 40/40 MP 0/0 Hu 46 $ 917 room=N
+-> n
+T 265 mode=game_loop           Beregond Stoneward(hum) F1@( 4,10) HP 40/40 MP 0/0 Hu 45 $ 917 room=.
+-> w
+T 266 mode=game_loop           Beregond Stoneward(hum) F1@( 3,10) HP 40/40 MP 0/0 Hu 44 $ 917 room=.
+-> s
+T 267 mode=game_loop           Beregond Stoneward(hum) F1@( 3,11) HP 40/40 MP 0/0 Hu 43 $ 917 room=.
+-> w
+T 268 mode=game_loop           Beregond Stoneward(hum) F1@( 2,11) HP 40/40 MP 0/0 Hu 42 $ 917 room=.
+-> e
+T 269 mode=game_loop           Beregond Stoneward(hum) F1@( 3,11) HP 40/40 MP 0/0 Hu 41 $ 917 room=.
+-> e
+T 270 mode=game_loop           Beregond Stoneward(hum) F1@( 4,11) HP 40/40 MP 0/0 Hu 40 $ 917 room=N
+-> l
+T 271 mode=game_loop           Beregond Stoneward(hum) F1@( 4,11) HP 40/40 MP 0/0 Hu 40 $ 917 room=N
+-> n
+T 272 mode=game_loop           Beregond Stoneward(hum) F1@( 4,10) HP 40/40 MP 0/0 Hu 39 $ 917 room=.
+-> w
+T 273 mode=game_loop           Beregond Stoneward(hum) F1@( 3,10) HP 40/40 MP 0/0 Hu 38 $ 917 room=.
+-> n
+T 274 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 9) HP 40/40 MP 0/0 Hu 37 $ 917 room=.
+-> n
+T 275 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 8) HP 40/40 MP 0/0 Hu 36 $ 917 room=.
+-> n
+T 276 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 7) HP 40/40 MP 0/0 Hu 35 $ 917 room=.
+-> e
+T 277 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 34 $ 917 room=.
+-> s
+T 278 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 8) HP 40/40 MP 0/0 Hu 33 $ 917 room=.
+-> e
+T 279 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 8) HP 40/40 MP 0/0 Hu 32 $ 917 room=.
+-> e
+T 280 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 40/40 MP 0/0 Hu 31 $ 917 room=.
+-> l
+T 281 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 40/40 MP 0/0 Hu 31 $ 917 room=.
+-> n
+T 282 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 7) HP 40/40 MP 0/0 Hu 30 $ 917 room=.
+-> w
+T 283 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 7) HP 40/40 MP 0/0 Hu 29 $ 917 room=.
+-> w
+T 284 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 40/40 MP 0/0 Hu 28 $ 917 room=.
+-> n
+T 285 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 40/40 MP 0/0 Hu 27 $ 917 room=.
+-> e
+T 286 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 6) HP 40/40 MP 0/0 Hu 26 $ 917 room=.
+-> n
+T 287 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 40/40 MP 0/0 Hu 25 $ 917 room=.
+-> w
+T 288 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 5) HP 40/40 MP 0/0 Hu 24 $ 917 room=.
+-> w
+T 289 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 23 $ 917 room=.
+-> w
+T 290 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu 22 $ 917 room=.
+-> l
+T 291 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu 22 $ 917 room=.
+-> n
+T 292 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 21 $ 917 room=.
+-> w
+T 293 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 20 $ 917 room=.
+-> n
+T 294 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 19 $ 917 room=.
+-> n
+T 295 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 2) HP 40/40 MP 0/0 Hu 18 $ 917 room=.
+-> n
+T 296 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 1) HP 40/40 MP 0/0 Hu 17 $ 917 room=E
+-> e
+T 297 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 1) HP 40/40 MP 0/0 Hu 16 $ 917 room=.
+-> e
+T 298 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 1) HP 40/40 MP 0/0 Hu 15 $ 917 room=.
+-> s
+T 299 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu 14 $ 917 room=.
+-> s
+T 300 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 3) HP 40/40 MP 0/0 Hu 13 $ 917 room=.
+-> l
+T 301 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 3) HP 40/40 MP 0/0 Hu 13 $ 917 room=.
+-> s
+T 302 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 4) HP 40/40 MP 0/0 Hu 12 $ 917 room=.
+-> s
+T 303 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 11 $ 917 room=.
+-> s
+T 304 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 6) HP 40/40 MP 0/0 Hu 10 $ 917 room=.
+-> w
+T 305 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 6) HP 40/40 MP 0/0 Hu  9 $ 917 room=.
+-> w
+T 306 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 40/40 MP 0/0 Hu  8 $ 917 room=.
+-> n
+T 307 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 5) HP 40/40 MP 0/0 Hu  7 $ 917 room=.
+-> n
+T 308 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu  6 $ 917 room=.
+-> n
+T 309 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu  5 $ 917 room=.
+-> e
+T 310 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu  4 $ 917 room=.
+-> l
+T 311 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 3) HP 40/40 MP 0/0 Hu  4 $ 917 room=.
+-> s
+T 312 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu  3 $ 917 room=.
+-> s
+T 313 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 5) HP 40/40 MP 0/0 Hu  2 $ 917 room=.
+-> s
+T 314 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 6) HP 40/40 MP 0/0 Hu  1 $ 917 room=.
+-> w
+T 315 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 6) HP 38/40 MP 0/0 Hu  0 $ 917 room=.
+-> n
+T 316 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 5) HP 36/40 MP 0/0 Hu  0 $ 917 room=.
+-> n
+T 317 mode=game_loop           Beregond Stoneward(hum) F1@( 1, 4) HP 34/40 MP 0/0 Hu  0 $ 917 room=.
+-> e
+T 318 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 4) HP 32/40 MP 0/0 Hu  0 $ 917 room=.
+-> n
+T 319 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 3) HP 30/40 MP 0/0 Hu  0 $ 917 room=.
+-> n
+T 320 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 2) HP 28/40 MP 0/0 Hu  0 $ 917 room=.
+-> l
+T 321 mode=game_loop           Beregond Stoneward(hum) F1@( 2, 2) HP 28/40 MP 0/0 Hu  0 $ 917 room=.
+-> e
+T 322 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 2) HP 26/40 MP 0/0 Hu  0 $ 917 room=.
+-> i
+T 323 mode=inventory           Beregond Stoneward(hum) F1@( 3, 2) HP 26/40 MP 0/0 Hu  0 $ 917 room=.
+-> u3
+T 324 mode=inventory           Beregond Stoneward(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu  0 $ 917 room=.
+-> x
+T 325 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu  0 $ 917 room=.
+-> s
+T 326 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 3) HP 38/40 MP 0/0 Hu  0 $ 917 room=.
+-> s
+T 327 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 4) HP 36/40 MP 0/0 Hu  0 $ 917 room=.
+-> s
+T 328 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 5) HP 34/40 MP 0/0 Hu  0 $ 917 room=.
+-> e
+T 329 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 5) HP 32/40 MP 0/0 Hu  0 $ 917 room=.
+-> e
+T 330 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 30/40 MP 0/0 Hu  0 $ 917 room=.
+-> l
+T 331 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 5) HP 30/40 MP 0/0 Hu  0 $ 917 room=.
+-> e
+T 332 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 5) HP 28/40 MP 0/0 Hu  0 $ 917 room=.
+-> i
+T 333 mode=inventory           Beregond Stoneward(hum) F1@( 6, 5) HP 28/40 MP 0/0 Hu  0 $ 917 room=.
+-> u3
+T 334 mode=inventory           Beregond Stoneward(hum) F1@( 6, 5) HP 40/40 MP 0/0 Hu  0 $ 917 room=.
+-> x
+T 335 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 5) HP 40/40 MP 0/0 Hu  0 $ 917 room=.
+-> e
+T 336 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 5) HP 38/40 MP 0/0 Hu  0 $ 917 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 337 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 5) HP 38/40 MP 0/0 Hu  0 $ 917 room=M vs Sewer Rat(L0 HP7/10)
+-> a
+T 338 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 5) HP 37/40 MP 0/0 Hu  0 $ 917 room=M vs Sewer Rat(L0 HP7/10)
+-> a
+T 339 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 5) HP 36/40 MP 0/0 Hu  0 $ 917 room=M vs Sewer Rat(L0 HP4/10)
+-> a
+T 340 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 5) HP 35/40 MP 0/0 Hu  0 $ 917 room=M vs Sewer Rat(L0 HP1/10)
+-> a
+T 341 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 5) HP 34/40 MP 0/0 Hu  0 $ 917 room=M vs Sewer Rat(L0 HP1/10)
+-> a
+T 342 mode=combat_mode         Beregond Stoneward(hum) F1@( 7, 5) HP 33/40 MP 0/0 Hu  0 $ 917 room=M vs Sewer Rat(L0 HP1/10)
+-> a
+T 343 mode=combat_victory      Beregond Stoneward(hum) F1@( 7, 5) HP 33/40 MP 0/0 Hu  0 $ 1071 room=.
+-> back
+T 344 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 5) HP 33/40 MP 0/0 Hu  0 $ 1071 room=.
+-> s
+T 345 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 6) HP 31/40 MP 0/0 Hu  0 $ 1071 room=.
+-> e
+T 346 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 6) HP 29/40 MP 0/0 Hu  0 $ 1071 room=M vs Goblin(L0 HP12/12)
+-> a
+T 347 mode=combat_mode         Beregond Stoneward(hum) F1@( 8, 6) HP 28/40 MP 0/0 Hu  0 $ 1071 room=M vs Goblin(L0 HP10/12)
+-> f
+T 348 mode=flee_direction_mode Beregond Stoneward(hum) F1@( 8, 6) HP 28/40 MP 0/0 Hu  0 $ 1071 room=M
+-> s
+T 349 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 7) HP 28/40 MP 0/0 Hu  0 $ 1071 room=.
+-> s
+T 350 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 8) HP 26/40 MP 0/0 Hu  0 $ 1071 room=.
+-> l
+T 351 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 8) HP 26/40 MP 0/0 Hu  0 $ 1071 room=.
+-> s
+T 352 mode=game_loop           Beregond Stoneward(hum) F1@( 8, 9) HP 24/40 MP 0/0 Hu  0 $ 1071 room=.
+-> w
+T 353 mode=game_loop           Beregond Stoneward(hum) F1@( 7, 9) HP 22/40 MP 0/0 Hu  0 $ 1071 room=.
+-> w
+T 354 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 9) HP 20/40 MP 0/0 Hu  0 $ 1071 room=.
+-> n
+T 355 mode=game_loop           Beregond Stoneward(hum) F1@( 6, 8) HP 18/40 MP 0/0 Hu  0 $ 1071 room=.
+-> w
+T 356 mode=game_loop           Beregond Stoneward(hum) F1@( 5, 8) HP 16/40 MP 0/0 Hu  0 $ 1071 room=.
+-> w
+T 357 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 8) HP 14/40 MP 0/0 Hu  0 $ 1071 room=.
+-> w
+T 358 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 8) HP 12/40 MP 0/0 Hu  0 $ 1071 room=.
+-> n
+T 359 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 7) HP 10/40 MP 0/0 Hu  0 $ 1071 room=.
+-> n
+T 360 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 6) HP 8/40 MP 0/0 Hu  0 $ 1071 room=.
+-> l
+T 361 mode=game_loop           Beregond Stoneward(hum) F1@( 3, 6) HP 8/40 MP 0/0 Hu  0 $ 1071 room=.
+-> e
+T 362 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 6) HP 6/40 MP 0/0 Hu  0 $ 1071 room=.
+-> s
+T 363 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 7) HP 4/40 MP 0/0 Hu  0 $ 1071 room=.
+-> s
+T 364 mode=game_loop           Beregond Stoneward(hum) F1@( 4, 8) HP 2/40 MP 0/0 Hu  0 $ 1071 room=.
+-> e
+T 365 mode=death_screen        Beregond Stoneward(hum) F1@( 5, 8) HP 0/40 MP 0/0 Hu  0 $ 1071 room=.
 
-=== run finished: turns=370 floor=1 hp=-2/40 gold=980 alive=False mode=death_screen ===
+=== run finished: turns=365 floor=1 hp=0/40 gold=1071 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/27182_human.html

@@ -131,29 +131,29 @@ T  56 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 2) HP 27/28 MP 0/0 
 T  57 mode=combat_mode         Voronwe Stareyed(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 98 $ 350 room=M vs Rust Monster(L0 HP18/18)
 -> f
 T  58 mode=flee_direction_mode Voronwe Stareyed(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 98 $ 350 room=M
--> e
-T  59 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 1) HP 28/28 MP 0/0 Hu 98 $ 350 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T  60 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 1) HP 27/28 MP 0/0 Hu 98 $ 350 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T  61 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 1) HP 27/28 MP 0/0 Hu 98 $ 350 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T  62 mode=combat_victory      Voronwe Stareyed(elf) F1@( 5, 1) HP 27/28 MP 0/0 Hu 98 $ 358 room=.
--> back
-T  63 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 1) HP 27/28 MP 0/0 Hu 98 $ 358 room=.
 -> s
-T  64 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 2) HP 27/28 MP 0/0 Hu 97 $ 358 room=M vs Kobold(L0 HP20/20)
--> a
-T  65 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 97 $ 358 room=M vs Kobold(L0 HP20/20)
--> a
-T  66 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 2) HP 25/28 MP 0/0 Hu 97 $ 358 room=M vs Kobold(L0 HP20/20)
--> a
-T  67 mode=combat_victory      Voronwe Stareyed(elf) F1@( 5, 2) HP 24/28 MP 0/0 Hu 97 $ 367 room=.
--> back
-T  68 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 2) HP 24/28 MP 0/0 Hu 97 $ 367 room=.
+T  59 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 98 $ 350 room=.
 -> e
-T  69 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 2) HP 25/28 MP 0/0 Hu 96 $ 367 room=.
+T  60 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 97 $ 350 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  61 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 2) HP 27/28 MP 0/0 Hu 97 $ 350 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  62 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 2) HP 27/28 MP 0/0 Hu 97 $ 350 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  63 mode=combat_victory      Voronwe Stareyed(elf) F1@( 5, 2) HP 27/28 MP 0/0 Hu 97 $ 358 room=.
+-> back
+T  64 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 2) HP 27/28 MP 0/0 Hu 97 $ 358 room=.
 -> n
+T  65 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 1) HP 27/28 MP 0/0 Hu 96 $ 358 room=M vs Kobold(L0 HP20/20)
+-> a
+T  66 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 1) HP 26/28 MP 0/0 Hu 96 $ 358 room=M vs Kobold(L0 HP20/20)
+-> a
+T  67 mode=combat_mode         Voronwe Stareyed(elf) F1@( 5, 1) HP 25/28 MP 0/0 Hu 96 $ 358 room=M vs Kobold(L0 HP20/20)
+-> a
+T  68 mode=combat_victory      Voronwe Stareyed(elf) F1@( 5, 1) HP 24/28 MP 0/0 Hu 96 $ 367 room=.
+-> back
+T  69 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 1) HP 24/28 MP 0/0 Hu 96 $ 367 room=.
+-> e
 T  70 mode=combat_mode         Voronwe Stareyed(elf) F1@( 6, 1) HP 25/28 MP 0/0 Hu 95 $ 367 room=M vs Spore Puff(L0 HP18/18)
 -> a
 T  71 mode=combat_mode         Voronwe Stareyed(elf) F1@( 6, 1) HP 25/28 MP 0/0 Hu 95 $ 367 room=M vs Spore Puff(L0 HP18/18)
@@ -162,653 +162,507 @@ T  72 mode=combat_victory      Voronwe Stareyed(elf) F1@( 6, 1) HP 25/28 MP 0/0 
 -> back
 T  73 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 1) HP 25/28 MP 0/0 Hu 95 $ 471 room=.
 -> e
-T  74 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 1) HP 26/28 MP 0/0 Hu 94 $ 471 room=.
+T  74 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 1) HP 25/28 MP 0/0 Hu 94 $ 471 room=.
 -> s
 T  75 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 2) HP 26/28 MP 0/0 Hu 93 $ 471 room=.
--> n
-T  76 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 1) HP 27/28 MP 0/0 Hu 92 $ 471 room=.
--> s
-T  77 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 91 $ 471 room=.
 -> w
-T  78 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 90 $ 471 room=.
+T  76 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 2) HP 26/28 MP 0/0 Hu 92 $ 471 room=.
 -> s
-T  79 mode=combat_mode         Voronwe Stareyed(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 89 $ 471 room=M vs Goblin(L0 HP12/12)
+T  77 mode=combat_mode         Voronwe Stareyed(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 91 $ 471 room=M vs Goblin(L0 HP12/12)
 -> a
-T  80 mode=combat_victory      Voronwe Stareyed(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 89 $ 474 room=.
+T  78 mode=combat_victory      Voronwe Stareyed(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 91 $ 474 room=.
 -> back
-T  81 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 89 $ 474 room=.
+T  79 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 91 $ 474 room=.
 -> s
-T  82 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 4) HP 28/28 MP 0/0 Hu 88 $ 474 room=.
+T  80 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 4) HP 27/28 MP 0/0 Hu 90 $ 474 room=.
 -> s
-T  83 mode=combat_mode         Voronwe Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 87 $ 474 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T  84 mode=combat_victory      Voronwe Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 87 $ 476 room=.
--> back
-T  85 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 87 $ 476 room=.
--> w
-T  86 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 86 $ 476 room=.
--> w
-T  87 mode=combat_mode         Voronwe Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 85 $ 476 room=M vs Zombie(L0 HP35/35)
+T  81 mode=combat_mode         Voronwe Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 89 $ 474 room=M vs Giant Centipede(L0 HP15/15)
 -> f
-T  88 mode=flee_direction_mode Voronwe Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 85 $ 476 room=M
--> n
-T  89 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 85 $ 476 room=.
--> n
-T  90 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 84 $ 476 room=.
--> n
-T  91 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 83 $ 476 room=.
--> n
-T  92 mode=combat_mode         Voronwe Stareyed(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 82 $ 476 room=M vs Rust Monster(L0 HP18/18)
--> a
-T  93 mode=combat_victory      Voronwe Stareyed(elf) F1@( 4, 1) HP 28/38 MP 0/0 Hu 82 $ 485 room=.
--> back
-T  94 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 1) HP 28/38 MP 0/0 Hu 82 $ 485 room=.
+T  82 mode=flee_direction_mode Voronwe Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 89 $ 474 room=M
 -> e
-T  95 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 1) HP 28/38 MP 0/0 Hu 81 $ 485 room=.
--> s
-T  96 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 2) HP 28/38 MP 0/0 Hu 80 $ 485 room=.
--> s
-T  97 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 3) HP 28/38 MP 0/0 Hu 79 $ 485 room=.
--> i
-T  98 mode=inventory           Voronwe Stareyed(elf) F1@( 5, 3) HP 28/38 MP 0/0 Hu 79 $ 485 room=.
--> u3
-T  99 mode=inventory           Voronwe Stareyed(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 79 $ 485 room=.
--> x
-T 100 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 79 $ 485 room=.
--> i
-T 101 mode=inventory           Voronwe Stareyed(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 79 $ 485 room=.
--> eat1
-T 102 mode=inventory           Voronwe Stareyed(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 84 $ 485 room=.
--> x
-T 103 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 3) HP 38/38 MP 0/0 Hu 84 $ 485 room=.
--> s
-T 104 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 83 $ 485 room=.
--> w
-T 105 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 82 $ 485 room=.
--> s
-T 106 mode=combat_mode         Voronwe Stareyed(elf) F1@( 4, 5) HP 38/38 MP 0/0 Hu 81 $ 485 room=M vs Zombie(L0 HP35/35)
--> a
-T 107 mode=combat_mode         Voronwe Stareyed(elf) F1@( 4, 5) HP 37/38 MP 0/0 Hu 81 $ 485 room=M vs Zombie(L0 HP14/35)
--> f
-T 108 mode=flee_direction_mode Voronwe Stareyed(elf) F1@( 4, 5) HP 37/38 MP 0/0 Hu 81 $ 485 room=M
--> s
-T 109 mode=combat_mode         Voronwe Stareyed(elf) F1@( 4, 6) HP 37/38 MP 0/0 Hu 81 $ 485 room=M vs Slime Mold(L0 HP15/15)
--> a
-T 110 mode=combat_victory      Voronwe Stareyed(elf) F1@( 4, 6) HP 37/38 MP 0/0 Hu 81 $ 490 room=.
--> back
-T 111 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 6) HP 37/38 MP 0/0 Hu 81 $ 490 room=.
--> e
-T 112 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 6) HP 37/38 MP 0/0 Hu 80 $ 490 room=.
+T  83 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 89 $ 474 room=.
 -> n
-T 113 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 5) HP 37/38 MP 0/0 Hu 79 $ 490 room=.
+T  84 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 4) HP 28/28 MP 0/0 Hu 88 $ 474 room=.
 -> e
-T 114 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 5) HP 37/38 MP 0/0 Hu 78 $ 490 room=.
+T  85 mode=game_loop           Voronwe Stareyed(elf) F1@( 8, 4) HP 28/28 MP 0/0 Hu 87 $ 474 room=.
+-> e
+T  86 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 4) HP 28/28 MP 0/0 Hu 86 $ 474 room=.
 -> n
-T 115 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 77 $ 490 room=.
--> i
-T 116 mode=inventory           Voronwe Stareyed(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 77 $ 490 room=.
--> eat1
-T 117 mode=inventory           Voronwe Stareyed(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 83 $ 490 room=.
--> x
-T 118 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 83 $ 490 room=.
--> w
-T 119 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 82 $ 490 room=.
--> w
-T 120 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 81 $ 490 room=.
--> s
-T 121 mode=combat_mode         Voronwe Stareyed(elf) F1@( 4, 5) HP 38/38 MP 0/0 Hu 80 $ 490 room=M vs Zombie(L0 HP14/35)
--> a
-T 122 mode=combat_mode         Voronwe Stareyed(elf) F1@( 4, 5) HP 37/38 MP 0/0 Hu 80 $ 490 room=M vs Zombie(L0 HP14/35)
--> a
-T 123 mode=combat_mode         Voronwe Stareyed(elf) F1@( 4, 5) HP 37/38 MP 0/0 Hu 80 $ 490 room=M vs Zombie(L0 HP14/35)
--> a
-T 124 mode=combat_victory      Voronwe Stareyed(elf) F1@( 4, 5) HP 37/38 MP 0/0 Hu 80 $ 495 room=.
--> back
-T 125 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 5) HP 37/38 MP 0/0 Hu 80 $ 495 room=.
--> s
-T 126 mode=game_loop           Voronwe Stareyed(elf) F1@( 4, 6) HP 37/38 MP 0/0 Hu 79 $ 495 room=.
--> e
-T 127 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 6) HP 37/38 MP 0/0 Hu 78 $ 495 room=.
--> n
-T 128 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 5) HP 37/38 MP 0/0 Hu 77 $ 495 room=.
--> n
-T 129 mode=game_loop           Voronwe Stareyed(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 76 $ 495 room=.
--> e
-T 130 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 75 $ 495 room=.
--> e
-T 131 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 74 $ 495 room=.
--> e
-T 132 mode=game_loop           Voronwe Stareyed(elf) F1@( 8, 4) HP 38/38 MP 0/0 Hu 73 $ 495 room=.
--> e
-T 133 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 4) HP 38/38 MP 0/0 Hu 72 $ 495 room=.
--> n
-T 134 mode=dungeon_mode        Voronwe Stareyed(elf) F1@( 9, 3) HP 38/38 MP 0/0 Hu 71 $ 495 room=N
+T  87 mode=dungeon_mode        Voronwe Stareyed(elf) F1@( 9, 3) HP 28/28 MP 0/0 Hu 85 $ 474 room=N
 -> u
-T 135 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 3) HP 38/38 MP 0/0 Hu 71 $ 495 room=N
+T  88 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 3) HP 28/28 MP 0/0 Hu 85 $ 474 room=N
 -> l
-T 136 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 3) HP 38/38 MP 0/0 Hu 71 $ 495 room=N
--> n
-T 137 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 2) HP 38/38 MP 0/0 Hu 70 $ 495 room=.
--> s
-T 138 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 3) HP 38/38 MP 0/0 Hu 69 $ 495 room=N
+T  89 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 3) HP 28/28 MP 0/0 Hu 85 $ 474 room=N
 -> e
-T 139 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 3) HP 38/38 MP 0/0 Hu 68 $ 495 room=M vs Zombie(L0 HP35/35)
+T  90 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 3) HP 28/28 MP 0/0 Hu 84 $ 474 room=M vs Zombie(L0 HP35/35)
 -> a
-T 140 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 3) HP 37/38 MP 0/0 Hu 68 $ 495 room=M vs Zombie(L0 HP14/35)
+T  91 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 3) HP 28/28 MP 0/0 Hu 84 $ 474 room=M vs Zombie(L0 HP14/35)
 -> a
-T 141 mode=combat_victory      Voronwe Stareyed(elf) F1@(10, 3) HP 36/38 MP 0/0 Hu 68 $ 499 room=.
+T  92 mode=combat_victory      Voronwe Stareyed(elf) F1@(10, 3) HP 28/28 MP 0/0 Hu 84 $ 477 room=.
 -> back
-T 142 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 3) HP 36/38 MP 0/0 Hu 68 $ 499 room=.
+T  93 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 3) HP 28/28 MP 0/0 Hu 84 $ 477 room=.
 -> s
-T 143 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 4) HP 36/38 MP 0/0 Hu 67 $ 499 room=.
+T  94 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 83 $ 477 room=.
 -> l
-T 144 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 4) HP 36/38 MP 0/0 Hu 67 $ 499 room=.
+T  95 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 83 $ 477 room=.
 -> e
-T 145 mode=altar_mode          Voronwe Stareyed(elf) F1@(11, 4) HP 36/38 MP 0/0 Hu 66 $ 499 room=A
+T  96 mode=altar_mode          Voronwe Stareyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 82 $ 477 room=A
 -> pray
-T 146 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 4) HP 36/38 MP 0/0 Hu 66 $ 499 room=.
--> l
-T 147 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 4) HP 36/38 MP 0/0 Hu 66 $ 499 room=.
+T  97 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 82 $ 477 room=.
 -> e
-T 148 mode=pool_mode           Voronwe Stareyed(elf) F1@(12, 4) HP 36/38 MP 0/0 Hu 65 $ 499 room=P
+T  98 mode=pool_mode           Voronwe Stareyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 81 $ 477 room=P
 -> dr
-T 149 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 4) HP 38/38 MP 0/0 Hu 65 $ 499 room=.
--> l
-T 150 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 4) HP 38/38 MP 0/0 Hu 65 $ 499 room=.
+T  99 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 4) HP 9/28 MP 0/0 Hu 81 $ 477 room=.
+-> i
+T 100 mode=inventory           Voronwe Stareyed(elf) F1@(12, 4) HP 9/28 MP 0/0 Hu 81 $ 477 room=.
+-> u3
+T 101 mode=inventory           Voronwe Stareyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 81 $ 477 room=.
+-> x
+T 102 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 81 $ 477 room=.
+-> i
+T 103 mode=inventory           Voronwe Stareyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 81 $ 477 room=.
+-> eat1
+T 104 mode=inventory           Voronwe Stareyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 86 $ 477 room=.
+-> x
+T 105 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 4) HP 28/28 MP 0/0 Hu 86 $ 477 room=.
 -> s
-T 151 mode=library_mode        Voronwe Stareyed(elf) F1@(12, 5) HP 38/38 MP 0/0 Hu 64 $ 499 room=L
+T 106 mode=library_mode        Voronwe Stareyed(elf) F1@(12, 5) HP 19/28 MP 0/0 Hu 85 $ 477 room=L
 -> r
-T 152 mode=library_read_decision_mode Voronwe Stareyed(elf) F1@(12, 5) HP 38/38 MP 0/0 Hu 64 $ 499 room=L
+T 107 mode=library_read_decision_mode Voronwe Stareyed(elf) F1@(12, 5) HP 19/28 MP 0/0 Hu 85 $ 477 room=L
 -> y
-T 153 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 5) HP 38/38 MP 0/0 Hu 64 $ 549 room=.
--> l
-T 154 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 5) HP 38/38 MP 0/0 Hu 64 $ 549 room=.
+T 108 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 5) HP 19/28 MP 0/0 Hu 85 $ 602 room=.
 -> s
-T 155 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 6) HP 38/38 MP 0/0 Hu 63 $ 549 room=.
+T 109 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 6) HP 10/28 MP 0/0 Hu 84 $ 602 room=.
 -> l
-T 156 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 6) HP 38/38 MP 0/0 Hu 63 $ 549 room=.
+T 110 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 6) HP 10/28 MP 0/0 Hu 84 $ 602 room=.
 -> s
-T 157 mode=chest_mode          Voronwe Stareyed(elf) F1@(12, 7) HP 38/38 MP 0/0 Hu 62 $ 549 room=C
+T 111 mode=chest_mode          Voronwe Stareyed(elf) F1@(12, 7) HP 1/28 MP 0/0 Hu 83 $ 602 room=C
 -> o
-T 158 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 7) HP 38/38 MP 0/0 Hu 62 $ 579 room=.
+T 112 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 7) HP 1/28 MP 0/0 Hu 83 $ 602 room=.
+-> i
+T 113 mode=inventory           Voronwe Stareyed(elf) F1@(12, 7) HP 1/28 MP 0/0 Hu 83 $ 602 room=.
+-> u3
+T 114 mode=inventory           Voronwe Stareyed(elf) F1@(12, 7) HP 28/28 MP 0/0 Hu 83 $ 602 room=.
+-> x
+T 115 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 7) HP 28/28 MP 0/0 Hu 83 $ 602 room=.
 -> l
-T 159 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 7) HP 38/38 MP 0/0 Hu 62 $ 579 room=.
+T 116 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 7) HP 28/28 MP 0/0 Hu 83 $ 602 room=.
 -> w
-T 160 mode=library_mode        Voronwe Stareyed(elf) F1@(11, 7) HP 38/38 MP 0/0 Hu 61 $ 579 room=L
+T 117 mode=library_mode        Voronwe Stareyed(elf) F1@(11, 7) HP 20/28 MP 0/0 Hu 82 $ 602 room=L
 -> r
-T 161 mode=library_read_decision_mode Voronwe Stareyed(elf) F1@(11, 7) HP 38/38 MP 0/0 Hu 61 $ 579 room=L
--> y
-T 162 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 7) HP 38/38 MP 0/0 Hu 61 $ 579 room=.
--> s
-T 163 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 8) HP 38/38 MP 0/0 Hu 60 $ 579 room=.
+T 118 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 7) HP 20/28 MP 0/0 Hu 82 $ 602 room=.
+-> i
+T 119 mode=inventory           Voronwe Stareyed(elf) F1@(11, 7) HP 20/28 MP 0/0 Hu 82 $ 602 room=.
+-> u3
+T 120 mode=inventory           Voronwe Stareyed(elf) F1@(11, 7) HP 28/28 MP 0/0 Hu 82 $ 602 room=.
+-> x
+T 121 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 7) HP 28/28 MP 0/0 Hu 82 $ 602 room=.
 -> l
-T 164 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 8) HP 38/38 MP 0/0 Hu 60 $ 579 room=.
--> s
-T 165 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 59 $ 579 room=.
--> l
-T 166 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 59 $ 579 room=.
--> s
-T 167 mode=combat_mode         Voronwe Stareyed(elf) F1@(11,10) HP 38/38 MP 0/0 Hu 58 $ 579 room=M vs Slime Mold(L0 HP15/15)
+T 122 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 7) HP 28/28 MP 0/0 Hu 82 $ 602 room=.
+-> n
+T 123 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 81 $ 602 room=.
+-> w
+T 124 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 6) HP 28/28 MP 0/0 Hu 80 $ 602 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T 168 mode=combat_mode         Voronwe Stareyed(elf) F1@(11,10) HP 37/38 MP 0/0 Hu 58 $ 579 room=M vs Slime Mold(L0 HP15/15)
--> a
-T 169 mode=combat_victory      Voronwe Stareyed(elf) F1@(11,10) HP 37/38 MP 0/0 Hu 58 $ 583 room=.
+T 125 mode=combat_victory      Voronwe Stareyed(elf) F1@(10, 6) HP 27/38 MP 0/0 Hu 80 $ 607 room=.
 -> back
-T 170 mode=game_loop           Voronwe Stareyed(elf) F1@(11,10) HP 37/38 MP 0/0 Hu 58 $ 583 room=.
--> l
-T 171 mode=game_loop           Voronwe Stareyed(elf) F1@(11,10) HP 37/38 MP 0/0 Hu 58 $ 583 room=.
--> e
-T 172 mode=game_loop           Voronwe Stareyed(elf) F1@(12,10) HP 37/38 MP 0/0 Hu 57 $ 583 room=.
+T 126 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 6) HP 27/38 MP 0/0 Hu 80 $ 607 room=.
+-> i
+T 127 mode=inventory           Voronwe Stareyed(elf) F1@(10, 6) HP 27/38 MP 0/0 Hu 80 $ 607 room=.
+-> u3
+T 128 mode=inventory           Voronwe Stareyed(elf) F1@(10, 6) HP 38/38 MP 0/0 Hu 80 $ 607 room=.
+-> x
+T 129 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 6) HP 38/38 MP 0/0 Hu 80 $ 607 room=.
 -> s
-T 173 mode=chest_mode          Voronwe Stareyed(elf) F1@(12,11) HP 37/38 MP 0/0 Hu 56 $ 583 room=C
--> o
-T 174 mode=game_loop           Voronwe Stareyed(elf) F1@(12,11) HP 37/38 MP 0/0 Hu 56 $ 593 room=.
+T 130 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 7) HP 38/38 MP 0/0 Hu 79 $ 607 room=M vs Lichen(L0 HP10/10)
+-> a
+T 131 mode=combat_victory      Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 79 $ 613 room=.
+-> back
+T 132 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 79 $ 613 room=.
 -> l
-T 175 mode=game_loop           Voronwe Stareyed(elf) F1@(12,11) HP 37/38 MP 0/0 Hu 56 $ 593 room=.
+T 133 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 79 $ 613 room=.
+-> s
+T 134 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 37/38 MP 0/0 Hu 78 $ 613 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 135 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 37/38 MP 0/0 Hu 78 $ 613 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 136 mode=combat_victory      Voronwe Stareyed(elf) F1@(10, 8) HP 37/38 MP 0/0 Hu 78 $ 616 room=.
+-> back
+T 137 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 8) HP 37/38 MP 0/0 Hu 78 $ 616 room=.
 -> e
-T 176 mode=game_loop           Voronwe Stareyed(elf) F1@(13,11) HP 37/38 MP 0/0 Hu 55 $ 593 room=.
+T 138 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 8) HP 37/38 MP 0/0 Hu 77 $ 616 room=.
+-> e
+T 139 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 8) HP 37/38 MP 0/0 Hu 76 $ 616 room=.
 -> l
-T 177 mode=game_loop           Voronwe Stareyed(elf) F1@(13,11) HP 37/38 MP 0/0 Hu 55 $ 593 room=.
+T 140 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 8) HP 37/38 MP 0/0 Hu 76 $ 616 room=.
 -> e
-T 178 mode=altar_mode          Voronwe Stareyed(elf) F1@(14,11) HP 37/38 MP 0/0 Hu 54 $ 593 room=A
+T 141 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 38/38 MP 0/0 Hu 75 $ 616 room=.
+-> l
+T 142 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 38/38 MP 0/0 Hu 75 $ 616 room=.
+-> s
+T 143 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 38/38 MP 0/0 Hu 74 $ 616 room=.
+-> l
+T 144 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 38/38 MP 0/0 Hu 74 $ 616 room=.
+-> e
+T 145 mode=dungeon_mode        Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 73 $ 616 room=N
+-> u
+T 146 mode=dungeon_unlocked_mode Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 73 $ 616 room=N
+-> r
+T 147 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 73 $ 801 room=N
+-> l
+T 148 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 73 $ 801 room=N
+-> e
+T 149 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 38/38 MP 0/0 Hu 72 $ 801 room=.
+-> w
+T 150 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 71 $ 801 room=N
+-> s
+T 151 mode=game_loop           Voronwe Stareyed(elf) F1@(14,10) HP 38/38 MP 0/0 Hu 70 $ 801 room=.
+-> s
+T 152 mode=altar_mode          Voronwe Stareyed(elf) F1@(14,11) HP 38/38 MP 0/0 Hu 69 $ 801 room=A
 -> pray
-T 179 mode=game_loop           Voronwe Stareyed(elf) F1@(14,11) HP 37/38 MP 0/0 Hu 54 $ 593 room=.
+T 153 mode=game_loop           Voronwe Stareyed(elf) F1@(14,11) HP 38/38 MP 0/0 Hu 69 $ 801 room=.
+-> w
+T 154 mode=game_loop           Voronwe Stareyed(elf) F1@(13,11) HP 38/38 MP 0/0 Hu 68 $ 801 room=.
+-> w
+T 155 mode=chest_mode          Voronwe Stareyed(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 67 $ 801 room=C
+-> o
+T 156 mode=game_loop           Voronwe Stareyed(elf) F1@(12,11) HP 38/38 MP 0/0 Hu 67 $ 801 room=.
+-> s
+T 157 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,12) HP 38/38 MP 0/0 Hu 66 $ 801 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 158 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,12) HP 38/38 MP 0/0 Hu 66 $ 801 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 159 mode=combat_victory      Voronwe Stareyed(elf) F1@(12,12) HP 37/38 MP 0/0 Hu 66 $ 807 room=.
+-> back
+T 160 mode=game_loop           Voronwe Stareyed(elf) F1@(12,12) HP 37/38 MP 0/0 Hu 66 $ 807 room=.
 -> l
-T 180 mode=game_loop           Voronwe Stareyed(elf) F1@(14,11) HP 37/38 MP 0/0 Hu 54 $ 593 room=.
+T 161 mode=game_loop           Voronwe Stareyed(elf) F1@(12,12) HP 37/38 MP 0/0 Hu 66 $ 807 room=.
+-> w
+T 162 mode=chest_mode          Voronwe Stareyed(elf) F1@(11,12) HP 37/38 MP 0/0 Hu 65 $ 807 room=C
+-> o
+T 163 mode=game_loop           Voronwe Stareyed(elf) F1@(11,12) HP 37/38 MP 0/0 Hu 65 $ 837 room=.
+-> l
+T 164 mode=game_loop           Voronwe Stareyed(elf) F1@(11,12) HP 37/38 MP 0/0 Hu 65 $ 837 room=.
+-> s
+T 165 mode=game_loop           Voronwe Stareyed(elf) F1@(11,13) HP 37/38 MP 0/0 Hu 64 $ 837 room=.
+-> e
+T 166 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,13) HP 37/38 MP 0/0 Hu 63 $ 837 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T 167 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,13) HP 36/38 MP 0/0 Hu 63 $ 837 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 168 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,13) HP 36/38 MP 0/0 Hu 63 $ 837 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 169 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,13) HP 36/38 MP 0/0 Hu 63 $ 837 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 170 mode=combat_victory      Voronwe Stareyed(elf) F1@(12,13) HP 36/38 MP 0/0 Hu 63 $ 839 room=.
+-> back
+T 171 mode=game_loop           Voronwe Stareyed(elf) F1@(12,13) HP 36/38 MP 0/0 Hu 63 $ 839 room=.
+-> e
+T 172 mode=game_loop           Voronwe Stareyed(elf) F1@(13,13) HP 37/38 MP 0/0 Hu 62 $ 839 room=.
 -> n
-T 181 mode=game_loop           Voronwe Stareyed(elf) F1@(14,10) HP 37/38 MP 0/0 Hu 53 $ 593 room=.
+T 173 mode=game_loop           Voronwe Stareyed(elf) F1@(13,12) HP 37/38 MP 0/0 Hu 61 $ 839 room=.
 -> n
-T 182 mode=dungeon_mode        Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 52 $ 593 room=N
+T 174 mode=game_loop           Voronwe Stareyed(elf) F1@(13,11) HP 37/38 MP 0/0 Hu 60 $ 839 room=.
+-> e
+T 175 mode=game_loop           Voronwe Stareyed(elf) F1@(14,11) HP 37/38 MP 0/0 Hu 59 $ 839 room=.
+-> n
+T 176 mode=game_loop           Voronwe Stareyed(elf) F1@(14,10) HP 37/38 MP 0/0 Hu 58 $ 839 room=.
+-> n
+T 177 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 57 $ 839 room=N
+-> w
+T 178 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 37/38 MP 0/0 Hu 56 $ 839 room=.
+-> n
+T 179 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 37/38 MP 0/0 Hu 55 $ 839 room=.
+-> n
+T 180 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 7) HP 37/38 MP 0/0 Hu 54 $ 839 room=.
+-> n
+T 181 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 6) HP 37/38 MP 0/0 Hu 53 $ 839 room=.
+-> i
+T 182 mode=inventory           Voronwe Stareyed(elf) F1@(13, 6) HP 37/38 MP 0/0 Hu 53 $ 839 room=.
+-> eat1
+T 183 mode=inventory           Voronwe Stareyed(elf) F1@(13, 6) HP 37/38 MP 0/0 Hu 58 $ 839 room=.
+-> x
+T 184 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 6) HP 37/38 MP 0/0 Hu 58 $ 839 room=.
+-> w
+T 185 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 6) HP 37/38 MP 0/0 Hu 57 $ 839 room=.
+-> n
+T 186 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 5) HP 37/38 MP 0/0 Hu 56 $ 839 room=.
+-> n
+T 187 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 4) HP 37/38 MP 0/0 Hu 55 $ 839 room=.
+-> w
+T 188 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 4) HP 37/38 MP 0/0 Hu 54 $ 839 room=.
+-> w
+T 189 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 4) HP 37/38 MP 0/0 Hu 53 $ 839 room=.
+-> n
+T 190 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 3) HP 37/38 MP 0/0 Hu 52 $ 839 room=.
+-> w
+T 191 mode=dungeon_mode        Voronwe Stareyed(elf) F1@( 9, 3) HP 37/38 MP 0/0 Hu 51 $ 839 room=N
 -> u
-T 183 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 52 $ 593 room=N
--> e
-T 184 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 37/38 MP 0/0 Hu 51 $ 593 room=.
--> w
-T 185 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 50 $ 593 room=N
--> n
-T 186 mode=combat_mode         Voronwe Stareyed(elf) F1@(14, 8) HP 37/38 MP 0/0 Hu 49 $ 593 room=M vs Skeleton(L0 HP25/25)
--> a
-T 187 mode=combat_mode         Voronwe Stareyed(elf) F1@(14, 8) HP 36/38 MP 0/0 Hu 49 $ 593 room=M vs Skeleton(L0 HP6/25)
--> a
-T 188 mode=combat_victory      Voronwe Stareyed(elf) F1@(14, 8) HP 36/38 MP 0/0 Hu 49 $ 595 room=.
--> back
-T 189 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 8) HP 36/38 MP 0/0 Hu 49 $ 595 room=.
--> w
-T 190 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 36/38 MP 0/0 Hu 48 $ 595 room=.
--> s
-T 191 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 36/38 MP 0/0 Hu 47 $ 595 room=.
--> w
-T 192 mode=combat_mode         Voronwe Stareyed(elf) F1@(12, 9) HP 36/38 MP 0/0 Hu 46 $ 595 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T 193 mode=combat_mode         Voronwe Stareyed(elf) F1@(12, 9) HP 36/38 MP 0/0 Hu 46 $ 595 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T 194 mode=combat_victory      Voronwe Stareyed(elf) F1@(12, 9) HP 36/38 MP 0/0 Hu 46 $ 596 room=.
--> back
-T 195 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 36/38 MP 0/0 Hu 46 $ 596 room=.
--> i
-T 196 mode=inventory           Voronwe Stareyed(elf) F1@(12, 9) HP 36/38 MP 0/0 Hu 46 $ 596 room=.
--> u3
-T 197 mode=inventory           Voronwe Stareyed(elf) F1@(12, 9) HP 38/38 MP 0/0 Hu 46 $ 596 room=.
--> x
-T 198 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 38/38 MP 0/0 Hu 46 $ 596 room=.
--> i
-T 199 mode=inventory           Voronwe Stareyed(elf) F1@(12, 9) HP 38/38 MP 0/0 Hu 46 $ 596 room=.
--> eat1
-T 200 mode=inventory           Voronwe Stareyed(elf) F1@(12, 9) HP 38/38 MP 0/0 Hu 52 $ 596 room=.
--> x
-T 201 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 38/38 MP 0/0 Hu 52 $ 596 room=.
--> w
-T 202 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 51 $ 596 room=.
--> w
-T 203 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 50 $ 596 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 204 mode=combat_victory      Voronwe Stareyed(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 50 $ 605 room=.
--> back
-T 205 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 50 $ 605 room=.
--> s
-T 206 mode=game_loop           Voronwe Stareyed(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 49 $ 605 room=.
--> l
-T 207 mode=game_loop           Voronwe Stareyed(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 49 $ 605 room=.
--> s
-T 208 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,11) HP 38/38 MP 0/0 Hu 48 $ 605 room=M vs Kobold(L0 HP8/8)
--> a
-T 209 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,11) HP 37/38 MP 0/0 Hu 48 $ 605 room=M vs Kobold(L0 HP8/8)
--> a
-T 210 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,11) HP 37/38 MP 0/0 Hu 48 $ 605 room=M vs Kobold(L0 HP8/8)
--> a
-T 211 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,11) HP 36/38 MP 0/0 Hu 48 $ 605 room=M vs Kobold(L0 HP8/8)
--> a
-T 212 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,11) HP 35/38 MP 0/0 Hu 48 $ 605 room=M vs Kobold(L0 HP5/8)
--> f
-T 213 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,11) HP 33/38 MP 0/0 Hu 48 $ 605 room=M vs Kobold(L0 HP5/8)
--> a
-T 214 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,11) HP 32/38 MP 0/0 Hu 48 $ 605 room=M vs Kobold(L0 HP2/8)
--> f
-T 215 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,11) HP 31/38 MP 0/0 Hu 48 $ 605 room=M vs Kobold(L0 HP2/8)
--> a
-T 216 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,11) HP 30/38 MP 0/0 Hu 48 $ 605 room=M vs Kobold(L0 HP2/8)
--> a
-T 217 mode=combat_victory      Voronwe Stareyed(elf) F1@(10,11) HP 29/38 MP 0/0 Hu 48 $ 613 room=.
--> back
-T 218 mode=game_loop           Voronwe Stareyed(elf) F1@(10,11) HP 29/38 MP 0/0 Hu 48 $ 613 room=.
--> i
-T 219 mode=inventory           Voronwe Stareyed(elf) F1@(10,11) HP 29/38 MP 0/0 Hu 48 $ 613 room=.
--> u3
-T 220 mode=inventory           Voronwe Stareyed(elf) F1@(10,11) HP 38/38 MP 0/0 Hu 48 $ 613 room=.
--> x
-T 221 mode=game_loop           Voronwe Stareyed(elf) F1@(10,11) HP 38/38 MP 0/0 Hu 48 $ 613 room=.
--> l
-T 222 mode=game_loop           Voronwe Stareyed(elf) F1@(10,11) HP 38/38 MP 0/0 Hu 48 $ 613 room=.
--> w
-T 223 mode=game_loop           Voronwe Stareyed(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 47 $ 613 room=.
--> l
-T 224 mode=game_loop           Voronwe Stareyed(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 47 $ 613 room=.
--> w
-T 225 mode=game_loop           Voronwe Stareyed(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 46 $ 613 room=.
--> l
-T 226 mode=game_loop           Voronwe Stareyed(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 46 $ 613 room=.
--> n
-T 227 mode=game_loop           Voronwe Stareyed(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 45 $ 613 room=.
--> l
-T 228 mode=game_loop           Voronwe Stareyed(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 45 $ 613 room=.
--> n
-T 229 mode=game_loop           Voronwe Stareyed(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 44 $ 613 room=.
--> l
-T 230 mode=game_loop           Voronwe Stareyed(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 44 $ 613 room=.
--> l
-T 231 mode=game_loop           Voronwe Stareyed(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 44 $ 613 room=.
--> w
-T 232 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu 43 $ 613 room=.
--> l
-T 233 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu 43 $ 613 room=.
--> n
-T 234 mode=garden_mode         Voronwe Stareyed(elf) F1@( 7, 8) HP 38/38 MP 0/0 Hu 42 $ 613 room=G
--> h
-T 235 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 8) HP 38/38 MP 0/0 Hu 42 $ 613 room=.
--> s
-T 236 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 9) HP 38/38 MP 0/0 Hu 41 $ 613 room=.
--> s
-T 237 mode=game_loop           Voronwe Stareyed(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 40 $ 613 room=.
--> e
-T 238 mode=game_loop           Voronwe Stareyed(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 39 $ 613 room=.
--> s
-T 239 mode=game_loop           Voronwe Stareyed(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 38 $ 613 room=.
--> e
-T 240 mode=game_loop           Voronwe Stareyed(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 37 $ 613 room=.
--> l
-T 241 mode=game_loop           Voronwe Stareyed(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 37 $ 613 room=.
--> e
-T 242 mode=game_loop           Voronwe Stareyed(elf) F1@(10,11) HP 38/38 MP 0/0 Hu 36 $ 613 room=.
--> n
-T 243 mode=game_loop           Voronwe Stareyed(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 35 $ 613 room=.
--> n
-T 244 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 34 $ 613 room=.
--> e
-T 245 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 33 $ 613 room=.
--> e
-T 246 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 38/38 MP 0/0 Hu 32 $ 613 room=.
--> e
-T 247 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 38/38 MP 0/0 Hu 31 $ 613 room=.
--> e
-T 248 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 30 $ 613 room=N
--> e
-T 249 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 38/38 MP 0/0 Hu 29 $ 613 room=.
--> w
-T 250 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 28 $ 613 room=N
--> l
-T 251 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 28 $ 613 room=N
--> n
-T 252 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 8) HP 38/38 MP 0/0 Hu 27 $ 613 room=.
--> w
-T 253 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 38/38 MP 0/0 Hu 26 $ 613 room=.
--> s
-T 254 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 38/38 MP 0/0 Hu 25 $ 613 room=.
--> w
-T 255 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 38/38 MP 0/0 Hu 24 $ 613 room=.
--> n
-T 256 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 8) HP 38/38 MP 0/0 Hu 23 $ 613 room=.
--> w
-T 257 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 8) HP 38/38 MP 0/0 Hu 22 $ 613 room=.
--> s
-T 258 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu 21 $ 613 room=.
--> s
-T 259 mode=game_loop           Voronwe Stareyed(elf) F1@(11,10) HP 38/38 MP 0/0 Hu 20 $ 613 room=.
--> w
-T 260 mode=game_loop           Voronwe Stareyed(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 19 $ 613 room=.
--> l
-T 261 mode=game_loop           Voronwe Stareyed(elf) F1@(10,10) HP 38/38 MP 0/0 Hu 19 $ 613 room=.
--> n
-T 262 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 9) HP 38/38 MP 0/0 Hu 18 $ 613 room=.
--> n
-T 263 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP22/22)
--> a
-T 264 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 37/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP19/22)
--> a
-T 265 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 37/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP16/22)
--> a
-T 266 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 36/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP16/22)
--> a
-T 267 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 36/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP13/22)
--> a
-T 268 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 35/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP10/22)
--> f
-T 269 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 32/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP10/22)
--> a
-T 270 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 29/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP10/22)
--> a
-T 271 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 26/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP7/22)
--> a
-T 272 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 26/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP4/22)
--> a
-T 273 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 25/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP4/22)
--> a
-T 274 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 8) HP 24/38 MP 0/0 Hu 17 $ 613 room=M vs Giant Rat(L0 HP1/22)
--> a
-T 275 mode=combat_victory      Voronwe Stareyed(elf) F1@(10, 8) HP 24/38 MP 0/0 Hu 17 $ 620 room=.
--> back
-T 276 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 8) HP 24/38 MP 0/0 Hu 17 $ 620 room=.
--> i
-T 277 mode=inventory           Voronwe Stareyed(elf) F1@(10, 8) HP 24/38 MP 0/0 Hu 17 $ 620 room=.
--> u3
-T 278 mode=inventory           Voronwe Stareyed(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 17 $ 620 room=.
--> x
-T 279 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 17 $ 620 room=.
--> n
-T 280 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 7) HP 38/38 MP 0/0 Hu 16 $ 620 room=M vs Bat(L0 HP12/12)
--> a
-T 281 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 16 $ 620 room=M vs Bat(L0 HP8/12)
--> a
-T 282 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 16 $ 620 room=M vs Bat(L0 HP4/12)
--> a
-T 283 mode=combat_victory      Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 16 $ 622 room=.
--> back
-T 284 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 16 $ 622 room=.
--> i
-T 285 mode=inventory           Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 16 $ 622 room=.
--> eat1
-T 286 mode=inventory           Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 21 $ 622 room=.
--> x
-T 287 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 7) HP 37/38 MP 0/0 Hu 21 $ 622 room=.
--> w
-T 288 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 37/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP18/18)
--> a
-T 289 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 36/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP18/18)
--> a
-T 290 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 35/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP16/18)
--> a
-T 291 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 34/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP16/18)
--> a
-T 292 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 33/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP16/18)
--> a
-T 293 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 32/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP16/18)
--> a
-T 294 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 31/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP14/18)
--> a
-T 295 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 31/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP14/18)
--> a
-T 296 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 30/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP12/18)
--> a
-T 297 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 29/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP10/18)
--> a
-T 298 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 29/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP8/18)
--> a
-T 299 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 29/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP6/18)
--> a
-T 300 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 29/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP6/18)
--> a
-T 301 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 28/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP4/18)
--> a
-T 302 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 28/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP2/18)
--> f
-T 303 mode=combat_mode         Voronwe Stareyed(elf) F1@( 9, 7) HP 27/38 MP 0/0 Hu 20 $ 622 room=M vs Rust Monster(L0 HP2/18)
--> a
-T 304 mode=combat_victory      Voronwe Stareyed(elf) F1@( 9, 7) HP 27/38 MP 0/0 Hu 20 $ 632 room=.
--> back
-T 305 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 7) HP 27/38 MP 0/0 Hu 20 $ 632 room=.
--> i
-T 306 mode=inventory           Voronwe Stareyed(elf) F1@( 9, 7) HP 27/38 MP 0/0 Hu 20 $ 632 room=.
--> u3
-T 307 mode=inventory           Voronwe Stareyed(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 20 $ 632 room=.
--> x
-T 308 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 20 $ 632 room=.
--> i
-T 309 mode=inventory           Voronwe Stareyed(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 20 $ 632 room=.
--> eat1
-T 310 mode=inventory           Voronwe Stareyed(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 26 $ 632 room=.
--> x
-T 311 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 26 $ 632 room=.
--> w
-T 312 mode=game_loop           Voronwe Stareyed(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 25 $ 632 room=.
--> w
-T 313 mode=combat_mode         Voronwe Stareyed(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 24 $ 632 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T 314 mode=combat_mode         Voronwe Stareyed(elf) F1@( 7, 7) HP 37/38 MP 0/0 Hu 24 $ 632 room=M vs Giant Centipede(L0 HP11/15)
--> a
-T 315 mode=combat_mode         Voronwe Stareyed(elf) F1@( 7, 7) HP 33/38 MP 0/0 Hu 24 $ 632 room=M vs Giant Centipede(L0 HP11/15)
--> a
-T 316 mode=combat_mode         Voronwe Stareyed(elf) F1@( 7, 7) HP 29/38 MP 0/0 Hu 24 $ 632 room=M vs Giant Centipede(L0 HP11/15)
--> a
-T 317 mode=combat_mode         Voronwe Stareyed(elf) F1@( 7, 7) HP 26/38 MP 0/0 Hu 24 $ 632 room=M vs Giant Centipede(L0 HP7/15)
--> a
-T 318 mode=combat_mode         Voronwe Stareyed(elf) F1@( 7, 7) HP 25/38 MP 0/0 Hu 24 $ 632 room=M vs Giant Centipede(L0 HP3/15)
--> a
-T 319 mode=combat_victory      Voronwe Stareyed(elf) F1@( 7, 7) HP 25/38 MP 0/0 Hu 24 $ 642 room=.
--> back
-T 320 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 7) HP 25/38 MP 0/0 Hu 24 $ 642 room=.
--> i
-T 321 mode=inventory           Voronwe Stareyed(elf) F1@( 7, 7) HP 25/38 MP 0/0 Hu 24 $ 642 room=.
--> u3
-T 322 mode=inventory           Voronwe Stareyed(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 24 $ 642 room=.
--> x
-T 323 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 24 $ 642 room=.
--> i
-T 324 mode=inventory           Voronwe Stareyed(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 24 $ 642 room=.
--> eat1
-T 325 mode=inventory           Voronwe Stareyed(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 29 $ 642 room=.
--> x
-T 326 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 29 $ 642 room=.
--> s
-T 327 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 8) HP 38/38 MP 0/0 Hu 28 $ 642 room=.
--> e
-T 328 mode=combat_mode         Voronwe Stareyed(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 27 $ 642 room=M vs Rust Monster(L0 HP18/18)
--> a
-T 329 mode=combat_mode         Voronwe Stareyed(elf) F1@( 8, 8) HP 37/38 MP 0/0 Hu 27 $ 642 room=M vs Rust Monster(L0 HP18/18)
--> f
-T 330 mode=flee_direction_mode Voronwe Stareyed(elf) F1@( 8, 8) HP 37/38 MP 0/0 Hu 27 $ 642 room=M
--> s
-T 331 mode=game_loop           Voronwe Stareyed(elf) F1@( 8, 9) HP 37/38 MP 0/0 Hu 27 $ 642 room=.
--> s
-T 332 mode=game_loop           Voronwe Stareyed(elf) F1@( 8,10) HP 37/38 MP 0/0 Hu 26 $ 642 room=.
--> s
-T 333 mode=game_loop           Voronwe Stareyed(elf) F1@( 8,11) HP 37/38 MP 0/0 Hu 25 $ 642 room=.
--> e
-T 334 mode=game_loop           Voronwe Stareyed(elf) F1@( 9,11) HP 37/38 MP 0/0 Hu 24 $ 642 room=.
--> e
-T 335 mode=game_loop           Voronwe Stareyed(elf) F1@(10,11) HP 37/38 MP 0/0 Hu 23 $ 642 room=.
--> n
-T 336 mode=game_loop           Voronwe Stareyed(elf) F1@(10,10) HP 37/38 MP 0/0 Hu 22 $ 642 room=.
--> n
-T 337 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 9) HP 37/38 MP 0/0 Hu 21 $ 642 room=.
--> e
-T 338 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 37/38 MP 0/0 Hu 20 $ 642 room=.
--> e
-T 339 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu 19 $ 642 room=.
--> e
-T 340 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 37/38 MP 0/0 Hu 18 $ 642 room=.
--> l
-T 341 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 37/38 MP 0/0 Hu 18 $ 642 room=.
--> e
-T 342 mode=dungeon_mode        Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 17 $ 642 room=N
--> u
-T 343 mode=dungeon_unlocked_mode Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 17 $ 642 room=N
+T 192 mode=dungeon_unlocked_mode Voronwe Stareyed(elf) F1@( 9, 3) HP 37/38 MP 0/0 Hu 51 $ 839 room=N
 -> r
-T 344 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 17 $ 642 room=N
--> i
-T 345 mode=inventory           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 17 $ 642 room=N
--> e2
-T 346 mode=inventory           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 17 $ 642 room=N
--> x
-T 347 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 17 $ 642 room=N
--> e
-T 348 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 37/38 MP 0/0 Hu 16 $ 642 room=.
--> w
-T 349 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 15 $ 642 room=N
+T 193 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 3) HP 37/38 MP 0/0 Hu 51 $ 1126 room=N
 -> s
-T 350 mode=game_loop           Voronwe Stareyed(elf) F1@(14,10) HP 37/38 MP 0/0 Hu 14 $ 642 room=.
--> l
-T 351 mode=game_loop           Voronwe Stareyed(elf) F1@(14,10) HP 37/38 MP 0/0 Hu 14 $ 642 room=.
--> s
-T 352 mode=game_loop           Voronwe Stareyed(elf) F1@(14,11) HP 37/38 MP 0/0 Hu 13 $ 642 room=.
+T 194 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 4) HP 37/38 MP 0/0 Hu 50 $ 1126 room=.
 -> w
-T 353 mode=game_loop           Voronwe Stareyed(elf) F1@(13,11) HP 37/38 MP 0/0 Hu 12 $ 642 room=.
--> s
-T 354 mode=game_loop           Voronwe Stareyed(elf) F1@(13,12) HP 37/38 MP 0/0 Hu 11 $ 642 room=.
+T 195 mode=game_loop           Voronwe Stareyed(elf) F1@( 8, 4) HP 37/38 MP 0/0 Hu 49 $ 1126 room=.
 -> w
-T 355 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,12) HP 37/38 MP 0/0 Hu 10 $ 642 room=M vs Slime Mold(L0 HP15/15)
--> f
-T 356 mode=flee_direction_mode Voronwe Stareyed(elf) F1@(12,12) HP 37/38 MP 0/0 Hu 10 $ 642 room=M
--> n
-T 357 mode=game_loop           Voronwe Stareyed(elf) F1@(12,11) HP 37/38 MP 0/0 Hu 10 $ 642 room=.
--> n
-T 358 mode=game_loop           Voronwe Stareyed(elf) F1@(12,10) HP 37/38 MP 0/0 Hu  9 $ 642 room=.
--> n
-T 359 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu  8 $ 642 room=.
--> e
-T 360 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 37/38 MP 0/0 Hu  7 $ 642 room=.
--> l
-T 361 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 37/38 MP 0/0 Hu  7 $ 642 room=.
--> e
-T 362 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu  6 $ 642 room=N
--> e
-T 363 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 37/38 MP 0/0 Hu  5 $ 642 room=.
+T 196 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 4) HP 37/38 MP 0/0 Hu 48 $ 1126 room=.
 -> w
-T 364 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu  4 $ 642 room=N
+T 197 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 4) HP 37/38 MP 0/0 Hu 47 $ 1126 room=.
 -> s
-T 365 mode=game_loop           Voronwe Stareyed(elf) F1@(14,10) HP 37/38 MP 0/0 Hu  3 $ 642 room=.
--> s
-T 366 mode=game_loop           Voronwe Stareyed(elf) F1@(14,11) HP 37/38 MP 0/0 Hu  2 $ 642 room=.
--> w
-T 367 mode=game_loop           Voronwe Stareyed(elf) F1@(13,11) HP 37/38 MP 0/0 Hu  1 $ 642 room=.
--> s
-T 368 mode=game_loop           Voronwe Stareyed(elf) F1@(13,12) HP 35/38 MP 0/0 Hu  0 $ 642 room=.
--> e
-T 369 mode=game_loop           Voronwe Stareyed(elf) F1@(14,12) HP 33/38 MP 0/0 Hu  0 $ 642 room=.
--> s
-T 370 mode=game_loop           Voronwe Stareyed(elf) F1@(14,13) HP 31/38 MP 0/0 Hu  0 $ 642 room=.
--> l
-T 371 mode=game_loop           Voronwe Stareyed(elf) F1@(14,13) HP 31/38 MP 0/0 Hu  0 $ 642 room=.
--> w
-T 372 mode=game_loop           Voronwe Stareyed(elf) F1@(13,13) HP 29/38 MP 0/0 Hu  0 $ 642 room=.
--> w
-T 373 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,13) HP 27/38 MP 0/0 Hu  0 $ 642 room=M vs Crawling Claw(L0 HP5/5)
+T 198 mode=combat_mode         Voronwe Stareyed(elf) F1@( 6, 5) HP 37/38 MP 0/0 Hu 46 $ 1126 room=M vs Giant Centipede(L0 HP15/15)
 -> a
-T 374 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,13) HP 27/38 MP 0/0 Hu  0 $ 642 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T 375 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,13) HP 27/38 MP 0/0 Hu  0 $ 642 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T 376 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,13) HP 27/38 MP 0/0 Hu  0 $ 642 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T 377 mode=combat_mode         Voronwe Stareyed(elf) F1@(12,13) HP 26/38 MP 0/0 Hu  0 $ 642 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T 378 mode=combat_victory      Voronwe Stareyed(elf) F1@(12,13) HP 26/38 MP 0/0 Hu  0 $ 647 room=.
+T 199 mode=combat_victory      Voronwe Stareyed(elf) F1@( 6, 5) HP 37/38 MP 0/0 Hu 46 $ 1130 room=.
 -> back
-T 379 mode=game_loop           Voronwe Stareyed(elf) F1@(12,13) HP 26/38 MP 0/0 Hu  0 $ 647 room=.
--> w
-T 380 mode=game_loop           Voronwe Stareyed(elf) F1@(11,13) HP 24/38 MP 0/0 Hu  0 $ 647 room=.
--> l
-T 381 mode=game_loop           Voronwe Stareyed(elf) F1@(11,13) HP 24/38 MP 0/0 Hu  0 $ 647 room=.
--> w
-T 382 mode=game_loop           Voronwe Stareyed(elf) F1@(10,13) HP 22/38 MP 0/0 Hu  0 $ 647 room=.
+T 200 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 5) HP 37/38 MP 0/0 Hu 46 $ 1130 room=.
+-> i
+T 201 mode=inventory           Voronwe Stareyed(elf) F1@( 6, 5) HP 37/38 MP 0/0 Hu 46 $ 1130 room=.
+-> eat1
+T 202 mode=inventory           Voronwe Stareyed(elf) F1@( 6, 5) HP 37/38 MP 0/0 Hu 51 $ 1130 room=.
+-> x
+T 203 mode=game_loop           Voronwe Stareyed(elf) F1@( 6, 5) HP 37/38 MP 0/0 Hu 51 $ 1130 room=.
+-> e
+T 204 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 5) HP 37/38 MP 0/0 Hu 50 $ 1130 room=.
 -> n
-T 383 mode=combat_mode         Voronwe Stareyed(elf) F1@(10,12) HP 20/38 MP 0/0 Hu  0 $ 647 room=M vs Zombie(L0 HP35/35)
+T 205 mode=game_loop           Voronwe Stareyed(elf) F1@( 7, 4) HP 37/38 MP 0/0 Hu 49 $ 1130 room=.
+-> e
+T 206 mode=game_loop           Voronwe Stareyed(elf) F1@( 8, 4) HP 37/38 MP 0/0 Hu 48 $ 1130 room=.
+-> e
+T 207 mode=game_loop           Voronwe Stareyed(elf) F1@( 9, 4) HP 37/38 MP 0/0 Hu 47 $ 1130 room=.
+-> e
+T 208 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 4) HP 37/38 MP 0/0 Hu 46 $ 1130 room=.
+-> e
+T 209 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 4) HP 37/38 MP 0/0 Hu 45 $ 1130 room=.
+-> e
+T 210 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 4) HP 37/38 MP 0/0 Hu 44 $ 1130 room=.
+-> l
+T 211 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 4) HP 37/38 MP 0/0 Hu 44 $ 1130 room=.
+-> s
+T 212 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 5) HP 37/38 MP 0/0 Hu 43 $ 1130 room=.
+-> s
+T 213 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 6) HP 37/38 MP 0/0 Hu 42 $ 1130 room=.
+-> s
+T 214 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 7) HP 37/38 MP 0/0 Hu 41 $ 1130 room=.
+-> s
+T 215 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 8) HP 37/38 MP 0/0 Hu 40 $ 1130 room=.
+-> e
+T 216 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 37/38 MP 0/0 Hu 39 $ 1130 room=.
+-> s
+T 217 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 37/38 MP 0/0 Hu 38 $ 1130 room=.
+-> e
+T 218 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 37 $ 1130 room=N
+-> e
+T 219 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 37/38 MP 0/0 Hu 36 $ 1130 room=.
+-> w
+T 220 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 35 $ 1130 room=N
+-> l
+T 221 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 35 $ 1130 room=N
+-> s
+T 222 mode=game_loop           Voronwe Stareyed(elf) F1@(14,10) HP 37/38 MP 0/0 Hu 34 $ 1130 room=.
+-> s
+T 223 mode=game_loop           Voronwe Stareyed(elf) F1@(14,11) HP 37/38 MP 0/0 Hu 33 $ 1130 room=.
+-> s
+T 224 mode=game_loop           Voronwe Stareyed(elf) F1@(14,12) HP 37/38 MP 0/0 Hu 32 $ 1130 room=.
+-> w
+T 225 mode=game_loop           Voronwe Stareyed(elf) F1@(13,12) HP 37/38 MP 0/0 Hu 31 $ 1130 room=.
+-> n
+T 226 mode=game_loop           Voronwe Stareyed(elf) F1@(13,11) HP 37/38 MP 0/0 Hu 30 $ 1130 room=.
+-> w
+T 227 mode=game_loop           Voronwe Stareyed(elf) F1@(12,11) HP 37/38 MP 0/0 Hu 29 $ 1130 room=.
+-> n
+T 228 mode=game_loop           Voronwe Stareyed(elf) F1@(12,10) HP 37/38 MP 0/0 Hu 28 $ 1130 room=.
+-> w
+T 229 mode=combat_mode         Voronwe Stareyed(elf) F1@(11,10) HP 37/38 MP 0/0 Hu 27 $ 1130 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 230 mode=combat_mode         Voronwe Stareyed(elf) F1@(11,10) HP 36/38 MP 0/0 Hu 27 $ 1130 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 231 mode=combat_victory      Voronwe Stareyed(elf) F1@(11,10) HP 36/38 MP 0/0 Hu 27 $ 1133 room=.
+-> back
+T 232 mode=game_loop           Voronwe Stareyed(elf) F1@(11,10) HP 36/38 MP 0/0 Hu 27 $ 1133 room=.
+-> n
+T 233 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 36/38 MP 0/0 Hu 26 $ 1133 room=.
+-> n
+T 234 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 8) HP 36/38 MP 0/0 Hu 25 $ 1133 room=.
+-> e
+T 235 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 8) HP 36/38 MP 0/0 Hu 24 $ 1133 room=.
+-> e
+T 236 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 36/38 MP 0/0 Hu 23 $ 1133 room=.
+-> s
+T 237 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 36/38 MP 0/0 Hu 22 $ 1133 room=.
+-> e
+T 238 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 36/38 MP 0/0 Hu 21 $ 1133 room=N
+-> i
+T 239 mode=inventory           Voronwe Stareyed(elf) F1@(14, 9) HP 36/38 MP 0/0 Hu 21 $ 1133 room=N
+-> u3
+T 240 mode=inventory           Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 21 $ 1133 room=N
+-> x
+T 241 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 21 $ 1133 room=N
+-> e
+T 242 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 38/38 MP 0/0 Hu 20 $ 1133 room=.
+-> w
+T 243 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 38/38 MP 0/0 Hu 19 $ 1133 room=N
+-> n
+T 244 mode=combat_mode         Voronwe Stareyed(elf) F1@(14, 8) HP 38/38 MP 0/0 Hu 18 $ 1133 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 245 mode=combat_victory      Voronwe Stareyed(elf) F1@(14, 8) HP 38/38 MP 0/0 Hu 18 $ 1141 room=.
+-> back
+T 246 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 8) HP 38/38 MP 0/0 Hu 18 $ 1141 room=.
+-> w
+T 247 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 38/38 MP 0/0 Hu 17 $ 1141 room=.
+-> s
+T 248 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 38/38 MP 0/0 Hu 16 $ 1141 room=.
+-> w
+T 249 mode=combat_mode         Voronwe Stareyed(elf) F1@(12, 9) HP 38/38 MP 0/0 Hu 15 $ 1141 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 250 mode=combat_mode         Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu 15 $ 1141 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 251 mode=combat_victory      Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu 15 $ 1148 room=.
+-> back
+T 252 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu 15 $ 1148 room=.
+-> i
+T 253 mode=inventory           Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu 15 $ 1148 room=.
+-> eat1
+T 254 mode=inventory           Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu 21 $ 1148 room=.
+-> x
+T 255 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu 21 $ 1148 room=.
+-> n
+T 256 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 8) HP 37/38 MP 0/0 Hu 20 $ 1148 room=.
+-> n
+T 257 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 7) HP 37/38 MP 0/0 Hu 19 $ 1148 room=.
+-> w
+T 258 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 7) HP 37/38 MP 0/0 Hu 18 $ 1148 room=.
+-> s
+T 259 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 8) HP 37/38 MP 0/0 Hu 17 $ 1148 room=.
+-> s
+T 260 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 37/38 MP 0/0 Hu 16 $ 1148 room=.
+-> l
+T 261 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 37/38 MP 0/0 Hu 16 $ 1148 room=.
+-> e
+T 262 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu 15 $ 1148 room=.
+-> e
+T 263 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 37/38 MP 0/0 Hu 14 $ 1148 room=.
+-> e
+T 264 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 13 $ 1148 room=N
+-> e
+T 265 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 37/38 MP 0/0 Hu 12 $ 1148 room=.
+-> w
+T 266 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu 11 $ 1148 room=N
+-> n
+T 267 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 8) HP 37/38 MP 0/0 Hu 10 $ 1148 room=.
+-> w
+T 268 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 37/38 MP 0/0 Hu  9 $ 1148 room=.
+-> s
+T 269 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 37/38 MP 0/0 Hu  8 $ 1148 room=.
+-> w
+T 270 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu  7 $ 1148 room=.
+-> l
+T 271 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 37/38 MP 0/0 Hu  7 $ 1148 room=.
+-> s
+T 272 mode=game_loop           Voronwe Stareyed(elf) F1@(12,10) HP 37/38 MP 0/0 Hu  6 $ 1148 room=.
+-> s
+T 273 mode=game_loop           Voronwe Stareyed(elf) F1@(12,11) HP 37/38 MP 0/0 Hu  5 $ 1148 room=.
+-> e
+T 274 mode=game_loop           Voronwe Stareyed(elf) F1@(13,11) HP 37/38 MP 0/0 Hu  4 $ 1148 room=.
+-> e
+T 275 mode=game_loop           Voronwe Stareyed(elf) F1@(14,11) HP 37/38 MP 0/0 Hu  3 $ 1148 room=.
+-> n
+T 276 mode=game_loop           Voronwe Stareyed(elf) F1@(14,10) HP 37/38 MP 0/0 Hu  2 $ 1148 room=.
+-> n
+T 277 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 37/38 MP 0/0 Hu  1 $ 1148 room=N
+-> e
+T 278 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 35/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 279 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 33/38 MP 0/0 Hu  0 $ 1148 room=N
+-> n
+T 280 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 8) HP 31/38 MP 0/0 Hu  0 $ 1148 room=.
+-> l
+T 281 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 8) HP 31/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 282 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 29/38 MP 0/0 Hu  0 $ 1148 room=.
+-> s
+T 283 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 27/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 284 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 25/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 285 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 23/38 MP 0/0 Hu  0 $ 1148 room=.
+-> i
+T 286 mode=inventory           Voronwe Stareyed(elf) F1@(11, 9) HP 23/38 MP 0/0 Hu  0 $ 1148 room=.
+-> u3
+T 287 mode=inventory           Voronwe Stareyed(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu  0 $ 1148 room=.
+-> x
+T 288 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 38/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 289 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 9) HP 36/38 MP 0/0 Hu  0 $ 1148 room=M vs Giant Centipede(L0 HP15/15)
 -> f
-T 384 mode=flee_direction_mode Voronwe Stareyed(elf) F1@(10,12) HP 19/38 MP 0/0 Hu  0 $ 647 room=M
+T 290 mode=flee_direction_mode Voronwe Stareyed(elf) F1@(10, 9) HP 36/38 MP 0/0 Hu  0 $ 1148 room=M
 -> n
-T 385 mode=game_loop           Voronwe Stareyed(elf) F1@(10,11) HP 19/38 MP 0/0 Hu  0 $ 647 room=.
+T 291 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 8) HP 36/38 MP 0/0 Hu  0 $ 1148 room=.
+-> e
+T 292 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 8) HP 34/38 MP 0/0 Hu  0 $ 1148 room=.
 -> n
-T 386 mode=game_loop           Voronwe Stareyed(elf) F1@(10,10) HP 17/38 MP 0/0 Hu  0 $ 647 room=.
+T 293 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 7) HP 32/38 MP 0/0 Hu  0 $ 1148 room=.
 -> n
-T 387 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 9) HP 15/38 MP 0/0 Hu  0 $ 647 room=.
--> e
-T 388 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 13/38 MP 0/0 Hu  0 $ 647 room=.
--> e
-T 389 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 11/38 MP 0/0 Hu  0 $ 647 room=.
--> e
-T 390 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 9/38 MP 0/0 Hu  0 $ 647 room=.
--> l
-T 391 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 9/38 MP 0/0 Hu  0 $ 647 room=.
--> e
-T 392 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 7/38 MP 0/0 Hu  0 $ 647 room=N
--> e
-T 393 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 5/38 MP 0/0 Hu  0 $ 647 room=.
+T 294 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 6) HP 30/38 MP 0/0 Hu  0 $ 1148 room=.
 -> w
-T 394 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 3/38 MP 0/0 Hu  0 $ 647 room=N
+T 295 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 6) HP 28/38 MP 0/0 Hu  0 $ 1148 room=.
 -> s
-T 395 mode=game_loop           Voronwe Stareyed(elf) F1@(14,10) HP 1/38 MP 0/0 Hu  0 $ 647 room=.
+T 296 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 7) HP 26/38 MP 0/0 Hu  0 $ 1148 room=.
+-> i
+T 297 mode=inventory           Voronwe Stareyed(elf) F1@(10, 7) HP 26/38 MP 0/0 Hu  0 $ 1148 room=.
+-> u3
+T 298 mode=inventory           Voronwe Stareyed(elf) F1@(10, 7) HP 38/38 MP 0/0 Hu  0 $ 1148 room=.
+-> x
+T 299 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 7) HP 38/38 MP 0/0 Hu  0 $ 1148 room=.
 -> s
-T 396 mode=death_screen        Voronwe Stareyed(elf) F1@(14,11) HP 0/38 MP 0/0 Hu  0 $ 647 room=.
+T 300 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 8) HP 36/38 MP 0/0 Hu  0 $ 1148 room=.
+-> l
+T 301 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 8) HP 36/38 MP 0/0 Hu  0 $ 1148 room=.
+-> e
+T 302 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 8) HP 34/38 MP 0/0 Hu  0 $ 1148 room=.
+-> s
+T 303 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 32/38 MP 0/0 Hu  0 $ 1148 room=.
+-> e
+T 304 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 30/38 MP 0/0 Hu  0 $ 1148 room=.
+-> e
+T 305 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 28/38 MP 0/0 Hu  0 $ 1148 room=.
+-> e
+T 306 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 26/38 MP 0/0 Hu  0 $ 1148 room=N
+-> e
+T 307 mode=game_loop           Voronwe Stareyed(elf) F1@(15, 9) HP 24/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 308 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 9) HP 22/38 MP 0/0 Hu  0 $ 1148 room=N
+-> n
+T 309 mode=game_loop           Voronwe Stareyed(elf) F1@(14, 8) HP 20/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 310 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 18/38 MP 0/0 Hu  0 $ 1148 room=.
+-> l
+T 311 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 8) HP 18/38 MP 0/0 Hu  0 $ 1148 room=.
+-> s
+T 312 mode=game_loop           Voronwe Stareyed(elf) F1@(13, 9) HP 16/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 313 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 9) HP 14/38 MP 0/0 Hu  0 $ 1148 room=.
+-> n
+T 314 mode=game_loop           Voronwe Stareyed(elf) F1@(12, 8) HP 12/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 315 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 8) HP 10/38 MP 0/0 Hu  0 $ 1148 room=.
+-> s
+T 316 mode=game_loop           Voronwe Stareyed(elf) F1@(11, 9) HP 8/38 MP 0/0 Hu  0 $ 1148 room=.
+-> w
+T 317 mode=combat_mode         Voronwe Stareyed(elf) F1@(10, 9) HP 6/38 MP 0/0 Hu  0 $ 1148 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 318 mode=combat_victory      Voronwe Stareyed(elf) F1@(10, 9) HP 6/38 MP 0/0 Hu  0 $ 1153 room=.
+-> back
+T 319 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 9) HP 6/38 MP 0/0 Hu  0 $ 1153 room=.
+-> n
+T 320 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 8) HP 4/38 MP 0/0 Hu  0 $ 1153 room=.
+-> l
+T 321 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 8) HP 4/38 MP 0/0 Hu  0 $ 1153 room=.
+-> n
+T 322 mode=game_loop           Voronwe Stareyed(elf) F1@(10, 7) HP 2/38 MP 0/0 Hu  0 $ 1153 room=.
+-> w
+T 323 mode=death_screen        Voronwe Stareyed(elf) F1@( 9, 7) HP 0/38 MP 0/0 Hu  0 $ 1153 room=M
 
-=== run finished: turns=396 floor=1 hp=0/38 gold=647 alive=False mode=death_screen ===
+=== run finished: turns=323 floor=1 hp=0/38 gold=1153 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00419_elf.html

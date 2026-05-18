@@ -215,20 +215,1076 @@ T  98 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 9) HP 62/64 MP 0/0 H
 T  99 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 9) HP 61/64 MP 0/0 Hu 95 $ 281 room=M vs Skeleton(L0 HP25/25)
 -> f
 T 100 mode=flee_direction_mode Borin Coalbeard(dwa) F1@( 5, 9) HP 61/64 MP 0/0 Hu 95 $ 281 room=M
--> s
-T 101 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5,10) HP 61/64 MP 0/0 Hu 95 $ 281 room=M vs Giant Rat(L0 HP22/22)
--> a
-T 102 mode=combat_victory      Borin Coalbeard(dwa) F1@( 5,10) HP 60/64 MP 0/0 Hu 95 $ 289 room=.
--> back
-T 103 mode=game_loop           Borin Coalbeard(dwa) F1@( 5,10) HP 60/64 MP 0/0 Hu 95 $ 289 room=.
--> l
-T 104 mode=game_loop           Borin Coalbeard(dwa) F1@( 5,10) HP 60/64 MP 0/0 Hu 95 $ 289 room=.
 -> e
-T 105 mode=pool_mode           Borin Coalbeard(dwa) F1@( 6,10) HP 60/64 MP 0/0 Hu 94 $ 289 room=P
+T 101 mode=chest_mode          Borin Coalbeard(dwa) F1@( 6, 9) HP 61/64 MP 0/0 Hu 95 $ 281 room=C
+-> o
+T 102 mode=game_loop           Borin Coalbeard(dwa) F1@( 6, 9) HP 61/64 MP 0/0 Hu 95 $ 281 room=.
+-> s
+T 103 mode=pool_mode           Borin Coalbeard(dwa) F1@( 6,10) HP 61/64 MP 0/0 Hu 94 $ 281 room=P
 -> dr
-T 106 mode=death_screen        Borin Coalbeard(dwa) F1@( 6,10) HP -10/64 MP 0/0 Hu 94 $ 289 room=P
+T 104 mode=game_loop           Borin Coalbeard(dwa) F1@( 6,10) HP 51/64 MP 0/0 Hu 94 $ 281 room=.
+-> i
+T 105 mode=inventory           Borin Coalbeard(dwa) F1@( 6,10) HP 51/64 MP 0/0 Hu 94 $ 281 room=.
+-> u5
+T 106 mode=inventory           Borin Coalbeard(dwa) F1@( 6,10) HP 64/64 MP 0/0 Hu 94 $ 281 room=.
+-> x
+T 107 mode=game_loop           Borin Coalbeard(dwa) F1@( 6,10) HP 64/64 MP 0/0 Hu 94 $ 281 room=.
+-> n
+T 108 mode=game_loop           Borin Coalbeard(dwa) F1@( 6, 9) HP 60/64 MP 0/0 Hu 93 $ 281 room=.
+-> e
+T 109 mode=tomb_mode           Borin Coalbeard(dwa) F1@( 7, 9) HP 55/64 MP 0/0 Hu 92 $ 281 room=T
+-> p
+T 110 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 9) HP 55/64 MP 0/0 Hu 92 $ 281 room=T
+-> l
+T 111 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 9) HP 55/64 MP 0/0 Hu 92 $ 281 room=T
+-> n
+T 112 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 8) HP 51/64 MP 0/0 Hu 91 $ 281 room=V
+-> i
+T 113 mode=inventory           Borin Coalbeard(dwa) F1@( 7, 8) HP 51/64 MP 0/0 Hu 91 $ 281 room=V
+-> u6
+T 114 mode=inventory           Borin Coalbeard(dwa) F1@( 7, 8) HP 64/64 MP 0/0 Hu 91 $ 281 room=V
+-> x
+T 115 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 8) HP 64/64 MP 0/0 Hu 91 $ 281 room=V
+-> i
+T 116 mode=inventory           Borin Coalbeard(dwa) F1@( 7, 8) HP 64/64 MP 0/0 Hu 91 $ 281 room=V
+-> eat4
+T 117 mode=inventory           Borin Coalbeard(dwa) F1@( 7, 8) HP 64/64 MP 0/0 Hu 96 $ 281 room=V
+-> x
+T 118 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 8) HP 64/64 MP 0/0 Hu 96 $ 281 room=V
+-> n
+T 119 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 7) HP 59/64 MP 0/0 Hu 95 $ 281 room=.
+-> n
+T 120 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 6) HP 60/64 MP 0/0 Hu 94 $ 281 room=.
+-> i
+T 121 mode=inventory           Borin Coalbeard(dwa) F1@( 7, 6) HP 60/64 MP 0/0 Hu 94 $ 281 room=.
+-> u6
+T 122 mode=inventory           Borin Coalbeard(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu 94 $ 281 room=.
+-> x
+T 123 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu 94 $ 281 room=.
+-> i
+T 124 mode=inventory           Borin Coalbeard(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu 94 $ 281 room=.
+-> eat3
+T 125 mode=inventory           Borin Coalbeard(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu100 $ 281 room=.
+-> x
+T 126 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu100 $ 281 room=.
+-> n
+T 127 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 99 $ 281 room=.
+-> w
+T 128 mode=game_loop           Borin Coalbeard(dwa) F1@( 6, 5) HP 64/64 MP 0/0 Hu 98 $ 281 room=.
+-> w
+T 129 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu 97 $ 281 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 130 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 5) HP 63/64 MP 0/0 Hu 97 $ 281 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 131 mode=combat_victory      Borin Coalbeard(dwa) F1@( 5, 5) HP 62/64 MP 0/0 Hu 97 $ 282 room=.
+-> back
+T 132 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 5) HP 62/64 MP 0/0 Hu 97 $ 282 room=.
+-> n
+T 133 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 4) HP 62/64 MP 0/0 Hu 96 $ 282 room=M vs Rust Monster(L0 HP18/18)
+-> f
+T 134 mode=flee_direction_mode Borin Coalbeard(dwa) F1@( 5, 4) HP 62/64 MP 0/0 Hu 96 $ 282 room=M
+-> n
+T 135 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 3) HP 62/64 MP 0/0 Hu 96 $ 282 room=.
+-> l
+T 136 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 3) HP 62/64 MP 0/0 Hu 96 $ 282 room=.
+-> n
+T 137 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 2) HP 63/64 MP 0/0 Hu 95 $ 282 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 138 mode=combat_victory      Borin Coalbeard(dwa) F1@( 5, 2) HP 63/64 MP 0/0 Hu 95 $ 291 room=.
+-> back
+T 139 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 2) HP 63/64 MP 0/0 Hu 95 $ 291 room=.
+-> w
+T 140 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 2) HP 63/64 MP 0/0 Hu 94 $ 291 room=.
+-> s
+T 141 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4, 3) HP 64/64 MP 0/0 Hu 93 $ 291 room=M vs Lichen(L0 HP10/10)
+-> a
+T 142 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4, 3) HP 63/64 MP 0/0 Hu 93 $ 291 room=M vs Lichen(L0 HP10/10)
+-> a
+T 143 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4, 3) HP 62/64 MP 0/0 Hu 93 $ 291 room=M vs Lichen(L0 HP10/10)
+-> a
+T 144 mode=combat_victory      Borin Coalbeard(dwa) F1@( 4, 3) HP 62/64 MP 0/0 Hu 93 $ 298 room=.
+-> back
+T 145 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 3) HP 62/64 MP 0/0 Hu 93 $ 298 room=.
+-> n
+T 146 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 2) HP 62/64 MP 0/0 Hu 92 $ 298 room=.
+-> w
+T 147 mode=combat_mode         Borin Coalbeard(dwa) F1@( 3, 2) HP 63/64 MP 0/0 Hu 91 $ 298 room=M vs Kobold(L0 HP20/20)
+-> f
+T 148 mode=combat_mode         Borin Coalbeard(dwa) F1@( 3, 2) HP 63/64 MP 0/0 Hu 91 $ 298 room=M vs Kobold(L0 HP20/20)
+-> a
+T 149 mode=combat_victory      Borin Coalbeard(dwa) F1@( 3, 2) HP 63/64 MP 0/0 Hu 91 $ 408 room=.
+-> back
+T 150 mode=game_loop           Borin Coalbeard(dwa) F1@( 3, 2) HP 63/64 MP 0/0 Hu 91 $ 408 room=.
+-> w
+T 151 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 2) HP 63/64 MP 0/0 Hu 90 $ 408 room=.
+-> n
+T 152 mode=combat_mode         Borin Coalbeard(dwa) F1@( 2, 1) HP 64/64 MP 0/0 Hu 89 $ 408 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 153 mode=combat_mode         Borin Coalbeard(dwa) F1@( 2, 1) HP 63/64 MP 0/0 Hu 89 $ 408 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 154 mode=combat_mode         Borin Coalbeard(dwa) F1@( 2, 1) HP 62/64 MP 0/0 Hu 89 $ 408 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 155 mode=combat_victory      Borin Coalbeard(dwa) F1@( 2, 1) HP 62/64 MP 0/0 Hu 89 $ 415 room=.
+-> back
+T 156 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 1) HP 62/64 MP 0/0 Hu 89 $ 415 room=.
+-> e
+T 157 mode=game_loop           Borin Coalbeard(dwa) F1@( 3, 1) HP 62/64 MP 0/0 Hu 88 $ 415 room=.
+-> e
+T 158 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 1) HP 63/64 MP 0/0 Hu 87 $ 415 room=.
+-> i
+T 159 mode=inventory           Borin Coalbeard(dwa) F1@( 4, 1) HP 63/64 MP 0/0 Hu 87 $ 415 room=.
+-> eat3
+T 160 mode=inventory           Borin Coalbeard(dwa) F1@( 4, 1) HP 63/64 MP 0/0 Hu 92 $ 415 room=.
+-> x
+T 161 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 1) HP 63/64 MP 0/0 Hu 92 $ 415 room=.
+-> s
+T 162 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 2) HP 63/64 MP 0/0 Hu 91 $ 415 room=.
+-> w
+T 163 mode=game_loop           Borin Coalbeard(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 90 $ 415 room=.
+-> i
+T 164 mode=inventory           Borin Coalbeard(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 90 $ 415 room=.
+-> eat3
+T 165 mode=inventory           Borin Coalbeard(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 95 $ 415 room=.
+-> x
+T 166 mode=game_loop           Borin Coalbeard(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 95 $ 415 room=.
+-> w
+T 167 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 94 $ 415 room=.
+-> s
+T 168 mode=combat_mode         Borin Coalbeard(dwa) F1@( 2, 3) HP 64/64 MP 0/0 Hu 93 $ 415 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T 169 mode=flee_direction_mode Borin Coalbeard(dwa) F1@( 2, 3) HP 63/64 MP 0/0 Hu 93 $ 415 room=M
+-> s
+T 170 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 4) HP 63/64 MP 0/0 Hu 93 $ 415 room=.
+-> i
+T 171 mode=inventory           Borin Coalbeard(dwa) F1@( 2, 4) HP 63/64 MP 0/0 Hu 93 $ 415 room=.
+-> eat4
+T 172 mode=inventory           Borin Coalbeard(dwa) F1@( 2, 4) HP 63/64 MP 0/0 Hu 99 $ 415 room=.
+-> x
+T 173 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 4) HP 63/64 MP 0/0 Hu 99 $ 415 room=.
+-> s
+T 174 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 5) HP 63/64 MP 0/0 Hu 98 $ 415 room=.
+-> e
+T 175 mode=game_loop           Borin Coalbeard(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu 97 $ 415 room=.
+-> i
+T 176 mode=inventory           Borin Coalbeard(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu 97 $ 415 room=.
+-> eat3
+T 177 mode=inventory           Borin Coalbeard(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu100 $ 415 room=.
+-> x
+T 178 mode=game_loop           Borin Coalbeard(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu100 $ 415 room=.
+-> e
+T 179 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 5) HP 64/64 MP 0/0 Hu 99 $ 415 room=.
+-> e
+T 180 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu 98 $ 415 room=.
+-> n
+T 181 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 4) HP 64/64 MP 0/0 Hu 97 $ 415 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 182 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 4) HP 63/64 MP 0/0 Hu 97 $ 415 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 183 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 4) HP 62/64 MP 0/0 Hu 97 $ 415 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 184 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 4) HP 61/64 MP 0/0 Hu 97 $ 415 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 185 mode=combat_victory      Borin Coalbeard(dwa) F1@( 5, 4) HP 60/64 MP 0/0 Hu 97 $ 416 room=.
+-> back
+T 186 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 4) HP 60/64 MP 0/0 Hu 97 $ 416 room=.
+-> n
+T 187 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 3) HP 60/64 MP 0/0 Hu 96 $ 416 room=.
+-> n
+T 188 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 2) HP 61/64 MP 0/0 Hu 95 $ 416 room=.
+-> e
+T 189 mode=game_loop           Borin Coalbeard(dwa) F1@( 6, 2) HP 61/64 MP 0/0 Hu 94 $ 416 room=.
+-> e
+T 190 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 2) HP 62/64 MP 0/0 Hu 93 $ 416 room=.
+-> e
+T 191 mode=combat_mode         Borin Coalbeard(dwa) F1@( 8, 2) HP 62/64 MP 0/0 Hu 92 $ 416 room=M vs Goblin(L0 HP30/30)
+-> a
+T 192 mode=combat_mode         Borin Coalbeard(dwa) F1@( 8, 2) HP 62/64 MP 0/0 Hu 92 $ 416 room=M vs Goblin(L0 HP4/30)
+-> a
+T 193 mode=combat_victory      Borin Coalbeard(dwa) F1@( 8, 2) HP 62/74 MP 0/0 Hu 92 $ 422 room=.
+-> back
+T 194 mode=game_loop           Borin Coalbeard(dwa) F1@( 8, 2) HP 62/74 MP 0/0 Hu 92 $ 422 room=.
+-> w
+T 195 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 2) HP 63/74 MP 0/0 Hu 91 $ 422 room=.
+-> s
+T 196 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 3) HP 63/74 MP 0/0 Hu 90 $ 422 room=.
+-> s
+T 197 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 4) HP 64/74 MP 0/0 Hu 89 $ 422 room=.
+-> l
+T 198 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 4) HP 64/74 MP 0/0 Hu 89 $ 422 room=.
+-> e
+T 199 mode=combat_mode         Borin Coalbeard(dwa) F1@( 8, 4) HP 64/74 MP 0/0 Hu 88 $ 422 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 200 mode=combat_victory      Borin Coalbeard(dwa) F1@( 8, 4) HP 64/74 MP 0/0 Hu 88 $ 423 room=.
+-> back
+T 201 mode=game_loop           Borin Coalbeard(dwa) F1@( 8, 4) HP 64/74 MP 0/0 Hu 88 $ 423 room=.
+-> e
+T 202 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9, 4) HP 65/74 MP 0/0 Hu 87 $ 423 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 203 mode=combat_victory      Borin Coalbeard(dwa) F1@( 9, 4) HP 65/74 MP 0/0 Hu 87 $ 424 room=.
+-> back
+T 204 mode=game_loop           Borin Coalbeard(dwa) F1@( 9, 4) HP 65/74 MP 0/0 Hu 87 $ 424 room=.
+-> l
+T 205 mode=game_loop           Borin Coalbeard(dwa) F1@( 9, 4) HP 65/74 MP 0/0 Hu 87 $ 424 room=.
+-> n
+T 206 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9, 3) HP 65/74 MP 0/0 Hu 86 $ 424 room=M vs Kobold(L0 HP8/8)
+-> a
+T 207 mode=combat_victory      Borin Coalbeard(dwa) F1@( 9, 3) HP 64/74 MP 0/0 Hu 86 $ 429 room=.
+-> back
+T 208 mode=game_loop           Borin Coalbeard(dwa) F1@( 9, 3) HP 64/74 MP 0/0 Hu 86 $ 429 room=.
+-> l
+T 209 mode=game_loop           Borin Coalbeard(dwa) F1@( 9, 3) HP 64/74 MP 0/0 Hu 86 $ 429 room=.
+-> e
+T 210 mode=combat_mode         Borin Coalbeard(dwa) F1@(10, 3) HP 65/74 MP 0/0 Hu 85 $ 429 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 211 mode=combat_victory      Borin Coalbeard(dwa) F1@(10, 3) HP 65/74 MP 0/0 Hu 85 $ 431 room=.
+-> back
+T 212 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 3) HP 65/74 MP 0/0 Hu 85 $ 431 room=.
+-> l
+T 213 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 3) HP 65/74 MP 0/0 Hu 85 $ 431 room=.
+-> n
+T 214 mode=pool_mode           Borin Coalbeard(dwa) F1@(10, 2) HP 65/74 MP 0/0 Hu 84 $ 431 room=P
+-> dr
+T 215 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 2) HP 65/74 MP 0/0 Hu 84 $ 431 room=.
+-> l
+T 216 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 2) HP 65/74 MP 0/0 Hu 84 $ 431 room=.
+-> e
+T 217 mode=chest_mode          Borin Coalbeard(dwa) F1@(11, 2) HP 65/74 MP 0/0 Hu 83 $ 431 room=C
+-> o
+T 218 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 2) HP 65/74 MP 0/0 Hu 82 $ 431 room=.
+-> i
+T 219 mode=inventory           Borin Coalbeard(dwa) F1@(10, 2) HP 65/74 MP 0/0 Hu 82 $ 431 room=.
+-> u6
+T 220 mode=inventory           Borin Coalbeard(dwa) F1@(10, 2) HP 74/74 MP 0/0 Hu 82 $ 431 room=.
+-> x
+T 221 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 2) HP 74/74 MP 0/0 Hu 82 $ 431 room=.
+-> i
+T 222 mode=inventory           Borin Coalbeard(dwa) F1@(10, 2) HP 74/74 MP 0/0 Hu 82 $ 431 room=.
+-> eat3
+T 223 mode=inventory           Borin Coalbeard(dwa) F1@(10, 2) HP 74/74 MP 0/0 Hu 87 $ 431 room=.
+-> x
+T 224 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 2) HP 74/74 MP 0/0 Hu 87 $ 431 room=.
+-> s
+T 225 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 86 $ 431 room=.
+-> s
+T 226 mode=combat_mode         Borin Coalbeard(dwa) F1@(10, 4) HP 74/74 MP 0/0 Hu 85 $ 431 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 227 mode=combat_victory      Borin Coalbeard(dwa) F1@(10, 4) HP 73/74 MP 0/0 Hu 85 $ 437 room=.
+-> back
+T 228 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 4) HP 73/74 MP 0/0 Hu 85 $ 437 room=.
+-> s
+T 229 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 5) HP 73/74 MP 0/0 Hu 84 $ 437 room=.
+-> l
+T 230 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 5) HP 73/74 MP 0/0 Hu 84 $ 437 room=.
+-> l
+T 231 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 5) HP 73/74 MP 0/0 Hu 84 $ 437 room=.
+-> e
+T 232 mode=combat_mode         Borin Coalbeard(dwa) F1@(11, 5) HP 73/74 MP 0/0 Hu 83 $ 437 room=M vs Bat(L0 HP12/12)
+-> a
+T 233 mode=combat_mode         Borin Coalbeard(dwa) F1@(11, 5) HP 72/74 MP 0/0 Hu 83 $ 437 room=M vs Bat(L0 HP12/12)
+-> a
+T 234 mode=combat_victory      Borin Coalbeard(dwa) F1@(11, 5) HP 71/74 MP 0/0 Hu 83 $ 445 room=.
+-> back
+T 235 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 5) HP 71/74 MP 0/0 Hu 83 $ 445 room=.
+-> s
+T 236 mode=combat_mode         Borin Coalbeard(dwa) F1@(11, 6) HP 71/74 MP 0/0 Hu 82 $ 445 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 237 mode=combat_victory      Borin Coalbeard(dwa) F1@(11, 6) HP 71/74 MP 0/0 Hu 82 $ 447 room=.
+-> back
+T 238 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 6) HP 71/74 MP 0/0 Hu 82 $ 447 room=.
+-> s
+T 239 mode=combat_mode         Borin Coalbeard(dwa) F1@(11, 7) HP 72/74 MP 0/0 Hu 81 $ 447 room=M vs Lichen(L0 HP10/10)
+-> a
+T 240 mode=combat_victory      Borin Coalbeard(dwa) F1@(11, 7) HP 72/74 MP 0/0 Hu 81 $ 456 room=.
+-> back
+T 241 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 7) HP 72/74 MP 0/0 Hu 81 $ 456 room=.
+-> i
+T 242 mode=inventory           Borin Coalbeard(dwa) F1@(11, 7) HP 72/74 MP 0/0 Hu 81 $ 456 room=.
+-> eat4
+T 243 mode=inventory           Borin Coalbeard(dwa) F1@(11, 7) HP 72/74 MP 0/0 Hu 86 $ 456 room=.
+-> x
+T 244 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 7) HP 72/74 MP 0/0 Hu 86 $ 456 room=.
+-> w
+T 245 mode=garden_mode         Borin Coalbeard(dwa) F1@(10, 7) HP 72/74 MP 0/0 Hu 85 $ 456 room=G
+-> h
+T 246 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 7) HP 72/74 MP 0/0 Hu 85 $ 456 room=.
+-> i
+T 247 mode=inventory           Borin Coalbeard(dwa) F1@(10, 7) HP 72/74 MP 0/0 Hu 85 $ 456 room=.
+-> eat4
+T 248 mode=inventory           Borin Coalbeard(dwa) F1@(10, 7) HP 72/74 MP 0/0 Hu 91 $ 456 room=.
+-> x
+T 249 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 7) HP 72/74 MP 0/0 Hu 91 $ 456 room=.
+-> s
+T 250 mode=chest_mode          Borin Coalbeard(dwa) F1@(10, 8) HP 73/74 MP 0/0 Hu 90 $ 456 room=C
+-> o
+T 251 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 8) HP 73/74 MP 0/0 Hu 90 $ 456 room=.
+-> w
+T 252 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9, 8) HP 73/74 MP 0/0 Hu 89 $ 456 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 253 mode=combat_victory      Borin Coalbeard(dwa) F1@( 9, 8) HP 73/74 MP 0/0 Hu 89 $ 459 room=.
+-> back
+T 254 mode=game_loop           Borin Coalbeard(dwa) F1@( 9, 8) HP 73/74 MP 0/0 Hu 89 $ 459 room=.
+-> s
+T 255 mode=chest_mode          Borin Coalbeard(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 88 $ 459 room=C
+-> o
+T 256 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 87 $ 459 room=M vs Kobold(L0 HP8/8)
+-> a
+T 257 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9,10) HP 73/74 MP 0/0 Hu 87 $ 459 room=M vs Kobold(L0 HP8/8)
+-> a
+T 258 mode=combat_victory      Borin Coalbeard(dwa) F1@( 9,10) HP 73/74 MP 0/0 Hu 87 $ 567 room=.
+-> back
+T 259 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,10) HP 73/74 MP 0/0 Hu 87 $ 567 room=.
+-> l
+T 260 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,10) HP 73/74 MP 0/0 Hu 87 $ 567 room=.
+-> l
+T 261 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,10) HP 73/74 MP 0/0 Hu 87 $ 567 room=.
+-> s
+T 262 mode=library_mode        Borin Coalbeard(dwa) F1@( 9,11) HP 73/74 MP 0/0 Hu 86 $ 567 room=L
+-> r
+T 263 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,11) HP 73/74 MP 0/0 Hu 86 $ 567 room=.
+-> l
+T 264 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,11) HP 73/74 MP 0/0 Hu 86 $ 567 room=.
+-> s
+T 265 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,12) HP 74/74 MP 0/0 Hu 85 $ 567 room=.
+-> l
+T 266 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,12) HP 74/74 MP 0/0 Hu 85 $ 567 room=.
+-> w
+T 267 mode=library_mode        Borin Coalbeard(dwa) F1@( 8,12) HP 74/74 MP 0/0 Hu 84 $ 567 room=L
+-> r
+T 268 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,12) HP 74/74 MP 0/0 Hu 84 $ 567 room=.
+-> i
+T 269 mode=inventory           Borin Coalbeard(dwa) F1@( 8,12) HP 74/74 MP 0/0 Hu 84 $ 567 room=.
+-> eat3
+T 270 mode=inventory           Borin Coalbeard(dwa) F1@( 8,12) HP 74/74 MP 0/0 Hu 89 $ 567 room=.
+-> x
+T 271 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,12) HP 74/74 MP 0/0 Hu 89 $ 567 room=.
+-> l
+T 272 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,12) HP 74/74 MP 0/0 Hu 89 $ 567 room=.
+-> s
+T 273 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,13) HP 74/74 MP 0/0 Hu 88 $ 567 room=.
+-> w
+T 274 mode=game_loop           Borin Coalbeard(dwa) F1@( 7,13) HP 74/74 MP 0/0 Hu 87 $ 567 room=.
+-> s
+T 275 mode=game_loop           Borin Coalbeard(dwa) F1@( 7,14) HP 74/74 MP 0/0 Hu 86 $ 567 room=.
+-> s
+T 276 mode=dungeon_mode        Borin Coalbeard(dwa) F1@( 7,15) HP 74/74 MP 0/0 Hu 85 $ 567 room=N
+-> u
+T 277 mode=game_loop           Borin Coalbeard(dwa) F1@( 7,15) HP 74/74 MP 0/0 Hu 85 $ 567 room=N
+-> e
+T 278 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,15) HP 74/74 MP 0/0 Hu 84 $ 567 room=.
+-> i
+T 279 mode=inventory           Borin Coalbeard(dwa) F1@( 8,15) HP 74/74 MP 0/0 Hu 84 $ 567 room=.
+-> eat4
+T 280 mode=inventory           Borin Coalbeard(dwa) F1@( 8,15) HP 74/74 MP 0/0 Hu 89 $ 567 room=.
+-> x
+T 281 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,15) HP 74/74 MP 0/0 Hu 89 $ 567 room=.
+-> n
+T 282 mode=combat_mode         Borin Coalbeard(dwa) F1@( 8,14) HP 74/74 MP 0/0 Hu 88 $ 567 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 283 mode=combat_victory      Borin Coalbeard(dwa) F1@( 8,14) HP 73/74 MP 0/0 Hu 88 $ 576 room=.
+-> back
+T 284 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,14) HP 73/74 MP 0/0 Hu 88 $ 576 room=.
+-> n
+T 285 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,13) HP 73/74 MP 0/0 Hu 87 $ 576 room=.
+-> i
+T 286 mode=inventory           Borin Coalbeard(dwa) F1@( 8,13) HP 73/74 MP 0/0 Hu 87 $ 576 room=.
+-> eat3
+T 287 mode=inventory           Borin Coalbeard(dwa) F1@( 8,13) HP 73/74 MP 0/0 Hu 92 $ 576 room=.
+-> x
+T 288 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,13) HP 73/74 MP 0/0 Hu 92 $ 576 room=.
+-> e
+T 289 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,13) HP 74/74 MP 0/0 Hu 91 $ 576 room=.
+-> l
+T 290 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,13) HP 74/74 MP 0/0 Hu 91 $ 576 room=.
+-> l
+T 291 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,13) HP 74/74 MP 0/0 Hu 91 $ 576 room=.
+-> n
+T 292 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,12) HP 74/74 MP 0/0 Hu 90 $ 576 room=.
+-> n
+T 293 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,11) HP 74/74 MP 0/0 Hu 89 $ 576 room=.
+-> n
+T 294 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,10) HP 74/74 MP 0/0 Hu 88 $ 576 room=.
+-> n
+T 295 mode=game_loop           Borin Coalbeard(dwa) F1@( 9, 9) HP 74/74 MP 0/0 Hu 87 $ 576 room=.
+-> n
+T 296 mode=game_loop           Borin Coalbeard(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 86 $ 576 room=.
+-> e
+T 297 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 85 $ 576 room=.
+-> n
+T 298 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 7) HP 74/74 MP 0/0 Hu 84 $ 576 room=.
+-> e
+T 299 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 7) HP 74/74 MP 0/0 Hu 83 $ 576 room=.
+-> i
+T 300 mode=inventory           Borin Coalbeard(dwa) F1@(11, 7) HP 74/74 MP 0/0 Hu 83 $ 576 room=.
+-> eat3
+T 301 mode=inventory           Borin Coalbeard(dwa) F1@(11, 7) HP 74/74 MP 0/0 Hu 88 $ 576 room=.
+-> x
+T 302 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 7) HP 74/74 MP 0/0 Hu 88 $ 576 room=.
+-> n
+T 303 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 6) HP 74/74 MP 0/0 Hu 87 $ 576 room=.
+-> n
+T 304 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 5) HP 74/74 MP 0/0 Hu 86 $ 576 room=.
+-> e
+T 305 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 5) HP 74/74 MP 0/0 Hu 85 $ 576 room=.
+-> s
+T 306 mode=combat_mode         Borin Coalbeard(dwa) F1@(12, 6) HP 74/74 MP 0/0 Hu 84 $ 576 room=M vs Bat(L0 HP12/12)
+-> a
+T 307 mode=combat_mode         Borin Coalbeard(dwa) F1@(12, 6) HP 73/74 MP 0/0 Hu 84 $ 576 room=M vs Bat(L0 HP12/12)
+-> a
+T 308 mode=combat_mode         Borin Coalbeard(dwa) F1@(12, 6) HP 72/74 MP 0/0 Hu 84 $ 576 room=M vs Bat(L0 HP12/12)
+-> a
+T 309 mode=combat_victory      Borin Coalbeard(dwa) F1@(12, 6) HP 71/74 MP 0/0 Hu 84 $ 579 room=.
+-> back
+T 310 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 6) HP 71/74 MP 0/0 Hu 84 $ 579 room=.
+-> l
+T 311 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 6) HP 71/74 MP 0/0 Hu 84 $ 579 room=.
+-> s
+T 312 mode=combat_mode         Borin Coalbeard(dwa) F1@(12, 7) HP 71/74 MP 0/0 Hu 83 $ 579 room=M vs Goblin(L0 HP30/30)
+-> a
+T 313 mode=combat_mode         Borin Coalbeard(dwa) F1@(12, 7) HP 70/74 MP 0/0 Hu 83 $ 579 room=M vs Goblin(L0 HP4/30)
+-> a
+T 314 mode=combat_mode         Borin Coalbeard(dwa) F1@(12, 7) HP 69/74 MP 0/0 Hu 83 $ 579 room=M vs Goblin(L0 HP4/30)
+-> f
+T 315 mode=combat_mode         Borin Coalbeard(dwa) F1@(12, 7) HP 68/74 MP 0/0 Hu 83 $ 579 room=M vs Goblin(L0 HP4/30)
+-> a
+T 316 mode=combat_victory      Borin Coalbeard(dwa) F1@(12, 7) HP 68/74 MP 0/0 Hu 83 $ 585 room=.
+-> back
+T 317 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 7) HP 68/74 MP 0/0 Hu 83 $ 585 room=.
+-> l
+T 318 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 7) HP 68/74 MP 0/0 Hu 83 $ 585 room=.
+-> e
+T 319 mode=game_loop           Borin Coalbeard(dwa) F1@(13, 7) HP 68/74 MP 0/0 Hu 82 $ 585 room=.
+-> s
+T 320 mode=combat_mode         Borin Coalbeard(dwa) F1@(13, 8) HP 68/74 MP 0/0 Hu 81 $ 585 room=M vs Bat(L0 HP12/12)
+-> a
+T 321 mode=combat_mode         Borin Coalbeard(dwa) F1@(13, 8) HP 67/74 MP 0/0 Hu 81 $ 585 room=M vs Bat(L0 HP12/12)
+-> a
+T 322 mode=combat_mode         Borin Coalbeard(dwa) F1@(13, 8) HP 66/74 MP 0/0 Hu 81 $ 585 room=M vs Bat(L0 HP12/12)
+-> a
+T 323 mode=combat_victory      Borin Coalbeard(dwa) F1@(13, 8) HP 66/74 MP 0/0 Hu 81 $ 587 room=.
+-> back
+T 324 mode=game_loop           Borin Coalbeard(dwa) F1@(13, 8) HP 66/74 MP 0/0 Hu 81 $ 587 room=.
+-> s
+T 325 mode=combat_mode         Borin Coalbeard(dwa) F1@(13, 9) HP 67/74 MP 0/0 Hu 80 $ 587 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 326 mode=combat_mode         Borin Coalbeard(dwa) F1@(13, 9) HP 66/74 MP 0/0 Hu 80 $ 587 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 327 mode=combat_victory      Borin Coalbeard(dwa) F1@(13, 9) HP 66/74 MP 0/0 Hu 80 $ 595 room=.
+-> back
+T 328 mode=game_loop           Borin Coalbeard(dwa) F1@(13, 9) HP 66/74 MP 0/0 Hu 80 $ 595 room=.
+-> e
+T 329 mode=altar_mode          Borin Coalbeard(dwa) F1@(14, 9) HP 66/74 MP 0/0 Hu 79 $ 595 room=A
+-> pray
+T 330 mode=game_loop           Borin Coalbeard(dwa) F1@(14, 9) HP 66/74 MP 0/0 Hu 79 $ 595 room=.
+-> l
+T 331 mode=game_loop           Borin Coalbeard(dwa) F1@(14, 9) HP 66/74 MP 0/0 Hu 79 $ 595 room=.
+-> n
+T 332 mode=combat_mode         Borin Coalbeard(dwa) F1@(14, 8) HP 66/74 MP 0/0 Hu 78 $ 595 room=M vs Stirge(L0 HP6/6)
+-> a
+T 333 mode=combat_mode         Borin Coalbeard(dwa) F1@(14, 8) HP 66/74 MP 0/0 Hu 78 $ 595 room=M vs Stirge(L0 HP6/6)
+-> a
+T 334 mode=combat_mode         Borin Coalbeard(dwa) F1@(14, 8) HP 62/74 MP 0/0 Hu 78 $ 595 room=M vs Stirge(L0 HP6/6)
+-> a
+T 335 mode=combat_victory      Borin Coalbeard(dwa) F1@(14, 8) HP 58/84 MP 0/0 Hu 78 $ 601 room=.
+-> back
+T 336 mode=game_loop           Borin Coalbeard(dwa) F1@(14, 8) HP 58/84 MP 0/0 Hu 78 $ 601 room=.
+-> l
+T 337 mode=game_loop           Borin Coalbeard(dwa) F1@(14, 8) HP 58/84 MP 0/0 Hu 78 $ 601 room=.
+-> i
+T 338 mode=inventory           Borin Coalbeard(dwa) F1@(14, 8) HP 58/84 MP 0/0 Hu 78 $ 601 room=.
+-> u6
+T 339 mode=inventory           Borin Coalbeard(dwa) F1@(14, 8) HP 84/84 MP 0/0 Hu 78 $ 601 room=.
+-> x
+T 340 mode=game_loop           Borin Coalbeard(dwa) F1@(14, 8) HP 84/84 MP 0/0 Hu 78 $ 601 room=.
+-> l
+T 341 mode=game_loop           Borin Coalbeard(dwa) F1@(14, 8) HP 84/84 MP 0/0 Hu 78 $ 601 room=.
+-> e
+T 342 mode=combat_mode         Borin Coalbeard(dwa) F1@(15, 8) HP 84/84 MP 0/0 Hu 77 $ 601 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 343 mode=combat_mode         Borin Coalbeard(dwa) F1@(15, 8) HP 83/84 MP 0/0 Hu 77 $ 601 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 344 mode=combat_mode         Borin Coalbeard(dwa) F1@(15, 8) HP 83/84 MP 0/0 Hu 77 $ 601 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 345 mode=combat_victory      Borin Coalbeard(dwa) F1@(15, 8) HP 82/84 MP 0/0 Hu 77 $ 606 room=.
+-> back
+T 346 mode=game_loop           Borin Coalbeard(dwa) F1@(15, 8) HP 82/84 MP 0/0 Hu 77 $ 606 room=.
+-> l
+T 347 mode=game_loop           Borin Coalbeard(dwa) F1@(15, 8) HP 82/84 MP 0/0 Hu 77 $ 606 room=.
+-> n
+T 348 mode=game_loop           Borin Coalbeard(dwa) F1@(15, 7) HP 82/84 MP 0/0 Hu 76 $ 606 room=.
+-> l
+T 349 mode=game_loop           Borin Coalbeard(dwa) F1@(15, 7) HP 82/84 MP 0/0 Hu 76 $ 606 room=.
+-> e
+T 350 mode=game_loop           Borin Coalbeard(dwa) F1@(16, 7) HP 82/84 MP 0/0 Hu 75 $ 606 room=.
+-> l
+T 351 mode=game_loop           Borin Coalbeard(dwa) F1@(16, 7) HP 82/84 MP 0/0 Hu 75 $ 606 room=.
+-> w
+T 352 mode=game_loop           Borin Coalbeard(dwa) F1@(15, 7) HP 82/84 MP 0/0 Hu 74 $ 606 room=.
+-> s
+T 353 mode=game_loop           Borin Coalbeard(dwa) F1@(15, 8) HP 83/84 MP 0/0 Hu 73 $ 606 room=.
+-> i
+T 354 mode=inventory           Borin Coalbeard(dwa) F1@(15, 8) HP 83/84 MP 0/0 Hu 73 $ 606 room=.
+-> eat3
+T 355 mode=inventory           Borin Coalbeard(dwa) F1@(15, 8) HP 83/84 MP 0/0 Hu 78 $ 606 room=.
+-> eat1
+T 356 mode=inventory           Borin Coalbeard(dwa) F1@(15, 8) HP 83/84 MP 0/0 Hu100 $ 606 room=.
+-> x
+T 357 mode=game_loop           Borin Coalbeard(dwa) F1@(15, 8) HP 83/84 MP 0/0 Hu100 $ 606 room=.
+-> w
+T 358 mode=game_loop           Borin Coalbeard(dwa) F1@(14, 8) HP 83/84 MP 0/0 Hu 99 $ 606 room=.
+-> w
+T 359 mode=game_loop           Borin Coalbeard(dwa) F1@(13, 8) HP 84/84 MP 0/0 Hu 98 $ 606 room=.
+-> i
+T 360 mode=inventory           Borin Coalbeard(dwa) F1@(13, 8) HP 84/84 MP 0/0 Hu 98 $ 606 room=.
+-> eat2
+T 361 mode=inventory           Borin Coalbeard(dwa) F1@(13, 8) HP 84/84 MP 0/0 Hu100 $ 606 room=.
+-> x
+T 362 mode=game_loop           Borin Coalbeard(dwa) F1@(13, 8) HP 84/84 MP 0/0 Hu100 $ 606 room=.
+-> n
+T 363 mode=game_loop           Borin Coalbeard(dwa) F1@(13, 7) HP 84/84 MP 0/0 Hu 99 $ 606 room=.
+-> w
+T 364 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 7) HP 84/84 MP 0/0 Hu 98 $ 606 room=.
+-> n
+T 365 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 6) HP 84/84 MP 0/0 Hu 97 $ 606 room=.
+-> n
+T 366 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 5) HP 84/84 MP 0/0 Hu 96 $ 606 room=.
+-> i
+T 367 mode=inventory           Borin Coalbeard(dwa) F1@(12, 5) HP 84/84 MP 0/0 Hu 96 $ 606 room=.
+-> eat2
+T 368 mode=inventory           Borin Coalbeard(dwa) F1@(12, 5) HP 84/84 MP 0/0 Hu100 $ 606 room=.
+-> x
+T 369 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 5) HP 84/84 MP 0/0 Hu100 $ 606 room=.
+-> w
+T 370 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 5) HP 84/84 MP 0/0 Hu 99 $ 606 room=.
+-> l
+T 371 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 5) HP 84/84 MP 0/0 Hu 99 $ 606 room=.
+-> w
+T 372 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 5) HP 84/84 MP 0/0 Hu 98 $ 606 room=.
+-> n
+T 373 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 4) HP 84/84 MP 0/0 Hu 97 $ 606 room=.
+-> n
+T 374 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 3) HP 84/84 MP 0/0 Hu 96 $ 606 room=.
+-> n
+T 375 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 2) HP 84/84 MP 0/0 Hu 95 $ 606 room=.
+-> e
+T 376 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 2) HP 84/84 MP 0/0 Hu 94 $ 606 room=.
+-> l
+T 377 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 2) HP 84/84 MP 0/0 Hu 94 $ 606 room=.
+-> s
+T 378 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 3) HP 84/84 MP 0/0 Hu 93 $ 606 room=.
+-> n
+T 379 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 2) HP 84/84 MP 0/0 Hu 92 $ 606 room=.
+-> n
+T 380 mode=combat_mode         Borin Coalbeard(dwa) F1@(11, 1) HP 84/84 MP 0/0 Hu 91 $ 606 room=M vs Kobold(L0 HP20/20)
+-> a
+T 381 mode=combat_victory      Borin Coalbeard(dwa) F1@(11, 1) HP 84/84 MP 0/0 Hu 91 $ 613 room=.
+-> back
+T 382 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 1) HP 84/84 MP 0/0 Hu 91 $ 613 room=.
+-> l
+T 383 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 1) HP 84/84 MP 0/0 Hu 91 $ 613 room=.
+-> e
+T 384 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 1) HP 84/84 MP 0/0 Hu 90 $ 613 room=.
+-> e
+T 385 mode=game_loop           Borin Coalbeard(dwa) F1@(13, 1) HP 84/84 MP 0/0 Hu 89 $ 613 room=.
+-> e
+T 386 mode=combat_mode         Borin Coalbeard(dwa) F1@(14, 1) HP 84/84 MP 0/0 Hu 88 $ 613 room=M vs Goblin(L0 HP12/12)
+-> a
+T 387 mode=combat_mode         Borin Coalbeard(dwa) F1@(14, 1) HP 83/84 MP 0/0 Hu 88 $ 613 room=M vs Goblin(L0 HP12/12)
+-> f
+T 388 mode=flee_direction_mode Borin Coalbeard(dwa) F1@(14, 1) HP 83/84 MP 0/0 Hu 88 $ 613 room=M
+-> w
+T 389 mode=game_loop           Borin Coalbeard(dwa) F1@(13, 1) HP 83/84 MP 0/0 Hu 88 $ 613 room=.
+-> e
+T 390 mode=combat_mode         Borin Coalbeard(dwa) F1@(14, 1) HP 83/84 MP 0/0 Hu 87 $ 613 room=M vs Goblin(L0 HP12/12)
+-> a
+T 391 mode=combat_mode         Borin Coalbeard(dwa) F1@(14, 1) HP 83/84 MP 0/0 Hu 87 $ 613 room=M vs Goblin(L0 HP9/12)
+-> a
+T 392 mode=combat_mode         Borin Coalbeard(dwa) F1@(14, 1) HP 83/84 MP 0/0 Hu 87 $ 613 room=M vs Goblin(L0 HP6/12)
+-> a
+T 393 mode=combat_mode         Borin Coalbeard(dwa) F1@(14, 1) HP 82/84 MP 0/0 Hu 87 $ 613 room=M vs Goblin(L0 HP3/12)
+-> a
+T 394 mode=combat_victory      Borin Coalbeard(dwa) F1@(14, 1) HP 82/84 MP 0/0 Hu 87 $ 621 room=.
+-> back
+T 395 mode=game_loop           Borin Coalbeard(dwa) F1@(14, 1) HP 82/84 MP 0/0 Hu 87 $ 621 room=.
+-> i
+T 396 mode=inventory           Borin Coalbeard(dwa) F1@(14, 1) HP 82/84 MP 0/0 Hu 87 $ 621 room=.
+-> e2
+T 397 mode=inventory           Borin Coalbeard(dwa) F1@(14, 1) HP 82/84 MP 0/0 Hu 87 $ 621 room=.
+-> x
+T 398 mode=game_loop           Borin Coalbeard(dwa) F1@(14, 1) HP 82/84 MP 0/0 Hu 87 $ 621 room=.
+-> w
+T 399 mode=game_loop           Borin Coalbeard(dwa) F1@(13, 1) HP 83/84 MP 0/0 Hu 86 $ 621 room=.
+-> w
+T 400 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 1) HP 83/84 MP 0/0 Hu 85 $ 621 room=.
+-> l
+T 401 mode=game_loop           Borin Coalbeard(dwa) F1@(12, 1) HP 83/84 MP 0/0 Hu 85 $ 621 room=.
+-> w
+T 402 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 1) HP 83/84 MP 0/0 Hu 84 $ 621 room=.
+-> s
+T 403 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 2) HP 83/84 MP 0/0 Hu 83 $ 621 room=.
+-> s
+T 404 mode=game_loop           Borin Coalbeard(dwa) F1@(11, 3) HP 84/84 MP 0/0 Hu 82 $ 621 room=.
+-> w
+T 405 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 3) HP 84/84 MP 0/0 Hu 81 $ 621 room=.
+-> i
+T 406 mode=inventory           Borin Coalbeard(dwa) F1@(10, 3) HP 84/84 MP 0/0 Hu 81 $ 621 room=.
+-> eat2
+T 407 mode=inventory           Borin Coalbeard(dwa) F1@(10, 3) HP 84/84 MP 0/0 Hu 86 $ 621 room=.
+-> x
+T 408 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 3) HP 84/84 MP 0/0 Hu 86 $ 621 room=.
+-> s
+T 409 mode=game_loop           Borin Coalbeard(dwa) F1@(10, 4) HP 84/84 MP 0/0 Hu 85 $ 621 room=.
+-> w
+T 410 mode=game_loop           Borin Coalbeard(dwa) F1@( 9, 4) HP 84/84 MP 0/0 Hu 84 $ 621 room=.
+-> l
+T 411 mode=game_loop           Borin Coalbeard(dwa) F1@( 9, 4) HP 84/84 MP 0/0 Hu 84 $ 621 room=.
+-> w
+T 412 mode=game_loop           Borin Coalbeard(dwa) F1@( 8, 4) HP 84/84 MP 0/0 Hu 83 $ 621 room=.
+-> w
+T 413 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 4) HP 84/84 MP 0/0 Hu 82 $ 621 room=.
+-> n
+T 414 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 3) HP 84/84 MP 0/0 Hu 81 $ 621 room=.
+-> n
+T 415 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 2) HP 84/84 MP 0/0 Hu 80 $ 621 room=.
+-> n
+T 416 mode=game_loop           Borin Coalbeard(dwa) F1@( 7, 1) HP 84/84 MP 0/0 Hu 79 $ 621 room=.
+-> w
+T 417 mode=game_loop           Borin Coalbeard(dwa) F1@( 6, 1) HP 84/84 MP 0/0 Hu 78 $ 621 room=.
+-> s
+T 418 mode=game_loop           Borin Coalbeard(dwa) F1@( 6, 2) HP 84/84 MP 0/0 Hu 77 $ 621 room=.
+-> w
+T 419 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 2) HP 84/84 MP 0/0 Hu 76 $ 621 room=.
+-> n
+T 420 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 1) HP 84/84 MP 0/0 Hu 75 $ 621 room=.
+-> l
+T 421 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 1) HP 84/84 MP 0/0 Hu 75 $ 621 room=.
+-> w
+T 422 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 1) HP 84/84 MP 0/0 Hu 74 $ 621 room=.
+-> s
+T 423 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 2) HP 84/84 MP 0/0 Hu 73 $ 621 room=.
+-> w
+T 424 mode=game_loop           Borin Coalbeard(dwa) F1@( 3, 2) HP 84/84 MP 0/0 Hu 72 $ 621 room=.
+-> w
+T 425 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 2) HP 84/84 MP 0/0 Hu 71 $ 621 room=.
+-> s
+T 426 mode=combat_mode         Borin Coalbeard(dwa) F1@( 2, 3) HP 84/84 MP 0/0 Hu 70 $ 621 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 427 mode=combat_mode         Borin Coalbeard(dwa) F1@( 2, 3) HP 84/84 MP 0/0 Hu 70 $ 621 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 428 mode=combat_mode         Borin Coalbeard(dwa) F1@( 2, 3) HP 84/84 MP 0/0 Hu 70 $ 621 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 429 mode=combat_mode         Borin Coalbeard(dwa) F1@( 2, 3) HP 84/84 MP 0/0 Hu 70 $ 621 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 430 mode=combat_victory      Borin Coalbeard(dwa) F1@( 2, 3) HP 84/84 MP 0/0 Hu 70 $ 625 room=.
+-> back
+T 431 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 3) HP 84/84 MP 0/0 Hu 70 $ 625 room=.
+-> s
+T 432 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 4) HP 84/84 MP 0/0 Hu 69 $ 625 room=.
+-> w
+T 433 mode=game_loop           Borin Coalbeard(dwa) F1@( 1, 4) HP 84/84 MP 0/0 Hu 68 $ 625 room=.
+-> s
+T 434 mode=game_loop           Borin Coalbeard(dwa) F1@( 1, 5) HP 84/84 MP 0/0 Hu 67 $ 625 room=.
+-> e
+T 435 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 5) HP 84/84 MP 0/0 Hu 66 $ 625 room=.
+-> s
+T 436 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 6) HP 84/84 MP 0/0 Hu 65 $ 625 room=.
+-> n
+T 437 mode=game_loop           Borin Coalbeard(dwa) F1@( 2, 5) HP 84/84 MP 0/0 Hu 64 $ 625 room=.
+-> e
+T 438 mode=game_loop           Borin Coalbeard(dwa) F1@( 3, 5) HP 84/84 MP 0/0 Hu 63 $ 625 room=.
+-> e
+T 439 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 5) HP 84/84 MP 0/0 Hu 62 $ 625 room=.
+-> s
+T 440 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 6) HP 84/84 MP 0/0 Hu 61 $ 625 room=.
+-> l
+T 441 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 6) HP 84/84 MP 0/0 Hu 61 $ 625 room=.
+-> e
+T 442 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 6) HP 84/84 MP 0/0 Hu 60 $ 625 room=.
+-> s
+T 443 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 7) HP 84/84 MP 0/0 Hu 59 $ 625 room=.
+-> e
+T 444 mode=game_loop           Borin Coalbeard(dwa) F1@( 6, 7) HP 84/84 MP 0/0 Hu 58 $ 625 room=.
+-> s
+T 445 mode=game_loop           Borin Coalbeard(dwa) F1@( 6, 8) HP 84/84 MP 0/0 Hu 57 $ 625 room=.
+-> w
+T 446 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 8) HP 84/84 MP 0/0 Hu 56 $ 625 room=.
+-> s
+T 447 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 9) HP 84/84 MP 0/0 Hu 55 $ 625 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 448 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5, 9) HP 83/84 MP 0/0 Hu 55 $ 625 room=M vs Skeleton(L0 HP1/25)
+-> a
+T 449 mode=combat_victory      Borin Coalbeard(dwa) F1@( 5, 9) HP 82/84 MP 0/0 Hu 55 $ 627 room=.
+-> back
+T 450 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 9) HP 82/84 MP 0/0 Hu 55 $ 627 room=.
+-> l
+T 451 mode=game_loop           Borin Coalbeard(dwa) F1@( 5, 9) HP 82/84 MP 0/0 Hu 55 $ 627 room=.
+-> w
+T 452 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4, 9) HP 82/84 MP 0/0 Hu 54 $ 627 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 453 mode=combat_victory      Borin Coalbeard(dwa) F1@( 4, 9) HP 82/84 MP 0/0 Hu 54 $ 636 room=.
+-> back
+T 454 mode=game_loop           Borin Coalbeard(dwa) F1@( 4, 9) HP 82/84 MP 0/0 Hu 54 $ 636 room=.
+-> w
+T 455 mode=game_loop           Borin Coalbeard(dwa) F1@( 3, 9) HP 82/84 MP 0/0 Hu 53 $ 636 room=.
+-> s
+T 456 mode=dungeon_mode        Borin Coalbeard(dwa) F1@( 3,10) HP 82/84 MP 0/0 Hu 52 $ 636 room=N
+-> u
+T 457 mode=game_loop           Borin Coalbeard(dwa) F1@( 3,10) HP 82/84 MP 0/0 Hu 52 $ 636 room=N
+-> s
+T 458 mode=game_loop           Borin Coalbeard(dwa) F1@( 3,11) HP 82/84 MP 0/0 Hu 51 $ 636 room=.
+-> w
+T 459 mode=game_loop           Borin Coalbeard(dwa) F1@( 2,11) HP 82/84 MP 0/0 Hu 50 $ 636 room=.
+-> n
+T 460 mode=combat_mode         Borin Coalbeard(dwa) F1@( 2,10) HP 82/84 MP 0/0 Hu 49 $ 636 room=M vs Goblin(L0 HP12/12)
+-> a
+T 461 mode=combat_victory      Borin Coalbeard(dwa) F1@( 2,10) HP 82/84 MP 0/0 Hu 49 $ 642 room=.
+-> back
+T 462 mode=game_loop           Borin Coalbeard(dwa) F1@( 2,10) HP 82/84 MP 0/0 Hu 49 $ 642 room=.
+-> i
+T 463 mode=inventory           Borin Coalbeard(dwa) F1@( 2,10) HP 82/84 MP 0/0 Hu 49 $ 642 room=.
+-> eat1
+T 464 mode=inventory           Borin Coalbeard(dwa) F1@( 2,10) HP 82/84 MP 0/0 Hu100 $ 642 room=.
+-> x
+T 465 mode=game_loop           Borin Coalbeard(dwa) F1@( 2,10) HP 82/84 MP 0/0 Hu100 $ 642 room=.
+-> s
+T 466 mode=game_loop           Borin Coalbeard(dwa) F1@( 2,11) HP 82/84 MP 0/0 Hu 99 $ 642 room=.
+-> n
+T 467 mode=game_loop           Borin Coalbeard(dwa) F1@( 2,10) HP 83/84 MP 0/0 Hu 98 $ 642 room=.
+-> e
+T 468 mode=game_loop           Borin Coalbeard(dwa) F1@( 3,10) HP 83/84 MP 0/0 Hu 97 $ 642 room=N
+-> e
+T 469 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4,10) HP 84/84 MP 0/0 Hu 96 $ 642 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 470 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4,10) HP 83/84 MP 0/0 Hu 96 $ 642 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 471 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4,10) HP 83/84 MP 0/0 Hu 96 $ 642 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 472 mode=combat_victory      Borin Coalbeard(dwa) F1@( 4,10) HP 83/84 MP 0/0 Hu 96 $ 645 room=.
+-> back
+T 473 mode=game_loop           Borin Coalbeard(dwa) F1@( 4,10) HP 83/84 MP 0/0 Hu 96 $ 645 room=.
+-> e
+T 474 mode=combat_mode         Borin Coalbeard(dwa) F1@( 5,10) HP 83/84 MP 0/0 Hu 95 $ 645 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 475 mode=combat_victory      Borin Coalbeard(dwa) F1@( 5,10) HP 83/84 MP 0/0 Hu 95 $ 646 room=.
+-> back
+T 476 mode=game_loop           Borin Coalbeard(dwa) F1@( 5,10) HP 83/84 MP 0/0 Hu 95 $ 646 room=.
+-> s
+T 477 mode=game_loop           Borin Coalbeard(dwa) F1@( 5,11) HP 84/84 MP 0/0 Hu 94 $ 646 room=.
+-> w
+T 478 mode=game_loop           Borin Coalbeard(dwa) F1@( 4,11) HP 84/84 MP 0/0 Hu 93 $ 646 room=.
+-> w
+T 479 mode=game_loop           Borin Coalbeard(dwa) F1@( 3,11) HP 84/84 MP 0/0 Hu 92 $ 646 room=.
+-> s
+T 480 mode=game_loop           Borin Coalbeard(dwa) F1@( 3,12) HP 84/84 MP 0/0 Hu 91 $ 646 room=.
+-> l
+T 481 mode=game_loop           Borin Coalbeard(dwa) F1@( 3,12) HP 84/84 MP 0/0 Hu 91 $ 646 room=.
+-> e
+T 482 mode=game_loop           Borin Coalbeard(dwa) F1@( 4,12) HP 84/84 MP 0/0 Hu 90 $ 646 room=.
+-> i
+T 483 mode=inventory           Borin Coalbeard(dwa) F1@( 4,12) HP 84/84 MP 0/0 Hu 90 $ 646 room=.
+-> eat1
+T 484 mode=inventory           Borin Coalbeard(dwa) F1@( 4,12) HP 84/84 MP 0/0 Hu 95 $ 646 room=.
+-> x
+T 485 mode=game_loop           Borin Coalbeard(dwa) F1@( 4,12) HP 84/84 MP 0/0 Hu 95 $ 646 room=.
+-> s
+T 486 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4,13) HP 84/84 MP 0/0 Hu 94 $ 646 room=M vs Goblin(L0 HP30/30)
+-> a
+T 487 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4,13) HP 84/84 MP 0/0 Hu 94 $ 646 room=M vs Goblin(L0 HP30/30)
+-> a
+T 488 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4,13) HP 83/84 MP 0/0 Hu 94 $ 646 room=M vs Goblin(L0 HP30/30)
+-> a
+T 489 mode=combat_mode         Borin Coalbeard(dwa) F1@( 4,13) HP 82/84 MP 0/0 Hu 94 $ 646 room=M vs Goblin(L0 HP5/30)
+-> a
+T 490 mode=combat_victory      Borin Coalbeard(dwa) F1@( 4,13) HP 82/84 MP 0/0 Hu 94 $ 656 room=.
+-> back
+T 491 mode=game_loop           Borin Coalbeard(dwa) F1@( 4,13) HP 82/84 MP 0/0 Hu 94 $ 656 room=.
+-> l
+T 492 mode=game_loop           Borin Coalbeard(dwa) F1@( 4,13) HP 82/84 MP 0/0 Hu 94 $ 656 room=.
+-> s
+T 493 mode=game_loop           Borin Coalbeard(dwa) F1@( 4,14) HP 82/84 MP 0/0 Hu 93 $ 656 room=.
+-> w
+T 494 mode=game_loop           Borin Coalbeard(dwa) F1@( 3,14) HP 83/84 MP 0/0 Hu 92 $ 656 room=.
+-> s
+T 495 mode=combat_mode         Borin Coalbeard(dwa) F1@( 3,15) HP 83/84 MP 0/0 Hu 91 $ 656 room=M vs Goblin(L0 HP12/12)
+-> a
+T 496 mode=combat_mode         Borin Coalbeard(dwa) F1@( 3,15) HP 82/84 MP 0/0 Hu 91 $ 656 room=M vs Goblin(L0 HP12/12)
+-> a
+T 497 mode=combat_victory      Borin Coalbeard(dwa) F1@( 3,15) HP 82/84 MP 0/0 Hu 91 $ 665 room=.
+-> back
+T 498 mode=game_loop           Borin Coalbeard(dwa) F1@( 3,15) HP 82/84 MP 0/0 Hu 91 $ 665 room=.
+-> i
+T 499 mode=inventory           Borin Coalbeard(dwa) F1@( 3,15) HP 82/84 MP 0/0 Hu 91 $ 665 room=.
+-> eat3
+T 500 mode=inventory           Borin Coalbeard(dwa) F1@( 3,15) HP 82/84 MP 0/0 Hu 96 $ 665 room=.
+-> x
+T 501 mode=game_loop           Borin Coalbeard(dwa) F1@( 3,15) HP 82/84 MP 0/0 Hu 96 $ 665 room=.
+-> e
+T 502 mode=game_loop           Borin Coalbeard(dwa) F1@( 4,15) HP 83/84 MP 0/0 Hu 95 $ 665 room=.
+-> i
+T 503 mode=inventory           Borin Coalbeard(dwa) F1@( 4,15) HP 83/84 MP 0/0 Hu 95 $ 665 room=.
+-> eat2
+T 504 mode=inventory           Borin Coalbeard(dwa) F1@( 4,15) HP 83/84 MP 0/0 Hu100 $ 665 room=.
+-> x
+T 505 mode=game_loop           Borin Coalbeard(dwa) F1@( 4,15) HP 83/84 MP 0/0 Hu100 $ 665 room=.
+-> e
+T 506 mode=game_loop           Borin Coalbeard(dwa) F1@( 5,15) HP 83/84 MP 0/0 Hu 99 $ 665 room=.
+-> n
+T 507 mode=game_loop           Borin Coalbeard(dwa) F1@( 5,14) HP 84/84 MP 0/0 Hu 98 $ 665 room=.
+-> e
+T 508 mode=combat_mode         Borin Coalbeard(dwa) F1@( 6,14) HP 84/84 MP 0/0 Hu 97 $ 665 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 509 mode=combat_victory      Borin Coalbeard(dwa) F1@( 6,14) HP 84/84 MP 0/0 Hu 97 $ 674 room=.
+-> back
+T 510 mode=game_loop           Borin Coalbeard(dwa) F1@( 6,14) HP 84/84 MP 0/0 Hu 97 $ 674 room=.
+-> l
+T 511 mode=game_loop           Borin Coalbeard(dwa) F1@( 6,14) HP 84/84 MP 0/0 Hu 97 $ 674 room=.
+-> n
+T 512 mode=combat_mode         Borin Coalbeard(dwa) F1@( 6,13) HP 84/84 MP 0/0 Hu 96 $ 674 room=M vs Zombie(L0 HP35/35)
+-> a
+T 513 mode=combat_mode         Borin Coalbeard(dwa) F1@( 6,13) HP 83/84 MP 0/0 Hu 96 $ 674 room=M vs Zombie(L0 HP35/35)
+-> a
+T 514 mode=combat_mode         Borin Coalbeard(dwa) F1@( 6,13) HP 82/84 MP 0/0 Hu 96 $ 674 room=M vs Zombie(L0 HP9/35)
+-> a
+T 515 mode=combat_victory      Borin Coalbeard(dwa) F1@( 6,13) HP 81/84 MP 0/0 Hu 96 $ 684 room=.
+-> back
+T 516 mode=game_loop           Borin Coalbeard(dwa) F1@( 6,13) HP 81/84 MP 0/0 Hu 96 $ 684 room=.
+-> n
+T 517 mode=chest_mode          Borin Coalbeard(dwa) F1@( 6,12) HP 81/84 MP 0/0 Hu 95 $ 684 room=C
+-> o
+T 518 mode=game_loop           Borin Coalbeard(dwa) F1@( 6,12) HP 81/84 MP 0/0 Hu 95 $ 714 room=.
+-> e
+T 519 mode=combat_mode         Borin Coalbeard(dwa) F1@( 7,12) HP 82/84 MP 0/0 Hu 94 $ 714 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 520 mode=combat_victory      Borin Coalbeard(dwa) F1@( 7,12) HP 82/84 MP 0/0 Hu 94 $ 721 room=.
+-> back
+T 521 mode=game_loop           Borin Coalbeard(dwa) F1@( 7,12) HP 82/84 MP 0/0 Hu 94 $ 721 room=.
+-> s
+T 522 mode=game_loop           Borin Coalbeard(dwa) F1@( 7,13) HP 82/84 MP 0/0 Hu 93 $ 721 room=.
+-> s
+T 523 mode=game_loop           Borin Coalbeard(dwa) F1@( 7,14) HP 83/84 MP 0/0 Hu 92 $ 721 room=.
+-> e
+T 524 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,14) HP 83/84 MP 0/0 Hu 91 $ 721 room=.
+-> i
+T 525 mode=inventory           Borin Coalbeard(dwa) F1@( 8,14) HP 83/84 MP 0/0 Hu 91 $ 721 room=.
+-> eat1
+T 526 mode=inventory           Borin Coalbeard(dwa) F1@( 8,14) HP 83/84 MP 0/0 Hu 96 $ 721 room=.
+-> x
+T 527 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,14) HP 83/84 MP 0/0 Hu 96 $ 721 room=.
+-> s
+T 528 mode=game_loop           Borin Coalbeard(dwa) F1@( 8,15) HP 84/84 MP 0/0 Hu 95 $ 721 room=.
+-> e
+T 529 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9,15) HP 84/84 MP 0/0 Hu 94 $ 721 room=M vs Bat(L0 HP12/12)
+-> a
+T 530 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9,15) HP 83/84 MP 0/0 Hu 94 $ 721 room=M vs Bat(L0 HP12/12)
+-> a
+T 531 mode=combat_victory      Borin Coalbeard(dwa) F1@( 9,15) HP 83/84 MP 0/0 Hu 94 $ 723 room=.
+-> back
+T 532 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,15) HP 83/84 MP 0/0 Hu 94 $ 723 room=.
+-> n
+T 533 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9,14) HP 83/84 MP 0/0 Hu 93 $ 723 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 534 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9,14) HP 82/84 MP 0/0 Hu 93 $ 723 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 535 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9,14) HP 81/84 MP 0/0 Hu 93 $ 723 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 536 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9,14) HP 81/84 MP 0/0 Hu 93 $ 723 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 537 mode=combat_mode         Borin Coalbeard(dwa) F1@( 9,14) HP 80/84 MP 0/0 Hu 93 $ 723 room=M vs Skeleton(L0 HP1/25)
+-> a
+T 538 mode=combat_victory      Borin Coalbeard(dwa) F1@( 9,14) HP 80/84 MP 0/0 Hu 93 $ 728 room=.
+-> back
+T 539 mode=game_loop           Borin Coalbeard(dwa) F1@( 9,14) HP 80/84 MP 0/0 Hu 93 $ 728 room=.
+-> e
+T 540 mode=game_loop           Borin Coalbeard(dwa) F1@(10,14) HP 81/84 MP 0/0 Hu 92 $ 728 room=.
+-> i
+T 541 mode=inventory           Borin Coalbeard(dwa) F1@(10,14) HP 81/84 MP 0/0 Hu 92 $ 728 room=.
+-> eat2
+T 542 mode=inventory           Borin Coalbeard(dwa) F1@(10,14) HP 81/84 MP 0/0 Hu 97 $ 728 room=.
+-> x
+T 543 mode=game_loop           Borin Coalbeard(dwa) F1@(10,14) HP 81/84 MP 0/0 Hu 97 $ 728 room=.
+-> n
+T 544 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 81/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 545 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 81/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 546 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 80/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 547 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 80/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP11/15)
+-> a
+T 548 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 79/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP7/15)
+-> a
+T 549 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 78/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP7/15)
+-> a
+T 550 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 78/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP7/15)
+-> a
+T 551 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 78/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP7/15)
+-> a
+T 552 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 78/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP3/15)
+-> a
+T 553 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 77/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP3/15)
+-> a
+T 554 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 76/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP3/15)
+-> a
+T 555 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,13) HP 75/84 MP 0/0 Hu 96 $ 728 room=M vs Giant Centipede(L0 HP3/15)
+-> a
+T 556 mode=combat_victory      Borin Coalbeard(dwa) F1@(10,13) HP 74/84 MP 0/0 Hu 96 $ 881 room=.
+-> back
+T 557 mode=game_loop           Borin Coalbeard(dwa) F1@(10,13) HP 74/84 MP 0/0 Hu 96 $ 881 room=.
+-> i
+T 558 mode=inventory           Borin Coalbeard(dwa) F1@(10,13) HP 74/84 MP 0/0 Hu 96 $ 881 room=.
+-> u5
+T 559 mode=inventory           Borin Coalbeard(dwa) F1@(10,13) HP 84/84 MP 0/0 Hu 96 $ 881 room=.
+-> x
+T 560 mode=game_loop           Borin Coalbeard(dwa) F1@(10,13) HP 84/84 MP 0/0 Hu 96 $ 881 room=.
+-> i
+T 561 mode=inventory           Borin Coalbeard(dwa) F1@(10,13) HP 84/84 MP 0/0 Hu 96 $ 881 room=.
+-> e2
+T 562 mode=inventory           Borin Coalbeard(dwa) F1@(10,13) HP 84/84 MP 0/0 Hu 96 $ 881 room=.
+-> e3
+T 563 mode=inventory           Borin Coalbeard(dwa) F1@(10,13) HP 84/84 MP 0/0 Hu 96 $ 881 room=.
+-> x
+T 564 mode=game_loop           Borin Coalbeard(dwa) F1@(10,13) HP 84/84 MP 0/0 Hu 96 $ 881 room=.
+-> n
+T 565 mode=combat_mode         Borin Coalbeard(dwa) F1@(10,12) HP 84/84 MP 0/0 Hu 95 $ 881 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 566 mode=combat_victory      Borin Coalbeard(dwa) F1@(10,12) HP 84/84 MP 0/0 Hu 95 $ 883 room=.
+-> back
+T 567 mode=game_loop           Borin Coalbeard(dwa) F1@(10,12) HP 84/84 MP 0/0 Hu 95 $ 883 room=.
+-> e
+T 568 mode=combat_mode         Borin Coalbeard(dwa) F1@(11,12) HP 84/84 MP 0/0 Hu 94 $ 883 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 569 mode=combat_victory      Borin Coalbeard(dwa) F1@(11,12) HP 84/84 MP 0/0 Hu 94 $ 890 room=.
+-> back
+T 570 mode=game_loop           Borin Coalbeard(dwa) F1@(11,12) HP 84/84 MP 0/0 Hu 94 $ 890 room=.
+-> l
+T 571 mode=game_loop           Borin Coalbeard(dwa) F1@(11,12) HP 84/84 MP 0/0 Hu 94 $ 890 room=.
+-> e
+T 572 mode=game_loop           Borin Coalbeard(dwa) F1@(12,12) HP 84/84 MP 0/0 Hu 93 $ 890 room=.
+-> s
+T 573 mode=combat_mode         Borin Coalbeard(dwa) F1@(12,13) HP 84/84 MP 0/0 Hu 92 $ 890 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 574 mode=combat_victory      Borin Coalbeard(dwa) F1@(12,13) HP 84/84 MP 0/0 Hu 92 $ 897 room=.
+-> back
+T 575 mode=game_loop           Borin Coalbeard(dwa) F1@(12,13) HP 84/84 MP 0/0 Hu 92 $ 897 room=.
+-> s
+T 576 mode=game_loop           Borin Coalbeard(dwa) F1@(12,14) HP 84/84 MP 0/0 Hu 91 $ 897 room=.
+-> l
+T 577 mode=game_loop           Borin Coalbeard(dwa) F1@(12,14) HP 84/84 MP 0/0 Hu 91 $ 897 room=.
+-> e
+T 578 mode=game_loop           Borin Coalbeard(dwa) F1@(13,14) HP 84/84 MP 0/0 Hu 90 $ 897 room=.
+-> l
+T 579 mode=game_loop           Borin Coalbeard(dwa) F1@(13,14) HP 84/84 MP 0/0 Hu 90 $ 897 room=.
+-> s
+T 580 mode=game_loop           Borin Coalbeard(dwa) F1@(13,15) HP 84/84 MP 0/0 Hu 89 $ 897 room=.
+-> i
+T 581 mode=inventory           Borin Coalbeard(dwa) F1@(13,15) HP 84/84 MP 0/0 Hu 89 $ 897 room=.
+-> eat1
+T 582 mode=inventory           Borin Coalbeard(dwa) F1@(13,15) HP 84/84 MP 0/0 Hu 94 $ 897 room=.
+-> x
+T 583 mode=game_loop           Borin Coalbeard(dwa) F1@(13,15) HP 84/84 MP 0/0 Hu 94 $ 897 room=.
+-> e
+T 584 mode=game_loop           Borin Coalbeard(dwa) F1@(14,15) HP 84/84 MP 0/0 Hu 93 $ 897 room=.
+-> l
+T 585 mode=game_loop           Borin Coalbeard(dwa) F1@(14,15) HP 84/84 MP 0/0 Hu 93 $ 897 room=.
+-> n
+T 586 mode=game_loop           Borin Coalbeard(dwa) F1@(14,14) HP 84/84 MP 0/0 Hu 92 $ 897 room=.
+-> n
+T 587 mode=combat_mode         Borin Coalbeard(dwa) F1@(14,13) HP 84/84 MP 0/0 Hu 91 $ 897 room=M vs Goblin(L0 HP12/12)
+-> a
+T 588 mode=combat_mode         Borin Coalbeard(dwa) F1@(14,13) HP 83/84 MP 0/0 Hu 91 $ 897 room=M vs Goblin(L0 HP12/12)
+-> a
+T 589 mode=combat_victory      Borin Coalbeard(dwa) F1@(14,13) HP 83/94 MP 0/0 Hu 91 $ 1148 room=.
+-> back
+T 590 mode=game_loop           Borin Coalbeard(dwa) F1@(14,13) HP 83/94 MP 0/0 Hu 91 $ 1148 room=.
+-> l
+T 591 mode=game_loop           Borin Coalbeard(dwa) F1@(14,13) HP 83/94 MP 0/0 Hu 91 $ 1148 room=.
+-> e
+T 592 mode=stairs_down_mode    Borin Coalbeard(dwa) F1@(15,13) HP 83/94 MP 0/0 Hu 90 $ 1148 room=D
+-> d
+T 593 mode=stairs_up_mode      Borin Coalbeard(dwa) F2@( 1, 1) HP 83/94 MP 0/0 Hu 90 $ 1148 room=U
+-> e
+T 594 mode=game_loop           Borin Coalbeard(dwa) F2@( 2, 1) HP 84/94 MP 0/0 Hu 89 $ 1148 room=.
+-> i
+T 595 mode=inventory           Borin Coalbeard(dwa) F2@( 2, 1) HP 84/94 MP 0/0 Hu 89 $ 1148 room=.
+-> eat1
+T 596 mode=inventory           Borin Coalbeard(dwa) F2@( 2, 1) HP 84/94 MP 0/0 Hu 94 $ 1148 room=.
+-> eat2
+T 597 mode=inventory           Borin Coalbeard(dwa) F2@( 2, 1) HP 84/94 MP 0/0 Hu 99 $ 1148 room=.
+-> x
+T 598 mode=game_loop           Borin Coalbeard(dwa) F2@( 2, 1) HP 84/94 MP 0/0 Hu 99 $ 1148 room=.
+-> l
+T 599 mode=game_loop           Borin Coalbeard(dwa) F2@( 2, 1) HP 84/94 MP 0/0 Hu 99 $ 1148 room=.
+-> s
+T 600 mode=chest_mode          Borin Coalbeard(dwa) F2@( 2, 2) HP 84/94 MP 0/0 Hu 98 $ 1148 room=C
+-> o
+T 601 mode=game_loop           Borin Coalbeard(dwa) F2@( 2, 2) HP 84/94 MP 0/0 Hu 98 $ 1198 room=.
+-> l
+T 602 mode=game_loop           Borin Coalbeard(dwa) F2@( 2, 2) HP 84/94 MP 0/0 Hu 98 $ 1198 room=.
+-> w
+T 603 mode=game_loop           Borin Coalbeard(dwa) F2@( 1, 2) HP 85/94 MP 0/0 Hu 97 $ 1198 room=.
+-> l
+T 604 mode=game_loop           Borin Coalbeard(dwa) F2@( 1, 2) HP 85/94 MP 0/0 Hu 97 $ 1198 room=.
+-> s
+T 605 mode=game_loop           Borin Coalbeard(dwa) F2@( 1, 3) HP 85/94 MP 0/0 Hu 96 $ 1198 room=.
+-> e
+T 606 mode=combat_mode         Borin Coalbeard(dwa) F2@( 2, 3) HP 86/94 MP 0/0 Hu 95 $ 1198 room=M vs Bugbear(L1 HP55/55)
+-> a
+T 607 mode=combat_mode         Borin Coalbeard(dwa) F2@( 2, 3) HP 85/94 MP 0/0 Hu 95 $ 1198 room=M vs Bugbear(L1 HP55/55)
+-> a
+T 608 mode=combat_mode         Borin Coalbeard(dwa) F2@( 2, 3) HP 84/94 MP 0/0 Hu 95 $ 1198 room=M vs Bugbear(L1 HP34/55)
+-> a
+T 609 mode=combat_mode         Borin Coalbeard(dwa) F2@( 2, 3) HP 84/94 MP 0/0 Hu 95 $ 1198 room=M vs Bugbear(L1 HP13/55)
+-> a
+T 610 mode=combat_mode         Borin Coalbeard(dwa) F2@( 2, 3) HP 83/94 MP 0/0 Hu 95 $ 1198 room=M vs Bugbear(L1 HP13/55)
+-> a
+T 611 mode=combat_mode         Borin Coalbeard(dwa) F2@( 2, 3) HP 82/94 MP 0/0 Hu 95 $ 1198 room=M vs Bugbear(L1 HP13/55)
+-> a
+T 612 mode=combat_victory      Borin Coalbeard(dwa) F2@( 2, 3) HP 82/94 MP 0/0 Hu 95 $ 1200 room=.
+-> back
+T 613 mode=game_loop           Borin Coalbeard(dwa) F2@( 2, 3) HP 82/94 MP 0/0 Hu 95 $ 1200 room=.
+-> l
+T 614 mode=game_loop           Borin Coalbeard(dwa) F2@( 2, 3) HP 82/94 MP 0/0 Hu 95 $ 1200 room=.
+-> e
+T 615 mode=garden_mode         Borin Coalbeard(dwa) F2@( 3, 3) HP 82/94 MP 0/0 Hu 94 $ 1200 room=G
+-> h
+T 616 mode=game_loop           Borin Coalbeard(dwa) F2@( 3, 3) HP 82/94 MP 0/0 Hu 94 $ 1200 room=.
+-> l
+T 617 mode=game_loop           Borin Coalbeard(dwa) F2@( 3, 3) HP 82/94 MP 0/0 Hu 94 $ 1200 room=.
+-> s
+T 618 mode=library_mode        Borin Coalbeard(dwa) F2@( 3, 4) HP 83/94 MP 0/0 Hu 93 $ 1200 room=L
+-> r
+T 619 mode=library_read_decision_mode Borin Coalbeard(dwa) F2@( 3, 4) HP 83/94 MP 0/0 Hu 93 $ 1200 room=L
+-> y
+T 620 mode=game_loop           Borin Coalbeard(dwa) F2@( 3, 4) HP 83/94 MP 0/0 Hu 93 $ 1250 room=.
+-> l
+T 621 mode=game_loop           Borin Coalbeard(dwa) F2@( 3, 4) HP 83/94 MP 0/0 Hu 93 $ 1250 room=.
+-> e
+T 622 mode=combat_mode         Borin Coalbeard(dwa) F2@( 4, 4) HP 83/94 MP 0/0 Hu 92 $ 1250 room=M vs Goblin(L1 HP30/30)
+-> a
+T 623 mode=combat_mode         Borin Coalbeard(dwa) F2@( 4, 4) HP 82/94 MP 0/0 Hu 92 $ 1250 room=M vs Goblin(L1 HP7/30)
+-> a
+T 624 mode=combat_victory      Borin Coalbeard(dwa) F2@( 4, 4) HP 81/94 MP 0/0 Hu 92 $ 1258 room=.
+-> back
+T 625 mode=game_loop           Borin Coalbeard(dwa) F2@( 4, 4) HP 81/94 MP 0/0 Hu 92 $ 1258 room=.
+-> e
+T 626 mode=dungeon_mode        Borin Coalbeard(dwa) F2@( 5, 4) HP 82/94 MP 0/0 Hu 91 $ 1258 room=N
+-> u
+T 627 mode=dungeon_unlocked_mode Borin Coalbeard(dwa) F2@( 5, 4) HP 82/94 MP 0/0 Hu 91 $ 1258 room=N
+-> r
+T 628 mode=game_loop           Borin Coalbeard(dwa) F2@( 5, 4) HP 82/94 MP 0/0 Hu 91 $ 1258 room=N
+-> i
+T 629 mode=inventory           Borin Coalbeard(dwa) F2@( 5, 4) HP 82/94 MP 0/0 Hu 91 $ 1258 room=N
+-> eat1
+T 630 mode=inventory           Borin Coalbeard(dwa) F2@( 5, 4) HP 82/94 MP 0/0 Hu 96 $ 1258 room=N
+-> x
+T 631 mode=game_loop           Borin Coalbeard(dwa) F2@( 5, 4) HP 82/94 MP 0/0 Hu 96 $ 1258 room=N
+-> l
+T 632 mode=game_loop           Borin Coalbeard(dwa) F2@( 5, 4) HP 82/94 MP 0/0 Hu 96 $ 1258 room=N
+-> e
+T 633 mode=pool_mode           Borin Coalbeard(dwa) F2@( 6, 4) HP 82/94 MP 0/0 Hu 95 $ 1258 room=P
+-> dr
+T 634 mode=death_screen        Borin Coalbeard(dwa) F2@( 6, 4) HP -11/94 MP 0/0 Hu 95 $ 1258 room=P
 
-=== run finished: turns=106 floor=1 hp=-10/64 gold=289 alive=False mode=death_screen ===
+=== run finished: turns=634 floor=2 hp=-11/94 gold=1258 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00999_dwarf.html

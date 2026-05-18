@@ -409,2190 +409,1318 @@ T 195 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,10) HP 39/40 MP 
 T 196 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 3,10) HP 39/40 MP 0/0 Hu 70 $ 722 room=M vs Lichen(L0 HP10/10)
 -> f
 T 197 mode=flee_direction_mode Thranduil the Bowyer(elf) F1@( 3,10) HP 38/40 MP 0/0 Hu 70 $ 722 room=M
--> n
-T 198 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 3, 9) HP 38/40 MP 0/0 Hu 70 $ 722 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 199 mode=combat_victory      Thranduil the Bowyer(elf) F1@( 3, 9) HP 38/40 MP 0/0 Hu 70 $ 729 room=.
--> back
-T 200 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 9) HP 38/40 MP 0/0 Hu 70 $ 729 room=.
--> e
-T 201 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4, 9) HP 38/40 MP 0/0 Hu 69 $ 729 room=M vs Zombie(L0 HP35/35)
--> a
-T 202 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4, 9) HP 37/40 MP 0/0 Hu 69 $ 729 room=M vs Zombie(L0 HP13/35)
--> f
-T 203 mode=flee_direction_mode Thranduil the Bowyer(elf) F1@( 4, 9) HP 37/40 MP 0/0 Hu 69 $ 729 room=M
--> s
-T 204 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4,10) HP 37/40 MP 0/0 Hu 69 $ 729 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 205 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4,10) HP 36/40 MP 0/0 Hu 69 $ 729 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 206 mode=combat_victory      Thranduil the Bowyer(elf) F1@( 4,10) HP 36/40 MP 0/0 Hu 69 $ 733 room=.
--> back
-T 207 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4,10) HP 36/40 MP 0/0 Hu 69 $ 733 room=.
--> l
-T 208 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4,10) HP 36/40 MP 0/0 Hu 69 $ 733 room=.
--> s
-T 209 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4,11) HP 37/40 MP 0/0 Hu 68 $ 733 room=.
--> l
-T 210 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4,11) HP 37/40 MP 0/0 Hu 68 $ 733 room=.
--> l
-T 211 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4,11) HP 37/40 MP 0/0 Hu 68 $ 733 room=.
 -> w
-T 212 mode=garden_mode         Thranduil the Bowyer(elf) F1@( 3,11) HP 37/40 MP 0/0 Hu 67 $ 733 room=G
+T 198 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,10) HP 38/40 MP 0/0 Hu 70 $ 722 room=.
+-> s
+T 199 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,11) HP 38/40 MP 0/0 Hu 69 $ 722 room=.
+-> l
+T 200 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,11) HP 38/40 MP 0/0 Hu 69 $ 722 room=.
+-> e
+T 201 mode=garden_mode         Thranduil the Bowyer(elf) F1@( 3,11) HP 39/40 MP 0/0 Hu 68 $ 722 room=G
 -> h
-T 213 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,11) HP 37/40 MP 0/0 Hu 67 $ 733 room=.
+T 202 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,11) HP 39/40 MP 0/0 Hu 68 $ 722 room=.
 -> l
-T 214 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,11) HP 37/40 MP 0/0 Hu 67 $ 733 room=.
+T 203 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,11) HP 39/40 MP 0/0 Hu 68 $ 722 room=.
 -> s
-T 215 mode=dungeon_mode        Thranduil the Bowyer(elf) F1@( 3,12) HP 37/40 MP 0/0 Hu 66 $ 733 room=N
+T 204 mode=dungeon_mode        Thranduil the Bowyer(elf) F1@( 3,12) HP 39/40 MP 0/0 Hu 67 $ 722 room=N
 -> u
-T 216 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,12) HP 37/40 MP 0/0 Hu 66 $ 733 room=N
+T 205 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,12) HP 39/40 MP 0/0 Hu 67 $ 722 room=N
 -> w
-T 217 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,12) HP 37/40 MP 0/0 Hu 65 $ 733 room=.
+T 206 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,12) HP 39/40 MP 0/0 Hu 66 $ 722 room=.
 -> l
-T 218 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,12) HP 37/40 MP 0/0 Hu 65 $ 733 room=.
--> n
-T 219 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,11) HP 38/40 MP 0/0 Hu 64 $ 733 room=.
--> n
-T 220 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,10) HP 38/40 MP 0/0 Hu 63 $ 733 room=.
+T 207 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,12) HP 39/40 MP 0/0 Hu 66 $ 722 room=.
+-> w
+T 208 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,12) HP 39/40 MP 0/0 Hu 65 $ 722 room=.
 -> l
-T 221 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,10) HP 38/40 MP 0/0 Hu 63 $ 733 room=.
--> n
-T 222 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 9) HP 38/40 MP 0/0 Hu 62 $ 733 room=.
--> w
-T 223 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 9) HP 38/40 MP 0/0 Hu 61 $ 733 room=.
--> n
-T 224 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 8) HP 39/40 MP 0/0 Hu 60 $ 733 room=.
--> n
-T 225 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 7) HP 39/40 MP 0/0 Hu 59 $ 733 room=.
--> n
-T 226 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 6) HP 39/40 MP 0/0 Hu 58 $ 733 room=.
--> n
-T 227 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 5) HP 39/40 MP 0/0 Hu 57 $ 733 room=.
--> n
-T 228 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 4) HP 39/40 MP 0/0 Hu 56 $ 733 room=.
--> n
-T 229 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 3) HP 39/40 MP 0/0 Hu 55 $ 733 room=.
--> n
-T 230 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 2) HP 39/40 MP 0/0 Hu 54 $ 733 room=.
--> l
-T 231 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 2) HP 39/40 MP 0/0 Hu 54 $ 733 room=.
--> e
-T 232 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 39/40 MP 0/0 Hu 53 $ 733 room=.
--> e
-T 233 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 39/40 MP 0/0 Hu 52 $ 733 room=.
--> e
-T 234 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 39/40 MP 0/0 Hu 51 $ 733 room=.
--> n
-T 235 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 39/40 MP 0/0 Hu 50 $ 733 room=.
--> w
-T 236 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 39/40 MP 0/0 Hu 49 $ 733 room=.
--> i
-T 237 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 1) HP 39/40 MP 0/0 Hu 49 $ 733 room=.
--> eat1
-T 238 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 1) HP 39/40 MP 0/0 Hu100 $ 733 room=.
--> x
-T 239 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 39/40 MP 0/0 Hu100 $ 733 room=.
--> w
-T 240 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 39/40 MP 0/0 Hu 99 $ 733 room=.
--> l
-T 241 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 39/40 MP 0/0 Hu 99 $ 733 room=.
+T 209 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,12) HP 39/40 MP 0/0 Hu 65 $ 722 room=.
 -> s
-T 242 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 98 $ 733 room=.
--> e
-T 243 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 97 $ 733 room=.
--> e
-T 244 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 96 $ 733 room=.
--> n
-T 245 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 95 $ 733 room=.
--> w
-T 246 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 94 $ 733 room=.
--> w
-T 247 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 93 $ 733 room=.
--> s
-T 248 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 92 $ 733 room=.
--> e
-T 249 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 91 $ 733 room=.
--> e
-T 250 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 90 $ 733 room=.
--> l
-T 251 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 90 $ 733 room=.
--> n
-T 252 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 733 room=.
--> w
-T 253 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 88 $ 733 room=.
--> w
-T 254 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 87 $ 733 room=.
--> s
-T 255 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 86 $ 733 room=.
--> e
-T 256 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 85 $ 733 room=.
--> e
-T 257 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 84 $ 733 room=.
--> n
-T 258 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 83 $ 733 room=.
--> w
-T 259 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 82 $ 733 room=.
--> w
-T 260 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 81 $ 733 room=.
--> l
-T 261 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 81 $ 733 room=.
--> s
-T 262 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 80 $ 733 room=.
--> e
-T 263 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 79 $ 733 room=.
--> e
-T 264 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 78 $ 733 room=.
--> n
-T 265 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 77 $ 733 room=.
--> w
-T 266 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 76 $ 733 room=.
--> w
-T 267 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 75 $ 733 room=.
--> s
-T 268 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 74 $ 733 room=.
--> e
-T 269 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 73 $ 733 room=.
--> e
-T 270 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 72 $ 733 room=.
--> l
-T 271 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 72 $ 733 room=.
--> n
-T 272 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 733 room=.
--> w
-T 273 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 70 $ 733 room=.
--> w
-T 274 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 69 $ 733 room=.
--> s
-T 275 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 68 $ 733 room=.
--> e
-T 276 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 67 $ 733 room=.
--> e
-T 277 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 66 $ 733 room=.
--> n
-T 278 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 65 $ 733 room=.
--> e
-T 279 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 64 $ 733 room=.
--> w
-T 280 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 63 $ 733 room=.
--> l
-T 281 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 63 $ 733 room=.
--> w
-T 282 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 62 $ 733 room=.
--> s
-T 283 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 61 $ 733 room=.
--> e
-T 284 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 60 $ 733 room=.
--> n
-T 285 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 59 $ 733 room=.
--> e
-T 286 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 58 $ 733 room=.
--> w
-T 287 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 57 $ 733 room=.
--> w
-T 288 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 56 $ 733 room=.
--> s
-T 289 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 55 $ 733 room=.
--> e
-T 290 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 54 $ 733 room=.
--> l
-T 291 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 54 $ 733 room=.
--> n
-T 292 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 733 room=.
--> e
-T 293 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 52 $ 733 room=.
--> w
-T 294 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 51 $ 733 room=.
--> w
-T 295 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 50 $ 733 room=.
--> s
-T 296 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 49 $ 733 room=.
--> i
-T 297 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 49 $ 733 room=.
--> eat1
-T 298 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 99 $ 733 room=.
--> x
-T 299 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 99 $ 733 room=.
--> e
-T 300 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 98 $ 733 room=.
--> l
-T 301 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 98 $ 733 room=.
--> n
-T 302 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 97 $ 733 room=.
--> e
-T 303 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 96 $ 733 room=.
--> w
-T 304 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 95 $ 733 room=.
--> w
-T 305 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 94 $ 733 room=.
--> s
-T 306 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 93 $ 733 room=.
--> e
-T 307 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 92 $ 733 room=.
--> n
-T 308 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 91 $ 733 room=.
--> e
-T 309 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 90 $ 733 room=.
--> w
-T 310 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 733 room=.
--> l
-T 311 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 733 room=.
--> w
-T 312 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 88 $ 733 room=.
--> s
-T 313 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 87 $ 733 room=.
--> e
-T 314 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 86 $ 733 room=.
--> n
-T 315 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 85 $ 733 room=.
--> e
-T 316 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 84 $ 733 room=.
--> w
-T 317 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 83 $ 733 room=.
--> w
-T 318 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 82 $ 733 room=.
--> s
-T 319 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 81 $ 733 room=.
--> e
-T 320 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 80 $ 733 room=.
--> l
-T 321 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 80 $ 733 room=.
--> n
-T 322 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 733 room=.
--> e
-T 323 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 78 $ 733 room=.
--> w
-T 324 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 77 $ 733 room=.
--> w
-T 325 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 76 $ 733 room=.
--> s
-T 326 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 75 $ 733 room=.
--> e
-T 327 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 74 $ 733 room=.
--> n
-T 328 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 73 $ 733 room=.
--> e
-T 329 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 72 $ 733 room=.
--> w
-T 330 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 733 room=.
--> l
-T 331 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 733 room=.
--> w
-T 332 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 70 $ 733 room=.
--> s
-T 333 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 69 $ 733 room=.
--> e
-T 334 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 68 $ 733 room=.
--> n
-T 335 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 67 $ 733 room=.
--> e
-T 336 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 66 $ 733 room=.
--> w
-T 337 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 65 $ 733 room=.
--> w
-T 338 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 64 $ 733 room=.
--> s
-T 339 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 63 $ 733 room=.
--> e
-T 340 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 62 $ 733 room=.
--> l
-T 341 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 62 $ 733 room=.
--> n
-T 342 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 61 $ 733 room=.
--> e
-T 343 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 60 $ 733 room=.
--> w
-T 344 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 59 $ 733 room=.
--> w
-T 345 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 58 $ 733 room=.
--> s
-T 346 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 57 $ 733 room=.
--> e
-T 347 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 56 $ 733 room=.
--> n
-T 348 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 55 $ 733 room=.
--> e
-T 349 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 54 $ 733 room=.
--> w
-T 350 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 733 room=.
--> l
-T 351 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 733 room=.
--> w
-T 352 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 52 $ 733 room=.
--> s
-T 353 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 51 $ 733 room=.
--> e
-T 354 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 50 $ 733 room=.
--> n
-T 355 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 733 room=.
--> i
-T 356 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 733 room=.
--> eat1
-T 357 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 733 room=.
--> x
-T 358 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 733 room=.
--> e
-T 359 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 98 $ 733 room=.
--> w
-T 360 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 97 $ 733 room=.
--> l
-T 361 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 97 $ 733 room=.
--> w
-T 362 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 96 $ 733 room=.
--> s
-T 363 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 95 $ 733 room=.
--> e
-T 364 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 94 $ 733 room=.
--> n
-T 365 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 93 $ 733 room=.
--> e
-T 366 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 92 $ 733 room=.
--> w
-T 367 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 91 $ 733 room=.
--> w
-T 368 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 90 $ 733 room=.
--> s
-T 369 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 89 $ 733 room=.
--> e
-T 370 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 88 $ 733 room=.
--> l
-T 371 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 88 $ 733 room=.
--> n
-T 372 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 87 $ 733 room=.
--> e
-T 373 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 86 $ 733 room=.
--> w
-T 374 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 85 $ 733 room=.
--> w
-T 375 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 84 $ 733 room=.
--> s
-T 376 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 83 $ 733 room=.
--> e
-T 377 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 82 $ 733 room=.
--> n
-T 378 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 81 $ 733 room=.
--> e
-T 379 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 80 $ 733 room=.
--> s
-T 380 mode=altar_mode          Thranduil the Bowyer(elf) F1@( 5, 2) HP 40/40 MP 0/0 Hu 79 $ 733 room=A
--> pray
-T 381 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 2) HP 40/40 MP 0/0 Hu 79 $ 733 room=.
--> s
-T 382 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 3) HP 40/40 MP 0/0 Hu 78 $ 733 room=.
--> s
-T 383 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 4) HP 40/40 MP 0/0 Hu 77 $ 733 room=.
--> s
-T 384 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 5) HP 40/40 MP 0/0 Hu 76 $ 733 room=.
--> e
-T 385 mode=game_loop           Thranduil the Bowyer(elf) F1@( 6, 5) HP 40/40 MP 0/0 Hu 75 $ 733 room=.
--> s
-T 386 mode=garden_mode         Thranduil the Bowyer(elf) F1@( 6, 6) HP 40/40 MP 0/0 Hu 74 $ 733 room=G
--> h
-T 387 mode=game_loop           Thranduil the Bowyer(elf) F1@( 6, 6) HP 40/40 MP 0/0 Hu 74 $ 733 room=.
--> s
-T 388 mode=game_loop           Thranduil the Bowyer(elf) F1@( 6, 7) HP 40/40 MP 0/0 Hu 73 $ 733 room=.
--> s
-T 389 mode=game_loop           Thranduil the Bowyer(elf) F1@( 6, 8) HP 40/40 MP 0/0 Hu 72 $ 733 room=.
--> e
-T 390 mode=game_loop           Thranduil the Bowyer(elf) F1@( 7, 8) HP 40/40 MP 0/0 Hu 71 $ 733 room=.
--> l
-T 391 mode=game_loop           Thranduil the Bowyer(elf) F1@( 7, 8) HP 40/40 MP 0/0 Hu 71 $ 733 room=.
--> s
-T 392 mode=game_loop           Thranduil the Bowyer(elf) F1@( 7, 9) HP 40/40 MP 0/0 Hu 70 $ 733 room=.
--> l
-T 393 mode=game_loop           Thranduil the Bowyer(elf) F1@( 7, 9) HP 40/40 MP 0/0 Hu 70 $ 733 room=.
--> e
-T 394 mode=game_loop           Thranduil the Bowyer(elf) F1@( 8, 9) HP 40/40 MP 0/0 Hu 69 $ 733 room=.
--> e
-T 395 mode=game_loop           Thranduil the Bowyer(elf) F1@( 9, 9) HP 40/40 MP 0/0 Hu 68 $ 733 room=.
--> e
-T 396 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 733 room=V
--> r1
-T 397 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 704 room=V
--> b12
-T 398 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 694 room=V
--> b4
-T 399 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 644 room=V
--> b4
-T 400 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 614 room=V
--> b4
-T 401 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 584 room=V
--> b4
-T 402 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 554 room=V
--> b4
-T 403 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 524 room=V
--> b5
-T 404 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 374 room=V
--> b1
-T 405 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 329 room=V
--> b1
-T 406 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 314 room=V
--> id9
-T 407 mode=vendor_shop         Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 289 room=V
--> x
-T 408 mode=game_loop           Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 289 room=V
--> i
-T 409 mode=inventory           Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 289 room=V
--> e1
-T 410 mode=inventory           Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 289 room=V
--> x
-T 411 mode=game_loop           Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 67 $ 289 room=V
--> e
-T 412 mode=game_loop           Thranduil the Bowyer(elf) F1@(11, 9) HP 40/40 MP 0/0 Hu 66 $ 289 room=.
--> l
-T 413 mode=game_loop           Thranduil the Bowyer(elf) F1@(11, 9) HP 40/40 MP 0/0 Hu 66 $ 289 room=.
--> n
-T 414 mode=pool_mode           Thranduil the Bowyer(elf) F1@(11, 8) HP 40/40 MP 0/0 Hu 65 $ 289 room=P
--> dr
-T 415 mode=game_loop           Thranduil the Bowyer(elf) F1@(11, 8) HP 40/40 MP 0/0 Hu 65 $ 289 room=.
--> l
-T 416 mode=game_loop           Thranduil the Bowyer(elf) F1@(11, 8) HP 40/40 MP 0/0 Hu 65 $ 289 room=.
--> e
-T 417 mode=combat_mode         Thranduil the Bowyer(elf) F1@(12, 8) HP 40/40 MP 0/0 Hu 64 $ 289 room=M vs Crawling Claw(L0 HP5/5)
--> f
-T 418 mode=flee_direction_mode Thranduil the Bowyer(elf) F1@(12, 8) HP 40/40 MP 0/0 Hu 64 $ 289 room=M
--> w
-T 419 mode=game_loop           Thranduil the Bowyer(elf) F1@(11, 8) HP 40/40 MP 0/0 Hu 64 $ 289 room=.
--> s
-T 420 mode=game_loop           Thranduil the Bowyer(elf) F1@(11, 9) HP 40/40 MP 0/0 Hu 63 $ 289 room=.
--> l
-T 421 mode=game_loop           Thranduil the Bowyer(elf) F1@(11, 9) HP 40/40 MP 0/0 Hu 63 $ 289 room=.
--> w
-T 422 mode=game_loop           Thranduil the Bowyer(elf) F1@(10, 9) HP 40/40 MP 0/0 Hu 62 $ 289 room=V
--> w
-T 423 mode=game_loop           Thranduil the Bowyer(elf) F1@( 9, 9) HP 40/40 MP 0/0 Hu 61 $ 289 room=.
--> w
-T 424 mode=game_loop           Thranduil the Bowyer(elf) F1@( 8, 9) HP 40/40 MP 0/0 Hu 60 $ 289 room=.
--> w
-T 425 mode=game_loop           Thranduil the Bowyer(elf) F1@( 7, 9) HP 40/40 MP 0/0 Hu 59 $ 289 room=.
--> n
-T 426 mode=game_loop           Thranduil the Bowyer(elf) F1@( 7, 8) HP 40/40 MP 0/0 Hu 58 $ 289 room=.
--> n
-T 427 mode=game_loop           Thranduil the Bowyer(elf) F1@( 7, 7) HP 40/40 MP 0/0 Hu 57 $ 289 room=.
--> n
-T 428 mode=game_loop           Thranduil the Bowyer(elf) F1@( 7, 6) HP 40/40 MP 0/0 Hu 56 $ 289 room=.
--> n
-T 429 mode=game_loop           Thranduil the Bowyer(elf) F1@( 7, 5) HP 40/40 MP 0/0 Hu 55 $ 289 room=.
--> w
-T 430 mode=game_loop           Thranduil the Bowyer(elf) F1@( 6, 5) HP 40/40 MP 0/0 Hu 54 $ 289 room=.
--> i
-T 431 mode=inventory           Thranduil the Bowyer(elf) F1@( 6, 5) HP 40/40 MP 0/0 Hu 54 $ 289 room=.
--> eat1
-T 432 mode=inventory           Thranduil the Bowyer(elf) F1@( 6, 5) HP 40/40 MP 0/0 Hu100 $ 289 room=.
--> u8
-T 433 mode=upgrade_scroll_mode Thranduil the Bowyer(elf) F1@( 6, 5) HP 40/40 MP 0/0 Hu100 $ 289 room=.
--> 1
-T 434 mode=inventory           Thranduil the Bowyer(elf) F1@( 6, 5) HP 40/40 MP 0/0 Hu100 $ 289 room=.
--> x
-T 435 mode=game_loop           Thranduil the Bowyer(elf) F1@( 6, 5) HP 40/40 MP 0/0 Hu100 $ 289 room=.
--> w
-T 436 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 5) HP 40/40 MP 0/0 Hu 99 $ 289 room=.
--> w
-T 437 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 5) HP 40/40 MP 0/0 Hu 98 $ 289 room=.
--> s
-T 438 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 6) HP 40/40 MP 0/0 Hu 97 $ 289 room=.
--> w
-T 439 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 6) HP 40/40 MP 0/0 Hu 96 $ 289 room=.
--> w
-T 440 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 6) HP 40/40 MP 0/0 Hu 95 $ 289 room=.
--> l
-T 441 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 6) HP 40/40 MP 0/0 Hu 95 $ 289 room=.
--> w
-T 442 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 6) HP 40/40 MP 0/0 Hu 94 $ 289 room=.
--> s
-T 443 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 7) HP 40/40 MP 0/0 Hu 93 $ 289 room=.
--> s
-T 444 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 8) HP 40/40 MP 0/0 Hu 92 $ 289 room=.
--> s
-T 445 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 9) HP 40/40 MP 0/0 Hu 91 $ 289 room=.
--> e
-T 446 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 9) HP 40/40 MP 0/0 Hu 90 $ 289 room=.
--> s
-T 447 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,10) HP 40/40 MP 0/0 Hu 89 $ 289 room=.
--> s
-T 448 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,11) HP 40/40 MP 0/0 Hu 88 $ 289 room=.
--> s
-T 449 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,12) HP 40/40 MP 0/0 Hu 87 $ 289 room=.
--> w
-T 450 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,12) HP 40/40 MP 0/0 Hu 86 $ 289 room=.
--> l
-T 451 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,12) HP 40/40 MP 0/0 Hu 86 $ 289 room=.
--> s
-T 452 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 1,13) HP 40/40 MP 0/0 Hu 85 $ 289 room=M vs Giant Rat(L0 HP22/22)
+T 210 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 1,13) HP 40/40 MP 0/0 Hu 64 $ 722 room=M vs Stirge(L0 HP6/6)
 -> a
-T 453 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 1,13) HP 39/40 MP 0/0 Hu 85 $ 289 room=M vs Giant Rat(L0 HP22/22)
--> a
-T 454 mode=combat_victory      Thranduil the Bowyer(elf) F1@( 1,13) HP 39/40 MP 0/0 Hu 85 $ 399 room=.
+T 211 mode=combat_victory      Thranduil the Bowyer(elf) F1@( 1,13) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
 -> back
-T 455 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,13) HP 39/40 MP 0/0 Hu 85 $ 399 room=.
+T 212 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,13) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
 -> n
-T 456 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,12) HP 39/40 MP 0/0 Hu 84 $ 399 room=.
+T 213 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,12) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
 -> s
-T 457 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,13) HP 39/40 MP 0/0 Hu 83 $ 399 room=.
+T 214 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,13) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
 -> n
-T 458 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,12) HP 39/40 MP 0/0 Hu 82 $ 399 room=.
+T 215 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1,12) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
 -> e
-T 459 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,12) HP 40/40 MP 0/0 Hu 81 $ 399 room=.
+T 216 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,12) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
 -> n
-T 460 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,11) HP 40/40 MP 0/0 Hu 80 $ 399 room=.
+T 217 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,11) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> n
+T 218 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,10) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> n
+T 219 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 9) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
+-> w
+T 220 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 9) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
 -> l
-T 461 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,11) HP 40/40 MP 0/0 Hu 80 $ 399 room=.
--> e
-T 462 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,11) HP 40/40 MP 0/0 Hu 79 $ 399 room=.
--> e
-T 463 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4,11) HP 40/40 MP 0/0 Hu 78 $ 399 room=.
+T 221 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 9) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
 -> n
-T 464 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4,10) HP 40/40 MP 0/0 Hu 77 $ 399 room=.
--> w
-T 465 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 3,10) HP 40/40 MP 0/0 Hu 76 $ 399 room=M vs Lichen(L0 HP10/10)
--> f
-T 466 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 3,10) HP 39/40 MP 0/0 Hu 76 $ 399 room=M vs Lichen(L0 HP10/10)
--> a
-T 467 mode=combat_victory      Thranduil the Bowyer(elf) F1@( 3,10) HP 39/40 MP 0/0 Hu 76 $ 401 room=.
--> back
-T 468 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,10) HP 39/40 MP 0/0 Hu 76 $ 401 room=.
+T 222 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 8) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
 -> n
-T 469 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 9) HP 39/40 MP 0/0 Hu 75 $ 401 room=.
--> w
-T 470 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 9) HP 39/40 MP 0/0 Hu 74 $ 401 room=.
--> l
-T 471 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 9) HP 39/40 MP 0/0 Hu 74 $ 401 room=.
--> s
-T 472 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,10) HP 39/40 MP 0/0 Hu 73 $ 401 room=.
--> s
-T 473 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,11) HP 40/40 MP 0/0 Hu 72 $ 401 room=.
--> e
-T 474 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,11) HP 40/40 MP 0/0 Hu 71 $ 401 room=.
--> e
-T 475 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4,11) HP 40/40 MP 0/0 Hu 70 $ 401 room=.
--> n
-T 476 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4,10) HP 40/40 MP 0/0 Hu 69 $ 401 room=.
--> n
-T 477 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4, 9) HP 40/40 MP 0/0 Hu 68 $ 401 room=M vs Zombie(L0 HP13/35)
--> a
-T 478 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4, 9) HP 39/40 MP 0/0 Hu 68 $ 401 room=M vs Zombie(L0 HP13/35)
--> f
-T 479 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4, 9) HP 38/40 MP 0/0 Hu 68 $ 401 room=M vs Zombie(L0 HP13/35)
--> a
-T 480 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4, 9) HP 38/40 MP 0/0 Hu 68 $ 401 room=M vs Zombie(L0 HP13/35)
--> a
-T 481 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4, 9) HP 37/40 MP 0/0 Hu 68 $ 401 room=M vs Zombie(L0 HP13/35)
--> a
-T 482 mode=combat_mode         Thranduil the Bowyer(elf) F1@( 4, 9) HP 37/40 MP 0/0 Hu 68 $ 401 room=M vs Zombie(L0 HP13/35)
--> a
-T 483 mode=combat_victory      Thranduil the Bowyer(elf) F1@( 4, 9) HP 37/40 MP 0/0 Hu 68 $ 405 room=.
--> back
-T 484 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 9) HP 37/40 MP 0/0 Hu 68 $ 405 room=.
--> w
-T 485 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 9) HP 37/40 MP 0/0 Hu 67 $ 405 room=.
--> s
-T 486 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3,10) HP 37/40 MP 0/0 Hu 66 $ 405 room=.
--> w
-T 487 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,10) HP 37/40 MP 0/0 Hu 65 $ 405 room=.
--> n
-T 488 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 9) HP 38/40 MP 0/0 Hu 64 $ 405 room=.
--> w
-T 489 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 9) HP 38/40 MP 0/0 Hu 63 $ 405 room=.
--> n
-T 490 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 8) HP 38/40 MP 0/0 Hu 62 $ 405 room=.
--> l
-T 491 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 8) HP 38/40 MP 0/0 Hu 62 $ 405 room=.
--> n
-T 492 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 7) HP 38/40 MP 0/0 Hu 61 $ 405 room=.
--> n
-T 493 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 6) HP 39/40 MP 0/0 Hu 60 $ 405 room=.
--> e
-T 494 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 6) HP 39/40 MP 0/0 Hu 59 $ 405 room=.
--> n
-T 495 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 5) HP 39/40 MP 0/0 Hu 58 $ 405 room=.
--> w
-T 496 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 5) HP 39/40 MP 0/0 Hu 57 $ 405 room=.
--> n
-T 497 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 4) HP 39/40 MP 0/0 Hu 56 $ 405 room=.
--> e
-T 498 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 4) HP 39/40 MP 0/0 Hu 55 $ 405 room=.
--> n
-T 499 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 3) HP 39/40 MP 0/0 Hu 54 $ 405 room=.
--> w
-T 500 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 3) HP 39/40 MP 0/0 Hu 53 $ 405 room=.
--> l
-T 501 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 3) HP 39/40 MP 0/0 Hu 53 $ 405 room=.
--> n
-T 502 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 2) HP 39/40 MP 0/0 Hu 52 $ 405 room=.
--> n
-T 503 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 1) HP 39/40 MP 0/0 Hu 51 $ 405 room=E
--> e
-T 504 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 39/40 MP 0/0 Hu 50 $ 405 room=.
--> e
-T 505 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 39/40 MP 0/0 Hu 49 $ 405 room=.
+T 223 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 7) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
 -> i
-T 506 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 1) HP 39/40 MP 0/0 Hu 49 $ 405 room=.
+T 224 mode=inventory           Thranduil the Bowyer(elf) F1@( 1, 7) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> eat3
+T 225 mode=inventory           Thranduil the Bowyer(elf) F1@( 1, 7) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
 -> eat1
-T 507 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 1) HP 39/40 MP 0/0 Hu 99 $ 405 room=.
+T 226 mode=inventory           Thranduil the Bowyer(elf) F1@( 1, 7) HP 40/40 MP 0/0 Hu100 $ 731 room=.
 -> x
-T 508 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 39/40 MP 0/0 Hu 99 $ 405 room=.
--> e
-T 509 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 39/40 MP 0/0 Hu 98 $ 405 room=.
--> e
-T 510 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 97 $ 405 room=.
+T 227 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 7) HP 40/40 MP 0/0 Hu100 $ 731 room=.
+-> n
+T 228 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 6) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
+-> n
+T 229 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 5) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
+-> n
+T 230 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 4) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
 -> l
-T 511 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 97 $ 405 room=.
--> w
-T 512 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 96 $ 405 room=.
--> s
-T 513 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 95 $ 405 room=.
--> w
-T 514 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 94 $ 405 room=.
+T 231 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 4) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
 -> n
-T 515 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 93 $ 405 room=.
--> w
-T 516 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 92 $ 405 room=.
--> w
-T 517 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 1) HP 40/40 MP 0/0 Hu 91 $ 405 room=E
--> s
-T 518 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 2) HP 40/40 MP 0/0 Hu 90 $ 405 room=.
+T 232 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 3) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
+-> n
+T 233 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 2) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
 -> e
-T 519 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 89 $ 405 room=.
--> s
-T 520 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 3) HP 40/40 MP 0/0 Hu 88 $ 405 room=.
+T 234 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
+-> e
+T 235 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 93 $ 731 room=.
+-> e
+T 236 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
+-> n
+T 237 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 91 $ 731 room=.
+-> e
+T 238 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
+-> w
+T 239 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
+-> w
+T 240 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
 -> l
-T 521 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 3) HP 40/40 MP 0/0 Hu 88 $ 405 room=.
--> e
-T 522 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 3) HP 40/40 MP 0/0 Hu 87 $ 405 room=.
--> n
-T 523 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 86 $ 405 room=.
--> n
-T 524 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 85 $ 405 room=.
--> e
-T 525 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 84 $ 405 room=.
+T 241 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
 -> s
-T 526 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 83 $ 405 room=.
--> n
-T 527 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 82 $ 405 room=.
+T 242 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
 -> e
-T 528 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 81 $ 405 room=.
+T 243 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
+-> n
+T 244 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
+-> e
+T 245 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 84 $ 731 room=.
 -> w
-T 529 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 80 $ 405 room=.
+T 246 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
 -> w
-T 530 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 79 $ 405 room=.
+T 247 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 82 $ 731 room=.
+-> s
+T 248 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> e
+T 249 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
+-> n
+T 250 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
 -> l
-T 531 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 79 $ 405 room=.
+T 251 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
+-> e
+T 252 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
 -> w
-T 532 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 78 $ 405 room=.
+T 253 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
 -> w
-T 533 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 1) HP 40/40 MP 0/0 Hu 77 $ 405 room=E
+T 254 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
 -> s
-T 534 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 2) HP 40/40 MP 0/0 Hu 76 $ 405 room=.
--> s
-T 535 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 3) HP 40/40 MP 0/0 Hu 75 $ 405 room=.
+T 255 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 75 $ 731 room=.
 -> e
-T 536 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 3) HP 40/40 MP 0/0 Hu 74 $ 405 room=.
--> e
-T 537 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 3) HP 40/40 MP 0/0 Hu 73 $ 405 room=.
+T 256 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
 -> n
-T 538 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 72 $ 405 room=.
+T 257 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 73 $ 731 room=.
 -> e
-T 539 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 71 $ 405 room=.
--> n
-T 540 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 70 $ 405 room=.
+T 258 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
+-> w
+T 259 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
+-> w
+T 260 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
 -> l
-T 541 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 70 $ 405 room=.
+T 261 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
+-> s
+T 262 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
 -> e
-T 542 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 69 $ 405 room=.
--> w
-T 543 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 68 $ 405 room=.
--> w
-T 544 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 67 $ 405 room=.
--> w
-T 545 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 66 $ 405 room=.
--> s
-T 546 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 65 $ 405 room=.
--> s
-T 547 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 3) HP 40/40 MP 0/0 Hu 64 $ 405 room=.
--> w
-T 548 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 3) HP 40/40 MP 0/0 Hu 63 $ 405 room=.
--> s
-T 549 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 4) HP 40/40 MP 0/0 Hu 62 $ 405 room=.
+T 263 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
+-> n
+T 264 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
 -> e
-T 550 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 4) HP 40/40 MP 0/0 Hu 61 $ 405 room=.
+T 265 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 66 $ 731 room=.
+-> w
+T 266 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
+-> w
+T 267 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
+-> s
+T 268 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> e
+T 269 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
+-> n
+T 270 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
 -> l
-T 551 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 4) HP 40/40 MP 0/0 Hu 61 $ 405 room=.
--> s
-T 552 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 5) HP 40/40 MP 0/0 Hu 60 $ 405 room=.
--> s
-T 553 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 6) HP 40/40 MP 0/0 Hu 59 $ 405 room=.
+T 271 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
+-> e
+T 272 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
 -> w
-T 554 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 6) HP 40/40 MP 0/0 Hu 58 $ 405 room=.
--> n
-T 555 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 5) HP 40/40 MP 0/0 Hu 57 $ 405 room=.
--> n
-T 556 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 4) HP 40/40 MP 0/0 Hu 56 $ 405 room=.
+T 273 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> w
+T 274 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> s
+T 275 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
 -> e
-T 557 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 4) HP 40/40 MP 0/0 Hu 55 $ 405 room=.
+T 276 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
 -> n
-T 558 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 3) HP 40/40 MP 0/0 Hu 54 $ 405 room=.
+T 277 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
 -> e
-T 559 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 3) HP 40/40 MP 0/0 Hu 53 $ 405 room=.
--> n
-T 560 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 52 $ 405 room=.
+T 278 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> w
+T 279 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
+-> w
+T 280 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
 -> l
-T 561 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 52 $ 405 room=.
--> w
-T 562 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 51 $ 405 room=.
--> n
-T 563 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 50 $ 405 room=.
+T 281 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
+-> s
+T 282 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
 -> e
-T 564 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 49 $ 405 room=.
+T 283 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
+-> n
+T 284 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> i
-T 565 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 49 $ 405 room=.
+T 285 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> eat1
-T 566 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 99 $ 405 room=.
+T 286 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> x
-T 567 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 99 $ 405 room=.
+T 287 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> e
-T 568 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 98 $ 405 room=.
--> s
-T 569 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 97 $ 405 room=.
+T 288 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
 -> w
-T 570 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 96 $ 405 room=.
+T 289 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
+-> w
+T 290 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
 -> l
-T 571 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 96 $ 405 room=.
+T 291 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
 -> s
-T 572 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 3) HP 40/40 MP 0/0 Hu 95 $ 405 room=.
--> w
-T 573 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 3) HP 40/40 MP 0/0 Hu 94 $ 405 room=.
+T 292 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
+-> e
+T 293 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
 -> n
-T 574 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 93 $ 405 room=.
+T 294 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 93 $ 731 room=.
+-> e
+T 295 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
 -> w
-T 575 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 2) HP 40/40 MP 0/0 Hu 92 $ 405 room=.
--> s
-T 576 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 3) HP 40/40 MP 0/0 Hu 91 $ 405 room=.
--> s
-T 577 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 4) HP 40/40 MP 0/0 Hu 90 $ 405 room=.
--> e
-T 578 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 4) HP 40/40 MP 0/0 Hu 89 $ 405 room=.
--> s
-T 579 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 5) HP 40/40 MP 0/0 Hu 88 $ 405 room=.
--> s
-T 580 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 6) HP 40/40 MP 0/0 Hu 87 $ 405 room=.
--> l
-T 581 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 6) HP 40/40 MP 0/0 Hu 87 $ 405 room=.
--> e
-T 582 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 6) HP 40/40 MP 0/0 Hu 86 $ 405 room=.
--> e
-T 583 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 6) HP 40/40 MP 0/0 Hu 85 $ 405 room=.
--> s
-T 584 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 7) HP 40/40 MP 0/0 Hu 84 $ 405 room=.
+T 296 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 91 $ 731 room=.
 -> w
-T 585 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 7) HP 40/40 MP 0/0 Hu 83 $ 405 room=.
+T 297 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
+-> s
+T 298 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
+-> e
+T 299 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
 -> n
-T 586 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 6) HP 40/40 MP 0/0 Hu 82 $ 405 room=.
--> n
-T 587 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 5) HP 40/40 MP 0/0 Hu 81 $ 405 room=.
--> w
-T 588 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 5) HP 40/40 MP 0/0 Hu 80 $ 405 room=.
--> n
-T 589 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 4) HP 40/40 MP 0/0 Hu 79 $ 405 room=.
--> w
-T 590 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 4) HP 40/40 MP 0/0 Hu 78 $ 405 room=.
+T 300 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
 -> l
-T 591 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 4) HP 40/40 MP 0/0 Hu 78 $ 405 room=.
--> n
-T 592 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 3) HP 40/40 MP 0/0 Hu 77 $ 405 room=.
+T 301 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
 -> e
-T 593 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 3) HP 40/40 MP 0/0 Hu 76 $ 405 room=.
+T 302 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
+-> w
+T 303 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
+-> w
+T 304 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 84 $ 731 room=.
+-> s
+T 305 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
+-> e
+T 306 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 82 $ 731 room=.
 -> n
-T 594 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 2) HP 40/40 MP 0/0 Hu 75 $ 405 room=.
+T 307 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> e
+T 308 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
 -> w
-T 595 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 2) HP 40/40 MP 0/0 Hu 74 $ 405 room=.
+T 309 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
+-> w
+T 310 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
+-> l
+T 311 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
+-> s
+T 312 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
+-> e
+T 313 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
 -> n
-T 596 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 1) HP 40/40 MP 0/0 Hu 73 $ 405 room=E
+T 314 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 75 $ 731 room=.
 -> e
-T 597 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 1) HP 40/40 MP 0/0 Hu 72 $ 405 room=.
--> e
-T 598 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 71 $ 405 room=.
--> s
-T 599 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 70 $ 405 room=.
--> s
-T 600 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 3) HP 40/40 MP 0/0 Hu 69 $ 405 room=.
--> l
-T 601 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 3) HP 40/40 MP 0/0 Hu 69 $ 405 room=.
+T 315 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
 -> w
-T 602 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 3) HP 40/40 MP 0/0 Hu 68 $ 405 room=.
--> s
-T 603 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 4) HP 40/40 MP 0/0 Hu 67 $ 405 room=.
--> s
-T 604 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 5) HP 40/40 MP 0/0 Hu 66 $ 405 room=.
--> s
-T 605 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 6) HP 40/40 MP 0/0 Hu 65 $ 405 room=.
+T 316 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 73 $ 731 room=.
 -> w
-T 606 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 6) HP 40/40 MP 0/0 Hu 64 $ 405 room=.
+T 317 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
 -> s
-T 607 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 7) HP 40/40 MP 0/0 Hu 63 $ 405 room=.
--> s
-T 608 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 8) HP 40/40 MP 0/0 Hu 62 $ 405 room=.
--> s
-T 609 mode=game_loop           Thranduil the Bowyer(elf) F1@( 1, 9) HP 40/40 MP 0/0 Hu 61 $ 405 room=.
+T 318 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
 -> e
-T 610 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 9) HP 40/40 MP 0/0 Hu 60 $ 405 room=.
+T 319 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
+-> n
+T 320 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
 -> l
-T 611 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2, 9) HP 40/40 MP 0/0 Hu 60 $ 405 room=.
--> s
-T 612 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,10) HP 40/40 MP 0/0 Hu 59 $ 405 room=.
--> s
-T 613 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,11) HP 40/40 MP 0/0 Hu 58 $ 405 room=.
--> s
-T 614 mode=game_loop           Thranduil the Bowyer(elf) F1@( 2,12) HP 40/40 MP 0/0 Hu 57 $ 405 room=.
--> s
-T 615 mode=warp_mode           Thranduil the Bowyer(elf) F1@( 2,13) HP 40/40 MP 0/0 Hu 56 $ 405 room=W
--> y
-T 616 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11, 6) HP 40/40 MP 0/0 Hu 56 $ 405 room=M vs Lichen(L1 HP10/10)
--> a
-T 617 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11, 6) HP 39/40 MP 0/0 Hu 56 $ 405 room=M vs Lichen(L1 HP10/10)
--> a
-T 618 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11, 6) HP 38/40 MP 0/0 Hu 56 $ 405 room=M vs Lichen(L1 HP10/10)
--> a
-T 619 mode=combat_victory      Thranduil the Bowyer(elf) F2@(11, 6) HP 38/40 MP 0/0 Hu 56 $ 421 room=.
--> back
-T 620 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 6) HP 38/40 MP 0/0 Hu 56 $ 421 room=.
--> l
-T 621 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 6) HP 38/40 MP 0/0 Hu 56 $ 421 room=.
--> s
-T 622 mode=pool_mode           Thranduil the Bowyer(elf) F2@(11, 7) HP 38/40 MP 0/0 Hu 55 $ 421 room=P
--> dr
-T 623 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 7) HP 38/40 MP 0/0 Hu 55 $ 421 room=.
--> l
-T 624 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 7) HP 38/40 MP 0/0 Hu 55 $ 421 room=.
--> s
-T 625 mode=library_mode        Thranduil the Bowyer(elf) F2@(11, 8) HP 38/40 MP 0/0 Hu 54 $ 421 room=L
--> r
-T 626 mode=library_read_decision_mode Thranduil the Bowyer(elf) F2@(11, 8) HP 38/40 MP 0/0 Hu 54 $ 421 room=L
--> y
-T 627 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 8) HP 38/40 MP 0/0 Hu 54 $ 421 room=.
--> l
-T 628 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 8) HP 38/40 MP 0/0 Hu 54 $ 421 room=.
--> s
-T 629 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 9) HP 38/40 MP 0/0 Hu 53 $ 421 room=.
--> l
-T 630 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 9) HP 38/40 MP 0/0 Hu 53 $ 421 room=.
+T 321 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
 -> e
-T 631 mode=game_loop           Thranduil the Bowyer(elf) F2@(12, 9) HP 38/40 MP 0/0 Hu 52 $ 421 room=.
--> l
-T 632 mode=game_loop           Thranduil the Bowyer(elf) F2@(12, 9) HP 38/40 MP 0/0 Hu 52 $ 421 room=.
--> s
-T 633 mode=game_loop           Thranduil the Bowyer(elf) F2@(12,10) HP 38/40 MP 0/0 Hu 51 $ 421 room=.
--> l
-T 634 mode=game_loop           Thranduil the Bowyer(elf) F2@(12,10) HP 38/40 MP 0/0 Hu 51 $ 421 room=.
--> s
-T 635 mode=game_loop           Thranduil the Bowyer(elf) F2@(12,11) HP 38/40 MP 0/0 Hu 50 $ 421 room=.
--> l
-T 636 mode=game_loop           Thranduil the Bowyer(elf) F2@(12,11) HP 38/40 MP 0/0 Hu 50 $ 421 room=.
+T 322 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
 -> w
-T 637 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11,11) HP 38/40 MP 0/0 Hu 49 $ 421 room=M vs Rust Monster(L1 HP18/18)
--> a
-T 638 mode=combat_victory      Thranduil the Bowyer(elf) F2@(11,11) HP 38/40 MP 0/0 Hu 49 $ 441 room=.
--> back
-T 639 mode=game_loop           Thranduil the Bowyer(elf) F2@(11,11) HP 38/40 MP 0/0 Hu 49 $ 441 room=.
+T 323 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
+-> w
+T 324 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 66 $ 731 room=.
+-> s
+T 325 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
+-> e
+T 326 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
+-> n
+T 327 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> e
+T 328 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
+-> w
+T 329 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
+-> w
+T 330 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
+-> l
+T 331 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
+-> s
+T 332 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> e
+T 333 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> n
+T 334 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
+-> e
+T 335 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
+-> w
+T 336 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
+-> w
+T 337 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> s
+T 338 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
+-> e
+T 339 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
+-> n
+T 340 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
+-> l
+T 341 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
+-> e
+T 342 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
+-> w
+T 343 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> i
-T 640 mode=inventory           Thranduil the Bowyer(elf) F2@(11,11) HP 38/40 MP 0/0 Hu 49 $ 441 room=.
+T 344 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> eat1
-T 641 mode=inventory           Thranduil the Bowyer(elf) F2@(11,11) HP 38/40 MP 0/0 Hu 99 $ 441 room=.
+T 345 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> x
-T 642 mode=game_loop           Thranduil the Bowyer(elf) F2@(11,11) HP 38/40 MP 0/0 Hu 99 $ 441 room=.
+T 346 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> w
-T 643 mode=game_loop           Thranduil the Bowyer(elf) F2@(10,11) HP 38/40 MP 0/0 Hu 98 $ 441 room=.
+T 347 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
+-> s
+T 348 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
+-> e
+T 349 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
 -> n
-T 644 mode=game_loop           Thranduil the Bowyer(elf) F2@(10,10) HP 39/40 MP 0/0 Hu 97 $ 441 room=.
+T 350 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
+-> l
+T 351 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
+-> e
+T 352 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
 -> w
-T 645 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9,10) HP 39/40 MP 0/0 Hu 96 $ 441 room=.
+T 353 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 93 $ 731 room=.
+-> w
+T 354 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
+-> s
+T 355 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 91 $ 731 room=.
+-> e
+T 356 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
+-> n
+T 357 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
+-> e
+T 358 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
+-> w
+T 359 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
+-> w
+T 360 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
+-> l
+T 361 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
+-> s
+T 362 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
+-> e
+T 363 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 84 $ 731 room=.
+-> n
+T 364 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
+-> e
+T 365 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 82 $ 731 room=.
+-> w
+T 366 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> w
+T 367 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
+-> s
+T 368 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
+-> e
+T 369 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
+-> n
+T 370 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
+-> l
+T 371 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
+-> e
+T 372 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
+-> w
+T 373 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 75 $ 731 room=.
+-> w
+T 374 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
+-> s
+T 375 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 73 $ 731 room=.
+-> e
+T 376 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
+-> n
+T 377 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
+-> e
+T 378 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
+-> w
+T 379 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
+-> w
+T 380 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
+-> l
+T 381 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
+-> s
+T 382 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
+-> e
+T 383 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 66 $ 731 room=.
+-> n
+T 384 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
+-> e
+T 385 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
+-> w
+T 386 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> w
+T 387 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
+-> s
+T 388 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
+-> e
+T 389 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
+-> n
+T 390 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> l
+T 391 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> e
+T 392 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> w
+T 393 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
+-> w
+T 394 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
+-> s
+T 395 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
+-> e
+T 396 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> n
+T 397 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
+-> e
+T 398 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
+-> w
+T 399 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
+-> w
+T 400 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
+-> l
+T 401 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
+-> s
+T 402 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> i
-T 646 mode=inventory           Thranduil the Bowyer(elf) F2@( 9,10) HP 39/40 MP 0/0 Hu 96 $ 441 room=.
--> eat2
-T 647 mode=inventory           Thranduil the Bowyer(elf) F2@( 9,10) HP 39/40 MP 0/0 Hu100 $ 441 room=.
--> x
-T 648 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9,10) HP 39/40 MP 0/0 Hu100 $ 441 room=.
--> w
-T 649 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8,10) HP 40/40 MP 0/0 Hu 99 $ 441 room=.
--> n
-T 650 mode=chest_mode          Thranduil the Bowyer(elf) F2@( 8, 9) HP 40/40 MP 0/0 Hu 98 $ 441 room=C
--> o
-T 651 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 9) HP 40/40 MP 0/0 Hu 98 $ 441 room=.
--> w
-T 652 mode=stairs_down_mode    Thranduil the Bowyer(elf) F2@( 7, 9) HP 40/40 MP 0/0 Hu 97 $ 441 room=D
--> e
-T 653 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 9) HP 40/40 MP 0/0 Hu 96 $ 441 room=.
--> e
-T 654 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 9) HP 40/40 MP 0/0 Hu 95 $ 441 room=.
--> n
-T 655 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 8) HP 40/40 MP 0/0 Hu 94 $ 441 room=.
--> n
-T 656 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 7) HP 40/40 MP 0/0 Hu 93 $ 441 room=.
--> i
-T 657 mode=inventory           Thranduil the Bowyer(elf) F2@( 9, 7) HP 40/40 MP 0/0 Hu 93 $ 441 room=.
--> eat2
-T 658 mode=inventory           Thranduil the Bowyer(elf) F2@( 9, 7) HP 40/40 MP 0/0 Hu 99 $ 441 room=.
--> x
-T 659 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 7) HP 40/40 MP 0/0 Hu 99 $ 441 room=.
--> n
-T 660 mode=pool_mode           Thranduil the Bowyer(elf) F2@( 9, 6) HP 40/40 MP 0/0 Hu 98 $ 441 room=P
--> dr
-T 661 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 6) HP 40/40 MP 0/0 Hu 98 $ 441 room=.
--> n
-T 662 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 5) HP 40/40 MP 0/0 Hu 97 $ 441 room=.
--> w
-T 663 mode=chest_mode          Thranduil the Bowyer(elf) F2@( 8, 5) HP 40/40 MP 0/0 Hu 96 $ 441 room=C
--> o
-T 664 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 5) HP 40/40 MP 0/0 Hu 96 $ 491 room=.
--> w
-T 665 mode=game_loop           Thranduil the Bowyer(elf) F2@( 7, 5) HP 40/40 MP 0/0 Hu 95 $ 491 room=.
--> w
-T 666 mode=chest_mode          Thranduil the Bowyer(elf) F2@( 6, 5) HP 40/40 MP 0/0 Hu 94 $ 491 room=C
--> o
-T 667 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 5) HP 40/40 MP 0/0 Hu 94 $ 561 room=.
--> w
-T 668 mode=library_mode        Thranduil the Bowyer(elf) F2@( 5, 5) HP 40/40 MP 0/0 Hu 93 $ 561 room=L
--> r
-T 669 mode=library_read_decision_mode Thranduil the Bowyer(elf) F2@( 5, 5) HP 40/40 MP 0/0 Hu 93 $ 561 room=L
--> y
-T 670 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 5) HP 40/40 MP 0/0 Hu 93 $ 561 room=.
--> w
-T 671 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 5) HP 40/40 MP 0/0 Hu 92 $ 561 room=.
--> l
-T 672 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 5) HP 40/40 MP 0/0 Hu 92 $ 561 room=.
--> s
-T 673 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 6) HP 40/40 MP 0/0 Hu 91 $ 561 room=.
--> e
-T 674 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 6) HP 40/40 MP 0/0 Hu 90 $ 561 room=.
--> e
-T 675 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 6) HP 40/40 MP 0/0 Hu 89 $ 561 room=.
--> n
-T 676 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 5) HP 40/40 MP 0/0 Hu 88 $ 561 room=.
--> n
-T 677 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 4) HP 40/40 MP 0/0 Hu 87 $ 561 room=.
--> w
-T 678 mode=dungeon_mode        Thranduil the Bowyer(elf) F2@( 5, 4) HP 40/40 MP 0/0 Hu 86 $ 561 room=N
--> u
-T 679 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 4) HP 40/40 MP 0/0 Hu 86 $ 561 room=N
--> w
-T 680 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 4) HP 40/40 MP 0/0 Hu 85 $ 561 room=.
--> l
-T 681 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 4) HP 40/40 MP 0/0 Hu 85 $ 561 room=.
--> n
-T 682 mode=garden_mode         Thranduil the Bowyer(elf) F2@( 4, 3) HP 40/40 MP 0/0 Hu 84 $ 561 room=G
--> h
-T 683 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 3) HP 40/40 MP 0/0 Hu 84 $ 561 room=.
--> l
-T 684 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 3) HP 40/40 MP 0/0 Hu 84 $ 561 room=.
--> e
-T 685 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 3) HP 40/40 MP 0/0 Hu 83 $ 561 room=.
--> e
-T 686 mode=dungeon_mode        Thranduil the Bowyer(elf) F2@( 6, 3) HP 40/40 MP 0/0 Hu 82 $ 561 room=N
--> u
-T 687 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 3) HP 40/40 MP 0/0 Hu 82 $ 561 room=N
--> s
-T 688 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 4) HP 40/40 MP 0/0 Hu 81 $ 561 room=.
--> w
-T 689 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 4) HP 40/40 MP 0/0 Hu 80 $ 561 room=N
--> w
-T 690 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 4) HP 40/40 MP 0/0 Hu 79 $ 561 room=.
--> w
-T 691 mode=game_loop           Thranduil the Bowyer(elf) F2@( 3, 4) HP 40/40 MP 0/0 Hu 78 $ 561 room=.
--> w
-T 692 mode=game_loop           Thranduil the Bowyer(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 77 $ 561 room=.
--> n
-T 693 mode=game_loop           Thranduil the Bowyer(elf) F2@( 2, 3) HP 40/40 MP 0/0 Hu 76 $ 561 room=.
--> l
-T 694 mode=game_loop           Thranduil the Bowyer(elf) F2@( 2, 3) HP 40/40 MP 0/0 Hu 76 $ 561 room=.
--> w
-T 695 mode=game_loop           Thranduil the Bowyer(elf) F2@( 1, 3) HP 40/40 MP 0/0 Hu 75 $ 561 room=.
--> l
-T 696 mode=game_loop           Thranduil the Bowyer(elf) F2@( 1, 3) HP 40/40 MP 0/0 Hu 75 $ 561 room=.
--> n
-T 697 mode=chest_mode          Thranduil the Bowyer(elf) F2@( 1, 2) HP 40/40 MP 0/0 Hu 74 $ 561 room=C
--> o
-T 698 mode=game_loop           Thranduil the Bowyer(elf) F2@( 1, 3) HP 40/40 MP 0/0 Hu 73 $ 561 room=.
--> s
-T 699 mode=combat_mode         Thranduil the Bowyer(elf) F2@( 1, 4) HP 40/40 MP 0/0 Hu 72 $ 561 room=M vs Stirge(L1 HP6/6)
--> a
-T 700 mode=combat_victory      Thranduil the Bowyer(elf) F2@( 1, 4) HP 39/40 MP 0/0 Hu 72 $ 567 room=.
--> back
-T 701 mode=game_loop           Thranduil the Bowyer(elf) F2@( 1, 4) HP 39/40 MP 0/0 Hu 72 $ 567 room=.
--> e
-T 702 mode=game_loop           Thranduil the Bowyer(elf) F2@( 2, 4) HP 39/40 MP 0/0 Hu 71 $ 567 room=.
--> n
-T 703 mode=game_loop           Thranduil the Bowyer(elf) F2@( 2, 3) HP 39/40 MP 0/0 Hu 70 $ 567 room=.
--> s
-T 704 mode=game_loop           Thranduil the Bowyer(elf) F2@( 2, 4) HP 39/40 MP 0/0 Hu 69 $ 567 room=.
--> e
-T 705 mode=game_loop           Thranduil the Bowyer(elf) F2@( 3, 4) HP 40/40 MP 0/0 Hu 68 $ 567 room=.
--> s
-T 706 mode=game_loop           Thranduil the Bowyer(elf) F2@( 3, 5) HP 40/40 MP 0/0 Hu 67 $ 567 room=.
--> e
-T 707 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 5) HP 40/40 MP 0/0 Hu 66 $ 567 room=.
--> n
-T 708 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 4) HP 40/40 MP 0/0 Hu 65 $ 567 room=.
--> n
-T 709 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 3) HP 40/40 MP 0/0 Hu 64 $ 567 room=.
--> e
-T 710 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 3) HP 40/40 MP 0/0 Hu 63 $ 567 room=.
--> s
-T 711 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 4) HP 40/40 MP 0/0 Hu 62 $ 567 room=N
--> i
-T 712 mode=inventory           Thranduil the Bowyer(elf) F2@( 5, 4) HP 40/40 MP 0/0 Hu 62 $ 567 room=N
--> eat2
-T 713 mode=inventory           Thranduil the Bowyer(elf) F2@( 5, 4) HP 40/40 MP 0/0 Hu 68 $ 567 room=N
+T 403 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> eat1
-T 714 mode=inventory           Thranduil the Bowyer(elf) F2@( 5, 4) HP 40/40 MP 0/0 Hu100 $ 567 room=N
+T 404 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> x
-T 715 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 4) HP 40/40 MP 0/0 Hu100 $ 567 room=N
--> s
-T 716 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 5) HP 40/40 MP 0/0 Hu 99 $ 567 room=.
--> w
-T 717 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 5) HP 40/40 MP 0/0 Hu 98 $ 567 room=.
+T 405 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
+-> e
+T 406 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
 -> n
-T 718 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 4) HP 40/40 MP 0/0 Hu 97 $ 567 room=.
+T 407 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
+-> e
+T 408 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
 -> w
-T 719 mode=game_loop           Thranduil the Bowyer(elf) F2@( 3, 4) HP 40/40 MP 0/0 Hu 96 $ 567 room=.
+T 409 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
 -> w
-T 720 mode=game_loop           Thranduil the Bowyer(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 95 $ 567 room=.
+T 410 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
+-> l
+T 411 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
+-> s
+T 412 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 93 $ 731 room=.
+-> e
+T 413 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
 -> n
-T 721 mode=game_loop           Thranduil the Bowyer(elf) F2@( 2, 3) HP 40/40 MP 0/0 Hu 94 $ 567 room=.
+T 414 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 91 $ 731 room=.
+-> e
+T 415 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
 -> w
-T 722 mode=game_loop           Thranduil the Bowyer(elf) F2@( 1, 3) HP 40/40 MP 0/0 Hu 93 $ 567 room=.
+T 416 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
+-> w
+T 417 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
+-> s
+T 418 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
+-> e
+T 419 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
 -> n
-T 723 mode=game_loop           Thranduil the Bowyer(elf) F2@( 1, 2) HP 40/40 MP 0/0 Hu 92 $ 567 room=.
+T 420 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
+-> l
+T 421 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
+-> e
+T 422 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 84 $ 731 room=.
+-> w
+T 423 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
+-> w
+T 424 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 82 $ 731 room=.
+-> s
+T 425 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> e
+T 426 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
 -> n
-T 724 mode=stairs_up_mode      Thranduil the Bowyer(elf) F2@( 1, 1) HP 40/40 MP 0/0 Hu 91 $ 567 room=U
--> u
-T 725 mode=stairs_down_mode    Thranduil the Bowyer(elf) F1@(18,13) HP 40/40 MP 0/0 Hu 91 $ 567 room=D
--> d
-T 726 mode=stairs_up_mode      Thranduil the Bowyer(elf) F2@( 1, 1) HP 40/40 MP 0/0 Hu 91 $ 567 room=U
--> s
-T 727 mode=game_loop           Thranduil the Bowyer(elf) F2@( 1, 2) HP 40/40 MP 0/0 Hu 90 $ 567 room=.
--> s
-T 728 mode=game_loop           Thranduil the Bowyer(elf) F2@( 1, 3) HP 40/40 MP 0/0 Hu 89 $ 567 room=.
--> s
-T 729 mode=game_loop           Thranduil the Bowyer(elf) F2@( 1, 4) HP 40/40 MP 0/0 Hu 88 $ 567 room=.
+T 427 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
 -> e
-T 730 mode=game_loop           Thranduil the Bowyer(elf) F2@( 2, 4) HP 40/40 MP 0/0 Hu 87 $ 567 room=.
--> e
-T 731 mode=game_loop           Thranduil the Bowyer(elf) F2@( 3, 4) HP 40/40 MP 0/0 Hu 86 $ 567 room=.
--> s
-T 732 mode=game_loop           Thranduil the Bowyer(elf) F2@( 3, 5) HP 40/40 MP 0/0 Hu 85 $ 567 room=.
--> e
-T 733 mode=game_loop           Thranduil the Bowyer(elf) F2@( 4, 5) HP 40/40 MP 0/0 Hu 84 $ 567 room=.
--> e
-T 734 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 5) HP 40/40 MP 0/0 Hu 83 $ 567 room=.
--> e
-T 735 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 5) HP 40/40 MP 0/0 Hu 82 $ 567 room=.
--> e
-T 736 mode=game_loop           Thranduil the Bowyer(elf) F2@( 7, 5) HP 40/40 MP 0/0 Hu 81 $ 567 room=.
--> e
-T 737 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 5) HP 40/40 MP 0/0 Hu 80 $ 567 room=.
--> e
-T 738 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 5) HP 40/40 MP 0/0 Hu 79 $ 567 room=.
--> e
-T 739 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 5) HP 40/40 MP 0/0 Hu 78 $ 567 room=.
--> e
-T 740 mode=altar_mode          Thranduil the Bowyer(elf) F2@(11, 5) HP 40/40 MP 0/0 Hu 77 $ 567 room=A
--> pray
-T 741 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 5) HP 40/40 MP 0/0 Hu 77 $ 567 room=.
--> s
-T 742 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 6) HP 40/40 MP 0/0 Hu 76 $ 567 room=.
+T 428 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
 -> w
-T 743 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 6) HP 40/40 MP 0/0 Hu 75 $ 567 room=.
+T 429 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
 -> w
-T 744 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 6) HP 40/40 MP 0/0 Hu 74 $ 567 room=.
+T 430 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
+-> l
+T 431 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
+-> s
+T 432 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 75 $ 731 room=.
+-> e
+T 433 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
 -> n
-T 745 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 5) HP 40/40 MP 0/0 Hu 73 $ 567 room=.
+T 434 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 73 $ 731 room=.
 -> e
-T 746 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 5) HP 40/40 MP 0/0 Hu 72 $ 567 room=.
--> n
-T 747 mode=pool_mode           Thranduil the Bowyer(elf) F2@(10, 4) HP 40/40 MP 0/0 Hu 71 $ 567 room=P
--> dr
-T 748 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 4) HP 40/40 MP 0/0 Hu 71 $ 567 room=.
+T 435 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
+-> w
+T 436 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
+-> w
+T 437 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
+-> s
+T 438 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
 -> e
-T 749 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11, 4) HP 40/40 MP 0/0 Hu 70 $ 567 room=M vs Lichen(L1 HP10/10)
--> a
-T 750 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11, 4) HP 39/40 MP 0/0 Hu 70 $ 567 room=M vs Lichen(L1 HP10/10)
--> a
-T 751 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11, 4) HP 38/40 MP 0/0 Hu 70 $ 567 room=M vs Lichen(L1 HP10/10)
--> a
-T 752 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11, 4) HP 37/40 MP 0/0 Hu 70 $ 567 room=M vs Lichen(L1 HP10/10)
--> a
-T 753 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11, 4) HP 36/40 MP 0/0 Hu 70 $ 567 room=M vs Lichen(L1 HP10/10)
--> a
-T 754 mode=combat_victory      Thranduil the Bowyer(elf) F2@(11, 4) HP 36/50 MP 0/0 Hu 70 $ 579 room=.
--> back
-T 755 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 4) HP 36/50 MP 0/0 Hu 70 $ 579 room=.
--> s
-T 756 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 5) HP 36/50 MP 0/0 Hu 69 $ 579 room=.
--> s
-T 757 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 6) HP 36/50 MP 0/0 Hu 68 $ 579 room=.
--> w
-T 758 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 6) HP 36/50 MP 0/0 Hu 67 $ 579 room=.
+T 439 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
 -> n
-T 759 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 5) HP 37/50 MP 0/0 Hu 66 $ 579 room=.
+T 440 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
+-> l
+T 441 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
+-> e
+T 442 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 66 $ 731 room=.
 -> w
-T 760 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 5) HP 37/50 MP 0/0 Hu 65 $ 579 room=.
+T 443 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
 -> w
-T 761 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 5) HP 37/50 MP 0/0 Hu 64 $ 579 room=.
+T 444 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
+-> s
+T 445 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> e
+T 446 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
+-> n
+T 447 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
+-> e
+T 448 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
+-> w
+T 449 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> w
+T 450 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> l
+T 451 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> s
+T 452 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
+-> e
+T 453 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
+-> n
+T 454 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
+-> e
+T 455 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> w
+T 456 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
+-> w
+T 457 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
+-> s
+T 458 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
+-> e
+T 459 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
+-> n
+T 460 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> i
-T 762 mode=inventory           Thranduil the Bowyer(elf) F2@( 8, 5) HP 37/50 MP 0/0 Hu 64 $ 579 room=.
--> u6
-T 763 mode=inventory           Thranduil the Bowyer(elf) F2@( 8, 5) HP 50/50 MP 0/0 Hu 64 $ 579 room=.
--> x
-T 764 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 5) HP 50/50 MP 0/0 Hu 64 $ 579 room=.
--> w
-T 765 mode=game_loop           Thranduil the Bowyer(elf) F2@( 7, 5) HP 50/50 MP 0/0 Hu 63 $ 579 room=.
--> w
-T 766 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 5) HP 50/50 MP 0/0 Hu 62 $ 579 room=.
--> n
-T 767 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 4) HP 50/50 MP 0/0 Hu 61 $ 579 room=.
--> n
-T 768 mode=dungeon_mode        Thranduil the Bowyer(elf) F2@( 6, 3) HP 50/50 MP 0/0 Hu 60 $ 579 room=N
--> u
-T 769 mode=dungeon_unlocked_mode Thranduil the Bowyer(elf) F2@( 6, 3) HP 50/50 MP 0/0 Hu 60 $ 579 room=N
--> r
-T 770 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 3) HP 50/50 MP 0/0 Hu 60 $ 579 room=N
--> i
-T 771 mode=inventory           Thranduil the Bowyer(elf) F2@( 6, 3) HP 50/50 MP 0/0 Hu 60 $ 579 room=N
--> eat2
-T 772 mode=inventory           Thranduil the Bowyer(elf) F2@( 6, 3) HP 50/50 MP 0/0 Hu 66 $ 579 room=N
+T 461 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> eat1
-T 773 mode=inventory           Thranduil the Bowyer(elf) F2@( 6, 3) HP 50/50 MP 0/0 Hu100 $ 579 room=N
+T 462 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> x
-T 774 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 3) HP 50/50 MP 0/0 Hu100 $ 579 room=N
+T 463 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> e
-T 775 mode=game_loop           Thranduil the Bowyer(elf) F2@( 7, 3) HP 50/50 MP 0/0 Hu 99 $ 579 room=.
+T 464 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
+-> w
+T 465 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
+-> w
+T 466 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
 -> s
-T 776 mode=combat_mode         Thranduil the Bowyer(elf) F2@( 7, 4) HP 50/50 MP 0/0 Hu 98 $ 579 room=M vs Kobold(L1 HP20/20)
--> a
-T 777 mode=combat_victory      Thranduil the Bowyer(elf) F2@( 7, 4) HP 50/50 MP 0/0 Hu 98 $ 585 room=.
--> back
-T 778 mode=game_loop           Thranduil the Bowyer(elf) F2@( 7, 4) HP 50/50 MP 0/0 Hu 98 $ 585 room=.
--> s
-T 779 mode=game_loop           Thranduil the Bowyer(elf) F2@( 7, 5) HP 50/50 MP 0/0 Hu 97 $ 585 room=.
+T 467 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
 -> e
-T 780 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 5) HP 50/50 MP 0/0 Hu 96 $ 585 room=.
+T 468 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
+-> n
+T 469 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 93 $ 731 room=.
 -> e
-T 781 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 5) HP 50/50 MP 0/0 Hu 95 $ 585 room=.
--> s
-T 782 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 6) HP 50/50 MP 0/0 Hu 94 $ 585 room=.
--> s
-T 783 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 7) HP 50/50 MP 0/0 Hu 93 $ 585 room=.
--> s
-T 784 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 8) HP 50/50 MP 0/0 Hu 92 $ 585 room=.
--> e
-T 785 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 8) HP 50/50 MP 0/0 Hu 91 $ 585 room=.
--> e
-T 786 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 8) HP 50/50 MP 0/0 Hu 90 $ 585 room=.
--> s
-T 787 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 9) HP 50/50 MP 0/0 Hu 89 $ 585 room=.
--> e
-T 788 mode=game_loop           Thranduil the Bowyer(elf) F2@(12, 9) HP 50/50 MP 0/0 Hu 88 $ 585 room=.
--> s
-T 789 mode=game_loop           Thranduil the Bowyer(elf) F2@(12,10) HP 50/50 MP 0/0 Hu 87 $ 585 room=.
--> e
-T 790 mode=game_loop           Thranduil the Bowyer(elf) F2@(13,10) HP 50/50 MP 0/0 Hu 86 $ 585 room=.
--> e
-T 791 mode=game_loop           Thranduil the Bowyer(elf) F2@(14,10) HP 50/50 MP 0/0 Hu 85 $ 585 room=.
--> e
-T 792 mode=chest_mode          Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 84 $ 585 room=C
--> o
-T 793 mode=game_loop           Thranduil the Bowyer(elf) F2@(16,10) HP 50/50 MP 0/0 Hu 83 $ 585 room=.
--> e
-T 794 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 82 $ 585 room=.
+T 470 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
 -> l
-T 795 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 82 $ 585 room=.
--> n
-T 796 mode=game_loop           Thranduil the Bowyer(elf) F2@(17, 9) HP 50/50 MP 0/0 Hu 81 $ 585 room=.
--> s
-T 797 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 80 $ 585 room=.
--> n
-T 798 mode=game_loop           Thranduil the Bowyer(elf) F2@(17, 9) HP 50/50 MP 0/0 Hu 79 $ 585 room=.
--> s
-T 799 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 78 $ 585 room=.
+T 471 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
 -> w
-T 800 mode=game_loop           Thranduil the Bowyer(elf) F2@(16,10) HP 50/50 MP 0/0 Hu 77 $ 585 room=.
+T 472 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 91 $ 731 room=.
 -> w
-T 801 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 76 $ 585 room=.
+T 473 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
+-> s
+T 474 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
+-> e
+T 475 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
+-> n
+T 476 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
+-> e
+T 477 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
+-> w
+T 478 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
+-> w
+T 479 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 84 $ 731 room=.
+-> s
+T 480 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
 -> l
-T 802 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 76 $ 585 room=.
+T 481 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
+-> e
+T 482 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 82 $ 731 room=.
 -> n
-T 803 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 9) HP 50/50 MP 0/0 Hu 75 $ 585 room=.
+T 483 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> e
+T 484 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
+-> w
+T 485 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
+-> w
+T 486 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
+-> s
+T 487 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
+-> e
+T 488 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
 -> n
-T 804 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 74 $ 585 room=.
+T 489 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 75 $ 731 room=.
+-> e
+T 490 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
 -> l
-T 805 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 74 $ 585 room=.
+T 491 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
 -> w
-T 806 mode=vendor_shop         Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 73 $ 585 room=V
--> r4
-T 807 mode=vendor_shop         Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 73 $ 537 room=V
--> b14
-T 808 mode=vendor_shop         Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 73 $ 527 room=V
--> b12
-T 809 mode=vendor_shop         Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 73 $ 377 room=V
--> b4
-T 810 mode=vendor_shop         Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 73 $ 317 room=V
--> b4
-T 811 mode=vendor_shop         Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 73 $ 247 room=V
--> id12
-T 812 mode=vendor_shop         Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 73 $ 197 room=V
--> x
-T 813 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 73 $ 197 room=V
--> n
-T 814 mode=chest_mode          Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 72 $ 197 room=C
--> n
-T 815 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 6) HP 50/50 MP 0/0 Hu 71 $ 197 room=.
+T 492 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 73 $ 731 room=.
+-> w
+T 493 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
+-> s
+T 494 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
 -> e
-T 816 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 6) HP 50/50 MP 0/0 Hu 70 $ 197 room=.
+T 495 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
+-> n
+T 496 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
+-> e
+T 497 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
+-> w
+T 498 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
+-> w
+T 499 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 66 $ 731 room=.
+-> s
+T 500 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
 -> l
-T 817 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 6) HP 50/50 MP 0/0 Hu 70 $ 197 room=.
+T 501 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
+-> e
+T 502 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
+-> n
+T 503 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> e
+T 504 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
+-> w
+T 505 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
+-> w
+T 506 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
 -> s
-T 818 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 69 $ 197 room=.
+T 507 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> e
+T 508 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> n
+T 509 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
+-> e
+T 510 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
 -> l
-T 819 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 69 $ 197 room=.
--> e
-T 820 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 68 $ 197 room=.
+T 511 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
+-> w
+T 512 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
+-> w
+T 513 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
 -> s
-T 821 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 67 $ 197 room=.
--> w
-T 822 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 66 $ 197 room=.
--> w
-T 823 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 65 $ 197 room=V
+T 514 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
+-> e
+T 515 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
 -> n
-T 824 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 64 $ 197 room=C
+T 516 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
 -> e
-T 825 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 63 $ 197 room=.
--> e
-T 826 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 62 $ 197 room=.
--> s
-T 827 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 61 $ 197 room=.
+T 517 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
 -> w
-T 828 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 60 $ 197 room=.
--> w
-T 829 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 59 $ 197 room=V
--> n
-T 830 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 58 $ 197 room=C
--> e
-T 831 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 57 $ 197 room=.
--> e
-T 832 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 56 $ 197 room=.
--> s
-T 833 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 55 $ 197 room=.
--> w
-T 834 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 54 $ 197 room=.
--> w
-T 835 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 53 $ 197 room=V
--> n
-T 836 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 52 $ 197 room=C
--> e
-T 837 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 51 $ 197 room=.
--> e
-T 838 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 50 $ 197 room=.
--> s
-T 839 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 49 $ 197 room=.
+T 518 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> i
-T 840 mode=inventory           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 49 $ 197 room=.
+T 519 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> eat1
-T 841 mode=inventory           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 99 $ 197 room=.
--> u11
-T 842 mode=upgrade_scroll_mode Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 99 $ 197 room=.
--> 1
-T 843 mode=inventory           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 99 $ 197 room=.
+T 520 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> x
-T 844 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 99 $ 197 room=.
+T 521 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> w
-T 845 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 98 $ 197 room=.
+T 522 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
 -> s
-T 846 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 9) HP 50/50 MP 0/0 Hu 97 $ 197 room=.
+T 523 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
+-> e
+T 524 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
+-> n
+T 525 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
+-> e
+T 526 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
+-> w
+T 527 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 93 $ 731 room=.
+-> w
+T 528 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
 -> s
-T 847 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 96 $ 197 room=.
--> w
-T 848 mode=game_loop           Thranduil the Bowyer(elf) F2@(14,10) HP 50/50 MP 0/0 Hu 95 $ 197 room=.
--> w
-T 849 mode=game_loop           Thranduil the Bowyer(elf) F2@(13,10) HP 50/50 MP 0/0 Hu 94 $ 197 room=.
--> w
-T 850 mode=game_loop           Thranduil the Bowyer(elf) F2@(12,10) HP 50/50 MP 0/0 Hu 93 $ 197 room=.
--> w
-T 851 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11,10) HP 50/50 MP 0/0 Hu 92 $ 197 room=M vs Zombie(L1 HP35/35)
--> f
-T 852 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11,10) HP 49/50 MP 0/0 Hu 92 $ 197 room=M vs Zombie(L1 HP35/35)
--> a
-T 853 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11,10) HP 48/50 MP 0/0 Hu 92 $ 197 room=M vs Zombie(L1 HP9/35)
--> a
-T 854 mode=combat_mode         Thranduil the Bowyer(elf) F2@(11,10) HP 47/50 MP 0/0 Hu 92 $ 197 room=M vs Zombie(L1 HP9/35)
--> f
-T 855 mode=flee_direction_mode Thranduil the Bowyer(elf) F2@(11,10) HP 47/50 MP 0/0 Hu 92 $ 197 room=M
--> n
-T 856 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 9) HP 47/50 MP 0/0 Hu 92 $ 197 room=.
--> w
-T 857 mode=combat_mode         Thranduil the Bowyer(elf) F2@(10, 9) HP 47/50 MP 0/0 Hu 91 $ 197 room=M vs Kobold(L1 HP8/8)
--> a
-T 858 mode=combat_mode         Thranduil the Bowyer(elf) F2@(10, 9) HP 47/50 MP 0/0 Hu 91 $ 197 room=M vs Kobold(L1 HP8/8)
--> a
-T 859 mode=combat_mode         Thranduil the Bowyer(elf) F2@(10, 9) HP 46/50 MP 0/0 Hu 91 $ 197 room=M vs Kobold(L1 HP8/8)
--> a
-T 860 mode=combat_mode         Thranduil the Bowyer(elf) F2@(10, 9) HP 46/50 MP 0/0 Hu 91 $ 197 room=M vs Kobold(L1 HP8/8)
--> a
-T 861 mode=combat_victory      Thranduil the Bowyer(elf) F2@(10, 9) HP 45/50 MP 0/0 Hu 91 $ 199 room=.
--> back
-T 862 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 9) HP 45/50 MP 0/0 Hu 91 $ 199 room=.
--> n
-T 863 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 8) HP 46/50 MP 0/0 Hu 90 $ 199 room=.
--> w
-T 864 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 8) HP 46/50 MP 0/0 Hu 89 $ 199 room=.
--> n
-T 865 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 7) HP 47/50 MP 0/0 Hu 88 $ 199 room=.
--> n
-T 866 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 6) HP 47/50 MP 0/0 Hu 87 $ 199 room=.
--> w
-T 867 mode=combat_mode         Thranduil the Bowyer(elf) F2@( 8, 6) HP 48/50 MP 0/0 Hu 86 $ 199 room=M vs Crawling Claw(L1 HP5/5)
--> a
-T 868 mode=combat_victory      Thranduil the Bowyer(elf) F2@( 8, 6) HP 48/50 MP 0/0 Hu 86 $ 203 room=.
--> back
-T 869 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 6) HP 48/50 MP 0/0 Hu 86 $ 203 room=.
--> n
-T 870 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 5) HP 48/50 MP 0/0 Hu 85 $ 203 room=.
--> n
-T 871 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 4) HP 48/50 MP 0/0 Hu 84 $ 203 room=.
--> w
-T 872 mode=game_loop           Thranduil the Bowyer(elf) F2@( 7, 4) HP 48/50 MP 0/0 Hu 83 $ 203 room=.
--> w
-T 873 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 4) HP 49/50 MP 0/0 Hu 82 $ 203 room=.
--> w
-T 874 mode=dungeon_mode        Thranduil the Bowyer(elf) F2@( 5, 4) HP 49/50 MP 0/0 Hu 81 $ 203 room=N
--> u
-T 875 mode=dungeon_unlocked_mode Thranduil the Bowyer(elf) F2@( 5, 4) HP 49/50 MP 0/0 Hu 81 $ 203 room=N
--> r
-T 876 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 4) HP 49/50 MP 0/0 Hu 81 $ 203 room=N
--> i
-T 877 mode=inventory           Thranduil the Bowyer(elf) F2@( 5, 4) HP 49/50 MP 0/0 Hu 81 $ 203 room=N
--> e1
-T 878 mode=inventory           Thranduil the Bowyer(elf) F2@( 5, 4) HP 49/50 MP 0/0 Hu 81 $ 203 room=N
--> x
-T 879 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 4) HP 49/50 MP 0/0 Hu 81 $ 203 room=N
--> s
-T 880 mode=game_loop           Thranduil the Bowyer(elf) F2@( 5, 5) HP 49/50 MP 0/0 Hu 80 $ 203 room=.
+T 529 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 91 $ 731 room=.
 -> e
-T 881 mode=game_loop           Thranduil the Bowyer(elf) F2@( 6, 5) HP 49/50 MP 0/0 Hu 79 $ 203 room=.
--> e
-T 882 mode=game_loop           Thranduil the Bowyer(elf) F2@( 7, 5) HP 50/50 MP 0/0 Hu 78 $ 203 room=.
--> e
-T 883 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 5) HP 50/50 MP 0/0 Hu 77 $ 203 room=.
--> s
-T 884 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 6) HP 50/50 MP 0/0 Hu 76 $ 203 room=.
--> i
-T 885 mode=inventory           Thranduil the Bowyer(elf) F2@( 8, 6) HP 50/50 MP 0/0 Hu 76 $ 203 room=.
--> eat2
-T 886 mode=inventory           Thranduil the Bowyer(elf) F2@( 8, 6) HP 50/50 MP 0/0 Hu 82 $ 203 room=.
--> x
-T 887 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 6) HP 50/50 MP 0/0 Hu 82 $ 203 room=.
--> e
-T 888 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 6) HP 50/50 MP 0/0 Hu 81 $ 203 room=.
--> s
-T 889 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 7) HP 50/50 MP 0/0 Hu 80 $ 203 room=.
--> s
-T 890 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 8) HP 50/50 MP 0/0 Hu 79 $ 203 room=.
--> s
-T 891 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 9) HP 50/50 MP 0/0 Hu 78 $ 203 room=.
--> e
-T 892 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 9) HP 50/50 MP 0/0 Hu 77 $ 203 room=.
--> e
-T 893 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 9) HP 50/50 MP 0/0 Hu 76 $ 203 room=.
--> e
-T 894 mode=game_loop           Thranduil the Bowyer(elf) F2@(12, 9) HP 50/50 MP 0/0 Hu 75 $ 203 room=.
--> s
-T 895 mode=game_loop           Thranduil the Bowyer(elf) F2@(12,10) HP 50/50 MP 0/0 Hu 74 $ 203 room=.
--> e
-T 896 mode=game_loop           Thranduil the Bowyer(elf) F2@(13,10) HP 50/50 MP 0/0 Hu 73 $ 203 room=.
--> e
-T 897 mode=game_loop           Thranduil the Bowyer(elf) F2@(14,10) HP 50/50 MP 0/0 Hu 72 $ 203 room=.
--> e
-T 898 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 71 $ 203 room=.
--> n
-T 899 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 9) HP 50/50 MP 0/0 Hu 70 $ 203 room=.
--> n
-T 900 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 69 $ 203 room=.
--> n
-T 901 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 68 $ 203 room=.
--> e
-T 902 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 67 $ 203 room=.
--> s
-T 903 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 66 $ 203 room=.
--> n
-T 904 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 65 $ 203 room=.
--> s
-T 905 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 64 $ 203 room=.
--> w
-T 906 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 63 $ 203 room=.
--> n
-T 907 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 62 $ 203 room=.
--> w
-T 908 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 61 $ 203 room=C
--> n
-T 909 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 6) HP 50/50 MP 0/0 Hu 60 $ 203 room=.
--> e
-T 910 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 6) HP 50/50 MP 0/0 Hu 59 $ 203 room=.
--> n
-T 911 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 5) HP 50/50 MP 0/0 Hu 58 $ 203 room=.
+T 530 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
 -> l
-T 912 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 5) HP 50/50 MP 0/0 Hu 58 $ 203 room=.
+T 531 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
+-> n
+T 532 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
 -> e
-T 913 mode=library_mode        Thranduil the Bowyer(elf) F2@(16, 5) HP 50/50 MP 0/0 Hu 57 $ 203 room=L
--> r
-T 914 mode=library_read_decision_mode Thranduil the Bowyer(elf) F2@(16, 5) HP 50/50 MP 0/0 Hu 57 $ 203 room=L
--> y
-T 915 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 5) HP 50/50 MP 0/0 Hu 57 $ 203 room=.
--> l
-T 916 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 5) HP 50/50 MP 0/0 Hu 57 $ 203 room=.
--> n
-T 917 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 4) HP 50/50 MP 0/0 Hu 56 $ 203 room=.
--> s
-T 918 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 5) HP 50/50 MP 0/0 Hu 55 $ 203 room=.
--> n
-T 919 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 4) HP 50/50 MP 0/0 Hu 54 $ 203 room=.
--> s
-T 920 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 5) HP 50/50 MP 0/0 Hu 53 $ 203 room=.
+T 533 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
 -> w
-T 921 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 5) HP 50/50 MP 0/0 Hu 52 $ 203 room=.
+T 534 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
+-> w
+T 535 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
 -> s
-T 922 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 6) HP 50/50 MP 0/0 Hu 51 $ 203 room=.
--> s
-T 923 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 50 $ 203 room=.
+T 536 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
 -> e
-T 924 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 49 $ 203 room=.
+T 537 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 84 $ 731 room=.
+-> n
+T 538 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
+-> e
+T 539 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 82 $ 731 room=.
+-> w
+T 540 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> l
+T 541 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> w
+T 542 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
+-> s
+T 543 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
+-> e
+T 544 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
+-> n
+T 545 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
+-> e
+T 546 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
+-> w
+T 547 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 75 $ 731 room=.
+-> w
+T 548 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
+-> s
+T 549 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 73 $ 731 room=.
+-> e
+T 550 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
+-> l
+T 551 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
+-> n
+T 552 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
+-> e
+T 553 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
+-> w
+T 554 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
+-> w
+T 555 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
+-> s
+T 556 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
+-> e
+T 557 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 66 $ 731 room=.
+-> n
+T 558 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
+-> e
+T 559 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
+-> w
+T 560 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> l
+T 561 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> w
+T 562 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
+-> s
+T 563 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
+-> e
+T 564 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
+-> n
+T 565 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> e
+T 566 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> w
+T 567 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
+-> w
+T 568 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
+-> s
+T 569 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
+-> e
+T 570 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> l
+T 571 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> n
+T 572 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
+-> e
+T 573 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
+-> w
+T 574 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
+-> w
+T 575 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
+-> s
+T 576 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> i
-T 925 mode=inventory           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 49 $ 203 room=.
+T 577 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> eat1
-T 926 mode=inventory           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 99 $ 203 room=.
+T 578 mode=inventory           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> x
-T 927 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 99 $ 203 room=.
--> s
-T 928 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 98 $ 203 room=.
--> w
-T 929 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 97 $ 203 room=.
--> w
-T 930 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 96 $ 203 room=V
+T 579 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
+-> e
+T 580 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
 -> l
-T 931 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 96 $ 203 room=V
+T 581 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
 -> n
-T 932 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 95 $ 203 room=C
+T 582 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
 -> e
-T 933 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 94 $ 203 room=.
--> e
-T 934 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 93 $ 203 room=.
--> s
-T 935 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 92 $ 203 room=.
+T 583 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
 -> w
-T 936 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 91 $ 203 room=.
+T 584 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
+-> w
+T 585 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
 -> s
-T 937 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 9) HP 50/50 MP 0/0 Hu 90 $ 203 room=.
--> s
-T 938 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 89 $ 203 room=.
+T 586 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 93 $ 731 room=.
 -> e
-T 939 mode=game_loop           Thranduil the Bowyer(elf) F2@(16,10) HP 50/50 MP 0/0 Hu 88 $ 203 room=.
+T 587 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
+-> n
+T 588 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 91 $ 731 room=.
 -> e
-T 940 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 87 $ 203 room=.
+T 589 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
+-> w
+T 590 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
 -> l
-T 941 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 87 $ 203 room=.
--> n
-T 942 mode=game_loop           Thranduil the Bowyer(elf) F2@(17, 9) HP 50/50 MP 0/0 Hu 86 $ 203 room=.
--> s
-T 943 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 85 $ 203 room=.
--> n
-T 944 mode=game_loop           Thranduil the Bowyer(elf) F2@(17, 9) HP 50/50 MP 0/0 Hu 84 $ 203 room=.
--> s
-T 945 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 83 $ 203 room=.
+T 591 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
 -> w
-T 946 mode=game_loop           Thranduil the Bowyer(elf) F2@(16,10) HP 50/50 MP 0/0 Hu 82 $ 203 room=.
+T 592 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
+-> s
+T 593 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
+-> e
+T 594 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
+-> n
+T 595 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
+-> e
+T 596 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 84 $ 731 room=.
 -> w
-T 947 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 81 $ 203 room=.
--> n
-T 948 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 9) HP 50/50 MP 0/0 Hu 80 $ 203 room=.
--> n
-T 949 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 79 $ 203 room=.
--> n
-T 950 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 78 $ 203 room=.
+T 597 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
+-> w
+T 598 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 82 $ 731 room=.
+-> s
+T 599 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> e
+T 600 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
 -> l
-T 951 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 78 $ 203 room=.
+T 601 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
+-> n
+T 602 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
 -> e
-T 952 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 77 $ 203 room=.
--> s
-T 953 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 76 $ 203 room=.
--> n
-T 954 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 75 $ 203 room=.
--> s
-T 955 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 74 $ 203 room=.
+T 603 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
 -> w
-T 956 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 73 $ 203 room=.
--> n
-T 957 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 72 $ 203 room=.
+T 604 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
 -> w
-T 958 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 71 $ 203 room=C
+T 605 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
 -> s
-T 959 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 70 $ 203 room=V
+T 606 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 75 $ 731 room=.
+-> e
+T 607 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
 -> n
-T 960 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 69 $ 203 room=C
+T 608 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 73 $ 731 room=.
+-> e
+T 609 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
+-> w
+T 610 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
 -> l
-T 961 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 69 $ 203 room=C
--> n
-T 962 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 6) HP 50/50 MP 0/0 Hu 68 $ 203 room=.
--> e
-T 963 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 6) HP 50/50 MP 0/0 Hu 67 $ 203 room=.
--> s
-T 964 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 66 $ 203 room=.
--> e
-T 965 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 65 $ 203 room=.
--> s
-T 966 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 64 $ 203 room=.
+T 611 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
 -> w
-T 967 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 63 $ 203 room=.
--> w
-T 968 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 62 $ 203 room=V
--> n
-T 969 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 61 $ 203 room=C
+T 612 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
+-> s
+T 613 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
 -> e
-T 970 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 60 $ 203 room=.
+T 614 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
+-> n
+T 615 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
+-> e
+T 616 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 66 $ 731 room=.
+-> w
+T 617 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
+-> w
+T 618 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
+-> s
+T 619 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> e
+T 620 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
 -> l
-T 971 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 60 $ 203 room=.
--> e
-T 972 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 59 $ 203 room=.
--> s
-T 973 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 58 $ 203 room=.
--> w
-T 974 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 57 $ 203 room=.
--> w
-T 975 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 56 $ 203 room=V
+T 621 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
 -> n
-T 976 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 55 $ 203 room=C
+T 622 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
 -> e
-T 977 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 54 $ 203 room=.
--> e
-T 978 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 53 $ 203 room=.
--> s
-T 979 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 52 $ 203 room=.
+T 623 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
 -> w
-T 980 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 51 $ 203 room=.
+T 624 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> w
+T 625 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> s
+T 626 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
+-> e
+T 627 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
+-> n
+T 628 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
+-> e
+T 629 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> w
+T 630 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
 -> l
-T 981 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 51 $ 203 room=.
+T 631 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
+-> w
+T 632 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
 -> s
-T 982 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 9) HP 50/50 MP 0/0 Hu 50 $ 203 room=.
--> s
-T 983 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 49 $ 203 room=.
+T 633 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
+-> e
+T 634 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
+-> n
+T 635 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> i
-T 984 mode=inventory           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 49 $ 203 room=.
+T 636 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> eat1
-T 985 mode=inventory           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 99 $ 203 room=.
+T 637 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> x
-T 986 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 99 $ 203 room=.
+T 638 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> e
-T 987 mode=game_loop           Thranduil the Bowyer(elf) F2@(16,10) HP 50/50 MP 0/0 Hu 98 $ 203 room=.
--> e
-T 988 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 97 $ 203 room=.
--> n
-T 989 mode=game_loop           Thranduil the Bowyer(elf) F2@(17, 9) HP 50/50 MP 0/0 Hu 96 $ 203 room=.
--> s
-T 990 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 95 $ 203 room=.
+T 639 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
+-> w
+T 640 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
 -> l
-T 991 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 95 $ 203 room=.
--> n
-T 992 mode=game_loop           Thranduil the Bowyer(elf) F2@(17, 9) HP 50/50 MP 0/0 Hu 94 $ 203 room=.
+T 641 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
+-> w
+T 642 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
 -> s
-T 993 mode=game_loop           Thranduil the Bowyer(elf) F2@(17,10) HP 50/50 MP 0/0 Hu 93 $ 203 room=.
--> w
-T 994 mode=game_loop           Thranduil the Bowyer(elf) F2@(16,10) HP 50/50 MP 0/0 Hu 92 $ 203 room=.
--> w
-T 995 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 91 $ 203 room=.
--> n
-T 996 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 9) HP 50/50 MP 0/0 Hu 90 $ 203 room=.
--> n
-T 997 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 89 $ 203 room=.
--> n
-T 998 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 88 $ 203 room=.
+T 643 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
 -> e
-T 999 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 87 $ 203 room=.
+T 644 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
+-> n
+T 645 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 93 $ 731 room=.
+-> e
+T 646 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
+-> w
+T 647 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 91 $ 731 room=.
+-> w
+T 648 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
 -> s
-T1000 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 86 $ 203 room=.
+T 649 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
+-> e
+T 650 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
 -> l
-T1001 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 86 $ 203 room=.
+T 651 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
 -> n
-T1002 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 85 $ 203 room=.
--> s
-T1003 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 84 $ 203 room=.
--> w
-T1004 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 83 $ 203 room=.
--> n
-T1005 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 82 $ 203 room=.
--> n
-T1006 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 6) HP 50/50 MP 0/0 Hu 81 $ 203 room=.
--> w
-T1007 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 6) HP 50/50 MP 0/0 Hu 80 $ 203 room=.
--> s
-T1008 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 79 $ 203 room=C
--> s
-T1009 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 78 $ 203 room=V
+T 652 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
 -> e
-T1010 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 77 $ 203 room=.
+T 653 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
+-> w
+T 654 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
+-> w
+T 655 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 84 $ 731 room=.
+-> s
+T 656 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
+-> e
+T 657 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 82 $ 731 room=.
+-> n
+T 658 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> e
+T 659 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
+-> w
+T 660 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
 -> l
-T1011 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 77 $ 203 room=.
--> n
-T1012 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 76 $ 203 room=.
+T 661 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
+-> w
+T 662 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
+-> s
+T 663 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
 -> e
-T1013 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 75 $ 203 room=.
--> s
-T1014 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 74 $ 203 room=.
+T 664 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
 -> n
-T1015 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 73 $ 203 room=.
--> s
-T1016 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 72 $ 203 room=.
+T 665 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 75 $ 731 room=.
+-> e
+T 666 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
 -> w
-T1017 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 71 $ 203 room=.
--> n
-T1018 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 70 $ 203 room=.
+T 667 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 73 $ 731 room=.
 -> w
-T1019 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 69 $ 203 room=C
+T 668 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
 -> s
-T1020 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 68 $ 203 room=V
+T 669 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
+-> e
+T 670 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
 -> l
-T1021 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 8) HP 50/50 MP 0/0 Hu 68 $ 203 room=V
+T 671 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
 -> n
-T1022 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 7) HP 50/50 MP 0/0 Hu 67 $ 203 room=C
--> n
-T1023 mode=game_loop           Thranduil the Bowyer(elf) F2@(14, 6) HP 50/50 MP 0/0 Hu 66 $ 203 room=.
+T 672 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
 -> e
-T1024 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 6) HP 50/50 MP 0/0 Hu 65 $ 203 room=.
--> s
-T1025 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 7) HP 50/50 MP 0/0 Hu 64 $ 203 room=.
--> e
-T1026 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 7) HP 50/50 MP 0/0 Hu 63 $ 203 room=.
--> s
-T1027 mode=game_loop           Thranduil the Bowyer(elf) F2@(16, 8) HP 50/50 MP 0/0 Hu 62 $ 203 room=.
+T 673 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
 -> w
-T1028 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 8) HP 50/50 MP 0/0 Hu 61 $ 203 room=.
+T 674 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
+-> w
+T 675 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 66 $ 731 room=.
 -> s
-T1029 mode=game_loop           Thranduil the Bowyer(elf) F2@(15, 9) HP 50/50 MP 0/0 Hu 60 $ 203 room=.
--> s
-T1030 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 59 $ 203 room=.
+T 676 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
+-> e
+T 677 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
+-> n
+T 678 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> e
+T 679 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
+-> w
+T 680 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
 -> l
-T1031 mode=game_loop           Thranduil the Bowyer(elf) F2@(15,10) HP 50/50 MP 0/0 Hu 59 $ 203 room=.
+T 681 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
 -> w
-T1032 mode=game_loop           Thranduil the Bowyer(elf) F2@(14,10) HP 50/50 MP 0/0 Hu 58 $ 203 room=.
--> w
-T1033 mode=game_loop           Thranduil the Bowyer(elf) F2@(13,10) HP 50/50 MP 0/0 Hu 57 $ 203 room=.
--> w
-T1034 mode=game_loop           Thranduil the Bowyer(elf) F2@(12,10) HP 50/50 MP 0/0 Hu 56 $ 203 room=.
--> n
-T1035 mode=game_loop           Thranduil the Bowyer(elf) F2@(12, 9) HP 50/50 MP 0/0 Hu 55 $ 203 room=.
--> w
-T1036 mode=game_loop           Thranduil the Bowyer(elf) F2@(11, 9) HP 50/50 MP 0/0 Hu 54 $ 203 room=.
--> w
-T1037 mode=game_loop           Thranduil the Bowyer(elf) F2@(10, 9) HP 50/50 MP 0/0 Hu 53 $ 203 room=.
--> w
-T1038 mode=game_loop           Thranduil the Bowyer(elf) F2@( 9, 9) HP 50/50 MP 0/0 Hu 52 $ 203 room=.
--> w
-T1039 mode=game_loop           Thranduil the Bowyer(elf) F2@( 8, 9) HP 50/50 MP 0/0 Hu 51 $ 203 room=.
--> w
-T1040 mode=stairs_down_mode    Thranduil the Bowyer(elf) F2@( 7, 9) HP 50/50 MP 0/0 Hu 50 $ 203 room=D
--> d
-T1041 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 50 $ 203 room=U
+T 682 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
 -> s
-T1042 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 49 $ 203 room=.
+T 683 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
+-> e
+T 684 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
+-> n
+T 685 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
+-> e
+T 686 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
+-> w
+T 687 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
+-> w
+T 688 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> s
+T 689 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
+-> e
+T 690 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
+-> l
+T 691 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
+-> n
+T 692 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
+-> e
+T 693 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
+-> w
+T 694 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> i
-T1043 mode=inventory           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 49 $ 203 room=.
+T 695 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
 -> eat1
-T1044 mode=inventory           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 99 $ 203 room=.
+T 696 mode=inventory           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
 -> x
-T1045 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 99 $ 203 room=.
+T 697 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 99 $ 731 room=.
+-> w
+T 698 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 98 $ 731 room=.
+-> s
+T 699 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 97 $ 731 room=.
+-> e
+T 700 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
 -> l
-T1046 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 99 $ 203 room=.
+T 701 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 96 $ 731 room=.
+-> n
+T 702 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 95 $ 731 room=.
 -> e
-T1047 mode=chest_mode          Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 98 $ 203 room=C
--> o
-T1048 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 98 $ 243 room=.
+T 703 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 94 $ 731 room=.
+-> w
+T 704 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 93 $ 731 room=.
+-> w
+T 705 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 92 $ 731 room=.
+-> s
+T 706 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 91 $ 731 room=.
+-> e
+T 707 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 90 $ 731 room=.
+-> n
+T 708 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 89 $ 731 room=.
+-> e
+T 709 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 88 $ 731 room=.
+-> w
+T 710 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
 -> l
-T1049 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 98 $ 243 room=.
+T 711 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 87 $ 731 room=.
+-> w
+T 712 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 86 $ 731 room=.
 -> s
-T1050 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 97 $ 243 room=.
+T 713 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 85 $ 731 room=.
+-> e
+T 714 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 84 $ 731 room=.
+-> n
+T 715 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 83 $ 731 room=.
+-> e
+T 716 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 82 $ 731 room=.
+-> w
+T 717 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 81 $ 731 room=.
+-> w
+T 718 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 80 $ 731 room=.
+-> s
+T 719 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 79 $ 731 room=.
+-> e
+T 720 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
 -> l
-T1051 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 97 $ 243 room=.
--> s
-T1052 mode=garden_mode         Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 96 $ 243 room=G
--> h
-T1053 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 96 $ 243 room=.
--> w
-T1054 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 95 $ 243 room=.
+T 721 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 78 $ 731 room=.
 -> n
-T1055 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 94 $ 243 room=.
--> n
-T1056 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 93 $ 243 room=.
+T 722 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 77 $ 731 room=.
 -> e
-T1057 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 92 $ 243 room=.
--> s
-T1058 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 91 $ 243 room=.
--> s
-T1059 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 90 $ 243 room=.
+T 723 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 76 $ 731 room=.
 -> w
-T1060 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 89 $ 243 room=.
--> n
-T1061 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 88 $ 243 room=.
--> n
-T1062 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 87 $ 243 room=.
--> e
-T1063 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 86 $ 243 room=.
--> s
-T1064 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 85 $ 243 room=.
--> s
-T1065 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 84 $ 243 room=.
+T 724 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 75 $ 731 room=.
 -> w
-T1066 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 83 $ 243 room=.
--> n
-T1067 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 82 $ 243 room=.
--> n
-T1068 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 81 $ 243 room=.
--> n
-T1069 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 80 $ 243 room=U
+T 725 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 74 $ 731 room=.
+-> s
+T 726 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 73 $ 731 room=.
 -> e
-T1070 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 79 $ 243 room=.
+T 727 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 72 $ 731 room=.
+-> n
+T 728 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 71 $ 731 room=.
+-> e
+T 729 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 70 $ 731 room=.
+-> w
+T 730 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
 -> l
-T1071 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 79 $ 243 room=.
+T 731 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 69 $ 731 room=.
+-> w
+T 732 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 68 $ 731 room=.
+-> s
+T 733 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 67 $ 731 room=.
 -> e
-T1072 mode=dungeon_mode        Thranduil the Bowyer(elf) F3@( 3, 1) HP 50/50 MP 0/0 Hu 78 $ 243 room=N
--> u
-T1073 mode=game_loop           Thranduil the Bowyer(elf) F3@( 3, 1) HP 50/50 MP 0/0 Hu 78 $ 243 room=N
--> s
-T1074 mode=game_loop           Thranduil the Bowyer(elf) F3@( 3, 2) HP 50/50 MP 0/0 Hu 77 $ 243 room=.
--> s
-T1075 mode=game_loop           Thranduil the Bowyer(elf) F3@( 3, 3) HP 50/50 MP 0/0 Hu 76 $ 243 room=.
--> w
-T1076 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 75 $ 243 room=.
--> s
-T1077 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 74 $ 243 room=.
--> w
-T1078 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 73 $ 243 room=.
+T 734 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 66 $ 731 room=.
 -> n
-T1079 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 72 $ 243 room=.
--> n
-T1080 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 71 $ 243 room=.
--> n
-T1081 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 70 $ 243 room=U
+T 735 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 65 $ 731 room=.
 -> e
-T1082 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 69 $ 243 room=.
--> s
-T1083 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 68 $ 243 room=.
--> s
-T1084 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 67 $ 243 room=.
--> s
-T1085 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 66 $ 243 room=.
+T 736 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 64 $ 731 room=.
 -> w
-T1086 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 65 $ 243 room=.
--> n
-T1087 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 64 $ 243 room=.
--> n
-T1088 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 63 $ 243 room=.
--> n
-T1089 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 62 $ 243 room=U
+T 737 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 63 $ 731 room=.
+-> w
+T 738 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 62 $ 731 room=.
+-> s
+T 739 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 61 $ 731 room=.
 -> e
-T1090 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 61 $ 243 room=.
--> s
-T1091 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 60 $ 243 room=.
--> s
-T1092 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 59 $ 243 room=.
--> s
-T1093 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 58 $ 243 room=.
--> w
-T1094 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 57 $ 243 room=.
+T 740 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
+-> l
+T 741 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 60 $ 731 room=.
 -> n
-T1095 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 56 $ 243 room=.
--> n
-T1096 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 55 $ 243 room=.
--> n
-T1097 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 54 $ 243 room=U
+T 742 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 59 $ 731 room=.
 -> e
-T1098 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 53 $ 243 room=.
--> s
-T1099 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 52 $ 243 room=.
--> s
-T1100 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 51 $ 243 room=.
--> s
-T1101 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 50 $ 243 room=.
+T 743 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 58 $ 731 room=.
 -> w
-T1102 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 49 $ 243 room=.
+T 744 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 57 $ 731 room=.
+-> w
+T 745 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 56 $ 731 room=.
+-> s
+T 746 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 55 $ 731 room=.
+-> e
+T 747 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 54 $ 731 room=.
+-> n
+T 748 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 53 $ 731 room=.
+-> e
+T 749 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 52 $ 731 room=.
+-> w
+T 750 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
+-> l
+T 751 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 51 $ 731 room=.
+-> w
+T 752 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 50 $ 731 room=.
+-> s
+T 753 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 49 $ 731 room=.
+-> e
+T 754 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 48 $ 731 room=.
+-> n
+T 755 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 47 $ 731 room=.
+-> e
+T 756 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 46 $ 731 room=.
+-> w
+T 757 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 45 $ 731 room=.
+-> w
+T 758 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 44 $ 731 room=.
+-> s
+T 759 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 43 $ 731 room=.
+-> e
+T 760 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 42 $ 731 room=.
+-> l
+T 761 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 42 $ 731 room=.
+-> n
+T 762 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 41 $ 731 room=.
+-> e
+T 763 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 40 $ 731 room=.
+-> w
+T 764 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 39 $ 731 room=.
+-> w
+T 765 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 38 $ 731 room=.
+-> s
+T 766 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 37 $ 731 room=.
+-> e
+T 767 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 36 $ 731 room=.
+-> n
+T 768 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 35 $ 731 room=.
+-> e
+T 769 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 34 $ 731 room=.
+-> w
+T 770 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 33 $ 731 room=.
+-> l
+T 771 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 33 $ 731 room=.
+-> w
+T 772 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 32 $ 731 room=.
+-> s
+T 773 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 31 $ 731 room=.
+-> e
+T 774 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 30 $ 731 room=.
+-> n
+T 775 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 29 $ 731 room=.
+-> e
+T 776 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 28 $ 731 room=.
+-> w
+T 777 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 27 $ 731 room=.
+-> w
+T 778 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 26 $ 731 room=.
+-> s
+T 779 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 25 $ 731 room=.
+-> e
+T 780 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 24 $ 731 room=.
+-> l
+T 781 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 24 $ 731 room=.
+-> n
+T 782 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 23 $ 731 room=.
+-> e
+T 783 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 22 $ 731 room=.
+-> w
+T 784 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 21 $ 731 room=.
+-> w
+T 785 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 20 $ 731 room=.
+-> s
+T 786 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 19 $ 731 room=.
+-> e
+T 787 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 18 $ 731 room=.
+-> n
+T 788 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 17 $ 731 room=.
+-> e
+T 789 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 16 $ 731 room=.
+-> w
+T 790 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 15 $ 731 room=.
+-> l
+T 791 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 15 $ 731 room=.
+-> w
+T 792 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu 14 $ 731 room=.
+-> s
+T 793 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu 13 $ 731 room=.
+-> e
+T 794 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu 12 $ 731 room=.
+-> n
+T 795 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu 11 $ 731 room=.
+-> e
+T 796 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu 10 $ 731 room=.
+-> w
+T 797 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu  9 $ 731 room=.
+-> w
+T 798 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu  8 $ 731 room=.
+-> s
+T 799 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu  7 $ 731 room=.
+-> e
+T 800 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu  6 $ 731 room=.
+-> l
+T 801 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 40/40 MP 0/0 Hu  6 $ 731 room=.
+-> n
+T 802 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu  5 $ 731 room=.
+-> e
+T 803 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu  4 $ 731 room=.
+-> w
+T 804 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 40/40 MP 0/0 Hu  3 $ 731 room=.
+-> w
+T 805 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 40/40 MP 0/0 Hu  2 $ 731 room=.
+-> s
+T 806 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 40/40 MP 0/0 Hu  1 $ 731 room=.
+-> e
+T 807 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 38/40 MP 0/0 Hu  0 $ 731 room=.
+-> n
+T 808 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 36/40 MP 0/0 Hu  0 $ 731 room=.
+-> e
+T 809 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 34/40 MP 0/0 Hu  0 $ 731 room=.
+-> w
+T 810 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 32/40 MP 0/0 Hu  0 $ 731 room=.
+-> l
+T 811 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 32/40 MP 0/0 Hu  0 $ 731 room=.
+-> w
+T 812 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 30/40 MP 0/0 Hu  0 $ 731 room=.
+-> s
+T 813 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 28/40 MP 0/0 Hu  0 $ 731 room=.
+-> e
+T 814 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 26/40 MP 0/0 Hu  0 $ 731 room=.
+-> n
+T 815 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 24/40 MP 0/0 Hu  0 $ 731 room=.
+-> e
+T 816 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 22/40 MP 0/0 Hu  0 $ 731 room=.
 -> i
-T1103 mode=inventory           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 49 $ 243 room=.
--> eat1
-T1104 mode=inventory           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 99 $ 243 room=.
+T 817 mode=inventory           Thranduil the Bowyer(elf) F1@( 5, 1) HP 22/40 MP 0/0 Hu  0 $ 731 room=.
+-> u3
+T 818 mode=inventory           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu  0 $ 731 room=.
 -> x
-T1105 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 99 $ 243 room=.
--> n
-T1106 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 98 $ 243 room=.
--> n
-T1107 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 97 $ 243 room=.
--> n
-T1108 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 96 $ 243 room=U
--> e
-T1109 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 95 $ 243 room=.
--> s
-T1110 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 94 $ 243 room=.
--> s
-T1111 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 93 $ 243 room=.
--> s
-T1112 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 92 $ 243 room=.
+T 819 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu  0 $ 731 room=.
 -> w
-T1113 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 91 $ 243 room=.
--> n
-T1114 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 90 $ 243 room=.
--> n
-T1115 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 89 $ 243 room=.
--> n
-T1116 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 88 $ 243 room=U
--> e
-T1117 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 87 $ 243 room=.
--> s
-T1118 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 86 $ 243 room=.
--> s
-T1119 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 85 $ 243 room=.
--> s
-T1120 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 84 $ 243 room=.
+T 820 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 38/40 MP 0/0 Hu  0 $ 731 room=.
+-> l
+T 821 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 38/40 MP 0/0 Hu  0 $ 731 room=.
 -> w
-T1121 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 83 $ 243 room=.
--> n
-T1122 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 82 $ 243 room=.
--> n
-T1123 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 81 $ 243 room=.
--> n
-T1124 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 80 $ 243 room=U
+T 822 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 36/40 MP 0/0 Hu  0 $ 731 room=.
+-> s
+T 823 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 34/40 MP 0/0 Hu  0 $ 731 room=.
 -> e
-T1125 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 79 $ 243 room=.
--> s
-T1126 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 78 $ 243 room=.
--> s
-T1127 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 77 $ 243 room=.
--> s
-T1128 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 76 $ 243 room=.
--> w
-T1129 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 75 $ 243 room=.
+T 824 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 32/40 MP 0/0 Hu  0 $ 731 room=.
 -> n
-T1130 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 74 $ 243 room=.
--> n
-T1131 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 73 $ 243 room=.
--> n
-T1132 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 72 $ 243 room=U
+T 825 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 30/40 MP 0/0 Hu  0 $ 731 room=.
 -> e
-T1133 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 71 $ 243 room=.
--> s
-T1134 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 70 $ 243 room=.
--> s
-T1135 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 69 $ 243 room=.
--> s
-T1136 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 68 $ 243 room=.
--> w
-T1137 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 67 $ 243 room=.
--> n
-T1138 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 66 $ 243 room=.
--> n
-T1139 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 65 $ 243 room=.
--> n
-T1140 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 64 $ 243 room=U
--> e
-T1141 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 63 $ 243 room=.
--> s
-T1142 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 62 $ 243 room=.
--> s
-T1143 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 61 $ 243 room=.
--> s
-T1144 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 60 $ 243 room=.
--> w
-T1145 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 59 $ 243 room=.
--> n
-T1146 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 58 $ 243 room=.
--> n
-T1147 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 57 $ 243 room=.
--> n
-T1148 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 56 $ 243 room=U
--> e
-T1149 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 55 $ 243 room=.
--> s
-T1150 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 54 $ 243 room=.
--> s
-T1151 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 53 $ 243 room=.
--> s
-T1152 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 52 $ 243 room=.
--> w
-T1153 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 51 $ 243 room=.
--> n
-T1154 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 50 $ 243 room=.
--> n
-T1155 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 49 $ 243 room=.
+T 826 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 28/40 MP 0/0 Hu  0 $ 731 room=.
 -> i
-T1156 mode=inventory           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 49 $ 243 room=.
--> eat1
-T1157 mode=inventory           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 99 $ 243 room=.
+T 827 mode=inventory           Thranduil the Bowyer(elf) F1@( 5, 1) HP 28/40 MP 0/0 Hu  0 $ 731 room=.
+-> u3
+T 828 mode=inventory           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu  0 $ 731 room=.
 -> x
-T1158 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 99 $ 243 room=.
--> e
-T1159 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 98 $ 243 room=.
--> s
-T1160 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 97 $ 243 room=.
--> s
-T1161 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 96 $ 243 room=.
+T 829 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 40/40 MP 0/0 Hu  0 $ 731 room=.
 -> w
-T1162 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 95 $ 243 room=.
--> n
-T1163 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 94 $ 243 room=.
--> n
-T1164 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 93 $ 243 room=.
--> e
-T1165 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 92 $ 243 room=.
--> s
-T1166 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 91 $ 243 room=.
--> s
-T1167 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 90 $ 243 room=.
+T 830 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 38/40 MP 0/0 Hu  0 $ 731 room=.
+-> l
+T 831 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 38/40 MP 0/0 Hu  0 $ 731 room=.
 -> w
-T1168 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 89 $ 243 room=.
--> n
-T1169 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 88 $ 243 room=.
--> n
-T1170 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 87 $ 243 room=.
+T 832 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 36/40 MP 0/0 Hu  0 $ 731 room=.
+-> s
+T 833 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 34/40 MP 0/0 Hu  0 $ 731 room=.
 -> e
-T1171 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 86 $ 243 room=.
--> s
-T1172 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 85 $ 243 room=.
--> s
-T1173 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 84 $ 243 room=.
--> w
-T1174 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 83 $ 243 room=.
+T 834 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 32/40 MP 0/0 Hu  0 $ 731 room=.
 -> n
-T1175 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 82 $ 243 room=.
--> s
-T1176 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 81 $ 243 room=.
--> s
-T1177 mode=combat_mode         Thranduil the Bowyer(elf) F3@( 1, 5) HP 50/50 MP 0/0 Hu 80 $ 243 room=M vs ELITE UNDEAD WRAITH(L3 HP104/104)
--> f
-T1178 mode=flee_direction_mode Thranduil the Bowyer(elf) F3@( 1, 5) HP 50/50 MP 0/0 Hu 80 $ 243 room=M
--> s
-T1179 mode=tomb_mode           Thranduil the Bowyer(elf) F3@( 1, 6) HP 50/50 MP 0/0 Hu 80 $ 243 room=T
--> p
-T1180 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 6) HP 50/50 MP 0/0 Hu 80 $ 243 room=T
--> n
-T1181 mode=combat_mode         Thranduil the Bowyer(elf) F3@( 1, 5) HP 50/50 MP 0/0 Hu 79 $ 243 room=M vs ELITE UNDEAD WRAITH(L3 HP104/104)
--> f
-T1182 mode=flee_direction_mode Thranduil the Bowyer(elf) F3@( 1, 5) HP 50/50 MP 0/0 Hu 79 $ 243 room=M
+T 835 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 30/40 MP 0/0 Hu  0 $ 731 room=.
 -> e
-T1183 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 5) HP 50/50 MP 0/0 Hu 79 $ 243 room=.
--> n
-T1184 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 78 $ 243 room=.
+T 836 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 28/40 MP 0/0 Hu  0 $ 731 room=.
 -> w
-T1185 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 77 $ 243 room=.
--> n
-T1186 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 76 $ 243 room=.
--> n
-T1187 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 75 $ 243 room=.
+T 837 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 26/40 MP 0/0 Hu  0 $ 731 room=.
+-> w
+T 838 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 24/40 MP 0/0 Hu  0 $ 731 room=.
+-> s
+T 839 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 22/40 MP 0/0 Hu  0 $ 731 room=.
 -> e
-T1188 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 74 $ 243 room=.
--> s
-T1189 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 73 $ 243 room=.
--> s
-T1190 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 72 $ 243 room=.
--> w
-T1191 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 71 $ 243 room=.
+T 840 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 20/40 MP 0/0 Hu  0 $ 731 room=.
+-> l
+T 841 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 20/40 MP 0/0 Hu  0 $ 731 room=.
 -> n
-T1192 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 70 $ 243 room=.
--> n
-T1193 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 69 $ 243 room=.
+T 842 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 18/40 MP 0/0 Hu  0 $ 731 room=.
 -> e
-T1194 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 68 $ 243 room=.
--> s
-T1195 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 67 $ 243 room=.
--> s
-T1196 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 66 $ 243 room=.
+T 843 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 16/40 MP 0/0 Hu  0 $ 731 room=.
 -> w
-T1197 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 65 $ 243 room=.
--> n
-T1198 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 64 $ 243 room=.
--> n
-T1199 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 63 $ 243 room=.
+T 844 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 14/40 MP 0/0 Hu  0 $ 731 room=.
+-> w
+T 845 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 1) HP 12/40 MP 0/0 Hu  0 $ 731 room=.
+-> s
+T 846 mode=game_loop           Thranduil the Bowyer(elf) F1@( 3, 2) HP 10/40 MP 0/0 Hu  0 $ 731 room=.
 -> e
-T1200 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 62 $ 243 room=.
--> s
-T1201 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 61 $ 243 room=.
--> s
-T1202 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 60 $ 243 room=.
--> w
-T1203 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 59 $ 243 room=.
+T 847 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 2) HP 8/40 MP 0/0 Hu  0 $ 731 room=.
 -> n
-T1204 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 58 $ 243 room=.
--> n
-T1205 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 57 $ 243 room=.
+T 848 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 6/40 MP 0/0 Hu  0 $ 731 room=.
 -> e
-T1206 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 56 $ 243 room=.
--> s
-T1207 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 55 $ 243 room=.
--> s
-T1208 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 54 $ 243 room=.
+T 849 mode=game_loop           Thranduil the Bowyer(elf) F1@( 5, 1) HP 4/40 MP 0/0 Hu  0 $ 731 room=.
 -> w
-T1209 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 53 $ 243 room=.
--> n
-T1210 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 52 $ 243 room=.
--> n
-T1211 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 51 $ 243 room=.
--> n
-T1212 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 50 $ 243 room=U
--> e
-T1213 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 49 $ 243 room=.
--> i
-T1214 mode=inventory           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 49 $ 243 room=.
--> eat1
-T1215 mode=inventory           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 99 $ 243 room=.
--> x
-T1216 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 99 $ 243 room=.
--> s
-T1217 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 98 $ 243 room=.
--> s
-T1218 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 97 $ 243 room=.
--> s
-T1219 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 96 $ 243 room=.
+T 850 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 2/40 MP 0/0 Hu  0 $ 731 room=.
+-> l
+T 851 mode=game_loop           Thranduil the Bowyer(elf) F1@( 4, 1) HP 2/40 MP 0/0 Hu  0 $ 731 room=.
 -> w
-T1220 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 95 $ 243 room=.
--> n
-T1221 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 94 $ 243 room=.
--> n
-T1222 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 93 $ 243 room=.
--> e
-T1223 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 92 $ 243 room=.
--> s
-T1224 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 91 $ 243 room=.
--> s
-T1225 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 90 $ 243 room=.
--> w
-T1226 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 89 $ 243 room=.
--> n
-T1227 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 88 $ 243 room=.
--> n
-T1228 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 87 $ 243 room=.
--> e
-T1229 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 86 $ 243 room=.
--> s
-T1230 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 85 $ 243 room=.
--> s
-T1231 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 84 $ 243 room=.
--> w
-T1232 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 83 $ 243 room=.
--> n
-T1233 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 82 $ 243 room=.
--> n
-T1234 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 81 $ 243 room=.
--> n
-T1235 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 80 $ 243 room=U
--> e
-T1236 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 79 $ 243 room=.
--> s
-T1237 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 78 $ 243 room=.
--> s
-T1238 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 77 $ 243 room=.
--> s
-T1239 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 76 $ 243 room=.
--> w
-T1240 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 75 $ 243 room=.
--> n
-T1241 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 74 $ 243 room=.
--> n
-T1242 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 73 $ 243 room=.
--> n
-T1243 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 72 $ 243 room=U
--> e
-T1244 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 71 $ 243 room=.
--> s
-T1245 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 70 $ 243 room=.
--> s
-T1246 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 69 $ 243 room=.
--> s
-T1247 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 68 $ 243 room=.
--> w
-T1248 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 67 $ 243 room=.
--> n
-T1249 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 66 $ 243 room=.
--> n
-T1250 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 65 $ 243 room=.
--> e
-T1251 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 64 $ 243 room=.
--> s
-T1252 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 63 $ 243 room=.
--> s
-T1253 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 62 $ 243 room=.
--> w
-T1254 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 61 $ 243 room=.
--> n
-T1255 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 60 $ 243 room=.
--> n
-T1256 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 59 $ 243 room=.
--> e
-T1257 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 58 $ 243 room=.
--> s
-T1258 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 57 $ 243 room=.
--> s
-T1259 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 56 $ 243 room=.
--> w
-T1260 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 55 $ 243 room=.
--> n
-T1261 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 54 $ 243 room=.
--> n
-T1262 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 53 $ 243 room=.
--> n
-T1263 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 52 $ 243 room=U
--> e
-T1264 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 51 $ 243 room=.
--> s
-T1265 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 50 $ 243 room=.
--> s
-T1266 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 49 $ 243 room=.
--> i
-T1267 mode=inventory           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 49 $ 243 room=.
--> eat1
-T1268 mode=inventory           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 99 $ 243 room=.
--> x
-T1269 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 99 $ 243 room=.
--> s
-T1270 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 98 $ 243 room=.
--> w
-T1271 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 97 $ 243 room=.
--> n
-T1272 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 96 $ 243 room=.
--> n
-T1273 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 95 $ 243 room=.
--> e
-T1274 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 94 $ 243 room=.
--> s
-T1275 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 93 $ 243 room=.
--> s
-T1276 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 92 $ 243 room=.
--> w
-T1277 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 91 $ 243 room=.
--> n
-T1278 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 3) HP 50/50 MP 0/0 Hu 90 $ 243 room=.
--> n
-T1279 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 2) HP 50/50 MP 0/0 Hu 89 $ 243 room=.
--> n
-T1280 mode=stairs_up_mode      Thranduil the Bowyer(elf) F3@( 1, 1) HP 50/50 MP 0/0 Hu 88 $ 243 room=U
--> e
-T1281 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 1) HP 50/50 MP 0/0 Hu 87 $ 243 room=.
--> s
-T1282 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 2) HP 50/50 MP 0/0 Hu 86 $ 243 room=.
--> s
-T1283 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 3) HP 50/50 MP 0/0 Hu 85 $ 243 room=.
--> s
-T1284 mode=game_loop           Thranduil the Bowyer(elf) F3@( 2, 4) HP 50/50 MP 0/0 Hu 84 $ 243 room=.
--> w
-T1285 mode=game_loop           Thranduil the Bowyer(elf) F3@( 1, 4) HP 50/50 MP 0/0 Hu 83 $ 243 room=.
--> s
-T1286 mode=combat_mode         Thranduil the Bowyer(elf) F3@( 1, 5) HP 50/50 MP 0/0 Hu 82 $ 243 room=M vs ELITE UNDEAD WRAITH(L3 HP104/104)
--> f
-T1287 mode=combat_mode         Thranduil the Bowyer(elf) F3@( 1, 5) HP 50/50 MP 0/0 Hu 82 $ 243 room=M vs ELITE UNDEAD WRAITH(L3 HP104/104)
--> f
-T1288 mode=death_screen        Thranduil the Bowyer(elf) F3@( 1, 5) HP 0/50 MP 0/0 Hu 82 $ 243 room=M
+T 852 mode=death_screen        Thranduil the Bowyer(elf) F1@( 3, 1) HP 0/40 MP 0/0 Hu  0 $ 731 room=.
 
-=== run finished: turns=1288 floor=3 hp=0/50 gold=243 alive=False mode=death_screen ===
+=== run finished: turns=852 floor=1 hp=0/40 gold=731 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/05000_elf.html
