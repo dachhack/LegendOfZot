@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Elrond the Twice-Born the elf — Wizard's Cavern Playtest</title>
+<style>
+* { box-sizing: border-box; }
+body {
+  margin: 0; padding: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", monospace;
+  background: #0c0c0c; color: #e6e6e6;
+  max-width: 1100px; margin-left: auto; margin-right: auto;
+}
+h1 { font-size: 22px; margin: 0 0 4px 0; }
+h2 { font-size: 16px; margin-top: 0; color: #fbbf24; border-bottom: 1px solid #333; padding-bottom: 4px; }
+h3 { font-size: 13px; color: #94a3b8; margin: 16px 0 6px 0; }
+a { color: #38bdf8; text-decoration: none; }
+a:hover { text-decoration: underline; }
+.muted { color: #888; font-size: 12px; }
+.card {
+  background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 14px 18px; margin: 14px 0;
+}
+.outcome {
+  display: inline-block; padding: 4px 10px; border-radius: 4px;
+  font-weight: bold; letter-spacing: 0.05em;
+}
+.outcome.alive { background: #134e2b; color: #bbf7d0; }
+.outcome.dead { background: #5a1313; color: #fecaca; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+.grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+.grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
+/* Mobile-friendly layout. Body padding shrinks, hero portrait stacks
+   above the info column, the Final Tally drops from 4 columns to 2,
+   gear cards stack, tab labels shrink, tables get a touch smaller.
+   The two breakpoints (800 / 600) cover tablet and phone-portrait. */
+@media (max-width: 800px) {
+  .grid4 { grid-template-columns: 1fr 1fr; }
+  .grid3 { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  body { padding: 12px; }
+  .card { padding: 10px 12px; }
+  h1 { font-size: 18px; }
+  h2 { font-size: 14px; }
+  .grid4, .grid3, .grid2 { grid-template-columns: 1fr; }
+  .hero-banner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  .hero-portrait { min-height: auto; }
+  .gear-cards { grid-template-columns: 1fr; }
+  .tabs > label {
+    padding: 6px 10px;
+    font-size: 12px;
+    margin-right: 1px;
+  }
+  .tab-panels { padding: 10px 12px; }
+  table { font-size: 11px; }
+  th, td { padding: 3px 4px; }
+  .stat { font-size: 12px; }
+  .hpchart { /* Stretch the SVG full-width on small screens */
+    max-width: 100%;
+  }
+}
+.stat { display: flex; justify-content: space-between; padding: 4px 0; border-bottom: 1px dotted #2a2a2a; }
+.stat:last-child { border-bottom: none; }
+.stat .v { color: #fde68a; font-weight: 600; }
+table { width: 100%; border-collapse: collapse; font-size: 12px; }
+th, td { text-align: left; padding: 4px 6px; border-bottom: 1px solid #222; }
+th { color: #94a3b8; font-weight: normal; }
+.log, .actions { font-family: ui-monospace, monospace; font-size: 11px;
+  background: #0a0a0a; padding: 10px; border-radius: 4px;
+  max-height: 320px; overflow-y: auto; }
+.log li, .actions li { list-style: none; padding: 2px 0; }
+.actions code { color: #67e8f9; }
+.mode { color: #94a3b8; font-size: 10px; }
+.cause strong { color: #fb923c; }
+.death { border-left: 3px solid #f43f5e; }
+.death-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#1a0c0c; border-left:3px solid #f43f5e;
+  border-radius:4px; margin-bottom:10px;
+}
+.hpchart { width: 100%; height: auto; border-radius: 4px; }
+
+/* Sprite system: each sprite renders as a background-image on a <span>,
+   so a sprite referenced N times only embeds the base64 webp once. */
+.sprite {
+  display: inline-block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  image-rendering: pixelated;
+  vertical-align: middle;
+  margin-right: 6px;
+}
+.player-sprite { display:block; margin: 0 auto; image-rendering: pixelated; }
+.sprite-cell { width: 36px; }
+
+/* Hero banner with portrait + headline stats side by side. */
+.hero-banner {
+  display: grid;
+  grid-template-columns: 120px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+.hero-portrait {
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 8px;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: 120px;
+}
+.hero-info p { margin: 4px 0; }
+.gear-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.gear-card {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #0a0a0a;
+  border: 1px solid #2a2a2a;
+  border-radius: 4px;
+  padding: 10px;
+}
+.gear-card .sprite { width: 48px; height: 48px; margin-right: 0; }
+.gear-card .gear-meta { flex: 1; }
+
+/* Tabs -- pure-CSS radio-button pattern, no JS required. */
+.tabs { margin-top: 14px; }
+.tabs input[type=radio] { position: absolute; opacity: 0; pointer-events: none; }
+.tabs > label {
+  display: inline-block;
+  padding: 8px 14px;
+  background: #161616;
+  border: 1px solid #2a2a2a;
+  border-bottom: none;
+  border-radius: 6px 6px 0 0;
+  font-size: 13px;
+  color: #94a3b8;
+  cursor: pointer;
+  margin-right: 2px;
+  margin-bottom: -1px;
+  transition: background .15s;
+}
+.tabs > label:hover { background: #1f1f1f; color: #fde68a; }
+.tabs > input[type=radio]:checked + label {
+  background: #2a1f0a;
+  color: #fbbf24;
+  border-bottom: 1px solid #2a1f0a;
+}
+.tab-panels { background: #161616; border: 1px solid #2a2a2a;
+  border-radius: 0 6px 6px 6px; padding: 14px 18px; }
+.tab-panel { display: none; }
+/* Show the panel whose paired radio is :checked. ~ matches siblings
+   that follow the input, and the panels live right after the labels. */
+#tab-overview:checked ~ .tab-panels #panel-overview,
+#tab-stats:checked ~ .tab-panels #panel-stats,
+#tab-equipment:checked ~ .tab-panels #panel-equipment,
+#tab-combat:checked ~ .tab-panels #panel-combat,
+#tab-journey:checked ~ .tab-panels #panel-journey { display: block; }
+
+.chart-block { margin: 16px 0; }
+.chart-block h3 { margin-top: 0; }
+.tomb-list { list-style: none; padding: 0; }
+.tomb-list li { padding: 6px 0; border-bottom: 1px dotted #2a2a2a; }
+.tomb-list li:last-child { border: none; }
+.tomb-list strong { color: #f97316; }
+
+.sprite-p0000{background-image:url(data:image/webp;base64,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)}
+.sprite-p0001{background-image:url(data:image/webp;base64,UklGRvoEAABXRUJQVlA4IO4EAADwFwCdASpgAGAAPm0ylEgkIqIhpXgK8IANiWdpZVZXnD6ibApNPIE7u8+Xnv/73lN+l/YK/l39o63fo8E35idT32Al7wBXpRZgCaamgZzDp3OtHgokf29rafThT/k+qsSxVglbQ/b6pwH7oHYvf1I5iq9qTxAx06oFBYT09X5o24I8tJk8Y91QEbVrBOcsvxxz6tBFF1wEw+/zRjcB34Le+3QPOJdHfKV/sCxCqi2W+fo47MqHVdK0egTwNnGe+VP093wId08eAAD+/m7Lff5r4CcUsMWiVEzKH06d70b8Cq10tZTlxhFzJbRC3YPdnR0ygKLuGHtj+6wxaNHeiGsbnx3uK2MpEnawsXlKDb0dXfTunKS/creTv/ej/f78if+24qFG75q68+nS2pGmnqIaDbGvo+C13KpV9/w7i94byIm5sbiXbGOCQKe+//6PHNHeSgAyJz3wUu4WlON1PZesm2JRWkD4Lt9/eaR/+GsPxW2WzcQ0Gnb+yfHR6SRyYNr1XjmdI+D8E89unM6PskJUlcka+G27uflvx6Y5nCy/T7lK/pNFS5dHL9eKfuqw19z9OcxFvV6g1kMOP07ekIpBeSqiNGypvn6pjTWrygjcTJ1IGayYr4uD7fKwuoJ+FzIfpRYzvseNnm+adPVBLsp0NXXU28EubutPcfkKLIjbnSbaka+2bkmf8yv6j2gWfOfiVwJ8M52KQALUH1WNZXPiRvp8qepe+rpyo5Dl21np9sNRYjQ0EY3mltQCFT8ZwRFo8AxW+h6i96mOX+6EK7ZX+U5dPAADoLcLL6U0AShbPjzVVCTLOgSiOUhpBm70VupFFy8nVGyz9DFwbE7/bYx+rugoZoqP9QtVgR6csShLv8HQ5GwwaB9pjmqAaufQcigxXOTG1pjoniZUBL1u7oayO96dku4Ilcj46PAAeE/BCUXEmP5rj/2u+1Zg9dDnjEgxMfAazkQ269OTgB9JFpiRXA4MKbxfwKxI96qTTHSQeMzD1CMCH6EM5FSeKtjdfzuGJAbo53X8MRCZ/J/IlJ2pkiyE6WIj4kL7p7k4OWthpGg1Wt+hrWitN8zcLNOqufFNx4CIs30n4eSvLYN7lzbd1r5Wml5LZ8UB2p0NebLV/8yW8O/4ho/x/clxaDSpU1xTVuyCDkZJ1Yc0q5fpYsxaeI3ngm4xUvcpQcOb87xsi9u+yUgmnSyeVngdO8ClMxwtkiU9UM5jgvCtCJGqyvwex9S/5eh3Ujxu4fSD8UQRSGSKfPaDPDg2NCIaw59/8lKs5gRrJov9hMgZBIovt8j4jxlac5ENq2uhTp23PaxyDNnJwek9aH28ELbUSsG0j1K5VbMw0gjp/V8T0Q+GzFmlIDZKTPVSmYmI6KkRaoOKdsoIwFUqhY20wdieUMOZQ8a2TbdKXOT2r0h6rFps0WgKgrH9KKnfUM85murcnEaLnUAPf1jHulZ1+ibhNZa2l/TekMv/RrXTHTRpqt5NPFolJgB+FWpzZgRwbfcnnPMAT4v/W2ZZi5YlF739iNmMiDpkeafsRH71e14GREJj60PIqi3wiH3XPOfK6wacbkroYLAJiJRvV+PvQO+3Mv5WWT1qu6rRHfy1AzMZXmfadJmMTXu2Qzdam/rM+Zogu4pCm7fIEb3E2LePh5WVtmDx5h4BB7QUSUSozHsYYgwAAA==)}
+.sprite-p0002{background-image:url(data:image/webp;base64,UklGRlgFAABXRUJQVlA4IEwFAABwGQCdASpgAGAAPm0skkakIqGhLjYLMIANiUOAAcwnOJnZK66dAB6Y9vdzrDNi8sAZ7O7sZllMHtM3NR8zUuORUk8BNmy4qek9aiNWlCESp3MLib/y9tU90/cBlOuLcjl4OjRLYO8zR4/Hq7mqeh0cJTZL+fbrGf46D2XQape+rt7rqN7KUOvAZ01ie1yIzycOPR1nIbF/gYCyl6V+EB0DJRLURm86Ie1Z4eOt42/bh3Ir6n5CRyAx8gRpoMmCVfZe+kdParZ+vTUVaP4FIXl+FfwTgAD+/d2UZKVKUIAlYj5C01mMJK5q0h4kpIbaMbTERpE8Qc32oZaDxFyuWhyNNw/fcn/SzxqFsrICQzNw5Beqodc/Ubb2MmkTtsPScBwJ0tThSTzN5ddBTcvOQOnznPfuCSIwOS68ty5heC1cEWgmzMEQyE5FvEnj3MaEegbWLLU9dbwm6dE/5slP8sis9/y9meKM/foagfEHAntB5efj9jGu56ZcwUoYDlFMEjI1JCxgSwGb+sEF0tJk+GU9lO07UU2pF+342z0ZSD8Uzn827VG0jhbM0YHaj8+letvuP3ndZ/jOZXCvLeRmiNUlLfVDhsPTxsx5FkW3MA9/4C6TyrgJMjDHvxLqc+mEjy8ZPW1hDnICEuc6WgtXb0bn1VGRvuJ9n9LhmwMVI1IxbeQlU52W7YZipaMPCvf5UkJ71BivrPtzNb2SfPCZ9FUn3bqEbizLGZ+J3lGDzD7ACDRSNzJpK52iiW0mdAJO5QtTuudFvv3eIuP6TzlBK6XBVaulU05kbA1vY4NYGJoQDJdF84EjAiRYaY+yoJcNIAqdkD5ybaoH4tiu6y4pMC7zTTFhDif5ddYba3njq/gv0uj+x2xOR5DViypI/7AUEgRLhPPQa6yx/KFxrnBa2U31b33hujvXLXenrk1bF4TqLT+XElHex4ftf5EeqUa2eQzSZ1eC12AAPFKTqmyZOhwYuK3tTlThFfls99M7naEvxMlzfTr0fldm6qrUUVgyq30qHFAiF/qXtOhZRlO5HddRBfchY8gn8VtnNEcHZBBZBwNmnINO8x02yBraRIGVUAz5NhFzXgtm/sWG5ZorCi/iwJzOyQtZyvO2aohsSYwFY1w/vG29LEvDENtSeFnQE03KYgiq7R7MQF0mPzPOBM8Z9ZntNk+2crXmqcjWbAa445BBwdpVoLLYuKzHwjT2mI8ELtr77Tz2CNIGHo1xIen6hcJi0w29QFVd66W45IZzsE5azOFJxDNFdsH2r9761oVKJeIoBy1oBo7iNllq3lf32Pt0cYWZXySTU1Xl1aVXoRoMaL3huhvmaWiGZA4Y+g7GrgOq34UyUygkw0knGztxgTZF1n9EGX2ZcCFFjJSyX2DDzeQDuIlLUav74+kmt2jlnNubaPaWTDr9sKQ3YNsbmhRX2WZrV59k+kPiyeM6/INGESVgri2fILRUOASaKb0oCxttF0udKnjlCDwX1Dfs0+KspoiA9Gt7TVtFxhr3/EztxYX/SsnAh7+oA+hkvbniQJoaHczix12RtTWwx4UUKODH/WTzlQi15+V5ByFqck8RroU6UVyo8JYrLCaegqhJh+B6s17oVwPAMTPWC4+b/jGSm4bzK2GrfmacYlqVZzMC4mvv7I3AXeeNd50ZZlgAlw4+4AN3YuyWY6v2VG79xQL5ILk406WKm8Re7mKfgKqsSDKCDxDpwCRHnFv3EtwYzjXoYizOL7GDEQlCf6NkGy72S1pca+bXD/KDI75mJVLQRfRNe9VmwbD0soz/oFvYzaI610ilzu1ZgAA=)}
+.sprite-p0003{background-image:url(data:image/webp;base64,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)}
+.sprite-p0004{background-image:url(data:image/webp;base64,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)}
+.sprite-p0005{background-image:url(data:image/webp;base64,UklGRiYEAABXRUJQVlA4IBoEAACQFgCdASpgAGAAPm0ulEckIiShK5TqcJANiWMA1XSiDb/Ics6Cf4GOfuEVvQ5ibKZajBXTeY8uXm+6rEle4hR1269N4Yu1hwbl6I8Fs0Y55FtdLkesBZ1oqC1TAObKqCIPCQN/1eJ0ZDxUxjg2RngJVJMXZ4N1Juo9NgnTGf/9ppXb4QoXvU0ocqMd/1ssrzNOHDNl0cOFd1LrIR2nHCGi7/jzibFdGcpbO3aSIKMyhTXTS407xJQXG2/VPiAA/vxEqgSXv3HMC0So+m8E+QgY5wwQoRrYvour+c94TnNrIZIsjFVem+McqH33Ur13u6OqrgPXveQSVm9PumbtT1LOIGAMG8uuZfbFEZP5EwPaHJvFYIzUt/ILuMnibxPp4v+XYecXsR23rzfhgpmQWpUgy/uICbdbaJC58uyyZd/7B9bstPJgs4PVc0ax3G7y1Gegwn9abyVkfMvSnRUlkaVWEf+Gkq7LJFS1RWjypMFO50c3l1DLCyjKPRptzARe1zPvA5rGXH8Lu8uLc778sJCUGHNMAAUO2xsdTfcbuJ1Z0T61GAGMjx8/7sAg7Yb9YUGouV9XKRGMoCHXGYyUn39HCJ46NAgmZY4Ou8lo1YfyAc+p0YUrbYJRDXWy3Cz3zSASk6Bb6ya0Rzc9C3EzKC9TRo+/M+/3PML1Nha3w3TmRttddFE6Z3ddeK77rmGVpr1gIahKVFiSYrCHJVg/NKW/6NGIN++AntFHK1N5o4Stm/xO3hg4Gr2NcYWz12CzWAfcmztjkfY0H22iThXlVyALBjp05TsrNN7dFZa7CkaRdXwMLv2wu2eeeyfZ11BGfRTz7tffYwbsx51ejMMwbyHClY4nV3tfj3fCUDr3mxDPHGanzADMqT5i1cXataJuMQLBcJRInLMdG/6N4Ceu+9bdFDMcH4eqNXDZgdpB5Tb5OD1lGBQM5GcFD6tTjSA1ajZyNC5n+NxHV8CBiFb/hskOSJjsl8W5IhO4kdnj2bMKTlGSJFZSapDPZbDUS9t6vQHuVps58pK+xg/v4i7afoIb+/+Kb+dYM/5fGIb2BIYIYejm29fUz+yOqjaxXuTz0VO2mu+Q1CTxBKjEaDyfzdtGO/W6CIXsb9lUcVRG3FNOaa5HsC+jKjhWvYDOJGNnvE9hhvfzuc8+rGI2IPuO92uQq2wG/4TNHkDxFTkdAtKMkSQWlHRvRoZYpmpByxxmPuw+OUKr6tT+k5rKIRimg9a+ZR8gyOTT+Gn2aFa8RsT4fV5BUMw9BJnc1RXL7wcuumxW0iCB3jL4gnQZCMlZYWDx1fW5Li1/r8nkiIl1v9AQThaMKunwwsQaVtKrKV1KdmNE3Nypv8aWjHethgncppCpXoObFBjhG6TGXb/vmlANJ+TTYC1nzMAAAAA=)}
+.sprite-p0006{background-image:url(data:image/webp;base64,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)}
+.sprite-p0007{background-image:url(data:image/webp;base64,UklGRmYFAABXRUJQVlA4IFoFAABwGQCdASpgAGAAPm0yk0ckIyGhKddKkIANiWcA0pG32GjS79Fw3YiPaP+t4fdgDe0dS7pffX6iKuPHr6BOfB6u9gj9dt+AMrt7FJUOJeSdoVHwKrrg77+pGP9IPzNE+svZVz6/UAGPTw8A4+3cLq9TzC711Rv7liqTI7vxciuvqk18R5E5tCLnrEA7aBKC2WylRJCghvdvTThmG35VSUbxEZqH7OlNZN6orVuQ1vNo99N/gy4WgGa2zYgk+k0WbJTNAh68MgHFDzGaqaTe7c6rn3HtGAD+/KX/SowVoztxtSBC1PwEv8R+Ng/1XP6AEKkg6JjL185oXbTp/4NXr00QXQw2TQTRv/ImJRN3Q5FWL1j+D/Q1uY44fcR/QixPI81QIAHWUVRKdCa4MBn52NjOn1zliX48e8e395+Nuee1dbIsL2wTA1fH0/1ge0z/y+jhTtHXjo+4gdW/aNpwvyNdf3+2BVmcgd+ru5OujnYC/0rabl0osCgbM04cW/fkJFosgHvZWIkmhF3Z9DGk1TJIeA6T6Q+MGMeHs5hJVsAqJovMRTu1t/B1fw5Y23r4v/+GQn16US6E45fGEBwdCxV4Nfw988l33HLxh79a3YqLL5FA4y+x2ifrchfqOKTYC9pnC2c7ot5ntiwJFoIw6GZU0E8t/LNvzDdgfS7UQlhJ1toFfuRYVK2x5JN3vNtHFbuxDpkf7uV4pobgEQaTerX4b1gJ5kamcKpmxRI5OyI27Xsp/SYHK2RqRHvmcjBwCsp9dbWYkKul3KMEM+7rl/WLFvI3kQhnX7sz3arjvFx4Cixd36LWaO5B3dRaCOkxAx6jmoHpdqMKAubsTxQ3ihE3m5vhyhYqbPHTTA79/nKkY3QJwwZ6K9aN/3DIw1qHzMJNpWyo2Oa+LJiCt16JdnheKe2NYKuQbuv6LK+pp9ualf88V24KZeYzlK516P5cxBIKz6syeJe5c614Bb1WJmpDf+a+f6OvXR3lDumfJVNRS7H2KZI+MdewClUy8jFD1Gv2651TwBi4aQy45ZbKIey5dJINHQibafO7h64afyxlFpfWrCW9bmvdOAvmbS+xm9KpIyrEXS6Ev6/zcmwBfIu4AEYKQom9JInIiIHOU99WoyeUEWxP7qoDy/Sreikdk68ayES3MDY0MG1iIiAdQQvsd80ncXkEER/3b+njYkY9PgZKqrF/yA/eXz87qpEZ54yUkJNHWE8i+l1soERcnYPsqoZu+9nmIj24tlg6Gww/nJz5Xa8Sn3AP9ciIVowKpXMPctn7scJMXJknCwoWeBwY7ekNN+ZaSI6AnXpOeBLjrYZv/WYD3zpkQCK/v1ikvRTtfrMby7w7ewMJ+ddIbI6Ch5QqNPXrb6dhK0U4NJko3XlA/JxBZJA1K3dWtOAxK8eCQenDQ3qbKRYbQccK5LRmZ4bUuuwbLki9sGRLAq0rusuHW62Bj+Xl6l82j3ZPU6RFr8TKsCbFcvYrZOq3W1dFVTOTWjzVGYkGX2O/6XUbmAkhy2s94Ti43XJvxe1njfx4O0ALMDtrG3Z3U/7e7J4Ibn22P0Pop6xRUiFTZZyZv4avrE3paCdwsq8f2RTjofgFXch8XZDBHMNjtR8hhDwAoADfKmEJ6bpZGvxf4qkUuEt2F4B0/O8Txzmm+t0CXp4f4jaNrc/ZRqw0Cc6h9rpfxhO7+mLCVKGkkABTXJ52N9uZ9C9G+8Py3GIdE+tW4MgFp1IsvQzEKm1Yi7WUPiCTPqRQpAjpc2MZyHSZC9OmUTrP1gvNj8nA3Ntr5/maIU6+VQh6GgTJvMr/Kti3ESlgMeVMHmeQAAAAAA==)}
+.sprite-p0008{background-image:url(data:image/webp;base64,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)}
+.sprite-p0009{background-image:url(data:image/webp;base64,UklGRtYEAABXRUJQVlA4IMoEAADQFgCdASpgAGAAPm0ylUekIyIhJXgLuIANiWMA0wkciapZy09Op+C/xVTg3GqpYZ/5K9Q1rv2HNb0dx+oYwSxTjBF6LFP1OhqKTl3xWBztIGGC2DPP9NWmD+t9j9waE2xwEWliWOGSV12TnyzvOAOMHK9FukIycke8G5+KtqWZWT9shwh4DHPJuj9i3Wx91f1YyW5Hvgv47QEMzd4qhXwC/nG/5NZvtlrAFyf6M9c7SARlZ8r5GFcVj30FsfVlgAD+/52LoLqENcRsoR7/YRtXFsOQFSbUrN7HX3q9IIp07VSNcyWBGLutGMLEv453E9+ZjCXCs5mT5DKFp+UuJGFGL+NTZpKh1NTXVWmPbSJFpp5jmQPcFpx+pTWlnAArYBSIzuvXFCTOJJ+m/3VDxZn58uqCl3+91k/f7RNhkyDacV8bPnUvXu4pv6iVKRa8pw3vXBpNz8dDqrORH5f+soC0VO/JxA3OvCl15JKFQgNcV3hCHROi3ojfPaqQfnNTqwYUFph5/TA/IjbtuGXkhpAtspyOOHwOzNqPUWWBT6rYCmI6lOAQ4uFBaToOkSfLNEtoHiomMQiV3XTFlXiGyI3Wx6HtSpH/db/OWInGjxUP53eojHv+/b+juBMy70ZMBl7mt593DWnK8XeDRYnsUDzvVRlB/NcEMxsHH5biu9kfxVb8CxpMwAIGQ9pgH2N3n2YsQN0fib4p/Zy3aTscB6A55TvssW+SZ682ibtmRHe6j1IvvBIZGkACZvD4/CeBlKzSvxOA7REdispKT+Jeyp2reCl8tCujc7RzqNW33mKK8sSw4kDbppQKWuBKj2UmAyBum7tCwzj/LWMbj4KIrfNiU3iyf5MELdEkc71jdwxjY/rtGZCxi9t+6HM6KHX78O1InB3+2b15jq67HHJFBtg10N3cg3qKXwYSyerNXM0B2o6I+WQGzK+rRNzP5U9/bPBwOYr97r2G5a+lK5gF49dfj7I8jNUd62H9/orMpUUyR+Ob6OtJn5+Cmx8YBtz5uJJSevg+UWWLQAWW3lr7pVW9mYryAoCE+vJfTgEvC6DvuVJnuTDyIfdLkxpRFbI+rs8lSuQOEqYDc+hoRzGK6XzWapXtRU9QkHW5jAuJ/HO9ExY6SVV2GZ/DVXQ68kUO5Nou4Cv6leaGeFXf87qeYyCfXMJh0hRiBk8L7RVgRdr7DA7U8XW7E9vEuz+SMb5IaDnElBgT6D8aTzjMznFM246ywiYDiuX7hQGgaAIeMJIe96MGa26ZFl4dRj3KHO9Sz9ZHyZqX8GyTAMWLG7927I7BP2tCl64azuRGk8rnAzCfKJE6/daVIBc52OJK+2Dx9iX6AYa75/BqU0wXNmFsxC+FS808xnQG1R9y/QZrrP1Kg6q/E6kymmIV35Tzh623b0Vz9Ebrg27H9juurmYlOH9rfqJc7cAo8Xv+u4cAX08Q+byHJDiBeWOvwo939+ZPurljLCJIvlS0wmzpKiFmNiwSWQ9Ov5ktU9Xocg/5ftrajzO5+PqG4h0/oQuPf2K2dDJU0l3GM5dj7ChbxJkHkFLLv0lBf6fRhZG0r/DfGSZbfgjRutExc0NlDz+NhTfxAqrruh8hjeZS5+aSfHDLSQYBIaZBJUL7wQAAAA==)}
+.sprite-p0010{background-image:url(data:image/webp;base64,UklGRhIFAABXRUJQVlA4IAYFAABwGACdASpgAGAAPm00lEekIyIhJlSbkIANiWkA06LyPkh9+yJ+6PUR7Q3wdrXy7nt6276pxF6SzH56G2ff6u/8nuF/rpvtJaRzSuYHNmlJy5WBU/x8A/AyQtDQfC7TwqdkTfKKYZ1ctdKBAih/bJhb7TdoqdnlC5qN+/lEEgUmz+vD4CeCGrOdSQL4am2pVRMCl7Xo79Ff+mx8D2uSlbT6RO+hcrHAMxna730e4Fv4l52JyjTphbGpvfSzYrdZyyN+QCgubbqnZbmENAAA/v8IwMangLeY4PiVxjKIT6frK09qlF9CWexzI/jp34+/frZCPy2YB4bQBlcs4uiSn7EEzp3UlqaDAnhGykwXlgaKFizSLkQ+vwo170RC7XQ/VlSfz1lnYI9wnuvDsCG3B3ti8MzRoCrpxKo065D6B4zFbkucNK0tjAfhdsfUP+Osy8/uZ8thwlX2E8uKuxHroRYalBvW9ItmXM8ZzadXp+wd6a44XzPuQ0klXyp87y23hyhx+VbVxAjuH2UQnVlh01tdeEvIApt2tcIvnICPKM+YGZLPee3BwvrGFd7XcQ6mu7/7HfBmaTRR5HrkjWOtRBJT3rm5b67W497UyHDB+fQEVUr8kSwvqcsfxAXMU63sHR8m5crAp+T5nykRZUZwhlI8ikuBrjK/SFpG060FRTjXvdTlVxR/On2PdrFqS5lsobJo2sf6yTrhTSI4PoiFauicA0H/QKS6bYl4+LVBZcWqOOUi6sqNvgRPlPYHsiqp2MaRWv+6xpuYLSfTdvysQjmOkOBJW2wxaLoUUm2jSlabanKzHZxsljgPf8ngczjxFwoVHBZ7Megca1bZuJczAq1fdHUtg0VJ/+vjIPlMmZ/v//b4jUSTUyUAdZjhhLCMtwr2Ypa9yGa/91Os+dKZEAtw8k2TNGS48vojSE5kim6bhshh2gHknrz2HTXj0NeHoMhF2CUD5R39/yJ/qdGZiTNqyDraj2F/ntbYxS8UJu4dEvMhurHPtdWSX2I7yM4VVOrNaTzykvsZx3MZy38qqZUlXfkIt7PE6ZNqTmJPTYkScpjWsDmbvIkMzFL2N+nuO30MeL2LXQ3HY2DEBpWkB8RqX0SiXkeRv2q26/fpqAiUaaNaW+gcuHjqv+Y3CJK0NG5089v/AH6dpqeM/MSDvp9uulvvEPfLnvMaMacE69uEnZxQs1NfvFWk1SbNrCsIFUaQhZRaAO/X9gx4rLPFWSW2ofRjrY9j6DBuocYVq+sQg5S8ZxOmzrWAJCviBD8uvnl7+8xRXx10A+Y7hIEtSp2vDV5VuOVFZL9Gl5o7Lo2RPrkQOXTHmav468V0pKGVPHtbMRwdt4pmDGw9nV8SyRkp1a6qqSjUBXTUoNMZxaZhvnYYKng3YOp2U4PJmUKGzpBO22cXALdrTnQRyNaSuXyKdsZF6gRbkRBnRONm6PeX18rsv/buE2lF7XihHmTXJj5Zi6z1TFFi3Di7S5gnaskpfQ3r3yrDTETcPqu/ZRaQOsfTJO+16x84b8+AqXoYOYPlIgnN2ZLVRiqXbvGhrillc+mU36Bx04fjFFlegPB+IPhnM/MvIJMjzTMGehjBLO0HEv4IYmaKvHyfTB/J9reLAR61lKuV+sLTTC/9WZyPBsL8Hsaxspm5JdNQoCMQ9QBsGgMU+HpHPFH9hV/ZSDCFZlIZQkoDV8o5cMJBANLzEKkbCYAAAA==)}
+.sprite-p0011{background-image:url(data:image/webp;base64,UklGRngGAABXRUJQVlA4IGwGAADQGgCdASpgAGAAPm0yk0akIyGhKrgLAIANiWMAxM/7F3e9u0SANvit3fP6NNW2POXEaw4aP5VPrEuaVEo/624tgc+wE0MraP+hp4idKu7exteH0Qeu9bgYsH0kcu8MMGOVr/uQXcdDH5MGtnl71kge911saDqhnVv287EuyluVMVKveUZ21x1VF3nDde9rpLHxbFQkG0xmItO86zrXpe0EOxnRtAqxgroaJAApuRB8SfjuB0vCCz+mscNvkakvMho0XillZJUYoW1VVLdi5aJt0pTjdNldsEFuh6wS+w4AAP7/HPnGrxusLnX5rG9blRmK7ISJX1r2ql+1nM0PMZU0Cwo6FDOcVdqYuCw1dhPPaaTWxtG4NuPsIfzcC553qtNTue5CJ22pFPR8C4td9BH7bP3ISUynnfRnTLRh8THABwVtjqosfOGwxPO6UAJee3W/5IeV40/092d2S2p2BQHTky/mltZt0ROdwmEFEVt336gUysQPjaAW8ZFmdAz2y2/xI8qnNjiyYNwcs2NA15JMnkLKyb8CyrH8WUcV8jjObpMxD73zJh8Jub4ncBBjo97bpBjQmqKgIZcLe/8SpDJoRdIT/H5+U1NBm0UFK9o0TVIkvsvQVwApYpJx44c4yFWgRlUGQN3Rqc6Eu6Ly6AZP0SYatiP6VnJOA3jqcqWzlAELglwZM1QgPsxVvyUAS7btea603Y1rbeJFoAfDth/WJ+hM8LnFp2ZA18ZDIkRvmvMXdmXoX5k4wYTitQYkturvnBvl5J+rgpBkEpY11bTyiMoRx9Yu19DHiEKkxqyTvayDhc8KgHZ/q1bEVVmzIsMFGERwhlZ22bJYnoL0AtP9w+73dD71QEoKh3SHC5JzVTYASU2HHRAuzkDIevbX/XO625ZrkgOMgbPi7I2T09+MiEmGFb0bAhCYwsu3D2o/jgUF08UYQcYmP3nnD2kKFWfKWkhl9ORlrYHM6KuqLtcfNAVVVLIEkdNDboyrvZIKU2lsdL76cdOGBqzGlfEA14b6rFdAFHwuozUh9hi0mg5Kkamh9V4L6CX4gMNtFuAtFdw66EXiSx/NRC5ul7bensBqio1HYVhBqHwmN7cx+j+KqwPqTbKGV0BjRjyuX+/p7qcol1ZX/FMEVQX8X3TOtFbPsX720iAsPGMRr+mnC/IL4tgWHfhrzIgDmTwtcg5zwLVSKkvu4/y/nxp2ie2NNo8fiRfhUhi65NciklZY6hY6+TKqL43EQs9KRUa4g3Dp+zthtvnx/uu0p9Gh30f2OxcgcQaYwHjraJtW2aHo2F6ggY7Baha08PIMTMK1DrYjToWWttOqaEGB+JO8+7e/AMQLLLPkt+RbNsQr6wRZABJH+SrEb5Av48QeiYkbZDEHsgfgS1v0b53pPSfRa1nncQ0UqmjLf/u7UaoutROXaOB3BwzzgshyTx3vlZG2nvfcj3+/gV9qPgZeax/Dvimqjn56Sef6DhP9+IiBZSOjY7EssKbPWcZVRISXJHTxCdw1lINKJKPCOQRdY5YV+6pFVhWsvwcvFLw5qRzPTGIxZ8+QjVy38BAt2+yxiyRt/Zn06ETwPZBAHb4os/MxPrchIZknm01HnAWemdf2qL9sjwg80X0Y4jBJnXy7/m23oOSb50gRZgx0Nl5CYQy6yJ4ZbCt6FMPqC6E8LOkDv/ZNKB186WMM628I1OxEXvFx4/WhmIA1YLbDX4Nl39ntCMOLVOaDXazNO2B88eYa3TDUsHhDERSW4+eqY97PUZcGFWMiN1KrORFh9o3d20ClxadpEBGD5RYC48U6cNFGOmWWLjjWgvz0EgLbM1Mko7pYccryXcW5vn4J+52YOVKuSnzg3M0MUV7tOfL0uZ4ZpyY2u2sWBqs9avGVrT7RSof0Q9yUgf/TNrP/jWCv20+23OuCXfQljUWe7vFTwhmJOCukz7yBZdcNnhhJ+51hOCYzdCRzBVHBgcbJUuWTb/hcqtEEMrIddxxne3TwQ/N28hu1pv7a4ONR1g3H8sPE/09Qju2CKm9DhRoAd5ohWUbAckHCMY4CwId/vAe2ZLAszWMBTxMwXukHakWdM9u81brv6kGj1g6/eMKqswwDWKtrfqJXPRvqrx6JxFswrwGjV2wMnzVwKvNmDDZ7YMRoO0bMNK+qCMR1rJHtNsrlLLd/gIqInJVzwk38X+2II1FLkAA=)}
+.sprite-p0012{background-image:url(data:image/webp;base64,UklGRj4FAABXRUJQVlA4IDIFAADwGACdASpgAGAAPm0qkEWkIqGYeo9IQAbEsbOsPZjssTFbYePY4S9uCp6b2EvbG8WXxqBGlSI+SXM6gjvX+KOXsP5xh8lmVyRZtZtDNQP9YyNMP5CDNg9g8vF91tUDVRnRjee21KnoJb8cF4pgzWTXeRpDRvhznZIs3G9Cd8AusggUpEqdCsCjROwscGzSxxuB+SuyHbWMG//TY0VwlB9soSxgJMKjuRiL3Sc/gn7M3SPzlrURtDaZlLsRcanLbtex7y5B832nUJCHk/Xtet4QAP7/Ce50Q83R/GGv5mNtnLcGISHMk8hH7uGSuZ7XdBLFAqhq0Stw3SQD8bPfSJeynh1dtrTodvvy1XTSp83URQDiL2LXa3nRjmtqI1SiRB0in+aJ2hCfV1CdlJN3GziLkPEjBnYuZY48w2HOqqiBaQpEyohZebeOIAaoCqjOApuM/xeXpWTrhq8jyzmdOtno5me9UfvBqkeqhYFUp24mIFb1kQ7A0iN65iG6zzqBYOrUkJubFZBEGKLICJ/rMluTUMZNy3d0uK8lcEZOggE6YzJp6MtCLk7dnf+9VSKS4M44TYPbfZoWSZrh8IW/1X9oIty03Ae7XzHPUKChqFO9ltVvLDXAmTHwVcIfRb0rHTG/q1CNu0TlAZK2d6e9a3UQEkX3AkcV/kFeNcHNDbXpWDVsFvvycPdbDICV+hdXb9YLvKaUjh/tJyUIIhrOnDef3nZDaTgMVmQTBdXkNhFiAuvRNrdt1EsRwrdw+auGNwenkEN6TzF+29Gstf7vxeycyGxv0lsXqCSL7m+wO/bCE7eM2/E2B2/vs1udFhS4gffSl3L8MvbaMPYt4Oz5B5uYVi0tR4pNMvFVWerZyETpPNFs0cvoEqzVGEzwPhkAmB3U6whlnKr5CYZ7ZxvLH301FFK0hlhm8B3oZ2U3t3Iq8PqIoqRUnIT9uwGr9dvZPJ7R89PMDC2m6OFiD+H20sfbLyMkFwCTr4cf9yfHEcEIqJOwGGJNcRCSoC30twryXnq5bNR0TlhbaHXF688u1DJpOdvI3QVRB9rFQUW/VvjDzsgoJIHIg49A1cjBrPJtxQu64J3X8/AwrDNr8UrT90fRDKw6CdwqC1Ep0rcWrL9CAWuzhK3o5RniiQ7t66NBBGRH86AlmoDk6MjoemtCmM3KXEGwq6aTpvREams2FVHR0eNoN4bEGrHVqtyDNnndOFyUJx67QkB8DXB36SD4+JlWzojk4mykDQSNWj08ZTKW0BKPh28On7e9KwG21aux5HC7cGPm+T4c25O8n5G3avVcwkjUwNepGIc/ZzIYLVXiyNb8WVWZR1gnKHTjFNoXww2KPRg3NKWRXwupBpGNo7hfLhqMGjkBvmmcXsl8T6qQBov4GxW8/i1ghAJnDzCkaSVgmgwfCuDohTulJp/biEk8ayEIiBomSIrm4ehk4jMZ3K7lGF3l9jwESDiGrxOZidkUqZWDWuNtOscD2w5P/sq5VYYbIhrOyiXh3KWzf3tfOGaeLM8+zkKwrJMue9gMhWcbKgXME+Y3iWOIhko15X/ff+pMOGoKfD+2zrbj8ZvDLanKVlnFar577Ysu35v0jjQC+mPZh4UWrXDDskYygC2HX8P1Z3WwQd0nOJ09EiP0XUsTJ3QdIQj3qDcTC0d9aRB72oUtW4HFhhb8cUpCRC62MC5bpsdUDMUIrUUx4t6ykD28FahPTxcc7D+P+lpLABIhGhtxkTc0Kl42kOXhCVWkdZjRAtTdAq/C4Ax2rFS2QAAA)}
+</style>
+</head>
+<body>
+<p class="muted"><a href="./index.html">← all runs</a></p>
+
+<header class="card">
+  <div class="hero-banner">
+    <div class="hero-portrait">
+      <span class='sprite sprite-p0000 player-sprite' style='width:96px;height:96px'></span>
+      <p class="muted" style="margin-top:8px;font-size:11px;">elf</p>
+    </div>
+    <div class="hero-info">
+      <h1>Elrond the Twice-Born, the elf</h1>
+      <p class="muted">non-binary adventurer · seed 419 · started 2026-05-18T09:00:04+00:00</p>
+      <p><span class="outcome dead">FELL</span></p>
+      <p class="muted">Memorised: —</p>
+    </div>
+  </div>
+</header>
+
+<section class="card">
+  <h2>Final Tally</h2>
+  <div class="grid4">
+    <div>
+      <div class="stat"><span>Turns lived</span><span class="v">52</span></div>
+      <div class="stat"><span>Max floor reached</span><span class="v">F1</span></div>
+      <div class="stat"><span>Final level</span><span class="v">L1</span></div>
+      <div class="stat"><span>Experience</span><span class="v">48</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>HP</span><span class="v">-4 / 28</span></div>
+      <div class="stat"><span>Mana</span><span class="v">0 / 0</span></div>
+      <div class="stat"><span>Hunger</span><span class="v">94</span></div>
+      <div class="stat"><span>Gold</span><span class="v">344g</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>STR</span><span class="v">9 <span class="muted" style="font-weight:normal;">(start 9)</span></span></div>
+      <div class="stat"><span>DEX</span><span class="v">12 <span class="muted" style="font-weight:normal;">(start 12)</span></span></div>
+      <div class="stat"><span>INT</span><span class="v">12 <span class="muted" style="font-weight:normal;">(start 12)</span></span></div>
+      <div class="stat"><span>Can cast</span><span class="v">no (int <= 15)</span></div>
+    </div>
+    <div>
+      <div class="stat"><span>Total kills</span><span class="v">10</span></div>
+      <div class="stat"><span>Items bought</span><span class="v">8</span></div>
+      <div class="stat"><span>Items identified</span><span class="v">10</span></div>
+      <div class="stat"><span>Tombs suspected</span><span class="v">0</span></div>
+    </div>
+  </div>
+</section>
+
+<div class="tabs">
+  <input type="radio" name="rep-tabs" id="tab-overview" checked>
+  <label for="tab-overview">Overview</label>
+  <input type="radio" name="rep-tabs" id="tab-stats">
+  <label for="tab-stats">Stats</label>
+  <input type="radio" name="rep-tabs" id="tab-equipment">
+  <label for="tab-equipment">Equipment</label>
+  <input type="radio" name="rep-tabs" id="tab-combat">
+  <label for="tab-combat">Combat</label>
+  <input type="radio" name="rep-tabs" id="tab-journey">
+  <label for="tab-journey">Journey</label>
+
+  <div class="tab-panels">
+    <!-- Overview -->
+    <div class="tab-panel" id="panel-overview">
+      <h2>Equipment at end</h2>
+      <div class="gear-cards">
+        <div class="gear-card">
+          <span class='sprite sprite-p0001' style='width:48px;height:48px'></span>
+          <div class="gear-meta">
+            <h3 style="margin:0;">Weapon</h3>
+            <p style="margin:4px 0;">Dagger</p>
+            <p class="muted" style="margin:0;">+2 atk (2 base + 0 upg) · dur 32/40 · uncursed</p>
+          </div>
+        </div>
+        <div class="gear-card">
+          <span class='sprite sprite-p0002' style='width:48px;height:48px'></span>
+          <div class="gear-meta">
+            <h3 style="margin:0;">Armor</h3>
+            <p style="margin:4px 0;">Leather Armor</p>
+            <p class="muted" style="margin:0;">+3 def (3 base + 0 upg) · dur 42/50 · uncursed</p>
+          </div>
+        </div>
+      </div>
+      <div class="chart-block">
+        <h3>HP arc</h3>
+        <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,61.4 25.0,61.4 40.0,61.4 55.0,10.0 70.0,10.0 85.0,10.0 100.0,10.0 115.0,10.0 130.0,10.0 145.0,10.0 160.0,10.0 175.0,10.0 190.0,10.0 205.0,10.0 220.0,16.4 235.0,16.4 250.0,16.4 265.0,16.4 280.0,16.4 295.0,16.4 310.0,16.4 325.0,10.0 340.0,10.0 355.0,10.0 370.0,10.0 385.0,10.0 400.0,10.0 415.0,10.0 430.0,10.0 445.0,10.0 460.0,10.0 475.0,10.0 490.0,10.0 505.0,16.4 520.0,16.4 535.0,16.4 550.0,16.4 565.0,16.4 580.0,10.0 595.0,10.0 610.0,10.0 625.0,10.0 640.0,10.0 655.0,10.0 670.0,10.0 685.0,10.0 700.0,10.0 715.0,10.0 730.0,10.0 745.0,10.0 760.0,10.0 775.0,10.0 790.0,215.7' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T52, max 28</text></svg>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="tab-panel" id="panel-stats">
+      <div class="chart-block">
+        <h3>HP over the run</h3>
+        <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,61.4 25.0,61.4 40.0,61.4 55.0,10.0 70.0,10.0 85.0,10.0 100.0,10.0 115.0,10.0 130.0,10.0 145.0,10.0 160.0,10.0 175.0,10.0 190.0,10.0 205.0,10.0 220.0,16.4 235.0,16.4 250.0,16.4 265.0,16.4 280.0,16.4 295.0,16.4 310.0,16.4 325.0,10.0 340.0,10.0 355.0,10.0 370.0,10.0 385.0,10.0 400.0,10.0 415.0,10.0 430.0,10.0 445.0,10.0 460.0,10.0 475.0,10.0 490.0,10.0 505.0,16.4 520.0,16.4 535.0,16.4 550.0,16.4 565.0,16.4 580.0,10.0 595.0,10.0 610.0,10.0 625.0,10.0 640.0,10.0 655.0,10.0 670.0,10.0 685.0,10.0 700.0,10.0 715.0,10.0 730.0,10.0 745.0,10.0 760.0,10.0 775.0,10.0 790.0,215.7' fill='none' stroke='#f43f5e' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>HP over T0..T52, max 28</text></svg>
+      </div>
+      <div class="chart-block">
+        <h3>Mana over the run</h3>
+        <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><polyline points='10.0,190.0 25.0,190.0 40.0,190.0 55.0,190.0 70.0,190.0 85.0,190.0 100.0,190.0 115.0,190.0 130.0,190.0 145.0,190.0 160.0,190.0 175.0,190.0 190.0,190.0 205.0,190.0 220.0,190.0 235.0,190.0 250.0,190.0 265.0,190.0 280.0,190.0 295.0,190.0 310.0,190.0 325.0,190.0 340.0,190.0 355.0,190.0 370.0,190.0 385.0,190.0 400.0,190.0 415.0,190.0 430.0,190.0 445.0,190.0 460.0,190.0 475.0,190.0 490.0,190.0 505.0,190.0 520.0,190.0 535.0,190.0 550.0,190.0 565.0,190.0 580.0,190.0 595.0,190.0 610.0,190.0 625.0,190.0 640.0,190.0 655.0,190.0 670.0,190.0 685.0,190.0 700.0,190.0 715.0,190.0 730.0,190.0 745.0,190.0 760.0,190.0 775.0,190.0 790.0,190.0' fill='none' stroke='#38bdf8' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>Mana over T0..T52, max 1</text></svg>
+      </div>
+      <div class="chart-block">
+        <h3>Hunger over the run</h3>
+        <svg viewBox='0 0 800 200' class='hpchart' xmlns='http://www.w3.org/2000/svg'><rect x='0' y='0' width='800' height='200' fill='#1a1a1a'/><rect x='10' y='136.0' width='780' height='54.0' fill='#5a131333'/><polyline points='10.0,10.0 25.0,10.0 40.0,10.0 55.0,10.0 70.0,10.0 85.0,11.8 100.0,11.8 115.0,11.8 130.0,11.8 145.0,11.8 160.0,11.8 175.0,11.8 190.0,11.8 205.0,13.6 220.0,13.6 235.0,13.6 250.0,13.6 265.0,15.4 280.0,15.4 295.0,15.4 310.0,15.4 325.0,17.2 340.0,17.2 355.0,17.2 370.0,19.0 385.0,19.0 400.0,19.0 415.0,19.0 430.0,20.8 445.0,22.6 460.0,24.4 475.0,26.2 490.0,28.0 505.0,28.0 520.0,28.0 535.0,28.0 550.0,29.8 565.0,29.8 580.0,31.6 595.0,31.6 610.0,22.6 625.0,22.6 640.0,22.6 655.0,24.4 670.0,24.4 685.0,15.4 700.0,15.4 715.0,17.2 730.0,19.0 745.0,19.0 760.0,19.0 775.0,20.8 790.0,20.8' fill='none' stroke='#fb923c' stroke-width='1.5'/><text x='10' y='15' fill='#aaa' font-size='11'>Hunger 0..100 over T0..T52 (red band = starving)</text></svg>
+      </div>
+    </div>
+
+    <!-- Equipment + Inventory -->
+    <div class="tab-panel" id="panel-equipment">
+      <h2>Equipped</h2>
+      <div class="gear-cards">
+        <div class="gear-card">
+          <span class='sprite sprite-p0001' style='width:48px;height:48px'></span>
+          <div class="gear-meta">
+            <h3 style="margin:0;">Weapon</h3>
+            <p style="margin:4px 0;">Dagger</p>
+            <p class="muted" style="margin:0;">+2 atk (2 base + 0 upg) · dur 32/40 · uncursed</p>
+          </div>
+        </div>
+        <div class="gear-card">
+          <span class='sprite sprite-p0002' style='width:48px;height:48px'></span>
+          <div class="gear-meta">
+            <h3 style="margin:0;">Armor</h3>
+            <p style="margin:4px 0;">Leather Armor</p>
+            <p class="muted" style="margin:0;">+3 def (3 base + 0 upg) · dur 42/50 · uncursed</p>
+          </div>
+        </div>
+      </div>
+      <h2 style="margin-top:18px;">Final Inventory</h2>
+      <table><tr><th>Slot</th><th></th><th>Name</th><th>Category</th><th>Count</th><th>Notes</th></tr>
+      <tr><td>1</td><td class='sprite-cell'><span class='sprite sprite-p0001' style='width:28px;height:28px'></span></td><td>Dagger</td><td>weapon</td><td>1</td><td>+2 | dur 32/40 ★</td></tr><tr><td>2</td><td class='sprite-cell'><span class='sprite sprite-p0002' style='width:28px;height:28px'></span></td><td>Leather Armor</td><td>armor</td><td>1</td><td>+3 | dur 42/50 ★</td></tr><tr><td>3</td><td class='sprite-cell'><span class='sprite sprite-p0009' style='width:28px;height:28px'></span></td><td>Minor Healing Potion</td><td>potion_healing</td><td>4</td><td>identified</td></tr><tr><td>4</td><td class='sprite-cell'><span class='sprite sprite-p0009' style='width:28px;height:28px'></span></td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>5</td><td class='sprite-cell'><span class='sprite sprite-p0009' style='width:28px;height:28px'></span></td><td>Minor Healing Potion</td><td>potion_healing</td><td>1</td><td>identified</td></tr><tr><td>6</td><td class='sprite-cell'><span class='sprite sprite-p0010' style='width:28px;height:28px'></span></td><td>Minor Mana Potion</td><td>potion_mana</td><td>1</td><td>identified</td></tr><tr><td>7</td><td class='sprite-cell'><span class='sprite sprite-p0008' style='width:28px;height:28px'></span></td><td>Rations</td><td>food</td><td>12</td><td></td></tr><tr><td>8</td><td class='sprite-cell'></td><td>Raw Kobold Cold cuts</td><td>food</td><td>1</td><td></td></tr><tr><td>9</td><td class='sprite-cell'><span class='sprite sprite-p0011' style='width:28px;height:28px'></span></td><td>Lantern</td><td>lantern</td><td>1</td><td></td></tr><tr><td>10</td><td class='sprite-cell'><span class='sprite sprite-p0012' style='width:28px;height:28px'></span></td><td>Lantern Fuel</td><td>lantern_fuel</td><td>1</td><td></td></tr><tr><td>11</td><td class='sprite-cell'><span class='sprite sprite-p0012' style='width:28px;height:28px'></span></td><td>Lantern Fuel</td><td>lantern_fuel</td><td>1</td><td></td></tr>
+      </table>
+    </div>
+
+    <!-- Combat -->
+    <div class="tab-panel" id="panel-combat">
+      <h2>Top Victims</h2>
+      <table><tr><th>Monster</th><th>Kills</th></tr>
+      <tr><td><span class='sprite sprite-p0003' style='width:32px;height:32px'></span> Spore Puff</td><td>4</td></tr><tr><td><span class='sprite sprite-p0004' style='width:32px;height:32px'></span> Kobold</td><td>3</td></tr><tr><td><span class='sprite sprite-p0005' style='width:32px;height:32px'></span> Bat</td><td>3</td></tr><tr><td><span class='sprite sprite-p0006' style='width:32px;height:32px'></span> Giant Centipede</td><td>2</td></tr><tr><td><span class='sprite sprite-p0007' style='width:32px;height:32px'></span> Stirge</td><td>2</td></tr>
+      </table>
+      <h2 style="margin-top:18px;">Kills by floor</h2>
+      <table><tr><td>Floor 1</td><td>10</td></tr></table>
+      <h2 style="margin-top:18px;">Tomb-suspected floors</h2>
+      <p class="muted">Encountering an undead is a reliable tell that a
+        tomb is on the floor; the policy drops M/T from its priority
+        list while weak on flagged floors to avoid blundering into the
+        elite guardian.</p>
+      <ul class="tomb-list"><li class='muted'>no undead encountered — no tombs suspected</li></ul>
+      
+        <div class="death-banner">
+          
+          <p class="cause">Cause: <strong>unknown</strong></p>
+        </div>
+        <h3>Last 30 log lines</h3>
+        <ol class="log"><li>T48: Removed Raw Giant Centipede Filet from inventory.</li><li>T48: Inventory closed.</li><li>T48: You light your Lantern...</li><li>T48: The lantern reveals 7 nearby rooms!</li><li>T48: Lantern fuel remaining: 74</li><li>T48: You gnaw on the raw Kobold cold cuts. It&#x27;s disgusting but fills you a little.</li><li>T48: Removed Raw Kobold Cold cuts from inventory.</li><li>T48: A Kobold (Level 0) appears! A small, dog-like humanoid yaps angrily.</li><li>T48: You seize the initiative!</li><li>T49: You hit the evil Kobold!</li><li>T49: Kobold took 21 damage.</li><li>T49: You defeated the Kobold!</li><li>T49: The kobold whines as it falls, its primitive weapon clattering.</li><li>T49: You gained 8 experience.</li><li>T49: You found 5 gold.</li><li>T49: You harvested some raw Kobold meat.</li><li>T51: A basin of water fills this chamber...</li><li>T51: The water has curious properties...</li><li>T51:  Your keen mind analyzes the water...</li><li>T51:    Completely unpredictable. Could be anything.</li><li>T51: Will you drink from the basin?</li><li>T52: The water has curious properties...</li><li>T52:  Your keen mind analyzes the water...</li><li>T52:    Completely unpredictable. Could be anything.</li><li>T52: Will you drink from the basin?</li><li>T52: You drink deeply from the basin...</li><li>T52:  It was the Pool of Chance! </li><li>T52:  THE POOL EXPLODES!</li><li>T52: You took 32 damage!</li><li>T52: The explosion was too powerful...</li></ol>
+        <h3>Last actions</h3>
+        <ol class="actions"><li>T41 <span class='mode'>game_loop</span>: <code>x</code></li><li>T42 <span class='mode'>game_loop</span>: <code>l</code></li><li>T43 <span class='mode'>game_loop</span>: <code>e</code></li><li>T44 <span class='mode'>inventory</span>: <code>i</code></li><li>T45 <span class='mode'>inventory</span>: <code>eat2</code></li><li>T46 <span class='mode'>game_loop</span>: <code>x</code></li><li>T47 <span class='mode'>game_loop</span>: <code>e</code></li><li>T48 <span class='mode'>combat_mode</span>: <code>n</code></li><li>T49 <span class='mode'>combat_victory</span>: <code>a</code></li><li>T50 <span class='mode'>game_loop</span>: <code>back</code></li><li>T51 <span class='mode'>pool_mode</span>: <code>n</code></li><li>T52 <span class='mode'>pool_mode</span>: <code>dr</code></li></ol>
+        
+    </div>
+
+    <!-- Journey -->
+    <div class="tab-panel" id="panel-journey">
+      <h2>Floor Transitions</h2>
+      <p class="muted">How each floor was left.
+        <span style="color:#94a3b8;">stairs</span> = chosen,
+        <span style="color:#fb923c;">warp accepted</span> = trapped-escape valve,
+        <span style="color:#f43f5e;">warp forced</span> = resist roll failed.
+        <strong>Warp share of floor changes: 0%</strong>
+        (0 warp / 0 total · 0 accepted, 0 forced).</p>
+      <ul><li>never left Floor 1</li></ul>
+      <h2 style="margin-top:18px;">Movement Efficiency · overall waste 0%</h2>
+      <p class="muted">First-visit moves discover new ground; revisits
+        are moves that step onto a tile the agent has already stood on
+        this floor. High waste% = patrol-bouncing.</p>
+      <table>
+        <tr><th>Floor</th><th>Moves</th><th>Unique tiles</th><th>First-visit</th><th>Revisit</th><th>Waste %</th></tr>
+        <tr><td>Floor 1</td><td>8</td><td>8</td><td>8</td><td>0</td><td>0%</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>8</td><td>8</td><td>8</td><td>0</td><td>0%</td></tr>
+      </table>
+      <h2 style="margin-top:18px;">Exploration · kills 20% · XP 20%</h2>
+      <p class="muted">Per-floor share of available monsters
+        engaged and XP banked. Big gaps indicate unclaimed survival
+        value (missed kills, missed level-ups). Boons = G/L/O/A/P/Q/K/B/F;
+        V = vendor rooms; T = tombs (each has 4 cardinal guardians).
+        Totals capped at 100% -- dynamic spawns (tomb-raid spirits,
+        same-coord respawns across revisits) can push the
+        numerator past the static M-tile pool, so the cap reads as
+        "% of MINIMUM available pool". Per-floor rows show raw
+        ratios for diagnosis.</p>
+      <table>
+        <tr><th>Floor</th><th>Kills</th><th>Kill %</th><th>XP</th><th>XP %</th><th>Chests</th><th>Boons</th><th>V</th><th>T</th></tr>
+        <tr><td>Floor 1</td><td>10/51</td><td>20%</td><td>80/408</td><td>20%</td><td>7</td><td>12</td><td>1</td><td>0</td></tr><tr style='font-weight:bold; border-top: 2px solid #444;'><td>Total</td><td>10/51</td><td>20%</td><td>80/408</td><td>20%</td><td>7</td><td>12</td><td>1</td><td>0</td></tr>
+      </table>
+      <h2 style="margin-top:18px;">Items (3 unique · 8 bought · 0 found)</h2>
+      <p class="muted">Aggregated by item name across the run. Status:
+        <span style="color:#4ade80;">equipped</span> at some point,
+        <span style="color:#fde68a;">in bag</span> still held at death/end,
+        <span style="color:#fbbf24;">partial</span> some held / some used,
+        <span style="color:#94a3b8;">used</span> fully consumed.</p>
+      <table>
+        <tr><th></th><th>Item</th><th>Found</th><th>Bought</th><th>In bag</th><th>Used</th><th>Status</th></tr>
+        <tr><td class='sprite-cell'><span class='sprite sprite-p0008' style='width:28px;height:28px'></span></td><td>Rations</td><td>0</td><td>3</td><td>12</td><td>0</td><td style='color:#fde68a;'>in bag</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0009' style='width:28px;height:28px'></span></td><td>Minor Healing Potion</td><td>0</td><td>3</td><td>6</td><td>0</td><td style='color:#fde68a;'>in bag</td></tr><tr><td class='sprite-cell'><span class='sprite sprite-p0010' style='width:28px;height:28px'></span></td><td>Minor Mana Potion</td><td>0</td><td>2</td><td>1</td><td>1</td><td style='color:#fbbf24;'>partial</td></tr>
+      </table>
+      <h2 style="margin-top:18px;">Vendor Purchases by Floor (1 vendors)</h2>
+      <p class="muted">Grouped by the floor's vendor. Category breakdown shows
+        what was bought + how much gold went toward each category.</p>
+      <table>
+        <tr><th>Floor</th><th>Items</th><th>Gold spent</th><th>By category</th></tr>
+        <tr><td>F1</td><td>8</td><td>180g</td><td>3 food (30g) · 3 potion_healing (90g) · 2 potion_mana (60g)</td></tr>
+      </table>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
