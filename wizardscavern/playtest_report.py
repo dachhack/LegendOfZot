@@ -257,6 +257,11 @@ class RunReport:
         self.events = []  # [(turn, kind, detail)]
         self.recent_log = []  # rolling buffer of last 60 lines
         self.recent_actions = []  # rolling buffer of last 12 (turn, mode, action)
+        # Longer-window action history just for loop / flatline status
+        # detection. Held as plain action strings so cycle matching
+        # stays cheap. Capped at 40 -- larger than any cycle we care
+        # about catching ("s s s s..." or two-step ping-pong).
+        self._action_history = []  # last 40 action strings
         self.kills_by_monster = {}  # name -> count
         self.kills_by_floor = {}  # floor -> count
         # Tomb-suspicion log -- floors where the agent fought an undead
@@ -335,6 +340,15 @@ class RunReport:
         # Final-state fields, filled in by `finalize`
         self.final = None
         self.death_cause = None
+        # Three-state outcome: "alive" | "dead" | "stuck". "stuck"
+        # means the agent finished alive but stopped making progress
+        # (flatlined HP + no events) or got trapped in a tight action
+        # cycle. status_reason is a short human-readable detail used
+        # in the per-run page and in the index "Cause" column for
+        # stuck runs (death_cause holds the analogous string for
+        # dead runs).
+        self.status = None
+        self.status_reason = None
 
     # ------------------------------------------------------------------
     # Recording -- called every turn from the harness loop
@@ -464,6 +478,12 @@ class RunReport:
         self.recent_actions.append((turn, mode, action))
         if len(self.recent_actions) > 12:
             self.recent_actions.pop(0)
+        # Loop-detection buffer. Keep just the action string -- the
+        # cycle check doesn't care about turn or mode.
+        if isinstance(action, str):
+            self._action_history.append(action)
+            if len(self._action_history) > 40:
+                self._action_history.pop(0)
 
     def _categorise_log(self, turn, line, p):
         low = line.lower()
@@ -577,6 +597,107 @@ class RunReport:
         }
         if not alive:
             self.death_cause = self._derive_death_cause()
+        # Three-state classification: dead beats stuck beats alive.
+        # Stuck only fires when the agent is still alive but has
+        # clearly stopped progressing (see _classify_status).
+        self.status, self.status_reason = self._classify_status(turns)
+
+    def _classify_status(self, turns):
+        """Return (status, reason) where status is one of
+        'alive' / 'dead' / 'stuck'. Reason is a short human-readable
+        detail string for stuck runs, or None.
+
+        Stuck signals (alive only):
+          1. flatline -- no progress event (kill / xp / level_up /
+             buy / identify / descent) AND HP did not change AND no
+             new floor reached for a long stretch of recent turns.
+             Window = max(100, turns // 4) so short runs need a
+             smaller idle period to qualify.
+          2. loop -- the last N action strings form a tight
+             repeating cycle (1, 2, 3, or 4-action period covering
+             at least 12 of the last 20 actions). Catches the
+             classic ping-pong-on-warp-tile pattern.
+
+        Dead always wins over stuck. Alive-with-no-stuck-signal is
+        plain 'alive'.
+        """
+        alive = (self.final or {}).get("alive", False)
+        if not alive:
+            return "dead", None
+
+        # ---- flatline check -----------------------------------------
+        progress_kinds = {
+            "kill", "xp", "level_up", "buy", "identify",
+            "fuel_drop", "tomb_fight",
+        }
+        last_progress = 0
+        for (t, kind, _detail) in self.events:
+            if kind in progress_kinds and t > last_progress:
+                last_progress = t
+        if self.descents:
+            last_progress = max(last_progress, max(t for (t, _f) in self.descents))
+        if self.identifies:
+            last_progress = max(last_progress, max(t for (t, _n) in self.identifies))
+
+        idle_turns = max(0, turns - last_progress)
+        window = max(100, turns // 4)
+
+        # HP-stability check inside the idle window. If HP moved at
+        # all, we're not flatlined (the agent is still fighting or
+        # taking ticks). Look at every sample with turn >= window-start.
+        window_start = max(0, turns - window)
+        hp_samples = [hp for (t, hp, _mx) in self.hp_timeline if t >= window_start]
+        hp_stable = bool(hp_samples) and (max(hp_samples) - min(hp_samples) <= 1)
+
+        flatlined = (
+            turns >= 80          # need enough runtime to be confident
+            and idle_turns >= window
+            and hp_stable
+        )
+
+        # ---- loop check ---------------------------------------------
+        # A periodic action sequence ALONE doesn't mean stuck -- a
+        # healthy explore phase can run n/e/s/w in a loop while still
+        # making real progress. Only treat the cycle as 'stuck' when
+        # the agent ALSO hasn't logged a progress event for a while
+        # (idle for at least 30 turns). The flatline check above
+        # requires HP-stability + a full window; the loop branch is
+        # a lighter idle gate that catches tighter ping-pong wedges
+        # before the flatline window fully closes.
+        loop_period = self._detect_action_loop()
+        looped = loop_period is not None and idle_turns >= 30 and turns >= 80
+
+        if looped:
+            return "stuck", f"loop (period={loop_period}, {idle_turns} idle)"
+        if flatlined:
+            return "stuck", f"flatline ({idle_turns} turns, no progress)"
+        return "alive", None
+
+    def _detect_action_loop(self):
+        """Look at the last 20 actions. If at least 12 of them form
+        a tight period-1/2/3/4 cycle, return that period. Else None.
+
+        Period-1 = same action repeated (e.g., 'i i i i ...').
+        Period-2 = two-action ping-pong ('n s n s ...').
+        Periods 3 and 4 cover the longer wander-loops the harness's
+        own stuck-on-floor override is designed to break out of."""
+        tail = self._action_history[-20:]
+        if len(tail) < 12:
+            return None
+        for period in (1, 2, 3, 4):
+            if len(tail) < period * 3:  # need at least 3 cycles to be sure
+                continue
+            base = tail[-period:]
+            matches = 0
+            # Count how many of the last 20 actions fit the pattern.
+            for i in range(len(tail)):
+                # tail[-1] is at base position period-1
+                pos_from_end = len(tail) - 1 - i  # 0 for last item
+                if tail[i] == base[(period - 1) - (pos_from_end % period)]:
+                    matches += 1
+            if matches >= 12:
+                return period
+        return None
 
     def _derive_death_cause(self):
         """Walk recent_log backwards for a recognisable killer.
@@ -806,6 +927,8 @@ class RunReport:
             "gold": f.get("gold"),
             "kills": sum(self.kills_by_floor.values()),
             "alive": f.get("alive", False),
+            "status": self.status or ("alive" if f.get("alive") else "dead"),
+            "status_reason": self.status_reason or "",
             "death_cause": self.death_cause or "—",
             "started": self.start_iso,
             "moves_total": total_moves,
@@ -832,8 +955,19 @@ class RunReport:
         wpn = eq.get("weapon") or {}
         arm = eq.get("armor") or {}
         inv = f.get("inventory") or []
-        alive_class = "alive" if f.get("alive") else "dead"
-        outcome_label = "SURVIVED" if f.get("alive") else "FELL"
+        # Three-state outcome on the per-run page.
+        status = self.status or ("alive" if f.get("alive") else "dead")
+        if status == "stuck":
+            alive_class = "stuck"
+            outcome_label = "STUCK"
+        elif status == "alive":
+            alive_class = "alive"
+            outcome_label = "SURVIVED"
+        else:
+            alive_class = "dead"
+            outcome_label = "FELL"
+        if self.status_reason:
+            outcome_label = f"{outcome_label} · {self.status_reason}"
 
         # Per-page sprite registry -- collects every pid referenced
         # on this page and emits a single dedup'd <style> block.
@@ -1183,6 +1317,16 @@ class RunReport:
         <h3>Last actions</h3>
         <ol class="actions">{actions_html}</ol>
         """
+        elif status == "stuck":
+            death_block = f"""
+        <div class="stuck-banner">
+          <p class="cause">Stuck: <strong>{html.escape(self.status_reason or '?')}</strong></p>
+        </div>
+        <h3>Last 30 log lines</h3>
+        <ol class="log">{log_html}</ol>
+        <h3>Last actions</h3>
+        <ol class="actions">{actions_html}</ol>
+        """
 
         page_html = Template(_TABBED_PAGE_TEMPLATE).safe_substitute(
             title=html.escape(f"{self.name} the {self.race}"),
@@ -1369,6 +1513,12 @@ a:hover { text-decoration: underline; }
 }
 .outcome.alive { background: #134e2b; color: #bbf7d0; }
 .outcome.dead { background: #5a1313; color: #fecaca; }
+.outcome.stuck { background: #4a3a0a; color: #fde68a; }
+.stuck-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#1a160a; border-left:3px solid #fbbf24;
+  border-radius:4px; margin-bottom:10px;
+}
+.stuck-banner .cause strong { color: #fbbf24; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
 .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
@@ -1746,6 +1896,7 @@ _INDEX_TEMPLATE = """<!doctype html>
 .tag { display: inline-block; padding: 1px 6px; border-radius: 3px; font-size: 11px; }
 .tag.alive { background: #134e2b; color: #bbf7d0; }
 .tag.dead { background: #5a1313; color: #fecaca; }
+.tag.stuck { background: #4a3a0a; color: #fde68a; }
 </style>
 </head>
 <body>
@@ -1768,6 +1919,43 @@ _INDEX_TEMPLATE = """<!doctype html>
 </body>
 </html>
 """
+
+
+def _index_row(d):
+    """Render one <tr> for the index table from a JSON summary dict.
+
+    Status reads from the new 'status' field (alive / dead / stuck)
+    when present, else falls back to the legacy 'alive' bool so old
+    sidecars from before the three-state classifier still render."""
+    status = d.get("status")
+    if not status:
+        status = "alive" if d.get("alive") else "dead"
+    cause = d.get("status_reason") if status == "stuck" else d.get("death_cause", "—")
+    cause = cause or "—"
+    return (
+        f"<tr>"
+        f"<td><a href='{d['slug']}.html'>{html.escape(d.get('name','?'))}</a></td>"
+        f"<td>{html.escape(d.get('race','?'))}</td>"
+        f"<td>{d.get('seed','?')}</td>"
+        f"<td><span class='tag {status}'>{status}</span></td>"
+        f"<td>{d.get('turn','?')}</td>"
+        f"<td>F{d.get('max_floor','?')}</td>"
+        f"<td>L{d.get('level','?')}</td>"
+        f"<td>{d.get('hp','?')}/{d.get('max_hp','?')}</td>"
+        f"<td>{d.get('gold','?')}g</td>"
+        f"<td>{d.get('kills','?')}</td>"
+        f"<td>{d.get('wasted_pct','?')}%</td>"
+        f"<td>{d.get('warp_pct','?')}% "
+        f"<span style='color:#94a3b8;font-size:0.85em;'>"
+        f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
+        f"</span></td>"
+        f"<td>{d.get('xp_pct','?')}% "
+        f"<span style='color:#94a3b8;font-size:0.85em;'>"
+        f"({d.get('xp_earned', 0)}/{d.get('xp_pool', 0)})"
+        f"</span></td>"
+        f"<td>{html.escape(str(cause))}</td>"
+        f"</tr>"
+    )
 
 
 def write_report(report, out_dir):
@@ -1798,32 +1986,7 @@ def write_index(out_dir):
                                    -(d.get("level") or 0),
                                    d.get("seed") or 0))
     for d in summaries:
-        alive_tag = "alive" if d.get("alive") else "dead"
-        outcome_label = "alive" if d.get("alive") else "dead"
-        rows.append(
-            f"<tr>"
-            f"<td><a href='{d['slug']}.html'>{html.escape(d.get('name','?'))}</a></td>"
-            f"<td>{html.escape(d.get('race','?'))}</td>"
-            f"<td>{d.get('seed','?')}</td>"
-            f"<td><span class='tag {alive_tag}'>{outcome_label}</span></td>"
-            f"<td>{d.get('turn','?')}</td>"
-            f"<td>F{d.get('max_floor','?')}</td>"
-            f"<td>L{d.get('level','?')}</td>"
-            f"<td>{d.get('hp','?')}/{d.get('max_hp','?')}</td>"
-            f"<td>{d.get('gold','?')}g</td>"
-            f"<td>{d.get('kills','?')}</td>"
-            f"<td>{d.get('wasted_pct','?')}%</td>"
-            f"<td>{d.get('warp_pct','?')}% "
-            f"<span style='color:#94a3b8;font-size:0.85em;'>"
-            f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
-            f"</span></td>"
-            f"<td>{d.get('xp_pct','?')}% "
-            f"<span style='color:#94a3b8;font-size:0.85em;'>"
-            f"({d.get('xp_earned', 0)}/{d.get('xp_pool', 0)})"
-            f"</span></td>"
-            f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
-            f"</tr>"
-        )
+        rows.append(_index_row(d))
     body = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
@@ -1972,32 +2135,7 @@ def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
                                    d.get("seed") or 0))
     rows = []
     for d in summaries:
-        alive_tag = "alive" if d.get("alive") else "dead"
-        outcome_label = "alive" if d.get("alive") else "dead"
-        rows.append(
-            f"<tr>"
-            f"<td><a href='{d['slug']}.html'>{html.escape(d.get('name','?'))}</a></td>"
-            f"<td>{html.escape(d.get('race','?'))}</td>"
-            f"<td>{d.get('seed','?')}</td>"
-            f"<td><span class='tag {alive_tag}'>{outcome_label}</span></td>"
-            f"<td>{d.get('turn','?')}</td>"
-            f"<td>F{d.get('max_floor','?')}</td>"
-            f"<td>L{d.get('level','?')}</td>"
-            f"<td>{d.get('hp','?')}/{d.get('max_hp','?')}</td>"
-            f"<td>{d.get('gold','?')}g</td>"
-            f"<td>{d.get('kills','?')}</td>"
-            f"<td>{d.get('wasted_pct','?')}%</td>"
-            f"<td>{d.get('warp_pct','?')}% "
-            f"<span style='color:#94a3b8;font-size:0.85em;'>"
-            f"({d.get('warp_changes', 0)}/{d.get('floor_changes', 0)})"
-            f"</span></td>"
-            f"<td>{d.get('xp_pct','?')}% "
-            f"<span style='color:#94a3b8;font-size:0.85em;'>"
-            f"({d.get('xp_earned', 0)}/{d.get('xp_pool', 0)})"
-            f"</span></td>"
-            f"<td>{html.escape(str(d.get('death_cause','—')))}</td>"
-            f"</tr>"
-        )
+        rows.append(_index_row(d))
     index_html = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),

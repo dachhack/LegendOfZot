@@ -4428,6 +4428,11 @@ def main(argv=None):
     if report is not None:
         from .playtest_report import write_report, write_index, deploy_gh_pages
         report.finalize(obs, gs.log_lines, sess.turn)
+        # Surface the 3-state classification (alive / dead / stuck) in
+        # the run-end console output so smoke-test loops can see it
+        # without scraping the HTML.
+        suffix = f" reason={report.status_reason}" if report.status_reason else ""
+        print(f"    status={report.status}{suffix}")
         out_dir = args.report_dir or _os.path.join(
             _os.path.dirname(_os.path.dirname(_os.path.abspath(__file__))),
             "playtest_reports",
