@@ -718,7 +718,20 @@ class PlaytestSession:
         # the same wedge floor. Caught on s=88 human F2 (1,1)U <->
         # (1,2): without this set the agent ping-ponged for 1500+
         # turns alternating stair-floor and wedge-floor.
-        self.wedge_floors = set()
+        # z -> turn the wedge marker was added. stairs_down_mode /
+        # game_loop strip D from priority when (current_z + 1) is in
+        # this dict. The 500T age cap stops permanent blocks: an
+        # agent who escapes F2 wedge, exhausts F1, and is stuck
+        # (D reachable on F1 but goes to wedged F2) should retry
+        # F2 after a budget rather than starve on F1. After 3
+        # wedge-add events on the same floor, the wedge becomes
+        # PERMANENT (no expiry) and the agent should seek a warp
+        # to skip past entirely -- this floor is provably impassable
+        # via stairs and we've burned 1500+ turns confirming it.
+        self.wedge_floors = {}  # z -> turn-added (most recent)
+        self.wedge_count = {}   # z -> number of times marked
+        self._WEDGE_EXPIRY_TURNS = 500
+        self._WEDGE_PERMANENT_AFTER = 3
         # Per-floor walkable-tile coverage: set of (x, y) the player
         # has stood on for the current floor. Reset on descent. Used
         # by the policy's tile-coverage descent gate to leave a floor
@@ -1001,7 +1014,15 @@ class PlaytestSession:
             # osc-streak 'u' valve. stairs_down_mode skips re-descent
             # into these so the agent doesn't bounce back into a
             # region-split wedge.
-            "wedge_floors": sorted(self.wedge_floors),
+            "wedge_floors": sorted(
+                z for z, t in self.wedge_floors.items()
+                if (self.turn - t < self._WEDGE_EXPIRY_TURNS
+                    or self.wedge_count.get(z, 0) >= self._WEDGE_PERMANENT_AFTER)
+            ),
+            "permanent_wedge_floors": sorted(
+                z for z, c in self.wedge_count.items()
+                if c >= self._WEDGE_PERMANENT_AFTER
+            ),
             # Name of the scroll currently driving upgrade_scroll_mode
             # / identify_scroll_mode -- empty otherwise. Lets the
             # smart_policy compute the scroll's tier cap (Basic +3,
@@ -1895,7 +1916,8 @@ class PlaytestSession:
         if (mode == "stairs_up_mode"
                 and action == "u"
                 and self.osc_streak >= 50):
-            self.wedge_floors.add(pc.z)
+            self.wedge_floors[pc.z] = self.turn
+            self.wedge_count[pc.z] = self.wedge_count.get(pc.z, 0) + 1
         # Record flee attempts (both successful and failed) so the
         # game_loop heal-up gate can fire before the agent walks back
         # into another fight. Every flee costs one monster attack
@@ -2714,6 +2736,18 @@ def smart_policy(obs, rng, use_lantern=True):
         d_avoid_reachable = bool(
             (feature_paths_avoid.get("D") or {}).get("first_step")
         )
+        # Treat D as unreachable for the trapped_no_d gate when the
+        # only D leads to a PERMANENT wedge floor (3+ wedge-add
+        # events, agent has provably bounced through this layout
+        # multiple times). The wayfinder should now seek W instead
+        # so the agent skips past the impassable floor via warp.
+        # Caught on s=88 human: F1 D points to F2 wedge, agent
+        # cycled F1 <-> F2 for 1500+ turns until starvation.
+        cur_z_for_perm = p.get("floor", 1) - 1
+        perm_wedge = set(obs.get("permanent_wedge_floors") or [])
+        d_leads_to_perm_wedge = (cur_z_for_perm + 1) in perm_wedge
+        if d_leads_to_perm_wedge:
+            d_avoid_reachable = False
         coverage_obs_avoid = obs.get("tile_coverage") or {}
         coverage_pct_avoid = coverage_obs_avoid.get("pct", 0)
         reach_pct_avoid = coverage_obs_avoid.get("reach_pct", 0)
@@ -2778,6 +2812,15 @@ def smart_policy(obs, rng, use_lantern=True):
                 (reach_pct_avoid >= 80 and turns_since_new >= 200)
                 or (turns_since_new >= 500)
                 or (turns_on_floor_avoid >= 600)
+                # Fast-path: D points only to a permanent wedge AND a
+                # warp is in reach. No need to wait for full
+                # exploration -- the agent has already proven this
+                # floor's D is a dead end and the food clock is
+                # ticking. Caught on s=88 human dying 2032T on F2
+                # after cycling F1 <-> F2 wedge.
+                or (d_leads_to_perm_wedge
+                    and obs.get("nearest_warp_path") is not None
+                    and turns_on_floor_avoid >= 150)
             )
         )
         # Cornered detection: agent's ONLY walkable cardinal
@@ -3161,7 +3204,18 @@ def smart_policy(obs, rng, use_lantern=True):
         # (warp) or Scroll of Descent to skip past the wedge.
         avoid_descent_to = set(obs.get("wedge_floors") or [])
         cur_z_for_wedge = p.get("floor", 1) - 1
-        if (cur_z_for_wedge + 1) in avoid_descent_to:
+        # If the agent has spent 600+ turns on this safe floor, the
+        # safe floor itself is now functionally a wedge -- the food
+        # / time cost of staying outweighs the risk of re-descending
+        # into the previously-marked wedge. Drop the block so the
+        # agent can try the wedge floor again with a fresh state
+        # (more XP, more meat, possibly different fog reveals).
+        # Caught on s=88 human: agent escaped F2 wedge, exhausted
+        # F1 with D pointing back to F2, then re-wedged-and-escaped
+        # F2 in 100T cycles for 1500+ turns before starvation.
+        turns_on_floor_wedge = obs.get("turns_on_floor") or 0
+        if ((cur_z_for_wedge + 1) in avoid_descent_to
+                and turns_on_floor_wedge < 600):
             tiers = [
                 tuple(t for t in tier if t != "D")
                 for tier in tiers
@@ -4269,7 +4323,12 @@ def smart_policy(obs, rng, use_lantern=True):
         # F2 (1,1)U <-> (1,2).
         avoid_descent_to = set(obs.get("wedge_floors") or [])
         cur_z = (p.get("floor", 1) - 1)
-        if (cur_z + 1) in avoid_descent_to:
+        # 600T-on-floor escape: if the supposedly-safe floor has
+        # also become a wedge (agent stuck here too long), drop
+        # the block and let normal descent fire. Mirrors the
+        # game_loop gate above.
+        turns_on_floor_wedge = obs.get("turns_on_floor") or 0
+        if (cur_z + 1) in avoid_descent_to and turns_on_floor_wedge < 600:
             neighbors = obs.get("neighbors") or {}
             for d in ("n", "s", "e", "w"):
                 t = neighbors.get(d)
@@ -4518,8 +4577,17 @@ def smart_policy(obs, rng, use_lantern=True):
         #     at sub-20% HP is a one-hit kill.
         feature_paths = obs.get("feature_paths") or {}
         d_reachable = bool((feature_paths.get("D") or {}).get("first_step"))
+        # Same permanent-wedge override as game_loop: if the only D
+        # leads to a known-impassable floor, treat D as unreachable
+        # so the trapped_no_d path fires and we accept the warp.
+        perm_wedge_warp = set(obs.get("permanent_wedge_floors") or [])
+        cur_z_warp = p.get("floor", 1) - 1
+        d_leads_to_perm_warp = (cur_z_warp + 1) in perm_wedge_warp
+        if d_leads_to_perm_warp:
+            d_reachable = False
         turns_since_new_warp = obs.get("turns_since_new_tile") or 0
         reach_pct_warp = (obs.get("tile_coverage") or {}).get("reach_pct", 0)
+        turns_on_floor_warp_mode = obs.get("turns_on_floor") or 0
         if starving or hp_pct < 0.20:
             return "y"
         # Mirror the tightened trapped_no_d in game_loop: only
@@ -4541,6 +4609,8 @@ def smart_policy(obs, rng, use_lantern=True):
                     (reach_pct_warp >= 80 and turns_since_new_warp >= 200)
                     or (turns_since_new_warp >= 500)
                     or (turns_on_floor_warp >= 600)
+                    or (d_leads_to_perm_warp
+                        and turns_on_floor_warp_mode >= 150)
                 )):
             return "n"
         return "y"
