@@ -1659,7 +1659,12 @@ class RunReport:
                 killer_pid = _sprite_pid_for("monster", killer_name)
                 killer_sprite = _sprite_span(sprites, killer_pid, size=64)
 
-        death_block = ""
+        # Final-log block. Earlier this only rendered for not-alive
+        # runs (death) and stuck runs; alive runs that finished
+        # turn-budget got no log tail at all. User asked for
+        # 'always capture the final log for all runs, not just the
+        # combat deaths' -- the alive branch now emits the same
+        # last-30-log + last-actions table inside a neutral banner.
         if not f.get("alive"):
             death_block = f"""
         <div class="death-banner">
@@ -1675,6 +1680,20 @@ class RunReport:
             death_block = f"""
         <div class="stuck-banner">
           <p class="cause">Stuck: <strong>{html.escape(self.status_reason or '?')}</strong></p>
+        </div>
+        <h3>Last 30 log lines</h3>
+        <ol class="log">{log_html}</ol>
+        <h3>Last actions</h3>
+        <ol class="actions">{actions_html}</ol>
+        """
+        else:
+            # Alive at turn budget. Same log + actions tail in a
+            # neutral 'survived' banner so the user can see what
+            # the agent was up to when the harness clock ran out.
+            death_block = f"""
+        <div class="alive-banner">
+          <p class="cause">Survived to T{f.get('turn', '?')}.
+            Run ended at the turn budget, not by death.</p>
         </div>
         <h3>Last 30 log lines</h3>
         <ol class="log">{log_html}</ol>
@@ -1985,6 +2004,11 @@ a:hover { text-decoration: underline; }
   border-radius:4px; margin-bottom:10px;
 }
 .stuck-banner .cause strong { color: #fbbf24; }
+.alive-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#0d1a13; border-left:3px solid #4ade80;
+  border-radius:4px; margin-bottom:10px;
+}
+.alive-banner .cause { color: #bbf7d0; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
 .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
