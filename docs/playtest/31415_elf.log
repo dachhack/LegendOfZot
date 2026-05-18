@@ -1,0 +1,500 @@
+T   0 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 13 nearby rooms!
+  Lantern fuel remaining: 79
+-> i
+T   2 mode=inventory           Galadriel the Quenya-tongued(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> u3
+T   3 mode=inventory           Galadriel the Quenya-tongued(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  You have identified: Minor Healing Potion!
+  Galadriel the Quenya-tongued drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   4 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  Inventory closed.
+-> e
+T   5 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=M vs Giant Rat(L0 HP22/22)
+  A Giant Rat (Level 0) appears! A rat the size of a dog, with yellowed teeth.
+  You seize the initiative!
+-> a
+T   6 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 2, 1) HP 27/28 MP 0/0 Hu 99 $ 290 room=M vs Giant Rat(L0 HP22/22)
+  You missed the evil Giant Rat!
+  Ouch! Giant Rat hit Galadriel the Quenya-tongued!
+  You took 1 damage!
+-> a
+T   7 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 2, 1) HP 26/28 MP 0/0 Hu 99 $ 290 room=M vs Giant Rat(L0 HP1/22)
+  You hit the evil Giant Rat!
+  Giant Rat took 21 damage.
+  Ouch! Giant Rat hit Galadriel the Quenya-tongued!
+  You took 1 damage!
+-> a
+T   8 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 2, 1) HP 25/28 MP 0/0 Hu 99 $ 290 room=M vs Giant Rat(L0 HP1/22)
+-> f
+T   9 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 2, 1) HP 22/28 MP 0/0 Hu 99 $ 290 room=M vs Giant Rat(L0 HP1/22)
+-> f
+T  10 mode=flee_direction_mode Galadriel the Quenya-tongued(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=M
+-> e
+T  11 mode=chest_mode          Galadriel the Quenya-tongued(elf) F1@( 3, 1) HP 18/28 MP 0/0 Hu 99 $ 290 room=C
+-> o
+T  12 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 3, 1) HP 18/28 MP 0/0 Hu 99 $ 310 room=.
+-> i
+T  13 mode=inventory           Galadriel the Quenya-tongued(elf) F1@( 3, 1) HP 18/28 MP 0/0 Hu 99 $ 310 room=.
+-> u3
+T  14 mode=inventory           Galadriel the Quenya-tongued(elf) F1@( 3, 1) HP 28/28 MP 0/0 Hu 99 $ 310 room=.
+-> x
+T  15 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 3, 1) HP 28/28 MP 0/0 Hu 99 $ 310 room=.
+-> l
+T  16 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 3, 1) HP 28/28 MP 0/0 Hu 99 $ 310 room=.
+-> s
+T  17 mode=chest_mode          Galadriel the Quenya-tongued(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 310 room=C
+-> o
+T  18 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 310 room=.
+-> l
+T  19 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 310 room=.
+-> s
+T  20 mode=vendor_shop         Galadriel the Quenya-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 310 room=V
+-> b11
+T  21 mode=vendor_shop         Galadriel the Quenya-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 300 room=V
+-> b4
+T  22 mode=vendor_shop         Galadriel the Quenya-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 270 room=V
+-> b4
+T  23 mode=vendor_shop         Galadriel the Quenya-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 240 room=V
+-> b4
+T  24 mode=vendor_shop         Galadriel the Quenya-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 210 room=V
+-> b4
+T  25 mode=vendor_shop         Galadriel the Quenya-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 180 room=V
+-> b5
+T  26 mode=vendor_shop         Galadriel the Quenya-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 150 room=V
+-> x
+T  27 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 150 room=V
+-> l
+T  28 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 150 room=V
+-> e
+T  29 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
+-> a
+T  30 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
+-> a
+T  31 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 4, 3) HP 27/28 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
+-> a
+T  32 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 4, 3) HP 26/28 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
+-> a
+T  33 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 4, 3) HP 25/28 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
+-> a
+T  34 mode=combat_victory      Galadriel the Quenya-tongued(elf) F1@( 4, 3) HP 25/28 MP 0/0 Hu 96 $ 208 room=.
+-> back
+T  35 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 4, 3) HP 25/28 MP 0/0 Hu 96 $ 208 room=.
+-> l
+T  36 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 4, 3) HP 25/28 MP 0/0 Hu 96 $ 208 room=.
+-> e
+T  37 mode=chest_mode          Galadriel the Quenya-tongued(elf) F1@( 5, 3) HP 25/28 MP 0/0 Hu 95 $ 208 room=C
+-> o
+T  38 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 5, 3) HP 25/28 MP 0/0 Hu 95 $ 218 room=.
+-> l
+T  39 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 5, 3) HP 25/28 MP 0/0 Hu 95 $ 218 room=.
+-> n
+T  40 mode=altar_mode          Galadriel the Quenya-tongued(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 94 $ 218 room=A
+-> pray
+T  41 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 94 $ 218 room=.
+-> n
+T  42 mode=chest_mode          Galadriel the Quenya-tongued(elf) F1@( 5, 1) HP 26/28 MP 0/0 Hu 93 $ 218 room=C
+-> o
+T  43 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 5, 1) HP 21/28 MP 0/0 Hu 93 $ 218 room=.
+-> w
+T  44 mode=chest_mode          Galadriel the Quenya-tongued(elf) F1@( 4, 1) HP 22/28 MP 0/0 Hu 92 $ 218 room=C
+-> o
+T  45 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 4, 1) HP 22/28 MP 0/0 Hu 92 $ 218 room=.
+-> i
+T  46 mode=inventory           Galadriel the Quenya-tongued(elf) F1@( 4, 1) HP 22/28 MP 0/0 Hu 92 $ 218 room=.
+-> u4
+T  47 mode=inventory           Galadriel the Quenya-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 92 $ 218 room=.
+-> x
+T  48 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 92 $ 218 room=.
+-> i
+T  49 mode=inventory           Galadriel the Quenya-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 92 $ 218 room=.
+-> e1
+T  50 mode=inventory           Galadriel the Quenya-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 92 $ 218 room=.
+-> x
+T  51 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 92 $ 218 room=.
+-> s
+T  52 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 91 $ 218 room=M vs Stirge(L0 HP6/6)
+-> a
+T  53 mode=combat_victory      Galadriel the Quenya-tongued(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 91 $ 321 room=.
+-> back
+T  54 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 91 $ 321 room=.
+-> s
+T  55 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 90 $ 321 room=.
+-> s
+T  56 mode=garden_mode         Galadriel the Quenya-tongued(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 89 $ 321 room=G
+-> h
+T  57 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 89 $ 321 room=.
+-> e
+T  58 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 88 $ 321 room=.
+-> l
+T  59 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 88 $ 321 room=.
+-> n
+T  60 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 5, 3) HP 28/28 MP 0/0 Hu 87 $ 321 room=.
+-> e
+T  61 mode=combat_mode         Galadriel the Quenya-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 86 $ 321 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  62 mode=combat_victory      Galadriel the Quenya-tongued(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 86 $ 329 room=.
+-> back
+T  63 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 6, 3) HP 27/28 MP 0/0 Hu 86 $ 329 room=.
+-> n
+T  64 mode=stairs_down_mode    Galadriel the Quenya-tongued(elf) F1@( 6, 2) HP 27/28 MP 0/0 Hu 85 $ 329 room=D
+-> n
+T  65 mode=library_mode        Galadriel the Quenya-tongued(elf) F1@( 6, 1) HP 27/28 MP 0/0 Hu 84 $ 329 room=L
+-> r
+T  66 mode=library_read_decision_mode Galadriel the Quenya-tongued(elf) F1@( 6, 1) HP 27/28 MP 0/0 Hu 84 $ 329 room=L
+-> y
+T  67 mode=game_loop           Galadriel the Quenya-tongued(elf) F1@( 6, 1) HP 27/28 MP 0/0 Hu 84 $ 429 room=.
+-> s
+T  68 mode=stairs_down_mode    Galadriel the Quenya-tongued(elf) F1@( 6, 2) HP 27/28 MP 0/0 Hu 83 $ 429 room=D
+-> d
+T  69 mode=stairs_up_mode      Galadriel the Quenya-tongued(elf) F2@( 1, 1) HP 27/28 MP 0/0 Hu 83 $ 429 room=U
+-> e
+T  70 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 82 $ 429 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T  71 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 82 $ 429 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T  72 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 82 $ 429 room=M vs Gray Ooze(L1 HP11/35)
+-> a
+T  73 mode=combat_victory      Galadriel the Quenya-tongued(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 82 $ 435 room=.
+-> back
+T  74 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 82 $ 435 room=.
+-> l
+T  75 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 82 $ 435 room=.
+-> e
+T  76 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 81 $ 435 room=M vs Crawling Claw(L1 HP5/5)
+-> a
+T  77 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 81 $ 435 room=M vs Crawling Claw(L1 HP5/5)
+-> a
+T  78 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 27/28 MP 0/0 Hu 81 $ 435 room=M vs Crawling Claw(L1 HP5/5)
+-> a
+T  79 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 26/28 MP 0/0 Hu 81 $ 435 room=M vs Crawling Claw(L1 HP5/5)
+-> a
+T  80 mode=combat_victory      Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 25/28 MP 0/0 Hu 81 $ 453 room=.
+-> back
+T  81 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 25/28 MP 0/0 Hu 81 $ 453 room=.
+-> i
+T  82 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 25/28 MP 0/0 Hu 81 $ 453 room=.
+-> u4
+T  83 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 81 $ 453 room=.
+-> x
+T  84 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 81 $ 453 room=.
+-> i
+T  85 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 81 $ 453 room=.
+-> eat5
+T  86 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 87 $ 453 room=.
+-> x
+T  87 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 87 $ 453 room=.
+-> l
+T  88 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 87 $ 453 room=.
+-> e
+T  89 mode=chest_mode          Galadriel the Quenya-tongued(elf) F2@( 4, 1) HP 28/28 MP 0/0 Hu 86 $ 453 room=C
+-> o
+T  90 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 4, 1) HP 28/28 MP 0/0 Hu 86 $ 453 room=.
+-> l
+T  91 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 4, 1) HP 28/28 MP 0/0 Hu 86 $ 453 room=.
+-> s
+T  92 mode=tomb_mode           Galadriel the Quenya-tongued(elf) F2@( 4, 2) HP 28/28 MP 0/0 Hu 85 $ 453 room=T
+-> p
+T  93 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 4, 2) HP 28/28 MP 0/0 Hu 85 $ 453 room=T
+-> l
+T  94 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 4, 2) HP 28/28 MP 0/0 Hu 85 $ 453 room=T
+-> n
+T  95 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 4, 1) HP 28/28 MP 0/0 Hu 84 $ 453 room=.
+-> e
+T  96 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 83 $ 453 room=.
+-> e
+T  97 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 82 $ 453 room=.
+-> i
+T  98 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 82 $ 453 room=.
+-> eat4
+T  99 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 87 $ 453 room=.
+-> x
+T 100 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 87 $ 453 room=.
+-> s
+T 101 mode=chest_mode          Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 86 $ 453 room=C
+-> o
+T 102 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 85 $ 453 room=.
+-> s
+T 103 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 84 $ 453 room=.
+-> l
+T 104 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 84 $ 453 room=.
+-> s
+T 105 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 83 $ 453 room=.
+-> l
+T 106 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 83 $ 453 room=.
+-> e
+T 107 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 82 $ 453 room=.
+-> w
+T 108 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 81 $ 453 room=.
+-> n
+T 109 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 80 $ 453 room=.
+-> n
+T 110 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 79 $ 453 room=.
+-> w
+T 111 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 78 $ 453 room=.
+-> e
+T 112 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 77 $ 453 room=.
+-> s
+T 113 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 76 $ 453 room=.
+-> s
+T 114 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 75 $ 453 room=.
+-> e
+T 115 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 74 $ 453 room=.
+-> w
+T 116 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 73 $ 453 room=.
+-> n
+T 117 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 72 $ 453 room=.
+-> n
+T 118 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 71 $ 453 room=.
+-> w
+T 119 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 70 $ 453 room=.
+-> e
+T 120 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 69 $ 453 room=.
+-> s
+T 121 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 68 $ 453 room=.
+-> s
+T 122 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 67 $ 453 room=.
+-> e
+T 123 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 66 $ 453 room=.
+-> w
+T 124 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 65 $ 453 room=.
+-> n
+T 125 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 64 $ 453 room=.
+-> n
+T 126 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 63 $ 453 room=.
+-> w
+T 127 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 62 $ 453 room=.
+-> e
+T 128 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 61 $ 453 room=.
+-> s
+T 129 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 60 $ 453 room=.
+-> s
+T 130 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 59 $ 453 room=.
+-> e
+T 131 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 58 $ 453 room=.
+-> w
+T 132 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 57 $ 453 room=.
+-> n
+T 133 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 56 $ 453 room=.
+-> n
+T 134 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 55 $ 453 room=.
+-> w
+T 135 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 54 $ 453 room=.
+-> e
+T 136 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 53 $ 453 room=.
+-> s
+T 137 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 52 $ 453 room=.
+-> s
+T 138 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 51 $ 453 room=.
+-> e
+T 139 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 50 $ 453 room=.
+-> w
+T 140 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 49 $ 453 room=.
+-> i
+T 141 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 49 $ 453 room=.
+-> eat1
+T 142 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu100 $ 453 room=.
+-> x
+T 143 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu100 $ 453 room=.
+-> n
+T 144 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 99 $ 453 room=.
+-> n
+T 145 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 98 $ 453 room=.
+-> w
+T 146 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 97 $ 453 room=.
+-> e
+T 147 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 96 $ 453 room=.
+-> s
+T 148 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 95 $ 453 room=.
+-> s
+T 149 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 94 $ 453 room=.
+-> e
+T 150 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 93 $ 453 room=.
+-> w
+T 151 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 92 $ 453 room=.
+-> n
+T 152 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 91 $ 453 room=.
+-> n
+T 153 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 90 $ 453 room=.
+-> w
+T 154 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 89 $ 453 room=.
+-> e
+T 155 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 88 $ 453 room=.
+-> s
+T 156 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 87 $ 453 room=.
+-> s
+T 157 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 86 $ 453 room=.
+-> e
+T 158 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 85 $ 453 room=.
+-> w
+T 159 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 84 $ 453 room=.
+-> n
+T 160 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 83 $ 453 room=.
+-> n
+T 161 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 82 $ 453 room=.
+-> w
+T 162 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 81 $ 453 room=.
+-> e
+T 163 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 80 $ 453 room=.
+-> s
+T 164 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 79 $ 453 room=.
+-> s
+T 165 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 78 $ 453 room=.
+-> e
+T 166 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 77 $ 453 room=.
+-> w
+T 167 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 76 $ 453 room=.
+-> n
+T 168 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 75 $ 453 room=.
+-> i
+T 169 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 75 $ 453 room=.
+-> eat3
+T 170 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 82 $ 453 room=.
+-> x
+T 171 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 82 $ 453 room=.
+-> n
+T 172 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 81 $ 453 room=.
+-> w
+T 173 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 80 $ 453 room=.
+-> e
+T 174 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 79 $ 453 room=.
+-> s
+T 175 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 78 $ 453 room=.
+-> s
+T 176 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 77 $ 453 room=.
+-> e
+T 177 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 76 $ 453 room=.
+-> w
+T 178 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 75 $ 453 room=.
+-> n
+T 179 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 74 $ 453 room=.
+-> n
+T 180 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 73 $ 453 room=.
+-> w
+T 181 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 72 $ 453 room=.
+-> e
+T 182 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 71 $ 453 room=.
+-> s
+T 183 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 70 $ 453 room=.
+-> s
+T 184 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 69 $ 453 room=.
+-> e
+T 185 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 68 $ 453 room=.
+-> w
+T 186 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 67 $ 453 room=.
+-> n
+T 187 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 66 $ 453 room=.
+-> n
+T 188 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 65 $ 453 room=.
+-> w
+T 189 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 64 $ 453 room=.
+-> e
+T 190 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 63 $ 453 room=.
+-> s
+T 191 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 62 $ 453 room=.
+-> s
+T 192 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 61 $ 453 room=.
+-> e
+T 193 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 60 $ 453 room=.
+-> w
+T 194 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 59 $ 453 room=.
+-> n
+T 195 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 58 $ 453 room=.
+-> n
+T 196 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 57 $ 453 room=.
+-> w
+T 197 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 56 $ 453 room=.
+-> e
+T 198 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 55 $ 453 room=.
+-> s
+T 199 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 54 $ 453 room=.
+-> s
+T 200 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 53 $ 453 room=.
+-> e
+T 201 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 52 $ 453 room=.
+-> w
+T 202 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 51 $ 453 room=.
+-> n
+T 203 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 2) HP 28/28 MP 0/0 Hu 50 $ 453 room=.
+-> n
+T 204 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 49 $ 453 room=.
+-> i
+T 205 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu 49 $ 453 room=.
+-> eat1
+T 206 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu100 $ 453 room=.
+-> x
+T 207 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 6, 1) HP 28/28 MP 0/0 Hu100 $ 453 room=.
+-> w
+T 208 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 99 $ 453 room=.
+-> s
+T 209 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 5, 2) HP 28/28 MP 0/0 Hu 98 $ 453 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
+-> f
+T 210 mode=flee_direction_mode Galadriel the Quenya-tongued(elf) F2@( 5, 2) HP 24/28 MP 0/0 Hu 98 $ 453 room=M
+-> w
+T 211 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 4, 2) HP 24/28 MP 0/0 Hu 98 $ 453 room=T
+-> w
+T 212 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 3, 2) HP 24/28 MP 0/0 Hu 97 $ 453 room=M vs UNDEAD SKELETON(L1 HP31/31)
+-> a
+T 213 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 3, 2) HP 20/28 MP 0/0 Hu 97 $ 453 room=M vs UNDEAD SKELETON(L1 HP31/31)
+-> f
+T 214 mode=flee_direction_mode Galadriel the Quenya-tongued(elf) F2@( 3, 2) HP 16/28 MP 0/0 Hu 97 $ 453 room=M
+-> n
+T 215 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 16/28 MP 0/0 Hu 97 $ 453 room=.
+-> i
+T 216 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 16/28 MP 0/0 Hu 97 $ 453 room=.
+-> u4
+T 217 mode=inventory           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 97 $ 453 room=.
+-> x
+T 218 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 97 $ 453 room=.
+-> w
+T 219 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 453 room=.
+-> w
+T 220 mode=stairs_up_mode      Galadriel the Quenya-tongued(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 95 $ 453 room=U
+-> s
+T 221 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 453 room=.
+-> l
+T 222 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 453 room=.
+-> s
+T 223 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 93 $ 453 room=.
+-> e
+T 224 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 453 room=M vs Lichen(L1 HP10/10)
+-> a
+T 225 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 453 room=M vs Lichen(L1 HP10/10)
+-> a
+T 226 mode=combat_mode         Galadriel the Quenya-tongued(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 453 room=M vs Lichen(L1 HP10/10)
+-> f
+T 227 mode=flee_direction_mode Galadriel the Quenya-tongued(elf) F2@( 2, 3) HP 27/28 MP 0/0 Hu 92 $ 453 room=M
+-> n
+T 228 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 2, 2) HP 27/28 MP 0/0 Hu 92 $ 453 room=.
+-> n
+T 229 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 2, 1) HP 27/28 MP 0/0 Hu 91 $ 453 room=.
+-> e
+T 230 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 90 $ 453 room=.
+-> w
+T 231 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 89 $ 453 room=.
+-> w
+T 232 mode=stairs_up_mode      Galadriel the Quenya-tongued(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 88 $ 453 room=U
+-> s
+T 233 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 87 $ 453 room=.
+-> s
+T 234 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 86 $ 453 room=.
+-> s
+T 235 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 1, 4) HP 28/28 MP 0/0 Hu 85 $ 453 room=.
+-> e
+T 236 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 84 $ 453 room=.
+-> e
+T 237 mode=game_loop           Galadriel the Quenya-tongued(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 83 $ 453 room=.
+-> s
+T 238 mode=pool_mode           Galadriel the Quenya-tongued(elf) F2@( 3, 5) HP 28/28 MP 0/0 Hu 82 $ 453 room=P
+-> dr
+T 239 mode=pool_mode           Galadriel the Quenya-tongued(elf) F2@( 3, 5) HP -5/28 MP 0/0 Hu 82 $ 453 room=P
+
+=== run finished: turns=239 floor=2 hp=-5/28 gold=453 alive=False mode=pool_mode ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/31415_elf.html

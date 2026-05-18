@@ -1,0 +1,492 @@
+T   0 mode=game_loop           Eowyn Stonefoot(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Eowyn Stonefoot(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 10 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP12/12)
+  Shinies! Give us your shinies, The Novice!
+  The Goblin strikes first!
+-> a
+T   3 mode=combat_victory      Eowyn Stonefoot(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 449 room=.
+  You hit the evil Goblin!
+  Goblin took 21 damage.
+  You defeated the Goblin!
+  The goblin falls with a pitiful shriek.
+  You gained 8 experience.
+  You found 9 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+   ACHIEVEMENT UNLOCKED: Untouchable - Kill a monster without taking damage
+  Reward: 100 gold!
+  You harvested some raw Goblin meat.
+-> back
+T   4 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 449 room=.
+-> l
+T   5 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 449 room=.
+-> e
+T   6 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 98 $ 449 room=M vs Skeleton(L0 HP25/25)
+-> a
+T   7 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 449 room=M vs Skeleton(L0 HP25/25)
+-> a
+T   8 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 98 $ 449 room=M vs Skeleton(L0 HP6/25)
+-> a
+T   9 mode=combat_victory      Eowyn Stonefoot(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 98 $ 453 room=.
+-> back
+T  10 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 98 $ 453 room=.
+-> l
+T  11 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 1) HP 27/30 MP 0/0 Hu 98 $ 453 room=.
+-> e
+T  12 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 4, 1) HP 27/30 MP 0/0 Hu 97 $ 453 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  13 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 4, 1) HP 26/30 MP 0/0 Hu 97 $ 453 room=M vs Skeleton(L0 HP6/25)
+-> f
+T  14 mode=flee_direction_mode Eowyn Stonefoot(hum) F1@( 4, 1) HP 26/30 MP 0/0 Hu 97 $ 453 room=M
+-> e
+T  15 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 1) HP 26/30 MP 0/0 Hu 97 $ 453 room=.
+-> l
+T  16 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 1) HP 26/30 MP 0/0 Hu 97 $ 453 room=.
+-> s
+T  17 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 2) HP 27/30 MP 0/0 Hu 96 $ 453 room=.
+-> l
+T  18 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 2) HP 27/30 MP 0/0 Hu 96 $ 453 room=.
+-> s
+T  19 mode=chest_mode          Eowyn Stonefoot(hum) F1@( 5, 3) HP 27/30 MP 0/0 Hu 95 $ 453 room=C
+-> o
+T  20 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 3) HP 27/30 MP 0/0 Hu 95 $ 493 room=.
+-> l
+T  21 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 3) HP 27/30 MP 0/0 Hu 95 $ 493 room=.
+-> w
+T  22 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 4, 3) HP 28/30 MP 0/0 Hu 94 $ 493 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  23 mode=combat_victory      Eowyn Stonefoot(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 94 $ 496 room=.
+-> back
+T  24 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 94 $ 496 room=.
+-> l
+T  25 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 94 $ 496 room=.
+-> w
+T  26 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 3, 3) HP 27/30 MP 0/0 Hu 93 $ 496 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  27 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 93 $ 496 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  28 mode=combat_victory      Eowyn Stonefoot(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 93 $ 503 room=.
+-> back
+T  29 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 26/30 MP 0/0 Hu 93 $ 503 room=.
+-> s
+T  30 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 3, 4) HP 27/30 MP 0/0 Hu 92 $ 503 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  31 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 3, 4) HP 26/30 MP 0/0 Hu 92 $ 503 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  32 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 92 $ 503 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  33 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 92 $ 503 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  34 mode=combat_victory      Eowyn Stonefoot(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 92 $ 507 room=.
+-> back
+T  35 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 24/30 MP 0/0 Hu 92 $ 507 room=.
+-> w
+T  36 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 2, 4) HP 24/30 MP 0/0 Hu 91 $ 507 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  37 mode=combat_victory      Eowyn Stonefoot(hum) F1@( 2, 4) HP 24/30 MP 0/0 Hu 91 $ 516 room=.
+-> back
+T  38 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 24/30 MP 0/0 Hu 91 $ 516 room=.
+-> e
+T  39 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 25/30 MP 0/0 Hu 90 $ 516 room=.
+-> e
+T  40 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 25/30 MP 0/0 Hu 89 $ 516 room=.
+-> i
+T  41 mode=inventory           Eowyn Stonefoot(hum) F1@( 4, 4) HP 25/30 MP 0/0 Hu 89 $ 516 room=.
+-> u3
+T  42 mode=inventory           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> x
+T  43 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> i
+T  44 mode=inventory           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> eat4
+T  45 mode=inventory           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 94 $ 516 room=.
+-> x
+T  46 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 94 $ 516 room=.
+-> e
+T  47 mode=dungeon_mode        Eowyn Stonefoot(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 93 $ 516 room=N
+-> u
+T  48 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 93 $ 516 room=N
+-> l
+T  49 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 93 $ 516 room=N
+-> n
+T  50 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 92 $ 516 room=.
+-> e
+T  51 mode=game_loop           Eowyn Stonefoot(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 91 $ 516 room=.
+-> e
+T  52 mode=garden_mode         Eowyn Stonefoot(hum) F1@( 7, 3) HP 30/30 MP 0/0 Hu 90 $ 516 room=G
+-> h
+T  53 mode=game_loop           Eowyn Stonefoot(hum) F1@( 7, 3) HP 30/30 MP 0/0 Hu 90 $ 516 room=.
+-> n
+T  54 mode=game_loop           Eowyn Stonefoot(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> n
+T  55 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 7, 1) HP 30/30 MP 0/0 Hu 88 $ 516 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  56 mode=combat_victory      Eowyn Stonefoot(hum) F1@( 7, 1) HP 30/30 MP 0/0 Hu 88 $ 518 room=.
+-> back
+T  57 mode=game_loop           Eowyn Stonefoot(hum) F1@( 7, 1) HP 30/30 MP 0/0 Hu 88 $ 518 room=.
+-> w
+T  58 mode=game_loop           Eowyn Stonefoot(hum) F1@( 6, 1) HP 30/30 MP 0/0 Hu 87 $ 518 room=.
+-> s
+T  59 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 86 $ 518 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  60 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 6, 2) HP 29/30 MP 0/0 Hu 86 $ 518 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  61 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 6, 2) HP 28/30 MP 0/0 Hu 86 $ 518 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  62 mode=combat_victory      Eowyn Stonefoot(hum) F1@( 6, 2) HP 28/30 MP 0/0 Hu 86 $ 525 room=.
+-> back
+T  63 mode=game_loop           Eowyn Stonefoot(hum) F1@( 6, 2) HP 28/30 MP 0/0 Hu 86 $ 525 room=.
+-> i
+T  64 mode=inventory           Eowyn Stonefoot(hum) F1@( 6, 2) HP 28/30 MP 0/0 Hu 86 $ 525 room=.
+-> u3
+T  65 mode=inventory           Eowyn Stonefoot(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 86 $ 525 room=.
+-> x
+T  66 mode=game_loop           Eowyn Stonefoot(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 86 $ 525 room=.
+-> i
+T  67 mode=inventory           Eowyn Stonefoot(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 86 $ 525 room=.
+-> eat3
+T  68 mode=inventory           Eowyn Stonefoot(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 91 $ 525 room=.
+-> x
+T  69 mode=game_loop           Eowyn Stonefoot(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 91 $ 525 room=.
+-> w
+T  70 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 90 $ 525 room=.
+-> w
+T  71 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 89 $ 525 room=.
+-> n
+T  72 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 88 $ 525 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  73 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 4, 1) HP 29/30 MP 0/0 Hu 88 $ 525 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  74 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 88 $ 525 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  75 mode=combat_mode         Eowyn Stonefoot(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 88 $ 525 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  76 mode=combat_victory      Eowyn Stonefoot(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 88 $ 531 room=.
+-> back
+T  77 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 1) HP 28/30 MP 0/0 Hu 88 $ 531 room=.
+-> w
+T  78 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 1) HP 28/30 MP 0/0 Hu 87 $ 531 room=.
+-> e
+T  79 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 1) HP 29/30 MP 0/0 Hu 86 $ 531 room=.
+-> e
+T  80 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 1) HP 29/30 MP 0/0 Hu 85 $ 531 room=.
+-> e
+T  81 mode=game_loop           Eowyn Stonefoot(hum) F1@( 6, 1) HP 29/30 MP 0/0 Hu 84 $ 531 room=.
+-> e
+T  82 mode=game_loop           Eowyn Stonefoot(hum) F1@( 7, 1) HP 29/30 MP 0/0 Hu 83 $ 531 room=.
+-> i
+T  83 mode=inventory           Eowyn Stonefoot(hum) F1@( 7, 1) HP 29/30 MP 0/0 Hu 83 $ 531 room=.
+-> eat3
+T  84 mode=inventory           Eowyn Stonefoot(hum) F1@( 7, 1) HP 29/30 MP 0/0 Hu 89 $ 531 room=.
+-> x
+T  85 mode=game_loop           Eowyn Stonefoot(hum) F1@( 7, 1) HP 29/30 MP 0/0 Hu 89 $ 531 room=.
+-> s
+T  86 mode=game_loop           Eowyn Stonefoot(hum) F1@( 7, 2) HP 30/30 MP 0/0 Hu 88 $ 531 room=.
+-> w
+T  87 mode=game_loop           Eowyn Stonefoot(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 87 $ 531 room=.
+-> w
+T  88 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 86 $ 531 room=.
+-> w
+T  89 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 85 $ 531 room=.
+-> s
+T  90 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 84 $ 531 room=.
+-> w
+T  91 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 83 $ 531 room=.
+-> s
+T  92 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 82 $ 531 room=.
+-> e
+T  93 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 81 $ 531 room=.
+-> e
+T  94 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 80 $ 531 room=N
+-> n
+T  95 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 79 $ 531 room=.
+-> w
+T  96 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 78 $ 531 room=.
+-> w
+T  97 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 77 $ 531 room=.
+-> s
+T  98 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 76 $ 531 room=.
+-> w
+T  99 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 75 $ 531 room=.
+-> e
+T 100 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 74 $ 531 room=.
+-> e
+T 101 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 73 $ 531 room=.
+-> n
+T 102 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 72 $ 531 room=.
+-> w
+T 103 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 71 $ 531 room=.
+-> s
+T 104 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 70 $ 531 room=.
+-> w
+T 105 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 69 $ 531 room=.
+-> e
+T 106 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 68 $ 531 room=.
+-> e
+T 107 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 67 $ 531 room=.
+-> n
+T 108 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 66 $ 531 room=.
+-> w
+T 109 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 65 $ 531 room=.
+-> s
+T 110 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 64 $ 531 room=.
+-> w
+T 111 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 63 $ 531 room=.
+-> e
+T 112 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 62 $ 531 room=.
+-> e
+T 113 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 61 $ 531 room=.
+-> n
+T 114 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 60 $ 531 room=.
+-> w
+T 115 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 59 $ 531 room=.
+-> s
+T 116 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 58 $ 531 room=.
+-> w
+T 117 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 57 $ 531 room=.
+-> e
+T 118 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 56 $ 531 room=.
+-> e
+T 119 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 55 $ 531 room=.
+-> n
+T 120 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 54 $ 531 room=.
+-> w
+T 121 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 53 $ 531 room=.
+-> s
+T 122 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 52 $ 531 room=.
+-> w
+T 123 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 51 $ 531 room=.
+-> e
+T 124 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 50 $ 531 room=.
+-> e
+T 125 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 49 $ 531 room=.
+-> i
+T 126 mode=inventory           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 49 $ 531 room=.
+-> eat1
+T 127 mode=inventory           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu100 $ 531 room=.
+-> x
+T 128 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu100 $ 531 room=.
+-> n
+T 129 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 99 $ 531 room=.
+-> w
+T 130 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 531 room=.
+-> s
+T 131 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 97 $ 531 room=.
+-> w
+T 132 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 531 room=.
+-> e
+T 133 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 95 $ 531 room=.
+-> e
+T 134 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 94 $ 531 room=.
+-> n
+T 135 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 531 room=.
+-> w
+T 136 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 531 room=.
+-> s
+T 137 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 91 $ 531 room=.
+-> w
+T 138 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 90 $ 531 room=.
+-> e
+T 139 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 89 $ 531 room=.
+-> e
+T 140 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 88 $ 531 room=.
+-> n
+T 141 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 87 $ 531 room=.
+-> w
+T 142 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 86 $ 531 room=.
+-> s
+T 143 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 85 $ 531 room=.
+-> w
+T 144 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 84 $ 531 room=.
+-> e
+T 145 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 83 $ 531 room=.
+-> e
+T 146 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 82 $ 531 room=.
+-> n
+T 147 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 81 $ 531 room=.
+-> w
+T 148 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 80 $ 531 room=.
+-> s
+T 149 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 79 $ 531 room=.
+-> w
+T 150 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 78 $ 531 room=.
+-> e
+T 151 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 77 $ 531 room=.
+-> e
+T 152 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 76 $ 531 room=.
+-> n
+T 153 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 75 $ 531 room=.
+-> w
+T 154 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 74 $ 531 room=.
+-> s
+T 155 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 73 $ 531 room=.
+-> w
+T 156 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 72 $ 531 room=.
+-> e
+T 157 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 71 $ 531 room=.
+-> e
+T 158 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 70 $ 531 room=.
+-> n
+T 159 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 69 $ 531 room=.
+-> w
+T 160 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 68 $ 531 room=.
+-> s
+T 161 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 67 $ 531 room=.
+-> w
+T 162 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 66 $ 531 room=.
+-> e
+T 163 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 65 $ 531 room=.
+-> e
+T 164 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 64 $ 531 room=.
+-> n
+T 165 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 63 $ 531 room=.
+-> w
+T 166 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 62 $ 531 room=.
+-> s
+T 167 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 61 $ 531 room=.
+-> w
+T 168 mode=game_loop           Eowyn Stonefoot(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 60 $ 531 room=.
+-> e
+T 169 mode=game_loop           Eowyn Stonefoot(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 59 $ 531 room=.
+-> e
+T 170 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 58 $ 531 room=.
+-> n
+T 171 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 57 $ 531 room=.
+-> s
+T 172 mode=game_loop           Eowyn Stonefoot(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 56 $ 531 room=.
+-> e
+T 173 mode=game_loop           Eowyn Stonefoot(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 55 $ 531 room=N
+-> s
+T 174 mode=warp_mode           Eowyn Stonefoot(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 54 $ 531 room=W
+-> y
+T 175 mode=game_loop           Eowyn Stonefoot(hum) F2@( 8,10) HP 30/30 MP 0/0 Hu 54 $ 531 room=.
+-> l
+T 176 mode=game_loop           Eowyn Stonefoot(hum) F2@( 8,10) HP 30/30 MP 0/0 Hu 54 $ 531 room=.
+-> e
+T 177 mode=game_loop           Eowyn Stonefoot(hum) F2@( 9,10) HP 30/30 MP 0/0 Hu 53 $ 531 room=.
+-> l
+T 178 mode=game_loop           Eowyn Stonefoot(hum) F2@( 9,10) HP 30/30 MP 0/0 Hu 53 $ 531 room=.
+-> e
+T 179 mode=game_loop           Eowyn Stonefoot(hum) F2@(10,10) HP 30/30 MP 0/0 Hu 52 $ 531 room=.
+-> l
+T 180 mode=game_loop           Eowyn Stonefoot(hum) F2@(10,10) HP 30/30 MP 0/0 Hu 52 $ 531 room=.
+-> n
+T 181 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 9) HP 30/30 MP 0/0 Hu 51 $ 531 room=.
+-> l
+T 182 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 9) HP 30/30 MP 0/0 Hu 51 $ 531 room=.
+-> e
+T 183 mode=oracle_mode         Eowyn Stonefoot(hum) F2@(11, 9) HP 30/30 MP 0/0 Hu 50 $ 531 room=O
+-> w
+T 184 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 9) HP 30/30 MP 0/0 Hu 49 $ 531 room=.
+-> i
+T 185 mode=inventory           Eowyn Stonefoot(hum) F2@(10, 9) HP 30/30 MP 0/0 Hu 49 $ 531 room=.
+-> eat1
+T 186 mode=inventory           Eowyn Stonefoot(hum) F2@(10, 9) HP 30/30 MP 0/0 Hu100 $ 531 room=.
+-> x
+T 187 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 9) HP 30/30 MP 0/0 Hu100 $ 531 room=.
+-> n
+T 188 mode=garden_mode         Eowyn Stonefoot(hum) F2@(10, 8) HP 30/30 MP 0/0 Hu 99 $ 531 room=G
+-> h
+T 189 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 8) HP 30/30 MP 0/0 Hu 99 $ 531 room=.
+-> n
+T 190 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 7) HP 30/30 MP 0/0 Hu 98 $ 531 room=.
+-> l
+T 191 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 7) HP 30/30 MP 0/0 Hu 98 $ 531 room=.
+-> e
+T 192 mode=game_loop           Eowyn Stonefoot(hum) F2@(11, 7) HP 30/30 MP 0/0 Hu 97 $ 531 room=.
+-> l
+T 193 mode=game_loop           Eowyn Stonefoot(hum) F2@(11, 7) HP 30/30 MP 0/0 Hu 97 $ 531 room=.
+-> e
+T 194 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 7) HP 30/30 MP 0/0 Hu 96 $ 531 room=.
+-> l
+T 195 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 7) HP 30/30 MP 0/0 Hu 96 $ 531 room=.
+-> n
+T 196 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 6) HP 30/30 MP 0/0 Hu 95 $ 531 room=.
+-> n
+T 197 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 5) HP 30/30 MP 0/0 Hu 94 $ 531 room=.
+-> n
+T 198 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 4) HP 30/30 MP 0/0 Hu 93 $ 531 room=.
+-> l
+T 199 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 4) HP 30/30 MP 0/0 Hu 93 $ 531 room=.
+-> e
+T 200 mode=game_loop           Eowyn Stonefoot(hum) F2@(13, 4) HP 30/30 MP 0/0 Hu 92 $ 531 room=.
+-> l
+T 201 mode=game_loop           Eowyn Stonefoot(hum) F2@(13, 4) HP 30/30 MP 0/0 Hu 92 $ 531 room=.
+-> n
+T 202 mode=pool_mode           Eowyn Stonefoot(hum) F2@(13, 3) HP 30/30 MP 0/0 Hu 91 $ 531 room=P
+-> dr
+T 203 mode=game_loop           Eowyn Stonefoot(hum) F2@(13, 3) HP 16/30 MP 0/0 Hu 91 $ 531 room=.
+-> l
+T 204 mode=game_loop           Eowyn Stonefoot(hum) F2@(13, 3) HP 16/30 MP 0/0 Hu 91 $ 531 room=.
+-> i
+T 205 mode=inventory           Eowyn Stonefoot(hum) F2@(13, 3) HP 16/30 MP 0/0 Hu 91 $ 531 room=.
+-> u3
+T 206 mode=inventory           Eowyn Stonefoot(hum) F2@(13, 3) HP 30/30 MP 0/0 Hu 91 $ 531 room=.
+-> x
+T 207 mode=game_loop           Eowyn Stonefoot(hum) F2@(13, 3) HP 30/30 MP 0/0 Hu 91 $ 531 room=.
+-> n
+T 208 mode=game_loop           Eowyn Stonefoot(hum) F2@(13, 2) HP 23/30 MP 0/0 Hu 90 $ 531 room=.
+-> l
+T 209 mode=game_loop           Eowyn Stonefoot(hum) F2@(13, 2) HP 23/30 MP 0/0 Hu 90 $ 531 room=.
+-> i
+T 210 mode=inventory           Eowyn Stonefoot(hum) F2@(13, 2) HP 23/30 MP 0/0 Hu 90 $ 531 room=.
+-> u3
+T 211 mode=inventory           Eowyn Stonefoot(hum) F2@(13, 2) HP 30/30 MP 0/0 Hu 90 $ 531 room=.
+-> x
+T 212 mode=game_loop           Eowyn Stonefoot(hum) F2@(13, 2) HP 30/30 MP 0/0 Hu 90 $ 531 room=.
+-> n
+T 213 mode=chest_mode          Eowyn Stonefoot(hum) F2@(13, 1) HP 24/30 MP 0/0 Hu 89 $ 531 room=C
+-> w
+T 214 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 1) HP 17/30 MP 0/0 Hu 88 $ 531 room=.
+-> l
+T 215 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 1) HP 17/30 MP 0/0 Hu 88 $ 531 room=.
+-> w
+T 216 mode=game_loop           Eowyn Stonefoot(hum) F2@(11, 1) HP 11/30 MP 0/0 Hu 87 $ 531 room=.
+-> s
+T 217 mode=game_loop           Eowyn Stonefoot(hum) F2@(11, 2) HP 11/30 MP 0/0 Hu 86 $ 531 room=.
+-> w
+T 218 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 2) HP 12/30 MP 0/0 Hu 85 $ 531 room=.
+-> e
+T 219 mode=game_loop           Eowyn Stonefoot(hum) F2@(11, 2) HP 12/30 MP 0/0 Hu 84 $ 531 room=.
+-> e
+T 220 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 2) HP 12/30 MP 0/0 Hu 83 $ 531 room=.
+-> s
+T 221 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 3) HP 12/30 MP 0/0 Hu 82 $ 531 room=.
+-> s
+T 222 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 4) HP 13/30 MP 0/0 Hu 81 $ 531 room=.
+-> s
+T 223 mode=game_loop           Eowyn Stonefoot(hum) F2@(12, 5) HP 13/30 MP 0/0 Hu 80 $ 531 room=.
+-> w
+T 224 mode=game_loop           Eowyn Stonefoot(hum) F2@(11, 5) HP 13/30 MP 0/0 Hu 79 $ 531 room=.
+-> w
+T 225 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 5) HP 13/30 MP 0/0 Hu 78 $ 531 room=.
+-> s
+T 226 mode=altar_mode          Eowyn Stonefoot(hum) F2@(10, 6) HP 14/30 MP 0/0 Hu 77 $ 531 room=A
+-> pray
+T 227 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 6) HP 14/30 MP 0/0 Hu 77 $ 606 room=.
+-> s
+T 228 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 7) HP 14/30 MP 0/0 Hu 76 $ 606 room=.
+-> s
+T 229 mode=game_loop           Eowyn Stonefoot(hum) F2@(10, 8) HP 14/30 MP 0/0 Hu 75 $ 606 room=.
+-> w
+T 230 mode=game_loop           Eowyn Stonefoot(hum) F2@( 9, 8) HP 14/30 MP 0/0 Hu 74 $ 606 room=.
+-> w
+T 231 mode=library_mode        Eowyn Stonefoot(hum) F2@( 8, 8) HP 15/30 MP 0/0 Hu 73 $ 606 room=L
+-> r
+T 232 mode=library_read_decision_mode Eowyn Stonefoot(hum) F2@( 8, 8) HP 15/30 MP 0/0 Hu 73 $ 606 room=L
+-> y
+T 233 mode=game_loop           Eowyn Stonefoot(hum) F2@( 8, 8) HP 15/30 MP 0/0 Hu 73 $ 706 room=.
+-> s
+T 234 mode=game_loop           Eowyn Stonefoot(hum) F2@( 8, 9) HP 7/30 MP 0/0 Hu 72 $ 706 room=.
+-> s
+T 235 mode=death_screen        Eowyn Stonefoot(hum) F2@( 8,10) HP -1/30 MP 0/0 Hu 71 $ 706 room=.
+
+=== run finished: turns=235 floor=2 hp=-1/30 gold=706 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/08128_human.html

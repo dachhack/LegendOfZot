@@ -1,0 +1,2882 @@
+T   0 mode=game_loop           Oin Steelpalm(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Oin Steelpalm(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 10 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=combat_mode         Oin Steelpalm(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=M vs Goblin(L0 HP12/12)
+  Shinies! Give us your shinies, The Novice!
+  The Goblin strikes first!
+-> a
+T   3 mode=combat_victory      Oin Steelpalm(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 349 room=.
+  Goblin missed Oin Steelpalm!
+  You hit the evil Goblin!
+  Goblin took 26 damage.
+  You defeated the Goblin!
+  The goblin falls with a pitiful shriek.
+  You gained 8 experience.
+  You found 9 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Goblin meat.
+-> back
+T   4 mode=game_loop           Oin Steelpalm(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 349 room=.
+-> l
+T   5 mode=game_loop           Oin Steelpalm(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 349 room=.
+  Lantern fuel remaining: 78
+-> e
+T   6 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 1) HP 61/64 MP 0/0 Hu 98 $ 349 room=M vs Skeleton(L0 HP25/25)
+-> a
+T   7 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 1) HP 60/64 MP 0/0 Hu 98 $ 349 room=M vs Skeleton(L0 HP1/25)
+-> a
+T   8 mode=combat_victory      Oin Steelpalm(dwa) F1@( 3, 1) HP 59/64 MP 0/0 Hu 98 $ 353 room=.
+-> back
+T   9 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 1) HP 59/64 MP 0/0 Hu 98 $ 353 room=.
+-> l
+T  10 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 1) HP 59/64 MP 0/0 Hu 98 $ 353 room=.
+-> e
+T  11 mode=combat_mode         Oin Steelpalm(dwa) F1@( 4, 1) HP 59/64 MP 0/0 Hu 97 $ 353 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  12 mode=combat_mode         Oin Steelpalm(dwa) F1@( 4, 1) HP 58/64 MP 0/0 Hu 97 $ 353 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  13 mode=combat_victory      Oin Steelpalm(dwa) F1@( 4, 1) HP 58/64 MP 0/0 Hu 97 $ 362 room=.
+-> back
+T  14 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 1) HP 58/64 MP 0/0 Hu 97 $ 362 room=.
+-> l
+T  15 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 1) HP 58/64 MP 0/0 Hu 97 $ 362 room=.
+-> s
+T  16 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 2) HP 59/64 MP 0/0 Hu 96 $ 362 room=.
+-> l
+T  17 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 2) HP 59/64 MP 0/0 Hu 96 $ 362 room=.
+-> s
+T  18 mode=combat_mode         Oin Steelpalm(dwa) F1@( 4, 3) HP 59/64 MP 0/0 Hu 95 $ 362 room=M vs Kobold(L0 HP8/8)
+-> f
+T  19 mode=flee_direction_mode Oin Steelpalm(dwa) F1@( 4, 3) HP 58/64 MP 0/0 Hu 95 $ 362 room=M
+-> s
+T  20 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 4) HP 58/64 MP 0/0 Hu 95 $ 362 room=.
+-> l
+T  21 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 4) HP 58/64 MP 0/0 Hu 95 $ 362 room=.
+-> w
+T  22 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 4) HP 59/64 MP 0/0 Hu 94 $ 362 room=M vs Lichen(L0 HP10/10)
+-> f
+T  23 mode=flee_direction_mode Oin Steelpalm(dwa) F1@( 3, 4) HP 58/64 MP 0/0 Hu 94 $ 362 room=M
+-> n
+T  24 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 3) HP 58/64 MP 0/0 Hu 94 $ 362 room=M vs Kobold(L0 HP20/20)
+-> a
+T  25 mode=combat_victory      Oin Steelpalm(dwa) F1@( 3, 3) HP 57/64 MP 0/0 Hu 94 $ 369 room=.
+-> back
+T  26 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 3) HP 57/64 MP 0/0 Hu 94 $ 369 room=.
+-> s
+T  27 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 4) HP 57/64 MP 0/0 Hu 93 $ 369 room=M vs Lichen(L0 HP10/10)
+-> a
+T  28 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 4) HP 57/64 MP 0/0 Hu 93 $ 369 room=M vs Lichen(L0 HP10/10)
+-> f
+T  29 mode=flee_direction_mode Oin Steelpalm(dwa) F1@( 3, 4) HP 56/64 MP 0/0 Hu 93 $ 369 room=M
+-> w
+T  30 mode=combat_mode         Oin Steelpalm(dwa) F1@( 2, 4) HP 56/64 MP 0/0 Hu 93 $ 369 room=M vs Stirge(L0 HP6/6)
+-> f
+T  31 mode=flee_direction_mode Oin Steelpalm(dwa) F1@( 2, 4) HP 52/64 MP 0/0 Hu 93 $ 369 room=M
+-> n
+T  32 mode=combat_mode         Oin Steelpalm(dwa) F1@( 2, 3) HP 52/64 MP 0/0 Hu 93 $ 369 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> f
+T  33 mode=flee_direction_mode Oin Steelpalm(dwa) F1@( 2, 3) HP 52/64 MP 0/0 Hu 93 $ 369 room=M
+-> n
+T  34 mode=tomb_mode           Oin Steelpalm(dwa) F1@( 2, 2) HP 52/64 MP 0/0 Hu 93 $ 369 room=T
+-> p
+T  35 mode=game_loop           Oin Steelpalm(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 93 $ 369 room=T
+-> e
+T  36 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 92 $ 369 room=M vs UNDEAD SKELETON(L0 HP31/31)
+-> a
+T  37 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 2) HP 61/64 MP 0/0 Hu 92 $ 369 room=M vs UNDEAD SKELETON(L0 HP31/31)
+-> a
+T  38 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 2) HP 58/64 MP 0/0 Hu 92 $ 369 room=M vs UNDEAD SKELETON(L0 HP7/31)
+-> a
+T  39 mode=combat_victory      Oin Steelpalm(dwa) F1@( 3, 2) HP 58/64 MP 0/0 Hu 92 $ 376 room=.
+-> back
+T  40 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 2) HP 58/64 MP 0/0 Hu 92 $ 376 room=.
+-> e
+T  41 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 2) HP 58/64 MP 0/0 Hu 91 $ 376 room=.
+-> s
+T  42 mode=combat_mode         Oin Steelpalm(dwa) F1@( 4, 3) HP 59/64 MP 0/0 Hu 90 $ 376 room=M vs Kobold(L0 HP8/8)
+-> a
+T  43 mode=combat_victory      Oin Steelpalm(dwa) F1@( 4, 3) HP 58/64 MP 0/0 Hu 90 $ 383 room=.
+-> back
+T  44 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 3) HP 58/64 MP 0/0 Hu 90 $ 383 room=.
+-> l
+T  45 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 3) HP 58/64 MP 0/0 Hu 90 $ 383 room=.
+-> e
+T  46 mode=chest_mode          Oin Steelpalm(dwa) F1@( 5, 3) HP 58/64 MP 0/0 Hu 89 $ 383 room=C
+-> o
+T  47 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 3) HP 58/64 MP 0/0 Hu 89 $ 383 room=.
+-> i
+T  48 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 3) HP 58/64 MP 0/0 Hu 89 $ 383 room=.
+-> u4
+T  49 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 89 $ 383 room=.
+-> x
+T  50 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 89 $ 383 room=.
+-> i
+T  51 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 89 $ 383 room=.
+-> eat3
+T  52 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 94 $ 383 room=.
+-> e2
+T  53 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 94 $ 383 room=.
+-> x
+T  54 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 3) HP 64/64 MP 0/0 Hu 94 $ 383 room=.
+-> s
+T  55 mode=dungeon_mode        Oin Steelpalm(dwa) F1@( 5, 4) HP 64/64 MP 0/0 Hu 93 $ 383 room=N
+-> u
+T  56 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 4) HP 64/64 MP 0/0 Hu 93 $ 383 room=N
+-> l
+T  57 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 4) HP 64/64 MP 0/0 Hu 93 $ 383 room=N
+-> e
+T  58 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 92 $ 383 room=.
+-> l
+T  59 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 92 $ 383 room=.
+-> s
+T  60 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 5) HP 64/64 MP 0/0 Hu 91 $ 383 room=M vs Giant Centipede(L0 HP15/15)
+-> f
+T  61 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 5) HP 62/64 MP 0/0 Hu 91 $ 383 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  62 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 5) HP 61/64 MP 0/0 Hu 91 $ 383 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  63 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 5) HP 60/64 MP 0/0 Hu 91 $ 383 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  64 mode=combat_victory      Oin Steelpalm(dwa) F1@( 6, 5) HP 59/64 MP 0/0 Hu 91 $ 384 room=.
+-> back
+T  65 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 5) HP 59/64 MP 0/0 Hu 91 $ 384 room=.
+-> l
+T  66 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 5) HP 59/64 MP 0/0 Hu 91 $ 384 room=.
+-> e
+T  67 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 5) HP 59/64 MP 0/0 Hu 90 $ 384 room=.
+-> l
+T  68 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 5) HP 59/64 MP 0/0 Hu 90 $ 384 room=.
+-> s
+T  69 mode=library_mode        Oin Steelpalm(dwa) F1@( 7, 6) HP 60/64 MP 0/0 Hu 89 $ 384 room=L
+-> r
+T  70 mode=library_read_decision_mode Oin Steelpalm(dwa) F1@( 7, 6) HP 60/64 MP 0/0 Hu 89 $ 384 room=L
+-> y
+T  71 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 6) HP 60/64 MP 0/0 Hu 89 $ 434 room=.
+-> i
+T  72 mode=inventory           Oin Steelpalm(dwa) F1@( 7, 6) HP 60/64 MP 0/0 Hu 89 $ 434 room=.
+-> u4
+T  73 mode=inventory           Oin Steelpalm(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu 89 $ 434 room=.
+-> x
+T  74 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu 89 $ 434 room=.
+-> i
+T  75 mode=inventory           Oin Steelpalm(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu 89 $ 434 room=.
+-> eat4
+T  76 mode=inventory           Oin Steelpalm(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu 94 $ 434 room=.
+-> x
+T  77 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu 94 $ 434 room=.
+-> l
+T  78 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 6) HP 64/64 MP 0/0 Hu 94 $ 434 room=.
+-> s
+T  79 mode=combat_mode         Oin Steelpalm(dwa) F1@( 7, 7) HP 64/64 MP 0/0 Hu 93 $ 434 room=M vs Bat(L0 HP12/12)
+-> a
+T  80 mode=combat_mode         Oin Steelpalm(dwa) F1@( 7, 7) HP 64/64 MP 0/0 Hu 93 $ 434 room=M vs Bat(L0 HP12/12)
+-> a
+T  81 mode=combat_mode         Oin Steelpalm(dwa) F1@( 7, 7) HP 63/64 MP 0/0 Hu 93 $ 434 room=M vs Bat(L0 HP12/12)
+-> a
+T  82 mode=combat_victory      Oin Steelpalm(dwa) F1@( 7, 7) HP 63/64 MP 0/0 Hu 93 $ 441 room=.
+-> back
+T  83 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 7) HP 63/64 MP 0/0 Hu 93 $ 441 room=.
+-> l
+T  84 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 7) HP 63/64 MP 0/0 Hu 93 $ 441 room=.
+-> w
+T  85 mode=pool_mode           Oin Steelpalm(dwa) F1@( 6, 7) HP 63/64 MP 0/0 Hu 92 $ 441 room=P
+-> dr
+T  86 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 7) HP 64/64 MP 0/0 Hu 92 $ 441 room=.
+-> w
+T  87 mode=chest_mode          Oin Steelpalm(dwa) F1@( 5, 7) HP 64/64 MP 0/0 Hu 91 $ 441 room=C
+-> o
+T  88 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 7) HP 64/64 MP 0/0 Hu 91 $ 481 room=.
+-> n
+T  89 mode=dungeon_mode        Oin Steelpalm(dwa) F1@( 5, 6) HP 64/64 MP 0/0 Hu 90 $ 481 room=N
+-> u
+T  90 mode=dungeon_unlocked_mode Oin Steelpalm(dwa) F1@( 5, 6) HP 64/64 MP 0/0 Hu 90 $ 481 room=N
+-> r
+T  91 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 6) HP 64/64 MP 0/0 Hu 90 $ 481 room=N
+-> w
+T  92 mode=vendor_shop         Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 481 room=V
+-> b13
+T  93 mode=vendor_shop         Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 471 room=V
+-> b4
+T  94 mode=vendor_shop         Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 441 room=V
+-> b4
+T  95 mode=vendor_shop         Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 411 room=V
+-> b7
+T  96 mode=vendor_shop         Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 381 room=V
+-> b7
+T  97 mode=vendor_shop         Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 231 room=V
+-> b1
+T  98 mode=vendor_shop         Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 156 room=V
+-> id11
+T  99 mode=vendor_shop         Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 131 room=V
+-> x
+T 100 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 131 room=V
+-> i
+T 101 mode=inventory           Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 131 room=V
+-> e1
+T 102 mode=inventory           Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 131 room=V
+-> x
+T 103 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 89 $ 131 room=V
+-> s
+T 104 mode=combat_mode         Oin Steelpalm(dwa) F1@( 4, 7) HP 64/64 MP 0/0 Hu 88 $ 131 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 105 mode=combat_victory      Oin Steelpalm(dwa) F1@( 4, 7) HP 63/64 MP 0/0 Hu 88 $ 233 room=.
+-> back
+T 106 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 7) HP 63/64 MP 0/0 Hu 88 $ 233 room=.
+-> l
+T 107 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 7) HP 63/64 MP 0/0 Hu 88 $ 233 room=.
+-> s
+T 108 mode=combat_mode         Oin Steelpalm(dwa) F1@( 4, 8) HP 63/64 MP 0/0 Hu 87 $ 233 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 109 mode=combat_mode         Oin Steelpalm(dwa) F1@( 4, 8) HP 62/64 MP 0/0 Hu 87 $ 233 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 110 mode=combat_mode         Oin Steelpalm(dwa) F1@( 4, 8) HP 61/64 MP 0/0 Hu 87 $ 233 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 111 mode=combat_mode         Oin Steelpalm(dwa) F1@( 4, 8) HP 60/64 MP 0/0 Hu 87 $ 233 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 112 mode=combat_victory      Oin Steelpalm(dwa) F1@( 4, 8) HP 59/64 MP 0/0 Hu 87 $ 340 room=.
+-> back
+T 113 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 8) HP 59/64 MP 0/0 Hu 87 $ 340 room=.
+-> e
+T 114 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 8) HP 60/64 MP 0/0 Hu 86 $ 340 room=.
+-> i
+T 115 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 8) HP 60/64 MP 0/0 Hu 86 $ 340 room=.
+-> u5
+T 116 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 8) HP 64/64 MP 0/0 Hu 86 $ 340 room=.
+-> x
+T 117 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 8) HP 64/64 MP 0/0 Hu 86 $ 340 room=.
+-> i
+T 118 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 8) HP 64/64 MP 0/0 Hu 86 $ 340 room=.
+-> eat3
+T 119 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 8) HP 64/64 MP 0/0 Hu 91 $ 340 room=.
+-> u9
+T 120 mode=upgrade_scroll_mode Oin Steelpalm(dwa) F1@( 5, 8) HP 64/64 MP 0/0 Hu 91 $ 340 room=.
+-> 1
+T 121 mode=inventory           Oin Steelpalm(dwa) F1@( 5, 8) HP 64/64 MP 0/0 Hu 91 $ 340 room=.
+-> x
+T 122 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 8) HP 64/64 MP 0/0 Hu 91 $ 340 room=.
+-> s
+T 123 mode=combat_mode         Oin Steelpalm(dwa) F1@( 5, 9) HP 64/64 MP 0/0 Hu 90 $ 340 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T 124 mode=flee_direction_mode Oin Steelpalm(dwa) F1@( 5, 9) HP 64/64 MP 0/0 Hu 90 $ 340 room=M
+-> e
+T 125 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 9) HP 64/64 MP 0/0 Hu 90 $ 340 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 126 mode=combat_victory      Oin Steelpalm(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 90 $ 341 room=.
+-> back
+T 127 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 9) HP 63/64 MP 0/0 Hu 90 $ 341 room=.
+-> e
+T 128 mode=combat_mode         Oin Steelpalm(dwa) F1@( 7, 9) HP 63/64 MP 0/0 Hu 89 $ 341 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 129 mode=combat_mode         Oin Steelpalm(dwa) F1@( 7, 9) HP 63/64 MP 0/0 Hu 89 $ 341 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 130 mode=combat_victory      Oin Steelpalm(dwa) F1@( 7, 9) HP 63/64 MP 0/0 Hu 89 $ 349 room=.
+-> back
+T 131 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 9) HP 63/64 MP 0/0 Hu 89 $ 349 room=.
+-> l
+T 132 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 9) HP 63/64 MP 0/0 Hu 89 $ 349 room=.
+-> n
+T 133 mode=combat_mode         Oin Steelpalm(dwa) F1@( 7, 8) HP 64/64 MP 0/0 Hu 88 $ 349 room=M vs Kobold(L0 HP20/20)
+-> a
+T 134 mode=combat_victory      Oin Steelpalm(dwa) F1@( 7, 8) HP 64/74 MP 0/0 Hu 88 $ 355 room=.
+-> back
+T 135 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 8) HP 64/74 MP 0/0 Hu 88 $ 355 room=.
+-> i
+T 136 mode=inventory           Oin Steelpalm(dwa) F1@( 7, 8) HP 64/74 MP 0/0 Hu 88 $ 355 room=.
+-> u5
+T 137 mode=inventory           Oin Steelpalm(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 88 $ 355 room=.
+-> x
+T 138 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 88 $ 355 room=.
+-> i
+T 139 mode=inventory           Oin Steelpalm(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 88 $ 355 room=.
+-> eat2
+T 140 mode=inventory           Oin Steelpalm(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 93 $ 355 room=.
+-> x
+T 141 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 93 $ 355 room=.
+-> l
+T 142 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 93 $ 355 room=.
+-> e
+T 143 mode=game_loop           Oin Steelpalm(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 92 $ 355 room=.
+-> e
+T 144 mode=game_loop           Oin Steelpalm(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 91 $ 355 room=.
+-> n
+T 145 mode=library_mode        Oin Steelpalm(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 90 $ 355 room=L
+-> r
+T 146 mode=game_loop           Oin Steelpalm(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 90 $ 355 room=.
+-> n
+T 147 mode=altar_mode          Oin Steelpalm(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 89 $ 355 room=A
+-> pray
+T 148 mode=game_loop           Oin Steelpalm(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu100 $ 355 room=.
+-> w
+T 149 mode=combat_mode         Oin Steelpalm(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 99 $ 355 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 150 mode=combat_victory      Oin Steelpalm(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 99 $ 458 room=.
+-> back
+T 151 mode=game_loop           Oin Steelpalm(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 99 $ 458 room=.
+-> n
+T 152 mode=altar_mode          Oin Steelpalm(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu 98 $ 458 room=A
+-> pray
+T 153 mode=game_loop           Oin Steelpalm(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu100 $ 458 room=.
+-> e
+T 154 mode=game_loop           Oin Steelpalm(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 99 $ 458 room=.
+-> l
+T 155 mode=game_loop           Oin Steelpalm(dwa) F1@( 9, 5) HP 74/74 MP 0/0 Hu 99 $ 458 room=.
+-> e
+T 156 mode=library_mode        Oin Steelpalm(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 98 $ 458 room=L
+-> r
+T 157 mode=library_read_decision_mode Oin Steelpalm(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 98 $ 458 room=L
+-> y
+T 158 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 98 $ 458 room=.
+-> i
+T 159 mode=inventory           Oin Steelpalm(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu 98 $ 458 room=.
+-> eat3
+T 160 mode=inventory           Oin Steelpalm(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu100 $ 458 room=.
+-> x
+T 161 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu100 $ 458 room=.
+-> l
+T 162 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 5) HP 74/74 MP 0/0 Hu100 $ 458 room=.
+-> n
+T 163 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 4) HP 74/74 MP 0/0 Hu 99 $ 458 room=.
+-> i
+T 164 mode=inventory           Oin Steelpalm(dwa) F1@(10, 4) HP 74/74 MP 0/0 Hu 99 $ 458 room=.
+-> eat3
+T 165 mode=inventory           Oin Steelpalm(dwa) F1@(10, 4) HP 74/74 MP 0/0 Hu100 $ 458 room=.
+-> x
+T 166 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 4) HP 74/74 MP 0/0 Hu100 $ 458 room=.
+-> l
+T 167 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 4) HP 74/74 MP 0/0 Hu100 $ 458 room=.
+-> n
+T 168 mode=pool_mode           Oin Steelpalm(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 99 $ 458 room=P
+-> dr
+T 169 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 99 $ 458 room=.
+-> l
+T 170 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 3) HP 74/74 MP 0/0 Hu 99 $ 458 room=.
+-> e
+T 171 mode=combat_mode         Oin Steelpalm(dwa) F1@(11, 3) HP 74/74 MP 0/0 Hu 98 $ 458 room=M vs Spore Puff(L0 HP18/18)
+-> f
+T 172 mode=flee_direction_mode Oin Steelpalm(dwa) F1@(11, 3) HP 74/74 MP 0/0 Hu 98 $ 458 room=M
+-> s
+T 173 mode=game_loop           Oin Steelpalm(dwa) F1@(11, 4) HP 74/74 MP 0/0 Hu 98 $ 458 room=.
+-> e
+T 174 mode=combat_mode         Oin Steelpalm(dwa) F1@(12, 4) HP 74/74 MP 0/0 Hu 97 $ 458 room=M vs Zombie(L0 HP35/35)
+-> a
+T 175 mode=combat_mode         Oin Steelpalm(dwa) F1@(12, 4) HP 73/74 MP 0/0 Hu 97 $ 458 room=M vs Zombie(L0 HP35/35)
+-> a
+T 176 mode=combat_mode         Oin Steelpalm(dwa) F1@(12, 4) HP 72/74 MP 0/0 Hu 97 $ 458 room=M vs Zombie(L0 HP35/35)
+-> a
+T 177 mode=combat_mode         Oin Steelpalm(dwa) F1@(12, 4) HP 71/74 MP 0/0 Hu 97 $ 458 room=M vs Zombie(L0 HP8/35)
+-> a
+T 178 mode=combat_mode         Oin Steelpalm(dwa) F1@(12, 4) HP 70/74 MP 0/0 Hu 97 $ 458 room=M vs Zombie(L0 HP8/35)
+-> a
+T 179 mode=combat_victory      Oin Steelpalm(dwa) F1@(12, 4) HP 69/74 MP 0/0 Hu 97 $ 462 room=.
+-> back
+T 180 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 4) HP 69/74 MP 0/0 Hu 97 $ 462 room=.
+-> s
+T 181 mode=combat_mode         Oin Steelpalm(dwa) F1@(12, 5) HP 69/74 MP 0/0 Hu 96 $ 462 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 182 mode=combat_mode         Oin Steelpalm(dwa) F1@(12, 5) HP 68/74 MP 0/0 Hu 96 $ 462 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 183 mode=combat_victory      Oin Steelpalm(dwa) F1@(12, 5) HP 68/74 MP 0/0 Hu 96 $ 465 room=.
+-> back
+T 184 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 5) HP 68/74 MP 0/0 Hu 96 $ 465 room=.
+-> s
+T 185 mode=combat_mode         Oin Steelpalm(dwa) F1@(12, 6) HP 69/74 MP 0/0 Hu 95 $ 465 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 186 mode=combat_victory      Oin Steelpalm(dwa) F1@(12, 6) HP 69/74 MP 0/0 Hu 95 $ 473 room=.
+-> back
+T 187 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 6) HP 69/74 MP 0/0 Hu 95 $ 473 room=.
+-> s
+T 188 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 7) HP 69/74 MP 0/0 Hu 94 $ 473 room=.
+-> i
+T 189 mode=inventory           Oin Steelpalm(dwa) F1@(12, 7) HP 69/74 MP 0/0 Hu 94 $ 473 room=.
+-> u5
+T 190 mode=inventory           Oin Steelpalm(dwa) F1@(12, 7) HP 74/74 MP 0/0 Hu 94 $ 473 room=.
+-> x
+T 191 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 7) HP 74/74 MP 0/0 Hu 94 $ 473 room=.
+-> i
+T 192 mode=inventory           Oin Steelpalm(dwa) F1@(12, 7) HP 74/74 MP 0/0 Hu 94 $ 473 room=.
+-> eat2
+T 193 mode=inventory           Oin Steelpalm(dwa) F1@(12, 7) HP 74/74 MP 0/0 Hu 99 $ 473 room=.
+-> x
+T 194 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 7) HP 74/74 MP 0/0 Hu 99 $ 473 room=.
+-> e
+T 195 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 7) HP 74/74 MP 0/0 Hu 98 $ 473 room=M vs Goblin(L0 HP12/12)
+-> a
+T 196 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 7) HP 74/74 MP 0/0 Hu 98 $ 473 room=M vs Goblin(L0 HP12/12)
+-> a
+T 197 mode=combat_victory      Oin Steelpalm(dwa) F1@(13, 7) HP 73/74 MP 0/0 Hu 98 $ 477 room=.
+-> back
+T 198 mode=game_loop           Oin Steelpalm(dwa) F1@(13, 7) HP 73/74 MP 0/0 Hu 98 $ 477 room=.
+-> s
+T 199 mode=game_loop           Oin Steelpalm(dwa) F1@(13, 8) HP 73/74 MP 0/0 Hu 97 $ 477 room=.
+-> s
+T 200 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 9) HP 74/74 MP 0/0 Hu 96 $ 477 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 201 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 9) HP 73/74 MP 0/0 Hu 96 $ 477 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 202 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 9) HP 70/74 MP 0/0 Hu 96 $ 477 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 203 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 9) HP 68/74 MP 0/0 Hu 96 $ 477 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 204 mode=flee_direction_mode Oin Steelpalm(dwa) F1@(13, 9) HP 68/74 MP 0/0 Hu 96 $ 477 room=M
+-> e
+T 205 mode=game_loop           Oin Steelpalm(dwa) F1@(14, 9) HP 68/74 MP 0/0 Hu 96 $ 477 room=.
+-> l
+T 206 mode=game_loop           Oin Steelpalm(dwa) F1@(14, 9) HP 68/74 MP 0/0 Hu 96 $ 477 room=.
+-> n
+T 207 mode=combat_mode         Oin Steelpalm(dwa) F1@(14, 8) HP 68/74 MP 0/0 Hu 95 $ 477 room=M vs Skeleton(L0 HP25/25)
+-> f
+T 208 mode=flee_direction_mode Oin Steelpalm(dwa) F1@(14, 8) HP 68/74 MP 0/0 Hu 95 $ 477 room=M
+-> n
+T 209 mode=game_loop           Oin Steelpalm(dwa) F1@(14, 7) HP 68/74 MP 0/0 Hu 95 $ 477 room=.
+-> w
+T 210 mode=game_loop           Oin Steelpalm(dwa) F1@(13, 7) HP 69/74 MP 0/0 Hu 94 $ 477 room=.
+-> l
+T 211 mode=game_loop           Oin Steelpalm(dwa) F1@(13, 7) HP 69/74 MP 0/0 Hu 94 $ 477 room=.
+-> s
+T 212 mode=game_loop           Oin Steelpalm(dwa) F1@(13, 8) HP 69/74 MP 0/0 Hu 93 $ 477 room=.
+-> w
+T 213 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 8) HP 70/74 MP 0/0 Hu 92 $ 477 room=.
+-> w
+T 214 mode=chest_mode          Oin Steelpalm(dwa) F1@(11, 8) HP 70/74 MP 0/0 Hu 91 $ 477 room=C
+-> o
+T 215 mode=game_loop           Oin Steelpalm(dwa) F1@(11, 8) HP 70/74 MP 0/0 Hu 91 $ 517 room=.
+-> s
+T 216 mode=chest_mode          Oin Steelpalm(dwa) F1@(11, 9) HP 71/74 MP 0/0 Hu 90 $ 517 room=C
+-> o
+T 217 mode=game_loop           Oin Steelpalm(dwa) F1@(11, 9) HP 71/74 MP 0/0 Hu 90 $ 517 room=.
+-> e
+T 218 mode=combat_mode         Oin Steelpalm(dwa) F1@(12, 9) HP 71/74 MP 0/0 Hu 89 $ 517 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 219 mode=combat_victory      Oin Steelpalm(dwa) F1@(12, 9) HP 71/74 MP 0/0 Hu 89 $ 527 room=.
+-> back
+T 220 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 9) HP 71/74 MP 0/0 Hu 89 $ 527 room=.
+-> l
+T 221 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 9) HP 71/74 MP 0/0 Hu 89 $ 527 room=.
+-> s
+T 222 mode=game_loop           Oin Steelpalm(dwa) F1@(12,10) HP 72/74 MP 0/0 Hu 88 $ 527 room=.
+-> i
+T 223 mode=inventory           Oin Steelpalm(dwa) F1@(12,10) HP 72/74 MP 0/0 Hu 88 $ 527 room=.
+-> eat2
+T 224 mode=inventory           Oin Steelpalm(dwa) F1@(12,10) HP 72/74 MP 0/0 Hu 93 $ 527 room=.
+-> u9
+T 225 mode=upgrade_scroll_mode Oin Steelpalm(dwa) F1@(12,10) HP 72/74 MP 0/0 Hu 93 $ 527 room=.
+-> 1
+T 226 mode=inventory           Oin Steelpalm(dwa) F1@(12,10) HP 72/74 MP 0/0 Hu 93 $ 527 room=.
+-> e2
+T 227 mode=inventory           Oin Steelpalm(dwa) F1@(12,10) HP 72/74 MP 0/0 Hu 93 $ 527 room=.
+-> x
+T 228 mode=game_loop           Oin Steelpalm(dwa) F1@(12,10) HP 72/74 MP 0/0 Hu 93 $ 527 room=.
+-> s
+T 229 mode=combat_mode         Oin Steelpalm(dwa) F1@(12,11) HP 72/74 MP 0/0 Hu 92 $ 527 room=M vs Bat(L0 HP12/12)
+-> a
+T 230 mode=combat_victory      Oin Steelpalm(dwa) F1@(12,11) HP 71/74 MP 0/0 Hu 92 $ 536 room=.
+-> back
+T 231 mode=game_loop           Oin Steelpalm(dwa) F1@(12,11) HP 71/74 MP 0/0 Hu 92 $ 536 room=.
+-> e
+T 232 mode=chest_mode          Oin Steelpalm(dwa) F1@(13,11) HP 72/74 MP 0/0 Hu 91 $ 536 room=C
+-> n
+T 233 mode=game_loop           Oin Steelpalm(dwa) F1@(13,10) HP 72/74 MP 0/0 Hu 90 $ 536 room=.
+-> n
+T 234 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 9) HP 73/74 MP 0/0 Hu 89 $ 536 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 235 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 9) HP 72/74 MP 0/0 Hu 89 $ 536 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 236 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 9) HP 69/74 MP 0/0 Hu 89 $ 536 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 237 mode=flee_direction_mode Oin Steelpalm(dwa) F1@(13, 9) HP 67/74 MP 0/0 Hu 89 $ 536 room=M
+-> n
+T 238 mode=game_loop           Oin Steelpalm(dwa) F1@(13, 8) HP 67/74 MP 0/0 Hu 89 $ 536 room=.
+-> n
+T 239 mode=game_loop           Oin Steelpalm(dwa) F1@(13, 7) HP 67/74 MP 0/0 Hu 88 $ 536 room=.
+-> w
+T 240 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 7) HP 68/74 MP 0/0 Hu 87 $ 536 room=.
+-> l
+T 241 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 7) HP 68/74 MP 0/0 Hu 87 $ 536 room=.
+-> w
+T 242 mode=combat_mode         Oin Steelpalm(dwa) F1@(11, 7) HP 68/74 MP 0/0 Hu 86 $ 536 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 243 mode=combat_victory      Oin Steelpalm(dwa) F1@(11, 7) HP 68/74 MP 0/0 Hu 86 $ 539 room=.
+-> back
+T 244 mode=game_loop           Oin Steelpalm(dwa) F1@(11, 7) HP 68/74 MP 0/0 Hu 86 $ 539 room=.
+-> n
+T 245 mode=game_loop           Oin Steelpalm(dwa) F1@(11, 6) HP 69/74 MP 0/0 Hu 85 $ 539 room=.
+-> n
+T 246 mode=game_loop           Oin Steelpalm(dwa) F1@(11, 5) HP 69/74 MP 0/0 Hu 84 $ 539 room=.
+-> w
+T 247 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 5) HP 69/74 MP 0/0 Hu 83 $ 539 room=.
+-> w
+T 248 mode=game_loop           Oin Steelpalm(dwa) F1@( 9, 5) HP 69/74 MP 0/0 Hu 82 $ 539 room=.
+-> w
+T 249 mode=game_loop           Oin Steelpalm(dwa) F1@( 8, 5) HP 70/74 MP 0/0 Hu 81 $ 539 room=.
+-> w
+T 250 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 5) HP 70/74 MP 0/0 Hu 80 $ 539 room=.
+-> l
+T 251 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 5) HP 70/74 MP 0/0 Hu 80 $ 539 room=.
+-> w
+T 252 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 5) HP 70/74 MP 0/0 Hu 79 $ 539 room=.
+-> n
+T 253 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 4) HP 70/74 MP 0/0 Hu 78 $ 539 room=.
+-> n
+T 254 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 3) HP 71/74 MP 0/0 Hu 77 $ 539 room=.
+-> e
+T 255 mode=garden_mode         Oin Steelpalm(dwa) F1@( 7, 3) HP 71/74 MP 0/0 Hu 76 $ 539 room=G
+-> h
+T 256 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 3) HP 71/74 MP 0/0 Hu 76 $ 539 room=.
+-> n
+T 257 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 2) HP 71/74 MP 0/0 Hu 75 $ 539 room=.
+-> n
+T 258 mode=combat_mode         Oin Steelpalm(dwa) F1@( 7, 1) HP 71/74 MP 0/0 Hu 74 $ 539 room=M vs Lichen(L0 HP10/10)
+-> a
+T 259 mode=combat_victory      Oin Steelpalm(dwa) F1@( 7, 1) HP 70/74 MP 0/0 Hu 74 $ 549 room=.
+-> back
+T 260 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 1) HP 70/74 MP 0/0 Hu 74 $ 549 room=.
+-> l
+T 261 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 1) HP 70/74 MP 0/0 Hu 74 $ 549 room=.
+-> w
+T 262 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 1) HP 71/74 MP 0/0 Hu 73 $ 549 room=.
+-> s
+T 263 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 2) HP 71/74 MP 0/0 Hu 72 $ 549 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 264 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 2) HP 71/74 MP 0/0 Hu 72 $ 549 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 265 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 2) HP 71/74 MP 0/0 Hu 72 $ 549 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 266 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 2) HP 70/74 MP 0/0 Hu 72 $ 549 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 267 mode=combat_mode         Oin Steelpalm(dwa) F1@( 6, 2) HP 69/74 MP 0/0 Hu 72 $ 549 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 268 mode=combat_victory      Oin Steelpalm(dwa) F1@( 6, 2) HP 69/74 MP 0/0 Hu 72 $ 555 room=.
+-> back
+T 269 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 2) HP 69/74 MP 0/0 Hu 72 $ 555 room=.
+-> w
+T 270 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 2) HP 69/74 MP 0/0 Hu 71 $ 555 room=.
+-> l
+T 271 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 2) HP 69/74 MP 0/0 Hu 71 $ 555 room=.
+-> w
+T 272 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 2) HP 69/74 MP 0/0 Hu 70 $ 555 room=.
+-> n
+T 273 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 1) HP 70/74 MP 0/0 Hu 69 $ 555 room=.
+-> w
+T 274 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 1) HP 70/74 MP 0/0 Hu 68 $ 555 room=.
+-> e
+T 275 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 1) HP 70/74 MP 0/0 Hu 67 $ 555 room=.
+-> e
+T 276 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 1) HP 70/74 MP 0/0 Hu 66 $ 555 room=.
+-> s
+T 277 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 2) HP 71/74 MP 0/0 Hu 65 $ 555 room=.
+-> w
+T 278 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 2) HP 71/74 MP 0/0 Hu 64 $ 555 room=.
+-> s
+T 279 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 3) HP 71/74 MP 0/0 Hu 63 $ 555 room=.
+-> w
+T 280 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 3) HP 71/74 MP 0/0 Hu 62 $ 555 room=.
+-> i
+T 281 mode=inventory           Oin Steelpalm(dwa) F1@( 3, 3) HP 71/74 MP 0/0 Hu 62 $ 555 room=.
+-> eat2
+T 282 mode=inventory           Oin Steelpalm(dwa) F1@( 3, 3) HP 71/74 MP 0/0 Hu 67 $ 555 room=.
+-> eat1
+T 283 mode=inventory           Oin Steelpalm(dwa) F1@( 3, 3) HP 71/74 MP 0/0 Hu100 $ 555 room=.
+-> x
+T 284 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 3) HP 71/74 MP 0/0 Hu100 $ 555 room=.
+-> s
+T 285 mode=combat_mode         Oin Steelpalm(dwa) F1@( 3, 4) HP 72/74 MP 0/0 Hu 99 $ 555 room=M vs Lichen(L0 HP10/10)
+-> a
+T 286 mode=combat_victory      Oin Steelpalm(dwa) F1@( 3, 4) HP 71/74 MP 0/0 Hu 99 $ 557 room=.
+-> back
+T 287 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 4) HP 71/74 MP 0/0 Hu 99 $ 557 room=.
+-> w
+T 288 mode=combat_mode         Oin Steelpalm(dwa) F1@( 2, 4) HP 71/74 MP 0/0 Hu 98 $ 557 room=M vs Stirge(L0 HP6/6)
+-> a
+T 289 mode=combat_victory      Oin Steelpalm(dwa) F1@( 2, 4) HP 70/74 MP 0/0 Hu 98 $ 563 room=.
+-> back
+T 290 mode=game_loop           Oin Steelpalm(dwa) F1@( 2, 4) HP 70/74 MP 0/0 Hu 98 $ 563 room=.
+-> l
+T 291 mode=game_loop           Oin Steelpalm(dwa) F1@( 2, 4) HP 70/74 MP 0/0 Hu 98 $ 563 room=.
+-> e
+T 292 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 4) HP 71/74 MP 0/0 Hu 97 $ 563 room=.
+-> e
+T 293 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 4) HP 71/74 MP 0/0 Hu 96 $ 563 room=.
+-> n
+T 294 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 3) HP 72/74 MP 0/0 Hu 95 $ 563 room=.
+-> w
+T 295 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 3) HP 72/74 MP 0/0 Hu 94 $ 563 room=.
+-> s
+T 296 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 4) HP 73/74 MP 0/0 Hu 93 $ 563 room=.
+-> w
+T 297 mode=game_loop           Oin Steelpalm(dwa) F1@( 2, 4) HP 73/74 MP 0/0 Hu 92 $ 563 room=.
+-> e
+T 298 mode=game_loop           Oin Steelpalm(dwa) F1@( 3, 4) HP 74/74 MP 0/0 Hu 91 $ 563 room=.
+-> e
+T 299 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 90 $ 563 room=.
+-> n
+T 300 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 89 $ 563 room=.
+-> l
+T 301 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 89 $ 563 room=.
+-> n
+T 302 mode=game_loop           Oin Steelpalm(dwa) F1@( 4, 2) HP 74/74 MP 0/0 Hu 88 $ 563 room=.
+-> e
+T 303 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 2) HP 74/74 MP 0/0 Hu 87 $ 563 room=.
+-> s
+T 304 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 86 $ 563 room=.
+-> s
+T 305 mode=game_loop           Oin Steelpalm(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 85 $ 563 room=N
+-> e
+T 306 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 84 $ 563 room=.
+-> s
+T 307 mode=game_loop           Oin Steelpalm(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 83 $ 563 room=.
+-> e
+T 308 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 82 $ 563 room=.
+-> s
+T 309 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 81 $ 563 room=.
+-> s
+T 310 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 80 $ 563 room=.
+-> l
+T 311 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 80 $ 563 room=.
+-> s
+T 312 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 79 $ 563 room=.
+-> s
+T 313 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 9) HP 74/74 MP 0/0 Hu 78 $ 563 room=.
+-> e
+T 314 mode=game_loop           Oin Steelpalm(dwa) F1@( 8, 9) HP 74/74 MP 0/0 Hu 77 $ 563 room=.
+-> l
+T 315 mode=game_loop           Oin Steelpalm(dwa) F1@( 8, 9) HP 74/74 MP 0/0 Hu 77 $ 563 room=.
+-> s
+T 316 mode=game_loop           Oin Steelpalm(dwa) F1@( 8,10) HP 74/74 MP 0/0 Hu 76 $ 563 room=.
+-> s
+T 317 mode=game_loop           Oin Steelpalm(dwa) F1@( 8,11) HP 74/74 MP 0/0 Hu 75 $ 563 room=.
+-> s
+T 318 mode=game_loop           Oin Steelpalm(dwa) F1@( 8,12) HP 74/74 MP 0/0 Hu 74 $ 563 room=.
+-> w
+T 319 mode=game_loop           Oin Steelpalm(dwa) F1@( 7,12) HP 74/74 MP 0/0 Hu 73 $ 563 room=.
+-> n
+T 320 mode=game_loop           Oin Steelpalm(dwa) F1@( 7,11) HP 74/74 MP 0/0 Hu 72 $ 563 room=.
+-> l
+T 321 mode=game_loop           Oin Steelpalm(dwa) F1@( 7,11) HP 74/74 MP 0/0 Hu 72 $ 563 room=.
+-> n
+T 322 mode=combat_mode         Oin Steelpalm(dwa) F1@( 7,10) HP 74/74 MP 0/0 Hu 71 $ 563 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 323 mode=combat_victory      Oin Steelpalm(dwa) F1@( 7,10) HP 74/74 MP 0/0 Hu 71 $ 568 room=.
+-> back
+T 324 mode=game_loop           Oin Steelpalm(dwa) F1@( 7,10) HP 74/74 MP 0/0 Hu 71 $ 568 room=.
+-> n
+T 325 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 9) HP 74/74 MP 0/0 Hu 70 $ 568 room=.
+-> n
+T 326 mode=game_loop           Oin Steelpalm(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 69 $ 568 room=.
+-> e
+T 327 mode=game_loop           Oin Steelpalm(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 68 $ 568 room=.
+-> e
+T 328 mode=game_loop           Oin Steelpalm(dwa) F1@( 9, 8) HP 74/74 MP 0/0 Hu 67 $ 568 room=.
+-> e
+T 329 mode=game_loop           Oin Steelpalm(dwa) F1@(10, 8) HP 74/74 MP 0/0 Hu 66 $ 568 room=.
+-> e
+T 330 mode=game_loop           Oin Steelpalm(dwa) F1@(11, 8) HP 74/74 MP 0/0 Hu 65 $ 568 room=.
+-> l
+T 331 mode=game_loop           Oin Steelpalm(dwa) F1@(11, 8) HP 74/74 MP 0/0 Hu 65 $ 568 room=.
+-> s
+T 332 mode=game_loop           Oin Steelpalm(dwa) F1@(11, 9) HP 74/74 MP 0/0 Hu 64 $ 568 room=.
+-> e
+T 333 mode=game_loop           Oin Steelpalm(dwa) F1@(12, 9) HP 74/74 MP 0/0 Hu 63 $ 568 room=.
+-> s
+T 334 mode=game_loop           Oin Steelpalm(dwa) F1@(12,10) HP 74/74 MP 0/0 Hu 62 $ 568 room=.
+-> e
+T 335 mode=game_loop           Oin Steelpalm(dwa) F1@(13,10) HP 74/74 MP 0/0 Hu 61 $ 568 room=.
+-> e
+T 336 mode=game_loop           Oin Steelpalm(dwa) F1@(14,10) HP 74/74 MP 0/0 Hu 60 $ 568 room=.
+-> n
+T 337 mode=game_loop           Oin Steelpalm(dwa) F1@(14, 9) HP 74/74 MP 0/0 Hu 59 $ 568 room=.
+-> e
+T 338 mode=combat_mode         Oin Steelpalm(dwa) F1@(15, 9) HP 74/74 MP 0/0 Hu 58 $ 568 room=M vs Goblin(L0 HP30/30)
+-> a
+T 339 mode=combat_mode         Oin Steelpalm(dwa) F1@(15, 9) HP 73/74 MP 0/0 Hu 58 $ 568 room=M vs Goblin(L0 HP3/30)
+-> a
+T 340 mode=combat_victory      Oin Steelpalm(dwa) F1@(15, 9) HP 72/74 MP 0/0 Hu 58 $ 574 room=.
+-> back
+T 341 mode=game_loop           Oin Steelpalm(dwa) F1@(15, 9) HP 72/74 MP 0/0 Hu 58 $ 574 room=.
+-> e
+T 342 mode=game_loop           Oin Steelpalm(dwa) F1@(16, 9) HP 72/74 MP 0/0 Hu 57 $ 574 room=.
+-> l
+T 343 mode=game_loop           Oin Steelpalm(dwa) F1@(16, 9) HP 72/74 MP 0/0 Hu 57 $ 574 room=.
+-> s
+T 344 mode=game_loop           Oin Steelpalm(dwa) F1@(16,10) HP 72/74 MP 0/0 Hu 56 $ 574 room=.
+-> l
+T 345 mode=game_loop           Oin Steelpalm(dwa) F1@(16,10) HP 72/74 MP 0/0 Hu 56 $ 574 room=.
+-> e
+T 346 mode=combat_mode         Oin Steelpalm(dwa) F1@(17,10) HP 72/74 MP 0/0 Hu 55 $ 574 room=M vs Stirge(L0 HP6/6)
+-> a
+T 347 mode=combat_mode         Oin Steelpalm(dwa) F1@(17,10) HP 72/74 MP 0/0 Hu 55 $ 574 room=M vs Stirge(L0 HP6/6)
+-> a
+T 348 mode=combat_victory      Oin Steelpalm(dwa) F1@(17,10) HP 72/74 MP 0/0 Hu 55 $ 578 room=.
+-> back
+T 349 mode=game_loop           Oin Steelpalm(dwa) F1@(17,10) HP 72/74 MP 0/0 Hu 55 $ 578 room=.
+-> l
+T 350 mode=game_loop           Oin Steelpalm(dwa) F1@(17,10) HP 72/74 MP 0/0 Hu 55 $ 578 room=.
+-> l
+T 351 mode=game_loop           Oin Steelpalm(dwa) F1@(17,10) HP 72/74 MP 0/0 Hu 55 $ 578 room=.
+-> s
+T 352 mode=tomb_mode           Oin Steelpalm(dwa) F1@(17,11) HP 72/74 MP 0/0 Hu 54 $ 578 room=T
+-> p
+T 353 mode=game_loop           Oin Steelpalm(dwa) F1@(17,11) HP 72/74 MP 0/0 Hu 54 $ 578 room=T
+-> l
+T 354 mode=game_loop           Oin Steelpalm(dwa) F1@(17,11) HP 72/74 MP 0/0 Hu 54 $ 578 room=T
+-> e
+T 355 mode=altar_mode          Oin Steelpalm(dwa) F1@(18,11) HP 72/74 MP 0/0 Hu 53 $ 578 room=A
+-> pray
+T 356 mode=game_loop           Oin Steelpalm(dwa) F1@(18,11) HP 72/74 MP 0/0 Hu 53 $ 578 room=.
+-> n
+T 357 mode=game_loop           Oin Steelpalm(dwa) F1@(18,10) HP 72/74 MP 0/0 Hu 52 $ 578 room=.
+-> n
+T 358 mode=garden_mode         Oin Steelpalm(dwa) F1@(18, 9) HP 72/74 MP 0/0 Hu 51 $ 578 room=G
+-> h
+T 359 mode=game_loop           Oin Steelpalm(dwa) F1@(18, 9) HP 72/74 MP 0/0 Hu 51 $ 578 room=.
+-> l
+T 360 mode=game_loop           Oin Steelpalm(dwa) F1@(18, 9) HP 72/74 MP 0/0 Hu 51 $ 578 room=.
+-> l
+T 361 mode=game_loop           Oin Steelpalm(dwa) F1@(18, 9) HP 72/74 MP 0/0 Hu 51 $ 578 room=.
+-> e
+T 362 mode=game_loop           Oin Steelpalm(dwa) F1@(19, 9) HP 72/74 MP 0/0 Hu 50 $ 578 room=.
+-> l
+T 363 mode=game_loop           Oin Steelpalm(dwa) F1@(19, 9) HP 72/74 MP 0/0 Hu 50 $ 578 room=.
+-> n
+T 364 mode=game_loop           Oin Steelpalm(dwa) F1@(19, 8) HP 72/74 MP 0/0 Hu 49 $ 578 room=.
+-> i
+T 365 mode=inventory           Oin Steelpalm(dwa) F1@(19, 8) HP 72/74 MP 0/0 Hu 49 $ 578 room=.
+-> eat1
+T 366 mode=inventory           Oin Steelpalm(dwa) F1@(19, 8) HP 72/74 MP 0/0 Hu 99 $ 578 room=.
+-> x
+T 367 mode=game_loop           Oin Steelpalm(dwa) F1@(19, 8) HP 72/74 MP 0/0 Hu 99 $ 578 room=.
+-> w
+T 368 mode=pool_mode           Oin Steelpalm(dwa) F1@(18, 8) HP 72/74 MP 0/0 Hu 98 $ 578 room=P
+-> dr
+T 369 mode=game_loop           Oin Steelpalm(dwa) F1@(18, 8) HP 74/74 MP 0/0 Hu 98 $ 578 room=.
+-> w
+T 370 mode=combat_mode         Oin Steelpalm(dwa) F1@(17, 8) HP 74/74 MP 0/0 Hu 97 $ 578 room=M vs Kobold(L0 HP8/8)
+-> a
+T 371 mode=combat_mode         Oin Steelpalm(dwa) F1@(17, 8) HP 73/74 MP 0/0 Hu 97 $ 578 room=M vs Kobold(L0 HP8/8)
+-> a
+T 372 mode=combat_victory      Oin Steelpalm(dwa) F1@(17, 8) HP 72/84 MP 0/0 Hu 97 $ 587 room=.
+-> back
+T 373 mode=game_loop           Oin Steelpalm(dwa) F1@(17, 8) HP 72/84 MP 0/0 Hu 97 $ 587 room=.
+-> s
+T 374 mode=game_loop           Oin Steelpalm(dwa) F1@(17, 9) HP 72/84 MP 0/0 Hu 96 $ 587 room=.
+-> w
+T 375 mode=game_loop           Oin Steelpalm(dwa) F1@(16, 9) HP 73/84 MP 0/0 Hu 95 $ 587 room=.
+-> w
+T 376 mode=game_loop           Oin Steelpalm(dwa) F1@(15, 9) HP 73/84 MP 0/0 Hu 94 $ 587 room=.
+-> w
+T 377 mode=game_loop           Oin Steelpalm(dwa) F1@(14, 9) HP 74/84 MP 0/0 Hu 93 $ 587 room=.
+-> s
+T 378 mode=game_loop           Oin Steelpalm(dwa) F1@(14,10) HP 74/84 MP 0/0 Hu 92 $ 587 room=.
+-> w
+T 379 mode=game_loop           Oin Steelpalm(dwa) F1@(13,10) HP 75/84 MP 0/0 Hu 91 $ 587 room=.
+-> n
+T 380 mode=combat_mode         Oin Steelpalm(dwa) F1@(13, 9) HP 75/84 MP 0/0 Hu 90 $ 587 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 381 mode=flee_direction_mode Oin Steelpalm(dwa) F1@(13, 9) HP 75/84 MP 0/0 Hu 90 $ 587 room=M
+-> n
+T 382 mode=game_loop           Oin Steelpalm(dwa) F1@(13, 8) HP 75/84 MP 0/0 Hu 90 $ 587 room=.
+-> e
+T 383 mode=combat_mode         Oin Steelpalm(dwa) F1@(14, 8) HP 76/84 MP 0/0 Hu 89 $ 587 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 384 mode=combat_victory      Oin Steelpalm(dwa) F1@(14, 8) HP 76/84 MP 0/0 Hu 89 $ 593 room=.
+-> back
+T 385 mode=game_loop           Oin Steelpalm(dwa) F1@(14, 8) HP 76/84 MP 0/0 Hu 89 $ 593 room=.
+-> s
+T 386 mode=game_loop           Oin Steelpalm(dwa) F1@(14, 9) HP 76/84 MP 0/0 Hu 88 $ 593 room=.
+-> e
+T 387 mode=game_loop           Oin Steelpalm(dwa) F1@(15, 9) HP 77/84 MP 0/0 Hu 87 $ 593 room=.
+-> i
+T 388 mode=inventory           Oin Steelpalm(dwa) F1@(15, 9) HP 77/84 MP 0/0 Hu 87 $ 593 room=.
+-> u5
+T 389 mode=inventory           Oin Steelpalm(dwa) F1@(15, 9) HP 84/84 MP 0/0 Hu 87 $ 593 room=.
+-> x
+T 390 mode=game_loop           Oin Steelpalm(dwa) F1@(15, 9) HP 84/84 MP 0/0 Hu 87 $ 593 room=.
+-> i
+T 391 mode=inventory           Oin Steelpalm(dwa) F1@(15, 9) HP 84/84 MP 0/0 Hu 87 $ 593 room=.
+-> eat2
+T 392 mode=inventory           Oin Steelpalm(dwa) F1@(15, 9) HP 84/84 MP 0/0 Hu 92 $ 593 room=.
+-> x
+T 393 mode=game_loop           Oin Steelpalm(dwa) F1@(15, 9) HP 84/84 MP 0/0 Hu 92 $ 593 room=.
+-> e
+T 394 mode=game_loop           Oin Steelpalm(dwa) F1@(16, 9) HP 84/84 MP 0/0 Hu 91 $ 593 room=.
+-> n
+T 395 mode=combat_mode         Oin Steelpalm(dwa) F1@(16, 8) HP 84/84 MP 0/0 Hu 90 $ 593 room=M vs Goblin(L0 HP30/30)
+-> f
+T 396 mode=combat_mode         Oin Steelpalm(dwa) F1@(16, 8) HP 84/84 MP 0/0 Hu 90 $ 593 room=M vs Goblin(L0 HP30/30)
+-> a
+T 397 mode=combat_mode         Oin Steelpalm(dwa) F1@(16, 8) HP 84/84 MP 0/0 Hu 90 $ 593 room=M vs Goblin(L0 HP3/30)
+-> a
+T 398 mode=combat_mode         Oin Steelpalm(dwa) F1@(16, 8) HP 83/84 MP 0/0 Hu 90 $ 593 room=M vs Goblin(L0 HP3/30)
+-> a
+T 399 mode=combat_mode         Oin Steelpalm(dwa) F1@(16, 8) HP 83/84 MP 0/0 Hu 90 $ 593 room=M vs Goblin(L0 HP3/30)
+-> a
+T 400 mode=combat_mode         Oin Steelpalm(dwa) F1@(16, 8) HP 82/84 MP 0/0 Hu 90 $ 593 room=M vs Goblin(L0 HP3/30)
+-> a
+T 401 mode=combat_victory      Oin Steelpalm(dwa) F1@(16, 8) HP 82/84 MP 0/0 Hu 90 $ 601 room=.
+-> back
+T 402 mode=game_loop           Oin Steelpalm(dwa) F1@(16, 8) HP 82/84 MP 0/0 Hu 90 $ 601 room=.
+-> e
+T 403 mode=game_loop           Oin Steelpalm(dwa) F1@(17, 8) HP 82/84 MP 0/0 Hu 89 $ 601 room=.
+-> s
+T 404 mode=game_loop           Oin Steelpalm(dwa) F1@(17, 9) HP 83/84 MP 0/0 Hu 88 $ 601 room=.
+-> e
+T 405 mode=game_loop           Oin Steelpalm(dwa) F1@(18, 9) HP 83/84 MP 0/0 Hu 87 $ 601 room=.
+-> s
+T 406 mode=game_loop           Oin Steelpalm(dwa) F1@(18,10) HP 84/84 MP 0/0 Hu 86 $ 601 room=.
+-> e
+T 407 mode=game_loop           Oin Steelpalm(dwa) F1@(19,10) HP 84/84 MP 0/0 Hu 85 $ 601 room=.
+-> s
+T 408 mode=combat_mode         Oin Steelpalm(dwa) F1@(19,11) HP 84/84 MP 0/0 Hu 84 $ 601 room=M vs Kobold(L0 HP8/8)
+-> a
+T 409 mode=combat_mode         Oin Steelpalm(dwa) F1@(19,11) HP 83/84 MP 0/0 Hu 84 $ 601 room=M vs Kobold(L0 HP8/8)
+-> f
+T 410 mode=flee_direction_mode Oin Steelpalm(dwa) F1@(19,11) HP 83/84 MP 0/0 Hu 84 $ 601 room=M
+-> s
+T 411 mode=combat_mode         Oin Steelpalm(dwa) F1@(19,12) HP 83/84 MP 0/0 Hu 84 $ 601 room=M vs Bat(L0 HP12/12)
+-> a
+T 412 mode=combat_mode         Oin Steelpalm(dwa) F1@(19,12) HP 83/84 MP 0/0 Hu 84 $ 601 room=M vs Bat(L0 HP12/12)
+-> f
+T 413 mode=combat_mode         Oin Steelpalm(dwa) F1@(19,12) HP 83/84 MP 0/0 Hu 84 $ 601 room=M vs Bat(L0 HP12/12)
+-> a
+T 414 mode=combat_victory      Oin Steelpalm(dwa) F1@(19,12) HP 83/84 MP 0/0 Hu 84 $ 603 room=.
+-> back
+T 415 mode=game_loop           Oin Steelpalm(dwa) F1@(19,12) HP 83/84 MP 0/0 Hu 84 $ 603 room=.
+-> s
+T 416 mode=game_loop           Oin Steelpalm(dwa) F1@(19,13) HP 83/84 MP 0/0 Hu 83 $ 603 room=.
+-> w
+T 417 mode=combat_mode         Oin Steelpalm(dwa) F1@(18,13) HP 83/84 MP 0/0 Hu 82 $ 603 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 418 mode=combat_victory      Oin Steelpalm(dwa) F1@(18,13) HP 82/84 MP 0/0 Hu 82 $ 610 room=.
+-> back
+T 419 mode=game_loop           Oin Steelpalm(dwa) F1@(18,13) HP 82/84 MP 0/0 Hu 82 $ 610 room=.
+-> w
+T 420 mode=game_loop           Oin Steelpalm(dwa) F1@(17,13) HP 82/84 MP 0/0 Hu 81 $ 610 room=.
+-> l
+T 421 mode=game_loop           Oin Steelpalm(dwa) F1@(17,13) HP 82/84 MP 0/0 Hu 81 $ 610 room=.
+-> s
+T 422 mode=stairs_down_mode    Oin Steelpalm(dwa) F1@(17,14) HP 83/84 MP 0/0 Hu 80 $ 610 room=D
+-> d
+T 423 mode=stairs_up_mode      Oin Steelpalm(dwa) F2@( 1, 1) HP 83/84 MP 0/0 Hu 80 $ 610 room=U
+-> w
+T 424 mode=stairs_up_mode      Oin Steelpalm(dwa) F2@( 1, 1) HP 83/84 MP 0/0 Hu 80 $ 610 room=U
+-> w
+T 425 mode=stairs_up_mode      Oin Steelpalm(dwa) F2@( 1, 1) HP 83/84 MP 0/0 Hu 80 $ 610 room=U
+-> s
+T 426 mode=warp_mode           Oin Steelpalm(dwa) F2@( 1, 2) HP 83/84 MP 0/0 Hu 79 $ 610 room=W
+-> y
+T 427 mode=game_loop           Oin Steelpalm(dwa) F2@( 1, 2) HP 83/84 MP 0/0 Hu 79 $ 610 room=W
+-> l
+T 428 mode=game_loop           Oin Steelpalm(dwa) F2@( 1, 2) HP 83/84 MP 0/0 Hu 79 $ 610 room=W
+-> e
+T 429 mode=combat_mode         Oin Steelpalm(dwa) F2@( 2, 2) HP 83/84 MP 0/0 Hu 78 $ 610 room=M vs Spore Puff(L1 HP18/18)
+-> a
+T 430 mode=combat_mode         Oin Steelpalm(dwa) F2@( 2, 2) HP 83/84 MP 0/0 Hu 78 $ 610 room=M vs Spore Puff(L1 HP18/18)
+-> a
+T 431 mode=combat_victory      Oin Steelpalm(dwa) F2@( 2, 2) HP 82/84 MP 0/0 Hu 78 $ 616 room=.
+-> back
+T 432 mode=game_loop           Oin Steelpalm(dwa) F2@( 2, 2) HP 82/84 MP 0/0 Hu 78 $ 616 room=.
+-> l
+T 433 mode=game_loop           Oin Steelpalm(dwa) F2@( 2, 2) HP 82/84 MP 0/0 Hu 78 $ 616 room=.
+-> n
+T 434 mode=chest_mode          Oin Steelpalm(dwa) F2@( 2, 1) HP 82/84 MP 0/0 Hu 77 $ 616 room=C
+-> e
+T 435 mode=game_loop           Oin Steelpalm(dwa) F2@( 3, 1) HP 83/84 MP 0/0 Hu 76 $ 616 room=.
+-> l
+T 436 mode=game_loop           Oin Steelpalm(dwa) F2@( 3, 1) HP 83/84 MP 0/0 Hu 76 $ 616 room=.
+-> s
+T 437 mode=altar_mode          Oin Steelpalm(dwa) F2@( 3, 2) HP 83/84 MP 0/0 Hu 75 $ 616 room=A
+-> pray
+T 438 mode=game_loop           Oin Steelpalm(dwa) F2@( 3, 2) HP 83/84 MP 0/0 Hu 75 $ 616 room=.
+-> e
+T 439 mode=game_loop           Oin Steelpalm(dwa) F2@( 4, 2) HP 83/84 MP 0/0 Hu 74 $ 616 room=.
+-> i
+T 440 mode=inventory           Oin Steelpalm(dwa) F2@( 4, 2) HP 83/84 MP 0/0 Hu 74 $ 616 room=.
+-> eat2
+T 441 mode=inventory           Oin Steelpalm(dwa) F2@( 4, 2) HP 83/84 MP 0/0 Hu 79 $ 616 room=.
+-> eat1
+T 442 mode=inventory           Oin Steelpalm(dwa) F2@( 4, 2) HP 83/84 MP 0/0 Hu100 $ 616 room=.
+-> x
+T 443 mode=game_loop           Oin Steelpalm(dwa) F2@( 4, 2) HP 83/84 MP 0/0 Hu100 $ 616 room=.
+-> e
+T 444 mode=library_mode        Oin Steelpalm(dwa) F2@( 5, 2) HP 84/84 MP 0/0 Hu 99 $ 616 room=L
+-> r
+T 445 mode=library_read_decision_mode Oin Steelpalm(dwa) F2@( 5, 2) HP 84/84 MP 0/0 Hu 99 $ 616 room=L
+-> y
+T 446 mode=game_loop           Oin Steelpalm(dwa) F2@( 5, 2) HP 84/84 MP 0/0 Hu 99 $ 616 room=.
+-> l
+T 447 mode=game_loop           Oin Steelpalm(dwa) F2@( 5, 2) HP 84/84 MP 0/0 Hu 99 $ 616 room=.
+-> s
+T 448 mode=garden_mode         Oin Steelpalm(dwa) F2@( 5, 3) HP 84/84 MP 0/0 Hu 98 $ 616 room=G
+-> h
+T 449 mode=game_loop           Oin Steelpalm(dwa) F2@( 5, 3) HP 84/84 MP 0/0 Hu 98 $ 616 room=.
+-> l
+T 450 mode=game_loop           Oin Steelpalm(dwa) F2@( 5, 3) HP 84/84 MP 0/0 Hu 98 $ 616 room=.
+-> e
+T 451 mode=game_loop           Oin Steelpalm(dwa) F2@( 6, 3) HP 84/84 MP 0/0 Hu 97 $ 616 room=.
+-> l
+T 452 mode=game_loop           Oin Steelpalm(dwa) F2@( 6, 3) HP 84/84 MP 0/0 Hu 97 $ 616 room=.
+-> s
+T 453 mode=combat_mode         Oin Steelpalm(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 96 $ 616 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 454 mode=combat_victory      Oin Steelpalm(dwa) F2@( 6, 4) HP 83/84 MP 0/0 Hu 96 $ 632 room=.
+-> back
+T 455 mode=game_loop           Oin Steelpalm(dwa) F2@( 6, 4) HP 83/84 MP 0/0 Hu 96 $ 632 room=.
+-> l
+T 456 mode=game_loop           Oin Steelpalm(dwa) F2@( 6, 4) HP 83/84 MP 0/0 Hu 96 $ 632 room=.
+-> e
+T 457 mode=chest_mode          Oin Steelpalm(dwa) F2@( 7, 4) HP 83/84 MP 0/0 Hu 95 $ 632 room=C
+-> o
+T 458 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 4) HP 83/84 MP 0/0 Hu 95 $ 632 room=.
+-> e
+T 459 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 4) HP 84/84 MP 0/0 Hu 94 $ 632 room=.
+-> l
+T 460 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 4) HP 84/84 MP 0/0 Hu 94 $ 632 room=.
+-> n
+T 461 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 3) HP 84/84 MP 0/0 Hu 93 $ 632 room=.
+-> l
+T 462 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 3) HP 84/84 MP 0/0 Hu 93 $ 632 room=.
+-> e
+T 463 mode=library_mode        Oin Steelpalm(dwa) F2@( 9, 3) HP 84/84 MP 0/0 Hu 92 $ 632 room=L
+-> r
+T 464 mode=library_read_decision_mode Oin Steelpalm(dwa) F2@( 9, 3) HP 84/84 MP 0/0 Hu 92 $ 632 room=L
+-> y
+T 465 mode=game_loop           Oin Steelpalm(dwa) F2@( 9, 3) HP 84/84 MP 0/0 Hu 92 $ 632 room=.
+-> n
+T 466 mode=game_loop           Oin Steelpalm(dwa) F2@( 9, 2) HP 84/84 MP 0/0 Hu 91 $ 632 room=.
+-> l
+T 467 mode=game_loop           Oin Steelpalm(dwa) F2@( 9, 2) HP 84/84 MP 0/0 Hu 91 $ 632 room=.
+-> n
+T 468 mode=oracle_mode         Oin Steelpalm(dwa) F2@( 9, 1) HP 84/84 MP 0/0 Hu 90 $ 632 room=O
+-> w
+T 469 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 1) HP 84/84 MP 0/0 Hu 89 $ 632 room=.
+-> l
+T 470 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 1) HP 84/84 MP 0/0 Hu 89 $ 632 room=.
+-> w
+T 471 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 1) HP 84/84 MP 0/0 Hu 88 $ 632 room=.
+-> s
+T 472 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 2) HP 84/84 MP 0/0 Hu 87 $ 632 room=.
+-> e
+T 473 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 2) HP 84/84 MP 0/0 Hu 86 $ 632 room=.
+-> i
+T 474 mode=inventory           Oin Steelpalm(dwa) F2@( 8, 2) HP 84/84 MP 0/0 Hu 86 $ 632 room=.
+-> eat2
+T 475 mode=inventory           Oin Steelpalm(dwa) F2@( 8, 2) HP 84/84 MP 0/0 Hu 91 $ 632 room=.
+-> x
+T 476 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 2) HP 84/84 MP 0/0 Hu 91 $ 632 room=.
+-> e
+T 477 mode=game_loop           Oin Steelpalm(dwa) F2@( 9, 2) HP 84/84 MP 0/0 Hu 90 $ 632 room=.
+-> n
+T 478 mode=game_loop           Oin Steelpalm(dwa) F2@( 9, 1) HP 84/84 MP 0/0 Hu 89 $ 632 room=O
+-> e
+T 479 mode=chest_mode          Oin Steelpalm(dwa) F2@(10, 1) HP 84/84 MP 0/0 Hu 88 $ 632 room=C
+-> o
+T 480 mode=game_loop           Oin Steelpalm(dwa) F2@(10, 2) HP 84/84 MP 0/0 Hu 87 $ 632 room=.
+-> s
+T 481 mode=game_loop           Oin Steelpalm(dwa) F2@(10, 3) HP 84/84 MP 0/0 Hu 86 $ 632 room=.
+-> s
+T 482 mode=combat_mode         Oin Steelpalm(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 85 $ 632 room=M vs Wight(L1 HP40/40)
+-> a
+T 483 mode=combat_mode         Oin Steelpalm(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 85 $ 632 room=M vs Wight(L1 HP15/40)
+-> a
+T 484 mode=combat_victory      Oin Steelpalm(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 85 $ 640 room=.
+-> back
+T 485 mode=game_loop           Oin Steelpalm(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 85 $ 640 room=.
+-> w
+T 486 mode=game_loop           Oin Steelpalm(dwa) F2@( 9, 4) HP 84/84 MP 0/0 Hu 84 $ 640 room=.
+-> n
+T 487 mode=game_loop           Oin Steelpalm(dwa) F2@( 9, 3) HP 84/84 MP 0/0 Hu 83 $ 640 room=.
+-> n
+T 488 mode=game_loop           Oin Steelpalm(dwa) F2@( 9, 2) HP 84/84 MP 0/0 Hu 82 $ 640 room=.
+-> w
+T 489 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 2) HP 84/84 MP 0/0 Hu 81 $ 640 room=.
+-> w
+T 490 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 2) HP 84/84 MP 0/0 Hu 80 $ 640 room=.
+-> w
+T 491 mode=game_loop           Oin Steelpalm(dwa) F2@( 6, 2) HP 84/84 MP 0/0 Hu 79 $ 640 room=.
+-> w
+T 492 mode=game_loop           Oin Steelpalm(dwa) F2@( 5, 2) HP 84/84 MP 0/0 Hu 78 $ 640 room=.
+-> w
+T 493 mode=game_loop           Oin Steelpalm(dwa) F2@( 4, 2) HP 84/84 MP 0/0 Hu 77 $ 640 room=.
+-> n
+T 494 mode=pool_mode           Oin Steelpalm(dwa) F2@( 4, 1) HP 84/84 MP 0/0 Hu 76 $ 640 room=P
+-> dr
+T 495 mode=game_loop           Oin Steelpalm(dwa) F2@( 4, 1) HP 84/84 MP 0/0 Hu 76 $ 640 room=.
+-> e
+T 496 mode=combat_mode         Oin Steelpalm(dwa) F2@( 5, 1) HP 84/84 MP 0/0 Hu 75 $ 640 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 497 mode=combat_mode         Oin Steelpalm(dwa) F2@( 5, 1) HP 83/84 MP 0/0 Hu 75 $ 640 room=M vs Gray Ooze(L1 HP2/35)
+-> a
+T 498 mode=combat_victory      Oin Steelpalm(dwa) F2@( 5, 1) HP 83/84 MP 0/0 Hu 75 $ 642 room=.
+-> back
+T 499 mode=game_loop           Oin Steelpalm(dwa) F2@( 5, 1) HP 83/84 MP 0/0 Hu 75 $ 642 room=.
+-> s
+T 500 mode=game_loop           Oin Steelpalm(dwa) F2@( 5, 2) HP 83/84 MP 0/0 Hu 74 $ 642 room=.
+-> s
+T 501 mode=game_loop           Oin Steelpalm(dwa) F2@( 5, 3) HP 83/84 MP 0/0 Hu 73 $ 642 room=.
+-> e
+T 502 mode=game_loop           Oin Steelpalm(dwa) F2@( 6, 3) HP 83/84 MP 0/0 Hu 72 $ 642 room=.
+-> s
+T 503 mode=game_loop           Oin Steelpalm(dwa) F2@( 6, 4) HP 84/84 MP 0/0 Hu 71 $ 642 room=.
+-> e
+T 504 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 4) HP 84/84 MP 0/0 Hu 70 $ 642 room=.
+-> e
+T 505 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 4) HP 84/84 MP 0/0 Hu 69 $ 642 room=.
+-> s
+T 506 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 5) HP 84/84 MP 0/0 Hu 68 $ 642 room=.
+-> s
+T 507 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 6) HP 84/84 MP 0/0 Hu 67 $ 642 room=.
+-> l
+T 508 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 6) HP 84/84 MP 0/0 Hu 67 $ 642 room=.
+-> w
+T 509 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 6) HP 84/84 MP 0/0 Hu 66 $ 642 room=.
+-> l
+T 510 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 6) HP 84/84 MP 0/0 Hu 66 $ 642 room=.
+-> s
+T 511 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 7) HP 84/84 MP 0/0 Hu 65 $ 642 room=.
+-> l
+T 512 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 7) HP 84/84 MP 0/0 Hu 65 $ 642 room=.
+-> s
+T 513 mode=garden_mode         Oin Steelpalm(dwa) F2@( 7, 8) HP 84/84 MP 0/0 Hu 64 $ 642 room=G
+-> h
+T 514 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 8) HP 84/84 MP 0/0 Hu 64 $ 642 room=.
+-> l
+T 515 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 8) HP 84/84 MP 0/0 Hu 64 $ 642 room=.
+-> s
+T 516 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 9) HP 84/84 MP 0/0 Hu 63 $ 642 room=.
+-> l
+T 517 mode=game_loop           Oin Steelpalm(dwa) F2@( 7, 9) HP 84/84 MP 0/0 Hu 63 $ 642 room=.
+-> e
+T 518 mode=library_mode        Oin Steelpalm(dwa) F2@( 8, 9) HP 84/84 MP 0/0 Hu 62 $ 642 room=L
+-> r
+T 519 mode=library_read_decision_mode Oin Steelpalm(dwa) F2@( 8, 9) HP 84/84 MP 0/0 Hu 62 $ 642 room=L
+-> y
+T 520 mode=game_loop           Oin Steelpalm(dwa) F2@( 8, 9) HP 84/84 MP 0/0 Hu 62 $ 942 room=.
+-> e
+T 521 mode=game_loop           Oin Steelpalm(dwa) F2@( 9, 9) HP 84/84 MP 0/0 Hu 61 $ 942 room=.
+-> e
+T 522 mode=game_loop           Oin Steelpalm(dwa) F2@(10, 9) HP 84/84 MP 0/0 Hu 60 $ 942 room=.
+-> l
+T 523 mode=game_loop           Oin Steelpalm(dwa) F2@(10, 9) HP 84/84 MP 0/0 Hu 60 $ 942 room=.
+-> e
+T 524 mode=pool_mode           Oin Steelpalm(dwa) F2@(11, 9) HP 84/84 MP 0/0 Hu 59 $ 942 room=P
+-> dr
+T 525 mode=game_loop           Oin Steelpalm(dwa) F2@(11, 9) HP 84/84 MP 0/0 Hu 59 $ 942 room=.
+-> l
+T 526 mode=game_loop           Oin Steelpalm(dwa) F2@(11, 9) HP 84/84 MP 0/0 Hu 59 $ 942 room=.
+-> s
+T 527 mode=game_loop           Oin Steelpalm(dwa) F2@(11,10) HP 84/84 MP 0/0 Hu 58 $ 942 room=.
+-> s
+T 528 mode=game_loop           Oin Steelpalm(dwa) F2@(11,11) HP 84/84 MP 0/0 Hu 57 $ 942 room=.
+-> s
+T 529 mode=game_loop           Oin Steelpalm(dwa) F2@(11,12) HP 84/84 MP 0/0 Hu 56 $ 942 room=.
+-> l
+T 530 mode=game_loop           Oin Steelpalm(dwa) F2@(11,12) HP 84/84 MP 0/0 Hu 56 $ 942 room=.
+-> s
+T 531 mode=shrine_mode         Oin Steelpalm(dwa) F2@(11,13) HP 84/84 MP 0/0 Hu 55 $ 942 room=F
+-> p
+T 532 mode=game_loop           Oin Steelpalm(dwa) F2@(11,13) HP 84/84 MP 0/0 Hu 55 $ 942 room=.
+-> e
+T 533 mode=chest_mode          Oin Steelpalm(dwa) F2@(12,13) HP 84/84 MP 0/0 Hu 54 $ 942 room=C
+-> o
+T 534 mode=game_loop           Oin Steelpalm(dwa) F2@(12,13) HP 84/84 MP 0/0 Hu 54 $ 942 room=.
+-> l
+T 535 mode=game_loop           Oin Steelpalm(dwa) F2@(12,13) HP 84/84 MP 0/0 Hu 54 $ 942 room=.
+-> n
+T 536 mode=game_loop           Oin Steelpalm(dwa) F2@(12,12) HP 84/84 MP 0/0 Hu 53 $ 942 room=.
+-> e
+T 537 mode=game_loop           Oin Steelpalm(dwa) F2@(13,12) HP 84/84 MP 0/0 Hu 52 $ 942 room=.
+-> e
+T 538 mode=game_loop           Oin Steelpalm(dwa) F2@(14,12) HP 84/84 MP 0/0 Hu 51 $ 942 room=.
+-> s
+T 539 mode=game_loop           Oin Steelpalm(dwa) F2@(14,13) HP 84/84 MP 0/0 Hu 50 $ 942 room=.
+-> l
+T 540 mode=game_loop           Oin Steelpalm(dwa) F2@(14,13) HP 84/84 MP 0/0 Hu 50 $ 942 room=.
+-> e
+T 541 mode=combat_mode         Oin Steelpalm(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 49 $ 942 room=M vs Lichen(L1 HP10/10)
+-> a
+T 542 mode=combat_victory      Oin Steelpalm(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 49 $ 956 room=.
+-> back
+T 543 mode=game_loop           Oin Steelpalm(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 49 $ 956 room=.
+-> i
+T 544 mode=inventory           Oin Steelpalm(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 49 $ 956 room=.
+-> eat1
+T 545 mode=inventory           Oin Steelpalm(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 99 $ 956 room=.
+-> x
+T 546 mode=game_loop           Oin Steelpalm(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 99 $ 956 room=.
+-> l
+T 547 mode=game_loop           Oin Steelpalm(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 99 $ 956 room=.
+-> e
+T 548 mode=dungeon_mode        Oin Steelpalm(dwa) F2@(16,13) HP 84/84 MP 0/0 Hu 98 $ 956 room=N
+-> u
+T 549 mode=game_loop           Oin Steelpalm(dwa) F2@(16,13) HP 84/84 MP 0/0 Hu 98 $ 956 room=N
+-> l
+T 550 mode=game_loop           Oin Steelpalm(dwa) F2@(16,13) HP 84/84 MP 0/0 Hu 98 $ 956 room=N
+-> n
+T 551 mode=stairs_down_mode    Oin Steelpalm(dwa) F2@(16,12) HP 84/84 MP 0/0 Hu 97 $ 956 room=D
+-> d
+T 552 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 97 $ 956 room=U
+-> s
+T 553 mode=garden_mode         Oin Steelpalm(dwa) F3@( 1, 2) HP 84/84 MP 0/0 Hu 96 $ 956 room=G
+-> h
+T 554 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 84/84 MP 0/0 Hu 96 $ 956 room=.
+-> l
+T 555 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 84/84 MP 0/0 Hu 96 $ 956 room=.
+-> s
+T 556 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 95 $ 956 room=.
+-> l
+T 557 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 95 $ 956 room=.
+-> e
+T 558 mode=chest_mode          Oin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 94 $ 956 room=C
+-> o
+T 559 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 94 $ 956 room=.
+-> l
+T 560 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 94 $ 956 room=.
+-> s
+T 561 mode=tomb_mode           Oin Steelpalm(dwa) F3@( 2, 4) HP 84/84 MP 0/0 Hu 93 $ 956 room=T
+-> p
+T 562 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 4) HP 84/84 MP 0/0 Hu 93 $ 956 room=T
+-> l
+T 563 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 4) HP 84/84 MP 0/0 Hu 93 $ 956 room=T
+-> n
+T 564 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 92 $ 956 room=.
+-> n
+T 565 mode=combat_mode         Oin Steelpalm(dwa) F3@( 2, 2) HP 84/84 MP 0/0 Hu 91 $ 956 room=M vs Bugbear(L2 HP35/35)
+-> f
+T 566 mode=flee_direction_mode Oin Steelpalm(dwa) F3@( 2, 2) HP 84/84 MP 0/0 Hu 91 $ 956 room=M
+-> n
+T 567 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 91 $ 956 room=.
+-> l
+T 568 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 91 $ 956 room=.
+-> e
+T 569 mode=combat_mode         Oin Steelpalm(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 90 $ 956 room=M vs Rust Monster(L2 HP18/18)
+-> a
+T 570 mode=combat_mode         Oin Steelpalm(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 90 $ 956 room=M vs Rust Monster(L2 HP18/18)
+-> a
+T 571 mode=combat_mode         Oin Steelpalm(dwa) F3@( 3, 1) HP 83/84 MP 0/0 Hu 90 $ 956 room=M vs Rust Monster(L2 HP18/18)
+-> a
+T 572 mode=combat_victory      Oin Steelpalm(dwa) F3@( 3, 1) HP 82/84 MP 0/0 Hu 90 $ 959 room=.
+-> back
+T 573 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 82/84 MP 0/0 Hu 90 $ 959 room=.
+-> s
+T 574 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 82/84 MP 0/0 Hu 89 $ 959 room=.
+-> i
+T 575 mode=inventory           Oin Steelpalm(dwa) F3@( 3, 2) HP 82/84 MP 0/0 Hu 89 $ 959 room=.
+-> eat2
+T 576 mode=inventory           Oin Steelpalm(dwa) F3@( 3, 2) HP 82/84 MP 0/0 Hu 95 $ 959 room=.
+-> x
+T 577 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 82/84 MP 0/0 Hu 95 $ 959 room=.
+-> w
+T 578 mode=combat_mode         Oin Steelpalm(dwa) F3@( 2, 2) HP 83/84 MP 0/0 Hu 94 $ 959 room=M vs Bugbear(L2 HP35/35)
+-> a
+T 579 mode=combat_mode         Oin Steelpalm(dwa) F3@( 2, 2) HP 83/84 MP 0/0 Hu 94 $ 959 room=M vs Bugbear(L2 HP35/35)
+-> a
+T 580 mode=combat_mode         Oin Steelpalm(dwa) F3@( 2, 2) HP 82/84 MP 0/0 Hu 94 $ 959 room=M vs Bugbear(L2 HP11/35)
+-> f
+T 581 mode=flee_direction_mode Oin Steelpalm(dwa) F3@( 2, 2) HP 82/84 MP 0/0 Hu 94 $ 959 room=M
+-> s
+T 582 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 3) HP 82/84 MP 0/0 Hu 94 $ 959 room=.
+-> w
+T 583 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 3) HP 82/84 MP 0/0 Hu 93 $ 959 room=.
+-> n
+T 584 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 83/84 MP 0/0 Hu 92 $ 959 room=.
+-> n
+T 585 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 83/84 MP 0/0 Hu 91 $ 959 room=U
+-> e
+T 586 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 90 $ 959 room=.
+-> s
+T 587 mode=combat_mode         Oin Steelpalm(dwa) F3@( 2, 2) HP 84/84 MP 0/0 Hu 89 $ 959 room=M vs Bugbear(L2 HP11/35)
+-> a
+T 588 mode=combat_victory      Oin Steelpalm(dwa) F3@( 2, 2) HP 84/94 MP 0/0 Hu 89 $ 974 room=.
+-> back
+T 589 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 84/94 MP 0/0 Hu 89 $ 974 room=.
+-> e
+T 590 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 84/94 MP 0/0 Hu 88 $ 974 room=.
+-> n
+T 591 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 85/94 MP 0/0 Hu 87 $ 974 room=.
+-> s
+T 592 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 85/94 MP 0/0 Hu 86 $ 974 room=.
+-> n
+T 593 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 86/94 MP 0/0 Hu 85 $ 974 room=.
+-> w
+T 594 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 86/94 MP 0/0 Hu 84 $ 974 room=.
+-> s
+T 595 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 86/94 MP 0/0 Hu 83 $ 974 room=.
+-> w
+T 596 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 86/94 MP 0/0 Hu 82 $ 974 room=.
+-> s
+T 597 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 3) HP 87/94 MP 0/0 Hu 81 $ 974 room=.
+-> n
+T 598 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 87/94 MP 0/0 Hu 80 $ 974 room=.
+-> n
+T 599 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 87/94 MP 0/0 Hu 79 $ 974 room=U
+-> e
+T 600 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 87/94 MP 0/0 Hu 78 $ 974 room=.
+-> s
+T 601 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 88/94 MP 0/0 Hu 77 $ 974 room=.
+-> e
+T 602 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 88/94 MP 0/0 Hu 76 $ 974 room=.
+-> n
+T 603 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 88/94 MP 0/0 Hu 75 $ 974 room=.
+-> s
+T 604 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 88/94 MP 0/0 Hu 74 $ 974 room=.
+-> n
+T 605 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 89/94 MP 0/0 Hu 73 $ 974 room=.
+-> w
+T 606 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 89/94 MP 0/0 Hu 72 $ 974 room=.
+-> s
+T 607 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 89/94 MP 0/0 Hu 71 $ 974 room=.
+-> w
+T 608 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 89/94 MP 0/0 Hu 70 $ 974 room=.
+-> n
+T 609 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 90/94 MP 0/0 Hu 69 $ 974 room=U
+-> s
+T 610 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 90/94 MP 0/0 Hu 68 $ 974 room=.
+-> s
+T 611 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 3) HP 90/94 MP 0/0 Hu 67 $ 974 room=.
+-> n
+T 612 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 90/94 MP 0/0 Hu 66 $ 974 room=.
+-> e
+T 613 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 91/94 MP 0/0 Hu 65 $ 974 room=.
+-> e
+T 614 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 91/94 MP 0/0 Hu 64 $ 974 room=.
+-> n
+T 615 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 91/94 MP 0/0 Hu 63 $ 974 room=.
+-> w
+T 616 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 91/94 MP 0/0 Hu 62 $ 974 room=.
+-> w
+T 617 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 92/94 MP 0/0 Hu 61 $ 974 room=U
+-> s
+T 618 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 92/94 MP 0/0 Hu 60 $ 974 room=.
+-> e
+T 619 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 92/94 MP 0/0 Hu 59 $ 974 room=.
+-> e
+T 620 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 92/94 MP 0/0 Hu 58 $ 974 room=.
+-> n
+T 621 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 92/94 MP 0/0 Hu 57 $ 974 room=.
+-> w
+T 622 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 92/94 MP 0/0 Hu 56 $ 974 room=.
+-> w
+T 623 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 92/94 MP 0/0 Hu 55 $ 974 room=U
+-> s
+T 624 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 92/94 MP 0/0 Hu 54 $ 974 room=.
+-> e
+T 625 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 92/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 626 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 92/94 MP 0/0 Hu 52 $ 974 room=.
+-> n
+T 627 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 92/94 MP 0/0 Hu 51 $ 974 room=.
+-> w
+T 628 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 92/94 MP 0/0 Hu 50 $ 974 room=.
+-> w
+T 629 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 92/94 MP 0/0 Hu 49 $ 974 room=U
+-> s
+T 630 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 92/94 MP 0/0 Hu 48 $ 974 room=.
+-> i
+T 631 mode=inventory           Oin Steelpalm(dwa) F3@( 1, 2) HP 92/94 MP 0/0 Hu 48 $ 974 room=.
+-> eat1
+T 632 mode=inventory           Oin Steelpalm(dwa) F3@( 1, 2) HP 92/94 MP 0/0 Hu 98 $ 974 room=.
+-> x
+T 633 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 92/94 MP 0/0 Hu 98 $ 974 room=.
+-> s
+T 634 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 3) HP 92/94 MP 0/0 Hu 97 $ 974 room=.
+-> n
+T 635 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 93/94 MP 0/0 Hu 96 $ 974 room=.
+-> e
+T 636 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 93/94 MP 0/0 Hu 95 $ 974 room=.
+-> n
+T 637 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 94 $ 974 room=.
+-> e
+T 638 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 93 $ 974 room=.
+-> s
+T 639 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 94/94 MP 0/0 Hu 92 $ 974 room=.
+-> n
+T 640 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 91 $ 974 room=.
+-> s
+T 641 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 94/94 MP 0/0 Hu 90 $ 974 room=.
+-> w
+T 642 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 94/94 MP 0/0 Hu 89 $ 974 room=.
+-> n
+T 643 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 88 $ 974 room=.
+-> w
+T 644 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 87 $ 974 room=U
+-> s
+T 645 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 94/94 MP 0/0 Hu 86 $ 974 room=.
+-> s
+T 646 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 3) HP 94/94 MP 0/0 Hu 85 $ 974 room=.
+-> n
+T 647 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 94/94 MP 0/0 Hu 84 $ 974 room=.
+-> e
+T 648 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 94/94 MP 0/0 Hu 83 $ 974 room=.
+-> e
+T 649 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 94/94 MP 0/0 Hu 82 $ 974 room=.
+-> n
+T 650 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 81 $ 974 room=.
+-> w
+T 651 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 80 $ 974 room=.
+-> w
+T 652 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 79 $ 974 room=U
+-> s
+T 653 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 94/94 MP 0/0 Hu 78 $ 974 room=.
+-> e
+T 654 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 94/94 MP 0/0 Hu 77 $ 974 room=.
+-> e
+T 655 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 94/94 MP 0/0 Hu 76 $ 974 room=.
+-> n
+T 656 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 75 $ 974 room=.
+-> w
+T 657 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 74 $ 974 room=.
+-> w
+T 658 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 73 $ 974 room=U
+-> s
+T 659 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 94/94 MP 0/0 Hu 72 $ 974 room=.
+-> s
+T 660 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 3) HP 94/94 MP 0/0 Hu 71 $ 974 room=.
+-> n
+T 661 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 94/94 MP 0/0 Hu 70 $ 974 room=.
+-> e
+T 662 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 94/94 MP 0/0 Hu 69 $ 974 room=.
+-> e
+T 663 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 94/94 MP 0/0 Hu 68 $ 974 room=.
+-> n
+T 664 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 67 $ 974 room=.
+-> w
+T 665 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 66 $ 974 room=.
+-> w
+T 666 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 65 $ 974 room=U
+-> s
+T 667 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 94/94 MP 0/0 Hu 64 $ 974 room=.
+-> e
+T 668 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 94/94 MP 0/0 Hu 63 $ 974 room=.
+-> e
+T 669 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 2) HP 94/94 MP 0/0 Hu 62 $ 974 room=.
+-> n
+T 670 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 61 $ 974 room=.
+-> w
+T 671 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 60 $ 974 room=.
+-> w
+T 672 mode=stairs_up_mode      Oin Steelpalm(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 59 $ 974 room=U
+-> s
+T 673 mode=game_loop           Oin Steelpalm(dwa) F3@( 1, 2) HP 94/94 MP 0/0 Hu 58 $ 974 room=.
+-> e
+T 674 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 2) HP 94/94 MP 0/0 Hu 57 $ 974 room=.
+-> s
+T 675 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 3) HP 94/94 MP 0/0 Hu 56 $ 974 room=.
+-> s
+T 676 mode=game_loop           Oin Steelpalm(dwa) F3@( 2, 4) HP 94/94 MP 0/0 Hu 55 $ 974 room=T
+-> e
+T 677 mode=warp_mode           Oin Steelpalm(dwa) F3@( 3, 4) HP 94/94 MP 0/0 Hu 54 $ 974 room=W
+-> y
+T 678 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 4) HP 94/94 MP 0/0 Hu 54 $ 974 room=W
+-> l
+T 679 mode=game_loop           Oin Steelpalm(dwa) F3@( 3, 4) HP 94/94 MP 0/0 Hu 54 $ 974 room=W
+-> e
+T 680 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 681 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 682 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 683 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 684 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 685 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 686 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 687 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 688 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 689 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 690 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 691 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 692 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 693 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 694 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 695 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 696 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 697 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 698 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 699 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 700 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 701 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 702 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 703 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 704 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 705 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 706 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 707 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 708 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 709 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 710 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 711 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 712 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 713 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 714 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 715 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 716 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 717 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 718 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 719 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 720 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 721 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 722 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 723 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 724 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 725 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 726 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 727 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 728 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 729 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 730 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 731 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 732 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 733 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 734 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 735 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 736 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 737 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 738 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 739 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 740 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 741 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 742 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 743 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 744 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 745 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 746 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 747 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 748 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 749 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 750 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 751 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 752 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 753 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 754 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 755 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 756 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 757 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 758 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 759 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 760 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> l
+T 761 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 762 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 763 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 764 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 765 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 766 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 767 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 768 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 769 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 770 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> l
+T 771 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 772 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 773 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 774 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> n
+T 775 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 776 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 777 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 778 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> e
+T 779 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> s
+T 780 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> l
+T 781 mode=game_loop           Oin Steelpalm(dwa) F3@( 4, 4) HP 94/94 MP 0/0 Hu 53 $ 974 room=.
+-> w
+T 782 mode=warp_mode           Oin Steelpalm(dwa) F3@( 3, 4) HP 94/94 MP 0/0 Hu 52 $ 974 room=W
+-> n
+T 783 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,14) HP 94/94 MP 0/0 Hu 52 $ 974 room=M vs Cockatrice(L3 HP26/26)
+-> a
+T 784 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,14) HP 93/94 MP 0/0 Hu 52 $ 974 room=M vs Cockatrice(L3 HP1/26)
+-> a
+T 785 mode=combat_victory      Oin Steelpalm(dwa) F4@( 7,14) HP 92/94 MP 0/0 Hu 52 $ 982 room=.
+-> back
+T 786 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,14) HP 92/94 MP 0/0 Hu 52 $ 982 room=.
+-> l
+T 787 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,14) HP 92/94 MP 0/0 Hu 52 $ 982 room=.
+-> s
+T 788 mode=altar_mode          Oin Steelpalm(dwa) F4@( 7,15) HP 92/94 MP 0/0 Hu 51 $ 982 room=A
+-> pray
+T 789 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,15) HP 92/94 MP 0/0 Hu 51 $ 982 room=.
+-> l
+T 790 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,15) HP 92/94 MP 0/0 Hu 51 $ 982 room=.
+-> e
+T 791 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,15) HP 92/94 MP 0/0 Hu 50 $ 982 room=.
+-> l
+T 792 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,15) HP 92/94 MP 0/0 Hu 50 $ 982 room=.
+-> s
+T 793 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,16) HP 92/94 MP 0/0 Hu 49 $ 982 room=.
+-> i
+T 794 mode=inventory           Oin Steelpalm(dwa) F4@( 8,16) HP 92/94 MP 0/0 Hu 49 $ 982 room=.
+-> eat1
+T 795 mode=inventory           Oin Steelpalm(dwa) F4@( 8,16) HP 92/94 MP 0/0 Hu 99 $ 982 room=.
+-> x
+T 796 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,16) HP 92/94 MP 0/0 Hu 99 $ 982 room=.
+-> w
+T 797 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 92/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP75/75)
+-> a
+T 798 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 92/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP75/75)
+-> a
+T 799 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 92/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP75/75)
+-> a
+T 800 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 84/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP75/75)
+-> a
+T 801 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 76/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP52/75)
+-> a
+T 802 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 76/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP29/75)
+-> a
+T 803 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 76/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP6/75)
+-> a
+T 804 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 68/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP6/75)
+-> a
+T 805 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 68/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP6/75)
+-> a
+T 806 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7,16) HP 68/94 MP 0/0 Hu 98 $ 982 room=M vs Minotaur(L3 HP6/75)
+-> a
+T 807 mode=combat_victory      Oin Steelpalm(dwa) F4@( 7,16) HP 60/94 MP 0/0 Hu 98 $ 1018 room=.
+-> back
+T 808 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,16) HP 60/94 MP 0/0 Hu 98 $ 1018 room=.
+-> n
+T 809 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,15) HP 61/94 MP 0/0 Hu 97 $ 1018 room=.
+-> n
+T 810 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,14) HP 61/94 MP 0/0 Hu 96 $ 1018 room=.
+-> n
+T 811 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,13) HP 62/94 MP 0/0 Hu 95 $ 1018 room=.
+-> l
+T 812 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,13) HP 62/94 MP 0/0 Hu 95 $ 1018 room=.
+-> n
+T 813 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,12) HP 62/94 MP 0/0 Hu 94 $ 1018 room=.
+-> i
+T 814 mode=inventory           Oin Steelpalm(dwa) F4@( 7,12) HP 62/94 MP 0/0 Hu 94 $ 1018 room=.
+-> u8
+T 815 mode=inventory           Oin Steelpalm(dwa) F4@( 7,12) HP 94/94 MP 0/0 Hu 94 $ 1018 room=.
+-> x
+T 816 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,12) HP 94/94 MP 0/0 Hu 94 $ 1018 room=.
+-> n
+T 817 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,11) HP 94/94 MP 0/0 Hu 93 $ 1018 room=.
+-> e
+T 818 mode=oracle_mode         Oin Steelpalm(dwa) F4@( 8,11) HP 94/94 MP 0/0 Hu 92 $ 1018 room=O
+-> n
+T 819 mode=altar_mode          Oin Steelpalm(dwa) F4@( 8,10) HP 94/94 MP 0/0 Hu 91 $ 1018 room=A
+-> pray
+T 820 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,10) HP 94/94 MP 0/0 Hu 91 $ 1018 room=.
+-> i
+T 821 mode=inventory           Oin Steelpalm(dwa) F4@( 8,10) HP 94/94 MP 0/0 Hu 91 $ 1018 room=.
+-> eat2
+T 822 mode=inventory           Oin Steelpalm(dwa) F4@( 8,10) HP 94/94 MP 0/0 Hu 97 $ 1018 room=.
+-> x
+T 823 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,10) HP 94/94 MP 0/0 Hu 97 $ 1018 room=.
+-> l
+T 824 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,10) HP 94/94 MP 0/0 Hu 97 $ 1018 room=.
+-> w
+T 825 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,10) HP 94/94 MP 0/0 Hu 96 $ 1018 room=.
+-> w
+T 826 mode=game_loop           Oin Steelpalm(dwa) F4@( 6,10) HP 94/94 MP 0/0 Hu 95 $ 1018 room=.
+-> l
+T 827 mode=game_loop           Oin Steelpalm(dwa) F4@( 6,10) HP 94/94 MP 0/0 Hu 95 $ 1018 room=.
+-> n
+T 828 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 9) HP 94/94 MP 0/0 Hu 94 $ 1018 room=.
+-> i
+T 829 mode=inventory           Oin Steelpalm(dwa) F4@( 6, 9) HP 94/94 MP 0/0 Hu 94 $ 1018 room=.
+-> eat2
+T 830 mode=inventory           Oin Steelpalm(dwa) F4@( 6, 9) HP 94/94 MP 0/0 Hu100 $ 1018 room=.
+-> x
+T 831 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 9) HP 94/94 MP 0/0 Hu100 $ 1018 room=.
+-> l
+T 832 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 9) HP 94/94 MP 0/0 Hu100 $ 1018 room=.
+-> n
+T 833 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 8) HP 94/94 MP 0/0 Hu 99 $ 1018 room=.
+-> l
+T 834 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 8) HP 94/94 MP 0/0 Hu 99 $ 1018 room=.
+-> n
+T 835 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 7) HP 94/94 MP 0/0 Hu 98 $ 1018 room=.
+-> l
+T 836 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 7) HP 94/94 MP 0/0 Hu 98 $ 1018 room=.
+-> n
+T 837 mode=library_mode        Oin Steelpalm(dwa) F4@( 6, 6) HP 94/94 MP 0/0 Hu 97 $ 1018 room=L
+-> r
+T 838 mode=library_read_decision_mode Oin Steelpalm(dwa) F4@( 6, 6) HP 94/94 MP 0/0 Hu 97 $ 1018 room=L
+-> y
+T 839 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 6) HP 94/94 MP 0/0 Hu 97 $ 1018 room=.
+-> l
+T 840 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 6) HP 94/94 MP 0/0 Hu 97 $ 1018 room=.
+-> n
+T 841 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 5) HP 94/94 MP 0/0 Hu 96 $ 1018 room=.
+-> l
+T 842 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 5) HP 94/94 MP 0/0 Hu 96 $ 1018 room=.
+-> n
+T 843 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 4) HP 94/94 MP 0/0 Hu 95 $ 1018 room=.
+-> l
+T 844 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 4) HP 94/94 MP 0/0 Hu 95 $ 1018 room=.
+-> n
+T 845 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 3) HP 94/94 MP 0/0 Hu 94 $ 1018 room=.
+-> l
+T 846 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 3) HP 94/94 MP 0/0 Hu 94 $ 1018 room=.
+-> n
+T 847 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 2) HP 94/94 MP 0/0 Hu 93 $ 1018 room=.
+-> l
+T 848 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 2) HP 94/94 MP 0/0 Hu 93 $ 1018 room=.
+-> e
+T 849 mode=library_mode        Oin Steelpalm(dwa) F4@( 7, 2) HP 94/94 MP 0/0 Hu 92 $ 1018 room=L
+-> r
+T 850 mode=library_read_decision_mode Oin Steelpalm(dwa) F4@( 7, 2) HP 94/94 MP 0/0 Hu 92 $ 1018 room=L
+-> y
+T 851 mode=game_loop           Oin Steelpalm(dwa) F4@( 7, 2) HP 94/94 MP 0/0 Hu 92 $ 1118 room=.
+-> l
+T 852 mode=game_loop           Oin Steelpalm(dwa) F4@( 7, 2) HP 94/94 MP 0/0 Hu 92 $ 1118 room=.
+-> n
+T 853 mode=garden_mode         Oin Steelpalm(dwa) F4@( 7, 1) HP 94/94 MP 0/0 Hu 91 $ 1118 room=G
+-> h
+T 854 mode=game_loop           Oin Steelpalm(dwa) F4@( 7, 1) HP 94/94 MP 0/0 Hu 91 $ 1118 room=.
+-> w
+T 855 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 1) HP 94/94 MP 0/0 Hu 90 $ 1118 room=.
+-> l
+T 856 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 1) HP 94/94 MP 0/0 Hu 90 $ 1118 room=.
+-> w
+T 857 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 1) HP 94/94 MP 0/0 Hu 89 $ 1118 room=.
+-> w
+T 858 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 1) HP 94/94 MP 0/0 Hu 88 $ 1118 room=.
+-> w
+T 859 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 1) HP 94/94 MP 0/0 Hu 87 $ 1118 room=.
+-> w
+T 860 mode=game_loop           Oin Steelpalm(dwa) F4@( 2, 1) HP 94/94 MP 0/0 Hu 86 $ 1118 room=.
+-> w
+T 861 mode=stairs_up_mode      Oin Steelpalm(dwa) F4@( 1, 1) HP 94/94 MP 0/0 Hu 85 $ 1118 room=U
+-> u
+T 862 mode=stairs_down_mode    Oin Steelpalm(dwa) F3@( 5, 9) HP 94/94 MP 0/0 Hu 85 $ 1118 room=D
+-> d
+T 863 mode=stairs_up_mode      Oin Steelpalm(dwa) F4@( 1, 1) HP 94/94 MP 0/0 Hu 85 $ 1118 room=U
+-> e
+T 864 mode=game_loop           Oin Steelpalm(dwa) F4@( 2, 1) HP 94/94 MP 0/0 Hu 84 $ 1118 room=.
+-> e
+T 865 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 1) HP 94/94 MP 0/0 Hu 83 $ 1118 room=.
+-> e
+T 866 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 1) HP 94/94 MP 0/0 Hu 82 $ 1118 room=.
+-> e
+T 867 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 1) HP 94/94 MP 0/0 Hu 81 $ 1118 room=.
+-> s
+T 868 mode=library_mode        Oin Steelpalm(dwa) F4@( 5, 2) HP 94/94 MP 0/0 Hu 80 $ 1118 room=L
+-> r
+T 869 mode=library_read_decision_mode Oin Steelpalm(dwa) F4@( 5, 2) HP 94/94 MP 0/0 Hu 80 $ 1118 room=L
+-> y
+T 870 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 2) HP 94/94 MP 0/0 Hu 80 $ 1118 room=.
+-> s
+T 871 mode=chest_mode          Oin Steelpalm(dwa) F4@( 5, 3) HP 94/94 MP 0/0 Hu 79 $ 1118 room=C
+-> o
+T 872 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 3) HP 94/94 MP 0/0 Hu 79 $ 1118 room=.
+-> s
+T 873 mode=chest_mode          Oin Steelpalm(dwa) F4@( 5, 4) HP 94/94 MP 0/0 Hu 78 $ 1118 room=C
+-> o
+T 874 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 4) HP 94/94 MP 0/0 Hu 78 $ 1118 room=.
+-> w
+T 875 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 4) HP 94/94 MP 0/0 Hu 77 $ 1118 room=.
+-> w
+T 876 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 4) HP 94/94 MP 0/0 Hu 76 $ 1118 room=.
+-> s
+T 877 mode=altar_mode          Oin Steelpalm(dwa) F4@( 3, 5) HP 94/94 MP 0/0 Hu 75 $ 1118 room=A
+-> pray
+T 878 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 5) HP 94/94 MP 0/0 Hu 75 $ 1318 room=.
+-> s
+T 879 mode=garden_mode         Oin Steelpalm(dwa) F4@( 3, 6) HP 94/94 MP 0/0 Hu 74 $ 1318 room=G
+-> h
+T 880 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 6) HP 94/94 MP 0/0 Hu 74 $ 1318 room=.
+-> s
+T 881 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 7) HP 94/94 MP 0/0 Hu 73 $ 1318 room=.
+-> e
+T 882 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 7) HP 94/94 MP 0/0 Hu 72 $ 1318 room=.
+-> e
+T 883 mode=pool_mode           Oin Steelpalm(dwa) F4@( 5, 7) HP 94/94 MP 0/0 Hu 71 $ 1318 room=P
+-> dr
+T 884 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 7) HP 94/94 MP 0/0 Hu 71 $ 1318 room=.
+-> s
+T 885 mode=chest_mode          Oin Steelpalm(dwa) F4@( 5, 8) HP 94/94 MP 0/0 Hu 70 $ 1318 room=C
+-> o
+T 886 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 8) HP 94/94 MP 0/0 Hu 70 $ 1318 room=.
+-> s
+T 887 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 9) HP 94/94 MP 0/0 Hu 69 $ 1318 room=.
+-> w
+T 888 mode=dungeon_mode        Oin Steelpalm(dwa) F4@( 4, 9) HP 94/94 MP 0/0 Hu 68 $ 1318 room=N
+-> u
+T 889 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 9) HP 94/94 MP 0/0 Hu 68 $ 1318 room=N
+-> n
+T 890 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 8) HP 94/94 MP 0/0 Hu 67 $ 1318 room=.
+-> w
+T 891 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 8) HP 94/94 MP 0/0 Hu 66 $ 1318 room=.
+-> w
+T 892 mode=dungeon_mode        Oin Steelpalm(dwa) F4@( 2, 8) HP 94/94 MP 0/0 Hu 65 $ 1318 room=N
+-> u
+T 893 mode=game_loop           Oin Steelpalm(dwa) F4@( 2, 8) HP 94/94 MP 0/0 Hu 65 $ 1318 room=N
+-> s
+T 894 mode=game_loop           Oin Steelpalm(dwa) F4@( 2, 9) HP 94/94 MP 0/0 Hu 64 $ 1318 room=.
+-> e
+T 895 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 9) HP 94/94 MP 0/0 Hu 63 $ 1318 room=.
+-> e
+T 896 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 9) HP 94/94 MP 0/0 Hu 62 $ 1318 room=N
+-> e
+T 897 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 9) HP 94/94 MP 0/0 Hu 61 $ 1318 room=.
+-> e
+T 898 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 9) HP 94/94 MP 0/0 Hu 60 $ 1318 room=.
+-> s
+T 899 mode=game_loop           Oin Steelpalm(dwa) F4@( 6,10) HP 94/94 MP 0/0 Hu 59 $ 1318 room=.
+-> e
+T 900 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,10) HP 94/94 MP 0/0 Hu 58 $ 1318 room=.
+-> s
+T 901 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,11) HP 94/94 MP 0/0 Hu 57 $ 1318 room=.
+-> s
+T 902 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,12) HP 94/94 MP 0/0 Hu 56 $ 1318 room=.
+-> e
+T 903 mode=combat_mode         Oin Steelpalm(dwa) F4@( 8,12) HP 94/94 MP 0/0 Hu 55 $ 1318 room=M vs Slime Mold(L3 HP16/16)
+-> a
+T 904 mode=combat_victory      Oin Steelpalm(dwa) F4@( 8,12) HP 93/94 MP 0/0 Hu 55 $ 1326 room=.
+-> back
+T 905 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,12) HP 93/94 MP 0/0 Hu 55 $ 1326 room=.
+-> l
+T 906 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,12) HP 93/94 MP 0/0 Hu 55 $ 1326 room=.
+-> n
+T 907 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,11) HP 93/94 MP 0/0 Hu 54 $ 1326 room=O
+-> l
+T 908 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,11) HP 93/94 MP 0/0 Hu 54 $ 1326 room=O
+-> e
+T 909 mode=garden_mode         Oin Steelpalm(dwa) F4@( 9,11) HP 93/94 MP 0/0 Hu 53 $ 1326 room=G
+-> h
+T 910 mode=game_loop           Oin Steelpalm(dwa) F4@( 9,11) HP 93/94 MP 0/0 Hu 53 $ 1326 room=.
+-> e
+T 911 mode=stairs_down_mode    Oin Steelpalm(dwa) F4@(10,11) HP 93/94 MP 0/0 Hu 52 $ 1326 room=D
+-> e
+T 912 mode=game_loop           Oin Steelpalm(dwa) F4@(11,11) HP 93/94 MP 0/0 Hu 51 $ 1326 room=.
+-> n
+T 913 mode=game_loop           Oin Steelpalm(dwa) F4@(11,10) HP 93/94 MP 0/0 Hu 50 $ 1326 room=.
+-> e
+T 914 mode=chest_mode          Oin Steelpalm(dwa) F4@(12,10) HP 93/94 MP 0/0 Hu 49 $ 1326 room=C
+-> o
+T 915 mode=game_loop           Oin Steelpalm(dwa) F4@(12,10) HP 93/94 MP 0/0 Hu 49 $ 1326 room=.
+-> i
+T 916 mode=inventory           Oin Steelpalm(dwa) F4@(12,10) HP 93/94 MP 0/0 Hu 49 $ 1326 room=.
+-> eat1
+T 917 mode=inventory           Oin Steelpalm(dwa) F4@(12,10) HP 93/94 MP 0/0 Hu 99 $ 1326 room=.
+-> u13
+T 918 mode=upgrade_scroll_mode Oin Steelpalm(dwa) F4@(12,10) HP 93/94 MP 0/0 Hu 99 $ 1326 room=.
+-> 1
+T 919 mode=inventory           Oin Steelpalm(dwa) F4@(12,10) HP 93/94 MP 0/0 Hu 99 $ 1326 room=.
+-> x
+T 920 mode=game_loop           Oin Steelpalm(dwa) F4@(12,10) HP 93/94 MP 0/0 Hu 99 $ 1326 room=.
+-> s
+T 921 mode=game_loop           Oin Steelpalm(dwa) F4@(12,11) HP 93/94 MP 0/0 Hu 98 $ 1326 room=.
+-> s
+T 922 mode=game_loop           Oin Steelpalm(dwa) F4@(12,12) HP 94/94 MP 0/0 Hu 97 $ 1326 room=.
+-> s
+T 923 mode=chest_mode          Oin Steelpalm(dwa) F4@(12,13) HP 94/94 MP 0/0 Hu 96 $ 1326 room=C
+-> o
+T 924 mode=game_loop           Oin Steelpalm(dwa) F4@(12,13) HP 94/94 MP 0/0 Hu 96 $ 1326 room=.
+-> e
+T 925 mode=game_loop           Oin Steelpalm(dwa) F4@(13,13) HP 94/94 MP 0/0 Hu 95 $ 1326 room=.
+-> n
+T 926 mode=game_loop           Oin Steelpalm(dwa) F4@(13,12) HP 94/94 MP 0/0 Hu 94 $ 1326 room=.
+-> e
+T 927 mode=pool_mode           Oin Steelpalm(dwa) F4@(14,12) HP 94/94 MP 0/0 Hu 93 $ 1326 room=P
+-> dr
+T 928 mode=game_loop           Oin Steelpalm(dwa) F4@(14,12) HP 94/94 MP 0/0 Hu 93 $ 1393 room=.
+-> n
+T 929 mode=game_loop           Oin Steelpalm(dwa) F4@(14,11) HP 94/94 MP 0/0 Hu 92 $ 1393 room=.
+-> w
+T 930 mode=game_loop           Oin Steelpalm(dwa) F4@(13,11) HP 94/94 MP 0/0 Hu 91 $ 1393 room=.
+-> w
+T 931 mode=game_loop           Oin Steelpalm(dwa) F4@(12,11) HP 94/94 MP 0/0 Hu 90 $ 1393 room=.
+-> w
+T 932 mode=game_loop           Oin Steelpalm(dwa) F4@(11,11) HP 94/94 MP 0/0 Hu 89 $ 1393 room=.
+-> w
+T 933 mode=stairs_down_mode    Oin Steelpalm(dwa) F4@(10,11) HP 94/94 MP 0/0 Hu 88 $ 1393 room=D
+-> w
+T 934 mode=game_loop           Oin Steelpalm(dwa) F4@( 9,11) HP 94/94 MP 0/0 Hu 87 $ 1393 room=.
+-> n
+T 935 mode=game_loop           Oin Steelpalm(dwa) F4@( 9,10) HP 94/94 MP 0/0 Hu 86 $ 1393 room=.
+-> e
+T 936 mode=combat_mode         Oin Steelpalm(dwa) F4@(10,10) HP 94/94 MP 0/0 Hu 85 $ 1393 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 937 mode=combat_mode         Oin Steelpalm(dwa) F4@(10,10) HP 93/94 MP 0/0 Hu 85 $ 1393 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 938 mode=combat_mode         Oin Steelpalm(dwa) F4@(10,10) HP 92/94 MP 0/0 Hu 85 $ 1393 room=M vs Gray Ooze(L3 HP7/36)
+-> a
+T 939 mode=combat_mode         Oin Steelpalm(dwa) F4@(10,10) HP 91/94 MP 0/0 Hu 85 $ 1393 room=M vs Gray Ooze(L3 HP7/36)
+-> f
+T 940 mode=flee_direction_mode Oin Steelpalm(dwa) F4@(10,10) HP 91/94 MP 0/0 Hu 85 $ 1393 room=M
+-> n
+T 941 mode=warp_mode           Oin Steelpalm(dwa) F4@(10, 9) HP 91/94 MP 0/0 Hu 85 $ 1393 room=W
+-> y
+T 942 mode=game_loop           Oin Steelpalm(dwa) F4@(10, 9) HP 91/94 MP 0/0 Hu 85 $ 1393 room=W
+-> l
+T 943 mode=game_loop           Oin Steelpalm(dwa) F4@(10, 9) HP 91/94 MP 0/0 Hu 85 $ 1393 room=W
+-> n
+T 944 mode=game_loop           Oin Steelpalm(dwa) F4@(10, 8) HP 91/94 MP 0/0 Hu 84 $ 1393 room=.
+-> l
+T 945 mode=game_loop           Oin Steelpalm(dwa) F4@(10, 8) HP 91/94 MP 0/0 Hu 84 $ 1393 room=.
+-> n
+T 946 mode=game_loop           Oin Steelpalm(dwa) F4@(10, 7) HP 91/94 MP 0/0 Hu 83 $ 1393 room=.
+-> l
+T 947 mode=game_loop           Oin Steelpalm(dwa) F4@(10, 7) HP 91/94 MP 0/0 Hu 83 $ 1393 room=.
+-> e
+T 948 mode=chest_mode          Oin Steelpalm(dwa) F4@(11, 7) HP 91/94 MP 0/0 Hu 82 $ 1393 room=C
+-> o
+T 949 mode=game_loop           Oin Steelpalm(dwa) F4@(11, 7) HP 91/94 MP 0/0 Hu 82 $ 1493 room=.
+-> l
+T 950 mode=game_loop           Oin Steelpalm(dwa) F4@(11, 7) HP 91/94 MP 0/0 Hu 82 $ 1493 room=.
+-> e
+T 951 mode=chest_mode          Oin Steelpalm(dwa) F4@(12, 7) HP 92/94 MP 0/0 Hu 81 $ 1493 room=C
+-> o
+T 952 mode=game_loop           Oin Steelpalm(dwa) F4@(12, 7) HP 92/94 MP 0/0 Hu 81 $ 1493 room=.
+-> l
+T 953 mode=game_loop           Oin Steelpalm(dwa) F4@(12, 7) HP 92/94 MP 0/0 Hu 81 $ 1493 room=.
+-> n
+T 954 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 1493 room=V
+-> r3
+T 955 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 1414 room=V
+-> r4
+T 956 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 1120 room=V
+-> b12
+T 957 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 1110 room=V
+-> b6
+T 958 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 1080 room=V
+-> b11
+T 959 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 1075 room=V
+-> b11
+T 960 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 1070 room=V
+-> b11
+T 961 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 1065 room=V
+-> b11
+T 962 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 1060 room=V
+-> b10
+T 963 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 910 room=V
+-> b4
+T 964 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 770 room=V
+-> b4
+T 965 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 680 room=V
+-> b2
+T 966 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 530 room=V
+-> id10
+T 967 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 430 room=V
+-> id17
+T 968 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 280 room=V
+-> id18
+T 969 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 155 room=V
+-> id19
+T 970 mode=vendor_shop         Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 55 room=V
+-> x
+T 971 mode=game_loop           Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 55 room=V
+-> i
+T 972 mode=inventory           Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 55 room=V
+-> e4
+T 973 mode=inventory           Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 55 room=V
+-> x
+T 974 mode=game_loop           Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 55 room=V
+-> l
+T 975 mode=game_loop           Oin Steelpalm(dwa) F4@(12, 6) HP 92/94 MP 0/0 Hu 80 $ 55 room=V
+-> w
+T 976 mode=game_loop           Oin Steelpalm(dwa) F4@(11, 6) HP 92/94 MP 0/0 Hu 79 $ 55 room=.
+-> w
+T 977 mode=pool_mode           Oin Steelpalm(dwa) F4@(10, 6) HP 92/94 MP 0/0 Hu 78 $ 55 room=P
+-> dr
+T 978 mode=game_loop           Oin Steelpalm(dwa) F4@(10, 6) HP 92/92 MP 0/0 Hu 78 $ 55 room=.
+-> s
+T 979 mode=game_loop           Oin Steelpalm(dwa) F4@(10, 7) HP 92/92 MP 0/0 Hu 77 $ 55 room=.
+-> e
+T 980 mode=game_loop           Oin Steelpalm(dwa) F4@(11, 7) HP 92/92 MP 0/0 Hu 76 $ 55 room=.
+-> s
+T 981 mode=combat_mode         Oin Steelpalm(dwa) F4@(11, 8) HP 92/92 MP 0/0 Hu 75 $ 55 room=M vs Kobold(L3 HP8/8)
+-> a
+T 982 mode=combat_mode         Oin Steelpalm(dwa) F4@(11, 8) HP 91/92 MP 0/0 Hu 75 $ 55 room=M vs Kobold(L3 HP8/8)
+-> a
+T 983 mode=combat_mode         Oin Steelpalm(dwa) F4@(11, 8) HP 90/92 MP 0/0 Hu 75 $ 55 room=M vs Kobold(L3 HP8/8)
+-> a
+T 984 mode=combat_victory      Oin Steelpalm(dwa) F4@(11, 8) HP 90/92 MP 0/0 Hu 75 $ 75 room=.
+-> back
+T 985 mode=game_loop           Oin Steelpalm(dwa) F4@(11, 8) HP 90/92 MP 0/0 Hu 75 $ 75 room=.
+-> s
+T 986 mode=game_loop           Oin Steelpalm(dwa) F4@(11, 9) HP 90/92 MP 0/0 Hu 74 $ 75 room=.
+-> s
+T 987 mode=game_loop           Oin Steelpalm(dwa) F4@(11,10) HP 90/92 MP 0/0 Hu 73 $ 75 room=.
+-> w
+T 988 mode=combat_mode         Oin Steelpalm(dwa) F4@(10,10) HP 90/92 MP 0/0 Hu 72 $ 75 room=M vs Gray Ooze(L3 HP7/36)
+-> a
+T 989 mode=combat_victory      Oin Steelpalm(dwa) F4@(10,10) HP 90/102 MP 0/0 Hu 72 $ 207 room=.
+-> back
+T 990 mode=game_loop           Oin Steelpalm(dwa) F4@(10,10) HP 90/102 MP 0/0 Hu 72 $ 207 room=.
+-> s
+T 991 mode=stairs_down_mode    Oin Steelpalm(dwa) F4@(10,11) HP 91/102 MP 0/0 Hu 71 $ 207 room=D
+-> d
+T 992 mode=stairs_up_mode      Oin Steelpalm(dwa) F5@( 1, 1) HP 91/102 MP 0/0 Hu 71 $ 207 room=U
+-> n
+T 993 mode=stairs_up_mode      Oin Steelpalm(dwa) F5@( 1, 1) HP 91/102 MP 0/0 Hu 71 $ 207 room=U
+-> e
+T 994 mode=pool_mode           Oin Steelpalm(dwa) F5@( 2, 1) HP 91/102 MP 0/0 Hu 70 $ 207 room=P
+-> dr
+T 995 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 1) HP 91/100 MP 0/0 Hu 70 $ 207 room=.
+-> l
+T 996 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 1) HP 91/100 MP 0/0 Hu 70 $ 207 room=.
+-> s
+T 997 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 2) HP 91/100 MP 0/0 Hu 69 $ 207 room=.
+-> l
+T 998 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 2) HP 91/100 MP 0/0 Hu 69 $ 207 room=.
+-> e
+T 999 mode=altar_mode          Oin Steelpalm(dwa) F5@( 3, 2) HP 91/100 MP 0/0 Hu 68 $ 207 room=A
+-> pray
+T1000 mode=game_loop           Oin Steelpalm(dwa) F5@( 3, 2) HP 100/100 MP 0/0 Hu100 $ 207 room=.
+-> l
+T1001 mode=game_loop           Oin Steelpalm(dwa) F5@( 3, 2) HP 100/100 MP 0/0 Hu100 $ 207 room=.
+-> s
+T1002 mode=game_loop           Oin Steelpalm(dwa) F5@( 3, 3) HP 100/100 MP 0/0 Hu 99 $ 207 room=.
+-> l
+T1003 mode=game_loop           Oin Steelpalm(dwa) F5@( 3, 3) HP 100/100 MP 0/0 Hu 99 $ 207 room=.
+-> w
+T1004 mode=shrine_mode         Oin Steelpalm(dwa) F5@( 2, 3) HP 100/100 MP 0/0 Hu 98 $ 207 room=F
+-> p
+T1005 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 3) HP 100/100 MP 0/0 Hu 98 $ 207 room=.
+-> w
+T1006 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 3) HP 100/100 MP 0/0 Hu 97 $ 207 room=.
+-> i
+T1007 mode=inventory           Oin Steelpalm(dwa) F5@( 1, 3) HP 100/100 MP 0/0 Hu 97 $ 207 room=.
+-> eat2
+T1008 mode=inventory           Oin Steelpalm(dwa) F5@( 1, 3) HP 100/100 MP 0/0 Hu100 $ 207 room=.
+-> u16
+T1009 mode=upgrade_scroll_mode Oin Steelpalm(dwa) F5@( 1, 3) HP 100/100 MP 0/0 Hu100 $ 207 room=.
+-> 1
+T1010 mode=upgrade_scroll_mode Oin Steelpalm(dwa) F5@( 1, 3) HP 100/100 MP 0/0 Hu100 $ 207 room=.
+-> 2
+T1011 mode=inventory           Oin Steelpalm(dwa) F5@( 1, 3) HP 100/100 MP 0/0 Hu100 $ 207 room=.
+-> x
+T1012 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 3) HP 100/100 MP 0/0 Hu100 $ 207 room=.
+-> l
+T1013 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 3) HP 100/100 MP 0/0 Hu100 $ 207 room=.
+-> n
+T1014 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 2) HP 100/100 MP 0/0 Hu 99 $ 207 room=.
+-> e
+T1015 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 2) HP 100/100 MP 0/0 Hu 98 $ 207 room=.
+-> e
+T1016 mode=game_loop           Oin Steelpalm(dwa) F5@( 3, 2) HP 100/100 MP 0/0 Hu 97 $ 207 room=.
+-> e
+T1017 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 2) HP 100/100 MP 0/0 Hu 96 $ 207 room=.
+-> e
+T1018 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 2) HP 100/100 MP 0/0 Hu 95 $ 207 room=.
+-> e
+T1019 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 2) HP 100/100 MP 0/0 Hu 94 $ 207 room=.
+-> e
+T1020 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 2) HP 100/100 MP 0/0 Hu 93 $ 207 room=.
+-> n
+T1021 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 1) HP 100/100 MP 0/0 Hu 92 $ 207 room=M vs Displacer Beast(L4 HP43/43)
+-> a
+T1022 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 1) HP 99/100 MP 0/0 Hu 92 $ 207 room=M vs Displacer Beast(L4 HP22/43)
+-> a
+T1023 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 1) HP 99/100 MP 0/0 Hu 92 $ 207 room=M vs Displacer Beast(L4 HP22/43)
+-> a
+T1024 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 1) HP 99/100 MP 0/0 Hu 92 $ 207 room=M vs Displacer Beast(L4 HP1/43)
+-> a
+T1025 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 1) HP 98/100 MP 0/0 Hu 92 $ 207 room=M vs Displacer Beast(L4 HP1/43)
+-> a
+T1026 mode=combat_victory      Oin Steelpalm(dwa) F5@( 7, 1) HP 98/100 MP 0/0 Hu 92 $ 212 room=.
+-> back
+T1027 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 1) HP 98/100 MP 0/0 Hu 92 $ 212 room=.
+-> w
+T1028 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 1) HP 98/100 MP 0/0 Hu 91 $ 212 room=.
+-> w
+T1029 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 1) HP 99/100 MP 0/0 Hu 90 $ 212 room=.
+-> s
+T1030 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 2) HP 99/100 MP 0/0 Hu 89 $ 212 room=.
+-> e
+T1031 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 2) HP 100/100 MP 0/0 Hu 88 $ 212 room=.
+-> e
+T1032 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 2) HP 100/100 MP 0/0 Hu 87 $ 212 room=.
+-> s
+T1033 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 3) HP 100/100 MP 0/0 Hu 86 $ 212 room=M vs Skeleton(L4 HP28/28)
+-> a
+T1034 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 3) HP 99/100 MP 0/0 Hu 86 $ 212 room=M vs Skeleton(L4 HP28/28)
+-> a
+T1035 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 3) HP 98/100 MP 0/0 Hu 86 $ 212 room=M vs Skeleton(L4 HP2/28)
+-> a
+T1036 mode=combat_victory      Oin Steelpalm(dwa) F5@( 7, 3) HP 98/100 MP 0/0 Hu 86 $ 227 room=.
+-> back
+T1037 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 3) HP 98/100 MP 0/0 Hu 86 $ 227 room=.
+-> l
+T1038 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 3) HP 98/100 MP 0/0 Hu 86 $ 227 room=.
+-> e
+T1039 mode=combat_mode         Oin Steelpalm(dwa) F5@( 8, 3) HP 98/100 MP 0/0 Hu 85 $ 227 room=M vs Gargoyle(L4 HP62/62)
+-> a
+T1040 mode=combat_mode         Oin Steelpalm(dwa) F5@( 8, 3) HP 98/100 MP 0/0 Hu 85 $ 227 room=M vs Gargoyle(L4 HP62/62)
+-> a
+T1041 mode=combat_mode         Oin Steelpalm(dwa) F5@( 8, 3) HP 98/100 MP 0/0 Hu 85 $ 227 room=M vs Gargoyle(L4 HP62/62)
+-> f
+T1042 mode=flee_direction_mode Oin Steelpalm(dwa) F5@( 8, 3) HP 98/100 MP 0/0 Hu 85 $ 227 room=M
+-> n
+T1043 mode=game_loop           Oin Steelpalm(dwa) F5@( 8, 2) HP 98/100 MP 0/0 Hu 85 $ 227 room=.
+-> s
+T1044 mode=combat_mode         Oin Steelpalm(dwa) F5@( 8, 3) HP 98/100 MP 0/0 Hu 84 $ 227 room=M vs Gargoyle(L4 HP62/62)
+-> a
+T1045 mode=combat_mode         Oin Steelpalm(dwa) F5@( 8, 3) HP 91/100 MP 0/0 Hu 84 $ 227 room=M vs Gargoyle(L4 HP41/62)
+-> a
+T1046 mode=combat_mode         Oin Steelpalm(dwa) F5@( 8, 3) HP 84/100 MP 0/0 Hu 84 $ 227 room=M vs Gargoyle(L4 HP20/62)
+-> a
+T1047 mode=combat_mode         Oin Steelpalm(dwa) F5@( 8, 3) HP 84/100 MP 0/0 Hu 84 $ 227 room=M vs Gargoyle(L4 HP20/62)
+-> a
+T1048 mode=combat_mode         Oin Steelpalm(dwa) F5@( 8, 3) HP 77/100 MP 0/0 Hu 84 $ 227 room=M vs Gargoyle(L4 HP20/62)
+-> a
+T1049 mode=combat_mode         Oin Steelpalm(dwa) F5@( 8, 3) HP 70/100 MP 0/0 Hu 84 $ 227 room=M vs Gargoyle(L4 HP20/62)
+-> a
+T1050 mode=combat_victory      Oin Steelpalm(dwa) F5@( 8, 3) HP 63/100 MP 0/0 Hu 84 $ 277 room=.
+-> back
+T1051 mode=game_loop           Oin Steelpalm(dwa) F5@( 8, 3) HP 63/100 MP 0/0 Hu 84 $ 277 room=.
+-> l
+T1052 mode=game_loop           Oin Steelpalm(dwa) F5@( 8, 3) HP 63/100 MP 0/0 Hu 84 $ 277 room=.
+-> e
+T1053 mode=chest_mode          Oin Steelpalm(dwa) F5@( 9, 3) HP 63/100 MP 0/0 Hu 83 $ 277 room=C
+-> o
+T1054 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 4) HP 64/100 MP 0/0 Hu 82 $ 277 room=.
+-> i
+T1055 mode=inventory           Oin Steelpalm(dwa) F5@( 9, 4) HP 64/100 MP 0/0 Hu 82 $ 277 room=.
+-> u12
+T1056 mode=inventory           Oin Steelpalm(dwa) F5@( 9, 4) HP 100/100 MP 0/0 Hu 82 $ 277 room=.
+-> x
+T1057 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 4) HP 100/100 MP 0/0 Hu 82 $ 277 room=.
+-> i
+T1058 mode=inventory           Oin Steelpalm(dwa) F5@( 9, 4) HP 100/100 MP 0/0 Hu 82 $ 277 room=.
+-> eat2
+T1059 mode=inventory           Oin Steelpalm(dwa) F5@( 9, 4) HP 100/100 MP 0/0 Hu 88 $ 277 room=.
+-> x
+T1060 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 4) HP 100/100 MP 0/0 Hu 88 $ 277 room=.
+-> l
+T1061 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 4) HP 100/100 MP 0/0 Hu 88 $ 277 room=.
+-> s
+T1062 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 5) HP 100/100 MP 0/0 Hu 87 $ 277 room=.
+-> l
+T1063 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 5) HP 100/100 MP 0/0 Hu 87 $ 277 room=.
+-> e
+T1064 mode=chest_mode          Oin Steelpalm(dwa) F5@(10, 5) HP 100/100 MP 0/0 Hu 86 $ 277 room=C
+-> o
+T1065 mode=game_loop           Oin Steelpalm(dwa) F5@(10, 5) HP 100/100 MP 0/0 Hu 86 $ 277 room=.
+-> l
+T1066 mode=game_loop           Oin Steelpalm(dwa) F5@(10, 5) HP 100/100 MP 0/0 Hu 86 $ 277 room=.
+-> s
+T1067 mode=game_loop           Oin Steelpalm(dwa) F5@(10, 6) HP 100/100 MP 0/0 Hu 85 $ 277 room=.
+-> l
+T1068 mode=game_loop           Oin Steelpalm(dwa) F5@(10, 6) HP 100/100 MP 0/0 Hu 85 $ 277 room=.
+-> w
+T1069 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 6) HP 100/100 MP 0/0 Hu 84 $ 277 room=.
+-> s
+T1070 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 7) HP 100/100 MP 0/0 Hu 83 $ 277 room=.
+-> s
+T1071 mode=library_mode        Oin Steelpalm(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 82 $ 277 room=L
+-> r
+T1072 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 8) HP 100/100 MP 0/0 Hu 82 $ 277 room=.
+-> e
+T1073 mode=game_loop           Oin Steelpalm(dwa) F5@(10, 8) HP 100/100 MP 0/0 Hu 81 $ 277 room=.
+-> l
+T1074 mode=game_loop           Oin Steelpalm(dwa) F5@(10, 8) HP 100/100 MP 0/0 Hu 81 $ 277 room=.
+-> s
+T1075 mode=game_loop           Oin Steelpalm(dwa) F5@(10, 9) HP 100/100 MP 0/0 Hu 80 $ 277 room=.
+-> s
+T1076 mode=game_loop           Oin Steelpalm(dwa) F5@(10,10) HP 100/100 MP 0/0 Hu 79 $ 277 room=.
+-> w
+T1077 mode=pool_mode           Oin Steelpalm(dwa) F5@( 9,10) HP 100/100 MP 0/0 Hu 78 $ 277 room=P
+-> dr
+T1078 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,10) HP 100/100 MP 0/0 Hu 78 $ 277 room=.
+-> s
+T1079 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,11) HP 100/100 MP 0/0 Hu 77 $ 277 room=.
+-> s
+T1080 mode=combat_mode         Oin Steelpalm(dwa) F5@( 9,12) HP 100/100 MP 0/0 Hu 76 $ 277 room=M vs Spore Puff(L4 HP20/20)
+-> f
+T1081 mode=combat_mode         Oin Steelpalm(dwa) F5@( 9,12) HP 99/100 MP 0/0 Hu 76 $ 277 room=M vs Spore Puff(L4 HP20/20)
+-> a
+T1082 mode=combat_mode         Oin Steelpalm(dwa) F5@( 9,12) HP 99/100 MP 0/0 Hu 76 $ 277 room=M vs Spore Puff(L4 HP20/20)
+-> a
+T1083 mode=combat_mode         Oin Steelpalm(dwa) F5@( 9,12) HP 99/100 MP 0/0 Hu 76 $ 277 room=M vs Spore Puff(L4 HP20/20)
+-> a
+T1084 mode=combat_victory      Oin Steelpalm(dwa) F5@( 9,12) HP 99/110 MP 0/0 Hu 76 $ 327 room=.
+-> back
+T1085 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,12) HP 99/110 MP 0/0 Hu 76 $ 327 room=.
+-> i
+T1086 mode=inventory           Oin Steelpalm(dwa) F5@( 9,12) HP 99/110 MP 0/0 Hu 76 $ 327 room=.
+-> u13
+T1087 mode=inventory           Oin Steelpalm(dwa) F5@( 9,12) HP 110/110 MP 0/0 Hu 76 $ 327 room=.
+-> x
+T1088 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,12) HP 110/110 MP 0/0 Hu 76 $ 327 room=.
+-> i
+T1089 mode=inventory           Oin Steelpalm(dwa) F5@( 9,12) HP 110/110 MP 0/0 Hu 76 $ 327 room=.
+-> e1
+T1090 mode=inventory           Oin Steelpalm(dwa) F5@( 9,12) HP 110/110 MP 0/0 Hu 76 $ 327 room=.
+-> x
+T1091 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,12) HP 110/110 MP 0/0 Hu 76 $ 327 room=.
+-> e
+T1092 mode=game_loop           Oin Steelpalm(dwa) F5@(10,12) HP 110/110 MP 0/0 Hu 75 $ 327 room=.
+-> n
+T1093 mode=game_loop           Oin Steelpalm(dwa) F5@(10,11) HP 110/110 MP 0/0 Hu 74 $ 327 room=.
+-> n
+T1094 mode=game_loop           Oin Steelpalm(dwa) F5@(10,10) HP 110/110 MP 0/0 Hu 73 $ 327 room=.
+-> w
+T1095 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,10) HP 110/110 MP 0/0 Hu 72 $ 327 room=.
+-> s
+T1096 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,11) HP 110/110 MP 0/0 Hu 71 $ 327 room=.
+-> w
+T1097 mode=game_loop           Oin Steelpalm(dwa) F5@( 8,11) HP 110/110 MP 0/0 Hu 70 $ 327 room=.
+-> s
+T1098 mode=game_loop           Oin Steelpalm(dwa) F5@( 8,12) HP 110/110 MP 0/0 Hu 69 $ 327 room=.
+-> w
+T1099 mode=game_loop           Oin Steelpalm(dwa) F5@( 7,12) HP 110/110 MP 0/0 Hu 68 $ 327 room=.
+-> s
+T1100 mode=game_loop           Oin Steelpalm(dwa) F5@( 7,13) HP 110/110 MP 0/0 Hu 67 $ 327 room=.
+-> e
+T1101 mode=game_loop           Oin Steelpalm(dwa) F5@( 8,13) HP 110/110 MP 0/0 Hu 66 $ 327 room=.
+-> e
+T1102 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,13) HP 110/110 MP 0/0 Hu 65 $ 327 room=.
+-> n
+T1103 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,12) HP 110/110 MP 0/0 Hu 64 $ 327 room=.
+-> n
+T1104 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,11) HP 110/110 MP 0/0 Hu 63 $ 327 room=.
+-> n
+T1105 mode=game_loop           Oin Steelpalm(dwa) F5@( 9,10) HP 110/110 MP 0/0 Hu 62 $ 327 room=.
+-> e
+T1106 mode=game_loop           Oin Steelpalm(dwa) F5@(10,10) HP 110/110 MP 0/0 Hu 61 $ 327 room=.
+-> n
+T1107 mode=game_loop           Oin Steelpalm(dwa) F5@(10, 9) HP 110/110 MP 0/0 Hu 60 $ 327 room=.
+-> e
+T1108 mode=game_loop           Oin Steelpalm(dwa) F5@(11, 9) HP 110/110 MP 0/0 Hu 59 $ 327 room=.
+-> n
+T1109 mode=game_loop           Oin Steelpalm(dwa) F5@(11, 8) HP 110/110 MP 0/0 Hu 58 $ 327 room=.
+-> e
+T1110 mode=combat_mode         Oin Steelpalm(dwa) F5@(12, 8) HP 110/110 MP 0/0 Hu 57 $ 327 room=M vs Spore Puff(L4 HP20/20)
+-> a
+T1111 mode=combat_victory      Oin Steelpalm(dwa) F5@(12, 8) HP 109/110 MP 0/0 Hu 57 $ 612 room=.
+-> back
+T1112 mode=game_loop           Oin Steelpalm(dwa) F5@(12, 8) HP 109/110 MP 0/0 Hu 57 $ 612 room=.
+-> n
+T1113 mode=game_loop           Oin Steelpalm(dwa) F5@(12, 7) HP 109/110 MP 0/0 Hu 56 $ 612 room=.
+-> w
+T1114 mode=game_loop           Oin Steelpalm(dwa) F5@(11, 7) HP 109/110 MP 0/0 Hu 55 $ 612 room=.
+-> n
+T1115 mode=game_loop           Oin Steelpalm(dwa) F5@(11, 6) HP 109/110 MP 0/0 Hu 54 $ 612 room=.
+-> w
+T1116 mode=game_loop           Oin Steelpalm(dwa) F5@(10, 6) HP 109/110 MP 0/0 Hu 53 $ 612 room=.
+-> w
+T1117 mode=game_loop           Oin Steelpalm(dwa) F5@( 9, 6) HP 109/110 MP 0/0 Hu 52 $ 612 room=.
+-> w
+T1118 mode=game_loop           Oin Steelpalm(dwa) F5@( 8, 6) HP 109/110 MP 0/0 Hu 51 $ 612 room=.
+-> w
+T1119 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 6) HP 109/110 MP 0/0 Hu 50 $ 612 room=.
+-> s
+T1120 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 7) HP 109/110 MP 0/0 Hu 49 $ 612 room=M vs Stirge(L4 HP6/6)
+-> a
+T1121 mode=combat_victory      Oin Steelpalm(dwa) F5@( 7, 7) HP 109/110 MP 0/0 Hu 49 $ 627 room=.
+-> back
+T1122 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 7) HP 109/110 MP 0/0 Hu 49 $ 627 room=.
+-> s
+T1123 mode=combat_mode         Oin Steelpalm(dwa) F5@( 7, 8) HP 109/110 MP 0/0 Hu 48 $ 627 room=M vs Spore Puff(L4 HP20/20)
+-> a
+T1124 mode=combat_victory      Oin Steelpalm(dwa) F5@( 7, 8) HP 109/110 MP 0/0 Hu 48 $ 667 room=.
+-> back
+T1125 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 8) HP 109/110 MP 0/0 Hu 48 $ 667 room=.
+-> w
+T1126 mode=combat_mode         Oin Steelpalm(dwa) F5@( 6, 8) HP 109/110 MP 0/0 Hu 47 $ 667 room=M vs Gnoll(L4 HP48/48)
+-> a
+T1127 mode=combat_mode         Oin Steelpalm(dwa) F5@( 6, 8) HP 108/110 MP 0/0 Hu 47 $ 667 room=M vs Gnoll(L4 HP20/48)
+-> a
+T1128 mode=combat_mode         Oin Steelpalm(dwa) F5@( 6, 8) HP 107/110 MP 0/0 Hu 47 $ 667 room=M vs Gnoll(L4 HP20/48)
+-> a
+T1129 mode=combat_mode         Oin Steelpalm(dwa) F5@( 6, 8) HP 106/110 MP 0/0 Hu 47 $ 667 room=M vs Gnoll(L4 HP20/48)
+-> a
+T1130 mode=combat_victory      Oin Steelpalm(dwa) F5@( 6, 8) HP 106/120 MP 0/0 Hu 47 $ 672 room=.
+-> back
+T1131 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 106/120 MP 0/0 Hu 47 $ 672 room=.
+-> i
+T1132 mode=inventory           Oin Steelpalm(dwa) F5@( 6, 8) HP 106/120 MP 0/0 Hu 47 $ 672 room=.
+-> u13
+T1133 mode=inventory           Oin Steelpalm(dwa) F5@( 6, 8) HP 120/120 MP 0/0 Hu 47 $ 672 room=.
+-> x
+T1134 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 120/120 MP 0/0 Hu 47 $ 672 room=.
+-> i
+T1135 mode=inventory           Oin Steelpalm(dwa) F5@( 6, 8) HP 120/120 MP 0/0 Hu 47 $ 672 room=.
+-> eat1
+T1136 mode=inventory           Oin Steelpalm(dwa) F5@( 6, 8) HP 120/120 MP 0/0 Hu 54 $ 672 room=.
+-> x
+T1137 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 120/120 MP 0/0 Hu 54 $ 672 room=.
+-> w
+T1138 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 8) HP 120/120 MP 0/0 Hu 53 $ 672 room=.
+-> w
+T1139 mode=pool_mode           Oin Steelpalm(dwa) F5@( 4, 8) HP 120/120 MP 0/0 Hu 52 $ 672 room=P
+-> dr
+T1140 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 8) HP 120/120 MP 0/0 Hu 52 $ 752 room=.
+-> n
+T1141 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 7) HP 120/120 MP 0/0 Hu 51 $ 752 room=.
+-> e
+T1142 mode=combat_mode         Oin Steelpalm(dwa) F5@( 5, 7) HP 120/120 MP 0/0 Hu 50 $ 752 room=M vs Bugbear(L4 HP59/59)
+-> a
+T1143 mode=combat_mode         Oin Steelpalm(dwa) F5@( 5, 7) HP 119/120 MP 0/0 Hu 50 $ 752 room=M vs Bugbear(L4 HP59/59)
+-> a
+T1144 mode=combat_mode         Oin Steelpalm(dwa) F5@( 5, 7) HP 118/120 MP 0/0 Hu 50 $ 752 room=M vs Bugbear(L4 HP59/59)
+-> a
+T1145 mode=combat_mode         Oin Steelpalm(dwa) F5@( 5, 7) HP 117/120 MP 0/0 Hu 50 $ 752 room=M vs Bugbear(L4 HP59/59)
+-> a
+T1146 mode=combat_mode         Oin Steelpalm(dwa) F5@( 5, 7) HP 116/120 MP 0/0 Hu 50 $ 752 room=M vs Bugbear(L4 HP32/59)
+-> a
+T1147 mode=combat_mode         Oin Steelpalm(dwa) F5@( 5, 7) HP 115/120 MP 0/0 Hu 50 $ 752 room=M vs Bugbear(L4 HP32/59)
+-> a
+T1148 mode=combat_mode         Oin Steelpalm(dwa) F5@( 5, 7) HP 115/120 MP 0/0 Hu 50 $ 752 room=M vs Bugbear(L4 HP5/59)
+-> a
+T1149 mode=combat_mode         Oin Steelpalm(dwa) F5@( 5, 7) HP 114/120 MP 0/0 Hu 50 $ 752 room=M vs Bugbear(L4 HP5/59)
+-> a
+T1150 mode=combat_victory      Oin Steelpalm(dwa) F5@( 5, 7) HP 114/120 MP 0/0 Hu 50 $ 792 room=.
+-> back
+T1151 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 7) HP 114/120 MP 0/0 Hu 50 $ 792 room=.
+-> n
+T1152 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 6) HP 114/120 MP 0/0 Hu 49 $ 792 room=.
+-> i
+T1153 mode=inventory           Oin Steelpalm(dwa) F5@( 5, 6) HP 114/120 MP 0/0 Hu 49 $ 792 room=.
+-> eat1
+T1154 mode=inventory           Oin Steelpalm(dwa) F5@( 5, 6) HP 114/120 MP 0/0 Hu 55 $ 792 room=.
+-> x
+T1155 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 6) HP 114/120 MP 0/0 Hu 55 $ 792 room=.
+-> e
+T1156 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 6) HP 114/120 MP 0/0 Hu 54 $ 792 room=.
+-> e
+T1157 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 6) HP 114/120 MP 0/0 Hu 53 $ 792 room=.
+-> s
+T1158 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 7) HP 114/120 MP 0/0 Hu 52 $ 792 room=.
+-> s
+T1159 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 8) HP 114/120 MP 0/0 Hu 51 $ 792 room=.
+-> w
+T1160 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 114/120 MP 0/0 Hu 50 $ 792 room=.
+-> n
+T1161 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 7) HP 114/120 MP 0/0 Hu 49 $ 792 room=.
+-> w
+T1162 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 7) HP 114/120 MP 0/0 Hu 48 $ 792 room=.
+-> s
+T1163 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 8) HP 114/120 MP 0/0 Hu 47 $ 792 room=.
+-> w
+T1164 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 8) HP 114/120 MP 0/0 Hu 46 $ 792 room=.
+-> n
+T1165 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 7) HP 114/120 MP 0/0 Hu 45 $ 792 room=.
+-> n
+T1166 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 6) HP 114/120 MP 0/0 Hu 44 $ 792 room=.
+-> w
+T1167 mode=game_loop           Oin Steelpalm(dwa) F5@( 3, 6) HP 114/120 MP 0/0 Hu 43 $ 792 room=.
+-> n
+T1168 mode=game_loop           Oin Steelpalm(dwa) F5@( 3, 5) HP 114/120 MP 0/0 Hu 42 $ 792 room=.
+-> w
+T1169 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 5) HP 114/120 MP 0/0 Hu 41 $ 792 room=.
+-> s
+T1170 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 6) HP 114/120 MP 0/0 Hu 40 $ 792 room=.
+-> n
+T1171 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 5) HP 114/120 MP 0/0 Hu 39 $ 792 room=.
+-> w
+T1172 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 5) HP 114/120 MP 0/0 Hu 38 $ 792 room=.
+-> n
+T1173 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 4) HP 114/120 MP 0/0 Hu 37 $ 792 room=.
+-> n
+T1174 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 3) HP 114/120 MP 0/0 Hu 36 $ 792 room=.
+-> e
+T1175 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 3) HP 114/120 MP 0/0 Hu 35 $ 792 room=.
+-> s
+T1176 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 4) HP 114/120 MP 0/0 Hu 34 $ 792 room=.
+-> s
+T1177 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 5) HP 114/120 MP 0/0 Hu 33 $ 792 room=.
+-> s
+T1178 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 6) HP 114/120 MP 0/0 Hu 32 $ 792 room=.
+-> e
+T1179 mode=game_loop           Oin Steelpalm(dwa) F5@( 3, 6) HP 114/120 MP 0/0 Hu 31 $ 792 room=.
+-> e
+T1180 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 6) HP 114/120 MP 0/0 Hu 30 $ 792 room=.
+-> s
+T1181 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 7) HP 114/120 MP 0/0 Hu 29 $ 792 room=.
+-> s
+T1182 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 8) HP 114/120 MP 0/0 Hu 28 $ 792 room=.
+-> e
+T1183 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 8) HP 114/120 MP 0/0 Hu 27 $ 792 room=.
+-> e
+T1184 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 114/120 MP 0/0 Hu 26 $ 792 room=.
+-> e
+T1185 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 8) HP 114/120 MP 0/0 Hu 25 $ 792 room=.
+-> n
+T1186 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 7) HP 114/120 MP 0/0 Hu 24 $ 792 room=.
+-> w
+T1187 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 7) HP 114/120 MP 0/0 Hu 23 $ 792 room=.
+-> n
+T1188 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 6) HP 114/120 MP 0/0 Hu 22 $ 792 room=.
+-> w
+T1189 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 6) HP 114/120 MP 0/0 Hu 21 $ 792 room=.
+-> s
+T1190 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 7) HP 114/120 MP 0/0 Hu 20 $ 792 room=.
+-> s
+T1191 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 8) HP 114/120 MP 0/0 Hu 19 $ 792 room=.
+-> e
+T1192 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 114/120 MP 0/0 Hu 18 $ 792 room=.
+-> e
+T1193 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 8) HP 114/120 MP 0/0 Hu 17 $ 792 room=.
+-> n
+T1194 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 7) HP 114/120 MP 0/0 Hu 16 $ 792 room=.
+-> w
+T1195 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 7) HP 114/120 MP 0/0 Hu 15 $ 792 room=.
+-> w
+T1196 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 7) HP 114/120 MP 0/0 Hu 14 $ 792 room=.
+-> s
+T1197 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 8) HP 114/120 MP 0/0 Hu 13 $ 792 room=.
+-> e
+T1198 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 114/120 MP 0/0 Hu 12 $ 792 room=.
+-> e
+T1199 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 8) HP 114/120 MP 0/0 Hu 11 $ 792 room=.
+-> n
+T1200 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 7) HP 114/120 MP 0/0 Hu 10 $ 792 room=.
+-> w
+T1201 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 7) HP 114/120 MP 0/0 Hu  9 $ 792 room=.
+-> w
+T1202 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 7) HP 114/120 MP 0/0 Hu  8 $ 792 room=.
+-> s
+T1203 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 8) HP 114/120 MP 0/0 Hu  7 $ 792 room=.
+-> e
+T1204 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 114/120 MP 0/0 Hu  6 $ 792 room=.
+-> e
+T1205 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 8) HP 114/120 MP 0/0 Hu  5 $ 792 room=.
+-> n
+T1206 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 7) HP 114/120 MP 0/0 Hu  4 $ 792 room=.
+-> w
+T1207 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 7) HP 114/120 MP 0/0 Hu  3 $ 792 room=.
+-> w
+T1208 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 7) HP 114/120 MP 0/0 Hu  2 $ 792 room=.
+-> s
+T1209 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 8) HP 114/120 MP 0/0 Hu  1 $ 792 room=.
+-> e
+T1210 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 112/120 MP 0/0 Hu  0 $ 792 room=.
+-> e
+T1211 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 8) HP 110/120 MP 0/0 Hu  0 $ 792 room=.
+-> n
+T1212 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 7) HP 108/120 MP 0/0 Hu  0 $ 792 room=.
+-> n
+T1213 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 6) HP 106/120 MP 0/0 Hu  0 $ 792 room=.
+-> e
+T1214 mode=game_loop           Oin Steelpalm(dwa) F5@( 8, 6) HP 104/120 MP 0/0 Hu  0 $ 792 room=.
+-> n
+T1215 mode=game_loop           Oin Steelpalm(dwa) F5@( 8, 5) HP 102/120 MP 0/0 Hu  0 $ 792 room=.
+-> n
+T1216 mode=game_loop           Oin Steelpalm(dwa) F5@( 8, 4) HP 100/120 MP 0/0 Hu  0 $ 792 room=.
+-> w
+T1217 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 4) HP 98/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1218 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 5) HP 96/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1219 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 6) HP 94/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1220 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 7) HP 92/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1221 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 8) HP 90/120 MP 0/0 Hu  0 $ 792 room=.
+-> i
+T1222 mode=inventory           Oin Steelpalm(dwa) F5@( 7, 8) HP 90/120 MP 0/0 Hu  0 $ 792 room=.
+-> u13
+T1223 mode=inventory           Oin Steelpalm(dwa) F5@( 7, 8) HP 120/120 MP 0/0 Hu  0 $ 792 room=.
+-> x
+T1224 mode=game_loop           Oin Steelpalm(dwa) F5@( 7, 8) HP 120/120 MP 0/0 Hu  0 $ 792 room=.
+-> w
+T1225 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 118/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1226 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 9) HP 116/120 MP 0/0 Hu  0 $ 792 room=.
+-> w
+T1227 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 9) HP 114/120 MP 0/0 Hu  0 $ 792 room=.
+-> n
+T1228 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 8) HP 112/120 MP 0/0 Hu  0 $ 792 room=.
+-> w
+T1229 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 8) HP 110/120 MP 0/0 Hu  0 $ 792 room=.
+-> n
+T1230 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 7) HP 108/120 MP 0/0 Hu  0 $ 792 room=.
+-> e
+T1231 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 7) HP 106/120 MP 0/0 Hu  0 $ 792 room=.
+-> e
+T1232 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 7) HP 104/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1233 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 8) HP 102/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1234 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 9) HP 100/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1235 mode=game_loop           Oin Steelpalm(dwa) F5@( 6,10) HP 98/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1236 mode=game_loop           Oin Steelpalm(dwa) F5@( 6,11) HP 96/120 MP 0/0 Hu  0 $ 792 room=.
+-> s
+T1237 mode=chest_mode          Oin Steelpalm(dwa) F5@( 6,12) HP 94/120 MP 0/0 Hu  0 $ 792 room=C
+-> o
+T1238 mode=game_loop           Oin Steelpalm(dwa) F5@( 6,12) HP 94/120 MP 0/0 Hu  0 $ 792 room=.
+-> e
+T1239 mode=game_loop           Oin Steelpalm(dwa) F5@( 7,12) HP 92/120 MP 0/0 Hu  0 $ 792 room=.
+-> e
+T1240 mode=game_loop           Oin Steelpalm(dwa) F5@( 8,12) HP 90/120 MP 0/0 Hu  0 $ 792 room=.
+-> n
+T1241 mode=game_loop           Oin Steelpalm(dwa) F5@( 8,11) HP 88/120 MP 0/0 Hu  0 $ 792 room=.
+-> i
+T1242 mode=inventory           Oin Steelpalm(dwa) F5@( 8,11) HP 88/120 MP 0/0 Hu  0 $ 792 room=.
+-> u13
+T1243 mode=inventory           Oin Steelpalm(dwa) F5@( 8,11) HP 118/120 MP 0/0 Hu  0 $ 792 room=.
+-> u6
+T1244 mode=upgrade_scroll_mode Oin Steelpalm(dwa) F5@( 8,11) HP 118/120 MP 0/0 Hu  0 $ 792 room=.
+-> 1
+T1245 mode=upgrade_scroll_mode Oin Steelpalm(dwa) F5@( 8,11) HP 118/120 MP 0/0 Hu  0 $ 792 room=.
+-> 2
+T1246 mode=inventory           Oin Steelpalm(dwa) F5@( 8,11) HP 118/120 MP 0/0 Hu  0 $ 792 room=.
+-> x
+T1247 mode=game_loop           Oin Steelpalm(dwa) F5@( 8,11) HP 118/120 MP 0/0 Hu  0 $ 792 room=.
+-> w
+T1248 mode=stairs_down_mode    Oin Steelpalm(dwa) F5@( 7,11) HP 116/120 MP 0/0 Hu  0 $ 792 room=D
+-> d
+T1249 mode=stairs_up_mode      Oin Steelpalm(dwa) F6@( 1, 1) HP 116/120 MP 0/0 Hu  0 $ 792 room=U
+-> w
+T1250 mode=stairs_up_mode      Oin Steelpalm(dwa) F6@( 1, 1) HP 116/120 MP 0/0 Hu  0 $ 792 room=U
+-> e
+T1251 mode=chest_mode          Oin Steelpalm(dwa) F6@( 2, 1) HP 114/120 MP 0/0 Hu  0 $ 892 room=C
+-> o
+T1252 mode=game_loop           Oin Steelpalm(dwa) F6@( 2, 1) HP 114/120 MP 0/0 Hu  0 $ 892 room=.
+-> s
+T1253 mode=game_loop           Oin Steelpalm(dwa) F6@( 2, 2) HP 112/120 MP 0/0 Hu  0 $ 892 room=.
+-> w
+T1254 mode=game_loop           Oin Steelpalm(dwa) F6@( 1, 2) HP 110/120 MP 0/0 Hu  0 $ 892 room=.
+-> s
+T1255 mode=game_loop           Oin Steelpalm(dwa) F6@( 1, 3) HP 108/120 MP 0/0 Hu  0 $ 892 room=.
+-> n
+T1256 mode=game_loop           Oin Steelpalm(dwa) F6@( 1, 2) HP 106/120 MP 0/0 Hu  0 $ 892 room=.
+-> n
+T1257 mode=stairs_up_mode      Oin Steelpalm(dwa) F6@( 1, 1) HP 104/120 MP 0/0 Hu  0 $ 892 room=U
+-> e
+T1258 mode=game_loop           Oin Steelpalm(dwa) F6@( 2, 1) HP 102/120 MP 0/0 Hu  0 $ 892 room=.
+-> s
+T1259 mode=game_loop           Oin Steelpalm(dwa) F6@( 2, 2) HP 100/120 MP 0/0 Hu  0 $ 892 room=.
+-> e
+T1260 mode=game_loop           Oin Steelpalm(dwa) F6@( 3, 2) HP 98/120 MP 0/0 Hu  0 $ 892 room=.
+-> e
+T1261 mode=game_loop           Oin Steelpalm(dwa) F6@( 4, 2) HP 96/120 MP 0/0 Hu  0 $ 892 room=.
+-> s
+T1262 mode=shrine_mode         Oin Steelpalm(dwa) F6@( 4, 3) HP 94/120 MP 0/0 Hu  0 $ 892 room=F
+-> p
+T1263 mode=game_loop           Oin Steelpalm(dwa) F6@( 4, 3) HP 94/122 MP 0/0 Hu  0 $ 892 room=.
+-> n
+T1264 mode=game_loop           Oin Steelpalm(dwa) F6@( 4, 2) HP 92/122 MP 0/0 Hu  0 $ 892 room=.
+-> e
+T1265 mode=game_loop           Oin Steelpalm(dwa) F6@( 5, 2) HP 90/122 MP 0/0 Hu  0 $ 892 room=.
+-> e
+T1266 mode=chest_mode          Oin Steelpalm(dwa) F6@( 6, 2) HP 88/122 MP 0/0 Hu  0 $ 892 room=C
+-> o
+T1267 mode=game_loop           Oin Steelpalm(dwa) F6@( 5, 2) HP 86/122 MP 0/0 Hu  0 $ 892 room=.
+-> e
+T1268 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 2) HP 84/122 MP 0/0 Hu  0 $ 892 room=.
+-> s
+T1269 mode=garden_mode         Oin Steelpalm(dwa) F6@( 6, 3) HP 82/122 MP 0/0 Hu  0 $ 892 room=G
+-> h
+T1270 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 3) HP 82/122 MP 0/0 Hu  0 $ 892 room=.
+-> s
+T1271 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 4) HP 80/122 MP 0/0 Hu  0 $ 892 room=.
+-> s
+T1272 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 5) HP 78/122 MP 0/0 Hu  0 $ 892 room=.
+-> s
+T1273 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 6) HP 76/122 MP 0/0 Hu  0 $ 892 room=.
+-> e
+T1274 mode=game_loop           Oin Steelpalm(dwa) F6@( 7, 6) HP 74/122 MP 0/0 Hu  0 $ 892 room=.
+-> e
+T1275 mode=combat_mode         Oin Steelpalm(dwa) F6@( 8, 6) HP 72/122 MP 0/0 Hu  0 $ 892 room=M vs Troll(L5 HP75/75)
+-> a
+T1276 mode=combat_mode         Oin Steelpalm(dwa) F6@( 8, 6) HP 69/122 MP 0/0 Hu  0 $ 892 room=M vs Troll(L5 HP50/75)
+-> a
+T1277 mode=combat_mode         Oin Steelpalm(dwa) F6@( 8, 6) HP 66/122 MP 0/0 Hu  0 $ 892 room=M vs Troll(L5 HP25/75)
+-> a
+T1278 mode=combat_victory      Oin Steelpalm(dwa) F6@( 8, 6) HP 63/122 MP 0/0 Hu  0 $ 916 room=.
+-> back
+T1279 mode=game_loop           Oin Steelpalm(dwa) F6@( 8, 6) HP 63/122 MP 0/0 Hu  0 $ 916 room=.
+-> i
+T1280 mode=inventory           Oin Steelpalm(dwa) F6@( 8, 6) HP 63/122 MP 0/0 Hu  0 $ 916 room=.
+-> u14
+T1281 mode=inventory           Oin Steelpalm(dwa) F6@( 8, 6) HP 93/122 MP 0/0 Hu  0 $ 916 room=.
+-> u4
+T1282 mode=inventory           Oin Steelpalm(dwa) F6@( 8, 6) HP 122/122 MP 0/0 Hu  0 $ 916 room=.
+-> x
+T1283 mode=game_loop           Oin Steelpalm(dwa) F6@( 8, 6) HP 122/122 MP 0/0 Hu  0 $ 916 room=.
+-> i
+T1284 mode=inventory           Oin Steelpalm(dwa) F6@( 8, 6) HP 122/122 MP 0/0 Hu  0 $ 916 room=.
+-> eat1
+T1285 mode=inventory           Oin Steelpalm(dwa) F6@( 8, 6) HP 122/122 MP 0/0 Hu 10 $ 916 room=.
+-> x
+T1286 mode=game_loop           Oin Steelpalm(dwa) F6@( 8, 6) HP 122/122 MP 0/0 Hu 10 $ 916 room=.
+-> e
+T1287 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 6) HP 122/122 MP 0/0 Hu  9 $ 916 room=.
+-> n
+T1288 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 5) HP 122/122 MP 0/0 Hu  8 $ 916 room=.
+-> n
+T1289 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 4) HP 122/122 MP 0/0 Hu  7 $ 916 room=.
+-> e
+T1290 mode=altar_mode          Oin Steelpalm(dwa) F6@(10, 4) HP 122/122 MP 0/0 Hu  6 $ 916 room=A
+-> pray
+T1291 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 4) HP 122/122 MP 0/0 Hu  6 $ 916 room=.
+-> n
+T1292 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 3) HP 122/122 MP 0/0 Hu  5 $ 916 room=.
+-> e
+T1293 mode=game_loop           Oin Steelpalm(dwa) F6@(11, 3) HP 122/122 MP 0/0 Hu  4 $ 916 room=.
+-> e
+T1294 mode=game_loop           Oin Steelpalm(dwa) F6@(12, 3) HP 122/122 MP 0/0 Hu  3 $ 916 room=.
+-> e
+T1295 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 122/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1296 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 121/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1297 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 120/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1298 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 119/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1299 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 119/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1300 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 118/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1301 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 117/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1302 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 117/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1303 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 116/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1304 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 115/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1305 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 114/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1306 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 113/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1307 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 113/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP44/44)
+-> a
+T1308 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 3) HP 113/122 MP 0/0 Hu  2 $ 916 room=M vs Giant Spider(L5 HP17/44)
+-> a
+T1309 mode=combat_victory      Oin Steelpalm(dwa) F6@(13, 3) HP 113/122 MP 0/0 Hu  2 $ 922 room=.
+-> back
+T1310 mode=game_loop           Oin Steelpalm(dwa) F6@(13, 3) HP 113/122 MP 0/0 Hu  2 $ 922 room=.
+-> i
+T1311 mode=inventory           Oin Steelpalm(dwa) F6@(13, 3) HP 113/122 MP 0/0 Hu  2 $ 922 room=.
+-> eat1
+T1312 mode=inventory           Oin Steelpalm(dwa) F6@(13, 3) HP 113/122 MP 0/0 Hu  7 $ 922 room=.
+-> u11
+T1313 mode=inventory           Oin Steelpalm(dwa) F6@(13, 3) HP 113/122 MP 0/0 Hu  7 $ 922 room=.
+-> x
+T1314 mode=game_loop           Oin Steelpalm(dwa) F6@(13, 3) HP 113/122 MP 0/0 Hu  7 $ 922 room=.
+-> n
+T1315 mode=game_loop           Oin Steelpalm(dwa) F6@(13, 2) HP 113/122 MP 0/0 Hu  6 $ 922 room=.
+-> n
+T1316 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 1) HP 113/122 MP 0/0 Hu  5 $ 922 room=M vs Wraith(L5 HP83/83)
+-> f
+T1317 mode=flee_direction_mode Oin Steelpalm(dwa) F6@(13, 1) HP 103/122 MP 0/0 Hu  5 $ 922 room=M
+-> s
+T1318 mode=game_loop           Oin Steelpalm(dwa) F6@(13, 2) HP 103/122 MP 0/0 Hu  5 $ 922 room=.
+-> n
+T1319 mode=combat_mode         Oin Steelpalm(dwa) F6@(13, 1) HP 103/122 MP 0/0 Hu  4 $ 922 room=M vs Wraith(L5 HP83/83)
+-> f
+T1320 mode=flee_direction_mode Oin Steelpalm(dwa) F6@(13, 1) HP 93/122 MP 0/0 Hu  4 $ 922 room=M
+-> s
+T1321 mode=game_loop           Oin Steelpalm(dwa) F6@(13, 2) HP 93/122 MP 0/0 Hu  4 $ 922 room=.
+-> s
+T1322 mode=game_loop           Oin Steelpalm(dwa) F6@(13, 3) HP 93/122 MP 0/0 Hu  3 $ 922 room=.
+-> w
+T1323 mode=game_loop           Oin Steelpalm(dwa) F6@(12, 3) HP 93/122 MP 0/0 Hu  2 $ 922 room=.
+-> w
+T1324 mode=game_loop           Oin Steelpalm(dwa) F6@(11, 3) HP 93/122 MP 0/0 Hu  1 $ 922 room=.
+-> w
+T1325 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 3) HP 91/122 MP 0/0 Hu  0 $ 922 room=.
+-> s
+T1326 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 4) HP 89/122 MP 0/0 Hu  0 $ 922 room=.
+-> w
+T1327 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 4) HP 87/122 MP 0/0 Hu  0 $ 922 room=.
+-> s
+T1328 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 5) HP 85/122 MP 0/0 Hu  0 $ 922 room=.
+-> s
+T1329 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 6) HP 83/122 MP 0/0 Hu  0 $ 922 room=.
+-> s
+T1330 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 7) HP 81/122 MP 0/0 Hu  0 $ 922 room=.
+-> e
+T1331 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 7) HP 79/122 MP 0/0 Hu  0 $ 922 room=.
+-> s
+T1332 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 8) HP 77/122 MP 0/0 Hu  0 $ 922 room=.
+-> s
+T1333 mode=chest_mode          Oin Steelpalm(dwa) F6@(10, 9) HP 75/122 MP 0/0 Hu  0 $ 922 room=C
+-> o
+T1334 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 9) HP 75/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1335 mode=game_loop           Oin Steelpalm(dwa) F6@(10,10) HP 73/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1336 mode=game_loop           Oin Steelpalm(dwa) F6@( 9,10) HP 71/122 MP 0/0 Hu  0 $ 1072 room=.
+-> n
+T1337 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 9) HP 69/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1338 mode=game_loop           Oin Steelpalm(dwa) F6@( 8, 9) HP 67/122 MP 0/0 Hu  0 $ 1072 room=.
+-> n
+T1339 mode=game_loop           Oin Steelpalm(dwa) F6@( 8, 8) HP 65/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1340 mode=game_loop           Oin Steelpalm(dwa) F6@( 7, 8) HP 63/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1341 mode=game_loop           Oin Steelpalm(dwa) F6@( 7, 9) HP 61/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1342 mode=warp_mode           Oin Steelpalm(dwa) F6@( 7,10) HP 59/122 MP 0/0 Hu  0 $ 1072 room=W
+-> y
+T1343 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 7) HP 59/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1344 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 8) HP 57/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1345 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 9) HP 55/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1346 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 9) HP 53/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1347 mode=dungeon_mode        Oin Steelpalm(dwa) F4@( 4, 9) HP 51/122 MP 0/0 Hu  0 $ 1072 room=N
+-> u
+T1348 mode=dungeon_unlocked_mode Oin Steelpalm(dwa) F4@( 4, 9) HP 51/122 MP 0/0 Hu  0 $ 1072 room=N
+-> r
+T1349 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 9) HP 51/122 MP 0/0 Hu  0 $ 1072 room=N
+-> w
+T1350 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 9) HP 49/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1351 mode=game_loop           Oin Steelpalm(dwa) F4@( 2, 9) HP 47/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1352 mode=game_loop           Oin Steelpalm(dwa) F4@( 1, 9) HP 45/122 MP 0/0 Hu  0 $ 1072 room=.
+-> n
+T1353 mode=game_loop           Oin Steelpalm(dwa) F4@( 1, 8) HP 43/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1354 mode=game_loop           Oin Steelpalm(dwa) F4@( 2, 8) HP 41/122 MP 0/0 Hu  0 $ 1072 room=N
+-> e
+T1355 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 8) HP 39/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1356 mode=game_loop           Oin Steelpalm(dwa) F4@( 3, 9) HP 37/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1357 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 9) HP 35/122 MP 0/0 Hu  0 $ 1072 room=N
+-> i
+T1358 mode=inventory           Oin Steelpalm(dwa) F4@( 4, 9) HP 35/122 MP 0/0 Hu  0 $ 1072 room=N
+-> u13
+T1359 mode=inventory           Oin Steelpalm(dwa) F4@( 4, 9) HP 85/122 MP 0/0 Hu  0 $ 1072 room=N
+-> x
+T1360 mode=game_loop           Oin Steelpalm(dwa) F4@( 4, 9) HP 85/122 MP 0/0 Hu  0 $ 1072 room=N
+-> e
+T1361 mode=game_loop           Oin Steelpalm(dwa) F4@( 5, 9) HP 83/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1362 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 9) HP 81/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1363 mode=game_loop           Oin Steelpalm(dwa) F4@( 6,10) HP 79/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1364 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,10) HP 77/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1365 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,10) HP 75/122 MP 0/0 Hu  0 $ 1072 room=.
+-> n
+T1366 mode=tomb_mode           Oin Steelpalm(dwa) F4@( 8, 9) HP 73/122 MP 0/0 Hu  0 $ 1072 room=T
+-> p
+T1367 mode=game_loop           Oin Steelpalm(dwa) F4@( 8, 9) HP 109/122 MP 0/0 Hu  0 $ 1072 room=T
+-> w
+T1368 mode=combat_mode         Oin Steelpalm(dwa) F4@( 7, 9) HP 107/122 MP 0/0 Hu  0 $ 1072 room=M vs UNDEAD SPECTER(L3 HP87/87)
+-> f
+T1369 mode=flee_direction_mode Oin Steelpalm(dwa) F4@( 7, 9) HP 107/122 MP 0/0 Hu  0 $ 1072 room=M
+-> n
+T1370 mode=game_loop           Oin Steelpalm(dwa) F4@( 7, 8) HP 107/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1371 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 8) HP 105/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1372 mode=game_loop           Oin Steelpalm(dwa) F4@( 6, 9) HP 103/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1373 mode=game_loop           Oin Steelpalm(dwa) F4@( 6,10) HP 101/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1374 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,10) HP 99/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1375 mode=game_loop           Oin Steelpalm(dwa) F4@( 7,11) HP 97/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1376 mode=game_loop           Oin Steelpalm(dwa) F4@( 8,11) HP 95/122 MP 0/0 Hu  0 $ 1072 room=O
+-> e
+T1377 mode=game_loop           Oin Steelpalm(dwa) F4@( 9,11) HP 93/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1378 mode=stairs_down_mode    Oin Steelpalm(dwa) F4@(10,11) HP 91/122 MP 0/0 Hu  0 $ 1072 room=D
+-> d
+T1379 mode=stairs_up_mode      Oin Steelpalm(dwa) F5@( 1, 1) HP 91/122 MP 0/0 Hu  0 $ 1072 room=U
+-> s
+T1380 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 2) HP 89/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1381 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 3) HP 87/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1382 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 4) HP 85/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1383 mode=game_loop           Oin Steelpalm(dwa) F5@( 1, 5) HP 83/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1384 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 5) HP 81/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1385 mode=game_loop           Oin Steelpalm(dwa) F5@( 2, 6) HP 79/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1386 mode=game_loop           Oin Steelpalm(dwa) F5@( 3, 6) HP 77/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1387 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 6) HP 75/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1388 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 7) HP 73/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1389 mode=game_loop           Oin Steelpalm(dwa) F5@( 4, 8) HP 71/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1390 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 8) HP 69/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1391 mode=game_loop           Oin Steelpalm(dwa) F5@( 5, 9) HP 67/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1392 mode=game_loop           Oin Steelpalm(dwa) F5@( 6, 9) HP 65/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1393 mode=game_loop           Oin Steelpalm(dwa) F5@( 6,10) HP 63/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1394 mode=game_loop           Oin Steelpalm(dwa) F5@( 6,11) HP 61/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1395 mode=game_loop           Oin Steelpalm(dwa) F5@( 6,12) HP 59/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1396 mode=game_loop           Oin Steelpalm(dwa) F5@( 7,12) HP 57/122 MP 0/0 Hu  0 $ 1072 room=.
+-> n
+T1397 mode=stairs_down_mode    Oin Steelpalm(dwa) F5@( 7,11) HP 55/122 MP 0/0 Hu  0 $ 1072 room=D
+-> d
+T1398 mode=stairs_up_mode      Oin Steelpalm(dwa) F6@( 1, 1) HP 55/122 MP 0/0 Hu  0 $ 1072 room=U
+-> s
+T1399 mode=game_loop           Oin Steelpalm(dwa) F6@( 1, 2) HP 53/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1400 mode=game_loop           Oin Steelpalm(dwa) F6@( 2, 2) HP 51/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1401 mode=game_loop           Oin Steelpalm(dwa) F6@( 3, 2) HP 49/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1402 mode=game_loop           Oin Steelpalm(dwa) F6@( 4, 2) HP 47/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1403 mode=fey_garden_mode     Oin Steelpalm(dwa) F6@( 4, 3) HP 45/122 MP 0/0 Hu  0 $ 1072 room=G
+-> h
+T1404 mode=game_loop           Oin Steelpalm(dwa) F6@( 4, 3) HP 45/122 MP 0/0 Hu  0 $ 1072 room=.
+-> n
+T1405 mode=game_loop           Oin Steelpalm(dwa) F6@( 4, 2) HP 43/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1406 mode=game_loop           Oin Steelpalm(dwa) F6@( 5, 2) HP 41/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1407 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 2) HP 39/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1408 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 3) HP 37/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1409 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 4) HP 35/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1410 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 5) HP 33/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1411 mode=game_loop           Oin Steelpalm(dwa) F6@( 6, 6) HP 31/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1412 mode=game_loop           Oin Steelpalm(dwa) F6@( 7, 6) HP 29/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1413 mode=game_loop           Oin Steelpalm(dwa) F6@( 8, 6) HP 27/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1414 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 6) HP 25/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1415 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 7) HP 23/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1416 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 7) HP 21/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1417 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 8) HP 19/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1418 mode=game_loop           Oin Steelpalm(dwa) F6@(10, 9) HP 17/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1419 mode=game_loop           Oin Steelpalm(dwa) F6@( 9, 9) HP 15/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1420 mode=game_loop           Oin Steelpalm(dwa) F6@( 9,10) HP 13/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1421 mode=game_loop           Oin Steelpalm(dwa) F6@( 9,11) HP 11/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1422 mode=game_loop           Oin Steelpalm(dwa) F6@( 9,12) HP 9/122 MP 0/0 Hu  0 $ 1072 room=.
+-> e
+T1423 mode=dungeon_mode        Oin Steelpalm(dwa) F6@(10,12) HP 7/122 MP 0/0 Hu  0 $ 1072 room=N
+-> u
+T1424 mode=game_loop           Oin Steelpalm(dwa) F6@(10,12) HP 7/122 MP 0/0 Hu  0 $ 1072 room=N
+-> s
+T1425 mode=game_loop           Oin Steelpalm(dwa) F6@(10,13) HP 5/122 MP 0/0 Hu  0 $ 1072 room=.
+-> s
+T1426 mode=library_mode        Oin Steelpalm(dwa) F6@(10,14) HP 3/122 MP 0/0 Hu  0 $ 1072 room=L
+-> r
+T1427 mode=library_read_decision_mode Oin Steelpalm(dwa) F6@(10,14) HP 3/122 MP 0/0 Hu  0 $ 1072 room=L
+-> y
+T1428 mode=game_loop           Oin Steelpalm(dwa) F6@(10,14) HP 3/122 MP 0/0 Hu  0 $ 1072 room=.
+-> w
+T1429 mode=game_loop           Oin Steelpalm(dwa) F6@( 9,14) HP 1/122 MP 0/0 Hu  0 $ 1072 room=.
+-> n
+T1430 mode=death_screen        Oin Steelpalm(dwa) F6@( 9,13) HP 0/122 MP 0/0 Hu  0 $ 1072 room=.
+
+=== run finished: turns=1430 floor=6 hp=0/122 gold=1072 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/08128_dwarf.html

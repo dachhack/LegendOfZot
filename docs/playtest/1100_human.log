@@ -1,0 +1,2692 @@
+T   0 mode=game_loop           Anborn of the White City(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Anborn of the White City(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 11 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=game_loop           Anborn of the White City(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T   3 mode=game_loop           Anborn of the White City(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 3 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   4 mode=chest_mode          Anborn of the White City(hum) F1@( 1, 3) HP 30/30 MP 0/0 Hu 98 $ 290 room=C
+-> s
+T   5 mode=pool_mode           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 97 $ 290 room=P
+  
+  A basin of water fills this chamber...
+  
+  
+  The water has curious properties...
+  
+   The complex enchantments here are clouding your understanding.
+     You sense magical power here. It might enhance you.
+  
+  Will you drink from the basin?
+-> dr
+T   6 mode=game_loop           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 97 $ 290 room=.
+-> s
+T   7 mode=combat_mode         Anborn of the White City(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 96 $ 290 room=M vs Kobold(L0 HP8/8)
+-> a
+T   8 mode=combat_victory      Anborn of the White City(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 96 $ 443 room=.
+-> back
+T   9 mode=game_loop           Anborn of the White City(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 96 $ 443 room=.
+-> s
+T  10 mode=chest_mode          Anborn of the White City(hum) F1@( 1, 6) HP 30/30 MP 0/0 Hu 95 $ 443 room=C
+-> o
+T  11 mode=game_loop           Anborn of the White City(hum) F1@( 1, 6) HP 30/30 MP 0/0 Hu 95 $ 453 room=.
+-> s
+T  12 mode=game_loop           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 94 $ 453 room=.
+-> l
+T  13 mode=game_loop           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 94 $ 453 room=.
+-> e
+T  14 mode=combat_mode         Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 93 $ 453 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  15 mode=combat_victory      Anborn of the White City(hum) F1@( 2, 7) HP 29/30 MP 0/0 Hu 93 $ 454 room=.
+-> back
+T  16 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 29/30 MP 0/0 Hu 93 $ 454 room=.
+-> l
+T  17 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 29/30 MP 0/0 Hu 93 $ 454 room=.
+-> s
+T  18 mode=combat_mode         Anborn of the White City(hum) F1@( 2, 8) HP 29/30 MP 0/0 Hu 92 $ 454 room=M vs Goblin(L0 HP30/30)
+-> a
+T  19 mode=combat_mode         Anborn of the White City(hum) F1@( 2, 8) HP 28/30 MP 0/0 Hu 92 $ 454 room=M vs Goblin(L0 HP10/30)
+-> a
+T  20 mode=combat_mode         Anborn of the White City(hum) F1@( 2, 8) HP 27/30 MP 0/0 Hu 92 $ 454 room=M vs Goblin(L0 HP10/30)
+-> a
+T  21 mode=combat_victory      Anborn of the White City(hum) F1@( 2, 8) HP 27/30 MP 0/0 Hu 92 $ 464 room=.
+-> back
+T  22 mode=game_loop           Anborn of the White City(hum) F1@( 2, 8) HP 27/30 MP 0/0 Hu 92 $ 464 room=.
+-> l
+T  23 mode=game_loop           Anborn of the White City(hum) F1@( 2, 8) HP 27/30 MP 0/0 Hu 92 $ 464 room=.
+-> e
+T  24 mode=game_loop           Anborn of the White City(hum) F1@( 3, 8) HP 28/30 MP 0/0 Hu 91 $ 464 room=.
+-> n
+T  25 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 28/30 MP 0/0 Hu 90 $ 464 room=.
+-> l
+T  26 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 28/30 MP 0/0 Hu 90 $ 464 room=.
+-> e
+T  27 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 29/30 MP 0/0 Hu 89 $ 464 room=.
+-> l
+T  28 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 29/30 MP 0/0 Hu 89 $ 464 room=.
+-> n
+T  29 mode=combat_mode         Anborn of the White City(hum) F1@( 4, 6) HP 29/30 MP 0/0 Hu 88 $ 464 room=M vs Kobold(L0 HP20/20)
+-> a
+T  30 mode=combat_mode         Anborn of the White City(hum) F1@( 4, 6) HP 28/30 MP 0/0 Hu 88 $ 464 room=M vs Kobold(L0 HP20/20)
+-> a
+T  31 mode=combat_mode         Anborn of the White City(hum) F1@( 4, 6) HP 27/30 MP 0/0 Hu 88 $ 464 room=M vs Kobold(L0 HP20/20)
+-> a
+T  32 mode=combat_mode         Anborn of the White City(hum) F1@( 4, 6) HP 27/30 MP 0/0 Hu 88 $ 464 room=M vs Kobold(L0 HP20/20)
+-> a
+T  33 mode=combat_victory      Anborn of the White City(hum) F1@( 4, 6) HP 27/30 MP 0/0 Hu 88 $ 470 room=.
+-> back
+T  34 mode=game_loop           Anborn of the White City(hum) F1@( 4, 6) HP 27/30 MP 0/0 Hu 88 $ 470 room=.
+-> w
+T  35 mode=game_loop           Anborn of the White City(hum) F1@( 3, 6) HP 28/30 MP 0/0 Hu 87 $ 470 room=.
+-> s
+T  36 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 28/30 MP 0/0 Hu 86 $ 470 room=.
+-> w
+T  37 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 29/30 MP 0/0 Hu 85 $ 470 room=.
+-> w
+T  38 mode=game_loop           Anborn of the White City(hum) F1@( 1, 7) HP 29/30 MP 0/0 Hu 84 $ 470 room=.
+-> n
+T  39 mode=game_loop           Anborn of the White City(hum) F1@( 1, 6) HP 29/30 MP 0/0 Hu 83 $ 470 room=.
+-> i
+T  40 mode=inventory           Anborn of the White City(hum) F1@( 1, 6) HP 29/30 MP 0/0 Hu 83 $ 470 room=.
+-> eat4
+T  41 mode=inventory           Anborn of the White City(hum) F1@( 1, 6) HP 29/30 MP 0/0 Hu 89 $ 470 room=.
+-> x
+T  42 mode=game_loop           Anborn of the White City(hum) F1@( 1, 6) HP 29/30 MP 0/0 Hu 89 $ 470 room=.
+-> n
+T  43 mode=game_loop           Anborn of the White City(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 88 $ 470 room=.
+-> n
+T  44 mode=game_loop           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 87 $ 470 room=.
+-> n
+T  45 mode=game_loop           Anborn of the White City(hum) F1@( 1, 3) HP 30/30 MP 0/0 Hu 86 $ 470 room=C
+-> n
+T  46 mode=game_loop           Anborn of the White City(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 85 $ 470 room=.
+-> e
+T  47 mode=altar_mode          Anborn of the White City(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 84 $ 470 room=A
+-> pray
+T  48 mode=game_loop           Anborn of the White City(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 84 $ 470 room=.
+-> i
+T  49 mode=inventory           Anborn of the White City(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 84 $ 470 room=.
+-> eat3
+T  50 mode=inventory           Anborn of the White City(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 89 $ 470 room=.
+-> x
+T  51 mode=game_loop           Anborn of the White City(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 89 $ 470 room=.
+-> n
+T  52 mode=game_loop           Anborn of the White City(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 470 room=.
+-> w
+T  53 mode=game_loop           Anborn of the White City(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 87 $ 470 room=E
+-> s
+T  54 mode=game_loop           Anborn of the White City(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 470 room=.
+-> s
+T  55 mode=game_loop           Anborn of the White City(hum) F1@( 1, 3) HP 30/30 MP 0/0 Hu 85 $ 470 room=C
+-> s
+T  56 mode=game_loop           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 84 $ 470 room=.
+-> s
+T  57 mode=game_loop           Anborn of the White City(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 83 $ 470 room=.
+-> s
+T  58 mode=game_loop           Anborn of the White City(hum) F1@( 1, 6) HP 30/30 MP 0/0 Hu 82 $ 470 room=.
+-> s
+T  59 mode=game_loop           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 81 $ 470 room=.
+-> e
+T  60 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 80 $ 470 room=.
+-> e
+T  61 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 79 $ 470 room=.
+-> e
+T  62 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 78 $ 470 room=.
+-> e
+T  63 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 77 $ 470 room=.
+-> e
+T  64 mode=combat_mode         Anborn of the White City(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 76 $ 470 room=M vs Kobold(L0 HP20/20)
+-> a
+T  65 mode=combat_victory      Anborn of the White City(hum) F1@( 6, 7) HP 29/30 MP 0/0 Hu 76 $ 477 room=.
+-> back
+T  66 mode=game_loop           Anborn of the White City(hum) F1@( 6, 7) HP 29/30 MP 0/0 Hu 76 $ 477 room=.
+-> l
+T  67 mode=game_loop           Anborn of the White City(hum) F1@( 6, 7) HP 29/30 MP 0/0 Hu 76 $ 477 room=.
+-> w
+T  68 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 29/30 MP 0/0 Hu 75 $ 477 room=.
+-> w
+T  69 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 29/30 MP 0/0 Hu 74 $ 477 room=.
+-> n
+T  70 mode=game_loop           Anborn of the White City(hum) F1@( 4, 6) HP 29/30 MP 0/0 Hu 73 $ 477 room=.
+-> w
+T  71 mode=game_loop           Anborn of the White City(hum) F1@( 3, 6) HP 30/30 MP 0/0 Hu 72 $ 477 room=.
+-> s
+T  72 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 71 $ 477 room=.
+-> w
+T  73 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 70 $ 477 room=.
+-> w
+T  74 mode=game_loop           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 69 $ 477 room=.
+-> n
+T  75 mode=game_loop           Anborn of the White City(hum) F1@( 1, 6) HP 30/30 MP 0/0 Hu 68 $ 477 room=.
+-> n
+T  76 mode=game_loop           Anborn of the White City(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 67 $ 477 room=.
+-> n
+T  77 mode=game_loop           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 66 $ 477 room=.
+-> i
+T  78 mode=inventory           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 66 $ 477 room=.
+-> eat3
+T  79 mode=inventory           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 71 $ 477 room=.
+-> eat1
+T  80 mode=inventory           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> x
+T  81 mode=game_loop           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> n
+T  82 mode=game_loop           Anborn of the White City(hum) F1@( 1, 3) HP 30/30 MP 0/0 Hu 99 $ 477 room=C
+-> n
+T  83 mode=game_loop           Anborn of the White City(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 98 $ 477 room=.
+-> n
+T  84 mode=game_loop           Anborn of the White City(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 97 $ 477 room=E
+-> e
+T  85 mode=game_loop           Anborn of the White City(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 96 $ 477 room=.
+-> s
+T  86 mode=game_loop           Anborn of the White City(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> w
+T  87 mode=game_loop           Anborn of the White City(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 94 $ 477 room=.
+-> s
+T  88 mode=game_loop           Anborn of the White City(hum) F1@( 1, 3) HP 30/30 MP 0/0 Hu 93 $ 477 room=C
+-> s
+T  89 mode=game_loop           Anborn of the White City(hum) F1@( 1, 4) HP 30/30 MP 0/0 Hu 92 $ 477 room=.
+-> s
+T  90 mode=game_loop           Anborn of the White City(hum) F1@( 1, 5) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> s
+T  91 mode=game_loop           Anborn of the White City(hum) F1@( 1, 6) HP 30/30 MP 0/0 Hu 90 $ 477 room=.
+-> s
+T  92 mode=game_loop           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 89 $ 477 room=.
+-> s
+T  93 mode=game_loop           Anborn of the White City(hum) F1@( 1, 8) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> e
+T  94 mode=game_loop           Anborn of the White City(hum) F1@( 2, 8) HP 30/30 MP 0/0 Hu 87 $ 477 room=.
+-> n
+T  95 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 86 $ 477 room=.
+-> e
+T  96 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> s
+T  97 mode=game_loop           Anborn of the White City(hum) F1@( 3, 8) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> n
+T  98 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> i
+T  99 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> u3
+T 100 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> u1
+T 101 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> u2
+T 102 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> u4
+T 103 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> x
+T 104 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> n
+T 105 mode=game_loop           Anborn of the White City(hum) F1@( 3, 6) HP 30/30 MP 0/0 Hu 82 $ 477 room=.
+-> e
+T 106 mode=game_loop           Anborn of the White City(hum) F1@( 4, 6) HP 30/30 MP 0/0 Hu 81 $ 477 room=.
+-> s
+T 107 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> e
+T 108 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 79 $ 477 room=.
+-> e
+T 109 mode=game_loop           Anborn of the White City(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 78 $ 477 room=.
+-> w
+T 110 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 77 $ 477 room=.
+-> w
+T 111 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 76 $ 477 room=.
+-> w
+T 112 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 75 $ 477 room=.
+-> i
+T 113 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 75 $ 477 room=.
+-> eat1
+T 114 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> u3
+T 115 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> u1
+T 116 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> u2
+T 117 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> u4
+T 118 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> x
+T 119 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> w
+T 120 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> i
+T 121 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> u3
+T 122 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> u1
+T 123 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> u2
+T 124 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> u4
+T 125 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> x
+T 126 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> s
+T 127 mode=game_loop           Anborn of the White City(hum) F1@( 2, 8) HP 30/30 MP 0/0 Hu 98 $ 477 room=.
+-> e
+T 128 mode=game_loop           Anborn of the White City(hum) F1@( 3, 8) HP 30/30 MP 0/0 Hu 97 $ 477 room=.
+-> n
+T 129 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 96 $ 477 room=.
+-> i
+T 130 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 96 $ 477 room=.
+-> u3
+T 131 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 96 $ 477 room=.
+-> u1
+T 132 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 96 $ 477 room=.
+-> u2
+T 133 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 96 $ 477 room=.
+-> u4
+T 134 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 96 $ 477 room=.
+-> x
+T 135 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 96 $ 477 room=.
+-> e
+T 136 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> i
+T 137 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> u3
+T 138 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> u1
+T 139 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> u2
+T 140 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> u4
+T 141 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> x
+T 142 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> n
+T 143 mode=game_loop           Anborn of the White City(hum) F1@( 4, 6) HP 30/30 MP 0/0 Hu 94 $ 477 room=.
+-> w
+T 144 mode=game_loop           Anborn of the White City(hum) F1@( 3, 6) HP 30/30 MP 0/0 Hu 93 $ 477 room=.
+-> e
+T 145 mode=game_loop           Anborn of the White City(hum) F1@( 4, 6) HP 30/30 MP 0/0 Hu 92 $ 477 room=.
+-> s
+T 146 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> i
+T 147 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> u3
+T 148 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> u1
+T 149 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> u2
+T 150 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> u4
+T 151 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> x
+T 152 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> e
+T 153 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 90 $ 477 room=.
+-> e
+T 154 mode=game_loop           Anborn of the White City(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 89 $ 477 room=.
+-> w
+T 155 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> i
+T 156 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> u3
+T 157 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> u1
+T 158 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> u2
+T 159 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> u4
+T 160 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> x
+T 161 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 88 $ 477 room=.
+-> e
+T 162 mode=game_loop           Anborn of the White City(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 87 $ 477 room=.
+-> w
+T 163 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 86 $ 477 room=.
+-> i
+T 164 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 86 $ 477 room=.
+-> u3
+T 165 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 86 $ 477 room=.
+-> u1
+T 166 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 86 $ 477 room=.
+-> u2
+T 167 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 86 $ 477 room=.
+-> u4
+T 168 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 86 $ 477 room=.
+-> x
+T 169 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 86 $ 477 room=.
+-> w
+T 170 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> i
+T 171 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> u3
+T 172 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> u1
+T 173 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> u2
+T 174 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> u4
+T 175 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> x
+T 176 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> w
+T 177 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> i
+T 178 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> u3
+T 179 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> u1
+T 180 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> u2
+T 181 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> u4
+T 182 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> x
+T 183 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> s
+T 184 mode=game_loop           Anborn of the White City(hum) F1@( 3, 8) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> w
+T 185 mode=game_loop           Anborn of the White City(hum) F1@( 2, 8) HP 30/30 MP 0/0 Hu 82 $ 477 room=.
+-> w
+T 186 mode=game_loop           Anborn of the White City(hum) F1@( 1, 8) HP 30/30 MP 0/0 Hu 81 $ 477 room=.
+-> n
+T 187 mode=game_loop           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> i
+T 188 mode=inventory           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> u3
+T 189 mode=inventory           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> u1
+T 190 mode=inventory           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> u2
+T 191 mode=inventory           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> u4
+T 192 mode=inventory           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> x
+T 193 mode=game_loop           Anborn of the White City(hum) F1@( 1, 7) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> e
+T 194 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 79 $ 477 room=.
+-> i
+T 195 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu 79 $ 477 room=.
+-> eat1
+T 196 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> u3
+T 197 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> u1
+T 198 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> u2
+T 199 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> u4
+T 200 mode=inventory           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> x
+T 201 mode=game_loop           Anborn of the White City(hum) F1@( 2, 7) HP 30/30 MP 0/0 Hu100 $ 477 room=.
+-> e
+T 202 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> i
+T 203 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> u3
+T 204 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> u1
+T 205 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> u2
+T 206 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> u4
+T 207 mode=inventory           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> x
+T 208 mode=game_loop           Anborn of the White City(hum) F1@( 3, 7) HP 30/30 MP 0/0 Hu 99 $ 477 room=.
+-> e
+T 209 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 98 $ 477 room=.
+-> i
+T 210 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 98 $ 477 room=.
+-> u3
+T 211 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 98 $ 477 room=.
+-> u1
+T 212 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 98 $ 477 room=.
+-> u2
+T 213 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 98 $ 477 room=.
+-> u4
+T 214 mode=inventory           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 98 $ 477 room=.
+-> x
+T 215 mode=game_loop           Anborn of the White City(hum) F1@( 4, 7) HP 30/30 MP 0/0 Hu 98 $ 477 room=.
+-> e
+T 216 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 477 room=.
+-> i
+T 217 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 477 room=.
+-> u3
+T 218 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 477 room=.
+-> u1
+T 219 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 477 room=.
+-> u2
+T 220 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 477 room=.
+-> u4
+T 221 mode=inventory           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 477 room=.
+-> x
+T 222 mode=game_loop           Anborn of the White City(hum) F1@( 5, 7) HP 30/30 MP 0/0 Hu 97 $ 477 room=.
+-> e
+T 223 mode=game_loop           Anborn of the White City(hum) F1@( 6, 7) HP 30/30 MP 0/0 Hu 96 $ 477 room=.
+-> n
+T 224 mode=warp_mode           Anborn of the White City(hum) F1@( 6, 6) HP 30/30 MP 0/0 Hu 95 $ 477 room=W
+-> y
+T 225 mode=game_loop           Anborn of the White City(hum) F3@( 4, 1) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> l
+T 226 mode=game_loop           Anborn of the White City(hum) F3@( 4, 1) HP 30/30 MP 0/0 Hu 95 $ 477 room=.
+-> s
+T 227 mode=game_loop           Anborn of the White City(hum) F3@( 4, 2) HP 30/30 MP 0/0 Hu 94 $ 477 room=.
+-> l
+T 228 mode=game_loop           Anborn of the White City(hum) F3@( 4, 2) HP 30/30 MP 0/0 Hu 94 $ 477 room=.
+-> s
+T 229 mode=game_loop           Anborn of the White City(hum) F3@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 477 room=.
+-> l
+T 230 mode=game_loop           Anborn of the White City(hum) F3@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 477 room=.
+-> w
+T 231 mode=game_loop           Anborn of the White City(hum) F3@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 477 room=.
+-> l
+T 232 mode=game_loop           Anborn of the White City(hum) F3@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 477 room=.
+-> w
+T 233 mode=game_loop           Anborn of the White City(hum) F3@( 2, 3) HP 30/30 MP 0/0 Hu 91 $ 477 room=.
+-> n
+T 234 mode=game_loop           Anborn of the White City(hum) F3@( 2, 2) HP 30/30 MP 0/0 Hu 90 $ 477 room=.
+-> n
+T 235 mode=game_loop           Anborn of the White City(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 89 $ 477 room=.
+-> w
+T 236 mode=stairs_up_mode      Anborn of the White City(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 88 $ 477 room=U
+-> u
+T 237 mode=stairs_down_mode    Anborn of the White City(hum) F2@(10, 1) HP 30/30 MP 0/0 Hu 88 $ 477 room=D
+-> n
+T 238 mode=stairs_down_mode    Anborn of the White City(hum) F2@(10, 1) HP 30/30 MP 0/0 Hu 88 $ 477 room=D
+-> e
+T 239 mode=game_loop           Anborn of the White City(hum) F2@(11, 1) HP 30/30 MP 0/0 Hu 87 $ 477 room=.
+-> l
+T 240 mode=game_loop           Anborn of the White City(hum) F2@(11, 1) HP 30/30 MP 0/0 Hu 87 $ 477 room=.
+-> w
+T 241 mode=stairs_down_mode    Anborn of the White City(hum) F2@(10, 1) HP 30/30 MP 0/0 Hu 86 $ 477 room=D
+-> w
+T 242 mode=game_loop           Anborn of the White City(hum) F2@( 9, 1) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> l
+T 243 mode=game_loop           Anborn of the White City(hum) F2@( 9, 1) HP 30/30 MP 0/0 Hu 85 $ 477 room=.
+-> s
+T 244 mode=game_loop           Anborn of the White City(hum) F2@( 9, 2) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> l
+T 245 mode=game_loop           Anborn of the White City(hum) F2@( 9, 2) HP 30/30 MP 0/0 Hu 84 $ 477 room=.
+-> s
+T 246 mode=game_loop           Anborn of the White City(hum) F2@( 9, 3) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> l
+T 247 mode=game_loop           Anborn of the White City(hum) F2@( 9, 3) HP 30/30 MP 0/0 Hu 83 $ 477 room=.
+-> s
+T 248 mode=game_loop           Anborn of the White City(hum) F2@( 9, 4) HP 30/30 MP 0/0 Hu 82 $ 477 room=.
+-> l
+T 249 mode=game_loop           Anborn of the White City(hum) F2@( 9, 4) HP 30/30 MP 0/0 Hu 82 $ 477 room=.
+-> s
+T 250 mode=shrine_mode         Anborn of the White City(hum) F2@( 9, 5) HP 30/30 MP 0/0 Hu 81 $ 477 room=F
+-> p
+T 251 mode=game_loop           Anborn of the White City(hum) F2@( 9, 5) HP 30/30 MP 0/0 Hu 81 $ 477 room=.
+-> s
+T 252 mode=game_loop           Anborn of the White City(hum) F2@( 9, 6) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> l
+T 253 mode=game_loop           Anborn of the White City(hum) F2@( 9, 6) HP 30/30 MP 0/0 Hu 80 $ 477 room=.
+-> s
+T 254 mode=game_loop           Anborn of the White City(hum) F2@( 9, 7) HP 30/30 MP 0/0 Hu 79 $ 477 room=.
+-> l
+T 255 mode=game_loop           Anborn of the White City(hum) F2@( 9, 7) HP 30/30 MP 0/0 Hu 79 $ 477 room=.
+-> s
+T 256 mode=game_loop           Anborn of the White City(hum) F2@( 9, 8) HP 30/30 MP 0/0 Hu 78 $ 477 room=.
+-> l
+T 257 mode=game_loop           Anborn of the White City(hum) F2@( 9, 8) HP 30/30 MP 0/0 Hu 78 $ 477 room=.
+-> s
+T 258 mode=game_loop           Anborn of the White City(hum) F2@( 9, 9) HP 30/30 MP 0/0 Hu 77 $ 477 room=.
+-> l
+T 259 mode=game_loop           Anborn of the White City(hum) F2@( 9, 9) HP 30/30 MP 0/0 Hu 77 $ 477 room=.
+-> s
+T 260 mode=library_mode        Anborn of the White City(hum) F2@( 9,10) HP 30/30 MP 0/0 Hu 76 $ 477 room=L
+-> r
+T 261 mode=library_read_decision_mode Anborn of the White City(hum) F2@( 9,10) HP 30/30 MP 0/0 Hu 76 $ 477 room=L
+-> y
+T 262 mode=game_loop           Anborn of the White City(hum) F2@( 9,10) HP 30/30 MP 0/0 Hu 76 $ 577 room=.
+-> l
+T 263 mode=game_loop           Anborn of the White City(hum) F2@( 9,10) HP 30/30 MP 0/0 Hu 76 $ 577 room=.
+-> s
+T 264 mode=game_loop           Anborn of the White City(hum) F2@( 8,10) HP 30/30 MP 0/0 Hu 75 $ 577 room=.
+-> n
+T 265 mode=game_loop           Anborn of the White City(hum) F2@( 8, 9) HP 30/30 MP 0/0 Hu 74 $ 577 room=.
+-> n
+T 266 mode=game_loop           Anborn of the White City(hum) F2@( 9, 9) HP 30/30 MP 0/0 Hu 73 $ 577 room=.
+-> e
+T 267 mode=game_loop           Anborn of the White City(hum) F2@( 8, 9) HP 30/30 MP 0/0 Hu 72 $ 577 room=.
+-> n
+T 268 mode=game_loop           Anborn of the White City(hum) F2@( 8, 8) HP 30/30 MP 0/0 Hu 71 $ 577 room=.
+-> e
+T 269 mode=game_loop           Anborn of the White City(hum) F2@( 9, 8) HP 30/30 MP 0/0 Hu 70 $ 577 room=.
+-> e
+T 270 mode=game_loop           Anborn of the White City(hum) F2@(10, 8) HP 30/30 MP 0/0 Hu 69 $ 577 room=.
+-> s
+T 271 mode=game_loop           Anborn of the White City(hum) F2@(10, 9) HP 30/30 MP 0/0 Hu 68 $ 577 room=.
+-> s
+T 272 mode=game_loop           Anborn of the White City(hum) F2@(10,10) HP 30/30 MP 0/0 Hu 67 $ 577 room=.
+-> l
+T 273 mode=game_loop           Anborn of the White City(hum) F2@(10,10) HP 30/30 MP 0/0 Hu 67 $ 577 room=.
+-> w
+T 274 mode=game_loop           Anborn of the White City(hum) F2@( 9,10) HP 30/30 MP 0/0 Hu 66 $ 577 room=.
+-> s
+T 275 mode=chest_mode          Anborn of the White City(hum) F2@( 9,11) HP 30/30 MP 0/0 Hu 65 $ 577 room=C
+-> o
+T 276 mode=game_loop           Anborn of the White City(hum) F2@( 9,11) HP 30/30 MP 0/0 Hu 65 $ 597 room=.
+-> s
+T 277 mode=game_loop           Anborn of the White City(hum) F2@( 9,12) HP 30/30 MP 0/0 Hu 64 $ 597 room=.
+-> s
+T 278 mode=game_loop           Anborn of the White City(hum) F2@( 9,13) HP 30/30 MP 0/0 Hu 63 $ 597 room=.
+-> l
+T 279 mode=game_loop           Anborn of the White City(hum) F2@( 9,13) HP 30/30 MP 0/0 Hu 63 $ 597 room=.
+-> e
+T 280 mode=game_loop           Anborn of the White City(hum) F2@(10,13) HP 30/30 MP 0/0 Hu 62 $ 597 room=.
+-> s
+T 281 mode=game_loop           Anborn of the White City(hum) F2@(10,14) HP 30/30 MP 0/0 Hu 61 $ 597 room=.
+-> l
+T 282 mode=game_loop           Anborn of the White City(hum) F2@(10,14) HP 30/30 MP 0/0 Hu 61 $ 597 room=.
+-> s
+T 283 mode=game_loop           Anborn of the White City(hum) F2@(10,15) HP 30/30 MP 0/0 Hu 60 $ 597 room=.
+-> l
+T 284 mode=game_loop           Anborn of the White City(hum) F2@(10,15) HP 30/30 MP 0/0 Hu 60 $ 597 room=.
+-> e
+T 285 mode=game_loop           Anborn of the White City(hum) F2@(11,15) HP 30/30 MP 0/0 Hu 59 $ 597 room=.
+-> l
+T 286 mode=game_loop           Anborn of the White City(hum) F2@(11,15) HP 30/30 MP 0/0 Hu 59 $ 597 room=.
+-> s
+T 287 mode=game_loop           Anborn of the White City(hum) F2@(11,16) HP 30/30 MP 0/0 Hu 58 $ 597 room=.
+-> l
+T 288 mode=game_loop           Anborn of the White City(hum) F2@(11,16) HP 30/30 MP 0/0 Hu 58 $ 597 room=.
+-> e
+T 289 mode=game_loop           Anborn of the White City(hum) F2@(12,16) HP 30/30 MP 0/0 Hu 57 $ 597 room=.
+-> e
+T 290 mode=library_mode        Anborn of the White City(hum) F2@(13,16) HP 30/30 MP 0/0 Hu 56 $ 597 room=L
+-> r
+T 291 mode=library_read_decision_mode Anborn of the White City(hum) F2@(13,16) HP 30/30 MP 0/0 Hu 56 $ 597 room=L
+-> y
+T 292 mode=game_loop           Anborn of the White City(hum) F2@(13,16) HP 30/30 MP 0/0 Hu 56 $ 597 room=.
+-> e
+T 293 mode=game_loop           Anborn of the White City(hum) F2@(14,16) HP 30/30 MP 0/0 Hu 55 $ 597 room=.
+-> e
+T 294 mode=combat_mode         Anborn of the White City(hum) F2@(15,16) HP 30/30 MP 0/0 Hu 54 $ 597 room=M vs Harpy(L1 HP28/28)
+-> a
+T 295 mode=combat_mode         Anborn of the White City(hum) F2@(15,16) HP 29/30 MP 0/0 Hu 54 $ 597 room=M vs Harpy(L1 HP28/28)
+-> a
+T 296 mode=combat_mode         Anborn of the White City(hum) F2@(15,16) HP 29/30 MP 0/0 Hu 54 $ 597 room=M vs Harpy(L1 HP28/28)
+-> a
+T 297 mode=combat_mode         Anborn of the White City(hum) F2@(15,16) HP 28/30 MP 0/0 Hu 54 $ 597 room=M vs Harpy(L1 HP9/28)
+-> a
+T 298 mode=combat_mode         Anborn of the White City(hum) F2@(15,16) HP 27/30 MP 0/0 Hu 54 $ 597 room=M vs Harpy(L1 HP9/28)
+-> a
+T 299 mode=combat_victory      Anborn of the White City(hum) F2@(15,16) HP 26/30 MP 0/0 Hu 54 $ 601 room=.
+-> back
+T 300 mode=game_loop           Anborn of the White City(hum) F2@(15,16) HP 26/30 MP 0/0 Hu 54 $ 601 room=.
+-> e
+T 301 mode=combat_mode         Anborn of the White City(hum) F2@(16,16) HP 26/30 MP 0/0 Hu 53 $ 601 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 302 mode=combat_victory      Anborn of the White City(hum) F2@(16,16) HP 25/30 MP 0/0 Hu 53 $ 611 room=.
+-> back
+T 303 mode=game_loop           Anborn of the White City(hum) F2@(16,16) HP 25/30 MP 0/0 Hu 53 $ 611 room=.
+-> l
+T 304 mode=game_loop           Anborn of the White City(hum) F2@(16,16) HP 25/30 MP 0/0 Hu 53 $ 611 room=.
+-> e
+T 305 mode=game_loop           Anborn of the White City(hum) F2@(17,16) HP 25/30 MP 0/0 Hu 52 $ 611 room=.
+-> l
+T 306 mode=game_loop           Anborn of the White City(hum) F2@(17,16) HP 25/30 MP 0/0 Hu 52 $ 611 room=.
+-> n
+T 307 mode=library_mode        Anborn of the White City(hum) F2@(17,15) HP 25/30 MP 0/0 Hu 51 $ 611 room=L
+-> r
+T 308 mode=library_read_decision_mode Anborn of the White City(hum) F2@(17,15) HP 25/30 MP 0/0 Hu 51 $ 611 room=L
+-> y
+T 309 mode=game_loop           Anborn of the White City(hum) F2@(17,15) HP 25/30 MP 0/0 Hu 51 $ 611 room=.
+-> l
+T 310 mode=game_loop           Anborn of the White City(hum) F2@(17,15) HP 25/30 MP 0/0 Hu 51 $ 611 room=.
+-> e
+T 311 mode=garden_mode         Anborn of the White City(hum) F2@(16,15) HP 25/30 MP 0/0 Hu 50 $ 611 room=G
+-> h
+T 312 mode=game_loop           Anborn of the White City(hum) F2@(16,15) HP 25/30 MP 0/0 Hu 50 $ 611 room=.
+-> n
+T 313 mode=game_loop           Anborn of the White City(hum) F2@(17,15) HP 25/30 MP 0/0 Hu 49 $ 611 room=.
+-> i
+T 314 mode=inventory           Anborn of the White City(hum) F2@(17,15) HP 25/30 MP 0/0 Hu 49 $ 611 room=.
+-> u3
+T 315 mode=inventory           Anborn of the White City(hum) F2@(17,15) HP 30/30 MP 0/0 Hu 49 $ 611 room=.
+-> x
+T 316 mode=game_loop           Anborn of the White City(hum) F2@(17,15) HP 30/30 MP 0/0 Hu 49 $ 611 room=.
+-> i
+T 317 mode=inventory           Anborn of the White City(hum) F2@(17,15) HP 30/30 MP 0/0 Hu 49 $ 611 room=.
+-> eat1
+T 318 mode=inventory           Anborn of the White City(hum) F2@(17,15) HP 30/30 MP 0/0 Hu 99 $ 611 room=.
+-> x
+T 319 mode=game_loop           Anborn of the White City(hum) F2@(17,15) HP 30/30 MP 0/0 Hu 99 $ 611 room=.
+-> e
+T 320 mode=game_loop           Anborn of the White City(hum) F2@(16,15) HP 30/30 MP 0/0 Hu 98 $ 611 room=.
+-> s
+T 321 mode=game_loop           Anborn of the White City(hum) F2@(16,16) HP 30/30 MP 0/0 Hu 97 $ 611 room=.
+-> w
+T 322 mode=game_loop           Anborn of the White City(hum) F2@(15,16) HP 30/30 MP 0/0 Hu 96 $ 611 room=.
+-> w
+T 323 mode=game_loop           Anborn of the White City(hum) F2@(14,16) HP 30/30 MP 0/0 Hu 95 $ 611 room=.
+-> w
+T 324 mode=game_loop           Anborn of the White City(hum) F2@(13,16) HP 30/30 MP 0/0 Hu 94 $ 611 room=.
+-> i
+T 325 mode=inventory           Anborn of the White City(hum) F2@(13,16) HP 30/30 MP 0/0 Hu 94 $ 611 room=.
+-> eat2
+T 326 mode=inventory           Anborn of the White City(hum) F2@(13,16) HP 30/30 MP 0/0 Hu100 $ 611 room=.
+-> x
+T 327 mode=game_loop           Anborn of the White City(hum) F2@(13,16) HP 30/30 MP 0/0 Hu100 $ 611 room=.
+-> n
+T 328 mode=game_loop           Anborn of the White City(hum) F2@(13,15) HP 30/30 MP 0/0 Hu 99 $ 611 room=.
+-> n
+T 329 mode=game_loop           Anborn of the White City(hum) F2@(13,14) HP 30/30 MP 0/0 Hu 98 $ 611 room=.
+-> n
+T 330 mode=game_loop           Anborn of the White City(hum) F2@(13,13) HP 30/30 MP 0/0 Hu 97 $ 611 room=.
+-> l
+T 331 mode=game_loop           Anborn of the White City(hum) F2@(13,13) HP 30/30 MP 0/0 Hu 97 $ 611 room=.
+-> e
+T 332 mode=altar_mode          Anborn of the White City(hum) F2@(14,13) HP 30/30 MP 0/0 Hu 96 $ 611 room=A
+-> pray
+T 333 mode=game_loop           Anborn of the White City(hum) F2@(14,13) HP 30/30 MP 0/0 Hu100 $ 611 room=.
+-> l
+T 334 mode=game_loop           Anborn of the White City(hum) F2@(14,13) HP 30/30 MP 0/0 Hu100 $ 611 room=.
+-> e
+T 335 mode=combat_mode         Anborn of the White City(hum) F2@(15,13) HP 30/30 MP 0/0 Hu 99 $ 611 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 336 mode=combat_mode         Anborn of the White City(hum) F2@(15,13) HP 29/30 MP 0/0 Hu 99 $ 611 room=M vs Myconid Shaman(L1 HP26/45)
+-> a
+T 337 mode=combat_mode         Anborn of the White City(hum) F2@(15,13) HP 28/30 MP 0/0 Hu 99 $ 611 room=M vs Myconid Shaman(L1 HP7/45)
+-> a
+T 338 mode=combat_victory      Anborn of the White City(hum) F2@(15,13) HP 28/30 MP 0/0 Hu 99 $ 625 room=.
+-> back
+T 339 mode=game_loop           Anborn of the White City(hum) F2@(15,13) HP 28/30 MP 0/0 Hu 99 $ 625 room=.
+-> l
+T 340 mode=game_loop           Anborn of the White City(hum) F2@(15,13) HP 28/30 MP 0/0 Hu 99 $ 625 room=.
+-> e
+T 341 mode=game_loop           Anborn of the White City(hum) F2@(16,13) HP 28/30 MP 0/0 Hu 98 $ 625 room=.
+-> e
+T 342 mode=game_loop           Anborn of the White City(hum) F2@(17,13) HP 29/30 MP 0/0 Hu 97 $ 625 room=.
+-> e
+T 343 mode=combat_mode         Anborn of the White City(hum) F2@(18,13) HP 29/30 MP 0/0 Hu 96 $ 625 room=M vs Cockatrice(L1 HP25/25)
+-> a
+T 344 mode=combat_mode         Anborn of the White City(hum) F2@(18,13) HP 28/30 MP 0/0 Hu 96 $ 625 room=M vs Cockatrice(L1 HP7/25)
+-> a
+T 345 mode=combat_mode         Anborn of the White City(hum) F2@(18,13) HP 28/30 MP 0/0 Hu 96 $ 625 room=M vs Cockatrice(L1 HP7/25)
+-> a
+T 346 mode=combat_victory      Anborn of the White City(hum) F2@(18,13) HP 28/40 MP 0/0 Hu 96 $ 633 room=.
+-> back
+T 347 mode=game_loop           Anborn of the White City(hum) F2@(18,13) HP 28/40 MP 0/0 Hu 96 $ 633 room=.
+-> l
+T 348 mode=game_loop           Anborn of the White City(hum) F2@(18,13) HP 28/40 MP 0/0 Hu 96 $ 633 room=.
+-> s
+T 349 mode=game_loop           Anborn of the White City(hum) F2@(18,14) HP 29/40 MP 0/0 Hu 95 $ 633 room=.
+-> l
+T 350 mode=game_loop           Anborn of the White City(hum) F2@(18,14) HP 29/40 MP 0/0 Hu 95 $ 633 room=.
+-> i
+T 351 mode=inventory           Anborn of the White City(hum) F2@(18,14) HP 29/40 MP 0/0 Hu 95 $ 633 room=.
+-> u3
+T 352 mode=inventory           Anborn of the White City(hum) F2@(18,14) HP 40/40 MP 0/0 Hu 95 $ 633 room=.
+-> x
+T 353 mode=game_loop           Anborn of the White City(hum) F2@(18,14) HP 40/40 MP 0/0 Hu 95 $ 633 room=.
+-> s
+T 354 mode=game_loop           Anborn of the White City(hum) F2@(18,15) HP 40/40 MP 0/0 Hu 94 $ 633 room=.
+-> e
+T 355 mode=game_loop           Anborn of the White City(hum) F2@(19,15) HP 40/40 MP 0/0 Hu 93 $ 633 room=.
+-> s
+T 356 mode=garden_mode         Anborn of the White City(hum) F2@(19,16) HP 40/40 MP 0/0 Hu 92 $ 633 room=G
+-> h
+T 357 mode=game_loop           Anborn of the White City(hum) F2@(19,16) HP 40/40 MP 0/0 Hu 92 $ 633 room=.
+-> w
+T 358 mode=combat_mode         Anborn of the White City(hum) F2@(18,16) HP 40/40 MP 0/0 Hu 91 $ 633 room=M vs Bugbear(L1 HP35/35)
+-> a
+T 359 mode=combat_mode         Anborn of the White City(hum) F2@(18,16) HP 39/40 MP 0/0 Hu 91 $ 633 room=M vs Bugbear(L1 HP18/35)
+-> a
+T 360 mode=combat_mode         Anborn of the White City(hum) F2@(18,16) HP 39/40 MP 0/0 Hu 91 $ 633 room=M vs Bugbear(L1 HP18/35)
+-> a
+T 361 mode=combat_mode         Anborn of the White City(hum) F2@(18,16) HP 39/40 MP 0/0 Hu 91 $ 633 room=M vs Bugbear(L1 HP18/35)
+-> a
+T 362 mode=combat_mode         Anborn of the White City(hum) F2@(18,16) HP 38/40 MP 0/0 Hu 91 $ 633 room=M vs Bugbear(L1 HP1/35)
+-> a
+T 363 mode=combat_mode         Anborn of the White City(hum) F2@(18,16) HP 38/40 MP 0/0 Hu 91 $ 633 room=M vs Bugbear(L1 HP1/35)
+-> a
+T 364 mode=combat_mode         Anborn of the White City(hum) F2@(18,16) HP 37/40 MP 0/0 Hu 91 $ 633 room=M vs Bugbear(L1 HP1/35)
+-> a
+T 365 mode=combat_victory      Anborn of the White City(hum) F2@(18,16) HP 37/40 MP 0/0 Hu 91 $ 753 room=.
+-> back
+T 366 mode=game_loop           Anborn of the White City(hum) F2@(18,16) HP 37/40 MP 0/0 Hu 91 $ 753 room=.
+-> w
+T 367 mode=game_loop           Anborn of the White City(hum) F2@(17,16) HP 37/40 MP 0/0 Hu 90 $ 753 room=.
+-> n
+T 368 mode=game_loop           Anborn of the White City(hum) F2@(17,15) HP 38/40 MP 0/0 Hu 89 $ 753 room=.
+-> w
+T 369 mode=game_loop           Anborn of the White City(hum) F2@(16,15) HP 38/40 MP 0/0 Hu 88 $ 753 room=.
+-> n
+T 370 mode=altar_mode          Anborn of the White City(hum) F2@(16,14) HP 39/40 MP 0/0 Hu 87 $ 753 room=A
+-> pray
+T 371 mode=game_loop           Anborn of the White City(hum) F2@(16,14) HP 39/40 MP 0/0 Hu 87 $ 753 room=.
+-> n
+T 372 mode=game_loop           Anborn of the White City(hum) F2@(16,13) HP 39/40 MP 0/0 Hu 86 $ 753 room=.
+-> w
+T 373 mode=game_loop           Anborn of the White City(hum) F2@(15,13) HP 40/40 MP 0/0 Hu 85 $ 753 room=.
+-> w
+T 374 mode=game_loop           Anborn of the White City(hum) F2@(14,13) HP 40/40 MP 0/0 Hu 84 $ 753 room=.
+-> w
+T 375 mode=game_loop           Anborn of the White City(hum) F2@(13,13) HP 40/40 MP 0/0 Hu 83 $ 753 room=.
+-> n
+T 376 mode=chest_mode          Anborn of the White City(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 82 $ 753 room=C
+-> o
+T 377 mode=game_loop           Anborn of the White City(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 82 $ 823 room=.
+-> l
+T 378 mode=game_loop           Anborn of the White City(hum) F2@(13,12) HP 40/40 MP 0/0 Hu 82 $ 823 room=.
+-> n
+T 379 mode=oracle_mode         Anborn of the White City(hum) F2@(13,11) HP 40/40 MP 0/0 Hu 81 $ 823 room=O
+-> w
+T 380 mode=game_loop           Anborn of the White City(hum) F2@(12,11) HP 40/40 MP 0/0 Hu 80 $ 823 room=.
+-> s
+T 381 mode=game_loop           Anborn of the White City(hum) F2@(12,12) HP 40/40 MP 0/0 Hu 79 $ 823 room=.
+-> w
+T 382 mode=game_loop           Anborn of the White City(hum) F2@(11,12) HP 40/40 MP 0/0 Hu 78 $ 823 room=.
+-> w
+T 383 mode=game_loop           Anborn of the White City(hum) F2@(10,12) HP 40/40 MP 0/0 Hu 77 $ 823 room=.
+-> w
+T 384 mode=game_loop           Anborn of the White City(hum) F2@( 9,12) HP 40/40 MP 0/0 Hu 76 $ 823 room=.
+-> n
+T 385 mode=game_loop           Anborn of the White City(hum) F2@( 9,11) HP 40/40 MP 0/0 Hu 75 $ 823 room=.
+-> n
+T 386 mode=game_loop           Anborn of the White City(hum) F2@( 9,10) HP 40/40 MP 0/0 Hu 74 $ 823 room=.
+-> n
+T 387 mode=game_loop           Anborn of the White City(hum) F2@( 9, 9) HP 40/40 MP 0/0 Hu 73 $ 823 room=.
+-> n
+T 388 mode=game_loop           Anborn of the White City(hum) F2@( 9, 8) HP 40/40 MP 0/0 Hu 72 $ 823 room=.
+-> n
+T 389 mode=game_loop           Anborn of the White City(hum) F2@( 9, 7) HP 40/40 MP 0/0 Hu 71 $ 823 room=.
+-> n
+T 390 mode=game_loop           Anborn of the White City(hum) F2@( 9, 6) HP 40/40 MP 0/0 Hu 70 $ 823 room=.
+-> n
+T 391 mode=game_loop           Anborn of the White City(hum) F2@( 9, 5) HP 40/40 MP 0/0 Hu 69 $ 823 room=.
+-> w
+T 392 mode=chest_mode          Anborn of the White City(hum) F2@( 8, 5) HP 40/40 MP 0/0 Hu 68 $ 823 room=C
+-> n
+T 393 mode=game_loop           Anborn of the White City(hum) F2@( 8, 4) HP 40/40 MP 0/0 Hu 67 $ 823 room=.
+-> n
+T 394 mode=game_loop           Anborn of the White City(hum) F2@( 8, 3) HP 40/40 MP 0/0 Hu 66 $ 823 room=.
+-> n
+T 395 mode=game_loop           Anborn of the White City(hum) F2@( 8, 2) HP 40/40 MP 0/0 Hu 65 $ 823 room=.
+-> n
+T 396 mode=game_loop           Anborn of the White City(hum) F2@( 8, 1) HP 40/40 MP 0/0 Hu 64 $ 823 room=.
+-> w
+T 397 mode=combat_mode         Anborn of the White City(hum) F2@( 7, 1) HP 40/40 MP 0/0 Hu 63 $ 823 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 398 mode=combat_mode         Anborn of the White City(hum) F2@( 7, 1) HP 40/40 MP 0/0 Hu 63 $ 823 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 399 mode=combat_mode         Anborn of the White City(hum) F2@( 7, 1) HP 39/40 MP 0/0 Hu 63 $ 823 room=M vs Myconid Shaman(L1 HP26/45)
+-> f
+T 400 mode=flee_direction_mode Anborn of the White City(hum) F2@( 7, 1) HP 39/40 MP 0/0 Hu 63 $ 823 room=M
+-> s
+T 401 mode=game_loop           Anborn of the White City(hum) F2@( 7, 2) HP 39/40 MP 0/0 Hu 63 $ 823 room=.
+-> w
+T 402 mode=game_loop           Anborn of the White City(hum) F2@( 6, 2) HP 39/40 MP 0/0 Hu 62 $ 823 room=.
+-> w
+T 403 mode=chest_mode          Anborn of the White City(hum) F2@( 5, 2) HP 39/40 MP 0/0 Hu 61 $ 823 room=C
+-> o
+T 404 mode=game_loop           Anborn of the White City(hum) F2@( 5, 2) HP 39/40 MP 0/0 Hu 61 $ 863 room=.
+-> n
+T 405 mode=pool_mode           Anborn of the White City(hum) F2@( 5, 1) HP 39/40 MP 0/0 Hu 60 $ 863 room=P
+-> dr
+T 406 mode=game_loop           Anborn of the White City(hum) F2@( 5, 1) HP 39/40 MP 0/0 Hu 60 $ 939 room=.
+-> w
+T 407 mode=game_loop           Anborn of the White City(hum) F2@( 4, 1) HP 39/40 MP 0/0 Hu 59 $ 939 room=.
+-> w
+T 408 mode=game_loop           Anborn of the White City(hum) F2@( 3, 1) HP 39/40 MP 0/0 Hu 58 $ 939 room=.
+-> l
+T 409 mode=game_loop           Anborn of the White City(hum) F2@( 3, 1) HP 39/40 MP 0/0 Hu 58 $ 939 room=.
+-> s
+T 410 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 939 room=V
+-> r1
+T 411 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 908 room=V
+-> r2
+T 412 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 877 room=V
+-> b14
+T 413 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 867 room=V
+-> b4
+T 414 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 837 room=V
+-> b4
+T 415 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 807 room=V
+-> b4
+T 416 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 777 room=V
+-> b4
+T 417 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 747 room=V
+-> b5
+T 418 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 717 room=V
+-> b9
+T 419 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 712 room=V
+-> b9
+T 420 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 707 room=V
+-> b7
+T 421 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 557 room=V
+-> b3
+T 422 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 487 room=V
+-> b4
+T 423 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 337 room=V
+-> b4
+T 424 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 257 room=V
+-> b1
+T 425 mode=vendor_shop         Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 175 room=V
+-> x
+T 426 mode=game_loop           Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 175 room=V
+-> i
+T 427 mode=inventory           Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 175 room=V
+-> e1
+T 428 mode=inventory           Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 175 room=V
+-> x
+T 429 mode=game_loop           Anborn of the White City(hum) F2@( 3, 2) HP 39/40 MP 0/0 Hu 57 $ 175 room=V
+-> n
+T 430 mode=game_loop           Anborn of the White City(hum) F2@( 3, 1) HP 39/40 MP 0/0 Hu 56 $ 175 room=.
+-> w
+T 431 mode=chest_mode          Anborn of the White City(hum) F2@( 2, 1) HP 39/40 MP 0/0 Hu 55 $ 175 room=C
+-> o
+T 432 mode=game_loop           Anborn of the White City(hum) F2@( 2, 1) HP 39/40 MP 0/0 Hu 55 $ 235 room=.
+-> w
+T 433 mode=stairs_up_mode      Anborn of the White City(hum) F2@( 1, 1) HP 39/40 MP 0/0 Hu 54 $ 235 room=U
+-> u
+T 434 mode=stairs_down_mode    Anborn of the White City(hum) F1@(14, 8) HP 39/40 MP 0/0 Hu 54 $ 235 room=D
+-> d
+T 435 mode=stairs_up_mode      Anborn of the White City(hum) F2@( 1, 1) HP 39/40 MP 0/0 Hu 54 $ 235 room=U
+-> e
+T 436 mode=game_loop           Anborn of the White City(hum) F2@( 2, 1) HP 39/40 MP 0/0 Hu 53 $ 235 room=.
+-> e
+T 437 mode=game_loop           Anborn of the White City(hum) F2@( 3, 1) HP 39/40 MP 0/0 Hu 52 $ 235 room=.
+-> e
+T 438 mode=game_loop           Anborn of the White City(hum) F2@( 4, 1) HP 39/40 MP 0/0 Hu 51 $ 235 room=.
+-> e
+T 439 mode=game_loop           Anborn of the White City(hum) F2@( 5, 1) HP 39/40 MP 0/0 Hu 50 $ 235 room=.
+-> s
+T 440 mode=game_loop           Anborn of the White City(hum) F2@( 5, 2) HP 39/40 MP 0/0 Hu 49 $ 235 room=.
+-> i
+T 441 mode=inventory           Anborn of the White City(hum) F2@( 5, 2) HP 39/40 MP 0/0 Hu 49 $ 235 room=.
+-> eat1
+T 442 mode=inventory           Anborn of the White City(hum) F2@( 5, 2) HP 39/40 MP 0/0 Hu 99 $ 235 room=.
+-> u10
+T 443 mode=upgrade_scroll_mode Anborn of the White City(hum) F2@( 5, 2) HP 39/40 MP 0/0 Hu 99 $ 235 room=.
+-> 1
+T 444 mode=inventory           Anborn of the White City(hum) F2@( 5, 2) HP 39/40 MP 0/0 Hu 99 $ 235 room=.
+-> x
+T 445 mode=game_loop           Anborn of the White City(hum) F2@( 5, 2) HP 39/40 MP 0/0 Hu 99 $ 235 room=.
+-> e
+T 446 mode=game_loop           Anborn of the White City(hum) F2@( 6, 2) HP 39/40 MP 0/0 Hu 98 $ 235 room=.
+-> e
+T 447 mode=game_loop           Anborn of the White City(hum) F2@( 7, 2) HP 40/40 MP 0/0 Hu 97 $ 235 room=.
+-> s
+T 448 mode=combat_mode         Anborn of the White City(hum) F2@( 7, 3) HP 40/40 MP 0/0 Hu 96 $ 235 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T 449 mode=combat_victory      Anborn of the White City(hum) F2@( 7, 3) HP 39/40 MP 0/0 Hu 96 $ 251 room=.
+-> back
+T 450 mode=game_loop           Anborn of the White City(hum) F2@( 7, 3) HP 39/40 MP 0/0 Hu 96 $ 251 room=.
+-> w
+T 451 mode=game_loop           Anborn of the White City(hum) F2@( 6, 3) HP 39/40 MP 0/0 Hu 95 $ 251 room=.
+-> n
+T 452 mode=game_loop           Anborn of the White City(hum) F2@( 6, 2) HP 40/40 MP 0/0 Hu 94 $ 251 room=.
+-> w
+T 453 mode=game_loop           Anborn of the White City(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 93 $ 251 room=.
+-> n
+T 454 mode=game_loop           Anborn of the White City(hum) F2@( 5, 1) HP 40/40 MP 0/0 Hu 92 $ 251 room=.
+-> w
+T 455 mode=game_loop           Anborn of the White City(hum) F2@( 4, 1) HP 40/40 MP 0/0 Hu 91 $ 251 room=.
+-> w
+T 456 mode=game_loop           Anborn of the White City(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 90 $ 251 room=.
+-> s
+T 457 mode=game_loop           Anborn of the White City(hum) F2@( 3, 2) HP 40/40 MP 0/0 Hu 89 $ 251 room=V
+-> n
+T 458 mode=game_loop           Anborn of the White City(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 88 $ 251 room=.
+-> w
+T 459 mode=game_loop           Anborn of the White City(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 87 $ 251 room=.
+-> w
+T 460 mode=stairs_up_mode      Anborn of the White City(hum) F2@( 1, 1) HP 40/40 MP 0/0 Hu 86 $ 251 room=U
+-> e
+T 461 mode=game_loop           Anborn of the White City(hum) F2@( 2, 1) HP 40/40 MP 0/0 Hu 85 $ 251 room=.
+-> e
+T 462 mode=game_loop           Anborn of the White City(hum) F2@( 3, 1) HP 40/40 MP 0/0 Hu 84 $ 251 room=.
+-> e
+T 463 mode=game_loop           Anborn of the White City(hum) F2@( 4, 1) HP 40/40 MP 0/0 Hu 83 $ 251 room=.
+-> e
+T 464 mode=game_loop           Anborn of the White City(hum) F2@( 5, 1) HP 40/40 MP 0/0 Hu 82 $ 251 room=.
+-> s
+T 465 mode=game_loop           Anborn of the White City(hum) F2@( 5, 2) HP 40/40 MP 0/0 Hu 81 $ 251 room=.
+-> e
+T 466 mode=game_loop           Anborn of the White City(hum) F2@( 6, 2) HP 40/40 MP 0/0 Hu 80 $ 251 room=.
+-> e
+T 467 mode=game_loop           Anborn of the White City(hum) F2@( 7, 2) HP 40/40 MP 0/0 Hu 79 $ 251 room=.
+-> e
+T 468 mode=game_loop           Anborn of the White City(hum) F2@( 8, 2) HP 40/40 MP 0/0 Hu 78 $ 251 room=.
+-> e
+T 469 mode=game_loop           Anborn of the White City(hum) F2@( 9, 2) HP 40/40 MP 0/0 Hu 77 $ 251 room=.
+-> e
+T 470 mode=chest_mode          Anborn of the White City(hum) F2@(10, 2) HP 40/40 MP 0/0 Hu 76 $ 251 room=C
+-> o
+T 471 mode=game_loop           Anborn of the White City(hum) F2@(10, 2) HP 22/40 MP 0/0 Hu 76 $ 251 room=.
+-> i
+T 472 mode=inventory           Anborn of the White City(hum) F2@(10, 2) HP 22/40 MP 0/0 Hu 76 $ 251 room=.
+-> u5
+T 473 mode=inventory           Anborn of the White City(hum) F2@(10, 2) HP 40/40 MP 0/0 Hu 76 $ 251 room=.
+-> u6
+T 474 mode=upgrade_scroll_mode Anborn of the White City(hum) F2@(10, 2) HP 40/40 MP 0/0 Hu 76 $ 251 room=.
+-> 1
+T 475 mode=inventory           Anborn of the White City(hum) F2@(10, 2) HP 40/40 MP 0/0 Hu 76 $ 251 room=.
+-> x
+T 476 mode=game_loop           Anborn of the White City(hum) F2@(10, 2) HP 40/40 MP 0/0 Hu 76 $ 251 room=.
+-> w
+T 477 mode=game_loop           Anborn of the White City(hum) F2@( 9, 2) HP 40/40 MP 0/0 Hu 75 $ 251 room=.
+-> s
+T 478 mode=game_loop           Anborn of the White City(hum) F2@( 9, 3) HP 40/40 MP 0/0 Hu 74 $ 251 room=.
+-> s
+T 479 mode=game_loop           Anborn of the White City(hum) F2@( 9, 4) HP 40/40 MP 0/0 Hu 73 $ 251 room=.
+-> e
+T 480 mode=dungeon_mode        Anborn of the White City(hum) F2@(10, 4) HP 40/40 MP 0/0 Hu 72 $ 251 room=N
+-> u
+T 481 mode=game_loop           Anborn of the White City(hum) F2@(10, 4) HP 40/40 MP 0/0 Hu 72 $ 251 room=N
+-> w
+T 482 mode=game_loop           Anborn of the White City(hum) F2@( 9, 4) HP 40/40 MP 0/0 Hu 71 $ 251 room=.
+-> s
+T 483 mode=game_loop           Anborn of the White City(hum) F2@( 9, 5) HP 40/40 MP 0/0 Hu 70 $ 251 room=.
+-> s
+T 484 mode=game_loop           Anborn of the White City(hum) F2@( 9, 6) HP 40/40 MP 0/0 Hu 69 $ 251 room=.
+-> w
+T 485 mode=game_loop           Anborn of the White City(hum) F2@( 8, 6) HP 40/40 MP 0/0 Hu 68 $ 251 room=.
+-> w
+T 486 mode=game_loop           Anborn of the White City(hum) F2@( 7, 6) HP 40/40 MP 0/0 Hu 67 $ 251 room=.
+-> l
+T 487 mode=game_loop           Anborn of the White City(hum) F2@( 7, 6) HP 40/40 MP 0/0 Hu 67 $ 251 room=.
+-> w
+T 488 mode=altar_mode          Anborn of the White City(hum) F2@( 6, 6) HP 40/40 MP 0/0 Hu 66 $ 251 room=A
+-> pray
+T 489 mode=game_loop           Anborn of the White City(hum) F2@( 6, 6) HP 40/42 MP 0/0 Hu 66 $ 251 room=.
+-> e
+T 490 mode=game_loop           Anborn of the White City(hum) F2@( 7, 6) HP 40/42 MP 0/0 Hu 65 $ 251 room=.
+-> s
+T 491 mode=dungeon_mode        Anborn of the White City(hum) F2@( 7, 7) HP 40/42 MP 0/0 Hu 64 $ 251 room=N
+-> u
+T 492 mode=game_loop           Anborn of the White City(hum) F2@( 7, 7) HP 40/42 MP 0/0 Hu 64 $ 251 room=N
+-> n
+T 493 mode=game_loop           Anborn of the White City(hum) F2@( 7, 6) HP 40/42 MP 0/0 Hu 63 $ 251 room=.
+-> e
+T 494 mode=game_loop           Anborn of the White City(hum) F2@( 8, 6) HP 41/42 MP 0/0 Hu 62 $ 251 room=.
+-> e
+T 495 mode=game_loop           Anborn of the White City(hum) F2@( 9, 6) HP 41/42 MP 0/0 Hu 61 $ 251 room=.
+-> s
+T 496 mode=game_loop           Anborn of the White City(hum) F2@( 9, 7) HP 41/42 MP 0/0 Hu 60 $ 251 room=.
+-> s
+T 497 mode=game_loop           Anborn of the White City(hum) F2@( 9, 8) HP 41/42 MP 0/0 Hu 59 $ 251 room=.
+-> s
+T 498 mode=game_loop           Anborn of the White City(hum) F2@( 9, 9) HP 41/42 MP 0/0 Hu 58 $ 251 room=.
+-> e
+T 499 mode=game_loop           Anborn of the White City(hum) F2@(10, 9) HP 41/42 MP 0/0 Hu 57 $ 251 room=.
+-> e
+T 500 mode=pool_mode           Anborn of the White City(hum) F2@(11, 9) HP 41/42 MP 0/0 Hu 56 $ 251 room=P
+-> dr
+T 501 mode=game_loop           Anborn of the White City(hum) F2@(11, 9) HP 42/42 MP 0/0 Hu 56 $ 251 room=.
+-> n
+T 502 mode=game_loop           Anborn of the White City(hum) F2@(11, 8) HP 42/42 MP 0/0 Hu 55 $ 251 room=.
+-> w
+T 503 mode=game_loop           Anborn of the White City(hum) F2@(10, 8) HP 42/42 MP 0/0 Hu 54 $ 251 room=.
+-> n
+T 504 mode=game_loop           Anborn of the White City(hum) F2@(10, 7) HP 42/42 MP 0/0 Hu 53 $ 251 room=.
+-> w
+T 505 mode=game_loop           Anborn of the White City(hum) F2@( 9, 7) HP 42/42 MP 0/0 Hu 52 $ 251 room=.
+-> s
+T 506 mode=game_loop           Anborn of the White City(hum) F2@( 9, 8) HP 42/42 MP 0/0 Hu 51 $ 251 room=.
+-> s
+T 507 mode=game_loop           Anborn of the White City(hum) F2@( 9, 9) HP 42/42 MP 0/0 Hu 50 $ 251 room=.
+-> s
+T 508 mode=game_loop           Anborn of the White City(hum) F2@( 9,10) HP 42/42 MP 0/0 Hu 49 $ 251 room=.
+-> i
+T 509 mode=inventory           Anborn of the White City(hum) F2@( 9,10) HP 42/42 MP 0/0 Hu 49 $ 251 room=.
+-> eat1
+T 510 mode=inventory           Anborn of the White City(hum) F2@( 9,10) HP 42/42 MP 0/0 Hu 99 $ 251 room=.
+-> x
+T 511 mode=game_loop           Anborn of the White City(hum) F2@( 9,10) HP 42/42 MP 0/0 Hu 99 $ 251 room=.
+-> s
+T 512 mode=game_loop           Anborn of the White City(hum) F2@( 9,11) HP 42/42 MP 0/0 Hu 98 $ 251 room=.
+-> e
+T 513 mode=combat_mode         Anborn of the White City(hum) F2@(10,11) HP 42/42 MP 0/0 Hu 97 $ 251 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 514 mode=combat_mode         Anborn of the White City(hum) F2@(10,11) HP 42/42 MP 0/0 Hu 97 $ 251 room=M vs Giant Spider(L1 HP7/40)
+-> f
+T 515 mode=flee_direction_mode Anborn of the White City(hum) F2@(10,11) HP 42/42 MP 0/0 Hu 97 $ 251 room=M
+-> n
+T 516 mode=game_loop           Anborn of the White City(hum) F2@(10,10) HP 42/42 MP 0/0 Hu 97 $ 251 room=.
+-> n
+T 517 mode=game_loop           Anborn of the White City(hum) F2@(10, 9) HP 42/42 MP 0/0 Hu 96 $ 251 room=.
+-> n
+T 518 mode=game_loop           Anborn of the White City(hum) F2@(10, 8) HP 42/42 MP 0/0 Hu 95 $ 251 room=.
+-> e
+T 519 mode=game_loop           Anborn of the White City(hum) F2@(11, 8) HP 42/42 MP 0/0 Hu 94 $ 251 room=.
+-> s
+T 520 mode=game_loop           Anborn of the White City(hum) F2@(11, 9) HP 42/42 MP 0/0 Hu 93 $ 251 room=.
+-> n
+T 521 mode=game_loop           Anborn of the White City(hum) F2@(11, 8) HP 42/42 MP 0/0 Hu 92 $ 251 room=.
+-> s
+T 522 mode=game_loop           Anborn of the White City(hum) F2@(11, 9) HP 42/42 MP 0/0 Hu 91 $ 251 room=.
+-> w
+T 523 mode=game_loop           Anborn of the White City(hum) F2@(10, 9) HP 42/42 MP 0/0 Hu 90 $ 251 room=.
+-> s
+T 524 mode=game_loop           Anborn of the White City(hum) F2@(10,10) HP 42/42 MP 0/0 Hu 89 $ 251 room=.
+-> w
+T 525 mode=game_loop           Anborn of the White City(hum) F2@( 9,10) HP 42/42 MP 0/0 Hu 88 $ 251 room=.
+-> s
+T 526 mode=game_loop           Anborn of the White City(hum) F2@( 9,11) HP 42/42 MP 0/0 Hu 87 $ 251 room=.
+-> s
+T 527 mode=game_loop           Anborn of the White City(hum) F2@( 9,12) HP 42/42 MP 0/0 Hu 86 $ 251 room=.
+-> s
+T 528 mode=game_loop           Anborn of the White City(hum) F2@( 9,13) HP 42/42 MP 0/0 Hu 85 $ 251 room=.
+-> w
+T 529 mode=combat_mode         Anborn of the White City(hum) F2@( 8,13) HP 42/42 MP 0/0 Hu 84 $ 251 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 530 mode=combat_mode         Anborn of the White City(hum) F2@( 8,13) HP 42/42 MP 0/0 Hu 84 $ 251 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 531 mode=combat_mode         Anborn of the White City(hum) F2@( 8,13) HP 42/42 MP 0/0 Hu 84 $ 251 room=M vs Skeleton(L1 HP3/25)
+-> a
+T 532 mode=combat_victory      Anborn of the White City(hum) F2@( 8,13) HP 41/42 MP 0/0 Hu 84 $ 267 room=.
+-> back
+T 533 mode=game_loop           Anborn of the White City(hum) F2@( 8,13) HP 41/42 MP 0/0 Hu 84 $ 267 room=.
+-> e
+T 534 mode=game_loop           Anborn of the White City(hum) F2@( 9,13) HP 41/42 MP 0/0 Hu 83 $ 267 room=.
+-> e
+T 535 mode=game_loop           Anborn of the White City(hum) F2@(10,13) HP 41/42 MP 0/0 Hu 82 $ 267 room=.
+-> n
+T 536 mode=game_loop           Anborn of the White City(hum) F2@(10,12) HP 41/42 MP 0/0 Hu 81 $ 267 room=.
+-> w
+T 537 mode=game_loop           Anborn of the White City(hum) F2@( 9,12) HP 42/42 MP 0/0 Hu 80 $ 267 room=.
+-> n
+T 538 mode=game_loop           Anborn of the White City(hum) F2@( 9,11) HP 42/42 MP 0/0 Hu 79 $ 267 room=.
+-> n
+T 539 mode=game_loop           Anborn of the White City(hum) F2@( 9,10) HP 42/42 MP 0/0 Hu 78 $ 267 room=.
+-> n
+T 540 mode=game_loop           Anborn of the White City(hum) F2@( 9, 9) HP 42/42 MP 0/0 Hu 77 $ 267 room=.
+-> n
+T 541 mode=game_loop           Anborn of the White City(hum) F2@( 9, 8) HP 42/42 MP 0/0 Hu 76 $ 267 room=.
+-> n
+T 542 mode=game_loop           Anborn of the White City(hum) F2@( 9, 7) HP 42/42 MP 0/0 Hu 75 $ 267 room=.
+-> n
+T 543 mode=game_loop           Anborn of the White City(hum) F2@( 9, 6) HP 42/42 MP 0/0 Hu 74 $ 267 room=.
+-> w
+T 544 mode=game_loop           Anborn of the White City(hum) F2@( 8, 6) HP 42/42 MP 0/0 Hu 73 $ 267 room=.
+-> w
+T 545 mode=game_loop           Anborn of the White City(hum) F2@( 7, 6) HP 42/42 MP 0/0 Hu 72 $ 267 room=.
+-> s
+T 546 mode=dungeon_mode        Anborn of the White City(hum) F2@( 7, 7) HP 42/42 MP 0/0 Hu 71 $ 267 room=N
+-> u
+T 547 mode=dungeon_unlocked_mode Anborn of the White City(hum) F2@( 7, 7) HP 42/42 MP 0/0 Hu 71 $ 267 room=N
+-> r
+T 548 mode=game_loop           Anborn of the White City(hum) F2@( 7, 7) HP 42/42 MP 0/0 Hu 71 $ 267 room=N
+-> n
+T 549 mode=game_loop           Anborn of the White City(hum) F2@( 7, 6) HP 42/42 MP 0/0 Hu 70 $ 267 room=.
+-> w
+T 550 mode=game_loop           Anborn of the White City(hum) F2@( 6, 6) HP 42/42 MP 0/0 Hu 69 $ 267 room=.
+-> e
+T 551 mode=game_loop           Anborn of the White City(hum) F2@( 7, 6) HP 42/42 MP 0/0 Hu 68 $ 267 room=.
+-> i
+T 552 mode=inventory           Anborn of the White City(hum) F2@( 7, 6) HP 42/42 MP 0/0 Hu 68 $ 267 room=.
+-> eat1
+T 553 mode=inventory           Anborn of the White City(hum) F2@( 7, 6) HP 42/42 MP 0/0 Hu100 $ 267 room=.
+-> u8
+T 554 mode=game_loop           Anborn of the White City(hum) F4@( 5,15) HP 42/42 MP 0/0 Hu100 $ 267 room=.
+-> l
+T 555 mode=game_loop           Anborn of the White City(hum) F4@( 5,15) HP 42/42 MP 0/0 Hu100 $ 267 room=.
+-> n
+T 556 mode=vendor_shop         Anborn of the White City(hum) F4@( 5,14) HP 42/42 MP 0/0 Hu 99 $ 267 room=V
+-> b12
+T 557 mode=vendor_shop         Anborn of the White City(hum) F4@( 5,14) HP 42/42 MP 0/0 Hu 99 $ 257 room=V
+-> b6
+T 558 mode=vendor_shop         Anborn of the White City(hum) F4@( 5,14) HP 42/42 MP 0/0 Hu 99 $ 227 room=V
+-> b11
+T 559 mode=vendor_shop         Anborn of the White City(hum) F4@( 5,14) HP 42/42 MP 0/0 Hu 99 $ 222 room=V
+-> b11
+T 560 mode=vendor_shop         Anborn of the White City(hum) F4@( 5,14) HP 42/42 MP 0/0 Hu 99 $ 217 room=V
+-> x
+T 561 mode=game_loop           Anborn of the White City(hum) F4@( 5,14) HP 42/42 MP 0/0 Hu 99 $ 217 room=V
+-> l
+T 562 mode=game_loop           Anborn of the White City(hum) F4@( 5,14) HP 42/42 MP 0/0 Hu 99 $ 217 room=V
+-> e
+T 563 mode=game_loop           Anborn of the White City(hum) F4@( 6,14) HP 42/42 MP 0/0 Hu 98 $ 217 room=.
+-> l
+T 564 mode=game_loop           Anborn of the White City(hum) F4@( 6,14) HP 42/42 MP 0/0 Hu 98 $ 217 room=.
+-> e
+T 565 mode=game_loop           Anborn of the White City(hum) F4@( 7,14) HP 42/42 MP 0/0 Hu 97 $ 217 room=.
+-> l
+T 566 mode=game_loop           Anborn of the White City(hum) F4@( 7,14) HP 42/42 MP 0/0 Hu 97 $ 217 room=.
+-> e
+T 567 mode=game_loop           Anborn of the White City(hum) F4@( 8,14) HP 42/42 MP 0/0 Hu 96 $ 217 room=.
+-> l
+T 568 mode=game_loop           Anborn of the White City(hum) F4@( 8,14) HP 42/42 MP 0/0 Hu 96 $ 217 room=.
+-> e
+T 569 mode=game_loop           Anborn of the White City(hum) F4@( 9,14) HP 42/42 MP 0/0 Hu 95 $ 217 room=.
+-> l
+T 570 mode=game_loop           Anborn of the White City(hum) F4@( 9,14) HP 42/42 MP 0/0 Hu 95 $ 217 room=.
+-> e
+T 571 mode=game_loop           Anborn of the White City(hum) F4@(10,14) HP 42/42 MP 0/0 Hu 94 $ 217 room=.
+-> l
+T 572 mode=game_loop           Anborn of the White City(hum) F4@(10,14) HP 42/42 MP 0/0 Hu 94 $ 217 room=.
+-> n
+T 573 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP57/57)
+-> a
+T 574 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP57/57)
+-> a
+T 575 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP57/57)
+-> a
+T 576 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP36/57)
+-> a
+T 577 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 39/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP36/57)
+-> a
+T 578 mode=combat_mode         Anborn of the White City(hum) F4@(10,13) HP 36/42 MP 0/0 Hu 93 $ 217 room=M vs Bugbear(L3 HP15/57)
+-> a
+T 579 mode=combat_victory      Anborn of the White City(hum) F4@(10,13) HP 33/42 MP 0/0 Hu 93 $ 237 room=.
+-> back
+T 580 mode=game_loop           Anborn of the White City(hum) F4@(10,13) HP 33/42 MP 0/0 Hu 93 $ 237 room=.
+-> i
+T 581 mode=inventory           Anborn of the White City(hum) F4@(10,13) HP 33/42 MP 0/0 Hu 93 $ 237 room=.
+-> u6
+T 582 mode=inventory           Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 237 room=.
+-> x
+T 583 mode=game_loop           Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 237 room=.
+-> l
+T 584 mode=game_loop           Anborn of the White City(hum) F4@(10,13) HP 42/42 MP 0/0 Hu 93 $ 237 room=.
+-> e
+T 585 mode=game_loop           Anborn of the White City(hum) F4@(11,13) HP 42/42 MP 0/0 Hu 92 $ 237 room=.
+-> l
+T 586 mode=game_loop           Anborn of the White City(hum) F4@(11,13) HP 42/42 MP 0/0 Hu 92 $ 237 room=.
+-> e
+T 587 mode=game_loop           Anborn of the White City(hum) F4@(12,13) HP 42/42 MP 0/0 Hu 91 $ 237 room=.
+-> l
+T 588 mode=game_loop           Anborn of the White City(hum) F4@(12,13) HP 42/42 MP 0/0 Hu 91 $ 237 room=.
+-> n
+T 589 mode=game_loop           Anborn of the White City(hum) F4@(12,12) HP 42/42 MP 0/0 Hu 90 $ 237 room=.
+-> l
+T 590 mode=game_loop           Anborn of the White City(hum) F4@(12,12) HP 42/42 MP 0/0 Hu 90 $ 237 room=.
+-> e
+T 591 mode=chest_mode          Anborn of the White City(hum) F4@(13,12) HP 42/42 MP 0/0 Hu 89 $ 237 room=C
+-> o
+T 592 mode=game_loop           Anborn of the White City(hum) F4@(13,12) HP 42/42 MP 0/0 Hu 89 $ 237 room=.
+-> l
+T 593 mode=game_loop           Anborn of the White City(hum) F4@(13,12) HP 42/42 MP 0/0 Hu 89 $ 237 room=.
+-> e
+T 594 mode=game_loop           Anborn of the White City(hum) F4@(14,12) HP 42/42 MP 0/0 Hu 88 $ 237 room=.
+-> l
+T 595 mode=game_loop           Anborn of the White City(hum) F4@(14,12) HP 42/42 MP 0/0 Hu 88 $ 237 room=.
+-> s
+T 596 mode=game_loop           Anborn of the White City(hum) F4@(14,13) HP 42/42 MP 0/0 Hu 87 $ 237 room=.
+-> l
+T 597 mode=game_loop           Anborn of the White City(hum) F4@(14,13) HP 42/42 MP 0/0 Hu 87 $ 237 room=.
+-> s
+T 598 mode=game_loop           Anborn of the White City(hum) F4@(14,14) HP 42/42 MP 0/0 Hu 86 $ 237 room=.
+-> l
+T 599 mode=game_loop           Anborn of the White City(hum) F4@(14,14) HP 42/42 MP 0/0 Hu 86 $ 237 room=.
+-> s
+T 600 mode=pool_mode           Anborn of the White City(hum) F4@(14,15) HP 42/42 MP 0/0 Hu 85 $ 237 room=P
+-> dr
+T 601 mode=game_loop           Anborn of the White City(hum) F4@(14,15) HP 42/42 MP 0/0 Hu 85 $ 237 room=.
+-> l
+T 602 mode=game_loop           Anborn of the White City(hum) F4@(14,15) HP 42/42 MP 0/0 Hu 85 $ 237 room=.
+-> s
+T 603 mode=game_loop           Anborn of the White City(hum) F4@(14,16) HP 42/42 MP 0/0 Hu 84 $ 237 room=.
+-> l
+T 604 mode=game_loop           Anborn of the White City(hum) F4@(14,16) HP 42/42 MP 0/0 Hu 84 $ 237 room=.
+-> e
+T 605 mode=game_loop           Anborn of the White City(hum) F4@(15,16) HP 42/42 MP 0/0 Hu 83 $ 237 room=.
+-> e
+T 606 mode=game_loop           Anborn of the White City(hum) F4@(16,16) HP 42/42 MP 0/0 Hu 82 $ 237 room=.
+-> e
+T 607 mode=game_loop           Anborn of the White City(hum) F4@(17,16) HP 42/42 MP 0/0 Hu 81 $ 237 room=.
+-> e
+T 608 mode=game_loop           Anborn of the White City(hum) F4@(18,16) HP 42/42 MP 0/0 Hu 80 $ 237 room=.
+-> e
+T 609 mode=altar_mode          Anborn of the White City(hum) F4@(19,16) HP 42/42 MP 0/0 Hu 79 $ 237 room=A
+-> pray
+T 610 mode=game_loop           Anborn of the White City(hum) F4@(19,16) HP 42/42 MP 0/0 Hu 79 $ 274 room=.
+-> w
+T 611 mode=game_loop           Anborn of the White City(hum) F4@(18,16) HP 42/42 MP 0/0 Hu 78 $ 274 room=.
+-> e
+T 612 mode=game_loop           Anborn of the White City(hum) F4@(19,16) HP 42/42 MP 0/0 Hu 77 $ 274 room=.
+-> w
+T 613 mode=game_loop           Anborn of the White City(hum) F4@(18,16) HP 42/42 MP 0/0 Hu 76 $ 274 room=.
+-> w
+T 614 mode=game_loop           Anborn of the White City(hum) F4@(17,16) HP 42/42 MP 0/0 Hu 75 $ 274 room=.
+-> w
+T 615 mode=game_loop           Anborn of the White City(hum) F4@(16,16) HP 42/42 MP 0/0 Hu 74 $ 274 room=.
+-> w
+T 616 mode=game_loop           Anborn of the White City(hum) F4@(15,16) HP 42/42 MP 0/0 Hu 73 $ 274 room=.
+-> w
+T 617 mode=game_loop           Anborn of the White City(hum) F4@(14,16) HP 42/42 MP 0/0 Hu 72 $ 274 room=.
+-> w
+T 618 mode=game_loop           Anborn of the White City(hum) F4@(13,16) HP 42/42 MP 0/0 Hu 71 $ 274 room=.
+-> w
+T 619 mode=chest_mode          Anborn of the White City(hum) F4@(12,16) HP 42/42 MP 0/0 Hu 70 $ 274 room=C
+-> o
+T 620 mode=game_loop           Anborn of the White City(hum) F4@(12,16) HP 42/42 MP 0/0 Hu 70 $ 374 room=.
+-> n
+T 621 mode=game_loop           Anborn of the White City(hum) F4@(12,15) HP 42/42 MP 0/0 Hu 69 $ 374 room=.
+-> e
+T 622 mode=game_loop           Anborn of the White City(hum) F4@(13,15) HP 42/42 MP 0/0 Hu 68 $ 374 room=.
+-> n
+T 623 mode=game_loop           Anborn of the White City(hum) F4@(13,14) HP 42/42 MP 0/0 Hu 67 $ 374 room=.
+-> e
+T 624 mode=game_loop           Anborn of the White City(hum) F4@(14,14) HP 42/42 MP 0/0 Hu 66 $ 374 room=.
+-> n
+T 625 mode=game_loop           Anborn of the White City(hum) F4@(14,13) HP 42/42 MP 0/0 Hu 65 $ 374 room=.
+-> n
+T 626 mode=game_loop           Anborn of the White City(hum) F4@(14,12) HP 42/42 MP 0/0 Hu 64 $ 374 room=.
+-> e
+T 627 mode=game_loop           Anborn of the White City(hum) F4@(15,12) HP 42/42 MP 0/0 Hu 63 $ 374 room=.
+-> e
+T 628 mode=game_loop           Anborn of the White City(hum) F4@(16,12) HP 42/42 MP 0/0 Hu 62 $ 374 room=.
+-> l
+T 629 mode=game_loop           Anborn of the White City(hum) F4@(16,12) HP 42/42 MP 0/0 Hu 62 $ 374 room=.
+-> e
+T 630 mode=game_loop           Anborn of the White City(hum) F4@(17,12) HP 42/42 MP 0/0 Hu 61 $ 374 room=.
+-> l
+T 631 mode=game_loop           Anborn of the White City(hum) F4@(17,12) HP 42/42 MP 0/0 Hu 61 $ 374 room=.
+-> e
+T 632 mode=game_loop           Anborn of the White City(hum) F4@(18,12) HP 42/42 MP 0/0 Hu 60 $ 374 room=.
+-> l
+T 633 mode=game_loop           Anborn of the White City(hum) F4@(18,12) HP 42/42 MP 0/0 Hu 60 $ 374 room=.
+-> n
+T 634 mode=game_loop           Anborn of the White City(hum) F4@(18,11) HP 42/42 MP 0/0 Hu 59 $ 374 room=.
+-> l
+T 635 mode=game_loop           Anborn of the White City(hum) F4@(18,11) HP 42/42 MP 0/0 Hu 59 $ 374 room=.
+-> e
+T 636 mode=game_loop           Anborn of the White City(hum) F4@(19,11) HP 42/42 MP 0/0 Hu 58 $ 374 room=.
+-> l
+T 637 mode=game_loop           Anborn of the White City(hum) F4@(19,11) HP 42/42 MP 0/0 Hu 58 $ 374 room=.
+-> n
+T 638 mode=game_loop           Anborn of the White City(hum) F4@(19,10) HP 42/42 MP 0/0 Hu 57 $ 374 room=.
+-> n
+T 639 mode=game_loop           Anborn of the White City(hum) F4@(19, 9) HP 42/42 MP 0/0 Hu 56 $ 374 room=.
+-> w
+T 640 mode=game_loop           Anborn of the White City(hum) F4@(18, 9) HP 42/42 MP 0/0 Hu 55 $ 374 room=.
+-> w
+T 641 mode=combat_mode         Anborn of the White City(hum) F4@(17, 9) HP 42/42 MP 0/0 Hu 54 $ 374 room=M vs Owlbear(L3 HP50/50)
+-> a
+T 642 mode=combat_mode         Anborn of the White City(hum) F4@(17, 9) HP 42/42 MP 0/0 Hu 54 $ 374 room=M vs Owlbear(L3 HP19/50)
+-> a
+T 643 mode=combat_mode         Anborn of the White City(hum) F4@(17, 9) HP 39/42 MP 0/0 Hu 54 $ 374 room=M vs Owlbear(L3 HP19/50)
+-> a
+T 644 mode=combat_victory      Anborn of the White City(hum) F4@(17, 9) HP 39/52 MP 0/0 Hu 54 $ 406 room=.
+-> back
+T 645 mode=game_loop           Anborn of the White City(hum) F4@(17, 9) HP 39/52 MP 0/0 Hu 54 $ 406 room=.
+-> w
+T 646 mode=game_loop           Anborn of the White City(hum) F4@(16, 9) HP 39/52 MP 0/0 Hu 53 $ 406 room=.
+-> s
+T 647 mode=chest_mode          Anborn of the White City(hum) F4@(16,10) HP 39/52 MP 0/0 Hu 52 $ 406 room=C
+-> s
+T 648 mode=game_loop           Anborn of the White City(hum) F4@(16,11) HP 39/52 MP 0/0 Hu 51 $ 406 room=.
+-> s
+T 649 mode=game_loop           Anborn of the White City(hum) F4@(16,12) HP 39/52 MP 0/0 Hu 50 $ 406 room=.
+-> w
+T 650 mode=game_loop           Anborn of the White City(hum) F4@(15,12) HP 39/52 MP 0/0 Hu 49 $ 406 room=.
+-> i
+T 651 mode=inventory           Anborn of the White City(hum) F4@(15,12) HP 39/52 MP 0/0 Hu 49 $ 406 room=.
+-> u7
+T 652 mode=inventory           Anborn of the White City(hum) F4@(15,12) HP 52/52 MP 0/0 Hu 49 $ 406 room=.
+-> x
+T 653 mode=game_loop           Anborn of the White City(hum) F4@(15,12) HP 52/52 MP 0/0 Hu 49 $ 406 room=.
+-> i
+T 654 mode=inventory           Anborn of the White City(hum) F4@(15,12) HP 52/52 MP 0/0 Hu 49 $ 406 room=.
+-> eat1
+T 655 mode=inventory           Anborn of the White City(hum) F4@(15,12) HP 52/52 MP 0/0 Hu 99 $ 406 room=.
+-> x
+T 656 mode=game_loop           Anborn of the White City(hum) F4@(15,12) HP 52/52 MP 0/0 Hu 99 $ 406 room=.
+-> w
+T 657 mode=game_loop           Anborn of the White City(hum) F4@(14,12) HP 52/52 MP 0/0 Hu 98 $ 406 room=.
+-> n
+T 658 mode=garden_mode         Anborn of the White City(hum) F4@(14,11) HP 52/52 MP 0/0 Hu 97 $ 406 room=G
+-> h
+T 659 mode=game_loop           Anborn of the White City(hum) F4@(14,11) HP 52/52 MP 0/0 Hu 97 $ 406 room=.
+-> n
+T 660 mode=game_loop           Anborn of the White City(hum) F4@(14,10) HP 52/52 MP 0/0 Hu 96 $ 406 room=.
+-> w
+T 661 mode=dungeon_mode        Anborn of the White City(hum) F4@(13,10) HP 52/52 MP 0/0 Hu 95 $ 406 room=N
+-> u
+T 662 mode=game_loop           Anborn of the White City(hum) F4@(13,10) HP 52/52 MP 0/0 Hu 95 $ 406 room=N
+-> n
+T 663 mode=game_loop           Anborn of the White City(hum) F4@(13, 9) HP 52/52 MP 0/0 Hu 94 $ 406 room=.
+-> n
+T 664 mode=game_loop           Anborn of the White City(hum) F4@(13, 8) HP 52/52 MP 0/0 Hu 93 $ 406 room=.
+-> w
+T 665 mode=game_loop           Anborn of the White City(hum) F4@(12, 8) HP 52/52 MP 0/0 Hu 92 $ 406 room=.
+-> w
+T 666 mode=game_loop           Anborn of the White City(hum) F4@(11, 8) HP 52/52 MP 0/0 Hu 91 $ 406 room=.
+-> w
+T 667 mode=game_loop           Anborn of the White City(hum) F4@(10, 8) HP 52/52 MP 0/0 Hu 90 $ 406 room=.
+-> l
+T 668 mode=game_loop           Anborn of the White City(hum) F4@(10, 8) HP 52/52 MP 0/0 Hu 90 $ 406 room=.
+-> s
+T 669 mode=game_loop           Anborn of the White City(hum) F4@(10, 9) HP 52/52 MP 0/0 Hu 89 $ 406 room=.
+-> l
+T 670 mode=game_loop           Anborn of the White City(hum) F4@(10, 9) HP 52/52 MP 0/0 Hu 89 $ 406 room=.
+-> s
+T 671 mode=game_loop           Anborn of the White City(hum) F4@(10,10) HP 52/52 MP 0/0 Hu 88 $ 406 room=.
+-> l
+T 672 mode=game_loop           Anborn of the White City(hum) F4@(10,10) HP 52/52 MP 0/0 Hu 88 $ 406 room=.
+-> s
+T 673 mode=game_loop           Anborn of the White City(hum) F4@(10,11) HP 52/52 MP 0/0 Hu 87 $ 406 room=.
+-> l
+T 674 mode=game_loop           Anborn of the White City(hum) F4@(10,11) HP 52/52 MP 0/0 Hu 87 $ 406 room=.
+-> w
+T 675 mode=game_loop           Anborn of the White City(hum) F4@( 9,11) HP 52/52 MP 0/0 Hu 86 $ 406 room=.
+-> n
+T 676 mode=game_loop           Anborn of the White City(hum) F4@( 9,10) HP 52/52 MP 0/0 Hu 85 $ 406 room=.
+-> n
+T 677 mode=game_loop           Anborn of the White City(hum) F4@( 9, 9) HP 52/52 MP 0/0 Hu 84 $ 406 room=.
+-> e
+T 678 mode=game_loop           Anborn of the White City(hum) F4@(10, 9) HP 52/52 MP 0/0 Hu 83 $ 406 room=.
+-> n
+T 679 mode=game_loop           Anborn of the White City(hum) F4@(10, 8) HP 52/52 MP 0/0 Hu 82 $ 406 room=.
+-> n
+T 680 mode=game_loop           Anborn of the White City(hum) F4@(10, 7) HP 52/52 MP 0/0 Hu 81 $ 406 room=.
+-> l
+T 681 mode=game_loop           Anborn of the White City(hum) F4@(10, 7) HP 52/52 MP 0/0 Hu 81 $ 406 room=.
+-> n
+T 682 mode=game_loop           Anborn of the White City(hum) F4@(10, 6) HP 52/52 MP 0/0 Hu 80 $ 406 room=.
+-> l
+T 683 mode=game_loop           Anborn of the White City(hum) F4@(10, 6) HP 52/52 MP 0/0 Hu 80 $ 406 room=.
+-> e
+T 684 mode=game_loop           Anborn of the White City(hum) F4@(11, 6) HP 52/52 MP 0/0 Hu 79 $ 406 room=.
+-> l
+T 685 mode=game_loop           Anborn of the White City(hum) F4@(11, 6) HP 52/52 MP 0/0 Hu 79 $ 406 room=.
+-> n
+T 686 mode=game_loop           Anborn of the White City(hum) F4@(11, 5) HP 52/52 MP 0/0 Hu 78 $ 406 room=.
+-> n
+T 687 mode=game_loop           Anborn of the White City(hum) F4@(11, 4) HP 52/52 MP 0/0 Hu 77 $ 406 room=.
+-> w
+T 688 mode=game_loop           Anborn of the White City(hum) F4@(10, 4) HP 52/52 MP 0/0 Hu 76 $ 406 room=.
+-> l
+T 689 mode=game_loop           Anborn of the White City(hum) F4@(10, 4) HP 52/52 MP 0/0 Hu 76 $ 406 room=.
+-> w
+T 690 mode=dungeon_mode        Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu 75 $ 406 room=N
+-> u
+T 691 mode=dungeon_unlocked_mode Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu 75 $ 406 room=N
+-> r
+T 692 mode=game_loop           Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu 75 $ 406 room=N
+-> i
+T 693 mode=inventory           Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu 75 $ 406 room=N
+-> e1
+T 694 mode=inventory           Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu 75 $ 406 room=N
+-> x
+T 695 mode=game_loop           Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu 75 $ 406 room=N
+-> l
+T 696 mode=game_loop           Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu 75 $ 406 room=N
+-> s
+T 697 mode=game_loop           Anborn of the White City(hum) F4@( 9, 5) HP 52/52 MP 0/0 Hu 74 $ 406 room=.
+-> s
+T 698 mode=altar_mode          Anborn of the White City(hum) F4@( 9, 6) HP 52/52 MP 0/0 Hu 73 $ 406 room=A
+-> pray
+T 699 mode=game_loop           Anborn of the White City(hum) F4@( 9, 6) HP 52/52 MP 0/0 Hu 73 $ 506 room=.
+-> w
+T 700 mode=combat_mode         Anborn of the White City(hum) F4@( 8, 6) HP 52/52 MP 0/0 Hu 72 $ 506 room=M vs Harpy(L3 HP29/29)
+-> a
+T 701 mode=combat_mode         Anborn of the White City(hum) F4@( 8, 6) HP 51/52 MP 0/0 Hu 72 $ 506 room=M vs Harpy(L3 HP29/29)
+-> a
+T 702 mode=combat_mode         Anborn of the White City(hum) F4@( 8, 6) HP 50/52 MP 0/0 Hu 72 $ 506 room=M vs Harpy(L3 HP4/29)
+-> a
+T 703 mode=combat_victory      Anborn of the White City(hum) F4@( 8, 6) HP 49/52 MP 0/0 Hu 72 $ 542 room=.
+-> back
+T 704 mode=game_loop           Anborn of the White City(hum) F4@( 8, 6) HP 49/52 MP 0/0 Hu 72 $ 542 room=.
+-> s
+T 705 mode=game_loop           Anborn of the White City(hum) F4@( 9, 6) HP 49/52 MP 0/0 Hu 71 $ 542 room=.
+-> e
+T 706 mode=game_loop           Anborn of the White City(hum) F4@(10, 6) HP 49/52 MP 0/0 Hu 70 $ 542 room=.
+-> n
+T 707 mode=game_loop           Anborn of the White City(hum) F4@(10, 7) HP 49/52 MP 0/0 Hu 69 $ 542 room=.
+-> w
+T 708 mode=game_loop           Anborn of the White City(hum) F4@( 9, 7) HP 50/52 MP 0/0 Hu 68 $ 542 room=.
+-> w
+T 709 mode=game_loop           Anborn of the White City(hum) F4@( 8, 7) HP 50/52 MP 0/0 Hu 67 $ 542 room=.
+-> s
+T 710 mode=game_loop           Anborn of the White City(hum) F4@( 8, 8) HP 50/52 MP 0/0 Hu 66 $ 542 room=.
+-> w
+T 711 mode=game_loop           Anborn of the White City(hum) F4@( 7, 8) HP 50/52 MP 0/0 Hu 65 $ 542 room=.
+-> w
+T 712 mode=game_loop           Anborn of the White City(hum) F4@( 6, 8) HP 51/52 MP 0/0 Hu 64 $ 542 room=.
+-> l
+T 713 mode=game_loop           Anborn of the White City(hum) F4@( 6, 8) HP 51/52 MP 0/0 Hu 64 $ 542 room=.
+-> n
+T 714 mode=game_loop           Anborn of the White City(hum) F4@( 6, 7) HP 51/52 MP 0/0 Hu 63 $ 542 room=.
+-> i
+T 715 mode=inventory           Anborn of the White City(hum) F4@( 6, 7) HP 51/52 MP 0/0 Hu 63 $ 542 room=.
+-> eat2
+T 716 mode=inventory           Anborn of the White City(hum) F4@( 6, 7) HP 51/52 MP 0/0 Hu 81 $ 542 room=.
+-> x
+T 717 mode=game_loop           Anborn of the White City(hum) F4@( 6, 7) HP 51/52 MP 0/0 Hu 81 $ 542 room=.
+-> l
+T 718 mode=game_loop           Anborn of the White City(hum) F4@( 6, 7) HP 51/52 MP 0/0 Hu 81 $ 542 room=.
+-> n
+T 719 mode=game_loop           Anborn of the White City(hum) F4@( 6, 6) HP 51/52 MP 0/0 Hu 80 $ 542 room=.
+-> i
+T 720 mode=inventory           Anborn of the White City(hum) F4@( 6, 6) HP 51/52 MP 0/0 Hu 80 $ 542 room=.
+-> eat3
+T 721 mode=inventory           Anborn of the White City(hum) F4@( 6, 6) HP 51/52 MP 0/0 Hu 86 $ 542 room=.
+-> x
+T 722 mode=game_loop           Anborn of the White City(hum) F4@( 6, 6) HP 51/52 MP 0/0 Hu 86 $ 542 room=.
+-> l
+T 723 mode=game_loop           Anborn of the White City(hum) F4@( 6, 6) HP 51/52 MP 0/0 Hu 86 $ 542 room=.
+-> n
+T 724 mode=game_loop           Anborn of the White City(hum) F4@( 6, 5) HP 52/52 MP 0/0 Hu 85 $ 542 room=.
+-> l
+T 725 mode=game_loop           Anborn of the White City(hum) F4@( 6, 5) HP 52/52 MP 0/0 Hu 85 $ 542 room=.
+-> e
+T 726 mode=game_loop           Anborn of the White City(hum) F4@( 7, 5) HP 52/52 MP 0/0 Hu 84 $ 542 room=.
+-> n
+T 727 mode=game_loop           Anborn of the White City(hum) F4@( 7, 4) HP 52/52 MP 0/0 Hu 83 $ 542 room=.
+-> l
+T 728 mode=game_loop           Anborn of the White City(hum) F4@( 7, 4) HP 52/52 MP 0/0 Hu 83 $ 542 room=.
+-> e
+T 729 mode=altar_mode          Anborn of the White City(hum) F4@( 8, 4) HP 52/52 MP 0/0 Hu 82 $ 542 room=A
+-> pray
+T 730 mode=game_loop           Anborn of the White City(hum) F4@( 8, 4) HP 52/52 MP 0/0 Hu 82 $ 742 room=.
+-> l
+T 731 mode=game_loop           Anborn of the White City(hum) F4@( 8, 4) HP 52/52 MP 0/0 Hu 82 $ 742 room=.
+-> n
+T 732 mode=game_loop           Anborn of the White City(hum) F4@( 8, 3) HP 52/52 MP 0/0 Hu 81 $ 742 room=.
+-> n
+T 733 mode=game_loop           Anborn of the White City(hum) F4@( 8, 2) HP 52/52 MP 0/0 Hu 80 $ 742 room=.
+-> w
+T 734 mode=game_loop           Anborn of the White City(hum) F4@( 7, 2) HP 52/52 MP 0/0 Hu 79 $ 742 room=.
+-> s
+T 735 mode=game_loop           Anborn of the White City(hum) F4@( 7, 3) HP 52/52 MP 0/0 Hu 78 $ 742 room=.
+-> s
+T 736 mode=game_loop           Anborn of the White City(hum) F4@( 7, 4) HP 52/52 MP 0/0 Hu 77 $ 742 room=.
+-> s
+T 737 mode=game_loop           Anborn of the White City(hum) F4@( 7, 5) HP 52/52 MP 0/0 Hu 76 $ 742 room=.
+-> w
+T 738 mode=game_loop           Anborn of the White City(hum) F4@( 6, 5) HP 52/52 MP 0/0 Hu 75 $ 742 room=.
+-> w
+T 739 mode=game_loop           Anborn of the White City(hum) F4@( 5, 5) HP 52/52 MP 0/0 Hu 74 $ 742 room=.
+-> s
+T 740 mode=game_loop           Anborn of the White City(hum) F4@( 5, 6) HP 52/52 MP 0/0 Hu 73 $ 742 room=.
+-> s
+T 741 mode=chest_mode          Anborn of the White City(hum) F4@( 5, 7) HP 52/52 MP 0/0 Hu 72 $ 742 room=C
+-> o
+T 742 mode=game_loop           Anborn of the White City(hum) F4@( 5, 7) HP 52/52 MP 0/0 Hu 72 $ 742 room=.
+-> s
+T 743 mode=game_loop           Anborn of the White City(hum) F4@( 5, 8) HP 52/52 MP 0/0 Hu 71 $ 742 room=.
+-> w
+T 744 mode=game_loop           Anborn of the White City(hum) F4@( 4, 8) HP 52/52 MP 0/0 Hu 70 $ 742 room=.
+-> l
+T 745 mode=game_loop           Anborn of the White City(hum) F4@( 4, 8) HP 52/52 MP 0/0 Hu 70 $ 742 room=.
+-> s
+T 746 mode=game_loop           Anborn of the White City(hum) F4@( 4, 9) HP 52/52 MP 0/0 Hu 69 $ 742 room=.
+-> n
+T 747 mode=game_loop           Anborn of the White City(hum) F4@( 4, 8) HP 52/52 MP 0/0 Hu 68 $ 742 room=.
+-> w
+T 748 mode=game_loop           Anborn of the White City(hum) F4@( 3, 8) HP 52/52 MP 0/0 Hu 67 $ 742 room=.
+-> e
+T 749 mode=game_loop           Anborn of the White City(hum) F4@( 4, 8) HP 52/52 MP 0/0 Hu 66 $ 742 room=.
+-> e
+T 750 mode=game_loop           Anborn of the White City(hum) F4@( 5, 8) HP 52/52 MP 0/0 Hu 65 $ 742 room=.
+-> n
+T 751 mode=game_loop           Anborn of the White City(hum) F4@( 5, 7) HP 52/52 MP 0/0 Hu 64 $ 742 room=.
+-> n
+T 752 mode=game_loop           Anborn of the White City(hum) F4@( 5, 6) HP 52/52 MP 0/0 Hu 63 $ 742 room=.
+-> n
+T 753 mode=game_loop           Anborn of the White City(hum) F4@( 5, 5) HP 52/52 MP 0/0 Hu 62 $ 742 room=.
+-> e
+T 754 mode=game_loop           Anborn of the White City(hum) F4@( 6, 5) HP 52/52 MP 0/0 Hu 61 $ 742 room=.
+-> s
+T 755 mode=game_loop           Anborn of the White City(hum) F4@( 6, 6) HP 52/52 MP 0/0 Hu 60 $ 742 room=.
+-> s
+T 756 mode=game_loop           Anborn of the White City(hum) F4@( 6, 7) HP 52/52 MP 0/0 Hu 59 $ 742 room=.
+-> w
+T 757 mode=game_loop           Anborn of the White City(hum) F4@( 5, 7) HP 52/52 MP 0/0 Hu 58 $ 742 room=.
+-> n
+T 758 mode=game_loop           Anborn of the White City(hum) F4@( 5, 6) HP 52/52 MP 0/0 Hu 57 $ 742 room=.
+-> n
+T 759 mode=game_loop           Anborn of the White City(hum) F4@( 5, 5) HP 52/52 MP 0/0 Hu 56 $ 742 room=.
+-> e
+T 760 mode=game_loop           Anborn of the White City(hum) F4@( 6, 5) HP 52/52 MP 0/0 Hu 55 $ 742 room=.
+-> l
+T 761 mode=game_loop           Anborn of the White City(hum) F4@( 6, 5) HP 52/52 MP 0/0 Hu 55 $ 742 room=.
+-> n
+T 762 mode=combat_mode         Anborn of the White City(hum) F4@( 6, 4) HP 52/52 MP 0/0 Hu 54 $ 742 room=M vs Gargoyle(L3 HP60/60)
+-> a
+T 763 mode=combat_mode         Anborn of the White City(hum) F4@( 6, 4) HP 38/52 MP 0/0 Hu 54 $ 742 room=M vs Gargoyle(L3 HP40/60)
+-> a
+T 764 mode=combat_mode         Anborn of the White City(hum) F4@( 6, 4) HP 38/52 MP 0/0 Hu 54 $ 742 room=M vs Gargoyle(L3 HP40/60)
+-> a
+T 765 mode=combat_mode         Anborn of the White City(hum) F4@( 6, 4) HP 38/52 MP 0/0 Hu 54 $ 742 room=M vs Gargoyle(L3 HP40/60)
+-> a
+T 766 mode=combat_mode         Anborn of the White City(hum) F4@( 6, 4) HP 24/52 MP 0/0 Hu 54 $ 742 room=M vs Gargoyle(L3 HP40/60)
+-> i
+T 767 mode=inventory           Anborn of the White City(hum) F4@( 6, 4) HP 24/52 MP 0/0 Hu 54 $ 742 room=M
+-> u3
+T 768 mode=inventory           Anborn of the White City(hum) F4@( 6, 4) HP 52/52 MP 0/0 Hu 54 $ 742 room=M
+-> x
+T 769 mode=combat_mode         Anborn of the White City(hum) F4@( 6, 4) HP 52/52 MP 0/0 Hu 54 $ 742 room=M vs Gargoyle(L3 HP40/60)
+-> a
+T 770 mode=combat_mode         Anborn of the White City(hum) F4@( 6, 4) HP 52/52 MP 0/0 Hu 54 $ 742 room=M vs Gargoyle(L3 HP20/60)
+-> f
+T 771 mode=flee_direction_mode Anborn of the White City(hum) F4@( 6, 4) HP 52/52 MP 0/0 Hu 54 $ 742 room=M
+-> e
+T 772 mode=game_loop           Anborn of the White City(hum) F4@( 7, 4) HP 52/52 MP 0/0 Hu 54 $ 742 room=.
+-> s
+T 773 mode=game_loop           Anborn of the White City(hum) F4@( 7, 5) HP 52/52 MP 0/0 Hu 53 $ 742 room=.
+-> n
+T 774 mode=game_loop           Anborn of the White City(hum) F4@( 7, 4) HP 52/52 MP 0/0 Hu 52 $ 742 room=.
+-> n
+T 775 mode=game_loop           Anborn of the White City(hum) F4@( 7, 3) HP 52/52 MP 0/0 Hu 51 $ 742 room=.
+-> e
+T 776 mode=game_loop           Anborn of the White City(hum) F4@( 8, 3) HP 52/52 MP 0/0 Hu 50 $ 742 room=.
+-> s
+T 777 mode=game_loop           Anborn of the White City(hum) F4@( 8, 4) HP 52/52 MP 0/0 Hu 49 $ 742 room=.
+-> i
+T 778 mode=inventory           Anborn of the White City(hum) F4@( 8, 4) HP 52/52 MP 0/0 Hu 49 $ 742 room=.
+-> eat1
+T 779 mode=inventory           Anborn of the White City(hum) F4@( 8, 4) HP 52/52 MP 0/0 Hu 99 $ 742 room=.
+-> x
+T 780 mode=game_loop           Anborn of the White City(hum) F4@( 8, 4) HP 52/52 MP 0/0 Hu 99 $ 742 room=.
+-> l
+T 781 mode=game_loop           Anborn of the White City(hum) F4@( 8, 4) HP 52/52 MP 0/0 Hu 99 $ 742 room=.
+-> e
+T 782 mode=game_loop           Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu 98 $ 742 room=N
+-> i
+T 783 mode=inventory           Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu 98 $ 742 room=N
+-> eat2
+T 784 mode=inventory           Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu100 $ 742 room=N
+-> x
+T 785 mode=game_loop           Anborn of the White City(hum) F4@( 9, 4) HP 52/52 MP 0/0 Hu100 $ 742 room=N
+-> s
+T 786 mode=game_loop           Anborn of the White City(hum) F4@( 9, 5) HP 52/52 MP 0/0 Hu 99 $ 742 room=.
+-> s
+T 787 mode=game_loop           Anborn of the White City(hum) F4@( 9, 6) HP 52/52 MP 0/0 Hu 98 $ 742 room=.
+-> s
+T 788 mode=game_loop           Anborn of the White City(hum) F4@( 9, 7) HP 52/52 MP 0/0 Hu 97 $ 742 room=.
+-> w
+T 789 mode=game_loop           Anborn of the White City(hum) F4@( 8, 7) HP 52/52 MP 0/0 Hu 96 $ 742 room=.
+-> s
+T 790 mode=game_loop           Anborn of the White City(hum) F4@( 8, 8) HP 52/52 MP 0/0 Hu 95 $ 742 room=.
+-> l
+T 791 mode=game_loop           Anborn of the White City(hum) F4@( 8, 8) HP 52/52 MP 0/0 Hu 95 $ 742 room=.
+-> w
+T 792 mode=game_loop           Anborn of the White City(hum) F4@( 7, 8) HP 52/52 MP 0/0 Hu 94 $ 742 room=.
+-> w
+T 793 mode=game_loop           Anborn of the White City(hum) F4@( 6, 8) HP 52/52 MP 0/0 Hu 93 $ 742 room=.
+-> n
+T 794 mode=game_loop           Anborn of the White City(hum) F4@( 6, 7) HP 52/52 MP 0/0 Hu 92 $ 742 room=.
+-> n
+T 795 mode=game_loop           Anborn of the White City(hum) F4@( 6, 6) HP 52/52 MP 0/0 Hu 91 $ 742 room=.
+-> n
+T 796 mode=game_loop           Anborn of the White City(hum) F4@( 6, 5) HP 52/52 MP 0/0 Hu 90 $ 742 room=.
+-> w
+T 797 mode=game_loop           Anborn of the White City(hum) F4@( 5, 5) HP 52/52 MP 0/0 Hu 89 $ 742 room=.
+-> s
+T 798 mode=game_loop           Anborn of the White City(hum) F4@( 5, 6) HP 52/52 MP 0/0 Hu 88 $ 742 room=.
+-> w
+T 799 mode=game_loop           Anborn of the White City(hum) F4@( 4, 6) HP 52/52 MP 0/0 Hu 87 $ 742 room=.
+-> w
+T 800 mode=game_loop           Anborn of the White City(hum) F4@( 3, 6) HP 52/52 MP 0/0 Hu 86 $ 742 room=.
+-> l
+T 801 mode=game_loop           Anborn of the White City(hum) F4@( 3, 6) HP 52/52 MP 0/0 Hu 86 $ 742 room=.
+-> n
+T 802 mode=game_loop           Anborn of the White City(hum) F4@( 3, 5) HP 52/52 MP 0/0 Hu 85 $ 742 room=.
+-> l
+T 803 mode=game_loop           Anborn of the White City(hum) F4@( 3, 5) HP 52/52 MP 0/0 Hu 85 $ 742 room=.
+-> w
+T 804 mode=game_loop           Anborn of the White City(hum) F4@( 2, 5) HP 52/52 MP 0/0 Hu 84 $ 742 room=.
+-> n
+T 805 mode=game_loop           Anborn of the White City(hum) F4@( 2, 4) HP 52/52 MP 0/0 Hu 83 $ 742 room=.
+-> l
+T 806 mode=game_loop           Anborn of the White City(hum) F4@( 2, 4) HP 52/52 MP 0/0 Hu 83 $ 742 room=.
+-> w
+T 807 mode=library_mode        Anborn of the White City(hum) F4@( 1, 4) HP 52/52 MP 0/0 Hu 82 $ 742 room=L
+-> r
+T 808 mode=library_read_decision_mode Anborn of the White City(hum) F4@( 1, 4) HP 52/52 MP 0/0 Hu 82 $ 742 room=L
+-> y
+T 809 mode=game_loop           Anborn of the White City(hum) F4@( 1, 4) HP 52/52 MP 0/0 Hu 82 $ 792 room=.
+-> l
+T 810 mode=game_loop           Anborn of the White City(hum) F4@( 1, 4) HP 52/52 MP 0/0 Hu 82 $ 792 room=.
+-> l
+T 811 mode=game_loop           Anborn of the White City(hum) F4@( 1, 4) HP 52/52 MP 0/0 Hu 82 $ 792 room=.
+-> n
+T 812 mode=game_loop           Anborn of the White City(hum) F4@( 1, 3) HP 52/52 MP 0/0 Hu 81 $ 792 room=.
+-> n
+T 813 mode=game_loop           Anborn of the White City(hum) F4@( 1, 2) HP 52/52 MP 0/0 Hu 80 $ 792 room=.
+-> n
+T 814 mode=stairs_up_mode      Anborn of the White City(hum) F4@( 1, 1) HP 52/52 MP 0/0 Hu 79 $ 792 room=U
+-> u
+T 815 mode=stairs_down_mode    Anborn of the White City(hum) F3@( 9, 7) HP 52/52 MP 0/0 Hu 79 $ 792 room=D
+-> e
+T 816 mode=game_loop           Anborn of the White City(hum) F3@(10, 7) HP 52/52 MP 0/0 Hu 78 $ 792 room=.
+-> l
+T 817 mode=game_loop           Anborn of the White City(hum) F3@(10, 7) HP 52/52 MP 0/0 Hu 78 $ 792 room=.
+-> s
+T 818 mode=garden_mode         Anborn of the White City(hum) F3@(10, 8) HP 52/52 MP 0/0 Hu 77 $ 792 room=G
+-> h
+T 819 mode=game_loop           Anborn of the White City(hum) F3@(10, 8) HP 52/52 MP 0/0 Hu 77 $ 792 room=.
+-> l
+T 820 mode=game_loop           Anborn of the White City(hum) F3@(10, 8) HP 52/52 MP 0/0 Hu 77 $ 792 room=.
+-> e
+T 821 mode=altar_mode          Anborn of the White City(hum) F3@(11, 8) HP 52/52 MP 0/0 Hu 76 $ 792 room=A
+-> pray
+T 822 mode=game_loop           Anborn of the White City(hum) F3@(11, 8) HP 52/52 MP 0/0 Hu 76 $ 792 room=.
+-> l
+T 823 mode=game_loop           Anborn of the White City(hum) F3@(11, 8) HP 52/52 MP 0/0 Hu 76 $ 792 room=.
+-> s
+T 824 mode=tomb_mode           Anborn of the White City(hum) F3@(11, 9) HP 52/52 MP 0/0 Hu 75 $ 792 room=T
+-> p
+T 825 mode=game_loop           Anborn of the White City(hum) F3@(11, 9) HP 52/52 MP 0/0 Hu 75 $ 792 room=T
+-> s
+T 826 mode=chest_mode          Anborn of the White City(hum) F3@(11,10) HP 52/52 MP 0/0 Hu 74 $ 792 room=C
+-> o
+T 827 mode=game_loop           Anborn of the White City(hum) F3@(11,10) HP 52/52 MP 0/0 Hu 74 $ 792 room=.
+-> l
+T 828 mode=game_loop           Anborn of the White City(hum) F3@(11,10) HP 52/52 MP 0/0 Hu 74 $ 792 room=.
+-> s
+T 829 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 52/52 MP 0/0 Hu 73 $ 792 room=.
+-> l
+T 830 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 52/52 MP 0/0 Hu 73 $ 792 room=.
+-> s
+T 831 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 52/52 MP 0/0 Hu 72 $ 792 room=.
+-> l
+T 832 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 52/52 MP 0/0 Hu 72 $ 792 room=.
+-> e
+T 833 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 52/52 MP 0/0 Hu 71 $ 792 room=.
+-> l
+T 834 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 52/52 MP 0/0 Hu 71 $ 792 room=.
+-> e
+T 835 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 792 room=V
+-> b11
+T 836 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 782 room=V
+-> b3
+T 837 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 702 room=V
+-> b4
+T 838 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 672 room=V
+-> b4
+T 839 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 642 room=V
+-> b8
+T 840 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 637 room=V
+-> b8
+T 841 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 632 room=V
+-> b8
+T 842 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 627 room=V
+-> b8
+T 843 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 622 room=V
+-> b7
+T 844 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 472 room=V
+-> b6
+T 845 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 422 room=V
+-> b2
+T 846 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 332 room=V
+-> id9
+T 847 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 232 room=V
+-> id16
+T 848 mode=vendor_shop         Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 82 room=V
+-> x
+T 849 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 82 room=V
+-> i
+T 850 mode=inventory           Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 82 room=V
+-> e5
+T 851 mode=inventory           Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 82 room=V
+-> x
+T 852 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 70 $ 82 room=V
+-> e
+T 853 mode=library_mode        Anborn of the White City(hum) F3@(14,12) HP 52/52 MP 0/0 Hu 69 $ 82 room=L
+-> r
+T 854 mode=library_read_decision_mode Anborn of the White City(hum) F3@(14,12) HP 52/52 MP 0/0 Hu 69 $ 82 room=L
+-> y
+T 855 mode=game_loop           Anborn of the White City(hum) F3@(14,12) HP 52/52 MP 0/0 Hu 69 $ 82 room=.
+-> l
+T 856 mode=game_loop           Anborn of the White City(hum) F3@(14,12) HP 52/52 MP 0/0 Hu 69 $ 82 room=.
+-> e
+T 857 mode=game_loop           Anborn of the White City(hum) F3@(15,12) HP 52/52 MP 0/0 Hu 68 $ 82 room=.
+-> l
+T 858 mode=game_loop           Anborn of the White City(hum) F3@(15,12) HP 52/52 MP 0/0 Hu 68 $ 82 room=.
+-> s
+T 859 mode=game_loop           Anborn of the White City(hum) F3@(15,13) HP 52/52 MP 0/0 Hu 67 $ 82 room=.
+-> l
+T 860 mode=game_loop           Anborn of the White City(hum) F3@(15,13) HP 52/52 MP 0/0 Hu 67 $ 82 room=.
+-> s
+T 861 mode=game_loop           Anborn of the White City(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 66 $ 82 room=.
+-> l
+T 862 mode=game_loop           Anborn of the White City(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 66 $ 82 room=.
+-> s
+T 863 mode=game_loop           Anborn of the White City(hum) F3@(15,15) HP 52/52 MP 0/0 Hu 65 $ 82 room=.
+-> l
+T 864 mode=game_loop           Anborn of the White City(hum) F3@(15,15) HP 52/52 MP 0/0 Hu 65 $ 82 room=.
+-> s
+T 865 mode=game_loop           Anborn of the White City(hum) F3@(15,16) HP 52/52 MP 0/0 Hu 64 $ 82 room=.
+-> l
+T 866 mode=game_loop           Anborn of the White City(hum) F3@(15,16) HP 52/52 MP 0/0 Hu 64 $ 82 room=.
+-> e
+T 867 mode=shrine_mode         Anborn of the White City(hum) F3@(16,16) HP 52/52 MP 0/0 Hu 63 $ 82 room=F
+-> p
+T 868 mode=game_loop           Anborn of the White City(hum) F3@(16,16) HP 52/52 MP 0/0 Hu 63 $ 82 room=.
+-> e
+T 869 mode=library_mode        Anborn of the White City(hum) F3@(17,16) HP 52/52 MP 0/0 Hu 62 $ 82 room=L
+-> r
+T 870 mode=library_read_decision_mode Anborn of the White City(hum) F3@(17,16) HP 52/52 MP 0/0 Hu 62 $ 82 room=L
+-> y
+T 871 mode=game_loop           Anborn of the White City(hum) F3@(17,16) HP 52/52 MP 0/0 Hu 62 $ 82 room=.
+-> e
+T 872 mode=game_loop           Anborn of the White City(hum) F3@(18,16) HP 52/52 MP 0/0 Hu 61 $ 82 room=.
+-> e
+T 873 mode=game_loop           Anborn of the White City(hum) F3@(19,16) HP 52/52 MP 0/0 Hu 60 $ 82 room=.
+-> n
+T 874 mode=altar_mode          Anborn of the White City(hum) F3@(19,15) HP 52/52 MP 0/0 Hu 59 $ 82 room=A
+-> pray
+T 875 mode=game_loop           Anborn of the White City(hum) F3@(19,15) HP 52/52 MP 0/0 Hu 59 $ 82 room=.
+-> w
+T 876 mode=game_loop           Anborn of the White City(hum) F3@(18,15) HP 52/52 MP 0/0 Hu 58 $ 82 room=.
+-> w
+T 877 mode=game_loop           Anborn of the White City(hum) F3@(17,15) HP 52/52 MP 0/0 Hu 57 $ 82 room=.
+-> n
+T 878 mode=game_loop           Anborn of the White City(hum) F3@(17,14) HP 52/52 MP 0/0 Hu 56 $ 82 room=.
+-> n
+T 879 mode=game_loop           Anborn of the White City(hum) F3@(17,13) HP 52/52 MP 0/0 Hu 55 $ 82 room=.
+-> n
+T 880 mode=game_loop           Anborn of the White City(hum) F3@(17,12) HP 52/52 MP 0/0 Hu 54 $ 82 room=.
+-> n
+T 881 mode=game_loop           Anborn of the White City(hum) F3@(17,11) HP 52/52 MP 0/0 Hu 53 $ 82 room=.
+-> w
+T 882 mode=chest_mode          Anborn of the White City(hum) F3@(16,11) HP 52/52 MP 0/0 Hu 52 $ 82 room=C
+-> s
+T 883 mode=game_loop           Anborn of the White City(hum) F3@(16,12) HP 52/52 MP 0/0 Hu 51 $ 82 room=.
+-> w
+T 884 mode=game_loop           Anborn of the White City(hum) F3@(15,12) HP 52/52 MP 0/0 Hu 50 $ 82 room=.
+-> n
+T 885 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 52/52 MP 0/0 Hu 49 $ 82 room=.
+-> i
+T 886 mode=inventory           Anborn of the White City(hum) F3@(15,11) HP 52/52 MP 0/0 Hu 49 $ 82 room=.
+-> eat1
+T 887 mode=inventory           Anborn of the White City(hum) F3@(15,11) HP 52/52 MP 0/0 Hu 99 $ 82 room=.
+-> u15
+T 888 mode=upgrade_scroll_mode Anborn of the White City(hum) F3@(15,11) HP 52/52 MP 0/0 Hu 99 $ 82 room=.
+-> 1
+T 889 mode=inventory           Anborn of the White City(hum) F3@(15,11) HP 52/52 MP 0/0 Hu 99 $ 82 room=.
+-> x
+T 890 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 52/52 MP 0/0 Hu 99 $ 82 room=.
+-> w
+T 891 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 52/52 MP 0/0 Hu 98 $ 82 room=.
+-> w
+T 892 mode=chest_mode          Anborn of the White City(hum) F3@(13,11) HP 52/52 MP 0/0 Hu 97 $ 82 room=C
+-> o
+T 893 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 52/52 MP 0/0 Hu 97 $ 242 room=.
+-> n
+T 894 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 52/52 MP 0/0 Hu 96 $ 242 room=.
+-> w
+T 895 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 52/52 MP 0/0 Hu 95 $ 242 room=.
+-> s
+T 896 mode=combat_mode         Anborn of the White City(hum) F3@(12,11) HP 52/52 MP 0/0 Hu 94 $ 242 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 897 mode=combat_mode         Anborn of the White City(hum) F3@(12,11) HP 52/52 MP 0/0 Hu 94 $ 242 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 898 mode=combat_mode         Anborn of the White City(hum) F3@(12,11) HP 51/52 MP 0/0 Hu 94 $ 242 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 899 mode=combat_mode         Anborn of the White City(hum) F3@(12,11) HP 51/52 MP 0/0 Hu 94 $ 242 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 900 mode=combat_mode         Anborn of the White City(hum) F3@(12,11) HP 51/52 MP 0/0 Hu 94 $ 242 room=M vs Skeleton(L2 HP1/26)
+-> a
+T 901 mode=combat_mode         Anborn of the White City(hum) F3@(12,11) HP 50/52 MP 0/0 Hu 94 $ 242 room=M vs Skeleton(L2 HP1/26)
+-> a
+T 902 mode=combat_victory      Anborn of the White City(hum) F3@(12,11) HP 49/52 MP 0/0 Hu 94 $ 266 room=.
+-> back
+T 903 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 49/52 MP 0/0 Hu 94 $ 266 room=.
+-> w
+T 904 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 49/52 MP 0/0 Hu 93 $ 266 room=.
+-> s
+T 905 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 50/52 MP 0/0 Hu 92 $ 266 room=.
+-> e
+T 906 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 50/52 MP 0/0 Hu 91 $ 266 room=.
+-> e
+T 907 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 51/52 MP 0/0 Hu 90 $ 266 room=V
+-> n
+T 908 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 51/52 MP 0/0 Hu 89 $ 266 room=.
+-> n
+T 909 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 52/52 MP 0/0 Hu 88 $ 266 room=.
+-> w
+T 910 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 52/52 MP 0/0 Hu 87 $ 266 room=.
+-> s
+T 911 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 52/52 MP 0/0 Hu 86 $ 266 room=.
+-> w
+T 912 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 52/52 MP 0/0 Hu 85 $ 266 room=.
+-> s
+T 913 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 52/52 MP 0/0 Hu 84 $ 266 room=.
+-> w
+T 914 mode=game_loop           Anborn of the White City(hum) F3@(10,12) HP 52/52 MP 0/0 Hu 83 $ 266 room=.
+-> e
+T 915 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 52/52 MP 0/0 Hu 82 $ 266 room=.
+-> e
+T 916 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 52/52 MP 0/0 Hu 81 $ 266 room=.
+-> n
+T 917 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 52/52 MP 0/0 Hu 80 $ 266 room=.
+-> n
+T 918 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 52/52 MP 0/0 Hu 79 $ 266 room=.
+-> e
+T 919 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 52/52 MP 0/0 Hu 78 $ 266 room=.
+-> e
+T 920 mode=combat_mode         Anborn of the White City(hum) F3@(14,10) HP 52/52 MP 0/0 Hu 77 $ 266 room=M vs Harpy(L2 HP28/28)
+-> a
+T 921 mode=combat_mode         Anborn of the White City(hum) F3@(14,10) HP 51/52 MP 0/0 Hu 77 $ 266 room=M vs Harpy(L2 HP28/28)
+-> a
+T 922 mode=combat_mode         Anborn of the White City(hum) F3@(14,10) HP 51/52 MP 0/0 Hu 77 $ 266 room=M vs Harpy(L2 HP3/28)
+-> a
+T 923 mode=combat_victory      Anborn of the White City(hum) F3@(14,10) HP 51/52 MP 0/0 Hu 77 $ 281 room=.
+-> back
+T 924 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 51/52 MP 0/0 Hu 77 $ 281 room=.
+-> s
+T 925 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 51/52 MP 0/0 Hu 76 $ 281 room=.
+-> s
+T 926 mode=game_loop           Anborn of the White City(hum) F3@(14,12) HP 51/52 MP 0/0 Hu 75 $ 281 room=.
+-> e
+T 927 mode=game_loop           Anborn of the White City(hum) F3@(15,12) HP 51/52 MP 0/0 Hu 74 $ 281 room=.
+-> n
+T 928 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 52/52 MP 0/0 Hu 73 $ 281 room=.
+-> n
+T 929 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 52/52 MP 0/0 Hu 72 $ 281 room=.
+-> w
+T 930 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 52/52 MP 0/0 Hu 71 $ 281 room=.
+-> w
+T 931 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 52/52 MP 0/0 Hu 70 $ 281 room=.
+-> w
+T 932 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 52/52 MP 0/0 Hu 69 $ 281 room=.
+-> s
+T 933 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 52/52 MP 0/0 Hu 68 $ 281 room=.
+-> e
+T 934 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 52/52 MP 0/0 Hu 67 $ 281 room=.
+-> i
+T 935 mode=inventory           Anborn of the White City(hum) F3@(13,11) HP 52/52 MP 0/0 Hu 67 $ 281 room=.
+-> eat2
+T 936 mode=inventory           Anborn of the White City(hum) F3@(13,11) HP 52/52 MP 0/0 Hu 73 $ 281 room=.
+-> eat1
+T 937 mode=inventory           Anborn of the White City(hum) F3@(13,11) HP 52/52 MP 0/0 Hu100 $ 281 room=.
+-> x
+T 938 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 52/52 MP 0/0 Hu100 $ 281 room=.
+-> s
+T 939 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 52/52 MP 0/0 Hu 99 $ 281 room=V
+-> w
+T 940 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 52/52 MP 0/0 Hu 98 $ 281 room=.
+-> w
+T 941 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 52/52 MP 0/0 Hu 97 $ 281 room=.
+-> n
+T 942 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 52/52 MP 0/0 Hu 96 $ 281 room=.
+-> e
+T 943 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 52/52 MP 0/0 Hu 95 $ 281 room=.
+-> n
+T 944 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 52/52 MP 0/0 Hu 94 $ 281 room=.
+-> e
+T 945 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 52/52 MP 0/0 Hu 93 $ 281 room=.
+-> s
+T 946 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 52/52 MP 0/0 Hu 92 $ 281 room=.
+-> e
+T 947 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 52/52 MP 0/0 Hu 91 $ 281 room=.
+-> n
+T 948 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 52/52 MP 0/0 Hu 90 $ 281 room=.
+-> e
+T 949 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 52/52 MP 0/0 Hu 89 $ 281 room=.
+-> s
+T 950 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 52/52 MP 0/0 Hu 88 $ 281 room=.
+-> e
+T 951 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 52/52 MP 0/0 Hu 87 $ 281 room=C
+-> s
+T 952 mode=game_loop           Anborn of the White City(hum) F3@(16,12) HP 52/52 MP 0/0 Hu 86 $ 281 room=.
+-> w
+T 953 mode=game_loop           Anborn of the White City(hum) F3@(15,12) HP 52/52 MP 0/0 Hu 85 $ 281 room=.
+-> s
+T 954 mode=game_loop           Anborn of the White City(hum) F3@(15,13) HP 52/52 MP 0/0 Hu 84 $ 281 room=.
+-> s
+T 955 mode=game_loop           Anborn of the White City(hum) F3@(15,14) HP 52/52 MP 0/0 Hu 83 $ 281 room=.
+-> s
+T 956 mode=game_loop           Anborn of the White City(hum) F3@(15,15) HP 52/52 MP 0/0 Hu 82 $ 281 room=.
+-> s
+T 957 mode=game_loop           Anborn of the White City(hum) F3@(15,16) HP 52/52 MP 0/0 Hu 81 $ 281 room=.
+-> e
+T 958 mode=game_loop           Anborn of the White City(hum) F3@(16,16) HP 52/52 MP 0/0 Hu 80 $ 281 room=.
+-> n
+T 959 mode=combat_mode         Anborn of the White City(hum) F3@(16,15) HP 52/52 MP 0/0 Hu 79 $ 281 room=M vs Cockatrice(L2 HP25/25)
+-> a
+T 960 mode=combat_mode         Anborn of the White City(hum) F3@(16,15) HP 51/52 MP 0/0 Hu 79 $ 281 room=M vs Cockatrice(L2 HP1/25)
+-> a
+T 961 mode=combat_mode         Anborn of the White City(hum) F3@(16,15) HP 50/52 MP 0/0 Hu 79 $ 281 room=M vs Cockatrice(L2 HP1/25)
+-> a
+T 962 mode=combat_victory      Anborn of the White City(hum) F3@(16,15) HP 50/62 MP 0/0 Hu 79 $ 293 room=.
+-> back
+T 963 mode=game_loop           Anborn of the White City(hum) F3@(16,15) HP 50/62 MP 0/0 Hu 79 $ 293 room=.
+-> e
+T 964 mode=game_loop           Anborn of the White City(hum) F3@(17,15) HP 50/62 MP 0/0 Hu 78 $ 293 room=.
+-> n
+T 965 mode=game_loop           Anborn of the White City(hum) F3@(17,14) HP 50/62 MP 0/0 Hu 77 $ 293 room=.
+-> n
+T 966 mode=game_loop           Anborn of the White City(hum) F3@(17,13) HP 50/62 MP 0/0 Hu 76 $ 293 room=.
+-> n
+T 967 mode=game_loop           Anborn of the White City(hum) F3@(17,12) HP 51/62 MP 0/0 Hu 75 $ 293 room=.
+-> n
+T 968 mode=game_loop           Anborn of the White City(hum) F3@(17,11) HP 51/62 MP 0/0 Hu 74 $ 293 room=.
+-> w
+T 969 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 51/62 MP 0/0 Hu 73 $ 293 room=C
+-> w
+T 970 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 51/62 MP 0/0 Hu 72 $ 293 room=.
+-> n
+T 971 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 52/62 MP 0/0 Hu 71 $ 293 room=.
+-> w
+T 972 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 52/62 MP 0/0 Hu 70 $ 293 room=.
+-> w
+T 973 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 52/62 MP 0/0 Hu 69 $ 293 room=.
+-> i
+T 974 mode=inventory           Anborn of the White City(hum) F3@(13,10) HP 52/62 MP 0/0 Hu 69 $ 293 room=.
+-> u9
+T 975 mode=inventory           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 69 $ 293 room=.
+-> x
+T 976 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 69 $ 293 room=.
+-> i
+T 977 mode=inventory           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 69 $ 293 room=.
+-> eat2
+T 978 mode=inventory           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 75 $ 293 room=.
+-> eat1
+T 979 mode=inventory           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu100 $ 293 room=.
+-> x
+T 980 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu100 $ 293 room=.
+-> w
+T 981 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 99 $ 293 room=.
+-> s
+T 982 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 98 $ 293 room=.
+-> s
+T 983 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 97 $ 293 room=.
+-> s
+T 984 mode=pool_mode           Anborn of the White City(hum) F3@(12,13) HP 62/62 MP 0/0 Hu 96 $ 293 room=P
+-> dr
+T 985 mode=game_loop           Anborn of the White City(hum) F3@(12,13) HP 48/62 MP 0/0 Hu 96 $ 293 room=.
+-> s
+T 986 mode=game_loop           Anborn of the White City(hum) F3@(12,14) HP 41/62 MP 0/0 Hu 95 $ 293 room=.
+-> i
+T 987 mode=inventory           Anborn of the White City(hum) F3@(12,14) HP 41/62 MP 0/0 Hu 95 $ 293 room=.
+-> u11
+T 988 mode=inventory           Anborn of the White City(hum) F3@(12,14) HP 62/62 MP 0/0 Hu 95 $ 293 room=.
+-> x
+T 989 mode=game_loop           Anborn of the White City(hum) F3@(12,14) HP 62/62 MP 0/0 Hu 95 $ 293 room=.
+-> e
+T 990 mode=pool_mode           Anborn of the White City(hum) F3@(13,14) HP 56/62 MP 0/0 Hu 94 $ 293 room=P
+-> dr
+T 991 mode=game_loop           Anborn of the White City(hum) F3@(13,14) HP 56/62 MP 0/0 Hu 94 $ 293 room=.
+-> e
+T 992 mode=game_loop           Anborn of the White City(hum) F3@(14,14) HP 49/62 MP 0/0 Hu 93 $ 293 room=.
+-> i
+T 993 mode=inventory           Anborn of the White City(hum) F3@(14,14) HP 49/62 MP 0/0 Hu 93 $ 293 room=.
+-> u11
+T 994 mode=inventory           Anborn of the White City(hum) F3@(14,14) HP 62/62 MP 0/0 Hu 93 $ 293 room=.
+-> x
+T 995 mode=game_loop           Anborn of the White City(hum) F3@(14,14) HP 62/62 MP 0/0 Hu 93 $ 293 room=.
+-> e
+T 996 mode=game_loop           Anborn of the White City(hum) F3@(15,14) HP 56/62 MP 0/0 Hu 92 $ 293 room=.
+-> n
+T 997 mode=game_loop           Anborn of the White City(hum) F3@(15,13) HP 56/62 MP 0/0 Hu 91 $ 293 room=.
+-> n
+T 998 mode=game_loop           Anborn of the White City(hum) F3@(15,12) HP 57/62 MP 0/0 Hu 90 $ 293 room=.
+-> n
+T 999 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 57/62 MP 0/0 Hu 89 $ 293 room=.
+-> n
+T1000 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 58/62 MP 0/0 Hu 88 $ 293 room=.
+-> w
+T1001 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 58/62 MP 0/0 Hu 87 $ 293 room=.
+-> w
+T1002 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 59/62 MP 0/0 Hu 86 $ 293 room=.
+-> w
+T1003 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 59/62 MP 0/0 Hu 85 $ 293 room=.
+-> s
+T1004 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 59/62 MP 0/0 Hu 84 $ 293 room=.
+-> w
+T1005 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 59/62 MP 0/0 Hu 83 $ 293 room=.
+-> s
+T1006 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 60/62 MP 0/0 Hu 82 $ 293 room=.
+-> w
+T1007 mode=game_loop           Anborn of the White City(hum) F3@(10,12) HP 60/62 MP 0/0 Hu 81 $ 293 room=.
+-> e
+T1008 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 60/62 MP 0/0 Hu 80 $ 293 room=.
+-> e
+T1009 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 60/62 MP 0/0 Hu 79 $ 293 room=.
+-> n
+T1010 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 61/62 MP 0/0 Hu 78 $ 293 room=.
+-> n
+T1011 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 61/62 MP 0/0 Hu 77 $ 293 room=.
+-> e
+T1012 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 61/62 MP 0/0 Hu 76 $ 293 room=.
+-> e
+T1013 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 61/62 MP 0/0 Hu 75 $ 293 room=.
+-> e
+T1014 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 62/62 MP 0/0 Hu 74 $ 293 room=.
+-> s
+T1015 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 73 $ 293 room=.
+-> s
+T1016 mode=game_loop           Anborn of the White City(hum) F3@(15,12) HP 62/62 MP 0/0 Hu 72 $ 293 room=.
+-> w
+T1017 mode=game_loop           Anborn of the White City(hum) F3@(14,12) HP 62/62 MP 0/0 Hu 71 $ 293 room=.
+-> n
+T1018 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 62/62 MP 0/0 Hu 70 $ 293 room=.
+-> n
+T1019 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 69 $ 293 room=.
+-> w
+T1020 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 68 $ 293 room=.
+-> l
+T1021 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 68 $ 293 room=.
+-> w
+T1022 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 67 $ 293 room=.
+-> s
+T1023 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 66 $ 293 room=.
+-> e
+T1024 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 65 $ 293 room=.
+-> s
+T1025 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 62/62 MP 0/0 Hu 64 $ 293 room=V
+-> w
+T1026 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 63 $ 293 room=.
+-> s
+T1027 mode=game_loop           Anborn of the White City(hum) F3@(12,13) HP 62/62 MP 0/0 Hu 62 $ 293 room=.
+-> s
+T1028 mode=game_loop           Anborn of the White City(hum) F3@(12,14) HP 62/62 MP 0/0 Hu 61 $ 293 room=.
+-> s
+T1029 mode=pool_mode           Anborn of the White City(hum) F3@(12,15) HP 62/62 MP 0/0 Hu 60 $ 293 room=P
+-> dr
+T1030 mode=game_loop           Anborn of the White City(hum) F3@(12,15) HP 62/62 MP 0/0 Hu 60 $ 293 room=.
+-> l
+T1031 mode=game_loop           Anborn of the White City(hum) F3@(12,15) HP 62/62 MP 0/0 Hu 60 $ 293 room=.
+-> e
+T1032 mode=game_loop           Anborn of the White City(hum) F3@(13,15) HP 62/62 MP 0/0 Hu 59 $ 293 room=.
+-> n
+T1033 mode=game_loop           Anborn of the White City(hum) F3@(13,14) HP 62/62 MP 0/0 Hu 58 $ 293 room=.
+-> e
+T1034 mode=game_loop           Anborn of the White City(hum) F3@(14,14) HP 62/62 MP 0/0 Hu 57 $ 293 room=.
+-> n
+T1035 mode=combat_mode         Anborn of the White City(hum) F3@(14,13) HP 62/62 MP 0/0 Hu 56 $ 293 room=M vs Orc(L2 HP50/50)
+-> a
+T1036 mode=combat_mode         Anborn of the White City(hum) F3@(14,13) HP 62/62 MP 0/0 Hu 56 $ 293 room=M vs Orc(L2 HP50/50)
+-> a
+T1037 mode=combat_mode         Anborn of the White City(hum) F3@(14,13) HP 60/62 MP 0/0 Hu 56 $ 293 room=M vs Orc(L2 HP27/50)
+-> a
+T1038 mode=combat_mode         Anborn of the White City(hum) F3@(14,13) HP 58/62 MP 0/0 Hu 56 $ 293 room=M vs Orc(L2 HP27/50)
+-> a
+T1039 mode=combat_mode         Anborn of the White City(hum) F3@(14,13) HP 56/62 MP 0/0 Hu 56 $ 293 room=M vs Orc(L2 HP4/50)
+-> a
+T1040 mode=combat_victory      Anborn of the White City(hum) F3@(14,13) HP 56/62 MP 0/0 Hu 56 $ 374 room=.
+-> back
+T1041 mode=game_loop           Anborn of the White City(hum) F3@(14,13) HP 56/62 MP 0/0 Hu 56 $ 374 room=.
+-> n
+T1042 mode=game_loop           Anborn of the White City(hum) F3@(14,12) HP 56/62 MP 0/0 Hu 55 $ 374 room=.
+-> n
+T1043 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 56/62 MP 0/0 Hu 54 $ 374 room=.
+-> n
+T1044 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 56/62 MP 0/0 Hu 53 $ 374 room=.
+-> w
+T1045 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 56/62 MP 0/0 Hu 52 $ 374 room=.
+-> w
+T1046 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 56/62 MP 0/0 Hu 51 $ 374 room=.
+-> s
+T1047 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 56/62 MP 0/0 Hu 50 $ 374 room=.
+-> w
+T1048 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 56/62 MP 0/0 Hu 49 $ 374 room=.
+-> i
+T1049 mode=inventory           Anborn of the White City(hum) F3@(11,11) HP 56/62 MP 0/0 Hu 49 $ 374 room=.
+-> u11
+T1050 mode=inventory           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 49 $ 374 room=.
+-> x
+T1051 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 49 $ 374 room=.
+-> i
+T1052 mode=inventory           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 49 $ 374 room=.
+-> eat1
+T1053 mode=inventory           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 99 $ 374 room=.
+-> x
+T1054 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 99 $ 374 room=.
+-> s
+T1055 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 98 $ 374 room=.
+-> w
+T1056 mode=game_loop           Anborn of the White City(hum) F3@(10,12) HP 62/62 MP 0/0 Hu 97 $ 374 room=.
+-> e
+T1057 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 96 $ 374 room=.
+-> i
+T1058 mode=inventory           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 96 $ 374 room=.
+-> eat2
+T1059 mode=inventory           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu100 $ 374 room=.
+-> x
+T1060 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu100 $ 374 room=.
+-> l
+T1061 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu100 $ 374 room=.
+-> e
+T1062 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 99 $ 374 room=.
+-> n
+T1063 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 98 $ 374 room=.
+-> n
+T1064 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 97 $ 374 room=.
+-> e
+T1065 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 96 $ 374 room=.
+-> e
+T1066 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 95 $ 374 room=.
+-> e
+T1067 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 62/62 MP 0/0 Hu 94 $ 374 room=.
+-> s
+T1068 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 93 $ 374 room=.
+-> w
+T1069 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 62/62 MP 0/0 Hu 92 $ 374 room=.
+-> w
+T1070 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 91 $ 374 room=.
+-> l
+T1071 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 91 $ 374 room=.
+-> n
+T1072 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 90 $ 374 room=.
+-> w
+T1073 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 89 $ 374 room=.
+-> s
+T1074 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 88 $ 374 room=.
+-> s
+T1075 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 87 $ 374 room=.
+-> w
+T1076 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 86 $ 374 room=.
+-> n
+T1077 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 85 $ 374 room=.
+-> s
+T1078 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 84 $ 374 room=.
+-> w
+T1079 mode=game_loop           Anborn of the White City(hum) F3@(10,12) HP 62/62 MP 0/0 Hu 83 $ 374 room=.
+-> e
+T1080 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 82 $ 374 room=.
+-> l
+T1081 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 82 $ 374 room=.
+-> e
+T1082 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 81 $ 374 room=.
+-> n
+T1083 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 80 $ 374 room=.
+-> n
+T1084 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 79 $ 374 room=.
+-> e
+T1085 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 78 $ 374 room=.
+-> e
+T1086 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 77 $ 374 room=.
+-> s
+T1087 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 62/62 MP 0/0 Hu 76 $ 374 room=.
+-> e
+T1088 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 75 $ 374 room=.
+-> n
+T1089 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 62/62 MP 0/0 Hu 74 $ 374 room=.
+-> s
+T1090 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 73 $ 374 room=.
+-> l
+T1091 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 73 $ 374 room=.
+-> s
+T1092 mode=game_loop           Anborn of the White City(hum) F3@(15,12) HP 62/62 MP 0/0 Hu 72 $ 374 room=.
+-> s
+T1093 mode=game_loop           Anborn of the White City(hum) F3@(15,13) HP 62/62 MP 0/0 Hu 71 $ 374 room=.
+-> e
+T1094 mode=game_loop           Anborn of the White City(hum) F3@(16,13) HP 62/62 MP 0/0 Hu 70 $ 374 room=.
+-> n
+T1095 mode=game_loop           Anborn of the White City(hum) F3@(16,12) HP 62/62 MP 0/0 Hu 69 $ 374 room=.
+-> n
+T1096 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 62/62 MP 0/0 Hu 68 $ 374 room=C
+-> w
+T1097 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 67 $ 374 room=.
+-> n
+T1098 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 62/62 MP 0/0 Hu 66 $ 374 room=.
+-> w
+T1099 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 65 $ 374 room=.
+-> w
+T1100 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 64 $ 374 room=.
+-> l
+T1101 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 64 $ 374 room=.
+-> w
+T1102 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 63 $ 374 room=.
+-> s
+T1103 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 62 $ 374 room=.
+-> w
+T1104 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 61 $ 374 room=.
+-> s
+T1105 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 60 $ 374 room=.
+-> e
+T1106 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 59 $ 374 room=.
+-> s
+T1107 mode=game_loop           Anborn of the White City(hum) F3@(12,13) HP 62/62 MP 0/0 Hu 58 $ 374 room=.
+-> s
+T1108 mode=game_loop           Anborn of the White City(hum) F3@(12,14) HP 62/62 MP 0/0 Hu 57 $ 374 room=.
+-> s
+T1109 mode=game_loop           Anborn of the White City(hum) F3@(12,15) HP 62/62 MP 0/0 Hu 56 $ 374 room=.
+-> e
+T1110 mode=game_loop           Anborn of the White City(hum) F3@(13,15) HP 62/62 MP 0/0 Hu 55 $ 374 room=.
+-> n
+T1111 mode=game_loop           Anborn of the White City(hum) F3@(13,14) HP 62/62 MP 0/0 Hu 54 $ 374 room=.
+-> e
+T1112 mode=game_loop           Anborn of the White City(hum) F3@(14,14) HP 62/62 MP 0/0 Hu 53 $ 374 room=.
+-> n
+T1113 mode=game_loop           Anborn of the White City(hum) F3@(14,13) HP 62/62 MP 0/0 Hu 52 $ 374 room=.
+-> n
+T1114 mode=game_loop           Anborn of the White City(hum) F3@(14,12) HP 62/62 MP 0/0 Hu 51 $ 374 room=.
+-> n
+T1115 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 62/62 MP 0/0 Hu 50 $ 374 room=.
+-> n
+T1116 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 49 $ 374 room=.
+-> i
+T1117 mode=inventory           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 49 $ 374 room=.
+-> eat1
+T1118 mode=inventory           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 99 $ 374 room=.
+-> x
+T1119 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 99 $ 374 room=.
+-> w
+T1120 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 98 $ 374 room=.
+-> w
+T1121 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 97 $ 374 room=.
+-> s
+T1122 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 96 $ 374 room=.
+-> w
+T1123 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 95 $ 374 room=.
+-> s
+T1124 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 94 $ 374 room=.
+-> w
+T1125 mode=game_loop           Anborn of the White City(hum) F3@(10,12) HP 62/62 MP 0/0 Hu 93 $ 374 room=.
+-> e
+T1126 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 92 $ 374 room=.
+-> e
+T1127 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 91 $ 374 room=.
+-> n
+T1128 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 90 $ 374 room=.
+-> n
+T1129 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 89 $ 374 room=.
+-> e
+T1130 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 88 $ 374 room=.
+-> s
+T1131 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 87 $ 374 room=.
+-> e
+T1132 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 62/62 MP 0/0 Hu 86 $ 374 room=.
+-> n
+T1133 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 85 $ 374 room=.
+-> e
+T1134 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 62/62 MP 0/0 Hu 84 $ 374 room=.
+-> s
+T1135 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 83 $ 374 room=.
+-> e
+T1136 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 62/62 MP 0/0 Hu 82 $ 374 room=C
+-> e
+T1137 mode=game_loop           Anborn of the White City(hum) F3@(17,11) HP 62/62 MP 0/0 Hu 81 $ 374 room=.
+-> s
+T1138 mode=game_loop           Anborn of the White City(hum) F3@(17,12) HP 62/62 MP 0/0 Hu 80 $ 374 room=.
+-> s
+T1139 mode=game_loop           Anborn of the White City(hum) F3@(17,13) HP 62/62 MP 0/0 Hu 79 $ 374 room=.
+-> e
+T1140 mode=combat_mode         Anborn of the White City(hum) F3@(18,13) HP 62/62 MP 0/0 Hu 78 $ 374 room=M vs Goblin(L2 HP12/12)
+-> a
+T1141 mode=combat_mode         Anborn of the White City(hum) F3@(18,13) HP 61/62 MP 0/0 Hu 78 $ 374 room=M vs Goblin(L2 HP12/12)
+-> a
+T1142 mode=combat_mode         Anborn of the White City(hum) F3@(18,13) HP 60/62 MP 0/0 Hu 78 $ 374 room=M vs Goblin(L2 HP12/12)
+-> a
+T1143 mode=combat_mode         Anborn of the White City(hum) F3@(18,13) HP 60/62 MP 0/0 Hu 78 $ 374 room=M vs Goblin(L2 HP12/12)
+-> a
+T1144 mode=combat_victory      Anborn of the White City(hum) F3@(18,13) HP 60/62 MP 0/0 Hu 78 $ 401 room=.
+-> back
+T1145 mode=game_loop           Anborn of the White City(hum) F3@(18,13) HP 60/62 MP 0/0 Hu 78 $ 401 room=.
+-> w
+T1146 mode=game_loop           Anborn of the White City(hum) F3@(17,13) HP 60/62 MP 0/0 Hu 77 $ 401 room=.
+-> w
+T1147 mode=game_loop           Anborn of the White City(hum) F3@(16,13) HP 60/62 MP 0/0 Hu 76 $ 401 room=.
+-> n
+T1148 mode=game_loop           Anborn of the White City(hum) F3@(16,12) HP 60/62 MP 0/0 Hu 75 $ 401 room=.
+-> n
+T1149 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 61/62 MP 0/0 Hu 74 $ 401 room=C
+-> w
+T1150 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 61/62 MP 0/0 Hu 73 $ 401 room=.
+-> n
+T1151 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 61/62 MP 0/0 Hu 72 $ 401 room=.
+-> w
+T1152 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 61/62 MP 0/0 Hu 71 $ 401 room=.
+-> w
+T1153 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 70 $ 401 room=.
+-> w
+T1154 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 69 $ 401 room=.
+-> s
+T1155 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 68 $ 401 room=.
+-> e
+T1156 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 67 $ 401 room=.
+-> s
+T1157 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 62/62 MP 0/0 Hu 66 $ 401 room=V
+-> w
+T1158 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 65 $ 401 room=.
+-> w
+T1159 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 64 $ 401 room=.
+-> n
+T1160 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 63 $ 401 room=.
+-> e
+T1161 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 62 $ 401 room=.
+-> n
+T1162 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 61 $ 401 room=.
+-> e
+T1163 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 60 $ 401 room=.
+-> e
+T1164 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 59 $ 401 room=.
+-> e
+T1165 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 62/62 MP 0/0 Hu 58 $ 401 room=.
+-> s
+T1166 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 57 $ 401 room=.
+-> e
+T1167 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 62/62 MP 0/0 Hu 56 $ 401 room=C
+-> e
+T1168 mode=game_loop           Anborn of the White City(hum) F3@(17,11) HP 62/62 MP 0/0 Hu 55 $ 401 room=.
+-> s
+T1169 mode=game_loop           Anborn of the White City(hum) F3@(17,12) HP 62/62 MP 0/0 Hu 54 $ 401 room=.
+-> s
+T1170 mode=game_loop           Anborn of the White City(hum) F3@(17,13) HP 62/62 MP 0/0 Hu 53 $ 401 room=.
+-> w
+T1171 mode=game_loop           Anborn of the White City(hum) F3@(16,13) HP 62/62 MP 0/0 Hu 52 $ 401 room=.
+-> n
+T1172 mode=game_loop           Anborn of the White City(hum) F3@(16,12) HP 62/62 MP 0/0 Hu 51 $ 401 room=.
+-> n
+T1173 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 62/62 MP 0/0 Hu 50 $ 401 room=C
+-> w
+T1174 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 49 $ 401 room=.
+-> i
+T1175 mode=inventory           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 49 $ 401 room=.
+-> eat1
+T1176 mode=inventory           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 99 $ 401 room=.
+-> x
+T1177 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 99 $ 401 room=.
+-> n
+T1178 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 62/62 MP 0/0 Hu 98 $ 401 room=.
+-> w
+T1179 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 97 $ 401 room=.
+-> w
+T1180 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 96 $ 401 room=.
+-> w
+T1181 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 95 $ 401 room=.
+-> s
+T1182 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 94 $ 401 room=.
+-> w
+T1183 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 93 $ 401 room=.
+-> s
+T1184 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 92 $ 401 room=.
+-> e
+T1185 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 91 $ 401 room=.
+-> e
+T1186 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 62/62 MP 0/0 Hu 90 $ 401 room=V
+-> n
+T1187 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 89 $ 401 room=.
+-> n
+T1188 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 88 $ 401 room=.
+-> w
+T1189 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 87 $ 401 room=.
+-> s
+T1190 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 86 $ 401 room=.
+-> w
+T1191 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 85 $ 401 room=.
+-> s
+T1192 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 84 $ 401 room=.
+-> e
+T1193 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 83 $ 401 room=.
+-> e
+T1194 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 62/62 MP 0/0 Hu 82 $ 401 room=V
+-> n
+T1195 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 81 $ 401 room=.
+-> n
+T1196 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 80 $ 401 room=.
+-> w
+T1197 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 79 $ 401 room=.
+-> s
+T1198 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 78 $ 401 room=.
+-> w
+T1199 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 62/62 MP 0/0 Hu 77 $ 401 room=.
+-> s
+T1200 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 62/62 MP 0/0 Hu 76 $ 401 room=.
+-> e
+T1201 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 75 $ 401 room=.
+-> s
+T1202 mode=game_loop           Anborn of the White City(hum) F3@(12,13) HP 62/62 MP 0/0 Hu 74 $ 401 room=.
+-> s
+T1203 mode=game_loop           Anborn of the White City(hum) F3@(12,14) HP 62/62 MP 0/0 Hu 73 $ 401 room=.
+-> e
+T1204 mode=game_loop           Anborn of the White City(hum) F3@(13,14) HP 62/62 MP 0/0 Hu 72 $ 401 room=.
+-> e
+T1205 mode=game_loop           Anborn of the White City(hum) F3@(14,14) HP 62/62 MP 0/0 Hu 71 $ 401 room=.
+-> n
+T1206 mode=game_loop           Anborn of the White City(hum) F3@(14,13) HP 62/62 MP 0/0 Hu 70 $ 401 room=.
+-> n
+T1207 mode=game_loop           Anborn of the White City(hum) F3@(14,12) HP 62/62 MP 0/0 Hu 69 $ 401 room=.
+-> n
+T1208 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 62/62 MP 0/0 Hu 68 $ 401 room=.
+-> n
+T1209 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 67 $ 401 room=.
+-> w
+T1210 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 66 $ 401 room=.
+-> w
+T1211 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 65 $ 401 room=.
+-> s
+T1212 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 64 $ 401 room=.
+-> s
+T1213 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 63 $ 401 room=.
+-> s
+T1214 mode=game_loop           Anborn of the White City(hum) F3@(12,13) HP 62/62 MP 0/0 Hu 62 $ 401 room=.
+-> s
+T1215 mode=game_loop           Anborn of the White City(hum) F3@(12,14) HP 62/62 MP 0/0 Hu 61 $ 401 room=.
+-> e
+T1216 mode=game_loop           Anborn of the White City(hum) F3@(13,14) HP 62/62 MP 0/0 Hu 60 $ 401 room=.
+-> e
+T1217 mode=game_loop           Anborn of the White City(hum) F3@(14,14) HP 62/62 MP 0/0 Hu 59 $ 401 room=.
+-> n
+T1218 mode=game_loop           Anborn of the White City(hum) F3@(14,13) HP 62/62 MP 0/0 Hu 58 $ 401 room=.
+-> n
+T1219 mode=game_loop           Anborn of the White City(hum) F3@(14,12) HP 62/62 MP 0/0 Hu 57 $ 401 room=.
+-> n
+T1220 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 62/62 MP 0/0 Hu 56 $ 401 room=.
+-> n
+T1221 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 55 $ 401 room=.
+-> w
+T1222 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 54 $ 401 room=.
+-> w
+T1223 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 53 $ 401 room=.
+-> s
+T1224 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 52 $ 401 room=.
+-> e
+T1225 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 51 $ 401 room=.
+-> e
+T1226 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 62/62 MP 0/0 Hu 50 $ 401 room=.
+-> n
+T1227 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 49 $ 401 room=.
+-> w
+T1228 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 48 $ 401 room=.
+-> w
+T1229 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 47 $ 401 room=.
+-> s
+T1230 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 46 $ 401 room=.
+-> s
+T1231 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 45 $ 401 room=.
+-> e
+T1232 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 62/62 MP 0/0 Hu 44 $ 401 room=V
+-> n
+T1233 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 43 $ 401 room=.
+-> n
+T1234 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 42 $ 401 room=.
+-> w
+T1235 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 41 $ 401 room=.
+-> s
+T1236 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 40 $ 401 room=.
+-> s
+T1237 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 39 $ 401 room=.
+-> s
+T1238 mode=game_loop           Anborn of the White City(hum) F3@(12,13) HP 62/62 MP 0/0 Hu 38 $ 401 room=.
+-> s
+T1239 mode=game_loop           Anborn of the White City(hum) F3@(12,14) HP 62/62 MP 0/0 Hu 37 $ 401 room=.
+-> e
+T1240 mode=game_loop           Anborn of the White City(hum) F3@(13,14) HP 62/62 MP 0/0 Hu 36 $ 401 room=.
+-> s
+T1241 mode=game_loop           Anborn of the White City(hum) F3@(13,15) HP 62/62 MP 0/0 Hu 35 $ 401 room=.
+-> w
+T1242 mode=game_loop           Anborn of the White City(hum) F3@(12,15) HP 62/62 MP 0/0 Hu 34 $ 401 room=.
+-> n
+T1243 mode=game_loop           Anborn of the White City(hum) F3@(12,14) HP 62/62 MP 0/0 Hu 33 $ 401 room=.
+-> n
+T1244 mode=game_loop           Anborn of the White City(hum) F3@(12,13) HP 62/62 MP 0/0 Hu 32 $ 401 room=.
+-> n
+T1245 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 31 $ 401 room=.
+-> n
+T1246 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 30 $ 401 room=.
+-> n
+T1247 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 29 $ 401 room=.
+-> e
+T1248 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 28 $ 401 room=.
+-> s
+T1249 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu 27 $ 401 room=.
+-> s
+T1250 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 62/62 MP 0/0 Hu 26 $ 401 room=V
+-> w
+T1251 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 62/62 MP 0/0 Hu 25 $ 401 room=.
+-> n
+T1252 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu 24 $ 401 room=.
+-> n
+T1253 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu 23 $ 401 room=.
+-> e
+T1254 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu 22 $ 401 room=.
+-> e
+T1255 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu 21 $ 401 room=.
+-> e
+T1256 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 62/62 MP 0/0 Hu 20 $ 401 room=.
+-> s
+T1257 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu 19 $ 401 room=.
+-> s
+T1258 mode=game_loop           Anborn of the White City(hum) F3@(15,12) HP 62/62 MP 0/0 Hu 18 $ 401 room=.
+-> e
+T1259 mode=game_loop           Anborn of the White City(hum) F3@(16,12) HP 62/62 MP 0/0 Hu 17 $ 401 room=.
+-> n
+T1260 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 62/62 MP 0/0 Hu 16 $ 401 room=C
+-> e
+T1261 mode=game_loop           Anborn of the White City(hum) F3@(17,11) HP 62/62 MP 0/0 Hu 15 $ 401 room=.
+-> s
+T1262 mode=game_loop           Anborn of the White City(hum) F3@(17,12) HP 62/62 MP 0/0 Hu 14 $ 401 room=.
+-> s
+T1263 mode=game_loop           Anborn of the White City(hum) F3@(17,13) HP 62/62 MP 0/0 Hu 13 $ 401 room=.
+-> e
+T1264 mode=game_loop           Anborn of the White City(hum) F3@(18,13) HP 62/62 MP 0/0 Hu 12 $ 401 room=.
+-> w
+T1265 mode=game_loop           Anborn of the White City(hum) F3@(17,13) HP 62/62 MP 0/0 Hu 11 $ 401 room=.
+-> w
+T1266 mode=game_loop           Anborn of the White City(hum) F3@(16,13) HP 62/62 MP 0/0 Hu 10 $ 401 room=.
+-> n
+T1267 mode=game_loop           Anborn of the White City(hum) F3@(16,12) HP 62/62 MP 0/0 Hu  9 $ 401 room=.
+-> n
+T1268 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 62/62 MP 0/0 Hu  8 $ 401 room=C
+-> w
+T1269 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 62/62 MP 0/0 Hu  7 $ 401 room=.
+-> n
+T1270 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 62/62 MP 0/0 Hu  6 $ 401 room=.
+-> w
+T1271 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 62/62 MP 0/0 Hu  5 $ 401 room=.
+-> w
+T1272 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 62/62 MP 0/0 Hu  4 $ 401 room=.
+-> w
+T1273 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 62/62 MP 0/0 Hu  3 $ 401 room=.
+-> s
+T1274 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 62/62 MP 0/0 Hu  2 $ 401 room=.
+-> e
+T1275 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 62/62 MP 0/0 Hu  1 $ 401 room=.
+-> e
+T1276 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 60/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1277 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 58/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1278 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 56/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1279 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 54/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1280 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 52/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1281 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 50/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1282 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 48/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1283 mode=game_loop           Anborn of the White City(hum) F3@(10,12) HP 46/62 MP 0/0 Hu  0 $ 401 room=.
+-> i
+T1284 mode=inventory           Anborn of the White City(hum) F3@(10,12) HP 46/62 MP 0/0 Hu  0 $ 401 room=.
+-> u11
+T1285 mode=inventory           Anborn of the White City(hum) F3@(10,12) HP 62/62 MP 0/0 Hu  0 $ 401 room=.
+-> x
+T1286 mode=game_loop           Anborn of the White City(hum) F3@(10,12) HP 62/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1287 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 60/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1288 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 58/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1289 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 56/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1290 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 54/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1291 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 52/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1292 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 50/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1293 mode=game_loop           Anborn of the White City(hum) F3@(13,12) HP 48/62 MP 0/0 Hu  0 $ 401 room=V
+-> w
+T1294 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 46/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1295 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 44/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1296 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 42/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1297 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 40/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1298 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 38/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1299 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 36/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1300 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 34/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1301 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 32/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1302 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 30/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1303 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 28/62 MP 0/0 Hu  0 $ 401 room=C
+-> s
+T1304 mode=game_loop           Anborn of the White City(hum) F3@(16,12) HP 26/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1305 mode=game_loop           Anborn of the White City(hum) F3@(16,13) HP 24/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1306 mode=game_loop           Anborn of the White City(hum) F3@(17,13) HP 22/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1307 mode=game_loop           Anborn of the White City(hum) F3@(17,12) HP 20/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1308 mode=game_loop           Anborn of the White City(hum) F3@(17,11) HP 18/62 MP 0/0 Hu  0 $ 401 room=.
+-> i
+T1309 mode=inventory           Anborn of the White City(hum) F3@(17,11) HP 18/62 MP 0/0 Hu  0 $ 401 room=.
+-> u11
+T1310 mode=inventory           Anborn of the White City(hum) F3@(17,11) HP 48/62 MP 0/0 Hu  0 $ 401 room=.
+-> x
+T1311 mode=game_loop           Anborn of the White City(hum) F3@(17,11) HP 48/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1312 mode=game_loop           Anborn of the White City(hum) F3@(16,11) HP 46/62 MP 0/0 Hu  0 $ 401 room=C
+-> w
+T1313 mode=game_loop           Anborn of the White City(hum) F3@(15,11) HP 44/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1314 mode=game_loop           Anborn of the White City(hum) F3@(15,10) HP 42/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1315 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 40/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1316 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 38/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1317 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 36/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1318 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 34/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1319 mode=game_loop           Anborn of the White City(hum) F3@(13,11) HP 32/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1320 mode=game_loop           Anborn of the White City(hum) F3@(14,11) HP 30/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1321 mode=game_loop           Anborn of the White City(hum) F3@(14,10) HP 28/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1322 mode=game_loop           Anborn of the White City(hum) F3@(13,10) HP 26/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1323 mode=game_loop           Anborn of the White City(hum) F3@(12,10) HP 24/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1324 mode=game_loop           Anborn of the White City(hum) F3@(12,11) HP 22/62 MP 0/0 Hu  0 $ 401 room=.
+-> w
+T1325 mode=game_loop           Anborn of the White City(hum) F3@(11,11) HP 20/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1326 mode=game_loop           Anborn of the White City(hum) F3@(11,12) HP 18/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1327 mode=game_loop           Anborn of the White City(hum) F3@(12,12) HP 16/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1328 mode=game_loop           Anborn of the White City(hum) F3@(12,13) HP 14/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1329 mode=game_loop           Anborn of the White City(hum) F3@(12,14) HP 12/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1330 mode=game_loop           Anborn of the White City(hum) F3@(13,14) HP 10/62 MP 0/0 Hu  0 $ 401 room=.
+-> s
+T1331 mode=game_loop           Anborn of the White City(hum) F3@(13,15) HP 8/62 MP 0/0 Hu  0 $ 401 room=.
+-> e
+T1332 mode=game_loop           Anborn of the White City(hum) F3@(14,15) HP 6/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1333 mode=game_loop           Anborn of the White City(hum) F3@(14,14) HP 4/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1334 mode=game_loop           Anborn of the White City(hum) F3@(14,13) HP 2/62 MP 0/0 Hu  0 $ 401 room=.
+-> n
+T1335 mode=death_screen        Anborn of the White City(hum) F3@(14,12) HP 0/62 MP 0/0 Hu  0 $ 401 room=.
+
+=== run finished: turns=1335 floor=3 hp=0/62 gold=401 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/01100_human.html

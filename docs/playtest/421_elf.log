@@ -1,0 +1,1986 @@
+T   0 mode=game_loop           Elrond Goldenbough(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Elrond Goldenbough(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 9 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=chest_mode          Elrond Goldenbough(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=C
+-> o
+T   3 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+  You found armor!
+  Hide Armor
+  Defense: +3 | Level: 1
+-> l
+T   4 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 5 nearby rooms!
+  Lantern fuel remaining: 78
+-> i
+T   5 mode=inventory           Elrond Goldenbough(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+-> u4
+T   6 mode=inventory           Elrond Goldenbough(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  You have identified: Minor Healing Potion!
+  Elrond Goldenbough drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   7 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  Inventory closed.
+-> s
+T   8 mode=combat_mode         Elrond Goldenbough(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Goblin(L0 HP12/12)
+  Shinies! Give us your shinies, The Novice!
+  The Goblin strikes first!
+-> a
+T   9 mode=combat_mode         Elrond Goldenbough(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Goblin(L0 HP12/12)
+  You missed the evil Goblin!
+-> a
+T  10 mode=combat_mode         Elrond Goldenbough(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Goblin(L0 HP12/12)
+-> a
+T  11 mode=combat_mode         Elrond Goldenbough(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 290 room=M vs Goblin(L0 HP12/12)
+-> a
+T  12 mode=combat_mode         Elrond Goldenbough(elf) F1@( 2, 2) HP 26/28 MP 0/0 Hu 98 $ 290 room=M vs Goblin(L0 HP12/12)
+-> a
+T  13 mode=combat_victory      Elrond Goldenbough(elf) F1@( 2, 2) HP 25/28 MP 0/0 Hu 98 $ 347 room=.
+-> back
+T  14 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 2) HP 25/28 MP 0/0 Hu 98 $ 347 room=.
+-> l
+T  15 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 2) HP 25/28 MP 0/0 Hu 98 $ 347 room=.
+-> s
+T  16 mode=chest_mode          Elrond Goldenbough(elf) F1@( 2, 3) HP 25/28 MP 0/0 Hu 97 $ 347 room=C
+-> s
+T  17 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 4) HP 26/28 MP 0/0 Hu 96 $ 347 room=.
+-> w
+T  18 mode=game_loop           Elrond Goldenbough(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 95 $ 347 room=.
+-> n
+T  19 mode=combat_mode         Elrond Goldenbough(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 94 $ 347 room=M vs Goblin(L0 HP30/30)
+-> a
+T  20 mode=combat_mode         Elrond Goldenbough(elf) F1@( 1, 3) HP 26/28 MP 0/0 Hu 94 $ 347 room=M vs Goblin(L0 HP30/30)
+-> a
+T  21 mode=combat_mode         Elrond Goldenbough(elf) F1@( 1, 3) HP 26/28 MP 0/0 Hu 94 $ 347 room=M vs Goblin(L0 HP30/30)
+-> a
+T  22 mode=combat_mode         Elrond Goldenbough(elf) F1@( 1, 3) HP 26/28 MP 0/0 Hu 94 $ 347 room=M vs Goblin(L0 HP10/30)
+-> a
+T  23 mode=combat_victory      Elrond Goldenbough(elf) F1@( 1, 3) HP 26/28 MP 0/0 Hu 94 $ 354 room=.
+-> back
+T  24 mode=game_loop           Elrond Goldenbough(elf) F1@( 1, 3) HP 26/28 MP 0/0 Hu 94 $ 354 room=.
+-> s
+T  25 mode=game_loop           Elrond Goldenbough(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 93 $ 354 room=.
+-> s
+T  26 mode=combat_mode         Elrond Goldenbough(elf) F1@( 1, 5) HP 27/28 MP 0/0 Hu 92 $ 354 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  27 mode=combat_mode         Elrond Goldenbough(elf) F1@( 1, 5) HP 27/28 MP 0/0 Hu 92 $ 354 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  28 mode=combat_victory      Elrond Goldenbough(elf) F1@( 1, 5) HP 27/28 MP 0/0 Hu 92 $ 362 room=.
+-> back
+T  29 mode=game_loop           Elrond Goldenbough(elf) F1@( 1, 5) HP 27/28 MP 0/0 Hu 92 $ 362 room=.
+-> e
+T  30 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 5) HP 27/28 MP 0/0 Hu 91 $ 362 room=.
+-> l
+T  31 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 5) HP 27/28 MP 0/0 Hu 91 $ 362 room=.
+-> n
+T  32 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 90 $ 362 room=.
+-> n
+T  33 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 89 $ 362 room=C
+-> l
+T  34 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 89 $ 362 room=C
+-> n
+T  35 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 88 $ 362 room=.
+-> e
+T  36 mode=shrine_mode         Elrond Goldenbough(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 87 $ 362 room=F
+-> p
+T  37 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 87 $ 362 room=.
+-> s
+T  38 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 86 $ 362 room=.
+-> n
+T  39 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 85 $ 362 room=.
+-> s
+T  40 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 84 $ 362 room=.
+-> w
+T  41 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 83 $ 362 room=C
+-> s
+T  42 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 82 $ 362 room=.
+-> s
+T  43 mode=game_loop           Elrond Goldenbough(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 81 $ 362 room=.
+-> e
+T  44 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 80 $ 362 room=.
+-> l
+T  45 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 80 $ 362 room=.
+-> s
+T  46 mode=combat_mode         Elrond Goldenbough(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 79 $ 362 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  47 mode=combat_victory      Elrond Goldenbough(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 79 $ 472 room=.
+-> back
+T  48 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 79 $ 472 room=.
+-> l
+T  49 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 79 $ 472 room=.
+-> e
+T  50 mode=chest_mode          Elrond Goldenbough(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 78 $ 472 room=C
+-> o
+T  51 mode=game_loop           Elrond Goldenbough(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 78 $ 472 room=.
+-> l
+T  52 mode=game_loop           Elrond Goldenbough(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 78 $ 472 room=.
+-> e
+T  53 mode=library_mode        Elrond Goldenbough(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 77 $ 472 room=L
+-> r
+T  54 mode=library_read_decision_mode Elrond Goldenbough(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 77 $ 472 room=L
+-> y
+T  55 mode=game_loop           Elrond Goldenbough(elf) F1@( 5, 6) HP 7/28 MP 0/0 Hu 77 $ 572 room=.
+-> i
+T  56 mode=inventory           Elrond Goldenbough(elf) F1@( 5, 6) HP 7/28 MP 0/0 Hu 77 $ 572 room=.
+-> u4
+T  57 mode=inventory           Elrond Goldenbough(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 77 $ 572 room=.
+-> x
+T  58 mode=game_loop           Elrond Goldenbough(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 77 $ 572 room=.
+-> l
+T  59 mode=game_loop           Elrond Goldenbough(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 77 $ 572 room=.
+-> s
+T  60 mode=chest_mode          Elrond Goldenbough(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 76 $ 572 room=C
+-> o
+T  61 mode=combat_mode         Elrond Goldenbough(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 75 $ 572 room=M vs Zombie(L0 HP35/35)
+-> a
+T  62 mode=combat_mode         Elrond Goldenbough(elf) F1@( 5, 8) HP 27/28 MP 0/0 Hu 75 $ 572 room=M vs Zombie(L0 HP14/35)
+-> a
+T  63 mode=combat_victory      Elrond Goldenbough(elf) F1@( 5, 8) HP 27/28 MP 0/0 Hu 75 $ 578 room=.
+-> back
+T  64 mode=game_loop           Elrond Goldenbough(elf) F1@( 5, 8) HP 27/28 MP 0/0 Hu 75 $ 578 room=.
+-> s
+T  65 mode=game_loop           Elrond Goldenbough(elf) F1@( 5, 9) HP 27/28 MP 0/0 Hu 74 $ 578 room=.
+-> s
+T  66 mode=combat_mode         Elrond Goldenbough(elf) F1@( 5,10) HP 27/28 MP 0/0 Hu 73 $ 578 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  67 mode=combat_victory      Elrond Goldenbough(elf) F1@( 5,10) HP 27/28 MP 0/0 Hu 73 $ 581 room=.
+-> back
+T  68 mode=game_loop           Elrond Goldenbough(elf) F1@( 5,10) HP 27/28 MP 0/0 Hu 73 $ 581 room=.
+-> n
+T  69 mode=game_loop           Elrond Goldenbough(elf) F1@( 5, 9) HP 27/28 MP 0/0 Hu 72 $ 581 room=.
+-> n
+T  70 mode=game_loop           Elrond Goldenbough(elf) F1@( 5, 8) HP 28/28 MP 0/0 Hu 71 $ 581 room=.
+-> n
+T  71 mode=game_loop           Elrond Goldenbough(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 70 $ 581 room=.
+-> w
+T  72 mode=combat_mode         Elrond Goldenbough(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 69 $ 581 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  73 mode=combat_mode         Elrond Goldenbough(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 69 $ 581 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  74 mode=combat_victory      Elrond Goldenbough(elf) F1@( 4, 7) HP 26/28 MP 0/0 Hu 69 $ 582 room=.
+-> back
+T  75 mode=game_loop           Elrond Goldenbough(elf) F1@( 4, 7) HP 26/28 MP 0/0 Hu 69 $ 582 room=.
+-> i
+T  76 mode=inventory           Elrond Goldenbough(elf) F1@( 4, 7) HP 26/28 MP 0/0 Hu 69 $ 582 room=.
+-> u4
+T  77 mode=inventory           Elrond Goldenbough(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 69 $ 582 room=.
+-> x
+T  78 mode=game_loop           Elrond Goldenbough(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 69 $ 582 room=.
+-> i
+T  79 mode=inventory           Elrond Goldenbough(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 69 $ 582 room=.
+-> eat4
+T  80 mode=inventory           Elrond Goldenbough(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 74 $ 582 room=.
+-> eat1
+T  81 mode=inventory           Elrond Goldenbough(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu100 $ 582 room=.
+-> x
+T  82 mode=game_loop           Elrond Goldenbough(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu100 $ 582 room=.
+-> w
+T  83 mode=combat_mode         Elrond Goldenbough(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 99 $ 582 room=M vs Zombie(L0 HP35/35)
+-> a
+T  84 mode=combat_mode         Elrond Goldenbough(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 99 $ 582 room=M vs Zombie(L0 HP35/35)
+-> a
+T  85 mode=combat_mode         Elrond Goldenbough(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 99 $ 582 room=M vs Zombie(L0 HP14/35)
+-> a
+T  86 mode=combat_victory      Elrond Goldenbough(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 99 $ 586 room=.
+-> back
+T  87 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 99 $ 586 room=.
+-> l
+T  88 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 99 $ 586 room=.
+-> n
+T  89 mode=game_loop           Elrond Goldenbough(elf) F1@( 3, 6) HP 27/28 MP 0/0 Hu 98 $ 586 room=.
+-> e
+T  90 mode=game_loop           Elrond Goldenbough(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 97 $ 586 room=.
+-> e
+T  91 mode=game_loop           Elrond Goldenbough(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 96 $ 586 room=.
+-> e
+T  92 mode=library_mode        Elrond Goldenbough(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 95 $ 586 room=L
+-> r
+T  93 mode=library_read_decision_mode Elrond Goldenbough(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 95 $ 586 room=L
+-> y
+T  94 mode=game_loop           Elrond Goldenbough(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 95 $ 586 room=.
+-> l
+T  95 mode=game_loop           Elrond Goldenbough(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 95 $ 586 room=.
+-> n
+T  96 mode=game_loop           Elrond Goldenbough(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 94 $ 586 room=.
+-> i
+T  97 mode=inventory           Elrond Goldenbough(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 94 $ 586 room=.
+-> eat3
+T  98 mode=inventory           Elrond Goldenbough(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 99 $ 586 room=.
+-> x
+T  99 mode=game_loop           Elrond Goldenbough(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 99 $ 586 room=.
+-> l
+T 100 mode=game_loop           Elrond Goldenbough(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 99 $ 586 room=.
+-> e
+T 101 mode=game_loop           Elrond Goldenbough(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 98 $ 586 room=.
+-> l
+T 102 mode=game_loop           Elrond Goldenbough(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 98 $ 586 room=.
+-> s
+T 103 mode=game_loop           Elrond Goldenbough(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 97 $ 586 room=.
+-> e
+T 104 mode=game_loop           Elrond Goldenbough(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 96 $ 586 room=.
+-> n
+T 105 mode=library_mode        Elrond Goldenbough(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 95 $ 586 room=L
+-> r
+T 106 mode=library_read_decision_mode Elrond Goldenbough(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 95 $ 586 room=L
+-> y
+T 107 mode=game_loop           Elrond Goldenbough(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 95 $ 636 room=.
+-> e
+T 108 mode=game_loop           Elrond Goldenbough(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 94 $ 636 room=.
+-> l
+T 109 mode=game_loop           Elrond Goldenbough(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 94 $ 636 room=.
+-> e
+T 110 mode=combat_mode         Elrond Goldenbough(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 93 $ 636 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 111 mode=combat_victory      Elrond Goldenbough(elf) F1@( 8, 5) HP 27/28 MP 0/0 Hu 93 $ 645 room=.
+-> back
+T 112 mode=game_loop           Elrond Goldenbough(elf) F1@( 8, 5) HP 27/28 MP 0/0 Hu 93 $ 645 room=.
+-> s
+T 113 mode=combat_mode         Elrond Goldenbough(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 92 $ 645 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 114 mode=combat_mode         Elrond Goldenbough(elf) F1@( 8, 6) HP 26/28 MP 0/0 Hu 92 $ 645 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 115 mode=combat_victory      Elrond Goldenbough(elf) F1@( 8, 6) HP 26/28 MP 0/0 Hu 92 $ 747 room=.
+-> back
+T 116 mode=game_loop           Elrond Goldenbough(elf) F1@( 8, 6) HP 26/28 MP 0/0 Hu 92 $ 747 room=.
+-> e
+T 117 mode=combat_mode         Elrond Goldenbough(elf) F1@( 9, 6) HP 27/28 MP 0/0 Hu 91 $ 747 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 118 mode=combat_mode         Elrond Goldenbough(elf) F1@( 9, 6) HP 26/28 MP 0/0 Hu 91 $ 747 room=M vs Giant Rat(L0 HP1/22)
+-> f
+T 119 mode=flee_direction_mode Elrond Goldenbough(elf) F1@( 9, 6) HP 26/28 MP 0/0 Hu 91 $ 747 room=M
+-> n
+T 120 mode=game_loop           Elrond Goldenbough(elf) F1@( 9, 5) HP 26/28 MP 0/0 Hu 91 $ 747 room=.
+-> s
+T 121 mode=combat_mode         Elrond Goldenbough(elf) F1@( 9, 6) HP 26/28 MP 0/0 Hu 90 $ 747 room=M vs Giant Rat(L0 HP1/22)
+-> f
+T 122 mode=flee_direction_mode Elrond Goldenbough(elf) F1@( 9, 6) HP 26/28 MP 0/0 Hu 90 $ 747 room=M
+-> s
+T 123 mode=game_loop           Elrond Goldenbough(elf) F1@( 9, 7) HP 26/28 MP 0/0 Hu 90 $ 747 room=.
+-> l
+T 124 mode=game_loop           Elrond Goldenbough(elf) F1@( 9, 7) HP 26/28 MP 0/0 Hu 90 $ 747 room=.
+-> s
+T 125 mode=game_loop           Elrond Goldenbough(elf) F1@( 9, 8) HP 27/28 MP 0/0 Hu 89 $ 747 room=.
+-> l
+T 126 mode=game_loop           Elrond Goldenbough(elf) F1@( 9, 8) HP 27/28 MP 0/0 Hu 89 $ 747 room=.
+-> s
+T 127 mode=pool_mode           Elrond Goldenbough(elf) F1@( 9, 9) HP 27/28 MP 0/0 Hu 88 $ 747 room=P
+-> dr
+T 128 mode=game_loop           Elrond Goldenbough(elf) F1@( 9, 9) HP 27/28 MP 0/0 Hu 88 $ 747 room=.
+-> l
+T 129 mode=game_loop           Elrond Goldenbough(elf) F1@( 9, 9) HP 27/28 MP 0/0 Hu 88 $ 747 room=.
+-> s
+T 130 mode=altar_mode          Elrond Goldenbough(elf) F1@( 9,10) HP 28/28 MP 0/0 Hu 87 $ 747 room=A
+-> pray
+T 131 mode=game_loop           Elrond Goldenbough(elf) F1@( 9,10) HP 28/28 MP 0/0 Hu 87 $ 788 room=.
+-> l
+T 132 mode=game_loop           Elrond Goldenbough(elf) F1@( 9,10) HP 28/28 MP 0/0 Hu 87 $ 788 room=.
+-> s
+T 133 mode=game_loop           Elrond Goldenbough(elf) F1@( 9,11) HP 28/28 MP 0/0 Hu 86 $ 788 room=.
+-> l
+T 134 mode=game_loop           Elrond Goldenbough(elf) F1@( 9,11) HP 28/28 MP 0/0 Hu 86 $ 788 room=.
+-> s
+T 135 mode=chest_mode          Elrond Goldenbough(elf) F1@( 9,12) HP 28/28 MP 0/0 Hu 85 $ 788 room=C
+-> o
+T 136 mode=game_loop           Elrond Goldenbough(elf) F1@( 9,12) HP 28/28 MP 0/0 Hu 85 $ 788 room=.
+-> l
+T 137 mode=game_loop           Elrond Goldenbough(elf) F1@( 9,12) HP 28/28 MP 0/0 Hu 85 $ 788 room=.
+-> e
+T 138 mode=combat_mode         Elrond Goldenbough(elf) F1@(10,12) HP 28/28 MP 0/0 Hu 84 $ 788 room=M vs Lichen(L0 HP10/10)
+-> a
+T 139 mode=combat_victory      Elrond Goldenbough(elf) F1@(10,12) HP 27/28 MP 0/0 Hu 84 $ 789 room=.
+-> back
+T 140 mode=game_loop           Elrond Goldenbough(elf) F1@(10,12) HP 27/28 MP 0/0 Hu 84 $ 789 room=.
+-> n
+T 141 mode=game_loop           Elrond Goldenbough(elf) F1@(10,11) HP 27/28 MP 0/0 Hu 83 $ 789 room=.
+-> s
+T 142 mode=game_loop           Elrond Goldenbough(elf) F1@(10,12) HP 27/28 MP 0/0 Hu 82 $ 789 room=.
+-> i
+T 143 mode=inventory           Elrond Goldenbough(elf) F1@(10,12) HP 27/28 MP 0/0 Hu 82 $ 789 room=.
+-> eat3
+T 144 mode=inventory           Elrond Goldenbough(elf) F1@(10,12) HP 27/28 MP 0/0 Hu 88 $ 789 room=.
+-> x
+T 145 mode=game_loop           Elrond Goldenbough(elf) F1@(10,12) HP 27/28 MP 0/0 Hu 88 $ 789 room=.
+-> e
+T 146 mode=combat_mode         Elrond Goldenbough(elf) F1@(11,12) HP 28/28 MP 0/0 Hu 87 $ 789 room=M vs Kobold(L0 HP20/20)
+-> a
+T 147 mode=combat_victory      Elrond Goldenbough(elf) F1@(11,12) HP 28/28 MP 0/0 Hu 87 $ 798 room=.
+-> back
+T 148 mode=game_loop           Elrond Goldenbough(elf) F1@(11,12) HP 28/28 MP 0/0 Hu 87 $ 798 room=.
+-> l
+T 149 mode=game_loop           Elrond Goldenbough(elf) F1@(11,12) HP 28/28 MP 0/0 Hu 87 $ 798 room=.
+-> s
+T 150 mode=combat_mode         Elrond Goldenbough(elf) F1@(11,13) HP 28/28 MP 0/0 Hu 86 $ 798 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 151 mode=combat_mode         Elrond Goldenbough(elf) F1@(11,13) HP 27/28 MP 0/0 Hu 86 $ 798 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 152 mode=combat_victory      Elrond Goldenbough(elf) F1@(11,13) HP 27/38 MP 0/0 Hu 86 $ 806 room=.
+-> back
+T 153 mode=game_loop           Elrond Goldenbough(elf) F1@(11,13) HP 27/38 MP 0/0 Hu 86 $ 806 room=.
+-> l
+T 154 mode=game_loop           Elrond Goldenbough(elf) F1@(11,13) HP 27/38 MP 0/0 Hu 86 $ 806 room=.
+-> e
+T 155 mode=game_loop           Elrond Goldenbough(elf) F1@(12,13) HP 27/38 MP 0/0 Hu 85 $ 806 room=.
+-> l
+T 156 mode=game_loop           Elrond Goldenbough(elf) F1@(12,13) HP 27/38 MP 0/0 Hu 85 $ 806 room=.
+-> e
+T 157 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 806 room=V
+-> r1
+T 158 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 778 room=V
+-> b10
+T 159 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 768 room=V
+-> b3
+T 160 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 718 room=V
+-> b3
+T 161 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 668 room=V
+-> b3
+T 162 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 638 room=V
+-> b3
+T 163 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 608 room=V
+-> b3
+T 164 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 578 room=V
+-> b3
+T 165 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 428 room=V
+-> b1
+T 166 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 420 room=V
+-> id10
+T 167 mode=vendor_shop         Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 370 room=V
+-> x
+T 168 mode=game_loop           Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 370 room=V
+-> i
+T 169 mode=inventory           Elrond Goldenbough(elf) F1@(13,13) HP 27/38 MP 0/0 Hu 84 $ 370 room=V
+-> u5
+T 170 mode=inventory           Elrond Goldenbough(elf) F1@(13,13) HP 38/38 MP 0/0 Hu 84 $ 370 room=V
+-> u4
+T 171 mode=upgrade_scroll_mode Elrond Goldenbough(elf) F1@(13,13) HP 38/38 MP 0/0 Hu 84 $ 370 room=V
+-> 1
+T 172 mode=inventory           Elrond Goldenbough(elf) F1@(13,13) HP 38/38 MP 0/0 Hu 84 $ 370 room=V
+-> x
+T 173 mode=game_loop           Elrond Goldenbough(elf) F1@(13,13) HP 38/38 MP 0/0 Hu 84 $ 370 room=V
+-> l
+T 174 mode=game_loop           Elrond Goldenbough(elf) F1@(13,13) HP 38/38 MP 0/0 Hu 84 $ 370 room=V
+-> n
+T 175 mode=combat_mode         Elrond Goldenbough(elf) F1@(13,12) HP 38/38 MP 0/0 Hu 83 $ 370 room=M vs Kobold(L0 HP8/8)
+-> a
+T 176 mode=combat_victory      Elrond Goldenbough(elf) F1@(13,12) HP 37/38 MP 0/0 Hu 83 $ 380 room=.
+-> back
+T 177 mode=game_loop           Elrond Goldenbough(elf) F1@(13,12) HP 37/38 MP 0/0 Hu 83 $ 380 room=.
+-> l
+T 178 mode=game_loop           Elrond Goldenbough(elf) F1@(13,12) HP 37/38 MP 0/0 Hu 83 $ 380 room=.
+-> e
+T 179 mode=game_loop           Elrond Goldenbough(elf) F1@(14,12) HP 37/38 MP 0/0 Hu 82 $ 380 room=.
+-> s
+T 180 mode=game_loop           Elrond Goldenbough(elf) F1@(14,13) HP 37/38 MP 0/0 Hu 81 $ 380 room=.
+-> l
+T 181 mode=game_loop           Elrond Goldenbough(elf) F1@(14,13) HP 37/38 MP 0/0 Hu 81 $ 380 room=.
+-> s
+T 182 mode=combat_mode         Elrond Goldenbough(elf) F1@(14,14) HP 37/38 MP 0/0 Hu 80 $ 380 room=M vs Kobold(L0 HP8/8)
+-> a
+T 183 mode=combat_mode         Elrond Goldenbough(elf) F1@(14,14) HP 37/38 MP 0/0 Hu 80 $ 380 room=M vs Kobold(L0 HP8/8)
+-> a
+T 184 mode=combat_victory      Elrond Goldenbough(elf) F1@(14,14) HP 37/38 MP 0/0 Hu 80 $ 382 room=.
+-> back
+T 185 mode=game_loop           Elrond Goldenbough(elf) F1@(14,14) HP 37/38 MP 0/0 Hu 80 $ 382 room=.
+-> l
+T 186 mode=game_loop           Elrond Goldenbough(elf) F1@(14,14) HP 37/38 MP 0/0 Hu 80 $ 382 room=.
+-> s
+T 187 mode=pool_mode           Elrond Goldenbough(elf) F1@(14,15) HP 38/38 MP 0/0 Hu 79 $ 382 room=P
+-> dr
+T 188 mode=game_loop           Elrond Goldenbough(elf) F1@(14,15) HP 38/38 MP 0/0 Hu 79 $ 382 room=.
+-> l
+T 189 mode=game_loop           Elrond Goldenbough(elf) F1@(14,15) HP 38/38 MP 0/0 Hu 79 $ 382 room=.
+-> e
+T 190 mode=tomb_mode           Elrond Goldenbough(elf) F1@(15,15) HP 38/38 MP 0/0 Hu 78 $ 382 room=T
+-> p
+T 191 mode=game_loop           Elrond Goldenbough(elf) F1@(15,15) HP 38/38 MP 0/0 Hu 78 $ 382 room=T
+-> l
+T 192 mode=game_loop           Elrond Goldenbough(elf) F1@(15,15) HP 38/38 MP 0/0 Hu 78 $ 382 room=T
+-> s
+T 193 mode=dungeon_mode        Elrond Goldenbough(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 77 $ 382 room=N
+-> u
+T 194 mode=dungeon_unlocked_mode Elrond Goldenbough(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 77 $ 382 room=N
+-> r
+T 195 mode=game_loop           Elrond Goldenbough(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 77 $ 382 room=N
+-> i
+T 196 mode=inventory           Elrond Goldenbough(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 77 $ 382 room=N
+-> eat3
+T 197 mode=inventory           Elrond Goldenbough(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 82 $ 382 room=N
+-> x
+T 198 mode=game_loop           Elrond Goldenbough(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 82 $ 382 room=N
+-> l
+T 199 mode=game_loop           Elrond Goldenbough(elf) F1@(15,16) HP 38/38 MP 0/0 Hu 82 $ 382 room=N
+-> e
+T 200 mode=combat_mode         Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 81 $ 382 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 201 mode=combat_victory      Elrond Goldenbough(elf) F1@(16,16) HP 37/38 MP 0/0 Hu 81 $ 392 room=.
+-> back
+T 202 mode=game_loop           Elrond Goldenbough(elf) F1@(16,16) HP 37/38 MP 0/0 Hu 81 $ 392 room=.
+-> e
+T 203 mode=altar_mode          Elrond Goldenbough(elf) F1@(17,16) HP 37/38 MP 0/0 Hu 80 $ 392 room=A
+-> pray
+T 204 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 37/38 MP 0/0 Hu 80 $ 392 room=.
+-> n
+T 205 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 37/38 MP 0/0 Hu 79 $ 392 room=.
+-> e
+T 206 mode=altar_mode          Elrond Goldenbough(elf) F1@(18,15) HP 37/38 MP 0/0 Hu 78 $ 392 room=A
+-> pray
+T 207 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 37/38 MP 0/0 Hu 78 $ 392 room=.
+-> n
+T 208 mode=combat_mode         Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 77 $ 392 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 209 mode=combat_mode         Elrond Goldenbough(elf) F1@(18,14) HP 37/38 MP 0/0 Hu 77 $ 392 room=M vs Skeleton(L0 HP4/25)
+-> a
+T 210 mode=combat_victory      Elrond Goldenbough(elf) F1@(18,14) HP 37/38 MP 0/0 Hu 77 $ 394 room=.
+-> back
+T 211 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 37/38 MP 0/0 Hu 77 $ 394 room=.
+-> e
+T 212 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 37/38 MP 0/0 Hu 76 $ 394 room=D
+-> w
+T 213 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 37/38 MP 0/0 Hu 75 $ 394 room=.
+-> s
+T 214 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 37/38 MP 0/0 Hu 74 $ 394 room=.
+-> w
+T 215 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 73 $ 394 room=.
+-> s
+T 216 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 72 $ 394 room=.
+-> w
+T 217 mode=game_loop           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 71 $ 394 room=.
+-> i
+T 218 mode=inventory           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 71 $ 394 room=.
+-> eat3
+T 219 mode=inventory           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 77 $ 394 room=.
+-> eat1
+T 220 mode=inventory           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu100 $ 394 room=.
+-> x
+T 221 mode=game_loop           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu100 $ 394 room=.
+-> e
+T 222 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 99 $ 394 room=.
+-> n
+T 223 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 98 $ 394 room=.
+-> e
+T 224 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 97 $ 394 room=.
+-> n
+T 225 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 96 $ 394 room=.
+-> e
+T 226 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 95 $ 394 room=D
+-> w
+T 227 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 94 $ 394 room=.
+-> s
+T 228 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 93 $ 394 room=.
+-> e
+T 229 mode=game_loop           Elrond Goldenbough(elf) F1@(19,15) HP 38/38 MP 0/0 Hu 92 $ 394 room=.
+-> s
+T 230 mode=game_loop           Elrond Goldenbough(elf) F1@(19,16) HP 38/38 MP 0/0 Hu 91 $ 394 room=.
+-> l
+T 231 mode=game_loop           Elrond Goldenbough(elf) F1@(19,16) HP 38/38 MP 0/0 Hu 91 $ 394 room=.
+-> n
+T 232 mode=game_loop           Elrond Goldenbough(elf) F1@(19,15) HP 38/38 MP 0/0 Hu 90 $ 394 room=.
+-> n
+T 233 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 89 $ 394 room=D
+-> w
+T 234 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 88 $ 394 room=.
+-> s
+T 235 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 87 $ 394 room=.
+-> w
+T 236 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 86 $ 394 room=.
+-> s
+T 237 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 85 $ 394 room=.
+-> w
+T 238 mode=game_loop           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 84 $ 394 room=.
+-> e
+T 239 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 83 $ 394 room=.
+-> n
+T 240 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 82 $ 394 room=.
+-> l
+T 241 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 82 $ 394 room=.
+-> e
+T 242 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 81 $ 394 room=.
+-> n
+T 243 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 80 $ 394 room=.
+-> e
+T 244 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 79 $ 394 room=D
+-> w
+T 245 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 78 $ 394 room=.
+-> s
+T 246 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 77 $ 394 room=.
+-> e
+T 247 mode=game_loop           Elrond Goldenbough(elf) F1@(19,15) HP 38/38 MP 0/0 Hu 76 $ 394 room=.
+-> s
+T 248 mode=game_loop           Elrond Goldenbough(elf) F1@(19,16) HP 38/38 MP 0/0 Hu 75 $ 394 room=.
+-> n
+T 249 mode=game_loop           Elrond Goldenbough(elf) F1@(19,15) HP 38/38 MP 0/0 Hu 74 $ 394 room=.
+-> n
+T 250 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 73 $ 394 room=D
+-> w
+T 251 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 72 $ 394 room=.
+-> s
+T 252 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 71 $ 394 room=.
+-> w
+T 253 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 70 $ 394 room=.
+-> s
+T 254 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 69 $ 394 room=.
+-> w
+T 255 mode=game_loop           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 68 $ 394 room=.
+-> e
+T 256 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 67 $ 394 room=.
+-> n
+T 257 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 66 $ 394 room=.
+-> e
+T 258 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 65 $ 394 room=.
+-> n
+T 259 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 64 $ 394 room=.
+-> e
+T 260 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 63 $ 394 room=D
+-> w
+T 261 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 62 $ 394 room=.
+-> s
+T 262 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 61 $ 394 room=.
+-> w
+T 263 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 60 $ 394 room=.
+-> s
+T 264 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 59 $ 394 room=.
+-> w
+T 265 mode=game_loop           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 58 $ 394 room=.
+-> e
+T 266 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 57 $ 394 room=.
+-> n
+T 267 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 56 $ 394 room=.
+-> e
+T 268 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 55 $ 394 room=.
+-> n
+T 269 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 54 $ 394 room=.
+-> e
+T 270 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 53 $ 394 room=D
+-> w
+T 271 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 52 $ 394 room=.
+-> s
+T 272 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 51 $ 394 room=.
+-> e
+T 273 mode=game_loop           Elrond Goldenbough(elf) F1@(19,15) HP 38/38 MP 0/0 Hu 50 $ 394 room=.
+-> s
+T 274 mode=game_loop           Elrond Goldenbough(elf) F1@(19,16) HP 38/38 MP 0/0 Hu 49 $ 394 room=.
+-> i
+T 275 mode=inventory           Elrond Goldenbough(elf) F1@(19,16) HP 38/38 MP 0/0 Hu 49 $ 394 room=.
+-> eat1
+T 276 mode=inventory           Elrond Goldenbough(elf) F1@(19,16) HP 38/38 MP 0/0 Hu 99 $ 394 room=.
+-> x
+T 277 mode=game_loop           Elrond Goldenbough(elf) F1@(19,16) HP 38/38 MP 0/0 Hu 99 $ 394 room=.
+-> n
+T 278 mode=game_loop           Elrond Goldenbough(elf) F1@(19,15) HP 38/38 MP 0/0 Hu 98 $ 394 room=.
+-> n
+T 279 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 97 $ 394 room=D
+-> w
+T 280 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 96 $ 394 room=.
+-> l
+T 281 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 96 $ 394 room=.
+-> s
+T 282 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 95 $ 394 room=.
+-> w
+T 283 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 94 $ 394 room=.
+-> s
+T 284 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 93 $ 394 room=.
+-> w
+T 285 mode=game_loop           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 92 $ 394 room=.
+-> e
+T 286 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 91 $ 394 room=.
+-> n
+T 287 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 90 $ 394 room=.
+-> e
+T 288 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 89 $ 394 room=.
+-> n
+T 289 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 88 $ 394 room=.
+-> e
+T 290 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 87 $ 394 room=D
+-> w
+T 291 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 86 $ 394 room=.
+-> s
+T 292 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 85 $ 394 room=.
+-> e
+T 293 mode=game_loop           Elrond Goldenbough(elf) F1@(19,15) HP 38/38 MP 0/0 Hu 84 $ 394 room=.
+-> s
+T 294 mode=game_loop           Elrond Goldenbough(elf) F1@(19,16) HP 38/38 MP 0/0 Hu 83 $ 394 room=.
+-> n
+T 295 mode=game_loop           Elrond Goldenbough(elf) F1@(19,15) HP 38/38 MP 0/0 Hu 82 $ 394 room=.
+-> n
+T 296 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 81 $ 394 room=D
+-> w
+T 297 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 80 $ 394 room=.
+-> s
+T 298 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 79 $ 394 room=.
+-> w
+T 299 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 78 $ 394 room=.
+-> s
+T 300 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 77 $ 394 room=.
+-> l
+T 301 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 77 $ 394 room=.
+-> w
+T 302 mode=game_loop           Elrond Goldenbough(elf) F1@(16,16) HP 38/38 MP 0/0 Hu 76 $ 394 room=.
+-> e
+T 303 mode=game_loop           Elrond Goldenbough(elf) F1@(17,16) HP 38/38 MP 0/0 Hu 75 $ 394 room=.
+-> n
+T 304 mode=game_loop           Elrond Goldenbough(elf) F1@(17,15) HP 38/38 MP 0/0 Hu 74 $ 394 room=.
+-> e
+T 305 mode=game_loop           Elrond Goldenbough(elf) F1@(18,15) HP 38/38 MP 0/0 Hu 73 $ 394 room=.
+-> n
+T 306 mode=game_loop           Elrond Goldenbough(elf) F1@(18,14) HP 38/38 MP 0/0 Hu 72 $ 394 room=.
+-> e
+T 307 mode=stairs_down_mode    Elrond Goldenbough(elf) F1@(19,14) HP 38/38 MP 0/0 Hu 71 $ 394 room=D
+-> d
+T 308 mode=stairs_up_mode      Elrond Goldenbough(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 71 $ 394 room=U
+-> e
+T 309 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 394 room=.
+-> l
+T 310 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 70 $ 394 room=.
+-> s
+T 311 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 69 $ 394 room=.
+-> l
+T 312 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 69 $ 394 room=.
+-> e
+T 313 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 68 $ 394 room=.
+-> l
+T 314 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 68 $ 394 room=.
+-> e
+T 315 mode=dungeon_mode        Elrond Goldenbough(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 67 $ 394 room=N
+-> u
+T 316 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 67 $ 394 room=N
+-> e
+T 317 mode=chest_mode          Elrond Goldenbough(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 66 $ 394 room=C
+-> o
+T 318 mode=game_loop           Elrond Goldenbough(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 66 $ 394 room=.
+-> l
+T 319 mode=game_loop           Elrond Goldenbough(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 66 $ 394 room=.
+-> s
+T 320 mode=game_loop           Elrond Goldenbough(elf) F2@( 5, 3) HP 38/38 MP 0/0 Hu 65 $ 394 room=.
+-> s
+T 321 mode=game_loop           Elrond Goldenbough(elf) F2@( 5, 4) HP 38/38 MP 0/0 Hu 64 $ 394 room=.
+-> l
+T 322 mode=game_loop           Elrond Goldenbough(elf) F2@( 5, 4) HP 38/38 MP 0/0 Hu 64 $ 394 room=.
+-> e
+T 323 mode=library_mode        Elrond Goldenbough(elf) F2@( 6, 4) HP 38/38 MP 0/0 Hu 63 $ 394 room=L
+-> r
+T 324 mode=library_read_decision_mode Elrond Goldenbough(elf) F2@( 6, 4) HP 38/38 MP 0/0 Hu 63 $ 394 room=L
+-> y
+T 325 mode=game_loop           Elrond Goldenbough(elf) F2@( 6, 4) HP 38/38 MP 0/0 Hu 63 $ 394 room=.
+-> l
+T 326 mode=game_loop           Elrond Goldenbough(elf) F2@( 6, 4) HP 38/38 MP 0/0 Hu 63 $ 394 room=.
+-> w
+T 327 mode=game_loop           Elrond Goldenbough(elf) F2@( 5, 4) HP 38/38 MP 0/0 Hu 62 $ 394 room=.
+-> w
+T 328 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 4) HP 38/38 MP 0/0 Hu 61 $ 394 room=.
+-> l
+T 329 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 4) HP 38/38 MP 0/0 Hu 61 $ 394 room=.
+-> s
+T 330 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 5) HP 38/38 MP 0/0 Hu 60 $ 394 room=.
+-> w
+T 331 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 5) HP 38/38 MP 0/0 Hu 59 $ 394 room=.
+-> w
+T 332 mode=pool_mode           Elrond Goldenbough(elf) F2@( 2, 5) HP 38/38 MP 0/0 Hu 58 $ 394 room=P
+-> dr
+T 333 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 5) HP 38/38 MP 0/0 Hu 58 $ 443 room=.
+-> l
+T 334 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 5) HP 38/38 MP 0/0 Hu 58 $ 443 room=.
+-> s
+T 335 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 6) HP 38/38 MP 0/0 Hu 57 $ 443 room=.
+-> l
+T 336 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 6) HP 38/38 MP 0/0 Hu 57 $ 443 room=.
+-> s
+T 337 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 7) HP 38/38 MP 0/0 Hu 56 $ 443 room=.
+-> l
+T 338 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 7) HP 38/38 MP 0/0 Hu 56 $ 443 room=.
+-> s
+T 339 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 8) HP 38/38 MP 0/0 Hu 55 $ 443 room=.
+-> e
+T 340 mode=library_mode        Elrond Goldenbough(elf) F2@( 3, 8) HP 38/38 MP 0/0 Hu 54 $ 443 room=L
+-> r
+T 341 mode=library_read_decision_mode Elrond Goldenbough(elf) F2@( 3, 8) HP 38/38 MP 0/0 Hu 54 $ 443 room=L
+-> y
+T 342 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 8) HP 38/32 MP 0/0 Hu 54 $ 443 room=.
+-> s
+T 343 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 9) HP 38/32 MP 0/0 Hu 53 $ 443 room=.
+-> l
+T 344 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 9) HP 38/32 MP 0/0 Hu 53 $ 443 room=.
+-> s
+T 345 mode=library_mode        Elrond Goldenbough(elf) F2@( 3,10) HP 38/32 MP 0/0 Hu 52 $ 443 room=L
+-> r
+T 346 mode=game_loop           Elrond Goldenbough(elf) F2@( 3,10) HP 38/32 MP 0/0 Hu 52 $ 443 room=.
+-> s
+T 347 mode=game_loop           Elrond Goldenbough(elf) F2@( 3,11) HP 38/32 MP 0/0 Hu 51 $ 443 room=.
+-> s
+T 348 mode=game_loop           Elrond Goldenbough(elf) F2@( 3,12) HP 38/32 MP 0/0 Hu 50 $ 443 room=.
+-> l
+T 349 mode=game_loop           Elrond Goldenbough(elf) F2@( 3,12) HP 38/32 MP 0/0 Hu 50 $ 443 room=.
+-> w
+T 350 mode=pool_mode           Elrond Goldenbough(elf) F2@( 2,12) HP 38/32 MP 0/0 Hu 49 $ 443 room=P
+-> dr
+T 351 mode=game_loop           Elrond Goldenbough(elf) F2@( 2,12) HP 38/32 MP 0/0 Hu 49 $ 578 room=.
+-> i
+T 352 mode=inventory           Elrond Goldenbough(elf) F2@( 2,12) HP 38/32 MP 0/0 Hu 49 $ 578 room=.
+-> eat1
+T 353 mode=inventory           Elrond Goldenbough(elf) F2@( 2,12) HP 38/32 MP 0/0 Hu 99 $ 578 room=.
+-> x
+T 354 mode=game_loop           Elrond Goldenbough(elf) F2@( 2,12) HP 38/32 MP 0/0 Hu 99 $ 578 room=.
+-> s
+T 355 mode=game_loop           Elrond Goldenbough(elf) F2@( 2,13) HP 38/32 MP 0/0 Hu 98 $ 578 room=.
+-> l
+T 356 mode=game_loop           Elrond Goldenbough(elf) F2@( 2,13) HP 38/32 MP 0/0 Hu 98 $ 578 room=.
+-> s
+T 357 mode=game_loop           Elrond Goldenbough(elf) F2@( 2,14) HP 38/32 MP 0/0 Hu 97 $ 578 room=.
+-> l
+T 358 mode=game_loop           Elrond Goldenbough(elf) F2@( 2,14) HP 38/32 MP 0/0 Hu 97 $ 578 room=.
+-> e
+T 359 mode=vendor_shop         Elrond Goldenbough(elf) F2@( 3,14) HP 38/32 MP 0/0 Hu 96 $ 578 room=V
+-> r4
+T 360 mode=vendor_shop         Elrond Goldenbough(elf) F2@( 3,14) HP 38/32 MP 0/0 Hu 96 $ 544 room=V
+-> b13
+T 361 mode=vendor_shop         Elrond Goldenbough(elf) F2@( 3,14) HP 38/32 MP 0/0 Hu 96 $ 534 room=V
+-> b10
+T 362 mode=vendor_shop         Elrond Goldenbough(elf) F2@( 3,14) HP 38/32 MP 0/0 Hu 96 $ 384 room=V
+-> b5
+T 363 mode=vendor_shop         Elrond Goldenbough(elf) F2@( 3,14) HP 38/32 MP 0/0 Hu 96 $ 314 room=V
+-> b5
+T 364 mode=vendor_shop         Elrond Goldenbough(elf) F2@( 3,14) HP 38/32 MP 0/0 Hu 96 $ 244 room=V
+-> x
+T 365 mode=game_loop           Elrond Goldenbough(elf) F2@( 3,14) HP 38/32 MP 0/0 Hu 96 $ 244 room=V
+-> n
+T 366 mode=game_loop           Elrond Goldenbough(elf) F2@( 3,13) HP 38/32 MP 0/0 Hu 95 $ 244 room=.
+-> n
+T 367 mode=game_loop           Elrond Goldenbough(elf) F2@( 3,12) HP 38/32 MP 0/0 Hu 94 $ 244 room=.
+-> n
+T 368 mode=game_loop           Elrond Goldenbough(elf) F2@( 3,11) HP 38/32 MP 0/0 Hu 93 $ 244 room=.
+-> n
+T 369 mode=game_loop           Elrond Goldenbough(elf) F2@( 3,10) HP 38/32 MP 0/0 Hu 92 $ 244 room=.
+-> n
+T 370 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 9) HP 38/32 MP 0/0 Hu 91 $ 244 room=.
+-> n
+T 371 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 8) HP 38/32 MP 0/0 Hu 90 $ 244 room=.
+-> e
+T 372 mode=combat_mode         Elrond Goldenbough(elf) F2@( 4, 8) HP 38/32 MP 0/0 Hu 89 $ 244 room=M vs Zombie(L1 HP35/35)
+-> a
+T 373 mode=combat_mode         Elrond Goldenbough(elf) F2@( 4, 8) HP 37/32 MP 0/0 Hu 89 $ 244 room=M vs Zombie(L1 HP14/35)
+-> a
+T 374 mode=combat_victory      Elrond Goldenbough(elf) F2@( 4, 8) HP 36/32 MP 0/0 Hu 89 $ 254 room=.
+-> back
+T 375 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 8) HP 36/32 MP 0/0 Hu 89 $ 254 room=.
+-> n
+T 376 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 7) HP 36/32 MP 0/0 Hu 88 $ 254 room=.
+-> n
+T 377 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 6) HP 36/32 MP 0/0 Hu 87 $ 254 room=.
+-> n
+T 378 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 5) HP 36/32 MP 0/0 Hu 86 $ 254 room=.
+-> e
+T 379 mode=combat_mode         Elrond Goldenbough(elf) F2@( 5, 5) HP 36/32 MP 0/0 Hu 85 $ 254 room=M vs Zombie(L1 HP35/35)
+-> a
+T 380 mode=combat_mode         Elrond Goldenbough(elf) F2@( 5, 5) HP 36/32 MP 0/0 Hu 85 $ 254 room=M vs Zombie(L1 HP35/35)
+-> a
+T 381 mode=combat_mode         Elrond Goldenbough(elf) F2@( 5, 5) HP 36/32 MP 0/0 Hu 85 $ 254 room=M vs Zombie(L1 HP14/35)
+-> a
+T 382 mode=combat_victory      Elrond Goldenbough(elf) F2@( 5, 5) HP 35/32 MP 0/0 Hu 85 $ 262 room=.
+-> back
+T 383 mode=game_loop           Elrond Goldenbough(elf) F2@( 5, 5) HP 35/32 MP 0/0 Hu 85 $ 262 room=.
+-> n
+T 384 mode=game_loop           Elrond Goldenbough(elf) F2@( 5, 4) HP 35/32 MP 0/0 Hu 84 $ 262 room=.
+-> e
+T 385 mode=game_loop           Elrond Goldenbough(elf) F2@( 6, 4) HP 35/32 MP 0/0 Hu 83 $ 262 room=.
+-> w
+T 386 mode=game_loop           Elrond Goldenbough(elf) F2@( 5, 4) HP 35/32 MP 0/0 Hu 82 $ 262 room=.
+-> w
+T 387 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 4) HP 35/32 MP 0/0 Hu 81 $ 262 room=.
+-> w
+T 388 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 4) HP 35/32 MP 0/0 Hu 80 $ 262 room=.
+-> n
+T 389 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 3) HP 35/32 MP 0/0 Hu 79 $ 262 room=.
+-> n
+T 390 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 2) HP 35/32 MP 0/0 Hu 78 $ 262 room=.
+-> w
+T 391 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 2) HP 35/32 MP 0/0 Hu 77 $ 262 room=.
+-> w
+T 392 mode=combat_mode         Elrond Goldenbough(elf) F2@( 1, 2) HP 35/32 MP 0/0 Hu 76 $ 262 room=M vs Crawling Claw(L1 HP5/5)
+-> a
+T 393 mode=combat_victory      Elrond Goldenbough(elf) F2@( 1, 2) HP 34/32 MP 0/0 Hu 76 $ 266 room=.
+-> back
+T 394 mode=game_loop           Elrond Goldenbough(elf) F2@( 1, 2) HP 34/32 MP 0/0 Hu 76 $ 266 room=.
+-> l
+T 395 mode=game_loop           Elrond Goldenbough(elf) F2@( 1, 2) HP 34/32 MP 0/0 Hu 76 $ 266 room=.
+-> s
+T 396 mode=combat_mode         Elrond Goldenbough(elf) F2@( 1, 3) HP 34/32 MP 0/0 Hu 75 $ 266 room=M vs Lichen(L1 HP10/10)
+-> a
+T 397 mode=combat_victory      Elrond Goldenbough(elf) F2@( 1, 3) HP 34/32 MP 0/0 Hu 75 $ 282 room=.
+-> back
+T 398 mode=game_loop           Elrond Goldenbough(elf) F2@( 1, 3) HP 34/32 MP 0/0 Hu 75 $ 282 room=.
+-> s
+T 399 mode=game_loop           Elrond Goldenbough(elf) F2@( 1, 4) HP 34/32 MP 0/0 Hu 74 $ 282 room=.
+-> e
+T 400 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 4) HP 34/32 MP 0/0 Hu 73 $ 282 room=.
+-> n
+T 401 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 3) HP 34/32 MP 0/0 Hu 72 $ 282 room=.
+-> n
+T 402 mode=game_loop           Elrond Goldenbough(elf) F2@( 2, 2) HP 34/32 MP 0/0 Hu 71 $ 282 room=.
+-> e
+T 403 mode=game_loop           Elrond Goldenbough(elf) F2@( 3, 2) HP 34/32 MP 0/0 Hu 70 $ 282 room=.
+-> e
+T 404 mode=dungeon_mode        Elrond Goldenbough(elf) F2@( 4, 2) HP 34/32 MP 0/0 Hu 69 $ 282 room=N
+-> u
+T 405 mode=dungeon_unlocked_mode Elrond Goldenbough(elf) F2@( 4, 2) HP 34/32 MP 0/0 Hu 69 $ 282 room=N
+-> r
+T 406 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 2) HP 34/32 MP 0/0 Hu 69 $ 282 room=N
+-> i
+T 407 mode=inventory           Elrond Goldenbough(elf) F2@( 4, 2) HP 34/32 MP 0/0 Hu 69 $ 282 room=N
+-> e3
+T 408 mode=inventory           Elrond Goldenbough(elf) F2@( 4, 2) HP 34/32 MP 0/0 Hu 69 $ 282 room=N
+-> x
+T 409 mode=game_loop           Elrond Goldenbough(elf) F2@( 4, 2) HP 34/32 MP 0/0 Hu 69 $ 282 room=N
+-> n
+T 410 mode=stairs_down_mode    Elrond Goldenbough(elf) F2@( 4, 1) HP 34/32 MP 0/0 Hu 68 $ 282 room=D
+-> d
+T 411 mode=stairs_up_mode      Elrond Goldenbough(elf) F3@( 1, 1) HP 34/32 MP 0/0 Hu 68 $ 282 room=U
+-> e
+T 412 mode=game_loop           Elrond Goldenbough(elf) F3@( 2, 1) HP 34/32 MP 0/0 Hu 67 $ 382 room=.
+-> l
+T 413 mode=game_loop           Elrond Goldenbough(elf) F3@( 2, 1) HP 34/32 MP 0/0 Hu 67 $ 382 room=.
+-> e
+T 414 mode=pool_mode           Elrond Goldenbough(elf) F3@( 3, 1) HP 34/32 MP 0/0 Hu 66 $ 382 room=P
+-> dr
+T 415 mode=tomb_mode           Elrond Goldenbough(elf) F3@( 6, 9) HP 34/32 MP 0/0 Hu 66 $ 382 room=T
+-> p
+T 416 mode=game_loop           Elrond Goldenbough(elf) F3@( 6, 9) HP 34/32 MP 0/0 Hu 66 $ 382 room=T
+-> i
+T 417 mode=inventory           Elrond Goldenbough(elf) F3@( 6, 9) HP 34/32 MP 0/0 Hu 66 $ 382 room=T
+-> eat2
+T 418 mode=inventory           Elrond Goldenbough(elf) F3@( 6, 9) HP 34/32 MP 0/0 Hu 72 $ 382 room=T
+-> eat1
+T 419 mode=inventory           Elrond Goldenbough(elf) F3@( 6, 9) HP 34/32 MP 0/0 Hu100 $ 382 room=T
+-> u12
+T 420 mode=upgrade_scroll_mode Elrond Goldenbough(elf) F3@( 6, 9) HP 34/32 MP 0/0 Hu100 $ 382 room=T
+-> 1
+T 421 mode=inventory           Elrond Goldenbough(elf) F3@( 6, 9) HP 34/32 MP 0/0 Hu100 $ 382 room=T
+-> x
+T 422 mode=game_loop           Elrond Goldenbough(elf) F3@( 6, 9) HP 34/32 MP 0/0 Hu100 $ 382 room=T
+-> l
+T 423 mode=game_loop           Elrond Goldenbough(elf) F3@( 6, 9) HP 34/32 MP 0/0 Hu100 $ 382 room=T
+-> n
+T 424 mode=pool_mode           Elrond Goldenbough(elf) F3@( 6, 8) HP 34/32 MP 0/0 Hu 99 $ 382 room=P
+-> dr
+T 425 mode=game_loop           Elrond Goldenbough(elf) F3@( 6, 8) HP 34/32 MP 0/0 Hu 99 $ 382 room=.
+-> e
+T 426 mode=garden_mode         Elrond Goldenbough(elf) F3@( 7, 8) HP 34/32 MP 0/0 Hu 98 $ 382 room=G
+-> h
+T 427 mode=game_loop           Elrond Goldenbough(elf) F3@( 7, 8) HP 34/32 MP 0/0 Hu 98 $ 382 room=.
+-> n
+T 428 mode=game_loop           Elrond Goldenbough(elf) F3@( 7, 7) HP 34/32 MP 0/0 Hu 97 $ 382 room=.
+-> e
+T 429 mode=chest_mode          Elrond Goldenbough(elf) F3@( 8, 7) HP 34/32 MP 0/0 Hu 96 $ 382 room=C
+-> n
+T 430 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 6) HP 34/32 MP 0/0 Hu 95 $ 382 room=.
+-> e
+T 431 mode=chest_mode          Elrond Goldenbough(elf) F3@( 9, 6) HP 34/32 MP 0/0 Hu 94 $ 382 room=C
+-> o
+T 432 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 6) HP 34/32 MP 0/0 Hu 94 $ 457 room=.
+-> s
+T 433 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 7) HP 34/32 MP 0/0 Hu 93 $ 457 room=.
+-> s
+T 434 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 8) HP 34/32 MP 0/0 Hu 92 $ 457 room=.
+-> e
+T 435 mode=garden_mode         Elrond Goldenbough(elf) F3@(10, 8) HP 34/32 MP 0/0 Hu 91 $ 457 room=G
+-> h
+T 436 mode=game_loop           Elrond Goldenbough(elf) F3@(10, 8) HP 34/32 MP 0/0 Hu 91 $ 457 room=.
+-> s
+T 437 mode=game_loop           Elrond Goldenbough(elf) F3@(10, 9) HP 34/32 MP 0/0 Hu 90 $ 457 room=.
+-> w
+T 438 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 9) HP 34/32 MP 0/0 Hu 89 $ 457 room=.
+-> w
+T 439 mode=library_mode        Elrond Goldenbough(elf) F3@( 8, 9) HP 34/32 MP 0/0 Hu 88 $ 457 room=L
+-> r
+T 440 mode=library_read_decision_mode Elrond Goldenbough(elf) F3@( 8, 9) HP 34/32 MP 0/0 Hu 88 $ 457 room=L
+-> y
+T 441 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 9) HP 34/32 MP 0/0 Hu 88 $ 457 room=.
+-> s
+T 442 mode=game_loop           Elrond Goldenbough(elf) F3@( 8,10) HP 34/32 MP 0/0 Hu 87 $ 457 room=.
+-> e
+T 443 mode=game_loop           Elrond Goldenbough(elf) F3@( 9,10) HP 34/32 MP 0/0 Hu 86 $ 457 room=.
+-> s
+T 444 mode=altar_mode          Elrond Goldenbough(elf) F3@( 9,11) HP 34/32 MP 0/0 Hu 85 $ 457 room=A
+-> pray
+T 445 mode=game_loop           Elrond Goldenbough(elf) F3@( 9,11) HP 34/32 MP 0/0 Hu 85 $ 457 room=.
+-> s
+T 446 mode=chest_mode          Elrond Goldenbough(elf) F3@( 9,12) HP 34/32 MP 0/0 Hu 84 $ 457 room=C
+-> e
+T 447 mode=game_loop           Elrond Goldenbough(elf) F3@(10,12) HP 34/32 MP 0/0 Hu 83 $ 457 room=.
+-> n
+T 448 mode=game_loop           Elrond Goldenbough(elf) F3@(10,11) HP 34/32 MP 0/0 Hu 82 $ 457 room=.
+-> e
+T 449 mode=library_mode        Elrond Goldenbough(elf) F3@(11,11) HP 34/32 MP 0/0 Hu 81 $ 457 room=L
+-> r
+T 450 mode=library_read_decision_mode Elrond Goldenbough(elf) F3@(11,11) HP 34/32 MP 0/0 Hu 81 $ 457 room=L
+-> y
+T 451 mode=game_loop           Elrond Goldenbough(elf) F3@(11,11) HP 34/32 MP 0/0 Hu 81 $ 457 room=.
+-> l
+T 452 mode=game_loop           Elrond Goldenbough(elf) F3@(11,11) HP 34/32 MP 0/0 Hu 81 $ 457 room=.
+-> s
+T 453 mode=game_loop           Elrond Goldenbough(elf) F3@(11,12) HP 34/32 MP 0/0 Hu 80 $ 457 room=.
+-> l
+T 454 mode=game_loop           Elrond Goldenbough(elf) F3@(11,12) HP 34/32 MP 0/0 Hu 80 $ 457 room=.
+-> e
+T 455 mode=game_loop           Elrond Goldenbough(elf) F3@(12,12) HP 34/32 MP 0/0 Hu 79 $ 457 room=.
+-> l
+T 456 mode=game_loop           Elrond Goldenbough(elf) F3@(12,12) HP 34/32 MP 0/0 Hu 79 $ 457 room=.
+-> n
+T 457 mode=game_loop           Elrond Goldenbough(elf) F3@(12,11) HP 34/32 MP 0/0 Hu 78 $ 457 room=.
+-> e
+T 458 mode=combat_mode         Elrond Goldenbough(elf) F3@(13,11) HP 34/32 MP 0/0 Hu 77 $ 457 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 459 mode=combat_mode         Elrond Goldenbough(elf) F3@(13,11) HP 33/32 MP 0/0 Hu 77 $ 457 room=M vs Skeleton(L2 HP6/26)
+-> a
+T 460 mode=combat_mode         Elrond Goldenbough(elf) F3@(13,11) HP 32/32 MP 0/0 Hu 77 $ 457 room=M vs Skeleton(L2 HP6/26)
+-> a
+T 461 mode=combat_victory      Elrond Goldenbough(elf) F3@(13,11) HP 32/42 MP 0/0 Hu 77 $ 460 room=.
+-> back
+T 462 mode=game_loop           Elrond Goldenbough(elf) F3@(13,11) HP 32/42 MP 0/0 Hu 77 $ 460 room=.
+-> i
+T 463 mode=inventory           Elrond Goldenbough(elf) F3@(13,11) HP 32/42 MP 0/0 Hu 77 $ 460 room=.
+-> u8
+T 464 mode=inventory           Elrond Goldenbough(elf) F3@(13,11) HP 42/42 MP 0/0 Hu 77 $ 460 room=.
+-> x
+T 465 mode=game_loop           Elrond Goldenbough(elf) F3@(13,11) HP 42/42 MP 0/0 Hu 77 $ 460 room=.
+-> l
+T 466 mode=game_loop           Elrond Goldenbough(elf) F3@(13,11) HP 42/42 MP 0/0 Hu 77 $ 460 room=.
+-> e
+T 467 mode=combat_mode         Elrond Goldenbough(elf) F3@(14,11) HP 42/42 MP 0/0 Hu 76 $ 460 room=M vs Goblin(L2 HP12/12)
+-> a
+T 468 mode=combat_victory      Elrond Goldenbough(elf) F3@(14,11) HP 41/42 MP 0/0 Hu 76 $ 475 room=.
+-> back
+T 469 mode=game_loop           Elrond Goldenbough(elf) F3@(14,11) HP 41/42 MP 0/0 Hu 76 $ 475 room=.
+-> l
+T 470 mode=game_loop           Elrond Goldenbough(elf) F3@(14,11) HP 41/42 MP 0/0 Hu 76 $ 475 room=.
+-> n
+T 471 mode=chest_mode          Elrond Goldenbough(elf) F3@(14,10) HP 41/42 MP 0/0 Hu 75 $ 475 room=C
+-> n
+T 472 mode=game_loop           Elrond Goldenbough(elf) F3@(14, 9) HP 41/42 MP 0/0 Hu 74 $ 475 room=.
+-> w
+T 473 mode=game_loop           Elrond Goldenbough(elf) F3@(13, 9) HP 41/42 MP 0/0 Hu 73 $ 475 room=.
+-> n
+T 474 mode=altar_mode          Elrond Goldenbough(elf) F3@(13, 8) HP 42/42 MP 0/0 Hu 72 $ 475 room=A
+-> pray
+T 475 mode=game_loop           Elrond Goldenbough(elf) F3@(13, 8) HP 42/42 MP 0/0 Hu100 $ 475 room=.
+-> w
+T 476 mode=game_loop           Elrond Goldenbough(elf) F3@(12, 8) HP 42/42 MP 0/0 Hu 99 $ 475 room=.
+-> n
+T 477 mode=combat_mode         Elrond Goldenbough(elf) F3@(12, 7) HP 42/42 MP 0/0 Hu 98 $ 475 room=M vs Wight(L2 HP40/40)
+-> a
+T 478 mode=combat_mode         Elrond Goldenbough(elf) F3@(12, 7) HP 32/42 MP 0/0 Hu 98 $ 475 room=M vs Wight(L2 HP27/40)
+-> a
+T 479 mode=combat_mode         Elrond Goldenbough(elf) F3@(12, 7) HP 32/42 MP 0/0 Hu 98 $ 475 room=M vs Wight(L2 HP27/40)
+-> f
+T 480 mode=flee_direction_mode Elrond Goldenbough(elf) F3@(12, 7) HP 32/42 MP 0/0 Hu 98 $ 475 room=M
+-> s
+T 481 mode=game_loop           Elrond Goldenbough(elf) F3@(12, 8) HP 32/42 MP 0/0 Hu 98 $ 475 room=.
+-> i
+T 482 mode=inventory           Elrond Goldenbough(elf) F3@(12, 8) HP 32/42 MP 0/0 Hu 98 $ 475 room=.
+-> u8
+T 483 mode=inventory           Elrond Goldenbough(elf) F3@(12, 8) HP 42/42 MP 0/0 Hu 98 $ 475 room=.
+-> x
+T 484 mode=game_loop           Elrond Goldenbough(elf) F3@(12, 8) HP 42/42 MP 0/0 Hu 98 $ 475 room=.
+-> w
+T 485 mode=game_loop           Elrond Goldenbough(elf) F3@(11, 8) HP 42/42 MP 0/0 Hu 97 $ 475 room=.
+-> w
+T 486 mode=game_loop           Elrond Goldenbough(elf) F3@(10, 8) HP 42/42 MP 0/0 Hu 96 $ 475 room=.
+-> n
+T 487 mode=game_loop           Elrond Goldenbough(elf) F3@(10, 7) HP 42/42 MP 0/0 Hu 95 $ 475 room=.
+-> w
+T 488 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 7) HP 42/42 MP 0/0 Hu 94 $ 475 room=.
+-> i
+T 489 mode=inventory           Elrond Goldenbough(elf) F3@( 9, 7) HP 42/42 MP 0/0 Hu 94 $ 475 room=.
+-> eat2
+T 490 mode=inventory           Elrond Goldenbough(elf) F3@( 9, 7) HP 42/42 MP 0/0 Hu 99 $ 475 room=.
+-> x
+T 491 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 7) HP 42/42 MP 0/0 Hu 99 $ 475 room=.
+-> n
+T 492 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 6) HP 42/42 MP 0/0 Hu 98 $ 475 room=.
+-> w
+T 493 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 6) HP 42/42 MP 0/0 Hu 97 $ 475 room=.
+-> n
+T 494 mode=combat_mode         Elrond Goldenbough(elf) F3@( 8, 5) HP 42/42 MP 0/0 Hu 96 $ 475 room=M vs Lichen(L2 HP10/10)
+-> a
+T 495 mode=combat_victory      Elrond Goldenbough(elf) F3@( 8, 5) HP 42/42 MP 0/0 Hu 96 $ 496 room=.
+-> back
+T 496 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 5) HP 42/42 MP 0/0 Hu 96 $ 496 room=.
+-> n
+T 497 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 4) HP 42/42 MP 0/0 Hu 95 $ 496 room=.
+-> n
+T 498 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 3) HP 42/42 MP 0/0 Hu 94 $ 496 room=.
+-> l
+T 499 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 3) HP 42/42 MP 0/0 Hu 94 $ 496 room=.
+-> w
+T 500 mode=dungeon_mode        Elrond Goldenbough(elf) F3@( 7, 3) HP 42/42 MP 0/0 Hu 93 $ 496 room=N
+-> u
+T 501 mode=dungeon_unlocked_mode Elrond Goldenbough(elf) F3@( 7, 3) HP 42/42 MP 0/0 Hu 93 $ 496 room=N
+-> r
+T 502 mode=game_loop           Elrond Goldenbough(elf) F3@( 7, 3) HP 42/42 MP 0/0 Hu 93 $ 496 room=N
+-> w
+T 503 mode=altar_mode          Elrond Goldenbough(elf) F3@( 6, 3) HP 42/42 MP 0/0 Hu 92 $ 496 room=A
+-> pray
+T 504 mode=game_loop           Elrond Goldenbough(elf) F3@( 6, 3) HP 42/42 MP 0/0 Hu 92 $ 496 room=.
+-> s
+T 505 mode=pool_mode           Elrond Goldenbough(elf) F3@( 6, 4) HP 42/42 MP 0/0 Hu 91 $ 496 room=P
+-> dr
+T 506 mode=game_loop           Elrond Goldenbough(elf) F3@( 6, 4) HP 42/42 MP 0/0 Hu 91 $ 496 room=.
+-> w
+T 507 mode=chest_mode          Elrond Goldenbough(elf) F3@( 5, 4) HP 42/42 MP 0/0 Hu 90 $ 496 room=C
+-> o
+T 508 mode=game_loop           Elrond Goldenbough(elf) F3@( 5, 4) HP 42/42 MP 0/0 Hu 90 $ 496 room=.
+-> n
+T 509 mode=combat_mode         Elrond Goldenbough(elf) F3@( 5, 3) HP 42/42 MP 0/0 Hu 89 $ 496 room=M vs Goblin(L2 HP12/12)
+-> a
+T 510 mode=combat_victory      Elrond Goldenbough(elf) F3@( 5, 3) HP 42/42 MP 0/0 Hu 89 $ 517 room=.
+-> back
+T 511 mode=game_loop           Elrond Goldenbough(elf) F3@( 5, 3) HP 42/42 MP 0/0 Hu 89 $ 517 room=.
+-> l
+T 512 mode=game_loop           Elrond Goldenbough(elf) F3@( 5, 3) HP 42/42 MP 0/0 Hu 89 $ 517 room=.
+-> w
+T 513 mode=game_loop           Elrond Goldenbough(elf) F3@( 4, 3) HP 42/42 MP 0/0 Hu 88 $ 517 room=.
+-> l
+T 514 mode=game_loop           Elrond Goldenbough(elf) F3@( 4, 3) HP 42/42 MP 0/0 Hu 88 $ 517 room=.
+-> s
+T 515 mode=game_loop           Elrond Goldenbough(elf) F3@( 4, 4) HP 42/42 MP 0/0 Hu 87 $ 517 room=.
+-> w
+T 516 mode=game_loop           Elrond Goldenbough(elf) F3@( 3, 4) HP 42/42 MP 0/0 Hu 86 $ 517 room=.
+-> i
+T 517 mode=inventory           Elrond Goldenbough(elf) F3@( 3, 4) HP 42/42 MP 0/0 Hu 86 $ 517 room=.
+-> eat3
+T 518 mode=inventory           Elrond Goldenbough(elf) F3@( 3, 4) HP 42/42 MP 0/0 Hu 92 $ 517 room=.
+-> u12
+T 519 mode=upgrade_scroll_mode Elrond Goldenbough(elf) F3@( 3, 4) HP 42/42 MP 0/0 Hu 92 $ 517 room=.
+-> 1
+T 520 mode=inventory           Elrond Goldenbough(elf) F3@( 3, 4) HP 42/42 MP 0/0 Hu 92 $ 517 room=.
+-> x
+T 521 mode=game_loop           Elrond Goldenbough(elf) F3@( 3, 4) HP 42/42 MP 0/0 Hu 92 $ 517 room=.
+-> s
+T 522 mode=chest_mode          Elrond Goldenbough(elf) F3@( 3, 5) HP 42/42 MP 0/0 Hu 91 $ 517 room=C
+-> o
+T 523 mode=game_loop           Elrond Goldenbough(elf) F3@( 3, 5) HP 42/42 MP 0/0 Hu 91 $ 697 room=.
+-> s
+T 524 mode=combat_mode         Elrond Goldenbough(elf) F3@( 3, 6) HP 42/42 MP 0/0 Hu 90 $ 697 room=M vs Orc(L2 HP50/50)
+-> a
+T 525 mode=combat_mode         Elrond Goldenbough(elf) F3@( 3, 6) HP 40/42 MP 0/0 Hu 90 $ 697 room=M vs Orc(L2 HP32/50)
+-> a
+T 526 mode=combat_mode         Elrond Goldenbough(elf) F3@( 3, 6) HP 38/42 MP 0/0 Hu 90 $ 697 room=M vs Orc(L2 HP14/50)
+-> a
+T 527 mode=combat_mode         Elrond Goldenbough(elf) F3@( 3, 6) HP 38/42 MP 0/0 Hu 90 $ 697 room=M vs Orc(L2 HP14/50)
+-> a
+T 528 mode=combat_victory      Elrond Goldenbough(elf) F3@( 3, 6) HP 38/42 MP 0/0 Hu 90 $ 715 room=.
+-> back
+T 529 mode=game_loop           Elrond Goldenbough(elf) F3@( 3, 6) HP 38/42 MP 0/0 Hu 90 $ 715 room=.
+-> w
+T 530 mode=game_loop           Elrond Goldenbough(elf) F3@( 2, 6) HP 38/42 MP 0/0 Hu 89 $ 715 room=.
+-> n
+T 531 mode=dungeon_mode        Elrond Goldenbough(elf) F3@( 2, 5) HP 39/42 MP 0/0 Hu 88 $ 715 room=N
+-> u
+T 532 mode=game_loop           Elrond Goldenbough(elf) F3@( 2, 5) HP 39/42 MP 0/0 Hu 88 $ 715 room=N
+-> n
+T 533 mode=game_loop           Elrond Goldenbough(elf) F3@( 2, 4) HP 39/42 MP 0/0 Hu 87 $ 715 room=.
+-> i
+T 534 mode=inventory           Elrond Goldenbough(elf) F3@( 2, 4) HP 39/42 MP 0/0 Hu 87 $ 715 room=.
+-> u8
+T 535 mode=inventory           Elrond Goldenbough(elf) F3@( 2, 4) HP 42/42 MP 0/0 Hu 87 $ 715 room=.
+-> x
+T 536 mode=game_loop           Elrond Goldenbough(elf) F3@( 2, 4) HP 42/42 MP 0/0 Hu 87 $ 715 room=.
+-> n
+T 537 mode=combat_mode         Elrond Goldenbough(elf) F3@( 2, 3) HP 42/42 MP 0/0 Hu 86 $ 715 room=M vs Goblin(L2 HP12/12)
+-> a
+T 538 mode=combat_victory      Elrond Goldenbough(elf) F3@( 2, 3) HP 42/52 MP 0/0 Hu 86 $ 718 room=.
+-> back
+T 539 mode=game_loop           Elrond Goldenbough(elf) F3@( 2, 3) HP 42/52 MP 0/0 Hu 86 $ 718 room=.
+-> e
+T 540 mode=game_loop           Elrond Goldenbough(elf) F3@( 3, 3) HP 42/52 MP 0/0 Hu 85 $ 718 room=.
+-> i
+T 541 mode=inventory           Elrond Goldenbough(elf) F3@( 3, 3) HP 42/52 MP 0/0 Hu 85 $ 718 room=.
+-> u9
+T 542 mode=inventory           Elrond Goldenbough(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 85 $ 718 room=.
+-> x
+T 543 mode=game_loop           Elrond Goldenbough(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 85 $ 718 room=.
+-> i
+T 544 mode=inventory           Elrond Goldenbough(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 85 $ 718 room=.
+-> eat2
+T 545 mode=inventory           Elrond Goldenbough(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 90 $ 718 room=.
+-> x
+T 546 mode=game_loop           Elrond Goldenbough(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 90 $ 718 room=.
+-> l
+T 547 mode=game_loop           Elrond Goldenbough(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 90 $ 718 room=.
+-> e
+T 548 mode=game_loop           Elrond Goldenbough(elf) F3@( 4, 3) HP 52/52 MP 0/0 Hu 89 $ 718 room=.
+-> e
+T 549 mode=game_loop           Elrond Goldenbough(elf) F3@( 5, 3) HP 52/52 MP 0/0 Hu 88 $ 718 room=.
+-> e
+T 550 mode=game_loop           Elrond Goldenbough(elf) F3@( 6, 3) HP 52/52 MP 0/0 Hu 87 $ 718 room=.
+-> e
+T 551 mode=game_loop           Elrond Goldenbough(elf) F3@( 7, 3) HP 52/52 MP 0/0 Hu 86 $ 718 room=N
+-> e
+T 552 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 3) HP 52/52 MP 0/0 Hu 85 $ 718 room=.
+-> n
+T 553 mode=chest_mode          Elrond Goldenbough(elf) F3@( 8, 2) HP 52/52 MP 0/0 Hu 84 $ 718 room=C
+-> o
+T 554 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 2) HP 52/52 MP 0/0 Hu 84 $ 898 room=.
+-> s
+T 555 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 3) HP 52/52 MP 0/0 Hu 83 $ 898 room=.
+-> s
+T 556 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 4) HP 52/52 MP 0/0 Hu 82 $ 898 room=.
+-> s
+T 557 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 5) HP 52/52 MP 0/0 Hu 81 $ 898 room=.
+-> s
+T 558 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 6) HP 52/52 MP 0/0 Hu 80 $ 898 room=.
+-> s
+T 559 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 7) HP 52/52 MP 0/0 Hu 79 $ 898 room=C
+-> s
+T 560 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 8) HP 52/52 MP 0/0 Hu 78 $ 898 room=.
+-> s
+T 561 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 9) HP 52/52 MP 0/0 Hu 77 $ 898 room=.
+-> s
+T 562 mode=game_loop           Elrond Goldenbough(elf) F3@( 8,10) HP 52/52 MP 0/0 Hu 76 $ 898 room=.
+-> e
+T 563 mode=game_loop           Elrond Goldenbough(elf) F3@( 9,10) HP 52/52 MP 0/0 Hu 75 $ 898 room=.
+-> s
+T 564 mode=game_loop           Elrond Goldenbough(elf) F3@( 9,11) HP 52/52 MP 0/0 Hu 74 $ 898 room=.
+-> s
+T 565 mode=game_loop           Elrond Goldenbough(elf) F3@( 9,12) HP 52/52 MP 0/0 Hu 73 $ 898 room=C
+-> e
+T 566 mode=game_loop           Elrond Goldenbough(elf) F3@(10,12) HP 52/52 MP 0/0 Hu 72 $ 898 room=.
+-> e
+T 567 mode=game_loop           Elrond Goldenbough(elf) F3@(11,12) HP 52/52 MP 0/0 Hu 71 $ 898 room=.
+-> e
+T 568 mode=game_loop           Elrond Goldenbough(elf) F3@(12,12) HP 52/52 MP 0/0 Hu 70 $ 898 room=.
+-> e
+T 569 mode=game_loop           Elrond Goldenbough(elf) F3@(13,12) HP 52/52 MP 0/0 Hu 69 $ 898 room=.
+-> e
+T 570 mode=game_loop           Elrond Goldenbough(elf) F3@(14,12) HP 52/52 MP 0/0 Hu 68 $ 898 room=.
+-> s
+T 571 mode=game_loop           Elrond Goldenbough(elf) F3@(14,13) HP 52/52 MP 0/0 Hu 67 $ 898 room=.
+-> s
+T 572 mode=game_loop           Elrond Goldenbough(elf) F3@(14,14) HP 52/52 MP 0/0 Hu 66 $ 898 room=.
+-> l
+T 573 mode=game_loop           Elrond Goldenbough(elf) F3@(14,14) HP 52/52 MP 0/0 Hu 66 $ 898 room=.
+-> s
+T 574 mode=library_mode        Elrond Goldenbough(elf) F3@(14,15) HP 52/52 MP 0/0 Hu 65 $ 898 room=L
+-> r
+T 575 mode=library_read_decision_mode Elrond Goldenbough(elf) F3@(14,15) HP 52/52 MP 0/0 Hu 65 $ 898 room=L
+-> y
+T 576 mode=game_loop           Elrond Goldenbough(elf) F3@(14,15) HP 52/52 MP 0/0 Hu 65 $ 898 room=.
+-> l
+T 577 mode=game_loop           Elrond Goldenbough(elf) F3@(14,15) HP 52/52 MP 0/0 Hu 65 $ 898 room=.
+-> e
+T 578 mode=game_loop           Elrond Goldenbough(elf) F3@(15,15) HP 52/52 MP 0/0 Hu 64 $ 898 room=.
+-> l
+T 579 mode=game_loop           Elrond Goldenbough(elf) F3@(15,15) HP 52/52 MP 0/0 Hu 64 $ 898 room=.
+-> e
+T 580 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 898 room=V
+-> b13
+T 581 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 888 room=V
+-> b4
+T 582 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 808 room=V
+-> b6
+T 583 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 778 room=V
+-> b6
+T 584 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 748 room=V
+-> b7
+T 585 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 598 room=V
+-> b1
+T 586 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 508 room=V
+-> b1
+T 587 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 448 room=V
+-> b1
+T 588 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 328 room=V
+-> id16
+T 589 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 253 room=V
+-> id17
+T 590 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 178 room=V
+-> id18
+T 591 mode=vendor_shop         Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 128 room=V
+-> x
+T 592 mode=game_loop           Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 128 room=V
+-> i
+T 593 mode=inventory           Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 128 room=V
+-> e1
+T 594 mode=inventory           Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 128 room=V
+-> e5
+T 595 mode=inventory           Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 128 room=V
+-> x
+T 596 mode=game_loop           Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 128 room=V
+-> l
+T 597 mode=game_loop           Elrond Goldenbough(elf) F3@(16,15) HP 52/52 MP 0/0 Hu 63 $ 128 room=V
+-> n
+T 598 mode=combat_mode         Elrond Goldenbough(elf) F3@(16,14) HP 52/52 MP 0/0 Hu 62 $ 128 room=M vs Spore Puff(L2 HP18/18)
+-> a
+T 599 mode=combat_victory      Elrond Goldenbough(elf) F3@(16,14) HP 51/52 MP 0/0 Hu 62 $ 155 room=.
+-> back
+T 600 mode=game_loop           Elrond Goldenbough(elf) F3@(16,14) HP 51/52 MP 0/0 Hu 62 $ 155 room=.
+-> e
+T 601 mode=game_loop           Elrond Goldenbough(elf) F3@(17,14) HP 51/52 MP 0/0 Hu 61 $ 155 room=.
+-> e
+T 602 mode=game_loop           Elrond Goldenbough(elf) F3@(18,14) HP 51/52 MP 0/0 Hu 60 $ 155 room=.
+-> l
+T 603 mode=game_loop           Elrond Goldenbough(elf) F3@(18,14) HP 51/52 MP 0/0 Hu 60 $ 155 room=.
+-> n
+T 604 mode=game_loop           Elrond Goldenbough(elf) F3@(18,13) HP 51/52 MP 0/0 Hu 59 $ 155 room=.
+-> l
+T 605 mode=game_loop           Elrond Goldenbough(elf) F3@(18,13) HP 51/52 MP 0/0 Hu 59 $ 155 room=.
+-> e
+T 606 mode=game_loop           Elrond Goldenbough(elf) F3@(19,13) HP 51/52 MP 0/0 Hu 58 $ 155 room=.
+-> s
+T 607 mode=game_loop           Elrond Goldenbough(elf) F3@(19,14) HP 51/52 MP 0/0 Hu 57 $ 155 room=.
+-> s
+T 608 mode=game_loop           Elrond Goldenbough(elf) F3@(19,15) HP 51/52 MP 0/0 Hu 56 $ 155 room=.
+-> l
+T 609 mode=game_loop           Elrond Goldenbough(elf) F3@(19,15) HP 51/52 MP 0/0 Hu 56 $ 155 room=.
+-> s
+T 610 mode=combat_mode         Elrond Goldenbough(elf) F3@(19,16) HP 51/52 MP 0/0 Hu 55 $ 155 room=M vs Wight(L2 HP40/40)
+-> f
+T 611 mode=flee_direction_mode Elrond Goldenbough(elf) F3@(19,16) HP 51/52 MP 0/0 Hu 55 $ 155 room=M
+-> w
+T 612 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 51/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP104/104)
+-> a
+T 613 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 30/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP88/104)
+-> a
+T 614 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 9/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP88/104)
+-> i
+T 615 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 9/52 MP 0/0 Hu 55 $ 155 room=M
+-> u5
+T 616 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 39/52 MP 0/0 Hu 55 $ 155 room=M
+-> x
+T 617 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 39/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP88/104)
+-> a
+T 618 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 18/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP88/104)
+-> i
+T 619 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 18/52 MP 0/0 Hu 55 $ 155 room=M
+-> u5
+T 620 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 48/52 MP 0/0 Hu 55 $ 155 room=M
+-> x
+T 621 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 48/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP88/104)
+-> a
+T 622 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 27/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP72/104)
+-> a
+T 623 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 27/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP72/104)
+-> a
+T 624 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 6/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP56/104)
+-> i
+T 625 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 6/52 MP 0/0 Hu 55 $ 155 room=M
+-> u5
+T 626 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 36/52 MP 0/0 Hu 55 $ 155 room=M
+-> x
+T 627 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 36/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP56/104)
+-> a
+T 628 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 15/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP40/104)
+-> i
+T 629 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 15/52 MP 0/0 Hu 55 $ 155 room=M
+-> u5
+T 630 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 45/52 MP 0/0 Hu 55 $ 155 room=M
+-> x
+T 631 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 45/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP40/104)
+-> a
+T 632 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 45/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP24/104)
+-> a
+T 633 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 45/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP24/104)
+-> a
+T 634 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 24/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP8/104)
+-> i
+T 635 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 24/52 MP 0/0 Hu 55 $ 155 room=M
+-> u5
+T 636 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 52/52 MP 0/0 Hu 55 $ 155 room=M
+-> x
+T 637 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 52/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP8/104)
+-> a
+T 638 mode=combat_mode         Elrond Goldenbough(elf) F3@(18,16) HP 31/52 MP 0/0 Hu 55 $ 155 room=M vs ELITE UNDEAD WRAITH(L3 HP8/104)
+-> a
+T 639 mode=combat_victory      Elrond Goldenbough(elf) F3@(18,16) HP 31/52 MP 0/0 Hu 55 $ 183 room=.
+-> back
+T 640 mode=game_loop           Elrond Goldenbough(elf) F3@(18,16) HP 31/52 MP 0/0 Hu 55 $ 183 room=.
+-> i
+T 641 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 31/52 MP 0/0 Hu 55 $ 183 room=.
+-> u13
+T 642 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 52/52 MP 0/0 Hu 55 $ 183 room=.
+-> u5
+T 643 mode=upgrade_scroll_mode Elrond Goldenbough(elf) F3@(18,16) HP 52/52 MP 0/0 Hu 55 $ 183 room=.
+-> 1
+T 644 mode=inventory           Elrond Goldenbough(elf) F3@(18,16) HP 52/52 MP 0/0 Hu 55 $ 183 room=.
+-> x
+T 645 mode=game_loop           Elrond Goldenbough(elf) F3@(18,16) HP 52/52 MP 0/0 Hu 55 $ 183 room=.
+-> l
+T 646 mode=game_loop           Elrond Goldenbough(elf) F3@(18,16) HP 52/52 MP 0/0 Hu 55 $ 183 room=.
+-> w
+T 647 mode=tomb_mode           Elrond Goldenbough(elf) F3@(17,16) HP 52/52 MP 0/0 Hu 54 $ 183 room=T
+-> p
+T 648 mode=game_loop           Elrond Goldenbough(elf) F3@(17,16) HP 52/52 MP 0/0 Hu 54 $ 183 room=T
+-> e
+T 649 mode=game_loop           Elrond Goldenbough(elf) F3@(18,16) HP 52/52 MP 0/0 Hu 53 $ 183 room=.
+-> n
+T 650 mode=game_loop           Elrond Goldenbough(elf) F3@(18,15) HP 52/52 MP 0/0 Hu 52 $ 183 room=.
+-> l
+T 651 mode=game_loop           Elrond Goldenbough(elf) F3@(18,15) HP 52/52 MP 0/0 Hu 52 $ 183 room=.
+-> n
+T 652 mode=game_loop           Elrond Goldenbough(elf) F3@(18,14) HP 52/52 MP 0/0 Hu 51 $ 183 room=.
+-> w
+T 653 mode=game_loop           Elrond Goldenbough(elf) F3@(17,14) HP 52/52 MP 0/0 Hu 50 $ 183 room=.
+-> w
+T 654 mode=game_loop           Elrond Goldenbough(elf) F3@(16,14) HP 52/52 MP 0/0 Hu 49 $ 183 room=.
+-> w
+T 655 mode=game_loop           Elrond Goldenbough(elf) F3@(15,14) HP 52/52 MP 0/0 Hu 48 $ 183 room=.
+-> w
+T 656 mode=game_loop           Elrond Goldenbough(elf) F3@(14,14) HP 52/52 MP 0/0 Hu 47 $ 183 room=.
+-> n
+T 657 mode=game_loop           Elrond Goldenbough(elf) F3@(14,13) HP 52/52 MP 0/0 Hu 46 $ 183 room=.
+-> n
+T 658 mode=game_loop           Elrond Goldenbough(elf) F3@(14,12) HP 52/52 MP 0/0 Hu 45 $ 183 room=.
+-> n
+T 659 mode=game_loop           Elrond Goldenbough(elf) F3@(14,11) HP 52/52 MP 0/0 Hu 44 $ 183 room=.
+-> n
+T 660 mode=game_loop           Elrond Goldenbough(elf) F3@(14,10) HP 52/52 MP 0/0 Hu 43 $ 183 room=C
+-> l
+T 661 mode=game_loop           Elrond Goldenbough(elf) F3@(14,10) HP 52/52 MP 0/0 Hu 43 $ 183 room=C
+-> n
+T 662 mode=game_loop           Elrond Goldenbough(elf) F3@(14, 9) HP 52/52 MP 0/0 Hu 42 $ 183 room=.
+-> w
+T 663 mode=game_loop           Elrond Goldenbough(elf) F3@(13, 9) HP 52/52 MP 0/0 Hu 41 $ 183 room=.
+-> n
+T 664 mode=game_loop           Elrond Goldenbough(elf) F3@(13, 8) HP 52/52 MP 0/0 Hu 40 $ 183 room=.
+-> w
+T 665 mode=game_loop           Elrond Goldenbough(elf) F3@(12, 8) HP 52/52 MP 0/0 Hu 39 $ 183 room=.
+-> w
+T 666 mode=game_loop           Elrond Goldenbough(elf) F3@(11, 8) HP 52/52 MP 0/0 Hu 38 $ 183 room=.
+-> w
+T 667 mode=game_loop           Elrond Goldenbough(elf) F3@(10, 8) HP 52/52 MP 0/0 Hu 37 $ 183 room=.
+-> n
+T 668 mode=game_loop           Elrond Goldenbough(elf) F3@(10, 7) HP 52/52 MP 0/0 Hu 36 $ 183 room=.
+-> w
+T 669 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 7) HP 52/52 MP 0/0 Hu 35 $ 183 room=.
+-> n
+T 670 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 6) HP 52/52 MP 0/0 Hu 34 $ 183 room=.
+-> l
+T 671 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 6) HP 52/52 MP 0/0 Hu 34 $ 183 room=.
+-> n
+T 672 mode=game_loop           Elrond Goldenbough(elf) F3@( 9, 5) HP 52/52 MP 0/0 Hu 33 $ 183 room=.
+-> w
+T 673 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 5) HP 52/52 MP 0/0 Hu 32 $ 183 room=.
+-> n
+T 674 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 4) HP 52/52 MP 0/0 Hu 31 $ 183 room=.
+-> n
+T 675 mode=game_loop           Elrond Goldenbough(elf) F3@( 8, 3) HP 52/52 MP 0/0 Hu 30 $ 183 room=.
+-> e
+T 676 mode=stairs_down_mode    Elrond Goldenbough(elf) F3@( 9, 3) HP 52/52 MP 0/0 Hu 29 $ 183 room=D
+-> d
+T 677 mode=stairs_up_mode      Elrond Goldenbough(elf) F4@( 1, 1) HP 52/52 MP 0/0 Hu 29 $ 183 room=U
+-> e
+T 678 mode=game_loop           Elrond Goldenbough(elf) F4@( 2, 1) HP 52/52 MP 0/0 Hu 28 $ 183 room=.
+-> l
+T 679 mode=game_loop           Elrond Goldenbough(elf) F4@( 2, 1) HP 52/52 MP 0/0 Hu 28 $ 183 room=.
+-> e
+T 680 mode=game_loop           Elrond Goldenbough(elf) F4@( 3, 1) HP 52/52 MP 0/0 Hu 27 $ 183 room=.
+-> l
+T 681 mode=game_loop           Elrond Goldenbough(elf) F4@( 3, 1) HP 52/52 MP 0/0 Hu 27 $ 183 room=.
+-> e
+T 682 mode=game_loop           Elrond Goldenbough(elf) F4@( 4, 1) HP 52/52 MP 0/0 Hu 26 $ 183 room=.
+-> l
+T 683 mode=game_loop           Elrond Goldenbough(elf) F4@( 4, 1) HP 52/52 MP 0/0 Hu 26 $ 183 room=.
+-> s
+T 684 mode=game_loop           Elrond Goldenbough(elf) F4@( 4, 2) HP 52/52 MP 0/0 Hu 25 $ 183 room=.
+-> l
+T 685 mode=game_loop           Elrond Goldenbough(elf) F4@( 4, 2) HP 52/52 MP 0/0 Hu 25 $ 183 room=.
+-> e
+T 686 mode=game_loop           Elrond Goldenbough(elf) F4@( 5, 2) HP 52/52 MP 0/0 Hu 24 $ 183 room=.
+-> l
+T 687 mode=game_loop           Elrond Goldenbough(elf) F4@( 5, 2) HP 52/52 MP 0/0 Hu 24 $ 183 room=.
+-> s
+T 688 mode=game_loop           Elrond Goldenbough(elf) F4@( 5, 3) HP 52/52 MP 0/0 Hu 23 $ 183 room=.
+-> l
+T 689 mode=game_loop           Elrond Goldenbough(elf) F4@( 5, 3) HP 52/52 MP 0/0 Hu 23 $ 183 room=.
+-> e
+T 690 mode=game_loop           Elrond Goldenbough(elf) F4@( 6, 3) HP 52/52 MP 0/0 Hu 22 $ 183 room=.
+-> e
+T 691 mode=game_loop           Elrond Goldenbough(elf) F4@( 7, 3) HP 52/52 MP 0/0 Hu 21 $ 183 room=.
+-> e
+T 692 mode=vendor_shop         Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 20 $ 183 room=V
+-> b12
+T 693 mode=vendor_shop         Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 20 $ 173 room=V
+-> b6
+T 694 mode=vendor_shop         Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 20 $ 143 room=V
+-> b6
+T 695 mode=vendor_shop         Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 20 $ 113 room=V
+-> b6
+T 696 mode=vendor_shop         Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 20 $ 83 room=V
+-> b6
+T 697 mode=vendor_shop         Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 20 $ 53 room=V
+-> b6
+T 698 mode=vendor_shop         Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 20 $ 23 room=V
+-> x
+T 699 mode=game_loop           Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 20 $ 23 room=V
+-> i
+T 700 mode=inventory           Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 20 $ 23 room=V
+-> eat1
+T 701 mode=inventory           Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 70 $ 23 room=V
+-> x
+T 702 mode=game_loop           Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 70 $ 23 room=V
+-> n
+T 703 mode=game_loop           Elrond Goldenbough(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu 69 $ 23 room=.
+-> e
+T 704 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 2) HP 52/52 MP 0/0 Hu 68 $ 23 room=.
+-> l
+T 705 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 2) HP 52/52 MP 0/0 Hu 68 $ 23 room=.
+-> n
+T 706 mode=combat_mode         Elrond Goldenbough(elf) F4@( 9, 1) HP 52/52 MP 0/0 Hu 67 $ 23 room=M vs Minotaur(L3 HP75/75)
+-> a
+T 707 mode=combat_mode         Elrond Goldenbough(elf) F4@( 9, 1) HP 45/52 MP 0/0 Hu 67 $ 23 room=M vs Minotaur(L3 HP75/75)
+-> a
+T 708 mode=combat_mode         Elrond Goldenbough(elf) F4@( 9, 1) HP 38/52 MP 0/0 Hu 67 $ 23 room=M vs Minotaur(L3 HP56/75)
+-> a
+T 709 mode=combat_mode         Elrond Goldenbough(elf) F4@( 9, 1) HP 38/52 MP 0/0 Hu 67 $ 23 room=M vs Minotaur(L3 HP56/75)
+-> a
+T 710 mode=combat_mode         Elrond Goldenbough(elf) F4@( 9, 1) HP 31/52 MP 0/0 Hu 67 $ 23 room=M vs Minotaur(L3 HP37/75)
+-> a
+T 711 mode=combat_mode         Elrond Goldenbough(elf) F4@( 9, 1) HP 24/52 MP 0/0 Hu 67 $ 23 room=M vs Minotaur(L3 HP18/75)
+-> i
+T 712 mode=inventory           Elrond Goldenbough(elf) F4@( 9, 1) HP 24/52 MP 0/0 Hu 67 $ 23 room=M
+-> u5
+T 713 mode=inventory           Elrond Goldenbough(elf) F4@( 9, 1) HP 52/52 MP 0/0 Hu 67 $ 23 room=M
+-> x
+T 714 mode=combat_mode         Elrond Goldenbough(elf) F4@( 9, 1) HP 52/52 MP 0/0 Hu 67 $ 23 room=M vs Minotaur(L3 HP18/75)
+-> f
+T 715 mode=flee_direction_mode Elrond Goldenbough(elf) F4@( 9, 1) HP 52/52 MP 0/0 Hu 67 $ 23 room=M
+-> s
+T 716 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 2) HP 52/52 MP 0/0 Hu 67 $ 23 room=.
+-> s
+T 717 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 3) HP 52/52 MP 0/0 Hu 66 $ 23 room=.
+-> w
+T 718 mode=game_loop           Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 65 $ 23 room=V
+-> w
+T 719 mode=game_loop           Elrond Goldenbough(elf) F4@( 7, 3) HP 52/52 MP 0/0 Hu 64 $ 23 room=.
+-> w
+T 720 mode=game_loop           Elrond Goldenbough(elf) F4@( 6, 3) HP 52/52 MP 0/0 Hu 63 $ 23 room=.
+-> w
+T 721 mode=game_loop           Elrond Goldenbough(elf) F4@( 5, 3) HP 52/52 MP 0/0 Hu 62 $ 23 room=.
+-> n
+T 722 mode=game_loop           Elrond Goldenbough(elf) F4@( 5, 2) HP 52/52 MP 0/0 Hu 61 $ 23 room=.
+-> w
+T 723 mode=game_loop           Elrond Goldenbough(elf) F4@( 4, 2) HP 52/52 MP 0/0 Hu 60 $ 23 room=.
+-> n
+T 724 mode=game_loop           Elrond Goldenbough(elf) F4@( 4, 1) HP 52/52 MP 0/0 Hu 59 $ 23 room=.
+-> w
+T 725 mode=game_loop           Elrond Goldenbough(elf) F4@( 3, 1) HP 52/52 MP 0/0 Hu 58 $ 23 room=.
+-> w
+T 726 mode=game_loop           Elrond Goldenbough(elf) F4@( 2, 1) HP 52/52 MP 0/0 Hu 57 $ 23 room=.
+-> s
+T 727 mode=game_loop           Elrond Goldenbough(elf) F4@( 2, 2) HP 52/52 MP 0/0 Hu 56 $ 23 room=.
+-> w
+T 728 mode=game_loop           Elrond Goldenbough(elf) F4@( 1, 2) HP 52/52 MP 0/0 Hu 55 $ 23 room=.
+-> n
+T 729 mode=stairs_up_mode      Elrond Goldenbough(elf) F4@( 1, 1) HP 52/52 MP 0/0 Hu 54 $ 23 room=U
+-> s
+T 730 mode=game_loop           Elrond Goldenbough(elf) F4@( 1, 2) HP 52/52 MP 0/0 Hu 53 $ 23 room=.
+-> s
+T 731 mode=game_loop           Elrond Goldenbough(elf) F4@( 1, 3) HP 52/52 MP 0/0 Hu 52 $ 23 room=.
+-> l
+T 732 mode=game_loop           Elrond Goldenbough(elf) F4@( 1, 3) HP 52/52 MP 0/0 Hu 52 $ 23 room=.
+-> s
+T 733 mode=game_loop           Elrond Goldenbough(elf) F4@( 1, 4) HP 52/52 MP 0/0 Hu 51 $ 23 room=.
+-> n
+T 734 mode=game_loop           Elrond Goldenbough(elf) F4@( 1, 3) HP 52/52 MP 0/0 Hu 50 $ 23 room=.
+-> n
+T 735 mode=game_loop           Elrond Goldenbough(elf) F4@( 1, 2) HP 52/52 MP 0/0 Hu 49 $ 23 room=.
+-> i
+T 736 mode=inventory           Elrond Goldenbough(elf) F4@( 1, 2) HP 52/52 MP 0/0 Hu 49 $ 23 room=.
+-> eat1
+T 737 mode=inventory           Elrond Goldenbough(elf) F4@( 1, 2) HP 52/52 MP 0/0 Hu 99 $ 23 room=.
+-> x
+T 738 mode=game_loop           Elrond Goldenbough(elf) F4@( 1, 2) HP 52/52 MP 0/0 Hu 99 $ 23 room=.
+-> n
+T 739 mode=stairs_up_mode      Elrond Goldenbough(elf) F4@( 1, 1) HP 52/52 MP 0/0 Hu 98 $ 23 room=U
+-> e
+T 740 mode=game_loop           Elrond Goldenbough(elf) F4@( 2, 1) HP 52/52 MP 0/0 Hu 97 $ 23 room=.
+-> e
+T 741 mode=game_loop           Elrond Goldenbough(elf) F4@( 3, 1) HP 52/52 MP 0/0 Hu 96 $ 23 room=.
+-> e
+T 742 mode=game_loop           Elrond Goldenbough(elf) F4@( 4, 1) HP 52/52 MP 0/0 Hu 95 $ 23 room=.
+-> s
+T 743 mode=game_loop           Elrond Goldenbough(elf) F4@( 4, 2) HP 52/52 MP 0/0 Hu 94 $ 23 room=.
+-> e
+T 744 mode=game_loop           Elrond Goldenbough(elf) F4@( 5, 2) HP 52/52 MP 0/0 Hu 93 $ 23 room=.
+-> s
+T 745 mode=game_loop           Elrond Goldenbough(elf) F4@( 5, 3) HP 52/52 MP 0/0 Hu 92 $ 23 room=.
+-> e
+T 746 mode=game_loop           Elrond Goldenbough(elf) F4@( 6, 3) HP 52/52 MP 0/0 Hu 91 $ 23 room=.
+-> e
+T 747 mode=game_loop           Elrond Goldenbough(elf) F4@( 7, 3) HP 52/52 MP 0/0 Hu 90 $ 23 room=.
+-> e
+T 748 mode=game_loop           Elrond Goldenbough(elf) F4@( 8, 3) HP 52/52 MP 0/0 Hu 89 $ 23 room=V
+-> n
+T 749 mode=game_loop           Elrond Goldenbough(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu 88 $ 23 room=.
+-> e
+T 750 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 2) HP 52/52 MP 0/0 Hu 87 $ 23 room=.
+-> s
+T 751 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 3) HP 52/52 MP 0/0 Hu 86 $ 23 room=.
+-> s
+T 752 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 4) HP 52/52 MP 0/0 Hu 85 $ 23 room=.
+-> l
+T 753 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 4) HP 52/52 MP 0/0 Hu 85 $ 23 room=.
+-> e
+T 754 mode=combat_mode         Elrond Goldenbough(elf) F4@(10, 4) HP 52/52 MP 0/0 Hu 84 $ 23 room=M vs Slime Mold(L3 HP16/16)
+-> a
+T 755 mode=combat_victory      Elrond Goldenbough(elf) F4@(10, 4) HP 51/52 MP 0/0 Hu 84 $ 35 room=.
+-> back
+T 756 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 4) HP 51/52 MP 0/0 Hu 84 $ 35 room=.
+-> l
+T 757 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 4) HP 51/52 MP 0/0 Hu 84 $ 35 room=.
+-> s
+T 758 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 5) HP 51/52 MP 0/0 Hu 83 $ 35 room=.
+-> l
+T 759 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 5) HP 51/52 MP 0/0 Hu 83 $ 35 room=.
+-> s
+T 760 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 6) HP 51/52 MP 0/0 Hu 82 $ 35 room=.
+-> l
+T 761 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 6) HP 51/52 MP 0/0 Hu 82 $ 35 room=.
+-> e
+T 762 mode=library_mode        Elrond Goldenbough(elf) F4@(11, 6) HP 51/52 MP 0/0 Hu 81 $ 35 room=L
+-> r
+T 763 mode=library_read_decision_mode Elrond Goldenbough(elf) F4@(11, 6) HP 51/52 MP 0/0 Hu 81 $ 35 room=L
+-> y
+T 764 mode=game_loop           Elrond Goldenbough(elf) F4@(11, 6) HP 51/52 MP 0/0 Hu 81 $ 110 room=.
+-> l
+T 765 mode=game_loop           Elrond Goldenbough(elf) F4@(11, 6) HP 51/52 MP 0/0 Hu 81 $ 110 room=.
+-> n
+T 766 mode=game_loop           Elrond Goldenbough(elf) F4@(11, 5) HP 44/52 MP 0/0 Hu 80 $ 110 room=.
+-> e
+T 767 mode=game_loop           Elrond Goldenbough(elf) F4@(12, 5) HP 36/52 MP 0/0 Hu 79 $ 110 room=.
+-> i
+T 768 mode=inventory           Elrond Goldenbough(elf) F4@(12, 5) HP 36/52 MP 0/0 Hu 79 $ 110 room=.
+-> u13
+T 769 mode=inventory           Elrond Goldenbough(elf) F4@(12, 5) HP 52/52 MP 0/0 Hu 79 $ 110 room=.
+-> x
+T 770 mode=game_loop           Elrond Goldenbough(elf) F4@(12, 5) HP 52/52 MP 0/0 Hu 79 $ 110 room=.
+-> e
+T 771 mode=stairs_down_mode    Elrond Goldenbough(elf) F4@(13, 5) HP 44/52 MP 0/0 Hu 78 $ 110 room=D
+-> s
+T 772 mode=pool_mode           Elrond Goldenbough(elf) F4@(13, 6) HP 36/52 MP 0/0 Hu 77 $ 110 room=P
+-> dr
+T 773 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 6) HP 36/52 MP 0/0 Hu 77 $ 110 room=.
+-> i
+T 774 mode=inventory           Elrond Goldenbough(elf) F4@(13, 6) HP 36/52 MP 0/0 Hu 77 $ 110 room=.
+-> u13
+T 775 mode=inventory           Elrond Goldenbough(elf) F4@(13, 6) HP 52/52 MP 0/0 Hu 77 $ 110 room=.
+-> x
+T 776 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 6) HP 52/52 MP 0/0 Hu 77 $ 110 room=.
+-> l
+T 777 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 6) HP 52/52 MP 0/0 Hu 77 $ 110 room=.
+-> s
+T 778 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 7) HP 52/52 MP 0/0 Hu 76 $ 110 room=.
+-> l
+T 779 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 7) HP 52/52 MP 0/0 Hu 76 $ 110 room=.
+-> w
+T 780 mode=game_loop           Elrond Goldenbough(elf) F4@(12, 7) HP 52/52 MP 0/0 Hu 75 $ 110 room=.
+-> n
+T 781 mode=combat_mode         Elrond Goldenbough(elf) F4@(12, 6) HP 52/52 MP 0/0 Hu 74 $ 110 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 782 mode=combat_mode         Elrond Goldenbough(elf) F4@(12, 6) HP 52/52 MP 0/0 Hu 74 $ 110 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 783 mode=combat_mode         Elrond Goldenbough(elf) F4@(12, 6) HP 51/52 MP 0/0 Hu 74 $ 110 room=M vs Crawling Claw(L3 HP5/5)
+-> a
+T 784 mode=combat_victory      Elrond Goldenbough(elf) F4@(12, 6) HP 51/52 MP 0/0 Hu 74 $ 122 room=.
+-> back
+T 785 mode=game_loop           Elrond Goldenbough(elf) F4@(12, 6) HP 51/52 MP 0/0 Hu 74 $ 122 room=.
+-> w
+T 786 mode=game_loop           Elrond Goldenbough(elf) F4@(11, 6) HP 51/52 MP 0/0 Hu 73 $ 122 room=.
+-> w
+T 787 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 6) HP 51/52 MP 0/0 Hu 72 $ 122 room=.
+-> w
+T 788 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 6) HP 51/52 MP 0/0 Hu 71 $ 122 room=.
+-> w
+T 789 mode=chest_mode          Elrond Goldenbough(elf) F4@( 8, 6) HP 52/52 MP 0/0 Hu 70 $ 122 room=C
+-> o
+T 790 mode=game_loop           Elrond Goldenbough(elf) F4@( 8, 6) HP 52/52 MP 0/0 Hu 70 $ 122 room=.
+-> s
+T 791 mode=game_loop           Elrond Goldenbough(elf) F4@( 8, 7) HP 52/52 MP 0/0 Hu 69 $ 122 room=.
+-> e
+T 792 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 7) HP 52/52 MP 0/0 Hu 68 $ 122 room=.
+-> s
+T 793 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 8) HP 52/52 MP 0/0 Hu 67 $ 122 room=.
+-> s
+T 794 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 9) HP 52/52 MP 0/0 Hu 66 $ 122 room=.
+-> l
+T 795 mode=game_loop           Elrond Goldenbough(elf) F4@( 9, 9) HP 52/52 MP 0/0 Hu 66 $ 122 room=.
+-> e
+T 796 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 9) HP 52/52 MP 0/0 Hu 65 $ 122 room=.
+-> s
+T 797 mode=pool_mode           Elrond Goldenbough(elf) F4@(10,10) HP 52/52 MP 0/0 Hu 64 $ 122 room=P
+-> dr
+T 798 mode=game_loop           Elrond Goldenbough(elf) F4@(10,10) HP 52/52 MP 0/0 Hu 64 $ 122 room=.
+-> e
+T 799 mode=game_loop           Elrond Goldenbough(elf) F4@(11,10) HP 52/52 MP 0/0 Hu 63 $ 122 room=.
+-> l
+T 800 mode=game_loop           Elrond Goldenbough(elf) F4@(11,10) HP 52/52 MP 0/0 Hu 63 $ 122 room=.
+-> n
+T 801 mode=game_loop           Elrond Goldenbough(elf) F4@(11, 9) HP 52/52 MP 0/0 Hu 62 $ 122 room=.
+-> n
+T 802 mode=dungeon_mode        Elrond Goldenbough(elf) F4@(11, 8) HP 52/52 MP 0/0 Hu 61 $ 122 room=N
+-> u
+T 803 mode=game_loop           Elrond Goldenbough(elf) F4@(11, 8) HP 52/52 MP 0/0 Hu 61 $ 122 room=N
+-> n
+T 804 mode=game_loop           Elrond Goldenbough(elf) F4@(11, 7) HP 52/52 MP 0/0 Hu 60 $ 122 room=.
+-> w
+T 805 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 7) HP 52/52 MP 0/0 Hu 59 $ 122 room=.
+-> s
+T 806 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 8) HP 52/52 MP 0/0 Hu 58 $ 122 room=.
+-> s
+T 807 mode=game_loop           Elrond Goldenbough(elf) F4@(10, 9) HP 52/52 MP 0/0 Hu 57 $ 122 room=.
+-> e
+T 808 mode=game_loop           Elrond Goldenbough(elf) F4@(11, 9) HP 52/52 MP 0/0 Hu 56 $ 122 room=.
+-> e
+T 809 mode=game_loop           Elrond Goldenbough(elf) F4@(12, 9) HP 52/52 MP 0/0 Hu 55 $ 122 room=.
+-> e
+T 810 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 9) HP 52/52 MP 0/0 Hu 54 $ 122 room=.
+-> s
+T 811 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,10) HP 52/52 MP 0/0 Hu 53 $ 122 room=M vs Fungal Hulk(L3 HP80/80)
+-> a
+T 812 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,10) HP 47/52 MP 0/0 Hu 53 $ 122 room=M vs Fungal Hulk(L3 HP62/80)
+-> a
+T 813 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,10) HP 47/52 MP 0/0 Hu 53 $ 122 room=M vs Fungal Hulk(L3 HP44/80)
+-> a
+T 814 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,10) HP 47/52 MP 0/0 Hu 53 $ 122 room=M vs Fungal Hulk(L3 HP44/80)
+-> a
+T 815 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,10) HP 47/52 MP 0/0 Hu 53 $ 122 room=M vs Fungal Hulk(L3 HP44/80)
+-> a
+T 816 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,10) HP 47/52 MP 0/0 Hu 53 $ 122 room=M vs Fungal Hulk(L3 HP26/80)
+-> a
+T 817 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,10) HP 42/52 MP 0/0 Hu 53 $ 122 room=M vs Fungal Hulk(L3 HP8/80)
+-> a
+T 818 mode=combat_victory      Elrond Goldenbough(elf) F4@(13,10) HP 42/62 MP 0/0 Hu 53 $ 238 room=.
+-> back
+T 819 mode=game_loop           Elrond Goldenbough(elf) F4@(13,10) HP 42/62 MP 0/0 Hu 53 $ 238 room=.
+-> e
+T 820 mode=garden_mode         Elrond Goldenbough(elf) F4@(14,10) HP 42/62 MP 0/0 Hu 52 $ 238 room=G
+-> h
+T 821 mode=game_loop           Elrond Goldenbough(elf) F4@(14,10) HP 42/62 MP 0/0 Hu 52 $ 238 room=.
+-> i
+T 822 mode=inventory           Elrond Goldenbough(elf) F4@(14,10) HP 42/62 MP 0/0 Hu 52 $ 238 room=.
+-> u13
+T 823 mode=inventory           Elrond Goldenbough(elf) F4@(14,10) HP 62/62 MP 0/0 Hu 52 $ 238 room=.
+-> x
+T 824 mode=game_loop           Elrond Goldenbough(elf) F4@(14,10) HP 62/62 MP 0/0 Hu 52 $ 238 room=.
+-> l
+T 825 mode=game_loop           Elrond Goldenbough(elf) F4@(14,10) HP 62/62 MP 0/0 Hu 52 $ 238 room=.
+-> n
+T 826 mode=game_loop           Elrond Goldenbough(elf) F4@(14, 9) HP 62/62 MP 0/0 Hu 51 $ 238 room=.
+-> n
+T 827 mode=chest_mode          Elrond Goldenbough(elf) F4@(14, 8) HP 62/62 MP 0/0 Hu 50 $ 238 room=C
+-> o
+T 828 mode=game_loop           Elrond Goldenbough(elf) F4@(14, 8) HP 62/62 MP 0/0 Hu 50 $ 298 room=.
+-> w
+T 829 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 8) HP 62/62 MP 0/0 Hu 49 $ 298 room=.
+-> s
+T 830 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 9) HP 62/62 MP 0/0 Hu 48 $ 298 room=.
+-> s
+T 831 mode=game_loop           Elrond Goldenbough(elf) F4@(13,10) HP 62/62 MP 0/0 Hu 47 $ 298 room=.
+-> s
+T 832 mode=game_loop           Elrond Goldenbough(elf) F4@(13,11) HP 62/62 MP 0/0 Hu 46 $ 298 room=.
+-> e
+T 833 mode=game_loop           Elrond Goldenbough(elf) F4@(14,11) HP 62/62 MP 0/0 Hu 45 $ 298 room=.
+-> l
+T 834 mode=game_loop           Elrond Goldenbough(elf) F4@(14,11) HP 62/62 MP 0/0 Hu 45 $ 298 room=.
+-> s
+T 835 mode=game_loop           Elrond Goldenbough(elf) F4@(14,12) HP 62/62 MP 0/0 Hu 44 $ 298 room=.
+-> l
+T 836 mode=game_loop           Elrond Goldenbough(elf) F4@(14,12) HP 62/62 MP 0/0 Hu 44 $ 298 room=.
+-> s
+T 837 mode=dungeon_mode        Elrond Goldenbough(elf) F4@(14,13) HP 62/62 MP 0/0 Hu 43 $ 298 room=N
+-> u
+T 838 mode=game_loop           Elrond Goldenbough(elf) F4@(14,13) HP 62/62 MP 0/0 Hu 43 $ 298 room=N
+-> l
+T 839 mode=game_loop           Elrond Goldenbough(elf) F4@(14,13) HP 62/62 MP 0/0 Hu 43 $ 298 room=N
+-> e
+T 840 mode=game_loop           Elrond Goldenbough(elf) F4@(15,13) HP 62/62 MP 0/0 Hu 42 $ 298 room=.
+-> l
+T 841 mode=game_loop           Elrond Goldenbough(elf) F4@(15,13) HP 62/62 MP 0/0 Hu 42 $ 298 room=.
+-> e
+T 842 mode=altar_mode          Elrond Goldenbough(elf) F4@(16,13) HP 62/62 MP 0/0 Hu 41 $ 298 room=A
+-> pray
+T 843 mode=game_loop           Elrond Goldenbough(elf) F4@(16,13) HP 62/62 MP 0/0 Hu 41 $ 498 room=.
+-> l
+T 844 mode=game_loop           Elrond Goldenbough(elf) F4@(16,13) HP 62/62 MP 0/0 Hu 41 $ 498 room=.
+-> e
+T 845 mode=game_loop           Elrond Goldenbough(elf) F4@(17,13) HP 62/62 MP 0/0 Hu 40 $ 498 room=.
+-> l
+T 846 mode=game_loop           Elrond Goldenbough(elf) F4@(17,13) HP 62/62 MP 0/0 Hu 40 $ 498 room=.
+-> e
+T 847 mode=chest_mode          Elrond Goldenbough(elf) F4@(18,13) HP 62/62 MP 0/0 Hu 39 $ 498 room=C
+-> o
+T 848 mode=game_loop           Elrond Goldenbough(elf) F4@(18,13) HP 28/62 MP 0/0 Hu 39 $ 498 room=.
+-> i
+T 849 mode=inventory           Elrond Goldenbough(elf) F4@(18,13) HP 28/62 MP 0/0 Hu 39 $ 498 room=.
+-> u12
+T 850 mode=inventory           Elrond Goldenbough(elf) F4@(18,13) HP 58/62 MP 0/0 Hu 39 $ 498 room=.
+-> x
+T 851 mode=game_loop           Elrond Goldenbough(elf) F4@(18,13) HP 58/62 MP 0/0 Hu 39 $ 498 room=.
+-> l
+T 852 mode=game_loop           Elrond Goldenbough(elf) F4@(18,13) HP 58/62 MP 0/0 Hu 39 $ 498 room=.
+-> n
+T 853 mode=combat_mode         Elrond Goldenbough(elf) F4@(18,12) HP 58/62 MP 0/0 Hu 38 $ 498 room=M vs Gnoll(L3 HP46/46)
+-> a
+T 854 mode=combat_mode         Elrond Goldenbough(elf) F4@(18,12) HP 57/62 MP 0/0 Hu 38 $ 498 room=M vs Gnoll(L3 HP46/46)
+-> a
+T 855 mode=combat_mode         Elrond Goldenbough(elf) F4@(18,12) HP 56/62 MP 0/0 Hu 38 $ 498 room=M vs Gnoll(L3 HP23/46)
+-> a
+T 856 mode=combat_victory      Elrond Goldenbough(elf) F4@(18,12) HP 55/62 MP 0/0 Hu 38 $ 518 room=.
+-> back
+T 857 mode=game_loop           Elrond Goldenbough(elf) F4@(18,12) HP 55/62 MP 0/0 Hu 38 $ 518 room=.
+-> n
+T 858 mode=game_loop           Elrond Goldenbough(elf) F4@(18,11) HP 55/62 MP 0/0 Hu 37 $ 518 room=.
+-> w
+T 859 mode=chest_mode          Elrond Goldenbough(elf) F4@(17,11) HP 55/62 MP 0/0 Hu 36 $ 518 room=C
+-> n
+T 860 mode=game_loop           Elrond Goldenbough(elf) F4@(17,10) HP 55/62 MP 0/0 Hu 35 $ 518 room=.
+-> e
+T 861 mode=game_loop           Elrond Goldenbough(elf) F4@(18,10) HP 55/62 MP 0/0 Hu 34 $ 518 room=.
+-> e
+T 862 mode=game_loop           Elrond Goldenbough(elf) F4@(19,10) HP 55/62 MP 0/0 Hu 33 $ 518 room=.
+-> l
+T 863 mode=game_loop           Elrond Goldenbough(elf) F4@(19,10) HP 55/62 MP 0/0 Hu 33 $ 518 room=.
+-> s
+T 864 mode=game_loop           Elrond Goldenbough(elf) F4@(19,11) HP 55/62 MP 0/0 Hu 32 $ 518 room=.
+-> w
+T 865 mode=game_loop           Elrond Goldenbough(elf) F4@(18,11) HP 55/62 MP 0/0 Hu 31 $ 518 room=.
+-> s
+T 866 mode=game_loop           Elrond Goldenbough(elf) F4@(18,12) HP 55/62 MP 0/0 Hu 30 $ 518 room=.
+-> s
+T 867 mode=game_loop           Elrond Goldenbough(elf) F4@(18,13) HP 55/62 MP 0/0 Hu 29 $ 518 room=.
+-> w
+T 868 mode=game_loop           Elrond Goldenbough(elf) F4@(17,13) HP 55/62 MP 0/0 Hu 28 $ 518 room=.
+-> w
+T 869 mode=game_loop           Elrond Goldenbough(elf) F4@(16,13) HP 55/62 MP 0/0 Hu 27 $ 518 room=.
+-> w
+T 870 mode=game_loop           Elrond Goldenbough(elf) F4@(15,13) HP 55/62 MP 0/0 Hu 26 $ 518 room=.
+-> w
+T 871 mode=dungeon_mode        Elrond Goldenbough(elf) F4@(14,13) HP 55/62 MP 0/0 Hu 25 $ 518 room=N
+-> u
+T 872 mode=dungeon_unlocked_mode Elrond Goldenbough(elf) F4@(14,13) HP 55/62 MP 0/0 Hu 25 $ 518 room=N
+-> r
+T 873 mode=game_loop           Elrond Goldenbough(elf) F4@(14,13) HP 55/62 MP 0/0 Hu 25 $ 518 room=N
+-> i
+T 874 mode=inventory           Elrond Goldenbough(elf) F4@(14,13) HP 55/62 MP 0/0 Hu 25 $ 518 room=N
+-> e1
+T 875 mode=inventory           Elrond Goldenbough(elf) F4@(14,13) HP 55/62 MP 0/0 Hu 25 $ 518 room=N
+-> x
+T 876 mode=game_loop           Elrond Goldenbough(elf) F4@(14,13) HP 55/62 MP 0/0 Hu 25 $ 518 room=N
+-> s
+T 877 mode=game_loop           Elrond Goldenbough(elf) F4@(14,14) HP 55/62 MP 0/0 Hu 24 $ 518 room=.
+-> l
+T 878 mode=game_loop           Elrond Goldenbough(elf) F4@(14,14) HP 55/62 MP 0/0 Hu 24 $ 518 room=.
+-> s
+T 879 mode=game_loop           Elrond Goldenbough(elf) F4@(14,15) HP 55/62 MP 0/0 Hu 23 $ 518 room=.
+-> l
+T 880 mode=game_loop           Elrond Goldenbough(elf) F4@(14,15) HP 55/62 MP 0/0 Hu 23 $ 518 room=.
+-> s
+T 881 mode=chest_mode          Elrond Goldenbough(elf) F4@(14,16) HP 55/62 MP 0/0 Hu 22 $ 518 room=C
+-> o
+T 882 mode=game_loop           Elrond Goldenbough(elf) F4@(13,16) HP 55/62 MP 0/0 Hu 21 $ 518 room=.
+-> n
+T 883 mode=game_loop           Elrond Goldenbough(elf) F4@(13,15) HP 55/62 MP 0/0 Hu 20 $ 518 room=.
+-> n
+T 884 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,14) HP 55/62 MP 0/0 Hu 19 $ 518 room=M vs Minotaur(L3 HP75/75)
+-> a
+T 885 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,14) HP 49/62 MP 0/0 Hu 19 $ 518 room=M vs Minotaur(L3 HP49/75)
+-> a
+T 886 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,14) HP 49/62 MP 0/0 Hu 19 $ 518 room=M vs Minotaur(L3 HP49/75)
+-> a
+T 887 mode=combat_mode         Elrond Goldenbough(elf) F4@(13,14) HP 43/62 MP 0/0 Hu 19 $ 518 room=M vs Minotaur(L3 HP23/75)
+-> a
+T 888 mode=combat_victory      Elrond Goldenbough(elf) F4@(13,14) HP 43/62 MP 0/0 Hu 19 $ 522 room=.
+-> back
+T 889 mode=game_loop           Elrond Goldenbough(elf) F4@(13,14) HP 43/62 MP 0/0 Hu 19 $ 522 room=.
+-> i
+T 890 mode=inventory           Elrond Goldenbough(elf) F4@(13,14) HP 43/62 MP 0/0 Hu 19 $ 522 room=.
+-> eat1
+T 891 mode=inventory           Elrond Goldenbough(elf) F4@(13,14) HP 43/62 MP 0/0 Hu 31 $ 522 room=.
+-> x
+T 892 mode=game_loop           Elrond Goldenbough(elf) F4@(13,14) HP 43/62 MP 0/0 Hu 31 $ 522 room=.
+-> e
+T 893 mode=game_loop           Elrond Goldenbough(elf) F4@(14,14) HP 43/62 MP 0/0 Hu 30 $ 522 room=.
+-> s
+T 894 mode=game_loop           Elrond Goldenbough(elf) F4@(14,15) HP 43/62 MP 0/0 Hu 29 $ 522 room=.
+-> s
+T 895 mode=game_loop           Elrond Goldenbough(elf) F4@(14,16) HP 43/62 MP 0/0 Hu 28 $ 522 room=.
+-> e
+T 896 mode=game_loop           Elrond Goldenbough(elf) F4@(15,16) HP 43/62 MP 0/0 Hu 27 $ 522 room=.
+-> e
+T 897 mode=game_loop           Elrond Goldenbough(elf) F4@(16,16) HP 43/62 MP 0/0 Hu 26 $ 522 room=.
+-> e
+T 898 mode=chest_mode          Elrond Goldenbough(elf) F4@(17,16) HP 43/62 MP 0/0 Hu 25 $ 522 room=C
+-> o
+T 899 mode=game_loop           Elrond Goldenbough(elf) F4@(17,16) HP 43/62 MP 0/0 Hu 25 $ 602 room=.
+-> n
+T 900 mode=game_loop           Elrond Goldenbough(elf) F4@(17,15) HP 43/62 MP 0/0 Hu 24 $ 602 room=.
+-> n
+T 901 mode=game_loop           Elrond Goldenbough(elf) F4@(17,14) HP 43/62 MP 0/0 Hu 23 $ 602 room=.
+-> n
+T 902 mode=game_loop           Elrond Goldenbough(elf) F4@(17,13) HP 43/62 MP 0/0 Hu 22 $ 602 room=.
+-> n
+T 903 mode=game_loop           Elrond Goldenbough(elf) F4@(17,12) HP 43/62 MP 0/0 Hu 21 $ 602 room=.
+-> n
+T 904 mode=game_loop           Elrond Goldenbough(elf) F4@(17,11) HP 43/62 MP 0/0 Hu 20 $ 602 room=C
+-> n
+T 905 mode=game_loop           Elrond Goldenbough(elf) F4@(17,10) HP 43/62 MP 0/0 Hu 19 $ 602 room=.
+-> e
+T 906 mode=game_loop           Elrond Goldenbough(elf) F4@(18,10) HP 43/62 MP 0/0 Hu 18 $ 602 room=.
+-> e
+T 907 mode=game_loop           Elrond Goldenbough(elf) F4@(19,10) HP 43/62 MP 0/0 Hu 17 $ 602 room=.
+-> n
+T 908 mode=game_loop           Elrond Goldenbough(elf) F4@(19, 9) HP 43/62 MP 0/0 Hu 16 $ 602 room=.
+-> n
+T 909 mode=game_loop           Elrond Goldenbough(elf) F4@(19, 8) HP 43/62 MP 0/0 Hu 15 $ 602 room=.
+-> w
+T 910 mode=garden_mode         Elrond Goldenbough(elf) F4@(18, 8) HP 43/62 MP 0/0 Hu 14 $ 602 room=G
+-> h
+T 911 mode=game_loop           Elrond Goldenbough(elf) F4@(18, 8) HP 43/62 MP 0/0 Hu 14 $ 602 room=.
+-> l
+T 912 mode=game_loop           Elrond Goldenbough(elf) F4@(18, 8) HP 43/62 MP 0/0 Hu 14 $ 602 room=.
+-> s
+T 913 mode=combat_mode         Elrond Goldenbough(elf) F4@(18, 9) HP 43/62 MP 0/0 Hu 13 $ 602 room=M vs Skeleton(L3 HP27/27)
+-> f
+T 914 mode=flee_direction_mode Elrond Goldenbough(elf) F4@(18, 9) HP 43/62 MP 0/0 Hu 13 $ 602 room=M
+-> s
+T 915 mode=game_loop           Elrond Goldenbough(elf) F4@(18,10) HP 43/62 MP 0/0 Hu 13 $ 602 room=.
+-> s
+T 916 mode=game_loop           Elrond Goldenbough(elf) F4@(18,11) HP 43/62 MP 0/0 Hu 12 $ 602 room=.
+-> s
+T 917 mode=game_loop           Elrond Goldenbough(elf) F4@(18,12) HP 43/62 MP 0/0 Hu 11 $ 602 room=.
+-> w
+T 918 mode=game_loop           Elrond Goldenbough(elf) F4@(17,12) HP 43/62 MP 0/0 Hu 10 $ 602 room=.
+-> w
+T 919 mode=game_loop           Elrond Goldenbough(elf) F4@(16,12) HP 43/62 MP 0/0 Hu  9 $ 602 room=.
+-> w
+T 920 mode=game_loop           Elrond Goldenbough(elf) F4@(15,12) HP 43/62 MP 0/0 Hu  8 $ 602 room=.
+-> n
+T 921 mode=game_loop           Elrond Goldenbough(elf) F4@(15,11) HP 43/62 MP 0/0 Hu  7 $ 602 room=.
+-> w
+T 922 mode=game_loop           Elrond Goldenbough(elf) F4@(14,11) HP 43/62 MP 0/0 Hu  6 $ 602 room=.
+-> n
+T 923 mode=game_loop           Elrond Goldenbough(elf) F4@(14,10) HP 43/62 MP 0/0 Hu  5 $ 602 room=.
+-> n
+T 924 mode=game_loop           Elrond Goldenbough(elf) F4@(14, 9) HP 43/62 MP 0/0 Hu  4 $ 602 room=.
+-> n
+T 925 mode=game_loop           Elrond Goldenbough(elf) F4@(14, 8) HP 43/62 MP 0/0 Hu  3 $ 602 room=.
+-> w
+T 926 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 8) HP 43/62 MP 0/0 Hu  2 $ 602 room=.
+-> n
+T 927 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 7) HP 43/62 MP 0/0 Hu  1 $ 602 room=.
+-> n
+T 928 mode=game_loop           Elrond Goldenbough(elf) F4@(13, 6) HP 41/62 MP 0/0 Hu  0 $ 602 room=.
+-> n
+T 929 mode=stairs_down_mode    Elrond Goldenbough(elf) F4@(13, 5) HP 39/62 MP 0/0 Hu  0 $ 602 room=D
+-> d
+T 930 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 39/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 931 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 37/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 932 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 37/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 933 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 37/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 934 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 35/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 935 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 35/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 936 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 35/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 937 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 33/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 938 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 32/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 939 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 32/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 940 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 30/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 941 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 30/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 942 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 30/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 943 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 28/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 944 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 28/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 945 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 28/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 946 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 26/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 947 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 26/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 948 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 26/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 949 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 26/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 950 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 24/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 951 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 24/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 952 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 24/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 953 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 22/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 954 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 22/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 955 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 22/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 956 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 20/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 957 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 20/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 958 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 20/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 959 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 18/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 960 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 18/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 961 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 18/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 962 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 16/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 963 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 15/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 964 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 15/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 965 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 15/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 966 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 13/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 967 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 12/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 968 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 11/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 969 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 11/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 970 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 9/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 971 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 8/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 972 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 8/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 973 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 6/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 974 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 5/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 975 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 5/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 976 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 3/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 977 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 3/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 978 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 3/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 979 mode=combat_mode         Elrond Goldenbough(elf) F5@( 1, 2) HP 1/62 MP 0/0 Hu  0 $ 602 room=M vs Slime Mold(L4 HP17/17)
+-> f
+T 980 mode=flee_direction_mode Elrond Goldenbough(elf) F5@( 1, 2) HP 1/62 MP 0/0 Hu  0 $ 602 room=M
+-> n
+T 981 mode=stairs_up_mode      Elrond Goldenbough(elf) F5@( 1, 1) HP 1/62 MP 0/0 Hu  0 $ 602 room=U
+-> s
+T 982 mode=death_screen        Elrond Goldenbough(elf) F5@( 1, 2) HP 0/62 MP 0/0 Hu  0 $ 602 room=M
+
+=== run finished: turns=982 floor=5 hp=0/62 gold=602 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/00421_elf.html

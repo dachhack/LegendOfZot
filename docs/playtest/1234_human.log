@@ -1,0 +1,1776 @@
+T   0 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 6 nearby rooms!
+  Lantern fuel remaining: 79
+-> s
+T   2 mode=combat_mode         Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=M vs Sewer Rat(L0 HP10/10)
+  A Sewer Rat (Level 0) appears! A scurrying rat, unnaturally large.
+  You seize the initiative!
+-> f
+T   3 mode=flee_direction_mode Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 290 room=M
+  You successfully broke away from combat!
+  Choose a direction to flee (n/s/e/w):
+-> n
+T   4 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=E
+-> e
+T   5 mode=combat_mode         Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 290 room=M vs Spore Puff(L0 HP18/18)
+  A Spore Puff (Level 0) appears! A fat, wobbly mushroom the size of a pumpkin waddles toward you, puffing clouds of yellowish spores.
+  The Spore Puff strikes first!
+-> a
+T   6 mode=combat_victory      Boromir of Bree(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 98 $ 347 room=.
+  Spore Puff took 22 damage.
+  You defeated the Spore Puff!
+  The Spore Puff bursts with a wet pop, releasing one final cloud of harmless spores.
+  You gained 8 experience.
+  You found 7 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+-> back
+T   7 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 98 $ 347 room=.
+-> l
+T   8 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 98 $ 347 room=.
+-> w
+T   9 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 29/30 MP 0/0 Hu 97 $ 347 room=E
+-> s
+T  10 mode=combat_mode         Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 347 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  11 mode=combat_victory      Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 456 room=.
+-> back
+T  12 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 456 room=.
+-> e
+T  13 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 95 $ 456 room=D
+-> n
+T  14 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=.
+-> w
+T  15 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 93 $ 456 room=E
+-> s
+T  16 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 92 $ 456 room=.
+-> n
+T  17 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=E
+-> s
+T  18 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 90 $ 456 room=.
+-> e
+T  19 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 89 $ 456 room=D
+-> n
+T  20 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> w
+T  21 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 87 $ 456 room=E
+-> s
+T  22 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 456 room=.
+-> n
+T  23 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> i
+T  24 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> u3
+T  25 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> u1
+T  26 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> u2
+T  27 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> u4
+T  28 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> x
+T  29 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> s
+T  30 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> i
+T  31 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> u3
+T  32 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> u1
+T  33 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> u2
+T  34 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> u4
+T  35 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> x
+T  36 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> e
+T  37 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 83 $ 456 room=D
+-> n
+T  38 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> w
+T  39 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> i
+T  40 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> u3
+T  41 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> u1
+T  42 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> u2
+T  43 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> u4
+T  44 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> x
+T  45 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> s
+T  46 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> i
+T  47 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> u3
+T  48 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> u1
+T  49 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> u2
+T  50 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> u4
+T  51 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> x
+T  52 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> n
+T  53 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 79 $ 456 room=E
+-> i
+T  54 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 79 $ 456 room=E
+-> eat1
+T  55 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> u3
+T  56 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> u1
+T  57 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> u2
+T  58 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> u4
+T  59 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> x
+T  60 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> s
+T  61 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> i
+T  62 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> u3
+T  63 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> u1
+T  64 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> u2
+T  65 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> u4
+T  66 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> x
+T  67 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> e
+T  68 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 456 room=D
+-> n
+T  69 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=.
+-> w
+T  70 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 96 $ 456 room=E
+-> i
+T  71 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 96 $ 456 room=E
+-> u3
+T  72 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 96 $ 456 room=E
+-> u1
+T  73 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 96 $ 456 room=E
+-> u2
+T  74 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 96 $ 456 room=E
+-> u4
+T  75 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 96 $ 456 room=E
+-> x
+T  76 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 96 $ 456 room=E
+-> s
+T  77 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 95 $ 456 room=.
+-> i
+T  78 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 95 $ 456 room=.
+-> u3
+T  79 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 95 $ 456 room=.
+-> u1
+T  80 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 95 $ 456 room=.
+-> u2
+T  81 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 95 $ 456 room=.
+-> u4
+T  82 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 95 $ 456 room=.
+-> x
+T  83 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 95 $ 456 room=.
+-> n
+T  84 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=E
+-> i
+T  85 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=E
+-> u3
+T  86 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=E
+-> u1
+T  87 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=E
+-> u2
+T  88 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=E
+-> u4
+T  89 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=E
+-> x
+T  90 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=E
+-> s
+T  91 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 93 $ 456 room=.
+-> i
+T  92 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 93 $ 456 room=.
+-> u3
+T  93 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 93 $ 456 room=.
+-> u1
+T  94 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 93 $ 456 room=.
+-> u2
+T  95 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 93 $ 456 room=.
+-> u4
+T  96 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 93 $ 456 room=.
+-> x
+T  97 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 93 $ 456 room=.
+-> e
+T  98 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 92 $ 456 room=D
+-> n
+T  99 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=.
+-> i
+T 100 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=.
+-> u3
+T 101 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=.
+-> u1
+T 102 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=.
+-> u2
+T 103 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=.
+-> u4
+T 104 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=.
+-> x
+T 105 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=.
+-> w
+T 106 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 90 $ 456 room=E
+-> i
+T 107 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 90 $ 456 room=E
+-> u3
+T 108 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 90 $ 456 room=E
+-> u1
+T 109 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 90 $ 456 room=E
+-> u2
+T 110 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 90 $ 456 room=E
+-> u4
+T 111 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 90 $ 456 room=E
+-> x
+T 112 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 90 $ 456 room=E
+-> s
+T 113 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 89 $ 456 room=.
+-> i
+T 114 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 89 $ 456 room=.
+-> u3
+T 115 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 89 $ 456 room=.
+-> u1
+T 116 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 89 $ 456 room=.
+-> u2
+T 117 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 89 $ 456 room=.
+-> u4
+T 118 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 89 $ 456 room=.
+-> x
+T 119 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 89 $ 456 room=.
+-> n
+T 120 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=E
+-> i
+T 121 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=E
+-> u3
+T 122 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=E
+-> u1
+T 123 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=E
+-> u2
+T 124 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=E
+-> u4
+T 125 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=E
+-> x
+T 126 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=E
+-> s
+T 127 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 87 $ 456 room=.
+-> i
+T 128 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 87 $ 456 room=.
+-> u3
+T 129 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 87 $ 456 room=.
+-> u1
+T 130 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 87 $ 456 room=.
+-> u2
+T 131 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 87 $ 456 room=.
+-> u4
+T 132 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 87 $ 456 room=.
+-> x
+T 133 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 87 $ 456 room=.
+-> e
+T 134 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 86 $ 456 room=D
+-> n
+T 135 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=.
+-> i
+T 136 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=.
+-> u3
+T 137 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=.
+-> u1
+T 138 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=.
+-> u2
+T 139 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=.
+-> u4
+T 140 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=.
+-> x
+T 141 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=.
+-> w
+T 142 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 84 $ 456 room=E
+-> i
+T 143 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 84 $ 456 room=E
+-> u3
+T 144 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 84 $ 456 room=E
+-> u1
+T 145 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 84 $ 456 room=E
+-> u2
+T 146 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 84 $ 456 room=E
+-> u4
+T 147 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 84 $ 456 room=E
+-> x
+T 148 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 84 $ 456 room=E
+-> s
+T 149 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 83 $ 456 room=.
+-> i
+T 150 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 83 $ 456 room=.
+-> u3
+T 151 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 83 $ 456 room=.
+-> u1
+T 152 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 83 $ 456 room=.
+-> u2
+T 153 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 83 $ 456 room=.
+-> u4
+T 154 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 83 $ 456 room=.
+-> x
+T 155 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 83 $ 456 room=.
+-> n
+T 156 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=E
+-> i
+T 157 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=E
+-> u3
+T 158 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=E
+-> u1
+T 159 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=E
+-> u2
+T 160 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=E
+-> u4
+T 161 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=E
+-> x
+T 162 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=E
+-> s
+T 163 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 81 $ 456 room=.
+-> i
+T 164 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 81 $ 456 room=.
+-> u3
+T 165 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 81 $ 456 room=.
+-> u1
+T 166 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 81 $ 456 room=.
+-> u2
+T 167 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 81 $ 456 room=.
+-> u4
+T 168 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 81 $ 456 room=.
+-> x
+T 169 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 81 $ 456 room=.
+-> e
+T 170 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=D
+-> n
+T 171 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 79 $ 456 room=.
+-> i
+T 172 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 79 $ 456 room=.
+-> eat1
+T 173 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=.
+-> u3
+T 174 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=.
+-> u1
+T 175 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=.
+-> u2
+T 176 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=.
+-> u4
+T 177 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=.
+-> x
+T 178 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=.
+-> w
+T 179 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 99 $ 456 room=E
+-> i
+T 180 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 99 $ 456 room=E
+-> u3
+T 181 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 99 $ 456 room=E
+-> u1
+T 182 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 99 $ 456 room=E
+-> u2
+T 183 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 99 $ 456 room=E
+-> u4
+T 184 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 99 $ 456 room=E
+-> x
+T 185 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 99 $ 456 room=E
+-> s
+T 186 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 98 $ 456 room=.
+-> i
+T 187 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 98 $ 456 room=.
+-> u3
+T 188 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 98 $ 456 room=.
+-> u1
+T 189 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 98 $ 456 room=.
+-> u2
+T 190 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 98 $ 456 room=.
+-> u4
+T 191 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 98 $ 456 room=.
+-> x
+T 192 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 98 $ 456 room=.
+-> n
+T 193 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=E
+-> i
+T 194 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=E
+-> u3
+T 195 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=E
+-> u1
+T 196 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=E
+-> u2
+T 197 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=E
+-> u4
+T 198 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=E
+-> x
+T 199 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=E
+-> s
+T 200 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 456 room=.
+-> i
+T 201 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 456 room=.
+-> u3
+T 202 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 456 room=.
+-> u1
+T 203 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 456 room=.
+-> u2
+T 204 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 456 room=.
+-> u4
+T 205 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 456 room=.
+-> x
+T 206 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 96 $ 456 room=.
+-> e
+T 207 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 95 $ 456 room=D
+-> n
+T 208 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=.
+-> i
+T 209 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=.
+-> u3
+T 210 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=.
+-> u1
+T 211 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=.
+-> u2
+T 212 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=.
+-> u4
+T 213 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=.
+-> x
+T 214 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 94 $ 456 room=.
+-> w
+T 215 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 93 $ 456 room=E
+-> i
+T 216 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 93 $ 456 room=E
+-> u3
+T 217 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 93 $ 456 room=E
+-> u1
+T 218 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 93 $ 456 room=E
+-> u2
+T 219 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 93 $ 456 room=E
+-> u4
+T 220 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 93 $ 456 room=E
+-> x
+T 221 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 93 $ 456 room=E
+-> s
+T 222 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 92 $ 456 room=.
+-> i
+T 223 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 92 $ 456 room=.
+-> u3
+T 224 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 92 $ 456 room=.
+-> u1
+T 225 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 92 $ 456 room=.
+-> u2
+T 226 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 92 $ 456 room=.
+-> u4
+T 227 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 92 $ 456 room=.
+-> x
+T 228 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 92 $ 456 room=.
+-> n
+T 229 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=E
+-> i
+T 230 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=E
+-> u3
+T 231 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=E
+-> u1
+T 232 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=E
+-> u2
+T 233 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=E
+-> u4
+T 234 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=E
+-> x
+T 235 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 91 $ 456 room=E
+-> s
+T 236 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 90 $ 456 room=.
+-> i
+T 237 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 90 $ 456 room=.
+-> u3
+T 238 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 90 $ 456 room=.
+-> u1
+T 239 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 90 $ 456 room=.
+-> u2
+T 240 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 90 $ 456 room=.
+-> u4
+T 241 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 90 $ 456 room=.
+-> x
+T 242 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 90 $ 456 room=.
+-> e
+T 243 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 89 $ 456 room=D
+-> n
+T 244 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> i
+T 245 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> u3
+T 246 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> u1
+T 247 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> u2
+T 248 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> u4
+T 249 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> x
+T 250 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> l
+T 251 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> i
+T 252 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> u5
+T 253 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> x
+T 254 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 88 $ 456 room=.
+-> w
+T 255 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 87 $ 456 room=E
+-> i
+T 256 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 87 $ 456 room=E
+-> u3
+T 257 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 87 $ 456 room=E
+-> u1
+T 258 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 87 $ 456 room=E
+-> u2
+T 259 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 87 $ 456 room=E
+-> u4
+T 260 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 87 $ 456 room=E
+-> x
+T 261 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 87 $ 456 room=E
+-> s
+T 262 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 456 room=.
+-> i
+T 263 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 456 room=.
+-> u3
+T 264 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 456 room=.
+-> u1
+T 265 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 456 room=.
+-> u2
+T 266 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 456 room=.
+-> u4
+T 267 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 456 room=.
+-> x
+T 268 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 86 $ 456 room=.
+-> n
+T 269 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> i
+T 270 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> u3
+T 271 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> u1
+T 272 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> u2
+T 273 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> u4
+T 274 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> x
+T 275 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 85 $ 456 room=E
+-> s
+T 276 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> i
+T 277 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> u3
+T 278 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> u1
+T 279 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> u2
+T 280 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> u4
+T 281 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> x
+T 282 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 84 $ 456 room=.
+-> e
+T 283 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 83 $ 456 room=D
+-> n
+T 284 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> i
+T 285 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> u3
+T 286 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> u1
+T 287 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> u2
+T 288 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> u4
+T 289 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> x
+T 290 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> l
+T 291 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> i
+T 292 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> u5
+T 293 mode=inventory           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> x
+T 294 mode=game_loop           Boromir of Bree(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 456 room=.
+-> w
+T 295 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> i
+T 296 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> u3
+T 297 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> u1
+T 298 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> u2
+T 299 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> u4
+T 300 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> x
+T 301 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 81 $ 456 room=E
+-> s
+T 302 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> i
+T 303 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> u3
+T 304 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> u1
+T 305 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> u2
+T 306 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> u4
+T 307 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> x
+T 308 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 80 $ 456 room=.
+-> n
+T 309 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 79 $ 456 room=E
+-> i
+T 310 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu 79 $ 456 room=E
+-> eat1
+T 311 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> u3
+T 312 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> u1
+T 313 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> u2
+T 314 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> u4
+T 315 mode=inventory           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> x
+T 316 mode=game_loop           Boromir of Bree(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 456 room=E
+-> s
+T 317 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> i
+T 318 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> u3
+T 319 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> u1
+T 320 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> u2
+T 321 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> u4
+T 322 mode=inventory           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> x
+T 323 mode=game_loop           Boromir of Bree(hum) F1@( 1, 2) HP 30/30 MP 0/0 Hu 99 $ 456 room=.
+-> e
+T 324 mode=stairs_down_mode    Boromir of Bree(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 456 room=D
+-> d
+T 325 mode=stairs_up_mode      Boromir of Bree(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 98 $ 456 room=U
+-> n
+T 326 mode=stairs_up_mode      Boromir of Bree(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 98 $ 456 room=U
+-> n
+T 327 mode=stairs_up_mode      Boromir of Bree(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 98 $ 456 room=U
+-> n
+T 328 mode=stairs_up_mode      Boromir of Bree(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 98 $ 456 room=U
+-> e
+T 329 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=.
+-> l
+T 330 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 97 $ 456 room=.
+-> e
+T 331 mode=chest_mode          Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 96 $ 456 room=C
+-> o
+T 332 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 96 $ 516 room=.
+-> l
+T 333 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 96 $ 516 room=.
+-> s
+T 334 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 95 $ 516 room=.
+-> s
+T 335 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 94 $ 516 room=.
+-> l
+T 336 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 94 $ 516 room=.
+-> w
+T 337 mode=combat_mode         Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 93 $ 516 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 338 mode=combat_mode         Boromir of Bree(hum) F2@( 2, 3) HP 29/30 MP 0/0 Hu 93 $ 516 room=M vs Skeleton(L1 HP6/25)
+-> a
+T 339 mode=combat_mode         Boromir of Bree(hum) F2@( 2, 3) HP 29/30 MP 0/0 Hu 93 $ 516 room=M vs Skeleton(L1 HP6/25)
+-> a
+T 340 mode=combat_victory      Boromir of Bree(hum) F2@( 2, 3) HP 29/30 MP 0/0 Hu 93 $ 532 room=.
+-> back
+T 341 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 29/30 MP 0/0 Hu 93 $ 532 room=.
+-> l
+T 342 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 29/30 MP 0/0 Hu 93 $ 532 room=.
+-> w
+T 343 mode=dungeon_mode        Boromir of Bree(hum) F2@( 1, 3) HP 29/30 MP 0/0 Hu 92 $ 532 room=N
+-> u
+T 344 mode=game_loop           Boromir of Bree(hum) F2@( 1, 3) HP 29/30 MP 0/0 Hu 92 $ 532 room=N
+-> l
+T 345 mode=game_loop           Boromir of Bree(hum) F2@( 1, 3) HP 29/30 MP 0/0 Hu 92 $ 532 room=N
+-> e
+T 346 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 91 $ 532 room=.
+-> e
+T 347 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> e
+T 348 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> l
+T 349 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> w
+T 350 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> n
+T 351 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> n
+T 352 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> w
+T 353 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> w
+T 354 mode=stairs_up_mode      Boromir of Bree(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 84 $ 532 room=U
+-> e
+T 355 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 83 $ 532 room=.
+-> e
+T 356 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> s
+T 357 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> s
+T 358 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> e
+T 359 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 79 $ 532 room=.
+-> w
+T 360 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 78 $ 532 room=.
+-> w
+T 361 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 77 $ 532 room=.
+-> w
+T 362 mode=game_loop           Boromir of Bree(hum) F2@( 1, 3) HP 30/30 MP 0/0 Hu 76 $ 532 room=N
+-> e
+T 363 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 75 $ 532 room=.
+-> e
+T 364 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 74 $ 532 room=.
+-> i
+T 365 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 74 $ 532 room=.
+-> eat1
+T 366 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u3
+T 367 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u1
+T 368 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u2
+T 369 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u4
+T 370 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> x
+T 371 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> e
+T 372 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> w
+T 373 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> i
+T 374 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u3
+T 375 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u1
+T 376 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u2
+T 377 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u4
+T 378 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> x
+T 379 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> n
+T 380 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> n
+T 381 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 96 $ 532 room=.
+-> w
+T 382 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> w
+T 383 mode=stairs_up_mode      Boromir of Bree(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 94 $ 532 room=U
+-> e
+T 384 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> e
+T 385 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> s
+T 386 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 91 $ 532 room=.
+-> s
+T 387 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> i
+T 388 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u3
+T 389 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u1
+T 390 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u2
+T 391 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u4
+T 392 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> x
+T 393 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> e
+T 394 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> w
+T 395 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> i
+T 396 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> u3
+T 397 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> u1
+T 398 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> u2
+T 399 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> u4
+T 400 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> x
+T 401 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> w
+T 402 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> w
+T 403 mode=game_loop           Boromir of Bree(hum) F2@( 1, 3) HP 30/30 MP 0/0 Hu 86 $ 532 room=N
+-> e
+T 404 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> i
+T 405 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u3
+T 406 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u1
+T 407 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u2
+T 408 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u4
+T 409 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> x
+T 410 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> e
+T 411 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> i
+T 412 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u3
+T 413 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u1
+T 414 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u2
+T 415 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u4
+T 416 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> x
+T 417 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> e
+T 418 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 83 $ 532 room=.
+-> w
+T 419 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> i
+T 420 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> u3
+T 421 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> u1
+T 422 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> u2
+T 423 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> u4
+T 424 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> x
+T 425 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> n
+T 426 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> i
+T 427 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> u3
+T 428 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> u1
+T 429 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> u2
+T 430 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> u4
+T 431 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> x
+T 432 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> n
+T 433 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> i
+T 434 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> u3
+T 435 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> u1
+T 436 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> u2
+T 437 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> u4
+T 438 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> x
+T 439 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> w
+T 440 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 79 $ 532 room=.
+-> i
+T 441 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 79 $ 532 room=.
+-> eat1
+T 442 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u3
+T 443 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u1
+T 444 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u2
+T 445 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u4
+T 446 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> x
+T 447 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> w
+T 448 mode=stairs_up_mode      Boromir of Bree(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 99 $ 532 room=U
+-> e
+T 449 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> i
+T 450 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u3
+T 451 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u1
+T 452 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u2
+T 453 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u4
+T 454 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> x
+T 455 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> e
+T 456 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> i
+T 457 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> u3
+T 458 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> u1
+T 459 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> u2
+T 460 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> u4
+T 461 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> x
+T 462 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> s
+T 463 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 96 $ 532 room=.
+-> i
+T 464 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 96 $ 532 room=.
+-> u3
+T 465 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 96 $ 532 room=.
+-> u1
+T 466 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 96 $ 532 room=.
+-> u2
+T 467 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 96 $ 532 room=.
+-> u4
+T 468 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 96 $ 532 room=.
+-> x
+T 469 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 96 $ 532 room=.
+-> s
+T 470 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> i
+T 471 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> u3
+T 472 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> u1
+T 473 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> u2
+T 474 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> u4
+T 475 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> x
+T 476 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> e
+T 477 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> i
+T 478 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> u3
+T 479 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> u1
+T 480 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> u2
+T 481 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> u4
+T 482 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> x
+T 483 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> w
+T 484 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> i
+T 485 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> u3
+T 486 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> u1
+T 487 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> u2
+T 488 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> u4
+T 489 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> x
+T 490 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> w
+T 491 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> i
+T 492 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> u3
+T 493 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> u1
+T 494 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> u2
+T 495 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> u4
+T 496 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> x
+T 497 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> w
+T 498 mode=game_loop           Boromir of Bree(hum) F2@( 1, 3) HP 30/30 MP 0/0 Hu 91 $ 532 room=N
+-> e
+T 499 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> i
+T 500 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u3
+T 501 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u1
+T 502 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u2
+T 503 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u4
+T 504 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> x
+T 505 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> e
+T 506 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> i
+T 507 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> u3
+T 508 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> u1
+T 509 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> u2
+T 510 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> u4
+T 511 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> x
+T 512 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> e
+T 513 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> i
+T 514 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> u3
+T 515 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> u1
+T 516 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> u2
+T 517 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> u4
+T 518 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> x
+T 519 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 88 $ 532 room=.
+-> w
+T 520 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> i
+T 521 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> u3
+T 522 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> u1
+T 523 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> u2
+T 524 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> u4
+T 525 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> x
+T 526 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> n
+T 527 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> i
+T 528 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> u3
+T 529 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> u1
+T 530 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> u2
+T 531 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> u4
+T 532 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> x
+T 533 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> n
+T 534 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> i
+T 535 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u3
+T 536 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u1
+T 537 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u2
+T 538 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u4
+T 539 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> x
+T 540 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> l
+T 541 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> i
+T 542 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u5
+T 543 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> x
+T 544 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> w
+T 545 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> i
+T 546 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u3
+T 547 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u1
+T 548 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u2
+T 549 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u4
+T 550 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> x
+T 551 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> w
+T 552 mode=stairs_up_mode      Boromir of Bree(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 83 $ 532 room=U
+-> e
+T 553 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> i
+T 554 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> u3
+T 555 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> u1
+T 556 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> u2
+T 557 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> u4
+T 558 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> x
+T 559 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=.
+-> e
+T 560 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> i
+T 561 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> u3
+T 562 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> u1
+T 563 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> u2
+T 564 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> u4
+T 565 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> x
+T 566 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 81 $ 532 room=.
+-> s
+T 567 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> i
+T 568 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> u3
+T 569 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> u1
+T 570 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> u2
+T 571 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> u4
+T 572 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> x
+T 573 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 80 $ 532 room=.
+-> s
+T 574 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 79 $ 532 room=.
+-> i
+T 575 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 79 $ 532 room=.
+-> eat1
+T 576 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u3
+T 577 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u1
+T 578 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u2
+T 579 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> u4
+T 580 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> x
+T 581 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu100 $ 532 room=.
+-> e
+T 582 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> i
+T 583 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> u3
+T 584 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> u1
+T 585 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> u2
+T 586 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> u4
+T 587 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> x
+T 588 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> w
+T 589 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> i
+T 590 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u3
+T 591 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u1
+T 592 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u2
+T 593 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> u4
+T 594 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> x
+T 595 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> w
+T 596 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> i
+T 597 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> u3
+T 598 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> u1
+T 599 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> u2
+T 600 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> u4
+T 601 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> x
+T 602 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> w
+T 603 mode=game_loop           Boromir of Bree(hum) F2@( 1, 3) HP 30/30 MP 0/0 Hu 96 $ 532 room=N
+-> e
+T 604 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> i
+T 605 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> u3
+T 606 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> u1
+T 607 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> u2
+T 608 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> u4
+T 609 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> x
+T 610 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> l
+T 611 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> i
+T 612 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> u5
+T 613 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> x
+T 614 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 95 $ 532 room=.
+-> e
+T 615 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> i
+T 616 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> u3
+T 617 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> u1
+T 618 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> u2
+T 619 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> u4
+T 620 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> x
+T 621 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 94 $ 532 room=.
+-> e
+T 622 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> i
+T 623 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> u3
+T 624 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> u1
+T 625 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> u2
+T 626 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> u4
+T 627 mode=inventory           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> x
+T 628 mode=game_loop           Boromir of Bree(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 93 $ 532 room=.
+-> w
+T 629 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> i
+T 630 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> u3
+T 631 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> u1
+T 632 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> u2
+T 633 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> u4
+T 634 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> x
+T 635 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 532 room=.
+-> n
+T 636 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 91 $ 532 room=.
+-> i
+T 637 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 91 $ 532 room=.
+-> u3
+T 638 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 91 $ 532 room=.
+-> u1
+T 639 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 91 $ 532 room=.
+-> u2
+T 640 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 91 $ 532 room=.
+-> u4
+T 641 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 91 $ 532 room=.
+-> x
+T 642 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 91 $ 532 room=.
+-> n
+T 643 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> i
+T 644 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u3
+T 645 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u1
+T 646 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u2
+T 647 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> u4
+T 648 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> x
+T 649 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 90 $ 532 room=.
+-> w
+T 650 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> i
+T 651 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> u3
+T 652 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> u1
+T 653 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> u2
+T 654 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> u4
+T 655 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> x
+T 656 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 89 $ 532 room=.
+-> w
+T 657 mode=stairs_up_mode      Boromir of Bree(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 88 $ 532 room=U
+-> e
+T 658 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> i
+T 659 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> u3
+T 660 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> u1
+T 661 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> u2
+T 662 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> u4
+T 663 mode=inventory           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> x
+T 664 mode=game_loop           Boromir of Bree(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 87 $ 532 room=.
+-> e
+T 665 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> i
+T 666 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> u3
+T 667 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> u1
+T 668 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> u2
+T 669 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> u4
+T 670 mode=inventory           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> x
+T 671 mode=game_loop           Boromir of Bree(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 86 $ 532 room=.
+-> s
+T 672 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> i
+T 673 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u3
+T 674 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u1
+T 675 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u2
+T 676 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> u4
+T 677 mode=inventory           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> x
+T 678 mode=game_loop           Boromir of Bree(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 85 $ 532 room=.
+-> s
+T 679 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> i
+T 680 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u3
+T 681 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u1
+T 682 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u2
+T 683 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> u4
+T 684 mode=inventory           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> x
+T 685 mode=game_loop           Boromir of Bree(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 532 room=.
+-> w
+T 686 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 83 $ 532 room=.
+-> i
+T 687 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 83 $ 532 room=.
+-> u3
+T 688 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 83 $ 532 room=.
+-> u1
+T 689 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 83 $ 532 room=.
+-> u2
+T 690 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 83 $ 532 room=.
+-> u4
+T 691 mode=inventory           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 83 $ 532 room=.
+-> x
+T 692 mode=game_loop           Boromir of Bree(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 83 $ 532 room=.
+-> s
+T 693 mode=stairs_down_mode    Boromir of Bree(hum) F2@( 2, 4) HP 30/30 MP 0/0 Hu 82 $ 532 room=D
+-> d
+T 694 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=U
+-> n
+T 695 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 82 $ 532 room=U
+-> e
+T 696 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 81 $ 532 room=D
+-> w
+T 697 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 80 $ 532 room=U
+-> e
+T 698 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 79 $ 532 room=D
+-> w
+T 699 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 78 $ 532 room=U
+-> e
+T 700 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 77 $ 532 room=D
+-> w
+T 701 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 76 $ 532 room=U
+-> e
+T 702 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 75 $ 532 room=D
+-> w
+T 703 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 74 $ 532 room=U
+-> e
+T 704 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 73 $ 532 room=D
+-> w
+T 705 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 72 $ 532 room=U
+-> e
+T 706 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 71 $ 532 room=D
+-> w
+T 707 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 70 $ 532 room=U
+-> e
+T 708 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 69 $ 532 room=D
+-> w
+T 709 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 68 $ 532 room=U
+-> e
+T 710 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 67 $ 532 room=D
+-> w
+T 711 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 66 $ 532 room=U
+-> e
+T 712 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 65 $ 532 room=D
+-> w
+T 713 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 64 $ 532 room=U
+-> e
+T 714 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 63 $ 532 room=D
+-> w
+T 715 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 62 $ 532 room=U
+-> e
+T 716 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 61 $ 532 room=D
+-> w
+T 717 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 60 $ 532 room=U
+-> e
+T 718 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 59 $ 532 room=D
+-> w
+T 719 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 58 $ 532 room=U
+-> e
+T 720 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 57 $ 532 room=D
+-> w
+T 721 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 56 $ 532 room=U
+-> e
+T 722 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 55 $ 532 room=D
+-> w
+T 723 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 54 $ 532 room=U
+-> e
+T 724 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 53 $ 532 room=D
+-> w
+T 725 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 52 $ 532 room=U
+-> e
+T 726 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 51 $ 532 room=D
+-> w
+T 727 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 50 $ 532 room=U
+-> e
+T 728 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 49 $ 532 room=D
+-> w
+T 729 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 48 $ 532 room=U
+-> e
+T 730 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 47 $ 532 room=D
+-> w
+T 731 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 46 $ 532 room=U
+-> e
+T 732 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 45 $ 532 room=D
+-> w
+T 733 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 44 $ 532 room=U
+-> e
+T 734 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 43 $ 532 room=D
+-> w
+T 735 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 42 $ 532 room=U
+-> e
+T 736 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 41 $ 532 room=D
+-> w
+T 737 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 40 $ 532 room=U
+-> e
+T 738 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 39 $ 532 room=D
+-> w
+T 739 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 38 $ 532 room=U
+-> e
+T 740 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 37 $ 532 room=D
+-> w
+T 741 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 36 $ 532 room=U
+-> e
+T 742 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 35 $ 532 room=D
+-> w
+T 743 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 34 $ 532 room=U
+-> e
+T 744 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 33 $ 532 room=D
+-> w
+T 745 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 32 $ 532 room=U
+-> e
+T 746 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 31 $ 532 room=D
+-> w
+T 747 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 30 $ 532 room=U
+-> e
+T 748 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 29 $ 532 room=D
+-> w
+T 749 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 28 $ 532 room=U
+-> e
+T 750 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 27 $ 532 room=D
+-> w
+T 751 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 26 $ 532 room=U
+-> e
+T 752 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 25 $ 532 room=D
+-> w
+T 753 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 24 $ 532 room=U
+-> e
+T 754 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 23 $ 532 room=D
+-> w
+T 755 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 22 $ 532 room=U
+-> e
+T 756 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 21 $ 532 room=D
+-> w
+T 757 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 20 $ 532 room=U
+-> e
+T 758 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 19 $ 532 room=D
+-> w
+T 759 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 18 $ 532 room=U
+-> e
+T 760 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 17 $ 532 room=D
+-> w
+T 761 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 16 $ 532 room=U
+-> e
+T 762 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 15 $ 532 room=D
+-> w
+T 763 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 14 $ 532 room=U
+-> e
+T 764 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 13 $ 532 room=D
+-> w
+T 765 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 12 $ 532 room=U
+-> e
+T 766 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu 11 $ 532 room=D
+-> w
+T 767 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu 10 $ 532 room=U
+-> e
+T 768 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu  9 $ 532 room=D
+-> w
+T 769 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu  8 $ 532 room=U
+-> e
+T 770 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu  7 $ 532 room=D
+-> w
+T 771 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu  6 $ 532 room=U
+-> e
+T 772 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu  5 $ 532 room=D
+-> w
+T 773 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu  4 $ 532 room=U
+-> e
+T 774 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu  3 $ 532 room=D
+-> w
+T 775 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 30/30 MP 0/0 Hu  2 $ 532 room=U
+-> e
+T 776 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 30/30 MP 0/0 Hu  1 $ 532 room=D
+-> w
+T 777 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 28/30 MP 0/0 Hu  0 $ 532 room=U
+-> e
+T 778 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 26/30 MP 0/0 Hu  0 $ 532 room=D
+-> w
+T 779 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 24/30 MP 0/0 Hu  0 $ 532 room=U
+-> e
+T 780 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 22/30 MP 0/0 Hu  0 $ 532 room=D
+-> w
+T 781 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 20/30 MP 0/0 Hu  0 $ 532 room=U
+-> e
+T 782 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 18/30 MP 0/0 Hu  0 $ 532 room=D
+-> w
+T 783 mode=stairs_up_mode      Boromir of Bree(hum) F3@( 1, 1) HP 16/30 MP 0/0 Hu  0 $ 532 room=U
+-> e
+T 784 mode=stairs_down_mode    Boromir of Bree(hum) F3@( 2, 1) HP 14/30 MP 0/0 Hu  0 $ 532 room=D
+-> d
+T 785 mode=stairs_up_mode      Boromir of Bree(hum) F4@( 1, 1) HP 14/30 MP 0/0 Hu  0 $ 532 room=U
+-> s
+T 786 mode=game_loop           Boromir of Bree(hum) F4@( 1, 2) HP 12/30 MP 0/0 Hu  0 $ 532 room=.
+-> i
+T 787 mode=inventory           Boromir of Bree(hum) F4@( 1, 2) HP 12/30 MP 0/0 Hu  0 $ 532 room=.
+-> u3
+T 788 mode=inventory           Boromir of Bree(hum) F4@( 1, 2) HP 30/30 MP 0/0 Hu  0 $ 532 room=.
+-> x
+T 789 mode=game_loop           Boromir of Bree(hum) F4@( 1, 2) HP 30/30 MP 0/0 Hu  0 $ 532 room=.
+-> i
+T 790 mode=inventory           Boromir of Bree(hum) F4@( 1, 2) HP 30/30 MP 0/0 Hu  0 $ 532 room=.
+-> eat1
+T 791 mode=inventory           Boromir of Bree(hum) F4@( 1, 2) HP 30/30 MP 0/0 Hu 50 $ 532 room=.
+-> x
+T 792 mode=game_loop           Boromir of Bree(hum) F4@( 1, 2) HP 30/30 MP 0/0 Hu 50 $ 532 room=.
+-> l
+T 793 mode=game_loop           Boromir of Bree(hum) F4@( 1, 2) HP 30/30 MP 0/0 Hu 50 $ 532 room=.
+-> s
+T 794 mode=game_loop           Boromir of Bree(hum) F4@( 1, 3) HP 30/30 MP 0/0 Hu 49 $ 532 room=.
+-> i
+T 795 mode=inventory           Boromir of Bree(hum) F4@( 1, 3) HP 30/30 MP 0/0 Hu 49 $ 532 room=.
+-> eat1
+T 796 mode=inventory           Boromir of Bree(hum) F4@( 1, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> x
+T 797 mode=game_loop           Boromir of Bree(hum) F4@( 1, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> l
+T 798 mode=game_loop           Boromir of Bree(hum) F4@( 1, 3) HP 30/30 MP 0/0 Hu 99 $ 532 room=.
+-> s
+T 799 mode=game_loop           Boromir of Bree(hum) F4@( 1, 4) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> l
+T 800 mode=game_loop           Boromir of Bree(hum) F4@( 1, 4) HP 30/30 MP 0/0 Hu 98 $ 532 room=.
+-> e
+T 801 mode=game_loop           Boromir of Bree(hum) F4@( 2, 4) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> l
+T 802 mode=game_loop           Boromir of Bree(hum) F4@( 2, 4) HP 30/30 MP 0/0 Hu 97 $ 532 room=.
+-> s
+T 803 mode=combat_mode         Boromir of Bree(hum) F4@( 2, 5) HP 30/30 MP 0/0 Hu 96 $ 532 room=M vs Gnoll(L3 HP33/33)
+-> a
+T 804 mode=combat_mode         Boromir of Bree(hum) F4@( 2, 5) HP 29/30 MP 0/0 Hu 96 $ 532 room=M vs Gnoll(L3 HP33/33)
+-> a
+T 805 mode=combat_mode         Boromir of Bree(hum) F4@( 2, 5) HP 28/30 MP 0/0 Hu 96 $ 532 room=M vs Gnoll(L3 HP33/33)
+-> a
+T 806 mode=combat_mode         Boromir of Bree(hum) F4@( 2, 5) HP 27/30 MP 0/0 Hu 96 $ 532 room=M vs Gnoll(L3 HP15/33)
+-> a
+T 807 mode=combat_mode         Boromir of Bree(hum) F4@( 2, 5) HP 26/30 MP 0/0 Hu 96 $ 532 room=M vs Gnoll(L3 HP15/33)
+-> a
+T 808 mode=combat_victory      Boromir of Bree(hum) F4@( 2, 5) HP 26/30 MP 0/0 Hu 96 $ 560 room=.
+-> back
+T 809 mode=game_loop           Boromir of Bree(hum) F4@( 2, 5) HP 26/30 MP 0/0 Hu 96 $ 560 room=.
+-> l
+T 810 mode=game_loop           Boromir of Bree(hum) F4@( 2, 5) HP 26/30 MP 0/0 Hu 96 $ 560 room=.
+-> e
+T 811 mode=game_loop           Boromir of Bree(hum) F4@( 3, 5) HP 26/30 MP 0/0 Hu 95 $ 560 room=.
+-> l
+T 812 mode=game_loop           Boromir of Bree(hum) F4@( 3, 5) HP 26/30 MP 0/0 Hu 95 $ 560 room=.
+-> s
+T 813 mode=library_mode        Boromir of Bree(hum) F4@( 3, 6) HP 27/30 MP 0/0 Hu 94 $ 560 room=L
+-> r
+T 814 mode=library_read_decision_mode Boromir of Bree(hum) F4@( 3, 6) HP 27/30 MP 0/0 Hu 94 $ 560 room=L
+-> y
+T 815 mode=game_loop           Boromir of Bree(hum) F4@( 3, 6) HP 27/30 MP 0/0 Hu 94 $ 610 room=.
+-> s
+T 816 mode=game_loop           Boromir of Bree(hum) F4@( 3, 7) HP 27/30 MP 0/0 Hu 93 $ 610 room=.
+-> l
+T 817 mode=game_loop           Boromir of Bree(hum) F4@( 3, 7) HP 27/30 MP 0/0 Hu 93 $ 610 room=.
+-> s
+T 818 mode=oracle_mode         Boromir of Bree(hum) F4@( 3, 8) HP 28/30 MP 0/0 Hu 92 $ 610 room=O
+-> s
+T 819 mode=chest_mode          Boromir of Bree(hum) F4@( 3, 9) HP 28/30 MP 0/0 Hu 91 $ 610 room=C
+-> o
+T 820 mode=game_loop           Boromir of Bree(hum) F4@( 3, 9) HP 28/30 MP 0/0 Hu 91 $ 610 room=.
+-> i
+T 821 mode=inventory           Boromir of Bree(hum) F4@( 3, 9) HP 28/30 MP 0/0 Hu 91 $ 610 room=.
+-> u4
+T 822 mode=inventory           Boromir of Bree(hum) F4@( 3, 9) HP 30/30 MP 0/0 Hu 91 $ 610 room=.
+-> x
+T 823 mode=game_loop           Boromir of Bree(hum) F4@( 3, 9) HP 30/30 MP 0/0 Hu 91 $ 610 room=.
+-> i
+T 824 mode=inventory           Boromir of Bree(hum) F4@( 3, 9) HP 30/30 MP 0/0 Hu 91 $ 610 room=.
+-> e1
+T 825 mode=inventory           Boromir of Bree(hum) F4@( 3, 9) HP 30/30 MP 0/0 Hu 91 $ 610 room=.
+-> x
+T 826 mode=game_loop           Boromir of Bree(hum) F4@( 3, 9) HP 30/30 MP 0/0 Hu 91 $ 610 room=.
+-> l
+T 827 mode=game_loop           Boromir of Bree(hum) F4@( 3, 9) HP 30/30 MP 0/0 Hu 91 $ 610 room=.
+-> w
+T 828 mode=chest_mode          Boromir of Bree(hum) F4@( 2, 9) HP 30/30 MP 0/0 Hu 90 $ 610 room=C
+-> o
+T 829 mode=game_loop           Boromir of Bree(hum) F4@( 3, 9) HP 30/30 MP 0/0 Hu 89 $ 610 room=.
+-> e
+T 830 mode=pool_mode           Boromir of Bree(hum) F4@( 4, 9) HP 30/30 MP 0/0 Hu 88 $ 610 room=P
+-> dr
+T 831 mode=game_loop           Boromir of Bree(hum) F4@( 4, 9) HP 30/30 MP 0/0 Hu 88 $ 610 room=.
+-> l
+T 832 mode=game_loop           Boromir of Bree(hum) F4@( 4, 9) HP 30/30 MP 0/0 Hu 88 $ 610 room=.
+-> e
+T 833 mode=pool_mode           Boromir of Bree(hum) F4@( 5, 9) HP 30/30 MP 0/0 Hu 87 $ 610 room=P
+-> dr
+T 834 mode=game_loop           Boromir of Bree(hum) F4@( 5, 9) HP 30/30 MP 0/0 Hu 87 $ 671 room=.
+-> l
+T 835 mode=game_loop           Boromir of Bree(hum) F4@( 5, 9) HP 30/30 MP 0/0 Hu 87 $ 671 room=.
+-> s
+T 836 mode=chest_mode          Boromir of Bree(hum) F4@( 5,10) HP 30/30 MP 0/0 Hu 86 $ 671 room=C
+-> o
+T 837 mode=game_loop           Boromir of Bree(hum) F4@( 5,10) HP 30/30 MP 0/0 Hu 86 $ 671 room=.
+-> i
+T 838 mode=inventory           Boromir of Bree(hum) F4@( 5,10) HP 30/30 MP 0/0 Hu 86 $ 671 room=.
+-> eat1
+T 839 mode=inventory           Boromir of Bree(hum) F4@( 5,10) HP 30/30 MP 0/0 Hu 93 $ 671 room=.
+-> x
+T 840 mode=game_loop           Boromir of Bree(hum) F4@( 5,10) HP 30/30 MP 0/0 Hu 93 $ 671 room=.
+-> l
+T 841 mode=game_loop           Boromir of Bree(hum) F4@( 5,10) HP 30/30 MP 0/0 Hu 93 $ 671 room=.
+-> w
+T 842 mode=game_loop           Boromir of Bree(hum) F4@( 4,10) HP 30/30 MP 0/0 Hu 92 $ 671 room=.
+-> s
+T 843 mode=game_loop           Boromir of Bree(hum) F4@( 4,11) HP 30/30 MP 0/0 Hu 91 $ 671 room=.
+-> s
+T 844 mode=game_loop           Boromir of Bree(hum) F4@( 4,12) HP 30/30 MP 0/0 Hu 90 $ 671 room=.
+-> e
+T 845 mode=game_loop           Boromir of Bree(hum) F4@( 5,12) HP 30/30 MP 0/0 Hu 89 $ 671 room=.
+-> l
+T 846 mode=game_loop           Boromir of Bree(hum) F4@( 5,12) HP 30/30 MP 0/0 Hu 89 $ 671 room=.
+-> e
+T 847 mode=game_loop           Boromir of Bree(hum) F4@( 6,12) HP 30/30 MP 0/0 Hu 88 $ 671 room=.
+-> l
+T 848 mode=game_loop           Boromir of Bree(hum) F4@( 6,12) HP 30/30 MP 0/0 Hu 88 $ 671 room=.
+-> n
+T 849 mode=game_loop           Boromir of Bree(hum) F4@( 6,11) HP 30/30 MP 0/0 Hu 87 $ 671 room=.
+-> l
+T 850 mode=game_loop           Boromir of Bree(hum) F4@( 6,11) HP 30/30 MP 0/0 Hu 87 $ 671 room=.
+-> n
+T 851 mode=game_loop           Boromir of Bree(hum) F4@( 6,10) HP 30/30 MP 0/0 Hu 86 $ 671 room=.
+-> e
+T 852 mode=game_loop           Boromir of Bree(hum) F4@( 7,10) HP 30/30 MP 0/0 Hu 85 $ 671 room=.
+-> s
+T 853 mode=game_loop           Boromir of Bree(hum) F4@( 7,11) HP 30/30 MP 0/0 Hu 84 $ 671 room=.
+-> e
+T 854 mode=combat_mode         Boromir of Bree(hum) F4@( 8,11) HP 30/30 MP 0/0 Hu 83 $ 671 room=M vs Rust Monster(L3 HP19/19)
+-> a
+T 855 mode=combat_mode         Boromir of Bree(hum) F4@( 8,11) HP 29/30 MP 0/0 Hu 83 $ 671 room=M vs Rust Monster(L3 HP19/19)
+-> a
+T 856 mode=combat_victory      Boromir of Bree(hum) F4@( 8,11) HP 28/40 MP 0/0 Hu 83 $ 679 room=.
+-> back
+T 857 mode=game_loop           Boromir of Bree(hum) F4@( 8,11) HP 28/40 MP 0/0 Hu 83 $ 679 room=.
+-> i
+T 858 mode=inventory           Boromir of Bree(hum) F4@( 8,11) HP 28/40 MP 0/0 Hu 83 $ 679 room=.
+-> u4
+T 859 mode=inventory           Boromir of Bree(hum) F4@( 8,11) HP 40/40 MP 0/0 Hu 83 $ 679 room=.
+-> x
+T 860 mode=game_loop           Boromir of Bree(hum) F4@( 8,11) HP 40/40 MP 0/0 Hu 83 $ 679 room=.
+-> s
+T 861 mode=combat_mode         Boromir of Bree(hum) F4@( 8,12) HP 40/40 MP 0/0 Hu 82 $ 679 room=M vs Giant Rat(L3 HP23/23)
+-> a
+T 862 mode=combat_victory      Boromir of Bree(hum) F4@( 8,12) HP 39/40 MP 0/0 Hu 82 $ 715 room=.
+-> back
+T 863 mode=game_loop           Boromir of Bree(hum) F4@( 8,12) HP 39/40 MP 0/0 Hu 82 $ 715 room=.
+-> l
+T 864 mode=game_loop           Boromir of Bree(hum) F4@( 8,12) HP 39/40 MP 0/0 Hu 82 $ 715 room=.
+-> e
+T 865 mode=game_loop           Boromir of Bree(hum) F4@( 9,12) HP 39/40 MP 0/0 Hu 81 $ 715 room=.
+-> l
+T 866 mode=game_loop           Boromir of Bree(hum) F4@( 9,12) HP 39/40 MP 0/0 Hu 81 $ 715 room=.
+-> s
+T 867 mode=library_mode        Boromir of Bree(hum) F4@( 9,13) HP 39/40 MP 0/0 Hu 80 $ 715 room=L
+-> r
+T 868 mode=library_read_decision_mode Boromir of Bree(hum) F4@( 9,13) HP 39/40 MP 0/0 Hu 80 $ 715 room=L
+-> y
+T 869 mode=game_loop           Boromir of Bree(hum) F4@( 9,13) HP 39/40 MP 0/0 Hu 80 $ 815 room=.
+-> s
+T 870 mode=game_loop           Boromir of Bree(hum) F4@( 9,14) HP 39/40 MP 0/0 Hu 79 $ 815 room=.
+-> s
+T 871 mode=game_loop           Boromir of Bree(hum) F4@( 9,13) HP 40/40 MP 0/0 Hu 78 $ 815 room=.
+-> n
+T 872 mode=combat_mode         Boromir of Bree(hum) F4@( 8,13) HP 40/40 MP 0/0 Hu 77 $ 815 room=M vs ELITE UNDEAD MUMMY(L4 HP123/123)
+-> f
+T 873 mode=combat_mode         Boromir of Bree(hum) F4@( 8,13) HP 12/40 MP 0/0 Hu 77 $ 815 room=M vs ELITE UNDEAD MUMMY(L4 HP123/123)
+-> i
+T 874 mode=inventory           Boromir of Bree(hum) F4@( 8,13) HP 12/40 MP 0/0 Hu 77 $ 815 room=M
+-> u1
+T 875 mode=inventory           Boromir of Bree(hum) F4@( 8,13) HP 40/40 MP 0/0 Hu 77 $ 815 room=M
+-> x
+T 876 mode=combat_mode         Boromir of Bree(hum) F4@( 8,13) HP 40/40 MP 0/0 Hu 77 $ 815 room=M vs ELITE UNDEAD MUMMY(L4 HP123/123)
+-> f
+T 877 mode=death_screen        Boromir of Bree(hum) F4@( 8,13) HP -16/40 MP 0/0 Hu 77 $ 815 room=M
+
+=== run finished: turns=877 floor=4 hp=-16/40 gold=815 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/01234_human.html

@@ -1,0 +1,2145 @@
+T   0 mode=game_loop           Borin Steelpalm(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Borin Steelpalm(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 12 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T   3 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   4 mode=combat_mode         Borin Steelpalm(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 290 room=M vs Goblin(L0 HP12/12)
+  [Well-fed] +1 HP
+  Shinies! Give us your shinies, The Novice!
+  You seize the initiative!
+-> a
+T   5 mode=combat_victory      Borin Steelpalm(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 347 room=.
+  The goblin falls with a pitiful shriek.
+  You gained 8 experience.
+  You found 7 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Goblin meat.
+-> back
+T   6 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 347 room=.
+-> l
+T   7 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 347 room=.
+-> s
+T   8 mode=combat_mode         Borin Steelpalm(dwa) F1@( 2, 3) HP 61/64 MP 0/0 Hu 97 $ 347 room=M vs Goblin(L0 HP30/30)
+-> a
+T   9 mode=combat_mode         Borin Steelpalm(dwa) F1@( 2, 3) HP 60/64 MP 0/0 Hu 97 $ 347 room=M vs Goblin(L0 HP5/30)
+-> a
+T  10 mode=combat_mode         Borin Steelpalm(dwa) F1@( 2, 3) HP 60/64 MP 0/0 Hu 97 $ 347 room=M vs Goblin(L0 HP5/30)
+-> a
+T  11 mode=combat_mode         Borin Steelpalm(dwa) F1@( 2, 3) HP 60/64 MP 0/0 Hu 97 $ 347 room=M vs Goblin(L0 HP5/30)
+-> a
+T  12 mode=combat_mode         Borin Steelpalm(dwa) F1@( 2, 3) HP 60/64 MP 0/0 Hu 97 $ 347 room=M vs Goblin(L0 HP5/30)
+-> a
+T  13 mode=combat_mode         Borin Steelpalm(dwa) F1@( 2, 3) HP 60/64 MP 0/0 Hu 97 $ 347 room=M vs Goblin(L0 HP5/30)
+-> a
+T  14 mode=combat_victory      Borin Steelpalm(dwa) F1@( 2, 3) HP 60/64 MP 0/0 Hu 97 $ 354 room=.
+-> back
+T  15 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 3) HP 60/64 MP 0/0 Hu 97 $ 354 room=.
+-> l
+T  16 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 3) HP 60/64 MP 0/0 Hu 97 $ 354 room=.
+-> s
+T  17 mode=combat_mode         Borin Steelpalm(dwa) F1@( 2, 4) HP 61/64 MP 0/0 Hu 96 $ 354 room=M vs Kobold(L0 HP8/8)
+-> a
+T  18 mode=combat_victory      Borin Steelpalm(dwa) F1@( 2, 4) HP 61/64 MP 0/0 Hu 96 $ 360 room=.
+-> back
+T  19 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 4) HP 61/64 MP 0/0 Hu 96 $ 360 room=.
+-> l
+T  20 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 4) HP 61/64 MP 0/0 Hu 96 $ 360 room=.
+-> s
+T  21 mode=combat_mode         Borin Steelpalm(dwa) F1@( 2, 5) HP 61/64 MP 0/0 Hu 95 $ 360 room=M vs Bat(L0 HP12/12)
+-> a
+T  22 mode=combat_victory      Borin Steelpalm(dwa) F1@( 2, 5) HP 61/64 MP 0/0 Hu 95 $ 365 room=.
+-> back
+T  23 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 5) HP 61/64 MP 0/0 Hu 95 $ 365 room=.
+-> l
+T  24 mode=game_loop           Borin Steelpalm(dwa) F1@( 2, 5) HP 61/64 MP 0/0 Hu 95 $ 365 room=.
+-> e
+T  25 mode=game_loop           Borin Steelpalm(dwa) F1@( 3, 5) HP 62/64 MP 0/0 Hu 94 $ 365 room=.
+-> l
+T  26 mode=game_loop           Borin Steelpalm(dwa) F1@( 3, 5) HP 62/64 MP 0/0 Hu 94 $ 365 room=.
+-> e
+T  27 mode=stairs_down_mode    Borin Steelpalm(dwa) F1@( 4, 5) HP 62/64 MP 0/0 Hu 93 $ 365 room=D
+-> e
+T  28 mode=library_mode        Borin Steelpalm(dwa) F1@( 5, 5) HP 63/64 MP 0/0 Hu 92 $ 365 room=L
+-> r
+T  29 mode=library_read_decision_mode Borin Steelpalm(dwa) F1@( 5, 5) HP 63/64 MP 0/0 Hu 92 $ 365 room=L
+-> y
+T  30 mode=game_loop           Borin Steelpalm(dwa) F1@( 5, 5) HP 63/64 MP 0/0 Hu 92 $ 415 room=.
+-> l
+T  31 mode=game_loop           Borin Steelpalm(dwa) F1@( 5, 5) HP 63/64 MP 0/0 Hu 92 $ 415 room=.
+-> e
+T  32 mode=garden_mode         Borin Steelpalm(dwa) F1@( 6, 5) HP 63/64 MP 0/0 Hu 91 $ 415 room=G
+-> h
+T  33 mode=game_loop           Borin Steelpalm(dwa) F1@( 6, 5) HP 63/64 MP 0/0 Hu 91 $ 415 room=.
+-> e
+T  34 mode=game_loop           Borin Steelpalm(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 90 $ 415 room=.
+-> e
+T  35 mode=game_loop           Borin Steelpalm(dwa) F1@( 8, 5) HP 64/64 MP 0/0 Hu 89 $ 415 room=.
+-> w
+T  36 mode=game_loop           Borin Steelpalm(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 88 $ 415 room=.
+-> i
+T  37 mode=inventory           Borin Steelpalm(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 88 $ 415 room=.
+-> eat4
+T  38 mode=inventory           Borin Steelpalm(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 93 $ 415 room=.
+-> x
+T  39 mode=game_loop           Borin Steelpalm(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 93 $ 415 room=.
+-> e
+T  40 mode=game_loop           Borin Steelpalm(dwa) F1@( 8, 5) HP 64/64 MP 0/0 Hu 92 $ 415 room=.
+-> i
+T  41 mode=inventory           Borin Steelpalm(dwa) F1@( 8, 5) HP 64/64 MP 0/0 Hu 92 $ 415 room=.
+-> eat4
+T  42 mode=inventory           Borin Steelpalm(dwa) F1@( 8, 5) HP 64/64 MP 0/0 Hu 97 $ 415 room=.
+-> x
+T  43 mode=game_loop           Borin Steelpalm(dwa) F1@( 8, 5) HP 64/64 MP 0/0 Hu 97 $ 415 room=.
+-> w
+T  44 mode=game_loop           Borin Steelpalm(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 96 $ 415 room=.
+-> i
+T  45 mode=inventory           Borin Steelpalm(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu 96 $ 415 room=.
+-> eat4
+T  46 mode=inventory           Borin Steelpalm(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu100 $ 415 room=.
+-> x
+T  47 mode=game_loop           Borin Steelpalm(dwa) F1@( 7, 5) HP 64/64 MP 0/0 Hu100 $ 415 room=.
+-> w
+T  48 mode=game_loop           Borin Steelpalm(dwa) F1@( 6, 5) HP 64/64 MP 0/0 Hu 99 $ 415 room=.
+-> i
+T  49 mode=inventory           Borin Steelpalm(dwa) F1@( 6, 5) HP 64/64 MP 0/0 Hu 99 $ 415 room=.
+-> eat3
+T  50 mode=inventory           Borin Steelpalm(dwa) F1@( 6, 5) HP 64/64 MP 0/0 Hu100 $ 415 room=.
+-> x
+T  51 mode=game_loop           Borin Steelpalm(dwa) F1@( 6, 5) HP 64/64 MP 0/0 Hu100 $ 415 room=.
+-> w
+T  52 mode=game_loop           Borin Steelpalm(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu 99 $ 415 room=.
+-> w
+T  53 mode=stairs_down_mode    Borin Steelpalm(dwa) F1@( 4, 5) HP 64/64 MP 0/0 Hu 98 $ 415 room=D
+-> d
+T  54 mode=stairs_up_mode      Borin Steelpalm(dwa) F2@( 1, 1) HP 64/64 MP 0/0 Hu 98 $ 415 room=U
+-> s
+T  55 mode=combat_mode         Borin Steelpalm(dwa) F2@( 1, 2) HP 64/64 MP 0/0 Hu 97 $ 415 room=M vs Rust Monster(L1 HP18/18)
+-> a
+T  56 mode=combat_mode         Borin Steelpalm(dwa) F2@( 1, 2) HP 64/64 MP 0/0 Hu 97 $ 415 room=M vs Rust Monster(L1 HP18/18)
+-> a
+T  57 mode=combat_victory      Borin Steelpalm(dwa) F2@( 1, 2) HP 63/64 MP 0/0 Hu 97 $ 435 room=.
+-> back
+T  58 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 2) HP 63/64 MP 0/0 Hu 97 $ 435 room=.
+-> l
+T  59 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 2) HP 63/64 MP 0/0 Hu 97 $ 435 room=.
+-> e
+T  60 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 2) HP 63/64 MP 0/0 Hu 96 $ 435 room=.
+-> l
+T  61 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 2) HP 63/64 MP 0/0 Hu 96 $ 435 room=.
+-> n
+T  62 mode=vendor_shop         Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 435 room=V
+-> b14
+T  63 mode=vendor_shop         Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 425 room=V
+-> b5
+T  64 mode=vendor_shop         Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 395 room=V
+-> b5
+T  65 mode=vendor_shop         Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 365 room=V
+-> b10
+T  66 mode=vendor_shop         Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 215 room=V
+-> b2
+T  67 mode=vendor_shop         Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 155 room=V
+-> id9
+T  68 mode=vendor_shop         Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 80 room=V
+-> x
+T  69 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 80 room=V
+-> i
+T  70 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 80 room=V
+-> e1
+T  71 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 80 room=V
+-> x
+T  72 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 1) HP 64/64 MP 0/0 Hu 95 $ 80 room=V
+-> s
+T  73 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 2) HP 64/64 MP 0/0 Hu 94 $ 80 room=.
+-> s
+T  74 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 3) HP 64/64 MP 0/0 Hu 93 $ 80 room=M vs Lichen(L1 HP10/10)
+-> a
+T  75 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 3) HP 63/64 MP 0/0 Hu 93 $ 80 room=M vs Lichen(L1 HP10/10)
+-> a
+T  76 mode=combat_victory      Borin Steelpalm(dwa) F2@( 2, 3) HP 62/64 MP 0/0 Hu 93 $ 88 room=.
+-> back
+T  77 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 3) HP 62/64 MP 0/0 Hu 93 $ 88 room=.
+-> l
+T  78 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 3) HP 62/64 MP 0/0 Hu 93 $ 88 room=.
+-> e
+T  79 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 3) HP 62/64 MP 0/0 Hu 92 $ 88 room=.
+-> e
+T  80 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 3) HP 63/64 MP 0/0 Hu 91 $ 88 room=.
+-> l
+T  81 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 3) HP 63/64 MP 0/0 Hu 91 $ 88 room=.
+-> s
+T  82 mode=library_mode        Borin Steelpalm(dwa) F2@( 4, 4) HP 63/64 MP 0/0 Hu 90 $ 88 room=L
+-> r
+T  83 mode=library_read_decision_mode Borin Steelpalm(dwa) F2@( 4, 4) HP 63/64 MP 0/0 Hu 90 $ 88 room=L
+-> y
+T  84 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 4) HP 63/64 MP 0/0 Hu 90 $ 188 room=.
+-> l
+T  85 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 4) HP 63/64 MP 0/0 Hu 90 $ 188 room=.
+-> s
+T  86 mode=combat_mode         Borin Steelpalm(dwa) F2@( 4, 5) HP 64/64 MP 0/0 Hu 89 $ 188 room=M vs Lichen(L1 HP10/10)
+-> a
+T  87 mode=combat_mode         Borin Steelpalm(dwa) F2@( 4, 5) HP 63/64 MP 0/0 Hu 89 $ 188 room=M vs Lichen(L1 HP10/10)
+-> a
+T  88 mode=combat_mode         Borin Steelpalm(dwa) F2@( 4, 5) HP 62/64 MP 0/0 Hu 89 $ 188 room=M vs Lichen(L1 HP10/10)
+-> a
+T  89 mode=combat_mode         Borin Steelpalm(dwa) F2@( 4, 5) HP 61/64 MP 0/0 Hu 89 $ 188 room=M vs Lichen(L1 HP10/10)
+-> a
+T  90 mode=combat_victory      Borin Steelpalm(dwa) F2@( 4, 5) HP 60/64 MP 0/0 Hu 89 $ 198 room=.
+-> back
+T  91 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 5) HP 60/64 MP 0/0 Hu 89 $ 198 room=.
+-> l
+T  92 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 5) HP 60/64 MP 0/0 Hu 89 $ 198 room=.
+-> w
+T  93 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 5) HP 60/64 MP 0/0 Hu 88 $ 198 room=.
+-> l
+T  94 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 5) HP 60/64 MP 0/0 Hu 88 $ 198 room=.
+-> w
+T  95 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 61/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T  96 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 55/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T  97 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 49/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T  98 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 49/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T  99 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 43/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 100 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 37/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 101 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 37/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 102 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 31/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> i
+T 103 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 5) HP 31/64 MP 0/0 Hu 87 $ 198 room=M
+-> u1
+T 104 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 5) HP 61/64 MP 0/0 Hu 87 $ 198 room=M
+-> x
+T 105 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 61/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 106 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 61/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 107 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 55/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 108 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 55/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 109 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 55/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 110 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 49/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 111 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 43/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 112 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 37/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 113 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 31/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> i
+T 114 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 5) HP 31/64 MP 0/0 Hu 87 $ 198 room=M
+-> u1
+T 115 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 5) HP 61/64 MP 0/0 Hu 87 $ 198 room=M
+-> x
+T 116 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 61/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> f
+T 117 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 49/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 118 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 43/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 119 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 37/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 120 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 37/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 121 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 31/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> i
+T 122 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 5) HP 31/64 MP 0/0 Hu 87 $ 198 room=M
+-> u1
+T 123 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 5) HP 61/64 MP 0/0 Hu 87 $ 198 room=M
+-> x
+T 124 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 61/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP40/40)
+-> a
+T 125 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 5) HP 55/64 MP 0/0 Hu 87 $ 198 room=M vs Giant Spider(L1 HP16/40)
+-> a
+T 126 mode=combat_victory      Borin Steelpalm(dwa) F2@( 2, 5) HP 49/74 MP 0/0 Hu 87 $ 202 room=.
+-> back
+T 127 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 5) HP 49/74 MP 0/0 Hu 87 $ 202 room=.
+-> l
+T 128 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 5) HP 49/74 MP 0/0 Hu 87 $ 202 room=.
+-> i
+T 129 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 5) HP 49/74 MP 0/0 Hu 87 $ 202 room=.
+-> u4
+T 130 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 87 $ 202 room=.
+-> u3
+T 131 mode=upgrade_scroll_mode Borin Steelpalm(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 87 $ 202 room=.
+-> 1
+T 132 mode=inventory           Borin Steelpalm(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 87 $ 202 room=.
+-> x
+T 133 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 87 $ 202 room=.
+-> s
+T 134 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 6) HP 74/74 MP 0/0 Hu 86 $ 202 room=M vs Wight(L1 HP40/40)
+-> a
+T 135 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 6) HP 70/74 MP 0/0 Hu 86 $ 202 room=M vs Wight(L1 HP16/40)
+-> a
+T 136 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 6) HP 66/74 MP 0/0 Hu 86 $ 202 room=M vs Wight(L1 HP16/40)
+-> a
+T 137 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 6) HP 62/74 MP 0/0 Hu 86 $ 202 room=M vs Wight(L1 HP16/40)
+-> a
+T 138 mode=combat_mode         Borin Steelpalm(dwa) F2@( 2, 6) HP 58/74 MP 0/0 Hu 86 $ 202 room=M vs Wight(L1 HP16/40)
+-> a
+T 139 mode=combat_victory      Borin Steelpalm(dwa) F2@( 2, 6) HP 48/74 MP 0/0 Hu 86 $ 210 room=.
+-> back
+T 140 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 6) HP 48/74 MP 0/0 Hu 86 $ 210 room=.
+-> s
+T 141 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 7) HP 48/74 MP 0/0 Hu 85 $ 210 room=.
+-> l
+T 142 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 7) HP 48/74 MP 0/0 Hu 85 $ 210 room=.
+-> e
+T 143 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 7) HP 48/74 MP 0/0 Hu 84 $ 210 room=.
+-> n
+T 144 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 6) HP 48/74 MP 0/0 Hu 83 $ 210 room=.
+-> i
+T 145 mode=inventory           Borin Steelpalm(dwa) F2@( 3, 6) HP 48/74 MP 0/0 Hu 83 $ 210 room=.
+-> u4
+T 146 mode=inventory           Borin Steelpalm(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 83 $ 210 room=.
+-> x
+T 147 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 83 $ 210 room=.
+-> i
+T 148 mode=inventory           Borin Steelpalm(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 83 $ 210 room=.
+-> eat4
+T 149 mode=inventory           Borin Steelpalm(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 89 $ 210 room=.
+-> x
+T 150 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 89 $ 210 room=.
+-> n
+T 151 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 88 $ 210 room=.
+-> e
+T 152 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 5) HP 74/74 MP 0/0 Hu 87 $ 210 room=.
+-> n
+T 153 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 4) HP 74/74 MP 0/0 Hu 86 $ 210 room=.
+-> e
+T 154 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 4) HP 74/74 MP 0/0 Hu 85 $ 210 room=.
+-> e
+T 155 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 4) HP 74/74 MP 0/0 Hu 84 $ 210 room=.
+-> e
+T 156 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 83 $ 210 room=.
+-> i
+T 157 mode=inventory           Borin Steelpalm(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 83 $ 210 room=.
+-> eat3
+T 158 mode=inventory           Borin Steelpalm(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 88 $ 210 room=.
+-> x
+T 159 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 88 $ 210 room=.
+-> n
+T 160 mode=dungeon_mode        Borin Steelpalm(dwa) F2@( 7, 3) HP 74/74 MP 0/0 Hu 87 $ 210 room=N
+-> u
+T 161 mode=dungeon_unlocked_mode Borin Steelpalm(dwa) F2@( 7, 3) HP 74/74 MP 0/0 Hu 87 $ 210 room=N
+-> r
+T 162 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 3) HP 74/74 MP 0/0 Hu 87 $ 365 room=N
+-> s
+T 163 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 86 $ 365 room=.
+-> n
+T 164 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 3) HP 74/74 MP 0/0 Hu 85 $ 365 room=N
+-> s
+T 165 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 4) HP 74/74 MP 0/0 Hu 84 $ 365 room=.
+-> w
+T 166 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 4) HP 74/74 MP 0/0 Hu 83 $ 365 room=.
+-> s
+T 167 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 5) HP 74/74 MP 0/0 Hu 82 $ 365 room=.
+-> l
+T 168 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 5) HP 74/74 MP 0/0 Hu 82 $ 365 room=.
+-> w
+T 169 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 5) HP 74/74 MP 0/0 Hu 81 $ 365 room=.
+-> l
+T 170 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 5) HP 74/74 MP 0/0 Hu 81 $ 365 room=.
+-> s
+T 171 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 6) HP 74/74 MP 0/0 Hu 80 $ 365 room=.
+-> s
+T 172 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 7) HP 74/74 MP 0/0 Hu 79 $ 365 room=.
+-> s
+T 173 mode=pool_mode           Borin Steelpalm(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 78 $ 365 room=P
+-> dr
+T 174 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 78 $ 365 room=.
+-> s
+T 175 mode=pool_mode           Borin Steelpalm(dwa) F2@( 5, 9) HP 74/74 MP 0/0 Hu 77 $ 365 room=P
+-> dr
+T 176 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 9) HP 74/74 MP 0/0 Hu 77 $ 365 room=.
+-> w
+T 177 mode=chest_mode          Borin Steelpalm(dwa) F2@( 4, 9) HP 74/74 MP 0/0 Hu 76 $ 365 room=C
+-> o
+T 178 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 9) HP 74/74 MP 0/0 Hu 76 $ 405 room=.
+-> w
+T 179 mode=combat_mode         Borin Steelpalm(dwa) F2@( 3, 9) HP 74/74 MP 0/0 Hu 75 $ 405 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 180 mode=combat_mode         Borin Steelpalm(dwa) F2@( 3, 9) HP 74/74 MP 0/0 Hu 75 $ 405 room=M vs Giant Rat(L1 HP22/22)
+-> a
+T 181 mode=combat_victory      Borin Steelpalm(dwa) F2@( 3, 9) HP 74/74 MP 0/0 Hu 75 $ 607 room=.
+-> back
+T 182 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 9) HP 74/74 MP 0/0 Hu 75 $ 607 room=.
+-> n
+T 183 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 8) HP 74/74 MP 0/0 Hu 74 $ 607 room=.
+-> w
+T 184 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 73 $ 607 room=.
+-> l
+T 185 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 73 $ 607 room=.
+-> w
+T 186 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 8) HP 74/74 MP 0/0 Hu 72 $ 607 room=.
+-> l
+T 187 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 8) HP 74/74 MP 0/0 Hu 72 $ 607 room=.
+-> n
+T 188 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 7) HP 74/74 MP 0/0 Hu 71 $ 607 room=.
+-> e
+T 189 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 7) HP 74/74 MP 0/0 Hu 70 $ 607 room=.
+-> n
+T 190 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 6) HP 74/74 MP 0/0 Hu 69 $ 607 room=.
+-> n
+T 191 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 68 $ 607 room=.
+-> e
+T 192 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 67 $ 607 room=.
+-> s
+T 193 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 66 $ 607 room=.
+-> s
+T 194 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 7) HP 74/74 MP 0/0 Hu 65 $ 607 room=.
+-> i
+T 195 mode=inventory           Borin Steelpalm(dwa) F2@( 3, 7) HP 74/74 MP 0/0 Hu 65 $ 607 room=.
+-> eat3
+T 196 mode=inventory           Borin Steelpalm(dwa) F2@( 3, 7) HP 74/74 MP 0/0 Hu 70 $ 607 room=.
+-> eat1
+T 197 mode=inventory           Borin Steelpalm(dwa) F2@( 3, 7) HP 74/74 MP 0/0 Hu100 $ 607 room=.
+-> x
+T 198 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 7) HP 74/74 MP 0/0 Hu100 $ 607 room=.
+-> s
+T 199 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 8) HP 74/74 MP 0/0 Hu 99 $ 607 room=.
+-> e
+T 200 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 8) HP 74/74 MP 0/0 Hu 98 $ 607 room=.
+-> e
+T 201 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 97 $ 607 room=.
+-> e
+T 202 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 8) HP 74/74 MP 0/0 Hu 96 $ 607 room=.
+-> e
+T 203 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 95 $ 607 room=.
+-> l
+T 204 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 95 $ 607 room=.
+-> e
+T 205 mode=library_mode        Borin Steelpalm(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 94 $ 607 room=L
+-> r
+T 206 mode=game_loop           Borin Steelpalm(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 94 $ 607 room=.
+-> l
+T 207 mode=game_loop           Borin Steelpalm(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 94 $ 607 room=.
+-> s
+T 208 mode=game_loop           Borin Steelpalm(dwa) F2@( 8, 9) HP 74/74 MP 0/0 Hu 93 $ 607 room=.
+-> l
+T 209 mode=game_loop           Borin Steelpalm(dwa) F2@( 8, 9) HP 74/74 MP 0/0 Hu 93 $ 607 room=.
+-> w
+T 210 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 9) HP 74/74 MP 0/0 Hu 92 $ 607 room=.
+-> w
+T 211 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 91 $ 607 room=.
+-> n
+T 212 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 8) HP 74/74 MP 0/0 Hu 90 $ 607 room=.
+-> w
+T 213 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 89 $ 607 room=.
+-> w
+T 214 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 8) HP 74/74 MP 0/0 Hu 88 $ 607 room=.
+-> w
+T 215 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 8) HP 74/74 MP 0/0 Hu 87 $ 607 room=.
+-> w
+T 216 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 86 $ 607 room=.
+-> w
+T 217 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 8) HP 74/74 MP 0/0 Hu 85 $ 607 room=.
+-> s
+T 218 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 9) HP 74/74 MP 0/0 Hu 84 $ 607 room=.
+-> n
+T 219 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 8) HP 74/74 MP 0/0 Hu 83 $ 607 room=.
+-> n
+T 220 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 7) HP 74/74 MP 0/0 Hu 82 $ 607 room=.
+-> e
+T 221 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 7) HP 74/74 MP 0/0 Hu 81 $ 607 room=.
+-> n
+T 222 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 6) HP 74/74 MP 0/0 Hu 80 $ 607 room=.
+-> n
+T 223 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 79 $ 607 room=.
+-> e
+T 224 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 78 $ 607 room=.
+-> e
+T 225 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 5) HP 74/74 MP 0/0 Hu 77 $ 607 room=.
+-> s
+T 226 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 76 $ 607 room=.
+-> e
+T 227 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 6) HP 74/74 MP 0/0 Hu 75 $ 607 room=.
+-> n
+T 228 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 5) HP 74/74 MP 0/0 Hu 74 $ 607 room=.
+-> e
+T 229 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 5) HP 74/74 MP 0/0 Hu 73 $ 607 room=.
+-> n
+T 230 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 4) HP 74/74 MP 0/0 Hu 72 $ 607 room=.
+-> w
+T 231 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 4) HP 74/74 MP 0/0 Hu 71 $ 607 room=.
+-> w
+T 232 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 4) HP 74/74 MP 0/0 Hu 70 $ 607 room=.
+-> s
+T 233 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 5) HP 74/74 MP 0/0 Hu 69 $ 607 room=.
+-> s
+T 234 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 6) HP 74/74 MP 0/0 Hu 68 $ 607 room=.
+-> w
+T 235 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 67 $ 607 room=.
+-> n
+T 236 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 66 $ 607 room=.
+-> w
+T 237 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 65 $ 607 room=.
+-> s
+T 238 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 6) HP 74/74 MP 0/0 Hu 64 $ 607 room=.
+-> s
+T 239 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 7) HP 74/74 MP 0/0 Hu 63 $ 607 room=.
+-> w
+T 240 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 7) HP 74/74 MP 0/0 Hu 62 $ 607 room=.
+-> s
+T 241 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 8) HP 74/74 MP 0/0 Hu 61 $ 607 room=.
+-> e
+T 242 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 60 $ 607 room=.
+-> e
+T 243 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 8) HP 74/74 MP 0/0 Hu 59 $ 607 room=.
+-> n
+T 244 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 7) HP 74/74 MP 0/0 Hu 58 $ 607 room=.
+-> w
+T 245 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 7) HP 74/74 MP 0/0 Hu 57 $ 607 room=.
+-> n
+T 246 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 6) HP 74/74 MP 0/0 Hu 56 $ 607 room=.
+-> n
+T 247 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 5) HP 74/74 MP 0/0 Hu 55 $ 607 room=.
+-> e
+T 248 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 5) HP 74/74 MP 0/0 Hu 54 $ 607 room=.
+-> s
+T 249 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 6) HP 74/74 MP 0/0 Hu 53 $ 607 room=.
+-> s
+T 250 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 7) HP 74/74 MP 0/0 Hu 52 $ 607 room=.
+-> w
+T 251 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 7) HP 74/74 MP 0/0 Hu 51 $ 607 room=.
+-> w
+T 252 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 7) HP 74/74 MP 0/0 Hu 50 $ 607 room=.
+-> s
+T 253 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 8) HP 74/74 MP 0/0 Hu 49 $ 607 room=.
+-> i
+T 254 mode=inventory           Borin Steelpalm(dwa) F2@( 1, 8) HP 74/74 MP 0/0 Hu 49 $ 607 room=.
+-> eat1
+T 255 mode=inventory           Borin Steelpalm(dwa) F2@( 1, 8) HP 74/74 MP 0/0 Hu100 $ 607 room=.
+-> x
+T 256 mode=game_loop           Borin Steelpalm(dwa) F2@( 1, 8) HP 74/74 MP 0/0 Hu100 $ 607 room=.
+-> e
+T 257 mode=game_loop           Borin Steelpalm(dwa) F2@( 2, 8) HP 74/74 MP 0/0 Hu 99 $ 607 room=.
+-> e
+T 258 mode=game_loop           Borin Steelpalm(dwa) F2@( 3, 8) HP 74/74 MP 0/0 Hu 98 $ 607 room=.
+-> e
+T 259 mode=game_loop           Borin Steelpalm(dwa) F2@( 4, 8) HP 74/74 MP 0/0 Hu 97 $ 607 room=.
+-> e
+T 260 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 96 $ 607 room=.
+-> l
+T 261 mode=game_loop           Borin Steelpalm(dwa) F2@( 5, 8) HP 74/74 MP 0/0 Hu 96 $ 607 room=.
+-> e
+T 262 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 8) HP 74/74 MP 0/0 Hu 95 $ 607 room=.
+-> s
+T 263 mode=game_loop           Borin Steelpalm(dwa) F2@( 6, 9) HP 74/74 MP 0/0 Hu 94 $ 607 room=.
+-> e
+T 264 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 9) HP 74/74 MP 0/0 Hu 93 $ 607 room=.
+-> n
+T 265 mode=game_loop           Borin Steelpalm(dwa) F2@( 7, 8) HP 74/74 MP 0/0 Hu 92 $ 607 room=.
+-> e
+T 266 mode=game_loop           Borin Steelpalm(dwa) F2@( 8, 8) HP 74/74 MP 0/0 Hu 91 $ 607 room=.
+-> s
+T 267 mode=game_loop           Borin Steelpalm(dwa) F2@( 8, 9) HP 74/74 MP 0/0 Hu 90 $ 607 room=.
+-> e
+T 268 mode=combat_mode         Borin Steelpalm(dwa) F2@( 9, 9) HP 74/74 MP 0/0 Hu 89 $ 607 room=M vs Gnoll(L1 HP32/32)
+-> a
+T 269 mode=combat_mode         Borin Steelpalm(dwa) F2@( 9, 9) HP 73/74 MP 0/0 Hu 89 $ 607 room=M vs Gnoll(L1 HP32/32)
+-> a
+T 270 mode=combat_mode         Borin Steelpalm(dwa) F2@( 9, 9) HP 73/74 MP 0/0 Hu 89 $ 607 room=M vs Gnoll(L1 HP8/32)
+-> a
+T 271 mode=combat_mode         Borin Steelpalm(dwa) F2@( 9, 9) HP 72/74 MP 0/0 Hu 89 $ 607 room=M vs Gnoll(L1 HP8/32)
+-> a
+T 272 mode=combat_victory      Borin Steelpalm(dwa) F2@( 9, 9) HP 72/74 MP 0/0 Hu 89 $ 621 room=.
+-> back
+T 273 mode=game_loop           Borin Steelpalm(dwa) F2@( 9, 9) HP 72/74 MP 0/0 Hu 89 $ 621 room=.
+-> e
+T 274 mode=game_loop           Borin Steelpalm(dwa) F2@(10, 9) HP 72/74 MP 0/0 Hu 88 $ 621 room=.
+-> l
+T 275 mode=game_loop           Borin Steelpalm(dwa) F2@(10, 9) HP 72/74 MP 0/0 Hu 88 $ 621 room=.
+-> n
+T 276 mode=pool_mode           Borin Steelpalm(dwa) F2@(10, 8) HP 73/74 MP 0/0 Hu 87 $ 621 room=P
+-> dr
+T 277 mode=game_loop           Borin Steelpalm(dwa) F2@(10, 8) HP 74/74 MP 0/0 Hu 87 $ 621 room=.
+-> l
+T 278 mode=game_loop           Borin Steelpalm(dwa) F2@(10, 8) HP 74/74 MP 0/0 Hu 87 $ 621 room=.
+-> e
+T 279 mode=game_loop           Borin Steelpalm(dwa) F2@(11, 8) HP 74/74 MP 0/0 Hu 86 $ 621 room=.
+-> l
+T 280 mode=game_loop           Borin Steelpalm(dwa) F2@(11, 8) HP 74/74 MP 0/0 Hu 86 $ 621 room=.
+-> l
+T 281 mode=game_loop           Borin Steelpalm(dwa) F2@(11, 8) HP 74/74 MP 0/0 Hu 86 $ 621 room=.
+-> n
+T 282 mode=game_loop           Borin Steelpalm(dwa) F2@(11, 7) HP 74/74 MP 0/0 Hu 85 $ 621 room=.
+-> l
+T 283 mode=game_loop           Borin Steelpalm(dwa) F2@(11, 7) HP 74/74 MP 0/0 Hu 85 $ 621 room=.
+-> n
+T 284 mode=chest_mode          Borin Steelpalm(dwa) F2@(11, 6) HP 74/74 MP 0/0 Hu 84 $ 621 room=C
+-> n
+T 285 mode=game_loop           Borin Steelpalm(dwa) F2@(11, 5) HP 74/74 MP 0/0 Hu 83 $ 621 room=.
+-> l
+T 286 mode=game_loop           Borin Steelpalm(dwa) F2@(11, 5) HP 74/74 MP 0/0 Hu 83 $ 621 room=.
+-> e
+T 287 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 5) HP 74/74 MP 0/0 Hu 82 $ 621 room=.
+-> l
+T 288 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 5) HP 74/74 MP 0/0 Hu 82 $ 621 room=.
+-> e
+T 289 mode=library_mode        Borin Steelpalm(dwa) F2@(13, 5) HP 74/74 MP 0/0 Hu 81 $ 621 room=L
+-> r
+T 290 mode=game_loop           Borin Steelpalm(dwa) F2@(13, 5) HP 74/74 MP 0/0 Hu 81 $ 621 room=.
+-> l
+T 291 mode=game_loop           Borin Steelpalm(dwa) F2@(13, 5) HP 74/74 MP 0/0 Hu 81 $ 621 room=.
+-> e
+T 292 mode=garden_mode         Borin Steelpalm(dwa) F2@(14, 5) HP 74/74 MP 0/0 Hu 80 $ 621 room=G
+-> h
+T 293 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 5) HP 74/74 MP 0/0 Hu 80 $ 621 room=.
+-> l
+T 294 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 5) HP 74/74 MP 0/0 Hu 80 $ 621 room=.
+-> n
+T 295 mode=altar_mode          Borin Steelpalm(dwa) F2@(14, 4) HP 74/74 MP 0/0 Hu 79 $ 621 room=A
+-> pray
+T 296 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 4) HP 74/74 MP 0/0 Hu 79 $ 621 room=.
+-> i
+T 297 mode=inventory           Borin Steelpalm(dwa) F2@(14, 4) HP 74/74 MP 0/0 Hu 79 $ 621 room=.
+-> eat2
+T 298 mode=inventory           Borin Steelpalm(dwa) F2@(14, 4) HP 74/74 MP 0/0 Hu 86 $ 621 room=.
+-> x
+T 299 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 4) HP 74/74 MP 0/0 Hu 86 $ 621 room=.
+-> l
+T 300 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 4) HP 74/74 MP 0/0 Hu 86 $ 621 room=.
+-> l
+T 301 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 4) HP 74/74 MP 0/0 Hu 86 $ 621 room=.
+-> n
+T 302 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 3) HP 74/74 MP 0/0 Hu 85 $ 621 room=.
+-> l
+T 303 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 3) HP 74/74 MP 0/0 Hu 85 $ 621 room=.
+-> e
+T 304 mode=game_loop           Borin Steelpalm(dwa) F2@(15, 3) HP 74/74 MP 0/0 Hu 84 $ 621 room=.
+-> l
+T 305 mode=game_loop           Borin Steelpalm(dwa) F2@(15, 3) HP 74/74 MP 0/0 Hu 84 $ 621 room=.
+-> e
+T 306 mode=game_loop           Borin Steelpalm(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 83 $ 621 room=.
+-> l
+T 307 mode=game_loop           Borin Steelpalm(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 83 $ 621 room=.
+-> e
+T 308 mode=dungeon_mode        Borin Steelpalm(dwa) F2@(17, 3) HP 74/74 MP 0/0 Hu 82 $ 621 room=N
+-> u
+T 309 mode=dungeon_unlocked_mode Borin Steelpalm(dwa) F2@(17, 3) HP 74/74 MP 0/0 Hu 82 $ 621 room=N
+-> r
+T 310 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 3) HP 74/74 MP 0/0 Hu 82 $ 621 room=N
+-> l
+T 311 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 3) HP 74/74 MP 0/0 Hu 82 $ 621 room=N
+-> n
+T 312 mode=chest_mode          Borin Steelpalm(dwa) F2@(17, 2) HP 74/74 MP 0/0 Hu 81 $ 621 room=C
+-> o
+T 313 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 2) HP 74/74 MP 0/0 Hu 81 $ 621 room=.
+-> w
+T 314 mode=game_loop           Borin Steelpalm(dwa) F2@(16, 2) HP 74/74 MP 0/0 Hu 80 $ 621 room=.
+-> w
+T 315 mode=game_loop           Borin Steelpalm(dwa) F2@(15, 2) HP 74/74 MP 0/0 Hu 79 $ 621 room=.
+-> s
+T 316 mode=game_loop           Borin Steelpalm(dwa) F2@(15, 3) HP 74/74 MP 0/0 Hu 78 $ 621 room=.
+-> e
+T 317 mode=game_loop           Borin Steelpalm(dwa) F2@(16, 3) HP 74/74 MP 0/0 Hu 77 $ 621 room=.
+-> s
+T 318 mode=chest_mode          Borin Steelpalm(dwa) F2@(16, 4) HP 74/74 MP 0/0 Hu 76 $ 621 room=C
+-> o
+T 319 mode=game_loop           Borin Steelpalm(dwa) F2@(16, 4) HP 74/74 MP 0/0 Hu 76 $ 641 room=.
+-> e
+T 320 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 4) HP 74/74 MP 0/0 Hu 75 $ 641 room=.
+-> l
+T 321 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 4) HP 74/74 MP 0/0 Hu 75 $ 641 room=.
+-> s
+T 322 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 5) HP 74/74 MP 0/0 Hu 74 $ 641 room=.
+-> l
+T 323 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 5) HP 74/74 MP 0/0 Hu 74 $ 641 room=.
+-> s
+T 324 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 6) HP 74/74 MP 0/0 Hu 73 $ 641 room=.
+-> s
+T 325 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 7) HP 74/74 MP 0/0 Hu 72 $ 641 room=.
+-> l
+T 326 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 7) HP 74/74 MP 0/0 Hu 72 $ 641 room=.
+-> s
+T 327 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 8) HP 74/74 MP 0/0 Hu 71 $ 641 room=.
+-> l
+T 328 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 8) HP 74/74 MP 0/0 Hu 71 $ 641 room=.
+-> s
+T 329 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 9) HP 74/74 MP 0/0 Hu 70 $ 641 room=.
+-> l
+T 330 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 9) HP 74/74 MP 0/0 Hu 70 $ 641 room=.
+-> l
+T 331 mode=game_loop           Borin Steelpalm(dwa) F2@(17, 9) HP 74/74 MP 0/0 Hu 70 $ 641 room=.
+-> w
+T 332 mode=altar_mode          Borin Steelpalm(dwa) F2@(16, 9) HP 74/74 MP 0/0 Hu 69 $ 641 room=A
+-> pray
+T 333 mode=game_loop           Borin Steelpalm(dwa) F2@(16, 9) HP 74/74 MP 0/0 Hu 69 $ 641 room=.
+-> n
+T 334 mode=game_loop           Borin Steelpalm(dwa) F2@(16, 8) HP 74/74 MP 0/0 Hu 68 $ 641 room=.
+-> s
+T 335 mode=game_loop           Borin Steelpalm(dwa) F2@(16, 9) HP 74/74 MP 0/0 Hu 67 $ 641 room=.
+-> w
+T 336 mode=game_loop           Borin Steelpalm(dwa) F2@(15, 9) HP 74/74 MP 0/0 Hu 66 $ 641 room=.
+-> w
+T 337 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 9) HP 74/74 MP 0/0 Hu 65 $ 641 room=.
+-> w
+T 338 mode=game_loop           Borin Steelpalm(dwa) F2@(13, 9) HP 74/74 MP 0/0 Hu 64 $ 641 room=.
+-> w
+T 339 mode=chest_mode          Borin Steelpalm(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 63 $ 641 room=C
+-> o
+T 340 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 63 $ 691 room=.
+-> l
+T 341 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 63 $ 691 room=.
+-> s
+T 342 mode=game_loop           Borin Steelpalm(dwa) F2@(12,10) HP 74/74 MP 0/0 Hu 62 $ 691 room=.
+-> e
+T 343 mode=garden_mode         Borin Steelpalm(dwa) F2@(13,10) HP 74/74 MP 0/0 Hu 61 $ 691 room=G
+-> h
+T 344 mode=game_loop           Borin Steelpalm(dwa) F2@(13,10) HP 74/74 MP 0/0 Hu 61 $ 691 room=.
+-> n
+T 345 mode=game_loop           Borin Steelpalm(dwa) F2@(13, 9) HP 74/74 MP 0/0 Hu 60 $ 691 room=.
+-> n
+T 346 mode=game_loop           Borin Steelpalm(dwa) F2@(13, 8) HP 74/74 MP 0/0 Hu 59 $ 691 room=.
+-> n
+T 347 mode=game_loop           Borin Steelpalm(dwa) F2@(13, 7) HP 74/74 MP 0/0 Hu 58 $ 691 room=.
+-> n
+T 348 mode=game_loop           Borin Steelpalm(dwa) F2@(13, 6) HP 74/74 MP 0/0 Hu 57 $ 691 room=.
+-> e
+T 349 mode=altar_mode          Borin Steelpalm(dwa) F2@(14, 6) HP 74/74 MP 0/0 Hu 56 $ 691 room=A
+-> pray
+T 350 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 6) HP 74/74 MP 0/0 Hu 56 $ 691 room=.
+-> l
+T 351 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 6) HP 74/74 MP 0/0 Hu 56 $ 691 room=.
+-> n
+T 352 mode=game_loop           Borin Steelpalm(dwa) F2@(14, 5) HP 74/74 MP 0/0 Hu 55 $ 691 room=.
+-> w
+T 353 mode=game_loop           Borin Steelpalm(dwa) F2@(13, 5) HP 74/74 MP 0/0 Hu 54 $ 691 room=.
+-> w
+T 354 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 5) HP 74/74 MP 0/0 Hu 53 $ 691 room=.
+-> s
+T 355 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 6) HP 74/74 MP 0/0 Hu 52 $ 691 room=.
+-> s
+T 356 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 7) HP 74/74 MP 0/0 Hu 51 $ 691 room=.
+-> s
+T 357 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 8) HP 74/74 MP 0/0 Hu 50 $ 691 room=.
+-> s
+T 358 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 49 $ 691 room=.
+-> i
+T 359 mode=inventory           Borin Steelpalm(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 49 $ 691 room=.
+-> eat1
+T 360 mode=inventory           Borin Steelpalm(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 99 $ 691 room=.
+-> x
+T 361 mode=game_loop           Borin Steelpalm(dwa) F2@(12, 9) HP 74/74 MP 0/0 Hu 99 $ 691 room=.
+-> w
+T 362 mode=stairs_down_mode    Borin Steelpalm(dwa) F2@(11, 9) HP 74/74 MP 0/0 Hu 98 $ 691 room=D
+-> d
+T 363 mode=stairs_up_mode      Borin Steelpalm(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 98 $ 691 room=U
+-> n
+T 364 mode=stairs_up_mode      Borin Steelpalm(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 98 $ 691 room=U
+-> n
+T 365 mode=stairs_up_mode      Borin Steelpalm(dwa) F3@( 1, 1) HP 74/74 MP 0/0 Hu 98 $ 691 room=U
+-> e
+T 366 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 97 $ 691 room=.
+-> l
+T 367 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 1) HP 74/74 MP 0/0 Hu 97 $ 691 room=.
+-> e
+T 368 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 96 $ 691 room=.
+-> l
+T 369 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 96 $ 691 room=.
+-> e
+T 370 mode=library_mode        Borin Steelpalm(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 95 $ 691 room=L
+-> r
+T 371 mode=library_read_decision_mode Borin Steelpalm(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 95 $ 691 room=L
+-> y
+T 372 mode=game_loop           Borin Steelpalm(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 95 $ 691 room=.
+-> l
+T 373 mode=game_loop           Borin Steelpalm(dwa) F3@( 4, 1) HP 74/74 MP 0/0 Hu 95 $ 691 room=.
+-> e
+T 374 mode=library_mode        Borin Steelpalm(dwa) F3@( 5, 1) HP 74/74 MP 0/0 Hu 94 $ 691 room=L
+-> r
+T 375 mode=library_read_decision_mode Borin Steelpalm(dwa) F3@( 5, 1) HP 74/74 MP 0/0 Hu 94 $ 691 room=L
+-> y
+T 376 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 1) HP 74/74 MP 0/0 Hu 94 $ 766 room=.
+-> l
+T 377 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 1) HP 74/74 MP 0/0 Hu 94 $ 766 room=.
+-> s
+T 378 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 2) HP 66/74 MP 0/0 Hu 93 $ 766 room=.
+-> l
+T 379 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 2) HP 66/74 MP 0/0 Hu 93 $ 766 room=.
+-> e
+T 380 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 2) HP 59/74 MP 0/0 Hu 92 $ 766 room=.
+-> l
+T 381 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 2) HP 59/74 MP 0/0 Hu 92 $ 766 room=.
+-> e
+T 382 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 766 room=V
+-> r1
+T 383 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 690 room=V
+-> r3
+T 384 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 641 room=V
+-> b10
+T 385 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 631 room=V
+-> b5
+T 386 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 601 room=V
+-> b5
+T 387 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 571 room=V
+-> b8
+T 388 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 566 room=V
+-> b6
+T 389 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 416 room=V
+-> b4
+T 390 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 356 room=V
+-> b1
+T 391 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 236 room=V
+-> id6
+T 392 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 186 room=V
+-> id9
+T 393 mode=vendor_shop         Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 86 room=V
+-> x
+T 394 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 86 room=V
+-> i
+T 395 mode=inventory           Borin Steelpalm(dwa) F3@( 7, 2) HP 51/74 MP 0/0 Hu 91 $ 86 room=V
+-> u6
+T 396 mode=inventory           Borin Steelpalm(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 91 $ 86 room=V
+-> u4
+T 397 mode=upgrade_scroll_mode Borin Steelpalm(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 91 $ 86 room=V
+-> 1
+T 398 mode=inventory           Borin Steelpalm(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 91 $ 86 room=V
+-> x
+T 399 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 91 $ 86 room=V
+-> i
+T 400 mode=inventory           Borin Steelpalm(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 91 $ 86 room=V
+-> e1
+T 401 mode=inventory           Borin Steelpalm(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 91 $ 86 room=V
+-> x
+T 402 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 91 $ 86 room=V
+-> l
+T 403 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 74/74 MP 0/0 Hu 91 $ 86 room=V
+-> s
+T 404 mode=altar_mode          Borin Steelpalm(dwa) F3@( 7, 3) HP 67/74 MP 0/0 Hu 90 $ 86 room=A
+-> pray
+T 405 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 3) HP 67/74 MP 0/0 Hu 90 $ 186 room=.
+-> l
+T 406 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 3) HP 67/74 MP 0/0 Hu 90 $ 186 room=.
+-> w
+T 407 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 3) HP 67/74 MP 0/0 Hu 89 $ 186 room=.
+-> s
+T 408 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 4) HP 68/74 MP 0/0 Hu 88 $ 186 room=.
+-> i
+T 409 mode=inventory           Borin Steelpalm(dwa) F3@( 6, 4) HP 68/74 MP 0/0 Hu 88 $ 186 room=.
+-> u6
+T 410 mode=inventory           Borin Steelpalm(dwa) F3@( 6, 4) HP 74/74 MP 0/0 Hu 88 $ 186 room=.
+-> x
+T 411 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 4) HP 74/74 MP 0/0 Hu 88 $ 186 room=.
+-> s
+T 412 mode=combat_mode         Borin Steelpalm(dwa) F3@( 6, 5) HP 74/74 MP 0/0 Hu 87 $ 186 room=M vs Wight(L2 HP40/40)
+-> a
+T 413 mode=combat_mode         Borin Steelpalm(dwa) F3@( 6, 5) HP 74/74 MP 0/0 Hu 87 $ 186 room=M vs Wight(L2 HP13/40)
+-> a
+T 414 mode=combat_victory      Borin Steelpalm(dwa) F3@( 6, 5) HP 74/74 MP 0/0 Hu 87 $ 207 room=.
+-> back
+T 415 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 5) HP 74/74 MP 0/0 Hu 87 $ 207 room=.
+-> n
+T 416 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 4) HP 74/74 MP 0/0 Hu 86 $ 207 room=.
+-> w
+T 417 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 4) HP 74/74 MP 0/0 Hu 85 $ 207 room=.
+-> n
+T 418 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 3) HP 74/74 MP 0/0 Hu 84 $ 207 room=.
+-> n
+T 419 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 2) HP 74/74 MP 0/0 Hu 83 $ 207 room=.
+-> w
+T 420 mode=game_loop           Borin Steelpalm(dwa) F3@( 4, 2) HP 74/74 MP 0/0 Hu 82 $ 207 room=.
+-> w
+T 421 mode=combat_mode         Borin Steelpalm(dwa) F3@( 3, 2) HP 74/74 MP 0/0 Hu 81 $ 207 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T 422 mode=combat_mode         Borin Steelpalm(dwa) F3@( 3, 2) HP 73/74 MP 0/0 Hu 81 $ 207 room=M vs Giant Rat(L2 HP22/22)
+-> f
+T 423 mode=flee_direction_mode Borin Steelpalm(dwa) F3@( 3, 2) HP 70/74 MP 0/0 Hu 81 $ 207 room=M
+-> n
+T 424 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 68/74 MP 0/0 Hu 81 $ 207 room=.
+-> i
+T 425 mode=inventory           Borin Steelpalm(dwa) F3@( 3, 1) HP 68/74 MP 0/0 Hu 81 $ 207 room=.
+-> u6
+T 426 mode=inventory           Borin Steelpalm(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 81 $ 207 room=.
+-> x
+T 427 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 81 $ 207 room=.
+-> w
+T 428 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 1) HP 72/74 MP 0/0 Hu 80 $ 207 room=.
+-> s
+T 429 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 2) HP 72/74 MP 0/0 Hu 79 $ 207 room=.
+-> s
+T 430 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 72/74 MP 0/0 Hu 78 $ 207 room=.
+-> l
+T 431 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 72/74 MP 0/0 Hu 78 $ 207 room=.
+-> s
+T 432 mode=combat_mode         Borin Steelpalm(dwa) F3@( 2, 4) HP 73/74 MP 0/0 Hu 77 $ 207 room=M vs Sewer Rat(L2 HP10/10)
+-> a
+T 433 mode=combat_mode         Borin Steelpalm(dwa) F3@( 2, 4) HP 73/74 MP 0/0 Hu 77 $ 207 room=M vs Sewer Rat(L2 HP10/10)
+-> f
+T 434 mode=flee_direction_mode Borin Steelpalm(dwa) F3@( 2, 4) HP 72/74 MP 0/0 Hu 77 $ 207 room=M
+-> s
+T 435 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 5) HP 72/74 MP 0/0 Hu 77 $ 207 room=.
+-> e
+T 436 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 5) HP 72/74 MP 0/0 Hu 76 $ 207 room=.
+-> n
+T 437 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 4) HP 72/74 MP 0/0 Hu 75 $ 207 room=.
+-> n
+T 438 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 3) HP 72/74 MP 0/0 Hu 74 $ 207 room=.
+-> n
+T 439 mode=combat_mode         Borin Steelpalm(dwa) F3@( 3, 2) HP 73/74 MP 0/0 Hu 73 $ 207 room=M vs Giant Rat(L2 HP22/22)
+-> f
+T 440 mode=flee_direction_mode Borin Steelpalm(dwa) F3@( 3, 2) HP 72/74 MP 0/0 Hu 73 $ 207 room=M
+-> n
+T 441 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 72/74 MP 0/0 Hu 73 $ 207 room=.
+-> e
+T 442 mode=game_loop           Borin Steelpalm(dwa) F3@( 4, 1) HP 72/74 MP 0/0 Hu 72 $ 207 room=.
+-> s
+T 443 mode=game_loop           Borin Steelpalm(dwa) F3@( 4, 2) HP 72/74 MP 0/0 Hu 71 $ 207 room=.
+-> e
+T 444 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 2) HP 72/74 MP 0/0 Hu 70 $ 207 room=.
+-> e
+T 445 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 2) HP 73/74 MP 0/0 Hu 69 $ 207 room=.
+-> e
+T 446 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 73/74 MP 0/0 Hu 68 $ 207 room=V
+-> n
+T 447 mode=combat_mode         Borin Steelpalm(dwa) F3@( 7, 1) HP 73/74 MP 0/0 Hu 67 $ 207 room=M vs Cockatrice(L2 HP25/25)
+-> a
+T 448 mode=combat_mode         Borin Steelpalm(dwa) F3@( 7, 1) HP 72/74 MP 0/0 Hu 67 $ 207 room=M vs Cockatrice(L2 HP25/25)
+-> a
+T 449 mode=combat_victory      Borin Steelpalm(dwa) F3@( 7, 1) HP 72/74 MP 0/0 Hu 67 $ 216 room=.
+-> back
+T 450 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 1) HP 72/74 MP 0/0 Hu 67 $ 216 room=.
+-> e
+T 451 mode=chest_mode          Borin Steelpalm(dwa) F3@( 8, 1) HP 72/74 MP 0/0 Hu 66 $ 216 room=C
+-> o
+T 452 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 1) HP 72/74 MP 0/0 Hu 66 $ 216 room=.
+-> w
+T 453 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 1) HP 73/74 MP 0/0 Hu 65 $ 216 room=.
+-> w
+T 454 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 1) HP 73/74 MP 0/0 Hu 64 $ 216 room=.
+-> w
+T 455 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 1) HP 73/74 MP 0/0 Hu 63 $ 216 room=.
+-> w
+T 456 mode=game_loop           Borin Steelpalm(dwa) F3@( 4, 1) HP 73/74 MP 0/0 Hu 62 $ 216 room=.
+-> w
+T 457 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 74/74 MP 0/0 Hu 61 $ 216 room=.
+-> s
+T 458 mode=combat_mode         Borin Steelpalm(dwa) F3@( 3, 2) HP 74/74 MP 0/0 Hu 60 $ 216 room=M vs Giant Rat(L2 HP22/22)
+-> f
+T 459 mode=combat_mode         Borin Steelpalm(dwa) F3@( 3, 2) HP 73/74 MP 0/0 Hu 60 $ 216 room=M vs Giant Rat(L2 HP22/22)
+-> f
+T 460 mode=combat_mode         Borin Steelpalm(dwa) F3@( 3, 2) HP 72/74 MP 0/0 Hu 60 $ 216 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T 461 mode=combat_mode         Borin Steelpalm(dwa) F3@( 3, 2) HP 71/74 MP 0/0 Hu 60 $ 216 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T 462 mode=combat_victory      Borin Steelpalm(dwa) F3@( 3, 2) HP 71/84 MP 0/0 Hu 60 $ 234 room=.
+-> back
+T 463 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 2) HP 71/84 MP 0/0 Hu 60 $ 234 room=.
+-> s
+T 464 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 3) HP 71/84 MP 0/0 Hu 59 $ 234 room=.
+-> w
+T 465 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 71/84 MP 0/0 Hu 58 $ 234 room=.
+-> i
+T 466 mode=inventory           Borin Steelpalm(dwa) F3@( 2, 3) HP 71/84 MP 0/0 Hu 58 $ 234 room=.
+-> u6
+T 467 mode=inventory           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 58 $ 234 room=.
+-> x
+T 468 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 58 $ 234 room=.
+-> w
+T 469 mode=combat_mode         Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 57 $ 234 room=M vs Bugbear(L2 HP55/55)
+-> a
+T 470 mode=combat_mode         Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 57 $ 234 room=M vs Bugbear(L2 HP29/55)
+-> a
+T 471 mode=combat_mode         Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 57 $ 234 room=M vs Bugbear(L2 HP29/55)
+-> a
+T 472 mode=combat_mode         Borin Steelpalm(dwa) F3@( 1, 3) HP 82/84 MP 0/0 Hu 57 $ 234 room=M vs Bugbear(L2 HP3/55)
+-> a
+T 473 mode=combat_mode         Borin Steelpalm(dwa) F3@( 1, 3) HP 80/84 MP 0/0 Hu 57 $ 234 room=M vs Bugbear(L2 HP3/55)
+-> a
+T 474 mode=combat_mode         Borin Steelpalm(dwa) F3@( 1, 3) HP 78/84 MP 0/0 Hu 57 $ 234 room=M vs Bugbear(L2 HP3/55)
+-> a
+T 475 mode=combat_mode         Borin Steelpalm(dwa) F3@( 1, 3) HP 76/84 MP 0/0 Hu 57 $ 234 room=M vs Bugbear(L2 HP3/55)
+-> a
+T 476 mode=combat_mode         Borin Steelpalm(dwa) F3@( 1, 3) HP 76/84 MP 0/0 Hu 57 $ 234 room=M vs Bugbear(L2 HP3/55)
+-> a
+T 477 mode=combat_mode         Borin Steelpalm(dwa) F3@( 1, 3) HP 74/84 MP 0/0 Hu 57 $ 234 room=M vs Bugbear(L2 HP3/55)
+-> a
+T 478 mode=combat_victory      Borin Steelpalm(dwa) F3@( 1, 3) HP 74/84 MP 0/0 Hu 57 $ 264 room=.
+-> back
+T 479 mode=game_loop           Borin Steelpalm(dwa) F3@( 1, 3) HP 74/84 MP 0/0 Hu 57 $ 264 room=.
+-> i
+T 480 mode=inventory           Borin Steelpalm(dwa) F3@( 1, 3) HP 74/84 MP 0/0 Hu 57 $ 264 room=.
+-> u6
+T 481 mode=inventory           Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 57 $ 264 room=.
+-> x
+T 482 mode=game_loop           Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 57 $ 264 room=.
+-> i
+T 483 mode=inventory           Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 57 $ 264 room=.
+-> eat3
+T 484 mode=inventory           Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 63 $ 264 room=.
+-> eat1
+T 485 mode=inventory           Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu100 $ 264 room=.
+-> x
+T 486 mode=game_loop           Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu100 $ 264 room=.
+-> l
+T 487 mode=game_loop           Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu100 $ 264 room=.
+-> s
+T 488 mode=game_loop           Borin Steelpalm(dwa) F3@( 1, 4) HP 84/84 MP 0/0 Hu 99 $ 264 room=.
+-> e
+T 489 mode=combat_mode         Borin Steelpalm(dwa) F3@( 2, 4) HP 84/84 MP 0/0 Hu 98 $ 264 room=M vs Sewer Rat(L2 HP10/10)
+-> a
+T 490 mode=combat_mode         Borin Steelpalm(dwa) F3@( 2, 4) HP 83/84 MP 0/0 Hu 98 $ 264 room=M vs Sewer Rat(L2 HP10/10)
+-> a
+T 491 mode=combat_mode         Borin Steelpalm(dwa) F3@( 2, 4) HP 82/84 MP 0/0 Hu 98 $ 264 room=M vs Sewer Rat(L2 HP10/10)
+-> a
+T 492 mode=combat_victory      Borin Steelpalm(dwa) F3@( 2, 4) HP 82/84 MP 0/0 Hu 98 $ 267 room=.
+-> back
+T 493 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 4) HP 82/84 MP 0/0 Hu 98 $ 267 room=.
+-> s
+T 494 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 5) HP 82/84 MP 0/0 Hu 97 $ 267 room=.
+-> e
+T 495 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 5) HP 83/84 MP 0/0 Hu 96 $ 267 room=.
+-> n
+T 496 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 4) HP 83/84 MP 0/0 Hu 95 $ 267 room=.
+-> n
+T 497 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 3) HP 84/84 MP 0/0 Hu 94 $ 267 room=.
+-> w
+T 498 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 93 $ 267 room=.
+-> i
+T 499 mode=inventory           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 93 $ 267 room=.
+-> eat3
+T 500 mode=inventory           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 98 $ 267 room=.
+-> x
+T 501 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 98 $ 267 room=.
+-> n
+T 502 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 2) HP 84/84 MP 0/0 Hu 97 $ 267 room=.
+-> n
+T 503 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 96 $ 267 room=.
+-> w
+T 504 mode=stairs_up_mode      Borin Steelpalm(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 95 $ 267 room=U
+-> e
+T 505 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 94 $ 267 room=.
+-> i
+T 506 mode=inventory           Borin Steelpalm(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 94 $ 267 room=.
+-> eat2
+T 507 mode=inventory           Borin Steelpalm(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu100 $ 267 room=.
+-> x
+T 508 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu100 $ 267 room=.
+-> e
+T 509 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 99 $ 267 room=.
+-> s
+T 510 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 2) HP 84/84 MP 0/0 Hu 98 $ 267 room=.
+-> w
+T 511 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 2) HP 84/84 MP 0/0 Hu 97 $ 267 room=.
+-> s
+T 512 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 96 $ 267 room=.
+-> w
+T 513 mode=game_loop           Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 95 $ 267 room=.
+-> s
+T 514 mode=game_loop           Borin Steelpalm(dwa) F3@( 1, 4) HP 84/84 MP 0/0 Hu 94 $ 267 room=.
+-> e
+T 515 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 4) HP 84/84 MP 0/0 Hu 93 $ 267 room=.
+-> e
+T 516 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 4) HP 84/84 MP 0/0 Hu 92 $ 267 room=.
+-> s
+T 517 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 5) HP 84/84 MP 0/0 Hu 91 $ 267 room=.
+-> w
+T 518 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 5) HP 84/84 MP 0/0 Hu 90 $ 267 room=.
+-> n
+T 519 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 4) HP 84/84 MP 0/0 Hu 89 $ 267 room=.
+-> n
+T 520 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 88 $ 267 room=.
+-> w
+T 521 mode=game_loop           Borin Steelpalm(dwa) F3@( 1, 3) HP 84/84 MP 0/0 Hu 87 $ 267 room=.
+-> s
+T 522 mode=game_loop           Borin Steelpalm(dwa) F3@( 1, 4) HP 84/84 MP 0/0 Hu 86 $ 267 room=.
+-> e
+T 523 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 4) HP 84/84 MP 0/0 Hu 85 $ 267 room=.
+-> e
+T 524 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 4) HP 84/84 MP 0/0 Hu 84 $ 267 room=.
+-> s
+T 525 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 5) HP 84/84 MP 0/0 Hu 83 $ 267 room=.
+-> w
+T 526 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 5) HP 84/84 MP 0/0 Hu 82 $ 267 room=.
+-> n
+T 527 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 4) HP 84/84 MP 0/0 Hu 81 $ 267 room=.
+-> n
+T 528 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 80 $ 267 room=.
+-> n
+T 529 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 2) HP 84/84 MP 0/0 Hu 79 $ 267 room=.
+-> e
+T 530 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 2) HP 84/84 MP 0/0 Hu 78 $ 267 room=.
+-> e
+T 531 mode=game_loop           Borin Steelpalm(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 77 $ 267 room=.
+-> e
+T 532 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 76 $ 267 room=.
+-> n
+T 533 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 1) HP 84/84 MP 0/0 Hu 75 $ 267 room=.
+-> e
+T 534 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 1) HP 84/84 MP 0/0 Hu 74 $ 267 room=.
+-> s
+T 535 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 2) HP 84/84 MP 0/0 Hu 73 $ 267 room=.
+-> s
+T 536 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 3) HP 84/84 MP 0/0 Hu 72 $ 267 room=.
+-> w
+T 537 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 3) HP 84/84 MP 0/0 Hu 71 $ 267 room=.
+-> s
+T 538 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 4) HP 84/84 MP 0/0 Hu 70 $ 267 room=.
+-> e
+T 539 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 4) HP 84/84 MP 0/0 Hu 69 $ 267 room=.
+-> s
+T 540 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 5) HP 84/84 MP 0/0 Hu 68 $ 267 room=.
+-> n
+T 541 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 4) HP 84/84 MP 0/0 Hu 67 $ 267 room=.
+-> n
+T 542 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 3) HP 84/84 MP 0/0 Hu 66 $ 267 room=.
+-> e
+T 543 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 3) HP 84/84 MP 0/0 Hu 65 $ 267 room=.
+-> n
+T 544 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 84/84 MP 0/0 Hu 64 $ 267 room=V
+-> n
+T 545 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 1) HP 84/84 MP 0/0 Hu 63 $ 267 room=.
+-> w
+T 546 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 1) HP 84/84 MP 0/0 Hu 62 $ 267 room=.
+-> s
+T 547 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 2) HP 84/84 MP 0/0 Hu 61 $ 267 room=.
+-> s
+T 548 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 3) HP 84/84 MP 0/0 Hu 60 $ 267 room=.
+-> w
+T 549 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 3) HP 84/84 MP 0/0 Hu 59 $ 267 room=.
+-> n
+T 550 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 58 $ 267 room=.
+-> n
+T 551 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 1) HP 84/84 MP 0/0 Hu 57 $ 267 room=.
+-> e
+T 552 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 1) HP 84/84 MP 0/0 Hu 56 $ 267 room=.
+-> s
+T 553 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 2) HP 84/84 MP 0/0 Hu 55 $ 267 room=.
+-> s
+T 554 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 3) HP 84/84 MP 0/0 Hu 54 $ 267 room=.
+-> e
+T 555 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 3) HP 84/84 MP 0/0 Hu 53 $ 267 room=.
+-> n
+T 556 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 84/84 MP 0/0 Hu 52 $ 267 room=V
+-> n
+T 557 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 1) HP 84/84 MP 0/0 Hu 51 $ 267 room=.
+-> w
+T 558 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 1) HP 84/84 MP 0/0 Hu 50 $ 267 room=.
+-> s
+T 559 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 2) HP 84/84 MP 0/0 Hu 49 $ 267 room=.
+-> i
+T 560 mode=inventory           Borin Steelpalm(dwa) F3@( 6, 2) HP 84/84 MP 0/0 Hu 49 $ 267 room=.
+-> eat1
+T 561 mode=inventory           Borin Steelpalm(dwa) F3@( 6, 2) HP 84/84 MP 0/0 Hu 99 $ 267 room=.
+-> x
+T 562 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 2) HP 84/84 MP 0/0 Hu 99 $ 267 room=.
+-> s
+T 563 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 3) HP 84/84 MP 0/0 Hu 98 $ 267 room=.
+-> e
+T 564 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 3) HP 84/84 MP 0/0 Hu 97 $ 267 room=.
+-> n
+T 565 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 84/84 MP 0/0 Hu 96 $ 267 room=V
+-> n
+T 566 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 1) HP 84/84 MP 0/0 Hu 95 $ 267 room=.
+-> w
+T 567 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 1) HP 84/84 MP 0/0 Hu 94 $ 267 room=.
+-> w
+T 568 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 1) HP 84/84 MP 0/0 Hu 93 $ 267 room=.
+-> w
+T 569 mode=game_loop           Borin Steelpalm(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 92 $ 267 room=.
+-> w
+T 570 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 91 $ 267 room=.
+-> l
+T 571 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 91 $ 267 room=.
+-> w
+T 572 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 90 $ 267 room=.
+-> s
+T 573 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 2) HP 84/84 MP 0/0 Hu 89 $ 267 room=.
+-> s
+T 574 mode=game_loop           Borin Steelpalm(dwa) F3@( 2, 3) HP 84/84 MP 0/0 Hu 88 $ 267 room=.
+-> e
+T 575 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 3) HP 84/84 MP 0/0 Hu 87 $ 267 room=.
+-> n
+T 576 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 2) HP 84/84 MP 0/0 Hu 86 $ 267 room=.
+-> n
+T 577 mode=game_loop           Borin Steelpalm(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 85 $ 267 room=.
+-> e
+T 578 mode=game_loop           Borin Steelpalm(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 84 $ 267 room=.
+-> e
+T 579 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 1) HP 84/84 MP 0/0 Hu 83 $ 267 room=.
+-> s
+T 580 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 82 $ 267 room=.
+-> l
+T 581 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 82 $ 267 room=.
+-> s
+T 582 mode=game_loop           Borin Steelpalm(dwa) F3@( 5, 3) HP 84/84 MP 0/0 Hu 81 $ 267 room=.
+-> e
+T 583 mode=game_loop           Borin Steelpalm(dwa) F3@( 6, 3) HP 84/84 MP 0/0 Hu 80 $ 267 room=.
+-> e
+T 584 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 3) HP 84/84 MP 0/0 Hu 79 $ 267 room=.
+-> n
+T 585 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 84/84 MP 0/0 Hu 78 $ 267 room=V
+-> n
+T 586 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 1) HP 84/84 MP 0/0 Hu 77 $ 267 room=.
+-> e
+T 587 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 1) HP 84/84 MP 0/0 Hu 76 $ 267 room=.
+-> w
+T 588 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 1) HP 84/84 MP 0/0 Hu 75 $ 267 room=.
+-> s
+T 589 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 2) HP 84/84 MP 0/0 Hu 74 $ 267 room=V
+-> s
+T 590 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 3) HP 84/84 MP 0/0 Hu 73 $ 267 room=.
+-> l
+T 591 mode=game_loop           Borin Steelpalm(dwa) F3@( 7, 3) HP 84/84 MP 0/0 Hu 73 $ 267 room=.
+-> e
+T 592 mode=warp_mode           Borin Steelpalm(dwa) F3@( 8, 3) HP 84/84 MP 0/0 Hu 72 $ 267 room=W
+-> y
+T 593 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 3) HP 84/84 MP 0/0 Hu 72 $ 267 room=W
+-> l
+T 594 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 3) HP 84/84 MP 0/0 Hu 72 $ 267 room=W
+-> s
+T 595 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 4) HP 84/84 MP 0/0 Hu 71 $ 267 room=.
+-> l
+T 596 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 4) HP 84/84 MP 0/0 Hu 71 $ 267 room=.
+-> s
+T 597 mode=chest_mode          Borin Steelpalm(dwa) F3@( 8, 5) HP 84/84 MP 0/0 Hu 70 $ 267 room=C
+-> o
+T 598 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 5) HP 84/84 MP 0/0 Hu 70 $ 327 room=.
+-> l
+T 599 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 5) HP 84/84 MP 0/0 Hu 70 $ 327 room=.
+-> s
+T 600 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 6) HP 84/84 MP 0/0 Hu 69 $ 327 room=.
+-> l
+T 601 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 6) HP 84/84 MP 0/0 Hu 69 $ 327 room=.
+-> e
+T 602 mode=combat_mode         Borin Steelpalm(dwa) F3@( 9, 6) HP 84/84 MP 0/0 Hu 68 $ 327 room=M vs Bugbear(L2 HP35/35)
+-> a
+T 603 mode=combat_mode         Borin Steelpalm(dwa) F3@( 9, 6) HP 84/84 MP 0/0 Hu 68 $ 327 room=M vs Bugbear(L2 HP35/35)
+-> f
+T 604 mode=combat_mode         Borin Steelpalm(dwa) F3@( 9, 6) HP 83/84 MP 0/0 Hu 68 $ 327 room=M vs Bugbear(L2 HP35/35)
+-> a
+T 605 mode=combat_mode         Borin Steelpalm(dwa) F3@( 9, 6) HP 82/84 MP 0/0 Hu 68 $ 327 room=M vs Bugbear(L2 HP35/35)
+-> a
+T 606 mode=combat_mode         Borin Steelpalm(dwa) F3@( 9, 6) HP 82/84 MP 0/0 Hu 68 $ 327 room=M vs Bugbear(L2 HP35/35)
+-> a
+T 607 mode=combat_mode         Borin Steelpalm(dwa) F3@( 9, 6) HP 82/84 MP 0/0 Hu 68 $ 327 room=M vs Bugbear(L2 HP10/35)
+-> a
+T 608 mode=combat_mode         Borin Steelpalm(dwa) F3@( 9, 6) HP 81/84 MP 0/0 Hu 68 $ 327 room=M vs Bugbear(L2 HP10/35)
+-> a
+T 609 mode=combat_victory      Borin Steelpalm(dwa) F3@( 9, 6) HP 81/84 MP 0/0 Hu 68 $ 348 room=.
+-> back
+T 610 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 6) HP 81/84 MP 0/0 Hu 68 $ 348 room=.
+-> l
+T 611 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 6) HP 81/84 MP 0/0 Hu 68 $ 348 room=.
+-> n
+T 612 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 5) HP 81/84 MP 0/0 Hu 67 $ 348 room=.
+-> n
+T 613 mode=chest_mode          Borin Steelpalm(dwa) F3@( 9, 4) HP 81/84 MP 0/0 Hu 66 $ 348 room=C
+-> o
+T 614 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 4) HP 81/84 MP 0/0 Hu 66 $ 348 room=.
+-> w
+T 615 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 4) HP 81/84 MP 0/0 Hu 65 $ 348 room=.
+-> s
+T 616 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 5) HP 82/84 MP 0/0 Hu 64 $ 348 room=.
+-> s
+T 617 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 6) HP 82/84 MP 0/0 Hu 63 $ 348 room=.
+-> e
+T 618 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 6) HP 82/84 MP 0/0 Hu 62 $ 348 room=.
+-> n
+T 619 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 5) HP 82/84 MP 0/0 Hu 61 $ 348 room=.
+-> n
+T 620 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 4) HP 83/84 MP 0/0 Hu 60 $ 348 room=.
+-> l
+T 621 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 4) HP 83/84 MP 0/0 Hu 60 $ 348 room=.
+-> w
+T 622 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 4) HP 83/84 MP 0/0 Hu 59 $ 348 room=.
+-> s
+T 623 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 5) HP 83/84 MP 0/0 Hu 58 $ 348 room=.
+-> s
+T 624 mode=game_loop           Borin Steelpalm(dwa) F3@( 8, 6) HP 83/84 MP 0/0 Hu 57 $ 348 room=.
+-> e
+T 625 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 6) HP 83/84 MP 0/0 Hu 56 $ 348 room=.
+-> s
+T 626 mode=combat_mode         Borin Steelpalm(dwa) F3@( 9, 7) HP 83/84 MP 0/0 Hu 55 $ 348 room=M vs Bugbear(L2 HP35/35)
+-> f
+T 627 mode=flee_direction_mode Borin Steelpalm(dwa) F3@( 9, 7) HP 83/84 MP 0/0 Hu 55 $ 348 room=M
+-> s
+T 628 mode=combat_mode         Borin Steelpalm(dwa) F3@( 9, 8) HP 83/84 MP 0/0 Hu 55 $ 348 room=M vs UNDEAD ZOMBIE(L2 HP43/43)
+-> f
+T 629 mode=flee_direction_mode Borin Steelpalm(dwa) F3@( 9, 8) HP 83/84 MP 0/0 Hu 55 $ 348 room=M
+-> s
+T 630 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 9) HP 83/84 MP 0/0 Hu 55 $ 348 room=.
+-> l
+T 631 mode=game_loop           Borin Steelpalm(dwa) F3@( 9, 9) HP 83/84 MP 0/0 Hu 55 $ 348 room=.
+-> s
+T 632 mode=game_loop           Borin Steelpalm(dwa) F3@( 9,10) HP 83/84 MP 0/0 Hu 54 $ 348 room=.
+-> l
+T 633 mode=game_loop           Borin Steelpalm(dwa) F3@( 9,10) HP 83/84 MP 0/0 Hu 54 $ 348 room=.
+-> e
+T 634 mode=game_loop           Borin Steelpalm(dwa) F3@(10,10) HP 83/84 MP 0/0 Hu 53 $ 348 room=.
+-> e
+T 635 mode=pool_mode           Borin Steelpalm(dwa) F3@(11,10) HP 83/84 MP 0/0 Hu 52 $ 348 room=P
+-> dr
+T 636 mode=game_loop           Borin Steelpalm(dwa) F3@(11,10) HP 83/84 MP 0/0 Hu 52 $ 348 room=.
+-> e
+T 637 mode=game_loop           Borin Steelpalm(dwa) F3@(12,10) HP 83/84 MP 0/0 Hu 51 $ 348 room=.
+-> l
+T 638 mode=game_loop           Borin Steelpalm(dwa) F3@(12,10) HP 83/84 MP 0/0 Hu 51 $ 348 room=.
+-> n
+T 639 mode=chest_mode          Borin Steelpalm(dwa) F3@(12, 9) HP 83/84 MP 0/0 Hu 50 $ 348 room=C
+-> o
+T 640 mode=game_loop           Borin Steelpalm(dwa) F3@(12, 9) HP 83/84 MP 0/0 Hu 50 $ 418 room=.
+-> l
+T 641 mode=game_loop           Borin Steelpalm(dwa) F3@(12, 9) HP 83/84 MP 0/0 Hu 50 $ 418 room=.
+-> e
+T 642 mode=chest_mode          Borin Steelpalm(dwa) F3@(13, 9) HP 83/84 MP 0/0 Hu 49 $ 418 room=C
+-> o
+T 643 mode=game_loop           Borin Steelpalm(dwa) F3@(13, 9) HP 83/84 MP 0/0 Hu 49 $ 488 room=.
+-> i
+T 644 mode=inventory           Borin Steelpalm(dwa) F3@(13, 9) HP 83/84 MP 0/0 Hu 49 $ 488 room=.
+-> eat1
+T 645 mode=inventory           Borin Steelpalm(dwa) F3@(13, 9) HP 83/84 MP 0/0 Hu 99 $ 488 room=.
+-> x
+T 646 mode=game_loop           Borin Steelpalm(dwa) F3@(13, 9) HP 83/84 MP 0/0 Hu 99 $ 488 room=.
+-> e
+T 647 mode=game_loop           Borin Steelpalm(dwa) F3@(14, 9) HP 83/84 MP 0/0 Hu 98 $ 488 room=.
+-> e
+T 648 mode=game_loop           Borin Steelpalm(dwa) F3@(15, 9) HP 84/84 MP 0/0 Hu 97 $ 488 room=.
+-> e
+T 649 mode=game_loop           Borin Steelpalm(dwa) F3@(16, 9) HP 84/84 MP 0/0 Hu 96 $ 488 room=.
+-> l
+T 650 mode=game_loop           Borin Steelpalm(dwa) F3@(16, 9) HP 84/84 MP 0/0 Hu 96 $ 488 room=.
+-> l
+T 651 mode=game_loop           Borin Steelpalm(dwa) F3@(16, 9) HP 84/84 MP 0/0 Hu 96 $ 488 room=.
+-> e
+T 652 mode=dungeon_mode        Borin Steelpalm(dwa) F3@(17, 9) HP 84/84 MP 0/0 Hu 95 $ 488 room=N
+-> u
+T 653 mode=dungeon_unlocked_mode Borin Steelpalm(dwa) F3@(17, 9) HP 84/84 MP 0/0 Hu 95 $ 488 room=N
+-> r
+T 654 mode=game_loop           Borin Steelpalm(dwa) F3@(17, 9) HP 84/84 MP 0/0 Hu 95 $ 488 room=N
+-> l
+T 655 mode=game_loop           Borin Steelpalm(dwa) F3@(17, 9) HP 84/84 MP 0/0 Hu 95 $ 488 room=N
+-> n
+T 656 mode=library_mode        Borin Steelpalm(dwa) F3@(17, 8) HP 84/84 MP 0/0 Hu 94 $ 488 room=L
+-> r
+T 657 mode=game_loop           Borin Steelpalm(dwa) F3@(17, 8) HP 84/84 MP 0/0 Hu 94 $ 488 room=.
+-> l
+T 658 mode=game_loop           Borin Steelpalm(dwa) F3@(17, 8) HP 84/84 MP 0/0 Hu 94 $ 488 room=.
+-> e
+T 659 mode=game_loop           Borin Steelpalm(dwa) F3@(18, 8) HP 84/84 MP 0/0 Hu 93 $ 488 room=.
+-> l
+T 660 mode=game_loop           Borin Steelpalm(dwa) F3@(18, 8) HP 84/84 MP 0/0 Hu 93 $ 488 room=.
+-> l
+T 661 mode=game_loop           Borin Steelpalm(dwa) F3@(18, 8) HP 84/84 MP 0/0 Hu 93 $ 488 room=.
+-> s
+T 662 mode=game_loop           Borin Steelpalm(dwa) F3@(18, 9) HP 84/84 MP 0/0 Hu 92 $ 488 room=.
+-> s
+T 663 mode=game_loop           Borin Steelpalm(dwa) F3@(18,10) HP 84/84 MP 0/0 Hu 91 $ 488 room=.
+-> l
+T 664 mode=game_loop           Borin Steelpalm(dwa) F3@(18,10) HP 84/84 MP 0/0 Hu 91 $ 488 room=.
+-> s
+T 665 mode=game_loop           Borin Steelpalm(dwa) F3@(18,11) HP 84/84 MP 0/0 Hu 90 $ 488 room=.
+-> l
+T 666 mode=game_loop           Borin Steelpalm(dwa) F3@(18,11) HP 84/84 MP 0/0 Hu 90 $ 488 room=.
+-> e
+T 667 mode=game_loop           Borin Steelpalm(dwa) F3@(19,11) HP 84/84 MP 0/0 Hu 89 $ 488 room=.
+-> n
+T 668 mode=chest_mode          Borin Steelpalm(dwa) F3@(19,10) HP 84/84 MP 0/0 Hu 88 $ 488 room=C
+-> o
+T 669 mode=game_loop           Borin Steelpalm(dwa) F3@(19,11) HP 84/84 MP 0/0 Hu 87 $ 488 room=.
+-> n
+T 670 mode=game_loop           Borin Steelpalm(dwa) F3@(19,10) HP 84/84 MP 0/0 Hu 86 $ 488 room=.
+-> l
+T 671 mode=game_loop           Borin Steelpalm(dwa) F3@(19,10) HP 84/84 MP 0/0 Hu 86 $ 488 room=.
+-> n
+T 672 mode=game_loop           Borin Steelpalm(dwa) F3@(19, 9) HP 84/84 MP 0/0 Hu 85 $ 488 room=.
+-> w
+T 673 mode=game_loop           Borin Steelpalm(dwa) F3@(18, 9) HP 84/84 MP 0/0 Hu 84 $ 488 room=.
+-> w
+T 674 mode=game_loop           Borin Steelpalm(dwa) F3@(17, 9) HP 84/84 MP 0/0 Hu 83 $ 488 room=N
+-> w
+T 675 mode=game_loop           Borin Steelpalm(dwa) F3@(16, 9) HP 84/84 MP 0/0 Hu 82 $ 488 room=.
+-> w
+T 676 mode=game_loop           Borin Steelpalm(dwa) F3@(15, 9) HP 84/84 MP 0/0 Hu 81 $ 488 room=.
+-> s
+T 677 mode=game_loop           Borin Steelpalm(dwa) F3@(15,10) HP 84/84 MP 0/0 Hu 80 $ 488 room=.
+-> s
+T 678 mode=game_loop           Borin Steelpalm(dwa) F3@(15,11) HP 84/84 MP 0/0 Hu 79 $ 488 room=.
+-> l
+T 679 mode=game_loop           Borin Steelpalm(dwa) F3@(15,11) HP 84/84 MP 0/0 Hu 79 $ 488 room=.
+-> e
+T 680 mode=stairs_down_mode    Borin Steelpalm(dwa) F3@(16,11) HP 84/84 MP 0/0 Hu 78 $ 488 room=D
+-> d
+T 681 mode=stairs_up_mode      Borin Steelpalm(dwa) F4@( 1, 1) HP 84/84 MP 0/0 Hu 78 $ 488 room=U
+-> s
+T 682 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 2) HP 84/84 MP 0/0 Hu 77 $ 488 room=M vs Gargoyle(L3 HP60/60)
+-> f
+T 683 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 2) HP 71/84 MP 0/0 Hu 77 $ 488 room=M vs Gargoyle(L3 HP60/60)
+-> a
+T 684 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 2) HP 58/84 MP 0/0 Hu 77 $ 488 room=M vs Gargoyle(L3 HP38/60)
+-> a
+T 685 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 2) HP 45/84 MP 0/0 Hu 77 $ 488 room=M vs Gargoyle(L3 HP16/60)
+-> a
+T 686 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 2) HP 32/84 MP 0/0 Hu 77 $ 488 room=M vs Gargoyle(L3 HP16/60)
+-> i
+T 687 mode=inventory           Borin Steelpalm(dwa) F4@( 1, 2) HP 32/84 MP 0/0 Hu 77 $ 488 room=M
+-> u2
+T 688 mode=inventory           Borin Steelpalm(dwa) F4@( 1, 2) HP 82/84 MP 0/0 Hu 77 $ 488 room=M
+-> x
+T 689 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 2) HP 82/84 MP 0/0 Hu 77 $ 488 room=M vs Gargoyle(L3 HP16/60)
+-> a
+T 690 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 2) HP 69/84 MP 0/0 Hu 77 $ 488 room=M vs Gargoyle(L3 HP16/60)
+-> a
+T 691 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 2) HP 56/84 MP 0/0 Hu 77 $ 488 room=M vs Gargoyle(L3 HP16/60)
+-> a
+T 692 mode=combat_victory      Borin Steelpalm(dwa) F4@( 1, 2) HP 56/94 MP 0/0 Hu 77 $ 528 room=.
+-> back
+T 693 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 2) HP 56/94 MP 0/0 Hu 77 $ 528 room=.
+-> l
+T 694 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 2) HP 56/94 MP 0/0 Hu 77 $ 528 room=.
+-> i
+T 695 mode=inventory           Borin Steelpalm(dwa) F4@( 1, 2) HP 56/94 MP 0/0 Hu 77 $ 528 room=.
+-> u6
+T 696 mode=inventory           Borin Steelpalm(dwa) F4@( 1, 2) HP 86/94 MP 0/0 Hu 77 $ 528 room=.
+-> u1
+T 697 mode=inventory           Borin Steelpalm(dwa) F4@( 1, 2) HP 86/94 MP 0/0 Hu 77 $ 528 room=.
+-> x
+T 698 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 2) HP 86/94 MP 0/0 Hu 77 $ 528 room=.
+-> e
+T 699 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 2) HP 86/94 MP 0/0 Hu 76 $ 528 room=.
+-> l
+T 700 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 2) HP 86/94 MP 0/0 Hu 76 $ 528 room=.
+-> n
+T 701 mode=library_mode        Borin Steelpalm(dwa) F4@( 2, 1) HP 86/94 MP 0/0 Hu 75 $ 528 room=L
+-> r
+T 702 mode=library_read_decision_mode Borin Steelpalm(dwa) F4@( 2, 1) HP 86/94 MP 0/0 Hu 75 $ 528 room=L
+-> y
+T 703 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 1) HP 86/94 MP 0/0 Hu 75 $ 528 room=.
+-> l
+T 704 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 1) HP 86/94 MP 0/0 Hu 75 $ 528 room=.
+-> e
+T 705 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 1) HP 86/94 MP 0/0 Hu 74 $ 528 room=.
+-> e
+T 706 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 1) HP 87/94 MP 0/0 Hu 73 $ 528 room=.
+-> s
+T 707 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 2) HP 87/94 MP 0/0 Hu 72 $ 528 room=.
+-> l
+T 708 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 2) HP 87/94 MP 0/0 Hu 72 $ 528 room=.
+-> e
+T 709 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 2) HP 87/94 MP 0/0 Hu 71 $ 528 room=.
+-> l
+T 710 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 2) HP 87/94 MP 0/0 Hu 71 $ 528 room=.
+-> s
+T 711 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 3) HP 87/94 MP 0/0 Hu 70 $ 528 room=.
+-> n
+T 712 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 2) HP 88/94 MP 0/0 Hu 69 $ 528 room=.
+-> n
+T 713 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 1) HP 88/94 MP 0/0 Hu 68 $ 528 room=.
+-> w
+T 714 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 1) HP 88/94 MP 0/0 Hu 67 $ 528 room=.
+-> s
+T 715 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 2) HP 88/94 MP 0/0 Hu 66 $ 528 room=.
+-> e
+T 716 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 2) HP 89/94 MP 0/0 Hu 65 $ 528 room=.
+-> s
+T 717 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 3) HP 89/94 MP 0/0 Hu 64 $ 528 room=.
+-> n
+T 718 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 2) HP 89/94 MP 0/0 Hu 63 $ 528 room=.
+-> n
+T 719 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 1) HP 89/94 MP 0/0 Hu 62 $ 528 room=.
+-> w
+T 720 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 1) HP 90/94 MP 0/0 Hu 61 $ 528 room=.
+-> w
+T 721 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 1) HP 90/94 MP 0/0 Hu 60 $ 528 room=.
+-> w
+T 722 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 1) HP 90/94 MP 0/0 Hu 59 $ 528 room=.
+-> w
+T 723 mode=stairs_up_mode      Borin Steelpalm(dwa) F4@( 1, 1) HP 90/94 MP 0/0 Hu 58 $ 528 room=U
+-> s
+T 724 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 2) HP 90/94 MP 0/0 Hu 57 $ 528 room=.
+-> s
+T 725 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 3) HP 90/94 MP 0/0 Hu 56 $ 528 room=M vs Hell Hound(L3 HP65/65)
+-> a
+T 726 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 3) HP 90/94 MP 0/0 Hu 56 $ 528 room=M vs Hell Hound(L3 HP65/65)
+-> a
+T 727 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 3) HP 79/94 MP 0/0 Hu 56 $ 528 room=M vs Hell Hound(L3 HP65/65)
+-> a
+T 728 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 3) HP 68/94 MP 0/0 Hu 56 $ 528 room=M vs Hell Hound(L3 HP40/65)
+-> f
+T 729 mode=flee_direction_mode Borin Steelpalm(dwa) F4@( 1, 3) HP 68/94 MP 0/0 Hu 56 $ 528 room=M
+-> s
+T 730 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 4) HP 68/94 MP 0/0 Hu 56 $ 528 room=.
+-> s
+T 731 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 5) HP 68/94 MP 0/0 Hu 55 $ 528 room=.
+-> s
+T 732 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 6) HP 68/94 MP 0/0 Hu 54 $ 528 room=.
+-> s
+T 733 mode=chest_mode          Borin Steelpalm(dwa) F4@( 1, 7) HP 68/94 MP 0/0 Hu 53 $ 528 room=C
+-> o
+T 734 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 7) HP 68/94 MP 0/0 Hu 53 $ 628 room=.
+-> e
+T 735 mode=dungeon_mode        Borin Steelpalm(dwa) F4@( 2, 7) HP 68/94 MP 0/0 Hu 52 $ 628 room=N
+-> u
+T 736 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 7) HP 68/94 MP 0/0 Hu 52 $ 628 room=N
+-> l
+T 737 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 7) HP 68/94 MP 0/0 Hu 52 $ 628 room=N
+-> e
+T 738 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 7) HP 68/94 MP 0/0 Hu 51 $ 628 room=.
+-> l
+T 739 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 7) HP 68/94 MP 0/0 Hu 51 $ 628 room=.
+-> n
+T 740 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 6) HP 68/94 MP 0/0 Hu 50 $ 628 room=.
+-> e
+T 741 mode=altar_mode          Borin Steelpalm(dwa) F4@( 4, 6) HP 68/94 MP 0/0 Hu 49 $ 628 room=A
+-> pray
+T 742 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 6) HP 68/94 MP 0/0 Hu 49 $ 628 room=.
+-> i
+T 743 mode=inventory           Borin Steelpalm(dwa) F4@( 4, 6) HP 68/94 MP 0/0 Hu 49 $ 628 room=.
+-> eat1
+T 744 mode=inventory           Borin Steelpalm(dwa) F4@( 4, 6) HP 68/94 MP 0/0 Hu 99 $ 628 room=.
+-> x
+T 745 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 6) HP 68/94 MP 0/0 Hu 99 $ 628 room=.
+-> l
+T 746 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 6) HP 68/94 MP 0/0 Hu 99 $ 628 room=.
+-> n
+T 747 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 5) HP 68/94 MP 0/0 Hu 98 $ 628 room=.
+-> n
+T 748 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 4) HP 69/94 MP 0/0 Hu 97 $ 628 room=.
+-> s
+T 749 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 5) HP 69/94 MP 0/0 Hu 96 $ 628 room=.
+-> w
+T 750 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 5) HP 70/94 MP 0/0 Hu 95 $ 628 room=.
+-> s
+T 751 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 6) HP 70/94 MP 0/0 Hu 94 $ 628 room=.
+-> w
+T 752 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 6) HP 71/94 MP 0/0 Hu 93 $ 628 room=.
+-> n
+T 753 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 5) HP 71/94 MP 0/0 Hu 92 $ 628 room=.
+-> n
+T 754 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 4) HP 72/94 MP 0/0 Hu 91 $ 628 room=.
+-> w
+T 755 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 4) HP 72/94 MP 0/0 Hu 90 $ 628 room=.
+-> s
+T 756 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 5) HP 73/94 MP 0/0 Hu 89 $ 628 room=.
+-> s
+T 757 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 6) HP 73/94 MP 0/0 Hu 88 $ 628 room=.
+-> s
+T 758 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 7) HP 74/94 MP 0/0 Hu 87 $ 628 room=.
+-> e
+T 759 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 7) HP 74/94 MP 0/0 Hu 86 $ 628 room=N
+-> n
+T 760 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 6) HP 75/94 MP 0/0 Hu 85 $ 628 room=.
+-> n
+T 761 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 5) HP 75/94 MP 0/0 Hu 84 $ 628 room=.
+-> n
+T 762 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 4) HP 75/94 MP 0/0 Hu 83 $ 628 room=.
+-> w
+T 763 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 4) HP 75/94 MP 0/0 Hu 82 $ 628 room=.
+-> s
+T 764 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 5) HP 76/94 MP 0/0 Hu 81 $ 628 room=.
+-> s
+T 765 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 6) HP 76/94 MP 0/0 Hu 80 $ 628 room=.
+-> e
+T 766 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 6) HP 76/94 MP 0/0 Hu 79 $ 628 room=.
+-> n
+T 767 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 5) HP 76/94 MP 0/0 Hu 78 $ 628 room=.
+-> n
+T 768 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 4) HP 77/94 MP 0/0 Hu 77 $ 628 room=.
+-> w
+T 769 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 4) HP 77/94 MP 0/0 Hu 76 $ 628 room=.
+-> n
+T 770 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 3) HP 77/94 MP 0/0 Hu 75 $ 628 room=M vs Hell Hound(L3 HP40/65)
+-> a
+T 771 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 3) HP 66/94 MP 0/0 Hu 75 $ 628 room=M vs Hell Hound(L3 HP15/65)
+-> f
+T 772 mode=flee_direction_mode Borin Steelpalm(dwa) F4@( 1, 3) HP 66/94 MP 0/0 Hu 75 $ 628 room=M
+-> n
+T 773 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 2) HP 66/94 MP 0/0 Hu 75 $ 628 room=.
+-> n
+T 774 mode=stairs_up_mode      Borin Steelpalm(dwa) F4@( 1, 1) HP 66/94 MP 0/0 Hu 74 $ 628 room=U
+-> e
+T 775 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 1) HP 67/94 MP 0/0 Hu 73 $ 628 room=.
+-> s
+T 776 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 2) HP 67/94 MP 0/0 Hu 72 $ 628 room=.
+-> w
+T 777 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 2) HP 67/94 MP 0/0 Hu 71 $ 628 room=.
+-> s
+T 778 mode=combat_mode         Borin Steelpalm(dwa) F4@( 1, 3) HP 67/94 MP 0/0 Hu 70 $ 628 room=M vs Hell Hound(L3 HP15/65)
+-> a
+T 779 mode=combat_victory      Borin Steelpalm(dwa) F4@( 1, 3) HP 67/94 MP 0/0 Hu 70 $ 652 room=.
+-> back
+T 780 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 3) HP 67/94 MP 0/0 Hu 70 $ 652 room=.
+-> i
+T 781 mode=inventory           Borin Steelpalm(dwa) F4@( 1, 3) HP 67/94 MP 0/0 Hu 70 $ 652 room=.
+-> e4
+T 782 mode=inventory           Borin Steelpalm(dwa) F4@( 1, 3) HP 67/94 MP 0/0 Hu 70 $ 652 room=.
+-> x
+T 783 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 3) HP 67/94 MP 0/0 Hu 70 $ 652 room=.
+-> s
+T 784 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 4) HP 68/94 MP 0/0 Hu 69 $ 652 room=.
+-> s
+T 785 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 5) HP 68/94 MP 0/0 Hu 68 $ 652 room=.
+-> s
+T 786 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 6) HP 68/94 MP 0/0 Hu 67 $ 652 room=.
+-> s
+T 787 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 7) HP 68/94 MP 0/0 Hu 66 $ 652 room=.
+-> e
+T 788 mode=dungeon_mode        Borin Steelpalm(dwa) F4@( 2, 7) HP 69/94 MP 0/0 Hu 65 $ 652 room=N
+-> u
+T 789 mode=dungeon_unlocked_mode Borin Steelpalm(dwa) F4@( 2, 7) HP 69/94 MP 0/0 Hu 65 $ 652 room=N
+-> r
+T 790 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 7) HP 69/94 MP 0/0 Hu 65 $ 652 room=N
+-> i
+T 791 mode=inventory           Borin Steelpalm(dwa) F4@( 2, 7) HP 69/94 MP 0/0 Hu 65 $ 652 room=N
+-> u6
+T 792 mode=inventory           Borin Steelpalm(dwa) F4@( 2, 7) HP 94/94 MP 0/0 Hu 65 $ 652 room=N
+-> x
+T 793 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 7) HP 94/94 MP 0/0 Hu 65 $ 652 room=N
+-> n
+T 794 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 6) HP 94/94 MP 0/0 Hu 64 $ 652 room=.
+-> n
+T 795 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 5) HP 94/94 MP 0/0 Hu 63 $ 652 room=.
+-> n
+T 796 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 4) HP 94/94 MP 0/0 Hu 62 $ 652 room=.
+-> w
+T 797 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 4) HP 94/94 MP 0/0 Hu 61 $ 652 room=.
+-> s
+T 798 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 5) HP 94/94 MP 0/0 Hu 60 $ 652 room=.
+-> s
+T 799 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 6) HP 94/94 MP 0/0 Hu 59 $ 652 room=.
+-> s
+T 800 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 7) HP 94/94 MP 0/0 Hu 58 $ 652 room=.
+-> e
+T 801 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 7) HP 94/94 MP 0/0 Hu 57 $ 652 room=N
+-> n
+T 802 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 6) HP 94/94 MP 0/0 Hu 56 $ 652 room=.
+-> n
+T 803 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 5) HP 94/94 MP 0/0 Hu 55 $ 652 room=.
+-> n
+T 804 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 4) HP 94/94 MP 0/0 Hu 54 $ 652 room=.
+-> w
+T 805 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 4) HP 94/94 MP 0/0 Hu 53 $ 652 room=.
+-> n
+T 806 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 3) HP 94/94 MP 0/0 Hu 52 $ 652 room=.
+-> n
+T 807 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 2) HP 94/94 MP 0/0 Hu 51 $ 652 room=.
+-> e
+T 808 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 2) HP 94/94 MP 0/0 Hu 50 $ 652 room=.
+-> n
+T 809 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 1) HP 94/94 MP 0/0 Hu 49 $ 652 room=.
+-> i
+T 810 mode=inventory           Borin Steelpalm(dwa) F4@( 2, 1) HP 94/94 MP 0/0 Hu 49 $ 652 room=.
+-> eat1
+T 811 mode=inventory           Borin Steelpalm(dwa) F4@( 2, 1) HP 94/94 MP 0/0 Hu 99 $ 652 room=.
+-> x
+T 812 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 1) HP 94/94 MP 0/0 Hu 99 $ 652 room=.
+-> e
+T 813 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 1) HP 94/94 MP 0/0 Hu 98 $ 652 room=.
+-> e
+T 814 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 1) HP 94/94 MP 0/0 Hu 97 $ 652 room=.
+-> s
+T 815 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 2) HP 94/94 MP 0/0 Hu 96 $ 652 room=.
+-> e
+T 816 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 2) HP 94/94 MP 0/0 Hu 95 $ 652 room=.
+-> n
+T 817 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 1) HP 94/94 MP 0/0 Hu 94 $ 652 room=.
+-> s
+T 818 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 2) HP 94/94 MP 0/0 Hu 93 $ 652 room=.
+-> s
+T 819 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 3) HP 94/94 MP 0/0 Hu 92 $ 652 room=.
+-> n
+T 820 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 2) HP 94/94 MP 0/0 Hu 91 $ 652 room=.
+-> w
+T 821 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 2) HP 94/94 MP 0/0 Hu 90 $ 652 room=.
+-> n
+T 822 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 1) HP 94/94 MP 0/0 Hu 89 $ 652 room=.
+-> w
+T 823 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 1) HP 94/94 MP 0/0 Hu 88 $ 652 room=.
+-> w
+T 824 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 1) HP 94/94 MP 0/0 Hu 87 $ 652 room=.
+-> s
+T 825 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 2) HP 94/94 MP 0/0 Hu 86 $ 652 room=.
+-> w
+T 826 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 2) HP 94/94 MP 0/0 Hu 85 $ 652 room=.
+-> s
+T 827 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 3) HP 94/94 MP 0/0 Hu 84 $ 652 room=.
+-> s
+T 828 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 4) HP 94/94 MP 0/0 Hu 83 $ 652 room=.
+-> e
+T 829 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 4) HP 94/94 MP 0/0 Hu 82 $ 652 room=.
+-> s
+T 830 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 5) HP 94/94 MP 0/0 Hu 81 $ 652 room=.
+-> w
+T 831 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 5) HP 94/94 MP 0/0 Hu 80 $ 652 room=.
+-> s
+T 832 mode=game_loop           Borin Steelpalm(dwa) F4@( 1, 6) HP 94/94 MP 0/0 Hu 79 $ 652 room=.
+-> e
+T 833 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 6) HP 94/94 MP 0/0 Hu 78 $ 652 room=.
+-> s
+T 834 mode=game_loop           Borin Steelpalm(dwa) F4@( 2, 7) HP 94/94 MP 0/0 Hu 77 $ 652 room=N
+-> e
+T 835 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 7) HP 94/94 MP 0/0 Hu 76 $ 652 room=.
+-> n
+T 836 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 6) HP 94/94 MP 0/0 Hu 75 $ 652 room=.
+-> n
+T 837 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 5) HP 94/94 MP 0/0 Hu 74 $ 652 room=.
+-> e
+T 838 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 5) HP 94/94 MP 0/0 Hu 73 $ 652 room=.
+-> n
+T 839 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 4) HP 94/94 MP 0/0 Hu 72 $ 652 room=.
+-> s
+T 840 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 5) HP 94/94 MP 0/0 Hu 71 $ 652 room=.
+-> s
+T 841 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 6) HP 94/94 MP 0/0 Hu 70 $ 652 room=.
+-> e
+T 842 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 6) HP 94/94 MP 0/0 Hu 69 $ 652 room=.
+-> s
+T 843 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 7) HP 94/94 MP 0/0 Hu 68 $ 652 room=.
+-> w
+T 844 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 7) HP 94/94 MP 0/0 Hu 67 $ 652 room=.
+-> w
+T 845 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 7) HP 94/94 MP 0/0 Hu 66 $ 652 room=.
+-> n
+T 846 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 6) HP 94/94 MP 0/0 Hu 65 $ 652 room=.
+-> n
+T 847 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 5) HP 94/94 MP 0/0 Hu 64 $ 652 room=.
+-> e
+T 848 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 5) HP 94/94 MP 0/0 Hu 63 $ 652 room=.
+-> n
+T 849 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 4) HP 94/94 MP 0/0 Hu 62 $ 652 room=.
+-> s
+T 850 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 5) HP 94/94 MP 0/0 Hu 61 $ 652 room=.
+-> s
+T 851 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 6) HP 94/94 MP 0/0 Hu 60 $ 652 room=.
+-> e
+T 852 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 6) HP 94/94 MP 0/0 Hu 59 $ 652 room=.
+-> e
+T 853 mode=game_loop           Borin Steelpalm(dwa) F4@( 6, 6) HP 94/94 MP 0/0 Hu 58 $ 652 room=.
+-> s
+T 854 mode=game_loop           Borin Steelpalm(dwa) F4@( 6, 7) HP 94/94 MP 0/0 Hu 57 $ 652 room=.
+-> l
+T 855 mode=game_loop           Borin Steelpalm(dwa) F4@( 6, 7) HP 94/94 MP 0/0 Hu 57 $ 652 room=.
+-> s
+T 856 mode=game_loop           Borin Steelpalm(dwa) F4@( 6, 8) HP 94/94 MP 0/0 Hu 56 $ 652 room=.
+-> l
+T 857 mode=game_loop           Borin Steelpalm(dwa) F4@( 6, 8) HP 94/94 MP 0/0 Hu 56 $ 652 room=.
+-> s
+T 858 mode=chest_mode          Borin Steelpalm(dwa) F4@( 6, 9) HP 94/94 MP 0/0 Hu 55 $ 652 room=C
+-> o
+T 859 mode=game_loop           Borin Steelpalm(dwa) F4@( 6, 9) HP 94/94 MP 0/0 Hu 55 $ 652 room=.
+-> l
+T 860 mode=game_loop           Borin Steelpalm(dwa) F4@( 6, 9) HP 94/94 MP 0/0 Hu 55 $ 652 room=.
+-> s
+T 861 mode=library_mode        Borin Steelpalm(dwa) F4@( 6,10) HP 94/94 MP 0/0 Hu 54 $ 652 room=L
+-> r
+T 862 mode=library_read_decision_mode Borin Steelpalm(dwa) F4@( 6,10) HP 94/94 MP 0/0 Hu 54 $ 652 room=L
+-> y
+T 863 mode=game_loop           Borin Steelpalm(dwa) F4@( 6,10) HP 94/94 MP 0/0 Hu 54 $ 652 room=.
+-> l
+T 864 mode=game_loop           Borin Steelpalm(dwa) F4@( 6,10) HP 94/94 MP 0/0 Hu 54 $ 652 room=.
+-> e
+T 865 mode=game_loop           Borin Steelpalm(dwa) F4@( 7,10) HP 94/94 MP 0/0 Hu 53 $ 652 room=.
+-> l
+T 866 mode=game_loop           Borin Steelpalm(dwa) F4@( 7,10) HP 94/94 MP 0/0 Hu 53 $ 652 room=.
+-> s
+T 867 mode=chest_mode          Borin Steelpalm(dwa) F4@( 7,11) HP 94/94 MP 0/0 Hu 52 $ 652 room=C
+-> o
+T 868 mode=game_loop           Borin Steelpalm(dwa) F4@( 7,11) HP 94/94 MP 0/0 Hu 52 $ 652 room=.
+-> l
+T 869 mode=game_loop           Borin Steelpalm(dwa) F4@( 7,11) HP 94/94 MP 0/0 Hu 52 $ 652 room=.
+-> e
+T 870 mode=game_loop           Borin Steelpalm(dwa) F4@( 8,11) HP 94/94 MP 0/0 Hu 51 $ 652 room=.
+-> l
+T 871 mode=game_loop           Borin Steelpalm(dwa) F4@( 8,11) HP 94/94 MP 0/0 Hu 51 $ 652 room=.
+-> n
+T 872 mode=altar_mode          Borin Steelpalm(dwa) F4@( 8,10) HP 94/94 MP 0/0 Hu 50 $ 652 room=A
+-> pray
+T 873 mode=game_loop           Borin Steelpalm(dwa) F4@( 8,10) HP 94/94 MP 0/0 Hu100 $ 652 room=.
+-> e
+T 874 mode=game_loop           Borin Steelpalm(dwa) F4@( 9,10) HP 94/94 MP 0/0 Hu 99 $ 652 room=.
+-> e
+T 875 mode=game_loop           Borin Steelpalm(dwa) F4@(10,10) HP 94/94 MP 0/0 Hu 98 $ 652 room=.
+-> e
+T 876 mode=pool_mode           Borin Steelpalm(dwa) F4@(11,10) HP 94/94 MP 0/0 Hu 97 $ 652 room=P
+-> dr
+T 877 mode=game_loop           Borin Steelpalm(dwa) F4@(11,10) HP 94/94 MP 0/0 Hu 97 $ 652 room=.
+-> s
+T 878 mode=chest_mode          Borin Steelpalm(dwa) F4@(11,11) HP 94/94 MP 0/0 Hu 96 $ 652 room=C
+-> o
+T 879 mode=game_loop           Borin Steelpalm(dwa) F4@(11,11) HP 69/94 MP 0/0 Hu 96 $ 652 room=.
+-> l
+T 880 mode=game_loop           Borin Steelpalm(dwa) F4@(11,11) HP 69/94 MP 0/0 Hu 96 $ 652 room=.
+-> s
+T 881 mode=game_loop           Borin Steelpalm(dwa) F4@(11,12) HP 69/94 MP 0/0 Hu 95 $ 652 room=.
+-> l
+T 882 mode=game_loop           Borin Steelpalm(dwa) F4@(11,12) HP 69/94 MP 0/0 Hu 95 $ 652 room=.
+-> e
+T 883 mode=game_loop           Borin Steelpalm(dwa) F4@(12,12) HP 70/94 MP 0/0 Hu 94 $ 652 room=.
+-> l
+T 884 mode=game_loop           Borin Steelpalm(dwa) F4@(12,12) HP 70/94 MP 0/0 Hu 94 $ 652 room=.
+-> s
+T 885 mode=game_loop           Borin Steelpalm(dwa) F4@(12,13) HP 70/94 MP 0/0 Hu 93 $ 652 room=.
+-> l
+T 886 mode=game_loop           Borin Steelpalm(dwa) F4@(12,13) HP 70/94 MP 0/0 Hu 93 $ 652 room=.
+-> s
+T 887 mode=garden_mode         Borin Steelpalm(dwa) F4@(12,14) HP 71/94 MP 0/0 Hu 92 $ 652 room=G
+-> h
+T 888 mode=game_loop           Borin Steelpalm(dwa) F4@(12,14) HP 71/94 MP 0/0 Hu 92 $ 652 room=.
+-> l
+T 889 mode=game_loop           Borin Steelpalm(dwa) F4@(12,14) HP 71/94 MP 0/0 Hu 92 $ 652 room=.
+-> w
+T 890 mode=game_loop           Borin Steelpalm(dwa) F4@(11,14) HP 71/94 MP 0/0 Hu 91 $ 652 room=.
+-> l
+T 891 mode=game_loop           Borin Steelpalm(dwa) F4@(11,14) HP 71/94 MP 0/0 Hu 91 $ 652 room=.
+-> n
+T 892 mode=game_loop           Borin Steelpalm(dwa) F4@(11,13) HP 72/94 MP 0/0 Hu 90 $ 652 room=.
+-> n
+T 893 mode=game_loop           Borin Steelpalm(dwa) F4@(11,12) HP 72/94 MP 0/0 Hu 89 $ 652 room=.
+-> n
+T 894 mode=game_loop           Borin Steelpalm(dwa) F4@(11,11) HP 73/94 MP 0/0 Hu 88 $ 652 room=.
+-> n
+T 895 mode=game_loop           Borin Steelpalm(dwa) F4@(11,10) HP 73/94 MP 0/0 Hu 87 $ 652 room=.
+-> n
+T 896 mode=garden_mode         Borin Steelpalm(dwa) F4@(11, 9) HP 74/94 MP 0/0 Hu 86 $ 652 room=G
+-> h
+T 897 mode=game_loop           Borin Steelpalm(dwa) F4@(11, 9) HP 74/94 MP 0/0 Hu 86 $ 652 room=.
+-> w
+T 898 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 9) HP 74/94 MP 0/0 Hu 85 $ 652 room=.
+-> s
+T 899 mode=game_loop           Borin Steelpalm(dwa) F4@(10,10) HP 74/94 MP 0/0 Hu 84 $ 652 room=.
+-> s
+T 900 mode=game_loop           Borin Steelpalm(dwa) F4@(10,11) HP 74/94 MP 0/0 Hu 83 $ 652 room=.
+-> l
+T 901 mode=game_loop           Borin Steelpalm(dwa) F4@(10,11) HP 74/94 MP 0/0 Hu 83 $ 652 room=.
+-> s
+T 902 mode=game_loop           Borin Steelpalm(dwa) F4@(10,12) HP 75/94 MP 0/0 Hu 82 $ 652 room=.
+-> s
+T 903 mode=game_loop           Borin Steelpalm(dwa) F4@(10,13) HP 75/94 MP 0/0 Hu 81 $ 652 room=.
+-> s
+T 904 mode=game_loop           Borin Steelpalm(dwa) F4@(10,14) HP 75/94 MP 0/0 Hu 80 $ 652 room=.
+-> s
+T 905 mode=chest_mode          Borin Steelpalm(dwa) F4@(10,15) HP 75/94 MP 0/0 Hu 79 $ 652 room=C
+-> o
+T 906 mode=game_loop           Borin Steelpalm(dwa) F4@(10,15) HP 75/94 MP 0/0 Hu 79 $ 652 room=.
+-> l
+T 907 mode=game_loop           Borin Steelpalm(dwa) F4@(10,15) HP 75/94 MP 0/0 Hu 79 $ 652 room=.
+-> w
+T 908 mode=game_loop           Borin Steelpalm(dwa) F4@( 9,15) HP 76/94 MP 0/0 Hu 78 $ 652 room=.
+-> l
+T 909 mode=game_loop           Borin Steelpalm(dwa) F4@( 9,15) HP 76/94 MP 0/0 Hu 78 $ 652 room=.
+-> s
+T 910 mode=game_loop           Borin Steelpalm(dwa) F4@( 9,16) HP 76/94 MP 0/0 Hu 77 $ 652 room=.
+-> e
+T 911 mode=game_loop           Borin Steelpalm(dwa) F4@(10,16) HP 76/94 MP 0/0 Hu 76 $ 652 room=.
+-> e
+T 912 mode=combat_mode         Borin Steelpalm(dwa) F4@(11,16) HP 76/94 MP 0/0 Hu 75 $ 652 room=M vs Myconid Shaman(L3 HP46/46)
+-> a
+T 913 mode=combat_mode         Borin Steelpalm(dwa) F4@(11,16) HP 76/94 MP 0/0 Hu 75 $ 652 room=M vs Myconid Shaman(L3 HP46/46)
+-> a
+T 914 mode=combat_mode         Borin Steelpalm(dwa) F4@(11,16) HP 76/94 MP 0/0 Hu 75 $ 652 room=M vs Myconid Shaman(L3 HP46/46)
+-> a
+T 915 mode=combat_mode         Borin Steelpalm(dwa) F4@(11,16) HP 75/94 MP 0/0 Hu 75 $ 652 room=M vs Myconid Shaman(L3 HP46/46)
+-> f
+T 916 mode=combat_mode         Borin Steelpalm(dwa) F4@(11,16) HP 74/94 MP 0/0 Hu 75 $ 652 room=M vs Myconid Shaman(L3 HP46/46)
+-> a
+T 917 mode=combat_mode         Borin Steelpalm(dwa) F4@(11,16) HP 73/94 MP 0/0 Hu 75 $ 652 room=M vs Myconid Shaman(L3 HP19/46)
+-> a
+T 918 mode=combat_mode         Borin Steelpalm(dwa) F4@(11,16) HP 72/94 MP 0/0 Hu 75 $ 652 room=M vs Myconid Shaman(L3 HP19/46)
+-> a
+T 919 mode=combat_mode         Borin Steelpalm(dwa) F4@(11,16) HP 71/94 MP 0/0 Hu 75 $ 652 room=M vs Myconid Shaman(L3 HP19/46)
+-> a
+T 920 mode=combat_mode         Borin Steelpalm(dwa) F4@(11,16) HP 71/94 MP 0/0 Hu 75 $ 652 room=M vs Myconid Shaman(L3 HP19/46)
+-> a
+T 921 mode=combat_victory      Borin Steelpalm(dwa) F4@(11,16) HP 71/94 MP 0/0 Hu 75 $ 656 room=.
+-> back
+T 922 mode=game_loop           Borin Steelpalm(dwa) F4@(11,16) HP 71/94 MP 0/0 Hu 75 $ 656 room=.
+-> l
+T 923 mode=game_loop           Borin Steelpalm(dwa) F4@(11,16) HP 71/94 MP 0/0 Hu 75 $ 656 room=.
+-> n
+T 924 mode=game_loop           Borin Steelpalm(dwa) F4@(11,15) HP 72/94 MP 0/0 Hu 74 $ 656 room=.
+-> n
+T 925 mode=game_loop           Borin Steelpalm(dwa) F4@(11,14) HP 72/94 MP 0/0 Hu 73 $ 656 room=.
+-> n
+T 926 mode=game_loop           Borin Steelpalm(dwa) F4@(11,13) HP 72/94 MP 0/0 Hu 72 $ 656 room=.
+-> e
+T 927 mode=game_loop           Borin Steelpalm(dwa) F4@(12,13) HP 72/94 MP 0/0 Hu 71 $ 656 room=.
+-> e
+T 928 mode=game_loop           Borin Steelpalm(dwa) F4@(13,13) HP 73/94 MP 0/0 Hu 70 $ 656 room=.
+-> e
+T 929 mode=game_loop           Borin Steelpalm(dwa) F4@(14,13) HP 73/94 MP 0/0 Hu 69 $ 656 room=.
+-> e
+T 930 mode=game_loop           Borin Steelpalm(dwa) F4@(15,13) HP 73/94 MP 0/0 Hu 68 $ 656 room=.
+-> e
+T 931 mode=game_loop           Borin Steelpalm(dwa) F4@(16,13) HP 73/94 MP 0/0 Hu 67 $ 656 room=.
+-> e
+T 932 mode=library_mode        Borin Steelpalm(dwa) F4@(17,13) HP 74/94 MP 0/0 Hu 66 $ 656 room=L
+-> r
+T 933 mode=library_read_decision_mode Borin Steelpalm(dwa) F4@(17,13) HP 74/94 MP 0/0 Hu 66 $ 656 room=L
+-> y
+T 934 mode=game_loop           Borin Steelpalm(dwa) F4@(17,13) HP 74/94 MP 0/0 Hu 66 $ 656 room=.
+-> e
+T 935 mode=game_loop           Borin Steelpalm(dwa) F4@(18,13) HP 74/94 MP 0/0 Hu 65 $ 656 room=.
+-> n
+T 936 mode=game_loop           Borin Steelpalm(dwa) F4@(18,12) HP 74/94 MP 0/0 Hu 64 $ 656 room=.
+-> l
+T 937 mode=game_loop           Borin Steelpalm(dwa) F4@(18,12) HP 74/94 MP 0/0 Hu 64 $ 656 room=.
+-> n
+T 938 mode=game_loop           Borin Steelpalm(dwa) F4@(18,11) HP 74/94 MP 0/0 Hu 63 $ 656 room=.
+-> l
+T 939 mode=game_loop           Borin Steelpalm(dwa) F4@(18,11) HP 74/94 MP 0/0 Hu 63 $ 656 room=.
+-> n
+T 940 mode=dungeon_mode        Borin Steelpalm(dwa) F4@(18,10) HP 75/94 MP 0/0 Hu 62 $ 656 room=N
+-> u
+T 941 mode=dungeon_unlocked_mode Borin Steelpalm(dwa) F4@(18,10) HP 75/94 MP 0/0 Hu 62 $ 656 room=N
+-> r
+T 942 mode=game_loop           Borin Steelpalm(dwa) F4@(18,10) HP 75/94 MP 0/0 Hu 62 $ 656 room=N
+-> l
+T 943 mode=game_loop           Borin Steelpalm(dwa) F4@(18,10) HP 75/94 MP 0/0 Hu 62 $ 656 room=N
+-> n
+T 944 mode=game_loop           Borin Steelpalm(dwa) F4@(18, 9) HP 75/94 MP 0/0 Hu 61 $ 656 room=.
+-> l
+T 945 mode=game_loop           Borin Steelpalm(dwa) F4@(18, 9) HP 75/94 MP 0/0 Hu 61 $ 656 room=.
+-> n
+T 946 mode=game_loop           Borin Steelpalm(dwa) F4@(18, 8) HP 75/94 MP 0/0 Hu 60 $ 656 room=.
+-> n
+T 947 mode=pool_mode           Borin Steelpalm(dwa) F4@(18, 7) HP 75/94 MP 0/0 Hu 59 $ 656 room=P
+-> dr
+T 948 mode=game_loop           Borin Steelpalm(dwa) F4@(18, 7) HP 75/94 MP 0/0 Hu 59 $ 656 room=.
+-> e
+T 949 mode=game_loop           Borin Steelpalm(dwa) F4@(19, 7) HP 75/94 MP 0/0 Hu 58 $ 656 room=.
+-> n
+T 950 mode=game_loop           Borin Steelpalm(dwa) F4@(19, 6) HP 75/94 MP 0/0 Hu 57 $ 656 room=.
+-> w
+T 951 mode=game_loop           Borin Steelpalm(dwa) F4@(18, 6) HP 75/94 MP 0/0 Hu 56 $ 656 room=.
+-> w
+T 952 mode=game_loop           Borin Steelpalm(dwa) F4@(17, 6) HP 75/94 MP 0/0 Hu 55 $ 656 room=.
+-> w
+T 953 mode=game_loop           Borin Steelpalm(dwa) F4@(16, 6) HP 75/94 MP 0/0 Hu 54 $ 656 room=.
+-> n
+T 954 mode=game_loop           Borin Steelpalm(dwa) F4@(16, 5) HP 75/94 MP 0/0 Hu 53 $ 656 room=.
+-> s
+T 955 mode=game_loop           Borin Steelpalm(dwa) F4@(16, 6) HP 75/94 MP 0/0 Hu 52 $ 656 room=.
+-> s
+T 956 mode=game_loop           Borin Steelpalm(dwa) F4@(16, 7) HP 75/94 MP 0/0 Hu 51 $ 656 room=.
+-> e
+T 957 mode=game_loop           Borin Steelpalm(dwa) F4@(17, 7) HP 75/94 MP 0/0 Hu 50 $ 656 room=.
+-> e
+T 958 mode=game_loop           Borin Steelpalm(dwa) F4@(18, 7) HP 75/94 MP 0/0 Hu 49 $ 656 room=.
+-> s
+T 959 mode=game_loop           Borin Steelpalm(dwa) F4@(18, 8) HP 75/94 MP 0/0 Hu 48 $ 656 room=.
+-> s
+T 960 mode=game_loop           Borin Steelpalm(dwa) F4@(18, 9) HP 75/94 MP 0/0 Hu 47 $ 656 room=.
+-> s
+T 961 mode=game_loop           Borin Steelpalm(dwa) F4@(18,10) HP 75/94 MP 0/0 Hu 46 $ 656 room=N
+-> w
+T 962 mode=game_loop           Borin Steelpalm(dwa) F4@(17,10) HP 75/94 MP 0/0 Hu 45 $ 656 room=.
+-> w
+T 963 mode=game_loop           Borin Steelpalm(dwa) F4@(16,10) HP 75/94 MP 0/0 Hu 44 $ 656 room=.
+-> w
+T 964 mode=game_loop           Borin Steelpalm(dwa) F4@(15,10) HP 75/94 MP 0/0 Hu 43 $ 656 room=.
+-> n
+T 965 mode=game_loop           Borin Steelpalm(dwa) F4@(15, 9) HP 75/94 MP 0/0 Hu 42 $ 656 room=.
+-> w
+T 966 mode=game_loop           Borin Steelpalm(dwa) F4@(14, 9) HP 75/94 MP 0/0 Hu 41 $ 656 room=.
+-> w
+T 967 mode=game_loop           Borin Steelpalm(dwa) F4@(13, 9) HP 75/94 MP 0/0 Hu 40 $ 656 room=.
+-> n
+T 968 mode=game_loop           Borin Steelpalm(dwa) F4@(13, 8) HP 75/94 MP 0/0 Hu 39 $ 656 room=.
+-> w
+T 969 mode=game_loop           Borin Steelpalm(dwa) F4@(12, 8) HP 75/94 MP 0/0 Hu 38 $ 656 room=.
+-> w
+T 970 mode=game_loop           Borin Steelpalm(dwa) F4@(11, 8) HP 75/94 MP 0/0 Hu 37 $ 656 room=.
+-> n
+T 971 mode=game_loop           Borin Steelpalm(dwa) F4@(11, 7) HP 75/94 MP 0/0 Hu 36 $ 656 room=.
+-> n
+T 972 mode=game_loop           Borin Steelpalm(dwa) F4@(11, 6) HP 75/94 MP 0/0 Hu 35 $ 656 room=.
+-> w
+T 973 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 6) HP 75/94 MP 0/0 Hu 34 $ 656 room=.
+-> w
+T 974 mode=game_loop           Borin Steelpalm(dwa) F4@( 9, 6) HP 75/94 MP 0/0 Hu 33 $ 656 room=.
+-> w
+T 975 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 6) HP 75/94 MP 0/0 Hu 32 $ 656 room=.
+-> w
+T 976 mode=game_loop           Borin Steelpalm(dwa) F4@( 7, 6) HP 75/94 MP 0/0 Hu 31 $ 656 room=.
+-> w
+T 977 mode=game_loop           Borin Steelpalm(dwa) F4@( 6, 6) HP 75/94 MP 0/0 Hu 30 $ 656 room=.
+-> w
+T 978 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 6) HP 75/94 MP 0/0 Hu 29 $ 656 room=.
+-> w
+T 979 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 6) HP 75/94 MP 0/0 Hu 28 $ 656 room=.
+-> n
+T 980 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 5) HP 75/94 MP 0/0 Hu 27 $ 656 room=.
+-> n
+T 981 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 4) HP 75/94 MP 0/0 Hu 26 $ 656 room=.
+-> s
+T 982 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 5) HP 75/94 MP 0/0 Hu 25 $ 656 room=.
+-> w
+T 983 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 5) HP 75/94 MP 0/0 Hu 24 $ 656 room=.
+-> s
+T 984 mode=game_loop           Borin Steelpalm(dwa) F4@( 3, 6) HP 75/94 MP 0/0 Hu 23 $ 656 room=.
+-> e
+T 985 mode=game_loop           Borin Steelpalm(dwa) F4@( 4, 6) HP 75/94 MP 0/0 Hu 22 $ 656 room=.
+-> e
+T 986 mode=game_loop           Borin Steelpalm(dwa) F4@( 5, 6) HP 75/94 MP 0/0 Hu 21 $ 656 room=.
+-> e
+T 987 mode=game_loop           Borin Steelpalm(dwa) F4@( 6, 6) HP 75/94 MP 0/0 Hu 20 $ 656 room=.
+-> e
+T 988 mode=game_loop           Borin Steelpalm(dwa) F4@( 7, 6) HP 75/94 MP 0/0 Hu 19 $ 656 room=.
+-> e
+T 989 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 6) HP 75/94 MP 0/0 Hu 18 $ 656 room=.
+-> s
+T 990 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 7) HP 75/94 MP 0/0 Hu 17 $ 656 room=.
+-> s
+T 991 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 8) HP 75/94 MP 0/0 Hu 16 $ 656 room=.
+-> e
+T 992 mode=game_loop           Borin Steelpalm(dwa) F4@( 9, 8) HP 75/94 MP 0/0 Hu 15 $ 656 room=.
+-> e
+T 993 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 8) HP 75/94 MP 0/0 Hu 14 $ 656 room=.
+-> n
+T 994 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 7) HP 75/94 MP 0/0 Hu 13 $ 656 room=.
+-> n
+T 995 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 6) HP 75/94 MP 0/0 Hu 12 $ 656 room=.
+-> w
+T 996 mode=game_loop           Borin Steelpalm(dwa) F4@( 9, 6) HP 75/94 MP 0/0 Hu 11 $ 656 room=.
+-> s
+T 997 mode=game_loop           Borin Steelpalm(dwa) F4@( 9, 7) HP 75/94 MP 0/0 Hu 10 $ 656 room=.
+-> w
+T 998 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 7) HP 75/94 MP 0/0 Hu  9 $ 656 room=.
+-> n
+T 999 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 6) HP 75/94 MP 0/0 Hu  8 $ 656 room=.
+-> n
+T1000 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 5) HP 75/94 MP 0/0 Hu  7 $ 656 room=.
+-> n
+T1001 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 4) HP 75/94 MP 0/0 Hu  6 $ 656 room=.
+-> e
+T1002 mode=game_loop           Borin Steelpalm(dwa) F4@( 9, 4) HP 75/94 MP 0/0 Hu  5 $ 656 room=.
+-> e
+T1003 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 4) HP 75/94 MP 0/0 Hu  4 $ 656 room=.
+-> s
+T1004 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 5) HP 75/94 MP 0/0 Hu  3 $ 656 room=.
+-> w
+T1005 mode=game_loop           Borin Steelpalm(dwa) F4@( 9, 5) HP 75/94 MP 0/0 Hu  2 $ 656 room=.
+-> w
+T1006 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 5) HP 75/94 MP 0/0 Hu  1 $ 656 room=.
+-> s
+T1007 mode=game_loop           Borin Steelpalm(dwa) F4@( 8, 6) HP 73/94 MP 0/0 Hu  0 $ 656 room=.
+-> e
+T1008 mode=game_loop           Borin Steelpalm(dwa) F4@( 9, 6) HP 71/94 MP 0/0 Hu  0 $ 656 room=.
+-> e
+T1009 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 6) HP 69/94 MP 0/0 Hu  0 $ 656 room=.
+-> n
+T1010 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 5) HP 67/94 MP 0/0 Hu  0 $ 656 room=.
+-> n
+T1011 mode=game_loop           Borin Steelpalm(dwa) F4@(10, 4) HP 65/94 MP 0/0 Hu  0 $ 656 room=.
+-> e
+T1012 mode=game_loop           Borin Steelpalm(dwa) F4@(11, 4) HP 63/94 MP 0/0 Hu  0 $ 656 room=.
+-> s
+T1013 mode=game_loop           Borin Steelpalm(dwa) F4@(11, 5) HP 61/94 MP 0/0 Hu  0 $ 656 room=.
+-> e
+T1014 mode=game_loop           Borin Steelpalm(dwa) F4@(12, 5) HP 59/94 MP 0/0 Hu  0 $ 656 room=.
+-> s
+T1015 mode=combat_mode         Borin Steelpalm(dwa) F4@(12, 6) HP 57/94 MP 0/0 Hu  0 $ 656 room=M vs Owlbear(L3 HP50/50)
+-> a
+T1016 mode=combat_mode         Borin Steelpalm(dwa) F4@(12, 6) HP 57/94 MP 0/0 Hu  0 $ 656 room=M vs Owlbear(L3 HP26/50)
+-> a
+T1017 mode=combat_mode         Borin Steelpalm(dwa) F4@(12, 6) HP 57/94 MP 0/0 Hu  0 $ 656 room=M vs Owlbear(L3 HP26/50)
+-> a
+T1018 mode=combat_mode         Borin Steelpalm(dwa) F4@(12, 6) HP 56/94 MP 0/0 Hu  0 $ 656 room=M vs Owlbear(L3 HP26/50)
+-> a
+T1019 mode=combat_mode         Borin Steelpalm(dwa) F4@(12, 6) HP 55/94 MP 0/0 Hu  0 $ 656 room=M vs Owlbear(L3 HP26/50)
+-> a
+T1020 mode=combat_mode         Borin Steelpalm(dwa) F4@(12, 6) HP 54/94 MP 0/0 Hu  0 $ 656 room=M vs Owlbear(L3 HP2/50)
+-> a
+T1021 mode=combat_mode         Borin Steelpalm(dwa) F4@(12, 6) HP 53/94 MP 0/0 Hu  0 $ 656 room=M vs Owlbear(L3 HP2/50)
+-> a
+T1022 mode=combat_mode         Borin Steelpalm(dwa) F4@(12, 6) HP 53/94 MP 0/0 Hu  0 $ 656 room=M vs Owlbear(L3 HP2/50)
+-> a
+T1023 mode=combat_victory      Borin Steelpalm(dwa) F4@(12, 6) HP 52/94 MP 0/0 Hu  0 $ 680 room=.
+-> back
+T1024 mode=game_loop           Borin Steelpalm(dwa) F4@(12, 6) HP 52/94 MP 0/0 Hu  0 $ 680 room=.
+-> i
+T1025 mode=inventory           Borin Steelpalm(dwa) F4@(12, 6) HP 52/94 MP 0/0 Hu  0 $ 680 room=.
+-> eat1
+T1026 mode=inventory           Borin Steelpalm(dwa) F4@(12, 6) HP 52/94 MP 0/0 Hu  6 $ 680 room=.
+-> x
+T1027 mode=game_loop           Borin Steelpalm(dwa) F4@(12, 6) HP 52/94 MP 0/0 Hu  6 $ 680 room=.
+-> e
+T1028 mode=game_loop           Borin Steelpalm(dwa) F4@(13, 6) HP 52/94 MP 0/0 Hu  5 $ 680 room=.
+-> n
+T1029 mode=combat_mode         Borin Steelpalm(dwa) F4@(13, 5) HP 52/94 MP 0/0 Hu  4 $ 680 room=M vs Skeleton(L3 HP27/27)
+-> f
+T1030 mode=flee_direction_mode Borin Steelpalm(dwa) F4@(13, 5) HP 51/94 MP 0/0 Hu  4 $ 680 room=M
+-> s
+T1031 mode=game_loop           Borin Steelpalm(dwa) F4@(13, 6) HP 51/94 MP 0/0 Hu  4 $ 680 room=.
+-> e
+T1032 mode=stairs_down_mode    Borin Steelpalm(dwa) F4@(14, 6) HP 51/94 MP 0/0 Hu  3 $ 680 room=D
+-> d
+T1033 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 51/94 MP 0/0 Hu  3 $ 680 room=U
+-> e
+T1034 mode=tomb_mode           Borin Steelpalm(dwa) F5@( 2, 1) HP 51/94 MP 0/0 Hu  2 $ 680 room=T
+-> p
+T1035 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 51/94 MP 0/0 Hu  2 $ 680 room=T
+-> w
+T1036 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 51/94 MP 0/0 Hu  1 $ 680 room=U
+-> e
+T1037 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 49/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1038 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 47/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1039 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 45/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1040 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 43/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1041 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 41/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1042 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 39/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1043 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 37/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1044 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 35/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1045 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 33/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1046 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 31/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1047 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 29/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1048 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 27/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1049 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 25/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1050 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 23/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1051 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 21/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1052 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 19/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1053 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 17/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1054 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 15/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1055 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 13/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1056 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 11/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1057 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 9/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1058 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 7/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1059 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 5/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1060 mode=stairs_up_mode      Borin Steelpalm(dwa) F5@( 1, 1) HP 3/94 MP 0/0 Hu  0 $ 680 room=U
+-> e
+T1061 mode=game_loop           Borin Steelpalm(dwa) F5@( 2, 1) HP 1/94 MP 0/0 Hu  0 $ 680 room=T
+-> w
+T1062 mode=death_screen        Borin Steelpalm(dwa) F5@( 1, 1) HP 0/94 MP 0/0 Hu  0 $ 680 room=U
+
+=== run finished: turns=1062 floor=5 hp=0/94 gold=680 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/00042_dwarf.html

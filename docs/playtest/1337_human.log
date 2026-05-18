@@ -1,0 +1,610 @@
+T   0 mode=game_loop           Forlong the Stalwart(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Forlong the Stalwart(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 13 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=game_loop           Forlong the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T   3 mode=game_loop           Forlong the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 4 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   4 mode=chest_mode          Forlong the Stalwart(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 290 room=C
+-> o
+T   5 mode=game_loop           Forlong the Stalwart(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 290 room=.
+  
+  You found 4 Lantern Fuel!
+  
+   Perfect! You can use this to refuel your lantern.
+  You also found a Glowing Potion tucked inside!
+-> l
+T   6 mode=game_loop           Forlong the Stalwart(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 8 nearby rooms!
+  Lantern fuel remaining: 77
+-> e
+T   7 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 290 room=.
+-> l
+T   8 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 290 room=.
+  The lantern reveals 8 nearby rooms!
+  Lantern fuel remaining: 76
+-> e
+T   9 mode=garden_mode         Forlong the Stalwart(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 96 $ 290 room=G
+-> h
+T  10 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 96 $ 290 room=.
+-> l
+T  11 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 2) HP 30/30 MP 0/0 Hu 96 $ 290 room=.
+-> n
+T  12 mode=combat_mode         Forlong the Stalwart(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 95 $ 290 room=M vs Lichen(L0 HP10/10)
+-> a
+T  13 mode=combat_victory      Forlong the Stalwart(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 95 $ 444 room=.
+-> back
+T  14 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 1) HP 30/30 MP 0/0 Hu 95 $ 444 room=.
+-> w
+T  15 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 94 $ 444 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  16 mode=combat_victory      Forlong the Stalwart(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 94 $ 446 room=.
+-> back
+T  17 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 1) HP 30/30 MP 0/0 Hu 94 $ 446 room=.
+-> w
+T  18 mode=game_loop           Forlong the Stalwart(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 93 $ 446 room=.
+-> s
+T  19 mode=game_loop           Forlong the Stalwart(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 92 $ 446 room=.
+-> e
+T  20 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 91 $ 446 room=.
+-> s
+T  21 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 90 $ 446 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  22 mode=combat_victory      Forlong the Stalwart(hum) F1@( 3, 3) HP 29/30 MP 0/0 Hu 90 $ 451 room=.
+-> back
+T  23 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 3) HP 29/30 MP 0/0 Hu 90 $ 451 room=.
+-> s
+T  24 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 4) HP 29/30 MP 0/0 Hu 89 $ 451 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  25 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 4) HP 28/30 MP 0/0 Hu 89 $ 451 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  26 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 4) HP 27/30 MP 0/0 Hu 89 $ 451 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  27 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 4) HP 26/30 MP 0/0 Hu 89 $ 451 room=M vs Giant Rat(L0 HP22/22)
+-> f
+T  28 mode=flee_direction_mode Forlong the Stalwart(hum) F1@( 3, 4) HP 26/30 MP 0/0 Hu 89 $ 451 room=M
+-> s
+T  29 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 5) HP 26/30 MP 0/0 Hu 89 $ 451 room=.
+-> s
+T  30 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 6) HP 27/30 MP 0/0 Hu 88 $ 451 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  31 mode=combat_victory      Forlong the Stalwart(hum) F1@( 3, 6) HP 27/30 MP 0/0 Hu 88 $ 458 room=.
+-> back
+T  32 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 6) HP 27/30 MP 0/0 Hu 88 $ 458 room=.
+-> s
+T  33 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 7) HP 27/30 MP 0/0 Hu 87 $ 458 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  34 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 7) HP 26/30 MP 0/0 Hu 87 $ 458 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  35 mode=combat_victory      Forlong the Stalwart(hum) F1@( 3, 7) HP 25/30 MP 0/0 Hu 87 $ 461 room=.
+-> back
+T  36 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 7) HP 25/30 MP 0/0 Hu 87 $ 461 room=.
+-> l
+T  37 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 7) HP 25/30 MP 0/0 Hu 87 $ 461 room=.
+-> w
+T  38 mode=library_mode        Forlong the Stalwart(hum) F1@( 2, 7) HP 26/30 MP 0/0 Hu 86 $ 461 room=L
+-> r
+T  39 mode=library_read_decision_mode Forlong the Stalwart(hum) F1@( 2, 7) HP 26/30 MP 0/0 Hu 86 $ 461 room=L
+-> y
+T  40 mode=game_loop           Forlong the Stalwart(hum) F1@( 2, 7) HP 26/30 MP 0/0 Hu 86 $ 511 room=.
+-> l
+T  41 mode=game_loop           Forlong the Stalwart(hum) F1@( 2, 7) HP 26/30 MP 0/0 Hu 86 $ 511 room=.
+-> w
+T  42 mode=combat_mode         Forlong the Stalwart(hum) F1@( 1, 7) HP 26/30 MP 0/0 Hu 85 $ 511 room=M vs Bat(L0 HP12/12)
+-> a
+T  43 mode=combat_victory      Forlong the Stalwart(hum) F1@( 1, 7) HP 26/30 MP 0/0 Hu 85 $ 520 room=.
+-> back
+T  44 mode=game_loop           Forlong the Stalwart(hum) F1@( 1, 7) HP 26/30 MP 0/0 Hu 85 $ 520 room=.
+-> l
+T  45 mode=game_loop           Forlong the Stalwart(hum) F1@( 1, 7) HP 26/30 MP 0/0 Hu 85 $ 520 room=.
+-> s
+T  46 mode=combat_mode         Forlong the Stalwart(hum) F1@( 1, 8) HP 26/30 MP 0/0 Hu 84 $ 520 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  47 mode=combat_victory      Forlong the Stalwart(hum) F1@( 1, 8) HP 26/30 MP 0/0 Hu 84 $ 528 room=.
+-> back
+T  48 mode=game_loop           Forlong the Stalwart(hum) F1@( 1, 8) HP 26/30 MP 0/0 Hu 84 $ 528 room=.
+-> s
+T  49 mode=game_loop           Forlong the Stalwart(hum) F1@( 1, 9) HP 26/30 MP 0/0 Hu 83 $ 528 room=.
+-> s
+T  50 mode=combat_mode         Forlong the Stalwart(hum) F1@( 1,10) HP 27/30 MP 0/0 Hu 82 $ 528 room=M vs Goblin(L0 HP12/12)
+-> a
+T  51 mode=combat_mode         Forlong the Stalwart(hum) F1@( 1,10) HP 26/30 MP 0/0 Hu 82 $ 528 room=M vs Goblin(L0 HP12/12)
+-> a
+T  52 mode=combat_mode         Forlong the Stalwart(hum) F1@( 1,10) HP 25/30 MP 0/0 Hu 82 $ 528 room=M vs Goblin(L0 HP12/12)
+-> a
+T  53 mode=combat_mode         Forlong the Stalwart(hum) F1@( 1,10) HP 25/30 MP 0/0 Hu 82 $ 528 room=M vs Goblin(L0 HP12/12)
+-> a
+T  54 mode=combat_victory      Forlong the Stalwart(hum) F1@( 1,10) HP 24/30 MP 0/0 Hu 82 $ 537 room=.
+-> back
+T  55 mode=game_loop           Forlong the Stalwart(hum) F1@( 1,10) HP 24/30 MP 0/0 Hu 82 $ 537 room=.
+-> s
+T  56 mode=combat_mode         Forlong the Stalwart(hum) F1@( 1,11) HP 24/30 MP 0/0 Hu 81 $ 537 room=M vs Stirge(L0 HP6/6)
+-> a
+T  57 mode=combat_victory      Forlong the Stalwart(hum) F1@( 1,11) HP 24/30 MP 0/0 Hu 81 $ 544 room=.
+-> back
+T  58 mode=game_loop           Forlong the Stalwart(hum) F1@( 1,11) HP 24/30 MP 0/0 Hu 81 $ 544 room=.
+-> e
+T  59 mode=game_loop           Forlong the Stalwart(hum) F1@( 2,11) HP 24/30 MP 0/0 Hu 80 $ 544 room=.
+-> i
+T  60 mode=inventory           Forlong the Stalwart(hum) F1@( 2,11) HP 24/30 MP 0/0 Hu 80 $ 544 room=.
+-> u3
+T  61 mode=inventory           Forlong the Stalwart(hum) F1@( 2,11) HP 30/30 MP 0/0 Hu 80 $ 544 room=.
+-> x
+T  62 mode=game_loop           Forlong the Stalwart(hum) F1@( 2,11) HP 30/30 MP 0/0 Hu 80 $ 544 room=.
+-> i
+T  63 mode=inventory           Forlong the Stalwart(hum) F1@( 2,11) HP 30/30 MP 0/0 Hu 80 $ 544 room=.
+-> eat4
+T  64 mode=inventory           Forlong the Stalwart(hum) F1@( 2,11) HP 30/30 MP 0/0 Hu 86 $ 544 room=.
+-> x
+T  65 mode=game_loop           Forlong the Stalwart(hum) F1@( 2,11) HP 30/30 MP 0/0 Hu 86 $ 544 room=.
+-> s
+T  66 mode=combat_mode         Forlong the Stalwart(hum) F1@( 2,12) HP 30/30 MP 0/0 Hu 85 $ 544 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  67 mode=combat_victory      Forlong the Stalwart(hum) F1@( 2,12) HP 30/30 MP 0/0 Hu 85 $ 647 room=.
+-> back
+T  68 mode=game_loop           Forlong the Stalwart(hum) F1@( 2,12) HP 30/30 MP 0/0 Hu 85 $ 647 room=.
+-> e
+T  69 mode=game_loop           Forlong the Stalwart(hum) F1@( 3,12) HP 30/30 MP 0/0 Hu 84 $ 647 room=.
+-> l
+T  70 mode=game_loop           Forlong the Stalwart(hum) F1@( 3,12) HP 30/30 MP 0/0 Hu 84 $ 647 room=.
+-> n
+T  71 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3,11) HP 30/30 MP 0/0 Hu 83 $ 647 room=M vs Goblin(L0 HP30/30)
+-> a
+T  72 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3,11) HP 29/30 MP 0/0 Hu 83 $ 647 room=M vs Goblin(L0 HP10/30)
+-> a
+T  73 mode=combat_victory      Forlong the Stalwart(hum) F1@( 3,11) HP 29/30 MP 0/0 Hu 83 $ 652 room=.
+-> back
+T  74 mode=game_loop           Forlong the Stalwart(hum) F1@( 3,11) HP 29/30 MP 0/0 Hu 83 $ 652 room=.
+-> i
+T  75 mode=inventory           Forlong the Stalwart(hum) F1@( 3,11) HP 29/30 MP 0/0 Hu 83 $ 652 room=.
+-> eat3
+T  76 mode=inventory           Forlong the Stalwart(hum) F1@( 3,11) HP 29/30 MP 0/0 Hu 88 $ 652 room=.
+-> x
+T  77 mode=game_loop           Forlong the Stalwart(hum) F1@( 3,11) HP 29/30 MP 0/0 Hu 88 $ 652 room=.
+-> l
+T  78 mode=game_loop           Forlong the Stalwart(hum) F1@( 3,11) HP 29/30 MP 0/0 Hu 88 $ 652 room=.
+-> n
+T  79 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3,10) HP 29/30 MP 0/0 Hu 87 $ 652 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  80 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3,10) HP 28/30 MP 0/0 Hu 87 $ 652 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  81 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3,10) HP 28/30 MP 0/0 Hu 87 $ 652 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  82 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3,10) HP 27/30 MP 0/0 Hu 87 $ 652 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  83 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3,10) HP 26/30 MP 0/0 Hu 87 $ 652 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  84 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3,10) HP 26/30 MP 0/0 Hu 87 $ 652 room=M vs Skeleton(L0 HP6/25)
+-> a
+T  85 mode=combat_victory      Forlong the Stalwart(hum) F1@( 3,10) HP 26/30 MP 0/0 Hu 87 $ 661 room=.
+-> back
+T  86 mode=game_loop           Forlong the Stalwart(hum) F1@( 3,10) HP 26/30 MP 0/0 Hu 87 $ 661 room=.
+-> i
+T  87 mode=inventory           Forlong the Stalwart(hum) F1@( 3,10) HP 26/30 MP 0/0 Hu 87 $ 661 room=.
+-> u4
+T  88 mode=inventory           Forlong the Stalwart(hum) F1@( 3,10) HP 30/30 MP 0/0 Hu 87 $ 661 room=.
+-> x
+T  89 mode=game_loop           Forlong the Stalwart(hum) F1@( 3,10) HP 30/30 MP 0/0 Hu 87 $ 661 room=.
+-> i
+T  90 mode=inventory           Forlong the Stalwart(hum) F1@( 3,10) HP 30/30 MP 0/0 Hu 87 $ 661 room=.
+-> e2
+T  91 mode=inventory           Forlong the Stalwart(hum) F1@( 3,10) HP 30/30 MP 0/0 Hu 87 $ 661 room=.
+-> x
+T  92 mode=game_loop           Forlong the Stalwart(hum) F1@( 3,10) HP 30/30 MP 0/0 Hu 87 $ 661 room=.
+-> l
+T  93 mode=game_loop           Forlong the Stalwart(hum) F1@( 3,10) HP 30/30 MP 0/0 Hu 87 $ 661 room=.
+-> n
+T  94 mode=library_mode        Forlong the Stalwart(hum) F1@( 3, 9) HP 30/30 MP 0/0 Hu 86 $ 661 room=L
+-> r
+T  95 mode=library_read_decision_mode Forlong the Stalwart(hum) F1@( 3, 9) HP 30/30 MP 0/0 Hu 86 $ 661 room=L
+-> y
+T  96 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 9) HP 30/30 MP 0/0 Hu 86 $ 761 room=.
+-> l
+T  97 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 9) HP 30/30 MP 0/0 Hu 86 $ 761 room=.
+-> n
+T  98 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 8) HP 30/30 MP 0/0 Hu 85 $ 761 room=M vs Lichen(L0 HP10/10)
+-> a
+T  99 mode=combat_victory      Forlong the Stalwart(hum) F1@( 3, 8) HP 29/40 MP 0/0 Hu 85 $ 766 room=.
+-> back
+T 100 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 8) HP 29/40 MP 0/0 Hu 85 $ 766 room=.
+-> n
+T 101 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 7) HP 29/40 MP 0/0 Hu 84 $ 766 room=.
+-> n
+T 102 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 6) HP 29/40 MP 0/0 Hu 83 $ 766 room=.
+-> n
+T 103 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 5) HP 29/40 MP 0/0 Hu 82 $ 766 room=.
+-> i
+T 104 mode=inventory           Forlong the Stalwart(hum) F1@( 3, 5) HP 29/40 MP 0/0 Hu 82 $ 766 room=.
+-> u4
+T 105 mode=inventory           Forlong the Stalwart(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 82 $ 766 room=.
+-> x
+T 106 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 82 $ 766 room=.
+-> i
+T 107 mode=inventory           Forlong the Stalwart(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 82 $ 766 room=.
+-> eat5
+T 108 mode=inventory           Forlong the Stalwart(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 88 $ 766 room=.
+-> x
+T 109 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 5) HP 40/40 MP 0/0 Hu 88 $ 766 room=.
+-> n
+T 110 mode=combat_mode         Forlong the Stalwart(hum) F1@( 3, 4) HP 40/40 MP 0/0 Hu 87 $ 766 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 111 mode=combat_victory      Forlong the Stalwart(hum) F1@( 3, 4) HP 39/40 MP 0/0 Hu 87 $ 767 room=.
+-> back
+T 112 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 4) HP 39/40 MP 0/0 Hu 87 $ 767 room=.
+-> e
+T 113 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 4) HP 37/40 MP 0/0 Hu 86 $ 767 room=.
+-> n
+T 114 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 3) HP 36/40 MP 0/0 Hu 85 $ 767 room=.
+-> l
+T 115 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 3) HP 36/40 MP 0/0 Hu 85 $ 767 room=.
+-> n
+T 116 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 2) HP 34/40 MP 0/0 Hu 84 $ 767 room=.
+-> i
+T 117 mode=inventory           Forlong the Stalwart(hum) F1@( 4, 2) HP 34/40 MP 0/0 Hu 84 $ 767 room=.
+-> u4
+T 118 mode=inventory           Forlong the Stalwart(hum) F1@( 4, 2) HP 40/40 MP 0/0 Hu 84 $ 767 room=.
+-> x
+T 119 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 2) HP 40/40 MP 0/0 Hu 84 $ 767 room=.
+-> i
+T 120 mode=inventory           Forlong the Stalwart(hum) F1@( 4, 2) HP 40/40 MP 0/0 Hu 84 $ 767 room=.
+-> eat4
+T 121 mode=inventory           Forlong the Stalwart(hum) F1@( 4, 2) HP 40/40 MP 0/0 Hu 89 $ 767 room=.
+-> x
+T 122 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 2) HP 40/40 MP 0/0 Hu 89 $ 767 room=.
+-> n
+T 123 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 1) HP 40/40 MP 0/0 Hu 88 $ 767 room=.
+-> e
+T 124 mode=game_loop           Forlong the Stalwart(hum) F1@( 5, 1) HP 40/40 MP 0/0 Hu 87 $ 767 room=.
+-> s
+T 125 mode=game_loop           Forlong the Stalwart(hum) F1@( 5, 2) HP 40/40 MP 0/0 Hu 86 $ 767 room=.
+-> i
+T 126 mode=inventory           Forlong the Stalwart(hum) F1@( 5, 2) HP 40/40 MP 0/0 Hu 86 $ 767 room=.
+-> eat4
+T 127 mode=inventory           Forlong the Stalwart(hum) F1@( 5, 2) HP 40/40 MP 0/0 Hu 92 $ 767 room=.
+-> x
+T 128 mode=game_loop           Forlong the Stalwart(hum) F1@( 5, 2) HP 40/40 MP 0/0 Hu 92 $ 767 room=.
+-> s
+T 129 mode=game_loop           Forlong the Stalwart(hum) F1@( 5, 3) HP 40/40 MP 0/0 Hu 91 $ 767 room=.
+-> w
+T 130 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 3) HP 40/40 MP 0/0 Hu 90 $ 767 room=.
+-> n
+T 131 mode=game_loop           Forlong the Stalwart(hum) F1@( 4, 2) HP 40/40 MP 0/0 Hu 89 $ 767 room=.
+-> w
+T 132 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu 88 $ 767 room=.
+-> i
+T 133 mode=inventory           Forlong the Stalwart(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu 88 $ 767 room=.
+-> eat3
+T 134 mode=inventory           Forlong the Stalwart(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu 93 $ 767 room=.
+-> x
+T 135 mode=game_loop           Forlong the Stalwart(hum) F1@( 3, 2) HP 40/40 MP 0/0 Hu 93 $ 767 room=.
+-> w
+T 136 mode=game_loop           Forlong the Stalwart(hum) F1@( 2, 2) HP 40/40 MP 0/0 Hu 92 $ 767 room=.
+-> w
+T 137 mode=game_loop           Forlong the Stalwart(hum) F1@( 1, 2) HP 40/40 MP 0/0 Hu 91 $ 767 room=.
+-> s
+T 138 mode=game_loop           Forlong the Stalwart(hum) F1@( 1, 3) HP 40/40 MP 0/0 Hu 90 $ 767 room=.
+-> s
+T 139 mode=game_loop           Forlong the Stalwart(hum) F1@( 1, 4) HP 40/40 MP 0/0 Hu 89 $ 767 room=.
+-> e
+T 140 mode=combat_mode         Forlong the Stalwart(hum) F1@( 2, 4) HP 40/40 MP 0/0 Hu 88 $ 767 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 141 mode=combat_mode         Forlong the Stalwart(hum) F1@( 2, 4) HP 39/40 MP 0/0 Hu 88 $ 767 room=M vs Skeleton(L0 HP4/25)
+-> f
+T 142 mode=flee_direction_mode Forlong the Stalwart(hum) F1@( 2, 4) HP 39/40 MP 0/0 Hu 88 $ 767 room=M
+-> n
+T 143 mode=warp_mode           Forlong the Stalwart(hum) F1@( 2, 3) HP 39/40 MP 0/0 Hu 88 $ 767 room=W
+-> y
+T 144 mode=game_loop           Forlong the Stalwart(hum) F3@( 7, 3) HP 39/40 MP 0/0 Hu 88 $ 767 room=.
+-> l
+T 145 mode=game_loop           Forlong the Stalwart(hum) F3@( 7, 3) HP 39/40 MP 0/0 Hu 88 $ 767 room=.
+-> w
+T 146 mode=library_mode        Forlong the Stalwart(hum) F3@( 6, 3) HP 39/40 MP 0/0 Hu 87 $ 767 room=L
+-> r
+T 147 mode=library_read_decision_mode Forlong the Stalwart(hum) F3@( 6, 3) HP 39/40 MP 0/0 Hu 87 $ 767 room=L
+-> y
+T 148 mode=game_loop           Forlong the Stalwart(hum) F3@( 6, 3) HP 39/40 MP 0/0 Hu 87 $ 767 room=.
+-> l
+T 149 mode=game_loop           Forlong the Stalwart(hum) F3@( 6, 3) HP 39/40 MP 0/0 Hu 87 $ 767 room=.
+-> s
+T 150 mode=game_loop           Forlong the Stalwart(hum) F3@( 6, 4) HP 40/40 MP 0/0 Hu 86 $ 767 room=.
+-> l
+T 151 mode=game_loop           Forlong the Stalwart(hum) F3@( 6, 4) HP 40/40 MP 0/0 Hu 86 $ 767 room=.
+-> w
+T 152 mode=game_loop           Forlong the Stalwart(hum) F3@( 5, 4) HP 40/40 MP 0/0 Hu 85 $ 767 room=.
+-> l
+T 153 mode=game_loop           Forlong the Stalwart(hum) F3@( 5, 4) HP 40/40 MP 0/0 Hu 85 $ 767 room=.
+-> s
+T 154 mode=stairs_down_mode    Forlong the Stalwart(hum) F3@( 5, 5) HP 40/40 MP 0/0 Hu 84 $ 767 room=D
+-> n
+T 155 mode=game_loop           Forlong the Stalwart(hum) F3@( 5, 4) HP 40/40 MP 0/0 Hu 83 $ 767 room=.
+-> n
+T 156 mode=game_loop           Forlong the Stalwart(hum) F3@( 5, 3) HP 40/40 MP 0/0 Hu 82 $ 767 room=.
+-> n
+T 157 mode=game_loop           Forlong the Stalwart(hum) F3@( 5, 2) HP 40/40 MP 0/0 Hu 81 $ 767 room=.
+-> l
+T 158 mode=game_loop           Forlong the Stalwart(hum) F3@( 5, 2) HP 40/40 MP 0/0 Hu 81 $ 767 room=.
+-> n
+T 159 mode=library_mode        Forlong the Stalwart(hum) F3@( 5, 1) HP 40/40 MP 0/0 Hu 80 $ 767 room=L
+-> r
+T 160 mode=library_read_decision_mode Forlong the Stalwart(hum) F3@( 5, 1) HP 40/40 MP 0/0 Hu 80 $ 767 room=L
+-> y
+T 161 mode=game_loop           Forlong the Stalwart(hum) F3@( 5, 1) HP 40/40 MP 0/0 Hu 80 $ 767 room=.
+-> l
+T 162 mode=game_loop           Forlong the Stalwart(hum) F3@( 5, 1) HP 40/40 MP 0/0 Hu 80 $ 767 room=.
+-> w
+T 163 mode=altar_mode          Forlong the Stalwart(hum) F3@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 767 room=A
+-> pray
+T 164 mode=game_loop           Forlong the Stalwart(hum) F3@( 4, 1) HP 40/40 MP 0/0 Hu 79 $ 767 room=.
+-> w
+T 165 mode=game_loop           Forlong the Stalwart(hum) F3@( 3, 1) HP 40/40 MP 0/0 Hu 78 $ 767 room=.
+-> w
+T 166 mode=dungeon_mode        Forlong the Stalwart(hum) F3@( 2, 1) HP 40/40 MP 0/0 Hu 77 $ 767 room=N
+-> u
+T 167 mode=game_loop           Forlong the Stalwart(hum) F3@( 2, 1) HP 40/40 MP 0/0 Hu 77 $ 767 room=N
+-> w
+T 168 mode=stairs_up_mode      Forlong the Stalwart(hum) F3@( 1, 1) HP 40/40 MP 0/0 Hu 76 $ 767 room=U
+-> u
+T 169 mode=stairs_down_mode    Forlong the Stalwart(hum) F2@(18,13) HP 40/40 MP 0/0 Hu 76 $ 767 room=D
+-> n
+T 170 mode=game_loop           Forlong the Stalwart(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 75 $ 767 room=.
+-> l
+T 171 mode=game_loop           Forlong the Stalwart(hum) F2@(18,12) HP 40/40 MP 0/0 Hu 75 $ 767 room=.
+-> w
+T 172 mode=game_loop           Forlong the Stalwart(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 74 $ 767 room=.
+-> l
+T 173 mode=game_loop           Forlong the Stalwart(hum) F2@(17,12) HP 40/40 MP 0/0 Hu 74 $ 767 room=.
+-> w
+T 174 mode=combat_mode         Forlong the Stalwart(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 73 $ 767 room=M vs Wight(L1 HP40/40)
+-> a
+T 175 mode=combat_mode         Forlong the Stalwart(hum) F2@(16,12) HP 36/40 MP 0/0 Hu 73 $ 767 room=M vs Wight(L1 HP40/40)
+-> a
+T 176 mode=combat_mode         Forlong the Stalwart(hum) F2@(16,12) HP 32/40 MP 0/0 Hu 73 $ 767 room=M vs Wight(L1 HP40/40)
+-> a
+T 177 mode=combat_mode         Forlong the Stalwart(hum) F2@(16,12) HP 32/40 MP 0/0 Hu 73 $ 767 room=M vs Wight(L1 HP20/40)
+-> a
+T 178 mode=combat_victory      Forlong the Stalwart(hum) F2@(16,12) HP 28/40 MP 0/0 Hu 73 $ 787 room=.
+-> back
+T 179 mode=game_loop           Forlong the Stalwart(hum) F2@(16,12) HP 28/40 MP 0/0 Hu 73 $ 787 room=.
+-> l
+T 180 mode=game_loop           Forlong the Stalwart(hum) F2@(16,12) HP 28/40 MP 0/0 Hu 73 $ 787 room=.
+-> i
+T 181 mode=inventory           Forlong the Stalwart(hum) F2@(16,12) HP 28/40 MP 0/0 Hu 73 $ 787 room=.
+-> u4
+T 182 mode=inventory           Forlong the Stalwart(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 73 $ 787 room=.
+-> x
+T 183 mode=game_loop           Forlong the Stalwart(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 73 $ 787 room=.
+-> s
+T 184 mode=tomb_mode           Forlong the Stalwart(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 72 $ 787 room=T
+-> p
+T 185 mode=game_loop           Forlong the Stalwart(hum) F2@(16,13) HP 40/40 MP 0/0 Hu 72 $ 787 room=T
+-> n
+T 186 mode=game_loop           Forlong the Stalwart(hum) F2@(16,12) HP 40/40 MP 0/0 Hu 71 $ 787 room=.
+-> w
+T 187 mode=game_loop           Forlong the Stalwart(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 70 $ 787 room=.
+-> l
+T 188 mode=game_loop           Forlong the Stalwart(hum) F2@(15,12) HP 40/40 MP 0/0 Hu 70 $ 787 room=.
+-> n
+T 189 mode=game_loop           Forlong the Stalwart(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 69 $ 787 room=.
+-> l
+T 190 mode=game_loop           Forlong the Stalwart(hum) F2@(15,11) HP 40/40 MP 0/0 Hu 69 $ 787 room=.
+-> n
+T 191 mode=game_loop           Forlong the Stalwart(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 68 $ 787 room=.
+-> l
+T 192 mode=game_loop           Forlong the Stalwart(hum) F2@(15,10) HP 40/40 MP 0/0 Hu 68 $ 787 room=.
+-> n
+T 193 mode=game_loop           Forlong the Stalwart(hum) F2@(15, 9) HP 40/40 MP 0/0 Hu 67 $ 787 room=.
+-> l
+T 194 mode=game_loop           Forlong the Stalwart(hum) F2@(15, 9) HP 40/40 MP 0/0 Hu 67 $ 787 room=.
+-> w
+T 195 mode=game_loop           Forlong the Stalwart(hum) F2@(14, 9) HP 40/40 MP 0/0 Hu 66 $ 787 room=.
+-> w
+T 196 mode=library_mode        Forlong the Stalwart(hum) F2@(13, 9) HP 40/40 MP 0/0 Hu 65 $ 787 room=L
+-> r
+T 197 mode=game_loop           Forlong the Stalwart(hum) F2@(13, 9) HP 40/40 MP 0/0 Hu 65 $ 787 room=.
+-> w
+T 198 mode=game_loop           Forlong the Stalwart(hum) F2@(12, 9) HP 40/40 MP 0/0 Hu 64 $ 787 room=.
+-> w
+T 199 mode=dungeon_mode        Forlong the Stalwart(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 63 $ 787 room=N
+-> u
+T 200 mode=game_loop           Forlong the Stalwart(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 63 $ 787 room=N
+-> l
+T 201 mode=game_loop           Forlong the Stalwart(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 63 $ 787 room=N
+-> n
+T 202 mode=game_loop           Forlong the Stalwart(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 62 $ 787 room=.
+-> l
+T 203 mode=game_loop           Forlong the Stalwart(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 62 $ 787 room=.
+-> w
+T 204 mode=chest_mode          Forlong the Stalwart(hum) F2@(10, 8) HP 40/40 MP 0/0 Hu 61 $ 787 room=C
+-> o
+T 205 mode=game_loop           Forlong the Stalwart(hum) F2@(10, 8) HP 40/40 MP 0/0 Hu 61 $ 817 room=.
+-> w
+T 206 mode=game_loop           Forlong the Stalwart(hum) F2@( 9, 8) HP 40/40 MP 0/0 Hu 60 $ 817 room=.
+-> e
+T 207 mode=game_loop           Forlong the Stalwart(hum) F2@(10, 8) HP 40/40 MP 0/0 Hu 59 $ 817 room=.
+-> s
+T 208 mode=game_loop           Forlong the Stalwart(hum) F2@(10, 9) HP 40/40 MP 0/0 Hu 58 $ 817 room=.
+-> e
+T 209 mode=game_loop           Forlong the Stalwart(hum) F2@(11, 9) HP 40/40 MP 0/0 Hu 57 $ 817 room=N
+-> s
+T 210 mode=chest_mode          Forlong the Stalwart(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 56 $ 817 room=C
+-> o
+T 211 mode=game_loop           Forlong the Stalwart(hum) F2@(11,10) HP 40/40 MP 0/0 Hu 56 $ 817 room=.
+-> s
+T 212 mode=game_loop           Forlong the Stalwart(hum) F2@(11,11) HP 40/40 MP 0/0 Hu 55 $ 817 room=.
+-> w
+T 213 mode=game_loop           Forlong the Stalwart(hum) F2@(10,11) HP 40/40 MP 0/0 Hu 54 $ 817 room=.
+-> w
+T 214 mode=game_loop           Forlong the Stalwart(hum) F2@( 9,11) HP 40/40 MP 0/0 Hu 53 $ 817 room=.
+-> l
+T 215 mode=game_loop           Forlong the Stalwart(hum) F2@( 9,11) HP 40/40 MP 0/0 Hu 53 $ 817 room=.
+-> s
+T 216 mode=game_loop           Forlong the Stalwart(hum) F2@( 9,12) HP 40/40 MP 0/0 Hu 52 $ 817 room=.
+-> l
+T 217 mode=game_loop           Forlong the Stalwart(hum) F2@( 9,12) HP 40/40 MP 0/0 Hu 52 $ 817 room=.
+-> w
+T 218 mode=dungeon_mode        Forlong the Stalwart(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu 51 $ 817 room=N
+-> u
+T 219 mode=game_loop           Forlong the Stalwart(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu 51 $ 817 room=N
+-> n
+T 220 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8,11) HP 40/40 MP 0/0 Hu 50 $ 817 room=M vs Orc(L1 HP50/50)
+-> a
+T 221 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8,11) HP 36/40 MP 0/0 Hu 50 $ 817 room=M vs Orc(L1 HP50/50)
+-> a
+T 222 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8,11) HP 32/40 MP 0/0 Hu 50 $ 817 room=M vs Orc(L1 HP31/50)
+-> a
+T 223 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8,11) HP 28/40 MP 0/0 Hu 50 $ 817 room=M vs Orc(L1 HP12/50)
+-> a
+T 224 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8,11) HP 28/40 MP 0/0 Hu 50 $ 817 room=M vs Orc(L1 HP12/50)
+-> a
+T 225 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8,11) HP 28/40 MP 0/0 Hu 50 $ 817 room=M vs Orc(L1 HP12/50)
+-> a
+T 226 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8,11) HP 28/40 MP 0/0 Hu 50 $ 817 room=M vs Orc(L1 HP12/50)
+-> a
+T 227 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8,11) HP 28/40 MP 0/0 Hu 50 $ 817 room=M vs Orc(L1 HP12/50)
+-> a
+T 228 mode=combat_victory      Forlong the Stalwart(hum) F2@( 8,11) HP 24/40 MP 0/0 Hu 50 $ 821 room=.
+-> back
+T 229 mode=game_loop           Forlong the Stalwart(hum) F2@( 8,11) HP 24/40 MP 0/0 Hu 50 $ 821 room=.
+-> s
+T 230 mode=dungeon_mode        Forlong the Stalwart(hum) F2@( 8,12) HP 24/40 MP 0/0 Hu 49 $ 821 room=N
+-> u
+T 231 mode=dungeon_unlocked_mode Forlong the Stalwart(hum) F2@( 8,12) HP 24/40 MP 0/0 Hu 49 $ 821 room=N
+-> r
+T 232 mode=game_loop           Forlong the Stalwart(hum) F2@( 8,12) HP 24/40 MP 0/0 Hu 49 $ 996 room=N
+-> i
+T 233 mode=inventory           Forlong the Stalwart(hum) F2@( 8,12) HP 24/40 MP 0/0 Hu 49 $ 996 room=N
+-> u5
+T 234 mode=inventory           Forlong the Stalwart(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu 49 $ 996 room=N
+-> x
+T 235 mode=game_loop           Forlong the Stalwart(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu 49 $ 996 room=N
+-> i
+T 236 mode=inventory           Forlong the Stalwart(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu 49 $ 996 room=N
+-> eat1
+T 237 mode=inventory           Forlong the Stalwart(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu100 $ 996 room=N
+-> x
+T 238 mode=game_loop           Forlong the Stalwart(hum) F2@( 8,12) HP 40/40 MP 0/0 Hu100 $ 996 room=N
+-> n
+T 239 mode=game_loop           Forlong the Stalwart(hum) F2@( 8,11) HP 40/40 MP 0/0 Hu 99 $ 996 room=.
+-> w
+T 240 mode=game_loop           Forlong the Stalwart(hum) F2@( 7,11) HP 40/40 MP 0/0 Hu 98 $ 996 room=.
+-> l
+T 241 mode=game_loop           Forlong the Stalwart(hum) F2@( 7,11) HP 40/40 MP 0/0 Hu 98 $ 996 room=.
+-> n
+T 242 mode=altar_mode          Forlong the Stalwart(hum) F2@( 7,10) HP 40/40 MP 0/0 Hu 97 $ 996 room=A
+-> pray
+T 243 mode=game_loop           Forlong the Stalwart(hum) F2@( 7,10) HP 40/40 MP 0/0 Hu 97 $ 996 room=.
+-> l
+T 244 mode=game_loop           Forlong the Stalwart(hum) F2@( 7,10) HP 40/40 MP 0/0 Hu 97 $ 996 room=.
+-> n
+T 245 mode=game_loop           Forlong the Stalwart(hum) F2@( 7, 9) HP 40/40 MP 0/0 Hu 96 $ 996 room=.
+-> w
+T 246 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 9) HP 40/40 MP 0/0 Hu 95 $ 996 room=.
+-> l
+T 247 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 9) HP 40/40 MP 0/0 Hu 95 $ 996 room=.
+-> n
+T 248 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 8) HP 40/40 MP 0/0 Hu 94 $ 996 room=.
+-> l
+T 249 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 8) HP 40/40 MP 0/0 Hu 94 $ 996 room=.
+-> n
+T 250 mode=pool_mode           Forlong the Stalwart(hum) F2@( 6, 7) HP 40/40 MP 0/0 Hu 93 $ 996 room=P
+-> dr
+T 251 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 7) HP 40/40 MP 0/0 Hu 93 $ 996 room=.
+-> l
+T 252 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 7) HP 40/40 MP 0/0 Hu 93 $ 996 room=.
+-> n
+T 253 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 6) HP 40/40 MP 0/0 Hu 92 $ 996 room=.
+-> l
+T 254 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 6) HP 40/40 MP 0/0 Hu 92 $ 996 room=.
+-> n
+T 255 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 5) HP 40/40 MP 0/0 Hu 91 $ 996 room=.
+-> i
+T 256 mode=inventory           Forlong the Stalwart(hum) F2@( 6, 5) HP 40/40 MP 0/0 Hu 91 $ 996 room=.
+-> eat3
+T 257 mode=inventory           Forlong the Stalwart(hum) F2@( 6, 5) HP 40/40 MP 0/0 Hu 96 $ 996 room=.
+-> x
+T 258 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 5) HP 40/40 MP 0/0 Hu 96 $ 996 room=.
+-> l
+T 259 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 5) HP 40/40 MP 0/0 Hu 96 $ 996 room=.
+-> n
+T 260 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 4) HP 40/40 MP 0/0 Hu 95 $ 996 room=.
+-> l
+T 261 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 4) HP 40/40 MP 0/0 Hu 95 $ 996 room=.
+-> e
+T 262 mode=game_loop           Forlong the Stalwart(hum) F2@( 7, 4) HP 40/40 MP 0/0 Hu 94 $ 996 room=.
+-> l
+T 263 mode=game_loop           Forlong the Stalwart(hum) F2@( 7, 4) HP 40/40 MP 0/0 Hu 94 $ 996 room=.
+-> e
+T 264 mode=game_loop           Forlong the Stalwart(hum) F2@( 8, 4) HP 40/40 MP 0/0 Hu 93 $ 996 room=.
+-> l
+T 265 mode=game_loop           Forlong the Stalwart(hum) F2@( 8, 4) HP 40/40 MP 0/0 Hu 93 $ 996 room=.
+-> n
+T 266 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8, 3) HP 40/40 MP 0/0 Hu 92 $ 996 room=M vs Orc(L1 HP50/50)
+-> a
+T 267 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8, 3) HP 36/40 MP 0/0 Hu 92 $ 996 room=M vs Orc(L1 HP50/50)
+-> a
+T 268 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8, 3) HP 32/40 MP 0/0 Hu 92 $ 996 room=M vs Orc(L1 HP31/50)
+-> a
+T 269 mode=combat_mode         Forlong the Stalwart(hum) F2@( 8, 3) HP 28/40 MP 0/0 Hu 92 $ 996 room=M vs Orc(L1 HP12/50)
+-> a
+T 270 mode=combat_victory      Forlong the Stalwart(hum) F2@( 8, 3) HP 28/40 MP 0/0 Hu 92 $ 1008 room=.
+-> back
+T 271 mode=game_loop           Forlong the Stalwart(hum) F2@( 8, 3) HP 28/40 MP 0/0 Hu 92 $ 1008 room=.
+-> w
+T 272 mode=combat_mode         Forlong the Stalwart(hum) F2@( 7, 3) HP 28/40 MP 0/0 Hu 91 $ 1008 room=M vs Stirge(L1 HP6/6)
+-> f
+T 273 mode=flee_direction_mode Forlong the Stalwart(hum) F2@( 7, 3) HP 28/40 MP 0/0 Hu 91 $ 1008 room=M
+-> n
+T 274 mode=game_loop           Forlong the Stalwart(hum) F2@( 7, 2) HP 28/40 MP 0/0 Hu 91 $ 1008 room=.
+-> w
+T 275 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 2) HP 29/40 MP 0/0 Hu 90 $ 1008 room=.
+-> l
+T 276 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 2) HP 29/40 MP 0/0 Hu 90 $ 1008 room=.
+-> s
+T 277 mode=combat_mode         Forlong the Stalwart(hum) F2@( 6, 3) HP 29/40 MP 0/0 Hu 89 $ 1008 room=M vs Orc(L1 HP50/50)
+-> a
+T 278 mode=combat_mode         Forlong the Stalwart(hum) F2@( 6, 3) HP 25/40 MP 0/0 Hu 89 $ 1008 room=M vs Orc(L1 HP31/50)
+-> a
+T 279 mode=combat_mode         Forlong the Stalwart(hum) F2@( 6, 3) HP 25/40 MP 0/0 Hu 89 $ 1008 room=M vs Orc(L1 HP12/50)
+-> a
+T 280 mode=combat_mode         Forlong the Stalwart(hum) F2@( 6, 3) HP 21/40 MP 0/0 Hu 89 $ 1008 room=M vs Orc(L1 HP12/50)
+-> a
+T 281 mode=combat_victory      Forlong the Stalwart(hum) F2@( 6, 3) HP 17/40 MP 0/0 Hu 89 $ 1022 room=.
+-> back
+T 282 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 3) HP 17/40 MP 0/0 Hu 89 $ 1022 room=.
+-> l
+T 283 mode=game_loop           Forlong the Stalwart(hum) F2@( 6, 3) HP 17/40 MP 0/0 Hu 89 $ 1022 room=.
+-> w
+T 284 mode=game_loop           Forlong the Stalwart(hum) F2@( 5, 3) HP 18/40 MP 0/0 Hu 88 $ 1022 room=.
+-> w
+T 285 mode=pool_mode           Forlong the Stalwart(hum) F2@( 4, 3) HP 18/40 MP 0/0 Hu 87 $ 1022 room=P
+-> n
+T 286 mode=chest_mode          Forlong the Stalwart(hum) F2@( 4, 2) HP 19/40 MP 0/0 Hu 86 $ 1022 room=C
+-> n
+T 287 mode=combat_mode         Forlong the Stalwart(hum) F2@( 4, 1) HP 19/40 MP 0/0 Hu 85 $ 1022 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 288 mode=combat_mode         Forlong the Stalwart(hum) F2@( 4, 1) HP 19/40 MP 0/0 Hu 85 $ 1022 room=M vs Myconid Shaman(L1 HP45/45)
+-> a
+T 289 mode=combat_mode         Forlong the Stalwart(hum) F2@( 4, 1) HP 19/40 MP 0/0 Hu 85 $ 1022 room=M vs Myconid Shaman(L1 HP24/45)
+-> a
+T 290 mode=combat_mode         Forlong the Stalwart(hum) F2@( 4, 1) HP 15/40 MP 0/0 Hu 85 $ 1022 room=M vs Myconid Shaman(L1 HP24/45)
+-> a
+T 291 mode=combat_mode         Forlong the Stalwart(hum) F2@( 4, 1) HP 11/40 MP 0/0 Hu 85 $ 1022 room=M vs Myconid Shaman(L1 HP3/45)
+-> f
+T 292 mode=combat_mode         Forlong the Stalwart(hum) F2@( 4, 1) HP 7/40 MP 0/0 Hu 85 $ 1022 room=M vs Myconid Shaman(L1 HP3/45)
+-> f
+T 293 mode=combat_mode         Forlong the Stalwart(hum) F2@( 4, 1) HP 3/40 MP 0/0 Hu 85 $ 1022 room=M vs Myconid Shaman(L1 HP3/45)
+-> f
+T 294 mode=death_screen        Forlong the Stalwart(hum) F2@( 4, 1) HP -1/40 MP 0/0 Hu 85 $ 1022 room=M
+
+=== run finished: turns=294 floor=2 hp=-1/40 gold=1022 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/01337_human.html

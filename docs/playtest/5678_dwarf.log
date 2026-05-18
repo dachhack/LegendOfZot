@@ -1,0 +1,2972 @@
+T   0 mode=game_loop           Oin the Bold(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Oin the Bold(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 12 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=combat_mode         Oin the Bold(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=M vs Kobold(L0 HP8/8)
+  You no take candle! ...Wait, wrong kobold.
+  You seize the initiative!
+-> a
+T   3 mode=combat_mode         Oin the Bold(dwa) F1@( 2, 1) HP 59/64 MP 0/0 Hu 99 $ 290 room=M vs Kobold(L0 HP8/8)
+  You missed the evil Kobold!
+  Ouch! Kobold hit Oin the Bold!
+  You took 1 damage!
+-> a
+T   4 mode=combat_victory      Oin the Bold(dwa) F1@( 2, 1) HP 59/64 MP 0/0 Hu 99 $ 344 room=.
+  Kobold took 26 damage.
+  You defeated the Kobold!
+  The kobold squeaks its last and collapses.
+  You gained 8 experience.
+  You found 4 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+  You harvested some raw Kobold meat.
+-> back
+T   5 mode=game_loop           Oin the Bold(dwa) F1@( 2, 1) HP 59/64 MP 0/0 Hu 99 $ 344 room=.
+-> l
+T   6 mode=game_loop           Oin the Bold(dwa) F1@( 2, 1) HP 59/64 MP 0/0 Hu 99 $ 344 room=.
+-> s
+T   7 mode=combat_mode         Oin the Bold(dwa) F1@( 2, 2) HP 60/64 MP 0/0 Hu 98 $ 344 room=M vs Goblin(L0 HP12/12)
+-> a
+T   8 mode=combat_victory      Oin the Bold(dwa) F1@( 2, 2) HP 60/64 MP 0/0 Hu 98 $ 348 room=.
+-> back
+T   9 mode=game_loop           Oin the Bold(dwa) F1@( 2, 2) HP 60/64 MP 0/0 Hu 98 $ 348 room=.
+-> l
+T  10 mode=game_loop           Oin the Bold(dwa) F1@( 2, 2) HP 60/64 MP 0/0 Hu 98 $ 348 room=.
+-> e
+T  11 mode=pool_mode           Oin the Bold(dwa) F1@( 3, 2) HP 60/64 MP 0/0 Hu 97 $ 348 room=P
+-> dr
+T  12 mode=game_loop           Oin the Bold(dwa) F1@( 3, 2) HP 60/64 MP 0/0 Hu 97 $ 383 room=.
+-> l
+T  13 mode=game_loop           Oin the Bold(dwa) F1@( 3, 2) HP 60/64 MP 0/0 Hu 97 $ 383 room=.
+-> n
+T  14 mode=combat_mode         Oin the Bold(dwa) F1@( 3, 1) HP 61/64 MP 0/0 Hu 96 $ 383 room=M vs Lichen(L0 HP10/10)
+-> a
+T  15 mode=combat_victory      Oin the Bold(dwa) F1@( 3, 1) HP 61/64 MP 0/0 Hu 96 $ 392 room=.
+-> back
+T  16 mode=game_loop           Oin the Bold(dwa) F1@( 3, 1) HP 61/64 MP 0/0 Hu 96 $ 392 room=.
+-> s
+T  17 mode=game_loop           Oin the Bold(dwa) F1@( 3, 2) HP 61/64 MP 0/0 Hu 95 $ 392 room=.
+-> s
+T  18 mode=combat_mode         Oin the Bold(dwa) F1@( 3, 3) HP 62/64 MP 0/0 Hu 94 $ 392 room=M vs Stirge(L0 HP6/6)
+-> a
+T  19 mode=combat_mode         Oin the Bold(dwa) F1@( 3, 3) HP 61/64 MP 0/0 Hu 94 $ 392 room=M vs Stirge(L0 HP6/6)
+-> a
+T  20 mode=combat_victory      Oin the Bold(dwa) F1@( 3, 3) HP 61/64 MP 0/0 Hu 94 $ 396 room=.
+-> back
+T  21 mode=game_loop           Oin the Bold(dwa) F1@( 3, 3) HP 61/64 MP 0/0 Hu 94 $ 396 room=.
+-> l
+T  22 mode=game_loop           Oin the Bold(dwa) F1@( 3, 3) HP 61/64 MP 0/0 Hu 94 $ 396 room=.
+-> e
+T  23 mode=combat_mode         Oin the Bold(dwa) F1@( 4, 3) HP 61/64 MP 0/0 Hu 93 $ 396 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  24 mode=combat_mode         Oin the Bold(dwa) F1@( 4, 3) HP 61/64 MP 0/0 Hu 93 $ 396 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  25 mode=combat_mode         Oin the Bold(dwa) F1@( 4, 3) HP 60/64 MP 0/0 Hu 93 $ 396 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  26 mode=combat_victory      Oin the Bold(dwa) F1@( 4, 3) HP 60/64 MP 0/0 Hu 93 $ 398 room=.
+-> back
+T  27 mode=game_loop           Oin the Bold(dwa) F1@( 4, 3) HP 60/64 MP 0/0 Hu 93 $ 398 room=.
+-> n
+T  28 mode=combat_mode         Oin the Bold(dwa) F1@( 4, 2) HP 61/64 MP 0/0 Hu 92 $ 398 room=M vs Lichen(L0 HP10/10)
+-> a
+T  29 mode=combat_victory      Oin the Bold(dwa) F1@( 4, 2) HP 61/64 MP 0/0 Hu 92 $ 400 room=.
+-> back
+T  30 mode=game_loop           Oin the Bold(dwa) F1@( 4, 2) HP 61/64 MP 0/0 Hu 92 $ 400 room=.
+-> s
+T  31 mode=game_loop           Oin the Bold(dwa) F1@( 4, 3) HP 61/64 MP 0/0 Hu 91 $ 400 room=.
+-> e
+T  32 mode=game_loop           Oin the Bold(dwa) F1@( 5, 3) HP 62/64 MP 0/0 Hu 90 $ 400 room=.
+-> l
+T  33 mode=game_loop           Oin the Bold(dwa) F1@( 5, 3) HP 62/64 MP 0/0 Hu 90 $ 400 room=.
+-> e
+T  34 mode=vendor_shop         Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 89 $ 400 room=V
+-> b15
+T  35 mode=vendor_shop         Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 89 $ 390 room=V
+-> b4
+T  36 mode=vendor_shop         Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 89 $ 340 room=V
+-> b4
+T  37 mode=vendor_shop         Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 89 $ 310 room=V
+-> b4
+T  38 mode=vendor_shop         Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 89 $ 280 room=V
+-> b6
+T  39 mode=vendor_shop         Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 89 $ 250 room=V
+-> b6
+T  40 mode=vendor_shop         Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 89 $ 220 room=V
+-> x
+T  41 mode=game_loop           Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 89 $ 220 room=V
+-> i
+T  42 mode=inventory           Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 89 $ 220 room=V
+-> eat4
+T  43 mode=inventory           Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 94 $ 220 room=V
+-> x
+T  44 mode=game_loop           Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 94 $ 220 room=V
+-> l
+T  45 mode=game_loop           Oin the Bold(dwa) F1@( 6, 3) HP 62/64 MP 0/0 Hu 94 $ 220 room=V
+-> s
+T  46 mode=game_loop           Oin the Bold(dwa) F1@( 6, 4) HP 63/64 MP 0/0 Hu 93 $ 220 room=.
+-> i
+T  47 mode=inventory           Oin the Bold(dwa) F1@( 6, 4) HP 63/64 MP 0/0 Hu 93 $ 220 room=.
+-> eat3
+T  48 mode=inventory           Oin the Bold(dwa) F1@( 6, 4) HP 63/64 MP 0/0 Hu 98 $ 220 room=.
+-> x
+T  49 mode=game_loop           Oin the Bold(dwa) F1@( 6, 4) HP 63/64 MP 0/0 Hu 98 $ 220 room=.
+-> l
+T  50 mode=game_loop           Oin the Bold(dwa) F1@( 6, 4) HP 63/64 MP 0/0 Hu 98 $ 220 room=.
+-> s
+T  51 mode=chest_mode          Oin the Bold(dwa) F1@( 6, 5) HP 63/64 MP 0/0 Hu 97 $ 220 room=C
+-> o
+T  52 mode=game_loop           Oin the Bold(dwa) F1@( 6, 5) HP 63/64 MP 0/0 Hu 97 $ 220 room=.
+-> i
+T  53 mode=inventory           Oin the Bold(dwa) F1@( 6, 5) HP 63/64 MP 0/0 Hu 97 $ 220 room=.
+-> e2
+T  54 mode=inventory           Oin the Bold(dwa) F1@( 6, 5) HP 63/64 MP 0/0 Hu 97 $ 220 room=.
+-> x
+T  55 mode=game_loop           Oin the Bold(dwa) F1@( 6, 5) HP 63/64 MP 0/0 Hu 97 $ 220 room=.
+-> l
+T  56 mode=game_loop           Oin the Bold(dwa) F1@( 6, 5) HP 63/64 MP 0/0 Hu 97 $ 220 room=.
+-> w
+T  57 mode=combat_mode         Oin the Bold(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu 96 $ 220 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  58 mode=combat_victory      Oin the Bold(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu 96 $ 323 room=.
+-> back
+T  59 mode=game_loop           Oin the Bold(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu 96 $ 323 room=.
+-> w
+T  60 mode=game_loop           Oin the Bold(dwa) F1@( 4, 5) HP 64/64 MP 0/0 Hu 95 $ 323 room=.
+-> e
+T  61 mode=game_loop           Oin the Bold(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu 94 $ 323 room=.
+-> i
+T  62 mode=inventory           Oin the Bold(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu 94 $ 323 room=.
+-> eat4
+T  63 mode=inventory           Oin the Bold(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu100 $ 323 room=.
+-> x
+T  64 mode=game_loop           Oin the Bold(dwa) F1@( 5, 5) HP 64/64 MP 0/0 Hu100 $ 323 room=.
+-> n
+T  65 mode=game_loop           Oin the Bold(dwa) F1@( 5, 4) HP 64/64 MP 0/0 Hu 99 $ 323 room=.
+-> e
+T  66 mode=game_loop           Oin the Bold(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 98 $ 323 room=.
+-> i
+T  67 mode=inventory           Oin the Bold(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu 98 $ 323 room=.
+-> eat3
+T  68 mode=inventory           Oin the Bold(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu100 $ 323 room=.
+-> x
+T  69 mode=game_loop           Oin the Bold(dwa) F1@( 6, 4) HP 64/64 MP 0/0 Hu100 $ 323 room=.
+-> e
+T  70 mode=combat_mode         Oin the Bold(dwa) F1@( 7, 4) HP 64/64 MP 0/0 Hu 99 $ 323 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  71 mode=combat_mode         Oin the Bold(dwa) F1@( 7, 4) HP 64/64 MP 0/0 Hu 99 $ 323 room=M vs Skeleton(L0 HP1/25)
+-> f
+T  72 mode=flee_direction_mode Oin the Bold(dwa) F1@( 7, 4) HP 64/64 MP 0/0 Hu 99 $ 323 room=M
+-> n
+T  73 mode=combat_mode         Oin the Bold(dwa) F1@( 7, 3) HP 64/64 MP 0/0 Hu 99 $ 323 room=M vs Skeleton(L0 HP25/25)
+-> f
+T  74 mode=combat_mode         Oin the Bold(dwa) F1@( 7, 3) HP 63/64 MP 0/0 Hu 99 $ 323 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  75 mode=combat_mode         Oin the Bold(dwa) F1@( 7, 3) HP 62/64 MP 0/0 Hu 99 $ 323 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  76 mode=combat_mode         Oin the Bold(dwa) F1@( 7, 3) HP 61/64 MP 0/0 Hu 99 $ 323 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  77 mode=combat_victory      Oin the Bold(dwa) F1@( 7, 3) HP 61/64 MP 0/0 Hu 99 $ 330 room=.
+-> back
+T  78 mode=game_loop           Oin the Bold(dwa) F1@( 7, 3) HP 61/64 MP 0/0 Hu 99 $ 330 room=.
+-> n
+T  79 mode=tomb_mode           Oin the Bold(dwa) F1@( 7, 2) HP 61/64 MP 0/0 Hu 98 $ 330 room=T
+-> p
+T  80 mode=game_loop           Oin the Bold(dwa) F1@( 7, 2) HP 64/64 MP 0/0 Hu 98 $ 330 room=T
+-> e
+T  81 mode=pool_mode           Oin the Bold(dwa) F1@( 8, 2) HP 64/64 MP 0/0 Hu 97 $ 330 room=P
+-> dr
+T  82 mode=game_loop           Oin the Bold(dwa) F1@( 8, 2) HP 64/64 MP 0/0 Hu 97 $ 330 room=.
+-> e
+T  83 mode=combat_mode         Oin the Bold(dwa) F1@( 9, 2) HP 64/64 MP 0/0 Hu 96 $ 330 room=M vs Goblin(L0 HP30/30)
+-> a
+T  84 mode=combat_mode         Oin the Bold(dwa) F1@( 9, 2) HP 63/64 MP 0/0 Hu 96 $ 330 room=M vs Goblin(L0 HP5/30)
+-> a
+T  85 mode=combat_victory      Oin the Bold(dwa) F1@( 9, 2) HP 63/64 MP 0/0 Hu 96 $ 339 room=.
+-> back
+T  86 mode=game_loop           Oin the Bold(dwa) F1@( 9, 2) HP 63/64 MP 0/0 Hu 96 $ 339 room=.
+-> s
+T  87 mode=pool_mode           Oin the Bold(dwa) F1@( 9, 3) HP 63/64 MP 0/0 Hu 95 $ 339 room=P
+-> dr
+T  88 mode=game_loop           Oin the Bold(dwa) F1@( 9, 3) HP 63/64 MP 0/0 Hu 95 $ 339 room=.
+-> e
+T  89 mode=combat_mode         Oin the Bold(dwa) F1@(10, 3) HP 64/64 MP 0/0 Hu 94 $ 339 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  90 mode=combat_mode         Oin the Bold(dwa) F1@(10, 3) HP 63/64 MP 0/0 Hu 94 $ 339 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  91 mode=combat_victory      Oin the Bold(dwa) F1@(10, 3) HP 63/64 MP 0/0 Hu 94 $ 442 room=.
+-> back
+T  92 mode=game_loop           Oin the Bold(dwa) F1@(10, 3) HP 63/64 MP 0/0 Hu 94 $ 442 room=.
+-> l
+T  93 mode=game_loop           Oin the Bold(dwa) F1@(10, 3) HP 63/64 MP 0/0 Hu 94 $ 442 room=.
+-> n
+T  94 mode=combat_mode         Oin the Bold(dwa) F1@(10, 2) HP 63/64 MP 0/0 Hu 93 $ 442 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  95 mode=combat_victory      Oin the Bold(dwa) F1@(10, 2) HP 62/64 MP 0/0 Hu 93 $ 451 room=.
+-> back
+T  96 mode=game_loop           Oin the Bold(dwa) F1@(10, 2) HP 62/64 MP 0/0 Hu 93 $ 451 room=.
+-> l
+T  97 mode=game_loop           Oin the Bold(dwa) F1@(10, 2) HP 62/64 MP 0/0 Hu 93 $ 451 room=.
+-> e
+T  98 mode=combat_mode         Oin the Bold(dwa) F1@(11, 2) HP 63/64 MP 0/0 Hu 92 $ 451 room=M vs Kobold(L0 HP20/20)
+-> a
+T  99 mode=combat_victory      Oin the Bold(dwa) F1@(11, 2) HP 63/64 MP 0/0 Hu 92 $ 461 room=.
+-> back
+T 100 mode=game_loop           Oin the Bold(dwa) F1@(11, 2) HP 63/64 MP 0/0 Hu 92 $ 461 room=.
+-> l
+T 101 mode=game_loop           Oin the Bold(dwa) F1@(11, 2) HP 63/64 MP 0/0 Hu 92 $ 461 room=.
+-> n
+T 102 mode=game_loop           Oin the Bold(dwa) F1@(11, 1) HP 63/64 MP 0/0 Hu 91 $ 461 room=.
+-> l
+T 103 mode=game_loop           Oin the Bold(dwa) F1@(11, 1) HP 63/64 MP 0/0 Hu 91 $ 461 room=.
+-> e
+T 104 mode=combat_mode         Oin the Bold(dwa) F1@(12, 1) HP 64/64 MP 0/0 Hu 90 $ 461 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 105 mode=combat_victory      Oin the Bold(dwa) F1@(12, 1) HP 64/74 MP 0/0 Hu 90 $ 469 room=.
+-> back
+T 106 mode=game_loop           Oin the Bold(dwa) F1@(12, 1) HP 64/74 MP 0/0 Hu 90 $ 469 room=.
+-> e
+T 107 mode=game_loop           Oin the Bold(dwa) F1@(13, 1) HP 64/74 MP 0/0 Hu 89 $ 469 room=.
+-> e
+T 108 mode=garden_mode         Oin the Bold(dwa) F1@(14, 1) HP 65/74 MP 0/0 Hu 88 $ 469 room=G
+-> h
+T 109 mode=game_loop           Oin the Bold(dwa) F1@(14, 1) HP 65/74 MP 0/0 Hu 88 $ 469 room=.
+-> l
+T 110 mode=game_loop           Oin the Bold(dwa) F1@(14, 1) HP 65/74 MP 0/0 Hu 88 $ 469 room=.
+-> s
+T 111 mode=combat_mode         Oin the Bold(dwa) F1@(14, 2) HP 65/74 MP 0/0 Hu 87 $ 469 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 112 mode=combat_mode         Oin the Bold(dwa) F1@(14, 2) HP 64/74 MP 0/0 Hu 87 $ 469 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 113 mode=combat_victory      Oin the Bold(dwa) F1@(14, 2) HP 63/74 MP 0/0 Hu 87 $ 570 room=.
+-> back
+T 114 mode=game_loop           Oin the Bold(dwa) F1@(14, 2) HP 63/74 MP 0/0 Hu 87 $ 570 room=.
+-> s
+T 115 mode=combat_mode         Oin the Bold(dwa) F1@(14, 3) HP 64/74 MP 0/0 Hu 86 $ 570 room=M vs Kobold(L0 HP20/20)
+-> a
+T 116 mode=combat_victory      Oin the Bold(dwa) F1@(14, 3) HP 64/74 MP 0/0 Hu 86 $ 572 room=.
+-> back
+T 117 mode=game_loop           Oin the Bold(dwa) F1@(14, 3) HP 64/74 MP 0/0 Hu 86 $ 572 room=.
+-> i
+T 118 mode=inventory           Oin the Bold(dwa) F1@(14, 3) HP 64/74 MP 0/0 Hu 86 $ 572 room=.
+-> u5
+T 119 mode=inventory           Oin the Bold(dwa) F1@(14, 3) HP 74/74 MP 0/0 Hu 86 $ 572 room=.
+-> x
+T 120 mode=game_loop           Oin the Bold(dwa) F1@(14, 3) HP 74/74 MP 0/0 Hu 86 $ 572 room=.
+-> i
+T 121 mode=inventory           Oin the Bold(dwa) F1@(14, 3) HP 74/74 MP 0/0 Hu 86 $ 572 room=.
+-> eat4
+T 122 mode=inventory           Oin the Bold(dwa) F1@(14, 3) HP 74/74 MP 0/0 Hu 91 $ 572 room=.
+-> x
+T 123 mode=game_loop           Oin the Bold(dwa) F1@(14, 3) HP 74/74 MP 0/0 Hu 91 $ 572 room=.
+-> s
+T 124 mode=game_loop           Oin the Bold(dwa) F1@(14, 4) HP 74/74 MP 0/0 Hu 90 $ 572 room=.
+-> l
+T 125 mode=game_loop           Oin the Bold(dwa) F1@(14, 4) HP 74/74 MP 0/0 Hu 90 $ 572 room=.
+-> w
+T 126 mode=game_loop           Oin the Bold(dwa) F1@(13, 4) HP 74/74 MP 0/0 Hu 89 $ 572 room=.
+-> i
+T 127 mode=inventory           Oin the Bold(dwa) F1@(13, 4) HP 74/74 MP 0/0 Hu 89 $ 572 room=.
+-> eat6
+T 128 mode=inventory           Oin the Bold(dwa) F1@(13, 4) HP 74/74 MP 0/0 Hu 95 $ 572 room=.
+-> x
+T 129 mode=game_loop           Oin the Bold(dwa) F1@(13, 4) HP 74/74 MP 0/0 Hu 95 $ 572 room=.
+-> l
+T 130 mode=game_loop           Oin the Bold(dwa) F1@(13, 4) HP 74/74 MP 0/0 Hu 95 $ 572 room=.
+-> s
+T 131 mode=combat_mode         Oin the Bold(dwa) F1@(13, 5) HP 74/74 MP 0/0 Hu 94 $ 572 room=M vs Goblin(L0 HP12/12)
+-> a
+T 132 mode=combat_victory      Oin the Bold(dwa) F1@(13, 5) HP 74/74 MP 0/0 Hu 94 $ 577 room=.
+-> back
+T 133 mode=game_loop           Oin the Bold(dwa) F1@(13, 5) HP 74/74 MP 0/0 Hu 94 $ 577 room=.
+-> e
+T 134 mode=game_loop           Oin the Bold(dwa) F1@(14, 5) HP 74/74 MP 0/0 Hu 93 $ 577 room=.
+-> i
+T 135 mode=inventory           Oin the Bold(dwa) F1@(14, 5) HP 74/74 MP 0/0 Hu 93 $ 577 room=.
+-> eat4
+T 136 mode=inventory           Oin the Bold(dwa) F1@(14, 5) HP 74/74 MP 0/0 Hu 98 $ 577 room=.
+-> x
+T 137 mode=game_loop           Oin the Bold(dwa) F1@(14, 5) HP 74/74 MP 0/0 Hu 98 $ 577 room=.
+-> l
+T 138 mode=game_loop           Oin the Bold(dwa) F1@(14, 5) HP 74/74 MP 0/0 Hu 98 $ 577 room=.
+-> s
+T 139 mode=combat_mode         Oin the Bold(dwa) F1@(14, 6) HP 74/74 MP 0/0 Hu 97 $ 577 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 140 mode=combat_mode         Oin the Bold(dwa) F1@(14, 6) HP 74/74 MP 0/0 Hu 97 $ 577 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 141 mode=combat_mode         Oin the Bold(dwa) F1@(14, 6) HP 74/74 MP 0/0 Hu 97 $ 577 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 142 mode=combat_victory      Oin the Bold(dwa) F1@(14, 6) HP 74/74 MP 0/0 Hu 97 $ 578 room=.
+-> back
+T 143 mode=game_loop           Oin the Bold(dwa) F1@(14, 6) HP 74/74 MP 0/0 Hu 97 $ 578 room=.
+-> l
+T 144 mode=game_loop           Oin the Bold(dwa) F1@(14, 6) HP 74/74 MP 0/0 Hu 97 $ 578 room=.
+-> e
+T 145 mode=combat_mode         Oin the Bold(dwa) F1@(15, 6) HP 74/74 MP 0/0 Hu 96 $ 578 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 146 mode=combat_mode         Oin the Bold(dwa) F1@(15, 6) HP 74/74 MP 0/0 Hu 96 $ 578 room=M vs Skeleton(L0 HP1/25)
+-> a
+T 147 mode=combat_victory      Oin the Bold(dwa) F1@(15, 6) HP 74/74 MP 0/0 Hu 96 $ 587 room=.
+-> back
+T 148 mode=game_loop           Oin the Bold(dwa) F1@(15, 6) HP 74/74 MP 0/0 Hu 96 $ 587 room=.
+-> i
+T 149 mode=inventory           Oin the Bold(dwa) F1@(15, 6) HP 74/74 MP 0/0 Hu 96 $ 587 room=.
+-> eat5
+T 150 mode=inventory           Oin the Bold(dwa) F1@(15, 6) HP 74/74 MP 0/0 Hu100 $ 587 room=.
+-> x
+T 151 mode=game_loop           Oin the Bold(dwa) F1@(15, 6) HP 74/74 MP 0/0 Hu100 $ 587 room=.
+-> l
+T 152 mode=game_loop           Oin the Bold(dwa) F1@(15, 6) HP 74/74 MP 0/0 Hu100 $ 587 room=.
+-> e
+T 153 mode=dungeon_mode        Oin the Bold(dwa) F1@(16, 6) HP 74/74 MP 0/0 Hu 99 $ 587 room=N
+-> u
+T 154 mode=dungeon_unlocked_mode Oin the Bold(dwa) F1@(16, 6) HP 74/74 MP 0/0 Hu 99 $ 587 room=N
+-> r
+T 155 mode=game_loop           Oin the Bold(dwa) F1@(16, 6) HP 74/74 MP 0/0 Hu 99 $ 587 room=N
+-> i
+T 156 mode=inventory           Oin the Bold(dwa) F1@(16, 6) HP 74/74 MP 0/0 Hu 99 $ 587 room=N
+-> e1
+T 157 mode=inventory           Oin the Bold(dwa) F1@(16, 6) HP 74/74 MP 0/0 Hu 99 $ 587 room=N
+-> x
+T 158 mode=game_loop           Oin the Bold(dwa) F1@(16, 6) HP 74/74 MP 0/0 Hu 99 $ 587 room=N
+-> l
+T 159 mode=game_loop           Oin the Bold(dwa) F1@(16, 6) HP 74/74 MP 0/0 Hu 99 $ 587 room=N
+-> n
+T 160 mode=combat_mode         Oin the Bold(dwa) F1@(16, 5) HP 74/74 MP 0/0 Hu 98 $ 587 room=M vs Zombie(L0 HP35/35)
+-> a
+T 161 mode=combat_mode         Oin the Bold(dwa) F1@(16, 5) HP 73/74 MP 0/0 Hu 98 $ 587 room=M vs Zombie(L0 HP8/35)
+-> a
+T 162 mode=combat_victory      Oin the Bold(dwa) F1@(16, 5) HP 73/74 MP 0/0 Hu 98 $ 589 room=.
+-> back
+T 163 mode=game_loop           Oin the Bold(dwa) F1@(16, 5) HP 73/74 MP 0/0 Hu 98 $ 589 room=.
+-> n
+T 164 mode=combat_mode         Oin the Bold(dwa) F1@(16, 4) HP 73/74 MP 0/0 Hu 97 $ 589 room=M vs Goblin(L0 HP12/12)
+-> a
+T 165 mode=combat_mode         Oin the Bold(dwa) F1@(16, 4) HP 73/74 MP 0/0 Hu 97 $ 589 room=M vs Goblin(L0 HP12/12)
+-> a
+T 166 mode=combat_victory      Oin the Bold(dwa) F1@(16, 4) HP 73/74 MP 0/0 Hu 97 $ 599 room=.
+-> back
+T 167 mode=game_loop           Oin the Bold(dwa) F1@(16, 4) HP 73/74 MP 0/0 Hu 97 $ 599 room=.
+-> i
+T 168 mode=inventory           Oin the Bold(dwa) F1@(16, 4) HP 73/74 MP 0/0 Hu 97 $ 599 room=.
+-> eat3
+T 169 mode=inventory           Oin the Bold(dwa) F1@(16, 4) HP 73/74 MP 0/0 Hu100 $ 599 room=.
+-> x
+T 170 mode=game_loop           Oin the Bold(dwa) F1@(16, 4) HP 73/74 MP 0/0 Hu100 $ 599 room=.
+-> w
+T 171 mode=combat_mode         Oin the Bold(dwa) F1@(15, 4) HP 74/74 MP 0/0 Hu 99 $ 599 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 172 mode=combat_victory      Oin the Bold(dwa) F1@(15, 4) HP 73/74 MP 0/0 Hu 99 $ 603 room=.
+-> back
+T 173 mode=game_loop           Oin the Bold(dwa) F1@(15, 4) HP 73/74 MP 0/0 Hu 99 $ 603 room=.
+-> i
+T 174 mode=inventory           Oin the Bold(dwa) F1@(15, 4) HP 73/74 MP 0/0 Hu 99 $ 603 room=.
+-> eat4
+T 175 mode=inventory           Oin the Bold(dwa) F1@(15, 4) HP 73/74 MP 0/0 Hu100 $ 603 room=.
+-> x
+T 176 mode=game_loop           Oin the Bold(dwa) F1@(15, 4) HP 73/74 MP 0/0 Hu100 $ 603 room=.
+-> s
+T 177 mode=combat_mode         Oin the Bold(dwa) F1@(15, 5) HP 73/74 MP 0/0 Hu 99 $ 603 room=M vs Kobold(L0 HP20/20)
+-> a
+T 178 mode=combat_mode         Oin the Bold(dwa) F1@(15, 5) HP 72/74 MP 0/0 Hu 99 $ 603 room=M vs Kobold(L0 HP20/20)
+-> a
+T 179 mode=combat_mode         Oin the Bold(dwa) F1@(15, 5) HP 72/74 MP 0/0 Hu 99 $ 603 room=M vs Kobold(L0 HP20/20)
+-> a
+T 180 mode=combat_victory      Oin the Bold(dwa) F1@(15, 5) HP 71/74 MP 0/0 Hu 99 $ 608 room=.
+-> back
+T 181 mode=game_loop           Oin the Bold(dwa) F1@(15, 5) HP 71/74 MP 0/0 Hu 99 $ 608 room=.
+-> s
+T 182 mode=game_loop           Oin the Bold(dwa) F1@(15, 6) HP 72/74 MP 0/0 Hu 98 $ 608 room=.
+-> s
+T 183 mode=combat_mode         Oin the Bold(dwa) F1@(15, 7) HP 72/74 MP 0/0 Hu 97 $ 608 room=M vs Bat(L0 HP12/12)
+-> a
+T 184 mode=combat_victory      Oin the Bold(dwa) F1@(15, 7) HP 72/74 MP 0/0 Hu 97 $ 610 room=.
+-> back
+T 185 mode=game_loop           Oin the Bold(dwa) F1@(15, 7) HP 72/74 MP 0/0 Hu 97 $ 610 room=.
+-> e
+T 186 mode=combat_mode         Oin the Bold(dwa) F1@(16, 7) HP 73/74 MP 0/0 Hu 96 $ 610 room=M vs Stirge(L0 HP6/6)
+-> a
+T 187 mode=combat_victory      Oin the Bold(dwa) F1@(16, 7) HP 72/74 MP 0/0 Hu 96 $ 611 room=.
+-> back
+T 188 mode=game_loop           Oin the Bold(dwa) F1@(16, 7) HP 72/74 MP 0/0 Hu 96 $ 611 room=.
+-> l
+T 189 mode=game_loop           Oin the Bold(dwa) F1@(16, 7) HP 72/74 MP 0/0 Hu 96 $ 611 room=.
+-> s
+T 190 mode=game_loop           Oin the Bold(dwa) F1@(16, 8) HP 72/74 MP 0/0 Hu 95 $ 611 room=.
+-> l
+T 191 mode=game_loop           Oin the Bold(dwa) F1@(16, 8) HP 72/74 MP 0/0 Hu 95 $ 611 room=.
+-> s
+T 192 mode=combat_mode         Oin the Bold(dwa) F1@(16, 9) HP 73/74 MP 0/0 Hu 94 $ 611 room=M vs Goblin(L0 HP30/30)
+-> a
+T 193 mode=combat_mode         Oin the Bold(dwa) F1@(16, 9) HP 72/74 MP 0/0 Hu 94 $ 611 room=M vs Goblin(L0 HP4/30)
+-> a
+T 194 mode=combat_mode         Oin the Bold(dwa) F1@(16, 9) HP 71/74 MP 0/0 Hu 94 $ 611 room=M vs Goblin(L0 HP4/30)
+-> a
+T 195 mode=combat_victory      Oin the Bold(dwa) F1@(16, 9) HP 71/74 MP 0/0 Hu 94 $ 614 room=.
+-> back
+T 196 mode=game_loop           Oin the Bold(dwa) F1@(16, 9) HP 71/74 MP 0/0 Hu 94 $ 614 room=.
+-> w
+T 197 mode=combat_mode         Oin the Bold(dwa) F1@(15, 9) HP 71/74 MP 0/0 Hu 93 $ 614 room=M vs Bat(L0 HP12/12)
+-> a
+T 198 mode=combat_mode         Oin the Bold(dwa) F1@(15, 9) HP 71/74 MP 0/0 Hu 93 $ 614 room=M vs Bat(L0 HP12/12)
+-> a
+T 199 mode=combat_victory      Oin the Bold(dwa) F1@(15, 9) HP 71/74 MP 0/0 Hu 93 $ 624 room=.
+-> back
+T 200 mode=game_loop           Oin the Bold(dwa) F1@(15, 9) HP 71/74 MP 0/0 Hu 93 $ 624 room=.
+-> s
+T 201 mode=combat_mode         Oin the Bold(dwa) F1@(15,10) HP 72/74 MP 0/0 Hu 92 $ 624 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 202 mode=combat_victory      Oin the Bold(dwa) F1@(15,10) HP 72/74 MP 0/0 Hu 92 $ 634 room=.
+-> back
+T 203 mode=game_loop           Oin the Bold(dwa) F1@(15,10) HP 72/74 MP 0/0 Hu 92 $ 634 room=.
+-> s
+T 204 mode=combat_mode         Oin the Bold(dwa) F1@(15,11) HP 72/74 MP 0/0 Hu 91 $ 634 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 205 mode=combat_mode         Oin the Bold(dwa) F1@(15,11) HP 71/74 MP 0/0 Hu 91 $ 634 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 206 mode=combat_victory      Oin the Bold(dwa) F1@(15,11) HP 71/74 MP 0/0 Hu 91 $ 636 room=.
+-> back
+T 207 mode=game_loop           Oin the Bold(dwa) F1@(15,11) HP 71/74 MP 0/0 Hu 91 $ 636 room=.
+-> i
+T 208 mode=inventory           Oin the Bold(dwa) F1@(15,11) HP 71/74 MP 0/0 Hu 91 $ 636 room=.
+-> eat4
+T 209 mode=inventory           Oin the Bold(dwa) F1@(15,11) HP 71/74 MP 0/0 Hu 96 $ 636 room=.
+-> x
+T 210 mode=game_loop           Oin the Bold(dwa) F1@(15,11) HP 71/74 MP 0/0 Hu 96 $ 636 room=.
+-> l
+T 211 mode=game_loop           Oin the Bold(dwa) F1@(15,11) HP 71/74 MP 0/0 Hu 96 $ 636 room=.
+-> e
+T 212 mode=library_mode        Oin the Bold(dwa) F1@(16,11) HP 72/74 MP 0/0 Hu 95 $ 636 room=L
+-> r
+T 213 mode=game_loop           Oin the Bold(dwa) F1@(16,11) HP 72/74 MP 0/0 Hu 95 $ 636 room=.
+-> s
+T 214 mode=combat_mode         Oin the Bold(dwa) F1@(16,12) HP 72/74 MP 0/0 Hu 94 $ 636 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 215 mode=combat_mode         Oin the Bold(dwa) F1@(16,12) HP 71/74 MP 0/0 Hu 94 $ 636 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 216 mode=combat_mode         Oin the Bold(dwa) F1@(16,12) HP 71/74 MP 0/0 Hu 94 $ 636 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 217 mode=combat_victory      Oin the Bold(dwa) F1@(16,12) HP 70/84 MP 0/0 Hu 94 $ 640 room=.
+-> back
+T 218 mode=game_loop           Oin the Bold(dwa) F1@(16,12) HP 70/84 MP 0/0 Hu 94 $ 640 room=.
+-> l
+T 219 mode=game_loop           Oin the Bold(dwa) F1@(16,12) HP 70/84 MP 0/0 Hu 94 $ 640 room=.
+-> s
+T 220 mode=chest_mode          Oin the Bold(dwa) F1@(16,13) HP 71/84 MP 0/0 Hu 93 $ 640 room=C
+-> o
+T 221 mode=game_loop           Oin the Bold(dwa) F1@(16,13) HP 71/84 MP 0/0 Hu 93 $ 650 room=.
+-> l
+T 222 mode=game_loop           Oin the Bold(dwa) F1@(16,13) HP 71/84 MP 0/0 Hu 93 $ 650 room=.
+-> s
+T 223 mode=combat_mode         Oin the Bold(dwa) F1@(16,14) HP 71/84 MP 0/0 Hu 92 $ 650 room=M vs Kobold(L0 HP8/8)
+-> a
+T 224 mode=combat_victory      Oin the Bold(dwa) F1@(16,14) HP 71/84 MP 0/0 Hu 92 $ 652 room=.
+-> back
+T 225 mode=game_loop           Oin the Bold(dwa) F1@(16,14) HP 71/84 MP 0/0 Hu 92 $ 652 room=.
+-> l
+T 226 mode=game_loop           Oin the Bold(dwa) F1@(16,14) HP 71/84 MP 0/0 Hu 92 $ 652 room=.
+-> e
+T 227 mode=dungeon_mode        Oin the Bold(dwa) F1@(17,14) HP 72/84 MP 0/0 Hu 91 $ 652 room=N
+-> u
+T 228 mode=dungeon_unlocked_mode Oin the Bold(dwa) F1@(17,14) HP 72/84 MP 0/0 Hu 91 $ 652 room=N
+-> r
+T 229 mode=game_loop           Oin the Bold(dwa) F1@(17,14) HP 72/84 MP 0/0 Hu 91 $ 788 room=N
+-> l
+T 230 mode=game_loop           Oin the Bold(dwa) F1@(17,14) HP 72/84 MP 0/0 Hu 91 $ 788 room=N
+-> l
+T 231 mode=game_loop           Oin the Bold(dwa) F1@(17,14) HP 72/84 MP 0/0 Hu 91 $ 788 room=N
+-> e
+T 232 mode=chest_mode          Oin the Bold(dwa) F1@(18,14) HP 72/84 MP 0/0 Hu 90 $ 788 room=C
+-> o
+T 233 mode=game_loop           Oin the Bold(dwa) F1@(18,14) HP 72/84 MP 0/0 Hu 90 $ 828 room=.
+-> l
+T 234 mode=game_loop           Oin the Bold(dwa) F1@(18,14) HP 72/84 MP 0/0 Hu 90 $ 828 room=.
+-> n
+T 235 mode=combat_mode         Oin the Bold(dwa) F1@(18,13) HP 73/84 MP 0/0 Hu 89 $ 828 room=M vs Lichen(L0 HP10/10)
+-> a
+T 236 mode=combat_mode         Oin the Bold(dwa) F1@(18,13) HP 73/84 MP 0/0 Hu 89 $ 828 room=M vs Lichen(L0 HP10/10)
+-> a
+T 237 mode=combat_mode         Oin the Bold(dwa) F1@(18,13) HP 72/84 MP 0/0 Hu 89 $ 828 room=M vs Lichen(L0 HP10/10)
+-> a
+T 238 mode=combat_mode         Oin the Bold(dwa) F1@(18,13) HP 72/84 MP 0/0 Hu 89 $ 828 room=M vs Lichen(L0 HP10/10)
+-> a
+T 239 mode=combat_victory      Oin the Bold(dwa) F1@(18,13) HP 72/84 MP 0/0 Hu 89 $ 830 room=.
+-> back
+T 240 mode=game_loop           Oin the Bold(dwa) F1@(18,13) HP 72/84 MP 0/0 Hu 89 $ 830 room=.
+-> l
+T 241 mode=game_loop           Oin the Bold(dwa) F1@(18,13) HP 72/84 MP 0/0 Hu 89 $ 830 room=.
+-> n
+T 242 mode=combat_mode         Oin the Bold(dwa) F1@(18,12) HP 72/84 MP 0/0 Hu 88 $ 830 room=M vs Goblin(L0 HP30/30)
+-> a
+T 243 mode=combat_mode         Oin the Bold(dwa) F1@(18,12) HP 71/84 MP 0/0 Hu 88 $ 830 room=M vs Goblin(L0 HP4/30)
+-> a
+T 244 mode=combat_mode         Oin the Bold(dwa) F1@(18,12) HP 71/84 MP 0/0 Hu 88 $ 830 room=M vs Goblin(L0 HP4/30)
+-> a
+T 245 mode=combat_victory      Oin the Bold(dwa) F1@(18,12) HP 70/84 MP 0/0 Hu 88 $ 834 room=.
+-> back
+T 246 mode=game_loop           Oin the Bold(dwa) F1@(18,12) HP 70/84 MP 0/0 Hu 88 $ 834 room=.
+-> i
+T 247 mode=inventory           Oin the Bold(dwa) F1@(18,12) HP 70/84 MP 0/0 Hu 88 $ 834 room=.
+-> u6
+T 248 mode=inventory           Oin the Bold(dwa) F1@(18,12) HP 84/84 MP 0/0 Hu 88 $ 834 room=.
+-> x
+T 249 mode=game_loop           Oin the Bold(dwa) F1@(18,12) HP 84/84 MP 0/0 Hu 88 $ 834 room=.
+-> i
+T 250 mode=inventory           Oin the Bold(dwa) F1@(18,12) HP 84/84 MP 0/0 Hu 88 $ 834 room=.
+-> eat3
+T 251 mode=inventory           Oin the Bold(dwa) F1@(18,12) HP 84/84 MP 0/0 Hu 93 $ 834 room=.
+-> x
+T 252 mode=game_loop           Oin the Bold(dwa) F1@(18,12) HP 84/84 MP 0/0 Hu 93 $ 834 room=.
+-> n
+T 253 mode=combat_mode         Oin the Bold(dwa) F1@(18,11) HP 84/84 MP 0/0 Hu 92 $ 834 room=M vs Lichen(L0 HP10/10)
+-> a
+T 254 mode=combat_mode         Oin the Bold(dwa) F1@(18,11) HP 84/84 MP 0/0 Hu 92 $ 834 room=M vs Lichen(L0 HP10/10)
+-> f
+T 255 mode=flee_direction_mode Oin the Bold(dwa) F1@(18,11) HP 84/84 MP 0/0 Hu 92 $ 834 room=M
+-> n
+T 256 mode=combat_mode         Oin the Bold(dwa) F1@(18,10) HP 84/84 MP 0/0 Hu 92 $ 834 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 257 mode=combat_mode         Oin the Bold(dwa) F1@(18,10) HP 83/84 MP 0/0 Hu 92 $ 834 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 258 mode=combat_victory      Oin the Bold(dwa) F1@(18,10) HP 83/84 MP 0/0 Hu 92 $ 842 room=.
+-> back
+T 259 mode=game_loop           Oin the Bold(dwa) F1@(18,10) HP 83/84 MP 0/0 Hu 92 $ 842 room=.
+-> i
+T 260 mode=inventory           Oin the Bold(dwa) F1@(18,10) HP 83/84 MP 0/0 Hu 92 $ 842 room=.
+-> eat6
+T 261 mode=inventory           Oin the Bold(dwa) F1@(18,10) HP 83/84 MP 0/0 Hu 97 $ 842 room=.
+-> x
+T 262 mode=game_loop           Oin the Bold(dwa) F1@(18,10) HP 83/84 MP 0/0 Hu 97 $ 842 room=.
+-> w
+T 263 mode=library_mode        Oin the Bold(dwa) F1@(17,10) HP 83/84 MP 0/0 Hu 96 $ 842 room=L
+-> r
+T 264 mode=game_loop           Oin the Bold(dwa) F1@(17,10) HP 83/84 MP 0/0 Hu 96 $ 842 room=.
+-> s
+T 265 mode=combat_mode         Oin the Bold(dwa) F1@(17,11) HP 84/84 MP 0/0 Hu 95 $ 842 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 266 mode=combat_victory      Oin the Bold(dwa) F1@(17,11) HP 84/84 MP 0/0 Hu 95 $ 843 room=.
+-> back
+T 267 mode=game_loop           Oin the Bold(dwa) F1@(17,11) HP 84/84 MP 0/0 Hu 95 $ 843 room=.
+-> s
+T 268 mode=combat_mode         Oin the Bold(dwa) F1@(17,12) HP 84/84 MP 0/0 Hu 94 $ 843 room=M vs Goblin(L0 HP30/30)
+-> a
+T 269 mode=combat_mode         Oin the Bold(dwa) F1@(17,12) HP 83/84 MP 0/0 Hu 94 $ 843 room=M vs Goblin(L0 HP4/30)
+-> a
+T 270 mode=combat_victory      Oin the Bold(dwa) F1@(17,12) HP 82/84 MP 0/0 Hu 94 $ 853 room=.
+-> back
+T 271 mode=game_loop           Oin the Bold(dwa) F1@(17,12) HP 82/84 MP 0/0 Hu 94 $ 853 room=.
+-> s
+T 272 mode=game_loop           Oin the Bold(dwa) F1@(17,13) HP 82/84 MP 0/0 Hu 93 $ 853 room=.
+-> s
+T 273 mode=game_loop           Oin the Bold(dwa) F1@(17,14) HP 83/84 MP 0/0 Hu 92 $ 853 room=N
+-> i
+T 274 mode=inventory           Oin the Bold(dwa) F1@(17,14) HP 83/84 MP 0/0 Hu 92 $ 853 room=N
+-> eat4
+T 275 mode=inventory           Oin the Bold(dwa) F1@(17,14) HP 83/84 MP 0/0 Hu 97 $ 853 room=N
+-> x
+T 276 mode=game_loop           Oin the Bold(dwa) F1@(17,14) HP 83/84 MP 0/0 Hu 97 $ 853 room=N
+-> s
+T 277 mode=game_loop           Oin the Bold(dwa) F1@(17,15) HP 83/84 MP 0/0 Hu 96 $ 853 room=.
+-> w
+T 278 mode=combat_mode         Oin the Bold(dwa) F1@(16,15) HP 84/84 MP 0/0 Hu 95 $ 853 room=M vs Zombie(L0 HP35/35)
+-> a
+T 279 mode=combat_mode         Oin the Bold(dwa) F1@(16,15) HP 83/84 MP 0/0 Hu 95 $ 853 room=M vs Zombie(L0 HP35/35)
+-> a
+T 280 mode=combat_mode         Oin the Bold(dwa) F1@(16,15) HP 83/84 MP 0/0 Hu 95 $ 853 room=M vs Zombie(L0 HP8/35)
+-> a
+T 281 mode=combat_victory      Oin the Bold(dwa) F1@(16,15) HP 82/84 MP 0/0 Hu 95 $ 855 room=.
+-> back
+T 282 mode=game_loop           Oin the Bold(dwa) F1@(16,15) HP 82/84 MP 0/0 Hu 95 $ 855 room=.
+-> l
+T 283 mode=game_loop           Oin the Bold(dwa) F1@(16,15) HP 82/84 MP 0/0 Hu 95 $ 855 room=.
+-> n
+T 284 mode=game_loop           Oin the Bold(dwa) F1@(16,14) HP 82/84 MP 0/0 Hu 94 $ 855 room=.
+-> i
+T 285 mode=inventory           Oin the Bold(dwa) F1@(16,14) HP 82/84 MP 0/0 Hu 94 $ 855 room=.
+-> eat4
+T 286 mode=inventory           Oin the Bold(dwa) F1@(16,14) HP 82/84 MP 0/0 Hu100 $ 855 room=.
+-> x
+T 287 mode=game_loop           Oin the Bold(dwa) F1@(16,14) HP 82/84 MP 0/0 Hu100 $ 855 room=.
+-> n
+T 288 mode=game_loop           Oin the Bold(dwa) F1@(16,13) HP 83/84 MP 0/0 Hu 99 $ 855 room=.
+-> i
+T 289 mode=inventory           Oin the Bold(dwa) F1@(16,13) HP 83/84 MP 0/0 Hu 99 $ 855 room=.
+-> eat3
+T 290 mode=inventory           Oin the Bold(dwa) F1@(16,13) HP 83/84 MP 0/0 Hu100 $ 855 room=.
+-> x
+T 291 mode=game_loop           Oin the Bold(dwa) F1@(16,13) HP 83/84 MP 0/0 Hu100 $ 855 room=.
+-> e
+T 292 mode=game_loop           Oin the Bold(dwa) F1@(17,13) HP 83/84 MP 0/0 Hu 99 $ 855 room=.
+-> s
+T 293 mode=game_loop           Oin the Bold(dwa) F1@(17,14) HP 84/84 MP 0/0 Hu 98 $ 855 room=N
+-> s
+T 294 mode=game_loop           Oin the Bold(dwa) F1@(17,15) HP 84/84 MP 0/0 Hu 97 $ 855 room=.
+-> w
+T 295 mode=game_loop           Oin the Bold(dwa) F1@(16,15) HP 84/84 MP 0/0 Hu 96 $ 855 room=.
+-> s
+T 296 mode=combat_mode         Oin the Bold(dwa) F1@(16,16) HP 84/84 MP 0/0 Hu 95 $ 855 room=M vs Crawling Claw(L0 HP5/5)
+-> f
+T 297 mode=combat_mode         Oin the Bold(dwa) F1@(16,16) HP 82/84 MP 0/0 Hu 95 $ 855 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 298 mode=combat_mode         Oin the Bold(dwa) F1@(16,16) HP 81/84 MP 0/0 Hu 95 $ 855 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 299 mode=combat_victory      Oin the Bold(dwa) F1@(16,16) HP 80/84 MP 0/0 Hu 95 $ 863 room=.
+-> back
+T 300 mode=game_loop           Oin the Bold(dwa) F1@(16,16) HP 80/84 MP 0/0 Hu 95 $ 863 room=.
+-> l
+T 301 mode=game_loop           Oin the Bold(dwa) F1@(16,16) HP 80/84 MP 0/0 Hu 95 $ 863 room=.
+-> n
+T 302 mode=game_loop           Oin the Bold(dwa) F1@(16,15) HP 80/84 MP 0/0 Hu 94 $ 863 room=.
+-> n
+T 303 mode=game_loop           Oin the Bold(dwa) F1@(16,14) HP 81/84 MP 0/0 Hu 93 $ 863 room=.
+-> n
+T 304 mode=game_loop           Oin the Bold(dwa) F1@(16,13) HP 81/84 MP 0/0 Hu 92 $ 863 room=.
+-> n
+T 305 mode=game_loop           Oin the Bold(dwa) F1@(16,12) HP 82/84 MP 0/0 Hu 91 $ 863 room=.
+-> n
+T 306 mode=game_loop           Oin the Bold(dwa) F1@(16,11) HP 82/84 MP 0/0 Hu 90 $ 863 room=.
+-> n
+T 307 mode=game_loop           Oin the Bold(dwa) F1@(16,10) HP 83/84 MP 0/0 Hu 89 $ 863 room=.
+-> n
+T 308 mode=game_loop           Oin the Bold(dwa) F1@(16, 9) HP 83/84 MP 0/0 Hu 88 $ 863 room=.
+-> n
+T 309 mode=game_loop           Oin the Bold(dwa) F1@(16, 8) HP 84/84 MP 0/0 Hu 87 $ 863 room=.
+-> n
+T 310 mode=game_loop           Oin the Bold(dwa) F1@(16, 7) HP 84/84 MP 0/0 Hu 86 $ 863 room=.
+-> l
+T 311 mode=game_loop           Oin the Bold(dwa) F1@(16, 7) HP 84/84 MP 0/0 Hu 86 $ 863 room=.
+-> n
+T 312 mode=game_loop           Oin the Bold(dwa) F1@(16, 6) HP 84/84 MP 0/0 Hu 85 $ 863 room=N
+-> i
+T 313 mode=inventory           Oin the Bold(dwa) F1@(16, 6) HP 84/84 MP 0/0 Hu 85 $ 863 room=N
+-> eat3
+T 314 mode=inventory           Oin the Bold(dwa) F1@(16, 6) HP 84/84 MP 0/0 Hu 91 $ 863 room=N
+-> x
+T 315 mode=game_loop           Oin the Bold(dwa) F1@(16, 6) HP 84/84 MP 0/0 Hu 91 $ 863 room=N
+-> n
+T 316 mode=game_loop           Oin the Bold(dwa) F1@(16, 5) HP 84/84 MP 0/0 Hu 90 $ 863 room=.
+-> n
+T 317 mode=game_loop           Oin the Bold(dwa) F1@(16, 4) HP 84/84 MP 0/0 Hu 89 $ 863 room=.
+-> w
+T 318 mode=game_loop           Oin the Bold(dwa) F1@(15, 4) HP 84/84 MP 0/0 Hu 88 $ 863 room=.
+-> w
+T 319 mode=game_loop           Oin the Bold(dwa) F1@(14, 4) HP 84/84 MP 0/0 Hu 87 $ 863 room=.
+-> n
+T 320 mode=game_loop           Oin the Bold(dwa) F1@(14, 3) HP 84/84 MP 0/0 Hu 86 $ 863 room=.
+-> l
+T 321 mode=game_loop           Oin the Bold(dwa) F1@(14, 3) HP 84/84 MP 0/0 Hu 86 $ 863 room=.
+-> n
+T 322 mode=game_loop           Oin the Bold(dwa) F1@(14, 2) HP 84/84 MP 0/0 Hu 85 $ 863 room=.
+-> n
+T 323 mode=game_loop           Oin the Bold(dwa) F1@(14, 1) HP 84/84 MP 0/0 Hu 84 $ 863 room=.
+-> w
+T 324 mode=game_loop           Oin the Bold(dwa) F1@(13, 1) HP 84/84 MP 0/0 Hu 83 $ 863 room=.
+-> w
+T 325 mode=game_loop           Oin the Bold(dwa) F1@(12, 1) HP 84/84 MP 0/0 Hu 82 $ 863 room=.
+-> w
+T 326 mode=game_loop           Oin the Bold(dwa) F1@(11, 1) HP 84/84 MP 0/0 Hu 81 $ 863 room=.
+-> s
+T 327 mode=game_loop           Oin the Bold(dwa) F1@(11, 2) HP 84/84 MP 0/0 Hu 80 $ 863 room=.
+-> w
+T 328 mode=game_loop           Oin the Bold(dwa) F1@(10, 2) HP 84/84 MP 0/0 Hu 79 $ 863 room=.
+-> s
+T 329 mode=game_loop           Oin the Bold(dwa) F1@(10, 3) HP 84/84 MP 0/0 Hu 78 $ 863 room=.
+-> w
+T 330 mode=game_loop           Oin the Bold(dwa) F1@( 9, 3) HP 84/84 MP 0/0 Hu 77 $ 863 room=.
+-> l
+T 331 mode=game_loop           Oin the Bold(dwa) F1@( 9, 3) HP 84/84 MP 0/0 Hu 77 $ 863 room=.
+-> w
+T 332 mode=stairs_down_mode    Oin the Bold(dwa) F1@( 8, 3) HP 84/84 MP 0/0 Hu 76 $ 863 room=D
+-> d
+T 333 mode=stairs_up_mode      Oin the Bold(dwa) F2@( 1, 1) HP 84/84 MP 0/0 Hu 76 $ 863 room=U
+-> n
+T 334 mode=stairs_up_mode      Oin the Bold(dwa) F2@( 1, 1) HP 84/84 MP 0/0 Hu 76 $ 863 room=U
+-> s
+T 335 mode=altar_mode          Oin the Bold(dwa) F2@( 1, 2) HP 84/84 MP 0/0 Hu 75 $ 863 room=A
+-> pray
+T 336 mode=game_loop           Oin the Bold(dwa) F2@( 1, 2) HP 84/84 MP 0/0 Hu 75 $ 863 room=.
+-> l
+T 337 mode=game_loop           Oin the Bold(dwa) F2@( 1, 2) HP 84/84 MP 0/0 Hu 75 $ 863 room=.
+-> s
+T 338 mode=game_loop           Oin the Bold(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 74 $ 863 room=.
+-> l
+T 339 mode=game_loop           Oin the Bold(dwa) F2@( 1, 3) HP 84/84 MP 0/0 Hu 74 $ 863 room=.
+-> e
+T 340 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 863 room=V
+-> r1
+T 341 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 783 room=V
+-> r2
+T 342 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 752 room=V
+-> b15
+T 343 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 742 room=V
+-> b7
+T 344 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 712 room=V
+-> b7
+T 345 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 682 room=V
+-> b13
+T 346 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 677 room=V
+-> b13
+T 347 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 672 room=V
+-> b13
+T 348 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 667 room=V
+-> b12
+T 349 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 517 room=V
+-> b5
+T 350 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 447 room=V
+-> b9
+T 351 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 357 room=V
+-> b9
+T 352 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 237 room=V
+-> id15
+T 353 mode=vendor_shop         Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 212 room=V
+-> x
+T 354 mode=game_loop           Oin the Bold(dwa) F2@( 2, 3) HP 84/84 MP 0/0 Hu 73 $ 212 room=V
+-> e
+T 355 mode=game_loop           Oin the Bold(dwa) F2@( 3, 3) HP 84/84 MP 0/0 Hu 72 $ 212 room=.
+-> e
+T 356 mode=game_loop           Oin the Bold(dwa) F2@( 4, 3) HP 84/84 MP 0/0 Hu 71 $ 212 room=.
+-> l
+T 357 mode=game_loop           Oin the Bold(dwa) F2@( 4, 3) HP 84/84 MP 0/0 Hu 71 $ 212 room=.
+-> e
+T 358 mode=chest_mode          Oin the Bold(dwa) F2@( 5, 3) HP 84/84 MP 0/0 Hu 70 $ 212 room=C
+-> o
+T 359 mode=game_loop           Oin the Bold(dwa) F2@( 5, 3) HP 84/84 MP 0/0 Hu 70 $ 252 room=.
+-> e
+T 360 mode=game_loop           Oin the Bold(dwa) F2@( 6, 3) HP 84/84 MP 0/0 Hu 69 $ 252 room=.
+-> l
+T 361 mode=game_loop           Oin the Bold(dwa) F2@( 6, 3) HP 84/84 MP 0/0 Hu 69 $ 252 room=.
+-> e
+T 362 mode=altar_mode          Oin the Bold(dwa) F2@( 7, 3) HP 84/84 MP 0/0 Hu 68 $ 252 room=A
+-> pray
+T 363 mode=game_loop           Oin the Bold(dwa) F2@( 7, 3) HP 84/84 MP 0/0 Hu 68 $ 252 room=.
+-> l
+T 364 mode=game_loop           Oin the Bold(dwa) F2@( 7, 3) HP 84/84 MP 0/0 Hu 68 $ 252 room=.
+-> e
+T 365 mode=dungeon_mode        Oin the Bold(dwa) F2@( 8, 3) HP 84/84 MP 0/0 Hu 67 $ 252 room=N
+-> u
+T 366 mode=game_loop           Oin the Bold(dwa) F2@( 8, 3) HP 84/84 MP 0/0 Hu 67 $ 252 room=N
+-> l
+T 367 mode=game_loop           Oin the Bold(dwa) F2@( 8, 3) HP 84/84 MP 0/0 Hu 67 $ 252 room=N
+-> e
+T 368 mode=game_loop           Oin the Bold(dwa) F2@( 9, 3) HP 84/84 MP 0/0 Hu 66 $ 252 room=.
+-> l
+T 369 mode=game_loop           Oin the Bold(dwa) F2@( 9, 3) HP 84/84 MP 0/0 Hu 66 $ 252 room=.
+-> e
+T 370 mode=pool_mode           Oin the Bold(dwa) F2@(10, 3) HP 84/84 MP 0/0 Hu 65 $ 252 room=P
+-> dr
+T 371 mode=game_loop           Oin the Bold(dwa) F2@(10, 3) HP 84/84 MP 0/0 Hu 65 $ 252 room=.
+-> l
+T 372 mode=game_loop           Oin the Bold(dwa) F2@(10, 3) HP 84/84 MP 0/0 Hu 65 $ 252 room=.
+-> s
+T 373 mode=combat_mode         Oin the Bold(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 64 $ 252 room=M vs Kobold(L1 HP8/8)
+-> a
+T 374 mode=combat_mode         Oin the Bold(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 64 $ 252 room=M vs Kobold(L1 HP8/8)
+-> f
+T 375 mode=flee_direction_mode Oin the Bold(dwa) F2@(10, 4) HP 84/84 MP 0/0 Hu 64 $ 252 room=M
+-> w
+T 376 mode=combat_mode         Oin the Bold(dwa) F2@( 9, 4) HP 84/84 MP 0/0 Hu 64 $ 252 room=M vs Gnoll(L1 HP32/32)
+-> a
+T 377 mode=combat_mode         Oin the Bold(dwa) F2@( 9, 4) HP 83/84 MP 0/0 Hu 64 $ 252 room=M vs Gnoll(L1 HP32/32)
+-> a
+T 378 mode=combat_mode         Oin the Bold(dwa) F2@( 9, 4) HP 82/84 MP 0/0 Hu 64 $ 252 room=M vs Gnoll(L1 HP32/32)
+-> f
+T 379 mode=flee_direction_mode Oin the Bold(dwa) F2@( 9, 4) HP 82/84 MP 0/0 Hu 64 $ 252 room=M
+-> w
+T 380 mode=game_loop           Oin the Bold(dwa) F2@( 8, 4) HP 82/84 MP 0/0 Hu 64 $ 252 room=.
+-> s
+T 381 mode=game_loop           Oin the Bold(dwa) F2@( 8, 5) HP 82/84 MP 0/0 Hu 63 $ 252 room=.
+-> s
+T 382 mode=game_loop           Oin the Bold(dwa) F2@( 8, 6) HP 82/84 MP 0/0 Hu 62 $ 252 room=.
+-> s
+T 383 mode=game_loop           Oin the Bold(dwa) F2@( 8, 7) HP 82/84 MP 0/0 Hu 61 $ 252 room=.
+-> l
+T 384 mode=game_loop           Oin the Bold(dwa) F2@( 8, 7) HP 82/84 MP 0/0 Hu 61 $ 252 room=.
+-> s
+T 385 mode=game_loop           Oin the Bold(dwa) F2@( 8, 8) HP 83/84 MP 0/0 Hu 60 $ 252 room=.
+-> l
+T 386 mode=game_loop           Oin the Bold(dwa) F2@( 8, 8) HP 83/84 MP 0/0 Hu 60 $ 252 room=.
+-> e
+T 387 mode=chest_mode          Oin the Bold(dwa) F2@( 9, 8) HP 83/84 MP 0/0 Hu 59 $ 252 room=C
+-> n
+T 388 mode=game_loop           Oin the Bold(dwa) F2@( 9, 7) HP 83/84 MP 0/0 Hu 58 $ 252 room=.
+-> e
+T 389 mode=game_loop           Oin the Bold(dwa) F2@(10, 7) HP 83/84 MP 0/0 Hu 57 $ 252 room=.
+-> l
+T 390 mode=game_loop           Oin the Bold(dwa) F2@(10, 7) HP 83/84 MP 0/0 Hu 57 $ 252 room=.
+-> s
+T 391 mode=game_loop           Oin the Bold(dwa) F2@(10, 8) HP 83/84 MP 0/0 Hu 56 $ 252 room=.
+-> e
+T 392 mode=garden_mode         Oin the Bold(dwa) F2@(11, 8) HP 83/84 MP 0/0 Hu 55 $ 252 room=G
+-> h
+T 393 mode=game_loop           Oin the Bold(dwa) F2@(11, 8) HP 83/84 MP 0/0 Hu 55 $ 252 room=.
+-> l
+T 394 mode=game_loop           Oin the Bold(dwa) F2@(11, 8) HP 83/84 MP 0/0 Hu 55 $ 252 room=.
+-> s
+T 395 mode=game_loop           Oin the Bold(dwa) F2@(11, 9) HP 83/84 MP 0/0 Hu 54 $ 252 room=.
+-> l
+T 396 mode=game_loop           Oin the Bold(dwa) F2@(11, 9) HP 83/84 MP 0/0 Hu 54 $ 252 room=.
+-> s
+T 397 mode=library_mode        Oin the Bold(dwa) F2@(11,10) HP 83/84 MP 0/0 Hu 53 $ 252 room=L
+-> r
+T 398 mode=library_read_decision_mode Oin the Bold(dwa) F2@(11,10) HP 83/84 MP 0/0 Hu 53 $ 252 room=L
+-> y
+T 399 mode=game_loop           Oin the Bold(dwa) F2@(11,10) HP 83/84 MP 0/0 Hu 53 $ 302 room=.
+-> l
+T 400 mode=game_loop           Oin the Bold(dwa) F2@(11,10) HP 83/84 MP 0/0 Hu 53 $ 302 room=.
+-> e
+T 401 mode=game_loop           Oin the Bold(dwa) F2@(12,10) HP 83/84 MP 0/0 Hu 52 $ 302 room=.
+-> l
+T 402 mode=game_loop           Oin the Bold(dwa) F2@(12,10) HP 83/84 MP 0/0 Hu 52 $ 302 room=.
+-> e
+T 403 mode=altar_mode          Oin the Bold(dwa) F2@(13,10) HP 83/84 MP 0/0 Hu 51 $ 302 room=A
+-> pray
+T 404 mode=game_loop           Oin the Bold(dwa) F2@(13,10) HP 83/84 MP 0/0 Hu 51 $ 302 room=.
+-> l
+T 405 mode=game_loop           Oin the Bold(dwa) F2@(13,10) HP 83/84 MP 0/0 Hu 51 $ 302 room=.
+-> s
+T 406 mode=shrine_mode         Oin the Bold(dwa) F2@(13,11) HP 83/84 MP 0/0 Hu 50 $ 302 room=F
+-> p
+T 407 mode=game_loop           Oin the Bold(dwa) F2@(13,11) HP 83/84 MP 0/0 Hu 50 $ 302 room=.
+-> l
+T 408 mode=game_loop           Oin the Bold(dwa) F2@(13,11) HP 83/84 MP 0/0 Hu 50 $ 302 room=.
+-> s
+T 409 mode=game_loop           Oin the Bold(dwa) F2@(13,12) HP 83/84 MP 0/0 Hu 49 $ 302 room=.
+-> i
+T 410 mode=inventory           Oin the Bold(dwa) F2@(13,12) HP 83/84 MP 0/0 Hu 49 $ 302 room=.
+-> eat1
+T 411 mode=inventory           Oin the Bold(dwa) F2@(13,12) HP 83/84 MP 0/0 Hu100 $ 302 room=.
+-> u13
+T 412 mode=inventory           Oin the Bold(dwa) F2@(13,12) HP 83/84 MP 0/0 Hu100 $ 302 room=.
+-> u9
+T 413 mode=upgrade_scroll_mode Oin the Bold(dwa) F2@(13,12) HP 83/84 MP 0/0 Hu100 $ 302 room=.
+-> 1
+T 414 mode=inventory           Oin the Bold(dwa) F2@(13,12) HP 83/84 MP 0/0 Hu100 $ 302 room=.
+-> x
+T 415 mode=game_loop           Oin the Bold(dwa) F2@(13,12) HP 83/84 MP 0/0 Hu100 $ 302 room=.
+-> l
+T 416 mode=game_loop           Oin the Bold(dwa) F2@(13,12) HP 83/84 MP 0/0 Hu100 $ 302 room=.
+-> e
+T 417 mode=game_loop           Oin the Bold(dwa) F2@(14,12) HP 83/84 MP 0/0 Hu 99 $ 302 room=.
+-> l
+T 418 mode=game_loop           Oin the Bold(dwa) F2@(14,12) HP 83/84 MP 0/0 Hu 99 $ 302 room=.
+-> e
+T 419 mode=pool_mode           Oin the Bold(dwa) F2@(15,12) HP 84/84 MP 0/0 Hu 98 $ 302 room=P
+-> dr
+T 420 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 84/84 MP 0/0 Hu 98 $ 302 room=.
+-> l
+T 421 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 84/84 MP 0/0 Hu 98 $ 302 room=.
+-> s
+T 422 mode=pool_mode           Oin the Bold(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 97 $ 302 room=P
+-> dr
+T 423 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 97 $ 302 room=.
+-> l
+T 424 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 84/84 MP 0/0 Hu 97 $ 302 room=.
+-> s
+T 425 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 84/84 MP 0/0 Hu 96 $ 302 room=.
+-> l
+T 426 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 84/84 MP 0/0 Hu 96 $ 302 room=.
+-> s
+T 427 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 84/84 MP 0/0 Hu 95 $ 302 room=.
+-> l
+T 428 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 84/84 MP 0/0 Hu 95 $ 302 room=.
+-> w
+T 429 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 84/84 MP 0/0 Hu 94 $ 302 room=.
+-> s
+T 430 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 84/84 MP 0/0 Hu 93 $ 302 room=.
+-> w
+T 431 mode=game_loop           Oin the Bold(dwa) F2@(13,16) HP 84/84 MP 0/0 Hu 92 $ 302 room=.
+-> w
+T 432 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 84/84 MP 0/0 Hu 91 $ 302 room=.
+-> n
+T 433 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 84/84 MP 0/0 Hu 90 $ 302 room=.
+-> w
+T 434 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 84/84 MP 0/0 Hu 89 $ 302 room=.
+-> n
+T 435 mode=chest_mode          Oin the Bold(dwa) F2@(11,14) HP 84/84 MP 0/0 Hu 88 $ 302 room=C
+-> o
+T 436 mode=game_loop           Oin the Bold(dwa) F2@(11,14) HP 84/84 MP 0/0 Hu 88 $ 302 room=.
+-> n
+T 437 mode=game_loop           Oin the Bold(dwa) F2@(11,13) HP 84/84 MP 0/0 Hu 87 $ 302 room=.
+-> w
+T 438 mode=library_mode        Oin the Bold(dwa) F2@(10,13) HP 84/84 MP 0/0 Hu 86 $ 302 room=L
+-> r
+T 439 mode=library_read_decision_mode Oin the Bold(dwa) F2@(10,13) HP 84/84 MP 0/0 Hu 86 $ 302 room=L
+-> y
+T 440 mode=game_loop           Oin the Bold(dwa) F2@(10,13) HP 84/84 MP 0/0 Hu 86 $ 302 room=.
+-> n
+T 441 mode=chest_mode          Oin the Bold(dwa) F2@(10,12) HP 84/84 MP 0/0 Hu 85 $ 302 room=C
+-> o
+T 442 mode=game_loop           Oin the Bold(dwa) F2@(10,12) HP 84/84 MP 0/0 Hu 85 $ 302 room=.
+-> n
+T 443 mode=stairs_down_mode    Oin the Bold(dwa) F2@(10,11) HP 84/84 MP 0/0 Hu 84 $ 302 room=D
+-> d
+T 444 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 84 $ 302 room=U
+-> s
+T 445 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 84 $ 302 room=U
+-> w
+T 446 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 84 $ 302 room=U
+-> n
+T 447 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 84 $ 302 room=U
+-> n
+T 448 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 84 $ 302 room=U
+-> s
+T 449 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 84 $ 302 room=U
+-> n
+T 450 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 84 $ 302 room=U
+-> w
+T 451 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 84 $ 302 room=U
+-> e
+T 452 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 83 $ 302 room=.
+-> l
+T 453 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 83 $ 302 room=.
+-> e
+T 454 mode=combat_mode         Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 82 $ 302 room=M vs Zombie(L2 HP36/36)
+-> a
+T 455 mode=combat_mode         Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 82 $ 302 room=M vs Zombie(L2 HP9/36)
+-> a
+T 456 mode=combat_mode         Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 82 $ 302 room=M vs Zombie(L2 HP9/36)
+-> a
+T 457 mode=combat_victory      Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 82 $ 311 room=.
+-> back
+T 458 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 82 $ 311 room=.
+-> e
+T 459 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 81 $ 311 room=.
+-> l
+T 460 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 81 $ 311 room=.
+-> s
+T 461 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 80 $ 311 room=.
+-> l
+T 462 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 80 $ 311 room=.
+-> s
+T 463 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 84/84 MP 0/0 Hu 79 $ 311 room=.
+-> l
+T 464 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 84/84 MP 0/0 Hu 79 $ 311 room=.
+-> n
+T 465 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 78 $ 311 room=.
+-> e
+T 466 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 77 $ 311 room=.
+-> w
+T 467 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 76 $ 311 room=.
+-> n
+T 468 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 75 $ 311 room=.
+-> w
+T 469 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 74 $ 311 room=.
+-> w
+T 470 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 73 $ 311 room=.
+-> w
+T 471 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 72 $ 311 room=U
+-> e
+T 472 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 71 $ 311 room=.
+-> e
+T 473 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 70 $ 311 room=.
+-> e
+T 474 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 69 $ 311 room=.
+-> s
+T 475 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 68 $ 311 room=.
+-> s
+T 476 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 84/84 MP 0/0 Hu 67 $ 311 room=.
+-> n
+T 477 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 66 $ 311 room=.
+-> e
+T 478 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 65 $ 311 room=.
+-> w
+T 479 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 64 $ 311 room=.
+-> n
+T 480 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 63 $ 311 room=.
+-> w
+T 481 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 62 $ 311 room=.
+-> w
+T 482 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 61 $ 311 room=.
+-> w
+T 483 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 60 $ 311 room=U
+-> e
+T 484 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 59 $ 311 room=.
+-> w
+T 485 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 58 $ 311 room=U
+-> e
+T 486 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 57 $ 311 room=.
+-> e
+T 487 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 56 $ 311 room=.
+-> e
+T 488 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 55 $ 311 room=.
+-> s
+T 489 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 54 $ 311 room=.
+-> s
+T 490 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 84/84 MP 0/0 Hu 53 $ 311 room=.
+-> n
+T 491 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 52 $ 311 room=.
+-> e
+T 492 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 51 $ 311 room=.
+-> w
+T 493 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 50 $ 311 room=.
+-> n
+T 494 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 49 $ 311 room=.
+-> i
+T 495 mode=inventory           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 49 $ 311 room=.
+-> eat1
+T 496 mode=inventory           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu100 $ 311 room=.
+-> x
+T 497 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu100 $ 311 room=.
+-> w
+T 498 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 99 $ 311 room=.
+-> w
+T 499 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 98 $ 311 room=.
+-> w
+T 500 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 97 $ 311 room=U
+-> e
+T 501 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 96 $ 311 room=.
+-> e
+T 502 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 95 $ 311 room=.
+-> e
+T 503 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 94 $ 311 room=.
+-> s
+T 504 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 93 $ 311 room=.
+-> s
+T 505 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 84/84 MP 0/0 Hu 92 $ 311 room=.
+-> n
+T 506 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 91 $ 311 room=.
+-> e
+T 507 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 90 $ 311 room=.
+-> w
+T 508 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 89 $ 311 room=.
+-> n
+T 509 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 88 $ 311 room=.
+-> w
+T 510 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 87 $ 311 room=.
+-> w
+T 511 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 86 $ 311 room=.
+-> w
+T 512 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 85 $ 311 room=U
+-> e
+T 513 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 84 $ 311 room=.
+-> e
+T 514 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 83 $ 311 room=.
+-> e
+T 515 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 82 $ 311 room=.
+-> s
+T 516 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 81 $ 311 room=.
+-> e
+T 517 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 80 $ 311 room=.
+-> w
+T 518 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 79 $ 311 room=.
+-> s
+T 519 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 84/84 MP 0/0 Hu 78 $ 311 room=.
+-> n
+T 520 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 77 $ 311 room=.
+-> n
+T 521 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 76 $ 311 room=.
+-> w
+T 522 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 75 $ 311 room=.
+-> w
+T 523 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 74 $ 311 room=.
+-> w
+T 524 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 73 $ 311 room=U
+-> e
+T 525 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 72 $ 311 room=.
+-> e
+T 526 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 71 $ 311 room=.
+-> e
+T 527 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 70 $ 311 room=.
+-> s
+T 528 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 69 $ 311 room=.
+-> s
+T 529 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 84/84 MP 0/0 Hu 68 $ 311 room=.
+-> n
+T 530 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 67 $ 311 room=.
+-> e
+T 531 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 66 $ 311 room=.
+-> w
+T 532 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 65 $ 311 room=.
+-> n
+T 533 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 64 $ 311 room=.
+-> w
+T 534 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 63 $ 311 room=.
+-> w
+T 535 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 62 $ 311 room=.
+-> w
+T 536 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 61 $ 311 room=U
+-> e
+T 537 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 60 $ 311 room=.
+-> e
+T 538 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 59 $ 311 room=.
+-> e
+T 539 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 58 $ 311 room=.
+-> s
+T 540 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 57 $ 311 room=.
+-> e
+T 541 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 56 $ 311 room=.
+-> w
+T 542 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 55 $ 311 room=.
+-> s
+T 543 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 84/84 MP 0/0 Hu 54 $ 311 room=.
+-> n
+T 544 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 53 $ 311 room=.
+-> n
+T 545 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 52 $ 311 room=.
+-> w
+T 546 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 51 $ 311 room=.
+-> w
+T 547 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 50 $ 311 room=.
+-> w
+T 548 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 49 $ 311 room=U
+-> e
+T 549 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 48 $ 311 room=.
+-> i
+T 550 mode=inventory           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 48 $ 311 room=.
+-> eat1
+T 551 mode=inventory           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 98 $ 311 room=.
+-> x
+T 552 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 98 $ 311 room=.
+-> e
+T 553 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 97 $ 311 room=.
+-> e
+T 554 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 96 $ 311 room=.
+-> s
+T 555 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 95 $ 311 room=.
+-> s
+T 556 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 84/84 MP 0/0 Hu 94 $ 311 room=.
+-> n
+T 557 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 93 $ 311 room=.
+-> e
+T 558 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 84/84 MP 0/0 Hu 92 $ 311 room=.
+-> w
+T 559 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 84/84 MP 0/0 Hu 91 $ 311 room=.
+-> n
+T 560 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 90 $ 311 room=.
+-> w
+T 561 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 89 $ 311 room=.
+-> w
+T 562 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 88 $ 311 room=.
+-> w
+T 563 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 84/84 MP 0/0 Hu 87 $ 311 room=U
+-> e
+T 564 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 84/84 MP 0/0 Hu 86 $ 311 room=.
+-> e
+T 565 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 84/84 MP 0/0 Hu 85 $ 311 room=.
+-> e
+T 566 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 84/84 MP 0/0 Hu 84 $ 311 room=.
+-> e
+T 567 mode=warp_mode           Oin the Bold(dwa) F3@( 5, 1) HP 84/84 MP 0/0 Hu 83 $ 311 room=W
+-> y
+T 568 mode=game_loop           Oin the Bold(dwa) F1@( 8, 1) HP 84/84 MP 0/0 Hu 83 $ 311 room=.
+-> e
+T 569 mode=combat_mode         Oin the Bold(dwa) F1@( 9, 1) HP 84/84 MP 0/0 Hu 82 $ 311 room=M vs Stirge(L0 HP6/6)
+-> a
+T 570 mode=combat_mode         Oin the Bold(dwa) F1@( 9, 1) HP 83/84 MP 0/0 Hu 82 $ 311 room=M vs Stirge(L0 HP6/6)
+-> a
+T 571 mode=combat_victory      Oin the Bold(dwa) F1@( 9, 1) HP 82/84 MP 0/0 Hu 82 $ 315 room=.
+-> back
+T 572 mode=game_loop           Oin the Bold(dwa) F1@( 9, 1) HP 82/84 MP 0/0 Hu 82 $ 315 room=.
+-> e
+T 573 mode=game_loop           Oin the Bold(dwa) F1@(10, 1) HP 82/84 MP 0/0 Hu 81 $ 315 room=.
+-> e
+T 574 mode=game_loop           Oin the Bold(dwa) F1@(11, 1) HP 82/84 MP 0/0 Hu 80 $ 315 room=.
+-> e
+T 575 mode=game_loop           Oin the Bold(dwa) F1@(12, 1) HP 82/84 MP 0/0 Hu 79 $ 315 room=.
+-> e
+T 576 mode=game_loop           Oin the Bold(dwa) F1@(13, 1) HP 83/84 MP 0/0 Hu 78 $ 315 room=.
+-> e
+T 577 mode=game_loop           Oin the Bold(dwa) F1@(14, 1) HP 83/84 MP 0/0 Hu 77 $ 315 room=.
+-> s
+T 578 mode=game_loop           Oin the Bold(dwa) F1@(14, 2) HP 83/84 MP 0/0 Hu 76 $ 315 room=.
+-> s
+T 579 mode=game_loop           Oin the Bold(dwa) F1@(14, 3) HP 83/84 MP 0/0 Hu 75 $ 315 room=.
+-> s
+T 580 mode=game_loop           Oin the Bold(dwa) F1@(14, 4) HP 84/84 MP 0/0 Hu 74 $ 315 room=.
+-> s
+T 581 mode=game_loop           Oin the Bold(dwa) F1@(14, 5) HP 84/84 MP 0/0 Hu 73 $ 315 room=.
+-> s
+T 582 mode=game_loop           Oin the Bold(dwa) F1@(14, 6) HP 84/84 MP 0/0 Hu 72 $ 315 room=.
+-> i
+T 583 mode=inventory           Oin the Bold(dwa) F1@(14, 6) HP 84/84 MP 0/0 Hu 72 $ 315 room=.
+-> eat2
+T 584 mode=inventory           Oin the Bold(dwa) F1@(14, 6) HP 84/84 MP 0/0 Hu 78 $ 315 room=.
+-> eat1
+T 585 mode=inventory           Oin the Bold(dwa) F1@(14, 6) HP 84/84 MP 0/0 Hu100 $ 315 room=.
+-> x
+T 586 mode=game_loop           Oin the Bold(dwa) F1@(14, 6) HP 84/84 MP 0/0 Hu100 $ 315 room=.
+-> e
+T 587 mode=game_loop           Oin the Bold(dwa) F1@(15, 6) HP 84/84 MP 0/0 Hu 99 $ 315 room=.
+-> s
+T 588 mode=game_loop           Oin the Bold(dwa) F1@(15, 7) HP 84/84 MP 0/0 Hu 98 $ 315 room=.
+-> e
+T 589 mode=game_loop           Oin the Bold(dwa) F1@(16, 7) HP 84/84 MP 0/0 Hu 97 $ 315 room=.
+-> s
+T 590 mode=game_loop           Oin the Bold(dwa) F1@(16, 8) HP 84/84 MP 0/0 Hu 96 $ 315 room=.
+-> s
+T 591 mode=game_loop           Oin the Bold(dwa) F1@(16, 9) HP 84/84 MP 0/0 Hu 95 $ 315 room=.
+-> s
+T 592 mode=game_loop           Oin the Bold(dwa) F1@(16,10) HP 84/84 MP 0/0 Hu 94 $ 315 room=.
+-> s
+T 593 mode=game_loop           Oin the Bold(dwa) F1@(16,11) HP 84/84 MP 0/0 Hu 93 $ 315 room=.
+-> s
+T 594 mode=game_loop           Oin the Bold(dwa) F1@(16,12) HP 84/84 MP 0/0 Hu 92 $ 315 room=.
+-> s
+T 595 mode=game_loop           Oin the Bold(dwa) F1@(16,13) HP 84/84 MP 0/0 Hu 91 $ 315 room=.
+-> s
+T 596 mode=game_loop           Oin the Bold(dwa) F1@(16,14) HP 84/84 MP 0/0 Hu 90 $ 315 room=.
+-> s
+T 597 mode=game_loop           Oin the Bold(dwa) F1@(16,15) HP 84/84 MP 0/0 Hu 89 $ 315 room=.
+-> e
+T 598 mode=game_loop           Oin the Bold(dwa) F1@(17,15) HP 84/84 MP 0/0 Hu 88 $ 315 room=.
+-> n
+T 599 mode=game_loop           Oin the Bold(dwa) F1@(17,14) HP 84/84 MP 0/0 Hu 87 $ 315 room=N
+-> e
+T 600 mode=game_loop           Oin the Bold(dwa) F1@(18,14) HP 84/84 MP 0/0 Hu 86 $ 315 room=.
+-> e
+T 601 mode=game_loop           Oin the Bold(dwa) F1@(19,14) HP 84/84 MP 0/0 Hu 85 $ 315 room=.
+-> n
+T 602 mode=game_loop           Oin the Bold(dwa) F1@(19,13) HP 84/84 MP 0/0 Hu 84 $ 315 room=.
+-> n
+T 603 mode=combat_mode         Oin the Bold(dwa) F1@(19,12) HP 84/84 MP 0/0 Hu 83 $ 315 room=M vs Kobold(L0 HP20/20)
+-> a
+T 604 mode=combat_victory      Oin the Bold(dwa) F1@(19,12) HP 84/84 MP 0/0 Hu 83 $ 316 room=.
+-> back
+T 605 mode=game_loop           Oin the Bold(dwa) F1@(19,12) HP 84/84 MP 0/0 Hu 83 $ 316 room=.
+-> w
+T 606 mode=game_loop           Oin the Bold(dwa) F1@(18,12) HP 84/84 MP 0/0 Hu 82 $ 316 room=.
+-> s
+T 607 mode=game_loop           Oin the Bold(dwa) F1@(18,13) HP 84/84 MP 0/0 Hu 81 $ 316 room=.
+-> s
+T 608 mode=game_loop           Oin the Bold(dwa) F1@(18,14) HP 84/84 MP 0/0 Hu 80 $ 316 room=.
+-> w
+T 609 mode=game_loop           Oin the Bold(dwa) F1@(17,14) HP 84/84 MP 0/0 Hu 79 $ 316 room=N
+-> s
+T 610 mode=game_loop           Oin the Bold(dwa) F1@(17,15) HP 84/84 MP 0/0 Hu 78 $ 316 room=.
+-> w
+T 611 mode=game_loop           Oin the Bold(dwa) F1@(16,15) HP 84/84 MP 0/0 Hu 77 $ 316 room=.
+-> w
+T 612 mode=combat_mode         Oin the Bold(dwa) F1@(15,15) HP 84/84 MP 0/0 Hu 76 $ 316 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 613 mode=combat_victory      Oin the Bold(dwa) F1@(15,15) HP 84/84 MP 0/0 Hu 76 $ 319 room=.
+-> back
+T 614 mode=game_loop           Oin the Bold(dwa) F1@(15,15) HP 84/84 MP 0/0 Hu 76 $ 319 room=.
+-> w
+T 615 mode=library_mode        Oin the Bold(dwa) F1@(14,15) HP 84/84 MP 0/0 Hu 75 $ 319 room=L
+-> r
+T 616 mode=library_read_decision_mode Oin the Bold(dwa) F1@(14,15) HP 84/84 MP 0/0 Hu 75 $ 319 room=L
+-> y
+T 617 mode=game_loop           Oin the Bold(dwa) F1@(14,15) HP 84/84 MP 0/0 Hu 75 $ 319 room=.
+-> l
+T 618 mode=game_loop           Oin the Bold(dwa) F1@(14,15) HP 84/84 MP 0/0 Hu 75 $ 319 room=.
+-> w
+T 619 mode=combat_mode         Oin the Bold(dwa) F1@(13,15) HP 84/84 MP 0/0 Hu 74 $ 319 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 620 mode=combat_mode         Oin the Bold(dwa) F1@(13,15) HP 83/84 MP 0/0 Hu 74 $ 319 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 621 mode=combat_mode         Oin the Bold(dwa) F1@(13,15) HP 83/84 MP 0/0 Hu 74 $ 319 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 622 mode=combat_victory      Oin the Bold(dwa) F1@(13,15) HP 83/84 MP 0/0 Hu 74 $ 327 room=.
+-> back
+T 623 mode=game_loop           Oin the Bold(dwa) F1@(13,15) HP 83/84 MP 0/0 Hu 74 $ 327 room=.
+-> w
+T 624 mode=game_loop           Oin the Bold(dwa) F1@(12,15) HP 83/84 MP 0/0 Hu 73 $ 327 room=.
+-> w
+T 625 mode=combat_mode         Oin the Bold(dwa) F1@(11,15) HP 83/84 MP 0/0 Hu 72 $ 327 room=M vs Goblin(L0 HP30/30)
+-> a
+T 626 mode=combat_mode         Oin the Bold(dwa) F1@(11,15) HP 83/84 MP 0/0 Hu 72 $ 327 room=M vs Goblin(L0 HP30/30)
+-> a
+T 627 mode=combat_mode         Oin the Bold(dwa) F1@(11,15) HP 82/84 MP 0/0 Hu 72 $ 327 room=M vs Goblin(L0 HP4/30)
+-> a
+T 628 mode=combat_victory      Oin the Bold(dwa) F1@(11,15) HP 82/84 MP 0/0 Hu 72 $ 329 room=.
+-> back
+T 629 mode=game_loop           Oin the Bold(dwa) F1@(11,15) HP 82/84 MP 0/0 Hu 72 $ 329 room=.
+-> l
+T 630 mode=game_loop           Oin the Bold(dwa) F1@(11,15) HP 82/84 MP 0/0 Hu 72 $ 329 room=.
+-> s
+T 631 mode=combat_mode         Oin the Bold(dwa) F1@(11,16) HP 82/84 MP 0/0 Hu 71 $ 329 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 632 mode=combat_mode         Oin the Bold(dwa) F1@(11,16) HP 82/84 MP 0/0 Hu 71 $ 329 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 633 mode=combat_victory      Oin the Bold(dwa) F1@(11,16) HP 82/84 MP 0/0 Hu 71 $ 335 room=.
+-> back
+T 634 mode=game_loop           Oin the Bold(dwa) F1@(11,16) HP 82/84 MP 0/0 Hu 71 $ 335 room=.
+-> l
+T 635 mode=game_loop           Oin the Bold(dwa) F1@(11,16) HP 82/84 MP 0/0 Hu 71 $ 335 room=.
+-> w
+T 636 mode=combat_mode         Oin the Bold(dwa) F1@(10,16) HP 83/84 MP 0/0 Hu 70 $ 335 room=M vs Bat(L0 HP12/12)
+-> a
+T 637 mode=combat_victory      Oin the Bold(dwa) F1@(10,16) HP 83/84 MP 0/0 Hu 70 $ 340 room=.
+-> back
+T 638 mode=game_loop           Oin the Bold(dwa) F1@(10,16) HP 83/84 MP 0/0 Hu 70 $ 340 room=.
+-> w
+T 639 mode=combat_mode         Oin the Bold(dwa) F1@( 9,16) HP 83/84 MP 0/0 Hu 69 $ 340 room=M vs Goblin(L0 HP12/12)
+-> a
+T 640 mode=combat_mode         Oin the Bold(dwa) F1@( 9,16) HP 83/84 MP 0/0 Hu 69 $ 340 room=M vs Goblin(L0 HP12/12)
+-> a
+T 641 mode=combat_victory      Oin the Bold(dwa) F1@( 9,16) HP 83/84 MP 0/0 Hu 69 $ 343 room=.
+-> back
+T 642 mode=game_loop           Oin the Bold(dwa) F1@( 9,16) HP 83/84 MP 0/0 Hu 69 $ 343 room=.
+-> l
+T 643 mode=game_loop           Oin the Bold(dwa) F1@( 9,16) HP 83/84 MP 0/0 Hu 69 $ 343 room=.
+-> w
+T 644 mode=combat_mode         Oin the Bold(dwa) F1@( 8,16) HP 83/84 MP 0/0 Hu 68 $ 343 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 645 mode=combat_victory      Oin the Bold(dwa) F1@( 8,16) HP 83/94 MP 0/0 Hu 68 $ 350 room=.
+-> back
+T 646 mode=game_loop           Oin the Bold(dwa) F1@( 8,16) HP 83/94 MP 0/0 Hu 68 $ 350 room=.
+-> l
+T 647 mode=game_loop           Oin the Bold(dwa) F1@( 8,16) HP 83/94 MP 0/0 Hu 68 $ 350 room=.
+-> n
+T 648 mode=game_loop           Oin the Bold(dwa) F1@( 8,15) HP 83/94 MP 0/0 Hu 67 $ 350 room=.
+-> n
+T 649 mode=combat_mode         Oin the Bold(dwa) F1@( 8,14) HP 84/94 MP 0/0 Hu 66 $ 350 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 650 mode=combat_victory      Oin the Bold(dwa) F1@( 8,14) HP 84/94 MP 0/0 Hu 66 $ 358 room=.
+-> back
+T 651 mode=game_loop           Oin the Bold(dwa) F1@( 8,14) HP 84/94 MP 0/0 Hu 66 $ 358 room=.
+-> l
+T 652 mode=game_loop           Oin the Bold(dwa) F1@( 8,14) HP 84/94 MP 0/0 Hu 66 $ 358 room=.
+-> e
+T 653 mode=game_loop           Oin the Bold(dwa) F1@( 9,14) HP 84/94 MP 0/0 Hu 65 $ 358 room=.
+-> s
+T 654 mode=game_loop           Oin the Bold(dwa) F1@( 9,15) HP 84/94 MP 0/0 Hu 64 $ 358 room=.
+-> i
+T 655 mode=inventory           Oin the Bold(dwa) F1@( 9,15) HP 84/94 MP 0/0 Hu 64 $ 358 room=.
+-> u8
+T 656 mode=inventory           Oin the Bold(dwa) F1@( 9,15) HP 94/94 MP 0/0 Hu 64 $ 358 room=.
+-> x
+T 657 mode=game_loop           Oin the Bold(dwa) F1@( 9,15) HP 94/94 MP 0/0 Hu 64 $ 358 room=.
+-> i
+T 658 mode=inventory           Oin the Bold(dwa) F1@( 9,15) HP 94/94 MP 0/0 Hu 64 $ 358 room=.
+-> eat3
+T 659 mode=inventory           Oin the Bold(dwa) F1@( 9,15) HP 94/94 MP 0/0 Hu 69 $ 358 room=.
+-> eat1
+T 660 mode=inventory           Oin the Bold(dwa) F1@( 9,15) HP 94/94 MP 0/0 Hu100 $ 358 room=.
+-> x
+T 661 mode=game_loop           Oin the Bold(dwa) F1@( 9,15) HP 94/94 MP 0/0 Hu100 $ 358 room=.
+-> s
+T 662 mode=game_loop           Oin the Bold(dwa) F1@( 9,16) HP 94/94 MP 0/0 Hu 99 $ 358 room=.
+-> e
+T 663 mode=game_loop           Oin the Bold(dwa) F1@(10,16) HP 94/94 MP 0/0 Hu 98 $ 358 room=.
+-> e
+T 664 mode=game_loop           Oin the Bold(dwa) F1@(11,16) HP 94/94 MP 0/0 Hu 97 $ 358 room=.
+-> i
+T 665 mode=inventory           Oin the Bold(dwa) F1@(11,16) HP 94/94 MP 0/0 Hu 97 $ 358 room=.
+-> eat3
+T 666 mode=inventory           Oin the Bold(dwa) F1@(11,16) HP 94/94 MP 0/0 Hu100 $ 358 room=.
+-> x
+T 667 mode=game_loop           Oin the Bold(dwa) F1@(11,16) HP 94/94 MP 0/0 Hu100 $ 358 room=.
+-> n
+T 668 mode=game_loop           Oin the Bold(dwa) F1@(11,15) HP 94/94 MP 0/0 Hu 99 $ 358 room=.
+-> i
+T 669 mode=inventory           Oin the Bold(dwa) F1@(11,15) HP 94/94 MP 0/0 Hu 99 $ 358 room=.
+-> eat2
+T 670 mode=inventory           Oin the Bold(dwa) F1@(11,15) HP 94/94 MP 0/0 Hu100 $ 358 room=.
+-> x
+T 671 mode=game_loop           Oin the Bold(dwa) F1@(11,15) HP 94/94 MP 0/0 Hu100 $ 358 room=.
+-> e
+T 672 mode=game_loop           Oin the Bold(dwa) F1@(12,15) HP 94/94 MP 0/0 Hu 99 $ 358 room=.
+-> e
+T 673 mode=game_loop           Oin the Bold(dwa) F1@(13,15) HP 94/94 MP 0/0 Hu 98 $ 358 room=.
+-> e
+T 674 mode=game_loop           Oin the Bold(dwa) F1@(14,15) HP 94/94 MP 0/0 Hu 97 $ 358 room=.
+-> e
+T 675 mode=game_loop           Oin the Bold(dwa) F1@(15,15) HP 94/94 MP 0/0 Hu 96 $ 358 room=.
+-> e
+T 676 mode=game_loop           Oin the Bold(dwa) F1@(16,15) HP 94/94 MP 0/0 Hu 95 $ 358 room=.
+-> e
+T 677 mode=game_loop           Oin the Bold(dwa) F1@(17,15) HP 94/94 MP 0/0 Hu 94 $ 358 room=.
+-> e
+T 678 mode=chest_mode          Oin the Bold(dwa) F1@(18,15) HP 94/94 MP 0/0 Hu 93 $ 358 room=C
+-> o
+T 679 mode=game_loop           Oin the Bold(dwa) F1@(18,15) HP 94/94 MP 0/0 Hu 93 $ 388 room=.
+-> s
+T 680 mode=tomb_mode           Oin the Bold(dwa) F1@(18,16) HP 94/94 MP 0/0 Hu 92 $ 388 room=T
+-> p
+T 681 mode=game_loop           Oin the Bold(dwa) F1@(18,16) HP 94/94 MP 0/0 Hu 92 $ 388 room=T
+-> w
+T 682 mode=combat_mode         Oin the Bold(dwa) F1@(17,16) HP 94/94 MP 0/0 Hu 91 $ 388 room=M vs ELITE UNDEAD SKELETON(L1 HP32/32)
+-> a
+T 683 mode=combat_mode         Oin the Bold(dwa) F1@(17,16) HP 94/94 MP 0/0 Hu 91 $ 388 room=M vs ELITE UNDEAD SKELETON(L1 HP7/32)
+-> a
+T 684 mode=combat_victory      Oin the Bold(dwa) F1@(17,16) HP 94/94 MP 0/0 Hu 91 $ 394 room=.
+-> back
+T 685 mode=game_loop           Oin the Bold(dwa) F1@(17,16) HP 94/94 MP 0/0 Hu 91 $ 394 room=.
+-> w
+T 686 mode=game_loop           Oin the Bold(dwa) F1@(16,16) HP 94/94 MP 0/0 Hu 90 $ 394 room=.
+-> n
+T 687 mode=game_loop           Oin the Bold(dwa) F1@(16,15) HP 94/94 MP 0/0 Hu 89 $ 394 room=.
+-> n
+T 688 mode=game_loop           Oin the Bold(dwa) F1@(16,14) HP 94/94 MP 0/0 Hu 88 $ 394 room=.
+-> n
+T 689 mode=game_loop           Oin the Bold(dwa) F1@(16,13) HP 94/94 MP 0/0 Hu 87 $ 394 room=.
+-> n
+T 690 mode=game_loop           Oin the Bold(dwa) F1@(16,12) HP 94/94 MP 0/0 Hu 86 $ 394 room=.
+-> n
+T 691 mode=game_loop           Oin the Bold(dwa) F1@(16,11) HP 94/94 MP 0/0 Hu 85 $ 394 room=.
+-> n
+T 692 mode=game_loop           Oin the Bold(dwa) F1@(16,10) HP 94/94 MP 0/0 Hu 84 $ 394 room=.
+-> n
+T 693 mode=game_loop           Oin the Bold(dwa) F1@(16, 9) HP 94/94 MP 0/0 Hu 83 $ 394 room=.
+-> n
+T 694 mode=game_loop           Oin the Bold(dwa) F1@(16, 8) HP 94/94 MP 0/0 Hu 82 $ 394 room=.
+-> n
+T 695 mode=game_loop           Oin the Bold(dwa) F1@(16, 7) HP 94/94 MP 0/0 Hu 81 $ 394 room=.
+-> n
+T 696 mode=game_loop           Oin the Bold(dwa) F1@(16, 6) HP 94/94 MP 0/0 Hu 80 $ 394 room=N
+-> n
+T 697 mode=game_loop           Oin the Bold(dwa) F1@(16, 5) HP 94/94 MP 0/0 Hu 79 $ 394 room=.
+-> n
+T 698 mode=game_loop           Oin the Bold(dwa) F1@(16, 4) HP 94/94 MP 0/0 Hu 78 $ 394 room=.
+-> w
+T 699 mode=game_loop           Oin the Bold(dwa) F1@(15, 4) HP 94/94 MP 0/0 Hu 77 $ 394 room=.
+-> w
+T 700 mode=game_loop           Oin the Bold(dwa) F1@(14, 4) HP 94/94 MP 0/0 Hu 76 $ 394 room=.
+-> n
+T 701 mode=game_loop           Oin the Bold(dwa) F1@(14, 3) HP 94/94 MP 0/0 Hu 75 $ 394 room=.
+-> n
+T 702 mode=game_loop           Oin the Bold(dwa) F1@(14, 2) HP 94/94 MP 0/0 Hu 74 $ 394 room=.
+-> n
+T 703 mode=game_loop           Oin the Bold(dwa) F1@(14, 1) HP 94/94 MP 0/0 Hu 73 $ 394 room=.
+-> w
+T 704 mode=game_loop           Oin the Bold(dwa) F1@(13, 1) HP 94/94 MP 0/0 Hu 72 $ 394 room=.
+-> w
+T 705 mode=game_loop           Oin the Bold(dwa) F1@(12, 1) HP 94/94 MP 0/0 Hu 71 $ 394 room=.
+-> w
+T 706 mode=game_loop           Oin the Bold(dwa) F1@(11, 1) HP 94/94 MP 0/0 Hu 70 $ 394 room=.
+-> s
+T 707 mode=game_loop           Oin the Bold(dwa) F1@(11, 2) HP 94/94 MP 0/0 Hu 69 $ 394 room=.
+-> w
+T 708 mode=game_loop           Oin the Bold(dwa) F1@(10, 2) HP 94/94 MP 0/0 Hu 68 $ 394 room=.
+-> s
+T 709 mode=game_loop           Oin the Bold(dwa) F1@(10, 3) HP 94/94 MP 0/0 Hu 67 $ 394 room=.
+-> w
+T 710 mode=game_loop           Oin the Bold(dwa) F1@( 9, 3) HP 94/94 MP 0/0 Hu 66 $ 394 room=.
+-> w
+T 711 mode=stairs_down_mode    Oin the Bold(dwa) F1@( 8, 3) HP 94/94 MP 0/0 Hu 65 $ 394 room=D
+-> d
+T 712 mode=stairs_up_mode      Oin the Bold(dwa) F2@( 1, 1) HP 94/94 MP 0/0 Hu 65 $ 394 room=U
+-> s
+T 713 mode=game_loop           Oin the Bold(dwa) F2@( 1, 2) HP 94/94 MP 0/0 Hu 64 $ 394 room=.
+-> s
+T 714 mode=game_loop           Oin the Bold(dwa) F2@( 1, 3) HP 94/94 MP 0/0 Hu 63 $ 394 room=.
+-> e
+T 715 mode=game_loop           Oin the Bold(dwa) F2@( 2, 3) HP 94/94 MP 0/0 Hu 62 $ 394 room=V
+-> e
+T 716 mode=game_loop           Oin the Bold(dwa) F2@( 3, 3) HP 94/94 MP 0/0 Hu 61 $ 394 room=.
+-> e
+T 717 mode=game_loop           Oin the Bold(dwa) F2@( 4, 3) HP 94/94 MP 0/0 Hu 60 $ 394 room=.
+-> e
+T 718 mode=game_loop           Oin the Bold(dwa) F2@( 5, 3) HP 94/94 MP 0/0 Hu 59 $ 394 room=.
+-> e
+T 719 mode=game_loop           Oin the Bold(dwa) F2@( 6, 3) HP 94/94 MP 0/0 Hu 58 $ 394 room=.
+-> s
+T 720 mode=game_loop           Oin the Bold(dwa) F2@( 6, 4) HP 94/94 MP 0/0 Hu 57 $ 394 room=.
+-> s
+T 721 mode=game_loop           Oin the Bold(dwa) F2@( 6, 5) HP 94/94 MP 0/0 Hu 56 $ 394 room=.
+-> s
+T 722 mode=game_loop           Oin the Bold(dwa) F2@( 6, 6) HP 94/94 MP 0/0 Hu 55 $ 394 room=.
+-> s
+T 723 mode=game_loop           Oin the Bold(dwa) F2@( 6, 7) HP 94/94 MP 0/0 Hu 54 $ 394 room=.
+-> e
+T 724 mode=game_loop           Oin the Bold(dwa) F2@( 7, 7) HP 94/94 MP 0/0 Hu 53 $ 394 room=.
+-> s
+T 725 mode=game_loop           Oin the Bold(dwa) F2@( 7, 8) HP 94/94 MP 0/0 Hu 52 $ 394 room=.
+-> s
+T 726 mode=game_loop           Oin the Bold(dwa) F2@( 7, 9) HP 94/94 MP 0/0 Hu 51 $ 394 room=.
+-> e
+T 727 mode=library_mode        Oin the Bold(dwa) F2@( 8, 9) HP 94/94 MP 0/0 Hu 50 $ 394 room=L
+-> r
+T 728 mode=library_read_decision_mode Oin the Bold(dwa) F2@( 8, 9) HP 94/94 MP 0/0 Hu 50 $ 394 room=L
+-> y
+T 729 mode=game_loop           Oin the Bold(dwa) F2@( 8, 9) HP 94/94 MP 0/0 Hu 50 $ 394 room=.
+-> n
+T 730 mode=game_loop           Oin the Bold(dwa) F2@( 8, 8) HP 94/94 MP 0/0 Hu 49 $ 394 room=.
+-> i
+T 731 mode=inventory           Oin the Bold(dwa) F2@( 8, 8) HP 94/94 MP 0/0 Hu 49 $ 394 room=.
+-> eat1
+T 732 mode=inventory           Oin the Bold(dwa) F2@( 8, 8) HP 94/94 MP 0/0 Hu 99 $ 394 room=.
+-> x
+T 733 mode=game_loop           Oin the Bold(dwa) F2@( 8, 8) HP 94/94 MP 0/0 Hu 99 $ 394 room=.
+-> n
+T 734 mode=game_loop           Oin the Bold(dwa) F2@( 8, 7) HP 94/94 MP 0/0 Hu 98 $ 394 room=.
+-> e
+T 735 mode=game_loop           Oin the Bold(dwa) F2@( 9, 7) HP 94/94 MP 0/0 Hu 97 $ 394 room=.
+-> e
+T 736 mode=game_loop           Oin the Bold(dwa) F2@(10, 7) HP 94/94 MP 0/0 Hu 96 $ 394 room=.
+-> n
+T 737 mode=game_loop           Oin the Bold(dwa) F2@(10, 6) HP 94/94 MP 0/0 Hu 95 $ 394 room=.
+-> e
+T 738 mode=oracle_mode         Oin the Bold(dwa) F2@(11, 6) HP 94/94 MP 0/0 Hu 94 $ 394 room=O
+-> s
+T 739 mode=game_loop           Oin the Bold(dwa) F2@(11, 7) HP 94/94 MP 0/0 Hu 93 $ 394 room=.
+-> s
+T 740 mode=game_loop           Oin the Bold(dwa) F2@(11, 8) HP 94/94 MP 0/0 Hu 92 $ 394 room=.
+-> s
+T 741 mode=game_loop           Oin the Bold(dwa) F2@(11, 9) HP 94/94 MP 0/0 Hu 91 $ 394 room=.
+-> s
+T 742 mode=game_loop           Oin the Bold(dwa) F2@(11,10) HP 94/94 MP 0/0 Hu 90 $ 394 room=.
+-> s
+T 743 mode=game_loop           Oin the Bold(dwa) F2@(11,11) HP 94/94 MP 0/0 Hu 89 $ 394 room=.
+-> s
+T 744 mode=game_loop           Oin the Bold(dwa) F2@(11,12) HP 94/94 MP 0/0 Hu 88 $ 394 room=.
+-> s
+T 745 mode=game_loop           Oin the Bold(dwa) F2@(11,13) HP 94/94 MP 0/0 Hu 87 $ 394 room=.
+-> s
+T 746 mode=game_loop           Oin the Bold(dwa) F2@(11,14) HP 94/94 MP 0/0 Hu 86 $ 394 room=.
+-> s
+T 747 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 85 $ 394 room=.
+-> e
+T 748 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 84 $ 394 room=.
+-> s
+T 749 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 83 $ 394 room=.
+-> e
+T 750 mode=game_loop           Oin the Bold(dwa) F2@(13,16) HP 94/94 MP 0/0 Hu 82 $ 394 room=.
+-> e
+T 751 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 81 $ 394 room=.
+-> n
+T 752 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 94/94 MP 0/0 Hu 80 $ 394 room=.
+-> e
+T 753 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 94/94 MP 0/0 Hu 79 $ 394 room=.
+-> e
+T 754 mode=combat_mode         Oin the Bold(dwa) F2@(16,15) HP 94/94 MP 0/0 Hu 78 $ 394 room=M vs Sewer Rat(L1 HP10/10)
+-> f
+T 755 mode=flee_direction_mode Oin the Bold(dwa) F2@(16,15) HP 93/94 MP 0/0 Hu 78 $ 394 room=M
+-> n
+T 756 mode=game_loop           Oin the Bold(dwa) F2@(16,14) HP 93/94 MP 0/0 Hu 78 $ 394 room=.
+-> w
+T 757 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 93/94 MP 0/0 Hu 77 $ 394 room=.
+-> n
+T 758 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 93/94 MP 0/0 Hu 76 $ 394 room=.
+-> n
+T 759 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 93/94 MP 0/0 Hu 75 $ 394 room=.
+-> n
+T 760 mode=game_loop           Oin the Bold(dwa) F2@(15,11) HP 94/94 MP 0/0 Hu 74 $ 394 room=.
+-> n
+T 761 mode=game_loop           Oin the Bold(dwa) F2@(15,10) HP 94/94 MP 0/0 Hu 73 $ 394 room=.
+-> w
+T 762 mode=game_loop           Oin the Bold(dwa) F2@(14,10) HP 94/94 MP 0/0 Hu 72 $ 394 room=.
+-> s
+T 763 mode=game_loop           Oin the Bold(dwa) F2@(14,11) HP 94/94 MP 0/0 Hu 71 $ 394 room=.
+-> s
+T 764 mode=game_loop           Oin the Bold(dwa) F2@(14,12) HP 94/94 MP 0/0 Hu 70 $ 394 room=.
+-> s
+T 765 mode=game_loop           Oin the Bold(dwa) F2@(14,13) HP 94/94 MP 0/0 Hu 69 $ 394 room=.
+-> e
+T 766 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 94/94 MP 0/0 Hu 68 $ 394 room=.
+-> s
+T 767 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 67 $ 394 room=.
+-> s
+T 768 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 94/94 MP 0/0 Hu 66 $ 394 room=.
+-> w
+T 769 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 94/94 MP 0/0 Hu 65 $ 394 room=.
+-> s
+T 770 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 64 $ 394 room=.
+-> w
+T 771 mode=game_loop           Oin the Bold(dwa) F2@(13,16) HP 94/94 MP 0/0 Hu 63 $ 394 room=.
+-> w
+T 772 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 62 $ 394 room=.
+-> n
+T 773 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 61 $ 394 room=.
+-> w
+T 774 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 60 $ 394 room=.
+-> w
+T 775 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 59 $ 394 room=.
+-> l
+T 776 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 59 $ 394 room=.
+-> s
+T 777 mode=game_loop           Oin the Bold(dwa) F2@(10,16) HP 94/94 MP 0/0 Hu 58 $ 394 room=.
+-> l
+T 778 mode=game_loop           Oin the Bold(dwa) F2@(10,16) HP 94/94 MP 0/0 Hu 58 $ 394 room=.
+-> e
+T 779 mode=game_loop           Oin the Bold(dwa) F2@(11,16) HP 94/94 MP 0/0 Hu 57 $ 394 room=.
+-> e
+T 780 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 56 $ 394 room=.
+-> n
+T 781 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 55 $ 394 room=.
+-> w
+T 782 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 54 $ 394 room=.
+-> w
+T 783 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 53 $ 394 room=.
+-> s
+T 784 mode=game_loop           Oin the Bold(dwa) F2@(10,16) HP 94/94 MP 0/0 Hu 52 $ 394 room=.
+-> e
+T 785 mode=game_loop           Oin the Bold(dwa) F2@(11,16) HP 94/94 MP 0/0 Hu 51 $ 394 room=.
+-> e
+T 786 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 50 $ 394 room=.
+-> n
+T 787 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 49 $ 394 room=.
+-> i
+T 788 mode=inventory           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 49 $ 394 room=.
+-> eat1
+T 789 mode=inventory           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 99 $ 394 room=.
+-> x
+T 790 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 99 $ 394 room=.
+-> w
+T 791 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 98 $ 394 room=.
+-> w
+T 792 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 97 $ 394 room=.
+-> w
+T 793 mode=game_loop           Oin the Bold(dwa) F2@( 9,15) HP 94/94 MP 0/0 Hu 96 $ 394 room=.
+-> n
+T 794 mode=game_loop           Oin the Bold(dwa) F2@( 9,14) HP 94/94 MP 0/0 Hu 95 $ 394 room=.
+-> e
+T 795 mode=game_loop           Oin the Bold(dwa) F2@(10,14) HP 94/94 MP 0/0 Hu 94 $ 394 room=.
+-> e
+T 796 mode=game_loop           Oin the Bold(dwa) F2@(11,14) HP 94/94 MP 0/0 Hu 93 $ 394 room=.
+-> s
+T 797 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 92 $ 394 room=.
+-> e
+T 798 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 91 $ 394 room=.
+-> s
+T 799 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 90 $ 394 room=.
+-> w
+T 800 mode=game_loop           Oin the Bold(dwa) F2@(11,16) HP 94/94 MP 0/0 Hu 89 $ 394 room=.
+-> w
+T 801 mode=game_loop           Oin the Bold(dwa) F2@(10,16) HP 94/94 MP 0/0 Hu 88 $ 394 room=.
+-> n
+T 802 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 87 $ 394 room=.
+-> e
+T 803 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 86 $ 394 room=.
+-> e
+T 804 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 85 $ 394 room=.
+-> s
+T 805 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 84 $ 394 room=.
+-> e
+T 806 mode=game_loop           Oin the Bold(dwa) F2@(13,16) HP 94/94 MP 0/0 Hu 83 $ 394 room=.
+-> e
+T 807 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 82 $ 394 room=.
+-> n
+T 808 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 94/94 MP 0/0 Hu 81 $ 394 room=.
+-> e
+T 809 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 94/94 MP 0/0 Hu 80 $ 394 room=.
+-> n
+T 810 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 79 $ 394 room=.
+-> n
+T 811 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 94/94 MP 0/0 Hu 78 $ 394 room=.
+-> w
+T 812 mode=game_loop           Oin the Bold(dwa) F2@(14,13) HP 94/94 MP 0/0 Hu 77 $ 394 room=.
+-> n
+T 813 mode=game_loop           Oin the Bold(dwa) F2@(14,12) HP 94/94 MP 0/0 Hu 76 $ 394 room=.
+-> e
+T 814 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 94/94 MP 0/0 Hu 75 $ 394 room=.
+-> n
+T 815 mode=game_loop           Oin the Bold(dwa) F2@(15,11) HP 94/94 MP 0/0 Hu 74 $ 394 room=.
+-> n
+T 816 mode=game_loop           Oin the Bold(dwa) F2@(15,10) HP 94/94 MP 0/0 Hu 73 $ 394 room=.
+-> e
+T 817 mode=game_loop           Oin the Bold(dwa) F2@(16,10) HP 94/94 MP 0/0 Hu 72 $ 394 room=.
+-> l
+T 818 mode=game_loop           Oin the Bold(dwa) F2@(16,10) HP 94/94 MP 0/0 Hu 72 $ 394 room=.
+-> n
+T 819 mode=chest_mode          Oin the Bold(dwa) F2@(16, 9) HP 94/94 MP 0/0 Hu 71 $ 394 room=C
+-> e
+T 820 mode=game_loop           Oin the Bold(dwa) F2@(17, 9) HP 94/94 MP 0/0 Hu 70 $ 394 room=.
+-> l
+T 821 mode=game_loop           Oin the Bold(dwa) F2@(17, 9) HP 94/94 MP 0/0 Hu 70 $ 394 room=.
+-> s
+T 822 mode=game_loop           Oin the Bold(dwa) F2@(17,10) HP 94/94 MP 0/0 Hu 69 $ 394 room=.
+-> s
+T 823 mode=combat_mode         Oin the Bold(dwa) F2@(17,11) HP 94/94 MP 0/0 Hu 68 $ 394 room=M vs Lichen(L1 HP10/10)
+-> a
+T 824 mode=combat_victory      Oin the Bold(dwa) F2@(17,11) HP 94/94 MP 0/0 Hu 68 $ 656 room=.
+-> back
+T 825 mode=game_loop           Oin the Bold(dwa) F2@(17,11) HP 94/94 MP 0/0 Hu 68 $ 656 room=.
+-> w
+T 826 mode=game_loop           Oin the Bold(dwa) F2@(16,11) HP 94/94 MP 0/0 Hu 67 $ 656 room=.
+-> w
+T 827 mode=game_loop           Oin the Bold(dwa) F2@(15,11) HP 94/94 MP 0/0 Hu 66 $ 656 room=.
+-> s
+T 828 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 94/94 MP 0/0 Hu 65 $ 656 room=.
+-> s
+T 829 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 94/94 MP 0/0 Hu 64 $ 656 room=.
+-> s
+T 830 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 63 $ 656 room=.
+-> s
+T 831 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 94/94 MP 0/0 Hu 62 $ 656 room=.
+-> w
+T 832 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 94/94 MP 0/0 Hu 61 $ 656 room=.
+-> s
+T 833 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 60 $ 656 room=.
+-> w
+T 834 mode=game_loop           Oin the Bold(dwa) F2@(13,16) HP 94/94 MP 0/0 Hu 59 $ 656 room=.
+-> w
+T 835 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 58 $ 656 room=.
+-> n
+T 836 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 57 $ 656 room=.
+-> w
+T 837 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 56 $ 656 room=.
+-> s
+T 838 mode=game_loop           Oin the Bold(dwa) F2@(11,16) HP 94/94 MP 0/0 Hu 55 $ 656 room=.
+-> w
+T 839 mode=game_loop           Oin the Bold(dwa) F2@(10,16) HP 94/94 MP 0/0 Hu 54 $ 656 room=.
+-> n
+T 840 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 53 $ 656 room=.
+-> w
+T 841 mode=game_loop           Oin the Bold(dwa) F2@( 9,15) HP 94/94 MP 0/0 Hu 52 $ 656 room=.
+-> w
+T 842 mode=game_loop           Oin the Bold(dwa) F2@( 8,15) HP 94/94 MP 0/0 Hu 51 $ 656 room=.
+-> s
+T 843 mode=combat_mode         Oin the Bold(dwa) F2@( 8,16) HP 94/94 MP 0/0 Hu 50 $ 656 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T 844 mode=combat_mode         Oin the Bold(dwa) F2@( 8,16) HP 94/94 MP 0/0 Hu 50 $ 656 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T 845 mode=combat_victory      Oin the Bold(dwa) F2@( 8,16) HP 94/94 MP 0/0 Hu 50 $ 668 room=.
+-> back
+T 846 mode=game_loop           Oin the Bold(dwa) F2@( 8,16) HP 94/94 MP 0/0 Hu 50 $ 668 room=.
+-> n
+T 847 mode=game_loop           Oin the Bold(dwa) F2@( 8,15) HP 94/94 MP 0/0 Hu 49 $ 668 room=.
+-> i
+T 848 mode=inventory           Oin the Bold(dwa) F2@( 8,15) HP 94/94 MP 0/0 Hu 49 $ 668 room=.
+-> eat1
+T 849 mode=inventory           Oin the Bold(dwa) F2@( 8,15) HP 94/94 MP 0/0 Hu 99 $ 668 room=.
+-> x
+T 850 mode=game_loop           Oin the Bold(dwa) F2@( 8,15) HP 94/94 MP 0/0 Hu 99 $ 668 room=.
+-> n
+T 851 mode=game_loop           Oin the Bold(dwa) F2@( 8,14) HP 94/94 MP 0/0 Hu 98 $ 668 room=.
+-> n
+T 852 mode=game_loop           Oin the Bold(dwa) F2@( 8,13) HP 94/94 MP 0/0 Hu 97 $ 668 room=.
+-> w
+T 853 mode=game_loop           Oin the Bold(dwa) F2@( 7,13) HP 94/94 MP 0/0 Hu 96 $ 668 room=.
+-> e
+T 854 mode=game_loop           Oin the Bold(dwa) F2@( 8,13) HP 94/94 MP 0/0 Hu 95 $ 668 room=.
+-> e
+T 855 mode=game_loop           Oin the Bold(dwa) F2@( 9,13) HP 94/94 MP 0/0 Hu 94 $ 668 room=.
+-> s
+T 856 mode=game_loop           Oin the Bold(dwa) F2@( 9,14) HP 94/94 MP 0/0 Hu 93 $ 668 room=.
+-> s
+T 857 mode=game_loop           Oin the Bold(dwa) F2@( 9,15) HP 94/94 MP 0/0 Hu 92 $ 668 room=.
+-> e
+T 858 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 91 $ 668 room=.
+-> e
+T 859 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 90 $ 668 room=.
+-> e
+T 860 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 89 $ 668 room=.
+-> s
+T 861 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 88 $ 668 room=.
+-> e
+T 862 mode=game_loop           Oin the Bold(dwa) F2@(13,16) HP 94/94 MP 0/0 Hu 87 $ 668 room=.
+-> e
+T 863 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 86 $ 668 room=.
+-> n
+T 864 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 94/94 MP 0/0 Hu 85 $ 668 room=.
+-> e
+T 865 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 94/94 MP 0/0 Hu 84 $ 668 room=.
+-> n
+T 866 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 83 $ 668 room=.
+-> n
+T 867 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 94/94 MP 0/0 Hu 82 $ 668 room=.
+-> n
+T 868 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 94/94 MP 0/0 Hu 81 $ 668 room=.
+-> n
+T 869 mode=game_loop           Oin the Bold(dwa) F2@(15,11) HP 94/94 MP 0/0 Hu 80 $ 668 room=.
+-> e
+T 870 mode=game_loop           Oin the Bold(dwa) F2@(16,11) HP 94/94 MP 0/0 Hu 79 $ 668 room=.
+-> e
+T 871 mode=game_loop           Oin the Bold(dwa) F2@(17,11) HP 94/94 MP 0/0 Hu 78 $ 668 room=.
+-> n
+T 872 mode=game_loop           Oin the Bold(dwa) F2@(17,10) HP 94/94 MP 0/0 Hu 77 $ 668 room=.
+-> n
+T 873 mode=game_loop           Oin the Bold(dwa) F2@(17, 9) HP 94/94 MP 0/0 Hu 76 $ 668 room=.
+-> n
+T 874 mode=game_loop           Oin the Bold(dwa) F2@(17, 8) HP 94/94 MP 0/0 Hu 75 $ 668 room=.
+-> l
+T 875 mode=game_loop           Oin the Bold(dwa) F2@(17, 8) HP 94/94 MP 0/0 Hu 75 $ 668 room=.
+-> e
+T 876 mode=game_loop           Oin the Bold(dwa) F2@(18, 8) HP 94/94 MP 0/0 Hu 74 $ 668 room=.
+-> l
+T 877 mode=game_loop           Oin the Bold(dwa) F2@(18, 8) HP 94/94 MP 0/0 Hu 74 $ 668 room=.
+-> n
+T 878 mode=dungeon_mode        Oin the Bold(dwa) F2@(18, 7) HP 94/94 MP 0/0 Hu 73 $ 668 room=N
+-> u
+T 879 mode=game_loop           Oin the Bold(dwa) F2@(18, 7) HP 94/94 MP 0/0 Hu 73 $ 668 room=N
+-> l
+T 880 mode=game_loop           Oin the Bold(dwa) F2@(18, 7) HP 94/94 MP 0/0 Hu 73 $ 668 room=N
+-> e
+T 881 mode=chest_mode          Oin the Bold(dwa) F2@(19, 7) HP 94/94 MP 0/0 Hu 72 $ 668 room=C
+-> n
+T 882 mode=game_loop           Oin the Bold(dwa) F2@(19, 6) HP 94/94 MP 0/0 Hu 71 $ 668 room=.
+-> l
+T 883 mode=game_loop           Oin the Bold(dwa) F2@(19, 6) HP 94/94 MP 0/0 Hu 71 $ 668 room=.
+-> n
+T 884 mode=chest_mode          Oin the Bold(dwa) F2@(19, 5) HP 94/94 MP 0/0 Hu 70 $ 668 room=C
+-> o
+T 885 mode=game_loop           Oin the Bold(dwa) F2@(19, 5) HP 94/94 MP 0/0 Hu 70 $ 668 room=.
+-> w
+T 886 mode=game_loop           Oin the Bold(dwa) F2@(18, 5) HP 94/94 MP 0/0 Hu 69 $ 668 room=.
+-> l
+T 887 mode=game_loop           Oin the Bold(dwa) F2@(18, 5) HP 94/94 MP 0/0 Hu 69 $ 668 room=.
+-> s
+T 888 mode=game_loop           Oin the Bold(dwa) F2@(18, 6) HP 94/94 MP 0/0 Hu 68 $ 668 room=.
+-> s
+T 889 mode=game_loop           Oin the Bold(dwa) F2@(18, 7) HP 94/94 MP 0/0 Hu 67 $ 668 room=N
+-> s
+T 890 mode=game_loop           Oin the Bold(dwa) F2@(18, 8) HP 94/94 MP 0/0 Hu 66 $ 668 room=.
+-> w
+T 891 mode=game_loop           Oin the Bold(dwa) F2@(17, 8) HP 94/94 MP 0/0 Hu 65 $ 668 room=.
+-> s
+T 892 mode=game_loop           Oin the Bold(dwa) F2@(17, 9) HP 94/94 MP 0/0 Hu 64 $ 668 room=.
+-> s
+T 893 mode=game_loop           Oin the Bold(dwa) F2@(17,10) HP 94/94 MP 0/0 Hu 63 $ 668 room=.
+-> s
+T 894 mode=game_loop           Oin the Bold(dwa) F2@(17,11) HP 94/94 MP 0/0 Hu 62 $ 668 room=.
+-> w
+T 895 mode=game_loop           Oin the Bold(dwa) F2@(16,11) HP 94/94 MP 0/0 Hu 61 $ 668 room=.
+-> w
+T 896 mode=game_loop           Oin the Bold(dwa) F2@(15,11) HP 94/94 MP 0/0 Hu 60 $ 668 room=.
+-> s
+T 897 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 94/94 MP 0/0 Hu 59 $ 668 room=.
+-> s
+T 898 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 94/94 MP 0/0 Hu 58 $ 668 room=.
+-> s
+T 899 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 57 $ 668 room=.
+-> s
+T 900 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 94/94 MP 0/0 Hu 56 $ 668 room=.
+-> w
+T 901 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 94/94 MP 0/0 Hu 55 $ 668 room=.
+-> s
+T 902 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 54 $ 668 room=.
+-> w
+T 903 mode=game_loop           Oin the Bold(dwa) F2@(13,16) HP 94/94 MP 0/0 Hu 53 $ 668 room=.
+-> w
+T 904 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 52 $ 668 room=.
+-> n
+T 905 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 51 $ 668 room=.
+-> w
+T 906 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 50 $ 668 room=.
+-> w
+T 907 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 49 $ 668 room=.
+-> i
+T 908 mode=inventory           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 49 $ 668 room=.
+-> eat1
+T 909 mode=inventory           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 99 $ 668 room=.
+-> x
+T 910 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 99 $ 668 room=.
+-> s
+T 911 mode=game_loop           Oin the Bold(dwa) F2@(10,16) HP 94/94 MP 0/0 Hu 98 $ 668 room=.
+-> e
+T 912 mode=game_loop           Oin the Bold(dwa) F2@(11,16) HP 94/94 MP 0/0 Hu 97 $ 668 room=.
+-> e
+T 913 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 96 $ 668 room=.
+-> n
+T 914 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 95 $ 668 room=.
+-> w
+T 915 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 94 $ 668 room=.
+-> n
+T 916 mode=game_loop           Oin the Bold(dwa) F2@(11,14) HP 94/94 MP 0/0 Hu 93 $ 668 room=.
+-> n
+T 917 mode=game_loop           Oin the Bold(dwa) F2@(11,13) HP 94/94 MP 0/0 Hu 92 $ 668 room=.
+-> n
+T 918 mode=game_loop           Oin the Bold(dwa) F2@(11,12) HP 94/94 MP 0/0 Hu 91 $ 668 room=.
+-> e
+T 919 mode=game_loop           Oin the Bold(dwa) F2@(12,12) HP 94/94 MP 0/0 Hu 90 $ 668 room=.
+-> s
+T 920 mode=game_loop           Oin the Bold(dwa) F2@(12,13) HP 94/94 MP 0/0 Hu 89 $ 668 room=.
+-> l
+T 921 mode=game_loop           Oin the Bold(dwa) F2@(12,13) HP 94/94 MP 0/0 Hu 89 $ 668 room=.
+-> n
+T 922 mode=game_loop           Oin the Bold(dwa) F2@(12,12) HP 94/94 MP 0/0 Hu 88 $ 668 room=.
+-> n
+T 923 mode=game_loop           Oin the Bold(dwa) F2@(12,11) HP 94/94 MP 0/0 Hu 87 $ 668 room=.
+-> w
+T 924 mode=game_loop           Oin the Bold(dwa) F2@(11,11) HP 94/94 MP 0/0 Hu 86 $ 668 room=.
+-> s
+T 925 mode=game_loop           Oin the Bold(dwa) F2@(11,12) HP 94/94 MP 0/0 Hu 85 $ 668 room=.
+-> s
+T 926 mode=game_loop           Oin the Bold(dwa) F2@(11,13) HP 94/94 MP 0/0 Hu 84 $ 668 room=.
+-> s
+T 927 mode=game_loop           Oin the Bold(dwa) F2@(11,14) HP 94/94 MP 0/0 Hu 83 $ 668 room=.
+-> s
+T 928 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 82 $ 668 room=.
+-> e
+T 929 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 81 $ 668 room=.
+-> s
+T 930 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 80 $ 668 room=.
+-> l
+T 931 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 80 $ 668 room=.
+-> w
+T 932 mode=game_loop           Oin the Bold(dwa) F2@(11,16) HP 94/94 MP 0/0 Hu 79 $ 668 room=.
+-> w
+T 933 mode=game_loop           Oin the Bold(dwa) F2@(10,16) HP 94/94 MP 0/0 Hu 78 $ 668 room=.
+-> n
+T 934 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 77 $ 668 room=.
+-> e
+T 935 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 76 $ 668 room=.
+-> e
+T 936 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 75 $ 668 room=.
+-> s
+T 937 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 74 $ 668 room=.
+-> w
+T 938 mode=game_loop           Oin the Bold(dwa) F2@(11,16) HP 94/94 MP 0/0 Hu 73 $ 668 room=.
+-> w
+T 939 mode=game_loop           Oin the Bold(dwa) F2@(10,16) HP 94/94 MP 0/0 Hu 72 $ 668 room=.
+-> n
+T 940 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 71 $ 668 room=.
+-> l
+T 941 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 71 $ 668 room=.
+-> e
+T 942 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 70 $ 668 room=.
+-> e
+T 943 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 69 $ 668 room=.
+-> s
+T 944 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 68 $ 668 room=.
+-> w
+T 945 mode=game_loop           Oin the Bold(dwa) F2@(11,16) HP 94/94 MP 0/0 Hu 67 $ 668 room=.
+-> w
+T 946 mode=game_loop           Oin the Bold(dwa) F2@(10,16) HP 94/94 MP 0/0 Hu 66 $ 668 room=.
+-> n
+T 947 mode=game_loop           Oin the Bold(dwa) F2@(10,15) HP 94/94 MP 0/0 Hu 65 $ 668 room=.
+-> e
+T 948 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 64 $ 668 room=.
+-> e
+T 949 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 63 $ 668 room=.
+-> s
+T 950 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 62 $ 668 room=.
+-> l
+T 951 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 62 $ 668 room=.
+-> e
+T 952 mode=game_loop           Oin the Bold(dwa) F2@(13,16) HP 94/94 MP 0/0 Hu 61 $ 668 room=.
+-> e
+T 953 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 60 $ 668 room=.
+-> n
+T 954 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 94/94 MP 0/0 Hu 59 $ 668 room=.
+-> e
+T 955 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 94/94 MP 0/0 Hu 58 $ 668 room=.
+-> n
+T 956 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 57 $ 668 room=.
+-> e
+T 957 mode=game_loop           Oin the Bold(dwa) F2@(16,14) HP 94/94 MP 0/0 Hu 56 $ 668 room=.
+-> n
+T 958 mode=game_loop           Oin the Bold(dwa) F2@(16,13) HP 94/94 MP 0/0 Hu 55 $ 668 room=.
+-> w
+T 959 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 94/94 MP 0/0 Hu 54 $ 668 room=.
+-> n
+T 960 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 94/94 MP 0/0 Hu 53 $ 668 room=.
+-> l
+T 961 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 94/94 MP 0/0 Hu 53 $ 668 room=.
+-> w
+T 962 mode=game_loop           Oin the Bold(dwa) F2@(14,12) HP 94/94 MP 0/0 Hu 52 $ 668 room=.
+-> s
+T 963 mode=game_loop           Oin the Bold(dwa) F2@(14,13) HP 94/94 MP 0/0 Hu 51 $ 668 room=.
+-> n
+T 964 mode=game_loop           Oin the Bold(dwa) F2@(14,12) HP 94/94 MP 0/0 Hu 50 $ 668 room=.
+-> n
+T 965 mode=game_loop           Oin the Bold(dwa) F2@(14,11) HP 94/94 MP 0/0 Hu 49 $ 668 room=.
+-> i
+T 966 mode=inventory           Oin the Bold(dwa) F2@(14,11) HP 94/94 MP 0/0 Hu 49 $ 668 room=.
+-> eat1
+T 967 mode=inventory           Oin the Bold(dwa) F2@(14,11) HP 94/94 MP 0/0 Hu 99 $ 668 room=.
+-> x
+T 968 mode=game_loop           Oin the Bold(dwa) F2@(14,11) HP 94/94 MP 0/0 Hu 99 $ 668 room=.
+-> w
+T 969 mode=game_loop           Oin the Bold(dwa) F2@(13,11) HP 94/94 MP 0/0 Hu 98 $ 668 room=.
+-> s
+T 970 mode=game_loop           Oin the Bold(dwa) F2@(13,12) HP 94/94 MP 0/0 Hu 97 $ 668 room=.
+-> l
+T 971 mode=game_loop           Oin the Bold(dwa) F2@(13,12) HP 94/94 MP 0/0 Hu 97 $ 668 room=.
+-> w
+T 972 mode=game_loop           Oin the Bold(dwa) F2@(12,12) HP 94/94 MP 0/0 Hu 96 $ 668 room=.
+-> s
+T 973 mode=game_loop           Oin the Bold(dwa) F2@(12,13) HP 94/94 MP 0/0 Hu 95 $ 668 room=.
+-> w
+T 974 mode=game_loop           Oin the Bold(dwa) F2@(11,13) HP 94/94 MP 0/0 Hu 94 $ 668 room=.
+-> s
+T 975 mode=game_loop           Oin the Bold(dwa) F2@(11,14) HP 94/94 MP 0/0 Hu 93 $ 668 room=.
+-> s
+T 976 mode=game_loop           Oin the Bold(dwa) F2@(11,15) HP 94/94 MP 0/0 Hu 92 $ 668 room=.
+-> e
+T 977 mode=game_loop           Oin the Bold(dwa) F2@(12,15) HP 94/94 MP 0/0 Hu 91 $ 668 room=.
+-> s
+T 978 mode=game_loop           Oin the Bold(dwa) F2@(12,16) HP 94/94 MP 0/0 Hu 90 $ 668 room=.
+-> e
+T 979 mode=game_loop           Oin the Bold(dwa) F2@(13,16) HP 94/94 MP 0/0 Hu 89 $ 668 room=.
+-> e
+T 980 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 88 $ 668 room=.
+-> l
+T 981 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 88 $ 668 room=.
+-> n
+T 982 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 94/94 MP 0/0 Hu 87 $ 668 room=.
+-> e
+T 983 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 94/94 MP 0/0 Hu 86 $ 668 room=.
+-> e
+T 984 mode=combat_mode         Oin the Bold(dwa) F2@(16,15) HP 94/94 MP 0/0 Hu 85 $ 668 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 985 mode=combat_mode         Oin the Bold(dwa) F2@(16,15) HP 93/94 MP 0/0 Hu 85 $ 668 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 986 mode=combat_mode         Oin the Bold(dwa) F2@(16,15) HP 92/94 MP 0/0 Hu 85 $ 668 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 987 mode=combat_victory      Oin the Bold(dwa) F2@(16,15) HP 92/94 MP 0/0 Hu 85 $ 676 room=.
+-> back
+T 988 mode=game_loop           Oin the Bold(dwa) F2@(16,15) HP 92/94 MP 0/0 Hu 85 $ 676 room=.
+-> n
+T 989 mode=game_loop           Oin the Bold(dwa) F2@(16,14) HP 92/94 MP 0/0 Hu 84 $ 676 room=.
+-> w
+T 990 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 92/94 MP 0/0 Hu 83 $ 676 room=.
+-> l
+T 991 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 92/94 MP 0/0 Hu 83 $ 676 room=.
+-> n
+T 992 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 92/94 MP 0/0 Hu 82 $ 676 room=.
+-> w
+T 993 mode=game_loop           Oin the Bold(dwa) F2@(14,13) HP 93/94 MP 0/0 Hu 81 $ 676 room=.
+-> n
+T 994 mode=game_loop           Oin the Bold(dwa) F2@(14,12) HP 93/94 MP 0/0 Hu 80 $ 676 room=.
+-> n
+T 995 mode=game_loop           Oin the Bold(dwa) F2@(14,11) HP 93/94 MP 0/0 Hu 79 $ 676 room=.
+-> e
+T 996 mode=game_loop           Oin the Bold(dwa) F2@(15,11) HP 93/94 MP 0/0 Hu 78 $ 676 room=.
+-> s
+T 997 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 94/94 MP 0/0 Hu 77 $ 676 room=.
+-> s
+T 998 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 94/94 MP 0/0 Hu 76 $ 676 room=.
+-> s
+T 999 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 75 $ 676 room=.
+-> i
+T1000 mode=inventory           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 75 $ 676 room=.
+-> eat2
+T1001 mode=inventory           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 80 $ 676 room=.
+-> x
+T1002 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 94/94 MP 0/0 Hu 80 $ 676 room=.
+-> s
+T1003 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 94/94 MP 0/0 Hu 79 $ 676 room=.
+-> w
+T1004 mode=game_loop           Oin the Bold(dwa) F2@(14,15) HP 94/94 MP 0/0 Hu 78 $ 676 room=.
+-> s
+T1005 mode=game_loop           Oin the Bold(dwa) F2@(14,16) HP 94/94 MP 0/0 Hu 77 $ 676 room=.
+-> e
+T1006 mode=game_loop           Oin the Bold(dwa) F2@(15,16) HP 94/94 MP 0/0 Hu 76 $ 676 room=.
+-> e
+T1007 mode=combat_mode         Oin the Bold(dwa) F2@(16,16) HP 94/94 MP 0/0 Hu 75 $ 676 room=M vs Goblin(L1 HP30/30)
+-> a
+T1008 mode=combat_mode         Oin the Bold(dwa) F2@(16,16) HP 93/94 MP 0/0 Hu 75 $ 676 room=M vs Goblin(L1 HP4/30)
+-> a
+T1009 mode=combat_victory      Oin the Bold(dwa) F2@(16,16) HP 93/94 MP 0/0 Hu 75 $ 692 room=.
+-> back
+T1010 mode=game_loop           Oin the Bold(dwa) F2@(16,16) HP 93/94 MP 0/0 Hu 75 $ 692 room=.
+-> l
+T1011 mode=game_loop           Oin the Bold(dwa) F2@(16,16) HP 93/94 MP 0/0 Hu 75 $ 692 room=.
+-> n
+T1012 mode=game_loop           Oin the Bold(dwa) F2@(16,15) HP 93/94 MP 0/0 Hu 74 $ 692 room=.
+-> w
+T1013 mode=game_loop           Oin the Bold(dwa) F2@(15,15) HP 93/94 MP 0/0 Hu 73 $ 692 room=.
+-> n
+T1014 mode=game_loop           Oin the Bold(dwa) F2@(15,14) HP 93/94 MP 0/0 Hu 72 $ 692 room=.
+-> n
+T1015 mode=game_loop           Oin the Bold(dwa) F2@(15,13) HP 94/94 MP 0/0 Hu 71 $ 692 room=.
+-> n
+T1016 mode=game_loop           Oin the Bold(dwa) F2@(15,12) HP 94/94 MP 0/0 Hu 70 $ 692 room=.
+-> n
+T1017 mode=game_loop           Oin the Bold(dwa) F2@(15,11) HP 94/94 MP 0/0 Hu 69 $ 692 room=.
+-> w
+T1018 mode=game_loop           Oin the Bold(dwa) F2@(14,11) HP 94/94 MP 0/0 Hu 68 $ 692 room=.
+-> w
+T1019 mode=game_loop           Oin the Bold(dwa) F2@(13,11) HP 94/94 MP 0/0 Hu 67 $ 692 room=.
+-> w
+T1020 mode=game_loop           Oin the Bold(dwa) F2@(12,11) HP 94/94 MP 0/0 Hu 66 $ 692 room=.
+-> l
+T1021 mode=game_loop           Oin the Bold(dwa) F2@(12,11) HP 94/94 MP 0/0 Hu 66 $ 692 room=.
+-> w
+T1022 mode=game_loop           Oin the Bold(dwa) F2@(11,11) HP 94/94 MP 0/0 Hu 65 $ 692 room=.
+-> i
+T1023 mode=inventory           Oin the Bold(dwa) F2@(11,11) HP 94/94 MP 0/0 Hu 65 $ 692 room=.
+-> eat2
+T1024 mode=inventory           Oin the Bold(dwa) F2@(11,11) HP 94/94 MP 0/0 Hu 70 $ 692 room=.
+-> eat1
+T1025 mode=inventory           Oin the Bold(dwa) F2@(11,11) HP 94/94 MP 0/0 Hu100 $ 692 room=.
+-> x
+T1026 mode=game_loop           Oin the Bold(dwa) F2@(11,11) HP 94/94 MP 0/0 Hu100 $ 692 room=.
+-> w
+T1027 mode=stairs_down_mode    Oin the Bold(dwa) F2@(10,11) HP 94/94 MP 0/0 Hu 99 $ 692 room=D
+-> d
+T1028 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 99 $ 692 room=U
+-> e
+T1029 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 98 $ 692 room=.
+-> e
+T1030 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 97 $ 692 room=.
+-> e
+T1031 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 96 $ 692 room=.
+-> s
+T1032 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 95 $ 692 room=.
+-> s
+T1033 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 94 $ 692 room=.
+-> n
+T1034 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 93 $ 692 room=.
+-> e
+T1035 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 92 $ 692 room=.
+-> w
+T1036 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 91 $ 692 room=.
+-> n
+T1037 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 90 $ 692 room=.
+-> w
+T1038 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 89 $ 692 room=.
+-> w
+T1039 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 88 $ 692 room=.
+-> w
+T1040 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 87 $ 692 room=U
+-> e
+T1041 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 86 $ 692 room=.
+-> e
+T1042 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 85 $ 692 room=.
+-> e
+T1043 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 84 $ 692 room=.
+-> s
+T1044 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 83 $ 692 room=.
+-> s
+T1045 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 82 $ 692 room=.
+-> n
+T1046 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 81 $ 692 room=.
+-> e
+T1047 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 80 $ 692 room=.
+-> w
+T1048 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 79 $ 692 room=.
+-> n
+T1049 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 78 $ 692 room=.
+-> w
+T1050 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 77 $ 692 room=.
+-> w
+T1051 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 76 $ 692 room=.
+-> w
+T1052 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 75 $ 692 room=U
+-> e
+T1053 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 74 $ 692 room=.
+-> e
+T1054 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 73 $ 692 room=.
+-> e
+T1055 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 72 $ 692 room=.
+-> s
+T1056 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 71 $ 692 room=.
+-> s
+T1057 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 70 $ 692 room=.
+-> n
+T1058 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 69 $ 692 room=.
+-> e
+T1059 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 68 $ 692 room=.
+-> w
+T1060 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 67 $ 692 room=.
+-> n
+T1061 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 66 $ 692 room=.
+-> w
+T1062 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 65 $ 692 room=.
+-> w
+T1063 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 64 $ 692 room=.
+-> w
+T1064 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 63 $ 692 room=U
+-> e
+T1065 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 62 $ 692 room=.
+-> w
+T1066 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 61 $ 692 room=U
+-> e
+T1067 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 60 $ 692 room=.
+-> e
+T1068 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 59 $ 692 room=.
+-> e
+T1069 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 58 $ 692 room=.
+-> s
+T1070 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 57 $ 692 room=.
+-> e
+T1071 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 56 $ 692 room=.
+-> w
+T1072 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 55 $ 692 room=.
+-> s
+T1073 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 54 $ 692 room=.
+-> n
+T1074 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 53 $ 692 room=.
+-> n
+T1075 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 52 $ 692 room=.
+-> w
+T1076 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 51 $ 692 room=.
+-> w
+T1077 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 50 $ 692 room=.
+-> w
+T1078 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 49 $ 692 room=U
+-> e
+T1079 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 48 $ 692 room=.
+-> i
+T1080 mode=inventory           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 48 $ 692 room=.
+-> eat1
+T1081 mode=inventory           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 98 $ 692 room=.
+-> x
+T1082 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 98 $ 692 room=.
+-> w
+T1083 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 97 $ 692 room=U
+-> e
+T1084 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 96 $ 692 room=.
+-> e
+T1085 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 95 $ 692 room=.
+-> e
+T1086 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 94 $ 692 room=.
+-> s
+T1087 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 93 $ 692 room=.
+-> s
+T1088 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 92 $ 692 room=.
+-> n
+T1089 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 91 $ 692 room=.
+-> e
+T1090 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 90 $ 692 room=.
+-> w
+T1091 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 89 $ 692 room=.
+-> n
+T1092 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 88 $ 692 room=.
+-> w
+T1093 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 87 $ 692 room=.
+-> w
+T1094 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 86 $ 692 room=.
+-> w
+T1095 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 85 $ 692 room=U
+-> e
+T1096 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 84 $ 692 room=.
+-> w
+T1097 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 83 $ 692 room=U
+-> e
+T1098 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 82 $ 692 room=.
+-> e
+T1099 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 81 $ 692 room=.
+-> e
+T1100 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 80 $ 692 room=.
+-> s
+T1101 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 79 $ 692 room=.
+-> e
+T1102 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 78 $ 692 room=.
+-> w
+T1103 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 77 $ 692 room=.
+-> s
+T1104 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 76 $ 692 room=.
+-> n
+T1105 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 75 $ 692 room=.
+-> n
+T1106 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 74 $ 692 room=.
+-> w
+T1107 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 73 $ 692 room=.
+-> w
+T1108 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 72 $ 692 room=.
+-> w
+T1109 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 71 $ 692 room=U
+-> e
+T1110 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 70 $ 692 room=.
+-> w
+T1111 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 69 $ 692 room=U
+-> e
+T1112 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 68 $ 692 room=.
+-> e
+T1113 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 67 $ 692 room=.
+-> e
+T1114 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 66 $ 692 room=.
+-> s
+T1115 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 65 $ 692 room=.
+-> e
+T1116 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 64 $ 692 room=.
+-> w
+T1117 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 63 $ 692 room=.
+-> s
+T1118 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 62 $ 692 room=.
+-> n
+T1119 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 61 $ 692 room=.
+-> n
+T1120 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 60 $ 692 room=.
+-> w
+T1121 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 59 $ 692 room=.
+-> w
+T1122 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 58 $ 692 room=.
+-> w
+T1123 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 57 $ 692 room=U
+-> e
+T1124 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 56 $ 692 room=.
+-> w
+T1125 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 55 $ 692 room=U
+-> e
+T1126 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 54 $ 692 room=.
+-> e
+T1127 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 53 $ 692 room=.
+-> e
+T1128 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 52 $ 692 room=.
+-> s
+T1129 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 51 $ 692 room=.
+-> s
+T1130 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 50 $ 692 room=.
+-> n
+T1131 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 49 $ 692 room=.
+-> i
+T1132 mode=inventory           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 49 $ 692 room=.
+-> eat1
+T1133 mode=inventory           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 99 $ 692 room=.
+-> x
+T1134 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 99 $ 692 room=.
+-> e
+T1135 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 98 $ 692 room=.
+-> n
+T1136 mode=warp_mode           Oin the Bold(dwa) F3@( 5, 1) HP 94/94 MP 0/0 Hu 97 $ 692 room=W
+-> y
+T1137 mode=game_loop           Oin the Bold(dwa) F3@( 5, 1) HP 94/94 MP 0/0 Hu 97 $ 692 room=W
+-> w
+T1138 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 96 $ 692 room=.
+-> w
+T1139 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 95 $ 692 room=.
+-> w
+T1140 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 94 $ 692 room=.
+-> w
+T1141 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 93 $ 692 room=U
+-> e
+T1142 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 92 $ 692 room=.
+-> w
+T1143 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 91 $ 692 room=U
+-> e
+T1144 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 90 $ 692 room=.
+-> e
+T1145 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 89 $ 692 room=.
+-> e
+T1146 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 88 $ 692 room=.
+-> s
+T1147 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 87 $ 692 room=.
+-> e
+T1148 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 86 $ 692 room=.
+-> w
+T1149 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 85 $ 692 room=.
+-> s
+T1150 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 84 $ 692 room=.
+-> n
+T1151 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 83 $ 692 room=.
+-> n
+T1152 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 82 $ 692 room=.
+-> w
+T1153 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 81 $ 692 room=.
+-> w
+T1154 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 80 $ 692 room=.
+-> w
+T1155 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 79 $ 692 room=U
+-> e
+T1156 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 78 $ 692 room=.
+-> w
+T1157 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 77 $ 692 room=U
+-> e
+T1158 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 76 $ 692 room=.
+-> e
+T1159 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 75 $ 692 room=.
+-> e
+T1160 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 74 $ 692 room=.
+-> s
+T1161 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 73 $ 692 room=.
+-> s
+T1162 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 72 $ 692 room=.
+-> n
+T1163 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 71 $ 692 room=.
+-> e
+T1164 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 70 $ 692 room=.
+-> w
+T1165 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 69 $ 692 room=.
+-> n
+T1166 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 68 $ 692 room=.
+-> w
+T1167 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 67 $ 692 room=.
+-> w
+T1168 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 66 $ 692 room=.
+-> w
+T1169 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 65 $ 692 room=U
+-> e
+T1170 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 64 $ 692 room=.
+-> w
+T1171 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 63 $ 692 room=U
+-> e
+T1172 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 62 $ 692 room=.
+-> e
+T1173 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 61 $ 692 room=.
+-> e
+T1174 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 60 $ 692 room=.
+-> s
+T1175 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 59 $ 692 room=.
+-> e
+T1176 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 58 $ 692 room=.
+-> w
+T1177 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 57 $ 692 room=.
+-> s
+T1178 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 56 $ 692 room=.
+-> n
+T1179 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 55 $ 692 room=.
+-> n
+T1180 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 54 $ 692 room=.
+-> w
+T1181 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 53 $ 692 room=.
+-> w
+T1182 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 52 $ 692 room=.
+-> w
+T1183 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 51 $ 692 room=U
+-> e
+T1184 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 50 $ 692 room=.
+-> w
+T1185 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 49 $ 692 room=U
+-> e
+T1186 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 48 $ 692 room=.
+-> i
+T1187 mode=inventory           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 48 $ 692 room=.
+-> eat1
+T1188 mode=inventory           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 98 $ 692 room=.
+-> x
+T1189 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 98 $ 692 room=.
+-> e
+T1190 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 97 $ 692 room=.
+-> e
+T1191 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 96 $ 692 room=.
+-> s
+T1192 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 95 $ 692 room=.
+-> e
+T1193 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 94 $ 692 room=.
+-> w
+T1194 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 93 $ 692 room=.
+-> s
+T1195 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 92 $ 692 room=.
+-> n
+T1196 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 91 $ 692 room=.
+-> n
+T1197 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 90 $ 692 room=.
+-> w
+T1198 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 89 $ 692 room=.
+-> w
+T1199 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 88 $ 692 room=.
+-> w
+T1200 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 87 $ 692 room=U
+-> e
+T1201 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 86 $ 692 room=.
+-> e
+T1202 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 85 $ 692 room=.
+-> e
+T1203 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 84 $ 692 room=.
+-> s
+T1204 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 83 $ 692 room=.
+-> e
+T1205 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 82 $ 692 room=.
+-> w
+T1206 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 81 $ 692 room=.
+-> s
+T1207 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 80 $ 692 room=.
+-> n
+T1208 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 79 $ 692 room=.
+-> n
+T1209 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 78 $ 692 room=.
+-> w
+T1210 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 77 $ 692 room=.
+-> w
+T1211 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 76 $ 692 room=.
+-> w
+T1212 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 75 $ 692 room=U
+-> e
+T1213 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 74 $ 692 room=.
+-> w
+T1214 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 73 $ 692 room=U
+-> e
+T1215 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 72 $ 692 room=.
+-> e
+T1216 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 71 $ 692 room=.
+-> e
+T1217 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 70 $ 692 room=.
+-> s
+T1218 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 69 $ 692 room=.
+-> e
+T1219 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 68 $ 692 room=.
+-> w
+T1220 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 67 $ 692 room=.
+-> s
+T1221 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 66 $ 692 room=.
+-> n
+T1222 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 65 $ 692 room=.
+-> n
+T1223 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 64 $ 692 room=.
+-> w
+T1224 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 63 $ 692 room=.
+-> w
+T1225 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 62 $ 692 room=.
+-> w
+T1226 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 61 $ 692 room=U
+-> e
+T1227 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 60 $ 692 room=.
+-> e
+T1228 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 59 $ 692 room=.
+-> e
+T1229 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 58 $ 692 room=.
+-> s
+T1230 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 57 $ 692 room=.
+-> l
+T1231 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 57 $ 692 room=.
+-> s
+T1232 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 56 $ 692 room=.
+-> n
+T1233 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 55 $ 692 room=.
+-> e
+T1234 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 54 $ 692 room=.
+-> w
+T1235 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 53 $ 692 room=.
+-> n
+T1236 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 52 $ 692 room=.
+-> e
+T1237 mode=warp_mode           Oin the Bold(dwa) F3@( 5, 1) HP 94/94 MP 0/0 Hu 51 $ 692 room=W
+-> n
+T1238 mode=game_loop           Oin the Bold(dwa) F1@(16,16) HP 94/94 MP 0/0 Hu 51 $ 692 room=.
+-> n
+T1239 mode=game_loop           Oin the Bold(dwa) F1@(16,15) HP 94/94 MP 0/0 Hu 50 $ 692 room=.
+-> n
+T1240 mode=game_loop           Oin the Bold(dwa) F1@(16,14) HP 94/94 MP 0/0 Hu 49 $ 692 room=.
+-> i
+T1241 mode=inventory           Oin the Bold(dwa) F1@(16,14) HP 94/94 MP 0/0 Hu 49 $ 692 room=.
+-> eat1
+T1242 mode=inventory           Oin the Bold(dwa) F1@(16,14) HP 94/94 MP 0/0 Hu 99 $ 692 room=.
+-> x
+T1243 mode=game_loop           Oin the Bold(dwa) F1@(16,14) HP 94/94 MP 0/0 Hu 99 $ 692 room=.
+-> n
+T1244 mode=game_loop           Oin the Bold(dwa) F1@(16,13) HP 94/94 MP 0/0 Hu 98 $ 692 room=.
+-> n
+T1245 mode=game_loop           Oin the Bold(dwa) F1@(16,12) HP 94/94 MP 0/0 Hu 97 $ 692 room=.
+-> n
+T1246 mode=game_loop           Oin the Bold(dwa) F1@(16,11) HP 94/94 MP 0/0 Hu 96 $ 692 room=.
+-> n
+T1247 mode=game_loop           Oin the Bold(dwa) F1@(16,10) HP 94/94 MP 0/0 Hu 95 $ 692 room=.
+-> n
+T1248 mode=game_loop           Oin the Bold(dwa) F1@(16, 9) HP 94/94 MP 0/0 Hu 94 $ 692 room=.
+-> n
+T1249 mode=game_loop           Oin the Bold(dwa) F1@(16, 8) HP 94/94 MP 0/0 Hu 93 $ 692 room=.
+-> n
+T1250 mode=game_loop           Oin the Bold(dwa) F1@(16, 7) HP 94/94 MP 0/0 Hu 92 $ 692 room=.
+-> n
+T1251 mode=game_loop           Oin the Bold(dwa) F1@(16, 6) HP 94/94 MP 0/0 Hu 91 $ 692 room=N
+-> n
+T1252 mode=game_loop           Oin the Bold(dwa) F1@(16, 5) HP 94/94 MP 0/0 Hu 90 $ 692 room=.
+-> n
+T1253 mode=game_loop           Oin the Bold(dwa) F1@(16, 4) HP 94/94 MP 0/0 Hu 89 $ 692 room=.
+-> w
+T1254 mode=game_loop           Oin the Bold(dwa) F1@(15, 4) HP 94/94 MP 0/0 Hu 88 $ 692 room=.
+-> w
+T1255 mode=game_loop           Oin the Bold(dwa) F1@(14, 4) HP 94/94 MP 0/0 Hu 87 $ 692 room=.
+-> n
+T1256 mode=game_loop           Oin the Bold(dwa) F1@(14, 3) HP 94/94 MP 0/0 Hu 86 $ 692 room=.
+-> n
+T1257 mode=game_loop           Oin the Bold(dwa) F1@(14, 2) HP 94/94 MP 0/0 Hu 85 $ 692 room=.
+-> n
+T1258 mode=game_loop           Oin the Bold(dwa) F1@(14, 1) HP 94/94 MP 0/0 Hu 84 $ 692 room=.
+-> w
+T1259 mode=game_loop           Oin the Bold(dwa) F1@(13, 1) HP 94/94 MP 0/0 Hu 83 $ 692 room=.
+-> w
+T1260 mode=game_loop           Oin the Bold(dwa) F1@(12, 1) HP 94/94 MP 0/0 Hu 82 $ 692 room=.
+-> w
+T1261 mode=game_loop           Oin the Bold(dwa) F1@(11, 1) HP 94/94 MP 0/0 Hu 81 $ 692 room=.
+-> s
+T1262 mode=game_loop           Oin the Bold(dwa) F1@(11, 2) HP 94/94 MP 0/0 Hu 80 $ 692 room=.
+-> w
+T1263 mode=game_loop           Oin the Bold(dwa) F1@(10, 2) HP 94/94 MP 0/0 Hu 79 $ 692 room=.
+-> s
+T1264 mode=game_loop           Oin the Bold(dwa) F1@(10, 3) HP 94/94 MP 0/0 Hu 78 $ 692 room=.
+-> w
+T1265 mode=game_loop           Oin the Bold(dwa) F1@( 9, 3) HP 94/94 MP 0/0 Hu 77 $ 692 room=.
+-> w
+T1266 mode=stairs_down_mode    Oin the Bold(dwa) F1@( 8, 3) HP 94/94 MP 0/0 Hu 76 $ 692 room=D
+-> d
+T1267 mode=stairs_up_mode      Oin the Bold(dwa) F2@( 1, 1) HP 94/94 MP 0/0 Hu 76 $ 692 room=U
+-> s
+T1268 mode=game_loop           Oin the Bold(dwa) F2@( 1, 2) HP 94/94 MP 0/0 Hu 75 $ 692 room=.
+-> s
+T1269 mode=game_loop           Oin the Bold(dwa) F2@( 1, 3) HP 94/94 MP 0/0 Hu 74 $ 692 room=.
+-> e
+T1270 mode=game_loop           Oin the Bold(dwa) F2@( 2, 3) HP 94/94 MP 0/0 Hu 73 $ 692 room=V
+-> e
+T1271 mode=game_loop           Oin the Bold(dwa) F2@( 3, 3) HP 94/94 MP 0/0 Hu 72 $ 692 room=.
+-> e
+T1272 mode=game_loop           Oin the Bold(dwa) F2@( 4, 3) HP 94/94 MP 0/0 Hu 71 $ 692 room=.
+-> e
+T1273 mode=game_loop           Oin the Bold(dwa) F2@( 5, 3) HP 94/94 MP 0/0 Hu 70 $ 692 room=.
+-> e
+T1274 mode=game_loop           Oin the Bold(dwa) F2@( 6, 3) HP 94/94 MP 0/0 Hu 69 $ 692 room=.
+-> s
+T1275 mode=game_loop           Oin the Bold(dwa) F2@( 6, 4) HP 94/94 MP 0/0 Hu 68 $ 692 room=.
+-> s
+T1276 mode=game_loop           Oin the Bold(dwa) F2@( 6, 5) HP 94/94 MP 0/0 Hu 67 $ 692 room=.
+-> s
+T1277 mode=game_loop           Oin the Bold(dwa) F2@( 6, 6) HP 94/94 MP 0/0 Hu 66 $ 692 room=.
+-> s
+T1278 mode=game_loop           Oin the Bold(dwa) F2@( 6, 7) HP 94/94 MP 0/0 Hu 65 $ 692 room=.
+-> e
+T1279 mode=game_loop           Oin the Bold(dwa) F2@( 7, 7) HP 94/94 MP 0/0 Hu 64 $ 692 room=.
+-> s
+T1280 mode=game_loop           Oin the Bold(dwa) F2@( 7, 8) HP 94/94 MP 0/0 Hu 63 $ 692 room=.
+-> s
+T1281 mode=game_loop           Oin the Bold(dwa) F2@( 7, 9) HP 94/94 MP 0/0 Hu 62 $ 692 room=.
+-> e
+T1282 mode=game_loop           Oin the Bold(dwa) F2@( 8, 9) HP 94/94 MP 0/0 Hu 61 $ 692 room=.
+-> e
+T1283 mode=game_loop           Oin the Bold(dwa) F2@( 9, 9) HP 94/94 MP 0/0 Hu 60 $ 692 room=.
+-> e
+T1284 mode=game_loop           Oin the Bold(dwa) F2@(10, 9) HP 94/94 MP 0/0 Hu 59 $ 692 room=.
+-> s
+T1285 mode=game_loop           Oin the Bold(dwa) F2@(10,10) HP 94/94 MP 0/0 Hu 58 $ 692 room=.
+-> s
+T1286 mode=stairs_down_mode    Oin the Bold(dwa) F2@(10,11) HP 94/94 MP 0/0 Hu 57 $ 692 room=D
+-> d
+T1287 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 57 $ 692 room=U
+-> e
+T1288 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 56 $ 692 room=.
+-> e
+T1289 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 55 $ 692 room=.
+-> e
+T1290 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 54 $ 692 room=.
+-> s
+T1291 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 53 $ 692 room=.
+-> s
+T1292 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 52 $ 692 room=.
+-> n
+T1293 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 51 $ 692 room=.
+-> e
+T1294 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 50 $ 692 room=.
+-> w
+T1295 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 49 $ 692 room=.
+-> i
+T1296 mode=inventory           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 49 $ 692 room=.
+-> eat1
+T1297 mode=inventory           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 99 $ 692 room=.
+-> x
+T1298 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 99 $ 692 room=.
+-> n
+T1299 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 98 $ 692 room=.
+-> w
+T1300 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 97 $ 692 room=.
+-> w
+T1301 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 96 $ 692 room=.
+-> w
+T1302 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 95 $ 692 room=U
+-> e
+T1303 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 94 $ 692 room=.
+-> e
+T1304 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 93 $ 692 room=.
+-> e
+T1305 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 92 $ 692 room=.
+-> s
+T1306 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 91 $ 692 room=.
+-> e
+T1307 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 90 $ 692 room=.
+-> w
+T1308 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 89 $ 692 room=.
+-> s
+T1309 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 88 $ 692 room=.
+-> n
+T1310 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 87 $ 692 room=.
+-> n
+T1311 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 86 $ 692 room=.
+-> w
+T1312 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 85 $ 692 room=.
+-> w
+T1313 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 84 $ 692 room=.
+-> w
+T1314 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 83 $ 692 room=U
+-> e
+T1315 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 82 $ 692 room=.
+-> w
+T1316 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 81 $ 692 room=U
+-> e
+T1317 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 80 $ 692 room=.
+-> e
+T1318 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 79 $ 692 room=.
+-> e
+T1319 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 78 $ 692 room=.
+-> s
+T1320 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 77 $ 692 room=.
+-> e
+T1321 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 76 $ 692 room=.
+-> w
+T1322 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 75 $ 692 room=.
+-> s
+T1323 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 74 $ 692 room=.
+-> n
+T1324 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 73 $ 692 room=.
+-> n
+T1325 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 72 $ 692 room=.
+-> w
+T1326 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 71 $ 692 room=.
+-> w
+T1327 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 70 $ 692 room=.
+-> w
+T1328 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 69 $ 692 room=U
+-> e
+T1329 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 68 $ 692 room=.
+-> e
+T1330 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 67 $ 692 room=.
+-> e
+T1331 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 66 $ 692 room=.
+-> s
+T1332 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 65 $ 692 room=.
+-> e
+T1333 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 64 $ 692 room=.
+-> w
+T1334 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 63 $ 692 room=.
+-> s
+T1335 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 62 $ 692 room=.
+-> n
+T1336 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 61 $ 692 room=.
+-> n
+T1337 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 60 $ 692 room=.
+-> w
+T1338 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 59 $ 692 room=.
+-> w
+T1339 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 58 $ 692 room=.
+-> w
+T1340 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 57 $ 692 room=U
+-> e
+T1341 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 56 $ 692 room=.
+-> w
+T1342 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 55 $ 692 room=U
+-> e
+T1343 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 54 $ 692 room=.
+-> e
+T1344 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 53 $ 692 room=.
+-> e
+T1345 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 52 $ 692 room=.
+-> s
+T1346 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 51 $ 692 room=.
+-> s
+T1347 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 50 $ 692 room=.
+-> n
+T1348 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 49 $ 692 room=.
+-> e
+T1349 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 48 $ 692 room=.
+-> w
+T1350 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 47 $ 692 room=.
+-> n
+T1351 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 46 $ 692 room=.
+-> w
+T1352 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 45 $ 692 room=.
+-> w
+T1353 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 44 $ 692 room=.
+-> w
+T1354 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 43 $ 692 room=U
+-> e
+T1355 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 42 $ 692 room=.
+-> e
+T1356 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 41 $ 692 room=.
+-> e
+T1357 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 40 $ 692 room=.
+-> s
+T1358 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 39 $ 692 room=.
+-> e
+T1359 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 38 $ 692 room=.
+-> w
+T1360 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 37 $ 692 room=.
+-> s
+T1361 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 36 $ 692 room=.
+-> n
+T1362 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 35 $ 692 room=.
+-> n
+T1363 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 34 $ 692 room=.
+-> w
+T1364 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 33 $ 692 room=.
+-> w
+T1365 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 32 $ 692 room=.
+-> w
+T1366 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 31 $ 692 room=U
+-> e
+T1367 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 30 $ 692 room=.
+-> e
+T1368 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 29 $ 692 room=.
+-> e
+T1369 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 28 $ 692 room=.
+-> s
+T1370 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 27 $ 692 room=.
+-> e
+T1371 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 26 $ 692 room=.
+-> w
+T1372 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 25 $ 692 room=.
+-> s
+T1373 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 24 $ 692 room=.
+-> n
+T1374 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 23 $ 692 room=.
+-> n
+T1375 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 22 $ 692 room=.
+-> w
+T1376 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 21 $ 692 room=.
+-> w
+T1377 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 20 $ 692 room=.
+-> w
+T1378 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu 19 $ 692 room=U
+-> e
+T1379 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu 18 $ 692 room=.
+-> e
+T1380 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu 17 $ 692 room=.
+-> e
+T1381 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 16 $ 692 room=.
+-> s
+T1382 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 15 $ 692 room=.
+-> e
+T1383 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu 14 $ 692 room=.
+-> w
+T1384 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 13 $ 692 room=.
+-> s
+T1385 mode=game_loop           Oin the Bold(dwa) F3@( 4, 3) HP 94/94 MP 0/0 Hu 12 $ 692 room=.
+-> n
+T1386 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu 11 $ 692 room=.
+-> n
+T1387 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu 10 $ 692 room=.
+-> w
+T1388 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu  9 $ 692 room=.
+-> w
+T1389 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu  8 $ 692 room=.
+-> w
+T1390 mode=stairs_up_mode      Oin the Bold(dwa) F3@( 1, 1) HP 94/94 MP 0/0 Hu  7 $ 692 room=U
+-> e
+T1391 mode=game_loop           Oin the Bold(dwa) F3@( 2, 1) HP 94/94 MP 0/0 Hu  6 $ 692 room=.
+-> e
+T1392 mode=game_loop           Oin the Bold(dwa) F3@( 3, 1) HP 94/94 MP 0/0 Hu  5 $ 692 room=.
+-> e
+T1393 mode=game_loop           Oin the Bold(dwa) F3@( 4, 1) HP 94/94 MP 0/0 Hu  4 $ 692 room=.
+-> s
+T1394 mode=game_loop           Oin the Bold(dwa) F3@( 4, 2) HP 94/94 MP 0/0 Hu  3 $ 692 room=.
+-> e
+T1395 mode=game_loop           Oin the Bold(dwa) F3@( 5, 2) HP 94/94 MP 0/0 Hu  2 $ 692 room=.
+-> n
+T1396 mode=warp_mode           Oin the Bold(dwa) F3@( 5, 1) HP 94/94 MP 0/0 Hu  1 $ 692 room=W
+-> y
+T1397 mode=chest_mode          Oin the Bold(dwa) F3@(16,14) HP 94/94 MP 0/0 Hu  1 $ 692 room=C
+-> o
+T1398 mode=game_loop           Oin the Bold(dwa) F3@(16,14) HP 94/94 MP 0/0 Hu  1 $ 692 room=.
+-> l
+T1399 mode=game_loop           Oin the Bold(dwa) F3@(16,14) HP 94/94 MP 0/0 Hu  1 $ 692 room=.
+-> e
+T1400 mode=chest_mode          Oin the Bold(dwa) F3@(17,14) HP 92/94 MP 0/0 Hu  0 $ 692 room=C
+-> o
+T1401 mode=game_loop           Oin the Bold(dwa) F3@(16,14) HP 90/94 MP 0/0 Hu  0 $ 692 room=.
+-> n
+T1402 mode=dungeon_mode        Oin the Bold(dwa) F3@(16,13) HP 88/94 MP 0/0 Hu  0 $ 692 room=N
+-> u
+T1403 mode=game_loop           Oin the Bold(dwa) F3@(16,13) HP 88/94 MP 0/0 Hu  0 $ 692 room=N
+-> l
+T1404 mode=game_loop           Oin the Bold(dwa) F3@(16,13) HP 88/94 MP 0/0 Hu  0 $ 692 room=N
+-> e
+T1405 mode=game_loop           Oin the Bold(dwa) F3@(17,13) HP 86/94 MP 0/0 Hu  0 $ 692 room=.
+-> e
+T1406 mode=game_loop           Oin the Bold(dwa) F3@(18,13) HP 84/94 MP 0/0 Hu  0 $ 692 room=.
+-> e
+T1407 mode=altar_mode          Oin the Bold(dwa) F3@(19,13) HP 82/94 MP 0/0 Hu  0 $ 692 room=A
+-> pray
+T1408 mode=game_loop           Oin the Bold(dwa) F3@(19,13) HP 82/94 MP 0/0 Hu  0 $ 692 room=.
+-> l
+T1409 mode=game_loop           Oin the Bold(dwa) F3@(19,13) HP 82/94 MP 0/0 Hu  0 $ 692 room=.
+-> n
+T1410 mode=stairs_down_mode    Oin the Bold(dwa) F3@(19,12) HP 80/94 MP 0/0 Hu  0 $ 692 room=D
+-> d
+T1411 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 80/94 MP 0/0 Hu  0 $ 692 room=U
+-> w
+T1412 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 80/94 MP 0/0 Hu  0 $ 692 room=U
+-> n
+T1413 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 80/94 MP 0/0 Hu  0 $ 692 room=U
+-> w
+T1414 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 80/94 MP 0/0 Hu  0 $ 692 room=U
+-> w
+T1415 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 80/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1416 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 78/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1417 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 78/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1418 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 78/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1419 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 78/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1420 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 78/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1421 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 76/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1422 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 72/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1423 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 64/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1424 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 62/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1425 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 62/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1426 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 60/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1427 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 60/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1428 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 60/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1429 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 58/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1430 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 56/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1431 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 56/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1432 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 54/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1433 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 52/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1434 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 52/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1435 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 50/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1436 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 50/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1437 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 50/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1438 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 48/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1439 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 46/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1440 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 46/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1441 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 44/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1442 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 44/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1443 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 44/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1444 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 42/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1445 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 40/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1446 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 40/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1447 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 38/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1448 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 36/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1449 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 36/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1450 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 34/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1451 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 34/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1452 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 34/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1453 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 32/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1454 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 22/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1455 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 20/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1456 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 20/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1457 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 20/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1458 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 18/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1459 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 18/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1460 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 18/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1461 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 16/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1462 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 16/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1463 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 16/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1464 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 14/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1465 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 14/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1466 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 14/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1467 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 12/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1468 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 10/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1469 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 10/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1470 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 8/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1471 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 6/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1472 mode=flee_direction_mode Oin the Bold(dwa) F4@( 2, 1) HP 4/94 MP 0/0 Hu  0 $ 692 room=M
+-> w
+T1473 mode=stairs_up_mode      Oin the Bold(dwa) F4@( 1, 1) HP 4/94 MP 0/0 Hu  0 $ 692 room=U
+-> e
+T1474 mode=combat_mode         Oin the Bold(dwa) F4@( 2, 1) HP 2/94 MP 0/0 Hu  0 $ 692 room=M vs Wight(L3 HP41/41)
+-> f
+T1475 mode=death_screen        Oin the Bold(dwa) F4@( 2, 1) HP 0/94 MP 0/0 Hu  0 $ 692 room=M
+
+=== run finished: turns=1475 floor=4 hp=0/94 gold=692 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/05678_dwarf.html

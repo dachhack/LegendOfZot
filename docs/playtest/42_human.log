@@ -1,0 +1,853 @@
+T   0 mode=game_loop           Theoden Greycloak(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Theoden Greycloak(hum) F1@( 1, 1) HP 30/30 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 12 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=.
+-> l
+T   3 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   4 mode=combat_mode         Theoden Greycloak(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 290 room=M vs Zombie(L0 HP35/35)
+  A Zombie (Level 0) appears! A shambling corpse reaches for you with rotting hands. If it's looking for brains, it's come to the wrong place.
+  The Zombie strikes first!
+-> a
+T   5 mode=combat_mode         Theoden Greycloak(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 290 room=M vs Zombie(L0 HP35/35)
+  Zombie missed Theoden Greycloak!
+  You missed the evil Zombie!
+-> a
+T   6 mode=combat_mode         Theoden Greycloak(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 290 room=M vs Zombie(L0 HP14/35)
+  Zombie missed Theoden Greycloak!
+  You hit the evil Zombie!
+  Zombie took 21 damage.
+-> a
+T   7 mode=combat_victory      Theoden Greycloak(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 442 room=.
+   ACHIEVEMENT UNLOCKED: Untouchable - Kill a monster without taking damage
+  Reward: 100 gold!
+-> back
+T   8 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 442 room=.
+-> l
+T   9 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 2) HP 30/30 MP 0/0 Hu 98 $ 442 room=.
+-> s
+T  10 mode=combat_mode         Theoden Greycloak(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 442 room=M vs Kobold(L0 HP8/8)
+-> a
+T  11 mode=combat_mode         Theoden Greycloak(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 442 room=M vs Kobold(L0 HP8/8)
+-> a
+T  12 mode=combat_mode         Theoden Greycloak(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 442 room=M vs Kobold(L0 HP8/8)
+-> a
+T  13 mode=combat_victory      Theoden Greycloak(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 449 room=.
+-> back
+T  14 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 449 room=.
+-> l
+T  15 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 449 room=.
+-> s
+T  16 mode=combat_mode         Theoden Greycloak(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 449 room=M vs Kobold(L0 HP8/8)
+-> a
+T  17 mode=combat_victory      Theoden Greycloak(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 455 room=.
+-> back
+T  18 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 455 room=.
+-> l
+T  19 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 4) HP 30/30 MP 0/0 Hu 96 $ 455 room=.
+-> s
+T  20 mode=combat_mode         Theoden Greycloak(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 455 room=M vs Bat(L0 HP12/12)
+-> a
+T  21 mode=combat_victory      Theoden Greycloak(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 460 room=.
+-> back
+T  22 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 460 room=.
+-> l
+T  23 mode=game_loop           Theoden Greycloak(hum) F1@( 2, 5) HP 30/30 MP 0/0 Hu 95 $ 460 room=.
+-> e
+T  24 mode=game_loop           Theoden Greycloak(hum) F1@( 3, 5) HP 30/30 MP 0/0 Hu 94 $ 460 room=.
+-> l
+T  25 mode=game_loop           Theoden Greycloak(hum) F1@( 3, 5) HP 30/30 MP 0/0 Hu 94 $ 460 room=.
+-> e
+T  26 mode=stairs_down_mode    Theoden Greycloak(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 93 $ 460 room=D
+-> e
+T  27 mode=library_mode        Theoden Greycloak(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 92 $ 460 room=L
+-> r
+T  28 mode=library_read_decision_mode Theoden Greycloak(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 92 $ 460 room=L
+-> y
+T  29 mode=game_loop           Theoden Greycloak(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 92 $ 510 room=.
+-> l
+T  30 mode=game_loop           Theoden Greycloak(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 92 $ 510 room=.
+-> e
+T  31 mode=garden_mode         Theoden Greycloak(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 91 $ 510 room=G
+-> h
+T  32 mode=game_loop           Theoden Greycloak(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 91 $ 510 room=.
+-> e
+T  33 mode=game_loop           Theoden Greycloak(hum) F1@( 7, 5) HP 30/30 MP 0/0 Hu 90 $ 510 room=.
+-> e
+T  34 mode=game_loop           Theoden Greycloak(hum) F1@( 8, 5) HP 30/30 MP 0/0 Hu 89 $ 510 room=.
+-> w
+T  35 mode=game_loop           Theoden Greycloak(hum) F1@( 7, 5) HP 30/30 MP 0/0 Hu 88 $ 510 room=.
+-> e
+T  36 mode=game_loop           Theoden Greycloak(hum) F1@( 8, 5) HP 30/30 MP 0/0 Hu 87 $ 510 room=.
+-> i
+T  37 mode=inventory           Theoden Greycloak(hum) F1@( 8, 5) HP 30/30 MP 0/0 Hu 87 $ 510 room=.
+-> eat4
+T  38 mode=inventory           Theoden Greycloak(hum) F1@( 8, 5) HP 30/30 MP 0/0 Hu 92 $ 510 room=.
+-> x
+T  39 mode=game_loop           Theoden Greycloak(hum) F1@( 8, 5) HP 30/30 MP 0/0 Hu 92 $ 510 room=.
+-> w
+T  40 mode=game_loop           Theoden Greycloak(hum) F1@( 7, 5) HP 30/30 MP 0/0 Hu 91 $ 510 room=.
+-> i
+T  41 mode=inventory           Theoden Greycloak(hum) F1@( 7, 5) HP 30/30 MP 0/0 Hu 91 $ 510 room=.
+-> eat4
+T  42 mode=inventory           Theoden Greycloak(hum) F1@( 7, 5) HP 30/30 MP 0/0 Hu 96 $ 510 room=.
+-> x
+T  43 mode=game_loop           Theoden Greycloak(hum) F1@( 7, 5) HP 30/30 MP 0/0 Hu 96 $ 510 room=.
+-> w
+T  44 mode=game_loop           Theoden Greycloak(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 95 $ 510 room=.
+-> i
+T  45 mode=inventory           Theoden Greycloak(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu 95 $ 510 room=.
+-> eat3
+T  46 mode=inventory           Theoden Greycloak(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu100 $ 510 room=.
+-> x
+T  47 mode=game_loop           Theoden Greycloak(hum) F1@( 6, 5) HP 30/30 MP 0/0 Hu100 $ 510 room=.
+-> w
+T  48 mode=game_loop           Theoden Greycloak(hum) F1@( 5, 5) HP 30/30 MP 0/0 Hu 99 $ 510 room=.
+-> w
+T  49 mode=stairs_down_mode    Theoden Greycloak(hum) F1@( 4, 5) HP 30/30 MP 0/0 Hu 98 $ 510 room=D
+-> d
+T  50 mode=stairs_up_mode      Theoden Greycloak(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 98 $ 510 room=U
+-> n
+T  51 mode=stairs_up_mode      Theoden Greycloak(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 98 $ 510 room=U
+-> n
+T  52 mode=stairs_up_mode      Theoden Greycloak(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 98 $ 510 room=U
+-> s
+T  53 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 97 $ 510 room=.
+-> l
+T  54 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 97 $ 510 room=.
+-> e
+T  55 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 510 room=.
+-> l
+T  56 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 510 room=.
+-> n
+T  57 mode=shrine_mode         Theoden Greycloak(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 95 $ 510 room=F
+-> p
+T  58 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 95 $ 510 room=.
+-> s
+T  59 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 94 $ 510 room=.
+-> s
+T  60 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 93 $ 510 room=.
+-> l
+T  61 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 93 $ 510 room=.
+-> e
+T  62 mode=combat_mode         Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 92 $ 510 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T  63 mode=combat_mode         Theoden Greycloak(hum) F2@( 3, 3) HP 29/30 MP 0/0 Hu 92 $ 510 room=M vs Gray Ooze(L1 HP35/35)
+-> a
+T  64 mode=combat_mode         Theoden Greycloak(hum) F2@( 3, 3) HP 28/30 MP 0/0 Hu 92 $ 510 room=M vs Gray Ooze(L1 HP14/35)
+-> a
+T  65 mode=combat_victory      Theoden Greycloak(hum) F2@( 3, 3) HP 27/30 MP 0/0 Hu 92 $ 516 room=.
+-> back
+T  66 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 3) HP 27/30 MP 0/0 Hu 92 $ 516 room=.
+-> w
+T  67 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 27/30 MP 0/0 Hu 91 $ 516 room=.
+-> n
+T  68 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 28/30 MP 0/0 Hu 90 $ 516 room=.
+-> w
+T  69 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 2) HP 28/30 MP 0/0 Hu 89 $ 516 room=.
+-> n
+T  70 mode=stairs_up_mode      Theoden Greycloak(hum) F2@( 1, 1) HP 29/30 MP 0/0 Hu 88 $ 516 room=U
+-> e
+T  71 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 1) HP 29/30 MP 0/0 Hu 87 $ 516 room=.
+-> s
+T  72 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 86 $ 516 room=.
+-> s
+T  73 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 85 $ 516 room=.
+-> e
+T  74 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 84 $ 516 room=.
+-> w
+T  75 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 83 $ 516 room=.
+-> n
+T  76 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 82 $ 516 room=.
+-> w
+T  77 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 81 $ 516 room=.
+-> n
+T  78 mode=stairs_up_mode      Theoden Greycloak(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 80 $ 516 room=U
+-> e
+T  79 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 79 $ 516 room=.
+-> s
+T  80 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 78 $ 516 room=.
+-> i
+T  81 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 78 $ 516 room=.
+-> eat1
+T  82 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> u3
+T  83 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> u1
+T  84 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> u2
+T  85 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> u4
+T  86 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> x
+T  87 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> s
+T  88 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 99 $ 516 room=.
+-> e
+T  89 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 98 $ 516 room=.
+-> w
+T  90 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 516 room=.
+-> i
+T  91 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 516 room=.
+-> u3
+T  92 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 516 room=.
+-> u1
+T  93 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 516 room=.
+-> u2
+T  94 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 516 room=.
+-> u4
+T  95 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 516 room=.
+-> x
+T  96 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 97 $ 516 room=.
+-> n
+T  97 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 516 room=.
+-> i
+T  98 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 516 room=.
+-> u3
+T  99 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 516 room=.
+-> u1
+T 100 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 516 room=.
+-> u2
+T 101 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 516 room=.
+-> u4
+T 102 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 516 room=.
+-> x
+T 103 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 96 $ 516 room=.
+-> n
+T 104 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 95 $ 516 room=.
+-> w
+T 105 mode=stairs_up_mode      Theoden Greycloak(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 94 $ 516 room=U
+-> s
+T 106 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 93 $ 516 room=.
+-> n
+T 107 mode=stairs_up_mode      Theoden Greycloak(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 92 $ 516 room=U
+-> s
+T 108 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 91 $ 516 room=.
+-> e
+T 109 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 90 $ 516 room=.
+-> i
+T 110 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 90 $ 516 room=.
+-> u3
+T 111 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 90 $ 516 room=.
+-> u1
+T 112 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 90 $ 516 room=.
+-> u2
+T 113 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 90 $ 516 room=.
+-> u4
+T 114 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 90 $ 516 room=.
+-> x
+T 115 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 90 $ 516 room=.
+-> s
+T 116 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> i
+T 117 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> u3
+T 118 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> u1
+T 119 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> u2
+T 120 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> u4
+T 121 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> x
+T 122 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 89 $ 516 room=.
+-> e
+T 123 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 88 $ 516 room=.
+-> w
+T 124 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 87 $ 516 room=.
+-> i
+T 125 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 87 $ 516 room=.
+-> u3
+T 126 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 87 $ 516 room=.
+-> u1
+T 127 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 87 $ 516 room=.
+-> u2
+T 128 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 87 $ 516 room=.
+-> u4
+T 129 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 87 $ 516 room=.
+-> x
+T 130 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 87 $ 516 room=.
+-> n
+T 131 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 86 $ 516 room=.
+-> i
+T 132 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 86 $ 516 room=.
+-> u3
+T 133 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 86 $ 516 room=.
+-> u1
+T 134 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 86 $ 516 room=.
+-> u2
+T 135 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 86 $ 516 room=.
+-> u4
+T 136 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 86 $ 516 room=.
+-> x
+T 137 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 86 $ 516 room=.
+-> w
+T 138 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 85 $ 516 room=.
+-> i
+T 139 mode=inventory           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 85 $ 516 room=.
+-> u3
+T 140 mode=inventory           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 85 $ 516 room=.
+-> u1
+T 141 mode=inventory           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 85 $ 516 room=.
+-> u2
+T 142 mode=inventory           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 85 $ 516 room=.
+-> u4
+T 143 mode=inventory           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 85 $ 516 room=.
+-> x
+T 144 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 85 $ 516 room=.
+-> n
+T 145 mode=stairs_up_mode      Theoden Greycloak(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 84 $ 516 room=U
+-> e
+T 146 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 83 $ 516 room=.
+-> s
+T 147 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 82 $ 516 room=.
+-> i
+T 148 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 82 $ 516 room=.
+-> u3
+T 149 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 82 $ 516 room=.
+-> u1
+T 150 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 82 $ 516 room=.
+-> u2
+T 151 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 82 $ 516 room=.
+-> u4
+T 152 mode=inventory           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 82 $ 516 room=.
+-> x
+T 153 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 82 $ 516 room=.
+-> s
+T 154 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 81 $ 516 room=.
+-> i
+T 155 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 81 $ 516 room=.
+-> u3
+T 156 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 81 $ 516 room=.
+-> u1
+T 157 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 81 $ 516 room=.
+-> u2
+T 158 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 81 $ 516 room=.
+-> u4
+T 159 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 81 $ 516 room=.
+-> x
+T 160 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 81 $ 516 room=.
+-> e
+T 161 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 80 $ 516 room=.
+-> w
+T 162 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 79 $ 516 room=.
+-> i
+T 163 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 79 $ 516 room=.
+-> eat1
+T 164 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> u3
+T 165 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> u1
+T 166 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> u2
+T 167 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> u4
+T 168 mode=inventory           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> x
+T 169 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu100 $ 516 room=.
+-> e
+T 170 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 99 $ 516 room=.
+-> i
+T 171 mode=inventory           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 99 $ 516 room=.
+-> u3
+T 172 mode=inventory           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 99 $ 516 room=.
+-> u1
+T 173 mode=inventory           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 99 $ 516 room=.
+-> u2
+T 174 mode=inventory           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 99 $ 516 room=.
+-> u4
+T 175 mode=inventory           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 99 $ 516 room=.
+-> x
+T 176 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 99 $ 516 room=.
+-> e
+T 177 mode=combat_mode         Theoden Greycloak(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 98 $ 516 room=M vs UNDEAD ZOMBIE(L1 HP43/43)
+-> a
+T 178 mode=combat_mode         Theoden Greycloak(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 98 $ 516 room=M vs UNDEAD ZOMBIE(L1 HP22/43)
+-> a
+T 179 mode=combat_mode         Theoden Greycloak(hum) F2@( 4, 3) HP 29/30 MP 0/0 Hu 98 $ 516 room=M vs UNDEAD ZOMBIE(L1 HP1/43)
+-> a
+T 180 mode=combat_mode         Theoden Greycloak(hum) F2@( 4, 3) HP 28/30 MP 0/0 Hu 98 $ 516 room=M vs UNDEAD ZOMBIE(L1 HP1/43)
+-> a
+T 181 mode=combat_mode         Theoden Greycloak(hum) F2@( 4, 3) HP 27/30 MP 0/0 Hu 98 $ 516 room=M vs UNDEAD ZOMBIE(L1 HP1/43)
+-> a
+T 182 mode=combat_mode         Theoden Greycloak(hum) F2@( 4, 3) HP 26/30 MP 0/0 Hu 98 $ 516 room=M vs UNDEAD ZOMBIE(L1 HP1/43)
+-> a
+T 183 mode=combat_victory      Theoden Greycloak(hum) F2@( 4, 3) HP 26/30 MP 0/0 Hu 98 $ 518 room=.
+-> back
+T 184 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 3) HP 26/30 MP 0/0 Hu 98 $ 518 room=.
+-> l
+T 185 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 3) HP 26/30 MP 0/0 Hu 98 $ 518 room=.
+-> n
+T 186 mode=tomb_mode           Theoden Greycloak(hum) F2@( 4, 2) HP 26/30 MP 0/0 Hu 97 $ 518 room=T
+-> p
+T 187 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 2) HP 30/30 MP 0/0 Hu 97 $ 518 room=T
+-> l
+T 188 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 2) HP 30/30 MP 0/0 Hu 97 $ 518 room=T
+-> n
+T 189 mode=chest_mode          Theoden Greycloak(hum) F2@( 4, 1) HP 30/30 MP 0/0 Hu 96 $ 518 room=C
+-> o
+T 190 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 1) HP 16/30 MP 0/0 Hu 96 $ 518 room=.
+-> l
+T 191 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 1) HP 16/30 MP 0/0 Hu 96 $ 518 room=.
+-> s
+T 192 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 2) HP 16/30 MP 0/0 Hu 95 $ 518 room=T
+-> i
+T 193 mode=inventory           Theoden Greycloak(hum) F2@( 4, 2) HP 16/30 MP 0/0 Hu 95 $ 518 room=T
+-> u3
+T 194 mode=inventory           Theoden Greycloak(hum) F2@( 4, 2) HP 30/30 MP 0/0 Hu 95 $ 518 room=T
+-> x
+T 195 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 2) HP 30/30 MP 0/0 Hu 95 $ 518 room=T
+-> s
+T 196 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 3) HP 30/30 MP 0/0 Hu 94 $ 518 room=.
+-> e
+T 197 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 3) HP 30/30 MP 0/0 Hu 93 $ 518 room=.
+-> l
+T 198 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 3) HP 30/30 MP 0/0 Hu 93 $ 518 room=.
+-> e
+T 199 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 3) HP 30/30 MP 0/0 Hu 92 $ 518 room=.
+-> l
+T 200 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 3) HP 30/30 MP 0/0 Hu 92 $ 518 room=.
+-> n
+T 201 mode=library_mode        Theoden Greycloak(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 91 $ 518 room=L
+-> r
+T 202 mode=library_read_decision_mode Theoden Greycloak(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 91 $ 518 room=L
+-> y
+T 203 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 2) HP 30/30 MP 0/0 Hu 91 $ 518 room=.
+-> s
+T 204 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 3) HP 30/30 MP 0/0 Hu 90 $ 518 room=.
+-> s
+T 205 mode=library_mode        Theoden Greycloak(hum) F2@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 518 room=L
+-> r
+T 206 mode=library_read_decision_mode Theoden Greycloak(hum) F2@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 518 room=L
+-> y
+T 207 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 618 room=.
+-> l
+T 208 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 4) HP 30/30 MP 0/0 Hu 89 $ 618 room=.
+-> s
+T 209 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 4) HP 30/30 MP 0/0 Hu 88 $ 618 room=.
+-> l
+T 210 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 4) HP 30/30 MP 0/0 Hu 88 $ 618 room=.
+-> s
+T 211 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 5) HP 30/30 MP 0/0 Hu 87 $ 618 room=.
+-> w
+T 212 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 4) HP 30/30 MP 0/0 Hu 86 $ 618 room=.
+-> n
+T 213 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 4) HP 30/30 MP 0/0 Hu 85 $ 618 room=.
+-> s
+T 214 mode=garden_mode         Theoden Greycloak(hum) F2@( 6, 5) HP 30/30 MP 0/0 Hu 84 $ 618 room=G
+-> h
+T 215 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 5) HP 30/30 MP 0/0 Hu 84 $ 618 room=.
+-> s
+T 216 mode=chest_mode          Theoden Greycloak(hum) F2@( 6, 6) HP 30/30 MP 0/0 Hu 83 $ 618 room=C
+-> o
+T 217 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 6) HP 30/30 MP 0/0 Hu 83 $ 618 room=.
+-> w
+T 218 mode=combat_mode         Theoden Greycloak(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu 82 $ 618 room=M vs Stirge(L1 HP6/6)
+-> a
+T 219 mode=combat_victory      Theoden Greycloak(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu 82 $ 620 room=.
+-> back
+T 220 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu 82 $ 620 room=.
+-> s
+T 221 mode=combat_mode         Theoden Greycloak(hum) F2@( 5, 7) HP 30/30 MP 0/0 Hu 81 $ 620 room=M vs Bugbear(L1 HP35/35)
+-> a
+T 222 mode=combat_mode         Theoden Greycloak(hum) F2@( 5, 7) HP 30/30 MP 0/0 Hu 81 $ 620 room=M vs Bugbear(L1 HP18/35)
+-> f
+T 223 mode=flee_direction_mode Theoden Greycloak(hum) F2@( 5, 7) HP 30/30 MP 0/0 Hu 81 $ 620 room=M
+-> s
+T 224 mode=dungeon_mode        Theoden Greycloak(hum) F2@( 5, 8) HP 30/30 MP 0/0 Hu 81 $ 620 room=N
+-> u
+T 225 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 8) HP 30/30 MP 0/0 Hu 81 $ 620 room=N
+-> e
+T 226 mode=combat_mode         Theoden Greycloak(hum) F2@( 6, 8) HP 30/30 MP 0/0 Hu 80 $ 620 room=M vs Bugbear(L1 HP35/35)
+-> a
+T 227 mode=combat_mode         Theoden Greycloak(hum) F2@( 6, 8) HP 29/30 MP 0/0 Hu 80 $ 620 room=M vs Bugbear(L1 HP18/35)
+-> a
+T 228 mode=combat_mode         Theoden Greycloak(hum) F2@( 6, 8) HP 29/30 MP 0/0 Hu 80 $ 620 room=M vs Bugbear(L1 HP18/35)
+-> a
+T 229 mode=combat_mode         Theoden Greycloak(hum) F2@( 6, 8) HP 28/30 MP 0/0 Hu 80 $ 620 room=M vs Bugbear(L1 HP1/35)
+-> a
+T 230 mode=combat_victory      Theoden Greycloak(hum) F2@( 6, 8) HP 27/40 MP 0/0 Hu 80 $ 632 room=.
+-> back
+T 231 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 8) HP 27/40 MP 0/0 Hu 80 $ 632 room=.
+-> e
+T 232 mode=chest_mode          Theoden Greycloak(hum) F2@( 7, 8) HP 27/40 MP 0/0 Hu 79 $ 632 room=C
+-> n
+T 233 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 7) HP 27/40 MP 0/0 Hu 78 $ 632 room=.
+-> l
+T 234 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 7) HP 27/40 MP 0/0 Hu 78 $ 632 room=.
+-> n
+T 235 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 6) HP 27/40 MP 0/0 Hu 77 $ 632 room=.
+-> n
+T 236 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 5) HP 28/40 MP 0/0 Hu 76 $ 632 room=.
+-> n
+T 237 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 4) HP 28/40 MP 0/0 Hu 75 $ 632 room=.
+-> n
+T 238 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 3) HP 28/40 MP 0/0 Hu 74 $ 632 room=.
+-> w
+T 239 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 3) HP 28/40 MP 0/0 Hu 73 $ 632 room=.
+-> s
+T 240 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 4) HP 29/40 MP 0/0 Hu 72 $ 632 room=.
+-> i
+T 241 mode=inventory           Theoden Greycloak(hum) F2@( 6, 4) HP 29/40 MP 0/0 Hu 72 $ 632 room=.
+-> u3
+T 242 mode=inventory           Theoden Greycloak(hum) F2@( 6, 4) HP 40/40 MP 0/0 Hu 72 $ 632 room=.
+-> x
+T 243 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 4) HP 40/40 MP 0/0 Hu 72 $ 632 room=.
+-> i
+T 244 mode=inventory           Theoden Greycloak(hum) F2@( 6, 4) HP 40/40 MP 0/0 Hu 72 $ 632 room=.
+-> eat2
+T 245 mode=inventory           Theoden Greycloak(hum) F2@( 6, 4) HP 40/40 MP 0/0 Hu 78 $ 632 room=.
+-> eat1
+T 246 mode=inventory           Theoden Greycloak(hum) F2@( 6, 4) HP 40/40 MP 0/0 Hu100 $ 632 room=.
+-> x
+T 247 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 4) HP 40/40 MP 0/0 Hu100 $ 632 room=.
+-> s
+T 248 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 5) HP 40/40 MP 0/0 Hu 99 $ 632 room=.
+-> s
+T 249 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 6) HP 40/40 MP 0/0 Hu 98 $ 632 room=.
+-> e
+T 250 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 6) HP 40/40 MP 0/0 Hu 97 $ 632 room=.
+-> s
+T 251 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu 96 $ 632 room=.
+-> s
+T 252 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 95 $ 632 room=C
+-> l
+T 253 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 95 $ 632 room=C
+-> s
+T 254 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 9) HP 40/40 MP 0/0 Hu 94 $ 632 room=.
+-> l
+T 255 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 9) HP 40/40 MP 0/0 Hu 94 $ 632 room=.
+-> w
+T 256 mode=oracle_mode         Theoden Greycloak(hum) F2@( 6, 9) HP 40/40 MP 0/0 Hu 93 $ 632 room=O
+-> n
+T 257 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 8) HP 40/40 MP 0/0 Hu 92 $ 632 room=.
+-> s
+T 258 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 9) HP 40/40 MP 0/0 Hu 91 $ 632 room=O
+-> n
+T 259 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 8) HP 40/40 MP 0/0 Hu 90 $ 632 room=.
+-> e
+T 260 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 89 $ 632 room=C
+-> l
+T 261 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 89 $ 632 room=C
+-> n
+T 262 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu 88 $ 632 room=.
+-> n
+T 263 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 6) HP 40/40 MP 0/0 Hu 87 $ 632 room=.
+-> w
+T 264 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 6) HP 40/40 MP 0/0 Hu 86 $ 632 room=.
+-> w
+T 265 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 85 $ 632 room=.
+-> s
+T 266 mode=combat_mode         Theoden Greycloak(hum) F2@( 5, 7) HP 40/40 MP 0/0 Hu 84 $ 632 room=M vs Bugbear(L1 HP18/35)
+-> a
+T 267 mode=combat_mode         Theoden Greycloak(hum) F2@( 5, 7) HP 40/40 MP 0/0 Hu 84 $ 632 room=M vs Bugbear(L1 HP18/35)
+-> a
+T 268 mode=combat_mode         Theoden Greycloak(hum) F2@( 5, 7) HP 39/40 MP 0/0 Hu 84 $ 632 room=M vs Bugbear(L1 HP1/35)
+-> a
+T 269 mode=combat_victory      Theoden Greycloak(hum) F2@( 5, 7) HP 39/40 MP 0/0 Hu 84 $ 634 room=.
+-> back
+T 270 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 7) HP 39/40 MP 0/0 Hu 84 $ 634 room=.
+-> l
+T 271 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 7) HP 39/40 MP 0/0 Hu 84 $ 634 room=.
+-> n
+T 272 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 39/40 MP 0/0 Hu 83 $ 634 room=.
+-> n
+T 273 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 5) HP 39/40 MP 0/0 Hu 82 $ 634 room=.
+-> w
+T 274 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 5) HP 39/40 MP 0/0 Hu 81 $ 634 room=.
+-> l
+T 275 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 5) HP 39/40 MP 0/0 Hu 81 $ 634 room=.
+-> s
+T 276 mode=combat_mode         Theoden Greycloak(hum) F2@( 4, 6) HP 40/40 MP 0/0 Hu 80 $ 634 room=M vs Harpy(L1 HP28/28)
+-> a
+T 277 mode=combat_mode         Theoden Greycloak(hum) F2@( 4, 6) HP 40/40 MP 0/0 Hu 80 $ 634 room=M vs Harpy(L1 HP9/28)
+-> a
+T 278 mode=combat_victory      Theoden Greycloak(hum) F2@( 4, 6) HP 40/40 MP 0/0 Hu 80 $ 750 room=.
+-> back
+T 279 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 6) HP 40/40 MP 0/0 Hu 80 $ 750 room=.
+-> l
+T 280 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 6) HP 40/40 MP 0/0 Hu 80 $ 750 room=.
+-> l
+T 281 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 6) HP 40/40 MP 0/0 Hu 80 $ 750 room=.
+-> w
+T 282 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 6) HP 40/40 MP 0/0 Hu 79 $ 750 room=.
+-> s
+T 283 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu 78 $ 750 room=.
+-> w
+T 284 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 7) HP 40/40 MP 0/0 Hu 77 $ 750 room=.
+-> l
+T 285 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 7) HP 40/40 MP 0/0 Hu 77 $ 750 room=.
+-> w
+T 286 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 7) HP 40/40 MP 0/0 Hu 76 $ 750 room=.
+-> l
+T 287 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 7) HP 40/40 MP 0/0 Hu 76 $ 750 room=.
+-> s
+T 288 mode=dungeon_mode        Theoden Greycloak(hum) F2@( 1, 8) HP 40/40 MP 0/0 Hu 75 $ 750 room=N
+-> u
+T 289 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 8) HP 40/40 MP 0/0 Hu 75 $ 750 room=N
+-> s
+T 290 mode=chest_mode          Theoden Greycloak(hum) F2@( 1, 9) HP 40/40 MP 0/0 Hu 74 $ 750 room=C
+-> o
+T 291 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 9) HP 40/40 MP 0/0 Hu 74 $ 750 room=.
+-> n
+T 292 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 8) HP 40/40 MP 0/0 Hu 73 $ 750 room=N
+-> e
+T 293 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 8) HP 40/40 MP 0/0 Hu 72 $ 750 room=.
+-> n
+T 294 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 7) HP 40/40 MP 0/0 Hu 71 $ 750 room=.
+-> e
+T 295 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu 70 $ 750 room=.
+-> i
+T 296 mode=inventory           Theoden Greycloak(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu 70 $ 750 room=.
+-> eat2
+T 297 mode=inventory           Theoden Greycloak(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu 76 $ 750 room=.
+-> eat1
+T 298 mode=inventory           Theoden Greycloak(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu100 $ 750 room=.
+-> x
+T 299 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu100 $ 750 room=.
+-> n
+T 300 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 6) HP 40/40 MP 0/0 Hu 99 $ 750 room=.
+-> l
+T 301 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 6) HP 40/40 MP 0/0 Hu 99 $ 750 room=.
+-> e
+T 302 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 6) HP 40/40 MP 0/0 Hu 98 $ 750 room=.
+-> e
+T 303 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 97 $ 750 room=.
+-> s
+T 304 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 7) HP 40/40 MP 0/0 Hu 96 $ 750 room=.
+-> n
+T 305 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 95 $ 750 room=.
+-> n
+T 306 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 5) HP 40/40 MP 0/0 Hu 94 $ 750 room=.
+-> w
+T 307 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 5) HP 40/40 MP 0/0 Hu 93 $ 750 room=.
+-> s
+T 308 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 6) HP 40/40 MP 0/0 Hu 92 $ 750 room=.
+-> w
+T 309 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 6) HP 40/40 MP 0/0 Hu 91 $ 750 room=.
+-> s
+T 310 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu 90 $ 750 room=.
+-> l
+T 311 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu 90 $ 750 room=.
+-> w
+T 312 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 7) HP 40/40 MP 0/0 Hu 89 $ 750 room=.
+-> n
+T 313 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 6) HP 40/40 MP 0/0 Hu 88 $ 750 room=.
+-> s
+T 314 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 7) HP 40/40 MP 0/0 Hu 87 $ 750 room=.
+-> s
+T 315 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 8) HP 40/40 MP 0/0 Hu 86 $ 750 room=.
+-> w
+T 316 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 8) HP 40/40 MP 0/0 Hu 85 $ 750 room=N
+-> n
+T 317 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 7) HP 40/40 MP 0/0 Hu 84 $ 750 room=.
+-> s
+T 318 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 8) HP 40/40 MP 0/0 Hu 83 $ 750 room=N
+-> s
+T 319 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 9) HP 40/40 MP 0/0 Hu 82 $ 750 room=.
+-> n
+T 320 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 8) HP 40/40 MP 0/0 Hu 81 $ 750 room=N
+-> l
+T 321 mode=game_loop           Theoden Greycloak(hum) F2@( 1, 8) HP 40/40 MP 0/0 Hu 81 $ 750 room=N
+-> e
+T 322 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 8) HP 40/40 MP 0/0 Hu 80 $ 750 room=.
+-> n
+T 323 mode=game_loop           Theoden Greycloak(hum) F2@( 2, 7) HP 40/40 MP 0/0 Hu 79 $ 750 room=.
+-> e
+T 324 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 7) HP 40/40 MP 0/0 Hu 78 $ 750 room=.
+-> n
+T 325 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 6) HP 40/40 MP 0/0 Hu 77 $ 750 room=.
+-> n
+T 326 mode=game_loop           Theoden Greycloak(hum) F2@( 3, 5) HP 40/40 MP 0/0 Hu 76 $ 750 room=.
+-> e
+T 327 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 5) HP 40/40 MP 0/0 Hu 75 $ 750 room=.
+-> s
+T 328 mode=game_loop           Theoden Greycloak(hum) F2@( 4, 6) HP 40/40 MP 0/0 Hu 74 $ 750 room=.
+-> e
+T 329 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 73 $ 750 room=.
+-> i
+T 330 mode=inventory           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 73 $ 750 room=.
+-> eat1
+T 331 mode=inventory           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu100 $ 750 room=.
+-> u3
+T 332 mode=inventory           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu100 $ 750 room=.
+-> u1
+T 333 mode=inventory           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu100 $ 750 room=.
+-> x
+T 334 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu100 $ 750 room=.
+-> s
+T 335 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 7) HP 40/40 MP 0/0 Hu 99 $ 750 room=.
+-> n
+T 336 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 98 $ 750 room=.
+-> i
+T 337 mode=inventory           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 98 $ 750 room=.
+-> u3
+T 338 mode=inventory           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 98 $ 750 room=.
+-> u1
+T 339 mode=inventory           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 98 $ 750 room=.
+-> x
+T 340 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 98 $ 750 room=.
+-> l
+T 341 mode=game_loop           Theoden Greycloak(hum) F2@( 5, 6) HP 40/40 MP 0/0 Hu 98 $ 750 room=.
+-> e
+T 342 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 6) HP 40/40 MP 0/0 Hu 97 $ 750 room=.
+-> e
+T 343 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 6) HP 40/40 MP 0/0 Hu 96 $ 750 room=.
+-> s
+T 344 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 7) HP 40/40 MP 0/0 Hu 95 $ 750 room=.
+-> s
+T 345 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 8) HP 40/40 MP 0/0 Hu 94 $ 750 room=C
+-> w
+T 346 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 8) HP 40/40 MP 0/0 Hu 93 $ 750 room=.
+-> s
+T 347 mode=game_loop           Theoden Greycloak(hum) F2@( 6, 9) HP 40/40 MP 0/0 Hu 92 $ 750 room=O
+-> e
+T 348 mode=game_loop           Theoden Greycloak(hum) F2@( 7, 9) HP 40/40 MP 0/0 Hu 91 $ 750 room=.
+-> e
+T 349 mode=game_loop           Theoden Greycloak(hum) F2@( 8, 9) HP 40/40 MP 0/0 Hu 90 $ 750 room=.
+-> n
+T 350 mode=game_loop           Theoden Greycloak(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu 89 $ 750 room=.
+-> l
+T 351 mode=game_loop           Theoden Greycloak(hum) F2@( 8, 8) HP 40/40 MP 0/0 Hu 89 $ 750 room=.
+-> e
+T 352 mode=game_loop           Theoden Greycloak(hum) F2@( 9, 8) HP 40/40 MP 0/0 Hu 88 $ 750 room=.
+-> e
+T 353 mode=game_loop           Theoden Greycloak(hum) F2@(10, 8) HP 40/40 MP 0/0 Hu 87 $ 750 room=.
+-> l
+T 354 mode=game_loop           Theoden Greycloak(hum) F2@(10, 8) HP 40/40 MP 0/0 Hu 87 $ 750 room=.
+-> e
+T 355 mode=game_loop           Theoden Greycloak(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 86 $ 750 room=.
+-> l
+T 356 mode=game_loop           Theoden Greycloak(hum) F2@(11, 8) HP 40/40 MP 0/0 Hu 86 $ 750 room=.
+-> e
+T 357 mode=game_loop           Theoden Greycloak(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 85 $ 750 room=.
+-> l
+T 358 mode=game_loop           Theoden Greycloak(hum) F2@(12, 8) HP 40/40 MP 0/0 Hu 85 $ 750 room=.
+-> n
+T 359 mode=game_loop           Theoden Greycloak(hum) F2@(12, 7) HP 40/40 MP 0/0 Hu 84 $ 750 room=.
+-> l
+T 360 mode=game_loop           Theoden Greycloak(hum) F2@(12, 7) HP 40/40 MP 0/0 Hu 84 $ 750 room=.
+-> l
+T 361 mode=game_loop           Theoden Greycloak(hum) F2@(12, 7) HP 40/40 MP 0/0 Hu 84 $ 750 room=.
+-> e
+T 362 mode=game_loop           Theoden Greycloak(hum) F2@(13, 7) HP 40/40 MP 0/0 Hu 83 $ 750 room=.
+-> l
+T 363 mode=game_loop           Theoden Greycloak(hum) F2@(13, 7) HP 40/40 MP 0/0 Hu 83 $ 750 room=.
+-> n
+T 364 mode=game_loop           Theoden Greycloak(hum) F2@(13, 6) HP 40/40 MP 0/0 Hu 82 $ 750 room=.
+-> w
+T 365 mode=game_loop           Theoden Greycloak(hum) F2@(12, 6) HP 40/40 MP 0/0 Hu 81 $ 750 room=.
+-> w
+T 366 mode=combat_mode         Theoden Greycloak(hum) F2@(11, 6) HP 40/40 MP 0/0 Hu 80 $ 750 room=M vs Bugbear(L1 HP35/35)
+-> a
+T 367 mode=combat_mode         Theoden Greycloak(hum) F2@(11, 6) HP 40/40 MP 0/0 Hu 80 $ 750 room=M vs Bugbear(L1 HP35/35)
+-> a
+T 368 mode=combat_mode         Theoden Greycloak(hum) F2@(11, 6) HP 39/40 MP 0/0 Hu 80 $ 750 room=M vs Bugbear(L1 HP18/35)
+-> a
+T 369 mode=combat_mode         Theoden Greycloak(hum) F2@(11, 6) HP 39/40 MP 0/0 Hu 80 $ 750 room=M vs Bugbear(L1 HP1/35)
+-> f
+T 370 mode=flee_direction_mode Theoden Greycloak(hum) F2@(11, 6) HP 39/40 MP 0/0 Hu 80 $ 750 room=M
+-> n
+T 371 mode=game_loop           Theoden Greycloak(hum) F2@(11, 5) HP 39/40 MP 0/0 Hu 80 $ 750 room=.
+-> n
+T 372 mode=game_loop           Theoden Greycloak(hum) F2@(11, 4) HP 39/40 MP 0/0 Hu 79 $ 750 room=.
+-> e
+T 373 mode=stairs_down_mode    Theoden Greycloak(hum) F2@(12, 4) HP 39/40 MP 0/0 Hu 78 $ 750 room=D
+-> d
+T 374 mode=stairs_up_mode      Theoden Greycloak(hum) F3@( 1, 1) HP 39/40 MP 0/0 Hu 78 $ 750 room=U
+-> w
+T 375 mode=stairs_up_mode      Theoden Greycloak(hum) F3@( 1, 1) HP 39/40 MP 0/0 Hu 78 $ 750 room=U
+-> n
+T 376 mode=stairs_up_mode      Theoden Greycloak(hum) F3@( 1, 1) HP 39/40 MP 0/0 Hu 78 $ 750 room=U
+-> n
+T 377 mode=stairs_up_mode      Theoden Greycloak(hum) F3@( 1, 1) HP 39/40 MP 0/0 Hu 78 $ 750 room=U
+-> n
+T 378 mode=stairs_up_mode      Theoden Greycloak(hum) F3@( 1, 1) HP 39/40 MP 0/0 Hu 78 $ 750 room=U
+-> s
+T 379 mode=warp_mode           Theoden Greycloak(hum) F3@( 1, 2) HP 39/40 MP 0/0 Hu 77 $ 750 room=W
+-> y
+T 380 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 39/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP50/50)
+-> a
+T 381 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 36/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP50/50)
+-> a
+T 382 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 33/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP34/50)
+-> a
+T 383 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 30/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP34/50)
+-> a
+T 384 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 27/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP34/50)
+-> a
+T 385 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 24/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP34/50)
+-> f
+T 386 mode=flee_direction_mode Theoden Greycloak(hum) F4@(10,12) HP 21/40 MP 0/0 Hu 77 $ 750 room=M
+-> c
+T 387 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 21/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP34/50)
+-> a
+T 388 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 18/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP34/50)
+-> i
+T 389 mode=inventory           Theoden Greycloak(hum) F4@(10,12) HP 18/40 MP 0/0 Hu 77 $ 750 room=M
+-> u1
+T 390 mode=inventory           Theoden Greycloak(hum) F4@(10,12) HP 40/40 MP 0/0 Hu 77 $ 750 room=M
+-> x
+T 391 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 40/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP34/50)
+-> f
+T 392 mode=flee_direction_mode Theoden Greycloak(hum) F4@(10,12) HP 37/40 MP 0/0 Hu 77 $ 750 room=M
+-> c
+T 393 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 37/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP34/50)
+-> a
+T 394 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 37/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP34/50)
+-> a
+T 395 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 34/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP18/50)
+-> a
+T 396 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 31/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP18/50)
+-> a
+T 397 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 31/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP18/50)
+-> a
+T 398 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 28/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP18/50)
+-> a
+T 399 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 25/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP17/50)
+-> a
+T 400 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 22/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP16/50)
+-> a
+T 401 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 22/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP16/50)
+-> a
+T 402 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 22/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP15/50)
+-> a
+T 403 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 22/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP14/50)
+-> f
+T 404 mode=flee_direction_mode Theoden Greycloak(hum) F4@(10,12) HP 19/40 MP 0/0 Hu 77 $ 750 room=M
+-> c
+T 405 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 19/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP14/50)
+-> i
+T 406 mode=inventory           Theoden Greycloak(hum) F4@(10,12) HP 19/40 MP 0/0 Hu 77 $ 750 room=M
+-> u1
+T 407 mode=inventory           Theoden Greycloak(hum) F4@(10,12) HP 40/40 MP 0/0 Hu 77 $ 750 room=M
+-> x
+T 408 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 40/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP14/50)
+-> a
+T 409 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 37/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP14/50)
+-> a
+T 410 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 34/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP14/50)
+-> a
+T 411 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 31/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP14/50)
+-> a
+T 412 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 25/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP13/50)
+-> a
+T 413 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 19/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP12/50)
+-> a
+T 414 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 13/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP11/50)
+-> a
+T 415 mode=combat_mode         Theoden Greycloak(hum) F4@(10,12) HP 7/40 MP 0/0 Hu 77 $ 750 room=M vs Owlbear(L3 HP10/50)
+-> f
+T 416 mode=death_screen        Theoden Greycloak(hum) F4@(10,12) HP -5/40 MP 0/0 Hu 77 $ 750 room=M
+
+=== run finished: turns=416 floor=4 hp=-5/40 gold=750 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/00042_human.html

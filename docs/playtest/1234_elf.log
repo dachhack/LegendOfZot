@@ -1,0 +1,1240 @@
+T   0 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 6 nearby rooms!
+  Lantern fuel remaining: 79
+-> i
+T   2 mode=inventory           Legolas the Bowyer(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> u3
+T   3 mode=inventory           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  You have identified: Minor Healing Potion!
+  Legolas the Bowyer drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   4 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu100 $ 290 room=E
+  Inventory closed.
+-> s
+T   5 mode=combat_mode         Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=M vs Sewer Rat(L0 HP10/10)
+  A Sewer Rat (Level 0) appears! A scurrying rat, unnaturally large.
+  You seize the initiative!
+-> f
+T   6 mode=flee_direction_mode Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 290 room=M
+  You successfully broke away from combat!
+  Choose a direction to flee (n/s/e/w):
+-> n
+T   7 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=E
+-> e
+T   8 mode=combat_mode         Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Spore Puff(L0 HP18/18)
+  A Spore Puff (Level 0) appears! A fat, wobbly mushroom the size of a pumpkin waddles toward you, puffing clouds of yellowish spores.
+  The Spore Puff strikes first!
+-> a
+T   9 mode=combat_victory      Legolas the Bowyer(elf) F1@( 2, 1) HP 27/28 MP 0/0 Hu 98 $ 347 room=.
+  You found 7 gold.
+   ACHIEVEMENT UNLOCKED: First Blood - Defeat your first monster
+  Reward: 50 gold!
+-> back
+T  10 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 27/28 MP 0/0 Hu 98 $ 347 room=.
+-> l
+T  11 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 27/28 MP 0/0 Hu 98 $ 347 room=.
+-> w
+T  12 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 27/28 MP 0/0 Hu 97 $ 347 room=E
+-> s
+T  13 mode=combat_mode         Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 347 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  14 mode=combat_victory      Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 456 room=.
+-> back
+T  15 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 456 room=.
+-> e
+T  16 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 95 $ 456 room=D
+-> n
+T  17 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 94 $ 456 room=.
+-> w
+T  18 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 93 $ 456 room=E
+-> s
+T  19 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 92 $ 456 room=.
+-> n
+T  20 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 91 $ 456 room=E
+-> s
+T  21 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 90 $ 456 room=.
+-> e
+T  22 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 89 $ 456 room=D
+-> n
+T  23 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 88 $ 456 room=.
+-> w
+T  24 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 87 $ 456 room=E
+-> s
+T  25 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 86 $ 456 room=.
+-> n
+T  26 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 85 $ 456 room=E
+-> s
+T  27 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 456 room=.
+-> e
+T  28 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 83 $ 456 room=D
+-> n
+T  29 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 82 $ 456 room=.
+-> w
+T  30 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 81 $ 456 room=E
+-> s
+T  31 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 80 $ 456 room=.
+-> n
+T  32 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 79 $ 456 room=E
+-> s
+T  33 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 78 $ 456 room=.
+-> e
+T  34 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 77 $ 456 room=D
+-> n
+T  35 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 76 $ 456 room=.
+-> w
+T  36 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 75 $ 456 room=E
+-> s
+T  37 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 74 $ 456 room=.
+-> n
+T  38 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 73 $ 456 room=E
+-> s
+T  39 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 72 $ 456 room=.
+-> e
+T  40 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 71 $ 456 room=D
+-> n
+T  41 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 70 $ 456 room=.
+-> w
+T  42 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 69 $ 456 room=E
+-> s
+T  43 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 68 $ 456 room=.
+-> n
+T  44 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 67 $ 456 room=E
+-> s
+T  45 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 66 $ 456 room=.
+-> e
+T  46 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 65 $ 456 room=D
+-> n
+T  47 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 64 $ 456 room=.
+-> w
+T  48 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 63 $ 456 room=E
+-> s
+T  49 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 62 $ 456 room=.
+-> n
+T  50 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 61 $ 456 room=E
+-> s
+T  51 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 60 $ 456 room=.
+-> e
+T  52 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 59 $ 456 room=D
+-> n
+T  53 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 58 $ 456 room=.
+-> w
+T  54 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 57 $ 456 room=E
+-> s
+T  55 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 56 $ 456 room=.
+-> n
+T  56 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 55 $ 456 room=E
+-> s
+T  57 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 54 $ 456 room=.
+-> e
+T  58 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 53 $ 456 room=D
+-> n
+T  59 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 52 $ 456 room=.
+-> w
+T  60 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 51 $ 456 room=E
+-> s
+T  61 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 456 room=.
+-> n
+T  62 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 49 $ 456 room=E
+-> i
+T  63 mode=inventory           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 49 $ 456 room=E
+-> eat1
+T  64 mode=inventory           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 99 $ 456 room=E
+-> x
+T  65 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 99 $ 456 room=E
+-> s
+T  66 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 456 room=.
+-> e
+T  67 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 97 $ 456 room=D
+-> n
+T  68 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 456 room=.
+-> w
+T  69 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 95 $ 456 room=E
+-> s
+T  70 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 456 room=.
+-> n
+T  71 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 93 $ 456 room=E
+-> s
+T  72 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 92 $ 456 room=.
+-> e
+T  73 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 91 $ 456 room=D
+-> n
+T  74 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 90 $ 456 room=.
+-> w
+T  75 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 89 $ 456 room=E
+-> s
+T  76 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 456 room=.
+-> n
+T  77 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 87 $ 456 room=E
+-> s
+T  78 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 86 $ 456 room=.
+-> e
+T  79 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 85 $ 456 room=D
+-> n
+T  80 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 84 $ 456 room=.
+-> w
+T  81 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 83 $ 456 room=E
+-> s
+T  82 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 456 room=.
+-> n
+T  83 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 81 $ 456 room=E
+-> s
+T  84 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 80 $ 456 room=.
+-> e
+T  85 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 79 $ 456 room=D
+-> n
+T  86 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 78 $ 456 room=.
+-> w
+T  87 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 77 $ 456 room=E
+-> s
+T  88 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 76 $ 456 room=.
+-> n
+T  89 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 75 $ 456 room=E
+-> s
+T  90 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 74 $ 456 room=.
+-> e
+T  91 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 73 $ 456 room=D
+-> n
+T  92 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 72 $ 456 room=.
+-> w
+T  93 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 71 $ 456 room=E
+-> s
+T  94 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 70 $ 456 room=.
+-> n
+T  95 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 69 $ 456 room=E
+-> s
+T  96 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 68 $ 456 room=.
+-> e
+T  97 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 67 $ 456 room=D
+-> n
+T  98 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 66 $ 456 room=.
+-> w
+T  99 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 65 $ 456 room=E
+-> s
+T 100 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 64 $ 456 room=.
+-> n
+T 101 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 63 $ 456 room=E
+-> s
+T 102 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 62 $ 456 room=.
+-> e
+T 103 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 61 $ 456 room=D
+-> n
+T 104 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 60 $ 456 room=.
+-> w
+T 105 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 59 $ 456 room=E
+-> s
+T 106 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 58 $ 456 room=.
+-> n
+T 107 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 57 $ 456 room=E
+-> s
+T 108 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 56 $ 456 room=.
+-> e
+T 109 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 55 $ 456 room=D
+-> n
+T 110 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 54 $ 456 room=.
+-> w
+T 111 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 53 $ 456 room=E
+-> s
+T 112 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 52 $ 456 room=.
+-> n
+T 113 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 51 $ 456 room=E
+-> s
+T 114 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 456 room=.
+-> e
+T 115 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 49 $ 456 room=D
+-> n
+T 116 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 48 $ 456 room=.
+-> i
+T 117 mode=inventory           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 48 $ 456 room=.
+-> eat1
+T 118 mode=inventory           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 98 $ 456 room=.
+-> x
+T 119 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 98 $ 456 room=.
+-> w
+T 120 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 97 $ 456 room=E
+-> s
+T 121 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 456 room=.
+-> n
+T 122 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 95 $ 456 room=E
+-> s
+T 123 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 456 room=.
+-> e
+T 124 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 456 room=D
+-> n
+T 125 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 92 $ 456 room=.
+-> w
+T 126 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 91 $ 456 room=E
+-> s
+T 127 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 90 $ 456 room=.
+-> n
+T 128 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 89 $ 456 room=E
+-> s
+T 129 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 456 room=.
+-> e
+T 130 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 87 $ 456 room=D
+-> n
+T 131 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 86 $ 456 room=.
+-> w
+T 132 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 85 $ 456 room=E
+-> s
+T 133 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 456 room=.
+-> n
+T 134 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 83 $ 456 room=E
+-> s
+T 135 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 456 room=.
+-> e
+T 136 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 81 $ 456 room=D
+-> n
+T 137 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 80 $ 456 room=.
+-> w
+T 138 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 79 $ 456 room=E
+-> s
+T 139 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 78 $ 456 room=.
+-> n
+T 140 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 77 $ 456 room=E
+-> s
+T 141 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 76 $ 456 room=.
+-> e
+T 142 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 75 $ 456 room=D
+-> n
+T 143 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 74 $ 456 room=.
+-> w
+T 144 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 73 $ 456 room=E
+-> s
+T 145 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 72 $ 456 room=.
+-> n
+T 146 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 71 $ 456 room=E
+-> s
+T 147 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 70 $ 456 room=.
+-> e
+T 148 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 69 $ 456 room=D
+-> n
+T 149 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 68 $ 456 room=.
+-> w
+T 150 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 67 $ 456 room=E
+-> s
+T 151 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 66 $ 456 room=.
+-> n
+T 152 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 65 $ 456 room=E
+-> s
+T 153 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 64 $ 456 room=.
+-> e
+T 154 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 63 $ 456 room=D
+-> n
+T 155 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 62 $ 456 room=.
+-> w
+T 156 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 61 $ 456 room=E
+-> s
+T 157 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 60 $ 456 room=.
+-> n
+T 158 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 59 $ 456 room=E
+-> s
+T 159 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 58 $ 456 room=.
+-> e
+T 160 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 57 $ 456 room=D
+-> n
+T 161 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 56 $ 456 room=.
+-> w
+T 162 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 55 $ 456 room=E
+-> s
+T 163 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 54 $ 456 room=.
+-> n
+T 164 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 53 $ 456 room=E
+-> s
+T 165 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 52 $ 456 room=.
+-> e
+T 166 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 51 $ 456 room=D
+-> n
+T 167 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 50 $ 456 room=.
+-> w
+T 168 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 49 $ 456 room=E
+-> i
+T 169 mode=inventory           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 49 $ 456 room=E
+-> eat1
+T 170 mode=inventory           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 99 $ 456 room=E
+-> x
+T 171 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 99 $ 456 room=E
+-> s
+T 172 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 456 room=.
+-> n
+T 173 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 97 $ 456 room=E
+-> s
+T 174 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 456 room=.
+-> e
+T 175 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 95 $ 456 room=D
+-> n
+T 176 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 94 $ 456 room=.
+-> w
+T 177 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 93 $ 456 room=E
+-> s
+T 178 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 92 $ 456 room=.
+-> n
+T 179 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 91 $ 456 room=E
+-> s
+T 180 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 90 $ 456 room=.
+-> e
+T 181 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 89 $ 456 room=D
+-> n
+T 182 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 88 $ 456 room=.
+-> w
+T 183 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 87 $ 456 room=E
+-> s
+T 184 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 86 $ 456 room=.
+-> n
+T 185 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 85 $ 456 room=E
+-> s
+T 186 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 456 room=.
+-> e
+T 187 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 83 $ 456 room=D
+-> n
+T 188 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 82 $ 456 room=.
+-> w
+T 189 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 81 $ 456 room=E
+-> s
+T 190 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 80 $ 456 room=.
+-> n
+T 191 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 79 $ 456 room=E
+-> s
+T 192 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 78 $ 456 room=.
+-> e
+T 193 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 77 $ 456 room=D
+-> n
+T 194 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 76 $ 456 room=.
+-> w
+T 195 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 75 $ 456 room=E
+-> s
+T 196 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 74 $ 456 room=.
+-> n
+T 197 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 73 $ 456 room=E
+-> s
+T 198 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 72 $ 456 room=.
+-> e
+T 199 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 71 $ 456 room=D
+-> n
+T 200 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 70 $ 456 room=.
+-> w
+T 201 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 69 $ 456 room=E
+-> s
+T 202 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 68 $ 456 room=.
+-> n
+T 203 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 67 $ 456 room=E
+-> s
+T 204 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 66 $ 456 room=.
+-> e
+T 205 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 65 $ 456 room=D
+-> n
+T 206 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 64 $ 456 room=.
+-> w
+T 207 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 63 $ 456 room=E
+-> s
+T 208 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 62 $ 456 room=.
+-> n
+T 209 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 61 $ 456 room=E
+-> s
+T 210 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 60 $ 456 room=.
+-> l
+T 211 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 60 $ 456 room=.
+-> e
+T 212 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 59 $ 456 room=D
+-> n
+T 213 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 58 $ 456 room=.
+-> w
+T 214 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 57 $ 456 room=E
+-> s
+T 215 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 56 $ 456 room=.
+-> n
+T 216 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 55 $ 456 room=E
+-> s
+T 217 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 54 $ 456 room=.
+-> e
+T 218 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 53 $ 456 room=D
+-> n
+T 219 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 52 $ 456 room=.
+-> w
+T 220 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 51 $ 456 room=E
+-> l
+T 221 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 51 $ 456 room=E
+-> s
+T 222 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 456 room=.
+-> n
+T 223 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 49 $ 456 room=E
+-> i
+T 224 mode=inventory           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 49 $ 456 room=E
+-> eat1
+T 225 mode=inventory           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 99 $ 456 room=E
+-> x
+T 226 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 99 $ 456 room=E
+-> s
+T 227 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 456 room=.
+-> e
+T 228 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 97 $ 456 room=D
+-> n
+T 229 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 456 room=.
+-> w
+T 230 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 95 $ 456 room=E
+-> l
+T 231 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 95 $ 456 room=E
+-> s
+T 232 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 456 room=.
+-> n
+T 233 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 93 $ 456 room=E
+-> s
+T 234 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 92 $ 456 room=.
+-> e
+T 235 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 91 $ 456 room=D
+-> n
+T 236 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 90 $ 456 room=.
+-> w
+T 237 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 89 $ 456 room=E
+-> s
+T 238 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 456 room=.
+-> n
+T 239 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 87 $ 456 room=E
+-> s
+T 240 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 86 $ 456 room=.
+-> l
+T 241 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 86 $ 456 room=.
+-> e
+T 242 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 85 $ 456 room=D
+-> n
+T 243 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 84 $ 456 room=.
+-> w
+T 244 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 83 $ 456 room=E
+-> s
+T 245 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 456 room=.
+-> n
+T 246 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 81 $ 456 room=E
+-> s
+T 247 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 80 $ 456 room=.
+-> e
+T 248 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 79 $ 456 room=D
+-> n
+T 249 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 78 $ 456 room=.
+-> w
+T 250 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 77 $ 456 room=E
+-> l
+T 251 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 77 $ 456 room=E
+-> s
+T 252 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 76 $ 456 room=.
+-> n
+T 253 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 75 $ 456 room=E
+-> s
+T 254 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 74 $ 456 room=.
+-> e
+T 255 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 73 $ 456 room=D
+-> n
+T 256 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 72 $ 456 room=.
+-> w
+T 257 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 71 $ 456 room=E
+-> s
+T 258 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 70 $ 456 room=.
+-> n
+T 259 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 69 $ 456 room=E
+-> s
+T 260 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 68 $ 456 room=.
+-> l
+T 261 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 68 $ 456 room=.
+-> e
+T 262 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 67 $ 456 room=D
+-> n
+T 263 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 66 $ 456 room=.
+-> w
+T 264 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 65 $ 456 room=E
+-> s
+T 265 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 64 $ 456 room=.
+-> n
+T 266 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 63 $ 456 room=E
+-> s
+T 267 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 62 $ 456 room=.
+-> e
+T 268 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 61 $ 456 room=D
+-> n
+T 269 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 60 $ 456 room=.
+-> w
+T 270 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 59 $ 456 room=E
+-> l
+T 271 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 59 $ 456 room=E
+-> s
+T 272 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 58 $ 456 room=.
+-> n
+T 273 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 57 $ 456 room=E
+-> s
+T 274 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 56 $ 456 room=.
+-> e
+T 275 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 55 $ 456 room=D
+-> n
+T 276 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 54 $ 456 room=.
+-> w
+T 277 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 53 $ 456 room=E
+-> s
+T 278 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 52 $ 456 room=.
+-> n
+T 279 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 51 $ 456 room=E
+-> s
+T 280 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 456 room=.
+-> l
+T 281 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 456 room=.
+-> e
+T 282 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 49 $ 456 room=D
+-> n
+T 283 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 48 $ 456 room=.
+-> i
+T 284 mode=inventory           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 48 $ 456 room=.
+-> eat1
+T 285 mode=inventory           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 98 $ 456 room=.
+-> x
+T 286 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 98 $ 456 room=.
+-> w
+T 287 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 97 $ 456 room=E
+-> s
+T 288 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 456 room=.
+-> n
+T 289 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 95 $ 456 room=E
+-> s
+T 290 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 456 room=.
+-> l
+T 291 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 456 room=.
+-> e
+T 292 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 456 room=D
+-> n
+T 293 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 92 $ 456 room=.
+-> w
+T 294 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 91 $ 456 room=E
+-> s
+T 295 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 90 $ 456 room=.
+-> n
+T 296 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 89 $ 456 room=E
+-> s
+T 297 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 456 room=.
+-> e
+T 298 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 87 $ 456 room=D
+-> n
+T 299 mode=game_loop           Legolas the Bowyer(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 86 $ 456 room=.
+-> w
+T 300 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 85 $ 456 room=E
+-> l
+T 301 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 85 $ 456 room=E
+-> s
+T 302 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 456 room=.
+-> n
+T 303 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 83 $ 456 room=E
+-> s
+T 304 mode=game_loop           Legolas the Bowyer(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 456 room=.
+-> e
+T 305 mode=stairs_down_mode    Legolas the Bowyer(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 81 $ 456 room=D
+-> d
+T 306 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 81 $ 456 room=U
+-> n
+T 307 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 81 $ 456 room=U
+-> n
+T 308 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 81 $ 456 room=U
+-> n
+T 309 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 81 $ 456 room=U
+-> e
+T 310 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 80 $ 456 room=.
+-> l
+T 311 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 80 $ 456 room=.
+-> e
+T 312 mode=chest_mode          Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 79 $ 456 room=C
+-> o
+T 313 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 79 $ 516 room=.
+-> l
+T 314 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 79 $ 516 room=.
+-> s
+T 315 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 78 $ 516 room=.
+-> s
+T 316 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 77 $ 516 room=.
+-> l
+T 317 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 77 $ 516 room=.
+-> w
+T 318 mode=combat_mode         Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 76 $ 516 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 319 mode=combat_mode         Legolas the Bowyer(elf) F2@( 2, 3) HP 27/28 MP 0/0 Hu 76 $ 516 room=M vs Skeleton(L1 HP6/25)
+-> a
+T 320 mode=combat_mode         Legolas the Bowyer(elf) F2@( 2, 3) HP 27/28 MP 0/0 Hu 76 $ 516 room=M vs Skeleton(L1 HP6/25)
+-> a
+T 321 mode=combat_victory      Legolas the Bowyer(elf) F2@( 2, 3) HP 27/28 MP 0/0 Hu 76 $ 532 room=.
+-> back
+T 322 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 27/28 MP 0/0 Hu 76 $ 532 room=.
+-> l
+T 323 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 27/28 MP 0/0 Hu 76 $ 532 room=.
+-> w
+T 324 mode=dungeon_mode        Legolas the Bowyer(elf) F2@( 1, 3) HP 27/28 MP 0/0 Hu 75 $ 532 room=N
+-> u
+T 325 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 27/28 MP 0/0 Hu 75 $ 532 room=N
+-> l
+T 326 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 27/28 MP 0/0 Hu 75 $ 532 room=N
+-> e
+T 327 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 27/28 MP 0/0 Hu 74 $ 532 room=.
+-> e
+T 328 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 27/28 MP 0/0 Hu 73 $ 532 room=.
+-> e
+T 329 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 72 $ 532 room=.
+-> l
+T 330 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 72 $ 532 room=.
+-> w
+T 331 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 71 $ 532 room=.
+-> n
+T 332 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 70 $ 532 room=.
+-> n
+T 333 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 69 $ 532 room=.
+-> w
+T 334 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 68 $ 532 room=.
+-> w
+T 335 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 67 $ 532 room=U
+-> e
+T 336 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 66 $ 532 room=.
+-> e
+T 337 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 65 $ 532 room=.
+-> s
+T 338 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 64 $ 532 room=.
+-> s
+T 339 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 532 room=.
+-> e
+T 340 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 62 $ 532 room=.
+-> w
+T 341 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 61 $ 532 room=.
+-> w
+T 342 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 60 $ 532 room=.
+-> w
+T 343 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 59 $ 532 room=N
+-> e
+T 344 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 58 $ 532 room=.
+-> e
+T 345 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 57 $ 532 room=.
+-> e
+T 346 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 56 $ 532 room=.
+-> w
+T 347 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 55 $ 532 room=.
+-> n
+T 348 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 54 $ 532 room=.
+-> n
+T 349 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 53 $ 532 room=.
+-> w
+T 350 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 52 $ 532 room=.
+-> w
+T 351 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 51 $ 532 room=U
+-> e
+T 352 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 50 $ 532 room=.
+-> e
+T 353 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 49 $ 532 room=.
+-> i
+T 354 mode=inventory           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 49 $ 532 room=.
+-> eat1
+T 355 mode=inventory           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 99 $ 532 room=.
+-> x
+T 356 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 99 $ 532 room=.
+-> s
+T 357 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 98 $ 532 room=.
+-> s
+T 358 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 532 room=.
+-> e
+T 359 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 96 $ 532 room=.
+-> w
+T 360 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 95 $ 532 room=.
+-> w
+T 361 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 94 $ 532 room=.
+-> w
+T 362 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 93 $ 532 room=N
+-> e
+T 363 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 532 room=.
+-> e
+T 364 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 532 room=.
+-> e
+T 365 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 90 $ 532 room=.
+-> w
+T 366 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 89 $ 532 room=.
+-> n
+T 367 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 88 $ 532 room=.
+-> n
+T 368 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 87 $ 532 room=.
+-> w
+T 369 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 86 $ 532 room=.
+-> w
+T 370 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 85 $ 532 room=U
+-> e
+T 371 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 84 $ 532 room=.
+-> e
+T 372 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 83 $ 532 room=.
+-> s
+T 373 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 82 $ 532 room=.
+-> s
+T 374 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 81 $ 532 room=.
+-> e
+T 375 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 80 $ 532 room=.
+-> w
+T 376 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 79 $ 532 room=.
+-> w
+T 377 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 78 $ 532 room=.
+-> w
+T 378 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 77 $ 532 room=N
+-> e
+T 379 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 76 $ 532 room=.
+-> e
+T 380 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 532 room=.
+-> e
+T 381 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 74 $ 532 room=.
+-> w
+T 382 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 73 $ 532 room=.
+-> n
+T 383 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 72 $ 532 room=.
+-> n
+T 384 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 71 $ 532 room=.
+-> w
+T 385 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 70 $ 532 room=.
+-> w
+T 386 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 69 $ 532 room=U
+-> e
+T 387 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 68 $ 532 room=.
+-> e
+T 388 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 67 $ 532 room=.
+-> s
+T 389 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 66 $ 532 room=.
+-> s
+T 390 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 65 $ 532 room=.
+-> e
+T 391 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 64 $ 532 room=.
+-> w
+T 392 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 532 room=.
+-> w
+T 393 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 62 $ 532 room=.
+-> w
+T 394 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 61 $ 532 room=N
+-> e
+T 395 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 60 $ 532 room=.
+-> e
+T 396 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 59 $ 532 room=.
+-> e
+T 397 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 58 $ 532 room=.
+-> w
+T 398 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 57 $ 532 room=.
+-> n
+T 399 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 56 $ 532 room=.
+-> n
+T 400 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 55 $ 532 room=.
+-> w
+T 401 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 54 $ 532 room=.
+-> w
+T 402 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 53 $ 532 room=U
+-> e
+T 403 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 52 $ 532 room=.
+-> e
+T 404 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 51 $ 532 room=.
+-> s
+T 405 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 50 $ 532 room=.
+-> s
+T 406 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 49 $ 532 room=.
+-> i
+T 407 mode=inventory           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 49 $ 532 room=.
+-> eat1
+T 408 mode=inventory           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 99 $ 532 room=.
+-> x
+T 409 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 99 $ 532 room=.
+-> e
+T 410 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 98 $ 532 room=.
+-> w
+T 411 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 532 room=.
+-> w
+T 412 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 96 $ 532 room=.
+-> w
+T 413 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 95 $ 532 room=N
+-> e
+T 414 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 94 $ 532 room=.
+-> e
+T 415 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 93 $ 532 room=.
+-> e
+T 416 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 92 $ 532 room=.
+-> w
+T 417 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 91 $ 532 room=.
+-> n
+T 418 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 90 $ 532 room=.
+-> n
+T 419 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 89 $ 532 room=.
+-> w
+T 420 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 88 $ 532 room=.
+-> w
+T 421 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 87 $ 532 room=U
+-> e
+T 422 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 86 $ 532 room=.
+-> e
+T 423 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 85 $ 532 room=.
+-> s
+T 424 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 84 $ 532 room=.
+-> s
+T 425 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 83 $ 532 room=.
+-> e
+T 426 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 82 $ 532 room=.
+-> w
+T 427 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 81 $ 532 room=.
+-> w
+T 428 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 80 $ 532 room=.
+-> w
+T 429 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 79 $ 532 room=N
+-> e
+T 430 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 78 $ 532 room=.
+-> e
+T 431 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 77 $ 532 room=.
+-> e
+T 432 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 76 $ 532 room=.
+-> w
+T 433 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 532 room=.
+-> n
+T 434 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 74 $ 532 room=.
+-> n
+T 435 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 73 $ 532 room=.
+-> w
+T 436 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 72 $ 532 room=.
+-> w
+T 437 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 71 $ 532 room=U
+-> e
+T 438 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 70 $ 532 room=.
+-> e
+T 439 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 69 $ 532 room=.
+-> s
+T 440 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 68 $ 532 room=.
+-> s
+T 441 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 67 $ 532 room=.
+-> e
+T 442 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 66 $ 532 room=.
+-> w
+T 443 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 65 $ 532 room=.
+-> w
+T 444 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 64 $ 532 room=.
+-> w
+T 445 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 63 $ 532 room=N
+-> e
+T 446 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 62 $ 532 room=.
+-> e
+T 447 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 61 $ 532 room=.
+-> e
+T 448 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 60 $ 532 room=.
+-> w
+T 449 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 59 $ 532 room=.
+-> n
+T 450 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 58 $ 532 room=.
+-> n
+T 451 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 57 $ 532 room=.
+-> w
+T 452 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 56 $ 532 room=.
+-> w
+T 453 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 55 $ 532 room=U
+-> e
+T 454 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 54 $ 532 room=.
+-> e
+T 455 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 53 $ 532 room=.
+-> s
+T 456 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 52 $ 532 room=.
+-> s
+T 457 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 51 $ 532 room=.
+-> e
+T 458 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 50 $ 532 room=.
+-> w
+T 459 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 49 $ 532 room=.
+-> i
+T 460 mode=inventory           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 49 $ 532 room=.
+-> eat1
+T 461 mode=inventory           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 99 $ 532 room=.
+-> x
+T 462 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 99 $ 532 room=.
+-> w
+T 463 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 98 $ 532 room=.
+-> w
+T 464 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 97 $ 532 room=N
+-> e
+T 465 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 96 $ 532 room=.
+-> e
+T 466 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 95 $ 532 room=.
+-> e
+T 467 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 94 $ 532 room=.
+-> w
+T 468 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 93 $ 532 room=.
+-> n
+T 469 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 92 $ 532 room=.
+-> n
+T 470 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 91 $ 532 room=.
+-> w
+T 471 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 90 $ 532 room=.
+-> w
+T 472 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 89 $ 532 room=U
+-> e
+T 473 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 88 $ 532 room=.
+-> e
+T 474 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 87 $ 532 room=.
+-> s
+T 475 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 86 $ 532 room=.
+-> s
+T 476 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 85 $ 532 room=.
+-> e
+T 477 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 84 $ 532 room=.
+-> w
+T 478 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 83 $ 532 room=.
+-> w
+T 479 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 82 $ 532 room=.
+-> w
+T 480 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 81 $ 532 room=N
+-> e
+T 481 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 80 $ 532 room=.
+-> e
+T 482 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 79 $ 532 room=.
+-> e
+T 483 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 78 $ 532 room=.
+-> w
+T 484 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 77 $ 532 room=.
+-> n
+T 485 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 76 $ 532 room=.
+-> n
+T 486 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 75 $ 532 room=.
+-> w
+T 487 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 74 $ 532 room=.
+-> w
+T 488 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 73 $ 532 room=U
+-> e
+T 489 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 72 $ 532 room=.
+-> e
+T 490 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 71 $ 532 room=.
+-> s
+T 491 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 70 $ 532 room=.
+-> s
+T 492 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 69 $ 532 room=.
+-> e
+T 493 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 68 $ 532 room=.
+-> w
+T 494 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 67 $ 532 room=.
+-> w
+T 495 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 66 $ 532 room=.
+-> w
+T 496 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 65 $ 532 room=N
+-> e
+T 497 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 64 $ 532 room=.
+-> e
+T 498 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 532 room=.
+-> e
+T 499 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 62 $ 532 room=.
+-> w
+T 500 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 61 $ 532 room=.
+-> n
+T 501 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 60 $ 532 room=.
+-> n
+T 502 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 59 $ 532 room=.
+-> w
+T 503 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 58 $ 532 room=.
+-> w
+T 504 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 57 $ 532 room=U
+-> e
+T 505 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 56 $ 532 room=.
+-> e
+T 506 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 55 $ 532 room=.
+-> s
+T 507 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 54 $ 532 room=.
+-> s
+T 508 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 53 $ 532 room=.
+-> e
+T 509 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 52 $ 532 room=.
+-> w
+T 510 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 51 $ 532 room=.
+-> l
+T 511 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 51 $ 532 room=.
+-> w
+T 512 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 50 $ 532 room=.
+-> w
+T 513 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 49 $ 532 room=N
+-> e
+T 514 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 48 $ 532 room=.
+-> e
+T 515 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 47 $ 532 room=.
+-> e
+T 516 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 46 $ 532 room=.
+-> w
+T 517 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 45 $ 532 room=.
+-> n
+T 518 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 44 $ 532 room=.
+-> n
+T 519 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 43 $ 532 room=.
+-> w
+T 520 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 42 $ 532 room=.
+-> l
+T 521 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 42 $ 532 room=.
+-> w
+T 522 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 41 $ 532 room=U
+-> e
+T 523 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 40 $ 532 room=.
+-> e
+T 524 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 39 $ 532 room=.
+-> s
+T 525 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 38 $ 532 room=.
+-> s
+T 526 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 37 $ 532 room=.
+-> e
+T 527 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 36 $ 532 room=.
+-> w
+T 528 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 35 $ 532 room=.
+-> w
+T 529 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 34 $ 532 room=.
+-> w
+T 530 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 33 $ 532 room=N
+-> l
+T 531 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 33 $ 532 room=N
+-> e
+T 532 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 32 $ 532 room=.
+-> e
+T 533 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 31 $ 532 room=.
+-> e
+T 534 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 30 $ 532 room=.
+-> w
+T 535 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 29 $ 532 room=.
+-> n
+T 536 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 28 $ 532 room=.
+-> n
+T 537 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 27 $ 532 room=.
+-> w
+T 538 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 26 $ 532 room=.
+-> w
+T 539 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 25 $ 532 room=U
+-> e
+T 540 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 24 $ 532 room=.
+-> l
+T 541 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 24 $ 532 room=.
+-> e
+T 542 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 23 $ 532 room=.
+-> s
+T 543 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 22 $ 532 room=.
+-> s
+T 544 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 21 $ 532 room=.
+-> e
+T 545 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 20 $ 532 room=.
+-> w
+T 546 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 19 $ 532 room=.
+-> w
+T 547 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 18 $ 532 room=.
+-> w
+T 548 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 17 $ 532 room=N
+-> e
+T 549 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 16 $ 532 room=.
+-> e
+T 550 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 15 $ 532 room=.
+-> l
+T 551 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 15 $ 532 room=.
+-> e
+T 552 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 14 $ 532 room=.
+-> w
+T 553 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu 13 $ 532 room=.
+-> n
+T 554 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 12 $ 532 room=.
+-> n
+T 555 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 11 $ 532 room=.
+-> w
+T 556 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 10 $ 532 room=.
+-> w
+T 557 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu  9 $ 532 room=U
+-> e
+T 558 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu  8 $ 532 room=.
+-> e
+T 559 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu  7 $ 532 room=.
+-> s
+T 560 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu  6 $ 532 room=.
+-> l
+T 561 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu  6 $ 532 room=.
+-> s
+T 562 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu  5 $ 532 room=.
+-> e
+T 563 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu  4 $ 532 room=.
+-> w
+T 564 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 28/28 MP 0/0 Hu  3 $ 532 room=.
+-> w
+T 565 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu  2 $ 532 room=.
+-> w
+T 566 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu  1 $ 532 room=N
+-> e
+T 567 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 26/28 MP 0/0 Hu  0 $ 532 room=.
+-> e
+T 568 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 24/28 MP 0/0 Hu  0 $ 532 room=.
+-> e
+T 569 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 22/28 MP 0/0 Hu  0 $ 532 room=.
+-> i
+T 570 mode=inventory           Legolas the Bowyer(elf) F2@( 4, 3) HP 22/28 MP 0/0 Hu  0 $ 532 room=.
+-> u3
+T 571 mode=inventory           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu  0 $ 532 room=.
+-> x
+T 572 mode=game_loop           Legolas the Bowyer(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu  0 $ 532 room=.
+-> w
+T 573 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 26/28 MP 0/0 Hu  0 $ 532 room=.
+-> n
+T 574 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 24/28 MP 0/0 Hu  0 $ 532 room=.
+-> n
+T 575 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 22/28 MP 0/0 Hu  0 $ 532 room=.
+-> w
+T 576 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 20/28 MP 0/0 Hu  0 $ 532 room=.
+-> w
+T 577 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 18/28 MP 0/0 Hu  0 $ 532 room=U
+-> e
+T 578 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 16/28 MP 0/0 Hu  0 $ 532 room=.
+-> e
+T 579 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 14/28 MP 0/0 Hu  0 $ 532 room=.
+-> s
+T 580 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 12/28 MP 0/0 Hu  0 $ 532 room=.
+-> l
+T 581 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 12/28 MP 0/0 Hu  0 $ 532 room=.
+-> s
+T 582 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 10/28 MP 0/0 Hu  0 $ 532 room=.
+-> w
+T 583 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 8/28 MP 0/0 Hu  0 $ 532 room=.
+-> i
+T 584 mode=inventory           Legolas the Bowyer(elf) F2@( 2, 3) HP 8/28 MP 0/0 Hu  0 $ 532 room=.
+-> u3
+T 585 mode=inventory           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu  0 $ 532 room=.
+-> x
+T 586 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu  0 $ 532 room=.
+-> s
+T 587 mode=stairs_down_mode    Legolas the Bowyer(elf) F2@( 2, 4) HP 26/28 MP 0/0 Hu  0 $ 532 room=D
+-> n
+T 588 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 24/28 MP 0/0 Hu  0 $ 532 room=.
+-> w
+T 589 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 22/28 MP 0/0 Hu  0 $ 532 room=N
+-> i
+T 590 mode=inventory           Legolas the Bowyer(elf) F2@( 1, 3) HP 22/28 MP 0/0 Hu  0 $ 532 room=N
+-> u3
+T 591 mode=inventory           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu  0 $ 532 room=N
+-> x
+T 592 mode=game_loop           Legolas the Bowyer(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu  0 $ 532 room=N
+-> e
+T 593 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 26/28 MP 0/0 Hu  0 $ 532 room=.
+-> e
+T 594 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 24/28 MP 0/0 Hu  0 $ 532 room=.
+-> n
+T 595 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 22/28 MP 0/0 Hu  0 $ 532 room=.
+-> n
+T 596 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 20/28 MP 0/0 Hu  0 $ 532 room=.
+-> w
+T 597 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 18/28 MP 0/0 Hu  0 $ 532 room=.
+-> w
+T 598 mode=stairs_up_mode      Legolas the Bowyer(elf) F2@( 1, 1) HP 16/28 MP 0/0 Hu  0 $ 532 room=U
+-> e
+T 599 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 1) HP 14/28 MP 0/0 Hu  0 $ 532 room=.
+-> e
+T 600 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 12/28 MP 0/0 Hu  0 $ 532 room=.
+-> l
+T 601 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 1) HP 12/28 MP 0/0 Hu  0 $ 532 room=.
+-> s
+T 602 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 2) HP 10/28 MP 0/0 Hu  0 $ 532 room=.
+-> s
+T 603 mode=game_loop           Legolas the Bowyer(elf) F2@( 3, 3) HP 8/28 MP 0/0 Hu  0 $ 532 room=.
+-> w
+T 604 mode=game_loop           Legolas the Bowyer(elf) F2@( 2, 3) HP 6/28 MP 0/0 Hu  0 $ 532 room=.
+-> s
+T 605 mode=stairs_down_mode    Legolas the Bowyer(elf) F2@( 2, 4) HP 4/28 MP 0/0 Hu  0 $ 532 room=D
+-> d
+T 606 mode=stairs_up_mode      Legolas the Bowyer(elf) F3@( 1, 1) HP 4/28 MP 0/0 Hu  0 $ 532 room=U
+-> e
+T 607 mode=stairs_down_mode    Legolas the Bowyer(elf) F3@( 2, 1) HP 2/28 MP 0/0 Hu  0 $ 532 room=D
+-> d
+T 608 mode=stairs_up_mode      Legolas the Bowyer(elf) F4@( 1, 1) HP 2/28 MP 0/0 Hu  0 $ 532 room=U
+-> s
+T 609 mode=death_screen        Legolas the Bowyer(elf) F4@( 1, 2) HP 0/28 MP 0/0 Hu  0 $ 532 room=.
+
+=== run finished: turns=609 floor=4 hp=0/28 gold=532 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/01234_elf.html

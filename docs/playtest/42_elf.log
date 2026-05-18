@@ -1,0 +1,723 @@
+T   0 mode=game_loop           Arwen Silverleaf(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Arwen Silverleaf(elf) F1@( 1, 1) HP 20/28 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 12 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+-> i
+T   3 mode=inventory           Arwen Silverleaf(elf) F1@( 2, 1) HP 20/28 MP 0/0 Hu 99 $ 290 room=.
+-> u3
+T   4 mode=inventory           Arwen Silverleaf(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  You have identified: Minor Healing Potion!
+  Arwen Silverleaf drinks Minor Healing Potion and recovers 8 HP!
+  Removed Minor Healing Potion from inventory.
+-> x
+T   5 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  Inventory closed.
+-> l
+T   6 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 7 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   7 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Zombie(L0 HP35/35)
+  A Zombie (Level 0) appears! A shambling corpse reaches for you with rotting hands. If it's looking for brains, it's come to the wrong place.
+  The Zombie strikes first!
+-> a
+T   8 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 290 room=M vs Zombie(L0 HP14/35)
+  Zombie missed Arwen Silverleaf!
+  You hit the evil Zombie!
+  Zombie took 21 damage.
+-> a
+T   9 mode=combat_victory      Arwen Silverleaf(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 348 room=.
+-> back
+T  10 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 348 room=.
+-> l
+T  11 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 2) HP 27/28 MP 0/0 Hu 98 $ 348 room=.
+-> s
+T  12 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 348 room=M vs Goblin(L0 HP30/30)
+-> a
+T  13 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 348 room=M vs Goblin(L0 HP30/30)
+-> a
+T  14 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 348 room=M vs Goblin(L0 HP30/30)
+-> a
+T  15 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 348 room=M vs Goblin(L0 HP30/30)
+-> a
+T  16 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 348 room=M vs Goblin(L0 HP10/30)
+-> a
+T  17 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 348 room=M vs Goblin(L0 HP10/30)
+-> a
+T  18 mode=combat_victory      Arwen Silverleaf(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 353 room=.
+-> back
+T  19 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 353 room=.
+-> l
+T  20 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 3) HP 27/28 MP 0/0 Hu 97 $ 353 room=.
+-> s
+T  21 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 96 $ 353 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  22 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 96 $ 353 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  23 mode=combat_victory      Arwen Silverleaf(elf) F1@( 2, 4) HP 26/28 MP 0/0 Hu 96 $ 362 room=.
+-> back
+T  24 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 4) HP 26/28 MP 0/0 Hu 96 $ 362 room=.
+-> l
+T  25 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 4) HP 26/28 MP 0/0 Hu 96 $ 362 room=.
+-> s
+T  26 mode=combat_mode         Arwen Silverleaf(elf) F1@( 2, 5) HP 26/28 MP 0/0 Hu 95 $ 362 room=M vs Lichen(L0 HP10/10)
+-> a
+T  27 mode=combat_victory      Arwen Silverleaf(elf) F1@( 2, 5) HP 25/28 MP 0/0 Hu 95 $ 369 room=.
+-> back
+T  28 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 5) HP 25/28 MP 0/0 Hu 95 $ 369 room=.
+-> l
+T  29 mode=game_loop           Arwen Silverleaf(elf) F1@( 2, 5) HP 25/28 MP 0/0 Hu 95 $ 369 room=.
+-> e
+T  30 mode=game_loop           Arwen Silverleaf(elf) F1@( 3, 5) HP 26/28 MP 0/0 Hu 94 $ 369 room=.
+-> l
+T  31 mode=game_loop           Arwen Silverleaf(elf) F1@( 3, 5) HP 26/28 MP 0/0 Hu 94 $ 369 room=.
+-> e
+T  32 mode=stairs_down_mode    Arwen Silverleaf(elf) F1@( 4, 5) HP 26/28 MP 0/0 Hu 93 $ 369 room=D
+-> e
+T  33 mode=library_mode        Arwen Silverleaf(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 92 $ 369 room=L
+-> r
+T  34 mode=library_read_decision_mode Arwen Silverleaf(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 92 $ 369 room=L
+-> y
+T  35 mode=game_loop           Arwen Silverleaf(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 92 $ 419 room=.
+-> l
+T  36 mode=game_loop           Arwen Silverleaf(elf) F1@( 5, 5) HP 27/28 MP 0/0 Hu 92 $ 419 room=.
+-> e
+T  37 mode=garden_mode         Arwen Silverleaf(elf) F1@( 6, 5) HP 27/28 MP 0/0 Hu 91 $ 419 room=G
+-> h
+T  38 mode=game_loop           Arwen Silverleaf(elf) F1@( 6, 5) HP 27/28 MP 0/0 Hu 91 $ 419 room=.
+-> e
+T  39 mode=game_loop           Arwen Silverleaf(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 90 $ 419 room=.
+-> e
+T  40 mode=game_loop           Arwen Silverleaf(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 89 $ 419 room=.
+-> w
+T  41 mode=game_loop           Arwen Silverleaf(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 88 $ 419 room=.
+-> e
+T  42 mode=game_loop           Arwen Silverleaf(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 87 $ 419 room=.
+-> i
+T  43 mode=inventory           Arwen Silverleaf(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 87 $ 419 room=.
+-> eat3
+T  44 mode=inventory           Arwen Silverleaf(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 92 $ 419 room=.
+-> x
+T  45 mode=game_loop           Arwen Silverleaf(elf) F1@( 8, 5) HP 28/28 MP 0/0 Hu 92 $ 419 room=.
+-> w
+T  46 mode=game_loop           Arwen Silverleaf(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 91 $ 419 room=.
+-> w
+T  47 mode=game_loop           Arwen Silverleaf(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 90 $ 419 room=.
+-> w
+T  48 mode=game_loop           Arwen Silverleaf(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 89 $ 419 room=.
+-> w
+T  49 mode=stairs_down_mode    Arwen Silverleaf(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 88 $ 419 room=D
+-> d
+T  50 mode=stairs_up_mode      Arwen Silverleaf(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 88 $ 419 room=U
+-> w
+T  51 mode=stairs_up_mode      Arwen Silverleaf(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 88 $ 419 room=U
+-> s
+T  52 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 87 $ 419 room=.
+-> l
+T  53 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 87 $ 419 room=.
+-> s
+T  54 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 86 $ 419 room=.
+-> s
+T  55 mode=chest_mode          Arwen Silverleaf(elf) F2@( 1, 4) HP 28/28 MP 0/0 Hu 85 $ 419 room=C
+-> o
+T  56 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 4) HP 28/28 MP 0/0 Hu 85 $ 419 room=.
+-> i
+T  57 mode=inventory           Arwen Silverleaf(elf) F2@( 1, 4) HP 28/28 MP 0/0 Hu 85 $ 419 room=.
+-> e1
+T  58 mode=inventory           Arwen Silverleaf(elf) F2@( 1, 4) HP 28/28 MP 0/0 Hu 85 $ 419 room=.
+-> x
+T  59 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 4) HP 28/28 MP 0/0 Hu 85 $ 419 room=.
+-> s
+T  60 mode=dungeon_mode        Arwen Silverleaf(elf) F2@( 1, 5) HP 28/28 MP 0/0 Hu 84 $ 419 room=N
+-> u
+T  61 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 5) HP 28/28 MP 0/0 Hu 84 $ 419 room=N
+-> s
+T  62 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 83 $ 419 room=.
+-> l
+T  63 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 83 $ 419 room=.
+-> e
+T  64 mode=combat_mode         Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 82 $ 419 room=M vs Orc(L1 HP50/50)
+-> a
+T  65 mode=combat_mode         Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 82 $ 419 room=M vs Orc(L1 HP25/50)
+-> a
+T  66 mode=combat_victory      Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 82 $ 537 room=.
+-> back
+T  67 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 82 $ 537 room=.
+-> l
+T  68 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 82 $ 537 room=.
+-> s
+T  69 mode=library_mode        Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 81 $ 537 room=L
+-> r
+T  70 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 81 $ 537 room=.
+-> s
+T  71 mode=garden_mode         Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 80 $ 537 room=G
+-> h
+T  72 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 80 $ 537 room=.
+-> w
+T  73 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 79 $ 537 room=.
+-> n
+T  74 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 78 $ 537 room=.
+-> n
+T  75 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 77 $ 537 room=.
+-> e
+T  76 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 76 $ 537 room=.
+-> s
+T  77 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 75 $ 537 room=.
+-> s
+T  78 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 74 $ 537 room=.
+-> w
+T  79 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 73 $ 537 room=.
+-> n
+T  80 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 72 $ 537 room=.
+-> n
+T  81 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 71 $ 537 room=.
+-> e
+T  82 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 70 $ 537 room=.
+-> s
+T  83 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 69 $ 537 room=.
+-> s
+T  84 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 68 $ 537 room=.
+-> w
+T  85 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 67 $ 537 room=.
+-> n
+T  86 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 66 $ 537 room=.
+-> n
+T  87 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 65 $ 537 room=.
+-> e
+T  88 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 64 $ 537 room=.
+-> s
+T  89 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 63 $ 537 room=.
+-> s
+T  90 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 62 $ 537 room=.
+-> w
+T  91 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 61 $ 537 room=.
+-> n
+T  92 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 60 $ 537 room=.
+-> n
+T  93 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 59 $ 537 room=.
+-> e
+T  94 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 58 $ 537 room=.
+-> s
+T  95 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 57 $ 537 room=.
+-> s
+T  96 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 56 $ 537 room=.
+-> w
+T  97 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 55 $ 537 room=.
+-> n
+T  98 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 54 $ 537 room=.
+-> n
+T  99 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 53 $ 537 room=.
+-> e
+T 100 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 52 $ 537 room=.
+-> s
+T 101 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 51 $ 537 room=.
+-> s
+T 102 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 50 $ 537 room=.
+-> w
+T 103 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 49 $ 537 room=.
+-> i
+T 104 mode=inventory           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 49 $ 537 room=.
+-> eat1
+T 105 mode=inventory           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu100 $ 537 room=.
+-> x
+T 106 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu100 $ 537 room=.
+-> n
+T 107 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 99 $ 537 room=.
+-> n
+T 108 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 98 $ 537 room=.
+-> e
+T 109 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 97 $ 537 room=.
+-> s
+T 110 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 96 $ 537 room=.
+-> s
+T 111 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 95 $ 537 room=.
+-> w
+T 112 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 94 $ 537 room=.
+-> n
+T 113 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 93 $ 537 room=.
+-> n
+T 114 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 92 $ 537 room=.
+-> e
+T 115 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 91 $ 537 room=.
+-> s
+T 116 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 90 $ 537 room=.
+-> s
+T 117 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 89 $ 537 room=.
+-> w
+T 118 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 88 $ 537 room=.
+-> n
+T 119 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 87 $ 537 room=.
+-> n
+T 120 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 86 $ 537 room=.
+-> e
+T 121 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 85 $ 537 room=.
+-> s
+T 122 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 84 $ 537 room=.
+-> s
+T 123 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 83 $ 537 room=.
+-> w
+T 124 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 82 $ 537 room=.
+-> n
+T 125 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 81 $ 537 room=.
+-> n
+T 126 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 80 $ 537 room=.
+-> e
+T 127 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 79 $ 537 room=.
+-> s
+T 128 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 78 $ 537 room=.
+-> s
+T 129 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 77 $ 537 room=.
+-> w
+T 130 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 76 $ 537 room=.
+-> n
+T 131 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 75 $ 537 room=.
+-> n
+T 132 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 74 $ 537 room=.
+-> e
+T 133 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 73 $ 537 room=.
+-> s
+T 134 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 72 $ 537 room=.
+-> s
+T 135 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 71 $ 537 room=.
+-> w
+T 136 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 70 $ 537 room=.
+-> n
+T 137 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 69 $ 537 room=.
+-> n
+T 138 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 68 $ 537 room=.
+-> e
+T 139 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 67 $ 537 room=.
+-> s
+T 140 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 66 $ 537 room=.
+-> s
+T 141 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 65 $ 537 room=.
+-> w
+T 142 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 64 $ 537 room=.
+-> n
+T 143 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 63 $ 537 room=.
+-> n
+T 144 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 62 $ 537 room=.
+-> e
+T 145 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 61 $ 537 room=.
+-> s
+T 146 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 60 $ 537 room=.
+-> s
+T 147 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 59 $ 537 room=.
+-> w
+T 148 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 58 $ 537 room=.
+-> n
+T 149 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 57 $ 537 room=.
+-> n
+T 150 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 56 $ 537 room=.
+-> e
+T 151 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 55 $ 537 room=.
+-> s
+T 152 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 54 $ 537 room=.
+-> s
+T 153 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 53 $ 537 room=.
+-> w
+T 154 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 52 $ 537 room=.
+-> n
+T 155 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 51 $ 537 room=.
+-> n
+T 156 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 50 $ 537 room=.
+-> e
+T 157 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 49 $ 537 room=.
+-> i
+T 158 mode=inventory           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 49 $ 537 room=.
+-> eat1
+T 159 mode=inventory           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu100 $ 537 room=.
+-> x
+T 160 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu100 $ 537 room=.
+-> s
+T 161 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 99 $ 537 room=.
+-> s
+T 162 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 98 $ 537 room=.
+-> w
+T 163 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 97 $ 537 room=.
+-> n
+T 164 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 96 $ 537 room=.
+-> n
+T 165 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 95 $ 537 room=.
+-> e
+T 166 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 94 $ 537 room=.
+-> s
+T 167 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 93 $ 537 room=.
+-> s
+T 168 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 92 $ 537 room=.
+-> w
+T 169 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 91 $ 537 room=.
+-> n
+T 170 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 90 $ 537 room=.
+-> n
+T 171 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 89 $ 537 room=.
+-> e
+T 172 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 88 $ 537 room=.
+-> s
+T 173 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 87 $ 537 room=.
+-> s
+T 174 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 86 $ 537 room=.
+-> n
+T 175 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 85 $ 537 room=.
+-> n
+T 176 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 84 $ 537 room=.
+-> e
+T 177 mode=combat_mode         Arwen Silverleaf(elf) F2@( 3, 6) HP 28/28 MP 0/0 Hu 83 $ 537 room=M vs ELITE UNDEAD ZOMBIE(L2 HP45/45)
+-> f
+T 178 mode=flee_direction_mode Arwen Silverleaf(elf) F2@( 3, 6) HP 28/28 MP 0/0 Hu 83 $ 537 room=M
+-> e
+T 179 mode=tomb_mode           Arwen Silverleaf(elf) F2@( 4, 6) HP 28/28 MP 0/0 Hu 83 $ 537 room=T
+-> p
+T 180 mode=game_loop           Arwen Silverleaf(elf) F2@( 4, 6) HP 28/28 MP 0/0 Hu 83 $ 537 room=T
+-> l
+T 181 mode=game_loop           Arwen Silverleaf(elf) F2@( 4, 6) HP 28/28 MP 0/0 Hu 83 $ 537 room=T
+-> w
+T 182 mode=combat_mode         Arwen Silverleaf(elf) F2@( 3, 6) HP 28/28 MP 0/0 Hu 82 $ 537 room=M vs ELITE UNDEAD ZOMBIE(L2 HP45/45)
+-> f
+T 183 mode=combat_mode         Arwen Silverleaf(elf) F2@( 3, 6) HP 27/28 MP 0/0 Hu 82 $ 537 room=M vs ELITE UNDEAD ZOMBIE(L2 HP45/45)
+-> f
+T 184 mode=flee_direction_mode Arwen Silverleaf(elf) F2@( 3, 6) HP 27/28 MP 0/0 Hu 82 $ 537 room=M
+-> e
+T 185 mode=game_loop           Arwen Silverleaf(elf) F2@( 4, 6) HP 27/28 MP 0/0 Hu 82 $ 537 room=T
+-> w
+T 186 mode=combat_mode         Arwen Silverleaf(elf) F2@( 3, 6) HP 27/28 MP 0/0 Hu 81 $ 537 room=M vs ELITE UNDEAD ZOMBIE(L2 HP45/45)
+-> f
+T 187 mode=combat_mode         Arwen Silverleaf(elf) F2@( 3, 6) HP 26/28 MP 0/0 Hu 81 $ 537 room=M vs ELITE UNDEAD ZOMBIE(L2 HP45/45)
+-> f
+T 188 mode=flee_direction_mode Arwen Silverleaf(elf) F2@( 3, 6) HP 26/28 MP 0/0 Hu 81 $ 537 room=M
+-> w
+T 189 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 26/28 MP 0/0 Hu 81 $ 537 room=.
+-> s
+T 190 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 26/28 MP 0/0 Hu 80 $ 537 room=.
+-> s
+T 191 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 26/28 MP 0/0 Hu 79 $ 537 room=.
+-> w
+T 192 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 27/28 MP 0/0 Hu 78 $ 537 room=.
+-> n
+T 193 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 27/28 MP 0/0 Hu 77 $ 537 room=.
+-> n
+T 194 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 27/28 MP 0/0 Hu 76 $ 537 room=.
+-> e
+T 195 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 27/28 MP 0/0 Hu 75 $ 537 room=.
+-> s
+T 196 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 74 $ 537 room=.
+-> s
+T 197 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 73 $ 537 room=.
+-> w
+T 198 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 72 $ 537 room=.
+-> n
+T 199 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 71 $ 537 room=.
+-> n
+T 200 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 70 $ 537 room=.
+-> e
+T 201 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 69 $ 537 room=.
+-> s
+T 202 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 68 $ 537 room=.
+-> s
+T 203 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 67 $ 537 room=.
+-> w
+T 204 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 66 $ 537 room=.
+-> n
+T 205 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 65 $ 537 room=.
+-> n
+T 206 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 64 $ 537 room=.
+-> e
+T 207 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 63 $ 537 room=.
+-> s
+T 208 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 62 $ 537 room=.
+-> s
+T 209 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 61 $ 537 room=.
+-> w
+T 210 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 60 $ 537 room=.
+-> n
+T 211 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 59 $ 537 room=.
+-> n
+T 212 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 58 $ 537 room=.
+-> e
+T 213 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 57 $ 537 room=.
+-> s
+T 214 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 56 $ 537 room=.
+-> s
+T 215 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 55 $ 537 room=.
+-> w
+T 216 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 54 $ 537 room=.
+-> n
+T 217 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 53 $ 537 room=.
+-> n
+T 218 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 52 $ 537 room=.
+-> e
+T 219 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 51 $ 537 room=.
+-> s
+T 220 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 50 $ 537 room=.
+-> s
+T 221 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 49 $ 537 room=.
+-> i
+T 222 mode=inventory           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 49 $ 537 room=.
+-> eat1
+T 223 mode=inventory           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 99 $ 537 room=.
+-> x
+T 224 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 99 $ 537 room=.
+-> w
+T 225 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 98 $ 537 room=.
+-> n
+T 226 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 97 $ 537 room=.
+-> n
+T 227 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 96 $ 537 room=.
+-> e
+T 228 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 95 $ 537 room=.
+-> s
+T 229 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 94 $ 537 room=.
+-> s
+T 230 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 93 $ 537 room=.
+-> w
+T 231 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 92 $ 537 room=.
+-> n
+T 232 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 91 $ 537 room=.
+-> n
+T 233 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 90 $ 537 room=.
+-> e
+T 234 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 89 $ 537 room=.
+-> s
+T 235 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 88 $ 537 room=.
+-> s
+T 236 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 87 $ 537 room=.
+-> w
+T 237 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 86 $ 537 room=.
+-> n
+T 238 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 85 $ 537 room=.
+-> n
+T 239 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 84 $ 537 room=.
+-> e
+T 240 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 83 $ 537 room=.
+-> s
+T 241 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 82 $ 537 room=.
+-> s
+T 242 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 81 $ 537 room=.
+-> w
+T 243 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 80 $ 537 room=.
+-> n
+T 244 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 79 $ 537 room=.
+-> n
+T 245 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 78 $ 537 room=.
+-> e
+T 246 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 77 $ 537 room=.
+-> s
+T 247 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 76 $ 537 room=.
+-> s
+T 248 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 75 $ 537 room=.
+-> w
+T 249 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 74 $ 537 room=.
+-> n
+T 250 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 73 $ 537 room=.
+-> n
+T 251 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 72 $ 537 room=.
+-> e
+T 252 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 71 $ 537 room=.
+-> s
+T 253 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 70 $ 537 room=.
+-> s
+T 254 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 69 $ 537 room=.
+-> w
+T 255 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 68 $ 537 room=.
+-> n
+T 256 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 67 $ 537 room=.
+-> n
+T 257 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 66 $ 537 room=.
+-> e
+T 258 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 65 $ 537 room=.
+-> s
+T 259 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 64 $ 537 room=.
+-> s
+T 260 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 63 $ 537 room=.
+-> l
+T 261 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 63 $ 537 room=.
+-> w
+T 262 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 62 $ 537 room=.
+-> n
+T 263 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 61 $ 537 room=.
+-> n
+T 264 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 60 $ 537 room=.
+-> e
+T 265 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 59 $ 537 room=.
+-> s
+T 266 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 58 $ 537 room=.
+-> s
+T 267 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 57 $ 537 room=.
+-> w
+T 268 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 56 $ 537 room=.
+-> n
+T 269 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 55 $ 537 room=.
+-> n
+T 270 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 54 $ 537 room=.
+-> l
+T 271 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 54 $ 537 room=.
+-> e
+T 272 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 53 $ 537 room=.
+-> s
+T 273 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 7) HP 28/28 MP 0/0 Hu 52 $ 537 room=.
+-> s
+T 274 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 8) HP 28/28 MP 0/0 Hu 51 $ 537 room=.
+-> w
+T 275 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 8) HP 28/28 MP 0/0 Hu 50 $ 537 room=.
+-> n
+T 276 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 49 $ 537 room=.
+-> i
+T 277 mode=inventory           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 49 $ 537 room=.
+-> eat1
+T 278 mode=inventory           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 99 $ 537 room=.
+-> x
+T 279 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 7) HP 28/28 MP 0/0 Hu 99 $ 537 room=.
+-> n
+T 280 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 98 $ 537 room=.
+-> l
+T 281 mode=game_loop           Arwen Silverleaf(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 98 $ 537 room=.
+-> e
+T 282 mode=game_loop           Arwen Silverleaf(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 97 $ 537 room=.
+-> e
+T 283 mode=combat_mode         Arwen Silverleaf(elf) F2@( 3, 6) HP 28/28 MP 0/0 Hu 96 $ 537 room=M vs ELITE UNDEAD ZOMBIE(L2 HP45/45)
+-> f
+T 284 mode=flee_direction_mode Arwen Silverleaf(elf) F2@( 3, 6) HP 27/28 MP 0/0 Hu 96 $ 537 room=M
+-> e
+T 285 mode=game_loop           Arwen Silverleaf(elf) F2@( 4, 6) HP 27/28 MP 0/0 Hu 96 $ 537 room=T
+-> n
+T 286 mode=warp_mode           Arwen Silverleaf(elf) F2@( 4, 5) HP 27/28 MP 0/0 Hu 95 $ 537 room=W
+-> y
+T 287 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 2) HP 27/28 MP 0/0 Hu 95 $ 537 room=.
+-> l
+T 288 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 2) HP 27/28 MP 0/0 Hu 95 $ 537 room=.
+-> s
+T 289 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 3) HP 28/28 MP 0/0 Hu 94 $ 537 room=.
+-> l
+T 290 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 3) HP 28/28 MP 0/0 Hu 94 $ 537 room=.
+-> s
+T 291 mode=chest_mode          Arwen Silverleaf(elf) F4@( 9, 4) HP 28/28 MP 0/0 Hu 93 $ 537 room=C
+-> o
+T 292 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 5) HP 28/28 MP 0/0 Hu 92 $ 537 room=.
+-> l
+T 293 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 5) HP 28/28 MP 0/0 Hu 92 $ 537 room=.
+-> s
+T 294 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 6) HP 28/28 MP 0/0 Hu 91 $ 537 room=.
+-> s
+T 295 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 7) HP 28/28 MP 0/0 Hu 90 $ 537 room=.
+-> l
+T 296 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 7) HP 28/28 MP 0/0 Hu 90 $ 537 room=.
+-> s
+T 297 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 8) HP 28/28 MP 0/0 Hu 89 $ 537 room=.
+-> l
+T 298 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 8) HP 28/28 MP 0/0 Hu 89 $ 537 room=.
+-> s
+T 299 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 9) HP 28/28 MP 0/0 Hu 88 $ 537 room=.
+-> l
+T 300 mode=game_loop           Arwen Silverleaf(elf) F4@( 9, 9) HP 28/28 MP 0/0 Hu 88 $ 537 room=.
+-> e
+T 301 mode=game_loop           Arwen Silverleaf(elf) F4@(10, 9) HP 28/28 MP 0/0 Hu 87 $ 537 room=.
+-> l
+T 302 mode=game_loop           Arwen Silverleaf(elf) F4@(10, 9) HP 28/28 MP 0/0 Hu 87 $ 537 room=.
+-> s
+T 303 mode=game_loop           Arwen Silverleaf(elf) F4@(10,10) HP 28/28 MP 0/0 Hu 86 $ 537 room=.
+-> l
+T 304 mode=game_loop           Arwen Silverleaf(elf) F4@(10,10) HP 28/28 MP 0/0 Hu 86 $ 537 room=.
+-> e
+T 305 mode=vendor_shop         Arwen Silverleaf(elf) F4@(11,10) HP 28/28 MP 0/0 Hu 85 $ 537 room=V
+-> b11
+T 306 mode=vendor_shop         Arwen Silverleaf(elf) F4@(11,10) HP 28/28 MP 0/0 Hu 85 $ 527 room=V
+-> b5
+T 307 mode=vendor_shop         Arwen Silverleaf(elf) F4@(11,10) HP 28/28 MP 0/0 Hu 85 $ 497 room=V
+-> b5
+T 308 mode=vendor_shop         Arwen Silverleaf(elf) F4@(11,10) HP 28/28 MP 0/0 Hu 85 $ 467 room=V
+-> b5
+T 309 mode=vendor_shop         Arwen Silverleaf(elf) F4@(11,10) HP 28/28 MP 0/0 Hu 85 $ 437 room=V
+-> b5
+T 310 mode=vendor_shop         Arwen Silverleaf(elf) F4@(11,10) HP 28/28 MP 0/0 Hu 85 $ 287 room=V
+-> id8
+T 311 mode=vendor_shop         Arwen Silverleaf(elf) F4@(11,10) HP 28/28 MP 0/0 Hu 85 $ 262 room=V
+-> x
+T 312 mode=game_loop           Arwen Silverleaf(elf) F4@(11,10) HP 28/28 MP 0/0 Hu 85 $ 262 room=V
+-> l
+T 313 mode=game_loop           Arwen Silverleaf(elf) F4@(11,10) HP 28/28 MP 0/0 Hu 85 $ 262 room=V
+-> s
+T 314 mode=game_loop           Arwen Silverleaf(elf) F4@(11,11) HP 28/28 MP 0/0 Hu 84 $ 262 room=.
+-> l
+T 315 mode=game_loop           Arwen Silverleaf(elf) F4@(11,11) HP 28/28 MP 0/0 Hu 84 $ 262 room=.
+-> s
+T 316 mode=game_loop           Arwen Silverleaf(elf) F4@(11,12) HP 28/28 MP 0/0 Hu 83 $ 262 room=.
+-> l
+T 317 mode=game_loop           Arwen Silverleaf(elf) F4@(11,12) HP 28/28 MP 0/0 Hu 83 $ 262 room=.
+-> s
+T 318 mode=game_loop           Arwen Silverleaf(elf) F4@(11,13) HP 28/28 MP 0/0 Hu 82 $ 262 room=.
+-> l
+T 319 mode=game_loop           Arwen Silverleaf(elf) F4@(11,13) HP 28/28 MP 0/0 Hu 82 $ 262 room=.
+-> e
+T 320 mode=garden_mode         Arwen Silverleaf(elf) F4@(12,13) HP 28/28 MP 0/0 Hu 81 $ 262 room=G
+-> h
+T 321 mode=game_loop           Arwen Silverleaf(elf) F4@(12,13) HP 28/28 MP 0/0 Hu 81 $ 262 room=.
+-> l
+T 322 mode=game_loop           Arwen Silverleaf(elf) F4@(12,13) HP 28/28 MP 0/0 Hu 81 $ 262 room=.
+-> s
+T 323 mode=game_loop           Arwen Silverleaf(elf) F4@(12,14) HP 28/28 MP 0/0 Hu 80 $ 262 room=.
+-> l
+T 324 mode=game_loop           Arwen Silverleaf(elf) F4@(12,14) HP 28/28 MP 0/0 Hu 80 $ 262 room=.
+-> e
+T 325 mode=library_mode        Arwen Silverleaf(elf) F4@(13,14) HP 28/28 MP 0/0 Hu 79 $ 262 room=L
+-> r
+T 326 mode=library_read_decision_mode Arwen Silverleaf(elf) F4@(13,14) HP 28/28 MP 0/0 Hu 79 $ 262 room=L
+-> y
+T 327 mode=game_loop           Arwen Silverleaf(elf) F4@(13,14) HP 28/28 MP 0/0 Hu 79 $ 362 room=.
+-> l
+T 328 mode=game_loop           Arwen Silverleaf(elf) F4@(13,14) HP 28/28 MP 0/0 Hu 79 $ 362 room=.
+-> s
+T 329 mode=game_loop           Arwen Silverleaf(elf) F4@(13,15) HP 28/28 MP 0/0 Hu 78 $ 362 room=.
+-> s
+T 330 mode=dungeon_mode        Arwen Silverleaf(elf) F4@(13,16) HP 28/28 MP 0/0 Hu 77 $ 362 room=N
+-> u
+T 331 mode=game_loop           Arwen Silverleaf(elf) F4@(13,16) HP 28/28 MP 0/0 Hu 77 $ 362 room=N
+-> n
+T 332 mode=game_loop           Arwen Silverleaf(elf) F4@(13,15) HP 28/28 MP 0/0 Hu 76 $ 362 room=.
+-> n
+T 333 mode=game_loop           Arwen Silverleaf(elf) F4@(13,14) HP 28/28 MP 0/0 Hu 75 $ 362 room=.
+-> n
+T 334 mode=game_loop           Arwen Silverleaf(elf) F4@(13,13) HP 28/28 MP 0/0 Hu 74 $ 362 room=.
+-> e
+T 335 mode=game_loop           Arwen Silverleaf(elf) F4@(14,13) HP 28/28 MP 0/0 Hu 73 $ 362 room=.
+-> e
+T 336 mode=game_loop           Arwen Silverleaf(elf) F4@(15,13) HP 28/28 MP 0/0 Hu 72 $ 362 room=.
+-> e
+T 337 mode=game_loop           Arwen Silverleaf(elf) F4@(16,13) HP 28/28 MP 0/0 Hu 71 $ 362 room=.
+-> l
+T 338 mode=game_loop           Arwen Silverleaf(elf) F4@(16,13) HP 28/28 MP 0/0 Hu 71 $ 362 room=.
+-> s
+T 339 mode=game_loop           Arwen Silverleaf(elf) F4@(16,14) HP 28/28 MP 0/0 Hu 70 $ 362 room=.
+-> l
+T 340 mode=game_loop           Arwen Silverleaf(elf) F4@(16,14) HP 28/28 MP 0/0 Hu 70 $ 362 room=.
+-> e
+T 341 mode=altar_mode          Arwen Silverleaf(elf) F4@(17,14) HP 28/28 MP 0/0 Hu 69 $ 362 room=A
+-> pray
+T 342 mode=game_loop           Arwen Silverleaf(elf) F4@(17,14) HP 28/28 MP 0/0 Hu 69 $ 362 room=.
+-> l
+T 343 mode=game_loop           Arwen Silverleaf(elf) F4@(17,14) HP 28/28 MP 0/0 Hu 69 $ 362 room=.
+-> s
+T 344 mode=game_loop           Arwen Silverleaf(elf) F4@(17,15) HP 28/28 MP 0/0 Hu 68 $ 362 room=.
+-> l
+T 345 mode=game_loop           Arwen Silverleaf(elf) F4@(17,15) HP 28/28 MP 0/0 Hu 68 $ 362 room=.
+-> s
+T 346 mode=game_loop           Arwen Silverleaf(elf) F4@(17,16) HP 28/28 MP 0/0 Hu 67 $ 362 room=.
+-> l
+T 347 mode=game_loop           Arwen Silverleaf(elf) F4@(17,16) HP 28/28 MP 0/0 Hu 67 $ 362 room=.
+-> e
+T 348 mode=stairs_down_mode    Arwen Silverleaf(elf) F4@(18,16) HP 28/28 MP 0/0 Hu 66 $ 362 room=D
+-> n
+T 349 mode=game_loop           Arwen Silverleaf(elf) F4@(18,15) HP 28/28 MP 0/0 Hu 65 $ 362 room=.
+-> e
+T 350 mode=pool_mode           Arwen Silverleaf(elf) F4@(19,15) HP 28/28 MP 0/0 Hu 64 $ 362 room=P
+-> dr
+T 351 mode=death_screen        Arwen Silverleaf(elf) F4@(19,15) HP -39/28 MP 0/0 Hu 64 $ 362 room=P
+
+=== run finished: turns=351 floor=4 hp=-39/28 gold=362 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/00042_elf.html

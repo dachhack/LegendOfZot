@@ -1,0 +1,1002 @@
+T   0 mode=game_loop           Nain Ironbeard(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+-> l
+T   1 mode=game_loop           Nain Ironbeard(dwa) F1@( 1, 1) HP 60/64 MP 0/0 Hu100 $ 290 room=E
+  You light your Lantern...
+  The lantern reveals 9 nearby rooms!
+  Lantern fuel remaining: 79
+-> e
+T   2 mode=chest_mode          Nain Ironbeard(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=C
+-> o
+T   3 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=.
+  You found a Scroll labeled DAIYEN FANSEN!
+  Upgrade items to +3 maximum.
+-> l
+T   4 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 1) HP 60/64 MP 0/0 Hu 99 $ 290 room=.
+  You light your Lantern...
+  The lantern reveals 5 nearby rooms!
+  Lantern fuel remaining: 78
+-> s
+T   5 mode=combat_mode         Nain Ironbeard(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 290 room=M vs Goblin(L0 HP12/12)
+  [Well-fed] +1 HP
+  Shinies! Give us your shinies, The Novice!
+  You seize the initiative!
+-> a
+T   6 mode=combat_mode         Nain Ironbeard(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 290 room=M vs Goblin(L0 HP12/12)
+  You missed the evil Goblin!
+  Goblin missed Nain Ironbeard!
+-> a
+T   7 mode=combat_mode         Nain Ironbeard(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 290 room=M vs Goblin(L0 HP12/12)
+  You missed the evil Goblin!
+  Goblin missed Nain Ironbeard!
+-> a
+T   8 mode=combat_victory      Nain Ironbeard(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 344 room=.
+  Reward: 50 gold!
+-> back
+T   9 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 344 room=.
+-> l
+T  10 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 2) HP 61/64 MP 0/0 Hu 98 $ 344 room=.
+-> s
+T  11 mode=chest_mode          Nain Ironbeard(dwa) F1@( 2, 3) HP 61/64 MP 0/0 Hu 97 $ 344 room=C
+-> o
+T  12 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 4) HP 62/64 MP 0/0 Hu 96 $ 344 room=.
+-> w
+T  13 mode=game_loop           Nain Ironbeard(dwa) F1@( 1, 4) HP 62/64 MP 0/0 Hu 95 $ 344 room=.
+-> n
+T  14 mode=combat_mode         Nain Ironbeard(dwa) F1@( 1, 3) HP 63/64 MP 0/0 Hu 94 $ 344 room=M vs Goblin(L0 HP30/30)
+-> a
+T  15 mode=combat_mode         Nain Ironbeard(dwa) F1@( 1, 3) HP 62/64 MP 0/0 Hu 94 $ 344 room=M vs Goblin(L0 HP5/30)
+-> a
+T  16 mode=combat_victory      Nain Ironbeard(dwa) F1@( 1, 3) HP 62/64 MP 0/0 Hu 94 $ 353 room=.
+-> back
+T  17 mode=game_loop           Nain Ironbeard(dwa) F1@( 1, 3) HP 62/64 MP 0/0 Hu 94 $ 353 room=.
+-> s
+T  18 mode=game_loop           Nain Ironbeard(dwa) F1@( 1, 4) HP 62/64 MP 0/0 Hu 93 $ 353 room=.
+-> s
+T  19 mode=combat_mode         Nain Ironbeard(dwa) F1@( 1, 5) HP 63/64 MP 0/0 Hu 92 $ 353 room=M vs Goblin(L0 HP30/30)
+-> a
+T  20 mode=combat_mode         Nain Ironbeard(dwa) F1@( 1, 5) HP 63/64 MP 0/0 Hu 92 $ 353 room=M vs Goblin(L0 HP30/30)
+-> a
+T  21 mode=combat_mode         Nain Ironbeard(dwa) F1@( 1, 5) HP 63/64 MP 0/0 Hu 92 $ 353 room=M vs Goblin(L0 HP5/30)
+-> a
+T  22 mode=combat_victory      Nain Ironbeard(dwa) F1@( 1, 5) HP 62/64 MP 0/0 Hu 92 $ 356 room=.
+-> back
+T  23 mode=game_loop           Nain Ironbeard(dwa) F1@( 1, 5) HP 62/64 MP 0/0 Hu 92 $ 356 room=.
+-> e
+T  24 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 5) HP 62/64 MP 0/0 Hu 91 $ 356 room=.
+-> l
+T  25 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 5) HP 62/64 MP 0/0 Hu 91 $ 356 room=.
+-> n
+T  26 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 4) HP 63/64 MP 0/0 Hu 90 $ 356 room=.
+-> n
+T  27 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 3) HP 63/64 MP 0/0 Hu 89 $ 356 room=.
+-> l
+T  28 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 3) HP 63/64 MP 0/0 Hu 89 $ 356 room=.
+-> n
+T  29 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 2) HP 64/64 MP 0/0 Hu 88 $ 356 room=.
+-> e
+T  30 mode=shrine_mode         Nain Ironbeard(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 87 $ 356 room=F
+-> p
+T  31 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 87 $ 356 room=.
+-> s
+T  32 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 3) HP 64/64 MP 0/0 Hu 86 $ 356 room=.
+-> n
+T  33 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 2) HP 64/64 MP 0/0 Hu 85 $ 356 room=.
+-> s
+T  34 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 3) HP 64/64 MP 0/0 Hu 84 $ 356 room=.
+-> i
+T  35 mode=inventory           Nain Ironbeard(dwa) F1@( 3, 3) HP 64/64 MP 0/0 Hu 84 $ 356 room=.
+-> eat3
+T  36 mode=inventory           Nain Ironbeard(dwa) F1@( 3, 3) HP 64/64 MP 0/0 Hu 89 $ 356 room=.
+-> x
+T  37 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 3) HP 64/64 MP 0/0 Hu 89 $ 356 room=.
+-> w
+T  38 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 3) HP 64/64 MP 0/0 Hu 88 $ 356 room=.
+-> s
+T  39 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 4) HP 64/64 MP 0/0 Hu 87 $ 356 room=.
+-> s
+T  40 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 5) HP 64/64 MP 0/0 Hu 86 $ 356 room=.
+-> e
+T  41 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu 85 $ 356 room=.
+-> l
+T  42 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 5) HP 64/64 MP 0/0 Hu 85 $ 356 room=.
+-> s
+T  43 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 84 $ 356 room=M vs Giant Rat(L0 HP22/22)
+-> f
+T  44 mode=flee_direction_mode Nain Ironbeard(dwa) F1@( 3, 6) HP 64/64 MP 0/0 Hu 84 $ 356 room=M
+-> s
+T  45 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 7) HP 64/64 MP 0/0 Hu 84 $ 356 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  46 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 7) HP 63/64 MP 0/0 Hu 84 $ 356 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  47 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 7) HP 62/64 MP 0/0 Hu 84 $ 356 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  48 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 7) HP 62/64 MP 0/0 Hu 84 $ 356 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  49 mode=combat_victory      Nain Ironbeard(dwa) F1@( 3, 7) HP 62/64 MP 0/0 Hu 84 $ 366 room=.
+-> back
+T  50 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 7) HP 62/64 MP 0/0 Hu 84 $ 366 room=.
+-> l
+T  51 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 7) HP 62/64 MP 0/0 Hu 84 $ 366 room=.
+-> e
+T  52 mode=combat_mode         Nain Ironbeard(dwa) F1@( 4, 7) HP 62/64 MP 0/0 Hu 83 $ 366 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T  53 mode=combat_victory      Nain Ironbeard(dwa) F1@( 4, 7) HP 62/64 MP 0/0 Hu 83 $ 374 room=.
+-> back
+T  54 mode=game_loop           Nain Ironbeard(dwa) F1@( 4, 7) HP 62/64 MP 0/0 Hu 83 $ 374 room=.
+-> l
+T  55 mode=game_loop           Nain Ironbeard(dwa) F1@( 4, 7) HP 62/64 MP 0/0 Hu 83 $ 374 room=.
+-> n
+T  56 mode=chest_mode          Nain Ironbeard(dwa) F1@( 4, 6) HP 62/64 MP 0/0 Hu 82 $ 374 room=C
+-> o
+T  57 mode=game_loop           Nain Ironbeard(dwa) F1@( 4, 6) HP 62/64 MP 0/0 Hu 82 $ 404 room=.
+-> l
+T  58 mode=game_loop           Nain Ironbeard(dwa) F1@( 4, 6) HP 62/64 MP 0/0 Hu 82 $ 404 room=.
+-> e
+T  59 mode=library_mode        Nain Ironbeard(dwa) F1@( 5, 6) HP 62/64 MP 0/0 Hu 81 $ 404 room=L
+-> r
+T  60 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 6) HP 62/64 MP 0/0 Hu 81 $ 404 room=.
+-> s
+T  61 mode=chest_mode          Nain Ironbeard(dwa) F1@( 5, 7) HP 63/64 MP 0/0 Hu 80 $ 404 room=C
+-> o
+T  62 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 7) HP 63/64 MP 0/0 Hu 80 $ 414 room=.
+-> l
+T  63 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 7) HP 63/64 MP 0/0 Hu 80 $ 414 room=.
+-> s
+T  64 mode=combat_mode         Nain Ironbeard(dwa) F1@( 5, 8) HP 63/64 MP 0/0 Hu 79 $ 414 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  65 mode=combat_victory      Nain Ironbeard(dwa) F1@( 5, 8) HP 62/64 MP 0/0 Hu 79 $ 420 room=.
+-> back
+T  66 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 8) HP 62/64 MP 0/0 Hu 79 $ 420 room=.
+-> s
+T  67 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 9) HP 62/64 MP 0/0 Hu 78 $ 420 room=.
+-> s
+T  68 mode=combat_mode         Nain Ironbeard(dwa) F1@( 5,10) HP 62/64 MP 0/0 Hu 77 $ 420 room=M vs Skeleton(L0 HP25/25)
+-> a
+T  69 mode=combat_mode         Nain Ironbeard(dwa) F1@( 5,10) HP 61/64 MP 0/0 Hu 77 $ 420 room=M vs Skeleton(L0 HP1/25)
+-> a
+T  70 mode=combat_victory      Nain Ironbeard(dwa) F1@( 5,10) HP 60/64 MP 0/0 Hu 77 $ 430 room=.
+-> back
+T  71 mode=game_loop           Nain Ironbeard(dwa) F1@( 5,10) HP 60/64 MP 0/0 Hu 77 $ 430 room=.
+-> n
+T  72 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 9) HP 61/64 MP 0/0 Hu 76 $ 430 room=.
+-> n
+T  73 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 8) HP 61/64 MP 0/0 Hu 75 $ 430 room=.
+-> n
+T  74 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 7) HP 61/64 MP 0/0 Hu 74 $ 430 room=.
+-> n
+T  75 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 6) HP 61/64 MP 0/0 Hu 73 $ 430 room=.
+-> e
+T  76 mode=library_mode        Nain Ironbeard(dwa) F1@( 6, 6) HP 62/64 MP 0/0 Hu 72 $ 430 room=L
+-> r
+T  77 mode=library_read_decision_mode Nain Ironbeard(dwa) F1@( 6, 6) HP 62/64 MP 0/0 Hu 72 $ 430 room=L
+-> y
+T  78 mode=game_loop           Nain Ironbeard(dwa) F1@( 6, 6) HP 62/64 MP 0/0 Hu 72 $ 480 room=.
+-> l
+T  79 mode=game_loop           Nain Ironbeard(dwa) F1@( 6, 6) HP 62/64 MP 0/0 Hu 72 $ 480 room=.
+-> n
+T  80 mode=library_mode        Nain Ironbeard(dwa) F1@( 6, 5) HP 62/64 MP 0/0 Hu 71 $ 480 room=L
+-> r
+T  81 mode=library_read_decision_mode Nain Ironbeard(dwa) F1@( 6, 5) HP 62/64 MP 0/0 Hu 71 $ 480 room=L
+-> y
+T  82 mode=game_loop           Nain Ironbeard(dwa) F1@( 6, 5) HP 62/64 MP 0/0 Hu 71 $ 480 room=.
+-> l
+T  83 mode=game_loop           Nain Ironbeard(dwa) F1@( 6, 5) HP 62/64 MP 0/0 Hu 71 $ 480 room=.
+-> e
+T  84 mode=game_loop           Nain Ironbeard(dwa) F1@( 7, 5) HP 62/64 MP 0/0 Hu 70 $ 480 room=.
+-> e
+T  85 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 5) HP 62/64 MP 0/0 Hu 69 $ 480 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T  86 mode=combat_victory      Nain Ironbeard(dwa) F1@( 8, 5) HP 61/64 MP 0/0 Hu 69 $ 488 room=.
+-> back
+T  87 mode=game_loop           Nain Ironbeard(dwa) F1@( 8, 5) HP 61/64 MP 0/0 Hu 69 $ 488 room=.
+-> i
+T  88 mode=inventory           Nain Ironbeard(dwa) F1@( 8, 5) HP 61/64 MP 0/0 Hu 69 $ 488 room=.
+-> eat2
+T  89 mode=inventory           Nain Ironbeard(dwa) F1@( 8, 5) HP 61/64 MP 0/0 Hu 75 $ 488 room=.
+-> eat1
+T  90 mode=inventory           Nain Ironbeard(dwa) F1@( 8, 5) HP 61/64 MP 0/0 Hu 80 $ 488 room=.
+-> x
+T  91 mode=game_loop           Nain Ironbeard(dwa) F1@( 8, 5) HP 61/64 MP 0/0 Hu 80 $ 488 room=.
+-> s
+T  92 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 6) HP 62/64 MP 0/0 Hu 79 $ 488 room=M vs Kobold(L0 HP20/20)
+-> a
+T  93 mode=combat_victory      Nain Ironbeard(dwa) F1@( 8, 6) HP 62/64 MP 0/0 Hu 79 $ 497 room=.
+-> back
+T  94 mode=game_loop           Nain Ironbeard(dwa) F1@( 8, 6) HP 62/64 MP 0/0 Hu 79 $ 497 room=.
+-> l
+T  95 mode=game_loop           Nain Ironbeard(dwa) F1@( 8, 6) HP 62/64 MP 0/0 Hu 79 $ 497 room=.
+-> e
+T  96 mode=combat_mode         Nain Ironbeard(dwa) F1@( 9, 6) HP 62/64 MP 0/0 Hu 78 $ 497 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  97 mode=combat_victory      Nain Ironbeard(dwa) F1@( 9, 6) HP 62/64 MP 0/0 Hu 78 $ 605 room=.
+-> back
+T  98 mode=game_loop           Nain Ironbeard(dwa) F1@( 9, 6) HP 62/64 MP 0/0 Hu 78 $ 605 room=.
+-> l
+T  99 mode=game_loop           Nain Ironbeard(dwa) F1@( 9, 6) HP 62/64 MP 0/0 Hu 78 $ 605 room=.
+-> s
+T 100 mode=game_loop           Nain Ironbeard(dwa) F1@( 9, 7) HP 62/64 MP 0/0 Hu 77 $ 605 room=.
+-> s
+T 101 mode=game_loop           Nain Ironbeard(dwa) F1@( 9, 8) HP 62/64 MP 0/0 Hu 76 $ 605 room=.
+-> s
+T 102 mode=pool_mode           Nain Ironbeard(dwa) F1@( 9, 9) HP 63/64 MP 0/0 Hu 75 $ 605 room=P
+-> dr
+T 103 mode=game_loop           Nain Ironbeard(dwa) F1@( 9, 9) HP 63/64 MP 0/0 Hu 75 $ 605 room=.
+-> s
+T 104 mode=altar_mode          Nain Ironbeard(dwa) F1@( 9,10) HP 63/64 MP 0/0 Hu 74 $ 605 room=A
+-> pray
+T 105 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,10) HP 63/64 MP 0/0 Hu 74 $ 605 room=.
+-> s
+T 106 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,11) HP 63/64 MP 0/0 Hu 73 $ 605 room=.
+-> s
+T 107 mode=chest_mode          Nain Ironbeard(dwa) F1@( 9,12) HP 63/64 MP 0/0 Hu 72 $ 605 room=C
+-> o
+T 108 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,12) HP 58/64 MP 0/0 Hu 72 $ 605 room=.
+-> e
+T 109 mode=combat_mode         Nain Ironbeard(dwa) F1@(10,12) HP 59/64 MP 0/0 Hu 71 $ 605 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 110 mode=combat_mode         Nain Ironbeard(dwa) F1@(10,12) HP 58/64 MP 0/0 Hu 71 $ 605 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 111 mode=combat_mode         Nain Ironbeard(dwa) F1@(10,12) HP 57/64 MP 0/0 Hu 71 $ 605 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 112 mode=combat_mode         Nain Ironbeard(dwa) F1@(10,12) HP 56/64 MP 0/0 Hu 71 $ 605 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 113 mode=combat_mode         Nain Ironbeard(dwa) F1@(10,12) HP 56/64 MP 0/0 Hu 71 $ 605 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 114 mode=combat_victory      Nain Ironbeard(dwa) F1@(10,12) HP 56/64 MP 0/0 Hu 71 $ 612 room=.
+-> back
+T 115 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 56/64 MP 0/0 Hu 71 $ 612 room=.
+-> e
+T 116 mode=combat_mode         Nain Ironbeard(dwa) F1@(11,12) HP 56/64 MP 0/0 Hu 70 $ 612 room=M vs Goblin(L0 HP12/12)
+-> f
+T 117 mode=flee_direction_mode Nain Ironbeard(dwa) F1@(11,12) HP 56/64 MP 0/0 Hu 70 $ 612 room=M
+-> s
+T 118 mode=combat_mode         Nain Ironbeard(dwa) F1@(11,13) HP 56/64 MP 0/0 Hu 70 $ 612 room=M vs Stirge(L0 HP6/6)
+-> f
+T 119 mode=flee_direction_mode Nain Ironbeard(dwa) F1@(11,13) HP 56/64 MP 0/0 Hu 70 $ 612 room=M
+-> s
+T 120 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 56/64 MP 0/0 Hu 70 $ 612 room=.
+-> l
+T 121 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 56/64 MP 0/0 Hu 70 $ 612 room=.
+-> e
+T 122 mode=chest_mode          Nain Ironbeard(dwa) F1@(12,14) HP 56/64 MP 0/0 Hu 69 $ 612 room=C
+-> o
+T 123 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 56/64 MP 0/0 Hu 69 $ 612 room=.
+-> l
+T 124 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 56/64 MP 0/0 Hu 69 $ 612 room=.
+-> n
+T 125 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 56/64 MP 0/0 Hu 68 $ 612 room=.
+-> e
+T 126 mode=vendor_shop         Nain Ironbeard(dwa) F1@(13,13) HP 57/64 MP 0/0 Hu 67 $ 612 room=V
+-> b16
+T 127 mode=vendor_shop         Nain Ironbeard(dwa) F1@(13,13) HP 57/64 MP 0/0 Hu 67 $ 602 room=V
+-> b4
+T 128 mode=vendor_shop         Nain Ironbeard(dwa) F1@(13,13) HP 57/64 MP 0/0 Hu 67 $ 552 room=V
+-> b4
+T 129 mode=vendor_shop         Nain Ironbeard(dwa) F1@(13,13) HP 57/64 MP 0/0 Hu 67 $ 502 room=V
+-> b4
+T 130 mode=vendor_shop         Nain Ironbeard(dwa) F1@(13,13) HP 57/64 MP 0/0 Hu 67 $ 472 room=V
+-> b9
+T 131 mode=vendor_shop         Nain Ironbeard(dwa) F1@(13,13) HP 57/64 MP 0/0 Hu 67 $ 322 room=V
+-> b9
+T 132 mode=vendor_shop         Nain Ironbeard(dwa) F1@(13,13) HP 57/64 MP 0/0 Hu 67 $ 172 room=V
+-> id8
+T 133 mode=vendor_shop         Nain Ironbeard(dwa) F1@(13,13) HP 57/64 MP 0/0 Hu 67 $ 97 room=V
+-> x
+T 134 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 57/64 MP 0/0 Hu 67 $ 97 room=V
+-> n
+T 135 mode=combat_mode         Nain Ironbeard(dwa) F1@(13,12) HP 57/64 MP 0/0 Hu 66 $ 97 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 136 mode=combat_victory      Nain Ironbeard(dwa) F1@(13,12) HP 57/64 MP 0/0 Hu 66 $ 103 room=.
+-> back
+T 137 mode=game_loop           Nain Ironbeard(dwa) F1@(13,12) HP 57/64 MP 0/0 Hu 66 $ 103 room=.
+-> e
+T 138 mode=game_loop           Nain Ironbeard(dwa) F1@(14,12) HP 57/64 MP 0/0 Hu 65 $ 103 room=.
+-> l
+T 139 mode=game_loop           Nain Ironbeard(dwa) F1@(14,12) HP 57/64 MP 0/0 Hu 65 $ 103 room=.
+-> s
+T 140 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 57/64 MP 0/0 Hu 64 $ 103 room=.
+-> l
+T 141 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 57/64 MP 0/0 Hu 64 $ 103 room=.
+-> e
+T 142 mode=game_loop           Nain Ironbeard(dwa) F1@(15,13) HP 58/64 MP 0/0 Hu 63 $ 103 room=.
+-> l
+T 143 mode=game_loop           Nain Ironbeard(dwa) F1@(15,13) HP 58/64 MP 0/0 Hu 63 $ 103 room=.
+-> n
+T 144 mode=game_loop           Nain Ironbeard(dwa) F1@(15,12) HP 58/64 MP 0/0 Hu 62 $ 103 room=.
+-> s
+T 145 mode=game_loop           Nain Ironbeard(dwa) F1@(15,13) HP 58/64 MP 0/0 Hu 61 $ 103 room=.
+-> n
+T 146 mode=game_loop           Nain Ironbeard(dwa) F1@(15,12) HP 58/64 MP 0/0 Hu 60 $ 103 room=.
+-> w
+T 147 mode=game_loop           Nain Ironbeard(dwa) F1@(14,12) HP 58/64 MP 0/0 Hu 59 $ 103 room=.
+-> s
+T 148 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 58/64 MP 0/0 Hu 58 $ 103 room=.
+-> w
+T 149 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 58/64 MP 0/0 Hu 57 $ 103 room=V
+-> w
+T 150 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 58/64 MP 0/0 Hu 56 $ 103 room=.
+-> i
+T 151 mode=inventory           Nain Ironbeard(dwa) F1@(12,13) HP 58/64 MP 0/0 Hu 56 $ 103 room=.
+-> u3
+T 152 mode=inventory           Nain Ironbeard(dwa) F1@(12,13) HP 64/64 MP 0/0 Hu 56 $ 103 room=.
+-> u5
+T 153 mode=upgrade_scroll_mode Nain Ironbeard(dwa) F1@(12,13) HP 64/64 MP 0/0 Hu 56 $ 103 room=.
+-> 1
+T 154 mode=inventory           Nain Ironbeard(dwa) F1@(12,13) HP 64/64 MP 0/0 Hu 56 $ 103 room=.
+-> x
+T 155 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 64/64 MP 0/0 Hu 56 $ 103 room=.
+-> i
+T 156 mode=inventory           Nain Ironbeard(dwa) F1@(12,13) HP 64/64 MP 0/0 Hu 56 $ 103 room=.
+-> eat3
+T 157 mode=inventory           Nain Ironbeard(dwa) F1@(12,13) HP 64/64 MP 0/0 Hu 62 $ 103 room=.
+-> eat1
+T 158 mode=inventory           Nain Ironbeard(dwa) F1@(12,13) HP 64/64 MP 0/0 Hu100 $ 103 room=.
+-> x
+T 159 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 64/64 MP 0/0 Hu100 $ 103 room=.
+-> w
+T 160 mode=combat_mode         Nain Ironbeard(dwa) F1@(11,13) HP 64/64 MP 0/0 Hu 99 $ 103 room=M vs Stirge(L0 HP6/6)
+-> a
+T 161 mode=combat_victory      Nain Ironbeard(dwa) F1@(11,13) HP 64/74 MP 0/0 Hu 99 $ 107 room=.
+-> back
+T 162 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 64/74 MP 0/0 Hu 99 $ 107 room=.
+-> n
+T 163 mode=combat_mode         Nain Ironbeard(dwa) F1@(11,12) HP 64/74 MP 0/0 Hu 98 $ 107 room=M vs Goblin(L0 HP12/12)
+-> a
+T 164 mode=combat_victory      Nain Ironbeard(dwa) F1@(11,12) HP 64/74 MP 0/0 Hu 98 $ 110 room=.
+-> back
+T 165 mode=game_loop           Nain Ironbeard(dwa) F1@(11,12) HP 64/74 MP 0/0 Hu 98 $ 110 room=.
+-> w
+T 166 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 65/74 MP 0/0 Hu 97 $ 110 room=.
+-> n
+T 167 mode=game_loop           Nain Ironbeard(dwa) F1@(10,11) HP 65/74 MP 0/0 Hu 96 $ 110 room=.
+-> w
+T 168 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,11) HP 66/74 MP 0/0 Hu 95 $ 110 room=.
+-> n
+T 169 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,10) HP 66/74 MP 0/0 Hu 94 $ 110 room=.
+-> n
+T 170 mode=game_loop           Nain Ironbeard(dwa) F1@( 9, 9) HP 67/74 MP 0/0 Hu 93 $ 110 room=.
+-> e
+T 171 mode=combat_mode         Nain Ironbeard(dwa) F1@(10, 9) HP 67/74 MP 0/0 Hu 92 $ 110 room=M vs Giant Centipede(L0 HP15/15)
+-> a
+T 172 mode=combat_victory      Nain Ironbeard(dwa) F1@(10, 9) HP 67/74 MP 0/0 Hu 92 $ 112 room=.
+-> back
+T 173 mode=game_loop           Nain Ironbeard(dwa) F1@(10, 9) HP 67/74 MP 0/0 Hu 92 $ 112 room=.
+-> e
+T 174 mode=combat_mode         Nain Ironbeard(dwa) F1@(11, 9) HP 68/74 MP 0/0 Hu 91 $ 112 room=M vs Stirge(L0 HP6/6)
+-> a
+T 175 mode=combat_mode         Nain Ironbeard(dwa) F1@(11, 9) HP 64/74 MP 0/0 Hu 91 $ 112 room=M vs Stirge(L0 HP6/6)
+-> f
+T 176 mode=flee_direction_mode Nain Ironbeard(dwa) F1@(11, 9) HP 64/74 MP 0/0 Hu 91 $ 112 room=M
+-> w
+T 177 mode=game_loop           Nain Ironbeard(dwa) F1@(10, 9) HP 64/74 MP 0/0 Hu 91 $ 112 room=.
+-> e
+T 178 mode=combat_mode         Nain Ironbeard(dwa) F1@(11, 9) HP 64/74 MP 0/0 Hu 90 $ 112 room=M vs Stirge(L0 HP6/6)
+-> a
+T 179 mode=combat_victory      Nain Ironbeard(dwa) F1@(11, 9) HP 63/74 MP 0/0 Hu 90 $ 115 room=.
+-> back
+T 180 mode=game_loop           Nain Ironbeard(dwa) F1@(11, 9) HP 63/74 MP 0/0 Hu 90 $ 115 room=.
+-> w
+T 181 mode=game_loop           Nain Ironbeard(dwa) F1@(10, 9) HP 64/74 MP 0/0 Hu 89 $ 115 room=.
+-> w
+T 182 mode=game_loop           Nain Ironbeard(dwa) F1@( 9, 9) HP 64/74 MP 0/0 Hu 88 $ 115 room=.
+-> w
+T 183 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 9) HP 65/74 MP 0/0 Hu 87 $ 115 room=M vs Goblin(L0 HP30/30)
+-> a
+T 184 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 9) HP 65/74 MP 0/0 Hu 87 $ 115 room=M vs Goblin(L0 HP30/30)
+-> a
+T 185 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 9) HP 64/74 MP 0/0 Hu 87 $ 115 room=M vs Goblin(L0 HP4/30)
+-> a
+T 186 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 9) HP 63/74 MP 0/0 Hu 87 $ 115 room=M vs Goblin(L0 HP4/30)
+-> a
+T 187 mode=combat_victory      Nain Ironbeard(dwa) F1@( 8, 9) HP 63/74 MP 0/0 Hu 87 $ 124 room=.
+-> back
+T 188 mode=game_loop           Nain Ironbeard(dwa) F1@( 8, 9) HP 63/74 MP 0/0 Hu 87 $ 124 room=.
+-> n
+T 189 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 8) HP 63/74 MP 0/0 Hu 86 $ 124 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 190 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 8) HP 63/74 MP 0/0 Hu 86 $ 124 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 191 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 8) HP 63/74 MP 0/0 Hu 86 $ 124 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 192 mode=combat_mode         Nain Ironbeard(dwa) F1@( 8, 8) HP 62/74 MP 0/0 Hu 86 $ 124 room=M vs Skeleton(L0 HP25/25)
+-> a
+T 193 mode=combat_victory      Nain Ironbeard(dwa) F1@( 8, 8) HP 61/74 MP 0/0 Hu 86 $ 126 room=.
+-> back
+T 194 mode=game_loop           Nain Ironbeard(dwa) F1@( 8, 8) HP 61/74 MP 0/0 Hu 86 $ 126 room=.
+-> w
+T 195 mode=garden_mode         Nain Ironbeard(dwa) F1@( 7, 8) HP 62/74 MP 0/0 Hu 85 $ 126 room=G
+-> h
+T 196 mode=game_loop           Nain Ironbeard(dwa) F1@( 7, 8) HP 62/74 MP 0/0 Hu 85 $ 126 room=.
+-> n
+T 197 mode=game_loop           Nain Ironbeard(dwa) F1@( 7, 7) HP 62/74 MP 0/0 Hu 84 $ 126 room=.
+-> n
+T 198 mode=game_loop           Nain Ironbeard(dwa) F1@( 7, 6) HP 62/74 MP 0/0 Hu 83 $ 126 room=.
+-> w
+T 199 mode=game_loop           Nain Ironbeard(dwa) F1@( 6, 6) HP 62/74 MP 0/0 Hu 82 $ 126 room=.
+-> w
+T 200 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 6) HP 63/74 MP 0/0 Hu 81 $ 126 room=.
+-> s
+T 201 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 7) HP 63/74 MP 0/0 Hu 80 $ 126 room=.
+-> w
+T 202 mode=game_loop           Nain Ironbeard(dwa) F1@( 4, 7) HP 63/74 MP 0/0 Hu 79 $ 126 room=.
+-> w
+T 203 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 7) HP 63/74 MP 0/0 Hu 78 $ 126 room=.
+-> w
+T 204 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 7) HP 64/74 MP 0/0 Hu 77 $ 126 room=.
+-> i
+T 205 mode=inventory           Nain Ironbeard(dwa) F1@( 2, 7) HP 64/74 MP 0/0 Hu 77 $ 126 room=.
+-> u4
+T 206 mode=inventory           Nain Ironbeard(dwa) F1@( 2, 7) HP 74/74 MP 0/0 Hu 77 $ 126 room=.
+-> x
+T 207 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 7) HP 74/74 MP 0/0 Hu 77 $ 126 room=.
+-> i
+T 208 mode=inventory           Nain Ironbeard(dwa) F1@( 2, 7) HP 74/74 MP 0/0 Hu 77 $ 126 room=.
+-> eat3
+T 209 mode=inventory           Nain Ironbeard(dwa) F1@( 2, 7) HP 74/74 MP 0/0 Hu 82 $ 126 room=.
+-> x
+T 210 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 7) HP 74/74 MP 0/0 Hu 82 $ 126 room=.
+-> l
+T 211 mode=game_loop           Nain Ironbeard(dwa) F1@( 2, 7) HP 74/74 MP 0/0 Hu 82 $ 126 room=.
+-> e
+T 212 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 7) HP 74/74 MP 0/0 Hu 81 $ 126 room=.
+-> n
+T 213 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 74/74 MP 0/0 Hu 80 $ 126 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 214 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 73/74 MP 0/0 Hu 80 $ 126 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 215 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 72/74 MP 0/0 Hu 80 $ 126 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 216 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 71/74 MP 0/0 Hu 80 $ 126 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 217 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 70/74 MP 0/0 Hu 80 $ 126 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 218 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 69/74 MP 0/0 Hu 80 $ 126 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 219 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 68/74 MP 0/0 Hu 80 $ 126 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 220 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 67/74 MP 0/0 Hu 80 $ 126 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 221 mode=combat_mode         Nain Ironbeard(dwa) F1@( 3, 6) HP 66/74 MP 0/0 Hu 80 $ 126 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 222 mode=combat_victory      Nain Ironbeard(dwa) F1@( 3, 6) HP 65/74 MP 0/0 Hu 80 $ 129 room=.
+-> back
+T 223 mode=game_loop           Nain Ironbeard(dwa) F1@( 3, 6) HP 65/74 MP 0/0 Hu 80 $ 129 room=.
+-> e
+T 224 mode=game_loop           Nain Ironbeard(dwa) F1@( 4, 6) HP 63/74 MP 0/0 Hu 79 $ 129 room=.
+-> e
+T 225 mode=game_loop           Nain Ironbeard(dwa) F1@( 5, 6) HP 61/74 MP 0/0 Hu 78 $ 129 room=.
+-> e
+T 226 mode=game_loop           Nain Ironbeard(dwa) F1@( 6, 6) HP 59/74 MP 0/0 Hu 77 $ 129 room=.
+-> e
+T 227 mode=game_loop           Nain Ironbeard(dwa) F1@( 7, 6) HP 60/74 MP 0/0 Hu 76 $ 129 room=.
+-> s
+T 228 mode=game_loop           Nain Ironbeard(dwa) F1@( 7, 7) HP 60/74 MP 0/0 Hu 75 $ 129 room=.
+-> s
+T 229 mode=game_loop           Nain Ironbeard(dwa) F1@( 7, 8) HP 60/74 MP 0/0 Hu 74 $ 129 room=.
+-> e
+T 230 mode=game_loop           Nain Ironbeard(dwa) F1@( 8, 8) HP 60/74 MP 0/0 Hu 73 $ 129 room=.
+-> l
+T 231 mode=game_loop           Nain Ironbeard(dwa) F1@( 8, 8) HP 60/74 MP 0/0 Hu 73 $ 129 room=.
+-> s
+T 232 mode=game_loop           Nain Ironbeard(dwa) F1@( 8, 9) HP 61/74 MP 0/0 Hu 72 $ 129 room=.
+-> e
+T 233 mode=game_loop           Nain Ironbeard(dwa) F1@( 9, 9) HP 61/74 MP 0/0 Hu 71 $ 129 room=.
+-> s
+T 234 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,10) HP 61/74 MP 0/0 Hu 70 $ 129 room=.
+-> s
+T 235 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,11) HP 61/74 MP 0/0 Hu 69 $ 129 room=.
+-> s
+T 236 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,12) HP 62/74 MP 0/0 Hu 68 $ 129 room=.
+-> e
+T 237 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 62/74 MP 0/0 Hu 67 $ 129 room=.
+-> e
+T 238 mode=game_loop           Nain Ironbeard(dwa) F1@(11,12) HP 62/74 MP 0/0 Hu 66 $ 129 room=.
+-> s
+T 239 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 62/74 MP 0/0 Hu 65 $ 129 room=.
+-> s
+T 240 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 63/74 MP 0/0 Hu 64 $ 129 room=.
+-> l
+T 241 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 63/74 MP 0/0 Hu 64 $ 129 room=.
+-> e
+T 242 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 63/74 MP 0/0 Hu 63 $ 129 room=.
+-> s
+T 243 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 63/74 MP 0/0 Hu 62 $ 129 room=.
+-> l
+T 244 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 63/74 MP 0/0 Hu 62 $ 129 room=.
+-> e
+T 245 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 63/74 MP 0/0 Hu 61 $ 129 room=.
+-> l
+T 246 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 63/74 MP 0/0 Hu 61 $ 129 room=.
+-> s
+T 247 mode=combat_mode         Nain Ironbeard(dwa) F1@(13,16) HP 64/74 MP 0/0 Hu 60 $ 129 room=M vs Stirge(L0 HP6/6)
+-> a
+T 248 mode=combat_victory      Nain Ironbeard(dwa) F1@(13,16) HP 64/74 MP 0/0 Hu 60 $ 131 room=.
+-> back
+T 249 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 64/74 MP 0/0 Hu 60 $ 131 room=.
+-> e
+T 250 mode=combat_mode         Nain Ironbeard(dwa) F1@(14,16) HP 64/74 MP 0/0 Hu 59 $ 131 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 251 mode=combat_mode         Nain Ironbeard(dwa) F1@(14,16) HP 63/74 MP 0/0 Hu 59 $ 131 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 252 mode=combat_mode         Nain Ironbeard(dwa) F1@(14,16) HP 62/74 MP 0/0 Hu 59 $ 131 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 253 mode=combat_mode         Nain Ironbeard(dwa) F1@(14,16) HP 61/74 MP 0/0 Hu 59 $ 131 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 254 mode=combat_victory      Nain Ironbeard(dwa) F1@(14,16) HP 60/74 MP 0/0 Hu 59 $ 139 room=.
+-> back
+T 255 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 60/74 MP 0/0 Hu 59 $ 139 room=.
+-> i
+T 256 mode=inventory           Nain Ironbeard(dwa) F1@(14,16) HP 60/74 MP 0/0 Hu 59 $ 139 room=.
+-> u4
+T 257 mode=inventory           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 59 $ 139 room=.
+-> x
+T 258 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 59 $ 139 room=.
+-> i
+T 259 mode=inventory           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 59 $ 139 room=.
+-> eat2
+T 260 mode=inventory           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 65 $ 139 room=.
+-> e3
+T 261 mode=inventory           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 65 $ 139 room=.
+-> x
+T 262 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 65 $ 139 room=.
+-> e
+T 263 mode=dungeon_mode        Nain Ironbeard(dwa) F1@(15,16) HP 74/74 MP 0/0 Hu 64 $ 139 room=N
+-> u
+T 264 mode=dungeon_unlocked_mode Nain Ironbeard(dwa) F1@(15,16) HP 74/74 MP 0/0 Hu 64 $ 139 room=N
+-> r
+T 265 mode=game_loop           Nain Ironbeard(dwa) F1@(15,16) HP 74/74 MP 0/0 Hu 64 $ 139 room=N
+-> l
+T 266 mode=game_loop           Nain Ironbeard(dwa) F1@(15,16) HP 74/74 MP 0/0 Hu 64 $ 139 room=N
+-> n
+T 267 mode=tomb_mode           Nain Ironbeard(dwa) F1@(15,15) HP 74/74 MP 0/0 Hu 63 $ 139 room=T
+-> p
+T 268 mode=game_loop           Nain Ironbeard(dwa) F1@(15,15) HP 74/74 MP 0/0 Hu 63 $ 139 room=T
+-> w
+T 269 mode=pool_mode           Nain Ironbeard(dwa) F1@(14,15) HP 74/74 MP 0/0 Hu 62 $ 139 room=P
+-> dr
+T 270 mode=game_loop           Nain Ironbeard(dwa) F1@(14,15) HP 74/74 MP 0/0 Hu 62 $ 139 room=.
+-> l
+T 271 mode=game_loop           Nain Ironbeard(dwa) F1@(14,15) HP 74/74 MP 0/0 Hu 62 $ 139 room=.
+-> n
+T 272 mode=combat_mode         Nain Ironbeard(dwa) F1@(14,14) HP 74/74 MP 0/0 Hu 61 $ 139 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 273 mode=combat_victory      Nain Ironbeard(dwa) F1@(14,14) HP 73/74 MP 0/0 Hu 61 $ 147 room=.
+-> back
+T 274 mode=game_loop           Nain Ironbeard(dwa) F1@(14,14) HP 73/74 MP 0/0 Hu 61 $ 147 room=.
+-> n
+T 275 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 73/74 MP 0/0 Hu 60 $ 147 room=.
+-> n
+T 276 mode=game_loop           Nain Ironbeard(dwa) F1@(14,12) HP 73/74 MP 0/0 Hu 59 $ 147 room=.
+-> w
+T 277 mode=game_loop           Nain Ironbeard(dwa) F1@(13,12) HP 73/74 MP 0/0 Hu 58 $ 147 room=.
+-> s
+T 278 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 73/74 MP 0/0 Hu 57 $ 147 room=V
+-> i
+T 279 mode=inventory           Nain Ironbeard(dwa) F1@(13,13) HP 73/74 MP 0/0 Hu 57 $ 147 room=V
+-> eat1
+T 280 mode=inventory           Nain Ironbeard(dwa) F1@(13,13) HP 73/74 MP 0/0 Hu 72 $ 147 room=V
+-> x
+T 281 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 73/74 MP 0/0 Hu 72 $ 147 room=V
+-> w
+T 282 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 73/74 MP 0/0 Hu 71 $ 147 room=.
+-> s
+T 283 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 73/74 MP 0/0 Hu 70 $ 147 room=.
+-> s
+T 284 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 73/74 MP 0/0 Hu 69 $ 147 room=.
+-> e
+T 285 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 74/74 MP 0/0 Hu 68 $ 147 room=.
+-> s
+T 286 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 74/74 MP 0/0 Hu 67 $ 147 room=.
+-> e
+T 287 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 66 $ 147 room=.
+-> i
+T 288 mode=inventory           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 66 $ 147 room=.
+-> eat1
+T 289 mode=inventory           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 72 $ 147 room=.
+-> x
+T 290 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 72 $ 147 room=.
+-> l
+T 291 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 72 $ 147 room=.
+-> w
+T 292 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 74/74 MP 0/0 Hu 71 $ 147 room=.
+-> n
+T 293 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 74/74 MP 0/0 Hu 70 $ 147 room=.
+-> w
+T 294 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 74/74 MP 0/0 Hu 69 $ 147 room=.
+-> n
+T 295 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 74/74 MP 0/0 Hu 68 $ 147 room=.
+-> n
+T 296 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 74/74 MP 0/0 Hu 67 $ 147 room=.
+-> e
+T 297 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 74/74 MP 0/0 Hu 66 $ 147 room=V
+-> e
+T 298 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 74/74 MP 0/0 Hu 65 $ 147 room=.
+-> s
+T 299 mode=game_loop           Nain Ironbeard(dwa) F1@(14,14) HP 74/74 MP 0/0 Hu 64 $ 147 room=.
+-> n
+T 300 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 74/74 MP 0/0 Hu 63 $ 147 room=.
+-> l
+T 301 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 74/74 MP 0/0 Hu 63 $ 147 room=.
+-> e
+T 302 mode=game_loop           Nain Ironbeard(dwa) F1@(15,13) HP 74/74 MP 0/0 Hu 62 $ 147 room=.
+-> n
+T 303 mode=game_loop           Nain Ironbeard(dwa) F1@(15,12) HP 74/74 MP 0/0 Hu 61 $ 147 room=.
+-> w
+T 304 mode=game_loop           Nain Ironbeard(dwa) F1@(14,12) HP 74/74 MP 0/0 Hu 60 $ 147 room=.
+-> w
+T 305 mode=game_loop           Nain Ironbeard(dwa) F1@(13,12) HP 74/74 MP 0/0 Hu 59 $ 147 room=.
+-> s
+T 306 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 74/74 MP 0/0 Hu 58 $ 147 room=V
+-> e
+T 307 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 74/74 MP 0/0 Hu 57 $ 147 room=.
+-> s
+T 308 mode=game_loop           Nain Ironbeard(dwa) F1@(14,14) HP 74/74 MP 0/0 Hu 56 $ 147 room=.
+-> n
+T 309 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 74/74 MP 0/0 Hu 55 $ 147 room=.
+-> e
+T 310 mode=game_loop           Nain Ironbeard(dwa) F1@(15,13) HP 74/74 MP 0/0 Hu 54 $ 147 room=.
+-> l
+T 311 mode=game_loop           Nain Ironbeard(dwa) F1@(15,13) HP 74/74 MP 0/0 Hu 54 $ 147 room=.
+-> n
+T 312 mode=game_loop           Nain Ironbeard(dwa) F1@(15,12) HP 74/74 MP 0/0 Hu 53 $ 147 room=.
+-> w
+T 313 mode=game_loop           Nain Ironbeard(dwa) F1@(14,12) HP 74/74 MP 0/0 Hu 52 $ 147 room=.
+-> w
+T 314 mode=game_loop           Nain Ironbeard(dwa) F1@(13,12) HP 74/74 MP 0/0 Hu 51 $ 147 room=.
+-> s
+T 315 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 74/74 MP 0/0 Hu 50 $ 147 room=V
+-> e
+T 316 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 74/74 MP 0/0 Hu 49 $ 147 room=.
+-> s
+T 317 mode=game_loop           Nain Ironbeard(dwa) F1@(14,14) HP 74/74 MP 0/0 Hu 48 $ 147 room=.
+-> n
+T 318 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 74/74 MP 0/0 Hu 47 $ 147 room=.
+-> n
+T 319 mode=game_loop           Nain Ironbeard(dwa) F1@(14,12) HP 74/74 MP 0/0 Hu 46 $ 147 room=.
+-> w
+T 320 mode=game_loop           Nain Ironbeard(dwa) F1@(13,12) HP 74/74 MP 0/0 Hu 45 $ 147 room=.
+-> l
+T 321 mode=game_loop           Nain Ironbeard(dwa) F1@(13,12) HP 74/74 MP 0/0 Hu 45 $ 147 room=.
+-> s
+T 322 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 74/74 MP 0/0 Hu 44 $ 147 room=V
+-> w
+T 323 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 74/74 MP 0/0 Hu 43 $ 147 room=.
+-> s
+T 324 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 74/74 MP 0/0 Hu 42 $ 147 room=.
+-> s
+T 325 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 74/74 MP 0/0 Hu 41 $ 147 room=.
+-> e
+T 326 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 74/74 MP 0/0 Hu 40 $ 147 room=.
+-> s
+T 327 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 74/74 MP 0/0 Hu 39 $ 147 room=.
+-> e
+T 328 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 74/74 MP 0/0 Hu 38 $ 147 room=.
+-> w
+T 329 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 74/74 MP 0/0 Hu 37 $ 147 room=.
+-> n
+T 330 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 74/74 MP 0/0 Hu 36 $ 147 room=.
+-> l
+T 331 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 74/74 MP 0/0 Hu 36 $ 147 room=.
+-> w
+T 332 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 74/74 MP 0/0 Hu 35 $ 147 room=.
+-> w
+T 333 mode=combat_mode         Nain Ironbeard(dwa) F1@(11,15) HP 74/74 MP 0/0 Hu 34 $ 147 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 334 mode=combat_mode         Nain Ironbeard(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 34 $ 147 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 335 mode=combat_victory      Nain Ironbeard(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 34 $ 156 room=.
+-> back
+T 336 mode=game_loop           Nain Ironbeard(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu 34 $ 156 room=.
+-> n
+T 337 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 73/74 MP 0/0 Hu 33 $ 156 room=.
+-> n
+T 338 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 73/74 MP 0/0 Hu 32 $ 156 room=.
+-> e
+T 339 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 73/74 MP 0/0 Hu 31 $ 156 room=.
+-> s
+T 340 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 73/74 MP 0/0 Hu 30 $ 156 room=.
+-> l
+T 341 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 73/74 MP 0/0 Hu 30 $ 156 room=.
+-> s
+T 342 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 73/74 MP 0/0 Hu 29 $ 156 room=.
+-> e
+T 343 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 73/74 MP 0/0 Hu 28 $ 156 room=.
+-> s
+T 344 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 73/74 MP 0/0 Hu 27 $ 156 room=.
+-> e
+T 345 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 73/74 MP 0/0 Hu 26 $ 156 room=.
+-> w
+T 346 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 73/74 MP 0/0 Hu 25 $ 156 room=.
+-> n
+T 347 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 73/74 MP 0/0 Hu 24 $ 156 room=.
+-> w
+T 348 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 73/74 MP 0/0 Hu 23 $ 156 room=.
+-> n
+T 349 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 73/74 MP 0/0 Hu 22 $ 156 room=.
+-> n
+T 350 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 73/74 MP 0/0 Hu 21 $ 156 room=.
+-> l
+T 351 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 73/74 MP 0/0 Hu 21 $ 156 room=.
+-> e
+T 352 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 73/74 MP 0/0 Hu 20 $ 156 room=V
+-> e
+T 353 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 73/74 MP 0/0 Hu 19 $ 156 room=.
+-> s
+T 354 mode=game_loop           Nain Ironbeard(dwa) F1@(14,14) HP 73/74 MP 0/0 Hu 18 $ 156 room=.
+-> n
+T 355 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 73/74 MP 0/0 Hu 17 $ 156 room=.
+-> n
+T 356 mode=game_loop           Nain Ironbeard(dwa) F1@(14,12) HP 73/74 MP 0/0 Hu 16 $ 156 room=.
+-> w
+T 357 mode=game_loop           Nain Ironbeard(dwa) F1@(13,12) HP 73/74 MP 0/0 Hu 15 $ 156 room=.
+-> s
+T 358 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 73/74 MP 0/0 Hu 14 $ 156 room=V
+-> w
+T 359 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 73/74 MP 0/0 Hu 13 $ 156 room=.
+-> s
+T 360 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 73/74 MP 0/0 Hu 12 $ 156 room=.
+-> l
+T 361 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 73/74 MP 0/0 Hu 12 $ 156 room=.
+-> s
+T 362 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 73/74 MP 0/0 Hu 11 $ 156 room=.
+-> e
+T 363 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 73/74 MP 0/0 Hu 10 $ 156 room=.
+-> s
+T 364 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 73/74 MP 0/0 Hu  9 $ 156 room=.
+-> e
+T 365 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 73/74 MP 0/0 Hu  8 $ 156 room=.
+-> w
+T 366 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 73/74 MP 0/0 Hu  7 $ 156 room=.
+-> n
+T 367 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 73/74 MP 0/0 Hu  6 $ 156 room=.
+-> w
+T 368 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 73/74 MP 0/0 Hu  5 $ 156 room=.
+-> n
+T 369 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 73/74 MP 0/0 Hu  4 $ 156 room=.
+-> w
+T 370 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 73/74 MP 0/0 Hu  3 $ 156 room=.
+-> l
+T 371 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 73/74 MP 0/0 Hu  3 $ 156 room=.
+-> s
+T 372 mode=game_loop           Nain Ironbeard(dwa) F1@(11,15) HP 73/74 MP 0/0 Hu  2 $ 156 room=.
+-> n
+T 373 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 73/74 MP 0/0 Hu  1 $ 156 room=.
+-> n
+T 374 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 71/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 375 mode=game_loop           Nain Ironbeard(dwa) F1@(11,12) HP 69/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 376 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 67/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 377 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,12) HP 65/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 378 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,11) HP 63/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 379 mode=game_loop           Nain Ironbeard(dwa) F1@(10,11) HP 61/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 380 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 59/74 MP 0/0 Hu  0 $ 156 room=.
+-> l
+T 381 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 59/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 382 mode=game_loop           Nain Ironbeard(dwa) F1@(11,12) HP 57/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 383 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 55/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 384 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 53/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 385 mode=game_loop           Nain Ironbeard(dwa) F1@(11,15) HP 51/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 386 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 49/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 387 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 47/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 388 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 45/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 389 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 43/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 390 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 41/74 MP 0/0 Hu  0 $ 156 room=.
+-> l
+T 391 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 41/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 392 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 39/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 393 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 37/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 394 mode=game_loop           Nain Ironbeard(dwa) F1@(11,15) HP 35/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 395 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 33/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 396 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 31/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 397 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 29/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 398 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 27/74 MP 0/0 Hu  0 $ 156 room=V
+-> e
+T 399 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 25/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 400 mode=game_loop           Nain Ironbeard(dwa) F1@(14,14) HP 23/74 MP 0/0 Hu  0 $ 156 room=.
+-> i
+T 401 mode=inventory           Nain Ironbeard(dwa) F1@(14,14) HP 23/74 MP 0/0 Hu  0 $ 156 room=.
+-> u4
+T 402 mode=inventory           Nain Ironbeard(dwa) F1@(14,14) HP 73/74 MP 0/0 Hu  0 $ 156 room=.
+-> x
+T 403 mode=game_loop           Nain Ironbeard(dwa) F1@(14,14) HP 73/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 404 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 71/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 405 mode=game_loop           Nain Ironbeard(dwa) F1@(14,12) HP 69/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 406 mode=game_loop           Nain Ironbeard(dwa) F1@(15,12) HP 67/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 407 mode=game_loop           Nain Ironbeard(dwa) F1@(15,13) HP 65/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 408 mode=game_loop           Nain Ironbeard(dwa) F1@(15,12) HP 63/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 409 mode=game_loop           Nain Ironbeard(dwa) F1@(15,13) HP 61/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 410 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 59/74 MP 0/0 Hu  0 $ 156 room=.
+-> l
+T 411 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 59/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 412 mode=game_loop           Nain Ironbeard(dwa) F1@(14,14) HP 57/74 MP 0/0 Hu  0 $ 156 room=.
+-> i
+T 413 mode=inventory           Nain Ironbeard(dwa) F1@(14,14) HP 57/74 MP 0/0 Hu  0 $ 156 room=.
+-> u4
+T 414 mode=inventory           Nain Ironbeard(dwa) F1@(14,14) HP 74/74 MP 0/0 Hu  0 $ 156 room=.
+-> x
+T 415 mode=game_loop           Nain Ironbeard(dwa) F1@(14,14) HP 74/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 416 mode=game_loop           Nain Ironbeard(dwa) F1@(14,13) HP 72/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 417 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 70/74 MP 0/0 Hu  0 $ 156 room=V
+-> w
+T 418 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 68/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 419 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 66/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 420 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 64/74 MP 0/0 Hu  0 $ 156 room=.
+-> l
+T 421 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 64/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 422 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 62/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 423 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 60/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 424 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 58/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 425 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 56/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 426 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 54/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 427 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 52/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 428 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 50/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 429 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 48/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 430 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 46/74 MP 0/0 Hu  0 $ 156 room=.
+-> l
+T 431 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 46/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 432 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 44/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 433 mode=game_loop           Nain Ironbeard(dwa) F1@(11,15) HP 42/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 434 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 40/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 435 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 38/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 436 mode=game_loop           Nain Ironbeard(dwa) F1@(11,12) HP 36/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 437 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 34/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 438 mode=game_loop           Nain Ironbeard(dwa) F1@(10,11) HP 32/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 439 mode=warp_mode           Nain Ironbeard(dwa) F1@(10,10) HP 30/74 MP 0/0 Hu  0 $ 156 room=W
+-> y
+T 440 mode=game_loop           Nain Ironbeard(dwa) F1@(10,10) HP 30/74 MP 0/0 Hu  0 $ 156 room=W
+-> l
+T 441 mode=game_loop           Nain Ironbeard(dwa) F1@(10,10) HP 30/74 MP 0/0 Hu  0 $ 156 room=W
+-> w
+T 442 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,10) HP 28/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 443 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,11) HP 26/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 444 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,12) HP 24/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 445 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 22/74 MP 0/0 Hu  0 $ 156 room=.
+-> i
+T 446 mode=inventory           Nain Ironbeard(dwa) F1@(10,12) HP 22/74 MP 0/0 Hu  0 $ 156 room=.
+-> u4
+T 447 mode=inventory           Nain Ironbeard(dwa) F1@(10,12) HP 52/74 MP 0/0 Hu  0 $ 156 room=.
+-> u1
+T 448 mode=inventory           Nain Ironbeard(dwa) F1@(10,12) HP 74/74 MP 0/0 Hu  0 $ 156 room=.
+-> x
+T 449 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 74/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 450 mode=game_loop           Nain Ironbeard(dwa) F1@(11,12) HP 72/74 MP 0/0 Hu  0 $ 156 room=.
+-> l
+T 451 mode=game_loop           Nain Ironbeard(dwa) F1@(11,12) HP 72/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 452 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 70/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 453 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 68/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 454 mode=game_loop           Nain Ironbeard(dwa) F1@(11,15) HP 66/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 455 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 64/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 456 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 62/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 457 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 60/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 458 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 58/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 459 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 56/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 460 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 54/74 MP 0/0 Hu  0 $ 156 room=.
+-> l
+T 461 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 54/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 462 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 52/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 463 mode=game_loop           Nain Ironbeard(dwa) F1@(11,15) HP 50/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 464 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 48/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 465 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 46/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 466 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 44/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 467 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 42/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 468 mode=game_loop           Nain Ironbeard(dwa) F1@(11,12) HP 40/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 469 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 38/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 470 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,12) HP 36/74 MP 0/0 Hu  0 $ 156 room=.
+-> l
+T 471 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,12) HP 36/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 472 mode=game_loop           Nain Ironbeard(dwa) F1@( 9,11) HP 34/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 473 mode=game_loop           Nain Ironbeard(dwa) F1@(10,11) HP 32/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 474 mode=game_loop           Nain Ironbeard(dwa) F1@(10,12) HP 30/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 475 mode=game_loop           Nain Ironbeard(dwa) F1@(11,12) HP 28/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 476 mode=game_loop           Nain Ironbeard(dwa) F1@(11,13) HP 26/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 477 mode=game_loop           Nain Ironbeard(dwa) F1@(11,14) HP 24/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 478 mode=game_loop           Nain Ironbeard(dwa) F1@(11,15) HP 22/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 479 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 20/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 480 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 18/74 MP 0/0 Hu  0 $ 156 room=.
+-> l
+T 481 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 18/74 MP 0/0 Hu  0 $ 156 room=.
+-> s
+T 482 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 16/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 483 mode=game_loop           Nain Ironbeard(dwa) F1@(14,16) HP 14/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 484 mode=game_loop           Nain Ironbeard(dwa) F1@(13,16) HP 12/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 485 mode=game_loop           Nain Ironbeard(dwa) F1@(13,15) HP 10/74 MP 0/0 Hu  0 $ 156 room=.
+-> w
+T 486 mode=game_loop           Nain Ironbeard(dwa) F1@(12,15) HP 8/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 487 mode=game_loop           Nain Ironbeard(dwa) F1@(12,14) HP 6/74 MP 0/0 Hu  0 $ 156 room=.
+-> n
+T 488 mode=game_loop           Nain Ironbeard(dwa) F1@(12,13) HP 4/74 MP 0/0 Hu  0 $ 156 room=.
+-> e
+T 489 mode=game_loop           Nain Ironbeard(dwa) F1@(13,13) HP 2/74 MP 0/0 Hu  0 $ 156 room=V
+-> e
+T 490 mode=death_screen        Nain Ironbeard(dwa) F1@(14,13) HP 0/74 MP 0/0 Hu  0 $ 156 room=.
+
+=== run finished: turns=490 floor=1 hp=0/74 gold=156 alive=False mode=death_screen ===
+    status=dead
+
+>>> Report: /tmp/pt_batch/00421_dwarf.html
