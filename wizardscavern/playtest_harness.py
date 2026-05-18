@@ -2726,10 +2726,24 @@ def smart_policy(obs, rng, use_lantern=True):
         # 159-seed grid before tightening: 35% of floor changes were
         # warps (194 forced + 35 accepted of 647 transitions).
         turns_since_new = obs.get("turns_since_new_tile") or 0
+        # trapped_no_d: D unreachable + agent has exhausted exploration.
+        # Two firing paths:
+        #   1. Standard: swept >= 80% of reachable tiles AND no new
+        #      tile in 200T. (Eased from reach_pct >= 90; build-329
+        #      audit caught s=88 dwarf stuck at reach_pct=85% for
+        #      2500+ turns because BFS-reachable count included a
+        #      handful of tiles the wayfinder never routed to.)
+        #   2. Long-stale: no new tile in 500T regardless of
+        #      reach_pct. Covers the rare case where reach_pct
+        #      stays low because BFS discovers new fog-tiles
+        #      faster than the agent walks to them, but the agent
+        #      is functionally idle anyway.
         trapped_no_d = (
             (not d_avoid_reachable)
-            and reach_pct_avoid >= 90
-            and turns_since_new >= 200
+            and (
+                (reach_pct_avoid >= 80 and turns_since_new >= 200)
+                or (turns_since_new >= 500)
+            )
         )
         # Cornered detection: agent's ONLY walkable cardinal
         # neighbour is an M tile (the rest are walls). Without this
@@ -4480,9 +4494,16 @@ def smart_policy(obs, rng, use_lantern=True):
         # Otherwise resist -- the resist roll fails ~60% of the
         # time, but the cost asymmetry (warp = 100-200T recovery vs
         # walking around) favours the gamble.
+        # Mirror the tightened trapped_no_d in game_loop: ACCEPT the
+        # warp when the agent is genuinely stuck. Two firing paths
+        # (matched to the game_loop gate exactly):
+        #   1. reach_pct >= 80% AND no new tile in 200T
+        #   2. no new tile in 500T regardless of reach_pct
         if (not d_reachable
-                and reach_pct_warp >= 90
-                and turns_since_new_warp >= 200):
+                and (
+                    (reach_pct_warp >= 80 and turns_since_new_warp >= 200)
+                    or (turns_since_new_warp >= 500)
+                )):
             return "n"
         return "y"
     if mode == "altar_mode":
