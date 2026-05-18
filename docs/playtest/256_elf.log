@@ -1617,9 +1617,9 @@ T 800 mode=game_loop           Elrond of the Greenwood(elf) F3@( 1,11) HP 38/38 
 -> n
 T 801 mode=combat_mode         Elrond of the Greenwood(elf) F3@( 1,10) HP 38/38 MP 0/0 Hu 89 $ 193 room=M vs Gnoll(L2 HP32/32)
 -> a
-T 802 mode=combat_mode         Elrond of the Greenwood(elf) F3@( 1,10) HP 37/38 MP 0/0 Hu 89 $ 193 room=M vs Gnoll(L2 HP8/32)
+T 802 mode=combat_mode         Elrond of the Greenwood(elf) F3@( 1,10) HP 37/38 MP 0/0 Hu 89 $ 193 room=M vs Gnoll(L2 HP7/32)
 -> a
-T 803 mode=combat_mode         Elrond of the Greenwood(elf) F3@( 1,10) HP 37/38 MP 0/0 Hu 89 $ 193 room=M vs Gnoll(L2 HP8/32)
+T 803 mode=combat_mode         Elrond of the Greenwood(elf) F3@( 1,10) HP 37/38 MP 0/0 Hu 89 $ 193 room=M vs Gnoll(L2 HP7/32)
 -> a
 T 804 mode=combat_victory      Elrond of the Greenwood(elf) F3@( 1,10) HP 36/48 MP 0/0 Hu 89 $ 223 room=.
 -> back
@@ -1789,9 +1789,9 @@ T 886 mode=combat_mode         Elrond of the Greenwood(elf) F3@(13, 3) HP 48/48 
 -> a
 T 887 mode=combat_mode         Elrond of the Greenwood(elf) F3@(13, 3) HP 48/48 MP 0/0 Hu 79 $ 479 room=M vs Orc(L2 HP50/50)
 -> a
-T 888 mode=combat_mode         Elrond of the Greenwood(elf) F3@(13, 3) HP 44/48 MP 0/0 Hu 79 $ 479 room=M vs Orc(L2 HP27/50)
+T 888 mode=combat_mode         Elrond of the Greenwood(elf) F3@(13, 3) HP 44/48 MP 0/0 Hu 79 $ 479 room=M vs Orc(L2 HP26/50)
 -> a
-T 889 mode=combat_mode         Elrond of the Greenwood(elf) F3@(13, 3) HP 40/48 MP 0/0 Hu 79 $ 479 room=M vs Orc(L2 HP4/50)
+T 889 mode=combat_mode         Elrond of the Greenwood(elf) F3@(13, 3) HP 40/48 MP 0/0 Hu 79 $ 479 room=M vs Orc(L2 HP2/50)
 -> a
 T 890 mode=combat_victory      Elrond of the Greenwood(elf) F3@(13, 3) HP 40/48 MP 0/0 Hu 79 $ 491 room=.
 -> back
@@ -1859,13 +1859,13 @@ T 921 mode=game_loop           Elrond of the Greenwood(elf) F3@( 9, 7) HP 58/58 
 -> e
 T 922 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 58/58 MP 0/0 Hu 62 $ 515 room=M vs Goblin(L2 HP31/31)
 -> a
-T 923 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 62 $ 515 room=M vs Goblin(L2 HP5/31)
+T 923 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 62 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 924 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 62 $ 515 room=M vs Goblin(L2 HP5/31)
+T 924 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 62 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 925 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 62 $ 515 room=M vs Goblin(L2 HP5/31)
+T 925 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 62 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 926 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 62 $ 515 room=M vs Goblin(L2 HP5/31)
+T 926 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 62 $ 515 room=M vs Goblin(L2 HP4/31)
 -> f
 T 927 mode=flee_direction_mode Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 62 $ 515 room=M
 -> n
@@ -1899,25 +1899,25 @@ T 941 mode=game_loop           Elrond of the Greenwood(elf) F3@( 9, 6) HP 56/58 
 -> s
 T 942 mode=game_loop           Elrond of the Greenwood(elf) F3@( 9, 7) HP 56/58 MP 0/0 Hu 50 $ 515 room=.
 -> e
-T 943 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 943 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 944 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 944 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 945 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 945 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 946 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 946 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 947 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 947 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 56/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 948 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 55/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 948 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 55/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 949 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 54/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 949 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 54/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 950 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 54/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 950 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 54/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 951 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 53/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 951 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 53/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T 952 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 53/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP5/31)
+T 952 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 53/58 MP 0/0 Hu 49 $ 515 room=M vs Goblin(L2 HP4/31)
 -> f
 T 953 mode=flee_direction_mode Elrond of the Greenwood(elf) F3@(10, 7) HP 52/58 MP 0/0 Hu 49 $ 515 room=M
 -> n
@@ -2043,13 +2043,13 @@ T1013 mode=game_loop           Elrond of the Greenwood(elf) F3@( 9, 6) HP 58/58 
 -> s
 T1014 mode=game_loop           Elrond of the Greenwood(elf) F3@( 9, 7) HP 58/58 MP 0/0 Hu 65 $ 515 room=.
 -> e
-T1015 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 58/58 MP 0/0 Hu 64 $ 515 room=M vs Goblin(L2 HP5/31)
+T1015 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 58/58 MP 0/0 Hu 64 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T1016 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 64 $ 515 room=M vs Goblin(L2 HP5/31)
+T1016 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 64 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T1017 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 64 $ 515 room=M vs Goblin(L2 HP5/31)
+T1017 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 64 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
-T1018 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 64 $ 515 room=M vs Goblin(L2 HP5/31)
+T1018 mode=combat_mode         Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 64 $ 515 room=M vs Goblin(L2 HP4/31)
 -> a
 T1019 mode=combat_victory      Elrond of the Greenwood(elf) F3@(10, 7) HP 57/58 MP 0/0 Hu 64 $ 527 room=.
 -> back
