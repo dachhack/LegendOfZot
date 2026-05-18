@@ -46,882 +46,884 @@ T  14 mode=combat_mode         Earendil Stareyed(elf) F1@( 1, 3) HP 27/28 MP 0/0
 T  15 mode=combat_victory      Earendil Stareyed(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 452 room=.
 -> back
 T  16 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 452 room=.
+-> i
+T  17 mode=inventory           Earendil Stareyed(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 452 room=.
+-> u10
+T  18 mode=inventory           Earendil Stareyed(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 452 room=.
+-> x
+T  19 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 452 room=.
 -> l
-T  17 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 452 room=.
+T  20 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 27/28 MP 0/0 Hu 98 $ 452 room=.
 -> s
-T  18 mode=combat_mode         Earendil Stareyed(elf) F1@( 1, 4) HP 27/28 MP 0/0 Hu 97 $ 452 room=M vs Skeleton(L0 HP25/25)
+T  21 mode=combat_mode         Earendil Stareyed(elf) F1@( 1, 4) HP 27/28 MP 0/0 Hu 97 $ 452 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  19 mode=combat_mode         Earendil Stareyed(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 97 $ 452 room=M vs Skeleton(L0 HP25/25)
+T  22 mode=combat_mode         Earendil Stareyed(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 97 $ 452 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  20 mode=combat_mode         Earendil Stareyed(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 97 $ 452 room=M vs Skeleton(L0 HP6/25)
+T  23 mode=combat_mode         Earendil Stareyed(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 97 $ 452 room=M vs Skeleton(L0 HP6/25)
 -> a
-T  21 mode=combat_victory      Earendil Stareyed(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 97 $ 461 room=.
+T  24 mode=combat_victory      Earendil Stareyed(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 97 $ 461 room=.
 -> back
-T  22 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 97 $ 461 room=.
+T  25 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 97 $ 461 room=.
 -> l
-T  23 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 97 $ 461 room=.
+T  26 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 25/28 MP 0/0 Hu 97 $ 461 room=.
 -> e
-T  24 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 26/28 MP 0/0 Hu 96 $ 461 room=.
+T  27 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 26/28 MP 0/0 Hu 96 $ 461 room=.
 -> l
-T  25 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 26/28 MP 0/0 Hu 96 $ 461 room=.
+T  28 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 26/28 MP 0/0 Hu 96 $ 461 room=.
 -> n
-T  26 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 26/28 MP 0/0 Hu 95 $ 461 room=.
+T  29 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 26/28 MP 0/0 Hu 95 $ 461 room=.
 -> e
-T  27 mode=library_mode        Earendil Stareyed(elf) F1@( 3, 3) HP 27/28 MP 0/0 Hu 94 $ 461 room=L
+T  30 mode=library_mode        Earendil Stareyed(elf) F1@( 3, 3) HP 27/28 MP 0/0 Hu 94 $ 461 room=L
 -> r
-T  28 mode=library_read_decision_mode Earendil Stareyed(elf) F1@( 3, 3) HP 27/28 MP 0/0 Hu 94 $ 461 room=L
+T  31 mode=library_read_decision_mode Earendil Stareyed(elf) F1@( 3, 3) HP 27/28 MP 0/0 Hu 94 $ 461 room=L
 -> y
-T  29 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 27/28 MP 0/0 Hu 94 $ 636 room=.
+T  32 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 27/28 MP 0/0 Hu 94 $ 636 room=.
 -> s
-T  30 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 19/28 MP 0/0 Hu 93 $ 636 room=.
+T  33 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 19/28 MP 0/0 Hu 93 $ 636 room=.
 -> l
-T  31 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 19/28 MP 0/0 Hu 93 $ 636 room=.
+T  34 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 19/28 MP 0/0 Hu 93 $ 636 room=.
 -> s
-T  32 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 12/28 MP 0/0 Hu 92 $ 636 room=.
+T  35 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 12/28 MP 0/0 Hu 92 $ 636 room=.
 -> i
-T  33 mode=inventory           Earendil Stareyed(elf) F1@( 3, 5) HP 12/28 MP 0/0 Hu 92 $ 636 room=.
+T  36 mode=inventory           Earendil Stareyed(elf) F1@( 3, 5) HP 12/28 MP 0/0 Hu 92 $ 636 room=.
 -> u4
-T  34 mode=inventory           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 92 $ 636 room=.
+T  37 mode=inventory           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 92 $ 636 room=.
 -> x
-T  35 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 92 $ 636 room=.
+T  38 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 92 $ 636 room=.
 -> l
-T  36 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 92 $ 636 room=.
+T  39 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 92 $ 636 room=.
 -> e
-T  37 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 20/28 MP 0/0 Hu 91 $ 636 room=.
+T  40 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 20/28 MP 0/0 Hu 91 $ 636 room=.
 -> l
-T  38 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 20/28 MP 0/0 Hu 91 $ 636 room=.
+T  41 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 20/28 MP 0/0 Hu 91 $ 636 room=.
 -> s
-T  39 mode=library_mode        Earendil Stareyed(elf) F1@( 4, 6) HP 13/28 MP 0/0 Hu 90 $ 636 room=L
+T  42 mode=library_mode        Earendil Stareyed(elf) F1@( 4, 6) HP 13/28 MP 0/0 Hu 90 $ 636 room=L
 -> r
-T  40 mode=library_read_decision_mode Earendil Stareyed(elf) F1@( 4, 6) HP 13/28 MP 0/0 Hu 90 $ 636 room=L
+T  43 mode=library_read_decision_mode Earendil Stareyed(elf) F1@( 4, 6) HP 13/28 MP 0/0 Hu 90 $ 636 room=L
 -> y
-T  41 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 13/28 MP 0/0 Hu 90 $ 686 room=.
+T  44 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 13/28 MP 0/0 Hu 90 $ 686 room=.
 -> i
-T  42 mode=inventory           Earendil Stareyed(elf) F1@( 4, 6) HP 13/28 MP 0/0 Hu 90 $ 686 room=.
+T  45 mode=inventory           Earendil Stareyed(elf) F1@( 4, 6) HP 13/28 MP 0/0 Hu 90 $ 686 room=.
 -> u4
-T  43 mode=inventory           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 90 $ 686 room=.
+T  46 mode=inventory           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 90 $ 686 room=.
 -> x
-T  44 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 90 $ 686 room=.
+T  47 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 90 $ 686 room=.
 -> l
-T  45 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 90 $ 686 room=.
+T  48 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 90 $ 686 room=.
 -> n
-T  46 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 686 room=.
+T  49 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 686 room=.
 -> s
-T  47 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 88 $ 686 room=.
--> i
-T  48 mode=inventory           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 88 $ 686 room=.
--> eat3
-T  49 mode=inventory           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 93 $ 686 room=.
--> x
-T  50 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 93 $ 686 room=.
+T  50 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 88 $ 686 room=.
 -> e
-T  51 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 92 $ 686 room=M vs Zombie(L0 HP35/35)
+T  51 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 87 $ 686 room=M vs Zombie(L0 HP35/35)
 -> a
-T  52 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 92 $ 686 room=M vs Zombie(L0 HP35/35)
+T  52 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 87 $ 686 room=M vs Zombie(L0 HP35/35)
 -> a
-T  53 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 92 $ 686 room=M vs Zombie(L0 HP14/35)
+T  53 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 27/28 MP 0/0 Hu 87 $ 686 room=M vs Zombie(L0 HP14/35)
 -> a
-T  54 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 26/28 MP 0/0 Hu 92 $ 686 room=M vs Zombie(L0 HP14/35)
+T  54 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 26/28 MP 0/0 Hu 87 $ 686 room=M vs Zombie(L0 HP14/35)
 -> a
-T  55 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 25/28 MP 0/0 Hu 92 $ 686 room=M vs Zombie(L0 HP14/35)
+T  55 mode=combat_mode         Earendil Stareyed(elf) F1@( 5, 6) HP 25/28 MP 0/0 Hu 87 $ 686 room=M vs Zombie(L0 HP14/35)
 -> a
-T  56 mode=combat_victory      Earendil Stareyed(elf) F1@( 5, 6) HP 25/28 MP 0/0 Hu 92 $ 688 room=.
+T  56 mode=combat_victory      Earendil Stareyed(elf) F1@( 5, 6) HP 25/28 MP 0/0 Hu 87 $ 688 room=.
 -> back
-T  57 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 25/28 MP 0/0 Hu 92 $ 688 room=.
+T  57 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 25/28 MP 0/0 Hu 87 $ 688 room=.
 -> e
-T  58 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 91 $ 688 room=M vs Giant Rat(L0 HP22/22)
+T  58 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 25/28 MP 0/0 Hu 86 $ 688 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T  59 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 24/28 MP 0/0 Hu 91 $ 688 room=M vs Giant Rat(L0 HP22/22)
+T  59 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 24/28 MP 0/0 Hu 86 $ 688 room=M vs Giant Rat(L0 HP22/22)
 -> f
-T  60 mode=flee_direction_mode Earendil Stareyed(elf) F1@( 6, 6) HP 21/28 MP 0/0 Hu 91 $ 688 room=M
+T  60 mode=flee_direction_mode Earendil Stareyed(elf) F1@( 6, 6) HP 21/28 MP 0/0 Hu 86 $ 688 room=M
 -> w
-T  61 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 19/28 MP 0/0 Hu 91 $ 688 room=.
+T  61 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 19/28 MP 0/0 Hu 86 $ 688 room=.
 -> i
-T  62 mode=inventory           Earendil Stareyed(elf) F1@( 5, 6) HP 19/28 MP 0/0 Hu 91 $ 688 room=.
+T  62 mode=inventory           Earendil Stareyed(elf) F1@( 5, 6) HP 19/28 MP 0/0 Hu 86 $ 688 room=.
 -> u4
-T  63 mode=inventory           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 91 $ 688 room=.
+T  63 mode=inventory           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 86 $ 688 room=.
 -> x
-T  64 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 91 $ 688 room=.
+T  64 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 86 $ 688 room=.
 -> w
-T  65 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 27/28 MP 0/0 Hu 90 $ 688 room=.
+T  65 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 27/28 MP 0/0 Hu 85 $ 688 room=.
 -> n
-T  66 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 89 $ 688 room=.
+T  66 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 27/28 MP 0/0 Hu 84 $ 688 room=.
 -> w
-T  67 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 88 $ 688 room=.
+T  67 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 27/28 MP 0/0 Hu 83 $ 688 room=.
 -> n
-T  68 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 87 $ 688 room=.
+T  68 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 27/28 MP 0/0 Hu 82 $ 688 room=.
 -> n
-T  69 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 86 $ 688 room=.
+T  69 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 81 $ 688 room=.
 -> w
-T  70 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 85 $ 688 room=.
+T  70 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 80 $ 688 room=.
 -> w
-T  71 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 84 $ 688 room=.
+T  71 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 79 $ 688 room=.
 -> n
-T  72 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 83 $ 688 room=.
+T  72 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 78 $ 688 room=.
 -> n
-T  73 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 82 $ 688 room=E
+T  73 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 77 $ 688 room=E
 -> e
-T  74 mode=dungeon_mode        Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 81 $ 688 room=N
+T  74 mode=dungeon_mode        Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 76 $ 688 room=N
 -> u
-T  75 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 81 $ 688 room=N
+T  75 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 76 $ 688 room=N
 -> s
-T  76 mode=combat_mode         Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 80 $ 688 room=M vs Spore Puff(L0 HP18/18)
+T  76 mode=combat_mode         Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 75 $ 688 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T  77 mode=combat_victory      Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 80 $ 694 room=.
+T  77 mode=combat_victory      Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 75 $ 694 room=.
 -> back
-T  78 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 80 $ 694 room=.
+T  78 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 75 $ 694 room=.
 -> s
-T  79 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 79 $ 694 room=.
+T  79 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 74 $ 694 room=.
 -> e
-T  80 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 78 $ 694 room=.
+T  80 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 73 $ 694 room=.
 -> s
-T  81 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 77 $ 694 room=.
+T  81 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 72 $ 694 room=.
 -> w
-T  82 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 76 $ 694 room=.
+T  82 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 71 $ 694 room=.
 -> w
-T  83 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 75 $ 694 room=.
+T  83 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 70 $ 694 room=.
 -> n
-T  84 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 74 $ 694 room=.
+T  84 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 69 $ 694 room=.
 -> e
-T  85 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 73 $ 694 room=.
+T  85 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 68 $ 694 room=.
 -> e
-T  86 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 72 $ 694 room=.
+T  86 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 67 $ 694 room=.
 -> n
-T  87 mode=combat_mode         Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 71 $ 694 room=M vs Spore Puff(L0 HP18/18)
+T  87 mode=combat_mode         Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 66 $ 694 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T  88 mode=combat_victory      Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 71 $ 698 room=.
+T  88 mode=combat_victory      Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 66 $ 698 room=.
 -> back
-T  89 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 71 $ 698 room=.
+T  89 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 66 $ 698 room=.
 -> w
-T  90 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 70 $ 698 room=.
+T  90 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 65 $ 698 room=.
 -> w
-T  91 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 69 $ 698 room=.
+T  91 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 64 $ 698 room=.
 -> n
-T  92 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 68 $ 698 room=E
+T  92 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 63 $ 698 room=E
 -> e
-T  93 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 67 $ 698 room=N
+T  93 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 62 $ 698 room=N
 -> w
-T  94 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 66 $ 698 room=E
+T  94 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 61 $ 698 room=E
 -> s
-T  95 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 65 $ 698 room=.
+T  95 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 60 $ 698 room=.
 -> s
-T  96 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 64 $ 698 room=.
+T  96 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 59 $ 698 room=.
 -> s
-T  97 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 63 $ 698 room=.
+T  97 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 58 $ 698 room=.
 -> e
-T  98 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 62 $ 698 room=.
+T  98 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 57 $ 698 room=.
 -> n
-T  99 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 61 $ 698 room=.
+T  99 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 56 $ 698 room=.
 -> n
-T 100 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 60 $ 698 room=.
+T 100 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 55 $ 698 room=.
 -> w
-T 101 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 59 $ 698 room=.
+T 101 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 54 $ 698 room=.
 -> n
-T 102 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 58 $ 698 room=E
+T 102 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 53 $ 698 room=E
 -> e
-T 103 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 57 $ 698 room=N
+T 103 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 52 $ 698 room=N
 -> w
-T 104 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 56 $ 698 room=E
+T 104 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 51 $ 698 room=E
 -> s
-T 105 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 55 $ 698 room=.
+T 105 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 50 $ 698 room=.
 -> e
-T 106 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 54 $ 698 room=.
--> s
-T 107 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 53 $ 698 room=.
--> e
-T 108 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 52 $ 698 room=.
--> s
-T 109 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 51 $ 698 room=.
--> w
-T 110 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 50 $ 698 room=.
--> w
-T 111 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 49 $ 698 room=.
+T 106 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 49 $ 698 room=.
 -> i
-T 112 mode=inventory           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 49 $ 698 room=.
+T 107 mode=inventory           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 49 $ 698 room=.
+-> eat3
+T 108 mode=inventory           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 56 $ 698 room=.
 -> eat1
-T 113 mode=inventory           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu100 $ 698 room=.
+T 109 mode=inventory           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu100 $ 698 room=.
 -> x
-T 114 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu100 $ 698 room=.
--> n
-T 115 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 99 $ 698 room=.
+T 110 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu100 $ 698 room=.
+-> s
+T 111 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 99 $ 698 room=.
 -> e
-T 116 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 98 $ 698 room=.
--> e
-T 117 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 698 room=.
--> n
-T 118 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 96 $ 698 room=.
+T 112 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 98 $ 698 room=.
+-> s
+T 113 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 97 $ 698 room=.
 -> w
-T 119 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 95 $ 698 room=.
+T 114 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 96 $ 698 room=.
 -> w
-T 120 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 698 room=.
+T 115 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 95 $ 698 room=.
 -> n
-T 121 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 93 $ 698 room=E
+T 116 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 94 $ 698 room=.
 -> e
-T 122 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 92 $ 698 room=N
--> s
-T 123 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 91 $ 698 room=.
--> s
-T 124 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 90 $ 698 room=.
+T 117 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 93 $ 698 room=.
 -> e
-T 125 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 89 $ 698 room=.
+T 118 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 92 $ 698 room=.
 -> n
-T 126 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 88 $ 698 room=.
--> s
-T 127 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 87 $ 698 room=.
--> s
-T 128 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 698 room=.
+T 119 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 91 $ 698 room=.
 -> w
-T 129 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 85 $ 698 room=.
+T 120 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 90 $ 698 room=.
 -> w
-T 130 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 84 $ 698 room=.
+T 121 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 89 $ 698 room=.
 -> n
-T 131 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 83 $ 698 room=.
--> n
-T 132 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 82 $ 698 room=.
--> n
-T 133 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 81 $ 698 room=E
+T 122 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 88 $ 698 room=E
 -> e
-T 134 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 80 $ 698 room=N
+T 123 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 87 $ 698 room=N
 -> s
-T 135 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 79 $ 698 room=.
+T 124 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 86 $ 698 room=.
 -> s
-T 136 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 78 $ 698 room=.
+T 125 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 85 $ 698 room=.
 -> e
-T 137 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 77 $ 698 room=.
+T 126 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 84 $ 698 room=.
 -> n
-T 138 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 76 $ 698 room=.
+T 127 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 83 $ 698 room=.
 -> s
-T 139 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 698 room=.
+T 128 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 82 $ 698 room=.
 -> s
-T 140 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 74 $ 698 room=.
+T 129 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 81 $ 698 room=.
 -> w
-T 141 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 73 $ 698 room=.
+T 130 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 80 $ 698 room=.
 -> w
-T 142 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 72 $ 698 room=.
+T 131 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 79 $ 698 room=.
 -> n
-T 143 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 71 $ 698 room=.
+T 132 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 78 $ 698 room=.
 -> n
-T 144 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 70 $ 698 room=.
+T 133 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 77 $ 698 room=.
 -> n
-T 145 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 69 $ 698 room=E
+T 134 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 76 $ 698 room=E
 -> e
-T 146 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 68 $ 698 room=N
+T 135 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 75 $ 698 room=N
 -> s
-T 147 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 67 $ 698 room=.
+T 136 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 74 $ 698 room=.
+-> s
+T 137 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 73 $ 698 room=.
 -> e
-T 148 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 66 $ 698 room=.
+T 138 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 72 $ 698 room=.
+-> n
+T 139 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 71 $ 698 room=.
 -> s
-T 149 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 65 $ 698 room=.
+T 140 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 70 $ 698 room=.
+-> s
+T 141 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 69 $ 698 room=.
 -> w
-T 150 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 64 $ 698 room=.
+T 142 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 68 $ 698 room=.
 -> w
-T 151 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 63 $ 698 room=.
--> s
-T 152 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 62 $ 698 room=.
+T 143 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 67 $ 698 room=.
+-> n
+T 144 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 66 $ 698 room=.
+-> n
+T 145 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 65 $ 698 room=.
+-> n
+T 146 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 64 $ 698 room=E
 -> e
-T 153 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 61 $ 698 room=.
+T 147 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 63 $ 698 room=N
+-> s
+T 148 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 62 $ 698 room=.
 -> e
-T 154 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 60 $ 698 room=.
+T 149 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 61 $ 698 room=.
 -> s
-T 155 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 59 $ 698 room=.
+T 150 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 60 $ 698 room=.
+-> w
+T 151 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 59 $ 698 room=.
+-> w
+T 152 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 58 $ 698 room=.
 -> s
-T 156 mode=combat_mode         Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 58 $ 698 room=M vs Zombie(L0 HP35/35)
+T 153 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 57 $ 698 room=.
+-> e
+T 154 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 56 $ 698 room=.
+-> e
+T 155 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 55 $ 698 room=.
+-> s
+T 156 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 54 $ 698 room=.
+-> s
+T 157 mode=combat_mode         Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 53 $ 698 room=M vs Zombie(L0 HP35/35)
 -> a
-T 157 mode=combat_mode         Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 58 $ 698 room=M vs Zombie(L0 HP14/35)
+T 158 mode=combat_mode         Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 53 $ 698 room=M vs Zombie(L0 HP14/35)
 -> a
-T 158 mode=combat_victory      Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 58 $ 704 room=.
+T 159 mode=combat_victory      Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 53 $ 704 room=.
 -> back
-T 159 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 58 $ 704 room=.
+T 160 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 53 $ 704 room=.
 -> s
-T 160 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 57 $ 704 room=.
+T 161 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 52 $ 704 room=.
 -> e
-T 161 mode=combat_mode         Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 56 $ 704 room=M vs Slime Mold(L0 HP15/15)
+T 162 mode=combat_mode         Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 51 $ 704 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T 162 mode=combat_victory      Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 56 $ 711 room=.
+T 163 mode=combat_victory      Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 51 $ 711 room=.
 -> back
-T 163 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 56 $ 711 room=.
+T 164 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 51 $ 711 room=.
 -> n
-T 164 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 55 $ 711 room=.
+T 165 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 50 $ 711 room=.
 -> n
-T 165 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 54 $ 711 room=.
--> w
-T 166 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 53 $ 711 room=.
--> n
-T 167 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 52 $ 711 room=.
--> n
-T 168 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 51 $ 711 room=.
--> n
-T 169 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 50 $ 711 room=.
--> w
-T 170 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 49 $ 711 room=.
+T 166 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 49 $ 711 room=.
 -> i
-T 171 mode=inventory           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 49 $ 711 room=.
+T 167 mode=inventory           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 49 $ 711 room=.
 -> eat1
-T 172 mode=inventory           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu100 $ 711 room=.
+T 168 mode=inventory           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu100 $ 711 room=.
 -> x
-T 173 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu100 $ 711 room=.
+T 169 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu100 $ 711 room=.
 -> w
-T 174 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 711 room=.
+T 170 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 99 $ 711 room=.
 -> n
-T 175 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 98 $ 711 room=E
--> e
-T 176 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 711 room=N
--> s
-T 177 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 96 $ 711 room=.
--> e
-T 178 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 95 $ 711 room=.
--> s
-T 179 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 94 $ 711 room=.
+T 171 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 98 $ 711 room=.
+-> n
+T 172 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 97 $ 711 room=.
+-> n
+T 173 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 96 $ 711 room=.
 -> w
-T 180 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 93 $ 711 room=.
+T 174 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 95 $ 711 room=.
+-> w
+T 175 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 94 $ 711 room=.
+-> n
+T 176 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 93 $ 711 room=E
+-> e
+T 177 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 92 $ 711 room=N
 -> s
-T 181 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 92 $ 711 room=.
+T 178 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 91 $ 711 room=.
 -> e
-T 182 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 91 $ 711 room=.
+T 179 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 90 $ 711 room=.
 -> s
-T 183 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 90 $ 711 room=.
--> e
-T 184 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 711 room=.
+T 180 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 89 $ 711 room=.
+-> w
+T 181 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 88 $ 711 room=.
 -> s
-T 185 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 88 $ 711 room=.
+T 182 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 87 $ 711 room=.
 -> e
-T 186 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 87 $ 711 room=.
+T 183 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 711 room=.
+-> s
+T 184 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 85 $ 711 room=.
 -> e
-T 187 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 86 $ 711 room=M vs Giant Rat(L0 HP22/22)
+T 185 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 84 $ 711 room=.
+-> s
+T 186 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 83 $ 711 room=.
+-> e
+T 187 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 82 $ 711 room=.
+-> e
+T 188 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 81 $ 711 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T 188 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 86 $ 711 room=M vs Giant Rat(L0 HP1/22)
+T 189 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 81 $ 711 room=M vs Giant Rat(L0 HP1/22)
 -> a
-T 189 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 86 $ 711 room=M vs Giant Rat(L0 HP1/22)
+T 190 mode=combat_mode         Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 81 $ 711 room=M vs Giant Rat(L0 HP1/22)
 -> a
-T 190 mode=combat_victory      Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
+T 191 mode=combat_victory      Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
 -> back
-T 191 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
+T 192 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
 -> l
-T 192 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
+T 193 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
 -> s
-T 193 mode=altar_mode          Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 85 $ 720 room=A
+T 194 mode=altar_mode          Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 80 $ 720 room=A
 -> pray
-T 194 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu100 $ 720 room=.
--> l
 T 195 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu100 $ 720 room=.
--> n
-T 196 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
--> n
-T 197 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
--> s
-T 198 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
--> w
-T 199 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
--> w
-T 200 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 95 $ 720 room=.
--> s
-T 201 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 94 $ 720 room=.
--> w
-T 202 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 93 $ 720 room=.
--> n
-T 203 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
--> n
-T 204 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 91 $ 720 room=.
--> e
-T 205 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
--> s
-T 206 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 89 $ 720 room=.
--> e
-T 207 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 88 $ 720 room=.
--> e
-T 208 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 87 $ 720 room=.
--> s
-T 209 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
--> n
-T 210 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
 -> l
-T 211 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
+T 196 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu100 $ 720 room=.
 -> n
-T 212 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 84 $ 720 room=.
--> s
-T 213 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
--> w
-T 214 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 82 $ 720 room=.
--> w
-T 215 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
+T 197 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
 -> n
-T 216 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 80 $ 720 room=.
+T 198 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
+-> s
+T 199 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
 -> w
-T 217 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 79 $ 720 room=.
+T 200 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
+-> w
+T 201 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 95 $ 720 room=.
 -> s
-T 218 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 78 $ 720 room=.
--> s
-T 219 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 77 $ 720 room=.
+T 202 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 94 $ 720 room=.
+-> w
+T 203 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 93 $ 720 room=.
+-> n
+T 204 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
+-> n
+T 205 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 91 $ 720 room=.
 -> e
-T 220 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
+T 206 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
+-> s
+T 207 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 89 $ 720 room=.
+-> e
+T 208 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 88 $ 720 room=.
+-> e
+T 209 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 87 $ 720 room=.
+-> s
+T 210 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
 -> l
-T 221 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
+T 211 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
 -> n
-T 222 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 75 $ 720 room=.
+T 212 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
 -> n
-T 223 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
--> w
-T 224 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 73 $ 720 room=.
+T 213 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 84 $ 720 room=.
 -> s
-T 225 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
--> s
-T 226 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 71 $ 720 room=.
--> e
-T 227 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 70 $ 720 room=.
--> n
-T 228 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 69 $ 720 room=.
--> n
-T 229 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
+T 214 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
 -> w
-T 230 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 67 $ 720 room=.
+T 215 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 82 $ 720 room=.
+-> w
+T 216 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
+-> n
+T 217 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 80 $ 720 room=.
+-> w
+T 218 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 79 $ 720 room=.
+-> s
+T 219 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 78 $ 720 room=.
+-> s
+T 220 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 77 $ 720 room=.
 -> l
-T 231 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 67 $ 720 room=.
+T 221 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 77 $ 720 room=.
+-> e
+T 222 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
 -> n
-T 232 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 66 $ 720 room=.
--> w
-T 233 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
+T 223 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 75 $ 720 room=.
 -> n
-T 234 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 64 $ 720 room=.
+T 224 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
 -> w
-T 235 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 63 $ 720 room=.
+T 225 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 73 $ 720 room=.
 -> s
-T 236 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 62 $ 720 room=.
--> n
-T 237 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 61 $ 720 room=.
--> n
-T 238 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 60 $ 720 room=.
+T 226 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
+-> s
+T 227 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 71 $ 720 room=.
 -> e
-T 239 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 59 $ 720 room=.
--> e
-T 240 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
+T 228 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 70 $ 720 room=.
+-> n
+T 229 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 69 $ 720 room=.
+-> n
+T 230 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
 -> l
-T 241 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
--> s
-T 242 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 57 $ 720 room=.
--> s
-T 243 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
+T 231 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
 -> w
-T 244 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 55 $ 720 room=.
+T 232 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 67 $ 720 room=.
 -> n
-T 245 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
+T 233 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 66 $ 720 room=.
 -> w
-T 246 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 53 $ 720 room=.
+T 234 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
+-> n
+T 235 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 64 $ 720 room=.
+-> w
+T 236 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 63 $ 720 room=.
 -> s
-T 247 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 52 $ 720 room=.
+T 237 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 62 $ 720 room=.
+-> n
+T 238 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 61 $ 720 room=.
+-> n
+T 239 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 60 $ 720 room=.
 -> e
-T 248 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 51 $ 720 room=.
+T 240 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 59 $ 720 room=.
+-> l
+T 241 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 59 $ 720 room=.
 -> e
-T 249 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
+T 242 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
 -> s
-T 250 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
+T 243 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 57 $ 720 room=.
+-> s
+T 244 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
+-> w
+T 245 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 55 $ 720 room=.
+-> n
+T 246 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
+-> w
+T 247 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 53 $ 720 room=.
+-> s
+T 248 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 52 $ 720 room=.
+-> e
+T 249 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 51 $ 720 room=.
+-> e
+T 250 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
+-> l
+T 251 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
+-> s
+T 252 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
 -> i
-T 251 mode=inventory           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
+T 253 mode=inventory           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
 -> eat1
-T 252 mode=inventory           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
+T 254 mode=inventory           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
 -> x
-T 253 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
+T 255 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
 -> s
-T 254 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
+T 256 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
 -> e
-T 255 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
+T 257 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
 -> n
-T 256 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
+T 258 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
 -> w
-T 257 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 95 $ 720 room=.
+T 259 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 95 $ 720 room=.
 -> n
-T 258 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 94 $ 720 room=.
--> n
-T 259 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 93 $ 720 room=.
--> n
-T 260 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
+T 260 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 94 $ 720 room=.
 -> l
-T 261 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
--> w
-T 262 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 91 $ 720 room=.
--> s
-T 263 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
--> s
-T 264 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 720 room=.
--> w
-T 265 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 88 $ 720 room=.
+T 261 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 94 $ 720 room=.
 -> n
-T 266 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 87 $ 720 room=.
+T 262 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 93 $ 720 room=.
 -> n
-T 267 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
--> e
-T 268 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
+T 263 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
+-> w
+T 264 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 91 $ 720 room=.
 -> s
-T 269 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 84 $ 720 room=.
+T 265 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
+-> s
+T 266 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 720 room=.
+-> w
+T 267 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 88 $ 720 room=.
+-> n
+T 268 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 87 $ 720 room=.
+-> n
+T 269 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
 -> e
-T 270 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
+T 270 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
 -> l
-T 271 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
+T 271 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
 -> s
-T 272 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 82 $ 720 room=.
--> s
-T 273 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
--> s
-T 274 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 80 $ 720 room=.
+T 272 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 84 $ 720 room=.
 -> e
-T 275 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 79 $ 720 room=.
+T 273 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
+-> s
+T 274 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 82 $ 720 room=.
+-> s
+T 275 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
+-> s
+T 276 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 80 $ 720 room=.
+-> e
+T 277 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 79 $ 720 room=.
 -> n
-T 276 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 78 $ 720 room=.
+T 278 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 78 $ 720 room=.
 -> w
-T 277 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 77 $ 720 room=.
+T 279 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 77 $ 720 room=.
 -> n
-T 278 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
--> n
-T 279 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 720 room=.
--> n
-T 280 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
+T 280 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
 -> l
-T 281 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
--> w
-T 282 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 73 $ 720 room=.
--> w
-T 283 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
--> s
-T 284 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 71 $ 720 room=.
--> s
-T 285 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 70 $ 720 room=.
--> e
-T 286 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 69 $ 720 room=.
+T 281 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
 -> n
-T 287 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
+T 282 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 720 room=.
+-> n
+T 283 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
+-> w
+T 284 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 73 $ 720 room=.
+-> w
+T 285 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
+-> s
+T 286 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 71 $ 720 room=.
+-> s
+T 287 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 70 $ 720 room=.
 -> e
-T 288 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 67 $ 720 room=.
--> s
-T 289 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 66 $ 720 room=.
--> s
-T 290 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
+T 288 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 69 $ 720 room=.
+-> n
+T 289 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
+-> e
+T 290 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 67 $ 720 room=.
 -> l
-T 291 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
--> e
-T 292 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 64 $ 720 room=.
+T 291 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 67 $ 720 room=.
 -> s
-T 293 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 63 $ 720 room=.
--> w
-T 294 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 62 $ 720 room=.
+T 292 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 66 $ 720 room=.
 -> s
-T 295 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 61 $ 720 room=.
+T 293 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
 -> e
-T 296 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 60 $ 720 room=.
+T 294 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 64 $ 720 room=.
+-> s
+T 295 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 63 $ 720 room=.
 -> w
-T 297 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 59 $ 720 room=.
--> n
-T 298 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
+T 296 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 62 $ 720 room=.
+-> s
+T 297 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 61 $ 720 room=.
 -> e
-T 299 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 57 $ 720 room=.
+T 298 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 60 $ 720 room=.
+-> w
+T 299 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 59 $ 720 room=.
 -> n
-T 300 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
+T 300 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
 -> l
-T 301 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
+T 301 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
+-> e
+T 302 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 57 $ 720 room=.
+-> n
+T 303 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
 -> w
-T 302 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 55 $ 720 room=.
+T 304 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 55 $ 720 room=.
 -> n
-T 303 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
+T 305 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
 -> n
-T 304 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 53 $ 720 room=.
+T 306 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 53 $ 720 room=.
 -> n
-T 305 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 52 $ 720 room=.
+T 307 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 52 $ 720 room=.
 -> w
-T 306 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 51 $ 720 room=.
+T 308 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 51 $ 720 room=.
 -> s
-T 307 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
+T 309 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
 -> s
-T 308 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
+T 310 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
 -> i
-T 309 mode=inventory           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
+T 311 mode=inventory           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
 -> eat1
-T 310 mode=inventory           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
+T 312 mode=inventory           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
 -> x
-T 311 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
+T 313 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
 -> w
-T 312 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
+T 314 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
 -> n
-T 313 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
+T 315 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
 -> n
-T 314 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
+T 316 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
 -> n
-T 315 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 95 $ 720 room=E
+T 317 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 95 $ 720 room=E
 -> e
-T 316 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 94 $ 720 room=N
+T 318 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 94 $ 720 room=N
 -> s
-T 317 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 720 room=.
+T 319 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 93 $ 720 room=.
 -> s
-T 318 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
--> w
-T 319 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 91 $ 720 room=.
--> s
-T 320 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
+T 320 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
 -> l
-T 321 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
--> e
-T 322 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 720 room=.
--> e
-T 323 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 88 $ 720 room=.
--> n
-T 324 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 87 $ 720 room=.
--> n
-T 325 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
+T 321 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
 -> w
-T 326 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
+T 322 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 91 $ 720 room=.
 -> s
-T 327 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 84 $ 720 room=.
--> w
-T 328 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
--> s
-T 329 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 82 $ 720 room=.
+T 323 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
 -> e
-T 330 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
+T 324 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 89 $ 720 room=.
+-> e
+T 325 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 88 $ 720 room=.
+-> n
+T 326 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 87 $ 720 room=.
+-> n
+T 327 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
+-> w
+T 328 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
+-> s
+T 329 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 84 $ 720 room=.
+-> w
+T 330 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
 -> l
-T 331 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
--> e
-T 332 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 80 $ 720 room=.
+T 331 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
 -> s
-T 333 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 79 $ 720 room=.
--> s
-T 334 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 78 $ 720 room=.
+T 332 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 82 $ 720 room=.
 -> e
-T 335 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 77 $ 720 room=.
+T 333 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
+-> e
+T 334 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 80 $ 720 room=.
+-> s
+T 335 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 79 $ 720 room=.
+-> s
+T 336 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 78 $ 720 room=.
+-> e
+T 337 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 77 $ 720 room=.
 -> n
-T 336 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
+T 338 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
 -> w
-T 337 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 75 $ 720 room=.
+T 339 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 75 $ 720 room=.
 -> n
-T 338 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
--> n
-T 339 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 73 $ 720 room=.
--> w
-T 340 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
+T 340 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
 -> l
-T 341 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
--> s
-T 342 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 71 $ 720 room=.
+T 341 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
+-> n
+T 342 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 73 $ 720 room=.
 -> w
-T 343 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 70 $ 720 room=.
--> n
-T 344 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 69 $ 720 room=.
--> n
-T 345 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
--> n
-T 346 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 67 $ 720 room=E
--> e
-T 347 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 66 $ 720 room=N
+T 343 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
 -> s
-T 348 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
+T 344 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 71 $ 720 room=.
+-> w
+T 345 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 70 $ 720 room=.
+-> n
+T 346 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 69 $ 720 room=.
+-> n
+T 347 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
+-> n
+T 348 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 67 $ 720 room=E
 -> e
-T 349 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 64 $ 720 room=.
+T 349 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 66 $ 720 room=N
 -> s
-T 350 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 720 room=.
+T 350 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
 -> l
-T 351 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 720 room=.
--> w
-T 352 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 62 $ 720 room=.
--> s
-T 353 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 61 $ 720 room=.
+T 351 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
 -> e
-T 354 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 60 $ 720 room=.
+T 352 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 64 $ 720 room=.
 -> s
-T 355 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 59 $ 720 room=.
--> e
-T 356 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
--> s
-T 357 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 57 $ 720 room=.
--> s
-T 358 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
+T 353 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 63 $ 720 room=.
 -> w
-T 359 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 55 $ 720 room=.
--> n
-T 360 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
+T 354 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 62 $ 720 room=.
+-> s
+T 355 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 61 $ 720 room=.
+-> e
+T 356 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 60 $ 720 room=.
+-> s
+T 357 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 59 $ 720 room=.
+-> e
+T 358 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
+-> s
+T 359 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 57 $ 720 room=.
+-> s
+T 360 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
 -> l
-T 361 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
+T 361 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
+-> w
+T 362 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 55 $ 720 room=.
 -> n
-T 362 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 53 $ 720 room=.
+T 363 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
+-> n
+T 364 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 53 $ 720 room=.
 -> e
-T 363 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 52 $ 720 room=.
+T 365 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 52 $ 720 room=.
 -> s
-T 364 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 51 $ 720 room=.
+T 366 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 51 $ 720 room=.
 -> e
-T 365 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
+T 367 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
 -> e
-T 366 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
+T 368 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
 -> i
-T 367 mode=inventory           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
+T 369 mode=inventory           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
 -> eat1
-T 368 mode=inventory           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
+T 370 mode=inventory           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
 -> x
-T 369 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
+T 371 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
 -> n
-T 370 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
+T 372 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
+-> s
+T 373 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
+-> s
+T 374 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
+-> n
+T 375 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 95 $ 720 room=.
+-> w
+T 376 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 94 $ 720 room=.
+-> w
+T 377 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 93 $ 720 room=.
+-> s
+T 378 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
+-> w
+T 379 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 91 $ 720 room=.
+-> n
+T 380 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
 -> l
-T 371 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 5) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
--> s
-T 372 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
--> s
-T 373 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
+T 381 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
 -> n
-T 374 mode=game_loop           Earendil Stareyed(elf) F1@( 6, 6) HP 28/28 MP 0/0 Hu 95 $ 720 room=.
+T 382 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 89 $ 720 room=.
+-> n
+T 383 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 88 $ 720 room=.
 -> w
-T 375 mode=game_loop           Earendil Stareyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 94 $ 720 room=.
+T 384 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 87 $ 720 room=.
 -> w
-T 376 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 93 $ 720 room=.
+T 385 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
+-> n
+T 386 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
+-> n
+T 387 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 720 room=.
+-> e
+T 388 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
+-> e
+T 389 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 82 $ 720 room=.
 -> s
-T 377 mode=game_loop           Earendil Stareyed(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 92 $ 720 room=.
--> w
-T 378 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 7) HP 28/28 MP 0/0 Hu 91 $ 720 room=.
--> n
-T 379 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 90 $ 720 room=.
--> n
-T 380 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 89 $ 720 room=.
+T 390 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
 -> l
-T 381 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 89 $ 720 room=.
--> n
-T 382 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 88 $ 720 room=.
+T 391 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
 -> w
-T 383 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 87 $ 720 room=.
+T 392 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 80 $ 720 room=.
 -> w
-T 384 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 86 $ 720 room=.
--> n
-T 385 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 85 $ 720 room=.
--> n
-T 386 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 84 $ 720 room=.
--> e
-T 387 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 83 $ 720 room=.
--> e
-T 388 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 82 $ 720 room=.
+T 393 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 79 $ 720 room=.
 -> s
-T 389 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 81 $ 720 room=.
--> w
-T 390 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 80 $ 720 room=.
+T 394 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 78 $ 720 room=.
+-> e
+T 395 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 77 $ 720 room=.
+-> e
+T 396 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
+-> n
+T 397 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 720 room=.
+-> n
+T 398 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
+-> s
+T 399 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 73 $ 720 room=.
+-> s
+T 400 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
 -> l
-T 391 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 80 $ 720 room=.
+T 401 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
 -> w
-T 392 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 3) HP 28/28 MP 0/0 Hu 79 $ 720 room=.
+T 402 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 71 $ 720 room=.
 -> s
-T 393 mode=game_loop           Earendil Stareyed(elf) F1@( 1, 4) HP 28/28 MP 0/0 Hu 78 $ 720 room=.
--> e
-T 394 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 77 $ 720 room=.
--> e
-T 395 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 76 $ 720 room=.
--> n
-T 396 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 75 $ 720 room=.
--> n
-T 397 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 74 $ 720 room=.
--> s
-T 398 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 73 $ 720 room=.
--> s
-T 399 mode=game_loop           Earendil Stareyed(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 72 $ 720 room=.
--> w
-T 400 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 71 $ 720 room=.
--> l
-T 401 mode=game_loop           Earendil Stareyed(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 71 $ 720 room=.
--> s
-T 402 mode=warp_mode           Earendil Stareyed(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 70 $ 720 room=W
+T 403 mode=warp_mode           Earendil Stareyed(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 70 $ 720 room=W
 -> y
-T 403 mode=garden_mode         Earendil Stareyed(elf) F3@(16,12) HP 28/28 MP 0/0 Hu 70 $ 720 room=G
+T 404 mode=garden_mode         Earendil Stareyed(elf) F3@(16,12) HP 28/28 MP 0/0 Hu 70 $ 720 room=G
 -> h
-T 404 mode=game_loop           Earendil Stareyed(elf) F3@(16,12) HP 28/28 MP 0/0 Hu 70 $ 720 room=.
--> l
 T 405 mode=game_loop           Earendil Stareyed(elf) F3@(16,12) HP 28/28 MP 0/0 Hu 70 $ 720 room=.
--> s
-T 406 mode=game_loop           Earendil Stareyed(elf) F3@(16,13) HP 28/28 MP 0/0 Hu 69 $ 720 room=.
 -> l
+T 406 mode=game_loop           Earendil Stareyed(elf) F3@(16,12) HP 28/28 MP 0/0 Hu 70 $ 720 room=.
+-> s
 T 407 mode=game_loop           Earendil Stareyed(elf) F3@(16,13) HP 28/28 MP 0/0 Hu 69 $ 720 room=.
--> s
-T 408 mode=game_loop           Earendil Stareyed(elf) F3@(16,14) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
 -> l
+T 408 mode=game_loop           Earendil Stareyed(elf) F3@(16,13) HP 28/28 MP 0/0 Hu 69 $ 720 room=.
+-> s
 T 409 mode=game_loop           Earendil Stareyed(elf) F3@(16,14) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
--> s
-T 410 mode=game_loop           Earendil Stareyed(elf) F3@(16,15) HP 28/28 MP 0/0 Hu 67 $ 720 room=.
 -> l
+T 410 mode=game_loop           Earendil Stareyed(elf) F3@(16,14) HP 28/28 MP 0/0 Hu 68 $ 720 room=.
+-> s
 T 411 mode=game_loop           Earendil Stareyed(elf) F3@(16,15) HP 28/28 MP 0/0 Hu 67 $ 720 room=.
--> e
-T 412 mode=game_loop           Earendil Stareyed(elf) F3@(17,15) HP 28/28 MP 0/0 Hu 66 $ 720 room=.
 -> l
+T 412 mode=game_loop           Earendil Stareyed(elf) F3@(16,15) HP 28/28 MP 0/0 Hu 67 $ 720 room=.
+-> e
 T 413 mode=game_loop           Earendil Stareyed(elf) F3@(17,15) HP 28/28 MP 0/0 Hu 66 $ 720 room=.
--> s
-T 414 mode=pool_mode           Earendil Stareyed(elf) F3@(17,16) HP 28/28 MP 0/0 Hu 65 $ 720 room=P
--> dr
-T 415 mode=game_loop           Earendil Stareyed(elf) F3@(17,16) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
 -> l
+T 414 mode=game_loop           Earendil Stareyed(elf) F3@(17,15) HP 28/28 MP 0/0 Hu 66 $ 720 room=.
+-> s
+T 415 mode=pool_mode           Earendil Stareyed(elf) F3@(17,16) HP 28/28 MP 0/0 Hu 65 $ 720 room=P
+-> dr
 T 416 mode=game_loop           Earendil Stareyed(elf) F3@(17,16) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
+-> l
+T 417 mode=game_loop           Earendil Stareyed(elf) F3@(17,16) HP 28/28 MP 0/0 Hu 65 $ 720 room=.
 -> e
-T 417 mode=garden_mode         Earendil Stareyed(elf) F3@(18,16) HP 28/28 MP 0/0 Hu 64 $ 720 room=G
+T 418 mode=garden_mode         Earendil Stareyed(elf) F3@(18,16) HP 28/28 MP 0/0 Hu 64 $ 720 room=G
 -> h
-T 418 mode=game_loop           Earendil Stareyed(elf) F3@(18,16) HP 28/28 MP 0/0 Hu 64 $ 720 room=.
+T 419 mode=game_loop           Earendil Stareyed(elf) F3@(18,16) HP 28/28 MP 0/0 Hu 64 $ 720 room=.
 -> e
-T 419 mode=game_loop           Earendil Stareyed(elf) F3@(19,16) HP 28/28 MP 0/0 Hu 63 $ 720 room=.
+T 420 mode=game_loop           Earendil Stareyed(elf) F3@(19,16) HP 28/28 MP 0/0 Hu 63 $ 720 room=.
 -> n
-T 420 mode=game_loop           Earendil Stareyed(elf) F3@(19,15) HP 28/28 MP 0/0 Hu 62 $ 720 room=.
+T 421 mode=game_loop           Earendil Stareyed(elf) F3@(19,15) HP 28/28 MP 0/0 Hu 62 $ 720 room=.
 -> n
-T 421 mode=game_loop           Earendil Stareyed(elf) F3@(19,14) HP 28/28 MP 0/0 Hu 61 $ 720 room=.
+T 422 mode=game_loop           Earendil Stareyed(elf) F3@(19,14) HP 28/28 MP 0/0 Hu 61 $ 720 room=.
 -> n
-T 422 mode=dungeon_mode        Earendil Stareyed(elf) F3@(19,13) HP 28/28 MP 0/0 Hu 60 $ 720 room=N
+T 423 mode=dungeon_mode        Earendil Stareyed(elf) F3@(19,13) HP 28/28 MP 0/0 Hu 60 $ 720 room=N
 -> u
-T 423 mode=game_loop           Earendil Stareyed(elf) F3@(19,13) HP 28/28 MP 0/0 Hu 60 $ 720 room=N
+T 424 mode=game_loop           Earendil Stareyed(elf) F3@(19,13) HP 28/28 MP 0/0 Hu 60 $ 720 room=N
 -> w
-T 424 mode=game_loop           Earendil Stareyed(elf) F3@(18,13) HP 28/28 MP 0/0 Hu 59 $ 720 room=.
+T 425 mode=game_loop           Earendil Stareyed(elf) F3@(18,13) HP 28/28 MP 0/0 Hu 59 $ 720 room=.
 -> w
-T 425 mode=game_loop           Earendil Stareyed(elf) F3@(17,13) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
+T 426 mode=game_loop           Earendil Stareyed(elf) F3@(17,13) HP 28/28 MP 0/0 Hu 58 $ 720 room=.
 -> n
-T 426 mode=game_loop           Earendil Stareyed(elf) F3@(17,12) HP 28/28 MP 0/0 Hu 57 $ 720 room=.
+T 427 mode=game_loop           Earendil Stareyed(elf) F3@(17,12) HP 28/28 MP 0/0 Hu 57 $ 720 room=.
 -> n
-T 427 mode=altar_mode          Earendil Stareyed(elf) F3@(17,11) HP 28/28 MP 0/0 Hu 56 $ 720 room=A
+T 428 mode=altar_mode          Earendil Stareyed(elf) F3@(17,11) HP 28/28 MP 0/0 Hu 56 $ 720 room=A
 -> pray
-T 428 mode=game_loop           Earendil Stareyed(elf) F3@(17,11) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
+T 429 mode=game_loop           Earendil Stareyed(elf) F3@(17,11) HP 28/28 MP 0/0 Hu 56 $ 720 room=.
 -> w
-T 429 mode=pool_mode           Earendil Stareyed(elf) F3@(16,11) HP 28/28 MP 0/0 Hu 55 $ 720 room=P
+T 430 mode=pool_mode           Earendil Stareyed(elf) F3@(16,11) HP 28/28 MP 0/0 Hu 55 $ 720 room=P
 -> dr
-T 430 mode=game_loop           Earendil Stareyed(elf) F3@(16,11) HP 28/28 MP 0/0 Hu 55 $ 720 room=.
--> l
 T 431 mode=game_loop           Earendil Stareyed(elf) F3@(16,11) HP 28/28 MP 0/0 Hu 55 $ 720 room=.
--> w
-T 432 mode=game_loop           Earendil Stareyed(elf) F3@(15,11) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
 -> l
+T 432 mode=game_loop           Earendil Stareyed(elf) F3@(16,11) HP 28/28 MP 0/0 Hu 55 $ 720 room=.
+-> w
 T 433 mode=game_loop           Earendil Stareyed(elf) F3@(15,11) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
--> n
-T 434 mode=game_loop           Earendil Stareyed(elf) F3@(15,10) HP 28/28 MP 0/0 Hu 53 $ 720 room=.
--> n
-T 435 mode=game_loop           Earendil Stareyed(elf) F3@(15, 9) HP 28/28 MP 0/0 Hu 52 $ 720 room=.
 -> l
+T 434 mode=game_loop           Earendil Stareyed(elf) F3@(15,11) HP 28/28 MP 0/0 Hu 54 $ 720 room=.
+-> n
+T 435 mode=game_loop           Earendil Stareyed(elf) F3@(15,10) HP 28/28 MP 0/0 Hu 53 $ 720 room=.
+-> n
 T 436 mode=game_loop           Earendil Stareyed(elf) F3@(15, 9) HP 28/28 MP 0/0 Hu 52 $ 720 room=.
--> e
-T 437 mode=game_loop           Earendil Stareyed(elf) F3@(16, 9) HP 28/28 MP 0/0 Hu 51 $ 720 room=.
 -> l
+T 437 mode=game_loop           Earendil Stareyed(elf) F3@(15, 9) HP 28/28 MP 0/0 Hu 52 $ 720 room=.
+-> e
 T 438 mode=game_loop           Earendil Stareyed(elf) F3@(16, 9) HP 28/28 MP 0/0 Hu 51 $ 720 room=.
--> e
-T 439 mode=game_loop           Earendil Stareyed(elf) F3@(17, 9) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
 -> l
+T 439 mode=game_loop           Earendil Stareyed(elf) F3@(16, 9) HP 28/28 MP 0/0 Hu 51 $ 720 room=.
+-> e
 T 440 mode=game_loop           Earendil Stareyed(elf) F3@(17, 9) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
+-> l
+T 441 mode=game_loop           Earendil Stareyed(elf) F3@(17, 9) HP 28/28 MP 0/0 Hu 50 $ 720 room=.
 -> n
-T 441 mode=game_loop           Earendil Stareyed(elf) F3@(17, 8) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
+T 442 mode=game_loop           Earendil Stareyed(elf) F3@(17, 8) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
 -> i
-T 442 mode=inventory           Earendil Stareyed(elf) F3@(17, 8) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
+T 443 mode=inventory           Earendil Stareyed(elf) F3@(17, 8) HP 28/28 MP 0/0 Hu 49 $ 720 room=.
 -> eat1
-T 443 mode=inventory           Earendil Stareyed(elf) F3@(17, 8) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
+T 444 mode=inventory           Earendil Stareyed(elf) F3@(17, 8) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
 -> x
-T 444 mode=game_loop           Earendil Stareyed(elf) F3@(17, 8) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
+T 445 mode=game_loop           Earendil Stareyed(elf) F3@(17, 8) HP 28/28 MP 0/0 Hu 99 $ 720 room=.
 -> n
-T 445 mode=game_loop           Earendil Stareyed(elf) F3@(17, 7) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
+T 446 mode=game_loop           Earendil Stareyed(elf) F3@(17, 7) HP 28/28 MP 0/0 Hu 98 $ 720 room=.
 -> w
-T 446 mode=game_loop           Earendil Stareyed(elf) F3@(16, 7) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
+T 447 mode=game_loop           Earendil Stareyed(elf) F3@(16, 7) HP 28/28 MP 0/0 Hu 97 $ 720 room=.
 -> w
-T 447 mode=library_mode        Earendil Stareyed(elf) F3@(15, 7) HP 28/28 MP 0/0 Hu 96 $ 720 room=L
+T 448 mode=library_mode        Earendil Stareyed(elf) F3@(15, 7) HP 28/28 MP 0/0 Hu 96 $ 720 room=L
 -> r
-T 448 mode=library_read_decision_mode Earendil Stareyed(elf) F3@(15, 7) HP 28/28 MP 0/0 Hu 96 $ 720 room=L
+T 449 mode=library_read_decision_mode Earendil Stareyed(elf) F3@(15, 7) HP 28/28 MP 0/0 Hu 96 $ 720 room=L
 -> y
-T 449 mode=game_loop           Earendil Stareyed(elf) F3@(15, 7) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
+T 450 mode=game_loop           Earendil Stareyed(elf) F3@(15, 7) HP 28/28 MP 0/0 Hu 96 $ 720 room=.
 -> s
-T 450 mode=game_loop           Earendil Stareyed(elf) F3@(15, 8) HP 20/28 MP 0/0 Hu 95 $ 720 room=.
+T 451 mode=game_loop           Earendil Stareyed(elf) F3@(15, 8) HP 20/28 MP 0/0 Hu 95 $ 720 room=.
 -> s
-T 451 mode=game_loop           Earendil Stareyed(elf) F3@(15, 9) HP 13/28 MP 0/0 Hu 94 $ 720 room=.
+T 452 mode=game_loop           Earendil Stareyed(elf) F3@(15, 9) HP 13/28 MP 0/0 Hu 94 $ 720 room=.
 -> s
-T 452 mode=game_loop           Earendil Stareyed(elf) F3@(15,10) HP 5/28 MP 0/0 Hu 93 $ 720 room=.
+T 453 mode=game_loop           Earendil Stareyed(elf) F3@(15,10) HP 5/28 MP 0/0 Hu 93 $ 720 room=.
 -> s
-T 453 mode=death_screen        Earendil Stareyed(elf) F3@(15,11) HP -2/28 MP 0/0 Hu 92 $ 720 room=.
+T 454 mode=death_screen        Earendil Stareyed(elf) F3@(15,11) HP -2/28 MP 0/0 Hu 92 $ 720 room=.
 
-=== run finished: turns=453 floor=3 hp=-2/28 gold=720 alive=False mode=death_screen ===
+=== run finished: turns=454 floor=3 hp=-2/28 gold=720 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00137_elf.html

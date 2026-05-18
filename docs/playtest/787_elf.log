@@ -91,1428 +91,1843 @@ T  36 mode=combat_mode         Galadriel the Wise(elf) F1@( 4, 4) HP 26/28 MP 0/
 T  37 mode=combat_victory      Galadriel the Wise(elf) F1@( 4, 4) HP 25/28 MP 0/0 Hu 94 $ 369 room=.
 -> back
 T  38 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 4) HP 25/28 MP 0/0 Hu 94 $ 369 room=.
--> l
-T  39 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 4) HP 25/28 MP 0/0 Hu 94 $ 369 room=.
--> n
-T  40 mode=combat_mode         Galadriel the Wise(elf) F1@( 4, 3) HP 26/28 MP 0/0 Hu 93 $ 369 room=M vs Skeleton(L0 HP25/25)
--> a
-T  41 mode=combat_mode         Galadriel the Wise(elf) F1@( 4, 3) HP 25/28 MP 0/0 Hu 93 $ 369 room=M vs Skeleton(L0 HP25/25)
--> a
-T  42 mode=combat_mode         Galadriel the Wise(elf) F1@( 4, 3) HP 24/28 MP 0/0 Hu 93 $ 369 room=M vs Skeleton(L0 HP25/25)
--> a
-T  43 mode=combat_mode         Galadriel the Wise(elf) F1@( 4, 3) HP 24/28 MP 0/0 Hu 93 $ 369 room=M vs Skeleton(L0 HP25/25)
--> f
-T  44 mode=flee_direction_mode Galadriel the Wise(elf) F1@( 4, 3) HP 24/28 MP 0/0 Hu 93 $ 369 room=M
--> s
-T  45 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 4) HP 24/28 MP 0/0 Hu 93 $ 369 room=.
--> s
-T  46 mode=combat_mode         Galadriel the Wise(elf) F1@( 4, 5) HP 24/28 MP 0/0 Hu 92 $ 369 room=M vs Bat(L0 HP12/12)
--> a
-T  47 mode=combat_victory      Galadriel the Wise(elf) F1@( 4, 5) HP 24/28 MP 0/0 Hu 92 $ 372 room=.
--> back
-T  48 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 5) HP 24/28 MP 0/0 Hu 92 $ 372 room=.
--> l
-T  49 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 5) HP 24/28 MP 0/0 Hu 92 $ 372 room=.
--> e
-T  50 mode=combat_mode         Galadriel the Wise(elf) F1@( 5, 5) HP 25/28 MP 0/0 Hu 91 $ 372 room=M vs Kobold(L0 HP8/8)
--> a
-T  51 mode=combat_victory      Galadriel the Wise(elf) F1@( 5, 5) HP 24/28 MP 0/0 Hu 91 $ 376 room=.
--> back
-T  52 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 5) HP 24/28 MP 0/0 Hu 91 $ 376 room=.
--> l
-T  53 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 5) HP 24/28 MP 0/0 Hu 91 $ 376 room=.
--> n
-T  54 mode=combat_mode         Galadriel the Wise(elf) F1@( 5, 4) HP 24/28 MP 0/0 Hu 90 $ 376 room=M vs Stirge(L0 HP6/6)
--> a
-T  55 mode=combat_victory      Galadriel the Wise(elf) F1@( 5, 4) HP 24/28 MP 0/0 Hu 90 $ 378 room=.
--> back
-T  56 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 4) HP 24/28 MP 0/0 Hu 90 $ 378 room=.
--> n
-T  57 mode=combat_mode         Galadriel the Wise(elf) F1@( 5, 3) HP 25/28 MP 0/0 Hu 89 $ 378 room=M vs Lichen(L0 HP10/10)
--> f
-T  58 mode=flee_direction_mode Galadriel the Wise(elf) F1@( 5, 3) HP 25/28 MP 0/0 Hu 89 $ 378 room=M
--> e
-T  59 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 3) HP 25/28 MP 0/0 Hu 89 $ 378 room=.
--> s
-T  60 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 4) HP 25/28 MP 0/0 Hu 88 $ 378 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T  61 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 4) HP 24/28 MP 0/0 Hu 88 $ 378 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T  62 mode=combat_victory      Galadriel the Wise(elf) F1@( 6, 4) HP 24/28 MP 0/0 Hu 88 $ 380 room=.
--> back
-T  63 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 4) HP 24/28 MP 0/0 Hu 88 $ 380 room=.
--> s
-T  64 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 5) HP 25/28 MP 0/0 Hu 87 $ 380 room=.
--> e
-T  65 mode=combat_mode         Galadriel the Wise(elf) F1@( 7, 5) HP 25/28 MP 0/0 Hu 86 $ 380 room=M vs Rust Monster(L0 HP18/18)
--> a
-T  66 mode=combat_victory      Galadriel the Wise(elf) F1@( 7, 5) HP 25/28 MP 0/0 Hu 86 $ 482 room=.
--> back
-T  67 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 25/28 MP 0/0 Hu 86 $ 482 room=.
--> l
-T  68 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 25/28 MP 0/0 Hu 86 $ 482 room=.
--> s
-T  69 mode=combat_mode         Galadriel the Wise(elf) F1@( 7, 6) HP 26/28 MP 0/0 Hu 85 $ 482 room=M vs Rust Monster(L0 HP18/18)
--> a
-T  70 mode=combat_victory      Galadriel the Wise(elf) F1@( 7, 6) HP 26/28 MP 0/0 Hu 85 $ 492 room=.
--> back
-T  71 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 26/28 MP 0/0 Hu 85 $ 492 room=.
--> l
-T  72 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 26/28 MP 0/0 Hu 85 $ 492 room=.
--> s
-T  73 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 26/28 MP 0/0 Hu 84 $ 492 room=.
 -> i
-T  74 mode=inventory           Galadriel the Wise(elf) F1@( 7, 7) HP 26/28 MP 0/0 Hu 84 $ 492 room=.
+T  39 mode=inventory           Galadriel the Wise(elf) F1@( 4, 4) HP 25/28 MP 0/0 Hu 94 $ 369 room=.
 -> u3
-T  75 mode=inventory           Galadriel the Wise(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 84 $ 492 room=.
+T  40 mode=inventory           Galadriel the Wise(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 94 $ 369 room=.
 -> x
-T  76 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 84 $ 492 room=.
+T  41 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 94 $ 369 room=.
 -> i
-T  77 mode=inventory           Galadriel the Wise(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 84 $ 492 room=.
--> eat3
-T  78 mode=inventory           Galadriel the Wise(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 89 $ 492 room=.
+T  42 mode=inventory           Galadriel the Wise(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 94 $ 369 room=.
+-> u7
+T  43 mode=inventory           Galadriel the Wise(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 94 $ 369 room=.
 -> x
-T  79 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 89 $ 492 room=.
+T  44 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 94 $ 369 room=.
 -> l
-T  80 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 89 $ 492 room=.
+T  45 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 94 $ 369 room=.
 -> e
-T  81 mode=combat_mode         Galadriel the Wise(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 88 $ 492 room=M vs Kobold(L0 HP8/8)
+T  46 mode=combat_mode         Galadriel the Wise(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 93 $ 369 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  82 mode=combat_victory      Galadriel the Wise(elf) F1@( 8, 7) HP 27/28 MP 0/0 Hu 88 $ 493 room=.
--> back
-T  83 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 27/28 MP 0/0 Hu 88 $ 493 room=.
--> l
-T  84 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 27/28 MP 0/0 Hu 88 $ 493 room=.
--> s
-T  85 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 8) HP 27/28 MP 0/0 Hu 87 $ 493 room=.
--> l
-T  86 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 8) HP 27/28 MP 0/0 Hu 87 $ 493 room=.
--> n
-T  87 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 86 $ 493 room=.
--> i
-T  88 mode=inventory           Galadriel the Wise(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 86 $ 493 room=.
--> eat3
-T  89 mode=inventory           Galadriel the Wise(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 91 $ 493 room=.
--> x
-T  90 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 91 $ 493 room=.
--> e
-T  91 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 90 $ 493 room=.
--> i
-T  92 mode=inventory           Galadriel the Wise(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 90 $ 493 room=.
--> eat4
-T  93 mode=inventory           Galadriel the Wise(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 96 $ 493 room=.
--> x
-T  94 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 96 $ 493 room=.
--> n
-T  95 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 6) HP 28/28 MP 0/0 Hu 95 $ 493 room=.
--> w
-T  96 mode=combat_mode         Galadriel the Wise(elf) F1@( 8, 6) HP 28/28 MP 0/0 Hu 94 $ 493 room=M vs Kobold(L0 HP20/20)
+T  47 mode=combat_mode         Galadriel the Wise(elf) F1@( 5, 4) HP 27/28 MP 0/0 Hu 93 $ 369 room=M vs Skeleton(L0 HP25/25)
 -> a
-T  97 mode=combat_mode         Galadriel the Wise(elf) F1@( 8, 6) HP 27/28 MP 0/0 Hu 94 $ 493 room=M vs Kobold(L0 HP20/20)
--> a
-T  98 mode=combat_victory      Galadriel the Wise(elf) F1@( 8, 6) HP 27/38 MP 0/0 Hu 94 $ 502 room=.
--> back
-T  99 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 6) HP 27/38 MP 0/0 Hu 94 $ 502 room=.
--> i
-T 100 mode=inventory           Galadriel the Wise(elf) F1@( 8, 6) HP 27/38 MP 0/0 Hu 94 $ 502 room=.
--> u3
-T 101 mode=inventory           Galadriel the Wise(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 94 $ 502 room=.
--> x
-T 102 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 94 $ 502 room=.
--> n
-T 103 mode=combat_mode         Galadriel the Wise(elf) F1@( 8, 5) HP 38/38 MP 0/0 Hu 93 $ 502 room=M vs Goblin(L0 HP12/12)
--> a
-T 104 mode=combat_victory      Galadriel the Wise(elf) F1@( 8, 5) HP 38/38 MP 0/0 Hu 93 $ 611 room=.
--> back
-T 105 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 5) HP 38/38 MP 0/0 Hu 93 $ 611 room=.
--> n
-T 106 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 4) HP 38/38 MP 0/0 Hu 92 $ 611 room=.
--> n
-T 107 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 3) HP 38/38 MP 0/0 Hu 91 $ 611 room=.
--> i
-T 108 mode=inventory           Galadriel the Wise(elf) F1@( 8, 3) HP 38/38 MP 0/0 Hu 91 $ 611 room=.
--> eat5
-T 109 mode=inventory           Galadriel the Wise(elf) F1@( 8, 3) HP 38/38 MP 0/0 Hu 97 $ 611 room=.
--> x
-T 110 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 3) HP 38/38 MP 0/0 Hu 97 $ 611 room=.
--> n
-T 111 mode=combat_mode         Galadriel the Wise(elf) F1@( 8, 2) HP 38/38 MP 0/0 Hu 96 $ 611 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T 112 mode=combat_victory      Galadriel the Wise(elf) F1@( 8, 2) HP 38/38 MP 0/0 Hu 96 $ 621 room=.
--> back
-T 113 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 2) HP 38/38 MP 0/0 Hu 96 $ 621 room=.
--> n
-T 114 mode=combat_mode         Galadriel the Wise(elf) F1@( 8, 1) HP 38/38 MP 0/0 Hu 95 $ 621 room=M vs Slime Mold(L0 HP15/15)
--> a
-T 115 mode=combat_mode         Galadriel the Wise(elf) F1@( 8, 1) HP 37/38 MP 0/0 Hu 95 $ 621 room=M vs Slime Mold(L0 HP15/15)
--> a
-T 116 mode=combat_victory      Galadriel the Wise(elf) F1@( 8, 1) HP 37/38 MP 0/0 Hu 95 $ 631 room=.
--> back
-T 117 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 1) HP 37/38 MP 0/0 Hu 95 $ 631 room=.
--> w
-T 118 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 1) HP 37/38 MP 0/0 Hu 94 $ 631 room=.
--> s
-T 119 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 2) HP 38/38 MP 0/0 Hu 93 $ 631 room=.
--> w
-T 120 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 2) HP 38/38 MP 0/0 Hu 92 $ 631 room=.
--> s
-T 121 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 3) HP 38/38 MP 0/0 Hu 91 $ 631 room=.
--> s
-T 122 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 90 $ 631 room=.
--> i
-T 123 mode=inventory           Galadriel the Wise(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 90 $ 631 room=.
--> eat4
-T 124 mode=inventory           Galadriel the Wise(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 95 $ 631 room=.
--> x
-T 125 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 95 $ 631 room=.
--> s
-T 126 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 5) HP 38/38 MP 0/0 Hu 94 $ 631 room=.
--> i
-T 127 mode=inventory           Galadriel the Wise(elf) F1@( 6, 5) HP 38/38 MP 0/0 Hu 94 $ 631 room=.
--> eat3
-T 128 mode=inventory           Galadriel the Wise(elf) F1@( 6, 5) HP 38/38 MP 0/0 Hu 99 $ 631 room=.
--> x
-T 129 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 5) HP 38/38 MP 0/0 Hu 99 $ 631 room=.
--> e
-T 130 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 98 $ 631 room=.
--> s
-T 131 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 97 $ 631 room=.
--> s
-T 132 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 96 $ 631 room=.
--> w
-T 133 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 95 $ 631 room=M vs Sewer Rat(L0 HP10/10)
+T  48 mode=combat_mode         Galadriel the Wise(elf) F1@( 5, 4) HP 26/28 MP 0/0 Hu 93 $ 369 room=M vs Skeleton(L0 HP25/25)
 -> f
-T 134 mode=flee_direction_mode Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 95 $ 631 room=M
+T  49 mode=flee_direction_mode Galadriel the Wise(elf) F1@( 5, 4) HP 26/28 MP 0/0 Hu 93 $ 369 room=M
 -> w
-T 135 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 7) HP 38/38 MP 0/0 Hu 95 $ 631 room=.
--> n
-T 136 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 6) HP 38/38 MP 0/0 Hu 94 $ 631 room=.
--> n
-T 137 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 5) HP 38/38 MP 0/0 Hu 93 $ 631 room=.
--> e
-T 138 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 5) HP 38/38 MP 0/0 Hu 92 $ 631 room=.
--> e
-T 139 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 91 $ 631 room=.
+T  50 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 4) HP 26/28 MP 0/0 Hu 93 $ 369 room=.
 -> s
-T 140 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 90 $ 631 room=.
--> s
-T 141 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 89 $ 631 room=.
--> e
-T 142 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 88 $ 631 room=.
--> s
-T 143 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 87 $ 631 room=.
--> n
-T 144 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 86 $ 631 room=.
--> n
-T 145 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 85 $ 631 room=.
--> e
-T 146 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 6) HP 38/38 MP 0/0 Hu 84 $ 631 room=.
--> s
-T 147 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 83 $ 631 room=.
--> n
-T 148 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 6) HP 38/38 MP 0/0 Hu 82 $ 631 room=.
--> s
-T 149 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 81 $ 631 room=.
--> w
-T 150 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 80 $ 631 room=.
--> s
-T 151 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 79 $ 631 room=.
--> n
-T 152 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 78 $ 631 room=.
--> w
-T 153 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 77 $ 631 room=.
--> w
-T 154 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 76 $ 631 room=M vs Sewer Rat(L0 HP10/10)
+T  51 mode=combat_mode         Galadriel the Wise(elf) F1@( 4, 5) HP 26/28 MP 0/0 Hu 92 $ 369 room=M vs Goblin(L0 HP12/12)
+-> f
+T  52 mode=combat_mode         Galadriel the Wise(elf) F1@( 4, 5) HP 26/28 MP 0/0 Hu 92 $ 369 room=M vs Goblin(L0 HP12/12)
 -> a
-T 155 mode=combat_victory      Galadriel the Wise(elf) F1@( 6, 7) HP 37/38 MP 0/0 Hu 76 $ 633 room=.
+T  53 mode=combat_victory      Galadriel the Wise(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 92 $ 370 room=.
 -> back
-T 156 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 7) HP 37/38 MP 0/0 Hu 76 $ 633 room=.
--> w
-T 157 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 7) HP 37/38 MP 0/0 Hu 75 $ 633 room=.
+T  54 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 92 $ 370 room=.
+-> l
+T  55 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 5) HP 25/28 MP 0/0 Hu 92 $ 370 room=.
 -> s
-T 158 mode=combat_mode         Galadriel the Wise(elf) F1@( 5, 8) HP 37/38 MP 0/0 Hu 74 $ 633 room=M vs Kobold(L0 HP8/8)
+T  56 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 6) HP 26/28 MP 0/0 Hu 91 $ 370 room=.
+-> l
+T  57 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 6) HP 26/28 MP 0/0 Hu 91 $ 370 room=.
+-> e
+T  58 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 6) HP 26/28 MP 0/0 Hu 90 $ 370 room=.
+-> l
+T  59 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 6) HP 26/28 MP 0/0 Hu 90 $ 370 room=.
+-> s
+T  60 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 89 $ 370 room=.
+-> l
+T  61 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 89 $ 370 room=.
+-> e
+T  62 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 7) HP 27/28 MP 0/0 Hu 88 $ 370 room=M vs Skeleton(L0 HP25/25)
+-> f
+T  63 mode=flee_direction_mode Galadriel the Wise(elf) F1@( 6, 7) HP 27/28 MP 0/0 Hu 88 $ 370 room=M
+-> e
+T  64 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 27/28 MP 0/0 Hu 88 $ 370 room=.
+-> l
+T  65 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 27/28 MP 0/0 Hu 88 $ 370 room=.
+-> n
+T  66 mode=combat_mode         Galadriel the Wise(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 370 room=M vs Crawling Claw(L0 HP5/5)
 -> a
-T 159 mode=combat_mode         Galadriel the Wise(elf) F1@( 5, 8) HP 36/38 MP 0/0 Hu 74 $ 633 room=M vs Kobold(L0 HP8/8)
--> a
-T 160 mode=combat_victory      Galadriel the Wise(elf) F1@( 5, 8) HP 36/38 MP 0/0 Hu 74 $ 640 room=.
+T  67 mode=combat_victory      Galadriel the Wise(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 473 room=.
 -> back
-T 161 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 8) HP 36/38 MP 0/0 Hu 74 $ 640 room=.
--> e
-T 162 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 8) HP 36/38 MP 0/0 Hu 73 $ 640 room=M vs Bat(L0 HP12/12)
+T  68 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 473 room=.
+-> i
+T  69 mode=inventory           Galadriel the Wise(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 473 room=.
+-> u8
+T  70 mode=inventory           Galadriel the Wise(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 473 room=.
+-> x
+T  71 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 473 room=.
+-> l
+T  72 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 28/28 MP 0/0 Hu 87 $ 473 room=.
+-> n
+T  73 mode=combat_mode         Galadriel the Wise(elf) F1@( 7, 5) HP 28/28 MP 0/0 Hu 86 $ 473 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T 163 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 8) HP 36/38 MP 0/0 Hu 73 $ 640 room=M vs Bat(L0 HP12/12)
--> a
-T 164 mode=combat_victory      Galadriel the Wise(elf) F1@( 6, 8) HP 35/38 MP 0/0 Hu 73 $ 644 room=.
+T  74 mode=combat_victory      Galadriel the Wise(elf) F1@( 7, 5) HP 27/28 MP 0/0 Hu 86 $ 479 room=.
 -> back
-T 165 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 8) HP 35/38 MP 0/0 Hu 73 $ 644 room=.
--> l
-T 166 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 8) HP 35/38 MP 0/0 Hu 73 $ 644 room=.
+T  75 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 27/28 MP 0/0 Hu 86 $ 479 room=.
 -> n
-T 167 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 7) HP 36/38 MP 0/0 Hu 72 $ 644 room=.
--> e
-T 168 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 36/38 MP 0/0 Hu 71 $ 644 room=.
--> e
-T 169 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 36/38 MP 0/0 Hu 70 $ 644 room=.
--> s
-T 170 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 8) HP 36/38 MP 0/0 Hu 69 $ 644 room=.
--> n
-T 171 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 37/38 MP 0/0 Hu 68 $ 644 room=.
--> e
-T 172 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 7) HP 37/38 MP 0/0 Hu 67 $ 644 room=.
--> n
-T 173 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 6) HP 37/38 MP 0/0 Hu 66 $ 644 room=.
--> i
-T 174 mode=inventory           Galadriel the Wise(elf) F1@( 9, 6) HP 37/38 MP 0/0 Hu 66 $ 644 room=.
--> eat4
-T 175 mode=inventory           Galadriel the Wise(elf) F1@( 9, 6) HP 37/38 MP 0/0 Hu 71 $ 644 room=.
--> eat1
-T 176 mode=inventory           Galadriel the Wise(elf) F1@( 9, 6) HP 37/38 MP 0/0 Hu100 $ 644 room=.
--> x
-T 177 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 6) HP 37/38 MP 0/0 Hu100 $ 644 room=.
+T  76 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 4) HP 27/28 MP 0/0 Hu 85 $ 479 room=.
 -> w
-T 178 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 99 $ 644 room=.
--> w
-T 179 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 98 $ 644 room=.
--> i
-T 180 mode=inventory           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 98 $ 644 room=.
--> eat3
-T 181 mode=inventory           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu100 $ 644 room=.
--> x
-T 182 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu100 $ 644 room=.
--> s
-T 183 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 99 $ 644 room=.
--> e
-T 184 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 98 $ 644 room=.
--> s
-T 185 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 97 $ 644 room=.
--> n
-T 186 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 96 $ 644 room=.
--> e
-T 187 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 95 $ 644 room=.
--> n
-T 188 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 6) HP 38/38 MP 0/0 Hu 94 $ 644 room=.
--> w
-T 189 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 93 $ 644 room=.
--> n
-T 190 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 5) HP 38/38 MP 0/0 Hu 92 $ 644 room=.
--> w
-T 191 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 91 $ 644 room=.
--> s
-T 192 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 90 $ 644 room=.
--> s
-T 193 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 89 $ 644 room=.
--> w
-T 194 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 88 $ 644 room=.
--> s
-T 195 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 8) HP 38/38 MP 0/0 Hu 87 $ 644 room=.
--> w
-T 196 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 8) HP 38/38 MP 0/0 Hu 86 $ 644 room=.
--> n
-T 197 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 7) HP 38/38 MP 0/0 Hu 85 $ 644 room=.
--> n
-T 198 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 6) HP 38/38 MP 0/0 Hu 84 $ 644 room=.
--> w
-T 199 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 83 $ 644 room=.
--> l
-T 200 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 83 $ 644 room=.
--> w
-T 201 mode=combat_mode         Galadriel the Wise(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 82 $ 644 room=M vs Sewer Rat(L0 HP10/10)
+T  77 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 4) HP 27/28 MP 0/0 Hu 84 $ 479 room=M vs Slime Mold(L0 HP15/15)
 -> a
-T 202 mode=combat_victory      Galadriel the Wise(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 82 $ 645 room=.
+T  78 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 4) HP 27/28 MP 0/0 Hu 84 $ 479 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T  79 mode=combat_mode         Galadriel the Wise(elf) F1@( 6, 4) HP 25/28 MP 0/0 Hu 84 $ 479 room=M vs Slime Mold(L0 HP15/15)
+-> f
+T  80 mode=flee_direction_mode Galadriel the Wise(elf) F1@( 6, 4) HP 24/28 MP 0/0 Hu 84 $ 479 room=M
+-> n
+T  81 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 3) HP 24/28 MP 0/0 Hu 84 $ 479 room=.
+-> n
+T  82 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 2) HP 24/28 MP 0/0 Hu 83 $ 479 room=.
+-> n
+T  83 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 1) HP 25/28 MP 0/0 Hu 82 $ 479 room=.
+-> w
+T  84 mode=combat_mode         Galadriel the Wise(elf) F1@( 5, 1) HP 25/28 MP 0/0 Hu 81 $ 479 room=M vs Rust Monster(L0 HP18/18)
+-> f
+T  85 mode=flee_direction_mode Galadriel the Wise(elf) F1@( 5, 1) HP 25/28 MP 0/0 Hu 81 $ 479 room=M
+-> w
+T  86 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 1) HP 25/28 MP 0/0 Hu 81 $ 479 room=.
+-> s
+T  87 mode=combat_mode         Galadriel the Wise(elf) F1@( 4, 2) HP 25/28 MP 0/0 Hu 80 $ 479 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  88 mode=combat_victory      Galadriel the Wise(elf) F1@( 4, 2) HP 24/28 MP 0/0 Hu 80 $ 482 room=.
 -> back
-T 203 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 82 $ 645 room=.
--> l
-T 204 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 82 $ 645 room=.
+T  89 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 2) HP 24/28 MP 0/0 Hu 80 $ 482 room=.
 -> w
-T 205 mode=game_loop           Galadriel the Wise(elf) F1@( 2, 6) HP 38/38 MP 0/0 Hu 81 $ 645 room=.
+T  90 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 2) HP 24/28 MP 0/0 Hu 79 $ 482 room=.
+-> w
+T  91 mode=game_loop           Galadriel the Wise(elf) F1@( 2, 2) HP 25/28 MP 0/0 Hu 78 $ 482 room=.
+-> n
+T  92 mode=game_loop           Galadriel the Wise(elf) F1@( 2, 1) HP 25/28 MP 0/0 Hu 77 $ 482 room=.
+-> w
+T  93 mode=game_loop           Galadriel the Wise(elf) F1@( 1, 1) HP 25/28 MP 0/0 Hu 76 $ 482 room=E
 -> s
-T 206 mode=library_mode        Galadriel the Wise(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 80 $ 645 room=L
--> r
-T 207 mode=library_read_decision_mode Galadriel the Wise(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 80 $ 645 room=L
--> y
-T 208 mode=game_loop           Galadriel the Wise(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 80 $ 695 room=.
--> e
-T 209 mode=combat_mode         Galadriel the Wise(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 79 $ 695 room=M vs Kobold(L0 HP8/8)
+T  94 mode=game_loop           Galadriel the Wise(elf) F1@( 1, 2) HP 25/28 MP 0/0 Hu 75 $ 482 room=.
+-> s
+T  95 mode=combat_mode         Galadriel the Wise(elf) F1@( 1, 3) HP 26/28 MP 0/0 Hu 74 $ 482 room=M vs Stirge(L0 HP6/6)
 -> a
-T 210 mode=combat_victory      Galadriel the Wise(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 79 $ 699 room=.
+T  96 mode=combat_victory      Galadriel the Wise(elf) F1@( 1, 3) HP 26/28 MP 0/0 Hu 74 $ 592 room=.
 -> back
-T 211 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 79 $ 699 room=.
--> n
-T 212 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 78 $ 699 room=.
--> e
-T 213 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 77 $ 699 room=.
--> e
-T 214 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 6) HP 38/38 MP 0/0 Hu 76 $ 699 room=.
+T  97 mode=game_loop           Galadriel the Wise(elf) F1@( 1, 3) HP 26/28 MP 0/0 Hu 74 $ 592 room=.
 -> s
-T 215 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 7) HP 38/38 MP 0/0 Hu 75 $ 699 room=.
--> s
-T 216 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 8) HP 38/38 MP 0/0 Hu 74 $ 699 room=.
--> e
-T 217 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 8) HP 38/38 MP 0/0 Hu 73 $ 699 room=.
--> n
-T 218 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 72 $ 699 room=.
--> i
-T 219 mode=inventory           Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 72 $ 699 room=.
--> eat4
-T 220 mode=inventory           Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 77 $ 699 room=.
--> eat1
-T 221 mode=inventory           Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu100 $ 699 room=.
--> x
-T 222 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu100 $ 699 room=.
--> e
-T 223 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 99 $ 699 room=.
--> n
-T 224 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 98 $ 699 room=.
--> n
-T 225 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 97 $ 699 room=.
--> i
-T 226 mode=inventory           Galadriel the Wise(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 97 $ 699 room=.
--> eat2
-T 227 mode=inventory           Galadriel the Wise(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu100 $ 699 room=.
--> x
-T 228 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu100 $ 699 room=.
--> w
-T 229 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 5) HP 38/38 MP 0/0 Hu 99 $ 699 room=.
--> n
-T 230 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 98 $ 699 room=.
--> l
-T 231 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 98 $ 699 room=.
--> w
-T 232 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 97 $ 699 room=.
--> s
-T 233 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 5) HP 38/38 MP 0/0 Hu 96 $ 699 room=.
--> s
-T 234 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 6) HP 38/38 MP 0/0 Hu 95 $ 699 room=.
--> s
-T 235 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 7) HP 38/38 MP 0/0 Hu 94 $ 699 room=.
--> s
-T 236 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 8) HP 38/38 MP 0/0 Hu 93 $ 699 room=.
--> e
-T 237 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 8) HP 38/38 MP 0/0 Hu 92 $ 699 room=.
--> n
-T 238 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 91 $ 699 room=.
--> e
-T 239 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 90 $ 699 room=.
--> n
-T 240 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 89 $ 699 room=.
--> l
-T 241 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 89 $ 699 room=.
--> e
-T 242 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 88 $ 699 room=.
--> s
-T 243 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 87 $ 699 room=.
--> s
-T 244 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 86 $ 699 room=.
--> n
-T 245 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 85 $ 699 room=.
--> e
-T 246 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 84 $ 699 room=.
--> n
-T 247 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 6) HP 38/38 MP 0/0 Hu 83 $ 699 room=.
--> w
-T 248 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 82 $ 699 room=.
--> w
-T 249 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 81 $ 699 room=.
--> s
-T 250 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 80 $ 699 room=.
--> l
-T 251 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 80 $ 699 room=.
--> e
-T 252 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 79 $ 699 room=.
--> s
-T 253 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 78 $ 699 room=.
--> n
-T 254 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 77 $ 699 room=.
--> e
-T 255 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 76 $ 699 room=.
--> n
-T 256 mode=game_loop           Galadriel the Wise(elf) F1@( 9, 6) HP 38/38 MP 0/0 Hu 75 $ 699 room=.
--> w
-T 257 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 6) HP 38/38 MP 0/0 Hu 74 $ 699 room=.
--> n
-T 258 mode=game_loop           Galadriel the Wise(elf) F1@( 8, 5) HP 38/38 MP 0/0 Hu 73 $ 699 room=.
--> w
-T 259 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 72 $ 699 room=.
--> s
-T 260 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 71 $ 699 room=.
--> l
-T 261 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 71 $ 699 room=.
--> s
-T 262 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 70 $ 699 room=.
--> w
-T 263 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 69 $ 699 room=.
--> s
-T 264 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 8) HP 38/38 MP 0/0 Hu 68 $ 699 room=.
--> w
-T 265 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 8) HP 38/38 MP 0/0 Hu 67 $ 699 room=.
--> n
-T 266 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 7) HP 38/38 MP 0/0 Hu 66 $ 699 room=.
--> n
-T 267 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 6) HP 38/38 MP 0/0 Hu 65 $ 699 room=.
--> w
-T 268 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 64 $ 699 room=.
--> w
-T 269 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 6) HP 38/38 MP 0/0 Hu 63 $ 699 room=.
--> s
-T 270 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 62 $ 699 room=.
--> l
-T 271 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 7) HP 38/38 MP 0/0 Hu 62 $ 699 room=.
--> w
-T 272 mode=game_loop           Galadriel the Wise(elf) F1@( 2, 7) HP 38/38 MP 0/0 Hu 61 $ 699 room=.
--> n
-T 273 mode=game_loop           Galadriel the Wise(elf) F1@( 2, 6) HP 38/38 MP 0/0 Hu 60 $ 699 room=.
--> n
-T 274 mode=game_loop           Galadriel the Wise(elf) F1@( 2, 5) HP 38/38 MP 0/0 Hu 59 $ 699 room=.
--> n
-T 275 mode=combat_mode         Galadriel the Wise(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 58 $ 699 room=M vs Goblin(L0 HP12/12)
--> a
-T 276 mode=combat_mode         Galadriel the Wise(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 58 $ 699 room=M vs Goblin(L0 HP12/12)
--> a
-T 277 mode=combat_mode         Galadriel the Wise(elf) F1@( 2, 4) HP 37/38 MP 0/0 Hu 58 $ 699 room=M vs Goblin(L0 HP12/12)
--> a
-T 278 mode=combat_mode         Galadriel the Wise(elf) F1@( 2, 4) HP 37/38 MP 0/0 Hu 58 $ 699 room=M vs Goblin(L0 HP9/12)
--> a
-T 279 mode=combat_mode         Galadriel the Wise(elf) F1@( 2, 4) HP 36/38 MP 0/0 Hu 58 $ 699 room=M vs Goblin(L0 HP6/12)
--> a
-T 280 mode=combat_mode         Galadriel the Wise(elf) F1@( 2, 4) HP 36/38 MP 0/0 Hu 58 $ 699 room=M vs Goblin(L0 HP3/12)
--> a
-T 281 mode=combat_mode         Galadriel the Wise(elf) F1@( 2, 4) HP 36/38 MP 0/0 Hu 58 $ 699 room=M vs Goblin(L0 HP3/12)
--> a
-T 282 mode=combat_victory      Galadriel the Wise(elf) F1@( 2, 4) HP 36/38 MP 0/0 Hu 58 $ 700 room=.
--> back
-T 283 mode=game_loop           Galadriel the Wise(elf) F1@( 2, 4) HP 36/38 MP 0/0 Hu 58 $ 700 room=.
--> e
-T 284 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 4) HP 36/38 MP 0/0 Hu 57 $ 700 room=.
--> e
-T 285 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 4) HP 36/38 MP 0/0 Hu 56 $ 700 room=.
--> s
-T 286 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 5) HP 36/38 MP 0/0 Hu 55 $ 700 room=.
--> s
-T 287 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 6) HP 36/38 MP 0/0 Hu 54 $ 700 room=.
--> e
-T 288 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 6) HP 36/38 MP 0/0 Hu 53 $ 700 room=.
--> s
-T 289 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 7) HP 36/38 MP 0/0 Hu 52 $ 700 room=.
--> s
-T 290 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 8) HP 36/38 MP 0/0 Hu 51 $ 700 room=.
--> l
-T 291 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 8) HP 36/38 MP 0/0 Hu 51 $ 700 room=.
--> e
-T 292 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 8) HP 36/38 MP 0/0 Hu 50 $ 700 room=.
--> n
-T 293 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 7) HP 36/38 MP 0/0 Hu 49 $ 700 room=.
--> i
-T 294 mode=inventory           Galadriel the Wise(elf) F1@( 6, 7) HP 36/38 MP 0/0 Hu 49 $ 700 room=.
--> eat1
-T 295 mode=inventory           Galadriel the Wise(elf) F1@( 6, 7) HP 36/38 MP 0/0 Hu 99 $ 700 room=.
--> x
-T 296 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 7) HP 36/38 MP 0/0 Hu 99 $ 700 room=.
--> e
-T 297 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 36/38 MP 0/0 Hu 98 $ 700 room=.
--> i
-T 298 mode=inventory           Galadriel the Wise(elf) F1@( 7, 7) HP 36/38 MP 0/0 Hu 98 $ 700 room=.
--> eat2
-T 299 mode=inventory           Galadriel the Wise(elf) F1@( 7, 7) HP 36/38 MP 0/0 Hu100 $ 700 room=.
--> x
-T 300 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 36/38 MP 0/0 Hu100 $ 700 room=.
--> l
-T 301 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 7) HP 36/38 MP 0/0 Hu100 $ 700 room=.
--> n
-T 302 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 6) HP 37/38 MP 0/0 Hu 99 $ 700 room=.
--> n
-T 303 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 5) HP 37/38 MP 0/0 Hu 98 $ 700 room=.
--> n
-T 304 mode=game_loop           Galadriel the Wise(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 97 $ 700 room=.
--> w
-T 305 mode=game_loop           Galadriel the Wise(elf) F1@( 6, 4) HP 38/38 MP 0/0 Hu 96 $ 700 room=.
--> w
-T 306 mode=game_loop           Galadriel the Wise(elf) F1@( 5, 4) HP 38/38 MP 0/0 Hu 95 $ 700 room=.
--> w
-T 307 mode=game_loop           Galadriel the Wise(elf) F1@( 4, 4) HP 38/38 MP 0/0 Hu 94 $ 700 room=.
--> w
-T 308 mode=game_loop           Galadriel the Wise(elf) F1@( 3, 4) HP 38/38 MP 0/0 Hu 93 $ 700 room=.
--> w
-T 309 mode=game_loop           Galadriel the Wise(elf) F1@( 2, 4) HP 38/38 MP 0/0 Hu 92 $ 700 room=.
--> w
-T 310 mode=stairs_down_mode    Galadriel the Wise(elf) F1@( 1, 4) HP 38/38 MP 0/0 Hu 91 $ 700 room=D
+T  98 mode=stairs_down_mode    Galadriel the Wise(elf) F1@( 1, 4) HP 26/28 MP 0/0 Hu 73 $ 592 room=D
 -> d
-T 311 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 700 room=U
--> w
-T 312 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 700 room=U
--> s
-T 313 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 90 $ 700 room=.
+T  99 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 26/28 MP 0/0 Hu 73 $ 592 room=U
+-> n
+T 100 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 26/28 MP 0/0 Hu 73 $ 592 room=U
+-> e
+T 101 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 1) HP 26/28 MP 0/0 Hu 72 $ 592 room=.
 -> l
-T 314 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 90 $ 700 room=.
--> e
-T 315 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 89 $ 700 room=.
+T 102 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 1) HP 26/28 MP 0/0 Hu 72 $ 592 room=.
+-> s
+T 103 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 26/28 MP 0/0 Hu 71 $ 592 room=.
 -> l
-T 316 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 89 $ 700 room=.
+T 104 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 26/28 MP 0/0 Hu 71 $ 592 room=.
 -> e
-T 317 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 88 $ 700 room=.
+T 105 mode=pool_mode           Galadriel the Wise(elf) F2@( 3, 2) HP 27/28 MP 0/0 Hu 70 $ 592 room=P
+-> dr
+T 106 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 27/28 MP 0/0 Hu 70 $ 592 room=.
 -> l
-T 318 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 88 $ 700 room=.
--> e
-T 319 mode=chest_mode          Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 87 $ 700 room=C
--> w
-T 320 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 86 $ 700 room=.
--> n
-T 321 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 85 $ 700 room=.
+T 107 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 27/28 MP 0/0 Hu 70 $ 592 room=.
+-> s
+T 108 mode=garden_mode         Galadriel the Wise(elf) F2@( 3, 3) HP 27/28 MP 0/0 Hu 69 $ 592 room=G
+-> h
+T 109 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 3) HP 27/28 MP 0/0 Hu 69 $ 592 room=.
 -> l
-T 322 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 85 $ 700 room=.
--> e
-T 323 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 84 $ 700 room=.
+T 110 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 3) HP 27/28 MP 0/0 Hu 69 $ 592 room=.
 -> s
-T 324 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 83 $ 700 room=C
+T 111 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 4) HP 27/28 MP 0/0 Hu 68 $ 592 room=.
 -> l
-T 325 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 83 $ 700 room=C
+T 112 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 4) HP 27/28 MP 0/0 Hu 68 $ 592 room=.
 -> s
-T 326 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 82 $ 700 room=.
+T 113 mode=chest_mode          Galadriel the Wise(elf) F2@( 3, 5) HP 27/28 MP 0/0 Hu 67 $ 592 room=C
+-> o
+T 114 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 5) HP 27/28 MP 0/0 Hu 67 $ 592 room=.
 -> l
-T 327 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 82 $ 700 room=.
--> n
-T 328 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 81 $ 700 room=C
--> w
-T 329 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 80 $ 700 room=.
--> n
-T 330 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 79 $ 700 room=.
+T 115 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 5) HP 27/28 MP 0/0 Hu 67 $ 592 room=.
 -> e
-T 331 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 78 $ 700 room=.
--> w
-T 332 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 77 $ 700 room=.
--> s
-T 333 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 76 $ 700 room=.
--> w
-T 334 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 75 $ 700 room=.
--> w
-T 335 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 74 $ 700 room=.
+T 116 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 5) HP 28/28 MP 0/0 Hu 66 $ 592 room=.
+-> l
+T 117 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 5) HP 28/28 MP 0/0 Hu 66 $ 592 room=.
 -> n
-T 336 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 73 $ 700 room=U
--> s
-T 337 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 72 $ 700 room=.
+T 118 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 4) HP 28/28 MP 0/0 Hu 65 $ 592 room=.
 -> e
-T 338 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 71 $ 700 room=.
+T 119 mode=game_loop           Galadriel the Wise(elf) F2@( 5, 4) HP 28/28 MP 0/0 Hu 64 $ 592 room=.
 -> e
-T 339 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 70 $ 700 room=.
--> n
-T 340 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 69 $ 700 room=.
+T 120 mode=game_loop           Galadriel the Wise(elf) F2@( 6, 4) HP 28/28 MP 0/0 Hu 63 $ 592 room=.
+-> s
+T 121 mode=game_loop           Galadriel the Wise(elf) F2@( 6, 5) HP 28/28 MP 0/0 Hu 62 $ 592 room=.
+-> l
+T 122 mode=game_loop           Galadriel the Wise(elf) F2@( 6, 5) HP 28/28 MP 0/0 Hu 62 $ 592 room=.
+-> s
+T 123 mode=game_loop           Galadriel the Wise(elf) F2@( 6, 6) HP 28/28 MP 0/0 Hu 61 $ 592 room=.
+-> l
+T 124 mode=game_loop           Galadriel the Wise(elf) F2@( 6, 6) HP 28/28 MP 0/0 Hu 61 $ 592 room=.
+-> s
+T 125 mode=game_loop           Galadriel the Wise(elf) F2@( 6, 7) HP 28/28 MP 0/0 Hu 60 $ 592 room=.
+-> l
+T 126 mode=game_loop           Galadriel the Wise(elf) F2@( 6, 7) HP 28/28 MP 0/0 Hu 60 $ 592 room=.
 -> e
-T 341 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 68 $ 700 room=.
--> s
-T 342 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 67 $ 700 room=C
--> s
-T 343 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 66 $ 700 room=.
--> n
-T 344 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 65 $ 700 room=C
--> w
-T 345 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 64 $ 700 room=.
--> w
-T 346 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 63 $ 700 room=.
--> w
-T 347 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 62 $ 700 room=.
--> n
-T 348 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 61 $ 700 room=U
--> s
-T 349 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 60 $ 700 room=.
+T 127 mode=game_loop           Galadriel the Wise(elf) F2@( 7, 7) HP 28/28 MP 0/0 Hu 59 $ 592 room=.
+-> l
+T 128 mode=game_loop           Galadriel the Wise(elf) F2@( 7, 7) HP 28/28 MP 0/0 Hu 59 $ 592 room=.
 -> e
-T 350 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 59 $ 700 room=.
+T 129 mode=game_loop           Galadriel the Wise(elf) F2@( 8, 7) HP 28/28 MP 0/0 Hu 58 $ 592 room=.
+-> l
+T 130 mode=game_loop           Galadriel the Wise(elf) F2@( 8, 7) HP 28/28 MP 0/0 Hu 58 $ 592 room=.
+-> s
+T 131 mode=game_loop           Galadriel the Wise(elf) F2@( 8, 8) HP 28/28 MP 0/0 Hu 57 $ 592 room=.
+-> l
+T 132 mode=game_loop           Galadriel the Wise(elf) F2@( 8, 8) HP 28/28 MP 0/0 Hu 57 $ 592 room=.
 -> e
-T 351 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 58 $ 700 room=.
--> n
-T 352 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 57 $ 700 room=.
+T 133 mode=altar_mode          Galadriel the Wise(elf) F2@( 9, 8) HP 28/28 MP 0/0 Hu 56 $ 592 room=A
+-> pray
+T 134 mode=game_loop           Galadriel the Wise(elf) F2@( 9, 8) HP 28/28 MP 0/0 Hu 56 $ 592 room=.
 -> e
-T 353 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 56 $ 700 room=.
+T 135 mode=game_loop           Galadriel the Wise(elf) F2@(10, 8) HP 28/28 MP 0/0 Hu 55 $ 592 room=.
+-> l
+T 136 mode=game_loop           Galadriel the Wise(elf) F2@(10, 8) HP 28/28 MP 0/0 Hu 55 $ 592 room=.
 -> s
-T 354 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 55 $ 700 room=C
--> s
-T 355 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 54 $ 700 room=.
+T 137 mode=dungeon_mode        Galadriel the Wise(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 54 $ 592 room=N
+-> u
+T 138 mode=game_loop           Galadriel the Wise(elf) F2@(10, 9) HP 28/28 MP 0/0 Hu 54 $ 592 room=N
 -> n
-T 356 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 53 $ 700 room=C
--> w
-T 357 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 52 $ 700 room=.
--> w
-T 358 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 51 $ 700 room=.
--> w
-T 359 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 50 $ 700 room=.
+T 139 mode=game_loop           Galadriel the Wise(elf) F2@(10, 8) HP 28/28 MP 0/0 Hu 53 $ 592 room=.
 -> n
-T 360 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 49 $ 700 room=U
--> s
-T 361 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 48 $ 700 room=.
+T 140 mode=game_loop           Galadriel the Wise(elf) F2@(10, 7) HP 28/28 MP 0/0 Hu 52 $ 592 room=.
+-> n
+T 141 mode=game_loop           Galadriel the Wise(elf) F2@(10, 6) HP 28/28 MP 0/0 Hu 51 $ 592 room=.
+-> l
+T 142 mode=game_loop           Galadriel the Wise(elf) F2@(10, 6) HP 28/28 MP 0/0 Hu 51 $ 592 room=.
+-> e
+T 143 mode=game_loop           Galadriel the Wise(elf) F2@(11, 6) HP 28/28 MP 0/0 Hu 50 $ 592 room=.
+-> e
+T 144 mode=game_loop           Galadriel the Wise(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu 49 $ 592 room=.
 -> i
-T 362 mode=inventory           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 48 $ 700 room=.
--> eat1
-T 363 mode=inventory           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 98 $ 700 room=.
+T 145 mode=inventory           Galadriel the Wise(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu 49 $ 592 room=.
+-> eat3
+T 146 mode=inventory           Galadriel the Wise(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu 67 $ 592 room=.
 -> x
-T 364 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 98 $ 700 room=.
--> n
-T 365 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 700 room=U
+T 147 mode=game_loop           Galadriel the Wise(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu 67 $ 592 room=.
+-> l
+T 148 mode=game_loop           Galadriel the Wise(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu 67 $ 592 room=.
 -> s
-T 366 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 96 $ 700 room=.
--> e
-T 367 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 95 $ 700 room=.
--> e
-T 368 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 94 $ 700 room=.
--> n
-T 369 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 93 $ 700 room=.
--> e
-T 370 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 92 $ 700 room=.
+T 149 mode=game_loop           Galadriel the Wise(elf) F2@(12, 7) HP 28/28 MP 0/0 Hu 66 $ 592 room=.
 -> s
-T 371 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 91 $ 700 room=C
+T 150 mode=library_mode        Galadriel the Wise(elf) F2@(12, 8) HP 28/28 MP 0/0 Hu 65 $ 592 room=L
+-> r
+T 151 mode=game_loop           Galadriel the Wise(elf) F2@(12, 8) HP 28/28 MP 0/0 Hu 65 $ 592 room=.
+-> l
+T 152 mode=game_loop           Galadriel the Wise(elf) F2@(12, 8) HP 28/28 MP 0/0 Hu 65 $ 592 room=.
+-> e
+T 153 mode=library_mode        Galadriel the Wise(elf) F2@(13, 8) HP 28/28 MP 0/0 Hu 64 $ 592 room=L
+-> r
+T 154 mode=library_read_decision_mode Galadriel the Wise(elf) F2@(13, 8) HP 28/28 MP 0/0 Hu 64 $ 592 room=L
+-> y
+T 155 mode=game_loop           Galadriel the Wise(elf) F2@(13, 8) HP 28/28 MP 0/0 Hu 64 $ 642 room=.
+-> l
+T 156 mode=game_loop           Galadriel the Wise(elf) F2@(13, 8) HP 28/28 MP 0/0 Hu 64 $ 642 room=.
 -> s
-T 372 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 90 $ 700 room=.
--> n
-T 373 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 89 $ 700 room=C
+T 157 mode=game_loop           Galadriel the Wise(elf) F2@(13, 9) HP 28/28 MP 0/0 Hu 63 $ 642 room=.
+-> l
+T 158 mode=game_loop           Galadriel the Wise(elf) F2@(13, 9) HP 28/28 MP 0/0 Hu 63 $ 642 room=.
+-> e
+T 159 mode=garden_mode         Galadriel the Wise(elf) F2@(14, 9) HP 28/28 MP 0/0 Hu 62 $ 642 room=G
+-> h
+T 160 mode=game_loop           Galadriel the Wise(elf) F2@(14, 9) HP 28/28 MP 0/0 Hu 62 $ 642 room=.
+-> l
+T 161 mode=game_loop           Galadriel the Wise(elf) F2@(14, 9) HP 28/28 MP 0/0 Hu 62 $ 642 room=.
+-> s
+T 162 mode=game_loop           Galadriel the Wise(elf) F2@(14,10) HP 28/28 MP 0/0 Hu 61 $ 642 room=.
+-> l
+T 163 mode=game_loop           Galadriel the Wise(elf) F2@(14,10) HP 28/28 MP 0/0 Hu 61 $ 642 room=.
 -> w
-T 374 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 88 $ 700 room=.
--> n
-T 375 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 87 $ 700 room=.
--> e
-T 376 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 86 $ 700 room=.
+T 164 mode=pool_mode           Galadriel the Wise(elf) F2@(13,10) HP 28/28 MP 0/0 Hu 60 $ 642 room=P
+-> dr
+T 165 mode=game_loop           Galadriel the Wise(elf) F2@(13,10) HP 16/28 MP 0/0 Hu 60 $ 642 room=.
+-> s
+T 166 mode=chest_mode          Galadriel the Wise(elf) F2@(13,11) HP 16/28 MP 0/0 Hu 59 $ 642 room=C
+-> o
+T 167 mode=game_loop           Galadriel the Wise(elf) F2@(13,11) HP 16/28 MP 0/0 Hu 59 $ 692 room=.
+-> s
+T 168 mode=game_loop           Galadriel the Wise(elf) F2@(13,12) HP 16/28 MP 0/0 Hu 58 $ 692 room=.
 -> w
-T 377 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 85 $ 700 room=.
--> s
-T 378 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 84 $ 700 room=.
+T 169 mode=pool_mode           Galadriel the Wise(elf) F2@(12,12) HP 16/28 MP 0/0 Hu 57 $ 692 room=P
+-> n
+T 170 mode=game_loop           Galadriel the Wise(elf) F2@(12,11) HP 16/28 MP 0/0 Hu 56 $ 692 room=.
+-> l
+T 171 mode=game_loop           Galadriel the Wise(elf) F2@(12,11) HP 16/28 MP 0/0 Hu 56 $ 692 room=.
 -> w
-T 379 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 83 $ 700 room=.
--> w
-T 380 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 82 $ 700 room=.
--> n
-T 381 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 700 room=U
+T 172 mode=game_loop           Galadriel the Wise(elf) F2@(11,11) HP 16/28 MP 0/0 Hu 55 $ 692 room=.
+-> l
+T 173 mode=game_loop           Galadriel the Wise(elf) F2@(11,11) HP 16/28 MP 0/0 Hu 55 $ 692 room=.
 -> s
-T 382 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 80 $ 700 room=.
--> e
-T 383 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 79 $ 700 room=.
--> e
-T 384 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 78 $ 700 room=.
--> n
-T 385 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 77 $ 700 room=.
--> e
-T 386 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 76 $ 700 room=.
--> s
-T 387 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 75 $ 700 room=C
--> s
-T 388 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 74 $ 700 room=.
--> n
-T 389 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 73 $ 700 room=C
--> w
-T 390 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 72 $ 700 room=.
--> n
-T 391 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 71 $ 700 room=.
--> e
-T 392 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 70 $ 700 room=.
--> w
-T 393 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 69 $ 700 room=.
--> s
-T 394 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 68 $ 700 room=.
--> w
-T 395 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 67 $ 700 room=.
--> w
-T 396 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 66 $ 700 room=.
--> n
-T 397 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 65 $ 700 room=U
--> s
-T 398 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 64 $ 700 room=.
--> e
-T 399 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 63 $ 700 room=.
--> e
-T 400 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 62 $ 700 room=.
--> n
-T 401 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 61 $ 700 room=.
--> e
-T 402 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 60 $ 700 room=.
--> s
-T 403 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 59 $ 700 room=C
--> s
-T 404 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 58 $ 700 room=.
--> n
-T 405 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 57 $ 700 room=C
--> w
-T 406 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 56 $ 700 room=.
--> n
-T 407 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 55 $ 700 room=.
--> e
-T 408 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 54 $ 700 room=.
--> w
-T 409 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 53 $ 700 room=.
--> e
-T 410 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 52 $ 700 room=.
--> s
-T 411 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 51 $ 700 room=C
--> s
-T 412 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 50 $ 700 room=.
--> n
-T 413 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 49 $ 700 room=C
+T 174 mode=chest_mode          Galadriel the Wise(elf) F2@(11,12) HP 16/28 MP 0/0 Hu 54 $ 692 room=C
+-> o
+T 175 mode=game_loop           Galadriel the Wise(elf) F2@(11,12) HP 16/28 MP 0/0 Hu 54 $ 692 room=.
 -> i
-T 414 mode=inventory           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 49 $ 700 room=C
--> eat1
-T 415 mode=inventory           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 99 $ 700 room=C
+T 176 mode=inventory           Galadriel the Wise(elf) F2@(11,12) HP 16/28 MP 0/0 Hu 54 $ 692 room=.
+-> u4
+T 177 mode=inventory           Galadriel the Wise(elf) F2@(11,12) HP 28/28 MP 0/0 Hu 54 $ 692 room=.
 -> x
-T 416 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 99 $ 700 room=C
--> w
-T 417 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 98 $ 700 room=.
--> n
-T 418 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 97 $ 700 room=.
--> e
-T 419 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 96 $ 700 room=.
--> w
-T 420 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 95 $ 700 room=.
--> s
-T 421 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 94 $ 700 room=.
--> w
-T 422 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 93 $ 700 room=.
--> w
-T 423 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 92 $ 700 room=.
--> n
-T 424 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 700 room=U
--> s
-T 425 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 90 $ 700 room=.
--> e
-T 426 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 89 $ 700 room=.
--> e
-T 427 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 88 $ 700 room=.
--> n
-T 428 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 87 $ 700 room=.
--> e
-T 429 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 86 $ 700 room=.
--> s
-T 430 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 85 $ 700 room=C
--> s
-T 431 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 84 $ 700 room=.
--> n
-T 432 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 83 $ 700 room=C
--> w
-T 433 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 82 $ 700 room=.
--> w
-T 434 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 81 $ 700 room=.
--> w
-T 435 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 80 $ 700 room=.
--> n
-T 436 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 700 room=U
--> s
-T 437 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 78 $ 700 room=.
--> e
-T 438 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 77 $ 700 room=.
--> e
-T 439 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 76 $ 700 room=.
--> n
-T 440 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 75 $ 700 room=.
--> e
-T 441 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 74 $ 700 room=.
--> s
-T 442 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 73 $ 700 room=C
--> s
-T 443 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 72 $ 700 room=.
--> n
-T 444 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 71 $ 700 room=C
--> w
-T 445 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 70 $ 700 room=.
--> w
-T 446 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 69 $ 700 room=.
--> w
-T 447 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 68 $ 700 room=.
--> n
-T 448 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 67 $ 700 room=U
--> s
-T 449 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 66 $ 700 room=.
--> e
-T 450 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 65 $ 700 room=.
--> e
-T 451 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 64 $ 700 room=.
--> n
-T 452 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 63 $ 700 room=.
--> e
-T 453 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 62 $ 700 room=.
--> s
-T 454 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 61 $ 700 room=C
--> s
-T 455 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 60 $ 700 room=.
--> n
-T 456 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 59 $ 700 room=C
--> w
-T 457 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 58 $ 700 room=.
--> w
-T 458 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 57 $ 700 room=.
--> w
-T 459 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 56 $ 700 room=.
--> n
-T 460 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 55 $ 700 room=U
--> s
-T 461 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 54 $ 700 room=.
--> n
-T 462 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 53 $ 700 room=U
--> s
-T 463 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 52 $ 700 room=.
--> e
-T 464 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 51 $ 700 room=.
--> e
-T 465 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 50 $ 700 room=.
--> n
-T 466 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 49 $ 700 room=.
+T 178 mode=game_loop           Galadriel the Wise(elf) F2@(11,12) HP 28/28 MP 0/0 Hu 54 $ 692 room=.
 -> i
-T 467 mode=inventory           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 49 $ 700 room=.
--> eat1
-T 468 mode=inventory           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 99 $ 700 room=.
+T 179 mode=inventory           Galadriel the Wise(elf) F2@(11,12) HP 28/28 MP 0/0 Hu 54 $ 692 room=.
+-> e1
+T 180 mode=inventory           Galadriel the Wise(elf) F2@(11,12) HP 28/28 MP 0/0 Hu 54 $ 692 room=.
 -> x
-T 469 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 99 $ 700 room=.
+T 181 mode=game_loop           Galadriel the Wise(elf) F2@(11,12) HP 28/28 MP 0/0 Hu 54 $ 692 room=.
+-> s
+T 182 mode=stairs_down_mode    Galadriel the Wise(elf) F2@(11,13) HP 28/28 MP 0/0 Hu 53 $ 692 room=D
 -> e
-T 470 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 98 $ 700 room=.
--> s
-T 471 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 97 $ 700 room=C
--> s
-T 472 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 96 $ 700 room=.
--> n
-T 473 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 95 $ 700 room=C
--> w
-T 474 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 94 $ 700 room=.
--> w
-T 475 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 93 $ 700 room=.
--> w
-T 476 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 92 $ 700 room=.
--> n
-T 477 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 700 room=U
--> s
-T 478 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 90 $ 700 room=.
--> n
-T 479 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 700 room=U
--> s
-T 480 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 88 $ 700 room=.
+T 183 mode=game_loop           Galadriel the Wise(elf) F2@(12,13) HP 28/28 MP 0/0 Hu 52 $ 692 room=.
 -> e
-T 481 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 87 $ 700 room=.
--> e
-T 482 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 86 $ 700 room=.
--> n
-T 483 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 85 $ 700 room=.
--> e
-T 484 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 84 $ 700 room=.
+T 184 mode=game_loop           Galadriel the Wise(elf) F2@(13,13) HP 28/28 MP 0/0 Hu 51 $ 692 room=.
 -> s
-T 485 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 83 $ 700 room=C
+T 185 mode=game_loop           Galadriel the Wise(elf) F2@(13,14) HP 28/28 MP 0/0 Hu 50 $ 692 room=.
 -> s
-T 486 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 82 $ 700 room=.
--> n
-T 487 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 81 $ 700 room=C
--> w
-T 488 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 80 $ 700 room=.
--> w
-T 489 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 79 $ 700 room=.
--> w
-T 490 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 78 $ 700 room=.
--> n
-T 491 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 77 $ 700 room=U
--> s
-T 492 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 76 $ 700 room=.
--> e
-T 493 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 75 $ 700 room=.
--> e
-T 494 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 74 $ 700 room=.
--> n
-T 495 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 73 $ 700 room=.
--> e
-T 496 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 72 $ 700 room=.
--> s
-T 497 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 71 $ 700 room=C
--> s
-T 498 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 70 $ 700 room=.
--> n
-T 499 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 69 $ 700 room=C
--> w
-T 500 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 68 $ 700 room=.
--> n
-T 501 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 67 $ 700 room=.
--> e
-T 502 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 66 $ 700 room=.
--> w
-T 503 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 65 $ 700 room=.
--> e
-T 504 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 64 $ 700 room=.
--> s
-T 505 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 63 $ 700 room=C
--> w
-T 506 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 62 $ 700 room=.
--> w
-T 507 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 61 $ 700 room=.
--> w
-T 508 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 60 $ 700 room=.
--> n
-T 509 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 59 $ 700 room=U
--> s
-T 510 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 58 $ 700 room=.
--> n
-T 511 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 57 $ 700 room=U
--> s
-T 512 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 56 $ 700 room=.
--> e
-T 513 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 55 $ 700 room=.
--> e
-T 514 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 54 $ 700 room=.
--> n
-T 515 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 53 $ 700 room=.
--> e
-T 516 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 52 $ 700 room=.
--> s
-T 517 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 51 $ 700 room=C
--> s
-T 518 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 50 $ 700 room=.
--> n
-T 519 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 49 $ 700 room=C
+T 186 mode=game_loop           Galadriel the Wise(elf) F2@(13,15) HP 28/28 MP 0/0 Hu 49 $ 692 room=.
 -> i
-T 520 mode=inventory           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 49 $ 700 room=C
+T 187 mode=inventory           Galadriel the Wise(elf) F2@(13,15) HP 28/28 MP 0/0 Hu 49 $ 692 room=.
+-> eat3
+T 188 mode=inventory           Galadriel the Wise(elf) F2@(13,15) HP 28/28 MP 0/0 Hu 61 $ 692 room=.
 -> eat1
-T 521 mode=inventory           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 99 $ 700 room=C
+T 189 mode=inventory           Galadriel the Wise(elf) F2@(13,15) HP 28/28 MP 0/0 Hu100 $ 692 room=.
 -> x
-T 522 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 99 $ 700 room=C
+T 190 mode=game_loop           Galadriel the Wise(elf) F2@(13,15) HP 28/28 MP 0/0 Hu100 $ 692 room=.
+-> s
+T 191 mode=chest_mode          Galadriel the Wise(elf) F2@(13,16) HP 28/28 MP 0/0 Hu 99 $ 692 room=C
 -> w
-T 523 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 98 $ 700 room=.
+T 192 mode=game_loop           Galadriel the Wise(elf) F2@(12,16) HP 28/28 MP 0/0 Hu 98 $ 692 room=.
 -> n
-T 524 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 97 $ 700 room=.
+T 193 mode=combat_mode         Galadriel the Wise(elf) F2@(12,15) HP 28/28 MP 0/0 Hu 97 $ 692 room=M vs Kobold(L1 HP8/8)
+-> a
+T 194 mode=combat_victory      Galadriel the Wise(elf) F2@(12,15) HP 28/28 MP 0/0 Hu 97 $ 702 room=.
+-> back
+T 195 mode=game_loop           Galadriel the Wise(elf) F2@(12,15) HP 28/28 MP 0/0 Hu 97 $ 702 room=.
+-> n
+T 196 mode=combat_mode         Galadriel the Wise(elf) F2@(12,14) HP 28/28 MP 0/0 Hu 96 $ 702 room=M vs Goblin(L1 HP12/12)
+-> a
+T 197 mode=combat_mode         Galadriel the Wise(elf) F2@(12,14) HP 28/28 MP 0/0 Hu 96 $ 702 room=M vs Goblin(L1 HP12/12)
+-> a
+T 198 mode=combat_mode         Galadriel the Wise(elf) F2@(12,14) HP 27/28 MP 0/0 Hu 96 $ 702 room=M vs Goblin(L1 HP12/12)
+-> a
+T 199 mode=combat_victory      Galadriel the Wise(elf) F2@(12,14) HP 26/38 MP 0/0 Hu 96 $ 712 room=.
+-> back
+T 200 mode=game_loop           Galadriel the Wise(elf) F2@(12,14) HP 26/38 MP 0/0 Hu 96 $ 712 room=.
+-> n
+T 201 mode=game_loop           Galadriel the Wise(elf) F2@(12,13) HP 26/38 MP 0/0 Hu 95 $ 712 room=.
+-> n
+T 202 mode=game_loop           Galadriel the Wise(elf) F2@(12,12) HP 27/38 MP 0/0 Hu 94 $ 712 room=P
+-> n
+T 203 mode=game_loop           Galadriel the Wise(elf) F2@(12,11) HP 27/38 MP 0/0 Hu 93 $ 712 room=.
 -> e
-T 525 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 96 $ 700 room=.
+T 204 mode=game_loop           Galadriel the Wise(elf) F2@(13,11) HP 28/38 MP 0/0 Hu 92 $ 712 room=.
+-> e
+T 205 mode=game_loop           Galadriel the Wise(elf) F2@(14,11) HP 28/38 MP 0/0 Hu 91 $ 712 room=.
+-> e
+T 206 mode=dungeon_mode        Galadriel the Wise(elf) F2@(15,11) HP 29/38 MP 0/0 Hu 90 $ 712 room=N
+-> u
+T 207 mode=game_loop           Galadriel the Wise(elf) F2@(15,11) HP 29/38 MP 0/0 Hu 90 $ 712 room=N
+-> l
+T 208 mode=game_loop           Galadriel the Wise(elf) F2@(15,11) HP 29/38 MP 0/0 Hu 90 $ 712 room=N
+-> n
+T 209 mode=game_loop           Galadriel the Wise(elf) F2@(15,10) HP 29/38 MP 0/0 Hu 89 $ 712 room=.
 -> w
-T 526 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 95 $ 700 room=.
+T 210 mode=game_loop           Galadriel the Wise(elf) F2@(14,10) HP 30/38 MP 0/0 Hu 88 $ 712 room=.
 -> w
-T 527 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP55/55)
--> a
-T 528 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 35/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP55/55)
--> a
-T 529 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 32/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP54/55)
--> a
-T 530 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 29/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP53/55)
--> a
-T 531 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 29/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP52/55)
--> a
-T 532 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 29/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP52/55)
--> a
-T 533 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 29/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP52/55)
--> a
-T 534 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 29/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP52/55)
--> a
-T 535 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 23/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP51/55)
--> a
-T 536 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 17/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP51/55)
--> a
-T 537 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 11/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP50/55)
+T 211 mode=game_loop           Galadriel the Wise(elf) F2@(13,10) HP 30/38 MP 0/0 Hu 87 $ 712 room=.
+-> s
+T 212 mode=game_loop           Galadriel the Wise(elf) F2@(13,11) HP 31/38 MP 0/0 Hu 86 $ 712 room=.
+-> s
+T 213 mode=game_loop           Galadriel the Wise(elf) F2@(13,12) HP 31/38 MP 0/0 Hu 85 $ 712 room=.
+-> s
+T 214 mode=game_loop           Galadriel the Wise(elf) F2@(13,13) HP 31/38 MP 0/0 Hu 84 $ 712 room=.
+-> e
+T 215 mode=game_loop           Galadriel the Wise(elf) F2@(14,13) HP 31/38 MP 0/0 Hu 83 $ 712 room=.
+-> e
+T 216 mode=chest_mode          Galadriel the Wise(elf) F2@(15,13) HP 32/38 MP 0/0 Hu 82 $ 712 room=C
+-> s
+T 217 mode=game_loop           Galadriel the Wise(elf) F2@(15,14) HP 32/38 MP 0/0 Hu 81 $ 712 room=.
+-> s
+T 218 mode=game_loop           Galadriel the Wise(elf) F2@(15,15) HP 32/38 MP 0/0 Hu 80 $ 712 room=.
+-> l
+T 219 mode=game_loop           Galadriel the Wise(elf) F2@(15,15) HP 32/38 MP 0/0 Hu 80 $ 712 room=.
+-> e
+T 220 mode=game_loop           Galadriel the Wise(elf) F2@(16,15) HP 32/38 MP 0/0 Hu 79 $ 712 room=.
+-> e
+T 221 mode=oracle_mode         Galadriel the Wise(elf) F2@(17,15) HP 33/38 MP 0/0 Hu 78 $ 712 room=O
+-> e
+T 222 mode=combat_mode         Galadriel the Wise(elf) F2@(18,15) HP 33/38 MP 0/0 Hu 77 $ 712 room=M vs ELITE UNDEAD SKELETON(L2 HP32/32)
 -> f
-T 538 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 11/38 MP 0/0 Hu 94 $ 700 room=M vs Bugbear(L1 HP50/55)
--> f
-T 539 mode=flee_direction_mode Galadriel the Wise(elf) F2@( 2, 1) HP 11/38 MP 0/0 Hu 94 $ 700 room=M
--> s
-T 540 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 11/38 MP 0/0 Hu 94 $ 700 room=.
+T 223 mode=flee_direction_mode Galadriel the Wise(elf) F2@(18,15) HP 33/38 MP 0/0 Hu 77 $ 712 room=M
+-> e
+T 224 mode=tomb_mode           Galadriel the Wise(elf) F2@(19,15) HP 33/38 MP 0/0 Hu 77 $ 712 room=T
+-> p
+T 225 mode=game_loop           Galadriel the Wise(elf) F2@(19,15) HP 33/38 MP 0/0 Hu 77 $ 712 room=T
 -> l
-T 541 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 11/38 MP 0/0 Hu 94 $ 700 room=.
--> w
-T 542 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 11/38 MP 0/0 Hu 93 $ 700 room=.
--> n
-T 543 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 12/38 MP 0/0 Hu 92 $ 700 room=U
+T 226 mode=game_loop           Galadriel the Wise(elf) F2@(19,15) HP 33/38 MP 0/0 Hu 77 $ 712 room=T
 -> s
-T 544 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 12/38 MP 0/0 Hu 91 $ 700 room=.
+T 227 mode=chest_mode          Galadriel the Wise(elf) F2@(19,16) HP 33/38 MP 0/0 Hu 76 $ 712 room=C
 -> n
-T 545 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 13/38 MP 0/0 Hu 90 $ 700 room=U
+T 228 mode=game_loop           Galadriel the Wise(elf) F2@(19,15) HP 33/38 MP 0/0 Hu 75 $ 712 room=T
 -> s
-T 546 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 13/38 MP 0/0 Hu 89 $ 700 room=.
--> e
-T 547 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 14/38 MP 0/0 Hu 88 $ 700 room=.
--> e
-T 548 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 14/38 MP 0/0 Hu 87 $ 700 room=.
--> n
-T 549 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 15/38 MP 0/0 Hu 86 $ 700 room=.
--> e
-T 550 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 15/38 MP 0/0 Hu 85 $ 700 room=.
+T 229 mode=game_loop           Galadriel the Wise(elf) F2@(19,16) HP 34/38 MP 0/0 Hu 74 $ 712 room=C
 -> l
-T 551 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 15/38 MP 0/0 Hu 85 $ 700 room=.
--> s
-T 552 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 15/38 MP 0/0 Hu 84 $ 700 room=C
--> s
-T 553 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 15/38 MP 0/0 Hu 83 $ 700 room=.
--> n
-T 554 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 16/38 MP 0/0 Hu 82 $ 700 room=C
+T 230 mode=game_loop           Galadriel the Wise(elf) F2@(19,16) HP 34/38 MP 0/0 Hu 74 $ 712 room=C
 -> w
-T 555 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 16/38 MP 0/0 Hu 81 $ 700 room=.
+T 231 mode=altar_mode          Galadriel the Wise(elf) F2@(18,16) HP 34/38 MP 0/0 Hu 73 $ 712 room=A
+-> pray
+T 232 mode=game_loop           Galadriel the Wise(elf) F2@(18,16) HP 34/38 MP 0/0 Hu 73 $ 712 room=.
 -> w
-T 556 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 16/38 MP 0/0 Hu 80 $ 700 room=.
--> w
-T 557 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 16/38 MP 0/0 Hu 79 $ 700 room=.
--> n
-T 558 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 17/38 MP 0/0 Hu 78 $ 700 room=U
--> s
-T 559 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 17/38 MP 0/0 Hu 77 $ 700 room=.
--> e
-T 560 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 17/38 MP 0/0 Hu 76 $ 700 room=.
--> l
-T 561 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 17/38 MP 0/0 Hu 76 $ 700 room=.
--> e
-T 562 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 17/38 MP 0/0 Hu 75 $ 700 room=.
--> n
-T 563 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 18/38 MP 0/0 Hu 74 $ 700 room=.
--> e
-T 564 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 18/38 MP 0/0 Hu 73 $ 700 room=.
--> s
-T 565 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 18/38 MP 0/0 Hu 72 $ 700 room=C
--> s
-T 566 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 18/38 MP 0/0 Hu 71 $ 700 room=.
--> n
-T 567 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 19/38 MP 0/0 Hu 70 $ 700 room=C
--> w
-T 568 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 19/38 MP 0/0 Hu 69 $ 700 room=.
--> w
-T 569 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 19/38 MP 0/0 Hu 68 $ 700 room=.
--> w
-T 570 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 19/38 MP 0/0 Hu 67 $ 700 room=.
--> l
-T 571 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 19/38 MP 0/0 Hu 67 $ 700 room=.
--> n
-T 572 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 20/38 MP 0/0 Hu 66 $ 700 room=U
--> s
-T 573 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 20/38 MP 0/0 Hu 65 $ 700 room=.
--> e
-T 574 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 20/38 MP 0/0 Hu 64 $ 700 room=.
--> e
-T 575 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 20/38 MP 0/0 Hu 63 $ 700 room=.
--> n
-T 576 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 21/38 MP 0/0 Hu 62 $ 700 room=.
--> e
-T 577 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 21/38 MP 0/0 Hu 61 $ 700 room=.
--> s
-T 578 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 21/38 MP 0/0 Hu 60 $ 700 room=C
--> s
-T 579 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 21/38 MP 0/0 Hu 59 $ 700 room=.
--> n
-T 580 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 21/38 MP 0/0 Hu 58 $ 700 room=C
--> l
-T 581 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 21/38 MP 0/0 Hu 58 $ 700 room=C
--> w
-T 582 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 21/38 MP 0/0 Hu 57 $ 700 room=.
--> w
-T 583 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 21/38 MP 0/0 Hu 56 $ 700 room=.
--> w
-T 584 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 21/38 MP 0/0 Hu 55 $ 700 room=.
--> n
-T 585 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 21/38 MP 0/0 Hu 54 $ 700 room=U
--> s
-T 586 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 21/38 MP 0/0 Hu 53 $ 700 room=.
--> e
-T 587 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 21/38 MP 0/0 Hu 52 $ 700 room=.
--> e
-T 588 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 21/38 MP 0/0 Hu 51 $ 700 room=.
--> n
-T 589 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 21/38 MP 0/0 Hu 50 $ 700 room=.
--> e
-T 590 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 21/38 MP 0/0 Hu 49 $ 700 room=.
+T 233 mode=combat_mode         Galadriel the Wise(elf) F2@(17,16) HP 34/38 MP 0/0 Hu 72 $ 712 room=M vs Lichen(L1 HP10/10)
+-> a
+T 234 mode=combat_mode         Galadriel the Wise(elf) F2@(17,16) HP 34/38 MP 0/0 Hu 72 $ 712 room=M vs Lichen(L1 HP10/10)
+-> a
+T 235 mode=combat_victory      Galadriel the Wise(elf) F2@(17,16) HP 34/38 MP 0/0 Hu 72 $ 728 room=.
+-> back
+T 236 mode=game_loop           Galadriel the Wise(elf) F2@(17,16) HP 34/38 MP 0/0 Hu 72 $ 728 room=.
 -> i
-T 591 mode=inventory           Galadriel the Wise(elf) F2@( 4, 1) HP 21/38 MP 0/0 Hu 49 $ 700 room=.
--> eat1
-T 592 mode=inventory           Galadriel the Wise(elf) F2@( 4, 1) HP 21/38 MP 0/0 Hu 99 $ 700 room=.
+T 237 mode=inventory           Galadriel the Wise(elf) F2@(17,16) HP 34/38 MP 0/0 Hu 72 $ 728 room=.
+-> u8
+T 238 mode=inventory           Galadriel the Wise(elf) F2@(17,16) HP 34/38 MP 0/0 Hu 72 $ 728 room=.
+-> eat3
+T 239 mode=inventory           Galadriel the Wise(elf) F2@(17,16) HP 34/38 MP 0/0 Hu 90 $ 728 room=.
 -> x
-T 593 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 21/38 MP 0/0 Hu 99 $ 700 room=.
--> s
-T 594 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 21/38 MP 0/0 Hu 98 $ 700 room=C
--> s
-T 595 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 22/38 MP 0/0 Hu 97 $ 700 room=.
+T 240 mode=game_loop           Galadriel the Wise(elf) F2@(17,16) HP 34/38 MP 0/0 Hu 90 $ 728 room=.
 -> n
-T 596 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 22/38 MP 0/0 Hu 96 $ 700 room=C
+T 241 mode=game_loop           Galadriel the Wise(elf) F2@(17,15) HP 35/38 MP 0/0 Hu 89 $ 728 room=O
 -> w
-T 597 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 23/38 MP 0/0 Hu 95 $ 700 room=.
+T 242 mode=game_loop           Galadriel the Wise(elf) F2@(16,15) HP 35/38 MP 0/0 Hu 88 $ 728 room=.
+-> w
+T 243 mode=game_loop           Galadriel the Wise(elf) F2@(15,15) HP 36/38 MP 0/0 Hu 87 $ 728 room=.
 -> n
-T 598 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 23/38 MP 0/0 Hu 94 $ 700 room=.
+T 244 mode=game_loop           Galadriel the Wise(elf) F2@(15,14) HP 36/38 MP 0/0 Hu 86 $ 728 room=.
+-> n
+T 245 mode=game_loop           Galadriel the Wise(elf) F2@(15,13) HP 37/38 MP 0/0 Hu 85 $ 728 room=C
+-> w
+T 246 mode=game_loop           Galadriel the Wise(elf) F2@(14,13) HP 37/38 MP 0/0 Hu 84 $ 728 room=.
+-> w
+T 247 mode=game_loop           Galadriel the Wise(elf) F2@(13,13) HP 37/38 MP 0/0 Hu 83 $ 728 room=.
+-> w
+T 248 mode=game_loop           Galadriel the Wise(elf) F2@(12,13) HP 37/38 MP 0/0 Hu 82 $ 728 room=.
+-> w
+T 249 mode=stairs_down_mode    Galadriel the Wise(elf) F2@(11,13) HP 38/38 MP 0/0 Hu 81 $ 728 room=D
+-> d
+T 250 mode=stairs_up_mode      Galadriel the Wise(elf) F3@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 728 room=U
+-> n
+T 251 mode=stairs_up_mode      Galadriel the Wise(elf) F3@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 728 room=U
 -> e
-T 599 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 24/38 MP 0/0 Hu 93 $ 700 room=.
--> w
-T 600 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 24/38 MP 0/0 Hu 92 $ 700 room=.
+T 252 mode=warp_mode           Galadriel the Wise(elf) F3@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 728 room=W
+-> y
+T 253 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 728 room=W
 -> l
-T 601 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 24/38 MP 0/0 Hu 92 $ 700 room=.
+T 254 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 728 room=W
 -> e
-T 602 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 25/38 MP 0/0 Hu 91 $ 700 room=.
--> s
-T 603 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 25/38 MP 0/0 Hu 90 $ 700 room=C
--> w
-T 604 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 26/38 MP 0/0 Hu 89 $ 700 room=.
--> w
-T 605 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 26/38 MP 0/0 Hu 88 $ 700 room=.
--> w
-T 606 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 27/38 MP 0/0 Hu 87 $ 700 room=.
--> n
-T 607 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 27/38 MP 0/0 Hu 86 $ 700 room=U
--> s
-T 608 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 28/38 MP 0/0 Hu 85 $ 700 room=.
--> e
-T 609 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 28/38 MP 0/0 Hu 84 $ 700 room=.
--> e
-T 610 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 28/38 MP 0/0 Hu 83 $ 700 room=.
+T 255 mode=library_mode        Galadriel the Wise(elf) F3@( 3, 1) HP 38/38 MP 0/0 Hu 79 $ 728 room=L
+-> r
+T 256 mode=library_read_decision_mode Galadriel the Wise(elf) F3@( 3, 1) HP 38/38 MP 0/0 Hu 79 $ 728 room=L
+-> y
+T 257 mode=game_loop           Galadriel the Wise(elf) F3@( 3, 1) HP 38/38 MP 0/0 Hu 79 $ 728 room=.
 -> l
-T 611 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 28/38 MP 0/0 Hu 83 $ 700 room=.
--> n
-T 612 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 28/38 MP 0/0 Hu 82 $ 700 room=.
--> e
-T 613 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 29/38 MP 0/0 Hu 81 $ 700 room=.
+T 258 mode=game_loop           Galadriel the Wise(elf) F3@( 3, 1) HP 38/38 MP 0/0 Hu 79 $ 728 room=.
 -> s
-T 614 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 29/38 MP 0/0 Hu 80 $ 700 room=C
--> s
-T 615 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 29/38 MP 0/0 Hu 79 $ 700 room=.
--> n
-T 616 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 29/38 MP 0/0 Hu 78 $ 700 room=C
--> w
-T 617 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 30/38 MP 0/0 Hu 77 $ 700 room=.
--> w
-T 618 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 30/38 MP 0/0 Hu 76 $ 700 room=.
--> w
-T 619 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 30/38 MP 0/0 Hu 75 $ 700 room=.
--> n
-T 620 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 30/38 MP 0/0 Hu 74 $ 700 room=U
--> s
-T 621 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 31/38 MP 0/0 Hu 73 $ 700 room=.
--> n
-T 622 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 31/38 MP 0/0 Hu 72 $ 700 room=U
--> s
-T 623 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 31/38 MP 0/0 Hu 71 $ 700 room=.
--> e
-T 624 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 31/38 MP 0/0 Hu 70 $ 700 room=.
--> e
-T 625 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 32/38 MP 0/0 Hu 69 $ 700 room=.
--> n
-T 626 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 32/38 MP 0/0 Hu 68 $ 700 room=.
--> e
-T 627 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 32/38 MP 0/0 Hu 67 $ 700 room=.
--> s
-T 628 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 32/38 MP 0/0 Hu 66 $ 700 room=C
--> s
-T 629 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 33/38 MP 0/0 Hu 65 $ 700 room=.
--> n
-T 630 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 33/38 MP 0/0 Hu 64 $ 700 room=C
+T 259 mode=game_loop           Galadriel the Wise(elf) F3@( 3, 2) HP 38/38 MP 0/0 Hu 78 $ 728 room=.
 -> l
-T 631 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 33/38 MP 0/0 Hu 64 $ 700 room=C
+T 260 mode=game_loop           Galadriel the Wise(elf) F3@( 3, 2) HP 38/38 MP 0/0 Hu 78 $ 728 room=.
 -> w
-T 632 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 33/38 MP 0/0 Hu 63 $ 700 room=.
--> w
-T 633 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 33/38 MP 0/0 Hu 62 $ 700 room=.
--> w
-T 634 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 34/38 MP 0/0 Hu 61 $ 700 room=.
--> n
-T 635 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 34/38 MP 0/0 Hu 60 $ 700 room=U
+T 261 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 2) HP 38/38 MP 0/0 Hu 77 $ 728 room=.
 -> s
-T 636 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 34/38 MP 0/0 Hu 59 $ 700 room=.
--> e
-T 637 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 34/38 MP 0/0 Hu 58 $ 700 room=.
--> e
-T 638 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 34/38 MP 0/0 Hu 57 $ 700 room=.
--> n
-T 639 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 34/38 MP 0/0 Hu 56 $ 700 room=.
--> e
-T 640 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 34/38 MP 0/0 Hu 55 $ 700 room=.
+T 262 mode=chest_mode          Galadriel the Wise(elf) F3@( 2, 3) HP 38/38 MP 0/0 Hu 76 $ 728 room=C
+-> s
+T 263 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 4) HP 38/38 MP 0/0 Hu 75 $ 728 room=.
 -> l
-T 641 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 34/38 MP 0/0 Hu 55 $ 700 room=.
--> s
-T 642 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 34/38 MP 0/0 Hu 54 $ 700 room=C
--> s
-T 643 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 34/38 MP 0/0 Hu 53 $ 700 room=.
+T 264 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 4) HP 38/38 MP 0/0 Hu 75 $ 728 room=.
+-> w
+T 265 mode=game_loop           Galadriel the Wise(elf) F3@( 1, 4) HP 38/38 MP 0/0 Hu 74 $ 728 room=.
+-> l
+T 266 mode=game_loop           Galadriel the Wise(elf) F3@( 1, 4) HP 38/38 MP 0/0 Hu 74 $ 728 room=.
 -> n
-T 644 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 34/38 MP 0/0 Hu 52 $ 700 room=C
--> w
-T 645 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 34/38 MP 0/0 Hu 51 $ 700 room=.
--> w
-T 646 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 34/38 MP 0/0 Hu 50 $ 700 room=.
--> w
-T 647 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 34/38 MP 0/0 Hu 49 $ 700 room=.
+T 267 mode=game_loop           Galadriel the Wise(elf) F3@( 1, 3) HP 38/38 MP 0/0 Hu 73 $ 728 room=.
+-> n
+T 268 mode=chest_mode          Galadriel the Wise(elf) F3@( 1, 2) HP 38/38 MP 0/0 Hu 72 $ 728 room=C
+-> n
+T 269 mode=stairs_up_mode      Galadriel the Wise(elf) F3@( 1, 1) HP 38/38 MP 0/0 Hu 71 $ 728 room=U
+-> s
+T 270 mode=game_loop           Galadriel the Wise(elf) F3@( 1, 2) HP 38/38 MP 0/0 Hu 70 $ 728 room=C
+-> e
+T 271 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 2) HP 38/38 MP 0/0 Hu 69 $ 728 room=.
+-> s
+T 272 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 3) HP 38/38 MP 0/0 Hu 68 $ 728 room=C
+-> e
+T 273 mode=game_loop           Galadriel the Wise(elf) F3@( 3, 3) HP 38/38 MP 0/0 Hu 67 $ 728 room=.
+-> l
+T 274 mode=game_loop           Galadriel the Wise(elf) F3@( 3, 3) HP 38/38 MP 0/0 Hu 67 $ 728 room=.
+-> e
+T 275 mode=library_mode        Galadriel the Wise(elf) F3@( 4, 3) HP 38/38 MP 0/0 Hu 66 $ 728 room=L
+-> r
+T 276 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 3) HP 38/38 MP 0/0 Hu 66 $ 728 room=.
+-> s
+T 277 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 4) HP 38/38 MP 0/0 Hu 65 $ 728 room=.
+-> l
+T 278 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 4) HP 38/38 MP 0/0 Hu 65 $ 728 room=.
+-> s
+T 279 mode=altar_mode          Galadriel the Wise(elf) F3@( 4, 5) HP 38/38 MP 0/0 Hu 64 $ 728 room=A
+-> pray
+T 280 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 5) HP 38/38 MP 0/0 Hu 64 $ 728 room=.
+-> l
+T 281 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 5) HP 38/38 MP 0/0 Hu 64 $ 728 room=.
+-> s
+T 282 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 6) HP 38/38 MP 0/0 Hu 63 $ 728 room=.
+-> l
+T 283 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 6) HP 38/38 MP 0/0 Hu 63 $ 728 room=.
+-> s
+T 284 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 7) HP 38/38 MP 0/0 Hu 62 $ 728 room=.
+-> l
+T 285 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 7) HP 38/38 MP 0/0 Hu 62 $ 728 room=.
+-> s
+T 286 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 8) HP 38/38 MP 0/0 Hu 61 $ 728 room=.
+-> l
+T 287 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 8) HP 38/38 MP 0/0 Hu 61 $ 728 room=.
+-> e
+T 288 mode=pool_mode           Galadriel the Wise(elf) F3@( 5, 8) HP 38/38 MP 0/0 Hu 60 $ 728 room=P
+-> dr
+T 289 mode=game_loop           Galadriel the Wise(elf) F3@( 5, 8) HP 38/38 MP 0/0 Hu 60 $ 766 room=.
+-> l
+T 290 mode=game_loop           Galadriel the Wise(elf) F3@( 5, 8) HP 38/38 MP 0/0 Hu 60 $ 766 room=.
+-> n
+T 291 mode=game_loop           Galadriel the Wise(elf) F3@( 5, 7) HP 38/38 MP 0/0 Hu 59 $ 766 room=.
+-> e
+T 292 mode=game_loop           Galadriel the Wise(elf) F3@( 6, 7) HP 38/38 MP 0/0 Hu 58 $ 766 room=.
+-> e
+T 293 mode=game_loop           Galadriel the Wise(elf) F3@( 7, 7) HP 38/38 MP 0/0 Hu 57 $ 766 room=.
+-> l
+T 294 mode=game_loop           Galadriel the Wise(elf) F3@( 7, 7) HP 38/38 MP 0/0 Hu 57 $ 766 room=.
+-> s
+T 295 mode=garden_mode         Galadriel the Wise(elf) F3@( 7, 8) HP 38/38 MP 0/0 Hu 56 $ 766 room=G
+-> h
+T 296 mode=game_loop           Galadriel the Wise(elf) F3@( 7, 8) HP 38/38 MP 0/0 Hu 56 $ 766 room=.
+-> s
+T 297 mode=chest_mode          Galadriel the Wise(elf) F3@( 7, 9) HP 38/38 MP 0/0 Hu 55 $ 766 room=C
+-> s
+T 298 mode=game_loop           Galadriel the Wise(elf) F3@( 7,10) HP 38/38 MP 0/0 Hu 54 $ 766 room=.
+-> l
+T 299 mode=game_loop           Galadriel the Wise(elf) F3@( 7,10) HP 38/38 MP 0/0 Hu 54 $ 766 room=.
+-> e
+T 300 mode=dungeon_mode        Galadriel the Wise(elf) F3@( 8,10) HP 38/38 MP 0/0 Hu 53 $ 766 room=N
+-> u
+T 301 mode=game_loop           Galadriel the Wise(elf) F3@( 8,10) HP 38/38 MP 0/0 Hu 53 $ 766 room=N
+-> l
+T 302 mode=game_loop           Galadriel the Wise(elf) F3@( 8,10) HP 38/38 MP 0/0 Hu 53 $ 766 room=N
+-> n
+T 303 mode=chest_mode          Galadriel the Wise(elf) F3@( 8, 9) HP 38/38 MP 0/0 Hu 52 $ 766 room=C
+-> s
+T 304 mode=game_loop           Galadriel the Wise(elf) F3@( 8,10) HP 38/38 MP 0/0 Hu 51 $ 766 room=N
+-> s
+T 305 mode=game_loop           Galadriel the Wise(elf) F3@( 8,11) HP 38/38 MP 0/0 Hu 50 $ 766 room=.
+-> l
+T 306 mode=game_loop           Galadriel the Wise(elf) F3@( 8,11) HP 38/38 MP 0/0 Hu 50 $ 766 room=.
+-> s
+T 307 mode=game_loop           Galadriel the Wise(elf) F3@( 8,12) HP 38/38 MP 0/0 Hu 49 $ 766 room=.
 -> i
-T 648 mode=inventory           Galadriel the Wise(elf) F2@( 1, 2) HP 34/38 MP 0/0 Hu 49 $ 700 room=.
+T 308 mode=inventory           Galadriel the Wise(elf) F3@( 8,12) HP 38/38 MP 0/0 Hu 49 $ 766 room=.
 -> eat1
-T 649 mode=inventory           Galadriel the Wise(elf) F2@( 1, 2) HP 34/38 MP 0/0 Hu 99 $ 700 room=.
+T 309 mode=inventory           Galadriel the Wise(elf) F3@( 8,12) HP 38/38 MP 0/0 Hu100 $ 766 room=.
 -> x
-T 650 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 34/38 MP 0/0 Hu 99 $ 700 room=.
+T 310 mode=game_loop           Galadriel the Wise(elf) F3@( 8,12) HP 38/38 MP 0/0 Hu100 $ 766 room=.
 -> l
-T 651 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 34/38 MP 0/0 Hu 99 $ 700 room=.
--> n
-T 652 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 34/38 MP 0/0 Hu 98 $ 700 room=U
--> s
-T 653 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 35/38 MP 0/0 Hu 97 $ 700 room=.
--> n
-T 654 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 35/38 MP 0/0 Hu 96 $ 700 room=U
--> s
-T 655 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 36/38 MP 0/0 Hu 95 $ 700 room=.
--> e
-T 656 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 36/38 MP 0/0 Hu 94 $ 700 room=.
--> e
-T 657 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 37/38 MP 0/0 Hu 93 $ 700 room=.
--> n
-T 658 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 37/38 MP 0/0 Hu 92 $ 700 room=.
--> e
-T 659 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 91 $ 700 room=.
--> s
-T 660 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 90 $ 700 room=C
+T 311 mode=game_loop           Galadriel the Wise(elf) F3@( 8,12) HP 38/38 MP 0/0 Hu100 $ 766 room=.
+-> w
+T 312 mode=altar_mode          Galadriel the Wise(elf) F3@( 7,12) HP 38/38 MP 0/0 Hu 99 $ 766 room=A
+-> pray
+T 313 mode=game_loop           Galadriel the Wise(elf) F3@( 7,12) HP 38/38 MP 0/0 Hu100 $ 766 room=.
+-> w
+T 314 mode=garden_mode         Galadriel the Wise(elf) F3@( 6,12) HP 38/38 MP 0/0 Hu 99 $ 766 room=G
+-> h
+T 315 mode=game_loop           Galadriel the Wise(elf) F3@( 6,12) HP 38/38 MP 0/0 Hu 99 $ 766 room=.
 -> l
-T 661 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 90 $ 700 room=C
--> s
-T 662 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 89 $ 700 room=.
--> n
-T 663 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 88 $ 700 room=C
+T 316 mode=game_loop           Galadriel the Wise(elf) F3@( 6,12) HP 38/38 MP 0/0 Hu 99 $ 766 room=.
 -> w
-T 664 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 87 $ 700 room=.
--> w
-T 665 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 86 $ 700 room=.
--> w
-T 666 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 85 $ 700 room=.
--> n
-T 667 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 84 $ 700 room=U
--> s
-T 668 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 83 $ 700 room=.
--> n
-T 669 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 82 $ 700 room=U
--> s
-T 670 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 81 $ 700 room=.
+T 317 mode=library_mode        Galadriel the Wise(elf) F3@( 5,12) HP 38/38 MP 0/0 Hu 98 $ 766 room=L
+-> r
+T 318 mode=library_read_decision_mode Galadriel the Wise(elf) F3@( 5,12) HP 38/38 MP 0/0 Hu 98 $ 766 room=L
+-> y
+T 319 mode=game_loop           Galadriel the Wise(elf) F3@( 5,12) HP 38/38 MP 0/0 Hu 98 $ 866 room=.
 -> l
-T 671 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 81 $ 700 room=.
--> e
-T 672 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 80 $ 700 room=.
--> e
-T 673 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 79 $ 700 room=.
--> n
-T 674 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 78 $ 700 room=.
--> e
-T 675 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 77 $ 700 room=.
--> s
-T 676 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 76 $ 700 room=C
--> s
-T 677 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 75 $ 700 room=.
--> n
-T 678 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 74 $ 700 room=C
+T 320 mode=game_loop           Galadriel the Wise(elf) F3@( 5,12) HP 38/38 MP 0/0 Hu 98 $ 866 room=.
 -> w
-T 679 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 73 $ 700 room=.
--> w
-T 680 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 72 $ 700 room=.
+T 321 mode=game_loop           Galadriel the Wise(elf) F3@( 4,12) HP 38/38 MP 0/0 Hu 97 $ 866 room=.
+-> n
+T 322 mode=game_loop           Galadriel the Wise(elf) F3@( 4,11) HP 38/38 MP 0/0 Hu 96 $ 866 room=.
+-> n
+T 323 mode=game_loop           Galadriel the Wise(elf) F3@( 4,10) HP 38/38 MP 0/0 Hu 95 $ 866 room=.
+-> n
+T 324 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 9) HP 38/38 MP 0/0 Hu 94 $ 866 room=.
+-> n
+T 325 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 8) HP 38/38 MP 0/0 Hu 93 $ 866 room=.
+-> n
+T 326 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 7) HP 38/38 MP 0/0 Hu 92 $ 866 room=.
+-> e
+T 327 mode=game_loop           Galadriel the Wise(elf) F3@( 5, 7) HP 38/38 MP 0/0 Hu 91 $ 866 room=.
+-> e
+T 328 mode=game_loop           Galadriel the Wise(elf) F3@( 6, 7) HP 38/38 MP 0/0 Hu 90 $ 866 room=.
+-> e
+T 329 mode=game_loop           Galadriel the Wise(elf) F3@( 7, 7) HP 38/38 MP 0/0 Hu 89 $ 866 room=.
+-> n
+T 330 mode=stairs_down_mode    Galadriel the Wise(elf) F3@( 7, 6) HP 38/38 MP 0/0 Hu 88 $ 866 room=D
+-> e
+T 331 mode=game_loop           Galadriel the Wise(elf) F3@( 8, 6) HP 38/38 MP 0/0 Hu 87 $ 866 room=.
 -> l
-T 681 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 72 $ 700 room=.
--> w
-T 682 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 71 $ 700 room=.
+T 332 mode=game_loop           Galadriel the Wise(elf) F3@( 8, 6) HP 38/38 MP 0/0 Hu 87 $ 866 room=.
 -> n
-T 683 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 70 $ 700 room=U
--> s
-T 684 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 69 $ 700 room=.
--> n
-T 685 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 68 $ 700 room=U
--> s
-T 686 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 67 $ 700 room=.
--> e
-T 687 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 66 $ 700 room=.
--> e
-T 688 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 65 $ 700 room=.
--> n
-T 689 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 64 $ 700 room=.
--> e
-T 690 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 63 $ 700 room=.
+T 333 mode=game_loop           Galadriel the Wise(elf) F3@( 8, 5) HP 38/38 MP 0/0 Hu 86 $ 866 room=.
 -> l
-T 691 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 63 $ 700 room=.
--> s
-T 692 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 62 $ 700 room=C
--> s
-T 693 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 61 $ 700 room=.
+T 334 mode=game_loop           Galadriel the Wise(elf) F3@( 8, 5) HP 38/38 MP 0/0 Hu 86 $ 866 room=.
 -> n
-T 694 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 60 $ 700 room=C
--> w
-T 695 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 59 $ 700 room=.
+T 335 mode=chest_mode          Galadriel the Wise(elf) F3@( 8, 4) HP 38/38 MP 0/0 Hu 85 $ 866 room=C
 -> n
-T 696 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 58 $ 700 room=.
--> e
-T 697 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 57 $ 700 room=.
--> w
-T 698 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 56 $ 700 room=.
--> e
-T 699 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 55 $ 700 room=.
--> s
-T 700 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 54 $ 700 room=C
+T 336 mode=game_loop           Galadriel the Wise(elf) F3@( 8, 3) HP 38/38 MP 0/0 Hu 84 $ 866 room=.
 -> l
-T 701 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 54 $ 700 room=C
--> w
-T 702 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 53 $ 700 room=.
--> w
-T 703 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 52 $ 700 room=.
--> w
-T 704 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 51 $ 700 room=.
--> n
-T 705 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 50 $ 700 room=U
+T 337 mode=game_loop           Galadriel the Wise(elf) F3@( 8, 3) HP 38/38 MP 0/0 Hu 84 $ 866 room=.
+-> e
+T 338 mode=game_loop           Galadriel the Wise(elf) F3@( 9, 3) HP 38/38 MP 0/0 Hu 83 $ 866 room=.
+-> l
+T 339 mode=game_loop           Galadriel the Wise(elf) F3@( 9, 3) HP 38/38 MP 0/0 Hu 83 $ 866 room=.
 -> s
-T 706 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 49 $ 700 room=.
+T 340 mode=game_loop           Galadriel the Wise(elf) F3@( 9, 4) HP 38/38 MP 0/0 Hu 82 $ 866 room=.
+-> s
+T 341 mode=pool_mode           Galadriel the Wise(elf) F3@( 9, 5) HP 38/38 MP 0/0 Hu 81 $ 866 room=P
+-> dr
+T 342 mode=game_loop           Galadriel the Wise(elf) F3@( 9, 5) HP 38/38 MP 0/0 Hu 81 $ 866 room=.
+-> e
+T 343 mode=game_loop           Galadriel the Wise(elf) F3@(10, 5) HP 38/38 MP 0/0 Hu 80 $ 866 room=.
+-> e
+T 344 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 866 room=V
+-> b11
+T 345 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 836 room=V
+-> b11
+T 346 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 821 room=V
+-> b11
+T 347 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 811 room=V
+-> b6
+T 348 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 781 room=V
+-> b6
+T 349 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 751 room=V
+-> b6
+T 350 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 721 room=V
+-> b6
+T 351 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 691 room=V
+-> b8
+T 352 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 686 room=V
+-> b8
+T 353 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 681 room=V
+-> b6
+T 354 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 531 room=V
+-> b5
+T 355 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 421 room=V
+-> b2
+T 356 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 361 room=V
+-> b2
+T 357 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 281 room=V
+-> b2
+T 358 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 211 room=V
+-> id10
+T 359 mode=vendor_shop         Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 86 room=V
+-> x
+T 360 mode=game_loop           Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 86 room=V
 -> i
-T 707 mode=inventory           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 49 $ 700 room=.
--> eat1
-T 708 mode=inventory           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 99 $ 700 room=.
+T 361 mode=inventory           Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 86 room=V
+-> e4
+T 362 mode=inventory           Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 86 room=V
 -> x
-T 709 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 99 $ 700 room=.
--> n
-T 710 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 98 $ 700 room=U
--> s
-T 711 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 97 $ 700 room=.
--> e
-T 712 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 96 $ 700 room=.
--> e
-T 713 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 95 $ 700 room=.
--> n
-T 714 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 94 $ 700 room=.
--> e
-T 715 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 93 $ 700 room=.
--> s
-T 716 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 92 $ 700 room=C
--> s
-T 717 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 3) HP 38/38 MP 0/0 Hu 91 $ 700 room=.
--> n
-T 718 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 90 $ 700 room=C
--> w
-T 719 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 89 $ 700 room=.
--> n
-T 720 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 88 $ 700 room=.
+T 363 mode=game_loop           Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 86 room=V
 -> l
-T 721 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 88 $ 700 room=.
--> e
-T 722 mode=game_loop           Galadriel the Wise(elf) F2@( 4, 1) HP 38/38 MP 0/0 Hu 87 $ 700 room=.
--> w
-T 723 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 86 $ 700 room=.
--> s
-T 724 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 85 $ 700 room=.
--> w
-T 725 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 84 $ 700 room=.
--> w
-T 726 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 83 $ 700 room=.
+T 364 mode=game_loop           Galadriel the Wise(elf) F3@(11, 5) HP 38/38 MP 0/0 Hu 79 $ 86 room=V
 -> n
-T 727 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 82 $ 700 room=U
--> s
-T 728 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 81 $ 700 room=.
--> e
-T 729 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 80 $ 700 room=.
--> n
-T 730 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 79 $ 700 room=M vs Bugbear(L1 HP50/55)
--> a
-T 731 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 32/38 MP 0/0 Hu 79 $ 700 room=M vs Bugbear(L1 HP49/55)
--> a
-T 732 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 26/38 MP 0/0 Hu 79 $ 700 room=M vs Bugbear(L1 HP49/55)
--> a
-T 733 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 20/38 MP 0/0 Hu 79 $ 700 room=M vs Bugbear(L1 HP48/55)
--> a
-T 734 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 20/38 MP 0/0 Hu 79 $ 700 room=M vs Bugbear(L1 HP47/55)
--> a
-T 735 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 20/38 MP 0/0 Hu 79 $ 700 room=M vs Bugbear(L1 HP46/55)
--> a
-T 736 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 14/38 MP 0/0 Hu 79 $ 700 room=M vs Bugbear(L1 HP45/55)
--> a
-T 737 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 8/38 MP 0/0 Hu 79 $ 700 room=M vs Bugbear(L1 HP44/55)
--> f
-T 738 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 2/38 MP 0/0 Hu 79 $ 700 room=M vs Bugbear(L1 HP44/55)
--> f
-T 739 mode=flee_direction_mode Galadriel the Wise(elf) F2@( 2, 1) HP 2/38 MP 0/0 Hu 79 $ 700 room=M
--> e
-T 740 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 2/38 MP 0/0 Hu 79 $ 700 room=.
+T 365 mode=game_loop           Galadriel the Wise(elf) F3@(11, 4) HP 38/38 MP 0/0 Hu 78 $ 86 room=.
 -> l
-T 741 mode=game_loop           Galadriel the Wise(elf) F2@( 3, 1) HP 2/38 MP 0/0 Hu 79 $ 700 room=.
--> w
-T 742 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 2/38 MP 0/0 Hu 78 $ 700 room=M vs Bugbear(L1 HP44/55)
--> f
-T 743 mode=flee_direction_mode Galadriel the Wise(elf) F2@( 2, 1) HP 2/38 MP 0/0 Hu 78 $ 700 room=M
--> w
-T 744 mode=stairs_up_mode      Galadriel the Wise(elf) F2@( 1, 1) HP 2/38 MP 0/0 Hu 78 $ 700 room=U
--> s
-T 745 mode=game_loop           Galadriel the Wise(elf) F2@( 1, 2) HP 2/38 MP 0/0 Hu 77 $ 700 room=.
--> e
-T 746 mode=game_loop           Galadriel the Wise(elf) F2@( 2, 2) HP 2/38 MP 0/0 Hu 76 $ 700 room=.
+T 366 mode=game_loop           Galadriel the Wise(elf) F3@(11, 4) HP 38/38 MP 0/0 Hu 78 $ 86 room=.
 -> n
-T 747 mode=combat_mode         Galadriel the Wise(elf) F2@( 2, 1) HP 3/38 MP 0/0 Hu 75 $ 700 room=M vs Bugbear(L1 HP44/55)
+T 367 mode=combat_mode         Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 77 $ 86 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T 368 mode=combat_victory      Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 77 $ 95 room=.
+-> back
+T 369 mode=game_loop           Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 77 $ 95 room=.
+-> i
+T 370 mode=inventory           Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 77 $ 95 room=.
+-> u17
+T 371 mode=inventory           Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 77 $ 95 room=.
+-> eat4
+T 372 mode=inventory           Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 95 $ 95 room=.
+-> u9
+T 373 mode=upgrade_scroll_mode Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 95 $ 95 room=.
+-> 1
+T 374 mode=inventory           Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 95 $ 95 room=.
+-> x
+T 375 mode=game_loop           Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 95 $ 95 room=.
+-> n
+T 376 mode=altar_mode          Galadriel the Wise(elf) F3@(11, 2) HP 38/38 MP 0/0 Hu 94 $ 95 room=A
+-> pray
+T 377 mode=game_loop           Galadriel the Wise(elf) F3@(11, 2) HP 38/38 MP 0/0 Hu 94 $ 95 room=.
+-> l
+T 378 mode=game_loop           Galadriel the Wise(elf) F3@(11, 2) HP 38/38 MP 0/0 Hu 94 $ 95 room=.
+-> e
+T 379 mode=game_loop           Galadriel the Wise(elf) F3@(12, 2) HP 38/38 MP 0/0 Hu 93 $ 95 room=.
+-> l
+T 380 mode=game_loop           Galadriel the Wise(elf) F3@(12, 2) HP 38/38 MP 0/0 Hu 93 $ 95 room=.
+-> e
+T 381 mode=game_loop           Galadriel the Wise(elf) F3@(13, 2) HP 38/38 MP 0/0 Hu 92 $ 95 room=.
+-> l
+T 382 mode=game_loop           Galadriel the Wise(elf) F3@(13, 2) HP 38/38 MP 0/0 Hu 92 $ 95 room=.
+-> n
+T 383 mode=game_loop           Galadriel the Wise(elf) F3@(13, 1) HP 38/38 MP 0/0 Hu 91 $ 95 room=.
+-> w
+T 384 mode=game_loop           Galadriel the Wise(elf) F3@(12, 1) HP 38/38 MP 0/0 Hu 90 $ 95 room=.
+-> w
+T 385 mode=game_loop           Galadriel the Wise(elf) F3@(11, 1) HP 38/38 MP 0/0 Hu 89 $ 95 room=.
+-> s
+T 386 mode=game_loop           Galadriel the Wise(elf) F3@(11, 2) HP 38/38 MP 0/0 Hu 88 $ 95 room=.
+-> s
+T 387 mode=game_loop           Galadriel the Wise(elf) F3@(11, 3) HP 38/38 MP 0/0 Hu 87 $ 95 room=.
+-> w
+T 388 mode=combat_mode         Galadriel the Wise(elf) F3@(10, 3) HP 38/38 MP 0/0 Hu 86 $ 95 room=M vs Crawling Claw(L2 HP5/5)
+-> a
+T 389 mode=combat_victory      Galadriel the Wise(elf) F3@(10, 3) HP 37/38 MP 0/0 Hu 86 $ 110 room=.
+-> back
+T 390 mode=game_loop           Galadriel the Wise(elf) F3@(10, 3) HP 37/38 MP 0/0 Hu 86 $ 110 room=.
+-> w
+T 391 mode=game_loop           Galadriel the Wise(elf) F3@( 9, 3) HP 37/38 MP 0/0 Hu 85 $ 110 room=.
+-> s
+T 392 mode=game_loop           Galadriel the Wise(elf) F3@( 9, 4) HP 37/38 MP 0/0 Hu 84 $ 110 room=.
+-> s
+T 393 mode=game_loop           Galadriel the Wise(elf) F3@( 9, 5) HP 37/38 MP 0/0 Hu 83 $ 110 room=.
+-> e
+T 394 mode=game_loop           Galadriel the Wise(elf) F3@(10, 5) HP 38/38 MP 0/0 Hu 82 $ 110 room=.
+-> s
+T 395 mode=game_loop           Galadriel the Wise(elf) F3@(10, 6) HP 38/38 MP 0/0 Hu 81 $ 110 room=.
+-> s
+T 396 mode=game_loop           Galadriel the Wise(elf) F3@(10, 7) HP 38/38 MP 0/0 Hu 80 $ 110 room=.
+-> s
+T 397 mode=combat_mode         Galadriel the Wise(elf) F3@(10, 8) HP 38/38 MP 0/0 Hu 79 $ 110 room=M vs Zombie(L2 HP36/36)
+-> a
+T 398 mode=combat_mode         Galadriel the Wise(elf) F3@(10, 8) HP 38/38 MP 0/0 Hu 79 $ 110 room=M vs Zombie(L2 HP36/36)
+-> a
+T 399 mode=combat_mode         Galadriel the Wise(elf) F3@(10, 8) HP 37/38 MP 0/0 Hu 79 $ 110 room=M vs Zombie(L2 HP14/36)
+-> a
+T 400 mode=combat_victory      Galadriel the Wise(elf) F3@(10, 8) HP 37/48 MP 0/0 Hu 79 $ 140 room=.
+-> back
+T 401 mode=game_loop           Galadriel the Wise(elf) F3@(10, 8) HP 37/48 MP 0/0 Hu 79 $ 140 room=.
+-> l
+T 402 mode=game_loop           Galadriel the Wise(elf) F3@(10, 8) HP 37/48 MP 0/0 Hu 79 $ 140 room=.
+-> s
+T 403 mode=game_loop           Galadriel the Wise(elf) F3@(10, 9) HP 37/48 MP 0/0 Hu 78 $ 140 room=.
+-> s
+T 404 mode=game_loop           Galadriel the Wise(elf) F3@(10,10) HP 37/48 MP 0/0 Hu 77 $ 140 room=.
+-> w
+T 405 mode=game_loop           Galadriel the Wise(elf) F3@( 9,10) HP 37/48 MP 0/0 Hu 76 $ 140 room=.
+-> w
+T 406 mode=dungeon_mode        Galadriel the Wise(elf) F3@( 8,10) HP 38/48 MP 0/0 Hu 75 $ 140 room=N
+-> u
+T 407 mode=dungeon_unlocked_mode Galadriel the Wise(elf) F3@( 8,10) HP 38/48 MP 0/0 Hu 75 $ 140 room=N
+-> r
+T 408 mode=game_loop           Galadriel the Wise(elf) F3@( 8,10) HP 38/48 MP 0/0 Hu 75 $ 318 room=N
+-> n
+T 409 mode=game_loop           Galadriel the Wise(elf) F3@( 8, 9) HP 38/48 MP 0/0 Hu 74 $ 318 room=C
+-> i
+T 410 mode=inventory           Galadriel the Wise(elf) F3@( 8, 9) HP 38/48 MP 0/0 Hu 74 $ 318 room=C
+-> u8
+T 411 mode=inventory           Galadriel the Wise(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 74 $ 318 room=C
+-> x
+T 412 mode=game_loop           Galadriel the Wise(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 74 $ 318 room=C
+-> n
+T 413 mode=combat_mode         Galadriel the Wise(elf) F3@( 8, 8) HP 48/48 MP 0/0 Hu 73 $ 318 room=M vs Gnoll(L2 HP32/32)
+-> a
+T 414 mode=combat_mode         Galadriel the Wise(elf) F3@( 8, 8) HP 47/48 MP 0/0 Hu 73 $ 318 room=M vs Gnoll(L2 HP32/32)
+-> a
+T 415 mode=combat_mode         Galadriel the Wise(elf) F3@( 8, 8) HP 46/48 MP 0/0 Hu 73 $ 318 room=M vs Gnoll(L2 HP13/32)
+-> a
+T 416 mode=combat_victory      Galadriel the Wise(elf) F3@( 8, 8) HP 46/48 MP 0/0 Hu 73 $ 342 room=.
+-> back
+T 417 mode=game_loop           Galadriel the Wise(elf) F3@( 8, 8) HP 46/48 MP 0/0 Hu 73 $ 342 room=.
+-> e
+T 418 mode=game_loop           Galadriel the Wise(elf) F3@( 9, 8) HP 46/48 MP 0/0 Hu 72 $ 342 room=.
+-> s
+T 419 mode=game_loop           Galadriel the Wise(elf) F3@( 9, 9) HP 46/48 MP 0/0 Hu 71 $ 342 room=.
+-> s
+T 420 mode=game_loop           Galadriel the Wise(elf) F3@( 9,10) HP 46/48 MP 0/0 Hu 70 $ 342 room=.
+-> w
+T 421 mode=game_loop           Galadriel the Wise(elf) F3@( 8,10) HP 47/48 MP 0/0 Hu 69 $ 342 room=N
+-> w
+T 422 mode=game_loop           Galadriel the Wise(elf) F3@( 7,10) HP 47/48 MP 0/0 Hu 68 $ 342 room=.
+-> w
+T 423 mode=game_loop           Galadriel the Wise(elf) F3@( 6,10) HP 47/48 MP 0/0 Hu 67 $ 342 room=.
+-> w
+T 424 mode=combat_mode         Galadriel the Wise(elf) F3@( 5,10) HP 47/48 MP 0/0 Hu 66 $ 342 room=M vs Lichen(L2 HP10/10)
+-> a
+T 425 mode=combat_victory      Galadriel the Wise(elf) F3@( 5,10) HP 46/48 MP 0/0 Hu 66 $ 357 room=.
+-> back
+T 426 mode=game_loop           Galadriel the Wise(elf) F3@( 5,10) HP 46/48 MP 0/0 Hu 66 $ 357 room=.
+-> i
+T 427 mode=inventory           Galadriel the Wise(elf) F3@( 5,10) HP 46/48 MP 0/0 Hu 66 $ 357 room=.
+-> u17
+T 428 mode=inventory           Galadriel the Wise(elf) F3@( 5,10) HP 46/48 MP 0/0 Hu 66 $ 357 room=.
+-> eat4
+T 429 mode=inventory           Galadriel the Wise(elf) F3@( 5,10) HP 46/48 MP 0/0 Hu 84 $ 357 room=.
+-> x
+T 430 mode=game_loop           Galadriel the Wise(elf) F3@( 5,10) HP 46/48 MP 0/0 Hu 84 $ 357 room=.
+-> w
+T 431 mode=game_loop           Galadriel the Wise(elf) F3@( 4,10) HP 47/48 MP 0/0 Hu 83 $ 357 room=.
+-> s
+T 432 mode=game_loop           Galadriel the Wise(elf) F3@( 4,11) HP 47/48 MP 0/0 Hu 82 $ 357 room=.
+-> s
+T 433 mode=game_loop           Galadriel the Wise(elf) F3@( 4,12) HP 47/48 MP 0/0 Hu 81 $ 357 room=.
+-> s
+T 434 mode=game_loop           Galadriel the Wise(elf) F3@( 4,13) HP 47/48 MP 0/0 Hu 80 $ 357 room=.
+-> s
+T 435 mode=game_loop           Galadriel the Wise(elf) F3@( 4,14) HP 48/48 MP 0/0 Hu 79 $ 357 room=.
+-> s
+T 436 mode=combat_mode         Galadriel the Wise(elf) F3@( 4,15) HP 48/48 MP 0/0 Hu 78 $ 357 room=M vs Giant Rat(L2 HP22/22)
+-> a
+T 437 mode=combat_victory      Galadriel the Wise(elf) F3@( 4,15) HP 48/48 MP 0/0 Hu 78 $ 384 room=.
+-> back
+T 438 mode=game_loop           Galadriel the Wise(elf) F3@( 4,15) HP 48/48 MP 0/0 Hu 78 $ 384 room=.
+-> e
+T 439 mode=game_loop           Galadriel the Wise(elf) F3@( 5,15) HP 48/48 MP 0/0 Hu 77 $ 384 room=.
+-> n
+T 440 mode=game_loop           Galadriel the Wise(elf) F3@( 5,14) HP 48/48 MP 0/0 Hu 76 $ 384 room=.
+-> n
+T 441 mode=game_loop           Galadriel the Wise(elf) F3@( 5,13) HP 48/48 MP 0/0 Hu 75 $ 384 room=.
+-> n
+T 442 mode=game_loop           Galadriel the Wise(elf) F3@( 5,12) HP 48/48 MP 0/0 Hu 74 $ 384 room=.
+-> w
+T 443 mode=game_loop           Galadriel the Wise(elf) F3@( 4,12) HP 48/48 MP 0/0 Hu 73 $ 384 room=.
+-> n
+T 444 mode=game_loop           Galadriel the Wise(elf) F3@( 4,11) HP 48/48 MP 0/0 Hu 72 $ 384 room=.
+-> n
+T 445 mode=game_loop           Galadriel the Wise(elf) F3@( 4,10) HP 48/48 MP 0/0 Hu 71 $ 384 room=.
+-> n
+T 446 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 9) HP 48/48 MP 0/0 Hu 70 $ 384 room=.
+-> n
+T 447 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 8) HP 48/48 MP 0/0 Hu 69 $ 384 room=.
+-> n
+T 448 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 7) HP 48/48 MP 0/0 Hu 68 $ 384 room=.
+-> n
+T 449 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 6) HP 48/48 MP 0/0 Hu 67 $ 384 room=.
+-> n
+T 450 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 5) HP 48/48 MP 0/0 Hu 66 $ 384 room=.
+-> w
+T 451 mode=game_loop           Galadriel the Wise(elf) F3@( 3, 5) HP 48/48 MP 0/0 Hu 65 $ 384 room=.
+-> w
+T 452 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 5) HP 48/48 MP 0/0 Hu 64 $ 384 room=.
+-> w
+T 453 mode=game_loop           Galadriel the Wise(elf) F3@( 1, 5) HP 48/48 MP 0/0 Hu 63 $ 384 room=.
+-> s
+T 454 mode=combat_mode         Galadriel the Wise(elf) F3@( 1, 6) HP 48/48 MP 0/0 Hu 62 $ 384 room=M vs Bat(L2 HP12/12)
+-> a
+T 455 mode=combat_victory      Galadriel the Wise(elf) F3@( 1, 6) HP 48/48 MP 0/0 Hu 62 $ 387 room=.
+-> back
+T 456 mode=game_loop           Galadriel the Wise(elf) F3@( 1, 6) HP 48/48 MP 0/0 Hu 62 $ 387 room=.
+-> n
+T 457 mode=game_loop           Galadriel the Wise(elf) F3@( 1, 5) HP 48/48 MP 0/0 Hu 61 $ 387 room=.
+-> n
+T 458 mode=game_loop           Galadriel the Wise(elf) F3@( 1, 4) HP 48/48 MP 0/0 Hu 60 $ 387 room=.
+-> n
+T 459 mode=game_loop           Galadriel the Wise(elf) F3@( 1, 3) HP 48/48 MP 0/0 Hu 59 $ 387 room=.
+-> e
+T 460 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 3) HP 48/48 MP 0/0 Hu 58 $ 387 room=C
+-> l
+T 461 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 3) HP 48/48 MP 0/0 Hu 58 $ 387 room=C
+-> s
+T 462 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 4) HP 48/48 MP 0/0 Hu 57 $ 387 room=.
+-> s
+T 463 mode=game_loop           Galadriel the Wise(elf) F3@( 2, 5) HP 48/48 MP 0/0 Hu 56 $ 387 room=.
+-> e
+T 464 mode=game_loop           Galadriel the Wise(elf) F3@( 3, 5) HP 48/48 MP 0/0 Hu 55 $ 387 room=.
+-> e
+T 465 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 5) HP 48/48 MP 0/0 Hu 54 $ 387 room=.
+-> s
+T 466 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 6) HP 48/48 MP 0/0 Hu 53 $ 387 room=.
+-> s
+T 467 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 7) HP 48/48 MP 0/0 Hu 52 $ 387 room=.
+-> e
+T 468 mode=game_loop           Galadriel the Wise(elf) F3@( 5, 7) HP 48/48 MP 0/0 Hu 51 $ 387 room=.
+-> e
+T 469 mode=game_loop           Galadriel the Wise(elf) F3@( 6, 7) HP 48/48 MP 0/0 Hu 50 $ 387 room=.
+-> e
+T 470 mode=game_loop           Galadriel the Wise(elf) F3@( 7, 7) HP 48/48 MP 0/0 Hu 49 $ 387 room=.
+-> i
+T 471 mode=inventory           Galadriel the Wise(elf) F3@( 7, 7) HP 48/48 MP 0/0 Hu 49 $ 387 room=.
+-> eat1
+T 472 mode=inventory           Galadriel the Wise(elf) F3@( 7, 7) HP 48/48 MP 0/0 Hu100 $ 387 room=.
+-> x
+T 473 mode=game_loop           Galadriel the Wise(elf) F3@( 7, 7) HP 48/48 MP 0/0 Hu100 $ 387 room=.
+-> n
+T 474 mode=stairs_down_mode    Galadriel the Wise(elf) F3@( 7, 6) HP 48/48 MP 0/0 Hu 99 $ 387 room=D
+-> d
+T 475 mode=stairs_up_mode      Galadriel the Wise(elf) F4@( 1, 1) HP 48/48 MP 0/0 Hu 99 $ 387 room=U
+-> e
+T 476 mode=game_loop           Galadriel the Wise(elf) F4@( 2, 1) HP 48/48 MP 0/0 Hu 98 $ 387 room=.
+-> l
+T 477 mode=game_loop           Galadriel the Wise(elf) F4@( 2, 1) HP 48/48 MP 0/0 Hu 98 $ 387 room=.
+-> e
+T 478 mode=game_loop           Galadriel the Wise(elf) F4@( 3, 1) HP 48/48 MP 0/0 Hu 97 $ 387 room=.
+-> l
+T 479 mode=game_loop           Galadriel the Wise(elf) F4@( 3, 1) HP 48/48 MP 0/0 Hu 97 $ 387 room=.
+-> e
+T 480 mode=game_loop           Galadriel the Wise(elf) F4@( 4, 1) HP 48/48 MP 0/0 Hu 96 $ 387 room=.
+-> l
+T 481 mode=game_loop           Galadriel the Wise(elf) F4@( 4, 1) HP 48/48 MP 0/0 Hu 96 $ 387 room=.
+-> e
+T 482 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 1) HP 48/48 MP 0/0 Hu 95 $ 387 room=.
+-> l
+T 483 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 1) HP 48/48 MP 0/0 Hu 95 $ 387 room=.
+-> s
+T 484 mode=vendor_shop         Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 387 room=V
+-> b12
+T 485 mode=vendor_shop         Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 357 room=V
+-> b12
+T 486 mode=vendor_shop         Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 342 room=V
+-> b12
+T 487 mode=vendor_shop         Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 332 room=V
+-> b4
+T 488 mode=vendor_shop         Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 302 room=V
+-> b4
+T 489 mode=vendor_shop         Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 272 room=V
+-> b4
+T 490 mode=vendor_shop         Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 242 room=V
+-> b3
+T 491 mode=vendor_shop         Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 182 room=V
+-> id12
+T 492 mode=vendor_shop         Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 107 room=V
+-> x
+T 493 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 107 room=V
+-> l
+T 494 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 2) HP 48/48 MP 0/0 Hu 94 $ 107 room=V
+-> s
+T 495 mode=garden_mode         Galadriel the Wise(elf) F4@( 5, 3) HP 48/48 MP 0/0 Hu 93 $ 107 room=G
+-> h
+T 496 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 3) HP 48/48 MP 0/0 Hu 93 $ 107 room=.
+-> l
+T 497 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 3) HP 48/48 MP 0/0 Hu 93 $ 107 room=.
+-> s
+T 498 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 4) HP 48/48 MP 0/0 Hu 92 $ 107 room=.
+-> l
+T 499 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 4) HP 48/48 MP 0/0 Hu 92 $ 107 room=.
+-> e
+T 500 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 4) HP 48/48 MP 0/0 Hu 91 $ 107 room=.
+-> l
+T 501 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 4) HP 48/48 MP 0/0 Hu 91 $ 107 room=.
+-> e
+T 502 mode=oracle_mode         Galadriel the Wise(elf) F4@( 7, 4) HP 48/48 MP 0/0 Hu 90 $ 107 room=O
+-> e
+T 503 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 4) HP 48/48 MP 0/0 Hu 89 $ 107 room=.
+-> l
+T 504 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 4) HP 48/48 MP 0/0 Hu 89 $ 107 room=.
+-> n
+T 505 mode=combat_mode         Galadriel the Wise(elf) F4@( 8, 3) HP 48/48 MP 0/0 Hu 88 $ 107 room=M vs Zombie(L3 HP37/37)
+-> a
+T 506 mode=combat_mode         Galadriel the Wise(elf) F4@( 8, 3) HP 48/48 MP 0/0 Hu 88 $ 107 room=M vs Zombie(L3 HP15/37)
+-> a
+T 507 mode=combat_mode         Galadriel the Wise(elf) F4@( 8, 3) HP 47/48 MP 0/0 Hu 88 $ 107 room=M vs Zombie(L3 HP15/37)
+-> a
+T 508 mode=combat_mode         Galadriel the Wise(elf) F4@( 8, 3) HP 46/48 MP 0/0 Hu 88 $ 107 room=M vs Zombie(L3 HP15/37)
+-> a
+T 509 mode=combat_victory      Galadriel the Wise(elf) F4@( 8, 3) HP 46/58 MP 0/0 Hu 88 $ 119 room=.
+-> back
+T 510 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 3) HP 46/58 MP 0/0 Hu 88 $ 119 room=.
+-> n
+T 511 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 2) HP 46/58 MP 0/0 Hu 87 $ 119 room=.
+-> n
+T 512 mode=dungeon_mode        Galadriel the Wise(elf) F4@( 8, 1) HP 47/58 MP 0/0 Hu 86 $ 119 room=N
+-> u
+T 513 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 1) HP 47/58 MP 0/0 Hu 86 $ 119 room=N
+-> e
+T 514 mode=game_loop           Galadriel the Wise(elf) F4@( 9, 1) HP 47/58 MP 0/0 Hu 85 $ 119 room=.
+-> e
+T 515 mode=game_loop           Galadriel the Wise(elf) F4@(10, 1) HP 47/58 MP 0/0 Hu 84 $ 119 room=.
+-> e
+T 516 mode=chest_mode          Galadriel the Wise(elf) F4@(11, 1) HP 47/58 MP 0/0 Hu 83 $ 119 room=C
+-> o
+T 517 mode=game_loop           Galadriel the Wise(elf) F4@(11, 1) HP 47/58 MP 0/0 Hu 83 $ 119 room=.
+-> w
+T 518 mode=game_loop           Galadriel the Wise(elf) F4@(10, 1) HP 48/58 MP 0/0 Hu 82 $ 119 room=.
+-> s
+T 519 mode=game_loop           Galadriel the Wise(elf) F4@(10, 2) HP 48/58 MP 0/0 Hu 81 $ 119 room=.
+-> s
+T 520 mode=game_loop           Galadriel the Wise(elf) F4@(10, 3) HP 48/58 MP 0/0 Hu 80 $ 119 room=.
+-> s
+T 521 mode=game_loop           Galadriel the Wise(elf) F4@(10, 4) HP 48/58 MP 0/0 Hu 79 $ 119 room=.
+-> l
+T 522 mode=game_loop           Galadriel the Wise(elf) F4@(10, 4) HP 48/58 MP 0/0 Hu 79 $ 119 room=.
+-> e
+T 523 mode=game_loop           Galadriel the Wise(elf) F4@(11, 4) HP 49/58 MP 0/0 Hu 78 $ 119 room=.
+-> l
+T 524 mode=game_loop           Galadriel the Wise(elf) F4@(11, 4) HP 49/58 MP 0/0 Hu 78 $ 119 room=.
+-> e
+T 525 mode=chest_mode          Galadriel the Wise(elf) F4@(12, 4) HP 49/58 MP 0/0 Hu 77 $ 119 room=C
+-> o
+T 526 mode=game_loop           Galadriel the Wise(elf) F4@(12, 4) HP 49/58 MP 0/0 Hu 77 $ 209 room=.
+-> l
+T 527 mode=game_loop           Galadriel the Wise(elf) F4@(12, 4) HP 49/58 MP 0/0 Hu 77 $ 209 room=.
+-> e
+T 528 mode=game_loop           Galadriel the Wise(elf) F4@(13, 4) HP 49/58 MP 0/0 Hu 76 $ 209 room=.
+-> l
+T 529 mode=game_loop           Galadriel the Wise(elf) F4@(13, 4) HP 49/58 MP 0/0 Hu 76 $ 209 room=.
+-> e
+T 530 mode=shrine_mode         Galadriel the Wise(elf) F4@(14, 4) HP 49/58 MP 0/0 Hu 75 $ 209 room=F
+-> p
+T 531 mode=game_loop           Galadriel the Wise(elf) F4@(14, 4) HP 49/58 MP 0/0 Hu 75 $ 209 room=.
+-> l
+T 532 mode=game_loop           Galadriel the Wise(elf) F4@(14, 4) HP 49/58 MP 0/0 Hu 75 $ 209 room=.
+-> e
+T 533 mode=game_loop           Galadriel the Wise(elf) F4@(15, 4) HP 50/58 MP 0/0 Hu 74 $ 209 room=.
+-> l
+T 534 mode=game_loop           Galadriel the Wise(elf) F4@(15, 4) HP 50/58 MP 0/0 Hu 74 $ 209 room=.
+-> e
+T 535 mode=game_loop           Galadriel the Wise(elf) F4@(16, 4) HP 50/58 MP 0/0 Hu 73 $ 209 room=.
+-> l
+T 536 mode=game_loop           Galadriel the Wise(elf) F4@(16, 4) HP 50/58 MP 0/0 Hu 73 $ 209 room=.
+-> e
+T 537 mode=library_mode        Galadriel the Wise(elf) F4@(17, 4) HP 50/58 MP 0/0 Hu 72 $ 209 room=L
+-> r
+T 538 mode=library_read_decision_mode Galadriel the Wise(elf) F4@(17, 4) HP 50/58 MP 0/0 Hu 72 $ 209 room=L
+-> y
+T 539 mode=game_loop           Galadriel the Wise(elf) F4@(17, 4) HP 50/58 MP 0/0 Hu 72 $ 309 room=.
+-> l
+T 540 mode=game_loop           Galadriel the Wise(elf) F4@(17, 4) HP 50/58 MP 0/0 Hu 72 $ 309 room=.
+-> n
+T 541 mode=combat_mode         Galadriel the Wise(elf) F4@(17, 3) HP 50/58 MP 0/0 Hu 71 $ 309 room=M vs Kobold(L3 HP8/8)
+-> a
+T 542 mode=combat_mode         Galadriel the Wise(elf) F4@(17, 3) HP 49/58 MP 0/0 Hu 71 $ 309 room=M vs Kobold(L3 HP8/8)
+-> a
+T 543 mode=combat_mode         Galadriel the Wise(elf) F4@(17, 3) HP 48/58 MP 0/0 Hu 71 $ 309 room=M vs Kobold(L3 HP8/8)
+-> a
+T 544 mode=combat_victory      Galadriel the Wise(elf) F4@(17, 3) HP 48/58 MP 0/0 Hu 71 $ 325 room=.
+-> back
+T 545 mode=game_loop           Galadriel the Wise(elf) F4@(17, 3) HP 48/58 MP 0/0 Hu 71 $ 325 room=.
+-> l
+T 546 mode=game_loop           Galadriel the Wise(elf) F4@(17, 3) HP 48/58 MP 0/0 Hu 71 $ 325 room=.
+-> n
+T 547 mode=game_loop           Galadriel the Wise(elf) F4@(17, 2) HP 49/58 MP 0/0 Hu 70 $ 325 room=.
+-> l
+T 548 mode=game_loop           Galadriel the Wise(elf) F4@(17, 2) HP 49/58 MP 0/0 Hu 70 $ 325 room=.
+-> e
+T 549 mode=combat_mode         Galadriel the Wise(elf) F4@(18, 2) HP 49/58 MP 0/0 Hu 69 $ 325 room=M vs Giant Rat(L3 HP23/23)
+-> a
+T 550 mode=combat_mode         Galadriel the Wise(elf) F4@(18, 2) HP 48/58 MP 0/0 Hu 69 $ 325 room=M vs Giant Rat(L3 HP1/23)
 -> f
-T 748 mode=death_screen        Galadriel the Wise(elf) F2@( 2, 1) HP -3/38 MP 0/0 Hu 75 $ 700 room=M
+T 551 mode=combat_mode         Galadriel the Wise(elf) F4@(18, 2) HP 45/58 MP 0/0 Hu 69 $ 325 room=M vs Giant Rat(L3 HP1/23)
+-> f
+T 552 mode=combat_mode         Galadriel the Wise(elf) F4@(18, 2) HP 42/58 MP 0/0 Hu 69 $ 325 room=M vs Giant Rat(L3 HP1/23)
+-> f
+T 553 mode=flee_direction_mode Galadriel the Wise(elf) F4@(18, 2) HP 39/58 MP 0/0 Hu 69 $ 325 room=M
+-> s
+T 554 mode=game_loop           Galadriel the Wise(elf) F4@(18, 3) HP 37/58 MP 0/0 Hu 69 $ 325 room=.
+-> i
+T 555 mode=inventory           Galadriel the Wise(elf) F4@(18, 3) HP 37/58 MP 0/0 Hu 69 $ 325 room=.
+-> u10
+T 556 mode=inventory           Galadriel the Wise(elf) F4@(18, 3) HP 58/58 MP 0/0 Hu 69 $ 325 room=.
+-> x
+T 557 mode=game_loop           Galadriel the Wise(elf) F4@(18, 3) HP 58/58 MP 0/0 Hu 69 $ 325 room=.
+-> w
+T 558 mode=game_loop           Galadriel the Wise(elf) F4@(17, 3) HP 56/58 MP 0/0 Hu 68 $ 325 room=.
+-> s
+T 559 mode=game_loop           Galadriel the Wise(elf) F4@(17, 4) HP 54/58 MP 0/0 Hu 67 $ 325 room=.
+-> s
+T 560 mode=game_loop           Galadriel the Wise(elf) F4@(17, 5) HP 55/58 MP 0/0 Hu 66 $ 325 room=.
+-> l
+T 561 mode=game_loop           Galadriel the Wise(elf) F4@(17, 5) HP 55/58 MP 0/0 Hu 66 $ 325 room=.
+-> w
+T 562 mode=game_loop           Galadriel the Wise(elf) F4@(16, 5) HP 55/58 MP 0/0 Hu 65 $ 325 room=.
+-> s
+T 563 mode=combat_mode         Galadriel the Wise(elf) F4@(16, 6) HP 55/58 MP 0/0 Hu 64 $ 325 room=M vs Kobold(L3 HP8/8)
+-> a
+T 564 mode=combat_mode         Galadriel the Wise(elf) F4@(16, 6) HP 54/58 MP 0/0 Hu 64 $ 325 room=M vs Kobold(L3 HP8/8)
+-> a
+T 565 mode=combat_victory      Galadriel the Wise(elf) F4@(16, 6) HP 53/58 MP 0/0 Hu 64 $ 345 room=.
+-> back
+T 566 mode=game_loop           Galadriel the Wise(elf) F4@(16, 6) HP 53/58 MP 0/0 Hu 64 $ 345 room=.
+-> w
+T 567 mode=game_loop           Galadriel the Wise(elf) F4@(15, 6) HP 53/58 MP 0/0 Hu 63 $ 345 room=.
+-> w
+T 568 mode=game_loop           Galadriel the Wise(elf) F4@(14, 6) HP 54/58 MP 0/0 Hu 62 $ 345 room=.
+-> w
+T 569 mode=altar_mode          Galadriel the Wise(elf) F4@(13, 6) HP 54/58 MP 0/0 Hu 61 $ 345 room=A
+-> pray
+T 570 mode=game_loop           Galadriel the Wise(elf) F4@(13, 6) HP 54/58 MP 0/0 Hu 61 $ 345 room=.
+-> s
+T 571 mode=game_loop           Galadriel the Wise(elf) F4@(13, 7) HP 54/58 MP 0/0 Hu 60 $ 345 room=.
+-> w
+T 572 mode=pool_mode           Galadriel the Wise(elf) F4@(12, 7) HP 54/58 MP 0/0 Hu 59 $ 345 room=P
+-> dr
+T 573 mode=game_loop           Galadriel the Wise(elf) F4@(12, 7) HP 54/58 MP 0/0 Hu 59 $ 345 room=.
+-> s
+T 574 mode=game_loop           Galadriel the Wise(elf) F4@(12, 8) HP 54/58 MP 0/0 Hu 58 $ 345 room=.
+-> s
+T 575 mode=altar_mode          Galadriel the Wise(elf) F4@(12, 9) HP 54/58 MP 0/0 Hu 57 $ 345 room=A
+-> pray
+T 576 mode=game_loop           Galadriel the Wise(elf) F4@(12, 9) HP 54/58 MP 0/0 Hu 57 $ 545 room=.
+-> s
+T 577 mode=game_loop           Galadriel the Wise(elf) F4@(12,10) HP 54/58 MP 0/0 Hu 56 $ 545 room=.
+-> l
+T 578 mode=game_loop           Galadriel the Wise(elf) F4@(12,10) HP 54/58 MP 0/0 Hu 56 $ 545 room=.
+-> e
+T 579 mode=game_loop           Galadriel the Wise(elf) F4@(13,10) HP 54/58 MP 0/0 Hu 55 $ 545 room=.
+-> l
+T 580 mode=game_loop           Galadriel the Wise(elf) F4@(13,10) HP 54/58 MP 0/0 Hu 55 $ 545 room=.
+-> e
+T 581 mode=pool_mode           Galadriel the Wise(elf) F4@(14,10) HP 54/58 MP 0/0 Hu 54 $ 545 room=P
+-> dr
+T 582 mode=game_loop           Galadriel the Wise(elf) F4@(14,10) HP 54/58 MP 0/0 Hu 54 $ 545 room=.
+-> l
+T 583 mode=game_loop           Galadriel the Wise(elf) F4@(14,10) HP 54/58 MP 0/0 Hu 54 $ 545 room=.
+-> s
+T 584 mode=game_loop           Galadriel the Wise(elf) F4@(14,11) HP 54/58 MP 0/0 Hu 53 $ 545 room=.
+-> l
+T 585 mode=game_loop           Galadriel the Wise(elf) F4@(14,11) HP 54/58 MP 0/0 Hu 53 $ 545 room=.
+-> e
+T 586 mode=game_loop           Galadriel the Wise(elf) F4@(15,11) HP 54/58 MP 0/0 Hu 52 $ 545 room=.
+-> l
+T 587 mode=game_loop           Galadriel the Wise(elf) F4@(15,11) HP 54/58 MP 0/0 Hu 52 $ 545 room=.
+-> w
+T 588 mode=game_loop           Galadriel the Wise(elf) F4@(14,11) HP 54/58 MP 0/0 Hu 51 $ 545 room=.
+-> s
+T 589 mode=game_loop           Galadriel the Wise(elf) F4@(14,12) HP 54/58 MP 0/0 Hu 50 $ 545 room=.
+-> s
+T 590 mode=game_loop           Galadriel the Wise(elf) F4@(14,13) HP 54/58 MP 0/0 Hu 49 $ 545 room=.
+-> i
+T 591 mode=inventory           Galadriel the Wise(elf) F4@(14,13) HP 54/58 MP 0/0 Hu 49 $ 545 room=.
+-> u11
+T 592 mode=inventory           Galadriel the Wise(elf) F4@(14,13) HP 58/58 MP 0/0 Hu 49 $ 545 room=.
+-> x
+T 593 mode=game_loop           Galadriel the Wise(elf) F4@(14,13) HP 58/58 MP 0/0 Hu 49 $ 545 room=.
+-> i
+T 594 mode=inventory           Galadriel the Wise(elf) F4@(14,13) HP 58/58 MP 0/0 Hu 49 $ 545 room=.
+-> eat1
+T 595 mode=inventory           Galadriel the Wise(elf) F4@(14,13) HP 58/58 MP 0/0 Hu100 $ 545 room=.
+-> x
+T 596 mode=game_loop           Galadriel the Wise(elf) F4@(14,13) HP 58/58 MP 0/0 Hu100 $ 545 room=.
+-> s
+T 597 mode=game_loop           Galadriel the Wise(elf) F4@(14,14) HP 58/58 MP 0/0 Hu 99 $ 545 room=.
+-> s
+T 598 mode=game_loop           Galadriel the Wise(elf) F4@(14,15) HP 58/58 MP 0/0 Hu 98 $ 545 room=.
+-> w
+T 599 mode=game_loop           Galadriel the Wise(elf) F4@(13,15) HP 58/58 MP 0/0 Hu 97 $ 545 room=.
+-> n
+T 600 mode=game_loop           Galadriel the Wise(elf) F4@(13,14) HP 58/58 MP 0/0 Hu 96 $ 545 room=.
+-> n
+T 601 mode=game_loop           Galadriel the Wise(elf) F4@(13,13) HP 58/58 MP 0/0 Hu 95 $ 545 room=.
+-> n
+T 602 mode=game_loop           Galadriel the Wise(elf) F4@(13,12) HP 58/58 MP 0/0 Hu 94 $ 545 room=.
+-> n
+T 603 mode=game_loop           Galadriel the Wise(elf) F4@(13,11) HP 58/58 MP 0/0 Hu 93 $ 545 room=.
+-> n
+T 604 mode=game_loop           Galadriel the Wise(elf) F4@(13,10) HP 58/58 MP 0/0 Hu 92 $ 545 room=.
+-> w
+T 605 mode=game_loop           Galadriel the Wise(elf) F4@(12,10) HP 58/58 MP 0/0 Hu 91 $ 545 room=.
+-> w
+T 606 mode=game_loop           Galadriel the Wise(elf) F4@(11,10) HP 58/58 MP 0/0 Hu 90 $ 545 room=.
+-> w
+T 607 mode=game_loop           Galadriel the Wise(elf) F4@(10,10) HP 58/58 MP 0/0 Hu 89 $ 545 room=.
+-> w
+T 608 mode=chest_mode          Galadriel the Wise(elf) F4@( 9,10) HP 58/58 MP 0/0 Hu 88 $ 545 room=C
+-> s
+T 609 mode=game_loop           Galadriel the Wise(elf) F4@( 9,11) HP 58/58 MP 0/0 Hu 87 $ 545 room=.
+-> w
+T 610 mode=pool_mode           Galadriel the Wise(elf) F4@( 8,11) HP 58/58 MP 0/0 Hu 86 $ 545 room=P
+-> dr
+T 611 mode=game_loop           Galadriel the Wise(elf) F4@( 8,11) HP 58/58 MP 0/0 Hu 86 $ 545 room=.
+-> n
+T 612 mode=game_loop           Galadriel the Wise(elf) F4@( 8,10) HP 58/58 MP 0/0 Hu 85 $ 545 room=.
+-> n
+T 613 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 9) HP 58/58 MP 0/0 Hu 84 $ 545 room=.
+-> l
+T 614 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 9) HP 58/58 MP 0/0 Hu 84 $ 545 room=.
+-> e
+T 615 mode=game_loop           Galadriel the Wise(elf) F4@( 9, 9) HP 58/58 MP 0/0 Hu 83 $ 545 room=.
+-> l
+T 616 mode=game_loop           Galadriel the Wise(elf) F4@( 9, 9) HP 58/58 MP 0/0 Hu 83 $ 545 room=.
+-> n
+T 617 mode=game_loop           Galadriel the Wise(elf) F4@( 9, 8) HP 58/58 MP 0/0 Hu 82 $ 545 room=.
+-> e
+T 618 mode=chest_mode          Galadriel the Wise(elf) F4@(10, 8) HP 58/58 MP 0/0 Hu 81 $ 545 room=C
+-> o
+T 619 mode=game_loop           Galadriel the Wise(elf) F4@(10, 8) HP 58/58 MP 0/0 Hu 81 $ 545 room=.
+-> s
+T 620 mode=game_loop           Galadriel the Wise(elf) F4@(10, 9) HP 58/58 MP 0/0 Hu 80 $ 545 room=.
+-> e
+T 621 mode=game_loop           Galadriel the Wise(elf) F4@(11, 9) HP 58/58 MP 0/0 Hu 79 $ 545 room=.
+-> n
+T 622 mode=game_loop           Galadriel the Wise(elf) F4@(11, 8) HP 58/58 MP 0/0 Hu 78 $ 545 room=.
+-> e
+T 623 mode=game_loop           Galadriel the Wise(elf) F4@(12, 8) HP 58/58 MP 0/0 Hu 77 $ 545 room=.
+-> s
+T 624 mode=game_loop           Galadriel the Wise(elf) F4@(12, 9) HP 58/58 MP 0/0 Hu 76 $ 545 room=.
+-> s
+T 625 mode=game_loop           Galadriel the Wise(elf) F4@(12,10) HP 58/58 MP 0/0 Hu 75 $ 545 room=.
+-> s
+T 626 mode=game_loop           Galadriel the Wise(elf) F4@(12,11) HP 58/58 MP 0/0 Hu 74 $ 545 room=.
+-> e
+T 627 mode=game_loop           Galadriel the Wise(elf) F4@(13,11) HP 58/58 MP 0/0 Hu 73 $ 545 room=.
+-> e
+T 628 mode=game_loop           Galadriel the Wise(elf) F4@(14,11) HP 58/58 MP 0/0 Hu 72 $ 545 room=.
+-> e
+T 629 mode=game_loop           Galadriel the Wise(elf) F4@(15,11) HP 58/58 MP 0/0 Hu 71 $ 545 room=.
+-> w
+T 630 mode=game_loop           Galadriel the Wise(elf) F4@(14,11) HP 58/58 MP 0/0 Hu 70 $ 545 room=.
+-> n
+T 631 mode=game_loop           Galadriel the Wise(elf) F4@(14,10) HP 58/58 MP 0/0 Hu 69 $ 545 room=.
+-> n
+T 632 mode=game_loop           Galadriel the Wise(elf) F4@(14, 9) HP 58/58 MP 0/0 Hu 68 $ 545 room=.
+-> s
+T 633 mode=game_loop           Galadriel the Wise(elf) F4@(14,10) HP 58/58 MP 0/0 Hu 67 $ 545 room=.
+-> w
+T 634 mode=game_loop           Galadriel the Wise(elf) F4@(13,10) HP 58/58 MP 0/0 Hu 66 $ 545 room=.
+-> s
+T 635 mode=game_loop           Galadriel the Wise(elf) F4@(13,11) HP 58/58 MP 0/0 Hu 65 $ 545 room=.
+-> e
+T 636 mode=game_loop           Galadriel the Wise(elf) F4@(14,11) HP 58/58 MP 0/0 Hu 64 $ 545 room=.
+-> e
+T 637 mode=game_loop           Galadriel the Wise(elf) F4@(15,11) HP 58/58 MP 0/0 Hu 63 $ 545 room=.
+-> w
+T 638 mode=game_loop           Galadriel the Wise(elf) F4@(14,11) HP 58/58 MP 0/0 Hu 62 $ 545 room=.
+-> i
+T 639 mode=inventory           Galadriel the Wise(elf) F4@(14,11) HP 58/58 MP 0/0 Hu 62 $ 545 room=.
+-> eat1
+T 640 mode=inventory           Galadriel the Wise(elf) F4@(14,11) HP 58/58 MP 0/0 Hu 97 $ 545 room=.
+-> u9
+T 641 mode=inventory           Galadriel the Wise(elf) F4@(14,11) HP 58/58 MP 0/0 Hu 97 $ 545 room=.
+  ! TypeError: Character.add_status_effect() got an unexpected keyword argument 'resistance_element'
+-> x
+T 642 mode=game_loop           Galadriel the Wise(elf) F4@(14,11) HP 58/58 MP 0/0 Hu 97 $ 545 room=.
+-> s
+T 643 mode=game_loop           Galadriel the Wise(elf) F4@(14,12) HP 58/58 MP 0/0 Hu 96 $ 545 room=.
+-> w
+T 644 mode=game_loop           Galadriel the Wise(elf) F4@(13,12) HP 58/58 MP 0/0 Hu 95 $ 545 room=.
+-> s
+T 645 mode=game_loop           Galadriel the Wise(elf) F4@(13,13) HP 58/58 MP 0/0 Hu 94 $ 545 room=.
+-> e
+T 646 mode=game_loop           Galadriel the Wise(elf) F4@(14,13) HP 58/58 MP 0/0 Hu 93 $ 545 room=.
+-> e
+T 647 mode=game_loop           Galadriel the Wise(elf) F4@(15,13) HP 58/58 MP 0/0 Hu 92 $ 545 room=.
+-> l
+T 648 mode=game_loop           Galadriel the Wise(elf) F4@(15,13) HP 58/58 MP 0/0 Hu 92 $ 545 room=.
+-> e
+T 649 mode=combat_mode         Galadriel the Wise(elf) F4@(16,13) HP 58/58 MP 0/0 Hu 91 $ 545 room=M vs Gray Ooze(L3 HP36/36)
+-> a
+T 650 mode=combat_mode         Galadriel the Wise(elf) F4@(16,13) HP 58/58 MP 0/0 Hu 91 $ 545 room=M vs Gray Ooze(L3 HP14/36)
+-> f
+T 651 mode=flee_direction_mode Galadriel the Wise(elf) F4@(16,13) HP 57/58 MP 0/0 Hu 91 $ 545 room=M
+-> e
+T 652 mode=game_loop           Galadriel the Wise(elf) F4@(17,13) HP 57/58 MP 0/0 Hu 91 $ 545 room=.
+-> l
+T 653 mode=game_loop           Galadriel the Wise(elf) F4@(17,13) HP 57/58 MP 0/0 Hu 91 $ 545 room=.
+-> s
+T 654 mode=game_loop           Galadriel the Wise(elf) F4@(17,14) HP 57/58 MP 0/0 Hu 90 $ 545 room=.
+-> l
+T 655 mode=game_loop           Galadriel the Wise(elf) F4@(17,14) HP 57/58 MP 0/0 Hu 90 $ 545 room=.
+-> s
+T 656 mode=game_loop           Galadriel the Wise(elf) F4@(17,15) HP 58/58 MP 0/0 Hu 89 $ 545 room=.
+-> s
+T 657 mode=combat_mode         Galadriel the Wise(elf) F4@(17,16) HP 58/58 MP 0/0 Hu 88 $ 545 room=M vs Goblin(L3 HP32/32)
+-> a
+T 658 mode=combat_mode         Galadriel the Wise(elf) F4@(17,16) HP 58/58 MP 0/0 Hu 88 $ 545 room=M vs Goblin(L3 HP32/32)
+-> a
+T 659 mode=combat_mode         Galadriel the Wise(elf) F4@(17,16) HP 58/58 MP 0/0 Hu 88 $ 545 room=M vs Goblin(L3 HP11/32)
+-> a
+T 660 mode=combat_victory      Galadriel the Wise(elf) F4@(17,16) HP 58/58 MP 0/0 Hu 88 $ 581 room=.
+-> back
+T 661 mode=game_loop           Galadriel the Wise(elf) F4@(17,16) HP 58/58 MP 0/0 Hu 88 $ 581 room=.
+-> i
+T 662 mode=inventory           Galadriel the Wise(elf) F4@(17,16) HP 58/58 MP 0/0 Hu 88 $ 581 room=.
+-> u18
+T 663 mode=inventory           Galadriel the Wise(elf) F4@(17,16) HP 58/58 MP 0/0 Hu 88 $ 581 room=.
+-> x
+T 664 mode=game_loop           Galadriel the Wise(elf) F4@(17,16) HP 58/58 MP 0/0 Hu 88 $ 581 room=.
+-> e
+T 665 mode=chest_mode          Galadriel the Wise(elf) F4@(18,16) HP 58/58 MP 0/0 Hu 87 $ 581 room=C
+-> o
+T 666 mode=game_loop           Galadriel the Wise(elf) F4@(18,16) HP 58/58 MP 0/0 Hu 87 $ 641 room=.
+-> e
+T 667 mode=library_mode        Galadriel the Wise(elf) F4@(19,16) HP 58/58 MP 0/0 Hu 86 $ 641 room=L
+-> r
+T 668 mode=library_read_decision_mode Galadriel the Wise(elf) F4@(19,16) HP 58/58 MP 0/0 Hu 86 $ 641 room=L
+-> y
+T 669 mode=game_loop           Galadriel the Wise(elf) F4@(19,16) HP 58/58 MP 0/0 Hu 86 $ 641 room=.
+-> n
+T 670 mode=combat_mode         Galadriel the Wise(elf) F4@(19,15) HP 58/58 MP 0/0 Hu 85 $ 641 room=M vs Stirge(L3 HP6/6)
+-> a
+T 671 mode=combat_mode         Galadriel the Wise(elf) F4@(19,15) HP 57/58 MP 0/0 Hu 85 $ 641 room=M vs Stirge(L3 HP6/6)
+-> a
+T 672 mode=combat_victory      Galadriel the Wise(elf) F4@(19,15) HP 56/58 MP 0/0 Hu 85 $ 669 room=.
+-> back
+T 673 mode=game_loop           Galadriel the Wise(elf) F4@(19,15) HP 56/58 MP 0/0 Hu 85 $ 669 room=.
+-> n
+T 674 mode=game_loop           Galadriel the Wise(elf) F4@(19,14) HP 56/58 MP 0/0 Hu 84 $ 669 room=.
+-> n
+T 675 mode=game_loop           Galadriel the Wise(elf) F4@(19,13) HP 56/58 MP 0/0 Hu 83 $ 669 room=.
+-> n
+T 676 mode=dungeon_mode        Galadriel the Wise(elf) F4@(19,12) HP 56/58 MP 0/0 Hu 82 $ 669 room=N
+-> u
+T 677 mode=dungeon_unlocked_mode Galadriel the Wise(elf) F4@(19,12) HP 56/58 MP 0/0 Hu 82 $ 669 room=N
+-> r
+T 678 mode=game_loop           Galadriel the Wise(elf) F4@(19,12) HP 56/58 MP 0/0 Hu 82 $ 669 room=N
+-> i
+T 679 mode=inventory           Galadriel the Wise(elf) F4@(19,12) HP 56/58 MP 0/0 Hu 82 $ 669 room=N
+-> e5
+T 680 mode=inventory           Galadriel the Wise(elf) F4@(19,12) HP 56/58 MP 0/0 Hu 82 $ 669 room=N
+-> x
+T 681 mode=game_loop           Galadriel the Wise(elf) F4@(19,12) HP 56/58 MP 0/0 Hu 82 $ 669 room=N
+-> n
+T 682 mode=game_loop           Galadriel the Wise(elf) F4@(19,11) HP 57/58 MP 0/0 Hu 81 $ 669 room=.
+-> n
+T 683 mode=garden_mode         Galadriel the Wise(elf) F4@(19,10) HP 57/58 MP 0/0 Hu 80 $ 669 room=G
+-> h
+T 684 mode=game_loop           Galadriel the Wise(elf) F4@(19,10) HP 57/58 MP 0/0 Hu 80 $ 669 room=.
+-> w
+T 685 mode=game_loop           Galadriel the Wise(elf) F4@(18,10) HP 57/58 MP 0/0 Hu 79 $ 669 room=.
+-> w
+T 686 mode=game_loop           Galadriel the Wise(elf) F4@(17,10) HP 57/58 MP 0/0 Hu 78 $ 669 room=.
+-> w
+T 687 mode=game_loop           Galadriel the Wise(elf) F4@(16,10) HP 58/58 MP 0/0 Hu 77 $ 669 room=.
+-> n
+T 688 mode=game_loop           Galadriel the Wise(elf) F4@(16, 9) HP 58/58 MP 0/0 Hu 76 $ 669 room=.
+-> e
+T 689 mode=game_loop           Galadriel the Wise(elf) F4@(17, 9) HP 58/58 MP 0/0 Hu 75 $ 669 room=.
+-> s
+T 690 mode=game_loop           Galadriel the Wise(elf) F4@(17,10) HP 58/58 MP 0/0 Hu 74 $ 669 room=.
+-> s
+T 691 mode=game_loop           Galadriel the Wise(elf) F4@(17,11) HP 58/58 MP 0/0 Hu 73 $ 669 room=.
+-> e
+T 692 mode=game_loop           Galadriel the Wise(elf) F4@(18,11) HP 58/58 MP 0/0 Hu 72 $ 669 room=.
+-> n
+T 693 mode=game_loop           Galadriel the Wise(elf) F4@(18,10) HP 58/58 MP 0/0 Hu 71 $ 669 room=.
+-> e
+T 694 mode=game_loop           Galadriel the Wise(elf) F4@(19,10) HP 58/58 MP 0/0 Hu 70 $ 669 room=.
+-> s
+T 695 mode=game_loop           Galadriel the Wise(elf) F4@(19,11) HP 58/58 MP 0/0 Hu 69 $ 669 room=.
+-> s
+T 696 mode=game_loop           Galadriel the Wise(elf) F4@(19,12) HP 58/58 MP 0/0 Hu 68 $ 669 room=N
+-> w
+T 697 mode=game_loop           Galadriel the Wise(elf) F4@(18,12) HP 58/58 MP 0/0 Hu 67 $ 669 room=.
+-> s
+T 698 mode=game_loop           Galadriel the Wise(elf) F4@(18,13) HP 58/58 MP 0/0 Hu 66 $ 669 room=.
+-> w
+T 699 mode=game_loop           Galadriel the Wise(elf) F4@(17,13) HP 58/58 MP 0/0 Hu 65 $ 669 room=.
+-> w
+T 700 mode=combat_mode         Galadriel the Wise(elf) F4@(16,13) HP 58/58 MP 0/0 Hu 64 $ 669 room=M vs Gray Ooze(L3 HP14/36)
+-> a
+T 701 mode=combat_mode         Galadriel the Wise(elf) F4@(16,13) HP 57/58 MP 0/0 Hu 64 $ 669 room=M vs Gray Ooze(L3 HP14/36)
+-> a
+T 702 mode=combat_victory      Galadriel the Wise(elf) F4@(16,13) HP 57/68 MP 0/0 Hu 64 $ 777 room=.
+-> back
+T 703 mode=game_loop           Galadriel the Wise(elf) F4@(16,13) HP 57/68 MP 0/0 Hu 64 $ 777 room=.
+-> w
+T 704 mode=game_loop           Galadriel the Wise(elf) F4@(15,13) HP 57/68 MP 0/0 Hu 63 $ 777 room=.
+-> w
+T 705 mode=game_loop           Galadriel the Wise(elf) F4@(14,13) HP 57/68 MP 0/0 Hu 62 $ 777 room=.
+-> n
+T 706 mode=game_loop           Galadriel the Wise(elf) F4@(14,12) HP 57/68 MP 0/0 Hu 61 $ 777 room=.
+-> n
+T 707 mode=game_loop           Galadriel the Wise(elf) F4@(14,11) HP 58/68 MP 0/0 Hu 60 $ 777 room=.
+-> n
+T 708 mode=game_loop           Galadriel the Wise(elf) F4@(14,10) HP 58/68 MP 0/0 Hu 59 $ 777 room=.
+-> w
+T 709 mode=game_loop           Galadriel the Wise(elf) F4@(13,10) HP 58/68 MP 0/0 Hu 58 $ 777 room=.
+-> w
+T 710 mode=game_loop           Galadriel the Wise(elf) F4@(12,10) HP 58/68 MP 0/0 Hu 57 $ 777 room=.
+-> n
+T 711 mode=game_loop           Galadriel the Wise(elf) F4@(12, 9) HP 58/68 MP 0/0 Hu 56 $ 777 room=.
+-> n
+T 712 mode=game_loop           Galadriel the Wise(elf) F4@(12, 8) HP 58/68 MP 0/0 Hu 55 $ 777 room=.
+-> n
+T 713 mode=game_loop           Galadriel the Wise(elf) F4@(12, 7) HP 58/68 MP 0/0 Hu 54 $ 777 room=.
+-> n
+T 714 mode=game_loop           Galadriel the Wise(elf) F4@(12, 6) HP 58/68 MP 0/0 Hu 53 $ 777 room=.
+-> n
+T 715 mode=game_loop           Galadriel the Wise(elf) F4@(12, 5) HP 58/68 MP 0/0 Hu 52 $ 777 room=.
+-> n
+T 716 mode=game_loop           Galadriel the Wise(elf) F4@(12, 4) HP 58/68 MP 0/0 Hu 51 $ 777 room=.
+-> w
+T 717 mode=game_loop           Galadriel the Wise(elf) F4@(11, 4) HP 58/68 MP 0/0 Hu 50 $ 777 room=.
+-> n
+T 718 mode=game_loop           Galadriel the Wise(elf) F4@(11, 3) HP 58/68 MP 0/0 Hu 49 $ 777 room=.
+-> i
+T 719 mode=inventory           Galadriel the Wise(elf) F4@(11, 3) HP 58/68 MP 0/0 Hu 49 $ 777 room=.
+-> u12
+T 720 mode=inventory           Galadriel the Wise(elf) F4@(11, 3) HP 68/68 MP 0/0 Hu 49 $ 777 room=.
+-> x
+T 721 mode=game_loop           Galadriel the Wise(elf) F4@(11, 3) HP 68/68 MP 0/0 Hu 49 $ 777 room=.
+-> i
+T 722 mode=inventory           Galadriel the Wise(elf) F4@(11, 3) HP 68/68 MP 0/0 Hu 49 $ 777 room=.
+-> eat3
+T 723 mode=inventory           Galadriel the Wise(elf) F4@(11, 3) HP 68/68 MP 0/0 Hu 56 $ 777 room=.
+-> eat1
+T 724 mode=inventory           Galadriel the Wise(elf) F4@(11, 3) HP 68/68 MP 0/0 Hu 91 $ 777 room=.
+-> x
+T 725 mode=game_loop           Galadriel the Wise(elf) F4@(11, 3) HP 68/68 MP 0/0 Hu 91 $ 777 room=.
+-> w
+T 726 mode=game_loop           Galadriel the Wise(elf) F4@(10, 3) HP 68/68 MP 0/0 Hu 90 $ 777 room=.
+-> n
+T 727 mode=game_loop           Galadriel the Wise(elf) F4@(10, 2) HP 68/68 MP 0/0 Hu 89 $ 777 room=.
+-> n
+T 728 mode=game_loop           Galadriel the Wise(elf) F4@(10, 1) HP 68/68 MP 0/0 Hu 88 $ 777 room=.
+-> w
+T 729 mode=game_loop           Galadriel the Wise(elf) F4@( 9, 1) HP 68/68 MP 0/0 Hu 87 $ 777 room=.
+-> w
+T 730 mode=dungeon_mode        Galadriel the Wise(elf) F4@( 8, 1) HP 68/68 MP 0/0 Hu 86 $ 777 room=N
+-> u
+T 731 mode=dungeon_unlocked_mode Galadriel the Wise(elf) F4@( 8, 1) HP 68/68 MP 0/0 Hu 86 $ 777 room=N
+-> r
+T 732 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 1) HP 68/68 MP 0/0 Hu 86 $ 777 room=N
+-> s
+T 733 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 2) HP 68/68 MP 0/0 Hu 85 $ 777 room=.
+-> s
+T 734 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 3) HP 68/68 MP 0/0 Hu 84 $ 777 room=.
+-> s
+T 735 mode=game_loop           Galadriel the Wise(elf) F4@( 8, 4) HP 68/68 MP 0/0 Hu 83 $ 777 room=.
+-> w
+T 736 mode=game_loop           Galadriel the Wise(elf) F4@( 7, 4) HP 68/68 MP 0/0 Hu 82 $ 777 room=O
+-> w
+T 737 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 4) HP 68/68 MP 0/0 Hu 81 $ 777 room=.
+-> s
+T 738 mode=combat_mode         Galadriel the Wise(elf) F4@( 6, 5) HP 68/68 MP 0/0 Hu 80 $ 777 room=M vs Slime Mold(L3 HP16/16)
+-> a
+T 739 mode=combat_victory      Galadriel the Wise(elf) F4@( 6, 5) HP 68/68 MP 0/0 Hu 80 $ 805 room=.
+-> back
+T 740 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 5) HP 68/68 MP 0/0 Hu 80 $ 805 room=.
+-> s
+T 741 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 6) HP 68/68 MP 0/0 Hu 79 $ 805 room=.
+-> s
+T 742 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 7) HP 68/68 MP 0/0 Hu 78 $ 805 room=.
+-> s
+T 743 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 8) HP 68/68 MP 0/0 Hu 77 $ 805 room=.
+-> s
+T 744 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 9) HP 68/68 MP 0/0 Hu 76 $ 805 room=.
+-> w
+T 745 mode=combat_mode         Galadriel the Wise(elf) F4@( 5, 9) HP 68/68 MP 0/0 Hu 75 $ 805 room=M vs Gargoyle(L3 HP60/60)
+-> a
+T 746 mode=combat_mode         Galadriel the Wise(elf) F4@( 5, 9) HP 55/68 MP 0/0 Hu 75 $ 805 room=M vs Gargoyle(L3 HP60/60)
+-> a
+T 747 mode=combat_mode         Galadriel the Wise(elf) F4@( 5, 9) HP 55/68 MP 0/0 Hu 75 $ 805 room=M vs Gargoyle(L3 HP45/60)
+-> a
+T 748 mode=combat_mode         Galadriel the Wise(elf) F4@( 5, 9) HP 42/68 MP 0/0 Hu 75 $ 805 room=M vs Gargoyle(L3 HP45/60)
+-> a
+T 749 mode=combat_mode         Galadriel the Wise(elf) F4@( 5, 9) HP 29/68 MP 0/0 Hu 75 $ 805 room=M vs Gargoyle(L3 HP30/60)
+-> i
+T 750 mode=inventory           Galadriel the Wise(elf) F4@( 5, 9) HP 29/68 MP 0/0 Hu 75 $ 805 room=M
+-> u4
+T 751 mode=inventory           Galadriel the Wise(elf) F4@( 5, 9) HP 59/68 MP 0/0 Hu 75 $ 805 room=M
+-> x
+T 752 mode=combat_mode         Galadriel the Wise(elf) F4@( 5, 9) HP 59/68 MP 0/0 Hu 75 $ 805 room=M vs Gargoyle(L3 HP30/60)
+-> a
+T 753 mode=combat_mode         Galadriel the Wise(elf) F4@( 5, 9) HP 46/68 MP 0/0 Hu 75 $ 805 room=M vs Gargoyle(L3 HP15/60)
+-> a
+T 754 mode=combat_victory      Galadriel the Wise(elf) F4@( 5, 9) HP 46/68 MP 0/0 Hu 75 $ 845 room=.
+-> back
+T 755 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 9) HP 46/68 MP 0/0 Hu 75 $ 845 room=.
+-> w
+T 756 mode=stairs_down_mode    Galadriel the Wise(elf) F4@( 4, 9) HP 46/68 MP 0/0 Hu 74 $ 845 room=D
+-> d
+T 757 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 46/68 MP 0/0 Hu 74 $ 845 room=U
+-> w
+T 758 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 46/68 MP 0/0 Hu 74 $ 845 room=U
+-> n
+T 759 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 46/68 MP 0/0 Hu 74 $ 845 room=U
+-> n
+T 760 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 46/68 MP 0/0 Hu 74 $ 845 room=U
+-> n
+T 761 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 46/68 MP 0/0 Hu 74 $ 845 room=U
+-> w
+T 762 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 46/68 MP 0/0 Hu 74 $ 845 room=U
+-> w
+T 763 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 46/68 MP 0/0 Hu 74 $ 845 room=U
+-> w
+T 764 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 46/68 MP 0/0 Hu 74 $ 845 room=U
+-> w
+T 765 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 46/68 MP 0/0 Hu 74 $ 845 room=U
+-> s
+T 766 mode=combat_mode         Galadriel the Wise(elf) F5@( 1, 2) HP 46/68 MP 0/0 Hu 73 $ 845 room=M vs Gray Ooze(L4 HP37/37)
+-> a
+T 767 mode=combat_mode         Galadriel the Wise(elf) F5@( 1, 2) HP 45/68 MP 0/0 Hu 73 $ 845 room=M vs Gray Ooze(L4 HP37/37)
+-> a
+T 768 mode=combat_mode         Galadriel the Wise(elf) F5@( 1, 2) HP 44/68 MP 0/0 Hu 73 $ 845 room=M vs Gray Ooze(L4 HP37/37)
+-> a
+T 769 mode=combat_mode         Galadriel the Wise(elf) F5@( 1, 2) HP 43/68 MP 0/0 Hu 73 $ 845 room=M vs Gray Ooze(L4 HP37/37)
+-> a
+T 770 mode=combat_mode         Galadriel the Wise(elf) F5@( 1, 2) HP 43/68 MP 0/0 Hu 73 $ 845 room=M vs Gray Ooze(L4 HP37/37)
+-> a
+T 771 mode=combat_mode         Galadriel the Wise(elf) F5@( 1, 2) HP 42/68 MP 0/0 Hu 73 $ 845 room=M vs Gray Ooze(L4 HP15/37)
+-> a
+T 772 mode=combat_victory      Galadriel the Wise(elf) F5@( 1, 2) HP 42/68 MP 0/0 Hu 73 $ 850 room=.
+-> back
+T 773 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 2) HP 42/68 MP 0/0 Hu 73 $ 850 room=.
+-> e
+T 774 mode=chest_mode          Galadriel the Wise(elf) F5@( 2, 2) HP 42/68 MP 0/0 Hu 72 $ 850 room=C
+-> o
+T 775 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 2) HP 42/68 MP 0/0 Hu 72 $ 850 room=.
+-> n
+T 776 mode=garden_mode         Galadriel the Wise(elf) F5@( 2, 1) HP 43/68 MP 0/0 Hu 71 $ 850 room=G
+-> h
+T 777 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 1) HP 43/68 MP 0/0 Hu 71 $ 850 room=.
+-> e
+T 778 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 1) HP 43/68 MP 0/0 Hu 70 $ 850 room=.
+-> s
+T 779 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 2) HP 43/68 MP 0/0 Hu 69 $ 850 room=.
+-> s
+T 780 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 3) HP 43/68 MP 0/0 Hu 68 $ 850 room=.
+-> e
+T 781 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 3) HP 44/68 MP 0/0 Hu 67 $ 850 room=.
+-> e
+T 782 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 3) HP 44/68 MP 0/0 Hu 66 $ 850 room=.
+-> e
+T 783 mode=combat_mode         Galadriel the Wise(elf) F5@( 6, 3) HP 44/68 MP 0/0 Hu 65 $ 850 room=M vs Gelatinous Cube(L4 HP46/46)
+-> a
+T 784 mode=combat_mode         Galadriel the Wise(elf) F5@( 6, 3) HP 43/68 MP 0/0 Hu 65 $ 850 room=M vs Gelatinous Cube(L4 HP25/46)
+-> f
+T 785 mode=combat_mode         Galadriel the Wise(elf) F5@( 6, 3) HP 38/68 MP 0/0 Hu 65 $ 850 room=M vs Gelatinous Cube(L4 HP25/46)
+-> f
+T 786 mode=combat_mode         Galadriel the Wise(elf) F5@( 6, 3) HP 33/68 MP 0/0 Hu 65 $ 850 room=M vs Gelatinous Cube(L4 HP25/46)
+-> i
+T 787 mode=inventory           Galadriel the Wise(elf) F5@( 6, 3) HP 29/68 MP 0/0 Hu 65 $ 850 room=M
+-> u4
+T 788 mode=inventory           Galadriel the Wise(elf) F5@( 6, 3) HP 59/68 MP 0/0 Hu 65 $ 850 room=M
+-> x
+T 789 mode=combat_mode         Galadriel the Wise(elf) F5@( 6, 3) HP 59/68 MP 0/0 Hu 65 $ 850 room=M vs Gelatinous Cube(L4 HP25/46)
+-> f
+T 790 mode=flee_direction_mode Galadriel the Wise(elf) F5@( 6, 3) HP 55/68 MP 0/0 Hu 65 $ 850 room=M
+-> w
+T 791 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 3) HP 55/68 MP 0/0 Hu 65 $ 850 room=.
+-> n
+T 792 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 2) HP 55/68 MP 0/0 Hu 64 $ 850 room=.
+-> e
+T 793 mode=game_loop           Galadriel the Wise(elf) F5@( 6, 2) HP 56/68 MP 0/0 Hu 63 $ 850 room=.
+-> e
+T 794 mode=warp_mode           Galadriel the Wise(elf) F5@( 7, 2) HP 56/68 MP 0/0 Hu 62 $ 850 room=W
+-> y
+T 795 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 9) HP 56/68 MP 0/0 Hu 62 $ 850 room=.
+-> n
+T 796 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 8) HP 56/68 MP 0/0 Hu 61 $ 850 room=.
+-> n
+T 797 mode=game_loop           Galadriel the Wise(elf) F3@( 4, 7) HP 56/68 MP 0/0 Hu 60 $ 850 room=.
+-> e
+T 798 mode=game_loop           Galadriel the Wise(elf) F3@( 5, 7) HP 56/68 MP 0/0 Hu 59 $ 850 room=.
+-> e
+T 799 mode=game_loop           Galadriel the Wise(elf) F3@( 6, 7) HP 56/68 MP 0/0 Hu 58 $ 850 room=.
+-> e
+T 800 mode=game_loop           Galadriel the Wise(elf) F3@( 7, 7) HP 56/68 MP 0/0 Hu 57 $ 850 room=.
+-> n
+T 801 mode=stairs_down_mode    Galadriel the Wise(elf) F3@( 7, 6) HP 56/68 MP 0/0 Hu 56 $ 850 room=D
+-> d
+T 802 mode=stairs_up_mode      Galadriel the Wise(elf) F4@( 1, 1) HP 56/68 MP 0/0 Hu 56 $ 850 room=U
+-> s
+T 803 mode=game_loop           Galadriel the Wise(elf) F4@( 1, 2) HP 56/68 MP 0/0 Hu 55 $ 850 room=.
+-> s
+T 804 mode=game_loop           Galadriel the Wise(elf) F4@( 1, 3) HP 56/68 MP 0/0 Hu 54 $ 850 room=.
+-> s
+T 805 mode=game_loop           Galadriel the Wise(elf) F4@( 1, 4) HP 56/68 MP 0/0 Hu 53 $ 850 room=.
+-> e
+T 806 mode=game_loop           Galadriel the Wise(elf) F4@( 2, 4) HP 56/68 MP 0/0 Hu 52 $ 850 room=.
+-> e
+T 807 mode=game_loop           Galadriel the Wise(elf) F4@( 3, 4) HP 56/68 MP 0/0 Hu 51 $ 850 room=.
+-> e
+T 808 mode=game_loop           Galadriel the Wise(elf) F4@( 4, 4) HP 56/68 MP 0/0 Hu 50 $ 850 room=.
+-> e
+T 809 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 4) HP 56/68 MP 0/0 Hu 49 $ 850 room=.
+-> i
+T 810 mode=inventory           Galadriel the Wise(elf) F4@( 5, 4) HP 56/68 MP 0/0 Hu 49 $ 850 room=.
+-> u14
+T 811 mode=inventory           Galadriel the Wise(elf) F4@( 5, 4) HP 68/68 MP 0/0 Hu 49 $ 850 room=.
+-> x
+T 812 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 4) HP 68/68 MP 0/0 Hu 49 $ 850 room=.
+-> i
+T 813 mode=inventory           Galadriel the Wise(elf) F4@( 5, 4) HP 68/68 MP 0/0 Hu 49 $ 850 room=.
+-> eat1
+T 814 mode=inventory           Galadriel the Wise(elf) F4@( 5, 4) HP 68/68 MP 0/0 Hu 99 $ 850 room=.
+-> x
+T 815 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 4) HP 68/68 MP 0/0 Hu 99 $ 850 room=.
+-> e
+T 816 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 4) HP 68/68 MP 0/0 Hu 98 $ 850 room=.
+-> s
+T 817 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 5) HP 68/68 MP 0/0 Hu 97 $ 850 room=.
+-> s
+T 818 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 6) HP 68/68 MP 0/0 Hu 96 $ 850 room=.
+-> s
+T 819 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 7) HP 68/68 MP 0/0 Hu 95 $ 850 room=.
+-> s
+T 820 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 8) HP 68/68 MP 0/0 Hu 94 $ 850 room=.
+-> s
+T 821 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 9) HP 68/68 MP 0/0 Hu 93 $ 850 room=.
+-> w
+T 822 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 9) HP 68/68 MP 0/0 Hu 92 $ 850 room=.
+-> w
+T 823 mode=stairs_down_mode    Galadriel the Wise(elf) F4@( 4, 9) HP 68/68 MP 0/0 Hu 91 $ 850 room=D
+-> d
+T 824 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 68/68 MP 0/0 Hu 91 $ 850 room=U
+-> s
+T 825 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 2) HP 68/68 MP 0/0 Hu 90 $ 850 room=.
+-> e
+T 826 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 2) HP 68/68 MP 0/0 Hu 89 $ 850 room=.
+-> e
+T 827 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 2) HP 68/68 MP 0/0 Hu 88 $ 850 room=.
+-> s
+T 828 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 3) HP 68/68 MP 0/0 Hu 87 $ 850 room=.
+-> e
+T 829 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 3) HP 68/68 MP 0/0 Hu 86 $ 850 room=.
+-> e
+T 830 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 3) HP 68/68 MP 0/0 Hu 85 $ 850 room=.
+-> n
+T 831 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 2) HP 68/68 MP 0/0 Hu 84 $ 850 room=.
+-> w
+T 832 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 2) HP 68/68 MP 0/0 Hu 83 $ 850 room=.
+-> n
+T 833 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 1) HP 68/68 MP 0/0 Hu 82 $ 850 room=.
+-> w
+T 834 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 1) HP 68/68 MP 0/0 Hu 81 $ 850 room=.
+-> w
+T 835 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 1) HP 68/68 MP 0/0 Hu 80 $ 850 room=.
+-> s
+T 836 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 2) HP 68/68 MP 0/0 Hu 79 $ 850 room=.
+-> w
+T 837 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 2) HP 68/68 MP 0/0 Hu 78 $ 850 room=.
+-> n
+T 838 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 68/68 MP 0/0 Hu 77 $ 850 room=U
+-> s
+T 839 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 2) HP 68/68 MP 0/0 Hu 76 $ 850 room=.
+-> s
+T 840 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 3) HP 68/68 MP 0/0 Hu 75 $ 850 room=.
+-> s
+T 841 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 4) HP 68/68 MP 0/0 Hu 74 $ 850 room=.
+-> e
+T 842 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 4) HP 68/68 MP 0/0 Hu 73 $ 850 room=.
+-> e
+T 843 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 4) HP 68/68 MP 0/0 Hu 72 $ 850 room=.
+-> n
+T 844 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 3) HP 68/68 MP 0/0 Hu 71 $ 850 room=.
+-> w
+T 845 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 3) HP 68/68 MP 0/0 Hu 70 $ 850 room=.
+-> w
+T 846 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 3) HP 68/68 MP 0/0 Hu 69 $ 850 room=.
+-> s
+T 847 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 4) HP 68/68 MP 0/0 Hu 68 $ 850 room=.
+-> e
+T 848 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 4) HP 68/68 MP 0/0 Hu 67 $ 850 room=.
+-> e
+T 849 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 4) HP 68/68 MP 0/0 Hu 66 $ 850 room=.
+-> n
+T 850 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 3) HP 68/68 MP 0/0 Hu 65 $ 850 room=.
+-> w
+T 851 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 3) HP 68/68 MP 0/0 Hu 64 $ 850 room=.
+-> w
+T 852 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 3) HP 68/68 MP 0/0 Hu 63 $ 850 room=.
+-> s
+T 853 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 4) HP 68/68 MP 0/0 Hu 62 $ 850 room=.
+-> e
+T 854 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 4) HP 68/68 MP 0/0 Hu 61 $ 850 room=.
+-> e
+T 855 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 4) HP 68/68 MP 0/0 Hu 60 $ 850 room=.
+-> n
+T 856 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 3) HP 68/68 MP 0/0 Hu 59 $ 850 room=.
+-> n
+T 857 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 2) HP 68/68 MP 0/0 Hu 58 $ 850 room=.
+-> e
+T 858 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 2) HP 68/68 MP 0/0 Hu 57 $ 850 room=.
+-> s
+T 859 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 3) HP 68/68 MP 0/0 Hu 56 $ 850 room=.
+-> e
+T 860 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 3) HP 68/68 MP 0/0 Hu 55 $ 850 room=.
+-> n
+T 861 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 2) HP 68/68 MP 0/0 Hu 54 $ 850 room=.
+-> n
+T 862 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 1) HP 68/68 MP 0/0 Hu 53 $ 850 room=.
+-> w
+T 863 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 1) HP 68/68 MP 0/0 Hu 52 $ 850 room=.
+-> w
+T 864 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 1) HP 68/68 MP 0/0 Hu 51 $ 850 room=.
+-> w
+T 865 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 1) HP 68/68 MP 0/0 Hu 50 $ 850 room=.
+-> w
+T 866 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 68/68 MP 0/0 Hu 49 $ 850 room=U
+-> s
+T 867 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 2) HP 68/68 MP 0/0 Hu 48 $ 850 room=.
+-> i
+T 868 mode=inventory           Galadriel the Wise(elf) F5@( 1, 2) HP 68/68 MP 0/0 Hu 48 $ 850 room=.
+-> eat1
+T 869 mode=inventory           Galadriel the Wise(elf) F5@( 1, 2) HP 68/68 MP 0/0 Hu 98 $ 850 room=.
+-> x
+T 870 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 2) HP 68/68 MP 0/0 Hu 98 $ 850 room=.
+-> s
+T 871 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 3) HP 68/68 MP 0/0 Hu 97 $ 850 room=.
+-> s
+T 872 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 4) HP 68/68 MP 0/0 Hu 96 $ 850 room=.
+-> e
+T 873 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 4) HP 68/68 MP 0/0 Hu 95 $ 850 room=.
+-> e
+T 874 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 4) HP 68/68 MP 0/0 Hu 94 $ 850 room=.
+-> n
+T 875 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 3) HP 68/68 MP 0/0 Hu 93 $ 850 room=.
+-> w
+T 876 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 3) HP 68/68 MP 0/0 Hu 92 $ 850 room=.
+-> n
+T 877 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 2) HP 68/68 MP 0/0 Hu 91 $ 850 room=.
+-> n
+T 878 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 1) HP 68/68 MP 0/0 Hu 90 $ 850 room=.
+-> e
+T 879 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 1) HP 68/68 MP 0/0 Hu 89 $ 850 room=.
+-> e
+T 880 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 1) HP 68/68 MP 0/0 Hu 88 $ 850 room=.
+-> e
+T 881 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 1) HP 68/68 MP 0/0 Hu 87 $ 850 room=.
+-> s
+T 882 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 2) HP 68/68 MP 0/0 Hu 86 $ 850 room=.
+-> s
+T 883 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 3) HP 68/68 MP 0/0 Hu 85 $ 850 room=.
+-> w
+T 884 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 3) HP 68/68 MP 0/0 Hu 84 $ 850 room=.
+-> s
+T 885 mode=combat_mode         Galadriel the Wise(elf) F5@( 4, 4) HP 68/68 MP 0/0 Hu 83 $ 850 room=M vs Skeleton(L4 HP28/28)
+-> a
+T 886 mode=combat_mode         Galadriel the Wise(elf) F5@( 4, 4) HP 68/68 MP 0/0 Hu 83 $ 850 room=M vs Skeleton(L4 HP28/28)
+-> a
+T 887 mode=combat_mode         Galadriel the Wise(elf) F5@( 4, 4) HP 68/68 MP 0/0 Hu 83 $ 850 room=M vs Skeleton(L4 HP28/28)
+-> a
+T 888 mode=combat_mode         Galadriel the Wise(elf) F5@( 4, 4) HP 67/68 MP 0/0 Hu 83 $ 850 room=M vs Skeleton(L4 HP28/28)
+-> a
+T 889 mode=combat_mode         Galadriel the Wise(elf) F5@( 4, 4) HP 66/68 MP 0/0 Hu 83 $ 850 room=M vs Skeleton(L4 HP8/28)
+-> a
+T 890 mode=combat_victory      Galadriel the Wise(elf) F5@( 4, 4) HP 66/78 MP 0/0 Hu 83 $ 890 room=.
+-> back
+T 891 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 4) HP 66/78 MP 0/0 Hu 83 $ 890 room=.
+-> e
+T 892 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 4) HP 66/78 MP 0/0 Hu 82 $ 890 room=.
+-> e
+T 893 mode=game_loop           Galadriel the Wise(elf) F5@( 6, 4) HP 66/78 MP 0/0 Hu 81 $ 890 room=.
+-> e
+T 894 mode=garden_mode         Galadriel the Wise(elf) F5@( 7, 4) HP 66/78 MP 0/0 Hu 80 $ 890 room=G
+-> h
+T 895 mode=game_loop           Galadriel the Wise(elf) F5@( 7, 4) HP 66/78 MP 0/0 Hu 80 $ 890 room=.
+-> e
+T 896 mode=game_loop           Galadriel the Wise(elf) F5@( 8, 4) HP 67/78 MP 0/0 Hu 79 $ 890 room=.
+-> n
+T 897 mode=warp_mode           Galadriel the Wise(elf) F5@( 8, 3) HP 67/78 MP 0/0 Hu 78 $ 890 room=W
+-> y
+T 898 mode=game_loop           Galadriel the Wise(elf) F4@( 5,14) HP 67/78 MP 0/0 Hu 78 $ 890 room=.
+-> s
+T 899 mode=game_loop           Galadriel the Wise(elf) F4@( 5,15) HP 67/78 MP 0/0 Hu 77 $ 890 room=.
+-> e
+T 900 mode=game_loop           Galadriel the Wise(elf) F4@( 6,15) HP 67/78 MP 0/0 Hu 76 $ 890 room=.
+-> e
+T 901 mode=game_loop           Galadriel the Wise(elf) F4@( 7,15) HP 68/78 MP 0/0 Hu 75 $ 890 room=.
+-> n
+T 902 mode=game_loop           Galadriel the Wise(elf) F4@( 7,14) HP 68/78 MP 0/0 Hu 74 $ 890 room=.
+-> e
+T 903 mode=game_loop           Galadriel the Wise(elf) F4@( 8,14) HP 68/78 MP 0/0 Hu 73 $ 890 room=.
+-> n
+T 904 mode=game_loop           Galadriel the Wise(elf) F4@( 8,13) HP 68/78 MP 0/0 Hu 72 $ 890 room=.
+-> w
+T 905 mode=game_loop           Galadriel the Wise(elf) F4@( 7,13) HP 69/78 MP 0/0 Hu 71 $ 890 room=.
+-> n
+T 906 mode=game_loop           Galadriel the Wise(elf) F4@( 7,12) HP 69/78 MP 0/0 Hu 70 $ 890 room=.
+-> n
+T 907 mode=game_loop           Galadriel the Wise(elf) F4@( 7,11) HP 69/78 MP 0/0 Hu 69 $ 890 room=.
+-> n
+T 908 mode=game_loop           Galadriel the Wise(elf) F4@( 7,10) HP 69/78 MP 0/0 Hu 68 $ 890 room=.
+-> n
+T 909 mode=game_loop           Galadriel the Wise(elf) F4@( 7, 9) HP 70/78 MP 0/0 Hu 67 $ 890 room=.
+-> w
+T 910 mode=game_loop           Galadriel the Wise(elf) F4@( 6, 9) HP 70/78 MP 0/0 Hu 66 $ 890 room=.
+-> w
+T 911 mode=game_loop           Galadriel the Wise(elf) F4@( 5, 9) HP 70/78 MP 0/0 Hu 65 $ 890 room=.
+-> w
+T 912 mode=stairs_down_mode    Galadriel the Wise(elf) F4@( 4, 9) HP 70/78 MP 0/0 Hu 64 $ 890 room=D
+-> d
+T 913 mode=stairs_up_mode      Galadriel the Wise(elf) F5@( 1, 1) HP 70/78 MP 0/0 Hu 64 $ 890 room=U
+-> s
+T 914 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 2) HP 71/78 MP 0/0 Hu 63 $ 890 room=.
+-> s
+T 915 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 3) HP 71/78 MP 0/0 Hu 62 $ 890 room=.
+-> s
+T 916 mode=game_loop           Galadriel the Wise(elf) F5@( 1, 4) HP 71/78 MP 0/0 Hu 61 $ 890 room=.
+-> e
+T 917 mode=game_loop           Galadriel the Wise(elf) F5@( 2, 4) HP 71/78 MP 0/0 Hu 60 $ 890 room=.
+-> e
+T 918 mode=game_loop           Galadriel the Wise(elf) F5@( 3, 4) HP 71/78 MP 0/0 Hu 59 $ 890 room=.
+-> e
+T 919 mode=game_loop           Galadriel the Wise(elf) F5@( 4, 4) HP 71/78 MP 0/0 Hu 58 $ 890 room=.
+-> e
+T 920 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 4) HP 71/78 MP 0/0 Hu 57 $ 890 room=.
+-> n
+T 921 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 3) HP 71/78 MP 0/0 Hu 56 $ 890 room=.
+-> n
+T 922 mode=game_loop           Galadriel the Wise(elf) F5@( 5, 2) HP 71/78 MP 0/0 Hu 55 $ 890 room=.
+-> e
+T 923 mode=game_loop           Galadriel the Wise(elf) F5@( 6, 2) HP 71/78 MP 0/0 Hu 54 $ 890 room=.
+-> s
+T 924 mode=combat_mode         Galadriel the Wise(elf) F5@( 6, 3) HP 71/78 MP 0/0 Hu 53 $ 890 room=M vs Gelatinous Cube(L4 HP25/46)
+-> a
+T 925 mode=combat_mode         Galadriel the Wise(elf) F5@( 6, 3) HP 70/78 MP 0/0 Hu 53 $ 890 room=M vs Gelatinous Cube(L4 HP25/46)
+-> f
+T 926 mode=combat_mode         Galadriel the Wise(elf) F5@( 6, 3) HP 65/78 MP 0/0 Hu 53 $ 890 room=M vs Gelatinous Cube(L4 HP25/46)
+-> f
+T 927 mode=flee_direction_mode Galadriel the Wise(elf) F5@( 6, 3) HP 61/78 MP 0/0 Hu 53 $ 890 room=M
+-> s
+T 928 mode=game_loop           Galadriel the Wise(elf) F5@( 6, 4) HP 57/78 MP 0/0 Hu 53 $ 890 room=.
+-> e
+T 929 mode=game_loop           Galadriel the Wise(elf) F5@( 7, 4) HP 53/78 MP 0/0 Hu 52 $ 890 room=.
+-> e
+T 930 mode=game_loop           Galadriel the Wise(elf) F5@( 8, 4) HP 49/78 MP 0/0 Hu 51 $ 890 room=.
+-> e
+T 931 mode=game_loop           Galadriel the Wise(elf) F5@( 9, 4) HP 49/78 MP 0/0 Hu 50 $ 890 room=.
+-> e
+T 932 mode=game_loop           Galadriel the Wise(elf) F5@(10, 4) HP 49/78 MP 0/0 Hu 49 $ 890 room=.
+-> i
+T 933 mode=inventory           Galadriel the Wise(elf) F5@(10, 4) HP 49/78 MP 0/0 Hu 49 $ 890 room=.
+-> eat1
+T 934 mode=inventory           Galadriel the Wise(elf) F5@(10, 4) HP 49/78 MP 0/0 Hu 99 $ 890 room=.
+-> u13
+T 935 mode=inventory           Galadriel the Wise(elf) F5@(10, 4) HP 49/78 MP 0/0 Hu 99 $ 890 room=.
+-> x
+T 936 mode=game_loop           Galadriel the Wise(elf) F5@(10, 4) HP 49/78 MP 0/0 Hu 99 $ 890 room=.
+-> n
+T 937 mode=game_loop           Galadriel the Wise(elf) F5@(10, 3) HP 49/78 MP 0/0 Hu 98 $ 890 room=.
+-> e
+T 938 mode=game_loop           Galadriel the Wise(elf) F5@(11, 3) HP 50/78 MP 0/0 Hu 97 $ 890 room=.
+-> e
+T 939 mode=game_loop           Galadriel the Wise(elf) F5@(12, 3) HP 50/78 MP 0/0 Hu 96 $ 890 room=.
+-> n
+T 940 mode=pool_mode           Galadriel the Wise(elf) F5@(12, 2) HP 51/78 MP 0/0 Hu 95 $ 890 room=P
+-> dr
+T 941 mode=game_loop           Galadriel the Wise(elf) F5@(12, 2) HP 78/78 MP 0/0 Hu 95 $ 890 room=.
+-> w
+T 942 mode=game_loop           Galadriel the Wise(elf) F5@(11, 2) HP 78/78 MP 0/0 Hu 94 $ 890 room=.
+-> n
+T 943 mode=game_loop           Galadriel the Wise(elf) F5@(11, 1) HP 78/78 MP 0/0 Hu 93 $ 890 room=.
+-> e
+T 944 mode=game_loop           Galadriel the Wise(elf) F5@(12, 1) HP 78/78 MP 0/0 Hu 92 $ 890 room=.
+-> e
+T 945 mode=game_loop           Galadriel the Wise(elf) F5@(13, 1) HP 78/78 MP 0/0 Hu 91 $ 890 room=.
+-> e
+T 946 mode=game_loop           Galadriel the Wise(elf) F5@(14, 1) HP 78/78 MP 0/0 Hu 90 $ 890 room=.
+-> e
+T 947 mode=chest_mode          Galadriel the Wise(elf) F5@(15, 1) HP 78/78 MP 0/0 Hu 89 $ 890 room=C
+-> o
+T 948 mode=game_loop           Galadriel the Wise(elf) F5@(15, 1) HP 78/78 MP 0/0 Hu 89 $ 1010 room=.
+-> s
+T 949 mode=game_loop           Galadriel the Wise(elf) F5@(15, 2) HP 78/78 MP 0/0 Hu 88 $ 1010 room=.
+-> s
+T 950 mode=game_loop           Galadriel the Wise(elf) F5@(15, 3) HP 78/78 MP 0/0 Hu 87 $ 1010 room=.
+-> e
+T 951 mode=game_loop           Galadriel the Wise(elf) F5@(16, 3) HP 78/78 MP 0/0 Hu 86 $ 1010 room=.
+-> n
+T 952 mode=warp_mode           Galadriel the Wise(elf) F5@(16, 2) HP 78/78 MP 0/0 Hu 85 $ 1010 room=W
+-> y
+T 953 mode=game_loop           Galadriel the Wise(elf) F7@(11,14) HP 78/78 MP 0/0 Hu 85 $ 1010 room=.
+-> n
+T 954 mode=combat_mode         Galadriel the Wise(elf) F7@(11,13) HP 78/78 MP 0/0 Hu 84 $ 1110 room=M vs ELITE UNDEAD LICH(L7 HP169/169)
+-> f
+T 955 mode=death_screen        Galadriel the Wise(elf) F7@(11,13) HP -14/78 MP 0/0 Hu 84 $ 1110 room=M
 
-=== run finished: turns=748 floor=2 hp=-3/38 gold=700 alive=False mode=death_screen ===
+=== run finished: turns=955 floor=7 hp=-14/78 gold=1110 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00787_elf.html

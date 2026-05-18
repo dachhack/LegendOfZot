@@ -29,1820 +29,302 @@ T   6 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 1, 2) HP 28/28
   You harvested some raw Crawling Claw meat.
 -> back
 T   7 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 448 room=.
+-> i
+T   8 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 448 room=.
+-> u9
+T   9 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 448 room=.
+-> x
+T  10 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 448 room=.
 -> l
-T   8 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 448 room=.
+T  11 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 1, 2) HP 28/28 MP 0/0 Hu 99 $ 448 room=.
 -> e
-T   9 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 448 room=.
+T  12 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 448 room=.
 -> l
-T  10 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 448 room=.
+T  13 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 98 $ 448 room=.
 -> n
-T  11 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 448 room=M vs Goblin(L0 HP30/30)
+T  14 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 448 room=M vs Goblin(L0 HP30/30)
 -> a
-T  12 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 448 room=M vs Goblin(L0 HP10/30)
+T  15 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 448 room=M vs Goblin(L0 HP10/30)
 -> a
-T  13 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 448 room=M vs Goblin(L0 HP10/30)
+T  16 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 448 room=M vs Goblin(L0 HP10/30)
 -> a
-T  14 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 449 room=.
+T  17 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 449 room=.
 -> back
-T  15 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 449 room=.
+T  18 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 449 room=.
+-> i
+T  19 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 449 room=.
+-> u10
+T  20 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 449 room=.
+-> x
+T  21 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 97 $ 449 room=.
 -> s
-T  16 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 96 $ 449 room=.
+T  22 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 2) HP 28/28 MP 0/0 Hu 96 $ 449 room=.
 -> s
-T  17 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 449 room=.
+T  23 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 449 room=.
 -> l
-T  18 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 449 room=.
+T  24 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 3) HP 28/28 MP 0/0 Hu 95 $ 449 room=.
 -> s
-T  19 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 94 $ 449 room=M vs Lichen(L0 HP10/10)
+T  25 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 2, 4) HP 28/28 MP 0/0 Hu 94 $ 449 room=M vs Lichen(L0 HP10/10)
 -> f
-T  20 mode=flee_direction_mode Galadhrim Silver-tongued(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 94 $ 449 room=M
+T  26 mode=flee_direction_mode Galadhrim Silver-tongued(elf) F1@( 2, 4) HP 27/28 MP 0/0 Hu 94 $ 449 room=M
 -> s
-T  21 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 5) HP 27/28 MP 0/0 Hu 94 $ 449 room=.
+T  27 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 5) HP 27/28 MP 0/0 Hu 94 $ 449 room=.
 -> l
-T  22 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 5) HP 27/28 MP 0/0 Hu 94 $ 449 room=.
+T  28 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 2, 5) HP 27/28 MP 0/0 Hu 94 $ 449 room=.
 -> e
-T  23 mode=chest_mode          Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 27/28 MP 0/0 Hu 93 $ 449 room=C
+T  29 mode=chest_mode          Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 27/28 MP 0/0 Hu 93 $ 449 room=C
 -> o
-T  24 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 27/28 MP 0/0 Hu 93 $ 489 room=.
+T  30 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 27/28 MP 0/0 Hu 93 $ 489 room=.
 -> l
-T  25 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 27/28 MP 0/0 Hu 93 $ 489 room=.
+T  31 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 27/28 MP 0/0 Hu 93 $ 489 room=.
 -> e
-T  26 mode=garden_mode         Galadhrim Silver-tongued(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 92 $ 489 room=G
+T  32 mode=garden_mode         Galadhrim Silver-tongued(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 92 $ 489 room=G
 -> h
-T  27 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 92 $ 489 room=.
+T  33 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 92 $ 489 room=.
 -> l
-T  28 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 92 $ 489 room=.
+T  34 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 92 $ 489 room=.
 -> s
-T  29 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs Rust Monster(L0 HP18/18)
+T  35 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 489 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  30 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 496 room=.
+T  36 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 496 room=.
 -> back
-T  31 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 496 room=.
+T  37 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 496 room=.
 -> l
-T  32 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 496 room=.
+T  38 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 496 room=.
 -> s
-T  33 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 90 $ 496 room=M vs Rust Monster(L0 HP18/18)
+T  39 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 90 $ 496 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  34 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 496 room=M vs Rust Monster(L0 HP18/18)
+T  40 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 496 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  35 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 496 room=M vs Rust Monster(L0 HP18/18)
+T  41 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 496 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T  36 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 498 room=.
+T  42 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 498 room=.
 -> back
-T  37 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 498 room=.
+T  43 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 498 room=.
+-> i
+T  44 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 498 room=.
+-> u11
+T  45 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 498 room=.
+-> x
+T  46 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 498 room=.
 -> l
-T  38 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 498 room=.
+T  47 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 90 $ 498 room=.
 -> w
-T  39 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 498 room=M vs Crawling Claw(L0 HP5/5)
+T  48 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 498 room=M vs Crawling Claw(L0 HP5/5)
 -> a
-T  40 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 498 room=M vs Crawling Claw(L0 HP5/5)
+T  49 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 498 room=M vs Crawling Claw(L0 HP5/5)
 -> a
-T  41 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 505 room=.
+T  50 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 505 room=.
 -> back
-T  42 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 505 room=.
+T  51 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 505 room=.
 -> i
-T  43 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 505 room=.
--> eat4
-T  44 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 95 $ 505 room=.
--> x
-T  45 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 95 $ 505 room=.
--> n
-T  46 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 94 $ 505 room=M vs Stirge(L0 HP6/6)
--> a
-T  47 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 94 $ 506 room=.
--> back
-T  48 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 94 $ 506 room=.
--> n
-T  49 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 93 $ 506 room=.
--> i
-T  50 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 93 $ 506 room=.
--> eat4
-T  51 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 98 $ 506 room=.
--> x
-T  52 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 98 $ 506 room=.
--> n
-T  53 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 97 $ 506 room=M vs Zombie(L0 HP35/35)
--> a
-T  54 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 97 $ 506 room=M vs Zombie(L0 HP14/35)
--> a
-T  55 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 97 $ 508 room=.
--> back
-T  56 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 97 $ 508 room=.
--> n
-T  57 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 96 $ 508 room=.
--> e
-T  58 mode=altar_mode          Galadhrim Silver-tongued(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 95 $ 508 room=A
--> pray
-T  59 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 95 $ 508 room=.
--> n
-T  60 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 94 $ 508 room=M vs Slime Mold(L0 HP15/15)
--> a
-T  61 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 94 $ 509 room=.
--> back
-T  62 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 94 $ 509 room=.
--> n
-T  63 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 93 $ 509 room=M vs Stirge(L0 HP6/6)
--> a
-T  64 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 93 $ 519 room=.
--> back
-T  65 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 93 $ 519 room=.
--> e
-T  66 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 1) HP 28/28 MP 0/0 Hu 92 $ 519 room=.
--> s
-T  67 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 91 $ 519 room=M vs Lichen(L0 HP10/10)
--> a
-T  68 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 27/28 MP 0/0 Hu 91 $ 519 room=M vs Lichen(L0 HP10/10)
--> a
-T  69 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 91 $ 626 room=.
--> back
-T  70 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 91 $ 626 room=.
--> i
-T  71 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 91 $ 626 room=.
--> u3
-T  72 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 91 $ 626 room=.
--> x
-T  73 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 91 $ 626 room=.
--> i
-T  74 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 91 $ 626 room=.
--> eat5
-T  75 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 97 $ 626 room=.
--> x
-T  76 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 97 $ 626 room=.
--> e
-T  77 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 96 $ 626 room=.
--> i
-T  78 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 96 $ 626 room=.
--> eat3
-T  79 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu100 $ 626 room=.
--> x
-T  80 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu100 $ 626 room=.
--> l
-T  81 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu100 $ 626 room=.
--> s
-T  82 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 99 $ 626 room=M vs Giant Rat(L0 HP22/22)
--> a
-T  83 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 99 $ 626 room=M vs Giant Rat(L0 HP1/22)
--> a
-T  84 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 99 $ 634 room=.
--> back
-T  85 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 99 $ 634 room=.
--> i
-T  86 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 99 $ 634 room=.
--> eat5
-T  87 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu100 $ 634 room=.
--> x
-T  88 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu100 $ 634 room=.
--> e
-T  89 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 3) HP 28/28 MP 0/0 Hu 99 $ 634 room=.
--> l
-T  90 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 3) HP 28/28 MP 0/0 Hu 99 $ 634 room=.
--> n
-T  91 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 98 $ 634 room=M vs Lichen(L0 HP10/10)
--> a
-T  92 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 98 $ 638 room=.
--> back
-T  93 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 98 $ 638 room=.
--> e
-T  94 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 27/28 MP 0/0 Hu 97 $ 638 room=M vs Zombie(L0 HP35/35)
--> a
-T  95 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 27/28 MP 0/0 Hu 97 $ 638 room=M vs Zombie(L0 HP35/35)
--> a
-T  96 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 26/28 MP 0/0 Hu 97 $ 638 room=M vs Zombie(L0 HP14/35)
--> a
-T  97 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 25/38 MP 0/0 Hu 97 $ 641 room=.
--> back
-T  98 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 25/38 MP 0/0 Hu 97 $ 641 room=.
--> l
-T  99 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 25/38 MP 0/0 Hu 97 $ 641 room=.
--> i
-T 100 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 25/38 MP 0/0 Hu 97 $ 641 room=.
--> u3
-T 101 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 38/38 MP 0/0 Hu 97 $ 641 room=.
--> x
-T 102 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 38/38 MP 0/0 Hu 97 $ 641 room=.
--> n
-T 103 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8, 1) HP 38/38 MP 0/0 Hu 96 $ 641 room=M vs Goblin(L0 HP12/12)
--> a
-T 104 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 8, 1) HP 38/38 MP 0/0 Hu 96 $ 642 room=.
--> back
-T 105 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 1) HP 38/38 MP 0/0 Hu 96 $ 642 room=.
--> w
-T 106 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 1) HP 38/38 MP 0/0 Hu 95 $ 642 room=.
--> w
-T 107 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 1) HP 38/38 MP 0/0 Hu 94 $ 642 room=.
--> i
-T 108 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 1) HP 38/38 MP 0/0 Hu 94 $ 642 room=.
--> eat6
-T 109 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 1) HP 38/38 MP 0/0 Hu100 $ 642 room=.
--> x
-T 110 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 1) HP 38/38 MP 0/0 Hu100 $ 642 room=.
--> s
-T 111 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 2) HP 38/38 MP 0/0 Hu 99 $ 642 room=.
--> s
-T 112 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 38/38 MP 0/0 Hu 98 $ 642 room=.
--> i
-T 113 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 38/38 MP 0/0 Hu 98 $ 642 room=.
--> eat5
-T 114 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 38/38 MP 0/0 Hu100 $ 642 room=.
--> x
-T 115 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 38/38 MP 0/0 Hu100 $ 642 room=.
--> e
-T 116 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 3) HP 38/38 MP 0/0 Hu 99 $ 642 room=.
--> s
-T 117 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 98 $ 642 room=M vs Lichen(L0 HP10/10)
--> a
-T 118 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 98 $ 645 room=.
--> back
-T 119 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 98 $ 645 room=.
--> i
-T 120 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 98 $ 645 room=.
--> eat3
-T 121 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu100 $ 645 room=.
--> x
-T 122 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu100 $ 645 room=.
--> s
-T 123 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 645 room=V
--> r1
-T 124 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 620 room=V
--> b15
-T 125 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 610 room=V
--> b4
-T 126 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 560 room=V
--> b4
-T 127 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 530 room=V
--> b4
-T 128 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 500 room=V
--> b4
-T 129 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 470 room=V
--> b4
-T 130 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 440 room=V
--> b7
-T 131 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 290 room=V
--> b1
-T 132 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 230 room=V
--> b1
-T 133 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 215 room=V
--> x
-T 134 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 215 room=V
--> i
-T 135 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 215 room=V
--> e1
-T 136 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 215 room=V
--> x
-T 137 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 99 $ 215 room=V
--> s
-T 138 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 98 $ 215 room=M vs Slime Mold(L0 HP15/15)
--> a
-T 139 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 98 $ 220 room=.
--> back
-T 140 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 98 $ 220 room=.
--> i
-T 141 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 98 $ 220 room=.
--> eat3
-T 142 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu100 $ 220 room=.
--> u8
-T 143 mode=upgrade_scroll_mode Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu100 $ 220 room=.
--> 1
-T 144 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu100 $ 220 room=.
--> x
-T 145 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu100 $ 220 room=.
--> w
-T 146 mode=chest_mode          Galadhrim Silver-tongued(elf) F1@( 6, 6) HP 38/38 MP 0/0 Hu 99 $ 220 room=C
--> o
-T 147 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 6) HP 38/38 MP 0/0 Hu 99 $ 220 room=.
--> s
-T 148 mode=pool_mode           Galadhrim Silver-tongued(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 98 $ 220 room=P
--> dr
-T 149 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 98 $ 220 room=.
--> s
-T 150 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 8) HP 38/38 MP 0/0 Hu 97 $ 220 room=.
--> l
-T 151 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 8) HP 38/38 MP 0/0 Hu 97 $ 220 room=.
--> s
-T 152 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 9) HP 38/38 MP 0/0 Hu 96 $ 220 room=.
--> l
-T 153 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 9) HP 38/38 MP 0/0 Hu 96 $ 220 room=.
--> s
-T 154 mode=chest_mode          Galadhrim Silver-tongued(elf) F1@( 6,10) HP 38/38 MP 0/0 Hu 95 $ 220 room=C
--> e
-T 155 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 94 $ 220 room=.
--> l
-T 156 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7,10) HP 38/38 MP 0/0 Hu 94 $ 220 room=.
--> e
-T 157 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 93 $ 220 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T 158 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 93 $ 228 room=.
--> back
-T 159 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 93 $ 228 room=.
--> l
-T 160 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 93 $ 228 room=.
--> n
-T 161 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 92 $ 228 room=.
--> i
-T 162 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 92 $ 228 room=.
--> eat3
-T 163 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 98 $ 228 room=.
--> x
-T 164 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 98 $ 228 room=.
--> n
-T 165 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 97 $ 228 room=M vs Rust Monster(L0 HP18/18)
--> a
-T 166 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 8, 8) HP 37/38 MP 0/0 Hu 97 $ 231 room=.
--> back
-T 167 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 8) HP 37/38 MP 0/0 Hu 97 $ 231 room=.
--> e
-T 168 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 37/38 MP 0/0 Hu 96 $ 231 room=M vs Zombie(L0 HP35/35)
--> a
-T 169 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 36/38 MP 0/0 Hu 96 $ 231 room=M vs Zombie(L0 HP35/35)
--> a
-T 170 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 36/38 MP 0/0 Hu 96 $ 231 room=M vs Zombie(L0 HP10/35)
--> a
-T 171 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 35/38 MP 0/0 Hu 96 $ 238 room=.
--> back
-T 172 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 35/38 MP 0/0 Hu 96 $ 238 room=.
--> n
-T 173 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 7) HP 36/38 MP 0/0 Hu 95 $ 238 room=.
--> n
-T 174 mode=library_mode        Galadhrim Silver-tongued(elf) F1@( 9, 6) HP 36/38 MP 0/0 Hu 94 $ 238 room=L
--> r
-T 175 mode=library_read_decision_mode Galadhrim Silver-tongued(elf) F1@( 9, 6) HP 36/38 MP 0/0 Hu 94 $ 238 room=L
--> y
-T 176 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 6) HP 36/38 MP 0/0 Hu 94 $ 388 room=.
--> w
-T 177 mode=altar_mode          Galadhrim Silver-tongued(elf) F1@( 8, 6) HP 37/38 MP 0/0 Hu 93 $ 388 room=A
--> pray
-T 178 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 6) HP 37/38 MP 0/0 Hu 93 $ 388 room=.
--> n
-T 179 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 5) HP 37/38 MP 0/0 Hu 92 $ 388 room=.
--> n
-T 180 mode=library_mode        Galadhrim Silver-tongued(elf) F1@( 8, 4) HP 38/38 MP 0/0 Hu 91 $ 388 room=L
--> r
-T 181 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 4) HP 38/38 MP 0/0 Hu 91 $ 388 room=.
--> l
-T 182 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 4) HP 38/38 MP 0/0 Hu 91 $ 388 room=.
--> n
-T 183 mode=stairs_down_mode    Galadhrim Silver-tongued(elf) F1@( 8, 3) HP 38/38 MP 0/0 Hu 90 $ 388 room=D
--> e
-T 184 mode=shrine_mode         Galadhrim Silver-tongued(elf) F1@( 9, 3) HP 38/38 MP 0/0 Hu 89 $ 388 room=F
--> p
-T 185 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 3) HP 38/38 MP 0/0 Hu 89 $ 388 room=.
--> i
-T 186 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 9, 3) HP 38/38 MP 0/0 Hu 89 $ 388 room=.
--> eat3
-T 187 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 9, 3) HP 38/38 MP 0/0 Hu 94 $ 388 room=.
--> x
-T 188 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 3) HP 38/38 MP 0/0 Hu 94 $ 388 room=.
--> e
-T 189 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(10, 3) HP 38/38 MP 0/0 Hu 93 $ 388 room=M vs Giant Rat(L0 HP22/22)
--> a
-T 190 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(10, 3) HP 38/38 MP 0/0 Hu 93 $ 388 room=M vs Giant Rat(L0 HP22/22)
--> a
-T 191 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(10, 3) HP 37/38 MP 0/0 Hu 93 $ 388 room=M vs Giant Rat(L0 HP22/22)
--> a
-T 192 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@(10, 3) HP 37/38 MP 0/0 Hu 93 $ 397 room=.
--> back
-T 193 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 3) HP 37/38 MP 0/0 Hu 93 $ 397 room=.
--> e
-T 194 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(11, 3) HP 37/38 MP 0/0 Hu 92 $ 397 room=M vs Skeleton(L0 HP25/25)
--> a
-T 195 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(11, 3) HP 36/38 MP 0/0 Hu 92 $ 397 room=M vs Skeleton(L0 HP25/25)
--> f
-T 196 mode=flee_direction_mode Galadhrim Silver-tongued(elf) F1@(11, 3) HP 36/38 MP 0/0 Hu 92 $ 397 room=M
--> s
-T 197 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(11, 4) HP 36/38 MP 0/0 Hu 92 $ 397 room=.
--> s
-T 198 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(11, 5) HP 37/38 MP 0/0 Hu 91 $ 397 room=.
--> l
-T 199 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(11, 5) HP 37/38 MP 0/0 Hu 91 $ 397 room=.
--> s
-T 200 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(11, 6) HP 37/38 MP 0/0 Hu 90 $ 397 room=.
--> l
-T 201 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(11, 6) HP 37/38 MP 0/0 Hu 90 $ 397 room=.
--> w
-T 202 mode=pool_mode           Galadhrim Silver-tongued(elf) F1@(10, 6) HP 38/38 MP 0/0 Hu 89 $ 397 room=P
--> dr
-T 203 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 6) HP 38/38 MP 0/0 Hu 89 $ 664 room=.
--> s
-T 204 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(10, 7) HP 38/38 MP 0/0 Hu 88 $ 664 room=M vs Kobold(L0 HP8/8)
--> a
-T 205 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@(10, 7) HP 38/38 MP 0/0 Hu 88 $ 670 room=.
--> back
-T 206 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 7) HP 38/38 MP 0/0 Hu 88 $ 670 room=.
--> s
-T 207 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 87 $ 670 room=.
--> w
-T 208 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 86 $ 670 room=.
--> n
-T 209 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 7) HP 38/38 MP 0/0 Hu 85 $ 670 room=.
--> n
-T 210 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 6) HP 38/38 MP 0/0 Hu 84 $ 670 room=.
--> l
-T 211 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 6) HP 38/38 MP 0/0 Hu 84 $ 670 room=.
--> e
-T 212 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 6) HP 38/38 MP 0/0 Hu 83 $ 670 room=.
--> i
-T 213 mode=inventory           Galadhrim Silver-tongued(elf) F1@(10, 6) HP 38/38 MP 0/0 Hu 83 $ 670 room=.
--> eat3
-T 214 mode=inventory           Galadhrim Silver-tongued(elf) F1@(10, 6) HP 38/38 MP 0/0 Hu 88 $ 670 room=.
--> x
-T 215 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 6) HP 38/38 MP 0/0 Hu 88 $ 670 room=.
--> e
-T 216 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(11, 6) HP 38/38 MP 0/0 Hu 87 $ 670 room=.
--> e
-T 217 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(12, 6) HP 38/38 MP 0/0 Hu 86 $ 670 room=.
--> l
-T 218 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(12, 6) HP 38/38 MP 0/0 Hu 86 $ 670 room=.
--> e
-T 219 mode=chest_mode          Galadhrim Silver-tongued(elf) F1@(13, 6) HP 38/38 MP 0/0 Hu 85 $ 670 room=C
--> e
-T 220 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(14, 6) HP 38/38 MP 0/0 Hu 84 $ 670 room=.
--> l
-T 221 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(14, 6) HP 38/38 MP 0/0 Hu 84 $ 670 room=.
--> n
-T 222 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(14, 5) HP 38/38 MP 0/0 Hu 83 $ 670 room=.
--> n
-T 223 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(14, 4) HP 38/38 MP 0/0 Hu 82 $ 670 room=.
--> n
-T 224 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(14, 3) HP 38/38 MP 0/0 Hu 81 $ 670 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T 225 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@(14, 3) HP 37/38 MP 0/0 Hu 81 $ 676 room=.
--> back
-T 226 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(14, 3) HP 37/38 MP 0/0 Hu 81 $ 676 room=.
--> l
-T 227 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(14, 3) HP 37/38 MP 0/0 Hu 81 $ 676 room=.
--> w
-T 228 mode=dungeon_mode        Galadhrim Silver-tongued(elf) F1@(13, 3) HP 37/38 MP 0/0 Hu 80 $ 676 room=N
--> u
-T 229 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(13, 3) HP 37/38 MP 0/0 Hu 80 $ 676 room=N
--> s
-T 230 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(13, 4) HP 37/38 MP 0/0 Hu 79 $ 676 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T 231 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@(13, 4) HP 37/38 MP 0/0 Hu 79 $ 681 room=.
--> back
-T 232 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(13, 4) HP 37/38 MP 0/0 Hu 79 $ 681 room=.
--> w
-T 233 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(12, 4) HP 37/38 MP 0/0 Hu 78 $ 681 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T 234 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@(12, 4) HP 36/38 MP 0/0 Hu 78 $ 681 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T 235 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@(12, 4) HP 36/38 MP 0/0 Hu 78 $ 685 room=.
--> back
-T 236 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(12, 4) HP 36/38 MP 0/0 Hu 78 $ 685 room=.
--> s
-T 237 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(12, 5) HP 37/38 MP 0/0 Hu 77 $ 685 room=.
--> s
-T 238 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(12, 6) HP 37/38 MP 0/0 Hu 76 $ 685 room=.
--> w
-T 239 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(11, 6) HP 37/38 MP 0/0 Hu 75 $ 685 room=.
--> w
-T 240 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 6) HP 37/38 MP 0/0 Hu 74 $ 685 room=.
--> l
-T 241 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 6) HP 37/38 MP 0/0 Hu 74 $ 685 room=.
--> s
-T 242 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 7) HP 38/38 MP 0/0 Hu 73 $ 685 room=.
--> s
-T 243 mode=game_loop           Galadhrim Silver-tongued(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 72 $ 685 room=.
--> w
-T 244 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 71 $ 685 room=.
--> i
-T 245 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 71 $ 685 room=.
--> eat4
-T 246 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 76 $ 685 room=.
--> eat1
-T 247 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu100 $ 685 room=.
--> x
-T 248 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu100 $ 685 room=.
--> s
-T 249 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9, 9) HP 38/38 MP 0/0 Hu 99 $ 685 room=.
--> s
-T 250 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 98 $ 685 room=.
--> i
-T 251 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu 98 $ 685 room=.
--> eat3
-T 252 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu100 $ 685 room=.
--> x
-T 253 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9,10) HP 38/38 MP 0/0 Hu100 $ 685 room=.
--> s
-T 254 mode=garden_mode         Galadhrim Silver-tongued(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 99 $ 685 room=G
--> h
-T 255 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 99 $ 685 room=.
--> i
-T 256 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu 99 $ 685 room=.
--> eat3
-T 257 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu100 $ 685 room=.
--> x
-T 258 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 9,11) HP 38/38 MP 0/0 Hu100 $ 685 room=.
--> w
-T 259 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8,11) HP 38/38 MP 0/0 Hu 99 $ 685 room=.
--> n
-T 260 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 98 $ 685 room=.
--> l
-T 261 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8,10) HP 38/38 MP 0/0 Hu 98 $ 685 room=.
--> n
-T 262 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 9) HP 38/38 MP 0/0 Hu 97 $ 685 room=.
--> n
-T 263 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 96 $ 685 room=.
--> n
-T 264 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 7) HP 38/38 MP 0/0 Hu 95 $ 685 room=.
--> w
-T 265 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 7) HP 38/38 MP 0/0 Hu 94 $ 685 room=.
--> w
-T 266 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 93 $ 685 room=.
--> w
-T 267 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 7) HP 38/38 MP 0/0 Hu 92 $ 685 room=.
--> w
-T 268 mode=garden_mode         Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 91 $ 685 room=G
--> h
-T 269 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 7) HP 38/38 MP 0/0 Hu 91 $ 685 room=.
--> n
-T 270 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 90 $ 685 room=.
--> l
-T 271 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 6) HP 38/38 MP 0/0 Hu 90 $ 685 room=.
--> e
-T 272 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 6) HP 38/38 MP 0/0 Hu 89 $ 685 room=.
--> e
-T 273 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 6) HP 38/38 MP 0/0 Hu 88 $ 685 room=.
--> e
-T 274 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 87 $ 685 room=.
--> n
-T 275 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 86 $ 685 room=V
--> n
-T 276 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 85 $ 685 room=.
--> n
-T 277 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 3) HP 38/38 MP 0/0 Hu 84 $ 685 room=.
--> e
-T 278 mode=stairs_down_mode    Galadhrim Silver-tongued(elf) F1@( 8, 3) HP 38/38 MP 0/0 Hu 83 $ 685 room=D
--> d
-T 279 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 685 room=U
--> w
-T 280 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 685 room=U
--> e
-T 281 mode=tomb_mode           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> p
-T 282 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> l
-T 283 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> w
-T 284 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 685 room=U
--> e
-T 285 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> w
-T 286 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 685 room=U
--> e
-T 287 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 685 room=T
--> w
-T 288 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 77 $ 685 room=U
--> e
-T 289 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 76 $ 685 room=T
--> w
-T 290 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 75 $ 685 room=U
--> e
-T 291 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 74 $ 685 room=T
--> s
-T 292 mode=combat_mode         Galadhrim Silver-tongued(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 73 $ 685 room=M vs ELITE UNDEAD ZOMBIE(L2 HP45/45)
--> f
-T 293 mode=flee_direction_mode Galadhrim Silver-tongued(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 73 $ 685 room=M
--> s
-T 294 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 3) HP 38/38 MP 0/0 Hu 73 $ 685 room=.
--> l
-T 295 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 3) HP 38/38 MP 0/0 Hu 73 $ 685 room=.
--> n
-T 296 mode=combat_mode         Galadhrim Silver-tongued(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 72 $ 685 room=M vs ELITE UNDEAD ZOMBIE(L2 HP45/45)
--> f
-T 297 mode=flee_direction_mode Galadhrim Silver-tongued(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 72 $ 685 room=M
--> n
-T 298 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 685 room=T
--> i
-T 299 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 72 $ 685 room=T
--> eat1
-T 300 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> u7
-T 301 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> u1
-T 302 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> x
-T 303 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> w
-T 304 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 99 $ 685 room=U
--> e
-T 305 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> i
-T 306 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> u7
-T 307 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> u1
-T 308 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> x
-T 309 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> w
-T 310 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 685 room=U
--> e
-T 311 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> i
-T 312 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> u7
-T 313 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> u1
-T 314 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> x
-T 315 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> w
-T 316 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 95 $ 685 room=U
--> e
-T 317 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> i
-T 318 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> u7
-T 319 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> u1
-T 320 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> x
-T 321 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> w
-T 322 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 685 room=U
--> e
-T 323 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> i
-T 324 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> u7
-T 325 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> u1
-T 326 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> x
-T 327 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> w
-T 328 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 685 room=U
--> e
-T 329 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> i
-T 330 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> u7
-T 331 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> u1
-T 332 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> x
-T 333 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> w
-T 334 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 685 room=U
--> e
-T 335 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> i
-T 336 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> u7
-T 337 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> u1
-T 338 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> x
-T 339 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> w
-T 340 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 87 $ 685 room=U
--> e
-T 341 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> i
-T 342 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> u7
-T 343 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> u1
-T 344 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> x
-T 345 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> w
-T 346 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 85 $ 685 room=U
--> e
-T 347 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> i
-T 348 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> u7
-T 349 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> u1
-T 350 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> x
-T 351 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> w
-T 352 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 685 room=U
--> e
-T 353 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> i
-T 354 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> u7
-T 355 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> u1
-T 356 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> x
-T 357 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> w
-T 358 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 685 room=U
--> e
-T 359 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> i
-T 360 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> u7
-T 361 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> u1
-T 362 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> x
-T 363 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> w
-T 364 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 685 room=U
--> e
-T 365 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 685 room=T
--> i
-T 366 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 685 room=T
--> eat1
-T 367 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> u7
-T 368 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> u1
-T 369 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> x
-T 370 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> w
-T 371 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 99 $ 685 room=U
--> e
-T 372 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> i
-T 373 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> u7
-T 374 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> u1
-T 375 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> x
-T 376 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> w
-T 377 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 685 room=U
--> e
-T 378 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> i
-T 379 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> u7
-T 380 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> u1
-T 381 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> x
-T 382 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> w
-T 383 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 95 $ 685 room=U
--> e
-T 384 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> i
-T 385 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> u7
-T 386 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> u1
-T 387 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> x
-T 388 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> w
-T 389 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 685 room=U
--> e
-T 390 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> i
-T 391 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> u7
-T 392 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> u1
-T 393 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> x
-T 394 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> w
-T 395 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 685 room=U
--> e
-T 396 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> i
-T 397 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> u7
-T 398 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> u1
-T 399 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> x
-T 400 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> w
-T 401 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 685 room=U
--> e
-T 402 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> i
-T 403 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> u7
-T 404 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> u1
-T 405 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> x
-T 406 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> w
-T 407 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 87 $ 685 room=U
--> e
-T 408 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> i
-T 409 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> u7
-T 410 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> u1
-T 411 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> x
-T 412 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> w
-T 413 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 85 $ 685 room=U
--> e
-T 414 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> i
-T 415 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> u7
-T 416 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> u1
-T 417 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> x
-T 418 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> w
-T 419 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 685 room=U
--> e
-T 420 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> i
-T 421 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> u7
-T 422 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> u1
-T 423 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> x
-T 424 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> w
-T 425 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 685 room=U
--> e
-T 426 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> i
-T 427 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> u7
-T 428 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> u1
-T 429 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> x
-T 430 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> w
-T 431 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 79 $ 685 room=U
--> e
-T 432 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 685 room=T
--> i
-T 433 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 78 $ 685 room=T
--> eat1
-T 434 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> u7
-T 435 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> u1
-T 436 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> x
-T 437 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu100 $ 685 room=T
--> w
-T 438 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 99 $ 685 room=U
--> e
-T 439 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> i
-T 440 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> u7
-T 441 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> u1
-T 442 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> x
-T 443 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 98 $ 685 room=T
--> w
-T 444 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 97 $ 685 room=U
--> e
-T 445 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> i
-T 446 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> u7
-T 447 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> u1
-T 448 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> x
-T 449 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 96 $ 685 room=T
--> w
-T 450 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 95 $ 685 room=U
--> e
-T 451 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> i
-T 452 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> u7
-T 453 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> u1
-T 454 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> x
-T 455 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 94 $ 685 room=T
--> w
-T 456 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 93 $ 685 room=U
--> e
-T 457 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> i
-T 458 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> u7
-T 459 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> u1
-T 460 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> x
-T 461 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 92 $ 685 room=T
--> w
-T 462 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 91 $ 685 room=U
--> e
-T 463 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> i
-T 464 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> u7
-T 465 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> u1
-T 466 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> x
-T 467 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 90 $ 685 room=T
--> w
-T 468 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 89 $ 685 room=U
--> e
-T 469 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> i
-T 470 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> u7
-T 471 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> u1
-T 472 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> x
-T 473 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 88 $ 685 room=T
--> w
-T 474 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 87 $ 685 room=U
--> e
-T 475 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> i
-T 476 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> u7
-T 477 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> u1
-T 478 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> x
-T 479 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 86 $ 685 room=T
--> w
-T 480 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 85 $ 685 room=U
--> e
-T 481 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> i
-T 482 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> u7
-T 483 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> u1
-T 484 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> x
-T 485 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 84 $ 685 room=T
--> w
-T 486 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 83 $ 685 room=U
--> e
-T 487 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> i
-T 488 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> u7
-T 489 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> u1
-T 490 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> x
-T 491 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 82 $ 685 room=T
--> w
-T 492 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 81 $ 685 room=U
--> e
-T 493 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> i
-T 494 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> u7
-T 495 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> u1
-T 496 mode=inventory           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> x
-T 497 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 80 $ 685 room=T
--> e
-T 498 mode=combat_mode         Galadhrim Silver-tongued(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 79 $ 685 room=M vs UNDEAD SKELETON(L1 HP31/31)
--> a
-T 499 mode=combat_mode         Galadhrim Silver-tongued(elf) F2@( 3, 1) HP 34/38 MP 0/0 Hu 79 $ 685 room=M vs UNDEAD SKELETON(L1 HP31/31)
--> a
-T 500 mode=combat_mode         Galadhrim Silver-tongued(elf) F2@( 3, 1) HP 34/38 MP 0/0 Hu 79 $ 685 room=M vs UNDEAD SKELETON(L1 HP8/31)
--> a
-T 501 mode=combat_victory      Galadhrim Silver-tongued(elf) F2@( 3, 1) HP 34/38 MP 0/0 Hu 79 $ 701 room=.
--> back
-T 502 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 3, 1) HP 34/38 MP 0/0 Hu 79 $ 701 room=.
--> l
-T 503 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 3, 1) HP 34/38 MP 0/0 Hu 79 $ 701 room=.
--> s
-T 504 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 3, 2) HP 34/38 MP 0/0 Hu 78 $ 701 room=.
--> l
-T 505 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 3, 2) HP 34/38 MP 0/0 Hu 78 $ 701 room=.
--> e
-T 506 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4, 2) HP 34/38 MP 0/0 Hu 77 $ 701 room=.
--> l
-T 507 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4, 2) HP 34/38 MP 0/0 Hu 77 $ 701 room=.
--> s
-T 508 mode=oracle_mode         Galadhrim Silver-tongued(elf) F2@( 4, 3) HP 34/38 MP 0/0 Hu 76 $ 701 room=O
--> s
-T 509 mode=pool_mode           Galadhrim Silver-tongued(elf) F2@( 4, 4) HP 35/38 MP 0/0 Hu 75 $ 701 room=P
--> dr
-T 510 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4, 4) HP 38/38 MP 0/0 Hu 75 $ 701 room=.
--> l
-T 511 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4, 4) HP 38/38 MP 0/0 Hu 75 $ 701 room=.
--> e
-T 512 mode=altar_mode          Galadhrim Silver-tongued(elf) F2@( 5, 4) HP 38/38 MP 0/0 Hu 74 $ 701 room=A
--> pray
-T 513 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 5, 4) HP 38/38 MP 0/0 Hu 74 $ 701 room=.
--> l
-T 514 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 5, 4) HP 38/38 MP 0/0 Hu 74 $ 701 room=.
--> n
-T 515 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 5, 3) HP 38/38 MP 0/0 Hu 73 $ 701 room=.
--> s
-T 516 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 5, 4) HP 38/38 MP 0/0 Hu 72 $ 701 room=.
--> e
-T 517 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 6, 4) HP 38/38 MP 0/0 Hu 71 $ 701 room=.
--> l
-T 518 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 6, 4) HP 38/38 MP 0/0 Hu 71 $ 701 room=.
--> s
-T 519 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 6, 5) HP 38/38 MP 0/0 Hu 70 $ 701 room=.
--> l
-T 520 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 6, 5) HP 38/38 MP 0/0 Hu 70 $ 701 room=.
--> l
-T 521 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 6, 5) HP 38/38 MP 0/0 Hu 70 $ 701 room=.
--> s
-T 522 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 6, 6) HP 38/38 MP 0/0 Hu 69 $ 701 room=.
--> l
-T 523 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 6, 6) HP 38/38 MP 0/0 Hu 69 $ 701 room=.
--> e
-T 524 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 7, 6) HP 38/38 MP 0/0 Hu 68 $ 701 room=.
--> l
-T 525 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 7, 6) HP 38/38 MP 0/0 Hu 68 $ 701 room=.
--> e
-T 526 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 8, 6) HP 38/38 MP 0/0 Hu 67 $ 701 room=.
--> l
-T 527 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 8, 6) HP 38/38 MP 0/0 Hu 67 $ 701 room=.
--> e
-T 528 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 9, 6) HP 38/38 MP 0/0 Hu 66 $ 701 room=.
--> l
-T 529 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 9, 6) HP 38/38 MP 0/0 Hu 66 $ 701 room=.
--> e
-T 530 mode=pool_mode           Galadhrim Silver-tongued(elf) F2@(10, 6) HP 38/38 MP 0/0 Hu 65 $ 701 room=P
--> dr
-T 531 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10, 6) HP 38/38 MP 0/0 Hu 65 $ 701 room=.
--> l
-T 532 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10, 6) HP 38/38 MP 0/0 Hu 65 $ 701 room=.
--> n
-T 533 mode=chest_mode          Galadhrim Silver-tongued(elf) F2@(10, 5) HP 38/38 MP 0/0 Hu 64 $ 701 room=C
--> o
-T 534 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10, 5) HP 38/38 MP 0/0 Hu 64 $ 721 room=.
--> w
-T 535 mode=combat_mode         Galadhrim Silver-tongued(elf) F2@( 9, 5) HP 38/38 MP 0/0 Hu 63 $ 721 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 536 mode=combat_mode         Galadhrim Silver-tongued(elf) F2@( 9, 5) HP 38/38 MP 0/0 Hu 63 $ 721 room=M vs Giant Spider(L1 HP18/40)
--> a
-T 537 mode=combat_mode         Galadhrim Silver-tongued(elf) F2@( 9, 5) HP 31/38 MP 0/0 Hu 63 $ 721 room=M vs Giant Spider(L1 HP18/40)
--> a
-T 538 mode=combat_victory      Galadhrim Silver-tongued(elf) F2@( 9, 5) HP 31/48 MP 0/0 Hu 63 $ 741 room=.
--> back
-T 539 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 9, 5) HP 31/48 MP 0/0 Hu 63 $ 741 room=.
--> n
-T 540 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 9, 4) HP 31/48 MP 0/0 Hu 62 $ 741 room=.
--> l
-T 541 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 9, 4) HP 31/48 MP 0/0 Hu 62 $ 741 room=.
--> e
-T 542 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10, 4) HP 31/48 MP 0/0 Hu 61 $ 741 room=.
--> n
-T 543 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10, 3) HP 31/48 MP 0/0 Hu 60 $ 741 room=.
--> l
-T 544 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10, 3) HP 31/48 MP 0/0 Hu 60 $ 741 room=.
--> e
-T 545 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(11, 3) HP 31/48 MP 0/0 Hu 59 $ 741 room=.
--> l
-T 546 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(11, 3) HP 31/48 MP 0/0 Hu 59 $ 741 room=.
--> e
-T 547 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(12, 3) HP 31/48 MP 0/0 Hu 58 $ 741 room=.
--> l
-T 548 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(12, 3) HP 31/48 MP 0/0 Hu 58 $ 741 room=.
--> s
-T 549 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(12, 4) HP 31/48 MP 0/0 Hu 57 $ 741 room=.
--> l
-T 550 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(12, 4) HP 31/48 MP 0/0 Hu 57 $ 741 room=.
--> l
-T 551 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(12, 4) HP 31/48 MP 0/0 Hu 57 $ 741 room=.
--> e
-T 552 mode=altar_mode          Galadhrim Silver-tongued(elf) F2@(13, 4) HP 31/48 MP 0/0 Hu 56 $ 741 room=A
--> pray
-T 553 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(13, 4) HP 31/48 MP 0/0 Hu 56 $ 741 room=.
--> s
-T 554 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(13, 5) HP 31/48 MP 0/0 Hu 55 $ 741 room=.
--> l
-T 555 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(13, 5) HP 31/48 MP 0/0 Hu 55 $ 741 room=.
--> s
-T 556 mode=garden_mode         Galadhrim Silver-tongued(elf) F2@(13, 6) HP 31/48 MP 0/0 Hu 54 $ 741 room=G
--> h
-T 557 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(13, 6) HP 31/48 MP 0/0 Hu 54 $ 741 room=.
--> s
-T 558 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(13, 7) HP 31/48 MP 0/0 Hu 53 $ 741 room=.
--> l
-T 559 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(13, 7) HP 31/48 MP 0/0 Hu 53 $ 741 room=.
--> s
-T 560 mode=garden_mode         Galadhrim Silver-tongued(elf) F2@(13, 8) HP 31/48 MP 0/0 Hu 52 $ 741 room=G
--> h
-T 561 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(13, 8) HP 31/48 MP 0/0 Hu 52 $ 741 room=.
--> l
-T 562 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(13, 8) HP 31/48 MP 0/0 Hu 52 $ 741 room=.
--> w
-T 563 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(12, 8) HP 31/48 MP 0/0 Hu 51 $ 741 room=.
--> w
-T 564 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(11, 8) HP 31/48 MP 0/0 Hu 50 $ 741 room=.
--> l
-T 565 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(11, 8) HP 31/48 MP 0/0 Hu 50 $ 741 room=.
--> w
-T 566 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10, 8) HP 31/48 MP 0/0 Hu 49 $ 741 room=.
--> i
-T 567 mode=inventory           Galadhrim Silver-tongued(elf) F2@(10, 8) HP 31/48 MP 0/0 Hu 49 $ 741 room=.
--> u7
-T 568 mode=inventory           Galadhrim Silver-tongued(elf) F2@(10, 8) HP 48/48 MP 0/0 Hu 49 $ 741 room=.
--> x
-T 569 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10, 8) HP 48/48 MP 0/0 Hu 49 $ 741 room=.
--> i
-T 570 mode=inventory           Galadhrim Silver-tongued(elf) F2@(10, 8) HP 48/48 MP 0/0 Hu 49 $ 741 room=.
--> eat1
-T 571 mode=inventory           Galadhrim Silver-tongued(elf) F2@(10, 8) HP 48/48 MP 0/0 Hu 99 $ 741 room=.
--> x
-T 572 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10, 8) HP 48/48 MP 0/0 Hu 99 $ 741 room=.
--> w
-T 573 mode=garden_mode         Galadhrim Silver-tongued(elf) F2@( 9, 8) HP 48/48 MP 0/0 Hu 98 $ 741 room=G
--> h
-T 574 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 9, 8) HP 48/48 MP 0/0 Hu 98 $ 741 room=.
--> s
-T 575 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 9, 9) HP 48/48 MP 0/0 Hu 97 $ 741 room=.
--> w
-T 576 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 8, 9) HP 48/48 MP 0/0 Hu 96 $ 741 room=.
--> w
-T 577 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 7, 9) HP 48/48 MP 0/0 Hu 95 $ 741 room=.
--> w
-T 578 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 6, 9) HP 48/48 MP 0/0 Hu 94 $ 741 room=.
--> w
-T 579 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 5, 9) HP 48/48 MP 0/0 Hu 93 $ 741 room=.
--> w
-T 580 mode=library_mode        Galadhrim Silver-tongued(elf) F2@( 4, 9) HP 48/48 MP 0/0 Hu 92 $ 741 room=L
--> r
-T 581 mode=library_read_decision_mode Galadhrim Silver-tongued(elf) F2@( 4, 9) HP 48/48 MP 0/0 Hu 92 $ 741 room=L
--> y
-T 582 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4, 9) HP 48/48 MP 0/0 Hu 92 $ 741 room=.
--> l
-T 583 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4, 9) HP 48/48 MP 0/0 Hu 92 $ 741 room=.
--> s
-T 584 mode=dungeon_mode        Galadhrim Silver-tongued(elf) F2@( 4,10) HP 48/48 MP 0/0 Hu 91 $ 741 room=N
--> u
-T 585 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4,10) HP 48/48 MP 0/0 Hu 91 $ 741 room=N
--> l
-T 586 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4,10) HP 48/48 MP 0/0 Hu 91 $ 741 room=N
--> s
-T 587 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4,11) HP 48/48 MP 0/0 Hu 90 $ 741 room=.
--> l
-T 588 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 4,11) HP 48/48 MP 0/0 Hu 90 $ 741 room=.
--> e
-T 589 mode=chest_mode          Galadhrim Silver-tongued(elf) F2@( 5,11) HP 48/48 MP 0/0 Hu 89 $ 741 room=C
--> o
-T 590 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 5,11) HP 48/48 MP 0/0 Hu 89 $ 741 room=.
--> l
-T 591 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 5,11) HP 48/48 MP 0/0 Hu 89 $ 741 room=.
--> e
-T 592 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 6,11) HP 48/48 MP 0/0 Hu 88 $ 741 room=.
--> e
-T 593 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 7,11) HP 48/48 MP 0/0 Hu 87 $ 741 room=.
--> e
-T 594 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 8,11) HP 48/48 MP 0/0 Hu 86 $ 741 room=.
--> e
-T 595 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 9,11) HP 48/48 MP 0/0 Hu 85 $ 741 room=.
--> s
-T 596 mode=game_loop           Galadhrim Silver-tongued(elf) F2@( 9,12) HP 48/48 MP 0/0 Hu 84 $ 741 room=.
--> e
-T 597 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(10,12) HP 48/48 MP 0/0 Hu 83 $ 741 room=.
--> e
-T 598 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(11,12) HP 48/48 MP 0/0 Hu 82 $ 741 room=.
--> l
-T 599 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(11,12) HP 48/48 MP 0/0 Hu 82 $ 741 room=.
--> s
-T 600 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(11,13) HP 48/48 MP 0/0 Hu 81 $ 741 room=.
--> l
-T 601 mode=game_loop           Galadhrim Silver-tongued(elf) F2@(11,13) HP 48/48 MP 0/0 Hu 81 $ 741 room=.
--> s
-T 602 mode=stairs_down_mode    Galadhrim Silver-tongued(elf) F2@(11,14) HP 48/48 MP 0/0 Hu 80 $ 741 room=D
--> d
-T 603 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F3@( 1, 1) HP 48/48 MP 0/0 Hu 80 $ 741 room=U
--> n
-T 604 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F3@( 1, 1) HP 48/48 MP 0/0 Hu 80 $ 741 room=U
--> w
-T 605 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F3@( 1, 1) HP 48/48 MP 0/0 Hu 80 $ 741 room=U
--> w
-T 606 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F3@( 1, 1) HP 48/48 MP 0/0 Hu 80 $ 741 room=U
--> n
-T 607 mode=stairs_up_mode      Galadhrim Silver-tongued(elf) F3@( 1, 1) HP 48/48 MP 0/0 Hu 80 $ 741 room=U
--> s
-T 608 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 1, 2) HP 48/48 MP 0/0 Hu 79 $ 741 room=.
--> l
-T 609 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 1, 2) HP 48/48 MP 0/0 Hu 79 $ 741 room=.
--> e
-T 610 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 2, 2) HP 48/48 MP 0/0 Hu 78 $ 741 room=.
--> l
-T 611 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 2, 2) HP 48/48 MP 0/0 Hu 78 $ 741 room=.
--> e
-T 612 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 3, 2) HP 48/48 MP 0/0 Hu 77 $ 741 room=.
--> l
-T 613 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 3, 2) HP 48/48 MP 0/0 Hu 77 $ 741 room=.
--> e
-T 614 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 4, 2) HP 48/48 MP 0/0 Hu 76 $ 741 room=.
--> l
-T 615 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 4, 2) HP 48/48 MP 0/0 Hu 76 $ 741 room=.
--> e
-T 616 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 5, 2) HP 48/48 MP 0/0 Hu 75 $ 741 room=.
--> l
-T 617 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 5, 2) HP 48/48 MP 0/0 Hu 75 $ 741 room=.
--> e
-T 618 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 6, 2) HP 48/48 MP 0/0 Hu 74 $ 741 room=.
--> l
-T 619 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 6, 2) HP 48/48 MP 0/0 Hu 74 $ 741 room=.
--> e
-T 620 mode=altar_mode          Galadhrim Silver-tongued(elf) F3@( 7, 2) HP 48/48 MP 0/0 Hu 73 $ 741 room=A
--> pray
-T 621 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 7, 2) HP 48/48 MP 0/0 Hu 73 $ 741 room=.
--> l
-T 622 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 7, 2) HP 48/48 MP 0/0 Hu 73 $ 741 room=.
--> e
-T 623 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 8, 2) HP 48/48 MP 0/0 Hu 72 $ 741 room=.
--> l
-T 624 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 8, 2) HP 48/48 MP 0/0 Hu 72 $ 741 room=.
--> e
-T 625 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 9, 2) HP 48/48 MP 0/0 Hu 71 $ 741 room=.
--> l
-T 626 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 9, 2) HP 48/48 MP 0/0 Hu 71 $ 741 room=.
--> e
-T 627 mode=pool_mode           Galadhrim Silver-tongued(elf) F3@(10, 2) HP 48/48 MP 0/0 Hu 70 $ 741 room=P
--> dr
-T 628 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10, 2) HP 48/48 MP 0/0 Hu 70 $ 741 room=.
--> l
-T 629 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10, 2) HP 48/48 MP 0/0 Hu 70 $ 741 room=.
--> s
-T 630 mode=chest_mode          Galadhrim Silver-tongued(elf) F3@(10, 3) HP 48/48 MP 0/0 Hu 69 $ 741 room=C
--> o
-T 631 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10, 4) HP 48/48 MP 0/0 Hu 68 $ 741 room=.
--> l
-T 632 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10, 4) HP 48/48 MP 0/0 Hu 68 $ 741 room=.
--> e
-T 633 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11, 4) HP 48/48 MP 0/0 Hu 67 $ 741 room=.
--> l
-T 634 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11, 4) HP 48/48 MP 0/0 Hu 67 $ 741 room=.
--> s
-T 635 mode=chest_mode          Galadhrim Silver-tongued(elf) F3@(11, 5) HP 48/48 MP 0/0 Hu 66 $ 741 room=C
--> o
-T 636 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11, 5) HP 48/48 MP 0/0 Hu 66 $ 831 room=.
--> n
-T 637 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11, 4) HP 48/48 MP 0/0 Hu 65 $ 831 room=.
--> n
-T 638 mode=library_mode        Galadhrim Silver-tongued(elf) F3@(11, 3) HP 48/48 MP 0/0 Hu 64 $ 831 room=L
--> r
-T 639 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11, 3) HP 48/48 MP 0/0 Hu 64 $ 831 room=.
--> l
-T 640 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11, 3) HP 48/48 MP 0/0 Hu 64 $ 831 room=.
--> e
-T 641 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(12, 3) HP 48/48 MP 0/0 Hu 63 $ 831 room=.
--> s
-T 642 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(12, 4) HP 48/48 MP 0/0 Hu 62 $ 831 room=.
--> e
-T 643 mode=library_mode        Galadhrim Silver-tongued(elf) F3@(13, 4) HP 48/48 MP 0/0 Hu 61 $ 831 room=L
--> r
-T 644 mode=library_read_decision_mode Galadhrim Silver-tongued(elf) F3@(13, 4) HP 48/48 MP 0/0 Hu 61 $ 831 room=L
--> y
-T 645 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13, 4) HP 48/48 MP 0/0 Hu 61 $ 1006 room=.
--> l
-T 646 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13, 4) HP 48/48 MP 0/0 Hu 61 $ 1006 room=.
--> e
-T 647 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14, 4) HP 40/48 MP 0/0 Hu 60 $ 1006 room=.
--> l
-T 648 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14, 4) HP 40/48 MP 0/0 Hu 60 $ 1006 room=.
--> e
-T 649 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 4) HP 32/48 MP 0/0 Hu 59 $ 1006 room=.
--> l
-T 650 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 4) HP 32/48 MP 0/0 Hu 59 $ 1006 room=.
--> e
-T 651 mode=chest_mode          Galadhrim Silver-tongued(elf) F3@(16, 4) HP 24/48 MP 0/0 Hu 58 $ 1006 room=C
--> o
-T 652 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16, 4) HP 24/48 MP 0/0 Hu 58 $ 1066 room=.
--> e
-T 653 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17, 4) HP 16/48 MP 0/0 Hu 57 $ 1066 room=.
--> l
-T 654 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17, 4) HP 16/48 MP 0/0 Hu 57 $ 1066 room=.
--> n
-T 655 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17, 3) HP 16/48 MP 0/0 Hu 56 $ 1066 room=.
--> l
-T 656 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17, 3) HP 16/48 MP 0/0 Hu 56 $ 1066 room=.
--> i
-T 657 mode=inventory           Galadhrim Silver-tongued(elf) F3@(17, 3) HP 16/48 MP 0/0 Hu 56 $ 1066 room=.
--> u8
-T 658 mode=inventory           Galadhrim Silver-tongued(elf) F3@(17, 3) HP 48/48 MP 0/0 Hu 56 $ 1066 room=.
--> x
-T 659 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17, 3) HP 48/48 MP 0/0 Hu 56 $ 1066 room=.
--> e
-T 660 mode=combat_mode         Galadhrim Silver-tongued(elf) F3@(18, 3) HP 48/48 MP 0/0 Hu 55 $ 1066 room=M vs Slime Mold(L2 HP16/16)
--> a
-T 661 mode=combat_victory      Galadhrim Silver-tongued(elf) F3@(18, 3) HP 48/48 MP 0/0 Hu 55 $ 1090 room=.
--> back
-T 662 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18, 3) HP 48/48 MP 0/0 Hu 55 $ 1090 room=.
--> s
-T 663 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18, 4) HP 48/48 MP 0/0 Hu 54 $ 1090 room=.
--> l
-T 664 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18, 4) HP 48/48 MP 0/0 Hu 54 $ 1090 room=.
--> s
-T 665 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18, 5) HP 48/48 MP 0/0 Hu 53 $ 1090 room=.
--> n
-T 666 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18, 4) HP 48/48 MP 0/0 Hu 52 $ 1090 room=.
--> w
-T 667 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17, 4) HP 48/48 MP 0/0 Hu 51 $ 1090 room=.
--> w
-T 668 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16, 4) HP 48/48 MP 0/0 Hu 50 $ 1090 room=.
--> w
-T 669 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 4) HP 48/48 MP 0/0 Hu 49 $ 1090 room=.
--> i
-T 670 mode=inventory           Galadhrim Silver-tongued(elf) F3@(15, 4) HP 48/48 MP 0/0 Hu 49 $ 1090 room=.
--> eat1
-T 671 mode=inventory           Galadhrim Silver-tongued(elf) F3@(15, 4) HP 48/48 MP 0/0 Hu 99 $ 1090 room=.
--> x
-T 672 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 4) HP 48/48 MP 0/0 Hu 99 $ 1090 room=.
--> s
-T 673 mode=pool_mode           Galadhrim Silver-tongued(elf) F3@(15, 5) HP 48/48 MP 0/0 Hu 98 $ 1090 room=P
--> dr
-T 674 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 5) HP 48/48 MP 0/0 Hu 98 $ 1090 room=.
--> s
-T 675 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 6) HP 48/48 MP 0/0 Hu 97 $ 1090 room=.
--> l
-T 676 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 6) HP 48/48 MP 0/0 Hu 97 $ 1090 room=.
--> s
-T 677 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 7) HP 48/48 MP 0/0 Hu 96 $ 1090 room=.
--> l
-T 678 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 7) HP 48/48 MP 0/0 Hu 96 $ 1090 room=.
--> s
-T 679 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 8) HP 48/48 MP 0/0 Hu 95 $ 1090 room=.
--> l
-T 680 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 8) HP 48/48 MP 0/0 Hu 95 $ 1090 room=.
--> e
-T 681 mode=chest_mode          Galadhrim Silver-tongued(elf) F3@(16, 8) HP 48/48 MP 0/0 Hu 94 $ 1090 room=C
--> o
-T 682 mode=combat_mode         Galadhrim Silver-tongued(elf) F3@(16, 9) HP 48/48 MP 0/0 Hu 93 $ 1090 room=M vs Rust Monster(L2 HP18/18)
--> a
-T 683 mode=combat_victory      Galadhrim Silver-tongued(elf) F3@(16, 9) HP 47/48 MP 0/0 Hu 93 $ 1093 room=.
--> back
-T 684 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16, 9) HP 47/48 MP 0/0 Hu 93 $ 1093 room=.
--> l
-T 685 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16, 9) HP 47/48 MP 0/0 Hu 93 $ 1093 room=.
--> w
-T 686 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15, 9) HP 47/48 MP 0/0 Hu 92 $ 1093 room=.
--> w
-T 687 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14, 9) HP 48/48 MP 0/0 Hu 91 $ 1093 room=.
--> w
-T 688 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13, 9) HP 48/48 MP 0/0 Hu 90 $ 1093 room=.
--> n
-T 689 mode=garden_mode         Galadhrim Silver-tongued(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 89 $ 1093 room=G
--> h
-T 690 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13, 8) HP 48/48 MP 0/0 Hu 89 $ 1093 room=.
--> n
-T 691 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13, 7) HP 48/48 MP 0/0 Hu 88 $ 1093 room=.
--> w
-T 692 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(12, 7) HP 48/48 MP 0/0 Hu 87 $ 1093 room=.
--> w
-T 693 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11, 7) HP 48/48 MP 0/0 Hu 86 $ 1093 room=.
--> w
-T 694 mode=altar_mode          Galadhrim Silver-tongued(elf) F3@(10, 7) HP 48/48 MP 0/0 Hu 85 $ 1093 room=A
--> pray
-T 695 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10, 7) HP 48/48 MP 0/0 Hu 85 $ 1093 room=.
--> w
-T 696 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 9, 7) HP 48/48 MP 0/0 Hu 84 $ 1093 room=.
--> l
-T 697 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 9, 7) HP 48/48 MP 0/0 Hu 84 $ 1093 room=.
--> w
-T 698 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 8, 7) HP 48/48 MP 0/0 Hu 83 $ 1093 room=.
--> w
-T 699 mode=chest_mode          Galadhrim Silver-tongued(elf) F3@( 7, 7) HP 48/48 MP 0/0 Hu 82 $ 1093 room=C
--> o
-T 700 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 7, 7) HP 48/48 MP 0/0 Hu 82 $ 1163 room=.
--> n
-T 701 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 7, 6) HP 48/48 MP 0/0 Hu 81 $ 1163 room=.
--> n
-T 702 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 7, 5) HP 48/48 MP 0/0 Hu 80 $ 1163 room=.
--> n
-T 703 mode=altar_mode          Galadhrim Silver-tongued(elf) F3@( 7, 4) HP 48/48 MP 0/0 Hu 79 $ 1163 room=A
--> pray
-T 704 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 7, 4) HP 48/48 MP 0/0 Hu 79 $ 1363 room=.
--> w
-T 705 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 6, 4) HP 48/48 MP 0/0 Hu 78 $ 1363 room=.
--> s
-T 706 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 6, 5) HP 48/48 MP 0/0 Hu 77 $ 1363 room=.
--> s
-T 707 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 6, 6) HP 48/48 MP 0/0 Hu 76 $ 1363 room=.
--> l
-T 708 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 6, 6) HP 48/48 MP 0/0 Hu 76 $ 1363 room=.
--> s
-T 709 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 6, 7) HP 48/48 MP 0/0 Hu 75 $ 1363 room=.
--> s
-T 710 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 6, 8) HP 48/48 MP 0/0 Hu 74 $ 1363 room=.
--> e
-T 711 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 7, 8) HP 48/48 MP 0/0 Hu 73 $ 1363 room=.
--> e
-T 712 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 8, 8) HP 48/48 MP 0/0 Hu 72 $ 1363 room=.
--> s
-T 713 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 71 $ 1363 room=.
--> l
-T 714 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 8, 9) HP 48/48 MP 0/0 Hu 71 $ 1363 room=.
--> e
-T 715 mode=garden_mode         Galadhrim Silver-tongued(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 70 $ 1363 room=G
--> h
-T 716 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 9, 9) HP 48/48 MP 0/0 Hu 70 $ 1363 room=.
--> e
-T 717 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 69 $ 1363 room=.
--> l
-T 718 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 69 $ 1363 room=.
--> e
-T 719 mode=dungeon_mode        Galadhrim Silver-tongued(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 68 $ 1363 room=N
--> u
-T 720 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 68 $ 1363 room=N
--> l
-T 721 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11, 9) HP 48/48 MP 0/0 Hu 68 $ 1363 room=N
--> s
-T 722 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 67 $ 1363 room=.
--> l
-T 723 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 67 $ 1363 room=.
--> w
-T 724 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 66 $ 1363 room=.
--> s
-T 725 mode=chest_mode          Galadhrim Silver-tongued(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 65 $ 1363 room=C
--> o
-T 726 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10,11) HP 48/48 MP 0/0 Hu 65 $ 1473 room=.
--> w
-T 727 mode=combat_mode         Galadhrim Silver-tongued(elf) F3@( 9,11) HP 48/48 MP 0/0 Hu 64 $ 1473 room=M vs Giant Rat(L2 HP22/22)
--> f
-T 728 mode=flee_direction_mode Galadhrim Silver-tongued(elf) F3@( 9,11) HP 47/48 MP 0/0 Hu 64 $ 1473 room=M
--> w
-T 729 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 8,11) HP 47/48 MP 0/0 Hu 64 $ 1473 room=.
--> n
-T 730 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 8,10) HP 47/48 MP 0/0 Hu 63 $ 1473 room=.
--> n
-T 731 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 8, 9) HP 47/48 MP 0/0 Hu 62 $ 1473 room=.
--> e
-T 732 mode=game_loop           Galadhrim Silver-tongued(elf) F3@( 9, 9) HP 47/48 MP 0/0 Hu 61 $ 1473 room=.
--> e
-T 733 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10, 9) HP 48/48 MP 0/0 Hu 60 $ 1473 room=.
--> s
-T 734 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(10,10) HP 48/48 MP 0/0 Hu 59 $ 1473 room=.
--> e
-T 735 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(11,10) HP 48/48 MP 0/0 Hu 58 $ 1473 room=.
--> e
-T 736 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(12,10) HP 48/48 MP 0/0 Hu 57 $ 1473 room=.
--> n
-T 737 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(12, 9) HP 48/48 MP 0/0 Hu 56 $ 1473 room=.
--> e
-T 738 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13, 9) HP 48/48 MP 0/0 Hu 55 $ 1473 room=.
--> e
-T 739 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14, 9) HP 48/48 MP 0/0 Hu 54 $ 1473 room=.
--> s
-T 740 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,10) HP 48/48 MP 0/0 Hu 53 $ 1473 room=.
--> s
-T 741 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,11) HP 48/48 MP 0/0 Hu 52 $ 1473 room=.
--> l
-T 742 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,11) HP 48/48 MP 0/0 Hu 52 $ 1473 room=.
--> s
-T 743 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,12) HP 48/48 MP 0/0 Hu 51 $ 1473 room=.
--> e
-T 744 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,12) HP 48/48 MP 0/0 Hu 50 $ 1473 room=.
--> e
-T 745 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,12) HP 48/48 MP 0/0 Hu 49 $ 1473 room=.
--> i
-T 746 mode=inventory           Galadhrim Silver-tongued(elf) F3@(16,12) HP 48/48 MP 0/0 Hu 49 $ 1473 room=.
--> eat1
-T 747 mode=inventory           Galadhrim Silver-tongued(elf) F3@(16,12) HP 48/48 MP 0/0 Hu 99 $ 1473 room=.
--> x
-T 748 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,12) HP 48/48 MP 0/0 Hu 99 $ 1473 room=.
--> l
-T 749 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,12) HP 48/48 MP 0/0 Hu 99 $ 1473 room=.
--> e
-T 750 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,12) HP 48/48 MP 0/0 Hu 98 $ 1473 room=.
--> l
-T 751 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,12) HP 48/48 MP 0/0 Hu 98 $ 1473 room=.
--> s
-T 752 mode=chest_mode          Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 97 $ 1473 room=C
--> o
-T 753 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 97 $ 1473 room=.
--> l
-T 754 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 97 $ 1473 room=.
--> w
-T 755 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,13) HP 48/48 MP 0/0 Hu 96 $ 1473 room=.
--> s
-T 756 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,14) HP 48/48 MP 0/0 Hu 95 $ 1473 room=.
--> e
-T 757 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,14) HP 48/48 MP 0/0 Hu 94 $ 1473 room=.
--> l
-T 758 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,14) HP 48/48 MP 0/0 Hu 94 $ 1473 room=.
--> e
-T 759 mode=pool_mode           Galadhrim Silver-tongued(elf) F3@(18,14) HP 48/48 MP 0/0 Hu 93 $ 1473 room=P
--> dr
-T 760 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,14) HP 31/48 MP 0/0 Hu 93 $ 1473 room=.
--> l
-T 761 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,14) HP 31/48 MP 0/0 Hu 93 $ 1473 room=.
--> s
-T 762 mode=tomb_mode           Galadhrim Silver-tongued(elf) F3@(18,15) HP 31/48 MP 0/0 Hu 92 $ 1473 room=T
--> p
-T 763 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,15) HP 45/48 MP 0/0 Hu 92 $ 1473 room=T
--> l
-T 764 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,15) HP 45/48 MP 0/0 Hu 92 $ 1473 room=T
--> n
-T 765 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,14) HP 46/48 MP 0/0 Hu 91 $ 1473 room=.
--> n
-T 766 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,13) HP 46/48 MP 0/0 Hu 90 $ 1473 room=.
--> n
-T 767 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,12) HP 47/48 MP 0/0 Hu 89 $ 1473 room=.
--> n
-T 768 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 1473 room=V
--> r7
-T 769 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 1425 room=V
--> b15
-T 770 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 1415 room=V
--> b15
-T 771 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 1410 room=V
--> b15
-T 772 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 1405 room=V
--> b15
-T 773 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 1400 room=V
--> b14
-T 774 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 1250 room=V
--> b4
-T 775 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 1150 room=V
--> b4
-T 776 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 1080 room=V
--> b10
-T 777 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 920 room=V
--> b10
-T 778 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 770 room=V
--> id17
-T 779 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 695 room=V
--> id18
-T 780 mode=vendor_shop         Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 645 room=V
--> x
-T 781 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,11) HP 47/48 MP 0/0 Hu 88 $ 645 room=V
--> n
-T 782 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,10) HP 48/48 MP 0/0 Hu 87 $ 645 room=.
--> w
-T 783 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,10) HP 48/48 MP 0/0 Hu 86 $ 645 room=.
--> w
-T 784 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,10) HP 48/48 MP 0/0 Hu 85 $ 645 room=.
--> s
-T 785 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,11) HP 48/48 MP 0/0 Hu 84 $ 645 room=.
--> s
-T 786 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,12) HP 48/48 MP 0/0 Hu 83 $ 645 room=.
--> s
-T 787 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,13) HP 48/48 MP 0/0 Hu 82 $ 645 room=.
--> s
-T 788 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,14) HP 48/48 MP 0/0 Hu 81 $ 645 room=.
--> w
-T 789 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,14) HP 48/48 MP 0/0 Hu 80 $ 645 room=.
--> w
-T 790 mode=library_mode        Galadhrim Silver-tongued(elf) F3@(14,14) HP 48/48 MP 0/0 Hu 79 $ 645 room=L
--> r
-T 791 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,14) HP 48/48 MP 0/0 Hu 79 $ 645 room=.
--> w
-T 792 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13,14) HP 48/48 MP 0/0 Hu 78 $ 645 room=.
--> s
-T 793 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13,15) HP 48/48 MP 0/0 Hu 77 $ 645 room=.
--> l
-T 794 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13,15) HP 48/48 MP 0/0 Hu 77 $ 645 room=.
--> e
-T 795 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,15) HP 48/48 MP 0/0 Hu 76 $ 645 room=.
--> l
-T 796 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,15) HP 48/48 MP 0/0 Hu 76 $ 645 room=.
--> s
-T 797 mode=dungeon_mode        Galadhrim Silver-tongued(elf) F3@(14,16) HP 48/48 MP 0/0 Hu 75 $ 645 room=N
--> u
-T 798 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,16) HP 48/48 MP 0/0 Hu 75 $ 645 room=N
--> l
-T 799 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,16) HP 48/48 MP 0/0 Hu 75 $ 645 room=N
--> e
-T 800 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,16) HP 48/48 MP 0/0 Hu 74 $ 645 room=.
--> e
-T 801 mode=combat_mode         Galadhrim Silver-tongued(elf) F3@(16,16) HP 48/48 MP 0/0 Hu 73 $ 645 room=M vs Slime Mold(L2 HP16/16)
--> a
-T 802 mode=combat_mode         Galadhrim Silver-tongued(elf) F3@(16,16) HP 48/48 MP 0/0 Hu 73 $ 645 room=M vs Slime Mold(L2 HP16/16)
--> a
-T 803 mode=combat_victory      Galadhrim Silver-tongued(elf) F3@(16,16) HP 48/48 MP 0/0 Hu 73 $ 675 room=.
--> back
-T 804 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,16) HP 48/48 MP 0/0 Hu 73 $ 675 room=.
--> e
-T 805 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,16) HP 48/48 MP 0/0 Hu 72 $ 675 room=.
--> w
-T 806 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,16) HP 48/48 MP 0/0 Hu 71 $ 675 room=.
--> n
-T 807 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,15) HP 48/48 MP 0/0 Hu 70 $ 675 room=.
--> w
-T 808 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,15) HP 48/48 MP 0/0 Hu 69 $ 675 room=.
--> s
-T 809 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,16) HP 48/48 MP 0/0 Hu 68 $ 675 room=.
--> w
-T 810 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,16) HP 48/48 MP 0/0 Hu 67 $ 675 room=N
--> l
-T 811 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,16) HP 48/48 MP 0/0 Hu 67 $ 675 room=N
--> w
-T 812 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13,16) HP 48/48 MP 0/0 Hu 66 $ 675 room=.
--> n
-T 813 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(13,15) HP 48/48 MP 0/0 Hu 65 $ 675 room=.
--> e
-T 814 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,15) HP 48/48 MP 0/0 Hu 64 $ 675 room=.
--> e
-T 815 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,15) HP 48/48 MP 0/0 Hu 63 $ 675 room=.
--> e
-T 816 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,15) HP 48/48 MP 0/0 Hu 62 $ 675 room=.
--> n
-T 817 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,14) HP 48/48 MP 0/0 Hu 61 $ 675 room=.
--> e
-T 818 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,14) HP 48/48 MP 0/0 Hu 60 $ 675 room=.
--> n
-T 819 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 59 $ 675 room=.
--> n
-T 820 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,12) HP 48/48 MP 0/0 Hu 58 $ 675 room=.
--> l
-T 821 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,12) HP 48/48 MP 0/0 Hu 58 $ 675 room=.
--> e
-T 822 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,12) HP 48/48 MP 0/0 Hu 57 $ 675 room=.
--> s
-T 823 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,13) HP 48/48 MP 0/0 Hu 56 $ 675 room=.
--> e
-T 824 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(19,13) HP 48/48 MP 0/0 Hu 55 $ 675 room=.
--> s
-T 825 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(19,14) HP 48/48 MP 0/0 Hu 54 $ 675 room=.
--> n
-T 826 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(19,13) HP 48/48 MP 0/0 Hu 53 $ 675 room=.
--> s
-T 827 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(19,14) HP 48/48 MP 0/0 Hu 52 $ 675 room=.
--> n
-T 828 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(19,13) HP 48/48 MP 0/0 Hu 51 $ 675 room=.
--> w
-T 829 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(18,13) HP 48/48 MP 0/0 Hu 50 $ 675 room=.
--> w
-T 830 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 49 $ 675 room=.
--> i
-T 831 mode=inventory           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 49 $ 675 room=.
--> eat1
-T 832 mode=inventory           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 99 $ 675 room=.
--> u16
-T 833 mode=upgrade_scroll_mode Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 99 $ 675 room=.
--> 3
-T 834 mode=inventory           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 99 $ 675 room=.
--> x
-T 835 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 99 $ 675 room=.
--> s
-T 836 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,14) HP 48/48 MP 0/0 Hu 98 $ 675 room=.
--> w
-T 837 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,14) HP 48/48 MP 0/0 Hu 97 $ 675 room=.
--> s
-T 838 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,15) HP 48/48 MP 0/0 Hu 96 $ 675 room=.
--> s
-T 839 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,16) HP 48/48 MP 0/0 Hu 95 $ 675 room=.
--> e
-T 840 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,16) HP 48/48 MP 0/0 Hu 94 $ 675 room=.
--> l
-T 841 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,16) HP 48/48 MP 0/0 Hu 94 $ 675 room=.
--> w
-T 842 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,16) HP 48/48 MP 0/0 Hu 93 $ 675 room=.
--> w
-T 843 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,16) HP 48/48 MP 0/0 Hu 92 $ 675 room=.
--> w
-T 844 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,16) HP 48/48 MP 0/0 Hu 91 $ 675 room=N
--> n
-T 845 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(14,15) HP 48/48 MP 0/0 Hu 90 $ 675 room=.
--> e
-T 846 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,15) HP 48/48 MP 0/0 Hu 89 $ 675 room=.
--> e
-T 847 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,15) HP 48/48 MP 0/0 Hu 88 $ 675 room=.
--> n
-T 848 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,14) HP 48/48 MP 0/0 Hu 87 $ 675 room=.
--> e
-T 849 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,14) HP 48/48 MP 0/0 Hu 86 $ 675 room=.
--> n
-T 850 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 85 $ 675 room=.
--> l
-T 851 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(17,13) HP 48/48 MP 0/0 Hu 85 $ 675 room=.
--> w
-T 852 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,13) HP 48/48 MP 0/0 Hu 84 $ 675 room=.
--> w
-T 853 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,13) HP 48/48 MP 0/0 Hu 83 $ 675 room=.
--> s
-T 854 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(15,14) HP 48/48 MP 0/0 Hu 82 $ 675 room=.
--> e
-T 855 mode=game_loop           Galadhrim Silver-tongued(elf) F3@(16,14) HP 48/48 MP 0/0 Hu 81 $ 675 room=.
--> i
-T 856 mode=inventory           Galadhrim Silver-tongued(elf) F3@(16,14) HP 48/48 MP 0/0 Hu 81 $ 675 room=.
--> u15
-T 857 mode=chest_mode          Galadhrim Silver-tongued(elf) F5@(15,16) HP 48/48 MP 0/0 Hu 81 $ 675 room=C
--> o
-T 858 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15,16) HP 48/48 MP 0/0 Hu 81 $ 895 room=.
--> l
-T 859 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15,16) HP 48/48 MP 0/0 Hu 81 $ 895 room=.
--> e
-T 860 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(16,16) HP 48/48 MP 0/0 Hu 80 $ 895 room=.
--> l
-T 861 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(16,16) HP 48/48 MP 0/0 Hu 80 $ 895 room=.
--> e
-T 862 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(17,16) HP 48/48 MP 0/0 Hu 79 $ 895 room=.
--> l
-T 863 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(17,16) HP 48/48 MP 0/0 Hu 79 $ 895 room=.
--> e
-T 864 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(18,16) HP 48/48 MP 0/0 Hu 78 $ 895 room=.
--> l
-T 865 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(18,16) HP 48/48 MP 0/0 Hu 78 $ 895 room=.
--> e
-T 866 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(19,16) HP 48/48 MP 0/0 Hu 77 $ 895 room=.
--> l
-T 867 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(19,16) HP 48/48 MP 0/0 Hu 77 $ 895 room=.
--> n
-T 868 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(19,15) HP 48/48 MP 0/0 Hu 76 $ 895 room=.
--> n
-T 869 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(19,14) HP 48/48 MP 0/0 Hu 75 $ 895 room=.
--> w
-T 870 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(18,14) HP 48/48 MP 0/0 Hu 74 $ 895 room=.
--> w
-T 871 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(17,14) HP 48/48 MP 0/0 Hu 73 $ 895 room=.
--> n
-T 872 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(17,13) HP 48/48 MP 0/0 Hu 72 $ 895 room=.
--> n
-T 873 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(17,12) HP 48/48 MP 0/0 Hu 71 $ 895 room=.
--> l
-T 874 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(17,12) HP 48/48 MP 0/0 Hu 71 $ 895 room=.
--> w
-T 875 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(16,12) HP 48/48 MP 0/0 Hu 70 $ 895 room=.
--> l
-T 876 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(16,12) HP 48/48 MP 0/0 Hu 70 $ 895 room=.
--> n
-T 877 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16,11) HP 48/48 MP 0/0 Hu 69 $ 895 room=M vs Gnoll(L4 HP48/48)
--> f
-T 878 mode=flee_direction_mode Galadhrim Silver-tongued(elf) F5@(16,11) HP 48/48 MP 0/0 Hu 69 $ 895 room=M
--> s
-T 879 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(16,12) HP 48/48 MP 0/0 Hu 69 $ 895 room=.
--> n
-T 880 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16,11) HP 48/48 MP 0/0 Hu 68 $ 895 room=M vs Gnoll(L4 HP48/48)
--> a
-T 881 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16,11) HP 48/48 MP 0/0 Hu 68 $ 895 room=M vs Gnoll(L4 HP25/48)
--> a
-T 882 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16,11) HP 46/48 MP 0/0 Hu 68 $ 895 room=M vs Gnoll(L4 HP2/48)
--> a
-T 883 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16,11) HP 44/48 MP 0/0 Hu 68 $ 895 room=M vs Gnoll(L4 HP2/48)
--> a
-T 884 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16,11) HP 44/48 MP 0/0 Hu 68 $ 895 room=M vs Gnoll(L4 HP2/48)
--> a
-T 885 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16,11) HP 42/48 MP 0/0 Hu 68 $ 895 room=M vs Gnoll(L4 HP2/48)
--> a
-T 886 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16,11) HP 40/48 MP 0/0 Hu 68 $ 895 room=M vs Gnoll(L4 HP2/48)
--> a
-T 887 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16,11) HP 38/48 MP 0/0 Hu 68 $ 895 room=M vs Gnoll(L4 HP2/48)
--> a
-T 888 mode=combat_victory      Galadhrim Silver-tongued(elf) F5@(16,11) HP 38/48 MP 0/0 Hu 68 $ 935 room=.
--> back
-T 889 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(16,11) HP 38/48 MP 0/0 Hu 68 $ 935 room=.
--> l
-T 890 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(16,11) HP 38/48 MP 0/0 Hu 68 $ 935 room=.
--> w
-T 891 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15,11) HP 38/48 MP 0/0 Hu 67 $ 935 room=.
--> l
-T 892 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15,11) HP 38/48 MP 0/0 Hu 67 $ 935 room=.
--> n
-T 893 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15,10) HP 38/48 MP 0/0 Hu 66 $ 935 room=.
--> n
-T 894 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15, 9) HP 38/48 MP 0/0 Hu 65 $ 935 room=.
--> l
-T 895 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15, 9) HP 38/48 MP 0/0 Hu 65 $ 935 room=.
--> e
-T 896 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(16, 9) HP 39/48 MP 0/0 Hu 64 $ 935 room=.
--> n
-T 897 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(16, 8) HP 39/48 MP 0/0 Hu 63 $ 935 room=.
--> w
-T 898 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15, 8) HP 39/48 MP 0/0 Hu 62 $ 935 room=.
--> i
-T 899 mode=inventory           Galadhrim Silver-tongued(elf) F5@(15, 8) HP 39/48 MP 0/0 Hu 62 $ 935 room=.
+T  52 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 505 room=.
 -> u12
-T 900 mode=inventory           Galadhrim Silver-tongued(elf) F5@(15, 8) HP 48/48 MP 0/0 Hu 62 $ 935 room=.
+T  53 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 505 room=.
 -> x
-T 901 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15, 8) HP 48/48 MP 0/0 Hu 62 $ 935 room=.
+T  54 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 7) HP 27/28 MP 0/0 Hu 89 $ 505 room=.
 -> n
-T 902 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(15, 7) HP 48/48 MP 0/0 Hu 61 $ 935 room=M vs Ogre(L4 HP83/83)
+T  55 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 88 $ 505 room=M vs Stirge(L0 HP6/6)
 -> a
-T 903 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(15, 7) HP 41/48 MP 0/0 Hu 61 $ 935 room=M vs Ogre(L4 HP64/83)
--> a
-T 904 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(15, 7) HP 34/48 MP 0/0 Hu 61 $ 935 room=M vs Ogre(L4 HP45/83)
--> a
-T 905 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(15, 7) HP 27/48 MP 0/0 Hu 61 $ 935 room=M vs Ogre(L4 HP26/83)
--> a
-T 906 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(15, 7) HP 20/48 MP 0/0 Hu 61 $ 935 room=M vs Ogre(L4 HP7/83)
--> i
-T 907 mode=inventory           Galadhrim Silver-tongued(elf) F5@(15, 7) HP 20/48 MP 0/0 Hu 61 $ 935 room=M
--> u4
-T 908 mode=inventory           Galadhrim Silver-tongued(elf) F5@(15, 7) HP 48/48 MP 0/0 Hu 61 $ 935 room=M
--> x
-T 909 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(15, 7) HP 48/48 MP 0/0 Hu 61 $ 935 room=M vs Ogre(L4 HP7/83)
--> a
-T 910 mode=combat_victory      Galadhrim Silver-tongued(elf) F5@(15, 7) HP 41/58 MP 0/0 Hu 61 $ 945 room=.
+T  56 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 88 $ 506 room=.
 -> back
-T 911 mode=game_loop           Galadhrim Silver-tongued(elf) F5@(15, 7) HP 41/58 MP 0/0 Hu 61 $ 945 room=.
+T  57 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 88 $ 506 room=.
+-> i
+T  58 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 88 $ 506 room=.
+-> u13
+T  59 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 88 $ 506 room=.
+-> x
+T  60 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 88 $ 506 room=.
+-> n
+T  61 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 87 $ 506 room=.
+-> n
+T  62 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 506 room=M vs Zombie(L0 HP35/35)
+-> a
+T  63 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 506 room=M vs Zombie(L0 HP14/35)
+-> a
+T  64 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 608 room=.
+-> back
+T  65 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 608 room=.
+-> n
+T  66 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 85 $ 608 room=.
 -> e
-T 912 mode=combat_mode         Galadhrim Silver-tongued(elf) F5@(16, 7) HP 41/58 MP 0/0 Hu 60 $ 945 room=M vs ELITE UNDEAD VAMPIRE(L5 HP143/143)
--> f
-T 913 mode=death_screen        Galadhrim Silver-tongued(elf) F5@(16, 7) HP 0/58 MP 0/0 Hu 60 $ 945 room=M
+T  67 mode=altar_mode          Galadhrim Silver-tongued(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 84 $ 608 room=A
+-> pray
+T  68 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 3) HP 28/28 MP 0/0 Hu 84 $ 608 room=.
+-> n
+T  69 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 83 $ 608 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T  70 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 83 $ 609 room=.
+-> back
+T  71 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 83 $ 609 room=.
+-> n
+T  72 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 82 $ 609 room=M vs Stirge(L0 HP6/6)
+-> a
+T  73 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 82 $ 619 room=.
+-> back
+T  74 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 82 $ 619 room=.
+-> i
+T  75 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 82 $ 619 room=.
+-> u14
+T  76 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 82 $ 619 room=.
+-> x
+T  77 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 82 $ 619 room=.
+-> e
+T  78 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 1) HP 28/28 MP 0/0 Hu 81 $ 619 room=.
+-> s
+T  79 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 80 $ 619 room=M vs Lichen(L0 HP10/10)
+-> a
+T  80 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 27/28 MP 0/0 Hu 80 $ 619 room=M vs Lichen(L0 HP10/10)
+-> a
+T  81 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 80 $ 726 room=.
+-> back
+T  82 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 80 $ 726 room=.
+-> i
+T  83 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 80 $ 726 room=.
+-> u3
+T  84 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 80 $ 726 room=.
+-> x
+T  85 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 80 $ 726 room=.
+-> i
+T  86 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 80 $ 726 room=.
+-> u15
+T  87 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 80 $ 726 room=.
+-> x
+T  88 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 5, 2) HP 28/28 MP 0/0 Hu 80 $ 726 room=.
+-> e
+T  89 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 79 $ 726 room=.
+-> l
+T  90 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 2) HP 28/28 MP 0/0 Hu 79 $ 726 room=.
+-> s
+T  91 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 78 $ 726 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  92 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 78 $ 726 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  93 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 78 $ 734 room=.
+-> back
+T  94 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 78 $ 734 room=.
+-> i
+T  95 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 78 $ 734 room=.
+-> u16
+T  96 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 78 $ 734 room=.
+-> eat3
+T  97 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 96 $ 734 room=.
+-> x
+T  98 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 28/28 MP 0/0 Hu 96 $ 734 room=.
+-> e
+T  99 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 3) HP 28/28 MP 0/0 Hu 95 $ 734 room=.
+-> l
+T 100 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 3) HP 28/28 MP 0/0 Hu 95 $ 734 room=.
+-> n
+T 101 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 7, 2) HP 28/28 MP 0/0 Hu 94 $ 734 room=M vs Lichen(L0 HP10/10)
+-> a
+T 102 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 94 $ 738 room=.
+-> back
+T 103 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 94 $ 738 room=.
+-> i
+T 104 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 94 $ 738 room=.
+-> u16
+T 105 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 94 $ 738 room=.
+-> x
+T 106 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 2) HP 27/28 MP 0/0 Hu 94 $ 738 room=.
+-> e
+T 107 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 27/28 MP 0/0 Hu 93 $ 738 room=M vs Zombie(L0 HP35/35)
+-> a
+T 108 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 27/28 MP 0/0 Hu 93 $ 738 room=M vs Zombie(L0 HP35/35)
+-> a
+T 109 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 26/28 MP 0/0 Hu 93 $ 738 room=M vs Zombie(L0 HP14/35)
+-> a
+T 110 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 25/38 MP 0/0 Hu 93 $ 741 room=.
+-> back
+T 111 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 25/38 MP 0/0 Hu 93 $ 741 room=.
+-> l
+T 112 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 25/38 MP 0/0 Hu 93 $ 741 room=.
+-> i
+T 113 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 25/38 MP 0/0 Hu 93 $ 741 room=.
+-> u3
+T 114 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 38/38 MP 0/0 Hu 93 $ 741 room=.
+-> x
+T 115 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 2) HP 38/38 MP 0/0 Hu 93 $ 741 room=.
+-> n
+T 116 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 8, 1) HP 38/38 MP 0/0 Hu 92 $ 741 room=M vs Goblin(L0 HP12/12)
+-> a
+T 117 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 8, 1) HP 38/38 MP 0/0 Hu 92 $ 742 room=.
+-> back
+T 118 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 8, 1) HP 38/38 MP 0/0 Hu 92 $ 742 room=.
+-> w
+T 119 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 1) HP 38/38 MP 0/0 Hu 91 $ 742 room=.
+-> w
+T 120 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 1) HP 38/38 MP 0/0 Hu 90 $ 742 room=.
+-> s
+T 121 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 2) HP 38/38 MP 0/0 Hu 89 $ 742 room=.
+-> s
+T 122 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 3) HP 38/38 MP 0/0 Hu 88 $ 742 room=.
+-> e
+T 123 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 3) HP 38/38 MP 0/0 Hu 87 $ 742 room=.
+-> s
+T 124 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 86 $ 742 room=M vs Lichen(L0 HP10/10)
+-> a
+T 125 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 86 $ 745 room=.
+-> back
+T 126 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 86 $ 745 room=.
+-> i
+T 127 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 86 $ 745 room=.
+-> u16
+T 128 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 86 $ 745 room=.
+-> x
+T 129 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 4) HP 38/38 MP 0/0 Hu 86 $ 745 room=.
+-> s
+T 130 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 745 room=V
+-> r1
+T 131 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 720 room=V
+-> b15
+T 132 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 690 room=V
+-> b15
+T 133 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 680 room=V
+-> b4
+T 134 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 630 room=V
+-> b4
+T 135 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 600 room=V
+-> b4
+T 136 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 570 room=V
+-> b4
+T 137 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 540 room=V
+-> b4
+T 138 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 510 room=V
+-> b7
+T 139 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 360 room=V
+-> b1
+T 140 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 300 room=V
+-> b1
+T 141 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 285 room=V
+-> b1
+T 142 mode=vendor_shop         Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 205 room=V
+-> x
+T 143 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 205 room=V
+-> i
+T 144 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 205 room=V
+-> e1
+T 145 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 205 room=V
+-> e4
+T 146 mode=inventory           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 205 room=V
+-> x
+T 147 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 5) HP 38/38 MP 0/0 Hu 85 $ 205 room=V
+-> s
+T 148 mode=combat_mode         Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 84 $ 205 room=M vs Slime Mold(L0 HP15/15)
+-> a
+T 149 mode=combat_victory      Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 84 $ 210 room=.
+-> back
+T 150 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 7, 6) HP 38/38 MP 0/0 Hu 84 $ 210 room=.
+-> w
+T 151 mode=chest_mode          Galadhrim Silver-tongued(elf) F1@( 6, 6) HP 38/38 MP 0/0 Hu 83 $ 210 room=C
+-> o
+T 152 mode=game_loop           Galadhrim Silver-tongued(elf) F1@( 6, 6) HP 38/38 MP 0/0 Hu 83 $ 210 room=.
+-> s
+T 153 mode=pool_mode           Galadhrim Silver-tongued(elf) F1@( 6, 7) HP 38/38 MP 0/0 Hu 82 $ 210 room=P
+-> dr
+T 154 mode=death_screen        Galadhrim Silver-tongued(elf) F1@( 6, 7) HP -55/38 MP 0/0 Hu 82 $ 210 room=P
 
-=== run finished: turns=913 floor=5 hp=0/58 gold=945 alive=False mode=death_screen ===
+=== run finished: turns=154 floor=1 hp=-55/38 gold=210 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00512_elf.html

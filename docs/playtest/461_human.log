@@ -25,618 +25,484 @@ T   4 mode=combat_victory      Imrahil the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 
   You harvested some raw Sewer Rat meat.
 -> back
 T   5 mode=game_loop           Imrahil the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 349 room=.
+-> i
+T   6 mode=inventory           Imrahil the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 349 room=.
+-> u10
+T   7 mode=inventory           Imrahil the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 349 room=.
+-> x
+T   8 mode=game_loop           Imrahil the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 349 room=.
 -> l
-T   6 mode=game_loop           Imrahil the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 349 room=.
+T   9 mode=game_loop           Imrahil the Wanderer(hum) F1@( 2, 1) HP 29/30 MP 0/0 Hu 99 $ 349 room=.
 -> e
-T   7 mode=chest_mode          Imrahil the Wanderer(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 349 room=C
+T  10 mode=chest_mode          Imrahil the Wanderer(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 349 room=C
 -> o
-T   8 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 349 room=.
+T  11 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 349 room=.
 -> l
-T   9 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 349 room=.
+T  12 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 1) HP 29/30 MP 0/0 Hu 98 $ 349 room=.
 -> s
-T  10 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 349 room=M vs Bat(L0 HP12/12)
+T  13 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 349 room=M vs Bat(L0 HP12/12)
 -> a
-T  11 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 349 room=M vs Bat(L0 HP12/12)
+T  14 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 349 room=M vs Bat(L0 HP12/12)
 -> f
-T  12 mode=flee_direction_mode Imrahil the Wanderer(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 349 room=M
+T  15 mode=flee_direction_mode Imrahil the Wanderer(hum) F1@( 3, 2) HP 30/30 MP 0/0 Hu 97 $ 349 room=M
 -> s
-T  13 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 349 room=.
+T  16 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 349 room=.
 -> s
-T  14 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 96 $ 349 room=.
+T  17 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 96 $ 349 room=.
 -> l
-T  15 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 96 $ 349 room=.
+T  18 mode=game_loop           Imrahil the Wanderer(hum) F1@( 3, 4) HP 30/30 MP 0/0 Hu 96 $ 349 room=.
 -> e
-T  16 mode=altar_mode          Imrahil the Wanderer(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 95 $ 349 room=A
+T  19 mode=altar_mode          Imrahil the Wanderer(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 95 $ 349 room=A
 -> pray
-T  17 mode=game_loop           Imrahil the Wanderer(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 95 $ 349 room=.
+T  20 mode=game_loop           Imrahil the Wanderer(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 95 $ 349 room=.
 -> l
-T  18 mode=game_loop           Imrahil the Wanderer(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 95 $ 349 room=.
+T  21 mode=game_loop           Imrahil the Wanderer(hum) F1@( 4, 4) HP 30/30 MP 0/0 Hu 95 $ 349 room=.
 -> e
-T  19 mode=garden_mode         Imrahil the Wanderer(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 94 $ 349 room=G
+T  22 mode=garden_mode         Imrahil the Wanderer(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 94 $ 349 room=G
 -> h
-T  20 mode=game_loop           Imrahil the Wanderer(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 94 $ 349 room=.
+T  23 mode=game_loop           Imrahil the Wanderer(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 94 $ 349 room=.
 -> l
-T  21 mode=game_loop           Imrahil the Wanderer(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 94 $ 349 room=.
+T  24 mode=game_loop           Imrahil the Wanderer(hum) F1@( 5, 4) HP 30/30 MP 0/0 Hu 94 $ 349 room=.
 -> e
-T  22 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 93 $ 349 room=M vs Spore Puff(L0 HP18/18)
+T  25 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 93 $ 349 room=M vs Spore Puff(L0 HP18/18)
 -> a
-T  23 mode=combat_victory      Imrahil the Wanderer(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 93 $ 450 room=.
+T  26 mode=combat_victory      Imrahil the Wanderer(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 93 $ 450 room=.
 -> back
-T  24 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 93 $ 450 room=.
+T  27 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 93 $ 450 room=.
 -> l
-T  25 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 93 $ 450 room=.
+T  28 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 4) HP 30/30 MP 0/0 Hu 93 $ 450 room=.
 -> n
-T  26 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 92 $ 450 room=M vs Zombie(L0 HP35/35)
+T  29 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 92 $ 450 room=M vs Zombie(L0 HP35/35)
 -> a
-T  27 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 92 $ 450 room=M vs Zombie(L0 HP35/35)
+T  30 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 92 $ 450 room=M vs Zombie(L0 HP35/35)
 -> a
-T  28 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 3) HP 29/30 MP 0/0 Hu 92 $ 450 room=M vs Zombie(L0 HP14/35)
+T  31 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 3) HP 29/30 MP 0/0 Hu 92 $ 450 room=M vs Zombie(L0 HP14/35)
 -> a
-T  29 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 3) HP 28/30 MP 0/0 Hu 92 $ 450 room=M vs Zombie(L0 HP14/35)
+T  32 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 6, 3) HP 28/30 MP 0/0 Hu 92 $ 450 room=M vs Zombie(L0 HP14/35)
 -> a
-T  30 mode=combat_victory      Imrahil the Wanderer(hum) F1@( 6, 3) HP 27/30 MP 0/0 Hu 92 $ 458 room=.
+T  33 mode=combat_victory      Imrahil the Wanderer(hum) F1@( 6, 3) HP 27/30 MP 0/0 Hu 92 $ 458 room=.
 -> back
-T  31 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 3) HP 27/30 MP 0/0 Hu 92 $ 458 room=.
+T  34 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 3) HP 27/30 MP 0/0 Hu 92 $ 458 room=.
 -> l
-T  32 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 3) HP 27/30 MP 0/0 Hu 92 $ 458 room=.
+T  35 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 3) HP 27/30 MP 0/0 Hu 92 $ 458 room=.
 -> e
-T  33 mode=game_loop           Imrahil the Wanderer(hum) F1@( 7, 3) HP 27/30 MP 0/0 Hu 91 $ 458 room=.
+T  36 mode=game_loop           Imrahil the Wanderer(hum) F1@( 7, 3) HP 27/30 MP 0/0 Hu 91 $ 458 room=.
 -> e
-T  34 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 8, 3) HP 28/30 MP 0/0 Hu 90 $ 458 room=M vs Kobold(L0 HP20/20)
+T  37 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 8, 3) HP 28/30 MP 0/0 Hu 90 $ 458 room=M vs Kobold(L0 HP20/20)
 -> a
-T  35 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 8, 3) HP 27/30 MP 0/0 Hu 90 $ 458 room=M vs Kobold(L0 HP20/20)
+T  38 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 8, 3) HP 27/30 MP 0/0 Hu 90 $ 458 room=M vs Kobold(L0 HP20/20)
 -> a
-T  36 mode=combat_victory      Imrahil the Wanderer(hum) F1@( 8, 3) HP 27/30 MP 0/0 Hu 90 $ 460 room=.
+T  39 mode=combat_victory      Imrahil the Wanderer(hum) F1@( 8, 3) HP 27/30 MP 0/0 Hu 90 $ 460 room=.
 -> back
-T  37 mode=game_loop           Imrahil the Wanderer(hum) F1@( 8, 3) HP 27/30 MP 0/0 Hu 90 $ 460 room=.
+T  40 mode=game_loop           Imrahil the Wanderer(hum) F1@( 8, 3) HP 27/30 MP 0/0 Hu 90 $ 460 room=.
 -> e
-T  38 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 9, 3) HP 27/30 MP 0/0 Hu 89 $ 460 room=M vs Stirge(L0 HP6/6)
+T  41 mode=combat_mode         Imrahil the Wanderer(hum) F1@( 9, 3) HP 27/30 MP 0/0 Hu 89 $ 460 room=M vs Stirge(L0 HP6/6)
 -> a
-T  39 mode=combat_victory      Imrahil the Wanderer(hum) F1@( 9, 3) HP 27/30 MP 0/0 Hu 89 $ 464 room=.
+T  42 mode=combat_victory      Imrahil the Wanderer(hum) F1@( 9, 3) HP 27/30 MP 0/0 Hu 89 $ 464 room=.
 -> back
-T  40 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 3) HP 27/30 MP 0/0 Hu 89 $ 464 room=.
--> i
-T  41 mode=inventory           Imrahil the Wanderer(hum) F1@( 9, 3) HP 27/30 MP 0/0 Hu 89 $ 464 room=.
--> u4
-T  42 mode=inventory           Imrahil the Wanderer(hum) F1@( 9, 3) HP 30/30 MP 0/0 Hu 89 $ 464 room=.
--> x
-T  43 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 3) HP 30/30 MP 0/0 Hu 89 $ 464 room=.
--> i
-T  44 mode=inventory           Imrahil the Wanderer(hum) F1@( 9, 3) HP 30/30 MP 0/0 Hu 89 $ 464 room=.
--> eat3
-T  45 mode=inventory           Imrahil the Wanderer(hum) F1@( 9, 3) HP 30/30 MP 0/0 Hu 94 $ 464 room=.
--> x
-T  46 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 3) HP 30/30 MP 0/0 Hu 94 $ 464 room=.
+T  43 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 3) HP 27/30 MP 0/0 Hu 89 $ 464 room=.
 -> l
-T  47 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 3) HP 30/30 MP 0/0 Hu 94 $ 464 room=.
+T  44 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 3) HP 27/30 MP 0/0 Hu 89 $ 464 room=.
 -> s
-T  48 mode=dungeon_mode        Imrahil the Wanderer(hum) F1@( 9, 4) HP 30/30 MP 0/0 Hu 93 $ 464 room=N
+T  45 mode=dungeon_mode        Imrahil the Wanderer(hum) F1@( 9, 4) HP 28/30 MP 0/0 Hu 88 $ 464 room=N
 -> u
-T  49 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 4) HP 30/30 MP 0/0 Hu 93 $ 464 room=N
+T  46 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 4) HP 28/30 MP 0/0 Hu 88 $ 464 room=N
 -> s
-T  50 mode=chest_mode          Imrahil the Wanderer(hum) F1@( 9, 5) HP 30/30 MP 0/0 Hu 92 $ 464 room=C
+T  47 mode=chest_mode          Imrahil the Wanderer(hum) F1@( 9, 5) HP 28/30 MP 0/0 Hu 87 $ 464 room=C
 -> o
-T  51 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 5) HP 30/30 MP 0/0 Hu 92 $ 464 room=.
+T  48 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 5) HP 28/30 MP 0/0 Hu 87 $ 464 room=.
 -> l
-T  52 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 5) HP 30/30 MP 0/0 Hu 92 $ 464 room=.
+T  49 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 5) HP 28/30 MP 0/0 Hu 87 $ 464 room=.
 -> s
-T  53 mode=chest_mode          Imrahil the Wanderer(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 91 $ 464 room=C
+T  50 mode=chest_mode          Imrahil the Wanderer(hum) F1@( 9, 6) HP 29/30 MP 0/0 Hu 86 $ 464 room=C
 -> o
-T  54 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 91 $ 464 room=.
+T  51 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 6) HP 29/30 MP 0/0 Hu 86 $ 564 room=.
 -> l
-T  55 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 91 $ 464 room=.
+T  52 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 6) HP 29/30 MP 0/0 Hu 86 $ 564 room=.
 -> e
-T  56 mode=shrine_mode         Imrahil the Wanderer(hum) F1@(10, 6) HP 30/30 MP 0/0 Hu 90 $ 464 room=F
+T  53 mode=shrine_mode         Imrahil the Wanderer(hum) F1@(10, 6) HP 29/30 MP 0/0 Hu 85 $ 564 room=F
 -> p
-T  57 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 6) HP 30/30 MP 0/0 Hu 90 $ 464 room=.
+T  54 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 6) HP 29/30 MP 0/0 Hu 85 $ 564 room=.
 -> l
-T  58 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 6) HP 30/30 MP 0/0 Hu 90 $ 464 room=.
+T  55 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 6) HP 29/30 MP 0/0 Hu 85 $ 564 room=.
 -> n
-T  59 mode=garden_mode         Imrahil the Wanderer(hum) F1@(10, 5) HP 30/30 MP 0/0 Hu 89 $ 464 room=G
+T  56 mode=garden_mode         Imrahil the Wanderer(hum) F1@(10, 5) HP 29/30 MP 0/0 Hu 84 $ 564 room=G
 -> h
-T  60 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 5) HP 30/30 MP 0/0 Hu 89 $ 464 room=.
+T  57 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 5) HP 29/30 MP 0/0 Hu 84 $ 564 room=.
 -> e
-T  61 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 564 room=V
+T  58 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 564 room=V
 -> b12
-T  62 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 554 room=V
--> b5
-T  63 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 504 room=V
--> b5
-T  64 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 454 room=V
--> b9
-T  65 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 304 room=V
+T  59 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 534 room=V
+-> b12
+T  60 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 524 room=V
+-> b6
+T  61 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 474 room=V
+-> b10
+T  62 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 324 room=V
 -> b1
-T  66 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 184 room=V
+T  63 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 204 room=V
+-> id7
+T  64 mode=vendor_shop         Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 179 room=V
 -> x
-T  67 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 184 room=V
+T  65 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 179 room=V
 -> i
-T  68 mode=inventory           Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 184 room=V
+T  66 mode=inventory           Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 179 room=V
 -> e1
-T  69 mode=inventory           Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 184 room=V
+T  67 mode=inventory           Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 179 room=V
 -> x
-T  70 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 184 room=V
+T  68 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 179 room=V
 -> l
-T  71 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 5) HP 30/30 MP 0/0 Hu 88 $ 184 room=V
+T  69 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 5) HP 29/30 MP 0/0 Hu 83 $ 179 room=V
 -> s
-T  72 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 6) HP 30/30 MP 0/0 Hu 87 $ 184 room=.
+T  70 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 6) HP 30/30 MP 0/0 Hu 82 $ 179 room=.
 -> s
-T  73 mode=chest_mode          Imrahil the Wanderer(hum) F1@(11, 7) HP 30/30 MP 0/0 Hu 86 $ 184 room=C
+T  71 mode=chest_mode          Imrahil the Wanderer(hum) F1@(11, 7) HP 30/30 MP 0/0 Hu 81 $ 179 room=C
 -> o
-T  74 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 7) HP 30/30 MP 0/0 Hu 86 $ 184 room=.
+T  72 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 7) HP 30/30 MP 0/0 Hu 81 $ 179 room=.
 -> l
-T  75 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 7) HP 30/30 MP 0/0 Hu 86 $ 184 room=.
+T  73 mode=game_loop           Imrahil the Wanderer(hum) F1@(11, 7) HP 30/30 MP 0/0 Hu 81 $ 179 room=.
 -> w
-T  76 mode=combat_mode         Imrahil the Wanderer(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 85 $ 184 room=M vs Goblin(L0 HP12/12)
+T  74 mode=combat_mode         Imrahil the Wanderer(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 80 $ 179 room=M vs Goblin(L0 HP12/12)
 -> a
-T  77 mode=combat_mode         Imrahil the Wanderer(hum) F1@(10, 7) HP 29/30 MP 0/0 Hu 85 $ 184 room=M vs Goblin(L0 HP12/12)
+T  75 mode=combat_mode         Imrahil the Wanderer(hum) F1@(10, 7) HP 29/30 MP 0/0 Hu 80 $ 179 room=M vs Goblin(L0 HP12/12)
 -> a
-T  78 mode=combat_victory      Imrahil the Wanderer(hum) F1@(10, 7) HP 29/30 MP 0/0 Hu 85 $ 185 room=.
+T  76 mode=combat_victory      Imrahil the Wanderer(hum) F1@(10, 7) HP 29/30 MP 0/0 Hu 80 $ 180 room=.
 -> back
-T  79 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 7) HP 29/30 MP 0/0 Hu 85 $ 185 room=.
+T  77 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 7) HP 29/30 MP 0/0 Hu 80 $ 180 room=.
 -> s
-T  80 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 8) HP 29/30 MP 0/0 Hu 84 $ 185 room=.
+T  78 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 8) HP 29/30 MP 0/0 Hu 79 $ 180 room=.
 -> s
-T  81 mode=garden_mode         Imrahil the Wanderer(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 83 $ 185 room=G
+T  79 mode=garden_mode         Imrahil the Wanderer(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 78 $ 180 room=G
 -> h
-T  82 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 83 $ 185 room=.
+T  80 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 9) HP 29/30 MP 0/0 Hu 78 $ 180 room=.
 -> n
-T  83 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 8) HP 29/30 MP 0/0 Hu 82 $ 185 room=.
+T  81 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 8) HP 29/30 MP 0/0 Hu 77 $ 180 room=.
 -> w
-T  84 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 8) HP 30/30 MP 0/0 Hu 81 $ 185 room=.
+T  82 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 8) HP 30/30 MP 0/0 Hu 76 $ 180 room=.
 -> n
-T  85 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 80 $ 185 room=.
+T  83 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 75 $ 180 room=.
 -> n
-T  86 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 79 $ 185 room=.
+T  84 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 74 $ 180 room=.
 -> e
-T  87 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 6) HP 30/30 MP 0/0 Hu 78 $ 185 room=.
+T  85 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 6) HP 30/30 MP 0/0 Hu 73 $ 180 room=.
 -> s
-T  88 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 77 $ 185 room=.
+T  86 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 7) HP 30/30 MP 0/0 Hu 72 $ 180 room=.
 -> s
-T  89 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 76 $ 185 room=.
+T  87 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 71 $ 180 room=.
 -> s
-T  90 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 75 $ 185 room=.
+T  88 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 9) HP 30/30 MP 0/0 Hu 70 $ 180 room=.
 -> n
-T  91 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 74 $ 185 room=.
+T  89 mode=game_loop           Imrahil the Wanderer(hum) F1@(10, 8) HP 30/30 MP 0/0 Hu 69 $ 180 room=.
 -> w
-T  92 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 8) HP 30/30 MP 0/0 Hu 73 $ 185 room=.
+T  90 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 8) HP 30/30 MP 0/0 Hu 68 $ 180 room=.
 -> n
-T  93 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 72 $ 185 room=.
+T  91 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 7) HP 30/30 MP 0/0 Hu 67 $ 180 room=.
 -> n
-T  94 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 71 $ 185 room=.
+T  92 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 6) HP 30/30 MP 0/0 Hu 66 $ 180 room=.
 -> n
-T  95 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 5) HP 30/30 MP 0/0 Hu 70 $ 185 room=.
+T  93 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 5) HP 30/30 MP 0/0 Hu 65 $ 180 room=.
 -> n
-T  96 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 4) HP 30/30 MP 0/0 Hu 69 $ 185 room=N
+T  94 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 4) HP 30/30 MP 0/0 Hu 64 $ 180 room=N
 -> n
-T  97 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 3) HP 30/30 MP 0/0 Hu 68 $ 185 room=.
+T  95 mode=game_loop           Imrahil the Wanderer(hum) F1@( 9, 3) HP 30/30 MP 0/0 Hu 63 $ 180 room=.
 -> w
-T  98 mode=game_loop           Imrahil the Wanderer(hum) F1@( 8, 3) HP 30/30 MP 0/0 Hu 67 $ 185 room=.
+T  96 mode=game_loop           Imrahil the Wanderer(hum) F1@( 8, 3) HP 30/30 MP 0/0 Hu 62 $ 180 room=.
 -> w
-T  99 mode=game_loop           Imrahil the Wanderer(hum) F1@( 7, 3) HP 30/30 MP 0/0 Hu 66 $ 185 room=.
+T  97 mode=game_loop           Imrahil the Wanderer(hum) F1@( 7, 3) HP 30/30 MP 0/0 Hu 61 $ 180 room=.
 -> w
-T 100 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 65 $ 185 room=.
+T  98 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 3) HP 30/30 MP 0/0 Hu 60 $ 180 room=.
 -> n
-T 101 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 64 $ 185 room=.
+T  99 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 59 $ 180 room=.
 -> l
-T 102 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 64 $ 185 room=.
--> n
-T 103 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 1) HP 30/30 MP 0/0 Hu 63 $ 185 room=.
--> l
-T 104 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 1) HP 30/30 MP 0/0 Hu 63 $ 185 room=.
--> e
-T 105 mode=game_loop           Imrahil the Wanderer(hum) F1@( 7, 1) HP 30/30 MP 0/0 Hu 62 $ 185 room=.
--> e
-T 106 mode=game_loop           Imrahil the Wanderer(hum) F1@( 8, 1) HP 30/30 MP 0/0 Hu 61 $ 185 room=.
+T 100 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 59 $ 180 room=.
 -> w
-T 107 mode=game_loop           Imrahil the Wanderer(hum) F1@( 7, 1) HP 30/30 MP 0/0 Hu 60 $ 185 room=.
--> e
-T 108 mode=game_loop           Imrahil the Wanderer(hum) F1@( 8, 1) HP 30/30 MP 0/0 Hu 59 $ 185 room=.
--> w
-T 109 mode=game_loop           Imrahil the Wanderer(hum) F1@( 7, 1) HP 30/30 MP 0/0 Hu 58 $ 185 room=.
--> w
-T 110 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 1) HP 30/30 MP 0/0 Hu 57 $ 185 room=.
--> s
-T 111 mode=game_loop           Imrahil the Wanderer(hum) F1@( 6, 2) HP 30/30 MP 0/0 Hu 56 $ 185 room=.
--> w
-T 112 mode=stairs_down_mode    Imrahil the Wanderer(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 55 $ 185 room=D
+T 101 mode=stairs_down_mode    Imrahil the Wanderer(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 58 $ 180 room=D
 -> d
-T 113 mode=stairs_up_mode      Imrahil the Wanderer(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 55 $ 185 room=U
+T 102 mode=stairs_up_mode      Imrahil the Wanderer(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 58 $ 180 room=U
 -> n
-T 114 mode=stairs_up_mode      Imrahil the Wanderer(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 55 $ 185 room=U
--> w
-T 115 mode=stairs_up_mode      Imrahil the Wanderer(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 55 $ 185 room=U
--> w
-T 116 mode=stairs_up_mode      Imrahil the Wanderer(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 55 $ 185 room=U
--> e
-T 117 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 54 $ 185 room=.
--> l
-T 118 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 54 $ 185 room=.
--> e
-T 119 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 53 $ 185 room=.
--> l
-T 120 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 53 $ 185 room=.
+T 103 mode=stairs_up_mode      Imrahil the Wanderer(hum) F2@( 1, 1) HP 30/30 MP 0/0 Hu 58 $ 180 room=U
 -> s
-T 121 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 52 $ 185 room=.
+T 104 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 57 $ 180 room=.
 -> l
-T 122 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 2) HP 30/30 MP 0/0 Hu 52 $ 185 room=.
+T 105 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1, 2) HP 30/30 MP 0/0 Hu 57 $ 180 room=.
 -> s
-T 123 mode=chest_mode          Imrahil the Wanderer(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 51 $ 185 room=C
+T 106 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1, 3) HP 30/30 MP 0/0 Hu 56 $ 180 room=.
+-> l
+T 107 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1, 3) HP 30/30 MP 0/0 Hu 56 $ 180 room=.
+-> e
+T 108 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 55 $ 180 room=.
+-> l
+T 109 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 55 $ 180 room=.
+-> e
+T 110 mode=chest_mode          Imrahil the Wanderer(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 54 $ 180 room=C
 -> o
-T 124 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 51 $ 215 room=.
+T 111 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 54 $ 210 room=.
 -> l
-T 125 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 51 $ 215 room=.
--> w
-T 126 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 3) HP 30/30 MP 0/0 Hu 50 $ 215 room=.
--> n
-T 127 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 49 $ 215 room=.
+T 112 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 3) HP 30/30 MP 0/0 Hu 54 $ 210 room=.
+-> s
+T 113 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 4) HP 30/30 MP 0/0 Hu 53 $ 210 room=.
+-> l
+T 114 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 4) HP 30/30 MP 0/0 Hu 53 $ 210 room=.
+-> e
+T 115 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 4) HP 30/30 MP 0/0 Hu 52 $ 210 room=.
+-> l
+T 116 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 4) HP 30/30 MP 0/0 Hu 52 $ 210 room=.
+-> e
+T 117 mode=altar_mode          Imrahil the Wanderer(hum) F2@( 5, 4) HP 30/30 MP 0/0 Hu 51 $ 210 room=A
+-> pray
+T 118 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 4) HP 30/30 MP 0/0 Hu 51 $ 210 room=.
+-> l
+T 119 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 4) HP 30/30 MP 0/0 Hu 51 $ 210 room=.
+-> s
+T 120 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 5) HP 30/30 MP 0/0 Hu 50 $ 210 room=.
+-> l
+T 121 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 5) HP 30/30 MP 0/0 Hu 50 $ 210 room=.
+-> s
+T 122 mode=chest_mode          Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu 49 $ 210 room=C
+-> o
+T 123 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu 49 $ 260 room=.
 -> i
-T 128 mode=inventory           Imrahil the Wanderer(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu 49 $ 215 room=.
+T 124 mode=inventory           Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu 49 $ 260 room=.
+-> eat3
+T 125 mode=inventory           Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu 61 $ 260 room=.
 -> eat1
-T 129 mode=inventory           Imrahil the Wanderer(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 215 room=.
--> u12
-T 130 mode=upgrade_scroll_mode Imrahil the Wanderer(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 215 room=.
+T 126 mode=inventory           Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu100 $ 260 room=.
+-> u11
+T 127 mode=upgrade_scroll_mode Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu100 $ 260 room=.
 -> 1
-T 131 mode=inventory           Imrahil the Wanderer(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 215 room=.
+T 128 mode=inventory           Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu100 $ 260 room=.
 -> x
-T 132 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 2) HP 30/30 MP 0/0 Hu100 $ 215 room=.
+T 129 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu100 $ 260 room=.
+-> l
+T 130 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu100 $ 260 room=.
+-> e
+T 131 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 6) HP 30/30 MP 0/0 Hu 99 $ 260 room=.
+-> l
+T 132 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 6) HP 30/30 MP 0/0 Hu 99 $ 260 room=.
+-> e
+T 133 mode=oracle_mode         Imrahil the Wanderer(hum) F2@( 7, 6) HP 30/30 MP 0/0 Hu 98 $ 260 room=O
 -> n
-T 133 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 1) HP 30/30 MP 0/0 Hu 99 $ 215 room=.
--> e
-T 134 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 1) HP 30/30 MP 0/0 Hu 98 $ 215 room=.
--> e
-T 135 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 1) HP 30/30 MP 0/0 Hu 97 $ 215 room=.
--> e
-T 136 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 1) HP 30/30 MP 0/0 Hu 96 $ 215 room=.
--> e
-T 137 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 1) HP 30/30 MP 0/0 Hu 95 $ 215 room=.
--> e
-T 138 mode=chest_mode          Imrahil the Wanderer(hum) F2@( 7, 1) HP 30/30 MP 0/0 Hu 94 $ 215 room=C
--> o
-T 139 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 1) HP 30/30 MP 0/0 Hu 94 $ 215 room=.
--> e
-T 140 mode=game_loop           Imrahil the Wanderer(hum) F2@( 8, 1) HP 30/30 MP 0/0 Hu 93 $ 215 room=.
--> e
-T 141 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 1) HP 30/30 MP 0/0 Hu 92 $ 215 room=.
--> e
-T 142 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 1) HP 30/30 MP 0/0 Hu 91 $ 215 room=.
--> l
-T 143 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 1) HP 30/30 MP 0/0 Hu 91 $ 215 room=.
--> e
-T 144 mode=library_mode        Imrahil the Wanderer(hum) F2@(11, 1) HP 30/30 MP 0/0 Hu 90 $ 215 room=L
--> r
-T 145 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 1) HP 30/30 MP 0/0 Hu 90 $ 215 room=.
--> l
-T 146 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 1) HP 30/30 MP 0/0 Hu 90 $ 215 room=.
--> s
-T 147 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 2) HP 30/30 MP 0/0 Hu 89 $ 215 room=.
--> w
-T 148 mode=combat_mode         Imrahil the Wanderer(hum) F2@(10, 2) HP 30/30 MP 0/0 Hu 88 $ 215 room=M vs Spore Puff(L1 HP18/18)
--> a
-T 149 mode=combat_mode         Imrahil the Wanderer(hum) F2@(10, 2) HP 29/30 MP 0/0 Hu 88 $ 215 room=M vs Spore Puff(L1 HP18/18)
--> f
-T 150 mode=flee_direction_mode Imrahil the Wanderer(hum) F2@(10, 2) HP 29/30 MP 0/0 Hu 88 $ 215 room=M
--> s
-T 151 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 3) HP 29/30 MP 0/0 Hu 88 $ 215 room=.
--> s
-T 152 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 4) HP 29/30 MP 0/0 Hu 87 $ 215 room=.
--> l
-T 153 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 4) HP 29/30 MP 0/0 Hu 87 $ 215 room=.
--> w
-T 154 mode=chest_mode          Imrahil the Wanderer(hum) F2@( 9, 4) HP 30/30 MP 0/0 Hu 86 $ 215 room=C
--> o
-T 155 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 4) HP 30/30 MP 0/0 Hu 86 $ 215 room=.
--> l
-T 156 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 4) HP 30/30 MP 0/0 Hu 86 $ 215 room=.
--> w
-T 157 mode=game_loop           Imrahil the Wanderer(hum) F2@( 8, 4) HP 30/30 MP 0/0 Hu 85 $ 215 room=.
--> l
-T 158 mode=game_loop           Imrahil the Wanderer(hum) F2@( 8, 4) HP 30/30 MP 0/0 Hu 85 $ 215 room=.
--> w
-T 159 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 4) HP 30/30 MP 0/0 Hu 84 $ 215 room=.
--> l
-T 160 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 4) HP 30/30 MP 0/0 Hu 84 $ 215 room=.
--> s
-T 161 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 5) HP 30/30 MP 0/0 Hu 83 $ 215 room=.
--> l
-T 162 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 5) HP 30/30 MP 0/0 Hu 83 $ 215 room=.
--> s
-T 163 mode=oracle_mode         Imrahil the Wanderer(hum) F2@( 7, 6) HP 30/30 MP 0/0 Hu 82 $ 215 room=O
--> s
-T 164 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 7) HP 30/30 MP 0/0 Hu 81 $ 215 room=.
--> l
-T 165 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 7) HP 30/30 MP 0/0 Hu 81 $ 215 room=.
--> s
-T 166 mode=garden_mode         Imrahil the Wanderer(hum) F2@( 7, 8) HP 30/30 MP 0/0 Hu 80 $ 215 room=G
--> h
-T 167 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 8) HP 30/30 MP 0/0 Hu 80 $ 215 room=.
--> l
-T 168 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 8) HP 30/30 MP 0/0 Hu 80 $ 215 room=.
--> w
-T 169 mode=altar_mode          Imrahil the Wanderer(hum) F2@( 6, 8) HP 30/30 MP 0/0 Hu 79 $ 215 room=A
--> pray
-T 170 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 8) HP 30/30 MP 0/0 Hu 79 $ 215 room=.
--> l
-T 171 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 8) HP 30/30 MP 0/0 Hu 79 $ 215 room=.
--> w
-T 172 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 8) HP 30/30 MP 0/0 Hu 78 $ 215 room=.
--> w
-T 173 mode=library_mode        Imrahil the Wanderer(hum) F2@( 4, 8) HP 30/30 MP 0/0 Hu 77 $ 215 room=L
--> r
-T 174 mode=library_read_decision_mode Imrahil the Wanderer(hum) F2@( 4, 8) HP 30/30 MP 0/0 Hu 77 $ 215 room=L
--> y
-T 175 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 8) HP 30/30 MP 0/0 Hu 77 $ 315 room=.
--> w
-T 176 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 8) HP 30/30 MP 0/0 Hu 76 $ 315 room=.
+T 134 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 5) HP 30/30 MP 0/0 Hu 97 $ 260 room=.
 -> n
-T 177 mode=pool_mode           Imrahil the Wanderer(hum) F2@( 3, 7) HP 30/30 MP 0/0 Hu 75 $ 315 room=P
+T 135 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 4) HP 30/30 MP 0/0 Hu 96 $ 260 room=.
+-> e
+T 136 mode=game_loop           Imrahil the Wanderer(hum) F2@( 8, 4) HP 30/30 MP 0/0 Hu 95 $ 260 room=.
+-> e
+T 137 mode=chest_mode          Imrahil the Wanderer(hum) F2@( 9, 4) HP 30/30 MP 0/0 Hu 94 $ 260 room=C
+-> o
+T 138 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 4) HP 30/30 MP 0/0 Hu 94 $ 260 room=.
+-> s
+T 139 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 5) HP 30/30 MP 0/0 Hu 93 $ 260 room=.
+-> s
+T 140 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 6) HP 30/30 MP 0/0 Hu 92 $ 260 room=.
+-> l
+T 141 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 6) HP 30/30 MP 0/0 Hu 92 $ 260 room=.
+-> e
+T 142 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 6) HP 30/30 MP 0/0 Hu 91 $ 260 room=.
+-> l
+T 143 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 6) HP 30/30 MP 0/0 Hu 91 $ 260 room=.
+-> e
+T 144 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 6) HP 30/30 MP 0/0 Hu 90 $ 260 room=.
+-> l
+T 145 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 6) HP 30/30 MP 0/0 Hu 90 $ 260 room=.
+-> e
+T 146 mode=game_loop           Imrahil the Wanderer(hum) F2@(12, 6) HP 30/30 MP 0/0 Hu 89 $ 260 room=.
+-> l
+T 147 mode=game_loop           Imrahil the Wanderer(hum) F2@(12, 6) HP 30/30 MP 0/0 Hu 89 $ 260 room=.
+-> e
+T 148 mode=chest_mode          Imrahil the Wanderer(hum) F2@(13, 6) HP 30/30 MP 0/0 Hu 88 $ 260 room=C
+-> o
+T 149 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 6) HP 30/30 MP 0/0 Hu 88 $ 280 room=.
+-> l
+T 150 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 6) HP 30/30 MP 0/0 Hu 88 $ 280 room=.
+-> s
+T 151 mode=pool_mode           Imrahil the Wanderer(hum) F2@(13, 7) HP 30/30 MP 0/0 Hu 87 $ 280 room=P
 -> dr
-T 178 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 7) HP 30/30 MP 0/0 Hu 75 $ 315 room=.
+T 152 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 7) HP 30/28 MP 0/0 Hu 87 $ 280 room=.
+-> l
+T 153 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 7) HP 30/28 MP 0/0 Hu 87 $ 280 room=.
+-> e
+T 154 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 7) HP 30/28 MP 0/0 Hu 86 $ 280 room=.
 -> n
-T 179 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 3, 6) HP 30/30 MP 0/0 Hu 74 $ 315 room=M vs Giant Centipede(L1 HP15/15)
--> a
-T 180 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 3, 6) HP 29/30 MP 0/0 Hu 74 $ 315 room=M vs Giant Centipede(L1 HP15/15)
--> a
-T 181 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 3, 6) HP 28/30 MP 0/0 Hu 74 $ 315 room=M vs Giant Centipede(L1 HP15/15)
--> f
-T 182 mode=flee_direction_mode Imrahil the Wanderer(hum) F2@( 3, 6) HP 25/30 MP 0/0 Hu 74 $ 315 room=M
+T 155 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 6) HP 30/28 MP 0/0 Hu 85 $ 280 room=.
+-> l
+T 156 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 6) HP 30/28 MP 0/0 Hu 85 $ 280 room=.
 -> n
-T 183 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 5) HP 22/30 MP 0/0 Hu 74 $ 315 room=.
+T 157 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 5) HP 30/28 MP 0/0 Hu 84 $ 280 room=.
+-> l
+T 158 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 5) HP 30/28 MP 0/0 Hu 84 $ 280 room=.
+-> n
+T 159 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 4) HP 30/28 MP 0/0 Hu 83 $ 280 room=.
+-> l
+T 160 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 4) HP 30/28 MP 0/0 Hu 83 $ 280 room=.
+-> n
+T 161 mode=combat_mode         Imrahil the Wanderer(hum) F2@(14, 3) HP 30/28 MP 0/0 Hu 82 $ 280 room=M vs Sewer Rat(L1 HP10/10)
+-> a
+T 162 mode=combat_victory      Imrahil the Wanderer(hum) F2@(14, 3) HP 29/28 MP 0/0 Hu 82 $ 288 room=.
+-> back
+T 163 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 3) HP 29/28 MP 0/0 Hu 82 $ 288 room=.
 -> i
-T 184 mode=inventory           Imrahil the Wanderer(hum) F2@( 3, 5) HP 22/30 MP 0/0 Hu 74 $ 315 room=.
--> u7
-T 185 mode=inventory           Imrahil the Wanderer(hum) F2@( 3, 5) HP 30/30 MP 0/0 Hu 74 $ 315 room=.
+T 164 mode=inventory           Imrahil the Wanderer(hum) F2@(14, 3) HP 29/28 MP 0/0 Hu 82 $ 288 room=.
+-> u15
+T 165 mode=inventory           Imrahil the Wanderer(hum) F2@(14, 3) HP 29/28 MP 0/0 Hu 82 $ 288 room=.
 -> x
-T 186 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 5) HP 30/30 MP 0/0 Hu 74 $ 315 room=.
--> e
-T 187 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 5) HP 27/30 MP 0/0 Hu 73 $ 315 room=.
+T 166 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 3) HP 29/28 MP 0/0 Hu 82 $ 288 room=.
 -> l
-T 188 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 5) HP 27/30 MP 0/0 Hu 73 $ 315 room=.
+T 167 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 3) HP 29/28 MP 0/0 Hu 82 $ 288 room=.
+-> e
+T 168 mode=game_loop           Imrahil the Wanderer(hum) F2@(15, 3) HP 29/28 MP 0/0 Hu 81 $ 288 room=.
+-> l
+T 169 mode=game_loop           Imrahil the Wanderer(hum) F2@(15, 3) HP 29/28 MP 0/0 Hu 81 $ 288 room=.
 -> s
-T 189 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 6) HP 27/30 MP 0/0 Hu 72 $ 315 room=.
--> l
-T 190 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 6) HP 27/30 MP 0/0 Hu 72 $ 315 room=.
+T 170 mode=combat_mode         Imrahil the Wanderer(hum) F2@(15, 4) HP 29/28 MP 0/0 Hu 80 $ 288 room=M vs Harpy(L1 HP28/28)
+-> a
+T 171 mode=combat_mode         Imrahil the Wanderer(hum) F2@(15, 4) HP 29/28 MP 0/0 Hu 80 $ 288 room=M vs Harpy(L1 HP4/28)
+-> a
+T 172 mode=combat_victory      Imrahil the Wanderer(hum) F2@(15, 4) HP 29/28 MP 0/0 Hu 80 $ 290 room=.
+-> back
+T 173 mode=game_loop           Imrahil the Wanderer(hum) F2@(15, 4) HP 29/28 MP 0/0 Hu 80 $ 290 room=.
+-> s
+T 174 mode=game_loop           Imrahil the Wanderer(hum) F2@(15, 5) HP 29/28 MP 0/0 Hu 79 $ 290 room=.
+-> w
+T 175 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 5) HP 29/28 MP 0/0 Hu 78 $ 290 room=.
+-> n
+T 176 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 4) HP 29/28 MP 0/0 Hu 77 $ 290 room=.
+-> n
+T 177 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 3) HP 29/28 MP 0/0 Hu 76 $ 290 room=.
 -> e
-T 191 mode=chest_mode          Imrahil the Wanderer(hum) F2@( 5, 6) HP 27/30 MP 0/0 Hu 71 $ 315 room=C
+T 178 mode=game_loop           Imrahil the Wanderer(hum) F2@(15, 3) HP 29/28 MP 0/0 Hu 75 $ 290 room=.
+-> e
+T 179 mode=game_loop           Imrahil the Wanderer(hum) F2@(16, 3) HP 29/28 MP 0/0 Hu 74 $ 290 room=.
+-> l
+T 180 mode=game_loop           Imrahil the Wanderer(hum) F2@(16, 3) HP 29/28 MP 0/0 Hu 74 $ 290 room=.
+-> e
+T 181 mode=chest_mode          Imrahil the Wanderer(hum) F2@(17, 3) HP 29/28 MP 0/0 Hu 73 $ 290 room=C
 -> o
-T 192 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 6) HP 27/30 MP 0/0 Hu 71 $ 315 room=.
+T 182 mode=game_loop           Imrahil the Wanderer(hum) F2@(17, 3) HP 29/28 MP 0/0 Hu 73 $ 360 room=.
+-> s
+T 183 mode=game_loop           Imrahil the Wanderer(hum) F2@(17, 4) HP 29/28 MP 0/0 Hu 72 $ 360 room=.
+-> w
+T 184 mode=game_loop           Imrahil the Wanderer(hum) F2@(16, 4) HP 29/28 MP 0/0 Hu 71 $ 360 room=.
+-> w
+T 185 mode=game_loop           Imrahil the Wanderer(hum) F2@(15, 4) HP 29/28 MP 0/0 Hu 70 $ 360 room=.
+-> w
+T 186 mode=game_loop           Imrahil the Wanderer(hum) F2@(14, 4) HP 29/28 MP 0/0 Hu 69 $ 360 room=.
+-> w
+T 187 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 4) HP 29/28 MP 0/0 Hu 68 $ 360 room=.
+-> w
+T 188 mode=game_loop           Imrahil the Wanderer(hum) F2@(12, 4) HP 29/28 MP 0/0 Hu 67 $ 360 room=.
+-> w
+T 189 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 4) HP 29/28 MP 0/0 Hu 66 $ 360 room=.
+-> w
+T 190 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 4) HP 29/28 MP 0/0 Hu 65 $ 360 room=.
 -> n
-T 193 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 5) HP 28/30 MP 0/0 Hu 70 $ 315 room=.
+T 191 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 3) HP 29/28 MP 0/0 Hu 64 $ 360 room=.
 -> n
-T 194 mode=altar_mode          Imrahil the Wanderer(hum) F2@( 5, 4) HP 28/30 MP 0/0 Hu 69 $ 315 room=A
--> pray
-T 195 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 4) HP 30/30 MP 0/0 Hu100 $ 315 room=.
--> e
-T 196 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 4) HP 30/30 MP 0/0 Hu 99 $ 315 room=.
--> s
-T 197 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 5) HP 30/30 MP 0/0 Hu 98 $ 315 room=.
--> s
-T 198 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 6) HP 30/30 MP 0/0 Hu 97 $ 315 room=.
--> w
-T 199 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 6) HP 30/30 MP 0/0 Hu 96 $ 315 room=.
--> s
-T 200 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 7) HP 30/30 MP 0/0 Hu 95 $ 315 room=.
--> s
-T 201 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 8) HP 30/30 MP 0/0 Hu 94 $ 315 room=.
--> w
-T 202 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 8) HP 30/30 MP 0/0 Hu 93 $ 315 room=.
--> w
-T 203 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 8) HP 30/30 MP 0/0 Hu 92 $ 315 room=.
--> w
-T 204 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 8) HP 30/30 MP 0/0 Hu 91 $ 315 room=.
--> l
-T 205 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 8) HP 30/30 MP 0/0 Hu 91 $ 315 room=.
--> s
-T 206 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 9) HP 30/30 MP 0/0 Hu 90 $ 315 room=.
--> l
-T 207 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 9) HP 30/30 MP 0/0 Hu 90 $ 315 room=.
--> w
-T 208 mode=library_mode        Imrahil the Wanderer(hum) F2@( 1, 9) HP 30/30 MP 0/0 Hu 89 $ 315 room=L
--> r
-T 209 mode=library_read_decision_mode Imrahil the Wanderer(hum) F2@( 1, 9) HP 30/30 MP 0/0 Hu 89 $ 315 room=L
--> y
-T 210 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1, 9) HP 30/30 MP 0/0 Hu 89 $ 365 room=.
--> l
-T 211 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1, 9) HP 30/30 MP 0/0 Hu 89 $ 365 room=.
--> s
-T 212 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
+T 192 mode=combat_mode         Imrahil the Wanderer(hum) F2@(10, 2) HP 29/28 MP 0/0 Hu 63 $ 360 room=M vs Giant Centipede(L1 HP15/15)
 -> a
-T 213 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 23/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
+T 193 mode=combat_mode         Imrahil the Wanderer(hum) F2@(10, 2) HP 28/28 MP 0/0 Hu 63 $ 360 room=M vs Giant Centipede(L1 HP15/15)
 -> a
-T 214 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 16/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 215 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 16/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 216 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 16/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 217 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> i
-T 218 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M
--> u2
-T 219 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M
--> x
-T 220 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 221 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 222 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 23/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 223 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 16/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 224 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 16/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 225 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 16/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 226 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> i
-T 227 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M
--> u2
-T 228 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M
--> x
-T 229 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 230 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 23/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 231 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 16/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 232 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> i
-T 233 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M
--> u2
-T 234 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M
--> x
-T 235 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 236 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 237 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 23/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
+T 194 mode=combat_mode         Imrahil the Wanderer(hum) F2@(10, 2) HP 27/28 MP 0/0 Hu 63 $ 360 room=M vs Giant Centipede(L1 HP15/15)
 -> f
-T 238 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
+T 195 mode=flee_direction_mode Imrahil the Wanderer(hum) F2@(10, 2) HP 24/28 MP 0/0 Hu 63 $ 360 room=M
+-> n
+T 196 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 1) HP 21/28 MP 0/0 Hu 63 $ 360 room=.
 -> i
-T 239 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M
--> u2
-T 240 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M
--> x
-T 241 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 242 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 23/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 243 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 16/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 244 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> i
-T 245 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M
--> u2
-T 246 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M
--> x
-T 247 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 248 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 23/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 249 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 16/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 250 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP16/40)
--> i
-T 251 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 9/30 MP 0/0 Hu 88 $ 365 room=M
--> u2
-T 252 mode=inventory           Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M
--> x
-T 253 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 1,10) HP 30/30 MP 0/0 Hu 88 $ 365 room=M vs Giant Spider(L1 HP16/40)
--> a
-T 254 mode=combat_victory      Imrahil the Wanderer(hum) F2@( 1,10) HP 23/30 MP 0/0 Hu 88 $ 367 room=.
--> back
-T 255 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1,10) HP 23/30 MP 0/0 Hu 88 $ 367 room=.
--> s
-T 256 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1,11) HP 23/30 MP 0/0 Hu 87 $ 367 room=.
--> s
-T 257 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1,12) HP 24/30 MP 0/0 Hu 86 $ 367 room=.
--> s
-T 258 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1,13) HP 24/30 MP 0/0 Hu 85 $ 367 room=.
--> l
-T 259 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1,13) HP 24/30 MP 0/0 Hu 85 $ 367 room=.
--> e
-T 260 mode=chest_mode          Imrahil the Wanderer(hum) F2@( 2,13) HP 24/30 MP 0/0 Hu 84 $ 367 room=C
--> e
-T 261 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3,13) HP 24/30 MP 0/0 Hu 83 $ 367 room=.
--> w
-T 262 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2,13) HP 25/30 MP 0/0 Hu 82 $ 367 room=C
--> l
-T 263 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2,13) HP 25/30 MP 0/0 Hu 82 $ 367 room=C
--> e
-T 264 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3,13) HP 25/30 MP 0/0 Hu 81 $ 367 room=.
--> w
-T 265 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2,13) HP 25/30 MP 0/0 Hu 80 $ 367 room=C
--> w
-T 266 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1,13) HP 25/30 MP 0/0 Hu 79 $ 367 room=.
--> n
-T 267 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1,12) HP 26/30 MP 0/0 Hu 78 $ 367 room=.
--> n
-T 268 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1,11) HP 26/30 MP 0/0 Hu 77 $ 367 room=.
--> n
-T 269 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1,10) HP 26/30 MP 0/0 Hu 76 $ 367 room=.
--> n
-T 270 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1, 9) HP 26/30 MP 0/0 Hu 75 $ 367 room=.
--> n
-T 271 mode=game_loop           Imrahil the Wanderer(hum) F2@( 1, 8) HP 27/30 MP 0/0 Hu 74 $ 367 room=.
--> e
-T 272 mode=game_loop           Imrahil the Wanderer(hum) F2@( 2, 8) HP 27/30 MP 0/0 Hu 73 $ 367 room=.
--> e
-T 273 mode=game_loop           Imrahil the Wanderer(hum) F2@( 3, 8) HP 27/30 MP 0/0 Hu 72 $ 367 room=.
--> e
-T 274 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 8) HP 27/30 MP 0/0 Hu 71 $ 367 room=.
--> e
-T 275 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 8) HP 28/30 MP 0/0 Hu 70 $ 367 room=.
--> e
-T 276 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 8) HP 28/30 MP 0/0 Hu 69 $ 367 room=.
--> e
-T 277 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 8) HP 28/30 MP 0/0 Hu 68 $ 367 room=.
--> e
-T 278 mode=game_loop           Imrahil the Wanderer(hum) F2@( 8, 8) HP 28/30 MP 0/0 Hu 67 $ 367 room=.
--> e
-T 279 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 8) HP 29/30 MP 0/0 Hu 66 $ 367 room=.
--> e
-T 280 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 8) HP 29/30 MP 0/0 Hu 65 $ 367 room=.
--> e
-T 281 mode=vendor_shop         Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 367 room=V
--> r5
-T 282 mode=vendor_shop         Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 328 room=V
--> b8
-T 283 mode=vendor_shop         Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 318 room=V
--> b3
-T 284 mode=vendor_shop         Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 268 room=V
--> b3
-T 285 mode=vendor_shop         Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 238 room=V
--> b3
-T 286 mode=vendor_shop         Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 208 room=V
--> b3
-T 287 mode=vendor_shop         Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 178 room=V
--> b4
-T 288 mode=vendor_shop         Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 173 room=V
--> id9
-T 289 mode=vendor_shop         Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 123 room=V
--> x
-T 290 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 123 room=V
--> l
-T 291 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 8) HP 29/30 MP 0/0 Hu 64 $ 123 room=V
--> e
-T 292 mode=combat_mode         Imrahil the Wanderer(hum) F2@(12, 8) HP 29/30 MP 0/0 Hu 63 $ 123 room=M vs Bugbear(L1 HP35/35)
--> a
-T 293 mode=combat_mode         Imrahil the Wanderer(hum) F2@(12, 8) HP 28/30 MP 0/0 Hu 63 $ 123 room=M vs Bugbear(L1 HP35/35)
--> a
-T 294 mode=combat_mode         Imrahil the Wanderer(hum) F2@(12, 8) HP 28/30 MP 0/0 Hu 63 $ 123 room=M vs Bugbear(L1 HP12/35)
--> a
-T 295 mode=combat_mode         Imrahil the Wanderer(hum) F2@(12, 8) HP 27/30 MP 0/0 Hu 63 $ 123 room=M vs Bugbear(L1 HP12/35)
--> a
-T 296 mode=combat_victory      Imrahil the Wanderer(hum) F2@(12, 8) HP 26/30 MP 0/0 Hu 63 $ 133 room=.
--> back
-T 297 mode=game_loop           Imrahil the Wanderer(hum) F2@(12, 8) HP 26/30 MP 0/0 Hu 63 $ 133 room=.
--> l
-T 298 mode=game_loop           Imrahil the Wanderer(hum) F2@(12, 8) HP 26/30 MP 0/0 Hu 63 $ 133 room=.
--> n
-T 299 mode=game_loop           Imrahil the Wanderer(hum) F2@(12, 7) HP 27/30 MP 0/0 Hu 62 $ 133 room=.
--> e
-T 300 mode=pool_mode           Imrahil the Wanderer(hum) F2@(13, 7) HP 27/30 MP 0/0 Hu 61 $ 133 room=P
--> dr
-T 301 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 7) HP 7/30 MP 0/0 Hu 61 $ 133 room=.
--> i
-T 302 mode=inventory           Imrahil the Wanderer(hum) F2@(13, 7) HP 7/30 MP 0/0 Hu 61 $ 133 room=.
+T 197 mode=inventory           Imrahil the Wanderer(hum) F2@(10, 1) HP 21/28 MP 0/0 Hu 63 $ 360 room=.
 -> u8
-T 303 mode=inventory           Imrahil the Wanderer(hum) F2@(13, 7) HP 30/30 MP 0/0 Hu 61 $ 133 room=.
+T 198 mode=inventory           Imrahil the Wanderer(hum) F2@(10, 1) HP 28/28 MP 0/0 Hu 63 $ 360 room=.
 -> x
-T 304 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 7) HP 30/30 MP 0/0 Hu 61 $ 133 room=.
+T 199 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 1) HP 28/28 MP 0/0 Hu 63 $ 360 room=.
+-> e
+T 200 mode=library_mode        Imrahil the Wanderer(hum) F2@(11, 1) HP 25/28 MP 0/0 Hu 62 $ 360 room=L
+-> r
+T 201 mode=library_read_decision_mode Imrahil the Wanderer(hum) F2@(11, 1) HP 25/28 MP 0/0 Hu 62 $ 360 room=L
+-> y
+T 202 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 1) HP 25/28 MP 0/0 Hu 62 $ 410 room=.
 -> l
-T 305 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 7) HP 30/30 MP 0/0 Hu 61 $ 133 room=.
--> n
-T 306 mode=chest_mode          Imrahil the Wanderer(hum) F2@(13, 6) HP 20/30 MP 0/0 Hu 60 $ 133 room=C
--> o
-T 307 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 6) HP 20/30 MP 0/0 Hu 60 $ 208 room=.
--> l
-T 308 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 6) HP 20/30 MP 0/0 Hu 60 $ 208 room=.
+T 203 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 1) HP 25/28 MP 0/0 Hu 62 $ 410 room=.
+-> e
+T 204 mode=game_loop           Imrahil the Wanderer(hum) F2@(12, 1) HP 25/28 MP 0/0 Hu 61 $ 410 room=.
+-> e
+T 205 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 1) HP 25/28 MP 0/0 Hu 60 $ 410 room=.
+-> s
+T 206 mode=combat_mode         Imrahil the Wanderer(hum) F2@(13, 2) HP 25/28 MP 0/0 Hu 59 $ 410 room=M vs Skeleton(L1 HP25/25)
+-> a
+T 207 mode=combat_mode         Imrahil the Wanderer(hum) F2@(13, 2) HP 25/28 MP 0/0 Hu 59 $ 410 room=M vs Skeleton(L1 HP1/25)
+-> f
+T 208 mode=flee_direction_mode Imrahil the Wanderer(hum) F2@(13, 2) HP 25/28 MP 0/0 Hu 59 $ 410 room=M
+-> s
+T 209 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 3) HP 25/28 MP 0/0 Hu 59 $ 410 room=.
+-> s
+T 210 mode=game_loop           Imrahil the Wanderer(hum) F2@(13, 4) HP 25/28 MP 0/0 Hu 58 $ 410 room=.
 -> w
-T 309 mode=game_loop           Imrahil the Wanderer(hum) F2@(12, 6) HP 10/30 MP 0/0 Hu 59 $ 208 room=.
+T 211 mode=game_loop           Imrahil the Wanderer(hum) F2@(12, 4) HP 25/28 MP 0/0 Hu 57 $ 410 room=.
+-> w
+T 212 mode=game_loop           Imrahil the Wanderer(hum) F2@(11, 4) HP 25/28 MP 0/0 Hu 56 $ 410 room=.
+-> w
+T 213 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 4) HP 25/28 MP 0/0 Hu 55 $ 410 room=.
 -> n
-T 310 mode=death_screen        Imrahil the Wanderer(hum) F2@(12, 5) HP 0/30 MP 0/0 Hu 58 $ 208 room=.
+T 214 mode=game_loop           Imrahil the Wanderer(hum) F2@(10, 3) HP 25/28 MP 0/0 Hu 54 $ 410 room=.
+-> w
+T 215 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 3) HP 25/28 MP 0/0 Hu 53 $ 410 room=.
+-> n
+T 216 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 2) HP 25/28 MP 0/0 Hu 52 $ 410 room=.
+-> n
+T 217 mode=game_loop           Imrahil the Wanderer(hum) F2@( 9, 1) HP 25/28 MP 0/0 Hu 51 $ 410 room=.
+-> w
+T 218 mode=game_loop           Imrahil the Wanderer(hum) F2@( 8, 1) HP 25/28 MP 0/0 Hu 50 $ 410 room=.
+-> w
+T 219 mode=chest_mode          Imrahil the Wanderer(hum) F2@( 7, 1) HP 25/28 MP 0/0 Hu 49 $ 410 room=C
+-> o
+T 220 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 1) HP 25/28 MP 0/0 Hu 49 $ 410 room=.
+-> i
+T 221 mode=inventory           Imrahil the Wanderer(hum) F2@( 7, 1) HP 25/28 MP 0/0 Hu 49 $ 410 room=.
+-> u8
+T 222 mode=inventory           Imrahil the Wanderer(hum) F2@( 7, 1) HP 28/28 MP 0/0 Hu 49 $ 410 room=.
+-> x
+T 223 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 1) HP 28/28 MP 0/0 Hu 49 $ 410 room=.
+-> i
+T 224 mode=inventory           Imrahil the Wanderer(hum) F2@( 7, 1) HP 28/28 MP 0/0 Hu 49 $ 410 room=.
+-> eat3
+T 225 mode=inventory           Imrahil the Wanderer(hum) F2@( 7, 1) HP 28/28 MP 0/0 Hu 61 $ 410 room=.
+-> eat1
+T 226 mode=inventory           Imrahil the Wanderer(hum) F2@( 7, 1) HP 28/28 MP 0/0 Hu100 $ 410 room=.
+-> x
+T 227 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 1) HP 28/28 MP 0/0 Hu100 $ 410 room=.
+-> s
+T 228 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 2) HP 28/28 MP 0/0 Hu 99 $ 410 room=.
+-> s
+T 229 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 3) HP 28/28 MP 0/0 Hu 98 $ 410 room=.
+-> s
+T 230 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 4) HP 28/28 MP 0/0 Hu 97 $ 410 room=.
+-> s
+T 231 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 5) HP 28/28 MP 0/0 Hu 96 $ 410 room=.
+-> s
+T 232 mode=game_loop           Imrahil the Wanderer(hum) F2@( 7, 6) HP 28/28 MP 0/0 Hu 95 $ 410 room=O
+-> w
+T 233 mode=game_loop           Imrahil the Wanderer(hum) F2@( 6, 6) HP 28/28 MP 0/0 Hu 94 $ 410 room=.
+-> w
+T 234 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 6) HP 28/28 MP 0/0 Hu 93 $ 410 room=.
+-> s
+T 235 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 7) HP 28/28 MP 0/0 Hu 92 $ 410 room=.
+-> s
+T 236 mode=game_loop           Imrahil the Wanderer(hum) F2@( 5, 8) HP 28/28 MP 0/0 Hu 91 $ 410 room=.
+-> w
+T 237 mode=library_mode        Imrahil the Wanderer(hum) F2@( 4, 8) HP 28/28 MP 0/0 Hu 90 $ 410 room=L
+-> r
+T 238 mode=library_read_decision_mode Imrahil the Wanderer(hum) F2@( 4, 8) HP 28/28 MP 0/0 Hu 90 $ 410 room=L
+-> y
+T 239 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 8) HP 28/28 MP 0/0 Hu 90 $ 585 room=.
+-> n
+T 240 mode=game_loop           Imrahil the Wanderer(hum) F2@( 4, 7) HP 20/28 MP 0/0 Hu 89 $ 585 room=.
+-> w
+T 241 mode=pool_mode           Imrahil the Wanderer(hum) F2@( 3, 7) HP 13/28 MP 0/0 Hu 88 $ 585 room=P
+-> n
+T 242 mode=combat_mode         Imrahil the Wanderer(hum) F2@( 3, 6) HP 5/28 MP 0/0 Hu 87 $ 585 room=M vs Myconid Shaman(L1 HP45/45)
+-> i
+T 243 mode=death_screen        Imrahil the Wanderer(hum) F2@( 3, 6) HP -3/28 MP 0/0 Hu 87 $ 585 room=M
 
-=== run finished: turns=310 floor=2 hp=0/30 gold=208 alive=False mode=death_screen ===
+=== run finished: turns=243 floor=2 hp=-3/28 gold=585 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00461_human.html

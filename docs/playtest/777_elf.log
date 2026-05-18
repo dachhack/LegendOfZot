@@ -117,36 +117,34 @@ T  49 mode=combat_mode         Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 
 T  50 mode=combat_victory      Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 470 room=.
 -> back
 T  51 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 470 room=.
+-> i
+T  52 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 470 room=.
+-> u8
+T  53 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 470 room=.
+-> x
+T  54 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 470 room=.
 -> l
-T  52 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 470 room=.
+T  55 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 89 $ 470 room=.
 -> e
-T  53 mode=pool_mode           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 88 $ 470 room=P
+T  56 mode=pool_mode           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 88 $ 470 room=P
 -> dr
-T  54 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 8/28 MP 0/0 Hu 88 $ 470 room=.
+T  57 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 8/28 MP 0/0 Hu 88 $ 470 room=.
 -> i
-T  55 mode=inventory           Thranduil the Singer(elf) F1@( 5, 5) HP 8/28 MP 0/0 Hu 88 $ 470 room=.
+T  58 mode=inventory           Thranduil the Singer(elf) F1@( 5, 5) HP 8/28 MP 0/0 Hu 88 $ 470 room=.
 -> u3
-T  56 mode=inventory           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 88 $ 470 room=.
+T  59 mode=inventory           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 88 $ 470 room=.
 -> x
-T  57 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 88 $ 470 room=.
+T  60 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 88 $ 470 room=.
 -> l
-T  58 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 88 $ 470 room=.
--> w
-T  59 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 18/28 MP 0/0 Hu 87 $ 470 room=.
--> i
-T  60 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 18/28 MP 0/0 Hu 87 $ 470 room=.
--> u3
-T  61 mode=inventory           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 87 $ 470 room=.
--> x
-T  62 mode=game_loop           Thranduil the Singer(elf) F1@( 4, 5) HP 28/28 MP 0/0 Hu 87 $ 470 room=.
--> w
-T  63 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 5) HP 19/28 MP 0/0 Hu 86 $ 470 room=.
+T  61 mode=game_loop           Thranduil the Singer(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 88 $ 470 room=.
 -> s
-T  64 mode=game_loop           Thranduil the Singer(elf) F1@( 3, 6) HP 9/28 MP 0/0 Hu 85 $ 470 room=.
--> n
-T  65 mode=death_screen        Thranduil the Singer(elf) F1@( 3, 5) HP -1/28 MP 0/0 Hu 84 $ 470 room=.
+T  62 mode=combat_mode         Thranduil the Singer(elf) F1@( 5, 6) HP 18/28 MP 0/0 Hu 87 $ 470 room=M vs Giant Rat(L0 HP22/22)
+-> f
+T  63 mode=flee_direction_mode Thranduil the Singer(elf) F1@( 5, 6) HP 8/28 MP 0/0 Hu 87 $ 470 room=M
+-> s
+T  64 mode=flee_direction_mode Thranduil the Singer(elf) F1@( 5, 7) HP -2/28 MP 0/0 Hu 87 $ 470 room=.
 
-=== run finished: turns=65 floor=1 hp=-1/28 gold=470 alive=False mode=death_screen ===
+=== run finished: turns=64 floor=1 hp=-2/28 gold=470 alive=False mode=flee_direction_mode ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00777_elf.html

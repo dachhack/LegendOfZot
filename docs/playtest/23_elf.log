@@ -78,1597 +78,1935 @@ T  30 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 6) HP 27/28 MP 0
 -> s
 T  31 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 490 room=V
 -> b11
-T  32 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 480 room=V
--> b5
+T  32 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 460 room=V
+-> b11
 T  33 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 450 room=V
 -> b5
 T  34 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 420 room=V
 -> b5
 T  35 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 390 room=V
--> b6
+-> b5
 T  36 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 360 room=V
 -> b6
-T  37 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 210 room=V
--> b1
-T  38 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 165 room=V
--> b1
-T  39 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 150 room=V
--> x
-T  40 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 150 room=V
--> i
-T  41 mode=inventory           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 150 room=V
--> e1
-T  42 mode=inventory           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 150 room=V
--> x
-T  43 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 150 room=V
--> l
-T  44 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 150 room=V
--> e
-T  45 mode=combat_mode         Galadriel Star-eyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 90 $ 150 room=M vs Kobold(L0 HP8/8)
--> a
-T  46 mode=combat_victory      Galadriel Star-eyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 90 $ 153 room=.
--> back
-T  47 mode=game_loop           Galadriel Star-eyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 90 $ 153 room=.
--> l
-T  48 mode=game_loop           Galadriel Star-eyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 90 $ 153 room=.
--> e
-T  49 mode=chest_mode          Galadriel Star-eyed(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 89 $ 153 room=C
--> o
-T  50 mode=game_loop           Galadriel Star-eyed(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 89 $ 333 room=.
--> l
-T  51 mode=game_loop           Galadriel Star-eyed(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 89 $ 333 room=.
--> e
-T  52 mode=game_loop           Galadriel Star-eyed(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 88 $ 333 room=.
--> l
-T  53 mode=game_loop           Galadriel Star-eyed(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 88 $ 333 room=.
--> e
-T  54 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 87 $ 333 room=.
--> l
-T  55 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 87 $ 333 room=.
--> e
-T  56 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu 86 $ 333 room=.
--> l
-T  57 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu 86 $ 333 room=.
--> e
-T  58 mode=garden_mode         Galadriel Star-eyed(elf) F1@(11, 7) HP 28/28 MP 0/0 Hu 85 $ 333 room=G
--> h
-T  59 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 7) HP 28/28 MP 0/0 Hu 85 $ 333 room=.
--> l
-T  60 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 7) HP 28/28 MP 0/0 Hu 85 $ 333 room=.
--> n
-T  61 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 333 room=M vs Kobold(L0 HP8/8)
--> a
-T  62 mode=combat_victory      Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 336 room=.
--> back
-T  63 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 336 room=.
--> l
-T  64 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 336 room=.
--> w
-T  65 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 6) HP 28/28 MP 0/0 Hu 83 $ 336 room=.
--> n
-T  66 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 82 $ 336 room=M vs Kobold(L0 HP20/20)
--> a
-T  67 mode=combat_victory      Galadriel Star-eyed(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 82 $ 342 room=.
--> back
-T  68 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 82 $ 342 room=.
--> n
-T  69 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 81 $ 342 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T  70 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 4) HP 27/28 MP 0/0 Hu 81 $ 342 room=M vs Crawling Claw(L0 HP5/5)
--> f
-T  71 mode=flee_direction_mode Galadriel Star-eyed(elf) F1@(10, 4) HP 27/28 MP 0/0 Hu 81 $ 342 room=M
--> n
-T  72 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 3) HP 27/28 MP 0/0 Hu 81 $ 342 room=.
--> l
-T  73 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 3) HP 27/28 MP 0/0 Hu 81 $ 342 room=.
--> e
-T  74 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 3) HP 27/28 MP 0/0 Hu 80 $ 342 room=.
--> l
-T  75 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 3) HP 27/28 MP 0/0 Hu 80 $ 342 room=.
--> e
-T  76 mode=library_mode        Galadriel Star-eyed(elf) F1@(12, 3) HP 27/28 MP 0/0 Hu 79 $ 342 room=L
--> r
-T  77 mode=library_read_decision_mode Galadriel Star-eyed(elf) F1@(12, 3) HP 27/28 MP 0/0 Hu 79 $ 342 room=L
--> y
-T  78 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 3) HP 27/28 MP 0/0 Hu 79 $ 492 room=.
--> l
-T  79 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 3) HP 27/28 MP 0/0 Hu 79 $ 492 room=.
--> n
-T  80 mode=combat_mode         Galadriel Star-eyed(elf) F1@(12, 2) HP 27/28 MP 0/0 Hu 78 $ 492 room=M vs Crawling Claw(L0 HP5/5)
--> a
-T  81 mode=combat_victory      Galadriel Star-eyed(elf) F1@(12, 2) HP 26/28 MP 0/0 Hu 78 $ 499 room=.
--> back
-T  82 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 2) HP 26/28 MP 0/0 Hu 78 $ 499 room=.
--> n
-T  83 mode=combat_mode         Galadriel Star-eyed(elf) F1@(12, 1) HP 27/28 MP 0/0 Hu 77 $ 499 room=M vs Goblin(L0 HP12/12)
--> a
-T  84 mode=combat_victory      Galadriel Star-eyed(elf) F1@(12, 1) HP 27/28 MP 0/0 Hu 77 $ 509 room=.
--> back
-T  85 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 1) HP 27/28 MP 0/0 Hu 77 $ 509 room=.
--> s
-T  86 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 2) HP 27/28 MP 0/0 Hu 76 $ 509 room=.
--> w
-T  87 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 2) HP 27/28 MP 0/0 Hu 75 $ 509 room=.
--> w
-T  88 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 2) HP 27/28 MP 0/0 Hu 74 $ 509 room=.
--> i
-T  89 mode=inventory           Galadriel Star-eyed(elf) F1@(10, 2) HP 27/28 MP 0/0 Hu 74 $ 509 room=.
--> eat4
-T  90 mode=inventory           Galadriel Star-eyed(elf) F1@(10, 2) HP 27/28 MP 0/0 Hu 79 $ 509 room=.
--> eat1
-T  91 mode=inventory           Galadriel Star-eyed(elf) F1@(10, 2) HP 27/28 MP 0/0 Hu100 $ 509 room=.
--> u10
-T  92 mode=upgrade_scroll_mode Galadriel Star-eyed(elf) F1@(10, 2) HP 27/28 MP 0/0 Hu100 $ 509 room=.
--> 1
-T  93 mode=inventory           Galadriel Star-eyed(elf) F1@(10, 2) HP 27/28 MP 0/0 Hu100 $ 509 room=.
--> x
-T  94 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 2) HP 27/28 MP 0/0 Hu100 $ 509 room=.
--> n
-T  95 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 1) HP 28/28 MP 0/0 Hu 99 $ 509 room=M vs Skeleton(L0 HP25/25)
--> a
-T  96 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 1) HP 27/28 MP 0/0 Hu 99 $ 509 room=M vs Skeleton(L0 HP25/25)
--> a
-T  97 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 1) HP 26/28 MP 0/0 Hu 99 $ 509 room=M vs Skeleton(L0 HP3/25)
--> a
-T  98 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 1) HP 25/28 MP 0/0 Hu 99 $ 509 room=M vs Skeleton(L0 HP3/25)
--> a
-T  99 mode=combat_victory      Galadriel Star-eyed(elf) F1@(10, 1) HP 25/28 MP 0/0 Hu 99 $ 514 room=.
--> back
-T 100 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 1) HP 25/28 MP 0/0 Hu 99 $ 514 room=.
--> l
-T 101 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 1) HP 25/28 MP 0/0 Hu 99 $ 514 room=.
--> w
-T 102 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 1) HP 25/28 MP 0/0 Hu 98 $ 514 room=.
--> i
-T 103 mode=inventory           Galadriel Star-eyed(elf) F1@( 9, 1) HP 25/28 MP 0/0 Hu 98 $ 514 room=.
--> u5
-T 104 mode=inventory           Galadriel Star-eyed(elf) F1@( 9, 1) HP 28/28 MP 0/0 Hu 98 $ 514 room=.
--> x
-T 105 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 1) HP 28/28 MP 0/0 Hu 98 $ 514 room=.
--> i
-T 106 mode=inventory           Galadriel Star-eyed(elf) F1@( 9, 1) HP 28/28 MP 0/0 Hu 98 $ 514 room=.
--> eat4
-T 107 mode=inventory           Galadriel Star-eyed(elf) F1@( 9, 1) HP 28/28 MP 0/0 Hu100 $ 514 room=.
--> x
-T 108 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 1) HP 28/28 MP 0/0 Hu100 $ 514 room=.
--> w
-T 109 mode=combat_mode         Galadriel Star-eyed(elf) F1@( 8, 1) HP 28/28 MP 0/0 Hu 99 $ 514 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 110 mode=combat_victory      Galadriel Star-eyed(elf) F1@( 8, 1) HP 28/28 MP 0/0 Hu 99 $ 522 room=.
--> back
-T 111 mode=game_loop           Galadriel Star-eyed(elf) F1@( 8, 1) HP 28/28 MP 0/0 Hu 99 $ 522 room=.
--> i
-T 112 mode=inventory           Galadriel Star-eyed(elf) F1@( 8, 1) HP 28/28 MP 0/0 Hu 99 $ 522 room=.
--> e1
-T 113 mode=inventory           Galadriel Star-eyed(elf) F1@( 8, 1) HP 28/28 MP 0/0 Hu 99 $ 522 room=.
--> x
-T 114 mode=game_loop           Galadriel Star-eyed(elf) F1@( 8, 1) HP 28/28 MP 0/0 Hu 99 $ 522 room=.
--> w
-T 115 mode=combat_mode         Galadriel Star-eyed(elf) F1@( 7, 1) HP 28/28 MP 0/0 Hu 98 $ 522 room=M vs Goblin(L0 HP12/12)
--> a
-T 116 mode=combat_mode         Galadriel Star-eyed(elf) F1@( 7, 1) HP 27/28 MP 0/0 Hu 98 $ 522 room=M vs Goblin(L0 HP12/12)
--> a
-T 117 mode=combat_victory      Galadriel Star-eyed(elf) F1@( 7, 1) HP 26/28 MP 0/0 Hu 98 $ 624 room=.
--> back
-T 118 mode=game_loop           Galadriel Star-eyed(elf) F1@( 7, 1) HP 26/28 MP 0/0 Hu 98 $ 624 room=.
--> l
-T 119 mode=game_loop           Galadriel Star-eyed(elf) F1@( 7, 1) HP 26/28 MP 0/0 Hu 98 $ 624 room=.
--> w
-T 120 mode=combat_mode         Galadriel Star-eyed(elf) F1@( 6, 1) HP 26/28 MP 0/0 Hu 97 $ 624 room=M vs Giant Rat(L0 HP22/22)
--> a
-T 121 mode=combat_victory      Galadriel Star-eyed(elf) F1@( 6, 1) HP 26/28 MP 0/0 Hu 97 $ 627 room=.
--> back
-T 122 mode=game_loop           Galadriel Star-eyed(elf) F1@( 6, 1) HP 26/28 MP 0/0 Hu 97 $ 627 room=.
--> l
-T 123 mode=game_loop           Galadriel Star-eyed(elf) F1@( 6, 1) HP 26/28 MP 0/0 Hu 97 $ 627 room=.
--> s
-T 124 mode=chest_mode          Galadriel Star-eyed(elf) F1@( 6, 2) HP 27/28 MP 0/0 Hu 96 $ 627 room=C
--> o
-T 125 mode=game_loop           Galadriel Star-eyed(elf) F1@( 6, 2) HP 27/28 MP 0/0 Hu 96 $ 627 room=.
--> w
-T 126 mode=combat_mode         Galadriel Star-eyed(elf) F1@( 5, 2) HP 27/28 MP 0/0 Hu 95 $ 627 room=M vs Giant Rat(L0 HP22/22)
--> a
-T 127 mode=combat_mode         Galadriel Star-eyed(elf) F1@( 5, 2) HP 26/28 MP 0/0 Hu 95 $ 627 room=M vs Giant Rat(L0 HP22/22)
--> a
-T 128 mode=combat_mode         Galadriel Star-eyed(elf) F1@( 5, 2) HP 25/28 MP 0/0 Hu 95 $ 627 room=M vs Giant Rat(L0 HP22/22)
--> f
-T 129 mode=flee_direction_mode Galadriel Star-eyed(elf) F1@( 5, 2) HP 25/28 MP 0/0 Hu 95 $ 627 room=M
--> s
-T 130 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 3) HP 25/28 MP 0/0 Hu 95 $ 627 room=.
--> i
-T 131 mode=inventory           Galadriel Star-eyed(elf) F1@( 5, 3) HP 25/28 MP 0/0 Hu 95 $ 627 room=.
--> u7
-T 132 mode=inventory           Galadriel Star-eyed(elf) F1@( 5, 3) HP 28/28 MP 0/0 Hu 95 $ 627 room=.
--> x
-T 133 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 3) HP 28/28 MP 0/0 Hu 95 $ 627 room=.
--> i
-T 134 mode=inventory           Galadriel Star-eyed(elf) F1@( 5, 3) HP 28/28 MP 0/0 Hu 95 $ 627 room=.
--> eat3
-T 135 mode=inventory           Galadriel Star-eyed(elf) F1@( 5, 3) HP 28/28 MP 0/0 Hu100 $ 627 room=.
--> x
-T 136 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 3) HP 28/28 MP 0/0 Hu100 $ 627 room=.
--> s
-T 137 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 4) HP 28/28 MP 0/0 Hu 99 $ 627 room=.
--> s
-T 138 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 5) HP 28/28 MP 0/0 Hu 98 $ 627 room=.
--> s
-T 139 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 6) HP 28/28 MP 0/0 Hu 97 $ 627 room=.
--> s
-T 140 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 7) HP 28/28 MP 0/0 Hu 96 $ 627 room=V
--> e
-T 141 mode=game_loop           Galadriel Star-eyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 95 $ 627 room=.
--> s
-T 142 mode=game_loop           Galadriel Star-eyed(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 94 $ 627 room=.
--> e
-T 143 mode=game_loop           Galadriel Star-eyed(elf) F1@( 7, 8) HP 28/28 MP 0/0 Hu 93 $ 627 room=.
--> i
-T 144 mode=inventory           Galadriel Star-eyed(elf) F1@( 7, 8) HP 28/28 MP 0/0 Hu 93 $ 627 room=.
--> eat3
-T 145 mode=inventory           Galadriel Star-eyed(elf) F1@( 7, 8) HP 28/28 MP 0/0 Hu 98 $ 627 room=.
--> x
-T 146 mode=game_loop           Galadriel Star-eyed(elf) F1@( 7, 8) HP 28/28 MP 0/0 Hu 98 $ 627 room=.
--> e
-T 147 mode=stairs_down_mode    Galadriel Star-eyed(elf) F1@( 8, 8) HP 28/28 MP 0/0 Hu 97 $ 627 room=D
--> d
-T 148 mode=stairs_up_mode      Galadriel Star-eyed(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 97 $ 627 room=U
--> e
-T 149 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 627 room=.
--> l
-T 150 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 96 $ 627 room=.
--> s
-T 151 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 95 $ 627 room=.
--> l
-T 152 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 95 $ 627 room=.
--> s
-T 153 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 94 $ 627 room=.
--> l
-T 154 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 3) HP 28/28 MP 0/0 Hu 94 $ 627 room=.
--> s
-T 155 mode=dungeon_mode        Galadriel Star-eyed(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 93 $ 627 room=N
--> u
-T 156 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 93 $ 627 room=N
--> l
-T 157 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 93 $ 627 room=N
--> s
-T 158 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 92 $ 627 room=.
--> l
-T 159 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 5) HP 28/28 MP 0/0 Hu 92 $ 627 room=.
--> w
-T 160 mode=garden_mode         Galadriel Star-eyed(elf) F2@( 1, 5) HP 28/28 MP 0/0 Hu 91 $ 627 room=G
--> h
-T 161 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 5) HP 28/28 MP 0/0 Hu 91 $ 627 room=.
--> l
-T 162 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 5) HP 28/28 MP 0/0 Hu 91 $ 627 room=.
--> s
-T 163 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 6) HP 28/28 MP 0/0 Hu 90 $ 627 room=.
--> e
-T 164 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 2, 6) HP 28/28 MP 0/0 Hu 89 $ 627 room=M vs Cockatrice(L1 HP25/25)
--> a
-T 165 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 2, 6) HP 27/28 MP 0/0 Hu 89 $ 627 room=M vs Cockatrice(L1 HP25/25)
--> a
-T 166 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 2, 6) HP 27/28 MP 0/0 Hu 89 $ 627 room=M vs Cockatrice(L1 HP3/25)
--> a
-T 167 mode=combat_victory      Galadriel Star-eyed(elf) F2@( 2, 6) HP 26/38 MP 0/0 Hu 89 $ 631 room=.
--> back
-T 168 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 6) HP 26/38 MP 0/0 Hu 89 $ 631 room=.
--> l
-T 169 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 6) HP 26/38 MP 0/0 Hu 89 $ 631 room=.
--> e
-T 170 mode=library_mode        Galadriel Star-eyed(elf) F2@( 3, 6) HP 26/38 MP 0/0 Hu 88 $ 631 room=L
--> r
-T 171 mode=library_read_decision_mode Galadriel Star-eyed(elf) F2@( 3, 6) HP 26/38 MP 0/0 Hu 88 $ 631 room=L
--> y
-T 172 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 6) HP 26/38 MP 0/0 Hu 88 $ 631 room=.
--> l
-T 173 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 6) HP 26/38 MP 0/0 Hu 88 $ 631 room=.
--> e
-T 174 mode=chest_mode          Galadriel Star-eyed(elf) F2@( 4, 6) HP 27/38 MP 0/0 Hu 87 $ 631 room=C
--> o
-T 175 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4, 6) HP 27/38 MP 0/0 Hu 87 $ 711 room=.
--> e
-T 176 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5, 6) HP 27/38 MP 0/0 Hu 86 $ 711 room=.
--> l
-T 177 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5, 6) HP 27/38 MP 0/0 Hu 86 $ 711 room=.
--> n
-T 178 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5, 5) HP 28/38 MP 0/0 Hu 85 $ 711 room=.
--> l
-T 179 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5, 5) HP 28/38 MP 0/0 Hu 85 $ 711 room=.
--> e
-T 180 mode=library_mode        Galadriel Star-eyed(elf) F2@( 6, 5) HP 28/38 MP 0/0 Hu 84 $ 711 room=L
--> r
-T 181 mode=library_read_decision_mode Galadriel Star-eyed(elf) F2@( 6, 5) HP 28/38 MP 0/0 Hu 84 $ 711 room=L
--> y
-T 182 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 5) HP 28/38 MP 0/0 Hu 84 $ 711 room=.
--> s
-T 183 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 6) HP 28/38 MP 0/0 Hu 83 $ 711 room=.
--> l
-T 184 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 6) HP 28/38 MP 0/0 Hu 83 $ 711 room=.
--> s
-T 185 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 7) HP 28/38 MP 0/0 Hu 82 $ 711 room=.
--> l
-T 186 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 7) HP 28/38 MP 0/0 Hu 82 $ 711 room=.
--> e
-T 187 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 7) HP 29/38 MP 0/0 Hu 81 $ 711 room=.
--> l
-T 188 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 7) HP 29/38 MP 0/0 Hu 81 $ 711 room=.
--> s
-T 189 mode=altar_mode          Galadriel Star-eyed(elf) F2@( 7, 8) HP 29/38 MP 0/0 Hu 80 $ 711 room=A
--> pray
-T 190 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 8) HP 38/38 MP 0/0 Hu100 $ 711 room=.
--> s
-T 191 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu 99 $ 711 room=.
--> i
-T 192 mode=inventory           Galadriel Star-eyed(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu 99 $ 711 room=.
--> eat3
-T 193 mode=inventory           Galadriel Star-eyed(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu100 $ 711 room=.
--> x
-T 194 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu100 $ 711 room=.
--> l
-T 195 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 9) HP 38/38 MP 0/0 Hu100 $ 711 room=.
--> e
-T 196 mode=pool_mode           Galadriel Star-eyed(elf) F2@( 8, 9) HP 38/38 MP 0/0 Hu 99 $ 711 room=P
--> dr
-T 197 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 9) HP 38/44 MP 0/0 Hu 99 $ 711 room=.
--> l
-T 198 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 9) HP 38/44 MP 0/0 Hu 99 $ 711 room=.
--> s
-T 199 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8,10) HP 38/44 MP 0/0 Hu 98 $ 711 room=.
--> l
-T 200 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8,10) HP 38/44 MP 0/0 Hu 98 $ 711 room=.
--> e
-T 201 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,10) HP 39/44 MP 0/0 Hu 97 $ 711 room=.
--> w
-T 202 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8,10) HP 39/44 MP 0/0 Hu 96 $ 711 room=.
--> n
-T 203 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 9) HP 40/44 MP 0/0 Hu 95 $ 711 room=.
--> w
-T 204 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 9) HP 40/44 MP 0/0 Hu 94 $ 711 room=.
--> n
-T 205 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 8) HP 41/44 MP 0/0 Hu 93 $ 711 room=.
--> n
-T 206 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 7) HP 41/44 MP 0/0 Hu 92 $ 711 room=.
--> n
-T 207 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 6) HP 42/44 MP 0/0 Hu 91 $ 711 room=.
--> w
-T 208 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 6) HP 42/44 MP 0/0 Hu 90 $ 711 room=.
--> w
-T 209 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5, 6) HP 43/44 MP 0/0 Hu 89 $ 711 room=.
--> w
-T 210 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4, 6) HP 43/44 MP 0/0 Hu 88 $ 711 room=.
--> w
-T 211 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 6) HP 44/44 MP 0/0 Hu 87 $ 711 room=.
--> n
-T 212 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 5) HP 44/44 MP 0/0 Hu 86 $ 711 room=.
--> n
-T 213 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 4) HP 44/44 MP 0/0 Hu 85 $ 711 room=.
--> w
-T 214 mode=dungeon_mode        Galadriel Star-eyed(elf) F2@( 2, 4) HP 44/44 MP 0/0 Hu 84 $ 711 room=N
--> u
-T 215 mode=dungeon_unlocked_mode Galadriel Star-eyed(elf) F2@( 2, 4) HP 44/44 MP 0/0 Hu 84 $ 711 room=N
--> r
-T 216 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 4) HP 44/44 MP 0/0 Hu 84 $ 888 room=N
--> s
-T 217 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 5) HP 44/44 MP 0/0 Hu 83 $ 888 room=.
--> s
-T 218 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 6) HP 44/44 MP 0/0 Hu 82 $ 888 room=.
--> e
-T 219 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 6) HP 44/44 MP 0/0 Hu 81 $ 888 room=.
--> e
-T 220 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4, 6) HP 44/44 MP 0/0 Hu 80 $ 888 room=.
--> e
-T 221 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5, 6) HP 44/44 MP 0/0 Hu 79 $ 888 room=.
--> e
-T 222 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 6) HP 44/44 MP 0/0 Hu 78 $ 888 room=.
--> s
-T 223 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 7) HP 44/44 MP 0/0 Hu 77 $ 888 room=.
--> e
-T 224 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 7) HP 44/44 MP 0/0 Hu 76 $ 888 room=.
--> s
-T 225 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 8) HP 44/44 MP 0/0 Hu 75 $ 888 room=.
--> s
-T 226 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 9) HP 44/44 MP 0/0 Hu 74 $ 888 room=.
--> w
-T 227 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 9) HP 44/44 MP 0/0 Hu 73 $ 888 room=.
--> s
-T 228 mode=dungeon_mode        Galadriel Star-eyed(elf) F2@( 6,10) HP 44/44 MP 0/0 Hu 72 $ 888 room=N
--> u
-T 229 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,10) HP 44/44 MP 0/0 Hu 72 $ 888 room=N
--> s
-T 230 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 6,11) HP 44/44 MP 0/0 Hu 71 $ 888 room=M vs Crawling Claw(L1 HP5/5)
--> a
-T 231 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 6,11) HP 43/44 MP 0/0 Hu 71 $ 888 room=M vs Crawling Claw(L1 HP5/5)
--> a
-T 232 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 6,11) HP 42/44 MP 0/0 Hu 71 $ 888 room=M vs Crawling Claw(L1 HP5/5)
--> a
-T 233 mode=combat_victory      Galadriel Star-eyed(elf) F2@( 6,11) HP 42/44 MP 0/0 Hu 71 $ 902 room=.
--> back
-T 234 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,11) HP 42/44 MP 0/0 Hu 71 $ 902 room=.
--> l
-T 235 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,11) HP 42/44 MP 0/0 Hu 71 $ 902 room=.
--> w
-T 236 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5,11) HP 42/44 MP 0/0 Hu 70 $ 902 room=.
--> n
-T 237 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5,10) HP 42/44 MP 0/0 Hu 69 $ 902 room=.
--> w
-T 238 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4,10) HP 42/44 MP 0/0 Hu 68 $ 902 room=.
--> l
-T 239 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4,10) HP 42/44 MP 0/0 Hu 68 $ 902 room=.
--> w
-T 240 mode=chest_mode          Galadriel Star-eyed(elf) F2@( 3,10) HP 43/44 MP 0/0 Hu 67 $ 902 room=C
--> o
-T 241 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3,10) HP 43/44 MP 0/0 Hu 67 $ 932 room=.
--> e
-T 242 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4,10) HP 43/44 MP 0/0 Hu 66 $ 932 room=.
--> n
-T 243 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4, 9) HP 43/44 MP 0/0 Hu 65 $ 932 room=.
--> n
-T 244 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4, 8) HP 43/44 MP 0/0 Hu 64 $ 932 room=.
--> l
-T 245 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4, 8) HP 43/44 MP 0/0 Hu 64 $ 932 room=.
--> w
-T 246 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 8) HP 44/44 MP 0/0 Hu 63 $ 932 room=.
--> w
-T 247 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 2, 8) HP 44/44 MP 0/0 Hu 62 $ 932 room=M vs Cockatrice(L1 HP25/25)
--> a
-T 248 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 2, 8) HP 44/44 MP 0/0 Hu 62 $ 932 room=M vs Cockatrice(L1 HP1/25)
--> a
-T 249 mode=combat_victory      Galadriel Star-eyed(elf) F2@( 2, 8) HP 43/44 MP 0/0 Hu 62 $ 946 room=.
--> back
-T 250 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 8) HP 43/44 MP 0/0 Hu 62 $ 946 room=.
--> w
-T 251 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 1, 8) HP 43/44 MP 0/0 Hu 61 $ 946 room=M vs Giant Centipede(L1 HP15/15)
--> a
-T 252 mode=combat_victory      Galadriel Star-eyed(elf) F2@( 1, 8) HP 43/44 MP 0/0 Hu 61 $ 954 room=.
--> back
-T 253 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 8) HP 43/44 MP 0/0 Hu 61 $ 954 room=.
--> i
-T 254 mode=inventory           Galadriel Star-eyed(elf) F2@( 1, 8) HP 43/44 MP 0/0 Hu 61 $ 954 room=.
--> eat4
-T 255 mode=inventory           Galadriel Star-eyed(elf) F2@( 1, 8) HP 43/44 MP 0/0 Hu 67 $ 954 room=.
--> eat1
-T 256 mode=inventory           Galadriel Star-eyed(elf) F2@( 1, 8) HP 43/44 MP 0/0 Hu100 $ 954 room=.
--> x
-T 257 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 8) HP 43/44 MP 0/0 Hu100 $ 954 room=.
--> n
-T 258 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 7) HP 44/44 MP 0/0 Hu 99 $ 954 room=.
--> e
-T 259 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 7) HP 44/44 MP 0/0 Hu 98 $ 954 room=.
--> n
-T 260 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 6) HP 44/44 MP 0/0 Hu 97 $ 954 room=.
--> e
-T 261 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 6) HP 44/44 MP 0/0 Hu 96 $ 954 room=.
--> s
-T 262 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 7) HP 44/44 MP 0/0 Hu 95 $ 954 room=.
--> s
-T 263 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 8) HP 44/44 MP 0/0 Hu 94 $ 954 room=.
--> e
-T 264 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4, 8) HP 44/44 MP 0/0 Hu 93 $ 954 room=.
--> s
-T 265 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4, 9) HP 44/44 MP 0/0 Hu 92 $ 954 room=.
--> s
-T 266 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4,10) HP 44/44 MP 0/0 Hu 91 $ 954 room=.
--> i
-T 267 mode=inventory           Galadriel Star-eyed(elf) F2@( 4,10) HP 44/44 MP 0/0 Hu 91 $ 954 room=.
--> eat2
-T 268 mode=inventory           Galadriel Star-eyed(elf) F2@( 4,10) HP 44/44 MP 0/0 Hu 97 $ 954 room=.
--> x
-T 269 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4,10) HP 44/44 MP 0/0 Hu 97 $ 954 room=.
--> e
-T 270 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5,10) HP 44/44 MP 0/0 Hu 96 $ 954 room=.
--> e
-T 271 mode=dungeon_mode        Galadriel Star-eyed(elf) F2@( 6,10) HP 44/44 MP 0/0 Hu 95 $ 954 room=N
--> u
-T 272 mode=dungeon_unlocked_mode Galadriel Star-eyed(elf) F2@( 6,10) HP 44/44 MP 0/0 Hu 95 $ 954 room=N
--> r
-T 273 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,10) HP 44/44 MP 0/0 Hu 95 $ 954 room=N
--> n
-T 274 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 9) HP 44/44 MP 0/0 Hu 94 $ 954 room=.
--> e
-T 275 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 9) HP 44/44 MP 0/0 Hu 93 $ 954 room=.
--> e
-T 276 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 9) HP 44/44 MP 0/0 Hu 92 $ 954 room=.
--> s
-T 277 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8,10) HP 44/44 MP 0/0 Hu 91 $ 954 room=.
--> e
-T 278 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,10) HP 44/44 MP 0/0 Hu 90 $ 954 room=.
--> w
-T 279 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8,10) HP 44/44 MP 0/0 Hu 89 $ 954 room=.
--> n
-T 280 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 9) HP 44/44 MP 0/0 Hu 88 $ 954 room=.
--> w
-T 281 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 9) HP 44/44 MP 0/0 Hu 87 $ 954 room=.
--> n
-T 282 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 8) HP 44/44 MP 0/0 Hu 86 $ 954 room=.
--> n
-T 283 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 7) HP 44/44 MP 0/0 Hu 85 $ 954 room=.
--> n
-T 284 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 6) HP 44/44 MP 0/0 Hu 84 $ 954 room=.
--> e
-T 285 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 6) HP 44/44 MP 0/0 Hu 83 $ 954 room=.
--> n
-T 286 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 8, 5) HP 44/44 MP 0/0 Hu 82 $ 954 room=M vs Giant Centipede(L1 HP15/15)
--> a
-T 287 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 8, 5) HP 43/44 MP 0/0 Hu 82 $ 954 room=M vs Giant Centipede(L1 HP15/15)
--> a
-T 288 mode=combat_victory      Galadriel Star-eyed(elf) F2@( 8, 5) HP 43/44 MP 0/0 Hu 82 $ 974 room=.
--> back
-T 289 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 5) HP 43/44 MP 0/0 Hu 82 $ 974 room=.
--> l
-T 290 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 5) HP 43/44 MP 0/0 Hu 82 $ 974 room=.
--> n
-T 291 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 4) HP 43/44 MP 0/0 Hu 81 $ 974 room=.
--> n
-T 292 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 3) HP 43/44 MP 0/0 Hu 80 $ 974 room=.
--> n
-T 293 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 2) HP 43/44 MP 0/0 Hu 79 $ 974 room=.
--> l
-T 294 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 2) HP 43/44 MP 0/0 Hu 79 $ 974 room=.
--> n
-T 295 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 1) HP 44/44 MP 0/0 Hu 78 $ 974 room=.
--> l
-T 296 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 1) HP 44/44 MP 0/0 Hu 78 $ 974 room=.
--> e
-T 297 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 1) HP 44/44 MP 0/0 Hu 77 $ 974 room=.
--> s
-T 298 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 9, 2) HP 44/44 MP 0/0 Hu 76 $ 974 room=M vs Harpy(L1 HP28/28)
--> f
-T 299 mode=flee_direction_mode Galadriel Star-eyed(elf) F2@( 9, 2) HP 43/44 MP 0/0 Hu 76 $ 974 room=M
--> e
-T 300 mode=pool_mode           Galadriel Star-eyed(elf) F2@(10, 2) HP 43/44 MP 0/0 Hu 76 $ 974 room=P
--> dr
-T 301 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 2) HP 43/44 MP 0/0 Hu 76 $ 974 room=.
--> l
-T 302 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 2) HP 43/44 MP 0/0 Hu 76 $ 974 room=.
--> s
-T 303 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 3) HP 43/44 MP 0/0 Hu 75 $ 974 room=.
--> l
-T 304 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 3) HP 43/44 MP 0/0 Hu 75 $ 974 room=.
--> e
-T 305 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 3) HP 43/44 MP 0/0 Hu 74 $ 974 room=.
--> l
-T 306 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 3) HP 43/44 MP 0/0 Hu 74 $ 974 room=.
--> s
-T 307 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 4) HP 43/44 MP 0/0 Hu 73 $ 974 room=.
--> l
-T 308 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 4) HP 43/44 MP 0/0 Hu 73 $ 974 room=.
--> e
-T 309 mode=game_loop           Galadriel Star-eyed(elf) F2@(12, 4) HP 44/44 MP 0/0 Hu 72 $ 974 room=.
--> l
-T 310 mode=game_loop           Galadriel Star-eyed(elf) F2@(12, 4) HP 44/44 MP 0/0 Hu 72 $ 974 room=.
--> e
-T 311 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 4) HP 44/44 MP 0/0 Hu 71 $ 974 room=.
--> l
-T 312 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 4) HP 44/44 MP 0/0 Hu 71 $ 974 room=.
--> e
-T 313 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 4) HP 44/44 MP 0/0 Hu 70 $ 974 room=.
--> l
-T 314 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 4) HP 44/44 MP 0/0 Hu 70 $ 974 room=.
--> e
-T 315 mode=pool_mode           Galadriel Star-eyed(elf) F2@(15, 4) HP 44/44 MP 0/0 Hu 69 $ 974 room=P
--> dr
-T 316 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 4) HP 26/44 MP 0/0 Hu 69 $ 974 room=.
--> l
-T 317 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 4) HP 26/44 MP 0/0 Hu 69 $ 974 room=.
--> s
-T 318 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 5) HP 17/44 MP 0/0 Hu 68 $ 974 room=.
--> s
-T 319 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 6) HP 8/44 MP 0/0 Hu 67 $ 974 room=.
--> i
-T 320 mode=inventory           Galadriel Star-eyed(elf) F2@(15, 6) HP 8/44 MP 0/0 Hu 67 $ 974 room=.
--> u7
-T 321 mode=inventory           Galadriel Star-eyed(elf) F2@(15, 6) HP 44/44 MP 0/0 Hu 67 $ 974 room=.
--> x
-T 322 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 6) HP 44/44 MP 0/0 Hu 67 $ 974 room=.
--> l
-T 323 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 6) HP 44/44 MP 0/0 Hu 67 $ 974 room=.
--> w
-T 324 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 1049 room=V
--> r6
-T 325 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 1017 room=V
--> b13
-T 326 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 1007 room=V
--> b7
-T 327 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 957 room=V
--> b7
-T 328 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 927 room=V
--> b11
-T 329 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 922 room=V
--> b11
-T 330 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 917 room=V
--> b10
-T 331 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 767 room=V
--> b5
-T 332 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 707 room=V
--> b5
-T 333 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 632 room=V
--> b7
-T 334 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 532 room=V
--> b1
-T 335 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 332 room=V
+T  37 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 330 room=V
+-> b6
+T  38 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 180 room=V
 -> b2
-T 336 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 242 room=V
--> b2
-T 337 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 162 room=V
--> id17
-T 338 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 87 room=V
+T  39 mode=vendor_shop         Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 165 room=V
 -> x
-T 339 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 87 room=V
+T  40 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 165 room=V
 -> i
-T 340 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 6) HP 35/44 MP 0/0 Hu 66 $ 87 room=V
--> u12
-T 341 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 66 $ 87 room=V
--> u9
-T 342 mode=upgrade_scroll_mode Galadriel Star-eyed(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 66 $ 87 room=V
--> 1
-T 343 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 66 $ 87 room=V
+T  41 mode=inventory           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 165 room=V
+-> e2
+T  42 mode=inventory           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 165 room=V
 -> x
-T 344 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 66 $ 87 room=V
--> i
-T 345 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 66 $ 87 room=V
--> e1
-T 346 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 66 $ 87 room=V
--> e7
-T 347 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 66 $ 87 room=V
--> x
-T 348 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 6) HP 44/44 MP 0/0 Hu 66 $ 87 room=V
--> w
-T 349 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 6) HP 36/44 MP 0/0 Hu 65 $ 87 room=.
--> s
-T 350 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 7) HP 36/44 MP 0/0 Hu 64 $ 87 room=.
+T  43 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 165 room=V
 -> l
-T 351 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 7) HP 36/44 MP 0/0 Hu 64 $ 87 room=.
--> s
-T 352 mode=chest_mode          Galadriel Star-eyed(elf) F2@(13, 8) HP 36/44 MP 0/0 Hu 63 $ 87 room=C
--> o
-T 353 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 9) HP 36/44 MP 0/0 Hu 62 $ 87 room=.
--> s
-T 354 mode=game_loop           Galadriel Star-eyed(elf) F2@(13,10) HP 37/44 MP 0/0 Hu 61 $ 87 room=.
--> n
-T 355 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 9) HP 37/44 MP 0/0 Hu 60 $ 87 room=.
+T  44 mode=game_loop           Galadriel Star-eyed(elf) F1@( 5, 7) HP 27/28 MP 0/0 Hu 91 $ 165 room=V
 -> e
-T 356 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 9) HP 37/44 MP 0/0 Hu 59 $ 87 room=.
--> n
-T 357 mode=garden_mode         Galadriel Star-eyed(elf) F2@(14, 8) HP 37/44 MP 0/0 Hu 58 $ 87 room=G
+T  45 mode=combat_mode         Galadriel Star-eyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 90 $ 165 room=M vs Kobold(L0 HP8/8)
+-> a
+T  46 mode=combat_victory      Galadriel Star-eyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 90 $ 168 room=.
+-> back
+T  47 mode=game_loop           Galadriel Star-eyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 90 $ 168 room=.
+-> l
+T  48 mode=game_loop           Galadriel Star-eyed(elf) F1@( 6, 7) HP 28/28 MP 0/0 Hu 90 $ 168 room=.
+-> e
+T  49 mode=chest_mode          Galadriel Star-eyed(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 89 $ 168 room=C
+-> o
+T  50 mode=game_loop           Galadriel Star-eyed(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 89 $ 348 room=.
+-> l
+T  51 mode=game_loop           Galadriel Star-eyed(elf) F1@( 7, 7) HP 28/28 MP 0/0 Hu 89 $ 348 room=.
+-> e
+T  52 mode=game_loop           Galadriel Star-eyed(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 88 $ 348 room=.
+-> l
+T  53 mode=game_loop           Galadriel Star-eyed(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 88 $ 348 room=.
+-> e
+T  54 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 87 $ 348 room=.
+-> l
+T  55 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 87 $ 348 room=.
+-> e
+T  56 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu 86 $ 348 room=.
+-> l
+T  57 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 7) HP 28/28 MP 0/0 Hu 86 $ 348 room=.
+-> e
+T  58 mode=garden_mode         Galadriel Star-eyed(elf) F1@(11, 7) HP 28/28 MP 0/0 Hu 85 $ 348 room=G
 -> h
-T 358 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 8) HP 37/44 MP 0/0 Hu 58 $ 87 room=.
+T  59 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 7) HP 28/28 MP 0/0 Hu 85 $ 348 room=.
+-> l
+T  60 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 7) HP 28/28 MP 0/0 Hu 85 $ 348 room=.
 -> n
-T 359 mode=combat_mode         Galadriel Star-eyed(elf) F2@(14, 7) HP 37/44 MP 0/0 Hu 57 $ 87 room=M vs Sewer Rat(L1 HP10/10)
+T  61 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 348 room=M vs Kobold(L0 HP8/8)
 -> a
-T 360 mode=combat_victory      Galadriel Star-eyed(elf) F2@(14, 7) HP 36/44 MP 0/0 Hu 57 $ 89 room=.
+T  62 mode=combat_victory      Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 351 room=.
 -> back
-T 361 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 7) HP 36/44 MP 0/0 Hu 57 $ 89 room=.
--> e
-T 362 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 7) HP 34/44 MP 0/0 Hu 56 $ 89 room=.
--> s
-T 363 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 8) HP 32/44 MP 0/0 Hu 55 $ 89 room=.
--> n
-T 364 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 7) HP 32/44 MP 0/0 Hu 54 $ 89 room=.
--> e
-T 365 mode=game_loop           Galadriel Star-eyed(elf) F2@(16, 7) HP 32/44 MP 0/0 Hu 53 $ 89 room=.
--> e
-T 366 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 7) HP 32/44 MP 0/0 Hu 52 $ 89 room=.
--> e
-T 367 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 7) HP 32/44 MP 0/0 Hu 51 $ 89 room=.
+T  63 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 351 room=.
 -> i
-T 368 mode=inventory           Galadriel Star-eyed(elf) F2@(18, 7) HP 32/44 MP 0/0 Hu 51 $ 89 room=.
--> u12
-T 369 mode=inventory           Galadriel Star-eyed(elf) F2@(18, 7) HP 44/44 MP 0/0 Hu 51 $ 89 room=.
--> x
-T 370 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 7) HP 44/44 MP 0/0 Hu 51 $ 89 room=.
--> l
-T 371 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 7) HP 44/44 MP 0/0 Hu 51 $ 89 room=.
--> e
-T 372 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 44/44 MP 0/0 Hu 50 $ 89 room=M vs Gnoll(L1 HP45/45)
--> a
-T 373 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 43/44 MP 0/0 Hu 50 $ 89 room=M vs Gnoll(L1 HP45/45)
--> a
-T 374 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 42/44 MP 0/0 Hu 50 $ 89 room=M vs Gnoll(L1 HP45/45)
--> a
-T 375 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 41/44 MP 0/0 Hu 50 $ 89 room=M vs Gnoll(L1 HP45/45)
--> f
-T 376 mode=flee_direction_mode Galadriel Star-eyed(elf) F2@(19, 7) HP 41/44 MP 0/0 Hu 50 $ 89 room=M
--> w
-T 377 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 7) HP 41/44 MP 0/0 Hu 50 $ 89 room=.
--> s
-T 378 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 8) HP 41/44 MP 0/0 Hu 49 $ 89 room=.
--> i
-T 379 mode=inventory           Galadriel Star-eyed(elf) F2@(18, 8) HP 41/44 MP 0/0 Hu 49 $ 89 room=.
--> u12
-T 380 mode=inventory           Galadriel Star-eyed(elf) F2@(18, 8) HP 44/44 MP 0/0 Hu 49 $ 89 room=.
--> x
-T 381 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 8) HP 44/44 MP 0/0 Hu 49 $ 89 room=.
--> i
-T 382 mode=inventory           Galadriel Star-eyed(elf) F2@(18, 8) HP 44/44 MP 0/0 Hu 49 $ 89 room=.
--> eat1
-T 383 mode=inventory           Galadriel Star-eyed(elf) F2@(18, 8) HP 44/44 MP 0/0 Hu 99 $ 89 room=.
--> x
-T 384 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 8) HP 44/44 MP 0/0 Hu 99 $ 89 room=.
--> l
-T 385 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 8) HP 44/44 MP 0/0 Hu 99 $ 89 room=.
--> e
-T 386 mode=altar_mode          Galadriel Star-eyed(elf) F2@(19, 8) HP 44/44 MP 0/0 Hu 98 $ 89 room=A
--> pray
-T 387 mode=game_loop           Galadriel Star-eyed(elf) F2@(19, 8) HP 44/44 MP 0/0 Hu 98 $ 89 room=.
--> l
-T 388 mode=game_loop           Galadriel Star-eyed(elf) F2@(19, 8) HP 44/44 MP 0/0 Hu 98 $ 89 room=.
--> s
-T 389 mode=game_loop           Galadriel Star-eyed(elf) F2@(19, 9) HP 44/44 MP 0/0 Hu 97 $ 89 room=.
--> i
-T 390 mode=inventory           Galadriel Star-eyed(elf) F2@(19, 9) HP 44/44 MP 0/0 Hu 97 $ 89 room=.
--> eat2
-T 391 mode=inventory           Galadriel Star-eyed(elf) F2@(19, 9) HP 44/44 MP 0/0 Hu100 $ 89 room=.
--> x
-T 392 mode=game_loop           Galadriel Star-eyed(elf) F2@(19, 9) HP 44/44 MP 0/0 Hu100 $ 89 room=.
--> s
-T 393 mode=oracle_mode         Galadriel Star-eyed(elf) F2@(19,10) HP 44/44 MP 0/0 Hu 99 $ 89 room=O
--> w
-T 394 mode=chest_mode          Galadriel Star-eyed(elf) F2@(18,10) HP 44/44 MP 0/0 Hu 98 $ 89 room=C
--> o
-T 395 mode=game_loop           Galadriel Star-eyed(elf) F2@(18,10) HP 44/44 MP 0/0 Hu 98 $ 129 room=.
--> l
-T 396 mode=game_loop           Galadriel Star-eyed(elf) F2@(18,10) HP 44/44 MP 0/0 Hu 98 $ 129 room=.
--> s
-T 397 mode=combat_mode         Galadriel Star-eyed(elf) F2@(18,11) HP 44/44 MP 0/0 Hu 97 $ 129 room=M vs Sewer Rat(L1 HP10/10)
--> f
-T 398 mode=flee_direction_mode Galadriel Star-eyed(elf) F2@(18,11) HP 44/44 MP 0/0 Hu 97 $ 129 room=M
--> s
-T 399 mode=game_loop           Galadriel Star-eyed(elf) F2@(18,12) HP 44/44 MP 0/0 Hu 97 $ 129 room=.
--> l
-T 400 mode=game_loop           Galadriel Star-eyed(elf) F2@(18,12) HP 44/44 MP 0/0 Hu 97 $ 129 room=.
--> l
-T 401 mode=game_loop           Galadriel Star-eyed(elf) F2@(18,12) HP 44/44 MP 0/0 Hu 97 $ 129 room=.
--> w
-T 402 mode=game_loop           Galadriel Star-eyed(elf) F2@(17,12) HP 44/44 MP 0/0 Hu 96 $ 129 room=.
--> l
-T 403 mode=game_loop           Galadriel Star-eyed(elf) F2@(17,12) HP 44/44 MP 0/0 Hu 96 $ 129 room=.
--> s
-T 404 mode=chest_mode          Galadriel Star-eyed(elf) F2@(17,13) HP 44/44 MP 0/0 Hu 95 $ 129 room=C
--> e
-T 405 mode=game_loop           Galadriel Star-eyed(elf) F2@(18,13) HP 44/44 MP 0/0 Hu 94 $ 129 room=.
--> e
-T 406 mode=game_loop           Galadriel Star-eyed(elf) F2@(19,13) HP 44/44 MP 0/0 Hu 93 $ 129 room=.
--> n
-T 407 mode=game_loop           Galadriel Star-eyed(elf) F2@(19,12) HP 44/44 MP 0/0 Hu 92 $ 129 room=.
--> w
-T 408 mode=game_loop           Galadriel Star-eyed(elf) F2@(18,12) HP 44/44 MP 0/0 Hu 91 $ 129 room=.
--> n
-T 409 mode=combat_mode         Galadriel Star-eyed(elf) F2@(18,11) HP 44/44 MP 0/0 Hu 90 $ 129 room=M vs Sewer Rat(L1 HP10/10)
--> a
-T 410 mode=combat_victory      Galadriel Star-eyed(elf) F2@(18,11) HP 44/44 MP 0/0 Hu 90 $ 139 room=.
--> back
-T 411 mode=game_loop           Galadriel Star-eyed(elf) F2@(18,11) HP 44/44 MP 0/0 Hu 90 $ 139 room=.
--> e
-T 412 mode=game_loop           Galadriel Star-eyed(elf) F2@(19,11) HP 44/44 MP 0/0 Hu 89 $ 139 room=.
--> n
-T 413 mode=game_loop           Galadriel Star-eyed(elf) F2@(19,10) HP 44/44 MP 0/0 Hu 88 $ 139 room=O
--> n
-T 414 mode=game_loop           Galadriel Star-eyed(elf) F2@(19, 9) HP 44/44 MP 0/0 Hu 87 $ 139 room=.
--> n
-T 415 mode=game_loop           Galadriel Star-eyed(elf) F2@(19, 8) HP 44/44 MP 0/0 Hu 86 $ 139 room=.
--> n
-T 416 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 44/44 MP 0/0 Hu 85 $ 139 room=M vs Gnoll(L1 HP45/45)
--> a
-T 417 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 43/44 MP 0/0 Hu 85 $ 139 room=M vs Gnoll(L1 HP45/45)
--> a
-T 418 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 42/44 MP 0/0 Hu 85 $ 139 room=M vs Gnoll(L1 HP45/45)
--> a
-T 419 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 41/44 MP 0/0 Hu 85 $ 139 room=M vs Gnoll(L1 HP45/45)
--> a
-T 420 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 40/44 MP 0/0 Hu 85 $ 139 room=M vs Gnoll(L1 HP45/45)
--> a
-T 421 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 7) HP 39/44 MP 0/0 Hu 85 $ 139 room=M vs Gnoll(L1 HP16/45)
--> a
-T 422 mode=combat_victory      Galadriel Star-eyed(elf) F2@(19, 7) HP 38/54 MP 0/0 Hu 85 $ 145 room=.
--> back
-T 423 mode=game_loop           Galadriel Star-eyed(elf) F2@(19, 7) HP 38/54 MP 0/0 Hu 85 $ 145 room=.
--> w
-T 424 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 7) HP 38/54 MP 0/0 Hu 84 $ 145 room=.
--> w
-T 425 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 7) HP 38/54 MP 0/0 Hu 83 $ 145 room=.
--> w
-T 426 mode=game_loop           Galadriel Star-eyed(elf) F2@(16, 7) HP 38/54 MP 0/0 Hu 82 $ 145 room=.
--> w
-T 427 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 7) HP 39/54 MP 0/0 Hu 81 $ 145 room=.
--> w
-T 428 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 7) HP 39/54 MP 0/0 Hu 80 $ 145 room=.
--> i
-T 429 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 7) HP 39/54 MP 0/0 Hu 80 $ 145 room=.
--> u12
-T 430 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 7) HP 54/54 MP 0/0 Hu 80 $ 145 room=.
--> x
-T 431 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 7) HP 54/54 MP 0/0 Hu 80 $ 145 room=.
--> i
-T 432 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 7) HP 54/54 MP 0/0 Hu 80 $ 145 room=.
--> eat3
-T 433 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 7) HP 54/54 MP 0/0 Hu 85 $ 145 room=.
--> x
-T 434 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 7) HP 54/54 MP 0/0 Hu 85 $ 145 room=.
--> w
-T 435 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 7) HP 54/54 MP 0/0 Hu 84 $ 145 room=.
--> w
-T 436 mode=game_loop           Galadriel Star-eyed(elf) F2@(12, 7) HP 54/54 MP 0/0 Hu 83 $ 145 room=.
--> w
-T 437 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 7) HP 54/54 MP 0/0 Hu 82 $ 145 room=.
--> w
-T 438 mode=combat_mode         Galadriel Star-eyed(elf) F2@(10, 7) HP 54/54 MP 0/0 Hu 81 $ 145 room=M vs Gnoll(L1 HP45/45)
--> a
-T 439 mode=combat_mode         Galadriel Star-eyed(elf) F2@(10, 7) HP 53/54 MP 0/0 Hu 81 $ 145 room=M vs Gnoll(L1 HP16/45)
--> a
-T 440 mode=combat_victory      Galadriel Star-eyed(elf) F2@(10, 7) HP 53/54 MP 0/0 Hu 81 $ 151 room=.
--> back
-T 441 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 7) HP 53/54 MP 0/0 Hu 81 $ 151 room=.
--> l
-T 442 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 7) HP 53/54 MP 0/0 Hu 81 $ 151 room=.
--> w
-T 443 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 7) HP 53/54 MP 0/0 Hu 80 $ 151 room=.
--> i
-T 444 mode=inventory           Galadriel Star-eyed(elf) F2@( 9, 7) HP 53/54 MP 0/0 Hu 80 $ 151 room=.
--> eat2
-T 445 mode=inventory           Galadriel Star-eyed(elf) F2@( 9, 7) HP 53/54 MP 0/0 Hu 87 $ 151 room=.
--> x
-T 446 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 7) HP 53/54 MP 0/0 Hu 87 $ 151 room=.
--> l
-T 447 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 7) HP 53/54 MP 0/0 Hu 87 $ 151 room=.
--> s
-T 448 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 9, 8) HP 54/54 MP 0/0 Hu 86 $ 151 room=M vs Wight(L1 HP40/40)
--> a
-T 449 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 9, 8) HP 54/54 MP 0/0 Hu 86 $ 151 room=M vs Wight(L1 HP12/40)
--> a
-T 450 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 9, 8) HP 50/54 MP 0/0 Hu 86 $ 151 room=M vs Wight(L1 HP12/40)
--> a
-T 451 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 9, 8) HP 50/54 MP 0/0 Hu 86 $ 151 room=M vs Wight(L1 HP12/40)
--> a
-T 452 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 9, 8) HP 46/54 MP 0/0 Hu 86 $ 151 room=M vs Wight(L1 HP12/40)
--> a
-T 453 mode=combat_victory      Galadriel Star-eyed(elf) F2@( 9, 8) HP 36/54 MP 0/0 Hu 86 $ 169 room=.
--> back
-T 454 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 8) HP 36/54 MP 0/0 Hu 86 $ 169 room=.
--> i
-T 455 mode=inventory           Galadriel Star-eyed(elf) F2@( 9, 8) HP 36/54 MP 0/0 Hu 86 $ 169 room=.
--> u12
-T 456 mode=inventory           Galadriel Star-eyed(elf) F2@( 9, 8) HP 54/54 MP 0/0 Hu 86 $ 169 room=.
--> x
-T 457 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 8) HP 54/54 MP 0/0 Hu 86 $ 169 room=.
--> n
-T 458 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 7) HP 54/54 MP 0/0 Hu 85 $ 169 room=.
--> n
-T 459 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 6) HP 54/54 MP 0/0 Hu 84 $ 169 room=.
--> w
-T 460 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 6) HP 54/54 MP 0/0 Hu 83 $ 169 room=.
--> l
-T 461 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 6) HP 54/54 MP 0/0 Hu 83 $ 169 room=.
--> s
-T 462 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 7) HP 54/54 MP 0/0 Hu 82 $ 169 room=.
--> w
-T 463 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 7) HP 54/54 MP 0/0 Hu 81 $ 169 room=.
--> s
-T 464 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 8) HP 54/54 MP 0/0 Hu 80 $ 169 room=.
--> s
-T 465 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 9) HP 54/54 MP 0/0 Hu 79 $ 169 room=.
--> i
-T 466 mode=inventory           Galadriel Star-eyed(elf) F2@( 7, 9) HP 54/54 MP 0/0 Hu 79 $ 169 room=.
--> eat1
-T 467 mode=inventory           Galadriel Star-eyed(elf) F2@( 7, 9) HP 54/54 MP 0/0 Hu100 $ 169 room=.
--> u15
-T 468 mode=altar_mode          Galadriel Star-eyed(elf) F4@( 6, 3) HP 54/54 MP 0/0 Hu100 $ 169 room=A
--> pray
-T 469 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 3) HP 54/54 MP 0/0 Hu100 $ 169 room=.
--> l
-T 470 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 3) HP 54/54 MP 0/0 Hu100 $ 169 room=.
--> s
-T 471 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 4) HP 54/54 MP 0/0 Hu 99 $ 169 room=.
--> i
-T 472 mode=inventory           Galadriel Star-eyed(elf) F4@( 6, 4) HP 54/54 MP 0/0 Hu 99 $ 169 room=.
--> eat2
-T 473 mode=inventory           Galadriel Star-eyed(elf) F4@( 6, 4) HP 54/54 MP 0/0 Hu100 $ 169 room=.
--> x
-T 474 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 4) HP 54/54 MP 0/0 Hu100 $ 169 room=.
--> l
-T 475 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 4) HP 54/54 MP 0/0 Hu100 $ 169 room=.
--> s
-T 476 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 5) HP 54/54 MP 0/0 Hu 99 $ 169 room=.
--> l
-T 477 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 5) HP 54/54 MP 0/0 Hu 99 $ 169 room=.
--> s
-T 478 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 6) HP 54/54 MP 0/0 Hu 98 $ 169 room=.
--> l
-T 479 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 6) HP 54/54 MP 0/0 Hu 98 $ 169 room=.
--> s
-T 480 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 7) HP 54/54 MP 0/0 Hu 97 $ 169 room=.
--> l
-T 481 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 7) HP 54/54 MP 0/0 Hu 97 $ 169 room=.
--> s
-T 482 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 8) HP 54/54 MP 0/0 Hu 96 $ 169 room=.
--> l
-T 483 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 8) HP 54/54 MP 0/0 Hu 96 $ 169 room=.
--> s
-T 484 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 9) HP 54/54 MP 0/0 Hu 95 $ 169 room=.
--> l
-T 485 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 9) HP 54/54 MP 0/0 Hu 95 $ 169 room=.
--> e
-T 486 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 7, 9) HP 54/54 MP 0/0 Hu 94 $ 169 room=M vs Troll(L3 HP70/70)
--> a
-T 487 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 7, 9) HP 46/54 MP 0/0 Hu 94 $ 169 room=M vs Troll(L3 HP70/70)
--> a
-T 488 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 7, 9) HP 46/54 MP 0/0 Hu 94 $ 169 room=M vs Troll(L3 HP43/70)
--> a
-T 489 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 7, 9) HP 38/54 MP 0/0 Hu 94 $ 169 room=M vs Troll(L3 HP43/70)
--> a
-T 490 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 7, 9) HP 30/54 MP 0/0 Hu 94 $ 169 room=M vs Troll(L3 HP17/70)
--> a
-T 491 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 7, 9) HP 22/54 MP 0/0 Hu 94 $ 169 room=M vs Troll(L3 HP17/70)
--> i
-T 492 mode=inventory           Galadriel Star-eyed(elf) F4@( 7, 9) HP 22/54 MP 0/0 Hu 94 $ 169 room=M
--> u3
-T 493 mode=inventory           Galadriel Star-eyed(elf) F4@( 7, 9) HP 52/54 MP 0/0 Hu 94 $ 169 room=M
--> x
-T 494 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 7, 9) HP 52/54 MP 0/0 Hu 94 $ 169 room=M vs Troll(L3 HP17/70)
--> a
-T 495 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 7, 9) HP 44/54 MP 0/0 Hu 94 $ 169 room=M vs Troll(L3 HP17/70)
--> a
-T 496 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 7, 9) HP 44/54 MP 0/0 Hu 94 $ 169 room=M vs Troll(L3 HP17/70)
--> a
-T 497 mode=combat_victory      Galadriel Star-eyed(elf) F4@( 7, 9) HP 44/54 MP 0/0 Hu 94 $ 205 room=.
--> back
-T 498 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 9) HP 44/54 MP 0/0 Hu 94 $ 205 room=.
--> l
-T 499 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 9) HP 44/54 MP 0/0 Hu 94 $ 205 room=.
--> s
-T 500 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7,10) HP 44/54 MP 0/0 Hu 93 $ 205 room=.
--> l
-T 501 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7,10) HP 44/54 MP 0/0 Hu 93 $ 205 room=.
--> e
-T 502 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 8,10) HP 45/54 MP 0/0 Hu 92 $ 205 room=M vs Gray Ooze(L3 HP36/36)
--> a
-T 503 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 8,10) HP 44/54 MP 0/0 Hu 92 $ 205 room=M vs Gray Ooze(L3 HP36/36)
--> a
-T 504 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 8,10) HP 43/54 MP 0/0 Hu 92 $ 205 room=M vs Gray Ooze(L3 HP36/36)
--> a
-T 505 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 8,10) HP 42/54 MP 0/0 Hu 92 $ 205 room=M vs Gray Ooze(L3 HP36/36)
--> a
-T 506 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 8,10) HP 41/54 MP 0/0 Hu 92 $ 205 room=M vs Gray Ooze(L3 HP36/36)
--> a
-T 507 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 8,10) HP 41/54 MP 0/0 Hu 92 $ 205 room=M vs Gray Ooze(L3 HP36/36)
--> a
-T 508 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 8,10) HP 40/54 MP 0/0 Hu 92 $ 205 room=M vs Gray Ooze(L3 HP5/36)
--> a
-T 509 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 8,10) HP 40/54 MP 0/0 Hu 92 $ 205 room=M vs Gray Ooze(L3 HP5/36)
--> a
-T 510 mode=combat_victory      Galadriel Star-eyed(elf) F4@( 8,10) HP 40/54 MP 0/0 Hu 92 $ 213 room=.
--> back
-T 511 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8,10) HP 40/54 MP 0/0 Hu 92 $ 213 room=.
--> e
-T 512 mode=chest_mode          Galadriel Star-eyed(elf) F4@( 9,10) HP 40/54 MP 0/0 Hu 91 $ 213 room=C
--> o
-T 513 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9,10) HP 40/54 MP 0/0 Hu 91 $ 213 room=.
--> l
-T 514 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9,10) HP 40/54 MP 0/0 Hu 91 $ 213 room=.
--> e
-T 515 mode=game_loop           Galadriel Star-eyed(elf) F4@(10,10) HP 41/54 MP 0/0 Hu 90 $ 213 room=.
--> l
-T 516 mode=game_loop           Galadriel Star-eyed(elf) F4@(10,10) HP 41/54 MP 0/0 Hu 90 $ 213 room=.
--> e
-T 517 mode=dungeon_mode        Galadriel Star-eyed(elf) F4@(11,10) HP 41/54 MP 0/0 Hu 89 $ 213 room=N
--> u
-T 518 mode=dungeon_unlocked_mode Galadriel Star-eyed(elf) F4@(11,10) HP 41/54 MP 0/0 Hu 89 $ 213 room=N
--> r
-T 519 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,10) HP 41/54 MP 0/0 Hu 89 $ 213 room=N
--> i
-T 520 mode=inventory           Galadriel Star-eyed(elf) F4@(11,10) HP 41/54 MP 0/0 Hu 89 $ 213 room=N
+T  64 mode=inventory           Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 351 room=.
 -> u13
-T 521 mode=inventory           Galadriel Star-eyed(elf) F4@(11,10) HP 54/54 MP 0/0 Hu 89 $ 213 room=N
--> u6
-T 522 mode=upgrade_scroll_mode Galadriel Star-eyed(elf) F4@(11,10) HP 54/54 MP 0/0 Hu 89 $ 213 room=N
--> 1
-T 523 mode=inventory           Galadriel Star-eyed(elf) F4@(11,10) HP 54/54 MP 0/0 Hu 89 $ 213 room=N
+T  65 mode=inventory           Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 351 room=.
+-> u8
+T  66 mode=upgrade_scroll_mode Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 351 room=.
+-> 2
+T  67 mode=inventory           Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 351 room=.
 -> x
-T 524 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,10) HP 54/54 MP 0/0 Hu 89 $ 213 room=N
--> i
-T 525 mode=inventory           Galadriel Star-eyed(elf) F4@(11,10) HP 54/54 MP 0/0 Hu 89 $ 213 room=N
--> e7
-T 526 mode=inventory           Galadriel Star-eyed(elf) F4@(11,10) HP 54/54 MP 0/0 Hu 89 $ 213 room=N
--> x
-T 527 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,10) HP 54/54 MP 0/0 Hu 89 $ 213 room=N
+T  68 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 351 room=.
 -> l
-T 528 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,10) HP 54/54 MP 0/0 Hu 89 $ 213 room=N
--> s
-T 529 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,11) HP 54/54 MP 0/0 Hu 88 $ 213 room=.
--> l
-T 530 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,11) HP 54/54 MP 0/0 Hu 88 $ 213 room=.
--> e
-T 531 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,11) HP 54/54 MP 0/0 Hu 87 $ 213 room=.
--> n
-T 532 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,10) HP 54/54 MP 0/0 Hu 86 $ 213 room=.
--> s
-T 533 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,11) HP 54/54 MP 0/0 Hu 85 $ 213 room=.
--> n
-T 534 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,10) HP 54/54 MP 0/0 Hu 84 $ 213 room=.
--> i
-T 535 mode=inventory           Galadriel Star-eyed(elf) F4@(12,10) HP 54/54 MP 0/0 Hu 84 $ 213 room=.
--> eat2
-T 536 mode=inventory           Galadriel Star-eyed(elf) F4@(12,10) HP 54/54 MP 0/0 Hu 94 $ 213 room=.
--> x
-T 537 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,10) HP 54/54 MP 0/0 Hu 94 $ 213 room=.
+T  69 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 6) HP 28/28 MP 0/0 Hu 84 $ 351 room=.
 -> w
-T 538 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,10) HP 54/54 MP 0/0 Hu 93 $ 213 room=N
+T  70 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 6) HP 28/28 MP 0/0 Hu 83 $ 351 room=.
 -> n
-T 539 mode=stairs_down_mode    Galadriel Star-eyed(elf) F4@(11, 9) HP 54/54 MP 0/0 Hu 92 $ 213 room=D
--> w
-T 540 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 9) HP 54/54 MP 0/0 Hu 91 $ 213 room=.
--> n
-T 541 mode=pool_mode           Galadriel Star-eyed(elf) F4@(10, 8) HP 54/54 MP 0/0 Hu 90 $ 213 room=P
--> dr
-T 542 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 8) HP 54/54 MP 0/0 Hu 90 $ 213 room=.
--> w
-T 543 mode=library_mode        Galadriel Star-eyed(elf) F4@( 9, 8) HP 54/54 MP 0/0 Hu 89 $ 213 room=L
--> r
-T 544 mode=library_read_decision_mode Galadriel Star-eyed(elf) F4@( 9, 8) HP 54/54 MP 0/0 Hu 89 $ 213 room=L
--> y
-T 545 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 8) HP 54/54 MP 0/0 Hu 89 $ 313 room=.
--> n
-T 546 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 7) HP 46/54 MP 0/0 Hu 88 $ 313 room=.
--> n
-T 547 mode=chest_mode          Galadriel Star-eyed(elf) F4@( 9, 6) HP 39/54 MP 0/0 Hu 87 $ 313 room=C
--> n
-T 548 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 5) HP 31/54 MP 0/0 Hu 86 $ 313 room=.
--> e
-T 549 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 5) HP 24/54 MP 0/0 Hu 85 $ 313 room=.
--> l
-T 550 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 5) HP 24/54 MP 0/0 Hu 85 $ 313 room=.
--> e
-T 551 mode=shrine_mode         Galadriel Star-eyed(elf) F4@(11, 5) HP 24/54 MP 0/0 Hu 84 $ 313 room=F
--> p
-T 552 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 5) HP 24/54 MP 0/0 Hu 84 $ 313 room=.
--> l
-T 553 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 5) HP 24/54 MP 0/0 Hu 84 $ 313 room=.
--> s
-T 554 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 6) HP 24/54 MP 0/0 Hu 83 $ 313 room=.
--> l
-T 555 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 6) HP 24/54 MP 0/0 Hu 83 $ 313 room=.
--> n
-T 556 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 5) HP 24/54 MP 0/0 Hu 82 $ 313 room=.
--> n
-T 557 mode=altar_mode          Galadriel Star-eyed(elf) F4@(11, 4) HP 25/54 MP 0/0 Hu 81 $ 313 room=A
--> pray
-T 558 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 4) HP 25/56 MP 0/0 Hu 81 $ 313 room=.
--> w
-T 559 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 4) HP 25/56 MP 0/0 Hu 80 $ 313 room=.
--> s
-T 560 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 5) HP 25/56 MP 0/0 Hu 79 $ 313 room=.
--> w
-T 561 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 5) HP 25/56 MP 0/0 Hu 78 $ 313 room=.
--> w
-T 562 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 5) HP 26/56 MP 0/0 Hu 77 $ 313 room=.
--> i
-T 563 mode=inventory           Galadriel Star-eyed(elf) F4@( 8, 5) HP 26/56 MP 0/0 Hu 77 $ 313 room=.
--> u14
-T 564 mode=inventory           Galadriel Star-eyed(elf) F4@( 8, 5) HP 56/56 MP 0/0 Hu 77 $ 313 room=.
--> x
-T 565 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 5) HP 56/56 MP 0/0 Hu 77 $ 313 room=.
--> s
-T 566 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 6) HP 56/56 MP 0/0 Hu 76 $ 313 room=.
--> w
-T 567 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 6) HP 56/56 MP 0/0 Hu 75 $ 313 room=.
--> w
-T 568 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 6) HP 56/56 MP 0/0 Hu 74 $ 313 room=.
--> w
-T 569 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 6) HP 56/56 MP 0/0 Hu 73 $ 313 room=.
--> w
-T 570 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 6) HP 56/56 MP 0/0 Hu 72 $ 313 room=.
--> w
-T 571 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 6) HP 56/56 MP 0/0 Hu 71 $ 313 room=.
--> l
-T 572 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 6) HP 56/56 MP 0/0 Hu 71 $ 313 room=.
--> s
-T 573 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 7) HP 56/56 MP 0/0 Hu 70 $ 313 room=.
--> l
-T 574 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 7) HP 56/56 MP 0/0 Hu 70 $ 313 room=.
--> s
-T 575 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 8) HP 56/56 MP 0/0 Hu 69 $ 313 room=.
--> l
-T 576 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 8) HP 56/56 MP 0/0 Hu 69 $ 313 room=.
--> s
-T 577 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 9) HP 56/56 MP 0/0 Hu 68 $ 313 room=.
--> l
-T 578 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 9) HP 56/56 MP 0/0 Hu 68 $ 313 room=.
--> s
-T 579 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,10) HP 56/56 MP 0/0 Hu 67 $ 313 room=.
--> l
-T 580 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,10) HP 56/56 MP 0/0 Hu 67 $ 313 room=.
--> s
-T 581 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,11) HP 56/56 MP 0/0 Hu 66 $ 313 room=.
--> l
-T 582 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,11) HP 56/56 MP 0/0 Hu 66 $ 313 room=.
--> s
-T 583 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,12) HP 56/56 MP 0/0 Hu 65 $ 313 room=.
--> l
-T 584 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,12) HP 56/56 MP 0/0 Hu 65 $ 313 room=.
--> w
-T 585 mode=chest_mode          Galadriel Star-eyed(elf) F4@( 2,12) HP 56/56 MP 0/0 Hu 64 $ 313 room=C
--> o
-T 586 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2,12) HP 56/56 MP 0/0 Hu 64 $ 313 room=.
--> w
-T 587 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1,12) HP 56/56 MP 0/0 Hu 63 $ 313 room=.
--> n
-T 588 mode=oracle_mode         Galadriel Star-eyed(elf) F4@( 1,11) HP 56/56 MP 0/0 Hu 62 $ 313 room=O
--> e
-T 589 mode=library_mode        Galadriel Star-eyed(elf) F4@( 2,11) HP 56/56 MP 0/0 Hu 61 $ 313 room=L
--> r
-T 590 mode=library_read_decision_mode Galadriel Star-eyed(elf) F4@( 2,11) HP 56/56 MP 0/0 Hu 61 $ 313 room=L
--> y
-T 591 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2,11) HP 21/56 MP 0/0 Hu 61 $ 313 room=.
--> e
-T 592 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,11) HP 21/56 MP 0/0 Hu 60 $ 313 room=.
--> n
-T 593 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,10) HP 21/56 MP 0/0 Hu 59 $ 313 room=.
--> n
-T 594 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 9) HP 21/56 MP 0/0 Hu 58 $ 313 room=.
--> i
-T 595 mode=inventory           Galadriel Star-eyed(elf) F4@( 3, 9) HP 21/56 MP 0/0 Hu 58 $ 313 room=.
--> u14
-T 596 mode=inventory           Galadriel Star-eyed(elf) F4@( 3, 9) HP 56/56 MP 0/0 Hu 58 $ 313 room=.
--> x
-T 597 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 9) HP 56/56 MP 0/0 Hu 58 $ 313 room=.
--> n
-T 598 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 8) HP 56/56 MP 0/0 Hu 57 $ 313 room=.
--> n
-T 599 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 7) HP 56/56 MP 0/0 Hu 56 $ 313 room=.
--> n
-T 600 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 6) HP 56/56 MP 0/0 Hu 55 $ 313 room=.
--> w
-T 601 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2, 6) HP 56/56 MP 0/0 Hu 54 $ 313 room=.
--> e
-T 602 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 6) HP 56/56 MP 0/0 Hu 53 $ 313 room=.
--> e
-T 603 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 6) HP 56/56 MP 0/0 Hu 52 $ 313 room=.
--> e
-T 604 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 6) HP 56/56 MP 0/0 Hu 51 $ 313 room=.
--> n
-T 605 mode=chest_mode          Galadriel Star-eyed(elf) F4@( 5, 5) HP 56/56 MP 0/0 Hu 50 $ 313 room=C
--> n
-T 606 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 4) HP 56/56 MP 0/0 Hu 49 $ 313 room=.
--> i
-T 607 mode=inventory           Galadriel Star-eyed(elf) F4@( 5, 4) HP 56/56 MP 0/0 Hu 49 $ 313 room=.
--> eat1
-T 608 mode=inventory           Galadriel Star-eyed(elf) F4@( 5, 4) HP 56/56 MP 0/0 Hu 99 $ 313 room=.
--> x
-T 609 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 4) HP 56/56 MP 0/0 Hu 99 $ 313 room=.
--> n
-T 610 mode=garden_mode         Galadriel Star-eyed(elf) F4@( 5, 3) HP 56/56 MP 0/0 Hu 98 $ 313 room=G
--> h
-T 611 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 3) HP 56/56 MP 0/0 Hu 98 $ 313 room=.
--> l
-T 612 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 3) HP 56/56 MP 0/0 Hu 98 $ 313 room=.
--> n
-T 613 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 2) HP 56/56 MP 0/0 Hu 97 $ 313 room=.
--> l
-T 614 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 2) HP 56/56 MP 0/0 Hu 97 $ 313 room=.
--> w
-T 615 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 2) HP 56/56 MP 0/0 Hu 96 $ 313 room=.
--> s
-T 616 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 3) HP 56/56 MP 0/0 Hu 95 $ 313 room=.
--> w
-T 617 mode=altar_mode          Galadriel Star-eyed(elf) F4@( 3, 3) HP 56/56 MP 0/0 Hu 94 $ 313 room=A
--> pray
-T 618 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 3) HP 56/56 MP 0/0 Hu 94 $ 513 room=.
--> w
-T 619 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2, 3) HP 56/56 MP 0/0 Hu 93 $ 513 room=.
--> l
-T 620 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2, 3) HP 56/56 MP 0/0 Hu 93 $ 513 room=.
--> s
-T 621 mode=chest_mode          Galadriel Star-eyed(elf) F4@( 2, 4) HP 56/56 MP 0/0 Hu 92 $ 513 room=C
--> o
-T 622 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2, 4) HP 56/56 MP 0/0 Hu 92 $ 513 room=.
--> e
-T 623 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 4) HP 56/56 MP 0/0 Hu 91 $ 513 room=.
--> e
-T 624 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 4) HP 56/56 MP 0/0 Hu 90 $ 513 room=.
--> e
-T 625 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 4) HP 56/56 MP 0/0 Hu 89 $ 513 room=.
--> e
-T 626 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 4) HP 56/56 MP 0/0 Hu 88 $ 513 room=.
--> s
-T 627 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 5) HP 56/56 MP 0/0 Hu 87 $ 513 room=.
--> s
-T 628 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 6) HP 56/56 MP 0/0 Hu 86 $ 513 room=.
--> e
-T 629 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 6) HP 56/56 MP 0/0 Hu 85 $ 513 room=.
--> s
-T 630 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 7) HP 56/56 MP 0/0 Hu 84 $ 513 room=.
--> s
-T 631 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 8) HP 56/56 MP 0/0 Hu 83 $ 513 room=.
--> s
-T 632 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 9) HP 56/56 MP 0/0 Hu 82 $ 513 room=.
--> w
-T 633 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 9) HP 56/56 MP 0/0 Hu 81 $ 513 room=.
--> n
-T 634 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 8) HP 56/56 MP 0/0 Hu 80 $ 513 room=.
--> n
-T 635 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 7) HP 56/56 MP 0/0 Hu 79 $ 513 room=.
--> n
-T 636 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 6) HP 56/56 MP 0/0 Hu 78 $ 513 room=.
--> w
-T 637 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 6) HP 56/56 MP 0/0 Hu 77 $ 513 room=.
--> w
-T 638 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 6) HP 56/56 MP 0/0 Hu 76 $ 513 room=.
--> w
-T 639 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 6) HP 56/56 MP 0/0 Hu 75 $ 513 room=.
--> s
-T 640 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 7) HP 56/56 MP 0/0 Hu 74 $ 513 room=.
--> s
-T 641 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 8) HP 56/56 MP 0/0 Hu 73 $ 513 room=.
--> w
-T 642 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 56/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP41/41)
+T  71 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 82 $ 351 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T 643 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 52/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP41/41)
--> a
-T 644 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 48/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 645 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 44/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 646 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 40/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 647 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 36/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 648 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 36/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 649 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 36/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 650 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 32/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 651 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 32/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 652 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 28/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 653 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 28/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 654 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 24/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 655 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 24/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 656 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 20/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> a
-T 657 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 2, 8) HP 16/56 MP 0/0 Hu 72 $ 513 room=M vs Giant Spider(L3 HP12/41)
--> f
-T 658 mode=flee_direction_mode Galadriel Star-eyed(elf) F4@( 2, 8) HP 16/56 MP 0/0 Hu 72 $ 513 room=M
--> e
-T 659 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 8) HP 16/56 MP 0/0 Hu 72 $ 513 room=.
--> s
-T 660 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 9) HP 16/56 MP 0/0 Hu 71 $ 513 room=.
--> s
-T 661 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,10) HP 16/56 MP 0/0 Hu 70 $ 513 room=.
--> s
-T 662 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,11) HP 16/56 MP 0/0 Hu 69 $ 513 room=.
--> w
-T 663 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2,11) HP 17/56 MP 0/0 Hu 68 $ 513 room=.
--> s
-T 664 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2,12) HP 17/56 MP 0/0 Hu 67 $ 513 room=.
--> w
-T 665 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1,12) HP 17/56 MP 0/0 Hu 66 $ 513 room=.
--> n
-T 666 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1,11) HP 17/56 MP 0/0 Hu 65 $ 513 room=O
--> e
-T 667 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2,11) HP 18/56 MP 0/0 Hu 64 $ 513 room=.
--> e
-T 668 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,11) HP 18/56 MP 0/0 Hu 63 $ 513 room=.
--> s
-T 669 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,12) HP 18/56 MP 0/0 Hu 62 $ 513 room=.
--> w
-T 670 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2,12) HP 18/56 MP 0/0 Hu 61 $ 513 room=.
--> l
-T 671 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2,12) HP 18/56 MP 0/0 Hu 61 $ 513 room=.
--> w
-T 672 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1,12) HP 19/56 MP 0/0 Hu 60 $ 513 room=.
--> n
-T 673 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1,11) HP 19/56 MP 0/0 Hu 59 $ 513 room=O
--> e
-T 674 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2,11) HP 19/56 MP 0/0 Hu 58 $ 513 room=.
--> e
-T 675 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,11) HP 19/56 MP 0/0 Hu 57 $ 513 room=.
--> n
-T 676 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3,10) HP 19/56 MP 0/0 Hu 56 $ 513 room=.
--> n
-T 677 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 9) HP 19/56 MP 0/0 Hu 55 $ 513 room=.
--> n
-T 678 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 8) HP 19/56 MP 0/0 Hu 54 $ 513 room=.
--> n
-T 679 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 7) HP 19/56 MP 0/0 Hu 53 $ 513 room=.
--> n
-T 680 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 6) HP 19/56 MP 0/0 Hu 52 $ 513 room=.
--> l
-T 681 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 6) HP 19/56 MP 0/0 Hu 52 $ 513 room=.
--> w
-T 682 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2, 6) HP 19/56 MP 0/0 Hu 51 $ 513 room=.
--> e
-T 683 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 6) HP 19/56 MP 0/0 Hu 50 $ 513 room=.
--> i
-T 684 mode=inventory           Galadriel Star-eyed(elf) F4@( 3, 6) HP 19/56 MP 0/0 Hu 50 $ 513 room=.
--> eat1
-T 685 mode=inventory           Galadriel Star-eyed(elf) F4@( 3, 6) HP 19/56 MP 0/0 Hu100 $ 513 room=.
--> u12
-T 686 mode=inventory           Galadriel Star-eyed(elf) F4@( 3, 6) HP 19/56 MP 0/0 Hu100 $ 513 room=.
--> u4
-T 687 mode=garden_mode         Galadriel Star-eyed(elf) F4@(15, 9) HP 19/56 MP 0/0 Hu100 $ 513 room=G
--> h
-T 688 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 19/56 MP 0/0 Hu100 $ 513 room=.
--> l
-T 689 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 19/56 MP 0/0 Hu100 $ 513 room=.
--> w
-T 690 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 19/56 MP 0/0 Hu 99 $ 513 room=.
--> l
-T 691 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 19/56 MP 0/0 Hu 99 $ 513 room=.
--> e
-T 692 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 20/56 MP 0/0 Hu 98 $ 513 room=.
--> s
-T 693 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 20/56 MP 0/0 Hu 97 $ 513 room=.
--> s
-T 694 mode=library_mode        Galadriel Star-eyed(elf) F4@(15,11) HP 21/56 MP 0/0 Hu 96 $ 513 room=L
--> r
-T 695 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 21/56 MP 0/0 Hu 96 $ 513 room=.
--> n
-T 696 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 21/56 MP 0/0 Hu 95 $ 513 room=.
--> s
-T 697 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 22/56 MP 0/0 Hu 94 $ 513 room=.
--> n
-T 698 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 22/56 MP 0/0 Hu 93 $ 513 room=.
--> n
-T 699 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 23/56 MP 0/0 Hu 92 $ 513 room=.
--> w
-T 700 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 23/56 MP 0/0 Hu 91 $ 513 room=.
--> l
-T 701 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 23/56 MP 0/0 Hu 91 $ 513 room=.
--> e
-T 702 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 24/56 MP 0/0 Hu 90 $ 513 room=.
--> s
-T 703 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 24/56 MP 0/0 Hu 89 $ 513 room=.
--> s
-T 704 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 25/56 MP 0/0 Hu 88 $ 513 room=.
--> n
-T 705 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 25/56 MP 0/0 Hu 87 $ 513 room=.
--> s
-T 706 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 26/56 MP 0/0 Hu 86 $ 513 room=.
--> n
-T 707 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 26/56 MP 0/0 Hu 85 $ 513 room=.
--> i
-T 708 mode=inventory           Galadriel Star-eyed(elf) F4@(15,10) HP 26/56 MP 0/0 Hu 85 $ 513 room=.
--> u11
-T 709 mode=inventory           Galadriel Star-eyed(elf) F4@(15,10) HP 26/56 MP 0/0 Hu 85 $ 513 room=.
--> x
-T 710 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 26/56 MP 0/0 Hu 85 $ 513 room=.
--> l
-T 711 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 26/56 MP 0/0 Hu 85 $ 513 room=.
--> n
-T 712 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 26/56 MP 0/0 Hu 84 $ 513 room=.
--> w
-T 713 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 26/56 MP 0/0 Hu 83 $ 513 room=.
--> e
-T 714 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 27/56 MP 0/0 Hu 82 $ 513 room=.
--> s
-T 715 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 27/56 MP 0/0 Hu 81 $ 513 room=.
--> s
-T 716 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 27/56 MP 0/0 Hu 80 $ 513 room=.
--> n
-T 717 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 27/56 MP 0/0 Hu 79 $ 513 room=.
--> s
-T 718 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 28/56 MP 0/0 Hu 78 $ 513 room=.
--> n
-T 719 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 28/56 MP 0/0 Hu 77 $ 513 room=.
--> w
-T 720 mode=combat_mode         Galadriel Star-eyed(elf) F4@(14,10) HP 28/56 MP 0/0 Hu 76 $ 513 room=M vs Myconid Shaman(L3 HP46/46)
--> f
-T 721 mode=flee_direction_mode Galadriel Star-eyed(elf) F4@(14,10) HP 28/56 MP 0/0 Hu 76 $ 513 room=M
--> n
-T 722 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 28/56 MP 0/0 Hu 76 $ 513 room=.
--> e
-T 723 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 28/56 MP 0/0 Hu 75 $ 513 room=.
--> s
-T 724 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 29/56 MP 0/0 Hu 74 $ 513 room=.
--> s
-T 725 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 29/56 MP 0/0 Hu 73 $ 513 room=.
--> n
-T 726 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 29/56 MP 0/0 Hu 72 $ 513 room=.
--> n
-T 727 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 29/56 MP 0/0 Hu 71 $ 513 room=.
--> w
-T 728 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/56 MP 0/0 Hu 70 $ 513 room=.
--> e
-T 729 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/56 MP 0/0 Hu 69 $ 513 room=.
--> w
-T 730 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/56 MP 0/0 Hu 68 $ 513 room=.
--> l
-T 731 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/56 MP 0/0 Hu 68 $ 513 room=.
--> e
-T 732 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/56 MP 0/0 Hu 67 $ 513 room=.
--> s
-T 733 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 31/56 MP 0/0 Hu 66 $ 513 room=.
--> s
-T 734 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 31/56 MP 0/0 Hu 65 $ 513 room=.
--> n
-T 735 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 31/56 MP 0/0 Hu 64 $ 513 room=.
--> n
-T 736 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 31/56 MP 0/0 Hu 63 $ 513 room=.
--> w
-T 737 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 32/56 MP 0/0 Hu 62 $ 513 room=.
--> s
-T 738 mode=combat_mode         Galadriel Star-eyed(elf) F4@(14,10) HP 32/56 MP 0/0 Hu 61 $ 513 room=M vs Myconid Shaman(L3 HP46/46)
--> a
-T 739 mode=combat_mode         Galadriel Star-eyed(elf) F4@(14,10) HP 32/56 MP 0/0 Hu 61 $ 513 room=M vs Myconid Shaman(L3 HP46/46)
--> a
-T 740 mode=combat_mode         Galadriel Star-eyed(elf) F4@(14,10) HP 31/56 MP 0/0 Hu 61 $ 513 room=M vs Myconid Shaman(L3 HP46/46)
--> a
-T 741 mode=combat_mode         Galadriel Star-eyed(elf) F4@(14,10) HP 30/56 MP 0/0 Hu 61 $ 513 room=M vs Myconid Shaman(L3 HP16/46)
--> a
-T 742 mode=combat_victory      Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 61 $ 549 room=.
+T  72 mode=combat_victory      Galadriel Star-eyed(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 82 $ 356 room=.
 -> back
-T 743 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 61 $ 549 room=.
--> e
-T 744 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 60 $ 549 room=.
--> s
-T 745 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 30/66 MP 0/0 Hu 59 $ 549 room=.
+T  73 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 82 $ 356 room=.
+-> i
+T  74 mode=inventory           Galadriel Star-eyed(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 82 $ 356 room=.
+-> u13
+T  75 mode=inventory           Galadriel Star-eyed(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 82 $ 356 room=.
+-> x
+T  76 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 5) HP 28/28 MP 0/0 Hu 82 $ 356 room=.
 -> n
-T 746 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 58 $ 549 room=.
--> n
-T 747 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 57 $ 549 room=.
--> w
-T 748 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 56 $ 549 room=.
--> s
-T 749 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 55 $ 549 room=.
--> e
-T 750 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 54 $ 549 room=.
+T  77 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 81 $ 356 room=M vs Kobold(L0 HP8/8)
+-> a
+T  78 mode=combat_victory      Galadriel Star-eyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 81 $ 357 room=.
+-> back
+T  79 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 81 $ 357 room=.
 -> l
-T 751 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 54 $ 549 room=.
--> s
-T 752 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 30/66 MP 0/0 Hu 53 $ 549 room=.
--> n
-T 753 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 52 $ 549 room=.
--> n
-T 754 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 51 $ 549 room=.
--> w
-T 755 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 50 $ 549 room=.
--> s
-T 756 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 49 $ 549 room=.
--> n
-T 757 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 48 $ 549 room=.
+T  80 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 4) HP 28/28 MP 0/0 Hu 81 $ 357 room=.
 -> e
-T 758 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 47 $ 549 room=.
--> s
-T 759 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 46 $ 549 room=.
--> s
-T 760 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 30/66 MP 0/0 Hu 45 $ 549 room=.
+T  81 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11, 4) HP 28/28 MP 0/0 Hu 80 $ 357 room=M vs Lichen(L0 HP10/10)
+-> f
+T  82 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11, 4) HP 27/28 MP 0/0 Hu 80 $ 357 room=M vs Lichen(L0 HP10/10)
+-> a
+T  83 mode=combat_victory      Galadriel Star-eyed(elf) F1@(11, 4) HP 27/28 MP 0/0 Hu 80 $ 360 room=.
+-> back
+T  84 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 4) HP 27/28 MP 0/0 Hu 80 $ 360 room=.
+-> i
+T  85 mode=inventory           Galadriel Star-eyed(elf) F1@(11, 4) HP 27/28 MP 0/0 Hu 80 $ 360 room=.
+-> u14
+T  86 mode=inventory           Galadriel Star-eyed(elf) F1@(11, 4) HP 27/28 MP 0/0 Hu 80 $ 360 room=.
+-> x
+T  87 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 4) HP 27/28 MP 0/0 Hu 80 $ 360 room=.
 -> l
-T 761 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 30/66 MP 0/0 Hu 45 $ 549 room=.
+T  88 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 4) HP 27/28 MP 0/0 Hu 80 $ 360 room=.
 -> n
-T 762 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 44 $ 549 room=.
--> w
-T 763 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 43 $ 549 room=.
--> n
-T 764 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 42 $ 549 room=.
--> e
-T 765 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 41 $ 549 room=.
--> w
-T 766 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 40 $ 549 room=.
--> e
-T 767 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 39 $ 549 room=.
--> s
-T 768 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 38 $ 549 room=.
--> s
-T 769 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 30/66 MP 0/0 Hu 37 $ 549 room=.
--> n
-T 770 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 36 $ 549 room=.
+T  89 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 3) HP 27/28 MP 0/0 Hu 79 $ 360 room=.
 -> l
-T 771 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 36 $ 549 room=.
--> w
-T 772 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 35 $ 549 room=.
--> n
-T 773 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 34 $ 549 room=.
+T  90 mode=game_loop           Galadriel Star-eyed(elf) F1@(11, 3) HP 27/28 MP 0/0 Hu 79 $ 360 room=.
 -> e
-T 774 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 33 $ 549 room=.
--> w
-T 775 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 32 $ 549 room=.
--> e
-T 776 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 31 $ 549 room=.
--> s
-T 777 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 30 $ 549 room=.
--> w
-T 778 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 29 $ 549 room=.
--> n
-T 779 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 28 $ 549 room=.
--> e
-T 780 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 27 $ 549 room=.
+T  91 mode=library_mode        Galadriel Star-eyed(elf) F1@(12, 3) HP 27/28 MP 0/0 Hu 78 $ 360 room=L
+-> r
+T  92 mode=library_read_decision_mode Galadriel Star-eyed(elf) F1@(12, 3) HP 27/28 MP 0/0 Hu 78 $ 360 room=L
+-> y
+T  93 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 3) HP 27/28 MP 0/0 Hu 78 $ 510 room=.
 -> l
-T 781 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 27 $ 549 room=.
--> w
-T 782 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 26 $ 549 room=.
--> s
-T 783 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 25 $ 549 room=.
--> e
-T 784 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 24 $ 549 room=.
--> s
-T 785 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 30/66 MP 0/0 Hu 23 $ 549 room=.
+T  94 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 3) HP 27/28 MP 0/0 Hu 78 $ 510 room=.
 -> n
-T 786 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 22 $ 549 room=.
+T  95 mode=combat_mode         Galadriel Star-eyed(elf) F1@(12, 2) HP 27/28 MP 0/0 Hu 77 $ 510 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  96 mode=combat_mode         Galadriel Star-eyed(elf) F1@(12, 2) HP 26/28 MP 0/0 Hu 77 $ 510 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T  97 mode=combat_victory      Galadriel Star-eyed(elf) F1@(12, 2) HP 25/28 MP 0/0 Hu 77 $ 515 room=.
+-> back
+T  98 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 2) HP 25/28 MP 0/0 Hu 77 $ 515 room=.
+-> i
+T  99 mode=inventory           Galadriel Star-eyed(elf) F1@(12, 2) HP 25/28 MP 0/0 Hu 77 $ 515 room=.
+-> u4
+T 100 mode=inventory           Galadriel Star-eyed(elf) F1@(12, 2) HP 28/28 MP 0/0 Hu 77 $ 515 room=.
+-> x
+T 101 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 2) HP 28/28 MP 0/0 Hu 77 $ 515 room=.
+-> i
+T 102 mode=inventory           Galadriel Star-eyed(elf) F1@(12, 2) HP 28/28 MP 0/0 Hu 77 $ 515 room=.
+-> u16
+T 103 mode=inventory           Galadriel Star-eyed(elf) F1@(12, 2) HP 28/28 MP 0/0 Hu 77 $ 515 room=.
+-> eat3
+T 104 mode=inventory           Galadriel Star-eyed(elf) F1@(12, 2) HP 28/28 MP 0/0 Hu 95 $ 515 room=.
+-> x
+T 105 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 2) HP 28/28 MP 0/0 Hu 95 $ 515 room=.
 -> n
-T 787 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 21 $ 549 room=.
+T 106 mode=combat_mode         Galadriel Star-eyed(elf) F1@(12, 1) HP 28/28 MP 0/0 Hu 94 $ 515 room=M vs Goblin(L0 HP12/12)
+-> a
+T 107 mode=combat_victory      Galadriel Star-eyed(elf) F1@(12, 1) HP 28/28 MP 0/0 Hu 94 $ 522 room=.
+-> back
+T 108 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 1) HP 28/28 MP 0/0 Hu 94 $ 522 room=.
+-> i
+T 109 mode=inventory           Galadriel Star-eyed(elf) F1@(12, 1) HP 28/28 MP 0/0 Hu 94 $ 522 room=.
+-> u17
+T 110 mode=inventory           Galadriel Star-eyed(elf) F1@(12, 1) HP 28/28 MP 0/0 Hu 94 $ 522 room=.
+-> x
+T 111 mode=game_loop           Galadriel Star-eyed(elf) F1@(12, 1) HP 28/28 MP 0/0 Hu 94 $ 522 room=.
 -> w
-T 788 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 20 $ 549 room=.
--> s
-T 789 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 19 $ 549 room=.
--> e
-T 790 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 18 $ 549 room=.
+T 112 mode=warp_mode           Galadriel Star-eyed(elf) F1@(11, 1) HP 28/28 MP 0/0 Hu 93 $ 522 room=W
+-> y
+T 113 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 93 $ 522 room=.
 -> l
-T 791 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 18 $ 549 room=.
--> s
-T 792 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 30/66 MP 0/0 Hu 17 $ 549 room=.
+T 114 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 93 $ 522 room=.
 -> n
-T 793 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 16 $ 549 room=.
--> n
-T 794 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu 15 $ 549 room=.
--> w
-T 795 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu 14 $ 549 room=.
--> s
-T 796 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu 13 $ 549 room=.
--> e
-T 797 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 12 $ 549 room=.
--> s
-T 798 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 30/66 MP 0/0 Hu 11 $ 549 room=.
--> n
-T 799 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu 10 $ 549 room=.
--> n
-T 800 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu  9 $ 549 room=.
+T 115 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 92 $ 522 room=.
 -> l
-T 801 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu  9 $ 549 room=.
--> w
-T 802 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu  8 $ 549 room=.
--> s
-T 803 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu  7 $ 549 room=.
--> e
-T 804 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu  6 $ 549 room=.
--> s
-T 805 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 30/66 MP 0/0 Hu  5 $ 549 room=.
+T 116 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 92 $ 522 room=.
 -> n
-T 806 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 30/66 MP 0/0 Hu  4 $ 549 room=.
+T 117 mode=stairs_up_mode      Galadriel Star-eyed(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 91 $ 522 room=U
+-> u
+T 118 mode=stairs_down_mode    Galadriel Star-eyed(elf) F1@( 8, 8) HP 28/28 MP 0/0 Hu 91 $ 522 room=D
 -> n
-T 807 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 30/66 MP 0/0 Hu  3 $ 549 room=.
--> w
-T 808 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 30/66 MP 0/0 Hu  2 $ 549 room=.
--> s
-T 809 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 30/66 MP 0/0 Hu  1 $ 549 room=.
+T 119 mode=game_loop           Galadriel Star-eyed(elf) F1@( 8, 7) HP 28/28 MP 0/0 Hu 90 $ 522 room=.
 -> e
-T 810 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 28/66 MP 0/0 Hu  0 $ 549 room=.
+T 120 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 7) HP 28/28 MP 0/0 Hu 89 $ 522 room=.
+-> s
+T 121 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 8) HP 28/28 MP 0/0 Hu 88 $ 522 room=.
+-> s
+T 122 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 9) HP 28/28 MP 0/0 Hu 87 $ 522 room=.
+-> e
+T 123 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 9) HP 28/28 MP 0/0 Hu 86 $ 522 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 124 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10, 9) HP 27/28 MP 0/0 Hu 86 $ 522 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T 125 mode=combat_victory      Galadriel Star-eyed(elf) F1@(10, 9) HP 27/28 MP 0/0 Hu 86 $ 625 room=.
+-> back
+T 126 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 9) HP 27/28 MP 0/0 Hu 86 $ 625 room=.
+-> s
+T 127 mode=pool_mode           Galadriel Star-eyed(elf) F1@(10,10) HP 27/28 MP 0/0 Hu 85 $ 625 room=P
+-> dr
+T 128 mode=game_loop           Galadriel Star-eyed(elf) F1@(10,10) HP 27/28 MP 0/0 Hu 85 $ 625 room=.
+-> e
+T 129 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,10) HP 27/28 MP 0/0 Hu 84 $ 625 room=M vs Zombie(L0 HP35/35)
+-> a
+T 130 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,10) HP 26/28 MP 0/0 Hu 84 $ 625 room=M vs Zombie(L0 HP12/35)
+-> a
+T 131 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,10) HP 25/28 MP 0/0 Hu 84 $ 625 room=M vs Zombie(L0 HP12/35)
+-> a
+T 132 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,10) HP 24/28 MP 0/0 Hu 84 $ 625 room=M vs Zombie(L0 HP12/35)
+-> a
+T 133 mode=combat_victory      Galadriel Star-eyed(elf) F1@(11,10) HP 24/28 MP 0/0 Hu 84 $ 627 room=.
+-> back
+T 134 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,10) HP 24/28 MP 0/0 Hu 84 $ 627 room=.
 -> l
-T 811 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 28/66 MP 0/0 Hu  0 $ 549 room=.
+T 135 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,10) HP 24/28 MP 0/0 Hu 84 $ 627 room=.
+-> n
+T 136 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11, 9) HP 24/28 MP 0/0 Hu 83 $ 627 room=M vs Kobold(L0 HP8/8)
+-> a
+T 137 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11, 9) HP 23/28 MP 0/0 Hu 83 $ 627 room=M vs Kobold(L0 HP8/8)
+-> a
+T 138 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11, 9) HP 22/28 MP 0/0 Hu 83 $ 627 room=M vs Kobold(L0 HP8/8)
+-> f
+T 139 mode=flee_direction_mode Galadriel Star-eyed(elf) F1@(11, 9) HP 21/28 MP 0/0 Hu 83 $ 627 room=M
 -> s
-T 812 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 26/66 MP 0/0 Hu  0 $ 549 room=.
--> n
-T 813 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 24/66 MP 0/0 Hu  0 $ 549 room=.
--> n
-T 814 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 22/66 MP 0/0 Hu  0 $ 549 room=.
--> w
-T 815 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 20/66 MP 0/0 Hu  0 $ 549 room=.
+T 140 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,10) HP 21/28 MP 0/0 Hu 83 $ 627 room=.
+-> i
+T 141 mode=inventory           Galadriel Star-eyed(elf) F1@(11,10) HP 21/28 MP 0/0 Hu 83 $ 627 room=.
+-> u5
+T 142 mode=inventory           Galadriel Star-eyed(elf) F1@(11,10) HP 28/28 MP 0/0 Hu 83 $ 627 room=.
+-> x
+T 143 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,10) HP 28/28 MP 0/0 Hu 83 $ 627 room=.
 -> s
-T 816 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 18/66 MP 0/0 Hu  0 $ 549 room=.
--> e
-T 817 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 16/66 MP 0/0 Hu  0 $ 549 room=.
--> s
-T 818 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 14/66 MP 0/0 Hu  0 $ 549 room=.
--> n
-T 819 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 12/66 MP 0/0 Hu  0 $ 549 room=.
--> n
-T 820 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 10/66 MP 0/0 Hu  0 $ 549 room=.
+T 144 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,11) HP 28/28 MP 0/0 Hu 82 $ 627 room=M vs Lichen(L0 HP10/10)
+-> a
+T 145 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,11) HP 27/28 MP 0/0 Hu 82 $ 627 room=M vs Lichen(L0 HP10/10)
+-> f
+T 146 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,11) HP 26/28 MP 0/0 Hu 82 $ 627 room=M vs Lichen(L0 HP10/10)
+-> a
+T 147 mode=combat_victory      Galadriel Star-eyed(elf) F1@(11,11) HP 25/28 MP 0/0 Hu 82 $ 629 room=.
+-> back
+T 148 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,11) HP 25/28 MP 0/0 Hu 82 $ 629 room=.
+-> i
+T 149 mode=inventory           Galadriel Star-eyed(elf) F1@(11,11) HP 25/28 MP 0/0 Hu 82 $ 629 room=.
+-> u5
+T 150 mode=inventory           Galadriel Star-eyed(elf) F1@(11,11) HP 28/28 MP 0/0 Hu 82 $ 629 room=.
+-> x
+T 151 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,11) HP 28/28 MP 0/0 Hu 82 $ 629 room=.
+-> i
+T 152 mode=inventory           Galadriel Star-eyed(elf) F1@(11,11) HP 28/28 MP 0/0 Hu 82 $ 629 room=.
+-> u18
+T 153 mode=inventory           Galadriel Star-eyed(elf) F1@(11,11) HP 28/28 MP 0/0 Hu 82 $ 629 room=.
+-> x
+T 154 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,11) HP 28/28 MP 0/0 Hu 82 $ 629 room=.
 -> l
-T 821 mode=game_loop           Galadriel Star-eyed(elf) F4@(15, 9) HP 10/66 MP 0/0 Hu  0 $ 549 room=.
+T 155 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,11) HP 28/28 MP 0/0 Hu 82 $ 629 room=.
+-> s
+T 156 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,12) HP 28/28 MP 0/0 Hu 81 $ 629 room=M vs Goblin(L0 HP30/30)
+-> a
+T 157 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,12) HP 27/28 MP 0/0 Hu 81 $ 629 room=M vs Goblin(L0 HP30/30)
+-> a
+T 158 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,12) HP 27/28 MP 0/0 Hu 81 $ 629 room=M vs Goblin(L0 HP30/30)
+-> a
+T 159 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,12) HP 27/28 MP 0/0 Hu 81 $ 629 room=M vs Goblin(L0 HP30/30)
+-> a
+T 160 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,12) HP 26/28 MP 0/0 Hu 81 $ 629 room=M vs Goblin(L0 HP8/30)
+-> a
+T 161 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,12) HP 25/28 MP 0/0 Hu 81 $ 629 room=M vs Goblin(L0 HP8/30)
+-> a
+T 162 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,12) HP 24/28 MP 0/0 Hu 81 $ 629 room=M vs Goblin(L0 HP8/30)
+-> a
+T 163 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,12) HP 24/28 MP 0/0 Hu 81 $ 629 room=M vs Goblin(L0 HP8/30)
+-> a
+T 164 mode=combat_mode         Galadriel Star-eyed(elf) F1@(11,12) HP 24/28 MP 0/0 Hu 81 $ 629 room=M vs Goblin(L0 HP8/30)
+-> a
+T 165 mode=combat_victory      Galadriel Star-eyed(elf) F1@(11,12) HP 23/38 MP 0/0 Hu 81 $ 637 room=.
+-> back
+T 166 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,12) HP 23/38 MP 0/0 Hu 81 $ 637 room=.
+-> i
+T 167 mode=inventory           Galadriel Star-eyed(elf) F1@(11,12) HP 23/38 MP 0/0 Hu 81 $ 637 room=.
+-> u5
+T 168 mode=inventory           Galadriel Star-eyed(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 81 $ 637 room=.
+-> x
+T 169 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 81 $ 637 room=.
+-> i
+T 170 mode=inventory           Galadriel Star-eyed(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 81 $ 637 room=.
+-> u18
+T 171 mode=inventory           Galadriel Star-eyed(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 81 $ 637 room=.
+-> x
+T 172 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 81 $ 637 room=.
+-> l
+T 173 mode=game_loop           Galadriel Star-eyed(elf) F1@(11,12) HP 38/38 MP 0/0 Hu 81 $ 637 room=.
 -> w
-T 822 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 9) HP 8/66 MP 0/0 Hu  0 $ 549 room=.
--> s
-T 823 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,10) HP 6/66 MP 0/0 Hu  0 $ 549 room=.
--> e
-T 824 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,10) HP 4/66 MP 0/0 Hu  0 $ 549 room=.
--> s
-T 825 mode=game_loop           Galadriel Star-eyed(elf) F4@(15,11) HP 2/66 MP 0/0 Hu  0 $ 549 room=.
+T 174 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10,12) HP 38/38 MP 0/0 Hu 80 $ 637 room=M vs Goblin(L0 HP12/12)
+-> a
+T 175 mode=combat_mode         Galadriel Star-eyed(elf) F1@(10,12) HP 37/38 MP 0/0 Hu 80 $ 637 room=M vs Goblin(L0 HP12/12)
+-> a
+T 176 mode=combat_victory      Galadriel Star-eyed(elf) F1@(10,12) HP 37/38 MP 0/0 Hu 80 $ 641 room=.
+-> back
+T 177 mode=game_loop           Galadriel Star-eyed(elf) F1@(10,12) HP 37/38 MP 0/0 Hu 80 $ 641 room=.
+-> i
+T 178 mode=inventory           Galadriel Star-eyed(elf) F1@(10,12) HP 37/38 MP 0/0 Hu 80 $ 641 room=.
+-> u19
+T 179 mode=inventory           Galadriel Star-eyed(elf) F1@(10,12) HP 37/38 MP 0/0 Hu 80 $ 641 room=.
+-> x
+T 180 mode=game_loop           Galadriel Star-eyed(elf) F1@(10,12) HP 37/38 MP 0/0 Hu 80 $ 641 room=.
 -> n
-T 826 mode=death_screen        Galadriel Star-eyed(elf) F4@(15,10) HP 0/66 MP 0/0 Hu  0 $ 549 room=.
+T 181 mode=game_loop           Galadriel Star-eyed(elf) F1@(10,11) HP 37/38 MP 0/0 Hu 79 $ 641 room=.
+-> n
+T 182 mode=game_loop           Galadriel Star-eyed(elf) F1@(10,10) HP 37/38 MP 0/0 Hu 78 $ 641 room=.
+-> n
+T 183 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 9) HP 37/38 MP 0/0 Hu 77 $ 641 room=.
+-> n
+T 184 mode=game_loop           Galadriel Star-eyed(elf) F1@(10, 8) HP 38/38 MP 0/0 Hu 76 $ 641 room=.
+-> w
+T 185 mode=game_loop           Galadriel Star-eyed(elf) F1@( 9, 8) HP 38/38 MP 0/0 Hu 75 $ 641 room=.
+-> w
+T 186 mode=stairs_down_mode    Galadriel Star-eyed(elf) F1@( 8, 8) HP 38/38 MP 0/0 Hu 74 $ 641 room=D
+-> d
+T 187 mode=stairs_up_mode      Galadriel Star-eyed(elf) F2@( 1, 1) HP 38/38 MP 0/0 Hu 74 $ 641 room=U
+-> s
+T 188 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1, 2) HP 38/38 MP 0/0 Hu 73 $ 641 room=.
+-> e
+T 189 mode=chest_mode          Galadriel Star-eyed(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 72 $ 641 room=C
+-> o
+T 190 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 72 $ 641 room=.
+-> l
+T 191 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 2) HP 38/38 MP 0/0 Hu 72 $ 641 room=.
+-> n
+T 192 mode=altar_mode          Galadriel Star-eyed(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 71 $ 641 room=A
+-> pray
+T 193 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 71 $ 641 room=.
+-> l
+T 194 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2, 1) HP 38/38 MP 0/0 Hu 71 $ 641 room=.
+-> e
+T 195 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 1) HP 38/38 MP 0/0 Hu 70 $ 641 room=.
+-> s
+T 196 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3, 2) HP 38/38 MP 0/0 Hu 69 $ 641 room=.
+-> e
+T 197 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4, 2) HP 38/38 MP 0/0 Hu 68 $ 641 room=.
+-> e
+T 198 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5, 2) HP 38/38 MP 0/0 Hu 67 $ 641 room=.
+-> e
+T 199 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6, 2) HP 38/38 MP 0/0 Hu 66 $ 641 room=.
+-> e
+T 200 mode=garden_mode         Galadriel Star-eyed(elf) F2@( 7, 2) HP 38/38 MP 0/0 Hu 65 $ 641 room=G
+-> h
+T 201 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 2) HP 38/38 MP 0/0 Hu 65 $ 641 room=.
+-> s
+T 202 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 3) HP 38/38 MP 0/0 Hu 64 $ 641 room=.
+-> l
+T 203 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 3) HP 38/38 MP 0/0 Hu 64 $ 641 room=.
+-> s
+T 204 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 4) HP 38/38 MP 0/0 Hu 63 $ 641 room=.
+-> l
+T 205 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 4) HP 38/38 MP 0/0 Hu 63 $ 641 room=.
+-> s
+T 206 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 5) HP 38/38 MP 0/0 Hu 62 $ 641 room=.
+-> s
+T 207 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 6) HP 38/38 MP 0/0 Hu 61 $ 641 room=.
+-> l
+T 208 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7, 6) HP 38/38 MP 0/0 Hu 61 $ 641 room=.
+-> e
+T 209 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 6) HP 38/38 MP 0/0 Hu 60 $ 641 room=.
+-> l
+T 210 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8, 6) HP 38/38 MP 0/0 Hu 60 $ 641 room=.
+-> e
+T 211 mode=pool_mode           Galadriel Star-eyed(elf) F2@( 9, 6) HP 38/38 MP 0/0 Hu 59 $ 641 room=P
+-> dr
+T 212 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 6) HP 5/38 MP 0/0 Hu 59 $ 641 room=.
+-> i
+T 213 mode=inventory           Galadriel Star-eyed(elf) F2@( 9, 6) HP 5/38 MP 0/0 Hu 59 $ 641 room=.
+-> u5
+T 214 mode=inventory           Galadriel Star-eyed(elf) F2@( 9, 6) HP 35/38 MP 0/0 Hu 59 $ 641 room=.
+-> u1
+T 215 mode=inventory           Galadriel Star-eyed(elf) F2@( 9, 6) HP 38/38 MP 0/0 Hu 59 $ 641 room=.
+-> x
+T 216 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 6) HP 38/38 MP 0/0 Hu 59 $ 641 room=.
+-> l
+T 217 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9, 6) HP 38/38 MP 0/0 Hu 59 $ 641 room=.
+-> e
+T 218 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 6) HP 38/38 MP 0/0 Hu 58 $ 641 room=.
+-> l
+T 219 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 6) HP 38/38 MP 0/0 Hu 58 $ 641 room=.
+-> e
+T 220 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 6) HP 38/38 MP 0/0 Hu 57 $ 641 room=.
+-> l
+T 221 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 6) HP 38/38 MP 0/0 Hu 57 $ 641 room=.
+-> s
+T 222 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 7) HP 38/38 MP 0/0 Hu 56 $ 641 room=.
+-> l
+T 223 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 7) HP 38/38 MP 0/0 Hu 56 $ 641 room=.
+-> s
+T 224 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 8) HP 38/38 MP 0/0 Hu 55 $ 641 room=.
+-> l
+T 225 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 8) HP 38/38 MP 0/0 Hu 55 $ 641 room=.
+-> s
+T 226 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 9) HP 38/38 MP 0/0 Hu 54 $ 641 room=.
+-> l
+T 227 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 9) HP 38/38 MP 0/0 Hu 54 $ 641 room=.
+-> s
+T 228 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 641 room=V
+-> r4
+T 229 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 607 room=V
+-> b13
+T 230 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 577 room=V
+-> b13
+T 231 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 562 room=V
+-> b13
+T 232 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 552 room=V
+-> b7
+T 233 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 522 room=V
+-> b7
+T 234 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 492 room=V
+-> b7
+T 235 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 462 room=V
+-> b10
+T 236 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 457 room=V
+-> b10
+T 237 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 452 room=V
+-> b10
+T 238 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 447 room=V
+-> b7
+T 239 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 297 room=V
+-> b5
+T 240 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 227 room=V
+-> b5
+T 241 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 167 room=V
+-> id10
+T 242 mode=vendor_shop         Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 117 room=V
+-> x
+T 243 mode=game_loop           Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 117 room=V
+-> l
+T 244 mode=game_loop           Galadriel Star-eyed(elf) F2@(11,10) HP 38/38 MP 0/0 Hu 53 $ 117 room=V
+-> s
+T 245 mode=game_loop           Galadriel Star-eyed(elf) F2@(11,11) HP 38/38 MP 0/0 Hu 52 $ 117 room=.
+-> l
+T 246 mode=game_loop           Galadriel Star-eyed(elf) F2@(11,11) HP 38/38 MP 0/0 Hu 52 $ 117 room=.
+-> e
+T 247 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 51 $ 117 room=M vs Giant Centipede(L1 HP15/15)
+-> f
+T 248 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 51 $ 117 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T 249 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 51 $ 117 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T 250 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,11) HP 37/38 MP 0/0 Hu 51 $ 117 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T 251 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,11) HP 36/38 MP 0/0 Hu 51 $ 117 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T 252 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,11) HP 35/38 MP 0/0 Hu 51 $ 117 room=M vs Giant Centipede(L1 HP15/15)
+-> a
+T 253 mode=combat_victory      Galadriel Star-eyed(elf) F2@(12,11) HP 35/38 MP 0/0 Hu 51 $ 137 room=.
+-> back
+T 254 mode=game_loop           Galadriel Star-eyed(elf) F2@(12,11) HP 35/38 MP 0/0 Hu 51 $ 137 room=.
+-> i
+T 255 mode=inventory           Galadriel Star-eyed(elf) F2@(12,11) HP 35/38 MP 0/0 Hu 51 $ 137 room=.
+-> u7
+T 256 mode=inventory           Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 51 $ 137 room=.
+-> u5
+T 257 mode=upgrade_scroll_mode Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 51 $ 137 room=.
+-> 1
+T 258 mode=inventory           Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 51 $ 137 room=.
+-> x
+T 259 mode=game_loop           Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 51 $ 137 room=.
+-> i
+T 260 mode=inventory           Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 51 $ 137 room=.
+-> u22
+T 261 mode=inventory           Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 51 $ 137 room=.
+-> eat4
+T 262 mode=inventory           Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 57 $ 137 room=.
+-> x
+T 263 mode=game_loop           Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 57 $ 137 room=.
+-> l
+T 264 mode=game_loop           Galadriel Star-eyed(elf) F2@(12,11) HP 38/38 MP 0/0 Hu 57 $ 137 room=.
+-> s
+T 265 mode=chest_mode          Galadriel Star-eyed(elf) F2@(12,12) HP 38/38 MP 0/0 Hu 56 $ 137 room=C
+-> w
+T 266 mode=game_loop           Galadriel Star-eyed(elf) F2@(11,12) HP 38/38 MP 0/0 Hu 55 $ 137 room=.
+-> s
+T 267 mode=game_loop           Galadriel Star-eyed(elf) F2@(11,13) HP 38/38 MP 0/0 Hu 54 $ 137 room=.
+-> e
+T 268 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,13) HP 38/38 MP 0/0 Hu 53 $ 137 room=M vs Orc(L1 HP50/50)
+-> a
+T 269 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,13) HP 33/38 MP 0/0 Hu 53 $ 137 room=M vs Orc(L1 HP31/50)
+-> a
+T 270 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,13) HP 28/38 MP 0/0 Hu 53 $ 137 room=M vs Orc(L1 HP31/50)
+-> a
+T 271 mode=combat_mode         Galadriel Star-eyed(elf) F2@(12,13) HP 23/38 MP 0/0 Hu 53 $ 137 room=M vs Orc(L1 HP12/50)
+-> a
+T 272 mode=combat_victory      Galadriel Star-eyed(elf) F2@(12,13) HP 18/38 MP 0/0 Hu 53 $ 145 room=.
+-> back
+T 273 mode=game_loop           Galadriel Star-eyed(elf) F2@(12,13) HP 18/38 MP 0/0 Hu 53 $ 145 room=.
+-> i
+T 274 mode=inventory           Galadriel Star-eyed(elf) F2@(12,13) HP 18/38 MP 0/0 Hu 53 $ 145 room=.
+-> u7
+T 275 mode=inventory           Galadriel Star-eyed(elf) F2@(12,13) HP 38/38 MP 0/0 Hu 53 $ 145 room=.
+-> x
+T 276 mode=game_loop           Galadriel Star-eyed(elf) F2@(12,13) HP 38/38 MP 0/0 Hu 53 $ 145 room=.
+-> i
+T 277 mode=inventory           Galadriel Star-eyed(elf) F2@(12,13) HP 38/38 MP 0/0 Hu 53 $ 145 room=.
+-> u22
+T 278 mode=inventory           Galadriel Star-eyed(elf) F2@(12,13) HP 38/38 MP 0/0 Hu 53 $ 145 room=.
+-> eat4
+T 279 mode=inventory           Galadriel Star-eyed(elf) F2@(12,13) HP 38/38 MP 0/0 Hu 60 $ 145 room=.
+-> x
+T 280 mode=game_loop           Galadriel Star-eyed(elf) F2@(12,13) HP 38/38 MP 0/0 Hu 60 $ 145 room=.
+-> l
+T 281 mode=game_loop           Galadriel Star-eyed(elf) F2@(12,13) HP 38/38 MP 0/0 Hu 60 $ 145 room=.
+-> e
+T 282 mode=game_loop           Galadriel Star-eyed(elf) F2@(13,13) HP 38/38 MP 0/0 Hu 59 $ 145 room=.
+-> l
+T 283 mode=game_loop           Galadriel Star-eyed(elf) F2@(13,13) HP 38/38 MP 0/0 Hu 59 $ 145 room=.
+-> n
+T 284 mode=chest_mode          Galadriel Star-eyed(elf) F2@(13,12) HP 38/38 MP 0/0 Hu 58 $ 145 room=C
+-> o
+T 285 mode=game_loop           Galadriel Star-eyed(elf) F2@(13,12) HP 38/38 MP 0/0 Hu 58 $ 145 room=.
+-> i
+T 286 mode=inventory           Galadriel Star-eyed(elf) F2@(13,12) HP 38/38 MP 0/0 Hu 58 $ 145 room=.
+-> e1
+T 287 mode=inventory           Galadriel Star-eyed(elf) F2@(13,12) HP 38/38 MP 0/0 Hu 58 $ 145 room=.
+-> x
+T 288 mode=game_loop           Galadriel Star-eyed(elf) F2@(13,12) HP 38/38 MP 0/0 Hu 58 $ 145 room=.
+-> l
+T 289 mode=game_loop           Galadriel Star-eyed(elf) F2@(13,12) HP 38/38 MP 0/0 Hu 58 $ 145 room=.
+-> e
+T 290 mode=combat_mode         Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 57 $ 145 room=M vs Bugbear(L1 HP35/35)
+-> a
+T 291 mode=combat_mode         Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 57 $ 145 room=M vs Bugbear(L1 HP12/35)
+-> a
+T 292 mode=combat_victory      Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 57 $ 149 room=.
+-> back
+T 293 mode=game_loop           Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 57 $ 149 room=.
+-> i
+T 294 mode=inventory           Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 57 $ 149 room=.
+-> u23
+T 295 mode=inventory           Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 57 $ 149 room=.
+-> eat4
+T 296 mode=inventory           Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 75 $ 149 room=.
+-> x
+T 297 mode=game_loop           Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 75 $ 149 room=.
+-> n
+T 298 mode=game_loop           Galadriel Star-eyed(elf) F2@(14,11) HP 38/38 MP 0/0 Hu 74 $ 149 room=.
+-> n
+T 299 mode=game_loop           Galadriel Star-eyed(elf) F2@(14,10) HP 38/38 MP 0/0 Hu 73 $ 149 room=.
+-> n
+T 300 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 9) HP 38/38 MP 0/0 Hu 72 $ 149 room=.
+-> n
+T 301 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 8) HP 38/38 MP 0/0 Hu 71 $ 149 room=.
+-> n
+T 302 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 7) HP 38/38 MP 0/0 Hu 70 $ 149 room=.
+-> n
+T 303 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 6) HP 38/38 MP 0/0 Hu 69 $ 149 room=.
+-> l
+T 304 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 6) HP 38/38 MP 0/0 Hu 69 $ 149 room=.
+-> w
+T 305 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 6) HP 38/38 MP 0/0 Hu 68 $ 149 room=.
+-> w
+T 306 mode=game_loop           Galadriel Star-eyed(elf) F2@(12, 6) HP 38/38 MP 0/0 Hu 67 $ 149 room=.
+-> n
+T 307 mode=chest_mode          Galadriel Star-eyed(elf) F2@(12, 5) HP 38/38 MP 0/0 Hu 66 $ 149 room=C
+-> w
+T 308 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 5) HP 38/38 MP 0/0 Hu 65 $ 149 room=.
+-> w
+T 309 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 5) HP 38/38 MP 0/0 Hu 64 $ 149 room=.
+-> n
+T 310 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 4) HP 38/38 MP 0/0 Hu 63 $ 149 room=.
+-> n
+T 311 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 3) HP 38/38 MP 0/0 Hu 62 $ 149 room=.
+-> l
+T 312 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 3) HP 38/38 MP 0/0 Hu 62 $ 149 room=.
+-> n
+T 313 mode=dungeon_mode        Galadriel Star-eyed(elf) F2@(10, 2) HP 38/38 MP 0/0 Hu 61 $ 149 room=N
+-> u
+T 314 mode=dungeon_unlocked_mode Galadriel Star-eyed(elf) F2@(10, 2) HP 38/38 MP 0/0 Hu 61 $ 149 room=N
+-> r
+T 315 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 2) HP 38/38 MP 0/0 Hu 61 $ 262 room=N
+-> l
+T 316 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 2) HP 38/38 MP 0/0 Hu 61 $ 262 room=N
+-> s
+T 317 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 3) HP 38/38 MP 0/0 Hu 60 $ 262 room=.
+-> e
+T 318 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 3) HP 38/38 MP 0/0 Hu 59 $ 262 room=.
+-> w
+T 319 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 3) HP 38/38 MP 0/0 Hu 58 $ 262 room=.
+-> s
+T 320 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 4) HP 38/38 MP 0/0 Hu 57 $ 262 room=.
+-> s
+T 321 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 5) HP 38/38 MP 0/0 Hu 56 $ 262 room=.
+-> s
+T 322 mode=game_loop           Galadriel Star-eyed(elf) F2@(10, 6) HP 38/38 MP 0/0 Hu 55 $ 262 room=.
+-> e
+T 323 mode=game_loop           Galadriel Star-eyed(elf) F2@(11, 6) HP 38/38 MP 0/0 Hu 54 $ 262 room=.
+-> e
+T 324 mode=game_loop           Galadriel Star-eyed(elf) F2@(12, 6) HP 38/38 MP 0/0 Hu 53 $ 262 room=.
+-> e
+T 325 mode=game_loop           Galadriel Star-eyed(elf) F2@(13, 6) HP 38/38 MP 0/0 Hu 52 $ 262 room=.
+-> e
+T 326 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 6) HP 38/38 MP 0/0 Hu 51 $ 262 room=.
+-> e
+T 327 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 6) HP 38/38 MP 0/0 Hu 50 $ 262 room=.
+-> l
+T 328 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 6) HP 38/38 MP 0/0 Hu 50 $ 262 room=.
+-> e
+T 329 mode=game_loop           Galadriel Star-eyed(elf) F2@(16, 6) HP 38/38 MP 0/0 Hu 49 $ 262 room=.
+-> i
+T 330 mode=inventory           Galadriel Star-eyed(elf) F2@(16, 6) HP 38/38 MP 0/0 Hu 49 $ 262 room=.
+-> eat4
+T 331 mode=inventory           Galadriel Star-eyed(elf) F2@(16, 6) HP 38/38 MP 0/0 Hu 56 $ 262 room=.
+-> x
+T 332 mode=game_loop           Galadriel Star-eyed(elf) F2@(16, 6) HP 38/38 MP 0/0 Hu 56 $ 262 room=.
+-> l
+T 333 mode=game_loop           Galadriel Star-eyed(elf) F2@(16, 6) HP 38/38 MP 0/0 Hu 56 $ 262 room=.
+-> e
+T 334 mode=oracle_mode         Galadriel Star-eyed(elf) F2@(17, 6) HP 38/38 MP 0/0 Hu 55 $ 262 room=O
+-> s
+T 335 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 7) HP 38/38 MP 0/0 Hu 54 $ 262 room=.
+-> s
+T 336 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 8) HP 38/38 MP 0/0 Hu 53 $ 262 room=.
+-> s
+T 337 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 9) HP 38/38 MP 0/0 Hu 52 $ 262 room=.
+-> e
+T 338 mode=pool_mode           Galadriel Star-eyed(elf) F2@(18, 9) HP 38/38 MP 0/0 Hu 51 $ 262 room=P
+-> dr
+T 339 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 9) HP 38/38 MP 0/0 Hu 51 $ 262 room=.
+-> l
+T 340 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 9) HP 38/38 MP 0/0 Hu 51 $ 262 room=.
+-> n
+T 341 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 8) HP 38/38 MP 0/0 Hu 50 $ 262 room=.
+-> l
+T 342 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 8) HP 38/38 MP 0/0 Hu 50 $ 262 room=.
+-> n
+T 343 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 7) HP 38/38 MP 0/0 Hu 49 $ 262 room=.
+-> i
+T 344 mode=inventory           Galadriel Star-eyed(elf) F2@(18, 7) HP 38/38 MP 0/0 Hu 49 $ 262 room=.
+-> eat4
+T 345 mode=inventory           Galadriel Star-eyed(elf) F2@(18, 7) HP 38/38 MP 0/0 Hu 56 $ 262 room=.
+-> x
+T 346 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 7) HP 38/38 MP 0/0 Hu 56 $ 262 room=.
+-> l
+T 347 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 7) HP 38/38 MP 0/0 Hu 56 $ 262 room=.
+-> n
+T 348 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 6) HP 38/38 MP 0/0 Hu 55 $ 262 room=.
+-> w
+T 349 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 6) HP 38/38 MP 0/0 Hu 54 $ 262 room=O
+-> l
+T 350 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 6) HP 38/38 MP 0/0 Hu 54 $ 262 room=O
+-> n
+T 351 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 5) HP 38/38 MP 0/0 Hu 53 $ 262 room=.
+-> n
+T 352 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 4) HP 38/38 MP 0/0 Hu 52 $ 262 room=.
+-> l
+T 353 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 4) HP 38/38 MP 0/0 Hu 52 $ 262 room=.
+-> n
+T 354 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 3) HP 38/38 MP 0/0 Hu 51 $ 262 room=.
+-> l
+T 355 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 3) HP 38/38 MP 0/0 Hu 51 $ 262 room=.
+-> n
+T 356 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 2) HP 38/38 MP 0/0 Hu 50 $ 262 room=.
+-> l
+T 357 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 2) HP 38/38 MP 0/0 Hu 50 $ 262 room=.
+-> n
+T 358 mode=altar_mode          Galadriel Star-eyed(elf) F2@(17, 1) HP 38/38 MP 0/0 Hu 49 $ 262 room=A
+-> pray
+T 359 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 1) HP 38/38 MP 0/0 Hu 49 $ 298 room=.
+-> i
+T 360 mode=inventory           Galadriel Star-eyed(elf) F2@(17, 1) HP 38/38 MP 0/0 Hu 49 $ 298 room=.
+-> eat4
+T 361 mode=inventory           Galadriel Star-eyed(elf) F2@(17, 1) HP 38/38 MP 0/0 Hu 64 $ 298 room=.
+-> x
+T 362 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 1) HP 38/38 MP 0/0 Hu 64 $ 298 room=.
+-> l
+T 363 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 1) HP 38/38 MP 0/0 Hu 64 $ 298 room=.
+-> e
+T 364 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 1) HP 38/38 MP 0/0 Hu 63 $ 298 room=.
+-> s
+T 365 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 2) HP 38/38 MP 0/0 Hu 62 $ 298 room=.
+-> s
+T 366 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 3) HP 38/38 MP 0/0 Hu 61 $ 298 room=.
+-> e
+T 367 mode=combat_mode         Galadriel Star-eyed(elf) F2@(19, 3) HP 38/38 MP 0/0 Hu 60 $ 298 room=M vs Gray Ooze(L1 HP35/35)
+-> f
+T 368 mode=flee_direction_mode Galadriel Star-eyed(elf) F2@(19, 3) HP 37/38 MP 0/0 Hu 60 $ 298 room=M
+-> n
+T 369 mode=game_loop           Galadriel Star-eyed(elf) F2@(19, 2) HP 37/38 MP 0/0 Hu 60 $ 298 room=.
+-> n
+T 370 mode=game_loop           Galadriel Star-eyed(elf) F2@(19, 1) HP 37/38 MP 0/0 Hu 59 $ 298 room=.
+-> w
+T 371 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 1) HP 37/38 MP 0/0 Hu 58 $ 298 room=.
+-> s
+T 372 mode=game_loop           Galadriel Star-eyed(elf) F2@(18, 2) HP 37/38 MP 0/0 Hu 57 $ 298 room=.
+-> w
+T 373 mode=game_loop           Galadriel Star-eyed(elf) F2@(17, 2) HP 37/38 MP 0/0 Hu 56 $ 298 room=.
+-> w
+T 374 mode=game_loop           Galadriel Star-eyed(elf) F2@(16, 2) HP 37/38 MP 0/0 Hu 55 $ 298 room=.
+-> w
+T 375 mode=library_mode        Galadriel Star-eyed(elf) F2@(15, 2) HP 37/38 MP 0/0 Hu 54 $ 298 room=L
+-> r
+T 376 mode=game_loop           Galadriel Star-eyed(elf) F2@(15, 2) HP 37/38 MP 0/0 Hu 54 $ 298 room=.
+-> w
+T 377 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 2) HP 37/38 MP 0/0 Hu 53 $ 298 room=.
+-> s
+T 378 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 3) HP 37/38 MP 0/0 Hu 52 $ 298 room=.
+-> s
+T 379 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 4) HP 37/38 MP 0/0 Hu 51 $ 298 room=.
+-> s
+T 380 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 5) HP 37/38 MP 0/0 Hu 50 $ 298 room=.
+-> s
+T 381 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 6) HP 37/38 MP 0/0 Hu 49 $ 298 room=.
+-> i
+T 382 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 6) HP 37/38 MP 0/0 Hu 49 $ 298 room=.
+-> eat4
+T 383 mode=inventory           Galadriel Star-eyed(elf) F2@(14, 6) HP 37/38 MP 0/0 Hu 67 $ 298 room=.
+-> x
+T 384 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 6) HP 37/38 MP 0/0 Hu 67 $ 298 room=.
+-> s
+T 385 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 7) HP 37/38 MP 0/0 Hu 66 $ 298 room=.
+-> s
+T 386 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 8) HP 37/38 MP 0/0 Hu 65 $ 298 room=.
+-> s
+T 387 mode=game_loop           Galadriel Star-eyed(elf) F2@(14, 9) HP 37/38 MP 0/0 Hu 64 $ 298 room=.
+-> s
+T 388 mode=game_loop           Galadriel Star-eyed(elf) F2@(14,10) HP 38/38 MP 0/0 Hu 63 $ 298 room=.
+-> s
+T 389 mode=game_loop           Galadriel Star-eyed(elf) F2@(14,11) HP 38/38 MP 0/0 Hu 62 $ 298 room=.
+-> s
+T 390 mode=game_loop           Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 61 $ 298 room=.
+-> l
+T 391 mode=game_loop           Galadriel Star-eyed(elf) F2@(14,12) HP 38/38 MP 0/0 Hu 61 $ 298 room=.
+-> s
+T 392 mode=game_loop           Galadriel Star-eyed(elf) F2@(14,13) HP 38/38 MP 0/0 Hu 60 $ 298 room=.
+-> w
+T 393 mode=game_loop           Galadriel Star-eyed(elf) F2@(13,13) HP 38/38 MP 0/0 Hu 59 $ 298 room=.
+-> w
+T 394 mode=game_loop           Galadriel Star-eyed(elf) F2@(12,13) HP 38/38 MP 0/0 Hu 58 $ 298 room=.
+-> w
+T 395 mode=game_loop           Galadriel Star-eyed(elf) F2@(11,13) HP 38/38 MP 0/0 Hu 57 $ 298 room=.
+-> w
+T 396 mode=game_loop           Galadriel Star-eyed(elf) F2@(10,13) HP 38/38 MP 0/0 Hu 56 $ 298 room=.
+-> l
+T 397 mode=game_loop           Galadriel Star-eyed(elf) F2@(10,13) HP 38/38 MP 0/0 Hu 56 $ 298 room=.
+-> w
+T 398 mode=chest_mode          Galadriel Star-eyed(elf) F2@( 9,13) HP 38/38 MP 0/0 Hu 55 $ 298 room=C
+-> o
+T 399 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,13) HP 38/38 MP 0/0 Hu 55 $ 298 room=.
+-> l
+T 400 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,13) HP 38/38 MP 0/0 Hu 55 $ 298 room=.
+-> l
+T 401 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,13) HP 38/38 MP 0/0 Hu 55 $ 298 room=.
+-> s
+T 402 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,14) HP 38/38 MP 0/0 Hu 54 $ 298 room=.
+-> l
+T 403 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,14) HP 38/38 MP 0/0 Hu 54 $ 298 room=.
+-> s
+T 404 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,15) HP 38/38 MP 0/0 Hu 53 $ 298 room=.
+-> l
+T 405 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,15) HP 38/38 MP 0/0 Hu 53 $ 298 room=.
+-> e
+T 406 mode=library_mode        Galadriel Star-eyed(elf) F2@(10,15) HP 38/38 MP 0/0 Hu 52 $ 298 room=L
+-> r
+T 407 mode=library_read_decision_mode Galadriel Star-eyed(elf) F2@(10,15) HP 38/38 MP 0/0 Hu 52 $ 298 room=L
+-> y
+T 408 mode=game_loop           Galadriel Star-eyed(elf) F2@(10,15) HP 38/38 MP 0/0 Hu 52 $ 298 room=.
+-> n
+T 409 mode=game_loop           Galadriel Star-eyed(elf) F2@(10,14) HP 38/38 MP 0/0 Hu 51 $ 298 room=.
+-> n
+T 410 mode=game_loop           Galadriel Star-eyed(elf) F2@(10,13) HP 38/38 MP 0/0 Hu 50 $ 298 room=.
+-> l
+T 411 mode=game_loop           Galadriel Star-eyed(elf) F2@(10,13) HP 38/38 MP 0/0 Hu 50 $ 298 room=.
+-> w
+T 412 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,13) HP 38/38 MP 0/0 Hu 49 $ 298 room=.
+-> i
+T 413 mode=inventory           Galadriel Star-eyed(elf) F2@( 9,13) HP 38/38 MP 0/0 Hu 49 $ 298 room=.
+-> eat4
+T 414 mode=inventory           Galadriel Star-eyed(elf) F2@( 9,13) HP 38/38 MP 0/0 Hu 67 $ 298 room=.
+-> x
+T 415 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,13) HP 38/38 MP 0/0 Hu 67 $ 298 room=.
+-> s
+T 416 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,14) HP 38/38 MP 0/0 Hu 66 $ 298 room=.
+-> s
+T 417 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,15) HP 38/38 MP 0/0 Hu 65 $ 298 room=.
+-> w
+T 418 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8,15) HP 38/38 MP 0/0 Hu 64 $ 298 room=.
+-> l
+T 419 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8,15) HP 38/38 MP 0/0 Hu 64 $ 298 room=.
+-> s
+T 420 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 8,16) HP 38/38 MP 0/0 Hu 63 $ 298 room=M vs Harpy(L1 HP28/28)
+-> a
+T 421 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 8,16) HP 38/38 MP 0/0 Hu 63 $ 298 room=M vs Harpy(L1 HP3/28)
+-> a
+T 422 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 8,16) HP 37/38 MP 0/0 Hu 63 $ 298 room=M vs Harpy(L1 HP3/28)
+-> a
+T 423 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 8,16) HP 36/38 MP 0/0 Hu 63 $ 298 room=M vs Harpy(L1 HP3/28)
+-> a
+T 424 mode=combat_mode         Galadriel Star-eyed(elf) F2@( 8,16) HP 35/38 MP 0/0 Hu 63 $ 298 room=M vs Harpy(L1 HP3/28)
+-> f
+T 425 mode=flee_direction_mode Galadriel Star-eyed(elf) F2@( 8,16) HP 35/38 MP 0/0 Hu 63 $ 298 room=M
+-> e
+T 426 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,16) HP 35/38 MP 0/0 Hu 63 $ 298 room=.
+-> e
+T 427 mode=game_loop           Galadriel Star-eyed(elf) F2@(10,16) HP 35/38 MP 0/0 Hu 62 $ 298 room=.
+-> e
+T 428 mode=combat_mode         Galadriel Star-eyed(elf) F2@(11,16) HP 35/38 MP 0/0 Hu 61 $ 298 room=M vs Wight(L1 HP40/40)
+-> a
+T 429 mode=combat_mode         Galadriel Star-eyed(elf) F2@(11,16) HP 23/38 MP 0/0 Hu 61 $ 298 room=M vs Wight(L1 HP40/40)
+-> a
+T 430 mode=combat_mode         Galadriel Star-eyed(elf) F2@(11,16) HP 17/38 MP 0/0 Hu 61 $ 298 room=M vs Wight(L1 HP16/40)
+-> i
+T 431 mode=inventory           Galadriel Star-eyed(elf) F2@(11,16) HP 17/38 MP 0/0 Hu 61 $ 298 room=M
+-> u3
+T 432 mode=inventory           Galadriel Star-eyed(elf) F2@(11,16) HP 38/38 MP 0/0 Hu 61 $ 298 room=M
+-> x
+T 433 mode=combat_mode         Galadriel Star-eyed(elf) F2@(11,16) HP 38/38 MP 0/0 Hu 61 $ 298 room=M vs Wight(L1 HP16/40)
+-> f
+T 434 mode=flee_direction_mode Galadriel Star-eyed(elf) F2@(11,16) HP 38/38 MP 0/0 Hu 61 $ 298 room=M
+-> n
+T 435 mode=game_loop           Galadriel Star-eyed(elf) F2@(11,15) HP 38/38 MP 0/0 Hu 61 $ 298 room=.
+-> w
+T 436 mode=game_loop           Galadriel Star-eyed(elf) F2@(10,15) HP 38/38 MP 0/0 Hu 60 $ 298 room=.
+-> w
+T 437 mode=game_loop           Galadriel Star-eyed(elf) F2@( 9,15) HP 38/38 MP 0/0 Hu 59 $ 298 room=.
+-> w
+T 438 mode=game_loop           Galadriel Star-eyed(elf) F2@( 8,15) HP 38/38 MP 0/0 Hu 58 $ 298 room=.
+-> w
+T 439 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7,15) HP 38/38 MP 0/0 Hu 57 $ 298 room=.
+-> l
+T 440 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7,15) HP 38/38 MP 0/0 Hu 57 $ 298 room=.
+-> l
+T 441 mode=game_loop           Galadriel Star-eyed(elf) F2@( 7,15) HP 38/38 MP 0/0 Hu 57 $ 298 room=.
+-> w
+T 442 mode=chest_mode          Galadriel Star-eyed(elf) F2@( 6,15) HP 38/38 MP 0/0 Hu 56 $ 298 room=C
+-> o
+T 443 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,15) HP 38/38 MP 0/0 Hu 56 $ 298 room=.
+-> l
+T 444 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,15) HP 38/38 MP 0/0 Hu 56 $ 298 room=.
+-> n
+T 445 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,14) HP 38/38 MP 0/0 Hu 55 $ 298 room=.
+-> n
+T 446 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,13) HP 38/38 MP 0/0 Hu 54 $ 298 room=.
+-> n
+T 447 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,12) HP 38/38 MP 0/0 Hu 53 $ 298 room=.
+-> l
+T 448 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,12) HP 38/38 MP 0/0 Hu 53 $ 298 room=.
+-> n
+T 449 mode=game_loop           Galadriel Star-eyed(elf) F2@( 6,11) HP 38/38 MP 0/0 Hu 52 $ 298 room=.
+-> w
+T 450 mode=garden_mode         Galadriel Star-eyed(elf) F2@( 5,11) HP 38/38 MP 0/0 Hu 51 $ 298 room=G
+-> h
+T 451 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5,11) HP 38/38 MP 0/0 Hu 51 $ 298 room=.
+-> l
+T 452 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5,11) HP 38/38 MP 0/0 Hu 51 $ 298 room=.
+-> s
+T 453 mode=game_loop           Galadriel Star-eyed(elf) F2@( 5,12) HP 38/38 MP 0/0 Hu 50 $ 298 room=.
+-> w
+T 454 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4,12) HP 38/38 MP 0/0 Hu 49 $ 298 room=.
+-> i
+T 455 mode=inventory           Galadriel Star-eyed(elf) F2@( 4,12) HP 38/38 MP 0/0 Hu 49 $ 298 room=.
+-> eat4
+T 456 mode=inventory           Galadriel Star-eyed(elf) F2@( 4,12) HP 38/38 MP 0/0 Hu 59 $ 298 room=.
+-> x
+T 457 mode=game_loop           Galadriel Star-eyed(elf) F2@( 4,12) HP 38/38 MP 0/0 Hu 59 $ 298 room=.
+-> w
+T 458 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3,12) HP 38/38 MP 0/0 Hu 58 $ 298 room=.
+-> w
+T 459 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2,12) HP 38/38 MP 0/0 Hu 57 $ 298 room=.
+-> w
+T 460 mode=altar_mode          Galadriel Star-eyed(elf) F2@( 1,12) HP 38/38 MP 0/0 Hu 56 $ 298 room=A
+-> pray
+T 461 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,12) HP 38/38 MP 0/0 Hu100 $ 298 room=.
+-> l
+T 462 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,12) HP 38/38 MP 0/0 Hu100 $ 298 room=.
+-> s
+T 463 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,13) HP 38/38 MP 0/0 Hu 99 $ 298 room=.
+-> s
+T 464 mode=pool_mode           Galadriel Star-eyed(elf) F2@( 1,14) HP 38/38 MP 0/0 Hu 98 $ 298 room=P
+-> dr
+T 465 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,14) HP 38/42 MP 0/0 Hu 98 $ 298 room=.
+-> l
+T 466 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,14) HP 38/42 MP 0/0 Hu 98 $ 298 room=.
+-> s
+T 467 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,15) HP 38/42 MP 0/0 Hu 97 $ 298 room=.
+-> l
+T 468 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,15) HP 38/42 MP 0/0 Hu 97 $ 298 room=.
+-> s
+T 469 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,16) HP 39/42 MP 0/0 Hu 96 $ 298 room=.
+-> l
+T 470 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,16) HP 39/42 MP 0/0 Hu 96 $ 298 room=.
+-> l
+T 471 mode=game_loop           Galadriel Star-eyed(elf) F2@( 1,16) HP 39/42 MP 0/0 Hu 96 $ 298 room=.
+-> e
+T 472 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2,16) HP 39/42 MP 0/0 Hu 95 $ 298 room=.
+-> n
+T 473 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2,15) HP 40/42 MP 0/0 Hu 94 $ 298 room=.
+-> n
+T 474 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2,14) HP 40/42 MP 0/0 Hu 93 $ 298 room=.
+-> n
+T 475 mode=game_loop           Galadriel Star-eyed(elf) F2@( 2,13) HP 41/42 MP 0/0 Hu 92 $ 298 room=.
+-> e
+T 476 mode=game_loop           Galadriel Star-eyed(elf) F2@( 3,13) HP 41/42 MP 0/0 Hu 91 $ 298 room=.
+-> e
+T 477 mode=stairs_down_mode    Galadriel Star-eyed(elf) F2@( 4,13) HP 42/42 MP 0/0 Hu 90 $ 298 room=D
+-> d
+T 478 mode=stairs_up_mode      Galadriel Star-eyed(elf) F3@( 1, 1) HP 42/42 MP 0/0 Hu 90 $ 298 room=U
+-> e
+T 479 mode=pool_mode           Galadriel Star-eyed(elf) F3@( 2, 1) HP 42/42 MP 0/0 Hu 89 $ 298 room=P
+-> dr
+T 480 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 1) HP 42/42 MP 0/0 Hu 89 $ 298 room=.
+-> l
+T 481 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 1) HP 42/42 MP 0/0 Hu 89 $ 298 room=.
+-> e
+T 482 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3, 1) HP 42/42 MP 0/0 Hu 88 $ 298 room=.
+-> l
+T 483 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3, 1) HP 42/42 MP 0/0 Hu 88 $ 298 room=.
+-> s
+T 484 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3, 2) HP 42/42 MP 0/0 Hu 87 $ 298 room=.
+-> w
+T 485 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 86 $ 298 room=M vs Kobold(L2 HP20/20)
+-> a
+T 486 mode=combat_victory      Galadriel Star-eyed(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 86 $ 310 room=.
+-> back
+T 487 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 86 $ 310 room=.
+-> i
+T 488 mode=inventory           Galadriel Star-eyed(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 86 $ 310 room=.
+-> u19
+T 489 mode=inventory           Galadriel Star-eyed(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 86 $ 310 room=.
+-> u10
+T 490 mode=upgrade_scroll_mode Galadriel Star-eyed(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 86 $ 310 room=.
+-> 1
+T 491 mode=inventory           Galadriel Star-eyed(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 86 $ 310 room=.
+-> x
+T 492 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 86 $ 310 room=.
+-> l
+T 493 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 86 $ 310 room=.
+-> w
+T 494 mode=game_loop           Galadriel Star-eyed(elf) F3@( 1, 2) HP 42/42 MP 0/0 Hu 85 $ 310 room=.
+-> l
+T 495 mode=game_loop           Galadriel Star-eyed(elf) F3@( 1, 2) HP 42/42 MP 0/0 Hu 85 $ 310 room=.
+-> s
+T 496 mode=game_loop           Galadriel Star-eyed(elf) F3@( 1, 3) HP 42/42 MP 0/0 Hu 84 $ 310 room=.
+-> s
+T 497 mode=game_loop           Galadriel Star-eyed(elf) F3@( 1, 4) HP 42/42 MP 0/0 Hu 83 $ 310 room=.
+-> s
+T 498 mode=game_loop           Galadriel Star-eyed(elf) F3@( 1, 5) HP 42/42 MP 0/0 Hu 82 $ 310 room=.
+-> e
+T 499 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 5) HP 42/42 MP 0/0 Hu 81 $ 310 room=.
+-> s
+T 500 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 6) HP 42/42 MP 0/0 Hu 80 $ 310 room=.
+-> s
+T 501 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 7) HP 42/42 MP 0/0 Hu 79 $ 310 room=.
+-> s
+T 502 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 310 room=V
+-> r4
+T 503 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 272 room=V
+-> b13
+T 504 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 242 room=V
+-> b13
+T 505 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 227 room=V
+-> b13
+T 506 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 217 room=V
+-> b3
+T 507 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 167 room=V
+-> b3
+T 508 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 137 room=V
+-> b3
+T 509 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 107 room=V
+-> b3
+T 510 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 77 room=V
+-> b3
+T 511 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 47 room=V
+-> b9
+T 512 mode=vendor_shop         Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 42 room=V
+-> x
+T 513 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 8) HP 42/42 MP 0/0 Hu 78 $ 42 room=V
+-> s
+T 514 mode=library_mode        Galadriel Star-eyed(elf) F3@( 2, 9) HP 42/42 MP 0/0 Hu 77 $ 42 room=L
+-> r
+T 515 mode=library_read_decision_mode Galadriel Star-eyed(elf) F3@( 2, 9) HP 42/42 MP 0/0 Hu 77 $ 42 room=L
+-> y
+T 516 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 9) HP 42/42 MP 0/0 Hu 77 $ 42 room=.
+-> l
+T 517 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2, 9) HP 42/42 MP 0/0 Hu 77 $ 42 room=.
+-> s
+T 518 mode=chest_mode          Galadriel Star-eyed(elf) F3@( 2,10) HP 42/42 MP 0/0 Hu 76 $ 42 room=C
+-> o
+T 519 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,10) HP 42/42 MP 0/0 Hu 76 $ 122 room=.
+-> s
+T 520 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,11) HP 42/42 MP 0/0 Hu 75 $ 122 room=.
+-> l
+T 521 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,11) HP 42/42 MP 0/0 Hu 75 $ 122 room=.
+-> e
+T 522 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,11) HP 42/42 MP 0/0 Hu 74 $ 122 room=.
+-> l
+T 523 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,11) HP 42/42 MP 0/0 Hu 74 $ 122 room=.
+-> s
+T 524 mode=dungeon_mode        Galadriel Star-eyed(elf) F3@( 3,12) HP 42/42 MP 0/0 Hu 73 $ 122 room=N
+-> u
+T 525 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,12) HP 42/42 MP 0/0 Hu 73 $ 122 room=N
+-> s
+T 526 mode=chest_mode          Galadriel Star-eyed(elf) F3@( 3,13) HP 42/42 MP 0/0 Hu 72 $ 122 room=C
+-> o
+T 527 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,13) HP 42/42 MP 0/0 Hu 72 $ 122 room=.
+-> l
+T 528 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,13) HP 42/42 MP 0/0 Hu 72 $ 122 room=.
+-> e
+T 529 mode=garden_mode         Galadriel Star-eyed(elf) F3@( 4,13) HP 42/42 MP 0/0 Hu 71 $ 122 room=G
+-> h
+T 530 mode=game_loop           Galadriel Star-eyed(elf) F3@( 4,13) HP 42/42 MP 0/0 Hu 71 $ 122 room=.
+-> l
+T 531 mode=game_loop           Galadriel Star-eyed(elf) F3@( 4,13) HP 42/42 MP 0/0 Hu 71 $ 122 room=.
+-> s
+T 532 mode=game_loop           Galadriel Star-eyed(elf) F3@( 4,14) HP 42/42 MP 0/0 Hu 70 $ 122 room=.
+-> i
+T 533 mode=inventory           Galadriel Star-eyed(elf) F3@( 4,14) HP 42/42 MP 0/0 Hu 70 $ 122 room=.
+-> eat5
+T 534 mode=inventory           Galadriel Star-eyed(elf) F3@( 4,14) HP 42/42 MP 0/0 Hu 88 $ 122 room=.
+-> x
+T 535 mode=game_loop           Galadriel Star-eyed(elf) F3@( 4,14) HP 42/42 MP 0/0 Hu 88 $ 122 room=.
+-> l
+T 536 mode=game_loop           Galadriel Star-eyed(elf) F3@( 4,14) HP 42/42 MP 0/0 Hu 88 $ 122 room=.
+-> w
+T 537 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 3,14) HP 42/42 MP 0/0 Hu 87 $ 122 room=M vs Slime Mold(L2 HP16/16)
+-> a
+T 538 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 3,14) HP 41/42 MP 0/0 Hu 87 $ 122 room=M vs Slime Mold(L2 HP16/16)
+-> a
+T 539 mode=combat_victory      Galadriel Star-eyed(elf) F3@( 3,14) HP 41/52 MP 0/0 Hu 87 $ 146 room=.
+-> back
+T 540 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,14) HP 41/52 MP 0/0 Hu 87 $ 146 room=.
+-> i
+T 541 mode=inventory           Galadriel Star-eyed(elf) F3@( 3,14) HP 41/52 MP 0/0 Hu 87 $ 146 room=.
+-> u9
+T 542 mode=inventory           Galadriel Star-eyed(elf) F3@( 3,14) HP 52/52 MP 0/0 Hu 87 $ 146 room=.
+-> x
+T 543 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,14) HP 52/52 MP 0/0 Hu 87 $ 146 room=.
+-> s
+T 544 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 3,15) HP 52/52 MP 0/0 Hu 86 $ 146 room=M vs Bugbear(L2 HP55/55)
+-> a
+T 545 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 3,15) HP 48/52 MP 0/0 Hu 86 $ 146 room=M vs Bugbear(L2 HP55/55)
+-> a
+T 546 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 3,15) HP 48/52 MP 0/0 Hu 86 $ 146 room=M vs Bugbear(L2 HP55/55)
+-> a
+T 547 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 3,15) HP 44/52 MP 0/0 Hu 86 $ 146 room=M vs Bugbear(L2 HP29/55)
+-> a
+T 548 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 3,15) HP 40/52 MP 0/0 Hu 86 $ 146 room=M vs Bugbear(L2 HP3/55)
+-> a
+T 549 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 3,15) HP 36/52 MP 0/0 Hu 86 $ 146 room=M vs Bugbear(L2 HP3/55)
+-> a
+T 550 mode=combat_victory      Galadriel Star-eyed(elf) F3@( 3,15) HP 36/52 MP 0/0 Hu 86 $ 161 room=.
+-> back
+T 551 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,15) HP 36/52 MP 0/0 Hu 86 $ 161 room=.
+-> i
+T 552 mode=inventory           Galadriel Star-eyed(elf) F3@( 3,15) HP 36/52 MP 0/0 Hu 86 $ 161 room=.
+-> u9
+T 553 mode=inventory           Galadriel Star-eyed(elf) F3@( 3,15) HP 52/52 MP 0/0 Hu 86 $ 161 room=.
+-> x
+T 554 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,15) HP 52/52 MP 0/0 Hu 86 $ 161 room=.
+-> i
+T 555 mode=inventory           Galadriel Star-eyed(elf) F3@( 3,15) HP 52/52 MP 0/0 Hu 86 $ 161 room=.
+-> u20
+T 556 mode=inventory           Galadriel Star-eyed(elf) F3@( 3,15) HP 52/52 MP 0/0 Hu 86 $ 161 room=.
+-> x
+T 557 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,15) HP 52/52 MP 0/0 Hu 86 $ 161 room=.
+-> w
+T 558 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,15) HP 52/52 MP 0/0 Hu 85 $ 161 room=.
+-> n
+T 559 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,14) HP 52/52 MP 0/0 Hu 84 $ 161 room=.
+-> n
+T 560 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,13) HP 52/52 MP 0/0 Hu 83 $ 161 room=.
+-> n
+T 561 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,12) HP 52/52 MP 0/0 Hu 82 $ 161 room=.
+-> l
+T 562 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,12) HP 52/52 MP 0/0 Hu 82 $ 161 room=.
+-> w
+T 563 mode=game_loop           Galadriel Star-eyed(elf) F3@( 1,12) HP 52/52 MP 0/0 Hu 81 $ 161 room=.
+-> s
+T 564 mode=game_loop           Galadriel Star-eyed(elf) F3@( 1,13) HP 52/52 MP 0/0 Hu 80 $ 161 room=.
+-> n
+T 565 mode=game_loop           Galadriel Star-eyed(elf) F3@( 1,12) HP 52/52 MP 0/0 Hu 79 $ 161 room=.
+-> n
+T 566 mode=game_loop           Galadriel Star-eyed(elf) F3@( 1,11) HP 52/52 MP 0/0 Hu 78 $ 161 room=.
+-> e
+T 567 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,11) HP 52/52 MP 0/0 Hu 77 $ 161 room=.
+-> s
+T 568 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,12) HP 52/52 MP 0/0 Hu 76 $ 161 room=.
+-> s
+T 569 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,13) HP 52/52 MP 0/0 Hu 75 $ 161 room=.
+-> s
+T 570 mode=game_loop           Galadriel Star-eyed(elf) F3@( 2,14) HP 52/52 MP 0/0 Hu 74 $ 161 room=.
+-> e
+T 571 mode=game_loop           Galadriel Star-eyed(elf) F3@( 3,14) HP 52/52 MP 0/0 Hu 73 $ 161 room=.
+-> e
+T 572 mode=game_loop           Galadriel Star-eyed(elf) F3@( 4,14) HP 52/52 MP 0/0 Hu 72 $ 161 room=.
+-> e
+T 573 mode=game_loop           Galadriel Star-eyed(elf) F3@( 5,14) HP 52/52 MP 0/0 Hu 71 $ 161 room=.
+-> l
+T 574 mode=game_loop           Galadriel Star-eyed(elf) F3@( 5,14) HP 52/52 MP 0/0 Hu 71 $ 161 room=.
+-> e
+T 575 mode=game_loop           Galadriel Star-eyed(elf) F3@( 6,14) HP 52/52 MP 0/0 Hu 70 $ 161 room=.
+-> l
+T 576 mode=game_loop           Galadriel Star-eyed(elf) F3@( 6,14) HP 52/52 MP 0/0 Hu 70 $ 161 room=.
+-> s
+T 577 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 6,15) HP 52/52 MP 0/0 Hu 69 $ 161 room=M vs Slime Mold(L2 HP16/16)
+-> a
+T 578 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 6,15) HP 51/52 MP 0/0 Hu 69 $ 161 room=M vs Slime Mold(L2 HP16/16)
+-> a
+T 579 mode=combat_victory      Galadriel Star-eyed(elf) F3@( 6,15) HP 51/52 MP 0/0 Hu 69 $ 188 room=.
+-> back
+T 580 mode=game_loop           Galadriel Star-eyed(elf) F3@( 6,15) HP 51/52 MP 0/0 Hu 69 $ 188 room=.
+-> l
+T 581 mode=game_loop           Galadriel Star-eyed(elf) F3@( 6,15) HP 51/52 MP 0/0 Hu 69 $ 188 room=.
+-> s
+T 582 mode=game_loop           Galadriel Star-eyed(elf) F3@( 6,16) HP 51/52 MP 0/0 Hu 68 $ 188 room=.
+-> l
+T 583 mode=game_loop           Galadriel Star-eyed(elf) F3@( 6,16) HP 51/52 MP 0/0 Hu 68 $ 188 room=.
+-> e
+T 584 mode=game_loop           Galadriel Star-eyed(elf) F3@( 7,16) HP 51/52 MP 0/0 Hu 67 $ 188 room=.
+-> n
+T 585 mode=game_loop           Galadriel Star-eyed(elf) F3@( 7,15) HP 51/52 MP 0/0 Hu 66 $ 188 room=.
+-> e
+T 586 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 8,15) HP 52/52 MP 0/0 Hu 65 $ 188 room=M vs Rust Monster(L2 HP18/18)
+-> a
+T 587 mode=combat_victory      Galadriel Star-eyed(elf) F3@( 8,15) HP 52/52 MP 0/0 Hu 65 $ 209 room=.
+-> back
+T 588 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,15) HP 52/52 MP 0/0 Hu 65 $ 209 room=.
+-> i
+T 589 mode=inventory           Galadriel Star-eyed(elf) F3@( 8,15) HP 52/52 MP 0/0 Hu 65 $ 209 room=.
+-> u21
+T 590 mode=inventory           Galadriel Star-eyed(elf) F3@( 8,15) HP 52/52 MP 0/0 Hu 65 $ 209 room=.
+-> eat4
+T 591 mode=inventory           Galadriel Star-eyed(elf) F3@( 8,15) HP 52/52 MP 0/0 Hu 83 $ 209 room=.
+-> x
+T 592 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,15) HP 52/52 MP 0/0 Hu 83 $ 209 room=.
+-> n
+T 593 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,14) HP 52/52 MP 0/0 Hu 82 $ 209 room=.
+-> l
+T 594 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,14) HP 52/52 MP 0/0 Hu 82 $ 209 room=.
+-> e
+T 595 mode=pool_mode           Galadriel Star-eyed(elf) F3@( 9,14) HP 52/52 MP 0/0 Hu 81 $ 209 room=P
+-> dr
+T 596 mode=game_loop           Galadriel Star-eyed(elf) F3@( 9,14) HP 52/52 MP 0/0 Hu 81 $ 209 room=.
+-> e
+T 597 mode=game_loop           Galadriel Star-eyed(elf) F3@(10,14) HP 52/52 MP 0/0 Hu 80 $ 209 room=.
+-> w
+T 598 mode=game_loop           Galadriel Star-eyed(elf) F3@( 9,14) HP 52/52 MP 0/0 Hu 79 $ 209 room=.
+-> e
+T 599 mode=game_loop           Galadriel Star-eyed(elf) F3@(10,14) HP 52/52 MP 0/0 Hu 78 $ 209 room=.
+-> w
+T 600 mode=game_loop           Galadriel Star-eyed(elf) F3@( 9,14) HP 52/52 MP 0/0 Hu 77 $ 209 room=.
+-> w
+T 601 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,14) HP 52/52 MP 0/0 Hu 76 $ 209 room=.
+-> n
+T 602 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,13) HP 52/52 MP 0/0 Hu 75 $ 209 room=.
+-> l
+T 603 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,13) HP 52/52 MP 0/0 Hu 75 $ 209 room=.
+-> n
+T 604 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,12) HP 52/52 MP 0/0 Hu 74 $ 209 room=.
+-> l
+T 605 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,12) HP 52/52 MP 0/0 Hu 74 $ 209 room=.
+-> n
+T 606 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 8,11) HP 52/52 MP 0/0 Hu 73 $ 209 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 607 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 8,11) HP 50/52 MP 0/0 Hu 73 $ 209 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 608 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 8,11) HP 48/52 MP 0/0 Hu 73 $ 209 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 609 mode=combat_mode         Galadriel Star-eyed(elf) F3@( 8,11) HP 46/52 MP 0/0 Hu 73 $ 209 room=M vs Skeleton(L2 HP26/26)
+-> a
+T 610 mode=combat_victory      Galadriel Star-eyed(elf) F3@( 8,11) HP 46/52 MP 0/0 Hu 73 $ 230 room=.
+-> back
+T 611 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,11) HP 46/52 MP 0/0 Hu 73 $ 230 room=.
+-> l
+T 612 mode=game_loop           Galadriel Star-eyed(elf) F3@( 8,11) HP 46/52 MP 0/0 Hu 73 $ 230 room=.
+-> e
+T 613 mode=library_mode        Galadriel Star-eyed(elf) F3@( 9,11) HP 46/52 MP 0/0 Hu 72 $ 230 room=L
+-> r
+T 614 mode=library_read_decision_mode Galadriel Star-eyed(elf) F3@( 9,11) HP 46/52 MP 0/0 Hu 72 $ 230 room=L
+-> y
+T 615 mode=game_loop           Galadriel Star-eyed(elf) F3@( 9,11) HP 46/52 MP 0/0 Hu 72 $ 230 room=.
+-> l
+T 616 mode=game_loop           Galadriel Star-eyed(elf) F3@( 9,11) HP 46/52 MP 0/0 Hu 72 $ 230 room=.
+-> e
+T 617 mode=stairs_down_mode    Galadriel Star-eyed(elf) F3@(10,11) HP 46/52 MP 0/0 Hu 71 $ 230 room=D
+-> d
+T 618 mode=stairs_up_mode      Galadriel Star-eyed(elf) F4@( 1, 1) HP 46/52 MP 0/0 Hu 71 $ 230 room=U
+-> n
+T 619 mode=stairs_up_mode      Galadriel Star-eyed(elf) F4@( 1, 1) HP 46/52 MP 0/0 Hu 71 $ 230 room=U
+-> n
+T 620 mode=stairs_up_mode      Galadriel Star-eyed(elf) F4@( 1, 1) HP 46/52 MP 0/0 Hu 71 $ 230 room=U
+-> s
+T 621 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 2) HP 46/52 MP 0/0 Hu 70 $ 230 room=.
+-> l
+T 622 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 2) HP 46/52 MP 0/0 Hu 70 $ 230 room=.
+-> s
+T 623 mode=oracle_mode         Galadriel Star-eyed(elf) F4@( 1, 3) HP 47/52 MP 0/0 Hu 69 $ 230 room=O
+-> s
+T 624 mode=garden_mode         Galadriel Star-eyed(elf) F4@( 1, 4) HP 47/52 MP 0/0 Hu 68 $ 230 room=G
+-> h
+T 625 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 4) HP 47/52 MP 0/0 Hu 68 $ 230 room=.
+-> l
+T 626 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 4) HP 47/52 MP 0/0 Hu 68 $ 230 room=.
+-> s
+T 627 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 5) HP 47/52 MP 0/0 Hu 67 $ 230 room=.
+-> l
+T 628 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 5) HP 47/52 MP 0/0 Hu 67 $ 230 room=.
+-> s
+T 629 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 6) HP 47/52 MP 0/0 Hu 66 $ 230 room=.
+-> l
+T 630 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 6) HP 47/52 MP 0/0 Hu 66 $ 230 room=.
+-> s
+T 631 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 7) HP 48/52 MP 0/0 Hu 65 $ 230 room=.
+-> l
+T 632 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 7) HP 48/52 MP 0/0 Hu 65 $ 230 room=.
+-> s
+T 633 mode=chest_mode          Galadriel Star-eyed(elf) F4@( 1, 8) HP 48/52 MP 0/0 Hu 64 $ 230 room=C
+-> o
+T 634 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 8) HP 48/52 MP 0/0 Hu 64 $ 330 room=.
+-> l
+T 635 mode=game_loop           Galadriel Star-eyed(elf) F4@( 1, 8) HP 48/52 MP 0/0 Hu 64 $ 330 room=.
+-> e
+T 636 mode=game_loop           Galadriel Star-eyed(elf) F4@( 2, 8) HP 48/52 MP 0/0 Hu 63 $ 330 room=.
+-> e
+T 637 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 8) HP 48/52 MP 0/0 Hu 62 $ 330 room=.
+-> e
+T 638 mode=altar_mode          Galadriel Star-eyed(elf) F4@( 4, 8) HP 49/52 MP 0/0 Hu 61 $ 330 room=A
+-> pray
+T 639 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 8) HP 49/52 MP 0/0 Hu 61 $ 330 room=.
+-> e
+T 640 mode=dungeon_mode        Galadriel Star-eyed(elf) F4@( 5, 8) HP 49/52 MP 0/0 Hu 60 $ 330 room=N
+-> u
+T 641 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 8) HP 49/52 MP 0/0 Hu 60 $ 330 room=N
+-> e
+T 642 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 8) HP 49/52 MP 0/0 Hu 59 $ 330 room=.
+-> s
+T 643 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 9) HP 49/52 MP 0/0 Hu 58 $ 330 room=.
+-> s
+T 644 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 6,10) HP 49/52 MP 0/0 Hu 57 $ 330 room=M vs Giant Spider(L3 HP41/41)
+-> f
+T 645 mode=flee_direction_mode Galadriel Star-eyed(elf) F4@( 6,10) HP 49/52 MP 0/0 Hu 57 $ 330 room=M
+-> n
+T 646 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 9) HP 49/52 MP 0/0 Hu 57 $ 330 room=.
+-> e
+T 647 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 9) HP 49/52 MP 0/0 Hu 56 $ 330 room=.
+-> n
+T 648 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 8) HP 49/52 MP 0/0 Hu 55 $ 330 room=.
+-> w
+T 649 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 8) HP 49/52 MP 0/0 Hu 54 $ 330 room=.
+-> w
+T 650 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 8) HP 49/52 MP 0/0 Hu 53 $ 330 room=N
+-> w
+T 651 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 8) HP 49/52 MP 0/0 Hu 52 $ 330 room=.
+-> n
+T 652 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 7) HP 49/52 MP 0/0 Hu 51 $ 330 room=.
+-> n
+T 653 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 6) HP 49/52 MP 0/0 Hu 50 $ 330 room=.
+-> n
+T 654 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 5) HP 49/52 MP 0/0 Hu 49 $ 330 room=.
+-> i
+T 655 mode=inventory           Galadriel Star-eyed(elf) F4@( 4, 5) HP 49/52 MP 0/0 Hu 49 $ 330 room=.
+-> u9
+T 656 mode=inventory           Galadriel Star-eyed(elf) F4@( 4, 5) HP 52/52 MP 0/0 Hu 49 $ 330 room=.
+-> x
+T 657 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 5) HP 52/52 MP 0/0 Hu 49 $ 330 room=.
+-> i
+T 658 mode=inventory           Galadriel Star-eyed(elf) F4@( 4, 5) HP 52/52 MP 0/0 Hu 49 $ 330 room=.
+-> eat4
+T 659 mode=inventory           Galadriel Star-eyed(elf) F4@( 4, 5) HP 52/52 MP 0/0 Hu 64 $ 330 room=.
+-> x
+T 660 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 5) HP 52/52 MP 0/0 Hu 64 $ 330 room=.
+-> e
+T 661 mode=library_mode        Galadriel Star-eyed(elf) F4@( 5, 5) HP 52/52 MP 0/0 Hu 63 $ 330 room=L
+-> r
+T 662 mode=library_read_decision_mode Galadriel Star-eyed(elf) F4@( 5, 5) HP 52/52 MP 0/0 Hu 63 $ 330 room=L
+-> y
+T 663 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 5) HP 52/52 MP 0/0 Hu 63 $ 430 room=.
+-> n
+T 664 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 4) HP 52/52 MP 0/0 Hu 62 $ 430 room=.
+-> w
+T 665 mode=pool_mode           Galadriel Star-eyed(elf) F4@( 4, 4) HP 52/52 MP 0/0 Hu 61 $ 430 room=P
+-> dr
+T 666 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 4) HP 41/52 MP 0/0 Hu 61 $ 430 room=.
+-> n
+T 667 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 3) HP 36/52 MP 0/0 Hu 60 $ 430 room=.
+-> n
+T 668 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 2) HP 31/52 MP 0/0 Hu 59 $ 430 room=.
+-> i
+T 669 mode=inventory           Galadriel Star-eyed(elf) F4@( 4, 2) HP 31/52 MP 0/0 Hu 59 $ 430 room=.
+-> u9
+T 670 mode=inventory           Galadriel Star-eyed(elf) F4@( 4, 2) HP 52/52 MP 0/0 Hu 59 $ 430 room=.
+-> x
+T 671 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 2) HP 52/52 MP 0/0 Hu 59 $ 430 room=.
+-> e
+T 672 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 2) HP 47/52 MP 0/0 Hu 58 $ 430 room=.
+-> e
+T 673 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 2) HP 42/52 MP 0/0 Hu 57 $ 430 room=.
+-> e
+T 674 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 2) HP 42/52 MP 0/0 Hu 56 $ 430 room=.
+-> e
+T 675 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 2) HP 42/52 MP 0/0 Hu 55 $ 430 room=.
+-> n
+T 676 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 1) HP 42/52 MP 0/0 Hu 54 $ 430 room=.
+-> w
+T 677 mode=warp_mode           Galadriel Star-eyed(elf) F4@( 7, 1) HP 42/52 MP 0/0 Hu 53 $ 430 room=W
+-> y
+T 678 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 1) HP 42/52 MP 0/0 Hu 53 $ 430 room=W
+-> w
+T 679 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 1) HP 42/52 MP 0/0 Hu 52 $ 430 room=.
+-> s
+T 680 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 2) HP 42/52 MP 0/0 Hu 51 $ 430 room=.
+-> e
+T 681 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 2) HP 42/52 MP 0/0 Hu 50 $ 430 room=.
+-> e
+T 682 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 2) HP 42/52 MP 0/0 Hu 49 $ 430 room=.
+-> i
+T 683 mode=inventory           Galadriel Star-eyed(elf) F4@( 8, 2) HP 42/52 MP 0/0 Hu 49 $ 430 room=.
+-> u9
+T 684 mode=inventory           Galadriel Star-eyed(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu 49 $ 430 room=.
+-> x
+T 685 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu 49 $ 430 room=.
+-> i
+T 686 mode=inventory           Galadriel Star-eyed(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu 49 $ 430 room=.
+-> eat4
+T 687 mode=inventory           Galadriel Star-eyed(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu 67 $ 430 room=.
+-> eat1
+T 688 mode=inventory           Galadriel Star-eyed(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu100 $ 430 room=.
+-> x
+T 689 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu100 $ 430 room=.
+-> n
+T 690 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 1) HP 52/52 MP 0/0 Hu 99 $ 430 room=.
+-> e
+T 691 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 9, 1) HP 52/52 MP 0/0 Hu 98 $ 430 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> f
+T 692 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 9, 1) HP 29/52 MP 0/0 Hu 98 $ 430 room=M vs ELITE UNDEAD SPECTER(L4 HP91/91)
+-> f
+T 693 mode=flee_direction_mode Galadriel Star-eyed(elf) F4@( 9, 1) HP 29/52 MP 0/0 Hu 98 $ 430 room=M
+-> w
+T 694 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 1) HP 29/52 MP 0/0 Hu 98 $ 430 room=.
+-> i
+T 695 mode=inventory           Galadriel Star-eyed(elf) F4@( 8, 1) HP 29/52 MP 0/0 Hu 98 $ 430 room=.
+-> u9
+T 696 mode=inventory           Galadriel Star-eyed(elf) F4@( 8, 1) HP 52/52 MP 0/0 Hu 98 $ 430 room=.
+-> x
+T 697 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 1) HP 52/52 MP 0/0 Hu 98 $ 430 room=.
+-> s
+T 698 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu 97 $ 430 room=.
+-> w
+T 699 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 2) HP 52/52 MP 0/0 Hu 96 $ 430 room=.
+-> s
+T 700 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 3) HP 52/52 MP 0/0 Hu 95 $ 430 room=.
+-> w
+T 701 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 3) HP 52/52 MP 0/0 Hu 94 $ 430 room=.
+-> n
+T 702 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 2) HP 52/52 MP 0/0 Hu 93 $ 430 room=.
+-> w
+T 703 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 2) HP 52/52 MP 0/0 Hu 92 $ 430 room=.
+-> n
+T 704 mode=altar_mode          Galadriel Star-eyed(elf) F4@( 5, 1) HP 52/52 MP 0/0 Hu 91 $ 430 room=A
+-> pray
+T 705 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 1) HP 52/52 MP 0/0 Hu 91 $ 705 room=.
+-> e
+T 706 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 1) HP 52/52 MP 0/0 Hu 90 $ 705 room=.
+-> s
+T 707 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 2) HP 52/52 MP 0/0 Hu 89 $ 705 room=.
+-> e
+T 708 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 2) HP 52/52 MP 0/0 Hu 88 $ 705 room=.
+-> e
+T 709 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 2) HP 52/52 MP 0/0 Hu 87 $ 705 room=.
+-> e
+T 710 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 2) HP 52/52 MP 0/0 Hu 86 $ 705 room=.
+-> s
+T 711 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 3) HP 52/52 MP 0/0 Hu 85 $ 705 room=.
+-> s
+T 712 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 4) HP 52/52 MP 0/0 Hu 84 $ 705 room=.
+-> s
+T 713 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 9, 5) HP 52/52 MP 0/0 Hu 83 $ 705 room=M vs Displacer Beast(L3 HP42/42)
+-> a
+T 714 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 9, 5) HP 49/52 MP 0/0 Hu 83 $ 705 room=M vs Displacer Beast(L3 HP42/42)
+-> a
+T 715 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 9, 5) HP 46/52 MP 0/0 Hu 83 $ 705 room=M vs Displacer Beast(L3 HP20/42)
+-> f
+T 716 mode=flee_direction_mode Galadriel Star-eyed(elf) F4@( 9, 5) HP 43/52 MP 0/0 Hu 83 $ 705 room=M
+-> n
+T 717 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 4) HP 43/52 MP 0/0 Hu 83 $ 705 room=.
+-> e
+T 718 mode=chest_mode          Galadriel Star-eyed(elf) F4@(10, 4) HP 43/52 MP 0/0 Hu 82 $ 705 room=C
+-> o
+T 719 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 4) HP 43/52 MP 0/0 Hu 82 $ 705 room=.
+-> s
+T 720 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 5) HP 43/52 MP 0/0 Hu 81 $ 705 room=.
+-> s
+T 721 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 6) HP 43/52 MP 0/0 Hu 80 $ 705 room=.
+-> w
+T 722 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 6) HP 44/52 MP 0/0 Hu 79 $ 705 room=.
+-> s
+T 723 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 7) HP 44/52 MP 0/0 Hu 78 $ 705 room=.
+-> e
+T 724 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 705 room=V
+-> r6
+T 725 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 668 room=V
+-> b13
+T 726 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 638 room=V
+-> b13
+T 727 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 623 room=V
+-> b13
+T 728 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 613 room=V
+-> b5
+T 729 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 583 room=V
+-> b5
+T 730 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 553 room=V
+-> b5
+T 731 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 523 room=V
+-> b5
+T 732 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 493 room=V
+-> b10
+T 733 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 488 room=V
+-> b10
+T 734 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 483 room=V
+-> b10
+T 735 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 478 room=V
+-> b10
+T 736 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 473 room=V
+-> b8
+T 737 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 323 room=V
+-> b4
+T 738 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 183 room=V
+-> id13
+T 739 mode=vendor_shop         Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 108 room=V
+-> x
+T 740 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 7) HP 44/52 MP 0/0 Hu 77 $ 108 room=V
+-> s
+T 741 mode=library_mode        Galadriel Star-eyed(elf) F4@(10, 8) HP 44/52 MP 0/0 Hu 76 $ 108 room=L
+-> r
+T 742 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 8) HP 44/52 MP 0/0 Hu 76 $ 108 room=.
+-> s
+T 743 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 9) HP 45/52 MP 0/0 Hu 75 $ 108 room=.
+-> s
+T 744 mode=game_loop           Galadriel Star-eyed(elf) F4@(10,10) HP 45/52 MP 0/0 Hu 74 $ 108 room=.
+-> w
+T 745 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9,10) HP 45/52 MP 0/0 Hu 73 $ 108 room=.
+-> w
+T 746 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8,10) HP 45/52 MP 0/0 Hu 72 $ 108 room=.
+-> w
+T 747 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7,10) HP 46/52 MP 0/0 Hu 71 $ 108 room=.
+-> w
+T 748 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 6,10) HP 46/52 MP 0/0 Hu 70 $ 108 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 749 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 6,10) HP 38/52 MP 0/0 Hu 70 $ 108 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 750 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 6,10) HP 38/52 MP 0/0 Hu 70 $ 108 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 751 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 6,10) HP 30/52 MP 0/0 Hu 70 $ 108 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 752 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 6,10) HP 30/52 MP 0/0 Hu 70 $ 108 room=M vs Giant Spider(L3 HP41/41)
+-> a
+T 753 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 6,10) HP 30/52 MP 0/0 Hu 70 $ 108 room=M vs Giant Spider(L3 HP15/41)
+-> a
+T 754 mode=combat_victory      Galadriel Star-eyed(elf) F4@( 6,10) HP 22/62 MP 0/0 Hu 70 $ 124 room=.
+-> back
+T 755 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6,10) HP 22/62 MP 0/0 Hu 70 $ 124 room=.
+-> i
+T 756 mode=inventory           Galadriel Star-eyed(elf) F4@( 6,10) HP 22/62 MP 0/0 Hu 70 $ 124 room=.
+-> u10
+T 757 mode=inventory           Galadriel Star-eyed(elf) F4@( 6,10) HP 52/62 MP 0/0 Hu 70 $ 124 room=.
+-> u4
+T 758 mode=inventory           Galadriel Star-eyed(elf) F4@( 6,10) HP 62/62 MP 0/0 Hu 70 $ 124 room=.
+-> u6
+T 759 mode=upgrade_scroll_mode Galadriel Star-eyed(elf) F4@( 6,10) HP 62/62 MP 0/0 Hu 70 $ 124 room=.
+-> 1
+T 760 mode=inventory           Galadriel Star-eyed(elf) F4@( 6,10) HP 62/62 MP 0/0 Hu 70 $ 124 room=.
+-> x
+T 761 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6,10) HP 62/62 MP 0/0 Hu 70 $ 124 room=.
+-> i
+T 762 mode=inventory           Galadriel Star-eyed(elf) F4@( 6,10) HP 62/62 MP 0/0 Hu 70 $ 124 room=.
+-> u21
+T 763 mode=inventory           Galadriel Star-eyed(elf) F4@( 6,10) HP 62/62 MP 0/0 Hu 70 $ 124 room=.
+-> eat4
+T 764 mode=inventory           Galadriel Star-eyed(elf) F4@( 6,10) HP 62/62 MP 0/0 Hu 73 $ 124 room=.
+-> eat1
+T 765 mode=inventory           Galadriel Star-eyed(elf) F4@( 6,10) HP 62/62 MP 0/0 Hu100 $ 124 room=.
+-> x
+T 766 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6,10) HP 62/62 MP 0/0 Hu100 $ 124 room=.
+-> n
+T 767 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 9) HP 62/62 MP 0/0 Hu 99 $ 124 room=.
+-> n
+T 768 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 8) HP 62/62 MP 0/0 Hu 98 $ 124 room=.
+-> w
+T 769 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 8) HP 62/62 MP 0/0 Hu 97 $ 124 room=N
+-> w
+T 770 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 8) HP 62/62 MP 0/0 Hu 96 $ 124 room=.
+-> n
+T 771 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 7) HP 62/62 MP 0/0 Hu 95 $ 124 room=.
+-> n
+T 772 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 6) HP 62/62 MP 0/0 Hu 94 $ 124 room=.
+-> n
+T 773 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 5) HP 62/62 MP 0/0 Hu 93 $ 124 room=.
+-> n
+T 774 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 4) HP 62/62 MP 0/0 Hu 92 $ 124 room=.
+-> e
+T 775 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 4) HP 62/62 MP 0/0 Hu 91 $ 124 room=.
+-> n
+T 776 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 5, 3) HP 62/62 MP 0/0 Hu 90 $ 124 room=M vs Gnoll(L3 HP46/46)
+-> f
+T 777 mode=flee_direction_mode Galadriel Star-eyed(elf) F4@( 5, 3) HP 59/62 MP 0/0 Hu 90 $ 124 room=M
+-> n
+T 778 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 2) HP 59/62 MP 0/0 Hu 90 $ 124 room=.
+-> e
+T 779 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 2) HP 59/62 MP 0/0 Hu 89 $ 124 room=.
+-> n
+T 780 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 1) HP 60/62 MP 0/0 Hu 88 $ 124 room=.
+-> w
+T 781 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 1) HP 60/62 MP 0/0 Hu 87 $ 124 room=.
+-> s
+T 782 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 2) HP 61/62 MP 0/0 Hu 86 $ 124 room=.
+-> s
+T 783 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 5, 3) HP 61/62 MP 0/0 Hu 85 $ 124 room=M vs Gnoll(L3 HP46/46)
+-> a
+T 784 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 5, 3) HP 58/62 MP 0/0 Hu 85 $ 124 room=M vs Gnoll(L3 HP18/46)
+-> a
+T 785 mode=combat_victory      Galadriel Star-eyed(elf) F4@( 5, 3) HP 58/62 MP 0/0 Hu 85 $ 160 room=.
+-> back
+T 786 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 3) HP 58/62 MP 0/0 Hu 85 $ 160 room=.
+-> i
+T 787 mode=inventory           Galadriel Star-eyed(elf) F4@( 5, 3) HP 58/62 MP 0/0 Hu 85 $ 160 room=.
+-> u10
+T 788 mode=inventory           Galadriel Star-eyed(elf) F4@( 5, 3) HP 62/62 MP 0/0 Hu 85 $ 160 room=.
+-> x
+T 789 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 3) HP 62/62 MP 0/0 Hu 85 $ 160 room=.
+-> i
+T 790 mode=inventory           Galadriel Star-eyed(elf) F4@( 5, 3) HP 62/62 MP 0/0 Hu 85 $ 160 room=.
+-> u21
+T 791 mode=inventory           Galadriel Star-eyed(elf) F4@( 5, 3) HP 62/62 MP 0/0 Hu 85 $ 160 room=.
+-> x
+T 792 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 3) HP 62/62 MP 0/0 Hu 85 $ 160 room=.
+-> w
+T 793 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 3) HP 62/62 MP 0/0 Hu 84 $ 160 room=.
+-> w
+T 794 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 3) HP 62/62 MP 0/0 Hu 83 $ 160 room=.
+-> n
+T 795 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 3, 2) HP 62/62 MP 0/0 Hu 82 $ 160 room=M vs Giant Centipede(L3 HP16/16)
+-> a
+T 796 mode=combat_mode         Galadriel Star-eyed(elf) F4@( 3, 2) HP 61/62 MP 0/0 Hu 82 $ 160 room=M vs Giant Centipede(L3 HP16/16)
+-> a
+T 797 mode=combat_victory      Galadriel Star-eyed(elf) F4@( 3, 2) HP 61/62 MP 0/0 Hu 82 $ 200 room=.
+-> back
+T 798 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 2) HP 61/62 MP 0/0 Hu 82 $ 200 room=.
+-> i
+T 799 mode=inventory           Galadriel Star-eyed(elf) F4@( 3, 2) HP 61/62 MP 0/0 Hu 82 $ 200 room=.
+-> u22
+T 800 mode=inventory           Galadriel Star-eyed(elf) F4@( 3, 2) HP 61/62 MP 0/0 Hu 82 $ 200 room=.
+-> x
+T 801 mode=game_loop           Galadriel Star-eyed(elf) F4@( 3, 2) HP 61/62 MP 0/0 Hu 82 $ 200 room=.
+-> e
+T 802 mode=game_loop           Galadriel Star-eyed(elf) F4@( 4, 2) HP 61/62 MP 0/0 Hu 81 $ 200 room=.
+-> e
+T 803 mode=game_loop           Galadriel Star-eyed(elf) F4@( 5, 2) HP 61/62 MP 0/0 Hu 80 $ 200 room=.
+-> e
+T 804 mode=game_loop           Galadriel Star-eyed(elf) F4@( 6, 2) HP 61/62 MP 0/0 Hu 79 $ 200 room=.
+-> e
+T 805 mode=game_loop           Galadriel Star-eyed(elf) F4@( 7, 2) HP 62/62 MP 0/0 Hu 78 $ 200 room=.
+-> e
+T 806 mode=game_loop           Galadriel Star-eyed(elf) F4@( 8, 2) HP 62/62 MP 0/0 Hu 77 $ 200 room=.
+-> e
+T 807 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 2) HP 62/62 MP 0/0 Hu 76 $ 200 room=.
+-> e
+T 808 mode=combat_mode         Galadriel Star-eyed(elf) F4@(10, 2) HP 62/62 MP 0/0 Hu 75 $ 200 room=M vs UNDEAD WRAITH(L3 HP100/100)
+-> a
+T 809 mode=combat_mode         Galadriel Star-eyed(elf) F4@(10, 2) HP 62/62 MP 0/0 Hu 75 $ 200 room=M vs UNDEAD WRAITH(L3 HP77/100)
+-> a
+T 810 mode=combat_mode         Galadriel Star-eyed(elf) F4@(10, 2) HP 37/62 MP 0/0 Hu 75 $ 200 room=M vs UNDEAD WRAITH(L3 HP54/100)
+-> a
+T 811 mode=combat_mode         Galadriel Star-eyed(elf) F4@(10, 2) HP 12/62 MP 0/0 Hu 75 $ 200 room=M vs UNDEAD WRAITH(L3 HP54/100)
+-> i
+T 812 mode=inventory           Galadriel Star-eyed(elf) F4@(10, 2) HP 12/62 MP 0/0 Hu 75 $ 200 room=M
+-> u4
+T 813 mode=inventory           Galadriel Star-eyed(elf) F4@(10, 2) HP 42/62 MP 0/0 Hu 75 $ 200 room=M
+-> x
+T 814 mode=combat_mode         Galadriel Star-eyed(elf) F4@(10, 2) HP 42/62 MP 0/0 Hu 75 $ 200 room=M vs UNDEAD WRAITH(L3 HP54/100)
+-> a
+T 815 mode=combat_mode         Galadriel Star-eyed(elf) F4@(10, 2) HP 17/62 MP 0/0 Hu 75 $ 200 room=M vs UNDEAD WRAITH(L3 HP31/100)
+-> i
+T 816 mode=inventory           Galadriel Star-eyed(elf) F4@(10, 2) HP 17/62 MP 0/0 Hu 75 $ 200 room=M
+-> u4
+T 817 mode=inventory           Galadriel Star-eyed(elf) F4@(10, 2) HP 47/62 MP 0/0 Hu 75 $ 200 room=M
+-> x
+T 818 mode=combat_mode         Galadriel Star-eyed(elf) F4@(10, 2) HP 47/62 MP 0/0 Hu 75 $ 200 room=M vs UNDEAD WRAITH(L3 HP31/100)
+-> f
+T 819 mode=flee_direction_mode Galadriel Star-eyed(elf) F4@(10, 2) HP 47/62 MP 0/0 Hu 75 $ 200 room=M
+-> w
+T 820 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 2) HP 47/62 MP 0/0 Hu 75 $ 200 room=.
+-> i
+T 821 mode=inventory           Galadriel Star-eyed(elf) F4@( 9, 2) HP 47/62 MP 0/0 Hu 75 $ 200 room=.
+-> u10
+T 822 mode=inventory           Galadriel Star-eyed(elf) F4@( 9, 2) HP 62/62 MP 0/0 Hu 75 $ 200 room=.
+-> x
+T 823 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 2) HP 62/62 MP 0/0 Hu 75 $ 200 room=.
+-> s
+T 824 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 3) HP 62/62 MP 0/0 Hu 74 $ 200 room=.
+-> s
+T 825 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 4) HP 62/62 MP 0/0 Hu 73 $ 200 room=.
+-> e
+T 826 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 4) HP 62/62 MP 0/0 Hu 72 $ 200 room=.
+-> s
+T 827 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 5) HP 62/62 MP 0/0 Hu 71 $ 200 room=.
+-> s
+T 828 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 6) HP 62/62 MP 0/0 Hu 70 $ 200 room=.
+-> s
+T 829 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 7) HP 62/62 MP 0/0 Hu 69 $ 200 room=V
+-> s
+T 830 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 8) HP 62/62 MP 0/0 Hu 68 $ 200 room=.
+-> l
+T 831 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 8) HP 62/62 MP 0/0 Hu 68 $ 200 room=.
+-> l
+T 832 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 8) HP 62/62 MP 0/0 Hu 68 $ 200 room=.
+-> s
+T 833 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 9) HP 62/62 MP 0/0 Hu 67 $ 200 room=.
+-> l
+T 834 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 9) HP 62/62 MP 0/0 Hu 67 $ 200 room=.
+-> e
+T 835 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 9) HP 62/62 MP 0/0 Hu 66 $ 200 room=.
+-> e
+T 836 mode=chest_mode          Galadriel Star-eyed(elf) F4@(12, 9) HP 62/62 MP 0/0 Hu 65 $ 200 room=C
+-> o
+T 837 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 9) HP 62/62 MP 0/0 Hu 65 $ 200 room=.
+-> e
+T 838 mode=game_loop           Galadriel Star-eyed(elf) F4@(13, 9) HP 62/62 MP 0/0 Hu 64 $ 200 room=.
+-> l
+T 839 mode=game_loop           Galadriel Star-eyed(elf) F4@(13, 9) HP 62/62 MP 0/0 Hu 64 $ 200 room=.
+-> s
+T 840 mode=game_loop           Galadriel Star-eyed(elf) F4@(13,10) HP 62/62 MP 0/0 Hu 63 $ 200 room=.
+-> l
+T 841 mode=game_loop           Galadriel Star-eyed(elf) F4@(13,10) HP 62/62 MP 0/0 Hu 63 $ 200 room=.
+-> s
+T 842 mode=game_loop           Galadriel Star-eyed(elf) F4@(13,11) HP 62/62 MP 0/0 Hu 62 $ 200 room=.
+-> l
+T 843 mode=game_loop           Galadriel Star-eyed(elf) F4@(13,11) HP 62/62 MP 0/0 Hu 62 $ 200 room=.
+-> e
+T 844 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,11) HP 62/62 MP 0/0 Hu 61 $ 200 room=.
+-> l
+T 845 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,11) HP 62/62 MP 0/0 Hu 61 $ 200 room=.
+-> s
+T 846 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,12) HP 62/62 MP 0/0 Hu 60 $ 200 room=.
+-> n
+T 847 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,11) HP 62/62 MP 0/0 Hu 59 $ 200 room=.
+-> s
+T 848 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,12) HP 62/62 MP 0/0 Hu 58 $ 200 room=.
+-> n
+T 849 mode=game_loop           Galadriel Star-eyed(elf) F4@(14,11) HP 62/62 MP 0/0 Hu 57 $ 200 room=.
+-> w
+T 850 mode=game_loop           Galadriel Star-eyed(elf) F4@(13,11) HP 62/62 MP 0/0 Hu 56 $ 200 room=.
+-> w
+T 851 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,11) HP 62/62 MP 0/0 Hu 55 $ 200 room=.
+-> l
+T 852 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,11) HP 62/62 MP 0/0 Hu 55 $ 200 room=.
+-> s
+T 853 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,12) HP 62/62 MP 0/0 Hu 54 $ 200 room=.
+-> l
+T 854 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,12) HP 62/62 MP 0/0 Hu 54 $ 200 room=.
+-> w
+T 855 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,12) HP 62/62 MP 0/0 Hu 53 $ 200 room=.
+-> l
+T 856 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,12) HP 62/62 MP 0/0 Hu 53 $ 200 room=.
+-> s
+T 857 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,13) HP 62/62 MP 0/0 Hu 52 $ 200 room=.
+-> n
+T 858 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,12) HP 62/62 MP 0/0 Hu 51 $ 200 room=.
+-> s
+T 859 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,13) HP 62/62 MP 0/0 Hu 50 $ 200 room=.
+-> n
+T 860 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,12) HP 62/62 MP 0/0 Hu 49 $ 200 room=.
+-> i
+T 861 mode=inventory           Galadriel Star-eyed(elf) F4@(11,12) HP 62/62 MP 0/0 Hu 49 $ 200 room=.
+-> eat4
+T 862 mode=inventory           Galadriel Star-eyed(elf) F4@(11,12) HP 62/62 MP 0/0 Hu 55 $ 200 room=.
+-> x
+T 863 mode=game_loop           Galadriel Star-eyed(elf) F4@(11,12) HP 62/62 MP 0/0 Hu 55 $ 200 room=.
+-> e
+T 864 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,12) HP 62/62 MP 0/0 Hu 54 $ 200 room=.
+-> n
+T 865 mode=game_loop           Galadriel Star-eyed(elf) F4@(12,11) HP 62/62 MP 0/0 Hu 53 $ 200 room=.
+-> e
+T 866 mode=game_loop           Galadriel Star-eyed(elf) F4@(13,11) HP 62/62 MP 0/0 Hu 52 $ 200 room=.
+-> n
+T 867 mode=game_loop           Galadriel Star-eyed(elf) F4@(13,10) HP 62/62 MP 0/0 Hu 51 $ 200 room=.
+-> n
+T 868 mode=game_loop           Galadriel Star-eyed(elf) F4@(13, 9) HP 62/62 MP 0/0 Hu 50 $ 200 room=.
+-> w
+T 869 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 9) HP 62/62 MP 0/0 Hu 49 $ 200 room=.
+-> i
+T 870 mode=inventory           Galadriel Star-eyed(elf) F4@(12, 9) HP 62/62 MP 0/0 Hu 49 $ 200 room=.
+-> eat4
+T 871 mode=inventory           Galadriel Star-eyed(elf) F4@(12, 9) HP 62/62 MP 0/0 Hu 71 $ 200 room=.
+-> eat1
+T 872 mode=inventory           Galadriel Star-eyed(elf) F4@(12, 9) HP 62/62 MP 0/0 Hu100 $ 200 room=.
+-> x
+T 873 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 9) HP 62/62 MP 0/0 Hu100 $ 200 room=.
+-> w
+T 874 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 9) HP 62/62 MP 0/0 Hu 99 $ 200 room=.
+-> n
+T 875 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 8) HP 62/62 MP 0/0 Hu 98 $ 200 room=.
+-> l
+T 876 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 8) HP 62/62 MP 0/0 Hu 98 $ 200 room=.
+-> n
+T 877 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 7) HP 62/62 MP 0/0 Hu 97 $ 200 room=.
+-> n
+T 878 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 6) HP 62/62 MP 0/0 Hu 96 $ 200 room=.
+-> n
+T 879 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 5) HP 62/62 MP 0/0 Hu 95 $ 200 room=.
+-> n
+T 880 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 4) HP 62/62 MP 0/0 Hu 94 $ 200 room=.
+-> e
+T 881 mode=dungeon_mode        Galadriel Star-eyed(elf) F4@(12, 4) HP 62/62 MP 0/0 Hu 93 $ 200 room=N
+-> u
+T 882 mode=dungeon_unlocked_mode Galadriel Star-eyed(elf) F4@(12, 4) HP 62/62 MP 0/0 Hu 93 $ 200 room=N
+-> r
+T 883 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 4) HP 62/62 MP 0/0 Hu 93 $ 200 room=N
+-> n
+T 884 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 3) HP 62/62 MP 0/0 Hu 92 $ 200 room=.
+-> w
+T 885 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 3) HP 62/62 MP 0/0 Hu 91 $ 200 room=.
+-> n
+T 886 mode=garden_mode         Galadriel Star-eyed(elf) F4@(11, 2) HP 62/62 MP 0/0 Hu 90 $ 200 room=G
+-> h
+T 887 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 2) HP 62/62 MP 0/0 Hu 90 $ 200 room=.
+-> e
+T 888 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 2) HP 62/62 MP 0/0 Hu 89 $ 200 room=.
+-> n
+T 889 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 1) HP 62/62 MP 0/0 Hu 88 $ 200 room=.
+-> e
+T 890 mode=game_loop           Galadriel Star-eyed(elf) F4@(13, 1) HP 62/62 MP 0/0 Hu 87 $ 200 room=.
+-> e
+T 891 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 1) HP 62/62 MP 0/0 Hu 86 $ 200 room=.
+-> w
+T 892 mode=game_loop           Galadriel Star-eyed(elf) F4@(13, 1) HP 62/62 MP 0/0 Hu 85 $ 200 room=.
+-> e
+T 893 mode=game_loop           Galadriel Star-eyed(elf) F4@(14, 1) HP 62/62 MP 0/0 Hu 84 $ 200 room=.
+-> w
+T 894 mode=game_loop           Galadriel Star-eyed(elf) F4@(13, 1) HP 62/62 MP 0/0 Hu 83 $ 200 room=.
+-> w
+T 895 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 1) HP 62/62 MP 0/0 Hu 82 $ 200 room=.
+-> s
+T 896 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 2) HP 62/62 MP 0/0 Hu 81 $ 200 room=.
+-> s
+T 897 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 3) HP 62/62 MP 0/0 Hu 80 $ 200 room=.
+-> w
+T 898 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 3) HP 62/62 MP 0/0 Hu 79 $ 200 room=.
+-> n
+T 899 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 2) HP 62/62 MP 0/0 Hu 78 $ 200 room=.
+-> s
+T 900 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 3) HP 62/62 MP 0/0 Hu 77 $ 200 room=.
+-> s
+T 901 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 4) HP 62/62 MP 0/0 Hu 76 $ 200 room=.
+-> s
+T 902 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 5) HP 62/62 MP 0/0 Hu 75 $ 200 room=.
+-> w
+T 903 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 5) HP 62/62 MP 0/0 Hu 74 $ 200 room=.
+-> n
+T 904 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 4) HP 62/62 MP 0/0 Hu 73 $ 200 room=.
+-> w
+T 905 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 4) HP 62/62 MP 0/0 Hu 72 $ 200 room=.
+-> n
+T 906 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 3) HP 62/62 MP 0/0 Hu 71 $ 200 room=.
+-> e
+T 907 mode=combat_mode         Galadriel Star-eyed(elf) F4@(10, 3) HP 62/62 MP 0/0 Hu 70 $ 200 room=M vs Gnoll(L3 HP46/46)
+-> a
+T 908 mode=combat_mode         Galadriel Star-eyed(elf) F4@(10, 3) HP 59/62 MP 0/0 Hu 70 $ 200 room=M vs Gnoll(L3 HP18/46)
+-> a
+T 909 mode=combat_victory      Galadriel Star-eyed(elf) F4@(10, 3) HP 56/62 MP 0/0 Hu 70 $ 220 room=.
+-> back
+T 910 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 3) HP 56/62 MP 0/0 Hu 70 $ 220 room=.
+-> i
+T 911 mode=inventory           Galadriel Star-eyed(elf) F4@(10, 3) HP 56/62 MP 0/0 Hu 70 $ 220 room=.
+-> u11
+T 912 mode=inventory           Galadriel Star-eyed(elf) F4@(10, 3) HP 62/62 MP 0/0 Hu 70 $ 220 room=.
+-> x
+T 913 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 3) HP 62/62 MP 0/0 Hu 70 $ 220 room=.
+-> i
+T 914 mode=inventory           Galadriel Star-eyed(elf) F4@(10, 3) HP 62/62 MP 0/0 Hu 70 $ 220 room=.
+-> u21
+T 915 mode=inventory           Galadriel Star-eyed(elf) F4@(10, 3) HP 62/62 MP 0/0 Hu 70 $ 220 room=.
+-> eat4
+T 916 mode=inventory           Galadriel Star-eyed(elf) F4@(10, 3) HP 62/62 MP 0/0 Hu 92 $ 220 room=.
+-> x
+T 917 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 3) HP 62/62 MP 0/0 Hu 92 $ 220 room=.
+-> e
+T 918 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 3) HP 62/62 MP 0/0 Hu 91 $ 220 room=.
+-> n
+T 919 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 2) HP 62/62 MP 0/0 Hu 90 $ 220 room=.
+-> e
+T 920 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 2) HP 62/62 MP 0/0 Hu 89 $ 220 room=.
+-> s
+T 921 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 3) HP 62/62 MP 0/0 Hu 88 $ 220 room=.
+-> s
+T 922 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 4) HP 62/62 MP 0/0 Hu 87 $ 220 room=N
+-> w
+T 923 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 4) HP 62/62 MP 0/0 Hu 86 $ 220 room=.
+-> s
+T 924 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 5) HP 62/62 MP 0/0 Hu 85 $ 220 room=.
+-> s
+T 925 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 6) HP 62/62 MP 0/0 Hu 84 $ 220 room=.
+-> s
+T 926 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 7) HP 62/62 MP 0/0 Hu 83 $ 220 room=.
+-> w
+T 927 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 7) HP 62/62 MP 0/0 Hu 82 $ 220 room=V
+-> n
+T 928 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 6) HP 62/62 MP 0/0 Hu 81 $ 220 room=.
+-> n
+T 929 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 5) HP 62/62 MP 0/0 Hu 80 $ 220 room=.
+-> e
+T 930 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 5) HP 62/62 MP 0/0 Hu 79 $ 220 room=.
+-> s
+T 931 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 6) HP 62/62 MP 0/0 Hu 78 $ 220 room=.
+-> s
+T 932 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 7) HP 62/62 MP 0/0 Hu 77 $ 220 room=.
+-> s
+T 933 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 8) HP 62/62 MP 0/0 Hu 76 $ 220 room=.
+-> w
+T 934 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 8) HP 62/62 MP 0/0 Hu 75 $ 220 room=.
+-> n
+T 935 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 7) HP 62/62 MP 0/0 Hu 74 $ 220 room=V
+-> w
+T 936 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 7) HP 62/62 MP 0/0 Hu 73 $ 220 room=.
+-> s
+T 937 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 8) HP 62/62 MP 0/0 Hu 72 $ 220 room=.
+-> s
+T 938 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 9) HP 62/62 MP 0/0 Hu 71 $ 220 room=.
+-> s
+T 939 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9,10) HP 62/62 MP 0/0 Hu 70 $ 220 room=.
+-> e
+T 940 mode=game_loop           Galadriel Star-eyed(elf) F4@(10,10) HP 62/62 MP 0/0 Hu 69 $ 220 room=.
+-> n
+T 941 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 9) HP 62/62 MP 0/0 Hu 68 $ 220 room=.
+-> n
+T 942 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 8) HP 62/62 MP 0/0 Hu 67 $ 220 room=.
+-> n
+T 943 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 7) HP 62/62 MP 0/0 Hu 66 $ 220 room=V
+-> e
+T 944 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 7) HP 62/62 MP 0/0 Hu 65 $ 220 room=.
+-> n
+T 945 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 6) HP 62/62 MP 0/0 Hu 64 $ 220 room=.
+-> n
+T 946 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 5) HP 62/62 MP 0/0 Hu 63 $ 220 room=.
+-> w
+T 947 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 5) HP 62/62 MP 0/0 Hu 62 $ 220 room=.
+-> n
+T 948 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 4) HP 62/62 MP 0/0 Hu 61 $ 220 room=.
+-> n
+T 949 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 3) HP 62/62 MP 0/0 Hu 60 $ 220 room=.
+-> e
+T 950 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 3) HP 62/62 MP 0/0 Hu 59 $ 220 room=.
+-> s
+T 951 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 4) HP 62/62 MP 0/0 Hu 58 $ 220 room=.
+-> s
+T 952 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 5) HP 62/62 MP 0/0 Hu 57 $ 220 room=.
+-> s
+T 953 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 6) HP 62/62 MP 0/0 Hu 56 $ 220 room=.
+-> s
+T 954 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 7) HP 62/62 MP 0/0 Hu 55 $ 220 room=.
+-> w
+T 955 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 7) HP 62/62 MP 0/0 Hu 54 $ 220 room=V
+-> w
+T 956 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 7) HP 62/62 MP 0/0 Hu 53 $ 220 room=.
+-> n
+T 957 mode=game_loop           Galadriel Star-eyed(elf) F4@( 9, 6) HP 62/62 MP 0/0 Hu 52 $ 220 room=.
+-> e
+T 958 mode=game_loop           Galadriel Star-eyed(elf) F4@(10, 6) HP 62/62 MP 0/0 Hu 51 $ 220 room=.
+-> e
+T 959 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 6) HP 62/62 MP 0/0 Hu 50 $ 220 room=.
+-> s
+T 960 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 7) HP 62/62 MP 0/0 Hu 49 $ 220 room=.
+-> i
+T 961 mode=inventory           Galadriel Star-eyed(elf) F4@(11, 7) HP 62/62 MP 0/0 Hu 49 $ 220 room=.
+-> eat1
+T 962 mode=inventory           Galadriel Star-eyed(elf) F4@(11, 7) HP 62/62 MP 0/0 Hu100 $ 220 room=.
+-> x
+T 963 mode=game_loop           Galadriel Star-eyed(elf) F4@(11, 7) HP 62/62 MP 0/0 Hu100 $ 220 room=.
+-> e
+T 964 mode=game_loop           Galadriel Star-eyed(elf) F4@(12, 7) HP 62/62 MP 0/0 Hu 99 $ 220 room=.
+-> e
+T 965 mode=stairs_down_mode    Galadriel Star-eyed(elf) F4@(13, 7) HP 62/62 MP 0/0 Hu 98 $ 220 room=D
+-> d
+T 966 mode=stairs_up_mode      Galadriel Star-eyed(elf) F5@( 1, 1) HP 62/62 MP 0/0 Hu 98 $ 220 room=U
+-> n
+T 967 mode=stairs_up_mode      Galadriel Star-eyed(elf) F5@( 1, 1) HP 62/62 MP 0/0 Hu 98 $ 220 room=U
+-> n
+T 968 mode=stairs_up_mode      Galadriel Star-eyed(elf) F5@( 1, 1) HP 62/62 MP 0/0 Hu 98 $ 220 room=U
+-> n
+T 969 mode=stairs_up_mode      Galadriel Star-eyed(elf) F5@( 1, 1) HP 62/62 MP 0/0 Hu 98 $ 220 room=U
+-> e
+T 970 mode=game_loop           Galadriel Star-eyed(elf) F5@( 2, 1) HP 62/62 MP 0/0 Hu 97 $ 220 room=.
+-> s
+T 971 mode=game_loop           Galadriel Star-eyed(elf) F5@( 2, 2) HP 62/62 MP 0/0 Hu 96 $ 220 room=.
+-> s
+T 972 mode=game_loop           Galadriel Star-eyed(elf) F5@( 2, 3) HP 62/62 MP 0/0 Hu 95 $ 220 room=.
+-> e
+T 973 mode=game_loop           Galadriel Star-eyed(elf) F5@( 3, 3) HP 62/62 MP 0/0 Hu 94 $ 220 room=.
+-> n
+T 974 mode=game_loop           Galadriel Star-eyed(elf) F5@( 3, 2) HP 62/62 MP 0/0 Hu 93 $ 220 room=.
+-> n
+T 975 mode=combat_mode         Galadriel Star-eyed(elf) F5@( 3, 1) HP 62/62 MP 0/0 Hu 92 $ 220 room=M vs Fungal Hulk(L4 HP83/83)
+-> a
+T 976 mode=combat_mode         Galadriel Star-eyed(elf) F5@( 3, 1) HP 62/62 MP 0/0 Hu 92 $ 220 room=M vs Fungal Hulk(L4 HP83/83)
+-> a
+T 977 mode=combat_mode         Galadriel Star-eyed(elf) F5@( 3, 1) HP 51/62 MP 0/0 Hu 92 $ 220 room=M vs Fungal Hulk(L4 HP83/83)
+-> a
+T 978 mode=combat_mode         Galadriel Star-eyed(elf) F5@( 3, 1) HP 40/62 MP 0/0 Hu 92 $ 220 room=M vs Fungal Hulk(L4 HP59/83)
+-> a
+T 979 mode=combat_mode         Galadriel Star-eyed(elf) F5@( 3, 1) HP 40/62 MP 0/0 Hu 92 $ 220 room=M vs Fungal Hulk(L4 HP35/83)
+-> a
+T 980 mode=combat_mode         Galadriel Star-eyed(elf) F5@( 3, 1) HP 29/62 MP 0/0 Hu 92 $ 220 room=M vs Fungal Hulk(L4 HP11/83)
+-> a
+T 981 mode=combat_mode         Galadriel Star-eyed(elf) F5@( 3, 1) HP 18/62 MP 0/0 Hu 92 $ 220 room=M vs Fungal Hulk(L4 HP11/83)
+-> f
+T 982 mode=flee_direction_mode Galadriel Star-eyed(elf) F5@( 3, 1) HP 18/62 MP 0/0 Hu 92 $ 220 room=M
+-> w
+T 983 mode=game_loop           Galadriel Star-eyed(elf) F5@( 2, 1) HP 18/62 MP 0/0 Hu 92 $ 220 room=.
+-> s
+T 984 mode=game_loop           Galadriel Star-eyed(elf) F5@( 2, 2) HP 18/62 MP 0/0 Hu 91 $ 220 room=.
+-> s
+T 985 mode=game_loop           Galadriel Star-eyed(elf) F5@( 2, 3) HP 19/62 MP 0/0 Hu 90 $ 220 room=.
+-> e
+T 986 mode=game_loop           Galadriel Star-eyed(elf) F5@( 3, 3) HP 19/62 MP 0/0 Hu 89 $ 220 room=.
+-> n
+T 987 mode=game_loop           Galadriel Star-eyed(elf) F5@( 3, 2) HP 20/62 MP 0/0 Hu 88 $ 220 room=.
+-> e
+T 988 mode=game_loop           Galadriel Star-eyed(elf) F5@( 4, 2) HP 20/62 MP 0/0 Hu 87 $ 220 room=.
+-> e
+T 989 mode=game_loop           Galadriel Star-eyed(elf) F5@( 5, 2) HP 21/62 MP 0/0 Hu 86 $ 220 room=.
+-> s
+T 990 mode=game_loop           Galadriel Star-eyed(elf) F5@( 5, 3) HP 21/62 MP 0/0 Hu 85 $ 220 room=.
+-> e
+T 991 mode=warp_mode           Galadriel Star-eyed(elf) F5@( 6, 3) HP 21/62 MP 0/0 Hu 84 $ 220 room=W
+-> y
+T 992 mode=game_loop           Galadriel Star-eyed(elf) F5@( 6, 3) HP 21/62 MP 0/0 Hu 84 $ 220 room=W
+-> n
+T 993 mode=game_loop           Galadriel Star-eyed(elf) F5@( 6, 2) HP 21/62 MP 0/0 Hu 83 $ 220 room=.
+-> e
+T 994 mode=combat_mode         Galadriel Star-eyed(elf) F5@( 7, 2) HP 22/62 MP 0/0 Hu 82 $ 220 room=M vs UNDEAD MUMMY(L4 HP118/118)
+-> a
+T 995 mode=death_screen        Galadriel Star-eyed(elf) F5@( 7, 2) HP -5/62 MP 0/0 Hu 82 $ 220 room=M
 
-=== run finished: turns=826 floor=4 hp=0/66 gold=549 alive=False mode=death_screen ===
+=== run finished: turns=995 floor=5 hp=-5/62 gold=220 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00023_elf.html

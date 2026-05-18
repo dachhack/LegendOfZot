@@ -139,756 +139,1118 @@ T  60 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 2) HP 64/64 MP 0
 T  61 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 8, 2) HP 63/64 MP 0/0 Hu 86 $ 406 room=.
 -> back
 T  62 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 2) HP 63/64 MP 0/0 Hu 86 $ 406 room=.
--> n
-T  63 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 63/64 MP 0/0 Hu 85 $ 406 room=M vs Zombie(L0 HP35/35)
--> a
-T  64 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 62/64 MP 0/0 Hu 85 $ 406 room=M vs Zombie(L0 HP9/35)
--> a
-T  65 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 61/64 MP 0/0 Hu 85 $ 406 room=M vs Zombie(L0 HP9/35)
--> a
-T  66 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 60/64 MP 0/0 Hu 85 $ 507 room=.
--> back
-T  67 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 60/64 MP 0/0 Hu 85 $ 507 room=.
--> w
-T  68 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 1) HP 60/64 MP 0/0 Hu 84 $ 507 room=.
--> w
-T  69 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 1) HP 60/64 MP 0/0 Hu 83 $ 507 room=.
--> w
-T  70 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 61/64 MP 0/0 Hu 82 $ 507 room=M vs Stirge(L0 HP6/6)
--> a
-T  71 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 60/64 MP 0/0 Hu 82 $ 512 room=.
--> back
-T  72 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 60/64 MP 0/0 Hu 82 $ 512 room=.
--> s
-T  73 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 60/64 MP 0/0 Hu 81 $ 512 room=M vs Zombie(L0 HP35/35)
--> a
-T  74 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 59/64 MP 0/0 Hu 81 $ 512 room=M vs Zombie(L0 HP35/35)
--> a
-T  75 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 59/64 MP 0/0 Hu 81 $ 512 room=M vs Zombie(L0 HP9/35)
--> a
-T  76 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 59/64 MP 0/0 Hu 81 $ 520 room=.
--> back
-T  77 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 59/64 MP 0/0 Hu 81 $ 520 room=.
--> w
-T  78 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 2) HP 59/64 MP 0/0 Hu 80 $ 520 room=.
--> s
-T  79 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 3) HP 59/64 MP 0/0 Hu 79 $ 520 room=.
--> s
-T  80 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 60/64 MP 0/0 Hu 78 $ 520 room=.
--> s
-T  81 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 60/64 MP 0/0 Hu 77 $ 520 room=.
--> s
-T  82 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 76 $ 520 room=.
 -> i
-T  83 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 60/64 MP 0/0 Hu 76 $ 520 room=.
+T  63 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 8, 2) HP 63/64 MP 0/0 Hu 86 $ 406 room=.
+-> u9
+T  64 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 8, 2) HP 63/64 MP 0/0 Hu 86 $ 406 room=.
+-> x
+T  65 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 2) HP 63/64 MP 0/0 Hu 86 $ 406 room=.
+-> n
+T  66 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 63/64 MP 0/0 Hu 85 $ 406 room=M vs Zombie(L0 HP35/35)
+-> a
+T  67 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 62/64 MP 0/0 Hu 85 $ 406 room=M vs Zombie(L0 HP9/35)
+-> a
+T  68 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 61/64 MP 0/0 Hu 85 $ 406 room=M vs Zombie(L0 HP9/35)
+-> a
+T  69 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 60/64 MP 0/0 Hu 85 $ 507 room=.
+-> back
+T  70 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 60/64 MP 0/0 Hu 85 $ 507 room=.
+-> w
+T  71 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 1) HP 60/64 MP 0/0 Hu 84 $ 507 room=.
+-> w
+T  72 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 1) HP 60/64 MP 0/0 Hu 83 $ 507 room=.
+-> w
+T  73 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 61/64 MP 0/0 Hu 82 $ 507 room=M vs Stirge(L0 HP6/6)
+-> a
+T  74 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 60/64 MP 0/0 Hu 82 $ 512 room=.
+-> back
+T  75 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 60/64 MP 0/0 Hu 82 $ 512 room=.
+-> i
+T  76 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 60/64 MP 0/0 Hu 82 $ 512 room=.
 -> u4
-T  84 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 76 $ 520 room=.
+T  77 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 82 $ 512 room=.
 -> x
-T  85 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 76 $ 520 room=.
+T  78 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 82 $ 512 room=.
 -> i
-T  86 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 76 $ 520 room=.
+T  79 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 82 $ 512 room=.
+-> u9
+T  80 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 82 $ 512 room=.
+-> x
+T  81 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 1) HP 64/64 MP 0/0 Hu 82 $ 512 room=.
+-> s
+T  82 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 64/64 MP 0/0 Hu 81 $ 512 room=M vs Zombie(L0 HP35/35)
+-> a
+T  83 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 63/64 MP 0/0 Hu 81 $ 512 room=M vs Zombie(L0 HP35/35)
+-> a
+T  84 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 63/64 MP 0/0 Hu 81 $ 512 room=M vs Zombie(L0 HP9/35)
+-> a
+T  85 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 63/64 MP 0/0 Hu 81 $ 520 room=.
+-> back
+T  86 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 63/64 MP 0/0 Hu 81 $ 520 room=.
+-> e
+T  87 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 2) HP 63/64 MP 0/0 Hu 80 $ 520 room=.
+-> s
+T  88 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 3) HP 63/64 MP 0/0 Hu 79 $ 520 room=.
+-> w
+T  89 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 3) HP 63/64 MP 0/0 Hu 78 $ 520 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  90 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 5, 3) HP 62/74 MP 0/0 Hu 78 $ 529 room=.
+-> back
+T  91 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 3) HP 62/74 MP 0/0 Hu 78 $ 529 room=.
+-> w
+T  92 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 3) HP 63/74 MP 0/0 Hu 77 $ 529 room=.
+-> s
+T  93 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 63/74 MP 0/0 Hu 76 $ 529 room=.
+-> s
+T  94 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 63/74 MP 0/0 Hu 75 $ 529 room=.
+-> s
+T  95 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 63/74 MP 0/0 Hu 74 $ 529 room=.
+-> l
+T  96 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 63/74 MP 0/0 Hu 74 $ 529 room=.
+-> e
+T  97 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 64/74 MP 0/0 Hu 73 $ 529 room=.
+-> s
+T  98 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 64/74 MP 0/0 Hu 72 $ 529 room=.
+-> l
+T  99 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 64/74 MP 0/0 Hu 72 $ 529 room=.
+-> s
+T 100 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 64/74 MP 0/0 Hu 71 $ 529 room=M vs Stirge(L0 HP6/6)
+-> a
+T 101 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 64/74 MP 0/0 Hu 71 $ 539 room=.
+-> back
+T 102 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 64/74 MP 0/0 Hu 71 $ 539 room=.
+-> l
+T 103 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 64/74 MP 0/0 Hu 71 $ 539 room=.
+-> e
+T 104 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 64/74 MP 0/0 Hu 70 $ 539 room=M vs Crawling Claw(L0 HP5/5)
+-> a
+T 105 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 64/74 MP 0/0 Hu 70 $ 543 room=.
+-> back
+T 106 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 64/74 MP 0/0 Hu 70 $ 543 room=.
+-> l
+T 107 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 64/74 MP 0/0 Hu 70 $ 543 room=.
+-> e
+T 108 mode=chest_mode          Nain the Cup-Bearer(dwa) F1@( 7, 8) HP 65/74 MP 0/0 Hu 69 $ 543 room=C
+-> n
+T 109 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 65/74 MP 0/0 Hu 68 $ 543 room=.
+-> l
+T 110 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 65/74 MP 0/0 Hu 68 $ 543 room=.
+-> n
+T 111 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 65/74 MP 0/0 Hu 67 $ 543 room=M vs Goblin(L0 HP12/12)
+-> a
+T 112 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 65/74 MP 0/0 Hu 67 $ 549 room=.
+-> back
+T 113 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 65/74 MP 0/0 Hu 67 $ 549 room=.
+-> i
+T 114 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 65/74 MP 0/0 Hu 67 $ 549 room=.
+-> u4
+T 115 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 67 $ 549 room=.
+-> x
+T 116 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 67 $ 549 room=.
+-> i
+T 117 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 67 $ 549 room=.
+-> u9
+T 118 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 67 $ 549 room=.
 -> eat2
-T  87 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 81 $ 520 room=.
+T 119 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 73 $ 549 room=.
 -> x
-T  88 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 81 $ 520 room=.
+T 120 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 73 $ 549 room=.
 -> l
-T  89 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 64/64 MP 0/0 Hu 81 $ 520 room=.
--> e
-T  90 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 64/64 MP 0/0 Hu 80 $ 520 room=.
--> s
-T  91 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 64/64 MP 0/0 Hu 79 $ 520 room=.
--> l
-T  92 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 64/64 MP 0/0 Hu 79 $ 520 room=.
--> s
-T  93 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 64/64 MP 0/0 Hu 78 $ 520 room=M vs Spore Puff(L0 HP18/18)
+T 121 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 73 $ 549 room=.
+-> n
+T 122 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 72 $ 549 room=M vs Kobold(L0 HP20/20)
 -> a
-T  94 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 63/74 MP 0/0 Hu 78 $ 529 room=.
+T 123 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 72 $ 549 room=M vs Kobold(L0 HP20/20)
+-> a
+T 124 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 72 $ 549 room=M vs Kobold(L0 HP20/20)
+-> a
+T 125 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 72 $ 549 room=M vs Kobold(L0 HP20/20)
+-> a
+T 126 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 72 $ 652 room=.
 -> back
-T  95 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 63/74 MP 0/0 Hu 78 $ 529 room=.
--> l
-T  96 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 63/74 MP 0/0 Hu 78 $ 529 room=.
+T 127 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 72 $ 652 room=.
+-> n
+T 128 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 71 $ 652 room=.
 -> e
-T  97 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 63/74 MP 0/0 Hu 77 $ 529 room=M vs Stirge(L0 HP6/6)
+T 129 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 70 $ 652 room=.
+-> n
+T 130 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 69 $ 652 room=.
+-> n
+T 131 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 2) HP 74/74 MP 0/0 Hu 68 $ 652 room=.
+-> w
+T 132 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 67 $ 652 room=.
+-> s
+T 133 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 66 $ 652 room=.
+-> s
+T 134 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 65 $ 652 room=.
+-> s
+T 135 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 64 $ 652 room=.
+-> s
+T 136 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 63 $ 652 room=.
+-> s
+T 137 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 62 $ 652 room=.
+-> w
+T 138 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 61 $ 652 room=M vs Zombie(L0 HP35/35)
+-> a
+T 139 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 61 $ 652 room=M vs Zombie(L0 HP35/35)
 -> f
-T  98 mode=flee_direction_mode Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 63/74 MP 0/0 Hu 77 $ 529 room=M
--> e
-T  99 mode=chest_mode          Nain the Cup-Bearer(dwa) F1@( 7, 8) HP 63/74 MP 0/0 Hu 77 $ 529 room=C
--> o
-T 100 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 8) HP 57/74 MP 0/0 Hu 77 $ 529 room=.
--> l
-T 101 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 8) HP 57/74 MP 0/0 Hu 77 $ 529 room=.
--> s
-T 102 mode=tomb_mode           Nain the Cup-Bearer(dwa) F1@( 7, 9) HP 57/74 MP 0/0 Hu 76 $ 529 room=T
--> p
-T 103 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 9) HP 74/74 MP 0/0 Hu 76 $ 529 room=T
--> l
-T 104 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 9) HP 74/74 MP 0/0 Hu 76 $ 529 room=T
--> n
-T 105 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 8) HP 74/74 MP 0/0 Hu 75 $ 529 room=.
--> e
-T 106 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 74 $ 529 room=.
--> n
-T 107 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 73 $ 529 room=M vs Kobold(L0 HP8/8)
+T 140 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 72/74 MP 0/0 Hu 61 $ 652 room=M vs Zombie(L0 HP35/35)
 -> a
-T 108 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 73/74 MP 0/0 Hu 73 $ 529 room=M vs Kobold(L0 HP8/8)
+T 141 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 72/74 MP 0/0 Hu 61 $ 652 room=M vs Zombie(L0 HP9/35)
 -> a
-T 109 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 72/74 MP 0/0 Hu 73 $ 529 room=M vs Kobold(L0 HP8/8)
--> a
-T 110 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 71/74 MP 0/0 Hu 73 $ 529 room=M vs Kobold(L0 HP8/8)
--> a
-T 111 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 70/74 MP 0/0 Hu 73 $ 529 room=M vs Kobold(L0 HP8/8)
--> f
-T 112 mode=flee_direction_mode Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 70/74 MP 0/0 Hu 73 $ 529 room=M
--> e
-T 113 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 7) HP 70/74 MP 0/0 Hu 73 $ 529 room=.
--> l
-T 114 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 7) HP 70/74 MP 0/0 Hu 73 $ 529 room=.
--> n
-T 115 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 6) HP 70/74 MP 0/0 Hu 72 $ 529 room=.
--> l
-T 116 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 6) HP 70/74 MP 0/0 Hu 72 $ 529 room=.
--> w
-T 117 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 70/74 MP 0/0 Hu 71 $ 529 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 118 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 69/74 MP 0/0 Hu 71 $ 539 room=.
+T 142 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 71/74 MP 0/0 Hu 61 $ 662 room=.
 -> back
-T 119 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 69/74 MP 0/0 Hu 71 $ 539 room=.
+T 143 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 71/74 MP 0/0 Hu 61 $ 662 room=.
+-> s
+T 144 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 71/74 MP 0/0 Hu 60 $ 662 room=.
+-> w
+T 145 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 71/74 MP 0/0 Hu 59 $ 662 room=.
 -> n
-T 120 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 5) HP 69/74 MP 0/0 Hu 70 $ 539 room=M vs Rust Monster(L0 HP18/18)
+T 146 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 71/74 MP 0/0 Hu 58 $ 662 room=.
+-> n
+T 147 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 71/74 MP 0/0 Hu 57 $ 662 room=.
+-> n
+T 148 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 71/74 MP 0/0 Hu 56 $ 662 room=.
+-> n
+T 149 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 71/74 MP 0/0 Hu 55 $ 662 room=M vs Bat(L0 HP12/12)
 -> a
-T 121 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 8, 5) HP 68/74 MP 0/0 Hu 70 $ 549 room=.
+T 150 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 70/74 MP 0/0 Hu 55 $ 668 room=.
 -> back
-T 122 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 5) HP 68/74 MP 0/0 Hu 70 $ 549 room=.
--> n
-T 123 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 4) HP 69/74 MP 0/0 Hu 69 $ 549 room=.
--> w
-T 124 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 69/74 MP 0/0 Hu 68 $ 549 room=.
--> n
-T 125 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 69/74 MP 0/0 Hu 67 $ 549 room=.
--> e
-T 126 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 3) HP 69/74 MP 0/0 Hu 66 $ 549 room=.
--> n
-T 127 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 2) HP 70/74 MP 0/0 Hu 65 $ 549 room=.
--> w
-T 128 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 2) HP 70/74 MP 0/0 Hu 64 $ 549 room=.
--> n
-T 129 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 1) HP 70/74 MP 0/0 Hu 63 $ 549 room=.
--> e
-T 130 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 1) HP 70/74 MP 0/0 Hu 62 $ 549 room=.
--> s
-T 131 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 2) HP 71/74 MP 0/0 Hu 61 $ 549 room=.
--> s
-T 132 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 3) HP 71/74 MP 0/0 Hu 60 $ 549 room=.
--> s
-T 133 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 4) HP 71/74 MP 0/0 Hu 59 $ 549 room=.
--> s
-T 134 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 5) HP 71/74 MP 0/0 Hu 58 $ 549 room=.
--> s
-T 135 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 71/74 MP 0/0 Hu 57 $ 549 room=.
--> e
-T 136 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 6) HP 71/74 MP 0/0 Hu 56 $ 549 room=.
--> s
-T 137 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 7) HP 71/74 MP 0/0 Hu 55 $ 549 room=.
--> w
-T 138 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 71/74 MP 0/0 Hu 54 $ 549 room=M vs Kobold(L0 HP8/8)
--> a
-T 139 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 70/74 MP 0/0 Hu 54 $ 549 room=M vs Kobold(L0 HP8/8)
--> a
-T 140 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 69/74 MP 0/0 Hu 54 $ 553 room=.
--> back
-T 141 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 69/74 MP 0/0 Hu 54 $ 553 room=.
--> s
-T 142 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 69/74 MP 0/0 Hu 53 $ 553 room=.
--> n
-T 143 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 69/74 MP 0/0 Hu 52 $ 553 room=.
--> w
-T 144 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 69/74 MP 0/0 Hu 51 $ 553 room=.
--> w
-T 145 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 69/74 MP 0/0 Hu 50 $ 553 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T 146 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 69/74 MP 0/0 Hu 50 $ 561 room=.
--> back
-T 147 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 69/74 MP 0/0 Hu 50 $ 561 room=.
--> w
-T 148 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 69/74 MP 0/0 Hu 49 $ 561 room=.
+T 151 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 70/74 MP 0/0 Hu 55 $ 668 room=.
 -> i
-T 149 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 69/74 MP 0/0 Hu 49 $ 561 room=.
--> eat1
-T 150 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 69/74 MP 0/0 Hu100 $ 561 room=.
+T 152 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 70/74 MP 0/0 Hu 55 $ 668 room=.
+-> u4
+T 153 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 55 $ 668 room=.
 -> x
-T 151 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 69/74 MP 0/0 Hu100 $ 561 room=.
--> s
-T 152 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 69/74 MP 0/0 Hu 99 $ 561 room=.
--> e
-T 153 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 70/74 MP 0/0 Hu 98 $ 561 room=M vs Stirge(L0 HP6/6)
--> a
-T 154 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 69/74 MP 0/0 Hu 98 $ 562 room=.
--> back
-T 155 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 69/74 MP 0/0 Hu 98 $ 562 room=.
--> n
-T 156 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 69/74 MP 0/0 Hu 97 $ 562 room=.
--> e
-T 157 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 70/74 MP 0/0 Hu 96 $ 562 room=.
--> n
-T 158 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 70/74 MP 0/0 Hu 95 $ 562 room=M vs Kobold(L0 HP8/8)
--> a
-T 159 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 69/74 MP 0/0 Hu 95 $ 562 room=M vs Kobold(L0 HP8/8)
--> a
-T 160 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 69/74 MP 0/0 Hu 95 $ 562 room=M vs Kobold(L0 HP5/8)
--> a
-T 161 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 69/74 MP 0/0 Hu 95 $ 562 room=M vs Kobold(L0 HP2/8)
--> a
-T 162 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 69/74 MP 0/0 Hu 95 $ 565 room=.
--> back
-T 163 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 69/74 MP 0/0 Hu 95 $ 565 room=.
+T 154 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 55 $ 668 room=.
 -> i
-T 164 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 69/74 MP 0/0 Hu 95 $ 565 room=.
--> eat3
-T 165 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 69/74 MP 0/0 Hu100 $ 565 room=.
--> x
-T 166 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 69/74 MP 0/0 Hu100 $ 565 room=.
--> e
-T 167 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 70/74 MP 0/0 Hu 99 $ 565 room=.
--> s
-T 168 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 70/74 MP 0/0 Hu 98 $ 565 room=.
--> s
-T 169 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 71/74 MP 0/0 Hu 97 $ 565 room=.
--> n
-T 170 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 71/74 MP 0/0 Hu 96 $ 565 room=.
--> i
-T 171 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 71/74 MP 0/0 Hu 96 $ 565 room=.
--> eat3
-T 172 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 71/74 MP 0/0 Hu100 $ 565 room=.
--> x
-T 173 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 71/74 MP 0/0 Hu100 $ 565 room=.
--> w
-T 174 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 72/74 MP 0/0 Hu 99 $ 565 room=.
--> w
-T 175 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 72/74 MP 0/0 Hu 98 $ 565 room=.
--> s
-T 176 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 73/74 MP 0/0 Hu 97 $ 565 room=.
--> w
-T 177 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 73/74 MP 0/0 Hu 96 $ 565 room=.
--> n
-T 178 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 95 $ 565 room=.
--> n
-T 179 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 94 $ 565 room=.
--> w
-T 180 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 93 $ 565 room=.
--> n
-T 181 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 92 $ 565 room=.
--> n
-T 182 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 91 $ 565 room=.
--> n
-T 183 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 90 $ 565 room=.
--> n
-T 184 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 2) HP 74/74 MP 0/0 Hu 89 $ 565 room=.
--> e
-T 185 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 74/74 MP 0/0 Hu 88 $ 565 room=.
--> e
-T 186 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 87 $ 565 room=.
--> s
-T 187 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 86 $ 565 room=.
--> e
-T 188 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 85 $ 565 room=.
--> s
-T 189 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 84 $ 565 room=.
--> e
-T 190 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 83 $ 565 room=.
--> s
-T 191 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu 82 $ 565 room=.
--> s
-T 192 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 81 $ 565 room=.
--> s
-T 193 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 80 $ 565 room=.
--> s
-T 194 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 79 $ 565 room=.
--> n
-T 195 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 78 $ 565 room=.
--> w
-T 196 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 77 $ 565 room=.
--> w
-T 197 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 76 $ 565 room=.
--> s
-T 198 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 75 $ 565 room=.
--> w
-T 199 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 74 $ 565 room=.
--> n
-T 200 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 73 $ 565 room=.
--> n
-T 201 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 72 $ 565 room=.
--> n
-T 202 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 71 $ 565 room=.
--> w
-T 203 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 70 $ 565 room=.
--> s
-T 204 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 69 $ 565 room=.
--> n
-T 205 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 68 $ 565 room=.
--> n
-T 206 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 67 $ 565 room=.
--> n
-T 207 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 66 $ 565 room=.
--> n
-T 208 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 2) HP 74/74 MP 0/0 Hu 65 $ 565 room=.
--> w
-T 209 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 3, 2) HP 74/74 MP 0/0 Hu 64 $ 565 room=.
--> n
-T 210 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 3, 1) HP 74/74 MP 0/0 Hu 63 $ 565 room=.
--> l
-T 211 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 3, 1) HP 74/74 MP 0/0 Hu 63 $ 565 room=.
--> w
-T 212 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 2, 1) HP 74/74 MP 0/0 Hu 62 $ 565 room=.
--> s
-T 213 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 2, 2) HP 74/74 MP 0/0 Hu 61 $ 565 room=.
--> w
-T 214 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 2) HP 74/74 MP 0/0 Hu 60 $ 565 room=.
--> n
-T 215 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 1) HP 74/74 MP 0/0 Hu 59 $ 565 room=E
--> s
-T 216 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 2) HP 74/74 MP 0/0 Hu 58 $ 565 room=.
--> n
-T 217 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 1) HP 74/74 MP 0/0 Hu 57 $ 565 room=E
--> i
-T 218 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 1, 1) HP 74/74 MP 0/0 Hu 57 $ 565 room=E
+T 155 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 55 $ 668 room=.
+-> u8
+T 156 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 55 $ 668 room=.
 -> eat2
-T 219 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 1, 1) HP 74/74 MP 0/0 Hu 75 $ 565 room=E
--> eat1
-T 220 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 1, 1) HP 74/74 MP 0/0 Hu100 $ 565 room=E
+T 157 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 68 $ 668 room=.
 -> x
-T 221 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 1) HP 74/74 MP 0/0 Hu100 $ 565 room=E
+T 158 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 68 $ 668 room=.
 -> e
-T 222 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 2, 1) HP 74/74 MP 0/0 Hu 99 $ 565 room=.
--> s
-T 223 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 2, 2) HP 74/74 MP 0/0 Hu 98 $ 565 room=.
--> e
-T 224 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 3, 2) HP 74/74 MP 0/0 Hu 97 $ 565 room=.
--> e
-T 225 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 2) HP 74/74 MP 0/0 Hu 96 $ 565 room=.
--> s
-T 226 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 95 $ 565 room=.
--> s
-T 227 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 94 $ 565 room=.
--> s
-T 228 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 93 $ 565 room=.
--> s
-T 229 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 92 $ 565 room=.
--> e
-T 230 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 91 $ 565 room=.
--> l
-T 231 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 91 $ 565 room=.
--> s
-T 232 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 90 $ 565 room=.
--> s
-T 233 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 89 $ 565 room=.
--> e
-T 234 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 88 $ 565 room=.
--> n
-T 235 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 87 $ 565 room=.
--> e
-T 236 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 86 $ 565 room=.
--> n
-T 237 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 85 $ 565 room=.
--> e
-T 238 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 84 $ 565 room=.
--> s
-T 239 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 83 $ 565 room=.
--> s
-T 240 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 82 $ 565 room=.
--> l
-T 241 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 82 $ 565 room=.
--> n
-T 242 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 81 $ 565 room=.
--> e
-T 243 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 80 $ 565 room=.
--> n
-T 244 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 79 $ 565 room=.
--> w
-T 245 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 78 $ 565 room=.
--> w
-T 246 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 77 $ 565 room=.
--> s
-T 247 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 76 $ 565 room=.
--> e
-T 248 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 75 $ 565 room=.
--> s
-T 249 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 74 $ 565 room=.
--> n
-T 250 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 73 $ 565 room=.
--> l
-T 251 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 73 $ 565 room=.
--> e
-T 252 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 72 $ 565 room=.
--> n
-T 253 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 71 $ 565 room=.
--> w
-T 254 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 70 $ 565 room=.
--> n
-T 255 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu 69 $ 565 room=.
--> n
-T 256 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 68 $ 565 room=.
--> w
-T 257 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 67 $ 565 room=.
--> n
-T 258 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 66 $ 565 room=.
--> w
-T 259 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 65 $ 565 room=.
--> n
-T 260 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 64 $ 565 room=.
--> l
-T 261 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 64 $ 565 room=.
--> n
-T 262 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 1) HP 74/74 MP 0/0 Hu 63 $ 565 room=.
--> e
-T 263 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 1) HP 74/74 MP 0/0 Hu 62 $ 565 room=.
--> s
-T 264 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 61 $ 565 room=.
--> s
-T 265 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 60 $ 565 room=.
--> s
-T 266 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 59 $ 565 room=.
--> e
-T 267 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 58 $ 565 room=.
--> s
-T 268 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 5) HP 74/74 MP 0/0 Hu 57 $ 565 room=.
--> s
-T 269 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 56 $ 565 room=.
--> s
-T 270 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 55 $ 565 room=.
--> l
-T 271 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 55 $ 565 room=.
--> s
-T 272 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 74/74 MP 0/0 Hu 54 $ 565 room=.
--> n
-T 273 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 74/74 MP 0/0 Hu 53 $ 565 room=.
--> e
-T 274 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 7) HP 74/74 MP 0/0 Hu 52 $ 565 room=.
--> n
-T 275 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 6) HP 74/74 MP 0/0 Hu 51 $ 565 room=.
--> w
-T 276 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 50 $ 565 room=.
--> w
-T 277 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 49 $ 565 room=.
--> s
-T 278 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 48 $ 565 room=.
--> w
-T 279 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 47 $ 565 room=.
--> s
-T 280 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 46 $ 565 room=.
--> l
-T 281 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 46 $ 565 room=.
--> w
-T 282 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 45 $ 565 room=.
--> n
-T 283 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 44 $ 565 room=.
--> n
-T 284 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 43 $ 565 room=.
--> n
-T 285 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 42 $ 565 room=.
--> w
-T 286 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 41 $ 565 room=.
--> s
-T 287 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 40 $ 565 room=.
--> n
-T 288 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 39 $ 565 room=.
--> n
-T 289 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 38 $ 565 room=.
--> n
-T 290 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 37 $ 565 room=.
--> l
-T 291 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 37 $ 565 room=.
--> n
-T 292 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 2) HP 74/74 MP 0/0 Hu 36 $ 565 room=.
--> n
-T 293 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 1) HP 74/74 MP 0/0 Hu 35 $ 565 room=.
--> w
-T 294 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 3, 1) HP 74/74 MP 0/0 Hu 34 $ 565 room=.
--> s
-T 295 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 3, 2) HP 74/74 MP 0/0 Hu 33 $ 565 room=.
--> w
-T 296 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 2, 2) HP 74/74 MP 0/0 Hu 32 $ 565 room=.
--> n
-T 297 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 2, 1) HP 74/74 MP 0/0 Hu 31 $ 565 room=.
--> w
-T 298 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 1) HP 74/74 MP 0/0 Hu 30 $ 565 room=E
--> s
-T 299 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 2) HP 74/74 MP 0/0 Hu 29 $ 565 room=.
--> s
-T 300 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 74/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP30/30)
+T 159 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 67 $ 668 room=M vs Lichen(L0 HP10/10)
 -> a
-T 301 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 73/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP30/30)
+T 160 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 73/74 MP 0/0 Hu 67 $ 668 room=M vs Lichen(L0 HP6/10)
 -> a
-T 302 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 72/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP30/30)
+T 161 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 72/74 MP 0/0 Hu 67 $ 668 room=M vs Lichen(L0 HP6/10)
 -> a
-T 303 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 71/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP28/30)
+T 162 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 72/74 MP 0/0 Hu 67 $ 668 room=M vs Lichen(L0 HP6/10)
 -> a
-T 304 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 70/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP26/30)
+T 163 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 72/74 MP 0/0 Hu 67 $ 668 room=M vs Lichen(L0 HP6/10)
 -> a
-T 305 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 69/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP24/30)
--> f
-T 306 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 68/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP24/30)
+T 164 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 71/74 MP 0/0 Hu 67 $ 668 room=M vs Lichen(L0 HP6/10)
 -> a
-T 307 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 68/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP22/30)
+T 165 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 71/74 MP 0/0 Hu 67 $ 668 room=M vs Lichen(L0 HP2/10)
 -> a
-T 308 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 68/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP20/30)
+T 166 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 70/74 MP 0/0 Hu 67 $ 668 room=M vs Lichen(L0 HP2/10)
 -> a
-T 309 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 67/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP20/30)
+T 167 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 69/74 MP 0/0 Hu 67 $ 668 room=M vs Lichen(L0 HP2/10)
 -> a
-T 310 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 66/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP20/30)
--> a
-T 311 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 65/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP18/30)
--> a
-T 312 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 65/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP16/30)
--> a
-T 313 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 64/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP14/30)
--> a
-T 314 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 63/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP14/30)
--> a
-T 315 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 63/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP14/30)
--> a
-T 316 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 62/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP14/30)
--> a
-T 317 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 61/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP14/30)
--> a
-T 318 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 60/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP12/30)
--> a
-T 319 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 59/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP10/30)
--> a
-T 320 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 59/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP8/30)
--> a
-T 321 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 58/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP8/30)
--> a
-T 322 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 58/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP6/30)
--> a
-T 323 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 57/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP6/30)
--> a
-T 324 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 57/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP4/30)
--> a
-T 325 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 56/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP2/30)
--> a
-T 326 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 56/74 MP 0/0 Hu 28 $ 565 room=M vs Goblin(L0 HP2/30)
--> a
-T 327 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 55/74 MP 0/0 Hu 28 $ 573 room=.
+T 168 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 69/74 MP 0/0 Hu 67 $ 675 room=.
 -> back
-T 328 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 55/74 MP 0/0 Hu 28 $ 573 room=.
+T 169 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 69/74 MP 0/0 Hu 67 $ 675 room=.
 -> i
-T 329 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 55/74 MP 0/0 Hu 28 $ 573 room=.
--> eat1
-T 330 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 55/74 MP 0/0 Hu 33 $ 573 room=.
+T 170 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 69/74 MP 0/0 Hu 67 $ 675 room=.
+-> u7
+T 171 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 69/74 MP 0/0 Hu 67 $ 675 room=.
+-> eat2
+T 172 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 69/74 MP 0/0 Hu 74 $ 675 room=.
 -> x
-T 331 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 3) HP 55/74 MP 0/0 Hu 33 $ 573 room=.
+T 173 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 69/74 MP 0/0 Hu 74 $ 675 room=.
 -> s
-T 332 mode=stairs_down_mode    Nain the Cup-Bearer(dwa) F1@( 1, 4) HP 55/74 MP 0/0 Hu 32 $ 573 room=D
--> d
-T 333 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 55/74 MP 0/0 Hu 32 $ 573 room=U
+T 174 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 69/74 MP 0/0 Hu 73 $ 675 room=.
+-> e
+T 175 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 69/74 MP 0/0 Hu 72 $ 675 room=.
+-> s
+T 176 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 69/74 MP 0/0 Hu 71 $ 675 room=.
+-> s
+T 177 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 70/74 MP 0/0 Hu 70 $ 675 room=.
 -> w
-T 334 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 55/74 MP 0/0 Hu 32 $ 573 room=U
+T 178 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 70/74 MP 0/0 Hu 69 $ 675 room=.
+-> s
+T 179 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 70/74 MP 0/0 Hu 68 $ 675 room=.
+-> w
+T 180 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 70/74 MP 0/0 Hu 67 $ 675 room=.
 -> n
-T 335 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 55/74 MP 0/0 Hu 32 $ 573 room=U
+T 181 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 71/74 MP 0/0 Hu 66 $ 675 room=.
 -> n
-T 336 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 55/74 MP 0/0 Hu 32 $ 573 room=U
+T 182 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 71/74 MP 0/0 Hu 65 $ 675 room=.
+-> w
+T 183 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 71/74 MP 0/0 Hu 64 $ 675 room=.
 -> n
-T 337 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 55/74 MP 0/0 Hu 32 $ 573 room=U
--> w
-T 338 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 55/74 MP 0/0 Hu 32 $ 573 room=U
--> w
-T 339 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 55/74 MP 0/0 Hu 32 $ 573 room=U
--> w
-T 340 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 55/74 MP 0/0 Hu 32 $ 573 room=U
--> w
-T 341 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 55/74 MP 0/0 Hu 32 $ 573 room=U
--> s
-T 342 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 2) HP 55/74 MP 0/0 Hu 31 $ 573 room=.
--> l
-T 343 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 2) HP 55/74 MP 0/0 Hu 31 $ 573 room=.
+T 184 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 71/74 MP 0/0 Hu 63 $ 675 room=.
+-> n
+T 185 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 72/74 MP 0/0 Hu 62 $ 675 room=.
 -> e
-T 344 mode=dungeon_mode        Nain the Cup-Bearer(dwa) F2@( 2, 2) HP 55/74 MP 0/0 Hu 30 $ 573 room=N
--> u
-T 345 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 2) HP 55/74 MP 0/0 Hu 30 $ 573 room=N
--> l
-T 346 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 2) HP 55/74 MP 0/0 Hu 30 $ 573 room=N
--> e
-T 347 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 3, 2) HP 55/74 MP 0/0 Hu 29 $ 573 room=.
--> l
-T 348 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 3, 2) HP 55/74 MP 0/0 Hu 29 $ 573 room=.
--> e
-T 349 mode=chest_mode          Nain the Cup-Bearer(dwa) F2@( 4, 2) HP 55/74 MP 0/0 Hu 28 $ 573 room=C
--> o
-T 350 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 2) HP 55/74 MP 0/0 Hu 28 $ 613 room=.
--> l
-T 351 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 2) HP 55/74 MP 0/0 Hu 28 $ 613 room=.
+T 186 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 72/74 MP 0/0 Hu 61 $ 675 room=.
 -> s
-T 352 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 3) HP 55/74 MP 0/0 Hu 27 $ 613 room=.
+T 187 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 72/74 MP 0/0 Hu 60 $ 675 room=.
 -> s
-T 353 mode=library_mode        Nain the Cup-Bearer(dwa) F2@( 4, 4) HP 55/74 MP 0/0 Hu 26 $ 613 room=L
--> r
-T 354 mode=library_read_decision_mode Nain the Cup-Bearer(dwa) F2@( 4, 4) HP 55/74 MP 0/0 Hu 26 $ 613 room=L
--> y
-T 355 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 4) HP 55/74 MP 0/0 Hu 26 $ 663 room=.
+T 188 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 72/74 MP 0/0 Hu 59 $ 675 room=.
 -> s
-T 356 mode=chest_mode          Nain the Cup-Bearer(dwa) F2@( 4, 5) HP 55/74 MP 0/0 Hu 25 $ 663 room=C
--> o
-T 357 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 5) HP 55/74 MP 0/0 Hu 25 $ 663 room=.
--> l
-T 358 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 5) HP 55/74 MP 0/0 Hu 25 $ 663 room=.
+T 189 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 72/74 MP 0/0 Hu 58 $ 675 room=.
+-> s
+T 190 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 72/74 MP 0/0 Hu 57 $ 675 room=.
 -> e
-T 359 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 55/74 MP 0/0 Hu 24 $ 663 room=M vs Bat(L1 HP12/12)
+T 191 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 72/74 MP 0/0 Hu 56 $ 675 room=.
+-> n
+T 192 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 72/74 MP 0/0 Hu 55 $ 675 room=.
+-> e
+T 193 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 72/74 MP 0/0 Hu 54 $ 675 room=.
+-> n
+T 194 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 72/74 MP 0/0 Hu 53 $ 675 room=.
+-> n
+T 195 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 72/74 MP 0/0 Hu 52 $ 675 room=.
+-> w
+T 196 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 72/74 MP 0/0 Hu 51 $ 675 room=.
+-> w
+T 197 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 72/74 MP 0/0 Hu 50 $ 675 room=.
+-> s
+T 198 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 72/74 MP 0/0 Hu 49 $ 675 room=.
+-> i
+T 199 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 72/74 MP 0/0 Hu 49 $ 675 room=.
+-> eat2
+T 200 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 72/74 MP 0/0 Hu 67 $ 675 room=.
+-> x
+T 201 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 72/74 MP 0/0 Hu 67 $ 675 room=.
+-> s
+T 202 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 72/74 MP 0/0 Hu 66 $ 675 room=.
+-> s
+T 203 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 72/74 MP 0/0 Hu 65 $ 675 room=.
+-> e
+T 204 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 72/74 MP 0/0 Hu 64 $ 675 room=.
+-> n
+T 205 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 73/74 MP 0/0 Hu 63 $ 675 room=.
+-> e
+T 206 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 73/74 MP 0/0 Hu 62 $ 675 room=.
+-> n
+T 207 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 61 $ 675 room=.
+-> n
+T 208 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 73/74 MP 0/0 Hu 60 $ 675 room=.
+-> n
+T 209 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 73/74 MP 0/0 Hu 59 $ 675 room=.
+-> w
+T 210 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 73/74 MP 0/0 Hu 58 $ 675 room=.
+-> l
+T 211 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 73/74 MP 0/0 Hu 58 $ 675 room=.
+-> s
+T 212 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 73/74 MP 0/0 Hu 57 $ 675 room=.
+-> w
+T 213 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 73/74 MP 0/0 Hu 56 $ 675 room=.
+-> s
+T 214 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 73/74 MP 0/0 Hu 55 $ 675 room=.
+-> s
+T 215 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 73/74 MP 0/0 Hu 54 $ 675 room=.
+-> s
+T 216 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 73/74 MP 0/0 Hu 53 $ 675 room=.
+-> e
+T 217 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 73/74 MP 0/0 Hu 52 $ 675 room=.
+-> n
+T 218 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 73/74 MP 0/0 Hu 51 $ 675 room=.
+-> e
+T 219 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 73/74 MP 0/0 Hu 50 $ 675 room=.
+-> n
+T 220 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 49 $ 675 room=.
+-> i
+T 221 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 49 $ 675 room=.
+-> eat2
+T 222 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu 67 $ 675 room=.
+-> eat1
+T 223 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu100 $ 675 room=.
+-> x
+T 224 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 73/74 MP 0/0 Hu100 $ 675 room=.
+-> n
+T 225 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 73/74 MP 0/0 Hu 99 $ 675 room=.
+-> n
+T 226 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 98 $ 675 room=.
+-> n
+T 227 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 97 $ 675 room=.
+-> w
+T 228 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 96 $ 675 room=.
+-> s
+T 229 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 95 $ 675 room=.
+-> s
+T 230 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 94 $ 675 room=.
+-> l
+T 231 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 94 $ 675 room=.
+-> e
+T 232 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 93 $ 675 room=.
+-> s
+T 233 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 92 $ 675 room=.
+-> s
+T 234 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 91 $ 675 room=.
+-> w
+T 235 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 90 $ 675 room=.
+-> s
+T 236 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 89 $ 675 room=.
+-> w
+T 237 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 88 $ 675 room=.
+-> n
+T 238 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 87 $ 675 room=.
+-> n
+T 239 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 86 $ 675 room=.
+-> w
+T 240 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 85 $ 675 room=.
+-> l
+T 241 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 85 $ 675 room=.
+-> n
+T 242 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 84 $ 675 room=.
+-> n
+T 243 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 83 $ 675 room=.
+-> e
+T 244 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 82 $ 675 room=.
+-> s
+T 245 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 81 $ 675 room=.
+-> s
+T 246 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 80 $ 675 room=.
+-> s
+T 247 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 79 $ 675 room=.
+-> s
+T 248 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 78 $ 675 room=.
+-> e
+T 249 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 77 $ 675 room=.
+-> n
+T 250 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 76 $ 675 room=.
+-> l
+T 251 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 76 $ 675 room=.
+-> e
+T 252 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 75 $ 675 room=.
+-> n
+T 253 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 74 $ 675 room=.
+-> n
+T 254 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 73 $ 675 room=.
+-> w
+T 255 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 72 $ 675 room=.
+-> w
+T 256 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 71 $ 675 room=.
+-> s
+T 257 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 70 $ 675 room=.
+-> s
+T 258 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 69 $ 675 room=.
+-> s
+T 259 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 68 $ 675 room=.
+-> e
+T 260 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 67 $ 675 room=.
+-> l
+T 261 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 67 $ 675 room=.
+-> n
+T 262 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 66 $ 675 room=.
+-> e
+T 263 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 65 $ 675 room=.
+-> n
+T 264 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 64 $ 675 room=.
+-> n
+T 265 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 63 $ 675 room=.
+-> w
+T 266 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 62 $ 675 room=.
+-> n
+T 267 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 61 $ 675 room=.
+-> w
+T 268 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 60 $ 675 room=.
+-> s
+T 269 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 59 $ 675 room=.
+-> s
+T 270 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 58 $ 675 room=.
+-> l
+T 271 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 58 $ 675 room=.
+-> s
+T 272 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 57 $ 675 room=.
+-> s
+T 273 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 56 $ 675 room=.
+-> e
+T 274 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 55 $ 675 room=.
+-> n
+T 275 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 54 $ 675 room=.
+-> e
+T 276 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 53 $ 675 room=.
+-> n
+T 277 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 52 $ 675 room=.
+-> n
+T 278 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 51 $ 675 room=.
+-> n
+T 279 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 50 $ 675 room=.
+-> n
+T 280 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 49 $ 675 room=.
+-> i
+T 281 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 49 $ 675 room=.
+-> eat1
+T 282 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu100 $ 675 room=.
+-> x
+T 283 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu100 $ 675 room=.
+-> w
+T 284 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 99 $ 675 room=.
+-> s
+T 285 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 98 $ 675 room=.
+-> s
+T 286 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 97 $ 675 room=.
+-> e
+T 287 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 96 $ 675 room=.
+-> s
+T 288 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 95 $ 675 room=.
+-> s
+T 289 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 94 $ 675 room=.
+-> w
+T 290 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 93 $ 675 room=.
+-> l
+T 291 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 93 $ 675 room=.
+-> s
+T 292 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 92 $ 675 room=.
+-> w
+T 293 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 91 $ 675 room=.
+-> n
+T 294 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 90 $ 675 room=.
+-> n
+T 295 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 89 $ 675 room=.
+-> n
+T 296 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 88 $ 675 room=.
+-> e
+T 297 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 87 $ 675 room=.
+-> e
+T 298 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 86 $ 675 room=.
+-> s
+T 299 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 85 $ 675 room=.
+-> s
+T 300 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 84 $ 675 room=.
+-> l
+T 301 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 84 $ 675 room=.
+-> w
+T 302 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 83 $ 675 room=.
+-> s
+T 303 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 82 $ 675 room=.
+-> w
+T 304 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 81 $ 675 room=.
+-> n
+T 305 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 80 $ 675 room=.
+-> n
+T 306 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 79 $ 675 room=.
+-> n
+T 307 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 78 $ 675 room=.
+-> n
+T 308 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 77 $ 675 room=.
+-> w
+T 309 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 76 $ 675 room=.
+-> s
+T 310 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 75 $ 675 room=.
+-> l
+T 311 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 75 $ 675 room=.
+-> s
+T 312 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 74 $ 675 room=.
+-> e
+T 313 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 73 $ 675 room=.
+-> s
+T 314 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 72 $ 675 room=.
+-> s
+T 315 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 71 $ 675 room=.
+-> e
+T 316 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 70 $ 675 room=.
+-> n
+T 317 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 69 $ 675 room=.
+-> e
+T 318 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 68 $ 675 room=.
+-> n
+T 319 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 67 $ 675 room=.
+-> n
+T 320 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 66 $ 675 room=.
+-> l
+T 321 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 66 $ 675 room=.
+-> n
+T 322 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 4) HP 74/74 MP 0/0 Hu 65 $ 675 room=.
+-> e
+T 323 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 4) HP 74/74 MP 0/0 Hu 64 $ 675 room=.
+-> n
+T 324 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 3) HP 74/74 MP 0/0 Hu 63 $ 675 room=.
+-> w
+T 325 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 3) HP 74/74 MP 0/0 Hu 62 $ 675 room=.
+-> n
+T 326 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 2) HP 74/74 MP 0/0 Hu 61 $ 675 room=.
+-> w
+T 327 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 2) HP 74/74 MP 0/0 Hu 60 $ 675 room=.
+-> s
+T 328 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 3) HP 74/74 MP 0/0 Hu 59 $ 675 room=.
+-> s
+T 329 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 4) HP 74/74 MP 0/0 Hu 58 $ 675 room=.
+-> s
+T 330 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 57 $ 675 room=.
+-> l
+T 331 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 57 $ 675 room=.
+-> e
+T 332 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 56 $ 675 room=.
+-> s
+T 333 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 55 $ 675 room=.
+-> s
+T 334 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 54 $ 675 room=.
+-> w
+T 335 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 53 $ 675 room=.
+-> s
+T 336 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 52 $ 675 room=.
+-> w
+T 337 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 51 $ 675 room=.
+-> n
+T 338 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 50 $ 675 room=.
+-> n
+T 339 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 49 $ 675 room=.
+-> w
+T 340 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 48 $ 675 room=.
+-> l
+T 341 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 48 $ 675 room=.
+-> n
+T 342 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 47 $ 675 room=.
+-> e
+T 343 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 46 $ 675 room=.
+-> e
+T 344 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 5) HP 74/74 MP 0/0 Hu 45 $ 675 room=.
+-> e
+T 345 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 5) HP 74/74 MP 0/0 Hu 44 $ 675 room=.
+-> s
+T 346 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 43 $ 675 room=.
+-> s
+T 347 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 42 $ 675 room=.
+-> w
+T 348 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 41 $ 675 room=.
+-> s
+T 349 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 40 $ 675 room=.
+-> w
+T 350 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 39 $ 675 room=.
+-> l
+T 351 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 39 $ 675 room=.
+-> n
+T 352 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 38 $ 675 room=.
+-> n
+T 353 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 37 $ 675 room=.
+-> w
+T 354 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 74/74 MP 0/0 Hu 36 $ 675 room=.
+-> n
+T 355 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 5) HP 74/74 MP 0/0 Hu 35 $ 675 room=.
+-> n
+T 356 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 4) HP 74/74 MP 0/0 Hu 34 $ 675 room=.
+-> n
+T 357 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 3) HP 74/74 MP 0/0 Hu 33 $ 675 room=.
+-> n
+T 358 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 2) HP 74/74 MP 0/0 Hu 32 $ 675 room=.
+-> e
+T 359 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 2) HP 74/74 MP 0/0 Hu 31 $ 675 room=.
+-> s
+T 360 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 30 $ 675 room=.
+-> l
+T 361 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 3) HP 74/74 MP 0/0 Hu 30 $ 675 room=.
+-> s
+T 362 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 4) HP 74/74 MP 0/0 Hu 29 $ 675 room=.
+-> s
+T 363 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 5) HP 74/74 MP 0/0 Hu 28 $ 675 room=.
+-> s
+T 364 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 74/74 MP 0/0 Hu 27 $ 675 room=.
+-> s
+T 365 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 74/74 MP 0/0 Hu 26 $ 675 room=.
+-> s
+T 366 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 74/74 MP 0/0 Hu 25 $ 675 room=.
+-> e
+T 367 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 74/74 MP 0/0 Hu 24 $ 675 room=.
+-> n
+T 368 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 74/74 MP 0/0 Hu 23 $ 675 room=.
+-> e
+T 369 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 74/74 MP 0/0 Hu 22 $ 675 room=.
+-> n
+T 370 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 21 $ 675 room=.
+-> l
+T 371 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 74/74 MP 0/0 Hu 21 $ 675 room=.
+-> e
+T 372 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 74/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T 360 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 54/74 MP 0/0 Hu 24 $ 663 room=M vs Bat(L1 HP8/12)
+T 373 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 73/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T 361 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 54/74 MP 0/0 Hu 24 $ 663 room=M vs Bat(L1 HP4/12)
+T 374 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 73/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP18/18)
 -> a
-T 362 mode=combat_victory      Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 54/74 MP 0/0 Hu 24 $ 675 room=.
+T 375 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 73/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T 376 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 72/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP16/18)
+-> a
+T 377 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 71/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP16/18)
+-> a
+T 378 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 70/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP14/18)
+-> a
+T 379 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 69/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP12/18)
+-> a
+T 380 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 68/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP10/18)
+-> a
+T 381 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 68/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP8/18)
+-> a
+T 382 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 67/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP6/18)
+-> a
+T 383 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 66/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP4/18)
+-> f
+T 384 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 66/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP4/18)
+-> a
+T 385 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 65/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP2/18)
+-> a
+T 386 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 65/74 MP 0/0 Hu 20 $ 675 room=M vs Rust Monster(L0 HP2/18)
+-> a
+T 387 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 65/74 MP 0/0 Hu 20 $ 828 room=.
 -> back
-T 363 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 54/74 MP 0/0 Hu 24 $ 675 room=.
+T 388 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 65/74 MP 0/0 Hu 20 $ 828 room=.
 -> i
-T 364 mode=inventory           Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 54/74 MP 0/0 Hu 24 $ 675 room=.
--> eat1
-T 365 mode=inventory           Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 54/74 MP 0/0 Hu 29 $ 675 room=.
--> x
-T 366 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 54/74 MP 0/0 Hu 29 $ 675 room=.
--> l
-T 367 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 54/74 MP 0/0 Hu 29 $ 675 room=.
--> s
-T 368 mode=pool_mode           Nain the Cup-Bearer(dwa) F2@( 5, 6) HP 54/74 MP 0/0 Hu 28 $ 675 room=P
--> dr
-T 369 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 5, 6) HP 54/74 MP 0/0 Hu 28 $ 675 room=.
--> l
-T 370 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 5, 6) HP 54/74 MP 0/0 Hu 28 $ 675 room=.
--> e
-T 371 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 54/74 MP 0/0 Hu 27 $ 675 room=M vs Gnoll(L1 HP32/32)
--> a
-T 372 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 53/74 MP 0/0 Hu 27 $ 675 room=M vs Gnoll(L1 HP32/32)
--> a
-T 373 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 53/74 MP 0/0 Hu 27 $ 675 room=M vs Gnoll(L1 HP32/32)
--> f
-T 374 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 52/74 MP 0/0 Hu 27 $ 675 room=M vs Gnoll(L1 HP32/32)
--> a
-T 375 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 51/74 MP 0/0 Hu 27 $ 675 room=M vs Gnoll(L1 HP31/32)
--> a
-T 376 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 50/74 MP 0/0 Hu 27 $ 675 room=M vs Gnoll(L1 HP31/32)
--> a
-T 377 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 49/74 MP 0/0 Hu 27 $ 675 room=M vs Gnoll(L1 HP31/32)
--> a
-T 378 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 48/74 MP 0/0 Hu 27 $ 675 room=M vs Gnoll(L1 HP30/32)
--> a
-T 379 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 48/74 MP 0/0 Hu 27 $ 675 room=M vs Gnoll(L1 HP29/32)
--> f
-T 380 mode=flee_direction_mode Nain the Cup-Bearer(dwa) F2@( 6, 6) HP 48/74 MP 0/0 Hu 27 $ 675 room=M
--> n
-T 381 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 6, 5) HP 48/74 MP 0/0 Hu 27 $ 675 room=.
--> e
-T 382 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 7, 5) HP 48/74 MP 0/0 Hu 26 $ 675 room=.
--> s
-T 383 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 7, 6) HP 48/74 MP 0/0 Hu 25 $ 675 room=.
--> l
-T 384 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 7, 6) HP 48/74 MP 0/0 Hu 25 $ 675 room=.
--> e
-T 385 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 8, 6) HP 48/74 MP 0/0 Hu 24 $ 675 room=.
--> l
-T 386 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 8, 6) HP 48/74 MP 0/0 Hu 24 $ 675 room=.
--> e
-T 387 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 9, 6) HP 48/74 MP 0/0 Hu 23 $ 675 room=.
--> l
-T 388 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 9, 6) HP 48/74 MP 0/0 Hu 23 $ 675 room=.
--> e
-T 389 mode=chest_mode          Nain the Cup-Bearer(dwa) F2@(10, 6) HP 48/74 MP 0/0 Hu 22 $ 675 room=C
--> o
-T 390 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(10, 6) HP 48/74 MP 0/0 Hu 22 $ 725 room=.
--> l
-T 391 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(10, 6) HP 48/74 MP 0/0 Hu 22 $ 725 room=.
--> e
-T 392 mode=chest_mode          Nain the Cup-Bearer(dwa) F2@(11, 6) HP 48/74 MP 0/0 Hu 21 $ 725 room=C
--> o
-T 393 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(11, 6) HP 48/74 MP 0/0 Hu 21 $ 725 room=.
--> i
-T 394 mode=inventory           Nain the Cup-Bearer(dwa) F2@(11, 6) HP 48/74 MP 0/0 Hu 21 $ 725 room=.
+T 389 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 65/74 MP 0/0 Hu 20 $ 828 room=.
 -> e1
-T 395 mode=inventory           Nain the Cup-Bearer(dwa) F2@(11, 6) HP 48/74 MP 0/0 Hu 21 $ 725 room=.
+T 390 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 65/74 MP 0/0 Hu 20 $ 828 room=.
 -> x
-T 396 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(11, 6) HP 48/74 MP 0/0 Hu 21 $ 725 room=.
--> l
-T 397 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(11, 6) HP 48/74 MP 0/0 Hu 21 $ 725 room=.
+T 391 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 65/74 MP 0/0 Hu 20 $ 828 room=.
 -> e
-T 398 mode=altar_mode          Nain the Cup-Bearer(dwa) F2@(12, 6) HP 48/74 MP 0/0 Hu 20 $ 725 room=A
--> pray
-T 399 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(12, 6) HP 48/74 MP 0/0 Hu 20 $ 725 room=.
--> l
-T 400 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(12, 6) HP 48/74 MP 0/0 Hu 20 $ 725 room=.
+T 392 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 6) HP 65/74 MP 0/0 Hu 19 $ 828 room=.
 -> s
-T 401 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(12, 7) HP 48/74 MP 0/0 Hu 19 $ 725 room=.
--> s
-T 402 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(12, 8) HP 48/74 MP 0/0 Hu 18 $ 725 room=.
--> l
-T 403 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(12, 8) HP 48/74 MP 0/0 Hu 18 $ 725 room=.
+T 393 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 9, 7) HP 65/74 MP 0/0 Hu 18 $ 828 room=.
 -> w
-T 404 mode=library_mode        Nain the Cup-Bearer(dwa) F2@(11, 8) HP 48/74 MP 0/0 Hu 17 $ 725 room=L
--> r
-T 405 mode=library_read_decision_mode Nain the Cup-Bearer(dwa) F2@(11, 8) HP 48/74 MP 0/0 Hu 17 $ 725 room=L
--> y
-T 406 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(11, 8) HP 48/74 MP 0/0 Hu 17 $ 725 room=.
--> w
-T 407 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(10, 8) HP 48/74 MP 0/0 Hu 16 $ 725 room=.
--> n
-T 408 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(10, 7) HP 48/74 MP 0/0 Hu 15 $ 725 room=.
--> n
-T 409 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(10, 6) HP 48/74 MP 0/0 Hu 14 $ 725 room=.
--> n
-T 410 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(10, 5) HP 48/74 MP 0/0 Hu 13 $ 725 room=.
--> e
-T 411 mode=dungeon_mode        Nain the Cup-Bearer(dwa) F2@(11, 5) HP 48/74 MP 0/0 Hu 12 $ 725 room=N
--> u
-T 412 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(11, 5) HP 48/74 MP 0/0 Hu 12 $ 725 room=N
--> n
-T 413 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(11, 4) HP 48/74 MP 0/0 Hu 11 $ 725 room=.
--> e
-T 414 mode=chest_mode          Nain the Cup-Bearer(dwa) F2@(12, 4) HP 48/74 MP 0/0 Hu 10 $ 725 room=C
--> o
-T 415 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(12, 4) HP 32/74 MP 0/0 Hu 10 $ 725 room=.
--> w
-T 416 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(11, 4) HP 32/74 MP 0/0 Hu  9 $ 725 room=.
--> w
-T 417 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(10, 4) HP 32/74 MP 0/0 Hu  8 $ 725 room=.
--> n
-T 418 mode=game_loop           Nain the Cup-Bearer(dwa) F2@(10, 3) HP 32/74 MP 0/0 Hu  7 $ 725 room=.
--> w
-T 419 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 9, 3) HP 32/74 MP 0/0 Hu  6 $ 725 room=.
--> n
-T 420 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 9, 2) HP 32/74 MP 0/0 Hu  5 $ 725 room=.
--> w
-T 421 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 8, 2) HP 32/74 MP 0/0 Hu  4 $ 725 room=.
--> w
-T 422 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 7, 2) HP 32/74 MP 0/0 Hu  3 $ 725 room=.
--> l
-T 423 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 7, 2) HP 32/74 MP 0/0 Hu  3 $ 725 room=.
--> n
-T 424 mode=chest_mode          Nain the Cup-Bearer(dwa) F2@( 7, 1) HP 32/74 MP 0/0 Hu  2 $ 725 room=C
--> e
-T 425 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 8, 1) HP 32/74 MP 0/0 Hu  1 $ 725 room=.
--> e
-T 426 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 30/74 MP 0/0 Hu  0 $ 725 room=M vs Orc(L1 HP50/50)
+T 394 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 65/74 MP 0/0 Hu 17 $ 828 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T 427 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 30/74 MP 0/0 Hu  0 $ 725 room=M vs Orc(L1 HP27/50)
--> a
-T 428 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 26/74 MP 0/0 Hu  0 $ 725 room=M vs Orc(L1 HP27/50)
--> a
-T 429 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 22/74 MP 0/0 Hu  0 $ 725 room=M vs Orc(L1 HP4/50)
--> a
-T 430 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 18/74 MP 0/0 Hu  0 $ 725 room=M vs Orc(L1 HP4/50)
--> a
-T 431 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 14/74 MP 0/0 Hu  0 $ 725 room=M vs Orc(L1 HP4/50)
+T 395 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 65/74 MP 0/0 Hu 17 $ 828 room=M vs Sewer Rat(L0 HP6/10)
 -> f
-T 432 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 10/74 MP 0/0 Hu  0 $ 725 room=M vs Orc(L1 HP4/50)
+T 396 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 64/74 MP 0/0 Hu 17 $ 828 room=M vs Sewer Rat(L0 HP6/10)
 -> a
-T 433 mode=combat_mode         Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 6/74 MP 0/0 Hu  0 $ 725 room=M vs Orc(L1 HP4/50)
+T 397 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 64/74 MP 0/0 Hu 17 $ 828 room=M vs Sewer Rat(L0 HP6/10)
 -> a
-T 434 mode=combat_victory      Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 2/74 MP 0/0 Hu  0 $ 739 room=.
+T 398 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 63/74 MP 0/0 Hu 17 $ 828 room=M vs Sewer Rat(L0 HP6/10)
+-> a
+T 399 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 62/74 MP 0/0 Hu 17 $ 828 room=M vs Sewer Rat(L0 HP6/10)
+-> a
+T 400 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 61/74 MP 0/0 Hu 17 $ 828 room=M vs Sewer Rat(L0 HP6/10)
+-> a
+T 401 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 60/74 MP 0/0 Hu 17 $ 828 room=M vs Sewer Rat(L0 HP2/10)
+-> a
+T 402 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 59/74 MP 0/0 Hu 17 $ 836 room=.
 -> back
-T 435 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 9, 1) HP 2/74 MP 0/0 Hu  0 $ 739 room=.
+T 403 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 59/74 MP 0/0 Hu 17 $ 836 room=.
+-> i
+T 404 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 59/74 MP 0/0 Hu 17 $ 836 room=.
+-> u3
+T 405 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 59/74 MP 0/0 Hu 17 $ 836 room=.
+-> eat1
+T 406 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 59/74 MP 0/0 Hu 29 $ 836 room=.
+-> x
+T 407 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 59/74 MP 0/0 Hu 29 $ 836 room=.
 -> s
-T 436 mode=death_screen        Nain the Cup-Bearer(dwa) F2@( 9, 2) HP 0/74 MP 0/0 Hu  0 $ 739 room=.
+T 408 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 59/74 MP 0/0 Hu 28 $ 836 room=.
+-> l
+T 409 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 8) HP 59/74 MP 0/0 Hu 28 $ 836 room=.
+-> n
+T 410 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 59/74 MP 0/0 Hu 27 $ 836 room=.
+-> l
+T 411 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 7) HP 59/74 MP 0/0 Hu 27 $ 836 room=.
+-> n
+T 412 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 8, 6) HP 59/74 MP 0/0 Hu 26 $ 836 room=.
+-> w
+T 413 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 6) HP 59/74 MP 0/0 Hu 25 $ 836 room=.
+-> s
+T 414 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 7, 7) HP 59/74 MP 0/0 Hu 24 $ 836 room=.
+-> w
+T 415 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 7) HP 59/74 MP 0/0 Hu 23 $ 836 room=.
+-> s
+T 416 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 6, 8) HP 59/74 MP 0/0 Hu 22 $ 836 room=.
+-> w
+T 417 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 8) HP 59/74 MP 0/0 Hu 21 $ 836 room=.
+-> n
+T 418 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 7) HP 59/74 MP 0/0 Hu 20 $ 836 room=.
+-> n
+T 419 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 5, 6) HP 59/74 MP 0/0 Hu 19 $ 836 room=.
+-> w
+T 420 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 59/74 MP 0/0 Hu 18 $ 836 room=.
+-> l
+T 421 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 4, 6) HP 59/74 MP 0/0 Hu 18 $ 836 room=.
+-> w
+T 422 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 59/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T 423 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 58/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP19/22)
+-> a
+T 424 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 58/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP16/22)
+-> a
+T 425 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 58/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP16/22)
+-> a
+T 426 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 57/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP13/22)
+-> a
+T 427 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 54/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP13/22)
+-> a
+T 428 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 51/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP13/22)
+-> a
+T 429 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 48/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP13/22)
+-> a
+T 430 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 47/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP13/22)
+-> a
+T 431 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 47/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP10/22)
+-> a
+T 432 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 47/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP7/22)
+-> a
+T 433 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 47/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP4/22)
+-> a
+T 434 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP4/22)
+-> a
+T 435 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP4/22)
+-> a
+T 436 mode=combat_mode         Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 17 $ 836 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T 437 mode=combat_victory      Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 17 $ 842 room=.
+-> back
+T 438 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 17 $ 842 room=.
+-> i
+T 439 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 17 $ 842 room=.
+-> u3
+T 440 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 17 $ 842 room=.
+-> eat1
+T 441 mode=inventory           Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 29 $ 842 room=.
+-> x
+T 442 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 29 $ 842 room=.
+-> l
+T 443 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 3, 6) HP 46/74 MP 0/0 Hu 29 $ 842 room=.
+-> w
+T 444 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 2, 6) HP 46/74 MP 0/0 Hu 28 $ 842 room=.
+-> n
+T 445 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 2, 5) HP 46/74 MP 0/0 Hu 27 $ 842 room=.
+-> w
+T 446 mode=game_loop           Nain the Cup-Bearer(dwa) F1@( 1, 5) HP 46/74 MP 0/0 Hu 26 $ 842 room=.
+-> n
+T 447 mode=stairs_down_mode    Nain the Cup-Bearer(dwa) F1@( 1, 4) HP 46/74 MP 0/0 Hu 25 $ 842 room=D
+-> d
+T 448 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F2@( 1, 1) HP 46/74 MP 0/0 Hu 25 $ 842 room=U
+-> e
+T 449 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu 24 $ 842 room=.
+-> l
+T 450 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 1) HP 46/74 MP 0/0 Hu 24 $ 842 room=.
+-> s
+T 451 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 2) HP 46/74 MP 0/0 Hu 23 $ 842 room=.
+-> l
+T 452 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 2) HP 46/74 MP 0/0 Hu 23 $ 842 room=.
+-> w
+T 453 mode=altar_mode          Nain the Cup-Bearer(dwa) F2@( 1, 2) HP 46/74 MP 0/0 Hu 22 $ 842 room=A
+-> pray
+T 454 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 2) HP 46/74 MP 0/0 Hu 22 $ 842 room=.
+-> l
+T 455 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 2) HP 46/74 MP 0/0 Hu 22 $ 842 room=.
+-> s
+T 456 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 3) HP 46/74 MP 0/0 Hu 21 $ 842 room=.
+-> s
+T 457 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 4) HP 46/74 MP 0/0 Hu 20 $ 842 room=.
+-> s
+T 458 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 5) HP 46/74 MP 0/0 Hu 19 $ 842 room=.
+-> s
+T 459 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 6) HP 46/74 MP 0/0 Hu 18 $ 842 room=.
+-> s
+T 460 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 7) HP 46/74 MP 0/0 Hu 17 $ 842 room=.
+-> s
+T 461 mode=library_mode        Nain the Cup-Bearer(dwa) F2@( 1, 8) HP 46/74 MP 0/0 Hu 16 $ 842 room=L
+-> r
+T 462 mode=library_read_decision_mode Nain the Cup-Bearer(dwa) F2@( 1, 8) HP 46/74 MP 0/0 Hu 16 $ 842 room=L
+-> y
+T 463 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 8) HP 46/74 MP 0/0 Hu 16 $ 942 room=.
+-> s
+T 464 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 8) HP 46/74 MP 0/0 Hu 15 $ 942 room=.
+-> l
+T 465 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 8) HP 46/74 MP 0/0 Hu 15 $ 942 room=.
+-> s
+T 466 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 8) HP 46/74 MP 0/0 Hu 14 $ 942 room=.
+-> s
+T 467 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 7) HP 46/74 MP 0/0 Hu 13 $ 942 room=.
+-> n
+T 468 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 1, 6) HP 46/74 MP 0/0 Hu 12 $ 942 room=.
+-> e
+T 469 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 6) HP 46/74 MP 0/0 Hu 11 $ 942 room=.
+-> l
+T 470 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 6) HP 46/74 MP 0/0 Hu 11 $ 942 room=.
+-> s
+T 471 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 7) HP 46/74 MP 0/0 Hu 10 $ 942 room=.
+-> l
+T 472 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 7) HP 46/74 MP 0/0 Hu 10 $ 942 room=.
+-> s
+T 473 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 8) HP 46/74 MP 0/0 Hu  9 $ 942 room=.
+-> s
+T 474 mode=chest_mode          Nain the Cup-Bearer(dwa) F2@( 2, 9) HP 46/74 MP 0/0 Hu  8 $ 942 room=C
+-> o
+T 475 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 9) HP 46/74 MP 0/0 Hu  8 $ 942 room=.
+-> l
+T 476 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2, 9) HP 46/74 MP 0/0 Hu  8 $ 942 room=.
+-> s
+T 477 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2,10) HP 46/74 MP 0/0 Hu  7 $ 942 room=.
+-> l
+T 478 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 2,10) HP 46/74 MP 0/0 Hu  7 $ 942 room=.
+-> e
+T 479 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 3,10) HP 46/74 MP 0/0 Hu  6 $ 942 room=.
+-> n
+T 480 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 3, 9) HP 46/74 MP 0/0 Hu  5 $ 942 room=.
+-> n
+T 481 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 3, 8) HP 46/74 MP 0/0 Hu  4 $ 942 room=.
+-> n
+T 482 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 3, 7) HP 46/74 MP 0/0 Hu  3 $ 942 room=.
+-> n
+T 483 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 3, 6) HP 46/74 MP 0/0 Hu  2 $ 942 room=.
+-> l
+T 484 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 3, 6) HP 46/74 MP 0/0 Hu  2 $ 942 room=.
+-> e
+T 485 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 6) HP 46/74 MP 0/0 Hu  1 $ 942 room=.
+-> l
+T 486 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 6) HP 46/74 MP 0/0 Hu  1 $ 942 room=.
+-> n
+T 487 mode=chest_mode          Nain the Cup-Bearer(dwa) F2@( 4, 5) HP 44/74 MP 0/0 Hu  0 $ 942 room=C
+-> o
+T 488 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 5) HP 44/74 MP 0/0 Hu  0 $ 992 room=.
+-> l
+T 489 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 4, 5) HP 44/74 MP 0/0 Hu  0 $ 992 room=.
+-> e
+T 490 mode=game_loop           Nain the Cup-Bearer(dwa) F2@( 5, 5) HP 42/74 MP 0/0 Hu  0 $ 992 room=.
+-> e
+T 491 mode=stairs_down_mode    Nain the Cup-Bearer(dwa) F2@( 6, 5) HP 40/74 MP 0/0 Hu  0 $ 992 room=D
+-> d
+T 492 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F3@( 1, 1) HP 40/74 MP 0/0 Hu  0 $ 992 room=U
+-> n
+T 493 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F3@( 1, 1) HP 40/74 MP 0/0 Hu  0 $ 992 room=U
+-> n
+T 494 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F3@( 1, 1) HP 40/74 MP 0/0 Hu  0 $ 992 room=U
+-> n
+T 495 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F3@( 1, 1) HP 40/74 MP 0/0 Hu  0 $ 992 room=U
+-> e
+T 496 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 38/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP16/16)
+-> a
+T 497 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 37/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP12/16)
+-> a
+T 498 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 36/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP12/16)
+-> i
+T 499 mode=inventory           Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 36/74 MP 0/0 Hu  0 $ 992 room=M
+-> u1
+T 500 mode=inventory           Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 61/74 MP 0/0 Hu  0 $ 992 room=M
+-> x
+T 501 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 61/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP12/16)
+-> a
+T 502 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 60/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP12/16)
+-> a
+T 503 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 57/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP8/16)
+-> a
+T 504 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 53/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP8/16)
+-> a
+T 505 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 49/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP8/16)
+-> a
+T 506 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 45/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP8/16)
+-> a
+T 507 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 41/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP4/16)
+-> f
+T 508 mode=flee_direction_mode Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 38/74 MP 0/0 Hu  0 $ 992 room=M
+-> w
+T 509 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F3@( 1, 1) HP 35/74 MP 0/0 Hu  0 $ 992 room=U
+-> e
+T 510 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 30/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP4/16)
+-> a
+T 511 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 29/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP4/16)
+-> a
+T 512 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 28/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP4/16)
+-> a
+T 513 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 27/74 MP 0/0 Hu  0 $ 992 room=M vs Giant Centipede(L2 HP4/16)
+-> a
+T 514 mode=combat_victory      Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 27/74 MP 0/0 Hu  0 $ 1010 room=.
+-> back
+T 515 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 27/74 MP 0/0 Hu  0 $ 1010 room=.
+-> i
+T 516 mode=inventory           Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 27/74 MP 0/0 Hu  0 $ 1010 room=.
+-> u2
+T 517 mode=inventory           Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 27/74 MP 0/0 Hu  0 $ 1010 room=.
+-> eat1
+T 518 mode=inventory           Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 27/74 MP 0/0 Hu  6 $ 1010 room=.
+-> x
+T 519 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 27/74 MP 0/0 Hu  6 $ 1010 room=.
+-> l
+T 520 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 27/74 MP 0/0 Hu  6 $ 1010 room=.
+-> s
+T 521 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 2) HP 27/74 MP 0/0 Hu  5 $ 1010 room=.
+-> l
+T 522 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 2) HP 27/74 MP 0/0 Hu  5 $ 1010 room=.
+-> s
+T 523 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 3) HP 27/74 MP 0/0 Hu  4 $ 1010 room=.
+-> l
+T 524 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 3) HP 27/74 MP 0/0 Hu  4 $ 1010 room=.
+-> s
+T 525 mode=chest_mode          Nain the Cup-Bearer(dwa) F3@( 2, 4) HP 27/74 MP 0/0 Hu  3 $ 1010 room=C
+-> s
+T 526 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 5) HP 27/74 MP 0/0 Hu  2 $ 1010 room=.
+-> l
+T 527 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 5) HP 27/74 MP 0/0 Hu  2 $ 1010 room=.
+-> s
+T 528 mode=altar_mode          Nain the Cup-Bearer(dwa) F3@( 2, 6) HP 27/74 MP 0/0 Hu  1 $ 1010 room=A
+-> pray
+T 529 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 6) HP 64/74 MP 0/0 Hu 51 $ 1010 room=.
+-> l
+T 530 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 6) HP 64/74 MP 0/0 Hu 51 $ 1010 room=.
+-> e
+T 531 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 3, 6) HP 64/74 MP 0/0 Hu 50 $ 1010 room=.
+-> l
+T 532 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 3, 6) HP 64/74 MP 0/0 Hu 50 $ 1010 room=.
+-> n
+T 533 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 3, 5) HP 64/74 MP 0/0 Hu 49 $ 1010 room=.
+-> e
+T 534 mode=library_mode        Nain the Cup-Bearer(dwa) F3@( 4, 5) HP 64/74 MP 0/0 Hu 48 $ 1010 room=L
+-> r
+T 535 mode=library_read_decision_mode Nain the Cup-Bearer(dwa) F3@( 4, 5) HP 64/74 MP 0/0 Hu 48 $ 1010 room=L
+-> y
+T 536 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 4, 5) HP 64/74 MP 0/0 Hu 48 $ 1085 room=.
+-> l
+T 537 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 4, 5) HP 64/74 MP 0/0 Hu 48 $ 1085 room=.
+-> n
+T 538 mode=chest_mode          Nain the Cup-Bearer(dwa) F3@( 4, 4) HP 56/74 MP 0/0 Hu 47 $ 1085 room=C
+-> o
+T 539 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 5, 4) HP 48/74 MP 0/0 Hu 46 $ 1085 room=.
+-> l
+T 540 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 5, 4) HP 48/74 MP 0/0 Hu 46 $ 1085 room=.
+-> n
+T 541 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 5, 3) HP 40/74 MP 0/0 Hu 45 $ 1085 room=.
+-> e
+T 542 mode=chest_mode          Nain the Cup-Bearer(dwa) F3@( 6, 3) HP 32/74 MP 0/0 Hu 44 $ 1085 room=C
+-> n
+T 543 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 6, 2) HP 32/74 MP 0/0 Hu 43 $ 1085 room=.
+-> n
+T 544 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 6, 1) HP 32/74 MP 0/0 Hu 42 $ 1085 room=.
+-> e
+T 545 mode=chest_mode          Nain the Cup-Bearer(dwa) F3@( 7, 1) HP 32/74 MP 0/0 Hu 41 $ 1085 room=C
+-> s
+T 546 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 2) HP 32/74 MP 0/0 Hu 40 $ 1085 room=.
+-> s
+T 547 mode=altar_mode          Nain the Cup-Bearer(dwa) F3@( 7, 3) HP 32/74 MP 0/0 Hu 39 $ 1085 room=A
+-> pray
+T 548 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 3) HP 32/74 MP 0/0 Hu 39 $ 1085 room=.
+-> s
+T 549 mode=garden_mode         Nain the Cup-Bearer(dwa) F3@( 7, 4) HP 32/74 MP 0/0 Hu 38 $ 1085 room=G
+-> h
+T 550 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 4) HP 32/74 MP 0/0 Hu 38 $ 1085 room=.
+-> s
+T 551 mode=pool_mode           Nain the Cup-Bearer(dwa) F3@( 7, 5) HP 32/74 MP 0/0 Hu 37 $ 1085 room=P
+-> s
+T 552 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 6) HP 32/74 MP 0/0 Hu 36 $ 1085 room=.
+-> l
+T 553 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 6) HP 32/74 MP 0/0 Hu 36 $ 1085 room=.
+-> s
+T 554 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 7) HP 32/74 MP 0/0 Hu 35 $ 1085 room=.
+-> l
+T 555 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 7) HP 32/74 MP 0/0 Hu 35 $ 1085 room=.
+-> e
+T 556 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 8, 7) HP 32/74 MP 0/0 Hu 34 $ 1085 room=.
+-> l
+T 557 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 8, 7) HP 32/74 MP 0/0 Hu 34 $ 1085 room=.
+-> n
+T 558 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 8, 6) HP 32/74 MP 0/0 Hu 33 $ 1085 room=.
+-> n
+T 559 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 8, 5) HP 32/74 MP 0/0 Hu 32 $ 1085 room=.
+-> e
+T 560 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 9, 5) HP 32/74 MP 0/0 Hu 31 $ 1085 room=.
+-> e
+T 561 mode=game_loop           Nain the Cup-Bearer(dwa) F3@(10, 5) HP 32/74 MP 0/0 Hu 30 $ 1085 room=.
+-> n
+T 562 mode=game_loop           Nain the Cup-Bearer(dwa) F3@(10, 4) HP 32/74 MP 0/0 Hu 29 $ 1085 room=.
+-> e
+T 563 mode=chest_mode          Nain the Cup-Bearer(dwa) F3@(11, 4) HP 32/74 MP 0/0 Hu 28 $ 1085 room=C
+-> w
+T 564 mode=game_loop           Nain the Cup-Bearer(dwa) F3@(10, 4) HP 32/74 MP 0/0 Hu 27 $ 1085 room=.
+-> s
+T 565 mode=game_loop           Nain the Cup-Bearer(dwa) F3@(10, 5) HP 32/74 MP 0/0 Hu 26 $ 1085 room=.
+-> w
+T 566 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 9, 5) HP 32/74 MP 0/0 Hu 25 $ 1085 room=.
+-> w
+T 567 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 8, 5) HP 32/74 MP 0/0 Hu 24 $ 1085 room=.
+-> n
+T 568 mode=dungeon_mode        Nain the Cup-Bearer(dwa) F3@( 8, 4) HP 32/74 MP 0/0 Hu 23 $ 1085 room=N
+-> u
+T 569 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 8, 4) HP 32/74 MP 0/0 Hu 23 $ 1085 room=N
+-> n
+T 570 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 8, 3) HP 32/74 MP 0/0 Hu 22 $ 1085 room=.
+-> w
+T 571 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 3) HP 32/74 MP 0/0 Hu 21 $ 1085 room=.
+-> w
+T 572 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 6, 3) HP 32/74 MP 0/0 Hu 20 $ 1085 room=C
+-> w
+T 573 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 5, 3) HP 32/74 MP 0/0 Hu 19 $ 1085 room=.
+-> w
+T 574 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 4, 3) HP 32/74 MP 0/0 Hu 18 $ 1085 room=.
+-> w
+T 575 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 3, 3) HP 32/74 MP 0/0 Hu 17 $ 1085 room=.
+-> w
+T 576 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 3) HP 32/74 MP 0/0 Hu 16 $ 1085 room=.
+-> w
+T 577 mode=pool_mode           Nain the Cup-Bearer(dwa) F3@( 1, 3) HP 32/74 MP 0/0 Hu 15 $ 1085 room=P
+-> n
+T 578 mode=combat_mode         Nain the Cup-Bearer(dwa) F3@( 1, 2) HP 32/74 MP 0/0 Hu 14 $ 1085 room=M vs Wight(L2 HP40/40)
+-> f
+T 579 mode=flee_direction_mode Nain the Cup-Bearer(dwa) F3@( 1, 2) HP 32/74 MP 0/0 Hu 14 $ 1085 room=M
+-> n
+T 580 mode=stairs_up_mode      Nain the Cup-Bearer(dwa) F3@( 1, 1) HP 32/74 MP 0/0 Hu 14 $ 1085 room=U
+-> e
+T 581 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 1) HP 32/74 MP 0/0 Hu 13 $ 1085 room=.
+-> s
+T 582 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 2) HP 32/74 MP 0/0 Hu 12 $ 1085 room=.
+-> s
+T 583 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 3) HP 32/74 MP 0/0 Hu 11 $ 1085 room=.
+-> s
+T 584 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 4) HP 32/74 MP 0/0 Hu 10 $ 1085 room=C
+-> s
+T 585 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 5) HP 32/74 MP 0/0 Hu  9 $ 1085 room=.
+-> s
+T 586 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 6) HP 32/74 MP 0/0 Hu  8 $ 1085 room=.
+-> s
+T 587 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 7) HP 32/74 MP 0/0 Hu  7 $ 1085 room=.
+-> s
+T 588 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 8) HP 32/74 MP 0/0 Hu  6 $ 1085 room=.
+-> l
+T 589 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 8) HP 32/74 MP 0/0 Hu  6 $ 1085 room=.
+-> s
+T 590 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 9) HP 32/74 MP 0/0 Hu  5 $ 1085 room=.
+-> l
+T 591 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 9) HP 32/74 MP 0/0 Hu  5 $ 1085 room=.
+-> s
+T 592 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2,10) HP 32/74 MP 0/0 Hu  4 $ 1085 room=.
+-> l
+T 593 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2,10) HP 32/74 MP 0/0 Hu  4 $ 1085 room=.
+-> s
+T 594 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2,11) HP 32/74 MP 0/0 Hu  3 $ 1085 room=.
+-> l
+T 595 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2,11) HP 32/74 MP 0/0 Hu  3 $ 1085 room=.
+-> e
+T 596 mode=library_mode        Nain the Cup-Bearer(dwa) F3@( 3,11) HP 32/74 MP 0/0 Hu  2 $ 1085 room=L
+-> r
+T 597 mode=library_read_decision_mode Nain the Cup-Bearer(dwa) F3@( 3,11) HP 32/74 MP 0/0 Hu  2 $ 1085 room=L
+-> y
+T 598 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 3,11) HP 32/72 MP 0/0 Hu  2 $ 1085 room=.
+-> w
+T 599 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2,11) HP 32/72 MP 0/0 Hu  1 $ 1085 room=.
+-> s
+T 600 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2,12) HP 30/72 MP 0/0 Hu  0 $ 1085 room=.
+-> l
+T 601 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2,12) HP 30/72 MP 0/0 Hu  0 $ 1085 room=.
+-> w
+T 602 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 1,12) HP 28/72 MP 0/0 Hu  0 $ 1085 room=.
+-> n
+T 603 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 1,11) HP 26/72 MP 0/0 Hu  0 $ 1085 room=.
+-> n
+T 604 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 1,10) HP 24/72 MP 0/0 Hu  0 $ 1085 room=.
+-> e
+T 605 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2,10) HP 22/72 MP 0/0 Hu  0 $ 1085 room=.
+-> n
+T 606 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 9) HP 20/72 MP 0/0 Hu  0 $ 1085 room=.
+-> n
+T 607 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 8) HP 18/72 MP 0/0 Hu  0 $ 1085 room=.
+-> n
+T 608 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 2, 7) HP 16/72 MP 0/0 Hu  0 $ 1085 room=.
+-> e
+T 609 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 3, 7) HP 14/72 MP 0/0 Hu  0 $ 1085 room=.
+-> e
+T 610 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 4, 7) HP 12/72 MP 0/0 Hu  0 $ 1085 room=.
+-> e
+T 611 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 5, 7) HP 10/72 MP 0/0 Hu  0 $ 1085 room=.
+-> s
+T 612 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 5, 8) HP 8/72 MP 0/0 Hu  0 $ 1085 room=.
+-> l
+T 613 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 5, 8) HP 8/72 MP 0/0 Hu  0 $ 1085 room=.
+-> e
+T 614 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 6, 8) HP 6/72 MP 0/0 Hu  0 $ 1085 room=.
+-> e
+T 615 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 8) HP 4/72 MP 0/0 Hu  0 $ 1085 room=.
+-> s
+T 616 mode=game_loop           Nain the Cup-Bearer(dwa) F3@( 7, 9) HP 2/72 MP 0/0 Hu  0 $ 1085 room=.
+-> s
+T 617 mode=death_screen        Nain the Cup-Bearer(dwa) F3@( 7,10) HP 0/72 MP 0/0 Hu  0 $ 1085 room=.
 
-=== run finished: turns=436 floor=2 hp=0/74 gold=739 alive=False mode=death_screen ===
+=== run finished: turns=617 floor=3 hp=0/72 gold=1085 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00787_dwarf.html

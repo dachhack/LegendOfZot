@@ -50,93 +50,107 @@ T  16 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 2) HP 30/30 MP 
 -> s
 T  17 mode=vendor_shop         Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 310 room=V
 -> b11
-T  18 mode=vendor_shop         Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 300 room=V
--> b4
+T  18 mode=vendor_shop         Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 280 room=V
+-> b11
 T  19 mode=vendor_shop         Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 270 room=V
 -> b4
 T  20 mode=vendor_shop         Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 240 room=V
 -> b4
 T  21 mode=vendor_shop         Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 210 room=V
--> b6
+-> b4
 T  22 mode=vendor_shop         Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 180 room=V
+-> b6
+T  23 mode=vendor_shop         Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 150 room=V
 -> x
-T  23 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 180 room=V
+T  24 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 150 room=V
 -> l
-T  24 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 180 room=V
+T  25 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 3) HP 30/30 MP 0/0 Hu 97 $ 150 room=V
 -> e
-T  25 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 180 room=M vs Goblin(L0 HP12/12)
+T  26 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
 -> a
-T  26 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 29/30 MP 0/0 Hu 96 $ 180 room=M vs Goblin(L0 HP12/12)
+T  27 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 29/30 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
 -> a
-T  27 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 28/30 MP 0/0 Hu 96 $ 180 room=M vs Goblin(L0 HP12/12)
+T  28 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 28/30 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
 -> a
-T  28 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 96 $ 180 room=M vs Goblin(L0 HP12/12)
+T  29 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
 -> a
-T  29 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 26/30 MP 0/0 Hu 96 $ 180 room=M vs Goblin(L0 HP12/12)
+T  30 mode=combat_mode         Faramir the Wanderer(hum) F1@( 4, 3) HP 26/30 MP 0/0 Hu 96 $ 150 room=M vs Goblin(L0 HP12/12)
 -> a
-T  30 mode=combat_victory      Faramir the Wanderer(hum) F1@( 4, 3) HP 26/30 MP 0/0 Hu 96 $ 238 room=.
+T  31 mode=combat_victory      Faramir the Wanderer(hum) F1@( 4, 3) HP 26/30 MP 0/0 Hu 96 $ 208 room=.
 -> back
-T  31 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 3) HP 26/30 MP 0/0 Hu 96 $ 238 room=.
+T  32 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 3) HP 26/30 MP 0/0 Hu 96 $ 208 room=.
+-> i
+T  33 mode=inventory           Faramir the Wanderer(hum) F1@( 4, 3) HP 26/30 MP 0/0 Hu 96 $ 208 room=.
+-> u3
+T  34 mode=inventory           Faramir the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 208 room=.
+-> x
+T  35 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 208 room=.
+-> i
+T  36 mode=inventory           Faramir the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 208 room=.
+-> u10
+T  37 mode=inventory           Faramir the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 208 room=.
+-> x
+T  38 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 208 room=.
 -> l
-T  32 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 3) HP 26/30 MP 0/0 Hu 96 $ 238 room=.
+T  39 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 3) HP 30/30 MP 0/0 Hu 96 $ 208 room=.
 -> e
-T  33 mode=chest_mode          Faramir the Wanderer(hum) F1@( 5, 3) HP 26/30 MP 0/0 Hu 95 $ 238 room=C
+T  40 mode=chest_mode          Faramir the Wanderer(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 95 $ 208 room=C
 -> o
-T  34 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 3) HP 26/30 MP 0/0 Hu 95 $ 248 room=.
+T  41 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 95 $ 218 room=.
 -> l
-T  35 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 3) HP 26/30 MP 0/0 Hu 95 $ 248 room=.
+T  42 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 3) HP 30/30 MP 0/0 Hu 95 $ 218 room=.
 -> n
-T  36 mode=altar_mode          Faramir the Wanderer(hum) F1@( 5, 2) HP 27/30 MP 0/0 Hu 94 $ 248 room=A
+T  43 mode=altar_mode          Faramir the Wanderer(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 94 $ 218 room=A
 -> pray
-T  37 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 2) HP 27/30 MP 0/0 Hu 94 $ 248 room=.
+T  44 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 2) HP 30/30 MP 0/0 Hu 94 $ 218 room=.
 -> n
-T  38 mode=chest_mode          Faramir the Wanderer(hum) F1@( 5, 1) HP 27/30 MP 0/0 Hu 93 $ 248 room=C
+T  45 mode=chest_mode          Faramir the Wanderer(hum) F1@( 5, 1) HP 30/30 MP 0/0 Hu 93 $ 218 room=C
 -> o
-T  39 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 1) HP 22/30 MP 0/0 Hu 93 $ 248 room=.
+T  46 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 1) HP 25/30 MP 0/0 Hu 93 $ 218 room=.
 -> w
-T  40 mode=chest_mode          Faramir the Wanderer(hum) F1@( 4, 1) HP 23/30 MP 0/0 Hu 92 $ 248 room=C
+T  47 mode=chest_mode          Faramir the Wanderer(hum) F1@( 4, 1) HP 25/30 MP 0/0 Hu 92 $ 218 room=C
 -> w
-T  41 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 1) HP 23/30 MP 0/0 Hu 91 $ 248 room=.
+T  48 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 1) HP 26/30 MP 0/0 Hu 91 $ 218 room=.
 -> s
-T  42 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 2) HP 24/30 MP 0/0 Hu 90 $ 248 room=.
+T  49 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 2) HP 26/30 MP 0/0 Hu 90 $ 218 room=.
 -> s
-T  43 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 3) HP 24/30 MP 0/0 Hu 89 $ 248 room=V
+T  50 mode=game_loop           Faramir the Wanderer(hum) F1@( 3, 3) HP 27/30 MP 0/0 Hu 89 $ 218 room=V
 -> e
-T  44 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 3) HP 25/30 MP 0/0 Hu 88 $ 248 room=.
+T  51 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 3) HP 27/30 MP 0/0 Hu 88 $ 218 room=.
 -> s
-T  45 mode=garden_mode         Faramir the Wanderer(hum) F1@( 4, 4) HP 25/30 MP 0/0 Hu 87 $ 248 room=G
+T  52 mode=garden_mode         Faramir the Wanderer(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 87 $ 218 room=G
 -> h
-T  46 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 4) HP 25/30 MP 0/0 Hu 87 $ 248 room=.
+T  53 mode=game_loop           Faramir the Wanderer(hum) F1@( 4, 4) HP 28/30 MP 0/0 Hu 87 $ 218 room=.
 -> e
-T  47 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 4) HP 26/30 MP 0/0 Hu 86 $ 248 room=.
+T  54 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 4) HP 28/30 MP 0/0 Hu 86 $ 218 room=.
 -> l
-T  48 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 4) HP 26/30 MP 0/0 Hu 86 $ 248 room=.
+T  55 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 4) HP 28/30 MP 0/0 Hu 86 $ 218 room=.
 -> n
-T  49 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 3) HP 26/30 MP 0/0 Hu 85 $ 248 room=.
+T  56 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 3) HP 29/30 MP 0/0 Hu 85 $ 218 room=.
 -> n
-T  50 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 2) HP 26/30 MP 0/0 Hu 84 $ 248 room=.
+T  57 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 2) HP 29/30 MP 0/0 Hu 84 $ 218 room=.
 -> n
-T  51 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 1) HP 26/30 MP 0/0 Hu 83 $ 248 room=.
+T  58 mode=game_loop           Faramir the Wanderer(hum) F1@( 5, 1) HP 29/30 MP 0/0 Hu 83 $ 218 room=.
 -> e
-T  52 mode=library_mode        Faramir the Wanderer(hum) F1@( 6, 1) HP 27/30 MP 0/0 Hu 82 $ 248 room=L
+T  59 mode=library_mode        Faramir the Wanderer(hum) F1@( 6, 1) HP 29/30 MP 0/0 Hu 82 $ 218 room=L
 -> r
-T  53 mode=library_read_decision_mode Faramir the Wanderer(hum) F1@( 6, 1) HP 27/30 MP 0/0 Hu 82 $ 248 room=L
+T  60 mode=library_read_decision_mode Faramir the Wanderer(hum) F1@( 6, 1) HP 29/30 MP 0/0 Hu 82 $ 218 room=L
 -> y
-T  54 mode=game_loop           Faramir the Wanderer(hum) F1@( 6, 1) HP 27/30 MP 0/0 Hu 82 $ 423 room=.
+T  61 mode=game_loop           Faramir the Wanderer(hum) F1@( 6, 1) HP 29/30 MP 0/0 Hu 82 $ 393 room=.
 -> s
-T  55 mode=stairs_down_mode    Faramir the Wanderer(hum) F1@( 6, 2) HP 19/30 MP 0/0 Hu 81 $ 423 room=D
+T  62 mode=stairs_down_mode    Faramir the Wanderer(hum) F1@( 6, 2) HP 22/30 MP 0/0 Hu 81 $ 393 room=D
 -> d
-T  56 mode=stairs_up_mode      Faramir the Wanderer(hum) F2@( 1, 1) HP 19/30 MP 0/0 Hu 81 $ 423 room=U
+T  63 mode=stairs_up_mode      Faramir the Wanderer(hum) F2@( 1, 1) HP 22/30 MP 0/0 Hu 81 $ 393 room=U
 -> e
-T  57 mode=game_loop           Faramir the Wanderer(hum) F2@( 2, 1) HP 11/30 MP 0/0 Hu 80 $ 423 room=.
+T  64 mode=game_loop           Faramir the Wanderer(hum) F2@( 2, 1) HP 14/30 MP 0/0 Hu 80 $ 393 room=.
 -> l
-T  58 mode=game_loop           Faramir the Wanderer(hum) F2@( 2, 1) HP 11/30 MP 0/0 Hu 80 $ 423 room=.
+T  65 mode=game_loop           Faramir the Wanderer(hum) F2@( 2, 1) HP 14/30 MP 0/0 Hu 80 $ 393 room=.
 -> s
-T  59 mode=game_loop           Faramir the Wanderer(hum) F2@( 2, 2) HP 3/30 MP 0/0 Hu 79 $ 423 room=.
+T  66 mode=game_loop           Faramir the Wanderer(hum) F2@( 2, 2) HP 6/30 MP 0/0 Hu 79 $ 393 room=.
 -> n
-T  60 mode=death_screen        Faramir the Wanderer(hum) F2@( 2, 1) HP -4/30 MP 0/0 Hu 78 $ 423 room=.
+T  67 mode=death_screen        Faramir the Wanderer(hum) F2@( 2, 1) HP -2/30 MP 0/0 Hu 78 $ 393 room=.
 
-=== run finished: turns=60 floor=2 hp=-4/30 gold=423 alive=False mode=death_screen ===
+=== run finished: turns=67 floor=2 hp=-2/30 gold=393 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/31415_human.html

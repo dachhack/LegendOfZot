@@ -69,1448 +69,630 @@ T  25 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2, 5) HP 28/28 MP 0/0 
 T  26 mode=combat_victory      Beleg Skywatcher(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 89 $ 444 room=.
 -> back
 T  27 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 89 $ 444 room=.
--> e
-T  28 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 88 $ 444 room=.
--> s
-T  29 mode=combat_mode         Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 87 $ 444 room=M vs Spore Puff(L0 HP18/18)
--> a
-T  30 mode=combat_victory      Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 87 $ 454 room=.
--> back
-T  31 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 87 $ 454 room=.
--> l
-T  32 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 87 $ 454 room=.
--> e
-T  33 mode=dungeon_mode        Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 86 $ 454 room=N
--> u
-T  34 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 86 $ 454 room=N
--> l
-T  35 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 86 $ 454 room=N
--> s
-T  36 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP22/22)
--> a
-T  37 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP22/22)
--> a
-T  38 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 26/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP22/22)
--> a
-T  39 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 25/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP1/22)
--> a
-T  40 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 25/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP1/22)
--> a
-T  41 mode=combat_victory      Beleg Skywatcher(elf) F1@( 4, 7) HP 25/28 MP 0/0 Hu 85 $ 461 room=.
--> back
-T  42 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 7) HP 25/28 MP 0/0 Hu 85 $ 461 room=.
--> s
-T  43 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 84 $ 461 room=V
--> b14
-T  44 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 84 $ 451 room=V
--> b4
-T  45 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 84 $ 421 room=V
--> b4
-T  46 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 84 $ 391 room=V
--> b4
-T  47 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 84 $ 361 room=V
--> b5
-T  48 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 84 $ 331 room=V
--> b6
-T  49 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 84 $ 181 room=V
--> x
-T  50 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 84 $ 181 room=V
--> l
-T  51 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 8) HP 25/28 MP 0/0 Hu 84 $ 181 room=V
--> s
-T  52 mode=chest_mode          Beleg Skywatcher(elf) F1@( 4, 9) HP 25/28 MP 0/0 Hu 83 $ 181 room=C
--> o
-T  53 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 25/28 MP 0/0 Hu 83 $ 181 room=.
--> l
-T  54 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 25/28 MP 0/0 Hu 83 $ 181 room=.
--> e
-T  55 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5, 9) HP 25/28 MP 0/0 Hu 82 $ 181 room=M vs Sewer Rat(L0 HP10/10)
--> f
-T  56 mode=flee_direction_mode Beleg Skywatcher(elf) F1@( 5, 9) HP 25/28 MP 0/0 Hu 82 $ 181 room=M
--> e
-T  57 mode=chest_mode          Beleg Skywatcher(elf) F1@( 6, 9) HP 25/28 MP 0/0 Hu 82 $ 181 room=C
--> o
-T  58 mode=warp_mode           Beleg Skywatcher(elf) F1@( 6, 8) HP 26/28 MP 0/0 Hu 81 $ 181 room=W
--> y
-T  59 mode=game_loop           Beleg Skywatcher(elf) F1@( 6, 8) HP 26/28 MP 0/0 Hu 81 $ 181 room=W
--> s
-T  60 mode=game_loop           Beleg Skywatcher(elf) F1@( 6, 9) HP 26/28 MP 0/0 Hu 80 $ 181 room=.
--> w
-T  61 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5, 9) HP 26/28 MP 0/0 Hu 79 $ 181 room=M vs Sewer Rat(L0 HP10/10)
--> a
-T  62 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5, 9) HP 25/28 MP 0/0 Hu 79 $ 181 room=M vs Sewer Rat(L0 HP10/10)
--> f
-T  63 mode=flee_direction_mode Beleg Skywatcher(elf) F1@( 5, 9) HP 23/28 MP 0/0 Hu 79 $ 181 room=M
--> w
-T  64 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 21/28 MP 0/0 Hu 79 $ 181 room=.
 -> i
-T  65 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 9) HP 21/28 MP 0/0 Hu 79 $ 181 room=.
+T  28 mode=inventory           Beleg Skywatcher(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 89 $ 444 room=.
+-> u9
+T  29 mode=inventory           Beleg Skywatcher(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 89 $ 444 room=.
+-> x
+T  30 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 5) HP 28/28 MP 0/0 Hu 89 $ 444 room=.
+-> e
+T  31 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 88 $ 444 room=.
+-> s
+T  32 mode=combat_mode         Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 87 $ 444 room=M vs Spore Puff(L0 HP18/18)
+-> a
+T  33 mode=combat_victory      Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 87 $ 454 room=.
+-> back
+T  34 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 87 $ 454 room=.
+-> l
+T  35 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 87 $ 454 room=.
+-> e
+T  36 mode=dungeon_mode        Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 86 $ 454 room=N
+-> u
+T  37 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 86 $ 454 room=N
+-> l
+T  38 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 86 $ 454 room=N
+-> s
+T  39 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  40 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 27/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  41 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 26/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP22/22)
+-> a
+T  42 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 25/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  43 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 7) HP 25/28 MP 0/0 Hu 85 $ 454 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T  44 mode=combat_victory      Beleg Skywatcher(elf) F1@( 4, 7) HP 25/28 MP 0/0 Hu 85 $ 461 room=.
+-> back
+T  45 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 7) HP 25/28 MP 0/0 Hu 85 $ 461 room=.
+-> i
+T  46 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 7) HP 25/28 MP 0/0 Hu 85 $ 461 room=.
 -> u3
-T  66 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 79 $ 181 room=.
--> u5
-T  67 mode=upgrade_scroll_mode Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 79 $ 181 room=.
--> 1
-T  68 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 79 $ 181 room=.
+T  47 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 85 $ 461 room=.
 -> x
-T  69 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 79 $ 181 room=.
+T  48 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 85 $ 461 room=.
 -> i
-T  70 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 79 $ 181 room=.
--> eat4
-T  71 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 85 $ 181 room=.
+T  49 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 85 $ 461 room=.
+-> u9
+T  50 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 85 $ 461 room=.
 -> x
-T  72 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 85 $ 181 room=.
+T  51 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 85 $ 461 room=.
 -> s
-T  73 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,10) HP 28/28 MP 0/0 Hu 84 $ 181 room=.
+T  52 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 461 room=V
+-> b14
+T  53 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 431 room=V
+-> b14
+T  54 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 421 room=V
+-> b4
+T  55 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 391 room=V
+-> b4
+T  56 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 361 room=V
+-> b4
+T  57 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 331 room=V
+-> b4
+T  58 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 301 room=V
+-> b4
+T  59 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 271 room=V
+-> b4
+T  60 mode=vendor_shop         Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 191 room=V
+-> x
+T  61 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 191 room=V
 -> l
-T  74 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,10) HP 28/28 MP 0/0 Hu 84 $ 181 room=.
+T  62 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 84 $ 191 room=V
 -> s
-T  75 mode=chest_mode          Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 83 $ 181 room=C
+T  63 mode=chest_mode          Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 83 $ 191 room=C
 -> o
-T  76 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 83 $ 181 room=.
--> i
-T  77 mode=inventory           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 83 $ 181 room=.
--> e1
-T  78 mode=inventory           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 83 $ 181 room=.
--> x
-T  79 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 83 $ 181 room=.
+T  64 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 83 $ 191 room=.
 -> l
-T  80 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 83 $ 181 room=.
+T  65 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 83 $ 191 room=.
 -> e
-T  81 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,11) HP 28/28 MP 0/0 Hu 82 $ 181 room=M vs Stirge(L0 HP6/6)
--> a
-T  82 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,11) HP 27/28 MP 0/0 Hu 82 $ 181 room=M vs Stirge(L0 HP6/6)
--> a
-T  83 mode=combat_victory      Beleg Skywatcher(elf) F1@( 5,11) HP 26/28 MP 0/0 Hu 82 $ 191 room=.
--> back
-T  84 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,11) HP 26/28 MP 0/0 Hu 82 $ 191 room=.
--> l
-T  85 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,11) HP 26/28 MP 0/0 Hu 82 $ 191 room=.
--> s
-T  86 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,12) HP 26/28 MP 0/0 Hu 81 $ 191 room=M vs Kobold(L0 HP20/20)
--> a
-T  87 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,12) HP 25/28 MP 0/0 Hu 81 $ 191 room=M vs Kobold(L0 HP20/20)
--> a
-T  88 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,12) HP 24/28 MP 0/0 Hu 81 $ 191 room=M vs Kobold(L0 HP20/20)
--> a
-T  89 mode=combat_victory      Beleg Skywatcher(elf) F1@( 5,12) HP 24/28 MP 0/0 Hu 81 $ 199 room=.
--> back
-T  90 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,12) HP 24/28 MP 0/0 Hu 81 $ 199 room=.
--> i
-T  91 mode=inventory           Beleg Skywatcher(elf) F1@( 5,12) HP 24/28 MP 0/0 Hu 81 $ 199 room=.
--> u4
-T  92 mode=inventory           Beleg Skywatcher(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 81 $ 199 room=.
--> x
-T  93 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 81 $ 199 room=.
--> i
-T  94 mode=inventory           Beleg Skywatcher(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 81 $ 199 room=.
--> eat3
-T  95 mode=inventory           Beleg Skywatcher(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 86 $ 199 room=.
--> x
-T  96 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 86 $ 199 room=.
--> l
-T  97 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 86 $ 199 room=.
--> w
-T  98 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,12) HP 28/28 MP 0/0 Hu 85 $ 199 room=.
--> s
-T  99 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,13) HP 28/28 MP 0/0 Hu 84 $ 199 room=M vs Bat(L0 HP12/12)
--> a
-T 100 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,13) HP 27/28 MP 0/0 Hu 84 $ 199 room=M vs Bat(L0 HP12/12)
--> a
-T 101 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,13) HP 26/28 MP 0/0 Hu 84 $ 199 room=M vs Bat(L0 HP12/12)
--> a
-T 102 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,13) HP 25/28 MP 0/0 Hu 84 $ 199 room=M vs Bat(L0 HP12/12)
--> a
-T 103 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,13) HP 25/28 MP 0/0 Hu 84 $ 199 room=M vs Bat(L0 HP12/12)
--> a
-T 104 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,13) HP 24/28 MP 0/0 Hu 84 $ 199 room=M vs Bat(L0 HP12/12)
--> a
-T 105 mode=combat_victory      Beleg Skywatcher(elf) F1@( 4,13) HP 24/28 MP 0/0 Hu 84 $ 205 room=.
--> back
-T 106 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,13) HP 24/28 MP 0/0 Hu 84 $ 205 room=.
--> s
-T 107 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,14) HP 24/28 MP 0/0 Hu 83 $ 205 room=.
--> l
-T 108 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,14) HP 24/28 MP 0/0 Hu 83 $ 205 room=.
--> s
-T 109 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,15) HP 24/28 MP 0/0 Hu 82 $ 205 room=M vs Crawling Claw(L0 HP5/5)
+T  66 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5, 9) HP 28/28 MP 0/0 Hu 82 $ 191 room=M vs Sewer Rat(L0 HP10/10)
 -> f
-T 110 mode=flee_direction_mode Beleg Skywatcher(elf) F1@( 4,15) HP 24/28 MP 0/0 Hu 82 $ 205 room=M
--> s
-T 111 mode=library_mode        Beleg Skywatcher(elf) F1@( 4,16) HP 24/28 MP 0/0 Hu 82 $ 205 room=L
--> r
-T 112 mode=library_read_decision_mode Beleg Skywatcher(elf) F1@( 4,16) HP 24/28 MP 0/0 Hu 82 $ 205 room=L
+T  67 mode=flee_direction_mode Beleg Skywatcher(elf) F1@( 5, 9) HP 28/28 MP 0/0 Hu 82 $ 191 room=M
+-> e
+T  68 mode=chest_mode          Beleg Skywatcher(elf) F1@( 6, 9) HP 28/28 MP 0/0 Hu 82 $ 191 room=C
+-> o
+T  69 mode=warp_mode           Beleg Skywatcher(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 81 $ 191 room=W
 -> y
-T 113 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,16) HP 24/28 MP 0/0 Hu 82 $ 255 room=.
--> n
-T 114 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,15) HP 24/28 MP 0/0 Hu 81 $ 255 room=M vs Crawling Claw(L0 HP5/5)
+T  70 mode=game_loop           Beleg Skywatcher(elf) F1@( 6, 8) HP 28/28 MP 0/0 Hu 81 $ 191 room=W
+-> s
+T  71 mode=game_loop           Beleg Skywatcher(elf) F1@( 6, 9) HP 28/28 MP 0/0 Hu 80 $ 191 room=.
+-> w
+T  72 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5, 9) HP 28/28 MP 0/0 Hu 79 $ 191 room=M vs Sewer Rat(L0 HP10/10)
 -> a
-T 115 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,15) HP 24/28 MP 0/0 Hu 81 $ 255 room=M vs Crawling Claw(L0 HP5/5)
+T  73 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5, 9) HP 27/28 MP 0/0 Hu 79 $ 191 room=M vs Sewer Rat(L0 HP10/10)
 -> f
-T 116 mode=flee_direction_mode Beleg Skywatcher(elf) F1@( 4,15) HP 23/28 MP 0/0 Hu 81 $ 255 room=M
--> e
-T 117 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,15) HP 23/28 MP 0/0 Hu 81 $ 255 room=.
--> n
-T 118 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,14) HP 24/28 MP 0/0 Hu 80 $ 255 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 119 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,14) HP 24/28 MP 0/0 Hu 80 $ 255 room=M vs Spore Puff(L0 HP18/18)
--> a
-T 120 mode=combat_victory      Beleg Skywatcher(elf) F1@( 5,14) HP 24/28 MP 0/0 Hu 80 $ 258 room=.
--> back
-T 121 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,14) HP 24/28 MP 0/0 Hu 80 $ 258 room=.
--> n
-T 122 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,13) HP 24/28 MP 0/0 Hu 79 $ 258 room=.
--> n
-T 123 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,12) HP 24/28 MP 0/0 Hu 78 $ 258 room=.
--> n
-T 124 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,11) HP 24/28 MP 0/0 Hu 77 $ 258 room=.
+T  74 mode=flee_direction_mode Beleg Skywatcher(elf) F1@( 5, 9) HP 25/28 MP 0/0 Hu 79 $ 191 room=M
 -> w
-T 125 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 25/28 MP 0/0 Hu 76 $ 258 room=.
--> w
-T 126 mode=combat_mode         Beleg Skywatcher(elf) F1@( 3,11) HP 25/28 MP 0/0 Hu 75 $ 258 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T 127 mode=combat_mode         Beleg Skywatcher(elf) F1@( 3,11) HP 24/28 MP 0/0 Hu 75 $ 258 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T 128 mode=combat_mode         Beleg Skywatcher(elf) F1@( 3,11) HP 23/28 MP 0/0 Hu 75 $ 258 room=M vs Giant Centipede(L0 HP15/15)
--> a
-T 129 mode=combat_victory      Beleg Skywatcher(elf) F1@( 3,11) HP 23/28 MP 0/0 Hu 75 $ 268 room=.
--> back
-T 130 mode=game_loop           Beleg Skywatcher(elf) F1@( 3,11) HP 23/28 MP 0/0 Hu 75 $ 268 room=.
+T  75 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 23/28 MP 0/0 Hu 79 $ 191 room=.
+-> s
+T  76 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,10) HP 23/28 MP 0/0 Hu 78 $ 191 room=.
+-> l
+T  77 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,10) HP 23/28 MP 0/0 Hu 78 $ 191 room=.
+-> s
+T  78 mode=chest_mode          Beleg Skywatcher(elf) F1@( 4,11) HP 23/28 MP 0/0 Hu 77 $ 191 room=C
+-> o
+T  79 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 23/28 MP 0/0 Hu 77 $ 191 room=.
+-> l
+T  80 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 23/28 MP 0/0 Hu 77 $ 191 room=.
 -> e
-T 131 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 23/28 MP 0/0 Hu 74 $ 268 room=.
+T  81 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,11) HP 23/28 MP 0/0 Hu 76 $ 191 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  82 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,11) HP 22/28 MP 0/0 Hu 76 $ 191 room=M vs Rust Monster(L0 HP18/18)
+-> a
+T  83 mode=combat_victory      Beleg Skywatcher(elf) F1@( 5,11) HP 21/28 MP 0/0 Hu 76 $ 201 room=.
+-> back
+T  84 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,11) HP 21/28 MP 0/0 Hu 76 $ 201 room=.
+-> l
+T  85 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,11) HP 21/28 MP 0/0 Hu 76 $ 201 room=.
 -> i
-T 132 mode=inventory           Beleg Skywatcher(elf) F1@( 4,11) HP 23/28 MP 0/0 Hu 74 $ 268 room=.
+T  86 mode=inventory           Beleg Skywatcher(elf) F1@( 5,11) HP 21/28 MP 0/0 Hu 76 $ 201 room=.
 -> u4
-T 133 mode=inventory           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 74 $ 268 room=.
+T  87 mode=inventory           Beleg Skywatcher(elf) F1@( 5,11) HP 28/28 MP 0/0 Hu 76 $ 201 room=.
 -> x
-T 134 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 74 $ 268 room=.
--> i
-T 135 mode=inventory           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 74 $ 268 room=.
--> eat3
-T 136 mode=inventory           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 79 $ 268 room=.
--> eat1
-T 137 mode=inventory           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu100 $ 268 room=.
--> x
-T 138 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu100 $ 268 room=.
--> n
-T 139 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,10) HP 28/28 MP 0/0 Hu 99 $ 268 room=.
--> n
-T 140 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 98 $ 268 room=.
--> w
-T 141 mode=combat_mode         Beleg Skywatcher(elf) F1@( 3, 9) HP 28/28 MP 0/0 Hu 97 $ 268 room=M vs Kobold(L0 HP20/20)
+T  88 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,11) HP 28/28 MP 0/0 Hu 76 $ 201 room=.
+-> s
+T  89 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,12) HP 28/28 MP 0/0 Hu 75 $ 201 room=M vs Kobold(L0 HP20/20)
 -> a
-T 142 mode=combat_victory      Beleg Skywatcher(elf) F1@( 3, 9) HP 27/28 MP 0/0 Hu 97 $ 274 room=.
+T  90 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,12) HP 27/28 MP 0/0 Hu 75 $ 201 room=M vs Kobold(L0 HP20/20)
+-> a
+T  91 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,12) HP 26/28 MP 0/0 Hu 75 $ 201 room=M vs Kobold(L0 HP20/20)
+-> a
+T  92 mode=combat_victory      Beleg Skywatcher(elf) F1@( 5,12) HP 26/28 MP 0/0 Hu 75 $ 209 room=.
 -> back
-T 143 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 9) HP 27/28 MP 0/0 Hu 97 $ 274 room=.
+T  93 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,12) HP 26/28 MP 0/0 Hu 75 $ 209 room=.
+-> l
+T  94 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,12) HP 26/28 MP 0/0 Hu 75 $ 209 room=.
+-> s
+T  95 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,13) HP 26/28 MP 0/0 Hu 74 $ 209 room=.
+-> s
+T  96 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,14) HP 26/28 MP 0/0 Hu 73 $ 209 room=M vs Bat(L0 HP12/12)
+-> a
+T  97 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,14) HP 25/28 MP 0/0 Hu 73 $ 209 room=M vs Bat(L0 HP12/12)
+-> a
+T  98 mode=combat_mode         Beleg Skywatcher(elf) F1@( 5,14) HP 25/28 MP 0/0 Hu 73 $ 209 room=M vs Bat(L0 HP12/12)
+-> a
+T  99 mode=combat_victory      Beleg Skywatcher(elf) F1@( 5,14) HP 25/28 MP 0/0 Hu 73 $ 217 room=.
+-> back
+T 100 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,14) HP 25/28 MP 0/0 Hu 73 $ 217 room=.
+-> s
+T 101 mode=game_loop           Beleg Skywatcher(elf) F1@( 5,15) HP 25/28 MP 0/0 Hu 72 $ 217 room=.
 -> w
-T 144 mode=library_mode        Beleg Skywatcher(elf) F1@( 2, 9) HP 27/28 MP 0/0 Hu 96 $ 274 room=L
+T 102 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,15) HP 26/28 MP 0/0 Hu 71 $ 217 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 103 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,15) HP 25/28 MP 0/0 Hu 71 $ 217 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 104 mode=combat_victory      Beleg Skywatcher(elf) F1@( 4,15) HP 24/28 MP 0/0 Hu 71 $ 218 room=.
+-> back
+T 105 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,15) HP 24/28 MP 0/0 Hu 71 $ 218 room=.
+-> l
+T 106 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,15) HP 24/28 MP 0/0 Hu 71 $ 218 room=.
+-> s
+T 107 mode=library_mode        Beleg Skywatcher(elf) F1@( 4,16) HP 24/28 MP 0/0 Hu 70 $ 218 room=L
 -> r
-T 145 mode=library_read_decision_mode Beleg Skywatcher(elf) F1@( 2, 9) HP 27/28 MP 0/0 Hu 96 $ 274 room=L
+T 108 mode=library_read_decision_mode Beleg Skywatcher(elf) F1@( 4,16) HP 24/28 MP 0/0 Hu 70 $ 218 room=L
 -> y
-T 146 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 9) HP 27/28 MP 0/0 Hu 96 $ 449 room=.
+T 109 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,16) HP 24/28 MP 0/0 Hu 70 $ 268 room=.
 -> n
-T 147 mode=chest_mode          Beleg Skywatcher(elf) F1@( 2, 8) HP 20/28 MP 0/0 Hu 95 $ 449 room=C
--> o
-T 148 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 8) HP 20/28 MP 0/0 Hu 95 $ 449 room=.
--> i
-T 149 mode=inventory           Beleg Skywatcher(elf) F1@( 2, 8) HP 20/28 MP 0/0 Hu 95 $ 449 room=.
--> u5
-T 150 mode=inventory           Beleg Skywatcher(elf) F1@( 2, 8) HP 28/28 MP 0/0 Hu 95 $ 449 room=.
--> x
-T 151 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 8) HP 28/28 MP 0/0 Hu 95 $ 449 room=.
--> e
-T 152 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 8) HP 20/28 MP 0/0 Hu 94 $ 449 room=.
--> e
-T 153 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 8) HP 13/28 MP 0/0 Hu 93 $ 449 room=V
+T 110 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,15) HP 24/28 MP 0/0 Hu 69 $ 268 room=.
 -> n
-T 154 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 7) HP 5/28 MP 0/0 Hu 92 $ 449 room=.
--> i
-T 155 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 7) HP 5/28 MP 0/0 Hu 92 $ 449 room=.
--> u5
-T 156 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 92 $ 449 room=.
--> x
-T 157 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 92 $ 449 room=.
+T 111 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,14) HP 24/28 MP 0/0 Hu 68 $ 268 room=.
+-> l
+T 112 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,14) HP 24/28 MP 0/0 Hu 68 $ 268 room=.
 -> n
-T 158 mode=dungeon_mode        Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 449 room=N
--> u
-T 159 mode=dungeon_unlocked_mode Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 449 room=N
--> r
-T 160 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 641 room=N
--> i
-T 161 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 91 $ 641 room=N
--> eat3
-T 162 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 96 $ 641 room=N
--> x
-T 163 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 96 $ 641 room=N
--> w
-T 164 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 95 $ 641 room=.
--> n
-T 165 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 94 $ 641 room=.
--> n
-T 166 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 93 $ 641 room=.
--> e
-T 167 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 4) HP 28/28 MP 0/0 Hu 92 $ 641 room=M vs Slime Mold(L0 HP15/15)
+T 113 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4,13) HP 25/28 MP 0/0 Hu 67 $ 268 room=M vs Kobold(L0 HP20/20)
 -> a
-T 168 mode=combat_mode         Beleg Skywatcher(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 92 $ 641 room=M vs Slime Mold(L0 HP15/15)
--> a
-T 169 mode=combat_victory      Beleg Skywatcher(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 92 $ 743 room=.
+T 114 mode=combat_victory      Beleg Skywatcher(elf) F1@( 4,13) HP 25/28 MP 0/0 Hu 67 $ 276 room=.
 -> back
-T 170 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 92 $ 743 room=.
+T 115 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,13) HP 25/28 MP 0/0 Hu 67 $ 276 room=.
+-> n
+T 116 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,12) HP 25/28 MP 0/0 Hu 66 $ 276 room=.
+-> n
+T 117 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 25/28 MP 0/0 Hu 65 $ 276 room=.
+-> w
+T 118 mode=combat_mode         Beleg Skywatcher(elf) F1@( 3,11) HP 25/28 MP 0/0 Hu 64 $ 276 room=M vs Lichen(L0 HP10/10)
+-> a
+T 119 mode=combat_victory      Beleg Skywatcher(elf) F1@( 3,11) HP 25/28 MP 0/0 Hu 64 $ 278 room=.
+-> back
+T 120 mode=game_loop           Beleg Skywatcher(elf) F1@( 3,11) HP 25/28 MP 0/0 Hu 64 $ 278 room=.
 -> i
-T 171 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 92 $ 743 room=.
--> eat3
-T 172 mode=inventory           Beleg Skywatcher(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 97 $ 743 room=.
+T 121 mode=inventory           Beleg Skywatcher(elf) F1@( 3,11) HP 25/28 MP 0/0 Hu 64 $ 278 room=.
+-> u4
+T 122 mode=inventory           Beleg Skywatcher(elf) F1@( 3,11) HP 28/28 MP 0/0 Hu 64 $ 278 room=.
 -> x
-T 173 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 4) HP 27/28 MP 0/0 Hu 97 $ 743 room=.
--> w
-T 174 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 4) HP 27/28 MP 0/0 Hu 96 $ 743 room=.
--> n
-T 175 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 95 $ 743 room=.
--> n
-T 176 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 94 $ 743 room=.
--> n
-T 177 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 1) HP 28/28 MP 0/0 Hu 93 $ 743 room=.
+T 123 mode=game_loop           Beleg Skywatcher(elf) F1@( 3,11) HP 28/28 MP 0/0 Hu 64 $ 278 room=.
+-> i
+T 124 mode=inventory           Beleg Skywatcher(elf) F1@( 3,11) HP 28/28 MP 0/0 Hu 64 $ 278 room=.
+-> u14
+T 125 mode=inventory           Beleg Skywatcher(elf) F1@( 3,11) HP 28/28 MP 0/0 Hu 64 $ 278 room=.
+-> eat3
+T 126 mode=inventory           Beleg Skywatcher(elf) F1@( 3,11) HP 28/28 MP 0/0 Hu 76 $ 278 room=.
+-> x
+T 127 mode=game_loop           Beleg Skywatcher(elf) F1@( 3,11) HP 28/28 MP 0/0 Hu 76 $ 278 room=.
 -> e
-T 178 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 92 $ 743 room=.
--> s
-T 179 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 91 $ 743 room=.
+T 128 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 75 $ 278 room=.
 -> n
-T 180 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 1) HP 28/28 MP 0/0 Hu 90 $ 743 room=.
--> s
-T 181 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 2) HP 28/28 MP 0/0 Hu 89 $ 743 room=.
+T 129 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,10) HP 28/28 MP 0/0 Hu 74 $ 278 room=.
+-> n
+T 130 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 73 $ 278 room=.
 -> w
-T 182 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 88 $ 743 room=.
--> s
-T 183 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 87 $ 743 room=.
--> s
-T 184 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 86 $ 743 room=.
--> s
-T 185 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 85 $ 743 room=.
--> s
-T 186 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 84 $ 743 room=.
--> e
-T 187 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 83 $ 743 room=N
--> s
-T 188 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 82 $ 743 room=.
--> s
-T 189 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 81 $ 743 room=V
--> s
-T 190 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 80 $ 743 room=.
+T 131 mode=combat_mode         Beleg Skywatcher(elf) F1@( 3, 9) HP 28/28 MP 0/0 Hu 72 $ 278 room=M vs Sewer Rat(L0 HP10/10)
+-> a
+T 132 mode=combat_mode         Beleg Skywatcher(elf) F1@( 3, 9) HP 28/28 MP 0/0 Hu 72 $ 278 room=M vs Sewer Rat(L0 HP10/10)
+-> f
+T 133 mode=flee_direction_mode Beleg Skywatcher(elf) F1@( 3, 9) HP 27/28 MP 0/0 Hu 72 $ 278 room=M
+-> n
+T 134 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 8) HP 27/28 MP 0/0 Hu 72 $ 278 room=.
 -> w
-T 191 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 9) HP 28/28 MP 0/0 Hu 79 $ 743 room=.
--> w
-T 192 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 78 $ 743 room=.
--> w
-T 193 mode=chest_mode          Beleg Skywatcher(elf) F1@( 1, 9) HP 28/28 MP 0/0 Hu 77 $ 743 room=C
+T 135 mode=chest_mode          Beleg Skywatcher(elf) F1@( 2, 8) HP 27/28 MP 0/0 Hu 71 $ 278 room=C
 -> o
-T 194 mode=game_loop           Beleg Skywatcher(elf) F1@( 1, 9) HP 28/28 MP 0/0 Hu 77 $ 743 room=.
+T 136 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 8) HP 27/28 MP 0/0 Hu 71 $ 528 room=.
 -> s
-T 195 mode=garden_mode         Beleg Skywatcher(elf) F1@( 1,10) HP 28/28 MP 0/0 Hu 76 $ 743 room=G
+T 137 mode=library_mode        Beleg Skywatcher(elf) F1@( 2, 9) HP 27/28 MP 0/0 Hu 70 $ 528 room=L
+-> r
+T 138 mode=library_read_decision_mode Beleg Skywatcher(elf) F1@( 2, 9) HP 27/28 MP 0/0 Hu 70 $ 528 room=L
+-> y
+T 139 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 9) HP 27/28 MP 0/0 Hu 70 $ 528 room=.
+-> w
+T 140 mode=chest_mode          Beleg Skywatcher(elf) F1@( 1, 9) HP 27/28 MP 0/0 Hu 69 $ 528 room=C
+-> o
+T 141 mode=game_loop           Beleg Skywatcher(elf) F1@( 1, 9) HP 27/28 MP 0/0 Hu 69 $ 538 room=.
+-> s
+T 142 mode=garden_mode         Beleg Skywatcher(elf) F1@( 1,10) HP 28/28 MP 0/0 Hu 68 $ 538 room=G
 -> h
-T 196 mode=game_loop           Beleg Skywatcher(elf) F1@( 1,10) HP 28/28 MP 0/0 Hu 76 $ 743 room=.
+T 143 mode=game_loop           Beleg Skywatcher(elf) F1@( 1,10) HP 28/28 MP 0/0 Hu 68 $ 538 room=.
 -> e
-T 197 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 28/28 MP 0/0 Hu 75 $ 743 room=M vs Goblin(L0 HP12/12)
+T 144 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 28/28 MP 0/0 Hu 67 $ 538 room=M vs Giant Rat(L0 HP22/22)
 -> a
-T 198 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 27/28 MP 0/0 Hu 75 $ 743 room=M vs Goblin(L0 HP12/12)
+T 145 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 28/28 MP 0/0 Hu 67 $ 538 room=M vs Giant Rat(L0 HP1/22)
 -> a
-T 199 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 26/28 MP 0/0 Hu 75 $ 743 room=M vs Goblin(L0 HP12/12)
--> a
-T 200 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 26/28 MP 0/0 Hu 75 $ 743 room=M vs Goblin(L0 HP12/12)
--> a
-T 201 mode=combat_victory      Beleg Skywatcher(elf) F1@( 2,10) HP 26/28 MP 0/0 Hu 75 $ 853 room=.
--> back
-T 202 mode=game_loop           Beleg Skywatcher(elf) F1@( 2,10) HP 26/28 MP 0/0 Hu 75 $ 853 room=.
+T 146 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 27/28 MP 0/0 Hu 67 $ 538 room=M vs Giant Rat(L0 HP1/22)
+-> f
+T 147 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 24/28 MP 0/0 Hu 67 $ 538 room=M vs Giant Rat(L0 HP1/22)
+-> f
+T 148 mode=flee_direction_mode Beleg Skywatcher(elf) F1@( 2,10) HP 22/28 MP 0/0 Hu 67 $ 538 room=M
 -> n
-T 203 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 9) HP 26/28 MP 0/0 Hu 74 $ 853 room=.
--> e
-T 204 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 9) HP 26/28 MP 0/0 Hu 73 $ 853 room=.
--> e
-T 205 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 26/28 MP 0/0 Hu 72 $ 853 room=.
--> s
-T 206 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,10) HP 27/28 MP 0/0 Hu 71 $ 853 room=.
--> s
-T 207 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 27/28 MP 0/0 Hu 70 $ 853 room=.
--> s
-T 208 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,12) HP 27/28 MP 0/0 Hu 69 $ 853 room=.
--> s
-T 209 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,13) HP 27/28 MP 0/0 Hu 68 $ 853 room=.
--> s
-T 210 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,14) HP 28/28 MP 0/0 Hu 67 $ 853 room=.
--> l
-T 211 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,14) HP 28/28 MP 0/0 Hu 67 $ 853 room=.
--> w
-T 212 mode=game_loop           Beleg Skywatcher(elf) F1@( 3,14) HP 28/28 MP 0/0 Hu 66 $ 853 room=.
--> l
-T 213 mode=game_loop           Beleg Skywatcher(elf) F1@( 3,14) HP 28/28 MP 0/0 Hu 66 $ 853 room=.
--> s
-T 214 mode=stairs_down_mode    Beleg Skywatcher(elf) F1@( 3,15) HP 28/28 MP 0/0 Hu 65 $ 853 room=D
--> d
-T 215 mode=stairs_up_mode      Beleg Skywatcher(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 65 $ 853 room=U
--> w
-T 216 mode=stairs_up_mode      Beleg Skywatcher(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 65 $ 853 room=U
--> e
-T 217 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 64 $ 853 room=.
+T 149 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 9) HP 20/28 MP 0/0 Hu 67 $ 538 room=.
 -> i
-T 218 mode=inventory           Beleg Skywatcher(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 64 $ 853 room=.
--> eat3
-T 219 mode=inventory           Beleg Skywatcher(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 69 $ 853 room=.
--> eat1
-T 220 mode=inventory           Beleg Skywatcher(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu100 $ 853 room=.
+T 150 mode=inventory           Beleg Skywatcher(elf) F1@( 2, 9) HP 20/28 MP 0/0 Hu 67 $ 538 room=.
+-> u4
+T 151 mode=inventory           Beleg Skywatcher(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 67 $ 538 room=.
 -> x
-T 221 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu100 $ 853 room=.
--> l
-T 222 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu100 $ 853 room=.
--> s
-T 223 mode=altar_mode          Beleg Skywatcher(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 99 $ 853 room=A
--> pray
-T 224 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 99 $ 853 room=.
--> l
-T 225 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 99 $ 853 room=.
--> w
-T 226 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 853 room=.
--> l
-T 227 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 98 $ 853 room=.
--> s
-T 228 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 97 $ 853 room=.
--> s
-T 229 mode=pool_mode           Beleg Skywatcher(elf) F2@( 1, 4) HP 28/28 MP 0/0 Hu 96 $ 853 room=P
--> dr
-T 230 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 4) HP 28/28 MP 0/0 Hu 96 $ 853 room=.
--> e
-T 231 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 95 $ 853 room=.
--> l
-T 232 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 4) HP 28/28 MP 0/0 Hu 95 $ 853 room=.
--> e
-T 233 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 94 $ 853 room=.
--> l
-T 234 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 94 $ 853 room=.
--> s
-T 235 mode=chest_mode          Beleg Skywatcher(elf) F2@( 3, 5) HP 28/28 MP 0/0 Hu 93 $ 853 room=C
--> o
-T 236 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 5) HP 10/28 MP 0/0 Hu 93 $ 853 room=.
--> l
-T 237 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 5) HP 10/28 MP 0/0 Hu 93 $ 853 room=.
--> w
-T 238 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 5) HP 10/28 MP 0/0 Hu 92 $ 853 room=.
--> w
-T 239 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 5) HP 11/28 MP 0/0 Hu 91 $ 853 room=.
+T 152 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 9) HP 28/28 MP 0/0 Hu 67 $ 538 room=.
 -> n
-T 240 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 4) HP 11/28 MP 0/0 Hu 90 $ 853 room=.
--> n
-T 241 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 3) HP 12/28 MP 0/0 Hu 89 $ 853 room=.
+T 153 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 8) HP 28/28 MP 0/0 Hu 66 $ 538 room=.
+-> w
+T 154 mode=combat_mode         Beleg Skywatcher(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 65 $ 538 room=M vs Stirge(L0 HP6/6)
+-> a
+T 155 mode=combat_victory      Beleg Skywatcher(elf) F1@( 1, 8) HP 24/28 MP 0/0 Hu 65 $ 648 room=.
+-> back
+T 156 mode=game_loop           Beleg Skywatcher(elf) F1@( 1, 8) HP 24/28 MP 0/0 Hu 65 $ 648 room=.
 -> i
-T 242 mode=inventory           Beleg Skywatcher(elf) F2@( 1, 3) HP 12/28 MP 0/0 Hu 89 $ 853 room=.
+T 157 mode=inventory           Beleg Skywatcher(elf) F1@( 1, 8) HP 24/28 MP 0/0 Hu 65 $ 648 room=.
+-> u4
+T 158 mode=inventory           Beleg Skywatcher(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 65 $ 648 room=.
+-> x
+T 159 mode=game_loop           Beleg Skywatcher(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 65 $ 648 room=.
+-> i
+T 160 mode=inventory           Beleg Skywatcher(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 65 $ 648 room=.
+-> u16
+T 161 mode=inventory           Beleg Skywatcher(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 65 $ 648 room=.
+-> eat3
+T 162 mode=inventory           Beleg Skywatcher(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 83 $ 648 room=.
 -> u7
-T 243 mode=inventory           Beleg Skywatcher(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 89 $ 853 room=.
+T 163 mode=inventory           Beleg Skywatcher(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 83 $ 648 room=.
 -> x
-T 244 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 3) HP 28/28 MP 0/0 Hu 89 $ 853 room=.
+T 164 mode=game_loop           Beleg Skywatcher(elf) F1@( 1, 8) HP 28/28 MP 0/0 Hu 83 $ 648 room=.
+-> s
+T 165 mode=game_loop           Beleg Skywatcher(elf) F1@( 1, 9) HP 28/28 MP 0/0 Hu 82 $ 648 room=.
+-> s
+T 166 mode=game_loop           Beleg Skywatcher(elf) F1@( 1,10) HP 28/28 MP 0/0 Hu 81 $ 648 room=.
+-> e
+T 167 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 28/28 MP 0/0 Hu 80 $ 648 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T 168 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 27/28 MP 0/0 Hu 80 $ 648 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T 169 mode=combat_mode         Beleg Skywatcher(elf) F1@( 2,10) HP 27/28 MP 0/0 Hu 80 $ 648 room=M vs Giant Rat(L0 HP1/22)
+-> a
+T 170 mode=combat_victory      Beleg Skywatcher(elf) F1@( 2,10) HP 27/28 MP 0/0 Hu 80 $ 655 room=.
+-> back
+T 171 mode=game_loop           Beleg Skywatcher(elf) F1@( 2,10) HP 27/28 MP 0/0 Hu 80 $ 655 room=.
+-> i
+T 172 mode=inventory           Beleg Skywatcher(elf) F1@( 2,10) HP 27/28 MP 0/0 Hu 80 $ 655 room=.
+-> u15
+T 173 mode=inventory           Beleg Skywatcher(elf) F1@( 2,10) HP 27/28 MP 0/0 Hu 80 $ 655 room=.
+-> x
+T 174 mode=game_loop           Beleg Skywatcher(elf) F1@( 2,10) HP 27/28 MP 0/0 Hu 80 $ 655 room=.
 -> n
-T 245 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 2) HP 28/28 MP 0/0 Hu 88 $ 853 room=.
+T 175 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 9) HP 27/28 MP 0/0 Hu 79 $ 655 room=.
 -> n
-T 246 mode=stairs_up_mode      Beleg Skywatcher(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 87 $ 853 room=U
+T 176 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 8) HP 27/28 MP 0/0 Hu 78 $ 655 room=.
 -> e
-T 247 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 86 $ 853 room=.
+T 177 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 8) HP 27/28 MP 0/0 Hu 77 $ 655 room=.
 -> e
-T 248 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 1) HP 28/28 MP 0/0 Hu 85 $ 853 room=.
--> e
-T 249 mode=library_mode        Beleg Skywatcher(elf) F2@( 4, 1) HP 28/28 MP 0/0 Hu 84 $ 853 room=L
+T 178 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 76 $ 655 room=V
+-> n
+T 179 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 75 $ 655 room=.
+-> n
+T 180 mode=dungeon_mode        Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 74 $ 655 room=N
+-> u
+T 181 mode=dungeon_unlocked_mode Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 74 $ 655 room=N
 -> r
-T 250 mode=library_read_decision_mode Beleg Skywatcher(elf) F2@( 4, 1) HP 28/28 MP 0/0 Hu 84 $ 853 room=L
--> y
-T 251 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 1) HP 28/28 MP 0/0 Hu 84 $ 853 room=.
--> e
-T 252 mode=garden_mode         Beleg Skywatcher(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 83 $ 853 room=G
--> h
-T 253 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 1) HP 28/28 MP 0/0 Hu 83 $ 853 room=.
--> s
-T 254 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 2) HP 28/28 MP 0/0 Hu 82 $ 853 room=.
--> l
-T 255 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 2) HP 28/28 MP 0/0 Hu 82 $ 853 room=.
--> s
-T 256 mode=chest_mode          Beleg Skywatcher(elf) F2@( 5, 3) HP 28/28 MP 0/0 Hu 81 $ 853 room=C
--> s
-T 257 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 4) HP 28/28 MP 0/0 Hu 80 $ 853 room=.
--> e
-T 258 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 4) HP 28/28 MP 0/0 Hu 79 $ 853 room=.
--> l
-T 259 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 4) HP 28/28 MP 0/0 Hu 79 $ 853 room=.
--> e
-T 260 mode=shrine_mode         Beleg Skywatcher(elf) F2@( 7, 4) HP 28/28 MP 0/0 Hu 78 $ 853 room=F
--> p
-T 261 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 4) HP 28/28 MP 0/0 Hu 78 $ 853 room=.
--> l
-T 262 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 4) HP 28/28 MP 0/0 Hu 78 $ 853 room=.
--> n
-T 263 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 77 $ 853 room=.
--> e
-T 264 mode=garden_mode         Beleg Skywatcher(elf) F2@( 8, 3) HP 28/28 MP 0/0 Hu 76 $ 853 room=G
--> h
-T 265 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 3) HP 28/28 MP 0/0 Hu 76 $ 853 room=.
--> l
-T 266 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 3) HP 28/28 MP 0/0 Hu 76 $ 853 room=.
--> e
-T 267 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 3) HP 28/28 MP 0/0 Hu 75 $ 853 room=.
--> s
-T 268 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 4) HP 28/28 MP 0/0 Hu 74 $ 853 room=.
--> e
-T 269 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 73 $ 853 room=.
--> n
-T 270 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 3) HP 28/28 MP 0/0 Hu 72 $ 853 room=.
--> e
-T 271 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 3) HP 28/28 MP 0/0 Hu 71 $ 853 room=.
--> s
-T 272 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 4) HP 28/28 MP 0/0 Hu 70 $ 853 room=.
--> l
-T 273 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 4) HP 28/28 MP 0/0 Hu 70 $ 853 room=.
--> e
-T 274 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 4) HP 28/28 MP 0/0 Hu 69 $ 853 room=.
--> l
-T 275 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 4) HP 28/28 MP 0/0 Hu 69 $ 853 room=.
--> s
-T 276 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 5) HP 28/28 MP 0/0 Hu 68 $ 853 room=.
--> l
-T 277 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 5) HP 28/28 MP 0/0 Hu 68 $ 853 room=.
--> s
-T 278 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 6) HP 28/28 MP 0/0 Hu 67 $ 853 room=.
--> s
-T 279 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 7) HP 28/28 MP 0/0 Hu 66 $ 853 room=.
--> s
-T 280 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 8) HP 28/28 MP 0/0 Hu 65 $ 853 room=.
--> l
-T 281 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 8) HP 28/28 MP 0/0 Hu 65 $ 853 room=.
--> s
-T 282 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 9) HP 28/28 MP 0/0 Hu 64 $ 853 room=.
--> l
-T 283 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 9) HP 28/28 MP 0/0 Hu 64 $ 853 room=.
--> s
-T 284 mode=stairs_down_mode    Beleg Skywatcher(elf) F2@(12,10) HP 28/28 MP 0/0 Hu 63 $ 853 room=D
--> s
-T 285 mode=pool_mode           Beleg Skywatcher(elf) F2@(12,11) HP 28/28 MP 0/0 Hu 62 $ 853 room=P
--> dr
-T 286 mode=game_loop           Beleg Skywatcher(elf) F2@(12,11) HP 28/32 MP 0/0 Hu 62 $ 853 room=.
--> l
-T 287 mode=game_loop           Beleg Skywatcher(elf) F2@(12,11) HP 28/32 MP 0/0 Hu 62 $ 853 room=.
--> e
-T 288 mode=game_loop           Beleg Skywatcher(elf) F2@(13,11) HP 28/32 MP 0/0 Hu 61 $ 853 room=.
--> l
-T 289 mode=game_loop           Beleg Skywatcher(elf) F2@(13,11) HP 28/32 MP 0/0 Hu 61 $ 853 room=.
--> e
-T 290 mode=game_loop           Beleg Skywatcher(elf) F2@(14,11) HP 28/32 MP 0/0 Hu 60 $ 853 room=.
--> l
-T 291 mode=game_loop           Beleg Skywatcher(elf) F2@(14,11) HP 28/32 MP 0/0 Hu 60 $ 853 room=.
--> e
-T 292 mode=altar_mode          Beleg Skywatcher(elf) F2@(15,11) HP 28/32 MP 0/0 Hu 59 $ 853 room=A
--> pray
-T 293 mode=game_loop           Beleg Skywatcher(elf) F2@(15,11) HP 28/32 MP 0/0 Hu 59 $ 853 room=.
--> n
-T 294 mode=game_loop           Beleg Skywatcher(elf) F2@(15,10) HP 28/32 MP 0/0 Hu 58 $ 853 room=.
+T 182 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 74 $ 655 room=N
 -> w
-T 295 mode=game_loop           Beleg Skywatcher(elf) F2@(14,10) HP 28/32 MP 0/0 Hu 57 $ 853 room=.
+T 183 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 73 $ 655 room=.
+-> n
+T 184 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 72 $ 655 room=.
+-> n
+T 185 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 71 $ 655 room=.
+-> n
+T 186 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 70 $ 655 room=.
+-> n
+T 187 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 69 $ 655 room=.
+-> n
+T 188 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 1) HP 28/28 MP 0/0 Hu 68 $ 655 room=.
 -> w
-T 296 mode=game_loop           Beleg Skywatcher(elf) F2@(13,10) HP 28/32 MP 0/0 Hu 56 $ 853 room=.
--> s
-T 297 mode=game_loop           Beleg Skywatcher(elf) F2@(13,11) HP 28/32 MP 0/0 Hu 55 $ 853 room=.
--> s
-T 298 mode=game_loop           Beleg Skywatcher(elf) F2@(13,12) HP 28/32 MP 0/0 Hu 54 $ 853 room=.
--> s
-T 299 mode=game_loop           Beleg Skywatcher(elf) F2@(13,13) HP 28/32 MP 0/0 Hu 53 $ 853 room=.
--> l
-T 300 mode=game_loop           Beleg Skywatcher(elf) F2@(13,13) HP 28/32 MP 0/0 Hu 53 $ 853 room=.
+T 189 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 67 $ 655 room=.
+-> w
+T 190 mode=game_loop           Beleg Skywatcher(elf) F1@( 1, 1) HP 28/28 MP 0/0 Hu 66 $ 655 room=E
 -> e
-T 301 mode=game_loop           Beleg Skywatcher(elf) F2@(14,13) HP 28/32 MP 0/0 Hu 52 $ 853 room=.
+T 191 mode=game_loop           Beleg Skywatcher(elf) F1@( 2, 1) HP 28/28 MP 0/0 Hu 65 $ 655 room=.
+-> e
+T 192 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 1) HP 28/28 MP 0/0 Hu 64 $ 655 room=.
 -> s
-T 302 mode=game_loop           Beleg Skywatcher(elf) F2@(14,14) HP 28/32 MP 0/0 Hu 51 $ 853 room=.
--> l
-T 303 mode=game_loop           Beleg Skywatcher(elf) F2@(14,14) HP 28/32 MP 0/0 Hu 51 $ 853 room=.
+T 193 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 2) HP 28/28 MP 0/0 Hu 63 $ 655 room=.
 -> s
-T 304 mode=game_loop           Beleg Skywatcher(elf) F2@(14,15) HP 28/32 MP 0/0 Hu 50 $ 853 room=.
--> l
-T 305 mode=game_loop           Beleg Skywatcher(elf) F2@(14,15) HP 28/32 MP 0/0 Hu 50 $ 853 room=.
+T 194 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 3) HP 28/28 MP 0/0 Hu 62 $ 655 room=.
 -> s
-T 306 mode=altar_mode          Beleg Skywatcher(elf) F2@(14,16) HP 28/32 MP 0/0 Hu 49 $ 853 room=A
--> pray
-T 307 mode=game_loop           Beleg Skywatcher(elf) F2@(14,16) HP 28/32 MP 0/0 Hu 49 $ 853 room=.
+T 195 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 4) HP 28/28 MP 0/0 Hu 61 $ 655 room=.
+-> s
+T 196 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 5) HP 28/28 MP 0/0 Hu 60 $ 655 room=.
+-> s
+T 197 mode=game_loop           Beleg Skywatcher(elf) F1@( 3, 6) HP 28/28 MP 0/0 Hu 59 $ 655 room=.
+-> e
+T 198 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 6) HP 28/28 MP 0/0 Hu 58 $ 655 room=N
+-> s
+T 199 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 7) HP 28/28 MP 0/0 Hu 57 $ 655 room=.
+-> s
+T 200 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 8) HP 28/28 MP 0/0 Hu 56 $ 655 room=V
+-> s
+T 201 mode=game_loop           Beleg Skywatcher(elf) F1@( 4, 9) HP 28/28 MP 0/0 Hu 55 $ 655 room=.
+-> s
+T 202 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,10) HP 28/28 MP 0/0 Hu 54 $ 655 room=.
+-> s
+T 203 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,11) HP 28/28 MP 0/0 Hu 53 $ 655 room=.
+-> s
+T 204 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,12) HP 28/28 MP 0/0 Hu 52 $ 655 room=.
+-> s
+T 205 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,13) HP 28/28 MP 0/0 Hu 51 $ 655 room=.
+-> s
+T 206 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,14) HP 28/28 MP 0/0 Hu 50 $ 655 room=.
+-> s
+T 207 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,15) HP 28/28 MP 0/0 Hu 49 $ 655 room=.
 -> i
-T 308 mode=inventory           Beleg Skywatcher(elf) F2@(14,16) HP 28/32 MP 0/0 Hu 49 $ 853 room=.
--> eat1
-T 309 mode=inventory           Beleg Skywatcher(elf) F2@(14,16) HP 28/32 MP 0/0 Hu 99 $ 853 room=.
+T 208 mode=inventory           Beleg Skywatcher(elf) F1@( 4,15) HP 28/28 MP 0/0 Hu 49 $ 655 room=.
+-> eat3
+T 209 mode=inventory           Beleg Skywatcher(elf) F1@( 4,15) HP 28/28 MP 0/0 Hu 61 $ 655 room=.
 -> x
-T 310 mode=game_loop           Beleg Skywatcher(elf) F2@(14,16) HP 28/32 MP 0/0 Hu 99 $ 853 room=.
+T 210 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,15) HP 28/28 MP 0/0 Hu 61 $ 655 room=.
 -> l
-T 311 mode=game_loop           Beleg Skywatcher(elf) F2@(14,16) HP 28/32 MP 0/0 Hu 99 $ 853 room=.
+T 211 mode=game_loop           Beleg Skywatcher(elf) F1@( 4,15) HP 28/28 MP 0/0 Hu 61 $ 655 room=.
 -> w
-T 312 mode=game_loop           Beleg Skywatcher(elf) F2@(13,16) HP 28/32 MP 0/0 Hu 98 $ 853 room=.
--> e
-T 313 mode=game_loop           Beleg Skywatcher(elf) F2@(14,16) HP 29/32 MP 0/0 Hu 97 $ 853 room=.
--> e
-T 314 mode=game_loop           Beleg Skywatcher(elf) F2@(15,16) HP 29/32 MP 0/0 Hu 96 $ 853 room=.
--> n
-T 315 mode=game_loop           Beleg Skywatcher(elf) F2@(15,15) HP 30/32 MP 0/0 Hu 95 $ 853 room=.
--> n
-T 316 mode=game_loop           Beleg Skywatcher(elf) F2@(15,14) HP 30/32 MP 0/0 Hu 94 $ 853 room=.
--> e
-T 317 mode=game_loop           Beleg Skywatcher(elf) F2@(16,14) HP 31/32 MP 0/0 Hu 93 $ 853 room=.
--> n
-T 318 mode=game_loop           Beleg Skywatcher(elf) F2@(16,13) HP 31/32 MP 0/0 Hu 92 $ 853 room=.
--> e
-T 319 mode=oracle_mode         Beleg Skywatcher(elf) F2@(17,13) HP 32/32 MP 0/0 Hu 91 $ 853 room=O
--> s
-T 320 mode=game_loop           Beleg Skywatcher(elf) F2@(17,14) HP 32/32 MP 0/0 Hu 90 $ 853 room=.
--> e
-T 321 mode=game_loop           Beleg Skywatcher(elf) F2@(18,14) HP 32/32 MP 0/0 Hu 89 $ 853 room=.
--> s
-T 322 mode=game_loop           Beleg Skywatcher(elf) F2@(18,15) HP 32/32 MP 0/0 Hu 88 $ 853 room=.
--> s
-T 323 mode=game_loop           Beleg Skywatcher(elf) F2@(18,16) HP 32/32 MP 0/0 Hu 87 $ 853 room=.
--> e
-T 324 mode=game_loop           Beleg Skywatcher(elf) F2@(19,16) HP 32/32 MP 0/0 Hu 86 $ 853 room=.
--> n
-T 325 mode=game_loop           Beleg Skywatcher(elf) F2@(19,15) HP 32/32 MP 0/0 Hu 85 $ 853 room=.
--> n
-T 326 mode=game_loop           Beleg Skywatcher(elf) F2@(19,14) HP 32/32 MP 0/0 Hu 84 $ 853 room=.
--> w
-T 327 mode=game_loop           Beleg Skywatcher(elf) F2@(18,14) HP 32/32 MP 0/0 Hu 83 $ 853 room=.
--> w
-T 328 mode=game_loop           Beleg Skywatcher(elf) F2@(17,14) HP 32/32 MP 0/0 Hu 82 $ 853 room=.
--> w
-T 329 mode=game_loop           Beleg Skywatcher(elf) F2@(16,14) HP 32/32 MP 0/0 Hu 81 $ 853 room=.
--> w
-T 330 mode=game_loop           Beleg Skywatcher(elf) F2@(15,14) HP 32/32 MP 0/0 Hu 80 $ 853 room=.
--> w
-T 331 mode=game_loop           Beleg Skywatcher(elf) F2@(14,14) HP 32/32 MP 0/0 Hu 79 $ 853 room=.
--> n
-T 332 mode=game_loop           Beleg Skywatcher(elf) F2@(14,13) HP 32/32 MP 0/0 Hu 78 $ 853 room=.
--> w
-T 333 mode=game_loop           Beleg Skywatcher(elf) F2@(13,13) HP 32/32 MP 0/0 Hu 77 $ 853 room=.
--> n
-T 334 mode=game_loop           Beleg Skywatcher(elf) F2@(13,12) HP 32/32 MP 0/0 Hu 76 $ 853 room=.
--> n
-T 335 mode=game_loop           Beleg Skywatcher(elf) F2@(13,11) HP 32/32 MP 0/0 Hu 75 $ 853 room=.
--> n
-T 336 mode=game_loop           Beleg Skywatcher(elf) F2@(13,10) HP 32/32 MP 0/0 Hu 74 $ 853 room=.
--> w
-T 337 mode=stairs_down_mode    Beleg Skywatcher(elf) F2@(12,10) HP 32/32 MP 0/0 Hu 73 $ 853 room=D
--> n
-T 338 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 9) HP 32/32 MP 0/0 Hu 72 $ 853 room=.
--> n
-T 339 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 8) HP 32/32 MP 0/0 Hu 71 $ 853 room=.
--> w
-T 340 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 8) HP 32/32 MP 0/0 Hu 70 $ 853 room=.
--> w
-T 341 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 8) HP 32/32 MP 0/0 Hu 69 $ 853 room=.
--> l
-T 342 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 8) HP 32/32 MP 0/0 Hu 69 $ 853 room=.
--> n
-T 343 mode=dungeon_mode        Beleg Skywatcher(elf) F2@(10, 7) HP 32/32 MP 0/0 Hu 68 $ 853 room=N
--> u
-T 344 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 7) HP 32/32 MP 0/0 Hu 68 $ 853 room=N
--> l
-T 345 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 7) HP 32/32 MP 0/0 Hu 68 $ 853 room=N
--> w
-T 346 mode=chest_mode          Beleg Skywatcher(elf) F2@( 9, 7) HP 32/32 MP 0/0 Hu 67 $ 853 room=C
--> s
-T 347 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 8) HP 32/32 MP 0/0 Hu 66 $ 853 room=.
--> w
-T 348 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 8) HP 32/32 MP 0/0 Hu 65 $ 853 room=.
--> w
-T 349 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 32/32 MP 0/0 Hu 64 $ 853 room=.
--> w
-T 350 mode=chest_mode          Beleg Skywatcher(elf) F2@( 6, 8) HP 32/32 MP 0/0 Hu 63 $ 853 room=C
--> n
-T 351 mode=dungeon_mode        Beleg Skywatcher(elf) F2@( 6, 7) HP 32/32 MP 0/0 Hu 62 $ 853 room=N
--> u
-T 352 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 7) HP 32/32 MP 0/0 Hu 62 $ 853 room=N
--> n
-T 353 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 32/32 MP 0/0 Hu 61 $ 853 room=.
--> e
-T 354 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 32/32 MP 0/0 Hu 60 $ 853 room=.
--> s
-T 355 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 32/32 MP 0/0 Hu 59 $ 853 room=.
--> s
-T 356 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 32/32 MP 0/0 Hu 58 $ 853 room=.
--> w
-T 357 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 8) HP 32/32 MP 0/0 Hu 57 $ 853 room=C
--> n
-T 358 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 7) HP 32/32 MP 0/0 Hu 56 $ 853 room=N
--> n
-T 359 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 32/32 MP 0/0 Hu 55 $ 853 room=.
--> e
-T 360 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 32/32 MP 0/0 Hu 54 $ 853 room=.
--> s
-T 361 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 32/32 MP 0/0 Hu 53 $ 853 room=.
--> e
-T 362 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 32/32 MP 0/0 Hu 52 $ 853 room=.
--> s
-T 363 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 8) HP 32/32 MP 0/0 Hu 51 $ 853 room=.
--> w
-T 364 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 32/32 MP 0/0 Hu 50 $ 853 room=.
--> s
-T 365 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 9) HP 32/32 MP 0/0 Hu 49 $ 853 room=.
--> i
-T 366 mode=inventory           Beleg Skywatcher(elf) F2@( 7, 9) HP 32/32 MP 0/0 Hu 49 $ 853 room=.
--> eat1
-T 367 mode=inventory           Beleg Skywatcher(elf) F2@( 7, 9) HP 32/32 MP 0/0 Hu 99 $ 853 room=.
--> x
-T 368 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 9) HP 32/32 MP 0/0 Hu 99 $ 853 room=.
--> w
-T 369 mode=combat_mode         Beleg Skywatcher(elf) F2@( 6, 9) HP 32/32 MP 0/0 Hu 98 $ 853 room=M vs Bugbear(L1 HP35/35)
--> a
-T 370 mode=combat_mode         Beleg Skywatcher(elf) F2@( 6, 9) HP 31/32 MP 0/0 Hu 98 $ 853 room=M vs Bugbear(L1 HP15/35)
--> a
-T 371 mode=combat_victory      Beleg Skywatcher(elf) F2@( 6, 9) HP 31/42 MP 0/0 Hu 98 $ 863 room=.
--> back
-T 372 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 9) HP 31/42 MP 0/0 Hu 98 $ 863 room=.
--> n
-T 373 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 8) HP 31/42 MP 0/0 Hu 97 $ 863 room=C
--> n
-T 374 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 7) HP 32/42 MP 0/0 Hu 96 $ 863 room=N
--> n
-T 375 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 32/42 MP 0/0 Hu 95 $ 863 room=.
--> e
-T 376 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 33/42 MP 0/0 Hu 94 $ 863 room=.
--> s
-T 377 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 33/42 MP 0/0 Hu 93 $ 863 room=.
--> s
-T 378 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 34/42 MP 0/0 Hu 92 $ 863 room=.
--> w
-T 379 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 8) HP 34/42 MP 0/0 Hu 91 $ 863 room=C
--> n
-T 380 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 7) HP 35/42 MP 0/0 Hu 90 $ 863 room=N
--> n
-T 381 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 35/42 MP 0/0 Hu 89 $ 863 room=.
--> e
-T 382 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 36/42 MP 0/0 Hu 88 $ 863 room=.
--> i
-T 383 mode=inventory           Beleg Skywatcher(elf) F2@( 7, 6) HP 36/42 MP 0/0 Hu 88 $ 863 room=.
--> eat2
-T 384 mode=inventory           Beleg Skywatcher(elf) F2@( 7, 6) HP 36/42 MP 0/0 Hu 94 $ 863 room=.
--> x
-T 385 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 36/42 MP 0/0 Hu 94 $ 863 room=.
--> s
-T 386 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 36/42 MP 0/0 Hu 93 $ 863 room=.
--> e
-T 387 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 37/42 MP 0/0 Hu 92 $ 863 room=.
--> e
-T 388 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 37/42 MP 0/0 Hu 91 $ 863 room=C
--> l
-T 389 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 37/42 MP 0/0 Hu 91 $ 863 room=C
--> n
-T 390 mode=chest_mode          Beleg Skywatcher(elf) F2@( 9, 6) HP 38/42 MP 0/0 Hu 90 $ 863 room=C
--> e
-T 391 mode=pool_mode           Beleg Skywatcher(elf) F2@(10, 6) HP 38/42 MP 0/0 Hu 89 $ 863 room=P
--> dr
-T 392 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 6) HP 38/42 MP 0/0 Hu 89 $ 863 room=.
--> s
-T 393 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 7) HP 39/42 MP 0/0 Hu 88 $ 863 room=N
--> s
-T 394 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 8) HP 39/42 MP 0/0 Hu 87 $ 863 room=.
--> w
-T 395 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 8) HP 40/42 MP 0/0 Hu 86 $ 863 room=.
--> n
-T 396 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 40/42 MP 0/0 Hu 85 $ 863 room=C
--> w
-T 397 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 40/42 MP 0/0 Hu 84 $ 863 room=.
--> w
-T 398 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 40/42 MP 0/0 Hu 83 $ 863 room=.
--> n
-T 399 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 41/42 MP 0/0 Hu 82 $ 863 room=.
--> w
-T 400 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 41/42 MP 0/0 Hu 81 $ 863 room=.
--> s
-T 401 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 7) HP 41/42 MP 0/0 Hu 80 $ 863 room=N
--> s
-T 402 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 8) HP 41/42 MP 0/0 Hu 79 $ 863 room=C
--> w
-T 403 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 8) HP 42/42 MP 0/0 Hu 78 $ 863 room=.
--> s
-T 404 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 9) HP 42/42 MP 0/0 Hu 77 $ 863 room=.
--> l
-T 405 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 9) HP 42/42 MP 0/0 Hu 77 $ 863 room=.
--> e
-T 406 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 9) HP 42/42 MP 0/0 Hu 76 $ 863 room=.
--> e
-T 407 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 9) HP 42/42 MP 0/0 Hu 75 $ 863 room=.
--> n
-T 408 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 42/42 MP 0/0 Hu 74 $ 863 room=.
--> n
-T 409 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 42/42 MP 0/0 Hu 73 $ 863 room=.
--> n
-T 410 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 42/42 MP 0/0 Hu 72 $ 863 room=.
--> w
-T 411 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 42/42 MP 0/0 Hu 71 $ 863 room=.
--> w
-T 412 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 6) HP 42/42 MP 0/0 Hu 70 $ 863 room=.
--> l
-T 413 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 6) HP 42/42 MP 0/0 Hu 70 $ 863 room=.
--> w
-T 414 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 6) HP 42/42 MP 0/0 Hu 69 $ 863 room=.
--> w
-T 415 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 6) HP 42/42 MP 0/0 Hu 68 $ 863 room=.
--> s
-T 416 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 7) HP 42/42 MP 0/0 Hu 67 $ 863 room=.
--> s
-T 417 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 8) HP 42/42 MP 0/0 Hu 66 $ 863 room=.
--> e
-T 418 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 8) HP 42/42 MP 0/0 Hu 65 $ 863 room=.
--> e
-T 419 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 8) HP 42/42 MP 0/0 Hu 64 $ 863 room=.
--> e
-T 420 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 8) HP 42/42 MP 0/0 Hu 63 $ 863 room=C
--> l
-T 421 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 8) HP 42/42 MP 0/0 Hu 63 $ 863 room=C
--> n
-T 422 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 7) HP 42/42 MP 0/0 Hu 62 $ 863 room=N
--> n
-T 423 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 42/42 MP 0/0 Hu 61 $ 863 room=.
--> e
-T 424 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 42/42 MP 0/0 Hu 60 $ 863 room=.
--> s
-T 425 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 42/42 MP 0/0 Hu 59 $ 863 room=.
--> s
-T 426 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 42/42 MP 0/0 Hu 58 $ 863 room=.
--> e
-T 427 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 8) HP 42/42 MP 0/0 Hu 57 $ 863 room=.
--> n
-T 428 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 42/42 MP 0/0 Hu 56 $ 863 room=.
--> e
-T 429 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 42/42 MP 0/0 Hu 55 $ 863 room=C
--> n
-T 430 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 6) HP 42/42 MP 0/0 Hu 54 $ 863 room=C
--> l
-T 431 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 6) HP 42/42 MP 0/0 Hu 54 $ 863 room=C
--> e
-T 432 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 6) HP 42/42 MP 0/0 Hu 53 $ 863 room=.
--> s
-T 433 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 7) HP 42/42 MP 0/0 Hu 52 $ 863 room=N
--> s
-T 434 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 8) HP 42/42 MP 0/0 Hu 51 $ 863 room=.
--> e
-T 435 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 8) HP 42/42 MP 0/0 Hu 50 $ 863 room=.
--> n
-T 436 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 7) HP 42/42 MP 0/0 Hu 49 $ 863 room=.
--> i
-T 437 mode=inventory           Beleg Skywatcher(elf) F2@(11, 7) HP 42/42 MP 0/0 Hu 49 $ 863 room=.
--> eat1
-T 438 mode=inventory           Beleg Skywatcher(elf) F2@(11, 7) HP 42/42 MP 0/0 Hu 99 $ 863 room=.
--> x
-T 439 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 7) HP 42/42 MP 0/0 Hu 99 $ 863 room=.
--> e
-T 440 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 7) HP 42/42 MP 0/0 Hu 98 $ 863 room=.
--> l
-T 441 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 7) HP 42/42 MP 0/0 Hu 98 $ 863 room=.
--> s
-T 442 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 8) HP 42/42 MP 0/0 Hu 97 $ 863 room=.
--> s
-T 443 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 9) HP 42/42 MP 0/0 Hu 96 $ 863 room=.
--> w
-T 444 mode=combat_mode         Beleg Skywatcher(elf) F2@(11, 9) HP 42/42 MP 0/0 Hu 95 $ 863 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 445 mode=combat_mode         Beleg Skywatcher(elf) F2@(11, 9) HP 35/42 MP 0/0 Hu 95 $ 863 room=M vs Giant Spider(L1 HP40/40)
--> f
-T 446 mode=flee_direction_mode Beleg Skywatcher(elf) F2@(11, 9) HP 28/42 MP 0/0 Hu 95 $ 863 room=M
--> n
-T 447 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 8) HP 28/42 MP 0/0 Hu 95 $ 863 room=.
--> n
-T 448 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 8) HP 28/42 MP 0/0 Hu 95 $ 863 room=.
--> w
-T 449 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 8) HP 28/42 MP 0/0 Hu 95 $ 863 room=.
--> s
-T 450 mode=combat_mode         Beleg Skywatcher(elf) F2@(11, 9) HP 28/42 MP 0/0 Hu 94 $ 863 room=M vs Giant Spider(L1 HP40/40)
--> f
-T 451 mode=flee_direction_mode Beleg Skywatcher(elf) F2@(11, 9) HP 21/42 MP 0/0 Hu 94 $ 863 room=M
--> w
-T 452 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 9) HP 21/42 MP 0/0 Hu 94 $ 863 room=.
--> n
-T 453 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 8) HP 22/42 MP 0/0 Hu 93 $ 863 room=.
--> n
-T 454 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 7) HP 22/42 MP 0/0 Hu 92 $ 863 room=N
--> w
-T 455 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 23/42 MP 0/0 Hu 91 $ 863 room=C
--> w
-T 456 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 23/42 MP 0/0 Hu 90 $ 863 room=.
--> w
-T 457 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 24/42 MP 0/0 Hu 89 $ 863 room=.
--> n
-T 458 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 24/42 MP 0/0 Hu 88 $ 863 room=.
--> w
-T 459 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 25/42 MP 0/0 Hu 87 $ 863 room=.
--> w
-T 460 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 6) HP 25/42 MP 0/0 Hu 86 $ 863 room=.
--> l
-T 461 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 6) HP 25/42 MP 0/0 Hu 86 $ 863 room=.
--> w
-T 462 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 6) HP 26/42 MP 0/0 Hu 85 $ 863 room=.
--> w
-T 463 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 6) HP 26/42 MP 0/0 Hu 84 $ 863 room=.
--> s
-T 464 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 7) HP 26/42 MP 0/0 Hu 83 $ 863 room=.
--> w
-T 465 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 7) HP 26/42 MP 0/0 Hu 82 $ 863 room=.
--> n
-T 466 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 6) HP 27/42 MP 0/0 Hu 81 $ 863 room=.
--> w
-T 467 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 6) HP 27/42 MP 0/0 Hu 80 $ 863 room=.
--> s
-T 468 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 7) HP 27/42 MP 0/0 Hu 79 $ 863 room=.
--> s
-T 469 mode=game_loop           Beleg Skywatcher(elf) F2@( 1, 8) HP 27/42 MP 0/0 Hu 78 $ 863 room=.
--> e
-T 470 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 8) HP 28/42 MP 0/0 Hu 77 $ 863 room=.
--> l
-T 471 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 8) HP 28/42 MP 0/0 Hu 77 $ 863 room=.
--> n
-T 472 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 7) HP 28/42 MP 0/0 Hu 76 $ 863 room=.
--> n
-T 473 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 6) HP 28/42 MP 0/0 Hu 75 $ 863 room=.
--> e
-T 474 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 6) HP 28/42 MP 0/0 Hu 74 $ 863 room=.
--> e
-T 475 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 6) HP 29/42 MP 0/0 Hu 73 $ 863 room=.
--> e
-T 476 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 6) HP 29/42 MP 0/0 Hu 72 $ 863 room=.
--> e
-T 477 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 29/42 MP 0/0 Hu 71 $ 863 room=.
--> e
-T 478 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 29/42 MP 0/0 Hu 70 $ 863 room=.
--> s
-T 479 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 30/42 MP 0/0 Hu 69 $ 863 room=.
--> e
-T 480 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 30/42 MP 0/0 Hu 68 $ 863 room=.
--> l
-T 481 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 30/42 MP 0/0 Hu 68 $ 863 room=.
--> s
-T 482 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 8) HP 30/42 MP 0/0 Hu 67 $ 863 room=.
--> w
-T 483 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 30/42 MP 0/0 Hu 66 $ 863 room=.
--> w
-T 484 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 8) HP 31/42 MP 0/0 Hu 65 $ 863 room=C
--> n
-T 485 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 7) HP 31/42 MP 0/0 Hu 64 $ 863 room=N
--> n
-T 486 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 31/42 MP 0/0 Hu 63 $ 863 room=.
--> e
-T 487 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 6) HP 31/42 MP 0/0 Hu 62 $ 863 room=.
--> s
-T 488 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 32/42 MP 0/0 Hu 61 $ 863 room=.
--> e
-T 489 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 32/42 MP 0/0 Hu 60 $ 863 room=.
--> e
-T 490 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 32/42 MP 0/0 Hu 59 $ 863 room=C
--> l
-T 491 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 32/42 MP 0/0 Hu 59 $ 863 room=C
--> e
-T 492 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 7) HP 32/42 MP 0/0 Hu 58 $ 863 room=N
--> e
-T 493 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 7) HP 32/42 MP 0/0 Hu 57 $ 863 room=.
--> e
-T 494 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 7) HP 32/42 MP 0/0 Hu 56 $ 863 room=.
--> s
-T 495 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 8) HP 32/42 MP 0/0 Hu 55 $ 863 room=.
--> s
-T 496 mode=game_loop           Beleg Skywatcher(elf) F2@(12, 9) HP 32/42 MP 0/0 Hu 54 $ 863 room=.
--> w
-T 497 mode=combat_mode         Beleg Skywatcher(elf) F2@(11, 9) HP 32/42 MP 0/0 Hu 53 $ 863 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 498 mode=combat_mode         Beleg Skywatcher(elf) F2@(11, 9) HP 32/42 MP 0/0 Hu 53 $ 863 room=M vs Giant Spider(L1 HP40/40)
--> a
-T 499 mode=combat_mode         Beleg Skywatcher(elf) F2@(11, 9) HP 32/42 MP 0/0 Hu 53 $ 863 room=M vs Giant Spider(L1 HP19/40)
--> a
-T 500 mode=combat_victory      Beleg Skywatcher(elf) F2@(11, 9) HP 25/42 MP 0/0 Hu 53 $ 873 room=.
--> back
-T 501 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 9) HP 25/42 MP 0/0 Hu 53 $ 873 room=.
--> n
-T 502 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 8) HP 25/42 MP 0/0 Hu 52 $ 873 room=.
--> n
-T 503 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 7) HP 25/42 MP 0/0 Hu 51 $ 873 room=.
--> w
-T 504 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 7) HP 25/42 MP 0/0 Hu 50 $ 873 room=N
--> w
-T 505 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 25/42 MP 0/0 Hu 49 $ 873 room=C
--> i
-T 506 mode=inventory           Beleg Skywatcher(elf) F2@( 9, 7) HP 25/42 MP 0/0 Hu 49 $ 873 room=C
--> eat1
-T 507 mode=inventory           Beleg Skywatcher(elf) F2@( 9, 7) HP 25/42 MP 0/0 Hu 99 $ 873 room=C
--> x
-T 508 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 25/42 MP 0/0 Hu 99 $ 873 room=C
--> w
-T 509 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 25/42 MP 0/0 Hu 98 $ 873 room=.
--> w
-T 510 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 26/42 MP 0/0 Hu 97 $ 873 room=.
--> l
-T 511 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 7) HP 26/42 MP 0/0 Hu 97 $ 873 room=.
--> s
-T 512 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 26/42 MP 0/0 Hu 96 $ 873 room=.
--> s
-T 513 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 9) HP 27/42 MP 0/0 Hu 95 $ 873 room=.
--> s
-T 514 mode=game_loop           Beleg Skywatcher(elf) F2@( 7,10) HP 27/42 MP 0/0 Hu 94 $ 873 room=.
--> s
-T 515 mode=game_loop           Beleg Skywatcher(elf) F2@( 7,11) HP 28/42 MP 0/0 Hu 93 $ 873 room=.
--> s
-T 516 mode=game_loop           Beleg Skywatcher(elf) F2@( 7,12) HP 28/42 MP 0/0 Hu 92 $ 873 room=.
--> e
-T 517 mode=game_loop           Beleg Skywatcher(elf) F2@( 8,12) HP 29/42 MP 0/0 Hu 91 $ 873 room=.
--> e
-T 518 mode=game_loop           Beleg Skywatcher(elf) F2@( 9,12) HP 29/42 MP 0/0 Hu 90 $ 873 room=.
--> e
-T 519 mode=game_loop           Beleg Skywatcher(elf) F2@(10,12) HP 30/42 MP 0/0 Hu 89 $ 873 room=.
--> l
-T 520 mode=game_loop           Beleg Skywatcher(elf) F2@(10,12) HP 30/42 MP 0/0 Hu 89 $ 873 room=.
--> l
-T 521 mode=game_loop           Beleg Skywatcher(elf) F2@(10,12) HP 30/42 MP 0/0 Hu 89 $ 873 room=.
--> n
-T 522 mode=game_loop           Beleg Skywatcher(elf) F2@(10,11) HP 30/42 MP 0/0 Hu 88 $ 873 room=.
--> e
-T 523 mode=game_loop           Beleg Skywatcher(elf) F2@(11,11) HP 31/42 MP 0/0 Hu 87 $ 873 room=.
--> e
-T 524 mode=game_loop           Beleg Skywatcher(elf) F2@(12,11) HP 31/42 MP 0/0 Hu 86 $ 873 room=.
--> n
-T 525 mode=stairs_down_mode    Beleg Skywatcher(elf) F2@(12,10) HP 32/42 MP 0/0 Hu 85 $ 873 room=D
+T 212 mode=stairs_down_mode    Beleg Skywatcher(elf) F1@( 3,15) HP 28/28 MP 0/0 Hu 60 $ 655 room=D
 -> d
-T 526 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 32/42 MP 0/0 Hu 85 $ 873 room=U
--> n
-T 527 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 32/42 MP 0/0 Hu 85 $ 873 room=U
--> w
-T 528 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 32/42 MP 0/0 Hu 85 $ 873 room=U
--> w
-T 529 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 32/42 MP 0/0 Hu 85 $ 873 room=U
+T 213 mode=stairs_up_mode      Beleg Skywatcher(elf) F2@( 1, 1) HP 28/28 MP 0/0 Hu 60 $ 655 room=U
 -> e
-T 530 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 32/42 MP 0/0 Hu 85 $ 873 room=U
--> s
-T 531 mode=combat_mode         Beleg Skywatcher(elf) F3@( 1, 2) HP 32/42 MP 0/0 Hu 84 $ 873 room=M vs Wight(L2 HP40/40)
--> a
-T 532 mode=combat_mode         Beleg Skywatcher(elf) F3@( 1, 2) HP 27/42 MP 0/0 Hu 84 $ 873 room=M vs Wight(L2 HP40/40)
--> a
-T 533 mode=combat_mode         Beleg Skywatcher(elf) F3@( 1, 2) HP 22/42 MP 0/0 Hu 84 $ 873 room=M vs Wight(L2 HP19/40)
--> f
-T 534 mode=flee_direction_mode Beleg Skywatcher(elf) F3@( 1, 2) HP 22/42 MP 0/0 Hu 84 $ 873 room=M
--> n
-T 535 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 22/42 MP 0/0 Hu 84 $ 873 room=U
--> s
-T 536 mode=combat_mode         Beleg Skywatcher(elf) F3@( 1, 2) HP 22/42 MP 0/0 Hu 83 $ 873 room=M vs Wight(L2 HP19/40)
--> a
-T 537 mode=combat_mode         Beleg Skywatcher(elf) F3@( 1, 2) HP 22/42 MP 0/0 Hu 83 $ 873 room=M vs Wight(L2 HP19/40)
--> a
-T 538 mode=combat_mode         Beleg Skywatcher(elf) F3@( 1, 2) HP 22/42 MP 0/0 Hu 83 $ 873 room=M vs Wight(L2 HP19/40)
--> a
-T 539 mode=combat_mode         Beleg Skywatcher(elf) F3@( 1, 2) HP 22/42 MP 0/0 Hu 83 $ 873 room=M vs Wight(L2 HP19/40)
--> f
-T 540 mode=flee_direction_mode Beleg Skywatcher(elf) F3@( 1, 2) HP 22/42 MP 0/0 Hu 83 $ 873 room=M
--> n
-T 541 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 22/42 MP 0/0 Hu 83 $ 873 room=U
--> s
-T 542 mode=combat_mode         Beleg Skywatcher(elf) F3@( 1, 2) HP 22/42 MP 0/0 Hu 82 $ 873 room=M vs Wight(L2 HP19/40)
--> a
-T 543 mode=combat_mode         Beleg Skywatcher(elf) F3@( 1, 2) HP 17/42 MP 0/0 Hu 82 $ 873 room=M vs Wight(L2 HP19/40)
--> a
-T 544 mode=combat_victory      Beleg Skywatcher(elf) F3@( 1, 2) HP 17/42 MP 0/0 Hu 82 $ 891 room=.
--> back
-T 545 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 17/42 MP 0/0 Hu 82 $ 891 room=.
+T 214 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 59 $ 655 room=.
 -> l
-T 546 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 17/42 MP 0/0 Hu 82 $ 891 room=.
+T 215 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 1) HP 28/28 MP 0/0 Hu 59 $ 655 room=.
 -> s
-T 547 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 891 room=V
--> r6
-T 548 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 844 room=V
--> b12
-T 549 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 834 room=V
--> b5
-T 550 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 754 room=V
--> b6
-T 551 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 724 room=V
--> b6
-T 552 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 694 room=V
--> b6
-T 553 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 664 room=V
--> b8
-T 554 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 659 room=V
--> b7
-T 555 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 509 room=V
--> b5
-T 556 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 439 room=V
--> b5
-T 557 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 289 room=V
--> b3
-T 558 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 169 room=V
--> id13
-T 559 mode=vendor_shop         Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 69 room=V
--> x
-T 560 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 69 room=V
--> i
-T 561 mode=inventory           Beleg Skywatcher(elf) F3@( 1, 3) HP 18/42 MP 0/0 Hu 81 $ 69 room=V
--> u8
-T 562 mode=inventory           Beleg Skywatcher(elf) F3@( 1, 3) HP 42/42 MP 0/0 Hu 81 $ 69 room=V
--> u4
-T 563 mode=upgrade_scroll_mode Beleg Skywatcher(elf) F3@( 1, 3) HP 42/42 MP 0/0 Hu 81 $ 69 room=V
--> 1
-T 564 mode=inventory           Beleg Skywatcher(elf) F3@( 1, 3) HP 42/42 MP 0/0 Hu 81 $ 69 room=V
--> x
-T 565 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 3) HP 42/42 MP 0/0 Hu 81 $ 69 room=V
--> i
-T 566 mode=inventory           Beleg Skywatcher(elf) F3@( 1, 3) HP 42/42 MP 0/0 Hu 81 $ 69 room=V
--> e6
-T 567 mode=inventory           Beleg Skywatcher(elf) F3@( 1, 3) HP 42/42 MP 0/0 Hu 81 $ 69 room=V
--> x
-T 568 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 3) HP 42/42 MP 0/0 Hu 81 $ 69 room=V
--> n
-T 569 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 42/42 MP 0/0 Hu 80 $ 69 room=.
--> e
-T 570 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 42/42 MP 0/0 Hu 79 $ 69 room=.
--> e
-T 571 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 42/42 MP 0/0 Hu 78 $ 69 room=.
+T 216 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 58 $ 655 room=.
 -> l
-T 572 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 42/42 MP 0/0 Hu 78 $ 69 room=.
--> n
-T 573 mode=chest_mode          Beleg Skywatcher(elf) F3@( 3, 1) HP 42/42 MP 0/0 Hu 77 $ 69 room=C
+T 217 mode=game_loop           Beleg Skywatcher(elf) F2@( 2, 2) HP 28/28 MP 0/0 Hu 58 $ 655 room=.
+-> e
+T 218 mode=altar_mode          Beleg Skywatcher(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu 57 $ 655 room=A
+-> pray
+T 219 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu100 $ 655 room=.
+-> l
+T 220 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 2) HP 28/28 MP 0/0 Hu100 $ 655 room=.
+-> e
+T 221 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 2) HP 28/28 MP 0/0 Hu 99 $ 655 room=.
+-> l
+T 222 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 2) HP 28/28 MP 0/0 Hu 99 $ 655 room=.
+-> s
+T 223 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 98 $ 655 room=.
+-> l
+T 224 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 98 $ 655 room=.
+-> e
+T 225 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 3) HP 28/28 MP 0/0 Hu 97 $ 655 room=.
+-> l
+T 226 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 3) HP 28/28 MP 0/0 Hu 97 $ 655 room=.
+-> s
+T 227 mode=garden_mode         Beleg Skywatcher(elf) F2@( 5, 4) HP 28/28 MP 0/0 Hu 96 $ 655 room=G
+-> h
+T 228 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 4) HP 28/28 MP 0/0 Hu 96 $ 655 room=.
+-> l
+T 229 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 4) HP 28/28 MP 0/0 Hu 96 $ 655 room=.
+-> s
+T 230 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 5) HP 28/28 MP 0/0 Hu 95 $ 655 room=.
+-> l
+T 231 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 5) HP 28/28 MP 0/0 Hu 95 $ 655 room=.
+-> s
+T 232 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 6) HP 28/28 MP 0/0 Hu 94 $ 655 room=.
+-> l
+T 233 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 6) HP 28/28 MP 0/0 Hu 94 $ 655 room=.
+-> e
+T 234 mode=chest_mode          Beleg Skywatcher(elf) F2@( 6, 6) HP 28/28 MP 0/0 Hu 93 $ 655 room=C
 -> o
-T 574 mode=warp_mode           Beleg Skywatcher(elf) F3@( 4, 1) HP 42/42 MP 0/0 Hu 76 $ 69 room=W
+T 235 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 28/28 MP 0/0 Hu 93 $ 655 room=.
+-> l
+T 236 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 6) HP 28/28 MP 0/0 Hu 93 $ 655 room=.
+-> s
+T 237 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 7) HP 28/28 MP 0/0 Hu 92 $ 655 room=.
+-> l
+T 238 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 7) HP 28/28 MP 0/0 Hu 92 $ 655 room=.
+-> s
+T 239 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 8) HP 28/28 MP 0/0 Hu 91 $ 655 room=.
+-> l
+T 240 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 8) HP 28/28 MP 0/0 Hu 91 $ 655 room=.
+-> w
+T 241 mode=library_mode        Beleg Skywatcher(elf) F2@( 5, 8) HP 28/28 MP 0/0 Hu 90 $ 655 room=L
+-> r
+T 242 mode=library_read_decision_mode Beleg Skywatcher(elf) F2@( 5, 8) HP 28/28 MP 0/0 Hu 90 $ 655 room=L
 -> y
-T 575 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 1) HP 42/42 MP 0/0 Hu 76 $ 69 room=W
--> l
-T 576 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 1) HP 42/42 MP 0/0 Hu 76 $ 69 room=W
+T 243 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 8) HP 28/28 MP 0/0 Hu 90 $ 830 room=.
+-> n
+T 244 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 7) HP 20/28 MP 0/0 Hu 89 $ 830 room=.
+-> n
+T 245 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 6) HP 13/28 MP 0/0 Hu 88 $ 830 room=.
+-> w
+T 246 mode=shrine_mode         Beleg Skywatcher(elf) F2@( 4, 6) HP 5/28 MP 0/0 Hu 87 $ 830 room=F
+-> p
+T 247 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 6) HP 5/28 MP 0/0 Hu 87 $ 830 room=.
+-> i
+T 248 mode=inventory           Beleg Skywatcher(elf) F2@( 4, 6) HP 5/28 MP 0/0 Hu 87 $ 830 room=.
+-> u4
+T 249 mode=inventory           Beleg Skywatcher(elf) F2@( 4, 6) HP 28/28 MP 0/0 Hu 87 $ 830 room=.
+-> x
+T 250 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 6) HP 28/28 MP 0/0 Hu 87 $ 830 room=.
 -> s
-T 577 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 42/42 MP 0/0 Hu 75 $ 69 room=.
+T 251 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 7) HP 21/28 MP 0/0 Hu 86 $ 830 room=.
+-> n
+T 252 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 6) HP 21/28 MP 0/0 Hu 85 $ 830 room=.
+-> w
+T 253 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 6) HP 21/28 MP 0/0 Hu 84 $ 830 room=.
+-> n
+T 254 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 5) HP 21/28 MP 0/0 Hu 83 $ 830 room=.
+-> n
+T 255 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 4) HP 22/28 MP 0/0 Hu 82 $ 830 room=.
+-> i
+T 256 mode=inventory           Beleg Skywatcher(elf) F2@( 3, 4) HP 22/28 MP 0/0 Hu 82 $ 830 room=.
+-> u4
+T 257 mode=inventory           Beleg Skywatcher(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 82 $ 830 room=.
+-> x
+T 258 mode=game_loop           Beleg Skywatcher(elf) F2@( 3, 4) HP 28/28 MP 0/0 Hu 82 $ 830 room=.
+-> e
+T 259 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 4) HP 28/28 MP 0/0 Hu 81 $ 830 room=.
+-> n
+T 260 mode=game_loop           Beleg Skywatcher(elf) F2@( 4, 3) HP 28/28 MP 0/0 Hu 80 $ 830 room=.
+-> e
+T 261 mode=game_loop           Beleg Skywatcher(elf) F2@( 5, 3) HP 28/28 MP 0/0 Hu 79 $ 830 room=.
+-> e
+T 262 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 3) HP 28/28 MP 0/0 Hu 78 $ 830 room=.
+-> e
+T 263 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 3) HP 28/28 MP 0/0 Hu 77 $ 830 room=.
+-> e
+T 264 mode=garden_mode         Beleg Skywatcher(elf) F2@( 8, 3) HP 28/28 MP 0/0 Hu 76 $ 830 room=G
+-> h
+T 265 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 3) HP 28/28 MP 0/0 Hu 76 $ 830 room=.
+-> n
+T 266 mode=dungeon_mode        Beleg Skywatcher(elf) F2@( 8, 2) HP 28/28 MP 0/0 Hu 75 $ 830 room=N
+-> u
+T 267 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 2) HP 28/28 MP 0/0 Hu 75 $ 830 room=N
+-> e
+T 268 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 2) HP 28/28 MP 0/0 Hu 74 $ 830 room=.
 -> s
-T 578 mode=pool_mode           Beleg Skywatcher(elf) F3@( 4, 3) HP 42/42 MP 0/0 Hu 74 $ 69 room=P
+T 269 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 3) HP 28/28 MP 0/0 Hu 73 $ 830 room=.
+-> s
+T 270 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 4) HP 28/28 MP 0/0 Hu 72 $ 830 room=.
+-> e
+T 271 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 4) HP 28/28 MP 0/0 Hu 71 $ 830 room=.
+-> s
+T 272 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 5) HP 28/28 MP 0/0 Hu 70 $ 830 room=.
+-> e
+T 273 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 5) HP 28/28 MP 0/0 Hu 69 $ 830 room=.
+-> s
+T 274 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 6) HP 28/28 MP 0/0 Hu 68 $ 830 room=.
+-> s
+T 275 mode=game_loop           Beleg Skywatcher(elf) F2@(11, 7) HP 28/28 MP 0/0 Hu 67 $ 830 room=.
+-> w
+T 276 mode=game_loop           Beleg Skywatcher(elf) F2@(10, 7) HP 28/28 MP 0/0 Hu 66 $ 830 room=.
+-> w
+T 277 mode=game_loop           Beleg Skywatcher(elf) F2@( 9, 7) HP 28/28 MP 0/0 Hu 65 $ 830 room=.
+-> w
+T 278 mode=pool_mode           Beleg Skywatcher(elf) F2@( 8, 7) HP 28/28 MP 0/0 Hu 64 $ 830 room=P
 -> dr
-T 579 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 42/42 MP 0/0 Hu 74 $ 69 room=.
+T 279 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 7) HP 28/26 MP 0/0 Hu 64 $ 830 room=.
+-> s
+T 280 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 8) HP 28/26 MP 0/0 Hu 63 $ 830 room=.
 -> l
-T 580 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 42/42 MP 0/0 Hu 74 $ 69 room=.
--> e
-T 581 mode=combat_mode         Beleg Skywatcher(elf) F3@( 5, 3) HP 42/42 MP 0/0 Hu 73 $ 69 room=M vs Wight(L2 HP40/40)
--> a
-T 582 mode=combat_mode         Beleg Skywatcher(elf) F3@( 5, 3) HP 42/42 MP 0/0 Hu 73 $ 69 room=M vs Wight(L2 HP40/40)
--> a
-T 583 mode=combat_mode         Beleg Skywatcher(elf) F3@( 5, 3) HP 35/42 MP 0/0 Hu 73 $ 69 room=M vs Wight(L2 HP18/40)
--> a
-T 584 mode=combat_mode         Beleg Skywatcher(elf) F3@( 5, 3) HP 35/42 MP 0/0 Hu 73 $ 69 room=M vs Wight(L2 HP18/40)
--> a
-T 585 mode=combat_victory      Beleg Skywatcher(elf) F3@( 5, 3) HP 34/42 MP 0/0 Hu 73 $ 72 room=.
--> back
-T 586 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 34/42 MP 0/0 Hu 73 $ 72 room=.
--> n
-T 587 mode=combat_mode         Beleg Skywatcher(elf) F3@( 5, 2) HP 34/42 MP 0/0 Hu 72 $ 72 room=M vs Spore Puff(L2 HP18/18)
--> a
-T 588 mode=combat_mode         Beleg Skywatcher(elf) F3@( 5, 2) HP 34/42 MP 0/0 Hu 72 $ 72 room=M vs Spore Puff(L2 HP18/18)
--> a
-T 589 mode=combat_mode         Beleg Skywatcher(elf) F3@( 5, 2) HP 33/42 MP 0/0 Hu 72 $ 72 room=M vs Spore Puff(L2 HP18/18)
--> a
-T 590 mode=combat_victory      Beleg Skywatcher(elf) F3@( 5, 2) HP 32/42 MP 0/0 Hu 72 $ 78 room=.
--> back
-T 591 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 32/42 MP 0/0 Hu 72 $ 78 room=.
--> n
-T 592 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 1) HP 32/42 MP 0/0 Hu 71 $ 78 room=.
--> s
-T 593 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 32/42 MP 0/0 Hu 70 $ 78 room=.
+T 281 mode=game_loop           Beleg Skywatcher(elf) F2@( 8, 8) HP 28/26 MP 0/0 Hu 63 $ 830 room=.
 -> w
-T 594 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 33/42 MP 0/0 Hu 69 $ 78 room=.
--> s
-T 595 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 33/42 MP 0/0 Hu 68 $ 78 room=.
--> e
-T 596 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 33/42 MP 0/0 Hu 67 $ 78 room=.
--> i
-T 597 mode=inventory           Beleg Skywatcher(elf) F3@( 5, 3) HP 33/42 MP 0/0 Hu 67 $ 78 room=.
--> u9
-T 598 mode=inventory           Beleg Skywatcher(elf) F3@( 5, 3) HP 42/42 MP 0/0 Hu 67 $ 78 room=.
--> x
-T 599 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 42/42 MP 0/0 Hu 67 $ 78 room=.
--> e
-T 600 mode=combat_mode         Beleg Skywatcher(elf) F3@( 6, 3) HP 42/42 MP 0/0 Hu 66 $ 78 room=M vs Gnoll(L2 HP32/32)
--> f
-T 601 mode=flee_direction_mode Beleg Skywatcher(elf) F3@( 6, 3) HP 42/42 MP 0/0 Hu 66 $ 78 room=M
--> w
-T 602 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 42/42 MP 0/0 Hu 66 $ 78 room=.
--> n
-T 603 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 42/42 MP 0/0 Hu 65 $ 78 room=.
--> w
-T 604 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 42/42 MP 0/0 Hu 64 $ 78 room=.
--> s
-T 605 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 42/42 MP 0/0 Hu 63 $ 78 room=.
--> w
-T 606 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 42/42 MP 0/0 Hu 62 $ 78 room=.
--> s
-T 607 mode=combat_mode         Beleg Skywatcher(elf) F3@( 3, 4) HP 42/42 MP 0/0 Hu 61 $ 78 room=M vs Bugbear(L2 HP55/55)
--> a
-T 608 mode=combat_mode         Beleg Skywatcher(elf) F3@( 3, 4) HP 41/42 MP 0/0 Hu 61 $ 78 room=M vs Bugbear(L2 HP33/55)
--> f
-T 609 mode=flee_direction_mode Beleg Skywatcher(elf) F3@( 3, 4) HP 40/42 MP 0/0 Hu 61 $ 78 room=M
--> n
-T 610 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 40/42 MP 0/0 Hu 61 $ 78 room=.
--> n
-T 611 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 40/42 MP 0/0 Hu 60 $ 78 room=.
--> w
-T 612 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 40/42 MP 0/0 Hu 59 $ 78 room=.
--> w
-T 613 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 40/42 MP 0/0 Hu 58 $ 78 room=.
--> n
-T 614 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 40/42 MP 0/0 Hu 57 $ 78 room=U
--> s
-T 615 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 40/42 MP 0/0 Hu 56 $ 78 room=.
--> s
-T 616 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 3) HP 40/42 MP 0/0 Hu 55 $ 78 room=V
--> n
-T 617 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 40/42 MP 0/0 Hu 54 $ 78 room=.
--> e
-T 618 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 40/42 MP 0/0 Hu 53 $ 78 room=.
--> e
-T 619 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 40/42 MP 0/0 Hu 52 $ 78 room=.
--> s
-T 620 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 40/42 MP 0/0 Hu 51 $ 78 room=.
--> s
-T 621 mode=combat_mode         Beleg Skywatcher(elf) F3@( 3, 4) HP 40/42 MP 0/0 Hu 50 $ 78 room=M vs Bugbear(L2 HP33/55)
--> a
-T 622 mode=combat_mode         Beleg Skywatcher(elf) F3@( 3, 4) HP 39/42 MP 0/0 Hu 50 $ 78 room=M vs Bugbear(L2 HP11/55)
--> a
-T 623 mode=combat_victory      Beleg Skywatcher(elf) F3@( 3, 4) HP 39/52 MP 0/0 Hu 50 $ 81 room=.
--> back
-T 624 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 4) HP 39/52 MP 0/0 Hu 50 $ 81 room=.
--> n
-T 625 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 39/52 MP 0/0 Hu 49 $ 81 room=.
--> i
-T 626 mode=inventory           Beleg Skywatcher(elf) F3@( 3, 3) HP 39/52 MP 0/0 Hu 49 $ 81 room=.
--> u9
-T 627 mode=inventory           Beleg Skywatcher(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 49 $ 81 room=.
--> x
-T 628 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 49 $ 81 room=.
--> i
-T 629 mode=inventory           Beleg Skywatcher(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 49 $ 81 room=.
--> eat1
-T 630 mode=inventory           Beleg Skywatcher(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 55 $ 81 room=.
--> x
-T 631 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 55 $ 81 room=.
--> e
-T 632 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 52/52 MP 0/0 Hu 54 $ 81 room=.
--> e
-T 633 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 52/52 MP 0/0 Hu 53 $ 81 room=.
--> n
-T 634 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 52/52 MP 0/0 Hu 52 $ 81 room=.
--> n
-T 635 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 1) HP 52/52 MP 0/0 Hu 51 $ 81 room=.
--> s
-T 636 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 52/52 MP 0/0 Hu 50 $ 81 room=.
--> w
-T 637 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 52/52 MP 0/0 Hu 49 $ 81 room=.
--> w
-T 638 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 52/52 MP 0/0 Hu 48 $ 81 room=.
--> w
-T 639 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 52/52 MP 0/0 Hu 47 $ 81 room=.
--> w
-T 640 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 52/52 MP 0/0 Hu 46 $ 81 room=.
--> n
-T 641 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 52/52 MP 0/0 Hu 45 $ 81 room=U
--> s
-T 642 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 52/52 MP 0/0 Hu 44 $ 81 room=.
--> s
-T 643 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 3) HP 52/52 MP 0/0 Hu 43 $ 81 room=V
--> n
-T 644 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 52/52 MP 0/0 Hu 42 $ 81 room=.
--> e
-T 645 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 52/52 MP 0/0 Hu 41 $ 81 room=.
--> e
-T 646 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 52/52 MP 0/0 Hu 40 $ 81 room=.
--> s
-T 647 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 39 $ 81 room=.
--> s
-T 648 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 4) HP 52/52 MP 0/0 Hu 38 $ 81 room=.
--> n
-T 649 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 52/52 MP 0/0 Hu 37 $ 81 room=.
--> e
-T 650 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 52/52 MP 0/0 Hu 36 $ 81 room=.
--> e
-T 651 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 52/52 MP 0/0 Hu 35 $ 81 room=.
--> e
-T 652 mode=combat_mode         Beleg Skywatcher(elf) F3@( 6, 3) HP 52/52 MP 0/0 Hu 34 $ 81 room=M vs Gnoll(L2 HP32/32)
--> a
-T 653 mode=combat_mode         Beleg Skywatcher(elf) F3@( 6, 3) HP 51/52 MP 0/0 Hu 34 $ 81 room=M vs Gnoll(L2 HP10/32)
--> f
-T 654 mode=flee_direction_mode Beleg Skywatcher(elf) F3@( 6, 3) HP 51/52 MP 0/0 Hu 34 $ 81 room=M
--> w
-T 655 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 51/52 MP 0/0 Hu 34 $ 81 room=.
--> n
-T 656 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 51/52 MP 0/0 Hu 33 $ 81 room=.
--> n
-T 657 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 1) HP 51/52 MP 0/0 Hu 32 $ 81 room=.
--> s
-T 658 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 51/52 MP 0/0 Hu 31 $ 81 room=.
--> w
-T 659 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 51/52 MP 0/0 Hu 30 $ 81 room=.
--> s
-T 660 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 51/52 MP 0/0 Hu 29 $ 81 room=.
--> w
-T 661 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 51/52 MP 0/0 Hu 28 $ 81 room=.
--> s
-T 662 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 4) HP 51/52 MP 0/0 Hu 27 $ 81 room=.
--> n
-T 663 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 51/52 MP 0/0 Hu 26 $ 81 room=.
--> n
-T 664 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 51/52 MP 0/0 Hu 25 $ 81 room=.
--> w
-T 665 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 51/52 MP 0/0 Hu 24 $ 81 room=.
--> w
-T 666 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 51/52 MP 0/0 Hu 23 $ 81 room=.
--> n
-T 667 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 51/52 MP 0/0 Hu 22 $ 81 room=U
--> s
-T 668 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 51/52 MP 0/0 Hu 21 $ 81 room=.
--> s
-T 669 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 3) HP 51/52 MP 0/0 Hu 20 $ 81 room=V
--> n
-T 670 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 51/52 MP 0/0 Hu 19 $ 81 room=.
--> e
-T 671 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 51/52 MP 0/0 Hu 18 $ 81 room=.
--> e
-T 672 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 51/52 MP 0/0 Hu 17 $ 81 room=.
--> s
-T 673 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 51/52 MP 0/0 Hu 16 $ 81 room=.
--> s
-T 674 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 4) HP 51/52 MP 0/0 Hu 15 $ 81 room=.
--> n
-T 675 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 51/52 MP 0/0 Hu 14 $ 81 room=.
--> e
-T 676 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 51/52 MP 0/0 Hu 13 $ 81 room=.
--> e
-T 677 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 51/52 MP 0/0 Hu 12 $ 81 room=.
--> e
-T 678 mode=combat_mode         Beleg Skywatcher(elf) F3@( 6, 3) HP 51/52 MP 0/0 Hu 11 $ 81 room=M vs Gnoll(L2 HP10/32)
--> a
-T 679 mode=combat_victory      Beleg Skywatcher(elf) F3@( 6, 3) HP 51/52 MP 0/0 Hu 11 $ 99 room=.
--> back
-T 680 mode=game_loop           Beleg Skywatcher(elf) F3@( 6, 3) HP 51/52 MP 0/0 Hu 11 $ 99 room=.
--> i
-T 681 mode=inventory           Beleg Skywatcher(elf) F3@( 6, 3) HP 51/52 MP 0/0 Hu 11 $ 99 room=.
--> eat1
-T 682 mode=inventory           Beleg Skywatcher(elf) F3@( 6, 3) HP 51/52 MP 0/0 Hu 18 $ 99 room=.
--> x
-T 683 mode=game_loop           Beleg Skywatcher(elf) F3@( 6, 3) HP 51/52 MP 0/0 Hu 18 $ 99 room=.
+T 282 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 28/26 MP 0/0 Hu 62 $ 830 room=.
 -> l
-T 684 mode=game_loop           Beleg Skywatcher(elf) F3@( 6, 3) HP 51/52 MP 0/0 Hu 18 $ 99 room=.
--> w
-T 685 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 51/52 MP 0/0 Hu 17 $ 99 room=.
--> n
-T 686 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 51/52 MP 0/0 Hu 16 $ 99 room=.
--> n
-T 687 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 1) HP 51/52 MP 0/0 Hu 15 $ 99 room=.
+T 283 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 8) HP 28/26 MP 0/0 Hu 62 $ 830 room=.
 -> s
-T 688 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 51/52 MP 0/0 Hu 14 $ 99 room=.
+T 284 mode=game_loop           Beleg Skywatcher(elf) F2@( 7, 9) HP 28/26 MP 0/0 Hu 61 $ 830 room=.
 -> w
-T 689 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 51/52 MP 0/0 Hu 13 $ 99 room=.
--> w
-T 690 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 51/52 MP 0/0 Hu 12 $ 99 room=.
--> n
-T 691 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 1) HP 51/52 MP 0/0 Hu 11 $ 99 room=.
+T 285 mode=game_loop           Beleg Skywatcher(elf) F2@( 6, 9) HP 28/26 MP 0/0 Hu 60 $ 830 room=.
 -> s
-T 692 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 51/52 MP 0/0 Hu 10 $ 99 room=.
--> w
-T 693 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 51/52 MP 0/0 Hu  9 $ 99 room=.
--> w
-T 694 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 51/52 MP 0/0 Hu  8 $ 99 room=.
--> n
-T 695 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 51/52 MP 0/0 Hu  7 $ 99 room=U
+T 286 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,10) HP 28/26 MP 0/0 Hu 59 $ 830 room=.
 -> s
-T 696 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 51/52 MP 0/0 Hu  6 $ 99 room=.
+T 287 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,11) HP 28/26 MP 0/0 Hu 58 $ 830 room=.
 -> s
-T 697 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 3) HP 51/52 MP 0/0 Hu  5 $ 99 room=V
--> n
-T 698 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 51/52 MP 0/0 Hu  4 $ 99 room=.
+T 288 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,12) HP 28/26 MP 0/0 Hu 57 $ 830 room=.
+-> s
+T 289 mode=chest_mode          Beleg Skywatcher(elf) F2@( 6,13) HP 28/26 MP 0/0 Hu 56 $ 830 room=C
+-> o
+T 290 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,13) HP 28/26 MP 0/0 Hu 56 $ 870 room=.
+-> l
+T 291 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,13) HP 28/26 MP 0/0 Hu 56 $ 870 room=.
+-> s
+T 292 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,14) HP 28/26 MP 0/0 Hu 55 $ 870 room=.
+-> l
+T 293 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,14) HP 28/26 MP 0/0 Hu 55 $ 870 room=.
 -> e
-T 699 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 51/52 MP 0/0 Hu  3 $ 99 room=.
+T 294 mode=game_loop           Beleg Skywatcher(elf) F2@( 7,14) HP 28/26 MP 0/0 Hu 54 $ 870 room=.
 -> e
-T 700 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 51/52 MP 0/0 Hu  2 $ 99 room=.
+T 295 mode=game_loop           Beleg Skywatcher(elf) F2@( 8,14) HP 28/26 MP 0/0 Hu 53 $ 870 room=.
 -> s
-T 701 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 51/52 MP 0/0 Hu  1 $ 99 room=.
--> e
-T 702 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 49/52 MP 0/0 Hu  0 $ 99 room=.
--> e
-T 703 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 47/52 MP 0/0 Hu  0 $ 99 room=.
--> n
-T 704 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 45/52 MP 0/0 Hu  0 $ 99 room=.
--> n
-T 705 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 1) HP 43/52 MP 0/0 Hu  0 $ 99 room=.
--> s
-T 706 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 41/52 MP 0/0 Hu  0 $ 99 room=.
+T 296 mode=library_mode        Beleg Skywatcher(elf) F2@( 8,15) HP 28/26 MP 0/0 Hu 52 $ 870 room=L
+-> r
+T 297 mode=library_read_decision_mode Beleg Skywatcher(elf) F2@( 8,15) HP 28/26 MP 0/0 Hu 52 $ 870 room=L
+-> y
+T 298 mode=game_loop           Beleg Skywatcher(elf) F2@( 8,15) HP 28/26 MP 0/0 Hu 52 $ 870 room=.
+-> l
+T 299 mode=game_loop           Beleg Skywatcher(elf) F2@( 8,15) HP 28/26 MP 0/0 Hu 52 $ 870 room=.
 -> w
-T 707 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 39/52 MP 0/0 Hu  0 $ 99 room=.
--> s
-T 708 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 37/52 MP 0/0 Hu  0 $ 99 room=.
+T 300 mode=game_loop           Beleg Skywatcher(elf) F2@( 7,15) HP 28/26 MP 0/0 Hu 51 $ 870 room=.
 -> w
-T 709 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 35/52 MP 0/0 Hu  0 $ 99 room=.
--> s
-T 710 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 4) HP 33/52 MP 0/0 Hu  0 $ 99 room=.
+T 301 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,15) HP 28/26 MP 0/0 Hu 50 $ 870 room=.
 -> n
-T 711 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 31/52 MP 0/0 Hu  0 $ 99 room=.
--> n
-T 712 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 29/52 MP 0/0 Hu  0 $ 99 room=.
--> w
-T 713 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 27/52 MP 0/0 Hu  0 $ 99 room=.
--> w
-T 714 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 25/52 MP 0/0 Hu  0 $ 99 room=.
--> n
-T 715 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 23/52 MP 0/0 Hu  0 $ 99 room=U
--> s
-T 716 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 21/52 MP 0/0 Hu  0 $ 99 room=.
--> s
-T 717 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 3) HP 19/52 MP 0/0 Hu  0 $ 99 room=V
--> n
-T 718 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 17/52 MP 0/0 Hu  0 $ 99 room=.
--> e
-T 719 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 15/52 MP 0/0 Hu  0 $ 99 room=.
+T 302 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,14) HP 28/26 MP 0/0 Hu 49 $ 870 room=.
 -> i
-T 720 mode=inventory           Beleg Skywatcher(elf) F3@( 2, 2) HP 15/52 MP 0/0 Hu  0 $ 99 room=.
--> u9
-T 721 mode=inventory           Beleg Skywatcher(elf) F3@( 2, 2) HP 45/52 MP 0/0 Hu  0 $ 99 room=.
+T 303 mode=inventory           Beleg Skywatcher(elf) F2@( 6,14) HP 28/26 MP 0/0 Hu 49 $ 870 room=.
+-> eat3
+T 304 mode=inventory           Beleg Skywatcher(elf) F2@( 6,14) HP 28/26 MP 0/0 Hu 67 $ 870 room=.
 -> x
-T 722 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 45/52 MP 0/0 Hu  0 $ 99 room=.
+T 305 mode=game_loop           Beleg Skywatcher(elf) F2@( 6,14) HP 28/26 MP 0/0 Hu 67 $ 870 room=.
 -> e
-T 723 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 43/52 MP 0/0 Hu  0 $ 99 room=.
+T 306 mode=game_loop           Beleg Skywatcher(elf) F2@( 7,14) HP 28/26 MP 0/0 Hu 66 $ 870 room=.
+-> e
+T 307 mode=game_loop           Beleg Skywatcher(elf) F2@( 8,14) HP 28/26 MP 0/0 Hu 65 $ 870 room=.
+-> e
+T 308 mode=game_loop           Beleg Skywatcher(elf) F2@( 9,14) HP 28/26 MP 0/0 Hu 64 $ 870 room=.
+-> e
+T 309 mode=game_loop           Beleg Skywatcher(elf) F2@(10,14) HP 28/26 MP 0/0 Hu 63 $ 870 room=.
+-> e
+T 310 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 870 room=V
+-> r1
+T 311 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 843 room=V
+-> b13
+T 312 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 813 room=V
+-> b13
+T 313 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 798 room=V
+-> b13
+T 314 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 788 room=V
+-> b3
+T 315 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 738 room=V
+-> b3
+T 316 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 688 room=V
+-> b3
+T 317 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 658 room=V
+-> b3
+T 318 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 628 room=V
+-> b8
+T 319 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 478 room=V
+-> b6
+T 320 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 328 room=V
+-> b6
+T 321 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 228 room=V
+-> id12
+T 322 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 153 room=V
+-> id13
+T 323 mode=vendor_shop         Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 103 room=V
+-> x
+T 324 mode=game_loop           Beleg Skywatcher(elf) F2@(11,14) HP 28/26 MP 0/0 Hu 62 $ 103 room=V
 -> n
-T 724 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 1) HP 41/52 MP 0/0 Hu  0 $ 99 room=.
--> s
-T 725 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 39/52 MP 0/0 Hu  0 $ 99 room=.
--> s
-T 726 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 3) HP 37/52 MP 0/0 Hu  0 $ 99 room=.
--> e
-T 727 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 3) HP 35/52 MP 0/0 Hu  0 $ 99 room=.
--> e
-T 728 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 3) HP 33/52 MP 0/0 Hu  0 $ 99 room=.
--> n
-T 729 mode=game_loop           Beleg Skywatcher(elf) F3@( 5, 2) HP 31/52 MP 0/0 Hu  0 $ 99 room=.
--> w
-T 730 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 29/52 MP 0/0 Hu  0 $ 99 room=.
+T 325 mode=game_loop           Beleg Skywatcher(elf) F2@(11,13) HP 28/26 MP 0/0 Hu 61 $ 103 room=.
 -> l
-T 731 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 29/52 MP 0/0 Hu  0 $ 99 room=.
--> w
-T 732 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 27/52 MP 0/0 Hu  0 $ 99 room=.
--> n
-T 733 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 1) HP 25/52 MP 0/0 Hu  0 $ 99 room=.
--> s
-T 734 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 23/52 MP 0/0 Hu  0 $ 99 room=.
--> w
-T 735 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 21/52 MP 0/0 Hu  0 $ 99 room=.
--> w
-T 736 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 19/52 MP 0/0 Hu  0 $ 99 room=.
--> n
-T 737 mode=stairs_up_mode      Beleg Skywatcher(elf) F3@( 1, 1) HP 17/52 MP 0/0 Hu  0 $ 99 room=U
--> s
-T 738 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 15/52 MP 0/0 Hu  0 $ 99 room=.
--> s
-T 739 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 3) HP 13/52 MP 0/0 Hu  0 $ 99 room=V
--> n
-T 740 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 11/52 MP 0/0 Hu  0 $ 99 room=.
+T 326 mode=game_loop           Beleg Skywatcher(elf) F2@(11,13) HP 28/26 MP 0/0 Hu 61 $ 103 room=.
+-> e
+T 327 mode=chest_mode          Beleg Skywatcher(elf) F2@(12,13) HP 28/26 MP 0/0 Hu 60 $ 103 room=C
+-> o
+T 328 mode=game_loop           Beleg Skywatcher(elf) F2@(12,13) HP 14/26 MP 0/0 Hu 60 $ 103 room=.
 -> l
-T 741 mode=game_loop           Beleg Skywatcher(elf) F3@( 1, 2) HP 11/52 MP 0/0 Hu  0 $ 99 room=.
--> e
-T 742 mode=game_loop           Beleg Skywatcher(elf) F3@( 2, 2) HP 9/52 MP 0/0 Hu  0 $ 99 room=.
--> e
-T 743 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 7/52 MP 0/0 Hu  0 $ 99 room=.
+T 329 mode=game_loop           Beleg Skywatcher(elf) F2@(12,13) HP 14/26 MP 0/0 Hu 60 $ 103 room=.
 -> n
-T 744 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 1) HP 5/52 MP 0/0 Hu  0 $ 99 room=.
--> s
-T 745 mode=game_loop           Beleg Skywatcher(elf) F3@( 3, 2) HP 3/52 MP 0/0 Hu  0 $ 99 room=.
+T 330 mode=game_loop           Beleg Skywatcher(elf) F2@(12,12) HP 14/26 MP 0/0 Hu 59 $ 103 room=.
+-> l
+T 331 mode=game_loop           Beleg Skywatcher(elf) F2@(12,12) HP 14/26 MP 0/0 Hu 59 $ 103 room=.
+-> n
+T 332 mode=game_loop           Beleg Skywatcher(elf) F2@(12,11) HP 14/26 MP 0/0 Hu 58 $ 103 room=.
+-> l
+T 333 mode=game_loop           Beleg Skywatcher(elf) F2@(12,11) HP 14/26 MP 0/0 Hu 58 $ 103 room=.
+-> n
+T 334 mode=chest_mode          Beleg Skywatcher(elf) F2@(12,10) HP 14/26 MP 0/0 Hu 57 $ 103 room=C
+-> o
+T 335 mode=game_loop           Beleg Skywatcher(elf) F2@(12,10) HP 14/26 MP 0/0 Hu 57 $ 103 room=.
+-> l
+T 336 mode=game_loop           Beleg Skywatcher(elf) F2@(12,10) HP 14/26 MP 0/0 Hu 57 $ 103 room=.
 -> e
-T 746 mode=game_loop           Beleg Skywatcher(elf) F3@( 4, 2) HP 1/52 MP 0/0 Hu  0 $ 99 room=.
--> e
-T 747 mode=death_screen        Beleg Skywatcher(elf) F3@( 5, 2) HP 0/52 MP 0/0 Hu  0 $ 99 room=.
+T 337 mode=chest_mode          Beleg Skywatcher(elf) F2@(13,10) HP 14/26 MP 0/0 Hu 56 $ 103 room=C
+-> o
+T 338 mode=death_screen        Beleg Skywatcher(elf) F2@(13,10) HP 0/26 MP 0/0 Hu 56 $ 103 room=C
 
-=== run finished: turns=747 floor=3 hp=0/52 gold=99 alive=False mode=death_screen ===
+=== run finished: turns=338 floor=2 hp=0/26 gold=103 alive=False mode=death_screen ===
     status=dead
 
 >>> Report: /tmp/pt_hunt/00088_elf.html
