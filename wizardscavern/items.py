@@ -2506,14 +2506,20 @@ def generate_vendor_inventory(floor_level, room):
     #   F2+: Salted Jerky.
     #   F3+: Cooking Kit (original game tier; restored after a
     #        brief F4 experiment).
+    # NB: floor_level here is character.z (0-indexed). F2 == z=1
+    # and F3 == z=2. Without this correction the jerky tier fired
+    # at F3+ and the cooking-kit tier at F4+ -- 160-run audit found
+    # 0/160 runs with either item stocked. 109/160 (68%) of those
+    # runs died of starvation, dominated by F1-F3 deaths where the
+    # cooking kit would have multiplied the meat economy.
     rations = Food("Rations", "Standard travel rations.", value=10, level=0, nutrition=50, count=1)
     inventory.append(_create_item_copy(rations))
     iron_rations = Food("Iron Rations", "Military-grade rations. Tasteless but highly nutritious.", value=30, level=3, nutrition=70, count=1)
     inventory.append(_create_item_copy(iron_rations))
-    if floor_level >= 2:
+    if floor_level >= 1:  # F2+
         jerky = Food("Salted Jerky", "Dried meat. Salty and chewy.", value=15, level=1, nutrition=35, count=1)
         inventory.append(_create_item_copy(jerky))
-    if floor_level >= 3:
+    if floor_level >= 2:  # F3+
         cooking_kit = CookingKit()
         inventory.append(cooking_kit)
 

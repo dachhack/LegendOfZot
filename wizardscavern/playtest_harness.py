@@ -536,14 +536,23 @@ def new_game(seed=None, playtest_mode=False, name="Tester",
         ))
         # User-requested balance pass: Iron Rations in starter pack
         # to extend the early-floor food window (70 nutrition each
-        # vs 50 for plain Rations). Cooking Kit deliberately NOT in
-        # starter -- agents have to reach a F4+ vendor to earn it,
-        # so cooking is a mid-game depth bonus, not a starter perk.
+        # vs 50 for plain Rations).
         pc.inventory.add_item_quiet(_Food(
             "Iron Rations",
             "Military-grade rations. Tasteless but highly nutritious.",
             value=30, level=3, nutrition=70, count=2,
         ))
+        # Cooking Kit also in the starter pack. Earlier balance pass
+        # framed cooking as a "mid-game depth bonus" gated on a F3+
+        # vendor, but the 160-seed audit showed 40% of runs never
+        # visit a vendor at all and 67% die starving. Mirror the
+        # UI starting-shop change in vendor.py that put a kit on
+        # the F1 starter inventory: every fresh agent gets one
+        # auto-cook tool in the bag from turn 0. The kit is heavy
+        # (120g value, but free in the starter) and pays itself
+        # off after ~2 monster meat drops.
+        from .items import CookingKit as _CookingKit
+        pc.inventory.add_item_quiet(_CookingKit())
         for _ in range(4):
             pc.inventory.add_item_quiet(Potion(
                 "Minor Healing Potion",
@@ -2132,6 +2141,7 @@ def smart_policy(obs, rng, use_lantern=True):
     # 1-based position in the edible-items filter (which includes rotten
     # meat, so we count both 'food' and 'food_rotten' but prefer fresh).
     food_slot = None
+    meat_slot = None  # first meat (rot_timer is not None) in the edible list
     # `urgent_meat` is set when we hold a fresh meat with a low rot timer.
     # Raw meat lasts 30 moves, cooked 100, preserved 200 -- eating slightly
     # before rot lets the agent stretch its food budget instead of letting
@@ -2144,6 +2154,16 @@ def smart_policy(obs, rng, use_lantern=True):
     for i in inv:
         if i["category"] in ("food", "food_rotten"):
             edible_count += 1
+            is_meat = i.get("rot_timer") is not None
+            # Prefer meat over rations for the routine eat-when-hungry
+            # gate. Rations are vendor-restockable; meat is per-kill
+            # and rots after 30-200 moves. 160-seed audit found
+            # s=666 elf accumulated 114 raw-meat samples + 34 cook
+            # actions but only ATE 2 meats (and 4 rations) before
+            # starving at F2 -- the routine eat picked the first
+            # 'food' (rations) and meat sat until rotten.
+            if is_meat and meat_slot is None:
+                meat_slot = edible_count
             if i["category"] == "food" and food_slot is None:
                 food_slot = edible_count
             # rot_timer is only set on Meat entries (Food rations don't rot).
@@ -2153,6 +2173,8 @@ def smart_policy(obs, rng, use_lantern=True):
                 if urgent_rot is None or rot < urgent_rot:
                     urgent_rot = rot
                     urgent_meat = edible_count
+    # Routine eat prefers meat (perishable) over rations (stable).
+    eat_slot = meat_slot if meat_slot is not None else food_slot
     # Spell-cast gate: the game refuses any cast attempt with
     # "Requires Intelligence > 15" (combat.py:1161) and consumes the
     # turn. Pre-memorised spells in the bag are useless until int
@@ -2452,7 +2474,7 @@ def smart_policy(obs, rng, use_lantern=True):
         # margin remains. User: 'work on balance so some are still
         # alive without looping at the end' -- food efficiency
         # extends the food-clock window proportionally.
-        if hunger < 50 and food_slot:
+        if hunger < 50 and eat_slot:
             return "i"
 
         # Lantern as exploration tool. With fog-of-war on, neighbours
@@ -3333,8 +3355,8 @@ def smart_policy(obs, rng, use_lantern=True):
             proposed = f"e{weapon_upgrade_slot}"
         if proposed is None and armor_upgrade_slot is not None:
             proposed = f"e{armor_upgrade_slot}"
-        if proposed is None and hunger < 80 and food_slot:
-            proposed = f"eat{food_slot}"
+        if proposed is None and hunger < 80 and eat_slot:
+            proposed = f"eat{eat_slot}"
         # Read safe identified scrolls -- one-shot beneficial effects
         # the agent's been hoarding. Skip teleport (random
         # destination, could land in a dangerous spot) and descent
@@ -3813,6 +3835,20 @@ def smart_policy(obs, rng, use_lantern=True):
         # visits and stepped blind into a W.
         if use_lantern and lantern_fuel < 45:
             STOCK["lantern_fuel"] = 6
+
+        # COOKING KIT FIRST: a one-time purchase that quadruples meat
+        # nutrition for the rest of the run AND auto-cooks the entire
+        # raw-meat backlog in a single 'use' action. Without it the
+        # food economy relies entirely on rations and uncooked-meat
+        # spoilage windows -- 67% of the 160-seed grid died of
+        # starvation before the vendor.py stock fix exposed kits to
+        # the dungeon vendor inventory. Skip if already owned (kit
+        # is permanent, no need to stockpile).
+        has_kit = any(i["category"] == "cooking_kit" for i in inv)
+        if not has_kit:
+            for v in vendor_inv:
+                if v["category"] == "cooking_kit" and v["price"] <= gold:
+                    return f"b{v['slot']}"
 
         # RATIONS FIRST: buy EVERY ration the vendor offers, before
         # any other stockpile or magic-item check. User framing:
