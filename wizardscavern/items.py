@@ -2167,21 +2167,33 @@ def process_upgrade_scroll_action(player_character, my_tower, cmd):
                     add_log(f"{COLOR_YELLOW}This item has reached the maximum possible upgrade level!{COLOR_RESET}")
                 return
 
-            # Upgrade probability logic - gets harder at higher levels
-            base_prob = 0.70
+            # Upgrade probability logic - gets harder at higher levels.
+            # User flagged 'pretty high failure rate on upgrade
+            # scrolls' on the 159-seed grid. Bumped each tier by
+            # 10pp and softened the natural-limit penalty
+            # 15pp -> 8pp. Base rate of 80% (was 70%) means a Lv1
+            # agent at INT 8-12 lands the first upgrade at the 90-95%
+            # clamp instead of 79-83%. The diminishing-returns shape
+            # is preserved (still gets harder at +6 / +10 / +15)
+            # but the curve doesn't bite as hard early.
+            base_prob = 0.80
             if chosen_item.upgrade_level >= 15:
-                base_prob = 0.35  # Very hard at +15 and above
+                base_prob = 0.45  # Very hard at +15 and above
             elif chosen_item.upgrade_level >= 10:
-                base_prob = 0.45  # Hard at +10 to +14
+                base_prob = 0.55  # Hard at +10 to +14
             elif chosen_item.upgrade_level >= 6:
-                base_prob = 0.55  # Medium at +6 to +9
+                base_prob = 0.65  # Medium at +6 to +9
             elif chosen_item.upgrade_level >= 3:
-                base_prob = 0.60  # Slightly harder at +3 to +5
-            
-            # Item's own upgrade limit still applies
+                base_prob = 0.70  # Slightly harder at +3 to +5
+
+            # Item's own upgrade limit still applies (softened from
+            # -15pp to -8pp; starter Battleaxe / Dagger sit at
+            # item.level = 0 so even a +1 upgrade trips this gate,
+            # and the steep penalty was the dominant reason early
+            # scrolls fizzled).
             if chosen_item.upgrade_limit:
                 if chosen_item.upgrade_level >= (chosen_item.level + 1):
-                    base_prob -= 0.15  # Penalty for exceeding item's natural limit
+                    base_prob -= 0.08
             
             # Intelligence and level bonuses
             upgrade_prob = base_prob + (player_character.intelligence / 100) + (player_character.level / 100)
