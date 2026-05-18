@@ -3981,6 +3981,18 @@ def smart_policy(obs, rng, use_lantern=True):
             neighbors = obs.get("neighbors") or {}
             recent_descend = set(obs.get("recent_step_set") or [])
             blocked_descend = set(obs.get("blocked_directions") or [])
+            # Stair-island short-circuit: if the only non-wall non-
+            # hazard neighbour is the OTHER stair (U), stepping off D
+            # walks straight onto U where stairs_up_mode then steps
+            # back onto D. Just descend and let the next floor have
+            # a chance. Caught on s=1234 human F3 (1,1)U <-> (2,1)D
+            # ping-pong for 99 turns. Same valve added in stairs_up.
+            has_real_neighbor_down = any(
+                neighbors.get(d) and neighbors.get(d) not in ("#", "U", "D", "M", "W")
+                for d in ("n", "s", "e", "w")
+            )
+            if not has_real_neighbor_down:
+                return "d"
             # Prefer non-recent, non-blocked, non-hazard direction
             # so the agent doesn't immediately walk back onto D the
             # next turn.
@@ -4064,6 +4076,10 @@ def smart_policy(obs, rng, use_lantern=True):
         # or W. Prefer M over W (one fight vs a random teleport),
         # then fall back to a random cardinal as a last resort so we
         # don't hang the policy.
+        # NB: stair-island handling lives entirely in stairs_down_mode
+        # (it presses 'd' to descend past the island). Adding a 'u'
+        # valve here would cancel that fix -- agent oscillates
+        # between F(N) descending and F(N+1) ascending forever.
         for d in ("n", "s", "e", "w"):
             t = neighbors.get(d)
             if t == "M":

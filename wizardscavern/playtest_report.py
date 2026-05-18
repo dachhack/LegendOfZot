@@ -215,6 +215,30 @@ class SpriteRegistry:
         return "\n".join(rules)
 
 
+def _detect_loop_period(actions, min_matches=12):
+    """Given a list of action strings, return the cycle period
+    (1, 2, 3, or 4) if at least `min_matches` of them fit a tight
+    periodic pattern keyed to the tail. Else None.
+
+    Used both for end-of-run stuck classification (called once with
+    the last 20 actions) and the post-hoc episode scan (called per
+    sliding window across the whole run)."""
+    if len(actions) < min_matches:
+        return None
+    for period in (1, 2, 3, 4):
+        if len(actions) < period * 3:  # need at least 3 cycles
+            continue
+        base = actions[-period:]
+        matches = 0
+        for i in range(len(actions)):
+            pos_from_end = len(actions) - 1 - i
+            if actions[i] == base[(period - 1) - (pos_from_end % period)]:
+                matches += 1
+        if matches >= min_matches:
+            return period
+    return None
+
+
 def _sprite_span(registry, pid, size=32, extra_class=""):
     """Emit an inline sprite reference using the registry for dedupe."""
     if not pid:
@@ -257,11 +281,21 @@ class RunReport:
         self.events = []  # [(turn, kind, detail)]
         self.recent_log = []  # rolling buffer of last 60 lines
         self.recent_actions = []  # rolling buffer of last 12 (turn, mode, action)
-        # Longer-window action history just for loop / flatline status
-        # detection. Held as plain action strings so cycle matching
-        # stays cheap. Capped at 40 -- larger than any cycle we care
-        # about catching ("s s s s..." or two-step ping-pong).
-        self._action_history = []  # last 40 action strings
+        # Full per-run action history used for two passes:
+        #   - end-of-run stuck classification (last 20 actions only)
+        #   - post-hoc mid-run loop-episode scan (whole list, at
+        #     finalize time, after the run is over)
+        # Each entry is (turn, mode, action) so the episode reporter
+        # can name the mode the agent got wedged in.
+        self._action_history = []  # [(turn, mode, action)] full run
+        # Mid-run loop episodes found at finalize. Each entry:
+        #   {"start": int, "end": int, "length": int, "period": int,
+        #    "mode": str, "action": str}
+        # Sorted by length descending. Episodes < 50 turns are
+        # filtered out -- the harness's anti-wedge breaks short
+        # ones cheaply; what we care about are the persistent ones
+        # that burn real budget before resolving.
+        self.loop_episodes = []
         self.kills_by_monster = {}  # name -> count
         self.kills_by_floor = {}  # floor -> count
         # Tomb-suspicion log -- floors where the agent fought an undead
@@ -489,12 +523,12 @@ class RunReport:
         self.recent_actions.append((turn, mode, action))
         if len(self.recent_actions) > 12:
             self.recent_actions.pop(0)
-        # Loop-detection buffer. Keep just the action string -- the
-        # cycle check doesn't care about turn or mode.
+        # Full-run action history -- no cap. The whole-run scan at
+        # finalize uses this to find loop episodes the agent
+        # eventually escaped. 5k turns x ~16 bytes per tuple ~ 80KB,
+        # fine for a per-run report buffer.
         if isinstance(action, str):
-            self._action_history.append(action)
-            if len(self._action_history) > 40:
-                self._action_history.pop(0)
+            self._action_history.append((turn, mode, action))
 
     def _categorise_log(self, turn, line, p):
         low = line.lower()
@@ -612,6 +646,12 @@ class RunReport:
         # Stuck only fires when the agent is still alive but has
         # clearly stopped progressing (see _classify_status).
         self.status, self.status_reason = self._classify_status(turns)
+        # Scan the whole run for mid-run loop episodes the agent
+        # eventually escaped. These don't change status (the run
+        # ended fine) but signal a softlock the harness's anti-
+        # wedge had to fight through -- exactly the diagnostic
+        # surface the user asked for ('loops within runs').
+        self.loop_episodes = self._scan_loop_episodes()
 
     def _classify_status(self, turns):
         """Return (status, reason) where status is one of
@@ -697,30 +737,94 @@ class RunReport:
         return "alive", None
 
     def _detect_action_loop(self):
-        """Look at the last 20 actions. If at least 12 of them form
-        a tight period-1/2/3/4 cycle, return that period. Else None.
+        """Look at the last 20 action STRINGS. If at least 12 of them
+        form a tight period-1/2/3/4 cycle, return that period. Else
+        None.
 
         Period-1 = same action repeated (e.g., 'i i i i ...').
         Period-2 = two-action ping-pong ('n s n s ...').
         Periods 3 and 4 cover the longer wander-loops the harness's
         own stuck-on-floor override is designed to break out of."""
-        tail = self._action_history[-20:]
-        if len(tail) < 12:
-            return None
-        for period in (1, 2, 3, 4):
-            if len(tail) < period * 3:  # need at least 3 cycles to be sure
+        actions = [a for (_t, _m, a) in self._action_history[-20:]]
+        return _detect_loop_period(actions, min_matches=12)
+
+    def _scan_loop_episodes(self):
+        """Whole-run pass over self._action_history to find stretches
+        where the agent was looping but eventually escaped. Returns
+        a list of episode dicts sorted by length descending. Only
+        episodes >= 50 turns are kept -- shorter wedges that the
+        harness's anti-wedge override clears are noise.
+
+        Algorithm: slide a 20-action window across the whole history.
+        At each position, run the same period-1..4 loop detector
+        used by the end-of-run classifier. Mark each frame as 'in
+        loop' (and at which period). Merge consecutive marked frames
+        into episodes, taking start/end turns and the dominant mode
+        + action at the start.
+        """
+        if len(self._action_history) < 20:
+            return []
+        actions = [a for (_t, _m, a) in self._action_history]
+        # in_loop[i] = period (1..4) or None for action index i
+        # Walk i = 19..N-1: the window ends at i (inclusive of last
+        # 20 frames). Mark every frame within a tripping window.
+        in_loop = [None] * len(actions)
+        tripped_until = -1  # right edge of currently-tripped window
+        for i in range(19, len(actions)):
+            window = actions[i - 19:i + 1]
+            period = _detect_loop_period(window, min_matches=12)
+            if period is not None:
+                # Mark all 20 frames in the window as part of a loop
+                # with this period. Frames before tripped_until keep
+                # their already-recorded period (first-seen wins so
+                # period stays consistent across overlapping windows).
+                left = max(i - 19, tripped_until + 1)
+                for j in range(left, i + 1):
+                    in_loop[j] = period
+                tripped_until = i
+        # Merge consecutive marked frames into episodes. For each
+        # episode, pick a representative "cycle" string by sampling
+        # `period` actions from a stable section (skip the first few
+        # frames where the boundary action may differ from the body
+        # of the loop). The MODE comes from the same section too --
+        # the start frame's mode can be a transition (e.g.
+        # 'inventory' on the boundary while the cycle is really in
+        # game_loop with n/s/n/s).
+        episodes = []
+        i = 0
+        while i < len(actions):
+            if in_loop[i] is None:
+                i += 1
                 continue
-            base = tail[-period:]
-            matches = 0
-            # Count how many of the last 20 actions fit the pattern.
-            for i in range(len(tail)):
-                # tail[-1] is at base position period-1
-                pos_from_end = len(tail) - 1 - i  # 0 for last item
-                if tail[i] == base[(period - 1) - (pos_from_end % period)]:
-                    matches += 1
-            if matches >= 12:
-                return period
-        return None
+            start = i
+            period = in_loop[i]
+            while i < len(actions) and in_loop[i] is not None:
+                i += 1
+            end = i - 1
+            start_turn = self._action_history[start][0]
+            end_turn = self._action_history[end][0]
+            length = end_turn - start_turn + 1
+            # Sample mode + cycle from the middle of the episode so
+            # the labels reflect the steady-state loop, not the
+            # transition frame at start.
+            mid = (start + end) // 2
+            mode = self._action_history[mid][1]
+            cycle_start = max(start, mid - (period - 1))
+            cycle = "".join(
+                self._action_history[j][2]
+                for j in range(cycle_start, min(cycle_start + period, end + 1))
+            )
+            if length >= 50:  # filter transient wedges
+                episodes.append({
+                    "start": start_turn,
+                    "end": end_turn,
+                    "length": length,
+                    "period": period,
+                    "mode": mode,
+                    "action": cycle,
+                })
+        episodes.sort(key=lambda e: -e["length"])
+        return episodes
 
     def _derive_death_cause(self):
         """Walk recent_log backwards for a recognisable killer.
@@ -970,6 +1074,10 @@ class RunReport:
             "xp_pct": round(xp_pct, 1),
             "chests_total": total_chests,
             "boons_total": total_boons,
+            # Mid-run loop episodes (eventually escaped). Top-line:
+            # count + total turns burned. Per-run page shows details.
+            "loop_episode_count": len(self.loop_episodes),
+            "loop_turns_total": sum(e["length"] for e in self.loop_episodes),
         }
 
     def to_html(self):
@@ -1303,6 +1411,37 @@ class RunReport:
                 "<li class='muted'>no undead encountered — no tombs suspected</li>"
             )
 
+        # Mid-run loop episodes (escaped wedges). Each row names the
+        # mode the agent got wedged in, the dominant action, the
+        # turn window, and the period. Top of the list is the
+        # longest wedge -- usually where to start diagnosing.
+        if self.loop_episodes:
+            loop_episode_rows = "".join(
+                f"<tr><td>T{e['start']}–T{e['end']}</td>"
+                f"<td>{e['length']}</td>"
+                f"<td>{html.escape(e['mode'])}</td>"
+                f"<td><code>{html.escape(e['action'])}</code></td>"
+                f"<td>period {e['period']}</td></tr>"
+                for e in self.loop_episodes
+            )
+            loop_episode_total = sum(e["length"] for e in self.loop_episodes)
+            loop_episodes_section = (
+                f"<h2 style='margin-top:18px;'>Mid-run Loop Episodes "
+                f"({len(self.loop_episodes)} · {loop_episode_total} turns wasted)</h2>"
+                f"<p class='muted'>Stretches where the agent was caught in a tight "
+                f"period-1..4 action cycle for 50+ turns before escaping. The mode + "
+                f"first action name where the wedge happened so the next fix targets "
+                f"the right handler. Long episodes here = the harness's anti-wedge "
+                f"needed to fight through a real softlock.</p>"
+                f"<table><tr><th>Turns</th><th>Length</th><th>Mode</th>"
+                f"<th>Action</th><th>Cycle</th></tr>{loop_episode_rows}</table>"
+            )
+        else:
+            loop_episodes_section = (
+                "<h2 style='margin-top:18px;'>Mid-run Loop Episodes</h2>"
+                "<p class='muted'>None — the agent never wedged in a tight cycle for 50+ turns.</p>"
+            )
+
         actions_html = "".join(
             f"<li>T{t} <span class='mode'>{html.escape(m)}</span>: "
             f"<code>{html.escape(a)}</code></li>"
@@ -1423,6 +1562,7 @@ class RunReport:
             overall_xp_pct=f"{total_xpct:.0f}",
             tomb_sighting_lines=tomb_sighting_lines,
             tomb_floor_count=len(self.tomb_suspected_floors),
+            loop_episodes_section=loop_episodes_section,
             death_block=death_block,
             sprite_styles=sprites.style_block(),
         )
@@ -1842,6 +1982,7 @@ $sprite_styles
         list while weak on flagged floors to avoid blundering into the
         elite guardian.</p>
       <ul class="tomb-list">$tomb_sighting_lines</ul>
+      $loop_episodes_section
       $death_block
     </div>
 
@@ -1934,7 +2075,9 @@ _INDEX_TEMPLATE = """<!doctype html>
     <tr>
       <th>Hero</th><th>Race</th><th>Seed</th><th>Outcome</th>
       <th>Turns</th><th>Floor</th><th>Level</th><th>HP</th>
-      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Warp %</th><th>XP %</th><th>Cause</th>
+      <th>Gold</th><th>Kills</th><th>Waste %</th><th>Warp %</th><th>XP %</th>
+      <th title="Mid-run loop episodes &gt;= 50 turns (count · total turns wasted)">Loops</th>
+      <th>Cause</th>
     </tr>
     $rows
   </table>
@@ -1976,8 +2119,27 @@ def _index_row(d):
         f"<span style='color:#94a3b8;font-size:0.85em;'>"
         f"({d.get('xp_earned', 0)}/{d.get('xp_pool', 0)})"
         f"</span></td>"
+        f"<td>{_loops_cell(d)}</td>"
         f"<td>{html.escape(str(cause))}</td>"
         f"</tr>"
+    )
+
+
+def _loops_cell(d):
+    """Render the Loops column: count × total-turns-wasted, with
+    the row tinted amber when the agent wasted heavy time wedged.
+    Old JSON sidecars without the field render as a dash."""
+    n = d.get("loop_episode_count")
+    if n is None:
+        return "—"
+    if n == 0:
+        return "<span class='muted'>0</span>"
+    total = d.get("loop_turns_total", 0)
+    color = "#fbbf24" if total >= 200 else "#fde68a"
+    return (
+        f"<span style='color:{color};'>{n}</span> "
+        f"<span style='color:#94a3b8;font-size:0.85em;'>"
+        f"({total} turns)</span>"
     )
 
 
@@ -2013,7 +2175,7 @@ def write_index(out_dir):
     body = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='14'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='15'>no runs yet</td></tr>",
     )
     (out_dir / "index.html").write_text(body, encoding="utf-8")
 
@@ -2162,7 +2324,7 @@ def deploy_gh_pages(out_dir, repo_root, branch="main", remote="origin",
     index_html = Template(_INDEX_TEMPLATE).safe_substitute(
         count=len(summaries),
         generated=datetime.now(timezone.utc).isoformat(timespec="seconds"),
-        rows="\n".join(rows) or "<tr><td colspan='14'>no runs yet</td></tr>",
+        rows="\n".join(rows) or "<tr><td colspan='15'>no runs yet</td></tr>",
     )
     index_sha = run(
         ["git", "hash-object", "-w", "--stdin"], input_text=index_html
