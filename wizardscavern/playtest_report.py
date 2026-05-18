@@ -793,6 +793,34 @@ class RunReport:
         total_xp_pool = max(total_xp_pool, total_xp_earned)
         kill_pct = (total_kills / total_monsters * 100.0) if total_monsters else 0
         xp_pct = (total_xp_earned / total_xp_pool * 100.0) if total_xp_pool else 0
+        # legit_alive: stricter survival metric introduced after the
+        # deployed gh-pages set showed 10 nominally-alive runs of which
+        # only 1 (Bombur F5 dwarf, 39% wasted, 87 moves, 23 kills, full
+        # HP) was genuinely progressing. The rest were parked-at-low-HP
+        # or tile-cycling out the clock on F2 (e.g. Halbarad 95.9%
+        # wasted, HP 1/40, 1541 moves). User framing: "Farin is the one
+        # legit alive; the others are stuck in loops." Honest counts
+        # come from this flag, not raw `alive`. Thresholds:
+        #   wasted_pct < 50  -- not a tile-cycle loop
+        #   moves_total > 30 -- not parked-on-spawn
+        #   max_floor >= 3   -- made meaningful descent progress
+        alive_raw = bool(f.get("alive", False))
+        legit_alive = (
+            alive_raw
+            and wasted_pct < 50.0
+            and total_moves > 30
+            and self.max_floor >= 3
+        )
+        if not alive_raw:
+            legit_reason = "dead"
+        elif wasted_pct >= 50.0:
+            legit_reason = f"loop ({wasted_pct:.0f}% wasted)"
+        elif total_moves <= 30:
+            legit_reason = f"parked ({total_moves} moves)"
+        elif self.max_floor < 3:
+            legit_reason = f"stuck shallow (maxF{self.max_floor})"
+        else:
+            legit_reason = "ok"
         return {
             "slug": self.slug,
             "name": self.name,
@@ -806,6 +834,8 @@ class RunReport:
             "gold": f.get("gold"),
             "kills": sum(self.kills_by_floor.values()),
             "alive": f.get("alive", False),
+            "legit_alive": legit_alive,
+            "legit_reason": legit_reason,
             "death_cause": self.death_cause or "—",
             "started": self.start_iso,
             "moves_total": total_moves,
