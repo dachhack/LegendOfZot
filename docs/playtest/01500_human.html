@@ -34,6 +34,11 @@ a:hover { text-decoration: underline; }
   border-radius:4px; margin-bottom:10px;
 }
 .stuck-banner .cause strong { color: #fbbf24; }
+.alive-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#0d1a13; border-left:3px solid #4ade80;
+  border-radius:4px; margin-bottom:10px;
+}
+.alive-banner .cause { color: #bbf7d0; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
 .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
@@ -249,7 +254,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Beregond III, the human</h1>
-      <p class="muted">non-binary adventurer · seed 1500 · started 2026-05-18T20:10:54+00:00</p>
+      <p class="muted">non-binary adventurer · seed 1500 · started 2026-05-18T20:17:57+00:00</p>
       <p><span class="outcome alive">SURVIVED</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -361,7 +366,7 @@ th { color: #94a3b8; font-weight: normal; }
         </div>
         <table style="margin-top:10px;">
           <tr><th>Food item</th><th>Found</th><th>Bought</th><th>Cooked</th><th>Eaten</th><th>Hunger restored</th></tr>
-          <tr><td>Iron Rations</td><td>0</td><td>22</td><td>0</td><td>189</td><td>9639</td></tr><tr><td>Rations</td><td>0</td><td>19</td><td>0</td><td>154</td><td>7700</td></tr><tr><td>Salted Jerky</td><td>0</td><td>20</td><td>0</td><td>85</td><td>2975</td></tr><tr><td>Cooked Orc steak</td><td>0</td><td>0</td><td>0</td><td>62</td><td>620</td></tr><tr><td>Cooked Bat kebab</td><td>0</td><td>0</td><td>0</td><td>18</td><td>234</td></tr><tr><td>Cooked Gnoll burger</td><td>0</td><td>0</td><td>0</td><td>15</td><td>330</td></tr><tr><td>Cooked Troll burger</td><td>0</td><td>0</td><td>0</td><td>13</td><td>390</td></tr><tr><td>Cooked Stirge chops</td><td>0</td><td>0</td><td>2</td><td>8</td><td>144</td></tr><tr><td>Cooked Bugbear kebab</td><td>0</td><td>0</td><td>0</td><td>9</td><td>162</td></tr><tr><td>Cooked Crawling Claw kebab</td><td>0</td><td>0</td><td>0</td><td>7</td><td>126</td></tr><tr><td>Cooked Sewer Rat nuggets</td><td>0</td><td>0</td><td>0</td><td>7</td><td>84</td></tr><tr><td>Cooked Crawling Claw filet</td><td>0</td><td>0</td><td>0</td><td>6</td><td>108</td></tr><tr><td>Cooked Ogre roast</td><td>0</td><td>0</td><td>0</td><td>6</td><td>198</td></tr><tr><td>Cooked Goblin burger</td><td>0</td><td>0</td><td>0</td><td>6</td><td>42</td></tr><tr><td>Cooked Stirge kebab</td><td>0</td><td>0</td><td>0</td><td>4</td><td>72</td></tr><tr><td>Cooked Hardened Orc steak</td><td>0</td><td>0</td><td>0</td><td>3</td><td>30</td></tr><tr><td>Raw Stirge meat</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Ettercap kebab</td><td>0</td><td>0</td><td>0</td><td>2</td><td>36</td></tr><tr><td>Cooked Rust Monster chops</td><td>0</td><td>0</td><td>0</td><td>2</td><td>36</td></tr><tr><td>Cooked Rust Monster kebab</td><td>0</td><td>0</td><td>0</td><td>2</td><td>36</td></tr>
+          <tr><td>Iron Rations</td><td>0</td><td>22</td><td>0</td><td>189</td><td>9639</td></tr><tr><td>Rations</td><td>0</td><td>19</td><td>0</td><td>154</td><td>7700</td></tr><tr><td>Salted Jerky</td><td>0</td><td>20</td><td>0</td><td>85</td><td>2975</td></tr><tr><td>Cooked Orc steak</td><td>0</td><td>0</td><td>0</td><td>62</td><td>620</td></tr><tr><td>Cooked Bat kebab</td><td>0</td><td>0</td><td>0</td><td>18</td><td>234</td></tr><tr><td>Cooked Gnoll burger</td><td>0</td><td>0</td><td>0</td><td>15</td><td>330</td></tr><tr><td>Cooked Troll burger</td><td>0</td><td>0</td><td>0</td><td>13</td><td>390</td></tr><tr><td>Cooked Stirge chops</td><td>0</td><td>0</td><td>2</td><td>8</td><td>144</td></tr><tr><td>Cooked Bugbear kebab</td><td>0</td><td>0</td><td>0</td><td>9</td><td>162</td></tr><tr><td>Cooked Sewer Rat nuggets</td><td>0</td><td>0</td><td>0</td><td>7</td><td>84</td></tr><tr><td>Cooked Crawling Claw kebab</td><td>0</td><td>0</td><td>0</td><td>7</td><td>126</td></tr><tr><td>Cooked Goblin burger</td><td>0</td><td>0</td><td>0</td><td>6</td><td>42</td></tr><tr><td>Cooked Crawling Claw filet</td><td>0</td><td>0</td><td>0</td><td>6</td><td>108</td></tr><tr><td>Cooked Ogre roast</td><td>0</td><td>0</td><td>0</td><td>6</td><td>198</td></tr><tr><td>Cooked Stirge kebab</td><td>0</td><td>0</td><td>0</td><td>4</td><td>72</td></tr><tr><td>Cooked Hardened Orc steak</td><td>0</td><td>0</td><td>0</td><td>3</td><td>30</td></tr><tr><td>Raw Stirge meat</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Rust Monster chops</td><td>0</td><td>0</td><td>0</td><td>2</td><td>36</td></tr><tr><td>Cooked Ettercap kebab</td><td>0</td><td>0</td><td>0</td><td>2</td><td>36</td></tr><tr><td>Cooked Rust Monster kebab</td><td>0</td><td>0</td><td>0</td><td>2</td><td>36</td></tr>
         </table>
       </div>
 
@@ -410,6 +415,23 @@ th { color: #94a3b8; font-weight: normal; }
       <ul class="tomb-list"><li>T31: F1 — encountered <span class='sprite sprite-p0013' style='width:24px;height:24px'></span> <strong>Skeleton</strong> → tomb suspected on Floor 1</li><li>T270: F2 — encountered <span class='sprite sprite-p0005' style='width:24px;height:24px'></span> <strong>Zombie</strong> → tomb suspected on Floor 2</li><li>T808: F4 — encountered <span class='sprite sprite-p0054' style='width:24px;height:24px'></span> <strong>ELITE UNDEAD SPECTER</strong> → tomb suspected on Floor 4</li><li>T1416: F3 — encountered <span class='sprite sprite-p0013' style='width:24px;height:24px'></span> <strong>Skeleton</strong> → tomb suspected on Floor 3</li><li>T2065: F5 — encountered <span class='sprite sprite-p0055' style='width:24px;height:24px'></span> <strong>UNDEAD SPECTER</strong> → tomb suspected on Floor 5</li><li>T4144: F7 — encountered <span class='sprite sprite-p0056' style='width:24px;height:24px'></span> <strong>ELITE UNDEAD DRAGON LICH</strong> → tomb suspected on Floor 7</li><li>T4531: F8 — encountered <span class='sprite sprite-p0057' style='width:24px;height:24px'></span> <strong>Wraith</strong> → tomb suspected on Floor 8</li></ul>
       <h2 style='margin-top:18px;'>Mid-run Loop Episodes (3 · 511 turns wasted)</h2><p class='muted'>Stretches where the agent was caught in a tight period-1..4 action cycle for 50+ turns before escaping. The mode + first action name where the wedge happened so the next fix targets the right handler. Long episodes here = the harness's anti-wedge needed to fight through a real softlock.</p><table><tr><th>Turns</th><th>Length</th><th>Mode</th><th>Action</th><th>Cycle</th></tr><tr><td>T1439–T1754</td><td>316</td><td>game_loop</td><td><code>e</code></td><td>period 1</td></tr><tr><td>T4005–T4132</td><td>128</td><td>game_loop</td><td><code>sn</code></td><td>period 2</td></tr><tr><td>T3934–T4000</td><td>67</td><td>game_loop</td><td><code>ewsn</code></td><td>period 4</td></tr></table>
       
+        <div class="alive-banner">
+          <p class="cause">Survived to T5000.
+            Run ended at the turn budget, not by death.</p>
+        </div>
+        <h3>Last 30 log lines</h3>
+        <ol class="log"><li>T4992: The library&#x27;s knowledge has been exhausted. The shelves are now empty.</li><li>T4992: You found 300 gold!</li><li>T4992: Total gold: 2263</li><li>T4996: Equipped Dragon Scale!</li><li>T4996: Inventory closed.</li><li>T4996: [Sated] +1 HP</li><li>T4996: Ancient tomes line the dusty shelves. You could search for useful grimoires here.</li><li>T4996: You begin searching through the dusty tomes...</li><li>T4996: You found a grimoire!</li><li>T4996: You examine the tome...
+It appears to be a Level 3 grimoire.
+It contains Combat Magic.
+The spell deals Ice damage.
+</li><li>T4996: Do you want to attempt to read this grimoire? (y/n)</li><li>T4996: You carefully open the grimoire and attempt to decipher its ancient text...</li><li>T4996: Success! You deciphered the grimoire and extracted the spell!</li><li>T4996: The unidentified spell has been added to your inventory. Take it to a vendor to identify it.</li><li>T4996: The library&#x27;s knowledge has been exhausted. The shelves are now empty.</li><li>T4996: You found 300 gold!</li><li>T4996: Total gold: 2263</li><li>T5000: Inventory closed.</li><li>T5000: [Sated] +1 HP</li><li>T5000: Ancient tomes line the dusty shelves. You could search for useful grimoires here.</li><li>T5000: You begin searching through the dusty tomes...</li><li>T5000: You found a grimoire!</li><li>T5000: You examine the tome...
+It appears to be a Level 3 grimoire.
+It contains Combat Magic.
+The spell deals Ice damage.
+</li><li>T5000: Do you want to attempt to read this grimoire? (y/n)</li><li>T5000: You carefully open the grimoire and attempt to decipher its ancient text...</li><li>T5000: Success! You deciphered the grimoire and extracted the spell!</li><li>T5000: The unidentified spell has been added to your inventory. Take it to a vendor to identify it.</li><li>T5000: The library&#x27;s knowledge has been exhausted. The shelves are now empty.</li><li>T5000: You found 300 gold!</li><li>T5000: Total gold: 2263</li></ol>
+        <h3>Last actions</h3>
+        <ol class="actions"><li>T4989 <span class='mode'>game_loop</span>: <code>e</code></li><li>T4990 <span class='mode'>chest_mode</span>: <code>o</code></li><li>T4991 <span class='mode'>game_loop</span>: <code>s</code></li><li>T4992 <span class='mode'>game_loop</span>: <code>s</code></li><li>T4993 <span class='mode'>game_loop</span>: <code>s</code></li><li>T4994 <span class='mode'>game_loop</span>: <code>s</code></li><li>T4995 <span class='mode'>game_loop</span>: <code>w</code></li><li>T4996 <span class='mode'>game_loop</span>: <code>s</code></li><li>T4997 <span class='mode'>game_loop</span>: <code>s</code></li><li>T4998 <span class='mode'>game_loop</span>: <code>w</code></li><li>T4999 <span class='mode'>game_loop</span>: <code>s</code></li><li>T5000 <span class='mode'>game_loop</span>: <code>w</code></li></ol>
+        
     </div>
 
     <!-- Journey -->

@@ -34,6 +34,11 @@ a:hover { text-decoration: underline; }
   border-radius:4px; margin-bottom:10px;
 }
 .stuck-banner .cause strong { color: #fbbf24; }
+.alive-banner { display:flex; align-items:center; gap:14px;
+  padding:10px; background:#0d1a13; border-left:3px solid #4ade80;
+  border-radius:4px; margin-bottom:10px;
+}
+.alive-banner .cause { color: #bbf7d0; }
 .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .grid3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
 .grid4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 14px; }
@@ -232,7 +237,7 @@ th { color: #94a3b8; font-weight: normal; }
     </div>
     <div class="hero-info">
       <h1>Galadriel the Wise, the elf</h1>
-      <p class="muted">non-binary adventurer · seed 787 · started 2026-05-18T20:10:44+00:00</p>
+      <p class="muted">non-binary adventurer · seed 787 · started 2026-05-18T20:17:46+00:00</p>
       <p><span class="outcome dead">FELL</span></p>
       <p class="muted">Memorised: —</p>
     </div>
@@ -344,7 +349,7 @@ th { color: #94a3b8; font-weight: normal; }
         </div>
         <table style="margin-top:10px;">
           <tr><th>Food item</th><th>Found</th><th>Bought</th><th>Cooked</th><th>Eaten</th><th>Hunger restored</th></tr>
-          <tr><td>Rations</td><td>0</td><td>8</td><td>0</td><td>164</td><td>8200</td></tr><tr><td>Iron Rations</td><td>0</td><td>10</td><td>0</td><td>65</td><td>3315</td></tr><tr><td>Cooked Goblin burger</td><td>0</td><td>0</td><td>28</td><td>21</td><td>147</td></tr><tr><td>Cooked Hell Hound burger</td><td>0</td><td>0</td><td>18</td><td>13</td><td>234</td></tr><tr><td>Raw Goblin meat</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Salted Jerky</td><td>0</td><td>9</td><td>0</td><td>12</td><td>420</td></tr><tr><td>Raw Hell Hound meat</td><td>18</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Stirge burger</td><td>0</td><td>0</td><td>9</td><td>9</td><td>162</td></tr><tr><td>Cooked Giant Spider skewer</td><td>0</td><td>0</td><td>7</td><td>9</td><td>27</td></tr><tr><td>Raw Stirge meat</td><td>14</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Stirge chops</td><td>0</td><td>0</td><td>2</td><td>11</td><td>198</td></tr><tr><td>Cooked Giant Rat nuggets</td><td>0</td><td>0</td><td>3</td><td>8</td><td>96</td></tr><tr><td>Cooked Bat kebab</td><td>0</td><td>0</td><td>1</td><td>8</td><td>104</td></tr><tr><td>Raw Giant Spider meat</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Lichen chops</td><td>0</td><td>0</td><td>6</td><td>1</td><td>18</td></tr><tr><td>Raw Lichen meat</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Crawling Claw filet</td><td>0</td><td>0</td><td>2</td><td>3</td><td>54</td></tr><tr><td>Raw Crawling Claw meat</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Raw Giant Rat meat</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Raw Bat meat</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+          <tr><td>Rations</td><td>0</td><td>8</td><td>0</td><td>164</td><td>8200</td></tr><tr><td>Iron Rations</td><td>0</td><td>10</td><td>0</td><td>65</td><td>3315</td></tr><tr><td>Cooked Goblin burger</td><td>0</td><td>0</td><td>28</td><td>21</td><td>147</td></tr><tr><td>Cooked Hell Hound burger</td><td>0</td><td>0</td><td>18</td><td>13</td><td>234</td></tr><tr><td>Raw Goblin meat</td><td>30</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Salted Jerky</td><td>0</td><td>9</td><td>0</td><td>12</td><td>420</td></tr><tr><td>Raw Hell Hound meat</td><td>18</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Stirge burger</td><td>0</td><td>0</td><td>9</td><td>9</td><td>162</td></tr><tr><td>Cooked Giant Spider skewer</td><td>0</td><td>0</td><td>7</td><td>9</td><td>27</td></tr><tr><td>Raw Stirge meat</td><td>14</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Stirge chops</td><td>0</td><td>0</td><td>2</td><td>11</td><td>198</td></tr><tr><td>Cooked Giant Rat nuggets</td><td>0</td><td>0</td><td>3</td><td>8</td><td>96</td></tr><tr><td>Cooked Bat kebab</td><td>0</td><td>0</td><td>1</td><td>8</td><td>104</td></tr><tr><td>Raw Giant Spider meat</td><td>8</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Lichen chops</td><td>0</td><td>0</td><td>6</td><td>1</td><td>18</td></tr><tr><td>Raw Lichen meat</td><td>5</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Cooked Crawling Claw filet</td><td>0</td><td>0</td><td>2</td><td>3</td><td>54</td></tr><tr><td>Raw Giant Rat meat</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Raw Crawling Claw meat</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr><tr><td>Raw Bat meat</td><td>3</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
         </table>
       </div>
 
